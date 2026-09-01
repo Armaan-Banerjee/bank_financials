@@ -8,6 +8,40 @@ Since 2026-08-27, remaining builds are tracked as a resumable ticket queue — s
 `wayfinder/map.md`. This document stays the durable record of time/token/difficulty
 data; the wayfinder tickets are the working queue.
 
+## The 3 skipped banks
+
+Every one of these was reviewed against primary sources (Companies House filing
+history, and — for Revolut — live registry data as of 2026-09-01) before being
+confirmed as a genuine, permanent skip, not a time-boxed guess. Full detail and
+resolution history is in "Difficulty ranking" below; this is the short version.
+
+1. **VTB Capital plc** — under UK sanctions and in insolvency administration
+   since December 2022, with no accounts filed since. Not a data-availability
+   problem: the entity is not a going concern.
+2. **Bank Of Baroda (UK) Limited** — a permanent FRS 102 §7.1B cash-flow
+   exemption (wholly-owned subsidiary), combined with zero quantitative
+   Pillar 3 data anywhere in either Annual Report reviewed (purely narrative
+   capital sections — no ratios, no figures to build a Pillar-3-only fallback
+   from). The bank has also been in a Solvent Wind Down since FY2024.
+3. **Revolut Bank UK Ltd** (FRN 981170, Companies House 12871051) — often
+   mistaken for the well-known Revolut consumer app, but that app is a
+   *different legal entity*: **Revolut Ltd** (company 08804411, incorporated
+   2013), an e-money institution and out of scope for this project, which
+   only covers PRA-authorised banks. Revolut Bank UK Ltd is a separate,
+   much younger entity: incorporated 10 September 2020, granted its UK
+   banking licence (with restrictions, the standard "mobilisation" path for
+   new banks) in July 2024, and renamed from "Revolut NewCo UK Ltd" to its
+   current name only in March 2026. It files full accounts (FY2022 through
+   FY2025, most recently 9 May 2026), but FY2023–FY2025 all explicitly claim
+   the FRS 101 IAS 7 cash-flow exemption — permanent, since its parent,
+   Revolut Group Holdings Ltd, files the consolidated group cash-flow
+   statement instead — and FY2022 has no cash-flow statement at all. The only
+   Pillar 3 disclosure found anywhere is Revolut Group Holdings Ltd's own
+   (group-level, FY24), not one for the standalone UK banking entity. Was
+   reassessed once already, at a prior user's request, using a shorter
+   FY2022–FY2025 window specifically to rule out the missing FY2021 filing as
+   the deciding factor — it wasn't; the double blocker above held regardless.
+
 ## Caveat on the data
 
 Hard timing/token data only exists for builds run as tracked background agents (their completion reports carry duration/tool-call/token counts). That covers every bank from Santander UK onward. The earlier banks (Barclays, Monzo, Chetwood, Starling, TSB, Bank of London, Clydesdale, plus the skipped PNBE/ICICI/VTB Capital) were built via direct in-conversation work with no equivalent metadata captured — there are no numbers for those, and none should be estimated.
