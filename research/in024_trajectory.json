@@ -10292,7 +10292,7 @@
           "persistence_score": 1.0,
           "robust_total_change": -79.22000000000003,
           "status": "eligible",
-          "total_change": -168.29999999999998,
+          "total_change": -168.3,
           "up_changes": 0
         },
         "years": [
@@ -18760,7 +18760,7 @@
           "last_year": 2025,
           "metric": "CET1 Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -24.959999999999965,
+          "robust_total_change": -24.959999999999972,
           "status": "eligible",
           "total_change": -43.07999999999999,
           "up_changes": 3
@@ -20412,7 +20412,7 @@
           "persistence_score": 0.5,
           "robust_total_change": -9.169999999999993,
           "status": "eligible",
-          "total_change": -50.059999999999995,
+          "total_change": -50.06,
           "up_changes": 2
         },
         "years": [
@@ -20740,7 +20740,7 @@
           "last_year": 2026,
           "metric": "CET1 Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": -22.000000000000007,
+          "robust_total_change": -22.000000000000004,
           "status": "eligible",
           "total_change": -22.000000000000004,
           "up_changes": 2
@@ -20960,9 +20960,9 @@
           "last_year": 2025,
           "metric": "CET1 Ratio",
           "persistence_score": 1.0,
-          "robust_total_change": -384.22999999999996,
+          "robust_total_change": -384.23,
           "status": "eligible",
-          "total_change": -384.22999999999996,
+          "total_change": -384.23,
           "up_changes": 0
         },
         "years": [
@@ -35042,7 +35042,7 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -31.75999999999999,
+          "robust_total_change": -31.759999999999994,
           "status": "eligible",
           "total_change": -18.74,
           "up_changes": 1
@@ -36912,7 +36912,7 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -89.24000000000001,
+          "robust_total_change": -89.24,
           "status": "eligible",
           "total_change": -89.24,
           "up_changes": 1
@@ -37132,7 +37132,7 @@
           "last_year": 2024,
           "metric": "Leverage Ratio",
           "persistence_score": 0.6666666666666666,
-          "robust_total_change": -83.26000000000005,
+          "robust_total_change": -83.26000000000003,
           "status": "eligible",
           "total_change": -70.62,
           "up_changes": 1
@@ -42196,7 +42196,7 @@
           "persistence_score": 1.0,
           "robust_total_change": -79.22000000000003,
           "status": "eligible",
-          "total_change": -168.29999999999998,
+          "total_change": -168.3,
           "up_changes": 0
         },
         "years": [
@@ -50664,7 +50664,7 @@
           "last_year": 2025,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -24.959999999999965,
+          "robust_total_change": -24.959999999999972,
           "status": "eligible",
           "total_change": -43.07999999999999,
           "up_changes": 3
@@ -52316,7 +52316,7 @@
           "persistence_score": 0.5,
           "robust_total_change": -9.169999999999993,
           "status": "eligible",
-          "total_change": -50.059999999999995,
+          "total_change": -50.06,
           "up_changes": 2
         },
         "years": [
@@ -52644,7 +52644,7 @@
           "last_year": 2026,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": -22.000000000000007,
+          "robust_total_change": -22.000000000000004,
           "status": "eligible",
           "total_change": -22.000000000000004,
           "up_changes": 2
@@ -52864,9 +52864,9 @@
           "last_year": 2025,
           "metric": "Tier 1 Ratio",
           "persistence_score": 1.0,
-          "robust_total_change": -384.22999999999996,
+          "robust_total_change": -384.23,
           "status": "eligible",
-          "total_change": -384.22999999999996,
+          "total_change": -384.23,
           "up_changes": 0
         },
         "years": [
@@ -58148,7 +58148,7 @@
           "persistence_score": 1.0,
           "robust_total_change": -79.22000000000003,
           "status": "eligible",
-          "total_change": -168.29999999999998,
+          "total_change": -168.3,
           "up_changes": 0
         },
         "years": [
@@ -62876,7 +62876,7 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": -18.539999999999992,
+          "robust_total_change": -18.54,
           "status": "eligible",
           "total_change": -18.54,
           "up_changes": 2
@@ -66616,7 +66616,7 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": -28.96999999999997,
+          "robust_total_change": -28.969999999999985,
           "status": "eligible",
           "total_change": -42.33,
           "up_changes": 2
@@ -68268,7 +68268,7 @@
           "persistence_score": 0.5,
           "robust_total_change": -9.169999999999993,
           "status": "eligible",
-          "total_change": -50.059999999999995,
+          "total_change": -50.06,
           "up_changes": 2
         },
         "years": [
@@ -68486,7 +68486,7 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -14.750000000000004,
+          "robust_total_change": -14.750000000000002,
           "status": "eligible",
           "total_change": -17.700000000000003,
           "up_changes": 1
@@ -68596,7 +68596,7 @@
           "last_year": 2026,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": -22.000000000000007,
+          "robust_total_change": -22.000000000000004,
           "status": "eligible",
           "total_change": -22.000000000000004,
           "up_changes": 2
@@ -68816,9 +68816,9 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 1.0,
-          "robust_total_change": -384.22999999999996,
+          "robust_total_change": -384.23,
           "status": "eligible",
-          "total_change": -384.22999999999996,
+          "total_change": -384.23,
           "up_changes": 0
         },
         "years": [

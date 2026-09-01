@@ -145,6 +145,8 @@ class FullInsightsPipeline(unittest.TestCase):
         self.assertNotRegex(html_text, r"IN-[0-9]{3}")
         self.assertIn("Strict versus broad coverage", html_text)
         self.assertIn("Outlier investigation", html_text)
+        self.assertNotRegex(html_text, r'<details id="outliers"[^>]*\bopen\b')
+        self.assertIn('button.closest("#watchlist")', html_text)
         self.assertIn("Parent-group dispersion and agreement", html_text)
         self.assertIn("CET1 ratio movement decomposition", html_text)
         self.assertIn("Capital change (%)", html_text)
@@ -175,8 +177,10 @@ class FullInsightsPipeline(unittest.TestCase):
         self.assertNotIn('tr[data-search],tr[data-bank],.in024-bank-toggle,.in024-point', html_text)
         self.assertIn('section=document.querySelector("#trajectories")', html_text)
         self.assertIn('toggle.dispatchEvent(new Event("change"', html_text)
-        self.assertEqual(len(re.findall(r'<details[^>]*\sopen(?:\s|=|>)', html_text)), 2)
+        self.assertEqual(len(re.findall(r'<details[^>]*\sopen(?:\s|=|>)', html_text)), 1)
         self.assertIn("freshness-badge", html_text)
+        self.assertEqual(html_text.count("<style>"), html_text.count("</style>"))
+        self.assertIn("</style></head>", html_text)
         self.assertIn("kpi-sparkline", html_text)
         # Regression: the dashboard's JS used to generate elements with these
         # class names while decorate_dashboard_html()'s own CSS injection was

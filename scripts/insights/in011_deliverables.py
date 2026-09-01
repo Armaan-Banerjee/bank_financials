@@ -302,7 +302,7 @@ def render_html_analysis(payload):
             f'<details class="card wide analysis-collapsible"><summary>{title}',
             f'<details id="{anchor}" class="card wide analysis-collapsible"><summary>{title}',
         )
-    for anchor in ("outliers", "headroom"):
+    for anchor in ("headroom",):
         rendered = rendered.replace(f'<details id="{anchor}" class="card wide analysis-collapsible">', f'<details id="{anchor}" open class="card wide analysis-collapsible">')
     return rendered
 
