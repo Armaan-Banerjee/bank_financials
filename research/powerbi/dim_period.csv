@@ -1,0 +1,24 @@
+period_id,fiscal_year,period_label,period_type
+FY2025,2025,FY2025,annual
+FY2024,2024,FY2024,annual
+FY2023,2023,FY2023,annual
+FY2022,2022,FY2022,annual
+FY2021,2021,FY2021,annual
+FY2020,2020,FY2020,annual
+FY2025_fy2025_y_e_30_jun_25,2025,FY2025 (y/e 30 Jun 25),annual
+FY2024_fy2024_y_e_30_jun_24,2024,FY2024 (y/e 30 Jun 24),annual
+FY2023_fy2023_y_e_30_jun_23,2023,FY2023 (y/e 30 Jun 23),annual
+FY2022_fy2022_y_e_30_jun_22,2022,FY2022 (y/e 30 Jun 22),annual
+FY2021_fy2021_y_e_30_jun_21,2021,FY2021 (y/e 30 Jun 21),annual
+FY2026,2026,FY2026,annual
+FY2024_fy2024,2024,FY2024*,annual
+FY2021_fy2021,2021,FY2021†,annual
+FY2025_fy2025_18mo,2025,FY2025 (18mo),annual
+FY2023_fy2023_15mo,2023,FY2023 (15mo),annual
+FY2025_fy2025_mbhg,2025,FY2025 (MBHG),annual
+FY2024_fy2024_mbhg,2024,FY2024 (MBHG)*,annual
+FY2023_fy2023_mbl,2023,FY2023 (MBL),annual
+FY2022_fy2022_mbl,2022,FY2022 (MBL),annual
+FY2021_fy2021_mbl,2021,FY2021 (MBL),annual
+FY2026_fy2026_sghl,2026,FY2026 (SGHL)‡,annual
+FY2023_fy2023_15m,2023,FY2023 (15m),annual

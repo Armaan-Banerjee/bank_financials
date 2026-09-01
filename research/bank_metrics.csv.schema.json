@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.2",
+  "columns": [
+    "bank",
+    "canonical_bank",
+    "source_filename_bank",
+    "source_workbook",
+    "frn",
+    "workbook_kind",
+    "sheet",
+    "row_label",
+    "year",
+    "value_raw",
+    "value_numeric",
+    "is_numeric",
+    "basis_note",
+    "unit",
+    "reporting_basis",
+    "restatement_note",
+    "source_note"
+  ],
+  "identity_key": "frn (falls back to bank when frn is blank)",
+  "row_count": 12846,
+  "generated_at": "2026-09-01T21:45:06.852218+00:00",
+  "generator": "scripts/extract_metrics.py",
+  "source_of_truth": "research/insights.db - this CSV is a generated export, see IN-008"
+}

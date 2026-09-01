@@ -1,0 +1,13 @@
+metric_id,metric,sheet,metric_type
+cet1_capital,CET1 Capital,CET1 Capital,pillar_3
+cet1_ratio,CET1 Ratio,CET1 Ratio,pillar_3
+tier_1_capital,Tier 1 Capital,Tier 1 Capital,pillar_3
+tier_1_ratio,Tier 1 Ratio,Tier 1 Ratio,pillar_3
+total_capital,Total Capital,Total Capital,pillar_3
+total_capital_ratio,Total Capital Ratio,Total Capital Ratio,pillar_3
+total_rwas,Total RWAs,Total RWAs,pillar_3
+leverage_ratio,Leverage Ratio,Leverage Ratio,pillar_3
+lcr,LCR,LCR,pillar_3
+nsfr,NSFR,NSFR,pillar_3
+mrel_ratio,MREL Ratio,MREL Ratio,pillar_3
+cash_flow_statement,Cash Flow Statement,Cash Flow Statement,cash_flow

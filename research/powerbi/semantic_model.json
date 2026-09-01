@@ -1,0 +1,47 @@
+{
+  "authoring_rules": [
+    "Use dimension fields for slicers and grouping; do not group directly on raw labels.",
+    "Use Comparable N beside every benchmark or percentile visual.",
+    "Filter quality_id=numeric and annual_eligible=TRUE for annual comparisons.",
+    "Do not compare absolute values across unit_id or reporting_basis without an explicit conversion contract.",
+    "Use IN-009/IN-016 findings for outliers and ranks; do not recreate those business rules in DAX."
+  ],
+  "measures": {
+    "Banks with Numeric Value": "CALCULATE(DISTINCTCOUNT(fact_observation[bank_id]), fact_observation[quality_id] = \"numeric\")",
+    "Comparable N": "CALCULATE(DISTINCTCOUNT(fact_observation[bank_id]), fact_observation[quality_id] = \"numeric\", fact_observation[annual_eligible] = TRUE(), fact_observation[reporting_basis] <> \"unknown\")",
+    "Latest Fiscal Year": "MAX(dim_period[fiscal_year])",
+    "Missing Observations": "CALCULATE(COUNTROWS(fact_observation), fact_observation[quality_id] = \"missing\")",
+    "Non-numeric Disclosures": "CALCULATE(COUNTROWS(fact_observation), fact_observation[quality_id] = \"non_numeric_string\")",
+    "Numeric Observations": "CALCULATE(COUNTROWS(fact_observation), fact_observation[quality_id] = \"numeric\")",
+    "Observation Coverage %": "DIVIDE([Numeric Observations], COUNTROWS(fact_observation))",
+    "Reported Value": "SUM(fact_observation[value_numeric])"
+  },
+  "refresh_contract": {
+    "command": "python3 scripts/insights/refresh_all.py",
+    "order": "extract -> parent groups -> clusters -> analysis -> Power BI export -> deliverables",
+    "schema_change": "Bump schema_version and update this contract when grain, field meaning, or keys change.",
+    "source": "research/insights.db",
+    "validation": "Refresh fails before export if SQLite structural checks fail; downstream outputs consume the same snapshot."
+  },
+  "relationships": [
+    "dim_bank[bank_id] 1:* fact_observation[bank_id]",
+    "dim_metric[metric_id] 1:* fact_observation[metric_id]",
+    "dim_period[period_id] 1:* fact_observation[period_id]",
+    "dim_source[source_id] 1:* fact_observation[source_id]",
+    "dim_unit[unit_id] 1:* fact_observation[unit_id]",
+    "dim_comparability[comparability_id] 1:* fact_observation[comparability_id]",
+    "dim_quality[quality_id] 1:* fact_observation[quality_id]"
+  ],
+  "schema_version": "1.0",
+  "source": "/Users/armaan/code/katalysis/research/insights.db",
+  "table_row_counts": {
+    "dim_bank": 145,
+    "dim_comparability": 3,
+    "dim_metric": 12,
+    "dim_period": 23,
+    "dim_quality": 4,
+    "dim_source": 145,
+    "dim_unit": 16,
+    "fact_observation": 12846
+  }
+}

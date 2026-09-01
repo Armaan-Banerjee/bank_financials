@@ -1,0 +1,3165 @@
+{
+  "absolute_metrics": {
+    "CET1 Capital": {
+      "coverage": {
+        "banks": 0,
+        "known_unit_banks": 0,
+        "known_unit_observations": 0,
+        "observations": 575,
+        "unknown_unit_observations": 575,
+        "unstable_unit_or_basis_bank_ids": [],
+        "unstable_unit_or_basis_banks": 0,
+        "years": []
+      },
+      "latest": {
+        "metadata": {
+          "1004742": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "106054": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "114216": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "114724": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "119250": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "119256": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "119278": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121873": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121878": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "121882": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121885": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122088": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122093": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122261": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122287": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122702": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124269": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "124543": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "124579": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124659": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124823": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "131818": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "135327": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "143336": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "144036": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "146003": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "146702": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "149025": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "151427": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "155240": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "165556": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "169628": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "171532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "172330": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "178737": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "183100": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "183722": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "188585": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "191240": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "195430": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204439": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204456": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204463": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204469": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204471": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204478": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204479": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204481": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204488": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204503": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204508": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204520": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204550": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204566": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204570": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204571": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204574": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204601": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "207380": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "207381": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "207701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208019": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208020": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "216772": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "219523": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "221156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "222030": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "223268": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "223304": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "229148": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "400972": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "451720": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "454750": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "455378": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "459701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "464292": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "466577": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "466611": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "467410": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "475346": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "478415": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "488982": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "502704": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "512956": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "514744": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "530504": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "541910": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "543146": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "575105": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "575225": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "579415": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "601551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "604551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "606934": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "627671": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "629564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "661960": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "671140": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "695048": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "716167": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "730166": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "730427": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "738741": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "740551": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "754568": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "755924": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "757156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "759676": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "763256": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "765112": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "800542": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "805574": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "806852": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "815220": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "817008": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "821851": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "832786": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "834822": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "848291": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "849404": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "849724": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "850286": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "953772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "954876": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "970920": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "993767": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          }
+        },
+        "values": {
+          "1004742": 12922.0,
+          "106054": 10601.0,
+          "114216": 20063.0,
+          "114724": 1905.0,
+          "119250": 291.256,
+          "119256": 670.5,
+          "119278": 26468.0,
+          "121873": 4248.0,
+          "121878": 14968.0,
+          "121882": 3952.0,
+          "121885": 923.5,
+          "122088": 1614.0,
+          "122093": 526455.0,
+          "122261": 655970.0,
+          "122287": 1248.0,
+          "122702": 28177.0,
+          "124269": 306.0,
+          "124543": 1773.0,
+          "124579": 2594.0,
+          "124659": 3677.1,
+          "124772": 348.0,
+          "124823": 1819.5,
+          "131818": 325.3,
+          "135327": 64528.0,
+          "143336": 234477.0,
+          "144036": 237.2,
+          "146003": 249.0,
+          "146702": 2241.2,
+          "149025": 564.579,
+          "151427": 443918.0,
+          "155240": 27836544.0,
+          "165556": 1269.0,
+          "169628": 11083.0,
+          "171532": 536637.0,
+          "172330": 2681.0,
+          "178737": 217373.0,
+          "183100": 1091.0,
+          "183722": 94.0,
+          "188585": 59210.0,
+          "191240": 1949276.0,
+          "195430": 676229.0,
+          "204439": 162.8,
+          "204456": 141776.0,
+          "204463": 390450.0,
+          "204469": 1600.0,
+          "204471": 156657.0,
+          "204478": 35985.0,
+          "204479": 168224.0,
+          "204481": 22532098.0,
+          "204488": 171.32,
+          "204503": 1337.8,
+          "204508": 13354.0,
+          "204520": 170750.0,
+          "204532": 10344.0,
+          "204550": 364.8,
+          "204564": 266352.0,
+          "204566": 28884.0,
+          "204570": 259127.0,
+          "204571": 84898.0,
+          "204574": 1297.0,
+          "204601": 397694.0,
+          "207380": 258360.0,
+          "207381": 108644570.0,
+          "207701": 41644.0,
+          "208019": 144.5,
+          "208020": 132244.3,
+          "216772": 363763.0,
+          "219523": 110.6,
+          "221156": 341.3,
+          "222030": 547878.0,
+          "223268": 322.9,
+          "223304": 4481.8,
+          "229148": 208.2,
+          "400972": 15808.0,
+          "451720": 320.8,
+          "454750": 41047.0,
+          "455378": 90882.0,
+          "459701": 104.8,
+          "464292": 225.806,
+          "466577": 124.259,
+          "466611": 48075379.0,
+          "467410": 274521.0,
+          "475346": 108.6,
+          "478415": 531687.1,
+          "488982": 826.0,
+          "502704": 40642.5,
+          "512956": 1601.0,
+          "514744": 14217.0,
+          "530504": 1975.8,
+          "541910": 84719.0,
+          "543146": 1234805.0,
+          "575105": 321877.0,
+          "575225": 2276.0,
+          "579415": 218496.0,
+          "601551": 86350.9,
+          "604551": 1085.1,
+          "606934": 74173.0,
+          "627671": 124587.0,
+          "629564": 988868.0,
+          "661960": 356400.0,
+          "671140": 30728.0,
+          "695048": 62459.9,
+          "716167": 79319.0,
+          "730166": 1123255.0,
+          "730427": 1158302.0,
+          "738741": 168319.0,
+          "740551": 187605.0,
+          "754568": 132.0,
+          "755924": 48900000.0,
+          "757156": 277.0,
+          "759676": 12331.0,
+          "763256": 3085.0,
+          "765112": 15509.0,
+          "800542": 489.0,
+          "805574": 418.0,
+          "806852": 2155.0,
+          "815220": 707000.0,
+          "817008": 193448.0,
+          "821851": 325689.0,
+          "832786": 25927.0,
+          "834822": 68026.0,
+          "848291": 112443.0,
+          "849404": 74617.0,
+          "849724": 56324.0,
+          "850286": 104969.0,
+          "953772": 7327982.0,
+          "954876": 35066.3,
+          "970920": 8564.0,
+          "993767": 103888.0
+        },
+        "years": {
+          "1004742": 2024,
+          "106054": 2025,
+          "114216": 2025,
+          "114724": 2025,
+          "119250": 2024,
+          "119256": 2025,
+          "119278": 2025,
+          "121873": 2026,
+          "121878": 2025,
+          "121882": 2025,
+          "121885": 2024,
+          "122088": 2025,
+          "122093": 2025,
+          "122261": 2025,
+          "122287": 2025,
+          "122702": 2025,
+          "124269": 2025,
+          "124543": 2025,
+          "124579": 2025,
+          "124659": 2025,
+          "124772": 2024,
+          "124823": 2025,
+          "131818": 2025,
+          "135327": 2025,
+          "143336": 2024,
+          "144036": 2024,
+          "146003": 2025,
+          "146702": 2025,
+          "149025": 2024,
+          "151427": 2025,
+          "155240": 2025,
+          "165556": 2025,
+          "169628": 2025,
+          "171532": 2025,
+          "172330": 2026,
+          "178737": 2025,
+          "183100": 2025,
+          "183722": 2024,
+          "188585": 2025,
+          "191240": 2025,
+          "195430": 2025,
+          "204439": 2025,
+          "204456": 2025,
+          "204463": 2025,
+          "204469": 2025,
+          "204471": 2024,
+          "204478": 2024,
+          "204479": 2025,
+          "204481": 2025,
+          "204488": 2025,
+          "204503": 2025,
+          "204508": 2023,
+          "204520": 2024,
+          "204532": 2025,
+          "204550": 2025,
+          "204564": 2025,
+          "204566": 2024,
+          "204570": 2025,
+          "204571": 2024,
+          "204574": 2024,
+          "204601": 2025,
+          "207380": 2024,
+          "207381": 2025,
+          "207701": 2025,
+          "208019": 2025,
+          "208020": 2025,
+          "216772": 2024,
+          "219523": 2025,
+          "221156": 2025,
+          "222030": 2025,
+          "223268": 2025,
+          "223304": 2025,
+          "229148": 2024,
+          "400972": 2025,
+          "451720": 2025,
+          "454750": 2025,
+          "455378": 2025,
+          "459701": 2026,
+          "464292": 2025,
+          "466577": 2025,
+          "466611": 2024,
+          "467410": 2025,
+          "475346": 2024,
+          "478415": 2023,
+          "488982": 2025,
+          "502704": 2025,
+          "512956": 2025,
+          "514744": 2025,
+          "530504": 2025,
+          "541910": 2025,
+          "543146": 2025,
+          "575105": 2024,
+          "575225": 2025,
+          "579415": 2025,
+          "601551": 2025,
+          "604551": 2025,
+          "606934": 2023,
+          "627671": 2025,
+          "629564": 2025,
+          "661960": 2025,
+          "671140": 2026,
+          "695048": 2024,
+          "716167": 2025,
+          "730166": 2026,
+          "730427": 2025,
+          "738741": 2025,
+          "740551": 2025,
+          "754568": 2025,
+          "755924": 2025,
+          "757156": 2025,
+          "759676": 2025,
+          "763256": 2025,
+          "765112": 2025,
+          "800542": 2025,
+          "805574": 2023,
+          "806852": 2025,
+          "815220": 2024,
+          "817008": 2025,
+          "821851": 2025,
+          "832786": 2025,
+          "834822": 2023,
+          "848291": 2025,
+          "849404": 2026,
+          "849724": 2024,
+          "850286": 2025,
+          "953772": 2024,
+          "954876": 2025,
+          "970920": 2023,
+          "993767": 2025
+        }
+      },
+      "scale_adjusted": {},
+      "scale_adjusted_coverage": {
+        "banks": 0,
+        "exclusions": {
+          "missing_rwa": 55,
+          "unknown_unit": 520
+        },
+        "observations": 0,
+        "years": []
+      },
+      "size_bands": {},
+      "size_cohorts": [],
+      "trends": []
+    },
+    "Tier 1 Capital": {
+      "coverage": {
+        "banks": 0,
+        "known_unit_banks": 0,
+        "known_unit_observations": 0,
+        "observations": 568,
+        "unknown_unit_observations": 568,
+        "unstable_unit_or_basis_bank_ids": [],
+        "unstable_unit_or_basis_banks": 0,
+        "years": []
+      },
+      "latest": {
+        "metadata": {
+          "1004742": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "106054": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "114216": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "114724": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "119250": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "119256": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "119278": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121873": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121878": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "121882": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121885": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122088": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122093": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122261": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122287": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122702": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124269": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "124543": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "124579": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124659": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124823": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "131818": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "135327": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "143336": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "144036": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "146003": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "146702": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "149025": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "151427": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "155240": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "165556": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "169628": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "171532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "172330": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "178737": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "183100": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "183722": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "188585": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "191240": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "195430": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204419": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204439": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204456": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204463": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204469": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204471": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204478": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204479": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204481": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204488": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204503": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204508": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204520": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204550": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204566": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204570": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204571": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204574": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204601": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "207380": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "207381": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "207701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208019": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208020": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "216772": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "219523": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "221156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "222030": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "223268": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "223304": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "229148": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "400972": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "451720": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "454750": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "455378": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "459701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "464292": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "466577": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "466611": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "467410": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "475346": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "478415": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "488982": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "512956": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "514744": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "530504": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "541910": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "543146": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "575105": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "579415": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "601551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "604551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "606934": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "627671": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "629564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "661960": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "671140": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "695048": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "716167": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "730166": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "730427": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "738741": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "740551": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "754568": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "755924": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "757156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "759676": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "763256": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "765112": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "800542": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "805574": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "806852": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "815220": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "817008": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "821851": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "832786": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "834822": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "848291": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "849404": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "850286": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "953772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "954876": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "970920": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "993767": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          }
+        },
+        "values": {
+          "1004742": 12922.0,
+          "106054": 12461.0,
+          "114216": 24272.0,
+          "114724": 2405.0,
+          "119250": 291.256,
+          "119256": 670.5,
+          "119278": 31835.0,
+          "121873": 4946.0,
+          "121878": 17910.0,
+          "121882": 4926.0,
+          "121885": 923.5,
+          "122088": 1724.0,
+          "122093": 526455.0,
+          "122261": 835421.0,
+          "122287": 1488.0,
+          "122702": 35848.0,
+          "124269": 306.0,
+          "124543": 2072.0,
+          "124579": 2594.0,
+          "124659": 3677.1,
+          "124772": 348.0,
+          "124823": 1979.5,
+          "131818": 325.3,
+          "135327": 64528.0,
+          "143336": 234477.0,
+          "144036": 237.2,
+          "146003": 299.0,
+          "146702": 2241.2,
+          "149025": 564.579,
+          "151427": 503465.0,
+          "155240": 35272594.0,
+          "165556": 1269.0,
+          "169628": 13683.0,
+          "171532": 536637.0,
+          "172330": 3031.0,
+          "178737": 217373.0,
+          "183100": 1091.0,
+          "183722": 94.0,
+          "188585": 74574.0,
+          "191240": 2198973.0,
+          "195430": 676229.0,
+          "204419": 281414.0,
+          "204439": 162.8,
+          "204456": 141776.0,
+          "204463": 453206.0,
+          "204469": 1600.0,
+          "204471": 156657.0,
+          "204478": 35985.0,
+          "204479": 168224.0,
+          "204481": 22532098.0,
+          "204488": 171.32,
+          "204503": 1387.8,
+          "204508": 13354.0,
+          "204520": 170750.0,
+          "204532": 10344.0,
+          "204550": 364.8,
+          "204564": 266352.0,
+          "204566": 28884.0,
+          "204570": 259127.0,
+          "204571": 87898.0,
+          "204574": 1422.0,
+          "204601": 414725.0,
+          "207380": 258360.0,
+          "207381": 108644570.0,
+          "207701": 41644.0,
+          "208019": 144.5,
+          "208020": 132244.3,
+          "216772": 363763.0,
+          "219523": 110.6,
+          "221156": 400.0,
+          "222030": 547878.0,
+          "223268": 322.9,
+          "223304": 4481.8,
+          "229148": 211.2,
+          "400972": 15808.0,
+          "451720": 320.8,
+          "454750": 41047.0,
+          "455378": 90882.0,
+          "459701": 138.9,
+          "464292": 225.806,
+          "466577": 124.259,
+          "466611": 48075379.0,
+          "467410": 334521.0,
+          "475346": 108.6,
+          "478415": 531687.1,
+          "488982": 1068.0,
+          "512956": 1751.0,
+          "514744": 14217.0,
+          "530504": 2142.9,
+          "541910": 84719.0,
+          "543146": 1464485.0,
+          "575105": 321877.0,
+          "579415": 242394.0,
+          "601551": 86350.9,
+          "604551": 1085.1,
+          "606934": 74173.0,
+          "627671": 124587.0,
+          "629564": 988868.0,
+          "661960": 356400.0,
+          "671140": 30728.0,
+          "695048": 62459.9,
+          "716167": 93994.0,
+          "730166": 1123255.0,
+          "730427": 1158302.0,
+          "738741": 168319.0,
+          "740551": 187605.0,
+          "754568": 132.0,
+          "755924": 48846803.0,
+          "757156": 277.0,
+          "759676": 14558.0,
+          "763256": 7137.0,
+          "765112": 18218.0,
+          "800542": 567.0,
+          "805574": 470.0,
+          "806852": 2155.0,
+          "815220": 707000.0,
+          "817008": 193448.0,
+          "821851": 370566.0,
+          "832786": 25927.0,
+          "834822": 68026.0,
+          "848291": 112443.0,
+          "849404": 74617.0,
+          "850286": 104969.0,
+          "953772": 7327982.0,
+          "954876": 35066.3,
+          "970920": 8564.0,
+          "993767": 103888.0
+        },
+        "years": {
+          "1004742": 2024,
+          "106054": 2025,
+          "114216": 2025,
+          "114724": 2025,
+          "119250": 2024,
+          "119256": 2025,
+          "119278": 2025,
+          "121873": 2026,
+          "121878": 2025,
+          "121882": 2025,
+          "121885": 2024,
+          "122088": 2025,
+          "122093": 2025,
+          "122261": 2025,
+          "122287": 2025,
+          "122702": 2025,
+          "124269": 2025,
+          "124543": 2025,
+          "124579": 2025,
+          "124659": 2025,
+          "124772": 2024,
+          "124823": 2025,
+          "131818": 2025,
+          "135327": 2025,
+          "143336": 2024,
+          "144036": 2024,
+          "146003": 2025,
+          "146702": 2025,
+          "149025": 2024,
+          "151427": 2025,
+          "155240": 2025,
+          "165556": 2025,
+          "169628": 2025,
+          "171532": 2025,
+          "172330": 2026,
+          "178737": 2025,
+          "183100": 2025,
+          "183722": 2024,
+          "188585": 2025,
+          "191240": 2025,
+          "195430": 2025,
+          "204419": 2025,
+          "204439": 2025,
+          "204456": 2025,
+          "204463": 2025,
+          "204469": 2025,
+          "204471": 2024,
+          "204478": 2024,
+          "204479": 2025,
+          "204481": 2025,
+          "204488": 2025,
+          "204503": 2025,
+          "204508": 2023,
+          "204520": 2024,
+          "204532": 2025,
+          "204550": 2025,
+          "204564": 2025,
+          "204566": 2024,
+          "204570": 2025,
+          "204571": 2024,
+          "204574": 2024,
+          "204601": 2025,
+          "207380": 2024,
+          "207381": 2025,
+          "207701": 2025,
+          "208019": 2025,
+          "208020": 2025,
+          "216772": 2024,
+          "219523": 2025,
+          "221156": 2025,
+          "222030": 2025,
+          "223268": 2025,
+          "223304": 2025,
+          "229148": 2024,
+          "400972": 2025,
+          "451720": 2025,
+          "454750": 2025,
+          "455378": 2025,
+          "459701": 2026,
+          "464292": 2025,
+          "466577": 2025,
+          "466611": 2024,
+          "467410": 2025,
+          "475346": 2024,
+          "478415": 2023,
+          "488982": 2025,
+          "512956": 2025,
+          "514744": 2025,
+          "530504": 2025,
+          "541910": 2025,
+          "543146": 2025,
+          "575105": 2024,
+          "579415": 2025,
+          "601551": 2025,
+          "604551": 2025,
+          "606934": 2023,
+          "627671": 2025,
+          "629564": 2025,
+          "661960": 2025,
+          "671140": 2026,
+          "695048": 2024,
+          "716167": 2025,
+          "730166": 2026,
+          "730427": 2025,
+          "738741": 2025,
+          "740551": 2025,
+          "754568": 2025,
+          "755924": 2025,
+          "757156": 2025,
+          "759676": 2025,
+          "763256": 2025,
+          "765112": 2025,
+          "800542": 2025,
+          "805574": 2023,
+          "806852": 2025,
+          "815220": 2024,
+          "817008": 2025,
+          "821851": 2025,
+          "832786": 2025,
+          "834822": 2023,
+          "848291": 2025,
+          "849404": 2026,
+          "850286": 2025,
+          "953772": 2024,
+          "954876": 2025,
+          "970920": 2023,
+          "993767": 2025
+        }
+      },
+      "scale_adjusted": {},
+      "scale_adjusted_coverage": {
+        "banks": 0,
+        "exclusions": {
+          "missing_rwa": 58,
+          "unknown_unit": 510
+        },
+        "observations": 0,
+        "years": []
+      },
+      "size_bands": {},
+      "size_cohorts": [],
+      "trends": []
+    },
+    "Total Capital": {
+      "coverage": {
+        "banks": 0,
+        "known_unit_banks": 0,
+        "known_unit_observations": 0,
+        "observations": 570,
+        "unknown_unit_observations": 570,
+        "unstable_unit_or_basis_bank_ids": [],
+        "unstable_unit_or_basis_banks": 0,
+        "years": []
+      },
+      "latest": {
+        "metadata": {
+          "1004742": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "106054": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "114216": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "114724": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "119250": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "119256": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "119278": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121873": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121878": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "121882": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121885": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122088": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122093": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122261": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122287": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122702": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124543": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "124579": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124659": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124823": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "131818": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "135327": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "143336": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "144036": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "146003": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "149025": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "151427": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "155240": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "165556": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "169628": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "171532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "172330": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "178737": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "183100": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "183722": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "188585": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "191240": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "195430": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204419": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204424": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204439": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204456": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204463": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204469": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204471": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204478": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204479": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204481": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204488": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204503": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204508": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204520": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204550": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204566": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204570": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204571": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204574": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204601": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "207380": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "207381": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "207701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208019": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208020": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "216772": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "219523": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "221156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "222030": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "223268": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "223304": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "229148": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "400972": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "451720": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "454750": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "455378": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "459701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "464292": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "466577": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "466611": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "467410": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "475346": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "478415": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "488982": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "502704": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "512956": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "514744": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "530504": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "541910": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "543146": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "575105": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "575225": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "579415": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "601551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "604551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "606934": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "627671": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "629564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "661960": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "671140": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "695048": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "716167": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "730166": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "730427": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "738741": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "740551": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "754568": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "755924": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "757156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "759676": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "763256": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "765112": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "800542": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "805574": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "806852": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "815220": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "817008": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "821851": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "832786": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "834822": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "848291": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "849404": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "850286": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "953772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "954876": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "970920": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "993767": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          }
+        },
+        "values": {
+          "1004742": 12922.0,
+          "106054": 14315.0,
+          "114216": 41473.0,
+          "114724": 2955.0,
+          "119250": 291.256,
+          "119256": 670.5,
+          "119278": 38995.0,
+          "121873": 5747.0,
+          "121878": 21701.0,
+          "121882": 5576.0,
+          "121885": 1123.9,
+          "122088": 1865.0,
+          "122093": 531333.0,
+          "122261": 835421.0,
+          "122287": 1788.0,
+          "122702": 42129.0,
+          "124543": 2358.0,
+          "124579": 2594.0,
+          "124659": 4291.3,
+          "124772": 348.0,
+          "124823": 2229.5,
+          "131818": 325.3,
+          "135327": 74528.0,
+          "143336": 272459.0,
+          "144036": 232.3,
+          "146003": 299.0,
+          "149025": 616.448,
+          "151427": 589922.0,
+          "155240": 41632920.0,
+          "165556": 1269.0,
+          "169628": 15183.0,
+          "171532": 536637.0,
+          "172330": 3751.0,
+          "178737": 217373.0,
+          "183100": 1091.0,
+          "183722": 94.0,
+          "188585": 81550.0,
+          "191240": 2498973.0,
+          "195430": 934449.0,
+          "204419": 281414.0,
+          "204424": 41939.0,
+          "204439": 162.8,
+          "204456": 141776.0,
+          "204463": 482806.0,
+          "204469": 1800.0,
+          "204471": 156657.0,
+          "204478": 35985.0,
+          "204479": 196155.0,
+          "204481": 22532098.0,
+          "204488": 171.32,
+          "204503": 1487.8,
+          "204508": 13354.0,
+          "204520": 201853.0,
+          "204532": 10344.0,
+          "204550": 428.4,
+          "204564": 334756.0,
+          "204566": 28884.0,
+          "204570": 259127.0,
+          "204571": 99753.0,
+          "204574": 1586.2,
+          "204601": 494725.0,
+          "207380": 258360.0,
+          "207381": 109906178.0,
+          "207701": 47044.0,
+          "208019": 144.5,
+          "208020": 132244.3,
+          "216772": 414074.0,
+          "219523": 123.6,
+          "221156": 541.5,
+          "222030": 547878.0,
+          "223268": 372.9,
+          "223304": 4481.8,
+          "229148": 224.9,
+          "400972": 15808.0,
+          "451720": 320.8,
+          "454750": 56485.0,
+          "455378": 90882.0,
+          "459701": 159.9,
+          "464292": 225.806,
+          "466577": 137.959,
+          "466611": 48075379.0,
+          "467410": 334521.0,
+          "475346": 127.1,
+          "478415": 531687.1,
+          "488982": 1218.0,
+          "502704": 47781.1,
+          "512956": 1941.0,
+          "514744": 15353.0,
+          "530504": 2392.9,
+          "541910": 99719.0,
+          "543146": 1768030.0,
+          "575105": 336877.0,
+          "575225": 2276.0,
+          "579415": 246946.0,
+          "601551": 86350.9,
+          "604551": 1235.1,
+          "606934": 74173.0,
+          "627671": 144852.0,
+          "629564": 1168868.0,
+          "661960": 406400.0,
+          "671140": 31755.0,
+          "695048": 62459.9,
+          "716167": 93994.0,
+          "730166": 1123255.0,
+          "730427": 1173723.0,
+          "738741": 202429.0,
+          "740551": 187605.0,
+          "754568": 132.0,
+          "755924": 58505932.0,
+          "757156": 277.0,
+          "759676": 16996.0,
+          "763256": 7137.0,
+          "765112": 21888.0,
+          "800542": 642.0,
+          "805574": 522.0,
+          "806852": 2456.0,
+          "815220": 809000.0,
+          "817008": 193448.0,
+          "821851": 406393.0,
+          "832786": 25927.0,
+          "834822": 82214.0,
+          "848291": 127745.0,
+          "849404": 74617.0,
+          "850286": 104969.0,
+          "953772": 7327982.0,
+          "954876": 35066.3,
+          "970920": 8564.0,
+          "993767": 113921.0
+        },
+        "years": {
+          "1004742": 2024,
+          "106054": 2025,
+          "114216": 2025,
+          "114724": 2025,
+          "119250": 2024,
+          "119256": 2025,
+          "119278": 2025,
+          "121873": 2026,
+          "121878": 2025,
+          "121882": 2025,
+          "121885": 2024,
+          "122088": 2025,
+          "122093": 2025,
+          "122261": 2025,
+          "122287": 2025,
+          "122702": 2025,
+          "124543": 2025,
+          "124579": 2025,
+          "124659": 2025,
+          "124772": 2024,
+          "124823": 2025,
+          "131818": 2025,
+          "135327": 2025,
+          "143336": 2024,
+          "144036": 2022,
+          "146003": 2025,
+          "149025": 2024,
+          "151427": 2025,
+          "155240": 2025,
+          "165556": 2025,
+          "169628": 2025,
+          "171532": 2025,
+          "172330": 2026,
+          "178737": 2025,
+          "183100": 2025,
+          "183722": 2024,
+          "188585": 2025,
+          "191240": 2025,
+          "195430": 2025,
+          "204419": 2025,
+          "204424": 2025,
+          "204439": 2025,
+          "204456": 2025,
+          "204463": 2025,
+          "204469": 2025,
+          "204471": 2024,
+          "204478": 2024,
+          "204479": 2025,
+          "204481": 2025,
+          "204488": 2025,
+          "204503": 2025,
+          "204508": 2023,
+          "204520": 2024,
+          "204532": 2025,
+          "204550": 2025,
+          "204564": 2025,
+          "204566": 2024,
+          "204570": 2025,
+          "204571": 2024,
+          "204574": 2024,
+          "204601": 2025,
+          "207380": 2024,
+          "207381": 2025,
+          "207701": 2025,
+          "208019": 2025,
+          "208020": 2025,
+          "216772": 2024,
+          "219523": 2025,
+          "221156": 2025,
+          "222030": 2025,
+          "223268": 2025,
+          "223304": 2025,
+          "229148": 2024,
+          "400972": 2025,
+          "451720": 2025,
+          "454750": 2025,
+          "455378": 2025,
+          "459701": 2026,
+          "464292": 2025,
+          "466577": 2025,
+          "466611": 2024,
+          "467410": 2025,
+          "475346": 2024,
+          "478415": 2023,
+          "488982": 2025,
+          "502704": 2025,
+          "512956": 2025,
+          "514744": 2025,
+          "530504": 2025,
+          "541910": 2025,
+          "543146": 2025,
+          "575105": 2024,
+          "575225": 2025,
+          "579415": 2025,
+          "601551": 2025,
+          "604551": 2025,
+          "606934": 2023,
+          "627671": 2025,
+          "629564": 2025,
+          "661960": 2025,
+          "671140": 2026,
+          "695048": 2024,
+          "716167": 2025,
+          "730166": 2026,
+          "730427": 2025,
+          "738741": 2025,
+          "740551": 2025,
+          "754568": 2025,
+          "755924": 2025,
+          "757156": 2025,
+          "759676": 2025,
+          "763256": 2025,
+          "765112": 2025,
+          "800542": 2025,
+          "805574": 2023,
+          "806852": 2025,
+          "815220": 2024,
+          "817008": 2025,
+          "821851": 2025,
+          "832786": 2025,
+          "834822": 2023,
+          "848291": 2025,
+          "849404": 2026,
+          "850286": 2025,
+          "953772": 2024,
+          "954876": 2025,
+          "970920": 2023,
+          "993767": 2025
+        }
+      },
+      "scale_adjusted": {},
+      "scale_adjusted_coverage": {
+        "banks": 0,
+        "exclusions": {
+          "missing_rwa": 56,
+          "unknown_unit": 514
+        },
+        "observations": 0,
+        "years": []
+      },
+      "size_bands": {},
+      "size_cohorts": [],
+      "trends": []
+    },
+    "Total RWAs": {
+      "coverage": {
+        "banks": 0,
+        "known_unit_banks": 0,
+        "known_unit_observations": 0,
+        "observations": 529,
+        "unknown_unit_observations": 529,
+        "unstable_unit_or_basis_bank_ids": [],
+        "unstable_unit_or_basis_banks": 0,
+        "years": []
+      },
+      "latest": {
+        "metadata": {
+          "1004742": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "106054": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "114216": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "114724": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "119250": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "119256": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "119278": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121873": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121878": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "121882": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "121885": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122088": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122093": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "122261": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122287": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "122702": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124269": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "124543": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "124579": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "124659": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "124823": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "131818": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "135327": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "143336": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "144036": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "146702": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "149025": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "151427": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "155240": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "165556": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "169628": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "171532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "172330": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "178737": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "183100": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "183722": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "188585": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "191240": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "195430": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204424": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204439": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204456": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204463": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204469": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204471": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204478": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204479": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204503": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204508": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204520": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204532": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "204550": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204566": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204570": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204571": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "204574": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "204601": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "207380": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "207381": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "207701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208019": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "208020": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "216772": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "219523": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "221156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "222030": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "223268": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "223304": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "229148": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "451720": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "454750": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "455378": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "459701": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "464292": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "466577": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "467410": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "475346": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "478415": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "488982": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "502704": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "512956": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "514744": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "530504": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "541910": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "543146": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "575225": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "579415": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "601551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "604551": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "606934": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "629564": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "661960": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "671140": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "695048": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "716167": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "730166": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "730427": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "738741": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "740551": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "754568": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "757156": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "759676": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "763256": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "765112": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "800542": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "805574": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "806852": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "815220": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "817008": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "821851": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "834822": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "848291": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "849404": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "849724": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "850286": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "953772": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
+          "954876": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          },
+          "970920": {
+            "amount_unit": null,
+            "reporting_basis": "consolidated_group"
+          },
+          "993767": {
+            "amount_unit": null,
+            "reporting_basis": "entity"
+          }
+        },
+        "values": {
+          "1004742": 3087.0,
+          "106054": 67231.0,
+          "114216": 112340.0,
+          "114724": 17385.0,
+          "119250": 1373.096,
+          "119256": 2790.7,
+          "119278": 194300.0,
+          "121873": 29742.0,
+          "121878": 133749.0,
+          "121882": 21457.0,
+          "121885": 4950.8,
+          "122088": 6020.0,
+          "122093": 2289414.0,
+          "122261": 4401004.0,
+          "122287": 10982.0,
+          "122702": 222247.0,
+          "124269": 160.0,
+          "124543": 12834.0,
+          "124579": 1041.0,
+          "124659": 14824.5,
+          "124772": 1569.1,
+          "124823": 14902.7,
+          "131818": 1618.4,
+          "135327": 372640.0,
+          "143336": 1782645.0,
+          "144036": 1523.7,
+          "146702": 1525.9,
+          "149025": 3486.256,
+          "151427": 3202921.0,
+          "155240": 169516391.0,
+          "165556": 801.0,
+          "169628": 82357.0,
+          "171532": 2624404.0,
+          "172330": 20177.0,
+          "178737": 277971.0,
+          "183100": 1047.0,
+          "183722": 473.0,
+          "188585": 383024.0,
+          "191240": 11646331.0,
+          "195430": 1586014.0,
+          "204424": 124856.0,
+          "204439": 930.2,
+          "204456": 619414.0,
+          "204463": 2785964.0,
+          "204469": 9646.0,
+          "204471": 700374.0,
+          "204478": 47333.0,
+          "204479": 1083333.0,
+          "204503": 7271.6,
+          "204508": 25253.0,
+          "204520": 1047061.0,
+          "204532": 8110.0,
+          "204550": 2827.5,
+          "204564": 1924184.0,
+          "204566": 103473.0,
+          "204570": 1065248.0,
+          "204571": 613559.0,
+          "204574": 9952.2,
+          "204601": 2949233.0,
+          "207380": 466000.0,
+          "207381": 412732000.0,
+          "207701": 240287.0,
+          "208019": 140.8,
+          "208020": 373987.1,
+          "216772": 1395598.0,
+          "219523": 294.9,
+          "221156": 2073.2,
+          "222030": 675668.0,
+          "223268": 1649.7,
+          "223304": 26251.7,
+          "229148": 1307.8,
+          "451720": 1370.7,
+          "454750": 235076.0,
+          "455378": 150420.0,
+          "459701": 678.6,
+          "464292": 1170.428,
+          "466577": 693.154,
+          "467410": 1008110.0,
+          "475346": 636.7,
+          "478415": 2375798.8,
+          "488982": 6437.0,
+          "502704": 274069.8,
+          "512956": 8180.0,
+          "514744": 70733.0,
+          "530504": 12541.7,
+          "541910": 634489.0,
+          "543146": 9150116.0,
+          "575225": 7855.0,
+          "579415": 1138000.0,
+          "601551": 317521.3,
+          "604551": 8613.2,
+          "606934": 361317.0,
+          "629564": 6363514.0,
+          "661960": 2379300.0,
+          "671140": 141317.0,
+          "695048": 127359.4,
+          "716167": 392607.0,
+          "730166": 3930308.0,
+          "730427": 2071182.0,
+          "738741": 1105780.0,
+          "740551": 1233321.0,
+          "754568": 266.0,
+          "757156": 1320.25,
+          "759676": 85065.0,
+          "763256": 22442.0,
+          "765112": 117463.0,
+          "800542": 3364.0,
+          "805574": 574.7,
+          "806852": 12309.0,
+          "815220": 5247000.0,
+          "817008": 908207.0,
+          "821851": 2422216.0,
+          "834822": 426705.0,
+          "848291": 623607.0,
+          "849404": 356376.0,
+          "849724": 281756.0,
+          "850286": 548458.0,
+          "953772": 30590678.0,
+          "954876": 141336.1,
+          "970920": 1879.0,
+          "993767": 561468.0
+        },
+        "years": {
+          "1004742": 2024,
+          "106054": 2025,
+          "114216": 2025,
+          "114724": 2025,
+          "119250": 2024,
+          "119256": 2024,
+          "119278": 2025,
+          "121873": 2026,
+          "121878": 2025,
+          "121882": 2025,
+          "121885": 2024,
+          "122088": 2025,
+          "122093": 2025,
+          "122261": 2025,
+          "122287": 2025,
+          "122702": 2025,
+          "124269": 2025,
+          "124543": 2025,
+          "124579": 2025,
+          "124659": 2025,
+          "124772": 2024,
+          "124823": 2025,
+          "131818": 2025,
+          "135327": 2025,
+          "143336": 2024,
+          "144036": 2022,
+          "146702": 2025,
+          "149025": 2024,
+          "151427": 2025,
+          "155240": 2025,
+          "165556": 2025,
+          "169628": 2025,
+          "171532": 2025,
+          "172330": 2026,
+          "178737": 2025,
+          "183100": 2025,
+          "183722": 2024,
+          "188585": 2025,
+          "191240": 2025,
+          "195430": 2025,
+          "204424": 2025,
+          "204439": 2025,
+          "204456": 2025,
+          "204463": 2025,
+          "204469": 2025,
+          "204471": 2024,
+          "204478": 2024,
+          "204479": 2025,
+          "204503": 2025,
+          "204508": 2023,
+          "204520": 2024,
+          "204532": 2025,
+          "204550": 2025,
+          "204564": 2025,
+          "204566": 2025,
+          "204570": 2025,
+          "204571": 2024,
+          "204574": 2024,
+          "204601": 2025,
+          "207380": 2024,
+          "207381": 2023,
+          "207701": 2025,
+          "208019": 2025,
+          "208020": 2021,
+          "216772": 2024,
+          "219523": 2025,
+          "221156": 2025,
+          "222030": 2025,
+          "223268": 2025,
+          "223304": 2025,
+          "229148": 2024,
+          "451720": 2025,
+          "454750": 2025,
+          "455378": 2025,
+          "459701": 2026,
+          "464292": 2025,
+          "466577": 2025,
+          "467410": 2025,
+          "475346": 2024,
+          "478415": 2023,
+          "488982": 2025,
+          "502704": 2025,
+          "512956": 2025,
+          "514744": 2025,
+          "530504": 2025,
+          "541910": 2025,
+          "543146": 2025,
+          "575225": 2025,
+          "579415": 2025,
+          "601551": 2025,
+          "604551": 2025,
+          "606934": 2023,
+          "629564": 2025,
+          "661960": 2025,
+          "671140": 2026,
+          "695048": 2024,
+          "716167": 2025,
+          "730166": 2026,
+          "730427": 2025,
+          "738741": 2025,
+          "740551": 2025,
+          "754568": 2025,
+          "757156": 2025,
+          "759676": 2025,
+          "763256": 2025,
+          "765112": 2025,
+          "800542": 2025,
+          "805574": 2023,
+          "806852": 2025,
+          "815220": 2024,
+          "817008": 2025,
+          "821851": 2025,
+          "834822": 2023,
+          "848291": 2025,
+          "849404": 2026,
+          "849724": 2024,
+          "850286": 2025,
+          "953772": 2024,
+          "954876": 2025,
+          "970920": 2023,
+          "993767": 2025
+        }
+      },
+      "size_bands": {},
+      "size_cohorts": [],
+      "trends": []
+    }
+  },
+  "metadata": {
+    "metrics": [
+      "CET1 Capital",
+      "Tier 1 Capital",
+      "Total Capital",
+      "Total RWAs"
+    ],
+    "source": "/Users/armaan/code/katalysis/research/insights.db"
+  }
+}

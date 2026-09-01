@@ -1,0 +1,146 @@
+bank_id,frn,bank,source_filename_bank,source_workbook,workbook_kind,parent_group_id,parent_group,parent_group_status_caveat
+149025,149025,ABC International Bank Plc,ABC INTERNATIONAL BANK,ABC INTERNATIONAL BANK FINANCIALS.xlsx,pillar3_only,arab_banking_corporation_bank_abc,Arab Banking Corporation / Bank ABC,"confirmed; FY2023–24 consolidated, earlier solo"
+478415,478415,The Access Bank UK Limited,ACCESS BANK UK,ACCESS BANK UK FINANCIALS.xlsx,full,access_holdings_plc,Access Holdings Plc,confirmed; UK entity/group basis varies by year
+1004742,1004742,Afin Bank Limited,AFIN BANK,AFIN BANK FINANCIALS.xlsx,full,waica_group,WAICA group,confirmed; standalone bank metrics
+122088,122088,AIB GROUP (UK) P.L.C.,AIB GROUP UK,AIB GROUP UK FINANCIALS.xlsx,full,aib_group_plc,AIB Group plc,confirmed; UK Group basis
+204503,204503,Aldermore Bank Plc,ALDERMORE,ALDERMORE FINANCIALS.xlsx,full,aldermore_group_plc,Aldermore Group plc,confirmed; Bank vs Group columns retained
+821851,821851,ALLICA BANK LIMITED,ALLICA,ALLICA FINANCIALS.xlsx,full,allica_group,Allica group,confirmed non-single-parent/institutional-investor ownership; no single ultimate parent
+135327,135327,Alpha Bank London Limited,ALPHA BANK LONDON,ALPHA BANK LONDON FINANCIALS.xlsx,full,alpha_bank_group,Alpha Bank group,confirmed from 20 Apr 2021; prior Alpha holding-company identities are historical
+229148,229148,ALRAYAN BANK LIMITED,ALRAYAN BANK,ALRAYAN BANK FINANCIALS.xlsx,full,alrayan_bank_q_p_s_c,AlRayan Bank Q.P.S.C.,confirmed; UK entity basis
+446951,446951,ARAB BANK EUROPE PLC,ARAB BANK EUROPE,ARAB BANK EUROPE FINANCIALS.xlsx,full,arab_bank_group,Arab Bank Group,confirmed; UK entity basis
+143336,143336,"ARBUTHNOT LATHAM & CO., LIMITED",ARBUTHNOT LATHAM,ARBUTHNOT LATHAM FINANCIALS.xlsx,full,arbuthnot_banking_group_plc,Arbuthnot Banking Group plc,"confirmed; Bank Group cash flow, ABG P3 caveat"
+661960,661960,Atom Bank PLC,ATOM BANK,ATOM BANK FINANCIALS.xlsx,full,atom_group,Atom group,confirmed; parent inserted during series
+204424,204424,Bank Mandiri (Europe) Limited,BANK MANDIRI EUROPE,BANK MANDIRI EUROPE FINANCIALS.xlsx,pillar3_only,bank_mandiri_group,Bank Mandiri group,confirmed; UK entity basis
+454750,454750,Bank of Africa United Kingdom Plc,BANK OF AFRICA UK,BANK OF AFRICA UK FINANCIALS.xlsx,full,bank_of_africa_bmce_group,Bank of Africa / BMCE group,confirmed; former BMCE/MediCapital names
+219523,219523,Bank of Beirut (UK) Ltd,BANK OF BEIRUT UK,BANK OF BEIRUT UK FINANCIALS.xlsx,full,bank_of_beirut_group,Bank of Beirut group,confirmed; UK entity basis
+514744,514744,BANK OF CEYLON (UK) LIMITED,BANK OF CEYLON UK,BANK OF CEYLON UK FINANCIALS.xlsx,full,bank_of_ceylon_group,Bank of Ceylon group,confirmed; UK entity basis
+467410,467410,BANK OF CHINA (UK) LIMITED,BANK OF CHINA UK,BANK OF CHINA UK FINANCIALS.xlsx,full,bank_of_china_group,Bank of China group,confirmed; state-owned parent
+512956,512956,Bank of Ireland (UK) Plc,BANK OF IRELAND UK,BANK OF IRELAND UK FINANCIALS.xlsx,full,bank_of_ireland_group,Bank of Ireland group,confirmed; consolidated UK Group basis
+169628,169628,Bank of Scotland plc,BANK OF SCOTLAND,BANK OF SCOTLAND FINANCIALS.xlsx,full,lloyds_banking_group,Lloyds Banking Group,"confirmed; distinct legal bank, Bank-only P3 basis"
+455378,455378,Bank of the Philippine Islands (Europe) PLC,BANK OF THE PHILIPPINE ISLANDS EUROPE,BANK OF THE PHILIPPINE ISLANDS EUROPE FINANCIALS.xlsx,pillar3_only,bpi_group,BPI group,confirmed; distinct from PNB Europe
+204488,204488,Bank Saderat Plc,BANK SADERAT,BANK SADERAT FINANCIALS.xlsx,full,bank_saderat_iran_group,Bank Saderat Iran group,confirmed; UK entity basis
+208019,208019,Bank Sepah International Plc,BANK SEPAH INTERNATIONAL,BANK SEPAH INTERNATIONAL FINANCIALS.xlsx,full,bank_sepah_group,Bank Sepah group,confirmed; EUR source converted to GBP
+122702,122702,Barclays Bank Plc,BARCLAYS BANK PLC,BARCLAYS BANK PLC FINANCIALS.xlsx,full,barclays_plc,Barclays plc,"confirmed; non-ring-fenced entity/group, distinct from Barclays UK"
+759676,759676,Barclays Bank UK PLC,BARCLAYS,BARCLAYS FINANCIALS.xlsx,full,barclays_bank_uk_group_barclays_plc,Barclays Bank UK Group / Barclays plc,"confirmed; ring-fenced subgroup, not wider Barclays Group"
+204478,204478,BIRMINGHAM BANK LIMITED,BIRMINGHAM BANK,BIRMINGHAM BANK FINANCIALS.xlsx,full,better_home_and_finance_group,Better Home and Finance group,confirmed from 22 Dec 2025; pre-acquisition period had no registrable parent
+464292,464292,Bank of London and The Middle East plc,BLME,BLME FINANCIALS.xlsx,full,boubyan_blme_group,Boubyan / BLME group,"confirmed; standalone BLME P3, not wider holdings"
+183100,183100,The Bank of New York Mellon (International) Limited,BNY MELLON INTERNATIONAL,BNY MELLON INTERNATIONAL FINANCIALS.xlsx,pillar3_only,bny_mellon_group,BNY Mellon group,confirmed; entity-level figures
+204564,204564,BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY,BRITISH ARAB COMMERCIAL BANK,BRITISH ARAB COMMERCIAL BANK FINANCIALS.xlsx,full,bacb_consortium,BACB consortium,confirmed consortium; no single parent
+124548,124548,BROWN SHIPLEY & CO. LIMITED,BROWN SHIPLEY,BROWN SHIPLEY FINANCIALS.xlsx,full,quintet_group,Quintet group,confirmed; entity-level cash flow
+122093,122093,C. HOARE & CO.,C HOARE AND CO,C HOARE AND CO FINANCIALS.xlsx,full,c_hoare_co,C. Hoare & Co.,confirmed private/family ownership; no corporate parent
+204451,204451,CAF BANK LIMITED,CAF BANK,CAF BANK FINANCIALS.xlsx,full,caf_group,CAF group,confirmed; own basis
+579415,579415,Cambridge & Counties Bank Limited,CAMBRIDGE AND COUNTIES BANK,CAMBRIDGE AND COUNTIES BANK FINANCIALS.xlsx,full,ccb_joint_ownership,CCB joint ownership,confirmed; no subsidiaries
+541910,541910,Castle Trust Capital PLC,CASTLE TRUST CAPITAL,CASTLE TRUST CAPITAL FINANCIALS.xlsx,full,castle_trust_group,Castle Trust group,confirmed; solo bank figures
+178737,178737,Cater Allen Limited,CATER ALLEN,CATER ALLEN FINANCIALS.xlsx,full,banco_santander_s_a,Banco Santander S.A.,confirmed; intermediate chain retained
+207701,207701,The Charity Bank Limited,CHARITY BANK,CHARITY BANK FINANCIALS.xlsx,full,charity_bank,Charity Bank,confirmed standalone UK-owned entity
+494549,494549,Charter Court Financial Services Limited,CHARTER COURT FINANCIAL SERVICES,CHARTER COURT FINANCIAL SERVICES FINANCIALS.xlsx,full,osb_group,OSB Group,confirmed; direct parent changed
+740551,740551,Chetwood Financial Limited,CHETWOOD,CHETWOOD FINANCIALS.xlsx,full,chetwood_group,Chetwood group,"confirmed; FY2021 solo, later Group"
+805574,805574,Citibank UK Limited,CITIBANK UK,CITIBANK UK FINANCIALS.xlsx,pillar3_only,citibank_uk_limited,Citibank UK Limited,confirmed standalone reporting entity; distinct from Citi branches
+754568,754568,ClearBank Limited,CLEARBANK,CLEARBANK FINANCIALS.xlsx,full,cb_growth_holdings_limited_clearbank_group,CB Growth Holdings Limited / ClearBank group,confirmed chain from 8 Dec 2023
+124750,124750,Close Brothers Limited,CLOSE BROTHERS,CLOSE BROTHERS FINANCIALS.xlsx,full,close_brothers_group,Close Brothers group,confirmed; workbook uses Close Brothers Limited Group
+121873,121873,Clydesdale Bank Plc,CLYDESDALE,CLYDESDALE FINANCIALS.xlsx,full,nationwide_group_current,Nationwide group (current),historical change; FY2025 transition period
+121885,121885,THE CO-OPERATIVE BANK P.L.C.,CO-OPERATIVE BANK,CO-OPERATIVE BANK FINANCIALS.xlsx,full,coventry_group_current,Coventry group (current),acquisition effective date matters; 2024 still prior perimeter
+122287,122287,Coutts & Company,COUTTS,COUTTS FINANCIALS.xlsx,full,natwest_group,NatWest Group,"confirmed; entity basis, ring-fenced subgroup caveat"
+146702,146702,CREDIT SUISSE INTERNATIONAL,CREDIT SUISSE INTERNATIONAL,CREDIT SUISSE INTERNATIONAL FINANCIALS.xlsx,full,ubs_group_current,UBS group (current),acquisition/wind-down transition
+124269,124269,Credit Suisse (UK) Limited,CREDIT SUISSE UK,CREDIT SUISSE UK FINANCIALS.xlsx,full,ubs_group_current,UBS group (current),acquisition and 2025 Part VII transfer
+204456,204456,Crown Agents Bank Limited,CROWN AGENTS BANK,CROWN AGENTS BANK FINANCIALS.xlsx,full,cab_payments_group,CAB Payments group,confirmed; bank-solo workbook basis
+575105,575105,Cynergy Bank Plc,CYNERGY BANK,CYNERGY BANK FINANCIALS.xlsx,full,cynergy_group,Cynergy group,confirmed; former Bank of Cyprus UK
+140848,140848,DB UK Bank Limited,DB UK BANK,DB UK BANK FINANCIALS.xlsx,pillar3_only,deutsche_bank_group,Deutsche Bank group,confirmed chain; UK entity basis
+848291,848291,DF Capital Bank Limited,DF CAPITAL BANK,DF CAPITAL BANK FINANCIALS.xlsx,full,df_capital_group,DF Capital group,confirmed; Group consolidated
+144036,144036,EFG Private Bank Limited,EFG PRIVATE BANK,EFG PRIVATE BANK FINANCIALS.xlsx,full,efg_international_group,EFG International group,confirmed; UK statutory entity data
+204469,204469,FCE Bank Plc,FCE BANK,FCE BANK FINANCIALS.xlsx,full,ford_motor_company_group,Ford Motor Company group,confirmed; parent transaction caveat in 2024
+502704,502704,FCMB Bank (UK) Limited,FCMB UK,FCMB UK FINANCIALS.xlsx,full,fcmb_group,FCMB group,confirmed; UK entity figures
+400712,400712,FidBank UK Limited,FIDBANK UK,FIDBANK UK FINANCIALS.xlsx,full,fidelity_bank_group,Fidelity Bank group,"confirmed; wholly owned, UK-only figures"
+216772,216772,FirstBank UK Limited,FIRSTBANK UK,FIRSTBANK UK FINANCIALS.xlsx,full,firstbank_group,FirstBank group,confirmed; formerly FBN Bank UK; 2022 FX restatement
+475346,475346,Gatehouse Bank Plc,GATEHOUSE BANK,GATEHOUSE BANK FINANCIALS.xlsx,full,kia_securities_house_controlled_gatehouse_group,KIA / Securities House-controlled Gatehouse group,confirmed; consolidated Gatehouse figures
+850286,850286,GB Bank Limited,GB BANK,GB BANK FINANCIALS.xlsx,pillar3_only,gb_bank,GB Bank,confirmed standalone/non-single-parent ownership; SilverRock is separate regulatory scope
+204471,204471,GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY,GHANA INTERNATIONAL BANK,GHANA INTERNATIONAL BANK FINANCIALS.xlsx,full,ghana_international_bank,Ghana International Bank,confirmed state-owned; no subsidiaries
+124659,124659,Goldman Sachs International Bank,GOLDMAN SACHS INTERNATIONAL BANK,GOLDMAN SACHS INTERNATIONAL BANK FINANCIALS.xlsx,full,the_goldman_sachs_group_inc,"The Goldman Sachs Group, Inc.",confirmed; GSIB breakout within GSG UK disclosure
+970920,970920,Griffin Bank Ltd,GRIFFIN BANK,GRIFFIN BANK FINANCIALS.xlsx,full,griffin_bank,Griffin Bank,confirmed standalone/non-single-parent ownership
+466611,466611,Guaranty Trust Bank (UK) Limited,GUARANTY TRUST BANK UK,GUARANTY TRUST BANK UK FINANCIALS.xlsx,full,gtco_plc,GTCO Plc,confirmed chain; UK entity figures
+124772,124772,Gulf International Bank (UK) Limited,GULF INTERNATIONAL BANK UK,GULF INTERNATIONAL BANK UK FINANCIALS.xlsx,full,gib_group,GIB group,confirmed; UK standalone accounts
+627671,627671,Habib Bank Zurich Plc,HABIB BANK ZURICH,HABIB BANK ZURICH FINANCIALS.xlsx,full,habib_bank_zurich_group,Habib Bank Zurich group,confirmed; immediate = ultimate parent
+606934,606934,HAMPDEN & CO PLC,HAMPDEN & CO,HAMPDEN & CO FINANCIALS.xlsx,full,hampden_co,Hampden & Co.,confirmed standalone; investors are not a parent
+204601,204601,Hampshire Trust Bank Plc,HAMPSHIRE TRUST BANK,HAMPSHIRE TRUST BANK FINANCIALS.xlsx,full,aso_managed_funds_htb_group,ASO-managed funds / HTB group,confirmed; Bank cash flow vs Group liquidity basis
+806852,806852,Handelsbanken plc,HANDELSBANKEN,HANDELSBANKEN FINANCIALS.xlsx,full,handelsbanken_group,Handelsbanken group,confirmed; UK Group figures
+204481,204481,Havin Bank Ltd,HAVIN BANK,HAVIN BANK FINANCIALS.xlsx,full,cuban_state_bank_group,Cuban state-bank group,confirmed controlling parent; minority state-bank interests
+188585,188585,HBL BANK UK LIMITED,HBL BANK UK,HBL BANK UK FINANCIALS.xlsx,full,aga_khan_fund_hbl_group,Aga Khan Fund / HBL group,confirmed chain; UK-only metrics
+114216,114216,HSBC Bank Plc,HSBC BANK PLC,HSBC BANK PLC FINANCIALS.xlsx,full,hsbc_group,HSBC group,confirmed; legacy non-ring-fenced entity
+543146,543146,HSBC INNOVATION BANK LIMITED,HSBC INNOVATION BANK,HSBC INNOVATION BANK FINANCIALS.xlsx,full,hsbc_group,HSBC group,confirmed; former Silicon Valley Bank UK
+765112,765112,HSBC UK Bank Plc,HSBC UK BANK PLC,HSBC UK BANK PLC FINANCIALS.xlsx,full,hsbc_group,HSBC group,"confirmed; ring-fenced entity, distinct from HSBC Bank plc"
+222030,222030,ICBC (London) plc,ICBC (LONDON) PLC,ICBC (LONDON) PLC FINANCIALS.xlsx,full,icbc_group,ICBC group,confirmed; UK solo basis
+124823,124823,ICBC Standard Bank Plc,ICBC STANDARD BANK PLC,ICBC STANDARD BANK PLC FINANCIALS.xlsx,full,icbc_standard_bank_jv,ICBC Standard Bank JV,confirmed joint venture; separate from ICBC London
+223268,223268,ICICI Bank UK Plc,ICICI BANK UK,ICICI BANK UK FINANCIALS.xlsx,pillar3_only,icici_group,ICICI group,confirmed wholly owned; UK entity basis
+716167,716167,IFAST GLOBAL BANK LIMITED,IFAST GLOBAL BANK LIMITED,IFAST GLOBAL BANK LIMITED FINANCIALS.xlsx,full,ifast_group,iFAST group,confirmed
+172330,172330,Investec Bank PLC,INVESTEC BANK PLC,INVESTEC BANK PLC FINANCIALS.xlsx,full,investec_group,Investec group,confirmed dual-listed structure
+575225,575225,Itau BBA International PLC,ITAU BBA INTERNATIONAL,ITAU BBA INTERNATIONAL FINANCIALS.xlsx,full,ita_group,Itaú group,confirmed
+183722,183722,Jordan International Bank Plc,JORDAN INTERNATIONAL BANK,JORDAN INTERNATIONAL BANK FINANCIALS.xlsx,full,jib_joint_ownership,JIB joint ownership,confirmed two-parent structure; no single parent
+124579,124579,J.P. Morgan Europe Limited,JP MORGAN EUROPE,JP MORGAN EUROPE FINANCIALS.xlsx,pillar3_only,jpmorgan_chase_group,JPMorgan Chase group,confirmed; distinct legal entity from JPMS
+155240,155240,J.P. Morgan Securities plc,JP MORGAN SECURITIES,JP MORGAN SECURITIES FINANCIALS.xlsx,pillar3_only,jpmorgan_chase_group,JPMorgan Chase group,confirmed; distinct from JPM Europe
+204439,204439,Julian Hodge Bank Limited,JULIAN HODGE BANK,JULIAN HODGE BANK FINANCIALS.xlsx,pillar3_only,the_carlyle_trust_jersey_limited,The Carlyle Trust (Jersey) Limited,confirmed private chain
+204490,204490,KEXIM BANK (UK) LIMITED,KEXIM BANK UK,KEXIM BANK UK FINANCIALS.xlsx,pillar3_only,kexim_korean_state_group,KEXIM / Korean state group,confirmed wholly owned
+400972,400972,KINGDOM BANK LIMITED,KINGDOM BANK,KINGDOM BANK FINANCIALS.xlsx,full,kingdom_group,Kingdom group,"confirmed; Stewardship is investor, not parent"
+953772,953772,Kroo Bank Ltd,KROO BANK,KROO BANK FINANCIALS.xlsx,full,kroo_bank,Kroo Bank,conservative standalone; no corporate parent
+131818,131818,KUWAIT FINANCE HOUSE PLC,KUWAIT FINANCE HOUSE,KUWAIT FINANCE HOUSE FINANCIALS.xlsx,full,kuwait_finance_house_group,Kuwait Finance House group,historical conversion/ownership change in 2024
+993767,993767,LHV BANK LIMITED,LHV,LHV FINANCIALS.xlsx,full,lhv_group,LHV group,confirmed Estonian parent
+763256,763256,Lloyds Bank Corporate Markets Plc,LLOYDS BANK CORPORATE MARKETS,LLOYDS BANK CORPORATE MARKETS FINANCIALS.xlsx,full,lloyds_banking_group,Lloyds Banking Group,confirmed; non-ring-fenced subgroup
+119278,119278,Lloyds Bank PLC,LLOYDS BANK,LLOYDS BANK FINANCIALS.xlsx,full,lloyds_banking_group,Lloyds Banking Group,confirmed; distinct from Bank of Scotland and LBCM
+151427,151427,MARKS AND SPENCER FINANCIAL SERVICES PLC,MARKS AND SPENCER FINANCIAL SERVICES,MARKS AND SPENCER FINANCIAL SERVICES FINANCIALS.xlsx,full,hsbc_group,HSBC group,confirmed; HSBC UK controls; entity remains distinct
+207380,207380,Melli Bank plc,MELLI BANK,MELLI BANK FINANCIALS.xlsx,full,bank_melli_iran_iranian_state,Bank Melli Iran / Iranian state,confirmed; UK standalone figures
+204508,204508,Methodist Chapel Aid Limited,METHODIST CHAPEL AID,METHODIST CHAPEL AID FINANCIALS.xlsx,full,methodist_chapel_aid,Methodist Chapel Aid,conservative standalone; church relationship is not a corporate parent
+488982,488982,Metro Bank PLC,METRO BANK,METRO BANK FINANCIALS.xlsx,full,metro_bank_group,Metro Bank group,historical parent insertion
+119256,119256,Mizuho International plc,MIZUHO INTERNATIONAL,MIZUHO INTERNATIONAL FINANCIALS.xlsx,full,mizuho_group,Mizuho group,confirmed chain
+849724,849724,MONUMENT BANK LIMITED,MONUMENT BANK,MONUMENT BANK FINANCIALS.xlsx,full,monument_bank_group_internal_reporting_group_only,Monument Bank group (internal reporting group only),confirmed standalone/non-single-parent ownership
+730427,730427,MONZO BANK LIMITED,MONZO,MONZO FINANCIALS.xlsx,full,monzo_group,Monzo group,historical holding-company insertion
+195430,195430,Morgan Stanley Bank International Limited,MORGAN STANLEY BANK INTERNATIONAL,MORGAN STANLEY BANK INTERNATIONAL FINANCIALS.xlsx,pillar3_only,morgan_stanley_group,Morgan Stanley group,confirmed
+204520,204520,National Bank of Egypt (UK) Limited,NATIONAL BANK OF EGYPT UK,NATIONAL BANK OF EGYPT UK FINANCIALS.xlsx,full,nbe_group,NBE group,confirmed
+171532,171532,National Bank of Kuwait (International) Plc,NATIONAL BANK OF KUWAIT INTERNATIONAL,NATIONAL BANK OF KUWAIT INTERNATIONAL FINANCIALS.xlsx,pillar3_only,nbk_group,NBK group,confirmed
+121878,121878,NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY,NATIONAL WESTMINSTER BANK PLC,NATIONAL WESTMINSTER BANK PLC FINANCIALS.xlsx,full,natwest_group,NatWest group,confirmed; DoLSub liquidity with RBS/Coutts
+121882,121882,NatWest Markets Plc,NATWEST MARKETS,NATWEST MARKETS FINANCIALS.xlsx,full,natwest_group,NatWest group,confirmed; distinct investment-bank entity
+204419,204419,Nomura Bank International Plc.,NOMURA BANK INTERNATIONAL,NOMURA BANK INTERNATIONAL FINANCIALS.xlsx,full,nomura_group,Nomura group,confirmed
+122261,122261,Northern Bank Limited,NORTHERN BANK,NORTHERN BANK FINANCIALS.xlsx,full,danske_bank_group,Danske Bank group,confirmed
+629564,629564,OakNorth Bank plc,OAKNORTH BANK,OAKNORTH BANK FINANCIALS.xlsx,full,oaknorth_group,OakNorth group,confirmed internal group; no external parent
+530504,530504,OneSavings Bank Plc,ONESAVINGS,ONESAVINGS FINANCIALS.xlsx,full,osb_group,OSB group,confirmed
+834822,834822,Oxbury Bank PLC,OXBURY,OXBURY FINANCIALS.xlsx,full,oxbury_group,Oxbury group,historical parent change
+604551,604551,Paragon Bank Plc,PARAGON,PARAGON FINANCIALS.xlsx,full,paragon_group,Paragon group,confirmed
+956138,956138,PERENNA BANK PLC,PERENNA,PERENNA FINANCIALS.xlsx,full,perenna_group,Perenna group,confirmed
+208020,208020,Persia International Bank Plc,PERSIA INTERNATIONAL BANK,PERSIA INTERNATIONAL BANK FINANCIALS.xlsx,full,persia_joint_ownership,Persia joint ownership,confirmed two-parent structure; no single parent
+204532,204532,Philippine National Bank (Europe) Plc,PHILIPPINE NATIONAL BANK EUROPE,PHILIPPINE NATIONAL BANK EUROPE FINANCIALS.xlsx,pillar3_only,pnb_group,PNB group,confirmed
+459701,459701,Punjab National Bank (International) Limited,PUNJAB NATIONAL BANK INTERNATIONAL,PUNJAB NATIONAL BANK INTERNATIONAL FINANCIALS.xlsx,full,pnb_india_group,PNB India group,confirmed
+466577,466577,QIB (UK) Plc,QIB UK,QIB UK FINANCIALS.xlsx,full,qib_group,QIB group,confirmed
+116316,116316,Rathbones Investment Management Limited,RATHBONES INVESTMENT MANAGEMENT,RATHBONES INVESTMENT MANAGEMENT FINANCIALS.xlsx,full,rathbones_group,Rathbones group,confirmed
+124543,124543,RBC Europe Limited,RBC EUROPE,RBC EUROPE FINANCIALS.xlsx,full,rbc_group,RBC group,confirmed
+114724,114724,THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY,RBS,RBS FINANCIALS.xlsx,full,natwest_group,NatWest group,confirmed; distinct post-2018 legal lineage; DoLSub caveat
+815220,815220,RCI Bank UK Limited,RCI BANK UK,RCI BANK UK FINANCIALS.xlsx,full,renault_group,Renault group,confirmed chain; group rebrand
+849404,849404,RECOGNISE BANK LIMITED,RECOGNISE BANK,RECOGNISE BANK FINANCIALS.xlsx,full,recognise_bank,Recognise Bank,conservative standalone; historical City of London/Parasol links
+755924,755924,REDWOOD BANK LIMITED,REDWOOD BANK,REDWOOD BANK FINANCIALS.xlsx,full,redwood_group,Redwood group,confirmed
+204537,204537,RELIANCE BANK LIMITED,RELIANCE BANK,RELIANCE BANK FINANCIALS.xlsx,full,salvation_army_group,Salvation Army group,confirmed charitable ownership; not ordinary corporate parent
+146003,146003,Santander Financial Services plc,SANTANDER FINANCIAL SERVICES,SANTANDER FINANCIAL SERVICES FINANCIALS.xlsx,full,banco_santander_s_a,Banco Santander S.A.,confirmed; standalone SFS accounts
+106054,106054,Santander UK Plc,SANTANDER,SANTANDER FINANCIALS.xlsx,full,banco_santander_s_a,Banco Santander S.A.,confirmed; RFB Group basis
+144206,144206,SCHRODER & CO. LIMITED,SCHRODER,SCHRODER FINANCIALS.xlsx,full,schroders_group,Schroders group,confirmed; standalone company figures
+204550,204550,SECURE TRUST BANK PUBLIC LIMITED COMPANY,SECURE TRUST BANK,SECURE TRUST BANK FINANCIALS.xlsx,full,secure_trust_group,Secure Trust group,confirmed; Group cash flow/P3
+204574,204574,Shawbrook Bank Limited,SHAWBROOK,SHAWBROOK FINANCIALS.xlsx,full,shawbrook_group,Shawbrook group,confirmed; FY2025 Group-only P3 caveat
+223304,223304,SMBC Bank International plc,SMBC,SMBC FINANCIALS.xlsx,full,smbc_sumitomo_mitsui_financial_group,SMBC / Sumitomo Mitsui Financial Group,confirmed
+114276,114276,Standard Chartered Bank,STANDARD CHARTERED BANK,STANDARD CHARTERED BANK FINANCIALS.xlsx,full,standard_chartered_group,Standard Chartered group,confirmed
+730166,730166,Starling Bank Limited,STARLING,STARLING FINANCIALS.xlsx,full,starling_group,Starling group,historical holding-company insertion
+757156,757156,State Bank Of India (UK) Limited,STATE BANK OF INDIA UK,STATE BANK OF INDIA UK FINANCIALS.xlsx,pillar3_only,sbi_group,SBI group,confirmed wholly owned; UK standalone metrics
+954876,954876,StreamBank PLC,STREAMBANK,STREAMBANK FINANCIALS.xlsx,full,streambank,StreamBank,conservative standalone; no subsidiaries
+204479,204479,Tandem Bank Limited,TANDEM,TANDEM FINANCIALS.xlsx,full,tandem_group,Tandem group,"confirmed; cash flow solo, P3 Group"
+165556,165556,TD Bank Europe Limited,TD BANK EUROPE,TD BANK EUROPE FINANCIALS.xlsx,pillar3_only,td_group,TD group,confirmed
+930379,930379,The Bank of London Group Limited,THE BANK OF LONDON GROUP,THE BANK OF LONDON GROUP FINANCIALS.xlsx,full,bank_of_london_oplyse_group,Bank of London/Oplyse group,historical parent/name change; regulatory notice caveat
+832786,832786,THIS BANK LIMITED,THIS BANK,THIS BANK FINANCIALS.xlsx,full,this_bank,This Bank,conservative standalone; entity-level accounts
+817008,817008,Triodos Bank UK Limited,TRIODOS,TRIODOS FINANCIALS.xlsx,full,triodos_group,Triodos group,confirmed; UK entity-level figures
+191240,191240,TSB Bank plc,TSB,TSB FINANCIALS.xlsx,full,sabadell_group_historical,Sabadell group (historical),"Santander acquisition announced, not effective at FY2025"
+204566,204566,TURKISH BANK (UK) LIMITED,TURKISH BANK UK,TURKISH BANK UK FINANCIALS.xlsx,full,turkish_bank_group,Turkish Bank group,confirmed
+695048,695048,United Bank for Africa (UK) Limited,UBA UK,UBA UK FINANCIALS.xlsx,full,uba_group,UBA group,confirmed
+119250,119250,Union Bancaire Privée (UK) Limited,UNION BANCAIRE PRIVEE UK,UNION BANCAIRE PRIVEE UK FINANCIALS.xlsx,pillar3_only,union_bancaire_priv_e_group,Union Bancaire Privée group,confirmed; UK consolidation group scope
+601551,601551,UNION BANK OF INDIA (UK) LIMITED,UNION BANK OF INDIA UK,UNION BANK OF INDIA UK FINANCIALS.xlsx,full,union_bank_of_india_group,Union Bank of India group,confirmed
+207381,207381,United National Bank Limited,UNITED NATIONAL,UNITED NATIONAL FINANCIALS.xlsx,full,bestway_group_current,Bestway group (current),historical ownership change; 95.1% acquisition
+204463,204463,United Trust Bank Limited,UNITED TRUST BANK,UNITED TRUST BANK FINANCIALS.xlsx,pillar3_only,utb_partners_group,UTB Partners group,"confirmed; consolidated P3, not solo"
+204570,204570,Unity Trust Bank Plc,UNITY TRUST,UNITY TRUST FINANCIALS.xlsx,full,unity_trust_bank,Unity Trust Bank,confirmed no ultimate parent; extended entity basis
+221156,221156,Vanquis Bank Limited,VANQUIS,VANQUIS FINANCIALS.xlsx,full,vanquis_group,Vanquis group,confirmed; Group P3 includes subsidiaries
+738741,738741,Vida Bank Limited,VIDA,VIDA FINANCIALS.xlsx,full,vida_group,Vida group,confirmed; Group P3
+204571,204571,Weatherbys Bank Limited,WEATHERBYS,WEATHERBYS FINANCIALS.xlsx,full,weatherbys_group,Weatherbys group,confirmed; Group/Solo disclosures
+671140,671140,Zempler Bank Limited,ZEMPLER,ZEMPLER FINANCIALS.xlsx,full,zempler_bank,Zempler Bank,conservative standalone; group restructuring caveat
+451720,451720,Zenith Bank (UK) Limited,ZENITH,ZENITH FINANCIALS.xlsx,full,zenith_group,Zenith group,confirmed
+800542,800542,Zopa Bank Limited,ZOPA,ZOPA FINANCIALS.xlsx,full,zopa_group,Zopa group,confirmed; Bank and Group reporting bases separated

@@ -1,0 +1,362 @@
+{
+  "accessibility": {
+    "fallbacks": [
+      "use the HTML tables for accessible/print review",
+      "use the fixed PDF for controlled export",
+      "do not rely on report-page tooltips for screen-reader interpretation"
+    ],
+    "requirements": [
+      "descriptive visual titles",
+      "alt text for charts",
+      "keyboard-reachable slicers and navigation",
+      "logical tab order",
+      "no colour-only status",
+      "tables for every chart's key values"
+    ]
+  },
+  "authoritative_outputs": [
+    "research/insights.db",
+    "research/powerbi/semantic_model.json",
+    "uk_bank_insights.html",
+    "uk_bank_insights.pdf"
+  ],
+  "drillthrough": {
+    "fallback": "visible source-trace table; do not make tooltip content the only evidence",
+    "page": "investigate",
+    "required_fields": [
+      "bank_id",
+      "metric_id",
+      "period_id"
+    ]
+  },
+  "export_limits": [
+    "Power BI PDF export is not the controlled narrative output",
+    "hidden and tooltip pages may be absent from PDF export",
+    "bookmark, drill and scroll state may not survive export",
+    "use the generated HTML/PDF for the formal client pack"
+  ],
+  "generated_at": "2026-09-01T21:45:12.660734+00:00",
+  "governance": {
+    "deterministic_findings": "IN-009 outlier rows remain the official review screen and are exposed in finding_detail.csv.",
+    "exploratory_labels": [
+      "decomposition tree",
+      "key influencers",
+      "anomaly detection"
+    ],
+    "non_causal_warning": "Associations and detected anomalies are exploratory and non-causal; they are not compliance findings or evidence of weakness."
+  },
+  "navigation": {
+    "bookmarks": [
+      {
+        "name": "executive",
+        "page": "executive",
+        "preserves": [
+          "metric",
+          "period",
+          "basis",
+          "unit"
+        ]
+      },
+      {
+        "name": "method",
+        "page": "comparability",
+        "preserves": [
+          "metric",
+          "period",
+          "basis",
+          "quality"
+        ]
+      },
+      {
+        "name": "investigate",
+        "page": "investigate",
+        "preserves": [
+          "bank",
+          "metric",
+          "period",
+          "basis",
+          "unit"
+        ]
+      },
+      {
+        "name": "scale",
+        "page": "scale",
+        "preserves": [
+          "metric",
+          "period",
+          "basis",
+          "unit"
+        ]
+      }
+    ],
+    "default": "executive"
+  },
+  "pages": [
+    {
+      "bookmark": "executive",
+      "id": "executive",
+      "purpose": "Start with coverage, sample size, selected metric levels and reviewed findings.",
+      "title": "Executive snapshot",
+      "visuals": [
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE()",
+          "denominator": "all fact observations",
+          "fields": [],
+          "id": "kpi_numeric",
+          "interpretation_note": "",
+          "measures": [
+            "Numeric Observations"
+          ],
+          "title": "Numeric observations",
+          "type": "card"
+        },
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE() AND reporting_basis <> 'unknown'",
+          "denominator": "distinct banks in the selected metric/year/basis cohort",
+          "fields": [],
+          "id": "kpi_comparable_n",
+          "interpretation_note": "",
+          "measures": [
+            "Comparable N"
+          ],
+          "title": "Comparable N",
+          "type": "card"
+        },
+        {
+          "comparability_filter": "metric dimension only",
+          "denominator": "not applicable",
+          "fields": [
+            "dim_metric[metric]"
+          ],
+          "id": "metric_selector",
+          "interpretation_note": "",
+          "measures": [],
+          "title": "Selected metric",
+          "type": "field_parameter"
+        },
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE() AND reporting_basis <> 'unknown'",
+          "denominator": "selected metric/year/basis numeric observations",
+          "fields": [
+            "dim_metric[metric]",
+            "dim_bank[parent_group]"
+          ],
+          "id": "latest_levels",
+          "interpretation_note": "",
+          "measures": [
+            "Reported Value"
+          ],
+          "title": "Latest disclosed levels",
+          "type": "column"
+        },
+        {
+          "comparability_filter": "use finding_detail[mode] and finding_detail[comparability_status]",
+          "denominator": "rows in the IN-009 finding extract",
+          "fields": [
+            "finding_detail[metric]",
+            "finding_detail[bank]",
+            "finding_detail[reason]"
+          ],
+          "id": "reviewed_findings",
+          "interpretation_note": "A prompt for review is not a conclusion.",
+          "measures": [],
+          "title": "Deterministic review prompts",
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "bookmark": "method",
+      "id": "comparability",
+      "purpose": "Make the denominator, exclusions, source quality and basis visible before comparison.",
+      "title": "Comparability and coverage",
+      "visuals": [
+        {
+          "comparability_filter": "quality_id = 'numeric'; annual_eligible is visible as a slicer",
+          "denominator": "fact observations in the current metric/year/basis filter",
+          "fields": [
+            "dim_metric[metric]",
+            "dim_comparability[reporting_basis]"
+          ],
+          "id": "coverage_by_metric",
+          "interpretation_note": "",
+          "measures": [
+            "Numeric Observations",
+            "Comparable N",
+            "Observation Coverage %"
+          ],
+          "title": "Coverage by metric and basis",
+          "type": "matrix"
+        },
+        {
+          "comparability_filter": "do not treat missing or non-numeric as zero",
+          "denominator": "all fact observations in the selected metric/period",
+          "fields": [
+            "dim_metric[metric]",
+            "dim_quality[quality_status]"
+          ],
+          "id": "quality_mix",
+          "interpretation_note": "",
+          "measures": [
+            "Numeric Observations",
+            "Missing Observations",
+            "Non-numeric Disclosures"
+          ],
+          "title": "Disclosure quality mix",
+          "type": "stacked_bar"
+        },
+        {
+          "comparability_filter": "retain current bank/metric/period/quality filters",
+          "denominator": "selected fact observations",
+          "fields": [
+            "dim_bank[bank]",
+            "fact_observation[row_label]",
+            "dim_period[period_label]",
+            "dim_source[source_id]",
+            "fact_observation[source_note]"
+          ],
+          "id": "source_trace",
+          "interpretation_note": "",
+          "measures": [],
+          "title": "Source trace",
+          "type": "table"
+        }
+      ]
+    },
+    {
+      "bookmark": "investigate",
+      "id": "investigate",
+      "purpose": "Follow a selected observation into its source, peer, parent and time context.",
+      "title": "Exceptions and investigation",
+      "visuals": [
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE() AND reporting_basis <> 'unknown'",
+          "denominator": "numeric observations for one bank, metric and reporting basis",
+          "fields": [
+            "dim_period[fiscal_year]",
+            "fact_observation[value_numeric]"
+          ],
+          "id": "trend",
+          "interpretation_note": "Anomaly detection is exploratory and requires a sufficiently long comparable series.",
+          "measures": [
+            "Reported Value"
+          ],
+          "title": "Comparable annual trend",
+          "type": "line_anomaly"
+        },
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE() AND reporting_basis <> 'unknown'",
+          "denominator": "distinct numeric banks in one exact fiscal-year/basis/unit cohort",
+          "fields": [
+            "fact_observation[value_numeric]",
+            "dim_bank[bank]"
+          ],
+          "id": "distribution",
+          "interpretation_note": "Suppress percentile interpretation below the IN-016 minimum cohort.",
+          "measures": [
+            "Reported Value",
+            "Comparable N"
+          ],
+          "title": "Comparable distribution",
+          "type": "box_strip_percentile"
+        },
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE()",
+          "denominator": "selected fact observations",
+          "fields": [
+            "dim_metric[metric]",
+            "dim_period[fiscal_year]",
+            "dim_bank[parent_group]",
+            "dim_comparability[reporting_basis]",
+            "dim_unit[unit]",
+            "dim_quality[quality_status]"
+          ],
+          "id": "decomposition",
+          "interpretation_note": "AI splits are exploratory associations, not causal, compliance or prudential findings.",
+          "measures": [
+            "Reported Value",
+            "Numeric Observations"
+          ],
+          "title": "Exploratory contribution paths",
+          "type": "decomposition_tree"
+        },
+        {
+          "comparability_filter": "bank_id, metric_id and period_id are required drillthrough fields",
+          "denominator": "selected observation rows",
+          "fields": [
+            "dim_bank[bank]",
+            "dim_metric[metric]",
+            "dim_period[period_label]",
+            "fact_observation[value_raw]",
+            "dim_unit[unit]",
+            "dim_comparability[reporting_basis]",
+            "dim_source[source_id]",
+            "fact_observation[basis_note]",
+            "fact_observation[restatement_note]",
+            "fact_observation[source_note]"
+          ],
+          "id": "detail",
+          "interpretation_note": "",
+          "measures": [],
+          "title": "Bank / observation drillthrough",
+          "type": "drillthrough_table"
+        }
+      ]
+    },
+    {
+      "bookmark": "scale",
+      "id": "scale",
+      "purpose": "Explore absolute amounts without mixing units or reporting bases.",
+      "title": "Capital and RWA scale",
+      "visuals": [
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE() AND unit_id <> 'unknown'",
+          "denominator": "numeric observations within one metric/year/unit/basis cohort",
+          "fields": [
+            "dim_period[fiscal_year]",
+            "dim_metric[metric]",
+            "dim_unit[unit]"
+          ],
+          "id": "scale_trend",
+          "interpretation_note": "Amounts are not strength rankings; pair with the relevant ratio.",
+          "measures": [
+            "Reported Value"
+          ],
+          "title": "Capital and RWA amounts",
+          "type": "line"
+        },
+        {
+          "comparability_filter": "quality_id = 'numeric' AND annual_eligible = TRUE() AND unit_id <> 'unknown'",
+          "denominator": "numeric banks with matching unit and reporting basis",
+          "fields": [
+            "dim_metric[metric]",
+            "dim_unit[unit]",
+            "dim_bank[bank]"
+          ],
+          "id": "size_cohort",
+          "interpretation_note": "Do not infer financial strength from amount size.",
+          "measures": [
+            "Reported Value"
+          ],
+          "title": "Size-aware comparison",
+          "type": "scatter"
+        }
+      ]
+    }
+  ],
+  "report_schema_version": "1.0",
+  "semantic_model_schema_version": "1.0",
+  "source": "/Users/armaan/code/katalysis/research/insights.db",
+  "tooltip": {
+    "fields": [
+      "value_raw",
+      "period_label",
+      "unit",
+      "reporting_basis",
+      "source_id",
+      "annual_eligible",
+      "quality_id"
+    ],
+    "required_redundancy": "all caveats required for interpretation must also appear on the page or drillthrough"
+  }
+}

@@ -1,0 +1,5 @@
+quality_id,quality_status,is_comparable_candidate,description
+numeric,numeric,True,Parsed numeric annual observation.
+missing,missing,False,No value was disclosed in the source row.
+non_numeric,non_numeric_string,False,Text was disclosed but could not be parsed as a number.
+special_numeric,special_numeric,False,Special numeric marker; excluded from statistical benchmarking.
