@@ -1,6 +1,6 @@
 # Integrated Build Effort Review
 
-**Last updated 2026-09-01.** This document synthesizes the whole project across
+**Last updated 2026-09-02.** This document synthesizes the whole project across
 both of its phases and both of the concurrent sessions ("Claude" and "Codex")
 that built it — something neither `Build Effort Review.md` (bank-build phase,
 this session's own timing/token data) nor `Build Effort Review Codex.md`
@@ -32,13 +32,36 @@ concurrently with a claim-before-work discipline):
 **Final count: 145 of 148 banks in `Banks List 2608.xlsx` built** — 126 full
 13-sheet workbooks (Cash Flow Statement + 11 Pillar 3 metrics), 19 Pillar-3-only
 (no cash flow — FRS 101/102 exemption), plus a further subset later expanded to
-14 sheets with an Interim Pillar 3 tab. **3 banks genuinely skipped**: VTB
-Capital plc (under UK sanctions, in insolvency administration, not a going
-concern), Bank Of Baroda (UK) Limited (permanent FRS 102 cash-flow exemption
-plus zero quantitative Pillar 3 data in either Annual Report), and Revolut Bank
-UK Ltd (FRS 101 IAS 7 exemption, no standalone-entity Pillar 3 dataset —
-reassessed once at the user's request with a shorter window before being
-confirmed as a genuine skip either way).
+14 sheets with an Interim Pillar 3 tab. **3 banks genuinely skipped**, each
+verified against primary sources before being confirmed as a permanent skip
+rather than a time-boxed guess (full detail in `Build Effort Review.md`'s "The
+3 skipped banks" section):
+
+1. **VTB Capital plc** — under UK sanctions and in insolvency administration
+   since December 2022, with no accounts filed since. Not a data-availability
+   problem: the entity is not a going concern.
+2. **Bank Of Baroda (UK) Limited** — a permanent FRS 102 §7.1B cash-flow
+   exemption (wholly-owned subsidiary), plus zero quantitative Pillar 3 data
+   anywhere in either Annual Report reviewed (purely narrative capital
+   sections, no fallback to build a Pillar-3-only workbook from). In a
+   Solvent Wind Down since FY2024.
+3. **Revolut Bank UK Ltd** (FRN 981170, Companies House 12871051) — easy to
+   mistake for the well-known Revolut consumer app, but that's a *different
+   legal entity* (Revolut Ltd, company 08804411, incorporated 2013, an
+   e-money institution and out of scope for this project, which only covers
+   PRA-authorised banks). Revolut Bank UK Ltd is separate and much younger:
+   incorporated September 2020, granted its UK banking licence only in July
+   2024, and renamed to its current name as recently as March 2026. Its
+   FY2023–FY2025 accounts all claim the FRS 101 IAS 7 cash-flow exemption
+   (permanent — its parent, Revolut Group Holdings Ltd, files the
+   consolidated group cash-flow statement instead), FY2022 has no cash-flow
+   statement at all, and the only Pillar 3 disclosure found anywhere is
+   Revolut Group Holdings Ltd's own group-level one, not the standalone UK
+   banking entity's. Reassessed once already at a prior user's request with
+   a shorter FY2022–FY2025 window specifically to rule out the missing
+   FY2021 filing as the deciding factor — it wasn't; the double blocker held
+   regardless. Re-verified against live Companies House/FCA data on
+   2026-09-01 and still holds.
 
 Built across two concurrent, independently-timed tracks:
 
