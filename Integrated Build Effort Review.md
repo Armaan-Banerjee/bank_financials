@@ -20,12 +20,12 @@ concurrently with a claim-before-work discipline):
 1. **`wayfinder/map.md`** — the bank-workbook-build map. **Closed.** Produced
    the 145 Excel workbooks in `banks/`.
 2. **`wayfinder/insights/map.md`** — the insights/clustering/deliverable map.
-   **Effectively closed** — 36 of 37 `IN-*` tickets closed; one (IN-013,
-   "shared SQLite analysis-query layer") still shows `in-progress`, claimed by
-   Codex since 2026-08-30, and appears stale (its own scope — comparability,
-   trend, outlier, and parent-group query helpers — looks superseded by
-   `analysis_queries.py`, which IN-009/IN-013's downstream tickets already use;
-   worth a status check next session rather than assuming abandoned work).
+   **Closed.** All 44 `IN-*` tickets closed, including IN-013 ("shared SQLite
+   analysis-query layer") — flagged in an earlier pass as stale/in-progress,
+   but Codex closed it on 2026-09-01: `analysis_queries.py` now exposes the
+   shared comparability, trend, outlier, and parent-group query seams, and
+   every database-backed analytical consumer and deliverable adapter has
+   migrated onto it (see its ticket's Resolution for the full consumer list).
 
 ## Phase 1 — Bank workbook builds (closed)
 
@@ -225,15 +225,16 @@ found real, user-impacting bugs three separate times):
 
 ## Current state
 
-- **222 tests passing** (`python3 -m unittest discover -s scripts/insights -p 'test*.py'`),
-  clean end-to-end `refresh_all.py`, byte-identical generated exports on a
-  no-op refresh.
+- **231 tests passing** (`python3 -m unittest discover -s scripts/insights -p 'test*.py'`),
+  clean end-to-end `refresh_all.py`.
 - **145/148 banks built**, 12,846 `annual_metrics` rows in `research/insights.db`.
 - **Both client deliverables current**: `wayfinder/insights/deliverable/uk_bank_insights.html`
-  (dashboard-style, watchlist/nav/drill-through/sparklines) and the matching
-  PDF companion, both sourced from the same computed payloads.
-- **36 of 37 insights tickets closed**; IN-013 is the one open item, likely
-  stale rather than blocking — worth a status check.
+  (dashboard-style, watchlist/nav/drill-through/sparklines, ~11MB — cut from
+  131.7MB by IN-034 after removing duplicated/unused server-only data from
+  the embedded client payload) and the matching PDF companion, both sourced
+  from the same computed payloads.
+- **All 44 insights tickets closed**, including IN-013 (see "Project shape"
+  above).
 - **Known minor doc drift, fixed as part of IN-028**: `scripts/insights/README.md`'s
   file table and pipeline diagram now match what's actually on disk and in
   `refresh_all.py`'s STEPS.
