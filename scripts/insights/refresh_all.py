@@ -48,14 +48,33 @@ Order and why:
     15. in021_headroom_trajectory.py DB -> headroom trajectory output
     16. review_trend_selection.py    DB -> in004_selection_review.md
        (needs annual_metrics from step 1)
-    17. build_in005_prototype.py     DB + cluster CSVs -> uk_bank_insights.html
-       (needs steps 1-3; also validates cluster-output freshness itself)
-    18. build_in006_pdf.py            DB + cluster CSV -> uk_bank_insights.pdf
-       (needs steps 1-3; also validates cluster-output freshness itself)
+    17. in040_risk_metrics.py        DB -> in040_risk_metrics.json
+       (needs annual_metrics from step 1; kept fresh for consumers other
+       than build_deliverable.py, which reads the DB directly - see below)
+    18. in041_spend_metrics.py       DB -> in041_spend_metrics.json
+       (same freshness note as in040_risk_metrics.py above)
+    19. build_deliverable.py         DB -> deliverable/*.html
+       (needs steps 1-3; reads research/insights.db directly via
+       in040_risk_metrics.py's and in041_spend_metrics.py's payload
+       builders, in-process - never depends on steps 17-18's JSON files
+       staying fresh, only on their functions)
+    20. build_in006_pdf.py            DB + cluster CSV -> uk_bank_insights.pdf
+       (needs steps 1-3; also validates cluster-output freshness itself;
+       still built from in011_deliverables.py's older single-file dashboard
+       - see wayfinder/insights/tickets/IN-053.md for the planned PDF redo)
 
 Each step runs as a subprocess (not an in-process import) so a script's own
 argparse/CLI behavior is exercised exactly as a human running it by hand
 would see, and so one step's module-level state can't leak into the next.
+
+build_in005_prototype.py (the older single-file uk_bank_insights.html
+dashboard) deliberately isn't in this list any more - deliverable/ built by
+build_deliverable.py is now the production HTML deliverable, per
+wayfinder/insights/tickets/IN-051.md. build_in005_prototype.py and its
+underlying in011_deliverables.py sections stay in the codebase (still
+runnable standalone) since build_in006_pdf.py depends on them and a future
+ticket (wayfinder/insights/tickets/IN-052.md) may fold some of those
+sections into deliverable/comparison.html.
 """
 
 import argparse
@@ -85,7 +104,9 @@ STEPS = [
     "in020_regulatory_context.py",
     "in021_headroom_trajectory.py",
     "review_trend_selection.py",
-    "build_in005_prototype.py",
+    "in040_risk_metrics.py",
+    "in041_spend_metrics.py",
+    "build_deliverable.py",
     "build_in006_pdf.py",
 ]
 

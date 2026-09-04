@@ -35,7 +35,7 @@
     "bookmark, drill and scroll state may not survive export",
     "use the generated HTML/PDF for the formal client pack"
   ],
-  "generated_at": "2026-09-04T17:05:26.584430+00:00",
+  "generated_at": "2026-09-04T18:02:29.203573+00:00",
   "governance": {
     "deterministic_findings": "IN-009 outlier rows remain the official review screen and are exposed in finding_detail.csv.",
     "exploratory_labels": [

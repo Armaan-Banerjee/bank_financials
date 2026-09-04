@@ -201,6 +201,26 @@ class FullInsightsPipeline(unittest.TestCase):
             self.assertIn(f'id="{anchor}"', html_text)
         self.assertNotIn("__DATA__", html_text)
 
+        deliverable_dir = self.tmpdir / "deliverable"
+        deliverable = run_script("build_deliverable.py", "--db", self.db, "--out", deliverable_dir)
+        self.assertIn("145 bank-<slug>.html", deliverable.stdout)
+        self.assertTrue((deliverable_dir / "comparison.html").exists())
+        self.assertTrue((deliverable_dir / "banks.html").exists())
+        self.assertTrue((deliverable_dir / "deliverable_shared.css").exists())
+        self.assertTrue((deliverable_dir / "deliverable_shared.js").exists())
+        self.assertEqual(len(list(deliverable_dir.glob("bank-*.html"))), 145)
+        self.assertEqual(len(list(deliverable_dir.glob("workbook-*.html"))), 145)
+        monzo_html = (deliverable_dir / "bank-monzo.html").read_text()
+        self.assertIn("Monzo", monzo_html)
+        self.assertIn('href="deliverable_shared.css"', monzo_html)
+        self.assertIn('src="deliverable_shared.js"', monzo_html)
+        # build_deliverable.py must read every metric straight from the DB
+        # at generation time (per IN-051's decision), never from a cached
+        # research/in040_risk_metrics.json or in041_spend_metrics.json
+        # snapshot that could silently go stale.
+        self.assertNotIn("in040_risk_metrics.json", (SCRIPTS / "build_deliverable.py").read_text())
+        self.assertNotIn("in041_spend_metrics.json", (SCRIPTS / "build_deliverable.py").read_text())
+
         pdf_path = self.tmpdir / "deliverable.pdf"
         pdf = run_script("build_in006_pdf.py", "--db", self.db, "--out", pdf_path, "--clusters", db_cluster)
         self.assertIn("deliverable.pdf", pdf.stdout)
