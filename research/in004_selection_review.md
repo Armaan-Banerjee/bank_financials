@@ -5,7 +5,7 @@ label or period variant was available. It is the manual-review queue
 for deciding whether the current explicit priorities are appropriate.
 Rows are from `research/insights.db` (source of truth); no workbook was read or changed.
 
-## Leverage ratio (25 FRN-year collisions)
+## Leverage ratio (27 FRN-year collisions)
 
 | FRN | Bank | Year | Candidate label | Value | Basis note |
 |---:|---|---:|---|---:|---|
@@ -33,6 +33,10 @@ Rows are from `research/insights.db` (source of truth); no workbook was read or 
 | 204570 | UNITY TRUST | 2024 | UK leverage ratio, excl. temporary central bank reserves exemption (%) | 15.97 | Extended entity basis (Bank + Unity EBT Limited), £'000 |
 | 204570 | UNITY TRUST | 2025 | Basel III leverage ratio, incl. temporary central bank reserves exemption (%) | 11.45 | Extended entity basis (Bank + Unity EBT Limited), £'000 |
 | 204570 | UNITY TRUST | 2025 | UK leverage ratio, excl. temporary central bank reserves exemption (%) | 12.67 | Extended entity basis (Bank + Unity EBT Limited), £'000 |
+| 207381 | UNITED NATIONAL | 2022 | Leverage ratio (%) | 8.43 | Company basis, exact £ (not £'000/£m) - see source note at bottom. |
+| 207381 | UNITED NATIONAL | 2022 | Tier 1 capital used in leverage ratio calculation | 73599000.0 | Company basis, exact £ (not £'000/£m) - see source note at bottom. |
+| 207381 | UNITED NATIONAL | 2024 | Leverage ratio (%) | 7.17 | Company basis, exact £ (not £'000/£m) - see source note at bottom. |
+| 207381 | UNITED NATIONAL | 2024 | Tier 1 capital used in leverage ratio calculation | 93996000.0 | Company basis, exact £ (not £'000/£m) - see source note at bottom. |
 | 223304 | SMBC | 2023 | Leverage ratio excluding claims on central banks (%) | 13.8 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
 | 223304 | SMBC | 2023 | Leverage ratio including claims on central banks (%) | 8.2 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
 | 223304 | SMBC | 2024 | Leverage ratio excluding claims on central banks (%) | 14.8 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
@@ -90,4 +94,4 @@ leverage and group-versus-bank or restatement variants in cash flow.
 The aggregate trend counts should not be treated as final for affected
 metrics until material exceptions are resolved.
 
-Total exception groups: 33.
+Total exception groups: 35.

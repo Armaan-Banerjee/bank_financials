@@ -159,7 +159,155 @@ NOT_DISCLOSED_NOTE = (
 )
 
 
+STATEMENTS_SOURCES = (
+    "Sources - FidBank UK Limited's own Statement of Financial Position / Statement of Comprehensive "
+    "Income / Statement of Changes in Equity (Bank-only, GBP figures converted from the source's own USD "
+    "figures - see FX methodology note in the Cash Flow Statement sheet's source citation):\n"
+    f"FY2025, FY2024: Annual Report and Financial Statements for the year ended 31 December 2025, "
+    f"pp.34-36 - {AR2025_URL}\n"
+    f"FY2023, FY2022: Annual Report & Financial Statements for the year ended 31 December 2023, "
+    f"pp.23-25 - {AR2023_URL}\n"
+    "FY2021: only the equity roll-forward's opening balance is available (as the FY2023 Annual Report's "
+    "own comparative 'Balance as at 1 January 2022' row) - no FY2021 balance sheet or income statement "
+    "exists in any filing reviewed (see the Cash Flow Statement sheet's entity note for why).\n\n"
+    "FX conversion: point-in-time (balance) figures at that year's period-end spot rate; flow (income "
+    "statement) figures at that year's average rate - both entity-disclosed, same methodology as the Cash "
+    "Flow Statement sheet.\n\n"
+    "PRESENTATION CHANGE, FY2025: Short-term investments, Derivative Financial Assets/Liabilities, and "
+    "Financial assets valued at Amortised Cost are new lines that first appear in FY2025 (nil/absent in "
+    "prior years' own statements) - left blank for FY2024-FY2022 rather than assumed nil, except where "
+    "the FY2025 Annual Report's own FY2024 comparative column explicitly shows '-' (shown as 0).\n\n"
+    "MINOR DISCLOSED INCONSISTENCY, FY2024/FY2025 BOUNDARY: the FY2025 Annual Report's own equity "
+    "statement states the 1 January 2025 opening balance as Retained losses $(29,740)k / Total equity "
+    "$55,372k, which differs by $1k from the FY2024 Annual Report's own 31 December 2024 closing balance "
+    "of $(29,741)k / $55,371k - a source-document rounding artifact. The equity sheet below uses each "
+    "year's own closing balance as the following year's opening (continuous roll-forward) rather than "
+    "FY2025's own restated opening figure, per project convention (reproduce as disclosed, not force-"
+    "reconciled) - the $1k gap is absorbed into that year's FX translation effect row alongside the "
+    "genuine FX translation effect, since both are immaterial at this entity's scale.\n\n"
+    + ENTITY_NOTE
+)
+
+CAPITAL_AMOUNTS_NOTE = (
+    "Sourced from Note 30(f) 'Capital adequacy' (Annual Report and Financial Statements, various years) - "
+    "an analysis of the items comprising the Regulatory Capital base reported to the PRA. This table gives "
+    "actual capital AMOUNTS (Total Tier 1 Capital / Total Regulatory Capital), not previously captured in "
+    "this workbook, which had only the entity's separately-disclosed headline 'Capital Ratio' (Shareholders' "
+    "Funds / RWA). Since Total Regulatory Capital exactly equals Total Tier 1 Capital in every year "
+    "disclosed (no AT1 or Tier 2 capital line appears), CET1 Capital, Tier 1 Capital, and Total Capital are "
+    "shown here as equal to that same figure - the capital base is entirely ordinary share capital and "
+    "reserves less intangibles, with no other capital instruments. RWA itself is never disclosed in any "
+    "filing reviewed (see CET1 Ratio/Tier 1 Ratio/Total RWAs/Leverage Ratio sheets), so these ratios cannot "
+    "be derived from this table - only the Capital Ratio proxy (Total Capital Ratio sheet) is available. "
+    "FY2021: no equivalent table exists (no capital-adequacy note for FY2021 in any filing reviewed)."
+)
+
 bw = BankWorkbook(bank_name="FidBank UK Limited", years=YEARS, year_label=YEAR_LABEL, header_color="AD7B7E")
+
+# ---------------------------------------------------------------
+# Balance Sheet / P&L / Statement of Changes in Equity data (all USD'000,
+# from the Statement of Financial Position / Statement of Comprehensive
+# Income / Statement of Changes in Equity, converted to £'000 as above).
+# ---------------------------------------------------------------
+bw.add_balance_sheet_sheet(
+    title="FidBank UK Limited — Statement of Financial Position",
+    subtitle="Bank-only basis, £'000 (conv. from USD). FY2021 not available - see source note below.",
+    rows=[
+        ("SECTION", "Assets", {}),
+        ("DATA", "Cash and cash equivalents", stock({"FY2025": 121756, "FY2024": 99914, "FY2023": 7127, "FY2022": 5431})),
+        ("DATA", "Short-term investments", stock({"FY2025": 11074, "FY2024": 0})),
+        ("DATA", "Loans and advances to banks", stock({"FY2025": 123763, "FY2024": 65801, "FY2023": 128017, "FY2022": 65437})),
+        ("DATA", "Loans and advances to customers", stock({"FY2025": 146830, "FY2024": 55165, "FY2023": 8590, "FY2022": 3564})),
+        ("DATA", "Derivative Financial Assets", stock({"FY2025": 423, "FY2024": 0})),
+        ("DATA", "Financial assets measured at FVOCI", stock({"FY2025": 33826, "FY2024": 47544, "FY2023": 42025, "FY2022": 18123})),
+        ("DATA", "Financial assets valued at Amortised Cost", stock({"FY2025": 8103, "FY2024": 0})),
+        ("DATA", "Property and equipment", stock({"FY2025": 38, "FY2024": 59, "FY2023": 56, "FY2022": 44})),
+        ("DATA", "Intangible assets", stock({"FY2025": 616, "FY2024": 366, "FY2023": 463, "FY2022": 507})),
+        ("DATA", "Right-of-use-assets", stock({"FY2025": 919, "FY2024": 1300, "FY2023": 1673, "FY2022": 2052})),
+        ("DATA", "Other assets", stock({"FY2025": 1708, "FY2024": 1226, "FY2023": 939, "FY2022": 850})),
+        ("DATA", "Prepayments", stock({"FY2025": 1066, "FY2024": 945, "FY2023": 719, "FY2022": 625})),
+        ("TOTAL", "Total Assets", stock({"FY2025": 450122, "FY2024": 272320, "FY2023": 189609, "FY2022": 96633})),
+        ("SECTION", "Liabilities", {}),
+        ("DATA", "Deposits by banks", stock({"FY2025": 194123, "FY2024": 106195, "FY2023": 78638, "FY2022": 19943})),
+        ("DATA", "Customer accounts", stock({"FY2025": 197185, "FY2024": 107700, "FY2023": 50613, "FY2022": 38278})),
+        ("DATA", "Derivative Financial Liabilities", stock({"FY2025": 138, "FY2024": 0})),
+        ("DATA", "Lease liabilities", stock({"FY2025": 1238, "FY2024": 1605, "FY2023": 2001, "FY2022": 2065})),
+        ("DATA", "Other liabilities", stock({"FY2025": 1008, "FY2024": 988, "FY2023": 717, "FY2022": 653})),
+        ("DATA", "Accruals and deferred income", stock({"FY2025": 149, "FY2024": 461, "FY2023": 143, "FY2022": 175})),
+        ("TOTAL", "Total Liabilities", stock({"FY2025": 393841, "FY2024": 216949, "FY2023": 132112, "FY2022": 61114})),
+        ("SECTION", "Equity", {}),
+        ("DATA", "Called up share capital", stock({"FY2025": 85090, "FY2024": 85090, "FY2023": 85090, "FY2022": 60090})),
+        ("DATA", "FVOCI reserve", stock({"FY2025": 11, "FY2024": 22, "FY2023": -3, "FY2022": -4})),
+        ("DATA", "Retained losses", stock({"FY2025": -28820, "FY2024": -29741, "FY2023": -27590, "FY2022": -24567})),
+        ("TOTAL", "Total equity", stock({"FY2025": 56281, "FY2024": 55371, "FY2023": 57497, "FY2022": 35519})),
+        ("TOTAL", "Total Liabilities and Equity", stock({"FY2025": 450122, "FY2024": 272320, "FY2023": 189609, "FY2022": 96633})),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=380,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+bw.add_income_statement_sheet(
+    title="FidBank UK Limited — Statement of Comprehensive Income",
+    subtitle="Bank-only basis, £'000 (conv. from USD). FY2021 not available - see source note below.",
+    rows=[
+        ("SECTION", "Income", {}),
+        ("DATA", "Interest income", flow({"FY2025": 19846, "FY2024": 14679, "FY2023": 8637, "FY2022": 3275})),
+        ("DATA", "Interest expense", flow({"FY2025": -8133, "FY2024": -4847, "FY2023": -1413, "FY2022": -432})),
+        ("TOTAL", "Net interest income", flow({"FY2025": 11713, "FY2024": 9832, "FY2023": 7224, "FY2022": 2843})),
+        ("DATA", "Fees and commission income", flow({"FY2025": 2475, "FY2024": 2028, "FY2023": 1315, "FY2022": 1003})),
+        ("DATA", "Dealing and exchange gains", flow({"FY2025": 2254, "FY2024": 275, "FY2023": 261, "FY2022": 125})),
+        ("TOTAL", "Total income", flow({"FY2025": 16442, "FY2024": 12135, "FY2023": 8800, "FY2022": 3971})),
+        ("DATA", "Administrative expenses", flow({"FY2025": -14688, "FY2024": -12750, "FY2023": -11165, "FY2022": -8495})),
+        ("DATA", "Depreciation and amortisation", flow({"FY2025": -544, "FY2024": -537, "FY2023": -572, "FY2022": -563})),
+        ("DATA", "Impairment reversal/(charge) on loans and advances", flow({"FY2025": 203, "FY2024": -640, "FY2023": 133, "FY2022": -144})),
+        ("DATA", "Other operating expense", flow({"FY2025": -493, "FY2024": -359, "FY2023": -219, "FY2022": -151})),
+        ("TOTAL", "Profit/(Loss) before tax", flow({"FY2025": 920, "FY2024": -2151, "FY2023": -3023, "FY2022": -5382})),
+        ("DATA", "Tax charge", flow({"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0})),
+        ("TOTAL", "Profit/(Loss) for the year after tax", flow({"FY2025": 920, "FY2024": -2151, "FY2023": -3023, "FY2022": -5382})),
+        ("SECTION", "Other comprehensive income", {}),
+        ("DATA", "Unrealised, net change in fair value of financial assets measured at FVOCI",
+         flow({"FY2025": -10, "FY2024": 25, "FY2023": 1, "FY2022": 3})),
+        ("TOTAL", "Total comprehensive income/(loss) for the year", flow({"FY2025": 910, "FY2024": -2126, "FY2023": -3022, "FY2022": -5379})),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=380,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+bw.add_equity_changes_sheet(
+    title="FidBank UK Limited — Statement of Changes in Equity",
+    subtitle="Bank-only basis, £'000 (conv. from USD), chronological. Each year's FX translation effect row "
+              "absorbs the pure FX-conversion gap from converting opening/movements/closing at three "
+              "different correct rates (prior-year spot / this year's average / this year's spot) - see "
+              "Cash Flow Statement sheet's FX methodology note.",
+    headers=["Share capital", "FVOCI reserve", "Retained losses", "Total equity"],
+    rows=[
+        ("DATA", "Balance as at 1 January 2022 (= FY2021 closing)", (44511.1, -5.2, -14211.1, 30294.8)),
+        ("DATA", "Change in fair value of assets measured at FVOCI", (None, 2.4, None, 2.4)),
+        ("TOTAL", "Loss for the year", (None, None, -4375.6, -4375.6)),
+        ("DATA", "FX translation effect on equity, net", (5563.9, -0.5, -1885.8, 3677.6)),
+        ("TOTAL", "Balance as at 31 December 2022", (50075.0, -3.3, -20472.5, 29599.2)),
+        ("DATA", "Share capital issued", (20000.0, None, None, 20000.0)),
+        ("DATA", "Change in fair value of assets measured at FVOCI", (None, 0.8, None, 0.8)),
+        ("TOTAL", "Loss for the year", (None, None, -2418.4, -2418.4)),
+        ("DATA", "FX translation effect on equity, net", (-3075.0, 0.1, 1166.5, -1908.4)),
+        ("TOTAL", "Balance as at 31 December 2023", (67000.0, -2.4, -21724.4, 45273.2)),
+        ("DATA", "Change in fair value of assets measured at FVOCI", (None, 19.5, None, 19.5)),
+        ("TOTAL", "Loss for the year", (None, None, -1680.5, -1680.5)),
+        ("DATA", "FX translation effect on equity, net", (1072.0, 0.5, -387.9, 684.6)),
+        ("TOTAL", "Balance as at 31 December 2024", (68072.0, 17.6, -23792.8, 44296.8)),
+        ("DATA", "Change in fair value of assets measured at FVOCI", (None, -7.6, None, -7.6)),
+        ("TOTAL", "Profit for the year", (None, None, 697.0, 697.0)),
+        ("DATA", "FX translation effect on equity, net", (-5042.4, -1.9, 1747.7, -3296.6)),
+        ("TOTAL", "Balance as at 31 December 2025", (63029.6, 8.1, -21348.1, 41689.6)),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=52,
+    source_height=380,
+)
 
 # ---------------------------------------------------------------
 # FY2023/FY2022 GBP-translation plug (computed programmatically from the
@@ -248,6 +396,56 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Asset Quality sheet - Loans and advances to customers, by product
+# (Note 19's own breakdown), gross/impairment/net, plus the Stage 1&2 vs
+# Stage 3 impairment split disclosed narratively (not in table form) below
+# each year's own Note 19.
+# ---------------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    "Sources - FidBank UK Limited's own Note 19 'Loans and advances to customers' (gross amount / "
+    "impairment allowance / net amount, by product), each Annual Report's own basis:\n"
+    f"FY2025, FY2024: Annual Report and Financial Statements for the year ended 31 December 2025, p.53 - "
+    f"{AR2025_URL}\n"
+    f"FY2023, FY2022: Annual Report & Financial Statements for the year ended 31 December 2023, p.44 - "
+    f"{AR2023_URL}\n"
+    "FY2021: not available - Note 19 gives no FY2021 comparative in either filing reviewed.\n\n"
+    "The Stage 1&2 vs Stage 3 impairment split is disclosed only as narrative text below each year's Note "
+    "19 table (not a further breakdown table), e.g. FY2025: 'Of the $0.33m impairment provision, $0.32m "
+    "represents the Stage 1 and stage 2 provisions under IFRS 9, while Stage 3 provisions amounted to "
+    "$0.01m' - reproduced here as disclosed. 'Sovereign Loans' only appears as its own product line from "
+    "FY2024 onward (shown as '-' for FY2024, absent as a line entirely for FY2023/FY2022 - left blank, not "
+    "assumed nil, per project convention). Coverage ratio = impairment allowance / gross amount, computed "
+    "from the disclosed £'000 figures (converted from USD at each year's period-end spot rate - see Cash "
+    "Flow Statement sheet's FX methodology note).\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_asset_quality_sheet(
+    title="FidBank UK Limited — Asset Quality (Loans and advances to customers)",
+    subtitle="Bank-only basis, £'000 (conv. from USD). By product, per Note 19. FY2021 not available.",
+    rows=[
+        ("SECTION", "Gross amount by product", {}),
+        ("DATA", "Commercial loans & advances", stock({"FY2025": 97206, "FY2024": 35991, "FY2023": 8488, "FY2022": 2934})),
+        ("DATA", "Personal loans & advances", stock({"FY2025": 295, "FY2024": 263, "FY2023": 132, "FY2022": 52})),
+        ("DATA", "Syndicated loans", stock({"FY2025": 24259, "FY2024": 19145, "FY2023": 0, "FY2022": 582})),
+        ("DATA", "Sovereign loans", stock({"FY2025": 25397, "FY2024": 0})),
+        ("TOTAL", "Gross amount, total", stock({"FY2025": 147157, "FY2024": 55399, "FY2023": 8620, "FY2022": 3568})),
+        ("SECTION", "Impairment and net amount", {}),
+        ("DATA", "Impairment allowance, total", stock({"FY2025": -327, "FY2024": -234, "FY2023": -30, "FY2022": -4})),
+        ("TOTAL", "Net amount, total", stock({"FY2025": 146830, "FY2024": 55165, "FY2023": 8590, "FY2022": 3564})),
+        ("DATA", "  of which: Stage 1 and Stage 2 impairment allowance", stock({"FY2025": -320, "FY2024": -180, "FY2023": -29.4, "FY2022": -4.1})),
+        ("DATA", "  of which: Stage 3 impairment allowance", stock({"FY2025": -10, "FY2024": -50, "FY2023": 0, "FY2022": 0})),
+        ("SECTION", "Derived ratio", {}),
+        ("DATA", "Impairment coverage ratio (allowance ÷ gross amount)",
+         {"FY2025": "0.22%", "FY2024": "0.42%", "FY2023": "0.35%", "FY2022": "0.11%"}),
+    ],
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=64,
+    source_height=340,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -256,22 +454,40 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 CAPITAL_RATIO = {"FY2025": "21.46%", "FY2024": "43%", "FY2023": "98%", "FY2022": "54%", "FY2021": "40%"}
 LCR = {"FY2025": "178%", "FY2024": "243%"}
+CAPITAL_AMOUNT = stock({"FY2025": 55665, "FY2024": 55005, "FY2023": 57034, "FY2022": 35420})
 
-bw.add_not_disclosed_metric_sheets(
-    ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio"],
-    p3_sources(),
-    per_note={m: NOT_DISCLOSED_NOTE for m in ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio"]},
-)
+metric("CET1 Capital", "£'000 (conv. from USD)", [("CET1 Capital (= Total Regulatory Capital)", CAPITAL_AMOUNT)],
+       p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 
-bw.add_not_disclosed_metric_sheets(["Total Capital"], p3_sources(), per_note={"Total Capital": NOT_DISCLOSED_NOTE})
+bw.add_not_disclosed_metric_sheets(["CET1 Ratio"], p3_sources(), per_note={"CET1 Ratio": NOT_DISCLOSED_NOTE})
+
+metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Total Tier 1 Capital", CAPITAL_AMOUNT)],
+       p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
+
+bw.add_not_disclosed_metric_sheets(["Tier 1 Ratio"], p3_sources(), per_note={"Tier 1 Ratio": NOT_DISCLOSED_NOTE})
+
+metric("Total Capital", "£'000 (conv. from USD)", [("Total Regulatory Capital", CAPITAL_AMOUNT)],
+       p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 
 metric("Total Capital Ratio", "%", [("Capital Ratio (Shareholders' Funds ÷ RWA)", CAPITAL_RATIO)],
        p3_sources(), note=CAPITAL_RATIO_NOTE)
 
+bw.add_not_disclosed_metric_sheets(["Total RWAs"], p3_sources(), per_note={"Total RWAs": NOT_DISCLOSED_NOTE})
+
+bw.add_rwa_breakdown_sheet(
+    title="FidBank UK Limited — RWA Breakdown",
+    subtitle="Not publicly disclosed - see note below.",
+    rows=[("DATA", "Not publicly disclosed", {})],
+    sources_text=p3_sources(NOT_DISCLOSED_NOTE + " No RWA figure of any kind - aggregate or by category - "
+                             "appears in any of the 3 Annual Reports reviewed, despite the Capital adequacy "
+                             "note (30(f)/31(f)) disclosing actual Regulatory Capital AMOUNTS (see CET1/"
+                             "Tier 1/Total Capital sheets) - RWA itself is never stated, only the entity's "
+                             "own headline 'Capital Ratio' proxy (Total Capital Ratio sheet)."),
+)
+
 bw.add_not_disclosed_metric_sheets(
-    ["Total RWAs", "Leverage Ratio"], p3_sources(),
-    per_note={"Total RWAs": NOT_DISCLOSED_NOTE,
-              "Leverage Ratio": NOT_DISCLOSED_NOTE + " The Strategic Report's Capital Risk section confirms "
+    ["Leverage Ratio"], p3_sources(),
+    per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE + " The Strategic Report's Capital Risk section confirms "
                                 "a Leverage Ratio IS tracked internally (\"tracked daily...reported quarterly "
                                 "to the Board\"), but its actual value is never stated in any filing reviewed."},
 )
@@ -288,6 +504,28 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total Assets", stock({"FY2025": 450122, "FY2024": 272320, "FY2023": 189609, "FY2022": 96633})),
+        ("Loans and advances to customers", stock({"FY2025": 146830, "FY2024": 55165, "FY2023": 8590, "FY2022": 3564})),
+        ("Customer accounts", stock({"FY2025": 197185, "FY2024": 107700, "FY2023": 50613, "FY2022": 38278})),
+        ("Total equity", stock({"FY2025": 56281, "FY2024": 55371, "FY2023": 57497, "FY2022": 35519})),
+    ],
+    balance_sheet_unit="£'000 (conv. from USD)",
+    income_statement_totals=[
+        ("Total income", flow({"FY2025": 16442, "FY2024": 12135, "FY2023": 8800, "FY2022": 3971})),
+        ("Administrative expenses", flow({"FY2025": -14688, "FY2024": -12750, "FY2023": -11165, "FY2022": -8495})),
+        ("Profit/(Loss) for the year after tax", flow({"FY2025": 920, "FY2024": -2151, "FY2023": -3023, "FY2022": -5382})),
+    ],
+    income_statement_unit="£'000 (conv. from USD)",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 44296.8, "FY2024": 45273.2, "FY2023": 29599.2, "FY2022": 30294.8}),
+        ("Total comprehensive income/(loss) for the year",
+         {"FY2025": 689.4, "FY2024": -1661.0, "FY2023": -2417.6, "FY2022": -4373.2}),
+        ("Other equity movements, net",
+         {"FY2025": -3296.6, "FY2024": 684.6, "FY2023": 18091.6, "FY2022": 3677.6}),
+        ("Closing equity", stock({"FY2025": 56281, "FY2024": 55371, "FY2023": 57497, "FY2022": 35519})),
+    ],
+    equity_changes_unit="£'000 (conv. from USD)",
     cash_flow_totals=[
         ("Net cash (used in)/from operating activities", flow({"FY2025": 22388, "FY2024": -15215, "FY2023": -22867, "FY2022": -3057})),
         ("Net cash flow used in investing activities", flow({"FY2025": -394, "FY2024": -61, "FY2023": -163, "FY2022": -38})),
@@ -299,10 +537,13 @@ bw.add_overview_sheet(
         ("Total Capital Ratio", CAPITAL_RATIO),
         ("LCR", LCR),
     ],
-    note="FY2021 cash flow not available (see Cash Flow Statement sheet's source note). Pillar 3 coverage is "
-         "very thin - only a combined Capital Ratio (all 5 years) and LCR (FY2025/FY2024 only) are disclosed "
-         "anywhere; every other Pillar 3 metric is Not publicly disclosed. Figures are duplicated from the "
-         "detail sheets for at-a-glance trend viewing; see each sheet's own source citation.",
+    note="FY2021 cash flow/balance sheet/P&L not available (see Cash Flow Statement sheet's source note) - "
+         "only FY2021's own closing equity is known (as FY2022's disclosed opening balance), shown on the "
+         "Statement of Changes in Equity sheet. Pillar 3 coverage is thin - a headline Capital Ratio (all 5 "
+         "years), actual Tier 1/CET1/Total Capital AMOUNTS (FY2025-FY2022, from the capital adequacy note - "
+         "a finding not previously captured in this workbook), and LCR (FY2025/FY2024 only) are disclosed; "
+         "RWA itself and every ratio derived from it remain Not publicly disclosed. Figures are duplicated "
+         "from the detail sheets for at-a-glance trend viewing; see each sheet's own source citation.",
 )
 
 # ---------------------------------------------------------------

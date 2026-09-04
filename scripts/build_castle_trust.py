@@ -68,6 +68,165 @@ NOT_DISCLOSED_NOTE = "Not found in any of the 5 Pillar 3 Disclosures documents r
 
 bw = BankWorkbook(bank_name="Castle Trust Capital plc", years=YEARS, header_color="6A4C93")
 
+STATEMENTS_SOURCES = (
+    "Sources - Castle Trust Capital plc's own Statement of Financial Position / Statement of Comprehensive "
+    "Income / Statement of Changes in Equity, each year's own originally-published figures (not a later year's "
+    "comparative column), £'000:\n"
+    f"FY2025: Annual financial statements, y/e 30 Sept 2025, pp.56-58 - {CH_FY2025_URL}\n"
+    f"FY2024: Annual financial statements, y/e 30 Sept 2024, pp.55-57 - {CH_FY2024_URL}\n"
+    f"FY2023: Annual financial statements, y/e 30 Sept 2023, pp.52-54 - {CH_FY2023_URL}\n"
+    f"FY2022: Annual financial statements, y/e 30 Sept 2022, pp.45-47 - {CH_FY2022_URL}\n"
+    f"FY2021: Annual financial statements, y/e 30 Sept 2021, pp.38-40 - {CH_FY2021_URL}\n"
+    + ENTITY_NOTE
+)
+
+PL_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: the P&L's line-item structure changed across years - FY2021/FY2022 use a "
+    "Net-interest-income/Net-operating-income structure with a distinct 'Other income - dividends received' "
+    "line (only populated FY2021: £18,001k, reflecting a dividend from a subsidiary, alongside a matching "
+    "£(18,001)k 'Impairment charge on investments in subsidiaries' line that year) and 'Profit/(loss) before "
+    "tax'; FY2023-FY2025 drop both the dividend-income and investment-impairment lines (nil in every "
+    "subsequent year) and FY2025 additionally renames 'Total operating (expense)/income' to 'Total operating "
+    "income'. 'Realised/unrealised (loss)/gain on financial instruments at fair value through profit or loss' "
+    "is the one line materially comparable across all 5 years. OCI detail (fair value of own credit risk "
+    "changes) is nil or near-nil throughout - a genuine feature of this Bank's balance sheet, not a disclosure "
+    "gap."
+)
+
+BS_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: 'Loans to customers, designated at fair value through profit or loss' (one legacy "
+    "mortgage - see the Bank's own Note 13/12) only appears FY2021-FY2023, fully run off by FY2024; "
+    "'Fair value adjustment on hedged assets/liabilities' and 'Derivative financial instruments' as assets "
+    "only appear from FY2023 onward (hedge accounting on interest rate swaps commenced 1 July 2023); "
+    "'Corporation tax receivable/payable' and 'Amounts due to credit institutions'/'group companies' are "
+    "populated only in the years the Bank actually had a balance on that line, per its own report - blank "
+    "cells elsewhere reflect a genuine nil/not-applicable balance, not a missing figure."
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet (Statement of Financial Position, Company/solo basis)
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", {"FY2025": 326895, "FY2024": 117053, "FY2023": 100292, "FY2022": 143706, "FY2021": 54544}),
+    ("DATA", "Due from credit institutions", {"FY2025": 15053, "FY2024": 12254, "FY2023": 3900, "FY2022": 1970}),
+    ("DATA", "Debt instruments", {"FY2025": 20301, "FY2024": 63810, "FY2023": 40495, "FY2022": 5000, "FY2021": 19999}),
+    ("DATA", "Trade and other receivables", {"FY2025": 996, "FY2024": 738, "FY2023": 750, "FY2022": 1003, "FY2021": 817}),
+    ("DATA", "Corporation tax receivable", {"FY2025": 1506, "FY2024": 276}),
+    ("DATA", "Loans to customers, at amortised cost", {"FY2025": 1082504, "FY2024": 668338, "FY2023": 546990, "FY2022": 453815, "FY2021": 394523}),
+    ("DATA", "Loans to customers, designated at fair value through profit or loss", {"FY2023": 4083, "FY2022": 4094, "FY2021": 4474}),
+    ("DATA", "Fair value adjustment on hedged assets", {"FY2025": 4016, "FY2024": 6499}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 1742, "FY2024": 1637, "FY2023": 3119, "FY2022": 3123}),
+    ("DATA", "Prepayments", {"FY2025": 2196, "FY2024": 2019, "FY2023": 1670, "FY2022": 1589, "FY2021": 1575}),
+    ("DATA", "Deferred tax", {"FY2025": 5519, "FY2024": 5695, "FY2023": 5907, "FY2022": 6898, "FY2021": 9043}),
+    ("DATA", "Amounts due from group companies", {"FY2025": 154496, "FY2024": 211327, "FY2023": 209527, "FY2022": 189221, "FY2021": 152451}),
+    ("DATA", "Property and equipment", {"FY2025": 1247, "FY2024": 518, "FY2023": 1001, "FY2022": 1593, "FY2021": 1450}),
+    ("DATA", "Investment in subsidiaries", {"FY2025": 16206, "FY2024": 16206, "FY2023": 16206, "FY2022": 16206, "FY2021": 16206}),
+    ("DATA", "Intangible assets", {"FY2025": 5365, "FY2024": 5793, "FY2023": 5451, "FY2022": 4679, "FY2021": 4186}),
+    ("TOTAL", "Total assets", {"FY2025": 1638042, "FY2024": 1112163, "FY2023": 939391, "FY2022": 832897, "FY2021": 659268}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Trade and other payables", {"FY2025": 13305, "FY2024": 5930, "FY2023": 5145, "FY2022": 8815, "FY2021": 8033}),
+    ("DATA", "Corporation tax payable", {"FY2023": 599}),
+    ("DATA", "Amounts due to credit institutions", {"FY2025": 1733, "FY2024": 1614, "FY2023": 2940, "FY2022": 4100}),
+    ("DATA", "Amounts due to customers, at amortised cost", {"FY2025": 1495438, "FY2024": 957770, "FY2023": 827055, "FY2022": 724595, "FY2021": 557956}),
+    ("DATA", "Amounts due to customers, at fair value through profit or loss", {"FY2025": 53, "FY2024": 128, "FY2023": 831, "FY2022": 1433, "FY2021": 1317}),
+    ("DATA", "Fair value adjustment on hedged liabilities", {"FY2025": 515, "FY2024": 567}),
+    ("DATA", "Derivative financial instruments (liability)", {"FY2025": 5026, "FY2024": 4691, "FY2023": 442}),
+    ("DATA", "Subordinated liabilities", {"FY2025": 15759, "FY2024": 7632}),
+    ("DATA", "Amounts due to group companies", {"FY2025": 3072, "FY2024": 31216}),
+    ("TOTAL", "Total liabilities", {"FY2025": 1534901, "FY2024": 1009548, "FY2023": 837012, "FY2022": 738943, "FY2021": 567306}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 15217, "FY2024": 15217, "FY2023": 15217, "FY2022": 15217, "FY2021": 15217}),
+    ("DATA", "Share premium", {"FY2025": 124195, "FY2024": 124195, "FY2023": 124195, "FY2022": 124195, "FY2021": 124195}),
+    ("DATA", "Equity settled share based payment reserve", {"FY2025": 301, "FY2024": 301, "FY2023": 300, "FY2022": 207, "FY2021": 171}),
+    ("DATA", "Own credit revaluation reserves", {"FY2025": 8, "FY2024": 8, "FY2023": 8, "FY2022": 8, "FY2021": 33}),
+    ("DATA", "Retained earnings", {"FY2025": -36580, "FY2024": -37106, "FY2023": -37341, "FY2022": -45673, "FY2021": -47654}),
+    ("TOTAL", "Total equity", {"FY2025": 103141, "FY2024": 102615, "FY2023": 102379, "FY2022": 93954, "FY2021": 91962}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 1638042, "FY2024": 1112163, "FY2023": 939391, "FY2022": 832897, "FY2021": 659268}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Castle Trust Capital plc — Statement of Financial Position",
+    subtitle="Company (solo) basis, £'000. Not the wider Castle Trust Holdings Limited Group. See source note at bottom.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + BS_PRESENTATION_NOTE,
+    first_col_width=68,
+    source_height=340,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (Statement of Comprehensive Income, Company/solo basis)
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest and similar income", {"FY2025": 88928, "FY2024": 66464, "FY2023": 49763, "FY2022": 34047, "FY2021": 35127}),
+    ("DATA", "Interest and similar expense", {"FY2025": -55919, "FY2024": -40056, "FY2023": -20137, "FY2022": -8508, "FY2021": -10873}),
+    ("TOTAL", "Net interest income", {"FY2025": 33009, "FY2024": 26408, "FY2023": 29626, "FY2022": 25539, "FY2021": 24254}),
+    ("DATA", "Other income", {"FY2025": 3712, "FY2024": 4509, "FY2023": 5126}),
+    ("DATA", "Fees and commission income", {"FY2025": 1486, "FY2024": 1351, "FY2023": 1088, "FY2022": 812, "FY2021": 643}),
+    ("DATA", "Fees and commission expense", {"FY2025": -64, "FY2024": -18, "FY2023": -20, "FY2021": -48}),
+    ("DATA", "Realised/unrealised (loss)/gain on financial instruments at fair value through profit or loss", {"FY2025": -1749, "FY2024": -2776, "FY2023": 988, "FY2022": 2680, "FY2021": -1328}),
+    ("TOTAL", "Total operating income", {"FY2025": 36394, "FY2024": 29474, "FY2023": 36808, "FY2022": 29031, "FY2021": 23521}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Administrative expenses", {"FY2025": -23526, "FY2024": -21751, "FY2023": -21144, "FY2022": -21001, "FY2021": -22281}),
+    ("DATA", "Impairment losses", {"FY2025": -8911, "FY2024": -4715, "FY2023": -3298, "FY2022": -1530, "FY2021": -1892}),
+    ("DATA", "Impairment charge on investments in subsidiaries", {"FY2021": -18001}),
+    ("DATA", "Depreciation and amortisation", {"FY2025": -2754, "FY2024": -2464, "FY2023": -2219, "FY2022": -2040, "FY2021": -1613}),
+    ("TOTAL", "Total operating expenses", {"FY2025": -35191, "FY2024": -28930, "FY2023": -26661, "FY2022": -24571, "FY2021": -43787}),
+    ("DATA", "Other income - dividends received", {"FY2021": 18001}),
+    ("TOTAL", "Profit/(loss) before tax", {"FY2025": 1203, "FY2024": 544, "FY2023": 10147, "FY2022": 4460, "FY2021": -2265}),
+    ("DATA", "Corporation tax charge/credit", {"FY2025": -677, "FY2024": -309, "FY2023": -1815, "FY2022": -2479, "FY2021": 9018}),
+    ("TOTAL", "Total profit/(loss)", {"FY2025": 526, "FY2024": 235, "FY2023": 8332, "FY2022": 1981, "FY2021": 6753}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Fair value of own credit risk changes of financial liabilities at FVPL", {"FY2022": -25, "FY2021": -4}),
+    ("TOTAL", "Total other comprehensive income/(expense) for the year", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": -25, "FY2021": -4}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year", {"FY2025": 526, "FY2024": 235, "FY2023": 8332, "FY2022": 1956, "FY2021": 6749}),
+]
+
+bw.add_income_statement_sheet(
+    title="Castle Trust Capital plc — Statement of Comprehensive Income",
+    subtitle="Company (solo) basis, £'000. Not the wider Castle Trust Holdings Limited Group. See source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + PL_PRESENTATION_NOTE,
+    first_col_width=88,
+    source_height=340,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity (chronological, oldest to newest)
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Share capital", "Share premium", "Equity settled share based payment reserve", "Own credit revaluation reserves", "Retained earnings", "Total"]
+equity_changes_rows = [
+    ("TOTAL", "At 1 October 2020", (15217, 124195, 155, 37, -54407, 85197)),
+    ("DATA", "Total profit for the year (FY2021)", (None, None, None, None, 6753, 6753)),
+    ("DATA", "Fair value of own credit risk changes of financial liabilities at FVPL (FY2021)", (None, None, None, -4, None, -4)),
+    ("DATA", "Equity settled share based payment reserve (FY2021)", (None, None, 16, None, None, 16)),
+    ("TOTAL", "At 30 September 2021", (15217, 124195, 171, 33, -47654, 91962)),
+    ("DATA", "Total profit for the year (FY2022)", (None, None, None, None, 1981, 1981)),
+    ("DATA", "Fair value of own credit risk changes of financial liabilities at FVPL (FY2022)", (None, None, None, -25, None, -25)),
+    ("DATA", "Equity settled share based payment reserve (FY2022)", (None, None, 36, None, None, 36)),
+    ("TOTAL", "At 30 September 2022", (15217, 124195, 207, 8, -45673, 93954)),
+    ("DATA", "Total comprehensive income for the year (FY2023)", (None, None, None, None, 8332, 8332)),
+    ("DATA", "Equity settled share based payment reserve (FY2023)", (None, None, 93, None, None, 93)),
+    ("TOTAL", "At 30 September 2023", (15217, 124195, 300, 8, -37341, 102379)),
+    ("DATA", "Total comprehensive income for the year (FY2024)", (None, None, None, None, 235, 235)),
+    ("DATA", "Equity settled share based payment reserve (FY2024)", (None, None, 1, None, None, 1)),
+    ("TOTAL", "At 30 September 2024", (15217, 124195, 301, 8, -37106, 102615)),
+    ("DATA", "Total comprehensive income for the year (FY2025)", (None, None, None, None, 526, 526)),
+    ("TOTAL", "At 30 September 2025", (15217, 124195, 301, 8, -36580, 103141)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Castle Trust Capital plc — Statement of Changes in Equity",
+    subtitle="Company (solo) basis, £'000. Not the wider Castle Trust Holdings Limited Group. Chronological, "
+             "oldest to newest. No plug row needed - GBP-native, chain ties exactly year to year.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=52,
+    source_height=280,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (Company/solo basis)
 # ---------------------------------------------------------------
@@ -147,7 +306,67 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=88,
     source_height=280,
-    unit_suffix="",
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Asset Quality / Credit Risk Disclosures
+# ---------------------------------------------------------------
+STAGE1_GROSS = {"FY2025": 968725, "FY2024": 532712, "FY2023": 440613, "FY2022": 335067, "FY2021": 224629}
+STAGE1_ECL = {"FY2025": -969, "FY2024": -765, "FY2023": -929, "FY2022": -291, "FY2021": -684}
+STAGE2_GROSS = {"FY2025": 44952, "FY2024": 57136, "FY2023": 48080, "FY2022": 65347, "FY2021": 116924}
+STAGE2_ECL = {"FY2025": -498, "FY2024": -842, "FY2023": -986, "FY2022": -1105, "FY2021": -1034}
+STAGE3_GROSS = {"FY2025": 87888, "FY2024": 90833, "FY2023": 70394, "FY2022": 63269, "FY2021": 61643}
+STAGE3_ECL = {"FY2025": -17594, "FY2024": -10736, "FY2023": -10182, "FY2022": -8472, "FY2021": -6955}
+TOTAL_GROSS_LOANS = {"FY2025": 1101565, "FY2024": 680681, "FY2023": 559087, "FY2022": 463683, "FY2021": 403196}
+TOTAL_ECL = {"FY2025": -19061, "FY2024": -12343, "FY2023": -12097, "FY2022": -9868, "FY2021": -8673}
+
+def _pct(numer, denom):
+    return {y: f"{abs(numer[y]) / denom[y] * 100:.2f}%" for y in YEARS}
+
+STAGE3_NPL_RATIO = _pct(STAGE3_GROSS, TOTAL_GROSS_LOANS)
+STAGE3_COVERAGE = {y: f"{abs(STAGE3_ECL[y]) / STAGE3_GROSS[y] * 100:.2f}%" for y in YEARS}
+TOTAL_ECL_COVERAGE = _pct(TOTAL_ECL, TOTAL_GROSS_LOANS)
+
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers at amortised cost, by IFRS 9 stage (gross carrying amount)", {}),
+    ("DATA", "Stage 1", STAGE1_GROSS),
+    ("DATA", "Stage 2", STAGE2_GROSS),
+    ("DATA", "Stage 3", STAGE3_GROSS),
+    ("TOTAL", "Total gross carrying amount", TOTAL_GROSS_LOANS),
+    ("SECTION", "Expected credit loss (ECL) allowance, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 allowance", STAGE1_ECL),
+    ("DATA", "Stage 2 allowance", STAGE2_ECL),
+    ("DATA", "Stage 3 allowance", STAGE3_ECL),
+    ("TOTAL", "Total ECL allowance", TOTAL_ECL),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross)", STAGE3_NPL_RATIO),
+    ("DATA", "Stage 3 coverage (Stage 3 ECL / Stage 3 gross)", STAGE3_COVERAGE),
+    ("DATA", "Total ECL coverage (total ECL / total gross)", TOTAL_ECL_COVERAGE),
+]
+
+bw.add_asset_quality_sheet(
+    title="Castle Trust Capital plc — Asset Quality / Credit Risk Disclosures",
+    subtitle="Company (solo) basis, £'000. Loans to customers at amortised cost only (excludes the small "
+             "fair-value-designated legacy mortgage book, run off by FY2024). All 5 years genuinely disclosed - "
+             "no not-disclosed fallback needed.",
+    rows=asset_quality_rows,
+    sources_text=(
+        "Sources - Castle Trust Capital plc's own 'Reconciliation of gross loan and ECL movements in the year' "
+        "note (Property loans table, the entity's sole loan product), each year's own originally-published "
+        "figures:\n"
+        f"FY2025: Annual financial statements, y/e 30 Sept 2025, p.85 - {CH_FY2025_URL}\n"
+        f"FY2024: Annual financial statements, y/e 30 Sept 2024, p.85 - {CH_FY2024_URL}\n"
+        f"FY2023: Annual financial statements, y/e 30 Sept 2023, p.78 - {CH_FY2023_URL}\n"
+        f"FY2022: Annual financial statements, y/e 30 Sept 2022, p.70 - {CH_FY2022_URL}\n"
+        f"FY2021: Annual financial statements, y/e 30 Sept 2021, p.62 - {CH_FY2021_URL}\n\n"
+        "All 5 years' Total gross carrying amount ties exactly to the Balance Sheet's 'Loans to customers, at "
+        "amortised cost' net figure once the Total ECL allowance is deducted (e.g. FY2025: £1,101,565k - "
+        "£19,061k = £1,082,504k). Derived ratios (Stage 3/NPL ratio, Stage 3 coverage, total ECL coverage) are "
+        "calculated here, not disclosed as standalone percentages by the Bank itself."
+    ),
+    first_col_width=64,
+    source_height=280,
 )
 
 # ---------------------------------------------------------------
@@ -216,6 +435,38 @@ metric(
     p3_sources(),
 )
 
+rwa_breakdown_rows = [
+    ("SECTION", "RWA by risk category (UK OV1, Bank basis)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 566610, "FY2024": 439883}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 6560, "FY2024": 3412}),
+    ("DATA", "  of which: credit valuation adjustment (CVA)", {"FY2025": 2755, "FY2024": 1465}),
+    ("DATA", "Operational risk", {"FY2025": 61318, "FY2024": 56237}),
+    ("TOTAL", "Total", {"FY2025": 634489, "FY2024": 499532, "FY2023": "Not publicly disclosed", "FY2022": "Not publicly disclosed", "FY2021": "Not publicly disclosed"}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Castle Trust Capital plc — RWA Breakdown",
+    subtitle="£'000, Bank basis. Only disclosed FY2024-FY2025 (UK OV1 template introduced from the FY2025 "
+             "Pillar 3 Disclosures document) - see note below for FY2021-FY2023.",
+    rows=rwa_breakdown_rows,
+    sources_text=(
+        f"Sources - Castle Trust Bank Pillar 3 Disclosures, 'Overview of RWEAs for Bank' table (Bank, not "
+        f"Group, basis):\nFY2025: Pillar 3 Disclosures FY ended 30 Sept 2025, p.6 - {P3_2025_URL} (also carries "
+        f"FY2024 as its own comparative column, used here since FY2024's own Pillar 3 Disclosures document "
+        f"predates the OV1 template and doesn't carry this breakdown itself - flagged, not a same-year "
+        f"original disclosure for FY2024)\n\n"
+        "FY2023/FY2022: not publicly disclosed - confirmed by reading both years' Pillar 3 Disclosures "
+        "documents in full; they contain only the 7-page 'Key Metrics' (KM1) template, with no RWA-by-category "
+        "breakdown. FY2021: the FY2021 Pillar 3 Disclosures document's Appendix 4 'Bank Disclosures' discloses "
+        "a Pillar 1 capital *requirement* by category (Credit Risk £24,914k, Operational Risk £3,826k, Total "
+        "£28,740k, i.e. 8% of RWA) but not an RWA figure by category itself - back-calculating an implied RWA "
+        "split (dividing by 8%) was deliberately not done here, since that would be a derived estimate "
+        "presented as a disclosed figure, not a genuine same-year disclosure."
+    ),
+    first_col_width=58,
+    source_height=280,
+)
+
 metric(
     "Leverage Ratio", "£'000 / %",
     [
@@ -266,6 +517,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 1638042, "FY2024": 1112163, "FY2023": 939391, "FY2022": 832897, "FY2021": 659268}),
+        ("Loans to customers, at amortised cost", {"FY2025": 1082504, "FY2024": 668338, "FY2023": 546990, "FY2022": 453815, "FY2021": 394523}),
+        ("Amounts due to customers, at amortised cost", {"FY2025": 1495438, "FY2024": 957770, "FY2023": 827055, "FY2022": 724595, "FY2021": 557956}),
+        ("Total equity", {"FY2025": 103141, "FY2024": 102615, "FY2023": 102379, "FY2022": 93954, "FY2021": 91962}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Net interest income", {"FY2025": 33009, "FY2024": 26408, "FY2023": 29626, "FY2022": 25539, "FY2021": 24254}),
+        ("Administrative expenses", {"FY2025": -23526, "FY2024": -21751, "FY2023": -21144, "FY2022": -21001, "FY2021": -22281}),
+        ("Total profit/(loss)", {"FY2025": 526, "FY2024": 235, "FY2023": 8332, "FY2022": 1981, "FY2021": 6753}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 102615, "FY2024": 102379, "FY2023": 93954, "FY2022": 91962, "FY2021": 85197}),
+        ("Total comprehensive income for the year", {"FY2025": 526, "FY2024": 235, "FY2023": 8332, "FY2022": 1956, "FY2021": 6749}),
+        ("Other movements, net", {"FY2025": 0, "FY2024": 1, "FY2023": 93, "FY2022": 36, "FY2021": 16}),
+        ("Closing equity", {"FY2025": 103141, "FY2024": 102615, "FY2023": 102379, "FY2022": 93954, "FY2021": 91962}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash generated from/(used in) operating activities", {"FY2025": 134605, "FY2024": 5222, "FY2023": 12982, "FY2022": 113687, "FY2021": -62617}),
         ("Net cash generated from/(used in) investing activities", {"FY2025": 41631, "FY2024": -25653, "FY2023": -37858, "FY2022": 12644, "FY2021": 95802}),

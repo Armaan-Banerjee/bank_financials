@@ -129,6 +129,299 @@ def p3_sources(page):
 bw = BankWorkbook(bank_name="SMBC Bank International plc", years=YEARS, header_color="1B6B3C")
 
 # ---------------------------------------------------------------
+# Sheet: Balance Sheet (raw USD figures, converted at build time - spot rate, stocks)
+# ---------------------------------------------------------------
+BS_CASH = {"FY2025": 25294.6, "FY2024": 22951.2, "FY2023": 25880.0, "FY2022": 25255.4, "FY2021": 24550.4}
+BS_SETTLEMENT = {"FY2025": 397.9, "FY2024": 95.5, "FY2023": 115.5, "FY2022": 96.9, "FY2021": 39.2}
+BS_LOANS_BANKS = {"FY2025": 3446.3, "FY2024": 3453.5, "FY2023": 3223.6, "FY2022": 3988.6, "FY2021": 3795.4}
+BS_LOANS_CUSTOMERS = {"FY2025": 19279.8, "FY2024": 18051.7, "FY2023": 17712.7, "FY2022": 19942.6, "FY2021": 20845.5}
+BS_REVERSE_REPO = {"FY2025": 17084.1, "FY2024": 1710.4, "FY2023": 1266.9, "FY2022": 1197.9, "FY2021": 1732.7}
+BS_TRADING_ASSETS = {"FY2025": 1497.7}
+BS_INVESTMENT_SEC = {"FY2025": 764.1, "FY2024": 668.5, "FY2023": 1045.1, "FY2022": 1009.2, "FY2021": 496.5}
+BS_DERIVATIVE_ASSETS = {"FY2025": 1757.9, "FY2024": 1973.0, "FY2023": 2085.6, "FY2022": 1430.4, "FY2021": 1255.7}
+BS_OTHER_ASSETS = {"FY2025": 1461.4, "FY2024": 763.8, "FY2023": 928.9, "FY2022": 696.3, "FY2021": 540.6}
+BS_INTANGIBLES = {"FY2025": 107.2, "FY2024": 70.2, "FY2023": 56.4, "FY2022": 46.7, "FY2021": 39.9}
+BS_PPE = {"FY2025": 216.2, "FY2024": 243.5, "FY2023": 254.4, "FY2022": 254.6, "FY2021": 219.1}
+BS_CURRENT_TAX_ASSET = {"FY2025": 8.2, "FY2024": 5.5, "FY2023": 24.2, "FY2022": 6.0}
+BS_DEFERRED_TAX_ASSET = {"FY2025": 34.6, "FY2024": 43.7, "FY2023": 26.0, "FY2022": 32.1, "FY2021": 20.4}
+BS_PENSION_SURPLUS = {"FY2025": 36.7, "FY2024": 33.6, "FY2023": 41.8, "FY2022": 60.4, "FY2021": 33.1}
+BS_TOTAL_ASSETS = {"FY2025": 71386.7, "FY2024": 50064.1, "FY2023": 52661.1, "FY2022": 54017.1, "FY2021": 53568.5}
+
+BS_DEPOSITS_BANKS = {"FY2025": 28933.9, "FY2024": 21151.7, "FY2023": 24989.5, "FY2022": 26376.9, "FY2021": 23826.3}
+BS_CUSTOMER_ACCOUNTS = {"FY2025": 19678.5, "FY2024": 19829.1, "FY2023": 18669.0, "FY2022": 19754.1, "FY2021": 22319.2}
+BS_DEBT_SECURITIES = {"FY2025": 1012.0, "FY2024": 901.9, "FY2023": 1048.7, "FY2022": 976.0, "FY2021": 853.6}
+BS_REPO_AGREEMENTS = {"FY2025": 12669.1}
+BS_DERIVATIVE_LIAB = {"FY2025": 1768.1, "FY2024": 1625.2, "FY2023": 1877.3, "FY2022": 1322.6, "FY2021": 1228.8}
+BS_TRADING_LIAB = {"FY2025": 294.3}
+BS_OTHER_LIAB = {"FY2025": 1066.7, "FY2024": 938.6, "FY2023": 847.3, "FY2022": 583.7, "FY2021": 499.3}
+BS_OTHER_PROVISIONS = {"FY2025": 16.5, "FY2024": 11.0, "FY2023": 12.0, "FY2022": 34.5, "FY2021": 21.2}
+BS_CURRENT_TAX_LIAB = {"FY2021": 18.3}
+BS_DEFERRED_TAX_LIAB = {"FY2025": 21.2, "FY2024": 26.8, "FY2023": 27.9, "FY2022": 23.1, "FY2021": 13.2}
+BS_TOTAL_LIABILITIES = {"FY2025": 65460.3, "FY2024": 44484.3, "FY2023": 47471.7, "FY2022": 49070.9, "FY2021": 48779.9}
+
+BS_SHARE_CAPITAL = {"FY2025": 3200.1, "FY2024": 3200.1, "FY2023": 3200.1, "FY2022": 3200.1, "FY2021": 3200.1}
+BS_OTHER_RESERVES = {"FY2025": 100.1, "FY2024": 103.8, "FY2023": 110.5, "FY2022": 106.7, "FY2021": 100.9}
+BS_RETAINED_EARNINGS = {"FY2025": 2626.2, "FY2024": 2275.9, "FY2023": 1878.8, "FY2022": 1639.4, "FY2021": 1487.6}
+BS_TOTAL_EQUITY = {"FY2025": 5926.4, "FY2024": 5579.8, "FY2023": 5189.4, "FY2022": 4946.2, "FY2021": 4788.6}
+
+BS_SOURCES = (
+    "Sources - SMBC Bank International plc's own Statement of financial position, converted from USD to £m (see FX "
+    "conversion note below):\n"
+    f"FY2025: SMBC BI Annual report and financial statements, year ended 31 March 2025, p.71 (Statement of financial "
+    f"position) - {AR2025_URL}\n"
+    f"FY2024: SMBC BI Annual report and financial statements, year ended 31 March 2024, p.83 (Statement of financial "
+    f"position) - {AR2024_URL}\n"
+    f"FY2023: SMBC BI Annual report and financial statements, year ended 31 March 2023, p.88 (Statement of financial "
+    f"position) - {AR2023_URL}\n"
+    f"FY2022: SMBC BI Annual report and financial statements, year ended 31 March 2022, p.85 (Statement of financial "
+    f"position) - {AR2022_URL}\n"
+    f"FY2021: SMBC BI Annual report & financial statements, year ended 31 March 2021, p.73 (Statement of financial "
+    f"position) - {AR2021_URL}\n"
+    "Each year's own report was used for its own column (not a restated comparative); every year's own figure was "
+    "cross-checked against its appearance as the comparative column in the following year's report and matched "
+    "exactly in all cases. Total assets ties exactly to Total liabilities + Total equity in USD every year; in GBP "
+    "terms the two sides differ by up to £0.1m due to independent per-line rounding, not a data error. FY2025 is "
+    "the first year to show Trading assets/liabilities and Repurchase agreements as separate lines (following the "
+    "securities-business transfer described in the entity note) and the only year with a Deferred tax asset "
+    "balance shown alongside a Current tax asset; Current tax liability appears only in FY2021 (nil/dash in every "
+    "other year shown).\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE
+)
+
+BS_ROWS = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", gbp_spot(BS_CASH)),
+    ("DATA", "Settlement balances", gbp_spot(BS_SETTLEMENT)),
+    ("DATA", "Loans and advances to banks", gbp_spot(BS_LOANS_BANKS)),
+    ("DATA", "Loans and advances to customers", gbp_spot(BS_LOANS_CUSTOMERS)),
+    ("DATA", "Reverse repurchase agreements", gbp_spot(BS_REVERSE_REPO)),
+    ("DATA", "Trading assets", gbp_spot(BS_TRADING_ASSETS)),
+    ("DATA", "Investment securities", gbp_spot(BS_INVESTMENT_SEC)),
+    ("DATA", "Derivative assets", gbp_spot(BS_DERIVATIVE_ASSETS)),
+    ("DATA", "Other assets", gbp_spot(BS_OTHER_ASSETS)),
+    ("DATA", "Intangible assets and goodwill", gbp_spot(BS_INTANGIBLES)),
+    ("DATA", "Property and equipment", gbp_spot(BS_PPE)),
+    ("DATA", "Current tax asset", gbp_spot(BS_CURRENT_TAX_ASSET)),
+    ("DATA", "Deferred tax asset", gbp_spot(BS_DEFERRED_TAX_ASSET)),
+    ("DATA", "Pensions surplus", gbp_spot(BS_PENSION_SURPLUS)),
+    ("TOTAL", "Total assets", gbp_spot(BS_TOTAL_ASSETS)),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", gbp_spot(BS_DEPOSITS_BANKS)),
+    ("DATA", "Customer accounts", gbp_spot(BS_CUSTOMER_ACCOUNTS)),
+    ("DATA", "Debt securities in issue", gbp_spot(BS_DEBT_SECURITIES)),
+    ("DATA", "Repurchase agreements", gbp_spot(BS_REPO_AGREEMENTS)),
+    ("DATA", "Derivative liabilities", gbp_spot(BS_DERIVATIVE_LIAB)),
+    ("DATA", "Trading liabilities", gbp_spot(BS_TRADING_LIAB)),
+    ("DATA", "Other liabilities", gbp_spot(BS_OTHER_LIAB)),
+    ("DATA", "Other provisions", gbp_spot(BS_OTHER_PROVISIONS)),
+    ("DATA", "Current tax liability", gbp_spot(BS_CURRENT_TAX_LIAB)),
+    ("DATA", "Deferred tax liability", gbp_spot(BS_DEFERRED_TAX_LIAB)),
+    ("TOTAL", "Total liabilities", gbp_spot(BS_TOTAL_LIABILITIES)),
+    ("SECTION", "Shareholders' equity", {}),
+    ("DATA", "Called up share capital", gbp_spot(BS_SHARE_CAPITAL)),
+    ("DATA", "Other reserves", gbp_spot(BS_OTHER_RESERVES)),
+    ("DATA", "Retained earnings", gbp_spot(BS_RETAINED_EARNINGS)),
+    ("TOTAL", "Total equity", gbp_spot(BS_TOTAL_EQUITY)),
+    ("TOTAL", "Total liabilities and equity", gbp_spot(BS_TOTAL_ASSETS)),
+]
+
+bw.add_balance_sheet_sheet(
+    title="SMBC Bank International plc — Statement of Financial Position",
+    subtitle="£m, converted from USD - see source note at bottom for FX methodology and rates used.",
+    rows=BS_ROWS,
+    sources_text=BS_SOURCES,
+    first_col_width=64,
+    source_height=340,
+    unit_suffix=" (£m, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (raw USD figures, converted at build time - average rate, flows)
+# ---------------------------------------------------------------
+IS_INTEREST_INCOME = {"FY2025": 2817.9, "FY2024": 2477.4, "FY2023": 1240.6, "FY2022": 468.2, "FY2021": 578.6}
+IS_INTEREST_EXPENSE = {"FY2025": -2338.7, "FY2024": -2037.0, "FY2023": -1016.5, "FY2022": -142.5, "FY2021": -238.0}
+IS_NET_INTEREST_INCOME = {"FY2025": 479.2, "FY2024": 440.4, "FY2023": 224.1, "FY2022": 325.7, "FY2021": 340.6}
+IS_FEES_INCOME = {"FY2025": 777.0, "FY2024": 582.0, "FY2023": 570.1, "FY2022": 518.6, "FY2021": 482.2}
+IS_FEES_EXPENSE = {"FY2025": -74.7, "FY2024": -25.9, "FY2023": -41.6, "FY2022": -49.4, "FY2021": -46.1}
+IS_NET_FEE_INCOME = {"FY2025": 702.3, "FY2024": 556.1, "FY2023": 528.5, "FY2022": 469.2, "FY2021": 436.1}
+IS_NET_TRADING_INCOME = {"FY2025": 283.0, "FY2024": 277.7, "FY2023": 261.8, "FY2022": 75.9, "FY2021": 64.3}
+IS_LOSS_ON_DISPOSAL = {"FY2025": -83.7}
+IS_OPERATING_INCOME = {"FY2025": 1380.8, "FY2024": 1274.2, "FY2023": 1014.4, "FY2022": 870.8, "FY2021": 841.0}
+IS_IMPAIRMENT = {"FY2025": -28.3, "FY2024": -27.2, "FY2023": -47.7, "FY2022": -95.8, "FY2021": -8.6}
+IS_PERSONNEL = {"FY2025": -508.8, "FY2024": -424.6, "FY2023": -373.2, "FY2022": -385.2, "FY2021": -339.2}
+IS_DEPRECIATION = {"FY2025": -62.1, "FY2024": -55.6, "FY2023": -51.9, "FY2022": -42.7, "FY2021": -40.8}
+IS_BANK_LEVY = {"FY2021": -0.6}
+IS_OTHER_EXPENSES = {"FY2025": -298.0, "FY2024": -231.2, "FY2023": -201.3, "FY2022": -166.3, "FY2021": -123.6}
+IS_NET_OPERATING_EXPENSES = {"FY2025": -897.2, "FY2024": -738.6, "FY2023": -674.1, "FY2022": -690.0, "FY2021": -512.8}
+IS_OTHER_INCOME = {"FY2021": 4.9}
+IS_PROFIT_BEFORE_TAX = {"FY2025": 483.6, "FY2024": 535.6, "FY2023": 340.3, "FY2022": 180.8, "FY2021": 333.1}
+IS_TAX = {"FY2025": -134.0, "FY2024": -129.3, "FY2023": -88.2, "FY2022": -48.9, "FY2021": -92.2}
+IS_PROFIT_FOR_YEAR = {"FY2025": 349.6, "FY2024": 406.3, "FY2023": 252.1, "FY2022": 131.9, "FY2021": 240.9}
+IS_PROFIT_CONTINUING = {"FY2025": 330.9}
+IS_PROFIT_DISCONTINUED = {"FY2025": 18.7}
+IS_ACTUARIAL = {"FY2025": 0.7, "FY2024": -9.2, "FY2023": -12.7, "FY2022": 20.0, "FY2021": -27.4}
+IS_HEDGE_RESERVE_MOVE = {"FY2025": -3.7, "FY2024": -6.6, "FY2023": 3.5, "FY2022": 5.6, "FY2021": -2.8}
+IS_FV_HEDGE_MOVE = {"FY2025": 0.0, "FY2024": -0.1, "FY2023": 0.3, "FY2022": 0.2, "FY2021": 0.5}
+IS_TAX_RATE_EFFECT = {"FY2022": -0.1}
+IS_OCI_TOTAL = {"FY2025": -3.0, "FY2024": -15.9, "FY2023": -8.9, "FY2022": 25.7, "FY2021": -29.7}
+IS_TOTAL_COMPREHENSIVE = {"FY2025": 346.6, "FY2024": 390.4, "FY2023": 243.2, "FY2022": 157.6, "FY2021": 211.2}
+
+IS_SOURCES = (
+    "Sources - SMBC Bank International plc's own Statement of comprehensive income, converted from USD to £m (see "
+    "FX conversion note below):\n"
+    f"FY2025: SMBC BI Annual report and financial statements, year ended 31 March 2025, p.70 (Statement of "
+    f"comprehensive income) - {AR2025_URL}\n"
+    f"FY2024: SMBC BI Annual report and financial statements, year ended 31 March 2024, p.82 (Statement of "
+    f"comprehensive income) - {AR2024_URL}\n"
+    f"FY2023: SMBC BI Annual report and financial statements, year ended 31 March 2023, p.87 (Statement of "
+    f"comprehensive income) - {AR2023_URL}\n"
+    f"FY2022: SMBC BI Annual report and financial statements, year ended 31 March 2022, p.84 (Statement of "
+    f"comprehensive income) - {AR2022_URL}\n"
+    f"FY2021: SMBC BI Annual report & financial statements, year ended 31 March 2021, p.72 (Statement of "
+    f"comprehensive income) - {AR2021_URL}\n"
+    "Each year's own report was used for its own column (not a restated comparative); every year's own figure was "
+    "cross-checked against its appearance as the comparative column in the following year's report and matched "
+    "exactly, EXCEPT: FY2021's own report shows a standalone 'Bank levy' line (USD 0.6m) separate from 'Other "
+    "expenses'; AR2022's own comparative column for FY2021 instead folds the bank levy into 'Other expenses' "
+    "(USD 124.2m = 123.6 + 0.6). FY2021's own originally-published split (used here) is kept, not AR2022's later "
+    "combined presentation - both total the same Net operating expenses either way. Net operating expenses is a "
+    "single bracket comprising impairment + personnel + depreciation + (bank levy, FY2021 only) + other expenses "
+    "in every year's own presentation, not a separate impairment subtotal. FY2025 is the only year showing a "
+    "continuing/discontinued split of Profit for the year (the October 2024 securities-business transfer and Abu "
+    "Dhabi branch opening - see entity note); FY2021 is the only year with a separate 'Other income' line.\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE
+)
+
+IS_ROWS = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", gbp_avg(IS_INTEREST_INCOME)),
+    ("DATA", "Interest expense", gbp_avg(IS_INTEREST_EXPENSE)),
+    ("TOTAL", "Net interest income", gbp_avg(IS_NET_INTEREST_INCOME)),
+    ("DATA", "Fees and commissions income", gbp_avg(IS_FEES_INCOME)),
+    ("DATA", "Fees and commissions expense", gbp_avg(IS_FEES_EXPENSE)),
+    ("TOTAL", "Net fee and commission income", gbp_avg(IS_NET_FEE_INCOME)),
+    ("DATA", "Net trading income", gbp_avg(IS_NET_TRADING_INCOME)),
+    ("DATA", "Net losses from disposal of financial assets at amortised cost", gbp_avg(IS_LOSS_ON_DISPOSAL)),
+    ("TOTAL", "Operating income", gbp_avg(IS_OPERATING_INCOME)),
+    ("SECTION", "Net operating expenses", {}),
+    ("DATA", "Net impairment loss on financial assets", gbp_avg(IS_IMPAIRMENT)),
+    ("DATA", "Personnel expenses", gbp_avg(IS_PERSONNEL)),
+    ("DATA", "Depreciation and amortisation", gbp_avg(IS_DEPRECIATION)),
+    ("DATA", "Bank levy", gbp_avg(IS_BANK_LEVY)),
+    ("DATA", "Other expenses", gbp_avg(IS_OTHER_EXPENSES)),
+    ("TOTAL", "Net operating expenses", gbp_avg(IS_NET_OPERATING_EXPENSES)),
+    ("DATA", "Other income", gbp_avg(IS_OTHER_INCOME)),
+    ("TOTAL", "Profit before income tax", gbp_avg(IS_PROFIT_BEFORE_TAX)),
+    ("DATA", "Income tax charge", gbp_avg(IS_TAX)),
+    ("TOTAL", "Profit for the year", gbp_avg(IS_PROFIT_FOR_YEAR)),
+    ("DATA", "Profit from continuing operations", gbp_avg(IS_PROFIT_CONTINUING)),
+    ("DATA", "Profit from discontinued operations", gbp_avg(IS_PROFIT_DISCONTINUED)),
+    ("SECTION", "Other comprehensive income, net of tax", {}),
+    ("DATA", "Actuarial gains/(losses) on defined benefit scheme", gbp_avg(IS_ACTUARIAL)),
+    ("DATA", "Movement in cash flow hedge reserve", gbp_avg(IS_HEDGE_RESERVE_MOVE)),
+    ("DATA", "Movement in fair value hedge reserve", gbp_avg(IS_FV_HEDGE_MOVE)),
+    ("DATA", "Effect of changes in tax rate", gbp_avg(IS_TAX_RATE_EFFECT)),
+    ("TOTAL", "Other comprehensive income, net of tax", gbp_avg(IS_OCI_TOTAL)),
+    ("TOTAL", "Total comprehensive income for the year", gbp_avg(IS_TOTAL_COMPREHENSIVE)),
+]
+
+bw.add_income_statement_sheet(
+    title="SMBC Bank International plc — Statement of Comprehensive Income",
+    subtitle="£m, converted from USD - see source note at bottom for FX methodology and rates used.",
+    rows=IS_ROWS,
+    sources_text=IS_SOURCES,
+    first_col_width=68,
+    source_height=340,
+    unit_suffix=" (£m, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity (chronological; spot for balances, average for
+# flows - both per the FX_NOTE methodology - with an explicit per-year "Effect of
+# GBP/USD translation" line on the Total column bridging the two, the same convention
+# already used on the Cash Flow Statement sheet for the same underlying conversion
+# problem)
+# ---------------------------------------------------------------
+EQ_HEADERS = ["Share capital", "Retained earnings", "Capital redemption", "Hedge reserve", "Fair value reserve", "Total equity"]
+
+EQ_SOURCES = (
+    "Sources - SMBC Bank International plc's own Statement of changes in equity, converted from USD to £m (see FX "
+    "conversion note below):\n"
+    f"1 April 2020 opening & FY2021 movements: SMBC BI Annual report & financial statements, year ended 31 March "
+    f"2021, p.74 - {AR2021_URL}\n"
+    f"FY2022 movements: SMBC BI Annual report and financial statements, year ended 31 March 2022, p.86 - {AR2022_URL}\n"
+    f"FY2023 movements: SMBC BI Annual report and financial statements, year ended 31 March 2023, p.89 - {AR2023_URL}\n"
+    f"FY2024 movements: SMBC BI Annual report and financial statements, year ended 31 March 2024, p.84 - {AR2024_URL}\n"
+    f"FY2025 movements: SMBC BI Annual report and financial statements, year ended 31 March 2025, p.72 - {AR2025_URL}\n"
+    "Each year's own report was used for its own movements column; every year's own closing balance was "
+    "cross-checked against its appearance as the opening balance in the following year's report and matched "
+    "exactly in USD. GENUINE FX ARTEFACT, NOT A PLUG ROW: because Share capital/Capital redemption are static USD "
+    "amounts and opening/closing balances are converted at each year's own period-end spot rate while movements "
+    "are converted at that year's average rate (see FX note), a large 'Effect of GBP/USD translation' bridging "
+    "line is needed on the Total column every year purely from GBP/USD rate movement - this has no bearing on the "
+    "Bank's underlying USD equity position, which reconciles exactly without any such line. Individual component "
+    "columns (Share capital/Retained earnings/Capital redemption/Hedge reserve/Fair value reserve) are shown "
+    "directly spot/average-converted without a matching per-column translation line, so only the Total column is "
+    "guaranteed to tie exactly row-to-row; components will not sum to Total's own movements exactly for this "
+    "reason. 'Issue of new shares' (FY2021 only, USD 0.1m) is the one genuine (non-FX) capital transaction across "
+    "all 5 years.\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE
+)
+
+EQ_ROWS = [
+    ("TOTAL", "Balance at 1 April 2020 (converted at 31 Mar 2020 spot rate)", (2580.0, 1027.3, 80.6, 3.1, -0.6, 3690.5)),
+    ("DATA", "Profit for the year", (None, 182.6, None, None, None, 182.6)),
+    ("DATA", "Net gains/(losses) transferred to net profit", (None, None, None, -3.0, None, -3.0)),
+    ("DATA", "Actuarial gain/(loss) on defined benefit scheme", (None, -20.8, None, None, None, -20.8)),
+    ("DATA", "Change in fair value of assets classified as FVOCI", (None, None, None, None, 0.4, 0.4)),
+    ("DATA", "Effective portion of changes in fair value", (None, None, None, 0.8, None, 0.8)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 161.8, None, -2.2, 0.4, 160.1)),
+    ("DATA", "Issue of new shares", (0.1, None, None, None, None, 0.1)),
+    ("DATA", "Effect of GBP/USD translation (£ conversion artefact - see FX note)", (None, None, None, None, None, -379.7)),
+    ("TOTAL", "Balance at 31 March 2021", (2319.6, 1078.3, 72.5, 0.8, -0.1, 3471.0)),
+    ("DATA", "Profit for the year", (None, 96.9, None, None, None, 96.9)),
+    ("DATA", "Net gains/(losses) transferred to net profit", (None, None, None, -0.8, None, -0.8)),
+    ("DATA", "Actuarial gain/(loss) on defined benefit scheme", (None, 14.7, None, None, None, 14.7)),
+    ("DATA", "Change in fair value of assets classified as FVOCI", (None, None, None, None, 0.1, 0.1)),
+    ("DATA", "Effective portion of changes in fair value", (None, None, None, 4.9, None, 4.9)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 111.6, None, 4.1, 0.1, 115.8)),
+    ("DATA", "Effect of GBP/USD translation (£ conversion artefact - see FX note)", (None, None, None, None, None, 171.1)),
+    ("TOTAL", "Balance at 31 March 2022", (2431.3, 1245.6, 76.0, 5.1, 0.0, 3757.9)),
+    ("DATA", "Profit for the year", (None, 209.3, None, None, None, 209.3)),
+    ("DATA", "Net gains/(losses) transferred to net profit", (None, None, None, -5.6, None, -5.6)),
+    ("DATA", "Actuarial gain/(loss) on defined benefit scheme", (None, -10.5, None, None, None, -10.5)),
+    ("DATA", "Change in fair value of assets classified as FVOCI", (None, None, None, None, 0.2, 0.2)),
+    ("DATA", "Effective portion of changes in fair value", (None, None, None, 8.5, None, 8.5)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 198.8, None, 2.9, 0.2, 201.9)),
+    ("DATA", "Effect of GBP/USD translation (£ conversion artefact - see FX note)", (None, None, None, None, None, 237.4)),
+    ("TOTAL", "Balance at 31 March 2023", (2588.2, 1519.6, 80.9, 8.2, 0.2, 4197.2)),
+    ("DATA", "Profit for the year", (None, 322.9, None, None, None, 322.9)),
+    ("DATA", "Net gains/(losses) transferred to net profit", (None, None, None, -8.1, None, -8.1)),
+    ("DATA", "Actuarial gain/(loss) on defined benefit scheme", (None, -7.3, None, None, None, -7.3)),
+    ("DATA", "Effective portion of changes in fair value", (None, None, None, 2.9, -0.1, 2.8)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 315.6, None, -5.2, -0.1, 310.3)),
+    ("DATA", "Effect of GBP/USD translation (£ conversion artefact - see FX note)", (None, None, None, None, None, -90.3)),
+    ("TOTAL", "Balance at 31 March 2024", (2533.3, 1801.7, 79.2, 2.8, 0.2, 4417.2)),
+    ("DATA", "Net profit for the period", (None, 273.7, None, None, None, 273.7)),
+    ("DATA", "Net gains/(losses) transferred to net profit", (None, None, None, -2.8, None, -2.8)),
+    ("DATA", "Actuarial gain/(loss) on defined benefit scheme", (None, 0.5, None, None, None, 0.5)),
+    ("DATA", "Effective portion of changes in fair value", (None, None, None, -0.1, None, -0.1)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 274.2, None, -2.9, 0.0, 271.3)),
+    ("DATA", "Effect of GBP/USD translation (£ conversion artefact - see FX note)", (None, None, None, None, None, -98.0)),
+    ("TOTAL", "Balance at 31 March 2025", (2478.8, 2034.2, 77.5, -0.1, 0.2, 4590.5)),
+]
+
+bw.add_equity_changes_sheet(
+    title="SMBC Bank International plc — Statement of Changes in Equity",
+    subtitle="£m, converted from USD - chronological 1 April 2020 through 31 March 2025 - see source note for FX methodology.",
+    headers=EQ_HEADERS,
+    rows=EQ_ROWS,
+    sources_text=EQ_SOURCES,
+    first_col_width=64,
+    source_height=340,
+)
+
+# ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (raw USD figures, converted at build time)
 # ---------------------------------------------------------------
 PROFIT_BEFORE_TAX = {"FY2025": 483.6, "FY2024": 535.6, "FY2023": 340.3, "FY2022": 180.8, "FY2021": 333.1}
@@ -232,6 +525,73 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality (raw USD figures, converted at build time - spot rate, stocks)
+# ---------------------------------------------------------------
+AQ_STAGE1_GROSS = {"FY2025": 64247.5, "FY2024": 43096.3, "FY2023": 44409.4, "FY2022": 47598.7, "FY2021": 46288.7}
+AQ_STAGE2_GROSS = {"FY2025": 1233.3, "FY2024": 1440.7, "FY2023": 3404.7, "FY2022": 2385.5, "FY2021": 3097.8}
+AQ_STAGE3_GROSS = {"FY2025": 164.5, "FY2024": 241.5, "FY2023": 396.7, "FY2022": 492.6, "FY2021": 526.5}
+AQ_TOTAL_GROSS = {"FY2025": 65645.3, "FY2024": 44778.5, "FY2023": 48210.8, "FY2022": 50476.8, "FY2021": 49913.0}
+AQ_STAGE1_IMPAIRMENT = {"FY2025": 19.1, "FY2024": 14.3, "FY2023": 19.3, "FY2022": 67.3, "FY2021": 34.6}
+AQ_STAGE2_IMPAIRMENT = {"FY2025": 157.3, "FY2024": 158.3, "FY2023": 211.3, "FY2022": 136.7, "FY2021": 108.2}
+AQ_STAGE3_IMPAIRMENT = {"FY2025": 28.0, "FY2024": 96.0, "FY2023": 22.5, "FY2022": 45.8, "FY2021": 56.2}
+AQ_TOTAL_IMPAIRMENT = {"FY2025": 204.4, "FY2024": 268.6, "FY2023": 253.1, "FY2022": 249.8, "FY2021": 199.0}
+
+AQ_STAGE3_PCT = {y: f"{100 * AQ_STAGE3_GROSS[y] / AQ_TOTAL_GROSS[y]:.2f}%" for y in YEARS}
+AQ_COVERAGE_PCT = {y: f"{100 * AQ_TOTAL_IMPAIRMENT[y] / AQ_TOTAL_GROSS[y]:.2f}%" for y in YEARS}
+
+AQ_SOURCES = (
+    "Sources - SMBC Bank International plc's own IFRS 9 gross exposure and impairment allowance roll-forward for "
+    "financial assets at amortised cost, converted from USD to £m (see FX conversion note below):\n"
+    f"FY2025: SMBC BI Annual report and financial statements, year ended 31 March 2025, p.87 (Note 4, Financial "
+    f"risk management) - {AR2025_URL}\n"
+    f"FY2024: SMBC BI Annual report and financial statements, year ended 31 March 2024, p.106 (Note 4, Financial "
+    f"risk management) - {AR2024_URL}\n"
+    f"FY2023: SMBC BI Annual report and financial statements, year ended 31 March 2023, p.111 (Note 4, Financial "
+    f"risk management) - {AR2023_URL}\n"
+    f"FY2022: SMBC BI Annual report and financial statements, year ended 31 March 2022, p.108 (Note 4, Financial "
+    f"risk management) - {AR2022_URL}\n"
+    f"FY2021: SMBC BI Annual report & financial statements, year ended 31 March 2021, p.95 (Note 4, Financial risk "
+    f"management) - {AR2021_URL}\n"
+    "Each year's own report was used for its own 'Balance at end of year' column (not a restated comparative); "
+    "every year's own closing balance was cross-checked against its appearance as the opening balance in the "
+    "following year's report and matched exactly, EXCEPT one figure: AR2022's own text extraction of the FY2022 "
+    "'Balance at end of year' Total gross exposure prints as USD 49,598.7m, which does not foot (47,598.7 + "
+    "2,385.5 + 492.6 = 50,476.8) and does not match AR2023's own FY2022 opening balance of USD 50,476.8m exactly - "
+    "the figure used here (USD 50,476.8m, £38,350.4m converted) is the cross-validated, footing figure, not the "
+    "garbled PDF-extracted one. SCOPE NOTE: FY2025's disclosure explicitly states these balances 'relate to loans and "
+    "advances to banks and customers and reverse repurchase agreements' - every other year's disclosure states "
+    "the narrower 'loans and advances to banks and customers' only (no reverse repos) - a real scope widening "
+    "from the October 2024 securities-business transfer (see entity note), not a presentation error. 'Stage 3 as "
+    "% of gross' and 'Coverage ratio' are derived credit-quality proxies (not Pillar 3-defined ratios).\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE
+)
+
+AQ_ROWS = [
+    ("SECTION", "Gross exposure by IFRS 9 stage - financial assets at amortised cost", {}),
+    ("DATA", "Stage 1: subject to 12-month ECL", gbp_spot(AQ_STAGE1_GROSS)),
+    ("DATA", "Stage 2: subject to lifetime ECL, not credit-impaired", gbp_spot(AQ_STAGE2_GROSS)),
+    ("DATA", "Stage 3: subject to lifetime ECL, credit-impaired", gbp_spot(AQ_STAGE3_GROSS)),
+    ("TOTAL", "Total gross exposure", gbp_spot(AQ_TOTAL_GROSS)),
+    ("SECTION", "Impairment allowance by IFRS 9 stage", {}),
+    ("DATA", "Stage 1: subject to 12-month ECL", gbp_spot(AQ_STAGE1_IMPAIRMENT)),
+    ("DATA", "Stage 2: subject to lifetime ECL, not credit-impaired", gbp_spot(AQ_STAGE2_IMPAIRMENT)),
+    ("DATA", "Stage 3: subject to lifetime ECL, credit-impaired", gbp_spot(AQ_STAGE3_IMPAIRMENT)),
+    ("TOTAL", "Total impairment allowance", gbp_spot(AQ_TOTAL_IMPAIRMENT)),
+    ("DATA", "Stage 3 as % of gross exposure (derived)", AQ_STAGE3_PCT),
+    ("DATA", "Coverage ratio (derived)", AQ_COVERAGE_PCT),
+]
+
+bw.add_asset_quality_sheet(
+    title="SMBC Bank International plc — Asset Quality",
+    subtitle="£m, converted from USD - IFRS 9 stage breakdown of gross exposure and impairment allowance - see source note for FX methodology.",
+    rows=AQ_ROWS,
+    sources_text=AQ_SOURCES,
+    first_col_width=68,
+    source_height=340,
+    unit_suffix=" (£m, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 CET1_CAPITAL = {"FY2025": 5786, "FY2024": 5477, "FY2023": 5083, "FY2022": 4887, "FY2021": 4787.9}
@@ -274,6 +634,53 @@ metric("Total Capital Ratio", "% of RWA", [
 ])
 
 metric("Total RWAs", "£m (conv. from USD)", [("Total risk weighted exposure amount", gbp_spot(TOTAL_RWA))])
+
+# ---------------------------------------------------------------
+# Sheet: RWA Breakdown (raw USD figures, converted at build time - spot rate, stocks)
+# ---------------------------------------------------------------
+RWA_CREDIT_RISK = {"FY2025": 27889, "FY2024": 24153, "FY2023": 24625, "FY2022": 26391, "FY2021": 25576}
+RWA_CCR = {"FY2025": 1841, "FY2024": 1759, "FY2023": 1742, "FY2022": 1303, "FY2021": 750}
+RWA_MARKET_RISK = {"FY2025": 1818, "FY2024": 195, "FY2023": 466, "FY2022": 610, "FY2021": 723}
+RWA_OPERATIONAL_RISK = {"FY2025": 2343, "FY2024": 2016, "FY2023": 1745, "FY2022": 1637, "FY2021": 1613}
+RWA_MEMO_BELOW_THRESHOLD = {"FY2025": 99, "FY2024": 117, "FY2023": 65, "FY2022": 80, "FY2021": 52}
+
+RWA_SOURCES = (
+    "Sources - SMBC Bank International plc's own Basel III Pillar 3 Disclosures, Table OV1 - Overview of risk "
+    "weighted exposure amounts, converted from USD to £m (see FX conversion note below):\n"
+    f"FY2025: Table 4.1 OV1, p.9 - {P3_2025_URL}\n"
+    f"FY2024: Table 5 OV1, p.9 - {P3_2024_URL}\n"
+    f"FY2023: Table 5 OV1, p.11 - {P3_2023_URL}\n"
+    f"FY2022: Table 5 OV1, p.10 - {P3_2022_URL}\n"
+    f"FY2021: Table 5 OV1, p.10 (FY2021's own column of the FY2022 Pillar 3 report - no standalone OV1 table is "
+    f"published in the March 2021 interim disclosure itself) - {P3_2022_URL}\n"
+    "Each year's own figure was cross-checked against its appearance as the comparative column in the following "
+    "year's report and matched exactly in every case. FY2024 and FY2023 each have a genuine £1m/USD1m rounding "
+    "gap between the sum of the four category rows and the Total (each line independently rounded to the nearest "
+    "USD million in the source table itself) - not a data error; FY2025, FY2022 and FY2021 sum exactly. 'Memo: "
+    "amounts below thresholds for deduction' is an information-only line excluded from the Total per the source "
+    "template's own footnote, not summed into RWAs. Settlement risk (FY2025 only, USD 0.1m) and 'exposures to a "
+    "CCP'/large exposures sub-lines (nil or immaterial in every year) are omitted as separate rows for brevity.\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE
+)
+
+RWA_ROWS = [
+    ("DATA", "Credit risk (excluding CCR)", gbp_spot(RWA_CREDIT_RISK)),
+    ("DATA", "Counterparty credit risk (CCR)", gbp_spot(RWA_CCR)),
+    ("DATA", "Position, foreign exchange and commodities risks (market risk)", gbp_spot(RWA_MARKET_RISK)),
+    ("DATA", "Operational risk", gbp_spot(RWA_OPERATIONAL_RISK)),
+    ("TOTAL", "Total risk weighted exposure amount", gbp_spot(TOTAL_RWA)),
+    ("DATA", "Memo: amounts below thresholds for deduction (not summed into Total)", gbp_spot(RWA_MEMO_BELOW_THRESHOLD)),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="SMBC Bank International plc — RWA Breakdown",
+    subtitle="£m, converted from USD - UK OV1 Overview of risk weighted exposure amounts - see source note for FX methodology.",
+    rows=RWA_ROWS,
+    sources_text=RWA_SOURCES,
+    first_col_width=66,
+    source_height=340,
+    unit_suffix=" (£m, conv. from USD)",
+)
 
 metric("Leverage Ratio", "£m (conv. from USD) / %", [
     ("Total exposure measure excluding claims on central banks", gbp_spot(LEV_EXPOSURE)),
@@ -392,6 +799,26 @@ bw.add_wide_interim_sheet(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", gbp_spot(BS_TOTAL_ASSETS)),
+        ("Loans and advances to customers", gbp_spot(BS_LOANS_CUSTOMERS)),
+        ("Customer accounts", gbp_spot(BS_CUSTOMER_ACCOUNTS)),
+        ("Total equity", gbp_spot(BS_TOTAL_EQUITY)),
+    ],
+    balance_sheet_unit="£m (conv. from USD)",
+    income_statement_totals=[
+        ("Operating income", gbp_avg(IS_OPERATING_INCOME)),
+        ("Net operating expenses", gbp_avg(IS_NET_OPERATING_EXPENSES)),
+        ("Profit for the year", gbp_avg(IS_PROFIT_FOR_YEAR)),
+    ],
+    income_statement_unit="£m (conv. from USD)",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 4417.2, "FY2024": 4197.2, "FY2023": 3757.9, "FY2022": 3471.0, "FY2021": 3690.5}),
+        ("Total comprehensive income for the year", {"FY2025": 271.3, "FY2024": 310.3, "FY2023": 201.9, "FY2022": 115.8, "FY2021": 160.1}),
+        ("Other equity movements, net", {"FY2025": -98.0, "FY2024": -90.3, "FY2023": 237.4, "FY2022": 171.1, "FY2021": -379.6}),
+        ("Closing equity", gbp_spot(BS_TOTAL_EQUITY)),
+    ],
+    equity_changes_unit="£m (conv. from USD)",
     cash_flow_totals=[
         ("Net cash from/(used in) operating activities", gbp_avg(NET_OPERATING)),
         ("Net cash from/(used in) investing activities", gbp_avg(NET_INVESTING)),

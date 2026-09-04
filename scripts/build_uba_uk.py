@@ -114,6 +114,80 @@ CASH_FLOW_SOURCES = (
 )
 
 
+STATEMENTS_SOURCES = (
+    "Sources - all figures are United Bank for Africa (UK) Limited's own primary financial statements (converted "
+    "from USD to £, see FX conversion note below):\n"
+    f"FY2024 & FY2023: Annual Report and Accounts 2024, p.47 (Statement of Profit or Loss and Other Comprehensive "
+    f"Income), p.48 (Statement of Financial Position) - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Accounts 2022, p.36 (Statement of Comprehensive Income), p.37 (Statement "
+    f"of Financial Position) - {AR2022_URL}\n\n"
+    "Presentation differs between report vintages: FY2024/FY2023 split interest income into 'calculated using the "
+    "effective interest method' and 'other interest and similar income' lines and separately disclose 'Due from "
+    "banks', a Deferred tax asset, and a Current tax asset; FY2022/FY2021 show a single 'Interest receivable and "
+    "similar income' line, no 'Due from banks' split, and a Deferred TAX LIABILITY instead (FY2021 only, £nil "
+    "FY2022) rather than an asset. Each year's own as-reported line items and labels are preserved rather than "
+    "forced into a common shape; blank cells indicate that year's report did not disclose that specific split.\n\n"
+    "OCI DISCREPANCY NOTE: FY2024's Statement of Profit or Loss and OCI shows 4 separate OCI detail lines summing "
+    "to the stated 'Total items that may be reclassified to profit or loss' ($1,086k + $740k + $618k + $349k = "
+    "$2,793k) - but the Statement of Changes in Equity's own FY2024 roll-forward shows a DIFFERENT 3-line OCI "
+    "component split ($1,435k fair value change + $740k reclassification + $618k ECL allowance change = the same "
+    "$2,793k total). Both statements' totals agree exactly ($2,793k / £2,185.1k), but their component breakdowns "
+    "do not reconcile line-for-line - an unresolved labelling inconsistency in the source document itself, "
+    "reproduced here exactly as each statement presents it rather than silently reconciled or picked one over "
+    "the other.\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE
+)
+
+EQUITY_SOURCES = (
+    "Sources - United Bank for Africa (UK) Limited's own Statement of Changes in Equity, presented in the Bank's "
+    "native US$'000 (NOT converted to £, unlike every other sheet in this workbook):\n"
+    f"FY2024 & FY2023: Annual Report and Accounts 2024, p.49 (Statement of Changes in Equity) - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Accounts 2022, p.38 (Statement of Changes in Equity) - {AR2022_URL}\n\n"
+    "WHY NOT CONVERTED: unlike the Balance Sheet (a point-in-time snapshot, convertible at that date's spot rate) "
+    "and the Profit & Loss (a single year's flow, convertible at that year's average rate), this sheet is a "
+    "multi-year chronological ROLL-FORWARD chaining 4 years of opening/movement/closing balances together. "
+    "Converting each balance at its own date's spot rate while converting each movement at that year's average "
+    "rate would introduce a distinct, unexplained 'FX translation' gap into every reserve column at every year "
+    "boundary (verified: gaps of several hundred to several thousand £'000 per column per year, driven entirely "
+    "by USD/GBP rate movement, not by any real accounting entry) - materially different from the Cash Flow "
+    "Statement sheet's single-line, whole-statement translation plug, and not cleanly representable as one "
+    "reconciling row across 5 equity-component columns. Rather than fabricate a misleadingly precise-looking £ "
+    "conversion that would obscure this, the ladder is shown in the Bank's own native USD, exactly as reported, "
+    "on every row. Convert any individual balance to £ using this sheet's own year-end spot rate (see FX "
+    "conversion note on the Cash Flow Statement sheet) if needed for cross-reference.\n\n"
+    "RECONCILIATION NOTE: FY2022, FY2023, and FY2024 all tie exactly to that year's own Balance Sheet Total "
+    "equity and to the next year's opening balance. FY2021's closing balance as shown in this equity statement "
+    "($39,492k total; Accumulated losses $(19,931)k; Fair value + Hedging reserve $(1,024)k combined) differs "
+    "from the FY2021 Balance Sheet's own independently-stated figures (Accumulated losses $(19,930)k; Other "
+    "reserves $(1,025)k) by exactly $1k in each of two lines (Total equity itself, $39,492k, matches exactly) - "
+    "a genuine $1k rounding artefact between the two primary statements in the FY2022 Annual Report, reproduced "
+    "exactly as each statement states rather than forced to tie.\n\n"
+    + ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - United Bank for Africa (UK) Limited's own credit risk / ECL disclosures (converted from USD to £ "
+    "where a $ amount; see FX conversion note on the Cash Flow Statement sheet):\n"
+    f"FY2024 & FY2023: Annual Report and Accounts 2024, p.59 (ECL scenario/stage summary table), p.85-86 "
+    f"(maximum exposure to credit risk by stage and credit rating) - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Accounts 2022, p.44 (ECL scenario note), p.54 (Ghana Stage 3 exposure "
+    f"note) - {AR2022_URL}\n\n"
+    "GRANULARITY NOTE: UBA UK is a wholesale/treasury bank with an essentially nil customer loan book (£0-2.6m "
+    "across all 4 years) - its real credit risk sits in interbank placements and investment securities, so this "
+    "sheet is built from the Bank's own IFRS 9 stage-tagged ECL disclosure across ALL financial assets subject to "
+    "ECL (cash, due from banks, loans and advances to banks/customers, debt instruments, investment securities at "
+    "FVOCI, financial commitments), not a conventional retail/commercial loan book split. FY2024/FY2023 disclose "
+    "a full stage-by-stage gross exposure and ECL allowance table (summed across all asset classes here); "
+    "FY2022/FY2021's Annual Report describes the same 3-stage ECL methodology only QUALITATIVELY, with no "
+    "consolidated numeric stage-tagged table anywhere in the document (confirmed via full review of the credit "
+    "risk note and all ECL-related notes) - a genuine confirmed non-disclosure at this granularity, not an access "
+    "gap. FY2022's one disclosed Stage 3 item (a Ghanaian sovereign Eurobond, $5m nominal / $4m carrying amount, "
+    "following a Fitch default downgrade) and FY2021's explicit 'Stage 3: Nil' are shown as the only stage-level "
+    "data points available for those two years.\n\n"
+    + ENTITY_NOTE
+)
+
+
 def p3_sources(page_24="10", page_22="9"):
     return (
         "Sources - United Bank for Africa (UK) Limited Pillar 3 Disclosures (Key Metrics table), converted from "
@@ -125,6 +199,127 @@ def p3_sources(page_24="10", page_22="9"):
 
 
 bw = BankWorkbook(bank_name="United Bank for Africa (UK) Limited", years=YEARS, year_label=YEAR_LABEL, header_color="805B10")
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet (£'000, converted via stock() - a point-in-time snapshot per year)
+# ---------------------------------------------------------------
+bs_rows_usd = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", {"FY2024": 102328, "FY2023": 91250, "FY2022": 31354, "FY2021": 55425}),
+    ("DATA", "Due from banks", {"FY2024": 86235}),
+    ("DATA", "Loans and advances to banks", {"FY2024": 88969, "FY2023": 363448, "FY2022": 418231, "FY2021": 326606}),
+    ("DATA", "Loans and advances to customers", {"FY2024": 0, "FY2023": 2561}),
+    ("DATA", "Investment securities", {"FY2024": 181213, "FY2023": 147377, "FY2022": 140253, "FY2021": 133829}),
+    ("DATA", "Property, plant and equipment", {"FY2024": 1740, "FY2023": 1600, "FY2022": 1831, "FY2021": 2399}),
+    ("DATA", "Intangible assets", {"FY2024": 1425, "FY2023": 1616, "FY2022": 1916, "FY2021": 2066}),
+    ("DATA", "Current tax asset", {"FY2024": 264}),
+    ("DATA", "Other assets", {"FY2024": 5872, "FY2023": 3805, "FY2022": 2253, "FY2021": 2212}),
+    ("DATA", "Deferred tax asset", {"FY2024": 1656}),
+    ("TOTAL", "Total assets", {"FY2024": 469702, "FY2023": 611657, "FY2022": 595838, "FY2021": 522537}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", {"FY2024": 373403, "FY2023": 493214, "FY2022": 539010, "FY2021": 476448}),
+    ("DATA", "Deposits from customers", {"FY2024": 9836, "FY2023": 37380, "FY2022": 4815, "FY2021": 17}),
+    ("DATA", "Deferred tax liability", {"FY2021": 67}),
+    ("DATA", "Corporation tax liability", {"FY2023": 176, "FY2022": 669}),
+    ("DATA", "Other liabilities", {"FY2024": 7154, "FY2023": 5820, "FY2022": 4941, "FY2021": 6513}),
+    ("TOTAL", "Total liabilities", {"FY2024": 390393, "FY2023": 536590, "FY2022": 549435, "FY2021": 483045}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2024": 72246, "FY2023": 72246, "FY2022": 60246, "FY2021": 60246}),
+    ("DATA", "Share premium account", {"FY2024": 201, "FY2023": 201, "FY2022": 201, "FY2021": 201}),
+    ("DATA", "Retained earnings/(Accumulated losses)", {"FY2024": 7292, "FY2023": 5843, "FY2022": -8480, "FY2021": -19930}),
+    ("DATA", "Other reserves", {"FY2024": -430, "FY2023": -3223, "FY2022": -5564, "FY2021": -1025}),
+    ("TOTAL", "Total equity", {"FY2024": 79309, "FY2023": 75067, "FY2022": 46403, "FY2021": 39492}),
+    ("TOTAL", "Total liabilities and equity", {"FY2024": 469702, "FY2023": 611657, "FY2022": 595838, "FY2021": 522537}),
+]
+bs_rows = [(kind, label, ({} if kind == "SECTION" else stock(usd))) for kind, label, usd in bs_rows_usd]
+
+bw.add_balance_sheet_sheet(
+    title="United Bank for Africa (UK) Limited — Statement of Financial Position",
+    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used.",
+    rows=bs_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=420,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (£'000, converted via flow() - a single year's flow per column)
+# ---------------------------------------------------------------
+is_rows_usd = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income calculated using the effective interest method", {"FY2024": 43575, "FY2023": 48839}),
+    ("DATA", "Other interest and similar income", {"FY2024": 1627, "FY2023": 1403}),
+    ("DATA", "Interest receivable and similar income", {"FY2022": 41116, "FY2021": 16513}),
+    ("DATA", "Interest expense", {"FY2024": -19477, "FY2023": -21553, "FY2022": -16927, "FY2021": -9045}),
+    ("TOTAL", "Net interest income", {"FY2024": 25725, "FY2023": 28689, "FY2022": 24189, "FY2021": 7468}),
+    ("DATA", "Fee and commission income", {"FY2024": 405, "FY2023": 558, "FY2022": 1763, "FY2021": 1624}),
+    ("DATA", "Provision for expected credit losses", {"FY2024": -33, "FY2023": -246, "FY2022": -3894, "FY2021": -1288}),
+    ("DATA", "Net gains/(losses) on derecognition of debt instruments at amortised cost", {"FY2024": 1047, "FY2023": -124}),
+    ("DATA", "Net gains on derecognition of debt instruments at FVOCI", {"FY2024": 204, "FY2023": 12}),
+    ("DATA", "Loss on disposal of investments at FVOCI", {"FY2022": -343, "FY2021": -18}),
+    ("DATA", "Other income", {"FY2024": 732, "FY2023": 2281, "FY2022": 676, "FY2021": 1114}),
+    ("TOTAL", "Operating income", {"FY2024": 28080, "FY2023": 31170, "FY2022": 22391, "FY2021": 8900}),
+    ("DATA", "Staff costs", {"FY2024": -9432, "FY2023": -7728, "FY2022": -7106, "FY2021": -5680}),
+    ("DATA", "Administrative expenses", {"FY2024": -4894, "FY2023": -3875, "FY2022": -2894, "FY2021": -2008}),
+    ("DATA", "Other operating (expenses)/income", {"FY2024": -55, "FY2023": -889, "FY2022": 418, "FY2021": -1494}),
+    ("DATA", "Depreciation and amortisation", {"FY2024": -780, "FY2023": -783, "FY2022": -756, "FY2021": -765}),
+    ("TOTAL", "Profit/(loss) before taxation", {"FY2024": 12919, "FY2023": 17895, "FY2022": 12053, "FY2021": -1047}),
+    ("DATA", "Income tax (expense)/credit", {"FY2024": -1470, "FY2023": -3572, "FY2022": -602, "FY2021": 0}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2024": 11449, "FY2023": 14323, "FY2022": 11451, "FY2021": -1047}),
+    ("SECTION", "Other comprehensive income/(expense)", {}),
+    ("DATA", "Items that may be reclassified to profit or loss (as printed - see OCI discrepancy note)", {"FY2024": 1086, "FY2023": 2341}),
+    ("DATA", "Net change in fair value of investment securities at FVOCI", {"FY2024": 740}),
+    ("DATA", "Net change in allowances for expected credit losses of investment securities at FVOCI", {"FY2024": 618}),
+    ("DATA", "Income tax related to the above", {"FY2024": 349}),
+    ("DATA", "Hedging derivative unrealised gain/(loss)", {"FY2022": 0, "FY2021": 172}),
+    ("DATA", "Net loss on financial assets measured at FVOCI", {"FY2022": -4540, "FY2021": -841}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year", {"FY2024": 14242, "FY2023": 16664, "FY2022": 6911, "FY2021": -1716}),
+]
+is_rows = [(kind, label, ({} if kind == "SECTION" else flow(usd))) for kind, label, usd in is_rows_usd]
+
+bw.add_income_statement_sheet(
+    title="United Bank for Africa (UK) Limited — Statement of Profit or Loss and Other Comprehensive Income",
+    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used.",
+    rows=is_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=78,
+    source_height=420,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity (US$'000, NOT converted - see EQUITY_SOURCES note)
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Share capital", "Share premium account", "Fair value & hedging reserve", "Retained earnings/(Accumulated losses)", "Total equity"]
+
+equity_rows = [
+    ("TOTAL", "Balance as at 1 January 2021", (60246, 201, -355, -18884, 41208)),
+    ("DATA", "Loss for the year", (None, None, None, -1047, -1047)),
+    ("DATA", "Other comprehensive expense (hedging + FVOCI)", (None, None, -669, None, -669)),
+    ("TOTAL", "Balance at 31 December 2021 / 1 January 2022", (60246, 201, -1024, -19931, 39492)),
+    ("DATA", "Profit for the year", (None, None, None, 11451, 11451)),
+    ("DATA", "Other comprehensive expense (FVOCI)", (None, None, -4540, None, -4540)),
+    ("TOTAL", "Balance at 31 December 2022 / 1 January 2023", (60246, 201, -5564, -8480, 46403)),
+    ("DATA", "Issuance of share capital", (12000, None, None, None, 12000)),
+    ("DATA", "Profit for the year", (None, None, None, 14323, 14323)),
+    ("DATA", "Net change in fair value of financial instruments at FVOCI", (None, None, 2341, None, 2341)),
+    ("TOTAL", "Balance at 31 December 2023 / 1 January 2024", (72246, 201, -3223, 5843, 75067)),
+    ("DATA", "Profit for the year", (None, None, None, 11449, 11449)),
+    ("DATA", "Total items that may be reclassified to profit or loss (OCI, net)", (None, None, 2793, None, 2793)),
+    ("DATA", "Dividends", (None, None, None, -10000, -10000)),
+    ("TOTAL", "Balance at 31 December 2024", (72246, 201, -430, 7292, 79309)),
+]
+
+bw.add_equity_changes_sheet(
+    title="United Bank for Africa (UK) Limited — Statement of Changes in Equity",
+    subtitle="US$'000 (NOT converted to £ - see source note at bottom for why).",
+    headers=EQUITY_HEADERS,
+    rows=equity_rows,
+    sources_text=EQUITY_SOURCES,
+    first_col_width=52,
+    source_height=460,
+)
 
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (raw USD '000, then converted via flow()/stock()/opening_cash())
@@ -206,6 +401,33 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality (£'000, stock() for balances / flow() for the P&L ECL charge)
+# ---------------------------------------------------------------
+aq_rows = [
+    ("SECTION", "Credit quality (IFRS 9 ECL by stage, all financial assets subject to ECL)", {}),
+    ("DATA", "Total gross exposure subject to ECL", stock({"FY2024": 437778, "FY2023": 585061})),
+    ("DATA", "Stage 1 ECL allowance", stock({"FY2024": 1774, "FY2023": 2805})),
+    ("DATA", "Stage 2 ECL allowance", stock({"FY2024": 517, "FY2023": 956})),
+    ("DATA", "Stage 3 ECL allowance", stock({"FY2024": 0, "FY2023": 2366})),
+    ("DATA", "POCI ECL allowance", stock({"FY2024": 96, "FY2023": 0})),
+    ("TOTAL", "Total ECL allowance", stock({"FY2024": 2387, "FY2023": 6127})),
+    ("DATA", "ECL charge for the year (P&L)", flow({"FY2024": -33, "FY2023": -246, "FY2022": -3894, "FY2021": -1288})),
+    ("DATA", "Stage 3 / non-performing gross exposure", stock({"FY2024": 0, "FY2023": 4418, "FY2022": 4000, "FY2021": 0})),
+    ("DATA", "Coverage ratio (Total ECL allowance / total gross exposure)", {"FY2024": "0.55%", "FY2023": "1.05%"}),
+    ("DATA", "Memo: Ghana sovereign Eurobond nominal value (FY2022 Stage 3 exposure)", stock({"FY2022": 5000})),
+]
+
+bw.add_asset_quality_sheet(
+    title="United Bank for Africa (UK) Limited — Asset Quality / Credit Risk Disclosures",
+    subtitle="£'000, converted from USD - see source note at bottom. UBA UK is a wholesale/treasury bank with an essentially nil customer loan book; figures cover all financial assets subject to IFRS 9 ECL.",
+    rows=aq_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=68,
+    source_height=380,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -229,6 +451,20 @@ metric("Total Capital", "£'000 (conv. from USD)", [("Total capital", stock(CET1
        note="Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.")
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2024": "49.04%", "FY2023": "47.60%", "FY2022": "23.27%", "FY2021": "33.56%"})], p3_sources())
 metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", stock(RWA_USD))], p3_sources())
+
+bw.add_rwa_breakdown_sheet(
+    title="United Bank for Africa (UK) Limited — RWA Breakdown",
+    subtitle="Not publicly disclosed.",
+    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
+    sources_text=p3_sources() + "\n\nNo UK OV1 (or equivalent RWA-by-category) template was found in either "
+                 "Pillar 3 Disclosures document - only a single Total RWA figure is disclosed in each year's Key "
+                 "Metrics table (see Total RWAs sheet), with no risk-category breakdown (credit risk, market risk, "
+                 "operational risk, etc.) anywhere in either document. Confirmed via full review of both Pillar 3 "
+                 "reports, not an access gap.",
+    first_col_width=54,
+    source_height=140,
+    unit_suffix="",
+)
 
 metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
@@ -281,6 +517,26 @@ bw.add_overview_sheet(
     cash_flow_totals=[(label, flow(vals)) for label, vals in cf_totals_usd.items()]
                       + [("Cash and cash equivalents at end of period", stock(cf_close_usd))],
     cash_flow_unit="£'000",
+    balance_sheet_totals=[
+        ("Total assets", stock({"FY2024": 469702, "FY2023": 611657, "FY2022": 595838, "FY2021": 522537})),
+        ("Loans and advances to customers", stock({"FY2024": 0, "FY2023": 2561})),
+        ("Deposits from customers", stock({"FY2024": 9836, "FY2023": 37380, "FY2022": 4815, "FY2021": 17})),
+        ("Total equity", stock({"FY2024": 79309, "FY2023": 75067, "FY2022": 46403, "FY2021": 39492})),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Operating income", flow({"FY2024": 28080, "FY2023": 31170, "FY2022": 22391, "FY2021": 8900})),
+        ("Total operating expense", flow({"FY2024": -15161, "FY2023": -13275, "FY2022": -10338, "FY2021": -9947})),
+        ("Profit/(loss) for the year", flow({"FY2024": 11449, "FY2023": 14323, "FY2022": 11451, "FY2021": -1047})),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2024": 75067, "FY2023": 46403, "FY2022": 39492, "FY2021": 41208}),
+        ("Total comprehensive income/(loss) for the year", {"FY2024": 14242, "FY2023": 16664, "FY2022": 6911, "FY2021": -1716}),
+        ("Other equity movements, net (issuances/dividends)", {"FY2024": -10000, "FY2023": 12000, "FY2022": 0, "FY2021": 0}),
+        ("Closing equity", {"FY2024": 79309, "FY2023": 75067, "FY2022": 46403, "FY2021": 39492}),
+    ],
+    equity_changes_unit="US$'000 (native, not converted - see Statement of Changes in Equity source note)",
     ratios=[
         ("CET1 Ratio", {"FY2024": "49.04%", "FY2023": "47.60%", "FY2022": "23.27%", "FY2021": "33.56%"}),
         ("Tier 1 Ratio", {"FY2024": "49.04%", "FY2023": "47.60%", "FY2022": "23.27%", "FY2021": "33.56%"}),
@@ -290,10 +546,12 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2024": "182.68%", "FY2023": "153.07%", "FY2022": "181.33%", "FY2021": "147.77%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation. All £ figures are converted from the Bank's native USD reporting (see Cash Flow Statement "
-         "sheet's FX conversion note) - this conversion was not explicitly requested for this bank but applied for "
-         "consistency with the rest of the series, following the same call already confirmed for Zenith Bank UK. "
-         "No FY2025 Annual Report or Pillar 3 disclosure has been published yet, so this workbook covers "
+         "citation. Balance Sheet/Profit & Loss/Cash Flow £ figures are converted from the Bank's native USD "
+         "reporting (see Cash Flow Statement sheet's FX conversion note) - this conversion was not explicitly "
+         "requested for this bank but applied for consistency with the rest of the series, following the same "
+         "call already confirmed for Zenith Bank UK. The Statement of Changes in Equity summary above is shown "
+         "in the Bank's native US$'000 (NOT converted), matching that detail sheet - see its own source note for "
+         "why. No FY2025 Annual Report or Pillar 3 disclosure has been published yet, so this workbook covers "
          "FY2021-FY2024 (4 years) rather than the usual 5.",
 )
 

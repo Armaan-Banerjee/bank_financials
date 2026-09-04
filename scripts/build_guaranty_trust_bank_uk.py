@@ -66,6 +66,211 @@ def p3_sources():
 
 bw = BankWorkbook(bank_name="Guaranty Trust Bank (UK) Limited", years=YEARS, year_label=YEAR_LABEL, header_color="00B721")
 
+STATEMENTS_SOURCES = (
+    "Sources - all figures are Guaranty Trust Bank (UK) Limited's own statements, as originally published in\n"
+    "each year's own Companies House-filed Annual Report and Financial Statements (FY2023 sourced from the\n"
+    "FY2024 Annual Report's own FY2023 comparative column, since no separate FY2023 filing exists as a\n"
+    "standalone document - the same convention already used for the Cash Flow Statement sheet):\n"
+    f"FY2024: Annual Report for the year ended 31 Dec 2024, p.23-25 (Statement of comprehensive income,\n"
+    f"Statement of financial position, Statement of changes in equity) - {AR2024_URL}\n"
+    f"FY2023: as above (FY2024 Annual Report's own FY2023 comparative column, p.23-25) - {AR2024_URL}\n"
+    f"FY2022: Annual Report for the year ended 31 Dec 2022, p.22-24 - {AR2022_URL}\n"
+    f"FY2021: Annual Report for the year ended 31 Dec 2021, p.21-23 - {AR2021_URL}\n\n"
+    + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+bw.add_balance_sheet_sheet(
+    title="Guaranty Trust Bank (UK) Limited — Statement of Financial Position",
+    subtitle="As originally published in each year's own Annual Report",
+    rows=[
+        ("SECTION", "Assets", {}),
+        ("DATA", "Cash and money market funds", {
+            "FY2024": 100662477, "FY2023": 94365231,
+        }),
+        ("DATA", "Cash and cash equivalents", {
+            "FY2022": 97716359, "FY2021": 116275570,
+        }),
+        ("DATA", "Loans and advances to banks", {
+            "FY2024": 259678468, "FY2023": 152612406, "FY2022": 345107924, "FY2021": 230460594,
+        }),
+        ("DATA", "Loans and advances to customers", {
+            "FY2024": 62534590, "FY2023": 57675796, "FY2022": 61872149, "FY2021": 57660949,
+        }),
+        ("DATA", "Investment securities", {
+            "FY2024": 146470054, "FY2023": 151922722, "FY2022": 107015424, "FY2021": 82190414,
+        }),
+        ("DATA", "Property and equipment", {
+            "FY2024": 3746354, "FY2023": 3197915, "FY2022": 2292269, "FY2021": 691135,
+        }),
+        ("DATA", "Right-of-use leasehold property", {
+            "FY2024": 9777616, "FY2023": 10556149, "FY2022": 11599109, "FY2021": 616484,
+        }),
+        ("DATA", "Other assets", {
+            "FY2024": 567044, "FY2023": 440852, "FY2022": 291795, "FY2021": 898439,
+        }),
+        ("DATA", "Deferred tax asset", {
+            "FY2024": 9284, "FY2023": 12379, "FY2022": 949586, "FY2021": 2042560,
+        }),
+        ("TOTAL", "Total assets", {
+            "FY2024": 583445887, "FY2023": 470783450, "FY2022": 626844615, "FY2021": 490836145,
+        }),
+        ("SECTION", "Liabilities", {}),
+        ("DATA", "Deposits by banks", {
+            "FY2024": 329988520, "FY2023": 217403953, "FY2022": 344658275, "FY2021": 291426385,
+        }),
+        ("DATA", "Deposits by customers", {
+            "FY2024": 191532438, "FY2023": 196877072, "FY2022": 232269660, "FY2021": 163962244,
+        }),
+        ("DATA", "Leasehold liability", {
+            "FY2024": 10765913, "FY2023": 11061158, "FY2022": 11215172, "FY2021": 704605,
+        }),
+        ("DATA", "Other liabilities", {
+            "FY2024": 2832498, "FY2023": 5875018, "FY2022": 10338218, "FY2021": 9598620,
+        }),
+        ("DATA", "Deferred tax liability", {
+            "FY2024": 251139, "FY2023": 175256, "FY2022": 18912, "FY2021": 54650,
+        }),
+        ("TOTAL", "Total liabilities", {
+            "FY2024": 535370508, "FY2023": 431392457, "FY2022": 598500237, "FY2021": 465746504,
+        }),
+        ("SECTION", "Equity", {}),
+        ("DATA", "Called up share capital", {
+            "FY2024": 37000000, "FY2023": 37000000, "FY2022": 37000000, "FY2021": 37000000,
+        }),
+        ("DATA", "Retained earnings", {
+            "FY2024": 11019326, "FY2023": 2380687, "FY2022": -8026214, "FY2021": -11900852,
+        }),
+        ("DATA", "Fair value reserves", {
+            "FY2024": 56053, "FY2023": 10306, "FY2022": -629408, "FY2021": -9507,
+        }),
+        ("TOTAL", "Shareholders' funds (Total equity)", {
+            "FY2024": 48075379, "FY2023": 39390993, "FY2022": 28344378, "FY2021": 25089641,
+        }),
+        ("TOTAL", "Total liabilities and shareholders' funds", {
+            "FY2024": 583445887, "FY2023": 470783450, "FY2022": 626844615, "FY2021": 490836145,
+        }),
+    ],
+    sources_text=(
+        "The Bank's own Statement of financial position labels the cash line 'Cash and money market funds'\n"
+        "FY2023-FY2024 and 'Cash and cash equivalents' FY2021-FY2022 - same line, presentation relabelled;\n"
+        "shown on separate rows above rather than merged, to match each year's own disclosed label.\n\n"
+        + STATEMENTS_SOURCES
+    ),
+    first_col_width=62,
+    source_height=260,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+bw.add_income_statement_sheet(
+    title="Guaranty Trust Bank (UK) Limited — Statement of Comprehensive Income",
+    subtitle="As originally published in each year's own Annual Report",
+    rows=[
+        ("SECTION", "Income", {}),
+        ("DATA", "Interest income", {
+            "FY2024": 26095367, "FY2023": 24585386, "FY2022": 12096324, "FY2021": 3155907,
+        }),
+        ("DATA", "Interest expense", {
+            "FY2024": -8140535, "FY2023": -5078320, "FY2022": -1902227, "FY2021": -780155,
+        }),
+        ("TOTAL", "Net interest income", {
+            "FY2024": 17954832, "FY2023": 19507066, "FY2022": 10194097, "FY2021": 2375752,
+        }),
+        ("DATA", "Fees and commissions income", {
+            "FY2024": 3222120, "FY2023": 3544250, "FY2022": 3569967, "FY2021": 2462438,
+        }),
+        ("DATA", "Other operating income", {
+            "FY2024": 4532851, "FY2023": 4410543, "FY2022": 3764651, "FY2021": 2587967,
+        }),
+        ("TOTAL", "Operating income", {
+            "FY2024": 25709803, "FY2023": 27461859, "FY2022": 17528715, "FY2021": 7426157,
+        }),
+        ("SECTION", "Operating expenses", {}),
+        ("DATA", "Personnel expenses", {
+            "FY2024": -8202750, "FY2023": -8017084, "FY2022": -5831341, "FY2021": -5096462,
+        }),
+        ("DATA", "Depreciation", {
+            "FY2024": -1370575, "FY2023": -1560012, "FY2022": -2176624, "FY2021": -1569766,
+        }),
+        ("DATA", "Other operating expenses", {
+            "FY2024": -4581738, "FY2023": -3959278, "FY2022": -4458281, "FY2021": -10651872,
+        }),
+        ("TOTAL", "Total operating expenses", {
+            "FY2024": -14155063, "FY2023": -13536374, "FY2022": -12466246, "FY2021": -17318100,
+        }),
+        ("DATA", "Other income", {
+            "FY2022": 180144, "FY2021": 176822,
+        }),
+        ("DATA", "Rental income", {
+            "FY2023": 20786,
+        }),
+        ("DATA", "Expected credit impairment losses (charge)/reversal", {
+            "FY2024": -74019, "FY2023": 12663, "FY2022": -120728, "FY2021": -17516,
+        }),
+        ("TOTAL", "Profit/(Loss) before taxation", {
+            "FY2024": 11480721, "FY2023": 13958934, "FY2022": 5121885, "FY2021": -9732637,
+        }),
+        ("DATA", "Taxation (charge)/credit", {
+            "FY2024": -2842082, "FY2023": -3552033, "FY2022": -1247247, "FY2021": 1402823,
+        }),
+        ("TOTAL", "Profit/(Loss) for the year", {
+            "FY2024": 8638639, "FY2023": 10406901, "FY2022": 3874638, "FY2021": -8329814,
+        }),
+        ("SECTION", "Other comprehensive income, net of corporation tax", {}),
+        ("DATA", "Fair value gain/(loss) on FVOCI investment securities, net of tax", {
+            "FY2024": 56053, "FY2023": 10306, "FY2022": -629408, "FY2021": -6686,
+        }),
+        ("DATA", "Fair value (gain)/loss reclassified to profit or loss", {
+            "FY2024": -10306, "FY2023": 629408, "FY2022": 9507, "FY2021": -9507,
+        }),
+        ("TOTAL", "Total comprehensive income/(loss) for the year, net of tax", {
+            "FY2024": 8684386, "FY2023": 11046615, "FY2022": 3254737, "FY2021": -8346007,
+        }),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=200,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+bw.add_equity_changes_sheet(
+    title="Guaranty Trust Bank (UK) Limited — Statement of Changes in Equity",
+    subtitle="Chronological roll-forward, oldest to newest. Equity reconciliation ladder confirmed: each year's "
+              "own closing balance ties exactly to the next year's own opening balance and to that year's own "
+              "Balance Sheet Total equity - zero plug rows needed anywhere in this chain.",
+    headers=["Share capital", "Retained earnings", "Fair value reserve", "Total equity"],
+    rows=[
+        ("DATA", "Balance as at 1 January 2021", (37000000, -3571038, 6686, 33435648)),
+        ("DATA", "Loss for the year", (None, -8329814, None, -8329814)),
+        ("DATA", "Net change in fair value", (None, None, -6686, -6686)),
+        ("DATA", "Net amount reclassified to P&L", (None, None, -9507, -9507)),
+        ("TOTAL", "Balance as at 31 December 2021", (37000000, -11900852, -9507, 25089641)),
+        ("DATA", "Profit for the year", (None, 3874638, None, 3874638)),
+        ("DATA", "Fair value (loss) on FVOCI investment securities, net of tax", (None, None, -629408, -629408)),
+        ("DATA", "Net profit/(loss) reclassified to profit or loss", (None, None, 9507, 9507)),
+        ("TOTAL", "Balance as at 31 December 2022", (37000000, -8026214, -629408, 28344378)),
+        ("DATA", "Profit for the year", (None, 10406901, None, 10406901)),
+        ("DATA", "Fair value gain on FVOCI investment securities, net of tax", (None, None, 10306, 10306)),
+        ("DATA", "Fair value loss reclassified to profit or loss", (None, None, 629408, 629408)),
+        ("TOTAL", "Balance as at 31 December 2023", (37000000, 2380687, 10306, 39390993)),
+        ("DATA", "Profit for the year", (None, 8638639, None, 8638639)),
+        ("DATA", "Fair value gain on FVOCI investment securities, net of tax", (None, None, 56053, 56053)),
+        ("DATA", "Fair value gain reclassified to profit or loss", (None, None, -10306, -10306)),
+        ("TOTAL", "Balance as at 31 December 2024", (37000000, 11019326, 56053, 48075379)),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=54,
+    source_height=200,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -183,6 +388,70 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+bw.add_asset_quality_sheet(
+    title="Guaranty Trust Bank (UK) Limited — Asset Quality",
+    subtitle="Loan book by maturity band and Expected Credit Loss (ECL) allowance, as originally published "
+              "each year. The Bank does not disclose an IFRS 9 Stage 1/2/3 split anywhere in its Annual "
+              "Report - only a single aggregate ECL figure per loan category - confirmed by reading Notes "
+              "12/13 and Note 23 (credit risk) in full each year; see source note.",
+    rows=[
+        ("SECTION", "Loans and advances to banks", {}),
+        ("DATA", "Three months or less", {
+            "FY2024": 207403713, "FY2023": 144634176, "FY2022": 335020113, "FY2021": 218116770,
+        }),
+        ("DATA", "One year or less but over three months", {
+            "FY2024": 52375036, "FY2023": 8003078, "FY2022": 10166817, "FY2021": 12416941,
+        }),
+        ("DATA", "Expected credit losses", {
+            "FY2024": -100281, "FY2023": -24848, "FY2022": -79006, "FY2021": -73117,
+        }),
+        ("TOTAL", "Net loans and advances to banks", {
+            "FY2024": 259678468, "FY2023": 152612406, "FY2022": 345107924, "FY2021": 230460594,
+        }),
+        ("SECTION", "Loans and advances to customers", {}),
+        ("DATA", "Three months or less", {
+            "FY2024": 1784014, "FY2023": 1022971, "FY2022": 1040567, "FY2021": 1416091,
+        }),
+        ("DATA", "One year or less but over three months", {
+            "FY2024": 5175504, "FY2023": 4571746, "FY2022": 6260705, "FY2021": 4406409,
+        }),
+        ("DATA", "Five years or less but over one year", {
+            "FY2024": 17362794, "FY2023": 15880590, "FY2022": 15958829, "FY2021": 16188919,
+        }),
+        ("DATA", "Over five years", {
+            "FY2024": 38770629, "FY2023": 36660770, "FY2022": 39112659, "FY2021": 35959033,
+        }),
+        ("DATA", "Less: Deferred Mortgage Arrangement Fees (EIR liability)", {
+            "FY2024": -532746, "FY2023": -437081, "FY2022": -389084, "FY2021": -307451,
+        }),
+        ("DATA", "Expected credit losses", {
+            "FY2024": -25605, "FY2023": -23200, "FY2022": -111527, "FY2021": -2052,
+        }),
+        ("TOTAL", "Net loans and advances to customers", {
+            "FY2024": 62534590, "FY2023": 57675796, "FY2022": 61872149, "FY2021": 57660949,
+        }),
+        ("SECTION", "Derived ratios (not directly disclosed, computed for reference)", {}),
+        ("DATA", "ECL coverage - loans and advances to customers (ECL / gross carrying amount)", {
+            "FY2024": "0.04%", "FY2023": "0.04%", "FY2022": "0.18%", "FY2021": "0.00%",
+        }),
+    ],
+    sources_text=(
+        "Sources - Notes 12 (Loans and advances to banks) and 13 (Loans and advances to customers) of each "
+        "year's own Annual Report (same documents as the Balance Sheet sheet above); FY2023 sourced from the "
+        "FY2024 Annual Report's own FY2023 comparative column. Each year's own Annual Report states 'All "
+        "loans and advances to banks were performing' and loans and advances to customers were 'performing or "
+        "adequately collateralised' - no non-performing loan balance is disclosed for any year. The ECL "
+        "coverage ratio row is calculated (ECL / (gross carrying amount before ECL)), not a figure the Bank "
+        "itself publishes - shown for reference only.\n\n" + ENTITY_NOTE
+    ),
+    first_col_width=68,
+    source_height=210,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -212,8 +481,18 @@ metric(
     note="The Bank has no Tier 2 capital, so Total Capital equals Tier 1 capital equals CET1 capital.",
 )
 
+bw.add_not_disclosed_metric_sheets(["Total Capital Ratio", "Total RWAs"], p3_sources())
+
+bw.add_rwa_breakdown_sheet(
+    title="Guaranty Trust Bank (UK) Limited — RWA Breakdown",
+    subtitle="Not publicly disclosed. See source note at bottom.",
+    rows=[("DATA", "Not publicly disclosed", {})],
+    sources_text=p3_sources(),
+    first_col_width=54,
+    source_height=280,
+)
+
 bw.add_not_disclosed_metric_sheets([
-    "Total Capital Ratio", "Total RWAs",
     "Leverage Ratio", "LCR", "NSFR", "MREL Ratio",
 ], p3_sources())
 
@@ -221,6 +500,39 @@ bw.add_not_disclosed_metric_sheets([
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {
+            "FY2024": 583445887, "FY2023": 470783450, "FY2022": 626844615, "FY2021": 490836145,
+        }),
+        ("Loans and advances to customers", {
+            "FY2024": 62534590, "FY2023": 57675796, "FY2022": 61872149, "FY2021": 57660949,
+        }),
+        ("Total liabilities", {
+            "FY2024": 535370508, "FY2023": 431392457, "FY2022": 598500237, "FY2021": 465746504,
+        }),
+        ("Shareholders' funds (Total equity)", {
+            "FY2024": 48075379, "FY2023": 39390993, "FY2022": 28344378, "FY2021": 25089641,
+        }),
+    ],
+    balance_sheet_unit="£",
+    income_statement_totals=[
+        ("Operating income", {
+            "FY2024": 25709803, "FY2023": 27461859, "FY2022": 17528715, "FY2021": 7426157,
+        }),
+        ("Total operating expenses", {
+            "FY2024": -14155063, "FY2023": -13536374, "FY2022": -12466246, "FY2021": -17318100,
+        }),
+        ("Profit/(Loss) for the year", {
+            "FY2024": 8638639, "FY2023": 10406901, "FY2022": 3874638, "FY2021": -8329814,
+        }),
+    ],
+    income_statement_unit="£",
+    equity_changes_totals=[
+        ("Total equity, end of year", {
+            "FY2024": 48075379, "FY2023": 39390993, "FY2022": 28344378, "FY2021": 25089641,
+        }),
+    ],
+    equity_changes_unit="£",
     cash_flow_totals=[
         ("Net cash flow from/(used in) operating activities", {
             "FY2024": 57935255, "FY2023": -102327202, "FY2022": 117737509, "FY2021": 52298689,

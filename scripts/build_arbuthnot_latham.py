@@ -64,6 +64,209 @@ def p3_sources(page_24="6", page_23="6", page_22="6", page_21="31"):
 
 bw = BankWorkbook(bank_name="Arbuthnot Latham & Co., Limited", years=YEARS, header_color="4E3B31")
 
+STATEMENT_SOURCES_HEAD = (
+    "Sources - all figures are Arbuthnot Latham & Co., Limited's own Consolidated financial statements "
+    "(the Bank + its own subsidiaries), £'000, as filed at Companies House:\n"
+    f"FY2025 & FY2024: accounts made up to 31 December 2025, Consolidated Statement of Financial Position/"
+    f"Comprehensive Income/Changes in Equity, pp.36-40 - {CH2025_URL}\n"
+    f"FY2023 & FY2022: accounts made up to 31 December 2023, same statements, pp.37-40 - {CH2023_URL}\n"
+    f"FY2021 (& FY2020 comparative, not used): accounts made up to 31 December 2021, same statements, "
+    f"pp.43-46 - {CH2021_URL}\n"
+)
+
+# ---------------------------------------------------------------
+# Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 437548, "FY2024": 911887, "FY2023": 826559, "FY2022": 732728, "FY2021": 814692}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 117491, "FY2024": 66964, "FY2023": 79374, "FY2022": 115781, "FY2021": 73430}),
+    ("DATA", "Debt securities at amortised cost", {"FY2025": 2033158, "FY2024": 1199847, "FY2023": 942437, "FY2022": 439753, "FY2021": 301052}),
+    ("DATA", "Assets classified as held for sale", {"FY2023": 3281, "FY2022": 3279, "FY2021": 3136}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 1398, "FY2024": 2970, "FY2023": 4214, "FY2022": 6322, "FY2021": 1753}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 1960552, "FY2024": 2094226, "FY2023": 2064256, "FY2022": 2047578, "FY2021": 1882461}),
+    ("DATA", "Current tax assets", {"FY2025": 7010, "FY2024": 1287, "FY2023": 2347}),
+    ("DATA", "Other assets", {"FY2025": 50176, "FY2024": 51623, "FY2023": 57092, "FY2022": 52110, "FY2021": 110065}),
+    ("DATA", "Financial investments", {"FY2025": 2061, "FY2024": 4947, "FY2023": 3942, "FY2022": 3404, "FY2021": 3169}),
+    ("DATA", "Deferred tax asset", {"FY2022": 1902, "FY2021": 2040}),
+    ("DATA", "Intangible assets", {"FY2025": 37179, "FY2024": 34299, "FY2023": 33320, "FY2022": 36281, "FY2021": 33595}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 310375, "FY2024": 313147, "FY2023": 274176, "FY2022": 175144, "FY2021": 125753}),
+    ("DATA", "Right-of-use assets", {"FY2025": 44502, "FY2024": 47511, "FY2023": 52816, "FY2022": 7714, "FY2021": 15675}),
+    ("DATA", "Investment property", {"FY2025": 5250, "FY2024": 5250, "FY2023": 5950, "FY2022": 6550, "FY2021": 6550}),
+    ("TOTAL", "Total assets", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", {"FY2025": 1389, "FY2024": 192911, "FY2023": 193410, "FY2022": 236027, "FY2021": 240333}),
+    ("DATA", "Derivative financial instruments", {"FY2023": 1032, "FY2022": 135, "FY2021": 171}),
+    ("DATA", "Deposits from customers", {"FY2025": 4575114, "FY2024": 4133406, "FY2023": 3760199, "FY2022": 3112478, "FY2021": 2856949}),
+    ("DATA", "Current tax liability", {"FY2022": 870, "FY2021": 652}),
+    ("DATA", "Other liabilities", {"FY2025": 39960, "FY2024": 34750, "FY2023": 38117, "FY2022": 24189, "FY2021": 19598}),
+    ("DATA", "Lease liabilities", {"FY2025": 58266, "FY2024": 54829, "FY2023": 53761, "FY2022": 7873, "FY2021": 21277}),
+    ("DATA", "Deferred tax liability", {"FY2025": 10743, "FY2024": 6186, "FY2023": 5430}),
+    ("DATA", "Debt securities in issue", {"FY2025": 38781, "FY2024": 38103, "FY2023": 38129, "FY2022": 24437, "FY2021": 24367}),
+    ("TOTAL", "Total liabilities", {"FY2025": 4724253, "FY2024": 4460185, "FY2023": 4090078, "FY2022": 3406009, "FY2021": 3163347}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 15000, "FY2024": 15000, "FY2023": 15000, "FY2022": 15000, "FY2021": 15000}),
+    ("DATA", "Retained earnings", {"FY2025": 115767, "FY2024": 105372, "FY2023": 91832, "FY2022": 59957, "FY2021": 47533}),
+    ("DATA", "Other reserves (capital contribution + fair value reserve)", {"FY2025": 151680, "FY2024": 153401, "FY2023": 152854, "FY2022": 147580, "FY2021": 147491}),
+    ("TOTAL", "Total equity", {"FY2025": 282447, "FY2024": 273773, "FY2023": 259686, "FY2022": 222537, "FY2021": 210024}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371}),
+]
+
+BALANCE_SHEET_SOURCES = (
+    STATEMENT_SOURCES_HEAD +
+    "Presentation note: 'Assets classified as held for sale' and 'Current tax liability' are only disclosed as "
+    "separate lines FY2021-FY2023; FY2025-FY2024's own statements omit or fold them elsewhere (immaterial/"
+    "reclassified per those years' own reports, not explained further in either source). 'Deferred tax asset' is "
+    "only a separate line FY2021-FY2022; 'Deferred tax liability' and 'Current tax assets' only appear from "
+    "FY2023/FY2025 respectively. 'Derivative financial instruments' appears as a liability line only FY2021-"
+    "FY2023 - FY2024-FY2025's own statements show no separate derivative liability line (netted/immaterial per "
+    "those years, not explained further). Blank cells reflect each year's own statement structure, not missing "
+    "data. 'Other reserves' is shown here as a single combined line (capital contribution reserve + fair value "
+    "reserve) to match each year's own Statement of Financial Position; see the Statement of Changes in Equity "
+    "sheet for the two components separately.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_balance_sheet_sheet(
+    title="Arbuthnot Latham & Co., Limited — Consolidated Statement of Financial Position",
+    subtitle="Arbuthnot Latham & Co., Limited Group (consolidated basis), £'000",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=64,
+    source_height=190,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Operating income from banking activities", {}),
+    ("DATA", "Interest income", {"FY2025": 247248, "FY2024": 263435, "FY2023": 231836, "FY2022": 120013, "FY2021": 77102}),
+    ("DATA", "Interest expense", {"FY2025": -129126, "FY2024": -137562, "FY2023": -90515, "FY2022": -17781, "FY2021": -10384}),
+    ("TOTAL", "Net interest income", {"FY2025": 118122, "FY2024": 125873, "FY2023": 141321, "FY2022": 102232, "FY2021": 66718}),
+    ("DATA", "Fee and commission income", {"FY2025": 31689, "FY2024": 29142, "FY2023": 23170, "FY2022": 21586, "FY2021": 18472}),
+    ("DATA", "Fee and commission expense", {"FY2025": -1444, "FY2024": -1029, "FY2023": -768, "FY2022": -537, "FY2021": -349}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 30245, "FY2024": 28113, "FY2023": 22402, "FY2022": 21049, "FY2021": 18123}),
+    ("TOTAL", "Operating income from banking activities", {"FY2025": 148367, "FY2024": 153986, "FY2023": 163723, "FY2022": 123281, "FY2021": 84841}),
+    ("SECTION", "Income from leasing activities", {}),
+    ("DATA", "Revenue", {"FY2025": 118569, "FY2024": 110832, "FY2023": 100952, "FY2022": 99367, "FY2021": 74500}),
+    ("DATA", "Cost of goods sold", {"FY2025": -97466, "FY2024": -85301, "FY2023": -81074, "FY2022": -82109, "FY2021": -68027}),
+    ("TOTAL", "Gross profit from leasing activities", {"FY2025": 21103, "FY2024": 25531, "FY2023": 19878, "FY2022": 17258, "FY2021": 6473}),
+    ("TOTAL", "Total group operating income", {"FY2025": 169470, "FY2024": 179517, "FY2023": 183601, "FY2022": 140539, "FY2021": 91314}),
+    ("DATA", "Impairment loss on financial assets", {"FY2025": -2501, "FY2024": -6275, "FY2023": -3191, "FY2022": -5503, "FY2021": -3196}),
+    ("DATA", "Other income", {"FY2025": 5536, "FY2024": 2560, "FY2023": 3361, "FY2022": 2467, "FY2021": 4402}),
+    ("DATA", "Profit from bargain purchase", {"FY2021": 8626}),
+    ("DATA", "Loss on sale of commercial property held as inventory", {"FY2022": -4590}),
+    ("DATA", "Operating expenses", {"FY2025": -148321, "FY2024": -140712, "FY2023": -136655, "FY2022": -112904, "FY2021": -96512}),
+    ("TOTAL", "Profit/(loss) before tax", {"FY2025": 24184, "FY2024": 35090, "FY2023": 47116, "FY2022": 20009, "FY2021": 4634}),
+    ("DATA", "Income tax (expense)/credit", {"FY2025": -2119, "FY2024": -5339, "FY2023": -8433, "FY2022": -2146, "FY2021": 2157}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2025": 22065, "FY2024": 29751, "FY2023": 38683, "FY2022": 17863, "FY2021": 6791}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Movement in fair value reserve", {"FY2025": -59, "FY2024": 778, "FY2023": 412, "FY2022": 628, "FY2021": 763}),
+    ("DATA", "Tax on other comprehensive income", {"FY2025": 15, "FY2024": -182, "FY2023": -91, "FY2022": -128, "FY2021": -124}),
+    ("TOTAL", "Other comprehensive income for the period, net of tax", {"FY2025": -44, "FY2024": 596, "FY2023": 321, "FY2022": 499, "FY2021": 639}),
+    ("TOTAL", "Total comprehensive income for the period", {"FY2025": 22021, "FY2024": 30347, "FY2023": 39004, "FY2022": 18363, "FY2021": 7430}),
+]
+
+INCOME_STATEMENT_SOURCES = (
+    STATEMENT_SOURCES_HEAD +
+    "Presentation note: FY2021 uniquely includes a 'Profit from bargain purchase' line (£8,626k, the AAG "
+    "acquisition) and reports an income tax CREDIT (positive); FY2022 uniquely includes a 'Loss on sale of "
+    "commercial property held as inventory' line. All other years leave these blank rather than showing zero. "
+    "'Sale of financial assets carried at FVOCI' (a reclassification between Retained earnings and the Fair "
+    "value reserve, disclosed in the equity statement) is not shown here - it nets to zero on total comprehensive "
+    "income and is a transfer within equity rather than a P&L income/expense item.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_income_statement_sheet(
+    title="Arbuthnot Latham & Co., Limited — Consolidated Statement of Comprehensive Income",
+    subtitle="Arbuthnot Latham & Co., Limited Group (consolidated basis), £'000",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=64,
+    source_height=170,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Share capital", "Retained earnings", "Capital contribution reserve", "Fair value reserve", "Total equity"]
+
+equity_changes_rows = [
+    ("TOTAL", "Balance at 1 January 2021", (15000, 46835, 121012, -203, 182644)),
+    ("DATA", "Profit for 2021", (None, 6791, None, None, 6791)),
+    ("DATA", "Fair value reserve - net change in fair value", (None, None, None, 637, 637)),
+    ("DATA", "Tax on other comprehensive income", (None, None, None, 2, 2)),
+    ("TOTAL", "Total comprehensive income for 2021", (None, 6791, None, 639, 7430)),
+    ("DATA", "Capital contribution", (None, None, 25500, None, 25500)),
+    ("DATA", "Loss on disposal of assets held at FVOCI", (None, -543, None, 543, 0)),
+    ("DATA", "Interim dividend relating to 2021", (None, -5550, None, None, -5550)),
+    ("TOTAL", "Total contributions by and distributions to owners", (None, -6093, 25500, 543, 19950)),
+    ("TOTAL", "Balance at 31 December 2021", (15000, 47533, 146512, 979, 210024)),
+    ("DATA", "Profit for 2022", (None, 17863, None, None, 17863)),
+    ("DATA", "Fair value reserve - net change in fair value", (None, None, None, 628, 628)),
+    ("DATA", "Sale of financial assets carried at FVOCI", (None, 411, None, -411, 0)),
+    ("DATA", "Tax on other comprehensive income", (None, None, None, -128, -128)),
+    ("TOTAL", "Total comprehensive income for 2022", (None, 18274, None, 89, 18363)),
+    ("DATA", "Final dividend relating to 2021", (None, -3300, None, None, -3300)),
+    ("DATA", "Interim dividend relating to 2022", (None, -2550, None, None, -2550)),
+    ("TOTAL", "Total contributions by and distributions to owners", (None, -5850, None, None, -5850)),
+    ("TOTAL", "Balance at 31 December 2022", (15000, 59957, 146512, 1068, 222537)),
+    ("DATA", "Profit for 2023", (None, 38683, None, None, 38683)),
+    ("DATA", "Fair value reserve - net change in fair value", (None, None, None, 412, 412)),
+    ("DATA", "Sale of financial assets carried at FVOCI", (None, 47, None, -47, 0)),
+    ("DATA", "Tax on other comprehensive income", (None, None, None, -91, -91)),
+    ("TOTAL", "Total comprehensive income for 2023", (None, 38730, None, 274, 39004)),
+    ("DATA", "Capital contribution", (None, None, 5000, None, 5000)),
+    ("DATA", "Final dividend relating to 2022", (None, -3755, None, None, -3755)),
+    ("DATA", "Interim dividend relating to 2023", (None, -3100, None, None, -3100)),
+    ("TOTAL", "Total contributions by and distributions to owners", (None, -6855, 5000, None, -1855)),
+    ("TOTAL", "Balance at 31 December 2023", (15000, 91832, 151512, 1342, 259686)),
+    ("DATA", "Profit for 2024", (None, 29751, None, None, 29751)),
+    ("DATA", "Fair value reserve - net change in fair value", (None, None, None, 778, 778)),
+    ("DATA", "Sale of financial assets carried at FVOCI", (None, 49, None, -49, 0)),
+    ("DATA", "Tax on other comprehensive income", (None, None, None, -182, -182)),
+    ("TOTAL", "Total comprehensive income for 2024", (None, 29800, None, 547, 30347)),
+    ("DATA", "Final dividend relating to 2023", (None, -4407, None, None, -4407)),
+    ("DATA", "Interim dividend relating to 2024", (None, -11853, None, None, -11853)),
+    ("TOTAL", "Total contributions by and distributions to owners", (None, -16260, None, None, -16260)),
+    ("TOTAL", "Balance at 31 December 2024", (15000, 105372, 151512, 1889, 273773)),
+    ("DATA", "Profit for 2025", (None, 22065, None, None, 22065)),
+    ("DATA", "Fair value reserve - net change in fair value", (None, None, None, -59, -59)),
+    ("DATA", "Sale of financial assets carried at FVOCI", (None, 1677, None, -1677, 0)),
+    ("DATA", "Tax on other comprehensive income", (None, None, None, 15, 15)),
+    ("TOTAL", "Total comprehensive income for 2025", (None, 23742, None, -1721, 22021)),
+    ("DATA", "Final dividend relating to 2024", (None, -7611, None, None, -7611)),
+    ("DATA", "Interim dividends relating to 2025", (None, -5736, None, None, -5736)),
+    ("TOTAL", "Total contributions by and distributions to owners", (None, -13347, None, None, -13347)),
+    ("TOTAL", "Balance at 31 December 2025", (15000, 115767, 151512, 168, 282447)),
+]
+
+EQUITY_CHANGES_SOURCES = (
+    "Sources - Arbuthnot Latham & Co., Limited's own Consolidated Statement of Changes in Equity (the Bank + "
+    "its own subsidiaries), £'000, as filed at Companies House:\n"
+    f"1 Jan 2021 - 31 Dec 2023: accounts made up to 31 December 2023, pp.39-40 - {CH2023_URL}\n"
+    f"31 Dec 2023 - 31 Dec 2025: accounts made up to 31 December 2025, p.39 - {CH2025_URL}\n"
+    f"1 Jan 2020 - 31 Dec 2021 (opening balance): accounts made up to 31 December 2021, p.46 - {CH2021_URL}\n"
+    "'Other reserves' on the Balance Sheet sheet is the sum of the 'Capital contribution reserve' and 'Fair "
+    "value reserve' columns here. Chronological, oldest-to-newest, unlike the year-column shape used elsewhere "
+    "in this workbook - see the sheet's own column headers.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_equity_changes_sheet(
+    title="Arbuthnot Latham & Co., Limited — Consolidated Statement of Changes in Equity",
+    subtitle="Arbuthnot Latham & Co., Limited Group (consolidated basis), £'000",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+    first_col_width=52,
+    source_height=180,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -125,6 +328,54 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Asset Quality / Credit Risk Disclosures
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Loan book by IFRS 9 stage (gross of ECL)", {}),
+    ("DATA", "Stage 1", {"FY2025": 1856653, "FY2024": 1929191, "FY2023": 1908981, "FY2022": 1929390}),
+    ("DATA", "Stage 2", {"FY2025": 53383, "FY2024": 103275, "FY2023": 82751, "FY2022": 74512}),
+    ("DATA", "Stage 3", {"FY2025": 63677, "FY2024": 73349, "FY2023": 79332, "FY2022": 50278}),
+    ("TOTAL", "Loans and advances to customers (gross of ECL)", {"FY2025": 1973713, "FY2024": 2105815, "FY2023": 2071064, "FY2022": 2054180, "FY2021": 1888848}),
+    ("SECTION", "Expected credit loss (ECL) allowance", {}),
+    ("DATA", "Stage 1", {"FY2021": 388}),
+    ("DATA", "Stage 2", {"FY2021": 77}),
+    ("DATA", "Stage 3", {"FY2021": 5922}),
+    ("TOTAL", "Total ECL allowance", {"FY2025": 13161, "FY2024": 11589, "FY2023": 6808, "FY2022": 6602, "FY2021": 6387}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross loans)", {"FY2025": "3.23%", "FY2024": "3.48%", "FY2023": "3.83%", "FY2022": "2.45%"}),
+    ("DATA", "ECL coverage ratio (total ECL / total gross loans)", {"FY2025": "0.67%", "FY2024": "0.55%", "FY2023": "0.33%", "FY2022": "0.32%", "FY2021": "0.34%"}),
+]
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Arbuthnot Latham & Co., Limited's own Note 6(a) 'Credit risk' (maximum credit risk exposure "
+    "table, Group basis), £'000:\n"
+    f"FY2025 & FY2024: accounts made up to 31 December 2025, pp.61-62 - {CH2025_URL}\n"
+    f"FY2023 & FY2022: accounts made up to 31 December 2023, pp.62-63 - {CH2023_URL}\n"
+    f"FY2021 ECL allowance by stage only (Note 4.1(a)): accounts made up to 31 December 2021, p.60 - {CH2021_URL}\n"
+    "All 4 source documents are scanned/image-only PDFs (no extractable text layer) - figures were visually "
+    "transcribed from rendered page images (pdf_tools.py render + Read), not OCR'd or estimated.\n"
+    "Gaps, documented rather than guessed: (1) FY2021's gross Stage 1/2/3 loan-book split was not located - only "
+    "the ECL allowance by stage (Note 4.1(a)) was found for that year, so the Stage 3/NPL ratio is left blank "
+    "for FY2021 while the ECL coverage ratio (which only needs the ECL total, not its stage split) is still "
+    "computable; FY2021's gross total loan figure shown here is DERIVED (Balance Sheet net loans £1,882,461k + "
+    "ECL allowance £6,387k = £1,888,848k), not a directly disclosed figure. (2) A loan-book-by-product/"
+    "collateral-type breakdown exists in the FY2025 Annual Report (concentration by collateral type, Note 6(a)) "
+    "but was not transcribed this session - the IFRS 9 stage breakdown above is the sheet's primary content per "
+    "its own convention; a future session could add the by-product view if wanted.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_asset_quality_sheet(
+    title="Arbuthnot Latham & Co., Limited — Asset Quality / Credit Risk Disclosures",
+    subtitle="Arbuthnot Latham & Co., Limited Group (consolidated basis), £'000 unless stated",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=62,
+    source_height=210,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -172,6 +423,33 @@ metric(
     "Total RWAs", "£'000",
     [("Total risk-weighted exposure amount", {"FY2024": 1782645, "FY2023": 1713146, "FY2022": 1516141, "FY2021": 1427724})],
     p3_sources(),
+)
+
+rwa_breakdown_rows = [
+    ("SECTION", "Risk weighted exposure amounts (Template UK OV1)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2024": 1525678, "FY2023": 1511071, "FY2022": 1333060, "FY2021": 1257789}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 741, "FY2023": 2250, "FY2022": 13540, "FY2021": 2911}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2024": 1376, "FY2023": 3727, "FY2022": 3753, "FY2021": 7527}),
+    ("DATA", "Operational risk", {"FY2024": 254850, "FY2023": 196098, "FY2022": 165788, "FY2021": 159498}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1782645, "FY2023": 1713146, "FY2022": 1516141, "FY2021": 1427725}),
+]
+
+RWA_BREAKDOWN_SOURCES = (
+    p3_sources(page_24="7", page_23="15", page_22="16", page_21="6") +
+    "\nFY2021's Total row (£1,427,725k) is £1k higher than the Total RWAs sheet's own FY2021 figure "
+    "(£1,427,724k) - both are read directly off their respective source tables (the OV1 breakdown here vs. the "
+    "KM1 headline total there); an immaterial rounding gap between the two templates in ABG's own Pillar 3 "
+    "reports, not corrected here."
+)
+
+bw.add_rwa_breakdown_sheet(
+    title="Arbuthnot Latham & Co., Limited — RWA Breakdown",
+    subtitle="Arbuthnot Banking Group PLC (Pillar 3) basis, £'000",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=54,
+    source_height=170,
+    unit_suffix=" (£'000)",
 )
 
 metric(
@@ -229,6 +507,26 @@ metric(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371}),
+        ("Loans and advances to customers", {"FY2025": 1960552, "FY2024": 2094226, "FY2023": 2064256, "FY2022": 2047578, "FY2021": 1882461}),
+        ("Deposits from customers", {"FY2025": 4575114, "FY2024": 4133406, "FY2023": 3760199, "FY2022": 3112478, "FY2021": 2856949}),
+        ("Total equity", {"FY2025": 282447, "FY2024": 273773, "FY2023": 259686, "FY2022": 222537, "FY2021": 210024}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total group operating income", {"FY2025": 169470, "FY2024": 179517, "FY2023": 183601, "FY2022": 140539, "FY2021": 91314}),
+        ("Operating expenses", {"FY2025": -148321, "FY2024": -140712, "FY2023": -136655, "FY2022": -112904, "FY2021": -96512}),
+        ("Profit/(loss) for the year", {"FY2025": 22065, "FY2024": 29751, "FY2023": 38683, "FY2022": 17863, "FY2021": 6791}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 273773, "FY2024": 259686, "FY2023": 222537, "FY2022": 210024, "FY2021": 182644}),
+        ("Total comprehensive income for the year", {"FY2025": 22021, "FY2024": 30347, "FY2023": 39004, "FY2022": 18363, "FY2021": 7430}),
+        ("Other equity movements, net", {"FY2025": -13347, "FY2024": -16260, "FY2023": -1855, "FY2022": -5850, "FY2021": 19950}),
+        ("Closing equity", {"FY2025": 282447, "FY2024": 273773, "FY2023": 259686, "FY2022": 222537, "FY2021": 210024}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash inflow from operating activities", {"FY2025": 630443, "FY2024": 374434, "FY2023": 610323, "FY2022": 113493, "FY2021": 206317}),
         ("Net cash outflow from investing activities", {"FY2025": -848623, "FY2024": -282524, "FY2023": -517902, "FY2022": -135492, "FY2021": -92546}),
@@ -245,10 +543,10 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2024": "132%", "FY2023": "136%", "FY2022": "127%", "FY2021": "133.1%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
-         "source citation for the underlying document/page. Cash flow is the Bank's own Group basis (Companies "
-         "House); Pillar 3 ratios are the Arbuthnot Banking Group PLC published Pillar 3 basis - see the entity "
-         "note on the Cash Flow Statement sheet for the small scope difference between the two. FY2025 Pillar 3 "
-         "is not yet published.",
+         "source citation for the underlying document/page. Balance Sheet, Profit & Loss, Statement of Changes "
+         "in Equity and Cash Flow are all the Bank's own Group basis (Companies House); Pillar 3 ratios are the "
+         "Arbuthnot Banking Group PLC published Pillar 3 basis - see the entity note on the Cash Flow Statement "
+         "sheet for the small scope difference between the two. FY2025 Pillar 3 is not yet published.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ARBUTHNOT LATHAM FINANCIALS.xlsx")

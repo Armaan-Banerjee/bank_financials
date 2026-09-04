@@ -100,6 +100,223 @@ P3_SOURCES_ALL = (
 
 bw = BankWorkbook(bank_name="Starling Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="6B2C91")
 
+STATEMENTS_SOURCES = (
+    "Sources - all figures are Group/consolidated basis, £'000. See entity note above re: FY2021 (16-month "
+    "period) and FY2026 (new SGHL parent entity).\n"
+    f"FY2026: Starling Group Holdings Limited Annual Report and Accounts 2026, p.162-164 (Consolidated statement "
+    f"of comprehensive income / financial position / changes in equity) - {AR26_SGHL_URL}\n"
+    f"FY2025 & FY2024: Starling Bank Limited Annual Report and Accounts 2025, p.157-159 (Consolidated and company "
+    f"statement of comprehensive income / financial position / changes in equity) - {AR25_URL}. FY2025's equity "
+    f"components independently cross-checked against the Group's own re-presented FY2025 comparative in the AR26 "
+    f"Annual Report (p.164), which agrees exactly (merger reserve, cash flow hedging reserve, own shares held "
+    f"reserve, share awards reserve and sundry reserves disaggregated only from AR26 onward - see presentation "
+    f"note below).\n"
+    f"FY2023 & FY2022 (restated): Starling Bank Limited Annual Report 2023, p.122-123, p.126-127 (Consolidated & "
+    f"Company Statement of Comprehensive Income / Financial Position / Changes in Equity) - {AR23_URL}\n"
+    f"FY2021: Starling Bank Limited Annual Report and Consolidated Financial Statements, period ended 31 March "
+    f"2021, p.62-68 (Consolidated Statement of Comprehensive Income / Financial Position / Changes in Equity) - "
+    f"{AR21_URL}. Independently cross-checked against Annual Report 2023's FY2021 comparative opening equity "
+    f"balance, which agrees exactly.\n\n" + ENTITY_NOTE + "\n\n"
+    "PRESENTATION NOTE (Balance Sheet): FY2024-FY2026 report a separate 'Cash and balances at central banks' line "
+    "distinct from 'Loans and advances to banks'; FY2021-FY2023 report a single combined 'Loans and Advances to "
+    "Banks' line that includes cash and cash equivalents (per that year's own footnote) - both are shown as "
+    "disclosed, not reconciled into a common split. FY2021 combines Property, Plant and Equipment with Intangible "
+    "Assets into one line (no separate Goodwill line - Goodwill first arose on the Fleet Mortgages acquisition in "
+    "FY2022); FY2022 onward splits these three lines out.\n\n"
+    "PRESENTATION NOTE (Profit & Loss): FY2021-FY2025 use a 'Net interest income / Net fees and commissions / "
+    "Total income' structure; FY2026 (Starling Group Holdings Limited's own first Annual Report) uses a "
+    "'Revenue / Cost of revenue / Gross profit' structure instead - both are shown as separate blocks, each with "
+    "its own Profit-after-tax and Total-comprehensive-income rows (mirroring the Cash Flow Statement sheet's "
+    "existing dual-presentation convention), rather than force-fitting FY2026 into the older structure. FY2021's "
+    "Loss for the year and OCI, net of tax are the same figure (no OCI items disclosed that year - 'There is no "
+    "difference between the loss after taxation and the total comprehensive income of the Group').\n\n"
+    "PRESENTATION NOTE (Statement of Changes in Equity): 'Merger reserve' (created in FY2022 on the Fleet "
+    "Mortgages Limited share-for-share acquisition, per Companies Act 2006 s.612) and 'Cash flow hedging reserve' "
+    "are shown as their own columns throughout for consistency, back-computed for FY2021-FY2023 from each year's "
+    "combined 'Other Reserves' column and that year's own movement notes (verified: FY2022's £15,000k Merger "
+    "reserve movement exactly matches the value AR26 later separately discloses as the FY2024 opening Merger "
+    "reserve balance, confirming it never changed between creation and FY2024). 'Other reserves' here combines "
+    "the own-shares-held reserve, share awards reserve, foreign exchange/translation reserve and sundry reserves "
+    "- these were only disclosed as separate sub-columns from AR26 (FY2026 report) onward; combining them keeps "
+    "the ladder's column set consistent across all 6 years. Every year's closing Total equity ties exactly to "
+    "that year's own Balance Sheet Total equity and to the next year's opening balance - zero undocumented plug "
+    "rows across all 6 years."
+)
+
+# ---------------------------------------------------------------
+# Balance Sheet (Consolidated Statement of Financial Position)
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2026": 4188830, "FY2025": 6686688, "FY2024": 6420115}),
+    ("DATA", "Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)", {"FY2026": 36508, "FY2025": 30489, "FY2024": 36879, "FY2023": 6109704, "FY2022": 6107281, "FY2021": 3196349}),
+    ("DATA", "Debt securities", {"FY2026": 6843426, "FY2025": 3934922, "FY2024": 3284867, "FY2023": 2479550, "FY2022": 2306886, "FY2021": 1513278}),
+    ("DATA", "Derivative assets", {"FY2026": 110908, "FY2025": 156615, "FY2024": 246541, "FY2023": 221774, "FY2022": 98056, "FY2021": 13488}),
+    ("DATA", "Loans and advances to customers", {"FY2026": 5161359, "FY2025": 4670567, "FY2024": 4537663, "FY2023": 4731997, "FY2022": 3234673, "FY2021": 2232846}),
+    ("DATA", "Other assets", {"FY2026": 63120, "FY2025": 54474, "FY2024": 100047, "FY2023": 71851, "FY2022": 66635, "FY2021": 63460}),
+    ("DATA", "Current tax asset", {"FY2026": 0, "FY2025": 748, "FY2024": 15640}),
+    ("DATA", "Deferred tax asset", {"FY2026": 1702, "FY2023": 4664, "FY2022": 21985, "FY2021": 6088}),
+    ("DATA", "Property, plant and equipment and right of use assets", {"FY2026": 26726, "FY2025": 18388, "FY2024": 18727, "FY2023": 15480, "FY2022": 5904}),
+    ("DATA", "Property, plant and equipment and intangible assets (FY2021: combined, pre-dates Goodwill - see source note)", {"FY2021": 23325}),
+    ("DATA", "Intangible assets", {"FY2026": 169008, "FY2025": 108891, "FY2024": 71523, "FY2023": 40585, "FY2022": 28211}),
+    ("DATA", "Goodwill", {"FY2026": 38347, "FY2025": 35890, "FY2024": 35890, "FY2023": 35890, "FY2022": 35890}),
+    ("TOTAL", "Total assets", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer deposits", {"FY2026": 12691991, "FY2025": 12066650, "FY2024": 10970237, "FY2023": 10551820, "FY2022": 9027413, "FY2021": 5827581}),
+    ("DATA", "Deposits from banks", {"FY2026": 2539524, "FY2025": 2278221, "FY2024": 2420471, "FY2023": 2274306, "FY2022": 2283821}),
+    ("DATA", "Central Bank Facilities (FY2021 - TFSME drawdown, predates Deposits from banks presentation)", {"FY2021": 1000000}),
+    ("DATA", "Derivative liabilities", {"FY2026": 39098, "FY2025": 49052, "FY2024": 51417, "FY2023": 55452, "FY2022": 330, "FY2021": 818}),
+    ("DATA", "Other liabilities", {"FY2026": 106320, "FY2025": 145617, "FY2024": 367422, "FY2023": 96958, "FY2022": 138614, "FY2021": 39141}),
+    ("DATA", "Deferred income", {"FY2026": 17245, "FY2025": 59980, "FY2024": 47873, "FY2023": 32380, "FY2022": 23059, "FY2021": 38463}),
+    ("DATA", "Provisions", {"FY2026": 33775, "FY2025": 51396, "FY2024": 11507, "FY2023": 1342, "FY2022": 1242, "FY2021": 2000}),
+    ("DATA", "Current tax liability", {"FY2026": 7036, "FY2023": 3960, "FY2022": 618}),
+    ("DATA", "Deferred tax liability", {"FY2025": 704, "FY2024": 9195}),
+    ("TOTAL", "Total liabilities", {"FY2026": 15434989, "FY2025": 14651620, "FY2024": 13878122, "FY2023": 13016218, "FY2022": 11475097, "FY2021": 6908003}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2026": 12, "FY2025": 12, "FY2024": 12, "FY2023": 12, "FY2022": 11, "FY2021": 9}),
+    ("DATA", "Share premium", {"FY2026": 0, "FY2025": 608833, "FY2024": 608833, "FY2023": 608833, "FY2022": 478333, "FY2021": 253335}),
+    ("DATA", "Merger reserve", {"FY2026": 623833, "FY2025": 15000, "FY2024": 15000, "FY2023": 15000, "FY2022": 15000}),
+    ("DATA", "Cash flow hedging reserve", {"FY2026": 427, "FY2025": 9834, "FY2024": 17133, "FY2023": -10246}),
+    ("DATA", "Other reserves (own shares held/share awards/sundry/FX - see source note)", {"FY2026": -19020, "FY2025": -31277, "FY2024": -44136, "FY2023": 9267, "FY2022": 7525, "FY2021": 2980}),
+    ("DATA", "Retained earnings / (Accumulated losses)", {"FY2026": 599693, "FY2025": 443650, "FY2024": 292928, "FY2023": 72411, "FY2022": -70445, "FY2021": -115493}),
+    ("TOTAL", "Total equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831}),
+    ("TOTAL", "Total liabilities and equity", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Starling Bank Limited — Balance Sheet",
+    subtitle="Group/consolidated basis, £'000. Total assets = Total liabilities + Total equity for every year; "
+              "Total equity ties exactly to the Statement of Changes in Equity sheet's own opening/closing "
+              "balances - zero plug rows. FY2021: 16-month period (†). FY2026: Starling Group Holdings Limited (‡).",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=290,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Profit & Loss (Consolidated Statement of Comprehensive Income) - two
+# presentation blocks, mirroring the Cash Flow Statement sheet's existing
+# FY2021-2023 vs FY2024-2026 convention (see PRESENTATION NOTE above).
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income (FY2021-FY2025 presentation)", {}),
+    ("DATA", "Interest income", {"FY2025": 811695, "FY2024": 754808, "FY2023": 403103, "FY2022": 126614}),
+    ("DATA", "Interest expense", {"FY2025": -221533, "FY2024": -161937, "FY2023": -54258, "FY2022": -4902}),
+    ("TOTAL", "Net interest income", {"FY2025": 590162, "FY2024": 592871, "FY2023": 348845, "FY2022": 121712, "FY2021": 59253}),
+    ("DATA", "Fees and commissions income", {"FY2025": 128306, "FY2024": 119467, "FY2023": 112413, "FY2022": 86041}),
+    ("DATA", "Fees and commissions expense", {"FY2025": -33539, "FY2024": -35044, "FY2023": -38023, "FY2022": -28311}),
+    ("TOTAL", "Net fees and commissions", {"FY2025": 94767, "FY2024": 84423, "FY2023": 74390, "FY2022": 57730, "FY2021": 33884}),
+    ("DATA", "Other (expense)/income", {"FY2025": -4546, "FY2024": -30176, "FY2023": -8421, "FY2022": 8624, "FY2021": 4452}),
+    ("DATA", "Credit for eligible spend (CIF)", {"FY2023": 10447, "FY2022": 32958, "FY2021": 46044}),
+    ("TOTAL", "Total income", {"FY2025": 680383, "FY2024": 647118, "FY2023": 414814, "FY2022": 188066, "FY2021": 97589}),
+    ("DATA", "Operating expenses / Administrative expenses", {"FY2025": -460213, "FY2024": -332130, "FY2023": -220674, "FY2022": -178336, "FY2021": -158981}),
+    ("DATA", "Impairment release/(charge) and charge-offs", {"FY2025": 3243, "FY2024": -13889, "FY2023": -9991, "FY2022": -10636, "FY2021": -16106}),
+    ("TOTAL", "Profit/(loss) before taxation", {"FY2025": 223413, "FY2024": 301099, "FY2023": 194596, "FY2022": 32052, "FY2021": -31454}),
+    ("DATA", "Tax charge/(credit)", {"FY2025": -72691, "FY2024": -81098, "FY2023": -51740, "FY2022": 12886, "FY2021": 8135}),
+    ("TOTAL", "Profit/(loss) after taxation", {"FY2025": 150722, "FY2024": 220001, "FY2023": 142856, "FY2022": 44938, "FY2021": -23319}),
+    ("SECTION", "Other comprehensive income, net of tax (FY2021-FY2025 presentation)", {}),
+    ("DATA", "Translation of subsidiary company", {"FY2025": 7, "FY2024": 25, "FY2023": 47, "FY2022": -4}),
+    ("DATA", "Cash flow hedges (net of tax)", {"FY2025": -7299, "FY2024": 27379, "FY2023": -10246}),
+    ("TOTAL", "Other comprehensive income/(loss), net of tax", {"FY2025": -7292, "FY2024": 27404, "FY2023": -10199, "FY2022": -4, "FY2021": 0}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year, net of tax (FY2021-FY2025 presentation)", {"FY2025": 143430, "FY2024": 247405, "FY2023": 132657, "FY2022": 44934, "FY2021": -23319}),
+    ("SECTION", "Income statement (FY2026 presentation - Revenue/Cost of revenue/Gross profit structure)", {}),
+    ("DATA", "Interest income (FY2026 presentation)", {"FY2026": 759202}),
+    ("DATA", "Fee and commission income (FY2026 presentation)", {"FY2026": 128153}),
+    ("TOTAL", "Revenue (FY2026 presentation)", {"FY2026": 887355}),
+    ("DATA", "Interest expense (FY2026 presentation)", {"FY2026": -189263}),
+    ("DATA", "Fee expense and cost of services (FY2026 presentation)", {"FY2026": -46579}),
+    ("DATA", "Impairment (charge)/release (FY2026 presentation)", {"FY2026": -6649}),
+    ("TOTAL", "Cost of revenue (FY2026 presentation)", {"FY2026": -242491}),
+    ("TOTAL", "Gross profit (FY2026 presentation)", {"FY2026": 644864}),
+    ("DATA", "Other income/(expense) (FY2026 presentation)", {"FY2026": 14209}),
+    ("DATA", "Operating expenses (FY2026 presentation)", {"FY2026": -441955}),
+    ("TOTAL", "Profit before taxation (FY2026 presentation)", {"FY2026": 217118}),
+    ("DATA", "Tax charge (FY2026 presentation)", {"FY2026": -61075}),
+    ("TOTAL", "Profit after taxation (FY2026 presentation)", {"FY2026": 156043}),
+    ("SECTION", "Other comprehensive income, net of tax (FY2026 presentation)", {}),
+    ("DATA", "Translation of subsidiary companies (FY2026 presentation)", {"FY2026": -11}),
+    ("DATA", "Cash flow hedges (net of tax) (FY2026 presentation)", {"FY2026": -9407}),
+    ("TOTAL", "Other comprehensive income/(loss), net of tax (FY2026 presentation)", {"FY2026": -9418}),
+    ("TOTAL", "Total comprehensive income for the year, net of tax (FY2026 presentation)", {"FY2026": 146625}),
+]
+
+bw.add_income_statement_sheet(
+    title="Starling Bank Limited — Profit & Loss",
+    subtitle="Group/consolidated basis, £'000. 'Total comprehensive income/(loss) for the year' ties exactly to "
+              "Profit/(loss) after taxation + Other comprehensive income for every year. FY2026 uses a different "
+              "Revenue/Cost-of-revenue/Gross-profit presentation than FY2021-FY2025 - see source note.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=290,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Statement of Changes in Equity - equity reconciliation ladder steps 2-3:
+# built year-by-year, confirmed against next year's opening AND that
+# year's own Balance Sheet Total equity above (all 6 years tie exactly).
+# Zero undocumented plug rows. See PRESENTATION NOTE above for the
+# Merger reserve / Cash flow hedging reserve / Other reserves column split.
+# ---------------------------------------------------------------
+EQUITY_HEADERS = [
+    "Share capital", "Share premium", "Merger reserve", "Cash flow hedging reserve", "Other reserves",
+    "Retained earnings", "Total equity",
+]
+
+equity_rows = [
+    ("TOTAL", "Balance at 30 November 2019", (7, 159332, None, None, 761, -92174, 67926)),
+    ("DATA", "Proceeds from issue of shares, less expenses", (2, 94003, None, None, None, None, 94005)),
+    ("DATA", "Loss for the period", (None, None, None, None, None, -23319, -23319)),
+    ("DATA", "Fair value of shares allocated to employees", (None, None, None, None, 2128, None, 2128)),
+    ("DATA", "Translation of subsidiary company", (None, None, None, None, 91, None, 91)),
+    ("TOTAL", "Balance at 31 March 2021", (9, 253335, None, None, 2980, -115493, 140831)),
+    ("DATA", "Proceeds from issue of shares, less expenses (of which £15,000k created the Merger reserve on the Fleet Mortgages Limited acquisition)", (2, 224998, 15000, None, None, None, 240000)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, 44938, 44938)),
+    ("DATA", "Translation of subsidiary company", (None, None, None, None, -4, None, -4)),
+    ("DATA", "Cost of share award schemes, net of tax", (None, None, None, None, 4549, 110, 4659)),
+    ("TOTAL", "Balance at 31 March 2022 / 1 April 2022", (11, 478333, 15000, None, 7525, -70445, 430424)),
+    ("DATA", "Proceeds from issue of shares, less expenses", (1, 130500, None, None, None, None, 130501)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, 142856, 142856)),
+    ("DATA", "Translation of subsidiary company", (None, None, None, None, 47, None, 47)),
+    ("DATA", "Cash flow hedge", (None, None, None, -10246, None, None, -10246)),
+    ("DATA", "Cost of share award schemes, net of tax", (None, None, None, None, 1695, None, 1695)),
+    ("TOTAL", "Balance at 31 March 2023 / 1 April 2023", (12, 608833, 15000, -10246, 9267, 72411, 695277)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, 220001, 220001)),
+    ("DATA", "Cash flow hedge", (None, None, None, 27379, None, None, 27379)),
+    ("DATA", "Translation of subsidiary company", (None, None, None, None, 25, None, 25)),
+    ("DATA", "Purchase of own shares", (None, None, None, None, -56362, None, -56362)),
+    ("DATA", "Cost of share award schemes, net of tax", (None, None, None, None, 3450, None, 3450)),
+    ("DATA", "Transfer from share award reserve", (None, None, None, None, -516, 516, 0)),
+    ("TOTAL", "Balance at 31 March 2024 / 1 April 2024", (12, 608833, 15000, 17133, -44136, 292928, 889770)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, 150722, 150722)),
+    ("DATA", "Cash flow hedge", (None, None, None, -7299, None, None, -7299)),
+    ("DATA", "Translation of subsidiary company", (None, None, None, None, 7, None, 7)),
+    ("DATA", "Cost of share award schemes, net of tax", (None, None, None, None, 12852, None, 12852)),
+    ("TOTAL", "Balance at 31 March 2025 / 1 April 2025", (12, 608833, 15000, 9834, -31277, 443650, 1046052)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, 156043, 156043)),
+    ("DATA", "Cash flow hedge", (None, None, None, -9407, None, None, -9407)),
+    ("DATA", "Translation of subsidiary companies", (None, None, None, None, -11, None, -11)),
+    ("DATA", "Merger reserve on Group reorganisation (SGHL inserted as new ultimate parent - see entity note)", (None, -608833, 608833, None, None, None, 0)),
+    ("DATA", "Warrants issued", (None, None, None, None, 1372, None, 1372)),
+    ("DATA", "Cost of share award schemes, net of tax", (None, None, None, None, 10896, None, 10896)),
+    ("TOTAL", "Balance at 31 March 2026", (12, 0, 623833, 427, -19020, 599693, 1204945)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Starling Bank Limited — Statement of Changes in Equity",
+    subtitle="Group/consolidated basis, £'000, chronological (oldest to newest). Each year's closing Total equity "
+              "ties exactly to that year's own Balance Sheet Total equity and to the next year's opening balance - "
+              "zero undocumented plug rows across all 6 years.",
+    headers=EQUITY_HEADERS,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=58,
+    source_height=290,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -177,6 +394,62 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Asset Quality - lending exposure and impairment provision by IFRS 9
+# stage, Group basis. FY2021 genuinely doesn't disclose a by-stage table
+# (introduced from the FY2022 Annual Report onward, coinciding with the
+# Fleet Mortgages acquisition and Government-scheme lending buildout) -
+# confirmed non-disclosure, not an access gap - left blank.
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Total exposure after guarantee, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1", {"FY2026": 4862307, "FY2025": 4165490, "FY2024": 3725761, "FY2023": 3571338, "FY2022": 1633418}),
+    ("DATA", "Stage 2", {"FY2026": 252112, "FY2025": 228850, "FY2024": 266374, "FY2023": 144105, "FY2022": 43581}),
+    ("DATA", "Stage 3", {"FY2026": 163254, "FY2025": 159469, "FY2024": 160167, "FY2023": 103707, "FY2022": 55960}),
+    ("TOTAL", "Total exposure after guarantee", {"FY2026": 5277673, "FY2025": 4553809, "FY2024": 4152302, "FY2023": 3819150, "FY2022": 1732959}),
+    ("SECTION", "Impairment provision, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1", {"FY2026": 7767, "FY2025": 6344, "FY2024": 9174, "FY2023": 11462, "FY2022": 13637}),
+    ("DATA", "Stage 2", {"FY2026": 5471, "FY2025": 5166, "FY2024": 9974, "FY2023": 5779, "FY2022": 3663}),
+    ("DATA", "Stage 3", {"FY2026": 11239, "FY2025": 10403, "FY2024": 28722, "FY2023": 18381, "FY2022": 9772}),
+    ("TOTAL", "Total impairment provision", {"FY2026": 24477, "FY2025": 21913, "FY2024": 47870, "FY2023": 35622, "FY2022": 27072}),
+    ("SECTION", "Net exposure, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1", {"FY2026": 4854540, "FY2025": 4159146, "FY2024": 3716587, "FY2023": 3559876, "FY2022": 1619781}),
+    ("DATA", "Stage 2", {"FY2026": 246641, "FY2025": 223684, "FY2024": 256400, "FY2023": 138326, "FY2022": 39918}),
+    ("DATA", "Stage 3", {"FY2026": 152015, "FY2025": 149066, "FY2024": 131445, "FY2023": 85326, "FY2022": 46188}),
+    ("TOTAL", "Net exposure", {"FY2026": 5253196, "FY2025": 4531896, "FY2024": 4104432, "FY2023": 3783528, "FY2022": 1705887}),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "% Coverage - Stage 1", {"FY2026": "0.2%", "FY2025": "0.2%", "FY2024": "0.2%", "FY2023": "0.3%", "FY2022": "0.8%"}),
+    ("DATA", "% Coverage - Stage 2", {"FY2026": "2.2%", "FY2025": "2.3%", "FY2024": "3.7%", "FY2023": "4.0%", "FY2022": "8.4%"}),
+    ("DATA", "% Coverage - Stage 3", {"FY2026": "6.9%", "FY2025": "6.5%", "FY2024": "17.9%", "FY2023": "17.7%", "FY2022": "17.5%"}),
+    ("DATA", "% Coverage - Total", {"FY2026": "0.5%", "FY2025": "0.5%", "FY2024": "1.2%", "FY2023": "0.9%", "FY2022": "1.6%"}),
+    ("DATA", "NPL ratio (Stage 3 exposure / Total exposure after guarantee)", {"FY2026": "3.09%", "FY2025": "3.50%", "FY2024": "3.86%", "FY2023": "2.72%", "FY2022": "3.23%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Starling Bank Limited — Asset Quality",
+    subtitle="Group/consolidated basis, £'000. Lending exposure and impairment provision by IFRS 9 stage, 'Total "
+              "exposure after guarantee' basis (includes off-balance-sheet undrawn facilities net of UK "
+              "government guarantees). FY2021 genuinely does not disclose a by-stage table - see source note.",
+    rows=asset_quality_rows,
+    sources_text=(
+        "Sources - Group basis, 'Lending exposure and impairment provision, by stage and coverage' table:\n"
+        f"FY2026: Starling Group Holdings Limited Annual Report and Accounts 2026, p.112 - {AR26_SGHL_URL}\n"
+        f"FY2025 & FY2024: Starling Bank Limited Annual Report and Accounts 2025, p.106 - {AR25_URL}\n"
+        f"FY2023 & FY2022: Starling Bank Limited Annual Report 2023, p.69-70 - {AR23_URL}\n"
+        "FY2021: not disclosed at this granularity - Starling Bank Limited's Annual Report and Consolidated "
+        "Financial Statements for the period ended 31 March 2021 does not include a lending-exposure-by-IFRS-9-"
+        "stage table (this disclosure was introduced from the FY2022 Annual Report onward); only an aggregate "
+        "impairment-provision-sensitivity figure (£17,256k, Retail + SME + undrawn overdrafts) is disclosed for "
+        "FY2021, which is not on a comparable 'exposure after guarantee, all products' basis - confirmed "
+        "non-disclosure at this granularity, not an access gap.\n"
+        "NPL ratio is derived (Stage 3 exposure after guarantee / Total exposure after guarantee); not itself a "
+        "disclosed figure.\n\n" + ENTITY_NOTE
+    ),
+    first_col_width=62,
+    source_height=280,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):
@@ -217,6 +490,45 @@ metric(
 metric(
     "Total RWAs", "£'000",
     [("Total risk-weighted exposure amount", {"FY2026": 3930308, "FY2025": 3170032, "FY2024": 2675477, "FY2023": 1894758, "FY2022": 994828, "FY2021": 285689})],
+)
+
+# ---------------------------------------------------------------
+# RWA Breakdown - Pillar 3 UK OV1 template (FY2022-FY2026); FY2021 uses
+# the older CRR-era 4-category table (predates the formal KM1/OV1
+# template - see ENTITY_NOTE / P3_SOURCES_ALL). All 6 years tie exactly
+# to the Total RWAs metric above.
+# ---------------------------------------------------------------
+rwa_breakdown_rows = [
+    ("SECTION", "RWA by risk category (Pillar 3 UK OV1 template; FY2021 uses an older CRR-era 4-category "
+                "structure - see source note)", {}),
+    ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2026": 2471912, "FY2025": 1987150, "FY2024": 1840844, "FY2023": 1689562, "FY2022": 835048, "FY2021": 227167}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2026": 3283, "FY2025": 4723, "FY2024": 4499, "FY2023": 46355, "FY2022": 92241, "FY2021": 13498}),
+    ("DATA", "Credit valuation adjustment (CVA) (FY2021: shown as a separate line, not within CCR)", {"FY2021": 19949}),
+    ("DATA", "Securitisation exposures in the non-trading book", {"FY2026": 231185, "FY2025": 105727, "FY2024": 80923, "FY2023": 4805, "FY2022": 1166}),
+    ("DATA", "Market risk (FY2021: de minimis, none shown per Article 351 CRR)", {"FY2021": 0}),
+    ("DATA", "Operational risk", {"FY2026": 1223928, "FY2025": 1072432, "FY2024": 749211, "FY2023": 154036, "FY2022": 66372, "FY2021": 25075}),
+    ("DATA", "Memo: amounts below thresholds for deduction (250% risk-weight; already included in Credit risk above, not additive)", {"FY2026": 125427, "FY2025": 125427, "FY2024": 125427, "FY2023": 125427, "FY2022": 98731}),
+    ("TOTAL", "Total RWAs", {"FY2026": 3930308, "FY2025": 3170032, "FY2024": 2675477, "FY2023": 1894758, "FY2022": 994828, "FY2021": 285689}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Starling Bank Limited — RWA Breakdown",
+    subtitle="Group/consolidated basis for FY2026 (Regulatory Group - see entity note), Bank basis FY2021-FY2025, "
+              "£'000. The 'Memo' row is already included within Credit risk and must NOT be added when summing to "
+              "Total RWAs (per the source template's own footnote) - the other categories sum exactly to Total RWAs.",
+    rows=rwa_breakdown_rows,
+    sources_text=P3_SOURCES_ALL + (
+        "\n\nRWA breakdown table specifically ('Overview of risk weighted exposure amounts' / '4.2'):\n"
+        f"FY2026: p.24 - {P3_26_URL}\n"
+        f"FY2025 & FY2024: p.24 - {P3_25_URL}\n"
+        f"FY2023 & FY2022: p.21 - {P3_23_URL}\n"
+        f"FY2021: 5.1 Risk Weighted Exposure Amounts, p.23 (older 4-category CRR-era structure: Credit Risk, "
+        f"Counterparty Credit Risk, Credit Valuation Adjustment shown separately from CCR, Market Risk, "
+        f"Operational Risk - no Securitisation line disclosed that year) - {P3_21_URL}"
+    ),
+    first_col_width=68,
+    source_height=250,
+    unit_suffix=" (£'000)",
 )
 
 metric(
@@ -268,6 +580,26 @@ metric(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834}),
+        ("Loans and advances to customers", {"FY2026": 5161359, "FY2025": 4670567, "FY2024": 4537663, "FY2023": 4731997, "FY2022": 3234673, "FY2021": 2232846}),
+        ("Customer deposits", {"FY2026": 12691991, "FY2025": 12066650, "FY2024": 10970237, "FY2023": 10551820, "FY2022": 9027413, "FY2021": 5827581}),
+        ("Total equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total income / Revenue", {"FY2026": 887355, "FY2025": 680383, "FY2024": 647118, "FY2023": 414814, "FY2022": 188066, "FY2021": 97589}),
+        ("Operating expenses", {"FY2026": -441955, "FY2025": -460213, "FY2024": -332130, "FY2023": -220674, "FY2022": -178336, "FY2021": -158981}),
+        ("Profit/(loss) after taxation", {"FY2026": 156043, "FY2025": 150722, "FY2024": 220001, "FY2023": 142856, "FY2022": 44938, "FY2021": -23319}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2026": 1046052, "FY2025": 889770, "FY2024": 695277, "FY2023": 430424, "FY2022": 140831, "FY2021": 67926}),
+        ("Total comprehensive income/(loss) for the year", {"FY2026": 146625, "FY2025": 143430, "FY2024": 247405, "FY2023": 132657, "FY2022": 44934, "FY2021": -23319}),
+        ("Other equity movements, net", {"FY2026": 12268, "FY2025": 12852, "FY2024": -52912, "FY2023": 132196, "FY2022": 244659, "FY2021": 96224}),
+        ("Closing equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash flows from operating activities", {
             "FY2023": 80602, "FY2022": 3535459, "FY2021": 3530940,  # FY2021-FY2023 presentation

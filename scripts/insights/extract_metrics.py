@@ -37,8 +37,16 @@ built banks. Columns:
                        matched - see the unmatched-name log printed at the end)
     workbook_kind      "full" (has a populated Cash Flow Statement) or
                        "pillar3_only" (FRS 101/102 cash-flow exemption)
-    sheet             "Cash Flow Statement", "Interim Pillar 3", or one of
-                       PILLAR3_SHEET_NAMES
+    sheet             "Cash Flow Statement", "Interim Pillar 3", one of
+                       STATEMENT_SHEET_NAMES (Balance Sheet, Profit & Loss,
+                       Asset Quality, RWA Breakdown - added 2026-09-04 for
+                       the ST- wayfinder rollout; unlike Cash Flow
+                       Statement, these carry every DATA+TOTAL row, not
+                       just totals), or one of PILLAR3_SHEET_NAMES.
+                       "Statement of Changes in Equity" is NOT in this
+                       column - its different (non-year-column) shape is
+                       written to the separate equity_changes table instead,
+                       see extract_equity_changes_sheet()
     row_label         the line item / metric label as written in the workbook
     year              year key as it appears in the workbook's column header
                        (e.g. "FY2025") - NOT normalized across banks, since
@@ -118,6 +126,16 @@ import openpyxl
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from bank_workbook import PILLAR3_SHEET_NAMES
 from in009_analysis import normalize_period
+
+# The 4 year-column statement sheets the ST- wayfinder rollout added
+# (2026-09-04, see wayfinder/statements/map.md) - same "Line item" +
+# year-column shape as Cash Flow Statement, extracted via
+# extract_statement_rows() below (all DATA+TOTAL rows, not just totals).
+# "Statement of Changes in Equity" is NOT in this list - it has a
+# genuinely different shape (see extract_equity_changes_sheet()) and is
+# handled separately, writing to the equity_changes table instead of
+# annual_metrics.
+STATEMENT_SHEET_NAMES = ["Balance Sheet", "Profit & Loss", "Asset Quality", "RWA Breakdown"]
 
 BANKS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "banks")
 BANK_LIST_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "Banks List 2608.xlsx")
@@ -277,6 +295,116 @@ def extract_cash_flow_totals(ws, header_row, years, ncols):
         if any_data:
             totals.append((label, row_values))
     return totals
+
+
+def extract_statement_rows(ws, header_row, years):
+    """Generalises extract_cash_flow_totals() to capture every DATA and
+    TOTAL row, not just bold TOTAL rows - used for the 4 year-column
+    statement sheets the ST- wayfinder rollout added (Balance Sheet,
+    Profit & Loss, Asset Quality, RWA Breakdown), where the line-item
+    detail (e.g. "Loans and advances to customers", "Interest income") is
+    exactly the "spend and risk" data this project exists to expose, not
+    just the subtotals - unlike the pre-existing Cash Flow Statement
+    extraction above, which stays TOTAL-only deliberately (settled
+    behaviour, not touched here).
+
+    SECTION divider rows are naturally excluded without any special-casing:
+    bank_workbook.py's _add_statement_sheet() never writes year-column
+    values for a SECTION row, so it has no data and fails the any_data
+    check below - the same mechanism extract_cash_flow_totals() already
+    relies on for its TOTAL-only filter, just without the bold restriction.
+
+    Every emitted label is prefixed with its nearest preceding SECTION
+    divider (e.g. "Assets - Derivative financial instruments" vs
+    "Liabilities - Derivative financial instruments"), because a genuine
+    balance sheet can and does repeat the same line-item label under two
+    different SECTION headers with two different real values - confirmed
+    by an actual collision found while building this (The Access Bank UK
+    Limited's Balance Sheet, FY2024: "Derivative financial instruments" =
+    2,801.5 under Assets vs 7,986.6 under Liabilities, both genuinely
+    disclosed). Without this prefix, deduplicate()'s (frn, sheet,
+    row_label, year) identity key would treat these as conflicting
+    duplicates of the same fact rather than two different facts, and hard
+    fail rather than silently picking one. A row with no preceding
+    SECTION divider (nothing to disambiguate) keeps its bare label.
+
+    A second, narrower collision exists WITHIN one section too: several
+    RWA Breakdown sheets repeat "Of which: standardised approach" (etc.)
+    as a sub-item of two different parent rows under the same SECTION -
+    e.g. Clydesdale's RWA Breakdown has it once under "Credit risk
+    (excluding CCR)" and once under "Counterparty credit risk (CCR)".
+    Any row whose label starts with "Of which" is prefixed with its
+    nearest preceding non-"Of which" row's label instead of the section
+    label, for the same disambiguation reason.
+    Returns list of (label, {year: value})."""
+    rows = []
+    last_row = header_row
+    for r in range(header_row + 1, ws.max_row + 1):
+        if ws.cell(row=r, column=1).value in (None, ""):
+            break
+        last_row = r
+    # SECTION and TOTAL share the identical bold font (bank_workbook.py's
+    # SECTION_FONT and TOTAL_FONT are both Font(bold=True)), and a
+    # genuinely blank DATA/TOTAL row (e.g. GIB UK's Asset Quality "Stage 2/
+    # 3" lines - real disclosed-nil rows, no year ever populated) is
+    # visually identical to a SECTION row (both: no year-column data).
+    # Blankness alone can't tell them apart - only column-A boldness can:
+    # a SECTION row is ALWAYS bold with NO data (the else-branch that
+    # writes year values never runs for kind=="SECTION"); a blank DATA row
+    # is NEVER bold. Confirmed by reading _add_statement_sheet() directly.
+    section = None
+    parent_label = None
+    for r in range(header_row + 1, last_row + 1):
+        label = ws.cell(row=r, column=1).value
+        row_values = {y: ws.cell(row=r, column=ci).value for ci, y in enumerate(years, start=2)}
+        has_data = any(v is not None for v in row_values.values())
+        if is_bold(ws, r, 1) and not has_data:
+            if label not in (None, ""):
+                section = label
+                parent_label = None
+            continue
+        if not has_data:
+            # Genuinely blank DATA/TOTAL row - nothing to extract, and not
+            # a section divider either, so section/parent state is untouched.
+            continue
+        is_sub_item = isinstance(label, str) and label.strip().lower().startswith("of which")
+        prefix = parent_label if (is_sub_item and parent_label) else section
+        full_label = f"{prefix} - {label}" if prefix else label
+        rows.append((full_label, row_values))
+        if not is_sub_item:
+            parent_label = label
+    return rows
+
+
+def extract_equity_changes_sheet(ws):
+    """Statement of Changes in Equity doesn't fit the year-column shape at
+    all (see add_equity_changes_sheet's docstring in bank_workbook.py): a
+    chronological roll-forward, "Movement" + equity-component columns, read
+    oldest-to-newest rather than most-recent-first. Returns
+    (rows, warning) where rows is a list of (row_order, movement_label,
+    component, value_raw) tuples in the sheet's own read order - callers
+    must preserve this order (row_order), never re-sort it the way
+    annual_metrics rows can be, since "oldest-to-newest" is the only thing
+    that makes a roll-forward legible."""
+    header_row = find_header_row(ws, {"Movement"})
+    if header_row is None:
+        return [], "Statement of Changes in Equity: expected header ('Movement') not found"
+    components = [ws.cell(row=header_row, column=c).value for c in range(2, ws.max_column + 1)]
+    rows = []
+    row_order = 0
+    for r in range(header_row + 1, ws.max_row + 1):
+        label = ws.cell(row=r, column=1).value
+        if label in (None, ""):
+            break
+        for ci, component in enumerate(components, start=2):
+            if component is None:
+                continue
+            value = ws.cell(row=r, column=ci).value
+            if value is None:
+                continue
+            rows.append((row_order, label, component, value))
+        row_order += 1
+    return rows, None
 
 
 def get_cash_flow_source_note(ws, header_row):
@@ -529,6 +657,7 @@ def process_workbook(path, bank_list):
     basis_note = get_basis_note(wb)
 
     rows_out = []
+    equity_rows_out = []
     workbook_kind = "pillar3_only"
 
     if "Cash Flow Statement" in wb.sheetnames:
@@ -582,10 +711,64 @@ def process_workbook(path, bank_list):
                     restatement_note=restatement_note, source_note=source_note,
                 ))
 
+    for sheet_name in STATEMENT_SHEET_NAMES:
+        if sheet_name not in wb.sheetnames:
+            continue
+        ws = wb[sheet_name]
+        header_row = find_header_row(ws, {"Line item"})
+        if header_row is not None:
+            years, ncols = get_years(ws, header_row)
+            stmt_rows = extract_statement_rows(ws, header_row, years)
+            stmt_unit = get_cash_flow_unit(ws, header_row, ncols)
+            stmt_source_note = get_cash_flow_source_note(ws, header_row)
+            if not stmt_rows:
+                warnings.append(f"{sheet_name}: no extractable rows")
+        else:
+            # A confirmed non-disclosure uses add_not_disclosed_metric_sheets'
+            # shape instead (header "Metric", a single "Not publicly
+            # disclosed" row) - the same fallback PILLAR3_SHEET_NAMES sheets
+            # use, not a bug. Falls back to that extraction path rather than
+            # warning, so a genuine non-disclosure is still captured as a
+            # real (non-numeric) annual_metrics row, same as every Pillar 3
+            # sheet already does.
+            metric_header_row = find_header_row(ws, {"Metric"})
+            if metric_header_row is None:
+                warnings.append(f"{sheet_name}: expected header ('Line item' or 'Metric') not found")
+                continue
+            years, ncols = get_years(ws, metric_header_row)
+            metric_rows, _, stmt_source_note = extract_metric_sheet_full(ws, years, metric_header_row)
+            stmt_unit = None
+            stmt_rows = metric_rows
+            if not stmt_rows:
+                warnings.append(f"{sheet_name}: no extractable rows")
+        for label, values in stmt_rows:
+            for y, v in values.items():
+                if y is None:
+                    continue
+                rows_out.append(_row(
+                    bank_name, canonical_bank, frn, source_workbook, workbook_kind,
+                    sheet_name, label, y, v, basis_note,
+                    unit=stmt_unit, reporting_basis=None,
+                    restatement_note=None, source_note=stmt_source_note,
+                ))
+
+    if "Statement of Changes in Equity" in wb.sheetnames:
+        ws = wb["Statement of Changes in Equity"]
+        equity_cells, equity_warning = extract_equity_changes_sheet(ws)
+        if equity_warning:
+            warnings.append(equity_warning)
+        elif not equity_cells:
+            warnings.append("Statement of Changes in Equity: no extractable rows")
+        for row_order, movement_label, component, value in equity_cells:
+            equity_rows_out.append(_equity_row(
+                frn, canonical_bank, source_workbook, movement_label, component,
+                row_order, value,
+            ))
+
     if not rows_out:
         warnings.append("workbook produced ZERO output rows across every sheet")
 
-    return bank_name, frn, matched_name, canonical_bank, workbook_kind, rows_out, warnings
+    return bank_name, frn, matched_name, canonical_bank, workbook_kind, rows_out, equity_rows_out, warnings
 
 
 def _row(bank, canonical_bank, frn, source_workbook, workbook_kind, sheet, label, year, value_raw, basis_note,
@@ -613,6 +796,22 @@ def _row(bank, canonical_bank, frn, source_workbook, workbook_kind, sheet, label
         "reporting_basis": reporting_basis or "",
         "restatement_note": restatement_note or "",
         "source_note": source_note or "",
+    }
+
+
+def _equity_row(frn, canonical_bank, source_workbook, movement_label, component, row_order, value_raw):
+    value_numeric = parse_numeric(value_raw)
+    return {
+        "frn": frn if frn is not None else "",
+        "canonical_bank": canonical_bank,
+        "source_workbook": source_workbook,
+        "sheet": "Statement of Changes in Equity",
+        "movement_label": movement_label,
+        "component": component,
+        "row_order": row_order,
+        "value_raw": "" if value_raw is None else value_raw,
+        "value_numeric": "" if value_numeric is None else value_numeric,
+        "is_numeric": "1" if value_numeric is not None else "0",
     }
 
 
@@ -696,6 +895,7 @@ def main():
     paths = sorted(glob.glob(os.path.join(args.banks_dir, "*.xlsx")))
 
     all_rows = []
+    all_equity_rows = []
     all_interim = []
     all_interim_register = []
     unmatched = []
@@ -705,7 +905,7 @@ def main():
 
     for path in paths:
         try:
-            bank_name, frn, matched_name, canonical_bank, workbook_kind, rows, warnings = \
+            bank_name, frn, matched_name, canonical_bank, workbook_kind, rows, equity_rows, warnings = \
                 process_workbook(path, bank_list)
         except Exception as exc:
             errors.append((path, str(exc)))
@@ -718,6 +918,7 @@ def main():
             all_warnings.append((bank_name, msg))
             print(f"  !! {bank_name}: {msg}", file=sys.stderr)
         all_rows.extend(rows)
+        all_equity_rows.extend(equity_rows)
         if frn is not None:
             interim, register = build_interim_records(path, frn)
             all_interim.extend(interim)
@@ -760,6 +961,23 @@ def main():
         n_interim, n_register = _db.write_interim_observations(
             conn, all_interim, all_interim_register
         )
+        # Equity rows are keyed on frn like annual_metrics, but written
+        # separately (different table, different shape - see
+        # extract_equity_changes_sheet's docstring). Rows with no FRN match
+        # can't be written (equity_changes.frn references banks(frn), and an
+        # unmatched bank was never inserted into banks by
+        # write_banks_and_metrics above) - dropped with a loud warning
+        # rather than silently, though FRN matching currently has zero
+        # unmatched banks so this path is not expected to trigger.
+        equity_rows_with_frn = [r for r in all_equity_rows if r["frn"] not in (None, "")]
+        equity_rows_dropped = len(all_equity_rows) - len(equity_rows_with_frn)
+        if equity_rows_dropped:
+            print(
+                f"  !! dropped {equity_rows_dropped} Statement of Changes in "
+                f"Equity rows with no FRN match (not written to equity_changes)",
+                file=sys.stderr,
+            )
+        n_equity = _db.write_equity_changes(conn, equity_rows_with_frn)
         # A metrics refresh can temporarily coexist with an independently
         # refreshed parent map, but never report success while the database
         # contains orphaned relationships or malformed metric rows.
@@ -794,6 +1012,8 @@ def main():
         }, f, indent=2)
 
     print(f"\nWrote {n_banks} banks / {n_metrics} annual_metrics rows to {args.db}")
+    print(f"Wrote {n_equity} equity_changes rows to {args.db}"
+          + (f" ({equity_rows_dropped} dropped, no FRN match)" if equity_rows_dropped else ""))
     print(f"Wrote {n_interim} interim observations / {n_register} source-register rows to {args.db}")
     print(f"Exported {n_exported} rows for {len(paths)} workbooks to {args.out} (from the database)")
     print(f"Wrote schema manifest ({SCHEMA_VERSION}) to {schema_path}")
@@ -806,7 +1026,7 @@ def main():
     for bank_name, msg in all_warnings:
         print(f"  - {bank_name}: {msg}")
     print("\nPer-sheet coverage, post-dedup (numeric / missing / non-numeric-string):")
-    for sheet in ["Cash Flow Statement"] + PILLAR3_SHEET_NAMES:
+    for sheet in ["Cash Flow Statement"] + STATEMENT_SHEET_NAMES + PILLAR3_SHEET_NAMES:
         if sheet in per_sheet_coverage:
             numeric, missing, non_numeric = per_sheet_coverage[sheet]
             print(f"  {sheet:22s} numeric={numeric:5d}  missing={missing:5d}  non_numeric_string={non_numeric:5d}")

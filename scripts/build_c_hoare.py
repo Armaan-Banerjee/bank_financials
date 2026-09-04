@@ -62,6 +62,217 @@ PAGES = {"recent": "15", "older": "26"}
 bw = BankWorkbook(bank_name="C. Hoare & Co.", years=YEARS, year_label=YEAR_LABEL, header_color="6F1D1B")
 
 # ---------------------------------------------------------------
+# ST- rollout (batch ST-014): Balance Sheet, P&L, Statement of Changes in
+# Equity, Asset Quality, RWA Breakdown. C. Hoare & Co. is a private
+# unlimited company (not a partnership, despite general references to it
+# as a "private bank" - its statutory accounts use standard Companies Act
+# equity line items: Called up share capital, Reserve Fund, Revaluation
+# reserves, Retained earnings, not partnership capital accounts). Group
+# basis throughout (Company-only columns also published but not used
+# here, consistent with the existing Cash Flow Statement/Pillar 3 sheets).
+# ---------------------------------------------------------------
+STATEMENTS_SOURCES = (
+    "Sources - C. Hoare & Co.'s own Consolidated Statement of Comprehensive Income / Consolidated and Company "
+    "Balance Sheets / Consolidated Statement of Changes in Equity (Group column only used), £'000, each from "
+    "that year's own originally-published Financial Report:\n"
+    f"FY2026: Financial Report 2026, pp.45,47,49 - {AR2026_URL}\n"
+    f"FY2025: Financial Report 2025, pp.35,36,37 - {AR2025_URL}\n"
+    f"FY2024: Financial Report 2024, pp.37,38,39 - {AR2024_URL}\n"
+    f"FY2023: Financial Report 2023, pp.33,34,35 - {AR2023_URL}\n"
+    f"FY2022: Annual Report 2022, pp.32,33,34 - {AR2022_URL}\n\n"
+    + ENTITY_NOTE
+)
+
+PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: the Balance Sheet's own 'Retained earnings' figure is the sum of two separate lines the "
+    "Bank's own balance sheet prints ('Current year net income' + 'Retained earnings brought forward') - shown "
+    "here as a single combined line to match the Statement of Changes in Equity's own single 'Retained Earnings' "
+    "column, which already combines them. 'Deferred tax asset' only appears as its own Balance Sheet line "
+    "FY2022-24 (nil/absent FY2025-26 on a Group basis); 'Post retirement benefit asset' only appears FY2022-23; "
+    "'Post retirement benefit liability' only appears FY2024; 'Provision for other liabilities' only appears "
+    "FY2022. 'Other operating income' is disclosed with the opposite sign convention in FY2022-23 (printed as "
+    "'Other operating (expense)/income', both years negative) vs FY2024-26 (printed as 'Other operating income', "
+    "all positive) - both reproduced as signed, not relabelled."
+)
+
+# ---------------------------------------------------------------
+# Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {
+        "FY2026": 896317, "FY2025": 1548443, "FY2024": 1345322, "FY2023": 1452949, "FY2022": 1843378}),
+    ("DATA", "Items in course of collection from banks", {
+        "FY2026": 316, "FY2025": 136, "FY2024": 266, "FY2023": 240, "FY2022": 330}),
+    ("DATA", "Derivative financial instruments (assets)", {
+        "FY2026": 215175, "FY2025": 100364, "FY2024": 117813, "FY2023": 126976, "FY2022": 110851}),
+    ("DATA", "Financial assets", {
+        "FY2026": 6339519, "FY2025": 5399523, "FY2024": 5229721, "FY2023": 5164686, "FY2022": 5204233}),
+    ("DATA", "Intangible assets", {
+        "FY2026": 37247, "FY2025": 31776, "FY2024": 17363, "FY2023": 16765, "FY2022": 17821}),
+    ("DATA", "Property and equipment", {
+        "FY2026": 52872, "FY2025": 53192, "FY2024": 50064, "FY2023": 51008, "FY2022": 55428}),
+    ("DATA", "Heritage assets", {
+        "FY2026": 15297, "FY2025": 15105, "FY2024": 15098, "FY2023": 15040, "FY2022": 14987}),
+    ("DATA", "Deferred tax asset", {"FY2024": 27, "FY2023": 496, "FY2022": 989}),
+    ("DATA", "Other assets", {
+        "FY2026": 3358, "FY2025": 1237, "FY2024": 4519, "FY2023": 3849, "FY2022": 3672}),
+    ("DATA", "Prepayments and accrued income", {
+        "FY2026": 7880, "FY2025": 9064, "FY2024": 21268, "FY2023": 17071, "FY2022": 13145}),
+    ("DATA", "Post retirement benefit asset", {"FY2023": 3859, "FY2022": 9831}),
+    ("TOTAL", "Total assets", {
+        "FY2026": 7567981, "FY2025": 7158840, "FY2024": 6801461, "FY2023": 6852939, "FY2022": 7274665}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {
+        "FY2026": 309283, "FY2025": 99590, "FY2024": 109543, "FY2023": 122958, "FY2022": 119572}),
+    ("DATA", "Customer accounts", {
+        "FY2026": 6555269, "FY2025": 6427375, "FY2024": 6096719, "FY2023": 6214358, "FY2022": 6689431}),
+    ("DATA", "Derivative financial instruments (liabilities)", {
+        "FY2026": 668, "FY2025": 712, "FY2024": 6764, "FY2023": 3158, "FY2022": 4629}),
+    ("DATA", "Deferred tax liability", {
+        "FY2026": 14802, "FY2025": 11555, "FY2024": 11331, "FY2023": 12342, "FY2022": 15548}),
+    ("DATA", "Other liabilities", {
+        "FY2026": 5457, "FY2025": 29582, "FY2024": 4901, "FY2023": 3072, "FY2022": 2485}),
+    ("DATA", "Accruals and deferred income", {
+        "FY2026": 77819, "FY2025": 31795, "FY2024": 60428, "FY2023": 39719, "FY2022": 24557}),
+    ("DATA", "Post retirement benefit liability", {"FY2024": 107}),
+    ("DATA", "Provision for other liabilities", {"FY2022": 2750}),
+    ("TOTAL", "Total liabilities", {
+        "FY2026": 6963298, "FY2025": 6600609, "FY2024": 6289793, "FY2023": 6395607, "FY2022": 6858972}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Called up share capital", {
+        "FY2026": 120, "FY2025": 120, "FY2024": 120, "FY2023": 120, "FY2022": 120}),
+    ("DATA", "Reserve fund", {
+        "FY2026": 22598, "FY2025": 22598, "FY2024": 22598, "FY2023": 22598, "FY2022": 22598}),
+    ("DATA", "Revaluation reserves", {
+        "FY2026": 30893, "FY2025": 31518, "FY2024": 31526, "FY2023": 32004, "FY2022": 35878}),
+    ("DATA", "Retained earnings", {
+        "FY2026": 551072, "FY2025": 503995, "FY2024": 457424, "FY2023": 402610, "FY2022": 357097}),
+    ("TOTAL", "Total equity", {
+        "FY2026": 604683, "FY2025": 558231, "FY2024": 511668, "FY2023": 457332, "FY2022": 415693}),
+    ("TOTAL", "Total liabilities and equity", {
+        "FY2026": 7567981, "FY2025": 7158840, "FY2024": 6801461, "FY2023": 6852939, "FY2022": 7274665}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="C. Hoare & Co. — Consolidated and Company Balance Sheets",
+    subtitle="Group column, £'000. See source note at bottom.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE,
+    first_col_width=68,
+    source_height=380,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest receivable", {
+        "FY2026": 362505, "FY2025": 397149, "FY2024": 368204, "FY2023": 217811, "FY2022": 94938}),
+    ("DATA", "Interest payable", {
+        "FY2026": -152001, "FY2025": -182502, "FY2024": -153516, "FY2023": -40520, "FY2022": -6681}),
+    ("TOTAL", "Net interest income", {
+        "FY2026": 210504, "FY2025": 214647, "FY2024": 214688, "FY2023": 177291, "FY2022": 88257}),
+    ("DATA", "Dividend income", {
+        "FY2026": 7708, "FY2025": 9621, "FY2024": 24831, "FY2023": 11150, "FY2022": 3587}),
+    ("DATA", "Other finance income", {"FY2025": 1, "FY2024": 413, "FY2023": 275, "FY2022": 79}),
+    ("DATA", "Fees and commissions receivable", {
+        "FY2026": 15571, "FY2025": 10858, "FY2024": 15018, "FY2023": 16534, "FY2022": 15662}),
+    ("DATA", "Fees and commissions payable", {
+        "FY2026": -1350, "FY2025": -1227, "FY2024": -1338, "FY2023": -1251, "FY2022": -1274}),
+    ("TOTAL", "Net fees and commissions income", {
+        "FY2026": 14221, "FY2025": 9631, "FY2024": 13680, "FY2023": 15283, "FY2022": 14388}),
+    ("DATA", "Dealing profits", {
+        "FY2026": 9461, "FY2025": 8778, "FY2024": 8551, "FY2023": 16696, "FY2022": 7542}),
+    ("DATA", "Other operating income/(expense)", {
+        "FY2026": 12733, "FY2025": 6723, "FY2024": 9533, "FY2023": -10227, "FY2022": -5041}),
+    ("TOTAL", "Total income", {
+        "FY2026": 254627, "FY2025": 249401, "FY2024": 271696, "FY2023": 210468, "FY2022": 108812}),
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Administrative expenses including staff costs", {
+        "FY2026": -179587, "FY2025": -172087, "FY2024": -176381, "FY2023": -125030, "FY2022": -79937}),
+    ("DATA", "Amortisation", {
+        "FY2026": -8685, "FY2025": -8608, "FY2024": -8385, "FY2023": -9483, "FY2022": -9099}),
+    ("DATA", "Depreciation", {
+        "FY2026": -2891, "FY2025": -2750, "FY2024": -2435, "FY2023": -2053, "FY2022": -1717}),
+    ("TOTAL", "Total operating expenses", {
+        "FY2026": -191163, "FY2025": -183445, "FY2024": -187201, "FY2023": -136566, "FY2022": -90753}),
+    ("DATA", "Impairment charge on loans and advances", {
+        "FY2026": -1278, "FY2025": -2222, "FY2024": -3659, "FY2023": -6213, "FY2022": -1522}),
+    ("TOTAL", "Profit before taxation", {
+        "FY2026": 62186, "FY2025": 63734, "FY2024": 80836, "FY2023": 67689, "FY2022": 16537}),
+    ("DATA", "Tax on profit", {
+        "FY2026": -15103, "FY2025": -16958, "FY2024": -15437, "FY2023": -17485, "FY2022": -3794}),
+    ("TOTAL", "Profit for the financial year", {
+        "FY2026": 47083, "FY2025": 46776, "FY2024": 65399, "FY2023": 50204, "FY2022": 12743}),
+    ("SECTION", "Other comprehensive income/(expense)", {}),
+    ("DATA", "Remeasurement of retirement benefit obligations", {
+        "FY2025": -172, "FY2024": -11570, "FY2023": -6247, "FY2022": 5802}),
+    ("DATA", "Deferred tax arising on pension scheme", {
+        "FY2025": -27, "FY2024": 991, "FY2023": 1562, "FY2022": -1672}),
+    ("DATA", "Revaluation gain/(loss) of property and heritage assets", {
+        "FY2026": -833, "FY2025": -11, "FY2024": -638, "FY2023": -5165, "FY2022": 4895}),
+    ("DATA", "Deferred tax on valuation gain/(loss)", {
+        "FY2026": 208, "FY2025": 3, "FY2024": 160, "FY2023": 1291, "FY2022": -3801}),
+    ("TOTAL", "Other comprehensive income/(expense), net of tax", {
+        "FY2026": -625, "FY2025": -207, "FY2024": -11057, "FY2023": -8559, "FY2022": 5224}),
+    ("TOTAL", "Total comprehensive income for the year", {
+        "FY2026": 46458, "FY2025": 46569, "FY2024": 54342, "FY2023": 41645, "FY2022": 17967}),
+]
+
+bw.add_income_statement_sheet(
+    title="C. Hoare & Co. — Consolidated Statement of Comprehensive Income",
+    subtitle="Group column, £'000. See source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE,
+    first_col_width=68,
+    source_height=380,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Statement of Changes in Equity (chronological). All 5 movement years
+# tie exactly to source (each year's own Profit + OCI split across the
+# Revaluation reserves and Retained earnings columns, per the Bank's own
+# presentation) - verified against every consecutive opening/closing pair.
+# ---------------------------------------------------------------
+equity_changes_rows = [
+    ("TOTAL", "Balance as at 1 April 2021", (120, 22598, 34784, 340230, 397732)),
+    ("DATA", "Profit for the year (FY2022)", (None, None, None, 12743, 12743)),
+    ("DATA", "Other comprehensive income, net of tax (FY2022)", (None, None, 1094, 4130, 5224)),
+    ("DATA", "Dividends (FY2022)", (None, None, None, -6, -6)),
+    ("TOTAL", "Balance as at 31 March 2022", (120, 22598, 35878, 357097, 415693)),
+    ("DATA", "Profit for the year (FY2023)", (None, None, None, 50204, 50204)),
+    ("DATA", "Other comprehensive expense, net of tax (FY2023)", (None, None, -3874, -4685, -8559)),
+    ("DATA", "Dividends (FY2023)", (None, None, None, -6, -6)),
+    ("TOTAL", "Balance as at 31 March 2023", (120, 22598, 32004, 402610, 457332)),
+    ("DATA", "Profit for the year (FY2024)", (None, None, None, 65399, 65399)),
+    ("DATA", "Other comprehensive expense, net of tax (FY2024)", (None, None, -478, -10579, -11057)),
+    ("DATA", "Dividends (FY2024)", (None, None, None, -6, -6)),
+    ("TOTAL", "Balance as at 31 March 2024", (120, 22598, 31526, 457424, 511668)),
+    ("DATA", "Profit for the year (FY2025)", (None, None, None, 46776, 46776)),
+    ("DATA", "Other comprehensive expense, net of tax (FY2025)", (None, None, -8, -199, -207)),
+    ("DATA", "Dividends (FY2025)", (None, None, None, -6, -6)),
+    ("TOTAL", "Balance as at 31 March 2025", (120, 22598, 31518, 503995, 558231)),
+    ("DATA", "Profit for the year (FY2026)", (None, None, None, 47083, 47083)),
+    ("DATA", "Other comprehensive expense, net of tax (FY2026)", (None, None, -625, 0, -625)),
+    ("DATA", "Dividends (FY2026)", (None, None, None, -6, -6)),
+    ("TOTAL", "Balance as at 31 March 2026", (120, 22598, 30893, 551072, 604683)),
+]
+
+bw.add_equity_changes_sheet(
+    title="C. Hoare & Co. — Consolidated Statement of Changes in Equity",
+    subtitle="Group column, £'000. Chronological roll-forward, oldest to newest.",
+    headers=["Called up Share Capital", "Reserve Fund", "Revaluation Reserves", "Retained Earnings", "Total Equity"],
+    rows=equity_changes_rows,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE,
+    first_col_width=56,
+    source_height=380,
+)
+
+# ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
@@ -117,6 +328,56 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Asset Quality: FRS 102 basis (not IFRS 9) - confirmed by reading the
+# Bank's own Note 14 "Allowance for Impairment Losses" (specific/
+# collective allowance roll-forward, no Stage 1/2/3 split anywhere in any
+# of the 5 reports checked) - loans and advances to customers only.
+# ---------------------------------------------------------------
+AQ_GROSS = {"FY2026": 2592710, "FY2025": 2286817, "FY2024": 2130465, "FY2023": 1989288, "FY2022": 2024798}
+AQ_SPECIFIC = {"FY2026": 8378, "FY2025": 7537, "FY2024": 9003, "FY2023": 17003, "FY2022": 25575}
+AQ_COLLECTIVE = {"FY2026": 5304, "FY2025": 4878, "FY2024": 4878, "FY2023": 5313, "FY2022": 4403}
+AQ_TOTAL_ALLOWANCE = {y: AQ_SPECIFIC[y] + AQ_COLLECTIVE[y] for y in YEARS}
+AQ_NET = {y: AQ_GROSS[y] - AQ_TOTAL_ALLOWANCE[y] for y in YEARS}
+AQ_COVERAGE = {y: f"{AQ_TOTAL_ALLOWANCE[y] / AQ_GROSS[y] * 100:.2f}%" for y in YEARS}
+
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers (gross)", {}),
+    ("DATA", "Total gross loans and advances to customers", AQ_GROSS),
+    ("SECTION", "Allowance for impairment losses", {}),
+    ("DATA", "Specific allowance for impairment", {y: -v for y, v in AQ_SPECIFIC.items()}),
+    ("DATA", "Collective allowance for impairment", {y: -v for y, v in AQ_COLLECTIVE.items()}),
+    ("TOTAL", "Total allowance for impairment", {y: -v for y, v in AQ_TOTAL_ALLOWANCE.items()}),
+    ("TOTAL", "Net loans and advances to customers", AQ_NET),
+    ("SECTION", "Ratios", {}),
+    ("DATA", "Overall coverage ratio (total allowance / gross loans)", AQ_COVERAGE),
+]
+
+bw.add_asset_quality_sheet(
+    title="C. Hoare & Co. — Asset Quality / Credit Risk Disclosures",
+    subtitle="Loans and advances to customers, £'000. FRS 102 basis (specific/collective allowance), Group & Company.",
+    rows=asset_quality_rows,
+    sources_text=(
+        "Sources - C. Hoare & Co.'s own Note 13(b) 'Loans and advances to customers' and Note 14 'Allowance for "
+        "Impairment Losses' (Group & Company, no separate Group-only figures disclosed), each from that year's "
+        "own originally-published Financial Report:\n"
+        f"FY2026: Financial Report 2026, p.73 - {AR2026_URL}\n"
+        f"FY2025: Financial Report 2025, pp.60-61 - {AR2025_URL}\n"
+        f"FY2024: Financial Report 2024, pp.62-63 - {AR2024_URL}\n"
+        f"FY2023: Financial Report 2023, pp.58-59 - {AR2023_URL}\n"
+        f"FY2022: Annual Report 2022, p.58 - {AR2022_URL}\n\n"
+        "Note: C. Hoare & Co. reports under FRS 102, not IFRS 9 - there is no Stage 1/2/3 split anywhere in any "
+        "of the 5 reports checked (confirmed by reading each year's impairment note in full), only a specific/"
+        "collective allowance roll-forward. Coverage fell steadily from 1.48% (FY2022) to 0.53% (FY2026), driven "
+        "by large specific-provision write-offs each year (e.g. £14.0m written off in FY2023 alone) outpacing new "
+        "specific charges - flagged here, not smoothed. Figures are Group & Company (identical - the Bank's own "
+        "note discloses no separate Group-only split for this line).\n\n" + ENTITY_NOTE
+    ),
+    first_col_width=62,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):
@@ -144,6 +405,56 @@ metric("Total Capital Ratio", "%", [("Total capital ratio", {
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", {
     "FY2025": 2289414, "FY2024": 2091044, "FY2023": 1997896, "FY2022": 1822244})])
 
+# ---------------------------------------------------------------
+# RWA Breakdown (Pillar 3's UK OV1 template - Table 6/Table 5 "Risk
+# weighted assets and Pillar 1 capital requirements by exposure class").
+# FY2026 not yet published (Pillar 3 editions consistently lag the Annual
+# Report, per ENTITY_NOTE) - left blank, not estimated.
+# ---------------------------------------------------------------
+RWA_SOURCES = (
+    "Sources - C. Hoare & Co. Pillar 3 Disclosures, UK OV1 'Risk weighted assets and Pillar 1 capital "
+    "requirements by exposure class' table:\n"
+    f"FY2025/FY2024: Pillar 3 Disclosures 2025, Table 6, p.10 - {P3_2025_URL}\n"
+    f"FY2023/FY2022: Pillar 3 Disclosures 2023, Table 5, p.14 - {P3_2023_URL}\n"
+    "FY2026: not yet published as of this build - left blank, not estimated.\n"
+    + ENTITY_NOTE
+)
+
+rwa_breakdown_rows = [
+    ("SECTION", "RWA by exposure class, £'000", {}),
+    ("DATA", "Institutions", {"FY2025": 41830, "FY2024": 54239, "FY2023": 162882, "FY2022": 61655}),
+    ("DATA", "Corporates", {"FY2025": 76500, "FY2024": 102248, "FY2023": 107319, "FY2022": 95307}),
+    ("DATA", "Retail", {"FY2025": 23348, "FY2024": 26562, "FY2023": 26867, "FY2022": 23919}),
+    ("DATA", "Secured by mortgages on immovable property", {
+        "FY2025": 1090724, "FY2024": 968778, "FY2023": 952975, "FY2022": 880391}),
+    ("DATA", "Exposures in default", {"FY2025": 31891, "FY2024": 26252, "FY2023": 31691, "FY2022": 61214}),
+    ("DATA", "Items associated with particularly high risk", {
+        "FY2025": 120576, "FY2024": 109542, "FY2023": 43564, "FY2022": 45923}),
+    ("DATA", "Covered bonds", {"FY2025": 158663, "FY2024": 154784, "FY2023": 159974, "FY2022": 132987}),
+    ("DATA", "Claims on institutions/corporates with short-term credit assessment", {
+        "FY2023": 0, "FY2022": 45485}),
+    ("DATA", "Claims in the form of Collective Investment Undertakings (CIU)", {
+        "FY2025": 177450, "FY2024": 148636, "FY2023": 146236, "FY2022": 165017}),
+    ("DATA", "Other items", {"FY2025": 99101, "FY2024": 115345, "FY2023": 96342, "FY2022": 89211}),
+    ("DATA", "Securitisations", {"FY2025": 74767, "FY2024": 65116, "FY2023": 39209, "FY2022": 36844}),
+    ("TOTAL", "Total credit risk", {
+        "FY2025": 1894851, "FY2024": 1771501, "FY2023": 1767060, "FY2022": 1637953}),
+    ("DATA", "Total market risk (FX PRR)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0}),
+    ("DATA", "Total operational risk", {
+        "FY2025": 394563, "FY2024": 319543, "FY2023": 230837, "FY2022": 184291}),
+    ("TOTAL", "Total Pillar 1 capital requirement (Total RWAs)", {
+        "FY2025": 2289414, "FY2024": 2091044, "FY2023": 1997896, "FY2022": 1822244}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="C. Hoare & Co. — RWA Breakdown",
+    subtitle="UK OV1 exposure-class split, £'000. FY2026 not yet published.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_SOURCES,
+    first_col_width=64,
+    source_height=280,
+)
+
 metric("Leverage Ratio", "%, excluding claims on central banks", [("Leverage ratio excluding claims on central banks", {
     "FY2025": "9.29%", "FY2024": "7.61%", "FY2023": "6.96%", "FY2022": "6.61%"})],
     note="Consistently disclosed on the same 'excluding claims on central banks' basis every year shown - no "
@@ -166,6 +477,36 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {
+            "FY2026": 7567981, "FY2025": 7158840, "FY2024": 6801461, "FY2023": 6852939, "FY2022": 7274665}),
+        ("Financial assets", {
+            "FY2026": 6339519, "FY2025": 5399523, "FY2024": 5229721, "FY2023": 5164686, "FY2022": 5204233}),
+        ("Customer accounts", {
+            "FY2026": 6555269, "FY2025": 6427375, "FY2024": 6096719, "FY2023": 6214358, "FY2022": 6689431}),
+        ("Total equity", {
+            "FY2026": 604683, "FY2025": 558231, "FY2024": 511668, "FY2023": 457332, "FY2022": 415693}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total income", {
+            "FY2026": 254627, "FY2025": 249401, "FY2024": 271696, "FY2023": 210468, "FY2022": 108812}),
+        ("Total operating expenses", {
+            "FY2026": -191163, "FY2025": -183445, "FY2024": -187201, "FY2023": -136566, "FY2022": -90753}),
+        ("Profit for the financial year", {
+            "FY2026": 47083, "FY2025": 46776, "FY2024": 65399, "FY2023": 50204, "FY2022": 12743}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {
+            "FY2026": 558231, "FY2025": 511668, "FY2024": 457332, "FY2023": 415693, "FY2022": 397732}),
+        ("Total comprehensive income for the year", {
+            "FY2026": 46458, "FY2025": 46569, "FY2024": 54342, "FY2023": 41645, "FY2022": 17967}),
+        ("Dividends", {"FY2026": -6, "FY2025": -6, "FY2024": -6, "FY2023": -6, "FY2022": -6}),
+        ("Closing equity", {
+            "FY2026": 604683, "FY2025": 558231, "FY2024": 511668, "FY2023": 457332, "FY2022": 415693}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash from/(used in) operating activities", {
             "FY2026": 75318, "FY2025": 321534, "FY2024": -110569, "FY2023": -436033, "FY2022": 1116449}),

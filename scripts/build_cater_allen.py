@@ -92,6 +92,157 @@ rows = [
 
 bw = BankWorkbook(bank_name="Cater Allen Limited", years=YEARS, year_label=None, header_color="1A5276")
 
+# ---------------------------------------------------------------
+# Balance Sheet / Profit & Loss / Statement of Changes in Equity
+# ---------------------------------------------------------------
+STATEMENTS_SOURCES = (
+    "Sources - Cater Allen Limited's own Balance Sheet / Statement of Comprehensive Income / "
+    "Statement of Changes in Equity, GBP'000, all scanned/image-only Companies House filings "
+    "visually transcribed:\n"
+    f"FY2025: Annual Report and Financial Statements 2025, p.27 (Statement of Comprehensive "
+    f"Income, Statement of Changes in Equity) and p.28 (Balance Sheet) - {AR2025_URL}\n"
+    f"FY2024 (own report, not the FY2025 filing's restated comparative - see PRESENTATION NOTE "
+    f"below): Annual Report and Financial Statements 2024, p.25 (Statement of Comprehensive "
+    f"Income, Statement of Changes in Equity) and p.26 (Balance Sheet) - {AR2024_URL}\n"
+    f"FY2023: Annual Report and Financial Statements 2024, p.25 (2023 comparative column) and "
+    f"p.26 (2023 comparative column) - {AR2024_URL}\n"
+    f"FY2022 (restated comparative, used as primary column per project convention - matches the "
+    f"existing Cash Flow Statement's own treatment of this year): Annual Report and Financial "
+    f"Statements 2023, p.24 (Statement of Comprehensive Income, Statement of Changes in Equity, "
+    f"2022 restated column) and p.25 (Balance Sheet, 2022 restated column) - {AR2023_URL}\n"
+    f"FY2021: Annual Report and Financial Statements 2021, p.12 (Statement of Comprehensive "
+    f"Income, Statement of Changes in Equity) and p.13 (Balance Sheet) - {AR2021_URL}\n\n"
+    + ENTITY_NOTE + "\n\n"
+    "PRESENTATION NOTE: FY2025's own Statement of Comprehensive Income combines amortisation of "
+    "intangible assets into a single 'Operating expenses' line, whereas FY2021-FY2024 each show "
+    "'Operating expenses' and 'Amortisation of intangible assets' as two separate lines - both "
+    "reproduced as each source presents them, not forced onto one basis. FY2021's own income "
+    "statement additionally shows a one-off 'Other operating result' line (£479k) with no "
+    "equivalent in any later year - shown as reported, not reclassified. The FY2025 Balance "
+    "Sheet separately discloses 'Cash, and other balances at central banks' (£39,583k) for the "
+    "first time; FY2021-FY2024 fold this into 'Loans and advances to banks' with no separate "
+    "line - the FY2024 comparative column in the FY2025 filing is marked '(Restated)' for this "
+    "split, but FY2024's own total assets/equity are unchanged either way, so this workbook uses "
+    "FY2024's own (unrestated, undivided) presentation per project convention, leaving the "
+    "'Cash, and other balances at central banks' cell blank for FY2021-FY2024. The Company holds "
+    "no customer loans in any year (see Asset Quality sheet)."
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash, and other balances at central banks", {"FY2025": 39583}),
+    ("DATA", "Loans and advances to banks",
+     {"FY2025": 5297136, "FY2024": 5540507, "FY2023": 5383852, "FY2022": 5671848, "FY2021": 5128808}),
+    ("DATA", "Loans and advances to customers",
+     {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "Other assets", {"FY2025": 7920, "FY2024": 9737, "FY2023": 12783, "FY2022": 10576, "FY2021": 170}),
+    ("DATA", "Goodwill", {"FY2025": 30000, "FY2024": 30000, "FY2023": 30000, "FY2022": 30000, "FY2021": 30000}),
+    ("DATA", "Intangible assets", {"FY2025": 155, "FY2024": 286, "FY2023": 3057, "FY2022": 5569, "FY2021": 8474}),
+    ("DATA", "Deferred tax", {"FY2025": 8, "FY2024": 10, "FY2023": 12, "FY2022": 15, "FY2021": 22}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 6, "FY2024": 6, "FY2023": 6, "FY2022": 6, "FY2021": 6}),
+    ("TOTAL", "Total assets",
+     {"FY2025": 5374808, "FY2024": 5580546, "FY2023": 5429710, "FY2022": 5718014, "FY2021": 5167480}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {"FY2025": 6652, "FY2024": 5902, "FY2023": 3082, "FY2022": 505, "FY2021": 2783}),
+    ("DATA", "Customer accounts",
+     {"FY2025": 4964597, "FY2024": 5112126, "FY2023": 4978130, "FY2022": 5326931, "FY2021": 4544224}),
+    ("DATA", "Amounts due to group companies",
+     {"FY2025": 14660, "FY2024": 10168, "FY2023": 8432, "FY2022": 6359, "FY2021": 1873}),
+    ("DATA", "Other liabilities", {"FY2025": 20076, "FY2024": 7816, "FY2023": 17363, "FY2022": 12873, "FY2021": 3932}),
+    ("DATA", "Current tax", {"FY2025": 34040, "FY2024": 47285, "FY2023": 47042, "FY2022": 18170, "FY2021": 10623}),
+    ("TOTAL", "Total liabilities",
+     {"FY2025": 5040025, "FY2024": 5183297, "FY2023": 5054049, "FY2022": 5364838, "FY2021": 4563435}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 100000, "FY2024": 100000, "FY2023": 100000, "FY2022": 100000, "FY2021": 100000}),
+    ("DATA", "Share premium", {"FY2025": 2950, "FY2024": 2950, "FY2023": 2950, "FY2022": 2950, "FY2021": 2950}),
+    ("DATA", "Retained earnings",
+     {"FY2025": 231833, "FY2024": 294299, "FY2023": 272711, "FY2022": 250226, "FY2021": 501095}),
+    ("TOTAL", "Total equity",
+     {"FY2025": 334783, "FY2024": 397249, "FY2023": 375661, "FY2022": 353176, "FY2021": 604045}),
+    ("TOTAL", "Total liabilities and equity",
+     {"FY2025": 5374808, "FY2024": 5580546, "FY2023": 5429710, "FY2022": 5718014, "FY2021": 5167480}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Cater Allen Limited — Balance Sheet",
+    subtitle="Entity basis, £'000. No customer loans in any year - see Asset Quality sheet. See source note at bottom.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=80,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest and similar income",
+     {"FY2025": 236408, "FY2024": 291425, "FY2023": 259964, "FY2022": 102326, "FY2021": 57544}),
+    ("DATA", "Interest expense and similar charges",
+     {"FY2025": -87134, "FY2024": -94933, "FY2023": -66912, "FY2022": -14546, "FY2021": -3162}),
+    ("TOTAL", "Net interest income",
+     {"FY2025": 149274, "FY2024": 196492, "FY2023": 193052, "FY2022": 87780, "FY2021": 54382}),
+    ("DATA", "Fee and commission income", {"FY2025": 2487, "FY2024": 3036, "FY2023": 2666, "FY2022": 3348, "FY2021": 3147}),
+    ("DATA", "Fee and commission expense",
+     {"FY2025": -4949, "FY2024": -4369, "FY2023": -2530, "FY2022": -1811, "FY2021": -2113}),
+    ("TOTAL", "Net fee and commission income/(expense)",
+     {"FY2025": -2462, "FY2024": -1333, "FY2023": 136, "FY2022": 1537, "FY2021": 1034}),
+    ("DATA", "Other operating result", {"FY2021": 479}),
+    ("TOTAL", "Total income",
+     {"FY2025": 146812, "FY2024": 195159, "FY2023": 193188, "FY2022": 89317, "FY2021": 55895}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Operating expenses",
+     {"FY2025": -25236, "FY2024": -23506, "FY2023": -20754, "FY2022": -19105, "FY2021": -13632}),
+    ("DATA", "Amortisation of intangible assets", {"FY2024": -2771, "FY2023": -2905, "FY2022": -2905, "FY2021": -2905}),
+    ("TOTAL", "Profit before tax",
+     {"FY2025": 121576, "FY2024": 168882, "FY2023": 169529, "FY2022": 67307, "FY2021": 39358}),
+    ("DATA", "Tax on profit",
+     {"FY2025": -34042, "FY2024": -47294, "FY2023": -47044, "FY2022": -18176, "FY2021": -10623}),
+    ("TOTAL", "Profit for the year after tax",
+     {"FY2025": 87534, "FY2024": 121588, "FY2023": 122485, "FY2022": 49131, "FY2021": 28735}),
+    ("TOTAL", "Total comprehensive income for the year, net of tax",
+     {"FY2025": 87534, "FY2024": 121588, "FY2023": 122485, "FY2022": 49131, "FY2021": 28735}),
+]
+
+bw.add_income_statement_sheet(
+    title="Cater Allen Limited — Profit & Loss",
+    subtitle="Entity basis, £'000. No OCI in any year - profit for the year equals total comprehensive income "
+              "every year (per the Company's own disclosure). See source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=80,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+equity_headers = ["Share capital", "Share premium", "Retained earnings", "Total"]
+equity_rows = [
+    ("TOTAL", "At 1 January 2021", (100000, 2950, 472360, 575310)),
+    ("DATA", "Profit and total comprehensive income for the year", (None, None, 28735, 28735)),
+    ("TOTAL", "At 31 December 2021", (100000, 2950, 501095, 604045)),
+    ("DATA", "Dividend paid", (None, None, -300000, -300000)),
+    ("DATA", "Profit and total comprehensive income for the year", (None, None, 49131, 49131)),
+    ("TOTAL", "At 31 December 2022", (100000, 2950, 250226, 353176)),
+    ("DATA", "Dividend paid", (None, None, -100000, -100000)),
+    ("DATA", "Profit and total comprehensive income for the year", (None, None, 122485, 122485)),
+    ("TOTAL", "At 31 December 2023", (100000, 2950, 272711, 375661)),
+    ("DATA", "Dividend paid", (None, None, -100000, -100000)),
+    ("DATA", "Profit and total comprehensive income for the year", (None, None, 121588, 121588)),
+    ("TOTAL", "At 31 December 2024", (100000, 2950, 294299, 397249)),
+    ("DATA", "Dividend paid", (None, None, -150000, -150000)),
+    ("DATA", "Profit and total comprehensive income for the year", (None, None, 87534, 87534)),
+    ("TOTAL", "At 31 December 2025", (100000, 2950, 231833, 334783)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Cater Allen Limited — Statement of Changes in Equity",
+    subtitle="Entity basis, £'000, chronological (oldest to newest). See source note at bottom.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=58,
+    source_height=340,
+)
+
 bw.add_cash_flow_sheet(
     title="Cater Allen Limited — Cash Flow Statement",
     subtitle="Entity basis, £'000. FY2025 not applicable — FRS 101 cash-flow exemption newly taken. See source note below.",
@@ -99,6 +250,39 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=78,
     source_height=320,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Asset Quality
+# ---------------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "ASSET QUALITY NOTE: Cater Allen Limited holds no loans and advances to customers in any "
+    "year (see Balance Sheet - 'Loans and advances to customers' is nil every year 2021-2025). "
+    "Its financial assets are entirely intercompany placements with, and cash held in accounts "
+    "operated by, Santander UK plc. Per the Company's own Note 1 'Impairment of financial "
+    "assets' (confirmed identically worded in the FY2025, FY2024 and FY2023 filings), expected "
+    "credit losses are assessed on these balances using Santander UK plc's own net asset value "
+    "and credit ratings, and 'because of these and given the intercompany nature, any "
+    "probability of default and loss given default is deemed to be nil and thus no ECL is "
+    "recognised over these balances' - with no write-offs in any year reviewed. This is a "
+    "genuine structural feature of a deposit-taking bank with no lending book, not a disclosure "
+    "gap."
+)
+
+bw.add_asset_quality_sheet(
+    title="Cater Allen Limited — Asset Quality",
+    subtitle="Entity basis, £'000. No loan book; ECL nil in all years. See source note at bottom.",
+    rows=[
+        ("DATA", "Loans and advances to customers", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+        ("DATA", "Expected credit loss (ECL) allowance on financial assets at amortised cost",
+         {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+        ("DATA", "Write-offs during the year", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ],
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=80,
+    source_height=280,
     unit_suffix=" (£'000)",
 )
 
@@ -153,6 +337,15 @@ metric(
          "capital ratio for each year. No RWA figure appears in any source reviewed.",
 )
 
+bw.add_rwa_breakdown_sheet(
+    title="Cater Allen Limited — RWA Breakdown",
+    subtitle="Not publicly disclosed. See source note at bottom.",
+    rows=[("DATA", "Not publicly disclosed", {})],
+    sources_text=CAPITAL_SOURCES + "\n\n" + NOT_DISCLOSED_NOTE,
+    first_col_width=54,
+    source_height=280,
+)
+
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
     CAPITAL_SOURCES,
@@ -163,6 +356,37 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets",
+         {"FY2025": 5374808, "FY2024": 5580546, "FY2023": 5429710, "FY2022": 5718014, "FY2021": 5167480}),
+        ("Loans and advances to banks",
+         {"FY2025": 5297136, "FY2024": 5540507, "FY2023": 5383852, "FY2022": 5671848, "FY2021": 5128808}),
+        ("Customer accounts",
+         {"FY2025": 4964597, "FY2024": 5112126, "FY2023": 4978130, "FY2022": 5326931, "FY2021": 4544224}),
+        ("Total equity",
+         {"FY2025": 334783, "FY2024": 397249, "FY2023": 375661, "FY2022": 353176, "FY2021": 604045}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total income",
+         {"FY2025": 146812, "FY2024": 195159, "FY2023": 193188, "FY2022": 89317, "FY2021": 55895}),
+        ("Operating expenses",
+         {"FY2025": -25236, "FY2024": -23506, "FY2023": -20754, "FY2022": -19105, "FY2021": -13632}),
+        ("Profit for the year after tax",
+         {"FY2025": 87534, "FY2024": 121588, "FY2023": 122485, "FY2022": 49131, "FY2021": 28735}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity",
+         {"FY2025": 397249, "FY2024": 375661, "FY2023": 353176, "FY2022": 604045, "FY2021": 575310}),
+        ("Total comprehensive income for the year",
+         {"FY2025": 87534, "FY2024": 121588, "FY2023": 122485, "FY2022": 49131, "FY2021": 28735}),
+        ("Other equity movements, net",
+         {"FY2025": -150000, "FY2024": -100000, "FY2023": -100000, "FY2022": -300000}),
+        ("Closing equity",
+         {"FY2025": 334783, "FY2024": 397249, "FY2023": 375661, "FY2022": 353176, "FY2021": 604045}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash (used in)/generated from operating activities",
          {"FY2024": 258187, "FY2023": -184058, "FY2022": 832547, "FY2021": -200379}),

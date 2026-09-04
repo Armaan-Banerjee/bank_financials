@@ -3,3 +3,12 @@ wayfinder/
 .agents/skills/
 HANDOFF.md
 CLAUDE.md
+
+# Regenerated derived-data artifacts that exceed GitHub's 100MB file limit.
+# Rebuild with `python3 scripts/insights/refresh_all.py`.
+research/insights.db
+research/bank_metrics.csv
+research/in017_quality.json
+research/in023_distribution_visuals.json
+research/in025_quality_views.json
+research/powerbi/fact_observation.csv

@@ -88,6 +88,173 @@ def p3_sources(page_2025="93 (Note 28) / 32 (Strategic Report)", page_2024="91 (
 
 bw = BankWorkbook(bank_name="The Charity Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="285943")
 
+STATEMENTS_SOURCES = (
+    "Sources - all figures are The Charity Bank Limited's own Statement of Comprehensive Income / Balance Sheet / "
+    "Statement of Changes in Equity, transcribed from each year's own annual report/filing (not a later year's "
+    "comparative column):\n"
+    f"FY2025: Charity Bank 2025 Annual Report, pp.51,52,53 - {AR2025_URL}\n"
+    f"FY2024: Charity Bank 2024 Annual Report, pp.49,50,51 - {AR2024_URL}\n"
+    f"FY2023: Charity Bank Annual Report 2023, pp.51,52,53 - {AR2023_URL}\n"
+    f"FY2022: The Charity Bank Limited Annual Report for the year ended 31 December 2022 (Companies House filing), "
+    f"pp.39,40,41 - scanned/image-only, visually transcribed - {AR2022_CH_URL}\n"
+    f"FY2021: The Charity Bank Limited Annual Report for the year ended 31 December 2021 (Companies House filing), "
+    f"pp.35,36,37 - scanned/image-only, visually transcribed - {AR2021_CH_URL}\n"
+    "All 5 years' own primary figures cross-checked and tie exactly against their appearance as the following "
+    "year's comparative column.\n\n"
+    + ENTITY_NOTE
+    + "\n\nPRESENTATION NOTE: 'Financial assets at fair value through profit & loss' (FVPL) and a separate "
+    "'Profit on financial assets at fair value through profit & loss' P&L line appear only in FY2021 (as a nil "
+    "balance/small profit) - the Bank held no such assets from FY2022 onward. 'Deferred tax asset' (Balance Sheet) "
+    "and 'Current tax liability' only appear as distinct lines from FY2022/FY2023 onward respectively - blank "
+    "cells indicate that year's own report did not disclose that specific line, not a transcription gap. No OCI "
+    "in any year - 'Total comprehensive income/(loss) for the year' equals 'Profit/(loss) after taxation' exactly, "
+    "per the Bank's own disclosure that all income and expenses are derived from continuing operations."
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - The Charity Bank Limited's own Note 28 (Financial Risk Management), 'Maximum exposure to credit "
+    "risk' / 'Credit risk by asset class' IFRS 9 stage tables for 'Loans and advances to customers at amortised "
+    "cost':\n"
+    f"FY2025: Charity Bank 2025 Annual Report, p.81 - {AR2025_URL}\n"
+    f"FY2024: Charity Bank 2024 Annual Report, p.85 - {AR2024_URL}\n"
+    f"FY2023: Charity Bank Annual Report 2023, p.83 - {AR2023_URL}\n"
+    f"FY2022: The Charity Bank Limited Annual Report for the year ended 31 December 2022 (Companies House filing), "
+    f"p.74 - scanned/image-only, visually transcribed - {AR2022_CH_URL}\n"
+    f"FY2021: The Charity Bank Limited Annual Report for the year ended 31 December 2021 (Companies House filing), "
+    f"p.70 - scanned/image-only, visually transcribed - {AR2021_CH_URL}\n"
+    "Every year's own 'Carrying amount' total ties exactly to the Balance Sheet's own 'Loans and advances to "
+    "customers' line for that year.\n\n"
+    + ENTITY_NOTE
+)
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - The Charity Bank Limited entity-level Pillar 3 / regulatory capital basis, UK OV1 template (RWAs by "
+    "category):\n"
+    f"FY2025/FY2024: Charity Bank 2025 Annual Report, p.32 (Strategic Report, aggregate Total RWA only - no "
+    "category split published; standalone Pillar 3 disclosure ceased after the FY2023 edition, see PILLAR3_NOTE "
+    f"on the Pillar 3 metric sheets) - {AR2025_URL}\n"
+    f"FY2023: Charity Bank Pillar 3 Disclosures 2023, p.15 (Template UK OV1) - {P3_2023_URL}\n"
+    f"FY2022: Charity Bank Pillar 3 Disclosures 2022, p.15 (Template UK OV1) - {P3_2022_URL}\n"
+    f"FY2021: Charity Bank Pillar 3 Disclosures 2022, p.15 (Template UK OV1, FY2021 comparative column) - "
+    f"{P3_2022_URL}\n\n"
+    + PILLAR3_NOTE
+    + "\n\nFY2021 SOURCING NOTE: FY2021's own Pillar 3 Disclosures 2021 document uses an older format (a single "
+    "'Credit and operational risk RWAs' combined total of £153,193k plus a separate 'Total Credit Risk Capital "
+    "Component' £'000 figure at an 8% weighting, not a UK OV1-style RWA-by-category table) - so the FY2021 "
+    "category split shown here (Credit risk £143,316k / Operational risk £9,877k) is instead taken from the "
+    "following year's own Pillar 3 Disclosures 2022 document, which states it as its own FY2021 comparative "
+    "column. The combined Total (£153,193k) is independently corroborated by FY2021's own document and ties "
+    "exactly to the existing Total RWAs metric sheet."
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at banks", {"FY2025": 82700, "FY2024": 97352, "FY2023": 91420, "FY2022": 63198, "FY2021": 45934}),
+    ("DATA", "Financial assets at fair value through profit & loss", {"FY2021": 0}),
+    ("DATA", "Financial assets at amortised cost", {"FY2025": 33160, "FY2024": 14859, "FY2023": 16661, "FY2022": 18776, "FY2021": 24888}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 363058, "FY2024": 331101, "FY2023": 285315, "FY2022": 273700, "FY2021": 238695}),
+    ("DATA", "Prepayments", {"FY2025": 770, "FY2024": 577, "FY2023": 407, "FY2022": 361, "FY2021": 256}),
+    ("DATA", "Other assets", {"FY2025": 325, "FY2024": 407, "FY2023": 497, "FY2022": 358, "FY2021": 215}),
+    ("DATA", "Deferred tax asset", {"FY2025": 264, "FY2024": 252, "FY2023": 393}),
+    ("DATA", "Property and equipment", {"FY2025": 177, "FY2024": 232, "FY2023": 41, "FY2022": 63, "FY2021": 110}),
+    ("DATA", "Right-of-use asset", {"FY2025": 638, "FY2024": 16, "FY2023": 208, "FY2022": 406, "FY2021": 622}),
+    ("DATA", "Intangible fixed assets", {"FY2025": 720, "FY2024": 871, "FY2023": 1025, "FY2022": 1188, "FY2021": 1352}),
+    ("TOTAL", "Total assets", {"FY2025": 481812, "FY2024": 445667, "FY2023": 395967, "FY2022": 358050, "FY2021": 312072}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer accounts", {"FY2025": 421741, "FY2024": 387175, "FY2023": 342963, "FY2022": 313835, "FY2021": 272571}),
+    ("DATA", "Deferred income", {"FY2025": 236, "FY2024": 341, "FY2023": 337, "FY2022": 316, "FY2021": 374}),
+    ("DATA", "Other liabilities", {"FY2025": 3322, "FY2024": 3609, "FY2023": 2563, "FY2022": 4771, "FY2021": 4079}),
+    ("DATA", "Current tax liability", {"FY2025": 521, "FY2024": 781, "FY2023": 1546, "FY2022": 0}),
+    ("DATA", "Accruals", {"FY2025": 627, "FY2024": 1052, "FY2023": 675, "FY2022": 638, "FY2021": 662}),
+    ("DATA", "Lease liability", {"FY2025": 656, "FY2024": 11, "FY2023": 179, "FY2022": 335, "FY2021": 501}),
+    ("DATA", "Subordinated debt", {"FY2025": 9555, "FY2024": 9346, "FY2023": 8141, "FY2022": 8141, "FY2021": 7137}),
+    ("TOTAL", "Total liabilities", {"FY2025": 436658, "FY2024": 402315, "FY2023": 356404, "FY2022": 328036, "FY2021": 285324}),
+    ("SECTION", "Shareholders' equity", {}),
+    ("DATA", "Called up share capital", {"FY2025": 16810, "FY2024": 16810, "FY2023": 16621, "FY2022": 15743, "FY2021": 15437}),
+    ("DATA", "Retained earnings", {"FY2025": 20412, "FY2024": 18610, "FY2023": 15235, "FY2022": 7398, "FY2021": 4682}),
+    ("DATA", "Share premium", {"FY2025": 7932, "FY2024": 7932, "FY2023": 7707, "FY2022": 6873, "FY2021": 6629}),
+    ("TOTAL", "Total equity", {"FY2025": 45154, "FY2024": 43352, "FY2023": 39563, "FY2022": 30014, "FY2021": 26748}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 481812, "FY2024": 445667, "FY2023": 395967, "FY2022": 358050, "FY2021": 312072}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="The Charity Bank Limited — Balance Sheet",
+    subtitle="Entity-level basis, £'000. See source note at bottom.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=74,
+    source_height=260,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 27885, "FY2024": 28476, "FY2023": 24041, "FY2022": 12218, "FY2021": 7116}),
+    ("DATA", "Interest expense", {"FY2025": -13398, "FY2024": -12537, "FY2023": -8026, "FY2022": -2822, "FY2021": -1602}),
+    ("TOTAL", "Net interest income", {"FY2025": 14487, "FY2024": 15939, "FY2023": 16015, "FY2022": 9396, "FY2021": 5514}),
+    ("DATA", "Fee income", {"FY2025": 526, "FY2024": 561, "FY2023": 596, "FY2022": 724, "FY2021": 780}),
+    ("DATA", "Profit on financial assets at fair value through profit & loss", {"FY2022": 0, "FY2021": 12}),
+    ("DATA", "Other operating income", {"FY2025": 115, "FY2024": 260, "FY2023": 144, "FY2022": 52, "FY2021": 98}),
+    ("TOTAL", "Net total income", {"FY2025": 15128, "FY2024": 16760, "FY2023": 16755, "FY2022": 10172, "FY2021": 6404}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Administrative expenses", {"FY2025": -11066, "FY2024": -9775, "FY2023": -7818, "FY2022": -6010, "FY2021": -5141}),
+    ("DATA", "Depreciation and amortisation", {"FY2025": -396, "FY2024": -391, "FY2023": -412, "FY2022": -424, "FY2021": -423}),
+    ("DATA", "Impairment reversal/(charge)", {"FY2025": 58, "FY2024": -4, "FY2023": 465, "FY2022": -1022, "FY2021": 104}),
+    ("TOTAL", "Profit before taxation", {"FY2025": 3724, "FY2024": 6590, "FY2023": 8990, "FY2022": 2716, "FY2021": 944}),
+    ("DATA", "Tax expense", {"FY2025": -934, "FY2024": -1649, "FY2023": -1153, "FY2022": 0, "FY2021": 0}),
+    ("TOTAL", "Profit after taxation and total comprehensive income for the year", {"FY2025": 2790, "FY2024": 4941, "FY2023": 7837, "FY2022": 2716, "FY2021": 944}),
+]
+
+bw.add_income_statement_sheet(
+    title="The Charity Bank Limited — Profit & Loss",
+    subtitle="Entity-level basis, £'000. No OCI in any year - see source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=74,
+    source_height=260,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+equity_headers = ["Share capital", "Retained earnings", "Share premium", "Total equity"]
+equity_rows = [
+    ("TOTAL", "At 1 January 2021", (12509, 3738, 4657, 20904)),
+    ("DATA", "Profit for the year", (None, 944, None, 944)),
+    ("DATA", "Capital received", (2928, None, 1972, 4900)),
+    ("TOTAL", "At 31 December 2021", (15437, 4682, 6629, 26748)),
+    ("DATA", "Profit for the year", (None, 2716, None, 2716)),
+    ("DATA", "Capital received", (306, None, 244, 550)),
+    ("TOTAL", "At 31 December 2022", (15743, 7398, 6873, 30014)),
+    ("DATA", "Profit for the year", (None, 7837, None, 7837)),
+    ("DATA", "Capital received", (878, None, 834, 1712)),
+    ("TOTAL", "At 31 December 2023", (16621, 15235, 7707, 39563)),
+    ("DATA", "Profit for the year", (None, 4941, None, 4941)),
+    ("DATA", "Dividends paid", (None, -1566, None, -1566)),
+    ("DATA", "Capital received", (189, None, 225, 414)),
+    ("TOTAL", "At 31 December 2024", (16810, 18610, 7932, 43352)),
+    ("DATA", "Profit for the year", (None, 2790, None, 2790)),
+    ("DATA", "Dividends paid", (None, -988, None, -988)),
+    ("TOTAL", "At 31 December 2025", (16810, 20412, 7932, 45154)),
+]
+
+bw.add_equity_changes_sheet(
+    title="The Charity Bank Limited — Statement of Changes in Equity",
+    subtitle="Entity-level basis, £'000, chronological (oldest to newest). See source note at bottom.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=54,
+    source_height=260,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -212,6 +379,33 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers at amortised cost, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (12-month ECL), gross carrying amount", {"FY2025": 311418, "FY2024": 199922, "FY2023": 172112, "FY2022": 177047, "FY2021": 212641}),
+    ("DATA", "Stage 2 (lifetime ECL), gross carrying amount", {"FY2025": 41592, "FY2024": 122844, "FY2023": 113183, "FY2022": 96664, "FY2021": 25429}),
+    ("DATA", "Stage 3 (lifetime ECL), gross carrying amount", {"FY2025": 11526, "FY2024": 9727, "FY2023": 1672, "FY2022": 1706, "FY2021": 1632}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 364536, "FY2024": 332493, "FY2023": 286967, "FY2022": 275417, "FY2021": 239702}),
+    ("SECTION", "Expected credit loss (ECL) allowance, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 allowance", {"FY2025": -94, "FY2024": -102, "FY2023": -82, "FY2022": -227, "FY2021": -240}),
+    ("DATA", "Stage 2 allowance", {"FY2025": -452, "FY2024": -870, "FY2023": -1204, "FY2022": -952, "FY2021": -353}),
+    ("DATA", "Stage 3 allowance", {"FY2025": -932, "FY2024": -420, "FY2023": -366, "FY2022": -538, "FY2021": -414}),
+    ("TOTAL", "Total ECL allowance", {"FY2025": -1478, "FY2024": -1392, "FY2023": -1652, "FY2022": -1717, "FY2021": -1007}),
+    ("TOTAL", "Carrying amount (net of ECL)", {"FY2025": 363058, "FY2024": 331101, "FY2023": 285315, "FY2022": 273700, "FY2021": 238695}),
+]
+
+bw.add_asset_quality_sheet(
+    title="The Charity Bank Limited — Asset Quality",
+    subtitle="Loans and advances to customers at amortised cost, £'000, IFRS 9 basis. See source note at bottom.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=88,
+    source_height=220,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -278,6 +472,25 @@ metric(
     p3_sources(),
 )
 
+rwa_breakdown_rows = [
+    ("SECTION", "RWA by risk category", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2023": 169233, "FY2022": 160312, "FY2021": 143316}),
+    ("DATA", "Operational risk", {"FY2023": 20823, "FY2022": 13462, "FY2021": 9877}),
+    ("TOTAL", "Total RWAs", {"FY2025": 240287, "FY2024": 225196, "FY2023": 190056, "FY2022": 173774, "FY2021": 153193}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="The Charity Bank Limited — RWA Breakdown",
+    subtitle="£'000. No market risk or counterparty credit risk exposure (Charity Bank holds no trading book) - "
+              "category split not published for FY2025/FY2024 (standalone Pillar 3 disclosure ceased after the "
+              "FY2023 edition). See source note at bottom.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=54,
+    source_height=280,
+    unit_suffix=" (£'000)",
+)
+
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio", {
@@ -322,6 +535,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 481812, "FY2024": 445667, "FY2023": 395967, "FY2022": 358050, "FY2021": 312072}),
+        ("Loans and advances to customers", {"FY2025": 363058, "FY2024": 331101, "FY2023": 285315, "FY2022": 273700, "FY2021": 238695}),
+        ("Customer accounts", {"FY2025": 421741, "FY2024": 387175, "FY2023": 342963, "FY2022": 313835, "FY2021": 272571}),
+        ("Total equity", {"FY2025": 45154, "FY2024": 43352, "FY2023": 39563, "FY2022": 30014, "FY2021": 26748}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Net total income", {"FY2025": 15128, "FY2024": 16760, "FY2023": 16755, "FY2022": 10172, "FY2021": 6404}),
+        ("Administrative expenses", {"FY2025": -11066, "FY2024": -9775, "FY2023": -7818, "FY2022": -6010, "FY2021": -5141}),
+        ("Profit after taxation and total comprehensive income for the year", {"FY2025": 2790, "FY2024": 4941, "FY2023": 7837, "FY2022": 2716, "FY2021": 944}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 43352, "FY2024": 39563, "FY2023": 30014, "FY2022": 26748}),
+        ("Total comprehensive income for the year", {"FY2025": 2790, "FY2024": 4941, "FY2023": 7837, "FY2022": 2716, "FY2021": 944}),
+        ("Other equity movements, net", {"FY2025": -988, "FY2024": -1152, "FY2023": 1712, "FY2022": 550, "FY2021": 4900}),
+        ("Closing equity", {"FY2025": 45154, "FY2024": 43352, "FY2023": 39563, "FY2022": 30014, "FY2021": 26748}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash (outflow)/inflow from operating activities", {
             "FY2025": -13510, "FY2024": 6397, "FY2023": 26761, "FY2022": 15953, "FY2021": 7914,

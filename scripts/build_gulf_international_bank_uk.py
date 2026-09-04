@@ -54,7 +54,12 @@ AR2021_URL = f"{CH_BASE}/MzM1NTYyODEwMGFkaXF6a2N4/document?format=pdf&download=0
 
 P3_2024_URL = "https://gib-am.files.svdcdn.com/production/documents/2024-GIBUK-Pillar-3-disclosures-Board-approved.pdf"
 P3_2023_URL = "https://gib-am.files.svdcdn.com/production/documents/Fund-sustainability-related-documents/2023-GIBUK-Pillar-3-disclosures.pdf"
-P3_2022_URL = "https://web.archive.org/web/20230927145657/https://gibam.com/assets/2022-GIBUK-Pillar-3-disclosures_VF.pdf"
+P3_2022_URL = "https://web.archive.org/web/20240223164517/https://gibam.com/assets/2022-GIBUK-Pillar-3-disclosures_VF.pdf"
+# Note: the 20230927145657 snapshot originally cited here is truncated by the
+# Wayback Machine's own crawler at 1,048,576 bytes (confirmed: it fails to
+# open as a valid PDF at all) - the 20240223164517 snapshot above is a full,
+# valid capture of the same document and was used for this workbook's RWA
+# Breakdown sheet.
 P3_2021_URL = "https://web.archive.org/web/20230329132856/https://gibam.com/assets/2021-GIBUK-Pillar-3_Final.pdf"
 
 ENTITY_NOTE = (
@@ -130,6 +135,210 @@ def p3_sources():
 
 bw = BankWorkbook(bank_name="Gulf International Bank (UK) Limited", years=YEARS, year_label=YEAR_LABEL, header_color="38AD47")
 
+STATEMENTS_SOURCES = (
+    "Sources - Gulf International Bank (UK) Limited's own Statement of Financial Position / Statement of "
+    "Income (converted from USD to £, see FX conversion note below), transcribed from Companies House filings "
+    "(FY2024/FY2023 text-native; FY2022/FY2021 scanned/image-only, no text layer):\n"
+    f"FY2024/FY2023: Annual Report and Financial Statements 2024, pp.105-108 (Statement of Financial Position, "
+    f"Statement of Income, Statement of Comprehensive Income, Statement of Changes in Equity) - {AR2024_URL}\n"
+    f"FY2022: Annual Report and Financial Statements 2023, pp.67-70 (own FY2022 comparative column) - {AR2023_URL}\n"
+    f"FY2021: Annual Report and Financial Statements 2021, pp.48-51 - {AR2021_URL}\n"
+    "FY2025 is blank throughout: no FY2025 Annual Report has been filed with Companies House yet.\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet (raw USD, then converted via stock())
+# ---------------------------------------------------------------
+balance_sheet_rows_usd = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", {"FY2024": 7378636, "FY2023": 14883184, "FY2022": 5325978, "FY2021": 5599337}),
+    ("DATA", "Placements with banks", {"FY2024": 5666838, "FY2023": 5290351, "FY2022": 3661166, "FY2021": 3805701}),
+    ("DATA", "Trading securities", {"FY2024": 141808, "FY2023": 111752, "FY2022": 73490, "FY2021": 56471}),
+    ("DATA", "Derivative financial asset", {"FY2024": 89160, "FY2023": 73778, "FY2022": 69607, "FY2021": 22397}),
+    ("DATA", "Debt securities at amortised cost", {"FY2024": 1015473, "FY2023": 969443, "FY2022": 983131, "FY2021": 1001816}),
+    ("DATA", "Property, plant and equipment", {"FY2024": 2762, "FY2023": 3363, "FY2022": 3915, "FY2021": 5087}),
+    ("DATA", "Right-of-use assets", {"FY2024": 21499, "FY2023": 23857, "FY2022": 25740, "FY2021": 28260}),
+    ("DATA", "Other assets", {"FY2024": 182679, "FY2023": 207336, "FY2022": 115596, "FY2021": 56297}),
+    ("DATA", "Current tax asset", {"FY2022": 918, "FY2021": 1026}),
+    ("TOTAL", "Total assets", {"FY2024": 14498855, "FY2023": 21563064, "FY2022": 10259541, "FY2021": 10576392}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", {"FY2024": 1159003, "FY2023": 76401, "FY2022": 370965, "FY2021": 35438}),
+    ("DATA", "Deposits from customers", {"FY2024": 12755439, "FY2023": 20851700, "FY2022": 9323428, "FY2021": 10022108}),
+    ("DATA", "Derivative financial liability", {"FY2024": 7739, "FY2023": 50031, "FY2022": 43543, "FY2021": 54878}),
+    ("DATA", "Deferred tax liability", {"FY2024": 6226, "FY2023": 12219, "FY2022": 5032, "FY2021": 1851}),
+    ("DATA", "Other liabilities", {"FY2024": 109076, "FY2023": 113887, "FY2022": 97890, "FY2021": 55256}),
+    ("DATA", "Current tax liabilities", {"FY2024": 1546, "FY2023": 775}),
+    ("TOTAL", "Total liabilities", {"FY2024": 14039029, "FY2023": 21105013, "FY2022": 9840858, "FY2021": 10169531}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2024": 250000, "FY2023": 250000, "FY2022": 250000, "FY2021": 250000}),
+    ("DATA", "Capital contribution", {"FY2024": 2279, "FY2023": 2279, "FY2022": 2279, "FY2021": 2279}),
+    ("DATA", "Cashflow hedge reserve", {"FY2024": 1928}),
+    ("DATA", "Pension reserves", {"FY2024": 8724, "FY2023": 32878, "FY2022": 33390, "FY2021": 28678}),
+    ("DATA", "Retained earnings", {"FY2024": 196895, "FY2023": 172894, "FY2022": 133014, "FY2021": 125904}),
+    ("TOTAL", "Total equity", {"FY2024": 459826, "FY2023": 458051, "FY2022": 418683, "FY2021": 406861}),
+    ("TOTAL", "Total liabilities and equity", {"FY2024": 14498855, "FY2023": 21563064, "FY2022": 10259541, "FY2021": 10576392}),
+]
+
+balance_sheet_rows = [
+    (kind, label, {} if kind == "SECTION" else stock(usd))
+    for kind, label, usd in balance_sheet_rows_usd
+]
+
+bw.add_balance_sheet_sheet(
+    title="Gulf International Bank (UK) Limited — Statement of Financial Position",
+    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=70,
+    source_height=340,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (raw USD, then converted via flow())
+# ---------------------------------------------------------------
+income_statement_rows_usd = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income from financial instruments at amortised cost", {"FY2024": 1030743, "FY2023": 702928, "FY2022": 222570, "FY2021": 27749}),
+    ("DATA", "Other interest income/(expense)", {"FY2024": 30875, "FY2023": 57071, "FY2022": 399, "FY2021": -6645}),
+    ("DATA", "Interest expense from financial instruments at amortised cost", {"FY2024": -987369, "FY2023": -679131, "FY2022": -184447, "FY2021": -9043}),
+    ("TOTAL", "Net interest income", {"FY2024": 74249, "FY2023": 80868, "FY2022": 38522, "FY2021": 12061}),
+    ("DATA", "Net fee and commission income", {"FY2024": 5455, "FY2023": 3415, "FY2022": 2128, "FY2021": 4036}),
+    ("DATA", "Net trading income/(loss)", {"FY2024": 5358, "FY2023": 7376, "FY2022": 4753, "FY2021": 3371}),
+    ("DATA", "Foreign exchange income and revaluation of foreign currencies", {"FY2024": 8150, "FY2023": 15526, "FY2022": 11764, "FY2021": 10845}),
+    ("DATA", "Expected credit loss charge/(release) on financial assets", {"FY2024": 166, "FY2023": -199, "FY2022": -140, "FY2021": -162}),
+    ("DATA", "Other operating income/(loss)", {"FY2024": 4133, "FY2023": 2852, "FY2022": 4801, "FY2021": 491}),
+    ("DATA", "Impairment of right-of-use asset", {"FY2021": -1199}),
+    ("DATA", "Operating expenses", {"FY2024": -65407, "FY2023": -57344, "FY2022": -52682, "FY2021": -43014}),
+    ("TOTAL", "Profit/(loss) before tax", {"FY2024": 32104, "FY2023": 52494, "FY2022": 9146, "FY2021": -13571}),
+    ("DATA", "Income tax (expense)/credit", {"FY2024": -8103, "FY2023": -12614, "FY2022": -2036, "FY2021": 6631}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2024": 24001, "FY2023": 39880, "FY2022": 7110, "FY2021": -6940}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Net movement in cash flow hedge reserve", {"FY2024": 2571}),
+    ("DATA", "Tax relating to cash flow hedge reserve", {"FY2024": -643}),
+    ("DATA", "Remeasurement of defined benefit pension fund", {"FY2024": -32186, "FY2023": -426, "FY2022": 6016, "FY2021": 28694}),
+    ("DATA", "Tax relating to defined benefit pension", {"FY2024": 8032, "FY2023": -86, "FY2022": -1304, "FY2021": -7489}),
+    ("TOTAL", "Other comprehensive income for the year, net of tax", {"FY2024": -22226, "FY2023": -512, "FY2022": 4712, "FY2021": 21205}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year", {"FY2024": 1775, "FY2023": 39368, "FY2022": 11822, "FY2021": 14265}),
+]
+income_statement_rows = [
+    (kind, label, {} if kind == "SECTION" else flow(usd))
+    for kind, label, usd in income_statement_rows_usd
+]
+
+bw.add_income_statement_sheet(
+    title="Gulf International Bank (UK) Limited — Statement of Income",
+    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=340,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity - built year-by-year per the map's
+# per-year reconciliation ladder: each TOTAL "At 31 December YYYY" row below
+# was checked to tie to (a) its own component's Balance Sheet figure above
+# and (b) the following year's own opening row, in USD, before conversion.
+# A "FX translation effect on equity, net" plug row (Total column only,
+# computed as the balancing figure) makes each year's roll-forward tie
+# exactly in GBP too, since opening/movement/closing convert at different
+# point-in-time rates (same pattern as this entity's own Cash Flow FX plug).
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Share capital", "Capital contribution", "Pension reserve", "Cashflow hedge reserve", "Retained earnings", "Total equity"]
+EQUITY_ROWS_USD = [
+    ("TOTAL", "At 1 January 2021", [250000, 2279, 7473, None, 132844, 392596], "spot", "FY2020"),
+    ("DATA", "Deferred tax liability on defined benefit pension (FY2021)", [None, None, -7489, None, None, -7489], "avg", "FY2021"),
+    ("DATA", "Pension reserves (FY2021)", [None, None, 28694, None, None, 28694], "avg", "FY2021"),
+    ("TOTAL", "Total other comprehensive income (FY2021)", [None, None, 21205, None, None, 21205], "avg", "FY2021"),
+    ("DATA", "Net loss for the year (FY2021)", [None, None, None, None, -6940, -6940], "avg", "FY2021"),
+    ("TOTAL", "Total comprehensive income for the year (FY2021)", [None, None, 21205, None, -6940, 14265], "avg", "FY2021"),
+    ("DATA", "FX translation effect on equity, net (FY2021)", [None, None, None, None, None, None], "plug", "FY2021"),
+    ("TOTAL", "At 31 December 2021", [250000, 2279, 28678, None, 125904, 406861], "spot", "FY2021"),
+
+    ("DATA", "Deferred tax liability on defined benefit pension (FY2022)", [None, None, -1304, None, None, -1304], "avg", "FY2022"),
+    ("DATA", "Pension reserves (FY2022)", [None, None, 6016, None, None, 6016], "avg", "FY2022"),
+    ("TOTAL", "Total other comprehensive income (FY2022)", [None, None, 4712, None, None, 4712], "avg", "FY2022"),
+    ("DATA", "Net profit for the year (FY2022)", [None, None, None, None, 7110, 7110], "avg", "FY2022"),
+    ("TOTAL", "Total comprehensive income for the year (FY2022)", [None, None, 4712, None, 7110, 11822], "avg", "FY2022"),
+    ("DATA", "FX translation effect on equity, net (FY2022)", [None, None, None, None, None, None], "plug", "FY2022"),
+    ("TOTAL", "At 31 December 2022", [250000, 2279, 33390, None, 133014, 418683], "spot", "FY2022"),
+
+    ("DATA", "Deferred tax liability on defined benefit pension (FY2023)", [None, None, -86, None, None, -86], "avg", "FY2023"),
+    ("DATA", "Pension reserves (FY2023)", [None, None, -426, None, None, -426], "avg", "FY2023"),
+    ("TOTAL", "Total other comprehensive income (FY2023)", [None, None, -512, None, None, -512], "avg", "FY2023"),
+    ("DATA", "Net profit for the year (FY2023)", [None, None, None, None, 39880, 39880], "avg", "FY2023"),
+    ("TOTAL", "Total comprehensive income for the year (FY2023)", [None, None, -512, None, 39880, 39368], "avg", "FY2023"),
+    ("DATA", "FX translation effect on equity, net (FY2023)", [None, None, None, None, None, None], "plug", "FY2023"),
+    ("TOTAL", "At 31 December 2023", [250000, 2279, 32878, None, 172894, 458051], "spot", "FY2023"),
+
+    ("DATA", "Pension reserves (FY2024)", [None, None, -32186, None, None, -32186], "avg", "FY2024"),
+    ("DATA", "Deferred tax liability on defined benefit pension (FY2024)", [None, None, 8032, None, None, 8032], "avg", "FY2024"),
+    ("DATA", "Net movement in cash flow hedge reserve (FY2024)", [None, None, None, 2571, None, 2571], "avg", "FY2024"),
+    ("DATA", "Tax relating to cash flow hedge reserve (FY2024)", [None, None, None, -643, None, -643], "avg", "FY2024"),
+    ("TOTAL", "Total other comprehensive income (FY2024)", [None, None, -24154, 1928, None, -22226], "avg", "FY2024"),
+    ("DATA", "Net profit for the year (FY2024)", [None, None, None, None, 24001, 24001], "avg", "FY2024"),
+    ("TOTAL", "Total comprehensive income for the year (FY2024)", [None, None, -24154, 1928, 24001, 1775], "avg", "FY2024"),
+    ("DATA", "FX translation effect on equity, net (FY2024)", [None, None, None, None, None, None], "plug", "FY2024"),
+    ("TOTAL", "At 31 December 2024", [250000, 2279, 8724, 1928, 196895, 459826], "spot", "FY2024"),
+]
+
+
+def _rate(rtype, ry):
+    return FX_SPOT[ry] if rtype == "spot" else FX_AVG[ry]
+
+
+_equity_totals_usd = {}
+for _kind, _label, _vals, _rtype, _ry in EQUITY_ROWS_USD:
+    if _kind == "TOTAL" and _rtype == "spot":
+        _equity_totals_usd[_label] = _vals
+
+FX_PLUG_GBP = {}
+for _ry in ["FY2021", "FY2022", "FY2023", "FY2024"]:
+    _prev_year = PREV_YEAR[_ry]
+    _open_label = "At 1 January 2021" if _ry == "FY2021" else f"At 31 December {int(_prev_year[2:])}"
+    _close_label = f"At 31 December {int(_ry[2:])}"
+    _opening_gbp = round(_equity_totals_usd[_open_label][-1] / FX_SPOT[_prev_year] / 1000, 1)
+    _closing_gbp = round(_equity_totals_usd[_close_label][-1] / FX_SPOT[_ry] / 1000, 1)
+    _movement_gbp = round(
+        sum(v[-1] for k, l, v, rt, ry in EQUITY_ROWS_USD if ry == _ry and rt == "avg" and k == "TOTAL" and l.startswith("Total comprehensive income")) / FX_AVG[_ry] / 1000,
+        1,
+    )
+    FX_PLUG_GBP[_ry] = round(_closing_gbp - _opening_gbp - _movement_gbp, 1)
+
+equity_changes_rows = []
+for kind, label, vals, rtype, ry in EQUITY_ROWS_USD:
+    if rtype == "plug":
+        row_vals = [None] * (len(EQUITY_HEADERS) - 1) + [FX_PLUG_GBP[ry]]
+    else:
+        rate = _rate(rtype, ry)
+        row_vals = [None if v is None else round(v / rate / 1000, 1) for v in vals]
+    equity_changes_rows.append((kind, label, row_vals))
+
+EQUITY_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "FX METHODOLOGY FOR THIS SHEET: opening/closing balances converted at that year-end's spot rate, movement "
+    "lines at that year's average rate - the same convention used throughout this workbook. Converting stocks "
+    "and flows at different rates within one year means the roll-forward doesn't tie exactly in GBP even though "
+    "it ties exactly in USD (independently verified against each year's own source table before conversion) - "
+    "an explicit 'FX translation effect on equity, net' row (Total column only, computed as the balancing "
+    "figure) is included each year, same treatment as this entity's own Cash Flow Statement's 'Effect of "
+    "GBP/USD translation' line. Zero plug rows were needed in USD terms - every year's own closing balance ties "
+    "exactly to both the next year's own opening balance and that year's Balance Sheet Total equity."
+)
+
+bw.add_equity_changes_sheet(
+    title="Gulf International Bank (UK) Limited — Statement of Changes in Equity",
+    subtitle="£'000, converted from USD - chronological, oldest to newest. See source note for FX methodology.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_SOURCES,
+    first_col_width=56,
+    source_height=340,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (raw USD, then converted via flow()/stock()/opening_cash())
 # ---------------------------------------------------------------
@@ -203,6 +412,79 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality - GIB UK does not lend to customers (its own filings
+# confirm no "Loans and advances to customers" line exists anywhere on the
+# Balance Sheet); credit risk sits in Placements with banks (Note 4) and
+# Debt securities at amortised cost (Note 6), each with their own IFRS 9
+# stage/internal-rating table. Every year, both are 100% Stage 1 /
+# Investment grade 1-4 - confirmed by reading each note in full, not
+# assumed from the aggregate ECL charge being small.
+# ---------------------------------------------------------------
+asset_quality_rows_usd = [
+    ("SECTION", "Placements with banks - gross carrying amount by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (Investment grade 1-4)", {"FY2024": 5667335, "FY2023": 5290994, "FY2022": 3661305, "FY2021": 3805820}),
+    ("DATA", "Stage 2 (Sub-investment grade 5-7)", {}),
+    ("DATA", "Stage 3 (Classified 8-10)", {}),
+    ("TOTAL", "Total gross placements with banks", {"FY2024": 5667335, "FY2023": 5290994, "FY2022": 3661305, "FY2021": 3805820}),
+    ("DATA", "Less: allowance for impairment losses", {"FY2024": -497, "FY2023": -643, "FY2022": -139, "FY2021": -119}),
+    ("TOTAL", "Net placements with banks", {"FY2024": 5666838, "FY2023": 5290351, "FY2022": 3661166, "FY2021": 3805701}),
+    ("SECTION", "Debt securities at amortised cost - gross carrying amount by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (Investment grade 1-4)", {"FY2024": 1015473, "FY2023": 969443, "FY2022": 983625, "FY2021": 1002191}),
+    ("DATA", "Stage 2 (Sub-investment grade 5-7)", {}),
+    ("DATA", "Stage 3 (Classified 8-10)", {}),
+    ("TOTAL", "Total gross debt securities at amortised cost", {"FY2024": 1015473, "FY2023": 969443, "FY2022": 983625, "FY2021": 1002191}),
+    ("DATA", "Less: allowance for impairment losses", {"FY2024": -20, "FY2023": -305, "FY2022": -494, "FY2021": -375}),
+    ("TOTAL", "Net debt securities at amortised cost", {"FY2024": 1015473, "FY2023": 969443, "FY2022": 983131, "FY2021": 1001816}),
+]
+asset_quality_rows = [
+    (kind, label, {} if kind == "SECTION" else stock(usd))
+    for kind, label, usd in asset_quality_rows_usd
+]
+# Coverage ratios - genuinely trivial (0.00-0.04%) given every asset is
+# Stage 1/Investment grade; computed from the USD figures directly (a
+# dimensionless ratio, so FX conversion doesn't change it).
+_placements_gross_usd = {"FY2024": 5667335, "FY2023": 5290994, "FY2022": 3661305, "FY2021": 3805820}
+_placements_ecl_usd = {"FY2024": 497, "FY2023": 643, "FY2022": 139, "FY2021": 119}
+_debt_sec_gross_usd = {"FY2024": 1015473, "FY2023": 969443, "FY2022": 983625, "FY2021": 1002191}
+_debt_sec_ecl_usd = {"FY2024": 20, "FY2023": 305, "FY2022": 494, "FY2021": 375}
+asset_quality_rows.append((
+    "DATA", "Placements with banks - ECL coverage ratio",
+    {y: f"{_placements_ecl_usd[y] / _placements_gross_usd[y] * 100:.3f}%" for y in _placements_gross_usd},
+))
+asset_quality_rows.append((
+    "DATA", "Debt securities - ECL coverage ratio",
+    {y: f"{_debt_sec_ecl_usd[y] / _debt_sec_gross_usd[y] * 100:.3f}%" for y in _debt_sec_gross_usd},
+))
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Gulf International Bank (UK) Limited's own Note 4 (Placements with banks) / Note 6 (Debt "
+    "securities at amortised cost) IFRS 9 stage and internal-credit-rating tables, converted from USD to £ (see "
+    "FX conversion note on the Cash Flow Statement sheet):\n"
+    f"FY2024/FY2023: Annual Report and Financial Statements 2024, pp.124-128 (Notes 4, 4.1, 6, 6.1) - {AR2024_URL}\n"
+    f"FY2022: Annual Report and Financial Statements 2023, pp.87-93 (Notes 4, 4.1, 6, 6.1, own FY2022 "
+    f"comparative) - {AR2023_URL}\n"
+    f"FY2021: Annual Report and Financial Statements 2021, pp.68-70 (Notes 4, 4.1, 6, 6.1) - {AR2021_URL}\n\n"
+    "GIB UK does not lend to customers - confirmed by reading: there is no 'Loans and advances to customers' "
+    "line anywhere in the Balance Sheet across all 4 years reviewed. Its credit risk instead sits entirely in "
+    "Placements with banks and Debt securities at amortised cost, each disclosed on the Bank's own internal "
+    "credit rating scale (Investment grade 1-4 / Sub-investment grade 5-7 / Classified 8-10) cross-referenced "
+    "to IFRS 9 stage. Every year, both asset classes are 100% Stage 1 / Investment grade 1-4, with no transfers "
+    "to Stage 2 or 3 disclosed in any year - confirmed by reading each note in full, not assumed from the small "
+    "ECL charge. ECL coverage ratios are correspondingly minimal (well under 0.1%).\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_asset_quality_sheet(
+    title="Gulf International Bank (UK) Limited — Asset Quality",
+    subtitle="£'000, converted from USD - see source note. GIB UK does not lend to customers; credit risk sits in Placements with banks and Debt securities at amortised cost.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=68,
+    source_height=340,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -223,6 +505,56 @@ metric("Total Capital", "£'000 (conv. from USD)", [("Total capital", stock(CAPI
        note="Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.")
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", CAPITAL_RATIO)], p3_sources())
 metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", stock(RWA_USD))], p3_sources())
+
+# ---------------------------------------------------------------
+# RWA Breakdown (UK OV1) - fully disclosed all 4 years. FY2024/FY2023 from
+# the Bank's own FY2024 Pillar 3 document (text-native); FY2022 from its
+# own FY2023 Pillar 3 document; FY2021 sourced from that same FY2023
+# Pillar 3 document's own T-4/prior-year comparative column (matches this
+# project's existing convention, e.g. p3_sources() already does this for
+# other metrics) rather than the dedicated FY2021 Pillar 3 document, since
+# both give identical figures where legible. Each year's own Total ties
+# exactly to the Total RWAs sheet above.
+# ---------------------------------------------------------------
+rwa_breakdown_rows_usd = [
+    ("SECTION", "Credit risk", {}),
+    ("DATA", "Credit risk (excluding CCR) - standardised approach", {"FY2024": 1704126, "FY2023": 1588788, "FY2022": 1426851, "FY2021": 1633319}),
+    ("SECTION", "Counterparty credit risk", {}),
+    ("DATA", "Of which credit valuation adjustment (CVA)", {"FY2024": 15040, "FY2023": 20994, "FY2022": 20625, "FY2021": 12553}),
+    ("DATA", "Of which other CCR", {"FY2024": 45049, "FY2023": 39716, "FY2022": 21799, "FY2021": 23092}),
+    ("TOTAL", "Total counterparty credit risk - CCR", {"FY2024": 60089, "FY2023": 60709, "FY2022": 42424, "FY2021": 35645}),
+    ("SECTION", "Market risk", {}),
+    ("DATA", "Position, foreign exchange and commodities risks - standardised approach", {"FY2024": 819, "FY2023": 11263, "FY2022": 2332, "FY2021": 166380}),
+    ("SECTION", "Operational risk", {}),
+    ("DATA", "Operational risk - standardised approach", {"FY2024": 198710, "FY2023": 149224, "FY2022": 85961, "FY2021": 96890}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1963743, "FY2023": 1809984, "FY2022": 1557567, "FY2021": 1932234}),
+]
+rwa_breakdown_rows = [
+    (kind, label, {} if kind == "SECTION" else stock(usd))
+    for kind, label, usd in rwa_breakdown_rows_usd
+]
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Gulf International Bank (UK) Limited's own UK OV1 (Pillar 1 capital requirements) table, "
+    "converted from USD to £ (see FX conversion note on the Cash Flow Statement sheet; the underlying $ RWA "
+    "figures are unconverted regulatory exposure amounts, converted here at spot rate for consistency with the "
+    "rest of this workbook):\n"
+    f"FY2024/FY2023: Pillar 3 Disclosures as at 31 December 2024 (Board-approved), pp.27-28 (section 6.2, UK "
+    f"OV1) - {P3_2024_URL}\n"
+    f"FY2022/FY2021: Pillar 3 Disclosures as at 31 December 2022, pp.26-27 (section 6.2, UK OV1) - FY2021 is "
+    f"that document's own T-4/prior-year comparative column - {P3_2022_URL}\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_rwa_breakdown_sheet(
+    title="Gulf International Bank (UK) Limited — RWA Breakdown",
+    subtitle="£'000, converted from USD - see source note. UK OV1 template.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=68,
+    source_height=280,
+    unit_suffix=" (£'000, conv. from USD)",
+)
 
 metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
@@ -294,10 +626,37 @@ cf_totals_usd = {
 }
 cf_close_usd = {"FY2024": 7378636, "FY2023": 14883184, "FY2022": 5325978, "FY2021": 5599337}
 
+balance_sheet_totals_usd = {
+    "Total assets": {"FY2024": 14498855, "FY2023": 21563064, "FY2022": 10259541, "FY2021": 10576392},
+    "Placements with banks": {"FY2024": 5666838, "FY2023": 5290351, "FY2022": 3661166, "FY2021": 3805701},
+    "Deposits from customers": {"FY2024": 12755439, "FY2023": 20851700, "FY2022": 9323428, "FY2021": 10022108},
+    "Total equity": {"FY2024": 459826, "FY2023": 458051, "FY2022": 418683, "FY2021": 406861},
+}
+income_statement_totals_usd = {
+    "Net interest income": {"FY2024": 74249, "FY2023": 80868, "FY2022": 38522, "FY2021": 12061},
+    "Operating expenses": {"FY2024": -65407, "FY2023": -57344, "FY2022": -52682, "FY2021": -43014},
+    "Profit/(loss) for the year": {"FY2024": 24001, "FY2023": 39880, "FY2022": 7110, "FY2021": -6940},
+}
+equity_changes_totals_usd = {
+    "Opening equity": {"FY2024": 458051, "FY2023": 418683, "FY2022": 406861, "FY2021": 392596},
+    "Total comprehensive income/(loss) for the year": {"FY2024": 1775, "FY2023": 39368, "FY2022": 11822, "FY2021": 14265},
+    "Closing equity": {"FY2024": 459826, "FY2023": 458051, "FY2022": 418683, "FY2021": 406861},
+}
+
 bw.add_overview_sheet(
     cash_flow_totals=[(label, flow(vals)) for label, vals in cf_totals_usd.items()]
                       + [("Cash and cash equivalents at end of year", stock(cf_close_usd))],
     cash_flow_unit="£'000",
+    balance_sheet_totals=[(label, stock(vals)) for label, vals in balance_sheet_totals_usd.items()],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[(label, flow(vals)) for label, vals in income_statement_totals_usd.items()],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", opening_cash(equity_changes_totals_usd["Opening equity"])),
+        ("Total comprehensive income/(loss) for the year", flow(equity_changes_totals_usd["Total comprehensive income/(loss) for the year"])),
+        ("Closing equity", stock(equity_changes_totals_usd["Closing equity"])),
+    ],
+    equity_changes_unit="£'000",
     ratios=[
         ("CET1 Ratio", CAPITAL_RATIO),
         ("Tier 1 Ratio", CAPITAL_RATIO),

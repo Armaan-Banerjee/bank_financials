@@ -75,10 +75,189 @@ rows = [
 ]
 
 bw = BankWorkbook(bank_name="Rathbones Investment Management Limited", years=YEARS, year_label=None, header_color="6B3F8C")
+
+STATEMENTS_SOURCES = (
+    "Sources - Rathbones Investment Management Limited statutory accounts, entity basis, GBP'000.\n"
+    f"FY2025 and FY2024 comparative: Annual report and financial statements 2025, Statement of comprehensive "
+    f"income p.22, Statement of changes in equity p.23, Balance sheet p.24 - {AR2025_URL}\n"
+    f"FY2024 and FY2023 comparative: Annual report and financial statements 2024, p.25/26/27 - {AR2024_URL}\n"
+    f"FY2023 and FY2022 comparative: Annual report and financial statements 2023, p.26/27/28 - {AR2023_URL}\n"
+    f"FY2022 and FY2021 comparative: Annual report and financial statements 2022, p.26/27/29 - {AR2022_URL}\n\n"
+    + ENTITY_NOTE
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances with central banks", {"FY2025": 1503963, "FY2024": 1165956, "FY2023": 1038280, "FY2022": 1412915, "FY2021": 1463293}),
+    ("DATA", "Settlement balances", {"FY2025": 44654, "FY2024": 35248, "FY2023": 39048, "FY2022": 19825, "FY2021": 28831}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 105394, "FY2024": 83482, "FY2023": 42601, "FY2022": 106475, "FY2021": 97887}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 206392, "FY2024": 124556, "FY2023": 131817, "FY2022": 205120, "FY2021": 194424}),
+    ("DATA", "Investment securities - fair value through profit and loss", {"FY2023": 1181, "FY2022": 3146, "FY2021": 2558}),
+    ("DATA", "Investment securities - amortised cost", {"FY2025": 1864282, "FY2024": 1278219, "FY2023": 1294589, "FY2022": 1045234, "FY2021": 761654}),
+    ("DATA", "Prepayments, accrued income and other assets", {"FY2025": 209933, "FY2024": 147396, "FY2023": 118622, "FY2022": 92179, "FY2021": 85601}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 48050, "FY2024": 10939, "FY2023": 7783, "FY2022": 12341, "FY2021": 12496}),
+    ("DATA", "Right of use assets", {"FY2023": 1, "FY2022": 17, "FY2021": 83}),
+    ("DATA", "Current tax asset", {"FY2025": 6770, "FY2024": 7992, "FY2023": 2130, "FY2022": 3520, "FY2021": 2826}),
+    ("DATA", "Deferred tax asset", {"FY2024": 1116, "FY2023": 1158}),
+    ("DATA", "Intangible assets", {"FY2025": 779332, "FY2024": 153029, "FY2023": 158751, "FY2022": 170498, "FY2021": 183788}),
+    ("DATA", "Investments in subsidiary undertakings", {"FY2025": 40913, "FY2024": 9798, "FY2023": 9798, "FY2022": 9798, "FY2021": 9798}),
+    ("TOTAL", "Total assets", {"FY2025": 4809683, "FY2024": 3017731, "FY2023": 2845759, "FY2022": 3081068, "FY2021": 2843239}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {"FY2025": 8410, "FY2024": 3770, "FY2023": 12359, "FY2022": 1035, "FY2021": 2213}),
+    ("DATA", "Settlement balances", {"FY2025": 63146, "FY2024": 47225, "FY2023": 41942, "FY2022": 31028, "FY2021": 27118}),
+    ("DATA", "Due to customers", {"FY2025": 3474635, "FY2024": 2540560, "FY2023": 2359342, "FY2022": 2622664, "FY2021": 2390232}),
+    ("DATA", "Accruals, deferred income, provisions and other liabilities", {"FY2025": 41844, "FY2024": 20964, "FY2023": 16271, "FY2022": 8736, "FY2021": 9432}),
+    ("DATA", "Lease liabilities", {"FY2022": 0, "FY2021": 81}),
+    ("DATA", "Deferred tax liability", {"FY2025": 74300, "FY2022": 1718, "FY2021": 4243}),
+    ("TOTAL", "Total liabilities", {"FY2025": 3662335, "FY2024": 2612519, "FY2023": 2429914, "FY2022": 2665181, "FY2021": 2433319}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 4996, "FY2024": 4996, "FY2023": 4996, "FY2022": 4996, "FY2021": 4996}),
+    ("DATA", "Share premium", {"FY2025": 751899, "FY2024": 298066, "FY2023": 298066, "FY2022": 298066, "FY2021": 298066}),
+    ("DATA", "Other reserves", {"FY2025": -21897}),
+    ("DATA", "Retained earnings", {"FY2025": 412350, "FY2024": 102150, "FY2023": 112783, "FY2022": 112825, "FY2021": 106858}),
+    ("TOTAL", "Total equity", {"FY2025": 1147348, "FY2024": 405212, "FY2023": 415845, "FY2022": 415887, "FY2021": 409920}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 4809683, "FY2024": 3017731, "FY2023": 2845759, "FY2022": 3081068, "FY2021": 2843239}),
+]
+bw.add_balance_sheet_sheet(
+    title="Rathbones Investment Management Limited — Balance Sheet",
+    subtitle="Entity basis, £'000. Blank cells indicate a line not disclosed that year (0 indicates a line disclosed as nil, not a gap).",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=280,
+    unit_suffix=" (£'000)",
+)
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest and similar income", {"FY2025": 155597, "FY2024": 137333, "FY2023": 123040, "FY2022": 43908, "FY2021": 7577}),
+    ("DATA", "Interest expense and similar charges", {"FY2025": -72439, "FY2024": -80881, "FY2023": -73395, "FY2022": -21293, "FY2021": -193}),
+    ("TOTAL", "Net interest income", {"FY2025": 83158, "FY2024": 56452, "FY2023": 49645, "FY2022": 22615, "FY2021": 7384}),
+    ("DATA", "Fee and commission income", {"FY2025": 626296, "FY2024": 352499, "FY2023": 318826, "FY2022": 318304, "FY2021": 335389}),
+    ("DATA", "Fee and commission expense", {"FY2025": -3515, "FY2024": -3050, "FY2023": -2811, "FY2022": -3666, "FY2021": -4016}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 622781, "FY2024": 349449, "FY2023": 316015, "FY2022": 314638, "FY2021": 331373}),
+    ("DATA", "Intra-group management charges", {"FY2025": 16754, "FY2024": 13433, "FY2023": 13760, "FY2022": 12705, "FY2021": 13518}),
+    ("DATA", "Dividends from subsidiaries", {"FY2025": 57002, "FY2024": 5000, "FY2023": 5000, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "Other operating income", {"FY2025": 1943, "FY2024": 630, "FY2023": 1331, "FY2022": 1189, "FY2021": 664}),
+    ("TOTAL", "Operating income", {"FY2025": 781638, "FY2024": 424964, "FY2023": 385751, "FY2022": 351147, "FY2021": 352939}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Charges in relation to client relationships and goodwill", {"FY2025": -32717, "FY2024": -13244, "FY2023": -12593, "FY2022": -13311, "FY2021": -13515}),
+    ("DATA", "Impairment in investment in subsidiaries", {"FY2025": -43888}),
+    ("DATA", "Other operating expenses", {"FY2025": -593560, "FY2024": -390553, "FY2023": -309294, "FY2022": -288662, "FY2021": -264226}),
+    ("TOTAL", "Operating expenses", {"FY2025": -670165, "FY2024": -403797, "FY2023": -321887, "FY2022": -301973, "FY2021": -277741}),
+    ("TOTAL", "Profit before tax", {"FY2025": 111473, "FY2024": 21167, "FY2023": 63864, "FY2022": 49174, "FY2021": 75198}),
+    ("DATA", "Taxation", {"FY2025": -30356, "FY2024": -4800, "FY2023": -13906, "FY2022": -8207, "FY2021": -16234}),
+    ("TOTAL", "Profit for the year attributable to equity holders of the Company", {"FY2025": 81117, "FY2024": 16367, "FY2023": 49958, "FY2022": 40967, "FY2021": 58964}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Other comprehensive income for the year, net of tax", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("TOTAL", "Total comprehensive income for the year, net of tax", {"FY2025": 81117, "FY2024": 16367, "FY2023": 49958, "FY2022": 40967, "FY2021": 58964}),
+]
+bw.add_income_statement_sheet(
+    title="Rathbones Investment Management Limited — Profit & Loss",
+    subtitle="Entity basis, £'000. Statement of comprehensive income; all comprehensive income each year is attributable to equity holders of the Company.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=280,
+    unit_suffix=" (£'000)",
+)
+
+equity_headers = ["Share capital", "Share premium", "Other reserves", "Retained earnings", "Total equity"]
+equity_rows = [
+    ("TOTAL", "At 1 January 2021", (4996, 298066, None, 102894, 405956)),
+    ("TOTAL", "Total comprehensive income for the year (FY2021)", (None, None, None, 58964, 58964)),
+    ("DATA", "Dividends paid (FY2021)", (None, None, None, -55000, -55000)),
+    ("TOTAL", "At 31 December 2021", (4996, 298066, None, 106858, 409920)),
+    ("TOTAL", "Total comprehensive income for the year (FY2022)", (None, None, None, 40967, 40967)),
+    ("DATA", "Dividends paid (FY2022)", (None, None, None, -35000, -35000)),
+    ("TOTAL", "At 31 December 2022", (4996, 298066, None, 112825, 415887)),
+    ("TOTAL", "Total comprehensive income for the year (FY2023)", (None, None, None, 49958, 49958)),
+    ("DATA", "Dividends paid (FY2023)", (None, None, None, -50000, -50000)),
+    ("TOTAL", "At 31 December 2023", (4996, 298066, None, 112783, 415845)),
+    ("TOTAL", "Total comprehensive income for the year (FY2024)", (None, None, None, 16367, 16367)),
+    ("DATA", "Dividends paid (FY2024)", (None, None, None, -27000, -27000)),
+    ("TOTAL", "At 31 December 2024", (4996, 298066, None, 102150, 405212)),
+    ("TOTAL", "Total comprehensive income for the year (FY2025)", (None, None, None, 81117, 81117)),
+    ("DATA", "Dividends paid (FY2025)", (None, None, None, -69000, -69000)),
+    ("DATA", "Arisen from business transfer (FY2025)", (None, None, -21897, None, -21897)),
+    ("DATA", "Issue of share capital (FY2025)", (None, 751898, None, None, 751898)),
+    ("DATA", "Cancellation of share premium (FY2025)", (None, -298065, None, 298065, 0)),
+    ("DATA", "Other movement (FY2025)", (None, None, None, 18, 18)),
+    ("TOTAL", "At 31 December 2025", (4996, 751899, -21897, 412350, 1147348)),
+]
+bw.add_equity_changes_sheet(
+    title="Rathbones Investment Management Limited — Statement of Changes in Equity",
+    subtitle="Chronological roll-forward, oldest to newest, entity basis, £'000. Equity reconciliation ladder confirmed: "
+              "every year's own closing balance ties exactly to both the next year's own opening balance and that "
+              "year's own Balance Sheet Total equity - zero undocumented plug rows across all 5 years, including "
+              "FY2025's four separate movements (business transfer, share issue, share premium cancellation, other).",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=52,
+    source_height=260,
+)
+
 bw.add_cash_flow_sheet(title="Rathbones Investment Management Limited — Cash Flow Statement", subtitle="Entity basis, £'000. All figures transcribed from the Company's statutory accounts.", rows=rows, sources_text=CASH_SOURCES, first_col_width=86, source_height=330, unit_suffix=" (£'000)")
 
-NOT_DISCLOSED = "Not publicly disclosed at Rathbones Investment Management Limited entity level. Rathbones Group Plc's official Pillar 3 reports are consolidated and state that no large subsidiary meets the definition requiring individual disclosure; group metrics must not be substituted for this Company's metrics. See the source note."
-bw.add_not_disclosed_metric_sheets(["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs", "Leverage Ratio", "LCR", "NSFR", "MREL Ratio"], CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs", "Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]})
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers, by product", {}),
+    ("DATA", "Overdrafts", {"FY2025": 17710, "FY2024": 15606, "FY2023": 9558, "FY2022": 6238, "FY2021": 6742}),
+    ("DATA", "Loan book", {"FY2025": 146810, "FY2024": 75942, "FY2023": 101666, "FY2022": 159694, "FY2021": 167981}),
+    ("DATA", "Amounts owed by group undertakings", {"FY2025": 39880, "FY2024": 31935, "FY2023": 19629, "FY2022": 38576, "FY2021": 18936}),
+    ("DATA", "Financial planning debtors", {"FY2025": 747, "FY2024": 718, "FY2023": 656, "FY2022": 520, "FY2021": 310}),
+    ("DATA", "Other debtors", {"FY2025": 1246, "FY2024": 417, "FY2023": 308, "FY2022": 104, "FY2021": 455}),
+    ("TOTAL", "Total before impairment loss allowance", {"FY2025": 206393, "FY2024": 124618, "FY2023": 131817, "FY2022": 205132, "FY2021": 194424}),
+    ("DATA", "Less: impairment loss allowance", {"FY2025": 0, "FY2024": -62, "FY2023": 0, "FY2022": -12, "FY2021": 0}),
+    ("TOTAL", "Net loans and advances to customers", {"FY2025": 206392, "FY2024": 124556, "FY2023": 131817, "FY2022": 205120, "FY2021": 194424}),
+    ("SECTION", "Asset quality ratio (derived)", {}),
+    ("DATA", "Impairment loss allowance as % of gross loans and advances to customers", {"FY2025": "0.0%", "FY2024": "0.05%", "FY2023": "0.0%", "FY2022": "0.01%", "FY2021": "0.0%"}),
+]
+bw.add_asset_quality_sheet(
+    title="Rathbones Investment Management Limited — Asset Quality",
+    subtitle="Entity basis, £'000. Loans and advances to customers by product (Note 14); no IFRS 9 Stage 1/2/3 split "
+              "is disclosed for this book - loans are fully secured against clients' investment portfolios held in "
+              "Rathbones' nominee name, and the Company's own risk-management note (27) reports £nil-to-negligible "
+              "impairment losses arising from the loan book in every year covered. (The Company's separate treasury "
+              "book - money-market/interbank placements, not customer lending - does carry a 12-month/lifetime ECL "
+              "stage split in note 27, but that reflects counterparty credit risk on Company cash, not loan asset "
+              "quality, so it is not reproduced here.)",
+    rows=asset_quality_rows,
+    sources_text=STATEMENTS_SOURCES + (
+        "\n\nNote 14 (Loans and advances to customers) page references - FY2025/FY2024: p.39; FY2024/FY2023: p.41; "
+        "FY2023/FY2022: p.41 (AR2023); FY2022/FY2021: p.43 (AR2022). FY2025's component lines sum to £206,393k "
+        "against a reported net total of £206,392k - a genuine £1k source rounding artifact, not a transcription "
+        "error; the reported net total is used for the Balance Sheet tie-out."
+    ),
+    first_col_width=90,
+    source_height=280,
+    unit_suffix=" (£'000)",
+)
 
-bw.add_overview_sheet(cash_flow_totals=[("Net cash inflow/(outflow) from operating activities", {"FY2025":988180,"FY2024":200256,"FY2023":-99468,"FY2022":276728,"FY2021":-249109}), ("Net cash used in investing activities", {"FY2025":-559268,"FY2024":-2375,"FY2023":-256406,"FY2022":-285059,"FY2021":-126903}), ("Cash and cash equivalents at the end of the year", {"FY2025":1609394,"FY2024":1249482,"FY2023":1078601,"FY2022":1484475,"FY2021":1530445})], cash_flow_unit=" (£'000)", ratios=[("CET1 Ratio", {})])
+NOT_DISCLOSED = "Not publicly disclosed at Rathbones Investment Management Limited entity level. Rathbones Group Plc's official Pillar 3 reports are consolidated and state that no large subsidiary meets the definition requiring individual disclosure; group metrics must not be substituted for this Company's metrics. See the source note."
+_pillar3_before_rwa = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs"]
+_pillar3_after_rwa = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
+bw.add_not_disclosed_metric_sheets(_pillar3_before_rwa, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_before_rwa})
+bw.add_rwa_breakdown_sheet(
+    title="Rathbones Investment Management Limited — RWA Breakdown",
+    subtitle="Not publicly disclosed at entity level.",
+    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
+    sources_text=CASH_SOURCES,
+    first_col_width=54,
+    source_height=180,
+    unit_suffix="",
+)
+bw.add_not_disclosed_metric_sheets(_pillar3_after_rwa, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_after_rwa})
+
+bw.add_overview_sheet(
+    cash_flow_totals=[("Net cash inflow/(outflow) from operating activities", {"FY2025":988180,"FY2024":200256,"FY2023":-99468,"FY2022":276728,"FY2021":-249109}), ("Net cash used in investing activities", {"FY2025":-559268,"FY2024":-2375,"FY2023":-256406,"FY2022":-285059,"FY2021":-126903}), ("Cash and cash equivalents at the end of the year", {"FY2025":1609394,"FY2024":1249482,"FY2023":1078601,"FY2022":1484475,"FY2021":1530445})],
+    cash_flow_unit=" (£'000)",
+    ratios=[("CET1 Ratio", {})],
+    balance_sheet_totals=[("Total assets", {"FY2025": 4809683, "FY2024": 3017731, "FY2023": 2845759, "FY2022": 3081068, "FY2021": 2843239}), ("Loans and advances to customers", {"FY2025": 206392, "FY2024": 124556, "FY2023": 131817, "FY2022": 205120, "FY2021": 194424}), ("Due to customers", {"FY2025": 3474635, "FY2024": 2540560, "FY2023": 2359342, "FY2022": 2622664, "FY2021": 2390232}), ("Total equity", {"FY2025": 1147348, "FY2024": 405212, "FY2023": 415845, "FY2022": 415887, "FY2021": 409920})],
+    balance_sheet_unit=" (£'000)",
+    income_statement_totals=[("Operating income", {"FY2025": 781638, "FY2024": 424964, "FY2023": 385751, "FY2022": 351147, "FY2021": 352939}), ("Operating expenses", {"FY2025": -670165, "FY2024": -403797, "FY2023": -321887, "FY2022": -301973, "FY2021": -277741}), ("Profit for the year", {"FY2025": 81117, "FY2024": 16367, "FY2023": 49958, "FY2022": 40967, "FY2021": 58964})],
+    income_statement_unit=" (£'000)",
+    equity_changes_totals=[("Opening equity", {"FY2025": 405212, "FY2024": 415845, "FY2023": 415887, "FY2022": 409920, "FY2021": 405956}), ("Total comprehensive income for the year", {"FY2025": 81117, "FY2024": 16367, "FY2023": 49958, "FY2022": 40967, "FY2021": 58964}), ("Closing equity", {"FY2025": 1147348, "FY2024": 405212, "FY2023": 415845, "FY2022": 415887, "FY2021": 409920})],
+    equity_changes_unit=" (£'000)",
+)
 bw.save("/Users/armaan/code/katalysis/banks/RATHBONES INVESTMENT MANAGEMENT FINANCIALS.xlsx")

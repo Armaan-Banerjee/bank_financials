@@ -1,0 +1,546 @@
+/**
+ * Professional Chart Styles for UK Bank Insights Deliverable
+ * ==================================================================
+ * 
+ * Designed to replace the AI-generated inline SVG visualizations with 
+ * proper Plotly.js canvas-based charts and D3.js interactive graphs.
+ * 
+ * Key differences from current styling:
+ * 1. No inline styles - everything externalized
+ * 2. Professional font hierarchy using Inter + Playfair Display pairing
+ * 3. Consistent color palette for all chart elements
+ * 4. Hover states and cursor behavior defined across all charts
+ */
+
+/* ========== THEME CONFIGURATION ========== */
+
+:root {
+    /* Primary brand colors - London School of Banking aesthetics */
+    --color-primary: #001e42;           /* Deep Navy Blue */
+    --color-accent: #ce7a35;            /* Professional Gold */
+    
+    /* Chart color palette - professional financial data visualization */
+    --chart-1: #1b4bf7;                 /* Primary blue - main metric lines */
+    --chart-2: #1088c1;                 /* Secondary blue for comparisons */
+    --chart-3: #2c3e50;                 /* Slate-grey */
+    --chart-4: #56a4bd;                 /* Soft cyan accent */
+    --chart-5: #7abdf3;                 /* Lighter blue */
+    
+    /* Status colors - professional financial reporting standards */
+    --status-up: #1f682e;               /* Professional green (not just bright green) */
+    --status-down: #c9302d;             /* Warm crimson red */
+    --status-neutral: #555555;           /* Professional grey - not #9aa4ab */
+    
+    /* Typography hierarchy */
+    --font-heading-1: 'Playfair Display', Georgia, serif;  /* Elegant for main titles */
+    --font-heading-2: 'Inter', system-ui, sans-serif;     /* Clean for section headers */
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+                  sans-serif;
+}
+
+/* ========== BASE STYLES ========== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faf9f5;            /* Subtle paper-like tint */
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    margin: 0;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1366px; /* Financial report standard */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.06), /* Outer shadow */
+        0 0 0 1px rgba(0, 0, 0, 0.08);    /* Subtle depth */
+}
+
+/* ========== TYPOGRAPHY ========== */
+
+h1.charts-heading {
+    font-family: var(--font-heading-1);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    line-height: 1.15;
+}
+
+h2.charts-subheading {
+    font-family: var(--font-heading-2);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 28px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3.chart-label {
+    font-family: var(--font-heading-2);
+    color: var(--status-neutral);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sub-headline {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: #657982;
+    display: block;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+/* ========== CHART CONTAINER ========== */
+
+.chart-wrapper {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.06),
+        0 0 0 1px rgba(0, 0, 0, 0.08);
+    margin-bottom: 32px;
+}
+
+/* ========== CHART SPECIFIC STYLING ========== */
+
+#main-chart {
+    min-height: 450px;
+    width: 92%;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.plotly-graph-div {
+    background-color: #fff !important;
+}
+
+/* ========== TOGGLES & CONTROLS ========== */
+
+.controls-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.chart-controls select, 
+.chart-controls input {
+    background: transparent;
+    border: none;
+    color: var(--status-neutral);
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 10px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.controls-row select:focus {
+    outline: none;
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== LEGEND STYLING ========== */
+
+.legend-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.legend-dots {
+    margin-right: 16px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: #0a247d;
+}
+
+.color-dot {
+    width: 20px !important;
+    height: 8px !important;
+    border-radius: 2px !important;
+    background-color: var(--color-primary) !important;
+    margin-right: 12px;
+    vertical-align: top;
+}
+
+.bars-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    align-items: center;
+}
+
+.bar-group {
+    display: inline-flex;
+    align-items: flex-end;
+    height: 80px;
+    margin: 4px;
+    gap: -4px;
+    position: relative;
+}
+
+.bar-value {
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+    border-radius: 4px 4px 0 0;
+}
+
+/* ========== HOVER EFFECTS ========== */
+
+.hover-effect {
+    transition-all: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bar-bar:hover {
+    transform: scaleX(1.05);       /* Width effect on hover */
+    box-shadow: 
+        0 2px 6px rgba(0, 0, 0, 0.15),
+        0 0 4px var(--color-accent);  /* Subtle glow */
+}
+
+.hover-dots-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot-hover:hover {
+    box-shadow: 0 0 0 4px var(--chart-1, #1b4bf7);
+}
+
+/* ========== CURSOR STYLING ========== */
+
+.interactive-chart {
+    cursor: -webkit-grab;             /* Webkit styling for grab effect */
+    cursor: grab;                     /* Fallbacks */
+}
+
+.interactive-chart:hover {
+    cursor: -webkit-grabbing;          /* Hover state */
+    cursor: grabbing;                  /* Browser default */
+}
+
+.interactive-chart.is-interacting:hover {
+    cursor: crosshair;                 /* Crosshair for zoom interactions */
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.hover-line-hover {
+    transition-all: all 0.3s ease;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+    
+    .chart-wrapper {
+        padding: 24px 15px;
+    }
+    
+    h1.charts-heading {
+        font-size: 30px;
+    }
+    
+    .interactive-container {
+        overflow-x: auto;                   /* Allow chart scrolling */
+    }
+}
+
+/* ========== SCROLLBAR STYLING ========== */
+
+.chart-wrapper::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+    height: 10px;                        /* Width of vertical scrollbar */
+    background: #f2f4f6;                  /* Background of track */
+    border-radius: 5px;                    /* Radius for rounded look */
+}
+
+.chart-wrapper::-webkit-scrollbar-thumb,
+.container::-webkit-scrollbar-thumb {
+    background: #0a2e91;                 /* Color of thumb */
+    background-clip: padding-box;          /* Clip to inner radius */
+    border-radius: 5px;                    /* Roundness */
+}
+
+.chart-wrapper::-webkit-scrollbar-corner,
+.container::-webkit-scrollbar-corner {
+    background: #efefef;                  /* Background for corner area */
+}
+
+
+/* ========== PRINT STYLES ========== */
+
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .controls-row,
+    .legend-container,
+    .chart-controls section:not(:first-of-type) {
+        display: none !important;
+    }
+}
+
+
+/* ========== CHART SPECIFIC STYLING ========== */
+
+.bar-chart-wrapper {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.chart-bars-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 32px;
+    height: 200px;
+}
+
+/* ========== ANTHROPOMORPHIC STYLING ========== */
+
+.hover-effect {
+    transition: all 0.3s ease;
+    opacity: 1 !important;
+}
+
+.bar-bar:hover {
+    transform: scale(1.05);             /* Scale on hover (not width) */
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.1),
+        0 0 0 1px #64748b;              /* Slight border for depth */
+}
+
+/* ========== LINE CHARTS STYLING ========== */
+
+.line-chart-container {
+    position: relative;
+    overflow: visible;
+    background-color: #fff !important;
+}
+
+.scatter-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.scatter-marker {
+    width: 30px;
+    height: 45px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scatter-marker:hover {
+    transform: scale(1.12);              /* Bigger on hover (not smaller) */
+    opacity: 1;                      /* Maintain visibility */
+    cursor: grab;                    /* Change to grab state */
+}
+
+
+/* ========== TOOLTIP ELEMENTS ========== */
+
+.tooltip-container {
+    background-color: #fff !important;
+    min-width: 200px;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        0 0 0 1px var(--color-accent);
+    
+    margin-top: 20px;
+}
+
+/* ========== FOCUS STATES ========== */
+
+.chart-container:focus-within {
+    outline: 2px solid #89b5c4 !important;
+    outline-offset: 2px;
+}
+
+
+/* ========== ANIMATION STYLING ========== */
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
+}
+
+.chart-wrapper:hover {
+    animation: pulse 2s ease-in-out infinite;   /* Subtle fade effect */
+}
+
+
+/* ========== COLOR PALETTE DEFINITIONS ========== */
+
+/* Main metric colors - consistent across all bars/lines */
+.metric-blue-bar {
+    background-color: #1b4bf7 !important;          /* Primary chart blue */
+}
+
+.metric-green-bar {
+    background-color: #1f682e !important;          /* Professional green */
+}
+
+.metric-orange-bar {
+    background-color: #ce7a35 !important;         /* Gold accent */
+}
+
+.metric-dark-red-bar {
+    background-color: #c9302d !important;      /* Not bright red, professional */
+}
+
+
+/* ========== CHART AXIS STYLING ========== */
+
+.axis-marker-line {
+    opacity: 0.1;
+}
+
+
+/* ========== CHART TITLE SECTION ========== */
+
+.chart-title-container {
+    max-width: 80%;
+    margin-bottom: 24px;
+}
+
+.chart-title-subtitle {
+    font-family: var(--font-body);
+    color: #a1aeb3;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+/* ========== CHART FOOTER STYLING ========== */
+
+.chart-footer-info {
+            background: linear-gradient(to right, #f8eaff 0%, #f7f3fc 100%);
+            padding: 16px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            display: inline-block;
+}
+
+.chart-footer-header {
+    color: var(--status-neutral);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+/* ========== DATA SOURCE LINK STYLING ========== */
+
+.data-source {
+    margin-top: 20px;
+    border: none;
+    padding: 8px 14px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--status-neutral);
+}
+
+.data-source:hover {
+    background-color: rgba(0, 30, 66, 0.1);
+}
+
+
+/* ========== CHART ANNOTATION STYLING ========== */
+
+.chart-annotation {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: var(--status-neutral);
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+
+            /* Professional annotation style */
+            min-width: 280px;
+            max-width: 350px;
+}
+
+.chart-annotation:hover {
+    transform: translateY(-2px);  /* Subtle lift on hover */
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ========== GRADIENT STYLING ========== */
+
+.gradient-bar {
+    background: linear-gradient(to right, #e8ebef 0%, #edf2fa 50%);
+    box-shadow: 
+        4px -1px 12px rgba(39, 68, 97, 0.1),
+        0 0 0 1px #8a99ad;
+}
+
+.chart-group {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 
+        4px -1px 14px rgba(39, 68, 97, 0.08),
+        0 0 0 1px #a7b5d0;
+}
+
+.chart-header {
+    background-color: var(--color-primary);
+    color: #fff !important;
+    padding: 24px 32px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+
+/* ========== CHART GRID LINES STYLING ========== */
+
+.grid-line, .y-axis-tick {
+            color: #666;
+            font-weight: 400;
+        }

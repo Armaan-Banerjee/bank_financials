@@ -70,6 +70,271 @@ def p3_sources(extra=""):
 
 bw = BankWorkbook(bank_name="Crown Agents Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="A9152C")
 
+STATEMENTS_ENTITY_NOTE = (
+    ENTITY_NOTE
+    + "\n\nRESTATEMENT (Balance Sheet/Equity): FY2021's own originally-published Total Assets/Total "
+    "equity (£1,311,970k/£75,204k) differ slightly from FY2022's own Annual Report's FY2021 comparative "
+    "(£1,312,701k/£75,150k, a £731k/£54k gap) - the same restatement already documented on the Cash Flow "
+    "Statement (Note 28). FY2021's own originally-published Profit for the financial year (£8,658k) "
+    "likewise differs from FY2022's own comparative (£8,714k, a £56k gap). Per project convention, each "
+    "year's own originally-published figures are used throughout, not later restated comparatives - this "
+    "creates a genuine, documented (not force-reconciled) £54k discontinuity between the FY2021 and FY2022 "
+    "columns of the Statement of Changes in Equity.\n\n"
+    "PRESENTATION NOTE: FY2021's own Balance Sheet ('Balance Sheet') and Profit and Loss Account use "
+    "different line-item structure and terminology than FY2022 onward's IFRS-style 'Statement of Financial "
+    "Position'/'Statement of Profit or Loss' (e.g. FY2021 has no separate 'Loans and advances to customers', "
+    "'Unsettled transactions', 'Right of use assets', or 'Current tax asset' lines - some of these may be "
+    "folded into other lines that year, some genuinely didn't exist yet). FY2021's Profit and Loss Account "
+    "also predates the Revenue/Total-income structure used FY2022 onward. FY2024's Investment in debt "
+    "securities was reclassified from a single amortised-cost line into separate amortised-cost and FVOCI "
+    "lines from FY2025 onward, following the FY2025 report's own presentation. Blank cells indicate that "
+    "year's own report did not disclose that specific line at that granularity."
+)
+
+STATEMENTS_SOURCES = (
+    "Sources - Crown Agents Bank Limited's own Balance Sheet / Statement of Financial Position, Profit and "
+    "Loss Account / Statement of Profit or Loss, and Statement of Changes in Equity, transcribed from each "
+    "year's own report (not a later year's comparative column):\n"
+    f"FY2025/FY2024: Annual Report and Financial Statements 2025, pp.53-56 - {AR2025_URL}\n"
+    f"FY2023 (and FY2022's own comparative used only for FY2022's balance sheet where FY2022's own report "
+    f"is not more direct): Annual Report and Financial Statements 2023, pp.55-58 - {AR2023_URL}\n"
+    f"FY2022 (own originally-published figures): Annual Report and Financial Statements 2022, pp.36-40 - "
+    f"{AR2022_URL}\n"
+    f"FY2021 (own originally-published figures, not FY2022's restated comparative): Annual Report and "
+    f"Financial Statements 2021, pp.34-37 - {AR2021_URL}\n\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Crown Agents Bank Limited's own Credit Risk note (IFRS 9 staging), Bank-solo basis:\n"
+    f"FY2025/FY2024: Annual Report and Financial Statements 2025, Note 31(v) 'Breakdown as a function of "
+    f"staging', p.121-122 (on-balance-sheet maximum exposure per stage and total ECL) - {AR2025_URL}\n"
+    f"FY2023/FY2022: Annual Report and Financial Statements 2023, Note 31(v), p.138-139 (total maximum "
+    f"exposure per stage and total ECL, on- and off-balance-sheet combined) - {AR2023_URL}\n"
+    "FY2021: no IFRS 9 staging/expected-credit-loss table was located in the FY2021 Annual Report (it "
+    "predates the Bank's IFRS-style statement presentation adopted from FY2022 onward, and its own P&L "
+    "shows a nominal 'Write-off of doubtful debts' rather than an ECL/staging disclosure) - confirmed "
+    "absent by checking, not assumed; left blank rather than guessed.\n\n"
+    + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks",
+     {"FY2025": 257867, "FY2024": 584679, "FY2023": 528396, "FY2022": 607358, "FY2021": 676492}),
+    ("DATA", "Money market funds",
+     {"FY2025": 218157, "FY2024": 488197, "FY2023": 518764, "FY2022": 209486, "FY2021": 336737}),
+    ("DATA", "Loans and advances on demand to banks",
+     {"FY2025": 127035, "FY2024": 184683, "FY2023": 132447, "FY2022": 89957, "FY2021": 105592}),
+    ("DATA", "Other loans and advances to banks",
+     {"FY2025": 274956, "FY2024": 180095, "FY2023": 137569, "FY2022": 91691, "FY2021": 74030}),
+    ("DATA", "Loans and advances to customers / non-banks",
+     {"FY2025": 21521, "FY2024": 32564, "FY2023": 8216, "FY2022": 4748}),
+    ("DATA", "Investments in debt securities, at amortised cost",
+     {"FY2025": 234790, "FY2024": 246021, "FY2023": 353028, "FY2022": 414061, "FY2021": 73249}),
+    ("DATA", "Investment in debt securities, at fair value through OCI",
+     {"FY2025": 442751}),
+    ("DATA", "Investments in equity securities",
+     {"FY2025": 679, "FY2024": 553, "FY2023": 495, "FY2022": 488, "FY2021": 341}),
+    ("DATA", "Derivative financial assets",
+     {"FY2025": 489, "FY2024": 4884, "FY2023": 3829, "FY2022": 6589, "FY2021": 1641}),
+    ("DATA", "Unsettled transactions",
+     {"FY2025": 8900, "FY2024": 10866, "FY2023": 8417, "FY2022": 12960}),
+    ("DATA", "Investments in subsidiary undertakings",
+     {"FY2025": 4476, "FY2024": 1899}),
+    ("DATA", "Current tax asset",
+     {"FY2025": 8839, "FY2024": 9386}),
+    ("DATA", "Other assets",
+     {"FY2025": 27071, "FY2024": 29352, "FY2023": 34653, "FY2022": 24022, "FY2021": 19902}),
+    ("DATA", "Accrued income",
+     {"FY2025": 2033, "FY2024": 925, "FY2023": 1217, "FY2022": 857}),
+    ("DATA", "Prepayments and accrued income",
+     {"FY2021": 3646}),
+    ("DATA", "Property, plant and equipment / tangible fixed assets",
+     {"FY2025": 2188, "FY2024": 2679, "FY2023": 1177, "FY2022": 1568, "FY2021": 2043}),
+    ("DATA", "Right of use assets",
+     {"FY2025": 14977, "FY2024": 16830, "FY2023": 689, "FY2022": 1134}),
+    ("DATA", "Intangible assets",
+     {"FY2025": 23840, "FY2024": 24398, "FY2023": 19084, "FY2022": 17523, "FY2021": 18297}),
+    ("TOTAL", "Total assets",
+     {"FY2025": 1670569, "FY2024": 1818011, "FY2023": 1747981, "FY2022": 1482442, "FY2021": 1311970}),
+
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer accounts",
+     {"FY2025": 1441097, "FY2024": 1589481, "FY2023": 1546632, "FY2022": 1310809, "FY2021": 1194682}),
+    ("DATA", "Derivative financial liabilities",
+     {"FY2025": 1384, "FY2024": 539, "FY2023": 9679, "FY2022": 4565, "FY2021": 7669}),
+    ("DATA", "Unsettled transactions",
+     {"FY2025": 20772, "FY2024": 35173, "FY2023": 20081, "FY2022": 25782}),
+    ("DATA", "Other liabilities",
+     {"FY2025": 6725, "FY2024": 12818, "FY2023": 18255, "FY2022": 11314, "FY2021": 26193}),
+    ("DATA", "Accruals / accruals and deferred income",
+     {"FY2025": 13529, "FY2024": 9160, "FY2023": 17315, "FY2022": 18368, "FY2021": 8222}),
+    ("DATA", "Lease liabilities",
+     {"FY2025": 18281, "FY2024": 17076, "FY2023": 884, "FY2022": 1281}),
+    ("DATA", "Deferred tax liability",
+     {"FY2025": 928, "FY2024": 1217, "FY2023": 695, "FY2022": 316}),
+    ("DATA", "Provisions",
+     {"FY2025": 2054, "FY2024": 1949, "FY2023": 236, "FY2022": 79}),
+    ("TOTAL", "Total liabilities",
+     {"FY2025": 1504770, "FY2024": 1667413, "FY2023": 1613777, "FY2022": 1372514, "FY2021": 1236766}),
+
+    ("SECTION", "Equity", {}),
+    ("DATA", "Called up share capital",
+     {"FY2025": 41200, "FY2024": 41200, "FY2023": 41200, "FY2022": 41200, "FY2021": 41200}),
+    ("DATA", "Retained earnings",
+     {"FY2025": 124563, "FY2024": 109264, "FY2023": 92885, "FY2022": 68624, "FY2021": 34004}),
+    ("DATA", "Investment revaluation reserve",
+     {"FY2025": 207, "FY2024": 134, "FY2023": 119, "FY2022": 104}),
+    ("DATA", "Debt securities revaluation reserve",
+     {"FY2025": 73}),
+    ("DATA", "Cash flow hedge reserve",
+     {"FY2025": -244}),
+    ("TOTAL", "Total equity / shareholders' funds",
+     {"FY2025": 165799, "FY2024": 150598, "FY2023": 134204, "FY2022": 109928, "FY2021": 75204}),
+    ("TOTAL", "Total liabilities and equity",
+     {"FY2025": 1670569, "FY2024": 1818011, "FY2023": 1747981, "FY2022": 1482442, "FY2021": 1311970}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Crown Agents Bank Limited — Balance Sheet",
+    subtitle="Bank-solo basis, £'000. See source note at bottom (genuine restatement and presentation changes documented).",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=88,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income",
+     {"FY2025": 55772, "FY2024": 58831, "FY2023": 52309, "FY2022": 17163, "FY2021": 3584}),
+    ("DATA", "Interest expense",
+     {"FY2025": -29770, "FY2024": -38403, "FY2023": -30854, "FY2022": -10398, "FY2021": -1376}),
+    ("TOTAL", "Net interest income",
+     {"FY2025": 26002, "FY2024": 20428, "FY2023": 21455, "FY2022": 6765, "FY2021": 2208}),
+    ("DATA", "Gains on money market funds",
+     {"FY2025": 14688, "FY2024": 16070, "FY2023": 11034, "FY2022": 3585}),
+    ("DATA", "Net (loss)/gain on financial instruments at FVTPL",
+     {"FY2025": -1616, "FY2024": -247, "FY2023": 1232, "FY2022": 1009}),
+    ("DATA", "Fees and commission income",
+     {"FY2025": 16429, "FY2024": 15835, "FY2023": 14647, "FY2022": 15831, "FY2021": 11755}),
+    ("DATA", "Net foreign exchange gain",
+     {"FY2025": 61965, "FY2024": 53797, "FY2023": 88742, "FY2022": 82682, "FY2021": 39133}),
+    ("DATA", "Write-off of doubtful debts",
+     {"FY2021": -38}),
+    ("DATA", "Other operating income/(loss)",
+     {"FY2025": 735, "FY2024": 616, "FY2023": 313, "FY2022": -484, "FY2021": 347}),
+    ("TOTAL", "Total income / operating income",
+     {"FY2025": 118203, "FY2024": 106499, "FY2023": 137423, "FY2022": 109388, "FY2021": 53405}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Operating expenses (recurring + non-recurring / before & after non-underlying items)",
+     {"FY2025": -97050, "FY2024": -85931, "FY2023": -79472, "FY2022": -64357}),
+    ("DATA", "Administrative expenses",
+     {"FY2021": -37122}),
+    ("DATA", "Amortisation",
+     {"FY2021": -4775}),
+    ("DATA", "Depreciation",
+     {"FY2021": -836}),
+    ("DATA", "Other finance costs",
+     {"FY2025": -1339, "FY2024": -876}),
+    ("DATA", "Impairment reversal/(loss) on financial assets at amortised cost",
+     {"FY2025": 154, "FY2024": 377, "FY2023": -454, "FY2022": -329}),
+    ("TOTAL", "Profit before taxation",
+     {"FY2025": 19968, "FY2024": 20069, "FY2023": 57497, "FY2022": 44702, "FY2021": 10672}),
+    ("DATA", "Tax expense",
+     {"FY2025": -5459, "FY2024": -4678, "FY2023": -14708, "FY2022": -10444, "FY2021": -2014}),
+    ("TOTAL", "Profit for the year",
+     {"FY2025": 14509, "FY2024": 15391, "FY2023": 42789, "FY2022": 34258, "FY2021": 8658}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Movement in investment revaluation reserve (equity instruments at FVOCI)",
+     {"FY2025": 98, "FY2024": 20, "FY2023": 27, "FY2022": 88}),
+    ("DATA", "Cash flow hedge reserve movement",
+     {"FY2025": -244}),
+    ("DATA", "Movement in debt securities at fair value through OCI",
+     {"FY2025": 73}),
+    ("DATA", "Income tax relating to these items",
+     {"FY2025": -25, "FY2024": -5, "FY2023": -12, "FY2022": -17}),
+    ("TOTAL", "Other comprehensive income, net of tax",
+     {"FY2025": -98, "FY2024": 15, "FY2023": 15, "FY2022": 71}),
+    ("TOTAL", "Total comprehensive income for the year",
+     {"FY2025": 14411, "FY2024": 15406, "FY2023": 42804, "FY2022": 34329, "FY2021": 8658}),
+]
+
+bw.add_income_statement_sheet(
+    title="Crown Agents Bank Limited — Profit & Loss",
+    subtitle="Bank-solo basis, £'000. See source note at bottom (genuine presentation changes documented).",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=88,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+equity_headers = ["Share capital", "Retained earnings", "Investment revaluation reserve",
+                   "Debt securities revaluation reserve", "Cash flow hedge reserve", "Total"]
+equity_rows = [
+    ("TOTAL", "At 1 January 2021 (own report)", (41200, 25088, None, None, None, 66288)),
+    ("DATA", "Profit for the financial year", (None, 8658, None, None, None, 8658)),
+    ("DATA", "Share based payment expense", (None, 258, None, None, None, 258)),
+    ("TOTAL", "At 31 December 2021", (41200, 34004, None, None, None, 75204)),
+
+    ("TOTAL", "At 1 January 2022 (own report - see restatement note re: FY2021 close)",
+     (41200, 33917, 33, None, None, 75150)),
+    ("DATA", "Profit for the year", (None, 34258, None, None, None, 34258)),
+    ("DATA", "Movement in investment revaluation reserve", (None, None, 88, None, None, 88)),
+    ("DATA", "Income tax relating to these items", (None, None, -17, None, None, -17)),
+    ("DATA", "Share based payment expense", (None, 449, None, None, None, 449)),
+    ("TOTAL", "At 31 December 2022", (41200, 68624, 104, None, None, 109928)),
+
+    ("TOTAL", "At 1 January 2023", (41200, 68624, 104, None, None, 109928)),
+    ("DATA", "Profit for the year", (None, 42789, None, None, None, 42789)),
+    ("DATA", "Movement in investment revaluation reserve", (None, None, 27, None, None, 27)),
+    ("DATA", "Income tax relating to these items", (None, None, -12, None, None, -12)),
+    ("DATA", "Share based payment expense", (None, 972, None, None, None, 972)),
+    ("DATA", "Dividends declared", (None, -19500, None, None, None, -19500)),
+    ("TOTAL", "At 31 December 2023", (41200, 92885, 119, None, None, 134204)),
+
+    ("TOTAL", "At 1 January 2024", (41200, 92885, 119, None, None, 134204)),
+    ("DATA", "Profit for the year", (None, 15391, None, None, None, 15391)),
+    ("DATA", "Movement in investment revaluation reserve", (None, None, 20, None, None, 20)),
+    ("DATA", "Income tax relating to these items", (None, None, -5, None, None, -5)),
+    ("DATA", "Share based payment expense", (None, 988, None, None, None, 988)),
+    ("DATA", "Dividends declared", (None, 0, None, None, None, 0)),
+    ("TOTAL", "At 31 December 2024", (41200, 109264, 134, None, None, 150598)),
+
+    ("TOTAL", "At 1 January 2025", (41200, 109264, 134, None, None, 150598)),
+    ("DATA", "Profit for the year", (None, 14509, None, None, None, 14509)),
+    ("DATA", "Movement in investment revaluation reserve", (None, None, 98, None, None, 98)),
+    ("DATA", "Cash flow hedge reserve", (None, None, None, None, -244, -244)),
+    ("DATA", "Movement in debt securities at fair value through OCI", (None, None, None, 73, None, 73)),
+    ("DATA", "Income tax relating to these items", (None, None, -25, None, None, -25)),
+    ("DATA", "Share-based payment expense", (None, 620, None, None, None, 620)),
+    ("DATA", "Deferred tax on share-based payment expense", (None, 170, None, None, None, 170)),
+    ("TOTAL", "At 31 December 2025", (41200, 124563, 207, 73, -244, 165799)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Crown Agents Bank Limited — Statement of Changes in Equity",
+    subtitle="Bank-solo basis, £'000, chronological (oldest to newest). See source note at bottom - a genuine "
+              "£54k restatement gap exists between the FY2021 and FY2022 columns (documented, not plugged).",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=58,
+    source_height=340,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -119,6 +384,41 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=78,
     source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Maximum credit exposure by IFRS 9 stage (on- and off-balance sheet)", {}),
+    ("DATA", "Stage 1 exposure",
+     {"FY2025": 1400040, "FY2024": 1242511, "FY2023": 1203697, "FY2022": 1290241}),
+    ("DATA", "Stage 2 exposure",
+     {"FY2025": 6097, "FY2024": 61435, "FY2023": 25033, "FY2022": 1163}),
+    ("DATA", "Stage 3 exposure",
+     {"FY2025": 94, "FY2024": 94, "FY2023": 184, "FY2022": 0}),
+    ("TOTAL", "Total maximum credit exposure",
+     {"FY2025": 1406231, "FY2024": 1304040, "FY2023": 1228914, "FY2022": 1291404}),
+    ("DATA", "Total expected credit loss (ECL) allowance",
+     {"FY2025": 324, "FY2024": 475, "FY2023": 854, "FY2022": 400}),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "Stage 3 / total exposure ratio",
+     {"FY2025": "0.007%", "FY2024": "0.007%", "FY2023": "0.015%", "FY2022": "0.000%"}),
+    ("DATA", "Total ECL / total exposure (overall coverage)",
+     {"FY2025": "0.023%", "FY2024": "0.036%", "FY2023": "0.069%", "FY2022": "0.031%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Crown Agents Bank Limited — Asset Quality",
+    subtitle="Bank-solo basis, £'000 (ratios as calculated). This is a treasury/correspondent-banking-led "
+              "balance sheet with minimal customer lending - the credit risk note covers all financial "
+              "asset classes (cash, interbank placements, debt securities, loans and advances), not "
+              "customer loans alone. See source note at bottom.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=58,
+    source_height=280,
     unit_suffix=" (£'000)",
 )
 
@@ -174,6 +474,23 @@ metric("Total Capital", "£'000 (= CET1 Capital; no Tier 2 instruments)", [("Tot
        p3_sources(), note=CET1_CAPITAL_NOTE)
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", CET1_RATIO)], p3_sources())
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", RWA)], p3_sources(), note=RWA_NOTE)
+
+RWA_BREAKDOWN_NOTE = (
+    "Not publicly disclosed in any of the 5 years reviewed - each year's own Pillar 3 document's UK KM1 "
+    "Key Metrics table (and, for FY2025, the narrative on Regulatory Capital and RWAs) discloses only the "
+    "aggregate Total RWA figure, with no risk-category (credit/counterparty credit/market/operational risk) "
+    "breakdown table found - confirmed by reading each document's Key Metrics, Credit Risk, Market Risk and "
+    "Operational Risk sections in full, not assumed absent."
+)
+bw.add_rwa_breakdown_sheet(
+    title="Crown Agents Bank Limited — RWA Breakdown",
+    subtitle="Not publicly disclosed. See source note at bottom.",
+    rows=[("DATA", "Not publicly disclosed", {})],
+    sources_text=p3_sources() + "\n\n" + RWA_BREAKDOWN_NOTE,
+    first_col_width=54,
+    source_height=280,
+)
+
 metric("Leverage Ratio", "%, excluding claims on central banks", [("Leverage ratio", LEVERAGE_RATIO)], p3_sources())
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)], p3_sources(), note=LIQUIDITY_BASIS_NOTE)
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], p3_sources(), note=LIQUIDITY_BASIS_NOTE)
@@ -188,6 +505,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 1670569, "FY2024": 1818011, "FY2023": 1747981, "FY2022": 1482442, "FY2021": 1311970}),
+        ("Loans and advances to customers / non-banks", {"FY2025": 21521, "FY2024": 32564, "FY2023": 8216, "FY2022": 4748}),
+        ("Customer accounts", {"FY2025": 1441097, "FY2024": 1589481, "FY2023": 1546632, "FY2022": 1310809, "FY2021": 1194682}),
+        ("Total equity / shareholders' funds", {"FY2025": 165799, "FY2024": 150598, "FY2023": 134204, "FY2022": 109928, "FY2021": 75204}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total income / operating income", {"FY2025": 118203, "FY2024": 106499, "FY2023": 137423, "FY2022": 109388, "FY2021": 53405}),
+        ("Operating expenses", {"FY2025": -97050, "FY2024": -85931, "FY2023": -79472, "FY2022": -64357, "FY2021": -42733}),
+        ("Profit for the year", {"FY2025": 14509, "FY2024": 15391, "FY2023": 42789, "FY2022": 34258, "FY2021": 8658}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 150598, "FY2024": 134204, "FY2023": 109928, "FY2022": 75150, "FY2021": 66288}),
+        ("Total comprehensive income for the year", {"FY2025": 14411, "FY2024": 15406, "FY2023": 42804, "FY2022": 34329, "FY2021": 8658}),
+        ("Other equity movements, net", {"FY2025": 790, "FY2024": 988, "FY2023": -18528, "FY2022": 449, "FY2021": 258}),
+        ("Closing equity", {"FY2025": 165799, "FY2024": 150598, "FY2023": 134204, "FY2022": 109928, "FY2021": 75204}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash (used in)/generated from operating activities",
          {"FY2025": -618716, "FY2024": 87381, "FY2023": 294763, "FY2022": -252244, "FY2021": 318950}),

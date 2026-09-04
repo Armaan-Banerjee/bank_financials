@@ -97,6 +97,164 @@ def p3_sources(extra=""):
 
 bw = BankWorkbook(bank_name="Cambridge & Counties Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="390062")
 
+STATEMENTS_SOURCES = (
+    "Sources - Cambridge & Counties Bank Limited's own Income Statement / Balance Sheet / Statement of Changes "
+    "in Equity (Bank-only basis, no subsidiaries):\n"
+    f"FY2025: Annual Report 2025, pp.55-57 (own year) - {AR2025_URL}\n"
+    f"FY2024: Annual Report 2025, pp.55-57 (FY2024 comparative column); cross-checked against Annual Report "
+    f"2024's own FY2024 figures, p.80-81 (exact match) - {AR2025_URL}\n"
+    f"FY2023: Annual Report 2024, pp.80-81 (FY2023 comparative column) - {AR2024_URL}\n"
+    f"FY2022: Annual Report 2022 (accounts to 31 Dec 2022), pp.85-86 (own year) - {AR2022_URL}\n"
+    f"FY2021: Annual Report 2022, pp.85-86 (FY2021 comparative column) - {AR2022_URL}\n"
+    + ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Cambridge & Counties Bank Limited's own Note 15 (Loans and advances to customers) and Note 16 "
+    "(Allowance for impairment losses):\n"
+    f"FY2025/FY2024: Annual Report 2025, p.66-67 - {AR2025_URL}\n"
+    f"FY2023: Annual Report 2024, Note 16 (Allowance for impairment losses), p.47's 'Gross loan balances by "
+    f"Stage 2023' table, 'Closing Balance at 31 December 2023' row - {AR2024_URL}\n"
+    f"FY2022/FY2021: Annual Report 2022, pp.48-49 - {AR2022_URL}\n"
+    "Gross/net loan figures per the Balance Sheet above; the loan loss provision is disclosed by full IFRS 9 "
+    "stage (Stage 1/2/3) in every year's own Note 16 - shown as negative (a deduction from gross loans). The "
+    "loan loss provision credit/(charge) for the year is the P&L's own 'Impairment release/(losses) on loans "
+    "and advances to customers' line.\n"
+    + ENTITY_NOTE
+)
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Cambridge & Counties Bank Limited's own Pillar 3 Disclosures, Table 2 ('Overview of risk weighted "
+    "exposure amounts'):\n"
+    f"FY2024: Pillar 3 Disclosures 2024 (own year, 31-Dec-24 column) - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023 (own year, 31-Dec-23 column) - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, p.19 (own year, 31-Dec-22 column) - {P3_2022_URL}\n"
+    f"FY2021: Pillar 3 Disclosures 2022, p.19 (31-Dec-21 comparative column) - {P3_2022_URL}\n"
+    "FY2025: not publicly disclosed - no standalone Pillar 3 document has been published yet for FY2025 (same "
+    "gap as the other Pillar 3 metric sheets this year).\n"
+    "Table 2 in the 2023/2024 Pillar 3 Disclosures is a .docx-embedded image (not text/a real table) - extracted "
+    "by rendering the embedded image. All 4 years' Total row ties exactly to the Total RWAs sheet's own figure "
+    "for that year.\n"
+    + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 282554, "FY2024": 292850, "FY2023": 302473, "FY2022": 286680, "FY2021": 240158}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 11034, "FY2024": 12139, "FY2023": 10420, "FY2022": 13931, "FY2021": 12293}),
+    ("DATA", "Debt securities", {"FY2025": 151065, "FY2024": 65137, "FY2023": 47409, "FY2022": 30412, "FY2021": 37137}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 1446075, "FY2024": 1204444, "FY2023": 1083278, "FY2022": 1037710, "FY2021": 977834}),
+    ("DATA", "Derivative financial assets", {"FY2025": 0, "FY2024": 149, "FY2023": 0}),
+    ("DATA", "Other assets and prepayments", {"FY2025": 1534, "FY2024": 1443, "FY2023": 2526, "FY2022": 2573, "FY2021": 2091}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 1398, "FY2024": 1700, "FY2023": 2026, "FY2022": 2366, "FY2021": 2587}),
+    ("DATA", "Intangible assets", {"FY2025": 3089, "FY2024": 2277, "FY2023": 1869, "FY2022": 1774, "FY2021": 1589}),
+    ("DATA", "Current tax asset", {"FY2025": 1276, "FY2024": 689, "FY2023": 0, "FY2022": 0, "FY2021": 407}),
+    ("DATA", "Deferred tax asset", {"FY2025": 608, "FY2024": 907, "FY2023": 721, "FY2022": 1099, "FY2021": 775}),
+    ("TOTAL", "Total assets", {"FY2025": 1898633, "FY2024": 1581735, "FY2023": 1450722, "FY2022": 1376545, "FY2021": 1274871}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customers' accounts", {"FY2025": 1633601, "FY2024": 1271824, "FY2023": 1155224, "FY2022": 1103256, "FY2021": 1025520}),
+    ("DATA", "Central Bank facilities", {"FY2025": 0, "FY2024": 55000, "FY2023": 65000, "FY2022": 78000, "FY2021": 78000}),
+    ("DATA", "Subordinated debt liability", {"FY2025": 4840, "FY2024": 4800, "FY2023": 4751}),
+    ("DATA", "Derivative financial liabilities", {"FY2025": 3087, "FY2024": 0, "FY2023": 652, "FY2022": 1010, "FY2021": 254}),
+    ("DATA", "Provisions", {"FY2025": 0, "FY2024": 750}),
+    ("DATA", "Other liabilities and accruals", {"FY2025": 8462, "FY2024": 9277, "FY2023": 9628, "FY2022": 9107, "FY2021": 7280}),
+    ("DATA", "Current tax liability", {"FY2025": 0, "FY2024": 0, "FY2023": 689, "FY2022": 326, "FY2021": 0}),
+    ("TOTAL", "Total liabilities", {"FY2025": 1649990, "FY2024": 1341651, "FY2023": 1235944, "FY2022": 1191699, "FY2021": 1111054}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 44955, "FY2024": 44955, "FY2023": 44955, "FY2022": 44955, "FY2021": 44955}),
+    ("DATA", "Contingent convertible loan notes", {"FY2025": 22900, "FY2024": 22900, "FY2023": 22900, "FY2022": 22900, "FY2021": 22900}),
+    ("DATA", "Fair value through other comprehensive income reserve", {"FY2025": 77, "FY2024": -274, "FY2023": -376, "FY2022": -1209, "FY2021": -475}),
+    ("DATA", "Retained earnings", {"FY2025": 180711, "FY2024": 172503, "FY2023": 147299, "FY2022": 118200, "FY2021": 96437}),
+    ("TOTAL", "Total equity", {"FY2025": 248643, "FY2024": 240084, "FY2023": 214778, "FY2022": 184846, "FY2021": 163817}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 1898633, "FY2024": 1581735, "FY2023": 1450722, "FY2022": 1376545, "FY2021": 1274871}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Cambridge & Counties Bank Limited — Balance Sheet",
+    subtitle="Bank-only basis (no subsidiaries), £'000. See source note at bottom.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=88,
+    source_height=260,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income calculated using the effective interest rate", {"FY2025": 130181, "FY2024": 128313, "FY2023": 116023, "FY2022": 75977, "FY2021": 55335}),
+    ("DATA", "Interest expense", {"FY2025": -59341, "FY2024": -54838, "FY2023": -40172, "FY2022": -16753, "FY2021": -10408}),
+    ("TOTAL", "Net interest income", {"FY2025": 70840, "FY2024": 73475, "FY2023": 75851, "FY2022": 59224, "FY2021": 44927}),
+    ("DATA", "Other income", {"FY2025": 376, "FY2024": 126, "FY2023": 553, "FY2022": 28, "FY2021": 23}),
+    ("TOTAL", "Total operating income", {"FY2025": 71216, "FY2024": 73601, "FY2023": 76404, "FY2022": 59252, "FY2021": 44950}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Administrative expenses", {"FY2025": -32390, "FY2024": -31772, "FY2023": -27287, "FY2022": -25034, "FY2021": -21965}),
+    ("DATA", "Depreciation and amortisation", {"FY2025": -1122, "FY2024": -1077, "FY2023": -944, "FY2022": -906, "FY2021": -971}),
+    ("TOTAL", "Operating profit before impairment losses", {"FY2025": 37704, "FY2024": 40752, "FY2023": 48173, "FY2022": 33312, "FY2021": 22014}),
+    ("DATA", "Impairment release/(losses) on loans and advances to customers", {"FY2025": 1967, "FY2024": -4932, "FY2023": -7263, "FY2022": -4773, "FY2021": -3524}),
+    ("TOTAL", "Profit before tax", {"FY2025": 39671, "FY2024": 35820, "FY2023": 40910, "FY2022": 28539, "FY2021": 18490}),
+    ("DATA", "Taxation charge", {"FY2025": -9179, "FY2024": -8157, "FY2023": -9620, "FY2022": -5337, "FY2021": -3024}),
+    ("TOTAL", "Profit after tax", {"FY2025": 30492, "FY2024": 27663, "FY2023": 31290, "FY2022": 23202, "FY2021": 15466}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Fair value movements taken to reserves", {"FY2025": 455, "FY2024": 150, "FY2023": 1111, "FY2022": -1233, "FY2021": -411}),
+    ("DATA", "Taxation", {"FY2025": -104, "FY2024": -48, "FY2023": -278, "FY2022": 499, "FY2021": -90}),
+    ("TOTAL", "Total other comprehensive income/(expense), net of tax", {"FY2025": 351, "FY2024": 102, "FY2023": 833, "FY2022": -734, "FY2021": -501}),
+    ("TOTAL", "Total comprehensive income attributable to owners of the Bank", {"FY2025": 30843, "FY2024": 27765, "FY2023": 32123, "FY2022": 22468, "FY2021": 14965}),
+]
+
+bw.add_income_statement_sheet(
+    title="Cambridge & Counties Bank Limited — Profit & Loss",
+    subtitle="Bank-only basis (no subsidiaries), £'000. All profit for the year arises from continuing "
+              "operations. See source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=88,
+    source_height=260,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+equity_headers = ["Share capital", "Contingent convertible loan notes", "FVOCI reserve", "Retained earnings", "Total"]
+equity_rows = [
+    ("TOTAL", "At 1 January 2021", (44955, 22900, 26, 82254, 150135)),
+    ("DATA", "Profit for the year", (None, None, None, 15466, 15466)),
+    ("DATA", "Other comprehensive expense", (None, None, -501, None, -501)),
+    ("DATA", "Total comprehensive income for the period (FY2021)", (None, None, -501, 15466, 14965)),
+    ("DATA", "Convertible loan note interest", (None, None, None, -1283, -1283)),
+    ("TOTAL", "At 31 December 2021", (44955, 22900, -475, 96437, 163817)),
+    ("DATA", "Total comprehensive income for the period (FY2022)", (None, None, -734, 23202, 22468)),
+    ("DATA", "Convertible loan note interest", (None, None, None, -1439, -1439)),
+    ("TOTAL", "At 31 December 2022", (44955, 22900, -1209, 118200, 184846)),
+    ("DATA", "Total comprehensive income for the period (FY2023)", (None, None, 833, 31290, 32123)),
+    ("DATA", "Convertible loan note interest", (None, None, None, -2191, -2191)),
+    ("TOTAL", "At 31 December 2023", (44955, 22900, -376, 147299, 214778)),
+    ("DATA", "Total comprehensive income for the period (FY2024)", (None, None, 102, 27663, 27765)),
+    ("DATA", "Convertible loan note interest", (None, None, None, -2459, -2459)),
+    ("TOTAL", "At 31 December 2024", (44955, 22900, -274, 172503, 240084)),
+    ("DATA", "Total comprehensive income for the period (FY2025)", (None, None, 351, 30492, 30843)),
+    ("DATA", "Dividend paid", (None, None, None, -20000, -20000)),
+    ("DATA", "Convertible loan note interest", (None, None, None, -2284, -2284)),
+    ("TOTAL", "At 31 December 2025", (44955, 22900, 77, 180711, 248643)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Cambridge & Counties Bank Limited — Statement of Changes in Equity",
+    subtitle="Bank-only basis (no subsidiaries), £'000, chronological (oldest to newest). All totals reconcile "
+              "exactly, no plug rows needed (real audited data). See source note at bottom.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=58,
+    source_height=260,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -146,6 +304,33 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Loan book", {}),
+    ("DATA", "Gross loans and advances", {"FY2025": 1454424, "FY2024": 1225716, "FY2023": 1106055, "FY2022": 1054638, "FY2021": 992600}),
+    ("DATA", "Loans and advances to customers, net", {"FY2025": 1446075, "FY2024": 1204444, "FY2023": 1083278, "FY2022": 1037710, "FY2021": 977834}),
+    ("SECTION", "Loan loss provision, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1: subject to 12-month ECL", {"FY2025": -3559, "FY2024": -2645, "FY2023": -3288, "FY2022": -3082, "FY2021": -2836}),
+    ("DATA", "Stage 2: subject to lifetime ECL", {"FY2025": -3366, "FY2024": -8208, "FY2023": -8907, "FY2022": -8283, "FY2021": -5954}),
+    ("DATA", "Stage 3: subject to lifetime ECL", {"FY2025": -4554, "FY2024": -10270, "FY2023": -10582, "FY2022": -5563, "FY2021": -5976}),
+    ("TOTAL", "Total loan loss provision", {"FY2025": -11479, "FY2024": -21123, "FY2023": -22777, "FY2022": -16928, "FY2021": -14766}),
+    ("DATA", "Loan loss provision credit/(charge) for the year", {"FY2025": 1967, "FY2024": -4932, "FY2023": -7263, "FY2022": -4773, "FY2021": -3524}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Cambridge & Counties Bank Limited — Asset Quality",
+    subtitle="Bank-only basis (no subsidiaries), £'000. Full IFRS 9 stage split disclosed every year, "
+              "including FY2023's gross loan figure (found on a follow-up pass; ties exactly to net + provision). "
+              "See source note at bottom.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=88,
+    source_height=260,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -180,6 +365,27 @@ metric(
 )
 metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)], p3_sources())
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", TOTAL_RWA)], p3_sources(RWA_RESTATEMENT_NOTE))
+
+rwa_breakdown_rows = [
+    ("SECTION", "RWA by risk category", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2024": 846780, "FY2023": 728547, "FY2022": 690434, "FY2021": 640391}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 2753, "FY2023": 130, "FY2022": 232, "FY2021": 46}),
+    ("DATA", "Securitisation exposures in the non-trading book", {"FY2024": 0, "FY2023": 0, "FY2022": 7991, "FY2021": 9158}),
+    ("DATA", "Operational risk", {"FY2024": 130786, "FY2023": 112879, "FY2022": 88964, "FY2021": 78784}),
+    ("DATA", "Amounts below the thresholds for deduction", {"FY2024": 2267, "FY2023": 1801, "FY2022": 2749, "FY2021": 1984}),
+    ("TOTAL", "Total RWAs", {"FY2024": 980319, "FY2023": 841556, "FY2022": 787621, "FY2021": 728379}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Cambridge & Counties Bank Limited — RWA Breakdown",
+    subtitle="Bank-only basis (no subsidiaries), £'000. FY2025 not publicly disclosed (no standalone Pillar 3 "
+              "document published yet). See source note at bottom.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=58,
+    source_height=280,
+    unit_suffix=" (£'000)",
+)
 
 metric(
     "Leverage Ratio", "£'000 exposure / %",
@@ -227,6 +433,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 1898633, "FY2024": 1581735, "FY2023": 1450722, "FY2022": 1376545, "FY2021": 1274871}),
+        ("Loans and advances to customers", {"FY2025": 1446075, "FY2024": 1204444, "FY2023": 1083278, "FY2022": 1037710, "FY2021": 977834}),
+        ("Customers' accounts", {"FY2025": 1633601, "FY2024": 1271824, "FY2023": 1155224, "FY2022": 1103256, "FY2021": 1025520}),
+        ("Total equity", {"FY2025": 248643, "FY2024": 240084, "FY2023": 214778, "FY2022": 184846, "FY2021": 163817}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total operating income", {"FY2025": 71216, "FY2024": 73601, "FY2023": 76404, "FY2022": 59252, "FY2021": 44950}),
+        ("Administrative expenses", {"FY2025": -32390, "FY2024": -31772, "FY2023": -27287, "FY2022": -25034, "FY2021": -21965}),
+        ("Profit after tax", {"FY2025": 30492, "FY2024": 27663, "FY2023": 31290, "FY2022": 23202, "FY2021": 15466}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 240084, "FY2024": 214778, "FY2023": 184846, "FY2022": 163817}),
+        ("Total comprehensive income for the year", {"FY2025": 30843, "FY2024": 27765, "FY2023": 32123, "FY2022": 22468, "FY2021": 14965}),
+        ("Other equity movements, net", {"FY2025": -22284, "FY2024": -2459, "FY2023": -2191, "FY2022": -1439, "FY2021": -1283}),
+        ("Closing equity", {"FY2025": 248643, "FY2024": 240084, "FY2023": 214778, "FY2022": 184846, "FY2021": 163817}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash generated from operating activities", {"FY2025": 98255, "FY2024": 13542, "FY2023": 26342, "FY2022": 45314, "FY2021": 53825}),
         ("Net cash (used in)/generated from investing activities", {"FY2025": -87372, "FY2024": -18987, "FY2023": -16474, "FY2022": 4285, "FY2021": -740}),

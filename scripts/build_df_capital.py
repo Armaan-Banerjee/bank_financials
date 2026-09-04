@@ -61,6 +61,226 @@ def p3_sources(page):
 
 bw = BankWorkbook(bank_name="DF Capital Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="D80034")
 
+STATEMENTS_SOURCES = (
+    "Sources - Distribution Finance Capital Holdings plc's Consolidated Financial Statements (Group basis, "
+    "the Bank's own filed accounts are fully scanned - see ENTITY NOTE):\n"
+    f"FY2025/FY2024: Annual Report and Accounts 2025, p.111-114 (Consolidated Statement of Comprehensive "
+    f"Income / Financial Position / Changes in Equity) - {AR2025_URL}\n"
+    f"FY2023/FY2022: Annual Report and Accounts 2023, p.111-114 (same statements) - {AR2023_URL}\n"
+    f"FY2021: Annual Report and Accounts 2021, p.103-105 (same statements) - {AR2021_URL}\n"
+    "Each year's own originally-published figures used; the equity roll-forward ties exactly at every "
+    "boundary (each year's closing Total equity ties to both the next year's own opening balance and that "
+    "year's own Balance Sheet Total equity) - no plug rows needed anywhere in this series.\n"
+    "PRESENTATION NOTE: FY2021-FY2022 label the investment line 'Debt securities'; FY2024-FY2025 relabel it "
+    "'Investment securities' (same line, a money market fund holding was added) - shown on one row. FY2021's "
+    "cash line is labelled 'Cash and cash equivalents' vs later years' 'Cash and balances at central banks' "
+    "- same line, relabelled. FY2021 doesn't disclose separate Current/Deferred taxation asset, Derivatives, "
+    "Fair value adjustments on hedged liabilities or Subordinated liabilities lines (business was smaller and "
+    "pre-dated some of these balances/hedge relationships) - left blank rather than assumed zero. Share "
+    "premium was cancelled during FY2023 (transferred to retained earnings) and Treasury shares only "
+    "introduced FY2025 (share buyback) - both shown as blank in years they don't apply.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_balance_sheet_sheet(
+    title="DF Capital Bank Limited — Consolidated Balance Sheet",
+    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000. See source note at bottom.",
+    rows=[
+        ("SECTION", "Assets", {}),
+        ("DATA", "Cash and balances at central banks",
+         {"FY2025": 131676, "FY2024": 110030, "FY2023": 89552, "FY2022": 107353, "FY2021": 29597}),
+        ("DATA", "Loans and advances to banks",
+         {"FY2025": 5894, "FY2024": 3771, "FY2023": 3475, "FY2022": 3848}),
+        ("DATA", "Investment/debt securities",
+         {"FY2025": 5722, "FY2024": 769, "FY2023": 14839, "FY2022": 22964, "FY2021": 108867}),
+        ("DATA", "Derivatives held for risk management (asset)",
+         {"FY2025": 411, "FY2024": 295, "FY2023": 537, "FY2022": 57}),
+        ("DATA", "Loans and advances to customers",
+         {"FY2025": 839526, "FY2024": 660772, "FY2023": 568044, "FY2022": 435883, "FY2021": 247205}),
+        ("DATA", "Trade and other receivables",
+         {"FY2025": 7734, "FY2024": 4678, "FY2023": 5335, "FY2022": 1524, "FY2021": 1133}),
+        ("DATA", "Current taxation asset",
+         {"FY2025": 40, "FY2023": 55, "FY2022": 55}),
+        ("DATA", "Deferred taxation asset",
+         {"FY2025": 1912, "FY2024": 3980, "FY2023": 7111, "FY2022": 8457}),
+        ("DATA", "Property, plant and equipment",
+         {"FY2025": 3797, "FY2024": 1093, "FY2023": 1145, "FY2022": 1045, "FY2021": 99}),
+        ("DATA", "Right-of-use assets",
+         {"FY2025": 2355, "FY2024": 202, "FY2023": 1227, "FY2022": 433, "FY2021": 641}),
+        ("DATA", "Intangible assets",
+         {"FY2025": 745, "FY2024": 950, "FY2023": 618, "FY2022": 877, "FY2021": 1066}),
+        ("TOTAL", "Total assets",
+         {"FY2025": 999812, "FY2024": 786540, "FY2023": 691938, "FY2022": 582496, "FY2021": 388608}),
+
+        ("SECTION", "Liabilities", {}),
+        ("DATA", "Customer deposits",
+         {"FY2025": 840565, "FY2024": 649665, "FY2023": 574622, "FY2022": 479736, "FY2021": 296856}),
+        ("DATA", "Amounts due to banks", {"FY2024": 180}),
+        ("DATA", "Derivatives held for risk management (liability)",
+         {"FY2025": 819, "FY2024": 6, "FY2023": 565, "FY2022": 42}),
+        ("DATA", "Fair value adjustments on hedged liabilities",
+         {"FY2025": 375, "FY2024": 136, "FY2023": 424, "FY2022": -84}),
+        ("DATA", "Financial liabilities",
+         {"FY2025": 2444, "FY2024": 90, "FY2023": 1255, "FY2022": 445, "FY2021": 554}),
+        ("DATA", "Trade and other payables",
+         {"FY2025": 12822, "FY2024": 9335, "FY2023": 4297, "FY2022": 6041, "FY2021": 5067}),
+        ("DATA", "Provisions",
+         {"FY2025": 255, "FY2024": 285, "FY2023": 67, "FY2022": 77, "FY2021": 73}),
+        ("DATA", "Current taxation liability",
+         {"FY2024": 1259, "FY2023": 73}),
+        ("DATA", "Subordinated liabilities",
+         {"FY2025": 15302, "FY2024": 10230, "FY2023": 10221}),
+        ("TOTAL", "Total liabilities",
+         {"FY2025": 872582, "FY2024": 671186, "FY2023": 591524, "FY2022": 486257, "FY2021": 302550}),
+
+        ("SECTION", "Equity", {}),
+        ("DATA", "Issued share capital",
+         {"FY2025": 1793, "FY2024": 1793, "FY2023": 1793, "FY2022": 1793, "FY2021": 1793}),
+        ("DATA", "Share premium", {"FY2022": 39273}),
+        ("DATA", "Merger relief",
+         {"FY2025": 94911, "FY2024": 94911, "FY2023": 94911, "FY2022": 94911, "FY2021": 94911}),
+        ("DATA", "Merger reserve",
+         {"FY2025": -20609, "FY2024": -20609, "FY2023": -20609, "FY2022": -20609, "FY2021": -20609}),
+        ("DATA", "Own shares",
+         {"FY2025": -548, "FY2024": -440, "FY2023": -401, "FY2022": -364, "FY2021": -364}),
+        ("DATA", "Treasury shares", {"FY2025": -4755}),
+        ("DATA", "Retained earnings/(loss)",
+         {"FY2025": 56438, "FY2024": 39699, "FY2023": 24720, "FY2022": -18765, "FY2021": -28946}),
+        ("TOTAL", "Total equity",
+         {"FY2025": 127230, "FY2024": 115354, "FY2023": 100414, "FY2022": 96239, "FY2021": 86058}),
+        ("TOTAL", "Total equity and liabilities",
+         {"FY2025": 999812, "FY2024": 786540, "FY2023": 691938, "FY2022": 582496, "FY2021": 388608}),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+bw.add_income_statement_sheet(
+    title="DF Capital Bank Limited — Consolidated Income Statement",
+    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000. See source note at bottom.",
+    rows=[
+        ("SECTION", "Income", {}),
+        ("DATA", "Interest and similar income",
+         {"FY2025": 90698, "FY2024": 76820, "FY2023": 59970, "FY2022": 25407, "FY2021": 13259}),
+        ("DATA", "Interest and similar expenses",
+         {"FY2025": -34897, "FY2024": -31208, "FY2023": -22336, "FY2022": -6411, "FY2021": -2338}),
+        ("TOTAL", "Net interest income",
+         {"FY2025": 55801, "FY2024": 45612, "FY2023": 37634, "FY2022": 18996, "FY2021": 10921}),
+        ("DATA", "Fee income",
+         {"FY2025": 1684, "FY2024": 1237, "FY2023": 1393, "FY2022": 1348, "FY2021": 466}),
+        ("DATA", "Fee expenses",
+         {"FY2025": -1608, "FY2024": -1626, "FY2023": -719}),
+        ("DATA", "Net losses on disposal of financial assets at FVOCI", {"FY2022": -17}),
+        ("DATA", "Net (losses)/gains from derivatives and other financial instruments at FVTPL",
+         {"FY2025": -773, "FY2024": 372, "FY2023": -303, "FY2022": 99, "FY2021": -3}),
+        ("DATA", "Other operating income",
+         {"FY2025": 28, "FY2024": 2, "FY2023": 9, "FY2022": 5}),
+        ("DATA", "Other operating (expense)/income", {"FY2021": -81}),
+        ("DATA", "Foreign currency gain/(loss)", {"FY2025": 907, "FY2024": -107}),
+        ("TOTAL", "Total operating income",
+         {"FY2025": 56039, "FY2024": 45490, "FY2023": 38014, "FY2022": 20431, "FY2021": 11303}),
+
+        ("SECTION", "Expenses", {}),
+        ("DATA", "Staff costs",
+         {"FY2025": -20684, "FY2024": -16044, "FY2023": -13431, "FY2022": -10848, "FY2021": -9121}),
+        ("DATA", "Other operating expenses",
+         {"FY2025": -11497, "FY2024": -10563, "FY2023": -8412, "FY2022": -5983, "FY2021": -5386}),
+        ("DATA", "Net impairment (loss)/gain on financial assets",
+         {"FY2025": -4267, "FY2024": 241, "FY2023": -11598, "FY2022": -2296, "FY2021": -556}),
+        ("DATA", "Other provisions", {"FY2025": 50, "FY2024": -50, "FY2021": 25}),
+        ("DATA", "Other losses", {"FY2021": 0}),
+        ("TOTAL", "Total operating profit/(loss)",
+         {"FY2025": 19641, "FY2024": 19074, "FY2023": 4573, "FY2022": 1304, "FY2021": -3735}),
+        ("TOTAL", "Profit/(loss) before taxation",
+         {"FY2025": 19641, "FY2024": 19074, "FY2023": 4573, "FY2022": 1304, "FY2021": -3735}),
+        ("DATA", "Taxation (charge)/credit",
+         {"FY2025": -4482, "FY2024": -5053, "FY2023": -1418, "FY2022": 8457, "FY2021": 59}),
+        ("TOTAL", "Profit/(loss) after taxation",
+         {"FY2025": 15159, "FY2024": 14021, "FY2023": 3155, "FY2022": 9761, "FY2021": -3676}),
+
+        ("SECTION", "Other comprehensive income", {}),
+        ("DATA", "FVOCI debt securities: amounts transferred to the income statement",
+         {"FY2024": 75, "FY2022": 17, "FY2021": 3}),
+        ("DATA", "FVOCI debt securities: fair value movements",
+         {"FY2023": 183, "FY2022": -96, "FY2021": -165}),
+        ("TOTAL", "Total other comprehensive income/(loss) for the year, net of tax",
+         {"FY2025": 0, "FY2024": 75, "FY2023": 183, "FY2022": -79, "FY2021": -162}),
+        ("TOTAL", "Total comprehensive income/(loss) for the year",
+         {"FY2025": 15159, "FY2024": 14096, "FY2023": 3338, "FY2022": 9682, "FY2021": -3838}),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=78,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+EQUITY_HEADERS = [
+    "Issued share capital", "Share premium", "Merger relief", "Merger reserve",
+    "Own shares", "Treasury shares", "Retained earnings/(loss)", "Total equity",
+]
+bw.add_equity_changes_sheet(
+    title="DF Capital Bank Limited — Consolidated Statement of Changes in Equity",
+    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000. See source note at bottom.",
+    headers=EQUITY_HEADERS,
+    rows=[
+        ("TOTAL", "At 31 December 2020 (FY2021 opening)",
+         (1066, None, 94911, -20609, -364, None, -24115, 50889)),
+        ("DATA", "Loss after taxation (FY2021)", (None, None, None, None, None, None, -3676, -3676)),
+        ("DATA", "Other comprehensive loss (FY2021)", (None, None, None, None, None, None, -162, -162)),
+        ("TOTAL", "Total comprehensive loss for the year (FY2021)",
+         (None, None, None, None, None, None, -3838, -3838)),
+        ("DATA", "Share-based payments (FY2021)", (None, None, None, None, None, None, 362, 362)),
+        ("DATA", "Issue of new shares (FY2021)", (727, 39273, None, None, None, None, -1355, 38645)),
+        ("TOTAL", "At 31 December 2021",
+         (1793, 39273, 94911, -20609, -364, None, -28946, 86058)),
+
+        ("DATA", "Profit after taxation (FY2022)", (None, None, None, None, None, None, 9761, 9761)),
+        ("DATA", "Other comprehensive loss (FY2022)", (None, None, None, None, None, None, -79, -79)),
+        ("TOTAL", "Total comprehensive income for the year (FY2022)",
+         (None, None, None, None, None, None, 9682, 9682)),
+        ("DATA", "Share-based payments (FY2022)", (None, None, None, None, None, None, 499, 499)),
+        ("TOTAL", "At 31 December 2022",
+         (1793, 39273, 94911, -20609, -364, None, -18765, 96239)),
+
+        ("DATA", "Profit after taxation (FY2023)", (None, None, None, None, None, None, 3155, 3155)),
+        ("DATA", "Other comprehensive income (FY2023)", (None, None, None, None, None, None, 183, 183)),
+        ("TOTAL", "Total comprehensive income for the year (FY2023)",
+         (None, None, None, None, None, None, 3338, 3338)),
+        ("DATA", "Share-based payments (FY2023)", (None, None, None, None, None, None, 905, 905)),
+        ("DATA", "Employee Benefit Trust (FY2023)", (None, None, None, None, -37, None, -31, -68)),
+        ("DATA", "Share premium account cancellation (FY2023)", (None, -39273, None, None, None, None, 39273, 0)),
+        ("TOTAL", "At 31 December 2023",
+         (1793, 0, 94911, -20609, -401, None, 24720, 100414)),
+
+        ("DATA", "Profit after taxation (FY2024)", (None, None, None, None, None, None, 14021, 14021)),
+        ("DATA", "Other comprehensive income (FY2024)", (None, None, None, None, None, None, 75, 75)),
+        ("TOTAL", "Total comprehensive income for the year (FY2024)",
+         (None, None, None, None, None, None, 14096, 14096)),
+        ("DATA", "Share-based payments (FY2024)", (None, None, None, None, None, None, 985, 985)),
+        ("DATA", "Employee Benefit Trust (FY2024)", (None, None, None, None, -39, None, -102, -141)),
+        ("TOTAL", "At 31 December 2024",
+         (1793, 0, 94911, -20609, -440, None, 39699, 115354)),
+
+        ("DATA", "Profit after taxation (FY2025)", (None, None, None, None, None, None, 15159, 15159)),
+        ("DATA", "Other comprehensive income (FY2025)", (None, None, None, None, None, None, 0, 0)),
+        ("TOTAL", "Total comprehensive income for the year (FY2025)",
+         (None, None, None, None, None, None, 15159, 15159)),
+        ("DATA", "Share-based payments (FY2025)", (None, None, None, None, None, None, 1254, 1254)),
+        ("DATA", "Employee Benefit Trust (FY2025)", (None, None, None, None, -108, None, -84, -192)),
+        ("DATA", "Share Buyback (FY2025)", (None, None, None, None, None, -4877, None, -4877)),
+        ("DATA", "Settlement of share options (FY2025)", (None, None, None, None, None, 122, -6, 116)),
+        ("DATA", "Deferred tax asset on share-based payments (FY2025)",
+         (None, None, None, None, None, None, 416, 416)),
+        ("TOTAL", "At 31 December 2025",
+         (1793, 0, 94911, -20609, -548, -4755, 56438, 127230)),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=64,
+    source_height=340,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -125,6 +345,71 @@ bw.add_cash_flow_sheet(
     unit_suffix=" (£'000)",
 )
 
+bw.add_asset_quality_sheet(
+    title="DF Capital Bank Limited — Asset Quality",
+    subtitle="Loans and advances to customers, by IFRS 9 stage, £'000. Group basis. See source note at bottom.",
+    rows=[
+        ("SECTION", "Loans and advances to customers - composition", {}),
+        ("DATA", "Loan book principal",
+         {"FY2025": 845966, "FY2024": 665709, "FY2023": 580525, "FY2022": 439282}),
+        ("DATA", "Accrued interest and fees",
+         {"FY2025": 4141, "FY2024": 4067, "FY2023": 3602, "FY2022": 2002}),
+        ("TOTAL", "Gross carrying amount",
+         {"FY2025": 850107, "FY2024": 669776, "FY2023": 584127, "FY2022": 441284, "FY2021": 249454}),
+        ("DATA", "less: impairment allowance",
+         {"FY2025": -8501, "FY2024": -6577, "FY2023": -14596, "FY2022": -3720, "FY2021": -1718}),
+        ("DATA", "less: effective interest rate adjustment",
+         {"FY2025": -2080, "FY2024": -2427, "FY2023": -1487, "FY2022": -1681, "FY2021": -531}),
+        ("TOTAL", "Total loans and advances to customers",
+         {"FY2025": 839526, "FY2024": 660772, "FY2023": 568044, "FY2022": 435883, "FY2021": 247205}),
+
+        ("SECTION", "Gross carrying amount, by IFRS 9 stage", {}),
+        ("DATA", "Stage 1",
+         {"FY2025": 785729, "FY2024": 643513, "FY2023": 545952, "FY2022": 410756, "FY2021": 239327}),
+        ("DATA", "Stage 2",
+         {"FY2025": 54741, "FY2024": 18484, "FY2023": 21052, "FY2022": 13323, "FY2021": 9585}),
+        ("DATA", "Stage 3",
+         {"FY2025": 9637, "FY2024": 7779, "FY2023": 17123, "FY2022": 17205, "FY2021": 542}),
+        ("TOTAL", "Total gross carrying amount (by stage)",
+         {"FY2025": 850107, "FY2024": 669776, "FY2023": 584127, "FY2022": 441284, "FY2021": 249454}),
+
+        ("SECTION", "Loss allowance (ECL), by IFRS 9 stage", {}),
+        ("DATA", "Stage 1",
+         {"FY2025": -4368, "FY2024": -3692, "FY2023": -2522, "FY2022": -1943, "FY2021": -1142}),
+        ("DATA", "Stage 2",
+         {"FY2025": -711, "FY2024": -166, "FY2023": -160, "FY2022": -84, "FY2021": -155}),
+        ("DATA", "Stage 3",
+         {"FY2025": -3422, "FY2024": -2719, "FY2023": -11914, "FY2022": -1693, "FY2021": -421}),
+        ("TOTAL", "Total loss allowance (by stage)",
+         {"FY2025": -8501, "FY2024": -6577, "FY2023": -14596, "FY2022": -3720, "FY2021": -1718}),
+
+        ("SECTION", "Derived ratios", {}),
+        ("DATA", "Stage 3 / gross carrying amount (NPL ratio)",
+         {"FY2025": "1.13%", "FY2024": "1.16%", "FY2023": "2.93%", "FY2022": "3.90%", "FY2021": "0.22%"}),
+        ("DATA", "Stage 3 coverage (Stage 3 loss allowance / Stage 3 gross)",
+         {"FY2025": "35.51%", "FY2024": "34.95%", "FY2023": "69.58%", "FY2022": "9.84%", "FY2021": "77.68%"}),
+        ("DATA", "Total loss allowance coverage (total allowance / total gross)",
+         {"FY2025": "1.00%", "FY2024": "0.98%", "FY2023": "2.50%", "FY2022": "0.84%", "FY2021": "0.69%"}),
+    ],
+    sources_text=(
+        "Sources - Distribution Finance Capital Holdings plc's own Notes to the Consolidated Financial "
+        "Statements, 'Loans and advances to customers' note and its 'Analysis of gross/impairment losses on "
+        "loans and advances to customers' stage-migration tables:\n"
+        f"FY2025/FY2024: Annual Report and Accounts 2025, p.148-151 - {AR2025_URL}\n"
+        f"FY2023/FY2022: Annual Report and Accounts 2023, p.148-151 - {AR2023_URL}\n"
+        f"FY2021: Annual Report and Accounts 2021, p.136-139 - {AR2021_URL}\n"
+        "Each year's own originally-published figures used; every stage-split total ties exactly to the "
+        "note's own Gross carrying amount and to the note's own disclosed 'Loss allowance coverage' "
+        "percentages (used directly for the Derived ratios, not independently recomputed, to avoid "
+        "rounding drift). FY2021's report does not disclose a Loan book principal/Accrued interest split "
+        "(pre-dates that level of note detail) - left blank rather than guessed.\n"
+        + ENTITY_NOTE
+    ),
+    first_col_width=64,
+    source_height=300,
+    unit_suffix=" (£'000)",
+)
+
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
@@ -155,6 +440,46 @@ metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], "4", note=NO_AT1_NOT
 metric("Total Capital", "£'000", [("Total capital", TOTAL_CAPITAL)], "4")
 metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)], "4")
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", TOTAL_RWA)], "4")
+
+bw.add_rwa_breakdown_sheet(
+    title="DF Capital Bank Limited — RWA Breakdown",
+    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000 (UK OV1 template). See source note at bottom.",
+    rows=[
+        ("DATA", "Credit risk (excluding CCR)",
+         {"FY2025": 533039, "FY2024": 388533, "FY2021": 211065}),
+        ("DATA", "Counterparty credit risk (CCR) - of which standardised approach",
+         {"FY2025": 2259, "FY2024": 1635}),
+        ("DATA", "Counterparty credit risk (CCR) - of which credit valuation adjustment (CVA)",
+         {"FY2025": 1027, "FY2024": 2371}),
+        ("TOTAL", "Counterparty credit risk (CCR), total",
+         {"FY2025": 3286, "FY2024": 4006}),
+        ("DATA", "Operational risk (Basic Indicator Approach)",
+         {"FY2025": 87281, "FY2024": 65026, "FY2021": 5288}),
+        ("TOTAL", "Total RWAs",
+         {"FY2025": 623607, "FY2024": 457565, "FY2023": 347034, "FY2022": 381972, "FY2021": 216353}),
+        ("DATA", "Securitisation exposures in the non-trading book (after the cap, deducted from CET1 - not part of Total RWAs)",
+         {"FY2025": 10942, "FY2024": 10095}),
+    ],
+    sources_text=(
+        "Sources - Distribution Finance Capital Holdings plc Pillar 3 Disclosures, 'Overview of risk "
+        "weighted exposure amounts' (UK OV1) table:\n"
+        f"FY2025/FY2024: DF Capital Pillar III 2025, p.5 (FY2024 shown as the document's own comparative "
+        f"column) - {P3_2025_URL}\n"
+        f"FY2021: DF Capital Pillar III Dec 2021, Table 3, p.22 (pre-dates CCR/CVA and the securitisation "
+        f"programme, which only began March 2023 per the FY2023 Pillar 3 document's own approach-to-RWAs "
+        f"note) - {P3_2021_URL}\n"
+        "FY2023/FY2022: genuinely NOT publicly disclosed at this category level - checked both the FY2023 "
+        "Pillar 3 document (DF Capital Pillar III 2024, which only discloses aggregate Total RWA in its UK "
+        "KM1 Key Regulatory Metrics table, no OV1-style breakdown) and confirmed no earlier/later document "
+        "carries an OV1 comparative for these two years. The aggregate Total RWA figure for FY2023/FY2022 "
+        "is genuine (from KM1, matching the Total RWAs metric sheet) - only the category split is missing.\n"
+        + ENTITY_NOTE
+    ),
+    first_col_width=70,
+    source_height=280,
+    unit_suffix=" (£'000)",
+)
+
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)], "4")
 metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "4")
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "4", note=NSFR_NOTE)
@@ -168,6 +493,37 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets",
+         {"FY2025": 999812, "FY2024": 786540, "FY2023": 691938, "FY2022": 582496, "FY2021": 388608}),
+        ("Loans and advances to customers",
+         {"FY2025": 839526, "FY2024": 660772, "FY2023": 568044, "FY2022": 435883, "FY2021": 247205}),
+        ("Customer deposits",
+         {"FY2025": 840565, "FY2024": 649665, "FY2023": 574622, "FY2022": 479736, "FY2021": 296856}),
+        ("Total equity",
+         {"FY2025": 127230, "FY2024": 115354, "FY2023": 100414, "FY2022": 96239, "FY2021": 86058}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total operating income",
+         {"FY2025": 56039, "FY2024": 45490, "FY2023": 38014, "FY2022": 20431, "FY2021": 11303}),
+        ("Total operating expenses (staff + other operating expenses)",
+         {"FY2025": -32181, "FY2024": -26607, "FY2023": -21843, "FY2022": -16831, "FY2021": -14507}),
+        ("Profit/(loss) after taxation",
+         {"FY2025": 15159, "FY2024": 14021, "FY2023": 3155, "FY2022": 9761, "FY2021": -3676}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity",
+         {"FY2025": 115354, "FY2024": 100414, "FY2023": 96239, "FY2022": 86058, "FY2021": 50889}),
+        ("Total comprehensive income/(loss) for the year",
+         {"FY2025": 15159, "FY2024": 14096, "FY2023": 3338, "FY2022": 9682, "FY2021": -3838}),
+        ("Other equity movements, net",
+         {"FY2025": -3283, "FY2024": 844, "FY2023": 837, "FY2022": 499, "FY2021": 39007}),
+        ("Closing equity",
+         {"FY2025": 127230, "FY2024": 115354, "FY2023": 100414, "FY2022": 96239, "FY2021": 86058}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash generated from/(used in) operating activities",
          {"FY2025": 32953, "FY2024": 9201, "FY2023": -37712, "FY2022": -3408, "FY2021": 13178}),

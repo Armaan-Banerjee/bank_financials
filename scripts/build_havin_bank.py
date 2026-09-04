@@ -56,12 +56,16 @@ CASH_FLOW_SOURCES = (
 
 def p3_sources():
     return (
-        "Sources - Havin Bank Limited's own statutory accounts (no standalone Pillar 3 "
-        "document exists for this entity - the Bank's website, hib.uk.com, is entirely "
-        "client-side JavaScript-rendered with no server-side content reachable by automated "
-        "tools, and Wayback Machine was unavailable this session; a Pillar 3 report may exist "
-        "that simply couldn't be located this session, so this is a documented access gap, "
-        "not a confirmed non-disclosure):\n"
+        "Sources - Havin Bank Limited's own statutory accounts. Confirmed non-disclosure "
+        "(two independent search attempts): the Bank's own Directors' report states verbatim "
+        "under 'Pillar 3 disclosures' and 'Country by country disclosures': \"Full disclosures "
+        "are available on request\" (Annual Report FY2024, p.2, and consistent in other years) "
+        "- i.e. the Bank itself confirms it does not publish a Pillar 3 document, only makes "
+        "one available privately on request. A first search attempt found the Bank's site, "
+        "hib.uk.com, to be JavaScript-rendered with Wayback Machine unavailable; a second "
+        "attempt (web search plus a direct fetch of the Bank's own FY2024 Annual Report PDF) "
+        "located and confirmed this explicit statement, so the absence of a public Pillar 3 "
+        "document is now a confirmed fact, not an access gap:\n"
         f"FY2025/FY2024: Annual Report FY2025, Note 23 'Capital', p.43 - {AR2025_URL}\n"
         f"FY2023/FY2022: Annual Report FY2023, Note 23 'Capital', p.47 - {AR2023_URL}\n"
         f"FY2021: Annual Report FY2021, Note 22 'Capital', p.42-43 (this year's disclosure "
@@ -78,6 +82,260 @@ def p3_sources():
 
 
 bw = BankWorkbook(bank_name="Havin Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="2858A5")
+
+STATEMENTS_SOURCES = (
+    "Sources - Havin Bank Limited's own Statement of Financial Position, Income Statement and "
+    "Statement of Changes in Equity (face of each statement, each year's own primary presentation, "
+    "not a later restated comparative) from its Companies House-filed Annual Report and Financial "
+    "Statements:\n"
+    f"FY2025: Annual Report FY2025, pp.19-21 - {AR2025_URL}\n"
+    f"FY2024: Annual Report FY2024, pp.18-20 - {AR2024_URL}\n"
+    f"FY2023: Annual Report FY2023, pp.22-24 - {AR2023_URL}\n"
+    f"FY2022: Annual Report FY2022, pp.24-26 - {AR2022_URL}\n"
+    f"FY2021: Annual Report FY2021, pp.18-20 - {AR2021_URL}\n\n"
+    + ENTITY_NOTE
+    + "\n\nEQUITY RECONCILIATION LADDER: built year-by-year, Balance Sheet first. Ties exactly at "
+    "every boundary from FY2022 onward. One small documented source-driven rounding artifact at the "
+    "FY2021 boundary: the Bank's own FY2021 Annual Report shows Shareholders' funds of GBP22,508,678 "
+    "on the face of the Balance Sheet but GBP22,508,676 as the closing balance on the face of the "
+    "Statement of Changes in Equity (a GBP2 internal inconsistency within the Bank's own single "
+    "document, not introduced by this workbook); FY2022's own Annual Report then shows its opening "
+    "balance as GBP22,508,677 (a further GBP1 from the equity statement's own figure). All three "
+    "figures are reproduced exactly as each document states them, not force-reconciled to a single "
+    "number. PRESENTATION NOTE: 'Receivables/debtors' only appears as its own Balance Sheet line "
+    "FY2024/FY2025 - it is folded into 'Other assets' in FY2021-FY2023. The Profit & Loss statement's "
+    "'Impairment losses and loans advances' line does not appear at all in FY2021's own presentation "
+    "(no impairment note existed as a separate income statement line that year); FY2022 shows it "
+    "explicitly as nil."
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Havin Bank Limited's own 'Loans and advances to customers' note (each year's own "
+    "primary presentation) from its Companies House-filed Annual Report and Financial Statements:\n"
+    f"FY2025/FY2024: Annual Report FY2025, Note 10, p.30 - {AR2025_URL}\n"
+    f"FY2023/FY2022: Annual Report FY2023, Note 10, p.34 - {AR2023_URL}\n"
+    f"FY2021: Annual Report FY2021, Note 9, p.29 - {AR2021_URL}\n\n"
+    + ENTITY_NOTE
+    + "\n\nThe Bank applies FRS 102/IAS 39 incurred-loss impairment (individually-assessed, no "
+    "collective provision, no IFRS 9 Stage 1/2/3 split disclosed in any year) - shown here by "
+    "repayment-status band (impaired / past due / by maturity) rather than by IFRS 9 stage, matching "
+    "the Bank's own disclosure basis throughout. 'Over five years' only appears as its own band in "
+    "FY2025 - not disclosed as a separate band in any earlier year (folded into 'between one and 5 "
+    "years' previously, per the Bank's own note wording). The disclosed 'impaired or past due loans' "
+    "figure each year is not a single consistently-labelled line across all 5 years - FY2024/FY2025 "
+    "call it 'non-performing loans' explicitly, FY2021-FY2023 the narrative text only ('the amount of "
+    "impaired or past due loans to customers is...') - both variants are the same underlying disclosure "
+    "and are shown here on one consistent 'Non-performing / impaired-or-past-due loans, as disclosed' row."
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+bw.add_balance_sheet_sheet(
+    title="Havin Bank Limited — Statement of Financial Position",
+    subtitle="As originally published in each year's own Annual Report (each year's own primary "
+             "presentation, not a later restated comparative)",
+    rows=[
+        ("SECTION", "Assets", {}),
+        ("DATA", "Cash and balances at central banks", {
+            "FY2025": 35346327, "FY2024": 29954158, "FY2023": 38342174,
+            "FY2022": 31789983, "FY2021": 25347880,
+        }),
+        ("DATA", "Loans and advances to banks and other financial institutions", {
+            "FY2025": 61460562, "FY2024": 64606314, "FY2023": 71371023,
+            "FY2022": 68737878, "FY2021": 83320302,
+        }),
+        ("DATA", "Loans and advances to customers", {
+            "FY2025": 10391111, "FY2024": 12428931, "FY2023": 8992307,
+            "FY2022": 18482200, "FY2021": 8634018,
+        }),
+        ("DATA", "Intangible assets", {
+            "FY2025": 295851, "FY2024": 391887, "FY2023": 488076,
+            "FY2022": 584296, "FY2021": 484067,
+        }),
+        ("DATA", "Tangible fixed assets", {
+            "FY2025": 1555105, "FY2024": 1540079, "FY2023": 1577233,
+            "FY2022": 1616026, "FY2021": 1656490,
+        }),
+        ("DATA", "Prepayments and accrued income", {
+            "FY2025": 892060, "FY2024": 858809, "FY2023": 889996,
+            "FY2022": 675544, "FY2021": 1004699,
+        }),
+        ("DATA", "Receivables/debtors", {
+            "FY2025": 39945, "FY2024": 39905,
+        }),
+        ("DATA", "Other assets", {
+            "FY2025": 354626, "FY2024": 249260, "FY2023": 296927,
+            "FY2022": 496494, "FY2021": 591406,
+        }),
+        ("TOTAL", "Total Assets", {
+            "FY2025": 110335587, "FY2024": 110109348, "FY2023": 121957736,
+            "FY2022": 122383421, "FY2021": 121038862,
+        }),
+        ("SECTION", "Liabilities", {}),
+        ("DATA", "Deposits by banks", {
+            "FY2025": 83183992, "FY2024": 81344620, "FY2023": 91487208,
+            "FY2022": 92659763, "FY2021": 90838505,
+        }),
+        ("DATA", "Customer accounts", {
+            "FY2025": 2805620, "FY2024": 3305718, "FY2023": 5137804,
+            "FY2022": 5737501, "FY2021": 6927373,
+        }),
+        ("DATA", "Due to parent undertaking", {
+            "FY2025": 538675, "FY2024": 130304, "FY2023": 169587,
+            "FY2022": 191756, "FY2021": 200058,
+        }),
+        ("DATA", "Accruals and other liabilities", {
+            "FY2025": 769119, "FY2024": 863560, "FY2023": 1196153,
+            "FY2022": 774301, "FY2021": 441394,
+        }),
+        ("DATA", "Deferred tax liability", {
+            "FY2025": 79469, "FY2024": 87265, "FY2023": 88287,
+            "FY2022": 131928, "FY2021": 122854,
+        }),
+        ("DATA", "Corporation tax liability", {
+            "FY2025": 130763, "FY2024": 194549, "FY2023": 284667,
+            "FY2022": 14517,
+        }),
+        ("TOTAL", "Total Liabilities", {
+            "FY2025": 87507638, "FY2024": 85926016, "FY2023": 98363706,
+            "FY2022": 99509766, "FY2021": 98530184,
+        }),
+        ("SECTION", "Equity", {}),
+        ("DATA", "Called up share capital", {
+            "FY2025": 22000000, "FY2024": 22000000, "FY2023": 22000000,
+            "FY2022": 22000000, "FY2021": 22000000,
+        }),
+        ("DATA", "Profit and loss account", {
+            "FY2025": 827949, "FY2024": 2183332, "FY2023": 1594030,
+            "FY2022": 873655, "FY2021": 508678,
+        }),
+        ("TOTAL", "Total equity (Shareholders' funds)", {
+            "FY2025": 22827949, "FY2024": 24183332, "FY2023": 23594030,
+            "FY2022": 22873655, "FY2021": 22508678,
+        }),
+        ("TOTAL", "Total liabilities and equity", {
+            "FY2025": 110335587, "FY2024": 110109348, "FY2023": 121957736,
+            "FY2022": 122383421, "FY2021": 121038862,
+        }),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=62,
+    source_height=280,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+bw.add_income_statement_sheet(
+    title="Havin Bank Limited — Income Statement",
+    subtitle="As originally published in each year's own Annual Report (each year's own primary "
+             "presentation, not a later restated comparative)",
+    rows=[
+        ("SECTION", "Income", {}),
+        ("DATA", "Interest receivable and similar income", {
+            "FY2025": 4654931, "FY2024": 5679555, "FY2023": 5336644,
+            "FY2022": 2785468, "FY2021": 1612507,
+        }),
+        ("DATA", "Interest payable and similar expenses", {
+            "FY2025": -1288150, "FY2024": -1710521, "FY2023": -1501108,
+            "FY2022": -442855, "FY2021": -104074,
+        }),
+        ("TOTAL", "Net interest income", {
+            "FY2025": 3366781, "FY2024": 3969034, "FY2023": 3835536,
+            "FY2022": 2342613, "FY2021": 1508433,
+        }),
+        ("DATA", "Fees and commissions receivable", {
+            "FY2025": 201787, "FY2024": 249690, "FY2023": 276851,
+            "FY2022": 343373, "FY2021": 269558,
+        }),
+        ("DATA", "Fees and commissions payable", {
+            "FY2025": -155818, "FY2024": -113049, "FY2023": -35548,
+            "FY2022": -25951, "FY2021": -27007,
+        }),
+        ("DATA", "Foreign exchange profits", {
+            "FY2025": 277248, "FY2024": 303470, "FY2023": 435780,
+            "FY2022": 513709, "FY2021": 318954,
+        }),
+        ("DATA", "Other operating income", {
+            "FY2025": 8516, "FY2024": 10492, "FY2023": 4756,
+            "FY2022": 9512, "FY2021": 9512,
+        }),
+        ("TOTAL", "Total operating income", {
+            "FY2025": 3698514, "FY2024": 4419637, "FY2023": 4517375,
+            "FY2022": 3183256, "FY2021": 2079450,
+        }),
+        ("SECTION", "Expenses", {}),
+        ("DATA", "Administrative expenses", {
+            "FY2025": -3352586, "FY2024": -2684867, "FY2023": -3270406,
+            "FY2022": -2576449, "FY2021": -2227306,
+        }),
+        ("DATA", "Impairment losses and loans advances", {
+            "FY2025": 150716, "FY2024": -840614, "FY2023": -162886,
+            "FY2022": 0,
+        }),
+        ("DATA", "Amortisation of intangible assets", {
+            "FY2025": -96036, "FY2024": -96189, "FY2023": -96219,
+            "FY2022": -84761, "FY2021": -83521,
+        }),
+        ("DATA", "Depreciation of tangible fixed assets", {
+            "FY2025": -53656, "FY2024": -37153, "FY2023": -38793,
+            "FY2022": -40464, "FY2021": -53141,
+        }),
+        ("TOTAL", "Operating profit/(loss)", {
+            "FY2025": 346952, "FY2024": 760814, "FY2023": 949071,
+            "FY2022": 481582, "FY2021": -284518,
+        }),
+        ("TOTAL", "Profit/(loss) before tax", {
+            "FY2025": 346952, "FY2024": 760814, "FY2023": 949071,
+            "FY2022": 481582, "FY2021": -284518,
+        }),
+        ("DATA", "Tax on profit", {
+            "FY2025": -102335, "FY2024": -173696, "FY2023": -228696,
+            "FY2022": -116604, "FY2021": 20154,
+        }),
+        ("TOTAL", "Profit/(loss) for the year and total comprehensive income/(loss)", {
+            "FY2025": 244617, "FY2024": 587118, "FY2023": 720375,
+            "FY2022": 364978, "FY2021": -264364,
+        }),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=66,
+    source_height=280,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+bw.add_equity_changes_sheet(
+    title="Havin Bank Limited — Statement of Changes in Equity",
+    subtitle="Chronological roll-forward, oldest to newest. Equity reconciliation ladder confirmed: "
+             "each year's own closing balance ties exactly to the next year's own opening balance and "
+             "to that year's own Balance Sheet Total equity from FY2022 onward - a small GBP1-2 "
+             "documented rounding artifact within the Bank's own FY2021/FY2022 filings is reproduced "
+             "as disclosed, not force-reconciled (see source note).",
+    headers=["Called-up capital", "Profit and loss account", "Total equity"],
+    rows=[
+        ("DATA", "Balance as at 1 January 2021 (FY2021's own opening, = FY2020 closing)", (22000000, 773040, 22773040)),
+        ("DATA", "Total comprehensive loss for the year", (None, -264364, -264364)),
+        ("TOTAL", "Balance as at 31 December 2021 (per FY2021's own Equity Statement)", (22000000, 508676, 22508676)),
+        ("DATA", "Total comprehensive profit for the year", (None, 364978, 364978)),
+        ("TOTAL", "Balance as at 31 December 2022 (per FY2022's own Annual Report; FY2022's own opening was GBP22,508,677, a GBP1 difference from the row above - reproduced as disclosed)", (22000000, 873655, 22873655)),
+        ("DATA", "Total comprehensive profit for the year", (None, 720375, 720375)),
+        ("TOTAL", "Balance as at 31 December 2023", (22000000, 1594030, 23594030)),
+        ("DATA", "Total comprehensive profit for the year", (None, 587118, 587118)),
+        ("DATA", "Prior year adjustment", (None, 2184, 2184)),
+        ("TOTAL", "Balance as at 31 December 2024", (22000000, 2183332, 24183332)),
+        ("DATA", "Total comprehensive profit for the year", (None, 244617, 244617)),
+        ("DATA", "Dividends in respect of prior years", (None, -1600000, -1600000)),
+        ("TOTAL", "Balance as at 31 December 2025", (22000000, 827949, 22827949)),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=280,
+)
 
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
@@ -135,6 +393,80 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+bw.add_asset_quality_sheet(
+    title="Havin Bank Limited — Asset Quality",
+    subtitle="Loans and advances to customers, by repayment status, as originally published each year "
+             "(no IFRS 9 Stage 1/2/3 split is disclosed - the Bank applies FRS 102/IAS 39 incurred-loss "
+             "impairment with individual, not collective, assessment)",
+    rows=[
+        ("SECTION", "Loans and advances to customers, by repayment status", {}),
+        ("DATA", "Impaired", {
+            "FY2024": 238799, "FY2023": 238844, "FY2022": 238799, "FY2021": 238799,
+        }),
+        ("DATA", "Past due", {
+            "FY2024": 2301049, "FY2023": 1086023, "FY2021": 369139,
+        }),
+        ("DATA", "Within three months", {
+            "FY2025": 836250, "FY2024": 304461, "FY2023": 1150339,
+            "FY2022": 546367, "FY2021": 1707498,
+        }),
+        ("DATA", "Between three months and one year", {
+            "FY2025": 4944742, "FY2024": 5264412, "FY2023": 4761704,
+            "FY2022": 13476280, "FY2021": 2441092,
+        }),
+        ("DATA", "Between one and five years", {
+            "FY2025": 4293397, "FY2024": 5562209, "FY2023": 2157082,
+            "FY2022": 4459553, "FY2021": 4116289,
+        }),
+        ("DATA", "Over five years", {
+            "FY2025": 1169507,
+        }),
+        ("TOTAL", "Total before impairment provision", {
+            "FY2025": 11243896, "FY2024": 13671230, "FY2023": 9393992,
+            "FY2022": 18720999, "FY2021": 8872817,
+        }),
+        ("DATA", "Impairment losses on loans and advances", {
+            "FY2025": -852785, "FY2024": -1242299, "FY2023": -401685,
+            "FY2022": -238799, "FY2021": -238799,
+        }),
+        ("TOTAL", "Total after impairment provision", {
+            "FY2025": 10391111, "FY2024": 12428931, "FY2023": 8992307,
+            "FY2022": 18482200, "FY2021": 8634018,
+        }),
+        ("SECTION", "Impairment allowance roll-forward", {}),
+        ("DATA", "As at 1 January", {
+            "FY2025": 1242299, "FY2024": 401685, "FY2023": 238799,
+            "FY2022": 238799, "FY2021": 238799,
+        }),
+        ("DATA", "Provision (charge)/release for the year", {
+            "FY2025": -150716, "FY2024": 840614, "FY2023": 162886,
+        }),
+        ("DATA", "Write-off", {
+            "FY2025": -238798,
+        }),
+        ("TOTAL", "As at 31 December", {
+            "FY2025": 852785, "FY2024": 1242299, "FY2023": 401685,
+            "FY2022": 238799, "FY2021": 238799,
+        }),
+        ("SECTION", "Asset quality ratios (derived)", {}),
+        ("DATA", "Non-performing / impaired-or-past-due loans, as disclosed", {
+            "FY2025": 4852633, "FY2024": 2539848, "FY2023": 1324822,
+            "FY2022": 238799, "FY2021": 607938,
+        }),
+        ("DATA", "Impairment coverage ratio (impairment / total before provision)", {
+            "FY2025": "7.58%", "FY2024": "9.09%", "FY2023": "4.28%",
+            "FY2022": "1.28%", "FY2021": "2.69%",
+        }),
+    ],
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=66,
+    source_height=280,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -160,9 +492,19 @@ bw.add_not_disclosed_metric_sheets(["Tier 1 Ratio"], p3_sources())
 metric("Total Capital", "£", [("Total regulatory capital", dict(CAPITAL_VALUES))],
        p3_sources(), note=CAPITAL_NOTE)
 
+bw.add_not_disclosed_metric_sheets(["Total Capital Ratio", "Total RWAs"], p3_sources())
+
+bw.add_rwa_breakdown_sheet(
+    title="Havin Bank Limited — RWA Breakdown",
+    subtitle="Not publicly disclosed - confirmed (Bank states disclosures are \"available on request\" only). See source note at bottom.",
+    rows=[("DATA", "Not publicly disclosed", {})],
+    sources_text=p3_sources(),
+    first_col_width=54,
+    source_height=280,
+)
+
 bw.add_not_disclosed_metric_sheets(
-    ["Total Capital Ratio", "Total RWAs",
-     "Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
+    ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
     p3_sources(),
 )
 
@@ -170,6 +512,58 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {
+            "FY2025": 110335587, "FY2024": 110109348, "FY2023": 121957736,
+            "FY2022": 122383421, "FY2021": 121038862,
+        }),
+        ("Loans and advances to customers", {
+            "FY2025": 10391111, "FY2024": 12428931, "FY2023": 8992307,
+            "FY2022": 18482200, "FY2021": 8634018,
+        }),
+        ("Customer accounts", {
+            "FY2025": 2805620, "FY2024": 3305718, "FY2023": 5137804,
+            "FY2022": 5737501, "FY2021": 6927373,
+        }),
+        ("Total equity", {
+            "FY2025": 22827949, "FY2024": 24183332, "FY2023": 23594030,
+            "FY2022": 22873655, "FY2021": 22508678,
+        }),
+    ],
+    balance_sheet_unit="£",
+    income_statement_totals=[
+        ("Total operating income", {
+            "FY2025": 3698514, "FY2024": 4419637, "FY2023": 4517375,
+            "FY2022": 3183256, "FY2021": 2079450,
+        }),
+        ("Administrative expenses", {
+            "FY2025": -3352586, "FY2024": -2684867, "FY2023": -3270406,
+            "FY2022": -2576449, "FY2021": -2227306,
+        }),
+        ("Profit/(loss) for the year", {
+            "FY2025": 244617, "FY2024": 587118, "FY2023": 720375,
+            "FY2022": 364978, "FY2021": -264364,
+        }),
+    ],
+    income_statement_unit="£",
+    equity_changes_totals=[
+        ("Opening equity", {
+            "FY2025": 24183332, "FY2024": 23594030, "FY2023": 22873655,
+            "FY2022": 22508676, "FY2021": 22773040,
+        }),
+        ("Total comprehensive income/(loss) for the year", {
+            "FY2025": 244617, "FY2024": 587118, "FY2023": 720375,
+            "FY2022": 364978, "FY2021": -264364,
+        }),
+        ("Other equity movements, net", {
+            "FY2025": -1600000, "FY2024": 2184,
+        }),
+        ("Closing equity", {
+            "FY2025": 22827949, "FY2024": 24183332, "FY2023": 23594030,
+            "FY2022": 22873655, "FY2021": 22508676,
+        }),
+    ],
+    equity_changes_unit="£",
     cash_flow_totals=[
         ("Net cash from/(used in) operating activities", {
             "FY2025": 3521073, "FY2024": 1528221, "FY2023": -3161495,

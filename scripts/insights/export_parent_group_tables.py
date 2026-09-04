@@ -94,15 +94,23 @@ def _find_table_block(lines, section_header, table_header):
     `section_header`. Raises if either isn't found - fail loudly rather
     than silently corrupt the file."""
     try:
-        section_idx = next(i for i, line in enumerate(lines) if line.strip() == section_header)
-    except StopIteration:
-        raise ValueError(f"Could not find section header {section_header!r} in the markdown file")
-    try:
-        header_idx = next(
-            i for i in range(section_idx, len(lines)) if lines[i].strip() == table_header
+        section_idx = next(
+            i for i, line in enumerate(lines) if line.strip() == section_header
         )
     except StopIteration:
-        raise ValueError(f"Could not find table header {table_header!r} after {section_header!r}")
+        raise ValueError(
+            f"Could not find section header {section_header!r} in the markdown file"
+        )
+    try:
+        header_idx = next(
+            i
+            for i in range(section_idx, len(lines))
+            if lines[i].strip() == table_header
+        )
+    except StopIteration:
+        raise ValueError(
+            f"Could not find table header {table_header!r} after {section_header!r}"
+        )
     # data rows run from header_idx+2 (skipping the separator row) until a blank line
     end_idx = header_idx + 2
     while end_idx < len(lines) and lines[end_idx].strip() != "":
@@ -114,20 +122,29 @@ def splice(markdown_path, conn):
     with open(markdown_path, encoding="utf-8") as f:
         lines = [line.rstrip("\n") for line in f.readlines()]
 
-    lookup_start, lookup_end = _find_table_block(lines, LOOKUP_SECTION_HEADER, LOOKUP_TABLE_HEADER)
+    lookup_start, lookup_end = _find_table_block(
+        lines, LOOKUP_SECTION_HEADER, LOOKUP_TABLE_HEADER
+    )
     lookup_rows = _render_lookup_rows(conn)
     new_lookup_block = [LOOKUP_TABLE_HEADER, LOOKUP_TABLE_SEP] + lookup_rows
 
-    edges_start, edges_end = _find_table_block(lines, EDGES_SECTION_HEADER, EDGES_TABLE_HEADER)
+    edges_start, edges_end = _find_table_block(
+        lines, EDGES_SECTION_HEADER, EDGES_TABLE_HEADER
+    )
     edge_rows = _render_edge_rows(conn)
     new_edges_block = [EDGES_TABLE_HEADER, EDGES_TABLE_SEP] + edge_rows
 
     # splice from the bottom block first so the earlier block's indices
     # (lookup_start/lookup_end) aren't invalidated by the edit
-    assert lookup_end <= edges_start, "expected the lookup table to precede the edge-list table"
+    assert lookup_end <= edges_start, (
+        "expected the lookup table to precede the edge-list table"
+    )
     new_lines = (
-        lines[:lookup_start] + new_lookup_block + lines[lookup_end:edges_start]
-        + new_edges_block + lines[edges_end:]
+        lines[:lookup_start]
+        + new_lookup_block
+        + lines[lookup_end:edges_start]
+        + new_edges_block
+        + lines[edges_end:]
     )
     return "\n".join(new_lines) + "\n", len(lookup_rows), len(edge_rows)
 
@@ -137,9 +154,10 @@ def main():
     parser.add_argument("--markdown", default=DEFAULT_MARKDOWN)
     parser.add_argument("--db", default=DEFAULT_DB)
     parser.add_argument(
-        "--skip-import", action="store_true",
+        "--skip-import",
+        action="store_true",
         help="skip re-importing the markdown's current tables into the DB first "
-             "(use only if you've already imported via build_insights_db.py)",
+        "(use only if you've already imported via build_insights_db.py)",
     )
     args = parser.parse_args()
 
@@ -148,7 +166,9 @@ def main():
         if not args.skip_import:
             lookup_rows, edge_rows = db.load_markdown_lookup_and_edges(args.markdown)
             n_lookup, n_edges = db.write_parent_group(conn, lookup_rows, edge_rows)
-            print(f"Imported {n_lookup} lookup rows / {n_edges} edge rows from {args.markdown} into {args.db}")
+            print(
+                f"Imported {n_lookup} lookup rows / {n_edges} edge rows from {args.markdown} into {args.db}"
+            )
 
         new_content, n_lookup_rendered, n_edges_rendered = splice(args.markdown, conn)
     finally:
@@ -164,7 +184,9 @@ def main():
     # destination). Only write the temp file and replace when there's an
     # actual change to make.
     if new_content == old_content:
-        print(f"{args.markdown}: no change (already reflects the database exactly) - file left untouched")
+        print(
+            f"{args.markdown}: no change (already reflects the database exactly) - file left untouched"
+        )
         return
 
     tmp_path = args.markdown + ".tmp"
@@ -172,8 +194,10 @@ def main():
         f.write(new_content)
     shutil.copystat(args.markdown, tmp_path)
     os.replace(tmp_path, args.markdown)
-    print(f"{args.markdown}: regenerated ({n_lookup_rendered} lookup rows, "
-          f"{n_edges_rendered} edge rows spliced in from {args.db})")
+    print(
+        f"{args.markdown}: regenerated ({n_lookup_rendered} lookup rows, "
+        f"{n_edges_rendered} edge rows spliced in from {args.db})"
+    )
 
 
 if __name__ == "__main__":

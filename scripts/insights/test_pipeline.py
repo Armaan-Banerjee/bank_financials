@@ -52,7 +52,7 @@ class FullInsightsPipeline(unittest.TestCase):
         conn = sqlite3.connect(self.db)
         try:
             self.assertEqual(conn.execute("SELECT COUNT(*) FROM banks").fetchone()[0], 145)
-            self.assertEqual(conn.execute("SELECT COUNT(*) FROM annual_metrics").fetchone()[0], 12846)
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM annual_metrics").fetchone()[0], 58587)
             self.assertEqual(conn.execute("PRAGMA integrity_check").fetchone()[0], "ok")
         finally:
             conn.close()
@@ -228,8 +228,8 @@ class FullInsightsPipeline(unittest.TestCase):
     def test_real_workbook_extraction_to_temporary_source_of_truth(self):
         metrics_csv = self.tmpdir / "bank_metrics.csv"
         extracted = run_script("extract_metrics.py", "--db", self.db, "--out", metrics_csv)
-        self.assertIn("Wrote 145 banks / 12846 annual_metrics rows", extracted.stdout)
-        self.assertIn("Exported 12846 rows", extracted.stdout)
+        self.assertIn("Wrote 145 banks / 58587 annual_metrics rows", extracted.stdout)
+        self.assertIn("Exported 58587 rows", extracted.stdout)
         self.assertIn("Banks with no FRN match (0)", extracted.stdout)
         self.assertNotIn("Workbooks that failed to process (", extracted.stdout)
         self.assertEqual(metrics_csv.read_bytes(), (ROOT / "research" / "bank_metrics.csv").read_bytes())

@@ -53,6 +53,53 @@ class DeliverableAdapterTests(unittest.TestCase):
         rendered = render_html_analysis(data)
         self.assertNotIn("Parent-group dispersion and agreement", rendered)
 
+    def test_html_renders_risk_composition_section(self):
+        data = payload()
+        data["in040"] = {
+            "metadata": {"banks": {"1": "Alpha", "2": "Beta"}},
+            "loan_concentration_quality": {
+                "stage_balances": {
+                    "1": {2024: {"Loans and advances to customers": {"stage_1": 700, "stage_2": 200, "stage_3": 100}}},
+                    "2": {2024: {"Placements with banks": {"stage_1": 500, "stage_2": 0, "stage_3": 0}}},
+                },
+                "coverage_and_npl_ratios": {"1": [{"year": 2024, "label": "NPL ratio", "value": 10.0, "value_raw": "10.0%"}]},
+                "coverage": {"banks_with_stage_data": 2, "banks_with_coverage_or_npl_disclosure": 1},
+            },
+            "rwa_density": {
+                "rwa_to_assets_pct": {"1": {2024: 45.0}, "2": {2024: 10.0}},
+                "rwa_category_composition": {
+                    "1:2024": [{"label": "Credit risk", "value": 90, "pct_of_total_rwa": 90.0}],
+                },
+                "coverage": {"bank_years_with_rwa_to_assets": 2, "bank_years_with_category_breakdown": 1},
+            },
+        }
+        rendered = render_html_analysis(data)
+        self.assertIn("Loan concentration, asset quality, and RWA density", rendered)
+        self.assertIn("Alpha", rendered)
+        self.assertIn("Beta", rendered)
+        self.assertIn("Placements with banks", rendered)
+        self.assertIn("Credit risk (90.0%)", rendered)
+        self.assertIn("10.0%", rendered)
+
+    def test_pdf_lines_include_risk_composition_summary(self):
+        data = payload()
+        data["in040"] = {
+            "metadata": {"banks": {"1": "Alpha"}},
+            "loan_concentration_quality": {
+                "stage_balances": {"1": {2024: {"Loans": {"stage_1": 90, "stage_2": 10, "stage_3": 0}}}},
+                "coverage_and_npl_ratios": {},
+                "coverage": {"banks_with_stage_data": 1, "banks_with_coverage_or_npl_disclosure": 0},
+            },
+            "rwa_density": {
+                "rwa_to_assets_pct": {"1": {2024: 35.5}},
+                "rwa_category_composition": {},
+                "coverage": {"bank_years_with_rwa_to_assets": 1, "bank_years_with_category_breakdown": 0},
+            },
+        }
+        rendered = "\n".join(render_pdf_analysis_lines(data))
+        self.assertIn("Loan concentration, asset quality, and RWA density", rendered)
+        self.assertIn("Alpha | FY2024 | RWA/assets=35.5%", rendered)
+
 
 if __name__ == "__main__":
     unittest.main()

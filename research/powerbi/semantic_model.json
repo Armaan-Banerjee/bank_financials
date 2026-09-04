@@ -37,11 +37,11 @@
   "table_row_counts": {
     "dim_bank": 145,
     "dim_comparability": 3,
-    "dim_metric": 12,
+    "dim_metric": 16,
     "dim_period": 23,
     "dim_quality": 4,
     "dim_source": 145,
-    "dim_unit": 16,
-    "fact_observation": 12846
+    "dim_unit": 21,
+    "fact_observation": 58668
   }
 }

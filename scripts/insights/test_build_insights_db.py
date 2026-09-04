@@ -181,6 +181,100 @@ class ValidateCatchesCorruption(unittest.TestCase):
         conn.close()
 
 
+class EquityChangesWriteAndValidate(unittest.TestCase):
+    """IN-039: equity_changes is a genuinely different-shaped table
+    (chronological roll-forward, not year-keyed) written independently of
+    write_banks_and_metrics - covers the write path, refresh_metadata's
+    new equity_changes_count column, and validate()'s orphan-FRN check."""
+
+    def setUp(self):
+        self.tmpdir = tempfile.mkdtemp(prefix="equity_changes_test_")
+        self.db_path = os.path.join(self.tmpdir, "test.db")
+
+    def tearDown(self):
+        shutil.rmtree(self.tmpdir, ignore_errors=True)
+
+    def _equity_rows(self, frn):
+        return [
+            {"frn": frn, "sheet": "Statement of Changes in Equity",
+             "movement_label": "Balance as at 1 January 2024", "component": "Share capital",
+             "value_raw": 100.0, "value_numeric": 100.0, "is_numeric": "1", "row_order": 0},
+            {"frn": frn, "sheet": "Statement of Changes in Equity",
+             "movement_label": "Balance as at 1 January 2024", "component": "Retained earnings",
+             "value_raw": 50.0, "value_numeric": 50.0, "is_numeric": "1", "row_order": 0},
+            {"frn": frn, "sheet": "Statement of Changes in Equity",
+             "movement_label": "Profit for the year", "component": "Retained earnings",
+             "value_raw": 20.0, "value_numeric": 20.0, "is_numeric": "1", "row_order": 1},
+        ]
+
+    def test_write_equity_changes_round_trips_and_updates_refresh_metadata(self):
+        conn = make_valid_db(self.db_path)  # writes bank frn=100
+        n = db.write_equity_changes(conn, self._equity_rows(100))
+        self.assertEqual(n, 3)
+
+        rows = conn.execute(
+            "SELECT movement_label, component, value_numeric, row_order "
+            "FROM equity_changes ORDER BY row_order, component"
+        ).fetchall()
+        self.assertEqual(rows, [
+            ("Balance as at 1 January 2024", "Retained earnings", 50.0, 0),
+            ("Balance as at 1 January 2024", "Share capital", 100.0, 0),
+            ("Profit for the year", "Retained earnings", 20.0, 1),
+        ])
+
+        count = conn.execute("SELECT equity_changes_count FROM refresh_metadata WHERE id = 1").fetchone()[0]
+        self.assertEqual(count, 3)
+        conn.close()
+
+    def test_write_equity_changes_replaces_not_appends(self):
+        conn = make_valid_db(self.db_path)
+        db.write_equity_changes(conn, self._equity_rows(100))
+        db.write_equity_changes(conn, self._equity_rows(100)[:1])  # a re-refresh with fewer rows
+        n = conn.execute("SELECT COUNT(*) FROM equity_changes").fetchone()[0]
+        self.assertEqual(n, 1)  # old rows deleted, not accumulated
+        conn.close()
+
+    def test_validate_catches_orphaned_equity_changes_row(self):
+        conn = make_valid_db(self.db_path)  # only frn=100,101 exist in banks
+        db.write_equity_changes(conn, self._equity_rows(999))  # unknown frn
+        with self.assertRaises(AssertionError):
+            db.validate(conn, expected_banks=2)
+        conn.close()
+
+    def test_migration_adds_equity_changes_table_and_refresh_metadata_column(self):
+        # A pre-IN-039 database has no equity_changes table at all, and
+        # refresh_metadata (if it already existed) has no
+        # equity_changes_count column - connect() must add both without
+        # touching existing data, same guarantee as MigrateAddColumns below.
+        conn = sqlite3.connect(self.db_path)
+        conn.executescript("""
+            CREATE TABLE banks (
+                frn INTEGER PRIMARY KEY, canonical_name TEXT NOT NULL,
+                filename_bank_name TEXT NOT NULL, source_workbook TEXT NOT NULL,
+                workbook_kind TEXT NOT NULL, basis_note TEXT
+            );
+            CREATE TABLE refresh_metadata (
+                id INTEGER PRIMARY KEY CHECK (id = 1),
+                metrics_built_at TEXT, metrics_source TEXT,
+                banks_count INTEGER, annual_metrics_count INTEGER
+            );
+        """)
+        conn.execute("INSERT INTO banks VALUES (100, 'Bank Zero Ltd', 'BANK0', 'BANK0 FINANCIALS.xlsx', 'full', NULL)")
+        conn.execute("INSERT INTO refresh_metadata (id, banks_count) VALUES (1, 1)")
+        conn.commit()
+        conn.close()
+
+        conn = db.connect(self.db_path)
+        tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+        self.assertIn("equity_changes", tables)
+        columns = {row[1] for row in conn.execute("PRAGMA table_info(refresh_metadata)")}
+        self.assertIn("equity_changes_count", columns)
+        # pre-existing refresh_metadata row untouched
+        banks_count = conn.execute("SELECT banks_count FROM refresh_metadata WHERE id = 1").fetchone()[0]
+        self.assertEqual(banks_count, 1)
+        conn.close()
+
+
 class ValidateClusterInputs(unittest.TestCase):
     """validate_cluster_inputs() is the staleness/FRN-mismatch guard both
     deliverable generators call before embedding cluster data - verified

@@ -79,6 +79,223 @@ def p3_sources(extra=""):
 
 bw = BankWorkbook(bank_name="Atom Bank Plc", years=YEARS, year_label=YEAR_LABEL, header_color="146C94")
 
+AR25_URL = "https://find-and-update.company-information.service.gov.uk/company/08632552/filing-history/MzQ3NzYwODYzOWFkaXF6a2N4/document?format=pdf&download=0"
+AR24_URL = "https://find-and-update.company-information.service.gov.uk/company/08632552/filing-history/MzQzNDkxNDM0M2FkaXF6a2N4/document?format=pdf&download=0"
+AR23_URL = "https://find-and-update.company-information.service.gov.uk/company/08632552/filing-history/MzM5ODE2MjM5N2FkaXF6a2N4/document?format=pdf&download=0"
+AR21_URL = "https://find-and-update.company-information.service.gov.uk/company/08632552/filing-history/MzMxNDk5MDE0OWFkaXF6a2N4/document?format=pdf&download=0"
+
+STATEMENT_ENTITY_NOTE = (
+    "Bank (solo) basis throughout - the same basis as the pre-existing Cash Flow Statement and Pillar 3 sheets "
+    "(see ENTITY NOTE below and on those sheets). FY2025/FY2024 come from the Atom Bank Plc full accounts filed "
+    "with the FY2025 Companies House filing (Statement of financial position/Statement of comprehensive income/ "
+    "Statement of changes in equity, pp.54-56), which is scanned/image-only - transcribed via page-render + "
+    "visual reading rather than left blank, per the ABC International Bank precedent. FY2023/FY2022 come from "
+    "the FY2023 filing (pp.52-54), also scanned/image-only. FY2021 comes from the FY2021 filing (pp.44-47, "
+    "double-page-spread layout), Bank column (the Group column is not used, matching every other sheet's Bank "
+    "basis)."
+    "\n\n" + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 1902200, "FY2024": 2405000, "FY2023": 4177488, "FY2022": 1453596, "FY2021": 316826}),
+    ("DATA", "Debt instruments at fair value through other comprehensive income", {"FY2025": 1384500, "FY2024": 474700, "FY2023": 323978, "FY2022": 297334, "FY2021": 151052}),
+    ("DATA", "Debt instruments held at amortised cost", {"FY2025": 202500, "FY2024": 23000, "FY2023": 150273, "FY2022": 295103, "FY2021": 649503}),
+    ("DATA", "Derivatives held for hedging purposes", {"FY2025": 55800, "FY2024": 62400, "FY2023": 76882, "FY2022": 36021, "FY2021": 4058}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 5301500, "FY2024": 4100900, "FY2023": 2958769, "FY2022": 2384066, "FY2021": 1638851}),
+    ("DATA", "Other assets", {"FY2025": 76700, "FY2024": 100100, "FY2023": 63182, "FY2022": 46845, "FY2021": 26077}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 600, "FY2024": 700, "FY2023": 3180, "FY2022": 4068, "FY2021": 4865}),
+    ("DATA", "Intangible assets", {"FY2025": 38000, "FY2024": 41600, "FY2023": 37829, "FY2022": 36129, "FY2021": 35889}),
+    ("DATA", "Deferred tax asset", {"FY2025": 29100, "FY2024": 16500, "FY2023": 9800, "FY2022": 5353}),
+    ("TOTAL", "Total assets", {"FY2025": 8990900, "FY2024": 7224900, "FY2023": 7801381, "FY2022": 4558515, "FY2021": 2827121}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer deposits", {"FY2025": 7538700, "FY2024": 5746200, "FY2023": 6551325, "FY2022": 3229796, "FY2021": 2154419}),
+    ("DATA", "Borrowings from central banks", {"FY2025": 358200, "FY2024": 683800, "FY2023": 681403, "FY2022": 675749, "FY2021": 378093}),
+    ("DATA", "Deemed loan", {"FY2025": 556100, "FY2024": 322400, "FY2023": 186864, "FY2022": 343856, "FY2021": 110700}),
+    ("DATA", "Subordinated liabilities", {"FY2025": 50100, "FY2024": 0, "FY2023": 8201, "FY2022": 8192, "FY2021": 8180}),
+    ("DATA", "Derivatives held for hedging purposes", {"FY2025": 200, "FY2024": 1100, "FY2023": 0, "FY2022": 108, "FY2021": 4422}),
+    ("DATA", "Provisions", {"FY2025": 900, "FY2024": 800, "FY2023": 425, "FY2022": 310, "FY2021": 197}),
+    ("DATA", "Other liabilities", {"FY2025": 61500, "FY2024": 66800, "FY2023": 88532, "FY2022": 49410, "FY2021": 29780}),
+    ("TOTAL", "Total liabilities", {"FY2025": 8565700, "FY2024": 6821100, "FY2023": 7516750, "FY2022": 4307421, "FY2021": 2685791}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital and share premium", {"FY2025": 128900, "FY2024": 128900, "FY2023": 29305, "FY2022": 566378, "FY2021": 448935}),
+    ("DATA", "Other reserves", {"FY2025": 49200, "FY2024": 44700, "FY2023": 37379, "FY2022": 26875, "FY2021": 22627}),
+    ("DATA", "Accumulated gains/(losses)", {"FY2025": 247100, "FY2024": 230200, "FY2023": 217947, "FY2022": -342159, "FY2021": -330232}),
+    ("TOTAL", "Total equity", {"FY2025": 425200, "FY2024": 403800, "FY2023": 284631, "FY2022": 251094, "FY2021": 141330}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 8990900, "FY2024": 7224900, "FY2023": 7801381, "FY2022": 4558515, "FY2021": 2827121}),
+]
+
+BALANCE_SHEET_SOURCES = (
+    "Sources - Statement of financial position, Bank basis, £'000:\n"
+    f"FY2025/FY2024: Atom Bank Plc full accounts made up to 31 March 2025, p.55 - {AR25_URL}\n"
+    f"FY2023/FY2022: Atom Bank Plc full accounts made up to 31 March 2023, p.53 - {AR23_URL}\n"
+    f"FY2021: Atom Bank Plc full accounts made up to 31 March 2021, p.45 (Bank column) - {AR21_URL}\n"
+    "FY2021's Bank statement carries no 'Deferred tax asset' line at all (Note 9 confirms no deferred tax asset "
+    "was recognised that year - the Board only concluded it was appropriate to start recognising one from "
+    "FY2022) - left blank rather than assumed zero. FY2021's Bank statement also carried a 'Debt securities in "
+    "issue' line (£nil for Bank, £141,357k for Group) which no other year's statement shows - omitted as a "
+    "row here since it is nil on the Bank basis used throughout, consistent with every other year."
+    "\n\n" + STATEMENT_ENTITY_NOTE
+)
+
+bw.add_balance_sheet_sheet(
+    title="Atom Bank Plc - Statement of Financial Position",
+    subtitle="Bank (solo) basis, £'000",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=62,
+    source_height=220,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 441700, "FY2024": 440900, "FY2023": 208467, "FY2022": 76836, "FY2021": 42262}),
+    ("DATA", "Interest expense", {"FY2025": -340400, "FY2024": -341800, "FY2023": -133218, "FY2022": -33566, "FY2021": -30199}),
+    ("TOTAL", "Net interest income", {"FY2025": 101300, "FY2024": 99100, "FY2023": 75249, "FY2022": 43270, "FY2021": 12063}),
+    ("DATA", "Net fee and commission expense", {"FY2021": -1072}),
+    ("DATA", "Gain on disposal of assets held at amortised cost", {"FY2023": 0, "FY2022": 1749}),
+    ("DATA", "Loss on disposal of assets held at amortised cost", {"FY2021": -9241}),
+    ("DATA", "Other income", {"FY2023": 3083, "FY2022": 4099}),
+    ("DATA", "Other expense", {"FY2025": -700, "FY2024": 0}),
+    ("DATA", "Other income/(expense)", {"FY2021": 188}),
+    ("DATA", "Credit impairment charges", {"FY2025": -7100, "FY2024": -11000, "FY2023": -12768, "FY2022": -1100, "FY2021": -3652}),
+    ("TOTAL", "Net operating income/(expense)", {"FY2025": 93500, "FY2024": 88100, "FY2023": 65564, "FY2022": 48018, "FY2021": -1714}),
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Staff costs", {"FY2025": -36900, "FY2024": -32700, "FY2023": -31347, "FY2022": -25882, "FY2021": -24183}),
+    ("DATA", "Administrative and general expenses", {"FY2025": -31500, "FY2024": -28800, "FY2023": -27781, "FY2022": -24300, "FY2021": -22946}),
+    ("TOTAL", "Staff and administrative expense", {"FY2025": -68400, "FY2024": -61500, "FY2023": -59128, "FY2022": -50182, "FY2021": -47129}),
+    ("TOTAL", "Profit/(loss) before other charges", {"FY2025": 25100, "FY2024": 26600, "FY2023": 6436, "FY2022": -2164, "FY2021": -48843}),
+    ("SECTION", "Other charges", {}),
+    ("DATA", "Amortisation, depreciation and intangible impairment", {"FY2025": -13900, "FY2024": -12700, "FY2023": -11273, "FY2022": -10531, "FY2021": -10443}),
+    ("DATA", "Platform transformation costs", {"FY2021": -596}),
+    ("DATA", "Equity-settled share-based payments", {"FY2025": -6100, "FY2024": -7200, "FY2023": -5233, "FY2022": -4585, "FY2021": -2497}),
+    ("TOTAL", "Other charges", {"FY2025": -20000, "FY2024": -19900, "FY2023": -16506, "FY2022": -15116, "FY2021": -13536}),
+    ("TOTAL", "Profit/(loss) before taxation", {"FY2025": 5100, "FY2024": 6700, "FY2023": -10070, "FY2022": -17280}),
+    ("DATA", "Taxation credit/(expense)", {"FY2025": 11800, "FY2024": 5600, "FY2023": 4447, "FY2022": 5353}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2025": 16900, "FY2024": 12300, "FY2023": -5623, "FY2022": -11927, "FY2021": -62379}),
+    ("SECTION", "Other comprehensive income/(expense), net of tax", {}),
+    ("DATA", "Net (loss)/gain in fair value (fair value reserve)", {"FY2025": -400, "FY2024": 500, "FY2023": 117, "FY2022": -388, "FY2021": 725}),
+    ("DATA", "Net amount transferred to profit or loss (fair value reserve)", {"FY2025": 200, "FY2024": 100, "FY2023": -9, "FY2022": 51, "FY2021": -16}),
+    ("DATA", "Net (losses)/gains from changes in fair value (cash flow hedge reserve)", {"FY2025": -1300, "FY2024": -400, "FY2023": 5163}),
+    ("TOTAL", "Other comprehensive income/(expense), net of tax", {"FY2025": -1500, "FY2024": 200, "FY2023": 5271, "FY2022": -337, "FY2021": 709}),
+    ("TOTAL", "Total comprehensive income/(expense) for the year", {"FY2025": 15400, "FY2024": 12500, "FY2023": -352, "FY2022": -12264, "FY2021": -61670}),
+]
+
+INCOME_STATEMENT_SOURCES = (
+    "Sources - Statement of comprehensive income, Bank basis, £'000:\n"
+    f"FY2025/FY2024: Atom Bank Plc full accounts made up to 31 March 2025, p.54 - {AR25_URL}\n"
+    f"FY2023/FY2022: Atom Bank Plc full accounts made up to 31 March 2023, p.52 - {AR23_URL}\n"
+    f"FY2021: Atom Bank Plc full accounts made up to 31 March 2021, p.44 (Bank column) - {AR21_URL}\n"
+    "PRESENTATION NOTE: the line-item structure changes materially across report vintages, kept as each year's "
+    "own report presents it rather than forced into one shape - 'Net fee and commission expense' and 'Platform "
+    "transformation costs' appear only in the FY2021 report; 'Loss on disposal of assets held at amortised "
+    "cost' (FY2021, a genuine loss) is a different line from 'Gain on disposal of assets held at amortised "
+    "cost' (FY2022/FY2023, a genuine gain, FY2023 nil); 'Other income' (FY2023/FY2022, a broader ~£3-4m income "
+    "note aggregating fee income, hedge ineffectiveness and other items) is conceptually distinct from the "
+    "small 'Other expense' line shown FY2025/FY2024 (-£0.7m/nil) and from FY2021's 'Other income/(expense)' "
+    "(£0.19m) - all three are kept as separate rows rather than merged. FY2021's report shows 'Loss before and "
+    "after taxation' as a single combined row with no separate pre-tax/taxation split (tax was nil that year) - "
+    "'Profit/(loss) before taxation' and 'Taxation credit/(expense)' are left blank for FY2021 as a result, "
+    "matching that report's own presentation. 'Total comprehensive income/(expense) for the year' is the one "
+    "row genuinely comparable and populated across all 5 years."
+    "\n\n" + STATEMENT_ENTITY_NOTE
+)
+
+bw.add_income_statement_sheet(
+    title="Atom Bank Plc - Statement of Comprehensive Income",
+    subtitle="Bank (solo) basis, £'000",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=68,
+    source_height=260,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_HEADERS = [
+    "Share capital and share premium", "Fair value reserve", "Cash flow hedge reserve",
+    "Share-based payment reserve", "Accumulated gains/(losses)", "Total equity",
+]
+
+equity_changes_rows = [
+    ("TOTAL", "Balance as at 1 April 2020 (opening FY2021)", (448935, -433, None, 19854, -267853, 200503)),
+    ("DATA", "Loss for the year (FY2021)", (None, None, None, None, -62379, -62379)),
+    ("DATA", "Net gain in fair value", (None, 725, None, None, None, 725)),
+    ("DATA", "Net amount transferred to profit or loss", (None, -16, None, None, None, -16)),
+    ("TOTAL", "Total comprehensive income/(expense) (FY2021)", (None, 709, None, None, -62379, -61670)),
+    ("DATA", "Share schemes - value of employee services", (None, None, None, 2497, None, 2497)),
+    ("TOTAL", "Balance as at 31 March 2021", (448935, 276, None, 22351, -330232, 141330)),
+    ("DATA", "Loss for the year (FY2022)", (None, None, None, None, -11927, -11927)),
+    ("DATA", "Net loss in fair value", (None, -388, None, None, None, -388)),
+    ("DATA", "Net amount transferred to profit or loss", (None, 51, None, None, None, 51)),
+    ("TOTAL", "Total comprehensive expense (FY2022)", (None, -337, None, None, -11927, -12264)),
+    ("DATA", "Issue of new ordinary shares, net of transaction costs", (117443, None, None, None, None, 117443)),
+    ("DATA", "Share schemes - value of employee services", (None, None, None, 4585, None, 4585)),
+    ("TOTAL", "Balance as at 31 March 2022", (566378, -61, None, 26936, -342159, 251094)),
+    ("DATA", "Loss for the year (FY2023)", (None, None, None, None, -5623, -5623)),
+    ("DATA", "Net gain in fair value", (None, 117, None, None, None, 117)),
+    ("DATA", "Hedging adjustment (cash flow hedge reserve)", (None, None, 5163, None, None, 5163)),
+    ("DATA", "Net amount transferred to profit or loss", (None, -9, None, None, None, -9)),
+    ("TOTAL", "Total comprehensive income/(expense) (FY2023)", (None, 108, 5163, None, -5623, -352)),
+    ("DATA", "Issue of new ordinary shares, net of transaction costs", (28656, None, None, None, None, 28656)),
+    ("DATA", "Share premium reduction", (-565729, None, None, None, 565729, 0)),
+    ("DATA", "Share schemes - value of employee services", (None, None, None, 5233, None, 5233)),
+    ("TOTAL", "Balance as at 31 March 2023 (per FY2023 report)", (29305, 47, 5163, 32169, 217947, 284631)),
+    ("TOTAL", "Balance as at 1 April 2023 (per FY2025 report - restated)", (29300, 0, 5200, 32100, 217900, 284500)),
+    ("DATA", "Profit for the year (FY2024)", (None, None, None, None, 12300, 12300)),
+    ("DATA", "Net gain in fair value", (None, 500, None, None, None, 500)),
+    ("DATA", "Hedging adjustment (cash flow hedge reserve)", (None, None, -400, None, None, -400)),
+    ("DATA", "Net amount transferred to profit or loss", (None, 100, None, None, None, 100)),
+    ("TOTAL", "Total comprehensive income (FY2024)", (None, 600, -400, None, 12300, 12500)),
+    ("DATA", "Issue of new ordinary shares, net of transaction costs", (99600, None, None, None, None, 99600)),
+    ("DATA", "Share schemes - value of employee services", (None, None, None, 7200, None, 7200)),
+    ("TOTAL", "Balance as at 31 March 2024", (128900, 600, 4800, 39300, 230200, 403800)),
+    ("DATA", "Profit for the year (FY2025)", (None, None, None, None, 16900, 16900)),
+    ("DATA", "Net loss in fair value", (None, -400, None, None, None, -400)),
+    ("DATA", "Hedging adjustment (cash flow hedge reserve)", (None, None, -1300, None, None, -1300)),
+    ("DATA", "Net amount transferred to profit or loss", (None, 200, None, None, None, 200)),
+    ("TOTAL", "Total comprehensive income (FY2025)", (None, -200, -1300, None, 16900, 15400)),
+    ("DATA", "Share schemes - value of employee services", (None, None, None, 6000, None, 6000)),
+    ("TOTAL", "Balance as at 31 March 2025", (128900, 400, 3500, 45300, 247100, 425200)),
+]
+
+EQUITY_CHANGES_SOURCES = (
+    "Sources - Statement of changes in equity, Bank basis, £'000, read chronologically:\n"
+    f"FY2021/FY2022 movements: Atom Bank Plc full accounts made up to 31 March 2021, p.46-47 (Bank balance rollforward, "
+    f"1 April 2020 to 31 March 2021) - {AR21_URL}\n"
+    f"FY2022/FY2023 movements: Atom Bank Plc full accounts made up to 31 March 2023, p.54 (1 April 2021 to 31 March 2023) - {AR23_URL}\n"
+    f"FY2024/FY2025 movements: Atom Bank Plc full accounts made up to 31 March 2025, p.56 (1 April 2023 to 31 March 2025) - {AR25_URL}\n"
+    "DISCREPANCY FLAGGED, not silently reconciled: the FY2023 report's own precise closing balance as at 31 "
+    "March 2023 (£'000: 29,305 / 47 / 5,163 / 32,169 / 217,947 / 284,631) does not exactly match the FY2025 "
+    "report's own restated opening balance as at 1 April 2023 (£m, converted to £'000: 29,300 / ~0 / 5,200 / "
+    "32,100 / 217,900 / 284,500) for the same date - a ~£131k gap driven mainly by the FY2025 report disclosing "
+    "in £m (1 decimal place) rather than FY2023's own £'000 precision, plus the fair value reserve rounding to "
+    "nil. Both rows are shown rather than picking one, and all FY2024/FY2025 movements and closing balances are "
+    "taken from the FY2025 report's own £m figures as printed (×1,000) so that report's own arithmetic ties out "
+    "exactly (Balance as at 31 March 2025 = 425,200 = the Balance Sheet sheet's own Total equity for FY2025)."
+    "\n\nThe 'Other reserves and treasury shares' column used in the FY2021 report's Bank statement (nil "
+    "throughout FY2020-FY2021, no treasury shares held by the Bank) and the 'Cash flow hedge reserve' column "
+    "(introduced only from FY2022's hedging activity onward) are genuine structural differences across report "
+    "vintages, not errors - reflected here as blank cells rather than forced to zero or merged."
+    "\n\n" + ENTITY_NOTE
+)
+
+bw.add_equity_changes_sheet(
+    title="Atom Bank Plc - Statement of Changes in Equity",
+    subtitle="Bank (solo) basis, £'000, read chronologically oldest to newest",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+    source_height=280,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -124,6 +341,61 @@ bw.add_cash_flow_sheet(
     first_col_width=74,
     source_height=280,
     unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Gross carrying amount by product", {}),
+    ("DATA", "Mortgages", {"FY2025": 4251500, "FY2024": 3242600, "FY2023": 2148481, "FY2022": 1487122, "FY2021": 976553}),
+    ("DATA", "BBSL (secured business lending)", {"FY2025": 838700, "FY2024": 607900, "FY2023": 511831, "FY2022": 497305, "FY2021": 351978}),
+    ("DATA", "BBUL (unsecured business lending)", {"FY2025": 256600, "FY2024": 307300, "FY2023": 389427, "FY2022": 439465, "FY2021": 310158}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 5346800, "FY2024": 4157800, "FY2023": 3049739, "FY2022": 2423892, "FY2021": 1638689}),
+    ("SECTION", "Gross carrying amount by IFRS 9 stage", {}),
+    ("DATA", "Stage 1: 12 month expected loss", {"FY2025": 5004400, "FY2024": 3881700, "FY2023": 2819585, "FY2022": 1970916, "FY2021": 1513908}),
+    ("DATA", "Stage 2: Lifetime - loans not credit impaired", {"FY2025": 292200, "FY2024": 239900, "FY2023": 195537, "FY2022": 428042, "FY2021": 117989}),
+    ("DATA", "Stage 3: Lifetime - credit impaired loans", {"FY2025": 50200, "FY2024": 36200, "FY2023": 34617, "FY2022": 24934, "FY2021": 6792}),
+    ("TOTAL", "Total gross carrying amount (by stage)", {"FY2025": 5346800, "FY2024": 4157800, "FY2023": 3049739, "FY2022": 2423892, "FY2021": 1638689}),
+    ("SECTION", "Expected credit loss provision", {}),
+    ("DATA", "Mortgages", {"FY2025": 5900, "FY2024": 5100, "FY2023": 3618, "FY2022": 1257, "FY2021": 577}),
+    ("DATA", "BBSL", {"FY2025": 3300, "FY2024": 3000, "FY2023": 2678, "FY2022": 2479, "FY2021": 4076}),
+    ("DATA", "BBUL", {"FY2025": 9200, "FY2024": 11900, "FY2023": 10042, "FY2022": 5751, "FY2021": 5086}),
+    ("TOTAL", "Total provision for on balance sheet impairment losses", {"FY2025": 18400, "FY2024": 20000, "FY2023": 16338, "FY2022": 9487, "FY2021": 9739}),
+    ("SECTION", "Net balance sheet carrying value by product", {}),
+    ("DATA", "Mortgages", {"FY2025": 4219800, "FY2024": 3200400, "FY2023": 2070110, "FY2022": 1455268, "FY2021": 985758}),
+    ("DATA", "BBSL", {"FY2025": 834300, "FY2024": 604900, "FY2023": 509153, "FY2022": 494826, "FY2021": 347902}),
+    ("DATA", "BBUL", {"FY2025": 247400, "FY2024": 295600, "FY2023": 379506, "FY2022": 433972, "FY2021": 305191}),
+    ("TOTAL", "Net balance sheet carrying value", {"FY2025": 5301500, "FY2024": 4100900, "FY2023": 2958769, "FY2022": 2384066, "FY2021": 1638851}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "Total coverage ratio (ECL provision / gross carrying amount)", {"FY2025": "0.33%", "FY2024": "0.44%", "FY2023": "0.48%", "FY2022": "0.36%", "FY2021": "0.53%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross carrying amount)", {"FY2025": "0.94%", "FY2024": "0.87%", "FY2023": "1.14%", "FY2022": "1.03%", "FY2021": "0.41%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 ECL provision / Stage 3 gross)", {"FY2025": "13.55%", "FY2024": "17.96%", "FY2023": "11.47%", "FY2022": "11.37%", "FY2021": "17.90%"}),
+]
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Note 'Loans and advances to customers', Bank/Group basis (Atom's retail lending is on a single "
+    "Bank basis for this note in every year, unlike the primary statements), £'000:\n"
+    f"FY2025/FY2024: Atom Bank Plc full accounts made up to 31 March 2025, p.69 - {AR25_URL}\n"
+    f"FY2023/FY2022: Atom Bank Plc full accounts made up to 31 March 2023, p.69-70 - {AR23_URL}\n"
+    f"FY2021: Atom Bank Plc full accounts made up to 31 March 2021, p.72-73 (comparatives disclosed there for "
+    f"FY2021/FY2020) - {AR21_URL}\n"
+    "'Total gross carrying amount' (by product) and 'Total gross carrying amount (by stage)' are the same "
+    "underlying figure shown two ways (by product vs by IFRS 9 stage) and tie out exactly for every year "
+    "(each product's own stage 1+2+3 gross carrying amounts sum to that product's own total row in the source "
+    "table) - the by-stage total is what ties to the Balance Sheet's Loans and advances to customers line (net "
+    "of the ECL provision below) for every year. Ratios are "
+    "the Bank's own disclosed 'Total coverage ratio' row (FY2023-FY2021) or its FY2025/FY2024 equivalent, plus "
+    "Stage 3/NPL and Stage 3 coverage ratios calculated here from the disclosed stage-level figures."
+    "\n\n" + STATEMENT_ENTITY_NOTE
+)
+
+bw.add_asset_quality_sheet(
+    title="Atom Bank Plc - Asset Quality / Credit Risk Disclosures",
+    subtitle="Bank basis, £'000 (ratios as stated/calculated)",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    source_height=260,
 )
 
 # ---------------------------------------------------------------
@@ -187,6 +459,38 @@ metric(
     p3_sources(),
 )
 
+# ---------------------------------------------------------------
+# Sheet: RWA Breakdown (placed immediately after Total RWAs, before Leverage Ratio)
+# ---------------------------------------------------------------
+rwa_breakdown_rows = [
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 2171000, "FY2024": 1676100, "FY2023": 1161945, "FY2022": 951043, "FY2021": 658405}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 13400, "FY2024": 6000, "FY2023": 1903, "FY2022": 13238, "FY2021": 3677}),
+    ("DATA", "  of which credit valuation adjustment (CVA)", {"FY2025": 7100, "FY2024": 2700, "FY2023": 524, "FY2022": 4621, "FY2021": 560}),
+    ("DATA", "Securitisation exposures (non-trading book, after the cap)", {"FY2025": 20900, "FY2024": 4300, "FY2023": 21200, "FY2022": 40725, "FY2021": 81214}),
+    ("DATA", "Market risk (position, FX and commodities risks)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "Operational risk", {"FY2025": 174000, "FY2024": 141600, "FY2023": 86621, "FY2022": 37995, "FY2021": 0}),
+    ("TOTAL", "Total risk-weighted exposure amount (RWEAs)", {"FY2025": 2379300, "FY2024": 1828000, "FY2023": 1271669, "FY2022": 1043001, "FY2021": 743296}),
+]
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Table UK OV1 (Overview of risk weighted exposure amounts), Bank basis, £'000:\n"
+    f"FY2025/FY2024: Atom Holdco plc Pillar 3 Disclosures 2025, p.16 (Bank column) - {P3_FY25_URL}\n"
+    f"FY2023: Atom Holdco Limited Pillar 3 Disclosures 2023, p.16-17 (Bank column) - {P3_FY23_URL}\n"
+    f"FY2022/FY2021: Atom Bank Plc Pillar 3 Disclosures 2021/22, p.20-21 - {P3_FY22_URL}\n"
+    "Atom states it has no Pillar 1 market risk exposures in every year's Pillar 3 report - shown as £0 rather "
+    "than blank/not-disclosed. FY2025/FY2024 figures were originally disclosed in £m (1 decimal place) and are "
+    "shown here converted to £'000 (x1,000), consistent with the FY2024/FY2025 Pillar 3 ratio sheets' own unit "
+    "conversion note; FY2023-FY2021 are the source table's own £'000 figures. Total ties out exactly to the "
+    "Total RWAs sheet for every year."
+)
+
+bw.add_rwa_breakdown_sheet(
+    title="Atom Bank Plc - RWA Breakdown",
+    subtitle="Bank basis, £'000",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+)
+
 metric(
     "Leverage Ratio", "£'000 / %",
     [
@@ -235,6 +539,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 8990900, "FY2024": 7224900, "FY2023": 7801381, "FY2022": 4558515, "FY2021": 2827121}),
+        ("Loans and advances to customers", {"FY2025": 5301500, "FY2024": 4100900, "FY2023": 2958769, "FY2022": 2384066, "FY2021": 1638851}),
+        ("Customer deposits", {"FY2025": 7538700, "FY2024": 5746200, "FY2023": 6551325, "FY2022": 3229796, "FY2021": 2154419}),
+        ("Total equity", {"FY2025": 425200, "FY2024": 403800, "FY2023": 284631, "FY2022": 251094, "FY2021": 141330}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Net operating income/(expense)", {"FY2025": 93500, "FY2024": 88100, "FY2023": 65564, "FY2022": 48018, "FY2021": -1714}),
+        ("Staff and administrative expense", {"FY2025": -68400, "FY2024": -61500, "FY2023": -59128, "FY2022": -50182, "FY2021": -47129}),
+        ("Profit/(loss) for the year", {"FY2025": 16900, "FY2024": 12300, "FY2023": -5623, "FY2022": -11927, "FY2021": -62379}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 403800, "FY2024": 284500, "FY2023": 251094, "FY2022": 141330, "FY2021": 200503}),
+        ("Total comprehensive income/(expense) for the year", {"FY2025": 15400, "FY2024": 12500, "FY2023": -352, "FY2022": -12264, "FY2021": -61670}),
+        ("Other equity movements, net", {"FY2025": 6000, "FY2024": 106800, "FY2023": 33889, "FY2022": 122028, "FY2021": 2497}),
+        ("Closing equity", {"FY2025": 425200, "FY2024": 403800, "FY2023": 284631, "FY2022": 251094, "FY2021": 141330}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash from/(used in) operating activities", {"FY2022": 1176233, "FY2021": 30842}),
         ("Net cash from/(used in) investing activities", {"FY2022": -156256, "FY2021": 16769}),
@@ -254,7 +578,13 @@ bw.add_overview_sheet(
          "citation for the underlying document/page. Cash flow is blank for FY2023-FY2025 (FRS 101 qualifying-"
          "entity exemption took effect from FY2023, following the insertion of Atom Holdco above Atom Bank Plc - "
          "see Cash Flow Statement sheet note). Unlike several other banks in this project, all ratios here are on "
-         "a consistent Bank-solo basis throughout - no cash-flow-vs-Pillar-3 basis mismatch.",
+         "a consistent Bank-solo basis throughout - no cash-flow-vs-Pillar-3 basis mismatch. 'Net operating "
+         "income/(expense)' and 'Staff and administrative expense' stand in for the usual 'Revenue'/'Total "
+         "operating expense' headline pair - Atom's own P&L structure doesn't disclose a single top-line revenue "
+         "figure (see the Profit & Loss sheet's presentation note). FY2024's 'Opening equity' (£284,500k) uses "
+         "the FY2025 Annual Report's own restated 1 April 2023 balance rather than the FY2023 report's own "
+         "(slightly different, £284,631k) closing balance for the same date - see the Statement of Changes in "
+         "Equity sheet's flagged discrepancy note.",
 )
 
 # ---------------------------------------------------------------

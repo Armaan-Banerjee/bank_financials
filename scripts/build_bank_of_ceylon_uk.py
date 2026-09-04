@@ -74,6 +74,149 @@ def p3_sources(page_25="3", page_24="4", page_21="12"):
 
 bw = BankWorkbook(bank_name="Bank of Ceylon (UK) Limited", years=YEARS, year_label=YEAR_LABEL, header_color="8D6A9F")
 
+STATEMENTS_SOURCES = (
+    "Sources - Bank of Ceylon (UK) Limited's own Statement of Financial Position / Statement of Comprehensive "
+    "Income / Statement of Changes to Equity, £'000, as filed at Companies House (all 3 filings are fully "
+    "scanned/image-only - visually transcribed by rendering each page to PNG at 200dpi and reading it directly, "
+    "the same OCR-equivalent workflow used elsewhere in this project for image-only statutory filings):\n"
+    f"FY2025 & FY2024: Full accounts made up to 31 December 2025, pp.24-26 - {CH2025_URL}\n"
+    f"FY2023 & FY2022: Full accounts made up to 31 December 2023, pp.39-41,57 (Note 15) - {CH2023_URL}\n"
+    f"FY2021 (& FY2020 comparative, not used): Full accounts made up to 31 December 2021, pp.26-28,43 (Note 14) - "
+    f"{CH2021_URL}\n"
+    "PRESENTATION NOTE: line items are not fully consistent year to year in these filings - Derivatives (assets "
+    "and liabilities) appear as a separate line only in the FY2021-FY2023 filings, not FY2024/FY2025 (likely "
+    "folded into Other assets/Other liabilities those years, not stated explicitly); Prepayments and accrued "
+    "income and Accruals are separate lines FY2022-FY2025 but not disclosed separately in FY2021 (folded into "
+    "Other assets/Other liabilities that year); Current tax is a separate line FY2023-FY2025 only. None of this "
+    "affects Total assets/Total liabilities/Total equity, which tie out exactly every year.\n"
+    "DATA CONSISTENCY NOTE: the FY2025 filing's own SOCE opening balance for 1 January 2024 (15,000/(1,293)/"
+    "1,104/14,811) ties out exactly to the FY2023 filing's own closing balance for 31 December 2023, and "
+    "similarly FY2023's opening 1 January 2022 balance (15,000/(1,989)/820/13,831) via the FY2023 filing itself, "
+    "and FY2021's closing 31 December 2021 balance (15,000/(1,843)/745/13,902) matches the FY2023 filing's own "
+    "'1 January 2022' opening row exactly - full chain verified across all 3 source documents, no restatement "
+    "breaks found (unlike some other banks in this project).\n"
+    "P&L NOTE: the FY2023 filing's Statement of Changes to Equity includes a 'Retained earnings Adjustment' of "
+    "£(193)k for FY2023 that is NOT part of that year's Statement of Comprehensive Income (which shows Total "
+    "comprehensive income of £1,173k) - this is a genuine one-off equity adjustment outside the P&L, not a "
+    "transcription error; it is captured in the Overview's equity bridge as part of 'Other movements, net'. "
+    "Similarly, FY2021's and FY2022's Revaluation reserve movements ((159) and 75 respectively) bypass the P&L's "
+    "Other Comprehensive Income section entirely in the source document and are booked directly to equity via "
+    "the Statement of Changes to Equity - reproduced as disclosed.\n"
+    + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", {"FY2025": 109027, "FY2024": 100818, "FY2023": 115702, "FY2022": 86759, "FY2021": 2866}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 4053, "FY2024": 7121, "FY2023": 1831, "FY2022": 7501, "FY2021": 21104}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 76043, "FY2024": 56807, "FY2023": 34032, "FY2022": 18096, "FY2021": 19359}),
+    ("DATA", "Derivatives", {"FY2023": 268, "FY2022": 1146, "FY2021": 88}),
+    ("DATA", "Prepayments and accrued income", {"FY2025": 300, "FY2024": 154, "FY2023": 103, "FY2022": 68}),
+    ("DATA", "Other assets", {"FY2025": 57, "FY2024": 83, "FY2023": 148, "FY2022": 115, "FY2021": 129}),
+    ("DATA", "Investments", {"FY2025": 1414, "FY2024": 3712, "FY2023": 435, "FY2022": 453, "FY2021": 1499}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 4079, "FY2024": 4071, "FY2023": 3812, "FY2022": 3450, "FY2021": 3563}),
+    ("DATA", "Intangible assets", {"FY2025": 140, "FY2024": 94, "FY2023": 22, "FY2022": 11, "FY2021": 22}),
+    ("TOTAL", "Total assets", {"FY2025": 195113, "FY2024": 172860, "FY2023": 156353, "FY2022": 117599, "FY2021": 48630}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {"FY2025": 100091, "FY2024": 111334, "FY2023": 120815, "FY2022": 90034, "FY2021": 28123}),
+    ("DATA", "Customer account deposits", {"FY2025": 76703, "FY2024": 44538, "FY2023": 19229, "FY2022": 11427, "FY2021": 5811}),
+    ("DATA", "Derivatives", {"FY2023": 189, "FY2022": 852, "FY2021": 86}),
+    ("DATA", "Accruals", {"FY2025": 162, "FY2024": 258, "FY2023": 357, "FY2022": 236}),
+    ("DATA", "Other liabilities", {"FY2025": 2082, "FY2024": 973, "FY2023": 239, "FY2022": 974, "FY2021": 377}),
+    ("TOTAL", "Current liabilities", {"FY2025": 179038, "FY2024": 157103, "FY2023": 140829, "FY2022": 103523, "FY2021": 34397}),
+    ("DATA", "Current tax", {"FY2025": 80, "FY2024": 85, "FY2023": 179}),
+    ("DATA", "Deferred tax", {"FY2025": 502, "FY2024": 502, "FY2023": 534, "FY2022": 245, "FY2021": 331}),
+    ("TOTAL", "Total liabilities", {"FY2025": 179620, "FY2024": 157690, "FY2023": 141542, "FY2022": 103768, "FY2021": 34728}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 15000, "FY2024": 15000, "FY2023": 15000, "FY2022": 15000, "FY2021": 15000}),
+    ("DATA", "Revaluation reserve", {"FY2025": 1136, "FY2024": 1136, "FY2023": 1104, "FY2022": 820, "FY2021": 745}),
+    ("DATA", "Accumulated losses", {"FY2025": -643, "FY2024": -966, "FY2023": -1293, "FY2022": -1989, "FY2021": -1843}),
+    ("TOTAL", "Equity shareholders' funds", {"FY2025": 15493, "FY2024": 15170, "FY2023": 14811, "FY2022": 13831, "FY2021": 13902}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 195113, "FY2024": 172860, "FY2023": 156353, "FY2022": 117599, "FY2021": 48630}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Bank of Ceylon (UK) Limited — Statement of Financial Position",
+    subtitle="Bank of Ceylon (UK) Limited (own entity basis), £'000",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=46,
+    source_height=260,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 8926, "FY2024": 9265, "FY2023": 6466, "FY2022": 2795, "FY2021": 1918}),
+    ("DATA", "Interest expense", {"FY2025": -6758, "FY2024": -6885, "FY2023": -4272, "FY2022": -1084, "FY2021": -229}),
+    ("TOTAL", "Net interest income", {"FY2025": 2168, "FY2024": 2380, "FY2023": 2194, "FY2022": 1711, "FY2021": 1689}),
+    ("DATA", "Fees and commission income", {"FY2025": 885, "FY2024": 564, "FY2023": 530, "FY2022": 474, "FY2021": 361}),
+    ("DATA", "Net gains from foreign exchange transactions", {"FY2025": 108, "FY2024": 97, "FY2023": 421, "FY2022": 193, "FY2021": 50}),
+    ("TOTAL", "Net operating income", {"FY2025": 3161, "FY2024": 3041, "FY2023": 3145, "FY2022": 2378, "FY2021": 2100}),
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Personnel expenses", {"FY2025": -1512, "FY2024": -1459, "FY2023": -1302, "FY2022": -1126, "FY2021": -1085}),
+    ("DATA", "Operational expenses", {"FY2025": -1168, "FY2024": -1133, "FY2023": -940, "FY2022": -877, "FY2021": -723}),
+    ("DATA", "Depreciation", {"FY2025": -84, "FY2024": -120, "FY2023": -116, "FY2022": -106, "FY2021": -107}),
+    ("DATA", "Amortisation", {"FY2025": -14, "FY2024": -10, "FY2023": -9, "FY2022": -11, "FY2021": -12}),
+    ("DATA", "Impairment (charge)/gain on credit exposure", {"FY2025": -15, "FY2024": 93, "FY2023": 290, "FY2022": -405, "FY2021": -59}),
+    ("TOTAL", "Total operating expenses", {"FY2025": -2793, "FY2024": -2629, "FY2023": -2077, "FY2022": -2525, "FY2021": -1986}),
+    ("TOTAL", "Profit/(loss) from ordinary activities before tax", {"FY2025": 368, "FY2024": 412, "FY2023": 1068, "FY2022": -147, "FY2021": 114}),
+    ("DATA", "Tax charge/(credit) on profit", {"FY2025": -45, "FY2024": -85, "FY2023": -179, "FY2022": 1, "FY2021": -2}),
+    ("TOTAL", "Profit/(loss) from ordinary activities after tax", {"FY2025": 323, "FY2024": 327, "FY2023": 889, "FY2022": -146, "FY2021": 112}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Fair value gain on revaluation of property", {"FY2023": 574}),
+    ("DATA", "Deferred tax on revaluation", {"FY2024": 32, "FY2023": -290}),
+    ("TOTAL", "Total other comprehensive income", {"FY2025": 0, "FY2024": 32, "FY2023": 284, "FY2022": 0, "FY2021": 0}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year", {"FY2025": 323, "FY2024": 359, "FY2023": 1173, "FY2022": -146, "FY2021": 112}),
+]
+
+bw.add_income_statement_sheet(
+    title="Bank of Ceylon (UK) Limited — Statement of Comprehensive Income",
+    subtitle="Bank of Ceylon (UK) Limited (own entity basis), £'000",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=52,
+    source_height=260,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Share capital", "Accumulated losses", "Revaluation reserve", "Total equity"]
+equity_changes_rows = [
+    ("TOTAL", "Balance at 1 January 2021", (15000, -1955, 904, 13949)),
+    ("DATA", "Total comprehensive income", (None, 112, None, 112)),
+    ("DATA", "Revaluation reserve movement", (None, None, -159, -159)),
+    ("TOTAL", "Balance at 31 December 2021", (15000, -1843, 745, 13902)),
+    ("DATA", "Total comprehensive income", (None, -146, None, -146)),
+    ("DATA", "Revaluation reserve movement", (None, None, 75, 75)),
+    ("TOTAL", "Balance at 31 December 2022", (15000, -1989, 820, 13831)),
+    ("DATA", "Profit for the year", (None, 889, None, 889)),
+    ("DATA", "Retained earnings adjustment", (None, -193, None, -193)),
+    ("DATA", "Revaluation reserve movement", (None, None, 284, 284)),
+    ("TOTAL", "Balance at 31 December 2023", (15000, -1293, 1104, 14811)),
+    ("DATA", "Profit for the year", (None, 327, None, 327)),
+    ("DATA", "Other comprehensive income", (None, None, 32, 32)),
+    ("TOTAL", "Balance at 31 December 2024", (15000, -966, 1136, 15170)),
+    ("DATA", "Profit for the year", (None, 323, None, 323)),
+    ("TOTAL", "Balance at 31 December 2025", (15000, -643, 1136, 15493)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Bank of Ceylon (UK) Limited — Statement of Changes to Equity",
+    subtitle="Bank of Ceylon (UK) Limited (own entity basis), £'000, chronological (oldest to newest)",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=42,
+    source_height=260,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -111,6 +254,54 @@ bw.add_cash_flow_sheet(
     first_col_width=56,
     source_height=220,
     unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    "Sources - Bank of Ceylon (UK) Limited's own Companies House filings (visually transcribed, see the "
+    "Balance Sheet sheet's source note for the OCR-equivalent method):\n"
+    f"FY2025 & FY2024 (by IFRS 9 stage): Full accounts made up to 31 December 2025, p.39 ('Credit exposure by "
+    f"stage' note) - {CH2025_URL}\n"
+    f"FY2023 & FY2022 (by product): Full accounts made up to 31 December 2023, p.57 (Note 15) - {CH2023_URL}\n"
+    f"FY2021 (by product): Full accounts made up to 31 December 2021, p.43 (Note 14) - {CH2021_URL}\n"
+    "STRUCTURAL BREAK: the FY2025 filing introduced a new IFRS 9 stage-level credit exposure disclosure not "
+    "present in the earlier filings - FY2025/FY2024 are shown by stage (Stage 1/2/3), FY2023/FY2022/FY2021 are "
+    "shown by product (Personal/Commercial) instead, since that is genuinely all that was disclosed those years. "
+    "The two breakdowns are NOT additive across the table (different bases) - both are transcribed as their own "
+    "source discloses, not forced into one shape.\n"
+    "FY2024's ECL allowance on loans and advances to customers (£26k) is DERIVED (gross £56,833k less carrying "
+    "£56,807k per the Balance Sheet/Note 15), not a directly disclosed per-portfolio figure for that year - the "
+    "FY2025 filing's reconciliation table (gross->ECL->net) is only given for FY2025 itself.\n"
+    + ENTITY_NOTE
+)
+
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers - by IFRS 9 stage (FY2024-FY2025 only)", {}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": 72088, "FY2024": 55739}),
+    ("DATA", "Stage 2 (significant increase in credit risk)", {"FY2025": 3646, "FY2024": 1094}),
+    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": 354, "FY2024": 0}),
+    ("TOTAL", "Gross loans and advances to customers (by stage)", {"FY2025": 76088, "FY2024": 56833}),
+    ("SECTION", "Loans and advances to customers - by product (FY2021-FY2023 only)", {}),
+    ("DATA", "Personal loans and advances (gross)", {"FY2023": 30188, "FY2022": 10750, "FY2021": 11277}),
+    ("DATA", "Commercial loans and advances (gross)", {"FY2023": 3862, "FY2022": 7355, "FY2021": 8088}),
+    ("TOTAL", "Gross loans and advances to customers (by product)", {"FY2023": 34050, "FY2022": 18105, "FY2021": 19365}),
+    ("SECTION", "Impairment", {}),
+    ("DATA", "ECL allowance on loans and advances to customers", {"FY2025": -45, "FY2024": -26, "FY2023": -18, "FY2022": -9, "FY2021": -6}),
+    ("TOTAL", "Net loans and advances to customers", {"FY2025": 76043, "FY2024": 56807, "FY2023": 34032, "FY2022": 18096, "FY2021": 19359}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "ECL coverage ratio (ECL allowance / gross loans)", {"FY2025": "0.06%", "FY2024": "0.05%", "FY2023": "0.05%", "FY2022": "0.05%", "FY2021": "0.03%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross)", {"FY2025": "0.47%", "FY2024": "0.00%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Bank of Ceylon (UK) Limited — Asset Quality / Credit Risk Disclosures",
+    subtitle="Bank of Ceylon (UK) Limited (own entity basis), £'000 unless stated",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=58,
+    source_height=220,
 )
 
 # ---------------------------------------------------------------
@@ -154,6 +345,46 @@ metric(
 metric(
     "Total RWAs", "£'000",
     [("Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32187, "FY2021": 24509})],
+)
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Bank of Ceylon (UK) Limited Pillar 3 disclosures, UK OV1-equivalent 'Own Funds Requirement' "
+    "exposure-class table (own entity-level basis), £'000:\n"
+    f"FY2025: Pillar 3 Disclosures 31 December 2025, p.13 (5.4 Own Funds Requirement) - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 31 December 2024, p.25 (5.4 Own Funds Requirement) - {P3_2024_URL}\n"
+    f"FY2023: DERIVED from the FY2024 Pillar 3 document's own '2023 Capital Requirement' comparative column "
+    f"(RWA = capital requirement / 8%, the standard Pillar 1 minimum capital ratio) - {P3_2024_URL}. No "
+    f"standalone FY2023 Pillar 3 document was found (consistent with the other Pillar 3 sheets' note). The "
+    f"derived total (£32,188k) is £1k above the pre-existing Total RWAs sheet's FY2023 figure (£32,187k) due "
+    f"to rounding in this back-calculation - not treated as an error, both are within £1k of each other.\n"
+    f"FY2021: Pillar 3 Disclosures as at 31st December 2021, p.16 (5.4 Own Funds Requirement) - {P3_2021_URL}\n"
+    "FY2022: no standalone Pillar 3 document was found (see other Pillar 3 sheets' note) - left blank rather "
+    "than guessed.\n"
+    "DISCREPANCY FLAGGED (FY2021): the pre-existing Total RWAs sheet's FY2021 figure (£24,509k) equals only "
+    "the Credit and Counterparty Credit Risk subtotal from the FY2021 Pillar 3 document's own table - it does "
+    "NOT include that same table's Market Risk (£302k) or Operational Risk (£4,241k) RWA, whose sum is the "
+    "document's own printed 'Total Pillar 1 Requirement' of £29,052k. This RWA Breakdown sheet uses the correct "
+    "full total (£29,052k), which is £4,543k higher than the pre-existing Total RWas sheet's FY2021 value - "
+    "flagged here for correction there rather than silently matched to the (apparently understated) existing "
+    "figure.\n"
+    + ENTITY_NOTE
+)
+
+rwa_breakdown_rows = [
+    ("SECTION", "Risk-weighted exposure amounts by risk type", {}),
+    ("DATA", "Credit and counterparty credit risk", {"FY2025": 65343, "FY2024": 56022, "FY2023": 26888, "FY2021": 24509}),
+    ("DATA", "Market risk", {"FY2025": 37, "FY2024": 557, "FY2023": 1150, "FY2021": 302}),
+    ("DATA", "Operational risk (Basic Indicator Approach)", {"FY2025": 5353, "FY2024": 4765, "FY2023": 4150, "FY2021": 4241}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32188, "FY2021": 29052}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Bank of Ceylon (UK) Limited — RWA Breakdown",
+    subtitle="Bank of Ceylon (UK) Limited (own entity basis), £'000",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=48,
+    source_height=260,
 )
 
 metric(
@@ -201,6 +432,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 195113, "FY2024": 172860, "FY2023": 156353, "FY2022": 117599, "FY2021": 48630}),
+        ("Loans and advances to customers", {"FY2025": 76043, "FY2024": 56807, "FY2023": 34032, "FY2022": 18096, "FY2021": 19359}),
+        ("Customer account deposits", {"FY2025": 76703, "FY2024": 44538, "FY2023": 19229, "FY2022": 11427, "FY2021": 5811}),
+        ("Total equity", {"FY2025": 15493, "FY2024": 15170, "FY2023": 14811, "FY2022": 13831, "FY2021": 13902}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Net operating income", {"FY2025": 3161, "FY2024": 3041, "FY2023": 3145, "FY2022": 2378, "FY2021": 2100}),
+        ("Total operating expenses", {"FY2025": -2793, "FY2024": -2629, "FY2023": -2077, "FY2022": -2525, "FY2021": -1986}),
+        ("Profit/(loss) for the year", {"FY2025": 323, "FY2024": 327, "FY2023": 889, "FY2022": -146, "FY2021": 112}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 15170, "FY2024": 14811, "FY2023": 13831, "FY2022": 13902, "FY2021": 13949}),
+        ("Total comprehensive income", {"FY2025": 323, "FY2024": 359, "FY2023": 1173, "FY2022": -146, "FY2021": 112}),
+        ("Other movements, net", {"FY2025": 0, "FY2024": 0, "FY2023": -193, "FY2022": 75, "FY2021": -159}),
+        ("Closing equity", {"FY2025": 15493, "FY2024": 15170, "FY2023": 14811, "FY2022": 13831, "FY2021": 13902}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash flow from operating activities", {"FY2025": 8361, "FY2024": -14423, "FY2023": 29059, "FY2022": 83148, "FY2021": 927}),
         ("Net cash flow from investing activities", {"FY2025": -152, "FY2024": -461, "FY2023": -116, "FY2022": -2, "FY2021": 0}),

@@ -10,4 +10,8 @@ leverage_ratio,Leverage Ratio,Leverage Ratio,pillar_3
 lcr,LCR,LCR,pillar_3
 nsfr,NSFR,NSFR,pillar_3
 mrel_ratio,MREL Ratio,MREL Ratio,pillar_3
+balance_sheet,Balance Sheet,Balance Sheet,pillar_3
+profit_loss,Profit & Loss,Profit & Loss,pillar_3
+asset_quality,Asset Quality,Asset Quality,pillar_3
+rwa_breakdown,RWA Breakdown,RWA Breakdown,pillar_3
 cash_flow_statement,Cash Flow Statement,Cash Flow Statement,cash_flow

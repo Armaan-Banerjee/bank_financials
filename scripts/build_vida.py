@@ -70,6 +70,212 @@ def p3_sources():
 
 bw = BankWorkbook(bank_name="Vida Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="6E2C00")
 
+STATEMENTS_ENTITY_NOTE = (
+    "Balance Sheet / Statement of Changes in Equity are on Vida Bank Limited's own Company (non-consolidated) "
+    "basis in every year, matching the Cash Flow Statement sheet's basis (see its own ENTITY_NOTE). Profit & Loss "
+    "is on the Company basis for FY2025/FY2024 only (Vida's own Company Statement of Comprehensive Income exists "
+    "for those two years); for FY2023/FY2022/FY2021, the Company took the section 408 Companies Act 2006 "
+    "exemption and published no separate Company income statement (only a one-line narrative profit/loss-after-tax "
+    "figure, which ties to the equity ladder's own movement for that year), so the Group/Consolidated income "
+    "statement is shown instead for those 3 years - a genuine basis difference, not forced to a single basis."
+)
+
+BALANCE_SHEET_SOURCES = (
+    "Sources - Vida Bank Limited's own Company (non-consolidated) Statement of Financial Position, £'000:\n"
+    f"FY2025: Vida Bank Limited Annual Report and Accounts 2025 (Company), p.53 - {AR2025_URL}\n"
+    f"FY2024: Vida Bank Limited Annual Report and Accounts 2024 (Company), p.71 - {AR2024_URL}\n"
+    f"FY2023: Belmont Green Finance Limited Annual Report and Accounts 2023, p.185 (Company Statement of "
+    f"Financial Position) - {AR2023_URL}\n"
+    f"FY2022: taken from the FY2023 Annual Report's own restated FY2022 comparative column (same document/page "
+    f"as above) - Belmont Green's own FY2022 Annual Report was not fetched this session.\n"
+    f"FY2021: Belmont Green Finance Limited Annual Report and Accounts 2021, p.149 (Company Statement of "
+    f"Financial Position) - {AR2021_URL}\n\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+INCOME_STATEMENT_SOURCES = (
+    "Sources - £'000. FY2025/FY2024: Vida Bank Limited's own Company Statement of Comprehensive Income. "
+    "FY2023/FY2022/FY2021: Group/Consolidated Statement of Profit and Loss and Other Comprehensive Income "
+    "(Company P&L exempted under s.408, see ENTITY_NOTE below):\n"
+    f"FY2025: Vida Bank Limited Annual Report and Accounts 2025 (Company), p.52 - {AR2025_URL}\n"
+    f"FY2024: Vida Bank Limited Annual Report and Accounts 2025 (Company), p.52, FY2024 comparative column - "
+    f"{AR2025_URL}\n"
+    f"FY2023: Belmont Green Finance Limited Annual Report and Accounts 2023, p.143 (Consolidated Statement of "
+    f"Profit and Loss and Other Comprehensive Income) - {AR2023_URL}\n"
+    f"FY2022: taken from the FY2023 Annual Report's own FY2022 comparative column (same document/page as above).\n"
+    f"FY2021: Belmont Green Finance Limited Annual Report and Accounts 2021, p.109 (Consolidated Statement of "
+    f"Comprehensive Income) - {AR2021_URL}\n\n"
+    "Presentation notes (not silently reconciled): FY2021's Group statement labels its operating-income subtotal "
+    "\"Total income\" rather than FY2022-25's \"Net operating income\" - same position in the statement, different "
+    "label, reproduced as printed. FY2025's own Statement of Comprehensive Income prints its final row as \"Total "
+    "other comprehensive profit\" with a value of 12,699 - this is actually the year's Total comprehensive income "
+    "(Profit after tax 13,097 less the 3 OCI items above it, -21-98-279=-398, gives exactly 12,699); the source's "
+    "own row label is internally inconsistent (a subtotal, not \"other\" comprehensive income), so this row is "
+    "relabelled \"Total comprehensive income for the year, net of tax\" here to match the other 4 years' own "
+    "correctly-labelled totals - the £'000 value itself is reproduced exactly as printed, unchanged.\n\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+EQUITY_SOURCES = (
+    "Sources - Vida Bank Limited's own Company (non-consolidated) Statement of Changes in Equity, £'000:\n"
+    f"FY2021 boundary (1 Jan 2021 opening, FY2021 movements, 31 Dec 2021 closing): Belmont Green Finance Limited "
+    f"Annual Report and Accounts 2021, p.150 - {AR2021_URL}\n"
+    f"FY2022 boundary: Belmont Green Finance Limited Annual Report and Accounts 2023, p.184 (FY2022 comparative "
+    f"rows) - {AR2023_URL}\n"
+    f"FY2023 boundary: same document, p.184 - {AR2023_URL}\n"
+    f"FY2024 boundary: Vida Bank Limited Annual Report and Accounts 2024, p.72 - {AR2024_URL}\n"
+    f"FY2025 boundary: Vida Bank Limited Annual Report and Accounts 2025 (Company), p.54 - {AR2025_URL}\n\n"
+    "Discrepancy flagged, not forced to tie: the FY2024 Annual Report's own opening balance at 1 January 2024 "
+    "(share capital 204,463 / total equity 122,070) differs by £1k from the FY2023 Annual Report's own closing "
+    "balance at 31 December 2023 (share capital 204,462 / total equity 122,069) - a genuine £1k rounding artefact "
+    "between the two source documents, each reproduced exactly as its own report states.\n\n"
+    "The FY2025 Statement of Changes in Equity's own \"Total comprehensive income\" subtotal row is omitted from "
+    "this ladder: it prints running balances (not that year's movement) in its Retained earnings and Total "
+    "columns - see the Profit & Loss sheet's own source note for the same issue on that sheet. Every individual "
+    "movement row above it (Profit for the year, Deferred tax on Gilts, Fair value through OCI reserve, Amounts "
+    "deferred to cash flow hedge reserve) is reproduced in full and the ladder ties exactly without it.\n\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Vida Bank Limited's own IFRS 9 stage disclosure (Note 13/14, \"Expected credit losses\"), £'000, "
+    "on a Group/Consolidated basis (the only basis at which this note is disclosed in every source document; "
+    "gross/net loan totals below therefore don't tie exactly to the Balance Sheet sheet's Company-basis \"Loans "
+    "to customers\" line - a genuine basis difference, documented not blended):\n"
+    f"FY2025/FY2024: Vida Bank Limited Annual Report and Accounts 2025, p.79-81 (Note 14, Expected credit "
+    f"losses) - {AR2025_URL}\n"
+    f"FY2023/FY2022: Belmont Green Finance Limited Annual Report and Accounts 2023, p.168-169 (Note 14, Expected "
+    f"credit losses) - {AR2023_URL}\n"
+    f"FY2021: Belmont Green Finance Limited Annual Report and Accounts 2021, p.132-133 (Note 13, Expected credit "
+    f"losses) - {AR2021_URL}\n\n"
+    "NPL ratio = Stage 3 gross balance / Total gross balance. Coverage ratio = Stage 3 impairment provision / "
+    "Stage 3 gross balance. Both derived, not separately disclosed by the Bank."
+)
+
+
+def rwa_not_disclosed_note():
+    return (
+        "No UK OV1 (RWA-by-risk-category) template, or equivalent RWA breakdown table, exists in either Pillar 3 "
+        "Disclosures document (2025 or 2024) checked this session - both are short (9-page) documents covering "
+        "only the KM1 Key Metrics table already used on the other Pillar 3 sheets. Confirmed non-disclosure, not "
+        "an access gap. No Pillar 3 disclosure exists at all for FY2021-FY2023 (see ENTITY_NOTE on the Cash Flow "
+        "Statement sheet)."
+    )
+
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+bs_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", {"FY2025": 254874, "FY2024": 143485, "FY2023": 17161, "FY2022": 14919, "FY2021": 13500}),
+    ("DATA", "Debt securities", {"FY2025": 819770, "FY2024": 34135}),
+    ("DATA", "Loans to customers", {"FY2025": 2301831, "FY2024": 1866006, "FY2023": 1712271, "FY2022": 1761996, "FY2021": 1811577}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 10198, "FY2024": 2123, "FY2022": 731}),
+    ("DATA", "Other receivables", {"FY2025": 71715, "FY2024": 16412, "FY2023": 34000, "FY2022": 13982, "FY2021": 11399}),
+    ("DATA", "Deferred taxation asset", {"FY2025": 15299, "FY2024": 13565, "FY2023": 13565, "FY2022": 13565, "FY2021": 12975}),
+    ("DATA", "Investment in subsidiaries", {}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 1343, "FY2024": 1551, "FY2023": 401, "FY2022": 965, "FY2021": 2407}),
+    ("DATA", "Intangible assets", {"FY2025": 1316, "FY2024": 2190, "FY2023": 2704, "FY2022": 2837, "FY2021": 2408}),
+    ("DATA", "Corporation tax", {"FY2022": 25}),
+    ("TOTAL", "Total assets", {"FY2025": 3476346, "FY2024": 2079467, "FY2023": 1780102, "FY2022": 1809020, "FY2021": 1854266}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Retail deposits", {"FY2025": 2425702, "FY2024": 173113}),
+    ("DATA", "Amounts owed to credit institutions", {"FY2025": 40345, "FY2024": 74254, "FY2023": 44437, "FY2022": 15188, "FY2021": 15336}),
+    ("DATA", "Deemed loan due to Group undertakings", {"FY2025": 767720, "FY2024": 1659540, "FY2023": 1544083, "FY2022": 1606178, "FY2021": 1690865}),
+    ("DATA", "Derivative financial liabilities", {"FY2025": 19403, "FY2024": 184, "FY2023": 4727}),
+    ("DATA", "Other liabilities", {"FY2025": 44269, "FY2024": 7067, "FY2023": 64722, "FY2022": 56584, "FY2021": 21050}),
+    ("DATA", "Provisions", {"FY2023": 64, "FY2022": 64, "FY2021": 374}),
+    ("DATA", "Corporation tax", {"FY2025": 1128, "FY2024": 229}),
+    ("TOTAL", "Total liabilities", {"FY2025": 3298567, "FY2024": 1914387, "FY2023": 1658033, "FY2022": 1678014, "FY2021": 1727625}),
+    ("SECTION", "Shareholders' equity", {}),
+    ("DATA", "Called up share capital", {"FY2025": 36156, "FY2024": 241039, "FY2023": 204462, "FY2022": 204462, "FY2021": 204462}),
+    ("DATA", "Other reserves", {"FY2025": -398}),
+    ("DATA", "Retained profit/(losses)", {"FY2025": 142021, "FY2024": -75959, "FY2023": -82393, "FY2022": -73456, "FY2021": -77821}),
+    ("TOTAL", "Total shareholders' equity", {"FY2025": 177779, "FY2024": 165080, "FY2023": 122069, "FY2022": 131006, "FY2021": 126641}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 3476346, "FY2024": 2079467, "FY2023": 1780102, "FY2022": 1809020, "FY2021": 1854266}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Vida Bank Limited — Company Statement of Financial Position",
+    subtitle="Company (non-consolidated) basis, £'000.",
+    rows=bs_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=60,
+    source_height=180,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+pl_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income and similar income", {"FY2025": 171518, "FY2024": 121718, "FY2023": 144373, "FY2022": 99941, "FY2021": 68551}),
+    ("DATA", "Interest expense and similar charges", {"FY2025": -124229, "FY2024": -87898, "FY2023": -110660, "FY2022": -57037, "FY2021": -34046}),
+    ("TOTAL", "Net interest income", {"FY2025": 47289, "FY2024": 33820, "FY2023": 33713, "FY2022": 42904, "FY2021": 34505}),
+    ("DATA", "Other operating income/(expense)", {"FY2025": 7035, "FY2024": 1158, "FY2023": 920, "FY2022": -6174, "FY2021": 987}),
+    ("DATA", "Net fair value gain/(loss) on financial instruments", {"FY2025": 3331, "FY2024": 6045, "FY2023": 3903, "FY2022": -706, "FY2021": -1404}),
+    ("TOTAL", "Net operating income", {"FY2025": 57655, "FY2024": 41023, "FY2023": 38536, "FY2022": 36024, "FY2021": 34088}),
+    ("DATA", "Administrative expenses", {"FY2025": -42450, "FY2024": -34231, "FY2023": -32438, "FY2022": -35502, "FY2021": -30932}),
+    ("TOTAL", "Operating profit before impairment", {"FY2025": 15205, "FY2024": 6792, "FY2023": 6098, "FY2022": 522, "FY2021": 3156}),
+    ("DATA", "Provisions", {"FY2023": 0, "FY2022": 310, "FY2021": 223}),
+    ("DATA", "Impairment (losses)/releases", {"FY2025": -2736, "FY2024": -128, "FY2023": -55, "FY2022": 543, "FY2021": -725}),
+    ("TOTAL", "Profit before taxation", {"FY2025": 12469, "FY2024": 6664, "FY2023": 6043, "FY2022": 1375, "FY2021": 2654}),
+    ("DATA", "Tax credit/(charge) for the year", {"FY2025": 628, "FY2024": -230, "FY2023": 25, "FY2022": 609, "FY2021": 2005}),
+    ("TOTAL", "Profit for the year", {"FY2025": 13097, "FY2024": 6434, "FY2023": 6068, "FY2022": 1984, "FY2021": 4659}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Cash flow hedge reserve (losses)/gains", {"FY2025": -21, "FY2024": 0, "FY2023": -10468, "FY2022": 16864, "FY2021": 0}),
+    ("DATA", "Tax on items in other comprehensive income", {"FY2025": -98}),
+    ("DATA", "Fair value through OCI reserve", {"FY2025": -279}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year, net of tax", {"FY2025": 12699, "FY2024": 6434, "FY2023": -4400, "FY2022": 18848, "FY2021": 4659}),
+]
+
+bw.add_income_statement_sheet(
+    title="Vida Bank Limited — Statement of Comprehensive Income",
+    subtitle="FY2025/FY2024: Company basis. FY2023-FY2021: Group/Consolidated basis (Company P&L exempted under s.408). £'000.",
+    rows=pl_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=64,
+    source_height=260,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+equity_headers = ["Called up share capital", "Retained earnings", "Other reserves", "Total"]
+equity_rows = [
+    ("TOTAL", "Balance at 1 January 2021", (196162, -71916, None, 124246)),
+    ("DATA", "Share issuance", (8300, None, None, 8300)),
+    ("DATA", "Loss for the year", (None, -5905, None, -5905)),
+    ("TOTAL", "Balance at 31 December 2021", (204462, -77821, None, 126641)),
+    ("DATA", "Profit for the year", (None, 4365, None, 4365)),
+    ("TOTAL", "Balance at 31 December 2022", (204462, -73456, None, 131006)),
+    ("DATA", "Loss for the year", (None, -8937, None, -8937)),
+    ("TOTAL", "Balance at 31 December 2023", (204462, -82393, None, 122069)),
+    ("TOTAL", "Balance at 1 January 2024 (per FY2024 Annual Report - see source note)", (204463, -82393, None, 122070)),
+    ("DATA", "Profit for the year", (None, 6434, None, 6434)),
+    ("DATA", "Share issuance", (36576, None, None, 36576)),
+    ("TOTAL", "Balance at 31 December 2024", (241039, -75959, None, 165080)),
+    ("DATA", "Profit for the year", (None, 13097, None, 13097)),
+    ("DATA", "Deferred tax on Gilts", (None, None, -98, -98)),
+    ("DATA", "Fair value through OCI reserve", (None, None, -279, -279)),
+    ("DATA", "Amounts deferred to cash flow hedge reserve, net of tax", (None, None, -21, -21)),
+    ("DATA", "Share capital reallocation", (-204883, 204883, None, 0)),
+    ("TOTAL", "Balance at 31 December 2025", (36156, 142021, -398, 177779)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Vida Bank Limited — Company Statement of Changes in Equity",
+    subtitle="Company (non-consolidated) basis, £'000. Chronological, oldest to newest.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=EQUITY_SOURCES,
+    first_col_width=56,
+    source_height=260,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -105,6 +311,35 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+aq_rows = [
+    ("SECTION", "Gross loans to customers by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": 1915462, "FY2024": 1463371, "FY2023": 1254493, "FY2022": 1041635, "FY2021": 1124656}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2025": 321347, "FY2024": 330053, "FY2023": 392712, "FY2022": 662983, "FY2021": 643597}),
+    ("DATA", "Stage 3 (non-performing)", {"FY2025": 65403, "FY2024": 63782, "FY2023": 51849, "FY2022": 45129, "FY2021": 44090}),
+    ("TOTAL", "Total gross loans to customers", {"FY2025": 2302212, "FY2024": 1857206, "FY2023": 1699054, "FY2022": 1749747, "FY2021": 1812343}),
+    ("SECTION", "Impairment provision (ECL) by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 provision", {"FY2025": 1671, "FY2024": 1053, "FY2023": 1105, "FY2022": 647, "FY2021": 1217}),
+    ("DATA", "Stage 2 provision", {"FY2025": 1555, "FY2024": 1341, "FY2023": 1885, "FY2022": 3443, "FY2021": 3889}),
+    ("DATA", "Stage 3 provision", {"FY2025": 3865, "FY2024": 2480, "FY2023": 2599, "FY2022": 1835, "FY2021": 2541}),
+    ("TOTAL", "Total impairment provision", {"FY2025": 7091, "FY2024": 4874, "FY2023": 5589, "FY2022": 5925, "FY2021": 7647}),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "NPL ratio (Stage 3 / Total gross loans)", {"FY2025": "2.84%", "FY2024": "3.43%", "FY2023": "3.05%", "FY2022": "2.58%", "FY2021": "2.43%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 provision / Stage 3 gross)", {"FY2025": "5.91%", "FY2024": "3.89%", "FY2023": "5.01%", "FY2022": "4.07%", "FY2021": "5.77%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Vida Bank Limited — Asset Quality",
+    subtitle="Group/Consolidated basis (see source note), £'000.",
+    rows=aq_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=64,
+    source_height=200,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):
@@ -122,6 +357,15 @@ metric("Total Capital", "£'000", [("Total capital", {"FY2025": 202429, "FY2024"
             "during the year to support planned balance sheet expansion; FY2024 had no Tier 2 capital.")
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2025": "18.3%", "FY2024": "16.2%"})])
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", {"FY2025": 1105780, "FY2024": 986809})])
+bw.add_rwa_breakdown_sheet(
+    title="Vida Bank Limited — RWA Breakdown",
+    subtitle="Vida Group Holdings basis",
+    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
+    sources_text=rwa_not_disclosed_note(),
+    first_col_width=54,
+    source_height=120,
+    unit_suffix="",
+)
 metric(
     "Leverage Ratio", "£'000 / %",
     [
@@ -156,6 +400,26 @@ metric("MREL Ratio", None, [("MREL ratio", {y: "Not disclosed" for y in YEARS})]
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 3476346, "FY2024": 2079467, "FY2023": 1780102, "FY2022": 1809020, "FY2021": 1854266}),
+        ("Loans to customers", {"FY2025": 2301831, "FY2024": 1866006, "FY2023": 1712271, "FY2022": 1761996, "FY2021": 1811577}),
+        ("Retail deposits", {"FY2025": 2425702, "FY2024": 173113}),
+        ("Total shareholders' equity", {"FY2025": 177779, "FY2024": 165080, "FY2023": 122069, "FY2022": 131006, "FY2021": 126641}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Net operating income", {"FY2025": 57655, "FY2024": 41023, "FY2023": 38536, "FY2022": 36024, "FY2021": 34088}),
+        ("Administrative expenses", {"FY2025": -42450, "FY2024": -34231, "FY2023": -32438, "FY2022": -35502, "FY2021": -30932}),
+        ("Profit for the year", {"FY2025": 13097, "FY2024": 6434, "FY2023": 6068, "FY2022": 1984, "FY2021": 4659}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 165080, "FY2024": 122070, "FY2023": 131006, "FY2022": 126641, "FY2021": 124246}),
+        ("Total comprehensive income/(loss) for the year", {"FY2025": 12699, "FY2024": 6434, "FY2023": -8937, "FY2022": 4365, "FY2021": -5905}),
+        ("Other equity movements, net", {"FY2025": 0, "FY2024": 36576, "FY2023": 0, "FY2022": 0, "FY2021": 8300}),
+        ("Closing equity", {"FY2025": 177779, "FY2024": 165080, "FY2023": 122069, "FY2022": 131006, "FY2021": 126641}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash from/(used in) operating activities", {"FY2025": 1766849, "FY2024": 70662, "FY2023": 65493, "FY2021": -179449}),
         ("Net cash from/(used in) investing activities", {"FY2025": -104, "FY2024": -408, "FY2023": -698, "FY2021": -1757}),

@@ -114,6 +114,179 @@ NOT_DISCLOSED_NOTE = (
 bw = BankWorkbook(bank_name="Bank of the Philippine Islands (Europe) PLC", years=YEARS, year_label=YEAR_LABEL, header_color="0057B7")
 
 # ---------------------------------------------------------------
+# ST- new sheets: Balance Sheet / P&L / Statement of Changes in Equity /
+# Asset Quality / RWA Breakdown. Sourced from the same 3 Annual Reports
+# already cited above (FY2025 AR gives FY2025+FY2024; FY2023 AR gives
+# FY2023 own-year; FY2022 AR gives FY2022+FY2021, both £ native). FY2023-25
+# are originally reported in USD (own report, own year) and converted to £
+# at that year's own period-end spot rate (same FX_SPOT table and stock()
+# helper already used for the capital/RWA sheets above) - applied here to
+# BOTH stock (Balance Sheet, Equity) and flow (P&L) figures for internal
+# sheet-to-sheet consistency, since no separate period-average rate table
+# exists for this entity; flagged as an approximation, not a true average.
+# ---------------------------------------------------------------
+BS_PL_SOURCES = (
+    ENTITY_NOTE + "\n\n" +
+    "Sources - Bank of the Philippine Islands (Europe) PLC, Balance Sheet / Profit and Loss Account / Statement "
+    "of Movement in Shareholder's Funds, from each year's own Annual Report filed at Companies House (all 3 "
+    "filings fully scanned/image-only, visually transcribed):\n"
+    f"FY2025 & FY2024: Annual Report FY2025, pp.35-37 - {FY2025_AR_URL}\n"
+    f"FY2023: Annual Report FY2023, pp.28-30 - {FY2023_AR_URL}\n"
+    f"FY2022 & FY2021: Annual Report FY2022, pp.26-28 (both years shown as primary/comparative in that one "
+    f"report) - {FY2022_AR_URL}\n"
+    + CURRENCY_NOTE + " The same period-end spot rate is applied here to P&L (flow) figures as an approximation, "
+    "since no separate period-average GBP/USD rate table exists for this entity."
+)
+
+def gbp(usd_by_year):
+    return {y: round(v / FX_SPOT[y]) for y, v in usd_by_year.items()}
+
+# --- Balance Sheet ---------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash", {**gbp({"FY2025": 4042, "FY2024": 5029, "FY2023": 10}), "FY2022": 680, "FY2021": 4443}),
+    ("DATA", "Loans and advances to banks", {**gbp({"FY2025": 10226245, "FY2024": 2725089, "FY2023": 3736215}), "FY2022": 10590380, "FY2021": 8215760}),
+    ("DATA", "Loans and advances to customers", {**gbp({"FY2025": 121682050, "FY2024": 73129828, "FY2023": 74751736}), "FY2022": 84804657, "FY2021": 43461929}),
+    ("DATA", "Amounts due from group undertakings", {**gbp({"FY2025": 13472, "FY2024": 19057, "FY2023": 39521}), "FY2022": 23882, "FY2021": 9094569}),
+    ("DATA", "Investment in securities", {**gbp({"FY2025": 151146088, "FY2024": 151772387, "FY2023": 121881874}), "FY2022": 89860760, "FY2021": 98421761}),
+    ("DATA", "Derivative assets", {**gbp({"FY2025": 315365, "FY2024": 395392, "FY2023": 17192}), "FY2022": 1524834, "FY2021": 336406}),
+    ("DATA", "Tangible fixed assets", {**gbp({"FY2025": 108352, "FY2024": 139257, "FY2023": 130877}), "FY2022": 42965, "FY2021": 75625}),
+    ("DATA", "Deferred tax asset", {**gbp({"FY2025": 148706, "FY2024": 451474, "FY2023": 254694})}),
+    ("DATA", "Other assets", {**gbp({"FY2025": 247527, "FY2024": 226234, "FY2023": 220331}), "FY2022": 301688, "FY2021": 304722}),
+    ("TOTAL", "Total assets", {**gbp({"FY2025": 283891847, "FY2024": 228863747, "FY2023": 201032450}), "FY2022": 187149846, "FY2021": 159915215}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from customers", {**gbp({"FY2025": 142032600, "FY2024": 88970695, "FY2023": 1696057}), "FY2022": 1180161, "FY2021": 1291370}),
+    ("DATA", "Bank borrowings", {**gbp({"FY2025": 5005375, "FY2024": 1790256, "FY2023": 61998461}), "FY2022": 67708294, "FY2021": 42276046}),
+    ("DATA", "Amounts due to group undertakings", {**gbp({"FY2025": 13716745, "FY2024": 15306531, "FY2023": 14088060}), "FY2022": 14274996, "FY2021": 10915712}),
+    ("DATA", "Amounts due to other banks", {"FY2022": 1120704, "FY2021": 2020426}),
+    ("DATA", "Derivative liabilities", {**gbp({"FY2025": 475266, "FY2024": 1061512, "FY2023": 853975}), "FY2022": 661433, "FY2021": 1114662}),
+    ("DATA", "Deferred tax liability", {"FY2022": 193}),
+    ("DATA", "Other liabilities", {**gbp({"FY2025": 443968, "FY2024": 449537, "FY2023": 510335}), "FY2022": 320976, "FY2021": 395657}),
+    ("TOTAL", "Total liabilities", {**gbp({"FY2025": 161673954, "FY2024": 107578531, "FY2023": 79146888}), "FY2022": 85266757, "FY2021": 58013873}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Called up share capital", {**gbp({"FY2025": 120390000, "FY2024": 120390000, "FY2023": 120390000}), "FY2022": 100000000, "FY2021": 100000000}),
+    ("DATA", "Profit and loss account", {**gbp({"FY2025": 1827893, "FY2024": 895216, "FY2023": 1495562}), "FY2022": 1883089, "FY2021": 1901342}),
+    ("TOTAL", "Total shareholder's funds", {**gbp({"FY2025": 122217893, "FY2024": 121285216, "FY2023": 121885562}), "FY2022": 101883089, "FY2021": 101901342}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Bank of the Philippine Islands (Europe) PLC — Consolidated Statement of Financial Position",
+    subtitle="£-equivalent, whole pounds (FY2021-22 £ native, FY2023-25 converted from USD at period-end spot)",
+    rows=balance_sheet_rows,
+    sources_text=BS_PL_SOURCES,
+    first_col_width=46,
+    source_height=210,
+    unit_suffix=" (£)",
+)
+
+# --- Profit & Loss -----------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest receivable and similar income", {**gbp({"FY2025": 11283426, "FY2024": 8343493, "FY2023": 8749221}), "FY2022": 4823824, "FY2021": 1977005}),
+    ("DATA", "Interest payable and similar charges", {**gbp({"FY2025": -6228718, "FY2024": -4641394, "FY2023": -5116017}), "FY2022": -1887599, "FY2021": -341865}),
+    ("TOTAL", "Net interest income", {**gbp({"FY2025": 5054708, "FY2024": 3702099, "FY2023": 3633204}), "FY2022": 2936225, "FY2021": 1635140}),
+    ("DATA", "Fees and commission income", {**gbp({"FY2025": 41562, "FY2024": 141289, "FY2023": 22362}), "FY2022": 91623, "FY2021": 44019}),
+    ("DATA", "Foreign exchange gain/(loss)", {**gbp({"FY2025": -420330, "FY2024": 127927, "FY2023": -760974}), "FY2022": -68042, "FY2021": 636230}),
+    ("DATA", "Gain/(loss) on sale/FV of investments", {**gbp({"FY2025": 1066619, "FY2024": 504529, "FY2023": 71503}), "FY2022": -506419, "FY2021": 267358}),
+    ("DATA", "Loss on sale of syndicated loan", {**gbp({"FY2023": -383713})}),
+    ("DATA", "Other operating income/(loss)", {**gbp({"FY2025": 3231, "FY2024": 17758, "FY2023": 2226}), "FY2022": 2855, "FY2021": -5172}),
+    ("TOTAL", "Operating income", {**gbp({"FY2025": 5745790, "FY2024": 4493602, "FY2023": 2584608}), "FY2022": 2456242, "FY2021": 2577575}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Administrative expenses", {**gbp({"FY2025": -4345837, "FY2024": -3610660, "FY2023": -3550817}), "FY2022": -2344707, "FY2021": -2029872}),
+    ("DATA", "Depreciation", {**gbp({"FY2025": -32989, "FY2024": -30774, "FY2023": -44436}), "FY2022": -45850, "FY2021": -44704}),
+    ("DATA", "Impairment charges", {**gbp({"FY2025": -131519, "FY2024": -1649293, "FY2023": -15771}), "FY2022": -82437, "FY2021": -50172}),
+    ("TOTAL", "Profit/(loss) on ordinary activities before taxation", {**gbp({"FY2025": 1235445, "FY2024": -797125, "FY2023": -1026416}), "FY2022": -16752, "FY2021": 452827}),
+    ("DATA", "Income tax (charge)/credit", {**gbp({"FY2025": -302768, "FY2024": 196779, "FY2023": 254927}), "FY2022": -1635, "FY2021": -79972}),
+    ("TOTAL", "Profit/(loss) for the financial year", {**gbp({"FY2025": 932677, "FY2024": -600346, "FY2023": -771489}), "FY2022": -18387, "FY2021": 372855}),
+]
+
+bw.add_income_statement_sheet(
+    title="Bank of the Philippine Islands (Europe) PLC — Consolidated Statement of Comprehensive Income",
+    subtitle="£-equivalent, whole pounds (FY2021-22 £ native, FY2023-25 converted from USD at period-end spot); "
+             "no separate OCI - the Bank has no comprehensive income/expense beyond the P&L result each year.",
+    rows=income_statement_rows,
+    sources_text=BS_PL_SOURCES,
+    first_col_width=52,
+    source_height=210,
+    unit_suffix=" (£)",
+)
+
+# --- Statement of Changes in Equity (chronological) ---------------------
+EQUITY_HEADERS = ["Called up share capital", "Profit and loss account", "Total shareholder's funds"]
+equity_changes_rows = [
+    ("TOTAL", "Balance as at 1 January 2021", (40000000, 1528487, 41528487)),
+    ("DATA", "Additional share capital", (60000000, 0, 60000000)),
+    ("DATA", "Profit for the year", (0, 372855, 372855)),
+    ("TOTAL", "Balance as at 31 December 2021", (100000000, 1901342, 101901342)),
+    ("DATA", "Loss for the year", (0, -18387, -18387)),
+    ("DATA", "Prior period adjustment", (0, 134, 134)),
+    ("TOTAL", "Balance as at 31 December 2022", (100000000, 1883089, 101883089)),
+    ("DATA", "FX translation effect (GBP->USD functional currency change), net", (-5442978, -102496, -5545474)),
+    ("DATA", "Loss for the year", (0, -605945, -605945)),
+    ("TOTAL", "Balance as at 31 December 2023", (94557022, 1174648, 95731670)),
+    ("DATA", "FX retranslation of USD balances at period-end spot, net", (1639542, 20367, 1659909)),
+    ("DATA", "Loss for the year", (0, -479701, -479701)),
+    ("TOTAL", "Balance as at 31 December 2024", (96196564, 715314, 96911879)),
+    ("DATA", "FX retranslation of USD balances at period-end spot, net", (-6673958, -49627, -6723585)),
+    ("DATA", "Profit for the year", (0, 693543, 693543)),
+    ("TOTAL", "Balance as at 31 December 2025", (89522606, 1359230, 90881836)),
+]
+
+EQUITY_SOURCES = (
+    BS_PL_SOURCES + "\n\n"
+    "EQUITY-SHEET-SPECIFIC NOTE: FY2021-22 rows are the Bank's own originally-published £ figures (no "
+    "conversion). The Bank changed its functional/presentation currency from GBP to USD during FY2023; rather "
+    "than force a single continuous £ or $ figure through that boundary, the two 'FX translation effect'/'FX "
+    "retranslation' rows are plug figures that make each year's £-equivalent closing balance tie exactly to that "
+    "year's own Annual Report (itself USD, converted at that year's period-end spot rate) - they are not a "
+    "disclosed line item, they are this workbook's own reconciling entry, shown explicitly rather than hidden. "
+    "Note the 'Called up share capital' column moves every USD year purely from FX retranslation - the "
+    "underlying $120,390,000 balance itself has been unchanged since FY2023."
+)
+
+bw.add_equity_changes_sheet(
+    title="Bank of the Philippine Islands (Europe) PLC — Statement of Changes in Equity",
+    subtitle="£-equivalent, whole pounds, chronological (FY2021-22 £ native, FY2023-25 converted from USD at period-end spot)",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_SOURCES,
+)
+
+# --- Asset Quality -------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    ENTITY_NOTE + "\n\n" +
+    "Sources - Bank of the Philippine Islands (Europe) PLC, \"Loans and advances to customers\" note "
+    "(Note 14 in the FY2025 AR, Note 12 in the FY2023 AR, Note 11 in the FY2022 AR) and its \"Impairment "
+    "Charge\"/\"Movement in provision for impairment\" note, from each year's own Annual Report:\n"
+    f"FY2025 & FY2024: Annual Report FY2025, Notes 13-14, pp.48-49 - {FY2025_AR_URL}\n"
+    f"FY2023: Annual Report FY2023, Note 12, p.40 - {FY2023_AR_URL}\n"
+    f"FY2022 & FY2021: Annual Report FY2022, Note 11, p.38 - {FY2022_AR_URL}\n"
+    + CURRENCY_NOTE + "\n\n"
+    "NO IFRS 9 STAGE BREAKDOWN: this entity applies a simple FRS 102 impairment model (a single collective "
+    "provision across the performing loan book, plus occasional specific provisions - see the FY2025 Auditor's "
+    "Report's Key Audit Matter: \"the loan portfolio is performing, and no specific provision has been "
+    "assessed\"). No Stage 1/2/3 staging table is disclosed in any of the 5 years checked, so this sheet shows "
+    "the loan book by product plus the collective/specific provision split instead. NOTE: the FY2025 AR's "
+    "impairment-movement note (Note 13) no longer breaks the provision into Collective/Specific columns - only a "
+    "single combined \"Provision for impairment\" figure is disclosed for FY2025/FY2024 (the Total provision row "
+    "below is populated for those years; the Collective/Specific split rows are left blank rather than assumed)."
+)
+
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers, by product", {}),
+    ("DATA", "Corporate loans", {**gbp({"FY2025": 121823428, "FY2024": 73139687, "FY2023": 74975584}), "FY2022": 84977493, "FY2021": 43552328}),
+    ("DATA", "Other retail loans", {**gbp({"FY2025": 1, "FY2024": 1, "FY2023": 1}), "FY2022": 1, "FY2021": 1}),
+    ("TOTAL", "Gross loans and advances to customers", {**gbp({"FY2025": 121823429, "FY2024": 73139688, "FY2023": 74975585}), "FY2022": 84977494, "FY2021": 43552329}),
+    ("SECTION", "Provision for impairment", {}),
+    ("DATA", "Collective provision", {**gbp({"FY2023": -223848}), "FY2022": -172836, "FY2021": -90399}),
+    ("DATA", "Specific provision", {**gbp({"FY2023": -1}), "FY2022": -1, "FY2021": -1}),
+    ("TOTAL", "Total provision for impairment", {**gbp({"FY2025": -141379, "FY2024": -9860, "FY2023": -223849}), "FY2022": -172837, "FY2021": -90400}),
+    ("TOTAL", "Net loans and advances to customers", {**gbp({"FY2025": 121682050, "FY2024": 73129828, "FY2023": 74751736}), "FY2022": 84804657, "FY2021": 43461929}),
+    ("SECTION", "Ratio", {}),
+    ("DATA", "Provision coverage (total provision / gross loans)", {"FY2025": "0.12%", "FY2024": "0.01%", "FY2023": "0.30%", "FY2022": "0.20%", "FY2021": "0.21%"}),
+]
+
+# ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (exemption note in place of line items)
 # ---------------------------------------------------------------
 rows = [
@@ -129,7 +302,18 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=90,
     source_height=320,
-    unit_suffix="",
+    unit_suffix=" (£'000)",
+)
+
+bw.add_asset_quality_sheet(
+    title="Bank of the Philippine Islands (Europe) PLC — Asset Quality / Credit Risk Disclosures",
+    subtitle="£-equivalent, whole pounds (FY2021-22 £ native, FY2023-25 converted from USD at period-end spot); "
+             "no IFRS 9 stage-level breakdown is disclosed - see source note",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=52,
+    source_height=260,
+    unit_suffix=" (£)",
 )
 
 # ---------------------------------------------------------------
@@ -187,6 +371,23 @@ metric("Total RWAs", "£'000 (FY2021-22 £ native, FY2023-25 conv. from USD)",
            ("Total Risk Exposure Amount", TOTAL_RWA_GBP),
        ], p3_sources())
 
+rwa_breakdown_rows = [
+    ("DATA", "Total Credit Risk-Weighted Assets (CRWA)", CRWA_GBP),
+    ("DATA", "Total Market Risk-Weighted Assets (MRWA)", MRWA_GBP),
+    ("DATA", "Total Operational Risk-Weighted Assets (ORWA)", ORWA_GBP),
+    ("TOTAL", "Total Risk Exposure Amount", TOTAL_RWA_GBP),
+]
+bw.add_rwa_breakdown_sheet(
+    title="Bank of the Philippine Islands (Europe) PLC — RWA Breakdown",
+    subtitle="£'000-equivalent (FY2021-22 £ native, FY2023-25 conv. from USD) — reuses the same CRWA/MRWA/ORWA "
+             "components already broken out on the Total RWAs sheet",
+    rows=rwa_breakdown_rows,
+    sources_text=p3_sources(),
+    first_col_width=52,
+    source_height=190,
+    unit_suffix=" (£'000)",
+)
+
 metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE)], p3_sources(),
        note="Not disclosed for FY2021/FY2022 in either Annual Report - left blank, not estimated.")
 
@@ -211,12 +412,35 @@ bw.add_overview_sheet(
         ("LCR", LCR),
         ("NSFR", NSFR),
     ],
+    balance_sheet_totals=[
+        ("Total assets", {**gbp({"FY2025": 283891847, "FY2024": 228863747, "FY2023": 201032450}), "FY2022": 187149846, "FY2021": 159915215}),
+        ("Loans and advances to customers", {**gbp({"FY2025": 121682050, "FY2024": 73129828, "FY2023": 74751736}), "FY2022": 84804657, "FY2021": 43461929}),
+        ("Deposits from customers", {**gbp({"FY2025": 142032600, "FY2024": 88970695, "FY2023": 1696057}), "FY2022": 1180161, "FY2021": 1291370}),
+        ("Total shareholder's funds", {**gbp({"FY2025": 122217893, "FY2024": 121285216, "FY2023": 121885562}), "FY2022": 101883089, "FY2021": 101901342}),
+    ],
+    balance_sheet_unit="£'000-equivalent",
+    income_statement_totals=[
+        ("Operating income", {**gbp({"FY2025": 5745790, "FY2024": 4493602, "FY2023": 2584608}), "FY2022": 2456242, "FY2021": 2577575}),
+        ("Total operating expense", {**gbp({"FY2025": -4510345, "FY2024": -5290727, "FY2023": -3611024}), "FY2022": -2472994, "FY2021": -2124748}),
+        ("Profit/(loss) for the year", {**gbp({"FY2025": 932677, "FY2024": -600346, "FY2023": -771489}), "FY2022": -18387, "FY2021": 372855}),
+    ],
+    income_statement_unit="£'000-equivalent",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 96911879, "FY2024": 95731670, "FY2023": 101883089, "FY2022": 101901342, "FY2021": 41528487}),
+        ("Total comprehensive income", {"FY2025": 693543, "FY2024": -479701, "FY2023": -605945, "FY2022": -18387, "FY2021": 372855}),
+        ("Other equity movements, net", {"FY2025": -6723585, "FY2024": 1659909, "FY2023": -5545474, "FY2022": 134, "FY2021": 60000000}),
+        ("Closing equity", {**gbp({"FY2025": 122217893, "FY2024": 121285216, "FY2023": 121885562}), "FY2022": 101883089, "FY2021": 101901342}),
+    ],
+    equity_changes_unit="£'000-equivalent (native/converted per year - see Statement of Changes in Equity sheet)",
     note="This is a PILLAR-3-ONLY workbook: BPI Europe takes the FRS 102 cash-flow-statement exemption every year "
          "(see the Cash Flow Statement sheet), so no cash flow summary or chart is shown here. Also note a genuine "
          "mid-series functional-currency change (GBP through FY2022, USD from FY2023) - monetary (£'000) figures "
-         "on the capital/RWA sheets are on a mixed native/converted basis across the window; see each sheet's own "
-         "source note and the CURRENCY note there for the exact treatment. % ratios are unaffected by the "
-         "currency change.",
+         "on the capital/RWA sheets and the new Balance Sheet/P&L/Equity/Asset Quality sheets are on a mixed "
+         "native/converted basis across the window; see each sheet's own source note and the CURRENCY note there "
+         "for the exact treatment. The Equity block's 'Other equity movements, net' line absorbs both real equity "
+         "events (e.g. FY2021's £60m share issuance) and the FX retranslation plugs documented on the Statement "
+         "of Changes in Equity sheet - see that sheet for the breakdown. % ratios are unaffected by the currency "
+         "change.",
 )
 
 # ---------------------------------------------------------------

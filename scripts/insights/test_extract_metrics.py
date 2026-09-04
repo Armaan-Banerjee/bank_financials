@@ -172,8 +172,8 @@ class SiblingEntityDisambiguation(unittest.TestCase):
         if not (os.path.exists(path_a) and os.path.exists(path_b)):
             self.skipTest("banks/BARCLAYS* fixtures not present")
         bank_list = load_bank_list()
-        _, frn_a, _, _, _, _, _ = process_workbook(path_a, bank_list)
-        _, frn_b, _, _, _, _, _ = process_workbook(path_b, bank_list)
+        _, frn_a, _, _, _, _, _, _ = process_workbook(path_a, bank_list)
+        _, frn_b, _, _, _, _, _, _ = process_workbook(path_b, bank_list)
         self.assertIsNotNone(frn_a)
         self.assertIsNotNone(frn_b)
         self.assertNotEqual(frn_a, frn_b, "Barclays Bank UK and Barclays Bank PLC must not collide")
@@ -184,8 +184,8 @@ class SiblingEntityDisambiguation(unittest.TestCase):
         if not (os.path.exists(path_a) and os.path.exists(path_b)):
             self.skipTest("banks/HSBC* fixtures not present")
         bank_list = load_bank_list()
-        _, frn_a, _, _, _, _, _ = process_workbook(path_a, bank_list)
-        _, frn_b, _, _, _, _, _ = process_workbook(path_b, bank_list)
+        _, frn_a, _, _, _, _, _, _ = process_workbook(path_a, bank_list)
+        _, frn_b, _, _, _, _, _, _ = process_workbook(path_b, bank_list)
         self.assertIsNotNone(frn_a)
         self.assertIsNotNone(frn_b)
         self.assertNotEqual(frn_a, frn_b, "HSBC Bank plc and HSBC UK Bank plc must not collide")
@@ -244,7 +244,7 @@ class SyntheticWorkbookExtraction(unittest.TestCase):
         # twice, both bold, both identical) rather than two different labels.
         rows[1] = ("TOTAL", "Cash and cash equivalents at end of year", rows[1][2])
         path = self._build("DUPTESTBANK", rows)
-        _, _, _, _, _, extracted_rows, _ = process_workbook(path, self.bank_list)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
         deduped, n_dup_groups, _ = deduplicate(extracted_rows)
         self.assertEqual(n_dup_groups, 2)  # one group per year (FY2025, FY2024)
         self.assertEqual(len(deduped), 2)  # collapsed to 1 row per year
@@ -259,7 +259,7 @@ class SyntheticWorkbookExtraction(unittest.TestCase):
         )
         path = os.path.join(self.tmpdir, "NOTETESTBANK FINANCIALS.xlsx")
         bw.save(path)
-        _, _, _, _, _, extracted_rows, _ = process_workbook(path, self.bank_list)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
         self.assertEqual(len(extracted_rows), 2)
         for row in extracted_rows:
             self.assertEqual(row["restatement_note"], "FY2024 restated from 13.2% following a methodology change.")
@@ -276,7 +276,7 @@ class SyntheticWorkbookExtraction(unittest.TestCase):
         )
         path = os.path.join(self.tmpdir, "UNITTESTBANK FINANCIALS.xlsx")
         bw.save(path)
-        _, _, _, _, _, extracted_rows, _ = process_workbook(path, self.bank_list)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
         self.assertEqual(len(extracted_rows), 2)
         for row in extracted_rows:
             self.assertEqual(row["unit"], "£m")
@@ -289,13 +289,177 @@ class SyntheticWorkbookExtraction(unittest.TestCase):
              {"FY2025": 100.0}),  # FY2024 deliberately omitted
         ]
         path = self._build("MISSINGYEARBANK", rows)
-        _, _, _, _, _, extracted_rows, _ = process_workbook(path, self.bank_list)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
         fy2024_rows = [r for r in extracted_rows if r["year"] == "FY2024"]
         self.assertEqual(len(fy2024_rows), 1)
         self.assertEqual(fy2024_rows[0]["value_raw"], "")
         self.assertEqual(fy2024_rows[0]["is_numeric"], "0")
         fy2025_rows = [r for r in extracted_rows if r["year"] == "FY2025"]
         self.assertEqual(fy2025_rows[0]["value_numeric"], 100.0)
+
+
+class NewStatementSheetExtraction(unittest.TestCase):
+    """IN-039: the 5 sheets the ST- wayfinder rollout added (Balance Sheet,
+    Profit & Loss, Statement of Changes in Equity, Asset Quality, RWA
+    Breakdown). Covers the two real label-collision patterns found while
+    building this against the real 145-bank dataset (The Access Bank UK
+    Limited's Balance Sheet, Clydesdale's RWA Breakdown, GIB UK's Asset
+    Quality) rather than only synthetic happy-path cases."""
+
+    def setUp(self):
+        self.tmpdir = tempfile.mkdtemp(prefix="statement_sheet_test_")
+        self.bank_list = []
+
+    def tearDown(self):
+        shutil.rmtree(self.tmpdir, ignore_errors=True)
+
+    def test_balance_sheet_captures_data_and_total_rows_not_just_totals(self):
+        bw = BankWorkbook(bank_name="STMTBANK", years=["FY2025", "FY2024"], header_color="336699")
+        bw.add_balance_sheet_sheet(
+            title="STMTBANK — Balance Sheet", subtitle="Test fixture",
+            rows=[
+                ("SECTION", "Assets", {}),
+                ("DATA", "Loans and advances to customers", {"FY2025": 100.0, "FY2024": 90.0}),
+                ("TOTAL", "Total assets", {"FY2025": 100.0, "FY2024": 90.0}),
+            ],
+            sources_text="Test fixture.",
+        )
+        path = os.path.join(self.tmpdir, "STMTBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
+        labels = {r["row_label"] for r in extracted_rows if r["sheet"] == "Balance Sheet"}
+        # "Assets" is a bare SECTION divider (no data) - never emitted.
+        self.assertNotIn("Assets", labels)
+        # Unlike Cash Flow Statement, DATA rows ARE captured here, prefixed
+        # by their section since a real collision (see below) proved that's
+        # needed - not just TOTAL rows.
+        self.assertIn("Assets - Loans and advances to customers", labels)
+        self.assertIn("Assets - Total assets", labels)
+
+    def test_same_label_in_two_sections_is_disambiguated_not_a_conflict(self):
+        """Reproduces The Access Bank UK Limited's real Balance Sheet:
+        "Derivative financial instruments" appears once under Assets
+        (a real asset position) and once under Liabilities (a real,
+        different-valued liability position) - both genuine, not a
+        duplicate of the same fact. Without section-prefixing,
+        deduplicate() would hard-fail on this as a value conflict."""
+        bw = BankWorkbook(bank_name="COLLIDEBANK", years=["FY2025"], header_color="336699")
+        bw.add_balance_sheet_sheet(
+            title="COLLIDEBANK — Balance Sheet", subtitle="Test fixture",
+            rows=[
+                ("SECTION", "Assets", {}),
+                ("DATA", "Derivative financial instruments", {"FY2025": 2801.5}),
+                ("SECTION", "Liabilities", {}),
+                ("DATA", "Derivative financial instruments", {"FY2025": 7986.6}),
+            ],
+            sources_text="Test fixture.",
+        )
+        path = os.path.join(self.tmpdir, "COLLIDEBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
+        by_label = {r["row_label"]: r["value_numeric"] for r in extracted_rows if r["sheet"] == "Balance Sheet"}
+        self.assertEqual(by_label["Assets - Derivative financial instruments"], 2801.5)
+        self.assertEqual(by_label["Liabilities - Derivative financial instruments"], 7986.6)
+        # Both rows survive deduplicate() without raising - they're
+        # different identity keys (different row_label), not a conflict.
+        deduped, n_dup_groups, _ = deduplicate(extracted_rows)
+        self.assertEqual(n_dup_groups, 0)
+        self.assertEqual(len(deduped), len(extracted_rows))
+
+    def test_of_which_sub_item_disambiguated_by_parent_not_section(self):
+        """Reproduces Clydesdale's real RWA Breakdown: "Of which:
+        standardised approach" appears twice under the SAME section
+        ("RWA by risk category"), once under "Credit risk" and once under
+        "Counterparty credit risk (CCR)" - section-prefixing alone can't
+        tell these apart, only tracking the nearest non-"Of which" parent
+        row can."""
+        bw = BankWorkbook(bank_name="OFWHICHBANK", years=["FY2025"], header_color="336699")
+        bw.add_rwa_breakdown_sheet(
+            title="OFWHICHBANK — RWA Breakdown", subtitle="Test fixture",
+            rows=[
+                ("SECTION", "RWA by risk category", {}),
+                ("DATA", "Credit risk (excluding CCR)", {"FY2025": 26567.0}),
+                ("DATA", "Of which: standardised approach", {"FY2025": 6186.0}),
+                ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 48.0}),
+                ("DATA", "Of which: standardised approach", {"FY2025": 35.0}),
+            ],
+            sources_text="Test fixture.",
+        )
+        path = os.path.join(self.tmpdir, "OFWHICHBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
+        by_label = {r["row_label"]: r["value_numeric"] for r in extracted_rows if r["sheet"] == "RWA Breakdown"}
+        self.assertEqual(by_label["Credit risk (excluding CCR) - Of which: standardised approach"], 6186.0)
+        self.assertEqual(by_label["Counterparty credit risk (CCR) - Of which: standardised approach"], 35.0)
+
+    def test_genuinely_blank_data_row_is_not_mistaken_for_a_section(self):
+        """Reproduces GIB UK's real Asset Quality: "Stage 3 (Classified
+        8-10)" is a genuine DATA row (not bold) that happens to be blank in
+        every year (100% Stage 1, nothing ever migrates). It must not be
+        mistaken for a SECTION divider (which is also blank but IS bold) -
+        getting this wrong would corrupt the section-prefix of every row
+        that follows it."""
+        bw = BankWorkbook(bank_name="BLANKROWBANK", years=["FY2025"], header_color="336699")
+        bw.add_asset_quality_sheet(
+            title="BLANKROWBANK — Asset Quality", subtitle="Test fixture",
+            rows=[
+                ("SECTION", "Placements with banks", {}),
+                ("DATA", "Stage 1", {"FY2025": 4528.4}),
+                ("DATA", "Stage 3", {}),  # genuinely blank every year, not a section
+                ("TOTAL", "Total gross placements with banks", {"FY2025": 4528.4}),
+            ],
+            sources_text="Test fixture.",
+        )
+        path = os.path.join(self.tmpdir, "BLANKROWBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
+        labels = {r["row_label"] for r in extracted_rows if r["sheet"] == "Asset Quality"}
+        # The TOTAL row must still be prefixed by the real section
+        # ("Placements with banks"), not by the blank "Stage 3" row.
+        self.assertIn("Placements with banks - Total gross placements with banks", labels)
+        self.assertNotIn("Stage 3 - Total gross placements with banks", labels)
+
+    def test_not_disclosed_statement_sheet_falls_back_to_metric_shape(self):
+        """A confirmed non-disclosure built via add_not_disclosed_metric_sheets
+        uses the "Metric" header shape, not "Line item" - must still be
+        captured (as the literal "Not publicly disclosed" string), not
+        just warned about as a missing header."""
+        bw = BankWorkbook(bank_name="NOTDISCBANK", years=["FY2025"], header_color="336699")
+        bw.add_not_disclosed_metric_sheets(["RWA Breakdown"], sources_text="Test fixture.")
+        path = os.path.join(self.tmpdir, "NOTDISCBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, extracted_rows, _, warnings = process_workbook(path, self.bank_list)
+        rwa_rows = [r for r in extracted_rows if r["sheet"] == "RWA Breakdown"]
+        self.assertEqual(len(rwa_rows), 1)
+        self.assertEqual(rwa_rows[0]["value_raw"], "Not publicly disclosed")
+        self.assertEqual(rwa_rows[0]["is_numeric"], "0")
+        self.assertFalse(any("RWA Breakdown" in w for w in warnings))
+
+    def test_equity_changes_sheet_extracted_in_chronological_row_order(self):
+        bw = BankWorkbook(bank_name="EQUITYBANK", years=["FY2025", "FY2024"], header_color="336699")
+        bw.add_equity_changes_sheet(
+            title="EQUITYBANK — Statement of Changes in Equity", subtitle="Test fixture",
+            headers=["Share capital", "Retained earnings"],
+            rows=[
+                ("TOTAL", "Balance as at 1 January 2024", (100.0, 50.0)),
+                ("DATA", "Profit for the year", (None, 20.0)),
+                ("TOTAL", "Balance as at 31 December 2024", (100.0, 70.0)),
+            ],
+            sources_text="Test fixture.",
+        )
+        path = os.path.join(self.tmpdir, "EQUITYBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, _, equity_rows, _ = process_workbook(path, self.bank_list)
+        self.assertEqual(len(equity_rows), 5)  # 3 rows x 2 components, minus the 1 None cell
+        opening = [r for r in equity_rows if r["movement_label"] == "Balance as at 1 January 2024"]
+        self.assertEqual({r["component"] for r in opening}, {"Share capital", "Retained earnings"})
+        profit_row = [r for r in equity_rows if r["movement_label"] == "Profit for the year"]
+        self.assertEqual(len(profit_row), 1)  # the None (Share capital) cell is skipped
+        self.assertEqual(profit_row[0]["component"], "Retained earnings")
+        self.assertEqual(profit_row[0]["value_numeric"], 20.0)
+        # row_order preserves the sheet's own chronological read order.
+        row_orders = sorted({r["row_order"] for r in equity_rows})
+        self.assertEqual(row_orders, [0, 1, 2])
 
 
 class DatabaseRoundTrip(unittest.TestCase):

@@ -76,7 +76,194 @@ def p3_sources(page_km1, table_km1="Table 1: Key metrics (KM1)"):
 bw = BankWorkbook(bank_name="TSB Bank plc", years=YEARS, header_color="002D5B")
 
 # ---------------------------------------------------------------
-# Sheet 1: Cash Flow Statement
+# Statement sources - TSB Bank plc, Bank (Consolidated) basis, £ million,
+# each year's own Annual Report figures, independently cross-checked against
+# the adjacent report's comparative column - ties exactly across all 5 years
+# for Total assets/Total liabilities/Total equity, Profit for the year, and
+# Total comprehensive income. Zero undocumented plug rows anywhere.
+# ---------------------------------------------------------------
+STATEMENTS_SOURCES = (
+    "Sources - TSB Bank plc, Bank (Consolidated) basis, £ million:\n"
+    f"FY2025 & FY2024: TSB Bank plc Annual Report and Accounts 2025, p.46 (Balance sheets), p.47 (Consolidated "
+    f"statement of comprehensive income), p.48 (Statements of changes in equity) - {AR25_URL}\n"
+    f"FY2023 & FY2022: TSB Bank plc Annual Report and Accounts 2023, p.30 (Balance sheets), p.31 (Consolidated "
+    f"statement of comprehensive income), p.32 (Statements of changes in equity) - {AR23_URL}\n"
+    f"FY2021: TSB Bank plc Annual Report and Accounts 2021, p.26 (Balance sheets), p.27 (Consolidated statement "
+    f"of comprehensive income), p.28 (Statements of changes in equity); FY2021's closing equity ties exactly to "
+    f"AR2023's own 'Balance at 1 January 2022' comparative - {AR21_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    "PRESENTATION NOTE: Balance sheet - 'Loans and advances to credit institutions' is shown as a standalone line "
+    "from FY2025 only; FY2021-FY2024 combine it with central bank placements as 'Loans and advances to central "
+    "banks and credit institutions' (same figures reused here). 'Other equity instruments' (Additional Tier 1) "
+    "first appears FY2024, following TSB's first AT1 issuance that year (see Cash Flow Statement financing "
+    "activities). Income statement - FY2024/FY2025 itemise 'Gains on derecognition of financial assets/liabilities' "
+    "lines that differ from FY2021-FY2023's own line items (e.g. FVOCI derecognition gains only shown FY2021-23); "
+    "each year's own as-published structure is preserved rather than forced into a common format."
+)
+
+# ---------------------------------------------------------------
+# Balance Sheet - equity reconciliation ladder step 1: built first so each
+# year's own Total equity is the independent check value for the equity
+# sheet below.
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash, cash balances at central banks and other demand deposits", {"FY2025": 4202.1, "FY2024": 4823.8, "FY2023": 5897.3, "FY2022": 5238.8, "FY2021": 4851.1}),
+    ("DATA", "Debt securities at amortised cost", {"FY2025": 1986.4, "FY2024": 1982.5, "FY2023": 2124.2, "FY2022": 1951.6, "FY2021": 2166.7}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 36268.4, "FY2024": 36330.9, "FY2023": 36245.9, "FY2022": 38050.0, "FY2021": 37383.8}),
+    ("DATA", "Loans and advances to central banks and credit institutions", {"FY2025": 305.2, "FY2024": 277.8, "FY2023": 328.0, "FY2022": 303.5, "FY2021": 199.7}),
+    ("DATA", "Reverse repurchase agreement", {"FY2025": 62.0, "FY2024": 0}),
+    ("DATA", "Other advances", {"FY2025": 66.9, "FY2024": 130.2, "FY2023": 209.6, "FY2022": 703.2, "FY2021": 80.7}),
+    ("DATA", "Debt securities at fair value through other comprehensive income", {"FY2025": 440.2, "FY2024": 328.6, "FY2023": 356.6, "FY2022": 509.5, "FY2021": 1069.0}),
+    ("DATA", "Derivative financial assets not in hedge accounting relationships", {"FY2025": 362.4, "FY2024": 667.6, "FY2023": 822.9, "FY2022": 1158.7, "FY2021": 168.4}),
+    ("DATA", "Hedging derivative financial assets", {"FY2025": 1149.2, "FY2024": 1274.3, "FY2023": 1346.9, "FY2022": 1565.9, "FY2021": 244.5}),
+    ("DATA", "Fair value adjustments for portfolio hedged risk", {"FY2025": 4.5, "FY2024": -170.9, "FY2023": -154.9, "FY2022": -542.8, "FY2021": -109.3}),
+    ("DATA", "Property and equipment", {"FY2025": 215.1, "FY2024": 233.9, "FY2023": 253.5, "FY2022": 287.5, "FY2021": 300.3}),
+    ("DATA", "Intangible assets", {"FY2025": 123.4, "FY2024": 109.9, "FY2023": 86.1, "FY2022": 75.6, "FY2021": 72.1}),
+    ("DATA", "Deferred tax asset", {"FY2025": 6.1, "FY2024": 8.1, "FY2023": 43.2, "FY2022": 64.5, "FY2021": 122.6}),
+    ("DATA", "Other assets", {"FY2025": 89.6, "FY2024": 102.4, "FY2023": 93.6, "FY2022": 83.6, "FY2021": 156.0}),
+    ("TOTAL", "Total assets", {"FY2025": 45281.5, "FY2024": 46099.1, "FY2023": 47652.9, "FY2022": 49449.6, "FY2021": 46705.6}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer deposits", {"FY2025": 35209.0, "FY2024": 35051.2, "FY2023": 34764.3, "FY2022": 36338.2, "FY2021": 35951.9}),
+    ("DATA", "Borrowings from central banks", {"FY2025": 598.9, "FY2024": 1406.9, "FY2023": 4057.9, "FY2022": 5538.3, "FY2021": 5501.6}),
+    ("DATA", "Debt securities in issue", {"FY2025": 4869.3, "FY2024": 4583.2, "FY2023": 3664.1, "FY2022": 1955.5, "FY2021": 2199.1}),
+    ("DATA", "Repurchase agreements", {"FY2023": 0, "FY2022": 360.0}),
+    ("DATA", "Subordinated liabilities", {"FY2025": 297.8, "FY2024": 285.9, "FY2023": 277.7, "FY2022": 265.4, "FY2021": 291.8}),
+    ("DATA", "Lease liabilities", {"FY2025": 107.8, "FY2024": 120.7, "FY2023": 125.0, "FY2022": 145.9, "FY2021": 163.5}),
+    ("DATA", "Other financial liabilities", {"FY2025": 1080.6, "FY2024": 1184.6, "FY2023": 1222.4, "FY2022": 1320.1, "FY2021": 193.6}),
+    ("DATA", "Derivative financial liabilities not in hedge accounting relationships", {"FY2025": 456.7, "FY2024": 824.2, "FY2023": 982.1, "FY2022": 1252.4, "FY2021": 156.5}),
+    ("DATA", "Hedging derivative financial liabilities", {"FY2025": 99.4, "FY2024": 143.6, "FY2023": 318.7, "FY2022": 301.5, "FY2021": 136.8}),
+    ("DATA", "Fair value adjustments for portfolio hedged risk", {"FY2025": 12.3, "FY2024": -134.7, "FY2023": -85.5, "FY2022": -321.3, "FY2021": -63.6}),
+    ("DATA", "Provisions", {"FY2025": 22.2, "FY2024": 39.8, "FY2023": 75.2, "FY2022": 125.0, "FY2021": 110.2}),
+    ("DATA", "Other liabilities", {"FY2025": 189.5, "FY2024": 473.0, "FY2023": 296.4, "FY2022": 238.8, "FY2021": 197.8}),
+    ("TOTAL", "Total liabilities", {"FY2025": 42943.5, "FY2024": 43978.4, "FY2023": 45698.3, "FY2022": 47519.8, "FY2021": 44839.2}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 79.4, "FY2024": 79.4, "FY2023": 79.4, "FY2022": 79.4, "FY2021": 79.4}),
+    ("DATA", "Share premium", {"FY2025": 195.6, "FY2024": 195.6, "FY2023": 195.6, "FY2022": 195.6, "FY2021": 195.6}),
+    ("DATA", "Other equity instruments", {"FY2025": 250.0, "FY2024": 250.0}),
+    ("DATA", "Merger reserve / Other reserves", {"FY2025": 412.8, "FY2024": 412.8, "FY2023": 412.8, "FY2022": 412.8, "FY2021": 412.8}),
+    ("DATA", "Retained profits", {"FY2025": 1398.4, "FY2024": 1164.9, "FY2023": 1261.1, "FY2022": 1207.7, "FY2021": 1174.1}),
+    ("DATA", "Fair value reserve", {"FY2025": -6.2, "FY2024": -8.0, "FY2023": -6.5, "FY2022": -6.1, "FY2021": 11.1}),
+    ("DATA", "Cash flow hedging reserve", {"FY2025": 8.0, "FY2024": 26.0, "FY2023": 12.2, "FY2022": 40.4, "FY2021": -6.6}),
+    ("TOTAL", "Total equity", {"FY2025": 2338.0, "FY2024": 2120.7, "FY2023": 1954.6, "FY2022": 1929.8, "FY2021": 1866.4}),
+    ("TOTAL", "Total equity and liabilities", {"FY2025": 45281.5, "FY2024": 46099.1, "FY2023": 47652.9, "FY2022": 49449.6, "FY2021": 46705.6}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="TSB Bank plc — Consolidated Balance Sheet",
+    subtitle="Bank (Consolidated) basis, £ million. Total equity ties exactly to the Statement of Changes in "
+              "Equity sheet for every year.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=230,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Profit & Loss (Consolidated Statement of Comprehensive Income)
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Interest and similar income", {}),
+    ("DATA", "Interest income calculated using the effective interest method", {"FY2025": 1846.4, "FY2024": 1803.9, "FY2023": 1573.5, "FY2022": 1123.0, "FY2021": 946.4}),
+    ("DATA", "Other interest income", {"FY2025": 129.3, "FY2024": 273.5, "FY2023": 368.6, "FY2022": 108.7, "FY2021": -35.0}),
+    ("TOTAL", "Total interest and similar income", {"FY2025": 1975.7, "FY2024": 2077.4, "FY2023": 1942.1, "FY2022": 1231.7, "FY2021": 911.4}),
+    ("DATA", "Interest and similar expense", {"FY2025": -920.1, "FY2024": -1093.0, "FY2023": -920.1, "FY2022": -250.0, "FY2021": -42.5}),
+    ("TOTAL", "Net interest income", {"FY2025": 1055.6, "FY2024": 984.4, "FY2023": 1022.0, "FY2022": 981.7, "FY2021": 868.9}),
+    ("DATA", "Fee and commission income", {"FY2025": 114.1, "FY2024": 124.7, "FY2023": 129.2, "FY2022": 135.5, "FY2021": 121.8}),
+    ("DATA", "Fee and commission expense", {"FY2025": -37.4, "FY2024": -34.0, "FY2023": -21.2, "FY2022": -21.3, "FY2021": -18.2}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 76.7, "FY2024": 90.7, "FY2023": 108.0, "FY2022": 114.2, "FY2021": 103.6}),
+    ("SECTION", "Other income", {}),
+    ("DATA", "Gains on derecognition of financial assets measured at amortised cost", {"FY2025": 2.8}),
+    ("DATA", "Gains on derecognition of financial assets measured at FVOCI", {"FY2023": 4.3, "FY2022": 6.3, "FY2021": 7.0}),
+    ("DATA", "Losses on derecognition of financial liabilities measured at amortised cost", {"FY2023": -1.0}),
+    ("DATA", "Gains/(losses) on derivative financial instruments at fair value through profit or loss", {"FY2025": 40.5, "FY2024": 57.6, "FY2023": 11.2, "FY2022": -8.1}),
+    ("DATA", "Losses on derivative financial assets at fair value through profit or loss", {"FY2021": -2.5}),
+    ("DATA", "(Losses)/gains from hedge accounting", {"FY2025": -34.2, "FY2024": -30.1, "FY2023": -2.2, "FY2022": 4.2, "FY2021": -2.4}),
+    ("DATA", "Gains/(losses) on derecognition of non-financial assets/liabilities", {"FY2025": 0.5, "FY2024": -2.3, "FY2023": -0.1, "FY2022": 0.6, "FY2021": -2.6}),
+    ("DATA", "Other operating income", {"FY2025": 30.4, "FY2024": 36.7, "FY2023": 14.5, "FY2022": 6.6, "FY2021": 10.9}),
+    ("TOTAL", "Other income", {"FY2025": 116.7, "FY2024": 152.6, "FY2023": 134.7, "FY2022": 123.8, "FY2021": 114.0}),
+    ("TOTAL", "Total income", {"FY2025": 1172.3, "FY2024": 1137.0, "FY2023": 1156.7, "FY2022": 1105.5, "FY2021": 982.9}),
+    ("DATA", "Total operating expenses", {"FY2025": -785.9, "FY2024": -821.8, "FY2023": -852.9, "FY2022": -869.5, "FY2021": -827.3}),
+    ("TOTAL", "Operating profit/(loss) before impairment losses and taxation", {"FY2025": 386.4, "FY2024": 315.2, "FY2023": 303.8, "FY2022": 236.0, "FY2021": 155.6}),
+    ("DATA", "Impairment losses on financial assets at amortised cost", {"FY2025": -51.2, "FY2024": -31.9, "FY2023": -71.8, "FY2022": -57.7, "FY2021": -2.6}),
+    ("DATA", "Impairment credit/(losses) on loan commitments", {"FY2025": 4.2, "FY2024": 1.8, "FY2023": 3.5, "FY2022": 2.8, "FY2021": 2.5}),
+    ("TOTAL", "Total impairment losses", {"FY2025": -47.0, "FY2024": -30.1, "FY2023": -68.3, "FY2022": -54.9, "FY2021": -0.1}),
+    ("TOTAL", "Profit/(loss) before taxation", {"FY2025": 339.4, "FY2024": 285.1, "FY2023": 235.5, "FY2022": 181.1, "FY2021": 155.5}),
+    ("DATA", "Taxation", {"FY2025": -88.3, "FY2024": -81.3, "FY2023": -62.1, "FY2022": -80.5, "FY2021": -27.1}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2025": 251.1, "FY2024": 203.8, "FY2023": 173.4, "FY2022": 100.6, "FY2021": 128.4}),
+    ("SECTION", "Other comprehensive income/(loss), net of taxation", {}),
+    ("DATA", "Change in fair value reserve", {"FY2025": 1.8, "FY2024": -1.5, "FY2023": -0.4, "FY2022": -17.2, "FY2021": -0.5}),
+    ("DATA", "Change in cash flow hedging reserve", {"FY2025": -18.0, "FY2024": 13.8, "FY2023": -28.2, "FY2022": 47.0, "FY2021": 13.6}),
+    ("TOTAL", "Other comprehensive income/(losses) for the year, net of taxation", {"FY2025": -16.2, "FY2024": 12.3, "FY2023": -28.6, "FY2022": 29.8, "FY2021": 13.1}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year", {"FY2025": 234.9, "FY2024": 216.1, "FY2023": 144.8, "FY2022": 130.4, "FY2021": 141.5}),
+]
+
+bw.add_income_statement_sheet(
+    title="TSB Bank plc — Consolidated Statement of Comprehensive Income",
+    subtitle="Bank (Consolidated) basis, £ million. 'Total comprehensive income/(loss) for the year' ties exactly "
+              "to Profit for the year + Other comprehensive income for every year.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=230,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Statement of Changes in Equity - equity reconciliation ladder steps 2-3:
+# built year-by-year, confirmed against next year's opening AND that year's
+# own Balance Sheet Total equity above (all 5 years tie exactly, including
+# the FY2024 AT1 issuance and FY2025 AT1 distribution - two easy-to-skip
+# movement categories deliberately checked for). Zero undocumented plug rows.
+# ---------------------------------------------------------------
+EQUITY_HEADERS = [
+    "Share capital", "Share premium", "Other equity instruments", "Merger reserve",
+    "Fair value reserve", "Cash flow hedging reserve", "Retained profit", "Total equity",
+]
+
+equity_rows = [
+    ("TOTAL", "Balance at 1 January 2021", (79.4, 195.6, None, 412.8, 11.6, -20.2, 1045.7, 1724.9)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, None, 128.4, 128.4)),
+    ("DATA", "Change in fair value reserve", (None, None, None, None, -0.5, None, None, -0.5)),
+    ("DATA", "Change in cash flow hedging reserve", (None, None, None, None, None, 13.6, None, 13.6)),
+    ("TOTAL", "Balance at 31 December 2021", (79.4, 195.6, None, 412.8, 11.1, -6.6, 1174.1, 1866.4)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, None, 100.6, 100.6)),
+    ("DATA", "Change in fair value reserve", (None, None, None, None, -17.2, None, None, -17.2)),
+    ("DATA", "Change in cash flow hedging reserve", (None, None, None, None, None, 47.0, None, 47.0)),
+    ("DATA", "Dividend paid", (None, None, None, None, None, None, -67.0, -67.0)),
+    ("TOTAL", "Balance at 31 December 2022", (79.4, 195.6, None, 412.8, -6.1, 40.4, 1207.7, 1929.8)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, None, 173.4, 173.4)),
+    ("DATA", "Change in fair value reserve", (None, None, None, None, -0.4, None, None, -0.4)),
+    ("DATA", "Change in cash flow hedging reserve", (None, None, None, None, None, -28.2, None, -28.2)),
+    ("DATA", "Dividend paid", (None, None, None, None, None, None, -120.0, -120.0)),
+    ("TOTAL", "Balance at 31 December 2023", (79.4, 195.6, None, 412.8, -6.5, 12.2, 1261.1, 1954.6)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, None, 203.8, 203.8)),
+    ("DATA", "Change in fair value reserve", (None, None, None, None, -1.5, None, None, -1.5)),
+    ("DATA", "Change in cash flow hedging reserve", (None, None, None, None, None, 13.8, None, 13.8)),
+    ("DATA", "Issue of Additional Tier 1 Securities", (None, None, 250.0, None, None, None, None, 250.0)),
+    ("DATA", "Dividends paid on ordinary shares", (None, None, None, None, None, None, -300.0, -300.0)),
+    ("TOTAL", "Balance at 31 December 2024", (79.4, 195.6, 250.0, 412.8, -8.0, 26.0, 1164.9, 2120.7)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, None, 251.1, 251.1)),
+    ("DATA", "Change in fair value reserve", (None, None, None, None, 1.8, None, None, 1.8)),
+    ("DATA", "Change in cash flow hedging reserve", (None, None, None, None, None, -18.0, None, -18.0)),
+    ("DATA", "Distributions on other equity instruments", (None, None, None, None, None, None, -17.6, -17.6)),
+    ("TOTAL", "Balance at 31 December 2025", (79.4, 195.6, 250.0, 412.8, -6.2, 8.0, 1398.4, 2338.0)),
+]
+
+bw.add_equity_changes_sheet(
+    title="TSB Bank plc — Statement of Changes in Equity",
+    subtitle="Bank (Consolidated) basis, £ million, chronological (oldest to newest). Each year's closing Total "
+              "equity ties exactly to that year's own Balance Sheet Total equity and to the next year's opening "
+              "balance - zero undocumented plug rows across all 5 years.",
+    headers=EQUITY_HEADERS,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=50,
+    source_height=230,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
     ("SECTION", "Cash flows from operating activities", {}),
@@ -527,6 +714,67 @@ bw.add_cash_flow_sheet(
     unit_suffix=" (£m)",
 )
 
+# ---------------------------------------------------------------
+# Asset Quality - loan book by IFRS 9 stage. FY2022-FY2025 sourced from the
+# 'Sensitivity to alternative economic scenario weightings' note's weighted
+# gross customer lending balances/ECL table; FY2021 sourced from the fuller
+# 'Reconciliation of movements in gross customer balances and allowances for
+# credit impairment losses' table (a differently-scoped disclosure - see
+# source note). Neither table ties exactly to the Balance Sheet's narrower
+# 'Loans and advances to customers' net line (a documented, genuine
+# cross-statement presentation difference, not forced to tie).
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Gross customer lending balances by IFRS 9 stage (weighted forecast)", {}),
+    ("DATA", "Stage 1", {"FY2025": 33038.7, "FY2024": 33151.6, "FY2023": 32115.9, "FY2022": 33737.1, "FY2021": 34280.5}),
+    ("DATA", "Stage 2", {"FY2025": 2738.6, "FY2024": 2697.2, "FY2023": 3684.9, "FY2022": 3866.8, "FY2021": 2583.9}),
+    ("DATA", "Stage 3 (non-performing)", {"FY2025": 525.7, "FY2024": 528.2, "FY2023": 508.1, "FY2022": 472.1, "FY2021": 502.4}),
+    ("DATA", "POCI (purchased or originated credit impaired)", {"FY2025": 73.2, "FY2024": 84.1, "FY2023": 94.9, "FY2022": 109.3, "FY2021": 124.8}),
+    ("TOTAL", "Total gross customer lending balances", {"FY2025": 36376.2, "FY2024": 36461.1, "FY2023": 36403.8, "FY2022": 38185.3, "FY2021": 37491.6}),
+    ("SECTION", "Allowance for credit losses and credit impairment provisions", {}),
+    ("DATA", "Stage 1", {"FY2025": 34.1, "FY2024": 50.2, "FY2023": 60.5, "FY2022": 42.5, "FY2021": 59.0}),
+    ("DATA", "Stage 2", {"FY2025": 52.4, "FY2024": 57.7, "FY2023": 80.9, "FY2022": 103.2, "FY2021": 74.4}),
+    ("DATA", "Stage 3", {"FY2025": 86.5, "FY2024": 80.0, "FY2023": 79.8, "FY2022": 65.5, "FY2021": 55.4}),
+    ("DATA", "POCI", {"FY2025": 2.6, "FY2024": 0.8, "FY2023": 1.0, "FY2022": 0.7, "FY2021": 0.8}),
+    ("TOTAL", "Total allowance for credit losses and credit impairment provisions", {"FY2025": 175.6, "FY2024": 188.7, "FY2023": 222.2, "FY2022": 211.9, "FY2021": 189.6}),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "NPL ratio (Stage 3 gross / Total gross customer lending)", {"FY2025": "1.45%", "FY2024": "1.45%", "FY2023": "1.40%", "FY2022": "1.24%", "FY2021": "1.34%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross)", {"FY2025": "16.45%", "FY2024": "15.15%", "FY2023": "15.71%", "FY2022": "13.87%", "FY2021": "11.03%"}),
+    ("DATA", "Total coverage ratio (Total allowance / Total gross)", {"FY2025": "0.48%", "FY2024": "0.52%", "FY2023": "0.61%", "FY2022": "0.55%", "FY2021": "0.51%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="TSB Bank plc — Asset Quality",
+    subtitle="Bank and Company, £ million. See source note for why this doesn't tie exactly to the Balance Sheet's "
+              "Loans and advances to customers line, and for a FY2021 vs FY2022-25 disclosure-basis difference.",
+    rows=asset_quality_rows,
+    sources_text=(
+        "Sources - Bank and Company basis, £ million:\n"
+        f"FY2025: TSB Bank plc Annual Report and Accounts 2025, p.62 (Note 8, 'Sensitivity to alternative economic "
+        f"scenario weightings', weighted column) - {AR25_URL}\n"
+        f"FY2024: TSB Bank plc Annual Report and Accounts 2025, p.63 (Note 8, FY2024 comparative, weighted column) "
+        f"- {AR25_URL}\n"
+        f"FY2023: TSB Bank plc Annual Report and Accounts 2023, p.45 (Note 8, weighted column) - {AR23_URL}\n"
+        f"FY2022: TSB Bank plc Annual Report and Accounts 2023, p.46 (Note 8, FY2022 comparative, weighted column) "
+        f"- {AR23_URL}\n"
+        f"FY2021: TSB Bank plc Annual Report and Accounts 2021, p.54 ('Reconciliation of movements in gross "
+        f"customer balances and allowances for credit impairment losses', at 31 December 2021 closing row) "
+        f"- {AR21_URL}\n\n"
+        "PRESENTATION NOTE: FY2022-FY2025 use the 'Sensitivity to alternative economic scenario weightings' note's "
+        "weighted-forecast gross lending/ECL table (a narrower disclosure scope than the full 'Reconciliation of "
+        "movements' table, which TSB stopped publishing after the 2021 Annual Report). FY2021 uses that older, "
+        "fuller reconciliation table instead - a genuine disclosure-format change, not a data error. Neither "
+        "table's Total gross/Total allowance figures tie exactly to the Balance Sheet's 'Loans and advances to "
+        "customers' net line (a ~£58m-£82m gap across all 5 years, consistent in direction and rough magnitude, "
+        "most likely reflecting a scope difference such as loan commitment provisions or accrued interest treated "
+        "differently between the two disclosures) - reproduced faithfully from each source rather than forced to "
+        "tie.\n\n" + ENTITY_NOTE
+    ),
+    first_col_width=64,
+    source_height=260,
+    unit_suffix=" (£m)",
+)
+
 
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
@@ -670,6 +918,47 @@ metric(
         )
     ],
     p3_sources("6"),
+)
+
+# ---------------------------------------------------------------
+# RWA Breakdown - Pillar 3 UK OV1 template. All 5 years sourced from TSB
+# Banking Group plc's own Large Subsidiary Disclosures (own-year figures
+# cross-checked against the adjacent year's comparative column, which agrees
+# exactly in every case). All 5 years tie exactly to the Total RWAs metric
+# above.
+# ---------------------------------------------------------------
+rwa_breakdown_rows = [
+    ("SECTION", "RWA by risk category (Pillar 3 UK OV1 template)", {}),
+    ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2025": 9802107, "FY2024": 9417095, "FY2023": 9285021, "FY2022": 8781922, "FY2021": 9375601}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 34637, "FY2024": 44008, "FY2023": 47113, "FY2022": 107036, "FY2021": 17276}),
+    ("DATA", "Operational risk", {"FY2025": 1725340, "FY2024": 1710925, "FY2023": 1633140, "FY2022": 1475213, "FY2021": 1400010}),
+    ("DATA", "Amounts below the thresholds for deduction (subject to 250% risk weight)", {"FY2025": 84247, "FY2024": 78792, "FY2023": 87477, "FY2022": 77895, "FY2021": 58980}),
+    ("TOTAL", "Total RWAs", {"FY2025": 11646331, "FY2024": 11250820, "FY2023": 11052751, "FY2022": 10442066, "FY2021": 10851867}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="TSB Bank plc — RWA Breakdown",
+    subtitle="TSB Banking Group plc consolidated Pillar 3 basis, £'000. The 4 category rows sum exactly to Total "
+              "RWAs for every year.",
+    rows=rwa_breakdown_rows,
+    sources_text=(
+        "Sources - TSB Banking Group plc consolidated Pillar 3 basis, UK OV1: Overview of risk-weighted exposure "
+        "amounts (see entity note on Cash Flow Statement sheet):\n"
+        f"FY2025: TSB Banking Group plc Large Subsidiary Disclosures, as at 31 December 2025, p.10 (Table 4: OV1) "
+        f"- {P3_25_URL}\n"
+        f"FY2024: TSB Banking Group plc Large Subsidiary Disclosures, as at 31 December 2024, p.12 (Table 5: OV1; "
+        f"independently cross-checked against the FY2025 disclosure's own FY2024 comparative column, which agrees "
+        f"exactly) - {P3_24_URL}\n"
+        f"FY2023: TSB Banking Group plc Large Subsidiary Disclosures, as at 31 December 2024, p.12 (Table 5: OV1, "
+        f"FY2023 comparative column) - {P3_24_URL}\n"
+        f"FY2022: TSB Banking Group plc Large Subsidiary Disclosures 2022, p.12 (Table 5: OV1) - {P3_22_URL}\n"
+        f"FY2021: TSB Banking Group plc Large Subsidiary Disclosures 2021, p.11 (Table 5: OV1; independently "
+        f"cross-checked against the 2022 disclosure's own FY2021 comparative column, which agrees exactly) "
+        f"- {P3_21_URL}"
+    ),
+    first_col_width=64,
+    source_height=220,
+    unit_suffix=" (£'000)",
 )
 
 metric(
@@ -860,6 +1149,26 @@ metric(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 45281.5, "FY2024": 46099.1, "FY2023": 47652.9, "FY2022": 49449.6, "FY2021": 46705.6}),
+        ("Loans and advances to customers", {"FY2025": 36268.4, "FY2024": 36330.9, "FY2023": 36245.9, "FY2022": 38050.0, "FY2021": 37383.8}),
+        ("Customer deposits", {"FY2025": 35209.0, "FY2024": 35051.2, "FY2023": 34764.3, "FY2022": 36338.2, "FY2021": 35951.9}),
+        ("Total equity", {"FY2025": 2338.0, "FY2024": 2120.7, "FY2023": 1954.6, "FY2022": 1929.8, "FY2021": 1866.4}),
+    ],
+    balance_sheet_unit="£m",
+    income_statement_totals=[
+        ("Total income", {"FY2025": 1172.3, "FY2024": 1137.0, "FY2023": 1156.7, "FY2022": 1105.5, "FY2021": 982.9}),
+        ("Total operating expenses", {"FY2025": -785.9, "FY2024": -821.8, "FY2023": -852.9, "FY2022": -869.5, "FY2021": -827.3}),
+        ("Profit/(loss) for the year", {"FY2025": 251.1, "FY2024": 203.8, "FY2023": 173.4, "FY2022": 100.6, "FY2021": 128.4}),
+    ],
+    income_statement_unit="£m",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 2120.7, "FY2024": 1954.6, "FY2023": 1929.8, "FY2022": 1866.4, "FY2021": 1724.9}),
+        ("Total comprehensive income/(loss) for the year", {"FY2025": 234.9, "FY2024": 216.1, "FY2023": 144.8, "FY2022": 130.4, "FY2021": 141.5}),
+        ("Other equity movements, net", {"FY2025": -17.6, "FY2024": -50.0, "FY2023": -120.0, "FY2022": -67.0, "FY2021": 0}),
+        ("Closing equity", {"FY2025": 2338.0, "FY2024": 2120.7, "FY2023": 1954.6, "FY2022": 1929.8, "FY2021": 1866.4}),
+    ],
+    equity_changes_unit="£m",
     cash_flow_totals=[
         ("Net cash (used in)/provided by operating activities", {"FY2025": 662.4, "FY2024": 996.9, "FY2023": 1200.7, "FY2022": 596.4, "FY2021": -2145.7}),
         ("Net cash (used in)/provided by investing activities", {"FY2025": -67.2, "FY2024": 21.1, "FY2023": 88.5, "FY2022": -80.3, "FY2021": -839.1}),

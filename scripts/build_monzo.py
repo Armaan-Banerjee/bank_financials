@@ -11,6 +11,7 @@ YEAR_LABEL = {
     "FY2021": "FY2021 (MBL)",
 }
 
+AR26_URL = "https://monzo.com/annual-report/2026/Monzo-Annual-Report-2026.pdf"
 AR25_URL = "https://monzo.com/annual-report/2025/Monzo%20Bank%20Group%20FY2025%20Annual%20Report.pdf"
 AR24_URL = "https://monzo.com/docs/monzo-annual-report-2024.pdf"
 AR23_URL = "https://monzo.com/docs/monzo-annual-report-2023.pdf"
@@ -68,6 +69,242 @@ def p3_sources(page_25="20", page_24="29", page_23="30", page_22="32-33", page_2
     )
 
 bw = BankWorkbook(bank_name="Monzo", years=YEARS, year_label=YEAR_LABEL, header_color="B8322A")
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet (Consolidated Statement of Financial Position)
+# ---------------------------------------------------------------
+BALANCE_SHEET_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: FY2021-23 (MBL) labelled the first asset line 'Cash and balances at bank' - "
+    "shown here on the same 'Cash and cash equivalents' row as FY2024-25 (MBHG)'s renamed line, same "
+    "underlying balance. 'Deferred tax asset' is only disclosed as its own line in FY2025. 'Collateral held "
+    "with third parties' is its own line FY2021-24; FY2025's Annual Report states this was merged into "
+    "'Other assets' that year (see its own footnote), so that cell is blank for FY2025 rather than a "
+    "genuine zero. Called up share capital is reported as nil ('-') for FY2021-23; shown as 0 here. "
+    "Total assets / Total liabilities / Total equity / Total liabilities and equity are consistent and "
+    "comparable across all 5 years regardless of the above."
+)
+
+BALANCE_SHEET_SOURCES = (
+    "Sources - all figures are Monzo Group (consolidated) statement of financial position, £'000. See "
+    "entity note on the Cash Flow Statement sheet for MBL vs MBHG scope by year.\n"
+    f"FY2025: Monzo Annual Report and Accounts 2025, p.117 (Consolidated statement of financial position) - {AR25_URL}\n"
+    f"FY2024: Monzo Bank Holding Group Limited Annual Report and Group Financial Statements 2024, p.96 "
+    f"(Consolidated statement of financial position, as at 31 March 2024) - {AR24_URL}\n"
+    f"FY2023: Monzo Bank Limited Annual Report and Accounts 2023, p.97 (Statement of financial position, "
+    f"Group, as at 28 February 2023) - {AR23_URL}\n"
+    f"FY2022: Monzo Bank Limited Group Annual Report 2022, p.106 (Statement of financial position, Group, "
+    f"restated, as at 28 February 2022) - {AR22_URL}\n"
+    f"FY2021: Monzo Bank Limited Group Annual Report 2022, p.106 (Statement of financial position, Group, "
+    f"restated comparative, as at 28 February 2021) - {AR22_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    + BALANCE_SHEET_PRESENTATION_NOTE
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", {"FY2025": 11021763, "FY2024": 7624300, "FY2023": 3101242, "FY2022": 3134540, "FY2021": 2977368}),
+    ("DATA", "Treasury investments", {"FY2025": 5381870, "FY2024": 3634401, "FY2023": 2727520, "FY2022": 1675478, "FY2021": 376641}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 1602470, "FY2024": 1190215, "FY2023": 653733, "FY2022": 235083, "FY2021": 87147}),
+    ("DATA", "Other assets", {"FY2025": 186290, "FY2024": 411228, "FY2023": 113495, "FY2022": 75200, "FY2021": 105642}),
+    ("DATA", "Collateral held with third parties", {"FY2024": 78506, "FY2023": 76461, "FY2022": 76292, "FY2021": 56314}),
+    ("DATA", "Current tax asset", {"FY2025": 10279, "FY2024": 7089}),
+    ("DATA", "Deferred tax asset", {"FY2025": 45788}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 15391, "FY2024": 20074, "FY2023": 15325, "FY2022": 21836, "FY2021": 26595}),
+    ("TOTAL", "Total assets", {"FY2025": 18263851, "FY2024": 12965813, "FY2023": 6687776, "FY2022": 5218429, "FY2021": 3629707}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer deposits", {"FY2025": 16599371, "FY2024": 11197622, "FY2023": 5945947, "FY2022": 4440650, "FY2021": 3124046}),
+    ("DATA", "Subordinated debt liability", {"FY2025": 15421, "FY2024": 15113, "FY2023": 14823, "FY2022": 14593}),
+    ("DATA", "Other liabilities", {"FY2025": 436116, "FY2024": 890933, "FY2023": 251356, "FY2022": 200918, "FY2021": 283767}),
+    ("TOTAL", "Total liabilities", {"FY2025": 17050908, "FY2024": 12103668, "FY2023": 6212126, "FY2022": 4656161, "FY2021": 3407813}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Called up share capital", {"FY2025": 238, "FY2024": 217, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "Share premium account", {"FY2025": 501730, "FY2024": 339388, "FY2023": 944786, "FY2022": 944486, "FY2021": 508478}),
+    ("DATA", "Other reserves", {"FY2025": 1013604, "FY2024": 966947, "FY2023": 108117, "FY2022": 79186, "FY2021": 56459}),
+    ("DATA", "Accumulated losses", {"FY2025": -302629, "FY2024": -444407, "FY2023": -577253, "FY2022": -461404, "FY2021": -343043}),
+    ("TOTAL", "Total equity", {"FY2025": 1212943, "FY2024": 862145, "FY2023": 475650, "FY2022": 562268, "FY2021": 221894}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 18263851, "FY2024": 12965813, "FY2023": 6687776, "FY2022": 5218429, "FY2021": 3629707}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Monzo — Consolidated Statement of Financial Position",
+    subtitle="Monzo Group (consolidated basis), £'000. See entity note on the Cash Flow Statement sheet.",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=42,
+    source_height=110,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (Consolidated Statement of Comprehensive Income)
+# ---------------------------------------------------------------
+INCOME_STATEMENT_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: Monzo's income statement structure changed materially between the MBL years "
+    "(FY2021-23), which build to 'Net interest income' / 'Net fee and commission income' / 'Net operating "
+    "income' subtotals, and the MBHG years (FY2024-25), which instead build to 'Revenue' / 'Cost of Revenue' "
+    "/ 'Gross Profit'. Blank cells indicate that year's report did not disclose that specific line at that "
+    "granularity. FY2023 disclosed no separate 'Profit before tax' / 'Taxation' split (tax was nil that "
+    "year) and no in-table other-comprehensive-income breakout (only a footnote); FY2022 and FY2021 "
+    "likewise disclosed no in-table OCI breakout. 'Profit/(Loss) for the year' and 'Total comprehensive "
+    "income/(loss) for the year, net of tax' are consistent and comparable across all 5 years regardless "
+    "of the above."
+)
+
+INCOME_STATEMENT_SOURCES = (
+    "Sources - all figures are Monzo Group (consolidated) statement of comprehensive income, £'000. See "
+    "entity note on the Cash Flow Statement sheet for MBL vs MBHG scope by year.\n"
+    f"FY2025: Monzo Annual Report and Accounts 2025, p.116 (Consolidated statement of comprehensive income) - {AR25_URL}\n"
+    f"FY2024: Monzo Bank Holding Group Limited Annual Report and Group Financial Statements 2024, p.95 "
+    f"(Consolidated statement of comprehensive income, 13-month period ended 31 March 2024) - {AR24_URL}\n"
+    f"FY2023: Monzo Bank Limited Annual Report and Accounts 2023, p.96 (Statement of comprehensive income, "
+    f"Group, year ended 28 February 2023) - {AR23_URL}\n"
+    f"FY2022: Monzo Bank Limited Group Annual Report 2022, p.104 (Statement of comprehensive income, Group, "
+    f"restated, year ended 28 February 2022) - {AR22_URL}\n"
+    f"FY2021: Monzo Bank Limited Group Annual Report 2022, p.104 (Statement of comprehensive income, Group, "
+    f"restated comparative, year ended 28 February 2021) - {AR22_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    + INCOME_STATEMENT_PRESENTATION_NOTE
+)
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 861673, "FY2024": 575974, "FY2023": 167956, "FY2022": 37809, "FY2021": 23950}),
+    ("DATA", "Interest expense", {"FY2025": -262833, "FY2024": -138002, "FY2023": -3709, "FY2022": -3727, "FY2021": -1564}),
+    ("TOTAL", "Net interest income", {"FY2024": 437972, "FY2023": 164247, "FY2022": 34082, "FY2021": 22386}),
+    ("DATA", "Fee and commission income", {"FY2025": 329165, "FY2024": 255531, "FY2023": 169095, "FY2022": 103270, "FY2021": 54051}),
+    ("DATA", "Fee and commission expense", {"FY2025": -72000, "FY2024": -50696, "FY2023": -36212, "FY2022": -22481, "FY2021": -12265}),
+    ("TOTAL", "Net fee and commission income", {"FY2024": 204835, "FY2023": 132883, "FY2022": 80789, "FY2021": 41786}),
+    ("DATA", "Other operating income", {"FY2025": 44517, "FY2024": 48452, "FY2023": 18582, "FY2022": 13161, "FY2021": 2490}),
+    ("DATA", "Total Revenue", {"FY2025": 1235355}),
+    ("DATA", "Credit loss expense on financial assets", {"FY2025": -152595, "FY2024": -176868, "FY2023": -101203, "FY2022": -14013, "FY2021": -3821}),
+    ("DATA", "Cost of Revenue", {"FY2025": -487428}),
+    ("DATA", "Gross Profit", {"FY2025": 747927}),
+    ("TOTAL", "Net operating income", {"FY2024": 514391, "FY2023": 214509, "FY2022": 114019, "FY2021": 62841}),
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Personnel expense", {"FY2025": -352929, "FY2024": -256913, "FY2023": -175325, "FY2022": -130151, "FY2021": -105269}),
+    ("DATA", "Depreciation & impairment expense", {"FY2023": -7601, "FY2022": -8311, "FY2021": -9010}),
+    ("DATA", "Other operating expense", {"FY2025": -334520, "FY2024": -242080, "FY2023": -147342, "FY2022": -94405, "FY2021": -79977}),
+    ("TOTAL", "Total operating expense", {"FY2025": -687449, "FY2024": -498993, "FY2023": -330268, "FY2022": -232867, "FY2021": -194256}),
+    ("DATA", "Exchange differences through profit or loss", {"FY2024": 50, "FY2023": -582, "FY2022": -172, "FY2021": 35}),
+    ("TOTAL", "Profit/(Loss) before tax", {"FY2025": 60478, "FY2024": 15448, "FY2022": -119020, "FY2021": -131380}),
+    ("DATA", "Taxation credit/(expense)", {"FY2025": 34090, "FY2024": -6739, "FY2022": 0, "FY2021": 303}),
+    ("TOTAL", "Profit/(Loss) for the year", {"FY2025": 94568, "FY2024": 8709, "FY2023": -116341, "FY2022": -119020, "FY2021": -131077}),
+    ("SECTION", "Other comprehensive income that may be recycled to profit or loss", {}),
+    ("DATA", "Currency translation differences", {"FY2025": -159, "FY2024": -305}),
+    ("DATA", "Cash flow hedging reserve: net gains from changes in fair value", {"FY2025": 5524, "FY2024": 1391}),
+    ("DATA", "Cash flow hedging reserve: net losses/(gains) transferred to net profit", {"FY2025": 180, "FY2024": -71}),
+    ("DATA", "Cash flow hedging reserve: tax", {"FY2025": -1637, "FY2024": -330}),
+    ("DATA", "Financial assets reserve: net changes in FVOCI financial assets", {"FY2025": 598}),
+    ("DATA", "Financial assets reserve: tax", {"FY2025": -167}),
+    ("TOTAL", "Other comprehensive income that may be recycled to profit or loss", {"FY2025": 4339, "FY2024": 685}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year, net of tax", {"FY2025": 98907, "FY2024": 9394, "FY2023": -116341, "FY2022": -119020, "FY2021": -131077}),
+]
+
+bw.add_income_statement_sheet(
+    title="Monzo — Consolidated Statement of Comprehensive Income",
+    subtitle="Monzo Group (consolidated basis), £'000. See entity note on the Cash Flow Statement sheet.",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=52,
+    source_height=120,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_CHANGES_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: Read chronologically top-to-bottom (oldest to newest), not year-columned like "
+    "every other sheet - each 'Balance as at ...' row (bold) opens/closes one year's block of movements. "
+    "'Merger reserve' only exists from the FY2024 group reorganisation onward (blank for FY2021-23). This "
+    "sheet's 'Other reserves' + 'Merger reserve' columns sum exactly to the Balance Sheet sheet's combined "
+    "'Other reserves' line for FY2024/FY2025 (e.g. FY2025: 68,791 + 944,813 = 1,013,604) - confirms both "
+    "sheets tie together. "
+    "DISCREPANCY IN MONZO'S OWN REPORTING: the Profit & Loss sheet's FY2023 'Total comprehensive "
+    "income/(loss) for the year, net of tax' is -116,341 (per the Statement of Comprehensive Income face "
+    "table, which shows no separate OCI line for FY2023 despite a footnote mentioning £0.3m of currency "
+    "translation differences). This sheet's FY2023 'Total comprehensive income/(loss) for the year' is "
+    "-116,015 (per the Statement of Changes in Equity, which does show a +326 Other reserves movement for "
+    "that £0.3m). Both figures are transcribed exactly as each of Monzo's own statements presents them - "
+    "the -326 difference is Monzo's own inter-statement inconsistency, not a transcription error here."
+)
+
+EQUITY_CHANGES_SOURCES = (
+    "Sources - all figures are Monzo Group (consolidated) statement of changes in equity, £'000. See "
+    "entity note on the Cash Flow Statement sheet for MBL vs MBHG scope by year.\n"
+    f"FY2025 (movements + balances at 31 March 2025 and 1 April 2024): Monzo Annual Report and Accounts "
+    f"2026, p.122 (Consolidated statement of changes in equity) - {AR26_URL}\n"
+    f"FY2024 (movements + balances at 31 March 2024 and 1 March 2022): Monzo Bank Holding Group Limited "
+    f"Annual Report and Group Financial Statements 2024, p.97 (Consolidated statement of changes in "
+    f"equity, 13-month period ended 31 March 2024) - {AR24_URL}\n"
+    f"FY2023 (movements + balance at 28 February 2023, cross-checked against AR2024 above): Monzo Bank "
+    f"Limited Annual Report and Accounts 2023, p.98 (Statement of changes in equity, Group, year ended 28 "
+    f"February 2023) - {AR23_URL}\n"
+    f"FY2022 and FY2021 (movements + balances at 28 February 2022, 28 February 2021 restated, and 1 March "
+    f"2020 restated): Monzo Bank Limited Group Annual Report 2022, p.107-108 (Statement of changes in "
+    f"equity, Group, restated) - {AR22_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    + EQUITY_CHANGES_PRESENTATION_NOTE
+)
+
+EQUITY_HEADERS = ["Share capital", "Share premium", "Other reserves", "Merger reserve", "Retained losses", "Total equity"]
+
+equity_changes_rows = [
+    ("TOTAL", "Balance as at 1 March 2020 (as previously reported)", (0, 311139, 17301, None, -199436, 129004)),
+    ("DATA", "Prior year adjustments", (0, 0, 12536, None, -12536, 0)),
+    ("TOTAL", "Restated balance as at 1 March 2020", (0, 311139, 29837, None, -211972, 129004)),
+    ("DATA", "Loss for the year (FY2021, restated)", (None, None, None, None, -131077, -131077)),
+    ("DATA", "Cumulative translation adjustment", (None, None, -131, None, None, -131)),
+    ("TOTAL", "Total comprehensive loss for the year (FY2021, restated)", (None, None, -131, None, -131077, -131208)),
+    ("DATA", "Shares issued", (None, 198019, None, None, None, 198019)),
+    ("DATA", "Cost of issuance", (None, -476, None, None, None, -476)),
+    ("DATA", "Share-based payments reserve (restated)", (None, None, 26550, None, None, 26550)),
+    ("DATA", "Share reclassification", (None, -209, 209, None, None, 0)),
+    ("DATA", "Exercise of options", (None, 5, -6, None, 6, 5)),
+    ("TOTAL", "Restated balance as at 28 February 2021", (0, 508478, 56459, None, -343043, 221894)),
+    ("DATA", "Loss for the year (FY2022)", (None, None, None, None, -119020, -119020)),
+    ("DATA", "Cumulative translation adjustment", (None, None, -1, None, None, -1)),
+    ("TOTAL", "Total comprehensive loss for the year (FY2022)", (None, None, -1, None, -119020, -119021)),
+    ("DATA", "Shares issued", (None, 454585, None, None, None, 454585)),
+    ("DATA", "Cost of issuance", (None, -18629, None, None, None, -18629)),
+    ("DATA", "Share-based payments reserve", (None, None, 23387, None, None, 23387)),
+    ("DATA", "Exercise of options", (None, 52, -659, None, 659, 52)),
+    ("TOTAL", "Balance as at 28 February 2022", (0, 944486, 79186, None, -461404, 562268)),
+    ("DATA", "Loss for the year (FY2023)", (None, None, None, None, -116341, -116341)),
+    ("DATA", "Cumulative translation adjustment", (None, None, 326, None, None, 326)),
+    ("TOTAL", "Total comprehensive income/(loss) for the year (FY2023)", (None, None, 326, None, -116341, -116015)),
+    ("DATA", "Shares issued", (None, 210, None, None, None, 210)),
+    ("DATA", "Cost of issuance", (None, -79, None, None, None, -79)),
+    ("DATA", "Share-based payments reserve", (None, None, 29097, None, None, 29097)),
+    ("DATA", "Exercise of options", (None, 169, -492, None, 492, 169)),
+    ("TOTAL", "Balance as at 28 February 2023", (0, 944786, 108117, None, -577253, 475650)),
+    ("DATA", "Profit for the year (FY2024)", (None, None, None, None, 8709, 8709)),
+    ("DATA", "Cumulative translation adjustment", (None, None, -305, None, None, -305)),
+    ("DATA", "Cash flow hedge reserve", (None, None, 990, None, None, 990)),
+    ("TOTAL", "Total comprehensive income for the year (FY2024)", (None, None, 685, None, 8709, 9394)),
+    ("DATA", "Shares issued", (217, 340496, None, None, None, 340713)),
+    ("DATA", "Cost of issuance", (None, -1356, None, None, None, -1356)),
+    ("DATA", "Share-based payments reserve", (None, None, 37469, None, None, 37469)),
+    ("DATA", "Exercise of options", (None, 275, -3761, None, 3761, 275)),
+    ("DATA", "Reserve reclassification", (None, None, -120376, None, 120376, 0)),
+    ("DATA", "Creation of merger reserve on group reorganisation", (None, -944813, None, 944813, None, 0)),
+    ("TOTAL", "Balance as at 31 March 2024", (217, 339388, 22134, 944813, -444407, 862145)),
+    ("DATA", "Profit for the year (FY2025)", (None, None, None, None, 94568, 94568)),
+    ("DATA", "Cumulative translation adjustment", (None, None, -159, None, None, -159)),
+    ("DATA", "Cash flow hedge reserve", (None, None, 4067, None, None, 4067)),
+    ("DATA", "Treasury investment fair value movements", (None, None, 431, None, None, 431)),
+    ("TOTAL", "Total comprehensive income for the year (FY2025)", (None, None, 4339, None, 94568, 98907)),
+    ("DATA", "Shares issued", (21, 150627, None, None, None, 150648)),
+    ("DATA", "Cost of issuance", (None, -20, None, None, None, -20)),
+    ("DATA", "Share-based payments reserve", (None, None, 89528, None, None, 89528)),
+    ("DATA", "Exercise of options", (None, 11735, -47210, None, 47210, 11735)),
+    ("TOTAL", "Balance as at 31 March 2025", (238, 501730, 68791, 944813, -302629, 1212943)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Monzo — Consolidated Statement of Changes in Equity",
+    subtitle="Monzo Group (consolidated basis), £'000, chronological FY2021-FY2025. See entity note on the Cash Flow Statement sheet.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+    first_col_width=54,
+    source_height=170,
+)
 
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
@@ -133,6 +370,81 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality / Credit Risk Disclosures
+# ---------------------------------------------------------------
+ASSET_QUALITY_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: 'Flex Loans' was only reported as its own product line from FY2023 onward - FY2021 "
+    "and FY2022's own reports combined it into 'Loans' (blank Flex Loans cells for those years; AR2023 "
+    "later restated FY2022 with the split - 130,892 Loans + 27,004 Flex Loans - matching FY2022's own "
+    "combined 157,896 exactly, but this sheet keeps each year's own primary-source figures for consistency "
+    "with the rest of the workbook). "
+    "The 'by IFRS 9 stage' Total gross loans for FY2024 (1,394,005) differs from the 'by product' Total "
+    "gross loans for FY2024 (1,394,222) by £217k - a small scope difference in Monzo's own two disclosures "
+    "(Note 13 vs the impairment loss allowance movement table); both are transcribed exactly as disclosed. "
+    "All other years' by-product and by-stage gross/impairment totals match exactly. "
+    "Stage 1 = performing, Stage 2 = underperforming/significant increase in credit risk since origination, "
+    "Stage 3 = credit-impaired (Monzo's proxy for non-performing). ECL coverage ratio = Total impairment "
+    "allowance / Total gross loans (by-product total); Stage 3 (NPL) ratio and Stage 3 coverage ratio use "
+    "the by-stage totals."
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - all figures are Monzo Group (consolidated) Note 13 'Loans and advances to customers' and "
+    "the 'Impairment loss allowance movement table', £'000. See entity note on the Cash Flow Statement "
+    "sheet for MBL vs MBHG scope by year.\n"
+    f"FY2025 and FY2024 (by product and by stage): Monzo Annual Report and Accounts 2025, p.137 (Note 13) "
+    f"and p.167-168 (Impairment loss allowance movement table) - {AR25_URL}\n"
+    f"FY2023 (by product): Monzo Bank Limited Annual Report and Accounts 2023, p.119 (Note 13) - {AR23_URL}\n"
+    f"FY2023 and FY2022 and FY2021 (by stage): Monzo Bank Limited Annual Report and Accounts 2023, p.147-149 "
+    f"(Impairment loss allowance movement table, 'As at 1 March 2021' / 'As at 28 February 2022' / 'As at "
+    f"28 February 2023' snapshots) - {AR23_URL}\n"
+    f"FY2022 (by product): Monzo Bank Limited Group Annual Report 2022, p.131 (Note 13) - {AR22_URL}\n"
+    f"FY2021 (by product): Monzo Bank Limited Group Annual Report 2022, p.131 (Note 13, restated "
+    f"comparative) - {AR22_URL}\n\n" + ENTITY_NOTE + "\n\n" + ASSET_QUALITY_PRESENTATION_NOTE
+)
+
+asset_quality_rows = [
+    ("SECTION", "Gross loans and advances to customers, by product", {}),
+    ("DATA", "Overdrafts and overdrawn balances", {"FY2025": 402876, "FY2024": 318960, "FY2023": 197104, "FY2022": 100911, "FY2021": 56818}),
+    ("DATA", "Loans", {"FY2025": 897426, "FY2024": 683976, "FY2023": 393349, "FY2022": 157896, "FY2021": 47772}),
+    ("DATA", "Flex Loans", {"FY2025": 553394, "FY2024": 391286, "FY2023": 169281}),
+    ("TOTAL", "Total gross loans and advances to customers", {"FY2025": 1853696, "FY2024": 1394222, "FY2023": 759734, "FY2022": 258807, "FY2021": 104590}),
+    ("SECTION", "Impairment loss allowance (ECL), by product", {}),
+    ("DATA", "Overdrafts and overdrawn balances", {"FY2025": -83013, "FY2024": -61938, "FY2023": -36266, "FY2022": -15179, "FY2021": -12600}),
+    ("DATA", "Loans", {"FY2025": -81429, "FY2024": -75892, "FY2023": -33247, "FY2022": -8545, "FY2021": -4843}),
+    ("DATA", "Flex Loans", {"FY2025": -86784, "FY2024": -66177, "FY2023": -36488}),
+    ("TOTAL", "Total impairment loss allowance", {"FY2025": -251226, "FY2024": -204007, "FY2023": -106001, "FY2022": -23724, "FY2021": -17443}),
+    ("SECTION", "Net loans and advances to customers, by product", {}),
+    ("DATA", "Overdrafts and overdrawn balances", {"FY2025": 319863, "FY2024": 257022, "FY2023": 160838, "FY2022": 85732, "FY2021": 44218}),
+    ("DATA", "Loans", {"FY2025": 815997, "FY2024": 608084, "FY2023": 360102, "FY2022": 149351, "FY2021": 42929}),
+    ("DATA", "Flex Loans", {"FY2025": 466610, "FY2024": 325109, "FY2023": 132793}),
+    ("TOTAL", "Total net loans and advances to customers", {"FY2025": 1602470, "FY2024": 1190215, "FY2023": 653733, "FY2022": 235083, "FY2021": 87147}),
+    ("SECTION", "Gross loans and advances to customers, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": 1347607, "FY2024": 1103258, "FY2023": 598627, "FY2022": 189761, "FY2021": 60059}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2025": 397399, "FY2024": 206174, "FY2023": 128104, "FY2022": 59765, "FY2021": 36901}),
+    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": 108690, "FY2024": 84573, "FY2023": 33003, "FY2022": 9281, "FY2021": 7630}),
+    ("TOTAL", "Total gross loans and advances to customers (by stage)", {"FY2025": 1853696, "FY2024": 1394005, "FY2023": 759734, "FY2022": 258807, "FY2021": 104590}),
+    ("SECTION", "Impairment loss allowance, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": -54783, "FY2024": -69167, "FY2023": -43742, "FY2022": -7855, "FY2021": -2833}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2025": -130326, "FY2024": -80852, "FY2023": -38022, "FY2022": -9765, "FY2021": -9341}),
+    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": -66117, "FY2024": -53988, "FY2023": -24237, "FY2022": -6104, "FY2021": -5269}),
+    ("TOTAL", "Total impairment loss allowance (by stage)", {"FY2025": -251226, "FY2024": -204007, "FY2023": -106001, "FY2022": -23724, "FY2021": -17443}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "ECL coverage ratio (Total impairment allowance / Total gross loans)", {"FY2025": "13.55%", "FY2024": "14.63%", "FY2023": "13.95%", "FY2022": "9.17%", "FY2021": "16.68%"}),
+    ("DATA", "Stage 3 (NPL) ratio (Stage 3 gross loans / Total gross loans)", {"FY2025": "5.86%", "FY2024": "6.07%", "FY2023": "4.34%", "FY2022": "3.59%", "FY2021": "7.30%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 impairment allowance / Stage 3 gross loans)", {"FY2025": "60.83%", "FY2024": "63.83%", "FY2023": "73.44%", "FY2022": "65.77%", "FY2021": "69.06%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Monzo — Asset Quality / Credit Risk Disclosures",
+    subtitle="Monzo Group (consolidated basis), £'000. See entity note on the Cash Flow Statement sheet.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=62,
+    source_height=170,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -179,6 +491,62 @@ metric(
     "Total RWAs", "£'000",
     [("Total risk-weighted exposure amount", {"FY2025": 2071182, "FY2024": 1616928, "FY2023": 979042, "FY2022": 370849, "FY2021": 236653})],
     p3_sources(),
+)
+
+# ---------------------------------------------------------------
+# Sheet: RWA Breakdown (Pillar 3's UK OV1 template - placed next to
+# Total RWAs, since it's itself a Pillar 3 disclosure)
+# ---------------------------------------------------------------
+RWA_BREAKDOWN_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: Transcribed from each year's own UK OV1 'Overview of risk weighted exposure "
+    "amounts' template. FY2021 has no OV1 template of its own (too early in Monzo's disclosure history) - "
+    "its figures are the FY2022 report's own comparative column instead, same per-year-primary-source "
+    "convention used throughout this workbook. '-' in the source table means a genuinely disclosed nil "
+    "exposure (written as 0 here), not 'not disclosed' - contrast with the Statement of Changes in Equity/"
+    "Balance Sheet/P&L sheets' convention where a blank cell means the source didn't disclose that line at "
+    "all. 'Of which' sub-rows are only shown where they differ from their parent row (e.g. Monzo only ever "
+    "uses the standardised approach for credit risk and the basic indicator approach for operational risk, "
+    "so those redundant 'of which' lines are omitted). This sheet's Total row ties out exactly to the "
+    "Total RWAs sheet for all 5 years."
+)
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources (see entity note on Cash Flow Statement sheet: FY2025/24 = Monzo Bank Holding Group Limited "
+    "consolidated (Group); FY2023-21 = Monzo Bank Limited (Bank)):\n"
+    f"FY2025: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2025, p.24 (Appendix 4 - Overview of "
+    f"risk weighted exposure amounts - OV1) - {P3_25_URL}\n"
+    f"FY2024: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2024, p.43 (Appendix 7 - Overview of "
+    f"risk weighted exposure amounts - OV1) - {P3_24_URL}\n"
+    f"FY2023: Monzo Bank Limited Pillar 3 Disclosures 2023, p.40 (Appendix 7 - Overview of risk weighted "
+    f"exposure amounts - OV1) - {P3_23_URL}\n"
+    f"FY2022: Monzo Bank Limited Pillar 3 Disclosures 2022, p.47-48 (Appendix 7 - Overview of risk weighted "
+    f"exposure amounts - OV1) - {P3_22_URL}\n"
+    f"FY2021: Monzo Bank Limited Pillar 3 Disclosures 2022, p.47-48 (Appendix 7 - Overview of risk weighted "
+    f"exposure amounts - OV1, FY2021 comparative column) - {P3_22_URL}\n\n" + RWA_BREAKDOWN_PRESENTATION_NOTE
+)
+
+rwa_breakdown_rows = [
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 1336768, "FY2024": 1290471, "FY2023": 821178, "FY2022": 285793, "FY2021": 151226}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 1031, "FY2024": 7052, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "  of which exposures to a CCP", {"FY2025": 1031}),
+    ("DATA", "  of which credit valuation adjustment (CVA)", {"FY2024": 4371}),
+    ("DATA", "  of which other CCR", {"FY2024": 2681}),
+    ("DATA", "Securitisation exposures (non-trading book, after the cap)", {"FY2025": 48405, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "  of which SEC-ERBA (including IAA)", {"FY2025": 28426}),
+    ("DATA", "  of which SEC-SA approach", {"FY2025": 19979}),
+    ("DATA", "Market risk (position, FX and commodities risks)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "Operational risk", {"FY2025": 684978, "FY2024": 319405, "FY2023": 157864, "FY2022": 85056, "FY2021": 85427}),
+    ("DATA", "Amounts below thresholds for deduction (subject to 250% risk weight, for information)", {"FY2025": 0, "FY2024": 8688, "FY2023": 5797, "FY2022": 0, "FY2021": 0}),
+    ("TOTAL", "Total risk-weighted exposure amount (RWEAs)", {"FY2025": 2071182, "FY2024": 1616928, "FY2023": 979042, "FY2022": 370849, "FY2021": 236653}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Monzo — RWA Breakdown (UK OV1: Overview of Risk Weighted Exposure Amounts)",
+    subtitle="Consolidated/Bank basis by year (see entity note on Cash Flow Statement sheet), £'000",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=58,
+    source_height=140,
 )
 
 metric(
@@ -241,6 +609,26 @@ metric(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 18263851, "FY2024": 12965813, "FY2023": 6687776, "FY2022": 5218429, "FY2021": 3629707}),
+        ("Loans and advances to customers", {"FY2025": 1602470, "FY2024": 1190215, "FY2023": 653733, "FY2022": 235083, "FY2021": 87147}),
+        ("Customer deposits", {"FY2025": 16599371, "FY2024": 11197622, "FY2023": 5945947, "FY2022": 4440650, "FY2021": 3124046}),
+        ("Total equity", {"FY2025": 1212943, "FY2024": 862145, "FY2023": 475650, "FY2022": 562268, "FY2021": 221894}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Revenue / Net operating income", {"FY2025": 747927, "FY2024": 514391, "FY2023": 214509, "FY2022": 114019, "FY2021": 62841}),
+        ("Total operating expense", {"FY2025": -687449, "FY2024": -498993, "FY2023": -330268, "FY2022": -232867, "FY2021": -194256}),
+        ("Profit/(Loss) for the year", {"FY2025": 94568, "FY2024": 8709, "FY2023": -116341, "FY2022": -119020, "FY2021": -131077}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 862145, "FY2024": 475650, "FY2023": 562268, "FY2022": 221894, "FY2021": 129004}),
+        ("Total comprehensive income/(loss) for the year", {"FY2025": 98907, "FY2024": 9394, "FY2023": -116015, "FY2022": -119021, "FY2021": -131208}),
+        ("Other equity movements, net", {"FY2025": 251891, "FY2024": 377101, "FY2023": 29397, "FY2022": 459395, "FY2021": 224098}),
+        ("Closing equity", {"FY2025": 1212943, "FY2024": 862145, "FY2023": 475650, "FY2022": 562268, "FY2021": 221894}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash from operating activities", {"FY2025": 4916764, "FY2024": 5020296, "FY2023": 998813, "FY2022": 1016526, "FY2021": 1695049}),
         ("Net cash from/(used in) investing activities", {"FY2025": -1676663, "FY2024": -829521, "FY2023": -1026103, "FY2022": -1300895, "FY2021": -285759}),
@@ -260,7 +648,13 @@ bw.add_overview_sheet(
          "citation for the underlying document/page. Entity basis switches from Monzo Bank Limited (FY2021-23) to "
          "Monzo Bank Holding Group Limited (FY2024-25); FY2024 is a 13-month transition period from a fiscal-year-end "
          "change. Leverage ratio for FY2022 uses the single unlabelled 'Leverage ratio' KM1 row whose basis is not "
-         "stated in the source (see Leverage Ratio sheet).",
+         "stated in the source (see Leverage Ratio sheet). 'Revenue / Net operating income' uses FY2025's 'Gross "
+         "Profit' row and FY2021-24's 'Net operating income' row from the Profit & Loss sheet - both are the same "
+         "underlying concept (income after netting interest/fee expense and credit losses, before operating "
+         "expenses), just grouped under different labels across Monzo's presentation-format change. "
+         "'Other equity movements, net' combines shares issued, cost of issuance, share-based payments, "
+         "exercise of options, and reserve reclassifications/merger reserve creation from the Statement of "
+         "Changes in Equity sheet into one line; see that sheet for the full year-by-year breakdown.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/MONZO FINANCIALS.xlsx")

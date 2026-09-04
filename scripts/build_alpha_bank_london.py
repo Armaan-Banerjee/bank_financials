@@ -60,6 +60,251 @@ def p3_sources():
 
 bw = BankWorkbook(bank_name="Alpha Bank London Limited", years=YEARS, header_color="1D3557")
 
+ENTITY_NOTE = (
+    "Alpha Bank London Limited (FRN 135327, company 00185070) prepares entity-only accounts - no group/"
+    "consolidated statements are produced. All figures below are on that entity-level basis, consistent with "
+    "the Cash Flow Statement and Pillar 3 sheets."
+)
+
+BALANCE_SHEET_SOURCES = (
+    "Sources — Alpha Bank London Limited's own Statement of Financial Position, £000's:\n"
+    f"FY2025 & FY2024: Annual Report and Financial Statements 31 December 2025, p.23 (Statement of Financial "
+    f"Position) — {AR25_URL}\n"
+    f"FY2023 (cross-checked against FY2024 & FY2023 comparative): Annual Report and Financial Statements 31 "
+    f"December 2024, p.24 — {AR24_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Financial Statements 31 December 2022, p.20 — {AR22_URL}\n"
+    "Filed accounts at Companies House are fully scanned/image-only (no text layer) for all 5 years - figures "
+    "transcribed via pdf_tools.py render+visual read of each statement page, cross-checked against the adjacent "
+    "year's comparative column where available. All figures GBP throughout.\n"
+    f"{ENTITY_NOTE}\n"
+    "PRESENTATION NOTE: 'Cash and cash equivalents' (FY2025) is labelled 'Cash and due from credit institutions' "
+    "in FY2024-FY2021 - same line, relabelled; both are shown under this sheet's 'Cash and cash equivalents' "
+    "label. All TOTAL rows (Total assets/Total liabilities/Total equity/Total liabilities and equity) tie out "
+    "exactly for every year."
+)
+
+INCOME_STATEMENT_SOURCES = (
+    "Sources — Alpha Bank London Limited's own Statement of Profit or Loss and Statement of Comprehensive "
+    "Income, £000's:\n"
+    f"FY2025 & FY2024: Annual Report and Financial Statements 31 December 2025, p.22 — {AR25_URL}\n"
+    f"FY2023 (cross-checked against FY2024 & FY2023 comparative): Annual Report and Financial Statements 31 "
+    f"December 2024, p.23 — {AR24_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Financial Statements 31 December 2022, p.19 — {AR22_URL}\n"
+    "Filed accounts at Companies House are fully scanned/image-only (no text layer) for all 5 years - figures "
+    "transcribed via pdf_tools.py render+visual read of each statement page.\n"
+    f"{ENTITY_NOTE}\n"
+    "'Net trading income/(expense)' is presented as a positive figure some years and negative in others exactly "
+    "as printed in the source (a genuine swing between net trading gains and losses year to year, not a sign "
+    "error). All TOTAL rows tie out exactly for every year; 'Total comprehensive income for the year, net of "
+    "tax' also ties to the Statement of Changes in Equity's own 'Total comprehensive income' movement row for "
+    "every year."
+)
+
+EQUITY_CHANGES_SOURCES = (
+    "Sources — Alpha Bank London Limited's own Statement of Changes in Equity, £000's, chronological (1 January "
+    "2021 to 31 December 2025):\n"
+    f"FY2025 & FY2024 movements: Annual Report and Financial Statements 31 December 2025, p.24 — {AR25_URL}\n"
+    f"FY2023 movements (cross-checked against FY2024 & FY2023 comparative): Annual Report and Financial "
+    f"Statements 31 December 2024, p.25 — {AR24_URL}\n"
+    f"FY2022 & FY2021 movements: Annual Report and Financial Statements 31 December 2022, p.21 — {AR22_URL}\n"
+    "Filed accounts at Companies House are fully scanned/image-only (no text layer) for all 5 years - figures "
+    "transcribed via pdf_tools.py render+visual read of each statement page.\n"
+    f"{ENTITY_NOTE}\n"
+    "Equity components are Share capital, Retained earnings, and a Fair value reserve (FVTOCI debt-instrument "
+    "movements) - no other reserve types exist across the 5 years. All 'Balance as at' rows tie out exactly to "
+    "the Balance Sheet sheet's own Total equity figure for the matching year-end."
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources — Alpha Bank London Limited's own Note 19 (Loans and advances to customers) and Note 34.3 (Credit "
+    "risk) IFRS 9 loss-allowance-by-stage disclosures, £000's:\n"
+    f"FY2025 & FY2024 (by-product breakdown, gross/ECL/carrying): Annual Report and Financial Statements 31 "
+    f"December 2025, p.45 — {AR25_URL}\n"
+    f"FY2023 (cross-checked against FY2024 & FY2023 comparative): Annual Report and Financial Statements 31 "
+    f"December 2024, p.46 — {AR24_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Financial Statements 31 December 2022, p.44 — {AR22_URL}\n"
+    f"FY2025 & FY2024 loss-allowance-by-IFRS-9-stage roll-forward (Loans and advances to customers): Annual "
+    f"Report and Financial Statements 31 December 2025, p.57 — {AR25_URL}\n"
+    "Filed accounts at Companies House are fully scanned/image-only (no text layer) for all 5 years - figures "
+    "transcribed via pdf_tools.py render+visual read of each note page.\n"
+    f"{ENTITY_NOTE}\n"
+    "DISCLOSURE GRANULARITY NOTE: the by-product split (Retail = Mortgage + Consumer lending; Corporate lending) "
+    "with gross carrying amount/ECL allowance/net carrying amount is disclosed for all 5 years. The £-value "
+    "by-IFRS-9-Stage-1/2/3 GROSS EXPOSURE breakdown is not disclosed in any year reviewed - only the loss "
+    "ALLOWANCE (not the underlying exposure) is broken out by stage, and only for FY2025/FY2024 (a stage-level "
+    "table for FY2023/FY2022/FY2021 was not located in the sections reviewed). This is an extremely low-credit-"
+    "risk book (ECL allowance is £3k-£432k against £325m-£454m of gross lending across the 5 years, reflecting "
+    "that 'almost 100%' of lending is fully collateralised per the source's own Note 34.3.4) - Stage 2/3 "
+    "allowances are consistently nil or near-nil. No NPL/non-performing-exposure £ or % figure is separately "
+    "disclosed in any year; a coverage ratio (ECL allowance ÷ gross lending) is shown below instead, calculated "
+    "from the disclosed totals."
+)
+
+def _cov_ratio(ecl, gross):
+    return f"{abs(ecl) / gross * 100:.2f}%"
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", {"FY2025": 44211, "FY2024": 36967, "FY2023": 40658, "FY2022": 38160, "FY2021": 80857}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 263, "FY2024": 2868, "FY2023": 345, "FY2022": 3261}),
+    ("DATA", "Investment securities", {"FY2025": 39897, "FY2024": 42230, "FY2023": 78097, "FY2022": 92051, "FY2021": 85647}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 454489, "FY2024": 397459, "FY2023": 330090, "FY2022": 325461, "FY2021": 357822}),
+    ("DATA", "Property and equipment", {"FY2025": 1020, "FY2024": 1987, "FY2023": 2861, "FY2022": 3804, "FY2021": 4787}),
+    ("DATA", "Intangible assets", {"FY2025": 3021, "FY2024": 1367, "FY2023": 87, "FY2022": 69, "FY2021": 116}),
+    ("DATA", "Current tax assets", {"FY2025": 584, "FY2024": 402, "FY2023": 110, "FY2022": 14, "FY2021": 52}),
+    ("DATA", "Deferred tax assets", {"FY2025": 611, "FY2023": 28, "FY2022": 50}),
+    ("DATA", "Other assets", {"FY2025": 3220, "FY2024": 1856, "FY2023": 799, "FY2022": 1002, "FY2021": 1215}),
+    ("TOTAL", "Total assets", {"FY2025": 547316, "FY2024": 485136, "FY2023": 453075, "FY2022": 463872, "FY2021": 530496}),
+
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Due to banks", {"FY2025": 7300, "FY2024": 1962, "FY2023": 201, "FY2022": 6388, "FY2021": 30194}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 793, "FY2024": 899, "FY2023": 1724, "FY2022": 1843, "FY2021": 2502}),
+    ("DATA", "Due to customers", {"FY2025": 454928, "FY2024": 397172, "FY2023": 370324, "FY2022": 380738, "FY2021": 424160}),
+    ("DATA", "Subordinated debt", {"FY2025": 10004, "FY2024": 10004, "FY2023": 10006, "FY2022": 10003, "FY2021": 10001}),
+    ("DATA", "Deferred tax liabilities", {"FY2025": 616, "FY2024": 251, "FY2023": 16, "FY2022": 16, "FY2021": 64}),
+    ("DATA", "Lease liabilities", {"FY2025": 1138, "FY2024": 1996, "FY2023": 2811, "FY2022": 3611, "FY2021": 4385}),
+    ("DATA", "Provisions", {"FY2025": 1, "FY2023": 1, "FY2021": 6}),
+    ("DATA", "Other liabilities", {"FY2025": 4987, "FY2024": 4470, "FY2023": 1989, "FY2022": 1739, "FY2021": 2814}),
+    ("TOTAL", "Total liabilities", {"FY2025": 479767, "FY2024": 416754, "FY2023": 387072, "FY2022": 404338, "FY2021": 474126}),
+
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 30000, "FY2024": 30000, "FY2023": 30000, "FY2022": 30000, "FY2021": 30000}),
+    ("DATA", "Retained earnings", {"FY2025": 37540, "FY2024": 38360, "FY2023": 36005, "FY2022": 29685, "FY2021": 26318}),
+    ("DATA", "Fair value reserve", {"FY2025": 9, "FY2024": 22, "FY2023": -2, "FY2022": -151, "FY2021": 52}),
+    ("TOTAL", "Total equity", {"FY2025": 67549, "FY2024": 68382, "FY2023": 66003, "FY2022": 59534, "FY2021": 56370}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 547316, "FY2024": 485136, "FY2023": 453075, "FY2022": 463872, "FY2021": 530496}),
+]
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest and similar income", {"FY2025": 40745, "FY2024": 41240, "FY2023": 36264, "FY2022": 19333, "FY2021": 13080}),
+    ("DATA", "Interest expense and similar charges", {"FY2025": -20860, "FY2024": -20382, "FY2023": -15359, "FY2022": -4329, "FY2021": -2107}),
+    ("TOTAL", "Net interest income", {"FY2025": 19885, "FY2024": 20858, "FY2023": 20905, "FY2022": 15004, "FY2021": 10973}),
+    ("DATA", "Fees and commission income", {"FY2025": 1162, "FY2024": 1284, "FY2023": 1126, "FY2022": 1557, "FY2021": 2446}),
+    ("DATA", "Net trading income/(expense)", {"FY2025": 374, "FY2024": 60, "FY2023": -67, "FY2022": -340, "FY2021": -98}),
+    ("DATA", "Other operating (expense)/income", {"FY2025": -35, "FY2024": 97, "FY2023": 36, "FY2022": 120, "FY2021": 143}),
+    ("DATA", "Net loss from derecognition of financial assets measured at FVTOCI", {"FY2025": 0, "FY2024": -34, "FY2023": -82, "FY2022": -41, "FY2021": -38}),
+    ("TOTAL", "Operating income", {"FY2025": 21386, "FY2024": 22265, "FY2023": 21918, "FY2022": 16300, "FY2021": 13426}),
+
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Staff costs", {"FY2025": -11526, "FY2024": -9688, "FY2023": -8892, "FY2022": -7845, "FY2021": -7176}),
+    ("DATA", "General administrative expenses", {"FY2025": -9699, "FY2024": -8415, "FY2023": -3886, "FY2022": -3512, "FY2021": -3462}),
+    ("DATA", "Depreciation and amortisation", {"FY2025": -1230, "FY2024": -1006, "FY2023": -1044, "FY2022": -1039, "FY2021": -1028}),
+    ("TOTAL", "Operating expenses", {"FY2025": -22455, "FY2024": -19109, "FY2023": -13822, "FY2022": -12396, "FY2021": -11666}),
+
+    ("DATA", "Reversal of impairment/(provision) for credit losses", {"FY2025": 3, "FY2024": 7, "FY2023": 171, "FY2022": 256, "FY2021": 108}),
+    ("TOTAL", "(Loss)/Profit before tax", {"FY2025": -1066, "FY2024": 3163, "FY2023": 8267, "FY2022": 4160, "FY2021": 1868}),
+    ("DATA", "Income tax (expense)/credit", {"FY2025": 246, "FY2024": -808, "FY2023": -1947, "FY2022": -793, "FY2021": -364}),
+    ("TOTAL", "(Loss)/Profit after tax", {"FY2025": -820, "FY2024": 2355, "FY2023": 6320, "FY2022": 3367, "FY2021": 1504}),
+
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Fair value movement of debt instruments at FVTOCI", {"FY2025": -1, "FY2024": -5, "FY2023": 70, "FY2022": -247, "FY2021": 56}),
+    ("DATA", "Allowance for ECL movement of debt instruments at FVTOCI", {"FY2025": -12, "FY2024": -5, "FY2023": -3, "FY2022": 3, "FY2021": -13}),
+    ("DATA", "Amounts reclassified to profit or loss for debt instruments measured at FVTOCI", {"FY2025": 0, "FY2024": 34, "FY2023": 82, "FY2022": 41, "FY2021": 38}),
+    ("TOTAL", "Other comprehensive (expense)/income", {"FY2025": -13, "FY2024": 24, "FY2023": 149, "FY2022": -203, "FY2021": 81}),
+    ("TOTAL", "Total comprehensive income for the year, net of tax", {"FY2025": -833, "FY2024": 2379, "FY2023": 6469, "FY2022": 3164, "FY2021": 1585}),
+]
+
+EQUITY_HEADERS = ["Share capital", "Retained earnings", "Fair value reserve", "Total equity"]
+equity_changes_rows = [
+    ("TOTAL", "Balance as at 1 January 2021", (30000, 24814, -29, 54785)),
+    ("DATA", "Profit after tax", (None, 1504, None, 1504)),
+    ("DATA", "Other comprehensive income for the year", (None, None, 81, 81)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 1504, 81, 1585)),
+    ("TOTAL", "Balance attributable to the owner as at 31 December 2021", (30000, 26318, 52, 56370)),
+
+    ("TOTAL", "Balance as at 1 January 2022", (30000, 26318, 52, 56370)),
+    ("DATA", "Profit after tax", (None, 3367, None, 3367)),
+    ("DATA", "Other comprehensive expense for the year", (None, None, -203, -203)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 3367, -203, 3164)),
+    ("TOTAL", "Balance attributable to the owner as at 31 December 2022", (30000, 29685, -151, 59534)),
+
+    ("TOTAL", "Balance as at 1 January 2023", (30000, 29685, -151, 59534)),
+    ("DATA", "Profit after tax", (None, 6320, None, 6320)),
+    ("DATA", "Other comprehensive income for the year", (None, None, 149, 149)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 6320, 149, 6469)),
+    ("TOTAL", "Balance attributable to the owner as at 31 December 2023", (30000, 36005, -2, 66003)),
+
+    ("TOTAL", "Balance as at 1 January 2024", (30000, 36005, -2, 66003)),
+    ("DATA", "Profit after tax", (None, 2355, None, 2355)),
+    ("DATA", "Other comprehensive income for the year", (None, None, 24, 24)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 2355, 24, 2379)),
+    ("TOTAL", "Balance attributable to the owner as at 31 December 2024", (30000, 38360, 22, 68382)),
+
+    ("TOTAL", "Balance as at 1 January 2025", (30000, 38360, 22, 68382)),
+    ("DATA", "(Loss) after tax", (None, -820, None, -820)),
+    ("DATA", "Other comprehensive expense for the year", (None, None, -13, -13)),
+    ("TOTAL", "Total comprehensive income for the year", (None, -820, -13, -833)),
+    ("TOTAL", "Balance attributable to the owner as at 31 December 2025", (30000, 37540, 9, 67549)),
+]
+
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers by product — gross carrying amount", {}),
+    ("DATA", "Mortgage lending", {"FY2025": 21626, "FY2024": 22798, "FY2023": 24460, "FY2022": 24842, "FY2021": 28943}),
+    ("DATA", "Consumer lending", {"FY2025": 13088, "FY2024": 11055, "FY2023": 5891, "FY2022": 5459, "FY2021": 6608}),
+    ("TOTAL", "Retail lending (gross)", {"FY2025": 34714, "FY2024": 33853, "FY2023": 30351, "FY2022": 30301, "FY2021": 35551}),
+    ("DATA", "Corporate lending (gross)", {"FY2025": 419778, "FY2024": 363615, "FY2023": 299749, "FY2022": 295339, "FY2021": 322703}),
+    ("TOTAL", "Total lending (gross carrying amount)", {"FY2025": 454492, "FY2024": 397468, "FY2023": 330100, "FY2022": 325640, "FY2021": 358254}),
+
+    ("SECTION", "ECL allowance by product", {}),
+    ("DATA", "Retail lending ECL allowance", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": -385}),
+    ("DATA", "Corporate lending ECL allowance", {"FY2025": -3, "FY2024": -9, "FY2023": -10, "FY2022": -179, "FY2021": -47}),
+    ("TOTAL", "Total ECL allowance", {"FY2025": -3, "FY2024": -9, "FY2023": -10, "FY2022": -179, "FY2021": -432}),
+    ("TOTAL", "Total lending (net carrying amount)", {"FY2025": 454489, "FY2024": 397459, "FY2023": 330090, "FY2022": 325461, "FY2021": 357822}),
+
+    ("SECTION", "ECL allowance by IFRS 9 stage — Loans and advances to customers (closing balance; gross exposure by stage not separately disclosed)", {}),
+    ("DATA", "Stage 1 (12-month ECL)", {"FY2025": -2, "FY2024": -9}),
+    ("DATA", "Stage 2 (lifetime ECL, not credit-impaired)", {"FY2025": -1, "FY2024": 0}),
+    ("DATA", "Stage 3 (lifetime ECL, credit-impaired)", {"FY2025": 0, "FY2024": 0}),
+    ("TOTAL", "Total ECL allowance by stage", {"FY2025": -3, "FY2024": -9}),
+
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "ECL coverage ratio (Total ECL allowance ÷ Total gross lending)",
+     {y: _cov_ratio(v, g) for y, v, g in [
+         ("FY2025", 3, 454492), ("FY2024", 9, 397468), ("FY2023", 10, 330100),
+         ("FY2022", 179, 325640), ("FY2021", 432, 358254),
+     ]}),
+]
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources — Alpha Bank London Limited's own Note 34.7 (Capital management, Regulatory analysis) and the "
+    f"Annual Report's Key Performance Indicators table:\n{AR25_URL}\n{AR24_URL}\n{AR22_URL}\n"
+    "NOT PUBLICLY DISCLOSED: as noted on the Total RWAs sheet, this bank does not publish a standalone Pillar 3 "
+    "document or a UK OV1-style risk-weighted-exposure-by-category table in any of the 5 Annual Reports reviewed "
+    "(confirmed by reading Note 34.7 in full, p.67 of the 2025 Annual Report and the equivalent pages of the "
+    "2024/2022 Annual Reports — it discloses only the aggregate Tier 1/Tier 2/Total regulatory capital build-up, "
+    "not a risk-category RWA split). Total RWAs (a single aggregate figure) is calculated on the Total RWAs "
+    "sheet from Total Capital ÷ Capital adequacy ratio, per that sheet's own note; no further breakdown by "
+    "credit/market/operational risk is available for any year."
+)
+rwa_breakdown_rows = [
+    ("DATA", "RWA category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Alpha Bank London Limited — Statement of Financial Position",
+    subtitle="Entity-level basis, £000's, as at 31 December, FY2021-FY2025",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    unit_suffix=" (£'000)",
+)
+
+bw.add_income_statement_sheet(
+    title="Alpha Bank London Limited — Statement of Profit or Loss and Other Comprehensive Income",
+    subtitle="Entity-level basis, £000's, FY2021-FY2025",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    unit_suffix=" (£'000)",
+)
+
+bw.add_equity_changes_sheet(
+    title="Alpha Bank London Limited — Statement of Changes in Equity",
+    subtitle="Entity-level basis, £000's, chronological, 1 January 2021 - 31 December 2025",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -133,6 +378,14 @@ bw.add_cash_flow_sheet(
     unit_suffix=" (£'000)",
 )
 
+bw.add_asset_quality_sheet(
+    title="Alpha Bank London Limited — Asset Quality / Credit Risk Disclosures",
+    subtitle="Entity-level basis, £000's, FY2021-FY2025",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    unit_suffix=" (£'000)",
+)
+
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
@@ -201,6 +454,14 @@ metric(
          "disclosed for those years either.",
 )
 
+bw.add_rwa_breakdown_sheet(
+    title="Alpha Bank London Limited — RWA Breakdown",
+    subtitle="Entity-level basis, FY2021-FY2025",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    unit_suffix="",
+)
+
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio", {"FY2025": "11%", "FY2024": "13%", "FY2023": "13%"})],
@@ -232,6 +493,25 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 547316, "FY2024": 485136, "FY2023": 453075, "FY2022": 463872, "FY2021": 530496}),
+        ("Loans and advances to customers", {"FY2025": 454489, "FY2024": 397459, "FY2023": 330090, "FY2022": 325461, "FY2021": 357822}),
+        ("Due to customers", {"FY2025": 454928, "FY2024": 397172, "FY2023": 370324, "FY2022": 380738, "FY2021": 424160}),
+        ("Total equity", {"FY2025": 67549, "FY2024": 68382, "FY2023": 66003, "FY2022": 59534, "FY2021": 56370}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Operating income", {"FY2025": 21386, "FY2024": 22265, "FY2023": 21918, "FY2022": 16300, "FY2021": 13426}),
+        ("Operating expenses", {"FY2025": -22455, "FY2024": -19109, "FY2023": -13822, "FY2022": -12396, "FY2021": -11666}),
+        ("(Loss)/Profit after tax", {"FY2025": -820, "FY2024": 2355, "FY2023": 6320, "FY2022": 3367, "FY2021": 1504}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 68382, "FY2024": 66003, "FY2023": 59534, "FY2022": 56370, "FY2021": 54785}),
+        ("Total comprehensive income for the year", {"FY2025": -833, "FY2024": 2379, "FY2023": 6469, "FY2022": 3164, "FY2021": 1585}),
+        ("Closing equity", {"FY2025": 67549, "FY2024": 68382, "FY2023": 66003, "FY2022": 59534, "FY2021": 56370}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash from operating activities", {"FY2025": 7196, "FY2024": -31370, "FY2023": -12026, "FY2022": -40650, "FY2021": -82764}),
         ("Net cash from investing activities", {"FY2025": 1325, "FY2024": 29199, "FY2023": 16148, "FY2022": -574, "FY2021": 66905}),

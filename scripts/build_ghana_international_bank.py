@@ -54,6 +54,252 @@ NO_AT1_NOTE = "No Additional Tier 1 or Tier 2 instruments disclosed any year - T
 
 bw = BankWorkbook(bank_name="Ghana International Bank Plc", years=YEARS, header_color="619578")
 
+STATEMENTS_ENTITY_NOTE = (
+    "Ghana International Bank Plc (Company basis, GHIB has no subsidiaries or branches) reports in £ "
+    "throughout - no currency conversion applied. Each year's own originally-published figures used "
+    "throughout - the Statement of Changes in Equity ties exactly at every year boundary (opening = "
+    "prior year's own closing = prior year's own Balance Sheet Total Equity) across all 5 years, zero "
+    "plug rows needed.\n"
+    "COLUMN-ORDER CAUTION (2025 Annual Report only): the FY2025 Annual Report is published as a "
+    "'2-page-view' PDF (two facing pages per PDF page) - naive text extraction interleaves the 2025 and "
+    "2024 columns of the Balance Sheet in a way that looks plausible but is backwards (the block of "
+    "values immediately following the P&L's 2024 column is actually the Balance Sheet's OWN 2024 "
+    "comparative, not FY2025). All figures below were independently confirmed by rendering the actual "
+    "page image and by cross-checking every FY2024 figure against the FY2024 Annual Report's own "
+    "originally-published Balance Sheet (Company basis) - which are identical, as they must be.\n"
+    "PRESENTATION CHANGES: the cash/central-bank balances line is labelled 'Cash and balances at banks "
+    "including items in course of collection' in the FY2021/FY2022 reports vs 'Cash and balances at "
+    "central banks' FY2023-FY2025 (same line, relabelled - not a new item). 'Right of use assets' only "
+    "appears as its own line from FY2023 (lease accounting change). 'Term financing' only appears from "
+    "FY2024 (new funding line; nil/not applicable before). 'Current tax asset' was a separate line "
+    "FY2021-FY2024 (nil in FY2021/FY2024, £945,584 in FY2022/FY2023) but was dropped entirely from the "
+    "FY2025 Annual Report's Balance Sheet structure (both the FY2025 and FY2024-comparative columns) - "
+    "left blank for FY2025 as a genuine structural change, not a data gap."
+)
+
+STATEMENTS_SOURCES = (
+    "Sources - Ghana International Bank Plc's own Statement of Financial Position / Statement of "
+    "Comprehensive Income / Statement of Changes in Equity, £:\n"
+    f"FY2025 & FY2024: Annual Report and Financial Statements 2025, p.74-77 (Statement of Comprehensive Income, "
+    f"Statement of Financial Position, Statement of Changes in Equity) - {AR2025_URL}\n"
+    f"FY2024 & FY2023: Annual Report and Financial Statements 2024, p.80-83 (own-year FY2024 figures; "
+    f"cross-checked against the FY2025 report's FY2024 comparative column, matched exactly) - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Financial Statements 2022, p.46-48 - {AR2022_URL}\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Ghana International Bank Plc's own 'Provisions for credit losses' note (Note 13/12), "
+    "'Total provision for credit losses' table (aggregate IFRS 9 stage reconciliation across placements/"
+    "loans to banks, loans to customers, and government/other securities combined), £'000:\n"
+    f"FY2025: Annual Report and Financial Statements 2025, p.92-93 - {AR2025_URL}\n"
+    f"FY2024 & FY2023: Annual Report and Financial Statements 2024, p.98-99 (own-year closing balances; "
+    f"FY2024 closing cross-checked against FY2025's own opening-balance comparative, matched exactly) - {AR2024_URL}\n"
+    f"FY2022: Annual Report and Financial Statements 2024, p.99 (FY2022's own closing balance, sourced from "
+    f"AR2024's prior-year reconciliation table, since AR2022 itself only discloses ECL by stage without a "
+    f"Gross Exposure breakdown at this granularity) - {AR2024_URL}\n"
+    f"FY2021: Annual Report and Financial Statements 2022, p.65, 'Provisions for credit losses' note, ECL by "
+    f"stage only (no Gross Exposure by stage disclosed this early - table introduced the Gross Exposure "
+    f"columns from FY2022 onward) - {AR2022_URL}\n"
+    "Net carrying amount by stage = Gross Exposure - ECL allowance for that stage (both are directly "
+    "disclosed together in this note). NPL ratio = Stage 3 gross / Total gross; Stage 3 coverage ratio = "
+    "Stage 3 ECL / Stage 3 gross; Total ECL coverage ratio = Total ECL / Total gross - all blank for FY2021, "
+    "which lacks a Gross Exposure breakdown by stage.\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet (Statement of Financial Position), £, own-year
+# figures throughout - built FIRST per the equity reconciliation ladder,
+# so each year's own Total Equity is an independent check value before
+# the equity sheet is built year-by-year.
+# ---------------------------------------------------------------
+bs_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {
+        "FY2025": 162234361, "FY2024": 181980487, "FY2023": 256691647, "FY2022": 135432668, "FY2021": 69522404}),
+    ("DATA", "Placements with and loans and advances to banks", {
+        "FY2025": 426835273, "FY2024": 471210664, "FY2023": 353387088, "FY2022": 510389547, "FY2021": 499653769}),
+    ("DATA", "Loans and advances to customers", {
+        "FY2025": 152082149, "FY2024": 57178671, "FY2023": 53066533, "FY2022": 65038106, "FY2021": 89440019}),
+    ("DATA", "Government and other securities", {
+        "FY2025": 428235831, "FY2024": 366183607, "FY2023": 119321238, "FY2022": 170000415, "FY2021": 93657043}),
+    ("DATA", "Prepayments and other receivables", {
+        "FY2025": 4074887, "FY2024": 5172009, "FY2023": 2778164, "FY2022": 2289462, "FY2021": 2333255}),
+    ("DATA", "Property, plant and equipment", {
+        "FY2025": 1407862, "FY2024": 1679557, "FY2023": 1878621, "FY2022": 4139799, "FY2021": 4304452}),
+    ("DATA", "Right of use assets", {"FY2025": 1573125, "FY2024": 2010863, "FY2023": 1605924}),
+    ("DATA", "Intangible assets", {
+        "FY2025": 7998495, "FY2024": 7829045, "FY2023": 6130633, "FY2022": 5252083, "FY2021": 2527506}),
+    ("DATA", "Current tax asset", {"FY2024": 0, "FY2023": 945584, "FY2022": 945584, "FY2021": 0}),
+    ("DATA", "Deferred tax asset", {
+        "FY2025": 405217, "FY2024": 2441160, "FY2023": 4843256, "FY2022": 6362609, "FY2021": 5189176}),
+    ("TOTAL", "Total assets", {
+        "FY2025": 1184847200, "FY2024": 1095686063, "FY2023": 800648688, "FY2022": 899850273, "FY2021": 766627624}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {
+        "FY2025": 570571847, "FY2024": 619446707, "FY2023": 355749487, "FY2022": 368415004, "FY2021": 377412107}),
+    ("DATA", "Amounts owed to depositors", {
+        "FY2025": 393649207, "FY2024": 255765401, "FY2023": 270972181, "FY2022": 347038076, "FY2021": 258550273}),
+    ("DATA", "Term financing", {"FY2025": 34616710, "FY2024": 14562133, "FY2023": 0}),
+    ("DATA", "Other liabilities", {
+        "FY2025": 2726095, "FY2024": 30261027, "FY2023": 6287092, "FY2022": 22784211, "FY2021": 7791171}),
+    ("DATA", "Accruals and deferred income", {
+        "FY2025": 8565137, "FY2024": 7184339, "FY2023": 5311755, "FY2022": 3763989, "FY2021": 2808672}),
+    ("TOTAL", "Total liabilities", {
+        "FY2025": 1010128996, "FY2024": 927219607, "FY2023": 638320515, "FY2022": 742001280, "FY2021": 646562223}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Ordinary shares", {
+        "FY2025": 63739927, "FY2024": 63739927, "FY2023": 63739927, "FY2022": 63739927, "FY2021": 45000000}),
+    ("DATA", "Share premium", {
+        "FY2025": 61212787, "FY2024": 61212787, "FY2023": 61212787, "FY2022": 61212787, "FY2021": 30000000}),
+    ("DATA", "FVOCI revaluation reserve", {
+        "FY2025": 1040762, "FY2024": -656013, "FY2023": -3179954, "FY2022": -4546839, "FY2021": -1420695}),
+    ("DATA", "Profit and loss account", {
+        "FY2025": 48724728, "FY2024": 44169755, "FY2023": 40555413, "FY2022": 37443118, "FY2021": 46486096}),
+    ("TOTAL", "Total Equity", {
+        "FY2025": 174718204, "FY2024": 168466456, "FY2023": 162328173, "FY2022": 157848993, "FY2021": 120065401}),
+    ("TOTAL", "Total liabilities and equity", {
+        "FY2025": 1184847200, "FY2024": 1095686063, "FY2023": 800648688, "FY2022": 899850273, "FY2021": 766627624}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Ghana International Bank Plc — Statement of Financial Position",
+    subtitle="Company basis (GHIB has no subsidiaries or branches), £. See source note at bottom.",
+    rows=bs_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=340,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (Statement of Comprehensive Income), £, own-year
+# figures throughout.
+# ---------------------------------------------------------------
+pl_rows = [
+    ("SECTION", "Continuing operations", {}),
+    ("DATA", "Interest receivable and similar income", {
+        "FY2025": 44645524, "FY2024": 45634349, "FY2023": 35055214, "FY2022": 20784717, "FY2021": 11402644}),
+    ("DATA", "Other interest income arising from debt and other fixed income securities", {
+        "FY2025": 13537189, "FY2024": 9820312, "FY2023": 9075263, "FY2022": 3177870, "FY2021": 1335400}),
+    ("TOTAL", "Total interest income", {
+        "FY2025": 58182713, "FY2024": 55454661, "FY2023": 44130477, "FY2022": 23962587, "FY2021": 12738044}),
+    ("DATA", "Interest expense and similar charges", {
+        "FY2025": -21177326, "FY2024": -19083832, "FY2023": -12823804, "FY2022": -4638083, "FY2021": -2641590}),
+    ("TOTAL", "Net interest income", {
+        "FY2025": 37005387, "FY2024": 36370829, "FY2023": 31306673, "FY2022": 19324504, "FY2021": 10096454}),
+    ("DATA", "Fees and commission income", {
+        "FY2025": 10547351, "FY2024": 8240062, "FY2023": 6490818, "FY2022": 5475061, "FY2021": 4495862}),
+    ("DATA", "Net foreign currency income", {
+        "FY2025": 2111389, "FY2024": 1944169, "FY2023": 1989283, "FY2022": 2218117, "FY2021": 1446706}),
+    ("DATA", "Investments gains/(losses) from sale of government and other securities", {
+        "FY2025": 912197, "FY2024": -163241, "FY2023": 79998, "FY2022": 0, "FY2021": 228305}),
+    ("DATA", "Other income", {
+        "FY2025": 5164, "FY2024": 1012475, "FY2023": 89352, "FY2022": 4404, "FY2021": 9652}),
+    ("TOTAL", "Total non-interest income", {
+        "FY2025": 13576101, "FY2024": 11033465, "FY2023": 8649451, "FY2022": 7697582, "FY2021": 6180525}),
+    ("TOTAL", "Operating income", {
+        "FY2025": 50581488, "FY2024": 47404294, "FY2023": 39956124, "FY2022": 27022086, "FY2021": 16276979}),
+    ("DATA", "Staff costs", {
+        "FY2025": -28184476, "FY2024": -26959541, "FY2023": -23423228, "FY2022": -18937087, "FY2021": -16723434}),
+    ("DATA", "Other administrative expenses", {
+        "FY2025": -12134745, "FY2024": -11815526, "FY2023": -11021926, "FY2022": -14536226, "FY2021": -9674690}),
+    ("DATA", "Depreciation and amortisation", {
+        "FY2025": -3318426, "FY2024": -2383646, "FY2023": -2277366, "FY2022": -1682232, "FY2021": -1258265}),
+    ("TOTAL", "Total operating expenses", {
+        "FY2025": -43637647, "FY2024": -41158713, "FY2023": -36722520, "FY2022": -35155545, "FY2021": -27656389}),
+    ("DATA", "Reversal of provisions/(provisions) for credit losses", {
+        "FY2025": 82778, "FY2024": -408819, "FY2023": 1024498, "FY2022": -1986487, "FY2021": -1090971}),
+    ("TOTAL", "Profit/(Loss) before taxation", {
+        "FY2025": 7026619, "FY2024": 5836762, "FY2023": 4258102, "FY2022": -10119946, "FY2021": -12470381}),
+    ("DATA", "Taxation", {
+        "FY2025": -1623905, "FY2024": -1599961, "FY2023": -1145807, "FY2022": 1076968, "FY2021": 3427257}),
+    ("TOTAL", "Profit/(Loss) for the year", {
+        "FY2025": 5402714, "FY2024": 4236801, "FY2023": 3112295, "FY2022": -9042978, "FY2021": -9043124}),
+    ("SECTION", "Other comprehensive income - that may be reclassified to profit or loss", {}),
+    ("DATA", "Fair value movements on FVOCI financial instruments", {
+        "FY2025": 2262367, "FY2024": 3365255, "FY2023": 1821050, "FY2022": -4168194, "FY2021": -2965070}),
+    ("DATA", "Taxation on FVOCI financial instruments", {
+        "FY2025": -565592, "FY2024": -841314, "FY2023": -454165, "FY2022": 1042050, "FY2021": 267533}),
+    ("TOTAL", "Total other comprehensive income/(loss)", {
+        "FY2025": 1696775, "FY2024": 2523941, "FY2023": 1366885, "FY2022": -3126144, "FY2021": -2697537}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year attributable to equity holders", {
+        "FY2025": 7099489, "FY2024": 6760742, "FY2023": 4479180, "FY2022": -12169122, "FY2021": -11740661}),
+]
+
+bw.add_income_statement_sheet(
+    title="Ghana International Bank Plc — Statement of Comprehensive Income",
+    subtitle="Company basis (GHIB has no subsidiaries or branches), £. See source note at bottom.",
+    rows=pl_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=80,
+    source_height=340,
+    unit_suffix=" (£)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity - chronological, oldest to newest.
+# Built via the per-year reconciliation ladder against the Balance Sheet
+# above: every year's closing balance ties exactly to both the next
+# year's own opening balance and that year's Balance Sheet Total Equity -
+# zero plug rows needed anywhere.
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Ordinary shares", "Share Premium", "Profit and Loss", "FVOCI Reserves", "Total"]
+
+equity_changes_rows = [
+    ("TOTAL", "At 31 December 2020", (45000000, 30000000, 55529220, 1276842, 131806062)),
+    ("DATA", "Loss for the year (FY2021)", (None, None, -9043124, None, -9043124)),
+    ("DATA", "Fair value losses on FVOCI financial instruments net of tax (FY2021)", (None, None, None, -2469232, -2469232)),
+    ("DATA", "Gains on FVOCI financial instruments transferred to Income statement (FY2021)", (None, None, None, -228305, -228305)),
+    ("TOTAL", "Total comprehensive loss for the year (FY2021)", (None, None, -9043124, -2697537, -11740661)),
+    ("TOTAL", "At 31 December 2021", (45000000, 30000000, 46486096, -1420695, 120065401)),
+
+    ("DATA", "Loss for the year (FY2022)", (None, None, -9042978, None, -9042978)),
+    ("DATA", "Fair value losses on FVOCI financial instruments net of tax (FY2022)", (None, None, None, -3126144, -3126144)),
+    ("TOTAL", "Total comprehensive loss for the year (FY2022)", (None, None, -9042978, -3126144, -12169122)),
+    ("DATA", "Issue of share capital (FY2022)", (18739927, 31212787, None, None, 49952714)),
+    ("TOTAL", "At 31 December 2022", (63739927, 61212787, 37443118, -4546839, 157848993)),
+
+    ("DATA", "Profit for the year (FY2023)", (None, None, 3112295, None, 3112295)),
+    ("DATA", "Fair value movements on FVOCI financial instruments net of tax (FY2023)", (None, None, None, 1446883, 1446883)),
+    ("DATA", "Gains on FVOCI financial instruments transferred to Income statement (FY2023)", (None, None, None, -79998, -79998)),
+    ("TOTAL", "Total comprehensive income for the year (FY2023)", (None, None, 3112295, 1366885, 4479180)),
+    ("TOTAL", "At 31 December 2023", (63739927, 61212787, 40555413, -3179954, 162328173)),
+
+    ("DATA", "Profit for the year (FY2024)", (None, None, 4236801, None, 4236801)),
+    ("DATA", "Fair value movements on FVOCI financial instruments net of tax (FY2024)", (None, None, None, 2360700, 2360700)),
+    ("DATA", "Losses on FVOCI financial instruments transferred to Income statement (FY2024)", (None, None, None, 163241, 163241)),
+    ("TOTAL", "Total comprehensive income for the year (FY2024)", (None, None, 4236801, 2523941, 6760742)),
+    ("DATA", "Dividend paid (FY2024)", (None, None, -622459, None, -622459)),
+    ("TOTAL", "At 31 December 2024", (63739927, 61212787, 44169755, -656013, 168466456)),
+
+    ("DATA", "Profit for the year (FY2025)", (None, None, 5402714, None, 5402714)),
+    ("DATA", "Fair value movements on FVOCI financial instruments net of tax (FY2025)", (None, None, None, 2608972, 2608972)),
+    ("DATA", "Gains on FVOCI financial instruments transferred to Income statement (FY2025)", (None, None, None, -912197, -912197)),
+    ("TOTAL", "Total comprehensive income for the year (FY2025)", (None, None, 5402714, 1696775, 7099489)),
+    ("DATA", "Dividend paid (FY2025)", (None, None, -847741, None, -847741)),
+    ("TOTAL", "At 31 December 2025", (63739927, 61212787, 48724728, 1040762, 174718204)),
+]
+
+EQUITY_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "No dividends paid FY2021/FY2022/FY2023 (each year's own report shows a dash). Dividend paid reduces "
+    "the Profit and Loss column directly (verified arithmetically - the source page's own 'Dividend paid' "
+    "row shows a dash under the Profit and Loss column but a non-zero amount only in the Total column; the "
+    "closing Profit and Loss balance only ties if the dividend is treated as reducing that column too)."
+)
+
+bw.add_equity_changes_sheet(
+    title="Ghana International Bank Plc — Statement of Changes in Equity",
+    subtitle="£, chronological - oldest to newest. See source note for details.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_SOURCES,
+    first_col_width=68,
+    source_height=280,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -127,6 +373,66 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality / Credit Risk Disclosures - aggregate "Total
+# provision for credit losses" table (placements/loans to banks + loans
+# to customers + government/other securities combined), £'000 as
+# disclosed. FY2021 lacks a Gross Exposure by stage breakdown (only ECL
+# by stage was disclosed that early) - left blank per project convention.
+# ---------------------------------------------------------------
+AQ_GROSS = {
+    "Stage 1": {"FY2025": 973433, "FY2024": 849658, "FY2023": 467106, "FY2022": 494742},
+    "Stage 2": {"FY2025": 178375, "FY2024": 289258, "FY2023": 191935, "FY2022": 200525},
+    "Stage 3": {"FY2025": 1004, "FY2024": 2784, "FY2023": 4993, "FY2022": 2451},
+    "Total": {"FY2025": 1152812, "FY2024": 1141700, "FY2023": 664034, "FY2022": 697718},
+}
+AQ_ECL = {
+    "Stage 1": {"FY2025": 686, "FY2024": 416, "FY2023": 472, "FY2022": 856, "FY2021": 1214},
+    "Stage 2": {"FY2025": 347, "FY2024": 788, "FY2023": 1238, "FY2022": 2259, "FY2021": 1336},
+    "Stage 3": {"FY2025": 30, "FY2024": 668, "FY2023": 1945, "FY2022": 1773, "FY2021": 0},
+    "Total": {"FY2025": 1063, "FY2024": 1872, "FY2023": 3655, "FY2022": 4888, "FY2021": 2551},
+}
+AQ_NET = {
+    stage: {y: AQ_GROSS[stage][y] - AQ_ECL[stage][y] for y in AQ_GROSS[stage]}
+    for stage in ("Stage 1", "Stage 2", "Stage 3", "Total")
+}
+AQ_NPL_RATIO = {y: f"{AQ_GROSS['Stage 3'][y] / AQ_GROSS['Total'][y] * 100:.2f}%" for y in AQ_GROSS["Total"]}
+AQ_STAGE3_COVERAGE = {y: f"{AQ_ECL['Stage 3'][y] / AQ_GROSS['Stage 3'][y] * 100:.2f}%" for y in AQ_GROSS["Total"]}
+AQ_TOTAL_COVERAGE = {y: f"{AQ_ECL['Total'][y] / AQ_GROSS['Total'][y] * 100:.2f}%" for y in AQ_GROSS["Total"]}
+
+aq_rows = [
+    ("SECTION", "Gross exposure by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (12-month ECL)", AQ_GROSS["Stage 1"]),
+    ("DATA", "Stage 2 (lifetime ECL, not credit-impaired)", AQ_GROSS["Stage 2"]),
+    ("DATA", "Stage 3 (credit-impaired)", AQ_GROSS["Stage 3"]),
+    ("TOTAL", "Total gross exposure", AQ_GROSS["Total"]),
+    ("SECTION", "ECL allowance by stage", {}),
+    ("DATA", "Stage 1 ECL", AQ_ECL["Stage 1"]),
+    ("DATA", "Stage 2 ECL", AQ_ECL["Stage 2"]),
+    ("DATA", "Stage 3 ECL", AQ_ECL["Stage 3"]),
+    ("TOTAL", "Total ECL allowance", AQ_ECL["Total"]),
+    ("SECTION", "Net carrying amount by stage (calculated - see source note)", {}),
+    ("DATA", "Stage 1", AQ_NET["Stage 1"]),
+    ("DATA", "Stage 2", AQ_NET["Stage 2"]),
+    ("DATA", "Stage 3", AQ_NET["Stage 3"]),
+    ("TOTAL", "Total net carrying amount", AQ_NET["Total"]),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "NPL ratio (Stage 3 gross / Total gross)", AQ_NPL_RATIO),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross)", AQ_STAGE3_COVERAGE),
+    ("DATA", "Total ECL coverage ratio (Total ECL / Total gross)", AQ_TOTAL_COVERAGE),
+]
+
+bw.add_asset_quality_sheet(
+    title="Ghana International Bank Plc — Asset Quality / Credit Risk Disclosures",
+    subtitle="£'000 (as disclosed - see source note; rest of workbook is in £). Aggregate across all credit "
+             "exposure classes (placements/loans to banks, loans to customers, government and other securities).",
+    rows=aq_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=68,
+    source_height=310,
+    unit_suffix="",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None, page="4-5"):
@@ -147,6 +453,69 @@ metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], note=NO_AT1_NOTE)
 metric("Total Capital", "£'000", [("Total capital", CET1_CAPITAL)], note=NO_AT1_NOTE)
 metric("Total Capital Ratio", "%", [("Total capital ratio", CET1_RATIO)], note=NO_AT1_NOTE)
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", TOTAL_RWA)])
+
+# ---------------------------------------------------------------
+# RWA Breakdown: Table 2 "Breakdown of the Bank's Regulatory Capital
+# Requirement" from each year's own Pillar 3 Disclosures - Credit risk
+# categories give RWA directly; Operational risk and Market risk RWA are
+# CALCULATED as (Capital Requirement / 8%), since the table only states
+# their capital requirement, not RWA - cross-checked against each year's
+# own disclosed Total RWAs figure (Total RWAs sheet), matching within
+# rounding for every year (e.g. FY2024: 700,375 calculated vs 700,374
+# disclosed).
+# ---------------------------------------------------------------
+RWA_CATEGORIES = {
+    "Central Gov/Central Banks": {"FY2024": 27645, "FY2023": 27361, "FY2022": 35066, "FY2021": 43896},
+    "Corporates": {"FY2024": 475975, "FY2023": 283530, "FY2022": 274893, "FY2021": 201102},
+    "Institutions": {"FY2024": 64563, "FY2023": 80749, "FY2022": 125314, "FY2021": 92530},
+    "Other Items": {"FY2024": 18447, "FY2023": 20363, "FY2022": 20893, "FY2021": 21987},
+    "Public Sector Entities": {"FY2024": 55699, "FY2023": 32940, "FY2022": 37618, "FY2021": 46854},
+    "Retail": {"FY2024": 148, "FY2023": 5870, "FY2022": 133, "FY2021": 1226},
+    "Multilateral Development Banks": {"FY2024": 0},
+    "Covered bonds": {"FY2024": 2020},
+}
+RWA_CREDIT_TOTAL = {"FY2024": 644497, "FY2023": 450813, "FY2022": 493919, "FY2021": 407595}
+RWA_OPRISK_CAPREQ = {"FY2024": 4147, "FY2023": 2963, "FY2022": 2690, "FY2021": 3173}
+RWA_MARKET_CAPREQ = {"FY2024": 323, "FY2023": 418, "FY2022": 813, "FY2021": 237}
+RWA_OPRISK = {y: round(v / 0.08) for y, v in RWA_OPRISK_CAPREQ.items()}
+RWA_MARKET = {y: round(v / 0.08) for y, v in RWA_MARKET_CAPREQ.items()}
+RWA_TOTAL_CALC = {y: RWA_CREDIT_TOTAL[y] + RWA_OPRISK[y] + RWA_MARKET[y] for y in RWA_CREDIT_TOTAL}
+
+rwa_rows = [
+    ("SECTION", "Credit risk RWA by exposure class", {}),
+    ("DATA", "Central Gov/Central Banks", RWA_CATEGORIES["Central Gov/Central Banks"]),
+    ("DATA", "Corporates", RWA_CATEGORIES["Corporates"]),
+    ("DATA", "Institutions", RWA_CATEGORIES["Institutions"]),
+    ("DATA", "Other Items", RWA_CATEGORIES["Other Items"]),
+    ("DATA", "Public Sector Entities", RWA_CATEGORIES["Public Sector Entities"]),
+    ("DATA", "Retail", RWA_CATEGORIES["Retail"]),
+    ("DATA", "Multilateral Development Banks", RWA_CATEGORIES["Multilateral Development Banks"]),
+    ("DATA", "Covered bonds", RWA_CATEGORIES["Covered bonds"]),
+    ("TOTAL", "Total credit and counterparty risk RWA", RWA_CREDIT_TOTAL),
+    ("SECTION", "Other risk types (RWA calculated as Capital Requirement / 8% - see source note)", {}),
+    ("DATA", "Operational risk (Basic Indicator Approach)", RWA_OPRISK),
+    ("DATA", "Market risk", RWA_MARKET),
+    ("TOTAL", "Total RWAs (calculated - cross-checked against Total RWAs sheet)", RWA_TOTAL_CALC),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Ghana International Bank Plc — RWA Breakdown",
+    subtitle="£'000. Credit risk RWA directly disclosed by exposure class; Operational/Market risk RWA "
+             "calculated from disclosed capital requirements - see source note. FY2025 not yet published.",
+    rows=rwa_rows,
+    sources_text=p3_sources(page="7") + "\n\nRWA BREAKDOWN NOTE: sourced from Table 2 'Breakdown of the "
+        "Bank's Regulatory Capital Requirement' in each year's own Pillar 3 Disclosures (Central Gov/Central "
+        "Banks, Corporates, Institutions, Other Items, Public Sector Entities, and Retail columns give RWA "
+        "directly; Multilateral Development Banks and Covered bonds are new categories introduced FY2024). "
+        "Operational risk and Market risk RWA are CALCULATED as (Capital Requirement / 8%), since the table "
+        "states only their capital requirement, not RWA directly - independently cross-checked against each "
+        "year's own disclosed Total RWAs figure (Total RWAs sheet), matching within rounding for every year "
+        "(e.g. FY2024: 700,375 calculated here vs 700,374 disclosed).",
+    first_col_width=58,
+    source_height=260,
+    unit_suffix="",
+)
+
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)])
 metric("LCR", "%", [("Liquidity coverage ratio", LCR)])
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], note=NSFR_NOTE)
@@ -160,6 +529,35 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {
+            "FY2025": 1184847200, "FY2024": 1095686063, "FY2023": 800648688, "FY2022": 899850273, "FY2021": 766627624}),
+        ("Loans and advances to customers", {
+            "FY2025": 152082149, "FY2024": 57178671, "FY2023": 53066533, "FY2022": 65038106, "FY2021": 89440019}),
+        ("Amounts owed to depositors", {
+            "FY2025": 393649207, "FY2024": 255765401, "FY2023": 270972181, "FY2022": 347038076, "FY2021": 258550273}),
+        ("Total Equity", {
+            "FY2025": 174718204, "FY2024": 168466456, "FY2023": 162328173, "FY2022": 157848993, "FY2021": 120065401}),
+    ],
+    balance_sheet_unit="£",
+    income_statement_totals=[
+        ("Operating income", {
+            "FY2025": 50581488, "FY2024": 47404294, "FY2023": 39956124, "FY2022": 27022086, "FY2021": 16276979}),
+        ("Total operating expenses", {
+            "FY2025": -43637647, "FY2024": -41158713, "FY2023": -36722520, "FY2022": -35155545, "FY2021": -27656389}),
+        ("Profit/(Loss) for the year", {
+            "FY2025": 5402714, "FY2024": 4236801, "FY2023": 3112295, "FY2022": -9042978, "FY2021": -9043124}),
+    ],
+    income_statement_unit="£",
+    equity_changes_totals=[
+        ("Opening equity", {
+            "FY2025": 168466456, "FY2024": 162328173, "FY2023": 157848993, "FY2022": 120065401, "FY2021": 131806062}),
+        ("Total comprehensive income/(loss) for the year", {
+            "FY2025": 7099489, "FY2024": 6760742, "FY2023": 4479180, "FY2022": -12169122, "FY2021": -11740661}),
+        ("Closing equity", {
+            "FY2025": 174718204, "FY2024": 168466456, "FY2023": 162328173, "FY2022": 157848993, "FY2021": 120065401}),
+    ],
+    equity_changes_unit="£",
     cash_flow_totals=[
         ("Net cash generated from/(used in) operating activities", {
             "FY2025": -61057195, "FY2024": -63471450, "FY2023": -40429835, "FY2022": 30054133, "FY2021": -32002834}),

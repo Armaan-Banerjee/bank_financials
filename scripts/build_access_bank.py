@@ -166,6 +166,245 @@ def p3_sources():
 bw = BankWorkbook(bank_name="The Access Bank UK Limited", years=YEARS, year_label=YEAR_LABEL, header_color="4B2E39")
 
 # ---------------------------------------------------------------
+# ST- rollout: shared entity/FX notes reused across the new sheets
+# ---------------------------------------------------------------
+STATEMENTS_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: The Bank column (entity-level) is used throughout for consistency with the Cash Flow "
+    "Statement sheet - Bank and Group are identical for FY2020-FY2023 (no subsidiary existed) and differ only "
+    "immaterially for FY2024 (following the Access Bank Malta investment - see Investment in Subsidiary note). "
+    "The Balance Sheet's line-item structure changed between report vintages: FY2024/FY2023 (AR2024) present "
+    "'Money market placements', 'Investment in subsidiary', 'Deferred tax liability' and a 'Prepaid corporation "
+    "tax' asset as separate lines not present in earlier years; FY2022 (AR2022)/FY2021/FY2020 group these "
+    "differently (e.g. a single 'Cash at bank' line, no separate money-market-placements or investment-securities "
+    "split visible pre-FY2021 in the same granularity). Each year's own as-reported labels/granularity are "
+    "preserved rather than forced into a common shape - blank cells indicate that year's report did not disclose "
+    "that specific line. The P&L's structure also changed: FY2024/FY2023 use a 'Total operating income' / "
+    "'Net operating income' (after ECL) structure; FY2022/FY2021/FY2020 use a similar shape but without the "
+    "'Total operating income' subtotal line (ECL is deducted one step later, after 'Other income', directly into "
+    "'Net operating income')."
+)
+
+
+def convert_bs_rows(rows_usd):
+    """Balance sheet / P&L line items in whole $ -> £'000 at point-in-time
+    (BS, spot) or average (P&L, flow) rate - same FX methodology as the
+    existing Cash Flow Statement (cf_stock/cf_flow), applied here for
+    consistency across the new sheets. Values are already whole $, so this
+    additionally divides by 1000 to reach £'000 (matching cf_flow/cf_stock's
+    own /1000 step for the Bank's whole-$ cash flow statement)."""
+    return rows_usd
+
+
+def bs_stock(usd):
+    return {y: round(v / FX_SPOT[y] / 1000, 1) for y, v in usd.items()}
+
+
+def bs_flow(usd):
+    return {y: round(v / FX_AVG[y] / 1000, 1) for y, v in usd.items()}
+
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet (Consolidated Statement of Financial Position)
+# ---------------------------------------------------------------
+BALANCE_SHEET_SOURCES = (
+    "Sources - The Access Bank UK Limited's own Statement of Financial Position (Bank column), converted from "
+    "USD to £ per the FX conversion note on the Cash Flow Statement sheet:\n"
+    f"FY2024 & FY2023: Report & Financial Statements 2024, p.21 - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Report and Statutory Accounts 2022, p.17 - {AR2022_URL}\n"
+    f"FY2020: Report and Statutory Accounts 2021, p.15 (comparative column) - {AR2021_URL}\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n" + STATEMENTS_PRESENTATION_NOTE
+)
+
+balance_sheet_rows_usd = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents / Cash at bank", {"FY2024": 302616403, "FY2023": 463780357, "FY2022": 634602649, "FY2021": 531094912, "FY2020": 160274778}),
+    ("DATA", "Money market placements", {"FY2024": 13252505, "FY2023": 7158534, "FY2022": 3600384, "FY2021": 3928474, "FY2020": 6510993}),
+    ("DATA", "Investment securities", {"FY2024": 2294936949, "FY2023": 1023445451, "FY2022": 714010643, "FY2021": 610046734, "FY2020": 356657172}),
+    ("DATA", "Investment in subsidiary", {"FY2024": 22224000}),
+    ("DATA", "Loans and advances to banks", {"FY2024": 1774689997, "FY2023": 1376219992, "FY2022": 1269502028, "FY2021": 849457860, "FY2020": 943688846}),
+    ("DATA", "Loans and advances to customers", {"FY2024": 1669793574, "FY2023": 1523143929, "FY2022": 1114878580, "FY2021": 1054399028, "FY2020": 890496159}),
+    ("DATA", "Property, plant and equipment", {"FY2024": 2032215, "FY2023": 1138435, "FY2022": 1094451, "FY2021": 944155, "FY2020": 1234891}),
+    ("DATA", "Right-of-use assets", {"FY2024": 7297760, "FY2023": 2467870, "FY2022": 3832014, "FY2021": 5191262, "FY2020": 4851412}),
+    ("DATA", "Intangible assets", {"FY2024": 8596031, "FY2023": 4658030, "FY2022": 3851278, "FY2021": 2677923, "FY2020": 2376663}),
+    ("DATA", "Other financial/non-financial assets", {"FY2024": 25972576, "FY2023": 19370331, "FY2022": 22937417, "FY2021": 27013191, "FY2020": 31461526}),
+    ("DATA", "Prepaid corporation tax", {"FY2024": 486548, "FY2023": 186777}),
+    ("DATA", "Derivative financial instruments", {"FY2024": 3506088, "FY2023": 1742483}),
+    ("TOTAL", "Total assets", {"FY2024": 6125404646, "FY2023": 4423312189, "FY2022": 3768309444, "FY2021": 3084753539, "FY2020": 2397552440}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", {"FY2024": 3720229334, "FY2023": 2255729461, "FY2022": 2001589908, "FY2021": 1742158743, "FY2020": 1150355865}),
+    ("DATA", "Deposits from customers", {"FY2024": 1549953453, "FY2023": 1451645528, "FY2022": 1252213546, "FY2021": 935798374, "FY2020": 876497010}),
+    ("DATA", "Lease liabilities", {"FY2024": 7268531, "FY2023": 2194027}),
+    ("DATA", "Other financial/non-financial liabilities", {"FY2024": 50824896, "FY2023": 28487357, "FY2022": 22937811, "FY2021": 25483781, "FY2020": 30083087}),
+    ("DATA", "Deferred tax liability", {"FY2024": 2228603, "FY2023": 1202528, "FY2022": 484114, "FY2021": 509917, "FY2020": 395016}),
+    ("DATA", "Derivative financial instruments", {"FY2024": 9995259, "FY2023": 1749163}),
+    ("TOTAL", "Total liabilities", {"FY2024": 5340500076, "FY2023": 3741008064, "FY2022": 3277225379, "FY2021": 2703950815, "FY2020": 2057330978}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2024": 372380250, "FY2023": 372380250, "FY2022": 272380250, "FY2021": 207380250, "FY2020": 207380250}),
+    ("DATA", "Retained earnings", {"FY2024": 417623754, "FY2023": 313703236, "FY2022": 223921592, "FY2021": 178591301, "FY2020": 138095774}),
+    ("DATA", "Other reserves", {"FY2024": -85871, "FY2023": 1234202, "FY2022": -204214, "FY2021": -155264, "FY2020": -240999}),
+    ("DATA", "Currency translation reserve", {"FY2024": -5013563, "FY2023": -5013563, "FY2022": -5013563, "FY2021": -5013563, "FY2020": -5013563}),
+    ("TOTAL", "Total equity", {"FY2024": 784904570, "FY2023": 682304125, "FY2022": 491084065, "FY2021": 380802724, "FY2020": 340221462}),
+    ("TOTAL", "Total liabilities and equity", {"FY2024": 6125404646, "FY2023": 4423312189, "FY2022": 3768309444, "FY2021": 3084753539, "FY2020": 2397552440}),
+]
+
+balance_sheet_rows = []
+for kind, label, usd in balance_sheet_rows_usd:
+    balance_sheet_rows.append((kind, label, bs_stock(usd) if kind != "SECTION" else {}))
+
+bw.add_balance_sheet_sheet(
+    title="The Access Bank UK Limited — Statement of Financial Position",
+    subtitle="£'000, converted from USD, Bank basis - see source note at bottom for FX methodology and rates used.",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=60,
+    source_height=260,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (Consolidated Statement of Comprehensive Income)
+# ---------------------------------------------------------------
+INCOME_STATEMENT_SOURCES = (
+    "Sources - The Access Bank UK Limited's own Statement of Comprehensive Income (Bank column), converted from "
+    "USD to £ per the FX conversion note on the Cash Flow Statement sheet:\n"
+    f"FY2024 & FY2023: Report & Financial Statements 2024, p.20 - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Report and Statutory Accounts 2022, p.16 - {AR2022_URL}\n"
+    f"FY2020: Report and Statutory Accounts 2021, p.14 (comparative column) - {AR2021_URL}\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n" + STATEMENTS_PRESENTATION_NOTE
+)
+
+income_statement_rows_usd = [
+    ("SECTION", "Operating income", {}),
+    ("DATA", "Interest income", {"FY2024": 362390387, "FY2023": 274162094, "FY2022": 129813100, "FY2021": 101091990, "FY2020": 98075794}),
+    ("DATA", "Interest expense", {"FY2024": -154070948, "FY2023": -100413489, "FY2022": -30327185, "FY2021": -17585729, "FY2020": -24571141}),
+    ("TOTAL", "Net interest income", {"FY2024": 208319439, "FY2023": 173748605, "FY2022": 99485915, "FY2021": 83506261, "FY2020": 73504653}),
+    ("DATA", "Fee and commission income", {"FY2024": 32739640, "FY2023": 30614509, "FY2022": 29973424, "FY2021": 27143190, "FY2020": 26743396}),
+    ("DATA", "Fee and commission expense", {"FY2024": -2891533, "FY2023": -1802245, "FY2022": -1995602, "FY2021": -1850925, "FY2020": -1221054}),
+    ("TOTAL", "Net fee and commission income", {"FY2024": 29848107, "FY2023": 28812264, "FY2022": 27977822, "FY2021": 25292265, "FY2020": 25522342}),
+    ("DATA", "Other income", {"FY2024": 6179206, "FY2023": 5046212, "FY2022": 4019405, "FY2021": 2373856, "FY2020": 1805722}),
+    ("DATA", "Other operating income", {"FY2021": 8072122}),
+    ("TOTAL", "Total operating income", {"FY2024": 244346752, "FY2023": 207607081}),
+    ("DATA", "Expected credit loss (ECL) allowance / Provision for expected credit losses", {"FY2024": -10834839, "FY2023": -8229710, "FY2022": -37271365, "FY2021": -32468250, "FY2020": -58636697}),
+    ("TOTAL", "Net operating income", {"FY2024": 233511913, "FY2023": 199377371, "FY2022": 94211777, "FY2021": 86776254, "FY2020": 42196020}),
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Personnel expenses", {"FY2024": -38755452, "FY2023": -31872155, "FY2022": -22478062, "FY2021": -22375495, "FY2020": -17055499}),
+    ("DATA", "Depreciation and amortisation", {"FY2024": -4164547, "FY2023": -2559119, "FY2022": -2287880, "FY2021": -1907756, "FY2020": -2308932}),
+    ("DATA", "Other expenses", {"FY2024": -17203350, "FY2023": -13416100, "FY2022": -10745827, "FY2021": -10633162, "FY2020": -6002946}),
+    ("TOTAL", "Total operating expenses", {"FY2024": -60123349, "FY2023": -47847374, "FY2022": -35511769, "FY2021": -34916413, "FY2020": -25367377}),
+    ("TOTAL", "Profit before tax expense", {"FY2024": 173388564, "FY2023": 151529997, "FY2022": 58700008, "FY2021": 51859841, "FY2020": 16828643}),
+    ("DATA", "Tax expense / Taxation", {"FY2024": -45661717, "FY2023": -39302942, "FY2022": -13369717, "FY2021": -11364314, "FY2020": -3323610}),
+    ("TOTAL", "Profit after tax expense for the year", {"FY2024": 127726847, "FY2023": 112227055, "FY2022": 45330291, "FY2021": 40495527, "FY2020": 13505033}),
+    ("SECTION", "Other comprehensive income/(expense)", {}),
+    ("DATA", "Other comprehensive income on investment securities / net profit on FVOCI securities", {"FY2024": -1320073, "FY2023": 1438416, "FY2022": -48950, "FY2021": 85735, "FY2020": -241960}),
+    ("TOTAL", "Total comprehensive income for the year, net of tax", {"FY2024": 126406774, "FY2023": 113665471, "FY2022": 45281341, "FY2021": 40581262, "FY2020": 13263073}),
+]
+
+income_statement_rows = []
+for kind, label, usd in income_statement_rows_usd:
+    income_statement_rows.append((kind, label, bs_flow(usd) if kind != "SECTION" else {}))
+
+bw.add_income_statement_sheet(
+    title="The Access Bank UK Limited — Statement of Comprehensive Income",
+    subtitle="£'000, converted from USD, Bank basis - see source note at bottom for FX methodology and rates used.",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=76,
+    source_height=260,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Share capital", "Retained earnings", "Other reserves", "Currency translation reserve", "Total equity"]
+
+EQUITY_CHANGES_SOURCES = (
+    "Sources - The Access Bank UK Limited's own Statement of Changes in Equity (Bank basis), converted from USD "
+    "to £ (Balance rows at that date's BoE spot rate; movement rows at that calendar year's BoE average rate - "
+    "same FX methodology as the Cash Flow Statement sheet):\n"
+    f"2024 & 2023 movements: Report & Financial Statements 2024, p.22 - {AR2024_URL}\n"
+    f"2022 & 2021 movements: Report and Statutory Accounts 2022, p.18 - {AR2022_URL}\n"
+    f"2020 movements: Report and Statutory Accounts 2021, p.16 (comparative column) - {AR2021_URL}\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n"
+    "EQUITY SHEET FX CAVEAT: because this roll-forward mixes point-in-time Balance rows (spot rate) with "
+    "in-year movement rows (average rate) - the same two-rate approach used for the Cash Flow Statement - each "
+    "period's £ closing balance will differ very slightly from £ opening balance + £ movements (unlike the Cash "
+    "Flow Statement, this sheet has no natural 'FX translation' line to absorb the difference, so no plug row is "
+    "shown here). The underlying USD figures (see rows above) tie out exactly in every period; this is purely a "
+    "£ presentation artefact of using two different conversion rates, not a data quality issue.\n\n"
+    "PRESENTATION NOTE: The Balance as at 1 January 2020 row is left blank (not converted) since it would "
+    "require a 31 December 2019 GBP/USD spot rate, which hasn't been sourced for this project - matching the "
+    "same gap already noted for the Cash Flow Statement's FY2020 opening balance. FY2022's own statement labels "
+    "its 'Proceeds from shares issued' row as part of a combined 'Total comprehensive income for the year' total "
+    "(which would overstate that label); this workbook instead reports 'Total comprehensive income for the "
+    "year (2022)' as profit + OCI only (excluding the share issuance), with 'Proceeds from shares issued' shown "
+    "as its own separate row immediately after - the Balance at 31 December 2022 row still ties to the sum of "
+    "all rows in between, this is a relabeling for clarity only, not a change to any figure."
+)
+
+equity_changes_rows_usd = [
+    ("TOTAL", "Balance as at 1 January 2020", (207380250, 124590741, 961, -5013563, 326958389)),
+    ("DATA", "Profit after tax for the year (2020)", (0, 13505033, 0, 0, 13505033)),
+    ("DATA", "Other comprehensive expense for the year (2020)", (0, 0, -241960, 0, -241960)),
+    ("TOTAL", "Total comprehensive income for the year (2020)", (0, 13505033, -241960, 0, 13263073)),
+    ("TOTAL", "Balance as at 31 December 2020", (207380250, 138095774, -240999, -5013563, 340221462)),
+    ("DATA", "Profit after tax for the year (2021)", (0, 40495527, 0, 0, 40495527)),
+    ("DATA", "Other comprehensive income for the year (2021)", (0, 0, 85735, 0, 85735)),
+    ("TOTAL", "Total comprehensive income for the year (2021)", (0, 40495527, 85735, 0, 40581262)),
+    ("TOTAL", "Balance as at 31 December 2021", (207380250, 178591301, -155264, -5013563, 380802724)),
+    ("DATA", "Profit after tax for the year (2022)", (0, 45330291, 0, 0, 45330291)),
+    ("DATA", "Other comprehensive expense for the year (2022)", (0, 0, -48950, 0, -48950)),
+    ("TOTAL", "Total comprehensive income for the year (2022)", (0, 45330291, -48950, 0, 45281341)),
+    ("DATA", "Proceeds from shares issued (2022)", (65000000, 0, 0, 0, 65000000)),
+    ("TOTAL", "Balance as at 31 December 2022", (272380250, 223921592, -204214, -5013563, 491084065)),
+    ("DATA", "Profit after tax for the year (2023)", (0, 112227055, 0, 0, 112227055)),
+    ("DATA", "Other comprehensive income for the year (2023)", (0, 0, 1438416, 0, 1438416)),
+    ("TOTAL", "Total comprehensive income for the year (2023)", (0, 112227055, 1438416, 0, 113665471)),
+    ("DATA", "Proceeds from shares issued (2023)", (100000000, 0, 0, 0, 100000000)),
+    ("DATA", "Dividends declared (2023)", (0, -22445411, 0, 0, -22445411)),
+    ("TOTAL", "Balance as at 31 December 2023", (372380250, 313703236, 1234202, -5013563, 682304125)),
+    ("DATA", "Profit after tax for the year (2024)", (0, 127726847, 0, 0, 127726847)),
+    ("DATA", "Other comprehensive expense for the year (2024)", (0, 0, -1320073, 0, -1320073)),
+    ("TOTAL", "Total comprehensive income for the year (2024)", (0, 127726847, -1320073, 0, 126406774)),
+    ("DATA", "Dividends declared (2024)", (0, -23806329, 0, 0, -23806329)),
+    ("TOTAL", "Balance as at 31 December 2024", (372380250, 417623754, -85871, -5013563, 784904570)),
+]
+
+_BALANCE_YEAR = {
+    "Balance as at 31 December 2020": "FY2020", "Balance as at 31 December 2021": "FY2021",
+    "Balance as at 31 December 2022": "FY2022", "Balance as at 31 December 2023": "FY2023",
+    "Balance as at 31 December 2024": "FY2024",
+}
+_MOVEMENT_YEAR = {"(2020)": "FY2020", "(2021)": "FY2021", "(2022)": "FY2022", "(2023)": "FY2023", "(2024)": "FY2024"}
+
+
+def _convert_equity_row(label, values):
+    if label == "Balance as at 1 January 2020":
+        return tuple(None for _ in values)
+    if label in _BALANCE_YEAR:
+        rate = FX_SPOT[_BALANCE_YEAR[label]]
+    else:
+        year = next(y for tag, y in _MOVEMENT_YEAR.items() if tag in label)
+        rate = FX_AVG[year]
+    return tuple(round(v / rate / 1000, 1) if v is not None else None for v in values)
+
+
+equity_changes_rows = [
+    (kind, label, _convert_equity_row(label, values))
+    for kind, label, values in equity_changes_rows_usd
+]
+
+bw.add_equity_changes_sheet(
+    title="The Access Bank UK Limited — Statement of Changes in Equity",
+    subtitle="£'000, converted from USD, Bank basis - chronological, oldest to newest. See source note for FX methodology/caveat.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+    first_col_width=48,
+    source_height=280,
+)
+
+# ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (raw USD, then converted via cf_flow()/cf_stock()/cf_opening())
 # ---------------------------------------------------------------
 rows_usd = [
@@ -241,6 +480,73 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality / Credit Risk Disclosures
+# ---------------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    "Sources - The Access Bank UK Limited's own Note 27/24 'Financial instruments - Credit risk' (Group basis; "
+    "immaterially different from Bank basis in every year - see entity note), converted from USD to £ at that "
+    "year's BoE spot rate (point-in-time balances, same as the Balance Sheet sheet's convention):\n"
+    f"FY2024 & FY2023: Report & Financial Statements 2024, p.51-52 (Note 27d, Loans to customers ECL staging table) - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Report and Statutory Accounts 2022, p.43 (Note 24d) - {AR2022_URL}\n"
+    f"FY2020: Report and Statutory Accounts 2021, p.42 (Note 24d, comparative column) - {AR2021_URL}\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n"
+    "PRESENTATION NOTE: the loan-book-by-product split is NOT presented on a consistent basis across all 5 years "
+    "- FY2024/FY2023 disclose a GROSS product split (Loans to corporates / secured on property / other secured "
+    "personal loans, from Note 18/17); FY2022/FY2021/FY2020 only disclose a NET-of-allowance Retail/Corporate "
+    "split (from the credit risk exposure table), not a gross one at that granularity - each row is labelled to "
+    "make this explicit, and the 'Total loans and advances to customers' row for each year sums exactly to "
+    "whichever rows are populated for that year (gross FY2023-24, net FY2020-22) - do not compare that total "
+    "row directly across the gross/net boundary. The by-IFRS-9-stage breakdown below IS on a consistent gross "
+    "basis for all 5 years and ties to each year's own Balance Sheet 'Loans and advances to customers' gross "
+    "figure. FY2024's Stage 3 loss allowance coverage (0.3%) is much lower than FY2023's (28.7%) - both figures "
+    "are as directly reported; the Bank's own notes attribute this to a large trade-finance Stage 3 exposure "
+    "($49.9m) that is substantially collateralised by credit insurance, so most of its gross balance is not "
+    "provisioned for - flagged here for visibility rather than smoothed over."
+)
+
+asset_quality_rows_usd = [
+    ("SECTION", "Loan book by product/segment (basis differs by year - see presentation note)", {}),
+    ("DATA", "Loans to corporates (gross)", {"FY2024": 1487628136, "FY2023": 1386572738}),
+    ("DATA", "Loans secured on property (gross)", {"FY2024": 128950353, "FY2023": 120538545}),
+    ("DATA", "Other secured personal loans (gross)", {"FY2024": 80281571, "FY2023": 42417147}),
+    ("DATA", "Retail loans, incl. mortgages (net of allowance)", {"FY2022": 151522375, "FY2021": 147076616, "FY2020": 109784290}),
+    ("DATA", "Corporate loans, incl. mortgages (net of allowance)", {"FY2022": 963356205, "FY2021": 907322412, "FY2020": 780711869}),
+    ("TOTAL", "Total loans and advances to customers (gross FY2023-24 / net FY2020-22)", {"FY2024": 1696860060, "FY2023": 1549528430, "FY2022": 1114878580, "FY2021": 1054399028, "FY2020": 890496159}),
+    ("SECTION", "Loan book by IFRS 9 stage (gross carrying amount)", {}),
+    ("DATA", "Stage 1 (12-month ECL)", {"FY2024": 1551240901, "FY2023": 1449313581, "FY2022": 1035081471, "FY2021": 927874029, "FY2020": 739050772}),
+    ("DATA", "Stage 2 (lifetime ECL, not credit-impaired)", {"FY2024": 57549029, "FY2023": 12145764, "FY2022": 10751443, "FY2021": 16075352, "FY2020": 96821620}),
+    ("DATA", "Stage 3 (lifetime ECL, credit-impaired)", {"FY2024": 88070130, "FY2023": 88069085, "FY2022": 112727842, "FY2021": 185298016, "FY2020": 113059835}),
+    ("TOTAL", "Total gross carrying amount", {"FY2024": 1696860060, "FY2023": 1549528430, "FY2022": 1158560756, "FY2021": 1129247397, "FY2020": 948932227}),
+    ("SECTION", "Loss allowance by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 loss allowance", {"FY2024": -1362900, "FY2023": -1073251, "FY2022": -775788, "FY2021": -486733, "FY2020": -736544}),
+    ("DATA", "Stage 2 loss allowance", {"FY2024": -25413612, "FY2023": 0, "FY2022": -18442, "FY2021": -44074, "FY2020": -8722790}),
+    ("DATA", "Stage 3 loss allowance", {"FY2024": -289974, "FY2023": -25311250, "FY2022": -42887946, "FY2021": -74317562, "FY2020": -48976734}),
+    ("TOTAL", "Total loss allowance", {"FY2024": -27066486, "FY2023": -26384501, "FY2022": -43682176, "FY2021": -74848369, "FY2020": -58436068}),
+]
+
+asset_quality_rows = []
+for kind, label, usd in asset_quality_rows_usd:
+    asset_quality_rows.append((kind, label, bs_stock(usd) if kind != "SECTION" else {}))
+
+asset_quality_rows.append(("SECTION", "Asset quality ratios (computed from the £-converted figures above)", {}))
+asset_quality_rows.append(("DATA", "ECL coverage ratio (total loss allowance / total gross carrying amount)",
+    {"FY2024": "1.6%", "FY2023": "1.7%", "FY2022": "3.8%", "FY2021": "6.6%", "FY2020": "6.2%"}))
+asset_quality_rows.append(("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross carrying amount)",
+    {"FY2024": "5.2%", "FY2023": "5.7%", "FY2022": "9.7%", "FY2021": "16.4%", "FY2020": "11.9%"}))
+asset_quality_rows.append(("DATA", "Stage 3 coverage ratio (Stage 3 loss allowance / Stage 3 gross)",
+    {"FY2024": "0.3%", "FY2023": "28.7%", "FY2022": "38.0%", "FY2021": "40.1%", "FY2020": "43.3%"}))
+
+bw.add_asset_quality_sheet(
+    title="The Access Bank UK Limited — Asset Quality / Credit Risk Disclosures",
+    subtitle="£'000, converted from USD, Group basis - see source note for FX methodology and product/stage basis caveats.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=78,
+    source_height=300,
+    unit_suffix=" (£'000, conv. from USD)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -269,6 +575,46 @@ metric("Total Capital", "£'000 (conv. from USD)", [("Total capital", p3_stock(C
        note="Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.")
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", CET1_RATIO)], p3_sources())
 metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", p3_stock(RWA_USD))], p3_sources())
+
+# ---------------------------------------------------------------
+# Sheet: RWA Breakdown (UK OV1 - Overview of risk weighted exposure amounts)
+# ---------------------------------------------------------------
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - The Access Bank UK Limited's own OV1 (Overview of risk weighted exposure amounts) table, "
+    "converted from USD to £ at that year's BoE spot rate:\n"
+    f"FY2023 & FY2022: Pillar 3 Disclosures 2023, p.6 (Section 4.3, OV1) - {P3_2023_URL}\n"
+    f"FY2021 & FY2020: Pillar 3 Disclosures 2022, p.15 (Section 4.3, OV1) - {P3_2022_URL}\n\n"
+    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n"
+    "No FY2024 Pillar 3 Disclosures document has been found (same gap already noted on the Pillar 3 metric "
+    "sheets) - FY2024 cells are blank rather than guessed. The Bank has no market risk RWA requirement in any "
+    "year shown (its own Pillar 3 reports state market risk is below the CRR de minimis threshold - it holds no "
+    "trading book) - not a missing-disclosure gap, a genuine nil. 'Of which: credit valuation adjustment (CVA)' "
+    "is a memo sub-item already included WITHIN 'Counterparty credit risk (CCR)' above it (per the OV1 template's "
+    "own structure), not an additional component - it will appear to double-count against the Total row in a "
+    "naive DATA-sum reconciliation check; this is expected and matches the Bank's own table structure."
+)
+
+rwa_breakdown_rows_usd = [
+    ("SECTION", "Risk-weighted exposure amounts (RWEAs)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2023": 2731456, "FY2022": 2238225, "FY2021": 1540125, "FY2020": 1671502}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2023": 9799, "FY2022": 6598, "FY2021": 838, "FY2020": 9552}),
+    ("DATA", "Of which: credit valuation adjustment (CVA)", {"FY2023": 2199, "FY2022": 828, "FY2021": 200, "FY2020": 3507}),
+    ("DATA", "Operational risk (basic indicator approach)", {"FY2023": 281414, "FY2022": 214522, "FY2021": 185601, "FY2020": 157396}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2023": 3024867, "FY2022": 2459345, "FY2021": 1726764, "FY2020": 1841957}),
+]
+rwa_breakdown_rows = []
+for kind, label, usd in rwa_breakdown_rows_usd:
+    rwa_breakdown_rows.append((kind, label, p3_stock(usd) if kind != "SECTION" else {}))
+
+bw.add_rwa_breakdown_sheet(
+    title="The Access Bank UK Limited — RWA Breakdown (UK OV1)",
+    subtitle="£'000, converted from USD - see source note for FX methodology.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=54,
+    source_height=170,
+    unit_suffix=" (£'000, conv. from USD)",
+)
 
 metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
@@ -328,10 +674,41 @@ cf_totals_usd = {
 }
 cf_close_usd = {"FY2024": 302616403, "FY2023": 463780357, "FY2022": 634602649, "FY2021": 531094912, "FY2020": 160274778}
 
+overview_bs_totals_usd = {
+    "Total assets": {"FY2024": 6125404646, "FY2023": 4423312189, "FY2022": 3768309444, "FY2021": 3084753539, "FY2020": 2397552440},
+    "Loans and advances to customers": {"FY2024": 1669793574, "FY2023": 1523143929, "FY2022": 1114878580, "FY2021": 1054399028, "FY2020": 890496159},
+    "Customer deposits": {"FY2024": 1549953453, "FY2023": 1451645528, "FY2022": 1252213546, "FY2021": 935798374, "FY2020": 876497010},
+    "Total equity": {"FY2024": 784904570, "FY2023": 682304125, "FY2022": 491084065, "FY2021": 380802724, "FY2020": 340221462},
+}
+overview_is_totals_usd = {
+    "Total operating income / Net operating income": {"FY2024": 233511913, "FY2023": 199377371, "FY2022": 94211777, "FY2021": 86776254, "FY2020": 42196020},
+    "Total operating expense": {"FY2024": -60123349, "FY2023": -47847374, "FY2022": -35511769, "FY2021": -34916413, "FY2020": -25367377},
+    "Profit for the year": {"FY2024": 127726847, "FY2023": 112227055, "FY2022": 45330291, "FY2021": 40495527, "FY2020": 13505033},
+}
+overview_eq_flow_usd = {
+    "Total comprehensive income for the year": {"FY2024": 126406774, "FY2023": 113665471, "FY2022": 45281341, "FY2021": 40581262, "FY2020": 13263073},
+    "Other equity movements, net (share issuance/dividends)": {"FY2024": -23806329, "FY2023": 77554589, "FY2022": 65000000, "FY2021": 0, "FY2020": 0},
+}
+overview_eq_opening_usd = {"FY2024": 682304125, "FY2023": 491084065, "FY2022": 380802724, "FY2021": 340221462}  # FY2020 opening not converted, see equity sheet's FX caveat
+_eq_opening_rate = {"FY2024": FX_SPOT["FY2023"], "FY2023": FX_SPOT["FY2022"], "FY2022": FX_SPOT["FY2021"], "FY2021": FX_SPOT["FY2020"]}
+overview_eq_opening_gbp = {y: round(v / _eq_opening_rate[y] / 1000, 1) for y, v in overview_eq_opening_usd.items()}
+overview_eq_closing_usd = {"FY2024": 784904570, "FY2023": 682304125, "FY2022": 491084065, "FY2021": 380802724, "FY2020": 340221462}
+
 bw.add_overview_sheet(
     cash_flow_totals=[(label, cf_flow(vals)) for label, vals in cf_totals_usd.items()]
                       + [("Cash and cash equivalents at end of year", cf_stock(cf_close_usd))],
     cash_flow_unit="£'000",
+    balance_sheet_totals=[(label, bs_stock(vals)) for label, vals in overview_bs_totals_usd.items()],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[(label, bs_flow(vals)) for label, vals in overview_is_totals_usd.items()],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", overview_eq_opening_gbp),
+        ("Total comprehensive income for the year", bs_flow(overview_eq_flow_usd["Total comprehensive income for the year"])),
+        ("Other equity movements, net", bs_flow(overview_eq_flow_usd["Other equity movements, net (share issuance/dividends)"])),
+        ("Closing equity", bs_stock(overview_eq_closing_usd)),
+    ],
+    equity_changes_unit="£'000",
     ratios=[
         ("CET1 Ratio", CET1_RATIO),
         ("Tier 1 Ratio", CET1_RATIO),
@@ -345,7 +722,11 @@ bw.add_overview_sheet(
          "sheet's FX conversion note) - this conversion was not explicitly requested for this bank but applied for "
          "consistency with the rest of the series. This workbook covers FY2020-FY2024 (shifted one year earlier "
          "than most other banks in this series) since no FY2025 Annual Report has been published yet; Pillar 3 "
-         "cells are blank for FY2024 (no edition found) and FY2020 LCR/NSFR (not found in any source).",
+         "cells are blank for FY2024 (no edition found) and FY2020 LCR/NSFR (not found in any source). "
+         "'Total operating income / Net operating income' uses each year's Net operating income (after ECL), the "
+         "one operating-income-level figure disclosed consistently across all 5 years (see Asset Quality sheet's "
+         "presentation note on the P&L structure change). Opening equity for FY2020 is not shown (no 31 December "
+         "2019 GBP/USD rate sourced) - see the Statement of Changes in Equity sheet's FX caveat.",
 )
 
 # ---------------------------------------------------------------

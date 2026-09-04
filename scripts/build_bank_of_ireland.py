@@ -81,6 +81,204 @@ def p3_sources(page):
 bw = BankWorkbook(bank_name="Bank of Ireland (UK) Plc", years=YEARS, header_color="00594F")
 
 # ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+BALANCE_SHEET_SOURCES = (
+    "Sources - Bank of Ireland (UK) Plc consolidated Group Balance sheet, £m, each year from its own primary "
+    "report:\n"
+    f"FY2025: Annual Report 2025, p.77 - {AR2025_URL}\n"
+    f"FY2024: Annual Report 2024, p.82 - {AR2024_URL}\n"
+    f"FY2023: Annual Report 2023, p.28 (printed) - {AR2023_URL}\n"
+    f"FY2022: Annual Report 2022, p.26 (printed) - {AR2022_URL}\n"
+    f"FY2021: Annual Report 2021, p.85 - {AR2021_URL}\n"
+    "Note: 'Fair value changes due to interest rate risk of hedged items in portfolio hedges' is shown as its own "
+    "line FY2022-FY2025 (a voluntary presentation change adopted in the FY2022 report); FY2021's own report embeds "
+    "it within Loans and advances to customers / Customer accounts instead - FY2021's own gross loan and customer-"
+    "account figures are ~£71m/£1m lower than the FY2022 report's restated FY2021 comparative column as a result. "
+    "Each year's own figures are used here (not restated comparatives) per project convention; both totals still "
+    "reconcile internally. Current tax assets/Assets classified as held for sale are blank where not separately "
+    "disclosed that year.\n\n" + ENTITY_NOTE
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 2306, "FY2024": 2069, "FY2023": 2213, "FY2022": 2239, "FY2021": 3456}),
+    ("DATA", "Items in the course of collection from other banks", {"FY2025": 96, "FY2024": 67, "FY2023": 71, "FY2022": 79, "FY2021": 101}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 70, "FY2024": 179, "FY2023": 283, "FY2022": 379, "FY2021": 88}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 1157, "FY2024": 1171, "FY2023": 1248, "FY2022": 1461, "FY2021": 1574}),
+    ("DATA", "Debt securities at amortised cost", {"FY2025": 881, "FY2024": 476, "FY2023": 489, "FY2022": 528, "FY2021": 798}),
+    ("DATA", "Fair value changes due to interest rate risk of hedged items in portfolio hedges", {"FY2025": 41, "FY2024": -58, "FY2023": -100, "FY2022": -276}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 14704, "FY2024": 14191, "FY2023": 14148, "FY2022": 14018, "FY2021": 16325}),
+    ("DATA", "Interest in joint venture", {"FY2025": 60, "FY2024": 61, "FY2023": 67, "FY2022": 71, "FY2021": 47}),
+    ("DATA", "Intangible assets and goodwill", {"FY2025": 24, "FY2024": 25, "FY2023": 26, "FY2022": 28, "FY2021": 32}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 272, "FY2024": 244, "FY2023": 215, "FY2022": 174, "FY2021": 143}),
+    ("DATA", "Other assets", {"FY2025": 102, "FY2024": 74, "FY2023": 65, "FY2022": 52, "FY2021": 42}),
+    ("DATA", "Current tax assets", {"FY2025": 67, "FY2024": 23, "FY2021": 8}),
+    ("DATA", "Deferred tax assets", {"FY2025": 71, "FY2024": 75, "FY2023": 96, "FY2022": 108, "FY2021": 77}),
+    ("DATA", "Retirement benefit asset", {"FY2025": 14, "FY2024": 14, "FY2023": 11, "FY2022": 10, "FY2021": 13}),
+    ("DATA", "Assets classified as held for sale", {"FY2021": 1}),
+    ("TOTAL", "Total assets", {"FY2025": 19865, "FY2024": 18611, "FY2023": 18832, "FY2022": 18871, "FY2021": 22705}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", {"FY2025": 2687, "FY2024": 2422, "FY2023": 3237, "FY2022": 3107, "FY2021": 3399}),
+    ("DATA", "Customer accounts", {"FY2025": 12765, "FY2024": 12223, "FY2023": 11815, "FY2022": 12222, "FY2021": 15753}),
+    ("DATA", "Fair value changes due to interest rate risk of hedged items in portfolio hedges", {"FY2025": -23, "FY2024": -87, "FY2023": -44, "FY2022": -130}),
+    ("DATA", "Items in the course of transmission to other banks", {"FY2025": 127, "FY2024": 63, "FY2023": 86, "FY2022": 63, "FY2021": 62}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 223, "FY2024": 293, "FY2023": 326, "FY2022": 328, "FY2021": 65}),
+    ("DATA", "Debt securities in issue", {"FY2025": 743, "FY2024": 514, "FY2023": 549, "FY2022": 379, "FY2021": 448}),
+    ("DATA", "Current tax liabilities", {"FY2025": 0, "FY2024": 16, "FY2023": 6, "FY2022": 4, "FY2021": 2}),
+    ("DATA", "Other liabilities", {"FY2025": 971, "FY2024": 1023, "FY2023": 1001, "FY2022": 1037, "FY2021": 1010}),
+    ("DATA", "Lease liabilities", {"FY2025": 14, "FY2024": 14, "FY2023": 16, "FY2022": 12, "FY2021": 15}),
+    ("DATA", "Provisions", {"FY2025": 377, "FY2024": 159, "FY2023": 8, "FY2022": 9, "FY2021": 14}),
+    ("DATA", "Loss allowance provision on loan commitments and financial guarantees", {"FY2025": 6, "FY2024": 4, "FY2023": 3, "FY2022": 5, "FY2021": 4}),
+    ("DATA", "Subordinated liabilities", {"FY2025": 190, "FY2024": 190, "FY2023": 190, "FY2022": 190, "FY2021": 190}),
+    ("TOTAL", "Total liabilities", {"FY2025": 18080, "FY2024": 16834, "FY2023": 17193, "FY2022": 17226, "FY2021": 20962}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 122, "FY2024": 122, "FY2023": 122, "FY2022": 122, "FY2021": 122}),
+    ("DATA", "Retained earnings", {"FY2025": 1162, "FY2024": 1171, "FY2023": 1049, "FY2022": 1049, "FY2021": 1083}),
+    ("DATA", "Other reserves", {"FY2025": 351, "FY2024": 334, "FY2023": 318, "FY2022": 324, "FY2021": 388}),
+    ("DATA", "Other equity instruments", {"FY2025": 150, "FY2024": 150, "FY2023": 150, "FY2022": 150, "FY2021": 150}),
+    ("TOTAL", "Total equity attributable to owners of the Bank", {"FY2025": 1785, "FY2024": 1777, "FY2023": 1639, "FY2022": 1645, "FY2021": 1743}),
+    ("TOTAL", "Total equity and liabilities", {"FY2025": 19865, "FY2024": 18611, "FY2023": 18832, "FY2022": 18871, "FY2021": 22705}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Bank of Ireland (UK) Plc — Consolidated Statement of Financial Position",
+    subtitle="Consolidated Group basis, £m. See source note at bottom.",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=78,
+    source_height=180,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+INCOME_STATEMENT_SOURCES = (
+    "Sources - Bank of Ireland (UK) Plc consolidated Group Income statement / Statement of other comprehensive "
+    "income, £m, each year from its own primary report:\n"
+    f"FY2025: Annual Report 2025, p.75-76 - {AR2025_URL}\n"
+    f"FY2024: Annual Report 2024, p.80-81 - {AR2024_URL}\n"
+    f"FY2023: Annual Report 2023, p.76 (printed) - {AR2023_URL}\n"
+    f"FY2022: Annual Report 2022, p.78 (printed) - {AR2022_URL}\n"
+    f"FY2021: Annual Report 2021, p.84 - {AR2021_URL}\n"
+    "Note: minor one-off gains (profit on disposal of PP&E/business activities/financial assets) are combined into "
+    "a single 'Other gains, net' row since none is consistently disclosed as its own line every year; blank/0 cells "
+    "reflect that year's own disclosure (0 = explicitly nil in the source, blank = line not applicable that year). "
+    "All totals reconcile exactly to (Loss)/profit before taxation and Total comprehensive income.\n\n" + ENTITY_NOTE
+)
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income calculated using the effective interest method", {"FY2025": 684, "FY2024": 796, "FY2023": 792, "FY2022": 580, "FY2021": 532}),
+    ("DATA", "Other interest income", {"FY2025": 215, "FY2024": 177, "FY2023": 131, "FY2022": 83, "FY2021": 78}),
+    ("TOTAL", "Total interest income", {"FY2025": 899, "FY2024": 973, "FY2023": 923, "FY2022": 663, "FY2021": 610}),
+    ("DATA", "Interest expense", {"FY2025": -442, "FY2024": -481, "FY2023": -340, "FY2022": -108, "FY2021": -99}),
+    ("TOTAL", "Net interest income", {"FY2025": 457, "FY2024": 492, "FY2023": 583, "FY2022": 555, "FY2021": 511}),
+    ("DATA", "Net leasing income", {"FY2025": 24, "FY2024": 19, "FY2023": 26, "FY2022": 22, "FY2021": 14}),
+    ("DATA", "Other leasing income", {"FY2025": 104, "FY2024": 92, "FY2023": 80, "FY2022": 60, "FY2021": 55}),
+    ("DATA", "Other leasing expense", {"FY2025": -80, "FY2024": -73, "FY2023": -54, "FY2022": -38, "FY2021": -41}),
+    ("DATA", "Fee and commission income", {"FY2025": 31, "FY2024": 32, "FY2023": 35, "FY2022": 37, "FY2021": 57}),
+    ("DATA", "Fee and commission expense", {"FY2025": -50, "FY2024": -67, "FY2023": -91, "FY2022": -88, "FY2021": -50}),
+    ("DATA", "Net trading income", {"FY2025": 14, "FY2024": 20, "FY2023": 15, "FY2022": 7, "FY2021": 3}),
+    ("DATA", "Other operating income", {"FY2025": 0, "FY2024": 2, "FY2023": 3, "FY2022": 0, "FY2021": 0}),
+    ("TOTAL", "Total operating income", {"FY2025": 476, "FY2024": 498, "FY2023": 571, "FY2022": 533, "FY2021": 535}),
+    ("SECTION", "Expenses and impairment", {}),
+    ("DATA", "Operating expenses", {"FY2025": -485, "FY2024": -382, "FY2023": -222, "FY2022": -247, "FY2021": -272}),
+    ("TOTAL", "Operating profit/(loss) before impairment charges on financial assets", {"FY2025": -9, "FY2024": 116, "FY2023": 349, "FY2022": 286, "FY2021": 263}),
+    ("DATA", "Net impairment (losses)/gains on financial instruments", {"FY2025": -25, "FY2024": 8, "FY2023": -43, "FY2022": -64, "FY2021": 54}),
+    ("TOTAL", "Operating profit/(loss)", {"FY2025": -34, "FY2024": 124, "FY2023": 306, "FY2022": 222, "FY2021": 317}),
+    ("DATA", "Share of profit/(loss) after tax of joint venture", {"FY2025": 22, "FY2024": 24, "FY2023": 25, "FY2022": 28, "FY2021": -2}),
+    ("DATA", "Other gains, net (disposal of PP&E/business activities/financial assets)", {"FY2025": 0, "FY2024": 33, "FY2023": 0, "FY2022": 1, "FY2021": 95}),
+    ("TOTAL", "Profit/(loss) before taxation", {"FY2025": -12, "FY2024": 181, "FY2023": 331, "FY2022": 251, "FY2021": 410}),
+    ("DATA", "Taxation credit/(charge)", {"FY2025": 11, "FY2024": -48, "FY2023": -72, "FY2022": -23, "FY2021": -12}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2025": -1, "FY2024": 133, "FY2023": 259, "FY2022": 228, "FY2021": 398}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Net change in cash flow hedge reserve, net of tax", {"FY2025": 17, "FY2024": 17, "FY2023": -5, "FY2022": -63, "FY2021": -35}),
+    ("DATA", "Net actuarial gain/(loss) on defined benefit schemes", {"FY2025": 0, "FY2024": 1, "FY2023": 0, "FY2022": -3, "FY2021": 2}),
+    ("DATA", "Net change in revaluation reserve, net of tax", {"FY2025": 0, "FY2024": -1, "FY2023": -1, "FY2022": -1, "FY2021": 1}),
+    ("TOTAL", "Other comprehensive income/(expense) for the year, net of tax", {"FY2025": 17, "FY2024": 17, "FY2023": -6, "FY2022": -67, "FY2021": -32}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year, net of tax", {"FY2025": 16, "FY2024": 150, "FY2023": 253, "FY2022": 161, "FY2021": 366}),
+]
+
+bw.add_income_statement_sheet(
+    title="Bank of Ireland (UK) Plc — Consolidated Statement of Comprehensive Income",
+    subtitle="Consolidated Group basis, £m. See source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=78,
+    source_height=180,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_CHANGES_SOURCES = (
+    "Sources - Bank of Ireland (UK) Plc consolidated Group Statement of changes in equity, £m, each year from its "
+    "own primary report (own-year 'Balance at 31 December' column used for that year's closing balances):\n"
+    f"FY2021: Annual Report 2021, p.86 - {AR2021_URL}\n"
+    f"FY2022: Annual Report 2022, p.80 (printed) - {AR2022_URL}\n"
+    f"FY2023: Annual Report 2023, p.78 (printed) - {AR2023_URL}\n"
+    f"FY2024: Annual Report 2024, p.83 - {AR2024_URL}\n"
+    f"FY2025: Annual Report 2025, p.78 - {AR2025_URL}\n"
+    "Note: Revaluation reserve, Cash flow hedge reserve, Capital contribution and Capital redemption reserve fund "
+    "are reported as 'Other reserves' sub-components in the source; Capital contribution never moves across all 5 "
+    "years shown (£266m throughout) so no separate movement row is needed for it. Each year's opening balance ties "
+    "exactly to the prior year's own closing balance.\n\n" + ENTITY_NOTE
+)
+
+EQUITY_HEADERS = ["Share capital", "Retained earnings", "Other equity instruments", "Revaluation reserve",
+                   "Cash flow hedge reserve", "Capital contribution", "Capital redemption reserve fund", "Total equity"]
+
+equity_changes_rows = [
+    ("TOTAL", "Balance at 1 January 2021", (197, 957, 300, 2, 21, 266, 58, 1801)),
+    ("DATA", "Profit for the year", (None, 398, None, None, None, None, None, 398)),
+    ("DATA", "Distribution on other equity instruments - AT1 coupon", (None, -25, None, None, None, None, None, -25)),
+    ("DATA", "Share repurchase", (-75, -250, None, None, None, None, 75, -250)),
+    ("DATA", "Remeasurement of the net defined benefit pension asset", (None, 3, None, None, None, None, None, 3)),
+    ("DATA", "Repayment of other equity instruments", (None, None, -300, None, None, None, None, -300)),
+    ("DATA", "Issuance of other equity instruments", (None, None, 150, None, None, None, None, 150)),
+    ("DATA", "Revaluation of property", (None, None, None, 1, None, None, None, 1)),
+    ("DATA", "Cash flow hedge reserve movement, net of tax", (None, None, None, None, -35, None, None, -35)),
+    ("TOTAL", "Balance at 31 December 2021", (122, 1083, 150, 3, -14, 266, 133, 1743)),
+    ("DATA", "Profit for the year", (None, 228, None, None, None, None, None, 228)),
+    ("DATA", "Dividend on ordinary shares", (None, -250, None, None, None, None, None, -250)),
+    ("DATA", "Distribution on other equity instruments - AT1 coupon", (None, -9, None, None, None, None, None, -9)),
+    ("DATA", "Remeasurement of the net defined benefit pension asset", (None, -3, None, None, None, None, None, -3)),
+    ("DATA", "Revaluation of property", (None, None, None, -1, None, None, None, -1)),
+    ("DATA", "Cash flow hedge reserve movement, net of tax", (None, None, None, None, -63, None, None, -63)),
+    ("TOTAL", "Balance at 31 December 2022", (122, 1049, 150, 2, -77, 266, 133, 1645)),
+    ("DATA", "Profit for the year", (None, 259, None, None, None, None, None, 259)),
+    ("DATA", "Dividend on ordinary shares", (None, -250, None, None, None, None, None, -250)),
+    ("DATA", "Distribution on other equity instruments - AT1 coupon", (None, -9, None, None, None, None, None, -9)),
+    ("DATA", "Revaluation of property", (None, None, None, -1, None, None, None, -1)),
+    ("DATA", "Cash flow hedge reserve movement, net of tax", (None, None, None, None, -5, None, None, -5)),
+    ("TOTAL", "Balance at 31 December 2023", (122, 1049, 150, 1, -82, 266, 133, 1639)),
+    ("DATA", "Profit for the year", (None, 133, None, None, None, None, None, 133)),
+    ("DATA", "Distribution on other equity instruments - AT1 coupon", (None, -9, None, None, None, None, None, -9)),
+    ("DATA", "Remeasurement of the net defined benefit pension asset", (None, 1, None, None, None, None, None, 1)),
+    ("DATA", "Other movements", (None, -3, None, None, None, None, None, -3)),
+    ("DATA", "Revaluation of property", (None, None, None, -1, None, None, None, -1)),
+    ("DATA", "Cash flow hedge reserve movement, net of tax", (None, None, None, None, 17, None, None, 17)),
+    ("TOTAL", "Balance at 31 December 2024", (122, 1171, 150, 0, -65, 266, 133, 1777)),
+    ("DATA", "(Loss) for the year", (None, -1, None, None, None, None, None, -1)),
+    ("DATA", "Distribution on other equity instruments - AT1 coupon", (None, -9, None, None, None, None, None, -9)),
+    ("DATA", "Other movements", (None, 1, None, None, None, None, None, 1)),
+    ("DATA", "Cash flow hedge reserve movement, net of tax", (None, None, None, None, 17, None, None, 17)),
+    ("TOTAL", "Balance at 31 December 2025", (122, 1162, 150, 0, -48, 266, 133, 1785)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Bank of Ireland (UK) Plc — Consolidated Statement of Changes in Equity",
+    subtitle="Consolidated Group basis, £m; chronological, oldest to newest. See source note at bottom.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+    source_height=200,
+)
+
+# ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
@@ -152,6 +350,60 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality / Credit Risk Disclosures
+# ---------------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    "Sources - Bank of Ireland (UK) Plc consolidated Group basis, loans and advances to customers at amortised "
+    "cost, £m, each year from its own primary report's IFRS 9 stage/product note (own-year gross carrying amount "
+    "and impairment loss allowance tables):\n"
+    f"FY2025: Annual Report 2025, p.111-113 (Note 19) - {AR2025_URL}\n"
+    f"FY2024: Annual Report 2024, p.111-113 (Note 19, prior-period comparative) - {AR2024_URL}\n"
+    f"FY2023: Annual Report 2023, p.114-115 (Note 18, printed) - {AR2023_URL}\n"
+    f"FY2022: Annual Report 2022, p.120-121 (Note 20, printed) - {AR2022_URL}\n"
+    f"FY2021: Annual Report 2021, p.128-130 (Note 20) - {AR2021_URL}\n"
+    "Note: by-product split (Residential mortgages / Non-property SME and corporate / Commercial property and "
+    "construction / Consumer) is disclosed at Group level for FY2022-FY2025 only; FY2021's Group-level table shows "
+    "only stage totals (a by-product split exists but only at Bank/solo level for FY2021, not reused here for a "
+    "Group-basis sheet) - by-product cells are blank for FY2021, the stage-level rows are complete for all 5 years. "
+    "FY2021's gross carrying amount (£16,503m) is ~£71m lower than the FY2022 report's restated FY2021 comparative "
+    "(£16,574m) - see the Balance Sheet sheet's note on the same reclassification; each year's own figures are used "
+    "here. Net loans (gross minus impairment loss allowance) tie exactly to the Balance Sheet's Loans and advances "
+    "to customers line for every year. Ratios are calculated here (not separately disclosed as ratios in the "
+    "source).\n\n" + ENTITY_NOTE
+)
+
+asset_quality_rows = [
+    ("SECTION", "Gross carrying amount by product", {}),
+    ("DATA", "Residential mortgages", {"FY2025": 10750, "FY2024": 10639, "FY2023": 9811, "FY2022": 9742}),
+    ("DATA", "Non-property SME and corporate", {"FY2025": 1157, "FY2024": 1278, "FY2023": 1306, "FY2022": 1355}),
+    ("DATA", "Commercial property and construction", {"FY2025": 207, "FY2024": 203, "FY2023": 216, "FY2022": 274}),
+    ("DATA", "Consumer", {"FY2025": 2684, "FY2024": 2159, "FY2023": 2966, "FY2022": 2831}),
+    ("SECTION", "Gross carrying amount by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 - 12 month ECL (not credit-impaired)", {"FY2025": 13409, "FY2024": 13113, "FY2023": 12501, "FY2022": 12615, "FY2021": 14769}),
+    ("DATA", "Stage 2 - Lifetime ECL (not credit-impaired)", {"FY2025": 1210, "FY2024": 901, "FY2023": 1502, "FY2022": 1288, "FY2021": 1208}),
+    ("DATA", "Stage 3 - Lifetime ECL (credit-impaired)", {"FY2025": 179, "FY2024": 265, "FY2023": 296, "FY2022": 299, "FY2021": 526}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 14798, "FY2024": 14279, "FY2023": 14299, "FY2022": 14202, "FY2021": 16503}),
+    ("SECTION", "Impairment loss allowance by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 - 12 month ECL (not credit-impaired)", {"FY2025": 22, "FY2024": 17, "FY2023": 40, "FY2022": 40, "FY2021": 47}),
+    ("DATA", "Stage 2 - Lifetime ECL (not credit-impaired)", {"FY2025": 30, "FY2024": 23, "FY2023": 66, "FY2022": 44, "FY2021": 46}),
+    ("DATA", "Stage 3 - Lifetime ECL (credit-impaired)", {"FY2025": 42, "FY2024": 48, "FY2023": 45, "FY2022": 100, "FY2021": 85}),
+    ("TOTAL", "Total impairment loss allowance", {"FY2025": 94, "FY2024": 88, "FY2023": 151, "FY2022": 184, "FY2021": 178}),
+    ("TOTAL", "Net loans and advances to customers", {"FY2025": 14704, "FY2024": 14191, "FY2023": 14148, "FY2022": 14018, "FY2021": 16325}),
+    ("SECTION", "Ratios (calculated)", {}),
+    ("DATA", "ECL coverage ratio (total allowance / total gross carrying amount)", {"FY2025": "0.64%", "FY2024": "0.62%", "FY2023": "1.06%", "FY2022": "1.30%", "FY2021": "1.08%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross carrying amount)", {"FY2025": "1.21%", "FY2024": "1.86%", "FY2023": "2.07%", "FY2022": "2.11%", "FY2021": "3.19%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross)", {"FY2025": "23.46%", "FY2024": "18.11%", "FY2023": "15.20%", "FY2022": "33.44%", "FY2021": "16.16%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Bank of Ireland (UK) Plc — Asset Quality / Credit Risk Disclosures",
+    subtitle="Consolidated Group basis, loans and advances to customers at amortised cost, £m. See source note at bottom.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    source_height=220,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 / capital metric sheets
 # ---------------------------------------------------------------
 CAP_PAGE = {"FY2025": "55", "FY2024": "57-58", "FY2023": "54-55", "FY2022": "55-56", "FY2021": "60"}
@@ -213,6 +465,27 @@ metric(
     CAP_PAGE,
 )
 
+RWA_BREAKDOWN_SOURCES = (
+    p3_sources(CAP_PAGE) + "\n\nNote: no formal Pillar 3 KM1/OV1-style template has been published at this UK-"
+    "entity level since FY2020 (see the Cash Flow Statement sheet's entity note) - the Annual Report's Capital "
+    "management section discloses only the aggregate Total risk weighted assets figure, not a category breakdown "
+    "(credit risk / counterparty credit risk / market risk / operational risk). Checked directly against all 5 "
+    "years' Capital management sections - genuinely not publicly disclosed at category level, not merely omitted "
+    "here. The Total row ties exactly to the Total RWAs sheet for every year."
+)
+
+rwa_breakdown_rows = [
+    ("DATA", "Category breakdown (credit risk / market risk / operational risk)", {"FY2025": "Not publicly disclosed"}),
+    ("TOTAL", "Total risk weighted assets", {"FY2025": 8180, "FY2024": 7767, "FY2023": 7939, "FY2022": 7699, "FY2021": 8686}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Bank of Ireland (UK) Plc — RWA Breakdown",
+    subtitle="Consolidated Group basis, £m. Category breakdown not publicly disclosed - see source note.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+)
+
 metric(
     "Leverage Ratio", "£m / %",
     [
@@ -253,6 +526,26 @@ metric(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 19865, "FY2024": 18611, "FY2023": 18832, "FY2022": 18871, "FY2021": 22705}),
+        ("Loans and advances to customers", {"FY2025": 14704, "FY2024": 14191, "FY2023": 14148, "FY2022": 14018, "FY2021": 16325}),
+        ("Customer accounts", {"FY2025": 12765, "FY2024": 12223, "FY2023": 11815, "FY2022": 12222, "FY2021": 15753}),
+        ("Total equity", {"FY2025": 1785, "FY2024": 1777, "FY2023": 1639, "FY2022": 1645, "FY2021": 1743}),
+    ],
+    balance_sheet_unit="£m",
+    income_statement_totals=[
+        ("Total operating income", {"FY2025": 476, "FY2024": 498, "FY2023": 571, "FY2022": 533, "FY2021": 535}),
+        ("Operating expenses", {"FY2025": -485, "FY2024": -382, "FY2023": -222, "FY2022": -247, "FY2021": -272}),
+        ("Profit/(loss) for the year", {"FY2025": -1, "FY2024": 133, "FY2023": 259, "FY2022": 228, "FY2021": 398}),
+    ],
+    income_statement_unit="£m",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 1777, "FY2024": 1639, "FY2023": 1645, "FY2022": 1743, "FY2021": 1801}),
+        ("Total comprehensive income/(loss) for the year", {"FY2025": 16, "FY2024": 150, "FY2023": 253, "FY2022": 161, "FY2021": 366}),
+        ("Other equity movements, net", {"FY2025": -8, "FY2024": -12, "FY2023": -259, "FY2022": -259, "FY2021": -424}),
+        ("Closing equity", {"FY2025": 1785, "FY2024": 1777, "FY2023": 1639, "FY2022": 1645, "FY2021": 1743}),
+    ],
+    equity_changes_unit="£m",
     cash_flow_totals=[
         ("Net cash flow from operating activities", {"FY2025": 730, "FY2024": -888, "FY2023": -14, "FY2022": -1249, "FY2021": -1155}),
         ("Cash flows from investing activities", {"FY2025": -437, "FY2024": 659, "FY2023": 27, "FY2022": 196, "FY2021": 3013}),

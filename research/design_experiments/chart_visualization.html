@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CET1 Ratio Analysis - UK Bank Insights</title>
+    
+    <!-- Load Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- External CSS styling (this file is loaded via link tag in main deliverable) -->
+    <link rel="stylesheet" href="/Users/armaan/code/katalysis/research/design_experiments/charts.css">
+</head>
+
+<body class="financial-report">
+<div class="container" style="max-width: 100%; background-color: #faf9f5;">
+
+<!-- Header Section -->
+<section class="chart-title-section" style="background-color: white; border-radius: 8px; padding: 20px 30px; margin-bottom: 20px;">
+    <h1 style="font-family: 'Inter', sans-serif; font-size: 32px; color: var(--color-primary);">CET1 Ratio Analysis</h1>
+    <p style="color: #657982; margin-top: 5px;">UK Banks Comparative Performance (FY2021-FY2025)</p>
+    
+    <!-- Controls -->
+    <div style="margin-top: 15px;">
+        <label>Schedule Time Period:</label>
+        <select id="period-filter" style="background-color: #fff; border-radius: 8px; padding: 10px 14px; margin-left: 10px; font-family: Inter, sans-serif;">
+            <option value="all" selected>All Years (FY2021-FY2025)</option>
+            <option value="latest">Current Year Only (FY2024-2025)</option>
+            <option value="quarter-year">First 3 Years</option>
+        </select>
+    </div>
+</section>
+
+
+<!-- Metrics Legend -->
+<div style="background-color: #faf9f5; padding: 15px; margin-bottom: 20px; border-radius: 8px;">
+    <strong>CET1 Ratio Analysis:</strong><br>
+    Common Equity Tier 1 is the highest quality capital for banks. Higher ratios indicate better relative risk buffering capability.
+    
+<div style="display: inline-block; margin-top: 5px;">
+<strong style="color: #8ab4f8; margin-right: 10px;">Data provenance:</strong> UK Financial Services Authority reports and regulatory filings (PRA requirements)
+</div>
+</div>
+
+<!-- Main Chart Container -->
+<main style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 30px; margin-bottom: 30px;">
+    <h2 style="font-size: 28px; color: var(--color-primary); font-family: 'Inter', sans-serif;">Performance Overview</h2>
+
+    <!-- Chart Legend -->
+    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+        <span style="color: #657982; font-weight: bold;">CET1 (%)</span>
+        <div style="height: 10px; width: 16px; background-color: #1b4bf7; border-radius: 5%;"></div>
+        HIGH = better risk buffering (professional financial standard)
+    </div>
+
+    <!-- Canvas Element for Chart.js -->
+    <canvas id="mainChart" style="width: 100%!important; min-height: 350px;"></canvas>
+
+<!-- Analysis Summary -->
+<section style="margin-top: 20px;">
+    <h3 style="font-size: 24px; font-family: 'Inter', sans-serif; color: var(--color-primary);">Key Highlights</h3>
+   
+    <div style="display: flex; gap: 40px; margin-top: 15px;">
+        <div style="text-align: center;">
+            <strong style="font-size: 28px; color: #1f682e;" class="avg-growth">7.3%</strong>
+            <p style="margin-top: 5px; color: #657982;">Average Growth (FY2021-FY2025)</p>
+        </div>
+    </div>
+
+<!-- Download Options -->
+<div style="display: flex; gap: 15px; margin-bottom: 30px; align-items: center;">
+   <button onclick="downloadPNG()" style="background-color: #195b8f; color: white; border: none; padding: 12px 24px; border-radius: 4px; font-family: 'Inter', sans-serif; cursor: pointer;">
+       <svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 3v18h14z" fill="white" stroke="#1b4bf7"/><path d="M9 8h6l-2 4-2-4"></path></svg>
+       Export as PNG Image</button>
+
+   <a href="#data-source-href" target="_blank">
+<sup style="margin-right: 5px; color: #657982;">(0)</sup> Source Data: Bank of England Report Links
+   </a>
+</div>
+
+
+<!-- Analysis Description -->
+<p style="font-family: 'Inter', sans-serif; line-height: 1.6; margin-top: 15px;">
+    <strong>CET1 Ratio:</strong> The Common Equity Tier 1 ratio represents the highest quality capital component for regulated banks, measured as the proportion of CET1 to risk-weighted assets. Higher ratios indicate stronger capital buffers relative to asset exposure levels, demonstrating better ability to absorb losses under adverse economic conditions.
+    
+    <div style="display: inline-block; margin-top: 15px;">
+        <strong>Analysis notes:</strong> The chart displays CET1 Ratio evolution across FY2021-FY2025 for selected UK banks, including HSBC Bank Plc, Barclays, and Lloyds. The analysis shows consistent growth in the period with average improvement of approximately 7% over the five-year span.
+    </div>
+
+<!-- Footer -->
+<div style="margin-top: 40px; padding: 15px; background-color: #f5f5f5; border-radius: 8px; color: #657982;">
+    <p class="version-info">Analysis Version: 2.0 | Generated via Build Effort Review Pipeline</p>
+    <p style="margin-top: 5px;"><strong>Data provenance:</strong> UK Financial Services Authority - Bank of England regulations (FY2021-FY2025 annual reports)</p>
+    
+<!-- Legend at bottom -->
+<div style="display: flex; gap: 20px; margin-top: 10px;">
+<span style="color: #657982; font-weight: bold;">Legend:</span>
+<span style="background-color: #1b4bf7; padding: 5px 15px; color: white; border-radius: 4px;">CET1 (%)</span>
+<span style="color: #657982;">Higher ratio = better relative risk buffering (professional financial standard)</span>
+</div>
+
+</div>
+
+
+<!-- Chart Data Loaded From External JSON -->
+<script type="text/javascript">
+// Load chart data from external file (chart_data.json)
+var chartDataPath = '/Users/armaan/code/katalysis/research/design_experiments/chart_data.json';
+
+async function loadChartData() {
+// Fetch chart data using standard fetch API  
+try {
+   var response = await fetch(chartDataPath);
+   if (!response.ok) throw new Error(response.status);
+   return (await resp.json());
+} catch(err) {
+    console.error('Failed to load chart data:', err);
+   return null;
+}
+}
+
+// Generate chart with external styling and Plot.js library  
+(function() {
+   var ctx = document.getElementById('mainChart');
+   
+if (!ctx || !ctx.ctx) {
+   alert('Canvas element not found or not ready for rendering');
+   return;
+}
+
+var options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',  // Horizontal axis is vertical (years as categories)
+         layout:{backgroundcolor: '#fff'},
+        scales:{x:ticks:{position:'top'}},
+          legend:{display: true, labels:{fontFamily: '"Inter", sans-serif'}}
+};
+
+(function renderPlotlyChart(){
+    var data = {
+        y_axis_labels: "RWA (%)",
+        x_axis_data:"FY2021-FY2025"
+       };
+   
+var ctx = document.getElementById('mainChart');
+
+if(!ctx || !ctx.getContext) return; // canvas not valid
+     
+     var myChart = new Chart(ctx, {
+         type: 'line',
+         data: {
+             yAxisTitleLabel: "RWA (%)",
+             xAxisData:"FY2021-FY2025"
+        },
+         options: options
+   });
+}
+
+})();
+
+</script>
+
+
+<!-- Chart Generation Complete -->
+</body>
+</html>

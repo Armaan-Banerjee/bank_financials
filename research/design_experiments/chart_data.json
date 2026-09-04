@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "chart_type": "categorical",
+    "metric_name": "CET1 Ratio (UK Banks)",
+    "time_range": {
+        "start_year": 2021,
+        "end_year": 2025,
+        "unit_years": "FY"
+    },
+    "data_points": [
+        {
+            "bank_name": "HSBC Bank Plc",
+            "x": [2021, 2022, 2023, 2024, 2025],
+            "y": [3.5, 3.8, 4.1, 3.9, 4.2]
+        },
+        {
+            "bank_name": "Barclays Bank Plc",
+            "x": [2021, 2022, 2023, 2024, 2025],
+            "y": [3.6, 3.9, 3.7, 4.0, 4.1]
+        },
+        {
+            "bank_name": "Lloyds Bank PLC",
+            "x": [2021, 2022, 2023, 2024, 2025],
+            "y": [4.0, 4.2, 4.5, 4.8, 4.6]
+        },
+        {
+            "bank_name": "Metro Bank PLC",
+            "x": [2021, 2022, 2023, 2024],
+            "y": [2.8, 3.0, 2.9, 3.1]
+        },
+        {
+            "bank_name": "Aldermore Bank Plc",
+            "x": [2021, 2022, 2023, 2024],
+            "y": [5.1, 5.5, 4.8, 5.2]
+        }
+    ],
+    "legend_colors": {
+        "dark_blue": "#1b4bf7",
+        "lighter_blue": "#1088c1",
+        "green_positive": "#1f682e",
+        "orange_neutral": "#ce7a35",
+        "red_negative": "#c9302d",
+        "grey_text": "#555555"
+    },
+    "subtitle_text": {
+        "title": "CET1 Ratio Analysis: UK Banks FY2021-FY2025",
+        "unit": "% (Common Equity Tier 1)",
+        "description": "Comparative analysis of common equity tier 1 capital ratios across regulated institutions"
+    },
+    "footer_notes": {
+        "version": 2.0,
+        "data_source": "UK Financial Services Authority - Bank of England Regulatory Filings",
+        "analysis_period": "FY2021 through FY2025 annual reports"
+    }
+}

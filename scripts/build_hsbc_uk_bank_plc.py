@@ -66,6 +66,208 @@ def p3_sources(page="5"):
 
 bw = BankWorkbook(bank_name="HSBC UK Bank plc", years=YEARS, header_color="DB0011")
 
+STATEMENTS_ENTITY_NOTE = (
+    "ENTITY NOTE: figures are HSBC UK Bank plc's own Consolidated statements (the ring-fenced retail/SME "
+    "banking entity, distinct from HSBC Bank plc and HSBC Innovation Bank - see the entity note on the "
+    "Cash Flow Statement sheet), £m, each year's own originally-published figures (not later restated "
+    "comparatives). Sourced from each year's own Annual Report and Accounts:\n"
+    f"FY2025 & FY2024: HSBC UK Bank plc Annual Report and Accounts 2025 - {AR2025_URL}\n"
+    f"FY2023 & FY2022: HSBC UK Bank plc Annual Report and Accounts 2023 - {AR2023_URL}\n"
+    f"FY2021: HSBC UK Bank plc Annual Report and Accounts 2021 - {AR2021_URL}\n\n"
+    + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+bs_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 40369, "FY2024": 52276, "FY2023": 65719, "FY2022": 94407, "FY2021": 112478}),
+    ("DATA", "Items in the course of collection from other banks", {"FY2023": 284, "FY2022": 353, "FY2021": 299}),
+    ("DATA", "Financial assets mandatorily measured at fair value through profit or loss", {"FY2025": 175, "FY2024": 174, "FY2023": 135, "FY2022": 108, "FY2021": 79}),
+    ("DATA", "Derivatives", {"FY2025": 167, "FY2024": 298, "FY2023": 178, "FY2022": 546, "FY2021": 64}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 6636, "FY2024": 7263, "FY2023": 7980, "FY2022": 6357, "FY2021": 1914}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 231223, "FY2024": 217604, "FY2023": 211887, "FY2022": 204143, "FY2021": 195526}),
+    ("DATA", "Reverse repurchase agreements - non-trading", {"FY2025": 21560, "FY2024": 11776, "FY2023": 7686, "FY2022": 7406, "FY2021": 7988}),
+    ("DATA", "Financial investments", {"FY2025": 41638, "FY2024": 37801, "FY2023": 26315, "FY2022": 16092, "FY2021": 14377}),
+    ("DATA", "Prepayments, accrued income and other assets", {"FY2025": 9736, "FY2024": 9303, "FY2023": 8321, "FY2022": 8762, "FY2021": 9136}),
+    ("DATA", "Current tax assets", {"FY2025": 3}),
+    ("DATA", "Interests in joint ventures", {"FY2025": 10, "FY2024": 9, "FY2023": 8, "FY2022": 9, "FY2021": 9}),
+    ("DATA", "Goodwill and intangible assets", {"FY2025": 4413, "FY2024": 4373, "FY2023": 4363, "FY2022": 4258, "FY2021": 4193}),
+    ("TOTAL", "Total assets", {"FY2025": 355930, "FY2024": 340877, "FY2023": 332876, "FY2022": 342441, "FY2021": 346063}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {"FY2025": 7709, "FY2024": 11144, "FY2023": 10843, "FY2022": 10721, "FY2021": 11180}),
+    ("DATA", "Customer accounts", {"FY2025": 288756, "FY2024": 280366, "FY2023": 268345, "FY2022": 281095, "FY2021": 281870}),
+    ("DATA", "Repurchase agreements - non-trading", {"FY2025": 6276, "FY2024": 420, "FY2023": 4652, "FY2022": 9333, "FY2021": 10438}),
+    ("DATA", "Items in the course of transmission to other banks", {"FY2023": 411, "FY2022": 308, "FY2021": 151}),
+    ("DATA", "Derivatives", {"FY2025": 162, "FY2024": 107, "FY2023": 108, "FY2022": 304, "FY2021": 292}),
+    ("DATA", "Debt securities in issue", {"FY2025": 3019, "FY2024": 2044, "FY2023": 1988, "FY2022": 1299, "FY2021": 900}),
+    ("DATA", "Accruals, deferred income and other liabilities", {"FY2025": 3524, "FY2024": 3476, "FY2023": 4124, "FY2022": 3543, "FY2021": 1674}),
+    ("DATA", "Current tax liabilities", {"FY2025": 218, "FY2024": 449, "FY2023": 276, "FY2022": 173, "FY2021": 802}),
+    ("DATA", "Provisions", {"FY2025": 264, "FY2024": 265, "FY2023": 350, "FY2022": 424, "FY2021": 495}),
+    ("DATA", "Deferred tax liabilities", {"FY2025": 1318, "FY2024": 949, "FY2023": 1111, "FY2022": 666, "FY2021": 1969}),
+    ("DATA", "Subordinated liabilities", {"FY2025": 16423, "FY2024": 15686, "FY2023": 14598, "FY2022": 12349, "FY2021": 12487}),
+    ("TOTAL", "Total liabilities", {"FY2025": 327669, "FY2024": 314906, "FY2023": 306806, "FY2022": 320215, "FY2021": 322258}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Called up share capital", {}),
+    ("DATA", "Share premium account", {"FY2023": 9015, "FY2022": 9015, "FY2021": 9015}),
+    ("DATA", "Other equity instruments", {"FY2025": 2691, "FY2024": 2196, "FY2023": 2196, "FY2022": 2196, "FY2021": 2196}),
+    ("DATA", "Other reserves", {"FY2025": 2387, "FY2024": 1579, "FY2023": 7226, "FY2022": 6121, "FY2021": 7657}),
+    ("DATA", "Retained earnings", {"FY2025": 23163, "FY2024": 22136, "FY2023": 7573, "FY2022": 4834, "FY2021": 4877}),
+    ("TOTAL", "Total shareholders' equity", {"FY2025": 28241, "FY2024": 25911, "FY2023": 26010, "FY2022": 22166, "FY2021": 23745}),
+    ("DATA", "Non-controlling interests", {"FY2025": 20, "FY2024": 60, "FY2023": 60, "FY2022": 60, "FY2021": 60}),
+    ("TOTAL", "Total equity", {"FY2025": 28261, "FY2024": 25971, "FY2023": 26070, "FY2022": 22226, "FY2021": 23805}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 355930, "FY2024": 340877, "FY2023": 332876, "FY2022": 342441, "FY2021": 346063}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="HSBC UK Bank plc — Consolidated Balance Sheet",
+    subtitle="HSBC UK Bank plc consolidated, £m. Called up share capital is nil/negligible throughout (rounds to £0m). See source note at bottom.",
+    rows=bs_rows,
+    sources_text=(
+        "Sources - HSBC UK Bank plc's own Consolidated balance sheet, £m:\n"
+        f"FY2025 & FY2024: Annual Report and Accounts 2025, p.78 - {AR2025_URL}\n"
+        f"FY2023 & FY2022: Annual Report and Accounts 2023, p.80 - {AR2023_URL}\n"
+        f"FY2021: Annual Report and Accounts 2021, p.75 - {AR2021_URL}\n\n"
+        "Presentation note: 'Items in the course of collection from other banks' and 'Items in the course of "
+        "transmission to other banks' only appear as separate lines FY2023/FY2022/FY2021 - removed from the "
+        "balance sheet's own presentation from FY2024 onward. 'Current tax assets' only appears FY2025 (nil in "
+        "other years, per each year's own report). All Total rows reconcile exactly (Total assets = Total "
+        "liabilities + Total equity for every year)."
+        + "\n\n" + STATEMENTS_ENTITY_NOTE
+    ),
+    first_col_width=68,
+    source_height=200,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+pl_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 14860, "FY2024": 14789, "FY2023": 12915, "FY2022": 7592, "FY2021": 5072}),
+    ("DATA", "Interest expense", {"FY2025": -6210, "FY2024": -6705, "FY2023": -5128, "FY2022": -1389, "FY2021": -422}),
+    ("TOTAL", "Net interest income", {"FY2025": 8650, "FY2024": 8084, "FY2023": 7787, "FY2022": 6203, "FY2021": 4650}),
+    ("DATA", "Fee income", {"FY2025": 1621, "FY2024": 1605, "FY2023": 1554, "FY2022": 1493, "FY2021": 1329}),
+    ("DATA", "Fee expense", {"FY2025": -335, "FY2024": -297, "FY2023": -270, "FY2022": -248, "FY2021": -249}),
+    ("TOTAL", "Net fee income", {"FY2025": 1286, "FY2024": 1308, "FY2023": 1284, "FY2022": 1245, "FY2021": 1080}),
+    ("DATA", "Net income from financial instruments held for trading or managed on a fair value basis", {"FY2025": 430, "FY2024": 454, "FY2023": 414, "FY2022": 384, "FY2021": 318}),
+    ("DATA", "Changes in fair value of other financial instruments mandatorily measured at FVTPL", {"FY2021": 15}),
+    ("DATA", "Gains less losses from financial investments", {"FY2021": 101}),
+    ("DATA", "Gain on acquisition of subsidiary (SVB UK)", {"FY2023": 1307}),
+    ("DATA", "Other operating income", {"FY2025": 102, "FY2024": 133, "FY2023": 15, "FY2022": 120, "FY2021": 86}),
+    ("TOTAL", "Net operating income before change in expected credit losses", {"FY2025": 10468, "FY2024": 9979, "FY2023": 10807, "FY2022": 7952, "FY2021": 6250}),
+    ("DATA", "Change in expected credit losses and other credit impairment charges", {"FY2025": -539, "FY2024": -315, "FY2023": -421, "FY2022": -482, "FY2021": 989}),
+    ("TOTAL", "Net operating income", {"FY2025": 9929, "FY2024": 9664, "FY2023": 10386, "FY2022": 7470, "FY2021": 7239}),
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Employee compensation and benefits", {"FY2025": -1205, "FY2024": -1128, "FY2023": -1007, "FY2022": -1079, "FY2021": -1022}),
+    ("DATA", "General and administrative expenses", {"FY2025": -2610, "FY2024": -2442, "FY2023": -2265, "FY2022": -2271, "FY2021": -2316}),
+    ("DATA", "Depreciation and impairment of PP&E and right-of-use assets", {"FY2025": -105, "FY2024": -99, "FY2023": -116, "FY2022": -164, "FY2021": -174}),
+    ("DATA", "Amortisation and impairment of intangible assets", {"FY2025": -390, "FY2024": -348, "FY2023": -319, "FY2022": -318, "FY2021": -247}),
+    ("TOTAL", "Total operating expenses", {"FY2025": -4310, "FY2024": -4017, "FY2023": -3707, "FY2022": -3832, "FY2021": -3759}),
+    ("TOTAL", "Profit before tax", {"FY2025": 5619, "FY2024": 5647, "FY2023": 6679, "FY2022": 3638, "FY2021": 3480}),
+    ("DATA", "Tax expense", {"FY2025": -1517, "FY2024": -1508, "FY2023": -1425, "FY2022": -762, "FY2021": -1112}),
+    ("TOTAL", "Profit for the year", {"FY2025": 4102, "FY2024": 4139, "FY2023": 5254, "FY2022": 2876, "FY2021": 2368}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Debt instruments at fair value through OCI", {"FY2025": 73, "FY2024": -35, "FY2023": 66, "FY2022": -300, "FY2021": -89}),
+    ("DATA", "Cash flow hedges", {"FY2025": 734, "FY2024": -365, "FY2023": 1031, "FY2022": -1234, "FY2021": -91}),
+    ("DATA", "Remeasurement of defined benefit asset/liability", {"FY2025": -80, "FY2024": -285, "FY2023": -128, "FY2022": -1023, "FY2021": -510}),
+    ("DATA", "Exchange differences", {"FY2025": 1, "FY2024": 1, "FY2023": 8, "FY2022": -2, "FY2021": -1}),
+    ("TOTAL", "Other comprehensive income/(expense) for the year, net of tax", {"FY2025": 728, "FY2024": -684, "FY2023": 977, "FY2022": -2559, "FY2021": -691}),
+    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 4830, "FY2024": 3455, "FY2023": 6231, "FY2022": 317, "FY2021": 1677}),
+]
+
+bw.add_income_statement_sheet(
+    title="HSBC UK Bank plc — Consolidated Income Statement & Statement of Comprehensive Income",
+    subtitle="HSBC UK Bank plc consolidated, £m. See source note at bottom.",
+    rows=pl_rows,
+    sources_text=(
+        "Sources - HSBC UK Bank plc's own Consolidated income statement / statement of comprehensive income, £m:\n"
+        f"FY2025 & FY2024: Annual Report and Accounts 2025, p.76-77 - {AR2025_URL}\n"
+        f"FY2023 & FY2022: Annual Report and Accounts 2023, p.78 - {AR2023_URL}\n"
+        f"FY2021: Annual Report and Accounts 2021, p.73 - {AR2021_URL}\n\n"
+        "Presentation note: FY2023's 'Gain on acquisition of subsidiary' (£1,307m, provisional gain on the "
+        "acquisition of Silicon Valley Bank UK, March 2023) is unique to that year. FY2021's 'Changes in fair "
+        "value of other financial instruments mandatorily measured at FVTPL' and 'Gains less losses from "
+        "financial investments' lines were folded into other income lines from FY2022 onward and don't appear "
+        "as separate lines in later years. OCI detail is disclosed in-table for all 5 years; Total comprehensive "
+        "income for the year is comparable across all years and ties exactly to Profit for the year + OCI total."
+        + "\n\n" + STATEMENTS_ENTITY_NOTE
+    ),
+    first_col_width=80,
+    source_height=210,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQ_HEADERS = ["Called up share capital and share premium", "Other equity instruments", "Retained earnings",
+              "Financial assets at FVOCI reserve", "Cash flow hedging reserve", "Group reorganisation reserve",
+              "Total shareholders' equity", "Non-controlling interests", "Total equity"]
+
+eq_rows = [
+    ("TOTAL", "At 1 Jan 2021 (FY2021's own opening)", (9015, 2196, 3749, 146, 1, 7691, 22798, 60, 22858)),
+    ("DATA", "Profit for the year", (None, None, 2363, None, None, None, 2363, 5, 2368)),
+    ("DATA", "Other comprehensive income (net of tax)", (None, None, -510, -90, -91, None, -691, None, -691)),
+    ("DATA", "Total comprehensive income for the year", (None, None, 1853, -90, -91, None, 1672, 5, 1677)),
+    ("DATA", "Dividends to shareholders", (None, None, -747, None, None, None, -747, -5, -752)),
+    ("DATA", "Other movements (pension asset transfers, share-based payments)", (None, None, 22, None, None, None, 22, None, 22)),
+    ("TOTAL", "At 31 Dec 2021 / 1 Jan 2022", (9015, 2196, 4877, 56, -90, 7691, 23745, 60, 23805)),
+    ("DATA", "Profit for the year", (None, None, 2871, None, None, None, 2871, 5, 2876)),
+    ("DATA", "Other comprehensive income (net of tax)", (None, None, -1023, -302, -1234, None, -2559, None, -2559)),
+    ("DATA", "Total comprehensive income for the year", (None, None, 1848, -302, -1234, None, 312, 5, 317)),
+    ("DATA", "Dividends to shareholders", (None, None, -1929, None, None, None, -1929, -5, -1934)),
+    ("DATA", "Other movements (pension asset transfers, share-based payments)", (None, None, 38, None, None, None, 38, None, 38)),
+    ("TOTAL", "At 31 Dec 2022 / 1 Jan 2023", (9015, 2196, 4834, -246, -1324, 7691, 22166, 60, 22226)),
+    ("DATA", "Profit for the year", (None, None, 5249, None, None, None, 5249, 5, 5254)),
+    ("DATA", "Other comprehensive income (net of tax)", (None, None, -128, 74, 1031, None, 977, None, 977)),
+    ("DATA", "Total comprehensive income for the year", (None, None, 5121, 74, 1031, None, 6226, 5, 6231)),
+    ("DATA", "Dividends to shareholders", (None, None, -2411, None, None, None, -2411, -5, -2416)),
+    ("DATA", "Other movements (pension asset transfers, share-based payments)", (None, None, 29, None, None, None, 29, None, 29)),
+    ("TOTAL", "At 31 Dec 2023 / 1 Jan 2024", (9015, 2196, 7573, -172, -293, 7691, 26010, 60, 26070)),
+    ("DATA", "Profit for the year", (None, None, 4134, None, None, None, 4134, 5, 4139)),
+    ("DATA", "Other comprehensive income (net of tax)", (None, None, -285, -34, -365, None, -684, None, -684)),
+    ("DATA", "Total comprehensive income for the year", (None, None, 3849, -34, -365, None, 3450, 5, 3455)),
+    ("DATA", "Dividends to shareholders", (None, None, -3564, None, None, None, -3564, -5, -3569)),
+    ("DATA", "Share premium reclassification to retained earnings", (-9015, None, 9015, None, None, None, 0, None, 0)),
+    ("DATA", "Capitalisation of Group reorganisation reserve through bonus share issuance", (5248, None, None, None, None, -5248, 0, None, 0)),
+    ("DATA", "Cancellation of bonus shares", (-5248, None, 5248, None, None, None, 0, None, 0)),
+    ("DATA", "Other movements (tax credit on share-based payments, pension asset transfers)", (None, None, 15, None, None, None, 15, None, 15)),
+    ("TOTAL", "At 31 Dec 2024 / 1 Jan 2025", (0, 2196, 22136, -206, -658, 2443, 25911, 60, 25971)),
+    ("DATA", "Profit for the year", (None, None, 4097, None, None, None, 4097, 5, 4102)),
+    ("DATA", "Other comprehensive income (net of tax)", (None, None, -80, 74, 734, None, 728, None, 728)),
+    ("DATA", "Total comprehensive income for the year", (None, None, 4017, 74, 734, None, 4825, 5, 4830)),
+    ("DATA", "Issue of other equity instruments", (None, 495, None, None, None, None, 495, None, 495)),
+    ("DATA", "Dividends to shareholders", (None, None, -3023, None, None, None, -3023, -5, -3028)),
+    ("DATA", "Other movements (tax credit on share-based payments, repayment of other equity instruments to NCI)", (None, None, 33, None, None, None, 33, -40, -7)),
+    ("TOTAL", "At 31 Dec 2025", (0, 2691, 23163, -132, 76, 2443, 28241, 20, 28261)),
+]
+
+bw.add_equity_changes_sheet(
+    title="HSBC UK Bank plc — Consolidated Statement of Changes in Equity",
+    subtitle=(
+        "Chronological roll-forward, oldest to newest, £m. Equity reconciliation ladder confirmed: each year's "
+        "own closing balance ties exactly to the next year's own opening balance and to that year's own Balance "
+        "Sheet Total equity - zero plug rows needed anywhere across all 5 years. During Q4 2024, HSBC UK Bank "
+        "plc converted £5.2bn of its Group reorganisation reserve and £9.0bn of its share premium account into "
+        "retained earnings via a bonus share issuance and cancellation (Note 23) - a real, disclosed internal "
+        "restructuring, not an error. See source note at bottom."
+    ),
+    headers=EQ_HEADERS,
+    rows=eq_rows,
+    sources_text=(
+        "Sources - HSBC UK Bank plc's own Consolidated statement of changes in equity, £m:\n"
+        f"FY2025 & FY2024: Annual Report and Accounts 2025, p.79 - {AR2025_URL}\n"
+        f"FY2023 & FY2022: Annual Report and Accounts 2023, p.81 - {AR2023_URL}\n"
+        f"FY2021: Annual Report and Accounts 2021, p.77 - {AR2021_URL}\n\n"
+        + STATEMENTS_ENTITY_NOTE
+    ),
+    first_col_width=58,
+    source_height=180,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -129,6 +331,51 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+aq_rows = [
+    ("SECTION", "Loans and advances to customers at amortised cost, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 - gross carrying amount", {"FY2025": 210641, "FY2024": 180408, "FY2023": 167396, "FY2022": 154818, "FY2021": 174917}),
+    ("DATA", "Stage 2 - gross carrying amount", {"FY2025": 18642, "FY2024": 35152, "FY2023": 42286, "FY2022": 46693, "FY2021": 18436}),
+    ("DATA", "Stage 3 - gross carrying amount", {"FY2025": 3453, "FY2024": 3532, "FY2023": 3909, "FY2022": 4521, "FY2021": 4008}),
+    ("DATA", "POCI - gross carrying amount", {"FY2023": 0, "FY2022": 23, "FY2021": 20}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 232736, "FY2024": 219092, "FY2023": 213591, "FY2022": 206055, "FY2021": 197381}),
+    ("DATA", "Stage 1 - allowance for ECL", {"FY2025": -284, "FY2024": -275, "FY2023": -286, "FY2022": -248, "FY2021": -315}),
+    ("DATA", "Stage 2 - allowance for ECL", {"FY2025": -477, "FY2024": -565, "FY2023": -755, "FY2022": -941, "FY2021": -692}),
+    ("DATA", "Stage 3 - allowance for ECL", {"FY2025": -752, "FY2024": -648, "FY2023": -663, "FY2022": -722, "FY2021": -843}),
+    ("DATA", "POCI - allowance for ECL", {"FY2023": 0, "FY2022": -1, "FY2021": -5}),
+    ("TOTAL", "Total allowance for ECL", {"FY2025": -1513, "FY2024": -1488, "FY2023": -1704, "FY2022": -1912, "FY2021": -1855}),
+    ("TOTAL", "Net loans and advances to customers", {"FY2025": 231223, "FY2024": 217604, "FY2023": 211887, "FY2022": 204143, "FY2021": 195526}),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "Stage 3 as % of total gross carrying amount", {"FY2025": "1.5%", "FY2024": "1.6%", "FY2023": "1.8%", "FY2022": "2.2%", "FY2021": "2.0%"}),
+    ("DATA", "ECL coverage - overall (total allowance / total gross)", {"FY2025": "0.7%", "FY2024": "0.7%", "FY2023": "0.8%", "FY2022": "0.9%", "FY2021": "0.9%"}),
+    ("DATA", "ECL coverage - Stage 3 (Stage 3 allowance / Stage 3 gross)", {"FY2025": "21.8%", "FY2024": "18.3%", "FY2023": "17.0%", "FY2022": "16.0%", "FY2021": "21.0%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="HSBC UK Bank plc — Asset Quality",
+    subtitle="Loans and advances to customers at amortised cost, by IFRS 9 stage, £m. Net figures tie exactly to the Balance Sheet's own 'Loans and advances to customers' line every year. See source note at bottom.",
+    rows=aq_rows,
+    sources_text=(
+        "Sources - HSBC UK Bank plc's own 'Summary of credit risk by stage distribution and ECL coverage by "
+        "industry sector' table (Risk review section), £m:\n"
+        f"FY2025: Annual Report and Accounts 2025, p.26 - {AR2025_URL}\n"
+        f"FY2024: Annual Report and Accounts 2024, p.30 - {AR2024_URL}\n"
+        f"FY2023: Annual Report and Accounts 2023, p.29 - {AR2023_URL}\n"
+        f"FY2022: Annual Report and Accounts 2023, p.30 (FY2022 comparative column, no separate FY2022-vintage "
+        f"report needed - same table format) - {AR2023_URL}\n"
+        f"FY2021: Annual Report and Accounts 2021, p.32 - {AR2021_URL}\n\n"
+        "Ratios derived from the disclosed gross/allowance figures, not separately disclosed by the bank. "
+        "POCI (purchased or originated credit-impaired) only appears as its own category FY2021/FY2022; "
+        "nil/not applicable from FY2023 onward."
+        + "\n\n" + STATEMENTS_ENTITY_NOTE
+    ),
+    first_col_width=64,
+    source_height=200,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):
@@ -168,6 +415,48 @@ metric(
 metric(
     "Total RWAs", "£m",
     [("Total risk-weighted assets", {"FY2025": 117463, "FY2024": 110423, "FY2023": 101478, "FY2022": 92413, "FY2021": 83723})],
+)
+
+rwa_rows = [
+    ("SECTION", "Credit risk (excluding counterparty credit risk)", {}),
+    ("DATA", "Standardised approach", {"FY2025": 12796, "FY2024": 11067, "FY2023": 10918, "FY2022": 3990, "FY2021": 1715}),
+    ("DATA", "Foundation IRB approach", {"FY2025": 45233, "FY2024": 45143, "FY2023": 40034, "FY2022": 41270, "FY2021": 41811}),
+    ("DATA", "Slotting approach", {"FY2025": 6074, "FY2024": 5012, "FY2023": 5146, "FY2022": 5469}),
+    ("DATA", "Advanced IRB approach", {"FY2025": 34602, "FY2024": 32297, "FY2023": 30680, "FY2022": 29361, "FY2021": 27904}),
+    ("TOTAL", "Credit risk (excluding counterparty credit risk) - total", {"FY2025": 98705, "FY2024": 93519, "FY2023": 86778, "FY2022": 80090, "FY2021": 71430}),
+    ("SECTION", "Other risk categories", {}),
+    ("DATA", "Counterparty credit risk", {"FY2025": 255, "FY2024": 243, "FY2023": 236, "FY2022": 204, "FY2021": 129}),
+    ("DATA", "Securitisation exposures in the non-trading book", {"FY2025": 1592, "FY2024": 899, "FY2023": 725, "FY2022": 650, "FY2021": 859}),
+    ("DATA", "Position, foreign exchange and commodities risks (Market risk)", {"FY2025": 97, "FY2024": 173, "FY2023": 132, "FY2022": 101, "FY2021": 170}),
+    ("DATA", "Operational risk", {"FY2025": 16814, "FY2024": 15589, "FY2023": 13607, "FY2022": 11368, "FY2021": 10607}),
+    ("DATA", "Amounts below thresholds for deduction (FY2021 only: additive to Total; FY2022-FY2025: memo, already included within Credit risk above)", {"FY2025": 457, "FY2024": 574, "FY2023": 652, "FY2022": 724, "FY2021": 528}),
+    ("TOTAL", "Total RWAs", {"FY2025": 117463, "FY2024": 110423, "FY2023": 101478, "FY2022": 92413, "FY2021": 83723}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="HSBC UK Bank plc — RWA Breakdown",
+    subtitle="Pillar 3 UK OV1 template, £m. Ties exactly to the Total RWAs sheet for all 5 years. See source note at bottom.",
+    rows=rwa_rows,
+    sources_text=(
+        "Sources - HSBC UK Bank plc's own entity-level Pillar 3 Disclosures, Table 'Overview of risk-weighted "
+        "exposure amounts (OV1)':\n"
+        f"FY2025 & FY2024: Pillar 3 Disclosures at 31 December 2025, p.15 - {P32025_URL}\n"
+        f"FY2023: Pillar 3 Disclosures at 31 December 2023, p.17 - {P32023_URL}\n"
+        f"FY2022: Pillar 3 Disclosures at 31 December 2022, p.16 - {P32022_URL}\n"
+        f"FY2021: Pillar 3 Disclosures at 31 December 2021, p.15 - {P32021_URL}\n\n"
+        "Template note: FY2021's OV1 table uses an older presentation (no separate 'slotting approach' row - "
+        "folded within foundation/advanced IRB, no separate SEC-ERBA row, includes a 'Settlement risk' row "
+        "showing nil throughout, and a 'Floor adjustment' row showing nil throughout, both omitted here since "
+        "always zero) and, unlike FY2022-FY2025 where 'Amounts below thresholds for deduction' is a memo "
+        "already embedded within Credit risk row 2, FY2021's own disclosure keeps it as a genuinely separate, "
+        "additive row before the Total - reproduced as disclosed in each year's own format rather than forced "
+        "onto a single template. All 5 years' category breakdowns sum exactly to that year's own disclosed "
+        "Total RWAs figure, cross-checked before finalizing."
+        + "\n\n" + ENTITY_NOTE
+    ),
+    first_col_width=76,
+    source_height=210,
+    unit_suffix=" (£m)",
 )
 
 metric(
@@ -332,6 +621,24 @@ bw.add_overview_sheet(
         ("Cash and cash equivalents at 31 Dec", {"FY2025": 55299, "FY2024": 63366, "FY2023": 73381, "FY2022": 100319, "FY2021": 114134}),
     ],
     cash_flow_unit="£m",
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 355930, "FY2024": 340877, "FY2023": 332876, "FY2022": 342441, "FY2021": 346063}),
+        ("Loans and advances to customers", {"FY2025": 231223, "FY2024": 217604, "FY2023": 211887, "FY2022": 204143, "FY2021": 195526}),
+        ("Total liabilities", {"FY2025": 327669, "FY2024": 314906, "FY2023": 306806, "FY2022": 320215, "FY2021": 322258}),
+        ("Total equity", {"FY2025": 28261, "FY2024": 25971, "FY2023": 26070, "FY2022": 22226, "FY2021": 23805}),
+    ],
+    balance_sheet_unit="£m",
+    income_statement_totals=[
+        ("Net interest income", {"FY2025": 8650, "FY2024": 8084, "FY2023": 7787, "FY2022": 6203, "FY2021": 4650}),
+        ("Total operating expenses", {"FY2025": -4310, "FY2024": -4017, "FY2023": -3707, "FY2022": -3832, "FY2021": -3759}),
+        ("Profit for the year", {"FY2025": 4102, "FY2024": 4139, "FY2023": 5254, "FY2022": 2876, "FY2021": 2368}),
+    ],
+    income_statement_unit="£m",
+    equity_changes_totals=[
+        ("Total comprehensive income for the year", {"FY2025": 4830, "FY2024": 3455, "FY2023": 6231, "FY2022": 317, "FY2021": 1677}),
+        ("Dividends to shareholders", {"FY2025": -3028, "FY2024": -3569, "FY2023": -2416, "FY2022": -1934, "FY2021": -752}),
+    ],
+    equity_changes_unit="£m",
     ratios=[
         ("CET1 Ratio", {"FY2025": "13.2%", "FY2024": "13.6%", "FY2023": "14.0%", "FY2022": "13.5%", "FY2021": "15.3%"}),
         ("Tier 1 Ratio", {"FY2025": "15.5%", "FY2024": "15.7%", "FY2023": "16.2%", "FY2022": "16.0%", "FY2021": "18.0%"}),

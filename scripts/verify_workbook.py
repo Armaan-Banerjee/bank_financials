@@ -9,9 +9,21 @@ Usage:
     python3 verify_workbook.py "banks/<BANK> FINANCIALS.xlsx"
 
 Checks performed:
-    1. Sheet list + count (expect 13: Overview, Cash Flow Statement, 11 Pillar 3
-       sheets; 14 when an auxiliary "Interim Pillar 3" sheet is present)
-    2. Overview sheet chart count (expect 2)
+    1. Sheet list + count. Base shape is 13 (Overview, Cash Flow Statement,
+       11 Pillar 3 sheets), +1 when an auxiliary "Interim Pillar 3" sheet is
+       present. Since the ST- wayfinder map (see wayfinder/statements/map.md)
+       started adding 5 more sheets bank-by-bank (Balance Sheet, Profit &
+       Loss, Statement of Changes in Equity, Asset Quality, RWA Breakdown),
+       expected count is computed as base + however many of those 5 are
+       actually present - so this check works unchanged for both
+       not-yet-rolled-out (13/14-sheet) and rolled-out (up to 18/19-sheet)
+       workbooks, rather than assuming every workbook is on one shape.
+    2. Overview sheet chart count - expected is derived the same way: 1 bar
+       chart per money block sheet present (Balance Sheet/Profit & Loss/
+       Statement of Changes in Equity/Cash Flow Statement) + 1 ratios line
+       chart if any Pillar 3 metric sheet is present. This is a heuristic
+       (a block's totals could have been passed empty even if its sheet
+       exists) so a mismatch is printed as informational, not asserted.
     3. Cash Flow Statement: for every contiguous run of plain DATA rows that is
        immediately followed by a bold TOTAL row (the standard SECTION/DATA*/TOTAL
        block shape from add_cash_flow_sheet), verify the DATA rows sum to that
@@ -26,9 +38,14 @@ This does NOT replace judgment for anything label-dependent or bank-specific
 it flags what it can verify unambiguously and prints the rest for a human/
 fork to check by eye.
 """
+
+import os
 import sys
 
 import openpyxl
+
+sys.path.insert(0, os.path.dirname(__file__))
+from bank_workbook import PILLAR3_SHEET_NAMES
 
 
 def main():
@@ -41,15 +58,33 @@ def main():
     print("=== Sheets ===")
     print(f"{len(wb.sheetnames)} sheets: {wb.sheetnames}")
     has_interim = "Interim Pillar 3" in wb.sheetnames
-    expected_sheets = 14 if has_interim else 13
+    st_sheet_names = [
+        "Balance Sheet",
+        "Profit & Loss",
+        "Statement of Changes in Equity",
+        "Asset Quality",
+        "RWA Breakdown",
+    ]
+    st_sheets_present = [n for n in st_sheet_names if n in wb.sheetnames]
+    expected_sheets = 13 + len(st_sheets_present) + (1 if has_interim else 0)
     if len(wb.sheetnames) != expected_sheets:
-        print(f"  !! expected {expected_sheets} sheets, got {len(wb.sheetnames)}")
+        print(
+            f"  !! expected {expected_sheets} sheets "
+            f"(13 base + {len(st_sheets_present)} ST- sheets {st_sheets_present} "
+            f"+ {1 if has_interim else 0} interim), got {len(wb.sheetnames)}"
+        )
 
     if has_interim:
         interim = wb["Interim Pillar 3"]
         expected_headers = [
-            "Period", "Disclosure type", "Metric", "Value", "Unit",
-            "Basis", "Source document", "Page / table",
+            "Period",
+            "Disclosure type",
+            "Metric",
+            "Value",
+            "Unit",
+            "Basis",
+            "Source document",
+            "Page / table",
         ]
         headers = [interim.cell(row=4, column=c).value for c in range(1, 9)]
         print("\n=== Interim Pillar 3 structure ===")
@@ -64,7 +99,10 @@ def main():
                 if interim.cell(row=r, column=2).value in (None, ""):
                     break
                 data_rows += 1
-                if any(interim.cell(row=r, column=c).value in (None, "") for c in (1, 2, 3, 7, 8)):
+                if any(
+                    interim.cell(row=r, column=c).value in (None, "")
+                    for c in (1, 2, 3, 7, 8)
+                ):
                     missing_fields.append(r)
                 if interim.cell(row=r, column=7).hyperlink:
                     hyperlink_count += 1
@@ -86,18 +124,26 @@ def main():
             # after an `if missing_fields: ... else: wide_headers = ...`,
             # which would raise UnboundLocalError on any long-format sheet
             # with a missing field).
-            wide_headers = [interim.cell(row=4, column=c).value for c in range(1, interim.max_column + 1)]
+            wide_headers = [
+                interim.cell(row=4, column=c).value
+                for c in range(1, interim.max_column + 1)
+            ]
             if len(wide_headers) < 4 or wide_headers[:3] != ["Metric", "Unit", "Basis"]:
                 print(f"Headers: {headers}")
-                print(f"  !! expected long headers {expected_headers} or wide headers beginning with Metric/Unit/Basis")
+                print(
+                    f"  !! expected long headers {expected_headers} or wide headers beginning with Metric/Unit/Basis"
+                )
             else:
                 period_count = len(wide_headers) - 3
                 metric_rows = 0
                 value_cells = 0
                 value_links = 0
                 source_register_row = next(
-                    (r for r in range(5, interim.max_row + 1)
-                     if interim.cell(row=r, column=1).value == "Source register"),
+                    (
+                        r
+                        for r in range(5, interim.max_row + 1)
+                        if interim.cell(row=r, column=1).value == "Source register"
+                    ),
                     None,
                 )
                 metric_end = source_register_row or interim.max_row + 1
@@ -114,30 +160,63 @@ def main():
                 register_links = 0
                 register_rows = 0
                 if source_register_row:
-                    register_header = [interim.cell(row=source_register_row + 1, column=c).value for c in range(1, 5)]
-                    if register_header != ["Period", "Disclosure type", "Source document", "Page / table"]:
-                        print(f"  !! invalid source-register headers: {register_header}")
+                    register_header = [
+                        interim.cell(row=source_register_row + 1, column=c).value
+                        for c in range(1, 5)
+                    ]
+                    if register_header != [
+                        "Period",
+                        "Disclosure type",
+                        "Source document",
+                        "Page / table",
+                    ]:
+                        print(
+                            f"  !! invalid source-register headers: {register_header}"
+                        )
                     for r in range(source_register_row + 2, interim.max_row + 1):
                         if interim.cell(row=r, column=1).value in (None, ""):
                             break
                         register_rows += 1
                         if interim.cell(row=r, column=3).hyperlink:
                             register_links += 1
-                print(f"Format: wide; metrics: {metric_rows}; periods: {period_count}; populated values: {value_cells}; value hyperlinks: {value_links}; source rows: {register_rows}; source hyperlinks: {register_links}")
+                print(
+                    f"Format: wide; metrics: {metric_rows}; periods: {period_count}; populated values: {value_cells}; value hyperlinks: {value_links}; source rows: {register_rows}; source hyperlinks: {register_links}"
+                )
                 if not metric_rows or not period_count:
-                    print("  !! wide Interim Pillar 3 sheet contains no metric/period matrix")
+                    print(
+                        "  !! wide Interim Pillar 3 sheet contains no metric/period matrix"
+                    )
                 if not source_register_row or not register_rows:
-                    print("  !! wide Interim Pillar 3 sheet contains no source register")
+                    print(
+                        "  !! wide Interim Pillar 3 sheet contains no source register"
+                    )
 
     if "Overview" in wb.sheetnames:
         ov = wb["Overview"]
         n_charts = len(ov._charts)
-        print(f"\n=== Overview charts ===\n{n_charts} charts")
-        if n_charts != 2:
-            print("  !! expected 2 charts (cash flow bar + ratios line)")
+        money_block_sheets = [
+            "Balance Sheet",
+            "Profit & Loss",
+            "Statement of Changes in Equity",
+            "Cash Flow Statement",
+        ]
+        expected_bar_charts = sum(1 for n in money_block_sheets if n in wb.sheetnames)
+        pillar3_present = any(n in wb.sheetnames for n in PILLAR3_SHEET_NAMES)
+        expected_charts = expected_bar_charts + (1 if pillar3_present else 0)
+        print(
+            f"\n=== Overview charts ===\n{n_charts} charts (heuristic expectation: {expected_charts} "
+            f"= {expected_bar_charts} money-block bar chart(s) + {1 if pillar3_present else 0} ratios line chart)"
+        )
+        if n_charts != expected_charts:
+            print(
+                "  (informational, not necessarily wrong - a block's totals could have been passed empty "
+                "even with its sheet present)"
+            )
 
     if "Cash Flow Statement" not in wb.sheetnames:
-        print("\nNo 'Cash Flow Statement' sheet found - skipping reconciliation checks.")
+        print(
+            "\nNo 'Cash Flow Statement' sheet found - skipping reconciliation checks."
+        )
         return
     ws = wb["Cash Flow Statement"]
 
@@ -166,7 +245,9 @@ def main():
         if not a_bold:
             return "DATA" if ws.cell(row=r, column=1).value else "BLANK"
         # bold col A: SECTION has no data-column values written; TOTAL does
-        any_data = any(ws.cell(row=r, column=c).value is not None for c in range(2, ncols + 1))
+        any_data = any(
+            ws.cell(row=r, column=c).value is not None for c in range(2, ncols + 1)
+        )
         return "TOTAL" if any_data else "SECTION"
 
     # find the last populated row before the (merged) source-citation cell
@@ -208,15 +289,21 @@ def main():
                 if ok:
                     checks_passed += 1
                 else:
-                    print(f"    !! block {run}->row {r} does NOT reconcile: {mismatches}")
+                    print(
+                        f"    !! block {run}->row {r} does NOT reconcile: {mismatches}"
+                    )
             run = []
 
     print(f"\n=== Block reconciliation summary ===")
-    print(f"{checks_passed}/{checks_run} DATA-block -> TOTAL checks passed"
-          f"{' (all clean)' if checks_passed == checks_run else '  !! see mismatches above'}")
-    print("\nReview the TOTAL rows above by eye for the tail chain (net change / "
-          "opening / closing, incl. any FX or other adjustment lines) - that part "
-          "is bank-specific and isn't auto-verified.")
+    print(
+        f"{checks_passed}/{checks_run} DATA-block -> TOTAL checks passed"
+        f"{' (all clean)' if checks_passed == checks_run else '  !! see mismatches above'}"
+    )
+    print(
+        "\nReview the TOTAL rows above by eye for the tail chain (net change / "
+        "opening / closing, incl. any FX or other adjustment lines) - that part "
+        "is bank-specific and isn't auto-verified."
+    )
 
 
 if __name__ == "__main__":

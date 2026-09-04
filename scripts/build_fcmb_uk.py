@@ -121,8 +121,284 @@ def p3_sources(page_2025="3", page_2024="2", page_2023="19", page_2022="19"):
 
 bw = BankWorkbook(bank_name="FCMB Bank (UK) Limited", years=YEARS, year_label=YEAR_LABEL, header_color="A90D9C")
 
+STATEMENTS_ENTITY_NOTE = (
+    ENTITY_NOTE + "\n"
+    "BALANCE SHEET RECLASSIFICATION NOTE (FY2024): the FY2025 Annual Report's own FY2024 comparative "
+    "column shows a different split between 'Loans and advances to banks' ($222,353,776), 'Loans and "
+    "advances to customers' ($87,181,343) and 'Investment securities' ($192,066,892) than FY2024's own "
+    "originally-published Annual Report ($215,293,067 / $86,092,409 / $196,761,703 respectively) - the "
+    "FY2025 report's own Balance Sheet page states 'There has been a re-classification of accrued "
+    "interest and some investment securities at the prior year-end have been recategorised as a "
+    "debtor.' Total assets/liabilities/equity are IDENTICAL between both vintages ($521,421,659 total "
+    "assets, $59,259,637 total equity) - only the asset-line split differs. FY2024's own originally-"
+    "published figures are used throughout here, per project convention.\n"
+    "ASSET QUALITY RECLASSIFICATION NOTE (FY2024): similarly, the FY2025 report's own FY2024 comparative "
+    "'Net carrying value of exposure by risk rating' table shows Stage 1/2/3 splits ($409,617,076 / "
+    "$6,832,107 / $3,121,198, total $419,570,381) that differ from FY2024's own originally-published "
+    "note ($404,519,023 / $6,673,411 / $3,121,198, total $414,313,632) - consistent with the same "
+    "reclassification. FY2024's own originally-published figures are used here too.\n"
+    "RWA BREAKDOWN NOTE: the Bank's Pillar 3 Disclosures do not publish a UK OV1-style RWA-by-category "
+    "table directly - only a 'Minimum Capital Requirements' table (8% of own funds requirement, by risk "
+    "type). RWA by category is CALCULATED as (capital requirement / 8%) for each row, independently "
+    "cross-checked against the Bank's own disclosed Total RWA/TREA figure (Total RWAs sheet) - the "
+    "calculated Total Pillar 1 RWA ties to the disclosed TREA within rounding for every year (e.g. "
+    "FY2025: $29,485k / 8% = $368,563k calculated vs $368,569k disclosed TREA)."
+)
+
+STATEMENTS_SOURCES = (
+    "Sources - FCMB Bank (UK) Limited's own Statement of Financial Position / Statement of Comprehensive "
+    "Income / Statement of Changes in Equity, from its Companies House-filed Annual Report and Accounts:\n"
+    f"FY2025: Audited Accounts 2025, p.40-41 - {AR2025_URL}\n"
+    f"FY2024: Audited Accounts 2024, p.29-30 (own-year figures - see reclassification note) - {AR2024_URL}\n"
+    f"FY2023: Audited Accounts 2023, p.31-32 - {AR2023_URL}\n"
+    f"FY2022: Annual Report & Financial Statements 2022, p.29-30 - {AR2022_URL}\n"
+    f"FY2021: Audited Accounts 2021, p.26-27 - {AR2021_URL}\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - FCMB Bank (UK) Limited's own 'Net carrying value of exposure by risk rating' (IFRS 9 "
+    "stage) and 'Expected Credit Loss by Stage' notes, Note 24 (Financial instruments and risk "
+    "management), from its Companies House-filed Annual Report and Accounts:\n"
+    f"FY2025: Audited Accounts 2025, p.79-80 - {AR2025_URL}\n"
+    f"FY2024: Audited Accounts 2024, p.65 (own-year figures - see reclassification note) - {AR2024_URL}\n"
+    f"FY2023: Audited Accounts 2023, p.67 - {AR2023_URL}\n"
+    f"FY2022: Annual Report & Financial Statements 2022, p.66 - {AR2022_URL}\n"
+    f"FY2021: Audited Accounts 2021, p.61 (ECL by stage sourced from this page's own narrative text) - {AR2021_URL}\n"
+    "Gross carrying amount by stage is CALCULATED as Net carrying amount + ECL allowance for that stage "
+    "(the Bank discloses net carrying value and ECL by stage separately, not gross carrying amount "
+    "directly). NPL ratio = Stage 3 gross carrying / Total gross carrying; Stage 3 coverage ratio = Stage "
+    "3 ECL / Stage 3 gross carrying (blank for FY2021, which had zero Stage 3 exposure); Total ECL "
+    "coverage = Total ECL / Total gross carrying.\n"
+    + ENTITY_NOTE.split("DATA QUALITY NOTE")[0]
+)
+
 # ---------------------------------------------------------------
-# Sheet 1: Cash Flow Statement
+# Balance Sheet (Statement of Financial Position), own-year figures throughout
+# ---------------------------------------------------------------
+BS_USD = {
+    "Cash and cash equivalents": {"FY2025": 10067514, "FY2024": 7266626, "FY2023": 7498541, "FY2022": 7118069, "FY2021": 5979879},
+    "Loans and advances to banks": {"FY2025": 272182290, "FY2024": 215293067, "FY2023": 179580081, "FY2022": 139928644, "FY2021": 132348155},
+    "Loans and advances to customers": {"FY2025": 115746735, "FY2024": 86092409, "FY2023": 74582276, "FY2022": 71445494, "FY2021": 79441478},
+    "Investment securities": {"FY2025": 195435410, "FY2024": 196761703, "FY2023": 187900449, "FY2022": 284747448, "FY2021": 174077450},
+    "Derivative financial instruments (asset)": {"FY2025": 2970155, "FY2024": 1432396, "FY2023": 1597744, "FY2022": 1851462, "FY2021": 834132},
+    "Other assets": {"FY2025": 9227109, "FY2024": 13004808, "FY2023": 9099146, "FY2022": 7569349, "FY2021": 6590091},
+    "Deferred tax asset": {"FY2025": 357362, "FY2023": 19819, "FY2022": 159008, "FY2021": 660811},
+    "Property and equipment": {"FY2025": 516932, "FY2024": 950961, "FY2023": 480338, "FY2022": 1851933, "FY2021": 2236095},
+    "Intangible assets": {"FY2025": 526698, "FY2024": 619689, "FY2023": 540470, "FY2022": 393250, "FY2021": 285064},
+    "Total assets": {"FY2025": 607030205, "FY2024": 521421659, "FY2023": 461298864, "FY2022": 515064657, "FY2021": 402453155},
+    "Deposits from banks": {"FY2025": 308574526, "FY2024": 280518956, "FY2023": 232089383, "FY2022": 238119179, "FY2021": 146683204},
+    "Deposits from customers": {"FY2025": 225771958, "FY2024": 160341314, "FY2023": 155331596, "FY2022": 213123234, "FY2021": 197470447},
+    "Derivative financial instruments (liability)": {"FY2025": 422687, "FY2024": 2178822, "FY2023": 1048899, "FY2022": 3686620, "FY2021": 2176318},
+    "Current tax liability": {"FY2022": 45624},
+    "Other liabilities": {"FY2025": 6941662, "FY2024": 9498007, "FY2023": 7934679, "FY2022": 6357677, "FY2021": 5998326},
+    "Subordinated liabilities": {"FY2025": 9600000, "FY2024": 9600000, "FY2023": 9600000, "FY2022": 9600000, "FY2021": 5000000},
+    "Deferred tax liability": {"FY2024": 24923},
+    "Total liabilities": {"FY2025": 551310833, "FY2024": 462162022, "FY2023": 406004557, "FY2022": 470932334, "FY2021": 357328295},
+    "Issued capital": {"FY2025": 53900000, "FY2024": 53900000, "FY2023": 53900000, "FY2022": 48900000, "FY2021": 48900000},
+    "Retained earnings": {"FY2025": 1818642, "FY2024": 5495727, "FY2023": 3035900, "FY2022": -1268750, "FY2021": -3674449},
+    "Other reserves": {"FY2025": 730, "FY2024": -136090, "FY2023": -1641593, "FY2022": -3498927, "FY2021": -100691},
+    "Total equity": {"FY2025": 55719372, "FY2024": 59259637, "FY2023": 55294307, "FY2022": 44132323, "FY2021": 45124860},
+    "Total liabilities and equity": {"FY2025": 607030205, "FY2024": 521421659, "FY2023": 461298864, "FY2022": 515064657, "FY2021": 402453155},
+}
+
+bs_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and cash equivalents", stock(BS_USD["Cash and cash equivalents"])),
+    ("DATA", "Loans and advances to banks", stock(BS_USD["Loans and advances to banks"])),
+    ("DATA", "Loans and advances to customers", stock(BS_USD["Loans and advances to customers"])),
+    ("DATA", "Investment securities", stock(BS_USD["Investment securities"])),
+    ("DATA", "Derivative financial instruments", stock(BS_USD["Derivative financial instruments (asset)"])),
+    ("DATA", "Other assets", stock(BS_USD["Other assets"])),
+    ("DATA", "Deferred tax asset", stock(BS_USD["Deferred tax asset"])),
+    ("DATA", "Property and equipment", stock(BS_USD["Property and equipment"])),
+    ("DATA", "Intangible assets", stock(BS_USD["Intangible assets"])),
+    ("TOTAL", "Total assets", stock(BS_USD["Total assets"])),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", stock(BS_USD["Deposits from banks"])),
+    ("DATA", "Deposits from customers", stock(BS_USD["Deposits from customers"])),
+    ("DATA", "Derivative financial instruments", stock(BS_USD["Derivative financial instruments (liability)"])),
+    ("DATA", "Current tax liability", stock(BS_USD["Current tax liability"])),
+    ("DATA", "Other liabilities", stock(BS_USD["Other liabilities"])),
+    ("DATA", "Subordinated liabilities", stock(BS_USD["Subordinated liabilities"])),
+    ("DATA", "Deferred tax liability", stock(BS_USD["Deferred tax liability"])),
+    ("TOTAL", "Total liabilities", stock(BS_USD["Total liabilities"])),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Issued capital", stock(BS_USD["Issued capital"])),
+    ("DATA", "Retained earnings", stock(BS_USD["Retained earnings"])),
+    ("DATA", "Other reserves", stock(BS_USD["Other reserves"])),
+    ("TOTAL", "Total equity", stock(BS_USD["Total equity"])),
+    ("TOTAL", "Total liabilities and equity", stock(BS_USD["Total liabilities and equity"])),
+]
+
+bw.add_balance_sheet_sheet(
+    title="FCMB Bank (UK) Limited — Statement of Financial Position",
+    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used.",
+    rows=bs_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=60,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Profit & Loss (Statement of Comprehensive Income), own-year figures throughout
+# ---------------------------------------------------------------
+PL_USD = {
+    "Interest and similar income": {"FY2025": 34085629, "FY2024": 36174703, "FY2023": 31703911, "FY2022": 18924173, "FY2021": 11210682},
+    "Interest and similar expense": {"FY2025": -18574590, "FY2024": -18342203, "FY2023": -13832115, "FY2022": -4429010, "FY2021": -2853008},
+    "Net interest income": {"FY2025": 15511039, "FY2024": 17832500, "FY2023": 17871796, "FY2022": 14495163, "FY2021": 8357674},
+    "Fees and commission income": {"FY2025": 2698507, "FY2024": 1755726, "FY2023": 1297345, "FY2022": 1776850, "FY2021": 2300057},
+    "Fees and commission expense": {"FY2025": -1108194, "FY2024": -809953, "FY2023": -734826, "FY2022": -888409, "FY2021": -767438},
+    "Net fee and commission income": {"FY2025": 1590313, "FY2024": 945773, "FY2023": 562519, "FY2022": 888441, "FY2021": 1532619},
+    "Other operating income": {"FY2025": 1819183, "FY2024": 2208661, "FY2023": 4611335, "FY2022": 3534205, "FY2021": 3022643},
+    "Impairment charges": {"FY2025": -5384068, "FY2024": -29914, "FY2023": -1795645, "FY2022": -2508414, "FY2021": -77775},
+    "Net operating income": {"FY2025": 13536467, "FY2024": 20957020, "FY2023": 21250005, "FY2022": 16409395, "FY2021": 12835161},
+    "Personnel expenses": {"FY2025": -12916311, "FY2024": -11495240, "FY2023": -9886321, "FY2022": -7880197, "FY2021": -6867362},
+    "Depreciation and amortisation expenses": {"FY2025": -797249, "FY2024": -804587, "FY2023": -672685, "FY2022": -579990, "FY2021": -603791},
+    "General and administrative expenses": {"FY2025": -4722107, "FY2024": -5356176, "FY2023": -5048080, "FY2022": -4996082, "FY2021": -4117113},
+    "Other operating expenses": {"FY2021": -122869},
+    "Total operating expenses": {"FY2025": -18435667, "FY2024": -17656003, "FY2023": -15607086, "FY2022": -13456269, "FY2021": -11711135},
+    "Profit/(Loss) before tax": {"FY2025": -4899200, "FY2024": 3301017, "FY2023": 5642919, "FY2022": 2953126, "FY2021": 1124026},
+    "Taxation": {"FY2025": 1222115, "FY2024": -841190, "FY2023": -1338269, "FY2022": -547427, "FY2021": 511455},
+    "Profit/(Loss) for the year": {"FY2025": -3677085, "FY2024": 2459827, "FY2023": 4304650, "FY2022": 2405699, "FY2021": 1635481},
+    "Net change in fair value of FVOCI investments": {"FY2025": 360812, "FY2024": 1464225, "FY2023": 1857334, "FY2022": -3398236, "FY2021": -359642},
+    "Net amount reclassified to the income statement": {"FY2025": -973472, "FY2024": 1053181},
+    "Recycling of ECL / net change in ECL on FVOCI investments": {"FY2025": 749480, "FY2024": -1011903},
+    "Other comprehensive income/(loss), net of tax": {"FY2025": 136820, "FY2024": 1505503, "FY2023": 1857334, "FY2022": -3398236, "FY2021": -359642},
+    "Total comprehensive income/(loss) for the year": {"FY2025": -3540265, "FY2024": 3965330, "FY2023": 6161984, "FY2022": -992537, "FY2021": 1275839},
+}
+
+pl_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest and similar income", flow(PL_USD["Interest and similar income"])),
+    ("DATA", "Interest and similar expense", flow(PL_USD["Interest and similar expense"])),
+    ("TOTAL", "Net interest income", flow(PL_USD["Net interest income"])),
+    ("DATA", "Fees and commission income", flow(PL_USD["Fees and commission income"])),
+    ("DATA", "Fees and commission expense", flow(PL_USD["Fees and commission expense"])),
+    ("TOTAL", "Net fee and commission income", flow(PL_USD["Net fee and commission income"])),
+    ("DATA", "Other operating income", flow(PL_USD["Other operating income"])),
+    ("DATA", "Impairment charges", flow(PL_USD["Impairment charges"])),
+    ("TOTAL", "Net operating income", flow(PL_USD["Net operating income"])),
+    ("DATA", "Personnel expenses", flow(PL_USD["Personnel expenses"])),
+    ("DATA", "Depreciation and amortisation expenses", flow(PL_USD["Depreciation and amortisation expenses"])),
+    ("DATA", "General and administrative expenses", flow(PL_USD["General and administrative expenses"])),
+    ("DATA", "Other operating expenses", flow(PL_USD["Other operating expenses"])),
+    ("TOTAL", "Total operating expenses", flow(PL_USD["Total operating expenses"])),
+    ("TOTAL", "Profit/(Loss) before tax", flow(PL_USD["Profit/(Loss) before tax"])),
+    ("DATA", "Taxation", flow(PL_USD["Taxation"])),
+    ("TOTAL", "Profit/(Loss) for the year", flow(PL_USD["Profit/(Loss) for the year"])),
+    ("SECTION", "Other comprehensive income/(loss)", {}),
+    ("DATA", "Net change in fair value of FVOCI investments", flow(PL_USD["Net change in fair value of FVOCI investments"])),
+    ("DATA", "Net amount reclassified to the income statement", flow(PL_USD["Net amount reclassified to the income statement"])),
+    ("DATA", "Recycling of ECL / net change in ECL on FVOCI investments", flow(PL_USD["Recycling of ECL / net change in ECL on FVOCI investments"])),
+    ("TOTAL", "Other comprehensive income/(loss), net of tax", flow(PL_USD["Other comprehensive income/(loss), net of tax"])),
+    ("TOTAL", "Total comprehensive income/(loss) for the year", flow(PL_USD["Total comprehensive income/(loss) for the year"])),
+]
+
+bw.add_income_statement_sheet(
+    title="FCMB Bank (UK) Limited — Statement of Comprehensive Income",
+    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used. "
+             "FY2023/FY2022 OCI shown as a single FVOCI fair value line (not broken into the FY2024/FY2025 "
+             "3-line split) - matches each year's own disclosure.",
+    rows=pl_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=340,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Statement of Changes in Equity - chronological, oldest to newest, per-year
+# reconciliation ladder: Balance Sheet built first (above), equity built
+# year-by-year checking each closing balance against BS Total equity before
+# moving on. Ties exactly at every boundary in USD; an explicit FX
+# translation plug row absorbs the stock/flow rate-mismatch in GBP only.
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Issued capital", "Retained earnings", "Other reserves", "Total equity"]
+
+EQUITY_ROWS_USD = [
+    ("TOTAL", "At 1 January 2021", [48900000, -5309930, 258951, 43849021], "spot", "FY2020"),
+    ("DATA", "Profit for the year (FY2021)", [None, 1635481, None, 1635481], "avg", "FY2021"),
+    ("DATA", "Other comprehensive income (FY2021)", [None, None, -359642, -359642], "avg", "FY2021"),
+    ("TOTAL", "Total comprehensive income (FY2021)", [None, 1635481, -359642, 1275839], "avg", "FY2021"),
+    ("DATA", "FX translation effect on equity, net (FY2021)", [None, None, None, None], "plug", "FY2021"),
+    ("TOTAL", "At 31 December 2021", [48900000, -3674449, -100691, 45124860], "spot", "FY2021"),
+
+    ("DATA", "Profit for the year (FY2022)", [None, 2405699, None, 2405699], "avg", "FY2022"),
+    ("DATA", "Other comprehensive loss (FY2022)", [None, None, -3398236, -3398236], "avg", "FY2022"),
+    ("TOTAL", "Total comprehensive income/(loss) (FY2022)", [None, 2405699, -3398236, -992537], "avg", "FY2022"),
+    ("DATA", "FX translation effect on equity, net (FY2022)", [None, None, None, None], "plug", "FY2022"),
+    ("TOTAL", "At 31 December 2022", [48900000, -1268750, -3498927, 44132323], "spot", "FY2022"),
+
+    ("DATA", "Profit for the year (FY2023)", [None, 4304650, None, 4304650], "avg", "FY2023"),
+    ("DATA", "Other comprehensive income (FY2023)", [None, None, 1857334, 1857334], "avg", "FY2023"),
+    ("TOTAL", "Total comprehensive income (FY2023)", [None, 4304650, 1857334, 6161984], "avg", "FY2023"),
+    ("DATA", "Proceeds from shares issued (FY2023)", [5000000, None, None, 5000000], "avg", "FY2023"),
+    ("DATA", "FX translation effect on equity, net (FY2023)", [None, None, None, None], "plug", "FY2023"),
+    ("TOTAL", "At 31 December 2023", [53900000, 3035900, -1641593, 55294307], "spot", "FY2023"),
+
+    ("DATA", "Profit for the year (FY2024)", [None, 2459827, None, 2459827], "avg", "FY2024"),
+    ("DATA", "Other comprehensive income (FY2024)", [None, None, 1505503, 1505503], "avg", "FY2024"),
+    ("TOTAL", "Total comprehensive income (FY2024)", [None, 2459827, 1505503, 3965330], "avg", "FY2024"),
+    ("DATA", "FX translation effect on equity, net (FY2024)", [None, None, None, None], "plug", "FY2024"),
+    ("TOTAL", "At 31 December 2024", [53900000, 5495727, -136090, 59259637], "spot", "FY2024"),
+
+    ("DATA", "Loss for the year (FY2025)", [None, -3677085, None, -3677085], "avg", "FY2025"),
+    ("DATA", "Other comprehensive income (FY2025)", [None, None, 136820, 136820], "avg", "FY2025"),
+    ("TOTAL", "Total comprehensive income/(loss) (FY2025)", [None, -3677085, 136820, -3540265], "avg", "FY2025"),
+    ("DATA", "FX translation effect on equity, net (FY2025)", [None, None, None, None], "plug", "FY2025"),
+    ("TOTAL", "At 31 December 2025", [53900000, 1818642, 730, 55719372], "spot", "FY2025"),
+]
+
+# FX translation plug (Total column only) computed programmatically as:
+# closing total (spot) - opening total (spot, prior year-end) - sum of that
+# year's movement totals (average rate) - not hardcoded, derived from the
+# same figures independently verified to tie exactly in USD above.
+equity_changes_rows = []
+prev_close_gbp = None
+for kind, label, vals, rtype, ry in EQUITY_ROWS_USD:
+    if rtype == "plug":
+        this_close_usd = next(v for k2, l2, v, rt2, ry2 in EQUITY_ROWS_USD if rt2 == "spot" and ry2 == ry and l2.startswith("At 31 December"))
+        this_close_gbp = round(this_close_usd[-1] / FX_SPOT[ry] / 1000, 1)
+        movements_gbp_total = sum(
+            round(v[-1] / (FX_AVG[ry2] if rt2 == "avg" else 1) / 1000, 1)
+            for k2, l2, v, rt2, ry2 in EQUITY_ROWS_USD
+            if ry2 == ry and rt2 == "avg" and not l2.startswith("Total comprehensive")
+        )
+        plug = round(this_close_gbp - prev_close_gbp - movements_gbp_total, 1)
+        equity_changes_rows.append((kind, label, [None, None, None, plug]))
+        continue
+    rate = FX_SPOT[ry] if rtype == "spot" else FX_AVG[ry]
+    row_vals = [None if v is None else round(v / rate / 1000, 1) for v in vals]
+    equity_changes_rows.append((kind, label, row_vals))
+    if label.startswith("At 31 December") or label.startswith("At 1 January"):
+        prev_close_gbp = row_vals[-1]
+
+EQUITY_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "FX METHODOLOGY FOR THIS SHEET: opening balances converted at the prior year-end's spot rate, "
+    "movement lines at that year's average rate, closing balances at that year-end's spot rate - the "
+    "same convention used throughout this workbook. Converting stocks and flows at different rates "
+    "within one year means the roll-forward doesn't tie exactly in GBP even though it ties exactly in "
+    "USD (independently verified against each year's own source table before conversion) - an explicit "
+    "'FX translation effect on equity, net' row (Total column only, computed as the balancing figure) is "
+    "included each year, same treatment as this entity's own Cash Flow Statement's 'Effect of GBP/USD "
+    "translation' line."
+)
+
+bw.add_equity_changes_sheet(
+    title="FCMB Bank (UK) Limited — Statement of Changes in Equity",
+    subtitle="£'000, converted from USD - chronological, oldest to newest. See source note for FX methodology.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_SOURCES,
+    first_col_width=56,
+    source_height=340,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Cash Flow Statement
 # ---------------------------------------------------------------
 rows_usd = [
     ("SECTION", "Operating activities", {}),
@@ -214,7 +490,67 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=95,
     source_height=280,
-    unit_suffix="",
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Asset Quality: Net carrying value + ECL by IFRS 9 stage, own-year figures
+# throughout. Gross carrying amount = Net carrying + ECL allowance (the Bank
+# discloses net + ECL separately, not gross directly - see sources note).
+# ---------------------------------------------------------------
+AQ_NET_USD = {
+    "Stage 1": {"FY2025": 441790782, "FY2024": 404519023, "FY2023": 330580426, "FY2022": 279834026, "FY2021": 284775434},
+    "Stage 2": {"FY2025": 2068858, "FY2024": 6673411, "FY2023": 10090935, "FY2022": 9009321, "FY2021": 529517},
+    "Stage 3": {"FY2025": 6506282, "FY2024": 3121198, "FY2023": 4410821, "FY2022": 3889084, "FY2021": 0},
+    "Total": {"FY2025": 450365922, "FY2024": 414313632, "FY2023": 345082182, "FY2022": 292732431, "FY2021": 285304951},
+}
+AQ_ECL_USD = {
+    "Stage 1": {"FY2025": 2180753, "FY2024": 1919530, "FY2023": 2099535, "FY2022": 1292032, "FY2021": 710047},
+    "Stage 2": {"FY2025": 49181, "FY2024": 364349, "FY2023": 322131, "FY2022": 206214, "FY2021": 561},
+    "Stage 3": {"FY2025": 6902293, "FY2024": 1707521, "FY2023": 2593001, "FY2022": 1720776, "FY2021": 0},
+    "Total": {"FY2025": 9132227, "FY2024": 3991400, "FY2023": 5014667, "FY2022": 3219022, "FY2021": 710608},
+}
+AQ_GROSS_USD = {
+    stage: {y: AQ_NET_USD[stage][y] + AQ_ECL_USD[stage][y] for y in YEARS}
+    for stage in ("Stage 1", "Stage 2", "Stage 3", "Total")
+}
+AQ_NPL_RATIO = {y: f"{AQ_GROSS_USD['Stage 3'][y] / AQ_GROSS_USD['Total'][y] * 100:.2f}%" for y in YEARS}
+AQ_STAGE3_COVERAGE = {
+    y: (f"{AQ_ECL_USD['Stage 3'][y] / AQ_GROSS_USD['Stage 3'][y] * 100:.2f}%" if AQ_GROSS_USD["Stage 3"][y] else None)
+    for y in YEARS
+}
+AQ_TOTAL_COVERAGE = {y: f"{AQ_ECL_USD['Total'][y] / AQ_GROSS_USD['Total'][y] * 100:.2f}%" for y in YEARS}
+
+aq_rows = [
+    ("SECTION", "Gross carrying amount by IFRS 9 stage (calculated - see source note)", {}),
+    ("DATA", "Stage 1 (12-month ECL)", stock(AQ_GROSS_USD["Stage 1"])),
+    ("DATA", "Stage 2 (lifetime ECL, not credit-impaired)", stock(AQ_GROSS_USD["Stage 2"])),
+    ("DATA", "Stage 3 (credit-impaired)", stock(AQ_GROSS_USD["Stage 3"])),
+    ("TOTAL", "Total gross carrying amount", stock(AQ_GROSS_USD["Total"])),
+    ("SECTION", "ECL allowance by stage", {}),
+    ("DATA", "Stage 1 ECL", stock(AQ_ECL_USD["Stage 1"])),
+    ("DATA", "Stage 2 ECL", stock(AQ_ECL_USD["Stage 2"])),
+    ("DATA", "Stage 3 ECL", stock(AQ_ECL_USD["Stage 3"])),
+    ("TOTAL", "Total ECL allowance", stock(AQ_ECL_USD["Total"])),
+    ("SECTION", "Net carrying amount by stage (as reported)", {}),
+    ("DATA", "Stage 1", stock(AQ_NET_USD["Stage 1"])),
+    ("DATA", "Stage 2", stock(AQ_NET_USD["Stage 2"])),
+    ("DATA", "Stage 3", stock(AQ_NET_USD["Stage 3"])),
+    ("TOTAL", "Total net carrying amount", stock(AQ_NET_USD["Total"])),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "NPL ratio (Stage 3 gross / Total gross)", AQ_NPL_RATIO),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross)", AQ_STAGE3_COVERAGE),
+    ("DATA", "Total ECL coverage ratio (Total ECL / Total gross)", AQ_TOTAL_COVERAGE),
+]
+
+bw.add_asset_quality_sheet(
+    title="FCMB Bank (UK) Limited — Asset Quality / Credit Risk Disclosures",
+    subtitle="£'000, converted from USD (stock figures) - see source note at bottom for FX methodology and rates used.",
+    rows=aq_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=70,
+    source_height=280,
+    unit_suffix=" (£'000)",
 )
 
 # ---------------------------------------------------------------
@@ -260,6 +596,43 @@ metric("Total Capital Ratio", "% of TREA (calculated - see note)", [("Total Capi
        note="CALCULATED as Total Capital / Total Risk-Weighted exposure amount (TREA) for each year - "
             "not directly stated as a percentage in the source (see CET1 Ratio sheet for the same caveat).")
 metric("Total RWAs", "£'000 (conv. from USD)", [("Total Risk-Weighted exposure amount (TREA)", stock(TREA_USD))], p3_sources())
+
+# ---------------------------------------------------------------
+# RWA Breakdown: calculated as (Minimum Capital Requirement / 8%) by risk
+# type from the Bank's own Pillar 3 "Minimum Capital Requirements" table -
+# see STATEMENTS_ENTITY_NOTE for the cross-check against disclosed TREA.
+# ---------------------------------------------------------------
+CAPREQ_USD_000 = {  # as disclosed, $'000
+    "Credit Risk": {"FY2025": 25892, "FY2024": 24221, "FY2023": 20567, "FY2022": 17170, "FY2021": 18000},
+    "Market Risk": {"FY2025": 429, "FY2024": 634, "FY2023": 424, "FY2022": 283, "FY2021": 524},
+    "Operational Risk": {"FY2025": 3148, "FY2024": 3148, "FY2023": 2022, "FY2022": 1558, "FY2021": 1337},
+    "CVA Risk": {"FY2025": 16, "FY2024": 12},
+    "Total Pillar 1 Capital Requirement": {"FY2025": 29485, "FY2024": 28014, "FY2023": 23013, "FY2022": 19011, "FY2021": 19861},
+}
+RWA_USD = {
+    cat: {y: v * 1000 * 12.5 for y, v in years_dict.items()}
+    for cat, years_dict in CAPREQ_USD_000.items()
+}
+
+rwa_rows = [
+    ("DATA", "Credit risk", stock(RWA_USD["Credit Risk"])),
+    ("DATA", "Market risk", stock(RWA_USD["Market Risk"])),
+    ("DATA", "Operational risk", stock(RWA_USD["Operational Risk"])),
+    ("DATA", "CVA risk", stock(RWA_USD["CVA Risk"])),
+    ("TOTAL", "Total RWAs (calculated)", stock(RWA_USD["Total Pillar 1 Capital Requirement"])),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="FCMB Bank (UK) Limited — RWA Breakdown",
+    subtitle="£'000, converted from USD - CALCULATED from disclosed Minimum Capital Requirements (see source note). "
+              "CVA Risk only disclosed from FY2024 onward.",
+    rows=rwa_rows,
+    sources_text=p3_sources() + "\n\nRWA BREAKDOWN NOTE:" + STATEMENTS_ENTITY_NOTE.split("RWA BREAKDOWN NOTE:")[1],
+    first_col_width=54,
+    source_height=200,
+    unit_suffix=" (£'000)",
+)
+
 metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources())
 metric("LCR", "% (12-month average - see methodology note)", [("Liquidity Coverage Ratio", LCR_RATIO)], p3_sources())
 metric("NSFR", "% (4-quarter average - see methodology note)", [("Net Stable Funding Ratio", NSFR_RATIO)], p3_sources())
@@ -269,6 +642,26 @@ bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", stock(BS_USD["Total assets"])),
+        ("Loans and advances to customers", stock(BS_USD["Loans and advances to customers"])),
+        ("Deposits from customers", stock(BS_USD["Deposits from customers"])),
+        ("Total equity", stock(BS_USD["Total equity"])),
+    ],
+    balance_sheet_unit="£'000 (conv. from USD)",
+    income_statement_totals=[
+        ("Net operating income", flow(PL_USD["Net operating income"])),
+        ("Total operating expenses", flow(PL_USD["Total operating expenses"])),
+        ("Profit/(Loss) for the year", flow(PL_USD["Profit/(Loss) for the year"])),
+    ],
+    income_statement_unit="£'000 (conv. from USD)",
+    equity_changes_totals=[
+        ("Opening equity", {y: round(v / FX_SPOT[PREV_YEAR[y]] / 1000, 1) for y, v in
+            {"FY2025": 59259637, "FY2024": 55294307, "FY2023": 44132323, "FY2022": 45124860, "FY2021": 43849021}.items()}),
+        ("Total comprehensive income/(loss) for the year", flow({"FY2025": -3540265, "FY2024": 3965330, "FY2023": 6161984, "FY2022": -992537, "FY2021": 1275839})),
+        ("Closing equity", stock(BS_USD["Total equity"])),
+    ],
+    equity_changes_unit="£'000 (conv. from USD)",
     cash_flow_totals=[
         ("Net cash flows from operating activities", flow(_usd_by_label["Net cash flows from operating activities"])),
         ("Net cash flows from investing activities", flow(_usd_by_label["Net cash flows from investing activities"])),

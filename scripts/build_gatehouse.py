@@ -83,6 +83,250 @@ def p3_sources(page, extra=""):
 
 bw = BankWorkbook(bank_name="Gatehouse Bank Plc", years=YEARS, year_label=YEAR_LABEL, header_color="76773E")
 
+STATEMENTS_SOURCES = (
+    "Sources - Gatehouse Bank Plc's own Consolidated Statement of Financial Position / Consolidated "
+    "Income Statement / Consolidated Statement of Changes in Equity:\n"
+    f"FY2025/FY2024: Annual Report and Financial Statements 2025, p.56-59 - {AR2025_URL}\n"
+    f"FY2023/FY2022: Annual Report and Financial Statements 2023, p.59-63 - {AR2023_URL}\n"
+    f"FY2021: Annual Report and Financial Statements 2021, p.46-50 - {AR2021_URL}\n"
+    "Each year's own originally-published figures used. The equity roll-forward ties exactly at every "
+    "boundary EXCEPT one genuine, disclosed restatement: the FY2023 Annual Report's own FY2022 "
+    "comparative equity statement opens at 'Balance at 1 January 2022 (restated)' of GBP92,816k "
+    "(attributable GBP91,513k + NCI GBP1,303k) - GBP19,836k lower than FY2021's own originally-published "
+    "closing Total Equity of GBP112,652k. The gap exactly matches a new 'Non-controlling interest "
+    "acquisition reserve' column (GBP(19,836)k) introduced from FY2022 onward that wasn't present in "
+    "FY2021's own equity statement - shown here as an explicit 'Prior period restatement' bridging row "
+    "(reproducing the disclosed component, not force-reconciling it), consistent with FY2021 using its "
+    "own originally-published figures throughout the rest of this workbook.\n"
+    "PRESENTATION NOTE: FY2021 carries a Foreign currency translation reserve and Investment in "
+    "associate/Investment Properties lines that later years don't (associate/investment property "
+    "disposed); FY2022-FY2023 introduce a Non-controlling interest acquisition reserve (renamed "
+    "'Reserve as a result of subsidiary acquisition' from FY2024) and a Goodwill balance sheet line "
+    "(written off/absorbed by FY2024); FY2024-FY2025 introduce Assets/Liabilities in disposal groups "
+    "classified as held for sale and a Deferred tax asset line not itemised in FY2021's own filing. The "
+    "Non-controlling interest is fully bought out by FY2023 (nil from FY2023's own statement onward, not "
+    "shown as a column at all from FY2024). Income statement structure also evolves: FY2021 shows "
+    "Loss/Gain on property held for sale and Gain on investment properties (FY2021-only, associated with "
+    "the investment property later disposed) and a below-the-line 'Net share of profit of associate' "
+    "(FY2021-only); FY2022-FY2023 report Profit/(loss) for the year from continuing operations "
+    "separately from Profit after tax from discontinued operations; FY2024-FY2025 relabel this split as "
+    "Loss after tax from continuing operations / Discontinued operation. Each year's own line items are "
+    "used unchanged, blank cells where a line genuinely doesn't apply that year.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_balance_sheet_sheet(
+    title="Gatehouse Bank Plc — Consolidated Balance Sheet",
+    subtitle="Consolidated basis, £'000. See source note at bottom.",
+    rows=[
+        ("SECTION", "Assets", {}),
+        ("DATA", "Cash and balances with banks",
+         {"FY2025": 24599, "FY2024": 27823, "FY2023": 24596, "FY2022": 22845, "FY2021": 41598}),
+        ("DATA", "Financing and advances at amortised cost",
+         {"FY2025": 1264559, "FY2024": 1315936, "FY2023": 1357803, "FY2022": 1227896, "FY2021": 901111}),
+        ("DATA", "Derivative financial instruments (asset)",
+         {"FY2025": 2348, "FY2024": 11337, "FY2023": 33032, "FY2022": 34138, "FY2021": 2619}),
+        ("DATA", "Fair value of hedged assets in portfolio hedges of interest rate risk",
+         {"FY2025": 2377, "FY2024": -371}),
+        ("DATA", "Financial assets held at FVTOCI",
+         {"FY2025": 38098, "FY2024": 28282, "FY2023": 19512, "FY2022": 19351, "FY2021": 22951}),
+        ("DATA", "Financial assets held at FVTIS",
+         {"FY2025": 2827, "FY2024": 8228, "FY2023": 18278, "FY2022": 17061, "FY2021": 26366}),
+        ("DATA", "Investment in associate", {"FY2021": 14298}),
+        ("DATA", "Goodwill", {"FY2023": 4242, "FY2022": 4242, "FY2021": 4242}),
+        ("DATA", "Intangible assets",
+         {"FY2025": 2849, "FY2024": 6644, "FY2023": 1879, "FY2022": 1812, "FY2021": 1389}),
+        ("DATA", "Property, plant and equipment and right-of-use assets",
+         {"FY2025": 1126, "FY2024": 945, "FY2023": 1155, "FY2022": 1486, "FY2021": 1714}),
+        ("DATA", "Assets in disposal groups classified as held for sale", {"FY2025": 13551}),
+        ("DATA", "Property held for sale", {"FY2021": 4537}),
+        ("DATA", "Other assets",
+         {"FY2025": 36503, "FY2024": 8857, "FY2023": 4016, "FY2022": 2571, "FY2021": 5533}),
+        ("DATA", "Deferred tax assets",
+         {"FY2025": 9374, "FY2024": 7427, "FY2023": 5260, "FY2022": 4525}),
+        ("TOTAL", "Total assets",
+         {"FY2025": 1398211, "FY2024": 1415108, "FY2023": 1469773, "FY2022": 1335927, "FY2021": 1026358}),
+
+        ("SECTION", "Liabilities", {}),
+        ("DATA", "Financial liabilities measured at amortised cost",
+         {"FY2025": 1287404, "FY2024": 1288977, "FY2023": 1316609, "FY2022": 1168586, "FY2021": 895637}),
+        ("DATA", "Financial liabilities held at FVTIS", {"FY2021": 1340}),
+        ("DATA", "Derivative financial instruments (liability)",
+         {"FY2025": 2736, "FY2024": 11110, "FY2023": 44010, "FY2022": 61224, "FY2021": 5033}),
+        ("DATA", "Other liabilities",
+         {"FY2025": 7562, "FY2024": 8649, "FY2023": 6926, "FY2022": 7333, "FY2021": 11696}),
+        ("DATA", "Liabilities directly associated with assets in disposal groups classified as held for sale",
+         {"FY2025": 4743}),
+        ("TOTAL", "Total liabilities",
+         {"FY2025": 1302445, "FY2024": 1308736, "FY2023": 1367545, "FY2022": 1237143, "FY2021": 913706}),
+
+        ("SECTION", "Equity", {}),
+        ("DATA", "Share capital",
+         {"FY2025": 150049, "FY2024": 150049, "FY2023": 150049, "FY2022": 150049, "FY2021": 150049}),
+        ("DATA", "Fair value through other comprehensive income reserve",
+         {"FY2025": -3616, "FY2024": -4377, "FY2023": -4721, "FY2022": -5275, "FY2021": -3848}),
+        ("DATA", "Foreign currency translation reserve", {"FY2021": 1792}),
+        ("DATA", "Reserve as a result of subsidiary acquisition",
+         {"FY2025": -15917, "FY2024": -15917, "FY2023": -15917, "FY2022": -15917}),
+        ("DATA", "Retained earnings/(deficit)",
+         {"FY2025": -34750, "FY2024": -23383, "FY2023": -27183, "FY2022": -30073, "FY2021": -36644}),
+        ("TOTAL", "Equity attributable to owners of the company",
+         {"FY2025": 95766, "FY2024": 106372, "FY2023": 102228, "FY2022": 98784, "FY2021": 111349}),
+        ("DATA", "Non-controlling interest", {"FY2023": 0, "FY2022": 0, "FY2021": 1303}),
+        ("TOTAL", "Total equity",
+         {"FY2025": 95766, "FY2024": 106372, "FY2023": 102228, "FY2022": 98784, "FY2021": 112652}),
+        ("TOTAL", "Total equity and liabilities",
+         {"FY2025": 1398211, "FY2024": 1415108, "FY2023": 1469773, "FY2022": 1335927, "FY2021": 1026358}),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=380,
+    unit_suffix=" (£'000)",
+)
+
+bw.add_income_statement_sheet(
+    title="Gatehouse Bank Plc — Consolidated Income Statement",
+    subtitle="Consolidated basis, £'000. See source note at bottom.",
+    rows=[
+        ("SECTION", "Income", {}),
+        ("DATA", "Income from financial assets held at amortised cost",
+         {"FY2025": 65700, "FY2024": 66694, "FY2023": 55745, "FY2022": 42738, "FY2021": 33889}),
+        ("DATA", "Charges to financial institutions and customers",
+         {"FY2025": -50933, "FY2024": -51092, "FY2023": -32736, "FY2022": -18604, "FY2021": -15332}),
+        ("DATA", "Fees and commission income",
+         {"FY2025": 2704, "FY2024": 917, "FY2023": 10130, "FY2022": 9078, "FY2021": 9954}),
+        ("DATA", "Fees and commission expense", {"FY2023": -127, "FY2022": -167, "FY2021": -164}),
+        ("DATA", "Foreign exchange gains/(losses)",
+         {"FY2025": 211, "FY2024": 137, "FY2023": 19, "FY2022": -834, "FY2021": -516}),
+        ("DATA", "Net (losses)/gains from financial assets at FVTIS",
+         {"FY2025": -2052, "FY2024": 2287, "FY2023": 1952, "FY2022": 5676, "FY2021": 756}),
+        ("DATA", "Net gains from financial assets at FVTOCI",
+         {"FY2025": 885, "FY2024": 344, "FY2023": 197, "FY2022": 376, "FY2021": 335}),
+        ("DATA", "Other income/(loss)", {"FY2023": -231, "FY2022": 335, "FY2021": 2178}),
+        ("DATA", "(Loss)/gain on property held for sale", {"FY2021": -472}),
+        ("DATA", "Gain on investment properties", {"FY2021": 1412}),
+        ("DATA", "Impairment (charge)/release",
+         {"FY2025": -2725, "FY2024": 192, "FY2023": -847, "FY2022": -5714, "FY2021": -806}),
+        ("TOTAL", "Total operating income",
+         {"FY2025": 13790, "FY2024": 19479, "FY2023": 34102, "FY2022": 32884, "FY2021": 31234}),
+
+        ("SECTION", "Expenses", {}),
+        ("DATA", "Staff costs",
+         {"FY2025": -19031, "FY2024": -14881, "FY2023": -20643, "FY2022": -19889, "FY2021": -18126}),
+        ("DATA", "Depreciation and amortisation",
+         {"FY2025": -1043, "FY2024": -931, "FY2023": -1302, "FY2022": -1319, "FY2021": -1222}),
+        ("DATA", "Other operating expenses",
+         {"FY2025": -8954, "FY2024": -7081, "FY2023": -9004, "FY2022": -9121, "FY2021": -9173}),
+        ("TOTAL", "Total operating expenses",
+         {"FY2025": -29028, "FY2024": -22893, "FY2023": -30949, "FY2022": -30329, "FY2021": -28521}),
+
+        ("TOTAL", "Operating profit/(loss)",
+         {"FY2025": -15238, "FY2024": -3414, "FY2023": 3153, "FY2022": 2555, "FY2021": 2713}),
+        ("DATA", "Net share of profit of associate", {"FY2021": 904}),
+        ("TOTAL", "Profit/(loss) before tax",
+         {"FY2025": -15238, "FY2024": -3414, "FY2023": 3153, "FY2022": 2555, "FY2021": 3617}),
+        ("DATA", "Tax",
+         {"FY2025": 1947, "FY2024": 2167, "FY2023": 4, "FY2022": 3933, "FY2021": -153}),
+        ("TOTAL", "Profit/(loss) for the year from continuing operations",
+         {"FY2025": -13291, "FY2024": -1247, "FY2023": 3157, "FY2022": 6488, "FY2021": 3464}),
+        ("DATA", "Profit for the year from discontinued operations",
+         {"FY2025": 1924, "FY2024": 5047, "FY2023": 0, "FY2022": 1640}),
+        ("TOTAL", "(Loss)/profit for the year",
+         {"FY2025": -11367, "FY2024": 3800, "FY2023": 3157, "FY2022": 8128, "FY2021": 3464}),
+
+        ("SECTION", "Other comprehensive income", {}),
+        ("DATA", "Net gain/(loss) on FVTOCI investments",
+         {"FY2025": 761, "FY2024": 344, "FY2023": 554, "FY2022": -1539, "FY2021": -382}),
+        ("DATA", "Foreign currency translation gains/(losses) from investment in associate (discontinued operation)",
+         {"FY2022": -1792, "FY2021": 244}),
+        ("TOTAL", "Other comprehensive income/(loss) for the year",
+         {"FY2025": 761, "FY2024": 344, "FY2023": 554, "FY2022": -3331, "FY2021": -138}),
+        ("TOTAL", "Total comprehensive (loss)/income for the year",
+         {"FY2025": -10606, "FY2024": 4144, "FY2023": 3711, "FY2022": 4797, "FY2021": 3326}),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=88,
+    source_height=380,
+    unit_suffix=" (£'000)",
+)
+
+EQUITY_HEADERS = [
+    "Share capital", "FVTOCI reserve", "Foreign currency translation reserve",
+    "Reserve as a result of subsidiary acquisition", "Retained earnings/(deficit)",
+    "Equity attributable to owners", "Non-controlling interest", "Total equity",
+]
+bw.add_equity_changes_sheet(
+    title="Gatehouse Bank Plc — Consolidated Statement of Changes in Equity",
+    subtitle="Consolidated basis, £'000, chronological. See source note at bottom.",
+    headers=EQUITY_HEADERS,
+    rows=[
+        ("TOTAL", "At 1 January 2021", (150049, -3434, 1548, None, -39680, 108483, 843, 109326)),
+        ("DATA", "Recycle of gain on sale of OCI investments (FY2021)",
+         (None, -32, None, None, 32, 0, None, 0)),
+        ("DATA", "Unrealised loss on instruments at FVTOCI (FY2021)",
+         (None, -382, None, None, None, -382, None, -382)),
+        ("DATA", "Foreign currency translation gains from associate investments (FY2021)",
+         (None, None, 244, None, None, 244, None, 244)),
+        ("TOTAL", "Subtotal after other comprehensive income (FY2021)",
+         (150049, -3848, 1792, None, -39648, 108345, 843, 109188)),
+        ("DATA", "Profit for the year (FY2021)", (None, None, None, None, 3004, 3004, 460, 3464)),
+        ("TOTAL", "At 31 December 2021", (150049, -3848, 1792, None, -36644, 111349, 1303, 112652)),
+
+        ("DATA", "Prior period restatement — introduction of Non-controlling interest acquisition reserve (FY2022 opening)",
+         (None, None, None, -19836, None, -19836, None, -19836)),
+        ("TOTAL", "At 1 January 2022 (restated)",
+         (150049, -3848, 1792, -19836, -36644, 91513, 1303, 92816)),
+        ("DATA", "Recycle of gain on sale of OCI investments (FY2022)",
+         (None, 112, None, None, -112, 0, None, 0)),
+        ("DATA", "Unrealised loss on instruments at FVTOCI (FY2022)",
+         (None, -1539, None, None, None, -1539, None, -1539)),
+        ("DATA", "Foreign currency translation losses from investment in associate — discontinued operation (FY2022)",
+         (None, None, -1792, None, None, -1792, None, -1792)),
+        ("TOTAL", "Subtotal after other comprehensive income (FY2022)",
+         (150049, -5275, 0, -19836, -36756, 88182, 1303, 89485)),
+        ("DATA", "Profit for the year — continuing operations (FY2022)",
+         (None, None, None, 228, 5043, 5271, 1217, 6488)),
+        ("DATA", "Profit for the year — discontinued operations (FY2022)",
+         (None, None, None, None, 1640, 1640, None, 1640)),
+        ("DATA", "Acquisition of a subsidiary (FY2022)",
+         (None, None, None, 3691, None, 3691, -2520, 1171)),
+        ("TOTAL", "At 31 December 2022", (150049, -5275, 0, -15917, -30073, 98784, 0, 98784)),
+
+        ("TOTAL", "At 1 January 2023", (150049, -5275, None, -15917, -30073, 98784, None, 98784)),
+        ("DATA", "Unrealised gain on instruments at FVTOCI (FY2023)",
+         (None, 554, None, None, None, 554, None, 554)),
+        ("TOTAL", "Subtotal after other comprehensive income (FY2023)",
+         (150049, -4721, None, -15917, -30073, 99338, None, 99338)),
+        ("DATA", "Profit for the year (FY2023)", (None, None, None, None, 3157, 3157, None, 3157)),
+        ("DATA", "Recycling of reserve on liquidation of subsidiary (FY2023)",
+         (None, None, None, None, -267, -267, None, -267)),
+        ("TOTAL", "At 31 December 2023", (150049, -4721, None, -15917, -27183, 102228, None, 102228)),
+
+        ("TOTAL", "At 1 January 2024", (150049, -4721, None, -15917, -27183, 102228, None, 102228)),
+        ("DATA", "Loss for the year — continuing operations (FY2024)",
+         (None, None, None, None, -1247, -1247, None, -1247)),
+        ("DATA", "Profit for the year — discontinued operations (FY2024)",
+         (None, None, None, None, 5047, 5047, None, 5047)),
+        ("DATA", "Other comprehensive income (FY2024)", (None, 344, None, None, None, 344, None, 344)),
+        ("TOTAL", "Total comprehensive income for the year (FY2024)",
+         (None, 344, None, None, 3800, 4144, None, 4144)),
+        ("TOTAL", "At 31 December 2024", (150049, -4377, None, -15917, -23383, 106372, None, 106372)),
+
+        ("TOTAL", "At 1 January 2025", (150049, -4377, None, -15917, -23383, 106372, None, 106372)),
+        ("DATA", "Loss for the year — continuing operations (FY2025)",
+         (None, None, None, None, -13291, -13291, None, -13291)),
+        ("DATA", "Profit for the year — discontinued operations (FY2025)",
+         (None, None, None, None, 1924, 1924, None, 1924)),
+        ("DATA", "Other comprehensive income (FY2025)", (None, 761, None, None, None, 761, None, 761)),
+        ("TOTAL", "Total comprehensive (loss)/income for the year (FY2025)",
+         (None, 761, None, None, -11367, -10606, None, -10606)),
+        ("TOTAL", "At 31 December 2025", (150049, -3616, None, -15917, -34750, 95766, None, 95766)),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=380,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -188,6 +432,64 @@ bw.add_cash_flow_sheet(
     unit_suffix=" (£'000)",
 )
 
+bw.add_asset_quality_sheet(
+    title="Gatehouse Bank Plc — Asset Quality",
+    subtitle="Financing and advances at amortised cost, by IFRS 9 stage, £'000. Consolidated basis. See source note at bottom.",
+    rows=[
+        ("SECTION", "Gross carrying value, by IFRS 9 stage", {}),
+        ("DATA", "Stage 1 (12m ECL)",
+         {"FY2025": 1098978, "FY2024": 1155258, "FY2023": 1193879, "FY2022": 1113761, "FY2021": 812023}),
+        ("DATA", "Stage 2 (lifetime ECL)",
+         {"FY2025": 94477, "FY2024": 91462, "FY2023": 116499, "FY2022": 106426, "FY2021": 79034}),
+        ("DATA", "Stage 3 (lifetime ECL)",
+         {"FY2025": 83611, "FY2024": 79036, "FY2023": 57596, "FY2022": 17035, "FY2021": 13666}),
+        ("TOTAL", "Total gross carrying value",
+         {"FY2025": 1277066, "FY2024": 1325756, "FY2023": 1367974, "FY2022": 1237222, "FY2021": 904723}),
+
+        ("SECTION", "Loss allowance, by IFRS 9 stage", {}),
+        ("DATA", "Stage 1 (12m ECL)",
+         {"FY2025": -1363, "FY2024": -790, "FY2023": -1379, "FY2022": -3108, "FY2021": -413}),
+        ("DATA", "Stage 2 (lifetime ECL)",
+         {"FY2025": -512, "FY2024": -497, "FY2023": -1362, "FY2022": -5586, "FY2021": -2468}),
+        ("DATA", "Stage 3 (lifetime ECL)",
+         {"FY2025": -10632, "FY2024": -8533, "FY2023": -7430, "FY2022": -632, "FY2021": -731}),
+        ("TOTAL", "Total loss allowance",
+         {"FY2025": -12507, "FY2024": -9820, "FY2023": -10171, "FY2022": -9326, "FY2021": -3612}),
+
+        ("SECTION", "Carrying value under IFRS 9, by stage", {}),
+        ("DATA", "Stage 1", {"FY2025": 1097615, "FY2024": 1154468, "FY2023": 1192500, "FY2022": 1110653, "FY2021": 811610}),
+        ("DATA", "Stage 2", {"FY2025": 93965, "FY2024": 90965, "FY2023": 115137, "FY2022": 100840, "FY2021": 76566}),
+        ("DATA", "Stage 3", {"FY2025": 72979, "FY2024": 70503, "FY2023": 50166, "FY2022": 16403, "FY2021": 12935}),
+        ("TOTAL", "Total carrying value (Financing and advances at amortised cost)",
+         {"FY2025": 1264559, "FY2024": 1315936, "FY2023": 1357803, "FY2022": 1227896, "FY2021": 901111}),
+
+        ("SECTION", "Derived ratios", {}),
+        ("DATA", "Stage 3 / total gross carrying value (NPL ratio)",
+         {"FY2025": "6.55%", "FY2024": "5.96%", "FY2023": "4.21%", "FY2022": "1.38%", "FY2021": "1.51%"}),
+        ("DATA", "Total loss allowance coverage (total allowance / total gross)",
+         {"FY2025": "0.98%", "FY2024": "0.74%", "FY2023": "0.74%", "FY2022": "0.75%", "FY2021": "0.40%"}),
+        ("DATA", "Stage 3 coverage (Stage 3 loss allowance / Stage 3 gross)",
+         {"FY2025": "12.72%", "FY2024": "10.80%", "FY2023": "12.90%", "FY2022": "3.71%", "FY2021": "5.35%"}),
+    ],
+    sources_text=(
+        "Sources - Gatehouse Bank Plc's own 'Financing and advances at amortised cost' note "
+        "(Group), IFRS 9 stage split:\n"
+        f"FY2025/FY2024: Annual Report and Financial Statements 2025, p.89-90 - {AR2025_URL}\n"
+        f"FY2023/FY2022: Annual Report and Financial Statements 2023, p.93 - {AR2023_URL}\n"
+        f"FY2021: Annual Report and Financial Statements 2021, p.78 - {AR2021_URL}\n"
+        "Each year's own originally-published figures used - every stage split ties exactly to that "
+        "year's own Total gross carrying value/loss allowance/carrying value and to the Balance Sheet's "
+        "own Financing and advances at amortised cost line. Derived ratios independently computed from "
+        "the disclosed stage figures (not restated). Note the growing Stage 3 balance/NPL ratio across "
+        "the series reflects a genuine, disclosed deterioration in the Bank's property finance book, not "
+        "a presentation change.\n"
+        + ENTITY_NOTE
+    ),
+    first_col_width=64,
+    source_height=300,
+    unit_suffix=" (£'000)",
+)
+
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
@@ -214,6 +516,65 @@ metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], "32", note=NO_AT1_NO
 metric("Total Capital", "£m", [("Total capital", TOTAL_CAPITAL)], "32")
 metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)], "32")
 metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", TOTAL_RWA)], "32")
+
+bw.add_rwa_breakdown_sheet(
+    title="Gatehouse Bank Plc — RWA Breakdown",
+    subtitle="Consolidated basis, £m. Pillar 1 credit risk RWA by exposure class + derived operational risk RWA. See source note at bottom.",
+    rows=[
+        ("SECTION", "Credit risk RWA, by exposure class (Standardised approach)", {}),
+        ("DATA", "Cash and balances with banks",
+         {"FY2024": 4.8, "FY2023": 4.5, "FY2022": 3.5, "FY2021": 3.6}),
+        ("DATA", "Financing and advances at amortised cost",
+         {"FY2024": 498.8, "FY2023": 499.3, "FY2022": 446.7, "FY2021": 356.3}),
+        ("DATA", "Financial assets held at fair value through the income statement",
+         {"FY2024": 10.9, "FY2023": 27.4, "FY2022": 25.6, "FY2021": 55.7}),
+        ("DATA", "Financial assets at fair value through other comprehensive income",
+         {"FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+        ("DATA", "Derivative financial instruments",
+         {"FY2024": 6.2, "FY2023": 6.6, "FY2022": 6.8, "FY2021": 0.5}),
+        ("DATA", "Investment in subsidiaries",
+         {"FY2024": 29.3, "FY2023": 29.2, "FY2022": 26.4, "FY2021": 6.5}),
+        ("DATA", "Investment in associates", {"FY2021": 28.3}),
+        ("DATA", "Other assets",
+         {"FY2024": 7.6, "FY2023": 4.3, "FY2022": 4.4, "FY2021": 3.9}),
+        ("DATA", "Off balance sheet assets",
+         {"FY2024": 6.3, "FY2023": 3.8, "FY2022": 12.9, "FY2021": 8.2}),
+        ("TOTAL", "Credit risk RWA, total",
+         {"FY2024": 563.9, "FY2023": 575.1, "FY2022": 526.3, "FY2021": 463.0}),
+
+        ("DATA", "Operational risk RWA (derived: disclosed Pillar 1 capital requirement ÷ 8%)",
+         {"FY2024": 52.5, "FY2023": 60.0, "FY2022": 47.5, "FY2021": 35.0}),
+        ("DATA", "Market risk, CVA and other Pillar 1 RWA (residual — Total RWA less disclosed Credit "
+                 "Risk and derived Operational Risk RWA)",
+         {"FY2024": 20.3, "FY2023": 9.7, "FY2022": 20.9, "FY2021": 25.0}),
+        ("TOTAL", "Total RWAs", {"FY2024": 636.7, "FY2023": 644.8, "FY2022": 594.7, "FY2021": 523.0}),
+    ],
+    sources_text=(
+        "Sources - Gatehouse Bank Plc Pillar 3 disclosures:\n"
+        "Credit risk RWA by exposure class - 'The table below breaks out the Bank's Pillar 1 capital "
+        "requirements for credit risk' table (an image-only table, visually transcribed):\n"
+        f"FY2024: Pillar III Disclosure 2024, p.14 - {P3_2024_URL}\n"
+        f"FY2023: Pillar III Disclosure 2023, p.14 - {P3_2023_URL}\n"
+        f"FY2022: Pillar III Disclosure 2022, p.15 - {P3_2022_URL}\n"
+        f"FY2021: Pillar III Disclosure 2021, p.14 - {P3_2021_URL}\n"
+        "Operational risk RWA is NOT disclosed directly - each year's Pillar 3 document states only the "
+        "Bank's 'Pillar 1 capital requirements to meet operational risks' in £m (FY2024: 4.2, FY2023: "
+        "4.8, FY2022: 3.8, FY2021: 2.8, from the same 4 documents' s.9 Operational Risk sections) - "
+        "derived to RWA here by dividing by the Pillar 1 minimum ratio of 8%, per the same documents' "
+        "own stated methodology. The Market risk/CVA/other residual row is NOT independently disclosed "
+        "anywhere - it is the arithmetic gap between the disclosed Total RWA (from the Total RWAs metric "
+        "sheet's own Article 447 Key Metrics source) and the sum of disclosed Credit Risk RWA plus "
+        "derived Operational Risk RWA, shown explicitly rather than silently absorbed, since the Bank's "
+        "own Pillar 3 narrative states it has 'no material exposure to market risk.' FY2025 blank - "
+        "Pillar 3 disclosures not yet published as at build date (same gap as the other Pillar 3 sheets "
+        "in this workbook).\n"
+        + ENTITY_NOTE
+    ),
+    first_col_width=76,
+    source_height=380,
+    unit_suffix=" (£m)",
+)
+
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)], "32")
 metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "32")
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "32", note=NSFR_NOTE)
@@ -228,6 +589,37 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets",
+         {"FY2025": 1398211, "FY2024": 1415108, "FY2023": 1469773, "FY2022": 1335927, "FY2021": 1026358}),
+        ("Financing and advances at amortised cost",
+         {"FY2025": 1264559, "FY2024": 1315936, "FY2023": 1357803, "FY2022": 1227896, "FY2021": 901111}),
+        ("Financial liabilities measured at amortised cost",
+         {"FY2025": 1287404, "FY2024": 1288977, "FY2023": 1316609, "FY2022": 1168586, "FY2021": 895637}),
+        ("Total equity",
+         {"FY2025": 95766, "FY2024": 106372, "FY2023": 102228, "FY2022": 98784, "FY2021": 112652}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total operating income",
+         {"FY2025": 13790, "FY2024": 19479, "FY2023": 34102, "FY2022": 32884, "FY2021": 31234}),
+        ("Total operating expenses",
+         {"FY2025": -29028, "FY2024": -22893, "FY2023": -30949, "FY2022": -30329, "FY2021": -28521}),
+        ("(Loss)/profit for the year",
+         {"FY2025": -11367, "FY2024": 3800, "FY2023": 3157, "FY2022": 8128, "FY2021": 3464}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity",
+         {"FY2025": 106372, "FY2024": 102228, "FY2023": 98784, "FY2022": 92816, "FY2021": 109326}),
+        ("Total comprehensive (loss)/income for the year",
+         {"FY2025": -10606, "FY2024": 4144, "FY2023": 3711, "FY2022": 4797, "FY2021": 3326}),
+        ("Other equity movements, net",
+         {"FY2025": 0, "FY2024": 0, "FY2023": -267, "FY2022": 1171, "FY2021": 0}),
+        ("Closing equity",
+         {"FY2025": 95766, "FY2024": 106372, "FY2023": 102228, "FY2022": 98784, "FY2021": 112652}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash flow from/(used in) operating activities",
          {"FY2025": 4075, "FY2024": 1987, "FY2023": 4640, "FY2022": -38927, "FY2021": 12357}),
@@ -247,10 +639,13 @@ bw.add_overview_sheet(
         ("NSFR", NSFR),
     ],
     note="Gatehouse Bank Plc is a UK Shariah-compliant (Islamic) bank; 'profit paid/received' is the "
-         "functional equivalent of interest paid/received. FY2025 Pillar 3 ratios are blank - not yet "
-         "published as at build date. See the Cash Flow Statement sheet's source note for the 3-era "
-         "presentation change and the FY2021/FY2022 restatement notes. Figures are duplicated from the "
-         "detail sheets for at-a-glance trend viewing.",
+         "functional equivalent of interest paid/received. FY2025 Pillar 3 ratios and RWA Breakdown are "
+         "blank - not yet published as at build date. Opening equity for FY2022 (GBP92,816k) is "
+         "GBP19,836k lower than FY2021's own closing Total equity (GBP112,652k) - a genuine, disclosed "
+         "restatement (a new Non-controlling interest acquisition reserve introduced from FY2022), see "
+         "the Statement of Changes in Equity sheet's source note. See the Cash Flow Statement sheet's "
+         "source note for the 3-era presentation change and the FY2021/FY2022 cash flow restatement "
+         "notes. Figures are duplicated from the detail sheets for at-a-glance trend viewing.",
 )
 
 # ---------------------------------------------------------------

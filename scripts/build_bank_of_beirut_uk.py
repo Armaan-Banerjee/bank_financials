@@ -79,6 +79,150 @@ def p3_sources(extra=""):
 
 bw = BankWorkbook(bank_name="Bank of Beirut (UK) Ltd", years=YEARS, year_label=YEAR_LABEL, header_color="6B4226")
 
+STATEMENT_SOURCES = (
+    "Sources - Bank of Beirut (UK) Ltd's own Balance Sheet / Income Statement / Statement of Changes in "
+    "Equity, converted from £ to £'000s (rounded to nearest £'000), all years:\n"
+    f"FY2025/FY2024: Annual Report and Financial Statements 2025, Income Statement p.29, Statement of Other "
+    f"Comprehensive Income p.30, Balance Sheet p.31, Statement of Changes in Equity p.32 - {AR2025_URL}\n"
+    f"FY2023/FY2022: Annual Report and Financial Statements 2023, Income Statement p.30, Statement of Other "
+    f"Comprehensive Income p.31, Balance Sheet p.32, Statement of Changes in Equity p.33 (FY2022 is that "
+    f"report's own FY2022 comparative column) - {AR2023_URL}\n"
+    f"FY2021: Annual Report & Financial Statements 2021, Income Statement/OCI p.28, Balance Sheet p.29, "
+    f"Statement of Changes in Equity p.30 - {AR2021_URL}\n"
+    "PRESENTATIONAL BREAK: FY2021's Balance Sheet carries 'Debt securities at amortised cost' and 'Financial "
+    "assets at FVTOCI' as separate lines; FY2022 onward consolidates everything into a single 'Financial "
+    "assets at amortised cost' line - a genuine reclassification of the investment portfolio, not merged here "
+    "(each year's own report structure kept). FY2021 and FY2023's own Balance Sheets carry no 'Derivative "
+    "assets/liabilities' line (nil that year); FY2022/FY2024 do.\n"
+    "ROUNDING ARTIFACT: FY2021's Statement of Changes in Equity's own Profit-for-year (£1,419,884 -> £1,420k) "
+    "and OCI-for-year (£10,501 -> £11k) rows sum to £1,431k against that year's own reported Total "
+    "comprehensive income of £1,430,385 (-> £1,430k) - a £1k rounding artifact from independently rounding "
+    "each component to the nearest £'000, not a source-document error (the underlying unrounded figures tie "
+    "exactly: 1,419,884 + 10,501 = 1,430,385).\n"
+    "FY2025's and FY2023's own Balance Sheet Total assets figures (£502,093,745 -> £502,094k; £367,528,644 -> "
+    "£367,529k) are each £1k more than Total liabilities + Total equity independently rounded (£379,117k + "
+    "£122,976k = £502,093k; £252,533k + £114,995k = £367,528k) - same rounding-artifact class as above, not "
+    "an imbalance in the source (both years' unrounded figures tie exactly).\n\n"
+    + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet 0a: Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at banks", {"FY2025": 254772, "FY2024": 276518, "FY2023": 97313, "FY2022": 97866, "FY2021": 134557}),
+    ("DATA", "Placements with banks", {"FY2025": 3554, "FY2024": 3005, "FY2023": 84957, "FY2022": 85207, "FY2021": 90779}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 144331, "FY2024": 121491, "FY2023": 121214, "FY2022": 161651, "FY2021": 128986}),
+    ("DATA", "Customers' acceptances", {"FY2025": 3581, "FY2024": 1783, "FY2023": 4492, "FY2022": 4089, "FY2021": 8186}),
+    ("DATA", "Financial assets at amortised cost", {"FY2025": 68899, "FY2024": 57046, "FY2023": 38551, "FY2022": 35784}),
+    ("DATA", "Debt securities at amortised cost", {}),
+    ("DATA", "Financial assets at FVTOCI", {"FY2021": 26631}),
+    ("DATA", "Derivative assets", {"FY2023": 47}),
+    ("DATA", "Prepayments and accrued income", {"FY2025": 1892, "FY2024": 1554, "FY2023": 1057, "FY2022": 1161, "FY2021": 983}),
+    ("DATA", "Current tax assets", {"FY2025": 1241, "FY2024": 406}),
+    ("DATA", "Land and Buildings", {"FY2025": 18289, "FY2024": 18449, "FY2023": 18583, "FY2022": 18649, "FY2021": 18800}),
+    ("DATA", "Right-of-use lease assets", {"FY2025": 345, "FY2024": 419, "FY2023": 531, "FY2022": 608, "FY2021": 731}),
+    ("DATA", "Property and equipment", {"FY2025": 631, "FY2024": 778, "FY2023": 699, "FY2022": 855, "FY2021": 384}),
+    ("DATA", "Intangible assets", {"FY2025": 4559, "FY2024": 1322, "FY2023": 83, "FY2022": 133, "FY2021": 204}),
+    ("TOTAL", "Total assets", {"FY2025": 502094, "FY2024": 482771, "FY2023": 367529, "FY2022": 406004, "FY2021": 410239}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {"FY2025": 187647, "FY2024": 162269, "FY2023": 89116, "FY2022": 80596, "FY2021": 88810}),
+    ("DATA", "Customer accounts", {"FY2025": 167175, "FY2024": 167963, "FY2023": 137387, "FY2022": 175446, "FY2021": 173317}),
+    ("DATA", "Acceptances payable", {"FY2025": 3587, "FY2024": 1797, "FY2023": 4498, "FY2022": 4098, "FY2021": 8218}),
+    ("DATA", "Derivative liabilities", {"FY2024": 145, "FY2022": 17}),
+    ("DATA", "Accruals and deferred income", {"FY2025": 316, "FY2024": 663, "FY2023": 833, "FY2022": 530, "FY2021": 560}),
+    ("DATA", "Lease liabilities", {"FY2025": 388, "FY2024": 479, "FY2023": 588, "FY2022": 655, "FY2021": 765}),
+    ("DATA", "Other liabilities", {"FY2025": 3341, "FY2024": 12280, "FY2023": 1886, "FY2022": 1954, "FY2021": 1655}),
+    ("DATA", "Current tax liability", {"FY2025": 47, "FY2024": 56, "FY2023": 1386, "FY2022": 417, "FY2021": 132}),
+    ("DATA", "Deferred tax liability", {"FY2025": 1970, "FY2024": 1121, "FY2023": 699, "FY2022": 657, "FY2021": 450}),
+    ("DATA", "Subordinated loan", {"FY2025": 14646, "FY2024": 15784, "FY2023": 16141, "FY2022": 33549, "FY2021": 31424}),
+    ("TOTAL", "Total liabilities", {"FY2025": 379117, "FY2024": 362557, "FY2023": 252533, "FY2022": 297920, "FY2021": 305331}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Called up share capital", {"FY2025": 34150, "FY2024": 34150, "FY2023": 34150, "FY2022": 34150, "FY2021": 34150}),
+    ("DATA", "Retained earnings", {"FY2025": 88826, "FY2024": 86064, "FY2023": 80845, "FY2022": 73934, "FY2021": 70758}),
+    ("TOTAL", "Total equity", {"FY2025": 122976, "FY2024": 120214, "FY2023": 114995, "FY2022": 108084, "FY2021": 104908}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 502094, "FY2024": 482771, "FY2023": 367529, "FY2022": 406004, "FY2021": 410239}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Bank of Beirut (UK) Ltd — Balance Sheet",
+    subtitle="Entity-level basis, £'000s (converted from source £). Full 5 years.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENT_SOURCES,
+    first_col_width=52,
+    source_height=280,
+)
+
+# ---------------------------------------------------------------
+# Sheet 0b: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 22273, "FY2024": 23830, "FY2023": 20688, "FY2022": 11195, "FY2021": 6286}),
+    ("DATA", "Interest expense", {"FY2025": -6352, "FY2024": -5875, "FY2023": -4270, "FY2022": -2956, "FY2021": -2676}),
+    ("TOTAL", "Net interest income", {"FY2025": 15921, "FY2024": 17955, "FY2023": 16418, "FY2022": 8239, "FY2021": 3610}),
+    ("DATA", "Fees and commission income (net)", {"FY2025": 7359, "FY2024": 6186, "FY2023": 6476, "FY2022": 8211, "FY2021": 7427}),
+    ("DATA", "Foreign exchange income", {"FY2025": 952, "FY2024": 888, "FY2023": 1041, "FY2022": 880, "FY2021": 588}),
+    ("TOTAL", "Total non-interest income", {"FY2025": 8311, "FY2024": 7073, "FY2023": 7517, "FY2022": 9090, "FY2021": 8015}),
+    ("TOTAL", "Total income", {"FY2025": 24232, "FY2024": 25029, "FY2023": 23935, "FY2022": 17329, "FY2021": 11625}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Administrative expenses", {"FY2025": -14398, "FY2024": -12234, "FY2023": -11303, "FY2022": -9666, "FY2021": -9127}),
+    ("DATA", "Finance cost", {"FY2025": -23, "FY2024": -83, "FY2023": -32, "FY2022": -38, "FY2021": -43}),
+    ("DATA", "Net impairment (losses)/reversal on financial assets", {"FY2025": 368, "FY2024": 241, "FY2023": -736, "FY2022": -2669, "FY2021": -297}),
+    ("TOTAL", "Profit before taxation", {"FY2025": 10177, "FY2024": 12953, "FY2023": 11864, "FY2022": 4956, "FY2021": 2157}),
+    ("DATA", "Taxation", {"FY2025": -2581, "FY2024": -3283, "FY2023": -2838, "FY2022": -980, "FY2021": -737}),
+    ("DATA", "Discontinued operations (Frankfurt Branch)", {"FY2023": -127}),
+    ("TOTAL", "Profit for the year", {"FY2025": 7597, "FY2024": 9670, "FY2023": 8899, "FY2022": 3976, "FY2021": 1420}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Financial assets at FVOCI - gains arising during the year", {"FY2022": 3, "FY2021": 13}),
+    ("DATA", "Income tax relating to items that may be reclassified", {"FY2022": -1, "FY2021": -2}),
+    ("TOTAL", "Other comprehensive income for the year, net of tax", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 2, "FY2021": 11}),
+    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 7597, "FY2024": 9670, "FY2023": 8899, "FY2022": 3978, "FY2021": 1430}),
+]
+
+bw.add_income_statement_sheet(
+    title="Bank of Beirut (UK) Ltd — Profit & Loss",
+    subtitle="Entity-level basis, £'000s (converted from source £). Full 5 years.",
+    rows=income_statement_rows,
+    sources_text=STATEMENT_SOURCES,
+    first_col_width=58,
+    source_height=280,
+)
+
+# ---------------------------------------------------------------
+# Sheet 0c: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Called up share capital", "Retained earnings", "Total equity"]
+equity_changes_rows = [
+    ("DATA", "As at 1 January 2021", (34150, 69328, 103478)),
+    ("DATA", "Profit for the year", (0, 1420, 1420)),
+    ("DATA", "Other comprehensive income for the year", (0, 11, 11)),
+    ("TOTAL", "As at 31 December 2021", (34150, 70758, 104908)),
+    ("DATA", "Dividend paid", (0, -802, -802)),
+    ("DATA", "Profit for the year", (0, 3976, 3976)),
+    ("DATA", "Other comprehensive income for the year", (0, 2, 2)),
+    ("TOTAL", "As at 31 December 2022", (34150, 73934, 108084)),
+    ("DATA", "Dividend paid", (0, -1988, -1988)),
+    ("DATA", "Profit for the year", (0, 8899, 8899)),
+    ("TOTAL", "As at 31 December 2023", (34150, 80845, 114995)),
+    ("DATA", "Other adjustment", (0, -1, -1)),
+    ("DATA", "Dividend paid", (0, -4450, -4450)),
+    ("DATA", "Profit for the year", (0, 9670, 9670)),
+    ("TOTAL", "As at 31 December 2024", (34150, 86064, 120214)),
+    ("DATA", "Dividend paid", (0, -4835, -4835)),
+    ("DATA", "Profit for the year", (0, 7597, 7597)),
+    ("TOTAL", "As at 31 December 2025", (34150, 88826, 122976)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Bank of Beirut (UK) Ltd — Statement of Changes in Equity",
+    subtitle="Entity-level basis, £'000s (converted from source £), chronological. Full 5 years, 1 Jan 2021 - 31 Dec 2025.",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=STATEMENT_SOURCES,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -127,6 +271,52 @@ bw.add_cash_flow_sheet(
     first_col_width=78,
     source_height=300,
     unit_suffix=" (£'000s)",
+)
+
+# ---------------------------------------------------------------
+# Sheet 2: Asset Quality / Credit Risk Disclosures
+# ---------------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    "Sources - Bank of Beirut (UK) Ltd's own IFRS 9 credit risk note (loans and advances to customers), "
+    "£'000s (converted from source £, rounded), all years:\n"
+    f"FY2025/FY2024: Annual Report and Financial Statements 2025, Note 28.1 Credit risk - {AR2025_URL}\n"
+    f"FY2023/FY2022: Annual Report and Financial Statements 2023, Note 30.1 Credit risk - {AR2023_URL}\n"
+    f"FY2021: Annual Report & Financial Statements 2021, Note 30.1 Credit risk - {AR2021_URL}\n"
+    "No by-product loan breakdown exists in any year's notes - only the IFRS 9 stage view (all lending is to "
+    "customers as a single class; the Bank does not sub-segment by retail/corporate/sector in its published "
+    "financial statements). Ratios are calculated from each year's own unrounded £ figures, not from the "
+    "rounded £'000s shown here, to avoid compounding rounding error.\n"
+    "IMMATERIAL RECONCILING DIFFERENCE: each year's Total gross carrying amount below is £90k-£150k (~0.1%) "
+    "higher than that year's Balance Sheet 'Loans and advances to customers' net-of-ECL figure would suggest "
+    "(Total gross - Total ECL allowance) - most likely accrued interest or fee adjustments not captured in "
+    "the credit-risk note's gross carrying table; both source tables are self-consistent within themselves, "
+    "this is a genuine small gap between two notes in the Bank's own reports, not a transcription error here.\n\n"
+    + ENTITY_NOTE
+)
+
+asset_quality_rows = [
+    ("SECTION", "Loan book by IFRS 9 stage (gross carrying amount)", {}),
+    ("DATA", "Stage 1 (12-month ECL)", {"FY2025": 142128, "FY2024": 119370, "FY2023": 114296, "FY2022": 159945, "FY2021": 118696}),
+    ("DATA", "Stage 2 (lifetime ECL, not credit-impaired)", {"FY2025": 2024, "FY2024": 1587, "FY2023": 7063, "FY2022": 2050, "FY2021": 8389}),
+    ("DATA", "Stage 3 (lifetime ECL, credit-impaired)", {"FY2025": 6562, "FY2024": 10543, "FY2023": 9952, "FY2022": 9795, "FY2021": 8438}),
+    ("TOTAL", "Total gross loans and advances to customers", {"FY2025": 150714, "FY2024": 131500, "FY2023": 131311, "FY2022": 171790, "FY2021": 135523}),
+    ("SECTION", "Loss allowance (ECL) by stage", {}),
+    ("DATA", "Stage 1 allowance", {"FY2025": 676, "FY2024": 347, "FY2023": 391, "FY2022": 696, "FY2021": 417}),
+    ("DATA", "Stage 2 allowance", {"FY2025": 42, "FY2024": 69, "FY2023": 84, "FY2022": 268, "FY2021": 301}),
+    ("DATA", "Stage 3 allowance", {"FY2025": 5812, "FY2024": 9688, "FY2023": 9740, "FY2022": 9340, "FY2021": 5960}),
+    ("TOTAL", "Total loss allowance", {"FY2025": 6530, "FY2024": 10103, "FY2023": 10215, "FY2022": 10303, "FY2021": 6678}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "ECL coverage ratio (Total allowance / Total gross loans)", {"FY2025": "4.33%", "FY2024": "7.68%", "FY2023": "7.78%", "FY2022": "6.00%", "FY2021": "4.93%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / Total gross loans)", {"FY2025": "4.35%", "FY2024": "8.02%", "FY2023": "7.58%", "FY2022": "5.70%", "FY2021": "6.23%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross)", {"FY2025": "88.57%", "FY2024": "91.89%", "FY2023": "97.87%", "FY2022": "95.35%", "FY2021": "70.65%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Bank of Beirut (UK) Ltd — Asset Quality / Credit Risk Disclosures",
+    subtitle="Entity-level basis, £'000s (converted from source £). Full 5 years.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=62,
 )
 
 # ---------------------------------------------------------------
@@ -186,6 +376,35 @@ metric(
          "FY2023 onward. FY2021 (£295.9m) is on the older ICAAP basis only (no KM1 equivalent exists for that year).",
 )
 
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Bank of Beirut (UK) Ltd's own Pillar 3 Disclosures, £'000s, all years:\n"
+    f"FY2025: Pillar 3 Disclosures - 31 December 2025, s.3.6 Key Metrics (UK KM1) - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures - 31 December 2024, s.3.6 Key Metrics (UK KM1) - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures - 31 December 2023, s.4.2 Key Metrics (UK KM1) - {P3_2023_URL}\n"
+    f"FY2022: FY2023 Pillar 3 Disclosures' own FY2022 KM1 comparative column - {P3_2023_URL}\n"
+    f"FY2021: FY2022 Pillar 3 Disclosures' own 5-year ICAAP summary table (s.4.1), pre-KM1 basis - {P3_2022_URL}\n"
+    "NOT PUBLICLY DISCLOSED (category split): checked all 4 available Pillar 3 Disclosures (FY2022-FY2025) "
+    "directly for a UK OV1-style risk-category breakdown (credit risk / counterparty credit risk / "
+    "securitisation / market risk / operational risk) - none exists in any year. Each report's 'Risk-Weighted "
+    "Exposure Amounts' section is KM1-only (a single aggregate Total RWA figure), consistent with a bank of "
+    "this size. Only the Total row below is populated (ties exactly to the Total RWAs sheet).\n\n"
+    + ENTITY_NOTE
+)
+
+rwa_breakdown_rows = [
+    ("SECTION", "RWA by risk category", {}),
+    ("DATA", "Not publicly disclosed (see sources - KM1-only Pillar 3 report, no UK OV1 category breakdown)", {}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 294900, "FY2024": 250100, "FY2023": 248500, "FY2022": 317600, "FY2021": 295900}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Bank of Beirut (UK) Ltd — RWA Breakdown",
+    subtitle="Entity-level basis, £'000s. Full 5 years. Category split not publicly disclosed - see sources.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=68,
+)
+
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio excluding claims on central banks", {"FY2025": "20.42%", "FY2024": "21.19%", "FY2023": "26.38%", "FY2022": "22.88%"})],
@@ -222,6 +441,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 502094, "FY2024": 482771, "FY2023": 367529, "FY2022": 406004, "FY2021": 410239}),
+        ("Loans and advances to customers", {"FY2025": 144331, "FY2024": 121491, "FY2023": 121214, "FY2022": 161651, "FY2021": 128986}),
+        ("Customer accounts", {"FY2025": 167175, "FY2024": 167963, "FY2023": 137387, "FY2022": 175446, "FY2021": 173317}),
+        ("Total equity", {"FY2025": 122976, "FY2024": 120214, "FY2023": 114995, "FY2022": 108084, "FY2021": 104908}),
+    ],
+    balance_sheet_unit="£'000s",
+    income_statement_totals=[
+        ("Total income", {"FY2025": 24232, "FY2024": 25029, "FY2023": 23935, "FY2022": 17329, "FY2021": 11625}),
+        ("Administrative expenses", {"FY2025": -14398, "FY2024": -12234, "FY2023": -11303, "FY2022": -9666, "FY2021": -9127}),
+        ("Profit for the year", {"FY2025": 7597, "FY2024": 9670, "FY2023": 8899, "FY2022": 3976, "FY2021": 1420}),
+    ],
+    income_statement_unit="£'000s",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 120214, "FY2024": 114995, "FY2023": 108084, "FY2022": 104908, "FY2021": 103478}),
+        ("Total comprehensive income for the year", {"FY2025": 7597, "FY2024": 9670, "FY2023": 8899, "FY2022": 3978, "FY2021": 1430}),
+        ("Other movements, net", {"FY2025": -4835, "FY2024": -4451, "FY2023": -1988, "FY2022": -802, "FY2021": 0}),
+        ("Closing equity", {"FY2025": 122976, "FY2024": 120214, "FY2023": 114995, "FY2022": 108084, "FY2021": 104908}),
+    ],
+    equity_changes_unit="£'000s",
     cash_flow_totals=[
         ("Net cash (used in)/generated from operating activities", {"FY2025": -529, "FY2024": 121755, "FY2023": 22662, "FY2022": -25122, "FY2021": 15041}),
         ("Net cash (used in)/generated from investing activities", {"FY2025": -19394, "FY2024": -19841, "FY2023": -5459, "FY2022": -7171, "FY2021": 318}),
@@ -240,7 +479,10 @@ bw.add_overview_sheet(
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page. Leverage/LCR/NSFR are blank for FY2021 (pre-KM1 "
          "disclosure with no numeric values published that year). Cash flow FY2024-FY2025 has a genuine, fully "
-         "explained (not guessed) presentational break - see the Cash Flow Statement sheet's source note.",
+         "explained (not guessed) presentational break - see the Cash Flow Statement sheet's source note. "
+         "Balance Sheet/P&L/Statement of Changes in Equity headline blocks added per the project's spend/risk "
+         "lens: 'Loans and advances to customers' and 'Customer accounts' as the capital-allocation view, "
+         "'Administrative expenses' as the operating-cost view.",
 )
 
 # ---------------------------------------------------------------

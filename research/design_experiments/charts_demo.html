@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CET1 Ratio Analysis - Chart Demo</title>
+<link href="charts.css" rel="stylesheet" id="main-charts-style">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>.chart-wrapper { padding: 24px; max-width: 90%; margin: auto; } #chart-container { background-color: white; border-radius: 8px; box-shadow 0 2px 8px rgba(0,0,0,0.06); }</style>
+</head>
+<body class="financial-report">
+
+<div class="container">
+<section class="chart-title-section">
+<h1>CET1 Ratio Analysis - UK Banks Comparison (FY2021-2025)</h1>
+<p>Comparative analysis of Common Equity Tier 1 ratios across regulated UK banking entities</p>
+</section>
+
+<main class="chart-wrapper" id="wrapper">
+<h2 class="charts-subheading">Performance Overview</h2>
+
+<div id="chart-container" class="plotly-graph-div"></div>
+</main>
+
+<script>
+var chartData = {
+   metric: 'CET1 Ratio',
+   data: [
+      {'x': [2021, 2022, 2023, 2024, 2025], 'y': [3.5, 3.8, 4.1, 3.9, 4.2], 'name': 'HSBC Bank Plc', 'trend': 'positive'},
+      {'x': [2021, 2022, 2023, 2024, 2025], 'y': [3.6, 3.9, 3.7, 4.0, 4.1], 'name': 'Barclays Bank Plc', 'trend': 'positive'},
+      {'x': [2021, 2022, 2023, 2024, 2025], 'y': [4.0, 4.2, 4.5, 4.8, 4.6], 'name': 'Lloyds Bank PLC', 'trend': 'positive'}
+   ]
+};
+
+function renderChart() {
+var trace1 = {'x': [2021, 2022, 2023, 2024, 2025], 'y': [3.5, 3.8, 4.1, 3.9, 4.2], 'name': 'HSBC Bank Plc', 'marker': {'size': 8}, 'line': {'width': 3}};
+var trace2 = {'x': [2021, 2022, 2023, 2024, 2025], 'y': [3.6, 3.9, 3.7, 4.0, 4.1], 'name': 'Barclays Bank Plc', 'marker': {'size': 8}, 'line': {'width': 3}};
+var trace3 = {'x': [2021, 2022, 2023, 2024, 2025], 'y': [4.0, 4.2, 4.5, 4.8, 4.6], 'marker': {'size': 8}, 'line': {'width': 3}};
+plotly.newPlot('chart-container', [trace1, trace2, trace3]);
+</script>
+
+<style>
+   body { font-family: Inter, sans-serif; background-color: #faf9f5; }
+   .chart-wrapper { padding: 24px; max-width: 90%; margin: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+   .legend-container { width: 100%; background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-bottom: 24px; }
+</style>
+
+</body>
+</html>

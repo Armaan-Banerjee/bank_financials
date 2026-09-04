@@ -73,6 +73,170 @@ def p3_sources():
 
 bw = BankWorkbook(bank_name="Bank of Scotland plc", years=YEARS, year_label=YEAR_LABEL, header_color="003865")
 
+STATEMENTS_SOURCES = (
+    "Sources - Bank of Scotland plc's own unconsolidated ('The Bank') Balance sheet / Income statement / "
+    "Statement of changes in equity, £m, from each year's own Companies House full accounts filing:\n"
+    f"FY2025: Annual Report and Accounts 2025, pp.21-26 - {AR2025_URL}\n"
+    f"FY2024: Annual Report and Accounts 2024, pp.21-26 - {AR2024_URL}\n"
+    f"FY2023: Annual Report and Accounts 2023, pp.26-29 - {AR2023_URL}\n"
+    f"FY2022: Annual Report and Accounts 2023 (2022 comparative column) and Annual Report and Accounts 2022 own "
+    f"equity statement - {AR2023_URL} / {AR2022_URL}\n"
+    f"FY2021: Annual Report and Accounts 2021, pp.22-26 - {AR2021_URL}\n\n"
+    + ENTITY_NOTE
+)
+
+PL_NOTE = (
+    "PROFIT & LOSS NOTE - genuine disclosure gap, not an omission: from FY2023 back to FY2021, this entity's own "
+    "Annual Report does NOT publish a full income statement for 'The Bank' (only for 'The Group'), permitted by "
+    "section 408 of the Companies Act 2006 - only the Bank's bottom-line 'Profit for the year' (split between "
+    "ordinary shareholders and other equity holders) is disclosed, in a footnote (FY2022/23) or the Statement of "
+    "comprehensive income (FY2021). All other P&L line items (interest income, fee income, operating expenses, "
+    "etc.) for those 3 years are therefore blank below - not missing data, genuinely not published at Bank level. "
+    "Full line-by-line detail is disclosed for the Bank from FY2024 onward."
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 2767, "FY2024": 2853, "FY2023": 3009, "FY2022": 3004, "FY2021": 3201}),
+    ("DATA", "Items in the course of collection from banks", {"FY2021": 47}),
+    ("DATA", "Financial assets at fair value through profit or loss", {"FY2025": 123, "FY2024": 117, "FY2023": 111, "FY2022": 113, "FY2021": 152}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 2214, "FY2024": 3337, "FY2023": 2850, "FY2022": 3476, "FY2021": 4264}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 97, "FY2024": 78, "FY2023": 180, "FY2022": 171, "FY2021": 50}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 306405, "FY2024": 294782, "FY2023": 286187, "FY2022": 283621, "FY2021": 276005}),
+    ("DATA", "Debt securities", {"FY2025": 1041, "FY2024": 1350, "FY2023": 1696}),
+    ("DATA", "Due from fellow Lloyds Banking Group undertakings", {"FY2025": 18038, "FY2024": 18896, "FY2023": 20921, "FY2022": 22999, "FY2021": 23919}),
+    ("TOTAL", "Financial assets at amortised cost", {"FY2025": 325581, "FY2024": 315106, "FY2023": 308984, "FY2022": 306791, "FY2021": 299974}),
+    ("DATA", "Financial assets at fair value through other comprehensive income", {"FY2021": 2047}),
+    ("DATA", "Goodwill", {"FY2025": 325, "FY2024": 325, "FY2023": 325, "FY2022": 325, "FY2021": 325}),
+    ("DATA", "Current tax recoverable", {"FY2025": 450, "FY2024": 1354, "FY2023": 1096, "FY2022": 464, "FY2021": 293}),
+    ("DATA", "Deferred tax assets", {"FY2025": 1768, "FY2024": 1886, "FY2023": 1932, "FY2022": 1979, "FY2021": 1991}),
+    ("DATA", "Investment in subsidiary undertakings", {"FY2025": 1284, "FY2024": 1284, "FY2023": 1294, "FY2022": 1313, "FY2021": 84}),
+    ("DATA", "Retirement benefit assets", {"FY2025": 39, "FY2024": 52, "FY2023": 49, "FY2022": 47, "FY2021": 58}),
+    ("DATA", "Other assets", {"FY2025": 1566, "FY2024": 1554, "FY2023": 1459, "FY2022": 1640, "FY2021": 1476}),
+    ("TOTAL", "Total assets", {"FY2025": 336117, "FY2024": 327868, "FY2023": 321109, "FY2022": 319152, "FY2021": 313912}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", {"FY2025": 99, "FY2024": 179, "FY2023": 179, "FY2022": 195, "FY2021": 597}),
+    ("DATA", "Customer deposits", {"FY2025": 167586, "FY2024": 165053, "FY2023": 161946, "FY2022": 166363, "FY2021": 170776}),
+    ("DATA", "Repurchase agreements at amortised cost", {"FY2025": 10443, "FY2024": 22168, "FY2023": 30397, "FY2022": 30210, "FY2021": 30028}),
+    ("DATA", "Due to fellow Lloyds Banking Group undertakings", {"FY2025": 124753, "FY2024": 107189, "FY2023": 94394, "FY2022": 91563, "FY2021": 83193}),
+    ("DATA", "Items in the course of transmission to banks", {"FY2021": 98}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 2905, "FY2024": 3366, "FY2023": 4297, "FY2022": 4421, "FY2021": 4144}),
+    ("DATA", "Notes in circulation", {"FY2025": 2118, "FY2024": 2121, "FY2023": 1392, "FY2022": 1280, "FY2021": 1321}),
+    ("DATA", "Debt securities in issue at amortised cost", {"FY2025": 8342, "FY2024": 8077, "FY2023": 7992, "FY2022": 5376, "FY2021": 6140}),
+    ("DATA", "Other liabilities", {"FY2025": 1008, "FY2024": 1031, "FY2023": 1290, "FY2022": 1345, "FY2021": 1288}),
+    ("DATA", "Provisions", {"FY2025": 368, "FY2024": 464, "FY2023": 655, "FY2022": 897, "FY2021": 1057}),
+    ("DATA", "Subordinated liabilities", {"FY2025": 1532, "FY2024": 1533, "FY2023": 1532, "FY2022": 1598, "FY2021": 1644}),
+    ("TOTAL", "Total liabilities", {"FY2025": 319154, "FY2024": 311181, "FY2023": 304074, "FY2022": 303248, "FY2021": 300286}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 5847, "FY2024": 5847, "FY2023": 5847, "FY2022": 5847, "FY2021": 5847}),
+    ("DATA", "Other reserves", {"FY2025": 3221, "FY2024": 3237, "FY2023": 3235, "FY2022": 3238, "FY2021": 2025}),
+    ("DATA", "Retained profits", {"FY2025": 5295, "FY2024": 5003, "FY2023": 5403, "FY2022": 4619, "FY2021": 3554}),
+    ("TOTAL", "Ordinary shareholders' equity", {"FY2025": 14363, "FY2024": 14087, "FY2023": 14485, "FY2022": 13704, "FY2021": 11426}),
+    ("DATA", "Other equity instruments", {"FY2025": 2600, "FY2024": 2600, "FY2023": 2550, "FY2022": 2200, "FY2021": 2200}),
+    ("TOTAL", "Total equity", {"FY2025": 16963, "FY2024": 16687, "FY2023": 17035, "FY2022": 15904, "FY2021": 13626}),
+    ("TOTAL", "Total equity and liabilities", {"FY2025": 336117, "FY2024": 327868, "FY2023": 321109, "FY2022": 319152, "FY2021": 313912}),
+]
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 14929, "FY2024": 14569}),
+    ("DATA", "Interest expense", {"FY2025": -10454, "FY2024": -10974}),
+    ("TOTAL", "Net interest income", {"FY2025": 4475, "FY2024": 3595}),
+    ("DATA", "Fee and commission income", {"FY2025": 625, "FY2024": 629}),
+    ("DATA", "Fee and commission expense", {"FY2025": -295, "FY2024": -374}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 330, "FY2024": 255}),
+    ("DATA", "Net trading income", {"FY2025": 187, "FY2024": 67}),
+    ("DATA", "Dividends from subsidiaries", {"FY2025": 406, "FY2024": 184}),
+    ("DATA", "Other operating income", {"FY2025": 224, "FY2024": 92}),
+    ("TOTAL", "Other income", {"FY2025": 1147, "FY2024": 598}),
+    ("TOTAL", "Total income", {"FY2025": 5622, "FY2024": 4193}),
+    ("DATA", "Operating expenses", {"FY2025": -3637, "FY2024": -3202}),
+    ("DATA", "Impairment (charge) credit", {"FY2025": -89, "FY2024": 24}),
+    ("TOTAL", "Profit before tax", {"FY2025": 1896, "FY2024": 1015}),
+    ("DATA", "Tax expense", {"FY2025": -385, "FY2024": -183}),
+    ("TOTAL", "Profit for the year", {"FY2025": 1511, "FY2024": 832, "FY2023": 926, "FY2022": 1147, "FY2021": 1962}),
+    ("DATA", "Profit attributable to ordinary shareholders", {"FY2025": 1274, "FY2024": 626, "FY2023": 740, "FY2022": 1025, "FY2021": 1853}),
+    ("DATA", "Profit attributable to other equity holders", {"FY2025": 237, "FY2024": 206, "FY2023": 186, "FY2022": 122, "FY2021": 109}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Other comprehensive income (total), net of tax", {"FY2025": -27, "FY2024": 3, "FY2023": -2, "FY2022": -22, "FY2021": -33}),
+    ("TOTAL", "Total comprehensive income for the year, net of tax", {"FY2025": 1484, "FY2024": 835, "FY2023": 924, "FY2022": 1125, "FY2021": 1929}),
+]
+
+EQUITY_HEADERS = ["Share capital", "Other reserves", "Retained profits", "Other equity instruments", "Total equity"]
+equity_changes_rows = [
+    ("TOTAL", "At 1 January 2021", (5847, 2046, 2877, 2200, 12970)),
+    ("DATA", "Profit for the year", (None, None, 1853, 109, 1962)),
+    ("DATA", "Other comprehensive income, net of tax", (None, -21, -12, None, -33)),
+    ("DATA", "Dividends", (None, None, -1200, None, -1200)),
+    ("DATA", "Distributions on other equity instruments", (None, None, None, -109, -109)),
+    ("DATA", "Capital contributions received", (None, None, 36, None, 36)),
+    ("TOTAL", "At 31 December 2021", (5847, 2025, 3554, 2200, 13626)),
+    ("DATA", "Profit for the year", (None, None, 1025, 122, 1147)),
+    ("DATA", "Other comprehensive income, net of tax", (None, -16, -6, None, -22)),
+    ("DATA", "Distributions on other equity instruments", (None, None, None, -122, -122)),
+    ("DATA", "Capital contributions received", (None, 1229, 46, None, 1275)),
+    ("TOTAL", "At 31 December 2022", (5847, 3238, 4619, 2200, 15904)),
+    ("DATA", "Profit for the year", (None, None, 740, 186, 926)),
+    ("DATA", "Other comprehensive income, net of tax", (None, -3, 1, None, -2)),
+    ("DATA", "Distributions on other equity instruments", (None, None, None, -186, -186)),
+    ("DATA", "Issue of other equity instruments", (None, None, None, 350, 350)),
+    ("DATA", "Capital contributions received", (None, None, 43, None, 43)),
+    ("TOTAL", "At 31 December 2023", (5847, 3235, 5403, 2550, 17035)),
+    ("DATA", "Profit for the year", (None, None, 626, 206, 832)),
+    ("DATA", "Other comprehensive income, net of tax", (None, 2, 1, None, 3)),
+    ("DATA", "Dividends", (None, None, -1050, None, -1050)),
+    ("DATA", "Distributions on other equity instruments", (None, None, None, -206, -206)),
+    ("DATA", "Issue of other equity instruments", (None, None, None, 1250, 1250)),
+    ("DATA", "Repurchases and redemptions of other equity instruments", (None, None, None, -1200, -1200)),
+    ("DATA", "Capital contributions received", (None, None, 23, None, 23)),
+    ("TOTAL", "At 31 December 2024", (5847, 3237, 5003, 2600, 16687)),
+    ("DATA", "Profit for the year", (None, None, 1274, 237, 1511)),
+    ("DATA", "Other comprehensive income, net of tax", (None, -16, -11, None, -27)),
+    ("DATA", "Dividends", (None, None, -980, None, -980)),
+    ("DATA", "Distributions on other equity instruments", (None, None, None, -237, -237)),
+    ("DATA", "Capital contributions received", (None, None, 9, None, 9)),
+    ("TOTAL", "At 31 December 2025", (5847, 3221, 5295, 2600, 16963)),
+]
+
+ASSET_QUALITY_NOTE = (
+    "ASSET QUALITY NOTE - IFRS 9 stage breakdown for 'The Bank' (Note 16/13 'Loans and advances to customers', "
+    "each year's own Companies House filing). FY2021 is genuinely blank: that year's own Annual Report discloses "
+    "the stage-by-stage movement table for 'The Group' only, not 'The Bank' - the Bank's FY2021 net loan figure "
+    "(276,005) is on the Balance Sheet, but no Bank-level Stage 1/2/3 split exists in that report. No by-product "
+    "loan-type split is separately disclosed for the Bank in any year - stage is the only breakdown available."
+)
+
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers, by IFRS 9 stage (gross carrying amount)", {}),
+    ("DATA", "Stage 1", {"FY2025": 272640, "FY2024": 259025, "FY2023": 242505, "FY2022": 237443}),
+    ("DATA", "Stage 2", {"FY2025": 29632, "FY2024": 31405, "FY2023": 38947, "FY2022": 42046}),
+    ("DATA", "Stage 3", {"FY2025": 5377, "FY2024": 5887, "FY2023": 6711, "FY2022": 6946}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 307649, "FY2024": 296317, "FY2023": 288163, "FY2022": 286435}),
+    ("SECTION", "Allowance for expected credit losses, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1", {"FY2025": 152, "FY2024": 175, "FY2023": 298, "FY2022": 216}),
+    ("DATA", "Stage 2", {"FY2025": 427, "FY2024": 514, "FY2023": 711, "FY2022": 935}),
+    ("DATA", "Stage 3", {"FY2025": 665, "FY2024": 846, "FY2023": 967, "FY2022": 1663}),
+    ("TOTAL", "Total allowance for expected credit losses", {"FY2025": 1244, "FY2024": 1535, "FY2023": 1976, "FY2022": 2814}),
+    ("TOTAL", "Net carrying amount", {"FY2025": 306405, "FY2024": 294782, "FY2023": 286187, "FY2022": 283621, "FY2021": 276005}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "Drawn ECL coverage (Total allowance / Total gross)", {"FY2025": "0.4%", "FY2024": "0.5%", "FY2023": "0.7%", "FY2022": "1.0%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / Total gross)", {"FY2025": "1.7%", "FY2024": "2.0%", "FY2023": "2.3%", "FY2022": "2.4%"}),
+    ("DATA", "Stage 3 coverage (Stage 3 allowance / Stage 3 gross)", {"FY2025": "12.4%", "FY2024": "14.4%", "FY2023": "14.4%", "FY2022": "23.9%"}),
+]
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Bank of Scotland plc's own 'Capital position' section of the Strategic Report, each year's own "
+    "Companies House full accounts filing (see p3_sources() URLs above):\n"
+    "NOT PUBLICLY DISCLOSED: as already noted on the Total RWAs/LCR/NSFR/MREL sheets, no standalone Pillar 3 "
+    "document is published for this entity, and the Strategic Report's Capital position section (used for the "
+    "Total RWAs figure) discloses only the single aggregate risk-weighted-assets total, not a UK OV1-style "
+    "breakdown by credit/market/operational risk - confirmed by reading that section in the FY2025 Annual Report "
+    "in full."
+)
+rwa_breakdown_rows = [
+    ("DATA", "RWA category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
+]
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -110,6 +274,36 @@ rows = [
     ("TOTAL", "Cash and cash equivalents at end of year", {"FY2025": 2771, "FY2024": 2858, "FY2023": 2101, "FY2022": 2027, "FY2021": 854}),
 ]
 
+bw.add_balance_sheet_sheet(
+    title="Bank of Scotland plc — Balance Sheet",
+    subtitle="Unconsolidated ('The Bank') basis, £m. See source note at bottom.",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=62,
+    source_height=200,
+    unit_suffix=" (£m)",
+)
+
+bw.add_income_statement_sheet(
+    title="Bank of Scotland plc — Profit & Loss",
+    subtitle="Unconsolidated ('The Bank') basis, £m. See source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + PL_NOTE,
+    first_col_width=62,
+    source_height=260,
+    unit_suffix=" (£m)",
+)
+
+bw.add_equity_changes_sheet(
+    title="Bank of Scotland plc — Statement of Changes in Equity",
+    subtitle="Unconsolidated ('The Bank') basis, £m, chronological, 1 January 2021 - 31 December 2025",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=52,
+    source_height=200,
+)
+
 bw.add_cash_flow_sheet(
     title="Bank of Scotland plc — Cash Flow Statement",
     subtitle="Unconsolidated ('The Bank') basis, £m. See source note at bottom.",
@@ -117,6 +311,16 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=78,
     source_height=280,
+    unit_suffix=" (£m)",
+)
+
+bw.add_asset_quality_sheet(
+    title="Bank of Scotland plc — Asset Quality",
+    subtitle="Unconsolidated ('The Bank') basis, £m. See source note at bottom.",
+    rows=asset_quality_rows,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + ASSET_QUALITY_NOTE,
+    first_col_width=62,
+    source_height=220,
     unit_suffix=" (£m)",
 )
 
@@ -163,6 +367,14 @@ metric(
     [("Total risk-weighted assets", {"FY2025": 82357, "FY2024": 81493, "FY2023": 80254, "FY2022": 73084, "FY2021": 60807})],
 )
 
+bw.add_rwa_breakdown_sheet(
+    title="Bank of Scotland plc — RWA Breakdown",
+    subtitle="Unconsolidated ('The Bank') basis",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    unit_suffix="",
+)
+
 metric(
     "Leverage Ratio", "%",
     [("UK leverage ratio", {"FY2025": "4.3%", "FY2024": "4.4%", "FY2023": "4.8%", "FY2022": "4.5%"})],
@@ -191,6 +403,26 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 336117, "FY2024": 327868, "FY2023": 321109, "FY2022": 319152, "FY2021": 313912}),
+        ("Loans and advances to customers", {"FY2025": 306405, "FY2024": 294782, "FY2023": 286187, "FY2022": 283621, "FY2021": 276005}),
+        ("Customer deposits", {"FY2025": 167586, "FY2024": 165053, "FY2023": 161946, "FY2022": 166363, "FY2021": 170776}),
+        ("Total equity", {"FY2025": 16963, "FY2024": 16687, "FY2023": 17035, "FY2022": 15904, "FY2021": 13626}),
+    ],
+    balance_sheet_unit="£m",
+    income_statement_totals=[
+        ("Total income", {"FY2025": 5622, "FY2024": 4193}),
+        ("Operating expenses", {"FY2025": -3637, "FY2024": -3202}),
+        ("Profit for the year", {"FY2025": 1511, "FY2024": 832, "FY2023": 926, "FY2022": 1147, "FY2021": 1962}),
+    ],
+    income_statement_unit="£m",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 16687, "FY2024": 17035, "FY2023": 15904, "FY2022": 13626, "FY2021": 12970}),
+        ("Total comprehensive income", {"FY2025": 1484, "FY2024": 835, "FY2023": 924, "FY2022": 1125, "FY2021": 1929}),
+        ("Other movements, net", {"FY2025": -1208, "FY2024": -1183, "FY2023": 207, "FY2022": 1153, "FY2021": -1273}),
+        ("Closing equity", {"FY2025": 16963, "FY2024": 16687, "FY2023": 17035, "FY2022": 15904, "FY2021": 13626}),
+    ],
+    equity_changes_unit="£m",
     cash_flow_totals=[
         ("Net cash provided by/(used in) operating activities", {"FY2025": 1133, "FY2024": 2120, "FY2023": -435, "FY2022": -1836, "FY2021": 6414}),
         ("Net cash (used in)/provided by investing activities", {"FY2025": 93, "FY2024": -49, "FY2023": 513, "FY2022": 1923, "FY2021": 211}),

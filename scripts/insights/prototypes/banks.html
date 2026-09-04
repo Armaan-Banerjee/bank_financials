@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Credit risk — banks (IN-042 prototype)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="in042_shared.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="proto-banner">PROTOTYPE v3 — IN-042 · separate static pages, not an SPA · real data, throwaway, not wired into the real dashboard</div>
+
+<aside class="sidebar">
+  <div class="brand">Credit risk<span class="sub">loan concentration &amp; RWA density</span></div>
+  <div>
+    <div class="nav-label">View</div>
+    <div class="nav-pills" id="sidebar-nav"></div>
+  </div>
+  <div class="bank-search-wrap" id="bank-search-wrap"></div>
+  <div class="sidebar-note">This prototype only has real data for 4 banks. At 145 banks, search still returns instantly and the sidebar never grows past this size — that's the point of moving the full list to its own page.</div>
+  <div class="sidebar-foot">IN-042 · scripts/insights/prototypes/</div>
+</aside>
+
+<main>
+  <div class="page-head">
+    <a class="back" href="comparison.html">← Comparison</a>
+    <h1>Banks</h1>
+    <div class="sub" id="page-sub">All 145 banks with credit-risk data in this prototype — click through for the full profile. At 145 banks this is the same table, just longer; the sidebar search is the fast path to a specific bank from anywhere.</div>
+  </div>
+  <div id="app"><div class="block" style="margin-top:8px;">
+    <div class="card" style="padding:0;">
+      <table class="bank-table">
+        <thead><tr>
+          <th>Bank</th><th>Profit or loss (latest)</th><th>Loan concentration basis</th><th>Years of data</th><th></th>
+        </tr></thead>
+        <tbody><tr>
+      <td><a href="bank-monzo.html">Monzo</a></td>
+      <td class="num"><span style="color:var(--green)">£94,568,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-monzo.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-barclays-bank-uk.html">Barclays Bank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£2,594,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-barclays-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-weatherbys.html">Weatherbys</a></td>
+      <td class="num"><span style="color:var(--green)">£19,244,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">exposure class</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-weatherbys.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-gulf-international-bank-uk.html">Gulf International Bank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£18,800</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-gulf-international-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-starling-bank.html">Starling Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£156,043,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-starling-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-hsbc-uk-bank.html">HSBC UK Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£4,102,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-hsbc-uk-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-lloyds-bank.html">Lloyds Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£3,856,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-lloyds-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-santander-uk.html">Santander UK</a></td>
+      <td class="num"><span style="color:var(--green)">£1,086,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-santander-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-tsb-bank.html">TSB Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£251,100,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-tsb-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-metro-bank.html">Metro Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£69,700,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">2</td>
+      <td><a href="bank-metro-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-atom-bank.html">Atom Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£16,900,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-atom-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-aldermore-bank.html">Aldermore Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£163,200,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-aldermore-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-shawbrook-bank.html">Shawbrook Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£194,900,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-shawbrook-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-secure-trust-bank.html">Secure Trust Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£44,600,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-secure-trust-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-investec-bank.html">Investec Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£353,551,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-investec-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-c-hoare-co.html">C. Hoare & Co</a></td>
+      <td class="num"><span style="color:var(--green)">£47,083,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-c-hoare-co.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-standard-chartered-bank.html">Standard Chartered Bank</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-standard-chartered-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-natwest-markets.html">NatWest Markets</a></td>
+      <td class="num"><span style="color:var(--green)">£275,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-natwest-markets.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-vanquis-bank.html">Vanquis Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£35,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-vanquis-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-clydesdale-bank.html">Clydesdale Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£150,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-clydesdale-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-abc-international-bank.html">ABC International Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£32,616,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-abc-international-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-access-bank-uk.html">Access Bank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£99,927,100</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-access-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-afin-bank.html">Afin Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£6,193,551</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-afin-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-aib-group-uk.html">AIB Group UK</a></td>
+      <td class="num"><span style="color:var(--green)">£237,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-aib-group-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-allica.html">Allica</a></td>
+      <td class="num"><span style="color:var(--green)">£27,300,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-allica.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-alpha-bank-london.html">Alpha Bank London</a></td>
+      <td class="num"><span style="color:var(--red)">-£820,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">2</td>
+      <td><a href="bank-alpha-bank-london.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-alrayan-bank.html">Alrayan Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£17,681,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-alrayan-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-arab-bank-europe.html">Arab Bank Europe</a></td>
+      <td class="num"><span style="color:var(--green)">£14,266,700</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-arab-bank-europe.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-arbuthnot-latham.html">Arbuthnot Latham</a></td>
+      <td class="num"><span style="color:var(--green)">£22,065,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-arbuthnot-latham.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-mandiri-europe.html">Bank Mandiri Europe</a></td>
+      <td class="num"><span style="color:var(--green)">£968,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-bank-mandiri-europe.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-of-africa-uk.html">Bank of Africa UK</a></td>
+      <td class="num"><span style="color:var(--green)">£2,273,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-bank-of-africa-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-of-beirut-uk.html">Bank of Beirut UK</a></td>
+      <td class="num"><span style="color:var(--green)">£7,597,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-bank-of-beirut-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-of-ceylon-uk.html">Bank of Ceylon UK</a></td>
+      <td class="num"><span style="color:var(--green)">£323,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">2</td>
+      <td><a href="bank-bank-of-ceylon-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-of-china-uk.html">Bank of China UK</a></td>
+      <td class="num"><span style="color:var(--green)">£68,931,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-bank-of-china-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-of-ireland-uk.html">Bank of Ireland UK</a></td>
+      <td class="num"><span style="color:var(--green)">£22,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-bank-of-ireland-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-of-scotland.html">Bank of Scotland</a></td>
+      <td class="num"><span style="color:var(--green)">£1,511,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-bank-of-scotland.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-of-the-philippine-islands-europe.html">Bank of the Philippine Islands Europe</a></td>
+      <td class="num"><span style="color:var(--green)">£693,543</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-bank-of-the-philippine-islands-europe.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-saderat.html">Bank Saderat</a></td>
+      <td class="num"><span style="color:var(--green)">£150,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-bank-saderat.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bank-sepah-international.html">Bank Sepah International</a></td>
+      <td class="num"><span style="color:var(--green)">£646,500</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-bank-sepah-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-barclays-bank.html">Barclays Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£4,658,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-barclays-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-birmingham-bank.html">Birmingham Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£10,844,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-birmingham-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-blme.html">BLME</a></td>
+      <td class="num"><span style="color:var(--green)">£1,419,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-blme.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-bny-mellon-international.html">BNY Mellon International</a></td>
+      <td class="num"><span style="color:var(--green)">£106,780,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-bny-mellon-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-british-arab-commercial-bank.html">British Arab Commercial Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£24,127,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">3</td>
+      <td><a href="bank-british-arab-commercial-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-brown-shipley.html">Brown Shipley</a></td>
+      <td class="num"><span style="color:var(--green)">£4,084,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-brown-shipley.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-caf-bank.html">Caf Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£12,139,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-caf-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-cambridge-and-counties-bank.html">Cambridge and Counties Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£30,492,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-cambridge-and-counties-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-castle-trust-capital.html">Castle Trust Capital</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-castle-trust-capital.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-cater-allen.html">Cater Allen</a></td>
+      <td class="num"><span style="color:var(--green)">£87,534,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-cater-allen.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-charity-bank.html">Charity Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£2,790,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-charity-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-charter-court-financial-services.html">Charter Court Financial Services</a></td>
+      <td class="num"><span style="color:var(--green)">£109,800,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-charter-court-financial-services.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-chetwood.html">Chetwood</a></td>
+      <td class="num"><span style="color:var(--red)">-£4,702,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-chetwood.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-citibank-uk.html">Citibank UK</a></td>
+      <td class="num"><span style="color:var(--red)">-£57,172,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-citibank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-clearbank.html">Clearbank</a></td>
+      <td class="num"><span style="color:var(--red)">-£15,765,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-clearbank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-close-brothers.html">Close Brothers</a></td>
+      <td class="num"><span style="color:var(--red)">-£85,300,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-close-brothers.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-co-operative-bank.html">Co-operative Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£25,400,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-co-operative-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-coutts.html">Coutts</a></td>
+      <td class="num"><span style="color:var(--green)">£259,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-coutts.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-credit-suisse-international.html">Credit Suisse International</a></td>
+      <td class="num"><span style="color:var(--green)">£132,600,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-credit-suisse-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-credit-suisse-uk.html">Credit Suisse UK</a></td>
+      <td class="num"><span style="color:var(--green)">£6,361,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">2</td>
+      <td><a href="bank-credit-suisse-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-crown-agents-bank.html">Crown Agents Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£14,509,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-crown-agents-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-cynergy-bank.html">Cynergy Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£37,940,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-cynergy-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-db-uk-bank.html">DB UK Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£12,050,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-db-uk-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-df-capital-bank.html">DF Capital Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£15,159,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-df-capital-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-efg-private-bank.html">EFG Private Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£20,475,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-efg-private-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-fce-bank.html">FCE Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£96,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-fce-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-fcmb-uk.html">FCMB UK</a></td>
+      <td class="num"><span style="color:var(--red)">-£2,787,100</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-fcmb-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-fidbank-uk.html">Fidbank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£697,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-fidbank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-firstbank-uk.html">Firstbank UK</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">3</td>
+      <td><a href="bank-firstbank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-gatehouse-bank.html">Gatehouse Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£13,291,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-gatehouse-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-gb-bank.html">GB Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£5,424,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-gb-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-ghana-international-bank.html">Ghana International Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£5,402,714</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-ghana-international-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-goldman-sachs-international-bank.html">Goldman Sachs International Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£369,900,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-goldman-sachs-international-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-griffin-bank.html">Griffin Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£12,058,149</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-griffin-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-guaranty-trust-bank-uk.html">Guaranty Trust Bank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£8,638,639</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-guaranty-trust-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-habib-bank-zurich.html">Habib Bank Zurich</a></td>
+      <td class="num"><span style="color:var(--green)">£10,023,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-habib-bank-zurich.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-hampden-co.html">Hampden & Co</a></td>
+      <td class="num"><span style="color:var(--green)">£4,989,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-hampden-co.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-hampshire-trust-bank.html">Hampshire Trust Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£60,116,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-hampshire-trust-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-handelsbanken.html">Handelsbanken</a></td>
+      <td class="num"><span style="color:var(--green)">£303,861,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-handelsbanken.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-havin-bank.html">Havin Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£244,617</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-havin-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-hbl-bank-uk.html">HBL Bank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£5,008,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-hbl-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-hsbc-bank.html">HSBC Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£581,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-hsbc-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-hsbc-innovation-bank.html">HSBC Innovation Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£215,425,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-hsbc-innovation-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-icbc-london.html">ICBC (London)</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-icbc-london.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-icbc-standard-bank.html">ICBC Standard Bank</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-icbc-standard-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-icici-bank-uk.html">ICICI Bank UK</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-icici-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-ifast-global-bank.html">iFAST Global Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£3,434,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-ifast-global-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-itau-bba-international.html">Itau BBA International</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-itau-bba-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-jordan-international-bank.html">Jordan International Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£1,678,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-jordan-international-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-jp-morgan-europe.html">JP Morgan Europe</a></td>
+      <td class="num"><span style="color:var(--green)">£114,294,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-jp-morgan-europe.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-jp-morgan-securities.html">JP Morgan Securities</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-jp-morgan-securities.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-julian-hodge-bank.html">Julian Hodge Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£3,900,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-julian-hodge-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-kexim-bank-uk.html">KEXIM Bank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£2,537,458</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-kexim-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-kingdom-bank.html">Kingdom Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£804,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-kingdom-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-kroo-bank.html">Kroo Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£19,224,388</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-kroo-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-kuwait-finance-house.html">Kuwait Finance House</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-kuwait-finance-house.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-lhv.html">LHV</a></td>
+      <td class="num"><span style="color:var(--green)">£4,761,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">3</td>
+      <td><a href="bank-lhv.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-lloyds-bank-corporate-markets.html">Lloyds Bank Corporate Markets</a></td>
+      <td class="num"><span style="color:var(--green)">£541,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-lloyds-bank-corporate-markets.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-marks-and-spencer-financial-services.html">Marks and Spencer Financial Services</a></td>
+      <td class="num"><span style="color:var(--green)">£8,260,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-marks-and-spencer-financial-services.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-melli-bank.html">Melli Bank</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-melli-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-methodist-chapel-aid.html">Methodist Chapel Aid</a></td>
+      <td class="num"><span style="color:var(--green)">£371,112</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-methodist-chapel-aid.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-mizuho-international.html">Mizuho International</a></td>
+      <td class="num"><span style="color:var(--green)">£7,200,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-mizuho-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-monument-bank.html">Monument Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£13,086,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-monument-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-morgan-stanley-bank-international.html">Morgan Stanley Bank International</a></td>
+      <td class="num"><span style="color:var(--green)">£37,579,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-morgan-stanley-bank-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-national-bank-of-egypt-uk.html">National Bank of Egypt UK</a></td>
+      <td class="num"><span style="color:var(--green)">£3,939,718</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-national-bank-of-egypt-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-national-bank-of-kuwait-international.html">National Bank of Kuwait International</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-national-bank-of-kuwait-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-national-westminster-bank.html">National Westminster Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£4,198,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-national-westminster-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-nomura-bank-international.html">Nomura Bank International</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-nomura-bank-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-northern-bank.html">Northern Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£189,231,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-northern-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-oaknorth-bank.html">OakNorth Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£165,211,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-oaknorth-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-onesavings.html">Onesavings</a></td>
+      <td class="num"><span style="color:var(--green)">£287,100,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-onesavings.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-oxbury.html">Oxbury</a></td>
+      <td class="num"><span style="color:var(--green)">£11,920,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-oxbury.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-paragon.html">Paragon</a></td>
+      <td class="num"><span style="color:var(--green)">£181,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-paragon.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-perenna.html">Perenna</a></td>
+      <td class="num"><span style="color:var(--red)">-£18,291,515</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">3</td>
+      <td><a href="bank-perenna.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-persia-international-bank.html">Persia International Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£20,582,800</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">1</td>
+      <td><a href="bank-persia-international-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-philippine-national-bank-europe.html">Philippine National Bank Europe</a></td>
+      <td class="num"><span style="color:var(--red)">-£492,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-philippine-national-bank-europe.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-punjab-national-bank-international.html">Punjab National Bank International</a></td>
+      <td class="num"><span style="color:var(--green)">£2,191,100</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-punjab-national-bank-international.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-qib-uk.html">QIB UK</a></td>
+      <td class="num"><span style="color:var(--green)">£11,730,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-qib-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-rathbones-investment-management.html">Rathbones Investment Management</a></td>
+      <td class="num"><span style="color:var(--green)">£81,117,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-rathbones-investment-management.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-rbc-europe.html">RBC Europe</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-rbc-europe.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-rbs.html">RBS</a></td>
+      <td class="num"><span style="color:var(--green)">£1,255,000,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-rbs.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-rci-bank-uk.html">RCI Bank UK</a></td>
+      <td class="num"><span style="color:var(--green)">£26,593,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-rci-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-recognise-bank.html">Recognise Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£8,856,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-recognise-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-redwood-bank.html">Redwood Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£602,813</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-redwood-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-reliance-bank.html">Reliance Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£869,584</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-reliance-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-santander-financial-services.html">Santander Financial Services</a></td>
+      <td class="num"><span style="color:var(--green)">£23,400,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-santander-financial-services.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-schroder.html">Schroder</a></td>
+      <td class="num"><span style="color:var(--green)">£84,580,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-schroder.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-smbc.html">SMBC</a></td>
+      <td class="num"><span style="color:var(--green)">£273,700,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-smbc.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-state-bank-of-india-uk.html">State Bank of India UK</a></td>
+      <td class="num"><span style="color:var(--green)">£18,525,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-state-bank-of-india-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-streambank.html">Streambank</a></td>
+      <td class="num"><span style="color:var(--green)">£908,300</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">2</td>
+      <td><a href="bank-streambank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-tandem.html">Tandem</a></td>
+      <td class="num"><span style="color:var(--green)">£3,458,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-tandem.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-td-bank-europe.html">TD Bank Europe</a></td>
+      <td class="num">—</td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-td-bank-europe.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-the-bank-of-london-group.html">The Bank of London Group</a></td>
+      <td class="num"><span style="color:var(--red)">-£23,503,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-the-bank-of-london-group.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-this-bank.html">This Bank</a></td>
+      <td class="num"><span style="color:var(--red)">-£9,616,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-this-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-triodos.html">Triodos</a></td>
+      <td class="num"><span style="color:var(--green)">£13,928,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-triodos.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-turkish-bank-uk.html">Turkish Bank UK</a></td>
+      <td class="num"><span style="color:var(--red)">-£576,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-turkish-bank-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-uba-uk.html">UBA UK</a></td>
+      <td class="num"><span style="color:var(--green)">£8,957,100</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">3</td>
+      <td><a href="bank-uba-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-union-bancaire-privee-uk.html">Union Bancaire Privee UK</a></td>
+      <td class="num"><span style="color:var(--green)">£8,654,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-union-bancaire-privee-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-union-bank-of-india-uk.html">Union Bank of India UK</a></td>
+      <td class="num"><span style="color:var(--red)">-£5,172,600</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-union-bank-of-india-uk.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-united-national.html">United National</a></td>
+      <td class="num"><span style="color:var(--green)">£10,845,105</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-united-national.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-united-trust-bank.html">United Trust Bank</a></td>
+      <td class="num"><span style="color:var(--green)">£60,680,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">not disclosed</span></td>
+      <td class="num">0</td>
+      <td><a href="bank-united-trust-bank.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-unity-trust.html">Unity Trust</a></td>
+      <td class="num"><span style="color:var(--green)">£40,789,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-unity-trust.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-vida.html">Vida</a></td>
+      <td class="num"><span style="color:var(--green)">£13,097,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-vida.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-zempler.html">Zempler</a></td>
+      <td class="num"><span style="color:var(--green)">£2,780,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2026</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-zempler.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-zenith.html">Zenith</a></td>
+      <td class="num"><span style="color:var(--green)">£33,033,400</span> <span style="color:var(--ink-faint);font-size:11px;">FY2024</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">4</td>
+      <td><a href="bank-zenith.html">View profile</a></td>
+    </tr><tr>
+      <td><a href="bank-zopa.html">Zopa</a></td>
+      <td class="num"><span style="color:var(--green)">£33,380,000</span> <span style="color:var(--ink-faint);font-size:11px;">FY2025</span></td>
+      <td><span class="basis-tag">IFRS 9 stage</span></td>
+      <td class="num">5</td>
+      <td><a href="bank-zopa.html">View profile</a></td>
+    </tr></tbody>
+      </table>
+    </div>
+  </div></div>
+  
+</main>
+
+<script src="in042_shared.js"></script>
+<script id="banks-index" type="application/json">[{"name": "Monzo", "slug": "monzo"}, {"name": "Barclays Bank UK", "slug": "barclays-bank-uk"}, {"name": "Weatherbys", "slug": "weatherbys"}, {"name": "Gulf International Bank UK", "slug": "gulf-international-bank-uk"}, {"name": "Starling Bank", "slug": "starling-bank"}, {"name": "HSBC UK Bank", "slug": "hsbc-uk-bank"}, {"name": "Lloyds Bank", "slug": "lloyds-bank"}, {"name": "Santander UK", "slug": "santander-uk"}, {"name": "TSB Bank", "slug": "tsb-bank"}, {"name": "Metro Bank", "slug": "metro-bank"}, {"name": "Atom Bank", "slug": "atom-bank"}, {"name": "Aldermore Bank", "slug": "aldermore-bank"}, {"name": "Shawbrook Bank", "slug": "shawbrook-bank"}, {"name": "Secure Trust Bank", "slug": "secure-trust-bank"}, {"name": "Investec Bank", "slug": "investec-bank"}, {"name": "C. Hoare & Co", "slug": "c-hoare-co"}, {"name": "Standard Chartered Bank", "slug": "standard-chartered-bank"}, {"name": "NatWest Markets", "slug": "natwest-markets"}, {"name": "Vanquis Bank", "slug": "vanquis-bank"}, {"name": "Clydesdale Bank", "slug": "clydesdale-bank"}, {"name": "ABC International Bank", "slug": "abc-international-bank"}, {"name": "Access Bank UK", "slug": "access-bank-uk"}, {"name": "Afin Bank", "slug": "afin-bank"}, {"name": "AIB Group UK", "slug": "aib-group-uk"}, {"name": "Allica", "slug": "allica"}, {"name": "Alpha Bank London", "slug": "alpha-bank-london"}, {"name": "Alrayan Bank", "slug": "alrayan-bank"}, {"name": "Arab Bank Europe", "slug": "arab-bank-europe"}, {"name": "Arbuthnot Latham", "slug": "arbuthnot-latham"}, {"name": "Bank Mandiri Europe", "slug": "bank-mandiri-europe"}, {"name": "Bank of Africa UK", "slug": "bank-of-africa-uk"}, {"name": "Bank of Beirut UK", "slug": "bank-of-beirut-uk"}, {"name": "Bank of Ceylon UK", "slug": "bank-of-ceylon-uk"}, {"name": "Bank of China UK", "slug": "bank-of-china-uk"}, {"name": "Bank of Ireland UK", "slug": "bank-of-ireland-uk"}, {"name": "Bank of Scotland", "slug": "bank-of-scotland"}, {"name": "Bank of the Philippine Islands Europe", "slug": "bank-of-the-philippine-islands-europe"}, {"name": "Bank Saderat", "slug": "bank-saderat"}, {"name": "Bank Sepah International", "slug": "bank-sepah-international"}, {"name": "Barclays Bank", "slug": "barclays-bank"}, {"name": "Birmingham Bank", "slug": "birmingham-bank"}, {"name": "BLME", "slug": "blme"}, {"name": "BNY Mellon International", "slug": "bny-mellon-international"}, {"name": "British Arab Commercial Bank", "slug": "british-arab-commercial-bank"}, {"name": "Brown Shipley", "slug": "brown-shipley"}, {"name": "Caf Bank", "slug": "caf-bank"}, {"name": "Cambridge and Counties Bank", "slug": "cambridge-and-counties-bank"}, {"name": "Castle Trust Capital", "slug": "castle-trust-capital"}, {"name": "Cater Allen", "slug": "cater-allen"}, {"name": "Charity Bank", "slug": "charity-bank"}, {"name": "Charter Court Financial Services", "slug": "charter-court-financial-services"}, {"name": "Chetwood", "slug": "chetwood"}, {"name": "Citibank UK", "slug": "citibank-uk"}, {"name": "Clearbank", "slug": "clearbank"}, {"name": "Close Brothers", "slug": "close-brothers"}, {"name": "Co-operative Bank", "slug": "co-operative-bank"}, {"name": "Coutts", "slug": "coutts"}, {"name": "Credit Suisse International", "slug": "credit-suisse-international"}, {"name": "Credit Suisse UK", "slug": "credit-suisse-uk"}, {"name": "Crown Agents Bank", "slug": "crown-agents-bank"}, {"name": "Cynergy Bank", "slug": "cynergy-bank"}, {"name": "DB UK Bank", "slug": "db-uk-bank"}, {"name": "DF Capital Bank", "slug": "df-capital-bank"}, {"name": "EFG Private Bank", "slug": "efg-private-bank"}, {"name": "FCE Bank", "slug": "fce-bank"}, {"name": "FCMB UK", "slug": "fcmb-uk"}, {"name": "Fidbank UK", "slug": "fidbank-uk"}, {"name": "Firstbank UK", "slug": "firstbank-uk"}, {"name": "Gatehouse Bank", "slug": "gatehouse-bank"}, {"name": "GB Bank", "slug": "gb-bank"}, {"name": "Ghana International Bank", "slug": "ghana-international-bank"}, {"name": "Goldman Sachs International Bank", "slug": "goldman-sachs-international-bank"}, {"name": "Griffin Bank", "slug": "griffin-bank"}, {"name": "Guaranty Trust Bank UK", "slug": "guaranty-trust-bank-uk"}, {"name": "Habib Bank Zurich", "slug": "habib-bank-zurich"}, {"name": "Hampden & Co", "slug": "hampden-co"}, {"name": "Hampshire Trust Bank", "slug": "hampshire-trust-bank"}, {"name": "Handelsbanken", "slug": "handelsbanken"}, {"name": "Havin Bank", "slug": "havin-bank"}, {"name": "HBL Bank UK", "slug": "hbl-bank-uk"}, {"name": "HSBC Bank", "slug": "hsbc-bank"}, {"name": "HSBC Innovation Bank", "slug": "hsbc-innovation-bank"}, {"name": "ICBC (London)", "slug": "icbc-london"}, {"name": "ICBC Standard Bank", "slug": "icbc-standard-bank"}, {"name": "ICICI Bank UK", "slug": "icici-bank-uk"}, {"name": "iFAST Global Bank", "slug": "ifast-global-bank"}, {"name": "Itau BBA International", "slug": "itau-bba-international"}, {"name": "Jordan International Bank", "slug": "jordan-international-bank"}, {"name": "JP Morgan Europe", "slug": "jp-morgan-europe"}, {"name": "JP Morgan Securities", "slug": "jp-morgan-securities"}, {"name": "Julian Hodge Bank", "slug": "julian-hodge-bank"}, {"name": "KEXIM Bank UK", "slug": "kexim-bank-uk"}, {"name": "Kingdom Bank", "slug": "kingdom-bank"}, {"name": "Kroo Bank", "slug": "kroo-bank"}, {"name": "Kuwait Finance House", "slug": "kuwait-finance-house"}, {"name": "LHV", "slug": "lhv"}, {"name": "Lloyds Bank Corporate Markets", "slug": "lloyds-bank-corporate-markets"}, {"name": "Marks and Spencer Financial Services", "slug": "marks-and-spencer-financial-services"}, {"name": "Melli Bank", "slug": "melli-bank"}, {"name": "Methodist Chapel Aid", "slug": "methodist-chapel-aid"}, {"name": "Mizuho International", "slug": "mizuho-international"}, {"name": "Monument Bank", "slug": "monument-bank"}, {"name": "Morgan Stanley Bank International", "slug": "morgan-stanley-bank-international"}, {"name": "National Bank of Egypt UK", "slug": "national-bank-of-egypt-uk"}, {"name": "National Bank of Kuwait International", "slug": "national-bank-of-kuwait-international"}, {"name": "National Westminster Bank", "slug": "national-westminster-bank"}, {"name": "Nomura Bank International", "slug": "nomura-bank-international"}, {"name": "Northern Bank", "slug": "northern-bank"}, {"name": "OakNorth Bank", "slug": "oaknorth-bank"}, {"name": "Onesavings", "slug": "onesavings"}, {"name": "Oxbury", "slug": "oxbury"}, {"name": "Paragon", "slug": "paragon"}, {"name": "Perenna", "slug": "perenna"}, {"name": "Persia International Bank", "slug": "persia-international-bank"}, {"name": "Philippine National Bank Europe", "slug": "philippine-national-bank-europe"}, {"name": "Punjab National Bank International", "slug": "punjab-national-bank-international"}, {"name": "QIB UK", "slug": "qib-uk"}, {"name": "Rathbones Investment Management", "slug": "rathbones-investment-management"}, {"name": "RBC Europe", "slug": "rbc-europe"}, {"name": "RBS", "slug": "rbs"}, {"name": "RCI Bank UK", "slug": "rci-bank-uk"}, {"name": "Recognise Bank", "slug": "recognise-bank"}, {"name": "Redwood Bank", "slug": "redwood-bank"}, {"name": "Reliance Bank", "slug": "reliance-bank"}, {"name": "Santander Financial Services", "slug": "santander-financial-services"}, {"name": "Schroder", "slug": "schroder"}, {"name": "SMBC", "slug": "smbc"}, {"name": "State Bank of India UK", "slug": "state-bank-of-india-uk"}, {"name": "Streambank", "slug": "streambank"}, {"name": "Tandem", "slug": "tandem"}, {"name": "TD Bank Europe", "slug": "td-bank-europe"}, {"name": "The Bank of London Group", "slug": "the-bank-of-london-group"}, {"name": "This Bank", "slug": "this-bank"}, {"name": "Triodos", "slug": "triodos"}, {"name": "Turkish Bank UK", "slug": "turkish-bank-uk"}, {"name": "UBA UK", "slug": "uba-uk"}, {"name": "Union Bancaire Privee UK", "slug": "union-bancaire-privee-uk"}, {"name": "Union Bank of India UK", "slug": "union-bank-of-india-uk"}, {"name": "United National", "slug": "united-national"}, {"name": "United Trust Bank", "slug": "united-trust-bank"}, {"name": "Unity Trust", "slug": "unity-trust"}, {"name": "Vida", "slug": "vida"}, {"name": "Zempler", "slug": "zempler"}, {"name": "Zenith", "slug": "zenith"}, {"name": "Zopa", "slug": "zopa"}]</script>
+<script>
+const BANKS_INDEX = JSON.parse(document.getElementById('banks-index').textContent);
+renderSidebar('banks', BANKS_INDEX);
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Design: institutional ledger, not SaaS card-kit. Grounded in the subject
+   (UK PRA bank Pillar 3 disclosures) — hairline structure, one considered
+   navy accent, semantic risk colors used consistently, serif for section/
+   bank headings (the register of a regulatory filing), sans for interface
+   chrome. No pill badges, no card shadows, no gradient washes, no ALL-CAPS
+   eyebrows. */
+:root{
+  --paper:#f5f4ef; --card:#ffffff; --ink:#1a1d22; --ink-soft:#52585f; --ink-faint:#878d93;
+  --hairline:#d8d4c8; --hairline-soft:#e8e5db;
+  --navy:#1e3a5f; --navy-soft:#e7ecf1;
+  --green:#1f6e52; --amber:#a6741f; --red:#9c3b2e;
+  --font-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --font-sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --sidebar-bg:#1b2530; --sidebar-border:rgba(255,255,255,.09);
+  --sidebar-ink:#eae7dd; --sidebar-ink-soft:#a3abb5; --sidebar-ink-faint:#69727c;
+  --sidebar-accent:#c99a4a; --sidebar-active-bg:rgba(201,154,74,.14);
+}
+*{box-sizing:border-box;}
+html{margin:0;}
+body{
+  margin:0;min-height:100vh;background:var(--paper);color:var(--ink);
+  font-family:var(--font-sans);font-size:13.5px;line-height:1.55;
+  display:flex;align-items:stretch;
+}
+.proto-banner{position:fixed;top:0;left:0;right:0;background:var(--ink);color:var(--paper);font-size:10px;letter-spacing:.03em;padding:5px 20px;text-align:center;z-index:20;font-family:var(--font-sans);}
+
+/* --- sidebar: deep ink chrome, distinct from the paper page --- */
+.sidebar{width:248px;flex:0 0 248px;background:var(--sidebar-bg);border-right:1px solid var(--sidebar-border);color:var(--sidebar-ink);padding:44px 0 18px;display:flex;flex-direction:column;gap:26px;position:relative;}
+.sidebar .brand{font-family:var(--font-serif);font-size:16px;font-weight:600;padding:0 20px;line-height:1.3;color:var(--sidebar-ink);}
+.sidebar .brand .sub{display:block;font-family:var(--font-sans);font-size:11px;font-weight:400;color:var(--sidebar-ink-faint);margin-top:3px;}
+.nav-label{font-size:11px;color:var(--sidebar-ink-faint);margin:0 20px 8px;}
+.nav-pills{display:flex;flex-direction:column;}
+.nav-pills a{text-decoration:none;color:var(--sidebar-ink-soft);font-size:13px;padding:7px 20px;border-left:3px solid transparent;}
+.nav-pills a:hover{background:rgba(255,255,255,.04);}
+.nav-pills a.active{background:var(--sidebar-active-bg);color:var(--sidebar-accent);border-left-color:var(--sidebar-accent);font-weight:600;}
+
+.bank-search-wrap{position:relative;padding:0 20px;}
+.bank-search{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--sidebar-border);color:var(--sidebar-ink);border-radius:3px;padding:7px 9px;font-size:12.5px;font-family:var(--font-sans);outline:none;}
+.bank-search:focus{border-color:var(--sidebar-accent);}
+.bank-search::placeholder{color:var(--sidebar-ink-faint);}
+.search-results{position:absolute;top:calc(100% + 4px);left:20px;right:20px;background:#fff;border:1px solid var(--hairline);border-radius:3px;box-shadow:0 6px 18px rgba(20,20,15,.12);max-height:280px;overflow-y:auto;z-index:30;}
+.search-results a{display:flex;align-items:center;gap:8px;padding:8px 10px;font-size:12.5px;color:var(--ink);text-decoration:none;}
+.search-results a:hover{background:var(--hairline-soft);}
+.search-results .none{padding:10px;font-size:12px;color:var(--ink-faint);font-style:italic;}
+.bank-swatch{width:7px;height:7px;border-radius:1px;flex:0 0 7px;}
+.sidebar-note{font-size:11px;color:var(--sidebar-ink-faint);line-height:1.5;padding:0 20px;}
+.sidebar-foot{margin-top:auto;font-size:10.5px;color:var(--sidebar-ink-faint);padding:0 20px;font-family:var(--font-sans);}
+
+main{flex:1;min-width:0;max-width:1180px;padding:44px 40px 60px;}
+main .page-head{margin-bottom:6px;}
+main .page-head h1{font-family:var(--font-serif);font-size:26px;font-weight:600;margin:0 0 5px;letter-spacing:-.01em;}
+main .page-head .sub{color:var(--ink-soft);font-size:13px;max-width:68ch;}
+main .page-head a.back{font-size:12.5px;color:var(--ink-soft);text-decoration:none;}
+main .page-head a.back:hover{color:var(--navy);}
+
+.block{margin-top:38px;}
+.block-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;border-bottom:1px solid var(--ink);padding-bottom:8px;cursor:pointer;user-select:none;}
+.block-head h2{font-family:var(--font-serif);font-size:17px;font-weight:600;margin:0;}
+.block-head .hint{color:var(--ink-faint);font-size:12px;}
+.block-head-right{display:flex;align-items:baseline;gap:10px;}
+.block-head .chevron{display:inline-block;color:var(--ink-faint);font-size:11px;transition:transform .15s;}
+.block.collapsed .block-body{display:none;}
+.block.collapsed .chevron{transform:rotate(-90deg);}
+
+.bank-picker{display:flex;flex-wrap:wrap;gap:4px 12px;margin-bottom:10px;font-size:12px;}
+.bank-picker label{display:inline-flex;align-items:center;gap:5px;color:var(--ink-soft);cursor:pointer;}
+.bank-picker label.disabled{color:var(--ink-faint);cursor:not-allowed;}
+.bank-picker input{accent-color:var(--navy);}
+.bank-picker .sw{width:8px;height:8px;border-radius:1px;display:inline-block;}
+.bank-picker-note{font-size:11px;color:var(--ink-faint);margin-bottom:10px;}
+
+.card{background:var(--card);border:1px solid var(--hairline);border-radius:2px;padding:15px 17px;}
+.grid{display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline);}
+.grid.cols{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.grid.cols .card{border:none;border-radius:0;background:var(--card);}
+
+.bank-card h3{font-family:var(--font-serif);font-size:14.5px;font-weight:600;line-height:1.25;margin:0 0 2px;height:36px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.bank-card .book-label{font-size:11px;line-height:1.4;color:var(--ink-faint);margin-bottom:9px;height:30px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.empty-note{font-size:12px;color:var(--ink-faint);font-style:italic;padding:6px 0;}
+.mini-chart-wrap{position:relative;height:32px;}
+.mini-chart-wrap.tall{height:150px;}
+
+.chip-row{display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:11px;}
+.chip{display:flex;align-items:baseline;gap:5px;padding:0 0 0 7px;border-left:2px solid var(--hairline);font-size:11.5px;color:var(--ink-soft);}
+.chip b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;}
+.chip.raw b{font-weight:600;font-style:normal;}
+
+[data-tip]{position:relative;cursor:help;}
+[data-tip]::after{
+  content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:0;
+  background:var(--ink);color:var(--paper);font-size:11px;line-height:1.4;padding:6px 9px;border-radius:2px;
+  width:230px;white-space:normal;opacity:0;pointer-events:none;transition:opacity .12s;z-index:10;font-family:var(--font-sans);
+}
+[data-tip]:hover::after{opacity:1;}
+.kind-flag{text-decoration:underline dotted;text-decoration-color:var(--ink-faint);cursor:help;color:var(--ink-faint);}
+
+.chart-card{padding-bottom:6px;}
+.chart-card canvas{max-width:100%;}
+.legend-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:9px;font-size:11.5px;color:var(--ink-soft);}
+.legend-row span{display:inline-flex;align-items:center;gap:5px;}
+.legend-row .sw{width:8px;height:8px;border-radius:1px;}
+
+.kpi-row{display:flex;gap:0;margin-bottom:20px;border:1px solid var(--hairline);}
+.kpi{flex:1;padding:12px 18px;border-right:1px solid var(--hairline);}
+.kpi:last-child{border-right:none;}
+.kpi .val{font-family:var(--font-serif);font-size:25px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums;}
+.kpi .lbl{font-size:11px;color:var(--ink-faint);margin-top:2px;}
+
+.todo-note{margin-top:38px;border-top:1px solid var(--hairline);padding:14px 0 0;font-size:12px;color:var(--ink-soft);}
+
+/* --- banks directory table --- */
+.bank-table{width:100%;border-collapse:collapse;background:var(--card);}
+.bank-table th{text-align:left;font-size:11px;font-weight:600;color:var(--ink-soft);padding:9px 16px;border-bottom:1px solid var(--ink);}
+.bank-table td{padding:11px 16px;border-bottom:1px solid var(--hairline-soft);font-size:13px;vertical-align:middle;}
+.bank-table tr:hover td{background:#fbfaf6;}
+.bank-table a{color:var(--navy);text-decoration:none;font-weight:600;font-family:var(--font-serif);font-size:13.5px;}
+.bank-table a:hover{text-decoration:underline;}
+.bank-table td:nth-child(5) a{font-family:var(--font-sans);font-weight:500;font-size:12.5px;}
+.bank-table .num{font-variant-numeric:tabular-nums;}
+.basis-tag{font-size:11px;color:var(--ink-soft);border-left:2px solid var(--hairline);padding-left:6px;}
+
+/* --- cost-base comparison table: metric rows, one column per bank --- */
+.cost-table th:not(:first-child), .cost-table td:not(:first-child){text-align:right;}
+.cost-table td:first-child{color:var(--ink-soft);}
+
+/* --- Statement of Changes in Equity: chronological roll-forward --- */
+.equity-table-wrap{overflow-x:auto;}
+.equity-table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap;}
+.equity-table th{text-align:right;font-weight:600;color:var(--ink-soft);padding:7px 12px;border-bottom:1px solid var(--ink);position:sticky;top:0;background:var(--card);}
+.equity-table th:first-child{text-align:left;}
+.equity-table td{padding:6px 12px;border-bottom:1px solid var(--hairline-soft);text-align:right;font-variant-numeric:tabular-nums;}
+.equity-table td:first-child{text-align:left;color:var(--ink-soft);white-space:normal;min-width:220px;}
+.equity-table tr.total-row td{font-weight:600;border-top:1px solid var(--hairline);}
+.equity-table tr:hover td{background:#fbfaf6;}
+
+.workbook-link-block{text-align:center;padding:22px 0;}
+.workbook-link-block a{display:inline-block;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;border:1px solid var(--hairline);border-radius:2px;padding:9px 18px;}
+.workbook-link-block a:hover{background:#fbfaf6;text-decoration:underline;}

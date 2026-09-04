@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T21:54:03.921169+00:00",
+  "generated_at": "2026-09-04T17:05:27.103693+00:00",
   "historical_policy": "unmatched effective dates, scope or basis return context_unavailable",
   "policy": "distance is emitted only for a dated metric/unit/basis match; no universal pass/fail is inferred",
   "records": [

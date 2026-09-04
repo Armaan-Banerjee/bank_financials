@@ -135,6 +135,9 @@ def build_in024_payload(db_path):
         trajectories = [_trajectory_record(bank, metric, selected, years) for bank in sorted(banks.items())]
         payload["trajectories"][metric] = trajectories
         payload["rank_mobility"][metric] = fixed_panel_mobility(rows, metric, sheet, years)
+        for panel in payload["rank_mobility"][metric]:
+            for record in panel["records"]:
+                record["bank"] = banks.get(record["frn"], record["frn"])
         eligible_by_year = {year: {frn for (frn, current_year), row in selected.items() if current_year == year} for year in years}
         churn = []
         for start, end in zip(years, years[1:]):

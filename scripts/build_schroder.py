@@ -84,6 +84,134 @@ rows = [
 ]
 
 bw = BankWorkbook(bank_name=COMPANY, years=YEARS, year_label=None, header_color="1F4E79")
+
+STATEMENTS_SOURCES = (
+    "Sources - Schroder & Co. Limited standalone statutory accounts, GBP'000. "
+    f"FY2025/FY2024: 2025 accounts, Income statement p.15, Statement of comprehensive income p.16, "
+    f"Statement of financial position p.17, Statement of changes in equity p.18, Note 9 (Loans and advances to "
+    f"customers) p.30, Note 13(a) (expected credit losses) p.40 - {AR_URL['FY2025']}\n"
+    f"FY2023/FY2022: 2023 accounts, Income statement p.17, Statement of comprehensive income p.18, "
+    f"Statement of financial position p.19, Statement of changes in equity p.20, Note 10 (Loans and advances to "
+    f"customers) p.33, Note 13(a) (expected credit losses) p.41 - {AR_URL['FY2023']}\n"
+    f"FY2021: 2021 accounts, Income statement p.17, Statement of comprehensive income p.18, "
+    f"Statement of financial position p.19, Statement of changes in equity p.20, Note 10 (Loans and advances to "
+    f"customers) p.35, Note 13(a) (expected credit losses) p.43 - {AR_URL['FY2021']}\n\n"
+    f"Entity verification: Companies House {CH_URL}; PRA register {PRA_URL}.\n\n"
+    + ENTITY_NOTE
+    + "\n\nFY2024 figures for the Balance Sheet, Profit & Loss and Statement of Changes in Equity are taken from "
+    "the 2025 accounts' own FY2024 comparative column (the FY2024 accounts themselves were not separately "
+    "fetched this session); FY2022 figures are taken from the 2023 accounts' own FY2022 comparative column. "
+    "The 2025 accounts re-presented their FY2024 equity comparative by combining Retained earnings and the Fair "
+    "value reserve into a single 'Profit and loss reserve' column; the Statement of Changes in Equity sheet "
+    "applies that same combined presentation to every year (FY2021-FY2023 recombined from their own separately-"
+    "reported Fair value reserve and Retained earnings columns) so the ladder uses one consistent column shape "
+    "throughout - this ties exactly: FY2023's own combined closing balance (12 + 133,425 = 133,437) matches the "
+    "2025 accounts' own restated 1 January 2024 opening balance exactly."
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 2935361, "FY2024": 2723942, "FY2023": 2455855, "FY2022": 2540496, "FY2021": 2007276}),
+    ("DATA", "Other financial assets", {"FY2025": 1046693, "FY2024": 977035, "FY2023": 702664, "FY2022": 407352, "FY2021": 245144}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 212217, "FY2024": 201141, "FY2023": 216217, "FY2022": 322466, "FY2021": 307037}),
+    ("DATA", "Trade and other receivables", {"FY2025": 1520, "FY2024": 1503, "FY2023": 1012, "FY2022": 4413, "FY2021": 3470}),
+    ("DATA", "Prepayments and accrued income", {"FY2025": 86310, "FY2024": 70329, "FY2023": 96284, "FY2022": 56794, "FY2021": 64574}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 94, "FY2024": 79, "FY2023": 96, "FY2022": 242, "FY2021": 24}),
+    ("DATA", "Investments in subsidiaries", {"FY2025": 2248, "FY2024": 37232, "FY2023": 13, "FY2022": 13, "FY2021": 2911}),
+    ("DATA", "Deferred tax", {"FY2025": 4148, "FY2024": 4020, "FY2023": 3398, "FY2022": 1329, "FY2021": 197}),
+    ("DATA", "Goodwill and intangible assets", {"FY2025": 129282, "FY2024": 99799, "FY2023": 102408, "FY2022": 113164, "FY2021": 118408}),
+    ("TOTAL", "Total assets", {"FY2025": 4417873, "FY2024": 4115080, "FY2023": 3577947, "FY2022": 3446269, "FY2021": 2749041}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {"FY2025": 37342, "FY2024": 34520, "FY2023": 67987, "FY2022": 124619, "FY2021": 120466}),
+    ("DATA", "Customer accounts", {"FY2025": 3865026, "FY2024": 3604438, "FY2023": 3066366, "FY2022": 2906645, "FY2021": 2235672}),
+    ("DATA", "Financial liabilities and derivative contracts", {"FY2025": 1289, "FY2024": 3708, "FY2023": 5230, "FY2022": 5260, "FY2021": 2743}),
+    ("DATA", "Trade and other payables", {"FY2025": 18463, "FY2024": 7991, "FY2023": 14244, "FY2022": 8308, "FY2021": 14106}),
+    ("DATA", "Corporation tax", {"FY2025": 30036, "FY2024": 28460, "FY2023": 16143, "FY2022": 14933, "FY2021": 13223}),
+    ("DATA", "Accruals and deferred income", {"FY2025": 87681, "FY2024": 68948, "FY2023": 105040, "FY2022": 66448, "FY2021": 71638}),
+    ("TOTAL", "Total liabilities", {"FY2025": 4039837, "FY2024": 3748065, "FY2023": 3275010, "FY2022": 3126213, "FY2021": 2457848}),
+    ("SECTION", "Equity", {}),
+    ("TOTAL", "Net assets", {"FY2025": 378036, "FY2024": 367015, "FY2023": 302937, "FY2022": 320056, "FY2021": 291193}),
+    ("TOTAL", "Total equity", {"FY2025": 378036, "FY2024": 367015, "FY2023": 302937, "FY2022": 320056, "FY2021": 291193}),
+]
+bw.add_balance_sheet_sheet(
+    title=f"{COMPANY} — Balance Sheet",
+    subtitle="Standalone Company basis, GBP'000. Statement of financial position; no separate equity component breakdown appears on this statement, only Net assets/Total equity (see the Statement of Changes in Equity sheet for the equity roll-forward).",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=75,
+    source_height=420,
+    unit_suffix=" (GBP'000)",
+)
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Debt securities and other fixed income securities", {"FY2025": 44209, "FY2024": 43060, "FY2023": 24783, "FY2022": 5433, "FY2021": 563}),
+    ("DATA", "Other interest income and similar income", {"FY2025": 141544, "FY2024": 142771, "FY2023": 126368, "FY2022": 44776, "FY2021": 7001}),
+    ("DATA", "Interest expense", {"FY2025": -146033, "FY2024": -149016, "FY2023": -118911, "FY2022": -29344, "FY2021": -518}),
+    ("TOTAL", "Net interest income", {"FY2025": 39720, "FY2024": 36815, "FY2023": 32240, "FY2022": 20865, "FY2021": 7046}),
+    ("DATA", "Fee and commission income", {"FY2025": 280921, "FY2024": 258142, "FY2023": 224377, "FY2022": 226761, "FY2021": 211390}),
+    ("DATA", "Fee and commission expense", {"FY2025": -12746, "FY2024": -15673, "FY2023": -9667, "FY2022": -8815, "FY2021": -9241}),
+    ("TOTAL", "Net fee income", {"FY2025": 268175, "FY2024": 242469, "FY2023": 214710, "FY2022": 217946, "FY2021": 202149}),
+    ("DATA", "Net gains on financial instruments and other income", {"FY2025": 17805, "FY2024": 12017, "FY2023": 6335, "FY2022": 7246, "FY2021": 7263}),
+    ("TOTAL", "Total net income", {"FY2025": 325700, "FY2024": 291301, "FY2023": 253285, "FY2022": 246057, "FY2021": 216458}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Administrative expenses", {"FY2025": -213834, "FY2024": -183484, "FY2023": -192316, "FY2022": -168766, "FY2021": -154072}),
+    ("DATA", "Gain on disposal of subsidiary undertaking", {"FY2022": 1416}),
+    ("TOTAL", "Profit before tax", {"FY2025": 111866, "FY2024": 107817, "FY2023": 60969, "FY2022": 78707, "FY2021": 62386}),
+    ("DATA", "Tax", {"FY2025": -27286, "FY2024": -28015, "FY2023": -13833, "FY2022": -13846, "FY2021": -12547}),
+    ("TOTAL", "Profit after tax", {"FY2025": 84580, "FY2024": 79802, "FY2023": 47136, "FY2022": 64861, "FY2021": 49839}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Net gains/(losses) on financial assets at fair value through OCI", {"FY2025": 55, "FY2024": 393, "FY2023": 489, "FY2022": -695, "FY2021": -73}),
+    ("DATA", "Net realised loss on disposal of debt securities classified as FVOCI", {"FY2025": -6, "FY2024": -9, "FY2023": -2, "FY2022": -2, "FY2021": 0}),
+    ("TOTAL", "Other comprehensive income for the year", {"FY2025": 49, "FY2024": 384, "FY2023": 487, "FY2022": -697, "FY2021": -73}),
+    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 84629, "FY2024": 80186, "FY2023": 47623, "FY2022": 64164, "FY2021": 49766}),
+]
+bw.add_income_statement_sheet(
+    title=f"{COMPANY} — Profit & Loss",
+    subtitle="Standalone Company basis, GBP'000. All the Company's revenues derive from continuing operations. FY2020's realised loss line is disclosed elsewhere in these accounts but the FY2021 figure is nil, not a gap.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=75,
+    source_height=420,
+    unit_suffix=" (GBP'000)",
+)
+
+equity_headers = ["Share capital", "Profit and loss reserve", "Total equity"]
+equity_rows = [
+    ("TOTAL", "At 1 January 2021", (169500, 109056, 278556)),
+    ("TOTAL", "Total comprehensive income for the year (FY2021)", (None, 49766, 49766)),
+    ("DATA", "Tax in respect of share schemes (FY2021)", (None, 367, 367)),
+    ("DATA", "Equity retained earnings (FY2021)", (None, -804, -804)),
+    ("DATA", "Dividends paid (FY2021)", (None, -36692, -36692)),
+    ("TOTAL", "At 31 December 2021", (169500, 121693, 291193)),
+    ("TOTAL", "Total comprehensive income for the year (FY2022)", (None, 64164, 64164)),
+    ("DATA", "Tax in respect of share schemes (FY2022)", (None, -301, -301)),
+    ("DATA", "Dividends paid (FY2022)", (None, -35000, -35000)),
+    ("TOTAL", "At 31 December 2022", (169500, 150556, 320056)),
+    ("TOTAL", "Total comprehensive income for the year (FY2023)", (None, 47623, 47623)),
+    ("DATA", "Tax in respect of share schemes (FY2023)", (None, 119, 119)),
+    ("DATA", "Dividends paid (FY2023)", (None, -64861, -64861)),
+    ("TOTAL", "At 31 December 2023", (169500, 133437, 302937)),
+    ("TOTAL", "Total comprehensive income for the year (FY2024)", (None, 80186, 80186)),
+    ("DATA", "Tax in respect of share schemes (FY2024)", (None, 28, 28)),
+    ("DATA", "Increase in share capital (FY2024)", (31000, None, 31000)),
+    ("DATA", "Dividends paid (FY2024)", (None, -47136, -47136)),
+    ("TOTAL", "At 31 December 2024", (200500, 166515, 367015)),
+    ("TOTAL", "Total comprehensive income for the year (FY2025)", (None, 84629, 84629)),
+    ("DATA", "Tax in respect of share schemes (FY2025)", (None, 292, 292)),
+    ("DATA", "Dividends paid (FY2025)", (None, -73900, -73900)),
+    ("TOTAL", "At 31 December 2025", (200500, 177536, 378036)),
+]
+bw.add_equity_changes_sheet(
+    title=f"{COMPANY} — Statement of Changes in Equity",
+    subtitle="Chronological roll-forward, oldest to newest, standalone Company basis, GBP'000. Equity reconciliation ladder confirmed: every year's own closing balance ties exactly to both the next year's own opening balance and that year's own Balance Sheet Total equity - zero undocumented plug rows across all 5 years, including FY2021's easy-to-skip 'Equity retained earnings' adjustment and FY2024's share capital increase.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=52,
+    source_height=380,
+)
+
 bw.add_cash_flow_sheet(
     title=f"{COMPANY} — Cash Flow Statement",
     subtitle="Standalone Company basis, GBP'000. Five latest available financial years.",
@@ -94,8 +222,43 @@ bw.add_cash_flow_sheet(
     unit_suffix=" (GBP'000)",
 )
 
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers, by product (Note 9/10)", {}),
+    ("DATA", "Overdrafts", {"FY2025": 696, "FY2024": 1577, "FY2023": 4466, "FY2022": 2006, "FY2021": 1222}),
+    ("DATA", "Term loans", {"FY2025": 141372, "FY2024": 138909, "FY2023": 142859, "FY2022": 230230, "FY2021": 291366}),
+    ("DATA", "Mortgages", {"FY2025": 70149, "FY2024": 60655, "FY2023": 68892, "FY2022": 90230, "FY2021": 14449}),
+    ("TOTAL", "Net loans and advances to customers", {"FY2025": 212217, "FY2024": 201141, "FY2023": 216217, "FY2022": 322466, "FY2021": 307037}),
+    ("SECTION", "Expected credit losses (Note 13(a))", {}),
+    ("DATA", "Gross carrying value", {"FY2025": 212228, "FY2024": 201150, "FY2023": 216233, "FY2022": 322483, "FY2021": 307082}),
+    ("DATA", "Expected credit losses", {"FY2025": -11, "FY2024": -10, "FY2023": -15, "FY2022": -17, "FY2021": -45}),
+    ("TOTAL", "Net carrying value", {"FY2025": 212217, "FY2024": 201141, "FY2023": 216217, "FY2022": 322466, "FY2021": 307037}),
+    ("DATA", "Expected credit losses as % of gross carrying value", {"FY2025": "0.0%", "FY2024": "0.0%", "FY2023": "0.0%", "FY2022": "0.0%", "FY2021": "0.0%"}),
+]
+bw.add_asset_quality_sheet(
+    title=f"{COMPANY} — Asset Quality",
+    subtitle="Standalone Company basis, GBP'000. Loans and advances to customers are usually secured. Under IFRS 9's three-stage model, all financial assets have been classified as performing (Stage 1) in every year FY2021-FY2025 covered by this workbook - no Stage 2 (under-performing) or Stage 3 (non-performing/defaulted) exposure in any of those years. (The FY2020 comparative disclosed in the FY2021 accounts included £1,795k of loans classified as non-performing/Stage 3, giving rise to £59,000 of expected credit losses - fully resolved by FY2021, the earliest year in this workbook, which reports zero Stage 2/3 exposure.) FY2023/FY2024's Net carrying value is the source's own reported figure (matching the Balance Sheet exactly) and is £1k above the Gross carrying value less Expected credit losses arithmetic - a genuine source rounding artifact, not a transcription error.",
+    rows=asset_quality_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=380,
+    unit_suffix=" (GBP'000)",
+)
+
 ND = "Not publicly disclosed for Schroder & Co. Limited as a standalone entity. The annual accounts refer to regulatory capital/liquidity processes but do not provide the requested numeric Pillar 3 metric. Schroders group figures are not substituted."
-for metric_name in ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs", "Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]:
+_pillar3_before_rwa = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs"]
+_pillar3_after_rwa = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
+for metric_name in _pillar3_before_rwa:
+    bw.add_metric_sheet(metric_name, "Not disclosed", [(metric_name, {y: ND for y in YEARS})], CASH_SOURCES, note=ND, first_col_width=55, source_height=320)
+bw.add_rwa_breakdown_sheet(
+    title=f"{COMPANY} — RWA Breakdown",
+    subtitle="Not publicly disclosed at entity level.",
+    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
+    sources_text=CASH_SOURCES,
+    first_col_width=54,
+    source_height=180,
+    unit_suffix="",
+)
+for metric_name in _pillar3_after_rwa:
     bw.add_metric_sheet(metric_name, "Not disclosed", [(metric_name, {y: ND for y in YEARS})], CASH_SOURCES, note=ND, first_col_width=55, source_height=320)
 
 bw.add_overview_sheet(
@@ -108,5 +271,24 @@ bw.add_overview_sheet(
     cash_flow_unit="GBP'000",
     ratios=[("CET1 Ratio", {y: "Not publicly disclosed" for y in YEARS})],
     note="All regulatory metric sheets are intentionally marked not publicly disclosed at entity level; see their source notes.",
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 4417873, "FY2024": 4115080, "FY2023": 3577947, "FY2022": 3446269, "FY2021": 2749041}),
+        ("Loans and advances to customers", {"FY2025": 212217, "FY2024": 201141, "FY2023": 216217, "FY2022": 322466, "FY2021": 307037}),
+        ("Customer accounts", {"FY2025": 3865026, "FY2024": 3604438, "FY2023": 3066366, "FY2022": 2906645, "FY2021": 2235672}),
+        ("Total equity", {"FY2025": 378036, "FY2024": 367015, "FY2023": 302937, "FY2022": 320056, "FY2021": 291193}),
+    ],
+    balance_sheet_unit="GBP'000",
+    income_statement_totals=[
+        ("Total net income", {"FY2025": 325700, "FY2024": 291301, "FY2023": 253285, "FY2022": 246057, "FY2021": 216458}),
+        ("Administrative expenses", {"FY2025": -213834, "FY2024": -183484, "FY2023": -192316, "FY2022": -168766, "FY2021": -154072}),
+        ("Profit after tax", {"FY2025": 84580, "FY2024": 79802, "FY2023": 47136, "FY2022": 64861, "FY2021": 49839}),
+    ],
+    income_statement_unit="GBP'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 367015, "FY2024": 302937, "FY2023": 320056, "FY2022": 291193, "FY2021": 278556}),
+        ("Total comprehensive income for the year", {"FY2025": 84629, "FY2024": 80186, "FY2023": 47623, "FY2022": 64164, "FY2021": 49766}),
+        ("Closing equity", {"FY2025": 378036, "FY2024": 367015, "FY2023": 302937, "FY2022": 320056, "FY2021": 291193}),
+    ],
+    equity_changes_unit="GBP'000",
 )
 bw.save("/Users/armaan/code/katalysis/banks/SCHRODER FINANCIALS.xlsx")

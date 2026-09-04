@@ -18,6 +18,7 @@ AR2020_URL = "https://www.co-operativebank.co.uk/assets/pdf/bank/investorrelatio
 
 P3_2024_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2024-pillar-3-disclosures.pdf"
 P3_2022_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2022-pillar-3-disclosures.pdf"
+P3_2020_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2020-pillar-3-disclosures.pdf"
 P3_2025_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2025-h2-pillar-3-disclosures.pdf"
 P3_2025_H1_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2025-h1-pillar-3-disclosures.pdf"
 
@@ -73,8 +74,259 @@ def p3_sources(page_2024="139-140", page_2022_23="101-102"):
 
 bw = BankWorkbook(bank_name="The Co-operative Bank p.l.c.", years=YEARS, year_label=YEAR_LABEL, header_color="1E5631")
 
+STATEMENTS_SOURCES = (
+    "Sources - The Co-operative Bank p.l.c.'s own Bank Company-only Balance Sheet / Statement of Changes in "
+    "Equity, £m, transcribed from each year's own report (not a later year's comparative column):\n"
+    f"FY2024: 2024 Annual Report and Accounts, p.220-221 (Balance Sheet), p.224 (Statement of Changes in Equity), "
+    f"p.226 (Note 2, Net profit attributable to equity shareholders - Section 408 Companies Act 2006 exemption) "
+    f"- {AR2024_URL}\n"
+    f"FY2023: 2024 Annual Report and Accounts, p.220-221/224/226 (FY2023 comparative columns, same statements) - "
+    f"{AR2024_URL}\n"
+    f"FY2022: 2022 Annual Report and Accounts, p.242-243/246/248 (Balance Sheet, Statement of Changes in Equity, "
+    f"Note 2) - {AR2022_URL}\n"
+    f"FY2021: 2022 Annual Report and Accounts, p.242-243/246/248 (FY2021 comparative columns, same statements) - "
+    f"{AR2022_URL}\n"
+    f"FY2020: 2020 Annual Report and Accounts, p.212-213/216/217 (Balance Sheet, Statement of Changes in Equity, "
+    f"Note 2) - {AR2020_URL}\n\n"
+    "The Bank Company (individual entity) takes advantage of the Section 408 Companies Act 2006 exemption not to "
+    "present its own income statement - each year's Annual Report discloses only the Bank Company's bottom-line "
+    "net profit/(loss) figure (Note 2) plus, separately, its Other Comprehensive Income broken into reserve "
+    "movements within the Statement of Changes in Equity itself; the Profit & Loss sheet reconstructs a P&L from "
+    "these two disclosed pieces rather than fabricating a full income statement - all rows tie exactly to the "
+    "equity roll-forward's own 'Total comprehensive income/(expense) for the year' figures.\n\n"
+    "PRESENTATION NOTE: the Balance Sheet's equity section shows 'Other reserves' as a single aggregate line from "
+    "FY2021 onward (FVOCI + cash flow hedging + capital redemption + defined benefit pension reserves combined); "
+    "FY2020's own Balance Sheet still itemises 'Share premium account' separately (£2,416.9m) - a genuine one-off "
+    "'Reserve reorganisation' movement during FY2021 (disclosed in the FY2022 Annual Report's own equity note) "
+    "wrote the share premium account and capital redemption reserve down to £nil and transferred the combined "
+    "£2,826.9m into retained earnings, a net-zero movement on Total equity; both entries are reproduced explicitly "
+    "in the Statement of Changes in Equity sheet, not silently dropped. 'Equity shares' and 'Prepayments' appear as "
+    "their own Balance Sheet lines FY2020-FY2022 only, folded into 'Other assets' from FY2023 onward per the "
+    "Bank's own presentation. Deferred tax is presented as an asset FY2021-FY2024 but as a liability in FY2020 - "
+    "both reproduced on their own side of the Balance Sheet as originally disclosed, not netted. 'Fair value "
+    "adjustments for hedged risk' appears as separate Balance Sheet lines (both asset- and liability-side) only "
+    "FY2020-FY2022 - embedded within the Loans and advances to customers note instead from FY2023 onward.\n\n"
+    + ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - The Co-operative Bank p.l.c.'s own Note 26/27 'Analysis of Credit Risk Exposure' (Bank "
+    "Company-only basis), £m:\n"
+    f"FY2024/FY2023: 2024 Annual Report and Accounts, p.242-243 (Note 26) - {AR2024_URL}\n"
+    f"FY2022/FY2021: 2022 Annual Report and Accounts, p.264-265 (Note 27) - {AR2022_URL}\n"
+    f"FY2020: 2022 Annual Report and Accounts, p.265 (Note 27's own 'At 1 January 2021' comparative row, i.e. "
+    f"FY2020's closing position) - {AR2022_URL}\n\n"
+    "Figures are 'Gross customer exposure'/'Allowance for losses' by IFRS 9 stage for Loans and advances to "
+    "customers - this is broader than the Balance Sheet's own 'Loans and advances to customers' line, since it "
+    "includes off-balance-sheet credit commitments and excludes FVTPL-measured balances (each year's own note "
+    "states the reconciling items); reproduced as disclosed, not force-reconciled to the narrower Balance Sheet "
+    "figure. All balances other than Loans and advances to customers are confirmed Stage 1 in every year and did "
+    "not transfer during the year (per each note's own statement), so are not separately broken out here.\n\n"
+    + ENTITY_NOTE
+)
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - The Co-operative Bank p.l.c. individual-entity Pillar 3 basis, UK OV1 'Overview of risk weighted "
+    "exposures (Individual)' template (Appendix 1), £m:\n"
+    f"FY2024/FY2023: 2024 Pillar 3 Disclosures, p.139 - {P3_2024_URL}\n"
+    f"FY2022/FY2021: 2022 Pillar 3 Disclosures, p.101 - {P3_2022_URL}\n"
+    f"FY2020: 2020 Pillar 3 Disclosures, p.55 (Table 40, 'Pillar 1 capital requirements', individual basis, "
+    f"Appendix 2) - {P3_2020_URL}\n\n"
+    "All 4 category-broken-out years tie exactly to the existing Total RWAs sheet's own figures. FY2020's own "
+    "Pillar 3 document predates the UK OV1 template and uses an older CRR exposure-class format (IRB approach vs "
+    "Standardised approach, not Credit risk/CCR/Securitisation/Market risk/Operational risk) - only Operational "
+    "risk (£512.6m) and the Total (£4,668.4m, ties exactly) map cleanly onto the later years' category structure; "
+    "Credit risk/CCR/Securitisation are left blank for FY2020 rather than force-mapped from a materially different "
+    "categorisation (FY2020's 'Total credit risk' of £4,155.8m combines what later years split into 3 separate "
+    "rows, and does not separately break out securitisation).\n\n"
+    + ENTITY_NOTE
+)
+
 # ---------------------------------------------------------------
-# Sheet 1: Cash Flow Statement
+# Sheet 1: Balance Sheet
+# ---------------------------------------------------------------
+bw.add_balance_sheet_sheet(
+    title="The Co-operative Bank p.l.c. — Balance Sheet (Bank Company-only)",
+    subtitle="Bank Company-only basis (not the wider consolidated Group), £m",
+    rows=[
+        ("SECTION", "Assets", {}),
+        ("DATA", "Cash and balances at central banks", {
+            "FY2024": 2586.0, "FY2023": 2708.3, "FY2022": 5270.4, "FY2021": 5696.9, "FY2020": 3877.8,
+        }),
+        ("DATA", "Loans and advances to banks", {
+            "FY2024": 173.1, "FY2023": 193.7, "FY2022": 312.5, "FY2021": 124.7, "FY2020": 431.6,
+        }),
+        ("DATA", "Loans and advances to customers", {
+            "FY2024": 20370.8, "FY2023": 20147.5, "FY2022": 20919.1, "FY2021": 20998.3, "FY2020": 18676.7,
+        }),
+        ("DATA", "Fair value adjustments for hedged risk (assets)", {
+            "FY2022": -430.7, "FY2021": -90.5, "FY2020": 134.1,
+        }),
+        ("DATA", "Investment securities", {
+            "FY2024": 1637.3, "FY2023": 2509.4, "FY2022": 1826.0, "FY2021": 2149.8, "FY2020": 2158.6,
+        }),
+        ("DATA", "Derivative financial instruments", {
+            "FY2024": 216.6, "FY2023": 301.0, "FY2022": 488.4, "FY2021": 241.2, "FY2020": 178.8,
+        }),
+        ("DATA", "Property, plant and equipment classified as held-for-sale", {"FY2020": 0.3}),
+        ("DATA", "Equity shares", {"FY2022": 11.1, "FY2021": 22.8, "FY2020": 22.1}),
+        ("DATA", "Investments in subsidiaries/group undertakings", {
+            "FY2024": 22.8, "FY2023": 14.9, "FY2022": 15.0, "FY2021": 14.7, "FY2020": 43.3,
+        }),
+        ("DATA", "Investment properties", {"FY2020": 1.9}),
+        ("DATA", "Other assets", {
+            "FY2024": 51.0, "FY2023": 47.9, "FY2022": 14.1, "FY2021": 12.7, "FY2020": 99.6,
+        }),
+        ("DATA", "Prepayments", {"FY2022": 21.4, "FY2021": 20.3, "FY2020": 13.2}),
+        ("DATA", "Amounts owed by Co-operative Bank undertakings", {
+            "FY2024": 552.1, "FY2023": 70.6, "FY2022": 65.1, "FY2021": 33.2, "FY2020": 1336.1,
+        }),
+        ("DATA", "Current tax assets", {"FY2024": 6.7, "FY2023": 4.3, "FY2022": 1.8}),
+        ("DATA", "Property, plant and equipment", {
+            "FY2024": 24.9, "FY2023": 23.6, "FY2022": 22.8, "FY2021": 24.3, "FY2020": 35.2,
+        }),
+        ("DATA", "Intangible assets", {
+            "FY2024": 109.8, "FY2023": 114.0, "FY2022": 90.0, "FY2021": 68.5, "FY2020": 63.4,
+        }),
+        ("DATA", "Right-of-use assets", {
+            "FY2024": 26.8, "FY2023": 31.4, "FY2022": 33.0, "FY2021": 46.9, "FY2020": 53.7,
+        }),
+        ("DATA", "Deferred tax assets", {
+            "FY2024": 243.0, "FY2023": 233.9, "FY2022": 167.5, "FY2021": 36.8,
+        }),
+        ("DATA", "Net retirement benefit asset", {
+            "FY2024": 32.0, "FY2023": 148.5, "FY2022": 159.7, "FY2021": 841.1, "FY2020": 651.8,
+        }),
+        ("TOTAL", "Total assets", {
+            "FY2024": 26052.9, "FY2023": 26549.0, "FY2022": 28987.2, "FY2021": 30241.7, "FY2020": 27778.2,
+        }),
+        ("SECTION", "Liabilities", {}),
+        ("DATA", "Deposits by banks", {
+            "FY2024": 2717.2, "FY2023": 4288.9, "FY2022": 5683.4, "FY2021": 5527.6, "FY2020": 2066.4,
+        }),
+        ("DATA", "Customer accounts", {
+            "FY2024": 19974.2, "FY2023": 19215.8, "FY2022": 20107.9, "FY2021": 21136.4, "FY2020": 20366.3,
+        }),
+        ("DATA", "Fair value adjustment for hedged risk (liabilities)", {"FY2022": -34.6, "FY2021": -7.5}),
+        ("DATA", "Debt securities in issue", {"FY2024": 499.3, "FY2020": 485.7}),
+        ("DATA", "Derivative financial instruments", {
+            "FY2024": 47.6, "FY2023": 110.3, "FY2022": 103.5, "FY2021": 148.2, "FY2020": 316.2,
+        }),
+        ("DATA", "Amounts owed to Co-operative Bank undertakings / parent undertakings / Finance Company", {
+            "FY2024": 897.3, "FY2023": 937.6, "FY2022": 646.9, "FY2021": 402.1, "FY2020": 408.2,
+        }),
+        ("DATA", "Other liabilities", {
+            "FY2024": 55.3, "FY2023": 44.1, "FY2022": 42.3, "FY2021": 38.0, "FY2020": 32.9,
+        }),
+        ("DATA", "Accruals and deferred income", {
+            "FY2024": 46.6, "FY2023": 22.7, "FY2022": 32.4, "FY2021": 36.8, "FY2020": 34.8,
+        }),
+        ("DATA", "Provisions", {
+            "FY2024": 10.1, "FY2023": 31.7, "FY2022": 33.1, "FY2021": 33.8, "FY2020": 46.0,
+        }),
+        ("DATA", "Lease liabilities", {
+            "FY2024": 26.2, "FY2023": 30.1, "FY2022": 31.0, "FY2021": 44.1, "FY2020": 53.6,
+        }),
+        ("DATA", "Deferred tax liabilities", {"FY2020": 38.2}),
+        ("DATA", "Net retirement benefit liability", {
+            "FY2024": 5.2, "FY2023": 5.9, "FY2022": 5.9, "FY2021": 8.1, "FY2020": 8.8,
+        }),
+        ("TOTAL", "Total liabilities", {
+            "FY2024": 24780.0, "FY2023": 25117.3, "FY2022": 27692.9, "FY2021": 28494.7, "FY2020": 26326.9,
+        }),
+        ("SECTION", "Equity", {}),
+        ("DATA", "Ordinary share capital", {
+            "FY2024": 25.6, "FY2023": 25.6, "FY2022": 25.6, "FY2021": 25.6, "FY2020": 25.6,
+        }),
+        ("DATA", "Share premium account", {"FY2020": 2416.9}),
+        ("DATA", "Retained earnings", {
+            "FY2024": 1328.6, "FY2023": 1398.2, "FY2022": 1241.1, "FY2021": 1218.8, "FY2020": -1823.6,
+        }),
+        ("DATA", "Other reserves", {
+            "FY2024": -81.3, "FY2023": 7.9, "FY2022": 27.6, "FY2021": 502.6, "FY2020": 832.4,
+        }),
+        ("TOTAL", "Total equity", {
+            "FY2024": 1272.9, "FY2023": 1431.7, "FY2022": 1294.3, "FY2021": 1747.0, "FY2020": 1451.3,
+        }),
+        ("TOTAL", "Total liabilities and equity", {
+            "FY2024": 26052.9, "FY2023": 26549.0, "FY2022": 28987.2, "FY2021": 30241.7, "FY2020": 27778.2,
+        }),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=280,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet 2: Profit & Loss
+# ---------------------------------------------------------------
+bw.add_income_statement_sheet(
+    title="The Co-operative Bank p.l.c. — Profit & Loss (Bank Company-only)",
+    subtitle="Bank Company-only basis; bottom-line profit plus OCI detail only (see source note), £m",
+    rows=[
+        ("TOTAL", "Profit/(loss) for the year", {
+            "FY2024": 25.4, "FY2023": 157.1, "FY2022": 22.3, "FY2021": 215.5, "FY2020": -87.4,
+        }),
+        ("SECTION", "Other comprehensive income/(expense), net of tax", {}),
+        ("DATA", "Fair value through OCI (FVOCI) reserve movement", {
+            "FY2024": -0.3, "FY2023": -2.7, "FY2022": -8.2, "FY2021": -1.9, "FY2020": 0.7,
+        }),
+        ("DATA", "Cash flow hedging reserve movement", {
+            "FY2024": -4.4, "FY2023": -5.2, "FY2022": -4.1, "FY2021": -7.8, "FY2020": 5.8,
+        }),
+        ("DATA", "Defined benefit pension reserve movement", {
+            "FY2024": -84.5, "FY2023": -11.8, "FY2022": -462.7, "FY2021": 89.9, "FY2020": -48.3,
+        }),
+        ("TOTAL", "Other comprehensive income/(expense) for the year, net of tax", {
+            "FY2024": -89.2, "FY2023": -19.7, "FY2022": -475.0, "FY2021": 80.2, "FY2020": -41.8,
+        }),
+        ("TOTAL", "Total comprehensive income/(expense) for the year, net of tax", {
+            "FY2024": -63.8, "FY2023": 137.4, "FY2022": -452.7, "FY2021": 295.7, "FY2020": -129.2,
+        }),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=68,
+    source_height=280,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet 3: Statement of Changes in Equity
+# ---------------------------------------------------------------
+bw.add_equity_changes_sheet(
+    title="The Co-operative Bank p.l.c. — Statement of Changes in Equity (Bank Company-only)",
+    subtitle="Bank Company-only basis, £m, chronological",
+    headers=[
+        "Share capital", "Share premium", "FVOCI reserve", "Cash flow hedging reserve",
+        "Capital redemption reserve", "Defined benefit pension reserve", "Retained earnings", "Total equity",
+    ],
+    rows=[
+        ("TOTAL", "At 1 January 2020", (25.6, 2416.9, 4.1, 16.7, 410.0, 443.4, -1736.2, 1580.5)),
+        ("DATA", "Total comprehensive income/(expense) for the year (FY2020)",
+         (None, None, 0.7, 5.8, None, -48.3, -87.4, -129.2)),
+        ("TOTAL", "At 31 December 2020", (25.6, 2416.9, 4.8, 22.5, 410.0, 395.1, -1823.6, 1451.3)),
+        ("DATA", "Total comprehensive income for the year (FY2021)",
+         (None, None, -1.9, -7.8, None, 89.9, 215.5, 295.7)),
+        ("DATA", "Reserve reorganisation (FY2021)",
+         (None, -2416.9, None, None, -410.0, None, 2826.9, 0.0)),
+        ("TOTAL", "At 31 December 2021", (25.6, 0.0, 2.9, 14.7, 0.0, 485.0, 1218.8, 1747.0)),
+        ("DATA", "Total comprehensive (expense)/income for the year (FY2022)",
+         (None, None, -8.2, -4.1, None, -462.7, 22.3, -452.7)),
+        ("TOTAL", "At 31 December 2022", (25.6, 0.0, -5.3, 10.6, 0.0, 22.3, 1241.1, 1294.3)),
+        ("DATA", "Total comprehensive income for the year (FY2023)",
+         (None, None, -2.7, -5.2, None, -11.8, 157.1, 137.4)),
+        ("TOTAL", "At 31 December 2023", (25.6, 0.0, -8.0, 5.4, 0.0, 10.5, 1398.2, 1431.7)),
+        ("DATA", "Total comprehensive (expense)/income for the year (FY2024)",
+         (None, None, -0.3, -4.4, None, -84.5, 25.4, -63.8)),
+        ("DATA", "Dividends paid (FY2024)", (None, None, None, None, None, None, -95.0, -95.0)),
+        ("TOTAL", "At 31 December 2024", (25.6, 0.0, -8.3, 1.0, 0.0, -74.0, 1328.6, 1272.9)),
+    ],
+    sources_text=STATEMENTS_SOURCES,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
     ("SECTION", "Operating activities", {}),
@@ -216,6 +468,59 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+bw.add_asset_quality_sheet(
+    title="The Co-operative Bank p.l.c. — Asset Quality (Bank Company-only)",
+    subtitle="Bank Company-only basis, £m; Loans and advances to customers by IFRS 9 stage",
+    rows=[
+        ("SECTION", "Gross customer exposure by IFRS 9 stage", {}),
+        ("DATA", "Stage 1", {
+            "FY2024": 20306.9, "FY2023": 19199.2, "FY2022": 18933.0, "FY2021": 21826.2, "FY2020": 19180.3,
+        }),
+        ("DATA", "Stage 2", {
+            "FY2024": 1415.9, "FY2023": 2421.1, "FY2022": 3692.0, "FY2021": 922.9, "FY2020": 1718.1,
+        }),
+        ("DATA", "Stage 3", {
+            "FY2024": 114.9, "FY2023": 98.3, "FY2022": 80.3, "FY2021": 67.4, "FY2020": 63.5,
+        }),
+        ("DATA", "POCI (purchased or originated credit-impaired)", {
+            "FY2024": 47.5, "FY2023": 55.5, "FY2022": 65.1, "FY2021": 77.3, "FY2020": 93.1,
+        }),
+        ("TOTAL", "Total gross customer exposure subject to ECL calculation", {
+            "FY2024": 21885.2, "FY2023": 21774.1, "FY2022": 22770.4, "FY2021": 22893.8, "FY2020": 21055.0,
+        }),
+        ("SECTION", "Allowance for losses by IFRS 9 stage", {}),
+        ("DATA", "Stage 1 allowance", {
+            "FY2024": -8.4, "FY2023": -8.8, "FY2022": -11.3, "FY2021": -19.1, "FY2020": -19.1,
+        }),
+        ("DATA", "Stage 2 allowance", {
+            "FY2024": -13.0, "FY2023": -20.7, "FY2022": -6.8, "FY2021": -13.0, "FY2020": -13.0,
+        }),
+        ("DATA", "Stage 3 allowance", {
+            "FY2024": -7.7, "FY2023": -7.5, "FY2022": -6.9, "FY2021": -7.5, "FY2020": -7.5,
+        }),
+        ("DATA", "POCI allowance", {
+            "FY2024": -0.2, "FY2023": -0.4, "FY2022": -0.3, "FY2021": -1.1, "FY2020": -1.1,
+        }),
+        ("TOTAL", "Total allowance for losses", {
+            "FY2024": -29.3, "FY2023": -37.4, "FY2022": -40.4, "FY2021": -37.5, "FY2020": -40.7,
+        }),
+        ("SECTION", "Derived ratios", {}),
+        ("DATA", "Stage 3 (NPL) ratio, % of gross exposure subject to ECL calculation", {
+            "FY2024": "0.53%", "FY2023": "0.45%", "FY2022": "0.35%", "FY2021": "0.29%", "FY2020": "0.30%",
+        }),
+        ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross exposure)", {
+            "FY2024": "6.70%", "FY2023": "7.63%", "FY2022": "8.59%", "FY2021": "11.13%", "FY2020": "11.81%",
+        }),
+    ],
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=68,
+    source_height=170,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -279,6 +584,38 @@ metric(
         "FY2024": 4950.8, "FY2023": 4830.6, "FY2022": 4806.7, "FY2021": 4399.8, "FY2020": 4668.4,
     })],
     p3_sources(),
+)
+
+bw.add_rwa_breakdown_sheet(
+    title="The Co-operative Bank p.l.c. — RWA Breakdown (Bank Company-only, Individual Pillar 3 basis)",
+    subtitle="UK OV1 'Overview of risk weighted exposures (Individual)', £m",
+    rows=[
+        ("DATA", "Credit risk (excluding CCR)", {
+            "FY2024": 4143.6, "FY2023": 4132.3, "FY2022": 4178.2, "FY2021": 3743.6,
+        }),
+        ("DATA", "Counterparty credit risk (CCR)", {
+            "FY2024": 18.2, "FY2023": 31.5, "FY2022": 37.6, "FY2021": 61.8,
+        }),
+        ("DATA", "Securitisation exposures in the non-trading book", {
+            "FY2024": 82.3, "FY2023": 100.5, "FY2022": 95.8, "FY2021": 102.9,
+        }),
+        ("DATA", "Position, foreign exchange and commodities risks (Market risk)", {
+            "FY2024": 0.0, "FY2023": 0.0, "FY2022": 0.0, "FY2021": 0.0,
+        }),
+        ("DATA", "Operational risk", {
+            "FY2024": 706.7, "FY2023": 566.3, "FY2022": 495.1, "FY2021": 491.5, "FY2020": 512.6,
+        }),
+        ("DATA", "Amounts below the thresholds for deduction (for information)", {
+            "FY2024": 136.1, "FY2023": 205.1, "FY2022": 236.1, "FY2021": 232.6,
+        }),
+        ("TOTAL", "Total", {
+            "FY2024": 4950.8, "FY2023": 4830.6, "FY2022": 4806.7, "FY2021": 4399.8, "FY2020": 4668.4,
+        }),
+    ],
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=64,
+    source_height=210,
+    unit_suffix=" (£m)",
 )
 
 metric(
@@ -389,6 +726,48 @@ for offset, source_row in enumerate(INTERIM_ROWS, start=2):
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Loans and advances to customers", {
+            "FY2024": 20370.8, "FY2023": 20147.5, "FY2022": 20919.1, "FY2021": 20998.3, "FY2020": 18676.7,
+        }),
+        ("Customer accounts", {
+            "FY2024": 19974.2, "FY2023": 19215.8, "FY2022": 20107.9, "FY2021": 21136.4, "FY2020": 20366.3,
+        }),
+        ("Total assets", {
+            "FY2024": 26052.9, "FY2023": 26549.0, "FY2022": 28987.2, "FY2021": 30241.7, "FY2020": 27778.2,
+        }),
+        ("Total equity", {
+            "FY2024": 1272.9, "FY2023": 1431.7, "FY2022": 1294.3, "FY2021": 1747.0, "FY2020": 1451.3,
+        }),
+    ],
+    balance_sheet_unit="£m",
+    income_statement_totals=[
+        ("Profit/(loss) for the year", {
+            "FY2024": 25.4, "FY2023": 157.1, "FY2022": 22.3, "FY2021": 215.5, "FY2020": -87.4,
+        }),
+        ("Other comprehensive income/(expense) for the year, net of tax", {
+            "FY2024": -89.2, "FY2023": -19.7, "FY2022": -475.0, "FY2021": 80.2, "FY2020": -41.8,
+        }),
+        ("Total comprehensive income/(expense) for the year, net of tax", {
+            "FY2024": -63.8, "FY2023": 137.4, "FY2022": -452.7, "FY2021": 295.7, "FY2020": -129.2,
+        }),
+    ],
+    income_statement_unit="£m",
+    equity_changes_totals=[
+        ("Opening equity", {
+            "FY2024": 1431.7, "FY2023": 1294.3, "FY2022": 1747.0, "FY2021": 1451.3, "FY2020": 1580.5,
+        }),
+        ("Total comprehensive income/(expense) for the year", {
+            "FY2024": -63.8, "FY2023": 137.4, "FY2022": -452.7, "FY2021": 295.7, "FY2020": -129.2,
+        }),
+        ("Other movements, net", {
+            "FY2024": -95.0, "FY2023": 0.0, "FY2022": 0.0, "FY2021": 0.0, "FY2020": 0.0,
+        }),
+        ("Closing equity", {
+            "FY2024": 1272.9, "FY2023": 1431.7, "FY2022": 1294.3, "FY2021": 1747.0, "FY2020": 1451.3,
+        }),
+    ],
+    equity_changes_unit="£m",
     cash_flow_totals=[
         ("Net cash flows from/(used in) operating activities", {
             "FY2024": -1243.5, "FY2023": -2165.6, "FY2022": -699.3, "FY2021": 1598.2, "FY2020": 481.2,

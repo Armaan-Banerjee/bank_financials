@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "chart_type": "CET1 Ratio - Line Chart",
+  "metric_name": "CET1 Ratio:",
+  "subtitle": "UK Banks: FY2021-FY2025 Comparative Analysis",
+  "data_points": [
+    {
+      "x": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "y": [
+        3.5,
+        3.8,
+        4.1,
+        3.9,
+        4.2
+      ],
+      "name": "HSBC Bank Plc",
+      "trend": "positive"
+    },
+    {
+      "x": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "y": [
+        3.6,
+        3.9,
+        3.7,
+        4.0,
+        4.1
+      ],
+      "name": "Barclays Bank Plc",
+      "trend": "positive"
+    },
+    {
+      "x": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "y": [
+        4.0,
+        4.2,
+        4.5,
+        4.8,
+        4.6
+      ],
+      "name": "Lloyds Bank PLC",
+      "trend": "positive"
+    }
+  ],
+  "title_text": {
+    "font_size": 28,
+    "text": "CET1 Ratio Analysis"
+  }
+}

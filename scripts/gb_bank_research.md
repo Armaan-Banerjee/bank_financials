@@ -35,4 +35,12 @@ The 2025 report also includes an individual-consolidation appendix with differen
 
 ## Cash flow treatment
 
-No cash-flow data was transcribed for this build. The workbook is deliberately a Pillar-3-only variant: the current official Pillar 3 set is sufficient for all 11 regulatory metric sheets, while the earlier account-access/scan blocker was not re-opened into a separate cash-flow extraction pass.
+Cash-flow data was backfilled in a 2026-09-03 follow-up pass (ST-019), transcribed from each
+year's own Statement of Cash Flows / Consolidated statement of cash flows in the same 5
+Companies House filings used for the other statement sheets (all scanned/image-only, visually
+transcribed): FY2021 p.23, FY2022 p.27, FY2023 p.28, FY2024 p.28 (9-month period), FY2025 p.47
+(Consolidated). All 5 years have a disclosed statement, so no year was left blank. See
+`scripts/build_gb_bank.py`'s `cash_flow_rows` / `add_cash_flow_sheet(...)` sources_text for two
+genuine (documented, not force-reconciled) discrepancies: a £2k FY2025-opening-vs-FY2024-closing
+cash mismatch, and a relabelled £29,291k FY2024 line between that year's own report and FY2025's
+comparative column.

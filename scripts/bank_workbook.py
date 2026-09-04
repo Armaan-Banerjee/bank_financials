@@ -1,12 +1,21 @@
 """
 Shared helpers for building "<BANK> FINANCIALS.xlsx" workbooks in banks/.
 
-Standard structure: a "Cash Flow Statement" sheet (full statement, period
-columns, most-recent-first) plus one sheet per Pillar 3 key metric (CET1
-Capital, CET1 Ratio, Tier 1 Capital, Tier 1 Ratio, Total Capital, Total
-Capital Ratio, Total RWAs, Leverage Ratio, LCR, NSFR, MREL Ratio). Each sheet
-ends in a single merged, wrapped source-citation cell rather than a per-row
-citation column.
+Standard structure (as of the ST- wayfinder map, see
+wayfinder/statements/map.md - 18 sheets total): an "Overview" sheet
+(headline Balance Sheet/P&L/Equity/Cash Flow figures plus Pillar 3 ratios -
+see the "spend and risk" lens in the map's Destination), then "Balance
+Sheet" (Consolidated Statement of Financial Position), "Profit & Loss"
+(Consolidated Statement of Comprehensive Income), a "Statement of Changes
+in Equity" sheet, a "Cash Flow Statement" sheet (full statement, period
+columns, most-recent-first), an "Asset Quality" sheet (loan book by
+product and IFRS 9 stage, plus NPL/coverage ratios), one sheet per Pillar 3
+key metric (CET1 Capital, CET1 Ratio, Tier 1 Capital, Tier 1 Ratio, Total
+Capital, Total Capital Ratio, Total RWAs, Leverage Ratio, LCR, NSFR, MREL
+Ratio), and finally an "RWA Breakdown" sheet (placed right after Total
+RWAs, not after MREL Ratio, since it's itself a Pillar 3 disclosure). Each
+sheet ends in a single merged, wrapped source-citation cell rather than a
+per-row citation column.
 
 Usage:
     from bank_workbook import BankWorkbook, PILLAR3_SHEET_NAMES
@@ -16,16 +25,33 @@ Usage:
         years=["FY2025", "FY2024", "FY2023"],
         header_color="0A2540",
     )
+    wb.add_overview_sheet(balance_sheet_totals=[...], balance_sheet_unit=..., income_statement_totals=[...],
+                           income_statement_unit=..., equity_changes_totals=[...], equity_changes_unit=...,
+                           cash_flow_totals=[...], cash_flow_unit=..., ratios=[...])
+    wb.add_balance_sheet_sheet(title=..., subtitle=..., rows=[...], sources_text=...)
+    wb.add_income_statement_sheet(title=..., subtitle=..., rows=[...], sources_text=...)
+    wb.add_equity_changes_sheet(title=..., subtitle=..., headers=[...], rows=[...], sources_text=...)
     wb.add_cash_flow_sheet(title=..., subtitle=..., rows=[...], sources_text=...)
+    wb.add_asset_quality_sheet(title=..., subtitle=..., rows=[...], sources_text=...)
     wb.add_metric_sheet("CET1 Capital", unit="£'000", rows_data=[...], sources_text=...)
+    wb.add_rwa_breakdown_sheet(title=..., subtitle=..., rows=[...], sources_text=...)
     wb.add_long_form_sheet("Interim Pillar 3", headers=[...], rows=[...])
     ...
     wb.save("/Users/armaan/code/katalysis/banks/EXAMPLE BANK FINANCIALS.xlsx")
 
 Row tuple formats:
-    Cash flow `rows`: (kind, label, values) where kind is "SECTION" (label-only
-        divider), "DATA" (a normal line item) or "TOTAL" (bolded subtotal/total).
-        `values` is a dict of {year: number}; omit a year to leave it blank.
+    Cash flow / Balance Sheet / Profit & Loss / Asset Quality / RWA
+        Breakdown `rows`: (kind, label, values) where kind is "SECTION"
+        (label-only divider), "DATA" (a normal line item) or "TOTAL"
+        (bolded subtotal/total). `values` is a dict of {year: number};
+        omit a year to leave it blank. Asset Quality and RWA Breakdown
+        ratio rows may use string values (e.g. "13.55%") the same way
+        Metric sheet rows do.
+    Equity changes `rows`: (kind, label, values) where kind is "DATA" or
+        "TOTAL" (bolded - use for balance b/f-c/f and comprehensive-income
+        rows). `values` is a tuple positionally aligned to the sheet's
+        `headers` (equity components), not a year dict - this sheet reads
+        chronologically oldest-to-newest, not year-columned.
     Metric sheet `rows_data`: (label, values) pairs, values as above. Use
         string values (e.g. "82.94%", "Not publicly disclosed") freely -
         cells are written as-is.
@@ -140,8 +166,12 @@ class BankWorkbook:
         # encroach on the axis tick labels above it.
         chart.legend.layout = Layout(
             manualLayout=ManualLayout(
-                xMode="edge", yMode="edge",
-                x=0.02, y=1.0 - legend_h, h=legend_h, w=0.96,
+                xMode="edge",
+                yMode="edge",
+                x=0.02,
+                y=1.0 - legend_h,
+                h=legend_h,
+                w=0.96,
             )
         )
         # ChartBase._write() overwrites plot_area.layout with chart.layout at
@@ -149,8 +179,12 @@ class BankWorkbook:
         chart.layout = Layout(
             manualLayout=ManualLayout(
                 layoutTarget="inner",
-                xMode="edge", yMode="edge",
-                x=0.10, y=plot_top, w=0.85, h=plot_h,
+                xMode="edge",
+                yMode="edge",
+                x=0.10,
+                y=plot_top,
+                w=0.85,
+                h=plot_h,
             )
         )
 
@@ -163,19 +197,21 @@ class BankWorkbook:
         return self.wb.create_sheet(title=name[:31])
 
     # -- public API -----------------------------------------------------------
-    def add_cash_flow_sheet(
+    def _add_statement_sheet(
         self,
         title,
         subtitle,
         rows,
         sources_text,
-        sheet_name="Cash Flow Statement",
-        first_col_width=60,
-        source_height=150,
-        unit_suffix=" (£'000)",
+        sheet_name,
+        first_col_width,
+        source_height,
+        unit_suffix,
     ):
-        """
-        rows: list of (kind, label, values) - kind in {"SECTION", "DATA", "TOTAL"}.
+        """Shared body for the full-statement sheets (Cash Flow, Balance
+        Sheet, Profit & Loss): a title/subtitle, then a header row of years,
+        then one row per (kind, label, values) tuple - kind in {"SECTION",
+        "DATA", "TOTAL"} - ending in a merged wrapped source-citation cell.
         """
         ws = self._next_sheet(sheet_name)
         ws.freeze_panes = "B4"
@@ -211,6 +247,197 @@ class BankWorkbook:
         self._write_source_cell(ws, r + 1, ncols, sources_text, height=source_height)
         self._autosize(ws, [first_col_width] + [15] * len(self.years))
         return ws
+
+    def add_cash_flow_sheet(
+        self,
+        title,
+        subtitle,
+        rows,
+        sources_text,
+        sheet_name="Cash Flow Statement",
+        first_col_width=60,
+        source_height=150,
+        unit_suffix=" (£'000)",
+    ):
+        """
+        rows: list of (kind, label, values) - kind in {"SECTION", "DATA", "TOTAL"}.
+        """
+        return self._add_statement_sheet(
+            title,
+            subtitle,
+            rows,
+            sources_text,
+            sheet_name,
+            first_col_width,
+            source_height,
+            unit_suffix,
+        )
+
+    def add_balance_sheet_sheet(
+        self,
+        title,
+        subtitle,
+        rows,
+        sources_text,
+        sheet_name="Balance Sheet",
+        first_col_width=60,
+        source_height=150,
+        unit_suffix=" (£'000)",
+    ):
+        """Consolidated Statement of Financial Position. Same row/column
+        shape as add_cash_flow_sheet - see that docstring for `rows`."""
+        return self._add_statement_sheet(
+            title,
+            subtitle,
+            rows,
+            sources_text,
+            sheet_name,
+            first_col_width,
+            source_height,
+            unit_suffix,
+        )
+
+    def add_income_statement_sheet(
+        self,
+        title,
+        subtitle,
+        rows,
+        sources_text,
+        sheet_name="Profit & Loss",
+        first_col_width=60,
+        source_height=150,
+        unit_suffix=" (£'000)",
+    ):
+        """Consolidated Statement of Comprehensive Income. Same row/column
+        shape as add_cash_flow_sheet - see that docstring for `rows`."""
+        return self._add_statement_sheet(
+            title,
+            subtitle,
+            rows,
+            sources_text,
+            sheet_name,
+            first_col_width,
+            source_height,
+            unit_suffix,
+        )
+
+    def add_equity_changes_sheet(
+        self,
+        title,
+        subtitle,
+        headers,
+        rows,
+        sources_text,
+        sheet_name="Statement of Changes in Equity",
+        first_col_width=46,
+        source_height=150,
+        col_width=15,
+    ):
+        """Consolidated Statement of Changes in Equity.
+
+        Unlike every other statement sheet, this one doesn't fit the
+        year-column shape - it's an equity-component-column, movement-row
+        roll-forward, read chronologically oldest-to-newest (opening
+        balance, this year's movements, closing balance, next year's
+        movements, ...), not most-recent-first like the rest of the
+        workbook.
+
+        headers: list of equity component names (e.g. "Share capital",
+            "Share premium", "Other reserves", "Merger reserve", "Retained
+            losses", "Total equity") - becomes the column headers after the
+            leading "Movement" label column.
+        rows: list of (kind, label, values) - kind in {"DATA", "TOTAL"};
+            TOTAL bolds the row (use it for balance-brought/carried-forward
+            rows and "Total comprehensive income/(loss) for the year" rows).
+            `values` is a tuple/list positionally aligned to `headers`
+            (not a year dict) - use None for a component not applicable to
+            that row (e.g. Merger reserve before it existed).
+        """
+        ws = self._next_sheet(sheet_name)
+        ws.freeze_panes = "A5"
+        ws["A1"] = title
+        ws["A1"].font = TITLE_FONT
+        ws["A2"] = subtitle
+        ws["A2"].font = SUBTITLE_FONT
+
+        ncols = 1 + len(headers)
+        col_headers = ["Movement"] + list(headers)
+        header_row = 3
+        for c, h in enumerate(col_headers, start=1):
+            ws.cell(row=header_row, column=c, value=h)
+        self._style_header(ws, header_row, ncols)
+
+        r = header_row + 1
+        for kind, label, values in rows:
+            ws.cell(row=r, column=1, value=label)
+            for ci, v in enumerate(values, start=2):
+                ws.cell(row=r, column=ci, value=v)
+            if kind == "TOTAL":
+                for c in range(1, ncols + 1):
+                    ws.cell(row=r, column=c).font = TOTAL_FONT
+            for c in range(1, ncols + 1):
+                ws.cell(row=r, column=c).border = BORDER
+            r += 1
+
+        self._write_source_cell(ws, r + 1, ncols, sources_text, height=source_height)
+        self._autosize(ws, [first_col_width] + [col_width] * len(headers))
+        return ws
+
+    def add_asset_quality_sheet(
+        self,
+        title,
+        subtitle,
+        rows,
+        sources_text,
+        sheet_name="Asset Quality",
+        first_col_width=58,
+        source_height=150,
+        unit_suffix=" (£'000)",
+    ):
+        """Asset Quality / Credit Risk Disclosures: loan book breakdown by
+        product and by IFRS 9 stage (1/2/3), plus derived coverage/NPL
+        ratios. Same year-column row/column shape as add_cash_flow_sheet -
+        see that docstring for `rows`. Ratio rows may use string values
+        (e.g. "13.55%") the same way add_metric_sheet does. Placed right
+        after Cash Flow Statement and right before the Pillar 3 sheets."""
+        return self._add_statement_sheet(
+            title,
+            subtitle,
+            rows,
+            sources_text,
+            sheet_name,
+            first_col_width,
+            source_height,
+            unit_suffix,
+        )
+
+    def add_rwa_breakdown_sheet(
+        self,
+        title,
+        subtitle,
+        rows,
+        sources_text,
+        sheet_name="RWA Breakdown",
+        first_col_width=54,
+        source_height=150,
+        unit_suffix=" (£'000)",
+    ):
+        """RWA breakdown by risk category (Pillar 3's UK OV1 template:
+        credit risk, counterparty credit risk, securitisation, market risk,
+        operational risk). Same year-column row/column shape as
+        add_cash_flow_sheet - see that docstring for `rows`. Placed with the
+        other Pillar 3 sheets (see PILLAR3_SHEET_NAMES), not with the other
+        3 statement sheets, since it's itself a Pillar 3 disclosure."""
+        return self._add_statement_sheet(
+            title,
+            subtitle,
+            rows,
+            sources_text,
+            sheet_name,
+            first_col_width,
+            source_height,
+            unit_suffix,
+        )
 
     def add_metric_sheet(
         self,
@@ -435,7 +662,12 @@ class BankWorkbook:
         source_header_row = header_row + len(metrics) + 3
         ws.cell(row=source_header_row, column=1, value="Source register")
         ws.cell(row=source_header_row, column=1).font = SUBTITLE_FONT
-        source_headers = ["Period", "Disclosure type", "Source document", "Page / table"]
+        source_headers = [
+            "Period",
+            "Disclosure type",
+            "Source document",
+            "Page / table",
+        ]
         for col, header in enumerate(source_headers, start=1):
             ws.cell(row=source_header_row + 1, column=col, value=header)
         self._style_header(ws, source_header_row + 1, len(source_headers))
@@ -451,30 +683,69 @@ class BankWorkbook:
         note_row = source_header_row + 2 + len(source_rows) + 1
         if note:
             ws.cell(row=note_row, column=1, value=f"Note: {note}")
-            ws.merge_cells(start_row=note_row, start_column=1, end_row=note_row, end_column=len(headers))
+            ws.merge_cells(
+                start_row=note_row,
+                start_column=1,
+                end_row=note_row,
+                end_column=len(headers),
+            )
             ws.cell(row=note_row, column=1).font = SOURCE_FONT
-            ws.cell(row=note_row, column=1).alignment = Alignment(wrap_text=True, vertical="top")
+            ws.cell(row=note_row, column=1).alignment = Alignment(
+                wrap_text=True, vertical="top"
+            )
             ws.row_dimensions[note_row].height = 60
 
         ws.freeze_panes = freeze_panes
         self._autosize(ws, [32, 18, 34] + [15] * len(periods))
         return ws
 
-    def add_overview_sheet(self, cash_flow_totals, cash_flow_unit, ratios, note=None):
+    def add_overview_sheet(
+        self,
+        cash_flow_totals,
+        cash_flow_unit,
+        ratios,
+        note=None,
+        balance_sheet_totals=None,
+        balance_sheet_unit=None,
+        income_statement_totals=None,
+        income_statement_unit=None,
+        equity_changes_totals=None,
+        equity_changes_unit=None,
+    ):
         """
-        Inserts an "Overview" sheet as the first tab: a summary table of
-        headline cash flow totals and headline Pillar 3 ratios across all
-        years, plus a clustered column chart (cash flow) and a line chart
-        (ratios) - both rendered oldest-year-first left to right regardless
-        of the most-recent-first column order used everywhere else.
+        Inserts an "Overview" sheet as the first tab: summary tables of
+        headline Balance Sheet / Profit & Loss / Statement of Changes in
+        Equity / cash flow totals and headline Pillar 3 ratios across all
+        years, plus a clustered column chart for each money block and a
+        line chart for the ratios - all rendered oldest-year-first left to
+        right regardless of the most-recent-first column order used
+        everywhere else. Block order, top to bottom: Balance Sheet,
+        Profit & Loss, Statement of Changes in Equity, Cash Flow, Ratios.
 
+        balance_sheet_totals / income_statement_totals: list of
+            (label, {year: number}) - e.g. Total assets/Loans and advances/
+            Customer deposits/Total equity for the balance sheet; Revenue/
+            Total operating expense/Profit for the year for the income
+            statement. Omit or pass `None`/`[]` to skip that block entirely
+            (e.g. for a workbook built before these sheets existed).
+        balance_sheet_unit / income_statement_unit: unit string for that
+            block's table heading and chart axis, e.g. "£'000". Ignored if
+            the corresponding totals list is empty.
+        equity_changes_totals: list of (label, {year: number}) - a per-year
+            bridge summary of the Statement of Changes in Equity sheet
+            (which is itself chronological, not year-columned - see
+            add_equity_changes_sheet), e.g. Opening equity / Total
+            comprehensive income(/loss) for the year / Other equity
+            movements, net / Closing equity. Omit or pass `None`/`[]` to
+            skip.
+        equity_changes_unit: unit string for that block, e.g. "£'000".
+            Ignored if equity_changes_totals is empty.
         cash_flow_totals: list of (label, {year: number}) - e.g. net cash
             from operating/investing/financing activities, cash at year end.
             Pass an empty list ([]) for a Pillar-3-only workbook (e.g. an
             entity taking the FRS 101/102 cash-flow-statement exemption) -
-            the cash-flow table/chart are then omitted entirely and only the
-            ratios chart is built; see the "Cash Flow Statement" sheet for
-            the exemption note in that case.
+            the cash-flow table/chart are then omitted entirely; see the
+            "Cash Flow Statement" sheet for the exemption note in that case.
         cash_flow_unit: unit string for the table heading and chart axis,
             e.g. "£m" or "£'000". Ignored if cash_flow_totals is empty.
         ratios: list of (label, {year: value}) - values as displayed
@@ -493,36 +764,71 @@ class BankWorkbook:
 
         ws["A1"] = f"{self.bank_name} — Overview"
         ws["A1"].font = TITLE_FONT
-        ws["A2"] = "Summary of cash flow and Pillar 3 disclosures across all years covered in this workbook"
+        ws["A2"] = (
+            "Headline balance sheet, profit & loss, cash flow and Pillar 3 figures across all years "
+            "covered in this workbook - how the bank is using its money and the risk it is taking with it"
+        )
         ws["A2"].font = SUBTITLE_FONT
 
-        row = 4
-        if cash_flow_totals:
-            ws.cell(row=row, column=1, value=f"Cash Flow Summary ({cash_flow_unit})").font = SECTION_FONT
-            row += 1
-            cf_header_row = row
-            for c, h in enumerate(headers, start=1):
-                ws.cell(row=row, column=c, value=h)
-            self._style_header(ws, row, ncols)
-            row += 1
-            cf_data_start = row
-            for label, values in cash_flow_totals:
-                ws.cell(row=row, column=1, value=label)
-                for ci, y in enumerate(self.years, start=2):
-                    ws.cell(row=row, column=ci, value=values.get(y))
-                for c in range(1, ncols + 1):
-                    ws.cell(row=row, column=c).font = TOTAL_FONT
-                    ws.cell(row=row, column=c).border = BORDER
-                row += 1
-            cf_data_end = row - 1
-        else:
-            ws.cell(row=row, column=1,
-                     value="Cash Flow Summary: not applicable — this entity does not publish a cash flow "
-                           "statement (see the Cash Flow Statement sheet for the exemption basis).").font = SECTION_FONT
-            row += 1
-            cf_header_row = None
+        # -- money blocks: Balance Sheet, Profit & Loss, Equity Changes, Cash Flow (bar charts) --
+        money_blocks = [
+            (
+                "bs",
+                "Balance Sheet Summary",
+                balance_sheet_totals or [],
+                balance_sheet_unit,
+            ),
+            (
+                "is",
+                "Profit & Loss Summary",
+                income_statement_totals or [],
+                income_statement_unit,
+            ),
+            (
+                "eq",
+                "Statement of Changes in Equity Summary",
+                equity_changes_totals or [],
+                equity_changes_unit,
+            ),
+            ("cf", "Cash Flow Summary", cash_flow_totals or [], cash_flow_unit),
+        ]
+        not_applicable_text = {
+            "bs": "Balance Sheet Summary: not applicable — this workbook was built before the Balance Sheet sheet existed.",
+            "is": "Profit & Loss Summary: not applicable — this workbook was built before the Profit & Loss sheet existed.",
+            "eq": "Statement of Changes in Equity Summary: not applicable — this workbook was built before the Statement of Changes in Equity sheet existed.",
+            "cf": "Cash Flow Summary: not applicable — this entity does not publish a cash flow statement (see the Cash Flow Statement sheet for the exemption basis).",
+        }
 
-        row += 1
+        row = 4
+        block_table_info = {}  # key -> (header_row, data_end) or None
+        for key, title, totals, unit in money_blocks:
+            if totals:
+                ws.cell(
+                    row=row, column=1, value=f"{title} ({unit})"
+                ).font = SECTION_FONT
+                row += 1
+                header_row = row
+                for c, h in enumerate(headers, start=1):
+                    ws.cell(row=row, column=c, value=h)
+                self._style_header(ws, row, ncols)
+                row += 1
+                for label, values in totals:
+                    ws.cell(row=row, column=1, value=label)
+                    for ci, y in enumerate(self.years, start=2):
+                        ws.cell(row=row, column=ci, value=values.get(y))
+                    for c in range(1, ncols + 1):
+                        ws.cell(row=row, column=c).font = TOTAL_FONT
+                        ws.cell(row=row, column=c).border = BORDER
+                    row += 1
+                block_table_info[key] = (header_row, row - 1)
+            else:
+                ws.cell(
+                    row=row, column=1, value=not_applicable_text[key]
+                ).font = SECTION_FONT
+                row += 1
+                block_table_info[key] = None
+            row += 1
+
         if ratios:
             ws.cell(row=row, column=1, value="Pillar 3 Key Metrics").font = SECTION_FONT
             row += 1
@@ -540,9 +846,12 @@ class BankWorkbook:
                 row += 1
             ratio_data_end = row - 1
         else:
-            ws.cell(row=row, column=1,
-                     value="Pillar 3 Key Metrics: not applicable — no ratios are disclosed for this "
-                           "entity (see the individual Pillar 3 metric sheets).").font = SECTION_FONT
+            ws.cell(
+                row=row,
+                column=1,
+                value="Pillar 3 Key Metrics: not applicable — no ratios are disclosed for this "
+                "entity (see the individual Pillar 3 metric sheets).",
+            ).font = SECTION_FONT
             row += 1
             ratio_header_row = None
 
@@ -550,71 +859,116 @@ class BankWorkbook:
             row += 1
             ws.cell(row=row, column=1, value=f"Note: {note}").font = SUBTITLE_FONT
             ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=ncols)
-            ws.cell(row=row, column=1).alignment = Alignment(wrap_text=True, vertical="top")
+            ws.cell(row=row, column=1).alignment = Alignment(
+                wrap_text=True, vertical="top"
+            )
             ws.row_dimensions[row].height = 45
             row += 1
 
         self._autosize(ws, [42] + [15] * len(self.years))
 
-        # -- hidden numeric staging areas, oldest-year-first, for the two charts --
+        # -- hidden numeric staging areas, oldest-year-first, for the charts --
         # (built as separate chronological blocks rather than via a reversed
         # category axis, which flips the value axis to the wrong side in Excel)
         chrono_years = list(reversed(self.years))
         n_years = len(self.years)
 
-        cf_stage_col = ncols + 3
-        if cash_flow_totals:
-            cf_stage_header_row = cf_header_row
-            for ci, y in enumerate(chrono_years, start=1):
-                ws.cell(row=cf_stage_header_row, column=cf_stage_col + ci, value=self.year_label[y])
-            r = cf_stage_header_row + 1
-            for label, values in cash_flow_totals:
-                ws.cell(row=r, column=cf_stage_col, value=label)
+        stage_col = ncols + 3
+        block_stage_info = {}  # key -> (stage_header_row, stage_end) or None
+        for key, title, totals, unit in money_blocks:
+            info = block_table_info[key]
+            if totals and info:
+                header_row, _ = info
                 for ci, y in enumerate(chrono_years, start=1):
-                    ws.cell(row=r, column=cf_stage_col + ci, value=values.get(y))
-                r += 1
-            cf_stage_end = r - 1
+                    ws.cell(
+                        row=header_row, column=stage_col + ci, value=self.year_label[y]
+                    )
+                r = header_row + 1
+                for label, values in totals:
+                    ws.cell(row=r, column=stage_col, value=label)
+                    for ci, y in enumerate(chrono_years, start=1):
+                        ws.cell(row=r, column=stage_col + ci, value=values.get(y))
+                    r += 1
+                block_stage_info[key] = (header_row, r - 1, stage_col)
+                stage_col += ncols + 2
+            else:
+                block_stage_info[key] = None
 
-        ratio_stage_col = cf_stage_col + ncols + 2
+        ratio_stage_col = stage_col
         if ratios:
-            ratio_stage_header_row = cf_header_row if cash_flow_totals else ratio_header_row
+            ratio_stage_header_row = ratio_header_row
+            for prev_key in ("bs", "is", "eq", "cf"):
+                if block_stage_info[prev_key]:
+                    ratio_stage_header_row = block_stage_info[prev_key][0]
+                    break
             for ci, y in enumerate(chrono_years, start=1):
-                ws.cell(row=ratio_stage_header_row, column=ratio_stage_col + ci, value=self.year_label[y])
+                ws.cell(
+                    row=ratio_stage_header_row,
+                    column=ratio_stage_col + ci,
+                    value=self.year_label[y],
+                )
             r = ratio_stage_header_row + 1
             for label, values in ratios:
                 ws.cell(row=r, column=ratio_stage_col, value=label)
                 for ci, y in enumerate(chrono_years, start=1):
-                    ws.cell(row=r, column=ratio_stage_col + ci, value=_parse_percent(values.get(y)))
+                    ws.cell(
+                        row=r,
+                        column=ratio_stage_col + ci,
+                        value=_parse_percent(values.get(y)),
+                    )
                 r += 1
             ratio_stage_end = r - 1
+            last_col = ratio_stage_col + ncols
+        else:
+            last_col = stage_col
 
-        for c in range(cf_stage_col, ratio_stage_col + ncols):
+        for c in range(ncols + 3, last_col):
             ws.column_dimensions[get_column_letter(c)].hidden = True
 
         # -- charts --
         chart_row = row + 2
-        if cash_flow_totals:
+        bar_titles = {
+            "bs": "Balance Sheet Summary",
+            "is": "Profit & Loss Summary",
+            "eq": "Statement of Changes in Equity Summary",
+            "cf": "Cash Flow Summary",
+        }
+        for key, title, totals, unit in money_blocks:
+            stage_info = block_stage_info[key]
+            if not stage_info:
+                continue
+            stage_header_row, stage_end, block_stage_col = stage_info
             bar = BarChart()
             bar.type = "col"
             bar.grouping = "clustered"
-            bar.title = f"{self.bank_name} — Cash Flow Summary by Year"
-            bar.y_axis.title = cash_flow_unit
+            bar.title = f"{self.bank_name} — {bar_titles[key]} by Year"
+            bar.y_axis.title = unit
             bar.height = 13
             bar.width = 24
-            data = Reference(ws, min_col=cf_stage_col, max_col=cf_stage_col + n_years,
-                              min_row=cf_stage_header_row + 1, max_row=cf_stage_end)
+            data = Reference(
+                ws,
+                min_col=block_stage_col,
+                max_col=block_stage_col + n_years,
+                min_row=stage_header_row + 1,
+                max_row=stage_end,
+            )
             bar.add_data(data, titles_from_data=True, from_rows=True)
-            cats = Reference(ws, min_col=cf_stage_col + 1, max_col=cf_stage_col + n_years,
-                              min_row=cf_stage_header_row, max_row=cf_stage_header_row)
+            cats = Reference(
+                ws,
+                min_col=block_stage_col + 1,
+                max_col=block_stage_col + n_years,
+                min_row=stage_header_row,
+                max_row=stage_header_row,
+            )
             bar.set_categories(cats)
-            bar.visible_cells_only = False  # source data lives in hidden staging columns
+            bar.visible_cells_only = (
+                False  # source data lives in hidden staging columns
+            )
             self._style_chart_axes(bar)
             bar.legend.position = "b"
             self._reserve_bottom_legend(bar, legend_h=0.16, plot_h=0.55, plot_top=0.14)
             ws.add_chart(bar, f"A{chart_row}")
-            line_chart_row = chart_row + 22
-        else:
-            line_chart_row = chart_row
+            chart_row += 22
 
         if not ratios:
             return ws
@@ -624,11 +978,21 @@ class BankWorkbook:
         line.y_axis.title = "%"
         line.height = 16
         line.width = 24
-        ldata = Reference(ws, min_col=ratio_stage_col, max_col=ratio_stage_col + n_years,
-                           min_row=ratio_stage_header_row + 1, max_row=ratio_stage_end)
+        ldata = Reference(
+            ws,
+            min_col=ratio_stage_col,
+            max_col=ratio_stage_col + n_years,
+            min_row=ratio_stage_header_row + 1,
+            max_row=ratio_stage_end,
+        )
         line.add_data(ldata, titles_from_data=True, from_rows=True)
-        lcats = Reference(ws, min_col=ratio_stage_col + 1, max_col=ratio_stage_col + n_years,
-                           min_row=ratio_stage_header_row, max_row=ratio_stage_header_row)
+        lcats = Reference(
+            ws,
+            min_col=ratio_stage_col + 1,
+            max_col=ratio_stage_col + n_years,
+            min_row=ratio_stage_header_row,
+            max_row=ratio_stage_header_row,
+        )
         line.set_categories(lcats)
         line.visible_cells_only = False  # source data lives in hidden staging columns
         self._style_chart_axes(line)
@@ -636,7 +1000,7 @@ class BankWorkbook:
         self._reserve_bottom_legend(line, legend_h=0.22, plot_h=0.50, plot_top=0.12)
         for s in line.series:
             s.smooth = False
-        ws.add_chart(line, f"A{line_chart_row}")
+        ws.add_chart(line, f"A{chart_row}")
 
         return ws
 

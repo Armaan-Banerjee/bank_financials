@@ -78,6 +78,188 @@ def p3_sources():
 bw = BankWorkbook(bank_name="Bank of China (UK) Limited", years=YEARS, header_color="B22222")
 
 # ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+AR2024_OWN_NOTE = (
+    "FY2024's own primary source is its own report (AR2024_URL), not AR2025's comparative column - both are "
+    "identical figures (verified), no restatement."
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 982512, "FY2024": 975201, "FY2023": 687070, "FY2022": 657656, "FY2021": 716133}),
+    ("DATA", "Government bonds", {"FY2025": 142529, "FY2024": 144495, "FY2023": 118328, "FY2022": 44264}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 90733, "FY2024": 73658, "FY2023": 86477, "FY2022": 29357, "FY2021": 69065}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 810985, "FY2024": 941507, "FY2023": 990763, "FY2022": 1122459, "FY2021": 1194653}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 2504, "FY2024": 4667, "FY2023": 5506, "FY2022": 7702, "FY2021": 11}),
+    ("DATA", "Prepayments, accrued income and other assets", {"FY2025": 156554, "FY2024": 138246, "FY2023": 130581, "FY2022": 351967, "FY2021": 87868}),
+    ("DATA", "Financial assets at fair value through profit and loss", {"FY2025": 71293, "FY2024": 30150, "FY2023": 47445, "FY2022": 60514, "FY2021": 64659}),
+    ("DATA", "Current tax asset", {"FY2025": 4582, "FY2024": 2934, "FY2023": 637, "FY2022": 2351, "FY2021": 5979}),
+    ("DATA", "Deferred tax assets", {"FY2025": 289, "FY2024": 406, "FY2023": 359, "FY2022": 1280, "FY2021": 1283}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 11573, "FY2024": 11419, "FY2023": 11902, "FY2022": 12769, "FY2021": 11167}),
+    ("DATA", "Intangible assets", {"FY2025": 887, "FY2024": 636, "FY2023": 305, "FY2022": 274, "FY2021": 362}),
+    ("TOTAL", "Total assets", {"FY2025": 2274441, "FY2024": 2323319, "FY2023": 2079373, "FY2022": 2290593, "FY2021": 2151180}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits from banks", {"FY2025": 511961, "FY2024": 493256, "FY2023": 369590, "FY2022": 539387, "FY2021": 396254}),
+    ("DATA", "Deposits from customers", {"FY2025": 1304816, "FY2024": 1355529, "FY2023": 1223068, "FY2022": 1291150, "FY2021": 1333523}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 289, "FY2024": 2, "FY2023": 3, "FY2022": 13, "FY2021": 5280}),
+    ("DATA", "Other liabilities", {"FY2025": 39574, "FY2024": 37473, "FY2023": 38352, "FY2022": 50379, "FY2021": 43571}),
+    ("DATA", "Accruals and deferred income", {"FY2025": 18650, "FY2024": 23257, "FY2023": 15017, "FY2022": 7720, "FY2021": 5657}),
+    ("DATA", "Impairment provision on off balance sheet products", {"FY2025": 138, "FY2024": 58, "FY2023": 54, "FY2022": 51, "FY2021": 119}),
+    ("DATA", "Subordinated liabilities", {"FY2021": 60000}),
+    ("TOTAL", "Total liabilities", {"FY2025": 1875428, "FY2024": 1909575, "FY2023": 1646084, "FY2022": 1888700, "FY2021": 1844404}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Authorised and called up share capital", {"FY2025": 250000, "FY2024": 250000, "FY2023": 250000, "FY2022": 250000, "FY2021": 250000}),
+    ("DATA", "Other equity instruments (Additional Tier 1)", {"FY2025": 60000, "FY2024": 60000, "FY2023": 60000, "FY2022": 60000}),
+    ("DATA", "Retained earnings", {"FY2025": 89013, "FY2024": 103744, "FY2023": 123289, "FY2022": 91893, "FY2021": 56776}),
+    ("TOTAL", "Total shareholders' equity", {"FY2025": 399013, "FY2024": 413744, "FY2023": 433289, "FY2022": 401893, "FY2021": 306776}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 2274441, "FY2024": 2323319, "FY2023": 2079373, "FY2022": 2290593, "FY2021": 2151180}),
+]
+
+BALANCE_SHEET_SOURCES = (
+    "Sources - Bank of China (UK) Limited's own Statement of Financial Position (Bank/solo basis - no group "
+    "accounts prepared, Companies Act 2006 s.401 exemption), £'000, each year's own originally-published report:\n"
+    f"FY2025: Annual Report 2025, p.49 - {AR2025_URL}\n"
+    f"FY2024: Annual Report 2024, p.49 - {AR2024_URL} ({AR2024_OWN_NOTE})\n"
+    f"FY2023: Annual Report 2023, p.50 - {AR2023_URL}\n"
+    f"FY2022: Financial Statements 2022, p.38 - {AR2022_URL}\n"
+    f"FY2021: Financial Statements 2021, p.35 - {AR2021_URL}\n"
+    "Presentation notes: 'Government bonds' only appears as its own line from FY2022 onward (no separate line "
+    "existed pre-2022 - blank for FY2021, not zero). 'Subordinated liabilities' (£60,000k, FY2021) was repaid "
+    "and replaced by an equal £60,000k Additional Tier 1 instrument in June 2022 - both nil/blank in the years "
+    "they don't apply. 'Investment in subsidiary companies' is nil every year and omitted as a row. FY2021's "
+    "own report's Statement of Changes in Equity states closing retained earnings as £56,706k, £70k less than "
+    "the Balance Sheet's own £56,776k for the same date - the Balance Sheet's single 'Retained earnings' line "
+    "appears to combine the SOCE's separate retained-earnings and FX-translation-reserve columns (£56,706k + "
+    "£70k = £56,776k); total equity ties out exactly either way (£306,776k).\n"
+    + ENTITY_NOTE
+)
+
+bw.add_balance_sheet_sheet(
+    title="Bank of China (UK) Limited — Statement of Financial Position",
+    subtitle="Bank of China (UK) Limited (solo entity basis), £'000",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=68,
+    source_height=200,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 110123, "FY2024": 128817, "FY2023": 121217, "FY2022": 62661, "FY2021": 36936}),
+    ("DATA", "Interest expense", {"FY2025": -53024, "FY2024": -57415, "FY2023": -40422, "FY2022": -13239, "FY2021": -3650}),
+    ("TOTAL", "Net interest income", {"FY2025": 57099, "FY2024": 71402, "FY2023": 80795, "FY2022": 49422, "FY2021": 33286}),
+    ("DATA", "Fee and commission income", {"FY2025": 3399, "FY2024": 3228, "FY2023": 3378, "FY2022": 3955, "FY2021": 4294}),
+    ("DATA", "Fee and commission expense", {"FY2025": -1462, "FY2024": -1481, "FY2023": -1692, "FY2022": -1694, "FY2021": -1319}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 1937, "FY2024": 1747, "FY2023": 1686, "FY2022": 2261, "FY2021": 2975}),
+    ("DATA", "Net fair value gain/(loss) on financial instruments", {"FY2025": 3431, "FY2024": 4711, "FY2023": 9119, "FY2022": 148, "FY2021": 1923}),
+    ("DATA", "Foreign exchange gain", {"FY2025": 2388, "FY2024": 2295, "FY2023": 386, "FY2022": 4916, "FY2021": 2590}),
+    ("DATA", "Net other operating income", {"FY2025": 123435, "FY2024": 107108, "FY2023": 114199, "FY2022": 93633, "FY2021": 83274}),
+    ("TOTAL", "Non-interest income", {"FY2025": 129254, "FY2024": 114114, "FY2023": 123704, "FY2022": 98697, "FY2021": 87787}),
+    ("TOTAL", "Total income", {"FY2025": 188290, "FY2024": 187263, "FY2023": 206185, "FY2022": 150380, "FY2021": 124048}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Staff costs", {"FY2025": -86079, "FY2024": -72194, "FY2023": -68058, "FY2022": -59208, "FY2021": -50154}),
+    ("DATA", "Other expenses", {"FY2025": -10029, "FY2024": -9735, "FY2023": -9543, "FY2022": -9818, "FY2021": -8924}),
+    ("DATA", "Depreciation of plant and equipment", {"FY2025": -1870, "FY2024": -1540, "FY2023": -1572, "FY2022": -1462, "FY2021": -1802}),
+    ("DATA", "Amortisation of intangible assets", {"FY2025": -161, "FY2024": -104, "FY2023": -52, "FY2022": -271, "FY2021": -237}),
+    ("DATA", "Credit/(provision) for expected credit losses", {"FY2025": 217, "FY2024": 3953, "FY2023": 11235, "FY2022": 11526, "FY2021": -23665}),
+    ("TOTAL", "Profit before income tax", {"FY2025": 90368, "FY2024": 107643, "FY2023": 138195, "FY2022": 91147, "FY2021": 39266}),
+    ("DATA", "Income tax expense", {"FY2025": -21437, "FY2024": -23726, "FY2023": -34982, "FY2022": -22583, "FY2021": -7788}),
+    ("TOTAL", "Profit for the year", {"FY2025": 68931, "FY2024": 83917, "FY2023": 103213, "FY2022": 68564, "FY2021": 31478}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Foreign currency translation", {"FY2025": 80, "FY2023": -2, "FY2022": 12, "FY2021": 134}),
+    ("TOTAL", "Other comprehensive income/(expense) for the year", {"FY2025": 80, "FY2024": 0, "FY2023": -2, "FY2022": 12, "FY2021": 134}),
+    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 69011, "FY2024": 83917, "FY2023": 103211, "FY2022": 68576, "FY2021": 31612}),
+]
+
+INCOME_STATEMENT_SOURCES = (
+    "Sources - Bank of China (UK) Limited's own Income Statement / Statement of Comprehensive Income (Bank/solo "
+    "basis), £'000, each year's own originally-published report:\n"
+    f"FY2025: Annual Report 2025, p.47-48 - {AR2025_URL}\n"
+    f"FY2024: Annual Report 2024, p.48-49 - {AR2024_URL} ({AR2024_OWN_NOTE})\n"
+    f"FY2023: Annual Report 2023, p.48-49 - {AR2023_URL}\n"
+    f"FY2022: Financial Statements 2022, p.36-37 - {AR2022_URL}\n"
+    f"FY2021: Financial Statements 2021, p.33-34 - {AR2021_URL}\n"
+    "Profit before income tax ties exactly to the Cash Flow Statement's own 'Profit before income tax' row for "
+    "every year, cross-checked as a reconciliation.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_income_statement_sheet(
+    title="Bank of China (UK) Limited — Income Statement and Statement of Comprehensive Income",
+    subtitle="Bank of China (UK) Limited (solo entity basis), £'000",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=68,
+    source_height=180,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Issued share capital", "Other equity instruments", "Retained earnings", "Foreign currency translation reserve", "Total"]
+
+equity_changes_rows = [
+    ("DATA", "As at 1 January 2021", (250000, 0, 92228, -64, 342164)),
+    ("DATA", "Profit for the financial year", (0, 0, 31478, 0, 31478)),
+    ("DATA", "Foreign exchange and other", (0, 0, 0, 134, 134)),
+    ("TOTAL", "Total comprehensive income", (0, 0, 31478, 134, 31612)),
+    ("DATA", "Dividend paid", (0, 0, -67000, 0, -67000)),
+    ("TOTAL", "As at 31 December 2021", (250000, 0, 56706, 70, 306776)),
+    ("DATA", "Additional Tier 1 capital issued", (0, 60000, 0, 0, 60000)),
+    ("DATA", "Profit for the financial year", (0, 0, 68564, 0, 68564)),
+    ("DATA", "Foreign exchange and other", (0, 0, 0, 12, 12)),
+    ("TOTAL", "Total comprehensive income", (0, 0, 68564, 12, 68576)),
+    ("DATA", "Dividend paid", (0, 0, -33459, 0, -33459)),
+    ("TOTAL", "As at 31 December 2022", (250000, 60000, 91811, 82, 401893)),
+    ("DATA", "Profit for the financial year", (0, 0, 103213, 0, 103213)),
+    ("DATA", "Foreign exchange and other", (0, 0, 0, -2, -2)),
+    ("TOTAL", "Total comprehensive income", (0, 0, 103213, -2, 103211)),
+    ("DATA", "Dividend paid", (0, 0, -71815, 0, -71815)),
+    ("TOTAL", "As at 31 December 2023", (250000, 60000, 123209, 80, 433289)),
+    ("DATA", "Profit for the financial year", (0, 0, 83917, 0, 83917)),
+    ("TOTAL", "Total comprehensive income", (0, 0, 83917, 0, 83917)),
+    ("DATA", "Dividend paid", (0, 0, -103462, 0, -103462)),
+    ("TOTAL", "As at 31 December 2024", (250000, 60000, 103664, 80, 413744)),
+    ("DATA", "Profit for the financial year", (0, 0, 68931, 0, 68931)),
+    ("DATA", "Transfer", (0, 0, 80, -80, 0)),
+    ("TOTAL", "Total comprehensive income", (0, 0, 69011, 0, 69011)),
+    ("DATA", "Dividend paid", (0, 0, -83662, 0, -83662)),
+    ("TOTAL", "As at 31 December 2025", (250000, 60000, 89013, 0, 399013)),
+]
+
+EQUITY_CHANGES_SOURCES = (
+    "Sources - Bank of China (UK) Limited's own Statement of Changes in Equity (Bank/solo basis), £'000, "
+    "chronological roll-forward reconstructed from each year's own originally-published report:\n"
+    f"2021 movements: Financial Statements 2021, p.36 - {AR2021_URL}\n"
+    f"2022 movements: Financial Statements 2022, p.39 - {AR2022_URL}\n"
+    f"2023 movements: Annual Report 2023, p.51 - {AR2023_URL}\n"
+    f"2024 movements: Annual Report 2024, p.50 - {AR2024_URL} ({AR2024_OWN_NOTE})\n"
+    f"2025 movements: Annual Report 2025, p.50 - {AR2025_URL}\n"
+    "Note: the 'Dividend paid' row in this statement (which includes both ordinary share dividends and Additional "
+    "Tier 1 coupon/interest payments to the parent) differs from the Cash Flow Statement's separately-split "
+    "'Dividend paid'/'Interest paid on Additional Tier 1 instrument' lines - e.g. FY2025's £83,662k here vs "
+    "£78,700k + £4,962k = £83,662k on the Cash Flow Statement (ties out exactly once combined; genuinely two "
+    "different presentations of the same total, not a discrepancy).\n"
+    + ENTITY_NOTE
+)
+
+bw.add_equity_changes_sheet(
+    title="Bank of China (UK) Limited — Statement of Changes in Equity",
+    subtitle="Bank of China (UK) Limited (solo entity basis), £'000, chronological",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+    first_col_width=42,
+    source_height=190,
+)
+
+# ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
@@ -130,6 +312,64 @@ bw.add_cash_flow_sheet(
     first_col_width=72,
     source_height=210,
     unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Gross carrying amount by product", {}),
+    ("DATA", "Wholesale loans", {"FY2025": 2162, "FY2024": 2242, "FY2023": 2352, "FY2022": 2535, "FY2021": 4806}),
+    ("DATA", "Housing loans", {"FY2025": 895, "FY2024": 1117, "FY2023": 2279, "FY2022": 2417, "FY2021": 2607}),
+    ("DATA", "Syndicated loans", {"FY2025": 194775, "FY2024": 238983, "FY2023": 173584, "FY2022": 155931, "FY2021": 183604}),
+    ("DATA", "Factoring financing", {"FY2025": 1898, "FY2024": 2185, "FY2023": 4840, "FY2022": 4219, "FY2021": 7892}),
+    ("DATA", "Credit cards", {"FY2025": 343, "FY2024": 382, "FY2023": 501, "FY2022": 401, "FY2021": 449}),
+    ("DATA", "Mortgage loans", {"FY2025": 611782, "FY2024": 697619, "FY2023": 812348, "FY2022": 973424, "FY2021": 1035418}),
+    ("DATA", "Financing order", {"FY2024": 319, "FY2023": 140, "FY2022": 92, "FY2021": 1960}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 811855, "FY2024": 942847, "FY2023": 996044, "FY2022": 1139019, "FY2021": 1236736}),
+    ("SECTION", "Gross carrying amount by IFRS 9 stage", {}),
+    ("DATA", "Stage 1: 12-month ECL", {"FY2025": 755256, "FY2024": 838850, "FY2023": 875144, "FY2022": 932381, "FY2021": 1161138}),
+    ("DATA", "Stage 2: Lifetime ECL, not credit-impaired", {"FY2025": 52230, "FY2024": 99518, "FY2023": 117365, "FY2022": 133805, "FY2021": 23529}),
+    ("DATA", "Stage 3: Lifetime ECL, credit-impaired", {"FY2025": 4369, "FY2024": 4479, "FY2023": 3535, "FY2022": 72833, "FY2021": 52069}),
+    ("TOTAL", "Total gross carrying amount (by stage)", {"FY2025": 811855, "FY2024": 942847, "FY2023": 996044, "FY2022": 1139019, "FY2021": 1236736}),
+    ("SECTION", "Reconciliation to Balance Sheet", {}),
+    ("DATA", "Net carrying value (Balance Sheet's Loans and advances to customers)", {"FY2025": 810985, "FY2024": 941507, "FY2023": 990763, "FY2022": 1122459, "FY2021": 1194653}),
+    ("DATA", "Implied total ECL allowance (gross − net)", {"FY2025": 870, "FY2024": 1340, "FY2023": 5281, "FY2022": 16560, "FY2021": 42083}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "ECL coverage ratio (implied allowance / gross carrying amount)", {"FY2025": "0.11%", "FY2024": "0.14%", "FY2023": "0.53%", "FY2022": "1.45%", "FY2021": "3.40%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross carrying amount)", {"FY2025": "0.54%", "FY2024": "0.48%", "FY2023": "0.35%", "FY2022": "6.39%", "FY2021": "4.21%"}),
+]
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Note 6(a) 'Analysis of risk concentration in the financial position' (Global/Europe/US/UK/UK "
+    "Retail x Stage 1/2/3 geographic table), Bank/solo basis, £'000. By-product and by-stage figures here are "
+    "summed from that table's 'Loans and advances to customers' product rows (Wholesale/Housing/Syndicated/"
+    "Factoring/Credit Cards/Mortgage/Financing Order) across all geography columns - both groupings tie exactly "
+    "to each other and to the same total for every year (verified):\n"
+    f"FY2025: Annual Report 2025, p.77 - {AR2025_URL}\n"
+    f"FY2024: Annual Report 2025's own FY2024 comparative column, p.78 (figures independently cross-checked "
+    "against AR2024's own Balance Sheet net-loans figure) - {AR2025_URL}\n"
+    f"FY2023: Annual Report 2023, p.80 - {AR2023_URL}\n"
+    f"FY2022: Annual Report 2023's own FY2022 comparative column, p.81 - {AR2023_URL}\n"
+    f"FY2021: Financial Statements 2021, p.67 - {AR2021_URL}\n"
+    "'Implied total ECL allowance' is not separately disclosed by product/stage anywhere in these documents - it "
+    "is the residual gap between this note's gross carrying total and the Balance Sheet's own net carrying "
+    "value, so it captures the whole-portfolio allowance only (not split by stage), hence no separate Stage 3 "
+    "coverage ratio is shown here (would require a stage-level allowance split that isn't disclosed). FY2021's "
+    "large ECL gap (£42,083k, 3.40% coverage) is consistent with that year's Cash Flow Statement, which shows "
+    "the largest single-year 'Net loss for expected credit losses' charge (£23,665k) in the whole 5-year series. "
+    "FY2022's elevated Stage 3/NPL ratio (6.39%, mostly Syndicated loans) fell sharply by FY2023 (0.35%) - both "
+    "years' own source tables, not smoothed or averaged.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_asset_quality_sheet(
+    title="Bank of China (UK) Limited — Asset Quality / Credit Risk Disclosures",
+    subtitle="Bank of China (UK) Limited (solo entity basis), £'000 (ratios as calculated)",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=68,
+    source_height=270,
 )
 
 # ---------------------------------------------------------------
@@ -186,6 +426,30 @@ metric(
     p3_sources(),
 )
 
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Bank of China (UK) Limited's UK KM1 Key Metrics tables (same 5 Pillar 3 documents as the Total "
+    "RWAs sheet):\n"
+    f"FY2025 & FY2024 comparative: Pillar 3 Disclosure 31 December 2025, p.15 - {P3_2025_URL}\n"
+    f"FY2023-FY2021: see p3_sources() citations on the Total RWAs sheet.\n\n"
+    "NOT DISCLOSED (category breakdown): none of the 5 Pillar 3 documents contains a UK OV1 'Overview of risk "
+    "weighted exposure amounts' table breaking RWA down by risk category (credit/market/operational/CVA) - "
+    "confirmed by reading the FY2025 document's own table of contents and KM1 template in full. Only the single "
+    "aggregate Total RWA figure exists for every year (see the Total RWAs sheet, which this sheet's Total row "
+    "ties out to exactly)."
+)
+
+bw.add_rwa_breakdown_sheet(
+    title="Bank of China (UK) Limited — RWA Breakdown",
+    subtitle="Bank of China (UK) Limited (solo entity basis), £'000",
+    rows=[
+        ("DATA", "Not publicly disclosed — category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
+        ("TOTAL", "Total risk exposure amount", {"FY2025": 1008110, "FY2024": 1106898, "FY2023": 1024452, "FY2022": 1176625, "FY2021": 1119380}),
+    ],
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=58,
+    source_height=170,
+)
+
 metric(
     "Leverage Ratio", "£'000 / %",
     [
@@ -232,6 +496,26 @@ metric(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 2274441, "FY2024": 2323319, "FY2023": 2079373, "FY2022": 2290593, "FY2021": 2151180}),
+        ("Loans and advances to customers", {"FY2025": 810985, "FY2024": 941507, "FY2023": 990763, "FY2022": 1122459, "FY2021": 1194653}),
+        ("Deposits from customers", {"FY2025": 1304816, "FY2024": 1355529, "FY2023": 1223068, "FY2022": 1291150, "FY2021": 1333523}),
+        ("Total shareholders' equity", {"FY2025": 399013, "FY2024": 413744, "FY2023": 433289, "FY2022": 401893, "FY2021": 306776}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total income", {"FY2025": 188290, "FY2024": 187263, "FY2023": 206185, "FY2022": 150380, "FY2021": 124048}),
+        ("Staff costs", {"FY2025": -86079, "FY2024": -72194, "FY2023": -68058, "FY2022": -59208, "FY2021": -50154}),
+        ("Profit for the year", {"FY2025": 68931, "FY2024": 83917, "FY2023": 103213, "FY2022": 68564, "FY2021": 31478}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 413744, "FY2024": 433289, "FY2023": 401893, "FY2022": 306776, "FY2021": 342164}),
+        ("Total comprehensive income", {"FY2025": 69011, "FY2024": 83917, "FY2023": 103211, "FY2022": 68576, "FY2021": 31612}),
+        ("Other movements, net (AT1 issued / dividends)", {"FY2025": -83662, "FY2024": -103462, "FY2023": -71815, "FY2022": 26541, "FY2021": -67000}),
+        ("Closing equity", {"FY2025": 399013, "FY2024": 413744, "FY2023": 433289, "FY2022": 401893, "FY2021": 306776}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash generated from operating activities", {"FY2025": 111252, "FY2024": 405091, "FY2023": 233292, "FY2022": 22570, "FY2021": 304294}),
         ("Net cash from/(used in) investing activities", {"FY2025": -2623, "FY2024": -25826, "FY2023": -74896, "FY2022": -47511, "FY2021": -1147}),

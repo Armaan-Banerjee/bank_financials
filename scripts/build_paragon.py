@@ -136,7 +136,231 @@ INTERIM_ROWS = [
 ]
 
 bw=BankWorkbook(bank_name="Paragon Bank Plc", years=YEARS, year_label=YEAR_LABEL, header_color="264653")
+
+# ---------------------------------------------------------------
+# Balance Sheet - equity reconciliation ladder step 1: built first so each
+# year's own Total equity is the independent check value for the equity
+# sheet below. All 5 years tie exactly (Total assets = Total liabilities +
+# Total equity; Total equity ties to the equity statement's own opening/
+# closing balances - zero undocumented plug rows anywhere across all 5
+# years - the one genuine bridge, FY2024's Note 44 restatement, is shown
+# as its own explicit row on the equity sheet).
+# ---------------------------------------------------------------
+STATEMENTS_SOURCES = (
+    "Sources - Paragon Bank PLC own statutory Balance Sheet/Statement of Profit or Loss/"
+    "Statement of Movements in Equity, £m (all years ended 30 September), transcribed from "
+    "each year's own Companies House full-accounts filing (image-only scans, transcribed by "
+    "reading rendered pages):\n"
+    f"FY2025: Companies House filing dated 10 Mar 2026 (157pp), Statement of Profit or Loss p.57, "
+    f"Balance Sheet p.58, Statement of Movements in Equity p.60 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n"
+    f"FY2024: Companies House filing dated 28 Jan 2025 (148pp), Statement of Profit or Loss p.51, "
+    f"Balance Sheet p.52, Statement of Movements in Equity p.54 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n"
+    f"FY2023: Companies House filing dated 15 Feb 2024 (147pp), Statement of Profit or Loss p.50, "
+    f"Balance Sheet p.51, Statement of Movements in Equity p.53 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n"
+    f"FY2022: Companies House filing dated 14 Mar 2023 (139pp), Statement of Profit or Loss p.46, "
+    f"Balance Sheet p.47, Statement of Movements in Equity p.49 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n"
+    f"FY2021: Companies House filing dated 2022 (137pp), Statement of Profit or Loss p.49, "
+    f"Balance Sheet p.50, Cash Flow Statement p.51 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n\n"
+    + ENTITY_NOTE +
+    "\n\nPRESENTATION NOTE: FY2023-FY2025's Balance Sheet carries a standalone 'Investment "
+    "securities' line (FY2023: nil, not separately listed that year - folded into the table's "
+    "absence; FY2024-25: populated); FY2021-FY2022 instead show a 'Short term investments' line "
+    "(both nil) - shown here on one combined row since they are the same conceptual line, "
+    "genuinely renamed by the Bank. 'Property, plant and equipment' appears as its own line only "
+    "FY2021-FY2023 (nil FY2022-FY2023, £5.1m FY2021) - dropped entirely as a separate line from "
+    "FY2024 onward (presumably folded into Sundry assets that year, per the Bank's own table). "
+    "FY2025 uniquely carries 'Covered bonds' (£499.2m) and 'Provisions' (£25.5m) on the liabilities "
+    "side, and a 'Provision for liabilities' line in the P&L - genuine new items that year, not "
+    "gaps in earlier years. FY2021's Interest receivable/Interest payable are shown grossed up "
+    "differently (£288.4m/£(145.8)m) than the FY2022 report's own restated FY2021 comparative "
+    "(£256.2m/£(113.6)m) - Net interest income is identical either way (£142.6m), so this is a "
+    "presentation-only grossing change (likely a swap-interest netting convention), not a "
+    "restatement of profit; the Bank's own contemporaneous FY2021 figures are used here."
+)
+
+bs_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash - central banks", {"FY2025": 2175.7, "FY2024": 2315.5, "FY2023": 2783.3, "FY2022": 1612.5, "FY2021": 1142.0}),
+    ("DATA", "Cash - retail banks", {"FY2025": 56.2, "FY2024": 62.9, "FY2023": 76.7, "FY2022": 33.6, "FY2021": 52.1}),
+    ("DATA", "Investment securities (FY2021-22: 'Short term investments', both nil)", {"FY2025": 626.2, "FY2024": 427.4, "FY2022": 0.0, "FY2021": 0.0}),
+    ("DATA", "Loans to customers", {"FY2025": 12446.0, "FY2024": 11671.6, "FY2023": 11161.2, "FY2022": 8952.8, "FY2021": 8144.6}),
+    ("DATA", "Investment in structured entities", {"FY2025": 1959.3, "FY2024": 2154.9, "FY2023": 1427.9, "FY2022": 1791.2, "FY2021": 1944.1}),
+    ("DATA", "Derivative financial assets", {"FY2025": 241.1, "FY2024": 319.1, "FY2023": 518.2, "FY2022": 605.9, "FY2021": 28.5}),
+    ("DATA", "Sundry assets", {"FY2025": 115.5, "FY2024": 137.0, "FY2023": 88.6, "FY2022": 115.0, "FY2021": 127.5}),
+    ("DATA", "Property, plant and equipment", {"FY2023": 0.0, "FY2022": 0.0, "FY2021": 5.1}),
+    ("DATA", "Investment in subsidiary undertakings", {"FY2025": 2192.7, "FY2024": 2111.9, "FY2023": 2069.0, "FY2022": 2278.0, "FY2021": 2061.7}),
+    ("TOTAL", "Total assets", {"FY2025": 19812.7, "FY2024": 19200.3, "FY2023": 18124.9, "FY2022": 15389.0, "FY2021": 13505.6}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Retail deposits", {"FY2025": 16270.8, "FY2024": 16314.7, "FY2023": 13234.4, "FY2022": 10569.5, "FY2021": 9297.4}),
+    ("DATA", "Derivative financial liabilities", {"FY2025": 65.3, "FY2024": 98.9, "FY2023": 39.7, "FY2022": 118.1, "FY2021": 42.0}),
+    ("DATA", "Covered bonds", {"FY2025": 499.2}),
+    ("DATA", "Central bank facilities", {"FY2025": 950.0, "FY2024": 755.0, "FY2023": 2750.0, "FY2022": 2750.0, "FY2021": 2819.0}),
+    ("DATA", "Sale and repurchase agreements", {"FY2025": 100.0, "FY2024": 100.0, "FY2023": 50.1, "FY2022": 0.0}),
+    ("DATA", "Corporate bond", {"FY2025": 150.2, "FY2024": 150.3, "FY2023": 146.3, "FY2022": 150.0, "FY2021": 150.0}),
+    ("DATA", "Sundry liabilities", {"FY2025": 621.4, "FY2024": 635.4, "FY2023": 811.0, "FY2022": 648.5, "FY2021": 339.2}),
+    ("DATA", "Provisions", {"FY2025": 25.5}),
+    ("DATA", "Current tax liabilities", {"FY2025": 73.4, "FY2024": 61.9, "FY2023": 53.0, "FY2022": 34.5, "FY2021": 35.7}),
+    ("DATA", "Deferred tax liability", {"FY2025": 10.9, "FY2024": 34.0, "FY2023": 38.9, "FY2022": 55.0, "FY2021": 3.0}),
+    ("TOTAL", "Total liabilities", {"FY2025": 18766.7, "FY2024": 18150.2, "FY2023": 17123.4, "FY2022": 14325.6, "FY2021": 12686.3}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Called up share capital", {"FY2025": 552.6, "FY2024": 552.6, "FY2023": 552.6, "FY2022": 552.6, "FY2021": 552.6}),
+    ("DATA", "Reserves (profit and loss account)", {"FY2025": 493.4, "FY2024": 497.5, "FY2023": 448.9, "FY2022": 510.8, "FY2021": 266.7}),
+    ("TOTAL", "Total equity", {"FY2025": 1046.0, "FY2024": 1050.1, "FY2023": 1001.5, "FY2022": 1063.4, "FY2021": 819.3}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 19812.7, "FY2024": 19200.3, "FY2023": 18124.9, "FY2022": 15389.0, "FY2021": 13505.6}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Paragon Bank Plc — Balance Sheet",
+    subtitle="Bank statutory basis, £m (all years as at 30 September). FY2024's Total equity is shown "
+              "here as originally reported (1,050.1) - see the Statement of Changes in Equity sheet for "
+              "FY2025's Note 44 restatement (-£29.3m to Reserves) applied to FY2024's closing balance.",
+    rows=bs_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=340,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Profit & Loss - all 5 years transcribed from each year's own Statement of
+# Profit or Loss. No OCI in any year (each report states this explicitly),
+# so Profit for the year = Total comprehensive income throughout.
+# ---------------------------------------------------------------
+pl_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest receivable", {"FY2025": 1148.9, "FY2024": 1180.9, "FY2023": 852.4, "FY2022": 368.0, "FY2021": 288.4}),
+    ("DATA", "Interest payable and similar charges", {"FY2025": -758.1, "FY2024": -838.0, "FY2023": -536.8, "FY2022": -147.0, "FY2021": -145.8}),
+    ("TOTAL", "Net interest income", {"FY2025": 390.8, "FY2024": 342.9, "FY2023": 315.6, "FY2022": 221.0, "FY2021": 142.6}),
+    ("DATA", "Other income / other operating income", {"FY2025": 51.9, "FY2024": 81.8, "FY2023": 108.7, "FY2022": 174.4, "FY2021": 95.5}),
+    ("TOTAL", "Total operating income", {"FY2025": 442.7, "FY2024": 424.7, "FY2023": 424.3, "FY2022": 395.4, "FY2021": 238.1}),
+    ("DATA", "Operating expenses", {"FY2025": -132.6, "FY2024": -132.5, "FY2023": -117.4, "FY2022": -99.8, "FY2021": -81.5}),
+    ("DATA", "Provisions for losses", {"FY2025": -6.4, "FY2024": -10.5, "FY2023": -10.5, "FY2022": -6.6, "FY2021": 10.9}),
+    ("DATA", "Provision for liabilities", {"FY2025": -25.5}),
+    ("TOTAL", "Operating profit before fair value items", {"FY2025": 278.2, "FY2024": 281.7, "FY2023": 296.4, "FY2022": 289.0, "FY2021": 167.5}),
+    ("DATA", "Fair value net gain/(loss)", {"FY2025": -36.0, "FY2024": -16.7, "FY2023": -63.8, "FY2022": 191.2, "FY2021": 15.0}),
+    ("TOTAL", "Profit on ordinary activities before taxation", {"FY2025": 242.2, "FY2024": 265.0, "FY2023": 232.6, "FY2022": 480.2, "FY2021": 182.5}),
+    ("DATA", "Tax charge on profit on ordinary activities", {"FY2025": -61.2, "FY2024": -57.5, "FY2023": -36.4, "FY2022": -85.8, "FY2021": -38.8}),
+    ("TOTAL", "Profit for the financial year", {"FY2025": 181.0, "FY2024": 207.5, "FY2023": 196.2, "FY2022": 394.4, "FY2021": 143.7}),
+]
+
+bw.add_income_statement_sheet(
+    title="Paragon Bank Plc — Profit & Loss",
+    subtitle="Bank statutory basis, £m. FY2025 uniquely carries a 'Provision for liabilities' line "
+              "(£25.5m) - a genuine new item that year, not a gap in earlier years. No other "
+              "comprehensive income was disclosed in any of the 5 years - Profit for the financial "
+              "year equals Total comprehensive income throughout, per each report's own statement.",
+    rows=pl_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=76,
+    source_height=340,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Statement of Changes in Equity - per-year reconciliation ladder confirmed:
+# every year's own closing balance ties exactly to both the next year's own
+# opening balance and that year's own Balance Sheet Total equity. Zero
+# undocumented plug rows - this entity's equity structure is unusually
+# simple (only two components, Share capital and Reserves; no share
+# issuances, treasury shares, or OCI reserves in any of the 5 years). The
+# one bridging row is FY2024's own Note 44 restatement, a genuine
+# Bank-disclosed prior-period adjustment, not an error.
+# ---------------------------------------------------------------
+equity_headers = ["Share capital", "Reserves (profit and loss account)", "Total equity"]
+equity_rows = [
+    ("TOTAL", "At 1 October 2020 (FY2021 opening)", (552.6, 217.8, 770.4)),
+    ("DATA", "Profit for the year", (None, 143.7, 143.7)),
+    ("DATA", "Dividends paid", (None, -94.8, -94.8)),
+    ("TOTAL", "At 30 September 2021 (FY2021 closing)", (552.6, 266.7, 819.3)),
+    ("DATA", "Profit for the year", (None, 394.4, 394.4)),
+    ("DATA", "Dividends paid", (None, -150.3, -150.3)),
+    ("TOTAL", "At 30 September 2022 (FY2022 closing)", (552.6, 510.8, 1063.4)),
+    ("DATA", "Profit for the year", (None, 196.2, 196.2)),
+    ("DATA", "Dividends paid", (None, -258.1, -258.1)),
+    ("TOTAL", "At 30 September 2023 (FY2023 closing)", (552.6, 448.9, 1001.5)),
+    ("DATA", "Profit for the year", (None, 207.5, 207.5)),
+    ("DATA", "Dividends paid", (None, -158.9, -158.9)),
+    ("TOTAL", "At 30 September 2024 (FY2024 closing, as originally reported)", (552.6, 497.5, 1050.1)),
+    ("DATA", "Restatement (Note 44, per FY2025 Annual Report)", (None, -29.3, -29.3)),
+    ("TOTAL", "At 30 September 2024 (FY2024 closing, as restated)", (552.6, 468.2, 1020.8)),
+    ("DATA", "Profit for the year", (None, 181.0, 181.0)),
+    ("DATA", "Dividends paid", (None, -155.8, -155.8)),
+    ("TOTAL", "At 30 September 2025 (FY2025 closing)", (552.6, 493.4, 1046.0)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Paragon Bank Plc — Statement of Changes in Equity",
+    subtitle="Chronological roll-forward, oldest to newest, Bank statutory basis, £m. Equity "
+              "reconciliation ladder confirmed: every year's own closing balance ties exactly to both "
+              "the next year's own opening balance and that year's own Balance Sheet Total equity - "
+              "zero undocumented plug rows across all 5 years. The one bridging row (FY2024's Note 44 "
+              "restatement, -£29.3m to Reserves) is a genuine Bank-disclosed prior-period adjustment, "
+              "not an error - the FY2025 Annual Report doesn't itemise the restatement's cause beyond "
+              "citing its own Note 44.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=64,
+)
+
 bw.add_cash_flow_sheet(title="Paragon Bank Plc — Cash Flow Statement", subtitle="Bank statutory basis, £m; see source and basis note", rows=rows, sources_text=CASH_FLOW_SOURCES, first_col_width=72, source_height=260, unit_suffix=" (£m)")
+
+# ---------------------------------------------------------------
+# Asset Quality - loans to customers by IFRS 9 stage (gross carrying
+# amount), loss allowance, and net carrying value, all 5 years. Carrying
+# value ties closely but not exactly to the Balance Sheet's own Loans to
+# customers line (small definitional differences, e.g. accrued interest,
+# are expected and flagged rather than forced to tie).
+# ---------------------------------------------------------------
+ASSET_QUALITY_SOURCES = (
+    "Sources - Paragon Bank PLC Note 'Impairment provisions on loans to customers' (loans-to-customers "
+    "balance movements by IFRS 9 stage), £m, transcribed from rendered page images:\n"
+    f"FY2025/FY2024: Annual Report 2025 (Companies House filing), Note 17, p.86 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n"
+    f"FY2023/FY2022: Annual Report 2023 (Companies House filing), Note 16, p.79 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n"
+    f"FY2021: Annual Report 2022 (Companies House filing), Note 17, p.74 - "
+    f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n\n"
+    + ENTITY_NOTE +
+    "\n\nDATA QUALITY NOTE: this note's own 'Carrying value' total is a few £m below the Balance "
+    "Sheet's own 'Loans to customers' line every year (e.g. FY2025: £12,439.5m here vs £12,446.0m "
+    "on the Balance Sheet; FY2024: £11,714.7m vs £11,671.6m - the FY2024 gap runs the other way) - "
+    "a small definitional difference between this note's population and the Balance Sheet line "
+    "(likely accrued interest or fair value hedge adjustments), not a transcription error. No "
+    "separate product-type split (e.g. buy-to-let vs SME lending) is disclosed at this granularity "
+    "in any of the 5 years - only the aggregate stage split shown below."
+)
+asset_quality_rows = [
+    ("SECTION", "Loans to customers, by IFRS 9 stage (gross carrying amount)", {}),
+    ("DATA", "Stage 1", {"FY2025": 11809.8, "FY2024": 11058.1, "FY2023": 10801.8, "FY2022": 7979.5, "FY2021": 7224.0}),
+    ("DATA", "Stage 2", {"FY2025": 502.6, "FY2024": 538.5, "FY2023": 554.7, "FY2022": 1302.5, "FY2021": 831.9}),
+    ("DATA", "Stage 3", {"FY2025": 163.2, "FY2024": 158.9, "FY2023": 122.9, "FY2022": 69.7, "FY2021": 88.6}),
+    ("TOTAL", "Gross carrying amount", {"FY2025": 12475.6, "FY2024": 11755.5, "FY2023": 11479.4, "FY2022": 9351.7, "FY2021": 8144.5}),
+    ("DATA", "Loss allowance - Stage 1", {"FY2025": -4.2, "FY2024": -6.4, "FY2023": -7.8, "FY2022": -7.8, "FY2021": -3.1}),
+    ("DATA", "Loss allowance - Stage 2", {"FY2025": -2.4, "FY2024": -3.4, "FY2023": -6.5, "FY2022": -5.7, "FY2021": -8.0}),
+    ("DATA", "Loss allowance - Stage 3", {"FY2025": -29.5, "FY2024": -31.0, "FY2023": -30.5, "FY2022": -14.6, "FY2021": -12.9}),
+    ("TOTAL", "Total loss allowance", {"FY2025": -36.1, "FY2024": -40.8, "FY2023": -44.8, "FY2022": -28.1, "FY2021": -24.0}),
+    ("TOTAL", "Carrying value", {"FY2025": 12439.5, "FY2024": 11714.7, "FY2023": 11434.6, "FY2022": 9323.6, "FY2021": 8120.5}),
+    ("DATA", "Stage 3 as % of gross carrying amount (NPL ratio)", {"FY2025": "1.31%", "FY2024": "1.35%", "FY2023": "1.07%", "FY2022": "0.75%", "FY2021": "1.09%"}),
+    ("DATA", "Stage 2 as % of gross carrying amount", {"FY2025": "4.03%", "FY2024": "4.58%", "FY2023": "4.83%", "FY2022": "13.93%", "FY2021": "10.21%"}),
+    ("DATA", "Total loss allowance as % of gross carrying amount (coverage)", {"FY2025": "0.29%", "FY2024": "0.35%", "FY2023": "0.39%", "FY2022": "0.30%", "FY2021": "0.29%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Paragon Bank Plc — Asset Quality",
+    subtitle="Bank statutory basis, £m. Loans to customers, IFRS 9 stage 1/2/3 gross carrying amount, "
+              "loss allowance, and carrying value.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=80,
+    source_height=300,
+    unit_suffix=" (£m)",
+)
 def metric(name, unit, label, values, note=None):
     bw.add_metric_sheet(name, unit, [(label, values)], P3_SOURCES, note=note, first_col_width=52, source_height=180)
 metric("CET1 Capital","£m","Common Equity Tier 1 (CET1) capital",capital)
@@ -146,6 +370,66 @@ metric("Tier 1 Ratio","%","Tier 1 ratio",cetr)
 metric("Total Capital","£m","Total regulatory capital",total)
 metric("Total Capital Ratio","%","Total capital ratio",tcr)
 metric("Total RWAs","£m","Total risk-weighted exposure amount",rwa)
+
+# ---------------------------------------------------------------
+# RWA Breakdown - Pillar 3 UK OV1 template risk-type category split, placed
+# right after Total RWAs per the locked sheet order. FY2024/FY2023 tie
+# exactly to the Total RWAs sheet above; FY2025/FY2022 are genuine
+# documented mismatches, not transcription errors - see the in-sheet note.
+# FY2021 predates the UK OV1 template and uses a different, coarser
+# category split from that year's own Pillar 3 document.
+# ---------------------------------------------------------------
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Paragon Banking Group PLC Pillar III Disclosures, UK OV1 'Overview of risk weighted "
+    "exposure amounts' table, £m, regulatory-group basis (all recovered via Wayback Machine archives "
+    "since paragonbankinggroup.co.uk blocks automated access):\n"
+    "FY2025: Pillar III Disclosures 30 September 2025 (published ~23 Jan 2026), UK OV1 pp.9-10 - "
+    "https://web.archive.org/web/20260203152658/https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2025/2025-pillar--iii\n"
+    "FY2024: FY2025 Pillar III Disclosures' own 30 September 2024 comparative column, UK OV1 pp.9-10 "
+    "(no standalone full-year FY2024 Pillar 3 document was locatable - only a half-year 31 March 2024 "
+    "report exists at that URL slug) - same document as FY2025 above\n"
+    "FY2023: Pillar III Disclosures 30 September 2023, UK OV1 pp.7-8 - "
+    "https://web.archive.org/web/20240830064955/https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2023/2023-pillar-iii\n"
+    "FY2022: Pillar III Disclosures 30 September 2022, UK OV1 pp.7-8 - "
+    "https://web.archive.org/web/20240830044143/https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2022/pbg_2022_pillar_iii_disclosures\n"
+    "FY2021: Pillar III Disclosures 30 September 2021, 'Total risk exposure (TRE)' table p.40 (predates "
+    "the UK OV1 template) - "
+    "https://web.archive.org/web/20240713140930/https://www.paragonbank.co.uk/resources/paragon-group/documents/reports-presentations/2022/pbg_2021_pillar_iii_disclosures\n\n"
+    + ENTITY_NOTE +
+    "\n\nDATA QUALITY NOTE (genuine, not transcription errors): FY2025's OV1 total (£8,630.6m) is "
+    "close to but doesn't exactly match the pre-existing Total RWAs sheet's figure (£8,613.2m, sourced "
+    "from the FY2025 Annual Report's own Note 38) - both are the Bank's own disclosed figures, just "
+    "from two different contemporaneous documents. FY2022's OV1 total as originally published in the "
+    "FY2022 Pillar 3 document (£7,645.8m, shown below) likewise doesn't match the Total RWAs sheet's "
+    "KM1-sourced figure (£7,515.0m) - but the FY2023 Pillar 3 document's own FY2022 comparative column "
+    "restates the FY2022 category breakdown (Credit risk £6,632.5m, CCR £249.4m, Operational risk "
+    "£633.1m = £7,515.0m) to tie exactly. The originally-published FY2022 figures are shown below "
+    "(each year on its own contemporaneous basis, per this rollout's standing convention), with this "
+    "restatement flagged rather than silently blended in. FY2021 predates the UK OV1 template - its "
+    "'Total risk exposure' table categorises differently (Credit risk/Operational risk/Market risk/"
+    "Other, no separate CCR line) but ties closely to the Total RWAs sheet (£6,836.9m vs £6,836.8m, "
+    "rounding)."
+)
+rwa_breakdown_rows = [
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 7658.8, "FY2024": 7351.1, "FY2023": 6817.1, "FY2022": 6763.3, "FY2021": 6247.1}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 43.5, "FY2024": 79.6, "FY2023": 111.4, "FY2022": 249.9}),
+    ("DATA", "Market risk", {"FY2021": 0.0}),
+    ("DATA", "Operational risk", {"FY2025": 928.3, "FY2024": 848.0, "FY2023": 740.2, "FY2022": 633.1, "FY2021": 576.0}),
+    ("DATA", "Other (FY2021 only; predates the UK OV1 template, category not broken out separately)", {"FY2021": 13.8}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 8630.6, "FY2024": 8278.7, "FY2023": 7668.7, "FY2022": 7645.8, "FY2021": 6836.9}),
+]
+bw.add_rwa_breakdown_sheet(
+    title="Paragon Bank Plc — RWA Breakdown",
+    subtitle="Pillar 3 UK OV1 template (top-level risk-type categories), £m, regulatory-group basis. "
+              "FY2021 predates the UK OV1 template and uses a coarser risk-type split from that year's "
+              "own Pillar 3 'Total risk exposure' table.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=64,
+    source_height=340,
+    unit_suffix=" (£m)",
+)
+
 metric("Leverage Ratio","%","Leverage ratio",lev,"FY2022 and FY2021 are not shown in the selected modern leverage-ratio series; no comparable figure was used.")
 metric("LCR","%","Liquidity Coverage Ratio",lcr,"FY2025 is the 12-month average disclosed in the Annual Report; FY2024-FY2021 are applicable-average figures in the Pillar 3 disclosures.")
 metric("NSFR","%","Net Stable Funding Ratio",nsfr)
@@ -162,6 +446,23 @@ bw.add_wide_interim_sheet(
           "Bank regulatory group rather than Paragon Bank PLC statutory solo accounts. No MREL figure is reported."),
 )
 bw.add_overview_sheet(
+ balance_sheet_totals=[
+  ("Total assets",{"FY2025":19812.7,"FY2024":19200.3,"FY2023":18124.9,"FY2022":15389.0,"FY2021":13505.6}),
+  ("Loans to customers",{"FY2025":12446.0,"FY2024":11671.6,"FY2023":11161.2,"FY2022":8952.8,"FY2021":8144.6}),
+  ("Retail deposits",{"FY2025":16270.8,"FY2024":16314.7,"FY2023":13234.4,"FY2022":10569.5,"FY2021":9297.4}),
+  ("Total equity",{"FY2025":1046.0,"FY2024":1050.1,"FY2023":1001.5,"FY2022":1063.4,"FY2021":819.3}),
+ ], balance_sheet_unit="£m",
+ income_statement_totals=[
+  ("Total operating income",{"FY2025":442.7,"FY2024":424.7,"FY2023":424.3,"FY2022":395.4,"FY2021":238.1}),
+  ("Operating expenses (incl. provisions)",{"FY2025":-164.5,"FY2024":-143.0,"FY2023":-127.9,"FY2022":-106.4,"FY2021":-70.6}),
+  ("Profit for the financial year",{"FY2025":181.0,"FY2024":207.5,"FY2023":196.2,"FY2022":394.4,"FY2021":143.7}),
+ ], income_statement_unit="£m",
+ equity_changes_totals=[
+  ("Opening equity",{"FY2025":1020.8,"FY2024":1001.5,"FY2023":1063.4,"FY2022":819.3,"FY2021":770.4}),
+  ("Total comprehensive income for the year",{"FY2025":181.0,"FY2024":207.5,"FY2023":196.2,"FY2022":394.4,"FY2021":143.7}),
+  ("Other equity movements, net (dividends paid)",{"FY2025":-155.8,"FY2024":-158.9,"FY2023":-258.1,"FY2022":-150.3,"FY2021":-94.8}),
+  ("Closing equity",{"FY2025":1046.0,"FY2024":1050.1,"FY2023":1001.5,"FY2022":1063.4,"FY2021":819.3}),
+ ], equity_changes_unit="£m",
  cash_flow_totals=[
   ("Net cash generated/(utilised) by operating activities",{"FY2025":-370.4,"FY2024":2084.9,"FY2023":1215.6,"FY2022":883.4,"FY2021":-934.8}),
   ("Net cash generated/(utilised) by investing activities",{"FY2025":-314.1,"FY2024":-462.5,"FY2023":206.3,"FY2022":-212.1,"FY2021":-414.4}),

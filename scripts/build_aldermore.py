@@ -57,6 +57,180 @@ def p3_sources(page_25="4", page_24="4", page_22="4"):
 bw = BankWorkbook(bank_name="Aldermore Bank PLC", years=YEARS, year_label=YEAR_LABEL, header_color="AD1457")
 
 # ---------------------------------------------------------------
+# Sheet: Balance Sheet (Statement of Financial Position)
+# ---------------------------------------------------------------
+BALANCE_SHEET_SOURCES = (
+    "Sources — Aldermore Bank PLC (company solo, not the Aldermore Group PLC holding company), Statement of "
+    "financial position from each year's full statutory accounts filed at Companies House (company no. 00947662), "
+    "£m:\n"
+    f"FY2025 & FY2024: Full accounts made up to 30 June 2025, filed 04 Nov 2025, p.54 — {CH_2025_URL}\n"
+    f"FY2023 & FY2022: Full accounts made up to 30 June 2023, filed 27 Oct 2023, p.52 — {CH_2023_URL}\n"
+    f"FY2021: Full accounts made up to 30 June 2021, filed 04 Nov 2021, p.58 — {CH_2021_URL}\n"
+    "Note: minor (£0.1m) rounding differences appear between the Total equity figure on the face of the "
+    "Statement of financial position and the Statement of Changes in Equity's closing balance in some years "
+    "(e.g. FY2021: £987.1m here vs £987.2m per the FY2021 accounts' own Statement of Changes in Equity) — "
+    "both are presented exactly as disclosed in their respective source tables, not reconciled."
+)
+
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 1182.3, "FY2024": 2172.2, "FY2023": 1923.4, "FY2022": 838.3, "FY2021": 688.5}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 183.6, "FY2024": 170.1, "FY2023": 206.5, "FY2022": 132.8, "FY2021": 106.4}),
+    ("DATA", "Amounts owed by / receivable from other Group undertakings", {"FY2025": 3779.6, "FY2024": 3720.5, "FY2023": 3525.1, "FY2022": 3072.5, "FY2021": 2303.8}),
+    ("DATA", "Debt securities", {"FY2025": 2704.2, "FY2024": 2436.5, "FY2023": 2048.9, "FY2022": 2339.2, "FY2021": 1999.5}),
+    ("DATA", "Derivatives held for risk management", {"FY2025": 170.1, "FY2024": 344.2, "FY2023": 666.3, "FY2022": 259.9, "FY2021": 18.9}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 12523.4, "FY2024": 11416.3, "FY2023": 10998.9, "FY2022": 10777.3, "FY2021": 10393.6}),
+    ("DATA", "Fair value adjustment for portfolio hedged risk", {"FY2025": 18.8, "FY2024": -129.0, "FY2023": -400.1, "FY2022": -180.2, "FY2021": 15.2}),
+    ("DATA", "Non-current assets held for sale", {"FY2023": 32.8}),
+    ("DATA", "Other assets", {"FY2025": 2.8, "FY2024": 9.2, "FY2023": 6.0, "FY2022": 1.6, "FY2021": 2.0}),
+    ("DATA", "Prepayments and accrued income", {"FY2025": 23.6, "FY2024": 22.8, "FY2023": 17.8, "FY2022": 14.5, "FY2021": 13.3}),
+    ("DATA", "Taxation asset", {"FY2025": 2.9, "FY2024": 2.2, "FY2023": 0, "FY2022": 7.0, "FY2021": 0.7}),
+    ("DATA", "Deferred taxation", {"FY2025": 6.3, "FY2024": 5.7, "FY2023": 6.1, "FY2022": 2.6, "FY2021": 5.7}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 16.3, "FY2024": 20.5, "FY2023": 15.7, "FY2022": 20.8, "FY2021": 25.8}),
+    ("DATA", "Intangible assets", {"FY2025": 4.3, "FY2024": 4.3, "FY2023": 4.3, "FY2022": 4.5, "FY2021": 9.6}),
+    ("TOTAL", "Total assets", {"FY2025": 20618.2, "FY2024": 20195.5, "FY2023": 19051.7, "FY2022": 17290.8, "FY2021": 15583.0}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Amounts due to banks", {"FY2025": 795.8, "FY2024": 1365.3, "FY2023": 1681.9, "FY2022": 1341.8, "FY2021": 1326.6}),
+    ("DATA", "Customers' accounts", {"FY2025": 17047.6, "FY2024": 16306.7, "FY2023": 15033.3, "FY2022": 14105.4, "FY2021": 12427.3}),
+    ("DATA", "Derivatives held for risk management", {"FY2025": 94.1, "FY2024": 37.8, "FY2023": 62.5, "FY2022": 24.5, "FY2021": 40.0}),
+    ("DATA", "Fair value adjustment for portfolio hedged risk", {"FY2025": 16.4, "FY2024": 6.5, "FY2023": -21.0, "FY2022": -12.7, "FY2021": 0}),
+    ("DATA", "Amounts owed / payable to other Group undertakings", {"FY2025": 952.5, "FY2024": 909.2, "FY2023": 862.0, "FY2022": 531.5, "FY2021": 537.2}),
+    ("DATA", "Other liabilities, accruals and deferred income", {"FY2025": 93.3, "FY2024": 96.7, "FY2023": 105.2, "FY2022": 97.9, "FY2021": 92.4}),
+    ("DATA", "Taxation liability", {"FY2023": 6.0}),
+    ("DATA", "Provisions", {"FY2025": 3.0, "FY2024": 0.6, "FY2023": 2.5, "FY2022": 3.8, "FY2021": 2.7}),
+    ("DATA", "Debt securities in issue", {"FY2023": -0.2, "FY2022": -0.5}),
+    ("DATA", "Subordinated notes", {"FY2025": 100.9, "FY2024": 100.9, "FY2023": 100.5, "FY2022": 100.5, "FY2021": 161.4}),
+    ("TOTAL", "Total liabilities", {"FY2025": 17050.8, "FY2024": 18823.7, "FY2023": 17832.7, "FY2022": 16192.2, "FY2021": 14595.9}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2025": 3.3, "FY2024": 3.3, "FY2023": 3.3, "FY2022": 3.3, "FY2021": 3.3}),
+    ("DATA", "Share premium account", {"FY2025": 307.5, "FY2024": 307.5, "FY2023": 307.5, "FY2022": 307.5, "FY2021": 307.5}),
+    ("DATA", "Additional Tier 1 capital", {"FY2025": 50.0, "FY2024": 61.0, "FY2023": 61.0, "FY2022": 61.0, "FY2021": 61.0}),
+    ("DATA", "FVOCI / fair value through other comprehensive income reserve", {"FY2025": -5.0, "FY2024": -0.7, "FY2023": 3.3, "FY2022": 6.9, "FY2021": 8.3}),
+    ("DATA", "Retained earnings", {"FY2025": 1158.8, "FY2024": 1000.7, "FY2023": 843.9, "FY2022": 719.9, "FY2021": 607.0}),
+    ("TOTAL", "Total equity", {"FY2025": 1514.6, "FY2024": 1371.8, "FY2023": 1219.0, "FY2022": 1098.6, "FY2021": 987.1}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 20618.2, "FY2024": 20195.5, "FY2023": 19051.7, "FY2022": 17290.8, "FY2021": 15583.0}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Aldermore Bank PLC — Statement of Financial Position",
+    subtitle="Company (Bank solo) basis, £m, as at 30 June",
+    rows=balance_sheet_rows,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=72,
+    source_height=150,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss (Income Statement + Statement of Comprehensive Income)
+# ---------------------------------------------------------------
+INCOME_STATEMENT_SOURCES = (
+    "Sources — Aldermore Bank PLC (company solo, not the Aldermore Group PLC holding company), Income "
+    "statement and Statement of comprehensive income from each year's full statutory accounts filed at "
+    "Companies House (company no. 00947662), £m:\n"
+    f"FY2025 & FY2024: Full accounts made up to 30 June 2025, filed 04 Nov 2025, p.53 — {CH_2025_URL}\n"
+    f"FY2023 & FY2022: Full accounts made up to 30 June 2023, filed 27 Oct 2023, p.50-51 — {CH_2023_URL}\n"
+    f"FY2021: Full accounts made up to 30 June 2021, filed 04 Nov 2021, p.56-57 — {CH_2021_URL}\n"
+    "Note: FY2021's admin expenses line ('Other administrative expenses') is presented separately from "
+    "'Depreciation and amortisation' and 'Provisions' that year; from FY2022 onward the Bank presents a "
+    "single combined 'Administrative expenses' line plus separate 'Provisions' and folds depreciation into "
+    "impairment/operating profit — both are transcribed as disclosed, not restated onto a common basis."
+)
+
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2025": 1240.5, "FY2024": 1234.8, "FY2023": 878.7, "FY2022": 533.4, "FY2021": 473.6}),
+    ("DATA", "Interest expense", {"FY2025": -828.0, "FY2024": -808.1, "FY2023": -433.6, "FY2022": -152.5, "FY2021": -157.3}),
+    ("TOTAL", "Net interest income", {"FY2025": 412.5, "FY2024": 426.7, "FY2023": 445.1, "FY2022": 380.9, "FY2021": 316.3}),
+    ("DATA", "Fee and commission income / fee and other income", {"FY2025": 7.5, "FY2024": 7.1, "FY2023": 11.7, "FY2022": 6.0, "FY2021": 6.5}),
+    ("DATA", "Fee and commission expense", {"FY2025": -9.5, "FY2024": -8.2, "FY2023": -5.4, "FY2022": -5.6, "FY2021": -5.4}),
+    ("DATA", "Net gains/(losses) from derivatives and other financial instruments at fair value through profit or loss", {"FY2025": 12.6, "FY2024": -3.0, "FY2023": 12.6, "FY2022": -5.3, "FY2021": -3.1}),
+    ("DATA", "Net gains on disposal of financial assets at fair value through other comprehensive income", {"FY2025": 1.1, "FY2024": 2.0, "FY2023": 2.1, "FY2022": 0.2, "FY2021": 0.7}),
+    ("DATA", "Net gains on financial assets at amortised cost", {"FY2024": 0.2}),
+    ("DATA", "Other operating income", {"FY2025": 49.2, "FY2024": 38.1, "FY2023": 10.1, "FY2022": 13.6, "FY2021": 8.4}),
+    ("TOTAL", "Total operating income", {"FY2025": 473.4, "FY2024": 462.9, "FY2023": 476.2, "FY2022": 389.8, "FY2021": 323.4}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Provisions", {"FY2025": -3.0, "FY2024": 1.2, "FY2023": -2.0, "FY2022": -2.1, "FY2021": -1.7}),
+    ("DATA", "Other expenses and staff costs / other administrative expenses", {"FY2025": -263.8, "FY2024": -265.0, "FY2023": -251.5, "FY2022": -221.9, "FY2021": -172.0}),
+    ("DATA", "Depreciation and amortisation", {"FY2021": -7.3}),
+    ("TOTAL", "Administrative expenses", {"FY2025": -266.8, "FY2024": -263.8, "FY2023": -253.5, "FY2022": -224.0, "FY2021": -173.7}),
+    ("TOTAL", "Operating profit before impairment losses", {"FY2025": 206.6, "FY2024": 199.1, "FY2023": 222.6, "FY2022": 165.8, "FY2021": 142.4}),
+    ("DATA", "Impairment releases/(losses) on loans and advances to customers", {"FY2025": 14.1, "FY2024": 19.1, "FY2023": -51.4, "FY2022": -5.1, "FY2021": -26.7}),
+    ("DATA", "Impairment losses on lease modifications", {"FY2021": 0}),
+    ("TOTAL", "Profit before taxation", {"FY2025": 220.7, "FY2024": 218.2, "FY2023": 171.2, "FY2022": 160.7, "FY2021": 115.7}),
+    ("DATA", "Taxation", {"FY2025": -57.5, "FY2024": -56.1, "FY2023": -42.0, "FY2022": -42.7, "FY2021": -26.4}),
+    ("TOTAL", "Profit after taxation — attributable to equity holders of the Company/Bank", {"FY2025": 163.2, "FY2024": 162.1, "FY2023": 129.2, "FY2022": 118.0, "FY2021": 89.3}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "FVOCI debt securities: Fair value movements", {"FY2025": -4.6, "FY2024": -3.3, "FY2023": -2.7, "FY2022": -2.2, "FY2021": 10.3}),
+    ("DATA", "FVOCI debt securities: Amounts transferred to the income statement", {"FY2025": -1.1, "FY2024": -2.0, "FY2023": -2.1, "FY2022": -0.2, "FY2021": -0.7}),
+    ("DATA", "Taxation on other comprehensive income", {"FY2025": 1.4, "FY2024": 1.3, "FY2023": 1.3, "FY2022": 1.0, "FY2021": -2.8}),
+    ("TOTAL", "Total other comprehensive (expense)/income", {"FY2025": -4.3, "FY2024": -4.0, "FY2023": -3.6, "FY2022": -1.4, "FY2021": 6.8}),
+    ("TOTAL", "Total comprehensive income attributable to equity holders of the Bank", {"FY2025": 158.9, "FY2024": 158.1, "FY2023": 125.7, "FY2022": 116.6, "FY2021": 96.1}),
+]
+
+bw.add_income_statement_sheet(
+    title="Aldermore Bank PLC — Income Statement and Statement of Comprehensive Income",
+    subtitle="Company (Bank solo) basis, £m, year ended 30 June",
+    rows=income_statement_rows,
+    sources_text=INCOME_STATEMENT_SOURCES,
+    first_col_width=78,
+    source_height=150,
+    unit_suffix=" (£m)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_CHANGES_SOURCES = (
+    "Sources — Aldermore Bank PLC (company solo) Statement of changes in equity from each year's full "
+    "statutory accounts filed at Companies House (company no. 00947662), £m:\n"
+    f"FY2025 & FY2024: Full accounts made up to 30 June 2025, filed 04 Nov 2025, p.56 — {CH_2025_URL}\n"
+    f"FY2023 & FY2022: Full accounts made up to 30 June 2023, filed 27 Oct 2023, p.54 — {CH_2023_URL}\n"
+    f"FY2021: Full accounts made up to 30 June 2021, filed 04 Nov 2021, p.60 — {CH_2021_URL}\n"
+    "Chronological roll-forward, oldest to newest. 'As at 30 June 2021' shows £987.2m in the FY2021 accounts' "
+    "own Statement of Changes in Equity vs £987.1m on the face of the FY2021 Statement of Financial Position "
+    "— a £0.1m rounding difference in the Bank's own disclosures, both transcribed as reported."
+)
+
+EQUITY_HEADERS = ["Share capital", "Share premium account", "Additional Tier 1 capital", "FVOCI reserve", "Retained earnings", "Total"]
+
+equity_changes_rows = [
+    ("TOTAL", "As at 1 July 2020", (3.3, 307.6, 61.0, 1.5, 522.9, 896.2)),
+    ("DATA", "Profit after taxation (FY2021)", (None, None, None, None, 89.3, 89.3)),
+    ("DATA", "Other comprehensive income (FY2021)", (None, None, None, 6.8, None, 6.9)),
+    ("DATA", "Coupon paid on Additional Tier 1 capital securities (FY2021)", (None, None, None, None, -5.2, -5.2)),
+    ("TOTAL", "As at 30 June 2021", (3.3, 307.6, 61.0, 8.3, 607.0, 987.2)),
+    ("DATA", "Profit after taxation (FY2022)", (None, None, None, None, 118.0, 118.0)),
+    ("DATA", "Other comprehensive loss (FY2022)", (None, None, None, -1.4, None, -1.4)),
+    ("DATA", "Coupon paid on Additional Tier 1 capital securities (FY2022)", (None, None, None, None, -5.2, -5.2)),
+    ("TOTAL", "As at 30 June 2022", (3.3, 307.5, 61.0, 6.9, 719.8, 1098.5)),
+    ("DATA", "Profit after taxation (FY2023)", (None, None, None, None, 129.2, 129.2)),
+    ("DATA", "Other comprehensive loss (FY2023)", (None, None, None, -3.6, None, -3.6)),
+    ("DATA", "Coupon paid on Additional Tier 1 capital securities (FY2023)", (None, None, None, None, -5.2, -5.2)),
+    ("TOTAL", "As at 30 June 2023", (3.3, 307.5, 61.0, 3.3, 843.9, 1219.0)),
+    ("DATA", "Profit after taxation (FY2024)", (None, None, None, None, 162.1, 162.1)),
+    ("DATA", "Other comprehensive loss (FY2024)", (None, None, None, -4.0, None, -4.0)),
+    ("DATA", "Coupon paid on Additional Tier 1 capital securities (FY2024)", (None, None, None, None, -5.3, -5.3)),
+    ("TOTAL", "As at 30 June 2024", (3.3, 307.5, 61.0, -0.7, 1000.7, 1371.8)),
+    ("DATA", "Profit after taxation (FY2025)", (None, None, None, None, 163.2, 163.2)),
+    ("DATA", "Other comprehensive loss (FY2025)", (None, None, None, -4.3, None, -4.3)),
+    ("DATA", "Redemption of Additional Tier 1 capital", (None, None, -61.0, None, None, -61.0)),
+    ("DATA", "Issuance of Additional Tier 1 capital", (None, None, 50.0, None, None, 50.0)),
+    ("DATA", "Coupon paid on Additional Tier 1 capital securities (FY2025)", (None, None, None, None, -5.1, -5.1)),
+    ("TOTAL", "As at 30 June 2025", (3.3, 307.5, 50.0, -5.0, 1158.8, 1514.6)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Aldermore Bank PLC — Statement of Changes in Equity",
+    subtitle="Company (Bank solo) basis, £m, chronological FY2021-FY2025",
+    headers=EQUITY_HEADERS,
+    rows=equity_changes_rows,
+    sources_text=EQUITY_CHANGES_SOURCES,
+    first_col_width=54,
+    source_height=150,
+)
+
+# ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
@@ -109,6 +283,66 @@ bw.add_cash_flow_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: Asset Quality / Credit Risk Disclosures
+# ---------------------------------------------------------------
+ASSET_QUALITY_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: figures are from each year's own full statutory accounts' 'Analysis of gross loans "
+    "and advances' and 'Analysis of loss allowances' notes (IFRS 9 stage roll-forward tables), Bank solo "
+    "basis. 'By product' figures (Business Finance / Property Finance) use the Bank's internal risk-category "
+    "disclosure (excludes Property Development, which is separately disclosed only for irrevocable "
+    "commitments, not drawn balances) and are only available at this granularity for FY2025/FY2024 in the "
+    "documents reviewed; FY2023/FY2022/FY2021 are left blank for the by-product split rather than estimated. "
+    "Stage totals (gross and ECL allowance) are available and tie out for all 5 years. FY2024's stage-total "
+    "gross loans (11,549.3) differs by £0.1m from the FY2024 Balance Sheet's own 'Loans and advances to "
+    "customers' figure (11,416.3 net + 133.0 allowance = 11,549.3) — consistent; both are transcribed as "
+    "disclosed."
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources — Aldermore Bank PLC (company solo) 'Analysis of gross loans and advances' and 'Analysis of "
+    "loss allowances' notes, £m:\n"
+    f"FY2025 & FY2024 (by product, Business/Property Finance split): Full accounts made up to 30 June 2025, "
+    f"filed 04 Nov 2025, p.24-26 (Credit quality and performance of loans) — {CH_2025_URL}\n"
+    f"FY2025 & FY2024 (by IFRS 9 stage, gross and allowance): Full accounts made up to 30 June 2025, filed "
+    f"04 Nov 2025, p.84-86 (Note 14, Analysis of gross loans and advances / Analysis of loss allowances) — {CH_2025_URL}\n"
+    f"FY2023 & FY2022 (by IFRS 9 stage, gross and allowance): Full accounts made up to 30 June 2023, filed "
+    f"27 Oct 2023, p.84 (Note 13, Analysis of gross loans and advances / Analysis of loss allowances) — {CH_2023_URL}\n"
+    f"FY2021 (by IFRS 9 stage, gross and allowance): Full accounts made up to 30 June 2021, filed 04 Nov "
+    f"2021, p.90-91 (Note 18, Analysis of gross loans and advances / Analysis of loss allowances) — {CH_2021_URL}\n\n"
+    + ASSET_QUALITY_PRESENTATION_NOTE
+)
+
+asset_quality_rows = [
+    ("SECTION", "Gross loans and advances to customers, by product (excl. Property Development commitments)", {}),
+    ("DATA", "Business Finance", {"FY2025": 3903.8, "FY2024": 3716.7}),
+    ("DATA", "Property Finance", {"FY2025": 8728.4, "FY2024": 7832.5}),
+    ("TOTAL", "Total gross loans and advances (by product)", {"FY2025": 12632.2, "FY2024": 11549.2}),
+    ("SECTION", "Gross loans and advances to customers, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": 11395.2, "FY2024": 10466.4, "FY2023": 10211.2, "FY2022": 9591.1, "FY2021": 9209.1}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2025": 814.8, "FY2024": 716.4, "FY2023": 664.9, "FY2022": 1026.0, "FY2021": 956.6}),
+    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": 422.2, "FY2024": 366.4, "FY2023": 287.3, "FY2022": 277.1, "FY2021": 343.9}),
+    ("TOTAL", "Total gross loans and advances (by stage)", {"FY2025": 12632.2, "FY2024": 11549.3, "FY2023": 11163.4, "FY2022": 10894.2, "FY2021": 10509.6}),
+    ("SECTION", "Allowance for impairment losses, by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": -34.2, "FY2024": -50.2, "FY2023": -91.4, "FY2022": -48.3, "FY2021": -32.8}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2025": -22.6, "FY2024": -25.6, "FY2023": -25.2, "FY2022": -19.8, "FY2021": -24.1}),
+    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": -52.0, "FY2024": -57.2, "FY2023": -48.0, "FY2022": -48.7, "FY2021": -59.1}),
+    ("TOTAL", "Total allowance for impairment losses", {"FY2025": -108.8, "FY2024": -133.0, "FY2023": -164.6, "FY2022": -116.8, "FY2021": -116.0}),
+    ("SECTION", "Asset quality ratios", {}),
+    ("DATA", "ECL coverage ratio (Total allowance / Total gross loans)", {"FY2025": "0.86%", "FY2024": "1.15%", "FY2023": "1.47%", "FY2022": "1.07%", "FY2021": "1.10%"}),
+    ("DATA", "Stage 3 (NPL) ratio (Stage 3 gross loans / Total gross loans)", {"FY2025": "3.34%", "FY2024": "3.17%", "FY2023": "2.57%", "FY2022": "2.54%", "FY2021": "3.27%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross loans)", {"FY2025": "12.32%", "FY2024": "15.61%", "FY2023": "16.71%", "FY2022": "17.58%", "FY2021": "17.18%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Aldermore Bank PLC — Asset Quality / Credit Risk Disclosures",
+    subtitle="Company (Bank solo) basis, £m",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=68,
+    source_height=170,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -155,6 +389,44 @@ metric(
     "Total RWAs", "£m",
     [("Total risk-weighted assets (RWA)", {"FY2025": 7271.6, "FY2024": 6875.6, "FY2023": 6504.9, "FY2022": 6260.1, "FY2021": 5964.1})],
     p3_sources(),
+)
+
+# ---------------------------------------------------------------
+# Sheet: RWA Breakdown (Pillar 3's UK OV1 template - placed next to
+# Total RWAs, since it's itself a Pillar 3 disclosure)
+# ---------------------------------------------------------------
+RWA_BREAKDOWN_PRESENTATION_NOTE = (
+    "PRESENTATION NOTE: transcribed from each year's own Pillar 3 disclosures' 'Overview of RWA' table, Bank "
+    "solo (not Group) column. This sheet's Total row ties out exactly to the Total RWAs sheet for all 5 years."
+)
+
+RWA_BREAKDOWN_SOURCES = (
+    "Sources — Aldermore Bank PLC solo figures from the 'Overview of RWA' table, Aldermore Group PLC Pillar 3 "
+    "Disclosures:\n"
+    f"FY2025 & FY2024: Pillar 3 Disclosures for the year ended 30 June 2025, p.9 (Overview Of RWA, Bank "
+    f"column) — {P3_2025_URL}\n"
+    f"FY2023: Pillar 3 Disclosures for the year ended 30 June 2024, p.8 (Overview Of RWA, Bank column, "
+    f"FY2023 comparative) — {P3_2024_URL}\n"
+    f"FY2022 & FY2021: Pillar 3 Disclosures for the year ended 30 June 2022, p.7 (Overview of RWA, Bank "
+    f"column) — {P3_2022_URL}\n\n" + RWA_BREAKDOWN_PRESENTATION_NOTE
+)
+
+rwa_breakdown_rows = [
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 6410.7, "FY2024": 6071.2, "FY2023": 5802.1, "FY2022": 5624.9, "FY2021": 5338.2}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 4.8, "FY2024": 20.9, "FY2023": 37.1, "FY2022": 0.9, "FY2021": 0.9}),
+    ("DATA", "Securitisation exposures in the non-trading book", {"FY2025": 25.5, "FY2024": 40.0, "FY2023": 22.5, "FY2022": 29.2, "FY2021": 23.1}),
+    ("DATA", "Position, foreign exchange and commodities risks", {"FY2025": 0, "FY2024": 0.1, "FY2023": 1.8, "FY2022": 0.4, "FY2021": 0.1}),
+    ("DATA", "Operational risk", {"FY2025": 830.6, "FY2024": 743.4, "FY2023": 641.4, "FY2022": 604.7, "FY2021": 601.8}),
+    ("TOTAL", "Total risk-weighted assets (RWA)", {"FY2025": 7271.6, "FY2024": 6875.6, "FY2023": 6504.9, "FY2022": 6260.1, "FY2021": 5964.1}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Aldermore Bank PLC — RWA Breakdown (Overview of Risk Weighted Assets)",
+    subtitle="Bank solo basis, £m",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=58,
+    source_height=140,
 )
 
 metric(
@@ -295,6 +567,26 @@ for row_number in range(source_register_row + 2, interim_ws.max_row + 1):
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 20618.2, "FY2024": 20195.5, "FY2023": 19051.7, "FY2022": 17290.8, "FY2021": 15583.0}),
+        ("Loans and advances to customers", {"FY2025": 12523.4, "FY2024": 11416.3, "FY2023": 10998.9, "FY2022": 10777.3, "FY2021": 10393.6}),
+        ("Customers' accounts", {"FY2025": 17047.6, "FY2024": 16306.7, "FY2023": 15033.3, "FY2022": 14105.4, "FY2021": 12427.3}),
+        ("Total equity", {"FY2025": 1514.6, "FY2024": 1371.8, "FY2023": 1219.0, "FY2022": 1098.6, "FY2021": 987.1}),
+    ],
+    balance_sheet_unit="£m",
+    income_statement_totals=[
+        ("Total operating income", {"FY2025": 473.4, "FY2024": 462.9, "FY2023": 476.2, "FY2022": 389.8, "FY2021": 323.4}),
+        ("Administrative expenses", {"FY2025": -266.8, "FY2024": -263.8, "FY2023": -253.5, "FY2022": -224.0, "FY2021": -173.7}),
+        ("Profit after taxation", {"FY2025": 163.2, "FY2024": 162.1, "FY2023": 129.2, "FY2022": 118.0, "FY2021": 89.3}),
+    ],
+    income_statement_unit="£m",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 1371.8, "FY2024": 1219.0, "FY2023": 1098.5, "FY2022": 987.1, "FY2021": 896.2}),
+        ("Total comprehensive income", {"FY2025": 158.9, "FY2024": 158.1, "FY2023": 125.7, "FY2022": 116.6, "FY2021": 96.1}),
+        ("Other equity movements, net", {"FY2025": -16.1, "FY2024": -5.3, "FY2023": -5.2, "FY2022": -5.2, "FY2021": -5.2}),
+        ("Closing equity", {"FY2025": 1514.6, "FY2024": 1371.8, "FY2023": 1219.0, "FY2022": 1098.6, "FY2021": 987.1}),
+    ],
+    equity_changes_unit="£m",
     cash_flow_totals=[
         ("Net cash from operating activities", {"FY2025": -725.0, "FY2024": 730.1, "FY2023": 1108.5, "FY2022": 1215.7, "FY2021": 884.1}),
         ("Net cash from investing activities", {"FY2025": -259.5, "FY2024": -401.6, "FY2023": 306.5, "FY2022": -334.8, "FY2021": -55.0}),
@@ -311,10 +603,12 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2025": "131.3%", "FY2024": "137.0%", "FY2023": "127.4%", "FY2022": "128.7%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page. Fiscal year ends 30 June. Cash flow statement uses Bank-solo "
-         "figures; Pillar 3 ratios use the Bank-solo columns of Aldermore Group PLC's Pillar 3 disclosures (the only "
-         "level at which Pillar 3 is published). Leverage/LCR/NSFR have no FY2021 figure — see the Leverage Ratio/LCR/"
-         "NSFR sheets for the disclosure-template basis note.",
+         "citation for the underlying document/page. Fiscal year ends 30 June. Balance Sheet, Profit & Loss, "
+         "Statement of Changes in Equity and Cash Flow figures are all Bank-solo; Pillar 3 ratios use the Bank-solo "
+         "columns of Aldermore Group PLC's Pillar 3 disclosures (the only level at which Pillar 3 is published). "
+         "'Other equity movements, net' combines Additional Tier 1 capital issuance/redemption and AT1 coupon "
+         "payments. Leverage/LCR/NSFR have no FY2021 figure — see the Leverage Ratio/LCR/NSFR sheets for the "
+         "disclosure-template basis note.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ALDERMORE FINANCIALS.xlsx")

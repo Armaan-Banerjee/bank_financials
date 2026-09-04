@@ -81,6 +81,156 @@ P3_SOURCES = (
 
 bw = BankWorkbook(bank_name="Zempler Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="8A5A00")
 
+STATEMENTS_SOURCES = (
+    "Sources - Zempler Bank Limited's own (Company-only) statements, £'000:\n"
+    f"FY2026: Zempler Bank Annual Report 2026, p.60-63 (Statement of Comprehensive Income / Statement of Financial "
+    f"Position) - {AR2026_URL}\n"
+    f"FY2025: Zempler Bank Annual Report 2026, p.60-63 (FY2025 comparative column) - {AR2026_URL} (matches AR2025's "
+    f"own FY2025 column exactly)\n"
+    f"FY2024 (restated): Zempler Bank Annual Report 2025, p.59-62 (restated comparative column) - {AR2025_URL} - "
+    "the FY2025 report's own Note 38 (prior year restatement) reclassified some Balance Sheet line items (moving "
+    "£1,841k from Other assets to a reduction in Customer deposits, and splitting Prepayments/Accrued income and "
+    "Deferred income out of Other assets/Other liabilities) and some P&L line items (moving £2,520k/£113k between "
+    "Fee income, Other income and Administrative expenses) - Profit for the year, Total comprehensive income, and "
+    "Net assets/Total equity are IDENTICAL under both the originally-reported and restated FY2024 figures, so this "
+    "restatement does not affect either bottom line. FY2024's own originally-published Annual Report (published "
+    "before the July 2024 rename) was not separately located this session - the restated comparative is used "
+    "throughout for consistency with the pre-existing Cash Flow Statement sheet, which already uses this same "
+    "convention for FY2024 (see that sheet's own source note). Note: the restated Balance Sheet's own 'Other "
+    "liabilities'/'Accruals and deferred income' split as printed in the primary statement (£37,321k/£5,796k) does "
+    "not exactly match the figures implied by Note 38's own reconciliation table (£36,701k/£5,796k) - a small "
+    "(~£620k) internal inconsistency in the source document itself; the primary statement's own printed figures "
+    "are used here, not the reconciliation note's.\n"
+    f"FY2023: Annual Report and Financial Statements (Cashplus Bank / Advanced Payment Solutions Limited) for the "
+    f"year ended 31 March 2023, p.53-56 (Statement of Comprehensive Income / Statement of Financial Position / "
+    f"Statement of Changes in Equity) - {AR2023_URL}\n"
+    f"FY2022 (restated to Company-only basis): same document, p.53-56 (comparative column) - {AR2023_URL}\n"
+    "Presentation note: FY2024-FY2026 use a 'Total operating income / Net operating income' P&L structure "
+    "(splitting Interest and Fee income/expense into separate net subtotals); FY2022-FY2023 use the same structure "
+    "but without a 'Loss on derivatives' line (introduced FY2024). The Balance Sheet's asset-side structure also "
+    "changed: FY2022-FY2023 combine several lines into 'Other assets' and 'Property, plant and equipment' that are "
+    "shown separately (Deferred tax, Prepayments and accrued income, Tangible fixed assets, Derivative financial "
+    "assets) from FY2024 onward - blank cells reflect lines not separately disclosed that year, not zero balances. "
+    "All TOTAL rows (Total assets/liabilities/equity, Profit before/after taxation, Total comprehensive income) tie "
+    "exactly across Balance Sheet <-> Equity Statement <-> P&L for every year, including a zero-plug-row equity "
+    "roll-forward chaining from the 31 March 2021 opening balance through to 31 March 2026.\n\n"
+    + ENTITY_NOTE
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+bs_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at banks", {"FY2026": 396832, "FY2025": 369088, "FY2024": 386025, "FY2023": 380533, "FY2022": 325327}),
+    ("DATA", "Investment securities", {"FY2026": 332687, "FY2025": 266859, "FY2024": 167073, "FY2023": 129949, "FY2022": 125196}),
+    ("DATA", "Derivative financial assets", {"FY2025": 0, "FY2024": 137}),
+    ("DATA", "Loans and advances to customers", {"FY2026": 35122, "FY2025": 25452, "FY2024": 28225, "FY2023": 22593, "FY2022": 21779}),
+    ("DATA", "Deferred tax", {"FY2026": 1781, "FY2025": 3051, "FY2024": 4730}),
+    ("DATA", "Intangible assets", {"FY2026": 4420, "FY2025": 5827, "FY2024": 5986, "FY2023": 4520, "FY2022": 2591}),
+    ("DATA", "Tangible fixed assets / Property, plant and equipment", {"FY2026": 1247, "FY2025": 2177, "FY2024": 3112}),
+    ("DATA", "Other assets", {"FY2026": 6199, "FY2025": 7480, "FY2024": 19172, "FY2023": 16932, "FY2022": 14891}),
+    ("DATA", "Prepayments and accrued income", {"FY2026": 1870, "FY2025": 1989, "FY2024": 2292}),
+    ("TOTAL", "Total assets", {"FY2026": 780158, "FY2025": 681923, "FY2024": 616752, "FY2023": 558055, "FY2022": 493925}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer deposits", {"FY2026": 713291, "FY2025": 624600, "FY2024": 542169, "FY2023": 511463, "FY2022": 452500}),
+    ("DATA", "Debt securities and borrowing", {"FY2026": 3000, "FY2025": 3000, "FY2024": 3000, "FY2023": 3000, "FY2022": 3000}),
+    ("DATA", "Other liabilities", {"FY2026": 21719, "FY2025": 16520, "FY2024": 37321}),
+    ("DATA", "Other liabilities and accruals (combined, as reported)", {"FY2023": 18386, "FY2022": 16364}),
+    ("DATA", "Accruals and deferred income", {"FY2026": 5357, "FY2025": 5024, "FY2024": 5796}),
+    ("DATA", "Deferred income", {"FY2023": 2238, "FY2022": 5443}),
+    ("TOTAL", "Total liabilities", {"FY2026": 743367, "FY2025": 649144, "FY2024": 588286, "FY2023": 535087, "FY2022": 477307}),
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital", {"FY2026": 11, "FY2025": 9, "FY2024": 9, "FY2023": 9, "FY2022": 9}),
+    ("DATA", "Share premium account", {"FY2026": 44565, "FY2025": 43335, "FY2024": 43335, "FY2023": 43321, "FY2022": 43321}),
+    ("DATA", "Other reserves", {"FY2026": 0, "FY2025": 4880, "FY2024": 3993, "FY2023": 3247, "FY2022": 2349}),
+    ("DATA", "Accumulated losses", {"FY2026": -7785, "FY2025": -15445, "FY2024": -18871, "FY2023": -23609, "FY2022": -29061}),
+    ("TOTAL", "Total equity", {"FY2026": 36791, "FY2025": 32779, "FY2024": 28466, "FY2023": 22968, "FY2022": 16618}),
+    ("TOTAL", "Total liabilities and equity", {"FY2026": 780158, "FY2025": 681923, "FY2024": 616752, "FY2023": 558055, "FY2022": 493925}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Zempler Bank Limited — Statement of Financial Position",
+    subtitle="Company (non-consolidated) basis, £'000.",
+    rows=bs_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=64,
+    source_height=380,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+pl_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income", {"FY2026": 36810, "FY2025": 36899, "FY2024": 33911, "FY2023": 16925, "FY2022": 7358}),
+    ("DATA", "Interest expense", {"FY2026": -2131, "FY2025": -2178, "FY2024": -2020, "FY2023": -1845, "FY2022": -1987}),
+    ("TOTAL", "Net interest income", {"FY2026": 34679, "FY2025": 34721, "FY2024": 31891, "FY2023": 15080, "FY2022": 5371}),
+    ("DATA", "Fee and commission income", {"FY2026": 31161, "FY2025": 31282, "FY2024": 33776, "FY2023": 34990, "FY2022": 33756}),
+    ("DATA", "Fee and commission expense", {"FY2026": -8165, "FY2025": -7993, "FY2024": -8627, "FY2023": -7652, "FY2022": -6654}),
+    ("TOTAL", "Net fee and commission income", {"FY2026": 22996, "FY2025": 23289, "FY2024": 25149, "FY2023": 27338, "FY2022": 27102}),
+    ("TOTAL", "Total operating income", {"FY2026": 57675, "FY2025": 58010, "FY2024": 57040, "FY2023": 42418, "FY2022": 32473}),
+    ("DATA", "Other income", {"FY2026": 1184, "FY2025": 2118, "FY2024": 2809, "FY2023": 3047, "FY2022": 1203}),
+    ("DATA", "Loss on derivatives", {"FY2026": 0, "FY2025": -121, "FY2024": -278}),
+    ("DATA", "Impairment charges and charge-offs", {"FY2026": -6527, "FY2025": -3771, "FY2024": -6559, "FY2023": -4426, "FY2022": -3147}),
+    ("TOTAL", "Net operating income", {"FY2026": 52332, "FY2025": 56236, "FY2024": 53012, "FY2023": 41039, "FY2022": 30529}),
+    ("DATA", "Administrative expenses", {"FY2026": -48107, "FY2025": -51019, "FY2024": -49721, "FY2023": -37796, "FY2022": -32632}),
+    ("TOTAL", "Profit/(loss) before taxation", {"FY2026": 4225, "FY2025": 5217, "FY2024": 3291, "FY2023": 3243, "FY2022": -2103}),
+    ("DATA", "Taxation charge/(credit)", {"FY2026": -1445, "FY2025": -1791, "FY2024": 1447, "FY2023": 2209, "FY2022": 0}),
+    ("TOTAL", "Profit/(loss) after taxation", {"FY2026": 2780, "FY2025": 3426, "FY2024": 4738, "FY2023": 5452, "FY2022": -2103}),
+    ("TOTAL", "Total comprehensive income/(loss)", {"FY2026": 2780, "FY2025": 3426, "FY2024": 4738, "FY2023": 5452, "FY2022": -2103}),
+]
+
+bw.add_income_statement_sheet(
+    title="Zempler Bank Limited — Statement of Comprehensive Income",
+    subtitle="Company (non-consolidated) basis, £'000. No other comprehensive income in any year shown.",
+    rows=pl_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=64,
+    source_height=380,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+equity_headers = ["Share capital", "Share premium account", "Other reserves", "Retained earnings", "Total"]
+equity_rows = [
+    ("TOTAL", "Balance at 31 March 2021", (9, 41060, 1673, -26958, 15784)),
+    ("DATA", "Issue of shares", (0, 2261, 0, 0, 2261)),
+    ("DATA", "Loss for the period", (0, 0, 0, -2103, -2103)),
+    ("DATA", "Fair value of shares allocated to employees", (0, 0, 676, 0, 676)),
+    ("TOTAL", "Balance at 31 March 2022", (9, 43321, 2349, -29061, 16618)),
+    ("DATA", "Issue of shares", (0, 0, 0, 0, 0)),
+    ("DATA", "Profit for the period", (0, 0, 0, 5452, 5452)),
+    ("DATA", "Fair value of shares allocated to employees", (0, 0, 898, 0, 898)),
+    ("TOTAL", "Balance at 31 March 2023", (9, 43321, 3247, -23609, 22968)),
+    ("DATA", "Issue of shares", (0, 14, 0, 0, 14)),
+    ("DATA", "Total comprehensive profit for the period", (0, 0, 0, 4738, 4738)),
+    ("DATA", "Employee share based payments", (0, 0, 746, 0, 746)),
+    ("TOTAL", "Balance at 31 March 2024", (9, 43335, 3993, -18871, 28466)),
+    ("DATA", "Issue of shares", (0, 0, 0, 0, 0)),
+    ("DATA", "Total comprehensive profit for the period", (0, 0, 0, 3426, 3426)),
+    ("DATA", "Employee share-based payments", (0, 0, 887, 0, 887)),
+    ("TOTAL", "Balance at 31 March 2025", (9, 43335, 4880, -15445, 32779)),
+    ("DATA", "Settlement of employee share scheme", (2, 1230, 0, 0, 1232)),
+    ("DATA", "Total comprehensive profit for the period", (0, 0, 0, 2780, 2780)),
+    ("DATA", "Transfer on exercise of share option", (0, 0, -4880, 4880, 0)),
+    ("TOTAL", "Balance at 31 March 2026", (11, 44565, 0, -7785, 36791)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Zempler Bank Limited — Statement of Changes in Equity",
+    subtitle="Company (non-consolidated) basis, £'000. Chronological, oldest to newest. Zero undocumented plug "
+              "rows - ties exactly to the Balance Sheet's own Total equity every year.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=56,
+    source_height=380,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -129,6 +279,58 @@ bw.add_cash_flow_sheet(
     unit_suffix=" (£'000)",
 )
 
+ASSET_QUALITY_SOURCES = (
+    "Sources - Zempler Bank Limited's own Note 27 'Credit Risk Management' (Credit quality by IFRS 9 stage), "
+    "£'000:\n"
+    f"FY2026: Zempler Bank Annual Report 2026, p.117-118 (Credit quality as at 31 March 2026) - {AR2026_URL}\n"
+    f"FY2025: Zempler Bank Annual Report 2026, p.118 (FY2025 comparative column) - {AR2026_URL} (matches AR2025's "
+    f"own FY2025 table exactly)\n"
+    f"FY2024: Zempler Bank Annual Report 2025, p.118 (Credit quality as at 31 March 2024) - {AR2025_URL}\n"
+    f"FY2023: Annual Report and Financial Statements (Cashplus Bank) for the year ended 31 March 2023, p.92 "
+    f"(Credit quality as at 31 March 2023) - {AR2023_URL}\n"
+    f"FY2022 (restated - the effective interest rate adjustment was added as a restatement per that report's own "
+    f"Note 34): same document, p.92 (Credit quality as at 31 March 2022) - {AR2023_URL}\n"
+    "Figures shown are 'provisions on loans and advances to customer' only (excluding undrawn-commitment "
+    "provisions, which are disclosed separately in the source and are not part of the Balance Sheet's loans "
+    "line). Note: FY2023/FY2022's Net loans and advances to customers per this note (£22,573k/£21,759k) is ~£20k "
+    "below the Balance Sheet's own loans and advances line (£22,593k/£21,779k) in both years - a small, "
+    "consistent gap in the source's own tables, not a transcription error; FY2024-FY2026 tie exactly."
+)
+
+def _npl(gross_s3, gross_total):
+    return f"{gross_s3 / gross_total * 100:.2f}%"
+
+aq_rows = [
+    ("SECTION", "Gross loans and advances to customers by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 (performing)", {"FY2026": 30138, "FY2025": 20693, "FY2024": 23438, "FY2023": 17540, "FY2022": 16493}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2026": 4356, "FY2025": 3136, "FY2024": 3898, "FY2023": 3529, "FY2022": 3275}),
+    ("DATA", "Stage 3 (non-performing)", {"FY2026": 7154, "FY2025": 6325, "FY2024": 6896, "FY2023": 5933, "FY2022": 7143}),
+    ("TOTAL", "Total gross loans and advances to customers", {"FY2026": 41648, "FY2025": 30154, "FY2024": 34232, "FY2023": 27002, "FY2022": 26911}),
+    ("DATA", "Effective interest rate adjustment", {"FY2026": 542, "FY2025": 74, "FY2024": 418, "FY2023": 371, "FY2022": 285}),
+    ("SECTION", "Impairment provision (ECL) by IFRS 9 stage", {}),
+    ("DATA", "Stage 1 provision", {"FY2026": 1808, "FY2025": 984, "FY2024": 1314, "FY2023": 1144, "FY2022": 712}),
+    ("DATA", "Stage 2 provision", {"FY2026": 1601, "FY2025": 858, "FY2024": 1086, "FY2023": 918, "FY2022": 972}),
+    ("DATA", "Stage 3 provision", {"FY2026": 3659, "FY2025": 2934, "FY2024": 4025, "FY2023": 2738, "FY2022": 3753}),
+    ("TOTAL", "Total impairment provision", {"FY2026": 7068, "FY2025": 4776, "FY2024": 6425, "FY2023": 4800, "FY2022": 5437}),
+    ("TOTAL", "Net loans and advances to customers", {"FY2026": 35122, "FY2025": 25452, "FY2024": 28225, "FY2023": 22573, "FY2022": 21759}),
+    ("SECTION", "Derived / disclosed ratios", {}),
+    ("DATA", "NPL ratio (Stage 3 gross / Total gross)", {"FY2026": _npl(7154, 41648), "FY2025": _npl(6325, 30154), "FY2024": _npl(6896, 34232), "FY2023": _npl(5933, 27002), "FY2022": _npl(7143, 26911)}),
+    ("DATA", "Coverage ratio - Stage 1", {"FY2026": "6.00%", "FY2025": "4.76%", "FY2024": "5.61%", "FY2023": "6.52%", "FY2022": "4.32%"}),
+    ("DATA", "Coverage ratio - Stage 2", {"FY2026": "36.75%", "FY2025": "27.36%", "FY2024": "27.86%", "FY2023": "26.01%", "FY2022": "29.68%"}),
+    ("DATA", "Coverage ratio - Stage 3", {"FY2026": "51.15%", "FY2025": "46.39%", "FY2024": "58.37%", "FY2023": "46.15%", "FY2022": "52.54%"}),
+    ("DATA", "Coverage ratio - Total", {"FY2026": "16.97%", "FY2025": "15.84%", "FY2024": "18.77%", "FY2023": "17.78%", "FY2022": "20.20%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Zempler Bank Limited — Asset Quality",
+    subtitle="Company (non-consolidated) basis, £'000.",
+    rows=aq_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=64,
+    source_height=240,
+    unit_suffix=" (£'000)",
+)
+
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
@@ -173,6 +375,35 @@ metric(
     [("Total risk-weighted assets", {"FY2026": 141317, "FY2025": 127987, "FY2024": 127670, "FY2023": 97282, "FY2022": 108982})],
 )
 
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - Zempler Bank Limited's own Table 1: Overview of Risk Weighted Exposure Amounts (OV1), £'000:\n"
+    f"FY2026/FY2025: Zempler Bank Pillar 3 Disclosures for the year ended 31 March 2026, p.28 - {P3_2026_URL}\n"
+    f"FY2024/FY2023: Zempler Bank Pillar 3 Disclosures for the year ended 31 March 2024, p.26 - {P3_2024_URL}\n"
+    f"FY2022: Pillar 3 Disclosures for the year ended 31 March 2023 (Cashplus Bank, FY2022 comparative column), "
+    f"p.20 - {P3_2023_URL} - this year's own OV1 table has no Counterparty Credit Risk (CCR) line (pre-dates its "
+    "introduction), so that row is blank rather than zero for FY2022.\n"
+    "All 5 years' category rows sum exactly to that year's own Total RWAs figure on the Total RWAs sheet."
+)
+
+bw.add_rwa_breakdown_sheet(
+    title="Zempler Bank Limited — RWA Breakdown",
+    subtitle="Company (non-consolidated) basis, £'000.",
+    rows=[
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "Credit Risk", {"FY2026": 33364, "FY2025": 29569, "FY2024": 42858, "FY2023": 34818, "FY2022": 36075}),
+        ("DATA", "Counterparty Credit Risk (CCR)", {"FY2026": 0, "FY2025": 0, "FY2024": 780, "FY2023": 0}),
+        ("DATA", "of which: Credit valuation adjustment (CVA)", {"FY2024": 299, "FY2023": 0}),
+        ("DATA", "of which: other CCR", {"FY2024": 481, "FY2023": 0}),
+        ("DATA", "Market Risk", {"FY2026": 0, "FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 353}),
+        ("DATA", "Operational Risk", {"FY2026": 107953, "FY2025": 98418, "FY2024": 84032, "FY2023": 62464, "FY2022": 72554}),
+        ("TOTAL", "Total Risk-weighted Assets", {"FY2026": 141317, "FY2025": 127987, "FY2024": 127670, "FY2023": 97282, "FY2022": 108982}),
+    ],
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=54,
+    source_height=180,
+    unit_suffix=" (£'000)",
+)
+
 metric(
     "Leverage Ratio", "£'000 / %",
     [
@@ -215,6 +446,26 @@ metric(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2026": 780158, "FY2025": 681923, "FY2024": 616752, "FY2023": 558055, "FY2022": 493925}),
+        ("Loans and advances to customers", {"FY2026": 35122, "FY2025": 25452, "FY2024": 28225, "FY2023": 22593, "FY2022": 21779}),
+        ("Customer deposits", {"FY2026": 713291, "FY2025": 624600, "FY2024": 542169, "FY2023": 511463, "FY2022": 452500}),
+        ("Total equity", {"FY2026": 36791, "FY2025": 32779, "FY2024": 28466, "FY2023": 22968, "FY2022": 16618}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total operating income", {"FY2026": 57675, "FY2025": 58010, "FY2024": 57040, "FY2023": 42418, "FY2022": 32473}),
+        ("Administrative expenses", {"FY2026": -48107, "FY2025": -51019, "FY2024": -49721, "FY2023": -37796, "FY2022": -32632}),
+        ("Profit/(loss) after taxation", {"FY2026": 2780, "FY2025": 3426, "FY2024": 4738, "FY2023": 5452, "FY2022": -2103}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2026": 32779, "FY2025": 28466, "FY2024": 22968, "FY2023": 16618, "FY2022": 15784}),
+        ("Total comprehensive income/(loss) for the year", {"FY2026": 2780, "FY2025": 3426, "FY2024": 4738, "FY2023": 5452, "FY2022": -2103}),
+        ("Other equity movements, net", {"FY2026": 1232, "FY2025": 887, "FY2024": 760, "FY2023": 898, "FY2022": 2937}),
+        ("Closing equity", {"FY2026": 36791, "FY2025": 32779, "FY2024": 28466, "FY2023": 22968, "FY2022": 16618}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash from/(used in) operating activities", {"FY2026": 80642, "FY2025": 75570, "FY2024": 38209, "FY2023": 60637, "FY2022": -5715}),
         ("Net cash from/(used in) investing activities", {"FY2026": -53638, "FY2025": -92016, "FY2024": -32238, "FY2023": -4967, "FY2022": 299456}),

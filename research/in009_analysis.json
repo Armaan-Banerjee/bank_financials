@@ -4,10 +4,10 @@
       "broad": {
         "banks": 128,
         "exclusions": {
-          "missing": 56,
-          "non_numeric_disclosure": 84
+          "missing": 54,
+          "non_numeric_disclosure": 82
         },
-        "observations": 564,
+        "observations": 569,
         "years": [
           2020,
           2021,
@@ -19,14 +19,14 @@
         ]
       },
       "strict": {
-        "banks": 57,
+        "banks": 58,
         "exclusions": {
           "basis_mismatch": 142,
-          "missing": 56,
-          "non_numeric_disclosure": 84,
-          "unknown_basis": 173
+          "missing": 54,
+          "non_numeric_disclosure": 82,
+          "unknown_basis": 172
         },
-        "observations": 249,
+        "observations": 255,
         "years": [
           2020,
           2021,
@@ -40,12 +40,12 @@
     },
     "Leverage Ratio": {
       "broad": {
-        "banks": 116,
+        "banks": 118,
         "exclusions": {
-          "missing": 224,
-          "non_numeric_disclosure": 138
+          "missing": 225,
+          "non_numeric_disclosure": 128
         },
-        "observations": 789,
+        "observations": 804,
         "years": [
           2020,
           2021,
@@ -57,14 +57,14 @@
         ]
       },
       "strict": {
-        "banks": 56,
+        "banks": 58,
         "exclusions": {
           "basis_mismatch": 225,
-          "missing": 224,
-          "non_numeric_disclosure": 138,
+          "missing": 225,
+          "non_numeric_disclosure": 128,
           "unknown_basis": 222
         },
-        "observations": 342,
+        "observations": 357,
         "years": [
           2020,
           2021,
@@ -78,12 +78,12 @@
     },
     "Tier 1 Ratio": {
       "broad": {
-        "banks": 117,
+        "banks": 118,
         "exclusions": {
           "missing": 57,
-          "non_numeric_disclosure": 126
+          "non_numeric_disclosure": 119
         },
-        "observations": 521,
+        "observations": 529,
         "years": [
           2020,
           2021,
@@ -95,14 +95,14 @@
         ]
       },
       "strict": {
-        "banks": 54,
+        "banks": 56,
         "exclusions": {
           "basis_mismatch": 141,
           "missing": 57,
-          "non_numeric_disclosure": 126,
-          "unknown_basis": 155
+          "non_numeric_disclosure": 119,
+          "unknown_basis": 154
         },
-        "observations": 225,
+        "observations": 234,
         "years": [
           2020,
           2021,
@@ -116,12 +116,12 @@
     },
     "Total Capital Ratio": {
       "broad": {
-        "banks": 126,
+        "banks": 127,
         "exclusions": {
-          "missing": 58,
-          "non_numeric_disclosure": 87
+          "missing": 54,
+          "non_numeric_disclosure": 85
         },
-        "observations": 559,
+        "observations": 566,
         "years": [
           2020,
           2021,
@@ -133,14 +133,14 @@
         ]
       },
       "strict": {
-        "banks": 57,
+        "banks": 59,
         "exclusions": {
           "basis_mismatch": 141,
-          "missing": 58,
-          "non_numeric_disclosure": 87,
-          "unknown_basis": 178
+          "missing": 54,
+          "non_numeric_disclosure": 85,
+          "unknown_basis": 177
         },
-        "observations": 240,
+        "observations": 248,
         "years": [
           2020,
           2021,
@@ -274,19 +274,6 @@
         "value": 12.2
       },
       {
-        "bank": "EFG PRIVATE BANK",
-        "comparability_status": "broad-only",
-        "fiscal_year": 2022,
-        "frn": "144036",
-        "metric": "CET1 Ratio",
-        "reasons": [
-          "level below 5th percentile"
-        ],
-        "reporting_basis": null,
-        "source_note": "Sources - EFG Private Bank Limited's own accounts, Note 34 (Capital management), unless noted otherwise:\nFY2024: Annual Report and Financial Statements 2024, p.83 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzQ2ODA5NDQ2MGFkaXF6a2N4/document?format=pdf&download=0\nFY2023: Annual Report and Financial Statements 2023, p.80 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzQyMTAwMDI4OGFkaXF6a2N4/document?format=pdf&download=0\nFY2022: Annual Report and Financial Statements 2022, p.60-61 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzM4ODQ3NjMwOWFkaXF6a2N4/document?format=pdf&download=0\nFY2021: as stated in the FY2022 Annual Report's own FY2021 comparative column, p.60-61 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzM4ODQ3NjMwOWFkaXF6a2N4/document?format=pdf&download=0\nNo standalone Pillar 3 document was locatable for this entity (efginternational.com blocks automated fetches; no UK-specific regulatory disclosures page found) - all figures sourced from the statutory accounts' own Capital management note.\nIMPORTANT DISCLOSURE-FORMAT NOTE: FY2021 and FY2022's own Annual Reports disclose a full capital table (CET1 Capital, Total Capital, Total RWAs, CET1 Ratio, Total Capital Ratio). FY2023 and FY2024's own Annual Reports disclose ONLY Common equity tier 1 capital (\u00a3m) - no ratio, no RWA, no Total Capital figure at all, confirmed by reading the full Capital management note in both reports. This is a genuine reduction in disclosure depth between report vintages, not a gap in this research. Liquidity risk (Note 29) is purely qualitative/contractual-maturity-table based in every year reviewed - no LCR/NSFR percentage is stated anywhere. No Leverage Ratio or MREL figure was found in any year.",
-        "value": 10.9
-      },
-      {
         "bank": "CREDIT SUISSE INTERNATIONAL",
         "comparability_status": "broad-only",
         "fiscal_year": 2025,
@@ -411,7 +398,7 @@
       {
         "bank": "MELLI BANK",
         "comparability_status": "broad-comparable",
-        "fiscal_year": 2024,
+        "fiscal_year": 2025,
         "frn": "207380",
         "metric": "CET1 Ratio",
         "reasons": [
@@ -419,7 +406,7 @@
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Melli Bank plc entity-level regulatory KPI and capital disclosures:\nFY2024/FY2023: Annual Report and Accounts 2024, KPI p.9 and capital management p.49 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzQ3MDI0ODU4NWFkaXF6a2N4/document?download=0&format=pdf\nFY2023/FY2022/FY2021: Annual Report and Accounts 2023, KPI p.9 and capital management p.49 - https://vpr.hkma.gov.hk/statics/assets/doc/100273/ar_23/ar_23_eng.pdf\nFY2021 comparative context: Annual Report 2021, KPI p.8 and capital management p.46 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzM0MzE1NzIzOWFkaXF6a2N4/document?download=0&format=pdf\nFY2025: the Companies House filing is listed, but the PDF was not retrievable in this run - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzUyNjMyOTE4OGFkaXF6a2N4/document?download=0&format=pdf\nThe 2022-2024 reports state that Pillar 3 disclosure is available on request; no public current Pillar 3/KM1 document or defensible entity-level interim series was located.",
-        "value": 55.0
+        "value": 56.0
       },
       {
         "bank": "BANK SEPAH INTERNATIONAL",
@@ -431,7 +418,7 @@
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
-        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No Pillar 3/KM1-format document, no leverage ratio, LCR, NSFR or MREL figure found anywhere in the Annual Report - the Bank states its (unaudited) Pillar 3 disclosures are published separately at www.banksepah.co.uk, but that site's TLS certificate has expired and could not be fetched.\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
+        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No leverage ratio, LCR, NSFR or MREL figure appears in the Annual Report itself - those are disclosed instead in the Bank's own Pillar 3 Disclosures documents, published separately at www.banksepah.co.uk/information. That site's TLS certificate has expired (browsers refuse the connection outright); the documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - see the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. No MREL figure was found in either source (see that sheet's own note).\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
         "value": 102.7
       },
       {
@@ -459,6 +446,19 @@
         "reporting_basis": null,
         "source_note": "Sources - Bank of the Philippine Islands (Europe) PLC, Strategic Report \"Capital Resources\"/\"Liquidity Resources\" narrative and the Notes' \"Capital Adequacy\" components table, from each year's own Annual Report filed at Companies House (all 5 filings fully scanned/image-only, OCR'd):\nFY2025 & FY2024: Annual Report FY2025, Strategic Report p.7, Note 21 components table p.9-10 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzUyMDczNTAwM2FkaXF6a2N4/document?format=pdf&download=0\nFY2023 & FY2022 (restated): Annual Report FY2023, Strategic Report p.7-8, components table p.9-10 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzQyNjQ2OTQ5OGFkaXF6a2N4/document?format=pdf&download=0\nFY2022 (as originally reported, \u00a3) & FY2021: Annual Report FY2022, Strategic Report p.5-6, components table p.7 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzM3NzAxNzg2OGFkaXF6a2N4/document?format=pdf&download=0\nFY2021 (as originally reported, \u00a3) & FY2020: Annual Report FY2021, Strategic Report p.5-6, components table p.7 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzMzNzI1NDc5M2FkaXF6a2N4/document?format=pdf&download=0\nCURRENCY: the Bank changed its functional/presentation currency from GBP to USD during FY2023 (confirmed in the FY2023 Annual Report's Strategic Report and its capital table's \"Restated\" FY2022 comparative). FY2021 and FY2022 monetary figures below are the Bank's own originally-published \u00a3 figures (Companies House filings for those years, in GBP) - not converted. FY2023-FY2025 are originally reported in USD and are converted to \u00a3 at the Bank of England GBP/USD spot rate as at each fiscal year-end (29 Dec 2023 1.2732 - 31st was a Sunday; 31 Dec 2024 1.2515; 31 Dec 2025 1.3448). % ratios are shown exactly as reported in either currency, never converted (dimensionless).",
         "value": 56.29
+      },
+      {
+        "bank": "METRO BANK",
+        "comparability_status": "broad-comparable",
+        "fiscal_year": 2025,
+        "frn": "488982",
+        "metric": "CET1 Ratio",
+        "reasons": [
+          "level below 5th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - Metro Bank regulatory key metrics:\nFY2025: Metro Bank Holdings PLC Pillar 3 Disclosure 2025, p.10 - https://www.metrobankonline.co.uk/globalassets/documents/investor_documents/pillar-3---2025-final.pdf\nFY2024: Metro Bank Holdings PLC Pillar 3 Disclosure 2024, p.12 - https://www.metrobankonline.co.uk/globalassets/pillar-3-2024.pdf\nFY2023: Metro Bank Holdings PLC Pillar 3 Disclosure 2023, p.12 - https://www.metrobankonline.co.uk/globalassets/pillar-3-disclosure-2023.pdf\nFY2022: Metro Bank PLC Pillar 3 Disclosure 2022, p.10 - https://www.metrobankonline.co.uk/globalassets/documents/customer_documents/business-and-commercial/pillar-3-disclosure-2022.pdf\nFY2021: Metro Bank PLC Pillar 3 Disclosure 2021, p.4 - https://www.metrobankonline.co.uk/globalassets/documents/customer_documents/intermediaries/metro-bank-pillar-3-disclosure-2021.pdf\n\nENTITY/BASIS NOTE: Metro Bank PLC (Companies House 06419578; FRN 488982; LEI 213800X5WU57YL9GPK89) is the matched legal entity in Banks List 2608.xlsx. FY2021-FY2023 cash flows are the Company/standalone figures from Metro Bank PLC accounts. Metro Bank PLC used an individual consolidation method for prudential reporting in 2021-2022. On 19 May 2023 Metro Bank Holdings PLC became the ultimate holding company; FY2023-FY2025 Pillar 3 disclosures are subsequently for Holdings and its subsidiaries, not standalone Metro Bank PLC. FY2024-FY2025 standalone Metro Bank PLC accounts/cash flows were not located in the reviewed official archive and are left blank rather than substituted with Holdings figures.",
+        "value": 12.5
       },
       {
         "bank": "PARAGON",
@@ -581,6 +581,19 @@
         "value": 418.5
       },
       {
+        "bank": "NATIONAL WESTMINSTER BANK PLC",
+        "comparability_status": "broad-comparable",
+        "fiscal_year": 2025,
+        "frn": "121878",
+        "metric": "Tier 1 Ratio",
+        "reasons": [
+          "level below 5th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - NWB Plc UK KM1 key metrics, PRA transitional basis:\nFY2025: NWB Plc Pillar 3 Report 2025, p.7 - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/nwb-pillar-3-report.pdf\nFY2024: NWB Plc Pillar 3 Report 2024, p.7 - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/nwb-pillar-3-report.pdf\nFY2023: NWB Plc Pillar 3 Report 2023, p.7 - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/16022024/nwb-plc-pillar-3-report.pdf\nFY2022 and FY2021: NWB Plc Pillar 3 Report 2022, p.7 (FY2021 comparative column) - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/17022023/nwb-plc-pillar-3-report.pdf\n\nENTITY NOTE: This workbook covers National Westminster Bank Public Limited Company (NWB Plc), company number 00929027, FRN 121878 and LEI 213800IBT39XQ9C4CP71. It is the PRA-authorised legal entity named in the project bank list, not NatWest Group plc, NatWest Holdings Limited, RBS plc or NatWest Markets Plc. NWB Plc is a member of the UK Domestic Liquidity Sub-Group (UK DoLSub) with RBS plc and Coutts & Company; LCR and NSFR are therefore shown on the UK DoLSub basis where the entity reports that basis, rather than as NWB Plc solo figures. Companies House confirms company 00929027 and the filed 2021 accounts used below.",
+        "value": 13.4
+      },
+      {
         "bank": "CREDIT SUISSE UK",
         "comparability_status": "broad-comparable",
         "fiscal_year": 2025,
@@ -635,19 +648,6 @@
         "reporting_basis": "consolidated_group",
         "source_note": "Sources - Arbuthnot Banking Group PLC Pillar 3 disclosures (UK KM1 Key Metrics template; FY2021 uses the pre-KM1 'Key Regulatory Metrics' template), \u00a3'000 unless stated:\nFY2024 & FY2023 comparative: Pillar 3 disclosures for the year ended 31 December 2024, p.6 (Template UK KM1) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/abg-pillar-3-disclosures-december-24.pdf\nFY2023 (own year) & FY2022 comparative: Pillar 3 disclosures for the year ended 31 December 2023, p.6 (Template UK KM1) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2023_Final.pdf\nFY2022 (own year) & FY2021 comparative: Pillar 3 disclosures for the year ended 31 December 2022, p.6 (Template UK KM1) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2022_Final.pdf\nFY2021 (own year): Pillar 3 disclosures for the year ended 31 December 2021, p.31 (Key Regulatory Metrics) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2021_Annual.pdf\nFY2025 Pillar 3 disclosures have not been published yet (checked against the site's naming pattern from prior years; none found) - FY2025 is left blank on every Pillar 3 sheet rather than guessed.\nEntity note: Arbuthnot Latham & Co., Limited (company 00819519, FRN 143336) is the PRA-authorised Bank itself, not the wider LSE-listed ultimate holding company Arbuthnot Banking Group PLC. The Bank files its own 'Group of companies' accounts' at Companies House (Arbuthnot Latham & Co., Limited and its own subsidiaries - Wealth Management, Asset Finance, Asset Based Lending and Commercial Vehicle Finance), which is the basis used for the cash flow statement here. The Bank's Annual Report also states its own 'Group Key Metrics' (e.g. FY2024 Tier 1 capital ratio 13.3%, Total capital ratio 15.4%, LCR 179%), which differ slightly from the formal Pillar 3 disclosures published under the Arbuthnot Banking Group PLC name (FY2024 CET1/Tier 1 ratio 13.15%, Total capital ratio 15.28%, LCR 175%) - the Pillar 3 sheets in this workbook use the formal ABG PLC Pillar 3 (Article 447 CRR) disclosures, since that is the entity's actual published Pillar 3 document; the small basis difference vs. the Bank's own Annual Report figures is not explained in either source and is flagged here rather than silently blended.",
         "value": 13.15
-      },
-      {
-        "bank": "EFG PRIVATE BANK",
-        "comparability_status": "broad-only",
-        "fiscal_year": 2022,
-        "frn": "144036",
-        "metric": "Tier 1 Ratio",
-        "reasons": [
-          "level below 5th percentile"
-        ],
-        "reporting_basis": null,
-        "source_note": "Sources - EFG Private Bank Limited's own accounts, Note 34 (Capital management), unless noted otherwise:\nFY2024: Annual Report and Financial Statements 2024, p.83 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzQ2ODA5NDQ2MGFkaXF6a2N4/document?format=pdf&download=0\nFY2023: Annual Report and Financial Statements 2023, p.80 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzQyMTAwMDI4OGFkaXF6a2N4/document?format=pdf&download=0\nFY2022: Annual Report and Financial Statements 2022, p.60-61 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzM4ODQ3NjMwOWFkaXF6a2N4/document?format=pdf&download=0\nFY2021: as stated in the FY2022 Annual Report's own FY2021 comparative column, p.60-61 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzM4ODQ3NjMwOWFkaXF6a2N4/document?format=pdf&download=0\nNo standalone Pillar 3 document was locatable for this entity (efginternational.com blocks automated fetches; no UK-specific regulatory disclosures page found) - all figures sourced from the statutory accounts' own Capital management note.\nIMPORTANT DISCLOSURE-FORMAT NOTE: FY2021 and FY2022's own Annual Reports disclose a full capital table (CET1 Capital, Total Capital, Total RWAs, CET1 Ratio, Total Capital Ratio). FY2023 and FY2024's own Annual Reports disclose ONLY Common equity tier 1 capital (\u00a3m) - no ratio, no RWA, no Total Capital figure at all, confirmed by reading the full Capital management note in both reports. This is a genuine reduction in disclosure depth between report vintages, not a gap in this research. Liquidity risk (Note 29) is purely qualitative/contractual-maturity-table based in every year reviewed - no LCR/NSFR percentage is stated anywhere. No Leverage Ratio or MREL figure was found in any year.",
-        "value": 10.9
       },
       {
         "bank": "CREDIT SUISSE INTERNATIONAL",
@@ -786,7 +786,7 @@
       {
         "bank": "MELLI BANK",
         "comparability_status": "broad-comparable",
-        "fiscal_year": 2024,
+        "fiscal_year": 2025,
         "frn": "207380",
         "metric": "Tier 1 Ratio",
         "reasons": [
@@ -794,7 +794,7 @@
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Melli Bank plc entity-level regulatory KPI and capital disclosures:\nFY2024/FY2023: Annual Report and Accounts 2024, KPI p.9 and capital management p.49 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzQ3MDI0ODU4NWFkaXF6a2N4/document?download=0&format=pdf\nFY2023/FY2022/FY2021: Annual Report and Accounts 2023, KPI p.9 and capital management p.49 - https://vpr.hkma.gov.hk/statics/assets/doc/100273/ar_23/ar_23_eng.pdf\nFY2021 comparative context: Annual Report 2021, KPI p.8 and capital management p.46 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzM0MzE1NzIzOWFkaXF6a2N4/document?download=0&format=pdf\nFY2025: the Companies House filing is listed, but the PDF was not retrievable in this run - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzUyNjMyOTE4OGFkaXF6a2N4/document?download=0&format=pdf\nThe 2022-2024 reports state that Pillar 3 disclosure is available on request; no public current Pillar 3/KM1 document or defensible entity-level interim series was located.",
-        "value": 55.0
+        "value": 56.0
       },
       {
         "bank": "BANK SEPAH INTERNATIONAL",
@@ -806,7 +806,7 @@
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
-        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No Pillar 3/KM1-format document, no leverage ratio, LCR, NSFR or MREL figure found anywhere in the Annual Report - the Bank states its (unaudited) Pillar 3 disclosures are published separately at www.banksepah.co.uk, but that site's TLS certificate has expired and could not be fetched.\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
+        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No leverage ratio, LCR, NSFR or MREL figure appears in the Annual Report itself - those are disclosed instead in the Bank's own Pillar 3 Disclosures documents, published separately at www.banksepah.co.uk/information. That site's TLS certificate has expired (browsers refuse the connection outright); the documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - see the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. No MREL figure was found in either source (see that sheet's own note).\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
         "value": 102.7
       },
       {
@@ -915,14 +915,14 @@
       },
       {
         "bank": "GB BANK",
-        "comparability_status": "broad-only",
+        "comparability_status": "broad-comparable",
         "fiscal_year": 2025,
         "frn": "850286",
         "metric": "Tier 1 Ratio",
         "reasons": [
           "year-over-year movement above 95th percentile"
         ],
-        "reporting_basis": null,
+        "reporting_basis": "entity",
         "source_note": "Sources - GB Bank Limited official annual Pillar 3 disclosures, solo basis:\nFY2025: Pillar 3 Disclosures 2025, UK KM1 p.13 - https://www.gbbank.co.uk/download/5065/?tmstv=1766062359\nFY2024: Pillar 3 Disclosures 2024, UK KM1 p.12 - https://www.gbbank.co.uk/download/4423/?tmstv=1760374514\nFY2023: Pillar 3 Disclosures 2023, UK KM1 p.11 - https://www.gbbank.co.uk/download/4420/?tmstv=1760374863\nFY2022 and FY2021: Pillar 3 Disclosures 2022, UK KM1 p.11 - https://www.gbbank.co.uk/download/4416/?tmstv=1760374739\nCompanies House entity record and filing history: https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history\n\nENTITY AND REPORTING BASIS: GB Bank Limited (Companies House 10702260; PRA FRN 850286) is the matched UK legal entity. The 2022-2025 Pillar 3 reports state that the reported figures are prepared on a solo basis. The 2025 report additionally records PRA permission, backdated to 1 October 2025, for an individual-consolidation method including SilverRock Financial Services Ltd going forward; the main 30 September 2025 table remains solo and is used here. GB Bank states that it publishes Pillar 3 annually under CRR Article 433b as a small and non-complex bank. FY2024 is a shortened nine-month period ended 30 September 2024 after the accounting period end changed; FY2021-FY2023 end on 31 December and FY2025 ends 30 September.",
         "value": 19.14
       },
@@ -1009,19 +1009,6 @@
         "reporting_basis": "consolidated_group",
         "source_note": "Sources - Arbuthnot Banking Group PLC Pillar 3 disclosures (UK KM1 Key Metrics template; FY2021 uses the pre-KM1 'Key Regulatory Metrics' template), \u00a3'000 unless stated:\nFY2024 & FY2023 comparative: Pillar 3 disclosures for the year ended 31 December 2024, p.6 (Template UK KM1) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/abg-pillar-3-disclosures-december-24.pdf\nFY2023 (own year) & FY2022 comparative: Pillar 3 disclosures for the year ended 31 December 2023, p.6 (Template UK KM1) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2023_Final.pdf\nFY2022 (own year) & FY2021 comparative: Pillar 3 disclosures for the year ended 31 December 2022, p.6 (Template UK KM1) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2022_Final.pdf\nFY2021 (own year): Pillar 3 disclosures for the year ended 31 December 2021, p.31 (Key Regulatory Metrics) - https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2021_Annual.pdf\nFY2025 Pillar 3 disclosures have not been published yet (checked against the site's naming pattern from prior years; none found) - FY2025 is left blank on every Pillar 3 sheet rather than guessed.\nEntity note: Arbuthnot Latham & Co., Limited (company 00819519, FRN 143336) is the PRA-authorised Bank itself, not the wider LSE-listed ultimate holding company Arbuthnot Banking Group PLC. The Bank files its own 'Group of companies' accounts' at Companies House (Arbuthnot Latham & Co., Limited and its own subsidiaries - Wealth Management, Asset Finance, Asset Based Lending and Commercial Vehicle Finance), which is the basis used for the cash flow statement here. The Bank's Annual Report also states its own 'Group Key Metrics' (e.g. FY2024 Tier 1 capital ratio 13.3%, Total capital ratio 15.4%, LCR 179%), which differ slightly from the formal Pillar 3 disclosures published under the Arbuthnot Banking Group PLC name (FY2024 CET1/Tier 1 ratio 13.15%, Total capital ratio 15.28%, LCR 175%) - the Pillar 3 sheets in this workbook use the formal ABG PLC Pillar 3 (Article 447 CRR) disclosures, since that is the entity's actual published Pillar 3 document; the small basis difference vs. the Bank's own Annual Report figures is not explained in either source and is flagged here rather than silently blended.",
         "value": 15.28
-      },
-      {
-        "bank": "EFG PRIVATE BANK",
-        "comparability_status": "broad-only",
-        "fiscal_year": 2022,
-        "frn": "144036",
-        "metric": "Total Capital Ratio",
-        "reasons": [
-          "level below 5th percentile"
-        ],
-        "reporting_basis": null,
-        "source_note": "Sources - EFG Private Bank Limited's own accounts, Note 34 (Capital management), unless noted otherwise:\nFY2024: Annual Report and Financial Statements 2024, p.83 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzQ2ODA5NDQ2MGFkaXF6a2N4/document?format=pdf&download=0\nFY2023: Annual Report and Financial Statements 2023, p.80 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzQyMTAwMDI4OGFkaXF6a2N4/document?format=pdf&download=0\nFY2022: Annual Report and Financial Statements 2022, p.60-61 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzM4ODQ3NjMwOWFkaXF6a2N4/document?format=pdf&download=0\nFY2021: as stated in the FY2022 Annual Report's own FY2021 comparative column, p.60-61 - https://find-and-update.company-information.service.gov.uk/company/02321802/filing-history/MzM4ODQ3NjMwOWFkaXF6a2N4/document?format=pdf&download=0\nNo standalone Pillar 3 document was locatable for this entity (efginternational.com blocks automated fetches; no UK-specific regulatory disclosures page found) - all figures sourced from the statutory accounts' own Capital management note.\nIMPORTANT DISCLOSURE-FORMAT NOTE: FY2021 and FY2022's own Annual Reports disclose a full capital table (CET1 Capital, Total Capital, Total RWAs, CET1 Ratio, Total Capital Ratio). FY2023 and FY2024's own Annual Reports disclose ONLY Common equity tier 1 capital (\u00a3m) - no ratio, no RWA, no Total Capital figure at all, confirmed by reading the full Capital management note in both reports. This is a genuine reduction in disclosure depth between report vintages, not a gap in this research. Liquidity risk (Note 29) is purely qualitative/contractual-maturity-table based in every year reviewed - no LCR/NSFR percentage is stated anywhere. No Leverage Ratio or MREL figure was found in any year.",
-        "value": 15.2
       },
       {
         "bank": "TD BANK EUROPE",
@@ -1147,7 +1134,7 @@
       {
         "bank": "MELLI BANK",
         "comparability_status": "broad-comparable",
-        "fiscal_year": 2024,
+        "fiscal_year": 2025,
         "frn": "207380",
         "metric": "Total Capital Ratio",
         "reasons": [
@@ -1155,7 +1142,7 @@
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Melli Bank plc entity-level regulatory KPI and capital disclosures:\nFY2024/FY2023: Annual Report and Accounts 2024, KPI p.9 and capital management p.49 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzQ3MDI0ODU4NWFkaXF6a2N4/document?download=0&format=pdf\nFY2023/FY2022/FY2021: Annual Report and Accounts 2023, KPI p.9 and capital management p.49 - https://vpr.hkma.gov.hk/statics/assets/doc/100273/ar_23/ar_23_eng.pdf\nFY2021 comparative context: Annual Report 2021, KPI p.8 and capital management p.46 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzM0MzE1NzIzOWFkaXF6a2N4/document?download=0&format=pdf\nFY2025: the Companies House filing is listed, but the PDF was not retrievable in this run - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzUyNjMyOTE4OGFkaXF6a2N4/document?download=0&format=pdf\nThe 2022-2024 reports state that Pillar 3 disclosure is available on request; no public current Pillar 3/KM1 document or defensible entity-level interim series was located.",
-        "value": 55.0
+        "value": 56.0
       },
       {
         "bank": "BANK SEPAH INTERNATIONAL",
@@ -1167,7 +1154,7 @@
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
-        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No Pillar 3/KM1-format document, no leverage ratio, LCR, NSFR or MREL figure found anywhere in the Annual Report - the Bank states its (unaudited) Pillar 3 disclosures are published separately at www.banksepah.co.uk, but that site's TLS certificate has expired and could not be fetched.\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
+        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No leverage ratio, LCR, NSFR or MREL figure appears in the Annual Report itself - those are disclosed instead in the Bank's own Pillar 3 Disclosures documents, published separately at www.banksepah.co.uk/information. That site's TLS certificate has expired (browsers refuse the connection outright); the documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - see the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. No MREL figure was found in either source (see that sheet's own note).\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
         "value": 102.7
       },
       {
@@ -1208,6 +1195,19 @@
         "reporting_basis": null,
         "source_note": "Sources - Bank of the Philippine Islands (Europe) PLC, Strategic Report \"Capital Resources\"/\"Liquidity Resources\" narrative and the Notes' \"Capital Adequacy\" components table, from each year's own Annual Report filed at Companies House (all 5 filings fully scanned/image-only, OCR'd):\nFY2025 & FY2024: Annual Report FY2025, Strategic Report p.7, Note 21 components table p.9-10 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzUyMDczNTAwM2FkaXF6a2N4/document?format=pdf&download=0\nFY2023 & FY2022 (restated): Annual Report FY2023, Strategic Report p.7-8, components table p.9-10 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzQyNjQ2OTQ5OGFkaXF6a2N4/document?format=pdf&download=0\nFY2022 (as originally reported, \u00a3) & FY2021: Annual Report FY2022, Strategic Report p.5-6, components table p.7 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzM3NzAxNzg2OGFkaXF6a2N4/document?format=pdf&download=0\nFY2021 (as originally reported, \u00a3) & FY2020: Annual Report FY2021, Strategic Report p.5-6, components table p.7 - https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzMzNzI1NDc5M2FkaXF6a2N4/document?format=pdf&download=0\nCURRENCY: the Bank changed its functional/presentation currency from GBP to USD during FY2023 (confirmed in the FY2023 Annual Report's Strategic Report and its capital table's \"Restated\" FY2022 comparative). FY2021 and FY2022 monetary figures below are the Bank's own originally-published \u00a3 figures (Companies House filings for those years, in GBP) - not converted. FY2023-FY2025 are originally reported in USD and are converted to \u00a3 at the Bank of England GBP/USD spot rate as at each fiscal year-end (29 Dec 2023 1.2732 - 31st was a Sunday; 31 Dec 2024 1.2515; 31 Dec 2025 1.3448). % ratios are shown exactly as reported in either currency, never converted (dimensionless).",
         "value": 56.29
+      },
+      {
+        "bank": "CASTLE TRUST CAPITAL",
+        "comparability_status": "broad-comparable",
+        "fiscal_year": 2025,
+        "frn": "541910",
+        "metric": "Total Capital Ratio",
+        "reasons": [
+          "level below 5th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - Castle Trust Bank Pillar 3 Disclosures, 'Key Metrics for the Bank' table (Castle Trust Capital plc solo basis, not the wider CTH Group):\nFY2025: Pillar 3 Disclosures FY ended 30 Sept 2025, p.6 - https://www.castletrust.co.uk/wp-content/uploads/fy-30_sept-2025-ctb-pillar-3-disclosures.pdf\nFY2024: Pillar 3 Disclosures FY ended 30 Sept 2024, p.6 - https://www.castletrust.co.uk/wp-content/uploads/fy-30_sept-2024-ctb-pillar-3-disclosures.pdf\nFY2023: Pillar 3 Disclosures FY ended 30 Sept 2023, p.6 - https://www.castletrust.co.uk/wp-content/uploads/fy-30-sept-2023-ctb-pillar-3-disclosures.pdf\nFY2022: Pillar 3 Disclosures FY ended 30 Sept 2022, p.6 - https://www.castletrust.co.uk/wp-content/uploads/fy-30-sept-2022-ctb-pillar-3-disclosures.pdf\nFY2021: Pillar 3 Disclosures FY ended 30 Sept 2021 (pre-KM1 template - 'Appendix 4. Bank Disclosures'), p.40-43 - https://www.castletrust.co.uk/wp-content/uploads/fy-30-sept-2021-ctb-pillar-3-disclosures.pdf",
+        "value": 15.72
       },
       {
         "bank": "PARAGON",
@@ -1316,14 +1316,14 @@
       },
       {
         "bank": "GB BANK",
-        "comparability_status": "broad-only",
+        "comparability_status": "broad-comparable",
         "fiscal_year": 2025,
         "frn": "850286",
         "metric": "Total Capital Ratio",
         "reasons": [
           "year-over-year movement above 95th percentile"
         ],
-        "reporting_basis": null,
+        "reporting_basis": "entity",
         "source_note": "Sources - GB Bank Limited official annual Pillar 3 disclosures, solo basis:\nFY2025: Pillar 3 Disclosures 2025, UK KM1 p.13 - https://www.gbbank.co.uk/download/5065/?tmstv=1766062359\nFY2024: Pillar 3 Disclosures 2024, UK KM1 p.12 - https://www.gbbank.co.uk/download/4423/?tmstv=1760374514\nFY2023: Pillar 3 Disclosures 2023, UK KM1 p.11 - https://www.gbbank.co.uk/download/4420/?tmstv=1760374863\nFY2022 and FY2021: Pillar 3 Disclosures 2022, UK KM1 p.11 - https://www.gbbank.co.uk/download/4416/?tmstv=1760374739\nCompanies House entity record and filing history: https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history\n\nENTITY AND REPORTING BASIS: GB Bank Limited (Companies House 10702260; PRA FRN 850286) is the matched UK legal entity. The 2022-2025 Pillar 3 reports state that the reported figures are prepared on a solo basis. The 2025 report additionally records PRA permission, backdated to 1 October 2025, for an individual-consolidation method including SilverRock Financial Services Ltd going forward; the main 30 September 2025 table remains solo and is used here. GB Bank states that it publishes Pillar 3 annually under CRR Article 433b as a small and non-complex bank. FY2024 is a shortened nine-month period ended 30 September 2024 after the accounting period end changed; FY2021-FY2023 end on 31 December and FY2025 ends 30 September.",
         "value": 19.14
       },
@@ -1378,7 +1378,7 @@
           "level below 5th percentile"
         ],
         "reporting_basis": "consolidated_group",
-        "source_note": "ENTITY NOTE: Mizuho International plc (company 01203696, FRN 119256; LEI 213800HZ54TG54H2KV03) is the legal entity in Banks List 2608.xlsx. Companies House confirms the active UK public company. Figures are the consolidated Mizuho International plc Group basis used in the official reports, in \u00a3 millions. The company accounts use the FRS 102 exemption from preparing a separate company cash-flow statement.\n\nOfficial Mizuho International plc Pillar 3 disclosures: FY2024: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6864747a2fb833ca68387b1e_mhi-consolidated-pillar-3-disclosure-2024-final.pdf; FY2023: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/68647496be5f9b72fe43c3f9_mhi-consolidated-pillar-3-disclosure-2023-final.pdf; FY2022: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/686474abd90349ac917e208a_2022-mhi-consolidated-pillar-3-disclosure.pdf; FY2021: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6864754eb71eb72dcfb8ec06_2021-mizuho-international-plc-pillar-3-disclosure.pdf\nFY2025 Pillar 3 PDF was not available at the official archive URL checked; 2025 values are included only where disclosed in the Annual Report KPI/regulatory-capital sections.",
+        "source_note": "ENTITY NOTE: Mizuho International plc (company 01203696, FRN 119256; LEI 213800HZ54TG54H2KV03) is the legal entity in Banks List 2608.xlsx. Companies House confirms the active UK public company. Figures are the consolidated Mizuho International plc Group basis used in the official reports, in \u00a3 millions. The company accounts use the FRS 102 exemption from preparing a separate company cash-flow statement.\n\nOfficial Mizuho International plc Pillar 3 disclosures: FY2025: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6a903f20d82fcd0100158b9f_MHI%20consolidated%20Pillar%203%20disclosure%202025.pdf; FY2024: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6864747a2fb833ca68387b1e_mhi-consolidated-pillar-3-disclosure-2024-final.pdf; FY2023: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/68647496be5f9b72fe43c3f9_mhi-consolidated-pillar-3-disclosure-2023-final.pdf; FY2022: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/686474abd90349ac917e208a_2022-mhi-consolidated-pillar-3-disclosure.pdf; FY2021: https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6864754eb71eb72dcfb8ec06_2021-mizuho-international-plc-pillar-3-disclosure.pdf",
         "value": 4.2
       },
       {
@@ -1476,6 +1476,20 @@
         "value": 35.4
       },
       {
+        "bank": "BANK SEPAH INTERNATIONAL",
+        "comparability_status": "broad-comparable",
+        "fiscal_year": 2025,
+        "frn": "208019",
+        "metric": "Leverage Ratio",
+        "reasons": [
+          "level above 95th percentile",
+          "robust level score at least 3.5"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - Bank Sepah International Plc's own Pillar 3 Disclosures documents, Table 1 'Summary of Key Metrics' (each report's own p.5):\nFY2025 ('Mar 25' column): Pillar 3 Disclosures as at 31 March 2025, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar3Disclosureasat31March2025.pdf\nFY2024 ('Mar 24' column): Pillar 3 Disclosures as at 31 March 2024, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar3Disclosuresasat31March2024.pdf\nFY2023 ('Mar 23' column): Pillar 3 Disclosures 31 March 2023, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2023.pdf\nFY2022 ('Mar 22' column): Pillar 3 Disclosures 31 March 2022, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2022.pdf\nFY2021 ('Mar 21' column - the earliest comparative quarter shown anywhere on the site; no standalone FY2021 Pillar 3 document was found, on the live site or via the Wayback Machine, and none is linked from the site's own /information page): Pillar 3 Disclosures 31 March 2022's own Table 1, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2022.pdf\n\nEach year's own report's own year-end column is used in preference to a later report's comparative column for the same date, where both exist - the two occasionally differ by a rounding point (e.g. NSFR at March 2022: 458% in the March-2022 report's own column vs 459% in the March-2023 report's comparative column); both are the Bank's own figures, not reconciled, immaterial.\n\nThe Bank's own Pillar 3 Disclosures documents are published at www.banksepah.co.uk/information, a site whose TLS certificate has expired (a normal browser or fetch refuses the connection outright). The documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - the PDFs are genuine, digitally-produced (not scanned) Pillar 3 reports bearing the Bank's own branding, each headed 'BANK SEPAH INTERNATIONAL plc / PILLAR 3 DISCLOSURES' and dated for its own year-end.",
+        "value": 55.0
+      },
+      {
         "bank": "PERSIA INTERNATIONAL BANK",
         "comparability_status": "broad-comparable",
         "fiscal_year": 2021,
@@ -1510,7 +1524,6 @@
         "frn": "455378",
         "metric": "Leverage Ratio",
         "reasons": [
-          "level above 95th percentile",
           "robust level score at least 3.5"
         ],
         "reporting_basis": null,
@@ -1696,7 +1709,7 @@
       {
         "bank": "MELLI BANK",
         "comparability_status": "strict-comparable",
-        "fiscal_year": 2024,
+        "fiscal_year": 2025,
         "frn": "207380",
         "metric": "CET1 Ratio",
         "reasons": [
@@ -1704,7 +1717,7 @@
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Melli Bank plc entity-level regulatory KPI and capital disclosures:\nFY2024/FY2023: Annual Report and Accounts 2024, KPI p.9 and capital management p.49 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzQ3MDI0ODU4NWFkaXF6a2N4/document?download=0&format=pdf\nFY2023/FY2022/FY2021: Annual Report and Accounts 2023, KPI p.9 and capital management p.49 - https://vpr.hkma.gov.hk/statics/assets/doc/100273/ar_23/ar_23_eng.pdf\nFY2021 comparative context: Annual Report 2021, KPI p.8 and capital management p.46 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzM0MzE1NzIzOWFkaXF6a2N4/document?download=0&format=pdf\nFY2025: the Companies House filing is listed, but the PDF was not retrievable in this run - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzUyNjMyOTE4OGFkaXF6a2N4/document?download=0&format=pdf\nThe 2022-2024 reports state that Pillar 3 disclosure is available on request; no public current Pillar 3/KM1 document or defensible entity-level interim series was located.",
-        "value": 55.0
+        "value": 56.0
       },
       {
         "bank": "BANK SEPAH INTERNATIONAL",
@@ -1717,7 +1730,7 @@
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
-        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No Pillar 3/KM1-format document, no leverage ratio, LCR, NSFR or MREL figure found anywhere in the Annual Report - the Bank states its (unaudited) Pillar 3 disclosures are published separately at www.banksepah.co.uk, but that site's TLS certificate has expired and could not be fetched.\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
+        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No leverage ratio, LCR, NSFR or MREL figure appears in the Annual Report itself - those are disclosed instead in the Bank's own Pillar 3 Disclosures documents, published separately at www.banksepah.co.uk/information. That site's TLS certificate has expired (browsers refuse the connection outright); the documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - see the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. No MREL figure was found in either source (see that sheet's own note).\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
         "value": 102.7
       },
       {
@@ -1809,8 +1822,7 @@
         "frn": "178737",
         "metric": "Tier 1 Ratio",
         "reasons": [
-          "robust level score at least 3.5",
-          "year-over-year movement above 95th percentile"
+          "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Cater Allen Limited's own Annual Report, Strategic Report KPI table and Risk Review 'Capital risk' section (Capital table), GBP'000 except ratios:\nFY2025: Annual Report and Financial Statements 2025, p.2 (KPIs) and p.12 (Capital) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzUxODk5NjMzM2FkaXF6a2N4/document?format=pdf&download=0\nFY2024: Annual Report and Financial Statements 2024, p.2 (KPIs) and p.13 (Capital) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQ2NDYzNjU4OGFkaXF6a2N4/document?format=pdf&download=0\nFY2023: Annual Report and Financial Statements 2023, p.2 (KPIs) and p.15 (Capital) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQyMDI4MDMwNWFkaXF6a2N4/document?format=pdf&download=0\nFY2022: Annual Report and Financial Statements 2023, p.2 (KPI comparative) and p.15 (Capital table 2022 comparative) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQyMDI4MDMwNWFkaXF6a2N4/document?format=pdf&download=0\n\nCET1 Capital = Tier 1 Capital = Total Capital every year - the Company's Tier 1 capital consists of shareholders' equity, share premium and audited prior-year profits (adjusted for foreseeable charges/dividends); no AT1 or Tier 2 instruments exist. FY2021 is genuinely not disclosed - the FY2021 Annual Report's KPI table and financial-statement notes predate this project's window's capital-ratio disclosure format and contain no capital-adequacy figures of any kind.",
@@ -1859,7 +1871,7 @@
       {
         "bank": "MELLI BANK",
         "comparability_status": "strict-comparable",
-        "fiscal_year": 2024,
+        "fiscal_year": 2025,
         "frn": "207380",
         "metric": "Tier 1 Ratio",
         "reasons": [
@@ -1867,7 +1879,7 @@
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Melli Bank plc entity-level regulatory KPI and capital disclosures:\nFY2024/FY2023: Annual Report and Accounts 2024, KPI p.9 and capital management p.49 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzQ3MDI0ODU4NWFkaXF6a2N4/document?download=0&format=pdf\nFY2023/FY2022/FY2021: Annual Report and Accounts 2023, KPI p.9 and capital management p.49 - https://vpr.hkma.gov.hk/statics/assets/doc/100273/ar_23/ar_23_eng.pdf\nFY2021 comparative context: Annual Report 2021, KPI p.8 and capital management p.46 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzM0MzE1NzIzOWFkaXF6a2N4/document?download=0&format=pdf\nFY2025: the Companies House filing is listed, but the PDF was not retrievable in this run - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzUyNjMyOTE4OGFkaXF6a2N4/document?download=0&format=pdf\nThe 2022-2024 reports state that Pillar 3 disclosure is available on request; no public current Pillar 3/KM1 document or defensible entity-level interim series was located.",
-        "value": 55.0
+        "value": 56.0
       },
       {
         "bank": "BANK SEPAH INTERNATIONAL",
@@ -1880,7 +1892,7 @@
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
-        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No Pillar 3/KM1-format document, no leverage ratio, LCR, NSFR or MREL figure found anywhere in the Annual Report - the Bank states its (unaudited) Pillar 3 disclosures are published separately at www.banksepah.co.uk, but that site's TLS certificate has expired and could not be fetched.\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
+        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No leverage ratio, LCR, NSFR or MREL figure appears in the Annual Report itself - those are disclosed instead in the Bank's own Pillar 3 Disclosures documents, published separately at www.banksepah.co.uk/information. That site's TLS certificate has expired (browsers refuse the connection outright); the documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - see the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. No MREL figure was found in either source (see that sheet's own note).\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
         "value": 102.7
       },
       {
@@ -1910,6 +1922,19 @@
         "value": 13.35
       },
       {
+        "bank": "GB BANK",
+        "comparability_status": "strict-comparable",
+        "fiscal_year": 2025,
+        "frn": "850286",
+        "metric": "Tier 1 Ratio",
+        "reasons": [
+          "year-over-year movement above 95th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - GB Bank Limited official annual Pillar 3 disclosures, solo basis:\nFY2025: Pillar 3 Disclosures 2025, UK KM1 p.13 - https://www.gbbank.co.uk/download/5065/?tmstv=1766062359\nFY2024: Pillar 3 Disclosures 2024, UK KM1 p.12 - https://www.gbbank.co.uk/download/4423/?tmstv=1760374514\nFY2023: Pillar 3 Disclosures 2023, UK KM1 p.11 - https://www.gbbank.co.uk/download/4420/?tmstv=1760374863\nFY2022 and FY2021: Pillar 3 Disclosures 2022, UK KM1 p.11 - https://www.gbbank.co.uk/download/4416/?tmstv=1760374739\nCompanies House entity record and filing history: https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history\n\nENTITY AND REPORTING BASIS: GB Bank Limited (Companies House 10702260; PRA FRN 850286) is the matched UK legal entity. The 2022-2025 Pillar 3 reports state that the reported figures are prepared on a solo basis. The 2025 report additionally records PRA permission, backdated to 1 October 2025, for an individual-consolidation method including SilverRock Financial Services Ltd going forward; the main 30 September 2025 table remains solo and is used here. GB Bank states that it publishes Pillar 3 annually under CRR Article 433b as a small and non-complex bank. FY2024 is a shortened nine-month period ended 30 September 2024 after the accounting period end changed; FY2021-FY2023 end on 31 December and FY2025 ends 30 September.",
+        "value": 19.14
+      },
+      {
         "bank": "AFIN BANK",
         "comparability_status": "strict-comparable",
         "fiscal_year": 2024,
@@ -1930,8 +1955,7 @@
         "frn": "178737",
         "metric": "Total Capital Ratio",
         "reasons": [
-          "robust level score at least 3.5",
-          "year-over-year movement above 95th percentile"
+          "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Cater Allen Limited's own Annual Report, Strategic Report KPI table and Risk Review 'Capital risk' section (Capital table), GBP'000 except ratios:\nFY2025: Annual Report and Financial Statements 2025, p.2 (KPIs) and p.12 (Capital) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzUxODk5NjMzM2FkaXF6a2N4/document?format=pdf&download=0\nFY2024: Annual Report and Financial Statements 2024, p.2 (KPIs) and p.13 (Capital) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQ2NDYzNjU4OGFkaXF6a2N4/document?format=pdf&download=0\nFY2023: Annual Report and Financial Statements 2023, p.2 (KPIs) and p.15 (Capital) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQyMDI4MDMwNWFkaXF6a2N4/document?format=pdf&download=0\nFY2022: Annual Report and Financial Statements 2023, p.2 (KPI comparative) and p.15 (Capital table 2022 comparative) - https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQyMDI4MDMwNWFkaXF6a2N4/document?format=pdf&download=0\n\nCET1 Capital = Tier 1 Capital = Total Capital every year - the Company's Tier 1 capital consists of shareholders' equity, share premium and audited prior-year profits (adjusted for foreseeable charges/dividends); no AT1 or Tier 2 instruments exist. FY2021 is genuinely not disclosed - the FY2021 Annual Report's KPI table and financial-statement notes predate this project's window's capital-ratio disclosure format and contain no capital-adequacy figures of any kind.",
@@ -1993,7 +2017,7 @@
       {
         "bank": "MELLI BANK",
         "comparability_status": "strict-comparable",
-        "fiscal_year": 2024,
+        "fiscal_year": 2025,
         "frn": "207380",
         "metric": "Total Capital Ratio",
         "reasons": [
@@ -2001,7 +2025,7 @@
         ],
         "reporting_basis": "entity",
         "source_note": "Sources - Melli Bank plc entity-level regulatory KPI and capital disclosures:\nFY2024/FY2023: Annual Report and Accounts 2024, KPI p.9 and capital management p.49 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzQ3MDI0ODU4NWFkaXF6a2N4/document?download=0&format=pdf\nFY2023/FY2022/FY2021: Annual Report and Accounts 2023, KPI p.9 and capital management p.49 - https://vpr.hkma.gov.hk/statics/assets/doc/100273/ar_23/ar_23_eng.pdf\nFY2021 comparative context: Annual Report 2021, KPI p.8 and capital management p.46 - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzM0MzE1NzIzOWFkaXF6a2N4/document?download=0&format=pdf\nFY2025: the Companies House filing is listed, but the PDF was not retrievable in this run - https://find-and-update.company-information.service.gov.uk/company/04152338/filing-history/MzUyNjMyOTE4OGFkaXF6a2N4/document?download=0&format=pdf\nThe 2022-2024 reports state that Pillar 3 disclosure is available on request; no public current Pillar 3/KM1 document or defensible entity-level interim series was located.",
-        "value": 55.0
+        "value": 56.0
       },
       {
         "bank": "BANK SEPAH INTERNATIONAL",
@@ -2014,7 +2038,7 @@
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
-        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No Pillar 3/KM1-format document, no leverage ratio, LCR, NSFR or MREL figure found anywhere in the Annual Report - the Bank states its (unaudited) Pillar 3 disclosures are published separately at www.banksepah.co.uk, but that site's TLS certificate has expired and could not be fetched.\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
+        "source_note": "Sources - Bank Sepah International Plc's own 'Performance Summary' 5-year table, Strategic Report p.5, FY2025 Annual Report - https://find-and-update.company-information.service.gov.uk/company/04189598/filing-history/MzQ3Mzg4ODM0MGFkaXF6a2N4/document?format=pdf&download=0. CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments mentioned; the Bank discloses a single 'Total capital to total risk-weighted assets' ratio, identical to 'Tier 1 capital to total risk-weighted assets' every year). No leverage ratio, LCR, NSFR or MREL figure appears in the Annual Report itself - those are disclosed instead in the Bank's own Pillar 3 Disclosures documents, published separately at www.banksepah.co.uk/information. That site's TLS certificate has expired (browsers refuse the connection outright); the documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - see the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. No MREL figure was found in either source (see that sheet's own note).\nFX conversion methodology: point-in-time/balance figures (capital, RWA, cash balances) converted at the Bank's own disclosed EUR/GBP year-end rate; cash-flow figures converted at its own disclosed EUR/GBP average rate (both from the FY2025 Annual Report's 5-year Performance Summary table, p.5). Ratios are not converted (dimensionless). The 'Effect of GBP/EUR translation' line in the Cash Flow Statement is computed programmatically from the actual converted figures (opening + net change + entity's own FX line + this plug = closing, exactly) - see this project's established FX conversion methodology (first used for SMBC Bank International plc).",
         "value": 102.7
       },
       {
@@ -2083,6 +2107,19 @@
         "reporting_basis": "entity",
         "source_note": "Sources - Monument Bank Limited annual regulatory KPIs and risk disclosures:\nFY2024 & FY2023: Financial Statements for the year ended 31 December 2024, pp.11-12 and 74 - https://find-and-update.company-information.service.gov.uk/company/10921940/filing-history/MzQ3Njc0NjA3MmFkaXF6a2N4/document?download=0&format=pdf\nFY2023 & FY2022: Financial Statements for the year ended 31 December 2023, pp.8-9 and 60-61 - https://find-and-update.company-information.service.gov.uk/company/10921940/filing-history/MzQzNjUxODg2NmFkaXF6a2N4/document?download=0&format=pdf\nFY2022 & FY2021: Financial Statements for the year ended 31 December 2022, pp.10 and 51 - https://find-and-update.company-information.service.gov.uk/company/10921940/filing-history/MzM5NDQyODAwN2FkaXF6a2N4/document?download=0&format=pdf\nFY2021: Financial Statements for the year ended 31 December 2021, pp.9 and 41 - https://find-and-update.company-information.service.gov.uk/company/10921940/filing-history/MzM1Mjc4MTU2M2FkaXF6a2N4/document?download=0&format=pdf\n\nThe reports do not provide a complete UK KM1 table for every year. Only explicitly disclosed entity-level values are populated; unavailable capital components and ratios remain blank.",
         "value": 44.0
+      },
+      {
+        "bank": "GB BANK",
+        "comparability_status": "strict-comparable",
+        "fiscal_year": 2025,
+        "frn": "850286",
+        "metric": "Total Capital Ratio",
+        "reasons": [
+          "year-over-year movement above 95th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - GB Bank Limited official annual Pillar 3 disclosures, solo basis:\nFY2025: Pillar 3 Disclosures 2025, UK KM1 p.13 - https://www.gbbank.co.uk/download/5065/?tmstv=1766062359\nFY2024: Pillar 3 Disclosures 2024, UK KM1 p.12 - https://www.gbbank.co.uk/download/4423/?tmstv=1760374514\nFY2023: Pillar 3 Disclosures 2023, UK KM1 p.11 - https://www.gbbank.co.uk/download/4420/?tmstv=1760374863\nFY2022 and FY2021: Pillar 3 Disclosures 2022, UK KM1 p.11 - https://www.gbbank.co.uk/download/4416/?tmstv=1760374739\nCompanies House entity record and filing history: https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history\n\nENTITY AND REPORTING BASIS: GB Bank Limited (Companies House 10702260; PRA FRN 850286) is the matched UK legal entity. The 2022-2025 Pillar 3 reports state that the reported figures are prepared on a solo basis. The 2025 report additionally records PRA permission, backdated to 1 October 2025, for an individual-consolidation method including SilverRock Financial Services Ltd going forward; the main 30 September 2025 table remains solo and is used here. GB Bank states that it publishes Pillar 3 annually under CRR Article 433b as a small and non-complex bank. FY2024 is a shortened nine-month period ended 30 September 2024 after the accounting period end changed; FY2021-FY2023 end on 31 December and FY2025 ends 30 September.",
+        "value": 19.14
       },
       {
         "bank": "AFIN BANK",
@@ -2166,13 +2203,26 @@
         "value": 35.4
       },
       {
+        "bank": "BANK SEPAH INTERNATIONAL",
+        "comparability_status": "strict-comparable",
+        "fiscal_year": 2025,
+        "frn": "208019",
+        "metric": "Leverage Ratio",
+        "reasons": [
+          "level above 95th percentile",
+          "robust level score at least 3.5"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - Bank Sepah International Plc's own Pillar 3 Disclosures documents, Table 1 'Summary of Key Metrics' (each report's own p.5):\nFY2025 ('Mar 25' column): Pillar 3 Disclosures as at 31 March 2025, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar3Disclosureasat31March2025.pdf\nFY2024 ('Mar 24' column): Pillar 3 Disclosures as at 31 March 2024, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar3Disclosuresasat31March2024.pdf\nFY2023 ('Mar 23' column): Pillar 3 Disclosures 31 March 2023, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2023.pdf\nFY2022 ('Mar 22' column): Pillar 3 Disclosures 31 March 2022, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2022.pdf\nFY2021 ('Mar 21' column - the earliest comparative quarter shown anywhere on the site; no standalone FY2021 Pillar 3 document was found, on the live site or via the Wayback Machine, and none is linked from the site's own /information page): Pillar 3 Disclosures 31 March 2022's own Table 1, p.5 - https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2022.pdf\n\nEach year's own report's own year-end column is used in preference to a later report's comparative column for the same date, where both exist - the two occasionally differ by a rounding point (e.g. NSFR at March 2022: 458% in the March-2022 report's own column vs 459% in the March-2023 report's comparative column); both are the Bank's own figures, not reconciled, immaterial.\n\nThe Bank's own Pillar 3 Disclosures documents are published at www.banksepah.co.uk/information, a site whose TLS certificate has expired (a normal browser or fetch refuses the connection outright). The documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome user-agent - the PDFs are genuine, digitally-produced (not scanned) Pillar 3 reports bearing the Bank's own branding, each headed 'BANK SEPAH INTERNATIONAL plc / PILLAR 3 DISCLOSURES' and dated for its own year-end.",
+        "value": 55.0
+      },
+      {
         "bank": "PERSIA INTERNATIONAL BANK",
         "comparability_status": "strict-comparable",
         "fiscal_year": 2021,
         "frn": "208020",
         "metric": "Leverage Ratio",
         "reasons": [
-          "level above 95th percentile",
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
@@ -2244,28 +2294,28 @@
         "down": 53,
         "end_year": 2023,
         "metric": "CET1 Ratio",
-        "n": 113,
+        "n": 114,
         "same": 0,
         "start_year": 2022,
-        "up": 60
+        "up": 61
       },
       {
-        "down": 63,
+        "down": 65,
         "end_year": 2024,
         "metric": "CET1 Ratio",
-        "n": 112,
+        "n": 113,
         "same": 3,
         "start_year": 2023,
-        "up": 46
+        "up": 45
       },
       {
         "down": 62,
         "end_year": 2025,
         "metric": "CET1 Ratio",
-        "n": 95,
-        "same": 1,
+        "n": 97,
+        "same": 2,
         "start_year": 2024,
-        "up": 32
+        "up": 33
       },
       {
         "down": 4,
@@ -2277,11 +2327,11 @@
         "up": 3
       },
       {
-        "down": 72,
+        "down": 73,
         "end_year": 2026,
         "horizon": "long_run",
         "metric": "CET1 Ratio",
-        "n": 125,
+        "n": 126,
         "same": 2,
         "start_year": 2020,
         "up": 51
@@ -2296,10 +2346,10 @@
         "up": 2
       },
       {
-        "down": 52,
+        "down": 53,
         "end_year": 2022,
         "metric": "Tier 1 Ratio",
-        "n": 97,
+        "n": 98,
         "same": 1,
         "start_year": 2021,
         "up": 44
@@ -2308,28 +2358,28 @@
         "down": 53,
         "end_year": 2023,
         "metric": "Tier 1 Ratio",
-        "n": 105,
+        "n": 107,
         "same": 0,
         "start_year": 2022,
-        "up": 52
+        "up": 54
       },
       {
-        "down": 52,
+        "down": 54,
         "end_year": 2024,
         "metric": "Tier 1 Ratio",
-        "n": 103,
+        "n": 104,
         "same": 3,
         "start_year": 2023,
-        "up": 48
+        "up": 47
       },
       {
-        "down": 58,
+        "down": 59,
         "end_year": 2025,
         "metric": "Tier 1 Ratio",
-        "n": 87,
+        "n": 89,
         "same": 1,
         "start_year": 2024,
-        "up": 28
+        "up": 29
       },
       {
         "down": 5,
@@ -2341,14 +2391,14 @@
         "up": 1
       },
       {
-        "down": 65,
+        "down": 64,
         "end_year": 2026,
         "horizon": "long_run",
         "metric": "Tier 1 Ratio",
-        "n": 114,
+        "n": 116,
         "same": 1,
         "start_year": 2020,
-        "up": 48
+        "up": 51
       },
       {
         "down": 1,
@@ -2369,31 +2419,31 @@
         "up": 43
       },
       {
-        "down": 47,
+        "down": 46,
         "end_year": 2023,
         "metric": "Total Capital Ratio",
-        "n": 111,
+        "n": 113,
         "same": 1,
         "start_year": 2022,
-        "up": 63
+        "up": 66
+      },
+      {
+        "down": 66,
+        "end_year": 2024,
+        "metric": "Total Capital Ratio",
+        "n": 112,
+        "same": 1,
+        "start_year": 2023,
+        "up": 45
       },
       {
         "down": 64,
-        "end_year": 2024,
-        "metric": "Total Capital Ratio",
-        "n": 111,
-        "same": 1,
-        "start_year": 2023,
-        "up": 46
-      },
-      {
-        "down": 63,
         "end_year": 2025,
         "metric": "Total Capital Ratio",
-        "n": 94,
+        "n": 96,
         "same": 2,
         "start_year": 2024,
-        "up": 29
+        "up": 30
       },
       {
         "down": 5,
@@ -2409,10 +2459,10 @@
         "end_year": 2026,
         "horizon": "long_run",
         "metric": "Total Capital Ratio",
-        "n": 123,
+        "n": 125,
         "same": 0,
         "start_year": 2020,
-        "up": 49
+        "up": 51
       },
       {
         "down": 2,
@@ -2424,38 +2474,38 @@
         "up": 0
       },
       {
-        "down": 26,
+        "down": 27,
         "end_year": 2022,
         "metric": "Leverage Ratio",
-        "n": 79,
+        "n": 81,
         "same": 1,
         "start_year": 2021,
-        "up": 52
+        "up": 53
       },
       {
         "down": 34,
         "end_year": 2023,
         "metric": "Leverage Ratio",
-        "n": 95,
+        "n": 96,
         "same": 1,
         "start_year": 2022,
-        "up": 60
+        "up": 61
       },
       {
-        "down": 55,
+        "down": 56,
         "end_year": 2024,
         "metric": "Leverage Ratio",
-        "n": 98,
+        "n": 100,
         "same": 2,
         "start_year": 2023,
-        "up": 41
+        "up": 42
       },
       {
         "down": 52,
         "end_year": 2025,
         "metric": "Leverage Ratio",
-        "n": 80,
-        "same": 1,
+        "n": 81,
+        "same": 2,
         "start_year": 2024,
         "up": 27
       },
@@ -2469,11 +2519,11 @@
         "up": 3
       },
       {
-        "down": 47,
+        "down": 48,
         "end_year": 2026,
         "horizon": "long_run",
         "metric": "Leverage Ratio",
-        "n": 111,
+        "n": 112,
         "same": 0,
         "start_year": 2020,
         "up": 64
@@ -2490,40 +2540,40 @@
         "up": 2
       },
       {
-        "down": 25,
+        "down": 26,
         "end_year": 2022,
         "metric": "CET1 Ratio",
-        "n": 43,
+        "n": 44,
         "same": 0,
         "start_year": 2021,
         "up": 18
       },
       {
-        "down": 20,
+        "down": 21,
         "end_year": 2023,
         "metric": "CET1 Ratio",
-        "n": 50,
+        "n": 51,
         "same": 0,
         "start_year": 2022,
         "up": 30
       },
       {
-        "down": 26,
+        "down": 28,
         "end_year": 2024,
         "metric": "CET1 Ratio",
-        "n": 50,
+        "n": 51,
         "same": 2,
         "start_year": 2023,
-        "up": 22
+        "up": 21
       },
       {
         "down": 26,
         "end_year": 2025,
         "metric": "CET1 Ratio",
-        "n": 42,
-        "same": 0,
+        "n": 44,
+        "same": 1,
         "start_year": 2024,
-        "up": 16
+        "up": 17
       },
       {
         "down": 2,
@@ -2535,14 +2585,14 @@
         "up": 1
       },
       {
-        "down": 27,
+        "down": 29,
         "end_year": 2026,
         "horizon": "long_run",
         "metric": "CET1 Ratio",
-        "n": 56,
+        "n": 57,
         "same": 1,
         "start_year": 2020,
-        "up": 28
+        "up": 27
       },
       {
         "down": 0,
@@ -2554,50 +2604,50 @@
         "up": 2
       },
       {
-        "down": 21,
+        "down": 23,
         "end_year": 2022,
         "metric": "Tier 1 Ratio",
-        "n": 40,
+        "n": 42,
         "same": 0,
         "start_year": 2021,
         "up": 19
       },
       {
-        "down": 21,
+        "down": 22,
         "end_year": 2023,
         "metric": "Tier 1 Ratio",
-        "n": 45,
+        "n": 47,
         "same": 0,
         "start_year": 2022,
-        "up": 24
+        "up": 25
       },
       {
-        "down": 18,
+        "down": 20,
         "end_year": 2024,
         "metric": "Tier 1 Ratio",
-        "n": 44,
+        "n": 45,
         "same": 3,
         "start_year": 2023,
-        "up": 23
-      },
-      {
-        "down": 23,
-        "end_year": 2025,
-        "metric": "Tier 1 Ratio",
-        "n": 38,
-        "same": 0,
-        "start_year": 2024,
-        "up": 15
+        "up": 22
       },
       {
         "down": 24,
         "end_year": 2025,
+        "metric": "Tier 1 Ratio",
+        "n": 40,
+        "same": 0,
+        "start_year": 2024,
+        "up": 16
+      },
+      {
+        "down": 25,
+        "end_year": 2025,
         "horizon": "long_run",
         "metric": "Tier 1 Ratio",
-        "n": 50,
+        "n": 52,
         "same": 1,
         "start_year": 2020,
-        "up": 25
+        "up": 26
       },
       {
         "down": 0,
@@ -2609,10 +2659,10 @@
         "up": 2
       },
       {
-        "down": 24,
+        "down": 25,
         "end_year": 2022,
         "metric": "Total Capital Ratio",
-        "n": 43,
+        "n": 44,
         "same": 2,
         "start_year": 2021,
         "up": 17
@@ -2621,38 +2671,38 @@
         "down": 18,
         "end_year": 2023,
         "metric": "Total Capital Ratio",
-        "n": 46,
+        "n": 48,
         "same": 0,
         "start_year": 2022,
-        "up": 28
+        "up": 30
       },
       {
-        "down": 24,
+        "down": 26,
         "end_year": 2024,
         "metric": "Total Capital Ratio",
-        "n": 48,
+        "n": 49,
         "same": 1,
         "start_year": 2023,
-        "up": 23
+        "up": 22
       },
       {
-        "down": 25,
+        "down": 26,
         "end_year": 2025,
         "metric": "Total Capital Ratio",
-        "n": 42,
+        "n": 44,
         "same": 1,
         "start_year": 2024,
-        "up": 16
+        "up": 17
       },
       {
-        "down": 30,
+        "down": 31,
         "end_year": 2025,
         "horizon": "long_run",
         "metric": "Total Capital Ratio",
-        "n": 53,
+        "n": 55,
         "same": 0,
         "start_year": 2020,
-        "up": 23
+        "up": 24
       },
       {
         "down": 2,
@@ -2664,50 +2714,50 @@
         "up": 0
       },
       {
-        "down": 11,
+        "down": 12,
         "end_year": 2022,
         "metric": "Leverage Ratio",
-        "n": 34,
+        "n": 36,
         "same": 0,
         "start_year": 2021,
-        "up": 23
+        "up": 24
       },
       {
-        "down": 15,
+        "down": 16,
         "end_year": 2023,
         "metric": "Leverage Ratio",
-        "n": 42,
+        "n": 44,
         "same": 0,
         "start_year": 2022,
-        "up": 27
+        "up": 28
       },
       {
-        "down": 25,
+        "down": 26,
         "end_year": 2024,
         "metric": "Leverage Ratio",
-        "n": 45,
+        "n": 47,
         "same": 2,
         "start_year": 2023,
-        "up": 18
+        "up": 19
       },
       {
-        "down": 22,
+        "down": 23,
         "end_year": 2025,
         "metric": "Leverage Ratio",
-        "n": 38,
-        "same": 0,
+        "n": 40,
+        "same": 1,
         "start_year": 2024,
         "up": 16
       },
       {
-        "down": 19,
+        "down": 20,
         "end_year": 2025,
         "horizon": "long_run",
         "metric": "Leverage Ratio",
-        "n": 51,
+        "n": 53,
         "same": 0,
         "start_year": 2020,
-        "up": 32
+        "up": 33
       }
     ]
   }

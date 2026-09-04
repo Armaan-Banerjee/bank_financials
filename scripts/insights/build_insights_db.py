@@ -46,9 +46,19 @@ parent_group_edges(id INTEGER PRIMARY KEY, from_node, edge_type, to_node,
       -- name matches a built bank exactly; NULL when the endpoint is a
       -- parent/holding entity that isn't itself one of the 145 built banks.
 
+equity_changes(id INTEGER PRIMARY KEY, frn INTEGER REFERENCES banks(frn),
+      sheet, movement_label, component, value_raw, value_numeric REAL NULL,
+      is_numeric INTEGER, row_order INTEGER)
+      -- Statement of Changes in Equity (added 2026-09-04, IN-039) - a
+      -- chronological roll-forward, not the year-column shape
+      -- annual_metrics assumes, so it gets its own table. row_order
+      -- preserves the sheet's own oldest-to-newest read order; never
+      -- re-sort by it implicitly (e.g. alphabetically on movement_label).
+
 refresh_metadata(id INTEGER PRIMARY KEY CHECK (id = 1),
       metrics_built_at, metrics_source, banks_count, annual_metrics_count,
-      parent_group_built_at, parent_group_lookup_count, parent_group_edges_count)
+      equity_changes_count, parent_group_built_at, parent_group_lookup_count,
+      parent_group_edges_count)
       -- one row, columns updated independently by whichever half (metrics
       -- vs. parent-group) last refreshed - the two halves are written by
       -- different scripts on different schedules, so this must not force
@@ -97,6 +107,28 @@ CREATE TABLE IF NOT EXISTS annual_metrics (
 CREATE INDEX IF NOT EXISTS idx_annual_metrics_frn ON annual_metrics(frn);
 CREATE INDEX IF NOT EXISTS idx_annual_metrics_sheet ON annual_metrics(sheet);
 """
+
+EQUITY_CHANGES_SCHEMA_SQL = """
+CREATE TABLE IF NOT EXISTS equity_changes (
+    id INTEGER PRIMARY KEY,
+    frn INTEGER NOT NULL REFERENCES banks(frn),
+    sheet TEXT NOT NULL,
+    movement_label TEXT NOT NULL,
+    component TEXT NOT NULL,
+    value_raw TEXT,
+    value_numeric REAL,
+    is_numeric INTEGER NOT NULL,
+    row_order INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_equity_changes_frn ON equity_changes(frn);
+"""
+# Statement of Changes in Equity (added by the ST- wayfinder rollout,
+# 2026-09-04, see wayfinder/insights/tickets/IN-039.md) doesn't fit
+# annual_metrics's year-keyed shape - it's a chronological roll-forward,
+# equity-component columns x movement rows, not year columns - so it gets
+# its own table rather than forcing `year` to hold a movement label.
+# `row_order` preserves the sheet's own oldest-to-newest read order;
+# consumers must not re-sort this the way annual_metrics rows can be.
 
 PARENT_GROUP_SCHEMA_SQL = """
 CREATE TABLE IF NOT EXISTS parent_group_lookup (
@@ -195,6 +227,7 @@ def connect(db_path):
     instead of relying on SQLite to enforce it at write time."""
     conn = sqlite3.connect(db_path)
     conn.executescript(BANKS_METRICS_SCHEMA_SQL)
+    conn.executescript(EQUITY_CHANGES_SCHEMA_SQL)
     conn.executescript(PARENT_GROUP_SCHEMA_SQL)
     conn.executescript(REFRESH_METADATA_SCHEMA_SQL)
     conn.executescript(INTERIM_SCHEMA_SQL)
@@ -218,6 +251,7 @@ _COLUMN_MIGRATIONS = [
     ("annual_metrics", "source_note", "TEXT"),
     ("parent_group_edges", "effective_from", "TEXT"),
     ("parent_group_edges", "effective_to", "TEXT"),
+    ("refresh_metadata", "equity_changes_count", "INTEGER"),
 ]
 
 
@@ -327,6 +361,43 @@ def write_banks_and_metrics(conn, rows, metrics_source):
         # source-of-truth snapshot if validation or an insert fails midway.
         conn.rollback()
         raise
+
+
+def write_equity_changes(conn, rows):
+    """Replace the equity_changes table from `rows` - dicts shaped like
+    extract_metrics.py's `_equity_row()` output. Independently refreshable
+    (DELETE + INSERT, like write_interim_observations below) rather than
+    tied to write_banks_and_metrics's own transaction, since a caller could
+    conceivably refresh one without the other - but every row's frn must
+    already exist in banks (see extract_metrics.py's frn-drop filter before
+    calling this), so call this AFTER write_banks_and_metrics in the same
+    refresh run."""
+    conn.execute("DELETE FROM equity_changes")
+    conn.executemany(
+        "INSERT INTO equity_changes (frn, sheet, movement_label, component, "
+        "value_raw, value_numeric, is_numeric, row_order) VALUES "
+        "(:frn, :sheet, :movement_label, :component, :value_raw, "
+        ":value_numeric, :is_numeric, :row_order)",
+        [
+            {
+                "frn": int(r["frn"]),
+                "sheet": r["sheet"],
+                "movement_label": r["movement_label"],
+                "component": r["component"],
+                "value_raw": (r["value_raw"] if r["value_raw"] not in (None, "") else None),
+                "value_numeric": (float(r["value_numeric"]) if r["value_numeric"] not in (None, "") else None),
+                "is_numeric": int(r["is_numeric"]),
+                "row_order": int(r["row_order"]),
+            }
+            for r in rows
+        ],
+    )
+    conn.execute(
+        "UPDATE refresh_metadata SET equity_changes_count = ? WHERE id = 1",
+        (len(rows),),
+    )
+    conn.commit()
+    return len(rows)
 
 
 def write_interim_observations(conn, observations, source_register):
@@ -748,6 +819,14 @@ def validate(conn, expected_banks=145, expected_metric_rows=None):
     print(f"annual_metrics rows with no matching bank: {n_orphan_metrics}")
     if n_orphan_metrics != 0:
         raise AssertionError(f"{n_orphan_metrics} annual_metrics rows reference an unknown FRN")
+
+    n_equity = cur.execute("SELECT COUNT(*) FROM equity_changes").fetchone()[0]
+    n_orphan_equity = cur.execute(
+        "SELECT COUNT(*) FROM equity_changes WHERE frn NOT IN (SELECT frn FROM banks)"
+    ).fetchone()[0]
+    print(f"equity_changes: {n_equity} rows, {n_orphan_equity} with no matching bank")
+    if n_orphan_equity != 0:
+        raise AssertionError(f"{n_orphan_equity} equity_changes rows reference an unknown FRN")
 
     n_lookup = cur.execute("SELECT COUNT(*) FROM parent_group_lookup").fetchone()[0]
     n_lookup_joined = cur.execute(

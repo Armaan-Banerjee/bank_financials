@@ -1,9 +1,9 @@
 unit_id,unit
 unknown,unknown
+000,£'000
 000_conv_from_usd,"£'000, conv. from USD"
 unknown,£
 m,£m
-000,£'000
 000s,£'000s
 000_conv_from_eur,"£'000, conv. from EUR"
 m_conv_from_eur,"£m, conv. from EUR"
@@ -12,6 +12,11 @@ m_conv_from_usd,"£m, conv. from USD"
 000,$'000
 m,$m
 usd_000,USD'000
+usd_million,USD million
+usd_m,USD m
 us_000,US$'000
 eur_000,EUR '000
+gbp_000,GBP '000
 gbp_000,GBP'000
+cad_000,CAD'000
+cad_mm,CAD MM

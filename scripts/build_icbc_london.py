@@ -49,10 +49,222 @@ def p3_sources(note_disclosure_start=True):
         )
     return text
 
+P3_23_KM1_NOTE = (
+    " (KM1 comparative column only - the OV1 category-level RWA breakdown "
+    "table is not available for FY2023 or earlier, only the aggregate Total "
+    "RWA figure)"
+)
+
+STATEMENTS_SOURCES = (
+    "Sources — all figures are ICBC (London) plc Balance Sheet / Profit and Loss "
+    "Account / Statement of Changes in Equity, $'000, as originally published in "
+    "each year's own Annual Report (each year's own primary presentation, not a "
+    "later restated comparative, except where noted):\n"
+    f"FY2025 & FY2024: ICBC (London) plc Annual Report and Financial Statements 2025, "
+    f"pp.23-26 (Profit and Loss Account, Statement of Comprehensive Income, Balance "
+    f"Sheet, Statement of Changes in Equity) — {AR25_URL}\n"
+    f"FY2023: ICBC (London) plc Annual Report and Financial Statements 2024, pp.25-28 "
+    f"(2023 comparative column) — {AR24_URL}. Cross-checked against ICBC (London) plc "
+    f"Annual Report and Financial Statements 2023 (Companies House filing), pp.26-29 "
+    f"(own originally-published figures) — {AR23_URL}. Both sources agree exactly.\n"
+    f"FY2022: ICBC (London) plc Annual Report and Financial Statements 2023 (Companies "
+    f"House filing), pp.26-29 (2022 comparative column) — {AR23_URL}\n"
+    f"FY2021: ICBC (London) plc Annual Report and Financial Statements 2022 (Companies "
+    f"House filing), pp.24-27 (2021 comparative column) — {AR22_URL}\n"
+    "Note: the FY2021-2023 Companies House filings are scanned (image-only) documents; "
+    "those years' figures were transcribed from page renders. The Statement of Changes "
+    "in Equity reconciles exactly at every year boundary (each year's own closing "
+    "Total shareholder's funds equals the next year's own opening balance and that "
+    "year's own Balance Sheet Total Share Capital and Reserves) - no plug rows were "
+    "needed anywhere. 'Reimbursement of expenses attributable to the Branch' offsets "
+    "operating expenses recharged to the Bank's own overseas Branch operation - a "
+    "genuine feature of this entity's cost structure, not a data error."
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources — ICBC (London) plc, Loans and advances to customers, $'000, IFRS 9 "
+    "stage-1/2/3 impairment allowance breakdown:\n"
+    f"FY2025: Annual Report 2025, Note 11(i) — {AR25_URL}\n"
+    f"FY2024: Annual Report 2025, Note 11(i) (2024 comparative) — {AR25_URL}. Cross-"
+    f"checked against Annual Report 2024, Note 11(i) — {AR24_URL}\n"
+    f"FY2023: Annual Report 2024, Note 11(i) (2023 comparative) — {AR24_URL}\n"
+    f"FY2022: Annual Report 2023 (Companies House filing), Note 11(i) — {AR23_URL}\n"
+    f"FY2021: Annual Report 2022 (Companies House filing), Note 11(i) — {AR22_URL}\n"
+    "Gross carrying amount and net carrying amount for Loans and advances to customers "
+    "sourced from each year's own Note 10 (or comparative column); confirmed by reading "
+    "Note 11 in full for every year that the Bank's entire loans-and-advances-to-"
+    "customers book sits in IFRS 9 Stage 1 throughout FY2021-FY2025 - no Stage 2 or "
+    "Stage 3 balance has existed at any year-end in this range (a genuine feature of "
+    "this book, not an omission - Stage 2 exposure of $4,594k did exist at the opening "
+    "of FY2021 per the Bank's own comparative disclosure, but had cleared to nil by "
+    "31 December 2021, before this workbook's coverage begins). Loans and advances to "
+    "banks (inter-bank placements) are kept separate from the customer loan book above "
+    "and are not included in this sheet's coverage or ratios, consistent with how "
+    "other banks in this project separate Inter-Group/interbank placements from "
+    "customer-facing credit risk."
+)
+
+def rwa_sources():
+    return (
+        "Sources — ICBC (London) plc (solo basis), Annex 1 — UK OV1 template (Overview "
+        "of risk weighted exposure amounts), $'000:\n"
+        f"FY2025: ICBC (London) plc Pillar 3 Disclosures 2025, p.14-15 (31/12/2025 "
+        f"column) — {P3_25_URL}\n"
+        f"FY2024: ICBC (London) plc Pillar 3 Disclosures 2024, p.15-16 (31/12/2024 "
+        f"column) — {P3_24_URL}\n"
+        "Note: the OV1 category-level RWA breakdown table is only publicly available "
+        "from FY2024 onward (same disclosure-start limitation as the other Pillar 3 "
+        "sheets in this workbook - see the CET1/Tier 1/etc. sheets' own source note). "
+        "No FY2023, FY2022 or FY2021 OV1 table exists; only the aggregate Total RWA "
+        "figure for those years is disclosed (in the KM1 template, see the Total RWAs "
+        "sheet), not a category-level split. FY2025's OV1 Total ($675,423.74k) and "
+        "FY2024's OV1 Total ($719,040.48k, matching the Total RWAs sheet's disclosed "
+        "figure exactly) both come from the Bank's own Pillar 3 documents; FY2025's OV1 "
+        "Total differs slightly ($675,423.74k vs. $675,668k) from the Total RWAs sheet's "
+        "KM1-sourced figure for the same date - both are the Bank's own official "
+        "disclosures, reproduced as reported rather than force-reconciled."
+    )
+
 bw = BankWorkbook(bank_name="ICBC (London) plc", years=YEARS, header_color="2E5395")
 
 # ---------------------------------------------------------------
-# Sheet 1: Cash Flow Statement
+# Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 1062471, "FY2024": 43857, "FY2023": 196360, "FY2022": 107136, "FY2021": 149090}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 511222, "FY2024": 934969, "FY2023": 523491, "FY2022": 612456, "FY2021": 537966}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 413326, "FY2024": 336256, "FY2023": 429281, "FY2022": 331484, "FY2021": 128348}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 0, "FY2024": 255, "FY2023": 66, "FY2022": 0, "FY2021": 21}),
+    ("DATA", "Financial investments at FVOCI", {"FY2025": 320996, "FY2024": 313176, "FY2023": 251961, "FY2022": 263048, "FY2021": 350258}),
+    ("DATA", "Financial investments at amortised cost", {"FY2025": 35803, "FY2024": 27177, "FY2023": 68805, "FY2022": 175266, "FY2021": 209357}),
+    ("DATA", "Intangible assets", {"FY2025": 244, "FY2024": 220, "FY2023": 186, "FY2022": 162, "FY2021": 167}),
+    ("DATA", "Tangible fixed assets", {"FY2025": 29460, "FY2024": 29928, "FY2023": 30669, "FY2022": 31651, "FY2021": 32585}),
+    ("DATA", "Current tax assets", {"FY2022": 0, "FY2021": 28}),
+    ("DATA", "Deferred tax assets", {"FY2025": 614, "FY2024": 614, "FY2023": 569, "FY2022": 3489}),
+    ("DATA", "Prepayments, accrued income and other assets", {"FY2025": 19810, "FY2024": 15677, "FY2023": 13332, "FY2022": 13447, "FY2021": 12868}),
+    ("TOTAL", "Total Assets", {"FY2025": 2393946, "FY2024": 1702129, "FY2023": 1514720, "FY2022": 1538139, "FY2021": 1420688}),
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Deposits by banks", {"FY2025": 1622117, "FY2024": 974702, "FY2023": 751531, "FY2022": 810645, "FY2021": 411211}),
+    ("DATA", "Customer accounts", {"FY2025": 160911, "FY2024": 165625, "FY2023": 244297, "FY2022": 247933, "FY2021": 530469}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 2245, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 117}),
+    ("DATA", "Other liabilities", {"FY2025": 12447, "FY2024": 10872, "FY2023": 11801, "FY2022": 8101, "FY2021": 8054}),
+    ("DATA", "Accruals and deferred income", {"FY2025": 1924, "FY2024": 3121, "FY2023": 5343, "FY2022": 2751, "FY2021": 476}),
+    ("DATA", "Provisions for liabilities", {"FY2022": 0, "FY2021": 1915}),
+    ("DATA", "Current tax liabilities", {"FY2025": 27, "FY2024": 1705, "FY2023": 718, "FY2022": 830, "FY2021": 0}),
+    ("DATA", "Deferred tax liabilities", {"FY2025": 2859, "FY2024": 1454, "FY2023": 0, "FY2022": 0, "FY2021": 848}),
+    ("TOTAL", "Total Liabilities", {"FY2025": 1802530, "FY2024": 1157479, "FY2023": 1013690, "FY2022": 1070260, "FY2021": 953090}),
+    ("SECTION", "Share Capital and Reserves", {}),
+    ("DATA", "Called up share capital", {"FY2025": 200000, "FY2024": 200000, "FY2023": 200000, "FY2022": 200000, "FY2021": 200000}),
+    ("DATA", "Retained earnings", {"FY2025": 389313, "FY2024": 346433, "FY2023": 306770, "FY2022": 280635, "FY2021": 269268}),
+    ("DATA", "Other reserves", {"FY2025": 2103, "FY2024": -1783, "FY2023": -5740, "FY2022": -12756, "FY2021": -1670}),
+    ("TOTAL", "Total Share Capital and Reserves", {"FY2025": 591416, "FY2024": 544650, "FY2023": 501030, "FY2022": 467879, "FY2021": 467598}),
+    ("TOTAL", "Total Liabilities and Share Capital and Reserves", {"FY2025": 2393946, "FY2024": 1702129, "FY2023": 1514720, "FY2022": 1538139, "FY2021": 1420688}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="ICBC (London) plc — Balance Sheet",
+    subtitle="Solo basis, $'000 unless stated",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=75,
+    source_height=170,
+    unit_suffix=" ($'000)",
+)
+
+# ---------------------------------------------------------------
+# Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest receivable", {"FY2025": 73022, "FY2024": 80464, "FY2023": 64844, "FY2022": 27188, "FY2021": 19740}),
+    ("DATA", "Interest payable", {"FY2025": -17005, "FY2024": -24461, "FY2023": -28971, "FY2022": -8992, "FY2021": -4294}),
+    ("TOTAL", "Net interest income", {"FY2025": 56017, "FY2024": 56003, "FY2023": 35873, "FY2022": 18196, "FY2021": 15446}),
+    ("DATA", "Fees and commissions receivable", {"FY2025": 2656, "FY2024": 2516, "FY2023": 1671, "FY2022": 1234, "FY2021": 1629}),
+    ("DATA", "Fees and commissions payable", {"FY2025": -360, "FY2024": -403, "FY2023": -371, "FY2022": -369, "FY2021": -394}),
+    ("TOTAL", "Net fees and commissions", {"FY2025": 2296, "FY2024": 2113, "FY2023": 1300, "FY2022": 865, "FY2021": 1235}),
+    ("DATA", "Dealing (loss)/profit", {"FY2025": 709, "FY2024": 515, "FY2023": 375, "FY2022": -365, "FY2021": 422}),
+    ("DATA", "Other operating income", {"FY2025": 9798, "FY2024": 6773, "FY2023": 5844, "FY2022": 6583, "FY2021": 6118}),
+    ("TOTAL", "Other income", {"FY2025": 10507, "FY2024": 7288, "FY2023": 6219, "FY2022": 6218, "FY2021": 6540}),
+    ("TOTAL", "Total operating income", {"FY2025": 68820, "FY2024": 65404, "FY2023": 43392, "FY2022": 25279, "FY2021": 23221}),
+    ("SECTION", "Operating expenses", {}),
+    ("DATA", "Staff costs", {"FY2025": -41255, "FY2024": -38325, "FY2023": -39301, "FY2022": -39373, "FY2021": -38201}),
+    ("DATA", "Depreciation and amortisation", {"FY2025": -1208, "FY2024": -1154, "FY2023": -1234, "FY2022": -1463, "FY2021": -1962}),
+    ("DATA", "Other operating charges", {"FY2025": -10247, "FY2024": -10487, "FY2023": -9009, "FY2022": -7385, "FY2021": -8297}),
+    ("DATA", "Reimbursement of expenses attributable to the Branch", {"FY2025": 41197, "FY2024": 39091, "FY2023": 39539, "FY2022": 38664, "FY2021": 38503}),
+    ("TOTAL", "Operating expenses", {"FY2025": -11513, "FY2024": -10875, "FY2023": -10005, "FY2022": -10609, "FY2021": -3425}),
+    ("DATA", "Impairment (losses)/releases", {"FY2025": -52, "FY2024": 312, "FY2023": 1180, "FY2022": -1052, "FY2021": 6532}),
+    ("TOTAL", "Profit on ordinary activities before tax", {"FY2025": 57255, "FY2024": 54841, "FY2023": 34567, "FY2022": 14670, "FY2021": 19796}),
+    ("DATA", "Tax on profit on ordinary activities", {"FY2025": -14375, "FY2024": -15178, "FY2023": -8432, "FY2022": -3303, "FY2021": -4280}),
+    ("TOTAL", "Profit for the financial year", {"FY2025": 42880, "FY2024": 39663, "FY2023": 26135, "FY2022": 11367, "FY2021": 15516}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Change in fair value of financial investments at FVOCI", {"FY2025": 5190, "FY2024": 5430, "FY2023": 10201, "FY2022": -15385, "FY2021": -5679}),
+    ("DATA", "Impairment allowance on financial investments at FVOCI", {"FY2025": -7, "FY2024": -116, "FY2023": -88, "FY2022": 123, "FY2021": -416}),
+    ("DATA", "Tax on components of other comprehensive income", {"FY2025": -1297, "FY2024": -1357, "FY2023": -3097, "FY2022": 4176, "FY2021": 1692}),
+    ("TOTAL", "Other comprehensive income for the year, net of income tax", {"FY2025": 3886, "FY2024": 3957, "FY2023": 7016, "FY2022": -11086, "FY2021": -4403}),
+    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 46766, "FY2024": 43620, "FY2023": 33151, "FY2022": 281, "FY2021": 11113}),
+]
+
+bw.add_income_statement_sheet(
+    title="ICBC (London) plc — Profit and Loss Account / Statement of Comprehensive Income",
+    subtitle="Solo basis, $'000 unless stated",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=75,
+    source_height=170,
+    unit_suffix=" ($'000)",
+)
+
+# ---------------------------------------------------------------
+# Statement of Changes in Equity
+# ---------------------------------------------------------------
+EQUITY_HEADERS = ["Share capital", "Retained earning", "Other reserves", "Total shareholder's funds"]
+
+equity_rows = [
+    ("DATA", "At 1 January 2021", (200000, 253752, 2733, 456485)),
+    ("DATA", "Profit for the year", (None, 15516, None, 15516)),
+    ("DATA", "Change in fair value of financial investments at FVOCI", (None, None, -5679, -5679)),
+    ("DATA", "Impairment charged on financial investments at FVOCI", (None, None, -416, -416)),
+    ("DATA", "Tax on other comprehensive income", (None, None, 1692, 1692)),
+    ("TOTAL", "At 31 December 2021", (200000, 269268, -1670, 467598)),
+    ("DATA", "At 1 January 2022 (= FY2021 closing)", (200000, 269268, -1670, 467598)),
+    ("DATA", "Profit for the year", (None, 11367, None, 11367)),
+    ("DATA", "Change in fair value of financial investments at FVOCI", (None, None, -15385, -15385)),
+    ("DATA", "Impairment released on financial investments at FVOCI", (None, None, 123, 123)),
+    ("DATA", "Deferred tax liability recognised through equity", (None, None, 4176, 4176)),
+    ("TOTAL", "At 31 December 2022", (200000, 280635, -12756, 467879)),
+    ("DATA", "At 1 January 2023 (= FY2022 closing)", (200000, 280635, -12756, 467879)),
+    ("DATA", "Profit for the year", (None, 26135, None, 26135)),
+    ("DATA", "Change in fair value of financial investments at FVOCI", (None, None, 10201, 10201)),
+    ("DATA", "Impairment charged on financial investments at FVOCI", (None, None, -88, -88)),
+    ("DATA", "Tax on other comprehensive income", (None, None, -3097, -3097)),
+    ("TOTAL", "At 31 December 2023", (200000, 306770, -5740, 501030)),
+    ("DATA", "At 1 January 2024 (= FY2023 closing)", (200000, 306770, -5740, 501030)),
+    ("DATA", "Profit for the year", (None, 39663, None, 39663)),
+    ("DATA", "Change in fair value of financial investments at FVOCI", (None, None, 5430, 5430)),
+    ("DATA", "Impairment charged on financial investments at FVOCI", (None, None, -116, -116)),
+    ("DATA", "Tax on other comprehensive income", (None, None, -1357, -1357)),
+    ("TOTAL", "At 31 December 2024", (200000, 346433, -1783, 544650)),
+    ("DATA", "At 1 January 2025 (= FY2024 closing)", (200000, 346433, -1783, 544650)),
+    ("DATA", "Profit for the year", (None, 42880, None, 42880)),
+    ("DATA", "Change in fair value of financial investments at FVOCI", (None, None, 5190, 5190)),
+    ("DATA", "Impairment released on financial investments at FVOCI", (None, None, -7, -7)),
+    ("DATA", "Tax on other comprehensive income", (None, None, -1297, -1297)),
+    ("TOTAL", "At 31 December 2025", (200000, 389313, 2103, 591416)),
+]
+
+bw.add_equity_changes_sheet(
+    title="ICBC (London) plc — Statement of Changes in Equity",
+    subtitle="$'000 - chronological, oldest to newest. Equity reconciliation ladder confirmed: every year's own "
+              "closing balance ties exactly to both the next year's own opening balance and that year's own "
+              "Balance Sheet Total Share Capital and Reserves - zero plug rows needed anywhere.",
+    headers=EQUITY_HEADERS,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+)
+
+# ---------------------------------------------------------------
+# Sheet: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
     ("SECTION", "Reconciliation of profit for the year to net cash flows from operating activities", {}),
@@ -97,6 +309,30 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=75,
     source_height=140,
+    unit_suffix=" ($'000)",
+)
+
+# ---------------------------------------------------------------
+# Asset Quality
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Loans and advances to customers, by IFRS 9 stage", {}),
+    ("DATA", "Gross carrying amount", {"FY2025": 413561, "FY2024": 336385, "FY2023": 429636, "FY2022": 331794, "FY2021": 128414}),
+    ("DATA", "Stage 1 loss allowance", {"FY2025": -235, "FY2024": -129, "FY2023": -355, "FY2022": -310, "FY2021": -66}),
+    ("DATA", "Stage 2 loss allowance", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "Stage 3 loss allowance", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("TOTAL", "Net carrying amount", {"FY2025": 413326, "FY2024": 336256, "FY2023": 429281, "FY2022": 331484, "FY2021": 128348}),
+    ("DATA", "Stage 1 coverage ratio (Stage 1 allowance / gross carrying amount)", {"FY2025": "0.06%", "FY2024": "0.04%", "FY2023": "0.08%", "FY2022": "0.09%", "FY2021": "0.05%"}),
+    ("DATA", "Stage 2/3 (impaired) exposure as % of gross carrying amount", {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="ICBC (London) plc — Asset Quality",
+    subtitle="Loans and advances to customers, solo basis, $'000 unless stated",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=75,
+    source_height=170,
     unit_suffix=" ($'000)",
 )
 
@@ -149,6 +385,23 @@ metric(
     p3_sources(),
 )
 
+rwa_breakdown_rows = [
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 590477.63, "FY2024": 660913.86}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 748.81, "FY2024": 294.72}),
+    ("DATA", "Operational risk", {"FY2025": 84197.30, "FY2024": 57831.90}),
+    ("TOTAL", "Total risk weighted exposure amount", {"FY2025": 675423.74, "FY2024": 719040.48}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="ICBC (London) plc — RWA Breakdown",
+    subtitle="Solo basis, UK OV1 template, $'000",
+    rows=rwa_breakdown_rows,
+    sources_text=rwa_sources(),
+    first_col_width=60,
+    source_height=170,
+    unit_suffix=" ($'000)",
+)
+
 metric(
     "Leverage Ratio", "$'000 / %",
     [
@@ -190,6 +443,25 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total Assets", {"FY2025": 2393946, "FY2024": 1702129, "FY2023": 1514720, "FY2022": 1538139, "FY2021": 1420688}),
+        ("Loans and advances to customers", {"FY2025": 413326, "FY2024": 336256, "FY2023": 429281, "FY2022": 331484, "FY2021": 128348}),
+        ("Customer accounts", {"FY2025": 160911, "FY2024": 165625, "FY2023": 244297, "FY2022": 247933, "FY2021": 530469}),
+        ("Total Share Capital and Reserves", {"FY2025": 591416, "FY2024": 544650, "FY2023": 501030, "FY2022": 467879, "FY2021": 467598}),
+    ],
+    balance_sheet_unit="$'000",
+    income_statement_totals=[
+        ("Total operating income", {"FY2025": 68820, "FY2024": 65404, "FY2023": 43392, "FY2022": 25279, "FY2021": 23221}),
+        ("Operating expenses", {"FY2025": -11513, "FY2024": -10875, "FY2023": -10005, "FY2022": -10609, "FY2021": -3425}),
+        ("Profit for the financial year", {"FY2025": 42880, "FY2024": 39663, "FY2023": 26135, "FY2022": 11367, "FY2021": 15516}),
+    ],
+    income_statement_unit="$'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 544650, "FY2024": 501030, "FY2023": 467879, "FY2022": 467598, "FY2021": 456485}),
+        ("Total comprehensive income for the year", {"FY2025": 46766, "FY2024": 43620, "FY2023": 33151, "FY2022": 281, "FY2021": 11113}),
+        ("Closing equity", {"FY2025": 591416, "FY2024": 544650, "FY2023": 501030, "FY2022": 467879, "FY2021": 467598}),
+    ],
+    equity_changes_unit="$'000",
     cash_flow_totals=[
         ("Net cash used in operating activities", {"FY2025": 1366477, "FY2024": -174234, "FY2023": 129403, "FY2022": -108415, "FY2021": -51743}),
         ("Net cash used in investing activities", {"FY2025": -764, "FY2024": -447, "FY2023": -275, "FY2022": -525, "FY2021": -793}),

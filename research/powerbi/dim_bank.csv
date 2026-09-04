@@ -53,7 +53,7 @@ bank_id,frn,bank,source_filename_bank,source_workbook,workbook_kind,parent_group
 400712,400712,FidBank UK Limited,FIDBANK UK,FIDBANK UK FINANCIALS.xlsx,full,fidelity_bank_group,Fidelity Bank group,"confirmed; wholly owned, UK-only figures"
 216772,216772,FirstBank UK Limited,FIRSTBANK UK,FIRSTBANK UK FINANCIALS.xlsx,full,firstbank_group,FirstBank group,confirmed; formerly FBN Bank UK; 2022 FX restatement
 475346,475346,Gatehouse Bank Plc,GATEHOUSE BANK,GATEHOUSE BANK FINANCIALS.xlsx,full,kia_securities_house_controlled_gatehouse_group,KIA / Securities House-controlled Gatehouse group,confirmed; consolidated Gatehouse figures
-850286,850286,GB Bank Limited,GB BANK,GB BANK FINANCIALS.xlsx,pillar3_only,gb_bank,GB Bank,confirmed standalone/non-single-parent ownership; SilverRock is separate regulatory scope
+850286,850286,GB Bank Limited,GB BANK,GB BANK FINANCIALS.xlsx,full,gb_bank,GB Bank,confirmed standalone/non-single-parent ownership; SilverRock is separate regulatory scope
 204471,204471,GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY,GHANA INTERNATIONAL BANK,GHANA INTERNATIONAL BANK FINANCIALS.xlsx,full,ghana_international_bank,Ghana International Bank,confirmed state-owned; no subsidiaries
 124659,124659,Goldman Sachs International Bank,GOLDMAN SACHS INTERNATIONAL BANK,GOLDMAN SACHS INTERNATIONAL BANK FINANCIALS.xlsx,full,the_goldman_sachs_group_inc,"The Goldman Sachs Group, Inc.",confirmed; GSIB breakout within GSG UK disclosure
 970920,970920,Griffin Bank Ltd,GRIFFIN BANK,GRIFFIN BANK FINANCIALS.xlsx,full,griffin_bank,Griffin Bank,confirmed standalone/non-single-parent ownership

@@ -15,6 +15,8 @@ from analysis_queries import AnalysisQueries
 from in016_distribution import build_in016_payload
 from in017_quality import build_in017_payload
 from in021_headroom_trajectory import build_headroom_payload, validate_payload
+from in040_risk_metrics import build_in040_payload
+from chart_contract import build_line_chart_spec, build_rank_chart_spec, validate_chart_spec
 
 
 DEFAULT_BANK_MIX = (
@@ -23,13 +25,22 @@ DEFAULT_BANK_MIX = (
     ("small / specialist", 3, ("Oxbury Bank PLC", "Atom Bank PLC", "Starling Bank Limited")),
     ("international", 1, ("Goldman Sachs International Bank", "Citibank UK Limited", "J.P. Morgan Europe Limited")),
 )
+DEFAULT_EXCLUDED_BANK_FRAGMENTS = ("cater allen", "gb bank")
 
 
 def default_bank_mix(records, years, limit=8):
     """Choose a readable, representative default set for a trajectory chart."""
     available = {str(record["bank"]): record for record in records}
     usable = {name for name, record in available.items()
-              if sum(point["value"] is not None and point["year"] in years for point in record["years"]) >= 2}
+              if sum(point["value"] is not None and point["year"] in years for point in record["years"]) >= 2
+              and not any(fragment in name.casefold() for fragment in DEFAULT_EXCLUDED_BANK_FRAGMENTS)}
+    recent_years = set(sorted(years)[-2:])
+    recent_usable = {name for name in usable
+                     if all(next((point["value"] for point in available[name]["years"]
+                                  if point["year"] == year), None) is not None
+                            for year in recent_years)}
+    if recent_usable:
+        usable = recent_usable
     chosen = []
     for _group, quota, candidates in DEFAULT_BANK_MIX:
         group_chosen = 0
@@ -92,7 +103,68 @@ def build_in011_payload(db_path):
         "in024": build_in024_payload(db_path),
         "in025": build_in025_payload(db_path),
         "in021": build_headroom_payload(db_path),
+        "in040": build_in040_payload(db_path),
     }
+
+
+def render_html_risk_composition(in040):
+    """Render loan concentration/quality and RWA density (IN-043). Own
+    section, deliberately not woven into the 7 existing sections above -
+    same scope as the IN-042 prototype (loan concentration/quality + RWA
+    density), across every bank the underlying observations cover."""
+    banks = in040["metadata"]["banks"]
+    stage_balances = in040["loan_concentration_quality"]["stage_balances"]
+    coverage_npl = in040["loan_concentration_quality"]["coverage_and_npl_ratios"]
+    rwa_to_assets = in040["rwa_density"]["rwa_to_assets_pct"]
+    rwa_category_composition = in040["rwa_density"]["rwa_category_composition"]
+
+    loan_rows = []
+    for frn, years in sorted(stage_balances.items(), key=lambda kv: banks.get(kv[0], "")):
+        bank = banks.get(frn, frn)
+        usable_years = [year for year, categories in years.items()
+                        if sum(stages.get(f"stage_{n}", 0) for stages in categories.values() for n in (1, 2, 3)) > 0]
+        if not usable_years:
+            continue
+        year = max(usable_years)
+        categories = years[year]
+        totals = {1: 0.0, 2: 0.0, 3: 0.0}
+        for stages in categories.values():
+            for n in (1, 2, 3):
+                totals[n] += stages.get(f"stage_{n}", 0)
+        grand_total = sum(totals.values())
+        stage3_pct = round(totals[3] / grand_total * 100, 1) if grand_total else None
+        npl = coverage_npl.get(frn, [])
+        latest_npl = max((item for item in npl if item["year"] == year), key=lambda item: item["label"], default=None)
+        category_list = ", ".join(sorted(categories)) or "—"
+        loan_rows.append(
+            f"<tr><td>{html.escape(bank)}</td><td>{year}</td><td>{html.escape(category_list)}</td>"
+            f"<td>{'—' if stage3_pct is None else f'{stage3_pct}%'}</td>"
+            f"<td>{html.escape(latest_npl['value_raw']) if latest_npl else '—'}</td></tr>"
+        )
+    if not loan_rows:
+        loan_rows.append('<tr><td colspan="5">No IFRS 9 stage data available.</td></tr>')
+
+    rwa_rows = []
+    for frn, years in sorted(rwa_to_assets.items(), key=lambda kv: banks.get(kv[0], "")):
+        bank = banks.get(frn, frn)
+        year = max(years)
+        density = years[year]
+        composition = rwa_category_composition.get(f"{frn}:{year}", [])
+        top_category = max(composition, key=lambda row: row["pct_of_total_rwa"], default=None)
+        top_text = f"{html.escape(top_category['label'])} ({top_category['pct_of_total_rwa']}%)" if top_category else "—"
+        rwa_rows.append(
+            f"<tr><td>{html.escape(bank)}</td><td>{year}</td><td>{density}%</td><td>{top_text}</td></tr>"
+        )
+    if not rwa_rows:
+        rwa_rows.append('<tr><td colspan="4">No RWA density data available.</td></tr>')
+
+    return f'''<details class="card wide analysis-collapsible"><summary>Loan concentration, asset quality, and RWA density</summary><div class="collapsible-content">
+<p class="explanation"><strong>What this shows:</strong> each bank's IFRS 9 loan-stage balances and RWA composition in its own most recent year with disclosed figures. Loan categories are reported as each bank actually discloses them - a bank with no customer loan book (e.g. a wholesale/treasury-led balance sheet) shows its own asset categories instead of an empty row. Stage 3 % is the share of the disclosed loan/exposure balance in Stage 3 (credit-impaired), a rough concentration-of-risk signal, not a formal NPL ratio unless the bank discloses one directly. RWA density is total RWAs as a % of total assets; the top RWA category is that bank-year's largest disclosed risk-weighted-asset category as a % of its own Total RWAs.</p>
+<h3>Loan concentration and quality</h3>
+<table><thead><tr><th>Bank</th><th>Year</th><th>Disclosed categories</th><th>Stage 3 %</th><th>Disclosed coverage/NPL ratio</th></tr></thead><tbody>{"".join(loan_rows)}</tbody></table>
+<h3>RWA density</h3>
+<table><thead><tr><th>Bank</th><th>Year</th><th>RWA / total assets</th><th>Largest RWA category</th></tr></thead><tbody>{"".join(rwa_rows)}</tbody></table>
+</div></details>'''
 
 
 def render_html_absolute_analysis(in012):
@@ -215,6 +287,8 @@ def render_html_analysis(payload):
         lines += ['<details class="card wide analysis-collapsible"><summary>Parent-group dispersion and agreement</summary><div class="collapsible-content">', '<p class="explanation"><strong>What this shows:</strong> whether separately regulated entities in the same banking group report similar Pillar 3 outcomes. The latest range describes the spread between the lowest and highest comparable entity; the trend describes whether entities moved in the same direction between reporting years. This is a legal-entity comparison, not a consolidated-group result.</p>', '<table><thead><tr><th>Metric</th><th>Group</th><th>Latest level</th><th>Range</th><th>Latest trend</th></tr></thead><tbody>', *parent_rows, "</tbody></table></div></details>"]
     if payload.get("in012"):
         lines.append(render_html_absolute_analysis(payload["in012"]))
+    if payload.get("in040"):
+        lines.append(render_html_risk_composition(payload["in040"]))
     if payload.get("in016"):
         distribution_rows = []
         for metric, modes in payload["in016"]["distributions"].items():
@@ -293,6 +367,7 @@ def render_html_analysis(payload):
         "Outlier investigation": "outliers",
         "Parent-group dispersion and agreement": "parent-dispersion",
         "Absolute capital and RWA analysis": "absolute-analysis",
+        "Loan concentration, asset quality, and RWA density": "risk-composition",
         "Comparable distribution benchmarks": "distribution-benchmarks",
         "Regulatory headroom trajectory": "headroom",
         "Interim disclosure coverage": "interim-coverage",
@@ -426,10 +501,19 @@ def render_html_trajectory_visuals(in024):
     rank_blocks = []
     all_years = sorted({point["year"] for records in trajectories.values() for record in records for point in record["years"]})
     display_all_years = [year for year in all_years if 2020 < year < 2026]
+    shared_records = {}
+    for records in trajectories.values():
+        for record in records:
+            shared_records.setdefault(str(record["bank"]), record)
     for metric, records in trajectories.items():
+        metric_slug = re.sub(r"[^a-z0-9]+", "-", metric.lower()).strip("-") or "metric"
         years = [point for point in (records[0]["years"] if records else []) if 2020 < point["year"] < 2026]
         display_year_numbers = [point["year"] for point in years]
-        numeric = [point["value"] for record in records for point in record["years"] if point["value"] is not None]
+        chart_spec = validate_chart_spec(build_line_chart_spec(
+            metric_slug, metric, "percentage points", records, display_year_numbers,
+            description=f"{metric} bank trajectories by fiscal year",
+        ))
+        numeric = [point["y"] for series in chart_spec["series"] for point in series["points"] if point["y"] is not None]
         low, high = (min(numeric), max(numeric)) if numeric else (0, 1)
         if high == low:
             high += 1
@@ -441,18 +525,19 @@ def render_html_trajectory_visuals(in024):
         for tick_y, tick_value in ((top, high), ((top + bottom) / 2, (low + high) / 2), (bottom, low)):
             tick_rows.append(f'<line class="axis" x1="48" y1="{tick_y:.1f}" x2="738" y2="{tick_y:.1f}" opacity=".25"/><text class="value in024-axis-value" data-axis-position="{tick_y:.1f}" text-anchor="end" x="40" y="{tick_y + 3:.1f}">{axis_fmt(tick_value)}</text>')
         tick_rows.append(f'<line class="axis" x1="48" y1="{top}" x2="48" y2="{bottom}"/>')
+        contract_series = {series["id"]: series for series in chart_spec["series"]}
         for record in records:
             points = []
-            record_points = {point["year"]: point for point in record["years"]}
+            record_points = {point["x"]: point for point in contract_series[str(record["bank"])] ["points"]}
             colour = "var(--blue)" if record["score"]["label"] == "persistent_up" else "var(--red)" if record["score"]["label"] == "persistent_down" else "#9aa4ab"
             for index, year in enumerate(display_year_numbers):
                 point = record_points[year]
-                if point["value"] is None:
+                if point["y"] is None:
                     continue
                 x = 48 + index * 690 / max(1, len(years) - 1)
-                y = bottom - (point["value"] - low) / (high - low) * (bottom - top)
+                y = bottom - (point["y"] - low) / (high - low) * (bottom - top)
                 points.append(f"{x:.1f},{y:.1f}")
-                point_markers.append(f'<ellipse class="in024-point" data-bank="{html.escape(str(record["bank"]), quote=True)}" data-year="{year}" data-value="{point["value"]}" cx="{x:.1f}" cy="{y:.1f}" rx="2.25" ry=".18" fill="{colour}" opacity=".85"><title>{html.escape(str(record["bank"]))} | FY{year}: {point["value"]:.2f}%</title></ellipse>')
+                point_markers.append(f'<ellipse class="in024-point" data-bank="{html.escape(str(record["bank"]), quote=True)}" data-year="{year}" data-value="{point["y"]}" cx="{x:.1f}" cy="{y:.1f}" rx="2.25" ry=".18" fill="{colour}" opacity=".85"><title>{html.escape(str(record["bank"]))} | FY{year}: {point["y"]:.2f}%</title></ellipse>')
             if len(points) >= 2:
                 paths.append(f'<polyline data-bank="{html.escape(str(record["bank"]), quote=True)}" points="{" ".join(points)}" fill="none" stroke="{colour}" stroke-width="1.8" data-base-stroke-width="1.8" vector-effect="non-scaling-stroke" opacity=".7"><title>{html.escape(record["bank"])} | {record["score"]["label"] or "insufficient series"} | N={record["score"]["changes"] + 1}</title></polyline>')
             changes = {item["start_year"]: item for item in record["changes"]}
@@ -467,10 +552,10 @@ def render_html_trajectory_visuals(in024):
                 latest = next((point for point in reversed(record["years"]) if point["value"] is not None), None)
                 candidate_items.append(record)
         labels = "".join(f'<text class="value" text-anchor="middle" x="{48 + index * 690 / max(1, len(years) - 1):.1f}" y="130">FY{year["year"]}</text>' for index, year in enumerate(years))
-        metric_slug = re.sub(r"[^a-z0-9]+", "-", metric.lower()).strip("-") or "metric"
         default_visible = default_bank_mix(records, display_year_numbers)
         bank_controls = "".join(f'<label><input type="checkbox" class="in024-bank-toggle" data-chart="{metric_slug}" data-default-visible="{"true" if str(record["bank"]) in default_visible else "false"}" value="{html.escape(str(record["bank"]), quote=True)}"{" checked" if str(record["bank"]) in default_visible else ""}> {html.escape(str(record["bank"]))}</label>' for record in records)
-        chart_blocks.append(f'<article class="card wide"><h3>{html.escape(metric)}</h3><div class="in024-chart-layout"><aside class="in024-bank-list" aria-label="Banks shown for {html.escape(metric)}"><strong>Include banks</strong><span class="sub">Representative default mix: large, medium, small/specialist, international ({len(default_visible)} shown)</span>{bank_controls}</aside><div class="in024-chart-stage"><div class="controls"><button type="button" class="in024-reset-zoom" data-chart="{metric_slug}">Reset zoom</button><span>Hover a point for bank, year, and value. Drag across a chart region to zoom; double-click to restore.</span></div><div class="in024-tooltip" role="status" aria-live="polite"></div><div role="img" aria-label="{html.escape(metric)} bank trajectory small multiple"><svg id="in024-chart-{metric_slug}" class="in024-trajectory-chart" data-chart="{metric_slug}" data-low="{low}" data-high="{high}" data-top="{top}" data-bottom="{bottom}" viewBox="0 0 760 145"><g class="in024-y-axis">{"".join(tick_rows)}</g><g class="in024-trajectory-layer"><line class="axis" x1="48" y1="108" x2="738" y2="108"/><g class="in024-data-layer">{"".join(paths)}{"".join(point_markers)}</g>{labels}</g><line class="in024-hover-line" x1="48" y1="18" x2="48" y2="108" style="display:none"></line><rect class="in024-brush" x="0" y="0" width="0" height="0" style="display:none"></rect></svg></div></div></div><p class="sub">FY2021–FY2025 shown; y-axis is metric-specific percentage points and rescales to the selected banks and zoom region. Missing years break the line. Persistent colours require at least {in024["metadata"]["minimum_changes"]} observed changes.</p></article>')
+        contract_json = html.escape(json.dumps(chart_spec, separators=(",", ":")), quote=True)
+        chart_blocks.append(f'<article class="card wide"><h3>{html.escape(metric)}</h3><div class="in024-chart-layout"><aside class="in024-bank-list" aria-label="Banks shown for {html.escape(metric)}"><strong>Include banks</strong><span class="sub">Representative default mix: large, medium, small/specialist, international ({len(default_visible)} shown)</span>{bank_controls}</aside><div class="in024-chart-stage" data-chart-contract="{contract_json}"><div class="controls"><button type="button" class="in024-reset-zoom" data-chart="{metric_slug}">Reset zoom</button><span>Hover a point for bank, year, and value. Drag across a chart region to zoom; double-click to restore.</span></div><div class="in024-tooltip" role="status" aria-live="polite"></div><div role="img" aria-label="{html.escape(metric)} bank trajectory small multiple"><svg id="in024-chart-{metric_slug}" class="in024-trajectory-chart" data-chart="{metric_slug}" data-low="{low}" data-high="{high}" data-top="{top}" data-bottom="{bottom}" viewBox="0 0 760 145"><g class="in024-y-axis">{"".join(tick_rows)}</g><g class="in024-trajectory-layer"><line class="axis" x1="48" y1="108" x2="738" y2="108"/><g class="in024-data-layer">{"".join(paths)}{"".join(point_markers)}</g>{labels}</g><line class="in024-hover-line" x1="48" y1="18" x2="48" y2="108" style="display:none"></line><rect class="in024-brush" x="0" y="0" width="0" height="0" style="display:none"></rect></svg></div></div></div><p class="sub">FY2021–FY2025 shown; y-axis is metric-specific percentage points and rescales to the selected banks and zoom region. Missing years break the line. Persistent colours require at least {in024["metadata"]["minimum_changes"]} observed changes.</p></article>')
         panels = in024["rank_mobility"].get(metric, [])
         panel = next((item for item in reversed(panels) if item["status"] == "eligible"), None)
         if panel:
@@ -480,9 +565,11 @@ def render_html_trajectory_visuals(in024):
                 y1 = 24 + (item["start_rank"] - 1) * 105 / max(1, n - 1)
                 y2 = 24 + (item["end_rank"] - 1) * 105 / max(1, n - 1)
                 colour = "var(--blue)" if item["rank_change"] < 0 else "var(--red)" if item["rank_change"] > 0 else "#9aa4ab"
-                lines.append(f'<line class="in024-rank-line" x1="170" y1="{y1:.1f}" x2="590" y2="{y2:.1f}" stroke="{colour}" stroke-width="1.3" data-base-stroke-width="1.3" vector-effect="non-scaling-stroke"><title>{html.escape(str(item["frn"]))}: rank {item["start_rank"]} to {item["end_rank"]}</title></line>')
+                lines.append(f'<line class="in024-rank-line" data-bank="{html.escape(str(item.get("bank", item["frn"])), quote=True)}" x1="170" y1="{y1:.1f}" x2="590" y2="{y2:.1f}" stroke="{colour}" stroke-width="1.3" data-base-stroke-width="1.3" vector-effect="non-scaling-stroke"><title>{html.escape(str(item.get("bank", item["frn"]))) }: rank {item["start_rank"]} to {item["end_rank"]}</title></line>')
             rank_slug = re.sub(r"[^a-z0-9]+", "-", f"{metric}-rank".lower()).strip("-") or "rank"
-            rank_blocks.append(f'<article class="card"><h3>{html.escape(metric)}</h3><div class="controls"><button type="button" class="in024-reset-zoom" data-chart="{rank_slug}">Reset zoom</button><span>Drag across the rank region to zoom; double-click to restore.</span></div><div role="img" aria-label="{html.escape(metric)} fixed-panel percentile rank slopegraph"><svg id="in024-chart-{rank_slug}" class="in024-trajectory-chart in024-rank-chart" data-chart="{rank_slug}" data-x-min="170" data-x-max="590" data-y-min="24" data-y-max="129" viewBox="0 0 640 155"><g class="in024-trajectory-layer">{"".join(lines)}<text class="label" x="140" y="145">FY{panel["start_year"]}</text><text class="label" x="560" y="145">FY{panel["end_year"]}</text></g><rect class="in024-brush" x="0" y="0" width="0" height="0" style="display:none"></rect></svg></div><p class="sub">Fixed same-basis panel N={n}; rank 1 is highest ratio. Blue = moved toward rank 1, red = moved away. Lines become finer when zoomed in to preserve detail.</p></article>')
+            rank_spec = validate_chart_spec(build_rank_chart_spec(rank_slug, metric, panel["records"], f"FY{panel['start_year']}", f"FY{panel['end_year']}", n))
+            rank_contract = html.escape(json.dumps(rank_spec, separators=(",", ":")), quote=True)
+            rank_blocks.append(f'<article class="card"><h3>{html.escape(metric)}</h3><div class="controls"><button type="button" class="in024-reset-zoom" data-chart="{rank_slug}">Reset zoom</button><span>Chart.js line chart; use the wheel to zoom the rank axis.</span></div><div class="in024-chart-stage" data-chart-contract="{rank_contract}" role="img" aria-label="{html.escape(metric)} fixed-panel percentile rank chart"><svg id="in024-chart-{rank_slug}" class="in024-trajectory-chart in024-rank-chart" data-chart="{rank_slug}" data-x-min="170" data-x-max="590" data-y-min="24" data-y-max="129" viewBox="0 0 640 155"><g class="in024-trajectory-layer">{"".join(lines)}<text class="label" x="140" y="145">FY{panel["start_year"]}</text><text class="label" x="560" y="145">FY{panel["end_year"]}</text></g><rect class="in024-brush" x="0" y="0" width="0" height="0" style="display:none"></rect></svg></div><p class="sub">Fixed same-basis panel N={n}; rank 1 is highest ratio. Blue = moved toward rank 1, red = moved away. The table remains the accessible detail view.</p></article>')
     candidate_items.sort(key=lambda record: (-record["score"]["persistence_score"], -abs(record["score"]["robust_total_change"] or 0), record["bank"], record["metric"]))
     candidate_rows = []
     for record in candidate_items:
@@ -493,10 +580,13 @@ def render_html_trajectory_visuals(in024):
         candidate_rows.append(f'<tr class="in024-filter-row" data-search="{html.escape((str(record["bank"]) + " " + record["metric"]).lower())}"><td>{html.escape(str(record["bank"]))}</td><td>{html.escape(record["metric"])}</td><td>{score["label"]}</td><td>{score["persistence_score"]:.2f}</td><td>{score["changes"]}</td><td>{score["robust_total_change"]:+.2f}</td><td><details><summary>{html.escape(str(basis or "unknown basis"))}</summary>{html.escape(str(note or "No source note recorded"))}</details></td></tr>')
     year_headers = "".join(f"<th>FY{year}→FY{year + 1}</th>" for year in display_all_years[:-1])
     churn_rows = "".join(f'<tr><td>{html.escape(metric)}</td><td>FY{item["start_year"]}→FY{item["end_year"]}</td><td>{item["start_n"]}</td><td>{item["end_n"]}</td><td>{item["retained_n"]}</td><td>{len(item["entered"])}</td><td>{len(item["exited"])}</td></tr>' for metric, items in in024["coverage_churn"].items() for item in items if item["start_year"] in display_all_years and item["end_year"] in display_all_years)
+    shared_default = default_bank_mix(list(shared_records.values()), display_all_years)
+    shared_bank_controls = "".join(f'<label><input type="checkbox" class="in024-shared-bank-toggle" data-default-visible="{"true" if name in shared_default else "false"}" value="{html.escape(name, quote=True)}"{" checked" if name in shared_default else ""}> {html.escape(name)}</label>' for name in sorted(shared_records, key=str.casefold))
     return f'''<details class="card wide analysis-collapsible"><summary>Persistent trajectories and rank mobility</summary><div class="collapsible-content">
 <p class="explanation"><strong>What this shows:</strong> whether a bank’s movement is persistent across adjacent annual observations rather than a one-year change or sample-coverage effect. Broad annual numeric observations are used for trajectories; at least {in024["metadata"]["minimum_changes"]} observed changes are required before a persistent label is assigned. Missing years remain missing and do not count as zero changes.</p>
 <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>persistent up: ≥75% of observed changes are up</span><span><i class="dot" style="background:var(--red)"></i>persistent down: ≥75% are down</span><span><i class="dot" style="background:#9aa4ab"></i>grey: mixed or insufficient series</span><span>blank gap: missing year, excluded from change count</span><span>y-axis ticks are metric-specific percentage points</span></div>
-<p class="sub">Each metric has its own bank checklist. Drag across a specific plot region to zoom into clustered lines; use Reset zoom or double-click the chart to restore the full view.</p>
+<div class="in024-shared-controls"><div class="controls"><strong>Bank selection</strong><button type="button" data-bank-preset="top">Representative defaults</button><button type="button" data-bank-preset="all">All banks</button><button type="button" data-bank-preset="clear">Clear</button><span class="sub">The same selection applies to every trajectory and rank chart.</span></div><div class="in024-bank-list in024-shared-bank-list" aria-label="Banks shown across trajectory and rank charts">{shared_bank_controls}</div></div>
+<p class="sub">Drag across a specific plot region to zoom into clustered lines; use Reset zoom or double-click the chart to restore the full view.</p>
 <div class="grid in024-trajectories">{"".join(chart_blocks)}</div>
 <h3>Direction and magnitude heatmap</h3><div class="controls"><label>Filter bank or metric <input id="in024-filter" type="search" placeholder="e.g. HSBC or CET1"></label></div><table><thead><tr><th>Bank</th><th>Metric</th>{year_headers}<th>Fingerprint</th></tr></thead><tbody>{"".join(heat_rows)}</tbody></table>
 <h3>Persistent review candidates</h3><p class="sub">Candidates are ordered by persistence score and absolute MAD-clipped accumulated change. This is a review queue, not a strength judgement; source notes and basis context remain visible.</p><table><thead><tr><th>Bank</th><th>Metric</th><th>Fingerprint</th><th>Persistence</th><th>Changes</th><th>Robust total change (pp)</th><th>Source / basis</th></tr></thead><tbody>{"".join(candidate_rows) or '<tr><td colspan="7">No eligible persistent candidates.</td></tr>'}</tbody></table>
@@ -537,8 +627,8 @@ def render_html_quality_views(in025):
 <p class="explanation"><strong>What this shows:</strong> where the evidence is strong enough for cross-bank interpretation and where disclosure quality limits it. Annual and interim observations are separate domains. The heatmap shows the actual disclosed value where available; unavailable or not-publicly-disclosed values are shown as N/A. Cell colour and tooltip retain the underlying quality state and comparability flags. No state is converted to zero.</p>
 <div class="legend"><span class="quality-badge">N={coverage["banks"]} banks</span><span class="quality-badge">unresolved flags={sum(1 for item in coverage["cells"] if item["flags"])}</span><span class="quality-badge">trace complete={trace["complete_rows"]}/{trace["rows"]}</span><span class="quality-badge">orphan annual/interim={join["annual_orphan_rows"]}/{join["interim_orphan_rows"]}</span></div>
 <h3>Cadence and quality by source domain</h3><table><thead><tr><th>Domain</th><th>Banks</th><th>Observations</th><th>Period types</th><th>Quality states</th></tr></thead><tbody>{"".join(cadence_rows)}</tbody></table>
-<h3>Annual evidence-quality heatmap</h3><div class="controls"><label>Filter bank, workbook, metric, or FRN <input id="in025-filter" type="search" placeholder="e.g. HSBC or CET1"></label></div><table><thead><tr><th>Bank</th><th>Metric</th>{"".join(f"<th>FY{year}</th>" for year in coverage_years)}</tr></thead><tbody>{"".join(coverage_rows)}</tbody></table>
-<h3>Searchable source trace</h3><p class="sub">Trace rows retain the FRN, workbook, sheet, source row, period, raw value, unit, reporting basis, and quality state. Interim rows remain identifiable by their source domain and period label.</p><table><thead><tr><th>FRN</th><th>Workbook</th><th>Sheet</th><th>Row label</th><th>Period</th><th>Raw value</th><th>Unit</th><th>Basis</th><th>Quality</th></tr></thead><tbody>{"".join(trace_rows)}</tbody></table>
+<details class="appendix-panel"><summary>Annual evidence-quality heatmap · open for bank/year detail</summary><div class="appendix-content"><div class="controls"><label>Filter bank, workbook, metric, or FRN <input id="in025-filter" type="search" placeholder="e.g. HSBC or CET1"></label></div><table><thead><tr><th>Bank</th><th>Metric</th>{"".join(f"<th>FY{year}</th>" for year in coverage_years)}</tr></thead><tbody>{"".join(coverage_rows)}</tbody></table></div></details>
+<details class="appendix-panel"><summary>Searchable source trace · open for row-level provenance</summary><div class="appendix-content"><p class="sub">Trace rows retain the FRN, workbook, sheet, source row, period, raw value, unit, reporting basis, and quality state. Interim rows remain identifiable by their source domain and period label.</p><table><thead><tr><th>FRN</th><th>Workbook</th><th>Sheet</th><th>Row label</th><th>Period</th><th>Raw value</th><th>Unit</th><th>Basis</th><th>Quality</th></tr></thead><tbody>{"".join(trace_rows)}</tbody></table></div></details>
 <script>(function(){{const input=document.getElementById('in025-filter');if(!input)return;input.addEventListener('input',function(){{const q=input.value.toLowerCase();document.querySelectorAll('.in025-filter-row').forEach(row=>row.style.display=!q||row.dataset.search.includes(q)?'':'none')}})}})();</script></div></details>'''
 
 
@@ -645,6 +735,24 @@ def render_pdf_analysis_lines(payload):
                 f"{metric} | {coverage.get('known_unit_banks', 0)} known-unit banks | "
                 f"{scaled.get('banks', 0)} scale-adjusted banks | exclusions={exclusions}"
             )
+    if payload.get("in040"):
+        in040 = payload["in040"]
+        banks = in040["metadata"]["banks"]
+        stage_coverage = in040["loan_concentration_quality"]["coverage"]
+        rwa_coverage = in040["rwa_density"]["coverage"]
+        lines.append("Loan concentration, asset quality, and RWA density")
+        lines.append(
+            f"Loan/asset-quality: {stage_coverage['banks_with_stage_data']} banks with IFRS 9 stage data, "
+            f"{stage_coverage['banks_with_coverage_or_npl_disclosure']} with a disclosed coverage/NPL ratio."
+        )
+        lines.append(
+            f"RWA density: {rwa_coverage['bank_years_with_rwa_to_assets']} bank-years with RWA/assets, "
+            f"{rwa_coverage['bank_years_with_category_breakdown']} bank-years with a category breakdown."
+        )
+        rwa_to_assets = in040["rwa_density"]["rwa_to_assets_pct"]
+        for frn, years in sorted(rwa_to_assets.items(), key=lambda kv: banks.get(kv[0], ""))[:24]:
+            year = max(years)
+            lines.append(f"{banks.get(frn, frn)} | FY{year} | RWA/assets={years[year]}%")
     if payload.get("interim"):
         coverage = payload["interim"]["coverage"]
         lines.append("Interim disclosure coverage")

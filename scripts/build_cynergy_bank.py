@@ -67,6 +67,254 @@ def p3_sources():
 
 bw = BankWorkbook(bank_name="Cynergy Bank Plc", years=YEARS, year_label=YEAR_LABEL, header_color="46C505")
 
+STATEMENTS_ENTITY_NOTE = (
+    ENTITY_NOTE
+    + "\n\nEach year's own originally-published figures are used for the Balance Sheet, Profit & Loss and "
+    "Statement of Changes in Equity below (not later restated comparatives) - the same convention already "
+    "applied to the Cash Flow Statement. FY2025's own report explicitly restates FY2024 (e.g. Total assets "
+    "£5,098,500k own-report vs £5,083,343k restated comparative shown in the FY2025 report) - FY2024's own "
+    "Annual Report is used instead. FY2021 figures are the FY2021 comparative column within FY2022's own "
+    "Annual Report (Companies House, scanned) - the FY2021 Annual Report itself was not independently "
+    "re-checked, same pattern as the Cash Flow Statement's FY2021 sourcing.\n"
+    "PRESENTATION NOTE: 'Current tax asset(s)' and 'Deferred tax liabilities' only appear as their own "
+    "Balance Sheet lines from FY2025 onward (per that year's own restatement note); earlier years fold these "
+    "into Other assets/Other liabilities - left blank rather than guessed for FY2021-FY2024. 'Assets "
+    "classified as held for sale' appears only FY2022-FY2023. Subordinated loan(s) were fully repaid during "
+    "FY2022 (nil at 31 Dec 2022) and re-issued during FY2023 (£14,847k) - a genuine, disclosed movement, not "
+    "a data gap."
+)
+
+STATEMENTS_SOURCES = (
+    "Sources - Cynergy Bank Plc's own Consolidated statement of financial position, statement of profit or "
+    "loss / income statement, statement of comprehensive income, and statement of changes in equity, "
+    "transcribed from each year's own report (not a later year's restated comparative):\n"
+    f"FY2025 (& FY2024 restated comparative used only for the equity roll-forward's opening-balance cross-"
+    f"check, not as FY2024's own figures): Cynergy Bank plc Annual Report & Accounts 2025, p.52-53 - "
+    f"{AR2025_URL}\n"
+    f"FY2024 (own, & FY2023 comparative cross-checked): Cynergy Bank plc Annual Report & Accounts 2024, "
+    f"p.83-86 - {AR2024_URL}\n"
+    f"FY2023 (own, & FY2022 comparative cross-checked): Cynergy Bank Limited Annual Report & Accounts 2023, "
+    f"p.89-93 - {AR2023_URL}\n"
+    f"FY2022 (own) & FY2021 (comparative): Cynergy Bank Limited Annual Report & Accounts 2022 (Companies "
+    f"House filing, scanned), p.91-93 - {AR2022_CH_URL}\n\n"
+    + STATEMENTS_ENTITY_NOTE
+)
+
+ASSET_QUALITY_SOURCES = (
+    "Sources - Cynergy Bank Plc's own Credit Risk note (IFRS 9 staging, Consolidated Loans + Overdrafts "
+    "gross carrying amount and ECL reconciliation tables combined):\n"
+    f"FY2025 (& FY2024 own-report comparative used for cross-check only): Annual Report & Accounts 2025, "
+    f"Note 15/Credit risk section, p.65-67 - {AR2025_URL}\n"
+    f"FY2024 (own) & FY2023 (own-report comparative, cross-checked against AR2023's own FY2023 figures): "
+    f"Annual Report & Accounts 2024, p.113-118 - {AR2024_URL}\n"
+    f"FY2022 (own, via AR2023's own comparative column) & the FY2021 closing balance (via AR2023's own "
+    f"'At 1 January 2022' opening-balance row, which is FY2021's own closing balance): Annual Report & "
+    f"Accounts 2023, p.123-126 - {AR2023_URL}\n\n"
+    + ENTITY_NOTE
+    + "\n\nFY2021's stage split is the FY2021 closing balance recovered from FY2022's own reconciliation "
+    "table 'At 1 January' row (the FY2021 Annual Report's own credit risk note was not independently "
+    "re-checked) - same 'sourced from the following year's own comparative' pattern used elsewhere in this "
+    "project. Ratios (Stage 3/Total gross exposure, Total ECL/Total gross exposure coverage, Stage 3 "
+    "coverage) are calculated from the gross carrying amount and ECL figures above, not separately "
+    "disclosed."
+)
+
+# ---------------------------------------------------------------
+# Sheet: Balance Sheet
+# ---------------------------------------------------------------
+balance_sheet_rows = [
+    ("SECTION", "Assets", {}),
+    ("DATA", "Cash and balances with central banks",
+     {"FY2025": 575031, "FY2024": 1014572, "FY2023": 697790, "FY2022": 553007, "FY2021": 324982}),
+    ("DATA", "Placements with banks",
+     {"FY2025": 36872, "FY2024": 44279, "FY2023": 63156, "FY2022": 102320, "FY2021": 54529}),
+    ("DATA", "Loans and advances to customers",
+     {"FY2025": 3745133, "FY2024": 3653477, "FY2023": 3564297, "FY2022": 3254230, "FY2021": 2949578}),
+    ("DATA", "Investment in securities",
+     {"FY2025": 1080929, "FY2024": 252914, "FY2023": 127547, "FY2022": 113377, "FY2021": 137782}),
+    ("DATA", "Derivative assets",
+     {"FY2025": 1843, "FY2024": 6404, "FY2023": 4512, "FY2022": 12404, "FY2021": 54}),
+    ("DATA", "Intangible assets",
+     {"FY2025": 78293, "FY2024": 63455, "FY2023": 49303, "FY2022": 27469, "FY2021": 26513}),
+    ("DATA", "Right-of-use assets",
+     {"FY2025": 9918, "FY2024": 11060, "FY2023": 11553, "FY2022": 11891, "FY2021": 220}),
+    ("DATA", "Property and equipment",
+     {"FY2025": 3080, "FY2024": 7934, "FY2023": 3861, "FY2022": 914, "FY2021": 12875}),
+    ("DATA", "Assets classified as held for sale",
+     {"FY2023": 7070, "FY2022": 7070}),
+    ("DATA", "Other assets",
+     {"FY2025": 58369, "FY2024": 44405, "FY2023": 82142, "FY2022": 42031, "FY2021": 11501}),
+    ("DATA", "Current tax assets",
+     {"FY2025": 7854}),
+    ("TOTAL", "Total assets",
+     {"FY2025": 5597322, "FY2024": 5098500, "FY2023": 4611231, "FY2022": 4124713, "FY2021": 3518034}),
+
+    ("SECTION", "Liabilities", {}),
+    ("DATA", "Customer deposits",
+     {"FY2025": 4910863, "FY2024": 4492026, "FY2023": 3758037, "FY2022": 3336442, "FY2021": 2832564}),
+    ("DATA", "Bank deposits",
+     {"FY2025": 85131, "FY2024": 80924, "FY2023": 359667, "FY2022": 390170, "FY2021": 400125}),
+    ("DATA", "Subordinated loan(s)",
+     {"FY2025": 49805, "FY2024": 14881, "FY2023": 14847, "FY2022": 0, "FY2021": 29868}),
+    ("DATA", "Lease liabilities",
+     {"FY2025": 10690, "FY2024": 11895, "FY2023": 12873, "FY2022": 12065, "FY2021": 278}),
+    ("DATA", "Provision for customer redress",
+     {"FY2022": 716, "FY2021": 261}),
+    ("DATA", "Deferred tax liabilities",
+     {"FY2025": 11526}),
+    ("DATA", "Derivative liabilities",
+     {"FY2025": 14563, "FY2024": 11478, "FY2023": 32374, "FY2022": 3838, "FY2021": 429}),
+    ("DATA", "Other liabilities",
+     {"FY2025": 88515, "FY2024": 99440, "FY2023": 83883, "FY2022": 72036, "FY2021": 33793}),
+    ("TOTAL", "Total liabilities",
+     {"FY2025": 5171093, "FY2024": 4710644, "FY2023": 4261681, "FY2022": 3815267, "FY2021": 3297318}),
+
+    ("SECTION", "Equity", {}),
+    ("DATA", "Share capital",
+     {"FY2025": 202000, "FY2024": 202000, "FY2023": 202000, "FY2022": 202000, "FY2021": 155000}),
+    ("DATA", "Property revaluation reserve",
+     {"FY2024": 505, "FY2023": 2433, "FY2022": 3148, "FY2021": 1674}),
+    ("DATA", "Accumulated profits",
+     {"FY2025": 222240, "FY2024": 184557, "FY2023": 145003, "FY2022": 104490, "FY2021": 64191}),
+    ("TOTAL", "Equity attributable to owners of the company",
+     {"FY2025": 424240, "FY2024": 387062, "FY2023": 349436, "FY2022": 309638, "FY2021": 220865}),
+    ("DATA", "Non-controlling interest",
+     {"FY2025": 1989, "FY2024": 794, "FY2023": 114, "FY2022": -192, "FY2021": -149}),
+    ("TOTAL", "Total equity",
+     {"FY2025": 426229, "FY2024": 387856, "FY2023": 349550, "FY2022": 309446, "FY2021": 220716}),
+    ("TOTAL", "Total liabilities and equity",
+     {"FY2025": 5597322, "FY2024": 5098500, "FY2023": 4611231, "FY2022": 4124713, "FY2021": 3518034}),
+]
+
+bw.add_balance_sheet_sheet(
+    title="Cynergy Bank Plc — Consolidated Statement of Financial Position",
+    subtitle="Consolidated basis, £'000. See source note at bottom (presentation changes documented).",
+    rows=balance_sheet_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=86,
+    source_height=320,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Profit & Loss
+# ---------------------------------------------------------------
+income_statement_rows = [
+    ("SECTION", "Income", {}),
+    ("DATA", "Interest income calculated using the effective interest method",
+     {"FY2025": 328554, "FY2024": 312777, "FY2023": 276395, "FY2022": 167199, "FY2021": 105716}),
+    ("DATA", "Other interest and similar income/(expense)",
+     {"FY2025": 59793, "FY2024": 57827, "FY2023": 41559, "FY2022": 1610, "FY2021": -187}),
+    ("DATA", "Interest expense calculated using the effective interest method",
+     {"FY2025": -193820, "FY2024": -191478, "FY2023": -128355, "FY2022": -44103, "FY2021": -18356}),
+    ("DATA", "Other interest expense",
+     {"FY2025": -61768, "FY2024": -48550, "FY2023": -34811, "FY2022": -1578}),
+    ("TOTAL", "Net interest income",
+     {"FY2025": 132759, "FY2024": 130576, "FY2023": 154788, "FY2022": 123128, "FY2021": 87173}),
+    ("DATA", "Fee and commission income",
+     {"FY2025": 3777, "FY2024": 3089, "FY2023": 2606, "FY2022": 1667, "FY2021": 1193}),
+    ("DATA", "Foreign exchange (losses)/gains",
+     {"FY2025": -677, "FY2024": 712, "FY2023": 42, "FY2022": -1194, "FY2021": 1853}),
+    ("DATA", "Fair value adjustment/(loss)/gain on hedging or derivative instruments",
+     {"FY2025": 544, "FY2024": -204, "FY2023": 2110, "FY2022": 3983, "FY2021": -2190}),
+    ("DATA", "Net gains on derecognition of financial assets",
+     {"FY2025": 3578}),
+    ("DATA", "Other income",
+     {"FY2025": 504, "FY2024": 473}),
+    ("TOTAL", "Total operating income",
+     {"FY2025": 140485, "FY2024": 134646, "FY2023": 159546, "FY2022": 127584, "FY2021": 88029}),
+    ("SECTION", "Expenses", {}),
+    ("DATA", "Staff costs",
+     {"FY2025": -41616, "FY2024": -42783, "FY2023": -49464, "FY2022": -38334, "FY2021": -28874}),
+    ("DATA", "Depreciation, amortisation and impairment/write-offs",
+     {"FY2025": -12516, "FY2024": -9766, "FY2023": -7072, "FY2022": -5758, "FY2021": -3447}),
+    ("DATA", "Other operating expenses",
+     {"FY2025": -35284, "FY2024": -28383, "FY2023": -43684, "FY2022": -33133, "FY2021": -19912}),
+    ("TOTAL", "Total operating expenses",
+     {"FY2025": -89416, "FY2024": -80932, "FY2023": -100220, "FY2022": -77225, "FY2021": -52233}),
+    ("DATA", "Other gains",
+     {"FY2025": 404, "FY2024": 1000}),
+    ("DATA", "Gain on sale of property",
+     {"FY2023": 276, "FY2022": 9230}),
+    ("TOTAL", "Profit before credit impairment reversals/(charges)",
+     {"FY2025": 51473, "FY2024": 54714, "FY2023": 59602, "FY2022": 59589, "FY2021": 35796}),
+    ("DATA", "Credit impairment reversals/(charges) on financial assets",
+     {"FY2025": 91, "FY2024": -2082, "FY2023": -4445, "FY2022": -9100, "FY2021": -5396}),
+    ("TOTAL", "Profit before tax",
+     {"FY2025": 51564, "FY2024": 52632, "FY2023": 55157, "FY2022": 50489, "FY2021": 30400}),
+    ("DATA", "Income tax expense",
+     {"FY2025": -13624, "FY2024": -12398, "FY2023": -14544, "FY2022": -10233, "FY2021": -5471}),
+    ("TOTAL", "Profit for the year",
+     {"FY2025": 37940, "FY2024": 40234, "FY2023": 40613, "FY2022": 40256, "FY2021": 24929}),
+    ("DATA", "Profit attributable to: Owners of the company",
+     {"FY2025": 36745, "FY2024": 39554, "FY2023": 40307, "FY2022": 40299, "FY2021": 25078}),
+    ("DATA", "Profit/(loss) attributable to: Non-controlling interest",
+     {"FY2025": 1195, "FY2024": 680, "FY2023": 306, "FY2022": -43, "FY2021": -149}),
+    ("SECTION", "Other comprehensive income", {}),
+    ("DATA", "Revaluation gain/(loss) on property",
+     {"FY2024": -2571, "FY2022": 1474}),
+    ("DATA", "Income tax relating to property revaluation",
+     {"FY2024": 643, "FY2023": -509}),
+    ("TOTAL", "Other comprehensive income/(expense) for the year, net of tax",
+     {"FY2025": 0, "FY2024": -1928, "FY2023": -509, "FY2022": 1474, "FY2021": 0}),
+    ("TOTAL", "Total comprehensive income for the year",
+     {"FY2025": 37940, "FY2024": 38306, "FY2023": 40104, "FY2022": 41730, "FY2021": 24929}),
+]
+
+bw.add_income_statement_sheet(
+    title="Cynergy Bank Plc — Consolidated Statement of Comprehensive Income",
+    subtitle="Consolidated basis, £'000. See source note at bottom.",
+    rows=income_statement_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=86,
+    source_height=320,
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Statement of Changes in Equity
+# ---------------------------------------------------------------
+equity_headers = ["Share capital", "Property revaluation reserve", "Accumulated profits",
+                   "Total attributable to owners", "Non-controlling interest", "Total equity"]
+equity_rows = [
+    ("TOTAL", "At 1 January 2021 (via FY2022 report's own comparative)",
+     (155000, 1674, 39113, 195787, 0, 195787)),
+    ("DATA", "Profit for the year after tax", (None, None, 25078, 25078, -149, 24929)),
+    ("TOTAL", "At 31 December 2021", (155000, 1674, 64191, 220865, -149, 220716)),
+
+    ("TOTAL", "At 1 January 2022", (155000, 1674, 64191, 220865, -149, 220716)),
+    ("DATA", "Profit/(loss) for the year after tax", (None, None, 40299, 40299, -43, 40256)),
+    ("DATA", "Other comprehensive income (revaluation of own properties)", (None, 1474, None, 1474, None, 1474)),
+    ("DATA", "Issue of share capital", (47000, None, None, 47000, None, 47000)),
+    ("TOTAL", "At 31 December 2022", (202000, 3148, 104490, 309638, -192, 309446)),
+
+    ("TOTAL", "At 1 January 2023", (202000, 3148, 104490, 309638, -192, 309446)),
+    ("DATA", "Profit for the year after tax", (None, None, 40307, 40307, 306, 40613)),
+    ("DATA", "Other comprehensive income (tax on property revaluation)", (None, -509, None, -509, None, -509)),
+    ("DATA", "Transfer from revaluation reserve to retained earnings", (None, -206, 206, None, None, None)),
+    ("TOTAL", "At 31 December 2023", (202000, 2433, 145003, 349436, 114, 349550)),
+
+    ("TOTAL", "At 1 January 2024", (202000, 2433, 145003, 349436, 114, 349550)),
+    ("DATA", "Profit for the year after tax", (None, None, 39554, 39554, 680, 40234)),
+    ("DATA", "Other comprehensive income (revaluation loss on property, net of tax)", (None, -1928, None, -1928, None, -1928)),
+    ("TOTAL", "At 31 December 2024", (202000, 505, 184557, 387062, 794, 387856)),
+
+    ("TOTAL", "At 1 January 2025", (202000, 505, 184557, 387062, 794, 387856)),
+    ("DATA", "Profit for the year after tax", (None, None, 36745, 36745, 1195, 37940)),
+    ("DATA", "Transfer and tax release on disposal of revalued asset", (None, -505, 938, 433, None, 433)),
+    ("TOTAL", "At 31 December 2025", (202000, 0, 222240, 424240, 1989, 426229)),
+]
+
+bw.add_equity_changes_sheet(
+    title="Cynergy Bank Plc — Consolidated Statement of Changes in Equity",
+    subtitle="Consolidated basis, £'000, chronological (oldest to newest). See source note at bottom.",
+    headers=equity_headers,
+    rows=equity_rows,
+    sources_text=STATEMENTS_SOURCES,
+    first_col_width=58,
+    source_height=320,
+)
+
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
@@ -130,7 +378,46 @@ bw.add_cash_flow_sheet(
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=80,
     source_height=260,
-    unit_suffix="",
+    unit_suffix=" (£'000)",
+)
+
+# ---------------------------------------------------------------
+# Sheet: Asset Quality
+# ---------------------------------------------------------------
+asset_quality_rows = [
+    ("SECTION", "Gross carrying amount by IFRS 9 stage (Loans + Overdrafts, Consolidated)", {}),
+    ("DATA", "Stage 1 gross carrying amount",
+     {"FY2025": 3423245, "FY2024": 3210782, "FY2023": 2968247, "FY2022": 2826161, "FY2021": 2687050}),
+    ("DATA", "Stage 2 gross carrying amount",
+     {"FY2025": 259276, "FY2024": 372480, "FY2023": 549578, "FY2022": 385150, "FY2021": 232788}),
+    ("DATA", "Stage 3 gross carrying amount",
+     {"FY2025": 91016, "FY2024": 99046, "FY2023": 73262, "FY2022": 65258, "FY2021": 43661}),
+    ("TOTAL", "Total gross carrying amount",
+     {"FY2025": 3773537, "FY2024": 3682308, "FY2023": 3591087, "FY2022": 3276569, "FY2021": 2963499}),
+    ("SECTION", "Expected credit loss (ECL) allowance by stage", {}),
+    ("DATA", "Stage 1 ECL", {"FY2025": 3964, "FY2024": 4403, "FY2023": 5372, "FY2022": 3338, "FY2021": 2124}),
+    ("DATA", "Stage 2 ECL", {"FY2025": 2951, "FY2024": 4118, "FY2023": 8485, "FY2022": 5321, "FY2021": 2175}),
+    ("DATA", "Stage 3 ECL", {"FY2025": 21489, "FY2024": 20310, "FY2023": 12933, "FY2022": 13680, "FY2021": 9626}),
+    ("TOTAL", "Total ECL allowance",
+     {"FY2025": 28404, "FY2024": 28831, "FY2023": 26790, "FY2022": 22339, "FY2021": 13925}),
+    ("SECTION", "Derived ratios", {}),
+    ("DATA", "Stage 3 / total gross carrying amount",
+     {"FY2025": "2.412%", "FY2024": "2.690%", "FY2023": "2.040%", "FY2022": "1.992%", "FY2021": "1.473%"}),
+    ("DATA", "Total ECL / total gross carrying amount (overall coverage)",
+     {"FY2025": "0.753%", "FY2024": "0.783%", "FY2023": "0.746%", "FY2022": "0.682%", "FY2021": "0.470%"}),
+    ("DATA", "Stage 3 ECL / Stage 3 gross carrying amount (Stage 3 coverage)",
+     {"FY2025": "23.61%", "FY2024": "20.51%", "FY2023": "17.65%", "FY2022": "20.96%", "FY2021": "22.05%"}),
+]
+
+bw.add_asset_quality_sheet(
+    title="Cynergy Bank Plc — Asset Quality",
+    subtitle="Consolidated basis, £'000 (ratios as calculated), combining the Loans and Overdrafts credit "
+              "risk note tables. See source note at bottom.",
+    rows=asset_quality_rows,
+    sources_text=ASSET_QUALITY_SOURCES,
+    first_col_width=60,
+    source_height=320,
+    unit_suffix=" (£'000)",
 )
 
 # ---------------------------------------------------------------
@@ -180,16 +467,56 @@ metric(
 )
 
 bw.add_not_disclosed_metric_sheets(
-    ["Total Capital Ratio", "Total RWAs", "Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
+    ["Total Capital Ratio", "Total RWAs"],
     p3_sources(),
-    per_note={m: NOT_DISCLOSED_NOTE for m in
-              ["Total Capital Ratio", "Total RWAs", "Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]},
+    per_note={m: NOT_DISCLOSED_NOTE for m in ["Total Capital Ratio", "Total RWAs"]},
+)
+
+RWA_BREAKDOWN_NOTE = (
+    "Not publicly disclosed in any of the 5 years reviewed. See the Total RWAs sheet's own note - no "
+    "aggregate RWA figure, let alone a risk-category breakdown, was found in any Annual Report reviewed; "
+    "confirmed by reading each report's Risk report and financial statement notes in full, not assumed "
+    "absent."
+)
+bw.add_rwa_breakdown_sheet(
+    title="Cynergy Bank Plc — RWA Breakdown",
+    subtitle="Not publicly disclosed. See source note at bottom.",
+    rows=[("DATA", "Not publicly disclosed", {})],
+    sources_text=p3_sources() + "\n\n" + RWA_BREAKDOWN_NOTE,
+    first_col_width=54,
+    source_height=200,
+)
+
+bw.add_not_disclosed_metric_sheets(
+    ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
+    p3_sources(),
+    per_note={m: NOT_DISCLOSED_NOTE for m in ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]},
 )
 
 # ---------------------------------------------------------------
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
+    balance_sheet_totals=[
+        ("Total assets", {"FY2025": 5597322, "FY2024": 5098500, "FY2023": 4611231, "FY2022": 4124713, "FY2021": 3518034}),
+        ("Loans and advances to customers", {"FY2025": 3745133, "FY2024": 3653477, "FY2023": 3564297, "FY2022": 3254230, "FY2021": 2949578}),
+        ("Customer deposits", {"FY2025": 4910863, "FY2024": 4492026, "FY2023": 3758037, "FY2022": 3336442, "FY2021": 2832564}),
+        ("Total equity", {"FY2025": 426229, "FY2024": 387856, "FY2023": 349550, "FY2022": 309446, "FY2021": 220716}),
+    ],
+    balance_sheet_unit="£'000",
+    income_statement_totals=[
+        ("Total operating income", {"FY2025": 140485, "FY2024": 134646, "FY2023": 159546, "FY2022": 127584, "FY2021": 88029}),
+        ("Total operating expenses", {"FY2025": -89416, "FY2024": -80932, "FY2023": -100220, "FY2022": -77225, "FY2021": -52233}),
+        ("Profit for the year", {"FY2025": 37940, "FY2024": 40234, "FY2023": 40613, "FY2022": 40256, "FY2021": 24929}),
+    ],
+    income_statement_unit="£'000",
+    equity_changes_totals=[
+        ("Opening equity", {"FY2025": 387856, "FY2024": 349550, "FY2023": 309446, "FY2022": 220716, "FY2021": 195787}),
+        ("Total comprehensive income for the year", {"FY2025": 37940, "FY2024": 38306, "FY2023": 40104, "FY2022": 41730, "FY2021": 24929}),
+        ("Other equity movements, net", {"FY2025": 433, "FY2024": 0, "FY2023": 0, "FY2022": 47000, "FY2021": 0}),
+        ("Closing equity", {"FY2025": 426229, "FY2024": 387856, "FY2023": 349550, "FY2022": 309446, "FY2021": 220716}),
+    ],
+    equity_changes_unit="£'000",
     cash_flow_totals=[
         ("Net cash flow from/(used in) operating activities", {"FY2025": -17143, "FY2024": 445559, "FY2023": 130953, "FY2022": 190786, "FY2021": 234303}),
         ("Net cash flow from/(used in) investing activities", {"FY2025": -459330, "FY2024": -135783, "FY2023": -39022, "FY2022": 36420, "FY2021": -147084}),
