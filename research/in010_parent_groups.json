@@ -1016,6 +1016,26 @@
           "trends": [
             {
               "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
               "direction": "-",
               "down": 3,
               "end_year": 2022,
@@ -2250,6 +2270,46 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2018,
+              "n": 2,
+              "same": 0,
+              "start_year": 2017,
+              "up": 2
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2019,
+              "n": 2,
+              "same": 0,
+              "start_year": 2018,
+              "up": 1
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 1
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 2
+            },
             {
               "agreement": 1.0,
               "direction": "+",
@@ -5672,6 +5732,26 @@
           ],
           "trends": [
             {
+              "agreement": 0.5,
+              "direction": "-",
+              "down": 1,
+              "end_year": 2020,
+              "n": 2,
+              "same": 1,
+              "start_year": 2019,
+              "up": 0
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 1
+            },
+            {
               "agreement": 1.0,
               "direction": "+",
               "down": 0,
@@ -6881,8 +6961,17 @@
         {
           "group": "UBS group (current)",
           "latest_level": {
-            "reason": "fewer than two entities share a comparable year",
-            "status": "insufficient"
+            "max": 11.8,
+            "median": 9.8,
+            "min": 7.8,
+            "n": 2,
+            "range": 4.000000000000001,
+            "status": "comparable",
+            "values": {
+              "124269": 7.8,
+              "146702": 11.8
+            },
+            "year": 2018
           },
           "member_count": 2,
           "members": [
@@ -6897,7 +6986,18 @@
               "frn": "146702"
             }
           ],
-          "trends": []
+          "trends": [
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2018,
+              "n": 2,
+              "same": 0,
+              "start_year": 2017,
+              "up": 2
+            }
+          ]
         },
         {
           "group": "UTB Partners group",
@@ -10351,6 +10451,26 @@
           "trends": [
             {
               "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
               "direction": "-",
               "down": 3,
               "end_year": 2022,
@@ -11585,6 +11705,46 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2018,
+              "n": 2,
+              "same": 0,
+              "start_year": 2017,
+              "up": 2
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2019,
+              "n": 2,
+              "same": 0,
+              "start_year": 2018,
+              "up": 1
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 1
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 2
+            },
             {
               "agreement": 1.0,
               "direction": "+",
@@ -15077,6 +15237,26 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 1
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 2
+            },
             {
               "agreement": 0.6666666666666666,
               "direction": "-",

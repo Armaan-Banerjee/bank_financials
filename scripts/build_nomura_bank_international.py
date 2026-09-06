@@ -25,11 +25,11 @@ def ar_sources():
     return (
         ENTITY_NOTE + "\n\n"
         "Sources — Nomura Bank International plc Annual Reports and Financial Statements, Statement of Cash Flows "
-        "and Note 16 UK Regulatory Capital:\n"
+        "and Note 15 UK Regulatory Capital:\n"
         f"FY2025: Annual Report for year ended 31 March 2025, pp.34 and 79 — {AR25_URL}\n"
         f"FY2024: Annual Report for year ended 31 March 2024, pp.38 and 85 — {AR24_URL}\n"
         f"FY2023: Annual Report for year ended 31 March 2023, pp.37 and 85 — {AR23_URL}\n"
-        f"FY2022: Annual Report for year ended 31 March 2022, Statement of Cash Flows and Note 16; the FY2023 "
+        f"FY2022: Annual Report for year ended 31 March 2022, Statement of Cash Flows and Note 15; the FY2023 "
         f"report's comparative column is also cross-checkable, pp.37 and 85 — {AR22_URL} / {AR23_URL}\n"
         f"FY2021: Annual Report for year ended 31 March 2021, pp.27 and 80 — {AR21_URL}\n"
         "The official reports are scanned PDFs; figures were transcribed from the cited pages and cross-checked "

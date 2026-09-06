@@ -2,7 +2,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]  # most recent first
 YEAR_LABEL = {y: y for y in YEARS}
 
 # ---------------------------------------------------------------
@@ -19,11 +19,15 @@ AR2024_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2023_URL = "https://find-and-update.company-information.service.gov.uk/company/04459383/filing-history/MzQyNjA0OTI3OWFkaXF6a2N4/document?format=pdf&download=0"
 AR2022_URL = "https://find-and-update.company-information.service.gov.uk/company/04459383/filing-history/MzM4NTMzODE5NmFkaXF6a2N4/document?format=pdf&download=0"
 AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company/04459383/filing-history/MzM0MTI4NjI3MGFkaXF6a2N4/document?format=pdf&download=0"
+AR2020_URL = "https://find-and-update.company-information.service.gov.uk/company/04459383/filing-history/MzMxMTQ1Nzc1OGFkaXF6a2N4/document?download=0&format=pdf"
+AR2019_URL = "https://find-and-update.company-information.service.gov.uk/company/04459383/filing-history/MzI3NzY5NDQwNWFkaXF6a2N4/document?download=0&format=pdf"
 
 P3_2024_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2025/09/FirstBank-UK-Pillar-3-Dec-2024-1.pdf"
 P3_2023_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FirstBank-UK-Pillar-3-Dec-2023.pdf"
 P3_2022_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FirstBank-UK-Pillar-3-Dec-2022-V1.0.pdf"
 P3_2021_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK-Pillar-3-Disclosures_-2021.pdf"
+P3_2020_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK_Pillar-3-Disclosures_2020.pdf"
+P3_2019_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK-Pillar-3-Dec-19-FINAL-Published_v3.pdf"
 
 # ---------------------------------------------------------------
 # Currency note: the Bank changed its presentation/functional currency from
@@ -49,6 +53,9 @@ P3_2021_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK-Pillar
 FX_SPOT_2020 = 1.3661  # 31 Dec 2020 - only used for FY2021's opening cash balance
 FX_SPOT_2021 = 1.3521  # 31 Dec 2021
 FX_AVG_2021 = 1.3752
+FX_SPOT_2019 = 1.3210
+FX_AVG_2019 = 1.2767
+FX_AVG_2020 = 1.2837
 
 CURRENCY_NOTE = (
     "CURRENCY NOTE: FirstBank UK Limited changed its presentation currency from GBP to USD starting with its "
@@ -61,7 +68,10 @@ CURRENCY_NOTE = (
     "cash balance). Ratios are NOT converted - dimensionless and currency-invariant, so FY2021's ratios below "
     "are the Bank's own as-reported % figures unchanged. The FY2021 cash flow column includes an explicit "
     "'Effect of GBP/USD translation' line so opening + flows + this line = closing exactly in $ terms; this "
-    "line is a translation artefact only and has no bearing on the Bank's underlying £ results for FY2021."
+    "line is a translation artefact only and has no bearing on the Bank's underlying £ results for FY2021. "
+    "FY2020 and FY2019 comparative figures are converted from the Bank's own five-year summary at the "
+    "FY2020/FY2019 year-end spot rates ($1.3661/$1.3210) for balances and calendar-year average rates "
+    "($1.2837/$1.2767) for flows."
 )
 
 CASH_FLOW_SOURCES = (
@@ -94,6 +104,9 @@ def p3_sources(page2024=None, page2023=None, page2022=None, page2021=None, table
     lines.append(f"FY2021: Pillar 3 Disclosures (as FBN Bank (UK) Limited), 31st December 2022, p.{page2022} "
                  f"(Table 6, 2021 comparative column, £ as originally reported) - {P3_2022_URL} - converted to "
                  f"$ per the Cash Flow Statement sheet's currency note (ratios unconverted).\n")
+    lines.append(f"FY2020/FY2019: Pillar 3 Disclosures (as FBN Bank (UK) Limited), 31st December 2021, Table 1 "
+                 f"comparative columns (£ as originally reported; FY2020/FY2019 balance metrics converted at "
+                 f"year-end spot rates; ratios unchanged) - {P3_2021_URL}\n")
     lines.append("FY2025: not yet published as of this workbook's build date - no FY2025 Pillar 3 Disclosures "
                  "document has been released.\n")
     return "".join(lines)
@@ -112,6 +125,9 @@ STATEMENTS_SOURCES = (
     f"FY2021 (as FBN Bank (UK) Limited, £ as originally reported, converted to $ per the Cash Flow "
     f"Statement's currency note): Annual Report and Financial Statements for the year ended 31 December "
     f"2021, p.30-32 - {AR2021_URL}\n\n"
+    f"FY2020/FY2019 (as FBN Bank (UK) Limited, £ as originally reported, converted to $ per the currency "
+    f"note): Annual Report and Financial Statements for the years ended 31 December 2020/2019, filed at "
+    f"Companies House - {AR2020_URL} / {AR2019_URL}\n\n"
     "EQUITY RECONCILIATION NOTE: the equity roll-forward ties exactly at every boundary from FY2022 onward "
     "using the Bank's own real reported $ figures. The FY2021->FY2022 boundary is the one exception: FY2021's "
     "own report publishes only £ figures, and independently converting FY2021's own closing Statement of "
@@ -134,84 +150,105 @@ bw.add_balance_sheet_sheet(
     rows=[
         ("SECTION", "Assets", {}),
         ("DATA", "Cash and bank balances", {
-            "FY2025": 22682, "FY2024": 54720, "FY2023": 38231, "FY2022": 28824, "FY2021": 54417,
+        "FY2025": 22682, "FY2024": 54720, "FY2023": 38231, "FY2022": 28824, "FY2021": 54417,
+            "FY2020": 36385, "FY2019": 34028,
         }),
         ("DATA", "Loans and advances to banks", {
-            "FY2025": 1036649, "FY2024": 999895, "FY2023": 1186213, "FY2022": 1244332, "FY2021": 1007414,
+        "FY2025": 1036649, "FY2024": 999895, "FY2023": 1186213, "FY2022": 1244332, "FY2021": 1007414,
+            "FY2020": 1023554, "FY2019": 939625,
         }),
         ("DATA", "Loans and advances to customers", {
-            "FY2025": 939009, "FY2024": 601178, "FY2023": 529947, "FY2022": 400733, "FY2021": 568544,
+        "FY2025": 939009, "FY2024": 601178, "FY2023": 529947, "FY2022": 400733, "FY2021": 568544,
+            "FY2020": 650060, "FY2019": 609612,
         }),
         ("DATA", "Financial assets at fair value through profit or loss", {
-            "FY2025": 489526, "FY2024": 33816, "FY2023": 37038, "FY2022": 31396, "FY2021": 20714,
+        "FY2025": 489526, "FY2024": 33816, "FY2023": 37038, "FY2022": 31396, "FY2021": 20714,
+            "FY2020": 36409, "FY2019": 25948,
         }),
         ("DATA", "Investment securities / financial investments at amortised cost", {
-            "FY2025": 576261, "FY2024": 1456429, "FY2023": 634655, "FY2022": 1741397, "FY2021": 1805594,
+        "FY2025": 576261, "FY2024": 1456429, "FY2023": 634655, "FY2022": 1741397, "FY2021": 1805594,
+            "FY2020": 1437962, "FY2019": 1845773,
         }),
         ("DATA", "Property and equipment", {
-            "FY2025": 5374, "FY2024": 6556, "FY2023": 7738, "FY2022": 9105, "FY2021": 11830,
+        "FY2025": 5374, "FY2024": 6556, "FY2023": 7738, "FY2022": 9105, "FY2021": 11830,
+            "FY2020": 13662, "FY2019": 14707,
         }),
         ("DATA", "Intangible assets", {
-            "FY2025": 232, "FY2024": 417, "FY2023": 1122, "FY2022": 1781, "FY2021": 2734,
+        "FY2025": 232, "FY2024": 417, "FY2023": 1122, "FY2022": 1781, "FY2021": 2734,
+            "FY2020": 3756, "FY2019": 4216,
         }),
         ("DATA", "Current tax asset", {
             "FY2025": 1917, "FY2024": 952, "FY2021": None,
             # not disclosed as a separate line in FY2023/FY2022 (own report) or FY2021
         }),
         ("DATA", "Other assets", {
-            "FY2025": 4701, "FY2024": 3310, "FY2023": 3281, "FY2022": 2429, "FY2021": 2541,
+        "FY2025": 4701, "FY2024": 3310, "FY2023": 3281, "FY2022": 2429, "FY2021": 2541,
+            "FY2020": 2227, "FY2019": 2202,
         }),
         ("DATA", "Deferred tax asset", {
-            "FY2025": 8830, "FY2024": 17049, "FY2023": 25819, "FY2022": 32636, "FY2021": 34025,
+        "FY2025": 8830, "FY2024": 17049, "FY2023": 25819, "FY2022": 32636, "FY2021": 34025,
+            "FY2020": 33406, "FY2019": 29057,
         }),
         ("TOTAL", "Total assets", {
-            "FY2025": 3085183, "FY2024": 3174323, "FY2023": 2464043, "FY2022": 3492632, "FY2021": 3507813,
+        "FY2025": 3085183, "FY2024": 3174323, "FY2023": 2464043, "FY2022": 3492632, "FY2021": 3507813,
+            "FY2020": 3237419, "FY2019": 3505179,
         }),
         ("SECTION", "Liabilities", {}),
         ("DATA", "Deposits from banks", {
-            "FY2025": 788631, "FY2024": 1518434, "FY2023": 713970, "FY2022": 1764739, "FY2021": 1862419,
+        "FY2025": 788631, "FY2024": 1518434, "FY2023": 713970, "FY2022": 1764739, "FY2021": 1862419,
+            "FY2020": 1656655, "FY2019": 1906883,
         }),
         ("DATA", "Deposits from customers", {
-            "FY2025": 1672792, "FY2024": 1060135, "FY2023": 1249444, "FY2022": 1208196, "FY2021": 1030261,
+        "FY2025": 1672792, "FY2024": 1060135, "FY2023": 1249444, "FY2022": 1208196, "FY2021": 1030261,
+            "FY2020": 1058435, "FY2019": 1003418,
         }),
         ("DATA", "Financial liabilities at fair value through profit or loss", {
-            "FY2025": 2143, "FY2024": 3007, "FY2023": 16660, "FY2022": 27888, "FY2021": 19375,
+        "FY2025": 2143, "FY2024": 3007, "FY2023": 16660, "FY2022": 27888, "FY2021": 19375,
+            "FY2020": 172, "FY2019": 0,
         }),
         ("DATA", "Current tax liability", {
             "FY2025": None, "FY2024": None, "FY2023": 1296, "FY2022": 2494, "FY2021": 1573,
             # not disclosed as a separate line in FY2025/FY2024 (nil/not applicable that year)
         }),
         ("DATA", "Subordinated liabilities", {
-            "FY2025": 60255, "FY2024": 60240, "FY2023": 60255, "FY2022": 60255, "FY2021": 60427,
+        "FY2025": 60255, "FY2024": 60240, "FY2023": 60255, "FY2022": 60255, "FY2021": 60427,
+            "FY2020": 60227, "FY2019": 60380,
         }),
         ("DATA", "Other liabilities", {
-            "FY2025": 138694, "FY2024": 150204, "FY2023": 85964, "FY2022": 128922, "FY2021": 248418,
+        "FY2025": 138694, "FY2024": 150204, "FY2023": 85964, "FY2022": 128922, "FY2021": 248418,
+            "FY2020": 211271, "FY2019": 313847,
         }),
         ("TOTAL", "Total liabilities", {
-            "FY2025": 2662514, "FY2024": 2792020, "FY2023": 2127589, "FY2022": 3192494, "FY2021": 3222473,
+        "FY2025": 2662514, "FY2024": 2792020, "FY2023": 2127589, "FY2022": 3192494, "FY2021": 3222473,
+            "FY2020": 2986760, "FY2019": 3284527,
         }),
         ("SECTION", "Equity", {}),
         ("DATA", "Called up share capital", {
-            "FY2025": 242000, "FY2024": 242000, "FY2023": 242000, "FY2022": 242000, "FY2021": 270420,
+        "FY2025": 242000, "FY2024": 242000, "FY2023": 242000, "FY2022": 242000, "FY2021": 270420,
+            "FY2020": 273220, "FY2019": 264200,
         }),
         ("DATA", "Share premium", {
-            "FY2025": 24228, "FY2024": 24228, "FY2023": 24228, "FY2022": 24228, "FY2021": 27650,
+        "FY2025": 24228, "FY2024": 24228, "FY2023": 24228, "FY2022": 24228, "FY2021": 27650,
+            "FY2020": 27936, "FY2019": 27014,
         }),
         ("DATA", "Translation reserve", {
             "FY2025": 475, "FY2024": 475, "FY2023": 475, "FY2022": 475, "FY2021": None,
             # translation reserve first created during FY2022 - see Statement of Changes in Equity
         }),
         ("DATA", "Retained earnings / (Accumulated losses)", {
-            "FY2025": 155941, "FY2024": 115532, "FY2023": 69751, "FY2022": 33436, "FY2021": -12730,
+        "FY2025": 155941, "FY2024": 115532, "FY2023": 69751, "FY2022": 33436, "FY2021": -12730,
+            "FY2020": -50497, "FY2019": -70562,
         }),
         ("DATA", "Fair value reserve", {
             "FY2025": 26, "FY2024": 69, "FY2023": None, "FY2022": None, "FY2021": None,
         }),
         ("TOTAL", "Equity shareholders' funds", {
-            "FY2025": 422669, "FY2024": 382303, "FY2023": 336454, "FY2022": 300139, "FY2021": 285340,
+        "FY2025": 422669, "FY2024": 382303, "FY2023": 336454, "FY2022": 300139, "FY2021": 285340,
+            "FY2020": 250659, "FY2019": 220652,
         }),
         ("TOTAL", "Total equity and liabilities", {
-            "FY2025": 3085183, "FY2024": 3174323, "FY2023": 2464043, "FY2022": 3492632, "FY2021": 3507813,
+        "FY2025": 3085183, "FY2024": 3174323, "FY2023": 2464043, "FY2022": 3492632, "FY2021": 3507813,
+            "FY2020": 3237419, "FY2019": 3505179,
         }),
     ],
     sources_text=STATEMENTS_SOURCES,
@@ -264,7 +301,8 @@ bw.add_income_statement_sheet(
             "FY2023": 3,
         }),
         ("TOTAL", "Operating income", {
-            "FY2025": 127450, "FY2024": 122301, "FY2023": 108507, "FY2022": 90026, "FY2021": 75787,
+        "FY2025": 127450, "FY2024": 122301, "FY2023": 108507, "FY2022": 90026, "FY2021": 75787,
+            "FY2020": 60905, "FY2019": 69228,
         }),
         ("SECTION", "Operating expenses", {}),
         ("DATA", "Personnel expenses", {
@@ -277,19 +315,23 @@ bw.add_income_statement_sheet(
             "FY2025": -26712, "FY2024": -25445, "FY2023": -23000, "FY2022": -15945, "FY2021": -11289,
         }),
         ("TOTAL", "Total operating expenses", {
-            "FY2025": -68516, "FY2024": -60363, "FY2023": -50301, "FY2022": -41297, "FY2021": -37588,
+        "FY2025": -68516, "FY2024": -60363, "FY2023": -50301, "FY2022": -41297, "FY2021": -37588,
+            "FY2020": -28314, "FY2019": -31030,
         }),
         ("DATA", "Credit impairment charge/(reversal)", {
             "FY2025": -4749, "FY2024": -870, "FY2023": -10653, "FY2022": -1145, "FY2021": 1356,
         }),
         ("TOTAL", "Profit before taxation", {
-            "FY2025": 54184, "FY2024": 61068, "FY2023": 47553, "FY2022": 47584, "FY2021": 39555,
+        "FY2025": 54184, "FY2024": 61068, "FY2023": 47553, "FY2022": 47584, "FY2021": 39555,
+            "FY2020": 14862, "FY2019": 32981,
         }),
         ("DATA", "Income tax (expense)/credit", {
-            "FY2025": -13775, "FY2024": -15288, "FY2023": -11238, "FY2022": -1437, "FY2021": -1669,
+        "FY2025": -13775, "FY2024": -15288, "FY2023": -11238, "FY2022": -1437, "FY2021": -1669,
+            "FY2020": 1589, "FY2019": -5999,
         }),
         ("TOTAL", "Profit for the year", {
-            "FY2025": 40409, "FY2024": 45781, "FY2023": 36315, "FY2022": 46146, "FY2021": 37886,
+        "FY2025": 40409, "FY2024": 45781, "FY2023": 36315, "FY2022": 46146, "FY2021": 37886,
+            "FY2020": 16451, "FY2019": 26981,
         }),
         ("SECTION", "Other comprehensive income", {}),
         ("DATA", "Net changes in fair value of debt securities at FVOCI", {
@@ -645,6 +687,7 @@ metric(
     "CET1 Capital", "$'000",
     [("Common Equity Tier 1 (CET1) capital", {
         "FY2024": 363763, "FY2023": 309460, "FY2022": 276585, "FY2021": 272998,
+        "FY2020": 248055, "FY2019": 227974,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
     note="CET1 capital equals Tier 1 capital for this Bank - it holds no Additional Tier 1 instruments (CET1 "
@@ -655,6 +698,7 @@ metric(
     "CET1 Ratio", "%",
     [("Common Equity Tier 1 (CET1) ratio", {
         "FY2024": "26.07%", "FY2023": "25.05%", "FY2022": "22.47%", "FY2021": "17.79%",
+        "FY2020": "20.20%", "FY2019": "19.49%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
 )
@@ -663,6 +707,7 @@ metric(
     "Tier 1 Capital", "$'000",
     [("Tier 1 capital", {
         "FY2024": 363763, "FY2023": 309460, "FY2022": 276585, "FY2021": 272998,
+        "FY2020": 248055, "FY2019": 227974,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
     note="Tier 1 capital equals CET1 capital for this Bank - it holds no Additional Tier 1 instruments.",
@@ -672,6 +717,7 @@ metric(
     "Tier 1 Ratio", "%",
     [("Tier 1 ratio", {
         "FY2024": "26.07%", "FY2023": "25.05%", "FY2022": "22.47%", "FY2021": "17.79%",
+        "FY2020": "20.20%", "FY2019": "19.49%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
 )
@@ -680,6 +726,7 @@ metric(
     "Total Capital", "$'000",
     [("Total capital (TC = T1 + T2)", {
         "FY2024": 414074, "FY2023": 353999, "FY2022": 320951, "FY2021": 326148,
+        "FY2020": 295303, "FY2019": 270979,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
 )
@@ -688,6 +735,7 @@ metric(
     "Total Capital Ratio", "%",
     [("Total capital ratio", {
         "FY2024": "29.67%", "FY2023": "28.65%", "FY2022": "26.08%", "FY2021": "21.25%",
+        "FY2020": "24.05%", "FY2019": "23.17%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
 )
@@ -696,6 +744,7 @@ metric(
     "Total RWAs", "$'000",
     [("Total risk-weighted exposure amounts", {
         "FY2024": 1395598, "FY2023": 1235478, "FY2022": 1230686, "FY2021": 1534738,
+        "FY2020": 1228011, "FY2019": 1169414,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
     note="FY2022 corrected to $1,230,686k (2026-09-03 follow-up): the Bank's FY2023 Pillar 3 Disclosures "
@@ -757,6 +806,7 @@ metric(
     "Leverage Ratio", "%",
     [("Leverage ratio", {
         "FY2024": "14.12%", "FY2023": "19.64%", "FY2022": "9.84%", "FY2021": "6.83%",
+        "FY2020": "6.75%", "FY2019": "4.98%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
 )
@@ -765,6 +815,7 @@ metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (12-month trailing average)", {
         "FY2024": "409.09%", "FY2023": "383.17%", "FY2022": "240.65%", "FY2021": "243.08%",
+        "FY2020": "252.76%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=26, table="Table 1 / Table 6"),
 )
@@ -799,27 +850,34 @@ bw.add_overview_sheet(
     balance_sheet_totals=[
         ("Total assets", {
             "FY2025": 3085183, "FY2024": 3174323, "FY2023": 2464043, "FY2022": 3492632, "FY2021": 3507813,
+            "FY2020": 3237419, "FY2019": 3505179,
         }),
         ("Loans and advances to customers", {
             "FY2025": 939009, "FY2024": 601178, "FY2023": 529947, "FY2022": 400733, "FY2021": 568544,
+            "FY2020": 650060, "FY2019": 609612,
         }),
         ("Deposits from customers", {
             "FY2025": 1672792, "FY2024": 1060135, "FY2023": 1249444, "FY2022": 1208196, "FY2021": 1030261,
+            "FY2020": 1058435, "FY2019": 1003418,
         }),
         ("Total equity", {
             "FY2025": 422669, "FY2024": 382303, "FY2023": 336454, "FY2022": 300139, "FY2021": 285340,
+            "FY2020": 250659, "FY2019": 220652,
         }),
     ],
     balance_sheet_unit="$'000",
     income_statement_totals=[
         ("Operating income", {
             "FY2025": 127450, "FY2024": 122301, "FY2023": 108507, "FY2022": 90026, "FY2021": 75787,
+            "FY2020": 60905, "FY2019": 69228,
         }),
         ("Total operating expenses", {
             "FY2025": -68516, "FY2024": -60363, "FY2023": -50301, "FY2022": -41297, "FY2021": -37588,
+            "FY2020": -28314, "FY2019": -31030,
         }),
         ("Profit for the year", {
             "FY2025": 40409, "FY2024": 45781, "FY2023": 36315, "FY2022": 46146, "FY2021": 37886,
+            "FY2020": 16451, "FY2019": 26981,
         }),
     ],
     income_statement_unit="$'000",

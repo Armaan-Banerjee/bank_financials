@@ -1,0 +1,1307 @@
+{
+  "ABC INTERNATIONAL BANK": {
+    "ch_number": "02564490",
+    "creation_date": "1990-12-03T00:00:00Z",
+    "frn": 149025,
+    "legal_form_id": "B6ES",
+    "lei": "PQEBSF10YW5QXWIKTJ21",
+    "list_name": "ABC International Bank Plc",
+    "status": "ACTIVE"
+  },
+  "ACCESS BANK UK": {
+    "ch_number": "06365062",
+    "creation_date": "2007-09-10T05:00:00Z",
+    "frn": 478415,
+    "legal_form_id": "H0PO",
+    "lei": "5493002IGEWNBCWX0S85",
+    "list_name": "The Access Bank UK Limited",
+    "status": "ACTIVE"
+  },
+  "AFIN BANK": {
+    "ch_number": "13090556",
+    "creation_date": "2020-12-18T00:00:00Z",
+    "frn": 1004742,
+    "legal_form_id": "H0PO",
+    "lei": "213800NRZ2K3AGEXHT08",
+    "list_name": "Afin Bank Limited",
+    "status": "ACTIVE"
+  },
+  "AIB GROUP UK": {
+    "ch_number": "NI018800",
+    "creation_date": "1985-11-18T00:00:00Z",
+    "frn": 122088,
+    "legal_form_id": "B6ES",
+    "lei": "54930061N57ORAEPGX16",
+    "list_name": "AIB GROUP (UK) P.L.C.",
+    "status": "ACTIVE"
+  },
+  "ALDERMORE": {
+    "ch_number": "00947662",
+    "creation_date": "1969-02-10T00:00:00Z",
+    "frn": 204503,
+    "legal_form_id": "B6ES",
+    "lei": "2138009CAEGO41Q6HB61",
+    "list_name": "Aldermore Bank Plc",
+    "status": "ACTIVE"
+  },
+  "ALLICA": {
+    "ch_number": "07706156",
+    "creation_date": "2018-02-28T15:00:22Z",
+    "frn": 821851,
+    "legal_form_id": "H0PO",
+    "lei": "8945008WK6DNAUZQ7L32",
+    "list_name": "ALLICA BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "ALPHA BANK LONDON": {
+    "ch_number": "00185070",
+    "creation_date": "1922-10-17T00:00:00Z",
+    "frn": 135327,
+    "legal_form_id": "H0PO",
+    "lei": "213800S8K5XZJ2K6OB13",
+    "list_name": "Alpha Bank London Limited",
+    "status": "ACTIVE"
+  },
+  "ALRAYAN BANK": {
+    "ch_number": "04483430",
+    "creation_date": "2002-07-11T00:00:00Z",
+    "frn": 229148,
+    "legal_form_id": "H0PO",
+    "lei": "213800AINT5U4D66UA65",
+    "list_name": "ALRAYAN BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "ARAB BANK EUROPE": {
+    "ch_number": "05575857",
+    "creation_date": "2005-09-27T00:00:00Z",
+    "frn": 446951,
+    "legal_form_id": "B6ES",
+    "lei": "213800RRX1TYUVV2R518",
+    "list_name": "ARAB BANK EUROPE PLC",
+    "status": "ACTIVE"
+  },
+  "ARBUTHNOT LATHAM": {
+    "ch_number": "00819519",
+    "creation_date": "1964-09-15T00:00:00Z",
+    "frn": 143336,
+    "legal_form_id": "H0PO",
+    "lei": "21380038NTY1PVJ3IY34",
+    "list_name": "ARBUTHNOT LATHAM & CO., LIMITED",
+    "status": "ACTIVE"
+  },
+  "ATOM BANK": {
+    "ch_number": "08632552",
+    "creation_date": "2013-07-31T00:00:00Z",
+    "frn": 661960,
+    "legal_form_id": "B6ES",
+    "lei": "213800YWQOYL4VQODV50",
+    "list_name": "Atom Bank PLC",
+    "status": "ACTIVE"
+  },
+  "BANK MANDIRI EUROPE": {
+    "ch_number": "03793679",
+    "creation_date": "1999-06-22T00:00:00Z",
+    "frn": 204424,
+    "legal_form_id": "H0PO",
+    "lei": "2138001M5OB5OE11NS50",
+    "list_name": "Bank Mandiri (Europe) Limited",
+    "status": "ACTIVE"
+  },
+  "BANK OF AFRICA UK": {
+    "ch_number": "05321714",
+    "creation_date": "2004-12-29T00:00:00Z",
+    "frn": 454750,
+    "legal_form_id": "B6ES",
+    "lei": "5493000N7DDJ93G26E43",
+    "list_name": "Bank of Africa United Kingdom Plc",
+    "status": "ACTIVE"
+  },
+  "BANK OF BEIRUT UK": {
+    "ch_number": "04406777",
+    "creation_date": "2002-03-30T00:00:00Z",
+    "frn": 219523,
+    "legal_form_id": "H0PO",
+    "lei": "213800AQHMYPEH8NNA33",
+    "list_name": "Bank of Beirut (UK) Ltd",
+    "status": "ACTIVE"
+  },
+  "BANK OF CEYLON UK": {
+    "ch_number": "06736473",
+    "creation_date": "2008-10-29T00:00:00Z",
+    "frn": 514744,
+    "legal_form_id": "H0PO",
+    "lei": "213800DG2M8QX22U6P30",
+    "list_name": "BANK OF CEYLON (UK) LIMITED",
+    "status": "ACTIVE"
+  },
+  "BANK OF CHINA UK": {
+    "ch_number": "06193060",
+    "creation_date": "2007-03-29T00:00:00Z",
+    "frn": 467410,
+    "legal_form_id": "H0PO",
+    "lei": "213800SVCJUHY6VX7884",
+    "list_name": "BANK OF CHINA (UK) LIMITED",
+    "status": "ACTIVE"
+  },
+  "BANK OF IRELAND UK": {
+    "ch_number": "07022885",
+    "creation_date": "2009-09-17T00:00:00Z",
+    "frn": 512956,
+    "legal_form_id": "B6ES",
+    "lei": "213800OOT97XZGKQPY40",
+    "list_name": "Bank of Ireland (UK) Plc",
+    "status": "ACTIVE"
+  },
+  "BANK OF SCOTLAND": {
+    "ch_number": "SC327000",
+    "creation_date": "2007-09-17T00:00:00Z",
+    "frn": 169628,
+    "legal_form_id": "B6ES",
+    "lei": "OQ3T05P7YR8P5YJEVI93",
+    "list_name": "Bank of Scotland plc",
+    "status": "ACTIVE"
+  },
+  "BANK OF THE PHILIPPINE ISLANDS EUROPE": {
+    "ch_number": "05888535",
+    "creation_date": "2006-07-27T00:00:00Z",
+    "frn": 455378,
+    "legal_form_id": "B6ES",
+    "lei": "5493007JJOEN82MFUM53",
+    "list_name": "Bank of the Philippine Islands (Europe) PLC",
+    "status": "ACTIVE"
+  },
+  "BANK SADERAT": {
+    "ch_number": "01126618",
+    "creation_date": null,
+    "frn": 204488,
+    "legal_form_id": "B6ES",
+    "lei": "2138008KTNTDICZU8L25",
+    "list_name": "Bank Saderat Plc",
+    "status": "ACTIVE"
+  },
+  "BANK SEPAH INTERNATIONAL": {
+    "ch_number": "04189598",
+    "creation_date": "2001-03-29T00:00:00Z",
+    "frn": 208019,
+    "legal_form_id": "B6ES",
+    "lei": "213800NCOJLY8JW3YI89",
+    "list_name": "Bank Sepah International Plc",
+    "status": "ACTIVE"
+  },
+  "BARCLAYS": {
+    "ch_number": "09740322",
+    "creation_date": "2015-08-19T00:00:00Z",
+    "frn": 759676,
+    "legal_form_id": "B6ES",
+    "lei": "213800UUGANOMFJ9X769",
+    "list_name": "Barclays Bank UK PLC",
+    "status": "ACTIVE"
+  },
+  "BARCLAYS BANK PLC": {
+    "ch_number": "01026167",
+    "creation_date": "1971-10-04T00:00:00Z",
+    "frn": 122702,
+    "legal_form_id": "B6ES",
+    "lei": "G5GSEF7VJP5I7OUK5573",
+    "list_name": "Barclays Bank Plc",
+    "status": "ACTIVE"
+  },
+  "BIRMINGHAM BANK": {
+    "ch_number": "00555071",
+    "creation_date": "1955-09-24T00:00:00Z",
+    "frn": 204478,
+    "legal_form_id": "H0PO",
+    "lei": "21380055DUNS6NF26T32",
+    "list_name": "BIRMINGHAM BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "BLME": {
+    "ch_number": "05897786",
+    "creation_date": "2006-08-07T00:00:00Z",
+    "frn": 464292,
+    "legal_form_id": "B6ES",
+    "lei": "213800NRFLLAE9AF6P35",
+    "list_name": "Bank of London and The Middle East plc",
+    "status": "ACTIVE"
+  },
+  "BNY MELLON INTERNATIONAL": {
+    "ch_number": "03236121",
+    "creation_date": "1996-08-09T00:00:00Z",
+    "frn": 183100,
+    "legal_form_id": "H0PO",
+    "lei": "549300KP56LL8NKKFL47",
+    "list_name": "The Bank of New York Mellon (International) Limited",
+    "status": "ACTIVE"
+  },
+  "BRITISH ARAB COMMERCIAL BANK": {
+    "ch_number": "01047302",
+    "creation_date": "1972-03-23T00:00:00Z",
+    "frn": 204564,
+    "legal_form_id": "B6ES",
+    "lei": "213800EF3SHQLBJPGB20",
+    "list_name": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
+    "status": "ACTIVE"
+  },
+  "BROWN SHIPLEY": {
+    "ch_number": "00398426",
+    "creation_date": "1945-09-08T00:00:00Z",
+    "frn": 124548,
+    "legal_form_id": "H0PO",
+    "lei": "5493003MITCIX89B0R76",
+    "list_name": "BROWN SHIPLEY & CO. LIMITED",
+    "status": "ACTIVE"
+  },
+  "C HOARE AND CO": {
+    "ch_number": "00240822",
+    "creation_date": "1929-07-05T00:00:00Z",
+    "frn": 122093,
+    "legal_form_id": "57V7",
+    "lei": "549300DPP8ACTS8VM749",
+    "list_name": "C. HOARE & CO.",
+    "status": "ACTIVE"
+  },
+  "CAF BANK": {
+    "ch_number": "01837656",
+    "creation_date": "1984-08-02T00:00:00Z",
+    "frn": 204451,
+    "legal_form_id": "H0PO",
+    "lei": "213800EUD395AUZB1G21",
+    "list_name": "CAF BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "CAMBRIDGE AND COUNTIES BANK": {
+    "ch_number": "07972522",
+    "creation_date": "2012-03-01T00:00:00Z",
+    "frn": 579415,
+    "legal_form_id": "H0PO",
+    "lei": "213800HZTUSEIN3M1Z46",
+    "list_name": "Cambridge & Counties Bank Limited",
+    "status": "ACTIVE"
+  },
+  "CASTLE TRUST CAPITAL": {
+    "ch_number": "07454474",
+    "creation_date": "2010-11-29T00:00:00Z",
+    "frn": 541910,
+    "legal_form_id": "B6ES",
+    "lei": "213800RA4QIHSIMFZL73",
+    "list_name": "Castle Trust Capital PLC",
+    "status": "ACTIVE"
+  },
+  "CATER ALLEN": {
+    "ch_number": "00383032",
+    "creation_date": "1943-09-30T00:00:00Z",
+    "frn": 178737,
+    "legal_form_id": "H0PO",
+    "lei": "NJ2Z3LWOIYWE0BE0UJ21",
+    "list_name": "Cater Allen Limited",
+    "status": "ACTIVE"
+  },
+  "CHARITY BANK": {
+    "ch_number": "04330018",
+    "creation_date": "2001-11-08T00:00:00Z",
+    "frn": 207701,
+    "legal_form_id": "H0PO",
+    "lei": "213800RNCUQ66C57MV78",
+    "list_name": "The Charity Bank Limited",
+    "status": "ACTIVE"
+  },
+  "CHARTER COURT FINANCIAL SERVICES": {
+    "ch_number": "06749498",
+    "creation_date": "2008-11-14T00:00:00Z",
+    "frn": 494549,
+    "legal_form_id": "H0PO",
+    "lei": "213800ZCPY5ZNSY5I637",
+    "list_name": "Charter Court Financial Services Limited",
+    "status": "ACTIVE"
+  },
+  "CHETWOOD": {
+    "ch_number": "09964966",
+    "creation_date": "2016-01-22T00:00:00Z",
+    "frn": 740551,
+    "legal_form_id": "H0PO",
+    "lei": "254900DIJWMU1HVLWA90",
+    "list_name": "Chetwood Financial Limited",
+    "status": "ACTIVE"
+  },
+  "CITIBANK UK": {
+    "ch_number": "11283101",
+    "creation_date": "2018-03-29T00:00:00Z",
+    "frn": 805574,
+    "legal_form_id": "H0PO",
+    "lei": "549300U8H3KN0K301B23",
+    "list_name": "Citibank UK Limited",
+    "status": "ACTIVE"
+  },
+  "CLEARBANK": {
+    "ch_number": "09736376",
+    "creation_date": "2015-08-17T00:00:00Z",
+    "frn": 754568,
+    "legal_form_id": "H0PO",
+    "lei": "213800PERENGATFCHD95",
+    "list_name": "ClearBank Limited",
+    "status": "ACTIVE"
+  },
+  "CLOSE BROTHERS": {
+    "ch_number": "00195626",
+    "creation_date": "1924-02-09T00:00:00Z",
+    "frn": 124750,
+    "legal_form_id": "H0PO",
+    "lei": "LC2LS8O497851NSB4L61",
+    "list_name": "Close Brothers Limited",
+    "status": "ACTIVE"
+  },
+  "CLYDESDALE": {
+    "ch_number": "SC001111",
+    "creation_date": "1882-04-03T00:00:00Z",
+    "frn": 121873,
+    "legal_form_id": "B6ES",
+    "lei": "NHXOBHMY8K53VRC7MZ54",
+    "list_name": "Clydesdale Bank Plc",
+    "status": "ACTIVE"
+  },
+  "CO-OPERATIVE BANK": {
+    "ch_number": "00990937",
+    "creation_date": "1970-10-05T00:00:00Z",
+    "frn": 121885,
+    "legal_form_id": "B6ES",
+    "lei": "213800TLZ6PCLYPSR448",
+    "list_name": "THE CO-OPERATIVE BANK P.L.C.",
+    "status": "ACTIVE"
+  },
+  "COUTTS": {
+    "ch_number": "00036695",
+    "creation_date": "1892-06-24T00:00:00Z",
+    "frn": 122287,
+    "legal_form_id": "57V7",
+    "lei": "549300OLXJ4Y010LOT34",
+    "list_name": "Coutts & Company",
+    "status": "ACTIVE"
+  },
+  "CREDIT SUISSE INTERNATIONAL": {
+    "ch_number": "02500199",
+    "creation_date": "1990-05-09T00:00:00Z",
+    "frn": 146702,
+    "legal_form_id": "57V7",
+    "lei": "E58DKGMJYYYJLN8C3868",
+    "list_name": "CREDIT SUISSE INTERNATIONAL",
+    "status": "ACTIVE"
+  },
+  "CREDIT SUISSE UK": {
+    "ch_number": "02009520",
+    "creation_date": "1986-04-11T00:00:00Z",
+    "frn": 124269,
+    "legal_form_id": "H0PO",
+    "lei": "549300GUAMON5OX2OO54",
+    "list_name": "Credit Suisse (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "CROWN AGENTS BANK": {
+    "ch_number": "02334687",
+    "creation_date": "1989-01-12T00:00:00Z",
+    "frn": 204456,
+    "legal_form_id": "H0PO",
+    "lei": "21380011ZYMBN21SZ194",
+    "list_name": "Crown Agents Bank Limited",
+    "status": "ACTIVE"
+  },
+  "CYNERGY BANK": {
+    "ch_number": "04728421",
+    "creation_date": "2003-04-09T00:00:00Z",
+    "frn": 575105,
+    "legal_form_id": "B6ES",
+    "lei": "2138008LEZ3ZLF8HJ541",
+    "list_name": "Cynergy Bank Plc",
+    "status": "ACTIVE"
+  },
+  "DB UK BANK": {
+    "ch_number": "00315841",
+    "creation_date": "1936-06-29T23:00:00Z",
+    "frn": 140848,
+    "legal_form_id": "H0PO",
+    "lei": "529900HNH6UOOF40A490",
+    "list_name": "DB UK Bank Limited",
+    "status": "ACTIVE"
+  },
+  "DF CAPITAL BANK": {
+    "ch_number": "10198535",
+    "creation_date": "2016-05-25T00:00:00Z",
+    "frn": 848291,
+    "legal_form_id": "H0PO",
+    "lei": "213800UHF7TEFY61T896",
+    "list_name": "DF Capital Bank Limited",
+    "status": "ACTIVE"
+  },
+  "EFG PRIVATE BANK": {
+    "ch_number": "02321802",
+    "creation_date": "1988-11-25T00:00:00Z",
+    "frn": 144036,
+    "legal_form_id": "H0PO",
+    "lei": "213800ZAC8VAGV4L2K61",
+    "list_name": "EFG Private Bank Limited",
+    "status": "ACTIVE"
+  },
+  "FCE BANK": {
+    "ch_number": "00772784",
+    "creation_date": "1963-09-03T00:00:00Z",
+    "frn": 204469,
+    "legal_form_id": "B6ES",
+    "lei": "TU5V87TL5Q0UV1EW4H93",
+    "list_name": "FCE Bank Plc",
+    "status": "ACTIVE"
+  },
+  "FCMB UK": {
+    "ch_number": "06621225",
+    "creation_date": "2008-06-16T00:00:00Z",
+    "frn": 502704,
+    "legal_form_id": "H0PO",
+    "lei": "213800NLJCYY4AZZLS92",
+    "list_name": "FCMB Bank (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "FIDBANK UK": {
+    "ch_number": "04661188",
+    "creation_date": "2003-02-10T00:00:00Z",
+    "frn": 400712,
+    "legal_form_id": "H0PO",
+    "lei": "549300URGO4D3SHWLM15",
+    "list_name": "FidBank UK Limited",
+    "status": "ACTIVE"
+  },
+  "FIRSTBANK UK": {
+    "ch_number": "04459383",
+    "creation_date": "2002-06-12T00:00:00Z",
+    "frn": 216772,
+    "legal_form_id": "H0PO",
+    "lei": "213800DD8GVBIP1HM239",
+    "list_name": "FirstBank UK Limited",
+    "status": "ACTIVE"
+  },
+  "GATEHOUSE BANK": {
+    "ch_number": "06260053",
+    "creation_date": "2007-05-25T00:00:00Z",
+    "frn": 475346,
+    "legal_form_id": "B6ES",
+    "lei": "213800UIMM88P3K5ZV42",
+    "list_name": "Gatehouse Bank Plc",
+    "status": "ACTIVE"
+  },
+  "GB BANK": {
+    "ch_number": "10702260",
+    "creation_date": "2017-03-31T00:00:00Z",
+    "frn": 850286,
+    "legal_form_id": "H0PO",
+    "lei": "2138002JLTR8GY8TKN40",
+    "list_name": "GB Bank Limited",
+    "status": "ACTIVE"
+  },
+  "GHANA INTERNATIONAL BANK": {
+    "ch_number": "03468216",
+    "creation_date": "1997-11-13T00:00:00Z",
+    "frn": 204471,
+    "legal_form_id": "B6ES",
+    "lei": "213800MSK6IY7NX8XM32",
+    "list_name": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
+    "status": "ACTIVE"
+  },
+  "GOLDMAN SACHS INTERNATIONAL BANK": {
+    "ch_number": "01122503",
+    "creation_date": "1973-07-12T00:00:00Z",
+    "frn": 124659,
+    "legal_form_id": "57V7",
+    "lei": "N9FYJ29MC81JI74MJE92",
+    "list_name": "Goldman Sachs International Bank",
+    "status": "ACTIVE"
+  },
+  "GRIFFIN BANK": {
+    "ch_number": "10842931",
+    "creation_date": "2017-06-29T00:00:00Z",
+    "frn": 970920,
+    "legal_form_id": "H0PO",
+    "lei": "213800PNWYME8874XZ32",
+    "list_name": "Griffin Bank Ltd",
+    "status": "ACTIVE"
+  },
+  "GUARANTY TRUST BANK UK": {
+    "ch_number": "05969821",
+    "creation_date": "2006-10-17T00:00:00Z",
+    "frn": 466611,
+    "legal_form_id": "H0PO",
+    "lei": "213800FD3LOR6LPZPH83",
+    "list_name": "Guaranty Trust Bank (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "GULF INTERNATIONAL BANK UK": {
+    "ch_number": "01223938",
+    "creation_date": "1975-08-22T00:00:00Z",
+    "frn": 124772,
+    "legal_form_id": "H0PO",
+    "lei": "7N7YKE66OZ27KON72O26",
+    "list_name": "Gulf International Bank (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "HABIB BANK ZURICH": {
+    "ch_number": "08864609",
+    "creation_date": "2014-01-28T00:00:00Z",
+    "frn": 627671,
+    "legal_form_id": "B6ES",
+    "lei": "213800DVCFBA2TVL1T25",
+    "list_name": "Habib Bank Zurich Plc",
+    "status": "ACTIVE"
+  },
+  "HAMPDEN & CO": {
+    "ch_number": "SC386922",
+    "creation_date": "2010-10-12T00:00:00Z",
+    "frn": 606934,
+    "legal_form_id": "B6ES",
+    "lei": "213800KJGAYVISGD2863",
+    "list_name": "HAMPDEN & CO PLC",
+    "status": "ACTIVE"
+  },
+  "HAMPSHIRE TRUST BANK": {
+    "ch_number": "01311315",
+    "creation_date": "1977-04-28T00:00:00Z",
+    "frn": 204601,
+    "legal_form_id": "B6ES",
+    "lei": "21380013V6JI2T3MOG16",
+    "list_name": "Hampshire Trust Bank Plc",
+    "status": "ACTIVE"
+  },
+  "HANDELSBANKEN": {
+    "ch_number": "11305395",
+    "creation_date": "2018-04-11T00:00:00Z",
+    "frn": 806852,
+    "legal_form_id": "B6ES",
+    "lei": "254900HILJ9CO56XA292",
+    "list_name": "Handelsbanken plc",
+    "status": "ACTIVE"
+  },
+  "HAVIN BANK": {
+    "ch_number": "01074897",
+    "creation_date": "1972-10-03T00:00:00Z",
+    "frn": 204481,
+    "legal_form_id": "H0PO",
+    "lei": "213800YMG7E1F48JC136",
+    "list_name": "Havin Bank Ltd",
+    "status": "ACTIVE"
+  },
+  "HBL BANK UK": {
+    "ch_number": "01719649",
+    "creation_date": "1983-04-29T00:00:00Z",
+    "frn": 188585,
+    "legal_form_id": "H0PO",
+    "lei": "549300K7NH3086Y0SV98",
+    "list_name": "HBL BANK UK LIMITED",
+    "status": "ACTIVE"
+  },
+  "HSBC BANK PLC": {
+    "ch_number": "00014259",
+    "creation_date": "1880-07-01T00:00:00Z",
+    "frn": 114216,
+    "legal_form_id": "B6ES",
+    "lei": "MP6I5ZYZBEU3UXPYFY54",
+    "list_name": "HSBC Bank Plc",
+    "status": "ACTIVE"
+  },
+  "HSBC INNOVATION BANK": {
+    "ch_number": "12546585",
+    "creation_date": "2020-04-03T00:00:00Z",
+    "frn": 543146,
+    "legal_form_id": "H0PO",
+    "lei": "213800LH7QCHIR3JI632",
+    "list_name": "HSBC INNOVATION BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "HSBC UK BANK PLC": {
+    "ch_number": "09928412",
+    "creation_date": "2015-12-23T00:00:00Z",
+    "frn": 765112,
+    "legal_form_id": "B6ES",
+    "lei": "21380081EP12LC86CB82",
+    "list_name": "HSBC UK Bank Plc",
+    "status": "ACTIVE"
+  },
+  "ICBC (LONDON) PLC": {
+    "ch_number": "04552753",
+    "creation_date": "2002-10-03T00:00:00Z",
+    "frn": 222030,
+    "legal_form_id": "B6ES",
+    "lei": "2138003HW6485HGVSH88",
+    "list_name": "ICBC (London) plc",
+    "status": "ACTIVE"
+  },
+  "ICBC STANDARD BANK PLC": {
+    "ch_number": "02130447",
+    "creation_date": "1987-05-11T00:00:00Z",
+    "frn": 124823,
+    "legal_form_id": "B6ES",
+    "lei": "F01VVKN4DRF2NWKGQ283",
+    "list_name": "ICBC Standard Bank Plc",
+    "status": "ACTIVE"
+  },
+  "ICICI BANK UK": {
+    "ch_number": "04663024",
+    "creation_date": "2003-02-11T00:00:00Z",
+    "frn": 223268,
+    "legal_form_id": "B6ES",
+    "lei": "2138002XB6T14IGKGU43",
+    "list_name": "ICICI Bank UK Plc",
+    "status": "ACTIVE"
+  },
+  "IFAST GLOBAL BANK LIMITED": {
+    "ch_number": "04797759",
+    "creation_date": "2003-06-13T00:00:00Z",
+    "frn": 716167,
+    "legal_form_id": "H0PO",
+    "lei": "2138003488D1LGCBRV23",
+    "list_name": "IFAST GLOBAL BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "INVESTEC BANK PLC": {
+    "ch_number": "00489604",
+    "creation_date": "1950-12-20T00:00:00Z",
+    "frn": 172330,
+    "legal_form_id": "B6ES",
+    "lei": "84S0VF8TSMH0T6D4K848",
+    "list_name": "Investec Bank PLC",
+    "status": "ACTIVE"
+  },
+  "ITAU BBA INTERNATIONAL": {
+    "ch_number": "07425398",
+    "creation_date": "2010-10-31T05:00:00Z",
+    "frn": 575225,
+    "legal_form_id": "B6ES",
+    "lei": "5493009ADHYKU8V9P697",
+    "list_name": "Itau BBA International PLC",
+    "status": "ACTIVE"
+  },
+  "JORDAN INTERNATIONAL BANK": {
+    "ch_number": "01814093",
+    "creation_date": "1984-05-04T00:00:00Z",
+    "frn": 183722,
+    "legal_form_id": "B6ES",
+    "lei": "213800WMLZ87OAYT3X87",
+    "list_name": "Jordan International Bank Plc",
+    "status": "ACTIVE"
+  },
+  "JP MORGAN EUROPE": {
+    "ch_number": "00938937",
+    "creation_date": "1968-09-18T00:00:00Z",
+    "frn": 124579,
+    "legal_form_id": "H0PO",
+    "lei": "549300EJYMJS22ND8Y17",
+    "list_name": "J.P. Morgan Europe Limited",
+    "status": "ACTIVE"
+  },
+  "JP MORGAN SECURITIES": {
+    "ch_number": "02711006",
+    "creation_date": "1992-04-30T00:00:00Z",
+    "frn": 155240,
+    "legal_form_id": "B6ES",
+    "lei": "K6Q0W1PS1L1O4IQL9C32",
+    "list_name": "J.P. Morgan Securities plc",
+    "status": "ACTIVE"
+  },
+  "JULIAN HODGE BANK": {
+    "ch_number": "00743437",
+    "creation_date": "1962-12-07T00:00:00Z",
+    "frn": 204439,
+    "legal_form_id": "H0PO",
+    "lei": "213800GEIK9AZNTJVZ29",
+    "list_name": "Julian Hodge Bank Limited",
+    "status": "ACTIVE"
+  },
+  "KEXIM BANK UK": {
+    "ch_number": "02693038",
+    "creation_date": "1992-03-03T00:00:00Z",
+    "frn": 204490,
+    "legal_form_id": "H0PO",
+    "lei": "213800246DSYDX1BMF80",
+    "list_name": "KEXIM BANK (UK) LIMITED",
+    "status": "ACTIVE"
+  },
+  "KINGDOM BANK": {
+    "ch_number": "04346834",
+    "creation_date": "2002-01-03T00:00:00Z",
+    "frn": 400972,
+    "legal_form_id": "H0PO",
+    "lei": "2138004N9K31CATCK953",
+    "list_name": "KINGDOM BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "KROO BANK": {
+    "ch_number": "10359002",
+    "creation_date": "2016-09-05T00:00:00Z",
+    "frn": 953772,
+    "legal_form_id": "H0PO",
+    "lei": "213800D41PZHBTEHQN06",
+    "list_name": "Kroo Bank Ltd",
+    "status": "ACTIVE"
+  },
+  "KUWAIT FINANCE HOUSE": {
+    "ch_number": "00877859",
+    "creation_date": "1966-04-27T00:00:00Z",
+    "frn": 131818,
+    "legal_form_id": "B6ES",
+    "lei": "213800F3IFWY8CWYWO07",
+    "list_name": "KUWAIT FINANCE HOUSE PLC",
+    "status": "ACTIVE"
+  },
+  "LHV": {
+    "ch_number": "13180211",
+    "creation_date": "2021-02-04T00:00:00Z",
+    "frn": 993767,
+    "legal_form_id": "H0PO",
+    "lei": "9845001RFA8CMB01A341",
+    "list_name": "LHV BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "LLOYDS BANK": {
+    "ch_number": "00002065",
+    "creation_date": "1865-04-20T00:00:00Z",
+    "frn": 119278,
+    "legal_form_id": "B6ES",
+    "lei": "H7FNTJ4851HG0EXQ1Z70",
+    "list_name": "Lloyds Bank PLC",
+    "status": "ACTIVE"
+  },
+  "LLOYDS BANK CORPORATE MARKETS": {
+    "ch_number": "10399850",
+    "creation_date": "2016-09-28T00:00:00Z",
+    "frn": 763256,
+    "legal_form_id": "B6ES",
+    "lei": "213800MBWEIJDM5CU638",
+    "list_name": "Lloyds Bank Corporate Markets Plc",
+    "status": "ACTIVE"
+  },
+  "MARKS AND SPENCER FINANCIAL SERVICES": {
+    "ch_number": "01772585",
+    "creation_date": "1983-11-24T00:00:00Z",
+    "frn": 151427,
+    "legal_form_id": "B6ES",
+    "lei": "2138009M124EE2Q9ZK29",
+    "list_name": "MARKS AND SPENCER FINANCIAL SERVICES PLC",
+    "status": "ACTIVE"
+  },
+  "MELLI BANK": {
+    "ch_number": "04152338",
+    "creation_date": "2001-02-01T00:00:00Z",
+    "frn": 207380,
+    "legal_form_id": "B6ES",
+    "lei": "213800BC4TEGCCQH9V07",
+    "list_name": "Melli Bank plc",
+    "status": "ACTIVE"
+  },
+  "METHODIST CHAPEL AID": {
+    "ch_number": "00030546",
+    "creation_date": "1890-01-02T00:00:00Z",
+    "frn": 204508,
+    "legal_form_id": "H0PO",
+    "lei": "213800GD7EDYBP4LH202",
+    "list_name": "Methodist Chapel Aid Limited",
+    "status": "ACTIVE"
+  },
+  "METRO BANK": {
+    "ch_number": "06419578",
+    "creation_date": "2007-11-06T00:00:00Z",
+    "frn": 488982,
+    "legal_form_id": "B6ES",
+    "lei": "213800X5WU57YL9GPK89",
+    "list_name": "Metro Bank PLC",
+    "status": "ACTIVE"
+  },
+  "MIZUHO INTERNATIONAL": {
+    "ch_number": "01203696",
+    "creation_date": "1975-03-14T00:00:00Z",
+    "frn": 119256,
+    "legal_form_id": "B6ES",
+    "lei": "213800HZ54TG54H2KV03",
+    "list_name": "Mizuho International plc",
+    "status": "ACTIVE"
+  },
+  "MONUMENT BANK": {
+    "ch_number": "10921940",
+    "creation_date": "2017-08-18T00:00:00Z",
+    "frn": 849724,
+    "legal_form_id": "H0PO",
+    "lei": "213800OLF8OE1I3HVY91",
+    "list_name": "MONUMENT BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "MONZO": {
+    "ch_number": "730427",
+    "creation_date": "2016-08-10T00:00:00Z",
+    "frn": 730427,
+    "legal_form_id": "H0PO",
+    "lei": "213800PLUYXGZ8LU7T61",
+    "list_name": "MONZO BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "MORGAN STANLEY BANK INTERNATIONAL": {
+    "ch_number": "03722571",
+    "creation_date": "1999-02-23T00:00:00Z",
+    "frn": 195430,
+    "legal_form_id": "H0PO",
+    "lei": "Z06S12H6N9QRJ8HHN626",
+    "list_name": "Morgan Stanley Bank International Limited",
+    "status": "ACTIVE"
+  },
+  "NATIONAL BANK OF EGYPT UK": {
+    "ch_number": "02743734",
+    "creation_date": "1992-08-28T00:00:00Z",
+    "frn": 204520,
+    "legal_form_id": "H0PO",
+    "lei": "2TV5CTDU7ZDMT8HL5F58",
+    "list_name": "National Bank of Egypt (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "NATIONAL BANK OF KUWAIT INTERNATIONAL": {
+    "ch_number": "02773743",
+    "creation_date": "1992-12-09T00:00:00Z",
+    "frn": 171532,
+    "legal_form_id": "B6ES",
+    "lei": "213800OTQ2BHFRVL6A46",
+    "list_name": "National Bank of Kuwait (International) Plc",
+    "status": "ACTIVE"
+  },
+  "NATIONAL WESTMINSTER BANK PLC": {
+    "ch_number": "00929027",
+    "creation_date": "1968-03-18T00:00:00Z",
+    "frn": 121878,
+    "legal_form_id": "B6ES",
+    "lei": "213800IBT39XQ9C4CP71",
+    "list_name": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY",
+    "status": "ACTIVE"
+  },
+  "NATWEST MARKETS": {
+    "ch_number": "SC090312",
+    "creation_date": "1984-10-31T00:00:00Z",
+    "frn": 121882,
+    "legal_form_id": "B6ES",
+    "lei": "RR3QWICWWIPCS8A4S074",
+    "list_name": "NatWest Markets Plc",
+    "status": "ACTIVE"
+  },
+  "NOMURA BANK INTERNATIONAL": {
+    "ch_number": "01981122",
+    "creation_date": "1986-01-22T00:00:00Z",
+    "frn": 204419,
+    "legal_form_id": "B6ES",
+    "lei": "WGII3666BEDR02O24131",
+    "list_name": "Nomura Bank International Plc.",
+    "status": "ACTIVE"
+  },
+  "NORTHERN BANK": {
+    "ch_number": "R0000568",
+    "creation_date": "1883-09-01T00:00:28Z",
+    "frn": 122261,
+    "legal_form_id": "H0PO",
+    "lei": "549300KUB2XKWLPMXV81",
+    "list_name": "Northern Bank Limited",
+    "status": "ACTIVE"
+  },
+  "OAKNORTH BANK": {
+    "ch_number": "08595042",
+    "creation_date": "2013-07-03T00:00:00Z",
+    "frn": 629564,
+    "legal_form_id": "B6ES",
+    "lei": "213800A7BOPQRC475O81",
+    "list_name": "OakNorth Bank plc",
+    "status": "ACTIVE"
+  },
+  "ONESAVINGS": {
+    "ch_number": "07312896",
+    "creation_date": "2010-07-13T00:00:00Z",
+    "frn": 530504,
+    "legal_form_id": "B6ES",
+    "lei": "213800WTQKOQI8ELD692",
+    "list_name": "OneSavings Bank Plc",
+    "status": "ACTIVE"
+  },
+  "OXBURY": {
+    "ch_number": "11383418",
+    "creation_date": "2018-05-25T00:00:00Z",
+    "frn": 834822,
+    "legal_form_id": "B6ES",
+    "lei": "21380065OVUSBK99TQ03",
+    "list_name": "Oxbury Bank PLC",
+    "status": "ACTIVE"
+  },
+  "PARAGON": {
+    "ch_number": "05390593",
+    "creation_date": "2005-03-12T00:00:00Z",
+    "frn": 604551,
+    "legal_form_id": "B6ES",
+    "lei": "213800ZD686TR7FEP983",
+    "list_name": "Paragon Bank Plc",
+    "status": "ACTIVE"
+  },
+  "PERENNA": {
+    "ch_number": "13084174",
+    "creation_date": "2020-12-16T00:00:00Z",
+    "frn": 956138,
+    "legal_form_id": "B6ES",
+    "lei": "2138005PR3L49ZS15G64",
+    "list_name": "PERENNA BANK PLC",
+    "status": "ACTIVE"
+  },
+  "PERSIA INTERNATIONAL BANK": {
+    "ch_number": "04218020",
+    "creation_date": "2001-05-16T10:00:00Z",
+    "frn": 208020,
+    "legal_form_id": "B6ES",
+    "lei": "213800HTIY6D1KMBG757",
+    "list_name": "Persia International Bank Plc",
+    "status": "ACTIVE"
+  },
+  "PHILIPPINE NATIONAL BANK EUROPE": {
+    "ch_number": "02939223",
+    "creation_date": "1994-06-15T10:00:00Z",
+    "frn": 204532,
+    "legal_form_id": "B6ES",
+    "lei": "8945002FWV05NGBXJJ26",
+    "list_name": "Philippine National Bank (Europe) Plc",
+    "status": "ACTIVE"
+  },
+  "PUNJAB NATIONAL BANK INTERNATIONAL": {
+    "ch_number": "05781326",
+    "creation_date": "2006-04-13T00:00:00Z",
+    "frn": 459701,
+    "legal_form_id": "H0PO",
+    "lei": "2138006AACENARGZJ838",
+    "list_name": "Punjab National Bank (International) Limited",
+    "status": "ACTIVE"
+  },
+  "QIB UK": {
+    "ch_number": "04656003",
+    "creation_date": "2003-02-04T00:00:00Z",
+    "frn": 466577,
+    "legal_form_id": "B6ES",
+    "lei": "213800S4QPWSX1GXY767",
+    "list_name": "QIB (UK) Plc",
+    "status": "ACTIVE"
+  },
+  "RATHBONES INVESTMENT MANAGEMENT": {
+    "ch_number": "01448919",
+    "creation_date": "1979-09-17T00:00:00Z",
+    "frn": 116316,
+    "legal_form_id": "H0PO",
+    "lei": "2138008ANZZHTOFO9Y42",
+    "list_name": "Rathbones Investment Management Limited",
+    "status": "ACTIVE"
+  },
+  "RBC EUROPE": {
+    "ch_number": "00995939",
+    "creation_date": "1970-12-02T00:00:00Z",
+    "frn": 124543,
+    "legal_form_id": "H0PO",
+    "lei": "TXDSU46SXBWIGJ8G8E98",
+    "list_name": "RBC Europe Limited",
+    "status": "ACTIVE"
+  },
+  "RBS": {
+    "ch_number": "SC083026",
+    "creation_date": "1983-05-09T00:00:00Z",
+    "frn": 114724,
+    "legal_form_id": "B6ES",
+    "lei": "549300WHU4EIHRP28H10",
+    "list_name": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY",
+    "status": "ACTIVE"
+  },
+  "RCI BANK UK": {
+    "ch_number": "11429127",
+    "creation_date": "2018-06-22T00:00:00Z",
+    "frn": 815220,
+    "legal_form_id": "H0PO",
+    "lei": "213800XJY1CUVMC29H81",
+    "list_name": "RCI Bank UK Limited",
+    "status": "ACTIVE"
+  },
+  "RECOGNISE BANK": {
+    "ch_number": "10603119",
+    "creation_date": "2017-02-06T00:00:00Z",
+    "frn": 849404,
+    "legal_form_id": "H0PO",
+    "lei": "213800ZFTXJC7RV9UQ92",
+    "list_name": "RECOGNISE BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "REDWOOD BANK": {
+    "ch_number": "09872265",
+    "creation_date": "2015-11-13T00:00:00Z",
+    "frn": 755924,
+    "legal_form_id": "H0PO",
+    "lei": "213800MZ8SY49DGWN237",
+    "list_name": "REDWOOD BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "RELIANCE BANK": {
+    "ch_number": "00068835",
+    "creation_date": null,
+    "frn": 204537,
+    "legal_form_id": "H0PO",
+    "lei": "213800EO3S4IKXAPB795",
+    "list_name": "RELIANCE BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "SANTANDER": {
+    "ch_number": "02294747",
+    "creation_date": "1988-09-12T00:00:00Z",
+    "frn": 106054,
+    "legal_form_id": "B6ES",
+    "lei": "PTCQB104N23FMNK2RZ28",
+    "list_name": "Santander UK Plc",
+    "status": "ACTIVE"
+  },
+  "SANTANDER FINANCIAL SERVICES": {
+    "ch_number": "02338548",
+    "creation_date": "1989-01-24T00:00:00Z",
+    "frn": 146003,
+    "legal_form_id": "B6ES",
+    "lei": "R83QYRLEMH4ZSHI0L097",
+    "list_name": "Santander Financial Services plc",
+    "status": "ACTIVE"
+  },
+  "SCHRODER": {
+    "ch_number": "02280926",
+    "creation_date": "1988-07-27T00:00:00Z",
+    "frn": 144206,
+    "legal_form_id": "H0PO",
+    "lei": "XZYM01I1402576QWNU05",
+    "list_name": "SCHRODER & CO. LIMITED",
+    "status": "ACTIVE"
+  },
+  "SECURE TRUST BANK": {
+    "ch_number": "00541132",
+    "creation_date": "1954-11-26T00:00:00Z",
+    "frn": 204550,
+    "legal_form_id": "B6ES",
+    "lei": "213800CXIBLC2TMIGI76",
+    "list_name": "SECURE TRUST BANK PUBLIC LIMITED COMPANY",
+    "status": "ACTIVE"
+  },
+  "SHAWBROOK": {
+    "ch_number": "00388466",
+    "creation_date": "1944-06-29T00:00:00Z",
+    "frn": 204574,
+    "legal_form_id": "H0PO",
+    "lei": "213800XSHRKUIZK86B68",
+    "list_name": "Shawbrook Bank Limited",
+    "status": "ACTIVE"
+  },
+  "SMBC": {
+    "ch_number": "04684034",
+    "creation_date": "2003-03-03T05:00:00Z",
+    "frn": 223304,
+    "legal_form_id": "B6ES",
+    "lei": "NT7C58H5HPZYKZDPOO64",
+    "list_name": "SMBC Bank International plc",
+    "status": "ACTIVE"
+  },
+  "STANDARD CHARTERED BANK": {
+    "ch_number": "ZC000018",
+    "creation_date": "2012-06-06T00:00:00Z",
+    "frn": 114276,
+    "legal_form_id": "Q0M5",
+    "lei": "RILFO74KP1CM8P6PCT96",
+    "list_name": "Standard Chartered Bank",
+    "status": "ACTIVE"
+  },
+  "STARLING": {
+    "ch_number": "09092149",
+    "creation_date": "2014-06-18T00:00:00Z",
+    "frn": 730166,
+    "legal_form_id": "H0PO",
+    "lei": "213800AE5VSF3V1PAV23",
+    "list_name": "Starling Bank Limited",
+    "status": "ACTIVE"
+  },
+  "STATE BANK OF INDIA UK": {
+    "ch_number": "10436460",
+    "creation_date": "2016-10-19T00:00:00Z",
+    "frn": 757156,
+    "legal_form_id": "H0PO",
+    "lei": "213800LOV39TJH6YQY23",
+    "list_name": "State Bank Of India (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "STREAMBANK": {
+    "ch_number": "11995458",
+    "creation_date": "2019-05-14T00:00:00Z",
+    "frn": 954876,
+    "legal_form_id": "B6ES",
+    "lei": "213800KDQFY4NBXFKP66",
+    "list_name": "StreamBank PLC",
+    "status": "ACTIVE"
+  },
+  "TANDEM": {
+    "ch_number": "00955491",
+    "creation_date": "1969-06-04T00:00:00Z",
+    "frn": 204479,
+    "legal_form_id": "H0PO",
+    "lei": "2138006XK2FFFY53L343",
+    "list_name": "Tandem Bank Limited",
+    "status": "ACTIVE"
+  },
+  "TD BANK EUROPE": {
+    "ch_number": "02734652",
+    "creation_date": "1992-07-27T00:00:00Z",
+    "frn": 165556,
+    "legal_form_id": "H0PO",
+    "lei": "213800TSUEO1BP2F4Z08",
+    "list_name": "TD Bank Europe Limited",
+    "status": "ACTIVE"
+  },
+  "THE BANK OF LONDON GROUP": {
+    "ch_number": "12844788",
+    "creation_date": "2020-08-28T00:00:00Z",
+    "frn": 930379,
+    "legal_form_id": "H0PO",
+    "lei": "984500564M886CFD4643",
+    "list_name": "The Bank of London Group Limited",
+    "status": "ACTIVE"
+  },
+  "THIS BANK": {
+    "ch_number": "11734380",
+    "creation_date": "2018-12-19T00:00:00Z",
+    "frn": 832786,
+    "legal_form_id": "H0PO",
+    "lei": "2138008GGHD1Q6OZZ280",
+    "list_name": "THIS BANK LIMITED",
+    "status": "ACTIVE"
+  },
+  "TRIODOS": {
+    "ch_number": "11379025",
+    "creation_date": "2018-05-23T00:00:00Z",
+    "frn": 817008,
+    "legal_form_id": "H0PO",
+    "lei": "213800CT9EVOBAGLKM04",
+    "list_name": "Triodos Bank UK Limited",
+    "status": "ACTIVE"
+  },
+  "TSB": {
+    "ch_number": "SC095237",
+    "creation_date": "1985-09-24T00:00:00Z",
+    "frn": 191240,
+    "legal_form_id": "B6ES",
+    "lei": "549300XP222MV7P3CC54",
+    "list_name": "TSB Bank plc",
+    "status": "ACTIVE"
+  },
+  "TURKISH BANK UK": {
+    "ch_number": "02643004",
+    "creation_date": "1991-09-03T21:00:00Z",
+    "frn": 204566,
+    "legal_form_id": "H0PO",
+    "lei": "213800UHJUCFNA7KY464",
+    "list_name": "TURKISH BANK (UK) LIMITED",
+    "status": "ACTIVE"
+  },
+  "UBA UK": {
+    "ch_number": "03104974",
+    "creation_date": "1995-09-21T00:00:00Z",
+    "frn": 695048,
+    "legal_form_id": "H0PO",
+    "lei": "213800Y39WDKGBTX4B95",
+    "list_name": "United Bank for Africa (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "UNION BANCAIRE PRIVEE UK": {
+    "ch_number": "00964058",
+    "creation_date": "1969-10-16T00:00:00Z",
+    "frn": 119250,
+    "legal_form_id": "H0PO",
+    "lei": "549300KR3CB1AXT4LT74",
+    "list_name": "Union Bancaire Priv\u00e9e (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "UNION BANK OF INDIA UK": {
+    "ch_number": "07653660",
+    "creation_date": "2011-06-01T00:00:00Z",
+    "frn": 601551,
+    "legal_form_id": "H0PO",
+    "lei": "213800AYQA28LZ7J6M48",
+    "list_name": "UNION BANK OF INDIA (UK) LIMITED",
+    "status": "ACTIVE"
+  },
+  "UNITED NATIONAL": {
+    "ch_number": "04146820",
+    "creation_date": "2001-01-24T00:00:00Z",
+    "frn": 207381,
+    "legal_form_id": "H0PO",
+    "lei": "213800W6KCECL8MCGZ36",
+    "list_name": "United National Bank Limited",
+    "status": "ACTIVE"
+  },
+  "UNITED TRUST BANK": {
+    "ch_number": "00549690",
+    "creation_date": "1955-05-23T00:00:00Z",
+    "frn": 204463,
+    "legal_form_id": "H0PO",
+    "lei": "213800LZU65P34WD8A92",
+    "list_name": "United Trust Bank Limited",
+    "status": "ACTIVE"
+  },
+  "UNITY TRUST": {
+    "ch_number": "01713124",
+    "creation_date": "1983-04-07T00:00:00Z",
+    "frn": 204570,
+    "legal_form_id": "B6ES",
+    "lei": "213800PX57VULWV8AK43",
+    "list_name": "Unity Trust Bank Plc",
+    "status": "ACTIVE"
+  },
+  "VANQUIS": {
+    "ch_number": "02558509",
+    "creation_date": "1990-11-15T00:00:00Z",
+    "frn": 221156,
+    "legal_form_id": "H0PO",
+    "lei": "2138005IBE41C824QF22",
+    "list_name": "Vanquis Bank Limited",
+    "status": "ACTIVE"
+  },
+  "VIDA": {
+    "ch_number": "09837692",
+    "creation_date": "2018-08-08T00:00:00Z",
+    "frn": 738741,
+    "legal_form_id": "H0PO",
+    "lei": "635400LSFAEFKDSBOC05",
+    "list_name": "Vida Bank Limited",
+    "status": "ACTIVE"
+  },
+  "WEATHERBYS": {
+    "ch_number": "02943300",
+    "creation_date": "1994-06-28T05:00:00Z",
+    "frn": 204571,
+    "legal_form_id": "H0PO",
+    "lei": "549300OF84KDPIFN4M17",
+    "list_name": "Weatherbys Bank Limited",
+    "status": "ACTIVE"
+  },
+  "ZEMPLER": {
+    "ch_number": "04947027",
+    "creation_date": "2003-10-29T00:00:00Z",
+    "frn": 671140,
+    "legal_form_id": "H0PO",
+    "lei": "21380039DXZZIN38WR68",
+    "list_name": "Zempler Bank Limited",
+    "status": "ACTIVE"
+  },
+  "ZENITH": {
+    "ch_number": "05713749",
+    "creation_date": "2006-01-17T00:00:00Z",
+    "frn": 451720,
+    "legal_form_id": "H0PO",
+    "lei": "213800HXR6XZKC2G7U74",
+    "list_name": "Zenith Bank (UK) Limited",
+    "status": "ACTIVE"
+  },
+  "ZOPA": {
+    "ch_number": "10627575",
+    "creation_date": "2017-02-20T00:00:00Z",
+    "frn": 800542,
+    "legal_form_id": "H0PO",
+    "lei": "213800QW7QJVVCL9RZ56",
+    "list_name": "Zopa Bank Limited",
+    "status": "ACTIVE"
+  }
+}

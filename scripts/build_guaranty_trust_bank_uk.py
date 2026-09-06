@@ -8,6 +8,9 @@ YEAR_LABEL = {y: y for y in YEARS}
 AR2024_URL = "https://find-and-update.company-information.service.gov.uk/company/05969821/filing-history/MzQ2NTE3NTM2NmFkaXF6a2N4/document?format=pdf&download=0"
 AR2022_URL = "https://find-and-update.company-information.service.gov.uk/company/05969821/filing-history/MzQwNjA2NDkyOGFkaXF6a2N4/document?format=pdf&download=0"
 AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company/05969821/filing-history/MzM3MzI3NjAyMmFkaXF6a2N4/document?format=pdf&download=0"
+P3_2024_URL = "https://gtbank-uk.files.svdcdn.com/production/general/GTBank-UK-Pillar-3-Disclosure-2024.pdf?dm=1769088481"
+P3_2023_URL = "https://gtbank-uk.files.svdcdn.com/production/general/GTBank-UK-Pillar-3-2023.pdf?dm=1731585289"
+P3_2022_URL = "https://gtbank-uk.files.svdcdn.com/production/media/GTBUK-Pillar-3-2022.pdf"
 
 ENTITY_NOTE = (
     "Guaranty Trust Bank (UK) Limited (FRN 466611, Companies House 05969821) is a wholly-owned UK\n"
@@ -46,19 +49,14 @@ CASH_FLOW_SOURCES = (
 
 def p3_sources():
     return (
-        "Sources - Guaranty Trust Bank (UK) Limited does not publish a standalone Pillar 3 disclosure document.\n"
-        "Confirmed via a full enumeration of every URL in gtbankuk.com's own sitemap.xml (all 8 sitemap\n"
-        "sections: about, businessBanking, helpCentre, homepage, investorRelationsIndex, mediaCentre,\n"
-        "personalBanking, securityCentre, staticPages) - no Pillar 3, regulatory-disclosures, or capital-ratio\n"
-        "page/document exists anywhere on the site. The Strategic Report each year states that Pillar 3/CRD IV\n"
-        "disclosures are 'set out in the Directors' Report' and risk management policies 'in Note 23', but the\n"
-        "only quantitative capital figure actually given anywhere in the statutory accounts is Note 23.8(a)\n"
-        "'Regulatory capital (unaudited)', reproduced below. No CET1/Total Capital/Leverage ratio, RWA,\n"
-        "Leverage Ratio, LCR, NSFR, or MREL figure of any kind is disclosed for any year.\n"
-        f"FY2024/FY2023: Annual Report FY2024, Note 23.8(a) 'Regulatory capital (unaudited)', p.68 - {AR2024_URL}\n"
-        f"FY2022/FY2021: Annual Report FY2022, Note 23.8(a) 'Regulatory capital (unaudited)', p.62 - {AR2022_URL}\n"
-        "(FY2021's own figure is confirmed identical in both the FY2021 Annual Report's own Note 23.8(a), "
-        f"p.58 - {AR2021_URL} - and the FY2022 Annual Report's FY2021 comparative column.)\n\n"
+        "Sources - Guaranty Trust Bank (UK) Limited's own standalone Pillar 3 disclosures (not GTBank Nigeria or GTCO).\n"
+        f"FY2024: Key Metrics pp.14-15, Available Capital/MCR pp.16-18 - {P3_2024_URL}\n"
+        f"FY2023: Key Metrics pp.13-14, Available Capital/MCR pp.16-18 - {P3_2023_URL}\n"
+        f"FY2022: KPI/Eligible Capital/CAR/Leverage pp.4-6 and MCR/TCR pp.14-16 - {P3_2022_URL}\n"
+        "FY2021 is included as the comparative column in the FY2022 disclosure. These disclosures provide\n"
+        "CET1, Tier 1 and total capital, RWA, capital ratios, leverage ratio, LCR and (from FY2023) NSFR.\n"
+        "MREL is not numerically disclosed in the reviewed standalone reports. FY2024/FY2023 also cross-check\n"
+        f"the statutory accounts' regulatory-capital Note 23.8(a) - {AR2024_URL}.\n\n"
         "The Bank states it has no Additional Tier 1 capital, so Common Equity Tier 1 = Tier 1 = Total\n"
         "regulatory capital throughout; the same figure is used on all three sheets below."
     )
@@ -466,14 +464,14 @@ metric(
     [("Common Equity Tier 1 (CET1) capital", REG_CAPITAL)],
     p3_sources(),
 )
-bw.add_not_disclosed_metric_sheets(["CET1 Ratio"], p3_sources())
+metric("CET1 Ratio", "%", [("CET1 ratio", {"FY2024": "26.89%", "FY2023": "32.30%", "FY2022": "20.68%", "FY2021": "25.02%"})], p3_sources())
 metric(
     "Tier 1 Capital", "£",
     [("Tier 1 capital", REG_CAPITAL)],
     p3_sources(),
     note="The Bank has no Additional Tier 1 capital, so Tier 1 capital equals CET1 capital.",
 )
-bw.add_not_disclosed_metric_sheets(["Tier 1 Ratio"], p3_sources())
+metric("Tier 1 Ratio", "%", [("Tier 1 ratio", {"FY2024": "26.89%", "FY2023": "32.30%", "FY2022": "20.68%", "FY2021": "25.02%"})], p3_sources())
 metric(
     "Total Capital", "£",
     [("Total regulatory capital (unaudited)", REG_CAPITAL)],
@@ -481,20 +479,26 @@ metric(
     note="The Bank has no Tier 2 capital, so Total Capital equals Tier 1 capital equals CET1 capital.",
 )
 
-bw.add_not_disclosed_metric_sheets(["Total Capital Ratio", "Total RWAs"], p3_sources())
+metric("Total Capital Ratio", "%", [("Total Capital Ratio", {"FY2024": "26.89%", "FY2023": "32.30%", "FY2022": "20.68%", "FY2021": "25.02%"})], p3_sources())
+metric("Total RWAs", "£", [("Total RWAs", {"FY2024": 157370, "FY2023": 105275, "FY2022": 187034, "FY2021": 100287})], p3_sources())
 
 bw.add_rwa_breakdown_sheet(
     title="Guaranty Trust Bank (UK) Limited — RWA Breakdown",
-    subtitle="Not publicly disclosed. See source note at bottom.",
-    rows=[("DATA", "Not publicly disclosed", {})],
+    subtitle="Standalone Pillar 3 disclosures, £'000. Component split is reported for FY2022/FY2021; FY2024/FY2023 reports disclose only total RWA.",
+    rows=[
+        ("DATA", "Credit risk RWA", {"FY2022": 166793, "FY2021": 77962}),
+        ("DATA", "Operational risk RWA", {"FY2022": 20026, "FY2021": 22148}),
+        ("DATA", "Market risk RWA", {"FY2022": 215, "FY2021": 177}),
+    ],
     sources_text=p3_sources(),
     first_col_width=54,
     source_height=280,
 )
 
-bw.add_not_disclosed_metric_sheets([
-    "Leverage Ratio", "LCR", "NSFR", "MREL Ratio",
-], p3_sources())
+metric("Leverage Ratio", "%", [("Leverage Ratio", {"FY2024": "8.02%", "FY2023": "8.30%", "FY2022": "4.38%", "FY2021": "5.04%"})], p3_sources())
+metric("LCR", "%", [("Liquidity Coverage Ratio", {"FY2024": "309%", "FY2023": "250%", "FY2022": "274%", "FY2021": "356%"})], p3_sources())
+metric("NSFR", "%", [("Net Stable Funding Ratio", {"FY2024": "260%", "FY2023": "310%"})], p3_sources(), note="The FY2022 standalone disclosure does not report an NSFR figure; FY2021 is not substituted from another entity.")
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources())
 
 # ---------------------------------------------------------------
 # Overview sheet

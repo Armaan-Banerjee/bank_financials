@@ -2,13 +2,17 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017"]
 YEAR_LABEL = {y: y for y in YEARS}
 AR2025_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/2025-paragon-bank-plc-ara"
 AR2024_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/paragon-bank-plc-annual-report-and-accounts-2024"
 AR2023_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/paragon-bank-plc-annual-report-and-accounts-2023"
 AR2022_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/section-172/2022/paragon-bank-plc-s172"
 AR2021_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/section-172/paragonbankaccounts2021"
+AR2020_URL = "https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history"
+AR2019_URL = AR2020_URL
+AR2018_URL = AR2020_URL
+AR2017_URL = AR2020_URL
 P3_2025_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2025/2025-pillar-iii"
 P3_2024_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2024/2024--pillar--iii"
 P3_2022_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2022/pbg_2022_pillar_iii_disclosures"
@@ -24,7 +28,9 @@ ENTITY_NOTE = (
     "Pillar 3 capital/liquidity figures are for the Paragon Bank regulatory group, including subsidiary entities, as stated "
     "in the 2025 accounts and Pillar 3 reports. FY2025 full-year Pillar 3 was announced on 23 January 2026, but the "
     "accessible 2025 URL is the half-year document; FY2025 capital metrics therefore use audited Annual Report note 38 "
-    "and FY2025 LCR/NSFR use its strategic-report disclosures. MREL is not disclosed in reviewed reports."
+    "and FY2025 LCR/NSFR use its strategic-report disclosures. MREL is not disclosed in reviewed reports. "
+    "FY2020-FY2017 source retrieval was checked against the Paragon Bank PLC Companies House filing history "
+    "(company 05390593); historical cells remain blank where the older filing presentation could not be transcribed reliably."
 )
 CASH_FLOW_SOURCES = (
     "Sources - Paragon Bank PLC own statutory Cash Flow Statement, £m (all years ended 30 September):\n"
@@ -36,39 +42,41 @@ CASH_FLOW_SOURCES = (
 )
 rows = [
  ("SECTION","Operating activities",{}),
- ("DATA","Profit before tax",{"FY2025":242.2,"FY2024":265.0,"FY2023":232.6,"FY2022":480.2,"FY2021":182.5}),
+ ("DATA","Profit before tax",{"FY2025":242.2,"FY2024":265.0,"FY2023":232.6,"FY2022":480.2,"FY2021":182.5,"FY2020":86.52,"FY2019":47.92,"FY2018":164.51,"FY2017":22.92}),
  ("DATA","Non-cash movement on borrowing",{"FY2025":0.4}),
  ("DATA","Non-cash movement on investment securities",{"FY2025":34.2,"FY2024":-7.8}),
  ("DATA","Depreciation on property, plant and equipment",{"FY2022":0.3,"FY2021":0.3}),
- ("DATA","Impairment losses on loans to customers",{"FY2025":8.0,"FY2024":9.2,"FY2023":10.5,"FY2022":6.6,"FY2021":-10.9}),
- ("DATA","Loans to customers",{"FY2025":-536.9,"FY2024":-1016.3,"FY2023":-1755.5,"FY2022":-1056.2,"FY2021":-3001.0}),
- ("DATA","Derivative financial instruments",{"FY2025":78.0,"FY2024":199.1,"FY2023":87.7,"FY2022":-577.4,"FY2021":-10.5}),
- ("DATA","Fair value of portfolio hedges",{"FY2025":-49.6,"FY2024":-230.3,"FY2023":-97.4,"FY2022":394.9,"FY2021":70.0}),
- ("DATA","Other receivables",{"FY2025":21.4,"FY2024":-48.4,"FY2023":26.4,"FY2022":12.5,"FY2021":447.3}),
- ("DATA","Retail deposits",{"FY2025":-32.3,"FY2024":3032.7,"FY2023":2596.0,"FY2022":1368.9,"FY2021":1443.8}),
- ("DATA","Derivative financial instruments (liabilities)",{"FY2025":-33.6,"FY2024":59.2,"FY2023":-78.4,"FY2022":76.1,"FY2021":-65.6}),
- ("DATA","Fair value of portfolio hedges (liabilities)",{"FY2025":-11.6,"FY2024":47.6,"FY2023":68.9,"FY2022":-96.8,"FY2021":-13.0}),
+ ("DATA","Impairment losses on loans to customers",{"FY2025":8.0,"FY2024":9.2,"FY2023":10.5,"FY2022":6.6,"FY2021":-10.9,"FY2018":2.13,"FY2017":1.00}),
+ ("DATA","Loans to customers",{"FY2025":-536.9,"FY2024":-1016.3,"FY2023":-1755.5,"FY2022":-1056.2,"FY2021":-3001.0,"FY2018":-1570.06,"FY2017":-1671.35}),
+ ("DATA","Derivative financial instruments",{"FY2025":78.0,"FY2024":199.1,"FY2023":87.7,"FY2022":-577.4,"FY2021":-10.5,"FY2018":-13.03,"FY2017":-7.74}),
+ ("DATA","Fair value of portfolio hedges",{"FY2025":-49.6,"FY2024":-230.3,"FY2023":-97.4,"FY2022":394.9,"FY2021":70.0,"FY2018":14.87,"FY2017":11.50}),
+ ("DATA","Other receivables",{"FY2025":21.4,"FY2024":-48.4,"FY2023":26.4,"FY2022":12.5,"FY2021":447.3,"FY2018":-720.90,"FY2017":-591.16}),
+ ("DATA","Retail deposits",{"FY2025":-32.3,"FY2024":3032.7,"FY2023":2596.0,"FY2022":1368.9,"FY2021":1443.8,"FY2018":1681.16,"FY2017":1741.53}),
+ ("DATA","Derivative financial instruments (liabilities)",{"FY2025":-33.6,"FY2024":59.2,"FY2023":-78.4,"FY2022":76.1,"FY2021":-65.6,"FY2018":-0.67,"FY2017":-3.93}),
+ ("DATA","Fair value of portfolio hedges (liabilities)",{"FY2025":-11.6,"FY2024":47.6,"FY2023":68.9,"FY2022":-96.8,"FY2021":-13.0,"FY2018":-1.12,"FY2017":0.69}),
  ("DATA","Increase in provisions",{"FY2025":25.5}),
- ("DATA","Other liabilities",{"FY2025":-54.7,"FY2024":-171.6,"FY2023":158.8,"FY2022":309.3,"FY2021":36.0}),
- ("DATA","Income taxes paid",{"FY2025":-61.4,"FY2024":-53.5,"FY2023":-34.0,"FY2022":-35.0,"FY2021":-13.7}),
- ("TOTAL","Net cash generated/(utilised) by operating activities",{"FY2025":-370.4,"FY2024":2084.9,"FY2023":1215.6,"FY2022":883.4,"FY2021":-934.8}),
+ ("DATA","Other liabilities",{"FY2025":-54.7,"FY2024":-171.6,"FY2023":158.8,"FY2022":309.3,"FY2021":36.0,"FY2018":418.00,"FY2017":16.61}),
+ ("DATA","Income taxes paid",{"FY2025":-61.4,"FY2024":-53.5,"FY2023":-34.0,"FY2022":-35.0,"FY2021":-13.7,"FY2018":-4.72,"FY2017":-0.09}),
+ ("TOTAL","Net cash generated/(utilised) by operating activities",{"FY2025":-370.4,"FY2024":2084.9,"FY2023":1215.6,"FY2022":883.4,"FY2021":-934.8,"FY2018":-29.83,"FY2017":-480.02}),
  ("SECTION","Investing activities",{}),
- ("DATA","Investment in securities",{"FY2025":-233.0,"FY2024":-419.6}),
+ ("DATA","Investment in securities",{"FY2025":-233.0,"FY2024":-419.6,"FY2017":7.06}),
  ("DATA","Proceeds from sale of operating property, plant and equipment",{"FY2022":4.8}),
+ ("DATA","Acquisition of subsidiary",{"FY2017":-225.60}),
  ("DATA","Advances of loans to subsidiary undertakings",{"FY2025":-2817.8,"FY2024":-10556.4,"FY2023":-9543.8,"FY2022":-5429.8,"FY2021":-2320.0}),
  ("DATA","Repayment of loans by subsidiary entities",{"FY2025":2736.7,"FY2024":10513.5,"FY2023":9750.1,"FY2022":5212.9,"FY2021":1905.6}),
- ("TOTAL","Net cash generated/(utilised) by investing activities",{"FY2025":-314.1,"FY2024":-462.5,"FY2023":206.3,"FY2022":-212.1,"FY2021":-414.4}),
+ ("TOTAL","Net cash generated/(utilised) by investing activities",{"FY2025":-314.1,"FY2024":-462.5,"FY2023":206.3,"FY2022":-212.1,"FY2021":-414.4,"FY2018":0.0,"FY2017":-218.54}),
  ("SECTION","Financing activities",{}),
- ("DATA","Dividends paid",{"FY2025":-155.8,"FY2024":-158.9,"FY2023":-258.1,"FY2022":-150.3,"FY2021":-94.8}),
+ ("DATA","Dividends paid",{"FY2025":-155.8,"FY2024":-158.9,"FY2023":-258.1,"FY2022":-150.3,"FY2021":-94.8,"FY2018":-6.91}),
  ("DATA","Issue of covered bond",{"FY2025":498.8}),
  ("DATA","Repayment of long term bank facilities",{"FY2025":-500.0,"FY2024":-2000.0}),
- ("DATA","Movement on short term central bank facilities",{"FY2025":695.0,"FY2024":5.0,"FY2022":-69.0,"FY2021":964.6}),
+ ("DATA","Shares issued",{"FY2017":303.76}),
+ ("DATA","Movement on short term central bank facilities",{"FY2025":695.0,"FY2024":5.0,"FY2022":-69.0,"FY2021":964.6,"FY2018":324.40,"FY2017":700.00}),
  ("DATA","Movement on repurchase facilities",{"FY2024":49.9,"FY2023":50.1}),
  ("DATA","Capital element of lease payments",{"FY2021":-0.1}),
- ("TOTAL","Net cash generated/(utilised) by financing activities",{"FY2025":538.0,"FY2024":-2104.0,"FY2023":-208.0,"FY2022":-219.3,"FY2021":869.7}),
- ("TOTAL","Net (decrease)/increase in cash and cash equivalents",{"FY2025":-146.5,"FY2024":-481.6,"FY2023":1213.9,"FY2022":452.0,"FY2021":-479.5}),
- ("DATA","Opening cash and cash equivalents",{"FY2025":2378.4,"FY2024":2860.0,"FY2023":1646.1,"FY2022":1194.1,"FY2021":1673.6}),
- ("TOTAL","Closing cash and cash equivalents",{"FY2025":2231.9,"FY2024":2378.4,"FY2023":2860.0,"FY2022":1646.1,"FY2021":1194.1}),
+ ("TOTAL","Net cash generated/(utilised) by financing activities",{"FY2025":538.0,"FY2024":-2104.0,"FY2023":-208.0,"FY2022":-219.3,"FY2021":869.7,"FY2018":317.49,"FY2017":1003.76}),
+ ("TOTAL","Net (decrease)/increase in cash and cash equivalents",{"FY2025":-146.5,"FY2024":-481.6,"FY2023":1213.9,"FY2022":452.0,"FY2021":-479.5,"FY2018":287.66,"FY2017":305.20}),
+ ("DATA","Opening cash and cash equivalents",{"FY2025":2378.4,"FY2024":2860.0,"FY2023":1646.1,"FY2022":1194.1,"FY2021":1673.6,"FY2018":629.89,"FY2017":324.69}),
+ ("TOTAL","Closing cash and cash equivalents",{"FY2025":2231.9,"FY2024":2378.4,"FY2023":2860.0,"FY2022":1646.1,"FY2021":1194.1,"FY2018":917.55,"FY2017":629.89}),
 ]
 P3_SOURCES = (
  "Sources - Pillar 3 / regulatory-group metrics (capital amounts and RWEAs £m; ratios %):\n"
@@ -163,6 +171,10 @@ STATEMENTS_SOURCES = (
     f"FY2022: Companies House filing dated 14 Mar 2023 (139pp), Statement of Profit or Loss p.46, "
     f"Balance Sheet p.47, Statement of Movements in Equity p.49 - "
     f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n"
+    f"FY2018: Companies House filing dated 13 Dec 2018 (99pp), Income Statement p.37, Balance Sheet p.38, "
+    f"Cash Flow Statement p.39 and Statement of Movement in Equity p.40 (supplied Companies House scan)\n"
+    f"FY2017: Companies House filing dated 19 Dec 2017 (82pp), Statement of Profit or Loss p.25, Balance Sheet p.26, "
+    f"Cash Flow Statement p.27 and Statement of Movement in Equity p.28 (supplied Companies House scan)\n"
     f"FY2021: Companies House filing dated 2022 (137pp), Statement of Profit or Loss p.49, "
     f"Balance Sheet p.50, Cash Flow Statement p.51 - "
     f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n\n"
@@ -185,33 +197,35 @@ STATEMENTS_SOURCES = (
 
 bs_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash - central banks", {"FY2025": 2175.7, "FY2024": 2315.5, "FY2023": 2783.3, "FY2022": 1612.5, "FY2021": 1142.0}),
-    ("DATA", "Cash - retail banks", {"FY2025": 56.2, "FY2024": 62.9, "FY2023": 76.7, "FY2022": 33.6, "FY2021": 52.1}),
-    ("DATA", "Investment securities (FY2021-22: 'Short term investments', both nil)", {"FY2025": 626.2, "FY2024": 427.4, "FY2022": 0.0, "FY2021": 0.0}),
-    ("DATA", "Loans to customers", {"FY2025": 12446.0, "FY2024": 11671.6, "FY2023": 11161.2, "FY2022": 8952.8, "FY2021": 8144.6}),
-    ("DATA", "Investment in structured entities", {"FY2025": 1959.3, "FY2024": 2154.9, "FY2023": 1427.9, "FY2022": 1791.2, "FY2021": 1944.1}),
-    ("DATA", "Derivative financial assets", {"FY2025": 241.1, "FY2024": 319.1, "FY2023": 518.2, "FY2022": 605.9, "FY2021": 28.5}),
-    ("DATA", "Sundry assets", {"FY2025": 115.5, "FY2024": 137.0, "FY2023": 88.6, "FY2022": 115.0, "FY2021": 127.5}),
+    ("DATA", "Cash - central banks", {"FY2025": 2175.7, "FY2024": 2315.5, "FY2023": 2783.3, "FY2022": 1612.5, "FY2021": 1142.0, "FY2020": 1637.06, "FY2019": 816.40, "FY2018": 917.55, "FY2017": 629.89}),
+    ("DATA", "Cash - retail banks", {"FY2025": 56.2, "FY2024": 62.9, "FY2023": 76.7, "FY2022": 33.6, "FY2021": 52.1, "FY2020": 36.51, "FY2019": 20.83}),
+    ("DATA", "Investment securities (FY2021-22: 'Short term investments', both nil)", {"FY2025": 626.2, "FY2024": 427.4, "FY2022": 0.0, "FY2021": 0.0, "FY2020": 0.0, "FY2019": 0.0}),
+    ("DATA", "Loans to customers", {"FY2025": 12446.0, "FY2024": 11671.6, "FY2023": 11161.2, "FY2022": 8952.8, "FY2021": 8144.6, "FY2020": 7146.78, "FY2019": 5848.32, "FY2018": 4655.43, "FY2017": 3086.70}),
+    ("DATA", "Investment in structured entities", {"FY2025": 1959.3, "FY2024": 2154.9, "FY2023": 1427.9, "FY2022": 1791.2, "FY2021": 1944.1, "FY2018": 8.22, "FY2017": 9.02}),
+    ("DATA", "Derivative financial assets", {"FY2025": 241.1, "FY2024": 319.1, "FY2023": 518.2, "FY2022": 605.9, "FY2021": 28.5, "FY2020": 17.98, "FY2019": 9.72, "FY2018": 22.40, "FY2017": 9.37}),
+    ("DATA", "Sundry assets", {"FY2025": 115.5, "FY2024": 137.0, "FY2023": 88.6, "FY2022": 115.0, "FY2021": 127.5, "FY2020": 574.87, "FY2019": 344.53, "FY2018": 350.23, "FY2017": 367.75}),
+    ("DATA", "Fair value adjustments from portfolio hedging (asset)", {"FY2018": -23.05, "FY2017": -8.18}),
     ("DATA", "Property, plant and equipment", {"FY2023": 0.0, "FY2022": 0.0, "FY2021": 5.1}),
-    ("DATA", "Investment in subsidiary undertakings", {"FY2025": 2192.7, "FY2024": 2111.9, "FY2023": 2069.0, "FY2022": 2278.0, "FY2021": 2061.7}),
-    ("TOTAL", "Total assets", {"FY2025": 19812.7, "FY2024": 19200.3, "FY2023": 18124.9, "FY2022": 15389.0, "FY2021": 13505.6}),
+    ("DATA", "Investment in subsidiary undertakings", {"FY2025": 2192.7, "FY2024": 2111.9, "FY2023": 2069.0, "FY2022": 2278.0, "FY2021": 2061.7, "FY2020": 1647.34, "FY2019": 1598.65}),
+    ("TOTAL", "Total assets", {"FY2025": 19812.7, "FY2024": 19200.3, "FY2023": 18124.9, "FY2022": 15389.0, "FY2021": 13505.6, "FY2020": 11061.83, "FY2019": 8640.96, "FY2018": 7488.86, "FY2017": 4914.21}),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Retail deposits", {"FY2025": 16270.8, "FY2024": 16314.7, "FY2023": 13234.4, "FY2022": 10569.5, "FY2021": 9297.4}),
-    ("DATA", "Derivative financial liabilities", {"FY2025": 65.3, "FY2024": 98.9, "FY2023": 39.7, "FY2022": 118.1, "FY2021": 42.0}),
+    ("DATA", "Retail deposits", {"FY2025": 16270.8, "FY2024": 16314.7, "FY2023": 13234.4, "FY2022": 10569.5, "FY2021": 9297.4, "FY2020": 7866.59, "FY2019": 6395.87, "FY2018": 5296.57, "FY2017": 3615.41}),
+    ("DATA", "Derivative financial liabilities", {"FY2025": 65.3, "FY2024": 98.9, "FY2023": 39.7, "FY2022": 118.1, "FY2021": 42.0, "FY2018": 4.30, "FY2017": 5.42}),
+    ("DATA", "Fair value adjustments from portfolio hedging (liability)", {"FY2018": -3.77, "FY2017": -3.10}),
     ("DATA", "Covered bonds", {"FY2025": 499.2}),
-    ("DATA", "Central bank facilities", {"FY2025": 950.0, "FY2024": 755.0, "FY2023": 2750.0, "FY2022": 2750.0, "FY2021": 2819.0}),
+    ("DATA", "Central bank facilities", {"FY2025": 950.0, "FY2024": 755.0, "FY2023": 2750.0, "FY2022": 2750.0, "FY2021": 2819.0, "FY2020": 1854.40, "FY2019": 994.40, "FY2018": 1024.40, "FY2017": 700.00}),
     ("DATA", "Sale and repurchase agreements", {"FY2025": 100.0, "FY2024": 100.0, "FY2023": 50.1, "FY2022": 0.0}),
     ("DATA", "Corporate bond", {"FY2025": 150.2, "FY2024": 150.3, "FY2023": 146.3, "FY2022": 150.0, "FY2021": 150.0}),
-    ("DATA", "Sundry liabilities", {"FY2025": 621.4, "FY2024": 635.4, "FY2023": 811.0, "FY2022": 648.5, "FY2021": 339.2}),
+    ("DATA", "Sundry liabilities", {"FY2025": 621.4, "FY2024": 635.4, "FY2023": 811.0, "FY2022": 648.5, "FY2021": 339.2, "FY2020": 297.89, "FY2019": 229.37, "FY2018": 449.51, "FY2017": 31.51}),
     ("DATA", "Provisions", {"FY2025": 25.5}),
-    ("DATA", "Current tax liabilities", {"FY2025": 73.4, "FY2024": 61.9, "FY2023": 53.0, "FY2022": 34.5, "FY2021": 35.7}),
-    ("DATA", "Deferred tax liability", {"FY2025": 10.9, "FY2024": 34.0, "FY2023": 38.9, "FY2022": 55.0, "FY2021": 3.0}),
-    ("TOTAL", "Total liabilities", {"FY2025": 18766.7, "FY2024": 18150.2, "FY2023": 17123.4, "FY2022": 14325.6, "FY2021": 12686.3}),
+    ("DATA", "Current tax liabilities", {"FY2025": 73.4, "FY2024": 61.9, "FY2023": 53.0, "FY2022": 34.5, "FY2021": 35.7, "FY2018": 7.15, "FY2017": 4.56}),
+    ("DATA", "Deferred tax liability", {"FY2025": 10.9, "FY2024": 34.0, "FY2023": 38.9, "FY2022": 55.0, "FY2021": 3.0, "FY2018": 1.37, "FY2017": 0.60}),
+    ("TOTAL", "Total liabilities", {"FY2025": 18766.7, "FY2024": 18150.2, "FY2023": 17123.4, "FY2022": 14325.6, "FY2021": 12686.3, "FY2020": 10291.39, "FY2019": 7854.89, "FY2018": 6779.53, "FY2017": 4354.40}),
     ("SECTION", "Equity", {}),
-    ("DATA", "Called up share capital", {"FY2025": 552.6, "FY2024": 552.6, "FY2023": 552.6, "FY2022": 552.6, "FY2021": 552.6}),
-    ("DATA", "Reserves (profit and loss account)", {"FY2025": 493.4, "FY2024": 497.5, "FY2023": 448.9, "FY2022": 510.8, "FY2021": 266.7}),
-    ("TOTAL", "Total equity", {"FY2025": 1046.0, "FY2024": 1050.1, "FY2023": 1001.5, "FY2022": 1063.4, "FY2021": 819.3}),
-    ("TOTAL", "Total liabilities and equity", {"FY2025": 19812.7, "FY2024": 19200.3, "FY2023": 18124.9, "FY2022": 15389.0, "FY2021": 13505.6}),
+    ("DATA", "Called up share capital", {"FY2025": 552.6, "FY2024": 552.6, "FY2023": 552.6, "FY2022": 552.6, "FY2021": 552.6, "FY2020": 552.62, "FY2019": 552.62, "FY2018": 552.62, "FY2017": 552.62}),
+    ("DATA", "Reserves (profit and loss account)", {"FY2025": 493.4, "FY2024": 497.5, "FY2023": 448.9, "FY2022": 510.8, "FY2021": 266.7, "FY2020": 217.82, "FY2019": 233.45, "FY2018": 156.71, "FY2017": 7.19}),
+    ("TOTAL", "Total equity", {"FY2025": 1046.0, "FY2024": 1050.1, "FY2023": 1001.5, "FY2022": 1063.4, "FY2021": 819.3, "FY2020": 770.44, "FY2019": 786.07, "FY2018": 709.33, "FY2017": 559.81}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 19812.7, "FY2024": 19200.3, "FY2023": 18124.9, "FY2022": 15389.0, "FY2021": 13505.6, "FY2020": 11061.83, "FY2019": 8640.96, "FY2018": 7488.86, "FY2017": 4914.21}),
 ]
 
 bw.add_balance_sheet_sheet(
@@ -233,19 +247,19 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 pl_rows = [
     ("SECTION", "Income", {}),
-    ("DATA", "Interest receivable", {"FY2025": 1148.9, "FY2024": 1180.9, "FY2023": 852.4, "FY2022": 368.0, "FY2021": 288.4}),
-    ("DATA", "Interest payable and similar charges", {"FY2025": -758.1, "FY2024": -838.0, "FY2023": -536.8, "FY2022": -147.0, "FY2021": -145.8}),
-    ("TOTAL", "Net interest income", {"FY2025": 390.8, "FY2024": 342.9, "FY2023": 315.6, "FY2022": 221.0, "FY2021": 142.6}),
-    ("DATA", "Other income / other operating income", {"FY2025": 51.9, "FY2024": 81.8, "FY2023": 108.7, "FY2022": 174.4, "FY2021": 95.5}),
-    ("TOTAL", "Total operating income", {"FY2025": 442.7, "FY2024": 424.7, "FY2023": 424.3, "FY2022": 395.4, "FY2021": 238.1}),
-    ("DATA", "Operating expenses", {"FY2025": -132.6, "FY2024": -132.5, "FY2023": -117.4, "FY2022": -99.8, "FY2021": -81.5}),
-    ("DATA", "Provisions for losses", {"FY2025": -6.4, "FY2024": -10.5, "FY2023": -10.5, "FY2022": -6.6, "FY2021": 10.9}),
+    ("DATA", "Interest receivable", {"FY2025": 1148.9, "FY2024": 1180.9, "FY2023": 852.4, "FY2022": 368.0, "FY2021": 288.4, "FY2020": 274.43, "FY2019": 247.38, "FY2018": 177.08, "FY2017": 105.66}),
+    ("DATA", "Interest payable and similar charges", {"FY2025": -758.1, "FY2024": -838.0, "FY2023": -536.8, "FY2022": -147.0, "FY2021": -145.8, "FY2020": -149.11, "FY2019": -136.23, "FY2018": -98.20, "FY2017": -49.37}),
+    ("TOTAL", "Net interest income", {"FY2025": 390.8, "FY2024": 342.9, "FY2023": 315.6, "FY2022": 221.0, "FY2021": 142.6, "FY2020": 125.32, "FY2019": 111.15, "FY2018": 78.88, "FY2017": 56.29}),
+    ("DATA", "Other income / other operating income", {"FY2025": 51.9, "FY2024": 81.8, "FY2023": 108.7, "FY2022": 174.4, "FY2021": 95.5, "FY2020": 58.85, "FY2019": 72.76, "FY2018": 140.21, "FY2017": 0.96}),
+    ("TOTAL", "Total operating income", {"FY2025": 442.7, "FY2024": 424.7, "FY2023": 424.3, "FY2022": 395.4, "FY2021": 238.1, "FY2020": 184.17, "FY2019": 183.91, "FY2018": 219.09, "FY2017": 57.25}),
+    ("DATA", "Operating expenses", {"FY2025": -132.6, "FY2024": -132.5, "FY2023": -117.4, "FY2022": -99.8, "FY2021": -81.5, "FY2020": -64.04, "FY2019": -61.54, "FY2018": -50.70, "FY2017": -32.49}),
+    ("DATA", "Provisions for losses", {"FY2025": -6.4, "FY2024": -10.5, "FY2023": -10.5, "FY2022": -6.6, "FY2021": 10.9, "FY2020": -15.50, "FY2019": -3.82, "FY2018": -2.13, "FY2017": -1.06}),
     ("DATA", "Provision for liabilities", {"FY2025": -25.5}),
-    ("TOTAL", "Operating profit before fair value items", {"FY2025": 278.2, "FY2024": 281.7, "FY2023": 296.4, "FY2022": 289.0, "FY2021": 167.5}),
-    ("DATA", "Fair value net gain/(loss)", {"FY2025": -36.0, "FY2024": -16.7, "FY2023": -63.8, "FY2022": 191.2, "FY2021": 15.0}),
-    ("TOTAL", "Profit on ordinary activities before taxation", {"FY2025": 242.2, "FY2024": 265.0, "FY2023": 232.6, "FY2022": 480.2, "FY2021": 182.5}),
-    ("DATA", "Tax charge on profit on ordinary activities", {"FY2025": -61.2, "FY2024": -57.5, "FY2023": -36.4, "FY2022": -85.8, "FY2021": -38.8}),
-    ("TOTAL", "Profit for the financial year", {"FY2025": 181.0, "FY2024": 207.5, "FY2023": 196.2, "FY2022": 394.4, "FY2021": 143.7}),
+    ("TOTAL", "Operating profit before fair value items", {"FY2025": 278.2, "FY2024": 281.7, "FY2023": 296.4, "FY2022": 289.0, "FY2021": 167.5, "FY2020": 104.63, "FY2019": 118.55, "FY2018": 166.26, "FY2017": 23.70}),
+    ("DATA", "Fair value net gain/(loss)", {"FY2025": -36.0, "FY2024": -16.7, "FY2023": -63.8, "FY2022": 191.2, "FY2021": 15.0, "FY2020": 5.52, "FY2019": -11.54, "FY2018": -1.75, "FY2017": -0.78}),
+    ("TOTAL", "Profit on ordinary activities before taxation", {"FY2025": 242.2, "FY2024": 265.0, "FY2023": 232.6, "FY2022": 480.2, "FY2021": 182.5, "FY2020": 110.15, "FY2019": 107.01, "FY2018": 164.51, "FY2017": 22.92}),
+    ("DATA", "Tax charge on profit on ordinary activities", {"FY2025": -61.2, "FY2024": -57.5, "FY2023": -36.4, "FY2022": -85.8, "FY2021": -38.8, "FY2020": -15.60, "FY2019": -9.79, "FY2018": -8.08, "FY2017": -5.25}),
+    ("TOTAL", "Profit for the financial year", {"FY2025": 181.0, "FY2024": 207.5, "FY2023": 196.2, "FY2022": 394.4, "FY2021": 143.7, "FY2020": 94.55, "FY2019": 97.22, "FY2018": 156.43, "FY2017": 17.67}),
 ]
 
 bw.add_income_statement_sheet(

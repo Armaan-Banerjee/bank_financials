@@ -177,7 +177,15 @@ def loan_concentration_quality(observations):
         if stage_num is None:
             continue
         stage = f"stage_{stage_num}"
-        stage_rows[item["frn"]][item["fiscal_year"]].setdefault(category, {})[stage] = float(item["value_numeric"])
+        # Banks disclose ECL/allowance/impairment/collateral rows as a
+        # contra-item (negative, netted against gross exposure) or as a
+        # plain magnitude depending on the source document's own table
+        # layout - both are faithful transcriptions, but the inconsistency
+        # made stage balances plot as negative bars for ~60 banks (found via
+        # a 2026-09-05 user report that Alpha Bank London's Stage 1/2/3
+        # loans looked negative). No row in this sheet is ever a genuine
+        # negative gross exposure, so abs() is safe here.
+        stage_rows[item["frn"]][item["fiscal_year"]].setdefault(category, {})[stage] = abs(float(item["value_numeric"]))
         stage_banks.add(item["frn"])
 
     coverage_npl = defaultdict(list)

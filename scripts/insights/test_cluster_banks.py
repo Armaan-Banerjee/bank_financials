@@ -246,6 +246,36 @@ class FeatureMatrixRowSelection(unittest.TestCase):
         banks, frns, matrix, years, coverage = build_feature_matrix(rows, ratio_sheets=["Leverage Ratio"])
         self.assertEqual(matrix[0, 0], 11.0)  # latest year of the more-populated row A
 
+    def test_a_bank_with_many_more_disclosed_years_than_its_peer_still_gets_exactly_one_row(self):
+        """The historical-depth (HD-series) extension effort gave some real
+        banks 10+ years of disclosed data against most banks' standard 5 -
+        confirms an extended bank's extra years are never treated as extra
+        independent clustering observations, and that its OWN latest year
+        (not a globally shared one, and not its earliest) is what's picked,
+        regardless of how many more years it has on file than its peer."""
+        long_window_years = [f"FY{y}" for y in range(2016, 2026)]  # 10 years
+        short_window_years = [f"FY{y}" for y in range(2021, 2026)]  # 5 years
+        rows = []
+        for i, year in enumerate(long_window_years):
+            # value climbs with year so a "picked the wrong year" bug is
+            # visible as a wrong matrix value, not just a wrong count.
+            rows.append(self._row("LONGWINDOW", "1", "CET1 Ratio", "CET1 ratio", year, f"{10 + i}%", 10 + i, "1"))
+        for i, year in enumerate(short_window_years):
+            rows.append(self._row("SHORTWINDOW", "2", "CET1 Ratio", "CET1 ratio", year, f"{20 + i}%", 20 + i, "1"))
+
+        banks, frns, matrix, years, coverage = build_feature_matrix(rows, ratio_sheets=["CET1 Ratio"])
+        self.assertEqual(sorted(banks), ["LONGWINDOW", "SHORTWINDOW"])
+        # exactly 2 rows total - 10 extra years must not become 10 extra rows
+        self.assertEqual(matrix.shape[0], 2)
+        long_idx = banks.index("LONGWINDOW")
+        short_idx = banks.index("SHORTWINDOW")
+        # LONGWINDOW's FY2025 (index 9, value 19) must win, not FY2016
+        # (index 0, value 10) just because it's first in the input list.
+        self.assertEqual(matrix[long_idx, 0], 19.0)
+        self.assertEqual(years[long_idx, 0], "FY2025")
+        self.assertEqual(matrix[short_idx, 0], 24.0)
+        self.assertEqual(years[short_idx, 0], "FY2025")
+
 
 class ExcludeMrelFlag(unittest.TestCase):
     """Integration-level test of --exclude-mrel, previously only verified

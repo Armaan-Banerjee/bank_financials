@@ -1,3 +1,3 @@
 cluster_id,cluster_label,cluster_size,CET1 Ratio,Tier 1 Ratio,Total Capital Ratio,Leverage Ratio,LCR,NSFR,MREL Ratio
-0,low Tier 1 Ratio / low CET1 Ratio,98,17.8334,19.022,21.0391,10.0206,335.3984,164.9389,26.2076
-1,high Tier 1 Ratio / high CET1 Ratio,19,52.5768,50.1516,48.8379,26.58,737.0995,281.6889,26.2
+0,high CET1 Ratio / high Tier 1 Ratio,20,54.7625,54.8825,51.64,26.098,688.0445,275.2085,26.62
+1,low CET1 Ratio / low Tier 1 Ratio,105,18.2917,19.465,21.2638,10.3057,328.7295,170.1782,26.6491

@@ -18,8 +18,8 @@ class In021HeadroomTests(unittest.TestCase):
         conn.close()
         return directory, db
 
-    def _row(self, year, value, frn="1", basis="standalone", unit="%"):
-        return {"bank": "Test Bank", "canonical_bank": "Test Bank", "source_filename_bank": "Test Bank",
+    def _row(self, year, value, frn="1", basis="standalone", unit="%", bank="Test Bank"):
+        return {"bank": bank, "canonical_bank": bank, "source_filename_bank": bank,
                 "source_workbook": "test.xlsx", "frn": frn, "workbook_kind": "full", "sheet": "CET1 Ratio",
                 "row_label": "CET1 ratio", "year": year, "value_raw": str(value), "value_numeric": str(value),
                 "is_numeric": "1", "unit": unit, "reporting_basis": None, "basis_note": basis,
@@ -34,6 +34,18 @@ class In021HeadroomTests(unittest.TestCase):
     def test_context_requires_basis_and_unit(self):
         self.assertIsNone(applicable_context({"unit": "%"}, "CET1 Ratio", 2025))
         self.assertIsNone(applicable_context({"unit": "£", "reporting_basis": "entity"}, "CET1 Ratio", 2025))
+
+    def test_context_falls_back_to_percent_in_value_raw_when_unit_column_is_unset(self):
+        # `unit` is NULL for every row in the real annual_metrics table (never
+        # populated at extraction time) - a bank/year whose only percentage
+        # signal is the literal "%" surviving in value_raw (e.g. "15.0%")
+        # must still match, not be silently dropped as "no regulatory
+        # context" for every single record in the database (found via
+        # IN-052's migration survey).
+        context = applicable_context(
+            {"unit": None, "value_raw": "15.0%", "reporting_basis": "entity"}, "CET1 Ratio", 2025
+        )
+        self.assertEqual(context["floor"], 7.0)
 
     def test_empty_database_is_safe(self):
         import tempfile
@@ -76,6 +88,38 @@ class In021HeadroomTests(unittest.TestCase):
             self.assertEqual(record["current_value"], 11.0)
             self.assertEqual(record["status"], "screened")
             self.assertEqual(record["current_headroom"], 4.0)
+        finally:
+            directory.cleanup()
+
+    def test_long_run_change_uses_each_banks_own_earliest_year_not_a_shared_one(self):
+        """The historical-depth (HD-series) extension effort gave some real
+        banks a 10-year window (FY2016-FY2025) against most banks' standard
+        5 (FY2021-FY2025). Confirms an extended bank's long-run change is
+        computed from ITS OWN earliest year (FY2016), not silently clipped
+        to the other bank's shorter window, and that the short-window
+        bank's own record is unaffected by its peer's longer history."""
+        rows = []
+        for i, year in enumerate(range(2016, 2026)):  # LONGBANK: FY2016-FY2025, values 10..19
+            rows.append(self._row(f"FY{year}", 10 + i, frn="1", bank="Long Window Bank"))
+        for i, year in enumerate(range(2021, 2026)):  # SHORTBANK: FY2021-FY2025, values 20..24
+            rows.append(self._row(f"FY{year}", 20 + i, frn="2", bank="Short Window Bank"))
+        directory, db = self._db_with_rows(rows)
+        try:
+            records = {r["frn"]: r for r in build_headroom_payload(db)["records"]}
+            long_record = records["1"]
+            short_record = records["2"]
+            self.assertEqual(long_record["comparable_year_count"], 10)
+            self.assertEqual(long_record["latest_year"], 2025)
+            # 19 (FY2025) - 10 (FY2016) = 9, NOT 19 - 14 (a wrongly-clipped
+            # FY2021 start) = 5.
+            self.assertEqual(long_record["trend_change"], 9)
+            self.assertEqual(long_record["trend_direction"], "increasing")
+
+            self.assertEqual(short_record["comparable_year_count"], 5)
+            self.assertEqual(short_record["latest_year"], 2025)
+            # 24 (FY2025) - 20 (FY2021) = 4 - unaffected by LONGBANK's
+            # extra pre-2021 years existing in the same database.
+            self.assertEqual(short_record["trend_change"], 4)
         finally:
             directory.cleanup()
 

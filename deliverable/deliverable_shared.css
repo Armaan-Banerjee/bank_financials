@@ -49,6 +49,10 @@ body{
 main{flex:1;min-width:0;max-width:1180px;padding:44px 40px 60px;}
 main .page-head{margin-bottom:6px;}
 main .page-head h1{font-family:var(--font-serif);font-size:26px;font-weight:600;margin:0 0 5px;letter-spacing:-.01em;}
+.bank-identity{display:flex;align-items:center;gap:11px;}
+.bank-logo{position:relative;display:grid;place-items:center;width:28px;height:28px;flex:0 0 28px;border-radius:9px;background:#eceef1;overflow:hidden;}
+.bank-logo img{position:absolute;inset:4px;width:calc(100% - 8px);height:calc(100% - 8px);object-fit:contain;}
+.bank-monogram{font-family:var(--font-sans);font-size:15px;font-weight:600;color:var(--ink-soft);}
 main .page-head .sub{color:var(--ink-soft);font-size:13px;max-width:68ch;}
 main .page-head a.back{font-size:12.5px;color:var(--ink-soft);text-decoration:none;}
 main .page-head a.back:hover{color:var(--navy);}
@@ -61,6 +65,18 @@ main .page-head a.back:hover{color:var(--navy);}
 .block-head .chevron{display:inline-block;color:var(--ink-faint);font-size:11px;transition:transform .15s;}
 .block.collapsed .block-body{display:none;}
 .block.collapsed .chevron{transform:rotate(-90deg);}
+
+/* --- subsection: one collapsible piece inside a block that's grown too
+   large to scan at a glance in one open state (IN-052 follow-up) --- */
+.subsection{margin-top:22px;border-top:1px solid var(--hairline-soft);padding-top:16px;}
+.subsection:first-of-type{margin-top:0;border-top:none;padding-top:0;}
+.subsection>summary{display:flex;align-items:baseline;justify-content:space-between;gap:10px;cursor:pointer;list-style:none;margin-bottom:12px;}
+.subsection>summary::-webkit-details-marker{display:none;}
+.subsection>summary h3{font-family:var(--font-serif);font-size:14px;font-weight:600;margin:0;display:flex;align-items:center;gap:7px;}
+.subsection>summary h3::before{content:"▾";color:var(--ink-faint);font-size:10px;transition:transform .15s;}
+.subsection:not([open])>summary h3::before{transform:rotate(-90deg);}
+.subsection:not([open])>summary{margin-bottom:0;}
+.subsection>summary .hint{color:var(--ink-faint);font-size:12px;white-space:nowrap;}
 
 .bank-picker{display:flex;flex-wrap:wrap;gap:4px 12px;margin-bottom:10px;font-size:12px;}
 .bank-picker label{display:inline-flex;align-items:center;gap:5px;color:var(--ink-soft);cursor:pointer;}
@@ -132,6 +148,12 @@ main .page-head a.back:hover{color:var(--navy);}
 .equity-table td:first-child{text-align:left;color:var(--ink-soft);white-space:normal;min-width:220px;}
 .equity-table tr.total-row td{font-weight:600;border-top:1px solid var(--hairline);}
 .equity-table tr:hover td{background:#fbfaf6;}
+
+/* --- sortable screening tables: regulatory headroom, most extreme (IN-052) --- */
+.headroom-table th:not(:first-child):not(:nth-child(2)):not(:nth-child(7)),
+.headroom-table td:not(:first-child):not(:nth-child(2)):not(:nth-child(7)){text-align:right;}
+.sort-col{border:0;background:none;color:inherit;cursor:pointer;font:inherit;font-size:11px;font-weight:600;letter-spacing:.02em;padding:0;text-align:left;}
+.sort-col:hover,.sort-col:focus{color:var(--navy);text-decoration:underline;}
 
 .workbook-link-block{text-align:center;padding:22px 0;}
 .workbook-link-block a{display:inline-block;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;border:1px solid var(--hairline);border-radius:2px;padding:9px 18px;}

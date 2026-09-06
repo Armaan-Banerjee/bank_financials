@@ -28,16 +28,22 @@ ENTITY_NOTE = (
     "transcribed via page-image review of each year's own filing. The Statement of Financial Position confirms "
     "Additional Tier 1 Equity Capital of £10,000k alongside CET1-eligible equity (called-up share capital + "
     "retained earnings) in every year shown - i.e. Brown Shipley's capital structure includes AT1 instruments, so "
-    "unlike some smaller banks in this series CET1 capital/ratio cannot be assumed equal to Tier 1 or Total "
-    "Capital. Brown Shipley's own statutory accounts, however, do not disclose a full Pillar 3-style capital "
-    "template (no CET1/Tier 1/Total Capital £ amounts, no Total RWAs, no Tier 1/Total Capital ratios, no "
-    "Leverage Ratio, no NSFR, no MREL Ratio in any year 2021-2024) - each year's Strategic Report includes only a "
-    "brief narrative 'Regulatory measures' KPI stating the CET1 ratio and Liquidity Coverage Ratio (LCR) as bare "
-    "percentages, with no supporting £ figures. No standalone Pillar 3 disclosure document was found on Brown "
-    "Shipley's own website (which links only to Quintet Group-level annual reports and TCFD/sustainability "
-    "documents, not a Brown Shipley-specific Pillar 3 filing) - Brown Shipley likely relies on Quintet Group-"
-    "level Pillar 3 disclosure rather than publishing its own UK solo template. Metrics beyond CET1 Ratio and LCR "
-    "are therefore filled with 'Not publicly disclosed' rather than guessed."
+    "unlike some smaller banks in this series CET1 capital/ratio cannot be assumed equal to Tier 1 capital. "
+    "CORRECTION (2026-09-06 correctness audit, HD-065): an earlier version of this script wrongly stated that "
+    "Brown Shipley's own statutory accounts do not disclose a Pillar 3-style capital template at all. In fact "
+    "each year's own accounts include a 'Capital' note (Note 35 in the FY2022-FY2024 accounts; Note 36 in the "
+    "FY2021 accounts, which numbers its notes one higher throughout) titled 'Unaudited Regulatory Capital at 31 "
+    "December', disclosing Total Common Equity Tier One Capital, Additional Tier 1 Capital, Total Tier One "
+    "Capital, Risk Exposure Amount (= Total RWAs), a Pillar 1 capital-requirement breakdown by Credit Risk and "
+    "Operational Risk, and CET1/Tier 1 Capital ratios - re-verified against each year's own primary source and "
+    "now populated on the CET1 Capital, Tier 1 Capital, Tier 1 Ratio, Total RWAs and RWA Breakdown sheets "
+    "accordingly. What remains genuinely undisclosed in any year 2021-2024 (confirmed by reading each year's own "
+    "Note 35/36 'Capital' and Note 36/37 'Financial Risk Management' sections in full, not assumed): Total "
+    "Capital/Total Capital Ratio (no Tier 2 capital instrument is ever mentioned, so Total Capital cannot be "
+    "assumed equal to Tier 1 Capital without the Bank stating so itself), Leverage Ratio, NSFR, and MREL Ratio - "
+    "these remain 'Not publicly disclosed'. No standalone Pillar 3 disclosure document (as opposed to this "
+    "statutory-accounts note) was found on Brown Shipley's own website (which links only to Quintet Group-level "
+    "annual reports and TCFD/sustainability documents, not a Brown Shipley-specific Pillar 3 filing)."
 )
 
 CASH_FLOW_SOURCES = (
@@ -60,8 +66,7 @@ CASH_FLOW_SOURCES = (
 def p3_sources():
     return (
         "Sources - Brown Shipley & Co. Limited's own Strategic Report 'Regulatory measures' KPI disclosure "
-        "(narrative percentages only, no supporting £/RWA breakdown published), transcribed from each year's own "
-        "Companies House filing:\n"
+        "(narrative percentages only), transcribed from each year's own Companies House filing:\n"
         f"FY2024: Annual Report 2024, p.6 (Strategic Report, 'Regulatory measures') - {AR2024_URL}\n"
         f"FY2023: Annual Report 2023, p.6 (Strategic Report, 'Regulatory measures') - {AR2023_URL}\n"
         f"FY2022: Annual Report 2022, p.6 (Strategic Report, 'Regulatory measures' (c)) - {AR2022_URL}\n"
@@ -71,7 +76,36 @@ def p3_sources():
         "and as the FY2021 comparative in FY2022's report), except FY2023 CET1: FY2023's own report states 22.3%, "
         "while FY2024's report states the FY2023 comparative as 22.2% (a 0.1pp discrepancy in the Bank's own "
         "filings) - FY2023's own report's 22.3% is used here, per this project's convention of preferring each "
-        "year's own report over a later comparative.\n\n"
+        "year's own report over a later comparative. UPDATE (2026-09-06 correctness audit, HD-065): this same "
+        "0.1pp discrepancy is also visible WITHIN FY2023's own report alone - its Strategic Report states CET1 "
+        "22.3% (p.6) while its own Note 35 'Capital' table (p.70, see capital_note_sources()) states CET1 22.2% "
+        "for the same FY2023 year-end - i.e. it is an internal inconsistency in the Bank's own FY2023 filing "
+        "between two disclosures, not merely a between-year comparative drift. The Strategic Report's 22.3% "
+        "continues to be used here for consistency with every other year's figure being sourced from the "
+        "Strategic Report KPI line.\n\n"
+        + ENTITY_NOTE
+    )
+
+
+def capital_note_sources():
+    return (
+        "Sources - Brown Shipley & Co. Limited's own 'Capital' note (Note 35 in the FY2022-FY2024 accounts, Note "
+        "36 in the FY2021 accounts - that year's notes are numbered one higher throughout), 'Unaudited Regulatory "
+        "Capital at 31 December' table, transcribed from each year's own Companies House filing:\n"
+        f"FY2024: Annual Report 2024, p.73 (Note 35, 'Capital') - {AR2024_URL}\n"
+        f"FY2023: Annual Report 2023, pp.69-70 (Note 35, 'Capital') - {AR2023_URL}\n"
+        f"FY2022: Annual Report 2022, pp.69-70 (Note 35, 'Capital') - {AR2022_URL}\n"
+        f"FY2021: Annual Report 2021, pp.69-70 (Note 36, 'Capital') - {AR2021_URL}\n"
+        "Cross-checked against each figure's appearance as the following year's comparative column - all matched "
+        "exactly (e.g. FY2021's own Total CET1 Capital £67,645k/Total Tier 1 Capital £77,645k/Risk Exposure "
+        "Amount £344,361k/CET1 ratio 19.6%/Tier 1 ratio 22.6% all tie to FY2022's own report's FY2021 comparative "
+        "column). Discovered by this correctness audit (2026-09-06, HD-065): a prior version of this script "
+        "wrongly marked CET1 Capital, Tier 1 Capital, Tier 1 Ratio and Total RWAs 'Not publicly disclosed' - this "
+        "note discloses all four, plus a Pillar 1 capital-requirement breakdown by Credit Risk and Operational "
+        "Risk (used on the RWA Breakdown sheet - see that sheet's own note on how RWA-by-category is derived from "
+        "the disclosed capital-requirement figures). Total Capital/Total Capital Ratio remain 'Not publicly "
+        "disclosed': no Tier 2 capital instrument is mentioned in this note or elsewhere in any year's accounts, "
+        "so Total Capital cannot be assumed equal to Total Tier 1 Capital without the Bank stating so itself.\n\n"
         + ENTITY_NOTE
     )
 
@@ -382,51 +416,90 @@ def metric(name, unit, rows_data, sources_text, note=None):
 CET1_RATIO = {"FY2024": "21.6%", "FY2023": "22.3%", "FY2022": "20.3%", "FY2021": "19.6%"}
 LCR_RATIO = {"FY2024": "236%", "FY2023": "274%", "FY2022": "218%", "FY2021": "253%"}
 
+# Disclosed via each year's own "Capital" note (Note 35, Note 36 for FY2021) - see
+# capital_note_sources(). Found by the 2026-09-06 correctness audit (HD-065); a
+# prior version of this script wrongly marked these "Not publicly disclosed".
+CET1_CAPITAL = {"FY2024": 94885, "FY2023": 90201, "FY2022": 84594, "FY2021": 67645}
+TIER1_CAPITAL = {"FY2024": 104885, "FY2023": 100201, "FY2022": 94594, "FY2021": 77645}
+TIER1_RATIO = {"FY2024": "23.9%", "FY2023": "24.7%", "FY2022": "22.7%", "FY2021": "22.6%"}
+TOTAL_RWAS = {"FY2024": 439621, "FY2023": 405524, "FY2022": 417077, "FY2021": 344361}
+
+# Pillar 1 CAPITAL REQUIREMENT by risk type, as literally disclosed (not RWA itself -
+# see the RWA Breakdown sheet's own note for how RWA-by-category is derived from these).
+RWA_CREDIT_RISK_CAPREQ = {"FY2024": 24024, "FY2023": 21885, "FY2022": 23868, "FY2021": 18347}
+RWA_OPERATIONAL_RISK_CAPREQ = {"FY2024": 11145, "FY2023": 10557, "FY2022": 9498, "FY2021": 9202}
+RWA_CREDIT_RISK = {y: round(RWA_CREDIT_RISK_CAPREQ[y] * 12.5) for y in YEARS}
+RWA_OPERATIONAL_RISK = {y: round(RWA_OPERATIONAL_RISK_CAPREQ[y] * 12.5) for y in YEARS}
+
 NOT_DISCLOSED_NOTE = (
-    "Brown Shipley's own statutory accounts do not disclose this metric in any year 2021-2024 - no standalone "
-    "Pillar 3 template was found (see Entity note on the Cash Flow Statement sheet)."
+    "Brown Shipley's own statutory accounts do not disclose this metric in any year 2021-2024 (see Entity note "
+    "on the Cash Flow Statement sheet)."
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["CET1 Capital"],
-    p3_sources(),
-    per_note={"CET1 Capital": NOT_DISCLOSED_NOTE},
+metric(
+    "CET1 Capital", "£'000",
+    [("Total Common Equity Tier 1 (CET1) Capital", CET1_CAPITAL)],
+    capital_note_sources(),
 )
 
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO)], p3_sources())
 
+metric(
+    "Tier 1 Capital", "£'000",
+    [("Total Tier 1 Capital (CET1 + Additional Tier 1)", TIER1_CAPITAL)],
+    capital_note_sources(),
+)
+
+metric(
+    "Tier 1 Ratio", "% of RWA",
+    [("Tier 1 Capital ratio", TIER1_RATIO)],
+    capital_note_sources(),
+)
+
 bw.add_not_disclosed_metric_sheets(
-    ["Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs"],
-    p3_sources(),
+    ["Total Capital", "Total Capital Ratio"],
+    capital_note_sources(),
     per_note={
-        "Tier 1 Capital": NOT_DISCLOSED_NOTE + " Note: the Statement of Financial Position confirms £10,000k of "
-                          "Additional Tier 1 Equity Capital exists in every year shown, so Tier 1 capital cannot "
-                          "be assumed equal to CET1 capital - not calculated here without a disclosed RWA figure.",
-        "Tier 1 Ratio": NOT_DISCLOSED_NOTE,
-        "Total Capital": NOT_DISCLOSED_NOTE,
-        "Total Capital Ratio": NOT_DISCLOSED_NOTE,
-        "Total RWAs": NOT_DISCLOSED_NOTE,
+        "Total Capital": NOT_DISCLOSED_NOTE + " The 'Capital' note discloses Total Tier 1 Capital but never "
+                          "mentions a Tier 2 capital instrument in any year, so Total Capital cannot be assumed "
+                          "equal to Total Tier 1 Capital without the Bank stating so itself.",
+        "Total Capital Ratio": NOT_DISCLOSED_NOTE + " Same reasoning as Total Capital.",
     },
+)
+
+metric(
+    "Total RWAs", "£'000",
+    [("Total Risk Exposure Amount (RWAs)", TOTAL_RWAS)],
+    capital_note_sources(),
 )
 
 bw.add_rwa_breakdown_sheet(
     title="Brown Shipley & Co. Limited — RWA Breakdown",
-    subtitle="Not publicly disclosed in any year - see note below.",
+    subtitle="£'000. Company (entity-level) basis. RWA by category derived - see note below.",
     rows=[
-        ("SECTION", "RWA by risk category", {}),
-        ("TOTAL", "Total RWAs", {y: "Not publicly disclosed" for y in YEARS}),
+        ("SECTION", "RWA by risk category (derived)", {}),
+        ("DATA", "Credit Risk", RWA_CREDIT_RISK),
+        ("DATA", "Operational Risk", RWA_OPERATIONAL_RISK),
+        ("TOTAL", "Total RWAs (as disclosed - Risk Exposure Amount)", TOTAL_RWAS),
     ],
-    sources_text=p3_sources() + "\n\n" + NOT_DISCLOSED_NOTE + " No RWA figure of any kind (total or by category) "
-                 "is published by this entity - only the narrative CET1 ratio and LCR percentages described in "
-                 "the Entity note.",
+    sources_text=capital_note_sources() + "\n\nDERIVATION NOTE: the Bank's own 'Capital' note discloses a Pillar "
+                 "1 CAPITAL REQUIREMENT by risk type (Credit Risk, Operational Risk), not RWA by category "
+                 "directly. Under the standardised approach the Pillar 1 capital requirement is exactly 8% of "
+                 "RWA (confirmed here: each year's own disclosed 'Pillar 1 Capital Requirement' divided by its "
+                 "own disclosed 'Risk Exposure Amount' equals 8.0000% in every year 2021-2024), so RWA by "
+                 "category above is each risk type's own disclosed capital requirement multiplied by 12.5 (i.e. "
+                 "divided by 8%). This grosses back up to the Bank's own disclosed Total RWAs (Risk Exposure "
+                 "Amount) within immaterial rounding (largest gap: £8.5k on a ~£440m total, FY2024) in every "
+                 "year - cross-checked, not assumed.",
     first_col_width=54,
-    source_height=200,
+    source_height=260,
 )
 
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio"],
-    p3_sources(),
-    per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE},
+    capital_note_sources(),
+    per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' note and "
+              "'Financial Risk Management' note in full - neither mentions a leverage ratio."},
 )
 
 metric(
@@ -437,8 +510,13 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"],
-    p3_sources(),
-    per_note={"NSFR": NOT_DISCLOSED_NOTE, "MREL Ratio": NOT_DISCLOSED_NOTE},
+    capital_note_sources(),
+    per_note={
+        "NSFR": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' and 'Financial Risk "
+                "Management'/'Liquidity risk' notes in full - only LCR is disclosed as a liquidity metric.",
+        "MREL Ratio": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' note in full - no "
+                      "MREL requirement or ratio is mentioned.",
+    },
 )
 
 # ---------------------------------------------------------------
@@ -474,7 +552,7 @@ bw.add_overview_sheet(
     cash_flow_unit="£'000",
     ratios=[
         ("CET1 Ratio", CET1_RATIO),
-        ("Tier 1 Ratio", {}),
+        ("Tier 1 Ratio", TIER1_RATIO),
         ("Total Capital Ratio", {}),
         ("Leverage Ratio", {}),
         ("LCR", LCR_RATIO),
@@ -483,9 +561,11 @@ bw.add_overview_sheet(
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page. This workbook covers FY2021-FY2024 (4 years, not the "
          "usual 5) since Brown Shipley's FY2025 accounts were still 'being processed' at Companies House as of "
-         "this build. Only CET1 Ratio and LCR are disclosed by Brown Shipley's own statutory accounts - all other "
-         "Pillar 3 metrics (Tier 1/Total Capital, RWAs, Leverage Ratio, NSFR, MREL Ratio) are not publicly "
-         "disclosed by this entity; see each metric sheet for detail.",
+         "this build. CET1 Ratio, Tier 1 Ratio, CET1 Capital, Tier 1 Capital, Total RWAs and LCR are all "
+         "disclosed by Brown Shipley's own statutory accounts (the CET1/Tier 1 figures via each year's own "
+         "'Capital' note, re-confirmed by the 2026-09-06 correctness audit, HD-065) - only Total Capital/Total "
+         "Capital Ratio, Leverage Ratio, NSFR and MREL Ratio are not publicly disclosed by this entity; see each "
+         "metric sheet for detail.",
 )
 
 # ---------------------------------------------------------------

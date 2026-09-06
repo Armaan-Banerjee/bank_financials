@@ -31,13 +31,16 @@ ENTITY_NOTE = (
     "'exemption kicks in partway through the window' pattern - here it only blocks the LAST "
     "year rather than the earlier years, so FY2021-FY2024 are built as a normal full cash flow "
     "statement and only FY2025 is left blank with this note.\n\n"
-    "PRESENTATION FORMAT NOTE: FY2021's own filing discloses only a single aggregate operating "
-    "cash flow figure (no trading-activities/working-capital breakdown, no investing/financing "
-    "sections) - this is the source's own presentation for that year, not a gap. FY2022-FY2024 "
-    "(sourced from the FY2023 and FY2024 filings, whose comparative/current columns cross-"
-    "check exactly) use a fuller breakdown. Blank cells on the more granular rows for FY2021 "
-    "reflect this genuine presentation difference; the year's one available total is placed on "
-    "the 'Net cash (used in)/generated from operating activities' row.\n\n"
+    "PRESENTATION FORMAT NOTE: FY2021's face Cash Flow Statement (p.14) itself shows only a "
+    "single aggregate operating total, but the full working-capital breakdown behind that total "
+    "IS disclosed in Note 24 'Cashflow statement' (p.35) - a prior text-only pass on this "
+    "workbook had cited p.35 as a source but, unable to read the scanned page image, incorrectly "
+    "left the breakdown rows blank and claimed no breakdown existed. A visual re-check of p.35 "
+    "found the full reconciliation and it has now been transcribed below; every FY2021 line "
+    "reconciles exactly (trading activities 41,774 + working-capital changes -242,153 = "
+    "-200,379, matching the face statement's total precisely). FY2021 has no investing or "
+    "financing activities section - that part of the presentation difference vs FY2022-FY2024 "
+    "is genuine, confirmed on both p.14 and p.35.\n\n"
     "Full opening-to-closing chain cross-checked and ties exactly across all 4 years with cash "
     "flow data: FY2021 closing (5,128,808) = FY2022 opening; FY2022 closing (5,671,848) = "
     "FY2023 opening; FY2023 closing (5,383,852) = FY2024 opening; FY2024 closing = 5,540,507, "
@@ -59,20 +62,24 @@ CASH_FLOW_SOURCES = (
 
 rows = [
     ("SECTION", "Operating activities", {}),
-    ("DATA", "Profit before tax", {"FY2024": 168882, "FY2023": 169529, "FY2022": 67307}),
+    ("DATA", "Profit before tax", {"FY2024": 168882, "FY2023": 169529, "FY2022": 67307, "FY2021": 39358}),
     ("DATA", "Effect of foreign exchange rates on loans and advances to banks",
      {"FY2024": -81, "FY2023": 3545, "FY2022": -10493}),
-    ("DATA", "Amortisation of intangible assets", {"FY2024": 2771, "FY2023": 2905, "FY2022": 2905}),
-    ("DATA", "Impairment reversal", {"FY2022": -35}),
-    ("TOTAL", "Net cash flow from trading activities", {"FY2024": 171572, "FY2023": 175979, "FY2022": 59684}),
-    ("DATA", "Decrease in loans and advances to customers", {"FY2022": 35}),
-    ("DATA", "Decrease/(increase) in other assets", {"FY2024": 3044, "FY2023": -2207, "FY2022": -10406}),
-    ("DATA", "Increase/(decrease) in customer accounts", {"FY2024": 135483, "FY2023": -348801, "FY2022": 782202}),
-    ("DATA", "Increase/(decrease) in deposits by banks", {"FY2024": 2820, "FY2023": 2577, "FY2022": -1348}),
-    ("DATA", "Increase in amounts due to other group companies", {"FY2024": 1736, "FY2023": 2073, "FY2022": 4061}),
-    ("DATA", "(Decrease)/increase in other liabilities", {"FY2024": -9420, "FY2023": 4491, "FY2022": 8942}),
+    ("DATA", "Amortisation of intangible assets", {"FY2024": 2771, "FY2023": 2905, "FY2022": 2905, "FY2021": 2905}),
+    ("DATA", "Impairment reversal", {"FY2022": -35, "FY2021": -10}),
+    ("DATA", "Finance write-backs", {"FY2021": -479}),
+    ("TOTAL", "Net cash flow from trading activities", {"FY2024": 171572, "FY2023": 175979, "FY2022": 59684, "FY2021": 41774}),
+    ("DATA", "Increase in items in course of transmission by other banks", {"FY2021": 1907}),
+    ("DATA", "Decrease in loans and advances to customers", {"FY2022": 35, "FY2021": 10}),
+    ("DATA", "Decrease/(increase) in other assets", {"FY2024": 3044, "FY2023": -2207, "FY2022": -10406, "FY2021": -76}),
+    ("DATA", "Decrease in derivative financial liabilities", {"FY2021": -10}),
+    ("DATA", "Decrease in financial assets at fair value through profit or loss", {"FY2021": 2572}),
+    ("DATA", "Increase/(decrease) in customer accounts", {"FY2024": 135483, "FY2023": -348801, "FY2022": 782202, "FY2021": -232334}),
+    ("DATA", "Increase/(decrease) in deposits by banks", {"FY2024": 2820, "FY2023": 2577, "FY2022": -1348, "FY2021": -2347}),
+    ("DATA", "Increase/(decrease) in amounts due to other group companies", {"FY2024": 1736, "FY2023": 2073, "FY2022": 4061, "FY2021": -1140}),
+    ("DATA", "(Decrease)/increase in other liabilities", {"FY2024": -9420, "FY2023": 4491, "FY2022": 8942, "FY2021": 475}),
     ("DATA", "Settlement to Santander UK plc in respect of Corporation Tax",
-     {"FY2024": -47048, "FY2023": -18170, "FY2022": -10623}),
+     {"FY2024": -47048, "FY2023": -18170, "FY2022": -10623, "FY2021": -11210}),
     ("TOTAL", "Net cash (used in)/generated from operating activities",
      {"FY2024": 258187, "FY2023": -184058, "FY2022": 832547, "FY2021": -200379}),
     ("SECTION", "Investing activities", {}),
@@ -289,7 +296,7 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 / capital metric sheets
 # ---------------------------------------------------------------
-CET1_CAPITAL = {"FY2025": 217373, "FY2024": 246095, "FY2023": 220848, "FY2022": 268414}
+CET1_CAPITAL = {"FY2025": 217373, "FY2024": 246095, "FY2023": 220848, "FY2022": 268414, "FY2021": 537042}
 CET1_RATIO = {"FY2025": "78.20%", "FY2024": "98.74%", "FY2023": "122.8%", "FY2022": "246.5%"}
 RWA_CALC = {"FY2025": 277971, "FY2024": 249235, "FY2023": 179844, "FY2022": 108890}
 
@@ -297,7 +304,9 @@ NOT_DISCLOSED_NOTE = (
     "Not publicly disclosed. Cater Allen's Annual Report discloses only CET1 capital ratio and "
     "Total Tier 1 Capital/Total Capital Resources (identical, since no AT1/Tier 2 instruments "
     "exist) via its Strategic Report KPI table and Capital risk note - no Leverage Ratio, LCR, "
-    "NSFR, or MREL figures are disclosed at this entity level in any of the 4 years reviewed. "
+    "NSFR, or MREL figures are disclosed at this entity level in any of the 5 years reviewed. "
+    "FY2021's CET1 ratio and RWA are not disclosed (only the absolute capital figure is); "
+    "FY2021-FY2025 CET1 ratios are only available FY2022 onward. "
     "No standalone Pillar 3 document exists; liquidity/capital management is described only "
     "narratively (managed centrally with Santander UK plc as part of the RFB Domestic "
     "Liquidity Sub-Group and the RFB Sub-Group Capital Support Deed)."
@@ -310,13 +319,13 @@ CAPITAL_SOURCES = (
     f"FY2024: Annual Report and Financial Statements 2024, p.2 (KPIs) and p.13 (Capital) - {AR2024_URL}\n"
     f"FY2023: Annual Report and Financial Statements 2023, p.2 (KPIs) and p.15 (Capital) - {AR2023_URL}\n"
     f"FY2022: Annual Report and Financial Statements 2023, p.2 (KPI comparative) and p.15 "
-    f"(Capital table 2022 comparative) - {AR2023_URL}\n\n"
+    f"(Capital table 2022 comparative) - {AR2023_URL}\n"
+    f"FY2021: Annual Report and Financial Statements 2021, p.27 (Capital adequacy note) - {AR2021_URL}\n\n"
     "CET1 Capital = Tier 1 Capital = Total Capital every year - the Company's Tier 1 capital "
     "consists of shareholders' equity, share premium and audited prior-year profits (adjusted "
-    "for foreseeable charges/dividends); no AT1 or Tier 2 instruments exist. FY2021 is "
-    "genuinely not disclosed - the FY2021 Annual Report's KPI table and financial-statement "
-    "notes predate this project's window's capital-ratio disclosure format and contain no "
-    "capital-adequacy figures of any kind."
+    "for foreseeable charges/dividends); no AT1 or Tier 2 instruments exist. FY2021's capital "
+    "figure (£537,042k) is Total Capital Resources (Tier 1) from the Capital adequacy note on "
+    "p.27 of the FY2021 Annual Report; no CET1 ratio or RWA is disclosed for FY2021."
 )
 
 

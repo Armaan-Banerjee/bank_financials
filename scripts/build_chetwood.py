@@ -2,19 +2,23 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]  # most recent first
 YEAR_LABEL = {
     "FY2025": "FY2025",
     "FY2024": "FY2024*",
     "FY2023": "FY2023",
     "FY2022": "FY2022",
     "FY2021": "FY2021†",
+    "FY2020": "FY2020†‡",
+    "FY2019": "FY2019†‡",
 }
 
 AR25_URL = "https://chetwoodbank.co.uk/documents/chetwood-bank-annual-report.pdf"
 AR24_URL = "http://web.archive.org/web/20240920030034/https://chetwood.co/static/97d26e488d5277699e5b9a9983db4d5b/AnnualReport.pdf"
 AR22_URL = "http://web.archive.org/web/20230131231341/https://chetwood.co/static/7fbc3d1ed9c0913dca3435f640a5a570/AnnualReport.pdf"
 AR21_URL = "http://web.archive.org/web/20210830132929/https://chetwood.co/static/3d0ade6e892213e246ca03dc1d84b417/AnnualReport.pdf"
+AR20_URL = "https://find-and-update.company-information.service.gov.uk/company/09964966/filing-history/MzI3NDIxOTQ2OWFkaXF6a2N4/document?format=pdf&download=0"
+AR19_URL = "https://find-and-update.company-information.service.gov.uk/company/09964966/filing-history/MzI0MTExMzg0OGFkaXF6a2N4/document?format=pdf&download=0"
 
 P3_25_URL = "https://chetwoodbank.co.uk/documents/chetwood-bank-pillar-three-disclosures.pdf"
 P3_23_URL = "http://web.archive.org/web/20240315022245/https://chetwood.co/static/330c40d433df90b83d3b3e5c673e21cc/Pillar3Disclosures.pdf"
@@ -24,14 +28,45 @@ P3_21_URL = "http://web.archive.org/web/20211128171331/https://chetwood.co/stati
 ENTITY_NOTE = (
     "ENTITY NOTE: Chetwood Financial Limited (trading as Chetwood Bank) is the entity on the PRA register - no "
     "holding-company substitution was needed here (unlike Monzo). All years are Chetwood Financial Limited, "
-    "consolidated/Group basis, EXCEPT FY2021 (marked †), which is Chetwood's own standalone entity accounts - "
-    "the Group didn't exist yet (Chetwood acquired Yobota Limited on 1 March 2022, and CHL Mortgages for "
-    "Intermediaries Limited later still), so there is no consolidated cash flow statement for FY2021. Companies "
-    "House confirms FY2021 accounts were filed as 'Full accounts' (solo), while FY2022-FY2025 were filed as "
-    "'Group of companies' accounts' (consolidated). Per user direction, FY2021 is included on a standalone basis "
-    "and clearly flagged, rather than omitted.\n"
+    "consolidated/Group basis, EXCEPT FY2021-FY2019 (marked †), which are Chetwood's own standalone entity "
+    "accounts - the Group didn't exist yet (Chetwood acquired Yobota Limited on 1 March 2022, and CHL Mortgages "
+    "for Intermediaries Limited later still), so there is no consolidated cash flow statement before FY2022. "
+    "Companies House confirms FY2019-FY2021 accounts were filed as 'Full accounts' (solo), while FY2022-FY2025 "
+    "were filed as 'Group of companies' accounts' (consolidated). Per user direction, FY2019-FY2021 are included "
+    "on a standalone basis and clearly flagged, rather than omitted.\n"
     "FY2024 (marked *) is consolidated, but no Pillar 3 disclosure for 'as at 31 March 2024' was ever published or "
-    "archived - see the note on each Pillar 3 sheet."
+    "archived - see the note on each Pillar 3 sheet.\n\n"
+    "HISTORICAL-DEPTH FLOOR NOTE (added 2026-09-06, HD-023): the workbook's true floor is FY2019, not FY2016 as "
+    "originally listed on that ticket, and not FY2021 as a since-corrected version of the same ticket guessed. "
+    "Verified against Chetwood's own Companies House filing history (company no. 09964966, incorporated 22 Jan "
+    "2016) and its own statutory accounts, not a domain/snapshot scan:\n"
+    "- Period to 31 Dec 2016: dormant shell only ('Total exemption full accounts', total assets £954k, no lending "
+    "or deposits) - pre-banking, excluded.\n"
+    "- FY2018 (15-month period, 1 Jan 2017 - 31 Mar 2018): the Company was granted a banking licence WITH "
+    "RESTRICTIONS only on 22 Dec 2017; consumer lending commenced Feb 2018 (2 months of the 15-month period); "
+    "there were zero customer deposits all period (total assets £7.1m, no deposit-taking yet) - this is a "
+    "pre-launch/development-stage period, not a genuine operating bank year, so excluded as a self-skipped year "
+    "despite audited accounts existing for it.\n"
+    "- FY2019 (year ended 31 Mar 2019): the PRA's restrictions on the banking licence were lifted 13 Dec 2018; "
+    "this is the first year with real customer deposits (£26.1m) and a meaningful loan book (£46.3m) - i.e. the "
+    "first genuine full year of Chetwood operating as an unrestricted retail bank. Treated as the floor.\n"
+    "- FY2019 and FY2020 statutory accounts (like FY2018's) were prepared under UK GAAP FRS 102, NOT IFRS - "
+    "Chetwood only adopted IFRS (and IFRS 9 stage-based credit-quality disclosure, and Pillar 3 reporting) from "
+    "FY2021 onward, per its own accounting-policy notes ('in compliance with...FRS 102') each year 2018-2020. "
+    "This is analogous to the ticket's flagged Basel II/CET1 terminology shift, but for the whole accounting "
+    "framework: FY2019-FY2020 (marked ‡) have no IFRS 9 loan-stage table and no Pillar 3 disclosure at all (the "
+    "FY2018/FY2019 strategic reports say a Pillar 3 document 'will be published...in due course' - it wasn't yet). "
+    "All 11 Pillar 3 metric sheets and the RWA Breakdown sheet are genuinely 'Not publicly disclosed' for FY2019 "
+    "and FY2020 - a real self-skip, not a gap in transcription.\n"
+    "- A further consequence of the FRS 102-to-IFRS transition: the FY2021 Annual Report's own FY2020 comparative "
+    "equity balance (used as the prior-year opening figure in that report) does not exactly match FY2020's own "
+    "originally-filed Statement of Changes in Equity (originally-filed closing Profit and Loss account -£36,357k, "
+    "Total Equity £51,182k, vs the FY2021 AR's stated FY2020-closing comparative of -£44,513k / £43,067k, a "
+    "~£8.1m gap most likely reflecting transition adjustments on first-time IFRS application). The Statement of "
+    "Changes in Equity sheet below uses Chetwood's own FY2019/FY2020 AS-FILED figures for the FY2019-FY2020 rows "
+    "(matching those years' own Balance Sheet), and switches to the FY2021 AR's own stated FY2020-comparative "
+    "opening balance only at the point the FY2021 movements begin - the ~£8.1m gap is disclosed here rather than "
+    "silently bridged."
 )
 
 CASH_FLOW_SOURCES = (
@@ -48,7 +83,13 @@ CASH_FLOW_SOURCES = (
     f"FY2022: Chetwood Financial Limited Annual Report and Financial Statements, year ended 31 March 2022, "
     f"p.26 (Consolidated and Company Statement of Cashflows) - {AR22_URL}\n"
     f"FY2021: Chetwood Financial Limited Annual Report and Financial Statements, year ended 31 March 2021, "
-    f"p.28 (Statement of Cashflows, standalone entity) - {AR21_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    f"p.28 (Statement of Cashflows, standalone entity) - {AR21_URL}\n"
+    f"FY2020: Chetwood Financial Limited Annual Report and Financial Statements, year ended 31 March 2020, "
+    f"p.22 (Statement of Cashflows, standalone entity, FRS 102 basis) - {AR20_URL} (Companies House filing history, "
+    f"company no. 09964966)\n"
+    f"FY2019: Chetwood Financial Limited Annual Report and Financial Statements, year ended 31 March 2019, "
+    f"p.17 (Statement of Cashflows, standalone entity, FRS 102 basis) - {AR19_URL} (Companies House filing history, "
+    f"company no. 09964966)\n\n" + ENTITY_NOTE + "\n\n"
     "PRESENTATION NOTE: Line items changed across the five years as the business grew (e.g. debt securities and "
     "derivative-related lines were introduced/split differently year to year, and FY2025 switched the starting "
     "line from 'Loss after tax' to '(Loss)/profit before tax'). Blank cells indicate that year's report did not "
@@ -66,7 +107,16 @@ CASH_FLOW_SOURCES = (
     "figure is nil - 6,753 was the Company-only figure); 'Subscription of shares in subsidiary undertaking' "
     "FY2023 (-1,500) removed entirely - it is a Company-only line with no Group-basis equivalent, so it never "
     "belonged in this Group-basis statement. All four sections now reconcile exactly to the penny against the "
-    "primary source."
+    "primary source.\n\n"
+    "FY2019/FY2020 PRESENTATION NOTE: these two years' statements (FRS 102 basis) do not split depreciation from "
+    "amortisation, so a single combined line is shown for those years only rather than force-splitting it across "
+    "the FY2021+ 'Depreciation of property, plant and equipment' / 'Amortisation of intangibles' rows. 'Purchase "
+    "of financial investments' (debt securities) is classified by Chetwood's own FY2019/FY2020 statements under "
+    "Financing activities, not Investing activities as in every later year - kept in its own as-disclosed section "
+    "rather than moved. FY2020's own statement shows FY2019 comparative figures (£27,620k operating cashflow, "
+    "£25,109k net cashflow for the period, £27,608k closing cash) that differ by £1k from FY2019's own filed "
+    "figures (£27,621k / £25,108k / £27,607k) used here - an immaterial rounding difference between the two "
+    "filings, not corrected."
 )
 
 def p3_sources(extra_note=""):
@@ -84,7 +134,9 @@ def p3_sources(extra_note=""):
         f"- {P3_22_URL}\n"
         f"FY2021: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31 March 2021, Section 1.2 (Summary Analysis) "
         f"and Section 4 (Capital Resources) - {P3_21_URL} (pre-dates the formal KM1 template; Chetwood adopted the "
-        f"CRR KM1 annex from the FY2022 report onward)" + (f"\n{extra_note}" if extra_note else "")
+        f"CRR KM1 annex from the FY2022 report onward)\n"
+        f"FY2019/FY2020: No Pillar 3 disclosure was ever published for these years - as at 31 March 2021 is "
+        f"Chetwood's earliest published/archived Pillar 3 document. Left blank." + (f"\n{extra_note}" if extra_note else "")
     )
 
 bw = BankWorkbook(bank_name="Chetwood Financial Limited", years=YEARS, year_label=YEAR_LABEL, header_color="003232")
@@ -103,7 +155,15 @@ STATEMENTS_SOURCES = (
     f"both present the same audited FY2023 statutory figures.)\n"
     f"FY2022/FY2021: Chetwood Financial Limited Annual Report and Financial Statements, year ended 31 March 2022, "
     f"p.22-25 (Consolidated Statement of Financial Position / Statement of Total Comprehensive Income / Statement "
-    f"of Changes in Equity, Group and Company for FY2021) - {AR22_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    f"of Changes in Equity, Group and Company for FY2021) - {AR22_URL}\n"
+    f"FY2020: Chetwood Financial Limited Annual Report and Financial Statements, year ended 31 March 2020, "
+    f"p.19-21 (Statement of Total Comprehensive Income / Statement of Financial Position / Statement of Changes "
+    f"in Equity, standalone entity, FRS 102 basis) - {AR20_URL} (Companies House filing history, company no. "
+    f"09964966)\n"
+    f"FY2019: Chetwood Financial Limited Annual Report and Financial Statements, year ended 31 March 2019, "
+    f"p.14-16 (Statement of Total Comprehensive Income / Statement of Financial Position / Statement of Changes "
+    f"in Equity, standalone entity, FRS 102 basis) - {AR19_URL} (Companies House filing history, company no. "
+    f"09964966)\n\n" + ENTITY_NOTE + "\n\n"
     "DATA QUALITY NOTE: the FY2024 Annual Report's own P&L page (used for FY2023's comparative column) has the "
     "same text-encoding fault as its Cash Flow Statement page, corrupting individual digits in places (e.g. that "
     "page's own FY2024 'Impairment of loans and advances to customers' prints as -855, matching the clean FY2025 "
@@ -127,42 +187,42 @@ STATEMENTS_SOURCES = (
 # ---------------------------------------------------------------
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and cash equivalents / Loans and advances to banks", {"FY2025": 387550, "FY2024": 586134, "FY2023": 688362, "FY2022": 74498, "FY2021": 52173}),
-    ("DATA", "Derivative financial assets", {"FY2025": 49410, "FY2024": 58475, "FY2023": 4565, "FY2022": 138, "FY2021": 19}),
-    ("DATA", "Investment in debt securities", {"FY2025": 1321666, "FY2024": 537291, "FY2023": 129595, "FY2022": 4883}),
-    ("DATA", "Loans and advances to customers", {"FY2025": 2691247, "FY2024": 1833411, "FY2023": 649179, "FY2022": 302546, "FY2021": 156249}),
+    ("DATA", "Cash and cash equivalents / Loans and advances to banks", {"FY2025": 387550, "FY2024": 586134, "FY2023": 688362, "FY2022": 74498, "FY2021": 52173, "FY2020": 88480, "FY2019": 27607}),
+    ("DATA", "Derivative financial assets", {"FY2025": 49410, "FY2024": 58475, "FY2023": 4565, "FY2022": 138, "FY2021": 19, "FY2020": 4}),
+    ("DATA", "Investment in debt securities", {"FY2025": 1321666, "FY2024": 537291, "FY2023": 129595, "FY2022": 4883, "FY2020": 30170, "FY2019": 1994}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 2691247, "FY2024": 1833411, "FY2023": 649179, "FY2022": 302546, "FY2021": 156249, "FY2020": 145022, "FY2019": 46269}),
     ("DATA", "Fair value adjustments on hedged assets", {"FY2025": 5615, "FY2024": 12926, "FY2023": -1069}),
-    ("DATA", "Other assets", {"FY2025": 63998, "FY2024": 43910, "FY2023": 18897, "FY2022": 8620, "FY2021": 3486}),
-    ("DATA", "Prepayments and accrued income", {"FY2025": 4177, "FY2024": 4353, "FY2023": 999, "FY2022": 930, "FY2021": 555}),
-    ("DATA", "Property, plant and equipment", {"FY2025": 913, "FY2024": 883, "FY2023": 1246, "FY2022": 690, "FY2021": 819}),
-    ("DATA", "Intangible assets", {"FY2025": 2044, "FY2024": 521, "FY2023": 2767, "FY2022": 7669, "FY2021": 3178}),
+    ("DATA", "Other assets", {"FY2025": 63998, "FY2024": 43910, "FY2023": 18897, "FY2022": 8620, "FY2021": 3486, "FY2020": 605, "FY2019": 448}),
+    ("DATA", "Prepayments and accrued income", {"FY2025": 4177, "FY2024": 4353, "FY2023": 999, "FY2022": 930, "FY2021": 555, "FY2020": 810, "FY2019": 406}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 913, "FY2024": 883, "FY2023": 1246, "FY2022": 690, "FY2021": 819, "FY2020": 477, "FY2019": 557}),
+    ("DATA", "Intangible assets", {"FY2025": 2044, "FY2024": 521, "FY2023": 2767, "FY2022": 7669, "FY2021": 3178, "FY2020": 485, "FY2019": 486}),
     ("DATA", "Goodwill", {"FY2025": 5927}),
-    ("TOTAL", "Total assets", {"FY2025": 4532547, "FY2024": 3077904, "FY2023": 1494541, "FY2022": 400038, "FY2021": 216524}),
+    ("TOTAL", "Total assets", {"FY2025": 4532547, "FY2024": 3077904, "FY2023": 1494541, "FY2022": 400038, "FY2021": 216524, "FY2020": 266053, "FY2019": 77767}),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Customer deposits", {"FY2025": 3812429, "FY2024": 2856737, "FY2023": 1383305, "FY2022": 322625, "FY2021": 160015}),
+    ("DATA", "Customer deposits", {"FY2025": 3812429, "FY2024": 2856737, "FY2023": 1383305, "FY2022": 322625, "FY2021": 160015, "FY2020": 210783, "FY2019": 26107}),
     ("DATA", "Fair value adjustments on hedged liabilities", {"FY2025": 621, "FY2024": -1073, "FY2023": -3286}),
     ("DATA", "Provisions", {"FY2025": 2252, "FY2024": 2909, "FY2023": 2015, "FY2022": 591}),
     ("DATA", "Amounts owed to credit institutions", {"FY2025": 488932, "FY2024": 9107}),
     ("DATA", "Debt securities in issue", {"FY2025": 89, "FY2024": 99}),
-    ("DATA", "Accruals", {"FY2025": 10864, "FY2024": 9766, "FY2023": 7279, "FY2022": 6790, "FY2021": 4127}),
-    ("DATA", "Derivative financial liabilities", {"FY2025": 12216, "FY2024": 18713, "FY2023": 6645, "FY2022": 457, "FY2021": 5}),
-    ("DATA", "Other liabilities", {"FY2025": 8795, "FY2024": 8564, "FY2023": 6100, "FY2022": 3582, "FY2021": 1547}),
+    ("DATA", "Accruals", {"FY2025": 10864, "FY2024": 9766, "FY2023": 7279, "FY2022": 6790, "FY2021": 4127, "FY2020": 2768, "FY2019": 1649}),
+    ("DATA", "Derivative financial liabilities", {"FY2025": 12216, "FY2024": 18713, "FY2023": 6645, "FY2022": 457, "FY2021": 5, "FY2020": 9}),
+    ("DATA", "Other liabilities", {"FY2025": 8795, "FY2024": 8564, "FY2023": 6100, "FY2022": 3582, "FY2021": 1547, "FY2020": 1311, "FY2019": 527}),
     ("DATA", "Deferred tax liabilities", {"FY2025": 206}),
-    ("TOTAL", "Total liabilities", {"FY2025": 4336404, "FY2024": 2904822, "FY2023": 1402058, "FY2022": 334045, "FY2021": 165694}),
+    ("TOTAL", "Total liabilities", {"FY2025": 4336404, "FY2024": 2904822, "FY2023": 1402058, "FY2022": 334045, "FY2021": 165694, "FY2020": 214871, "FY2019": 28283}),
     ("SECTION", "Equity", {}),
-    ("DATA", "Called up share capital", {"FY2025": 253913, "FY2024": 253730, "FY2023": 253297, "FY2022": 168688, "FY2021": 113688}),
-    ("DATA", "Share premium account", {"FY2025": 118236, "FY2024": 91418, "FY2023": 2851, "FY2022": 2851, "FY2021": 2851}),
+    ("DATA", "Called up share capital", {"FY2025": 253913, "FY2024": 253730, "FY2023": 253297, "FY2022": 168688, "FY2021": 113688, "FY2020": 84688, "FY2019": 64688}),
+    ("DATA", "Share premium account", {"FY2025": 118236, "FY2024": 91418, "FY2023": 2851, "FY2022": 2851, "FY2021": 2851, "FY2020": 2851, "FY2019": 2851}),
     ("DATA", "Capital redemption reserve / Capital contribution", {"FY2025": 6247, "FY2024": 6247, "FY2023": 6247, "FY2022": 6247}),
     ("DATA", "Other reserves", {"FY2025": 877, "FY2024": 692, "FY2023": 232, "FY2022": 203, "FY2021": 114}),
-    ("DATA", "Retained losses", {"FY2025": -183900, "FY2024": -179775, "FY2023": -170914, "FY2022": -112766, "FY2021": -65823}),
+    ("DATA", "Retained losses", {"FY2025": -183900, "FY2024": -179775, "FY2023": -170914, "FY2022": -112766, "FY2021": -65823, "FY2020": -36357, "FY2019": -18055}),
     ("DATA", "Merger reserve", {"FY2025": 770, "FY2024": 770, "FY2023": 770, "FY2022": 770}),
-    ("TOTAL", "Total equity", {"FY2025": 196143, "FY2024": 173082, "FY2023": 92483, "FY2022": 65993, "FY2021": 50830}),
-    ("TOTAL", "Total liabilities and equity", {"FY2025": 4532547, "FY2024": 3077904, "FY2023": 1494541, "FY2022": 400038, "FY2021": 216524}),
+    ("TOTAL", "Total equity", {"FY2025": 196143, "FY2024": 173082, "FY2023": 92483, "FY2022": 65993, "FY2021": 50830, "FY2020": 51182, "FY2019": 49484}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 4532547, "FY2024": 3077904, "FY2023": 1494541, "FY2022": 400038, "FY2021": 216524, "FY2020": 266053, "FY2019": 77767}),
 ]
 
 bw.add_balance_sheet_sheet(
     title="Chetwood Financial Limited — Consolidated Statement of Financial Position",
-    subtitle="£'000. Consolidated (Group) basis except FY2021 († standalone entity - Group and Company are identical that year). See source note at bottom.",
+    subtitle="£'000. Consolidated (Group) basis except FY2019-FY2021 († standalone entity - Group and Company are identical those years; FY2019-FY2020 also FRS 102 basis, marked ‡). See source note at bottom.",
     rows=balance_sheet_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=58,
@@ -174,32 +234,32 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 income_statement_rows = [
     ("SECTION", "Income", {}),
-    ("DATA", "Interest income calculated using the effective interest rate method", {"FY2025": 216716, "FY2024": 149127, "FY2023": 35406, "FY2022": 29755, "FY2021": 17567}),
-    ("DATA", "Interest payable and similar charges", {"FY2025": -174940, "FY2024": -104811, "FY2023": -14914, "FY2022": -2542, "FY2021": -3135}),
-    ("TOTAL", "Net interest income", {"FY2025": 41776, "FY2024": 44316, "FY2023": 20492, "FY2022": 27213, "FY2021": 14432}),
+    ("DATA", "Interest income calculated using the effective interest rate method", {"FY2025": 216716, "FY2024": 149127, "FY2023": 35406, "FY2022": 29755, "FY2021": 17567, "FY2020": 9687, "FY2019": 2666}),
+    ("DATA", "Interest payable and similar charges", {"FY2025": -174940, "FY2024": -104811, "FY2023": -14914, "FY2022": -2542, "FY2021": -3135, "FY2020": -2014, "FY2019": -967}),
+    ("TOTAL", "Net interest income", {"FY2025": 41776, "FY2024": 44316, "FY2023": 20492, "FY2022": 27213, "FY2021": 14432, "FY2020": 7673, "FY2019": 1699}),
     ("DATA", "Fee and commission income", {"FY2025": 851, "FY2024": 1794, "FY2023": 2731, "FY2022": 244}),
     ("DATA", "Fee and commission expense", {"FY2025": -4758, "FY2024": -3162, "FY2023": -718, "FY2022": -152}),
     ("TOTAL", "Net fee and commission income/(expense)", {"FY2025": -3907, "FY2024": -1368, "FY2023": 2013, "FY2022": 92}),
     ("DATA", "Net income/(expense) from financial instruments held at fair value through profit and loss", {"FY2025": 16369, "FY2024": 3041, "FY2023": -1160, "FY2022": 108, "FY2021": 15}),
     ("DATA", "Other income", {"FY2023": 126, "FY2022": 15}),
-    ("TOTAL", "Total income", {"FY2025": 54238, "FY2024": 45989, "FY2023": 21471, "FY2022": 27428, "FY2021": 14447}),
-    ("DATA", "Administrative expenses", {"FY2025": -57209, "FY2024": -53995, "FY2023": -56119, "FY2022": -30809, "FY2021": -22372}),
-    ("DATA", "Impairment of loans and advances to customers", {"FY2025": -1731, "FY2024": -855, "FY2023": -25126, "FY2022": -30737, "FY2021": -13375}),
+    ("TOTAL", "Total income", {"FY2025": 54238, "FY2024": 45989, "FY2023": 21471, "FY2022": 27428, "FY2021": 14447, "FY2020": 7673, "FY2019": 1699}),
+    ("DATA", "Administrative expenses", {"FY2025": -57209, "FY2024": -53995, "FY2023": -56119, "FY2022": -30809, "FY2021": -22372, "FY2020": -14413, "FY2019": -11240}),
+    ("DATA", "Impairment of loans and advances to customers", {"FY2025": -1731, "FY2024": -855, "FY2023": -25126, "FY2022": -30737, "FY2021": -13375, "FY2020": -11574, "FY2019": -1995}),
     ("DATA", "Net gain arising from derecognition of financial assets measured at amortised cost", {"FY2023": 1727, "FY2022": 4369}),
-    ("TOTAL", "Loss before taxation", {"FY2025": -4702, "FY2024": -8861, "FY2023": -58047, "FY2022": -29749, "FY2021": -21300}),
+    ("TOTAL", "Loss before taxation", {"FY2025": -4702, "FY2024": -8861, "FY2023": -58047, "FY2022": -29749, "FY2021": -21300, "FY2020": -18314, "FY2019": -11536}),
     ("DATA", "Taxation", {"FY2023": -101, "FY2022": -4, "FY2021": -10}),
-    ("TOTAL", "Loss after tax and loss for the year", {"FY2025": -4702, "FY2024": -8861, "FY2023": -58148, "FY2022": -29753, "FY2021": -21310}),
+    ("TOTAL", "Loss after tax and loss for the year", {"FY2025": -4702, "FY2024": -8861, "FY2023": -58148, "FY2022": -29753, "FY2021": -21310, "FY2020": -18314, "FY2019": -11536}),
     ("SECTION", "Other comprehensive income/(expense)", {}),
     ("DATA", "Fair value gains/(losses) on debt instruments during the year", {"FY2025": 824, "FY2024": 145, "FY2023": -178, "FY2022": -120, "FY2021": 5}),
     ("DATA", "Debt instruments at FVOCI - reclassified to profit or loss", {"FY2025": 0, "FY2024": 31, "FY2023": 2, "FY2021": -34}),
     ("DATA", "Deferred tax on fair value gains on debt instruments", {"FY2025": -206}),
     ("TOTAL", "Total other comprehensive income/(expense) for the year", {"FY2025": 618, "FY2024": 176, "FY2023": -176, "FY2022": -120, "FY2021": -29}),
-    ("TOTAL", "Total comprehensive loss for the year", {"FY2025": -4084, "FY2024": -8685, "FY2023": -58324, "FY2022": -29873, "FY2021": -21339}),
+    ("TOTAL", "Total comprehensive loss for the year", {"FY2025": -4084, "FY2024": -8685, "FY2023": -58324, "FY2022": -29873, "FY2021": -21339, "FY2020": -18314, "FY2019": -11536}),
 ]
 
 bw.add_income_statement_sheet(
     title="Chetwood Financial Limited — Consolidated Statement of Total Comprehensive Income",
-    subtitle="£'000. Consolidated (Group) basis except FY2021 († standalone entity - Group and Company are identical that year). See source note at bottom.",
+    subtitle="£'000. Consolidated (Group) basis except FY2019-FY2021 († standalone entity - Group and Company are identical those years; FY2019-FY2020 also FRS 102 basis, marked ‡). See source note at bottom.",
     rows=income_statement_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=66,
@@ -214,7 +274,15 @@ equity_headers = [
     "Debt securities revaluation reserve", "Capital redemption/contribution reserve", "Merger reserve", "Total equity",
 ]
 equity_rows = [
-    ("TOTAL", "At 1 April 2020", (84688, 2851, -44513, 12, 29, None, None, 43067)),
+    ("TOTAL", "At 1 April 2018", (9451, 2851, -6519, None, None, None, None, 5783)),
+    ("DATA", "Issue of shares", (55237, None, None, None, None, None, None, 55237)),
+    ("DATA", "Loss for the period (FY2019)", (None, None, -11536, None, None, None, None, -11536)),
+    ("TOTAL", "At 31 March 2019", (64688, 2851, -18055, None, None, None, None, 49484)),
+    ("DATA", "Issue of shares", (20000, None, None, None, None, None, None, 20000)),
+    ("DATA", "Equity-settled share-based payment transactions", (None, None, 12, None, None, None, None, 12)),
+    ("DATA", "Loss for the period (FY2020)", (None, None, -18314, None, None, None, None, -18314)),
+    ("TOTAL", "At 31 March 2020 (as filed in the FY2020 accounts)", (84688, 2851, -36357, None, None, None, None, 51182)),
+    ("TOTAL", "At 1 April 2020 (per FY2021 AR's own comparative - see gap note)", (84688, 2851, -44513, 12, 29, None, None, 43067)),
     ("DATA", "Loss for the period (FY2021)", (None, None, -21310, None, None, None, None, -21310)),
     ("DATA", "Net changes in fair value", (None, None, None, None, 5, None, None, 5)),
     ("DATA", "Reclassified to income statement", (None, None, None, None, -34, None, None, -34)),
@@ -252,7 +320,7 @@ equity_rows = [
 
 bw.add_equity_changes_sheet(
     title="Chetwood Financial Limited — Statement of Changes in Equity",
-    subtitle="Consolidated basis (FY2021 standalone entity), £'000, chronological (oldest to newest). See source note at bottom.",
+    subtitle="Consolidated basis (FY2019-FY2021 standalone entity), £'000, chronological (oldest to newest). FY2019-FY2020 as filed under FRS 102; a ~£8.1m gap vs the FY2021 AR's own FY2020-comparative opening balance is shown and explained, not bridged - see source note at bottom.",
     headers=equity_headers,
     rows=equity_rows,
     sources_text=STATEMENTS_SOURCES,
@@ -266,37 +334,39 @@ bw.add_equity_changes_sheet(
 rows = [
     ("SECTION", "Cash flows from operating activities", {}),
     ("DATA", "Loss after tax", {"FY2024": -8861, "FY2023": -58148, "FY2022": -29753, "FY2021": -21310}),
+    ("DATA", "Loss for the period (FY2019-FY2020, FRS 102 basis)", {"FY2020": -18314, "FY2019": -11536}),
     ("DATA", "(Loss)/profit before tax", {"FY2025": -4702}),
     ("DATA", "Depreciation of property, plant and equipment", {"FY2025": 615, "FY2024": 560, "FY2023": 496, "FY2022": 322, "FY2021": 347}),
+    ("DATA", "Depreciation and amortisation (combined line, FY2019-FY2020 only)", {"FY2020": 230, "FY2019": 151}),
     ("DATA", "Remeasurement of right-of-use asset", {"FY2023": -217, "FY2022": 304}),
     ("DATA", "Amortisation of intangibles", {"FY2025": 536, "FY2024": 1261, "FY2023": 2235, "FY2022": 694, "FY2021": 106}),
     ("DATA", "Impairment of intangibles", {"FY2024": 985, "FY2023": 3069}),
     ("DATA", "Interest income on debt securities", {"FY2025": -50560, "FY2024": -18163, "FY2023": -1885}),
     ("DATA", "Interest expense/(income) on financing activities", {"FY2025": 6800, "FY2024": 180, "FY2023": 36, "FY2022": 35, "FY2021": 40}),
-    ("DATA", "Equity-settled share-based payment transactions", {"FY2025": 144, "FY2024": 284, "FY2023": 85, "FY2022": 209, "FY2021": 102}),
+    ("DATA", "Equity-settled share-based payment transactions", {"FY2025": 144, "FY2024": 284, "FY2023": 85, "FY2022": 209, "FY2021": 102, "FY2020": 12}),
     ("DATA", "Movement in fair value of financial instruments at FVTPL", {"FY2025": -22983, "FY2024": 9208, "FY2023": 1399}),
-    ("DATA", "Movement in fair value of derivative financial assets", {"FY2022": -119, "FY2021": -15}),
+    ("DATA", "Movement in fair value of derivative financial assets", {"FY2022": -119, "FY2021": -15, "FY2020": 5}),
     ("DATA", "Movement in fair value of derivative financial liabilities", {"FY2022": 452, "FY2021": -4}),
     ("DATA", "Fair value adjustment on hedged items", {"FY2025": 9005, "FY2024": -11782, "FY2023": -2217}),
     ("DATA", "Loss on disposal of property, plant and equipment", {"FY2025": 1, "FY2023": 8, "FY2022": 1, "FY2021": 12}),
     ("DATA", "Profit on sale of investments in debt securities", {"FY2025": -1, "FY2024": -42}),
     ("DATA", "Discount unwind on debt securities", {"FY2025": 536}),
     ("DATA", "Loss on disposal of intangible assets", {"FY2022": 18, "FY2021": 402}),
-    ("DATA", "Movement in provision", {"FY2025": -657, "FY2024": 894, "FY2023": 1424, "FY2022": 591}),
+    ("DATA", "Movement in provision", {"FY2025": -657, "FY2024": 894, "FY2023": 1424, "FY2022": 591, "FY2020": 11316, "FY2019": 1920}),
     ("DATA", "Impairment of investment in subsidiary / impairment of Yobota", {"FY2024": 0, "FY2023": 0}),
     ("DATA", "Net gain arising from derecognition of financial assets measured at amortised cost", {"FY2022": -4369}),
-    ("DATA", "Net increase in loans and advances to customers", {"FY2025": -857836, "FY2024": -1184232, "FY2023": -346633, "FY2022": -146297, "FY2021": -19344}),
+    ("DATA", "Net increase in loans and advances to customers", {"FY2025": -857836, "FY2024": -1184232, "FY2023": -346633, "FY2022": -146297, "FY2021": -19344, "FY2020": -110070, "FY2019": -44506}),
     ("DATA", "Net interest paid on derivative financial assets", {"FY2025": 25551, "FY2024": 1448, "FY2023": 37}),
     ("DATA", "Net cash flow on derivative financial instruments", {"FY2024": -52498, "FY2023": 325}),
-    ("DATA", "Increase/(decrease) in prepayments and accrued income", {"FY2025": 324, "FY2024": -3353, "FY2023": -69, "FY2022": -175, "FY2021": 223}),
-    ("DATA", "Increase in other assets", {"FY2025": -20076, "FY2024": -25013, "FY2023": -10277, "FY2022": -4696, "FY2021": -2881}),
+    ("DATA", "Increase/(decrease) in prepayments and accrued income", {"FY2025": 324, "FY2024": -3353, "FY2023": -69, "FY2022": -175, "FY2021": 223, "FY2020": -404, "FY2019": -159}),
+    ("DATA", "Increase in other assets", {"FY2025": -20076, "FY2024": -25013, "FY2023": -10277, "FY2022": -4696, "FY2021": -2881, "FY2020": -157, "FY2019": -421}),
     ("DATA", "(Increase)/decrease in tax asset", {"FY2023": 64, "FY2022": -19, "FY2021": -45}),
-    ("DATA", "Increase/(decrease) in customer deposits", {"FY2025": 955692, "FY2024": 1473432, "FY2023": 1060680, "FY2022": 162610, "FY2021": -52195}),
-    ("DATA", "Increase/(decrease) in accruals and deferred income", {"FY2025": 507, "FY2024": 2487, "FY2023": 489, "FY2022": 1612, "FY2021": 2838}),
-    ("DATA", "Increase/(decrease) in other liabilities", {"FY2025": 142, "FY2024": 2725, "FY2023": 2518, "FY2022": 1447, "FY2021": -396}),
+    ("DATA", "Increase/(decrease) in customer deposits", {"FY2025": 955692, "FY2024": 1473432, "FY2023": 1060680, "FY2022": 162610, "FY2021": -52195, "FY2020": 184676, "FY2019": 26107}),
+    ("DATA", "Increase/(decrease) in accruals and deferred income", {"FY2025": 507, "FY2024": 2487, "FY2023": 489, "FY2022": 1612, "FY2021": 2838, "FY2020": 1119, "FY2019": 829}),
+    ("DATA", "Increase/(decrease) in other liabilities", {"FY2025": 142, "FY2024": 2725, "FY2023": 2518, "FY2022": 1447, "FY2021": -396, "FY2020": 784, "FY2019": -6}),
     ("DATA", "Purchase of mortgage portfolio", {"FY2022": 157842}),
     ("DATA", "Derecognition of assets at amortised cost on sale", {"FY2022": -123733}),
-    ("TOTAL", "Net cash from operating activities", {"FY2025": 43038, "FY2024": 189520, "FY2023": 653419, "FY2022": 16976, "FY2021": -92120}),
+    ("TOTAL", "Net cash from operating activities", {"FY2025": 43038, "FY2024": 189520, "FY2023": 653419, "FY2022": 16976, "FY2021": -92120, "FY2020": 69197, "FY2019": -27621}),
     ("SECTION", "Cash flows from investing activities", {}),
     ("DATA", "Proceeds from sale and maturity of debt securities", {"FY2025": 1401, "FY2024": 36835, "FY2023": 11031}),
     ("DATA", "Acquisition of debt securities", {"FY2025": -910238, "FY2024": -505077, "FY2023": -135674, "FY2022": -5003}),
@@ -304,30 +374,31 @@ rows = [
     ("DATA", "Interest received from investing activities", {"FY2025": 40802, "FY2024": 17601, "FY2023": 1760}),
     ("DATA", "Net maturity/(purchase) of debt securities", {"FY2021": 30170}),
     ("DATA", "Purchase of loans and advances to customers", {"FY2022": -157842}),
-    ("DATA", "Purchases of property, plant and equipment", {"FY2025": -617, "FY2024": -461, "FY2023": -843, "FY2022": -119, "FY2021": -116}),
+    ("DATA", "Purchases of property, plant and equipment", {"FY2025": -617, "FY2024": -461, "FY2023": -843, "FY2022": -119, "FY2021": -116, "FY2020": -85, "FY2019": -462}),
     ("DATA", "Proceeds from sale of property, plant and equipment", {"FY2025": 11}),
-    ("DATA", "Investment in Intangible assets", {"FY2025": -9, "FY2023": -402, "FY2022": -1852, "FY2021": -3201}),
+    ("DATA", "Investment in Intangible assets", {"FY2025": -9, "FY2023": -402, "FY2022": -1852, "FY2021": -3201, "FY2020": -64, "FY2019": -52}),
     ("DATA", "Acquisition of subsidiary net of cash acquired", {"FY2025": -7497, "FY2022": -12903}),
-    ("TOTAL", "Net cash from/(used in) investing activities", {"FY2025": -741638, "FY2024": -389775, "FY2023": -124128, "FY2022": -177719, "FY2021": 26853}),
+    ("TOTAL", "Net cash from/(used in) investing activities", {"FY2025": -741638, "FY2024": -389775, "FY2023": -124128, "FY2022": -177719, "FY2021": 26853, "FY2020": -149, "FY2019": -514}),
     ("SECTION", "Cash flows from financing activities", {}),
     ("DATA", "Principal drawdowns on amounts owed to credit institutions", {"FY2025": 476000, "FY2024": 9000}),
     ("DATA", "Interest paid on amounts owed to credit institutions", {"FY2025": -2930}),
-    ("DATA", "Issuance of ordinary shares", {"FY2025": 27001, "FY2024": 89000, "FY2023": 84609, "FY2022": 55000, "FY2021": 29000}),
+    ("DATA", "Purchase of financial investments (FY2019-FY2020 only - classified under financing that year, see presentation note)", {"FY2020": -28176, "FY2019": -1994}),
+    ("DATA", "Issuance of ordinary shares", {"FY2025": 27001, "FY2024": 89000, "FY2023": 84609, "FY2022": 55000, "FY2021": 29000, "FY2020": 20000, "FY2019": 55237}),
     ("DATA", "Issuance of debt securities", {"FY2024": 100}),
     ("DATA", "Repayment of debt securities", {"FY2025": -10}),
     ("DATA", "Interest (paid)/received on debt securities", {"FY2025": -6}),
     ("DATA", "Interest expense on debt securities", {"FY2024": 0}),
     ("DATA", "Proceeds from the sale of loans and advances at amortised cost", {"FY2022": 128103}),
     ("DATA", "Interest paid on lease liabilities", {"FY2025": -39, "FY2024": -73, "FY2023": -36, "FY2022": -35, "FY2021": -40}),
-    ("TOTAL", "Net cash from/(used in) financing activities", {"FY2025": 500016, "FY2024": 98027, "FY2023": 84573, "FY2022": 183068, "FY2021": 28960}),
-    ("TOTAL", "Net cash flows for the period", {"FY2025": -198584, "FY2024": -102228, "FY2023": 613864, "FY2022": 22325, "FY2021": -36307}),
-    ("DATA", "Opening cash and cash equivalents", {"FY2025": 586134, "FY2024": 688362, "FY2023": 74498, "FY2022": 52173, "FY2021": 88480}),
-    ("TOTAL", "Closing cash and cash equivalents", {"FY2025": 387550, "FY2024": 586134, "FY2023": 688362, "FY2022": 74498, "FY2021": 52173}),
+    ("TOTAL", "Net cash from/(used in) financing activities", {"FY2025": 500016, "FY2024": 98027, "FY2023": 84573, "FY2022": 183068, "FY2021": 28960, "FY2020": -8176, "FY2019": 53243}),
+    ("TOTAL", "Net cash flows for the period", {"FY2025": -198584, "FY2024": -102228, "FY2023": 613864, "FY2022": 22325, "FY2021": -36307, "FY2020": 60872, "FY2019": 25108}),
+    ("DATA", "Opening cash and cash equivalents", {"FY2025": 586134, "FY2024": 688362, "FY2023": 74498, "FY2022": 52173, "FY2021": 88480, "FY2020": 27608, "FY2019": 2499}),
+    ("TOTAL", "Closing cash and cash equivalents", {"FY2025": 387550, "FY2024": 586134, "FY2023": 688362, "FY2022": 74498, "FY2021": 52173, "FY2020": 88480, "FY2019": 27607}),
 ]
 
 bw.add_cash_flow_sheet(
     title="Chetwood Financial Limited — Cash Flow Statement",
-    subtitle="£'000 unless stated. Consolidated (Group) basis except FY2021 († standalone entity). See source note at bottom.",
+    subtitle="£'000 unless stated. Consolidated (Group) basis except FY2019-FY2021 († standalone entity). See source note at bottom.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=66,
@@ -345,14 +416,23 @@ ASSET_QUALITY_SOURCES = (
     "acquired - FY2021 is unsecured lending only, and ties exactly to that year's Balance Sheet loan figure).\n"
     f"FY2025/FY2024: Annual Report 2025, p.96-100 (Note 36.2/36.3 Credit quality) - {AR25_URL}\n"
     f"FY2023: Annual Report 2024, p.51-52 (Note 37, FY2023 comparative tables) - {AR24_URL}\n"
-    f"FY2022/FY2021: Annual Report 2022, p.49-52 (Note 31.2 Credit quality) - {AR22_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    f"FY2022/FY2021: Annual Report 2022, p.49-52 (Note 31.2 Credit quality) - {AR22_URL}\n"
+    f"FY2020: Annual Report and Financial Statements, year ended 31 March 2020, p.20/28 (Statement of Financial "
+    f"Position net loan balance; no IFRS 9 stage table - see FRS 102 note below) - {AR20_URL}\n"
+    f"FY2019: Annual Report and Financial Statements, year ended 31 March 2019, p.15 (Statement of Financial "
+    f"Position net loan balance; no IFRS 9 stage table - see FRS 102 note below) - {AR19_URL}\n\n" + ENTITY_NOTE + "\n\n"
     "PRESENTATION NOTE: these Note 36/37 tables report gross/net loans and advances measured at amortised cost "
     "only. The Balance Sheet's own 'Loans and advances to customers' line is larger in every year from FY2022 "
     "onward (e.g. FY2025: £2,691,247k on the Balance Sheet vs £2,665,626k gross / £2,655,384k net summed here) "
     "because some loans are measured at fair value through profit or loss and fall outside this amortised-cost "
     "IFRS 9 note - this gap is a genuine measurement-basis difference disclosed by the Bank, not a transcription "
     "error, and is not force-reconciled here. FY2021 is the exception: with no secured book yet and no FVTPL "
-    "loans, the combined stage total ties to the Balance Sheet exactly (£156,249k both ways)."
+    "loans, the combined stage total ties to the Balance Sheet exactly (£156,249k both ways).\n\n"
+    "FY2019/FY2020 NOTE: these two years' statutory accounts were prepared under UK GAAP FRS 102 (not IFRS), "
+    "before Chetwood adopted IFRS 9 - there is no loan-staging (Stage 1/2/3) table in either year's accounts, only "
+    "a single aggregate net loan balance and a simple impairment-allowance movement in the notes. The Stage/ECL "
+    "breakdown rows above are genuinely 'Not publicly disclosed' for FY2019 and FY2020; only the single 'Net loans "
+    "and advances to customers' total row is populated for those two years, tying exactly to the Balance Sheet."
 )
 asset_quality_rows = [
     ("SECTION", "Loan book by IFRS 9 stage (secured + unsecured combined)", {}),
@@ -366,7 +446,7 @@ asset_quality_rows = [
     ("DATA", "Stage 3 - ECL allowance", {"FY2025": -5974, "FY2024": -24527, "FY2023": -23300, "FY2022": -18255, "FY2021": -12455}),
     ("DATA", "POCI - ECL allowance", {"FY2025": 0, "FY2024": 0, "FY2023": -17, "FY2022": -13}),
     ("TOTAL", "Total ECL allowance", {"FY2025": -10242, "FY2024": -30487, "FY2023": -36904, "FY2022": -34576, "FY2021": -25896}),
-    ("TOTAL", "Net loans and advances to customers (amortised cost)", {"FY2025": 2655384, "FY2024": 1819705, "FY2023": 631775, "FY2022": 285748, "FY2021": 156249}),
+    ("TOTAL", "Net loans and advances to customers (amortised cost)", {"FY2025": 2655384, "FY2024": 1819705, "FY2023": 631775, "FY2022": 285748, "FY2021": 156249, "FY2020": 145022, "FY2019": 46269}),
     ("SECTION", "Derived ratios", {}),
     ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross)", {"FY2025": "0.57%", "FY2024": "1.67%", "FY2023": "3.92%", "FY2022": "6.65%", "FY2021": "8.01%"}),
     ("DATA", "ECL coverage ratio (total allowance / total gross)", {"FY2025": "0.38%", "FY2024": "1.65%", "FY2023": "5.52%", "FY2022": "10.79%", "FY2021": "14.22%"}),
@@ -374,7 +454,7 @@ asset_quality_rows = [
 ]
 bw.add_asset_quality_sheet(
     title="Chetwood Financial Limited — Asset Quality / Credit Risk Disclosures",
-    subtitle="£'000. Consolidated (Group) basis except FY2021 († standalone entity). See source note at bottom.",
+    subtitle="£'000. Consolidated (Group) basis except FY2019-FY2021 († standalone entity). No IFRS 9 stage table for FY2019-FY2020 (FRS 102 basis - see source note). See source note at bottom.",
     rows=asset_quality_rows,
     sources_text=ASSET_QUALITY_SOURCES,
     first_col_width=64,
@@ -387,7 +467,12 @@ bw.add_asset_quality_sheet(
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=46, source_height=150)
 
-FY2024_GAP_NOTE = "FY2024 is blank - no Pillar 3 disclosure 'as at 31 March 2024' was published/archived. See source note."
+FY2024_GAP_NOTE = (
+    "FY2024 is blank - no Pillar 3 disclosure 'as at 31 March 2024' was published/archived. FY2019 and FY2020 are "
+    "also blank on every Pillar 3 sheet - Chetwood published no Pillar 3 disclosure at all for those two years "
+    "(its FY2018/FY2019 statutory accounts say a Pillar 3 document 'will be published...in due course', but the "
+    "earliest one actually published/archived is 'as at 31 March 2021'). See source note."
+)
 
 metric(
     "CET1 Capital", "£'000, Group/consolidated basis (FY2021: standalone entity)",
@@ -475,7 +560,7 @@ rwa_breakdown_rows = [
 ]
 bw.add_rwa_breakdown_sheet(
     title="Chetwood Financial Limited — RWA Breakdown",
-    subtitle="£'000, Group/consolidated basis (FY2021: standalone entity). See source note at bottom.",
+    subtitle="£'000, Group/consolidated basis (FY2021: standalone entity). FY2019-FY2020 blank - no Pillar 3 disclosure was ever published for those years. See source note at bottom.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=54,
@@ -529,13 +614,15 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not applicable" for y in YEARS})],
+    [("MREL ratio", {y: "Not applicable" for y in YEARS if y not in ("FY2019", "FY2020")})],
     p3_sources(),
     note="Chetwood is classified as a 'small and non-complex institution' (SNCI) and is not subject to any MREL "
          "requirement above its minimum capital requirement - stated explicitly in the FY2021, FY2022 and FY2023 "
          "Pillar 3 reports ('...has no minimum requirements for Own funds and Eligible Liabilities (MREL) above "
          "its [minimum capital requirement]'). The FY2025 report uses a shorter reduced-disclosure format that "
-         "omits this narrative section, but there is no indication Chetwood's MREL/SNCI status has changed.",
+         "omits this narrative section, but there is no indication Chetwood's MREL/SNCI status has changed. "
+         "FY2019/FY2020 are left blank rather than 'Not applicable' - no Pillar 3 disclosure was published for "
+         "those years, so Chetwood's SNCI/MREL status at that time was never publicly stated.",
 )
 
 # ---------------------------------------------------------------
@@ -543,30 +630,30 @@ metric(
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 4532547, "FY2024": 3077904, "FY2023": 1494541, "FY2022": 400038, "FY2021": 216524}),
-        ("Loans and advances to customers", {"FY2025": 2691247, "FY2024": 1833411, "FY2023": 649179, "FY2022": 302546, "FY2021": 156249}),
-        ("Customer deposits", {"FY2025": 3812429, "FY2024": 2856737, "FY2023": 1383305, "FY2022": 322625, "FY2021": 160015}),
-        ("Total equity", {"FY2025": 196143, "FY2024": 173082, "FY2023": 92483, "FY2022": 65993, "FY2021": 50830}),
+        ("Total assets", {"FY2025": 4532547, "FY2024": 3077904, "FY2023": 1494541, "FY2022": 400038, "FY2021": 216524, "FY2020": 266053, "FY2019": 77767}),
+        ("Loans and advances to customers", {"FY2025": 2691247, "FY2024": 1833411, "FY2023": 649179, "FY2022": 302546, "FY2021": 156249, "FY2020": 145022, "FY2019": 46269}),
+        ("Customer deposits", {"FY2025": 3812429, "FY2024": 2856737, "FY2023": 1383305, "FY2022": 322625, "FY2021": 160015, "FY2020": 210783, "FY2019": 26107}),
+        ("Total equity", {"FY2025": 196143, "FY2024": 173082, "FY2023": 92483, "FY2022": 65993, "FY2021": 50830, "FY2020": 51182, "FY2019": 49484}),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
-        ("Total income", {"FY2025": 54238, "FY2024": 45989, "FY2023": 21471, "FY2022": 27428, "FY2021": 14447}),
-        ("Administrative expenses", {"FY2025": -57209, "FY2024": -53995, "FY2023": -56119, "FY2022": -30809, "FY2021": -22372}),
-        ("Loss after tax and loss for the year", {"FY2025": -4702, "FY2024": -8861, "FY2023": -58148, "FY2022": -29753, "FY2021": -21310}),
+        ("Total income", {"FY2025": 54238, "FY2024": 45989, "FY2023": 21471, "FY2022": 27428, "FY2021": 14447, "FY2020": 7673, "FY2019": 1699}),
+        ("Administrative expenses", {"FY2025": -57209, "FY2024": -53995, "FY2023": -56119, "FY2022": -30809, "FY2021": -22372, "FY2020": -14413, "FY2019": -11240}),
+        ("Loss after tax and loss for the year", {"FY2025": -4702, "FY2024": -8861, "FY2023": -58148, "FY2022": -29753, "FY2021": -21310, "FY2020": -18314, "FY2019": -11536}),
     ],
     income_statement_unit="£'000",
     equity_changes_totals=[
-        ("Opening equity", {"FY2025": 173082, "FY2024": 92483, "FY2023": 65993, "FY2022": 50830, "FY2021": 43067}),
-        ("Total comprehensive income/(loss)", {"FY2025": -4084, "FY2024": -8685, "FY2023": -58324, "FY2022": -29873, "FY2021": -21339}),
-        ("Other movements, net", {"FY2025": 27145, "FY2024": 89284, "FY2023": 84814, "FY2022": 45036, "FY2021": 29102}),
-        ("Closing equity", {"FY2025": 196143, "FY2024": 173082, "FY2023": 92483, "FY2022": 65993, "FY2021": 50830}),
+        ("Opening equity", {"FY2025": 173082, "FY2024": 92483, "FY2023": 65993, "FY2022": 50830, "FY2021": 43067, "FY2020": 49484, "FY2019": 5783}),
+        ("Total comprehensive income/(loss)", {"FY2025": -4084, "FY2024": -8685, "FY2023": -58324, "FY2022": -29873, "FY2021": -21339, "FY2020": -18314, "FY2019": -11536}),
+        ("Other movements, net", {"FY2025": 27145, "FY2024": 89284, "FY2023": 84814, "FY2022": 45036, "FY2021": 29102, "FY2020": 20012, "FY2019": 55237}),
+        ("Closing equity", {"FY2025": 196143, "FY2024": 173082, "FY2023": 92483, "FY2022": 65993, "FY2021": 50830, "FY2020": 51182, "FY2019": 49484}),
     ],
     equity_changes_unit="£'000",
     cash_flow_totals=[
-        ("Net cash from operating activities", {"FY2025": 43038, "FY2024": 189520, "FY2023": 653419, "FY2022": 16976, "FY2021": -92120}),
-        ("Net cash from/(used in) investing activities", {"FY2025": -741638, "FY2024": -389775, "FY2023": -124128, "FY2022": -177719, "FY2021": 26853}),
-        ("Net cash from/(used in) financing activities", {"FY2025": 500016, "FY2024": 98027, "FY2023": 84573, "FY2022": 183068, "FY2021": 28960}),
-        ("Closing cash and cash equivalents", {"FY2025": 387550, "FY2024": 586134, "FY2023": 688362, "FY2022": 74498, "FY2021": 52173}),
+        ("Net cash from operating activities", {"FY2025": 43038, "FY2024": 189520, "FY2023": 653419, "FY2022": 16976, "FY2021": -92120, "FY2020": 69197, "FY2019": -27621}),
+        ("Net cash from/(used in) investing activities", {"FY2025": -741638, "FY2024": -389775, "FY2023": -124128, "FY2022": -177719, "FY2021": 26853, "FY2020": -149, "FY2019": -514}),
+        ("Net cash from/(used in) financing activities", {"FY2025": 500016, "FY2024": 98027, "FY2023": 84573, "FY2022": 183068, "FY2021": 28960, "FY2020": -8176, "FY2019": 53243}),
+        ("Closing cash and cash equivalents", {"FY2025": 387550, "FY2024": 586134, "FY2023": 688362, "FY2022": 74498, "FY2021": 52173, "FY2020": 88480, "FY2019": 27607}),
     ],
     cash_flow_unit="£'000",
     ratios=[
@@ -578,7 +665,9 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2025": "145%", "FY2023": "243%", "FY2022": "162.9%", "FY2021": "146.5%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page. " + FY2024_GAP_NOTE,
+         "citation for the underlying document/page. Ratios are blank for FY2019/FY2020 (no Pillar 3 disclosure "
+         "published for those years). Note the ~£8.1m FY2020-closing/FY2021-opening equity gap explained on the "
+         "Statement of Changes in Equity sheet (FRS 102-to-IFRS transition). " + FY2024_GAP_NOTE,
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/CHETWOOD FINANCIALS.xlsx")

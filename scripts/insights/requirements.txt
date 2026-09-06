@@ -1,0 +1,11 @@
+# This pipeline (scripts/insights/) is the only part of the repo with a real
+# dependency manifest - the per-bank build scripts in scripts/ assume only
+# openpyxl is pre-installed (see CLAUDE.md) and stay dependency-free.
+#
+# Install: python3 -m pip install --user -r scripts/insights/requirements.txt
+#          python3 -m playwright install chromium
+#
+# playwright: headless-Chromium print-to-PDF for build_in006_pdf.py (IN-053) -
+# renders the print template's real Chart.js canvases exactly as a browser
+# would, instead of hand-drawing every chart type in raw PDF syntax.
+playwright

@@ -7,7 +7,7 @@ from bank_workbook import BankWorkbook
 # Statement of Changes in Equity/Cash Flows) - converted to £ using the same
 # methodology as Arab Bank Europe Plc (the project's other EUR-reporting
 # bank), reusing that bank's FX rate table extended by one year for FY2025.
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]  # most recent first
 
 AR2024_URL = (
     "https://find-and-update.company-information.service.gov.uk/company/01126618/"
@@ -21,6 +21,14 @@ AR2025_URL = (
     "https://find-and-update.company-information.service.gov.uk/company/01126618/"
     "filing-history/MzUyNzI0MjU2MGFkaXF6a2N4/document?format=pdf&download=0"
 )
+AR2020_URL = (
+    "https://find-and-update.company-information.service.gov.uk/company/01126618/"
+    "filing-history/MzI5OTI5MzU3NGFkaXF6a2N4/document?format=pdf&download=0"
+)
+AR2019_URL = (
+    "https://find-and-update.company-information.service.gov.uk/company/01126618/"
+    "filing-history/MzI2MzQzNDY1MmFkaXF6a2N4/document?format=pdf&download=0"
+)
 
 # ---------------------------------------------------------------
 # FX conversion: rates in market convention "£1 = €X" (Bank of England GBP/EUR
@@ -30,6 +38,8 @@ AR2025_URL = (
 # archive; average is a rough mid-month-sample estimate, full daily series
 # wasn't practical to extract - flagged as approximate in FX_NOTE).
 FX_RATES = {
+    "FY2018": {"period_end": 1.1133},
+    "FY2019": {"period_end": 1.1757, "average": 1.1405},
     "FY2020": {"period_end": 1.1118},
     "FY2021": {"period_end": 1.1907, "average": 1.1628},
     "FY2022": {"period_end": 1.1277, "average": 1.1717},
@@ -37,23 +47,24 @@ FX_RATES = {
     "FY2024": {"period_end": 1.2099, "average": 1.1824},
     "FY2025": {"period_end": 1.1454, "average": 1.168},
 }
-PRIOR_YEAR = {"FY2021": "FY2020", "FY2022": "FY2021", "FY2023": "FY2022", "FY2024": "FY2023", "FY2025": "FY2024"}
+FX_RATES["FY2020"]["average"] = 1.1250
+PRIOR_YEAR = {"FY2019": "FY2018", "FY2020": "FY2019", "FY2021": "FY2020", "FY2022": "FY2021", "FY2023": "FY2022", "FY2024": "FY2023", "FY2025": "FY2024"}
 
 
 def gbp_m_spot(eur_by_year):
     """Convert a {year: €} dict to £m using that year's OWN period-end spot rate (stocks)."""
-    return {y: round(v / FX_RATES[y]["period_end"] / 1_000_000, 2) for y, v in eur_by_year.items()}
+    return {y: (None if v is None else round(v / FX_RATES[y]["period_end"] / 1_000_000, 2)) for y, v in eur_by_year.items()}
 
 
 def gbp_m_spot_prior(eur_by_year):
     """Convert a {year: €} dict to £m using the PRIOR year's period-end spot rate
     (for opening cash balances, which are last year's closing balance)."""
-    return {y: round(v / FX_RATES[PRIOR_YEAR[y]]["period_end"] / 1_000_000, 2) for y, v in eur_by_year.items()}
+    return {y: (None if v is None else round(v / FX_RATES[PRIOR_YEAR[y]]["period_end"] / 1_000_000, 2)) for y, v in eur_by_year.items()}
 
 
 def gbp_m_avg(eur_by_year):
     """Convert a {year: €} dict to £m using that year's average rate (flows)."""
-    return {y: round(v / FX_RATES[y]["average"] / 1_000_000, 2) for y, v in eur_by_year.items()}
+    return {y: (None if v is None else round(v / FX_RATES[y]["average"] / 1_000_000, 2)) for y, v in eur_by_year.items()}
 
 
 FX_NOTE = (
@@ -116,7 +127,8 @@ CASH_FLOW_SOURCES = (
     f"FY2025/FY2024 (2024 comparative confirmed unchanged): Full accounts made up to 31 December 2025, p.32 "
     f"(Statement of Cash Flows) - {AR2025_URL}\n"
     f"FY2024/FY2023: Full accounts made up to 31 December 2024, p.30 (Statement of Cash Flows) - {AR2024_URL}\n"
-    f"FY2022/FY2021: Full accounts made up to 31 December 2022, p.24 (Statement of Cash Flows) - {AR2022_URL}. "
+    f"FY2022/FY2021: Full accounts made up to 31 December 2022, p.24 (Statement of Cash Flows) - {AR2022_URL}\n"
+    f"FY2020/FY2019: FY2020 accounts p.20 and FY2019 accounts p.18 - {AR2020_URL} / {AR2019_URL}. "
     f"Note: this filing states 'The 2021 cash flow stands amended' - the FY2021 column here is that amended "
     f"figure, not the original FY2021 filing's figure (not separately sourced).\n\n"
     + ENTITY_NOTE + "\n\n" + FX_NOTE
@@ -130,7 +142,8 @@ def p3_sources(page):
         "important caveats on how these ratios are defined and their cross-vintage consistency):\n"
         f"FY2025: Full accounts made up to 31 December 2025, p.{page['FY2025']} - {AR2025_URL}\n"
         f"FY2024/FY2023: Full accounts made up to 31 December 2024, p.{page['FY2024']} - {AR2024_URL}\n"
-        f"FY2022/FY2021: Full accounts made up to 31 December 2022, p.{page['FY2022']} - {AR2022_URL}"
+        f"FY2022/FY2021: Full accounts made up to 31 December 2022, p.{page['FY2022']} - {AR2022_URL}\n"
+        f"FY2020/FY2019: own Capital management Note 15, FY2020 p.35 and FY2019 p.35 - {AR2020_URL} / {AR2019_URL}"
     )
 
 
@@ -152,7 +165,9 @@ STATEMENTS_SOURCES = (
     f"FY2024/FY2023: Full accounts made up to 31 December 2024, pp.27-29 - {AR2024_URL} (FY2024's own primary "
     f"report used per project convention, in preference to the FY2025 report's FY2024 comparative column, which "
     f"reclassifies the Other liabilities/Deferred tax liability lines differently - see PRESENTATION_NOTE)\n"
-    f"FY2022/FY2021: Full accounts made up to 31 December 2022, pp.21-23 - {AR2022_URL}\n\n"
+    f"FY2022/FY2021: Full accounts made up to 31 December 2022, pp.21-23 - {AR2022_URL}\n"
+    f"FY2020: Full accounts made up to 31 December 2020, pp.17-19 - {AR2020_URL}\n"
+    f"FY2019: Full accounts made up to 31 December 2019, pp.15-17 - {AR2019_URL}\n\n"
     + ENTITY_NOTE + "\n\n" + FX_NOTE
 )
 
@@ -174,27 +189,28 @@ PRESENTATION_NOTE = (
 # ---------------------------------------------------------------
 # Balance Sheet (EUR, raw units - converted at each year's own period-end spot rate)
 # ---------------------------------------------------------------
-BS_CASH = {"FY2025": 1679132, "FY2024": 1741636, "FY2023": 1707223, "FY2022": 1690155, "FY2021": 1740004}
-BS_LOANS_BANKS = {"FY2025": 199786057, "FY2024": 209345595, "FY2023": 196726056, "FY2022": 192267152, "FY2021": 188430847}
-BS_LOANS_CUSTOMERS = {"FY2025": 10327206, "FY2024": 1852583, "FY2023": 11906292, "FY2022": 14025951, "FY2021": 17529843}
-BS_TANGIBLE_FA = {"FY2025": 11905141, "FY2024": 12045264, "FY2023": 12198950, "FY2022": 12345892, "FY2021": 12304894}
+BS_CASH = {"FY2025": 1679132, "FY2024": 1741636, "FY2023": 1707223, "FY2022": 1690155, "FY2021": 1740004, "FY2020": 1616050, "FY2019": 1724643}
+BS_LOANS_BANKS = {"FY2025": 199786057, "FY2024": 209345595, "FY2023": 196726056, "FY2022": 192267152, "FY2021": 188430847, "FY2020": 186486070, "FY2019": 187385290}
+BS_LOANS_CUSTOMERS = {"FY2025": 10327206, "FY2024": 1852583, "FY2023": 11906292, "FY2022": 14025951, "FY2021": 17529843, "FY2020": 23194499, "FY2019": 23622973}
+BS_TANGIBLE_FA = {"FY2025": 11905141, "FY2024": 12045264, "FY2023": 12198950, "FY2022": 12345892, "FY2021": 12304894, "FY2020": 12381659, "FY2019": 12478397}
 BS_INTANGIBLE_FA = {"FY2025": 174875, "FY2024": 261390, "FY2023": 342715, "FY2022": 431434, "FY2021": 621177}
-BS_OTHER_ASSETS = {"FY2025": 638242, "FY2024": 668048, "FY2023": 36508, "FY2022": 418946, "FY2021": 303728}
-BS_DEFERRED_TAX_ASSET = {"FY2025": 62654, "FY2024": 59638}
-BS_PREPAYMENTS = {"FY2025": 1462160, "FY2024": 1096657, "FY2023": 1079507, "FY2022": 1100167, "FY2021": 1070309}
-BS_TOTAL_ASSETS = {"FY2025": 226035467, "FY2024": 227070811, "FY2023": 223997250, "FY2022": 222279687, "FY2021": 221900802}
+BS_OTHER_ASSETS = {"FY2025": 638242, "FY2024": 668048, "FY2023": 36508, "FY2022": 418946, "FY2021": 303728, "FY2020": 124729, "FY2019": 33565}
+BS_INTANGIBLE_FA.update({"FY2020": 0, "FY2019": 0})
+BS_DEFERRED_TAX_ASSET = {"FY2025": 62654, "FY2024": 59638, "FY2020": 63119, "FY2019": 62180}
+BS_PREPAYMENTS = {"FY2025": 1462160, "FY2024": 1096657, "FY2023": 1079507, "FY2022": 1100167, "FY2021": 1070309, "FY2020": 275634, "FY2019": 218557}
+BS_TOTAL_ASSETS = {"FY2025": 226035467, "FY2024": 227070811, "FY2023": 223997250, "FY2022": 222279687, "FY2021": 221900802, "FY2020": 224516310, "FY2019": 225525605}
 
-BS_DEPOSITS_BANKS = {"FY2025": 22179542, "FY2024": 23734019, "FY2023": 23195849, "FY2022": 23197516, "FY2021": 23349246}
-BS_CUSTOMER_ACCOUNTS = {"FY2025": 3331704, "FY2024": 3535622, "FY2023": 3409112, "FY2022": 3468029, "FY2021": 3452199}
+BS_DEPOSITS_BANKS = {"FY2025": 22179542, "FY2024": 23734019, "FY2023": 23195849, "FY2022": 23197516, "FY2021": 23349246, "FY2020": 27673592, "FY2019": 29185063}
+BS_CUSTOMER_ACCOUNTS = {"FY2025": 3331704, "FY2024": 3535622, "FY2023": 3409112, "FY2022": 3468029, "FY2021": 3452199, "FY2020": 3271385, "FY2019": 3505884}
 BS_DEFERRED_TAX_LIAB = {"FY2023": 23426, "FY2022": 63649, "FY2021": 37764}
-BS_OTHER_LIABILITIES = {"FY2025": 1017433, "FY2024": 3710072, "FY2023": 2899488, "FY2022": 2329932, "FY2021": 2463658}
+BS_OTHER_LIABILITIES = {"FY2025": 1017433, "FY2024": 3710072, "FY2023": 2899488, "FY2022": 2329932, "FY2021": 2463658, "FY2020": 1777596, "FY2019": 1732767}
 BS_ACCRUALS_DEFERRED_INCOME = {"FY2025": 3239462}
-BS_TOTAL_LIABILITIES = {"FY2025": 29768141, "FY2024": 30979713, "FY2023": 29527874, "FY2022": 29059126, "FY2021": 29302867}
+BS_TOTAL_LIABILITIES = {"FY2025": 29768141, "FY2024": 30979713, "FY2023": 29527874, "FY2022": 29059126, "FY2021": 29302867, "FY2020": 32722574, "FY2019": 34423714}
 
 BS_SHARE_CAPITAL = {y: 183219924 for y in YEARS}
 BS_GEN_BANKING_RESERVE = {y: 6000000 for y in YEARS}
-BS_RETAINED_EARNINGS = {"FY2025": 7047402, "FY2024": 6871174, "FY2023": 5249451, "FY2022": 4000637, "FY2021": 3378011}
-BS_TOTAL_EQUITY = {"FY2025": 196267326, "FY2024": 196091098, "FY2023": 194469375, "FY2022": 193220561, "FY2021": 192597935}
+BS_RETAINED_EARNINGS = {"FY2025": 7047402, "FY2024": 6871174, "FY2023": 5249451, "FY2022": 4000637, "FY2021": 3378011, "FY2020": 2573812, "FY2019": 1881967}
+BS_TOTAL_EQUITY = {"FY2025": 196267326, "FY2024": 196091098, "FY2023": 194469375, "FY2022": 193220561, "FY2021": 192597935, "FY2020": 191793736, "FY2019": 191101891}
 
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
@@ -235,19 +251,20 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 # Profit & Loss (EUR, raw units - flow figures converted at each year's average rate)
 # ---------------------------------------------------------------
-IS_INTEREST_INCOME = {"FY2025": 4570218, "FY2024": 6733396, "FY2023": 5505485, "FY2022": 4752833, "FY2021": 5150072}
-IS_INTEREST_EXPENSE = {"FY2025": -55745, "FY2024": -61203, "FY2023": -39920, "FY2022": -33454, "FY2021": -31616}
-IS_NET_INTEREST_INCOME = {"FY2025": 4514473, "FY2024": 6672193, "FY2023": 5465565, "FY2022": 4719379, "FY2021": 5118456}
-IS_FEES_RECEIVABLE = {"FY2025": 32106, "FY2024": 20243, "FY2023": 65058, "FY2022": 20526, "FY2021": 19749}
-IS_OTHER_OPERATING = {"FY2025": -84557, "FY2024": -50385, "FY2023": -148108, "FY2022": 65380, "FY2021": 57771}
-IS_OPERATING_INCOME = {"FY2025": 4462023, "FY2024": 6642051, "FY2023": 5382515, "FY2022": 4805285, "FY2021": 5195976}
-IS_ADMIN_EXPENSES = {"FY2025": -3098500, "FY2024": -3329844, "FY2023": -3175665, "FY2022": -3238959, "FY2021": -3752083}
-IS_DEPRECIATION = {"FY2025": -228391, "FY2024": -235012, "FY2023": -235661, "FY2022": -224464, "FY2021": -158258}
+IS_INTEREST_INCOME = {"FY2025": 4570218, "FY2024": 6733396, "FY2023": 5505485, "FY2022": 4752833, "FY2021": 5150072, "FY2020": 4691851, "FY2019": 4201434}
+IS_INTEREST_EXPENSE = {"FY2025": -55745, "FY2024": -61203, "FY2023": -39920, "FY2022": -33454, "FY2021": -31616, "FY2020": -41527, "FY2019": -61451}
+IS_NET_INTEREST_INCOME = {"FY2025": 4514473, "FY2024": 6672193, "FY2023": 5465565, "FY2022": 4719379, "FY2021": 5118456, "FY2020": 4650324, "FY2019": 4139983}
+IS_FEES_RECEIVABLE = {"FY2025": 32106, "FY2024": 20243, "FY2023": 65058, "FY2022": 20526, "FY2021": 19749, "FY2020": 7535, "FY2019": 58382}
+IS_OTHER_OPERATING = {"FY2025": -84557, "FY2024": -50385, "FY2023": -148108, "FY2022": 65380, "FY2021": 57771, "FY2020": -55427, "FY2019": 14167}
+IS_OPERATING_INCOME = {"FY2025": 4462023, "FY2024": 6642051, "FY2023": 5382515, "FY2022": 4805285, "FY2021": 5195976, "FY2020": 4596479, "FY2019": 4208448}
+IS_ADMIN_EXPENSES = {"FY2025": -3098500, "FY2024": -3329844, "FY2023": -3175665, "FY2022": -3238959, "FY2021": -3752083, "FY2020": -3013972, "FY2019": -3653179}
+IS_DEPRECIATION = {"FY2025": -228391, "FY2024": -235012, "FY2023": -235661, "FY2022": -224464, "FY2021": -158258, "FY2020": -107851, "FY2019": -108286}
 IS_NET_OPERATING_INCOME = {"FY2025": 1135132, "FY2024": 3077195, "FY2023": 1971189}
-IS_PROVISIONS = {"FY2025": -965654, "FY2024": -786269, "FY2023": -308056, "FY2022": -542170, "FY2021": -308848}
-IS_PROFIT_BEFORE_TAX = {"FY2025": 169477, "FY2024": 2290926, "FY2023": 1663133, "FY2022": 799692, "FY2021": 976787}
-IS_TAX = {"FY2025": 6751, "FY2024": -669203, "FY2023": -414320, "FY2022": -177066, "FY2021": -172589}
-IS_PROFIT_AFTER_TAX = {"FY2025": 176228, "FY2024": 1621723, "FY2023": 1248813, "FY2022": 622626, "FY2021": 804198}
+IS_NET_OPERATING_INCOME.update({"FY2020": None, "FY2019": None})
+IS_PROVISIONS = {"FY2025": -965654, "FY2024": -786269, "FY2023": -308056, "FY2022": -542170, "FY2021": -308848, "FY2020": -596849, "FY2019": 35897}
+IS_PROFIT_BEFORE_TAX = {"FY2025": 169477, "FY2024": 2290926, "FY2023": 1663133, "FY2022": 799692, "FY2021": 976787, "FY2020": 877808, "FY2019": 482880}
+IS_TAX = {"FY2025": 6751, "FY2024": -669203, "FY2023": -414320, "FY2022": -177066, "FY2021": -172589, "FY2020": -185962, "FY2019": -111853}
+IS_PROFIT_AFTER_TAX = {"FY2025": 176228, "FY2024": 1621723, "FY2023": 1248813, "FY2022": 622626, "FY2021": 804198, "FY2020": 691846, "FY2019": 371027}
 IS_OCI = {y: 0 for y in YEARS}
 IS_TOTAL_COMPREHENSIVE = dict(IS_PROFIT_AFTER_TAX)
 
@@ -292,6 +309,11 @@ bw.add_income_statement_sheet(
 # a real economic movement.
 # ---------------------------------------------------------------
 EQUITY_EUR = [
+    ("2019-01-01", "opening", {"cap": 183219924, "reserve": 6000000, "retained": 1510940, "total": 190730864}),
+    ("FY2019", "profit", {"cap": 0, "reserve": 0, "retained": 371027, "total": 371027}),
+    ("2019-12-31", "closing", {"cap": 183219924, "reserve": 6000000, "retained": 1881967, "total": 191101891}),
+    ("FY2020", "profit", {"cap": 0, "reserve": 0, "retained": 691846, "total": 691846}),
+    ("2020-12-31", "closing", {"cap": 183219924, "reserve": 6000000, "retained": 2573812, "total": 191793736}),
     ("2021-01-01", "opening", {"cap": 183219924, "reserve": 6000000, "retained": 2573813, "total": 191793737}),
     ("FY2021", "profit", {"cap": 0, "reserve": 0, "retained": 804198, "total": 804198}),
     ("2021-12-31", "closing", {"cap": 183219924, "reserve": 6000000, "retained": 3378011, "total": 192597935}),
@@ -311,6 +333,9 @@ EQUITY_EUR = [
 # adjusted.
 
 SNAPSHOT_SPOT = {
+    "2019-01-01": FX_RATES["FY2018"]["period_end"] if "FY2018" in FX_RATES else FX_RATES["FY2019"]["period_end"],
+    "2019-12-31": FX_RATES["FY2019"]["period_end"],
+    "2020-12-31": FX_RATES["FY2020"]["period_end"],
     "2021-01-01": FX_RATES["FY2020"]["period_end"],
     "2021-12-31": FX_RATES["FY2021"]["period_end"],
     "2022-12-31": FX_RATES["FY2022"]["period_end"],
@@ -378,18 +403,18 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (raw EUR figures, converted to £m at build time)
 # ---------------------------------------------------------------
-CASH_FROM_OPERATIONS = {"FY2025": -70787294, "FY2024": 25102237, "FY2023": 30246049, "FY2022": 27068225, "FY2021": 668390}
-TAXATION_PAID = {"FY2025": -164923, "FY2024": -450593, "FY2023": -126529, "FY2022": -180691, "FY2021": -59573}
-NET_OPERATING = {"FY2025": -70952217, "FY2024": 24651644, "FY2023": 30119520, "FY2022": 26887534, "FY2021": 608817}
+CASH_FROM_OPERATIONS = {"FY2025": -70787294, "FY2024": 25102237, "FY2023": 30246049, "FY2022": 27068225, "FY2021": 668390, "FY2020": 45889, "FY2019": 213286}
+TAXATION_PAID = {"FY2025": -164923, "FY2024": -450593, "FY2023": -126529, "FY2022": -180691, "FY2021": -59573, "FY2020": -122886, "FY2019": -164458}
+NET_OPERATING = {"FY2025": -70952217, "FY2024": 24651644, "FY2023": 30119520, "FY2022": 26887534, "FY2021": 608817, "FY2020": -76997, "FY2019": 48828}
 
 # Investing: explicitly nil (stated as "-") FY2023-FY2025 per the Bank's own presentation; a genuine
 # purchase of tangible fixed assets appears only in FY2021/FY2022.
-PURCHASE_FIXED_ASSETS = {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": -175719, "FY2021": -621432}
-NET_INVESTING = {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": -175719, "FY2021": -621432}
+PURCHASE_FIXED_ASSETS = {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": -175719, "FY2021": -621432, "FY2020": -11112, "FY2019": -2056}
+NET_INVESTING = {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": -175719, "FY2021": -621432, "FY2020": -11112, "FY2019": -2056}
 
-NET_CHANGE = {"FY2025": -70952217, "FY2024": 24651644, "FY2023": 30119520, "FY2022": 26711816, "FY2021": -12615}
-CASH_BEGIN = {"FY2025": 204773258, "FY2024": 180121614, "FY2023": 150002094, "FY2022": 123290279, "FY2021": 123302894}
-CASH_END = {"FY2025": 133821041, "FY2024": 204773258, "FY2023": 180121614, "FY2022": 150002094, "FY2021": 123290279}
+NET_CHANGE = {"FY2025": -70952217, "FY2024": 24651644, "FY2023": 30119520, "FY2022": 26711816, "FY2021": -12615, "FY2020": -88109, "FY2019": 46772}
+CASH_BEGIN = {"FY2025": 204773258, "FY2024": 180121614, "FY2023": 150002094, "FY2022": 123290279, "FY2021": 123302894, "FY2020": 1724643, "FY2019": 1657214}
+CASH_END = {"FY2025": 133821041, "FY2024": 204773258, "FY2023": 180121614, "FY2022": 150002094, "FY2021": 123290279, "FY2020": 1616050, "FY2019": 1724643}
 
 cash_begin_gbp = gbp_m_spot_prior(CASH_BEGIN)
 cash_end_gbp = gbp_m_spot(CASH_END)
@@ -434,11 +459,11 @@ bw.add_cash_flow_sheet(
 # AR2022 report) - FY2023-25 don't carry an equivalent note in the sections
 # reviewed, so those cells are left blank rather than estimated.
 # ---------------------------------------------------------------
-AQ_MATURITY_3M = {"FY2025": 11406356, "FY2024": 10681209, "FY2023": 17026526, "FY2022": 14496029, "FY2021": 13523362}
-AQ_MATURITY_1Y = {"FY2025": 0, "FY2024": 896129, "FY2023": 2623410, "FY2022": 2324700, "FY2021": 2324701}
-AQ_MATURITY_5Y = {"FY2025": 10657868, "FY2024": 298710, "FY2023": 1493549, "FY2022": 5545530, "FY2021": 9597512}
+AQ_MATURITY_3M = {"FY2025": 11406356, "FY2024": 10681209, "FY2023": 17026526, "FY2022": 14496029, "FY2021": 13523362, "FY2020": 16180724, "FY2019": 13278277}
+AQ_MATURITY_1Y = {"FY2025": 0, "FY2024": 896129, "FY2023": 2623410, "FY2022": 2324700, "FY2021": 2324701, "FY2020": 3220830, "FY2019": 1792258}
+AQ_MATURITY_5Y = {"FY2025": 10657868, "FY2024": 298710, "FY2023": 1493549, "FY2022": 5545530, "FY2021": 9597512, "FY2020": 41558526, "FY2019": 15376776}
 AQ_GROSS_LOANS = {y: AQ_MATURITY_3M[y] + AQ_MATURITY_1Y[y] + AQ_MATURITY_5Y[y] for y in YEARS}
-AQ_ALLOWANCE = {"FY2025": 11737018, "FY2024": 10023465, "FY2023": 9237194, "FY2022": 7917439, "FY2021": 7375271}
+AQ_ALLOWANCE = {"FY2025": 11737018, "FY2024": 10023465, "FY2023": 9237194, "FY2022": 7917439, "FY2021": 7375271, "FY2020": 7765581, "FY2019": 6824338}
 AQ_INTEREST_SUSPENSE = {"FY2022": 422869, "FY2021": 540461}
 AQ_NET_LOANS = {y: AQ_GROSS_LOANS[y] - AQ_ALLOWANCE[y] - AQ_INTEREST_SUSPENSE.get(y, 0) for y in YEARS}
 AQ_IMPAIRED = {"FY2022": 7866000, "FY2021": 7645000}
@@ -473,7 +498,8 @@ bw.add_asset_quality_sheet(
         "loans and advances, FY2021/FY2022 only):\n"
         f"FY2025/FY2024: Full accounts made up to 31 December 2025, p.48 - {AR2025_URL}\n"
         f"FY2024/FY2023: Full accounts made up to 31 December 2024, p.44 - {AR2024_URL}\n"
-        f"FY2022/FY2021: Full accounts made up to 31 December 2022, pp.30,37 - {AR2022_URL}\n\n"
+        f"FY2022/FY2021: Full accounts made up to 31 December 2022, pp.30,37 - {AR2022_URL}\n"
+        f"FY2020/FY2019: own Notes 9-11, FY2020 pp.25-26 and FY2019 p.24 - {AR2020_URL} / {AR2019_URL}\n\n"
         + ENTITY_NOTE + "\n\n" + FX_NOTE
     ),
     first_col_width=70,
@@ -484,10 +510,10 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-RATIO_PAGES = {"FY2025": "13-14", "FY2024": "13-14", "FY2022": "9"}
+RATIO_PAGES = {"FY2025": "13-14", "FY2024": "13-14", "FY2022": "9", "FY2020": "35", "FY2019": "35"}
 
-CAPITAL_BASE = {"FY2025": 196228824, "FY2024": 196287187, "FY2023": 194469375, "FY2022": 193220561, "FY2021": 192597935}
-CAPITAL_COVER = {"FY2025": "331%", "FY2024": "349%", "FY2023": "325%", "FY2022": "339%", "FY2021": "313%"}
+CAPITAL_BASE = {"FY2025": 196228824, "FY2024": 196287187, "FY2023": 194469375, "FY2022": 193220561, "FY2021": 192597935, "FY2020": 191793736, "FY2019": 191101891}
+CAPITAL_COVER = {"FY2025": "331%", "FY2024": "349%", "FY2023": "325%", "FY2022": "339%", "FY2021": "313%", "FY2020": "330%", "FY2019": "324%"}
 LCR_ALL_CCY = {"FY2025": "477%", "FY2024": "331%", "FY2023": "334%", "FY2022": "368%", "FY2021": "376%"}
 
 capital_base_gbp = gbp_m_spot(CAPITAL_BASE)
@@ -557,8 +583,8 @@ bw.add_not_disclosed_metric_sheets(
 # ---------------------------------------------------------------
 # Overview sheet
 # ---------------------------------------------------------------
-OPENING_KEY = {"FY2021": "2021-01-01", "FY2022": "2021-12-31", "FY2023": "2022-12-31", "FY2024": "2023-12-31", "FY2025": "2024-12-31"}
-CLOSING_KEY = {"FY2021": "2021-12-31", "FY2022": "2022-12-31", "FY2023": "2023-12-31", "FY2024": "2024-12-31", "FY2025": "2025-12-31"}
+OPENING_KEY = {"FY2019": "2019-01-01", "FY2020": "2019-12-31", "FY2021": "2021-01-01", "FY2022": "2021-12-31", "FY2023": "2022-12-31", "FY2024": "2023-12-31", "FY2025": "2024-12-31"}
+CLOSING_KEY = {"FY2019": "2019-12-31", "FY2020": "2020-12-31", "FY2021": "2021-12-31", "FY2022": "2022-12-31", "FY2023": "2023-12-31", "FY2024": "2024-12-31", "FY2025": "2025-12-31"}
 eq_opening = {y: equity_gbp[OPENING_KEY[y]]["total"] for y in YEARS}
 eq_tci = {y: equity_gbp[y]["total"] for y in YEARS}
 eq_closing = {y: equity_gbp[CLOSING_KEY[y]]["total"] for y in YEARS}

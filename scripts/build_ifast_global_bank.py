@@ -411,14 +411,14 @@ metric(
 metric(
     "LCR", "£'000 / %",
     [
-        ("Total high-quality liquid assets (HQLA) (£'000)", {"FY2025": 279890, "FY2024": 301040, "FY2023": 180356, "FY2022": 65205, "FY2021": "Not disclosed"}),
-        ("Total net cash outflows, adjusted value (£'000)", {"FY2025": 52750, "FY2024": 33002, "FY2023": 24764, "FY2022": 5258, "FY2021": "Not disclosed"}),
-        ("Liquidity coverage ratio (%)", {"FY2025": "531%", "FY2024": "912%", "FY2023": "728%", "FY2022": "1240%", "FY2021": "Not disclosed"}),
+        ("Total high-quality liquid assets (HQLA) (£'000)", {"FY2025": 279890, "FY2024": 301040, "FY2023": 180356, "FY2022": 65205, "FY2021": 26728}),
+        ("Total net cash outflows, adjusted value (£'000)", {"FY2025": 52750, "FY2024": 33002, "FY2023": 24764, "FY2022": 5258, "FY2021": 2411}),
+        ("Liquidity coverage ratio (%)", {"FY2025": "531%", "FY2024": "912%", "FY2023": "728%", "FY2022": "1240%", "FY2021": "1109%"}),
     ],
     p3_sources(),
-    note="The FY2021 (BFC Bank Limited) Pillar 3 Disclosures document has no LCR/liquidity section at all — only "
-         "Leverage, Asset Encumbrance, Own funds, Capital Adequacy and Remuneration are covered — so FY2021 is "
-         "genuinely not disclosed, not merely omitted from this workbook.",
+    note="FY2021's (BFC Bank Limited) Pillar 3 Disclosures disclose the liquidity table in the Market Risk section "
+         "(p.18): liquidity buffer/HQLA £26,728k, total net cash outflows £2,411k and LCR 1,109%. These are the "
+         "Bank's own figures; the report states that BFC Bank refers to the renamed iFAST Global Bank Limited.",
 )
 
 metric(
@@ -475,7 +475,7 @@ bw.add_overview_sheet(
         ("Tier 1 Ratio", {"FY2025": "23.9%", "FY2024": "28.1%", "FY2023": "36.3%", "FY2022": "40.7%", "FY2021": "22%"}),
         ("Total Capital Ratio", {"FY2025": "23.9%", "FY2024": "28.1%", "FY2023": "36.3%", "FY2022": "40.7%", "FY2021": "22%"}),
         ("Leverage Ratio", {"FY2025": "11.0%", "FY2024": "15.4%", "FY2023": "29.0%", "FY2022": "47.3%", "FY2021": "19%"}),
-        ("LCR", {"FY2025": "531%", "FY2024": "912%", "FY2023": "728%", "FY2022": "1240%", "FY2021": "Not disclosed"}),
+        ("LCR", {"FY2025": "531%", "FY2024": "912%", "FY2023": "728%", "FY2022": "1240%", "FY2021": "1109%"}),
         ("NSFR", {"FY2025": "190.9%", "FY2024": "257.5%", "FY2023": "345.4%", "FY2022": "416.4%", "FY2021": "Not disclosed"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "

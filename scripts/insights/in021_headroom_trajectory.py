@@ -7,15 +7,24 @@ import tempfile
 from datetime import datetime, timezone
 
 import build_insights_db
-from in009_analysis import CORE_METRICS, _select_metric_observations, build_metric_series, comparison_diagnostics, normalize_observation
+from in009_analysis import CORE_METRICS, _is_percent_value, _select_metric_observations, build_metric_series, comparison_diagnostics, normalize_observation
 from in020_regulatory_context import CONTEXT
 
 SCHEMA_VERSION = "1.0"
 
 
 def applicable_context(observation, metric, year):
-    """Return a dated floor using IN-020's safe unit/basis policy."""
-    if observation.get("unit") != "%" or not observation.get("reporting_basis"):
+    """Return a dated floor using IN-020's safe unit/basis policy.
+
+    Used `observation.get("unit") == "%"` alone until IN-052's migration
+    survey found `unit` is NULL for every row in `annual_metrics` (never
+    populated at extraction time) - silently zeroing out every headroom
+    record regardless of bank or metric (all 491 screened as
+    "no_regulatory_context"). `_is_percent_value()` (in009_analysis.py) is
+    the existing, already-correct pattern for this same check elsewhere in
+    the codebase: it falls back to the literal "%" in `value_raw`, which
+    does survive extraction even though `unit` doesn't."""
+    if not _is_percent_value(observation) or not observation.get("reporting_basis"):
         return None
     candidates = [item for item in CONTEXT if item["metric"] == metric
                   and item["effective_from"] <= year

@@ -8,6 +8,7 @@ AR25_URL = "https://find-and-update.company-information.service.gov.uk/company/1
 AR24_URL = "https://find-and-update.company-information.service.gov.uk/company/12844788/filing-history/MzUwMDM4NjMxMWFkaXF6a2N4/document?format=pdf&download=0"
 AR23_URL = "https://find-and-update.company-information.service.gov.uk/company/12844788/filing-history/MzQ2NTkxNTY0NWFkaXF6a2N4/document?format=pdf&download=0"
 PRA_NOTICE_URL = "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/regulatory-action/2026/final-notice-bol-and-oplyse-holdings-limited.pdf"
+CH_FILING_HISTORY_URL = "https://find-and-update.company-information.service.gov.uk/company/12844788/filing-history"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: The Bank of London Group Limited is the entity on the PRA register (company number 12844788) - "
@@ -18,7 +19,15 @@ ENTITY_NOTE = (
     "to 31 December 2021) that aren't meaningfully comparable, so this workbook covers FY2022-FY2025 (4 years) "
     "rather than 5. FY2022's own annual report took an FRS 101 exemption from presenting a cash flow statement; "
     "FY2022 figures here are the restated prior-year comparative column published in the FY2023 annual report "
-    "instead (same audited figures, just sourced from the following year's report)."
+    "instead (same audited figures, just sourced from the following year's report).\n\n"
+    "FY2020 SELF-SKIP (whole year, re-verified against Companies House filing history, checked 2026-09-06): the "
+    "company was incorporated 28 August 2020, so it existed for only its final ~4 months of calendar 2020 - and it "
+    "was not yet PRA-authorised until 7 October 2021, so it had no banking operations to report even in that stub "
+    "window. No accounts were ever filed for any period ending in 2020: Companies House's filing history shows the "
+    "company's first-ever accounts ('Total exemption full accounts') cover the period to 31 August 2021 (its first "
+    "~12-month accounting reference period, running from incorporation), followed by a shortened transition period "
+    "to 31 December 2021 - there is no distinct FY2020 accounting period at all for this entity to report on, "
+    f"confirmed vs. earlier signal, not assumed - {CH_FILING_HISTORY_URL}"
 )
 
 REGULATORY_NOTE = (

@@ -2,13 +2,14 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first, y/e 31 Dec
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2017"]  # most recent first, y/e 31 Dec
 YEAR_LABEL = {y: y for y in YEARS}
 
 AR2025_URL = "https://assets.gatehousebank.com/production/downloads/Gatehouse-Bank-Annual-Report-2025.pdf"
 AR2023_URL = "https://gatehousebank.com/downloads/gatehouse-bank-annual-report-2023"
 AR2022_URL = "https://gatehousebank.com/downloads/gatehouse-bank-annual-report-2022"
 AR2021_URL = "https://assets.gatehousebank.com/production/downloads/Gatehouse-Bank-Annual-Report-2021-FINAL-web.pdf"
+AR2017_URL = "https://assets.gatehousebank.com/production/downloads/gatehousebankannualreport2017-wesbite2.pdf"
 P3_2024_URL = "https://assets.gatehousebank.com/production/downloads/Gatehouse-Bank-Pillar-III-Disclosure-2024-FINAL.pdf"
 P3_2023_URL = "https://assets.gatehousebank.com/production/downloads/Gatehouse-Bank-Pillar-III-Disclosure-2023-FINAL.pdf"
 P3_2022_URL = "https://gatehousebank.com/downloads/gatehouse-bank-pillar-3-disclosure-2022"
@@ -42,8 +43,11 @@ ENTITY_NOTE = (
     "a value correction (the same pattern seen at FCE Bank Plc in this project). FY2021's own "
     "originally-published Annual Report figures are used here, consistent with every other year using "
     "its own primary source rather than a later restated comparative.\n\n"
+    f"FY2017: Annual Report and Financial Statements 2017, pp.33-36 - {AR2017_URL}\n"
+    "FY2017 Pillar 3 key metrics were not published in the 2017 annual report; regulatory metric cells are "
+    "left blank rather than inferred from the financial statements.\n\n"
     "Full opening-to-closing cash balance chain (including the separately-disclosed FX effect on cash) "
-    "ties exactly across all 5 years."
+    "ties exactly across all available years."
 )
 
 CASH_FLOW_SOURCES = (
@@ -89,6 +93,7 @@ STATEMENTS_SOURCES = (
     f"FY2025/FY2024: Annual Report and Financial Statements 2025, p.56-59 - {AR2025_URL}\n"
     f"FY2023/FY2022: Annual Report and Financial Statements 2023, p.59-63 - {AR2023_URL}\n"
     f"FY2021: Annual Report and Financial Statements 2021, p.46-50 - {AR2021_URL}\n"
+    f"FY2017: Annual Report and Financial Statements 2017, pp.33-36 - {AR2017_URL}\n"
     "Each year's own originally-published figures used. The equity roll-forward ties exactly at every "
     "boundary EXCEPT one genuine, disclosed restatement: the FY2023 Annual Report's own FY2022 "
     "comparative equity statement opens at 'Balance at 1 January 2022 (restated)' of GBP92,816k "
@@ -648,5 +653,70 @@ bw.add_overview_sheet(
          "notes. Figures are duplicated from the detail sheets for at-a-glance trend viewing.",
 )
 
-# ---------------------------------------------------------------
+# FY2017 statement extension.  The 2017 report is the Bank's own consolidated
+# report (pp.33-36); values are rounded to the workbook's £'000 convention.
+# Pillar 3 metrics remain blank because this predates the Bank's published
+# Article 447/KM1 disclosure series.
+_FY2017 = {
+    "Balance Sheet": {
+        "Cash and balances with banks": 11900,
+        "Financing and advances at amortised cost": 85903,
+        "Financial assets held at FVTOCI": 72095,
+        "Financial assets held at FVTIS": 0,
+        "Investment in associate": 15379,
+        "Derivative financial instruments (asset)": 0,
+        "Intangible assets": 339,
+        "Property, plant and equipment and right-of-use assets": 13031,
+        "Other assets": 4627,
+        "Total assets": 280526,
+        "Financial liabilities measured at amortised cost": 150077,
+        "Other liabilities": 2481,
+        "Total liabilities": 153065,
+        "Share capital": 150049,
+        "Foreign currency translation reserve": 1571,
+        "Fair value through other comprehensive income reserve": -394,
+        "Retained earnings/(deficit)": -23764,
+        "Equity attributable to owners of the company": 127462,
+        "Total equity": 127462,
+        "Total equity and liabilities": 280526,
+    },
+    "Profit & Loss": {
+        "Income from financial assets held at amortised cost": 9072,
+        "Charges to financial institutions and customers": -3425,
+        "Fees and commission income": 4062,
+        "Fees and commission expense": 0,
+        "Foreign exchange gains/(losses)": -276,
+        "Realised gains/(losses) on investments": 769,
+        "Other income": 560,
+        "Total operating income": 10762,
+        "Staff costs": -6790,
+        "Depreciation and amortisation": -583,
+        "Other operating expenses": -4008,
+        "Total operating expenses": -11381,
+        "Operating profit/(loss)": -620,
+        "Net share of profit of associate": 1946,
+        "Impairment (charge)/release": -1671,
+        "Profit/(loss) before tax": -345,
+        "Tax": -7,
+        "Profit/(loss) for the year from continuing operations": -351,
+        "Other comprehensive income/(loss) for the year": -1032,
+        "Total comprehensive (loss)/income for the year": -1383,
+    },
+    "Cash Flow Statement": {
+        "Cash and cash equivalents at end of year": 11900,
+        "Net cash flow from/(used in) operating activities": 30046,
+        "Net cash flow from/(used in) investing activities": 10353,
+        "Net cash flow from/(used in) financing activities": -36904,
+        "Net (decrease)/increase in cash and cash equivalents": 3494,
+        "Cash and cash equivalents at beginning of year": 8406,
+    },
+}
+for _sheet, _rows in _FY2017.items():
+    _ws = bw.wb[_sheet]
+    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
+    _col = 1 + YEARS.index("FY2017") + 1
+    for _label, _value in _rows.items():
+        if _label in _labels:
+            _ws.cell(_labels[_label], _col, _value)
+
 bw.save("/Users/armaan/code/katalysis/banks/GATEHOUSE BANK FINANCIALS.xlsx")

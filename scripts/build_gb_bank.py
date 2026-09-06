@@ -10,6 +10,21 @@ from bank_workbook import BankWorkbook
 # Statement of Changes in Equity, Asset Quality, RWA Breakdown), and the
 # Cash Flow Statement itself was backfilled in a 2026-09-03 follow-up pass
 # from the same Companies House filings.
+#
+# HD-053 (2026-09-05): checked whether the FY2017 window applies to this
+# entity, per the ticket's blanket "confirmed floor FY2017" — it does not.
+# Companies House 10702260 traded as THE MODEL T FINANCE COMPANY LIMITED
+# from incorporation (31 Mar 2017) until it was renamed GB Bank Limited on
+# 12 Nov 2021. Its FY2017-FY2020 filings (accounting periods to 31 Mar
+# 2018, 31 Mar 2019, a stub to 31 Dec 2019, and 31 Dec 2020) are all
+# small-company "abridged"/"total exemption" accounts for that unrelated,
+# pre-rename business (a scanned 2-page balance sheet-only filing for the
+# earliest years; no P&L, no cash flow, no regulatory capital data, and
+# the entity was not yet PRA-authorised). These are not GB Bank's banking
+# financials under any accounting basis, so FY2017-FY2020 are self-skipped
+# in full (same treatment as Griffin Bank's pre-rename years) rather than
+# populated with a different company's dormant-shell figures. Kept at the
+# existing FY2021-FY2025 window.
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
 YEAR_LABEL = {y: y for y in YEARS}
 

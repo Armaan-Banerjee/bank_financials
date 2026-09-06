@@ -1,7 +1,6 @@
 import unittest
 
 from in011_deliverables import render_html_analysis, render_pdf_analysis_lines
-from build_in006_pdf import make_pages, write_pdf
 from in022_ratio_decomposition import decompose_pair, fit_trend
 
 
@@ -101,14 +100,6 @@ class DecompositionDeliverableTests(unittest.TestCase):
         rendered = render_pdf_analysis_lines(payload())
         self.assertIn("CET1 ratio movement decomposition", "\n".join(str(item) for item in rendered))
         self.assertTrue(any(isinstance(item, dict) and item["type"] == "decomposition_chart" for item in rendered))
-
-    def test_pdf_writer_accepts_decomposition_chart_marker(self):
-        import tempfile
-        from pathlib import Path
-        with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / "out.pdf"
-            write_pdf(make_pages(render_pdf_analysis_lines(payload())), path)
-            self.assertTrue(path.read_bytes().startswith(b"%PDF-1.4"))
 
 
 if __name__ == "__main__":

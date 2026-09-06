@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]
 YEAR_LABEL = {y: y for y in YEARS}
 
 AR_2025_URL = "https://find-and-update.company-information.service.gov.uk/company/07312896/filing-history/MzUyMDIyOTcwM2FkaXF6a2N4/document?download=0&format=pdf"
@@ -13,12 +13,15 @@ AR_2024_URL = "https://find-and-update.company-information.service.gov.uk/compan
 AR_2023_URL = "https://find-and-update.company-information.service.gov.uk/company/07312896/filing-history/MzQxOTAwNzg1NWFkaXF6a2N4/document?download=0&format=pdf"
 AR_2022_URL = "https://www.onesavingsbank.com/media/w3ffou5b/osbg-ara-2022.pdf"
 AR_2021_URL = "https://www.onesavingsbank.com/media/5n1lklrr/onesavings-bank-plc-2021-accounts.pdf"
+AR_2019_URL = "https://www.osb.co.uk/media/utofi4fl/11-osb-2019-annual-report-and-accounts.pdf"
 
 P3_2025_URL = "https://www.onesavingsbank.com/media/hbymiii2/q4-2025-osbg-pillar-3-disclosure.pdf"
 P3_2024_URL = "https://www.onesavingsbank.com/media/143pzceq/q4-2024-osbg-pillar-3-disclosure.pdf"
 P3_2023_URL = "https://www.onesavingsbank.com/media/kn3nulae/q4-2023-osb-pillar-3-disclosures.pdf"
 P3_2022_URL = "https://www.onesavingsbank.com/media/cqepdkda/osb-group-pillar-3-disclosures-2022.pdf"
 P3_2021_URL = "https://www.onesavingsbank.com/media/iuvfpajb/osb-group-pillar-3-disclosures-2021.pdf"
+P3_2020_URL = "https://www.osb.co.uk/media/xmiprmgq/download-pillar-3-disclosure-document-2020.pdf"
+P3_2019_URL = "https://www.osb.co.uk/media/nwwagqwf/download-pillar-3-disclosure-document-2019.pdf"
 
 ENTITY_NOTE = (
     "ENTITY AND BASIS NOTE: OneSavings Bank plc (Companies House 07312896, FRN 530504) is the PRA-authorised "
@@ -26,7 +29,7 @@ ENTITY_NOTE = (
     "annual accounts. The Pillar 3 disclosures are published by OSB Group plc on a consolidated Group basis and "
     "include the Group's banking entities OneSavings Bank plc and Charter Court Financial Services Limited, plus "
     "their relevant subsidiaries; OSB does not publish a five-year OSB-bank-only Pillar 3 series. The bases are "
-    "therefore intentionally different and must not be treated as a single-entity time series. The 2023-2025 "
+    "therefore intentionally different and must not be treated as a single-entity time series. The 2019 "
     "Companies House filings were scanned/image-only and were OCR'd; figures were cross-checked against the "
     "official OSB reports and the printed opening/closing cash reconciliation."
 )
@@ -40,7 +43,10 @@ CASH_FLOW_SOURCES = (
     f"FY2023 & FY2022: OneSavings Bank plc Annual Report and Financial Statements for the year ended 31 December "
     f"2023, p.89 (Company column; FY2022 comparative) — {AR_2023_URL}\n"
     f"FY2021: OneSavings Bank plc Annual Report and Financial Statements for the year ended 31 December 2021, "
-    f"p.98 (Company column) — {AR_2021_URL}\n\n" + ENTITY_NOTE
+    f"p.98 (Company column) — {AR_2021_URL}\n"
+    f"FY2020 & FY2019: OneSavings Bank plc Annual Report and Accounts for the year ended 31 December 2020, "
+    f"p.98 (Company columns; FY2019 comparative) — https://www.onesavingsbank.com/media/03kpilxl/onesavings-bank-plc-2020-accounts.pdf; "
+    f"FY2019 cross-check: 2019 Annual Report and Accounts, p.166 (Company column) — {AR_2019_URL}\n\n" + ENTITY_NOTE
 )
 
 
@@ -55,7 +61,9 @@ def p3_sources():
         f"{P3_2023_URL}\n"
         f"FY2022: Pillar 3 Disclosures 31 December 2022, pp.8-9 (UK KM1 and liquidity templates) — {P3_2022_URL}\n"
         f"FY2021: Pillar 3 Disclosures for year ended 31 December 2021, p.8 (Table 4: Key metrics) and p.62 "
-        f"(Table 47: LIQ1) — {P3_2021_URL}\n\n" + ENTITY_NOTE
+        f"(Table 47: LIQ1) — {P3_2021_URL}\n"
+        f"FY2020: Pillar 3 Disclosures for year ended 31 December 2020, Table 1 — {P3_2020_URL}\n"
+        f"FY2019: Pillar 3 Disclosures for year ended 31 December 2019, Table 1 p.7 — {P3_2019_URL}\n\n" + ENTITY_NOTE
     )
 
 
@@ -81,7 +89,9 @@ STATEMENTS_SOURCES = (
     f"Changes in Equity (Group) p.87 and (Company) p.88 — {AR_2023_URL}\n"
     f"FY2021: Annual Report and Financial Statements for the year ended 31 December 2021, Statement of "
     f"Comprehensive Income (Group) p.94, Statement of Financial Position p.95, Statement of Changes in "
-    f"Equity (Group) p.96 and (Company) p.97 — {AR_2021_URL}\n\n" + ENTITY_NOTE
+    f"Equity (Group) p.96 and (Company) p.97 — {AR_2021_URL}\n"
+    f"FY2020: OneSavings Bank plc Annual Report and Financial Statements for the year ended 31 December 2020, Company comparative columns — https://www.onesavingsbank.com/media/03kpilxl/onesavings-bank-plc-2020-accounts.pdf\n"
+    f"FY2019: OneSavings Bank plc Annual Report and Accounts for the year ended 31 December 2019, Statements pp.163-165 — {AR_2019_URL}\n\n" + ENTITY_NOTE
 )
 
 bs_rows = [
@@ -126,6 +136,29 @@ bs_rows = [
     ("TOTAL", "Total equity", {"FY2025": 2098.7, "FY2024": 1925.7, "FY2023": 1848.4, "FY2022": 1796.5, "FY2021": 1691.5}),
     ("TOTAL", "Total liabilities and equity", {"FY2025": 19561.7, "FY2024": 17829.5, "FY2023": 16738.0, "FY2022": 15603.9, "FY2021": 14084.5}),
 ]
+
+# FY2020 is the Company comparative in the 2021 accounts; FY2019 is the
+# Bank column in the 2019 accounts.  Keep the statutory Company basis explicit.
+_bs_history = {
+    "Cash in hand": (0.5, 0.4), "Loans and advances to credit institutions": (1518.1, 1340.0),
+    "Investment securities": (15.0, 58.9), "Loans and advances to customers": (8531.7, 7208.2),
+    "Fair value adjustments on hedged assets": (127.4, 19.8), "Derivative assets": (4.7, 11.7),
+    "Other assets": (5.7, 5.5), "Deferred taxation asset": (3.1, 1.6),
+    "Property, plant and equipment": (20.5, 15.6), "Intangible assets": (7.0, 7.1),
+    "Investments in subsidiaries and intercompany loans": (3137.3, 3629.4),
+    "Total assets": (13374.8, 13469.9), "Amounts owed to credit institutions": (1900.5, 1671.1),
+    "Amounts owed to retail depositors": (9705.3, 9435.7), "Fair value adjustments on hedged liabilities": (3.1, -0.1),
+    "Amounts owed to other customers": (5.8, 8.9), "Derivative liabilities": (93.8, 54.3),
+    "Lease liabilities": (3.9, 4.3), "Other liabilities": (13.8, 17.1), "Provisions": (1.6, 1.6),
+    "Deemed loan liabilities": (66.2, 240.2), "Intercompany loans": (37.9, 643.9),
+    "Subordinated liabilities": (10.5, 10.6), "Perpetual subordinated bonds": (37.6, 37.6),
+    "Total liabilities": (11880.0, 12141.6), "Share capital": (4.5, 4.5),
+    "Retained earnings": (1423.7, 407.0), "Other reserves": (66.6, 52.6),
+    "Total equity": (1494.8, 1328.3), "Total liabilities and equity": (13374.8, 13469.9),
+}
+for _row in bs_rows:
+    if _row[1] in _bs_history:
+        _row[2]["FY2020"], _row[2]["FY2019"] = _bs_history[_row[1]]
 
 bw.add_balance_sheet_sheet(
     title="OneSavings Bank plc — Balance Sheet",
@@ -183,6 +216,22 @@ pl_rows = [
     ("TOTAL", "Other comprehensive expense", {"FY2025": -0.7, "FY2024": -0.1, "FY2023": -0.9, "FY2022": -0.5, "FY2021": -0.5}),
     ("TOTAL", "Total comprehensive income for the year", {"FY2025": 286.4, "FY2024": 308.0, "FY2023": 282.7, "FY2022": 410.8, "FY2021": 344.5}),
 ]
+_pl_history = {
+    "Interest receivable and similar income": (711.9, 539.9), "Interest payable and similar charges": (-239.7, -195.2),
+    "Net interest income": (472.2, 344.7), "Fair value gains/(losses) on financial instruments": (7.4, -3.3),
+    "Gain/(loss) on sale of financial assets held at amortised cost": (20.0, -0.1),
+    "Other operating income": (9.0, 3.4), "Total income": (508.6, 343.4),
+    "Administrative expenses": (-157.1, -108.7), "Increase/(decrease) in provisions": (-0.1, 0.0),
+    "Impairment of financial assets": (-71.0, -15.6), "Integration costs": (-9.8, -5.2),
+    "Exceptional items": (-3.3, -15.6), "Profit before taxation": (260.3, 209.1),
+    "Taxation": (-64.1, -50.3), "Profit for the year": (196.2, 158.8),
+    "Fair value changes on FVOCI instruments arising in the year": (1.0, 0.8),
+    "Tax on items in other comprehensive (expense)/income": (-0.5, -0.2),
+    "Other comprehensive expense": (0.5, 0.0), "Total comprehensive income for the year": (196.7, 158.8),
+}
+for _row in pl_rows:
+    if _row[1] in _pl_history:
+        _row[2]["FY2020"], _row[2]["FY2019"] = _pl_history[_row[1]]
 
 bw.add_income_statement_sheet(
     title="OneSavings Bank plc — Profit & Loss",
@@ -309,6 +358,26 @@ rows = [
     ("DATA", "Cash and cash equivalents at the beginning of the year", {"FY2025": 1038.6, "FY2024": 850.5, "FY2023": 1449.1, "FY2022": 1332.3, "FY2021": 1377.6}),
     ("TOTAL", "Cash and cash equivalents at the end of the year", {"FY2025": 1268.0, "FY2024": 1038.6, "FY2023": 850.5, "FY2022": 1449.1, "FY2021": 1332.3}),
 ]
+_cf_history = {
+    "Profit before taxation": (197.3, 189.4), "Adjustments for non-cash and other items": (39.2, 26.8),
+    "Changes in operating assets and liabilities": (-573.7, -577.4),
+    "Cash generated in operating activities": (-337.2, -361.2), "Net tax paid": (-53.6, -32.4),
+    "Provisions paid": (0.0, -0.2), "Net cash generated from operating activities": (-390.8, -393.8),
+    "Maturity and sales of investment securities": (291.1, 349.0), "Purchases of investment securities": (-205.9, -389.9),
+    "Interest received on investment securities": (0.4, 0.0), "Sales of financial instruments": (248.9, 0.0),
+    "Purchases of property, plant and equipment and intangible assets": (-4.3, -6.7),
+    "Net cash from investing activities": (330.2, -47.6), "Financing received": (1060.2, 602.2),
+    "Financing repaid": (-764.7, -275.0), "Interest paid on financing": (-9.8, -2.5),
+    "Dividends paid": (0.0, -37.3), "Coupon paid on AT1 securities": (-5.5, -5.5),
+    "Repayments of principal portion of lease liabilities": (-0.6, -0.8),
+    "Proceeds from issuance of shares under employee SAYE scheme": (2.6, 0.4),
+    "Net cash from financing activities": (281.6, 281.1), "Net (decrease)/increase in cash and cash equivalents": (221.0, -160.3),
+    "Cash and cash equivalents at the beginning of the year": (1156.6, 1316.9),
+    "Cash and cash equivalents at the end of the year": (1377.6, 1156.6),
+}
+for _row in rows:
+    if _row[1] in _cf_history:
+        _row[2]["FY2020"], _row[2]["FY2019"] = _cf_history[_row[1]]
 
 bw.add_cash_flow_sheet("OneSavings Bank plc — Statement of Cash Flows", "Company-only basis, £m. Pillar 3 sheets are OSB Group consolidated; see source note.", rows, CASH_FLOW_SOURCES, first_col_width=72, source_height=260, unit_suffix=" (£m)")
 

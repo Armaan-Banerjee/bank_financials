@@ -47,7 +47,7 @@ def p3_sources():
         f"FY2024/FY2023: Annual Report and Accounts 2024, KPI p.9 and capital management p.49 - {AR2024_URL}\n"
         f"FY2023/FY2022/FY2021: Annual Report and Accounts 2023, KPI p.9 and capital management p.49 - {AR2023_URL}\n"
         f"FY2021 comparative context: Annual Report 2021, KPI p.8 and capital management p.46 - {AR2021_URL}\n"
-        f"FY2025: the Companies House filing is listed, but the PDF was not retrievable in this run - {AR2025_URL}\n"
+        f"FY2025: Annual Report and Accounts 2025, 'Capital and Liquidity Position' KPI table p.10 - {AR2025_URL}\n"
         "The 2022-2024 reports state that Pillar 3 disclosure is available on request; no public current "
         "Pillar 3/KM1 document or defensible entity-level interim series was located."
     )
@@ -299,7 +299,7 @@ ELIGIBLE_CAPITAL = {
 }
 RWA = {"FY2025": 458000, "FY2024": 466000, "FY2023": 498000, "FY2022": 423000, "FY2021": 399000}
 CAPITAL_RATIO = {"FY2025": "56%", "FY2024": "55%", "FY2023": "51%", "FY2022": "60%", "FY2021": "64%"}
-LCR = {"FY2025": "679%", "FY2024": "697%", "FY2023": "529%", "FY2022": "617%"}
+LCR = {"FY2025": "679%", "FY2024": "697%", "FY2023": "529%", "FY2022": "617%", "FY2021": "350%"}
 
 CAPITAL_NOTE = (
     "Eligible regulatory capital is 100% CET1 in the disclosed KPI/capital-management tables; "
@@ -346,7 +346,7 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%", [("Leverage ratio", {})], note=GAP_NOTE)
-metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)], note="Directly disclosed in the KPI table for FY2022-FY2025; no FY2021 value was located.")
+metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)], note="Directly disclosed in the KPI tables. FY2021 is reported in the FY2023 Annual Report KPI comparative table (p.9); FY2022-FY2025 are reported in the later corresponding KPI tables.")
 bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"],
     p3_sources(),

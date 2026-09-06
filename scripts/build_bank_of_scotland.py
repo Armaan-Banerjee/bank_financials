@@ -199,42 +199,79 @@ equity_changes_rows = [
 ]
 
 ASSET_QUALITY_NOTE = (
-    "ASSET QUALITY NOTE - IFRS 9 stage breakdown for 'The Bank' (Note 16/13 'Loans and advances to customers', "
-    "each year's own Companies House filing). FY2021 is genuinely blank: that year's own Annual Report discloses "
-    "the stage-by-stage movement table for 'The Group' only, not 'The Bank' - the Bank's FY2021 net loan figure "
-    "(276,005) is on the Balance Sheet, but no Bank-level Stage 1/2/3 split exists in that report. No by-product "
-    "loan-type split is separately disclosed for the Bank in any year - stage is the only breakdown available."
+    "ASSET QUALITY NOTE - IFRS 9 stage breakdown for 'The Bank' (Note 16/13/14 'Loans and advances to customers' "
+    "(latterly 'Financial assets at amortised cost'), each year's own Companies House filing). FY2021's own Annual "
+    "Report and Accounts 2021 (p.54, Note 13, 'Year ended 31 December 2021 / The Bank') DOES disclose a Bank-level "
+    "Stage 1/2/3 movement table - corrected here from an earlier version of this workbook which wrongly treated it "
+    "as undisclosed (having only checked the Group-level table); the FY2021 figures below reconcile exactly to the "
+    "same Bank-level table repeated as FY2022's own comparative column in the Annual Report and Accounts 2022 (p.56, "
+    "Note 13). No by-product loan-type split is separately disclosed for the Bank in any year - stage is the only "
+    "breakdown available."
 )
 
 asset_quality_rows = [
     ("SECTION", "Loans and advances to customers, by IFRS 9 stage (gross carrying amount)", {}),
-    ("DATA", "Stage 1", {"FY2025": 272640, "FY2024": 259025, "FY2023": 242505, "FY2022": 237443}),
-    ("DATA", "Stage 2", {"FY2025": 29632, "FY2024": 31405, "FY2023": 38947, "FY2022": 42046}),
-    ("DATA", "Stage 3", {"FY2025": 5377, "FY2024": 5887, "FY2023": 6711, "FY2022": 6946}),
-    ("TOTAL", "Total gross carrying amount", {"FY2025": 307649, "FY2024": 296317, "FY2023": 288163, "FY2022": 286435}),
+    ("DATA", "Stage 1", {"FY2025": 272640, "FY2024": 259025, "FY2023": 242505, "FY2022": 237443, "FY2021": 247854}),
+    ("DATA", "Stage 2", {"FY2025": 29632, "FY2024": 31405, "FY2023": 38947, "FY2022": 42046, "FY2021": 25363}),
+    ("DATA", "Stage 3", {"FY2025": 5377, "FY2024": 5887, "FY2023": 6711, "FY2022": 6946, "FY2021": 5251}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 307649, "FY2024": 296317, "FY2023": 288163, "FY2022": 286435, "FY2021": 278468}),
     ("SECTION", "Allowance for expected credit losses, by IFRS 9 stage", {}),
-    ("DATA", "Stage 1", {"FY2025": 152, "FY2024": 175, "FY2023": 298, "FY2022": 216}),
-    ("DATA", "Stage 2", {"FY2025": 427, "FY2024": 514, "FY2023": 711, "FY2022": 935}),
-    ("DATA", "Stage 3", {"FY2025": 665, "FY2024": 846, "FY2023": 967, "FY2022": 1663}),
-    ("TOTAL", "Total allowance for expected credit losses", {"FY2025": 1244, "FY2024": 1535, "FY2023": 1976, "FY2022": 2814}),
+    ("DATA", "Stage 1", {"FY2025": 152, "FY2024": 175, "FY2023": 298, "FY2022": 216, "FY2021": 389}),
+    ("DATA", "Stage 2", {"FY2025": 427, "FY2024": 514, "FY2023": 711, "FY2022": 935, "FY2021": 748}),
+    ("DATA", "Stage 3", {"FY2025": 665, "FY2024": 846, "FY2023": 967, "FY2022": 1663, "FY2021": 1326}),
+    ("TOTAL", "Total allowance for expected credit losses", {"FY2025": 1244, "FY2024": 1535, "FY2023": 1976, "FY2022": 2814, "FY2021": 2463}),
     ("TOTAL", "Net carrying amount", {"FY2025": 306405, "FY2024": 294782, "FY2023": 286187, "FY2022": 283621, "FY2021": 276005}),
     ("SECTION", "Asset quality ratios", {}),
-    ("DATA", "Drawn ECL coverage (Total allowance / Total gross)", {"FY2025": "0.4%", "FY2024": "0.5%", "FY2023": "0.7%", "FY2022": "1.0%"}),
-    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / Total gross)", {"FY2025": "1.7%", "FY2024": "2.0%", "FY2023": "2.3%", "FY2022": "2.4%"}),
-    ("DATA", "Stage 3 coverage (Stage 3 allowance / Stage 3 gross)", {"FY2025": "12.4%", "FY2024": "14.4%", "FY2023": "14.4%", "FY2022": "23.9%"}),
+    ("DATA", "Drawn ECL coverage (Total allowance / Total gross)", {"FY2025": "0.4%", "FY2024": "0.5%", "FY2023": "0.7%", "FY2022": "1.0%", "FY2021": "0.9%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / Total gross)", {"FY2025": "1.7%", "FY2024": "2.0%", "FY2023": "2.3%", "FY2022": "2.4%", "FY2021": "1.9%"}),
+    ("DATA", "Stage 3 coverage (Stage 3 allowance / Stage 3 gross)", {"FY2025": "12.4%", "FY2024": "14.4%", "FY2023": "14.4%", "FY2022": "23.9%", "FY2021": "25.3%"}),
 ]
 
+RWA_BREAKDOWN_NOTE = (
+    "CORRECTION: an earlier version of this workbook marked this sheet 'Not publicly disclosed', claiming the "
+    "Strategic Report's Capital position section discloses only the single aggregate risk-weighted-assets total. "
+    "That was wrong - immediately below the capital resources table, each year's own Strategic Report has its own "
+    "'Risk-weighted assets of the Bank' table with a full breakdown by IRB/Standardised approach and by risk type "
+    "(credit/counterparty credit/securitisation/market/operational), reconciling exactly to the Total RWAs sheet "
+    "in every year. PRESENTATION NOTE: category labels and sub-splits shift slightly year to year, transcribed "
+    "faithfully from each year's own report rather than restated: (1) FY2025's own report folds credit valuation "
+    "adjustment (CVA) risk into 'Counterparty credit risk' (footnoted); FY2024-FY2021 show CVA risk as its own "
+    "line. (2) FY2021's own report has no separate 'Securitisation' line (folded into Standardised Approach/Other "
+    "IRB) and instead shows a 'Underlying risk-weighted assets' subtotal before adding back 'Threshold "
+    "risk-weighted assets' to reach the Total - FY2022 onward drop that subtotal and show the threshold figure as "
+    "a memo ('of which') line below an already-inclusive Total. The FY2022 report's own comparative column for "
+    "FY2021 restates Other IRB Approach/Standardised Approach/Credit risk slightly differently (adding a separate "
+    "Securitisation line) while the Total RWAs figure (60,807) is unchanged either way - this workbook uses "
+    "FY2021's own report figures, per the per-year-own-source convention used throughout."
+)
+
 RWA_BREAKDOWN_SOURCES = (
-    "Sources - Bank of Scotland plc's own 'Capital position' section of the Strategic Report, each year's own "
-    "Companies House full accounts filing (see p3_sources() URLs above):\n"
-    "NOT PUBLICLY DISCLOSED: as already noted on the Total RWAs/LCR/NSFR/MREL sheets, no standalone Pillar 3 "
-    "document is published for this entity, and the Strategic Report's Capital position section (used for the "
-    "Total RWAs figure) discloses only the single aggregate risk-weighted-assets total, not a UK OV1-style "
-    "breakdown by credit/market/operational risk - confirmed by reading that section in the FY2025 Annual Report "
-    "in full."
+    "Sources - Bank of Scotland plc's own 'Risk-weighted assets of the Bank' table, in the 'Capital position' "
+    "section of the Strategic Report, each year's own Companies House full accounts filing:\n"
+    f"FY2025: Annual Report and Accounts 2025, p.2 - {AR2025_URL}\n"
+    f"FY2024: Annual Report and Accounts 2024, p.2 - {AR2024_URL}\n"
+    f"FY2023: Annual Report and Accounts 2023, p.2 - {AR2023_URL}\n"
+    f"FY2022: Annual Report and Accounts 2022, p.2 - {AR2022_URL}\n"
+    f"FY2021: Annual Report and Accounts 2021, p.2 - {AR2021_URL}\n\n"
+    + RWA_BREAKDOWN_NOTE + "\n\n" + ENTITY_NOTE
 )
 rwa_breakdown_rows = [
-    ("DATA", "RWA category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
+    ("SECTION", "Risk-weighted assets of the Bank, by approach", {}),
+    ("DATA", "Foundation Internal Ratings Based (IRB) Approach", {"FY2025": 1942, "FY2024": 2159, "FY2023": 2492, "FY2022": 2605, "FY2021": 3476}),
+    ("DATA", "Retail IRB Approach", {"FY2025": 63418, "FY2024": 65594, "FY2023": 61956, "FY2022": 53771, "FY2021": 41636}),
+    ("DATA", "Other IRB Approach", {"FY2025": 3786, "FY2024": 3740, "FY2023": 3917, "FY2022": 3863, "FY2021": 1557}),
+    ("TOTAL", "IRB Approach", {"FY2025": 69146, "FY2024": 71493, "FY2023": 68365, "FY2022": 60239, "FY2021": 46669}),
+    ("DATA", "Standardised (STA) Approach", {"FY2025": 6196, "FY2024": 3136, "FY2023": 3457, "FY2022": 4307, "FY2021": 4389}),
+    ("TOTAL", "Credit risk", {"FY2025": 75342, "FY2024": 74629, "FY2023": 71821, "FY2022": 64546, "FY2021": 51058}),
+    ("SECTION", "Risk-weighted assets of the Bank, by risk type", {}),
+    ("DATA", "Securitisation", {"FY2025": 722, "FY2024": 707, "FY2023": 931, "FY2022": 463}),
+    ("DATA", "Counterparty credit risk", {"FY2025": 188, "FY2024": 136, "FY2023": 162, "FY2022": 191, "FY2021": 333}),
+    ("DATA", "Credit valuation adjustment risk", {"FY2024": 51, "FY2023": 72, "FY2022": 77, "FY2021": 46}),
+    ("DATA", "Operational risk", {"FY2025": 6051, "FY2024": 5909, "FY2023": 6799, "FY2022": 7751, "FY2021": 8488}),
+    ("DATA", "Market risk", {"FY2025": 54, "FY2024": 61, "FY2023": 468, "FY2022": 56, "FY2021": 254}),
+    ("TOTAL", "Underlying risk-weighted assets", {"FY2021": 60179}),
+    ("DATA", "Threshold risk-weighted assets (of which, already included above)", {"FY2025": 2806, "FY2024": 2926, "FY2023": 3205, "FY2022": 3190, "FY2021": 628}),
+    ("TOTAL", "Total risk-weighted assets", {"FY2025": 82357, "FY2024": 81493, "FY2023": 80254, "FY2022": 73084, "FY2021": 60807}),
 ]
 
 # ---------------------------------------------------------------
@@ -369,10 +406,12 @@ metric(
 
 bw.add_rwa_breakdown_sheet(
     title="Bank of Scotland plc — RWA Breakdown",
-    subtitle="Unconsolidated ('The Bank') basis",
+    subtitle="Unconsolidated ('The Bank') basis, £m. See source note at bottom.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
-    unit_suffix="",
+    first_col_width=62,
+    source_height=280,
+    unit_suffix=" (£m)",
 )
 
 metric(

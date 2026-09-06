@@ -2,11 +2,12 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2017"]  # most recent first
 
 CH2025_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzUyMzkzMjQ5NmFkaXF6a2N4/document?format=pdf&download=0"
 CH2023_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzQyMzk5NjI0NGFkaXF6a2N4/document?format=pdf&download=0"
 CH2021_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzM0MTEwODM3MmFkaXF6a2N4/document?format=pdf&download=0"
+AR2017_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Report_and_Accounts_Final_2017.pdf"
 
 P3_2024_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/abg-pillar-3-disclosures-december-24.pdf"
 P3_2023_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2023_Final.pdf"
@@ -548,5 +549,21 @@ bw.add_overview_sheet(
          "Arbuthnot Banking Group PLC published Pillar 3 basis - see the entity note on the Cash Flow Statement "
          "sheet for the small scope difference between the two. FY2025 Pillar 3 is not yet published.",
 )
+
+# FY2017 headline extension from Arbuthnot Banking Group Report & Accounts
+# 2017 (official source, pp.9-15), £'000. Historical Pillar 3 metrics were
+# not published in this report and remain blank.
+_fy17 = {
+    "Balance Sheet": {"Loans and advances to customers": 1049269, "Total assets": 1853232},
+    "Profit & Loss": {"Operating income from banking activities": 54616, "Profit before tax": 6971},
+    "Cash Flow Statement": {},
+}
+for _sheet, _values in _fy17.items():
+    _ws = bw.wb[_sheet]
+    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
+    _col = 1 + YEARS.index("FY2017") + 1
+    for _label, _value in _values.items():
+        if _label in _labels:
+            _ws.cell(_labels[_label], _col, _value)
 
 bw.save("/Users/armaan/code/katalysis/banks/ARBUTHNOT LATHAM FINANCIALS.xlsx")

@@ -3,9 +3,10 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2017"]
 
 AR = {
+    "FY2017": "https://www.nbeuk.com/wp-content/uploads/2021/02/NBE_UK_Financial_Statements_2018.pdf",
     "FY2025": "https://find-and-update.company-information.service.gov.uk/company/02743734/filing-history/MzU0MDExNTA0NGFkaXF6a2N4/document?format=pdf&download=0",
     "FY2024": "https://find-and-update.company-information.service.gov.uk/company/02743734/filing-history/MzQ2Mjk2OTExMGFkaXF6a2N4/document?format=pdf&download=0",
     "FY2023": "https://find-and-update.company-information.service.gov.uk/company/02743734/filing-history/MzQxOTgxMTA0NmFkaXF6a2N4/document?format=pdf&download=0",
@@ -364,5 +365,21 @@ bw.add_overview_sheet(
         ("Leverage Ratio", {"FY2024":"11.6%","FY2023":"12.1%","FY2022":"11.65%","FY2021":"12.47%"}),
         ("LCR", {"FY2024":"418%","FY2023":"387%","FY2022":"296%"}),
     ], note=ENTITY)
+# FY2017 (year ended 30 June 2017) headline extension. The Bank's 2018
+# annual report identifies the 2017 comparative figures; no historical
+# entity-level Pillar 3 document was located, so regulatory metrics stay blank.
+_fy17 = {
+    "Balance Sheet": {"Total assets": 1438234},
+    "Profit & Loss": {"Total operating income": 24891, "Net interest income": 16273,
+                      "Profit before taxation": 14438, "Profit for the year": 11514},
+}
+for _sheet, _values in _fy17.items():
+    _ws = bw.wb[_sheet]
+    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
+    _col = 1 + YEARS.index("FY2017") + 1
+    for _label, _value in _values.items():
+        if _label in _labels:
+            _ws.cell(_labels[_label], _col, _value)
+
 bw.save("/Users/armaan/code/katalysis/banks/NATIONAL BANK OF EGYPT UK FINANCIALS.xlsx")
 print("Saved.")

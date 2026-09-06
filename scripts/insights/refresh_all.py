@@ -58,10 +58,11 @@ Order and why:
        in040_risk_metrics.py's and in041_spend_metrics.py's payload
        builders, in-process - never depends on steps 17-18's JSON files
        staying fresh, only on their functions)
-    20. build_in006_pdf.py            DB + cluster CSV -> uk_bank_insights.pdf
-       (needs steps 1-3; also validates cluster-output freshness itself;
-       still built from in011_deliverables.py's older single-file dashboard
-       - see wayfinder/insights/tickets/IN-053.md for the planned PDF redo)
+    20. build_in006_pdf.py            DB -> uk_bank_insights.pdf
+       (needs steps 1-3; per IN-053, mirrors deliverable/comparison.html's
+       own sections via headless-Chromium print-to-PDF (Playwright) instead
+       of in011_deliverables.py's older hand-rolled PDF writer - see
+       wayfinder/insights/tickets/IN-053.md)
 
 Each step runs as a subprocess (not an in-process import) so a script's own
 argparse/CLI behavior is exercised exactly as a human running it by hand
@@ -72,9 +73,9 @@ dashboard) deliberately isn't in this list any more - deliverable/ built by
 build_deliverable.py is now the production HTML deliverable, per
 wayfinder/insights/tickets/IN-051.md. build_in005_prototype.py and its
 underlying in011_deliverables.py sections stay in the codebase (still
-runnable standalone) since build_in006_pdf.py depends on them and a future
-ticket (wayfinder/insights/tickets/IN-052.md) may fold some of those
-sections into deliverable/comparison.html.
+runnable standalone, kept per the grilled decision in
+wayfinder/insights/tickets/IN-053.md) even though build_in006_pdf.py no
+longer depends on them as of that ticket's rewrite.
 """
 
 import argparse

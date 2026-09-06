@@ -105,6 +105,12 @@ BALANCE_SHEET_SOURCES = (
     f"Annual Financial Report's own p.70 statement) - {AR2023_URL}\n"
     f"FY2021: FY2022 Annual Financial Report, p.70 (FY2021 comparative, 'AIB UK Group' column) - {AR2022_URL}\n\n"
     + ENTITY_NOTE + "\n\n" + STATEMENT_ENTITY_NOTE
+    + "\n\nCORRECTION (HD-066 correctness audit): 'Investment securities' FY2024 (£54m) was previously missing "
+      "entirely from this sheet - confirmed via the FY2024 Annual Financial Report's own p.52 Statement of "
+      "financial position and the FY2025 Annual Financial Report's own p.33 FY2024 comparative column (both agree: "
+      "£54m) - this £54m gap exactly reconciled the previous Total assets tie-out for FY2024. Also added the "
+      "explicitly-disclosed nil ('—') FY2025 Investment securities and FY2024 Investments in group undertakings "
+      "values (both £0m, not blank) for consistency with how every other year on this row is shown."
 )
 
 balance_sheet_rows = [
@@ -114,8 +120,8 @@ balance_sheet_rows = [
     ("DATA", "Loans and advances to banks", {"FY2025": 696, "FY2024": 714, "FY2023": 502, "FY2022": 555, "FY2021": 637}),
     ("DATA", "Loans and advances to customers", {"FY2025": 5291, "FY2024": 4708, "FY2023": 5647, "FY2022": 5718, "FY2021": 6198}),
     ("DATA", "Securities financing", {"FY2025": 921}),
-    ("DATA", "Investment securities", {"FY2023": 73, "FY2022": 50, "FY2021": 40}),
-    ("DATA", "Investments in group undertakings", {"FY2025": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "Investment securities", {"FY2025": 0, "FY2024": 54, "FY2023": 73, "FY2022": 50, "FY2021": 40}),
+    ("DATA", "Investments in group undertakings", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
     ("DATA", "Intangible assets", {"FY2025": 15, "FY2024": 14, "FY2023": 13, "FY2022": 15, "FY2021": 21}),
     ("DATA", "Property, plant and equipment", {"FY2025": 30, "FY2024": 31, "FY2023": 33, "FY2022": 27, "FY2021": 31}),
     ("DATA", "Other assets", {"FY2025": 22, "FY2024": 22, "FY2023": 13, "FY2022": 55, "FY2021": 17}),
@@ -344,19 +350,25 @@ ASSET_QUALITY_SOURCES = (
     + ENTITY_NOTE
     + "\n\nPRESENTATION NOTE: AIB UK does not disclose loans and advances to customers by product (e.g. mortgages "
       "vs. term loans vs. overdrafts) at a group total level - only a credit-quality/stage breakdown and a "
-      "sector-concentration breakdown (not reproduced here as a distinct line item set). The FY2025 and FY2024 "
-      "reports split 'Total strong/satisfactory' into 'Strong' and 'Satisfactory' sub-lines; FY2021-FY2023 reports "
-      "disclose only the combined 'Total strong/satisfactory' figure - Strong/Satisfactory cells are blank for "
-      "those years accordingly. 'Non-performing' = Stage 3 throughout. Coverage/NPL ratios below are CALCULATED "
-      "from the gross carrying amount and ECL allowance figures above (AIB UK does not itself publish these ratios "
-      "as named percentages, aside from the £0.3bn/4.4%-of-gross-loans NPL figure narrated in the FY2023 Financial "
-      "review, which matches the calculated FY2023 Stage 3/NPL ratio here exactly)."
+      "sector-concentration breakdown (not reproduced here as a distinct line item set). 'Non-performing' = Stage 3 "
+      "throughout. Coverage/NPL ratios below are CALCULATED from the gross carrying amount and ECL allowance "
+      "figures above (AIB UK does not itself publish these ratios as named percentages, aside from the "
+      "£0.3bn/4.4%-of-gross-loans NPL figure narrated in the FY2023 Financial review, which matches the calculated "
+      "FY2023 Stage 3/NPL ratio here exactly).\n\n"
+      "CORRECTION (HD-066 correctness audit): FY2023 and FY2022 Strong/Satisfactory were previously wrongly left "
+      "blank on the assumption only the combined 'Total strong/satisfactory' figure was disclosed for those years. "
+      "The FY2023 Annual Financial Report's own Note 21(f) (p.120) in fact splits both years: FY2023 Strong £4,233m "
+      "/ Satisfactory £998m (sums to the Total strong/satisfactory £5,231m already shown), FY2022 Strong £3,959m / "
+      "Satisfactory £1,092m (sums to £5,051m) - both now added. FY2021 genuinely has no such split anywhere - the "
+      "FY2022 Annual Financial Report's own Note 21(f) (p.119, covering FY2022/FY2021) shows only the combined "
+      "'Total strong/satisfactory' line for both years, i.e. AIB UK had not yet started publishing the split as of "
+      "that report - FY2021 Strong/Satisfactory cells remain blank accordingly."
 )
 
 asset_quality_rows = [
     ("SECTION", "Gross carrying amount, by credit quality", {}),
-    ("DATA", "Strong", {"FY2025": 3038, "FY2024": 2746}),
-    ("DATA", "Satisfactory", {"FY2025": 2093, "FY2024": 1711}),
+    ("DATA", "Strong", {"FY2025": 3038, "FY2024": 2746, "FY2023": 4233, "FY2022": 3959}),
+    ("DATA", "Satisfactory", {"FY2025": 2093, "FY2024": 1711, "FY2023": 998, "FY2022": 1092}),
     ("TOTAL", "Total strong/satisfactory", {"FY2025": 5131, "FY2024": 4457, "FY2023": 5231, "FY2022": 5051, "FY2021": 5210}),
     ("DATA", "Criticised watch", {"FY2025": 65, "FY2024": 51, "FY2023": 147, "FY2022": 174, "FY2021": 242}),
     ("DATA", "Criticised recovery", {"FY2025": 75, "FY2024": 111, "FY2023": 149, "FY2022": 361, "FY2021": 435}),

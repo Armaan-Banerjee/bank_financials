@@ -2,7 +2,7 @@ import os
 import tempfile
 import unittest
 
-from analyze_trends import METRICS, extract, load_groups, pairwise_counts
+from analyze_trends import METRICS, consecutive_year_pairs, extract, load_groups, pairwise_counts
 
 
 def row(frn, label, period, value, basis=""):
@@ -117,6 +117,42 @@ class PairwiseCountsTests(unittest.TestCase):
         values = {str(i): {2021: float(i), 2022: float(i) + (i % 3 - 1)} for i in range(10)}
         c = pairwise_counts(values, 2021, 2022)
         self.assertEqual(c["down"] + c["up"] + c["same"], c["n"])
+
+
+class ConsecutiveYearPairsTests(unittest.TestCase):
+    """main() used to hardcode ((2021,2022),...,(2024,2025)) - a silent
+    under-reporting bug once the historical-depth effort gave individual
+    banks year windows stretching back to FY2014: those banks' older-year
+    trends would simply never be checked, no crash, no warning."""
+
+    def test_pairs_derived_from_a_standard_five_year_window(self):
+        values_by_metric = {"CET1 ratio": {"1": {2021: 1.0, 2022: 2.0, 2023: 3.0, 2024: 4.0, 2025: 5.0}}}
+        self.assertEqual(
+            consecutive_year_pairs(values_by_metric),
+            [(2021, 2022), (2022, 2023), (2023, 2024), (2024, 2025)],
+        )
+
+    def test_an_extended_banks_older_years_are_included(self):
+        # One HD-series-extended bank reaching back to FY2016, alongside a
+        # standard bank only covering FY2021-2025 - both ranges' consecutive
+        # pairs must be surfaced, not just the standard window's.
+        values_by_metric = {
+            "CET1 ratio": {
+                "1": {2021: 1.0, 2022: 2.0},
+                "2": {2016: 1.0, 2017: 2.0, 2018: 3.0},
+            }
+        }
+        self.assertEqual(
+            consecutive_year_pairs(values_by_metric),
+            [(2016, 2017), (2017, 2018), (2021, 2022)],
+        )
+
+    def test_a_gap_year_does_not_produce_a_spurious_pair(self):
+        values_by_metric = {"CET1 ratio": {"1": {2021: 1.0, 2023: 3.0}}}  # 2022 missing
+        self.assertEqual(consecutive_year_pairs(values_by_metric), [])
+
+    def test_empty_input_gives_no_pairs(self):
+        self.assertEqual(consecutive_year_pairs({}), [])
 
 
 class LoadGroupsMarkdownParsing(unittest.TestCase):

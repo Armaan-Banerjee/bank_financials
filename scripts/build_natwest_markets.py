@@ -407,9 +407,19 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "£m / %", [("Leverage exposure measure", {"FY2025": 97880, "FY2024": 92859, "FY2023": 89929, "FY2022": 81083, "FY2021": 110603}), ("Leverage ratio", {"FY2025": "5.0%", "FY2024": "5.5%", "FY2023": "5.0%", "FY2022": "5.4%", "FY2021": "4.3%"})], note="FY2021 uses the CRR leverage ratio; FY2022 onward uses the PRA UK leverage-ratio presentation. These bases are not directly comparable.")
-metric("LCR", "%", [("Liquidity coverage ratio", {"FY2025": "198%", "FY2024": "192%", "FY2023": "240%", "FY2022": "226%"})], note="NWM Plc's standalone headline LCR is not included in the 2021 large-subsidiary supplement; FY2021 is left blank rather than substituted with a NatWest Group figure.")
+metric("LCR", "%", [("Liquidity coverage ratio", {"FY2025": "198%", "FY2024": "192%", "FY2023": "240%", "FY2022": "226%", "FY2021": "205%"})], note="FY2021 is NWM Plc's own headline LCR (2021 Annual Report and Accounts, p.37), not a NatWest Group figure. The 2021 large-subsidiary supplement does not repeat the standalone LCR, but the annual report's Financial review explicitly reports it.")
 metric("NSFR", "%", [("Net stable funding ratio", {"FY2025": "121%", "FY2024": "120%", "FY2023": "127%", "FY2022": "133%"})], note="NWM Plc's standalone NSFR is not included in the 2021 large-subsidiary supplement; FY2021 is left blank rather than substituted with a NatWest Group figure.")
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], sources_text="NWM Plc Pillar 3 Reports 2021–2025 — " + P3_URLS["FY2025"], per_note={"MREL Ratio": "The reviewed NWM Plc reports disclose MREL instruments and liabilities but do not provide a numeric MREL ratio in the project's target metric format."})
+bw.add_metric_sheet(
+    "MREL Ratio", "% of RWAs",
+    [("Minimum requirement for own funds and eligible liabilities (MREL) ratio", {
+        "FY2025": "45.6%", "FY2024": "48.2%", "FY2023": "34.5%", "FY2022": "40.4%", "FY2021": "42.1%",
+    })],
+    "Sources — NWM Plc Annual Report and Accounts, performance highlights (all metrics explicitly relate to NWM Plc):\n"
+    + "\n".join(f"{year}: p.2 — {AR_URLS[year]}" for year in YEARS),
+    note="NWM Plc's own Annual Report performance highlights disclose this ratio in every year. It includes total regulatory capital, non-eligible capital and downstreamed internal MREL; it is not a NatWest Group parent figure.",
+    first_col_width=55,
+    source_height=125,
+)
 
 
 # NWM Plc publishes entity-level quarterly Pillar 3 KM1 tables.  The reports

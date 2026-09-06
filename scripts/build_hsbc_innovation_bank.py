@@ -2,13 +2,14 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020"]  # most recent first
 YEAR_LABEL = {
     "FY2025": "FY2025",
     "FY2024": "FY2024",
     "FY2023": "FY2023",
     "FY2022": "FY2022",
     "FY2021": "FY2021*",
+    "FY2020": "FY2020*",
 }
 
 AR2025_URL = "https://find-and-update.company-information.service.gov.uk/company/12546585/filing-history"
@@ -23,12 +24,22 @@ AR2022_DOC_URL = "https://find-and-update.company-information.service.gov.uk/com
 P3_2022_URL = "https://www.hsbcinnovationbanking.com/-/media/hinv/pdf/regulations/pillar-3-report-2022.pdf"
 
 ENTITY_NOTE = (
-    "\nENTITY HISTORY: HSBC Innovation Bank Limited (company 12546585) was incorporated in April 2020 as "
-    "SVBUK Limited, a dormant shell company seeking UK bank authorisation. It had no banking operations in "
-    "FY2021 (loss of GBP477k, funded by a loan from Silicon Valley Bank's UK Branch purely to pay "
-    "non-executive director fees) and, being a small company under FRS 101's Reduced Disclosure Framework "
-    "that year, published no cash flow statement or Pillar 3 disclosure at all - FY2021 is left blank here "
-    "rather than guessed. The actual banking business (Silicon Valley Bank UK Branch) was transferred into "
+    "\nENTITY HISTORY: HSBC Innovation Bank Limited (company 12546585) was incorporated on 3 April 2020 as "
+    "SVBUK Limited, a dormant shell company seeking UK bank authorisation. Its very first accounting period "
+    "was shortened by an AA01 filing from a 30 April 2021 year-end to 31 December 2020 (filed 28 Oct 2020), "
+    "and its FY2020 accounts (filed 26 Jul 2021, 2 pages, Companies House document "
+    "MzMwODc2NzM1M2FkaXF6a2N4) were filed as 'Dormant Accounts' under the section 480 Companies Act 2006 "
+    "dormant-company exemption: the entire balance sheet is GBP1 cash at bank held against 1 Ordinary Share "
+    "of GBP1, with no P&L, no cash flow statement, and no banking activity of any kind - confirmed by reading "
+    "the filed document itself, not inferred from the filing description alone. FY2020 is therefore left "
+    "blank throughout this workbook, the same treatment already applied to FY2021 below and for the same "
+    "reason (a pre-authorisation shell with nothing bankable to show), just one year further back and even "
+    "more literally dormant (GBP1 nominal capital vs FY2021's genuine, if small, GBP477k operating loss). It "
+    "had no banking operations in FY2021 (loss of GBP477k, funded by a loan from Silicon Valley Bank's UK "
+    "Branch purely to pay non-executive director fees) and, being a small company under FRS 101's Reduced "
+    "Disclosure Framework that year, published no cash flow statement or Pillar 3 disclosure at all - FY2021 "
+    "is left blank here rather than guessed. The actual banking business (Silicon Valley Bank UK Branch) was "
+    "transferred into "
     "this entity via a court-based Part VII transfer on 31 July 2022, at which point it began operating and "
     "reporting as a real bank (renamed Silicon Valley Bank UK Limited in July 2022). On 10-13 March 2023, "
     "the entity's former US parent (SVB Financial Group) collapsed after a bank run, triggering a severe "
@@ -57,6 +68,9 @@ CASH_FLOW_SOURCES = (
     "for a small company', filed 7 Sep 2022) applied FRS 101's Reduced Disclosure Framework and published no "
     "cash flow statement; the entity was a pre-authorisation dormant/near-dormant shell that year with no "
     "banking operations.\n"
+    "FY2020: not applicable - see entity-history note below. SVBUK Limited's own FY2020 accounts (filed as "
+    "'Dormant Accounts' under s480 CA2006, 26 Jul 2021) show a GBP1 balance sheet only, no P&L, and no cash "
+    "flow statement at all - a genuinely dormant shell for its entire first (shortened) accounting period.\n"
     + ENTITY_NOTE
 )
 
@@ -64,6 +78,9 @@ CASH_FLOW_SOURCES = (
 def p3_sources(extra=""):
     return (
         "Sources - HSBC Innovation Bank Limited Pillar 3 / capital disclosure basis:\n"
+        "FY2020-FY2021: not applicable - the entity was a dormant/pre-authorisation shell with no regulated "
+        "banking operations and so no Pillar 3 disclosure obligation in either year (see entity-history "
+        "note).\n"
         f"FY2022: standalone Pillar 3 Report 2022, p.4-5 (Key Metrics; Capital & Risk Weighted-Assets), "
         f"{P3_2022_URL} - the only year this entity has published a standalone Pillar 3 report (confirmed "
         "via the bank's own regulatory-disclosures page and a Wayback Machine CDX search finding no other "
@@ -104,6 +121,8 @@ STATEMENTS_SOURCES = (
     f"Valley Bank UK Limited), pp.39-42 (as originally published; ties exactly to FY2023 AR's FY2022 "
     f"comparative), filed 19 Oct 2023 - {AR2022_DOC_URL}\n"
     "FY2021: not applicable - see entity-history note below.\n"
+    "FY2020: not applicable - see entity-history note below (dormant shell, GBP1 balance sheet only, no "
+    "P&L or Statement of Changes in Equity movements).\n"
     + ENTITY_NOTE
     + "\n\nPRESENTATION NOTE: the Balance Sheet's own line-item structure genuinely changed over this "
     "period, reflecting HSBC's integration of the entity's treasury function. FY2022-FY2023 show separate "
@@ -168,9 +187,10 @@ balance_sheet_rows = [
 statement(
     balance_sheet_rows, bw.add_balance_sheet_sheet,
     title="HSBC Innovation Bank Limited — Statement of Financial Position",
-    subtitle="As reported in each year's own Companies House-filed Annual Report and Accounts. FY2021 is "
-              "blank - the entity was a dormant, pre-authorisation shell that year with no banking "
-              "operations. Cash/Financial investments lines disappear from FY2024 onward - see source note.",
+    subtitle="As reported in each year's own Companies House-filed Annual Report and Accounts. FY2020-FY2021 "
+              "are blank - the entity was a dormant, pre-authorisation shell in both years with no banking "
+              "operations (FY2020: GBP1 dormant-company balance sheet only). Cash/Financial investments "
+              "lines disappear from FY2024 onward - see source note.",
     sheet_name="Balance Sheet",
 )
 
@@ -205,9 +225,10 @@ income_statement_rows = [
 statement(
     income_statement_rows, bw.add_income_statement_sheet,
     title="HSBC Innovation Bank Limited — Income Statement",
-    subtitle="As reported in each year's own Companies House-filed Annual Report and Accounts. FY2021 is "
-              "blank (dormant shell, no banking operations). There is no difference between profit/(loss) "
-              "after tax and total comprehensive income/(expense) in any year - no OCI is disclosed.",
+    subtitle="As reported in each year's own Companies House-filed Annual Report and Accounts. FY2020-FY2021 "
+              "are blank (dormant shell, no banking operations - FY2020 had no P&L at all, filed as Dormant "
+              "Accounts). There is no difference between profit/(loss) after tax and total comprehensive "
+              "income/(expense) in any year - no OCI is disclosed.",
     sheet_name="Profit & Loss",
 )
 
@@ -216,7 +237,9 @@ statement(
 # ---------------------------------------------------------------
 EQUITY_HEADERS = ["Called up share capital", "Other equity instruments", "Other reserves", "Retained earnings", "Total equity"]
 equity_rows = [
-    ("TOTAL", "Balance as at 1 Jan 2021", (0, 0, 0, 0, 0)),
+    ("TOTAL", "Balance as at incorporation (3 Apr 2020)", (0, 0, 0, 0, 0)),
+    ("DATA", "Movement in the period (GBP1 nominal share capital issued; dormant, s480 CA2006 exemption)", (0, None, None, None, 0)),
+    ("TOTAL", "Balance as at 31 Dec 2020 / 1 Jan 2021", (0, 0, 0, 0, 0)),
     ("DATA", "Loss for the year", (None, None, None, -477, -477)),
     ("TOTAL", "Balance as at 31 Dec 2021", (0, 0, 0, -477, -477)),
     ("DATA", "Issue of share capital", (978000, None, None, None, 978000)),
@@ -302,9 +325,10 @@ rows = [
 
 bw.add_cash_flow_sheet(
     title="HSBC Innovation Bank Limited — Statement of Cash Flows",
-    subtitle="As reported in each year's own Companies House-filed Annual Report and Accounts. FY2021 is "
-              "blank - the entity was a dormant, pre-authorisation shell that year with no banking "
-              "operations and no cash flow statement published under its FRS 101 exemption (see source note).",
+    subtitle="As reported in each year's own Companies House-filed Annual Report and Accounts. FY2020-FY2021 "
+              "are blank - the entity was a dormant, pre-authorisation shell in both years with no banking "
+              "operations and no cash flow statement published (FY2021's FRS 101 exemption; FY2020's s480 "
+              "dormant-company exemption - see source note).",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=70,
@@ -334,8 +358,8 @@ asset_quality_rows = [
 bw.add_asset_quality_sheet(
     title="HSBC Innovation Bank Limited — Asset Quality",
     subtitle="Loans and advances to clients at amortised cost, by IFRS 9 stage - the Bank's Note 15/18/14 "
-              "'Credit risk analysis'/'Summary of credit risk by stage distribution' tables. FY2021 is "
-              "blank (dormant shell, no lending). FY2022's own segmentation (Investor/Balance Sheet/Cash "
+              "'Credit risk analysis'/'Summary of credit risk by stage distribution' tables. FY2020-FY2021 "
+              "are blank (dormant shell, no lending). FY2022's own segmentation (Investor/Balance Sheet/Cash "
               "Flow Dependent etc.) was replaced by a corporate-and-commercial/non-bank-financial-"
               "institutions split from FY2023 onward following HSBC's post-acquisition risk-management "
               "framework change - both genuinely different bases, shown here only at the combined "
@@ -447,8 +471,9 @@ metric(
               "commenced 1 August 2022, leaving 5 observable month-ends - per the Pillar 3 report's own "
               "footnote, not a like-for-like basis with a full 12-month average."
     ),
-    note="Only disclosed for FY2022 (the only year with a standalone Pillar 3 report) - not publicly "
-         "disclosed at this entity level FY2023-FY2025 (see source note).",
+    note="Only disclosed for FY2022 (the only year with a standalone Pillar 3 report) - not "
+         "applicable FY2020-FY2021 (dormant/pre-authorisation shell, no banking operations) and not "
+         "publicly disclosed at this entity level FY2023-FY2025 (see source note).",
 )
 
 metric(
@@ -458,8 +483,9 @@ metric(
         extra="FY2022's 203% is a 2-quarter (not 4-quarter) average, for the same reason as LCR above - per "
               "the Pillar 3 report's own footnote."
     ),
-    note="Only disclosed for FY2022 (the only year with a standalone Pillar 3 report) - not publicly "
-         "disclosed at this entity level FY2023-FY2025 (see source note).",
+    note="Only disclosed for FY2022 (the only year with a standalone Pillar 3 report) - not "
+         "applicable FY2020-FY2021 (dormant/pre-authorisation shell, no banking operations) and not "
+         "publicly disclosed at this entity level FY2023-FY2025 (see source note).",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -508,9 +534,10 @@ bw.add_overview_sheet(
     ],
     note="Formerly Silicon Valley Bank UK Limited (formerly SVBUK Limited) - acquired by HSBC UK Bank plc "
          "for GBP1 on 13 March 2023 under the Bank of England's Special Resolution Regime, following the "
-         "collapse of former US parent SVB Financial Group. FY2021 is blank throughout (dormant "
-         "pre-authorisation shell, no banking operations, FRS 101 exemption). LCR/NSFR only disclosed for "
-         "FY2022; MREL not disclosed at this entity level in any year - see individual sheets for detail.",
+         "collapse of former US parent SVB Financial Group. FY2020-FY2021 are blank throughout (dormant "
+         "pre-authorisation shell, no banking operations - FY2020 was a s480 dormant-company GBP1 shell, "
+         "FY2021 an FRS 101-exempt pre-authorisation shell). LCR/NSFR only disclosed for FY2022; MREL not "
+         "disclosed at this entity level in any year - see individual sheets for detail.",
 )
 
 # ---------------------------------------------------------------

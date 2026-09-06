@@ -62,7 +62,10 @@ PILLAR3_NOTE = (
     "disclosures explicitly provide GSIB columns/tables alongside GSGUK and GSI. The GSIB breakout is used here "
     "rather than substituting GSGUK consolidated figures. FY2021 GSIB capital, ratios, RWA, leverage and LCR are "
     "available; FY2022-FY2025 also provide GSIB NSFR. No GSIB-specific numeric MREL value is shown in the reviewed "
-    "reports, so MREL remains explicitly unavailable."
+    "reports, so MREL remains explicitly unavailable. Exhaustive follow-up also checked the official Q1/Q3 2020-2021 "
+    "Pillar 3 archive reports and their capital-instrument/MREL sections: those reports provide GSIB regulatory-capital "
+    "components (and, in the Q3 2021 report, a GSGUK-only own-funds-and-eligible-liabilities key-metrics table), but "
+    "no GSIB-specific MREL amount or ratio. GSGUK-only MREL values are not substituted for GSIB."
 )
 
 FX_METHOD_NOTE = (

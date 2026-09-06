@@ -37,11 +37,20 @@ CF_NOTE = (
 def annual_sources(extra=""):
     text = ENTITY_NOTE + "\n\nOfficial annual reports and financial statements:\n"
     capital_pages = {
-        "FY2025": "capital management p.75",
-        "FY2024": "capital management p.76",
-        "FY2023": "capital management p.72",
-        "FY2022": "capital management p.64",
-        "FY2021": "capital management p.72",
+        # Verified 2026-09-06 (HD-066): FY2021 AR's own Note 32 "Capital management
+        # (unaudited)" is on p.72; FY2023 AR's own Note 31 (same title) is on p.72;
+        # FY2022 AR's own Note 31 is actually on p.65, not p.64 (corrected here).
+        # FY2024 and FY2025's own accounts contain no capital management note at all
+        # (both end at Country by Country Reporting - Note 30 and Note 31
+        # respectively; the FY2025 accounts' own going-concern section references a
+        # non-existent "Note 32" - a dangling cross-reference in the Bank's own
+        # document, not an error introduced here) - capital figures for these two
+        # years come solely from the Pillar 3 disclosure cited below.
+        "FY2025": "no capital management note published in the statutory accounts (see note)",
+        "FY2024": "no capital management note published in the statutory accounts (see note)",
+        "FY2023": "Note 31 \"Capital management (unaudited)\" p.72",
+        "FY2022": "Note 31 \"Capital management (unaudited)\" p.65",
+        "FY2021": "Note 32 \"Capital management (unaudited)\" p.72",
     }
     text += "\n".join(f"{y}: {capital_pages[y]}, {AR_URLS[y]}" for y in YEARS)
     if extra:
@@ -148,7 +157,7 @@ pl_rows = [
     ("DATA", "Taxation", {"FY2025": -11584, "FY2024": -11139, "FY2023": -12761, "FY2022": -25945, "FY2021": -4099}),
     ("TOTAL", "Profit for the year", {"FY2025": 34235, "FY2024": 32569, "FY2023": 35877, "FY2022": 22423, "FY2021": 17076}),
     ("SECTION", "Other comprehensive income/(expense) for the year", {}),
-    ("DATA", "Change in fair value of debt securities measured at FVOCI (net of tax)", {"FY2025": 894, "FY2024": -830}),
+    ("DATA", "Change in fair value of debt securities measured at FVOCI (net of tax)", {"FY2025": 894, "FY2024": -830, "FY2021": -124}),
     ("DATA", "Change in fair value of equity instruments measured at FVOCI (net of tax)", {"FY2025": 91, "FY2024": 277, "FY2021": -45}),
     ("DATA", "Change in fair value of investment in subsidiary measured at FVOCI (net of tax)", {"FY2021": -2759}),
     ("DATA", "Change in fair value of debt/equity securities and investment in subsidiary (combined, FY2022-FY2023)", {"FY2023": -2455, "FY2022": 3202}),
@@ -279,7 +288,20 @@ CAPITAL_UNIT = "As reported: £000 (FY2024–FY2025); US$000 (FY2021–FY2023)"
 CAPITAL_NOTE = (
     "CET1, Tier 1, and Total Capital are equal in every year because the Bank reports no Tier 2 capital and its "
     "regulatory capital is comprised entirely of CET1. FY2021–FY2023 are reported in US$000; FY2024–FY2025 are "
-    "reported in GBP£000 following the presentation-currency change. No conversion has been imposed."
+    "reported in GBP£000 following the presentation-currency change. No conversion has been imposed.\n\n"
+    "DATA QUALITY NOTE (FY2021/FY2022, verified 2026-09-06, HD-066): the FY2021 and FY2022 CET1/Total Capital and "
+    "ratio figures here are taken from each year's own audited Annual Report Note 32/31 \"Capital management "
+    "(unaudited)\" (US$432,220k/21.24% for FY2021; US$453,162k/21.26% for FY2022 - each self-consistent against "
+    "the same year's own RWA of US$2,034,858k/US$2,131,640k to the basis point). Both years' archived Pillar 3 "
+    "disclosures state different capital amounts against the identical RWA: the \"December 2021\"-dated document's "
+    "own Table 1 states US$432,220k (matching the AR) but pairs it with a 21.81% ratio that is arithmetically "
+    "inconsistent with that amount (432,220/2,034,858 = 21.24%, not 21.81% - an apparent error within that "
+    "document); the \"December 2023\"-dated document's own Table 3/5 states a different, internally-consistent "
+    "pair for both years (US$443,710k/21.81% FY2021; US$474,412k/22.26% FY2022 - each ties exactly to the same "
+    "RWA). The two Pillar 3 documents' own RWA, Leverage Ratio, LCR, and NSFR agree with each other and are used "
+    "on those sheets; only the CET1/Total Capital amount and ratio are disputed between the Bank's own statutory "
+    "accounts and its own Pillar 3 disclosures for these two years, and the statutory accounts' figures are used "
+    "here as the audited-adjacent, internally self-consistent source."
 )
 
 metric("CET1 Capital", CAPITAL_UNIT, [("Common Equity Tier 1 (CET1) capital", CAPITAL)], CAPITAL_NOTE)

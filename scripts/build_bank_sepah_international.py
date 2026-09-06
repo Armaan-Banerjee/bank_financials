@@ -68,6 +68,7 @@ P3_2025_URL = "https://www.banksepah.co.uk/uploads/documents/Pillar3Disclosureas
 P3_2024_URL = "https://www.banksepah.co.uk/uploads/documents/Pillar3Disclosuresasat31March2024.pdf"
 P3_2023_URL = "https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2023.pdf"
 P3_2022_URL = "https://www.banksepah.co.uk/uploads/documents/Pillar_3_Disclosures_31_March_2022.pdf"
+P3_2021_URL = "https://www.banksepah.co.uk/uploads/documents/Pillar-3-Disclosures-31-March-2021.pdf"
 
 P3_FETCH_NOTE = (
     "The Bank's own Pillar 3 Disclosures documents are published at www.banksepah.co.uk/information, a site "
@@ -86,11 +87,8 @@ def liquidity_leverage_sources():
         f"FY2025 ('Mar 25' column): Pillar 3 Disclosures as at 31 March 2025, p.5 - {P3_2025_URL}\n"
         f"FY2024 ('Mar 24' column): Pillar 3 Disclosures as at 31 March 2024, p.5 - {P3_2024_URL}\n"
         f"FY2023 ('Mar 23' column): Pillar 3 Disclosures 31 March 2023, p.5 - {P3_2023_URL}\n"
-        f"FY2022 ('Mar 22' column): Pillar 3 Disclosures 31 March 2022, p.5 - {P3_2022_URL}\n"
-        "FY2021 ('Mar 21' column - the earliest comparative quarter shown anywhere on the site; no standalone "
-        "FY2021 Pillar 3 document was found, on the live site or via the Wayback Machine, and none is linked "
-        f"from the site's own /information page): Pillar 3 Disclosures 31 March 2022's own Table 1, p.5 - "
-        f"{P3_2022_URL}\n\n"
+        f"FY2022 ('Mar 22' column): Pillar 3 Disclosures 31 March 2022, pp.5/16 - {P3_2022_URL}\n"
+        f"FY2021: Bank's own Pillar 3 Disclosures 31 March 2021, pp.5/16 - {P3_2021_URL}\n\n"
         "Each year's own report's own year-end column is used in preference to a later report's comparative "
         "column for the same date, where both exist - the two occasionally differ by a rounding point (e.g. "
         "NSFR at March 2022: 458% in the March-2022 report's own column vs 459% in the March-2023 report's "
@@ -475,13 +473,17 @@ CAPITAL_EUR_M = {"FY2025": 173, "FY2024": 172, "FY2023": 172, "FY2022": 170, "FY
 CAPITAL_RATIO = {"FY2025": "102.7%", "FY2024": "91.8%", "FY2023": "81.5%", "FY2022": "67.5%", "FY2021": "61.2%"}
 CAPITAL_GBP_M = {y: round(v * YEAR_END_RATE[y], 1) for y, v in CAPITAL_EUR_M.items()}
 
-# RWA calculated (not directly disclosed) = capital resources / ratio, in EUR m, then converted
-RWA_EUR_M = {y: round(CAPITAL_EUR_M[y] / (float(CAPITAL_RATIO[y].rstrip('%')) / 100), 1) for y in YEARS}
+# Directly disclosed in the Bank's own Pillar 3 Table 4 (Total Risk Exposure = Total RWAs).
+RWA_EUR_M = {"FY2025": 167.006, "FY2024": 188.600, "FY2023": 209.637,
+             "FY2022": 252.583, "FY2021": 277.208}
 RWA_GBP_M = {y: round(v * YEAR_END_RATE[y], 1) for y, v in RWA_EUR_M.items()}
 
 CAPITAL_NOTE = "CET1 = Tier 1 = Total Capital every year - the Bank discloses only a single combined capital figure, no AT1/Tier 2 instruments mentioned anywhere in the Annual Report."
 RATIO_NOTE = "The Bank discloses one 'Total capital / Tier 1 capital to total risk-weighted assets' ratio (identical each year, confirming no AT1/Tier 2) - used for CET1/Tier1/Total Capital Ratio alike."
-RWA_NOTE = "CALCULATED, not directly disclosed in the Annual Report - derived as capital resources (EUR) ÷ the disclosed capital ratio for each year, then converted to GBP at the year-end rate. (The Bank's own Pillar 3 Disclosures documents - see the Leverage Ratio/LCR/NSFR sheets' citations - do separately disclose an actual 'Total Risk Exposure' each year, e.g. EUR167,006k at March 2025 vs this calculated EUR168.5m; the two are close but not identical, likely due to the capital ratio being disclosed rounded to one decimal place. Left as the established calculated figure here since replacing it is outside this fix's scope.)"
+RWA_NOTE = ("DIRECTLY DISCLOSED by the Bank's own Pillar 3 Table 4 'Total Risk Exposure' (equivalent to Total "
+            "Risk Weighted Assets), rather than calculated from rounded capital ratios. Each year's own report "
+            "is used (March 2025/2024/2023/2022/2021, Table 4 p.16). EUR amounts are converted to GBP at the "
+            "Bank's own year-end EUR/GBP rate.")
 MREL_NOTE = ("Not publicly disclosed - no MREL figure appears in the FY2021-FY2025 Annual Reports, nor in the "
              "Bank's own Pillar 3 Disclosures documents for FY2022-FY2025 (see the Leverage Ratio/LCR/NSFR "
              "sheets' citations - the same Table 1 'Summary of Key Metrics' that discloses those three ratios "
@@ -498,17 +500,28 @@ metric("Total Capital", "£m (conv. from EUR)", [("Total capital resources", CAP
 metric("Total Capital Ratio", "%", [("Total capital to total risk-weighted assets", CAPITAL_RATIO)], note=RATIO_NOTE)
 metric("Total RWAs", "£m (conv. from EUR)", [("Total risk-weighted assets", RWA_GBP_M)], note=RWA_NOTE)
 
+RWA_CREDIT_EUR_M = {"FY2025": 149.153, "FY2024": 171.615, "FY2023": 195.297,
+                    "FY2022": 239.515, "FY2021": 264.441}
+RWA_MARKET_EUR_M = {"FY2025": 3.547, "FY2024": 2.586, "FY2023": 1.665,
+                    "FY2022": 1.379, "FY2021": 1.601}
+RWA_OPERATIONAL_EUR_M = {"FY2025": 14.305, "FY2024": 14.399, "FY2023": 12.675,
+                         "FY2022": 11.689, "FY2021": 11.166}
 bw.add_rwa_breakdown_sheet(
     title="Bank Sepah International Plc — RWA Breakdown",
-    subtitle="Not publicly disclosed - see note below.",
-    rows=[("DATA", "RWA by risk category (UK OV1)", {y: "Not publicly disclosed" for y in YEARS})],
-    sources_text=p3_sources() + "\n\nNot broken down by risk category anywhere in the Annual Reports, nor in the "
+    subtitle="£m (conv. from EUR) — risk type split, as disclosed",
+    rows=[("DATA", "Credit risk", {y: round(RWA_CREDIT_EUR_M[y] * YEAR_END_RATE[y], 1) for y in YEARS}),
+          ("DATA", "Market risk", {y: round(RWA_MARKET_EUR_M[y] * YEAR_END_RATE[y], 1) for y in YEARS}),
+          ("DATA", "Operational risk", {y: round(RWA_OPERATIONAL_EUR_M[y] * YEAR_END_RATE[y], 1) for y in YEARS}),
+          ("TOTAL", "Total Risk Exposure", RWA_GBP_M)],
+    sources_text=p3_sources() + "\n\nThe Bank's own Pillar 3 Table 4 directly discloses the risk-type split "
                  "Bank's own Pillar 3 Disclosures documents (see the Leverage Ratio/LCR/NSFR sheets' citations - "
                  "these were successfully fetched despite the site's expired TLS certificate). Those documents' "
                  "own Table 4 'Total Risk Exposure' splits Total Risk Exposure only 3 ways, by risk TYPE (credit/"
                  "market/operational, e.g. EUR149,153k/3,547k/14,305k at March 2025) - not by risk CATEGORY/asset "
                  "class in the UK OV1 format this sheet is structured for (sovereign, institutions, corporate, "
-                 "retail, etc.), so no like-for-like data was found to populate this sheet with.",
+                 "retail, etc.). The directly disclosed risk-type split is provided above; it is the Bank's "
+                 "own Table 4 classification and sums to Total Risk Exposure (minor GBP conversion rounding may "
+                 "leave a 0.1m difference).",
     first_col_width=54,
     source_height=200,
 )

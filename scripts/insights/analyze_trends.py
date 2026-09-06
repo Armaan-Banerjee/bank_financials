@@ -174,6 +174,22 @@ def report_pairwise(name, values, left, right):
     print(f"{name}: FY{left}->FY{right}: n={c['n']}, down={c['down']}, up={c['up']}, unchanged={c['same']}")
 
 
+def consecutive_year_pairs(values_by_metric):
+    """Every (year, year+1) pair actually present for at least one bank in
+    any metric's series - not a hardcoded FY2021-FY2025 window. The
+    historical-depth (HD-series) effort gave individual banks year windows
+    stretching back to FY2014, so a fixed pair list would silently never
+    report on any extended bank's older-year trends (no crash, just missing
+    output) - the same silent-failure class this pipeline's docstring
+    already warns about for the parent-group-table ordering bug."""
+    years = set()
+    for series in values_by_metric.values():
+        for per_bank in series.values():
+            years.update(per_bank.keys())
+    ordered = sorted(years)
+    return [(y, y + 1) for y in ordered if (y + 1) in years]
+
+
 def report_group_agreement(group, members, extracted, left, right):
     for name in ("CET1 ratio", "Total capital ratio", "LCR", "Operating cash flow"):
         comparable = [(bank, extracted[name].get(frn, {})) for frn, bank, _ in members]
@@ -221,9 +237,10 @@ def main():
     for name, spec in METRICS.items():
         extracted[name], diagnostics = extract(rows, name, spec)
         print(f"{name}: {len(extracted[name])} banks with numeric series; {diagnostics}")
+    year_pairs = consecutive_year_pairs(extracted)
     print("\nYear-pair checks:")
     for name in METRICS:
-        for left, right in ((2021, 2022), (2022, 2023), (2023, 2024), (2024, 2025)):
+        for left, right in year_pairs:
             report_pairwise(name, extracted[name], left, right)
 
     multi = defaultdict(list)
@@ -234,7 +251,7 @@ def main():
         if len(members) < 2:
             continue
         print(f"{group} ({len(members)}): {', '.join(bank for _, bank, _ in members)}")
-        for left, right in ((2021, 2022), (2022, 2023), (2023, 2024), (2024, 2025)):
+        for left, right in year_pairs:
             report_group_agreement(group, members, extracted, left, right)
 
 

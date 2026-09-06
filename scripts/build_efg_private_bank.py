@@ -31,34 +31,15 @@ PILLAR3_2025_URL = ("https://www.efginternational.com/doc/jcr:895b914b-441b-48b6
                      "lang:en/EFG%20Private%20Bank%20Limited%202024%20Pillar%203%20Disclosure%20Report.pdf")
 
 PILLAR3_2025_NOTE = (
-    "Additional source - EFG Private Bank Limited's own standalone Pillar 3 Disclosures, 'For the "
-    "year ended 31 December 2025' (approved by the Board of Directors 9 April 2026), UK KM1 table "
-    f"(p.3) unless noted otherwise - {PILLAR3_2025_URL}\n"
-    "NOTE ON FILENAME: the URL/filename inherited from EFG's CMS reads '2024 Pillar 3 Disclosure "
-    "Report', but the document's own cover page and content are for the year ended 31 December 2025, "
-    "with a FY2024 comparative column (column (b) of the UK KM1 table) - only that FY2024 comparative "
-    "column is used in this workbook, consistent with the YEARS list above (FY2025 itself is out of "
-    "scope until EFGIUK's FY2025 Annual Report is filed at Companies House).\n"
-    "FY2024 comparative figures per UK KM1 (p.3): CET1 capital GBP252.2m, Tier 1 capital GBP318.8m, "
-    "Total capital GBP318.8m, Total risk-weighted exposure amount GBP1,763.3m (GBP1,763.2m per the UK "
-    "OV1 breakdown table, p.14 - non-significant rounding difference, both stated directly in the "
-    "source), CET1 ratio 14.30%, Tier 1 ratio 18.08%, Total capital ratio 18.08%, Leverage ratio "
-    "(excluding claims on central banks) 5.34%, Liquidity coverage ratio 213%, Net stable funding "
-    "ratio 154%.\n"
-    "IMPORTANT DISCREPANCY NOTE: this Pillar 3 report's own FY2024 CET1 capital (GBP252.2m) and Tier 1 "
-    "capital (GBP318.8m, which includes a GBP66.6m Additional Tier 1 subordinated debt instrument "
-    "maturing 12 Dec 2027) are HIGHER than, and structurally different from, the FY2024 figures on "
-    "this workbook's own CET1 Capital and Tier 1 Capital sheets (GBP237.2m, with Tier 1 assumed equal "
-    "to CET1 there because the statutory accounts' Note 34 Capital management, this workbook's source "
-    "for those two sheets, did not mention any AT1 instrument). The two sources are not reconciled "
-    "here: the CET1 Capital/Tier 1 Capital £m sheets keep their original accounts-sourced FY2024 "
-    "figures per this workbook's per-sheet sourcing convention, while the ratio and RWA figures below "
-    "are taken directly from this Pillar 3 report's own disclosed figures, not recalculated from the "
-    "£m sheets. The Pillar 3 report's own introductory text (p.2, section 1.6) separately states an "
-    "LCR of 227% and NSFR of 145% for FY2025 (not FY2024) - these headline figures do not match the "
-    "FY2025 UK KM1 table itself (LCR 218%, NSFR 145% - LCR differs, NSFR matches), an inconsistency "
-    "within the source document itself; the UK KM1 table figures (the formal quantitative disclosure) "
-    "are used throughout this note in preference to the introductory prose."
+    "Additional source - EFG Private Bank Limited's own standalone Pillar 3 Disclosures, for the "
+    "year ended 31 December 2024 (approved 30 September 2025), UK KM1 table (p.3) and UK OV1 table "
+    "(p.14) - " + PILLAR3_2025_URL + "\n"
+    "The report is explicitly prepared on a stand-alone basis (p.1) and its UK KM1 comparative column "
+    "also discloses FY2023. FY2024/FY2023 KM1 figures are: CET1 capital GBP237.3m/205.8m, Tier 1 "
+    "capital GBP303.9m/272.4m, total capital GBP303.9m/272.4m, total RWA GBP1,763.3m/1,581.0m, "
+    "CET1 ratios 13.46%/13.01%, Tier 1 and total-capital ratios 17.24%/17.23%, leverage ratios "
+    "5.09%/5.15%, LCR 213%/220%, and NSFR 154%/160%. The formal KM1 table is used in preference to "
+    "the report's rounded introductory prose (which quotes 17.24%, 247% and 158% for selected metrics)."
 )
 
 ENTITY_NOTE = (
@@ -108,7 +89,12 @@ def p3_sources(page="83"):
         "management note in both reports. This is a genuine reduction in disclosure depth between "
         "report vintages, not a gap in this research. Liquidity risk (Note 29) is purely "
         "qualitative/contractual-maturity-table based in every year reviewed - no LCR/NSFR "
-        "percentage is stated anywhere. No Leverage Ratio or MREL figure was found in any year."
+        "percentage is stated anywhere. No Leverage Ratio or MREL figure was found in any year. "
+        "Exhaustive follow-up: EFG's official UK document archive was also checked, including the linked "
+        "'Pillar III' PDF (2018 Pillar III disclosure, which is a CRR Article 450 remuneration disclosure "
+        "only, not a prudential-metrics/KM1 report) and the 2020-2024 annual-report links. No additional "
+        "entity-level prudential figures for FY2021/FY2022 beyond those in the accounts were found. The "
+        "2024 standalone report's comparative column supplies the previously missed FY2023 values."
     )
 
 
@@ -141,7 +127,7 @@ BS_IS_EQ_SOURCES = (
 # Sheet: Balance Sheet
 # ---------------------------------------------------------------
 bw.add_balance_sheet_sheet(
-    title="EFG Private Bank Limited — Consolidated Statement of Financial Position",
+    title="EFG Private Bank Limited — Standalone Statement of Financial Position",
     subtitle="Company basis, £'000. See source note at bottom.",
     rows=[
         ("SECTION", "Assets", {}),
@@ -525,38 +511,34 @@ NOT_DISCLOSED_NOTE = (
 metric(
     "CET1 Capital", "£m",
     [("Common equity tier 1 capital",
-      {"FY2024": 237.2, "FY2023": 205.8, "FY2022": 165.6, "FY2021": 195.2})],
+      {"FY2024": 237.3, "FY2023": 205.8, "FY2022": 165.6, "FY2021": 195.2})],
     p3_sources(),
     note="FY2022/FY2021 stated as \"(audited)\" in the source; FY2024/FY2023 not marked audited/unaudited.",
 )
 
 metric(
     "CET1 Ratio", "%",
-    [("Common equity tier 1 capital ratio", {"FY2024": "14.30%", "FY2022": "10.9%", "FY2021": "14.8%"})],
+    [("Common equity tier 1 capital ratio", {"FY2024": "13.46%", "FY2023": "13.01%", "FY2022": "10.9%", "FY2021": "14.8%"})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
-    note="FY2023 remains not publicly disclosed (statutory accounts only disclose CET1 Capital in £m "
-         "for that year - see the Pillar 3 source note). FY2024 is now sourced from EFGIUK's own "
+    note="FY2023 and FY2024 are sourced from EFGIUK's own "
          "standalone Pillar 3 Disclosures report - see the additional source note below for the "
          "discrepancy this creates against the CET1 Capital £m sheet's own FY2024 figure.",
 )
 
 metric(
     "Tier 1 Capital", "£m",
-    [("Tier 1 capital (= CET1 capital; no AT1 instruments disclosed any year)",
-      {"FY2024": 237.2, "FY2023": 205.8, "FY2022": 165.6, "FY2021": 195.2})],
+    [("Tier 1 capital", {"FY2024": 303.9, "FY2023": 272.4, "FY2022": 165.6, "FY2021": 195.2})],
     p3_sources(),
-    note="Tier 1 = CET1 throughout - no Additional Tier 1 instruments are mentioned anywhere in "
-         "the source across any of the 4 years (the AT1 INTEREST paid in the Cash Flow Statement "
-         "relates to a different capital instrument class disclosed elsewhere in the accounts as "
-         "part of \"other equity\", not counted as regulatory Tier 1/AT1 capital in Note 34).",
+    note="FY2023 and FY2024 are sourced from the standalone Pillar 3 UK KM1 table, which discloses "
+         "an Additional Tier 1 component not shown in the statutory accounts' Note 34.",
 )
 
 metric(
     "Tier 1 Ratio", "%",
-    [("Tier 1 ratio", {"FY2024": "18.08%", "FY2022": "10.9%", "FY2021": "14.8%"})],
+    [("Tier 1 ratio", {"FY2024": "17.24%", "FY2023": "17.23%", "FY2022": "10.9%", "FY2021": "14.8%"})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
-    note="FY2023 remains not publicly disclosed. FY2022/FY2021 are = CET1 ratio, since no AT1 "
-         "instruments were disclosed in the statutory accounts for those years. FY2024 is now sourced "
+    note="FY2023/FY2024 are sourced from the standalone Pillar 3 UK KM1 table. FY2022/FY2021 are = "
+         "CET1 ratio, since no AT1 instruments were disclosed in the statutory accounts. "
          "from EFGIUK's own standalone Pillar 3 Disclosures report and is HIGHER than the FY2022/FY2021 "
          "CET1-equals-Tier1 figures because that report discloses a GBP66.6m AT1 instrument for FY2024 "
          "not mentioned in the statutory accounts - see the additional source note below.",
@@ -564,9 +546,9 @@ metric(
 
 metric(
     "Total Capital", "£m",
-    [("Total capital", {"FY2024": 318.8, "FY2022": 232.3, "FY2021": 261.8})],
+    [("Total capital", {"FY2024": 303.9, "FY2023": 272.4, "FY2022": 232.3, "FY2021": 261.8})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
-    note="FY2023 remains not publicly disclosed. FY2022/FY2021 values are from the statutory accounts' "
+    note="FY2023/FY2024 are sourced from the standalone Pillar 3 UK KM1 table. FY2022/FY2021 values are from the statutory accounts' "
          "own table (Tier 1 + Tier 2; Tier 2 comprises unrealised FVOCI gains per the source's own "
          "definition, not separately itemised). FY2024 is now sourced from EFGIUK's own standalone "
          "Pillar 3 Disclosures report (Total capital = Tier 1 + Tier 2, with Tier 2 = nil that year) - "
@@ -576,17 +558,17 @@ metric(
 
 metric(
     "Total Capital Ratio", "%",
-    [("Total capital ratio", {"FY2024": "18.08%", "FY2022": "15.2%", "FY2021": "19.9%"})],
+    [("Total capital ratio", {"FY2024": "17.24%", "FY2023": "17.23%", "FY2022": "15.2%", "FY2021": "19.9%"})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
-    note="FY2023 remains not publicly disclosed. FY2024 is now sourced from EFGIUK's own standalone "
+    note="FY2023/FY2024 are sourced from EFGIUK's own standalone "
          "Pillar 3 Disclosures report - see the additional source note below.",
 )
 
 metric(
     "Total RWAs", "£m",
-    [("Total risk weighted assets", {"FY2024": 1763.3, "FY2022": 1523.7, "FY2021": 1317.8})],
+    [("Total risk weighted assets", {"FY2024": 1763.3, "FY2023": 1581.0, "FY2022": 1523.7, "FY2021": 1317.8})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
-    note="FY2023 remains not publicly disclosed. FY2022/FY2021 as directly stated in the statutory "
+    note="FY2023/FY2024 are sourced from EFGIUK's standalone Pillar 3 report; FY2022/FY2021 as directly stated in the statutory "
          "accounts (not calculated). FY2024 is now sourced from EFGIUK's own standalone Pillar 3 "
          "Disclosures report, UK KM1 table - see the additional source note below (also see the RWA "
          "Breakdown sheet, which now has a full FY2024 breakdown by risk category from the same "
@@ -595,19 +577,19 @@ metric(
 
 bw.add_rwa_breakdown_sheet(
     title="EFG Private Bank Limited — RWA Breakdown",
-    subtitle="FY2024 only (UK OV1 template, from Pillar 3 report); FY2023/FY2022/FY2021 not publicly "
+    subtitle="FY2024/FY2023 (UK OV1 template, from Pillar 3 report); FY2022/FY2021 not publicly "
              "disclosed. £m. See source note at bottom.",
     rows=[
-        ("DATA", "Credit risk (excluding CCR)", {"FY2024": 1430.2}),
-        ("DATA", "  of which standardised approach", {"FY2024": 1430.2}),
-        ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 64.0}),
-        ("DATA", "  of which standardised approach", {"FY2024": 38.0}),
+        ("DATA", "Credit risk (excluding CCR)", {"FY2024": 1430.2, "FY2023": 1246.2}),
+        ("DATA", "  of which standardised approach", {"FY2024": 1430.2, "FY2023": 1246.2}),
+        ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 64.0, "FY2023": 31.6}),
+        ("DATA", "  of which standardised approach", {"FY2024": 38.0, "FY2023": 31.6}),
         ("DATA", "  of which credit valuation adjustment (CVA)", {"FY2024": 26.0}),
-        ("DATA", "Settlement risk", {"FY2024": 0}),
-        ("DATA", "Operational risk", {"FY2024": 269.0}),
-        ("DATA", "  of which standardised approach", {"FY2024": 269.0}),
-        ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1763.2}),
-        ("DATA", "FY2023 / FY2022 / FY2021: Not publicly disclosed", {}),
+        ("DATA", "Settlement risk", {"FY2024": 0, "FY2023": 0}),
+        ("DATA", "Operational risk", {"FY2024": 269.0, "FY2023": 279.4}),
+        ("DATA", "  of which standardised approach", {"FY2024": 269.0, "FY2023": 279.4}),
+        ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1763.3, "FY2023": 1581.0}),
+        ("DATA", "FY2022 / FY2021: Not publicly disclosed", {}),
     ],
     sources_text=(
         "Sources - EFG Private Bank Limited's own accounts, Note 34 (Capital management), and its own "
@@ -627,7 +609,7 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio (excluding claims on central banks)", {"FY2024": "5.34%"})],
+    [("Leverage ratio (excluding claims on central banks)", {"FY2024": "5.09%", "FY2023": "5.15%"})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
     note="Not publicly disclosed for FY2023/FY2022/FY2021 - no Leverage Ratio figure was found in the "
          "statutory accounts for any of those years (confirmed by reading the Capital management and "
@@ -638,7 +620,7 @@ metric(
 
 metric(
     "LCR", "%",
-    [("Liquidity coverage ratio", {"FY2024": "213%"})],
+    [("Liquidity coverage ratio", {"FY2024": "213%", "FY2023": "220%"})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
     note="Not publicly disclosed for FY2023/FY2022/FY2021 - Liquidity risk (Note 29) is purely "
          "qualitative/contractual-maturity-table based in every statutory accounts year reviewed, no "
@@ -651,7 +633,7 @@ metric(
 
 metric(
     "NSFR", "%",
-    [("Net stable funding ratio", {"FY2024": "154%"})],
+    [("Net stable funding ratio", {"FY2024": "154%", "FY2023": "160%"})],
     p3_sources() + "\n" + PILLAR3_2025_NOTE,
     note="Not publicly disclosed for FY2023/FY2022/FY2021, for the same reason as LCR above. FY2024 is "
          "now sourced from EFGIUK's own standalone Pillar 3 Disclosures report, UK KM1 table (net "
@@ -716,12 +698,11 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000",
     ratios=[
-        ("CET1 Ratio", {"FY2024": "14.30%", "FY2022": "10.9%", "FY2021": "14.8%"}),
-        ("Total Capital Ratio", {"FY2024": "18.08%", "FY2022": "15.2%", "FY2021": "19.9%"}),
+        ("CET1 Ratio", {"FY2024": "13.46%", "FY2023": "13.01%", "FY2022": "10.9%", "FY2021": "14.8%"}),
+        ("Total Capital Ratio", {"FY2024": "17.24%", "FY2023": "17.23%", "FY2022": "15.2%", "FY2021": "19.9%"}),
     ],
-    note="FY2023's own Annual Report discloses only CET1 Capital (£m) - no ratio, no RWA, no Total "
-         "Capital - so no ratios plot for that year; see the CET1 Capital sheet and the Pillar 3 "
-         "source note for the full disclosure-format explanation. FY2024 ratios are now sourced from "
+    note="FY2023's own Annual Report is supplemented by the standalone Pillar 3 comparative column, "
+         "which supplies the previously missed FY2023 regulatory ratios and RWA. FY2024 ratios are sourced from "
          "EFGIUK's own standalone Pillar 3 Disclosures report (located 2026-09-04), NOT from the "
          "statutory accounts used for FY2022/FY2021 - see the CET1 Ratio/Total Capital Ratio sheets' "
          "own source notes for the resulting discrepancy against the CET1 Capital £m sheet's FY2024 "

@@ -81,7 +81,7 @@ def p3_sources(page_2025="93 (Note 28) / 32 (Strategic Report)", page_2024="91 (
         f"FY2024: Charity Bank 2024 Annual Report, p.{page_2024} - {AR2024_URL}\n"
         f"FY2023: Charity Bank Pillar 3 Disclosures 2023, p.{page_2023} - {P3_2023_URL}\n"
         f"FY2022: Charity Bank Pillar 3 Disclosures 2022, p.{page_2022} - {P3_2022_URL}\n"
-        f"FY2021: Charity Bank Pillar 3 Disclosures 2021, p.{page_2021} - {P3_2021_URL}\n\n"
+        f"FY2021: Charity Bank Pillar 3 Disclosures 2021, p.{page_2021} - {P3_2021_URL}; FY2021 LCR cross-check: FY2022 Pillar 3 Disclosure, FY2021 comparative column - {P3_2022_URL}\n\n"
         + PILLAR3_NOTE
     )
 
@@ -503,10 +503,11 @@ metric(
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (LCR)", {
-        "FY2023": "206.0%", "FY2022": "182.2%",
+        "FY2023": "206.0%", "FY2022": "182.2%", "FY2021": "222.4%",
     })],
     p3_sources(),
-    note="Blank FY2021 (not disclosed in that year's Pillar 3 document) and FY2024-FY2025 (no standalone Pillar 3 "
+    note="FY2021 is disclosed in the FY2022 Pillar 3 document's comparative column (222.4%); FY2024-FY2025 "
+         "remain blank (no standalone Pillar 3 "
          "document has been published for either year, and the Annual Reports do not disclose LCR at all - see "
          "the Pillar 3 note on this sheet's source citation).",
 )

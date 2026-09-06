@@ -71,6 +71,51 @@ relief tapering and post-COVID balance-sheet/RWA growth, but reporting-basis
 changes and entity-specific events remain material caveats. The counts show
 directional prevalence, not that every decline has the same cause.
 
+### 5. Cost efficiency and profitability both broadly improved through FY2023, then reversed
+
+Unlike findings 1-4, this one is not drawn from `bank_metrics.csv` /
+`analyze_trends.py` — it uses the insights pipeline's own curated
+`cost_base` (IN-041, cost-to-income ratio) and `income_volatility` (IN-040,
+year-over-year profit/(loss) swing) series in `research/insights.db`,
+computed by `curate_comparison_efficiency()` in
+`scripts/insights/build_deliverable.py` and charted on the comparison
+dashboard's "Cost efficiency & profitability" section. Coverage is a
+real-but-partial subset of the 145 banks, comparable to finding 3's LCR
+n=73:
+
+| Window | Comparable banks (cost-to-income) | % worsening (rising) | Comparable banks (profit YoY) | % declining |
+|---|---:|---:|---:|---:|
+| FY2021→FY2022 | 33 | 33.3% | 47 | 40.4% |
+| FY2022→FY2023 | 36 | 22.2% | 49 | 38.8% |
+| FY2023→FY2024 | 37 | 62.2% | 48 | 58.3% |
+| FY2024→FY2025 | 34 | 67.6% | 46 | 50.0% |
+
+Both series move together: the share of banks with a *worsening*
+(rising) cost-to-income ratio falls from FY2021→FY2022 through
+FY2022→FY2023, then more than doubles by FY2023→FY2024 and stays high
+into FY2024→FY2025. The share of banks with a *declining* profit/(loss)
+for the year follows the same shape. Read together, this suggests a
+broad efficiency/profitability improvement across roughly a third of
+comparably-disclosed banks through FY2023, followed by a reversal
+affecting a clear majority of that same comparable set from FY2023
+onward — consistent in timing with finding 4's FY2023→FY2024 capital
+softening, though this cross-metric co-movement is observational, not a
+tested causal claim.
+
+Caveats: coverage is n≈33-49 of 145 per window (not a majority-of-145
+result), driven by which banks disclose a clean, unambiguous
+cost-to-income figure or a single unambiguous "Profit/(loss) for the
+year" row (33 distinct label variants exist across banks; ambiguous
+bank-years are excluded rather than guessed, per `income_volatility()`'s
+own selection logic). This finding also surfaced two now-fixed data
+bugs during development: a Python int/string dict-key collision in
+`curate()`'s cost_base loop was silently discarding real
+cost-to-income/personnel-expense/opex data for 112 of 145 banks before
+the fix, and the equity-mix chart was double-counting a second
+grand-total-shaped equity column for 6 of 145 banks with more than one
+recognized total-equity component. Both are corrected as of this
+finding.
+
 ## Additional time-cluster scan
 
 The scan also covered operating-cash-flow totals and headline CET1, Total

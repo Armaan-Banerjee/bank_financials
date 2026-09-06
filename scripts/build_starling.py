@@ -2,7 +2,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
+YEARS = ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017"]  # most recent first
 YEAR_LABEL = {
     "FY2026": "FY2026 (SGHL)‡",
     "FY2025": "FY2025",
@@ -10,6 +10,10 @@ YEAR_LABEL = {
     "FY2023": "FY2023",
     "FY2022": "FY2022",
     "FY2021": "FY2021†",
+    "FY2020": "FY2020",
+    "FY2019": "FY2019",
+    "FY2018": "FY2018",
+    "FY2017": "FY2017",
 }
 
 AR21_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2019-21.pdf"
@@ -17,6 +21,10 @@ AR22_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annua
 AR23_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2023.pdf"
 AR25_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2025.pdf"
 AR26_SGHL_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Group-Annual-Report-2026.pdf"
+AR20_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2019-21.pdf"
+AR19_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2019-18.pdf"
+AR18_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-bank-annual-report-2017-18.pdf"
+AR17_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-bank-annual-report-2016-17.pdf"
 
 P3_21_URL = "https://www.starlingbank.com/docs/annual-reports/Pillar3-2021.pdf"
 P3_22_URL = "https://www.starlingbank.com/docs/annual-reports/Pillar3-2022.pdf"
@@ -44,7 +52,9 @@ ENTITY_NOTE = (
     "are on the narrower 'Regulatory Group' basis (SGHL, SIHL, SBL, SFSSL and Ember only - Murmur/Fleet "
     "Mortgages/Engine fall below CRR Article 19 materiality thresholds); cross-checking confirms this made no "
     "difference to the FY2025 capital figures, so Pillar 3 continuity FY2021-FY2026 is unaffected by the "
-    "restructuring."
+    "restructuring. FY2020-FY2017 are covered by Starling's official investor archive: FY2020/FY2019 in the "
+    "2019-21 report, FY2018 in the 2017-18 report, and FY2017 in the 2016-17 report. Older columns retain blanks "
+    "where the historical filing used a materially different presentation and no reliable like-for-like line exists."
 )
 
 CASH_FLOW_SOURCES = (
@@ -182,6 +192,29 @@ balance_sheet_rows = [
     ("TOTAL", "Total equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831}),
     ("TOTAL", "Total liabilities and equity", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834}),
 ]
+
+# FY2017-FY2018 are transcribed from Starling's original official annual
+# reports (rather than back-filled from later comparatives).  The old reports
+# use a materially different line presentation, so only exact line matches
+# are carried into the extended ladder.
+_OLD_BS = {
+    "FY2018": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 37544,
+               "Debt securities": 18039, "Loans and advances to customers": 8698,
+               "Other assets": 20924, "Total assets": 234669, "Customer deposits": 202323,
+               "Total liabilities": 206670, "Total equity": 27999, "Total liabilities and equity": 234669},
+    "FY2017": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 37544,
+               "Debt securities": 3014, "Loans and advances to customers": 804,
+               "Property, plant and equipment and right of use assets": 253,
+               "Intangible assets": 9330, "Other assets": 2332, "Total assets": 53277,
+               "Customer deposits": 18083, "Total liabilities": 20559, "Share capital": 5,
+               "Share premium": 47846, "Other reserves (own shares held/share awards/sundry/FX - see source note)": -94,
+               "Retained earnings / (Accumulated losses)": -15039, "Total equity": 32718,
+               "Total liabilities and equity": 53277},
+}
+for _kind, _label, _values in balance_sheet_rows:
+    for _year, _old in _OLD_BS.items():
+        if _label in _old:
+            _values[_year] = _old[_label]
 
 bw.add_balance_sheet_sheet(
     title="Starling Bank Limited — Balance Sheet",

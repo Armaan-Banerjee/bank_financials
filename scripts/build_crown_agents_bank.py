@@ -58,9 +58,9 @@ def p3_sources(extra=""):
         f"FY2023: Pillar 3 Disclosures - 31 December 2023, p.9 (UK KM1) - {P3_2023_URL}\n"
         f"FY2022: Pillar 3 Disclosures - 31 December 2022, p.9 (Summary of Key Ratios - pre-KM1-template "
         f"format) - {P3_2022_URL}, cross-checked against FY2023's own KM1 comparative column where available\n"
-        f"FY2021: sourced from the FY2022 document's own comparative column (p.9, Summary of Key Ratios) - "
-        f"{P3_2022_URL} - no capital/liquidity summary table was located within budget in the FY2021 Pillar 3 "
-        f"document itself.\n"
+        f"FY2021: Pillar 3 Disclosures - 31 December 2021, p.7 (Summary of Key Ratios) and p.18 (Capital "
+        f"Resources / RWA / Capital Ratios) - https://www.crownagentsbank.com/wp-content/uploads/2025/09/"
+        f"cab_pillar_3_disclosures_2021.pdf\n"
         "FY2021 predates the UK's post-Brexit CRR/KM1 regulatory regime, which UK banks became subject to "
         "from 1 January 2022 (per the FY2022 document's own Introduction) - FY2021 figures may not be "
         "directly comparable to FY2022 onward on a like-for-like basis.\n"
@@ -430,22 +430,21 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=48, source_height=170)
 
 
-CET1_CAPITAL = {"FY2025": 141776, "FY2024": 126265, "FY2023": 115358, "FY2022": 89871, "FY2021": 56661}
-RWA = {"FY2025": 619414, "FY2024": 627016, "FY2023": 436220, "FY2022": 269258, "FY2021": 187000}
-CET1_RATIO = {"FY2025": "22.9%", "FY2024": "20.1%", "FY2023": "26.4%", "FY2022": "33.4%", "FY2021": "30.3%"}
+CET1_CAPITAL = {"FY2025": 141776, "FY2024": 126265, "FY2023": 115358, "FY2022": 89871, "FY2021": 56906}
+RWA = {"FY2025": 619414, "FY2024": 627016, "FY2023": 436220, "FY2022": 269258, "FY2021": 186856}
+CET1_RATIO = {"FY2025": "22.9%", "FY2024": "20.1%", "FY2023": "26.4%", "FY2022": "33.4%", "FY2021": "30.5%"}
 LEVERAGE_RATIO = {"FY2025": "9.5%", "FY2024": "7.4%", "FY2023": "7.3%", "FY2022": "6.9%", "FY2021": "5.0%"}
 LCR = {"FY2025": "134.7%", "FY2024": "136.4%", "FY2023": "149.7%", "FY2022": "143.2%", "FY2021": "132%"}
 NSFR = {"FY2025": "130.0%", "FY2024": "130.9%", "FY2023": "159.4%", "FY2022": "206.6%", "FY2021": "211%"}
 
 RWA_NOTE = (
-    "FY2021's RWA (£187m) is directly stated in the FY2022 document's own comparative column (rounded "
-    "to the nearest £m, not disclosed to the £'000). All other years disclosed to the £'000 in their own "
-    "KM1 tables."
+    "FY2021's RWA (£186,856k) is directly stated in the Bank's own 2021 Pillar 3 disclosure, p.18. "
+    "All other years are disclosed to the £'000 in their own KM1 tables."
 )
 CET1_CAPITAL_NOTE = (
-    "FY2021's CET1/Tier1/Total Capital (£56,661k) is CALCULATED (RWA £187,000k x CET1 Ratio 30.3%) since "
-    "no absolute capital figure was directly disclosed for FY2021, only the ratio and RWA - flagged, not "
-    "guessed. All other years (FY2022 onward) are directly disclosed in the respective year's own KM1 table "
+    "FY2021's CET1/Tier1/Total Capital (£56,906k) is directly disclosed as Total Common Equity Tier 1 "
+    "Capital / Total Capital Resources in the Bank's own 2021 Pillar 3 disclosure, p.18. Its own 2021 "
+    "capital-ratio table gives 30.5%. All other years (FY2022 onward) are directly disclosed in the respective year's own KM1 table "
     "(FY2022's calculated cross-check: £269,258k x 33.4% = £89,933k vs the directly-disclosed £89,871k - "
     "matches closely, confirming the calculation method is sound)."
 )
@@ -476,16 +475,24 @@ metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", CET1_RATIO)],
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", RWA)], p3_sources(), note=RWA_NOTE)
 
 RWA_BREAKDOWN_NOTE = (
-    "Not publicly disclosed in any of the 5 years reviewed - each year's own Pillar 3 document's UK KM1 "
-    "Key Metrics table (and, for FY2025, the narrative on Regulatory Capital and RWAs) discloses only the "
-    "aggregate Total RWA figure, with no risk-category (credit/counterparty credit/market/operational risk) "
-    "breakdown table found - confirmed by reading each document's Key Metrics, Credit Risk, Market Risk and "
-    "Operational Risk sections in full, not assumed absent."
+    "FY2021's own Pillar 3 disclosure, p.18, provides the following RWA category breakdown (all £'000): "
+    "Credit Risk 106,588; Counterparty Risk (Derivatives) 1,720; Total Credit Risk Weighted Assets 108,308; "
+    "Settlement Risk and Credit Value Adjustment (CVA) 1,047; Market Risk 5,110; Operational Risk 72,390; "
+    "Total Risk Weighted Assets 186,856. The other years' documents disclose aggregate RWA only in the "
+    "reviewed sections, so their category rows remain not publicly disclosed."
 )
 bw.add_rwa_breakdown_sheet(
     title="Crown Agents Bank Limited — RWA Breakdown",
-    subtitle="Not publicly disclosed. See source note at bottom.",
-    rows=[("DATA", "Not publicly disclosed", {})],
+    subtitle="FY2021 category breakdown disclosed; other years aggregate-only. See source note at bottom.",
+    rows=[
+        ("DATA", "Credit risk", {"FY2021": 106588}),
+        ("DATA", "Counterparty risk (derivatives)", {"FY2021": 1720}),
+        ("TOTAL", "Total credit risk weighted assets", {"FY2021": 108308}),
+        ("DATA", "Settlement risk and CVA", {"FY2021": 1047}),
+        ("DATA", "Market risk", {"FY2021": 5110}),
+        ("DATA", "Operational risk", {"FY2021": 72390}),
+        ("TOTAL", "Total risk weighted assets", RWA),
+    ],
     sources_text=p3_sources() + "\n\n" + RWA_BREAKDOWN_NOTE,
     first_col_width=54,
     source_height=280,

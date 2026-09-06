@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2017"]
 AR_URLS = {
     "FY2025": "https://www.lloydsbankinggroup.com/assets/pdfs/investors/financial-performance/lloyds-bank-plc/2025/q4/2025-lb-annual-report.pdf",
     "FY2024": "https://www.lloydsbankinggroup.com/assets/pdfs/investors/financial-performance/lloyds-bank-plc/2024/q4/2024-lb-annual-report.pdf",
@@ -21,6 +21,7 @@ P3_URLS = {
     "FY2021": "https://www.lloydsbankinggroup.com/assets/pdfs/investors/financial-performance/lloyds-bank-plc/2021/full-year/2021-lb-fy-pillar3.pdf",
 }
 CH_URL = "https://find-and-update.company-information.service.gov.uk/company/00002065"
+AR2017_URL = "https://www.lloydsbankinggroup.com/assets/pdfs/investors/financial-performance/lloyds-bank-plc/2017/2017-lb-annual-report-v2.pdf"
 
 ENTITY_NOTE = (
     "Entity: Lloyds Bank plc, company number 00002065, FRN 119278, LEI "
@@ -34,7 +35,12 @@ def annual_sources(kind):
     pages = {"FY2025": 79, "FY2024": 81, "FY2023": 82, "FY2022": 82, "FY2021": 82}
     urls = AR_URLS if kind == "annual" else P3_URLS
     label = "Annual Report and Accounts" if kind == "annual" else "Year-End Pillar 3 disclosure"
-    return "\n".join([f"{y}: Lloyds Bank plc {label}, p.{pages[y]} — {urls[y]}" for y in YEARS] + [ENTITY_NOTE, f"Companies House — {CH_URL}"])
+    lines = [f"{y}: Lloyds Bank plc {label}, p.{pages[y]} — {urls[y]}" for y in YEARS if y in pages and y in urls]
+    if kind == "annual":
+        lines.append(f"FY2017: Lloyds Bank plc Annual Report and Accounts 2017, pp.21-27 — {AR2017_URL}")
+    else:
+        lines.append("FY2017: no historical Pillar 3 disclosure located; regulatory metrics left blank.")
+    return "\n".join(lines + [ENTITY_NOTE, f"Companies House — {CH_URL}"])
 
 
 bw = BankWorkbook("Lloyds Bank plc", YEARS, header_color="005A8D")
@@ -478,5 +484,22 @@ bw.add_overview_sheet(
     ], cash_flow_unit="£m",
     ratios=[("CET1 Ratio", {y: v for y, v in zip(YEARS, ANNUAL["CET1 Ratio"])}), ("Tier 1 Ratio", {y: v for y, v in zip(YEARS, ANNUAL["Tier 1 Ratio"])}), ("Total Capital Ratio", {y: v for y, v in zip(YEARS, ANNUAL["Total Capital Ratio"])}), ("Leverage Ratio", {y: v for y, v in zip(YEARS, ANNUAL["Leverage Ratio"])}), ("LCR", {y: v for y, v in zip(YEARS, ANNUAL["LCR"])})],
     note="Annual figures are consolidated Lloyds Bank plc Group metrics; interim observations are on the Interim Pillar 3 sheet.")
+
+# FY2017 extension from Lloyds Bank plc Annual Report 2017 (official report,
+# pp.21-27), £m. The report predates the current Pillar 3 series; absent
+# historical regulatory metrics remain blank.
+_fy17 = {
+    "Balance Sheet": {"Cash and balances at central banks": 58521,
+                      "Loans and advances to customers": 465555,
+                      "Total assets": 823030},
+    "Profit & Loss": {"Total income": 17352, "Profit before tax": 5035},
+}
+for _sheet, _values in _fy17.items():
+    _ws = bw.wb[_sheet]
+    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
+    _col = 1 + YEARS.index("FY2017") + 1
+    for _label, _value in _values.items():
+        if _label in _labels:
+            _ws.cell(_labels[_label], _col, _value)
 
 bw.save("/Users/armaan/code/katalysis/banks/LLOYDS BANK FINANCIALS.xlsx")

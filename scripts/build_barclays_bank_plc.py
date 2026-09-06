@@ -26,7 +26,8 @@ def p3_sources(note_extra=""):
     return (
         "Sources — Barclays Bank PLC solo-consolidated capital/liquidity disclosures, from the 'Treasury and "
         "Capital risk' section of the Risk review, as filed with Companies House:\n"
-        f"FY2025 & FY2024: Barclays Bank PLC Annual Report 2025, p.231-233 (Capital risk / Liquidity risk) — {AR25_URL}\n"
+        f"FY2025 & FY2024: Barclays Bank PLC Annual Report 2025, p.220-222 (Liquidity risk: Liquidity Pool/LCR/NSFR) "
+        f"and p.231 (Capital risk: Capital ratios/resources/RWAs/Leverage ratio) — {AR25_URL}\n"
         f"FY2023: Barclays Bank PLC Annual Report 2024, p.213-222 (Liquidity risk / Capital risk) — {AR24_URL}\n"
         f"FY2022 & FY2021: Barclays Bank PLC Annual Report 2022, p.115-126 (Liquidity risk / Capital risk) — {AR22_URL}"
         + note_extra
@@ -48,9 +49,9 @@ STATEMENTS_SOURCES = (
     "FY2022 Annual Report), consistent with the Cash Flow Statement and Pillar 3 sheets in this workbook. "
     "'UK regulatory levies' was not a separate income statement line until FY2023 - blank for FY2022/FY2021 rather "
     "than folded into another line. FY2021's other comprehensive income detail (currency translation, FVOCI, cash "
-    "flow hedge, retirement benefit, own credit rows) was not sourced within this batch's reviewed pages of the "
-    "FY2022 Annual Report - only that year's Profit after tax and Total comprehensive income (from the Statement "
-    "of Changes in Equity) are populated; the underlying OCI note itself was not reviewed."
+    "flow hedge, retirement benefit, own credit rows) is sourced from the same FY2022 Annual Report's restated "
+    "2021 comparative column in its Consolidated statement of comprehensive income (p.166); this cross-checks "
+    "exactly against the FY2021 movements in the Statement of Changes in Equity."
 )
 
 balance_sheet_rows = [
@@ -129,22 +130,22 @@ income_statement_rows = [
     ("DATA", "Taxation", {"FY2025": -1285, "FY2024": -999, "FY2023": -662, "FY2022": -485, "FY2021": -830}),
     ("TOTAL", "Profit after tax", {"FY2025": 4658, "FY2024": 3748, "FY2023": 3561, "FY2022": 4382, "FY2021": 4588}),
     ("SECTION", "Other comprehensive income/(loss)", {}),
-    ("DATA", "Currency translation differences", {"FY2025": -1107, "FY2024": -143, "FY2023": -1242, "FY2022": 2411}),
-    ("DATA", "Currency translation tax", {"FY2025": -49, "FY2024": 50, "FY2023": 33, "FY2022": 0}),
-    ("DATA", "FVOCI debt securities: net gains/(losses) from changes in fair value", {"FY2025": 695, "FY2024": -840, "FY2023": 1142, "FY2022": -6376}),
-    ("DATA", "FVOCI debt securities: net losses/(gains) transferred to net profit on disposal", {"FY2025": 201, "FY2024": -134, "FY2023": -102, "FY2022": 68}),
-    ("DATA", "FVOCI debt securities: net (gains)/losses related to (releases of) impairment", {"FY2025": -3, "FY2024": 1, "FY2023": -2, "FY2022": 8}),
-    ("DATA", "FVOCI debt securities: net gains/(losses) due to fair value hedging", {"FY2025": 30, "FY2024": 318, "FY2023": -849, "FY2022": 4627}),
-    ("DATA", "FVOCI debt securities: tax", {"FY2025": -256, "FY2024": 181, "FY2023": -54, "FY2022": 449}),
-    ("DATA", "Cash flow hedging reserve: net gains/(losses) from changes in fair value", {"FY2025": 2654, "FY2024": -1349, "FY2023": 2506, "FY2022": -7290}),
-    ("DATA", "Cash flow hedging reserve: net (gains)/losses transferred to net profit", {"FY2025": -506, "FY2024": 1950, "FY2023": 1158, "FY2022": 543}),
-    ("DATA", "Cash flow hedging reserve: tax", {"FY2025": -607, "FY2024": -154, "FY2023": -1002, "FY2022": 1808}),
-    ("TOTAL", "Other comprehensive income/(loss) that may be recycled to profit or loss", {"FY2025": 1052, "FY2024": -120, "FY2023": 1588, "FY2022": -3752}),
-    ("DATA", "Retirement benefit remeasurements", {"FY2025": -13, "FY2024": -419, "FY2023": -1182, "FY2022": -755}),
-    ("DATA", "Own credit", {"FY2025": 89, "FY2024": -1131, "FY2023": -983, "FY2022": 2092}),
-    ("DATA", "Own credit / retirement benefit tax", {"FY2025": -29, "FY2024": 430, "FY2023": 609, "FY2022": -156}),
-    ("TOTAL", "Other comprehensive income/(loss) not recycled to profit or loss", {"FY2025": 47, "FY2024": -1120, "FY2023": -1556, "FY2022": 1181}),
-    ("TOTAL", "Other comprehensive income/(loss) for the year", {"FY2025": 1099, "FY2024": -1240, "FY2023": 32, "FY2022": -2571}),
+    ("DATA", "Currency translation differences", {"FY2025": -1107, "FY2024": -143, "FY2023": -1242, "FY2022": 2411, "FY2021": -155}),
+    ("DATA", "Currency translation tax", {"FY2025": -49, "FY2024": 50, "FY2023": 33, "FY2022": 0, "FY2021": 0}),
+    ("DATA", "FVOCI debt securities: net gains/(losses) from changes in fair value", {"FY2025": 695, "FY2024": -840, "FY2023": 1142, "FY2022": -6376, "FY2021": -1383}),
+    ("DATA", "FVOCI debt securities: net losses/(gains) transferred to net profit on disposal", {"FY2025": 201, "FY2024": -134, "FY2023": -102, "FY2022": 68, "FY2021": -248}),
+    ("DATA", "FVOCI debt securities: net (gains)/losses related to (releases of) impairment", {"FY2025": -3, "FY2024": 1, "FY2023": -2, "FY2022": 8, "FY2021": -6}),
+    ("DATA", "FVOCI debt securities: net gains/(losses) due to fair value hedging", {"FY2025": 30, "FY2024": 318, "FY2023": -849, "FY2022": 4627, "FY2021": 1105}),
+    ("DATA", "FVOCI debt securities: tax", {"FY2025": -256, "FY2024": 181, "FY2023": -54, "FY2022": 449, "FY2021": 170}),
+    ("DATA", "Cash flow hedging reserve: net gains/(losses) from changes in fair value", {"FY2025": 2654, "FY2024": -1349, "FY2023": 2506, "FY2022": -7290, "FY2021": -2212}),
+    ("DATA", "Cash flow hedging reserve: net (gains)/losses transferred to net profit", {"FY2025": -506, "FY2024": 1950, "FY2023": 1158, "FY2022": 543, "FY2021": -327}),
+    ("DATA", "Cash flow hedging reserve: tax", {"FY2025": -607, "FY2024": -154, "FY2023": -1002, "FY2022": 1808, "FY2021": 740}),
+    ("TOTAL", "Other comprehensive income/(loss) that may be recycled to profit or loss", {"FY2025": 1052, "FY2024": -120, "FY2023": 1588, "FY2022": -3752, "FY2021": -2316}),
+    ("DATA", "Retirement benefit remeasurements", {"FY2025": -13, "FY2024": -419, "FY2023": -1182, "FY2022": -755, "FY2021": 1299}),
+    ("DATA", "Own credit", {"FY2025": 89, "FY2024": -1131, "FY2023": -983, "FY2022": 2092, "FY2021": -105}),
+    ("DATA", "Own credit / retirement benefit tax", {"FY2025": -29, "FY2024": 430, "FY2023": 609, "FY2022": -156, "FY2021": -563}),
+    ("TOTAL", "Other comprehensive income/(loss) not recycled to profit or loss", {"FY2025": 47, "FY2024": -1120, "FY2023": -1556, "FY2022": 1181, "FY2021": 631}),
+    ("TOTAL", "Other comprehensive income/(loss) for the year", {"FY2025": 1099, "FY2024": -1240, "FY2023": 32, "FY2022": -2571, "FY2021": -1685}),
     ("TOTAL", "Total comprehensive income for the year, net of tax", {"FY2025": 5757, "FY2024": 2508, "FY2023": 3593, "FY2022": 1811, "FY2021": 2903}),
 ]
 
@@ -503,15 +504,13 @@ metric(
 metric(
     "NSFR", "£bn / %",
     [
-        ("Total Available Stable Funding (£bn)", {"FY2025": 381, "FY2024": 372, "FY2023": 339}),
-        ("Total Required Stable Funding (£bn)", {"FY2025": 337, "FY2024": 333, "FY2023": 308}),
+        ("Total Available Stable Funding (£bn)", {"FY2025": 381, "FY2024": 372, "FY2023": 339, "FY2022": 310}),
+        ("Total Required Stable Funding (£bn)", {"FY2025": 337, "FY2024": 333, "FY2023": 308, "FY2022": 288}),
         ("Net Stable Funding Ratio (%)", {"FY2025": "113%", "FY2024": "112%", "FY2023": "110%", "FY2022": "108%", "FY2021": "Not publicly disclosed"}),
     ],
     p3_sources(),
     note="NSFR is an average of the last four spot quarter-end ratios. It was not a UK regulatory requirement "
-         "as at FY2021 (the UK NSFR regime took effect from 1 January 2022), so no FY2021 figure is available. "
-         "Available/Required Stable Funding £bn breakdown was not located for FY2022 within the reviewed pages "
-         "(only the ratio, 108%, was disclosed there); the ratio alone is reported for that year.",
+         "as at FY2021 (the UK NSFR regime took effect from 1 January 2022), so no FY2021 figure is available.",
 )
 
 bw.add_not_disclosed_metric_sheets(

@@ -176,6 +176,35 @@ class NormalizationTests(unittest.TestCase):
     def test_pairwise_trend_works_for_available_years_without_hardcoded_window(self):
         self.assertEqual(pairwise_trend({"1": {2020: 1, 2021: 2}}, 2020, 2021)["up"], 1)
 
+    def test_metric_series_and_pairwise_trend_handle_two_banks_of_different_window_lengths(self):
+        """The historical-depth (HD-series) extension effort gave some real
+        banks a 10-year window (FY2016-FY2025) against most banks' standard 5
+        (FY2021-FY2025). Existing tests here only ever use one FRN, or two
+        FRNs sharing identical years - neither exercises build_metric_series
+        grouping two genuinely different-length windows into independent
+        per-FRN series, nor pairwise_trend being asked about an older year
+        pair that only the long-window bank has on file."""
+        observations = [
+            normalize_observation(row(frn="1", row_label="CET1 ratio", year=f"FY{year}", value_numeric=str(10 + i)))
+            for i, year in enumerate(range(2016, 2026))  # long-window bank: 10 years, values 10..19
+        ] + [
+            normalize_observation(row(frn="2", row_label="CET1 ratio", year=f"FY{year}", value_numeric=str(20 + i)))
+            for i, year in enumerate(range(2021, 2026))  # short-window bank: 5 years, values 20..24
+        ]
+        series = build_metric_series(observations, "CET1 Ratio")
+        self.assertEqual(series["1"], {2016 + i: 10.0 + i for i in range(10)})
+        self.assertEqual(series["2"], {2021 + i: 20.0 + i for i in range(5)})
+
+        # FY2016->FY2017 pair: only the long-window bank has both years.
+        old_pair = pairwise_trend(series, 2016, 2017)
+        self.assertEqual(old_pair["n"], 1)
+        self.assertEqual(old_pair["up"], 1)
+
+        # FY2021->FY2022 pair: both banks have both years.
+        shared_pair = pairwise_trend(series, 2021, 2022)
+        self.assertEqual(shared_pair["n"], 2)
+        self.assertEqual(shared_pair["up"], 2)
+
     def test_outlier_has_explainable_level_and_movement_reasons(self):
         observations = []
         for frn, value in (("1", 10), ("2", 11), ("3", 12), ("4", 100)):

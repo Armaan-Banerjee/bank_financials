@@ -1,7 +1,7 @@
 import unittest
 
 from in011_deliverables import default_bank_mix, render_html_analysis, render_pdf_analysis_lines
-from in024_trajectory import _metric_rows, direction, fixed_panel_mobility, score_fingerprint
+from in024_trajectory import _metric_rows, _trajectory_record, direction, fixed_panel_mobility, score_fingerprint
 
 
 class TrajectoryTests(unittest.TestCase):
@@ -62,6 +62,53 @@ class TrajectoryTests(unittest.TestCase):
         ranks = {item["frn"]: item for item in panel["records"]}
         self.assertEqual(ranks["1"]["start_rank"], 2)
         self.assertEqual(ranks["1"]["end_rank"], 1)
+
+    def test_trajectory_record_marks_a_short_window_banks_missing_years_explicitly(self):
+        """The historical-depth (HD-series) extension effort pools ALL
+        banks' years into one global x-axis (build_in024_payload's own
+        `years = sorted({... for row in rows ...})`), so a short-window
+        bank's trajectory must show "missing" - not a fabricated/padded
+        value - for every pooled year it genuinely doesn't have on file,
+        while a long-window bank's real values for those same years must
+        come through untouched."""
+        selected = {
+            ("1", 2016): {"value_numeric": 10, "reporting_basis": "entity", "basis_note": "entity"},
+            ("1", 2021): {"value_numeric": 15, "reporting_basis": "entity", "basis_note": "entity"},
+            # bank "2" (the short-window bank) has no 2016 observation at all.
+            ("2", 2021): {"value_numeric": 20, "reporting_basis": "entity", "basis_note": "entity"},
+        }
+        pooled_years = [2016, 2021]  # the union across both banks
+        long_record = _trajectory_record(("1", "Long Window Bank"), "CET1 ratio", selected, pooled_years)
+        short_record = _trajectory_record(("2", "Short Window Bank"), "CET1 ratio", selected, pooled_years)
+
+        long_points = {p["year"]: p for p in long_record["years"]}
+        self.assertEqual(long_points[2016]["status"], "numeric")
+        self.assertEqual(long_points[2016]["value"], 10.0)
+        self.assertEqual(long_points[2021]["value"], 15.0)
+
+        short_points = {p["year"]: p for p in short_record["years"]}
+        self.assertEqual(short_points[2016]["status"], "missing")
+        self.assertIsNone(short_points[2016]["value"])
+        self.assertEqual(short_points[2021]["status"], "numeric")
+        self.assertEqual(short_points[2021]["value"], 20.0)
+
+    def test_fixed_panel_mobility_excludes_a_bank_missing_one_of_the_pair_years(self):
+        """A rank-mobility panel for an OLDER year pair (e.g. FY2016->FY2017,
+        only reachable via an HD-series-extended bank) must exclude any
+        bank that doesn't have both years on file, not crash or silently
+        misrank it - the short-window bank here has no FY2016 at all."""
+        def row(frn, year, value, basis="entity"):
+            return {"frn": frn, "sheet": "CET1 Ratio", "fiscal_year": year,
+                    "annual_eligible": True, "value_status": "numeric",
+                    "value_numeric": value, "value_raw": f"{value}%", "reporting_basis": basis,
+                    "period_key": f"FY{year}", "row_label": "CET1 ratio"}
+        rows = [
+            row("1", 2016, 10), row("1", 2017, 11),  # long-window bank: has both years
+            row("2", 2017, 20),                       # short-window bank: FY2016 missing entirely
+        ]
+        panel = fixed_panel_mobility(rows, "CET1 ratio", "CET1 Ratio", [2016, 2017])[0]
+        self.assertEqual(panel["n"], 1)
+        self.assertEqual([r["frn"] for r in panel["records"]], ["1"])
 
     def test_trajectory_visuals_expose_filter_and_pdf_table_fallback(self):
         trajectory = {"bank": "Example Bank", "frn": "1", "metric": "CET1 ratio",

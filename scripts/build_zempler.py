@@ -108,9 +108,12 @@ STATEMENTS_SOURCES = (
     "Presentation note: FY2024-FY2026 use a 'Total operating income / Net operating income' P&L structure "
     "(splitting Interest and Fee income/expense into separate net subtotals); FY2022-FY2023 use the same structure "
     "but without a 'Loss on derivatives' line (introduced FY2024). The Balance Sheet's asset-side structure also "
-    "changed: FY2022-FY2023 combine several lines into 'Other assets' and 'Property, plant and equipment' that are "
-    "shown separately (Deferred tax, Prepayments and accrued income, Tangible fixed assets, Derivative financial "
-    "assets) from FY2024 onward - blank cells reflect lines not separately disclosed that year, not zero balances. "
+    "changed: FY2022-FY2023 combine several lines into 'Other assets' (Deferred tax, Prepayments and accrued "
+    "income, Derivative financial assets) that are shown separately from FY2024 onward - blank cells for those "
+    "specific lines reflect items not separately disclosed that year, not zero balances. 'Tangible fixed assets / "
+    "Property, plant and equipment' is its own distinct line in the FY2023 Annual Report's own Statement of "
+    "Financial Position for both FY2023 (£3,528k) and its FY2022 comparative (£4,141k restated) - not combined "
+    "into Other assets - and both years' Total assets figures already include it. "
     "All TOTAL rows (Total assets/liabilities/equity, Profit before/after taxation, Total comprehensive income) tie "
     "exactly across Balance Sheet <-> Equity Statement <-> P&L for every year, including a zero-plug-row equity "
     "roll-forward chaining from the 31 March 2021 opening balance through to 31 March 2026.\n\n"
@@ -128,7 +131,7 @@ bs_rows = [
     ("DATA", "Loans and advances to customers", {"FY2026": 35122, "FY2025": 25452, "FY2024": 28225, "FY2023": 22593, "FY2022": 21779}),
     ("DATA", "Deferred tax", {"FY2026": 1781, "FY2025": 3051, "FY2024": 4730}),
     ("DATA", "Intangible assets", {"FY2026": 4420, "FY2025": 5827, "FY2024": 5986, "FY2023": 4520, "FY2022": 2591}),
-    ("DATA", "Tangible fixed assets / Property, plant and equipment", {"FY2026": 1247, "FY2025": 2177, "FY2024": 3112}),
+    ("DATA", "Tangible fixed assets / Property, plant and equipment", {"FY2026": 1247, "FY2025": 2177, "FY2024": 3112, "FY2023": 3528, "FY2022": 4141}),
     ("DATA", "Other assets", {"FY2026": 6199, "FY2025": 7480, "FY2024": 19172, "FY2023": 16932, "FY2022": 14891}),
     ("DATA", "Prepayments and accrued income", {"FY2026": 1870, "FY2025": 1989, "FY2024": 2292}),
     ("TOTAL", "Total assets", {"FY2026": 780158, "FY2025": 681923, "FY2024": 616752, "FY2023": 558055, "FY2022": 493925}),

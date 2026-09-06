@@ -55,6 +55,10 @@ def opening_cash(usd):
 CH_BASE = "https://find-and-update.company-information.service.gov.uk/company/04661188/filing-history"
 AR2025_URL = f"{CH_BASE}/MzUzMzg1ODU2NWFkaXF6a2N4/document?format=pdf&download=0"  # filed 25 Jul 2026, covers FY2025+FY2024
 AR2023_URL = f"{CH_BASE}/MzQxOTU1NjA5M2FkaXF6a2N4/document?format=pdf&download=0"  # filed 26 Apr 2024, covers FY2023+FY2022
+P3_2024_URL = "https://fidbank.co.uk/assets/Uploads/NewFolder/FidBank-UK-Pillar-3-Disclosure-2024.pdf"
+P3_2023_URL = "https://fidbank.co.uk/assets/Uploads/NewFolder/FidBank-UK-Pillar-3-Disclosure-2023.pdf"
+P3_2022_URL = "https://fidbank.co.uk/assets/Uploads/NewFolder/FBUK-Pillar-3-Disclosure-2022.pdf"
+P3_2021_URL = "https://fidbank.co.uk/assets/Uploads/NewFolder/FBUK-Pillar-3-Disclosure-2021.pdf"
 
 ENTITY_NOTE = (
     "FidBank UK Limited (company 04661188, FRN 400712) is a wholly-owned subsidiary of Fidelity Bank Plc, "
@@ -125,19 +129,13 @@ def p3_sources(extra=""):
         f"2025's own 5-year \"Financial Highlights\" comparative table (p.6), cross-checked against the "
         f"FY2023 Annual Report's own 5-year Financial Highlights table (p.3), which independently confirms "
         f"the same FY2023/FY2022/FY2021 figures - {AR2025_URL} ; {AR2023_URL}\n\n"
-        "No standalone Pillar 3 document exists for this entity - no capital/liquidity-specific "
-        "investor-relations or regulatory-disclosures page was found on FidBank UK's own site, and the "
-        "Annual Report itself contains no dedicated Pillar 3/KM1-style table. All capital/liquidity figures "
-        "come from the Annual Report's own Financial Highlights and Performance Metrics pages, which give "
-        "only a single combined \"Capital Ratio\" (defined explicitly in the source as Shareholders' Funds "
-        "÷ Risk Weighted Assets - not necessarily identical to a standard regulatory Total Capital "
-        "Ratio calculation, since the numerator is an accounting rather than a regulatory-capital figure; "
-        "used here as the closest available proxy, same treatment as Bank Saderat's \"Capital Cover\" "
-        "elsewhere in this project) and, from FY2024 only, an LCR percentage. No CET1/Tier 1 breakdown, no "
-        "RWA amount, no Leverage Ratio %, no NSFR, and no MREL figure were found anywhere in any of the 3 "
-        "Annual Reports reviewed, despite the Strategic Report's Capital Risk section confirming a Leverage "
-        "Ratio is tracked internally (\"tracked daily...reported quarterly to the Board\") - its actual value "
-        "is never disclosed.\n"
+        f"Pillar 3 sources: FY2024 p.9 - {P3_2024_URL}; FY2023 p.9 - {P3_2023_URL}; "
+        f"FY2022 pp.6,10 - {P3_2022_URL}; FY2021 pp.6,10 - {P3_2021_URL}.\n\n"
+        "Primary-source correction (HD-064): FidBank UK's own Reporting Archive publishes standalone, "
+        "entity-level Pillar 3 disclosures for FY2021-FY2024. The FY2023/FY2024 UK KM1 tables disclose "
+        "CET1, Tier 1, total capital, RWA, capital ratios, leverage, LCR and NSFR; FY2021/FY2022's older "
+        "disclosures give the capital base and RWA components. These replace the prior incorrect blanket "
+        "claim that no Pillar 3 document existed. MREL remains not disclosed.\n"
         + extra
     )
 
@@ -454,51 +452,57 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 CAPITAL_RATIO = {"FY2025": "21.46%", "FY2024": "43%", "FY2023": "98%", "FY2022": "54%", "FY2021": "40%"}
 LCR = {"FY2025": "178%", "FY2024": "243%"}
-CAPITAL_AMOUNT = stock({"FY2025": 55665, "FY2024": 55005, "FY2023": 57034, "FY2022": 35420})
+CAPITAL_AMOUNT = stock({"FY2025": 55665, "FY2024": 55029, "FY2023": 57034, "FY2022": 35045, "FY2021": 40718})
+REGULATORY_RWA = stock({"FY2024": 133310, "FY2023": 60485, "FY2022": 65571, "FY2021": 102825})
+CET1_RATIO = {"FY2024": "41.28%", "FY2023": "94.29%", "FY2022": "53.45%", "FY2021": "39.60%"}
+LEVERAGE_RATIO = {"FY2024": "19.45%", "FY2023": "29.83%", "FY2022": "35.78%"}
+P3_LCR = {"FY2024": "243.39%", "FY2023": "233.04%", "FY2022": "379.92%"}
+NSFR = {"FY2024": "211.78%", "FY2023": "335.67%", "FY2022": "363.79%"}
 
 metric("CET1 Capital", "£'000 (conv. from USD)", [("CET1 Capital (= Total Regulatory Capital)", CAPITAL_AMOUNT)],
        p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 
-bw.add_not_disclosed_metric_sheets(["CET1 Ratio"], p3_sources(), per_note={"CET1 Ratio": NOT_DISCLOSED_NOTE})
+metric("CET1 Ratio", "% of RWA", [("CET1 ratio", CET1_RATIO)], p3_sources(),
+       note="FY2024-FY2022 are FidBank UK's own UK KM1 disclosures. FY2021 is calculated from its own disclosed CET1 capital and Pillar 1 RWA components; the Annual Report's 40% headline is rounded.")
 
 metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Total Tier 1 Capital", CAPITAL_AMOUNT)],
        p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 
-bw.add_not_disclosed_metric_sheets(["Tier 1 Ratio"], p3_sources(), per_note={"Tier 1 Ratio": NOT_DISCLOSED_NOTE})
+metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", CET1_RATIO)], p3_sources(),
+       note="FidBank has no AT1 or Tier 2 in the disclosed periods, so Tier 1 equals CET1.")
 
 metric("Total Capital", "£'000 (conv. from USD)", [("Total Regulatory Capital", CAPITAL_AMOUNT)],
        p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 
-metric("Total Capital Ratio", "%", [("Capital Ratio (Shareholders' Funds ÷ RWA)", CAPITAL_RATIO)],
-       p3_sources(), note=CAPITAL_RATIO_NOTE)
+metric("Total Capital Ratio", "%", [("Total capital ratio", {"FY2024": "41.28%", "FY2023": "94.29%", "FY2022": "53.45%", "FY2021": "39.60%"}),
+                                         ("Annual Report capital-ratio proxy (Shareholders' Funds ÷ RWA)", CAPITAL_RATIO)],
+       p3_sources(), note="The first row is the standard regulatory ratio from FidBank UK's own Pillar 3 disclosures. The Annual Report's different accounting-equity proxy is retained separately for comparability.")
 
-bw.add_not_disclosed_metric_sheets(["Total RWAs"], p3_sources(), per_note={"Total RWAs": NOT_DISCLOSED_NOTE})
+metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", REGULATORY_RWA)], p3_sources(),
+       note="FY2024-FY2022 are directly disclosed in UK KM1. FY2021 is the sum of the source's own Pillar 1 capital requirements divided by 8%; it reconciles to the Annual Report's rounded 40% capital proxy.")
 
 bw.add_rwa_breakdown_sheet(
     title="FidBank UK Limited — RWA Breakdown",
-    subtitle="Not publicly disclosed - see note below.",
-    rows=[("DATA", "Not publicly disclosed", {})],
-    sources_text=p3_sources(NOT_DISCLOSED_NOTE + " No RWA figure of any kind - aggregate or by category - "
-                             "appears in any of the 3 Annual Reports reviewed, despite the Capital adequacy "
-                             "note (30(f)/31(f)) disclosing actual Regulatory Capital AMOUNTS (see CET1/"
-                             "Tier 1/Total Capital sheets) - RWA itself is never stated, only the entity's "
-                             "own headline 'Capital Ratio' proxy (Total Capital Ratio sheet)."),
+    subtitle="FidBank UK's own Pillar 3 disclosures; £'000 converted from USD.",
+    rows=[
+        ("DATA", "Credit risk", stock({"FY2023": 46743, "FY2022": 47963, "FY2021": 79725})),
+        ("DATA", "Operational risk", stock({"FY2023": 10450, "FY2022": 15525, "FY2021": 21300})),
+        ("DATA", "Market risk", stock({"FY2023": 3292, "FY2022": 2075, "FY2021": 1800})),
+        ("TOTAL", "Total", REGULATORY_RWA),
+    ],
+    sources_text=p3_sources("FY2023 components are direct from its own Pillar 3 Table 2. FY2022/FY2021 components are each disclosed Pillar 1 capital requirement ÷ 8%; immaterial rounding differences versus the separately disclosed aggregate are retained in the Total row."),
+    unit_suffix=" (£'000, conv. from USD)",
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["Leverage Ratio"], p3_sources(),
-    per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE + " The Strategic Report's Capital Risk section confirms "
-                                "a Leverage Ratio IS tracked internally (\"tracked daily...reported quarterly "
-                                "to the Board\"), but its actual value is never stated in any filing reviewed."},
-)
+metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)], p3_sources(),
+       note="Directly disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables. FY2021 remains blank: its older Pillar 3 disclosure does not provide a leverage ratio.")
 
-metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)], p3_sources(),
-       note="Only disclosed for FY2025 and FY2024 (Performance Metrics page, p.7 of the FY2025 Annual "
-            "Report) - not found in the FY2023 Annual Report or anywhere else for FY2023/FY2022/FY2021.")
+metric("LCR", "%", [("Liquidity Coverage Ratio", {**LCR, **P3_LCR})], p3_sources(),
+       note="FY2024-FY2022 values are directly disclosed in FidBank UK's UK KM1 tables; FY2025 remains sourced from its Annual Report. FY2021's older disclosure has no LCR value.")
 
-bw.add_not_disclosed_metric_sheets(
-    ["NSFR", "MREL Ratio"], p3_sources(), per_note={m: NOT_DISCLOSED_NOTE for m in ["NSFR", "MREL Ratio"]},
-)
+metric("NSFR", "%", [("Net stable funding ratio", NSFR)], p3_sources(),
+       note="Directly disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables. FY2021 and FY2025 remain blank because no entity-level value was located in their respective disclosures.")
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE})
 
 # ---------------------------------------------------------------
 # Overview sheet

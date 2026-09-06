@@ -1,0 +1,1048 @@
+{
+  "monzo": {
+    "status": "verified",
+    "asset": "monzo.svg",
+    "source_url": "https://static-assets.monzo.com/monzo-com/2fb55011621098cdf4fff04bbc835ab79ac6415f/_next/static/media/favicon.4c6ebc6f.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Published by Monzo as the favicon for https://monzo.com/.",
+    "use_note": "Internal prototype only; public availability is not a licence for broader reuse."
+  },
+  "rci-bank-uk": {
+    "status": "verified",
+    "asset": "rci-bank-uk.svg",
+    "source_url": "https://itunes.apple.com/search?term=RCI%20Bank%20UK",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for RCI Bank UK's savings app",
+    "use_note": "Swapped wordmark for cyan circular app icon for legibility at icon-tile size"
+  },
+  "recognise-bank": {
+    "status": "verified",
+    "asset": "recognise-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Recognise%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Recognise Bank",
+    "use_note": "Swapped wordmark for purple abstract-mark app icon for legibility"
+  },
+  "smbc": {
+    "status": "verified",
+    "asset": "smbc.svg",
+    "source_url": "https://www.smbcgroup.com/img/favicon.ico",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official SMBC Group favicon mark, published on smbcgroup.com.",
+    "use_note": "Swapped from the header wordmark for legibility: that file draws 'SMBC' in white with no background, meant for display on a dark green site background, and disappeared against the icon tile's light-grey background. Maps Sumitomo Mitsui Banking Corporation London Branch to the SMBC group brand."
+  },
+  "tandem": {
+    "status": "verified",
+    "asset": "tandem.svg",
+    "source_url": "https://itunes.apple.com/search?term=Tandem%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Tandem Money",
+    "use_note": "Swapped wordmark for green 't' monogram app icon for legibility"
+  },
+  "triodos": {
+    "status": "verified",
+    "asset": "triodos.svg",
+    "source_url": "https://itunes.apple.com/search?term=Triodos%20Bank%20UK",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Triodos Bank UK",
+    "use_note": "Swapped wordmark for green/purple leaf-mark app icon for legibility"
+  },
+  "union-bancaire-privee-uk": {
+    "status": "verified",
+    "asset": "union-bancaire-privee-uk.svg",
+    "source_url": "https://itunes.apple.com/search?term=Union%20Bancaire%20Privee",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Union Bancaire Privee",
+    "use_note": "Swapped wordmark for teal 'UBP' monogram app icon for legibility"
+  },
+  "redwood-bank": {
+    "status": "verified",
+    "asset": "redwood-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Redwood%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Redwood Bank",
+    "use_note": "Swapped wordmark for navy 'R' monogram app icon for legibility"
+  },
+  "reliance-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Reliance Bank site did not publish a suitable SVG mark in the reviewed page."
+  },
+  "santander-financial-services": {
+    "status": "verified",
+    "asset": "santander-financial-services.svg",
+    "source_url": "https://www.caterallen.co.uk/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Santander Group app-icon flame mark, published on caterallen.co.uk (a Santander UK subsidiary site serving the same group icon).",
+    "use_note": "Swapped from the full wordmark for legibility, same as santander-uk. Maps Santander Financial Services to the parent Santander UK flame logo; no distinct mark of its own exists."
+  },
+  "schroder": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Schroders site exposed an icon rather than a suitable bank brand SVG in the reviewed page."
+  },
+  "state-bank-of-india-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official SBI UK site certificate did not match its hostname during source review."
+  },
+  "streambank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Streambank site did not publish a suitable SVG mark in the reviewed page."
+  },
+  "td-bank-europe": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official TD site did not publish a suitable SVG mark for the European entity in the reviewed page."
+  },
+  "the-bank-of-london-group": {
+    "status": "verified",
+    "asset": "the-bank-of-london-group.svg",
+    "source_url": "https://itunes.apple.com/search?term=The%20Bank%20of%20London",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for The Bank of London",
+    "use_note": "Swapped wordmark for blue abstract 'b' app icon for legibility"
+  },
+  "this-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official This Bank domain did not resolve during source review."
+  },
+  "turkish-bank-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Turkish Bank UK site did not publish a suitable SVG mark in the reviewed page."
+  },
+  "uba-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official UBA Group site did not publish a suitable UK-entity SVG mark in the reviewed page."
+  },
+  "union-bank-of-india-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Union Bank of India UK site timed out during source review."
+  },
+  "united-national": {
+    "status": "verified",
+    "asset": "united-national.svg",
+    "source_url": "https://itunes.apple.com/search?term=UBL%20UK",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for UBL UK (United National Bank's operating brand)",
+    "use_note": "Swapped wordmark for blue 'UBL' oval monogram app icon for legibility"
+  },
+  "united-trust-bank": {
+    "status": "verified",
+    "asset": "united-trust-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=United%20Trust%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for United Trust Bank",
+    "use_note": "Swapped wordmark for black/yellow shield app icon for legibility"
+  },
+  "df-capital-bank": {
+    "status": "verified",
+    "asset": "df-capital-bank.svg",
+    "source_url": "https://wp-dfc-retail-2019.s3.eu-west-2.amazonaws.com/media/2019/06/dfc-retail-favicon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "DF Capital Bank homepage favicon",
+    "use_note": "Swapped wordmark for green checkmark favicon mark for legibility"
+  },
+  "gatehouse-bank": {
+    "status": "verified",
+    "asset": "gatehouse-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Gatehouse%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Gatehouse Bank Savings",
+    "use_note": "Swapped wordmark for green/blue gradient hexagon app icon for legibility"
+  },
+  "gb-bank": {
+    "status": "verified",
+    "asset": "gb-bank.svg",
+    "source_url": "https://www.gbbank.co.uk/app/uploads/2025/09/favicon-4.svg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "GB Bank homepage favicon",
+    "use_note": "Swapped wordmark for pink 'GB' monogram favicon for legibility"
+  },
+  "ghana-international-bank": {
+    "status": "verified",
+    "asset": "ghana-international-bank.svg",
+    "source_url": "https://www.ghanabank.co.uk/app/themes/tetloose/dist/images/meta/apple-touch-icon-180x180.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Ghana International Bank homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for navy globe emblem favicon for legibility"
+  },
+  "goldman-sachs-international-bank": {
+    "status": "verified",
+    "asset": "goldman-sachs-international-bank.svg",
+    "source_url": "https://cdn.gs.com/images/goldman-sachs/v2/gs-favicon.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official Goldman Sachs website favicon mark.",
+    "use_note": "Maps Goldman Sachs International Bank to the Goldman Sachs GS brand mark."
+  },
+  "hampshire-trust-bank": {
+    "status": "verified",
+    "asset": "hampshire-trust-bank.svg",
+    "source_url": "https://www.htb.co.uk/icons/icon-512x512.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Hampshire Trust Bank homepage icon",
+    "use_note": "Swapped wordmark for orange/blue pinwheel favicon for legibility"
+  },
+  "cynergy-bank": {
+    "status": "verified",
+    "asset": "cynergy-bank.svg",
+    "source_url": "https://apps.apple.com/gb/app/cynergy-bank-mobile-banking/id1147420165",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Cynergy Bank iOS app icon, via the App Store listing.",
+    "use_note": "Swapped from the full wordmark for legibility: the wordmark's wide aspect ratio (7.1:1) rendered as an unreadable thin sliver in the square icon tile."
+  },
+  "db-uk-bank": {
+    "status": "verified",
+    "asset": "db-uk-bank.svg",
+    "source_url": "https://prod2.master.dwebcms.db.com/application/themes/default/favicon/safari-pinned-tab.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Deutsche Bank's official pinned-tab/mask-icon mark, served from db.com's own CMS.",
+    "use_note": "Maps DB UK Bank Limited to its parent Deutsche Bank group symbol; no distinct UK-specific mark exists."
+  },
+  "efg-private-bank": {
+    "status": "verified",
+    "asset": "efg-private-bank.svg",
+    "source_url": "https://web.archive.org/web/20250211153819/https://www.efginternational.com/doc/jcr:a3f9cea6-cae5-4222-a9e2-f38739ed5ecd/logo-efg-footer.svg/lang:en/logo-efg-footer.svg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official EFG International (the Swiss-listed parent group) footer logo variant, recovered via Wayback Machine since both efgl.com and efginternational.com return 403 to automated fetches.",
+    "use_note": "Swapped from the header variant for legibility: that mark was drawn almost entirely in white and disappeared against the icon tile's light background. Maps EFG Private Bank (UK) to its parent EFG International group mark; no distinct UK-only mark was found."
+  },
+  "fce-bank": {
+    "status": "verified",
+    "asset": "fce-bank.svg",
+    "source_url": "https://web.archive.org/web/20241221184548/https://www.ford.co.uk/content/dam/guxeu/global-shared/header/ford_oval_blue_logo.svg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Ford UK site header logo (the Ford Blue Oval mark), recovered via Wayback Machine since FCE Bank's own site (fcebank.com) is a JS shell with no logo asset at all.",
+    "use_note": "FCE Bank is Ford Credit Europe, a wholly-owned Ford subsidiary with no distinct bank mark of its own; mapped to Ford's own oval logo."
+  },
+  "fcmb-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official FCMB site did not publish a suitable SVG mark in the reviewed page."
+  },
+  "fidbank-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Fidbank UK site did not publish a suitable SVG mark in the reviewed page."
+  },
+  "firstbank-uk": {
+    "status": "verified",
+    "asset": "firstbank-uk.svg",
+    "source_url": "https://www.fbnbank.co.uk/wp-content/uploads/2022/12/First-Bank-Logo_Symbol.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official FirstBank UK Limited (fbnbank.co.uk) website header symbol mark.",
+    "use_note": "Maps Firstbank UK to its own current elephant symbol mark."
+  },
+  "griffin-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Griffin site did not publish a suitable SVG mark in the reviewed page."
+  },
+  "guaranty-trust-bank-uk": {
+    "status": "verified",
+    "asset": "guaranty-trust-bank-uk.svg",
+    "source_url": "https://www.gtbankuk.com/",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Inline SVG logo mark extracted from Guaranty Trust Bank (UK) Limited's own site header markup (gtbankuk.com).",
+    "use_note": "Maps Guaranty Trust Bank UK to its own current mark."
+  },
+  "habib-bank-zurich": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Habib Bank Zurich site did not publish a suitable SVG mark in the reviewed page."
+  },
+  "hampden-co": {
+    "status": "verified",
+    "asset": "hampden-co.svg",
+    "source_url": "https://itunes.apple.com/search?term=Hampden%20and%20Co",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Hampden Bank card app",
+    "use_note": "Swapped wordmark for purple four-eagle crest app icon for legibility"
+  },
+  "handelsbanken": {
+    "status": "verified",
+    "asset": "handelsbanken.svg",
+    "source_url": "https://www.handelsbanken.co.uk/",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official Handelsbanken UK website header wordmark, extracted from inline SVG markup (fill hardcoded from currentColor to black to render standalone).",
+    "use_note": "Maps Handelsbanken to its own current mark."
+  },
+  "havin-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official Havin Bank site timed out during source review."
+  },
+  "hbl-bank-uk": {
+    "status": "verified",
+    "asset": "hbl-bank-uk.svg",
+    "source_url": "https://hblbankuk.com/wp-content/uploads/2020/07/favicon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "HBL Bank UK homepage favicon",
+    "use_note": "Swapped wordmark for green 'H' monogram favicon for legibility"
+  },
+  "weatherbys": {
+    "status": "verified",
+    "asset": "weatherbys.svg",
+    "source_url": "https://itunes.apple.com/search?term=Weatherbys%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Weatherbys Bank",
+    "use_note": "Swapped wordmark for grey tree/shield app icon for legibility"
+  },
+  "lloyds-bank": {
+    "status": "verified",
+    "asset": "lloyds-bank.svg",
+    "source_url": "https://apps.apple.com/gb/app/lloyds-mobile-banking/id424376595",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Lloyds Bank iOS app icon (the black horse mark), via the App Store listing.",
+    "use_note": "Swapped from the full wordmark for legibility: the horse-plus-\"LLOYDS\"-text lockup's wide aspect ratio (3.7:1) shrank both the icon and the text unreadably in the square icon tile."
+  },
+  "santander-uk": {
+    "status": "verified",
+    "asset": "santander-uk.svg",
+    "source_url": "https://www.caterallen.co.uk/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Santander Group app-icon flame mark, published on caterallen.co.uk (a Santander UK subsidiary site serving the same group icon).",
+    "use_note": "Swapped from the full wordmark for legibility: the wordmark's wide aspect ratio (5.7:1) shrank the flame icon and the wordmark text below readable size in the square icon tile."
+  },
+  "tsb-bank": {
+    "status": "verified",
+    "asset": "tsb-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=TSB%20Mobile%20Banking",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for TSB Mobile Banking",
+    "use_note": "Swapped wordmark for blue 'TSB' monogram app icon for legibility"
+  },
+  "atom-bank": {
+    "status": "verified",
+    "asset": "atom-bank.svg",
+    "source_url": "https://www.atombank.co.uk/favicon.ico",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Atom bank favicon mark (the colour splash icon, without the wordmark).",
+    "use_note": "Swapped from the full wide wordmark for legibility at icon size; the wordmark's outline is drawn in white and disappeared against the icon tile's light background."
+  },
+  "shawbrook-bank": {
+    "status": "verified",
+    "asset": "shawbrook-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Shawbrook%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Shawbrook Bank",
+    "use_note": "Swapped wordmark for pink abstract 'S' app icon for legibility"
+  },
+  "c-hoare-co": {
+    "status": "verified",
+    "asset": "c-hoare-co.svg",
+    "source_url": "https://itunes.apple.com/search?term=Hoare",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for C. Hoare & Co.",
+    "use_note": "Swapped wordmark for gold leather-bag app icon for legibility"
+  },
+  "gulf-international-bank-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Official website review did not yield a downloadable SVG during this pass."
+  },
+  "aldermore-bank": {
+    "status": "verified",
+    "asset": "aldermore-bank.svg",
+    "source_url": "https://www.aldermore.co.uk/assets/images/ico/favicon-180x180.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Aldermore Bank homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for black 'A' + yellow dot favicon mark for legibility"
+  },
+  "secure-trust-bank": {
+    "status": "verified",
+    "asset": "secure-trust-bank.svg",
+    "source_url": "https://www.securetrustbank.com/templates/stbgtemplate/assets/favicons/favicon.svg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Secure Trust Bank colour favicon, published on securetrustbank.com.",
+    "use_note": "Swapped from the Safari mask-icon variant for legibility/brand colour: mask icons are single flat monochrome silhouettes meant only for Safari's own pinned-tab tinting, not a real display logo."
+  },
+  "natwest-markets": {
+    "status": "verified",
+    "asset": "natwest-markets.svg",
+    "source_url": "https://apps.apple.com/gb/app/natwest-mobile-banking/id362301717",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official NatWest Group iOS app icon (the red cube mark), via the App Store listing.",
+    "use_note": "Swapped from the full wordmark lockup for legibility: the source file drew 'NatWest Group' in white with no separable icon, and it disappeared entirely against the icon tile's light-grey background, leaving only a flat purple square. Maps NatWest Markets to the parent NatWest Group's official mark; NatWest Markets' own domain was unreachable."
+  },
+  "vanquis-bank": {
+    "status": "verified",
+    "asset": "vanquis-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Vanquis%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Vanquis Bank credit card app",
+    "use_note": "Swapped wordmark for purple heart-mark app icon for legibility"
+  },
+  "clydesdale-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Clydesdale is a Virgin Money brand; a current legal-entity mapping and first-party SVG are still required."
+  },
+  "barclays-bank-uk": {
+    "status": "verified",
+    "asset": "barclays-bank-uk.svg",
+    "source_url": "https://github.com/simple-icons/simple-icons",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Simple Icons catalogue (Barclays icon, CC0-1.0).",
+    "use_note": "Interim catalogue source; replace with first-party asset if required."
+  },
+  "hsbc-uk-bank": {
+    "status": "verified",
+    "asset": "hsbc-uk-bank.svg",
+    "source_url": "https://github.com/simple-icons/simple-icons",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Simple Icons catalogue (HSBC icon, CC0-1.0).",
+    "use_note": "Interim catalogue source; maps HSBC UK Bank plc to HSBC mark."
+  },
+  "starling-bank": {
+    "status": "verified",
+    "asset": "starling-bank.svg",
+    "source_url": "https://github.com/simple-icons/simple-icons",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Simple Icons catalogue (Starling Bank icon, CC0-1.0).",
+    "use_note": "Interim catalogue source; replace following Starling's 2025 rebrand review."
+  },
+  "metro-bank": {
+    "status": "verified",
+    "asset": "metro-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Metro%20Bank%20Mobile%20Banking",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Metro Bank Mobile Banking",
+    "use_note": "Swapped wordmark for blue/red 'M' monogram app icon for legibility"
+  },
+  "investec-bank": {
+    "status": "verified",
+    "asset": "investec-bank.svg",
+    "source_url": "https://worldvectorlogo.com/logo/investec",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Worldvectorlogo catalogue; exact Investec result.",
+    "use_note": "Interim non-commercial catalogue source; maps Investec Bank plc to Investec brand."
+  },
+  "standard-chartered-bank": {
+    "status": "verified",
+    "asset": "standard-chartered-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Standard%20Chartered",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Standard Chartered Mobile Banking",
+    "use_note": "Swapped wordmark for blue/green 'SC' app icon for legibility"
+  },
+  "birmingham-bank": {
+    "status": "verified",
+    "asset": "birmingham-bank.svg",
+    "source_url": "https://www.birminghambank.com/hubfs/BB_logomark_Navy_on_Light_square.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official Birmingham Bank website brand asset (navy-on-light logomark variant).",
+    "use_note": "Maps The Birmingham Bank Limited to its own current mark."
+  },
+  "blme": {
+    "status": "verified",
+    "asset": "blme.svg",
+    "source_url": "https://itunes.apple.com/search?term=Nomo%20BLME",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Nomo (BLME's digital banking brand)",
+    "use_note": "Swapped wordmark for 'nomo' logotype app icon for legibility"
+  },
+  "bny-mellon-international": {
+    "status": "verified",
+    "asset": "bny-mellon-international.svg",
+    "source_url": "https://www.bny.com/content/dam/bnymellon/web/favicons/favicon-152.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "BNY homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for teal arrow/chevron favicon mark for legibility"
+  },
+  "british-arab-commercial-bank": {
+    "status": "verified",
+    "asset": "british-arab-commercial-bank.svg",
+    "source_url": "user-provided",
+    "retrieved_on": "2026-09-05",
+    "source_context": "User-supplied square BACB lettermark",
+    "use_note": "Swapped wide wordmark for a compact square 'BACB' monogram for legibility"
+  },
+  "brown-shipley": {
+    "status": "verified",
+    "asset": "brown-shipley.svg",
+    "source_url": "https://itunes.apple.com/search?term=Brown%20Shipley",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Brown Shipley",
+    "use_note": "Swapped wordmark for white triple-ring app icon for legibility"
+  },
+  "caf-bank": {
+    "status": "verified",
+    "asset": "caf-bank.svg",
+    "source_url": "https://www.cafonline.org/svg/caf-logo.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official Charities Aid Foundation (CAF) website logo asset.",
+    "use_note": "Maps CAF Bank Limited to its parent Charities Aid Foundation (CAF) brand."
+  },
+  "cambridge-and-counties-bank": {
+    "status": "verified",
+    "asset": "cambridge-and-counties-bank.svg",
+    "source_url": "https://ccbank.co.uk/wp-content/themes/ccbank-wj/img/icons/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Cambridge & Counties Bank homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for blue gradient-swirl favicon mark for legibility"
+  },
+  "castle-trust-capital": {
+    "status": "verified",
+    "asset": "castle-trust-capital.svg",
+    "source_url": "https://www.castletrust.co.uk/wp-content/uploads/2025/03/CTB_Logo-2-cropped.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Published by Castle Trust Bank in the header of https://www.castletrust.co.uk/.",
+    "use_note": "First-party CTB mark; maps Castle Trust Capital plc to its Castle Trust Bank trading brand."
+  },
+  "cater-allen": {
+    "status": "verified",
+    "asset": "cater-allen.svg",
+    "source_url": "https://www.caterallen.co.uk/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Cater Allen app-icon mark (the Santander group flame, since Cater Allen is a Santander UK subsidiary with no separate flame variant), published on caterallen.co.uk.",
+    "use_note": "Swapped from the full wordmark for legibility: the wordmark's wide aspect ratio (5.7:1) compressed the flame icon and squeezed the wordmark text unreadably in the square icon tile."
+  },
+  "charity-bank": {
+    "status": "verified",
+    "asset": "charity-bank.svg",
+    "source_url": "https://www.charitybank.org/wp-content/themes/charity-bank/images/favicon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Charity Bank homepage favicon",
+    "use_note": "Swapped wordmark for black serif 'C' monogram favicon for legibility"
+  },
+  "charter-court-financial-services": {
+    "status": "verified",
+    "asset": "charter-court-financial-services.svg",
+    "source_url": "https://www.chartercourtfs.co.uk/media/gr5l2lv3/osb-group-logo.svg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Published by Charter Court Financial Services on https://www.chartercourtfs.co.uk/.",
+    "use_note": "First-party OSB Group mark; Charter Court Financial Services is an OSB Group entity."
+  },
+  "chetwood": {
+    "status": "verified",
+    "asset": "chetwood.svg",
+    "source_url": "https://www.chetwood.co/icons/icon-192x192.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Chetwood's own app-icon mark (the \"C\" monogram), published on chetwood.co.",
+    "use_note": "Swapped from the full wide wordmark (48:1 aspect ratio) for legibility at icon size; the wordmark rendered as an unreadable sliver in the square icon tile."
+  },
+  "citibank-uk": {
+    "status": "verified",
+    "asset": "citibank-uk.svg",
+    "source_url": "https://www.citigroup.com/global/about-us/global-presence/united-kingdom",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Citigroup's official arc logo mark, extracted from inline base64 SVG markup on its UK presence page.",
+    "use_note": "Maps Citibank UK to the parent Citi arc mark."
+  },
+  "clearbank": {
+    "status": "verified",
+    "asset": "clearbank.svg",
+    "source_url": "https://www.clearbank.co.uk/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "ClearBank homepage apple-touch-icon",
+    "use_note": "Swapped wide wordmark for abstract gradient 'C'-arc app icon for legibility"
+  },
+  "close-brothers": {
+    "status": "verified",
+    "asset": "close-brothers.svg",
+    "source_url": "https://web.archive.org/web/20250107095551/https://www.closebrothers.com/sites/default/files/Close%20Brothers_MMB_Flat%20Logo_64px_0.svg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Close Brothers Group flat logo SVG, served from the bank's own site media path and recovered via Wayback Machine; cropped to the circular icon mark only, from the same source file.",
+    "use_note": "Cropped out the wordmark and \"Modern Merchant Banking\" tagline for legibility: the full lockup's wide aspect ratio (4.8:1) and small tagline text were unreadable in the square icon tile. The circular mark has its own self-contained gradient fill."
+  },
+  "co-operative-bank": {
+    "status": "verified",
+    "asset": "co-operative-bank.svg",
+    "source_url": "https://apps.apple.com/gb/app/co-operative-bank/id1091168663",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Co-operative Bank iOS app icon, via the App Store listing.",
+    "use_note": "Swapped from the full wordmark for legibility: the wordmark's wide aspect ratio (8.9:1) rendered as an unreadable thin sliver in the square icon tile."
+  },
+  "coutts": {
+    "status": "verified",
+    "asset": "coutts.svg",
+    "source_url": "https://itunes.apple.com/search?term=Coutts",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Coutts",
+    "use_note": "Swapped wordmark for white triple-crown-on-maroon app icon for legibility"
+  },
+  "credit-suisse-international": {
+    "status": "verified",
+    "asset": "credit-suisse-international.svg",
+    "source_url": "https://itunes.apple.com/search?term=Credit%20Suisse",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Credit Suisse Digital",
+    "use_note": "Swapped wordmark for navy sail/flag app icon for legibility"
+  },
+  "credit-suisse-uk": {
+    "status": "verified",
+    "asset": "credit-suisse-uk.svg",
+    "source_url": "https://itunes.apple.com/search?term=Credit%20Suisse",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Credit Suisse Digital",
+    "use_note": "Swapped wordmark for navy sail/flag app icon for legibility"
+  },
+  "crown-agents-bank": {
+    "status": "verified",
+    "asset": "crown-agents-bank.svg",
+    "source_url": "https://www.crownagentsbank.com/wp-content/uploads/2025/09/cropped-favicon-180x180.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Crown Agents Bank homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for navy 'CAB' monogram favicon for legibility"
+  },
+  "abc-international-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG could be retrieved from the bank's public web presence; renders the explicit initials fallback."
+  },
+  "access-bank-uk": {
+    "status": "verified",
+    "asset": "access-bank-uk.svg",
+    "source_url": "https://itunes.apple.com/search?term=Access%20Bank%20UK",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for The Access Bank UK",
+    "use_note": "Swapped wordmark for orange geometric app icon for legibility"
+  },
+  "afin-bank": {
+    "status": "verified",
+    "asset": "afin-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Afin%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Afin Bank",
+    "use_note": "Swapped wordmark for green/orange 'A' loop app icon for legibility"
+  },
+  "aib-group-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG was safely retrievable for the UK entity; renders the explicit initials fallback."
+  },
+  "allica": {
+    "status": "verified",
+    "asset": "allica.svg",
+    "source_url": "https://itunes.apple.com/search?term=Allica%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Allica Bank",
+    "use_note": "Swapped wide wordmark for navy app icon for legibility"
+  },
+  "alpha-bank-london": {
+    "status": "verified",
+    "asset": "alpha-bank-london.svg",
+    "source_url": "user-provided",
+    "retrieved_on": "2026-09-05",
+    "source_context": "User-supplied square Alpha Bank icon mark",
+    "use_note": "Swapped wide wordmark for icon-only navy/white mark for legibility"
+  },
+  "alrayan-bank": {
+    "status": "verified",
+    "asset": "alrayan-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Al%20Rayan%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for AlRayan Bank UK",
+    "use_note": "Swapped wordmark for blue geometric 'r' app icon for legibility"
+  },
+  "arab-bank-europe": {
+    "status": "verified",
+    "asset": "arab-bank-europe.svg",
+    "source_url": "https://itunes.apple.com/search?term=Arab%20Bank%20Personal%20Banking",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Arab Bank Personal Banking (parent group)",
+    "use_note": "Swapped wordmark for blue infinity-ring app icon for legibility"
+  },
+  "arbuthnot-latham": {
+    "status": "verified",
+    "asset": "arbuthnot-latham.svg",
+    "source_url": "https://www.arbuthnotlatham.co.uk/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Arbuthnot Latham homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for peacock-crest favicon mark for legibility"
+  },
+  "bank-mandiri-europe": {
+    "status": "verified",
+    "asset": "bank-mandiri-europe.svg",
+    "source_url": "https://www.bkmandiri.co.uk/media/2024/12/cropped-favicon-1-180x180.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Bank Mandiri Europe homepage apple-touch-icon",
+    "use_note": "Swapped white-on-transparent wordmark for navy/yellow favicon mark for legibility"
+  },
+  "bank-of-africa-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG was safely retrievable for the UK entity; renders the explicit initials fallback."
+  },
+  "bank-of-beirut-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public group site did not expose a reusable first-party SVG suitable for the UK subsidiary; renders the explicit initials fallback."
+  },
+  "bank-of-ceylon-uk": {
+    "status": "verified",
+    "asset": "bank-of-ceylon-uk.svg",
+    "source_url": "https://www.boc.lk/assets/images/logo/boc-logo.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official Bank of Ceylon (parent group) website header logo.",
+    "use_note": "Maps Bank of Ceylon (UK) Limited to its parent Bank of Ceylon brand."
+  },
+  "bank-of-china-uk": {
+    "status": "verified",
+    "asset": "bank-of-china-uk.svg",
+    "source_url": "https://itunes.apple.com/search?term=Bank%20of%20China%20UK",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Bank of China",
+    "use_note": "Swapped parent-group wordmark for red/white app icon for legibility"
+  },
+  "bank-of-ireland-uk": {
+    "status": "verified",
+    "asset": "bank-of-ireland-uk.svg",
+    "source_url": "https://boi-public-assets.s3-eu-west-1.amazonaws.com/images/logos/bank-of-ireland-logo-new-branding-positive.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official Bank of Ireland public asset bucket (current branding, positive/colour variant).",
+    "use_note": "Maps Bank of Ireland (UK) plc to its parent Bank of Ireland brand."
+  },
+  "bank-of-scotland": {
+    "status": "verified",
+    "asset": "bank-of-scotland.svg",
+    "source_url": "https://itunes.apple.com/search?term=Bank%20of%20Scotland",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Bank of Scotland Mobile Bank",
+    "use_note": "Swapped wordmark for white Saltire-on-blue app icon for legibility"
+  },
+  "bank-of-the-philippine-islands-europe": {
+    "status": "verified",
+    "asset": "bank-of-the-philippine-islands-europe.svg",
+    "source_url": "https://www.bpi.com.ph/etc.clientlibs/bpi/clientlibs/clientlib-bpi-ph/resources/AppleTouch-Icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Bank of the Philippine Islands homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for gold heraldic-shield favicon mark for legibility"
+  },
+  "bank-saderat": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG could be retrieved from the bank's public web presence; renders the explicit initials fallback."
+  },
+  "bank-sepah-international": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG was safely retrievable for the international subsidiary; renders the explicit initials fallback."
+  },
+  "barclays-bank": {
+    "status": "verified",
+    "asset": "barclays-bank.svg",
+    "source_url": "https://home.barclays/content/dam/home-barclays/images/generic/barclays-eagle.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Published by Barclays on its public corporate website as the Barclays eagle mark.",
+    "use_note": "Internal prototype only; maps Barclays Bank PLC to the Barclays group mark."
+  },
+  "hsbc-bank": {
+    "status": "verified",
+    "asset": "hsbc-bank.svg",
+    "source_url": "https://www.hsbc.com/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "HSBC Group homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for red/white HSBC hexagon favicon for legibility"
+  },
+  "hsbc-innovation-bank": {
+    "status": "verified",
+    "asset": "hsbc-innovation-bank.svg",
+    "source_url": "https://www.hsbc.com/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Reuses the HSBC Group homepage apple-touch-icon (same as hsbc-bank) since no distinct HSBC Innovation Bank mark exists",
+    "use_note": "Swapped for the HSBC Group hexagon mark for legibility; HSBC Innovation Bank has no separable brand mark of its own"
+  },
+  "icbc-london": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public London site did not expose a reusable first-party SVG mark; renders the explicit initials fallback."
+  },
+  "icbc-standard-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG was safely retrievable for the UK entity; renders the explicit initials fallback."
+  },
+  "icici-bank-uk": {
+    "status": "verified",
+    "asset": "icici-bank-uk.svg",
+    "source_url": "https://www.icicibank.co.uk/favicon.ico",
+    "retrieved_on": "2026-09-05",
+    "source_context": "ICICI Bank UK homepage favicon",
+    "use_note": "Swapped wordmark for orange/maroon flame favicon for legibility"
+  },
+  "ifast-global-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public site did not expose a reusable first-party SVG mark; renders the explicit initials fallback."
+  },
+  "itau-bba-international": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public group site could not be retrieved reliably and no first-party SVG was verified; renders the explicit initials fallback."
+  },
+  "jordan-international-bank": {
+    "status": "verified",
+    "asset": "jordan-international-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Jordan%20International%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Jordan International Bank",
+    "use_note": "Swapped wordmark for red 'jib' monogram app icon for legibility"
+  },
+  "jp-morgan-europe": {
+    "status": "verified",
+    "asset": "jp-morgan-europe.svg",
+    "source_url": "https://www.jpmorgan.com/etc.clientlibs/cws/clientlibs/clientlib-base/resources/jpm/images/jpm-favicon-152.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "J.P. Morgan's own app-icon/favicon mark (\"JPM\" monogram), published on jpmorgan.com.",
+    "use_note": "Swapped from the wide wordmark for legibility at icon size; maps J.P. Morgan Europe Limited to the J.P. Morgan group mark."
+  },
+  "jp-morgan-securities": {
+    "status": "verified",
+    "asset": "jp-morgan-securities.svg",
+    "source_url": "https://www.jpmorgan.com/etc.clientlibs/cws/clientlibs/clientlib-base/resources/jpm/images/jpm-favicon-152.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "J.P. Morgan's own app-icon/favicon mark (\"JPM\" monogram), published on jpmorgan.com.",
+    "use_note": "Swapped from the wide wordmark for legibility at icon size; maps J.P. Morgan Securities plc to the J.P. Morgan group mark."
+  },
+  "julian-hodge-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG could be retrieved from the bank's public web presence; renders the explicit initials fallback."
+  },
+  "kexim-bank-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "Parent Export-Import Bank of Korea's official site redirect-loops and no genuine KEXIM Bank UK domain resolves. NOTE: keximbankuk.com resolves and serves a logo but presents as a retail consumer site with no FCA/PRA/Companies House references and a suspicious filename - flagged as a likely scam/clone site impersonating this wholesale bank and deliberately NOT used as a source."
+  },
+  "kingdom-bank": {
+    "status": "verified",
+    "asset": "kingdom-bank.svg",
+    "source_url": "https://www.kingdom.bank/wp-content/uploads/cropped-kingdom-bank-crown-yellow-192x192.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Kingdom Bank homepage favicon",
+    "use_note": "Swapped wordmark for orange/white crown favicon for legibility"
+  },
+  "kroo-bank": {
+    "status": "verified",
+    "asset": "kroo-bank.svg",
+    "source_url": "https://itunes.apple.com/search?term=Kroo%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Kroo Bank - Mobile Banking",
+    "use_note": "Swapped wordmark for pink abstract app icon for legibility"
+  },
+  "kuwait-finance-house": {
+    "status": "verified",
+    "asset": "kuwait-finance-house.svg",
+    "source_url": "https://www.kfh.com/.resources/kfh-templates/webresources/kfh-theme/images/favicon/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Kuwait Finance House homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for green pinwheel favicon for legibility"
+  },
+  "lhv": {
+    "status": "verified",
+    "asset": "lhv.svg",
+    "source_url": "https://itunes.apple.com/search?term=LHV%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for LHV Bank",
+    "use_note": "Swapped wordmark for black square 'LHV' monogram app icon for legibility"
+  },
+  "lloyds-bank-corporate-markets": {
+    "status": "verified",
+    "asset": "lloyds-bank-corporate-markets.svg",
+    "source_url": "https://apps.apple.com/gb/app/lloyds-mobile-banking/id424376595",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Lloyds Bank iOS app icon (the black horse mark, shared across the Lloyds Banking Group brand family), via the App Store listing.",
+    "use_note": "Swapped from the full \"Lloyds Banking Group\" wordmark lockup for legibility: its wide aspect ratio (3.6:1) and two-line caption text were unreadable in the square icon tile. Maps Lloyds Bank Corporate Markets plc to its parent Lloyds Banking Group mark."
+  },
+  "marks-and-spencer-financial-services": {
+    "status": "verified",
+    "asset": "marks-and-spencer-financial-services.svg",
+    "source_url": "https://bank.marksandspencer.com/etc.clientlibs/dpws/clientlibs-public/clientlib-marksandspencer/resources/favicons/apple-touch-icon.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "M&S Bank homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for black square 'M&S BANK' favicon for legibility"
+  },
+  "melli-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public group site could not be retrieved reliably and no first-party SVG was verified; renders the explicit initials fallback."
+  },
+  "methodist-chapel-aid": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No current first-party SVG could be retrieved from the organisation's public web presence; renders the explicit initials fallback."
+  },
+  "mizuho-international": {
+    "status": "verified",
+    "asset": "mizuho-international.svg",
+    "source_url": "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/67d44ce8bb4fc244b2b78014_mizuho-webclip.jpg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Mizuho Group EMEA site webclip icon",
+    "use_note": "Swapped wordmark for navy 'M' monogram favicon for legibility"
+  },
+  "monument-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public Monument Bank site did not expose a reusable first-party SVG; renders the explicit initials fallback."
+  },
+  "morgan-stanley-bank-international": {
+    "status": "verified",
+    "asset": "morgan-stanley-bank-international.svg",
+    "source_url": "https://itunes.apple.com/search?term=Morgan%20Stanley",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Morgan Stanley Wealth Mgmt",
+    "use_note": "Swapped wide wordmark for square navy 'Morgan Stanley' app icon for legibility"
+  },
+  "national-bank-of-egypt-uk": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public NBE UK site currently publishes a raster logo rather than a reusable SVG; renders the explicit initials fallback."
+  },
+  "national-bank-of-kuwait-international": {
+    "status": "verified",
+    "asset": "national-bank-of-kuwait-international.svg",
+    "source_url": "https://www.nbkwealth.com/application/files/9616/9685/4023/nbk-wealth-fav.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "NBK Wealth homepage favicon (NBK group brand family)",
+    "use_note": "Swapped wordmark for black camel-silhouette favicon for legibility"
+  },
+  "national-westminster-bank": {
+    "status": "verified",
+    "asset": "national-westminster-bank.svg",
+    "source_url": "https://apps.apple.com/gb/app/natwest-mobile-banking/id362301717",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official NatWest Group iOS app icon (the red cube mark), via the App Store listing.",
+    "use_note": "Swapped from the full wordmark for legibility: the wordmark's wide aspect ratio (2.9:1, combined with the icon) shrank the text below readable size in the square icon tile. First-party NatWest mark; maps National Westminster Bank plc to its trading brand."
+  },
+  "nomura-bank-international": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public Nomura site did not yield a reusable first-party SVG during this retrieval; renders the explicit initials fallback."
+  },
+  "northern-bank": {
+    "status": "verified",
+    "asset": "northern-bank.svg",
+    "source_url": "https://danskebank.co.uk/~/media/Danske%20Bank/favicons/Apple/apple-touch-icon-180x180.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Danske Bank UK homepage apple-touch-icon",
+    "use_note": "Swapped wordmark for navy/white flag logomark favicon for legibility"
+  },
+  "oaknorth-bank": {
+    "status": "verified",
+    "asset": "oaknorth-bank.svg",
+    "source_url": "https://oaknorth.com/wp-content/themes/palebluedot/assets/img/logo-icon.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Published by OakNorth in the header of https://www.oaknorth.com/.",
+    "use_note": "First-party OakNorth icon mark."
+  },
+  "onesavings": {
+    "status": "verified",
+    "asset": "onesavings.svg",
+    "source_url": "https://www.osb.co.uk/media/gr5l2lv3/osb-group-logo.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Published by OSB Group in the header of https://www.osb.co.uk/.",
+    "use_note": "First-party OSB Group mark; maps OneSavings Bank plc to its current parent/group brand."
+  },
+  "oxbury": {
+    "status": "verified",
+    "asset": "oxbury.svg",
+    "source_url": "https://itunes.apple.com/search?term=Oxbury%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Oxbury Bank",
+    "use_note": "Swapped white-on-transparent wordmark for green gradient triple-slash app icon for legibility"
+  },
+  "paragon": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public Paragon site was unavailable to this retrieval and no suitable first-party SVG was verified; renders the explicit initials fallback."
+  },
+  "perenna": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public Perenna site currently publishes a raster logo rather than a reusable SVG; renders the explicit initials fallback."
+  },
+  "persia-international-bank": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No suitable current first-party SVG was verified for Persia International Bank; renders the explicit initials fallback."
+  },
+  "philippine-national-bank-europe": {
+    "status": "verified",
+    "asset": "philippine-national-bank-europe.svg",
+    "source_url": "https://thebanks.eu/img/logos/Philippine_National_Bank.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Parent PNB group logo, cropped to just the heraldic shield icon (text portion removed)",
+    "use_note": "Cropped from parent PNB's wordmark+shield lockup to the shield only, for legibility; no distinct PNB Europe mark exists"
+  },
+  "punjab-national-bank-international": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "No suitable current first-party SVG was verified for Punjab National Bank International; renders the explicit initials fallback."
+  },
+  "qib-uk": {
+    "status": "verified",
+    "asset": "qib-uk.svg",
+    "source_url": "https://itunes.apple.com/search?term=QIB%20(UK)",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for QIB (UK)",
+    "use_note": "Swapped wordmark for blue 'QIB' monogram app icon for legibility"
+  },
+  "rathbones-investment-management": {
+    "status": "verified",
+    "asset": "rathbones-investment-management.svg",
+    "source_url": "https://itunes.apple.com/search?term=MyRathbones",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for MyRathbones",
+    "use_note": "Swapped wordmark for blue gradient compass-rose app icon for legibility"
+  },
+  "rbc-europe": {
+    "status": "verified",
+    "asset": "rbc-europe.svg",
+    "source_url": "https://www.rbc.com/dvl/v1.0/assets/images/logos/rbc-logo-shield-blue.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official RBC (Royal Bank of Canada) shield-and-crown mark, referenced on rbc.com's About RBC page.",
+    "use_note": "Maps RBC Europe to the parent Royal Bank of Canada group's official mark; no distinct RBC Europe-specific mark exists."
+  },
+  "rbs": {
+    "status": "verified",
+    "asset": "rbs.svg",
+    "source_url": "https://www.rbs.co.uk/content/dam/championlogos/RBS_Secondary_Horizontal_RGB_NEG.svg",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Published by RBS in the header of https://www.rbs.co.uk/; cropped to the square daisy-wheel brandmark only, from the same source file.",
+    "use_note": "Cropped out the wordmark portion for legibility: the source file's \"Royal Bank of Scotland\" text path was drawn in white and disappeared against the icon tile's light background. The brandmark icon itself uses its own solid purple background so it isn't affected."
+  },
+  "unity-trust": {
+    "status": "verified",
+    "asset": "unity-trust.svg",
+    "source_url": "https://itunes.apple.com/search?term=Unity%20Trust%20Bank",
+    "retrieved_on": "2026-09-05",
+    "source_context": "App Store icon for Unity Trust Bank",
+    "use_note": "Swapped wordmark for green abstract-wave app icon for legibility"
+  },
+  "vida": {
+    "status": "verified",
+    "asset": "vida.svg",
+    "source_url": "https://www.vidahomeloans.co.uk/images/default-source/hero-images/logo.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Official Vida Homeloans (Vida Bank group) homepage hero logo asset.",
+    "use_note": "Maps Vida to Vida Homeloans' own current mark."
+  },
+  "zempler": {
+    "status": "verified",
+    "asset": "zempler.svg",
+    "source_url": "https://zempler.bank/src/images/icon-192x192.png",
+    "retrieved_on": "2026-09-05",
+    "source_context": "Official Zempler Bank app-icon mark, published on zempler.bank.",
+    "use_note": "Swapped from the wordmark for legibility: the wordmark is set in a pale brand cyan (#80D9FF) that has very low contrast against the icon tile's light-grey background. The app icon uses the same cyan as a solid fill behind a dark mark, which reads clearly."
+  },
+  "zenith": {
+    "status": "unresolved",
+    "asset": null,
+    "source_context": "The public site could not be retrieved reliably and no first-party SVG was verified; renders the explicit initials fallback."
+  },
+  "zopa": {
+    "status": "verified",
+    "asset": "zopa.svg",
+    "source_url": "https://www.datocms-assets.com/23873/1773327748-zopa-logo.svg",
+    "retrieved_on": "2026-09-04",
+    "source_context": "Zopa's own first-party CMS asset host (its dedicated DatoCMS media bucket), the icon mark used on zopa.com.",
+    "use_note": "Maps Zopa to its own current icon mark."
+  }
+}

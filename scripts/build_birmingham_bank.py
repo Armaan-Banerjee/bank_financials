@@ -46,7 +46,17 @@ STATEMENTS_SOURCES = (
 PL_NOTE = (
     "The 'Net (loss)/gain on financial instruments held at fair value through profit and loss' line only "
     "appears from FY2024 onward (GBP27k) - not disclosed as a separate line in FY2021-FY2023, where it did "
-    "not exist or was immaterial/nil."
+    "not exist or was immaterial/nil.\n\n"
+    "CORRECTION (2026-09-06 audit): FY2022 Total income and Net income were previously shown as GBP758k and "
+    "GBP668k - the FY2023 filing's own restated £'000 comparative column for FY2022 (itself component-rounded: "
+    "530+228=758). The FY2022 filing's own primary Income Statement (exact GBP, this project's stated "
+    "per-year sourcing convention) states Total income of GBP757,483 and Net income of GBP667,285, which "
+    "round to GBP757k/GBP667k - now corrected to match. All other FY2022 P&L lines already matched the FY2022 "
+    "filing exactly; only these two subtotals had drifted to the later filing's rounding. The downstream "
+    "'Loss on ordinary activities before taxation' (GBP4,194k) is unaffected - it is each filing's own reported "
+    "total, not a re-derived sum of the (rounded) lines above it, so it does not tie by simple subtraction to "
+    "the corrected Net income figure; this is the same independent-rounding artifact already documented on "
+    "the Balance Sheet sheet (a component sum landing GBP1k off its own total row)."
 )
 
 ASSET_QUALITY_NOTE = (
@@ -88,8 +98,14 @@ def p3_sources():
         f"FY2022: Strategic Report 'key financial performance indicators' table in the Full accounts made up "
         f"to 31 Dec 2023 (filed 20 Mar 2024), p.4 - {SR2023_URL}. Ratio only - no GBP capital/RWA breakdown "
         "was published for FY2022 (the bank's only Pillar 3 document covers FY2023-FY2024 only).\n"
-        "FY2021: not disclosed anywhere found - no Pillar 3 document covers this year, and no capital ratio "
-        "appears in any Annual Report's Strategic Report for FY2021.\n"
+        f"FY2021: CET1/Tier 1/Total Capital Ratio (96.69%, rounded here to 97%) and LCR (16,250%) - Strategic "
+        f"Report 'key financial performance indicators' table in the Amended full accounts made up to 31 Dec "
+        f"2022 (filed 25 Oct 2023), p.5 - {AR2022_URL}. Corrected 2026-09-06 audit: this ratio was previously "
+        "marked as not disclosed for FY2021, but this same KPI table (already cited elsewhere on this "
+        "workbook for its FY2022 column) also carries a FY2021 comparative column that was missed on first "
+        "build. Ratio only, same as FY2022 - no GBP CET1/Tier 1/Total Capital or RWA figure for FY2021 was "
+        "found in any document (the bank's only Pillar 3 document covers FY2023-FY2024 only), so those GBP "
+        "metric sheets remain blank for FY2021.\n"
         "The Bank has no Additional Tier 1 or Tier 2 capital in any year (per the Pillar 3 report's own "
         "statement), so CET1 Capital = Tier 1 Capital = Total Capital, and CET1 Ratio = Tier 1 Ratio = Total "
         "Capital Ratio, throughout."
@@ -149,10 +165,10 @@ income_statement_rows = [
     ("SECTION", "Income", {}),
     ("DATA", "Interest receivable and similar income arising from debt securities", {"FY2024": 1756, "FY2023": 313, "FY2022": 530, "FY2021": 602}),
     ("DATA", "Other interest receivable and similar income", {"FY2024": 2680, "FY2023": 805, "FY2022": 228, "FY2021": 14}),
-    ("TOTAL", "Total income", {"FY2024": 4436, "FY2023": 1118, "FY2022": 758, "FY2021": 616}),
+    ("TOTAL", "Total income", {"FY2024": 4436, "FY2023": 1118, "FY2022": 757, "FY2021": 616}),
     ("DATA", "Net (loss)/gain on financial instruments at fair value through profit and loss", {"FY2024": 27}),
     ("DATA", "Interest payable", {"FY2024": -1997, "FY2023": -213, "FY2022": -90, "FY2021": -115}),
-    ("TOTAL", "Net income", {"FY2024": 2466, "FY2023": 905, "FY2022": 668, "FY2021": 500}),
+    ("TOTAL", "Net income", {"FY2024": 2466, "FY2023": 905, "FY2022": 667, "FY2021": 500}),
     ("DATA", "Administrative expenses", {"FY2024": -13155, "FY2023": -8475, "FY2022": -4817, "FY2021": -3858}),
     ("DATA", "Depreciation and amortisation", {"FY2024": -237, "FY2023": -32, "FY2022": -24, "FY2021": -42}),
     ("DATA", "Impairment charge for loan losses", {"FY2024": -22, "FY2023": -4, "FY2022": -21, "FY2021": -34}),
@@ -285,18 +301,28 @@ def metric(name, unit, rows_data, note=None):
 
 
 TOTAL_CAPITAL = {"FY2024": 35985, "FY2023": 18617}
-CAPITAL_RATIO = {"FY2024": "76%", "FY2023": "365%", "FY2022": "91%"}
+CAPITAL_RATIO = {"FY2024": "76%", "FY2023": "365%", "FY2022": "91%", "FY2021": "97%"}
 RWA = {"FY2024": 47333, "FY2023": 5229}
 LEVERAGE = {"FY2024": "24%", "FY2023": "63%"}
-LCR = {"FY2024": "725%", "FY2023": "11,351%", "FY2022": "2,983%"}
+LCR = {"FY2024": "725%", "FY2023": "11,351%", "FY2022": "2,983%", "FY2021": "16,250%"}
 
 SINGLE_TIER_NOTE = "No Additional Tier 1 or Tier 2 capital in any year - equals CET1 Capital exactly."
 
-metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", TOTAL_CAPITAL)])
+CAPITAL_FIGURE_NOTE = (
+    "The Pillar 3 report's own Section 1.4 'Summary Analysis' headline FY2024 Tier 1 capital (GBP35,985k, "
+    "shown here) differs from the same report's own Section 5.1 capital-resources table and Section 9 'Own "
+    "Funds Disclosure' table (Total Equity GBP38,115k less regulatory deductions GBP2,008k = GBP36,107k) - "
+    "both are the entity's own genuine disclosures in the same document, ~0.3% apart; the headline summary "
+    "figure is used for consistency with how every other year/metric on this sheet is sourced (same class of "
+    "internal document inconsistency as the RWA figures - see the Total RWAs sheet's own note). FY2023 has "
+    "no such discrepancy - both of the report's tables agree at GBP18,617k."
+)
+
+metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", TOTAL_CAPITAL)], note=CAPITAL_FIGURE_NOTE)
 metric("CET1 Ratio", "%", [("CET1 Ratio (= Capital Adequacy Ratio)", CAPITAL_RATIO)])
-metric("Tier 1 Capital", "£'000", [("Tier 1 capital", TOTAL_CAPITAL)], note=SINGLE_TIER_NOTE)
+metric("Tier 1 Capital", "£'000", [("Tier 1 capital", TOTAL_CAPITAL)], note=SINGLE_TIER_NOTE + " " + CAPITAL_FIGURE_NOTE)
 metric("Tier 1 Ratio", "%", [("Tier 1 Capital ratio", CAPITAL_RATIO)])
-metric("Total Capital", "£'000", [("Total capital", TOTAL_CAPITAL)], note=SINGLE_TIER_NOTE)
+metric("Total Capital", "£'000", [("Total capital", TOTAL_CAPITAL)], note=SINGLE_TIER_NOTE + " " + CAPITAL_FIGURE_NOTE)
 metric("Total Capital Ratio", "%", [("Total Capital Ratio (= Capital Adequacy Ratio)", CAPITAL_RATIO)])
 metric("Total RWAs", "£'000", [("Total risk-weighted assets", RWA)], note=RWA_NOTE)
 
@@ -345,7 +371,7 @@ bw.add_overview_sheet(
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
-        ("Total income", {"FY2024": 4436, "FY2023": 1118, "FY2022": 758, "FY2021": 616}),
+        ("Total income", {"FY2024": 4436, "FY2023": 1118, "FY2022": 757, "FY2021": 616}),
         ("Loss for the financial year", {"FY2024": -10844, "FY2023": -7247, "FY2022": -4156, "FY2021": -3434}),
     ],
     income_statement_unit="£'000",

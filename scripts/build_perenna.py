@@ -22,7 +22,21 @@ ENTITY_NOTE = (
     "not a substituted group or predecessor. It received a restricted banking licence in August 2022 "
     "and a full banking licence in 2023. FY2021-FY2023 are company-only accounts; FY2024-FY2025 also "
     "present consolidated Group accounts, and the consolidated cash-flow statement is used for those "
-    "years. All figures below are in pounds (£), as reported."
+    "years. All figures below are in pounds (£), as reported.\n\n"
+    "FY2020 SELF-SKIP (whole year, re-verified 2026-09-06 per HD-061): Companies House confirms the "
+    "company was incorporated on 16 December 2020 and did not receive its s761 Companies Act trading "
+    "certificate (required for a public company to do business or borrow at all) until 9 July 2021. Its "
+    "very first statutory accounts, filed 14 September 2022, cover the period from incorporation "
+    "(16 December 2020) through 31 December 2021 - a single extended first accounting reference period, "
+    "not two separate years. No FY2020-dated accounts, dormant-company accounts, or any other financial "
+    "filing exists for this entity in Companies House's filing history (checked page by page across the "
+    "full accounts-category history: Incorporation 16 Dec 2020 -> Trading Certificate 9 Jul 2021 -> "
+    "Director appointments Jul 2021 -> Confirmation Statement 16 Dec 2021 -> first Full accounts, to "
+    "31 Dec 2021, filed 14 Sep 2022 -> Memorandum/Resolutions Apr 2022). There is therefore no FY2020 "
+    "financial year to extend into: the company had at most ~2 weeks of pre-trading-certificate corporate "
+    "existence in calendar 2020, and the FY2021 column already is the entity's full first reporting "
+    "period. This is a genuine whole-year self-skip, not an access gap - confirmed directly against the "
+    "primary Companies House record, not assumed from the earlier scan."
 )
 
 DATA_QUALITY_NOTE = (
