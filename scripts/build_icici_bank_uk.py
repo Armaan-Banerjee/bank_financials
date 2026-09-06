@@ -7,7 +7,10 @@ from bank_workbook import BankWorkbook
 YEARS = [
     "FY2025", "FY2024", "FY2023", "FY2022", "FY2021",
     "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014",
+    "FY2013", "FY2012", "FY2011", "FY2010", "FY2009", "FY2008",
 ]
+Y_CORE = YEARS[:YEARS.index('FY2014') + 1]  # HD-072/075/079: FY2014-floor default for Pillar 3/Asset Quality/RWA Breakdown/Overview
+
 
 P3_URLS = {
     "FY2025": "https://www.icicibank.co.uk/content/dam/icicibank/icici-assets/uk/basel-pillar-3-disclosures-FY2024-25.pdf",
@@ -35,6 +38,12 @@ AR2017_URL = "https://www.icicibank.co.uk/content/dam/icicibank/icici-assets/uk/
 AR2016_URL = "https://www.icicibank.co.uk/content/dam/icicibank/icici-assets/uk/financial-report-15-16.pdf"
 AR2015_URL = "https://www.icicibank.co.uk/content/dam/icicibank/icici-assets/uk/financial-report-14-15.pdf"
 AR2014_URL = "https://find-and-update.company-information.service.gov.uk/company/04663024/filing-history/MzEwMDE3NDY1OGFkaXF6a2N4/document?format=pdf&download=0"
+AR2013_URL = "https://find-and-update.company-information.service.gov.uk/company/04663024/filing-history/MzA3ODM0MTM2NGFkaXF6a2N4/document?format=pdf&download=0"
+AR2012_URL = "https://find-and-update.company-information.service.gov.uk/company/04663024/filing-history/MzA1NzY0MjQxOGFkaXF6a2N4/document?format=pdf&download=0"
+AR2011_URL = "https://find-and-update.company-information.service.gov.uk/company/04663024/filing-history/MzAzNjcwNDYwOGFkaXF6a2N4/document?format=pdf&download=0"
+AR2010_URL = "https://find-and-update.company-information.service.gov.uk/company/04663024/filing-history/MzAyMTI3MzU1MGFkaXF6a2N4/document?format=pdf&download=0"
+AR2009_URL = "https://find-and-update.company-information.service.gov.uk/company/04663024/filing-history/MjAzNTc0MTU4N2FkaXF6a2N4/document?format=pdf&download=0"
+AR2008_URL = "https://find-and-update.company-information.service.gov.uk/company/04663024/filing-history/MjAwNzk0MTQ0MGFkaXF6a2N4/document?format=pdf&download=0"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: ICICI Bank UK Plc (Companies House 04663024, FRN 223268, LEI "
@@ -54,10 +63,16 @@ EXEMPTION_NOTE = (
     f"Official supporting source: ICICI Bank UK PLC Strategic report, Directors' report "
     f"and financial statements for the year ended 31 March 2025, cash-flow exemptions "
     f"section (c) - {AR2025_URL}. "
-    f"For FY2014-FY2015 the Bank's own Annual Report instead cites the equivalent exemption "
+    f"For FY2008-FY2015 the Bank's own Annual Report instead cites the equivalent exemption "
     f"under FRS 1 (the pre-FRS 101/102 UK GAAP standard then in force) - same substantive "
     f"exemption, different accounting-standard citation; confirmed in the FY2015 Annual Report's "
-    f"own 'Cash flow exemptions' note (d) - {AR2015_URL}."
+    f"own 'Cash flow exemptions' note (d) - {AR2015_URL} - and independently confirmed in the "
+    f"FY2008 Annual Report's own note 3(b) 'Cash flow statement', which cites 'the exemption "
+    f"available within FRS 1 (revised), \"Cash Flow Statements\"' in identical substance - "
+    f"{AR2008_URL}. The intervening years (FY2009-FY2013) were not individually checked for this "
+    f"specific note's wording during HD-075 (only their primary statements were transcribed) - "
+    f"no basis-shift is expected given both endpoints of the range cite FRS 1, but this is flagged "
+    f"rather than assumed."
 )
 
 
@@ -99,9 +114,44 @@ STATEMENTS_SOURCES = (
     f"March 2014 (Companies House filing, scanned/non-text - read directly page by page), pp.16-19 "
     f"- {AR2014_URL}. Cross-checked against the identical FY2014 comparative column reproduced "
     f"text-natively in the FY2015 Annual Report ({AR2015_URL}) - every figure ties exactly.\n"
+    f"FY2013 (own, Companies House filing MzA3ODM0MTM2NGFkaXF6a2N4, scanned/non-text - read directly "
+    f"page by page): Directors' report and financial statements, year ended March 31, 2013, Profit "
+    f"and loss account/Balance sheet/Statement of total recognised gains and losses/Reconciliation "
+    f"of movements in shareholders' funds, pp.12-15 - {AR2013_URL}. Cross-checked against the "
+    f"identical FY2013 comparative column reproduced in the FY2014 Companies House filing "
+    f"({AR2014_URL}) via the opening 1 April 2013 balance on the Statement of Changes in Equity "
+    f"sheet - ties exactly.\n"
+    f"FY2012 (own, Companies House filing MzA1NzY0MjQxOGFkaXF6a2N4, scanned/non-text): Directors' "
+    f"report and financial statements, year ended March 31, 2012, pp.10-13 - {AR2012_URL}. "
+    f"Cross-checked against the FY2012 comparative column in the FY2013 filing above - ties exactly "
+    f"except the FY2013 filing's comparative reclassifies USD 67,183k out of 'Loans and advances to "
+    f"banks' into a new 'Balances at central banks' line for FY2012 (a restatement, not a real "
+    f"change - FY2012's own originally-published Total assets of 4,084,322 is unaffected either "
+    f"way); this workbook uses FY2012's own originally-published, unreclassified figures "
+    f"throughout, per this project's standard convention.\n"
+    f"FY2011 (own, Companies House filing MzAzNjcwNDYwOGFkaXF6a2N4, scanned/non-text): Directors' "
+    f"report and financial statements, year ended March 31, 2011, pp.9-12 - {AR2011_URL}. "
+    f"Cross-checked against the FY2011 comparative column in the FY2012 filing above - ties exactly.\n"
+    f"FY2010 (own, Companies House filing MzAyMTI3MzU1MGFkaXF6a2N4, scanned/non-text): Directors "
+    f"report and financial statements, year ended March 31, 2010, pp.9-12 - {AR2010_URL}. "
+    f"Cross-checked against the FY2010 comparative column in the FY2011 filing above - ties exactly.\n"
+    f"FY2009 (own, Companies House filing MjAzNTc0MTU4N2FkaXF6a2N4, scanned/non-text): Directors' "
+    f"report and financial statements, year ended March 31, 2009, pp.10-13 - {AR2009_URL}. "
+    f"Cross-checked against the FY2009 comparative column in the FY2010 filing above - ties exactly.\n"
+    f"FY2008 (own, Companies House filing MjAwNzk0MTQ0MGFkaXF6a2N4, scanned/non-text): Directors' "
+    f"report and financial statements, year ended 31 March 2008, Profit and loss account/Balance "
+    f"sheet/Statement of total recognised gains and losses/Reconciliation of movements in "
+    f"shareholders' funds, pp.9-12 - {AR2008_URL}. Cross-checked against the FY2008 comparative "
+    f"column in the FY2009 filing above - ties exactly (both give Total assets 8,829,049).\n"
     "HD-046 (2026-09-05): extended FY2014-FY2020 back from the prior FY2021-FY2025 window, capped "
     "at FY2014 by explicit project-wide decision (real archive on icicibank.co.uk goes back to "
     "FY2008, see HD-046.md) - see wayfinder/historical-depth/tickets/HD-046.md.\n"
+    "HD-075 (2026-09-06): extended the four statutory statements (Balance Sheet, Profit & Loss, "
+    "Statement of Changes in Equity, Cash Flow Statement) only, further back to FY2008 - the real "
+    "statutory floor identified by HD-004/HD-046 - by reading all six Companies House filings for "
+    "FY2008-FY2013 directly (all scanned/non-text, read page by page). Pillar 3, Asset Quality and "
+    "RWA Breakdown remain capped at FY2014 - out of scope for HD-075. See "
+    "wayfinder/historical-depth/tickets/HD-075.md.\n"
     "PRESENTATION NOTES: each year's own originally-published figures are used throughout "
     "(not later restated comparatives), except for the Statement of Changes in Equity where a "
     "genuine, Bank-disclosed prior period adjustment is shown explicitly (see that sheet's own "
@@ -131,7 +181,41 @@ STATEMENTS_SOURCES = (
     "483,932 both FY2014 and FY2015 ARs report), but no equivalent split exists anywhere for "
     "FY2014, so FY2014's combined total is shown on its own dedicated row instead, with both "
     "'Bonds and medium term notes' and 'Subordinated debt' left blank for FY2014 rather than "
-    "guessed. Tangible/intangible fixed assets: shown as one combined line for FY2014 (5,751, no "
+    "guessed. The same 'Debt securities and subordinated liabilities' combined row is used for "
+    "FY2008-FY2013 too (none of those years' own Annual Reports, nor any later year's comparative "
+    "column, ever splits them) - see the dedicated combined row below the split rows. Similarly, "
+    "'Investment in Treasury Bills / Government Securities' and 'Investment Securities other than "
+    "Government/Treasury securities' are shown combined on a single 'Investment securities' row "
+    "for FY2008-FY2010 (no split exists in any source reviewed); FY2011 IS split, using the FY2012 "
+    "Annual Report's own FY2011 comparative column (517,435/1,057,938, ties exactly to the combined "
+    "1,575,373 both the FY2011 and FY2012 ARs report for that year), even though FY2011's own "
+    "Annual Report itself only shows the combined figure. HD-075 (2026-09-06) wrinkle: 'Issued "
+    "share capital' meant only Ordinary/Equity share capital throughout the pre-existing FY2014-"
+    "FY2025 window (Preference share capital having already been redeemed by FY2014); for the newly-"
+    "added FY2008-FY2012 the Bank's Balance Sheet discloses Ordinary/Equity and Preference/Non-"
+    "equity share capital as two separate lines throughout (labelled 'Ordinary'/'Preference' from "
+    "FY2012, 'Equity'/'Non-equity' FY2008-FY2011 - same substance), so a new 'Preference share "
+    "capital' row is added, carrying 50,000 for FY2008-FY2012 and explicit nil for FY2013 (the year "
+    "of redemption - see Statement of Changes in Equity), blank thereafter. The Profit & Loss sheet "
+    "gains a new 'Gains on buy back of bonds' row, disclosed as its own P&L line FY2009-FY2012 "
+    "(87,357/6,415/150/0) but not present at all in the FY2008 P&L or any FY2013 onward P&L - left "
+    "blank for FY2008 and FY2013 onward rather than assumed nil (FY2012's own 'Financial 2013' "
+    "column implies the line still existed conceptually but was FY2013-onward folded back into "
+    "profit/(loss) on sale of debt securities per that year's own Directors' report highlights "
+    "table). FY2008's P&L does not separately disclose 'Foreign exchange revaluation gains' - that "
+    "year's own statement instead shows a single combined 'Dealing (losses)/profits' line (-27,313), "
+    "which the FY2009 Annual Report's own FY2008 comparative column later reclassifies into "
+    "'Foreign exchange revaluation gains' (23,353) plus 'Income/(Expense) on financial instruments "
+    "at fair value through profit and loss' (-50,666) - a restatement, not a real change (both net "
+    "to -27,313). Per this workbook's standing convention of using each year's own originally-"
+    "published figures, FY2008's combined -27,313 is shown on the 'Income/(loss) on financial "
+    "instruments at fair value through P&L' row, with 'Foreign exchange revaluation gains' left "
+    "blank for FY2008 only rather than force-split. FY2008's Balance Sheet has no directly-"
+    "disclosed 'Total Liabilities' subtotal separate from Total Equity (that year's own statement "
+    "prints one combined bottom-line figure covering both) - the FY2008 Total Liabilities row shown "
+    "here (8,363,027) is therefore computed as the sum of that year's own disclosed liability line "
+    "items, not copied from an explicit source subtotal; it ties exactly (Total Liabilities + Total "
+    "Equity = Total assets = 8,829,049). Tangible/intangible fixed assets: shown as one combined line for FY2014 (5,751, no "
     "separate intangible disclosed that year), FY2015 (4,774, ditto), FY2019 and FY2020 (both "
     "years' own 'Tangible and Intangible fixed assets' combined line); shown as two components "
     "summed for FY2016-FY2018, where the Bank disclosed them as separate lines. 'Derivative "
@@ -152,47 +236,56 @@ def p3_sources():
     for year in YEARS:
         if year in P3_URLS:
             lines.append(f"{year}: official ICICI Bank UK Pillar 3 disclosure, pp.7–8 - {P3_URLS[year]}")
-        else:
+        elif year == "FY2021":
             lines.append(
                 f"{year}: 31 March 2021 comparative in the official ICICI Bank UK Pillar 3 disclosure, pp.7–8 - {P3_URLS['FY2022']}"
+            )
+        else:
+            lines.append(
+                f"{year}: out of scope for Pillar 3/Asset Quality/RWA Breakdown - HD-075 (2026-09-06) "
+                f"extended only the four statutory statements (Balance Sheet, P&L, Statement of Changes "
+                f"in Equity, Cash Flow Statement) back to FY2008; Pillar 3 remains capped at FY2014 by "
+                f"explicit ticket scope. Left blank."
             )
     lines.append(ENTITY_NOTE)
     return "\n".join(lines)
 
 
-bw = BankWorkbook(bank_name="ICICI Bank UK Plc", years=YEARS, header_color="2A5D67")
+bw = BankWorkbook(bank_name="ICICI Bank UK Plc", years=Y_CORE, year_label={y: y for y in YEARS}, header_color="2A5D67")
 
 BS_ROWS = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and cash equivalents / Cash and Balances at Central Banks", {"FY2025": 403868, "FY2024": 219629, "FY2023": 352907, "FY2022": 336706, "FY2021": 733560, "FY2020": 289988, "FY2019": 273101, "FY2018": 500246, "FY2017": 282287, "FY2016": 500618, "FY2015": 449752, "FY2014": 1009055}),
-    ("DATA", "Investment in Treasury Bills / Government Securities", {"FY2025": 140589, "FY2024": 146509, "FY2023": 206357, "FY2022": 154441, "FY2021": 125760, "FY2020": 263617, "FY2019": 297509, "FY2018": 192094, "FY2017": 74127, "FY2016": 129352, "FY2015": 84951, "FY2014": 126967}),
-    ("DATA", "Loans and advances to banks", {"FY2025": 339561, "FY2024": 355557, "FY2023": 190371, "FY2022": 141379, "FY2021": 52372, "FY2020": 168105, "FY2019": 144881, "FY2018": 137553, "FY2017": 106641, "FY2016": 283149, "FY2015": 184146, "FY2014": 79079}),
-    ("DATA", "Loans and advances to customers", {"FY2025": 964471, "FY2024": 888857, "FY2023": 899505, "FY2022": 1182895, "FY2021": 1522138, "FY2020": 2074527, "FY2019": 2423180, "FY2018": 2365651, "FY2017": 2332132, "FY2016": 2962535, "FY2015": 2878811, "FY2014": 2749136}),
-    ("DATA", "Investment securities other than Government/Treasury securities (FY2025: Debt Securities + Equity shares combined)", {"FY2025": 535052, "FY2024": 551784, "FY2023": 431819, "FY2022": 366804, "FY2021": 412986, "FY2020": 607599, "FY2019": 608610, "FY2018": 612801, "FY2017": 609179, "FY2016": 614061, "FY2015": 412979, "FY2014": 371918}),
+    ("DATA", "Cash and cash equivalents / Cash and Balances at Central Banks", {"FY2025": 403868, "FY2024": 219629, "FY2023": 352907, "FY2022": 336706, "FY2021": 733560, "FY2020": 289988, "FY2019": 273101, "FY2018": 500246, "FY2017": 282287, "FY2016": 500618, "FY2015": 449752, "FY2014": 1009055, "FY2013": 583792, "FY2012": 1255, "FY2011": 1057, "FY2010": 1060, "FY2009": 3108, "FY2008": 3150}),
+    ("DATA", "Investment in Treasury Bills / Government Securities", {"FY2025": 140589, "FY2024": 146509, "FY2023": 206357, "FY2022": 154441, "FY2021": 125760, "FY2020": 263617, "FY2019": 297509, "FY2018": 192094, "FY2017": 74127, "FY2016": 129352, "FY2015": 84951, "FY2014": 126967, "FY2013": 101988, "FY2012": 693723, "FY2011": 517435}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 339561, "FY2024": 355557, "FY2023": 190371, "FY2022": 141379, "FY2021": 52372, "FY2020": 168105, "FY2019": 144881, "FY2018": 137553, "FY2017": 106641, "FY2016": 283149, "FY2015": 184146, "FY2014": 79079, "FY2013": 78657, "FY2012": 301503, "FY2011": 875384, "FY2010": 1429224, "FY2009": 984601, "FY2008": 2225539}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 964471, "FY2024": 888857, "FY2023": 899505, "FY2022": 1182895, "FY2021": 1522138, "FY2020": 2074527, "FY2019": 2423180, "FY2018": 2365651, "FY2017": 2332132, "FY2016": 2962535, "FY2015": 2878811, "FY2014": 2749136, "FY2013": 2282972, "FY2012": 2387707, "FY2011": 3594595, "FY2010": 3635269, "FY2009": 3146865, "FY2008": 1963202}),
+    ("DATA", "Investment securities other than Government/Treasury securities (FY2025: Debt Securities + Equity shares combined)", {"FY2025": 535052, "FY2024": 551784, "FY2023": 431819, "FY2022": 366804, "FY2021": 412986, "FY2020": 607599, "FY2019": 608610, "FY2018": 612801, "FY2017": 609179, "FY2016": 614061, "FY2015": 412979, "FY2014": 371918, "FY2013": 423667, "FY2012": 479531, "FY2011": 1057938}),
+    ("DATA", "Investment securities (FY2008-FY2010 only - combined, not split into Treasury Bills/other; see source note)", {"FY2010": 2000397, "FY2009": 2927000, "FY2008": 4365047}),
     ("DATA", "Derivative financial instruments", {"FY2025": 22995, "FY2024": 23710, "FY2023": 48189, "FY2022": 20096, "FY2021": 49181, "FY2020": 33964, "FY2019": 29259, "FY2018": 24295}),
-    ("DATA", "Tangible & intangible fixed assets", {"FY2025": 2447, "FY2024": 2350, "FY2023": 2348, "FY2022": 2690, "FY2021": 3549, "FY2020": 4107, "FY2019": 2302, "FY2018": 2776, "FY2017": 3469, "FY2016": 4184, "FY2015": 4774, "FY2014": 5751}),
-    ("DATA", "Other assets", {"FY2025": 11331, "FY2024": 13339, "FY2023": 9221, "FY2022": 27383, "FY2021": 46158, "FY2020": 82985, "FY2019": 43270, "FY2018": 30380, "FY2017": 55076, "FY2016": 53236, "FY2015": 79037, "FY2014": 109065}),
-    ("DATA", "Prepayments and accrued income", {"FY2025": 1299, "FY2024": 1525, "FY2023": 1343, "FY2022": 9579, "FY2021": 11050, "FY2020": 15792, "FY2019": 18048, "FY2018": 18544, "FY2017": 16855, "FY2016": 56122, "FY2015": 35356, "FY2014": 20183}),
-    ("TOTAL", "Total assets", {"FY2025": 2421613, "FY2024": 2203260, "FY2023": 2142060, "FY2022": 2241973, "FY2021": 2956754, "FY2020": 3540684, "FY2019": 3840160, "FY2018": 3884340, "FY2017": 3479766, "FY2016": 4603257, "FY2015": 4129806, "FY2014": 4471154}),
+    ("DATA", "Tangible & intangible fixed assets", {"FY2025": 2447, "FY2024": 2350, "FY2023": 2348, "FY2022": 2690, "FY2021": 3549, "FY2020": 4107, "FY2019": 2302, "FY2018": 2776, "FY2017": 3469, "FY2016": 4184, "FY2015": 4774, "FY2014": 5751, "FY2013": 7172, "FY2012": 8487, "FY2011": 9760, "FY2010": 11666, "FY2009": 13076, "FY2008": 7677}),
+    ("DATA", "Other assets", {"FY2025": 11331, "FY2024": 13339, "FY2023": 9221, "FY2022": 27383, "FY2021": 46158, "FY2020": 82985, "FY2019": 43270, "FY2018": 30380, "FY2017": 55076, "FY2016": 53236, "FY2015": 79037, "FY2014": 109065, "FY2013": 93402, "FY2012": 182211, "FY2011": 337406, "FY2010": 285930, "FY2009": 162985, "FY2008": 177925}),
+    ("DATA", "Prepayments and accrued income", {"FY2025": 1299, "FY2024": 1525, "FY2023": 1343, "FY2022": 9579, "FY2021": 11050, "FY2020": 15792, "FY2019": 18048, "FY2018": 18544, "FY2017": 16855, "FY2016": 56122, "FY2015": 35356, "FY2014": 20183, "FY2013": 15656, "FY2012": 29905, "FY2011": 48445, "FY2010": 55319, "FY2009": 83073, "FY2008": 86509}),
+    ("TOTAL", "Total assets", {"FY2025": 2421613, "FY2024": 2203260, "FY2023": 2142060, "FY2022": 2241973, "FY2021": 2956754, "FY2020": 3540684, "FY2019": 3840160, "FY2018": 3884340, "FY2017": 3479766, "FY2016": 4603257, "FY2015": 4129806, "FY2014": 4471154, "FY2013": 3587306, "FY2012": 4084322, "FY2011": 6442020, "FY2010": 7418865, "FY2009": 7320708, "FY2008": 8829049}),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Deposits by banks", {"FY2025": 27169, "FY2024": 0, "FY2023": 32456, "FY2022": 28850, "FY2021": 65315, "FY2020": 285939, "FY2019": 559541, "FY2018": 916438, "FY2017": 602425, "FY2016": 591280, "FY2015": 365417, "FY2014": 461141}),
-    ("DATA", "Customer accounts", {"FY2025": 1901625, "FY2024": 1668596, "FY2023": 1617438, "FY2022": 1541957, "FY2021": 1957458, "FY2020": 2042228, "FY2019": 2140798, "FY2018": 1748820, "FY2017": 1648588, "FY2016": 2466866, "FY2015": 2284686, "FY2014": 2533259}),
+    ("DATA", "Deposits by banks", {"FY2025": 27169, "FY2024": 0, "FY2023": 32456, "FY2022": 28850, "FY2021": 65315, "FY2020": 285939, "FY2019": 559541, "FY2018": 916438, "FY2017": 602425, "FY2016": 591280, "FY2015": 365417, "FY2014": 461141, "FY2013": 288768, "FY2012": 318651, "FY2011": 355627, "FY2010": 782806, "FY2009": 813326, "FY2008": 1413152}),
+    ("DATA", "Customer accounts", {"FY2025": 1901625, "FY2024": 1668596, "FY2023": 1617438, "FY2022": 1541957, "FY2021": 1957458, "FY2020": 2042228, "FY2019": 2140798, "FY2018": 1748820, "FY2017": 1648588, "FY2016": 2466866, "FY2015": 2284686, "FY2014": 2533259, "FY2013": 1799281, "FY2012": 2411464, "FY2011": 4210158, "FY2010": 4552107, "FY2009": 4622767, "FY2008": 5180328}),
     ("DATA", "Bonds and medium term notes", {"FY2024": 0, "FY2023": 25122, "FY2022": 146358, "FY2021": 197852, "FY2020": 295301, "FY2019": 238632, "FY2018": 359781, "FY2017": 344197, "FY2016": 511453, "FY2015": 250530}),
-    ("DATA", "Debt securities and subordinated liabilities (FY2014 only - combined; the FY2014 and FY2015 Annual Reports never split this into Bonds/Subordinated debt, see source note)", {"FY2014": 426643}),
+    ("DATA", "Debt securities and subordinated liabilities (FY2008-FY2014 only - combined; none of these years' own Annual Reports, nor any later year's comparative column, ever splits this into Bonds/Subordinated debt, see source note)", {"FY2014": 426643, "FY2013": 528070, "FY2012": 372621, "FY2011": 838492, "FY2010": 1112408, "FY2009": 1168120, "FY2008": 1341251}),
     ("DATA", "Derivative financial instruments", {"FY2025": 16587, "FY2024": 19191, "FY2023": 28483, "FY2022": 18208, "FY2021": 40360, "FY2020": 73225, "FY2019": 19918, "FY2018": 17572}),
-    ("DATA", "Other liabilities", {"FY2025": 28627, "FY2024": 24163, "FY2023": 37868, "FY2022": 15546, "FY2021": 19620, "FY2020": 18843, "FY2019": 32265, "FY2018": 13066, "FY2017": 26297, "FY2016": 76075, "FY2015": 126762, "FY2014": 73041}),
-    ("DATA", "Accruals and deferred income", {"FY2025": 11671, "FY2024": 11078, "FY2023": 9734, "FY2022": 13680, "FY2021": 14139, "FY2020": 20724, "FY2019": 24064, "FY2018": 21045, "FY2017": 19096, "FY2016": 24431, "FY2015": 29546, "FY2014": 31477}),
+    ("DATA", "Other liabilities", {"FY2025": 28627, "FY2024": 24163, "FY2023": 37868, "FY2022": 15546, "FY2021": 19620, "FY2020": 18843, "FY2019": 32265, "FY2018": 13066, "FY2017": 26297, "FY2016": 76075, "FY2015": 126762, "FY2014": 73041, "FY2013": 106591, "FY2012": 222742, "FY2011": 262727, "FY2010": 245458, "FY2009": 287430, "FY2008": 403240}),
+    ("DATA", "Accruals and deferred income", {"FY2025": 11671, "FY2024": 11078, "FY2023": 9734, "FY2022": 13680, "FY2021": 14139, "FY2020": 20724, "FY2019": 24064, "FY2018": 21045, "FY2017": 19096, "FY2016": 24431, "FY2015": 29546, "FY2014": 31477, "FY2013": 34464, "FY2012": 49204, "FY2011": 91654, "FY2010": 99483, "FY2009": 19233, "FY2008": 25056}),
     ("DATA", "Subordinated debt", {"FY2025": 50568, "FY2024": 50028, "FY2023": 72616, "FY2022": 72954, "FY2021": 76116, "FY2020": 219854, "FY2019": 223348, "FY2018": 149880, "FY2017": 176149, "FY2016": 234242, "FY2015": 233402}),
     ("DATA", "Repurchase Agreements", {"FY2025": 33425, "FY2024": 92735, "FY2023": 0, "FY2022": 88548, "FY2021": 79153, "FY2020": 131238, "FY2019": 147263, "FY2018": 150986, "FY2017": 129784, "FY2016": 153383, "FY2015": 294035, "FY2014": 316544}),
-    ("TOTAL", "Total Liabilities", {"FY2025": 2069672, "FY2024": 1865791, "FY2023": 1823717, "FY2022": 1926101, "FY2021": 2450013, "FY2020": 3087352, "FY2019": 3385829, "FY2018": 3377588, "FY2017": 2946536, "FY2016": 4057730, "FY2015": 3584378, "FY2014": 3842105}),
+    ("TOTAL", "Total Liabilities", {"FY2025": 2069672, "FY2024": 1865791, "FY2023": 1823717, "FY2022": 1926101, "FY2021": 2450013, "FY2020": 3087352, "FY2019": 3385829, "FY2018": 3377588, "FY2017": 2946536, "FY2016": 4057730, "FY2015": 3584378, "FY2014": 3842105, "FY2013": 2965134, "FY2012": 3374682, "FY2011": 5758658, "FY2010": 6792262, "FY2009": 6910876, "FY2008": 8363027}),
     ("SECTION", "Shareholders' funds", {}),
-    ("DATA", "Issued share capital", {"FY2025": 220095, "FY2024": 220095, "FY2023": 220095, "FY2022": 220095, "FY2021": 420095, "FY2020": 420095, "FY2019": 420095, "FY2018": 420095, "FY2017": 420095, "FY2016": 420095, "FY2015": 420095, "FY2014": 495095}),
-    ("DATA", "Capital contribution", {"FY2025": 12208, "FY2024": 12208, "FY2023": 12208, "FY2022": 12194, "FY2021": 12108, "FY2020": 11634, "FY2019": 10703, "FY2018": 10168, "FY2017": 9121, "FY2016": 7332, "FY2015": 5912, "FY2014": 5256}),
-    ("DATA", "Capital redemption reserve (cancelled into Retained earnings during FY2015 - see Statement of Changes in Equity)", {"FY2015": 0, "FY2014": 50000}),
-    ("DATA", "Retained earnings", {"FY2025": 117423, "FY2024": 103595, "FY2023": 86086, "FY2022": 83076, "FY2021": 72175, "FY2020": 57383, "FY2019": 34133, "FY2018": 87002, "FY2017": 112550, "FY2016": 128632, "FY2015": 128089, "FY2014": 89760}),
-    ("DATA", "Available for sale reserve", {"FY2025": 2215, "FY2024": 1571, "FY2023": -46, "FY2022": 507, "FY2021": 2363, "FY2020": -35780, "FY2019": -10600, "FY2018": -10513, "FY2017": -8536, "FY2016": -10532, "FY2015": -8668, "FY2014": -11062}),
-    ("TOTAL", "Total Equity", {"FY2025": 351941, "FY2024": 337469, "FY2023": 318343, "FY2022": 315872, "FY2021": 506741, "FY2020": 453332, "FY2019": 454331, "FY2018": 506752, "FY2017": 533230, "FY2016": 545527, "FY2015": 545428, "FY2014": 629049}),
-    ("TOTAL", "Total Equity and Liabilities", {"FY2025": 2421613, "FY2024": 2203260, "FY2023": 2142060, "FY2022": 2241973, "FY2021": 2956754, "FY2020": 3540684, "FY2019": 3840160, "FY2018": 3884340, "FY2017": 3479766, "FY2016": 4603257, "FY2015": 4129806, "FY2014": 4471154}),
+    ("DATA", "Issued share capital", {"FY2025": 220095, "FY2024": 220095, "FY2023": 220095, "FY2022": 220095, "FY2021": 420095, "FY2020": 420095, "FY2019": 420095, "FY2018": 420095, "FY2017": 420095, "FY2016": 420095, "FY2015": 420095, "FY2014": 495095, "FY2013": 495095, "FY2012": 545095, "FY2011": 545095, "FY2010": 545095, "FY2009": 545095, "FY2008": 445095}),
+    ("DATA", "Preference share capital (Non-equity/Preference share capital; redeemed during FY2013 - see Statement of Changes in Equity)", {"FY2013": 0, "FY2012": 50000, "FY2011": 50000, "FY2010": 50000, "FY2009": 50000, "FY2008": 50000}),
+    ("DATA", "Capital contribution", {"FY2025": 12208, "FY2024": 12208, "FY2023": 12208, "FY2022": 12194, "FY2021": 12108, "FY2020": 11634, "FY2019": 10703, "FY2018": 10168, "FY2017": 9121, "FY2016": 7332, "FY2015": 5912, "FY2014": 5256, "FY2013": 4148, "FY2012": 3151, "FY2011": 2131, "FY2010": 1467, "FY2009": 851}),
+    ("DATA", "Capital redemption reserve (cancelled into Retained earnings during FY2015 - see Statement of Changes in Equity)", {"FY2015": 0, "FY2014": 50000, "FY2013": 50000}),
+    ("DATA", "Retained earnings", {"FY2025": 117423, "FY2024": 103595, "FY2023": 86086, "FY2022": 83076, "FY2021": 72175, "FY2020": 57383, "FY2019": 34133, "FY2018": 87002, "FY2017": 112550, "FY2016": 128632, "FY2015": 128089, "FY2014": 89760, "FY2013": 89536, "FY2012": 149278, "FY2011": 148013, "FY2010": 115582, "FY2009": 78589, "FY2008": 71753}),
+    ("DATA", "Available for sale reserve", {"FY2025": 2215, "FY2024": 1571, "FY2023": -46, "FY2022": 507, "FY2021": 2363, "FY2020": -35780, "FY2019": -10600, "FY2018": -10513, "FY2017": -8536, "FY2016": -10532, "FY2015": -8668, "FY2014": -11062, "FY2013": -16607, "FY2012": -37884, "FY2011": -61877, "FY2010": -85541, "FY2009": -264703, "FY2008": -100826}),
+    ("TOTAL", "Total Equity", {"FY2025": 351941, "FY2024": 337469, "FY2023": 318343, "FY2022": 315872, "FY2021": 506741, "FY2020": 453332, "FY2019": 454331, "FY2018": 506752, "FY2017": 533230, "FY2016": 545527, "FY2015": 545428, "FY2014": 629049, "FY2013": 622172, "FY2012": 709640, "FY2011": 683362, "FY2010": 626603, "FY2009": 409832, "FY2008": 466022}),
+    ("TOTAL", "Total Equity and Liabilities", {"FY2025": 2421613, "FY2024": 2203260, "FY2023": 2142060, "FY2022": 2241973, "FY2021": 2956754, "FY2020": 3540684, "FY2019": 3840160, "FY2018": 3884340, "FY2017": 3479766, "FY2016": 4603257, "FY2015": 4129806, "FY2014": 4471154, "FY2013": 3587306, "FY2012": 4084322, "FY2011": 6442020, "FY2010": 7418865, "FY2009": 7320708, "FY2008": 8829049}),
 ]
 
 bw.add_balance_sheet_sheet(
@@ -203,30 +296,32 @@ bw.add_balance_sheet_sheet(
     first_col_width=70,
     source_height=220,
     unit_suffix=" (USD'000)",
+    years=YEARS,
 )
 
 PL_ROWS = [
     ("SECTION", "Income", {}),
-    ("DATA", "Interest income and similar income", {"FY2025": 124272, "FY2024": 123959, "FY2023": 76554, "FY2022": 54766, "FY2021": 82846, "FY2020": 123971, "FY2019": 130009, "FY2018": 115269, "FY2017": 118410, "FY2016": 141059, "FY2015": 134664, "FY2014": 130932}),
-    ("DATA", "Interest expense", {"FY2025": -58391, "FY2024": -57300, "FY2023": -23910, "FY2022": -14268, "FY2021": -31939, "FY2020": -59708, "FY2019": -59487, "FY2018": -48364, "FY2017": -52884, "FY2016": -69571, "FY2015": -70012, "FY2014": -75700}),
-    ("TOTAL", "Net interest income", {"FY2025": 65881, "FY2024": 66659, "FY2023": 52644, "FY2022": 40498, "FY2021": 50907, "FY2020": 64263, "FY2019": 70522, "FY2018": 66905, "FY2017": 65526, "FY2016": 71488, "FY2015": 64652, "FY2014": 55232}),
-    ("DATA", "Fees and commissions receivable", {"FY2025": 8656, "FY2024": 7399, "FY2023": 6785, "FY2022": 7352, "FY2021": 6461, "FY2020": 8475, "FY2019": 8042, "FY2018": 8135, "FY2017": 9217, "FY2016": 17285, "FY2015": 20812, "FY2014": 27030}),
-    ("DATA", "Foreign exchange revaluation gains", {"FY2025": 8918, "FY2024": 8389, "FY2023": 6343, "FY2022": 5786, "FY2021": 6376, "FY2020": 6969, "FY2019": 5363, "FY2018": 6907, "FY2017": 4572, "FY2016": 4820, "FY2015": 6689, "FY2014": 7999}),
-    ("DATA", "Income/(loss) on financial instruments at fair value through P&L", {"FY2025": 1238, "FY2024": -17, "FY2023": 1095, "FY2022": 461, "FY2021": -157, "FY2020": -749, "FY2019": 126, "FY2018": -2282, "FY2017": -1090, "FY2016": -6638, "FY2015": 12023, "FY2014": -1291}),
-    ("DATA", "Profit/(loss) on sale of financial assets", {"FY2025": 2601, "FY2024": 3221, "FY2023": -7094, "FY2022": 66, "FY2021": -1336, "FY2020": -23, "FY2019": -4773, "FY2018": 2960, "FY2017": 4619, "FY2016": 11984, "FY2015": 8299, "FY2014": 2974}),
-    ("DATA", "Other operating income", {"FY2025": 28, "FY2024": 40, "FY2023": 279, "FY2022": 294, "FY2021": 326, "FY2020": 375, "FY2019": 562, "FY2018": 599, "FY2017": 665, "FY2016": 682, "FY2015": 451, "FY2014": 1185}),
-    ("TOTAL", "Total revenue / Net Income (FY2014-FY2017: that year's own 'Operating income' subtotal, which EXCLUDES the profit/(loss)-on-sale-of-financial-assets row above - see source note)", {"FY2025": 87322, "FY2024": 85691, "FY2023": 60052, "FY2022": 54457, "FY2021": 62577, "FY2020": 79310, "FY2019": 79842, "FY2018": 83224, "FY2017": 78890, "FY2016": 87637, "FY2015": 104627, "FY2014": 90155}),
+    ("DATA", "Interest income and similar income", {"FY2025": 124272, "FY2024": 123959, "FY2023": 76554, "FY2022": 54766, "FY2021": 82846, "FY2020": 123971, "FY2019": 130009, "FY2018": 115269, "FY2017": 118410, "FY2016": 141059, "FY2015": 134664, "FY2014": 130932, "FY2013": 141925, "FY2012": 196182, "FY2011": 257674, "FY2010": 286754, "FY2009": 447061, "FY2008": 414259}),
+    ("DATA", "Interest expense", {"FY2025": -58391, "FY2024": -57300, "FY2023": -23910, "FY2022": -14268, "FY2021": -31939, "FY2020": -59708, "FY2019": -59487, "FY2018": -48364, "FY2017": -52884, "FY2016": -69571, "FY2015": -70012, "FY2014": -75700, "FY2013": -91033, "FY2012": -137742, "FY2011": -182846, "FY2010": -239637, "FY2009": -377893, "FY2008": -364419}),
+    ("TOTAL", "Net interest income", {"FY2025": 65881, "FY2024": 66659, "FY2023": 52644, "FY2022": 40498, "FY2021": 50907, "FY2020": 64263, "FY2019": 70522, "FY2018": 66905, "FY2017": 65526, "FY2016": 71488, "FY2015": 64652, "FY2014": 55232, "FY2013": 50892, "FY2012": 58440, "FY2011": 74828, "FY2010": 47117, "FY2009": 69168, "FY2008": 49840}),
+    ("DATA", "Fees and commissions receivable", {"FY2025": 8656, "FY2024": 7399, "FY2023": 6785, "FY2022": 7352, "FY2021": 6461, "FY2020": 8475, "FY2019": 8042, "FY2018": 8135, "FY2017": 9217, "FY2016": 17285, "FY2015": 20812, "FY2014": 27030, "FY2013": 19041, "FY2012": 16514, "FY2011": 23578, "FY2010": 40541, "FY2009": 31046, "FY2008": 81023}),
+    ("DATA", "Foreign exchange revaluation gains", {"FY2025": 8918, "FY2024": 8389, "FY2023": 6343, "FY2022": 5786, "FY2021": 6376, "FY2020": 6969, "FY2019": 5363, "FY2018": 6907, "FY2017": 4572, "FY2016": 4820, "FY2015": 6689, "FY2014": 7999, "FY2013": 9435, "FY2012": 9277, "FY2011": 2828, "FY2010": 7456, "FY2009": 1712}),
+    ("DATA", "Income/(loss) on financial instruments at fair value through P&L (FY2008: combined with Foreign exchange revaluation gains as a single 'Dealing (losses)/profits' line - see source note)", {"FY2025": 1238, "FY2024": -17, "FY2023": 1095, "FY2022": 461, "FY2021": -157, "FY2020": -749, "FY2019": 126, "FY2018": -2282, "FY2017": -1090, "FY2016": -6638, "FY2015": 12023, "FY2014": -1291, "FY2013": 4508, "FY2012": -694, "FY2011": 3240, "FY2010": 9460, "FY2009": -667, "FY2008": -27313}),
+    ("DATA", "Profit/(loss) on sale of financial assets", {"FY2025": 2601, "FY2024": 3221, "FY2023": -7094, "FY2022": 66, "FY2021": -1336, "FY2020": -23, "FY2019": -4773, "FY2018": 2960, "FY2017": 4619, "FY2016": 11984, "FY2015": 8299, "FY2014": 2974, "FY2013": -1192, "FY2012": -5205, "FY2011": 6390, "FY2010": 8932, "FY2009": -12476, "FY2008": 23}),
+    ("DATA", "Gains on buy back of bonds (disclosed as its own P&L line FY2009-FY2012 only; not present in the FY2008 P&L or any FY2013-onward P&L - see source note)", {"FY2012": 0, "FY2011": 150, "FY2010": 6415, "FY2009": 87357}),
+    ("DATA", "Other operating income", {"FY2025": 28, "FY2024": 40, "FY2023": 279, "FY2022": 294, "FY2021": 326, "FY2020": 375, "FY2019": 562, "FY2018": 599, "FY2017": 665, "FY2016": 682, "FY2015": 451, "FY2014": 1185, "FY2013": 697, "FY2012": 848, "FY2011": 2285, "FY2010": 2225, "FY2009": 1508, "FY2008": 6186}),
+    ("TOTAL", "Total revenue / Net Income (FY2014-FY2017: that year's own 'Operating income' subtotal, which EXCLUDES the profit/(loss)-on-sale-of-financial-assets row above - see source note)", {"FY2025": 87322, "FY2024": 85691, "FY2023": 60052, "FY2022": 54457, "FY2021": 62577, "FY2020": 79310, "FY2019": 79842, "FY2018": 83224, "FY2017": 78890, "FY2016": 87637, "FY2015": 104627, "FY2014": 90155, "FY2013": 84573, "FY2012": 84385, "FY2011": 106909, "FY2010": 113214, "FY2009": 190124, "FY2008": 109736}),
     ("SECTION", "Expenses", {}),
-    ("DATA", "Administrative expenses", {"FY2025": -51266, "FY2024": -46758, "FY2023": -37348, "FY2022": -38960, "FY2021": -35531, "FY2020": -37402, "FY2019": -33314, "FY2018": -34135, "FY2017": -33050, "FY2016": -33142, "FY2015": -37259, "FY2014": -35318}),
-    ("DATA", "Depreciation", {"FY2025": -786, "FY2024": -709, "FY2023": -956, "FY2022": -1229, "FY2021": -1157, "FY2020": -994, "FY2019": -796, "FY2018": -782, "FY2017": -867, "FY2016": -1026, "FY2015": -1414, "FY2014": -1472}),
-    ("DATA", "Impairment on investment securities", {"FY2025": -27, "FY2024": -23, "FY2023": -79, "FY2022": -20, "FY2021": 49, "FY2020": -3432, "FY2019": -992, "FY2018": 0, "FY2017": 0, "FY2016": -5917, "FY2015": -13538, "FY2014": -5632}),
-    ("DATA", "Impairment on loans and advances", {"FY2025": -3207, "FY2024": -7145, "FY2023": -5867, "FY2022": -2906, "FY2021": -8414, "FY2020": -8902, "FY2019": -104401, "FY2018": -78710, "FY2017": -68181, "FY2016": -53525, "FY2015": -37945, "FY2014": -14590}),
-    ("TOTAL", "Profit on ordinary activities before tax", {"FY2025": 32036, "FY2024": 31056, "FY2023": 15802, "FY2022": 11342, "FY2021": 17524, "FY2020": 28580, "FY2019": -59661, "FY2018": -30404, "FY2017": -18589, "FY2016": 6011, "FY2015": 22770, "FY2014": 36117}),
-    ("DATA", "Taxation on ordinary activities", {"FY2025": -5208, "FY2024": -2279, "FY2023": -2792, "FY2022": -441, "FY2021": -2732, "FY2020": -5331, "FY2019": 6792, "FY2018": 4856, "FY2017": 2507, "FY2016": -5468, "FY2015": -4441, "FY2014": -10893}),
-    ("TOTAL", "Profit for the year", {"FY2025": 26828, "FY2024": 28777, "FY2023": 13010, "FY2022": 10901, "FY2021": 14792, "FY2020": 23249, "FY2019": -52869, "FY2018": -25548, "FY2017": -16082, "FY2016": 543, "FY2015": 18329, "FY2014": 25224}),
+    ("DATA", "Administrative expenses", {"FY2025": -51266, "FY2024": -46758, "FY2023": -37348, "FY2022": -38960, "FY2021": -35531, "FY2020": -37402, "FY2019": -33314, "FY2018": -34135, "FY2017": -33050, "FY2016": -33142, "FY2015": -37259, "FY2014": -35318, "FY2013": -35523, "FY2012": -37630, "FY2011": -42153, "FY2010": -46814, "FY2009": -58413, "FY2008": -45704}),
+    ("DATA", "Depreciation", {"FY2025": -786, "FY2024": -709, "FY2023": -956, "FY2022": -1229, "FY2021": -1157, "FY2020": -994, "FY2019": -796, "FY2018": -782, "FY2017": -867, "FY2016": -1026, "FY2015": -1414, "FY2014": -1472, "FY2013": -1476, "FY2012": -1540, "FY2011": -2338, "FY2010": -2490, "FY2009": -1610, "FY2008": -1301}),
+    ("DATA", "Impairment on investment securities", {"FY2025": -27, "FY2024": -23, "FY2023": -79, "FY2022": -20, "FY2021": 49, "FY2020": -3432, "FY2019": -992, "FY2018": 0, "FY2017": 0, "FY2016": -5917, "FY2015": -13538, "FY2014": -5632, "FY2013": -7015, "FY2012": -8916, "FY2011": 1112, "FY2010": 0, "FY2009": -91434}),
+    ("DATA", "Impairment on loans and advances", {"FY2025": -3207, "FY2024": -7145, "FY2023": -5867, "FY2022": -2906, "FY2021": -8414, "FY2020": -8902, "FY2019": -104401, "FY2018": -78710, "FY2017": -68181, "FY2016": -53525, "FY2015": -37945, "FY2014": -14590, "FY2013": -20209, "FY2012": 4356, "FY2011": -18868, "FY2010": -20549, "FY2009": -16111, "FY2008": -6026}),
+    ("TOTAL", "Profit on ordinary activities before tax", {"FY2025": 32036, "FY2024": 31056, "FY2023": 15802, "FY2022": 11342, "FY2021": 17524, "FY2020": 28580, "FY2019": -59661, "FY2018": -30404, "FY2017": -18589, "FY2016": 6011, "FY2015": 22770, "FY2014": 36117, "FY2013": 19158, "FY2012": 35450, "FY2011": 51052, "FY2010": 52293, "FY2009": 10080, "FY2008": 56728}),
+    ("DATA", "Taxation on ordinary activities", {"FY2025": -5208, "FY2024": -2279, "FY2023": -2792, "FY2022": -441, "FY2021": -2732, "FY2020": -5331, "FY2019": 6792, "FY2018": 4856, "FY2017": 2507, "FY2016": -5468, "FY2015": -4441, "FY2014": -10893, "FY2013": -4775, "FY2012": -10060, "FY2011": -14496, "FY2010": -15300, "FY2009": -3244, "FY2008": -18316}),
+    ("TOTAL", "Profit for the year", {"FY2025": 26828, "FY2024": 28777, "FY2023": 13010, "FY2022": 10901, "FY2021": 14792, "FY2020": 23249, "FY2019": -52869, "FY2018": -25548, "FY2017": -16082, "FY2016": 543, "FY2015": 18329, "FY2014": 25224, "FY2013": 14383, "FY2012": 25390, "FY2011": 36556, "FY2010": 36993, "FY2009": 6836, "FY2008": 38412}),
     ("SECTION", "Other comprehensive income", {}),
-    ("DATA", "Movement in valuation of available for sale debt securities, net of tax (FY2020 also includes a new cash flow hedge component - see source note)", {"FY2025": 644, "FY2024": 1617, "FY2023": -553, "FY2022": -1856, "FY2021": 38143, "FY2020": -25180, "FY2019": -87, "FY2018": -1977, "FY2017": 1996, "FY2016": -1864, "FY2015": 2394, "FY2014": 5545}),
-    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 27472, "FY2024": 30394, "FY2023": 12457, "FY2022": 9045, "FY2021": 52935, "FY2020": -1931, "FY2019": -52956, "FY2018": -27525, "FY2017": -14086, "FY2016": -1321, "FY2015": 20723, "FY2014": 30769}),
+    ("DATA", "Movement in valuation of available for sale debt securities, net of tax (FY2020 also includes a new cash flow hedge component - see source note)", {"FY2025": 644, "FY2024": 1617, "FY2023": -553, "FY2022": -1856, "FY2021": 38143, "FY2020": -25180, "FY2019": -87, "FY2018": -1977, "FY2017": 1996, "FY2016": -1864, "FY2015": 2394, "FY2014": 5545, "FY2013": 21277, "FY2012": 23993, "FY2011": 23664, "FY2010": 179162, "FY2009": -163877, "FY2008": -100454}),
+    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 27472, "FY2024": 30394, "FY2023": 12457, "FY2022": 9045, "FY2021": 52935, "FY2020": -1931, "FY2019": -52956, "FY2018": -27525, "FY2017": -14086, "FY2016": -1321, "FY2015": 20723, "FY2014": 30769, "FY2013": 35660, "FY2012": 49383, "FY2011": 60220, "FY2010": 216155, "FY2009": -157041, "FY2008": -62042}),
 ]
 
 bw.add_income_statement_sheet(
@@ -237,11 +332,51 @@ bw.add_income_statement_sheet(
     first_col_width=70,
     source_height=220,
     unit_suffix=" (USD'000)",
+    years=YEARS,
 )
 
 EQUITY_HEADERS = ["Issued share capital", "Retained earnings", "Capital redemption reserve", "Available for sale reserve", "Capital contribution", "Total equity"]
 EQUITY_ROWS = [
-    ("TOTAL", "Balance as at 1 April 2013 (FY2014's own opening)", (495095, 89536, 50000, -16607, 4148, 622172)),
+    ("TOTAL", "Balance as at 1 April 2007 (FY2008's own opening; 'Issued share capital' here combines Ordinary/Equity + Preference/Non-equity share capital throughout FY2008-FY2012, matching the Bank's own Reconciliation of movements in shareholders' funds table - see subtitle note)", (185095, 37466, None, -372, None, 222189)),
+    ("DATA", "Ordinary shares issued during the year, FY2008", (310000, None, None, None, None, 310000)),
+    ("DATA", "Unrealised loss on available for sale securities, FY2008", (None, None, None, -142763, None, -142763)),
+    ("DATA", "Tax impact on available for sale reserve, FY2008", (None, None, None, 42309, None, 42309)),
+    ("DATA", "Profit for the year, FY2008", (None, 38412, None, None, None, 38412)),
+    ("DATA", "Preference dividend paid, FY2008", (None, -4125, None, None, None, -4125)),
+    ("TOTAL", "Balance as at 31 March 2008 / 1 April 2008", (495095, 71753, None, -100826, None, 466022)),
+    ("DATA", "Ordinary shares issued during the year, FY2009", (100000, None, None, None, None, 100000)),
+    ("DATA", "Capital contribution (share-based payments), FY2009", (None, None, None, None, 851, 851)),
+    ("DATA", "Unrealised loss on available for sale securities, FY2009", (None, None, None, -208291, None, -208291)),
+    ("DATA", "Tax impact on available for sale reserve, FY2009", (None, None, None, 44414, None, 44414)),
+    ("DATA", "Profit for the year, FY2009", (None, 6836, None, None, None, 6836)),
+    ("TOTAL", "Balance as at 31 March 2009 / 1 April 2009", (595095, 78589, None, -264703, 851, 409832)),
+    ("DATA", "Capital contribution (share-based payments), FY2010", (None, None, None, None, 616, 616)),
+    ("DATA", "Unrealised gain on available for sale securities, FY2010", (None, None, None, 232412, None, 232412)),
+    ("DATA", "Tax impact on available for sale reserve, FY2010", (None, None, None, -53250, None, -53250)),
+    ("DATA", "Profit for the year, FY2010", (None, 36993, None, None, None, 36993)),
+    ("TOTAL", "Balance as at 31 March 2010 / 1 April 2010", (595095, 115582, None, -85541, 1467, 626603)),
+    ("DATA", "Capital contribution (share-based payments), FY2011", (None, None, None, None, 664, 664)),
+    ("DATA", "Unrealised gain on available for sale securities, FY2011", (None, None, None, 32867, None, 32867)),
+    ("DATA", "Tax impact on available for sale reserve, FY2011", (None, None, None, -9203, None, -9203)),
+    ("DATA", "Profit for the year, FY2011", (None, 36556, None, None, None, 36556)),
+    ("DATA", "Preference dividend paid, FY2011", (None, -4125, None, None, None, -4125)),
+    ("TOTAL", "Balance as at 31 March 2011 / 1 April 2011", (595095, 148013, None, -61877, 2131, 683362)),
+    ("DATA", "Capital contribution (share-based payments), FY2012", (None, None, None, None, 1020, 1020)),
+    ("DATA", "Unrealised gain on available for sale securities, FY2012", (None, None, None, 30020, None, 30020)),
+    ("DATA", "Tax impact on available for sale reserve, FY2012", (None, None, None, -6027, None, -6027)),
+    ("DATA", "Profit for the year, FY2012", (None, 25390, None, None, None, 25390)),
+    ("DATA", "Preference dividend paid, FY2012", (None, -4125, None, None, None, -4125)),
+    ("DATA", "Equity dividend paid, FY2012", (None, -20000, None, None, None, -20000)),
+    ("TOTAL", "Balance as at 31 March 2012 / 1 April 2012", (595095, 149278, None, -37884, 3151, 709640)),
+    ("DATA", "Capital contribution (share-based payments), FY2013", (None, None, None, None, 997, 997)),
+    ("DATA", "Redemption of Preference share capital, FY2013", (-50000, -50000, 50000, None, None, -50000)),
+    ("DATA", "Reduction in Equity share capital, FY2013", (-50000, None, None, None, None, -50000)),
+    ("DATA", "Unrealised gain on available for sale securities, FY2013", (None, None, None, 27996, None, 27996)),
+    ("DATA", "Tax impact on available for sale reserve, FY2013", (None, None, None, -6719, None, -6719)),
+    ("DATA", "Profit for the year, FY2013", (None, 14383, None, None, None, 14383)),
+    ("DATA", "Preference dividend paid, FY2013", (None, -4125, None, None, None, -4125)),
+    ("DATA", "Equity dividend paid, FY2013", (None, -20000, None, None, None, -20000)),
+    ("TOTAL", "Balance as at 31 March 2013 / 1 April 2013 (FY2014's own opening; from here on 'Issued share capital' is Ordinary shares only, since Preference share capital was redeemed to nil during FY2013 - see the two DATA rows above)", (495095, 89536, 50000, -16607, 4148, 622172)),
     ("DATA", "Capital contribution (share-based payments), FY2014", (None, None, None, None, 1108, 1108)),
     ("DATA", "Unrealised gain on available for sale securities, FY2014", (None, None, None, 7201, None, 7201)),
     ("DATA", "Tax impact on available for sale reserve, FY2014", (None, None, None, -1656, None, -1656)),
@@ -316,7 +451,20 @@ bw.add_equity_changes_sheet(
         "redemption reserve of $50,000k existed at the FY2014 opening (1 April 2013) and was "
         "cancelled into Retained earnings during FY2015 (nil from 31 March 2015 onward) - carried "
         "as its own column throughout for a clean reconciliation even though it is blank/zero after "
-        "FY2015."
+        "FY2015. HD-075 (2026-09-06) extended the ladder back from FY2013's opening to FY2008's "
+        "opening (1 April 2007), the real statutory floor. For FY2008-FY2012, the 'Issued share "
+        "capital' column combines Ordinary/Equity share capital AND Preference/Non-equity share "
+        "capital into a single figure, exactly matching how the Bank's own Reconciliation of "
+        "movements in shareholders' funds table presents it in every one of those years' Annual "
+        "Reports (the Balance Sheet sheet, by contrast, shows them as two separate line items, "
+        "matching THAT statement's own presentation - the two sheets are individually accurate to "
+        "their own source table, not to each other's convention). Preference share capital ($50,000k "
+        "throughout FY2008-FY2012) was redeemed to nil during FY2013 (see the 'Redemption of "
+        "Preference share capital, FY2013' row), which is also when the Capital redemption reserve "
+        "column first appears - both events happen in the same year, are unrelated to each other, "
+        "and are shown as separate rows. Every closing balance from FY2008 to FY2013 ties exactly to "
+        "the next year's own opening balance and to that year's own Balance Sheet Total Equity "
+        "(single Issued-share-capital-combined total in both cases)."
     ),
     headers=EQUITY_HEADERS,
     rows=EQUITY_ROWS,
@@ -333,6 +481,7 @@ bw.add_cash_flow_sheet(
     first_col_width=105,
     source_height=180,
     unit_suffix="",
+    years=YEARS,
 )
 
 

@@ -6,7 +6,12 @@ from bank_workbook import BankWorkbook
 # workbook converts every $ figure to £ at the user's request. See FX_NOTE
 # below for the full methodology; ratios are never converted (see FX_NOTE).
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016",
-         "FY2015", "FY2014"]  # most recent first; FY2014 is the project-wide historical-depth cap (HD-052)
+         "FY2015", "FY2014", "FY2013"]
+Y_CORE = YEARS[:YEARS.index('FY2014') + 1]  # HD-072/075/079: FY2014-floor default for Pillar 3/Asset Quality/RWA Breakdown/Overview
+  # most recent first; FY2014 was the project-wide historical-depth cap
+# (HD-052) until HD-072 lifted it for the four statutory statements only (Balance Sheet/P&L/Statement of Changes
+# in Equity/Cash Flow Statement) - Pillar 3/Asset Quality/RWA Breakdown remain capped at FY2014, see those
+# sheets' dicts below which deliberately have no FY2013 entries.
 
 AR2021_URL = "https://web.archive.org/web/20240612221125/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbcbi-annual-report-2021.pdf"
 AR2022_URL = "https://www.smbcgroup.com/emea/getmedia/efb562ee-627d-41c9-823a-b157f879892f/Annual-Report-and-Financial-Statements-2022-(SMBC-BI).pdf"
@@ -23,6 +28,9 @@ AR2017_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2016_URL = "https://find-and-update.company-information.service.gov.uk/company/04684034/filing-history/MzE1MzEzNzE2MWFkaXF6a2N4/document?format=pdf&download=0"
 AR2015_URL = "https://find-and-update.company-information.service.gov.uk/company/04684034/filing-history/MzEyNjg1NTk3OWFkaXF6a2N4/document?format=pdf&download=0"
 AR2014_URL = "https://find-and-update.company-information.service.gov.uk/company/04684034/filing-history/MzEwMzk5NTEyM2FkaXF6a2N4/document?format=pdf&download=0"
+# FY2013 (HD-072): SMBC BI's own Companies House filing history, "Full accounts made up to 31 March 2013",
+# filed 04 Jul 2013.
+AR2013_URL = "https://find-and-update.company-information.service.gov.uk/company/04684034/filing-history/MzA4MDk2MzYzM2FkaXF6a2N4/document?format=pdf&download=0"
 
 P3_2021_URL = "https://www.smbcgroup.com/emea/getmedia/c956424b-468e-4f29-9650-a4c792a720c3/Pillar-3-Interim-Disclosure-March-2021-(SMBC-BI).pdf"
 P3_2022_URL = "https://web.archive.org/web/20240712094621/https://www.smbcgroup.com/emea/images/SMBC/media/Notices-Reporting/Corporate%20Disclosures/smbcbi-pillar3-2022.pdf"
@@ -54,7 +62,14 @@ P3_2014_URL = "https://web.archive.org/web/20240701160935/https://www.smbcgroup.
 # for a true daily average, used because the source's daily series does not
 # expose a ready-made period-average figure.
 FX_RATES = {
-    "FY2013": {"period_end": 1.5181},  # 31 Mar 2013 only - needed for FY2014's opening cash balance
+    # 31 Mar 2012 only - needed for the Statement of Changes in Equity's "Balance at 1 April 2012" opening
+    # (HD-072). Source: BoE spot rate archive, last business day before the date - 30 Mar 2012 (31 Mar 2012 was
+    # a Saturday).
+    "FY2012": {"period_end": 1.5981},
+    # HD-072: "average" added when FY2013 was extended in as its own year column - simple mean of the 12
+    # month-end spot rates 30 Apr 2012 through 28 Mar 2013 (28 Mar was the last business day before Easter;
+    # 29-31 Mar 2013 had no BoE rate published), per the same methodology as every other year below.
+    "FY2013": {"period_end": 1.5181, "average": 1.5795},
     "FY2014": {"period_end": 1.6673, "average": 1.5964},
     "FY2015": {"period_end": 1.4847, "average": 1.6087},
     "FY2016": {"period_end": 1.4378, "average": 1.5023},
@@ -69,6 +84,7 @@ FX_RATES = {
     "FY2025": {"period_end": 1.2910, "average": 1.2775},
 }
 PRIOR_YEAR = {
+    "FY2013": "FY2012",
     "FY2014": "FY2013", "FY2015": "FY2014", "FY2016": "FY2015", "FY2017": "FY2016", "FY2018": "FY2017",
     "FY2019": "FY2018", "FY2020": "FY2019", "FY2021": "FY2020", "FY2022": "FY2021", "FY2023": "FY2022",
     "FY2024": "FY2023", "FY2025": "FY2024",
@@ -99,8 +115,8 @@ FX_NOTE = (
     "Bank of England GBP/USD SPOT rate as at that fiscal year-end (31 March); flow figures (every cash flow "
     "statement line item) use the AVERAGE of the 12 month-end spot rates over that fiscal year (1 April-31 March), "
     "since a true daily average was not practically obtainable - both from Bank of England daily reference rates "
-    "via poundsterlinglive.com's published archive. Rates used (£1 = $X): 31 Mar 2013 spot 1.5181 (FY2014 opening "
-    "cash only); FY2014 spot 1.6673 / average 1.5964; FY2015 spot 1.4847 / average 1.6087; FY2016 spot 1.4378 / "
+    "via poundsterlinglive.com's published archive. Rates used (£1 = $X): 31 Mar 2012 spot 1.5981 (FY2013 opening "
+    "equity balance only); FY2013 spot 1.5181 / average 1.5795; FY2014 spot 1.6673 / average 1.5964; FY2015 spot 1.4847 / average 1.6087; FY2016 spot 1.4378 / "
     "average 1.5023; FY2017 spot 1.2507 / average 1.3046; FY2018 spot 1.4033 / average 1.3390; FY2019 spot 1.3030 "
     "/ average 1.3102; FY2020 spot 1.2403 / average 1.2713; FY2021 spot 1.3796 / average 1.3193; FY2022 spot "
     "1.3162 / average 1.3617; FY2023 spot 1.2364 / average 1.2043; FY2024 spot 1.2632 / average 1.2581; FY2025 "
@@ -150,10 +166,13 @@ CASH_FLOW_SOURCES = (
     f"FY2016: as above, year ended 31 March 2016, p.17 - {AR2016_URL}\n"
     f"FY2015: as above, year ended 31 March 2015, p.17 - {AR2015_URL}\n"
     f"FY2014: as above, year ended 31 March 2014, p.16 - {AR2014_URL}\n"
+    f"FY2013 (HD-072): as above, year ended 31 March 2013, p.16 - {AR2013_URL}\n"
     "Each year's own report was used for its own column (not a restated comparative); every year's own figure was "
     "cross-checked against its appearance as the comparative column in the following year's report and matched "
     "exactly in all cases, so there are no presentation-basis restatements to flag across vintages for FY2015-2025 "
-    "(only new line items appearing from FY2025 onward - see entity note). Note: FY2025's operating/investing/"
+    "(only new line items appearing from FY2025 onward - see entity note). FY2013's own figures were specifically "
+    "cross-checked against their appearance as the comparative column in AR2014 and matched exactly, with no "
+    "restatement. Note: FY2025's operating/investing/"
     "financing subtotals sum to £1,785.5m against a directly-converted net change of £1,785.4m - a £0.1m rounding "
     "artefact from rounding each £ line independently to 1 decimal place before summing, not a data error; the "
     "full statement still ties exactly end-to-end via the net change, FX and translation-effect lines. GENUINE "
@@ -164,11 +183,12 @@ CASH_FLOW_SOURCES = (
     "- a genuine derivatives grossing/netting basis change between the two reports, not a transcription error. "
     "FY2014's own originally-published basis is used here, per the general convention above; see also the "
     "Balance Sheet sheet's source note. Two rows are genuinely new-then-discontinued: 'Impairment loss written "
-    "off' and 'Changes in income tax' appear as distinct reconciling lines only in FY2014-FY2016's own "
-    "presentation (folded into other lines from FY2017 onward); 'Repayment and cancellation of subordinated debt' "
-    "and 'Net issue of shares' appear only in FY2014 (the Bank's subordinated debt was redeemed and a further "
-    "ordinary share capital injection made that year, on top of a similar FY2013 injection - see the Statement of "
-    "Changes in Equity sheet).\n\n"
+    "off' and 'Changes in income tax' appear as distinct reconciling lines only in FY2013-FY2016's own "
+    "presentation (folded into other lines from FY2017 onward); 'Net issue of shares' appears in both FY2013 and "
+    "FY2014 (a USD 800.0m ordinary share capital injection each year - see the Statement of Changes in Equity "
+    "sheet); 'Repayment and cancellation of subordinated debt' appears only in FY2014 (redemption in full of the "
+    "USD 800.0m Subordinated liabilities balance carried on FY2013's own balance sheet - see the Balance Sheet "
+    "sheet's source note).\n\n"
     + ENTITY_NOTE + "\n\n" + FX_NOTE
 )
 
@@ -193,92 +213,96 @@ def p3_sources(page):
     )
 
 
-bw = BankWorkbook(bank_name="SMBC Bank International plc", years=YEARS, header_color="1B6B3C")
+bw = BankWorkbook(bank_name="SMBC Bank International plc", years=Y_CORE, year_label={y: y for y in YEARS}, header_color="1B6B3C")
 
 # ---------------------------------------------------------------
 # Sheet: Balance Sheet (raw USD figures, converted at build time - spot rate, stocks)
 # ---------------------------------------------------------------
 BS_CASH = {"FY2025": 25294.6, "FY2024": 22951.2, "FY2023": 25880.0, "FY2022": 25255.4, "FY2021": 24550.4,
            "FY2020": 24726.5, "FY2019": 19670.1, "FY2018": 33655.0, "FY2017": 16559.5, "FY2016": 19559.4,
-           "FY2015": 11875.2, "FY2014": 13775.6}
+           "FY2015": 11875.2, "FY2014": 13775.6, "FY2013": 15425.1}
 BS_SETTLEMENT = {"FY2025": 397.9, "FY2024": 95.5, "FY2023": 115.5, "FY2022": 96.9, "FY2021": 39.2,
                  "FY2020": 4216.8, "FY2019": 131.0}
 # FY2018 and earlier: "Loans and advances to banks" was reported as a single combined line (split into
 # "included in cash and cash equivalents" + "other" sub-lines pre-FY2019 restatement) - combined here; see BS_SOURCES.
 BS_LOANS_BANKS = {"FY2025": 3446.3, "FY2024": 3453.5, "FY2023": 3223.6, "FY2022": 3988.6, "FY2021": 3795.4,
                   "FY2020": 3802.5, "FY2019": 2914.6, "FY2018": 4368.4, "FY2017": 5469.2, "FY2016": 3641.9,
-                  "FY2015": 5779.4, "FY2014": 4526.6}
+                  "FY2015": 5779.4, "FY2014": 4526.6, "FY2013": 1788.8 + 1157.1}
 BS_LOANS_CUSTOMERS = {"FY2025": 19279.8, "FY2024": 18051.7, "FY2023": 17712.7, "FY2022": 19942.6, "FY2021": 20845.5,
                       "FY2020": 22722.7, "FY2019": 21484.2, "FY2018": 20394.1, "FY2017": 14962.0, "FY2016": 15571.3,
-                      "FY2015": 11589.8, "FY2014": 11351.5}
+                      "FY2015": 11589.8, "FY2014": 11351.5, "FY2013": 11022.7}
 BS_REVERSE_REPO = {"FY2025": 17084.1, "FY2024": 1710.4, "FY2023": 1266.9, "FY2022": 1197.9, "FY2021": 1732.7,
                    "FY2020": 1502.5, "FY2019": 1793.4}
 BS_TRADING_ASSETS = {"FY2025": 1497.7}
 BS_INVESTMENT_SEC = {"FY2025": 764.1, "FY2024": 668.5, "FY2023": 1045.1, "FY2022": 1009.2, "FY2021": 496.5,
                      "FY2020": 624.9, "FY2019": 426.5, "FY2018": 751.1, "FY2017": 455.3, "FY2016": 783.7,
-                     "FY2015": 882.9, "FY2014": 1001.7}
+                     "FY2015": 882.9, "FY2014": 1001.7, "FY2013": 476.1}
 BS_DERIVATIVE_ASSETS = {"FY2025": 1757.9, "FY2024": 1973.0, "FY2023": 2085.6, "FY2022": 1430.4, "FY2021": 1255.7,
                         "FY2020": 1776.3, "FY2019": 996.0, "FY2018": 1568.2, "FY2017": 1093.6, "FY2016": 1260.9,
-                        "FY2015": 1496.5, "FY2014": 468.7}
+                        "FY2015": 1496.5, "FY2014": 468.7, "FY2013": 483.0}
 BS_OTHER_ASSETS = {"FY2025": 1461.4, "FY2024": 763.8, "FY2023": 928.9, "FY2022": 696.3, "FY2021": 540.6,
                    "FY2020": 836.4, "FY2019": 481.0, "FY2018": 254.8, "FY2017": 217.2, "FY2016": 213.2,
-                   "FY2015": 299.9, "FY2014": 228.0}
+                   "FY2015": 299.9, "FY2014": 228.0, "FY2013": 185.0}
 BS_INTANGIBLES = {"FY2025": 107.2, "FY2024": 70.2, "FY2023": 56.4, "FY2022": 46.7, "FY2021": 39.9,
                   "FY2020": 38.3, "FY2019": 30.0, "FY2018": 22.0, "FY2017": 16.4, "FY2016": 13.6,
-                  "FY2015": 6.8, "FY2014": 6.2}
+                  "FY2015": 6.8, "FY2014": 6.2, "FY2013": 3.6}
 BS_PPE = {"FY2025": 216.2, "FY2024": 243.5, "FY2023": 254.4, "FY2022": 254.6, "FY2021": 219.1,
           "FY2020": 45.1, "FY2019": 30.4, "FY2018": 28.2, "FY2017": 16.8, "FY2016": 19.6,
-          "FY2015": 12.0, "FY2014": 17.4}
+          "FY2015": 12.0, "FY2014": 17.4, "FY2013": 23.4}
 BS_CURRENT_TAX_ASSET = {"FY2025": 8.2, "FY2024": 5.5, "FY2023": 24.2, "FY2022": 6.0, "FY2020": 30.6, "FY2014": 2.2}
 BS_DEFERRED_TAX_ASSET = {"FY2025": 34.6, "FY2024": 43.7, "FY2023": 26.0, "FY2022": 32.1, "FY2021": 20.4,
-                         "FY2020": 6.5, "FY2019": 6.5, "FY2018": 5.3, "FY2017": 6.9, "FY2015": 1.8, "FY2014": 8.1}
+                         "FY2020": 6.5, "FY2019": 6.5, "FY2018": 5.3, "FY2017": 6.9, "FY2015": 1.8, "FY2014": 8.1,
+                         "FY2013": 8.4}
 BS_PENSION_SURPLUS = {"FY2025": 36.7, "FY2024": 33.6, "FY2023": 41.8, "FY2022": 60.4, "FY2021": 33.1,
                       "FY2020": 62.2, "FY2019": 45.6, "FY2018": 50.8, "FY2017": 41.1, "FY2016": 46.0,
-                      "FY2015": 21.2, "FY2014": 3.7}
+                      "FY2015": 21.2, "FY2014": 3.7, "FY2013": 0.5}
 BS_TOTAL_ASSETS = {"FY2025": 71386.7, "FY2024": 50064.1, "FY2023": 52661.1, "FY2022": 54017.1, "FY2021": 53568.5,
                    "FY2020": 60391.3, "FY2019": 48009.3, "FY2018": 61097.9, "FY2017": 38838.0, "FY2016": 41109.6,
-                   "FY2015": 31965.5, "FY2014": 31389.7}
+                   "FY2015": 31965.5, "FY2014": 31389.7, "FY2013": 30573.7}
 
 BS_DEPOSITS_BANKS = {"FY2025": 28933.9, "FY2024": 21151.7, "FY2023": 24989.5, "FY2022": 26376.9, "FY2021": 23826.3,
                      "FY2020": 25681.1, "FY2019": 24212.6, "FY2018": 27898.2, "FY2017": 13007.2, "FY2016": 23949.1,
-                     "FY2015": 16854.8, "FY2014": 17079.8}
+                     "FY2015": 16854.8, "FY2014": 17079.8, "FY2013": 19277.4}
 BS_CUSTOMER_ACCOUNTS = {"FY2025": 19678.5, "FY2024": 19829.1, "FY2023": 18669.0, "FY2022": 19754.1, "FY2021": 22319.2,
                         "FY2020": 27648.9, "FY2019": 18193.0, "FY2018": 23188.4, "FY2017": 16918.0, "FY2016": 8010.0,
-                        "FY2015": 7648.4, "FY2014": 7825.3}
+                        "FY2015": 7648.4, "FY2014": 7825.3, "FY2013": 5116.3}
 BS_DEBT_SECURITIES = {"FY2025": 1012.0, "FY2024": 901.9, "FY2023": 1048.7, "FY2022": 976.0, "FY2021": 853.6,
                       "FY2019": 13.1, "FY2018": 4045.3, "FY2017": 3730.0, "FY2016": 4098.5, "FY2015": 2378.4,
-                      "FY2014": 2375.7}
+                      "FY2014": 2375.7, "FY2013": 2240.0}
+# FY2013 only: subordinated liabilities, redeemed in full during FY2014 (see the Cash Flow Statement's
+# "Repayment and cancellation of subordinated debt" line) - absent from every other year's own balance sheet.
+BS_SUBORDINATED = {"FY2013": 800.0}
 BS_REPO_AGREEMENTS = {"FY2025": 12669.1}
 BS_DERIVATIVE_LIAB = {"FY2025": 1768.1, "FY2024": 1625.2, "FY2023": 1877.3, "FY2022": 1322.6, "FY2021": 1228.8,
                       "FY2020": 1625.9, "FY2019": 870.8, "FY2018": 1621.1, "FY2017": 1036.8, "FY2016": 1177.2,
-                      "FY2015": 1351.0, "FY2014": 451.5}
+                      "FY2015": 1351.0, "FY2014": 451.5, "FY2013": 415.1}
 BS_TRADING_LIAB = {"FY2025": 294.3}
 BS_OTHER_LIAB = {"FY2025": 1066.7, "FY2024": 938.6, "FY2023": 847.3, "FY2022": 583.7, "FY2021": 499.3,
                  "FY2020": 826.2, "FY2019": 232.8, "FY2018": 165.0, "FY2017": 204.1, "FY2016": 104.8,
-                 "FY2015": 83.7, "FY2014": 100.4}
+                 "FY2015": 83.7, "FY2014": 100.4, "FY2013": 87.0}
 BS_OTHER_PROVISIONS = {"FY2025": 16.5, "FY2024": 11.0, "FY2023": 12.0, "FY2022": 34.5, "FY2021": 21.2,
                        "FY2020": 9.6, "FY2019": 5.5, "FY2018": 10.8, "FY2017": 8.4, "FY2016": 14.4,
-                       "FY2015": 3.5, "FY2014": 7.8}
+                       "FY2015": 3.5, "FY2014": 7.8, "FY2013": 6.7}
 BS_CURRENT_TAX_LIAB = {"FY2021": 18.3, "FY2019": 54.7, "FY2018": 34.4, "FY2017": 18.6, "FY2016": 1.2,
-                       "FY2015": 3.0, "FY2014": 23.6}
+                       "FY2015": 3.0, "FY2014": 23.6, "FY2013": 6.7}
 BS_DEFERRED_TAX_LIAB = {"FY2025": 21.2, "FY2024": 26.8, "FY2023": 27.9, "FY2022": 23.1, "FY2021": 13.2,
                         "FY2020": 22.3, "FY2019": 18.7, "FY2018": 13.5, "FY2017": 10.2, "FY2016": 3.1}
 BS_TOTAL_LIABILITIES = {"FY2025": 65460.3, "FY2024": 44484.3, "FY2023": 47471.7, "FY2022": 49070.9, "FY2021": 48779.9,
                         "FY2020": 55814.0, "FY2019": 43601.2, "FY2018": 56976.7, "FY2017": 34933.3, "FY2016": 37358.3,
-                        "FY2015": 28322.8, "FY2014": 27864.1}
+                        "FY2015": 28322.8, "FY2014": 27864.1, "FY2013": 27949.2}
 
 BS_SHARE_CAPITAL = {"FY2025": 3200.1, "FY2024": 3200.1, "FY2023": 3200.1, "FY2022": 3200.1, "FY2021": 3200.1,
                     "FY2020": 3200.0, "FY2019": 3200.0, "FY2018": 3200.0, "FY2017": 3200.0, "FY2016": 3200.0,
-                    "FY2015": 3200.0, "FY2014": 3200.0}
+                    "FY2015": 3200.0, "FY2014": 3200.0, "FY2013": 2400.0}
 BS_OTHER_RESERVES = {"FY2025": 100.1, "FY2024": 103.8, "FY2023": 110.5, "FY2022": 106.7, "FY2021": 100.9,
                      "FY2020": 103.2, "FY2019": 99.9, "FY2018": 102.5, "FY2017": 101.4, "FY2016": 102.0,
-                     "FY2015": 97.8, "FY2014": 99.6}
+                     "FY2015": 97.8, "FY2014": 99.6, "FY2013": 93.1}
 BS_RETAINED_EARNINGS = {"FY2025": 2626.2, "FY2024": 2275.9, "FY2023": 1878.8, "FY2022": 1639.4, "FY2021": 1487.6,
                         "FY2020": 1274.1, "FY2019": 1108.2, "FY2018": 818.7, "FY2017": 603.3, "FY2016": 449.3,
-                        "FY2015": 344.9, "FY2014": 226.0}
+                        "FY2015": 344.9, "FY2014": 226.0, "FY2013": 131.4}
 BS_TOTAL_EQUITY = {"FY2025": 5926.4, "FY2024": 5579.8, "FY2023": 5189.4, "FY2022": 4946.2, "FY2021": 4788.6,
                    "FY2020": 4577.3, "FY2019": 4408.1, "FY2018": 4121.2, "FY2017": 3904.7, "FY2016": 3751.3,
-                   "FY2015": 3642.7, "FY2014": 3525.6}
+                   "FY2015": 3642.7, "FY2014": 3525.6, "FY2013": 2624.5}
 
 BS_SOURCES = (
     "Sources - SMBC Bank International plc's own Statement of financial position, converted from USD to £m (see FX "
@@ -301,12 +325,16 @@ BS_SOURCES = (
     f"FY2016: as above, year ended 31 March 2016, p.15 - {AR2016_URL}\n"
     f"FY2015: as above, year ended 31 March 2015, p.15 - {AR2015_URL}\n"
     f"FY2014: as above, year ended 31 March 2014, p.14 - {AR2014_URL}\n"
+    f"FY2013 (HD-072): as above, year ended 31 March 2013, p.14 - {AR2013_URL}\n"
     "Each year's own report was used for its own column (not a restated comparative); every year's own figure was "
     "cross-checked against its appearance as the comparative column in the following year's report and matched "
     "exactly in all cases EXCEPT FY2014 (see the genuine derivatives-basis restatement flagged on the Cash Flow "
-    "Statement sheet's source note - Derivative assets/liabilities are affected). Total assets ties exactly to "
+    "Statement sheet's source note - Derivative assets/liabilities are affected) - FY2013's own figures were "
+    "specifically cross-checked against their appearance as the comparative column in AR2014 and matched exactly "
+    "with no restatement. Total assets ties exactly to "
     "Total liabilities + Total equity in USD every year; in GBP terms the two sides differ by up to £0.1m due to "
-    "independent per-line rounding, not a data error. FY2025 is "
+    "independent per-line rounding, not a data error. FY2013 is the only year with a 'Subordinated liabilities' "
+    "balance (USD 800.0m, redeemed in full during FY2014 - see the Cash Flow Statement sheet). FY2025 is "
     "the first year to show Trading assets/liabilities and Repurchase agreements as separate lines (following the "
     "securities-business transfer described in the entity note) and the only year with a Deferred tax asset "
     "balance shown alongside a Current tax asset; Current tax liability appears only in FY2021 among FY2021-2025 "
@@ -341,6 +369,7 @@ BS_ROWS = [
     ("DATA", "Deposits by banks", gbp_spot(BS_DEPOSITS_BANKS)),
     ("DATA", "Customer accounts", gbp_spot(BS_CUSTOMER_ACCOUNTS)),
     ("DATA", "Debt securities in issue", gbp_spot(BS_DEBT_SECURITIES)),
+    ("DATA", "Subordinated liabilities (FY2013 only)", gbp_spot(BS_SUBORDINATED)),
     ("DATA", "Repurchase agreements", gbp_spot(BS_REPO_AGREEMENTS)),
     ("DATA", "Derivative liabilities", gbp_spot(BS_DERIVATIVE_LIAB)),
     ("DATA", "Trading liabilities", gbp_spot(BS_TRADING_LIAB)),
@@ -365,6 +394,7 @@ bw.add_balance_sheet_sheet(
     first_col_width=64,
     source_height=340,
     unit_suffix=" (£m, conv. from USD)",
+    years=YEARS,
 )
 
 # ---------------------------------------------------------------
@@ -372,73 +402,73 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 IS_INTEREST_INCOME = {"FY2025": 2817.9, "FY2024": 2477.4, "FY2023": 1240.6, "FY2022": 468.2, "FY2021": 578.6,
                       "FY2020": 878.5, "FY2019": 836.6, "FY2018": 517.1, "FY2017": 461.8, "FY2016": 434.9,
-                      "FY2015": 383.2, "FY2014": 303.5}
+                      "FY2015": 383.2, "FY2014": 303.5, "FY2013": 388.4}
 IS_INTEREST_EXPENSE = {"FY2025": -2338.7, "FY2024": -2037.0, "FY2023": -1016.5, "FY2022": -142.5, "FY2021": -238.0,
                        "FY2020": -560.6, "FY2019": -545.1, "FY2018": -294.6, "FY2017": -183.2, "FY2016": -158.5,
-                       "FY2015": -148.8, "FY2014": -111.2}
+                       "FY2015": -148.8, "FY2014": -111.2, "FY2013": -179.7}
 IS_NET_INTEREST_INCOME = {"FY2025": 479.2, "FY2024": 440.4, "FY2023": 224.1, "FY2022": 325.7, "FY2021": 340.6,
                           "FY2020": 317.9, "FY2019": 291.5, "FY2018": 222.5, "FY2017": 278.6, "FY2016": 276.4,
-                          "FY2015": 234.4, "FY2014": 192.3}
+                          "FY2015": 234.4, "FY2014": 192.3, "FY2013": 208.7}
 IS_FEES_INCOME = {"FY2025": 777.0, "FY2024": 582.0, "FY2023": 570.1, "FY2022": 518.6, "FY2021": 482.2,
                   "FY2020": 443.4, "FY2019": 400.3, "FY2018": 372.2, "FY2017": 351.6, "FY2016": 336.6,
-                  "FY2015": 347.9, "FY2014": 304.2}
+                  "FY2015": 347.9, "FY2014": 304.2, "FY2013": 263.0}
 IS_FEES_EXPENSE = {"FY2025": -74.7, "FY2024": -25.9, "FY2023": -41.6, "FY2022": -49.4, "FY2021": -46.1,
                    "FY2020": -72.1, "FY2019": -54.8, "FY2018": -33.6, "FY2017": -44.5, "FY2016": -26.6,
-                   "FY2015": -20.7, "FY2014": -31.5}
+                   "FY2015": -20.7, "FY2014": -31.5, "FY2013": -33.2}
 IS_NET_FEE_INCOME = {"FY2025": 702.3, "FY2024": 556.1, "FY2023": 528.5, "FY2022": 469.2, "FY2021": 436.1,
                      "FY2020": 371.3, "FY2019": 345.5, "FY2018": 338.6, "FY2017": 307.1, "FY2016": 310.0,
-                     "FY2015": 327.2, "FY2014": 272.7}
+                     "FY2015": 327.2, "FY2014": 272.7, "FY2013": 229.8}
 IS_NET_TRADING_INCOME = {"FY2025": 283.0, "FY2024": 277.7, "FY2023": 261.8, "FY2022": 75.9, "FY2021": 64.3,
                          "FY2020": 154.1, "FY2019": 193.8, "FY2018": 178.0, "FY2017": 56.9, "FY2016": 28.2,
-                         "FY2015": -11.6, "FY2014": 28.2}
+                         "FY2015": -11.6, "FY2014": 28.2, "FY2013": 21.8}
 IS_LOSS_ON_DISPOSAL = {"FY2025": -83.7}
 IS_OPERATING_INCOME = {"FY2025": 1380.8, "FY2024": 1274.2, "FY2023": 1014.4, "FY2022": 870.8, "FY2021": 841.0,
                        "FY2020": 843.3, "FY2019": 830.8, "FY2018": 739.1, "FY2017": 642.6, "FY2016": 614.6,
-                       "FY2015": 550.0, "FY2014": 493.2}
+                       "FY2015": 550.0, "FY2014": 493.2, "FY2013": 460.3}
 IS_IMPAIRMENT = {"FY2025": -28.3, "FY2024": -27.2, "FY2023": -47.7, "FY2022": -95.8, "FY2021": -8.6,
                  "FY2020": -200.3, "FY2019": -13.1, "FY2018": -36.9, "FY2017": -35.6, "FY2016": -72.6,
-                 "FY2015": -36.0, "FY2014": -11.8}
+                 "FY2015": -36.0, "FY2014": -11.8, "FY2013": -29.2}
 IS_PERSONNEL = {"FY2025": -508.8, "FY2024": -424.6, "FY2023": -373.2, "FY2022": -385.2, "FY2021": -339.2,
                 "FY2020": -270.7, "FY2019": -279.6, "FY2018": -267.2, "FY2017": -250.5, "FY2016": -257.9,
-                "FY2015": -243.5, "FY2014": -222.5}
+                "FY2015": -243.5, "FY2014": -222.5, "FY2013": -198.9}
 IS_DEPRECIATION = {"FY2025": -62.1, "FY2024": -55.6, "FY2023": -51.9, "FY2022": -42.7, "FY2021": -40.8,
                    "FY2020": -33.6, "FY2019": -19.9, "FY2018": -16.8, "FY2017": -15.9, "FY2016": -13.5,
-                   "FY2015": -12.1, "FY2014": -10.4}
+                   "FY2015": -12.1, "FY2014": -10.4, "FY2013": -9.4}
 IS_BANK_LEVY = {"FY2021": -0.6, "FY2020": -7.0}
 IS_OTHER_EXPENSES = {"FY2025": -298.0, "FY2024": -231.2, "FY2023": -201.3, "FY2022": -166.3, "FY2021": -123.6,
                      "FY2020": -120.8, "FY2019": -129.9, "FY2018": -121.0, "FY2017": -109.9, "FY2016": -130.5,
-                     "FY2015": -106.0, "FY2014": -104.5}
+                     "FY2015": -106.0, "FY2014": -104.5, "FY2013": -100.1}
 IS_NET_OPERATING_EXPENSES = {"FY2025": -897.2, "FY2024": -738.6, "FY2023": -674.1, "FY2022": -690.0, "FY2021": -512.8,
                              "FY2020": -632.4, "FY2019": -442.5, "FY2018": -441.9, "FY2017": -411.9, "FY2016": -474.5,
-                             "FY2015": -397.6, "FY2014": -349.2}
+                             "FY2015": -397.6, "FY2014": -349.2, "FY2013": -337.6}
 IS_OTHER_INCOME = {"FY2021": 4.9, "FY2020": 8.7}
 IS_PROFIT_BEFORE_TAX = {"FY2025": 483.6, "FY2024": 535.6, "FY2023": 340.3, "FY2022": 180.8, "FY2021": 333.1,
                         "FY2020": 219.6, "FY2019": 388.3, "FY2018": 297.2, "FY2017": 230.7, "FY2016": 140.1,
-                        "FY2015": 152.4, "FY2014": 144.0}
+                        "FY2015": 152.4, "FY2014": 144.0, "FY2013": 122.7}
 IS_TAX = {"FY2025": -134.0, "FY2024": -129.3, "FY2023": -88.2, "FY2022": -48.9, "FY2021": -92.2,
           "FY2020": -66.7, "FY2019": -113.0, "FY2018": -84.0, "FY2017": -72.9, "FY2016": -41.3,
-          "FY2015": -38.0, "FY2014": -39.9}
+          "FY2015": -38.0, "FY2014": -39.9, "FY2013": -32.1}
 IS_PROFIT_FOR_YEAR = {"FY2025": 349.6, "FY2024": 406.3, "FY2023": 252.1, "FY2022": 131.9, "FY2021": 240.9,
                       "FY2020": 152.9, "FY2019": 275.3, "FY2018": 213.2, "FY2017": 157.8, "FY2016": 98.8,
-                      "FY2015": 114.4, "FY2014": 104.1}
+                      "FY2015": 114.4, "FY2014": 104.1, "FY2013": 90.6}
 IS_PROFIT_CONTINUING = {"FY2025": 330.9}
 IS_PROFIT_DISCONTINUED = {"FY2025": 18.7}
 IS_ACTUARIAL = {"FY2025": 0.7, "FY2024": -9.2, "FY2023": -12.7, "FY2022": 20.0, "FY2021": -27.4,
                 "FY2020": 13.0, "FY2019": -1.4, "FY2018": 2.2, "FY2017": -3.8, "FY2016": 5.6,
-                "FY2015": 4.5, "FY2014": -9.5}
+                "FY2015": 4.5, "FY2014": -9.5, "FY2013": 5.6}
 IS_HEDGE_RESERVE_MOVE = {"FY2025": -3.7, "FY2024": -6.6, "FY2023": 3.5, "FY2022": 5.6, "FY2021": -2.8,
                          "FY2020": 3.9, "FY2019": 0.0, "FY2018": -0.7, "FY2017": -0.3, "FY2016": 1.2,
-                         "FY2015": -1.8, "FY2014": 7.5}
+                         "FY2015": -1.8, "FY2014": 7.5, "FY2013": -9.0}
 IS_FV_HEDGE_MOVE = {"FY2025": 0.0, "FY2024": -0.1, "FY2023": 0.3, "FY2022": 0.2, "FY2021": 0.5,
                     "FY2020": -0.6, "FY2019": -2.6, "FY2018": 1.8, "FY2017": -0.3, "FY2016": 3.0,
-                    "FY2015": 0.0, "FY2014": -1.0}
+                    "FY2015": 0.0, "FY2014": -1.0, "FY2013": -0.6}
 IS_TAX_RATE_EFFECT = {"FY2022": -0.1}
 IS_OCI_TOTAL = {"FY2025": -3.0, "FY2024": -15.9, "FY2023": -8.9, "FY2022": 25.7, "FY2021": -29.7,
                 "FY2020": 16.3, "FY2019": -4.0, "FY2018": 3.3, "FY2017": -4.4, "FY2016": 9.8,
-                "FY2015": 2.7, "FY2014": -3.0}
+                "FY2015": 2.7, "FY2014": -3.0, "FY2013": -4.0}
 IS_TOTAL_COMPREHENSIVE = {"FY2025": 346.6, "FY2024": 390.4, "FY2023": 243.2, "FY2022": 157.6, "FY2021": 211.2,
                           "FY2020": 169.2, "FY2019": 271.3, "FY2018": 216.5, "FY2017": 153.4, "FY2016": 108.6,
-                          "FY2015": 117.1, "FY2014": 101.1}
+                          "FY2015": 117.1, "FY2014": 101.1, "FY2013": 86.6}
 
 IS_SOURCES = (
     "Sources - SMBC Bank International plc's own Statement of comprehensive income, converted from USD to £m (see "
@@ -461,9 +491,11 @@ IS_SOURCES = (
     f"FY2016: as above, year ended 31 March 2016, p.14 - {AR2016_URL}\n"
     f"FY2015: as above, year ended 31 March 2015, p.14 - {AR2015_URL}\n"
     f"FY2014: as above, year ended 31 March 2014, p.13 - {AR2014_URL}\n"
+    f"FY2013 (HD-072): as above, year ended 31 March 2013, p.13 - {AR2013_URL}\n"
     "Each year's own report was used for its own column (not a restated comparative); every year's own figure was "
     "cross-checked against its appearance as the comparative column in the following year's report and matched "
-    "exactly, EXCEPT: FY2021's own report shows a standalone 'Bank levy' line (USD 0.6m) separate from 'Other "
+    "exactly (FY2013's own figures were specifically cross-checked against their appearance as the comparative "
+    "column in AR2014 and matched exactly), EXCEPT: FY2021's own report shows a standalone 'Bank levy' line (USD 0.6m) separate from 'Other "
     "expenses'; AR2022's own comparative column for FY2021 instead folds the bank levy into 'Other expenses' "
     "(USD 124.2m = 123.6 + 0.6). FY2021's own originally-published split (used here) is kept, not AR2022's later "
     "combined presentation - both total the same Net operating expenses either way. Net operating expenses is a "
@@ -471,7 +503,7 @@ IS_SOURCES = (
     "expenses in every year's own presentation, not a separate impairment subtotal. FY2025 is the only year showing a "
     "continuing/discontinued split of Profit for the year (the October 2024 securities-business transfer and Abu "
     "Dhabi branch opening - see entity note); FY2020 and FY2021 are the only years with a separate 'Other income' "
-    "line. TERMINOLOGY NOTE (FY2014-2018): the 'Movement in fair value hedge reserve' row is labelled 'Available-"
+    "line. TERMINOLOGY NOTE (FY2013-2018): the 'Movement in fair value hedge reserve' row is labelled 'Available-"
     "for-sale investments' in these years' own reports (FVOCI/'Fair value reserve' terminology was introduced only "
     "from FY2019's report following IFRS 9 adoption on 1 April 2018) - the same underlying reserve bucket, shown "
     "here under the later, consistent row label.\n\n"
@@ -519,6 +551,7 @@ bw.add_income_statement_sheet(
     first_col_width=68,
     source_height=340,
     unit_suffix=" (£m, conv. from USD)",
+    years=YEARS,
 )
 
 # ---------------------------------------------------------------
@@ -533,8 +566,9 @@ EQ_HEADERS = ["Share capital", "Retained earnings", "Capital redemption", "Hedge
 EQ_SOURCES = (
     "Sources - SMBC Bank International plc's own Statement of changes in equity, converted from USD to £m (see FX "
     "conversion note below):\n"
-    f"1 April 2013 opening & FY2014 movements: Sumitomo Mitsui Banking Corporation Europe Limited (SMBC BI's "
-    f"former name) Annual report & financial statements, year ended 31 March 2014, p.15 - {AR2014_URL}\n"
+    f"1 April 2012 opening & FY2013 movements (HD-072): Sumitomo Mitsui Banking Corporation Europe Limited (SMBC "
+    f"BI's former name) Annual report & financial statements, year ended 31 March 2013, p.15 - {AR2013_URL}\n"
+    f"FY2014 movements: as above, year ended 31 March 2014, p.15 - {AR2014_URL}\n"
     f"FY2015 movements: as above, year ended 31 March 2015, p.16 - {AR2015_URL}\n"
     f"FY2016 movements: as above, year ended 31 March 2016, p.16 - {AR2016_URL}\n"
     f"FY2017 movements: as above, year ended 31 March 2017, p.17 - {AR2017_URL}\n"
@@ -550,7 +584,9 @@ EQ_SOURCES = (
     f"FY2025 movements: SMBC BI Annual report and financial statements, year ended 31 March 2025, p.72 - {AR2025_URL}\n"
     "Each year's own report was used for its own movements column; every year's own closing balance was "
     "cross-checked against its appearance as the opening balance in the following year's report and matched "
-    "exactly in USD. GENUINE FX ARTEFACT, NOT A PLUG ROW: because Share capital/Capital redemption are static USD "
+    "exactly in USD (FY2013's own 'At 1 April 2012' opening and 'At 31 March 2013' closing were specifically "
+    "cross-checked against AR2014's own comparative equity statement and matched exactly). GENUINE FX ARTEFACT, "
+    "NOT A PLUG ROW: because Share capital/Capital redemption are static USD "
     "amounts and opening/closing balances are converted at each year's own period-end spot rate while movements "
     "are converted at that year's average rate (see FX note), a large 'Effect of GBP/USD translation' bridging "
     "line is needed on the Total column every year purely from GBP/USD rate movement - this has no bearing on the "
@@ -558,8 +594,8 @@ EQ_SOURCES = (
     "columns (Share capital/Retained earnings/Capital redemption/Hedge reserve/Fair value reserve) are shown "
     "directly spot/average-converted without a matching per-column translation line, so only the Total column is "
     "guaranteed to tie exactly row-to-row; components will not sum to Total's own movements exactly for this "
-    "reason. 'Issue of new shares' occurs in FY2014 (USD 800.0m, part of a capital injection also seen in FY2013) "
-    "and FY2021 (USD 0.1m) only - the two genuine (non-FX) capital transactions across all 12 years. This single "
+    "reason. 'Issue of new shares' occurs in FY2013 (USD 800.0m), FY2014 (USD 800.0m, a further injection on top "
+    "of FY2013's) and FY2021 (USD 0.1m) - the three genuine (non-FX) capital transactions across all 13 years. This single "
     "'Fair value reserve' column merges what FY2014-2018's own reports called the 'Available-for-sale reserve' and "
     "what FY2019 onward calls the 'Fair value reserve'/'FVOCI reserve' (renamed following IFRS 9 adoption on 1 "
     "April 2018 - see the Profit & Loss sheet's source note) - the same underlying reserve bucket throughout. The "
@@ -571,7 +607,17 @@ EQ_SOURCES = (
 )
 
 EQ_ROWS = [
-    ("TOTAL", "Balance at 1 April 2013 (converted at 31 Mar 2013 spot rate)", (1580.9, 86.6, 65.9, -3.9, -0.7, 1728.8)),
+    ("TOTAL", "Balance at 1 April 2012 (converted at 31 Mar 2012 spot rate)", (1001.2, 22.0, 62.6, 1.9, -0.3, 1087.5)),
+    ("DATA", "Profit for the year", (None, 57.4, None, None, None, 57.4)),
+    ("DATA", "Effective portion of changes in fair value", (None, None, None, -3.7, None, -3.7)),
+    ("DATA", "Net gains/(losses) transferred to net profit", (None, None, None, -2.0, None, -2.0)),
+    ("DATA", "Actuarial gain/(loss) on defined benefit scheme", (None, 3.5, None, None, None, 3.5)),
+    ("DATA", "Change in fair value of assets classified as FVOCI", (None, None, None, None, -0.6, -0.6)),
+    ("DATA", "Net gains/(losses) transferred to net profit on FVOCI", (None, None, None, None, 0.3, 0.3)),
+    ("TOTAL", "Total comprehensive income for the year", (None, 60.9, None, -5.7, -0.4, 54.8)),
+    ("DATA", "Issue of new shares", (506.5, None, None, None, None, 506.5)),
+    ("DATA", "Effect of GBP/USD translation (£ conversion artefact - see FX note)", (None, None, None, None, None, 80.0)),
+    ("TOTAL", "Balance at 31 March 2013", (1580.9, 86.6, 65.9, -3.9, -0.7, 1728.8)),
     ("DATA", "Profit for the year", (None, 65.2, None, None, None, 65.2)),
     ("DATA", "Effective portion of changes in fair value", (None, None, None, 3.7, None, 3.7)),
     ("DATA", "Net gains/(losses) transferred to net profit", (None, None, None, 1.0, None, 1.0)),
@@ -674,7 +720,7 @@ EQ_ROWS = [
 
 bw.add_equity_changes_sheet(
     title="SMBC Bank International plc — Statement of Changes in Equity",
-    subtitle="£m, converted from USD - chronological 1 April 2020 through 31 March 2025 - see source note for FX methodology.",
+    subtitle="£m, converted from USD - chronological 1 April 2012 through 31 March 2025 - see source note for FX methodology.",
     headers=EQ_HEADERS,
     rows=EQ_ROWS,
     sources_text=EQ_SOURCES,
@@ -687,44 +733,44 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 PROFIT_BEFORE_TAX = {"FY2025": 483.6, "FY2024": 535.6, "FY2023": 340.3, "FY2022": 180.8, "FY2021": 333.1,
                      "FY2020": 219.6, "FY2019": 388.3, "FY2018": 297.2, "FY2017": 230.7, "FY2016": 140.1,
-                     "FY2015": 152.4, "FY2014": 144.0}
+                     "FY2015": 152.4, "FY2014": 144.0, "FY2013": 122.7}
 IMPAIRMENT_LOSS = {"FY2025": 28.3, "FY2024": 27.2, "FY2023": 47.7, "FY2022": 95.8, "FY2021": 8.6,
                    "FY2020": 200.3, "FY2019": 13.1, "FY2018": 36.9, "FY2017": 35.6, "FY2016": 72.6,
-                   "FY2015": 36.0, "FY2014": 11.8}
+                   "FY2015": 36.0, "FY2014": 11.8, "FY2013": 29.2}
 LOSS_ON_DISPOSAL = {"FY2025": 83.7}
-# FY2014-FY2016 only: a distinct "Impairment loss written off" adjustment line not seen from FY2017 onward.
-IMPAIRMENT_WRITTEN_OFF = {"FY2016": -21.9, "FY2015": -30.2, "FY2014": -122.9}
+# FY2013-FY2016 only: a distinct "Impairment loss written off" adjustment line not seen from FY2017 onward.
+IMPAIRMENT_WRITTEN_OFF = {"FY2016": -21.9, "FY2015": -30.2, "FY2014": -122.9, "FY2013": -28.4}
 UNREALISED_FX = {"FY2025": -239.2, "FY2024": -161.3, "FY2023": -1076.0, "FY2022": -1121.7, "FY2021": 1698.8,
                  "FY2020": 4.4, "FY2019": -64.2, "FY2018": -19.2, "FY2017": 29.1, "FY2016": -22.4,
-                 "FY2015": -7.4, "FY2014": 5.9}
+                 "FY2015": -7.4, "FY2014": 5.9, "FY2013": -2.5}
 DEPRECIATION = {"FY2025": 62.1, "FY2024": 55.6, "FY2023": 51.9, "FY2022": 42.7, "FY2021": 40.8,
                 "FY2020": 33.6, "FY2019": 19.9, "FY2018": 16.8, "FY2017": 16.0, "FY2016": 13.5,
-                "FY2015": 12.1, "FY2014": 10.4}
+                "FY2015": 12.1, "FY2014": 10.4, "FY2013": 9.4}
 CHG_LOANS_BANKS = {"FY2025": -35.0, "FY2024": -276.4, "FY2023": 736.4, "FY2022": -197.8, "FY2021": 8.9,
                    "FY2020": -891.4, "FY2019": -428.6, "FY2018": 489.2, "FY2017": -12.1, "FY2016": -496.9,
-                   "FY2015": 319.4, "FY2014": 64.0}
+                   "FY2015": 319.4, "FY2014": 64.0, "FY2013": 964.0}
 CHG_LOANS_CUSTOMERS = {"FY2025": -1292.4, "FY2024": -321.5, "FY2023": 2255.5, "FY2022": 856.4, "FY2021": 1943.4,
                        "FY2020": -1404.4, "FY2019": -1030.5, "FY2018": -5462.0, "FY2017": 565.6, "FY2016": -4023.4,
-                       "FY2015": -246.1, "FY2014": -297.5}
+                       "FY2015": -246.1, "FY2014": -297.5, "FY2013": -345.3}
 CHG_REVERSE_REPO = {"FY2025": -15373.7, "FY2024": -443.5, "FY2023": -69.0, "FY2022": 534.8, "FY2021": -230.2,
                     "FY2020": 290.9, "FY2019": -459.8}
 CHG_DERIVATIVES = {"FY2025": 358.0, "FY2024": -139.5, "FY2023": -100.5, "FY2022": -80.9, "FY2021": 123.5,
                    "FY2020": -25.2, "FY2019": -178.1, "FY2018": 109.7, "FY2017": 26.9, "FY2016": 61.8,
-                   "FY2015": -128.3, "FY2014": 50.7}
+                   "FY2015": -128.3, "FY2014": 50.7, "FY2013": -101.7}
 CHG_OTHER_ASSETS = {"FY2025": -698.8, "FY2024": 162.5, "FY2023": -214.0, "FY2022": -200.7, "FY2021": 341.6,
                     "FY2020": -402.6, "FY2019": 269.2, "FY2018": -45.7, "FY2017": 2.3, "FY2016": 63.7,
-                    "FY2015": -83.1, "FY2014": -42.5}
+                    "FY2015": -83.1, "FY2014": -42.5, "FY2013": -46.0}
 CHG_DEPOSITS_BANKS = {"FY2025": 7630.1, "FY2024": -4082.8, "FY2023": -1387.4, "FY2022": 2550.6, "FY2021": -1854.8,
                       "FY2020": 1468.5, "FY2019": -2723.0, "FY2018": 14891.0, "FY2017": -10941.9, "FY2016": 7094.3,
-                      "FY2015": -225.0, "FY2014": -2197.6}
+                      "FY2015": -225.0, "FY2014": -2197.6, "FY2013": 8050.1}
 CHG_CUSTOMER_ACCOUNTS = {"FY2025": -149.1, "FY2024": 1157.2, "FY2023": -1085.1, "FY2022": -2565.1, "FY2021": -5329.7,
                          "FY2020": 9455.9, "FY2019": -4995.4, "FY2018": 6270.4, "FY2017": 8908.0, "FY2016": 361.6,
-                         "FY2015": -176.9, "FY2014": 2709.0}
-# FY2014-FY2016 only: a distinct "Changes in income tax" line (separate from "Taxes paid") in these years' own presentation.
-CHG_INCOME_TAX = {"FY2016": -1.8, "FY2015": -18.4, "FY2014": 16.9}
+                         "FY2015": -176.9, "FY2014": 2709.0, "FY2013": -216.8}
+# FY2013-FY2016 only: a distinct "Changes in income tax" line (separate from "Taxes paid") in these years' own presentation.
+CHG_INCOME_TAX = {"FY2016": -1.8, "FY2015": -18.4, "FY2014": 16.9, "FY2013": -5.3}
 CHG_OTHER_LIABILITIES = {"FY2025": 145.4, "FY2024": 99.4, "FY2023": 245.9, "FY2022": 107.6, "FY2021": -324.4,
                          "FY2020": 601.1, "FY2019": -894.9, "FY2018": -33.4, "FY2017": 92.1, "FY2016": 14.0,
-                         "FY2015": -16.6, "FY2014": 13.4}
+                         "FY2015": -16.6, "FY2014": 13.4, "FY2013": -14.1}
 CHG_TRADING_ASSETS = {"FY2025": -1497.7}
 CHG_TRADING_LIABILITIES = {"FY2025": 294.3}
 CHG_REPO_BORROWING = {"FY2025": 12669.1}
@@ -732,50 +778,52 @@ TAXES_PAID = {"FY2025": -130.3, "FY2024": -122.8, "FY2023": -91.6, "FY2022": -92
               "FY2020": -150.3, "FY2019": -92.2, "FY2018": -69.7, "FY2017": -54.4}
 NET_OPERATING = {"FY2025": 2338.4, "FY2024": -3510.3, "FY2023": -350.7, "FY2022": 110.4, "FY2021": -3290.9,
                  "FY2020": 9400.4, "FY2019": -10176.2, "FY2018": 16481.2, "FY2017": -1102.1, "FY2016": 3255.2,
-                 "FY2015": -412.1, "FY2014": 365.6}
+                 "FY2015": -412.1, "FY2014": 365.6, "FY2013": 8415.3}
 
 PURCHASE_SECURITIES = {"FY2025": -3186.0, "FY2024": -2849.6, "FY2023": -1025.2, "FY2022": -1669.1, "FY2021": -1137.0,
                        "FY2020": -1136.1, "FY2019": -1144.5, "FY2018": -821.4, "FY2017": -878.0, "FY2016": -762.0,
-                       "FY2015": -950.2, "FY2014": -936.2}
+                       "FY2015": -950.2, "FY2014": -936.2, "FY2013": -585.0}
 PROCEEDS_SECURITIES = {"FY2025": 3107.4, "FY2024": 3217.3, "FY2023": 992.4, "FY2022": 1145.9, "FY2021": 1269.1,
                        "FY2020": 922.1, "FY2019": 1458.1, "FY2018": 542.1, "FY2017": 1178.4, "FY2016": 860.0,
-                       "FY2015": 1014.5, "FY2014": 425.4}
+                       "FY2015": 1014.5, "FY2014": 425.4, "FY2013": 526.4}
 PURCHASE_INTANGIBLES = {"FY2025": -65.7, "FY2024": -34.5, "FY2023": -24.5, "FY2022": -21.0, "FY2021": -20.9,
                         "FY2020": -22.4, "FY2019": -12.5, "FY2018": -15.9, "FY2017": -9.6, "FY2016": -10.3,
-                        "FY2015": -4.4, "FY2014": -5.0}
+                        "FY2015": -4.4, "FY2014": -5.0, "FY2013": -2.1}
 PROCEEDS_INTANGIBLES = {"FY2021": 0.2}
 PURCHASE_PPE = {"FY2025": -6.6, "FY2024": -24.0, "FY2023": -37.1, "FY2022": -64.1, "FY2021": -199.1,
                 "FY2020": -4.1, "FY2019": -10.8, "FY2018": -17.9, "FY2017": -5.7, "FY2016": -15.8,
-                "FY2015": -2.9, "FY2014": -0.2}
+                "FY2015": -2.9, "FY2014": -0.2, "FY2013": -4.8}
 PROCEEDS_PPE = {"FY2025": 0.5, "FY2021": 15.1, "FY2020": 6.0, "FY2019": 7.2, "FY2016": 1.6}
 NET_INVESTING = {"FY2025": -150.4, "FY2024": 309.2, "FY2023": -94.4, "FY2022": -608.3, "FY2021": -72.6,
                  "FY2020": -234.5, "FY2019": 297.5, "FY2018": -313.1, "FY2017": 285.1, "FY2016": 73.5,
-                 "FY2015": 57.0, "FY2014": -516.0}
+                 "FY2015": 57.0, "FY2014": -516.0, "FY2013": -65.5}
 
 LEASE_PAYMENTS = {"FY2025": -17.2, "FY2024": -8.3, "FY2023": -5.3, "FY2022": -18.9, "FY2021": -19.0, "FY2020": -10.6}
 PROCEEDS_DEBT_SECURITIES = {"FY2025": 1012.0, "FY2024": 901.9, "FY2023": 1048.7, "FY2022": 976.0, "FY2021": 853.6,
                             "FY2019": 13.1, "FY2018": 4045.3, "FY2017": 3519.1, "FY2016": 4098.5,
-                            "FY2015": 2378.4, "FY2014": 2375.7}
+                            "FY2015": 2378.4, "FY2014": 2375.7, "FY2013": 2240.0}
 REPAYMENT_DEBT_SECURITIES = {"FY2025": -901.9, "FY2024": -1048.7, "FY2023": -976.0, "FY2022": -853.6, "FY2021": 0,
                              "FY2020": -13.1, "FY2018": -3730.0, "FY2017": -3887.6, "FY2016": -2378.4,
-                             "FY2015": -2375.7, "FY2014": -2240.0}
+                             "FY2015": -2375.7, "FY2014": -2240.0, "FY2013": -3323.7}
 # FY2014 only: redemption of subordinated debt and a further ordinary share issue (on top of FY2013's own).
 REPAYMENT_SUB_DEBT = {"FY2014": -800.0}
-NET_ISSUE_SHARES = {"FY2014": 800.0}
+# FY2013 and FY2014 both saw a USD 800.0m ordinary share capital injection (see the Statement of Changes in
+# Equity sheet) - the FY2014 injection was a further one, on top of FY2013's.
+NET_ISSUE_SHARES = {"FY2014": 800.0, "FY2013": 800.0}
 NET_FINANCING = {"FY2025": 92.9, "FY2024": -155.1, "FY2023": 67.4, "FY2022": 103.5, "FY2021": 834.6,
                  "FY2020": -23.7, "FY2019": -4032.2, "FY2018": 315.3, "FY2017": -368.5, "FY2016": 1720.1,
-                 "FY2015": 2.7, "FY2014": 135.7}
+                 "FY2015": 2.7, "FY2014": 135.7, "FY2013": -283.7}
 
 NET_CHANGE = {"FY2025": 2280.9, "FY2024": -3356.2, "FY2023": -377.7, "FY2022": -394.4, "FY2021": -2528.9,
               "FY2020": 9142.2, "FY2019": -13910.9, "FY2018": 16483.4, "FY2017": -1185.5, "FY2016": 5048.8,
-              "FY2015": -352.4, "FY2014": -14.7}
+              "FY2015": -352.4, "FY2014": -14.7, "FY2013": 8066.1}
 FX_EFFECT = {"FY2025": 214.3, "FY2024": 159.5, "FY2023": 1020.9, "FY2022": 1157.1, "FY2021": -1824.8}
 CASH_BEGIN = {"FY2025": 22798.8, "FY2024": 25995.5, "FY2023": 25352.3, "FY2022": 24589.6, "FY2021": 28943.3,
               "FY2020": 19801.1, "FY2019": 33712.0, "FY2018": 20710.1, "FY2017": 21895.6, "FY2016": 16846.8,
-              "FY2015": 17199.2, "FY2014": 17213.9}
+              "FY2015": 17199.2, "FY2014": 17213.9, "FY2013": 9147.8}
 CASH_END = {"FY2025": 25294.0, "FY2024": 22798.8, "FY2023": 25995.5, "FY2022": 25352.3, "FY2021": 24589.6,
             "FY2020": 28943.3, "FY2019": 19801.1, "FY2018": 37193.5, "FY2017": 20710.1, "FY2016": 21895.6,
-            "FY2015": 16846.8, "FY2014": 17199.2}
+            "FY2015": 16846.8, "FY2014": 17199.2, "FY2013": 17213.9}
 
 # Reconciling line: with stocks at spot and flows at average, opening + net
 # change (avg) + FX effect (avg) will not exactly equal closing (spot) in
@@ -797,7 +845,7 @@ rows = [
     ("DATA", "Net impairment loss on financial assets", gbp_avg(IMPAIRMENT_LOSS)),
     ("DATA", "Net losses from disposal of financial assets at amortised cost", gbp_avg(LOSS_ON_DISPOSAL)),
     ("DATA", "Unrealised exchange movements on non operating assets and liabilities", gbp_avg(UNREALISED_FX)),
-    ("DATA", "Impairment loss written off (FY2014-FY2016 only)", gbp_avg(IMPAIRMENT_WRITTEN_OFF)),
+    ("DATA", "Impairment loss written off (FY2013-FY2016 only)", gbp_avg(IMPAIRMENT_WRITTEN_OFF)),
     ("DATA", "Depreciation and amortisation", gbp_avg(DEPRECIATION)),
     ("SECTION", "Changes in operating assets and liabilities", {}),
     ("DATA", "Changes in loans and advances to banks", gbp_avg(CHG_LOANS_BANKS)),
@@ -811,7 +859,7 @@ rows = [
     ("DATA", "Net decrease/(increase) in trading portfolio assets", gbp_avg(CHG_TRADING_ASSETS)),
     ("DATA", "Net increase in trading portfolio liabilities", gbp_avg(CHG_TRADING_LIABILITIES)),
     ("DATA", "Net increase in repurchase agreements and other similar secured borrowing", gbp_avg(CHG_REPO_BORROWING)),
-    ("DATA", "Changes in income tax (FY2014-FY2016 only - see 'Taxes paid' for other years)", gbp_avg(CHG_INCOME_TAX)),
+    ("DATA", "Changes in income tax (FY2013-FY2016 only - see 'Taxes paid' for other years)", gbp_avg(CHG_INCOME_TAX)),
     ("DATA", "Taxes paid", gbp_avg(TAXES_PAID)),
     ("TOTAL", "Net cash from/(used in) operating activities", gbp_avg(NET_OPERATING)),
     ("SECTION", "Investing activities", {}),
@@ -827,7 +875,7 @@ rows = [
     ("DATA", "Proceeds from issue of debt securities", gbp_avg(PROCEEDS_DEBT_SECURITIES)),
     ("DATA", "Repayment of debt securities", gbp_avg(REPAYMENT_DEBT_SECURITIES)),
     ("DATA", "Repayment and cancellation of subordinated debt (FY2014 only)", gbp_avg(REPAYMENT_SUB_DEBT)),
-    ("DATA", "Net issue of shares (FY2014 only)", gbp_avg(NET_ISSUE_SHARES)),
+    ("DATA", "Net issue of shares (FY2013-FY2014 only)", gbp_avg(NET_ISSUE_SHARES)),
     ("TOTAL", "Net cash from/(used in) financing activities", gbp_avg(NET_FINANCING)),
     ("TOTAL", "Net increase/(decrease) in cash and cash equivalents", net_change_gbp),
     ("DATA", "Exchange differences in respect of cash and cash equivalents (USD)", fx_effect_gbp),
@@ -844,6 +892,7 @@ bw.add_cash_flow_sheet(
     first_col_width=76,
     source_height=340,
     unit_suffix=" (£m, conv. from USD)",
+    years=YEARS,
 )
 
 # ---------------------------------------------------------------

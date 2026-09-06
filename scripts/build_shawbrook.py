@@ -2,14 +2,25 @@ import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-Y=["FY2025","FY2024","FY2023","FY2022","FY2021","FY2020","FY2019","FY2018","FY2017","FY2016","FY2015","FY2014"]
+# Y is the extended (14-year) list used only for the four statutory-statement
+# sheets (Balance Sheet, Profit & Loss, Statement of Changes in Equity, Cash
+# Flow Statement), per wayfinder ticket HD-072. Y_CORE is the project-wide
+# 12-year list the workbook itself (and hence Pillar 3, Asset Quality, RWA
+# Breakdown and the Overview sheet, none of which are in scope for HD-072)
+# is built on - passed to BankWorkbook(years=...) so those sheets' own year
+# columns are untouched. The three statutory sheets pass years=Y explicitly
+# to their add_*_sheet() calls to widen just their own header row.
+Y=["FY2025","FY2024","FY2023","FY2022","FY2021","FY2020","FY2019","FY2018","FY2017","FY2016","FY2015","FY2014","FY2013","FY2012"]
+Y_CORE=["FY2025","FY2024","FY2023","FY2022","FY2021","FY2020","FY2019","FY2018","FY2017","FY2016","FY2015","FY2014"]
 AR={"FY2025":"https://www.shawbrook.co.uk/media/vkkpos4a/shawbrook-bank-limited-2025-annual-report-accounts.pdf","FY2024":"https://www.shawbrook.co.uk/media/jhujcnzh/shawbrook-bank-limited-2024-annual-report-accounts.pdf","FY2023":"https://www.shawbrook.co.uk/media/iflapcxl/shawbrook-bank-ltd-annual-report-and-accounts-2023.pdf","FY2022":"https://www.shawbrook.co.uk/media/wttf0kdt/2022-shawbrook-bank-limited-annual-report-and-accounts.pdf","FY2021":"https://www.shawbrook.co.uk/media/ft4eulfp/shawbrook-bank-ara-2021.pdf",
 "FY2020":"https://www.shawbrook.co.uk/media/bvvovq0d/shawbrook-bank-limited-annual-report-2020.pdf","FY2019":"https://www.shawbrook.co.uk/media/pqtkvwzv/sb-limited-ara-2019.pdf",
 "FY2018":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2018, as filed with Companies House)",
 "FY2017":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2017, as filed with Companies House)",
 "FY2016":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2016, as filed with Companies House)",
 "FY2015":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2015, as filed with Companies House)",
-"FY2014":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2014, as filed with Companies House)"}
+"FY2014":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2014, as filed with Companies House)",
+"FY2013":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2013, as filed with Companies House, filed 09 Jun 2014)",
+"FY2012":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2012, as filed with Companies House, filed 20 May 2013)"}
 P3={"FY2025":"https://www.shawbrook.co.uk/media/w5chxn4q/shawbrook-pillar-3-disclosures-2025.pdf","FY2024":"https://www.shawbrook.co.uk/media/rzpdavyj/shawbrook-2024-pillar-3-disclosures.pdf","FY2023":"https://www.shawbrook.co.uk/media/wrpglj2h/shawbrook-pillar-3-disclosures-2023.pdf","FY2022":"https://www.shawbrook.co.uk/media/pljhf2fo/2022-shawbrook-pillar-3-disclosures.pdf","FY2021":"https://www.shawbrook.co.uk/media/hlbpmnjm/pillar-3-2021.pdf",
 "FY2020":"https://www.shawbrook.co.uk/media/xexpjjkq/shawbrook-pillar-3-disclosures-2020.pdf","FY2019":"https://www.shawbrook.co.uk/media/2azlz2vz/shawbrook-pillar-3-disclosures-2019.pdf",
 "FY2018":"https://www.shawbrook.co.uk/media/kfnfg0oe/shawbrook-pillar-3-disclosures-2018.pdf","FY2017":"https://www.shawbrook.co.uk/media/3lifgtxe/shawbrook-pillar-3-disclosures-2017.pdf",
@@ -21,9 +32,25 @@ note=("Shawbrook Bank Limited (Companies House 00388466; FRN 204574; LEI 213800X
 "The FY2025 Pillar 3 publication is Group-only after the listing and is not substituted for Bank data. FY2022 RWA/capital comparatives use the restatement in the 2023 Pillar 3 disclosure; FY2021 and FY2022 leverage bases differ. "
 "FY2014-FY2018 statements were sourced from Companies House filing-history (scanned filings, OCR'd) because shawbrook.co.uk's own hosted 'Annual Report' links for those years are Shawbrook Group plc (holdco) documents, not Bank-entity accounts; FY2019-FY2020 statements use the Bank-entity reports hosted on shawbrook.co.uk directly. "
 "FY2016-FY2018 Bank-level Total RWAs, CET1/Tier1/Total Capital ratios are blank: those years' Pillar 3 disclosures give a Bank-level credit-risk RWA figure but never an operational-risk RWA component at Bank level, so Total RWA cannot be assembled without substituting a Group figure, which this workbook does not do. FY2019 Bank Total RWA/ratios use the comparative column in the FY2020 Pillar 3 disclosure (the first year Shawbrook disclosed a full Bank-level RWA-by-category table); FY2019's own Pillar 3 document did not itself disclose this breakdown. "
-"FY2014/FY2015 Bank Total RWAs are derived from the Bank's own disclosed Pillar 1 capital requirement (Credit risk + Operational risk) grossed up at 8%, per each year's own Pillar 3 disclosure; FY2015's derived total (£2,173.8m) is used in preference to the £2,175.9m 'Total risk exposure amount' shown in that year's countercyclical-buffer table, which nets to the same figure within rounding.")
-cf="Sources - Shawbrook Bank Limited Company cash flows (£m):\n"+"\n".join(f"{y}: Annual Report and Accounts cash-flow statement, p.{({'FY2021':106,'FY2022':98,'FY2023':111,'FY2024':107,'FY2025':114}[y])}, {AR[y]}" for y in Y if y in {'FY2021','FY2022','FY2023','FY2024','FY2025'})+"\nFY2020: Annual Report and Accounts 2020, p.111 - "+AR['FY2020']+"\nFY2019: Annual Report and Accounts 2019, p.90 - "+AR['FY2019']+"\nFY2018: Annual Report and Accounts 2018 (Companies House filing), p.80 - "+AR['FY2018']+"\nFY2017: Annual Report and Accounts 2017 (Companies House filing), p.37 - "+AR['FY2017']+"\nFY2016: Annual Report and Accounts 2016 (Companies House filing), p.41 - "+AR['FY2016']+"\nFY2015: Annual Report and Accounts 2015 (Companies House filing), p.53 - "+AR['FY2015']+"\nFY2014: Annual Report and Accounts 2014 (Companies House filing) - "+AR['FY2014']+"\n\n"+note
-b=BankWorkbook(bank_name="Shawbrook Bank Limited",years=Y,header_color="FE1270")
+"FY2014/FY2015 Bank Total RWAs are derived from the Bank's own disclosed Pillar 1 capital requirement (Credit risk + Operational risk) grossed up at 8%, per each year's own Pillar 3 disclosure; FY2015's derived total (£2,173.8m) is used in preference to the £2,175.9m 'Total risk exposure amount' shown in that year's countercyclical-buffer table, which nets to the same figure within rounding. "
+"Per wayfinder ticket HD-072 (2026-09-06), FY2013 and FY2012 were added to the four statutory-statement sheets only "
+"(Balance Sheet, Profit & Loss, Statement of Changes in Equity, Cash Flow Statement) - Pillar 3, Asset Quality and "
+"RWA Breakdown remain FY2014-floored, since Pillar 3 disclosures genuinely aren't comparable pre-CRD IV/Basel III.")
+cf="Sources - Shawbrook Bank Limited Company cash flows (£m):\n"+"\n".join(f"{y}: Annual Report and Accounts cash-flow statement, p.{({'FY2021':106,'FY2022':98,'FY2023':111,'FY2024':107,'FY2025':114}[y])}, {AR[y]}" for y in Y if y in {'FY2021','FY2022','FY2023','FY2024','FY2025'})+"\nFY2020: Annual Report and Accounts 2020, p.111 - "+AR['FY2020']+"\nFY2019: Annual Report and Accounts 2019, p.90 - "+AR['FY2019']+"\nFY2018: Annual Report and Accounts 2018 (Companies House filing), p.80 - "+AR['FY2018']+"\nFY2017: Annual Report and Accounts 2017 (Companies House filing), p.37 - "+AR['FY2017']+"\nFY2016: Annual Report and Accounts 2016 (Companies House filing), p.41 - "+AR['FY2016']+"\nFY2015: Annual Report and Accounts 2015 (Companies House filing), p.53 - "+AR['FY2015']+"\nFY2014: Annual Report and Accounts 2014 (Companies House filing) - "+AR['FY2014']+"\nFY2013: Annual Report and Accounts 2013 (Companies House filing), Company Statement of Cashflows p.20 - "+AR['FY2013']+". Independently cross-checked against the FY2013 comparative column in the Annual Report and Accounts 2014 (Companies House filing) p.35, which agrees exactly on the investing- and financing-activities subtotals but diverges on the operating-activities subtotal (-£10.5m there vs -£10.0m per FY2013's own report) and hence on the cash-and-cash-equivalents balances themselves (see note below) - both attributable to the same reclassification.\nFY2012: Annual Report and Accounts 2012 (Companies House filing), Company Statement of Cashflows p.21 - "+AR['FY2012']+"\n\nNOTE ON A GENUINE, DOCUMENTED CASH-FLOW-CHAIN BREAK AT THE FY2013/FY2014 BOUNDARY: FY2013's own Annual Report "
+"reports Company cash and cash equivalents of £180.1m at 1 January 2013 and £230.3m at 31 December 2013 (an exact "
+"chain from FY2012's own Annual Report, which reports £180.1m at both 1 January 2012 and, after that year's own "
+"movements, matches FY2013's opening figure exactly). The FY2014 Annual Report's own comparative column for "
+"FY2013, however, shows £179.9m at 1 January 2013 and £229.6m at 31 December 2013/1 January 2014 (already the "
+"figure this workbook uses for FY2014's own opening balance) - roughly £0.7m lower throughout. This is not a "
+"transcription error: the FY2014 statement introduces a new 'Increase in mandatory balances with central banks' "
+"operating-asset line not present in the FY2012/FY2013 statements' own presentation, consistent with the FY2014 "
+"Annual Report having redefined 'cash and cash equivalents' to exclude mandatory central-bank balances that "
+"FY2012/FY2013's own statements had included. Per this workbook's standing convention (use each year's own "
+"Annual Report, not a later year's restated comparative), the FY2013 and FY2012 cash-flow figures below are "
+"FY2013's and FY2012's own reported figures - so FY2013's closing balance (£230.3m) does not tie to FY2014's "
+"opening balance (£229.6m) already shown on this sheet; this ~£0.7m gap is a genuine, sourced definitional "
+"reclassification, not an omitted plug row."+"\n\n"+note
+b=BankWorkbook(bank_name="Shawbrook Bank Limited",years=Y_CORE,year_label={y: y for y in Y},header_color="FE1270")
 
 # ---------------------------------------------------------------
 # Statement sources shared by Balance Sheet / P&L / Statement of Changes in
@@ -74,7 +101,26 @@ STATEMENTS_SOURCES = (
     f"Statements of Financial Position p.51, Company Statement of Changes in Equity p.52, Consolidated Statement "
     f"of profit and loss and Other Comprehensive Income p.50 - {AR['FY2015']}\n"
     f"FY2014: Annual Report and Accounts 2014 (Companies House filing, OCR'd), Statements of Financial Position "
-    f"p.34, Company Statement of Changes in Equity p.34, Consolidated Income Statement (Group basis) - {AR['FY2014']}\n\n" + note +
+    f"p.34, Company Statement of Changes in Equity p.34, Consolidated Income Statement (Group basis) - {AR['FY2014']}\n"
+    f"FY2013: Annual Report and Accounts 2013 (Companies House filing, OCR'd), Statements of Financial Position "
+    f"p.17, Company Statement of Changes in Equity p.19, Consolidated Income Statement (Group basis) p.15 - "
+    f"{AR['FY2013']}. Independently cross-checked against the FY2013 comparative column in the Annual Report and "
+    f"Accounts 2014 (Companies House filing) pp.30/32/34, which agrees on every Balance Sheet, P&L and Statement "
+    f"of Changes in Equity line (both are already in £m to 1 decimal place, so this cross-check column is used "
+    f"directly for FY2013's Balance Sheet/P&L/Equity figures below in preference to independently rounding "
+    f"FY2013's own £000 figures) - {AR['FY2014']}.\n"
+    f"FY2012: Annual Report and Accounts 2012 (Companies House filing, OCR'd), Company Statement of Financial "
+    f"Position p.17, Company Statement of Changes in Equity p.19, Consolidated Income Statement (Group basis) "
+    f"p.14, Consolidated Statement of Comprehensive Income p.15 - {AR['FY2012']}. FY2012's own report separately "
+    f"discloses, within its Company Statement of Changes in Equity, a small (£55k) restatement of its own opening "
+    f"1 January 2012 retained earnings for an accounting policy change made during 2012 - this is folded directly "
+    f"into the single 'Balance at 1 January 2012' row below (immaterial at this sheet's £0.1m precision) rather "
+    f"than shown as its own row. A second, larger (£549k) restatement of FY2012's Company closing retained "
+    f"earnings/Total equity is disclosed in Note 4 of the FY2013 Annual Report and is shown below as its own "
+    f"'Effect of restatement (Note 4, FY2013 Annual Report)' row between FY2012's own closing balance and FY2013's "
+    f"own opening balance, consistent with how this sheet already shows the FY2018 IFRS 9 transition as its own "
+    f"row - this keeps both FY2012's and FY2013's own reported figures intact rather than silently overwriting "
+    f"one with the other.\n\n" + note +
     "\n\nPRESENTATION NOTE: the Company has taken the exemption in s.408 Companies Act 2006 not to present its "
     "own individual income statement, so the P&L sheet is necessarily Group/Consolidated basis (the only fully "
     "disclosed income statement each year), while the Balance Sheet and Statement of Changes in Equity sheets "
@@ -95,56 +141,59 @@ STATEMENTS_SOURCES = (
 # ---------------------------------------------------------------
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances at central banks", d([1924.5, 2244.7, 2188.1, 2037.1, 1693.8, 1273.2, 1064.6, 645.2, 752.5, 429.9, 521.9, 313.1])),
-    ("DATA", "Loans and advances to banks", d([200.2, 248.8, 337.5, 199.9, 49.0, 84.7, 52.3, 50.1, 28.5, 24.1, 30.9, 36.4])),
-    ("DATA", "Loans and advances to customers", d([17801.1, 15129.4, 13157.9, 10472.8, 8278.9, 7061.3, 6637.7, 5805.7, 4799.3, 4050.4, 3319.1, 2284.7])),
-    ("DATA", "Investment securities", d([2164.8, 1449.3, 816.3, 716.8, 614.8, 421.6, 245.9, 139.9, None, None, None, None])),
-    ("DATA", "Derivative financial assets", d([64.1, 151.8, 182.1, 271.6, 21.5, 0.6, 3.1, 1.6, 1.8, 5.2, 2.8, 3.7])),
-    ("DATA", "Current tax receivable", d([12.3, 17.9, None, None, 4.2, 3.0, None, None, None, None, None, None])),
-    ("DATA", "Property, plant and equipment", d([54.0, 64.3, 38.9, 47.8, 47.8, 53.6, 57.2, 38.1, 39.2, 42.6, 48.2, 49.0])),
-    ("DATA", "Intangible assets", d([60.9, 56.2, 51.6, 45.6, 44.3, 45.1, 46.6, 46.4, 44.6, 38.8, 33.6, 28.4])),
-    ("DATA", "Deferred tax assets", d([None, None, 5.4, 11.3, 9.2, 12.3, 14.9, 18.0, 15.7, 17.9, 14.2, 10.0])),
-    ("DATA", "Assets held for sale", d([None, None, None, None, 299.7, 2.3, 104.1, None, None, None, None, None])),
-    ("DATA", "Other assets", d([55.6, 55.0, 50.4, 35.5, 17.5, 20.1, 16.2, 55.1, 19.8, 16.1, 7.4, 6.8])),
-    ("DATA", "Deemed loan due from structured entities", d([52.8, 131.0, 214.1, 93.4, None, None, None, None, None, None, None, None])),
-    ("DATA", "Investment in subsidiaries", d([145.4, 80.6, 58.6, 13.9, 13.9, None, None, None, None, None, None, None])),
-    ("DATA", "Investment in associates", d([None, None, None, None, None, 2.8, 5.4, 5.5, None, None, None, None])),
-    ("TOTAL", "Total assets", d([22535.7, 19629.0, 17100.9, 13945.7, 11094.6, 8980.6, 8248.0, 6805.6, 5701.4, 4625.0, 3978.1, 2732.1])),
+    ("DATA", "Cash and balances at central banks", d([1924.5, 2244.7, 2188.1, 2037.1, 1693.8, 1273.2, 1064.6, 645.2, 752.5, 429.9, 521.9, 313.1, 206.6, 0.2])),
+    ("DATA", "Loans and advances to banks", d([200.2, 248.8, 337.5, 199.9, 49.0, 84.7, 52.3, 50.1, 28.5, 24.1, 30.9, 36.4, 23.7, 117.0])),
+    ("DATA", "Loans and advances to customers", d([17801.1, 15129.4, 13157.9, 10472.8, 8278.9, 7061.3, 6637.7, 5805.7, 4799.3, 4050.4, 3319.1, 2284.7, 1346.8, 684.4])),
+    ("DATA", "Investment securities", d([2164.8, 1449.3, 816.3, 716.8, 614.8, 421.6, 245.9, 139.9, None, None, None, None, None, 144.9])),
+    ("DATA", "Derivative financial assets", d([64.1, 151.8, 182.1, 271.6, 21.5, 0.6, 3.1, 1.6, 1.8, 5.2, 2.8, 3.7, None, None])),
+    ("DATA", "Current tax receivable", d([12.3, 17.9, None, None, 4.2, 3.0, None, None, None, None, None, None, None, None])),
+    ("DATA", "Property, plant and equipment", d([54.0, 64.3, 38.9, 47.8, 47.8, 53.6, 57.2, 38.1, 39.2, 42.6, 48.2, 49.0, 52.9, 59.7])),
+    ("DATA", "Intangible assets", d([60.9, 56.2, 51.6, 45.6, 44.3, 45.1, 46.6, 46.4, 44.6, 38.8, 33.6, 28.4, 1.1, None])),
+    ("DATA", "Deferred tax assets", d([None, None, 5.4, 11.3, 9.2, 12.3, 14.9, 18.0, 15.7, 17.9, 14.2, 10.0, 8.8, 11.4])),
+    ("DATA", "Assets held for sale", d([None, None, None, None, 299.7, 2.3, 104.1, None, None, None, None, None, None, None])),
+    ("DATA", "Other assets", d([55.6, 55.0, 50.4, 35.5, 17.5, 20.1, 16.2, 55.1, 19.8, 16.1, 7.4, 6.8, 8.6, 11.0])),
+    ("DATA", "Deemed loan due from structured entities", d([52.8, 131.0, 214.1, 93.4, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Investment in subsidiaries", d([145.4, 80.6, 58.6, 13.9, 13.9, None, None, None, None, None, None, None, None, 0.0])),
+    ("DATA", "Investment in associates", d([None, None, None, None, None, 2.8, 5.4, 5.5, None, None, None, None, None, None])),
+    ("TOTAL", "Total assets", d([22535.7, 19629.0, 17100.9, 13945.7, 11094.6, 8980.6, 8248.0, 6805.6, 5701.4, 4625.0, 3978.1, 2732.1, 1648.5, 1028.5])),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Amounts due to banks", d([1430.6, 1372.1, 1397.6, 1498.7, 1200.7, 815.5, 881.6, 1029.4, 607.3, 147.7, 39.9, 41.0])),
-    ("DATA", "Customer deposits", d([18353.5, 15804.0, 13562.7, 10914.5, 8358.6, 6894.1, 6109.4, 4977.9, 4376.2, 3943.5, 3186.4, 2421.0])),
-    ("DATA", "Provisions", d([8.3, 11.5, 15.9, 6.0, 14.2, 18.0, 8.3, 11.6, 2.8, 1.3, 0.9, 0.6])),
-    ("DATA", "Derivative financial liabilities", d([93.2, 117.1, 184.5, 90.5, 7.9, 42.0, 14.9, 5.7, 3.4, 0.4, None, None])),
-    ("DATA", "Current tax liabilities", d([None, None, 0.2, 3.6, None, None, 1.0, 3.9, 7.8, 14.2, 7.5, None])),
-    ("DATA", "Lease liabilities", d([24.4, 25.0, 5.2, 7.1, 9.4, 11.1, 12.4, None, None, None, None, None])),
-    ("DATA", "Deferred tax liabilities", d([14.5, 7.1, None, None, None, None, None, None, None, None, None, None])),
-    ("DATA", "Other liabilities", d([188.3, 122.4, 85.4, 58.5, 60.7, 41.1, 93.9, 40.7, 26.8, 28.7, 333.7, 41.9])),
-    ("DATA", "Subordinated debt liability", d([171.5, 171.2, 188.8, 97.4, 97.5, 97.7, 96.4, 76.1, 76.1, 76.1, 75.0, 30.8])),
-    ("DATA", "Deemed loan due to structured entities", d([375.7, 388.5, 269.2, 133.0, 402.8, 268.2, 286.2, None, None, None, None, None])),
-    ("TOTAL", "Total liabilities", d([20660.0, 18018.9, 15709.5, 12809.3, 10151.8, 8187.7, 7504.1, 6145.3, 5100.4, 4211.9, 3635.9, 2535.3])),
+    ("DATA", "Amounts due to banks", d([1430.6, 1372.1, 1397.6, 1498.7, 1200.7, 815.5, 881.6, 1029.4, 607.3, 147.7, 39.9, 41.0, 24.6, None])),
+    ("DATA", "Customer deposits", d([18353.5, 15804.0, 13562.7, 10914.5, 8358.6, 6894.1, 6109.4, 4977.9, 4376.2, 3943.5, 3186.4, 2421.0, 1463.0, 923.7])),
+    ("DATA", "Provisions", d([8.3, 11.5, 15.9, 6.0, 14.2, 18.0, 8.3, 11.6, 2.8, 1.3, 0.9, 0.6, 0.4, 0.8])),
+    ("DATA", "Derivative financial liabilities", d([93.2, 117.1, 184.5, 90.5, 7.9, 42.0, 14.9, 5.7, 3.4, 0.4, None, None, None, 0.0])),
+    ("DATA", "Current tax liabilities", d([None, None, 0.2, 3.6, None, None, 1.0, 3.9, 7.8, 14.2, 7.5, None, None, None])),
+    ("DATA", "Lease liabilities", d([24.4, 25.0, 5.2, 7.1, 9.4, 11.1, 12.4, None, None, None, None, None, None, None])),
+    ("DATA", "Deferred tax liabilities", d([14.5, 7.1, None, None, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Other liabilities", d([188.3, 122.4, 85.4, 58.5, 60.7, 41.1, 93.9, 40.7, 26.8, 28.7, 333.7, 41.9, 21.3, 23.9])),
+    ("DATA", "Subordinated debt liability", d([171.5, 171.2, 188.8, 97.4, 97.5, 97.7, 96.4, 76.1, 76.1, 76.1, 75.0, 30.8, 27.6, None])),
+    ("DATA", "Deemed loan due to structured entities", d([375.7, 388.5, 269.2, 133.0, 402.8, 268.2, 286.2, None, None, None, None, None, None, None])),
+    ("TOTAL", "Total liabilities", d([20660.0, 18018.9, 15709.5, 12809.3, 10151.8, 8187.7, 7504.1, 6145.3, 5100.4, 4211.9, 3635.9, 2535.3, 1536.9, 948.4])),
     ("SECTION", "Equity", {}),
-    ("DATA", "Share capital", d([225.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 174.5])),
-    ("DATA", "Share premium account", d([81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, None])),
-    ("DATA", "Capital securities", d([125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, None, None, None])),
-    ("DATA", "Merger reserve", d([1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6])),
-    ("DATA", "Capital contribution reserve", d([39.7, 39.7, 39.0, 24.0, 23.9, 17.7, 17.2, 16.4, 16.7, 9.2, 4.4, 0.3])),
-    ("DATA", "Cash flow hedging reserve", d([1.3, 0.1, 0.1, None, None, None, None, None, None, None, None, None])),
-    ("DATA", "Fair value through other comprehensive income reserve", d([43.8, 29.6, -0.3, -10.7, None, None, None, None, None, None, None, None])),
-    ("DATA", "Retained earnings", d([1357.8, 1157.6, 969.5, 740.0, 535.8, 392.1, 343.6, 260.8, 201.2, 145.8, 79.7, 20.4])),
-    ("TOTAL", "Total equity", d([1875.7, 1610.1, 1391.4, 1136.4, 942.8, 792.9, 743.9, 660.3, 601.0, 413.1, 342.2, 196.8])),
-    ("TOTAL", "Total liabilities and equity", d([22535.7, 19629.0, 17100.9, 13945.7, 11094.6, 8980.6, 8248.0, 6805.6, 5701.4, 4625.0, 3978.1, 2732.1])),
+    ("DATA", "Share capital", d([225.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 175.5, 174.5, 129.0, 112.0])),
+    ("DATA", "Share premium account", d([81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, None, None, None])),
+    ("DATA", "Capital securities", d([125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, None, None, None, None, None])),
+    ("DATA", "Merger reserve", d([1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, None, None])),
+    ("DATA", "Capital contribution reserve", d([39.7, 39.7, 39.0, 24.0, 23.9, 17.7, 17.2, 16.4, 16.7, 9.2, 4.4, 0.3, 0.2, 0.2])),
+    ("DATA", "Cash flow hedging reserve", d([1.3, 0.1, 0.1, None, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Fair value through other comprehensive income reserve", d([43.8, 29.6, -0.3, -10.7, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Retained earnings", d([1357.8, 1157.6, 969.5, 740.0, 535.8, 392.1, 343.6, 260.8, 201.2, 145.8, 79.7, 20.4, -17.6, -32.0])),
+    ("TOTAL", "Total equity", d([1875.7, 1610.1, 1391.4, 1136.4, 942.8, 792.9, 743.9, 660.3, 601.0, 413.1, 342.2, 196.8, 111.6, 80.2])),
+    ("TOTAL", "Total liabilities and equity", d([22535.7, 19629.0, 17100.9, 13945.7, 11094.6, 8980.6, 8248.0, 6805.6, 5701.4, 4625.0, 3978.1, 2732.1, 1648.5, 1028.5])),
 ]
 
 b.add_balance_sheet_sheet(
     title="Shawbrook Bank Limited — Balance Sheet",
-    subtitle="Company/entity basis, £m; FY2014-FY2025 calendar year-ends. Total assets = Total liabilities + "
+    subtitle="Company/entity basis, £m; FY2012-FY2025 calendar year-ends. Total assets = Total liabilities + "
               "Total equity for every year; Total equity ties exactly to the Statement of Changes in Equity "
-              "sheet's own opening/closing balances - zero plug rows.",
+              "sheet's own opening/closing balances - zero plug rows. FY2013/FY2012 added per wayfinder ticket "
+              "HD-072 (see source note); FY2013 figures use the already-£m-rounded comparative column in the "
+              "FY2014 Annual Report rather than independently rounding FY2013's own £000 figures.",
     rows=balance_sheet_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=68,
     source_height=260,
     unit_suffix=" (£m)",
+    years=Y,
 )
 
 # ---------------------------------------------------------------
@@ -157,70 +206,80 @@ b.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 income_statement_rows = [
     ("SECTION", "Income", {}),
-    ("DATA", "Interest income calculated using the effective interest rate method", d([1284.6, 1199.3, 946.0, 588.1, 456.3, 399.9, 406.0, 356.0, 313.3, 280.2, 216.9, 156.7])),
-    ("DATA", "Other interest and similar income", d([137.3, 187.7, 197.8, 36.2, -12.6, -8.7, -0.3, 0.8, None, None, None, None])),
-    ("DATA", "Interest expense and similar charges", d([-774.9, -795.9, -567.1, -164.4, -88.9, -114.9, -113.1, -87.2, -75.9, -83.0, -63.8, -54.0])),
-    ("TOTAL", "Net interest income", d([647.0, 591.1, 576.7, 459.9, 354.8, 276.3, 292.6, 269.6, 237.4, 197.2, 153.1, 102.7])),
-    ("DATA", "Operating lease rental income", d([7.3, 8.7, 9.6, 10.1, 10.4, 10.9, 10.3, 10.0, 12.3, 13.5, 14.9, 15.7])),
-    ("DATA", "Depreciation on operating leases", d([-6.2, -7.4, -8.2, -8.7, -8.6, -9.1, -8.6, -7.6, -10.6, -11.3, -12.2, -13.1])),
-    ("DATA", "Net other operating lease income/(expense)", d([0.1, 0.1, 0.1, 0.3, None, -0.1, 0.2, -0.6, None, 0.1, 1.1, 1.1])),
-    ("TOTAL", "Net operating lease income", d([1.2, 1.4, 1.5, 1.7, 1.8, 1.7, 1.9, 1.8, 1.7, 2.3, 3.8, 3.7])),
-    ("DATA", "Fee and commission income", d([17.3, 16.2, 16.9, 14.1, 11.5, 8.6, 9.7, 10.7, 12.3, 15.4, 13.1, 7.6])),
-    ("DATA", "Fee and commission expense", d([-19.6, -17.0, -13.3, -8.8, -7.3, -9.2, -8.7, -9.7, -13.5, -5.7, -2.8, -1.7])),
-    ("TOTAL", "Net fee and commission income/(expense)", d([-2.3, -0.8, 3.6, 5.3, 4.2, -0.6, 1.0, 1.0, -1.2, 9.7, 10.3, 5.9])),
-    ("DATA", "Net gains on derecognition of financial assets measured at amortised cost", d([None, None, None, 7.7, 21.7, 9.4, None, None, None, None, None, None])),
-    ("DATA", "Net gains on structured asset sales", d([34.8, 14.1, None, None, None, None, None, None, None, None, None, None])),
-    ("DATA", "Net (losses)/gains on derivative financial instruments and hedge accounting", d([-2.2, 1.9, 5.1, -0.8, 3.1, -5.0, 2.3, 0.5, 0.2, 0.5, -0.3, -0.1])),
-    ("DATA", "Net gains on loans and advances measured at FVTPL", d([0.3, None, None, None, None, None, None, None, None, None, None, None])),
-    ("DATA", "Net other operating income/(expense)", d([2.5, 1.4, -0.9, 2.4, 0.4, 0.6, -2.6, None, None, None, None, None])),
-    ("TOTAL", "Net operating income", d([681.3, 609.1, 586.0, 476.2, 386.0, 282.4, 295.2, 272.9, 238.1, 209.7, 166.9, 112.2])),
+    ("DATA", "Interest income calculated using the effective interest rate method", d([1284.6, 1199.3, 946.0, 588.1, 456.3, 399.9, 406.0, 356.0, 313.3, 280.2, 216.9, 156.7, 93.3, 46.9])),
+    ("DATA", "Other interest and similar income", d([137.3, 187.7, 197.8, 36.2, -12.6, -8.7, -0.3, 0.8, None, None, None, None, None, None])),
+    ("DATA", "Interest expense and similar charges", d([-774.9, -795.9, -567.1, -164.4, -88.9, -114.9, -113.1, -87.2, -75.9, -83.0, -63.8, -54.0, -38.4, -27.4])),
+    ("TOTAL", "Net interest income", d([647.0, 591.1, 576.7, 459.9, 354.8, 276.3, 292.6, 269.6, 237.4, 197.2, 153.1, 102.7, 54.9, 19.5])),
+    ("DATA", "Operating lease rental income", d([7.3, 8.7, 9.6, 10.1, 10.4, 10.9, 10.3, 10.0, 12.3, 13.5, 14.9, 15.7, 17.1, 15.1])),
+    ("DATA", "Depreciation on operating leases", d([-6.2, -7.4, -8.2, -8.7, -8.6, -9.1, -8.6, -7.6, -10.6, -11.3, -12.2, -13.1, -13.8, -12.0])),
+    ("DATA", "Net other operating lease income/(expense)", d([0.1, 0.1, 0.1, 0.3, None, -0.1, 0.2, -0.6, None, 0.1, 1.1, 1.1, 1.1, None])),
+    ("TOTAL", "Net operating lease income", d([1.2, 1.4, 1.5, 1.7, 1.8, 1.7, 1.9, 1.8, 1.7, 2.3, 3.8, 3.7, 4.4, 3.1])),
+    ("DATA", "Fee and commission income", d([17.3, 16.2, 16.9, 14.1, 11.5, 8.6, 9.7, 10.7, 12.3, 15.4, 13.1, 7.6, 0.8, 0.5])),
+    ("DATA", "Fee and commission expense", d([-19.6, -17.0, -13.3, -8.8, -7.3, -9.2, -8.7, -9.7, -13.5, -5.7, -2.8, -1.7, 0.0, -0.2])),
+    ("TOTAL", "Net fee and commission income/(expense)", d([-2.3, -0.8, 3.6, 5.3, 4.2, -0.6, 1.0, 1.0, -1.2, 9.7, 10.3, 5.9, 0.8, 0.4])),
+    ("DATA", "Net gains on derecognition of financial assets measured at amortised cost", d([None, None, None, 7.7, 21.7, 9.4, None, None, None, None, None, None, None, None])),
+    ("DATA", "Net gains on structured asset sales", d([34.8, 14.1, None, None, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Net (losses)/gains on derivative financial instruments and hedge accounting", d([-2.2, 1.9, 5.1, -0.8, 3.1, -5.0, 2.3, 0.5, 0.2, 0.5, -0.3, -0.1, 0.0, None])),
+    ("DATA", "Net gains on loans and advances measured at FVTPL", d([0.3, None, None, None, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Net other operating income/(expense)", d([2.5, 1.4, -0.9, 2.4, 0.4, 0.6, -2.6, None, None, None, None, None, None, None])),
+    ("TOTAL", "Net operating income", d([681.3, 609.1, 586.0, 476.2, 386.0, 282.4, 295.2, 272.9, 238.1, 209.7, 166.9, 112.2, 60.1, 22.9])),
     ("SECTION", "Operating expenses", {}),
-    ("DATA", "Administrative expenses", d([-325.9, -252.2, -225.6, -189.3, -164.2, -131.0, -138.4, -128.8, -113.2, -95.2, -84.0, -58.3])),
-    ("DATA", "Impairment losses on financial assets", d([-83.0, -67.2, -60.1, -47.7, -31.4, -54.9, -29.9, -23.2, -23.3, -24.3, -6.5, -6.7])),
-    ("DATA", "Provisions", d([-0.8, 5.3, -13.1, -0.8, 7.0, -20.3, -4.5, -10.1, -2.1, -1.1, -1.6, -1.1])),
-    ("TOTAL", "Total operating expenses", d([-409.7, -314.1, -298.8, -237.8, -188.6, -206.2, -172.8, -162.1, -138.6, -120.6, -92.1, -66.1])),
-    ("DATA", "Share of results of associates", d([None, None, None, None, None, 0.1, -0.1, -0.5, None, None, None, None])),
-    ("DATA", "Impairment of investment in associate", d([None, None, None, None, None, -2.7, None, None, None, None, None, None])),
-    ("DATA", "Net gain on disposal of subsidiary", d([None, None, None, None, None, None, 0.3, None, None, None, None, None])),
-    ("TOTAL", "Profit before tax", d([271.6, 295.0, 287.2, 238.4, 197.4, 73.6, 122.6, 110.3, 99.5, 89.1, 74.8, 46.1])),
-    ("DATA", "Tax", d([-76.7, -75.2, -74.6, -58.7, -47.9, -15.4, -28.8, -28.3, -25.3, -23.4, -11.8, -10.8])),
-    ("TOTAL", "Profit after tax, attributable to owners", d([194.9, 219.8, 212.6, 179.7, 149.5, 58.2, 93.8, 82.0, 74.2, 65.7, 63.0, 35.3])),
+    ("DATA", "Acquisition costs", d([None, None, None, None, None, None, None, None, None, None, None, None, None, -2.1])),
+    ("DATA", "Administrative expenses", d([-325.9, -252.2, -225.6, -189.3, -164.2, -131.0, -138.4, -128.8, -113.2, -95.2, -84.0, -58.3, -39.1, -26.9])),
+    ("DATA", "Impairment losses on financial assets", d([-83.0, -67.2, -60.1, -47.7, -31.4, -54.9, -29.9, -23.2, -23.3, -24.3, -6.5, -6.7, -3.5, -0.9])),
+    ("DATA", "Provisions", d([-0.8, 5.3, -13.1, -0.8, 7.0, -20.3, -4.5, -10.1, -2.1, -1.1, -1.6, -1.1, -0.7, -0.7])),
+    ("TOTAL", "Total operating expenses", d([-409.7, -314.1, -298.8, -237.8, -188.6, -206.2, -172.8, -162.1, -138.6, -120.6, -92.1, -66.1, -43.3, -30.7])),
+    ("DATA", "Share of results of associates", d([None, None, None, None, None, 0.1, -0.1, -0.5, None, None, None, None, None, None])),
+    ("DATA", "Impairment of investment in associate", d([None, None, None, None, None, -2.7, None, None, None, None, None, None, None, None])),
+    ("DATA", "Net gain on disposal of subsidiary", d([None, None, None, None, None, None, 0.3, None, None, None, None, None, None, None])),
+    ("TOTAL", "Profit before tax", d([271.6, 295.0, 287.2, 238.4, 197.4, 73.6, 122.6, 110.3, 99.5, 89.1, 74.8, 46.1, 16.8, -7.8])),
+    ("DATA", "Tax", d([-76.7, -75.2, -74.6, -58.7, -47.9, -15.4, -28.8, -28.3, -25.3, -23.4, -11.8, -10.8, -3.3, 0.4])),
+    ("TOTAL", "Profit after tax, attributable to owners", d([194.9, 219.8, 212.6, 179.7, 149.5, 58.2, 93.8, 82.0, 74.2, 65.7, 63.0, 35.3, 13.5, -7.4])),
     ("SECTION", "Other comprehensive income, net of tax (items that may be reclassified subsequently to the statement of profit and loss)", {}),
-    ("DATA", "Cash flow hedging reserve - net (losses)/gains from effective portion of changes in fair value", d([-4.4, 17.6, -23.1, 38.4, None, None, None, None, None, None, None, None])),
-    ("DATA", "Cash flow hedging reserve - reclassifications to statement of profit and loss", d([-6.6, -6.2, -6.8, -2.2, None, None, None, None, None, None, None, None])),
-    ("DATA", "Cash flow hedging reserve - related tax", d([3.0, -3.2, 8.0, -9.8, None, None, None, None, None, None, None, None])),
-    ("TOTAL", "Movement in cash flow hedging reserve", d([-8.0, 8.2, -21.9, 26.4, None, None, None, None, None, None, None, None])),
-    ("DATA", "FVOCI reserve - net gains/(losses) from changes in fair value", d([18.3, 35.6, 9.9, -17.1, None, None, None, None, None, None, None, None])),
-    ("DATA", "FVOCI reserve - change in loss allowance", d([1.4, 5.3, 4.3, 2.4, None, None, None, None, None, None, None, None])),
-    ("DATA", "FVOCI reserve - related tax", d([-5.5, -11.0, -3.8, 4.0, None, None, None, None, None, None, None, None])),
-    ("TOTAL", "Movement in fair value through other comprehensive income reserve", d([14.2, 29.9, 10.4, -10.7, None, None, None, None, None, None, None, None])),
-    ("TOTAL", "Other comprehensive income/(expense), net of tax", d([6.2, 38.1, -11.5, 15.7, None, None, None, None, None, None, None, None])),
-    ("TOTAL", "Total comprehensive income, attributable to owners", d([201.1, 257.9, 201.1, 195.4, 149.5, 58.2, 93.8, 82.0, 74.2, 65.7, 63.0, 35.3])),
+    ("DATA", "Cash flow hedging reserve - net (losses)/gains from effective portion of changes in fair value", d([-4.4, 17.6, -23.1, 38.4, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Cash flow hedging reserve - reclassifications to statement of profit and loss", d([-6.6, -6.2, -6.8, -2.2, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "Cash flow hedging reserve - related tax", d([3.0, -3.2, 8.0, -9.8, None, None, None, None, None, None, None, None, None, None])),
+    ("TOTAL", "Movement in cash flow hedging reserve", d([-8.0, 8.2, -21.9, 26.4, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "FVOCI reserve - net gains/(losses) from changes in fair value", d([18.3, 35.6, 9.9, -17.1, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "FVOCI reserve - change in loss allowance", d([1.4, 5.3, 4.3, 2.4, None, None, None, None, None, None, None, None, None, None])),
+    ("DATA", "FVOCI reserve - related tax", d([-5.5, -11.0, -3.8, 4.0, None, None, None, None, None, None, None, None, None, None])),
+    ("TOTAL", "Movement in fair value through other comprehensive income reserve", d([14.2, 29.9, 10.4, -10.7, None, None, None, None, None, None, None, None, None, None])),
+    ("TOTAL", "Other comprehensive income/(expense), net of tax", d([6.2, 38.1, -11.5, 15.7, None, None, None, None, None, None, None, None, 0.0, 0.4])),
+    ("TOTAL", "Total comprehensive income, attributable to owners", d([201.1, 257.9, 201.1, 195.4, 149.5, 58.2, 93.8, 82.0, 74.2, 65.7, 63.0, 35.3, 13.5, -6.9])),
 ]
 
 b.add_income_statement_sheet(
     title="Shawbrook Bank Limited — Profit & Loss",
-    subtitle="Group/Consolidated basis, £m; FY2014-FY2025 calendar year-ends. Necessarily Group basis - the "
+    subtitle="Group/Consolidated basis, £m; FY2012-FY2025 calendar year-ends. Necessarily Group basis - the "
               "Company takes the s.408 Companies Act 2006 exemption and does not publish its own income "
               "statement (see source note for the Company's own disclosed after-tax profit each year, which "
               "differs from Group 'Profit after tax' shown here). FY2014-FY2021 have no disclosed OCI items at "
               "all - 'Profit after tax' equals 'Total comprehensive income' exactly in each of those years, per "
-              "that year's own Annual Report.",
+              "that year's own Annual Report. FY2013/FY2012 do have disclosed OCI (cash flow hedge and "
+              "available-for-sale reserve movements), but only as a single combined net-of-tax figure per their "
+              "own Annual Reports (not split per-reserve the way FY2022-FY2025 are) - so only the 'Other "
+              "comprehensive income/(expense), net of tax' total is populated for those two years, not the "
+              "per-reserve breakdown rows above it. 'Acquisition costs' (FY2012 only, £2.1m) is a genuine "
+              "one-off line from that year's own Income Statement, not disclosed in any other year.",
     rows=income_statement_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=86,
     source_height=260,
     unit_suffix=" (£m)",
+    years=Y,
 )
 
 # ---------------------------------------------------------------
 # Statement of Changes in Equity - Company basis, chronological. Equity
 # reconciliation ladder: built year-by-year, each closing balance ties
 # exactly to that year's own Balance Sheet Total equity above and to the
-# next year's opening balance - zero undocumented plug rows across all 5
+# next year's opening balance - zero undocumented plug rows across all 14
 # years, including easy-to-skip categories (cash flow hedging reserve,
 # FVOCI reserve, capital securities issue/settlement, capital
 # contributions, share-based payments, a FY2025 ordinary share issue).
+# FY2012/FY2013 added per wayfinder ticket HD-072; see the source note for
+# the Note 4 restatement between FY2012's own closing balance and FY2013's
+# own opening balance.
 # ---------------------------------------------------------------
 EQUITY_HEADERS = [
     "Share capital", "Share premium account", "Capital securities", "Merger reserve",
@@ -229,7 +288,19 @@ EQUITY_HEADERS = [
 ]
 
 equity_rows = [
-    ("TOTAL", "Balance at 1 January 2014", (129.0, None, None, None, 0.2, None, None, -17.6, 111.6)),
+    ("TOTAL", "Balance at 1 January 2012", (37.0, None, None, None, None, 0.0, -0.5, -5.7, 30.9)),
+    ("DATA", "Loss for the year", (None, None, None, None, None, None, None, -26.3, -26.3)),
+    ("DATA", "Movement in cash flow hedging reserve", (None, None, None, None, None, 0.0, None, None, 0.0)),
+    ("DATA", "Movement in fair value through other comprehensive income reserve", (None, None, None, None, None, None, 0.5, None, 0.5)),
+    ("DATA", "Capital contribution", (None, None, None, None, 0.2, None, None, None, 0.2)),
+    ("DATA", "Issue of ordinary shares", (75.0, None, None, None, None, None, None, None, 75.0)),
+    ("TOTAL", "Balance at 31 December 2012 / 1 January 2013", (112.0, None, None, None, 0.2, 0.0, 0.0, -32.0, 80.2)),
+    ("DATA", "Effect of restatement (Note 4, FY2013 Annual Report)", (None, None, None, None, None, None, None, 0.5, 0.5)),
+    ("TOTAL", "Restated balance at 1 January 2013", (112.0, None, None, None, 0.2, 0.0, 0.0, -31.4, 80.7)),
+    ("DATA", "Profit for the year", (None, None, None, None, None, None, None, 13.8, 13.8)),
+    ("DATA", "Movement in fair value through other comprehensive income reserve", (None, None, None, None, None, None, 0.0, None, 0.0)),
+    ("DATA", "Issue of ordinary shares", (17.0, None, None, None, None, None, None, None, 17.0)),
+    ("TOTAL", "Balance at 31 December 2013 / 1 January 2014", (129.0, None, None, None, 0.2, None, None, -17.6, 111.6)),
     ("DATA", "Profit for the year", (None, None, None, None, None, None, None, 38.0, 38.0)),
     ("DATA", "Capital contribution", (None, None, None, None, 0.1, None, None, None, 0.1)),
     ("DATA", "Creation of merger reserve", (None, None, None, 1.6, None, None, None, None, 1.6)),
@@ -298,12 +369,15 @@ equity_rows = [
 
 b.add_equity_changes_sheet(
     title="Shawbrook Bank Limited — Statement of Changes in Equity",
-    subtitle="Company/entity basis, £m, chronological (oldest to newest), FY2014-FY2025. Each year's closing "
+    subtitle="Company/entity basis, £m, chronological (oldest to newest), FY2012-FY2025. Each year's closing "
               "Total equity ties exactly to that year's own Balance Sheet Total equity and to the next year's "
-              "opening balance - zero undocumented plug rows across all 12 years. 'Profit for the year' rows use "
+              "opening balance - zero undocumented plug rows across all 14 years. 'Profit for the year' rows use "
               "the Company's own disclosed profit figure (see the Profit & Loss sheet's source note for why this "
               "differs from Group 'Profit after tax'). The 1 January 2018 IFRS 9 transition impact is shown as "
-              "its own restatement row, consistent with the Asset Quality sheet's IAS 39/IFRS 9 basis break.",
+              "its own restatement row, consistent with the Asset Quality sheet's IAS 39/IFRS 9 basis break; the "
+              "1 January 2013 Note 4 restatement (a smaller, £549k accounting-policy break disclosed in the "
+              "FY2013 Annual Report, affecting only FY2012's Company retained earnings/Total equity) is shown the "
+              "same way, between FY2012's own closing balance and FY2013's own opening balance.",
     headers=EQUITY_HEADERS,
     rows=equity_rows,
     sources_text=STATEMENTS_SOURCES,
@@ -315,46 +389,47 @@ b.add_equity_changes_sheet(
 # Sheet: Cash Flow Statement
 # ---------------------------------------------------------------
 r=[("SECTION","Cash flows from operating activities",{}),
-("DATA","Profit before tax",d([252.7,271.6,333.8,284.6,203.8,73.7,121.4,110.9,100.2,89.5,75.2,48.8])),
-("DATA","Adjustments for non-cash items and other adjustments",d([182.2,52.4,63.2,67.4,2.6,59.1,23.5,39.2,54.3,51.3,26.2,23.6])),
-("DATA","(Increase)/decrease in operating assets",d([-2597.8,-1906.0,-2632.5,-2234.4,-1526.5,-369.0,-948.5,-1087.2,-777.9,-775.5,-1040.6,-750.5])),
-("DATA","Increase in operating liabilities",d([2590.0,2209.7,2775.8,2627.5,1449.6,768.7,1191.2,626.2,432.3,460.1,1055.3,966.2])),
-("DATA","Tax (paid)/recovered",d([-56.5,-85.1,-88.5,-61.9,-48.4,-16.8,-28.6,-26.4,-29.5,-20.5,-13.8,-4.6])),
-("TOTAL","Net cash generated from operating activities",d([370.6,542.6,451.8,683.2,81.1,515.7,359.0,-337.3,-220.6,-195.1,102.3,283.5])),
+("DATA","Profit before tax",d([252.7,271.6,333.8,284.6,203.8,73.7,121.4,110.9,100.2,89.5,75.2,48.8,19.4,-26.3])),
+("DATA","Adjustments for non-cash items and other adjustments",d([182.2,52.4,63.2,67.4,2.6,59.1,23.5,39.2,54.3,51.3,26.2,23.6,14.0,34.9])),
+("DATA","(Increase)/decrease in operating assets",d([-2597.8,-1906.0,-2632.5,-2234.4,-1526.5,-369.0,-948.5,-1087.2,-777.9,-775.5,-1040.6,-750.5,-578.2,-376.4])),
+("DATA","Increase in operating liabilities",d([2590.0,2209.7,2775.8,2627.5,1449.6,768.7,1191.2,626.2,432.3,460.1,1055.3,966.2,537.1,748.4])),
+("DATA","Tax (paid)/recovered",d([-56.5,-85.1,-88.5,-61.9,-48.4,-16.8,-28.6,-26.4,-29.5,-20.5,-13.8,-4.6,-2.2,0.0])),
+("TOTAL","Net cash generated from operating activities",d([370.6,542.6,451.8,683.2,81.1,515.7,359.0,-337.3,-220.6,-195.1,102.3,283.5,-10.0,380.5])),
 ("SECTION","Cash flows from investing activities",{}),
-("DATA","Purchase of investment securities",d([-1254.0,-691.3,-308.4,-204.8,-231.9,-176.8,-105.9,-139.7,None,None,None,None])),
-("DATA","Disposals and maturities of investment securities",d([441.1,60.7,194.8,92.9,37.7,None,None,None,None,None,None,None])),
-("DATA","Purchase of property, plant and equipment",d([-0.3,-2.3,-0.7,-0.4,-0.7,-0.8,-3.3,-3.4,-1.6,-0.2,-14.8,-11.0])),
-("DATA","Sale of property, plant and equipment",d([None,None,None,None,None,None,None,None,None,0.2,2.7,2.2])),
-("DATA","Purchase and development of intangible assets",d([-17.2,-13.3,-13.4,-9.1,-7.1,-7.5,-8.0,-9.8,-9.8,-7.9,-6.1,-3.9])),
-("DATA","Investment in right-of-use asset",d([0,-6.9,0,0,0,None,None,None,None,None,None,None])),
-("DATA","Purchase of subsidiary/shares in associate",d([-64.8,-22.0,-44.7,0,-5.5,None,None,-6.0,None,None,None,-76.3])),
-("DATA","Disposal of subsidiary, net of cash disposed",d([None,None,None,None,None,None,28.4,None,None,None,None,None])),
-("TOTAL","Net cash (used by)/generated from investing activities",d([-895.2,-675.1,-172.4,-121.4,-207.5,-185.1,-88.8,-158.9,-11.4,-7.9,-18.2,-89.0])),
+("DATA","Purchase of investment securities",d([-1254.0,-691.3,-308.4,-204.8,-231.9,-176.8,-105.9,-139.7,None,None,None,None,None,None])),
+("DATA","Disposals and maturities of investment securities",d([441.1,60.7,194.8,92.9,37.7,None,None,None,None,None,None,None,None,None])),
+("DATA","Purchase of property, plant and equipment",d([-0.3,-2.3,-0.7,-0.4,-0.7,-0.8,-3.3,-3.4,-1.6,-0.2,-14.8,-11.0,-11.2,-12.5])),
+("DATA","Sale of property, plant and equipment",d([None,None,None,None,None,None,None,None,None,0.2,2.7,2.2,3.8,3.8])),
+("DATA","Purchase and development of intangible assets",d([-17.2,-13.3,-13.4,-9.1,-7.1,-7.5,-8.0,-9.8,-9.8,-7.9,-6.1,-3.9,-1.1,None])),
+("DATA","Investment in right-of-use asset",d([0,-6.9,0,0,0,None,None,None,None,None,None,None,None,None])),
+("DATA","Purchase of subsidiary/shares in associate",d([-64.8,-22.0,-44.7,0,-5.5,None,None,-6.0,None,None,None,-76.3,0.0,-15.3])),
+("DATA","Disposal of subsidiary, net of cash disposed",d([None,None,None,None,None,None,28.4,None,None,None,None,None,None,None])),
+("TOTAL","Net cash (used by)/generated from investing activities",d([-895.2,-675.1,-172.4,-121.4,-207.5,-185.1,-88.8,-158.9,-11.4,-7.9,-18.2,-89.0,-8.5,-24.0])),
 ("SECTION","Cash flows from financing activities",{}),
-("DATA","Increase/(decrease) in amounts due to banks",d([58.5,-25.5,-101.1,298.0,385.2,-66.1,-147.8,422.1,459.6,107.8,-1.1,16.4])),
-("DATA","Issue of debt securities",d([0,0,0,0,0,None,None,None,None,None,None,None])),
-("DATA","Repurchase and redemption of debt securities",d([0,0,0,0,0,None,None,None,None,None,None,None])),
-("DATA","Costs arising on issue of debt securities",d([0,0,0,0,0,None,None,None,None,None,None,None])),
-("DATA","Payment of principal portion of lease liabilities",d([-0.6,-1.5,-1.9,-2.1,-1.8,-1.2,-0.8,None,None,None,None,None])),
-("DATA","Issue of subordinated debt",d([75.0,0,90.0,0,0,75.0,20.0,None,None,None,75.0,None])),
-("DATA","Redemption of subordinated debt",d([-76.5,-20.0,0,0,0,-75.0,None,None,None,None,-33.7,None])),
-("DATA","Costs arising on issue of subordinated debt",d([-0.9,0,-1.0,0,0,None,None,None,None,None,None,None])),
-("DATA","Net proceeds from issue of share capital",d([50.0,0,0,0,0,None,None,None,None,None,82.0,45.5])),
-("DATA","Decrease/(increase) in deemed loan due from structured entities",d([78.2,83.1,-120.7,0,0,None,None,None,None,None,None,None])),
-("DATA","(Decrease)/increase in deemed loan due to structured entities",d([-12.8,119.3,136.2,-269.8,134.6,-18.0,286.2,None,None,None,None,None])),
-("DATA","Increase in deemed loan due from structured entities",d([0,0,0,-93.4,0,None,None,None,None,None,None,None])),
-("DATA","Capital contribution",d([0,0,14.3,0,0,None,None,None,None,None,None,None])),
-("DATA","Coupon paid to holders of capital securities",d([-15.1,-15.1,-16.9,-8.8,-9.8,-9.8,-9.8,-9.8,None,None,None,None])),
-("DATA","Payment of subordinated debt interest",d([None,None,None,None,None,None,None,-6.4,-6.4,-5.3,None,None])),
-("DATA","Net proceeds from issue of capital securities",d([None,None,None,None,None,None,None,None,125.0,None,None,None])),
-("DATA","Dividends paid to parent/shareholders",d([None,None,None,None,None,None,None,None,-19.5,None,-4.0,None])),
-("DATA","Repayment of Centric third party funding",d([None,None,None,None,None,None,None,None,None,None,None,-138.2])),
-("TOTAL","Net cash (used by)/generated from financing activities",d([155.8,140.3,-1.1,-76.1,508.2,-95.1,147.8,405.9,558.7,102.5,118.2,-76.3])),
-("TOTAL","Net (decrease)/increase in cash and cash equivalents",d([-368.8,7.8,278.3,485.7,381.8,235.5,418.0,-90.3,326.7,-100.5,202.7,118.2])),
-("DATA","Cash and cash equivalents as at 1 January",d([2493.5,2485.7,2207.4,1721.7,1339.9,1104.4,686.4,776.7,450.0,550.5,347.8,229.6])),
-("TOTAL","Cash and cash equivalents as at 31 December",d([2124.7,2493.5,2485.7,2207.4,1721.7,1339.9,1104.4,686.4,776.7,450.0,550.5,347.8]))]
-b.add_cash_flow_sheet(title="Shawbrook Bank Limited — Company Cash Flow Statement",subtitle="Company/entity basis, £m; FY2014-FY2025 calendar year-ends. FY2014-FY2017 granular operating-asset/liability line items are condensed into the same 2-line 'increase/decrease' format used from FY2018 onward; each year's condensed subtotal ties exactly to that year's own disclosed net change.",rows=r,sources_text=cf,first_col_width=70,source_height=230,unit_suffix=" (£m)")
+("DATA","Increase/(decrease) in amounts due to banks",d([58.5,-25.5,-101.1,298.0,385.2,-66.1,-147.8,422.1,459.6,107.8,-1.1,16.4,24.6,None])),
+("DATA","Issue of debt securities",d([0,0,0,0,0,None,None,None,None,None,None,None,None,None])),
+("DATA","Repurchase and redemption of debt securities",d([0,0,0,0,0,None,None,None,None,None,None,None,None,None])),
+("DATA","Costs arising on issue of debt securities",d([0,0,0,0,0,None,None,None,None,None,None,None,None,None])),
+("DATA","Payment of principal portion of lease liabilities",d([-0.6,-1.5,-1.9,-2.1,-1.8,-1.2,-0.8,None,None,None,None,None,None,None])),
+("DATA","Issue of subordinated debt",d([75.0,0,90.0,0,0,75.0,20.0,None,None,None,75.0,None,27.1,None])),
+("DATA","Redemption of subordinated debt",d([-76.5,-20.0,0,0,0,-75.0,None,None,None,None,-33.7,None,None,None])),
+("DATA","Costs arising on issue of subordinated debt",d([-0.9,0,-1.0,0,0,None,None,None,None,None,None,None,None,None])),
+("DATA","Net proceeds from issue of share capital",d([50.0,0,0,0,0,None,None,None,None,None,82.0,45.5,17.0,75.0])),
+("DATA","Decrease/(increase) in deemed loan due from structured entities",d([78.2,83.1,-120.7,0,0,None,None,None,None,None,None,None,None,None])),
+("DATA","(Decrease)/increase in deemed loan due to structured entities",d([-12.8,119.3,136.2,-269.8,134.6,-18.0,286.2,None,None,None,None,None,None,None])),
+("DATA","Increase in deemed loan due from structured entities",d([0,0,0,-93.4,0,None,None,None,None,None,None,None,None,None])),
+("DATA","Capital contribution",d([0,0,14.3,0,0,None,None,None,None,None,None,None,None,None])),
+("DATA","Coupon paid to holders of capital securities",d([-15.1,-15.1,-16.9,-8.8,-9.8,-9.8,-9.8,-9.8,None,None,None,None,None,None])),
+("DATA","Payment of subordinated debt interest",d([None,None,None,None,None,None,None,-6.4,-6.4,-5.3,None,None,None,None])),
+("DATA","Net proceeds from issue of capital securities",d([None,None,None,None,None,None,None,None,125.0,None,None,None,None,None])),
+("DATA","Dividends paid to parent/shareholders",d([None,None,None,None,None,None,None,None,-19.5,None,-4.0,None,None,None])),
+("DATA","Repayment of Centric third party funding",d([None,None,None,None,None,None,None,None,None,None,None,-138.2,None,None])),
+("DATA","Repayment of SAF third party funding",d([None,None,None,None,None,None,None,None,None,None,None,None,None,-325.1])),
+("TOTAL","Net cash (used by)/generated from financing activities",d([155.8,140.3,-1.1,-76.1,508.2,-95.1,147.8,405.9,558.7,102.5,118.2,-76.3,68.7,-250.1])),
+("TOTAL","Net (decrease)/increase in cash and cash equivalents",d([-368.8,7.8,278.3,485.7,381.8,235.5,418.0,-90.3,326.7,-100.5,202.7,118.2,50.2,106.4])),
+("DATA","Cash and cash equivalents as at 1 January",d([2493.5,2485.7,2207.4,1721.7,1339.9,1104.4,686.4,776.7,450.0,550.5,347.8,229.6,180.1,73.7])),
+("TOTAL","Cash and cash equivalents as at 31 December",d([2124.7,2493.5,2485.7,2207.4,1721.7,1339.9,1104.4,686.4,776.7,450.0,550.5,347.8,230.3,180.1]))]
+b.add_cash_flow_sheet(title="Shawbrook Bank Limited — Company Cash Flow Statement",subtitle="Company/entity basis, £m; FY2012-FY2025 calendar year-ends. FY2012-FY2017 granular operating-asset/liability line items are condensed into the same 2-line 'increase/decrease' format used from FY2018 onward; each year's condensed subtotal ties exactly to that year's own disclosed net change. FY2012's own closing balance ties exactly to FY2013's own opening balance (both £180.1m, per each year's own Annual Report). FY2013's own closing balance (£230.3m) does NOT tie to FY2014's opening balance already shown here (£229.6m) - a genuine, sourced ~£0.7m break from a 'cash and cash equivalents' definition change first introduced in the FY2014 Annual Report (see source note), not an omitted plug row.",rows=r,sources_text=cf,first_col_width=70,source_height=230,unit_suffix=" (£m)",years=Y)
 
 # ---------------------------------------------------------------
 # Asset Quality - loans and advances to customers AT AMORTISED COST ONLY
@@ -437,7 +512,7 @@ b.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-ps="Sources - Bank-specific Pillar 3: FY2021 Appendix 4 pp.54-58; FY2022 Bank tables 17 and KM1 pp.18-21; FY2023 Bank tables 14-15 pp.19-22; FY2024 Bank tables 11-12 pp.16-19; FY2020/FY2019 'Key risk metrics for Shawbrook Bank Limited' table, Appendix 1 (Pillar 3 Disclosures 2020); FY2018/FY2017/FY2016 Appendix 1 capital-composition tables (no Bank RWA breakdown disclosed those 3 years - see note); FY2015 Appendix 1 pp.33-34; FY2014 Appendix (Disclosures for Shawbrook Bank Limited) pp.39-40.\n"+"\n".join(f"{y}: {P3[y]}" for y in Y)+"\nBlank cells mean not publicly disclosed/not applicable; FY2025 Group-only data is not used as a Bank proxy."
+ps="Sources - Bank-specific Pillar 3: FY2021 Appendix 4 pp.54-58; FY2022 Bank tables 17 and KM1 pp.18-21; FY2023 Bank tables 14-15 pp.19-22; FY2024 Bank tables 11-12 pp.16-19; FY2020/FY2019 'Key risk metrics for Shawbrook Bank Limited' table, Appendix 1 (Pillar 3 Disclosures 2020); FY2018/FY2017/FY2016 Appendix 1 capital-composition tables (no Bank RWA breakdown disclosed those 3 years - see note); FY2015 Appendix 1 pp.33-34; FY2014 Appendix (Disclosures for Shawbrook Bank Limited) pp.39-40.\n"+"\n".join(f"{y}: {P3[y]}" for y in Y if y in P3)+"\nBlank cells mean not publicly disclosed/not applicable; FY2025 Group-only data is not used as a Bank proxy. FY2013/FY2012 are out of scope for this workbook's Pillar 3 sheets (see wayfinder ticket HD-072) and are simply blank, same as any other undisclosed year."
 def m(name,unit,data,n=None): b.add_metric_sheet(name,unit,[(name,data)],ps,note=n,first_col_width=54,source_height=180)
 m("CET1 Capital","£m",d([None,1297.0,1122.7,951.5,775.7,663.8,594.4,514.4,431.4,367.6,308.6,168.4]))
 m("CET1 Ratio","%",d([None,"13.0%","12.9%","12.7%","12.6%","12.6%","12.0%",None,None,None,"14.2%","11.5%"]),"FY2018-FY2016 blank: no Bank-level Total RWA is available those years (see Total RWAs note), so a CET1 ratio cannot be computed without a Group proxy. FY2015/FY2014 CET1 ratio equals the Bank's disclosed Tier 1 capital ratio, since CET1 = Tier 1 capital in both years (no Additional Tier 1 issued until FY2017).")
@@ -538,6 +613,10 @@ b.add_overview_sheet(
          "Group basis (Company takes the s.408 exemption) - see the Profit & Loss sheet's source note. "
          "Company-only cash flows and Bank-specific regulatory metrics; FY2025 Bank regulatory metrics are "
          "blank because the available Pillar 3 document is Group-only. FY2016-FY2018 capital ratios are blank "
-         "because no Bank-level Total RWA is available those years (see Pillar 3 sheets' source notes).",
+         "because no Bank-level Total RWA is available those years (see Pillar 3 sheets' source notes). "
+         "This Overview stays on the project-wide FY2014 floor; the Balance Sheet, Profit & Loss, Statement of "
+         "Changes in Equity and Cash Flow Statement sheets were separately extended back to FY2012 per wayfinder "
+         "ticket HD-072 (Pillar 3, Asset Quality and RWA Breakdown were not, since Pillar 3 disclosures genuinely "
+         "aren't comparable pre-CRD IV/Basel III) - see those sheets directly for FY2013/FY2012 figures.",
 )
 b.save("/Users/armaan/code/katalysis/banks/SHAWBROOK FINANCIALS.xlsx")

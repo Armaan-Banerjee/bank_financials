@@ -207,12 +207,20 @@ class BankWorkbook:
         first_col_width,
         source_height,
         unit_suffix,
+        years=None,
     ):
         """Shared body for the full-statement sheets (Cash Flow, Balance
         Sheet, Profit & Loss): a title/subtitle, then a header row of years,
         then one row per (kind, label, values) tuple - kind in {"SECTION",
         "DATA", "TOTAL"} - ending in a merged wrapped source-citation cell.
+
+        years: optional override of self.years for this sheet only - use
+            when one sheet's historical depth has been extended further back
+            than the rest of the workbook (e.g. a statutory-statement-only
+            historical-depth extension that deliberately leaves Pillar 3 /
+            Asset Quality / RWA Breakdown at the project-wide floor).
         """
+        years = years if years is not None else self.years
         ws = self._next_sheet(sheet_name)
         ws.freeze_panes = "B4"
         ws["A1"] = title
@@ -220,9 +228,9 @@ class BankWorkbook:
         ws["A2"] = subtitle
         ws["A2"].font = SUBTITLE_FONT
 
-        ncols = 1 + len(self.years)
+        ncols = 1 + len(years)
         headers = ["Line item"] + [
-            f"{self.year_label[y]}{unit_suffix}" for y in self.years
+            f"{self.year_label[y]}{unit_suffix}" for y in years
         ]
         header_row = 3
         for c, h in enumerate(headers, start=1):
@@ -235,7 +243,7 @@ class BankWorkbook:
             if kind == "SECTION":
                 ws.cell(row=r, column=1).font = SECTION_FONT
             else:
-                for ci, y in enumerate(self.years, start=2):
+                for ci, y in enumerate(years, start=2):
                     ws.cell(row=r, column=ci, value=values.get(y))
                 if kind == "TOTAL":
                     for c in range(1, ncols + 1):
@@ -245,7 +253,7 @@ class BankWorkbook:
             r += 1
 
         self._write_source_cell(ws, r + 1, ncols, sources_text, height=source_height)
-        self._autosize(ws, [first_col_width] + [15] * len(self.years))
+        self._autosize(ws, [first_col_width] + [15] * len(years))
         return ws
 
     def add_cash_flow_sheet(
@@ -258,9 +266,12 @@ class BankWorkbook:
         first_col_width=60,
         source_height=150,
         unit_suffix=" (£'000)",
+        years=None,
     ):
         """
         rows: list of (kind, label, values) - kind in {"SECTION", "DATA", "TOTAL"}.
+        years: optional override of self.years for this sheet only - see
+            _add_statement_sheet's docstring.
         """
         return self._add_statement_sheet(
             title,
@@ -271,6 +282,7 @@ class BankWorkbook:
             first_col_width,
             source_height,
             unit_suffix,
+            years=years,
         )
 
     def add_balance_sheet_sheet(
@@ -283,9 +295,10 @@ class BankWorkbook:
         first_col_width=60,
         source_height=150,
         unit_suffix=" (£'000)",
+        years=None,
     ):
         """Consolidated Statement of Financial Position. Same row/column
-        shape as add_cash_flow_sheet - see that docstring for `rows`."""
+        shape as add_cash_flow_sheet - see that docstring for `rows`/`years`."""
         return self._add_statement_sheet(
             title,
             subtitle,
@@ -295,6 +308,7 @@ class BankWorkbook:
             first_col_width,
             source_height,
             unit_suffix,
+            years=years,
         )
 
     def add_income_statement_sheet(
@@ -307,9 +321,10 @@ class BankWorkbook:
         first_col_width=60,
         source_height=150,
         unit_suffix=" (£'000)",
+        years=None,
     ):
         """Consolidated Statement of Comprehensive Income. Same row/column
-        shape as add_cash_flow_sheet - see that docstring for `rows`."""
+        shape as add_cash_flow_sheet - see that docstring for `rows`/`years`."""
         return self._add_statement_sheet(
             title,
             subtitle,
@@ -319,6 +334,7 @@ class BankWorkbook:
             first_col_width,
             source_height,
             unit_suffix,
+            years=years,
         )
 
     def add_equity_changes_sheet(
@@ -393,13 +409,15 @@ class BankWorkbook:
         first_col_width=58,
         source_height=150,
         unit_suffix=" (£'000)",
+        years=None,
     ):
         """Asset Quality / Credit Risk Disclosures: loan book breakdown by
         product and by IFRS 9 stage (1/2/3), plus derived coverage/NPL
         ratios. Same year-column row/column shape as add_cash_flow_sheet -
         see that docstring for `rows`. Ratio rows may use string values
         (e.g. "13.55%") the same way add_metric_sheet does. Placed right
-        after Cash Flow Statement and right before the Pillar 3 sheets."""
+        after Cash Flow Statement and right before the Pillar 3 sheets.
+        years: optional per-sheet override - see _add_statement_sheet."""
         return self._add_statement_sheet(
             title,
             subtitle,
@@ -409,6 +427,7 @@ class BankWorkbook:
             first_col_width,
             source_height,
             unit_suffix,
+            years=years,
         )
 
     def add_rwa_breakdown_sheet(
@@ -421,13 +440,15 @@ class BankWorkbook:
         first_col_width=54,
         source_height=150,
         unit_suffix=" (£'000)",
+        years=None,
     ):
         """RWA breakdown by risk category (Pillar 3's UK OV1 template:
         credit risk, counterparty credit risk, securitisation, market risk,
         operational risk). Same year-column row/column shape as
         add_cash_flow_sheet - see that docstring for `rows`. Placed with the
         other Pillar 3 sheets (see PILLAR3_SHEET_NAMES), not with the other
-        3 statement sheets, since it's itself a Pillar 3 disclosure."""
+        3 statement sheets, since it's itself a Pillar 3 disclosure.
+        years: optional per-sheet override - see _add_statement_sheet."""
         return self._add_statement_sheet(
             title,
             subtitle,
@@ -437,6 +458,7 @@ class BankWorkbook:
             first_col_width,
             source_height,
             unit_suffix,
+            years=years,
         )
 
     def add_metric_sheet(
@@ -449,19 +471,22 @@ class BankWorkbook:
         first_col_width=46,
         source_height=150,
         note_height=60,
+        years=None,
     ):
         """
         rows_data: list of (label, values) pairs, values a {year: value} dict
             (numbers or strings, e.g. "82.94%" / "Not publicly disclosed").
+        years: optional per-sheet override - see _add_statement_sheet.
         """
+        years = years if years is not None else self.years
         ws = self.wb.create_sheet(title=name[:31])
-        ncols = 1 + len(self.years)
+        ncols = 1 + len(years)
         ws["A1"] = f"{self.bank_name} — {name}"
         ws["A1"].font = TITLE_FONT
         ws["A2"] = unit or ""
         ws["A2"].font = SUBTITLE_FONT
 
-        headers = ["Metric"] + [self.year_label[y] for y in self.years]
+        headers = ["Metric"] + [self.year_label[y] for y in years]
         header_row = 3
         for c, h in enumerate(headers, start=1):
             ws.cell(row=header_row, column=c, value=h)
@@ -470,7 +495,7 @@ class BankWorkbook:
         r = header_row + 1
         for label, values in rows_data:
             ws.cell(row=r, column=1, value=label)
-            for ci, y in enumerate(self.years, start=2):
+            for ci, y in enumerate(years, start=2):
                 ws.cell(row=r, column=ci, value=values.get(y))
             for c in range(1, ncols + 1):
                 ws.cell(row=r, column=c).border = BORDER
@@ -486,7 +511,7 @@ class BankWorkbook:
             r += 1
 
         self._write_source_cell(ws, r + 1, ncols, sources_text, height=source_height)
-        self._autosize(ws, [first_col_width] + [15] * len(self.years))
+        self._autosize(ws, [first_col_width] + [15] * len(years))
         return ws
 
     def add_long_form_sheet(
@@ -711,6 +736,7 @@ class BankWorkbook:
         income_statement_unit=None,
         equity_changes_totals=None,
         equity_changes_unit=None,
+        years=None,
     ):
         """
         Inserts an "Overview" sheet as the first tab: summary tables of
@@ -758,9 +784,10 @@ class BankWorkbook:
             entries instead, e.g. build_caf_bank.py/build_brown_shipley.py -
             that workaround still works too, no need to change them).
         """
+        years = years if years is not None else self.years
         ws = self.wb.create_sheet(title="Overview", index=0)
-        ncols = 1 + len(self.years)
-        headers = ["Line item"] + [self.year_label[y] for y in self.years]
+        ncols = 1 + len(years)
+        headers = ["Line item"] + [self.year_label[y] for y in years]
 
         ws["A1"] = f"{self.bank_name} — Overview"
         ws["A1"].font = TITLE_FONT
@@ -814,7 +841,7 @@ class BankWorkbook:
                 row += 1
                 for label, values in totals:
                     ws.cell(row=row, column=1, value=label)
-                    for ci, y in enumerate(self.years, start=2):
+                    for ci, y in enumerate(years, start=2):
                         ws.cell(row=row, column=ci, value=values.get(y))
                     for c in range(1, ncols + 1):
                         ws.cell(row=row, column=c).font = TOTAL_FONT
@@ -839,7 +866,7 @@ class BankWorkbook:
             row += 1
             for label, values in ratios:
                 ws.cell(row=row, column=1, value=label)
-                for ci, y in enumerate(self.years, start=2):
+                for ci, y in enumerate(years, start=2):
                     ws.cell(row=row, column=ci, value=values.get(y))
                 for c in range(1, ncols + 1):
                     ws.cell(row=row, column=c).border = BORDER
@@ -865,13 +892,13 @@ class BankWorkbook:
             ws.row_dimensions[row].height = 45
             row += 1
 
-        self._autosize(ws, [42] + [15] * len(self.years))
+        self._autosize(ws, [42] + [15] * len(years))
 
         # -- hidden numeric staging areas, oldest-year-first, for the charts --
         # (built as separate chronological blocks rather than via a reversed
         # category axis, which flips the value axis to the wrong side in Excel)
-        chrono_years = list(reversed(self.years))
-        n_years = len(self.years)
+        chrono_years = list(reversed(years))
+        n_years = len(years)
 
         stage_col = ncols + 3
         block_stage_info = {}  # key -> (stage_header_row, stage_end) or None
@@ -1004,18 +1031,21 @@ class BankWorkbook:
 
         return ws
 
-    def add_not_disclosed_metric_sheets(self, names, sources_text, per_note=None):
+    def add_not_disclosed_metric_sheets(self, names, sources_text, per_note=None, years=None):
         """Convenience for the common "no Pillar 3 doc exists" case - fills a
         list of metric sheets with a single "Not publicly disclosed" row each.
-        per_note: optional {name: note_text} for sheet-specific notes."""
+        per_note: optional {name: note_text} for sheet-specific notes.
+        years: optional per-sheet override - see _add_statement_sheet."""
         per_note = per_note or {}
+        years = years if years is not None else self.years
         for name in names:
             self.add_metric_sheet(
                 name,
                 None,
-                [(name, {y: "Not publicly disclosed" for y in self.years})],
+                [(name, {y: "Not publicly disclosed" for y in years})],
                 sources_text,
                 note=per_note.get(name),
+                years=years,
             )
 
     def save(self, path):

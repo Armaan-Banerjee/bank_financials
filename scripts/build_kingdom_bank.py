@@ -5,16 +5,29 @@ from bank_workbook import BankWorkbook
 YEARS = [
     "FY2025", "FY2024", "FY2023", "FY2022", "FY2021",
     "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014",
+    "FY2013", "FY2012", "FY2011", "FY2010", "FY2009", "FY2008", "FY2007", "FY2006", "FY2005", "FY2004",
 ]  # most recent first
 YEAR_LABEL = {y: y for y in YEARS}
 
-# All 12 years sourced from Companies House filings (fully scanned/image-only,
+# HD-077 (2026-09-06): the statutory-statement sheets (Balance Sheet, P&L,
+# Statement of Changes in Equity, Cash Flow Statement) use the full YEARS
+# above, but Pillar 3 (all 11 metric sheets), Asset Quality, and RWA
+# Breakdown are explicitly out of scope for that extension - they must keep
+# FY2014 as their earliest column, same as before this ticket. Every call
+# building one of those sheets passes years=PILLAR3_YEARS explicitly.
+PILLAR3_YEARS = [y for y in YEARS if y not in ("FY2013", "FY2012", "FY2011", "FY2010", "FY2009", "FY2008", "FY2007", "FY2006", "FY2005", "FY2004")]
+
+# All 22 years sourced from Companies House filings (fully scanned/image-only,
 # 0 text blocks per page) - the bank's registered site (www.kingdombank.co.uk)
 # is an unrelated expired/parked domain; the real site is www.kingdom.bank.
 # Per HD-045 (2026-09-05), the FY2014-FY2020 window was added on top of the
 # original FY2021-FY2025 build, capped at FY2014 by explicit project-wide
-# decision even though the bank's real Companies House archive goes back to
-# ~FY2004 - do not extend earlier than FY2014.
+# decision. HD-077 (2026-09-06) lifted that cap for the statutory-statement
+# sheets only (Balance Sheet, Profit & Loss, Statement of Changes in Equity,
+# Cash Flow Statement) back to the bank's real statutory floor of FY2004 -
+# Pillar 3, Asset Quality and RWA Breakdown remain capped at FY2014 by
+# design (see those sheets' own notes), since Pillar 3-style disclosure
+# genuinely didn't exist for this SDDT bank in the earlier years.
 CH_BASE = "https://find-and-update.company-information.service.gov.uk/company/04346834/filing-history"
 FY2025_URL = f"{CH_BASE}/MzUzMjA2MDkzOWFkaXF6a2N4/document?format=pdf&download=0"
 FY2024_URL = f"{CH_BASE}/MzQ3Mjc3MDk4N2FkaXF6a2N4/document?format=pdf&download=0"
@@ -28,6 +41,16 @@ FY2017_URL = f"{CH_BASE}/MzIwMTY1OTMwOWFkaXF6a2N4/document?format=pdf&download=0
 FY2016_URL = f"{CH_BASE}/MzE3Mjc3MDQyOGFkaXF6a2N4/document?format=pdf&download=0"
 FY2015_URL = f"{CH_BASE}/MzE1NzU2NjI4N2FkaXF6a2N4/document?format=pdf&download=0"
 FY2014_URL = f"{CH_BASE}/MzEyMTIyNDc5OGFkaXF6a2N4/document?format=pdf&download=0"
+FY2013_URL = f"{CH_BASE}/MzEwODM5MTg2OWFkaXF6a2N4/document?format=pdf&download=0"
+FY2012_URL = f"{CH_BASE}/MzA3NTk1OTAyMWFkaXF6a2N4/document?format=pdf&download=0"
+FY2011_URL = f"{CH_BASE}/MzA1NjkzNzEwMWFkaXF6a2N4/document?format=pdf&download=0"
+FY2010_URL = f"{CH_BASE}/MzAzNjQzNTIyMWFkaXF6a2N4/document?format=pdf&download=0"
+FY2009_URL = f"{CH_BASE}/MzAxMzc0NDMwNmFkaXF6a2N4/document?format=pdf&download=0"
+FY2008_URL = f"{CH_BASE}/MjAzMDM3NTQ0OWFkaXF6a2N4/document?format=pdf&download=0"
+FY2007_URL = f"{CH_BASE}/MjAwOTc4MTY0NmFkaXF6a2N4/document?format=pdf&download=0"
+FY2006_URL = f"{CH_BASE}/MTg2OTAwNzEyYWRpcXprY3g/document?format=pdf&download=0"
+FY2005_URL = f"{CH_BASE}/MTY0MjI5OTU5YWRpcXprY3g/document?format=pdf&download=0"
+FY2004_URL = f"{CH_BASE}/NzIzMTc1NDBhZGlxemtjeA/document?format=pdf&download=0"
 
 ENTITY_NOTE = (
     "Entity: Kingdom Bank Limited, company 04346834 (formerly Kingdom Banking Limited), FRN 400972 - "
@@ -50,6 +73,41 @@ ENTITY_NOTE = (
     "break this creates)."
 )
 
+# Used only by the statutory-statement sheets (Balance Sheet / P&L / Statement of Changes in Equity /
+# Cash Flow Statement) extended under HD-077 - kept separate from ENTITY_NOTE above so the Pillar 3 /
+# Asset Quality / RWA Breakdown sheets (out of HD-077's scope) stay byte-for-byte unchanged.
+STATUTORY_ENTITY_NOTE = (
+    "Entity: Kingdom Bank Limited, company 04346834 (formerly Kingdom Banking Limited), FRN 400972 - "
+    "confirmed via Banks List 2608.xlsx and Companies House, no identity ambiguity. A small specialist "
+    "bank providing mortgages, savings and insurance broking to UK churches, Christian charities and "
+    "individuals in Christian ministry; parent/ultimate controlling party is Lamb's Passage Holding "
+    "Limited (LPHL) from 31 March 2020 onward (whose investor group includes Stewardship Services (UKET) "
+    "Limited); for FY2004-FY2019 the ultimate parent was instead Assemblies of God Property Trust "
+    "throughout (confirmed directly in each year's own accounting policies note, back to FY2004). "
+    "Solo/Bank basis throughout - no group consolidation applies. All 22 years' filings on Companies "
+    "House are fully scanned/image-only (0 extractable text on every page); the bank's registered-"
+    "looking domain www.kingdombank.co.uk is an unrelated expired/parked domain (a GoDaddy-style parking "
+    "page) - its real site is www.kingdom.bank. FY2004-FY2014 were prepared under old UK GAAP/the BBA "
+    "SORP (pre FRS 102) and, as a wholly-owned subsidiary whose parent's consolidated accounts are "
+    "publicly available, took the FRS 1 (revised 1996) exemption from preparing a cash flow statement in "
+    "every one of those years (confirmed directly in each year's own accounting policies note, not "
+    "assumed) - none of FY2004-FY2014 has a cash flow statement, and none of this is a sourcing gap "
+    "(see Note 1(b) of the FY2014 Annual Report, and Note 1(a) of the FY2004 Annual Report for the "
+    "same exemption stated in the bank's very first trading period). FY2004 additionally has no profit "
+    "and loss account, statement of total recognised gains and losses, or cash flow statement at all: "
+    "the FY2004 Annual Report is an 11-month period (1 February-31 December 2004, following a dormant "
+    "shell period back to incorporation - see the two 'Accounts for a dormant company' filings that "
+    "precede it on Companies House) and states explicitly, in its own Note 1(d): 'No profit and loss "
+    "account has been prepared for the period ended 31 December 2004, as Kingdom Bank Limited did not "
+    "commence trading until 1 January 2005.' Only a Balance Sheet exists for FY2004, and it is shown "
+    "here on that basis - not a sourcing gap. FRS 102 was first adopted for FY2015, with a restated "
+    "opening balance sheet at the 1 "
+    "January 2014 transition date; the FY2014 figures used on every sheet here are as originally filed "
+    "(old GAAP), not the FRS 102-restated comparatives shown in the FY2015 Annual Report's Statement of "
+    "changes in equity (see the Statement of Changes in Equity sheet's source note for the one reconciling "
+    "break this creates)."
+)
+
 CASH_FLOW_SOURCES = (
     "Sources - all figures are Kingdom Bank Limited's own Statement of cash flows, £'000, Bank/solo basis "
     "(Companies House filings, all fully scanned):\n"
@@ -66,16 +124,22 @@ CASH_FLOW_SOURCES = (
     f"FY2017 (own): Annual Report & Accounts 2017 - " + FY2017_URL + "\n"
     f"FY2016 (own) & FY2015 (comparative): Annual Report & Accounts 2016, p.16 (Statement of cash flows) - " + FY2016_URL + "\n"
     f"FY2015 (own): Annual Report & Accounts 2015, p.16 - " + FY2015_URL + "\n"
-    "FY2014: no cash flow statement was prepared - the Bank took the FRS 1 (revised 1996) 'Cash flow "
-    "statements' exemption available to a wholly-owned subsidiary whose parent (Assemblies of God "
-    "Property Trust) publishes consolidated accounts (FY2014 Annual Report, Note 1(b)) - " + FY2014_URL + "\n"
-    + ENTITY_NOTE + "\n"
+    "FY2004-FY2014: no cash flow statement was prepared in any of these 11 years - the Bank took the "
+    "FRS 1 (revised 1996) 'Cash flow statements' exemption available to a wholly-owned subsidiary whose "
+    "parent (Assemblies of God Property Trust) publishes consolidated accounts, re-confirmed directly in "
+    "each year's own Note 1 accounting policies back to the FY2004 Annual Report's Note 1(a) (the bank's "
+    "very first trading period) - " + FY2014_URL + " (FY2014); " + FY2013_URL + " (FY2013); " + FY2012_URL
+    + " (FY2012); " + FY2011_URL + " (FY2011); " + FY2010_URL + " (FY2010); " + FY2009_URL + " (FY2009); "
+    + FY2008_URL + " (FY2008); " + FY2007_URL + " (FY2007); " + FY2006_URL + " (FY2006); " + FY2005_URL
+    + " (FY2005); " + FY2004_URL + " (FY2004)\n"
+    + STATUTORY_ENTITY_NOTE + "\n"
     "Every year-end closing balance ties exactly to the following year's opening balance across all 11 "
     "years for which a cash flow statement exists (FY2015 closing £13,263k = FY2016 opening; FY2016 "
     "closing £13,457k = FY2017 opening; FY2017 closing £14,528k = FY2018 opening; FY2018 closing £10,189k "
     "= FY2019 opening; FY2019 closing £12,010k = FY2020 opening; FY2020 closing £19,561k = FY2021 opening; "
     "FY2021 closing £20,030k = FY2022 opening; FY2022 closing £24,861k = FY2023 opening; FY2023 closing "
-    "£35,058k = FY2024 opening; FY2024 closing £39,791k = FY2025 opening) - no restatements found."
+    "£35,058k = FY2024 opening; FY2024 closing £39,791k = FY2025 opening) - no restatements found. "
+    "FY2004-FY2014 (11 years) genuinely have no cash flow statement at all - not a sourcing gap."
 )
 
 STATEMENTS_SOURCES = (
@@ -103,7 +167,31 @@ STATEMENTS_SOURCES = (
     "gains and losses p.11, balance sheet p.12; no SOCE or cash flow statement prepared that year - see "
     "the Statement of Changes in Equity and Cash Flow Statement sheets): Annual Report & Accounts 2014 - "
     + FY2014_URL + "\n"
-    + ENTITY_NOTE + "\n"
+    f"FY2013 & FY2012: Annual Report & Accounts 2013, p.10 (P&L), p.11 (STRGL), p.12 (Balance sheet), "
+    "p.25 (reserves reconciliation notes) - " + FY2013_URL + "\n"
+    f"FY2012 (own) & FY2011 (comparative): Annual Report & Accounts 2012, p.9 (P&L), p.10 (STRGL), "
+    "p.11 (Balance sheet), p.24 (reserves reconciliation notes) - " + FY2012_URL + "\n"
+    f"FY2011 (own) & FY2010 (comparative): Annual Report & Accounts 2011, p.8 (P&L), p.9 (STRGL), "
+    "p.10 (Balance sheet), p.22-23 (reserves reconciliation notes) - " + FY2011_URL + "\n"
+    f"FY2010 (own) & FY2009 restated (comparative - see PRESENTATION NOTE (9) below): Annual Report & "
+    "Accounts 2010, p.9 (P&L), p.10 (STRGL), p.11 (Balance sheet), p.22 (reserves reconciliation notes), "
+    "p.14 (Note 1(n), restatement of 2009 comparatives) - " + FY2010_URL + "\n"
+    f"FY2009 (own, as originally filed - used here in preference to FY2010's restated comparative, per "
+    "this workbook's standing convention of showing each year's own figures as filed): Annual Report & "
+    "Accounts 2009, p.8 (P&L), p.9 (STRGL), p.10 (Balance sheet), p.20 (reserves reconciliation notes) - "
+    + FY2009_URL + "\n"
+    f"FY2008 & FY2007: Annual Report & Accounts 2008, p.8 (P&L), p.9 (STRGL), p.10 (Balance sheet), "
+    "p.19 (reserves reconciliation notes) - " + FY2008_URL + "\n"
+    f"FY2007 (own) & FY2006 (comparative): Annual Report & Accounts 2007, p.7 (P&L, no STRGL that year), "
+    "p.8 (Balance sheet), p.16 (reserves reconciliation notes) - " + FY2007_URL + "\n"
+    f"FY2006 (own) & FY2005 (comparative): Annual Report & Accounts 2006, p.7 (P&L, no STRGL), "
+    "p.8 (Balance sheet) - " + FY2006_URL + "\n"
+    f"FY2005 (own, prepared in whole £, converted to £'000 here) & FY2004 (comparative): Annual Report & "
+    "Accounts 2005, p.7 (P&L and STRGL), p.8 (Balance sheet) - " + FY2005_URL + "\n"
+    f"FY2004 (own, Balance Sheet only - see PRESENTATION NOTE (10) below): Report and Financial Statements "
+    "for the period ended 31 December 2004, p.6 (Balance sheet), p.7 (Note 1, accounting policies) - "
+    + FY2004_URL + "\n"
+    + STATUTORY_ENTITY_NOTE + "\n"
     "PRESENTATION NOTES: (1) FY2021-FY2022 do not disclose separate 'Prepayments and accrued income' or "
     "'Accruals and deferred income' lines - FY2021/FY2022's own 'Other assets' and 'Other liabilities' totals "
     "bundle what FY2023 onward splits into two lines each; each year's own labelling is followed as published, "
@@ -135,7 +223,40 @@ STATEMENTS_SOURCES = (
     "disclosed reconciling difference between the FY2014 closing position shown here (£4,960k total "
     "shareholders' funds) and the FY2015 Annual Report's restated opening position for 1 January 2015 "
     "(£4,847k), driven mainly by a £77k lower Revaluation reserve and a £365k higher Profit and loss "
-    "account balance under the restated basis - not an error."
+    "account balance under the restated basis - not an error. (9) The FY2010 Annual Report's Note 1(n) "
+    "discloses a change of accounting policy adopted during FY2010, to recognise commission earned by the "
+    "Bank's authorised representative SALT Insurance Services Ltd gross rather than net - the 2009 "
+    "comparatives shown in the FY2010 Annual Report were restated for this (fees receivable grossed up "
+    "£131k, a matching fees payable line added, and a £65k other-debtor/other-creditor gross-up on the "
+    "Balance Sheet), but the Report states explicitly 'There is no impact on the reported losses', and the "
+    "restatement nets to zero on every equity total (FY2009's own closing shareholders' funds of £4,788k "
+    "is identical either way). This workbook therefore shows FY2009 exactly as filed in the FY2009 Annual "
+    "Report itself (net presentation, £265k combined fees receivable, no separate fees payable line, "
+    "£75k Prepayments/other assets) rather than the FY2010 Annual Report's restated comparative (£396k/"
+    "£131k gross, £140k Prepayments/other assets) - consistent with this workbook's standing principle of "
+    "using each year's own figures as originally filed, per PRESENTATION NOTE (8) above for the equivalent "
+    "FY2014/FY2015 FRS 102 transition. (10) FY2004 is the bank's first trading period (1 February-31 "
+    "December 2004, an 11-month period, not a full year - see the FY2004 Annual Report's own Note 1(a)) "
+    "and its Note 1(d) states explicitly that no profit and loss account was prepared for it, since the "
+    "Bank did not commence trading until 1 January 2005 - so the Profit & Loss, Statement of Changes in "
+    "Equity (movement rows) and Cash Flow Statement sheets are all blank for FY2004, a genuine and "
+    "explicitly documented absence, not a sourcing gap; only the Balance Sheet exists for that year. "
+    "FY2004's own Balance Sheet additionally used a more granular structure than every later year - a "
+    "separate 'Cash' line (£76, immaterial) and separate 'Loans and advances to banks'/'Loans and advances "
+    "to building societies' lines - which the FY2005 Annual Report's own FY2004 comparative column already "
+    "collapses into the single 'Loans and advances to credit institutions' and 'Prepayments, accrued "
+    "income and other assets' lines used here (cross-checked exactly: £7,424,652 + £2,320,638 + £113,101 = "
+    "£9,858,391 loans; £76 + £10,364 = £10,440 prepayments/other assets), consistent with this workbook's "
+    "practice elsewhere of following each year's own line structure but not inventing new rows for a "
+    "single immaterial one-off split. FY2004's Called up share capital of £4,217k combines both the £4,208k "
+    "called-up and £9k unpaid share capital shown as separate lines that year only - both were fully paid "
+    "by FY2005, when a single 'Called up share capital' line resumes. No 'Cash and balances at central "
+    "banks' line existed at all before FY2010 (it was bundled within 'Loans and advances to banks' "
+    "throughout FY2004-FY2009 - confirmed absent, not merely blank, in each of those years' own Balance "
+    "Sheets); no Revaluation reserve existed before FY2007 (the Bank's freehold properties were first "
+    "professionally revalued that year); a 'Loans and advances from credit institutions due within 3 "
+    "months' liability line existed only FY2006-FY2009 (nil from FY2010 onward) - see the dedicated row "
+    "below."
 )
 
 ASSET_QUALITY_SOURCES = (
@@ -237,76 +358,112 @@ bw = BankWorkbook(bank_name="Kingdom Bank Limited", years=YEARS, year_label=YEAR
 # ---------------------------------------------------------------
 bs_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances at central banks", {
+    ("DATA", "Cash and balances at central banks (no such line existed before FY2010 - see source note)", {
         "FY2025": 38497, "FY2024": 38548, "FY2023": 34064, "FY2022": 23032, "FY2021": 10087,
         "FY2020": 6678, "FY2019": 6502, "FY2018": 4502, "FY2017": 4523, "FY2016": 4261, "FY2015": 3993, "FY2014": 3973,
+        "FY2013": 3703, "FY2012": 4033, "FY2011": 2014, "FY2010": 3001,
     }),
-    ("DATA", "Loans and advances to banks (FY2014's own label: 'Loans and advances to credit institutions')", {
+    ("DATA", "Loans and advances to banks (FY2014's own label: 'Loans and advances to credit institutions'; FY2004 combines that year's separate banks/building-societies lines - see source note)", {
         "FY2025": 1217, "FY2024": 1243, "FY2023": 994, "FY2022": 1829, "FY2021": 10795,
         "FY2020": 14135, "FY2019": 5509, "FY2018": 5939, "FY2017": 11311, "FY2016": 9864, "FY2015": 10981, "FY2014": 11905,
+        "FY2013": 17724, "FY2012": 13663, "FY2011": 16043, "FY2010": 16236, "FY2009": 15052, "FY2008": 23823,
+        "FY2007": 23472, "FY2006": 11711, "FY2005": 10925, "FY2004": 9858,
     }),
     ("DATA", "Loans and advances to customers", {
         "FY2025": 118242, "FY2024": 97733, "FY2023": 77532, "FY2022": 63291, "FY2021": 53795,
         "FY2020": 47114, "FY2019": 45339, "FY2018": 41404, "FY2017": 38438, "FY2016": 35336, "FY2015": 33028, "FY2014": 29724,
+        "FY2013": 28355, "FY2012": 27886, "FY2011": 28238, "FY2010": 32538, "FY2009": 33073, "FY2008": 26860,
+        "FY2007": 20322, "FY2006": 21208, "FY2005": 17900, "FY2004": 16680,
     }),
-    ("DATA", "Debt securities (FY2014 only)", {"FY2014": 0}),
+    ("DATA", "Debt securities (not disclosed before FY2009, nil FY2010)", {
+        "FY2014": 0, "FY2013": 24, "FY2012": 25, "FY2011": 25, "FY2010": 0, "FY2009": 1692,
+    }),
     ("DATA", "Investment property", {"FY2025": 650, "FY2020": 667, "FY2019": 667, "FY2018": 667, "FY2017": 500, "FY2016": 498}),
-    ("DATA", "Intangible fixed assets", {
+    ("DATA", "Intangible fixed assets (nil/absent before FY2008 - see source note)", {
         "FY2025": 18, "FY2024": 39, "FY2023": 75, "FY2022": 76, "FY2021": 83,
         "FY2020": 69, "FY2019": 69, "FY2018": 122, "FY2017": 189, "FY2016": 255, "FY2015": 168, "FY2014": 131,
+        "FY2013": 162, "FY2012": 192, "FY2011": 222, "FY2010": 252, "FY2009": 283, "FY2008": 0,
     }),
     ("DATA", "Tangible fixed assets (FY2014 figure includes freehold investment property, not separately disclosed that year)", {
         "FY2025": 171, "FY2024": 174, "FY2023": 192, "FY2022": 230, "FY2021": 268,
         "FY2020": 730, "FY2019": 742, "FY2018": 685, "FY2017": 842, "FY2016": 845, "FY2015": 1369, "FY2014": 3883,
+        "FY2013": 3599, "FY2012": 3399, "FY2011": 1289, "FY2010": 1355, "FY2009": 1384, "FY2008": 2235,
+        "FY2007": 2171, "FY2006": 2035, "FY2005": 2110, "FY2004": 2146,
+    }),
+    ("DATA", "Fixed asset investment / Participating interests (49% of SALT Insurance Services Ltd, acquired 2 June 2008, sold during FY2012)", {
+        "FY2011": 15, "FY2010": 15, "FY2009": 15, "FY2008": 15,
     }),
     ("DATA", "Other assets", {
         "FY2025": 23, "FY2024": 63, "FY2023": 37, "FY2022": 481, "FY2021": 347,
         "FY2020": 388, "FY2019": 482, "FY2018": 484, "FY2017": 447, "FY2016": 390, "FY2015": 270,
     }),
     ("DATA", "Prepayments and accrued income", {"FY2025": 1056, "FY2024": 662, "FY2023": 571}),
-    ("DATA", "Prepayments, accrued income and other assets (FY2014 combined line - see note)", {"FY2014": 227}),
+    ("DATA", "Prepayments, accrued income and other assets (combined line every year before FY2015 - see source note)", {
+        "FY2014": 227, "FY2013": 251, "FY2012": 309, "FY2011": 296, "FY2010": 162, "FY2009": 75,
+        "FY2008": 26, "FY2007": 13, "FY2006": 30, "FY2005": 20, "FY2004": 10,
+    }),
     ("DATA", "Deferred tax assets", {"FY2025": 297, "FY2024": 30, "FY2023": 44, "FY2022": 83, "FY2021": 166}),
     ("TOTAL", "Total assets", {
         "FY2025": 160171, "FY2024": 138492, "FY2023": 113509, "FY2022": 89022, "FY2021": 75541,
         "FY2020": 69781, "FY2019": 59310, "FY2018": 53803, "FY2017": 56250, "FY2016": 51449, "FY2015": 49809, "FY2014": 49843,
     }),
     ("SECTION", "Liabilities", {}),
+    ("DATA", "Loans and advances from credit institutions due within 3 months (existed FY2006-FY2009 only - see source note)", {
+        "FY2009": 0, "FY2008": 507, "FY2007": 510, "FY2006": 503,
+    }),
     ("DATA", "Customer accounts", {
         "FY2025": 141758, "FY2024": 121269, "FY2023": 102091, "FY2022": 78452, "FY2021": 66668,
         "FY2020": 61287, "FY2019": 51378, "FY2018": 46112, "FY2017": 48656, "FY2016": 43885, "FY2015": 41906, "FY2014": 42935,
+        "FY2013": 47013, "FY2012": 42546, "FY2011": 41638, "FY2010": 47247, "FY2009": 45168, "FY2008": 46737,
+        "FY2007": 39931, "FY2006": 29520, "FY2005": 26294, "FY2004": 24187,
     }),
     ("DATA", "Other liabilities", {
         "FY2025": 616, "FY2024": 448, "FY2023": 438, "FY2022": 517, "FY2021": 661,
         "FY2020": 292, "FY2019": 356, "FY2018": 352, "FY2017": 235, "FY2016": 316, "FY2015": 591, "FY2014": 267,
+        "FY2013": 267, "FY2012": 412, "FY2011": 346, "FY2010": 341, "FY2009": 296, "FY2008": 322,
+        "FY2007": 274, "FY2006": 231, "FY2005": 176, "FY2004": 290,
     }),
     ("DATA", "Accruals and deferred income", {"FY2025": 1289, "FY2024": 563, "FY2023": 404}),
-    ("DATA", "Subordinated liabilities (FY2014's own label: 'Subordinated deposits')", {
+    ("DATA", "Subordinated liabilities (FY2014's own label: 'Subordinated deposits'; nil/absent before FY2007 - see source note)", {
         "FY2025": 700, "FY2024": 700, "FY2023": 700, "FY2022": 700, "FY2021": 761,
         "FY2020": 1431, "FY2019": 1431, "FY2018": 1431, "FY2017": 1581, "FY2016": 1581, "FY2015": 1681, "FY2014": 1681,
+        "FY2013": 1892, "FY2012": 1892, "FY2011": 1892, "FY2010": 1322, "FY2009": 1322, "FY2008": 172,
+        "FY2007": 172,
     }),
     ("TOTAL", "Total liabilities", {
         "FY2025": 144363, "FY2024": 122980, "FY2023": 103633, "FY2022": 79669, "FY2021": 68090,
         "FY2020": 63010, "FY2019": 53165, "FY2018": 47895, "FY2017": 50472, "FY2016": 45782, "FY2015": 44178, "FY2014": 44883,
+        "FY2013": 49172, "FY2012": 44850, "FY2011": 43876, "FY2010": 48910, "FY2009": 46786, "FY2008": 47738,
+        "FY2007": 40887, "FY2006": 30426, "FY2005": 26643, "FY2004": 24477,
     }),
     ("SECTION", "Equity", {}),
-    ("DATA", "Called up share capital", {
+    ("DATA", "Called up share capital (FY2004 combines that year's separate 'called up' and 'unpaid' share capital lines, both fully paid by FY2005 - see source note)", {
         "FY2025": 13237, "FY2024": 12067, "FY2023": 6667, "FY2022": 6667, "FY2021": 4867,
         "FY2020": 4867, "FY2019": 4217, "FY2018": 4217, "FY2017": 4217, "FY2016": 4217, "FY2015": 4217, "FY2014": 4217,
+        "FY2013": 4217, "FY2012": 4217, "FY2011": 4217, "FY2010": 4217, "FY2009": 4217, "FY2008": 4217,
+        "FY2007": 4217, "FY2006": 4217, "FY2005": 4217, "FY2004": 4217,
     }),
-    ("DATA", "Revaluation reserve (fully extinguished during FY2021 - see Statement of Changes in Equity sheet)", {
+    ("DATA", "Revaluation reserve (fully extinguished during FY2021 - see Statement of Changes in Equity sheet; nil/absent before FY2007, when the Bank's freehold properties were first professionally revalued)", {
         "FY2020": 172, "FY2019": 172, "FY2018": 172, "FY2017": 172, "FY2016": 166, "FY2015": 164, "FY2014": 578,
+        "FY2013": 333, "FY2012": 416, "FY2011": 71, "FY2010": 71, "FY2009": 65, "FY2008": 406, "FY2007": 406,
     }),
     ("DATA", "Profit and loss account", {
         "FY2025": 2571, "FY2024": 3445, "FY2023": 3209, "FY2022": 2686, "FY2021": 2584,
         "FY2020": 1732, "FY2019": 1756, "FY2018": 1519, "FY2017": 1389, "FY2016": 1284, "FY2015": 1250, "FY2014": 165,
+        "FY2013": 96, "FY2012": 24, "FY2011": -22, "FY2010": 361, "FY2009": 506, "FY2008": 598,
+        "FY2007": 468, "FY2006": 341, "FY2005": 95, "FY2004": 0,
     }),
     ("TOTAL", "Total shareholders' funds", {
         "FY2025": 15808, "FY2024": 15512, "FY2023": 9876, "FY2022": 9353, "FY2021": 7451,
         "FY2020": 6771, "FY2019": 6145, "FY2018": 5908, "FY2017": 5778, "FY2016": 5667, "FY2015": 5631, "FY2014": 4960,
+        "FY2013": 4646, "FY2012": 4657, "FY2011": 4266, "FY2010": 4649, "FY2009": 4788, "FY2008": 5221,
+        "FY2007": 5091, "FY2006": 4558, "FY2005": 4312, "FY2004": 4217,
     }),
     ("TOTAL", "Total liabilities and total shareholders' funds", {
         "FY2025": 160171, "FY2024": 138492, "FY2023": 113509, "FY2022": 89022, "FY2021": 75541,
         "FY2020": 69781, "FY2019": 59310, "FY2018": 53803, "FY2017": 56250, "FY2016": 51449, "FY2015": 49809, "FY2014": 49843,
+        "FY2013": 53818, "FY2012": 49507, "FY2011": 48142, "FY2010": 53559, "FY2009": 51574, "FY2008": 52959,
+        "FY2007": 45978, "FY2006": 34984, "FY2005": 30955, "FY2004": 28695,
     }),
 ]
 
@@ -328,54 +485,79 @@ pl_rows = [
     ("DATA", "Interest receivable", {
         "FY2025": 8637, "FY2024": 7828, "FY2023": 6003, "FY2022": 3144, "FY2021": 2419,
         "FY2020": 2297, "FY2019": 2330, "FY2018": 2168, "FY2017": 1955, "FY2016": 1904, "FY2015": 1744, "FY2014": 1699,
+        "FY2013": 1776, "FY2012": 1755, "FY2011": 1843, "FY2010": 1794, "FY2009": 1646, "FY2008": 2959,
+        "FY2007": 2678, "FY2006": 1920, "FY2005": 1703,
     }),
     ("DATA", "Interest payable", {
         "FY2025": -2942, "FY2024": -3207, "FY2023": -2193, "FY2022": -454, "FY2021": -345,
         "FY2020": -523, "FY2019": -552, "FY2018": -495, "FY2017": -478, "FY2016": -527, "FY2015": -511, "FY2014": -650,
+        "FY2013": -915, "FY2012": -877, "FY2011": -755, "FY2010": -811, "FY2009": -859, "FY2008": -2004,
+        "FY2007": -1827, "FY2006": -1161, "FY2005": -1051,
     }),
     ("TOTAL", "Net interest income", {
         "FY2025": 5695, "FY2024": 4621, "FY2023": 3810, "FY2022": 2690, "FY2021": 2074,
         "FY2020": 1774, "FY2019": 1778, "FY2018": 1673, "FY2017": 1477, "FY2016": 1377, "FY2015": 1233, "FY2014": 1049,
+        "FY2013": 861, "FY2012": 878, "FY2011": 1088, "FY2010": 983, "FY2009": 787, "FY2008": 955,
+        "FY2007": 851, "FY2006": 759, "FY2005": 652,
     }),
-    ("DATA", "Insurance commission income (FY2014's own label: 'Fees and commission receivable/(payable), net')", {
+    ("DATA", "Insurance commission income (FY2014's own label: 'Fees and commission receivable/(payable), net'; FY2004-FY2013 own presentation combines fees receivable and payable into one net figure - see source note)", {
         "FY2025": 666, "FY2024": 576, "FY2023": 543, "FY2022": 482, "FY2021": 419,
         "FY2020": 433, "FY2019": 388, "FY2018": 369, "FY2017": 335, "FY2016": 319, "FY2015": 315, "FY2014": 361,
+        "FY2013": 362, "FY2012": 313, "FY2011": 258, "FY2010": 248, "FY2009": 265, "FY2008": 168,
+        "FY2007": 86, "FY2006": 129, "FY2005": 96,
     }),
     ("DATA", "Other operating income", {
         "FY2025": 43, "FY2024": 8, "FY2023": 7, "FY2022": 3, "FY2021": 117,
         "FY2020": 80, "FY2019": 76, "FY2018": 64, "FY2017": 63, "FY2016": 59, "FY2015": 89, "FY2014": 138,
+        "FY2013": 149, "FY2012": 43, "FY2011": 53, "FY2010": 35, "FY2009": 31, "FY2008": 26,
+        "FY2007": 16, "FY2006": 12, "FY2005": 13,
     }),
     ("TOTAL", "Total net income (FY2014-FY2022's own equivalent subtotal is labelled 'Operating income' - same calculation)",
      {
          "FY2025": 6404, "FY2024": 5205, "FY2023": 4360, "FY2022": 3175, "FY2021": 2610,
          "FY2020": 2287, "FY2019": 2242, "FY2018": 2106, "FY2017": 1875, "FY2016": 1755, "FY2015": 1637, "FY2014": 1548,
+         "FY2013": 1372, "FY2012": 1234, "FY2011": 1399, "FY2010": 1266, "FY2009": 1083, "FY2008": 1149,
+         "FY2007": 953, "FY2006": 900, "FY2005": 761,
      }),
     ("DATA", "Administrative expenses", {
         "FY2025": -7241, "FY2024": -4776, "FY2023": -3597, "FY2022": -2953, "FY2021": -2437,
         "FY2020": -2167, "FY2019": -1780, "FY2018": -1776, "FY2017": -1538, "FY2016": -1554, "FY2015": -1487, "FY2014": -1413,
+        "FY2013": -1241, "FY2012": -1201, "FY2011": -1185, "FY2010": -1194, "FY2009": -1082, "FY2008": -838,
+        "FY2007": -726, "FY2006": -548, "FY2005": -568,
     }),
     ("DATA", "Depreciation and amortisation", {
         "FY2025": -67, "FY2024": -79, "FY2023": -86, "FY2022": -85, "FY2021": -80,
         "FY2020": -81, "FY2019": -93, "FY2018": -109, "FY2017": -111, "FY2016": -130, "FY2015": -124, "FY2014": -113,
+        "FY2013": -117, "FY2012": -126, "FY2011": -116, "FY2010": -117, "FY2009": -102, "FY2008": -66,
+        "FY2007": -37, "FY2006": -47, "FY2005": -44,
     }),
-    ("DATA", "Profit on sale / unrealised surplus on revaluation of investment property", {
+    ("DATA", "Profit on sale / unrealised surplus on revaluation of investment property (FY2004-FY2012 own equivalents: profit on sale of participating interests/fixed assets, net of loss on revaluation of property - see source note)", {
         "FY2022": 0, "FY2021": 634, "FY2018": 0, "FY2017": 2, "FY2015": 898,
+        "FY2012": 40, "FY2009": -30, "FY2007": 22, "FY2006": 43,
     }),
     ("DATA", "Movement in loan loss provision (FY2014's own label: 'Provision for bad and doubtful debts')", {
         "FY2025": -158, "FY2024": -9, "FY2023": -12, "FY2022": -9, "FY2021": -24,
         "FY2020": -77, "FY2019": -43, "FY2018": -43, "FY2017": -88, "FY2016": -16, "FY2015": -21, "FY2014": 70,
+        "FY2013": 92, "FY2012": 111, "FY2011": -576, "FY2010": -127, "FY2009": -74, "FY2008": -66,
+        "FY2007": 10, "FY2006": -38, "FY2005": -13,
     }),
     ("TOTAL", "(Loss)/profit on ordinary activities before taxation", {
         "FY2025": -1062, "FY2024": 341, "FY2023": 665, "FY2022": 128, "FY2021": 703,
         "FY2020": -38, "FY2019": 326, "FY2018": 178, "FY2017": 140, "FY2016": 55, "FY2015": 903, "FY2014": 92,
+        "FY2013": 106, "FY2012": 58, "FY2011": -478, "FY2010": -172, "FY2009": -205, "FY2008": 179,
+        "FY2007": 222, "FY2006": 310, "FY2005": 136,
     }),
     ("DATA", "Tax credit/(charge) on (loss)/profit", {
         "FY2025": 258, "FY2024": -62, "FY2023": -142, "FY2022": -26, "FY2021": -23,
         "FY2020": 14, "FY2019": -69, "FY2018": -32, "FY2017": -35, "FY2016": -21, "FY2015": -183, "FY2014": -23,
+        "FY2013": -34, "FY2012": -12, "FY2011": 95, "FY2010": 27, "FY2009": 113, "FY2008": -49,
+        "FY2007": -95, "FY2006": -64, "FY2005": -41,
     }),
     ("TOTAL", "(Loss)/profit and total comprehensive income for the financial year", {
         "FY2025": -804, "FY2024": 279, "FY2023": 523, "FY2022": 102, "FY2021": 680,
         "FY2020": -24, "FY2019": 257, "FY2018": 146, "FY2017": 105, "FY2016": 34, "FY2015": 720, "FY2014": 69,
+        "FY2013": 72, "FY2012": 46, "FY2011": -383, "FY2010": -145, "FY2009": -92, "FY2008": 130,
+        "FY2007": 127, "FY2006": 246, "FY2005": 95,
     }),
 ]
 
@@ -402,6 +584,32 @@ bw.add_income_statement_sheet(
 # ---------------------------------------------------------------
 equity_headers = ["Called up share capital", "Profit and loss account", "Revaluation reserve", "Total shareholders' funds"]
 equity_rows = [
+    ("TOTAL", "Balance as at 31 December 2004 (FY2004 closing - first trading period, 1 Feb-31 Dec 2004; no profit "
+     "and loss account was prepared for this period, see source note, so no opening balance/movement row precedes "
+     "this one)", (4217, 0, None, 4217)),
+    ("DATA", "Profit for the financial year", (None, 95, None, 95)),
+    ("TOTAL", "Balance as at 31 December 2005 (FY2005 closing)", (4217, 95, None, 4312)),
+    ("DATA", "Profit for the financial year", (None, 246, None, 246)),
+    ("TOTAL", "Balance as at 31 December 2006 (FY2006 closing)", (4217, 341, None, 4558)),
+    ("DATA", "Profit for the financial year", (None, 127, None, 127)),
+    ("DATA", "Revaluation surplus during the year on freehold properties", (None, None, 406, 406)),
+    ("TOTAL", "Balance as at 31 December 2007 (FY2007 closing)", (4217, 468, 406, 5091)),
+    ("DATA", "Profit for the financial year", (None, 130, None, 130)),
+    ("TOTAL", "Balance as at 31 December 2008 (FY2008 closing)", (4217, 598, 406, 5221)),
+    ("DATA", "Loss for the financial year", (None, -92, None, -92)),
+    ("DATA", "Revaluation deficit during the year on freehold properties (see PRESENTATION NOTE (9))", (None, None, -341, -341)),
+    ("TOTAL", "Balance as at 31 December 2009 (FY2009 closing, own as-filed figures - see PRESENTATION NOTE (9) on the "
+     "FY2010 restatement of the FY2009 comparative)", (4217, 506, 65, 4788)),
+    ("DATA", "Loss for the financial year", (None, -145, None, -145)),
+    ("DATA", "Reversal of previously recognised revaluation losses on freehold properties", (None, None, 6, 6)),
+    ("TOTAL", "Balance as at 31 December 2010 (FY2010 closing)", (4217, 361, 71, 4649)),
+    ("DATA", "Loss for the financial year", (None, -383, None, -383)),
+    ("TOTAL", "Balance as at 31 December 2011 (FY2011 closing)", (4217, -22, 71, 4266)),
+    ("DATA", "Profit for the financial year", (None, 46, None, 46)),
+    ("DATA", "Revaluation surplus during the year on freehold properties", (None, None, 345, 345)),
+    ("TOTAL", "Balance as at 31 December 2012 (FY2012 closing)", (4217, 24, 416, 4657)),
+    ("DATA", "Profit for the financial year", (None, 72, None, 72)),
+    ("DATA", "Revaluation deficit during the year on freehold properties", (None, None, -83, -83)),
     ("TOTAL", "Balance as at 1 January 2014 (own report, old UK GAAP/BBA SORP)", (4217, 96, 333, 4646)),
     ("DATA", "Profit for the financial year", (None, 69, None, 69)),
     ("DATA", "Revaluation surplus during the year on investment properties", (None, None, 167, 167)),
@@ -448,9 +656,10 @@ equity_rows = [
 
 bw.add_equity_changes_sheet(
     title="Kingdom Bank Limited — Statement of Changes in Equity",
-    subtitle="Chronological roll-forward, oldest to newest. Equity reconciliation ladder confirmed: every year's own "
-              "closing balance ties exactly to both the next year's own opening balance and that year's own Balance "
-              "Sheet Total shareholders' funds - zero plug rows needed anywhere, FY2014 onward. £'000. FY2014 is "
+    subtitle="Chronological roll-forward, oldest to newest, from FY2004 (first trading period) onward. Equity "
+              "reconciliation ladder confirmed: every year's own closing balance ties exactly to both the next "
+              "year's own opening balance and that year's own Balance Sheet Total shareholders' funds - zero plug "
+              "rows needed anywhere, including across the FY2004-FY2013 extension. £'000. FY2014 is "
               "shown as originally filed under old UK GAAP/the BBA SORP (no SOCE was published that year - built "
               "here from Notes 16-19 of the FY2014 Annual Report); FRS 102 was first adopted for FY2015 and its "
               "Annual Report separately discloses a restated 1 January 2015 opening position (£4,847k total "
@@ -466,9 +675,10 @@ bw.add_equity_changes_sheet(
 )
 
 # ---------------------------------------------------------------
-# Sheet 4: Cash Flow Statement - FY2014 has no cash flow statement at
-# all (FRS 1 wholly-owned-subsidiary exemption - see source note), so
-# it is the one column left entirely blank on this sheet, not zero.
+# Sheet 4: Cash Flow Statement - FY2004-FY2014 (all 11 years) have no
+# cash flow statement at all (FRS 1 wholly-owned-subsidiary exemption -
+# see source note), so these are the columns left entirely blank on
+# this sheet, not zero.
 # ---------------------------------------------------------------
 rows = [
     ("SECTION", "Operating activities", {}),
@@ -528,8 +738,8 @@ rows = [
 
 bw.add_cash_flow_sheet(
     title="Kingdom Bank Limited — Statement of Cash Flows",
-    subtitle="Bank/solo basis, £'000. FY2014 has no cash flow statement (FRS 1 wholly-owned-subsidiary exemption - "
-              "column intentionally blank, not zero). See source note at bottom.",
+    subtitle="Bank/solo basis, £'000. FY2004-FY2014 (11 years) have no cash flow statement (FRS 1 wholly-owned-"
+              "subsidiary exemption - columns intentionally blank, not zero). See source note at bottom.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=68,
@@ -630,6 +840,7 @@ bw.add_asset_quality_sheet(
     first_col_width=100,
     source_height=340,
     unit_suffix=" (£'000)",
+    years=PILLAR3_YEARS,
 )
 
 # ---------------------------------------------------------------
@@ -649,7 +860,8 @@ bw.add_asset_quality_sheet(
 
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, f"Bank/solo basis, {unit}" if unit else "Bank/solo basis",
-                         rows_data, p3_sources(), note=note, first_col_width=52, source_height=230)
+                         rows_data, p3_sources(), note=note, first_col_width=52, source_height=230,
+                         years=PILLAR3_YEARS)
 
 
 CET1_VALUES = {
@@ -660,7 +872,7 @@ TIER2_VALUES = {
     "FY2025": 700, "FY2024": 700, "FY2023": 700, "FY2022": 700, "FY2021": 761,
     "FY2020": 1431, "FY2019": 1431, "FY2018": 1431, "FY2017": 1581, "FY2016": 1581, "FY2015": 1681, "FY2014": 1681,
 }
-TOTAL_CAPITAL_VALUES = {y: CET1_VALUES[y] + TIER2_VALUES[y] for y in YEARS}
+TOTAL_CAPITAL_VALUES = {y: CET1_VALUES[y] + TIER2_VALUES[y] for y in YEARS if y in CET1_VALUES and y in TIER2_VALUES}
 
 CET1_RATIO_VALUES = {
     "FY2025": "18.8%", "FY2024": "22.2%", "FY2023": "17.37%", "FY2022": "20.84%", "FY2021": "16.97%",
@@ -719,6 +931,7 @@ bw.add_not_disclosed_metric_sheets(
     ["Total Capital Ratio", "Total RWAs"],
     p3_sources(),
     per_note={m: NOT_DISCLOSED_NOTE for m in ["Total Capital Ratio", "Total RWAs"]},
+    years=PILLAR3_YEARS,
 )
 
 # RWA Breakdown - placed immediately after Total RWAs, before Leverage
@@ -731,6 +944,7 @@ bw.add_rwa_breakdown_sheet(
     sources_text=p3_sources() + "\n\n" + RWA_NOT_DISCLOSED_NOTE,
     first_col_width=54,
     source_height=230,
+    years=PILLAR3_YEARS,
 )
 
 metric(
@@ -749,6 +963,7 @@ bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"],
     p3_sources(),
     per_note={m: NOT_DISCLOSED_NOTE for m in ["NSFR", "MREL Ratio"]},
+    years=PILLAR3_YEARS,
 )
 
 # ---------------------------------------------------------------
