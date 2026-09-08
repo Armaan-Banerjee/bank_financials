@@ -98,18 +98,40 @@ CASH_FLOW_SOURCES = (
 )
 
 
-def statement(kind_label, name, rows, first_col_width=58):
+DEBT_SECURITIES_NOTE = (
+    "DEBT SECURITIES BREAKDOWN: the 'Debt securities at amortised cost - ...' sub-rows below the renamed "
+    "'Total debt securities at amortised cost, net of allowance for credit losses' line are transcribed from "
+    "each year's own Note 13/14 'Debt Securities' of the Notes to the financial statements, which splits the "
+    "balance by issuer type (Government securities vs. Other debt securities) and separately states the "
+    "Provision for credit losses deducted to reach the net total; the note gives no measurement-basis split "
+    "(100% of the balance is at amortised cost - no FVOCI/FVTPL debt securities line exists) and does not "
+    "identify which sovereign(s) 'Government securities' refers to:\n"
+    "FY2025/FY2024: Note 13, p.48 (image-rendered PDF page; scanned/image-only filing, OCR-transcribed) - "
+    + AR_URL["FY2025"] + "\n"
+    "FY2023/FY2022: Note 14, p.54 (image-rendered PDF page; scanned/image-only filing, OCR-transcribed) - "
+    + AR_URL["FY2023"] + "\n"
+    "FY2021: Note 14, p.50 (image-rendered PDF page; scanned/image-only filing, OCR-transcribed) - "
+    + AR_URL["FY2021"] + "\n"
+    "Each year's three sub-rows sum exactly to that year's headline total, e.g. FY2025: 16,473,157 + 6,983,072 "
+    "- 314 = 23,455,915 (verified for all 5 years)."
+)
+
+
+def statement(kind_label, name, rows, first_col_width=58, extra_note=None, source_height=280):
     fn = {
         "balance_sheet": bw.add_balance_sheet_sheet,
         "income_statement": bw.add_income_statement_sheet,
     }[kind_label]
+    sources_text = AR_SOURCES_NOTE + "\n\n" + PRESENTATION_NOTE
+    if extra_note:
+        sources_text += "\n\n" + extra_note
     fn(
         title=f"TD Bank Europe Limited — {name}",
         subtitle="Entity/Company basis, CAD'000 unless noted - see the equity ladder/asset quality units in each sheet's own subtitle.",
         rows=rows,
-        sources_text=AR_SOURCES_NOTE + "\n\n" + PRESENTATION_NOTE,
+        sources_text=sources_text,
         first_col_width=first_col_width,
-        source_height=280,
+        source_height=source_height,
         unit_suffix=" (CAD'000)",
     )
 
@@ -117,7 +139,10 @@ def statement(kind_label, name, rows, first_col_width=58):
 BS_ROWS = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at central banks", {"FY2025": 163611, "FY2024": 960678, "FY2023": 135911, "FY2022": 84054, "FY2021": 1009106}),
-    ("DATA", "Debt securities at amortised cost, net of allowance for credit losses", {"FY2025": 23455915, "FY2024": 21297771, "FY2023": 21193385, "FY2022": 19221927, "FY2021": 16375260}),
+    ("DATA", "Total debt securities at amortised cost, net of allowance for credit losses", {"FY2025": 23455915, "FY2024": 21297771, "FY2023": 21193385, "FY2022": 19221927, "FY2021": 16375260}),
+    ("DATA", "Debt securities at amortised cost - Government securities", {"FY2025": 16473157, "FY2024": 14864668, "FY2023": 14979772, "FY2022": 14114679, "FY2021": 12566303}),
+    ("DATA", "Debt securities at amortised cost - Other debt securities", {"FY2025": 6983072, "FY2024": 6433392, "FY2023": 6213783, "FY2022": 5107284, "FY2021": 3809069}),
+    ("DATA", "Debt securities at amortised cost - Provision for credit losses", {"FY2025": -314, "FY2024": -289, "FY2023": -170, "FY2022": -36, "FY2021": -112}),
     ("DATA", "Loans and advances to banks", {"FY2025": 512755, "FY2024": 1310183, "FY2023": 319740, "FY2022": 285427, "FY2021": 293637}),
     ("DATA", "Loans and advances to customers, net of allowance for credit losses", {"FY2023": 22977, "FY2022": 70648, "FY2021": 176208}),
     ("DATA", "Derivative financial instruments", {"FY2025": 0, "FY2024": 159, "FY2023": 137226, "FY2022": 1698556, "FY2021": 1151448}),
@@ -144,7 +169,7 @@ BS_ROWS = [
     ("TOTAL", "Total shareholder's equity", {"FY2025": 1426705, "FY2024": 1408127, "FY2023": 1187508, "FY2022": 1174679, "FY2021": 866701}),
     ("TOTAL", "Total liabilities and shareholder's equity", {"FY2025": 24303535, "FY2024": 23701833, "FY2023": 21902569, "FY2022": 21411125, "FY2021": 19119360}),
 ]
-statement("balance_sheet", "Balance Sheet", BS_ROWS)
+statement("balance_sheet", "Balance Sheet", BS_ROWS, extra_note=DEBT_SECURITIES_NOTE, source_height=360)
 
 IS_ROWS = [
     ("SECTION", "Income", {}),
@@ -156,8 +181,29 @@ IS_ROWS = [
     ("DATA", "Foreign exchange gain/(loss)", {"FY2025": -566, "FY2024": -1072, "FY2023": -303, "FY2022": 2191, "FY2021": 122}),
     ("DATA", "Income/(loss) on financial assets at fair value", {"FY2025": 2666, "FY2024": -218, "FY2023": 205, "FY2022": -889, "FY2021": 374}),
     ("DATA", "Other operating income", {"FY2025": 0, "FY2024": 396, "FY2023": 11, "FY2022": 11, "FY2021": 288}),
+    # Not a line the source statement itself prints - the Company's own
+    # income statement has no combined income subtotal, going straight from
+    # these five income lines to the expense lines. This row is simply their
+    # sum (ties exactly to Profit on ordinary activities before taxation net
+    # of the expense/credit-loss lines below in every year, e.g. FY2025
+    # 88609+222-566+2666+0=90931, and 90931-8286-25=82620), added
+    # 2026-09-07 so cost-to-income analysis has a "Total operating income"
+    # denominator to work from.
+    ("TOTAL", "Total operating income (sum of the five income lines above - not itself a printed subtotal)", {
+        "FY2025": 90931, "FY2024": 75605, "FY2023": 93709, "FY2022": 87230, "FY2021": 73161,
+    }),
     ("DATA", "Personnel expenses", {"FY2025": 1265, "FY2024": -5342, "FY2023": -10029, "FY2022": -7063, "FY2021": -5869}),
     ("DATA", "Other expenses", {"FY2025": -9551, "FY2024": -8470, "FY2023": -13966, "FY2022": -8584, "FY2021": -5419}),
+    # Not a line the source statement itself prints - the Company's own
+    # income statement has no combined opex subtotal either. This row is
+    # simply their sum (Personnel expenses + Other expenses, excluding
+    # Credit loss (expense)/recovery just below, kept out of opex per this
+    # project's convention of separating credit-related items from operating
+    # costs), added 2026-09-07 so cost-to-income analysis has a "Total
+    # operating expenses" numerator to work from.
+    ("TOTAL", "Total operating expenses (sum of Personnel expenses + Other expenses above - not itself a printed subtotal)", {
+        "FY2025": -8286, "FY2024": -13812, "FY2023": -23995, "FY2022": -15647, "FY2021": -11288,
+    }),
     ("DATA", "Credit loss (expense)/recovery", {"FY2025": -25, "FY2024": -31, "FY2023": 745, "FY2022": 706, "FY2021": -753}),
     ("TOTAL", "Profit on ordinary activities before taxation", {"FY2025": 82620, "FY2024": 61762, "FY2023": 70459, "FY2022": 72289, "FY2021": 61120}),
     ("DATA", "Tax on profit on ordinary activities", {"FY2025": -20976, "FY2024": -13818, "FY2023": -14422, "FY2022": -19554, "FY2021": -16841}),

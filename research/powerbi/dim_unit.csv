@@ -1,22 +1,72 @@
 unit_id,unit
+m,£m
 unknown,unknown
 000,£'000
 000_conv_from_usd,"£'000, conv. from USD"
+000_conv_from_usd,£'000 (conv. from USD)
 unknown,£
-m,£m
+bank_solo_basis_m,"Bank solo basis, £m"
+consolidated_group_basis_000,"Consolidated (Group) basis, £'000"
+entity_level_basis_000_s,"Entity-level basis, £000's"
 000s,£'000s
 000_conv_from_eur,"£'000, conv. from EUR"
+entity_level_basis,Entity-level basis
+entity_level_basis_000,"Entity-level basis, £'000"
+arbuthnot_banking_group_plc_pillar_3_basis_000,"Arbuthnot Banking Group PLC (Pillar 3) basis, £'000"
+bank_basis_000,"Bank basis, £'000"
+consolidated_group_basis_m,"Consolidated Group basis, £m"
+unconsolidated_the_bank_basis_m,"Unconsolidated ('The Bank') basis, £m"
+000_fy2021_22_native_fy2023_25_conv_from_usd,"£'000 (FY2021-22 £ native, FY2023-25 conv. from USD)"
 m_conv_from_eur,"£m, conv. from EUR"
+m_bank_s_disclosed_capital_base_consisting_of_cet1_capital,"£m (Bank's disclosed capital base, consisting of CET1 Capital)"
+m_cet1_capital_no_at1_instruments,£m (= CET1 Capital; no AT1 instruments)
+m_cet1_capital_no_tier_2_instruments,£m (= CET1 Capital; no Tier 2 instruments)
+m_conv_from_eur,£m (conv. from EUR)
+solo_consolidated_basis_m,"Solo-consolidated basis, £m"
+consolidated_basis_m,"Consolidated basis, £m"
+000_cet1_capital_no_at1_instruments,£'000 (= CET1 capital; no AT1 instruments)
+000_cet1_capital_no_at1_instruments,£'000 (= CET1 Capital; no AT1 instruments)
+000_cet1_capital_no_tier_2_instruments,£'000 (= CET1 Capital; no Tier 2 instruments)
+000_group_consolidated_basis_fy2021_standalone_entity,"£'000, Group/consolidated basis (FY2021: standalone entity)"
+m_cet1_capital_no_at1_instruments,£m (= CET1 capital; no AT1 instruments)
+m_cet1_capital_no_tier_2_instruments,£m (= CET1 capital; no Tier 2 instruments)
+cb_consolidated_basis_m,"CB consolidated basis, £m"
 m_conv_from_usd,"£m, conv. from USD"
+m_conv_from_usd_see_note,£m (conv. from USD) - see note
+m_conv_from_usd,£m (conv. from USD)
+consolidated_basis_000,"Consolidated basis, £'000"
 000_fy2021_conv_from,"$'000, FY2021 conv. from £"
 000,$'000
+uk_group_consolidated_basis_m,"UK Group consolidated basis, £m"
+solo_basis_000,"Solo basis, $'000"
 m,$m
-usd_000,USD'000
+consolidated_basis_m,"Consolidated basis, $m"
 usd_million,USD million
+usd_000,USD'000
+solo_basis_000,"Solo basis, £'000"
+group_consolidated_basis_usd_m,"Group/consolidated basis, USD m"
 usd_m,USD m
+bank_solo_basis_000,"Bank/solo basis, £'000"
 us_000,US$'000
 eur_000,EUR '000
+millions,£ millions
+000_group_consolidated_basis_solo_basis_for_mbl_years_monzo_s_subsidiaries_are_excluded_from_prudential_consolidation_as_below_uk_crr_article_19_thresholds,"£'000, Group/consolidated basis (solo basis for MBL years - Monzo's subsidiaries are excluded from prudential consolidation as below UK CRR Article 19 thresholds)"
+000,£000
+as_reported_000_fy2024_fy2025_us_000_fy2021_fy2023,As reported: £000 (FY2024–FY2025); US$000 (FY2021–FY2023)
+osb_group_consolidated_basis_m,"OSB Group consolidated basis, £m"
+000_conv_from_eur,£'000 (conv. from EUR)
 gbp_000,GBP '000
+000_uk_km1_group_basis,"£'000, UK KM1 / Group basis"
+rfb_group_consolidated_basis_m,"RFB Group consolidated basis, £m"
 gbp_000,GBP'000
-cad_000,CAD'000
+not_disclosed,Not disclosed
+smbc_bi_basis_m_conv_from_usd,"SMBC BI basis, £m (conv. from USD)"
+million,$million / %
+tml_group_basis_000,"TML Group basis, £'000"
 cad_mm,CAD MM
+cad_000,CAD'000
+tbuk_entity_level_basis_000,"TBUK entity-level basis, £'000"
+company_basis,"Company basis, £"
+vanquis_banking_group_consolidated_basis_m,"Vanquis Banking Group consolidated basis, £m"
+vida_group_holdings_basis_000,"Vida Group Holdings basis, £'000"
+zopa_bank_limited_basis_m,"Zopa Bank Limited basis, £m"

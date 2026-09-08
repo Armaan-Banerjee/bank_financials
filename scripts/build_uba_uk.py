@@ -196,6 +196,32 @@ STATEMENTS_SOURCES = (
     + ENTITY_NOTE + "\n\n" + FX_NOTE
 )
 
+INVESTMENT_SECURITIES_BREAKDOWN_NOTE = (
+    "INVESTMENT SECURITIES BREAKDOWN: the 'Investment securities - ...' sub-rows below the renamed 'Total "
+    "investment securities' line are transcribed from each year's own Note 'Investment securities' (numbered "
+    "differently by vintage), which splits the balance by measurement basis - debt securities at amortised "
+    "cost, debt securities at FVOCI, and a FVTPL/Collective Investment Undertaking ('CIU') bucket (the Bank's "
+    "own investment in the BlackRock ICS US Treasury Fund, which invests solely in US Government securities "
+    "and is held to meet Level 1 HQLA requirements) - each shown gross, with a deduction for the ECL "
+    "impairment provision (and, in FY2022/FY2021 only, a further 'FX Movement' deduction the source note "
+    "itself states separately) so the sub-rows sum EXACTLY to that year's own 'Total investment securities' "
+    "line:\n"
+    f"FY2024 & FY2023: Annual Report and Accounts 2024, Note 17 'Investment securities', p.72 - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Accounts 2022, Note 14 'Investment securities', p.53 - {AR2022_URL}\n"
+    f"FY2020 & FY2019: Annual Report and Accounts 2020, Note 14 'Investment securities', p.54 - {AR2020_URL}\n"
+    "FY2018: no equivalent breakdown available - the FY2018 Annual Report's own source URL (previously cited "
+    "for this workbook's other sheets) now 404s and no archived copy could be located, so FY2018's single "
+    "lump 'Total investment securities' figure is retained with its sub-rows left blank rather than guessed.\n\n"
+    "ISSUER-TYPE NOTE: none of the 4 report vintages disclose investment securities by issuer type (e.g. UK "
+    "government/gilts vs corporate/other) as a reconciling £/$ table - UBA UK is a wholesale/treasury bank "
+    "with no UK government gilt holdings in this book at all. Qualitatively, the FY2024 Annual Report's credit "
+    "risk section states the amortised-cost and FVOCI buckets 'consist[] of emerging market Eurobonds' (Ghana "
+    "and Egypt sovereign Eurobonds, and a Nigeria-issued Ecobank Eurobond, per that same report's credit risk "
+    "narrative), while the FVTPL/CIU bucket is explicitly identified (FY2020 onward) as the BlackRock ICS US "
+    "Treasury Fund, holding US (not UK) Government securities - so no further per-year $ split by issuer type "
+    "is available; only the measurement-basis split above is added."
+)
+
 EQUITY_SOURCES = (
     "Sources - United Bank for Africa (UK) Limited's own Statement of Changes in Equity, presented in the Bank's "
     "native US$'000 (NOT converted to £, unlike every other sheet in this workbook):\n"
@@ -321,8 +347,18 @@ bs_rows_usd = [
     ("DATA", "Loans and advances to banks", {"FY2024": 88969, "FY2023": 363448, "FY2022": 418231, "FY2021": 326606,
                                               "FY2020": 77202, "FY2019": 111003, "FY2018": 74927}),
     ("DATA", "Loans and advances to customers", {"FY2024": 0, "FY2023": 2561}),
-    ("DATA", "Investment securities", {"FY2024": 181213, "FY2023": 147377, "FY2022": 140253, "FY2021": 133829,
-                                        "FY2020": 119082, "FY2019": 80125, "FY2018": 61754}),
+    ("DATA", "Total investment securities", {"FY2024": 181213, "FY2023": 147377, "FY2022": 140253, "FY2021": 133829,
+                                              "FY2020": 119082, "FY2019": 80125, "FY2018": 61754}),
+    ("DATA", "Investment securities - Debt securities at amortised cost (gross)",
+     {"FY2024": 23286, "FY2023": 44535, "FY2022": 46726, "FY2021": 33135, "FY2020": 41008, "FY2019": 24016}),
+    ("DATA", "Investment securities - Debt securities at FVOCI (gross)",
+     {"FY2024": 110519, "FY2023": 65393, "FY2022": 71339, "FY2021": 89500, "FY2020": 76480, "FY2019": 56257}),
+    ("DATA", "Investment securities - FVTPL / Collective Investment Undertaking (gross)",
+     {"FY2024": 48644, "FY2023": 42684, "FY2022": 27050, "FY2021": 12502, "FY2020": 2000, "FY2019": 0}),
+    ("DATA", "Investment securities - Less: ECL impairment provision",
+     {"FY2024": -1236, "FY2023": -5235, "FY2022": -4095, "FY2021": -1221, "FY2020": -406, "FY2019": -148}),
+    ("DATA", "Investment securities - Less: FX movement",
+     {"FY2022": -767, "FY2021": -87}),
     ("DATA", "Property, plant and equipment", {"FY2024": 1740, "FY2023": 1600, "FY2022": 1831, "FY2021": 2399,
                                                 "FY2020": 2825, "FY2019": 3151, "FY2018": 765}),
     ("DATA", "Intangible assets", {"FY2024": 1425, "FY2023": 1616, "FY2022": 1916, "FY2021": 2066,
@@ -362,13 +398,15 @@ bs_rows_usd = [
 ]
 bs_rows = [(kind, label, ({} if kind == "SECTION" else stock(usd))) for kind, label, usd in bs_rows_usd]
 
+BALANCE_SHEET_SOURCES = STATEMENTS_SOURCES + "\n\n" + INVESTMENT_SECURITIES_BREAKDOWN_NOTE
+
 bw.add_balance_sheet_sheet(
     title="United Bank for Africa (UK) Limited — Statement of Financial Position",
     subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used.",
     rows=bs_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=68,
-    source_height=420,
+    source_height=480,
     unit_suffix=" (£'000, conv. from USD)",
 )
 

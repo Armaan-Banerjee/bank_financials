@@ -15,6 +15,7 @@ Excel itself last computed and saved.
 import html as htmlmod
 
 import openpyxl
+from openpyxl.utils import get_column_letter
 
 WORKBOOK_VIEWER_CSS = """
 * { box-sizing: border-box; }
@@ -76,6 +77,12 @@ def _sheet_to_table_html(ws):
     for r in range(1, max_row + 1):
         cells_html = []
         for c in range(1, max_col + 1):
+            # BankWorkbook keeps chart-only chronological data in hidden
+            # staging columns. Those cells are an Excel implementation
+            # detail, not workbook content: exposing them here both repeats
+            # every year and makes deep-history workbooks needlessly wide.
+            if ws.column_dimensions[get_column_letter(c)].hidden:
+                continue
             if (r, c) in skip:
                 continue
             cell = ws.cell(row=r, column=c)

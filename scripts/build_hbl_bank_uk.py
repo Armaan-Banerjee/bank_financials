@@ -105,7 +105,19 @@ STATEMENTS_SOURCES = (
     f"comparative column) - {AR2021_URL}\n"
     "Balance Sheet's own FY2025 Total equity (87,654) is £1k above the Statement of Changes in "
     "Equity's own FY2025 closing total (87,653) - a rounding gap present in the Bank's own report, "
-    "reproduced as disclosed rather than force-reconciled."
+    "reproduced as disclosed rather than force-reconciled.\n"
+    "Debt securities breakdown (measurement basis: Held to Maturity vs Available for Sale; issuer "
+    "type: Government securities vs Other) is sourced from Note 10 'Debt Securities' of each year's "
+    "own Annual Report and Financial Statements, each year's own originally-published figures, "
+    "reconciling exactly to the Balance Sheet's own Debt securities total for every year:\n"
+    f"FY2025: Note 10, p.45 - {AR2025_URL}\n"
+    f"FY2024: Note 10, p.45 - {AR2024_URL}\n"
+    f"FY2023: Note 10, p.48 - {AR2023_URL}\n"
+    f"FY2022: Note 10, p.49 - {AR2022_URL}\n"
+    f"FY2021: Note 10, p.45 - {AR2021_URL}\n"
+    "FY2025 and FY2024 disclose no 'Other securities' leg under Available for Sale (100% "
+    "Government securities that year); FY2025 also discloses no Provision for diminution line "
+    "(fully written off by FY2024, per Note 10.1's roll-forward in each year's own report)."
 )
 
 
@@ -123,7 +135,22 @@ balance_sheet_rows = [
     ("DATA", "Loans and advances to customers", {
         "FY2025": 293309, "FY2024": 215563, "FY2023": 217968, "FY2022": 204734, "FY2021": 178267,
     }),
-    ("DATA", "Debt securities", {
+    ("DATA", "Debt securities - Held to Maturity (Government securities)", {
+        "FY2025": 3644, "FY2024": 3709, "FY2023": 7609, "FY2022": 3509, "FY2021": 0,
+    }),
+    ("DATA", "Debt securities - Available for Sale (Government securities)", {
+        "FY2025": 81444, "FY2024": 163009, "FY2023": 89666, "FY2022": 77063, "FY2021": 88149,
+    }),
+    ("DATA", "Debt securities - Available for Sale (Other securities)", {
+        "FY2024": 0, "FY2023": 3886, "FY2022": 10635, "FY2021": 11463,
+    }),
+    ("DATA", "Gain/(deficit) on revaluation of available-for-sale debt securities", {
+        "FY2025": 90, "FY2024": 152, "FY2023": -151, "FY2022": -906, "FY2021": -125,
+    }),
+    ("DATA", "Provision for diminution in the value of investments", {
+        "FY2024": 0, "FY2023": -3901, "FY2022": -3901, "FY2021": -3901,
+    }),
+    ("TOTAL", "Total debt securities", {
         "FY2025": 85178, "FY2024": 166870, "FY2023": 97109, "FY2022": 86400, "FY2021": 95586,
     }),
     ("DATA", "Fixed assets", {

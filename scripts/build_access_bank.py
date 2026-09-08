@@ -219,6 +219,12 @@ BALANCE_SHEET_SOURCES = (
     f"FY2022 & FY2021: Report and Statutory Accounts 2022, p.17 - {AR2022_URL}\n"
     f"FY2020: Report and Statutory Accounts 2021, p.15 (comparative column) - {AR2021_URL}\n"
     f"FY2019: Report and Statutory Accounts 2019, p.12 - {AR2019_URL}\n\n"
+    "Investment securities breakdown (Bank column) - by issuer type in all years, plus measurement basis "
+    "(FVPL/FVOCI) where the Bank separately discloses it:\n"
+    f"FY2024 & FY2023: Report & Financial Statements 2024, Note 16 'Investment securities', p.36 - {AR2024_URL}\n"
+    f"FY2022 & FY2021: Report and Statutory Accounts 2022, Note 13 'Investment securities', p.30 - {AR2022_URL}\n"
+    f"FY2020: Report and Statutory Accounts 2021, Note 13 'Investment securities' (comparative column) - {AR2021_URL}\n"
+    f"FY2019: Report and Statutory Accounts 2019, Note 12 'Investment securities', p.27 - {AR2019_URL}\n\n"
     + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n" + STATEMENTS_PRESENTATION_NOTE
 )
 
@@ -226,7 +232,11 @@ balance_sheet_rows_usd = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents / Cash at bank", {"FY2024": 302616403, "FY2023": 463780357, "FY2022": 634602649, "FY2021": 531094912, "FY2020": 160274778, "FY2019": 497558784}),
     ("DATA", "Money market placements", {"FY2024": 13252505, "FY2023": 7158534, "FY2022": 3600384, "FY2021": 3928474, "FY2020": 6510993, "FY2019": 23239663}),
-    ("DATA", "Investment securities", {"FY2024": 2294936949, "FY2023": 1023445451, "FY2022": 714010643, "FY2021": 610046734, "FY2020": 356657172, "FY2019": 417122556}),
+    ("DATA", "Investment securities - US Treasury bills and government bonds, at FVPL", {"FY2024": 1971422489, "FY2023": 1018686084}),
+    ("DATA", "Investment securities - US Treasury bills, at FVOCI", {"FY2024": 319419125, "FY2023": 0}),
+    ("DATA", "Investment securities - US Treasury bills and government bonds (measurement basis not separately disclosed pre-FY2023)", {"FY2022": 711513304, "FY2021": 607500000, "FY2020": 355007353, "FY2019": 415118236}),
+    ("DATA", "Investment securities - Listed equity securities in financial institutions", {"FY2024": 4095335, "FY2023": 4759367, "FY2022": 2497339, "FY2021": 2546734, "FY2020": 1649819, "FY2019": 2004320}),
+    ("TOTAL", "Total investment securities", {"FY2024": 2294936949, "FY2023": 1023445451, "FY2022": 714010643, "FY2021": 610046734, "FY2020": 356657172, "FY2019": 417122556}),
     ("DATA", "Investment in subsidiary", {"FY2024": 22224000}),
     ("DATA", "Loans and advances to banks", {"FY2024": 1774689997, "FY2023": 1376219992, "FY2022": 1269502028, "FY2021": 849457860, "FY2020": 943688846, "FY2019": 674309238}),
     ("DATA", "Loans and advances to customers", {"FY2024": 1669793574, "FY2023": 1523143929, "FY2022": 1114878580, "FY2021": 1054399028, "FY2020": 890496159, "FY2019": 874086599}),

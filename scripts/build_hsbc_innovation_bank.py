@@ -133,6 +133,23 @@ STATEMENTS_SOURCES = (
     "'Loans and advances to banks' instead, not a disclosed reclassification, so left as two genuinely "
     "distinct presentations rather than force-merged. Tax assets/liabilities similarly flip between "
     "'Current'/'Deferred' and asset/liability sides year to year exactly as each year's own report shows."
+    "\n\nFINANCIAL INVESTMENTS BREAKDOWN NOTE: Annual Report and Accounts 2022, Note 18 'Financial "
+    "investments' (p.74) tables 'Financial investments by type' and 'Governments and other public bodies "
+    "by country of issuance' - " + AR2022_DOC_URL + " - disclose FY2022's GBP3,458,278k Financial "
+    "investments balance (net of ECL) by issuer: Governments and other public bodies GBP3,091.1m (89%, "
+    "of which United Kingdom GBP547m/18%, United States GBP2,499m/81%, France GBP45m/1%), Agencies "
+    "GBP367.2m (11%), Corporate and other issuers nil (0%). Note 2(e)/(f) (p.47-49) confirms the entity "
+    "'does not currently classify any financial assets as measured at fair value through other "
+    "comprehensive income' and that financial investments are measured entirely at amortised cost - "
+    "there is no FVOCI/FVTPL/available-for-sale leg to split out. The 'UK government and public bodies' "
+    "sub-row above uses Note 18's own disclosed GBP547m UK net-exposure figure exactly as reported; the "
+    "'other issuers' sub-row is the residual (total less the UK figure) so the two sub-rows reconcile "
+    "EXACTLY to the GBP3,458,278k balance sheet total (Note 18's own more granular by-type/by-country "
+    "tables only sum to GBP3,458.2m-3,458.3m depending on which sub-table's roundings are combined, a "
+    "sub-GBP100k/~0.002% rounding artefact of the source disclosing in whole/one-decimal GBPm rather than "
+    "GBP'000 - not reproduced here since the residual construction avoids it entirely). FY2023's balance "
+    "is nil (see PRESENTATION NOTE above) so no breakdown applies that year; FY2024 onward the line no "
+    "longer exists on the Balance Sheet at all."
 )
 
 
@@ -155,7 +172,9 @@ def statement(kind_rows, sheet_fn, title, subtitle, sheet_name, first_col_width=
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at central banks", {"FY2023": 0, "FY2022": 2064343}),
-    ("DATA", "Financial investments", {"FY2023": 0, "FY2022": 3458278}),
+    ("TOTAL", "Financial investments total (amortised cost)", {"FY2023": 0, "FY2022": 3458278}),
+    ("DATA", "Financial investments - UK government and public bodies (gilts/treasury), amortised cost", {"FY2022": 547000}),
+    ("DATA", "Financial investments - other issuers (overseas government/agencies/corporate), amortised cost", {"FY2022": 2911278}),
     ("DATA", "Derivatives", {"FY2025": 3883, "FY2024": 3426, "FY2023": 2720, "FY2022": 124999}),
     ("DATA", "Loans and advances to banks", {"FY2025": 3553416, "FY2024": 2820579, "FY2023": 2510251, "FY2022": 928181}),
     ("DATA", "Loans and advances to clients", {"FY2025": 6922886, "FY2024": 6615509, "FY2023": 6283807, "FY2022": 5747242}),

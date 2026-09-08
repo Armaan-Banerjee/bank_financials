@@ -299,7 +299,7 @@ income_statement_rows = [
     ("TOTAL", "Total income", {"FY2025": 1172.3, "FY2024": 1137.0, "FY2023": 1156.7, "FY2022": 1105.5, "FY2021": 982.9, "FY2020": 932.9, "FY2019": 987.2, "FY2018": 1295.3, "FY2017": 1096.1, "FY2016": 1004.0, "FY2015": 890.7, "FY2014": 900.2}),
     ("DATA", "Costs of preparing for migration", {"FY2018": -417.3}),
     ("DATA", "Defined benefit pension scheme settlement gain (within FY2014 operating expenses)", {"FY2014": 63.7}),
-    ("DATA", "Total operating expenses", {"FY2025": -785.9, "FY2024": -821.8, "FY2023": -852.9, "FY2022": -869.5, "FY2021": -827.3, "FY2020": -969.4, "FY2019": -881.3, "FY2018": -905.7, "FY2017": -859.2, "FY2016": -734.7, "FY2015": -740.8, "FY2014": -632.4}),
+    ("TOTAL", "Total operating expenses", {"FY2025": -785.9, "FY2024": -821.8, "FY2023": -852.9, "FY2022": -869.5, "FY2021": -827.3, "FY2020": -969.4, "FY2019": -881.3, "FY2018": -905.7, "FY2017": -859.2, "FY2016": -734.7, "FY2015": -740.8, "FY2014": -632.4}),
     ("TOTAL", "Operating profit/(loss) before impairment losses and taxation", {"FY2025": 386.4, "FY2024": 315.2, "FY2023": 303.8, "FY2022": 236.0, "FY2021": 155.6, "FY2020": -36.5, "FY2019": 105.9, "FY2018": -27.7, "FY2017": 236.9, "FY2016": 269.3, "FY2015": 149.9, "FY2014": 267.8}),
     ("DATA", "Impairment losses on financial assets at amortised cost / loans and advances to customers", {"FY2025": -51.2, "FY2024": -31.9, "FY2023": -71.8, "FY2022": -57.7, "FY2021": -2.6, "FY2020": -162.7, "FY2019": -60.9, "FY2018": -72.8, "FY2017": -77.8, "FY2016": -87.3, "FY2015": -82.3, "FY2014": -97.6}),
     ("DATA", "Impairment credit/(losses) on loan commitments", {"FY2025": 4.2, "FY2024": 1.8, "FY2023": 3.5, "FY2022": 2.8, "FY2021": 2.5, "FY2020": -1.3, "FY2019": 0.4, "FY2018": -0.5}),

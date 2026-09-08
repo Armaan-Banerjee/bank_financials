@@ -5,9 +5,9 @@ from bank_workbook import BankWorkbook
 # Arab Bank Europe Plc (Companies House / trading name "Europe Arab Bank plc",
 # company 05575857, FRN 446951) reports in EUR (its functional currency) - this
 # workbook converts every € figure to £ at the established FX methodology (see
-# FX_NOTE below). Only FY2021-FY2024 could be sourced (FY2025 Annual Report and
-# any Pillar 3 document are unobtainable - see ENTITY_NOTE); ratios are never
-# converted.
+# FX_NOTE below). Only FY2021-FY2024 could be sourced (FY2025 Annual Report was
+# still not incorporated as of the 2026-09-07 re-check even though a copy was
+# finally found - see ENTITY_NOTE); ratios are never converted.
 YEARS = ["FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
 
 AR2022_URL = (
@@ -17,6 +17,16 @@ AR2022_URL = (
 AR2024_URL = (
     "https://web.archive.org/web/20250805183352/"
     "https://www.eabplc.com/downloads/202502_EABAnnualReport_v3.pdf"
+)
+# Recovered 2026-09-07 (HD-081 item 4 re-check): the generic Pillar3.pdf that was
+# previously found archived but truncated/corrupted on every retry now downloads
+# intact. EAB Group's own standalone Pillar 3 disclosure as at 31 Dec 2022 (with a
+# 31 Dec 2021 comparative) - covers FY2021/FY2022 only, on both an "EAB Group"
+# (consolidated) and "EAB plc" (entity-only) basis; this workbook uses the EAB plc
+# entity-only column throughout, consistent with every other sheet.
+PILLAR3_2022_URL = (
+    "https://web.archive.org/web/20240714131343/"
+    "https://www.eabplc.com/downloads/Pillar3.pdf"
 )
 
 # ---------------------------------------------------------------
@@ -78,25 +88,44 @@ ENTITY_NOTE = (
     "Companies House/FCA register, confirmed as the same entity via FRN and company number match, not a guess). "
     "Wholly-owned subsidiary of Arab Bank plc (Jordan); UNLIKE many single-foreign-parent subsidiaries in this "
     "series, it does NOT take the FRS 101/102 cash-flow-statement exemption - a full Cash Flow Statement is "
-    "published every year. eabplc.com's TLS configuration rejects every automated fetch attempted (both direct "
-    "and via Wayback-triggered re-crawl), so sourcing relied entirely on Wayback Machine snapshots already in the "
-    "archive; only the FY2022 Annual Report (giving FY2021+FY2022) and the FY2024 Annual Report (giving "
-    "FY2023+FY2024) were found archived - the FY2021, FY2023, and FY2025 standalone Annual Reports, and every "
-    "standalone Pillar 3 document (only a generic 'Pillar3.pdf' was found archived, and that download was itself "
-    "truncated/corrupted on every retry attempted), were not obtainable. FY2025 is therefore excluded entirely "
-    "(Companies House confirms a FY2025 filing exists, filed 10 May 2026, but no accessible copy was found). "
-    "Pillar 3 disclosure is consequently very thin: only two ratios (Capital adequacy/Total Capital ratio, "
-    "Common Equity Tier 1 ratio) are ever stated, and only as headline percentages in the Annual Report's own "
-    "'Other Key Performance Indicators' table (note 37 does not add any £/€ breakdown - CET1/Total Capital "
-    "amounts, RWA, leverage, LCR, NSFR and MREL are not disclosed anywhere in the sourced documents) - the same "
-    "narrative-KPI-only pattern seen at AIB Group (UK) and Bank of Ireland (UK). A genuine, undocumented cash "
-    "bridge gap exists between FY2022's closing balance (per the FY2022 Annual Report, €158,856k) and FY2023's "
-    "opening balance (per the FY2024 Annual Report's own comparative column, €538,633k) - the FY2023 Annual "
-    "Report itself, which would show what happened during that year, was not obtainable. The FY2023 column shows "
-    "a 'Loss on disposal of subsidiary' (€3,294k) and 'Disposal of subsidiaries' (€25,342k) line item not present "
-    "in any other year, consistent with a subsidiary disposal/deconsolidation event during FY2023, but this does "
-    "not come close to explaining the full €379,777k gap - left unbridged and flagged rather than silently forced "
-    "to reconcile."
+    "published every year. eabplc.com's TLS configuration originally rejected every automated fetch attempted; "
+    "re-checked 2026-09-07 (HD-081 item 4) and the domain now serves valid TLS but has migrated wholesale to "
+    "arabbankeurope.com with a blanket 301 redirect to that site's homepage for every old eabplc.com URL "
+    "(including PDF paths that Google's index still shows as live, e.g. Pillar3EABplc2023.pdf and "
+    "Pillar3EAB_PLC_2024.pdf - both 301 to the new homepage, not obtainable, and neither is in the Wayback "
+    "Machine), so most sourcing still relies on Wayback Machine snapshots. The FY2022 Annual Report (giving "
+    "FY2021+FY2022) and the FY2024 Annual Report (giving FY2023+FY2024) remain the two Annual Reports used "
+    "throughout this workbook. The FY2021 and FY2023 standalone Annual Reports were still not obtainable on "
+    "re-check. The FY2025 Annual Report, previously unobtainable, WAS found on re-check (2026-09-07) live at "
+    "arabbankeurope.com/downloads/annual-report-2025/ (Companies House confirms this FY2025 filing, filed 10 May "
+    "2026) - not incorporated into this workbook (YEARS remains FY2021-FY2024; adding a 5th year requires a full "
+    "statement transcription across every ST- sheet, out of scope for this correctness re-check - flagged for a "
+    "future year-extension ticket). The generic 'Pillar3.pdf' previously found archived but truncated/corrupted "
+    "on every retry attempted was RE-CHECKED 2026-09-07 and now downloads intact from its Wayback snapshot "
+    "(https://web.archive.org/web/20240714131343/https://www.eabplc.com/downloads/Pillar3.pdf, 35pp, EAB Group's "
+    "own standalone Pillar 3 disclosure as at 31 Dec 2022 with a 31 Dec 2021 comparative) - it gives full "
+    "entity-level (\"EAB plc**\", i.e. Arab Bank Europe Plc solo, not the wider EAB Group) capital/RWA/leverage/"
+    "LCR/NSFR amounts for FY2021 and FY2022, previously all marked 'Not publicly disclosed'; see the individual "
+    "Pillar 3 metric sheets and the RWA Breakdown sheet for the recovered figures and their citation. No "
+    "equivalent standalone document could be recovered for FY2023 or FY2024, so those two years remain limited "
+    "to the Annual Report's own two headline ratios. "
+    "Pillar 3 disclosure for FY2023/FY2024 is consequently still thin: only two ratios (Capital adequacy/Total "
+    "Capital ratio, Common Equity Tier 1 ratio) are stated for those years, as headline percentages in the "
+    "Annual Report's own "
+    "'Other Key Performance Indicators' table (note 37 does not add any £/€ breakdown for those two years - CET1/"
+    "Total Capital amounts, RWA, leverage, LCR and NSFR for FY2023/FY2024 are not disclosed anywhere in the "
+    "sourced documents; MREL is not disclosed for any year) - the same narrative-KPI-only pattern seen at AIB "
+    "Group (UK) and Bank of Ireland (UK), now only for FY2023/FY2024 rather than all four years. A genuine, "
+    "undocumented cash bridge gap exists between FY2022's closing balance (per the FY2022 Annual Report, "
+    "€158,856k) and FY2023's opening balance (per the FY2024 Annual Report's own comparative column, €538,633k) - "
+    "the FY2023 Annual Report itself, which would show what happened during that year, was not obtainable "
+    "(re-checked 2026-09-07, both eabplc.com direct and a broader Wayback search: still not archived anywhere). "
+    "The FY2023 column shows a 'Loss on disposal of subsidiary' (€3,294k) and 'Disposal of subsidiaries' "
+    "(€25,342k) line item not present in any other year, consistent with a subsidiary disposal/deconsolidation "
+    "event during FY2023, but this does not come close to explaining the full €379,777k gap; the FY2025 Annual "
+    "Report found on re-check (see above) only carries FY2024/FY2025 comparatives, one year too late to shed any "
+    "light on FY2023, and contains no restatement note referencing FY2023 or FY2022 - left unbridged and flagged "
+    "rather than silently forced to reconcile."
 )
 
 CASH_FLOW_SOURCES = (
@@ -584,17 +613,60 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
-# Pillar 3 metric sheets - only two ratios disclosed anywhere (see ENTITY_NOTE)
+# Pillar 3 metric sheets. FY2023/FY2024 still have only the Annual Report's two
+# headline ratios (see ENTITY_NOTE). FY2021/FY2022 now have full entity-level
+# (EAB plc solo) capital/RWA/leverage/LCR/NSFR amounts, recovered 2026-09-07
+# (HD-081 item 4 re-check) from the standalone Pillar3.pdf that was previously
+# found archived but corrupted on every download attempt - see ENTITY_NOTE and
+# PILLAR3_SOURCES below.
 # ---------------------------------------------------------------
 RATIO_PAGES = {"FY2024": "6", "FY2022": "9"}
 
-TOTAL_CAPITAL_RATIO = {"FY2024": "23%", "FY2023": "24%", "FY2022": "23%", "FY2021": "22%"}
-CET1_RATIO = {"FY2024": "16%", "FY2023": "17%", "FY2022": "16%", "FY2021": "16%"}
+# More precise than the AR's rounded whole-percent KPI table, since FY2021/FY2022
+# are now sourced from the Pillar3.pdf's own "EAB plc**" (entity-only) column
+# instead - see PILLAR3_SOURCES. FY2023/FY2024 unchanged (AR KPI table only).
+TOTAL_CAPITAL_RATIO = {"FY2024": "23%", "FY2023": "24%", "FY2022": "22.7%", "FY2021": "22.4%"}
+CET1_RATIO = {"FY2024": "16%", "FY2023": "17%", "FY2022": "15.5%", "FY2021": "15.6%"}
+
+# EAB plc (entity-only, "**" column) figures from Pillar3.pdf's "Overview of key
+# metrics" table, EURm as published, held here before £'000 conversion.
+P3_CET1_CAPITAL_EUR = {"FY2022": 253000, "FY2021": 252000}
+P3_TIER1_CAPITAL_EUR = {"FY2022": 253000, "FY2021": 252000}  # AT1 = nil both years
+P3_TOTAL_CAPITAL_EUR = {"FY2022": 370000, "FY2021": 362000}
+P3_TOTAL_RWA_EUR = {"FY2022": 1631000, "FY2021": 1616000}
+p3_cet1_capital_gbp = gbp_spot(P3_CET1_CAPITAL_EUR)
+p3_tier1_capital_gbp = gbp_spot(P3_TIER1_CAPITAL_EUR)
+p3_total_capital_gbp = gbp_spot(P3_TOTAL_CAPITAL_EUR)
+p3_total_rwa_gbp = gbp_spot(P3_TOTAL_RWA_EUR)
+
+# Leverage ratio and NSFR are both flagged 'n/a' in Pillar3.pdf's own FY2021
+# comparative column - the PRA's leverage/NSFR disclosure templates only took
+# effect from 1 Jan 2022, so no FY2021 comparative was ever produced (not a
+# gap in sourcing - the document itself says so). LCR has both years.
+LEVERAGE_RATIO = {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+                   "FY2022": "11.7%", "FY2021": "Not publicly disclosed"}
+LCR_RATIO = {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+             "FY2022": "218%", "FY2021": "267%"}
+NSFR_RATIO = {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+              "FY2022": "120%", "FY2021": "Not publicly disclosed"}
+
+PILLAR3_SOURCES = (
+    "FY2022/FY2021 (this row only): Europe Arab Bank plc's standalone Pillar 3 Disclosures as at 31 December "
+    "2022, PDF page 8 of 35 ('Overview of key metrics' table), 'EAB plc**' entity-only column (** = 'EAB plc "
+    "regulatory numbers are based on entity only basis', per the document's own footnote) - not the wider 'EAB "
+    "Group' column, for consistency with every other sheet in this workbook, which is entity-only throughout. "
+    f"{PILLAR3_2022_URL}\n"
+    "Recovered 2026-09-07 (HD-081 item 4 re-check) - this document was previously found archived at the same "
+    "Wayback URL but was corrupted/truncated on every earlier download attempt; it now downloads intact as a "
+    "readable 35-page PDF. No equivalent standalone document could be found for FY2023 or FY2024 (see "
+    "ENTITY_NOTE)."
+)
 
 
-def metric(name, unit, rows_data, note=None):
+def metric(name, unit, rows_data, note=None, extra_sources=None):
+    sources = p3_sources(RATIO_PAGES) + (("\n\n" + extra_sources) if extra_sources else "")
     bw.add_metric_sheet(name, f"Entity-level basis, {unit}" if unit else "Entity-level basis",
-                         rows_data, p3_sources(RATIO_PAGES), note=note,
+                         rows_data, sources, note=note,
                          first_col_width=46, source_height=140)
 
 
@@ -605,43 +677,117 @@ NOT_DISCLOSED_NOTE = (
     "on the Cash Flow Statement sheet) and no other figure for this metric appears anywhere in either report."
 )
 
-metric("CET1 Capital", None, [("Common Equity Tier 1 (CET1) capital (£'000)", {y: "Not publicly disclosed" for y in YEARS})],
-       note=NOT_DISCLOSED_NOTE)
+FY2324_ONLY_NOTE = (
+    "FY2021/FY2022 now sourced from the recovered standalone Pillar3.pdf (see PILLAR3_SOURCES below and "
+    "ENTITY_NOTE). FY2023/FY2024 remain 'Not publicly disclosed' - the Bank's only capital disclosure for those "
+    "two years is the Annual Report's 'Other Key Performance Indicators' table's two headline ratios (Capital "
+    "adequacy ratio, Common Equity Tier 1 ratio); no standalone Pillar 3 document could be recovered for either "
+    "year despite a re-check of both eabplc.com/arabbankeurope.com directly and a broader Wayback CDX search "
+    "(2026-09-07, HD-081 item 4)."
+)
 
-metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO)])
+metric("CET1 Capital", None,
+       [("Common Equity Tier 1 (CET1) capital (£'000)",
+         {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+          "FY2022": p3_cet1_capital_gbp["FY2022"], "FY2021": p3_cet1_capital_gbp["FY2021"]})],
+       note=FY2324_ONLY_NOTE, extra_sources=PILLAR3_SOURCES)
 
-metric("Tier 1 Capital", None, [("Tier 1 capital (£'000)", {y: "Not publicly disclosed" for y in YEARS})],
-       note=NOT_DISCLOSED_NOTE)
+metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO)],
+       note="FY2021/FY2022 values (15.6%/15.5%) are the recovered Pillar3.pdf's own precise figures on the "
+            "same 'EAB plc' entity-only basis, rather than the Annual Report's rounded whole-percent KPI table "
+            "(which shows 16% for both years) - both are the Bank's own disclosures and are consistent once "
+            "rounded, so the more precise source is preferred. FY2023/FY2024 (17%/16%) remain from the Annual "
+            "Report's KPI table, the only source found for those two years.",
+       extra_sources=PILLAR3_SOURCES)
 
-metric("Tier 1 Ratio", None, [("Tier 1 ratio", {y: "Not publicly disclosed" for y in YEARS})],
-       note=NOT_DISCLOSED_NOTE + " Note: the KPI table's 'Capital adequacy ratio' is Total Capital, not Tier 1 - "
-                                  "not substituted here since that would misrepresent a different metric.")
+metric("Tier 1 Capital", None,
+       [("Tier 1 capital (£'000)",
+         {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+          "FY2022": p3_tier1_capital_gbp["FY2022"], "FY2021": p3_tier1_capital_gbp["FY2021"]})],
+       note=FY2324_ONLY_NOTE + " Additional Tier 1 (AT1) capital is nil in both FY2021 and FY2022 per Pillar3.pdf, "
+                               "so Tier 1 = CET1 exactly in those two years.",
+       extra_sources=PILLAR3_SOURCES)
 
-metric("Total Capital", None, [("Total capital (£'000)", {y: "Not publicly disclosed" for y in YEARS})],
-       note=NOT_DISCLOSED_NOTE)
+metric("Tier 1 Ratio", None,
+       [("Tier 1 ratio",
+         {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+          "FY2022": "15.5%", "FY2021": "15.6%"})],
+       note=FY2324_ONLY_NOTE + " Tier 1 ratio = CET1 ratio in both FY2021 and FY2022 since AT1 is nil (see Tier 1 "
+                               "Capital sheet). For FY2023/FY2024, the KPI table's 'Capital adequacy ratio' is "
+                               "Total Capital, not Tier 1 - not substituted here since that would misrepresent a "
+                               "different metric.",
+       extra_sources=PILLAR3_SOURCES)
 
-metric("Total Capital Ratio", "% of RWA", [("Capital adequacy (Total Capital) ratio", TOTAL_CAPITAL_RATIO)])
+metric("Total Capital", None,
+       [("Total capital (£'000)",
+         {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+          "FY2022": p3_total_capital_gbp["FY2022"], "FY2021": p3_total_capital_gbp["FY2021"]})],
+       note=FY2324_ONLY_NOTE, extra_sources=PILLAR3_SOURCES)
 
-metric("Total RWAs", None, [("Total risk-weighted assets (£'000)", {y: "Not publicly disclosed" for y in YEARS})],
-       note=NOT_DISCLOSED_NOTE)
+metric("Total Capital Ratio", "% of RWA", [("Capital adequacy (Total Capital) ratio", TOTAL_CAPITAL_RATIO)],
+       note="FY2021/FY2022 values (22.4%/22.7%) are the recovered Pillar3.pdf's own precise figures on the "
+            "same 'EAB plc' entity-only basis, rather than the Annual Report's rounded whole-percent KPI table "
+            "(which shows 22%/23%) - both are the Bank's own disclosures and are consistent once rounded, so "
+            "the more precise source is preferred. FY2023/FY2024 (24%/23%) remain from the Annual Report's KPI "
+            "table, the only source found for those two years.",
+       extra_sources=PILLAR3_SOURCES)
 
+metric("Total RWAs", "£'000",
+       [("Total risk-weighted assets (£'000)",
+         {"FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed",
+          "FY2022": p3_total_rwa_gbp["FY2022"], "FY2021": p3_total_rwa_gbp["FY2021"]})],
+       note=FY2324_ONLY_NOTE, extra_sources=PILLAR3_SOURCES)
+
+# EAB plc (entity-only) RWA breakdown from Pillar3.pdf's "Overview of RWA" table
+# (UK OV1-style split by risk category), EURm as published.
+RWA_BREAKDOWN_EUR = {
+    "Credit risk (excluding counterparty credit risk)": {"FY2022": 1382000, "FY2021": 1376000},
+    "Counterparty credit risk": {"FY2022": 12000, "FY2021": 4000},
+    "Credit valuation adjustment": {"FY2022": 1000, "FY2021": 10000},
+    "Securitisation exposures in the non-trading book": {"FY2022": 163000, "FY2021": 168000},
+    "Position, foreign exchange and commodities risks": {"FY2022": 6000, "FY2021": 0},
+    "Operational risk": {"FY2022": 67000, "FY2021": 57000},
+}
 bw.add_rwa_breakdown_sheet(
     title="Arab Bank Europe Plc — RWA Breakdown",
     subtitle="Entity-level basis",
-    rows=[("DATA", "RWA breakdown by risk category", {y: "Not publicly disclosed" for y in YEARS})],
-    sources_text=p3_sources(RATIO_PAGES) + "\n\n" + RWA_NOT_DISCLOSED_NOTE,
+    rows=(
+        [("DATA", label, gbp_spot(eur)) for label, eur in RWA_BREAKDOWN_EUR.items()]
+        + [("TOTAL", "Total risk-weighted assets", {y: p3_total_rwa_gbp[y] for y in ("FY2022", "FY2021")})]
+    ),
+    sources_text=(
+        "FY2022/FY2021: recovered Pillar3.pdf's 'Overview of RWA' table, 'EAB PLC' entity-only RWA columns "
+        "(not the 'EAB Group' columns, for consistency with the rest of this workbook), converted from EUR to "
+        "£'000 at each year's period-end spot rate. " + PILLAR3_SOURCES + "\n\n"
+        "FY2023/FY2024: " + RWA_NOT_DISCLOSED_NOTE
+    ),
     first_col_width=54,
-    source_height=160,
+    source_height=200,
 )
 
+metric("Leverage Ratio", None,
+       [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)],
+       note="FY2022 only - Pillar3.pdf's own FY2021 comparative is flagged 'n/a': the PRA's leverage ratio "
+            "disclosure template only took effect from 1 Jan 2022, so no FY2021 comparative was ever produced "
+            "(not a sourcing gap). FY2023/FY2024: " + NOT_DISCLOSED_NOTE,
+       extra_sources=PILLAR3_SOURCES)
+
+metric("LCR", None, [("Liquidity Coverage Ratio", LCR_RATIO)],
+       note="FY2023/FY2024: " + NOT_DISCLOSED_NOTE, extra_sources=PILLAR3_SOURCES)
+
+metric("NSFR", None, [("Net Stable Funding Ratio", NSFR_RATIO)],
+       note="FY2022 only - Pillar3.pdf's own FY2021 comparative is flagged 'n/a': the PRA's NSFR disclosure "
+            "template only took effect from 1 Jan 2022, so no FY2021 comparative was ever produced (not a "
+            "sourcing gap). FY2023/FY2024: " + NOT_DISCLOSED_NOTE,
+       extra_sources=PILLAR3_SOURCES)
+
 bw.add_not_disclosed_metric_sheets(
-    ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
-    p3_sources(RATIO_PAGES),
+    ["MREL Ratio"],
+    p3_sources(RATIO_PAGES) + "\n\n" + PILLAR3_SOURCES,
     per_note={
-        "Leverage Ratio": NOT_DISCLOSED_NOTE,
-        "LCR": NOT_DISCLOSED_NOTE,
-        "NSFR": NOT_DISCLOSED_NOTE,
-        "MREL Ratio": NOT_DISCLOSED_NOTE,
+        "MREL Ratio": NOT_DISCLOSED_NOTE + " Not disclosed in the recovered Pillar3.pdf either (no MREL section "
+                                            "anywhere in that document) - EAB plc is likely below the MREL "
+                                            "threshold that would require this disclosure.",
     },
 )
 
@@ -697,9 +843,11 @@ bw.add_overview_sheet(
          "workbook are converted from Arab Bank Europe Plc's (Europe Arab Bank plc's) native EUR reporting - see "
          "the Cash Flow Statement sheet's source note for the full FX methodology and exact rates used. Ratios "
          "(%) are shown exactly as reported in EUR and were not converted. Only 2 of the usual 6 headline ratios "
-         "are plotted here (CET1 Ratio, Total Capital Ratio) - Tier 1 Ratio, Leverage Ratio, LCR and NSFR are not "
-         "publicly disclosed for this entity, see the individual Pillar 3 sheets and ENTITY_NOTE for why. FY2025 "
-         "is excluded entirely (no accessible Annual Report found - see ENTITY_NOTE). 'Other movements, net' in "
+         "are plotted here (CET1 Ratio, Total Capital Ratio, both disclosed for all 4 years) - Tier 1 Ratio, "
+         "Leverage Ratio, LCR and NSFR are only disclosed for FY2021/FY2022 (LCR)/FY2022 (Leverage, NSFR), via a "
+         "recovered standalone Pillar 3 document, and not at all for FY2023/FY2024, see the individual Pillar 3 "
+         "sheets and ENTITY_NOTE for why. FY2025 is excluded entirely - its Annual Report was found on a "
+         "2026-09-07 re-check but not yet incorporated (see ENTITY_NOTE for why). 'Other movements, net' in "
          "the equity bridge absorbs the FX spot/average rate differential (near-zero in EUR-native terms).",
 )
 

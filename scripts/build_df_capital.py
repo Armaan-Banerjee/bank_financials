@@ -104,6 +104,17 @@ STATEMENTS_SOURCES = (
     "boundary (each year's closing Total equity ties to both the next year's own opening balance and that "
     "year's own Balance Sheet Total equity, including FY2020's own closing GBP50,889k tying to FY2021's own "
     "opening balance) - no plug rows needed anywhere in this series.\n"
+    f"INVESTMENT SECURITIES COMPOSITION: the Investment/debt securities line is 100% one bucket in every year "
+    f"shown, but which bucket changes over time (confirmed against each year's own note, no sub-row split is "
+    f"possible since there is nothing to reconcile against within a year): FY2020 (GBP66,601k) and FY2021 "
+    f"(GBP108,867k) are 100% FVOCI debt securities split between Treasury bills (GBP49,011k/GBP53,085k) and UK "
+    f"government gilts (GBP17,590k/GBP55,782k) - both UK sovereign issuer, just different instruments - Annual "
+    f"Report and Accounts 2021, Note 20 'Debt securities', p.139 - {AR2021_URL}. FY2022 (GBP22,964k) and FY2023 "
+    f"(GBP14,839k) are 100% FVOCI UK government gilts (Treasury bills line is GBPnil both years) - Annual Report "
+    f"and Accounts 2023, Note 21 'Debt securities', p.149 - {AR2023_URL}. FY2024 (GBP769k) and FY2025 (GBP5,722k) "
+    f"are 100% a Euro liquidity money market fund carried at amortised cost/not measured at fair value (the FVOCI "
+    f"gilts/T-bills book was fully sold down during FY2024) - Annual Report and Accounts 2025, Note 20 "
+    f"'Investment Securities', p.149 - {AR2025_URL}.\n"
     "PRESENTATION NOTE: FY2021-FY2022 label the investment line 'Debt securities'; FY2024-FY2025 relabel it "
     "'Investment securities' (same line, a money market fund holding was added) - shown on one row. FY2020- "
     "FY2021's cash line is labelled 'Cash and cash equivalents' vs later years' 'Cash and balances at central "
@@ -128,7 +139,8 @@ bw.add_balance_sheet_sheet(
          {"FY2025": 131676, "FY2024": 110030, "FY2023": 89552, "FY2022": 107353, "FY2021": 29597, "FY2020": 21233}),
         ("DATA", "Loans and advances to banks",
          {"FY2025": 5894, "FY2024": 3771, "FY2023": 3475, "FY2022": 3848}),
-        ("DATA", "Investment/debt securities",
+        ("DATA", "Investment/debt securities (UK govt gilts/T-bills, FVOCI, FY2020-FY2023; money market "
+                 "fund, amortised cost, FY2024-FY2025)",
          {"FY2025": 5722, "FY2024": 769, "FY2023": 14839, "FY2022": 22964, "FY2021": 108867, "FY2020": 66601}),
         ("DATA", "Derivatives held for risk management (asset)",
          {"FY2025": 411, "FY2024": 295, "FY2023": 537, "FY2022": 57}),

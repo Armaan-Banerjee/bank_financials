@@ -42,6 +42,12 @@ class NormalizationTests(unittest.TestCase):
         self.assertEqual(normalized["period_length_months"], 15)
         self.assertFalse(normalized["annual_eligible"])
 
+    def test_historical_fiscal_year_is_annual_eligible(self):
+        normalized = normalize_observation(row(year="FY1973"))
+        self.assertEqual(normalized["fiscal_year"], 1973)
+        self.assertEqual(normalized["period_type"], "annual")
+        self.assertTrue(normalized["annual_eligible"])
+
     def test_explicit_basis_note_is_classified(self):
         self.assertEqual(
             classify_reporting_basis("Consolidated Group basis, £m."),

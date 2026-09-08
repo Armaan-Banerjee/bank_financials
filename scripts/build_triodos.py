@@ -193,7 +193,10 @@ balance_sheet_rows = [
     ("DATA", "On demand deposits with credit institutions", {"FY2025": 18184, "FY2024": 10684}),
     ("DATA", "Loans and advances to credit institutions", {"FY2023": 31575, "FY2022": 34611, "FY2021": 42177, "FY2020": 22705, "FY2019": 27455}),
     ("DATA", "Loans and advances to customers", {"FY2025": 1098334, "FY2024": 1088413, "FY2023": 1111377, "FY2022": 1121305, "FY2021": 1132132, "FY2020": 1070386, "FY2019": 975025}),
-    ("DATA", "Debt securities", {"FY2025": 643064, "FY2024": 551669, "FY2023": 456689, "FY2022": 345801, "FY2021": 269035, "FY2020": 153005, "FY2019": 115269}),
+    ("DATA", "Total debt securities", {"FY2025": 643064, "FY2024": 551669, "FY2023": 456689, "FY2022": 345801, "FY2021": 269035, "FY2020": 153005, "FY2019": 115269}),
+    ("DATA", "Government securities (issued by public bodies)", {"FY2025": 296183, "FY2024": 167494, "FY2023": 171574, "FY2022": 154662, "FY2021": 124958, "FY2020": 62207, "FY2019": 71259}),
+    ("DATA", "Debt securities issued by other issuers", {"FY2025": 346887, "FY2024": 384178, "FY2023": 285118, "FY2022": 191142, "FY2021": 144081, "FY2020": 90808, "FY2019": 44016}),
+    ("DATA", "Expected credit loss on debt securities", {"FY2025": -7, "FY2024": -3, "FY2023": -3, "FY2022": -3, "FY2021": -4, "FY2020": -10, "FY2019": -7}),
     ("DATA", "Intangible fixed assets", {"FY2025": 1183, "FY2024": 1371, "FY2023": 927, "FY2022": 1162, "FY2021": 1183, "FY2020": 1312, "FY2019": 1548}),
     ("DATA", "Property, plant and equipment", {"FY2025": 10497, "FY2024": 11032, "FY2023": 11230, "FY2022": 11624, "FY2021": 11957, "FY2020": 12327, "FY2019": 12456}),
     ("DATA", "Right of use assets", {"FY2025": 733, "FY2024": 766, "FY2023": 912, "FY2022": 1049, "FY2021": 1180, "FY2020": 1322, "FY2019": 977}),
@@ -218,16 +221,40 @@ balance_sheet_rows = [
     ("TOTAL", "Total equity and liabilities", {"FY2025": 2043128, "FY2024": 1964329, "FY2023": 1897815, "FY2022": 1876832, "FY2021": 1834464, "FY2020": 1639370, "FY2019": 1378369}),
 ]
 
+BALANCE_SHEET_SOURCES = (
+    STATEMENTS_SOURCES
+    + "\n\nDEBT SECURITIES BREAKDOWN (issuer type, each year's own Note 12/13 'Debt Securities'): 'Government "
+    "securities (issued by public bodies)' = that note's own 'Issued by public bodies' line (UK central "
+    "government plus, in most years, regional government/public sector entities - not broken out separately "
+    "here); 'Debt securities issued by other issuers' = that note's own 'Issued by other issuers' line (credit "
+    "institutions, corporate debt securities, multilateral development banks - see the note's own maturity-"
+    "analysis sub-table for the issuer-type detail within this leg); 'Expected credit loss on debt securities' "
+    "= that note's own ECL line. The three sum exactly to 'Total debt securities' for FY2020-FY2024; FY2025 and FY2019 each have "
+    "a genuine £1k internal rounding gap within their own source note (FY2025: Note 12's own three lines sum "
+    "to £643,063k against its own stated 'Balance sheet value as at 31 December' of £643,064k; FY2019: Note "
+    "13's own three lines sum to £115,268k against its own stated total of £115,269k) - both years reproduced "
+    "exactly as each note states its own lines and its own total, not plugged. Per AR2025's own 'Financial "
+    "instruments' accounting policy (p.61): 'All of the Bank's financial instruments are measured at amortised "
+    "cost less impairment allowance where applicable' - i.e. there is no FVOCI/FVTPL/trading leg to split out "
+    "for this book in any year; 100% of debt securities are held at amortised cost. Note pages: FY2025/FY2024 "
+    f"Note 12, AR2025 p.74 - {AR2025_URL}; FY2023/FY2022 Note 12, AR2023 p.95 - {AR2023_URL}; FY2021/FY2020 "
+    f"Note 12, AR2021 p.50 - {AR2021_URL}; FY2019 Note 13, AR2019 p.48 - {AR2019_URL}."
+)
+
 bw.add_balance_sheet_sheet(
     title="Triodos Bank UK Limited — Balance Sheet",
     subtitle="TBUK entity-level (Company) basis, £'000. Total assets = Total liabilities + Total equity for "
               "every year (off by £1k for FY2019, immaterial rounding). FY2025 Total equity has a genuine £4k "
               "gap against the Statement of Changes in Equity sheet's own closing figure; FY2019's own figures "
-              "here differ from later years' restated FY2019 comparatives - see source note for both, not plugs.",
+              "here differ from later years' restated FY2019 comparatives - see source note for both, not plugs. "
+              "Debt securities are broken down below by issuer type (government/public bodies vs other issuers, "
+              "net of expected credit loss) per each year's own Note 12/13 - see source note; all debt "
+              "securities are held at amortised cost (no fair-value-through-P&L/OCI leg disclosed, see source "
+              "note).",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=68,
-    source_height=340,
+    source_height=420,
     unit_suffix=" (£'000)",
 )
 

@@ -145,6 +145,20 @@ pl_rows = [
     ("TOTAL", "Total revenue / Total net income (FY2025's own report relabels this subtotal 'Total net income' - same position in the account, not a different line)", {"FY2025": 12286, "FY2024": 12765, "FY2023": 8289, "FY2022": 9221, "FY2021": 3777}),
     ("DATA", "Administrative expenses", {"FY2025": -11439, "FY2024": -9065, "FY2023": -7495, "FY2022": -8202, "FY2021": -7711}),
     ("DATA", "Depreciation and amortisation", {"FY2025": -666, "FY2024": -365, "FY2023": -392, "FY2022": -475, "FY2021": -743}),
+    # Not a line the source statement itself prints - the Bank's own P&L has
+    # no combined opex subtotal in any year (its own subtotal position
+    # shifts year to year, see the two TOTAL rows below). This row is simply
+    # Administrative expenses + Depreciation and amortisation - the two
+    # genuinely routine operating-cost lines present every year - deliberately
+    # excluding the DB Pension Scheme remeasurement item just below (a one-off
+    # item that flips between "Other charges" and "Other income" depending on
+    # the year, not a stable operating cost) and the impairment line further
+    # down (credit-related, kept out of opex per this project's convention).
+    # Added 2026-09-07 so cost-to-income analysis has a "Total operating
+    # expenses" numerator to work from.
+    ("TOTAL", "Total operating expenses (sum of Administrative expenses + Depreciation and amortisation above - not itself a printed subtotal)", {
+        "FY2025": -12105, "FY2024": -9430, "FY2023": -7887, "FY2022": -8677, "FY2021": -8454,
+    }),
     ("DATA", "Other charges - DB Pension Scheme / Other income (same underlying pension remeasurement item, presented as an add-back 'Other charges' in FY2024/FY2025's own account and as 'Other income' in FY2023/FY2022's own account)", {"FY2025": 0, "FY2024": 224, "FY2023": 228, "FY2022": 41, "FY2021": 12}),
     ("TOTAL", "Operating profit/(loss) (FY2021's own subtotal position, before Other charges)", {"FY2021": -4677}),
     ("TOTAL", "Profit before provision and taxation (FY2022/FY2023's own subtotal position, after Other income)", {"FY2023": 630, "FY2022": 585}),

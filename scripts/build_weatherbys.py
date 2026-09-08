@@ -141,6 +141,23 @@ rows = [
 
 AR2024_OWN_URL = AR_URLS["FY2024"]
 
+DEBT_SECURITIES_NOTE = (
+    "DEBT SECURITIES MEASUREMENT BASIS: Note 32 'Financial instruments' of each Annual Report (the "
+    "table of financial assets/liabilities by IFRS 9 measurement category) states 'Debt Securities' is "
+    "entirely within 'Instruments measured at amortised cost' - not fair value through OCI or fair value "
+    "through profit or loss - confirmed identically in AR2024 (p.71, FY2024/FY2023 columns: GBP248,749k/"
+    f"GBP146,097k - {AR_URLS['FY2024']}) and AR2022 (Note 32, FY2022/FY2021 columns: GBP207,605k/GBP117,625k "
+    f"- {AR_URLS['FY2022']}). No note discloses a further split of the balance by issuer type (UK "
+    "government gilts/treasury bills/sovereign vs supranational/corporate/other) in any year reviewed - "
+    "Note 17 'Debt securities' only reconciles cost, premiums/discounts and book value, and the maturity-"
+    "gap table (Note 33) breaks the balance down by remaining term, not issuer, so the label below is a "
+    "relabel of the existing single line (measurement basis only), not a multi-row split. FY2015-FY2020 "
+    "are Companies House scanned-image filings with no machine-readable Note 32 equivalent to verify "
+    "against; given the consistent 'amortised cost' classification across every machine-readable year "
+    "(FY2021-FY2025) and no indication of a change in accounting policy, the same measurement basis is "
+    "assumed - not independently re-verified - for FY2015-FY2020."
+)
+
 BS_RESTATEMENT_NOTE = (
     "AR2025's own restated FY2024 comparative balance sheet (note 36, 'Statement of financial position "
     "reclassification') moves broker commissions and interest receivable/payable between prepayments, loans "
@@ -176,6 +193,7 @@ BS_SOURCES = (
     "the Group held, unrelated to the GBP10m Tier 2 'Subordinated loan' liability the Bank itself issued "
     "in 2018 (see FY2018's Cash Flow Statement). 'Provisions for liabilities' (a small liability-side "
     "balance, FY2015-FY2018 only) was not separately disclosed on the Balance Sheet from FY2019 onward."
+    + " " + DEBT_SECURITIES_NOTE
 )
 
 bs_rows = [
@@ -183,7 +201,7 @@ bs_rows = [
     ("DATA", "Cash at banks / Loans and advances to banks", {"FY2025": 575367, "FY2024": 687343, "FY2023": 624875, "FY2022": 585221, "FY2021": 592380, "FY2020": 326087, "FY2019": 261050, "FY2018": 297773, "FY2017": 271992, "FY2016": 215788, "FY2015": 135944}),
     ("DATA", "Derivative financial assets", {"FY2025": 1394, "FY2024": 5018, "FY2023": 5194, "FY2022": 9813, "FY2021": 961, "FY2020": 30, "FY2019": 265, "FY2018": 377, "FY2017": 81, "FY2016": 37, "FY2015": 16}),
     ("DATA", "Loans and advances to customers", {"FY2025": 1006160, "FY2024": 859672, "FY2023": 821700, "FY2022": 775573, "FY2021": 744591, "FY2020": 678564, "FY2019": 588924, "FY2018": 474728, "FY2017": 387504, "FY2016": 327384, "FY2015": 276621}),
-    ("DATA", "Debt securities", {"FY2025": 420989, "FY2024": 248749, "FY2023": 146097, "FY2022": 207605, "FY2021": 117625, "FY2020": 134258, "FY2019": 98093, "FY2018": 89545, "FY2017": 81265, "FY2016": 76021, "FY2015": 100903}),
+    ("DATA", "Debt securities (measured at amortised cost)", {"FY2025": 420989, "FY2024": 248749, "FY2023": 146097, "FY2022": 207605, "FY2021": 117625, "FY2020": 134258, "FY2019": 98093, "FY2018": 89545, "FY2017": 81265, "FY2016": 76021, "FY2015": 100903}),
     ("DATA", "Investment in joint venture", {"FY2024": 670, "FY2023": 670, "FY2022": 610, "FY2021": 330, "FY2020": 318, "FY2019": 320, "FY2018": 290, "FY2017": 230, "FY2016": 240, "FY2015": 234}),
     ("DATA", "Subordinated term loan (Group's own asset, unrelated to the Tier 2 liability below)", {"FY2016": 50, "FY2015": 50}),
     ("DATA", "Investments", {"FY2025": 364, "FY2024": 384, "FY2023": 455, "FY2022": 438, "FY2021": 542, "FY2020": 546, "FY2019": 717, "FY2018": 331, "FY2017": 280, "FY2016": 235}),
@@ -255,6 +273,12 @@ pl_rows = [
     ("DATA", "(Loss)/Gain on investment property", {"FY2016": -149, "FY2015": 1055}),
     ("DATA", "Administrative expenses", {"FY2025": -65873, "FY2024": -55163, "FY2023": -50274, "FY2022": -39014, "FY2021": -31654, "FY2020": -26942, "FY2019": -25426, "FY2018": -21661, "FY2017": -19315, "FY2016": -16391, "FY2015": -13534}),
     ("DATA", "Depreciation and amortisation", {"FY2025": -7065, "FY2024": -4505, "FY2023": -2758, "FY2022": -2786, "FY2021": -2402, "FY2020": -1794, "FY2019": -1204, "FY2018": -1060, "FY2017": -805, "FY2016": -434, "FY2015": -115}),
+    # Not itself a printed AR subtotal - the sum of Administrative expenses +
+    # Depreciation and amortisation above. Excludes the derivative/investment
+    # property valuation movements, credit impairment charge, and joint
+    # venture share above/below per standard cost-to-income convention
+    # (operating costs only, not credit risk or valuation items).
+    ("TOTAL", "Total operating expenses (sum of Administrative expenses + Depreciation and amortisation - excludes derivative/property valuation movements, credit impairment, and joint venture share)", {"FY2025": -72938, "FY2024": -59668, "FY2023": -53032, "FY2022": -41800, "FY2021": -34056, "FY2020": -28736, "FY2019": -26630, "FY2018": -22721, "FY2017": -20120, "FY2016": -16825, "FY2015": -13649}),
     ("DATA", "Impairment charge on loans and advances", {"FY2025": -4648, "FY2024": -4571, "FY2023": -2784, "FY2022": -1400, "FY2021": -1559, "FY2020": -3298, "FY2019": -795, "FY2018": -809, "FY2017": -836, "FY2016": -250, "FY2015": -497}),
     ("DATA", "Other provisions for liabilities", {"FY2019": 8, "FY2018": 0, "FY2017": -15, "FY2016": -30, "FY2015": -95}),
     ("DATA", "Share of operating profit in joint venture", {"FY2024": 400, "FY2023": 400, "FY2022": 340, "FY2021": 280, "FY2020": 268, "FY2019": 270, "FY2018": 240, "FY2017": 180, "FY2016": 190, "FY2015": 184}),

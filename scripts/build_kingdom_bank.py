@@ -256,7 +256,17 @@ STATEMENTS_SOURCES = (
     "Sheets); no Revaluation reserve existed before FY2007 (the Bank's freehold properties were first "
     "professionally revalued that year); a 'Loans and advances from credit institutions due within 3 "
     "months' liability line existed only FY2006-FY2009 (nil from FY2010 onward) - see the dedicated row "
-    "below."
+    "below. (11) The 'Debt securities' line's only note-level breakdown across all years reviewed is the "
+    "FY2009 Annual Report's Note 10 (p.17), which shows the full £1,692k FY2009 balance as a single "
+    "'Available-for-sale' bucket in its financial-instruments valuation-hierarchy table, valued as Level 1 "
+    "(\"unadjusted quoted prices in active markets\"), with the accompanying text stating this Level 1 "
+    "category \"includes UK government bonds and gilts\" - the only issuer-type detail disclosed in any "
+    "year. No later year's Debt securities note (e.g. FY2012 Note 10, p.20, or FY2013's equivalent) "
+    "discloses any measurement-basis or issuer-type split at all - each shows only a single repayment-"
+    "maturity line, with no comparison basis for a genuine sub-row split. Given this, and that every "
+    "year's balance is immaterial (£25k or less in FY2011-FY2013, nil FY2010/FY2014, versus total assets "
+    "of ~£48-52m each of those years), the row above is labelled in place using the one instance of "
+    "disclosed detail (FY2009) rather than split into sub-rows."
 )
 
 ASSET_QUALITY_SOURCES = (
@@ -375,7 +385,8 @@ bs_rows = [
         "FY2013": 28355, "FY2012": 27886, "FY2011": 28238, "FY2010": 32538, "FY2009": 33073, "FY2008": 26860,
         "FY2007": 20322, "FY2006": 21208, "FY2005": 17900, "FY2004": 16680,
     }),
-    ("DATA", "Debt securities (not disclosed before FY2009, nil FY2010)", {
+    ("DATA", "Debt securities - available-for-sale, UK government gilts/bonds per FY2009 disclosure "
+             "(not disclosed before FY2009, nil FY2010; see PRESENTATION NOTE (11))", {
         "FY2014": 0, "FY2013": 24, "FY2012": 25, "FY2011": 25, "FY2010": 0, "FY2009": 1692,
     }),
     ("DATA", "Investment property", {"FY2025": 650, "FY2020": 667, "FY2019": 667, "FY2018": 667, "FY2017": 500, "FY2016": 498}),
@@ -519,7 +530,7 @@ pl_rows = [
          "FY2013": 1372, "FY2012": 1234, "FY2011": 1399, "FY2010": 1266, "FY2009": 1083, "FY2008": 1149,
          "FY2007": 953, "FY2006": 900, "FY2005": 761,
      }),
-    ("DATA", "Administrative expenses", {
+    ("TOTAL", "Administrative expenses", {
         "FY2025": -7241, "FY2024": -4776, "FY2023": -3597, "FY2022": -2953, "FY2021": -2437,
         "FY2020": -2167, "FY2019": -1780, "FY2018": -1776, "FY2017": -1538, "FY2016": -1554, "FY2015": -1487, "FY2014": -1413,
         "FY2013": -1241, "FY2012": -1201, "FY2011": -1185, "FY2010": -1194, "FY2009": -1082, "FY2008": -838,

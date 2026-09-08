@@ -211,8 +211,18 @@ income_statement_rows = [
     ("DATA", "Investment gains/(losses) on debt securities", {"FY2024": -371214, "FY2023": -27579, "FY2022": -12251, "FY2021": -30549, "FY2020": 328406, "FY2019": 4366, "FY2018": 37062, "FY2017": 4681, "FY2016": 24643}),
     ("DATA", "Fees and commissions payable to Investment Manager", {"FY2025": -32837, "FY2024": -3575, "FY2023": -19845, "FY2022": -37299, "FY2021": -29476, "FY2020": -43050, "FY2019": -43816, "FY2018": -51541, "FY2017": -52371, "FY2016": -66220}),
     ("DATA", "Other operating income", {"FY2025": 4302, "FY2024": 4900, "FY2023": 6543, "FY2022": 11797, "FY2021": 177145, "FY2020": 2924, "FY2019": 5692, "FY2018": 3666, "FY2017": 7218, "FY2016": 3925}),
+    # Derived sum (not a printed AR subtotal) of every DATA row in the Income
+    # section above, so the cross-bank insights pipeline (in041_spend_metrics.py)
+    # has a TOTAL-tagged revenue row to divide against. FY2025 excludes
+    # "Investment gains/(losses) on debt securities" since the AR doesn't
+    # disclose that line for the 9-month FY2025 period.
+    ("TOTAL", "Total income", {"FY2025": 515736, "FY2024": 365797, "FY2023": 638482, "FY2022": 582651, "FY2021": 626954, "FY2020": 754679, "FY2019": 535248, "FY2018": 552171, "FY2017": 511877, "FY2016": 493933}),
     ("DATA", "Administrative expenses - staff costs", {"FY2025": -241735, "FY2024": -310501, "FY2023": -281131, "FY2022": -236031, "FY2021": -202930, "FY2020": -205751, "FY2019": -198443, "FY2018": -191928, "FY2017": -180526, "FY2016": -179379}),
     ("DATA", "Administrative expenses - other", {"FY2025": -230594, "FY2024": -246970, "FY2023": -260190, "FY2022": -212268, "FY2021": -154761, "FY2020": -150767, "FY2019": -162438, "FY2018": -159701, "FY2017": -162332, "FY2016": -162246}),
+    # Derived sum (not a printed AR subtotal) of the two administrative expense
+    # DATA rows above, so the cross-bank insights pipeline has a TOTAL-tagged
+    # opex row to divide against.
+    ("TOTAL", "Total administrative expenses", {"FY2025": -472329, "FY2024": -557471, "FY2023": -541321, "FY2022": -448299, "FY2021": -357691, "FY2020": -356518, "FY2019": -360881, "FY2018": -351629, "FY2017": -342858, "FY2016": -341625}),
     ("DATA", "Depreciation and amortisation", {"FY2025": -9635, "FY2024": -13288, "FY2023": -9937, "FY2022": -7168, "FY2021": -3633, "FY2020": -14732, "FY2019": -17132, "FY2018": -18651, "FY2017": -18377, "FY2016": -14038}),
     ("TOTAL", "Operating surplus/(deficit)", {"FY2025": 33772, "FY2024": -204962, "FY2023": 87224, "FY2022": 127184, "FY2021": 265630, "FY2020": 383429, "FY2019": 157235, "FY2018": 181891, "FY2017": 150642, "FY2016": 138270}),
     ("DATA", "Fair value adjustment to investments", {"FY2025": 385195, "FY2024": 694496, "FY2023": 391546, "FY2022": -1845411, "FY2021": 711942, "FY2020": 318792, "FY2019": 1402028, "FY2018": -754426, "FY2017": 729845, "FY2016": 666013}),

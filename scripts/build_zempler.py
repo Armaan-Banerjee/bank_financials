@@ -116,7 +116,15 @@ STATEMENTS_SOURCES = (
     "into Other assets - and both years' Total assets figures already include it. "
     "All TOTAL rows (Total assets/liabilities/equity, Profit before/after taxation, Total comprehensive income) tie "
     "exactly across Balance Sheet <-> Equity Statement <-> P&L for every year, including a zero-plug-row equity "
-    "roll-forward chaining from the 31 March 2021 opening balance through to 31 March 2026.\n\n"
+    "roll-forward chaining from the 31 March 2021 opening balance through to 31 March 2026.\n"
+    "'Total investment securities' is broken down into Treasury bills / UK government issued gilts / SSA "
+    "(Sovereign, Supranational, Agency) bonds / Unamortised interest and discount, per each annual report's own "
+    "'Investment securities' note (continued) table: Note 10 (p.91) of the FY2026 Annual Report for FY2026/FY2025 "
+    f"({AR2026_URL}); Note 10 (p.91) of the FY2025 Annual Report for FY2024 ({AR2025_URL}); Note 11 of the FY2023 "
+    f"Annual Report for FY2023/FY2022 ({AR2023_URL}). Each annual report's note also states 'All investment "
+    "securities are held at amortised cost' for every year shown - there is no FVOCI/FVTPL/mark-to-market leg to "
+    "this book across FY2022-FY2026. The SSA Bonds category was first disclosed in FY2025 (nil in FY2022-FY2024); "
+    "Treasury bills were nil in FY2022. Sub-rows sum exactly to 'Total investment securities' each year.\n\n"
     + ENTITY_NOTE
 )
 
@@ -126,7 +134,11 @@ STATEMENTS_SOURCES = (
 bs_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at banks", {"FY2026": 396832, "FY2025": 369088, "FY2024": 386025, "FY2023": 380533, "FY2022": 325327}),
-    ("DATA", "Investment securities", {"FY2026": 332687, "FY2025": 266859, "FY2024": 167073, "FY2023": 129949, "FY2022": 125196}),
+    ("DATA", "Total investment securities", {"FY2026": 332687, "FY2025": 266859, "FY2024": 167073, "FY2023": 129949, "FY2022": 125196}),
+    ("DATA", "Treasury bills - investment securities at amortised cost", {"FY2026": 60000, "FY2025": 69368, "FY2024": 75354, "FY2023": 61045, "FY2022": 0}),
+    ("DATA", "UK government issued gilts - investment securities at amortised cost", {"FY2026": 135000, "FY2025": 125000, "FY2024": 95000, "FY2023": 70000, "FY2022": 125000}),
+    ("DATA", "SSA (Sovereign, Supranational, Agency) bonds - investment securities at amortised cost", {"FY2026": 140000, "FY2025": 75000, "FY2024": 0, "FY2023": 0, "FY2022": 0}),
+    ("DATA", "Unamortised interest and discount on investment securities", {"FY2026": -2313, "FY2025": -2509, "FY2024": -3281, "FY2023": -1096, "FY2022": 196}),
     ("DATA", "Derivative financial assets", {"FY2025": 0, "FY2024": 137}),
     ("DATA", "Loans and advances to customers", {"FY2026": 35122, "FY2025": 25452, "FY2024": 28225, "FY2023": 22593, "FY2022": 21779}),
     ("DATA", "Deferred tax", {"FY2026": 1781, "FY2025": 3051, "FY2024": 4730}),

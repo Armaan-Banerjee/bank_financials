@@ -230,7 +230,7 @@ bw.add_balance_sheet_sheet(
         ("DATA", "Loans to group companies", {
             "FY2025": 700, "FY2024": 499, "FY2023": 369, "FY2022": 205, "FY2021": 120,
         }),
-        ("DATA", "Debt securities", {
+        ("DATA", "Debt securities - UK government securities (amortised cost)", {
             "FY2025": 100346, "FY2024": 118562, "FY2023": 19510, "FY2022": 84783, "FY2021": 221816,
         }),
         ("DATA", "Derivative financial instruments (assets)", {
@@ -298,9 +298,20 @@ bw.add_balance_sheet_sheet(
             "FY2022": 2798317, "FY2021": 2254178, "FY2020": 1867932,
         }),
     ],
-    sources_text=statements_sources(),
+    sources_text=(
+        statements_sources() + "\n\n"
+        "DEBT SECURITIES COMPOSITION: Note 10 'Debt securities' of each year's own Notes to the Financial"
+        " Statements (Report and Accounts 2025 p.56 for FY2025/FY2024; Report and Accounts 2023 p.59 for"
+        " FY2023; Report and Accounts 2022 p.67 for FY2022/FY2021) shows the entire debt securities balance"
+        " in a single line, 'Issued by public bodies - government securities', in every one of the 5 years"
+        " covered (FY2021-FY2025) - i.e. 100% UK government/gilt issuance, with no supranational, corporate"
+        " or other-issuer holdings disclosed in any year. Note 19 'Financial instruments' of the same"
+        " accounts classifies debt securities as 'Measured at amortised cost' throughout, with no FVOCI/FVTPL/"
+        " available-for-sale/trading debt securities holdings disclosed. There is accordingly no sub-row"
+        " breakdown to add; the row label above has been amended in place to reflect this."
+    ),
     first_col_width=58,
-    source_height=210,
+    source_height=230,
 )
 
 bw.add_income_statement_sheet(

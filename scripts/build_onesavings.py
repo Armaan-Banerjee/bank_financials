@@ -91,7 +91,15 @@ STATEMENTS_SOURCES = (
     f"Comprehensive Income (Group) p.94, Statement of Financial Position p.95, Statement of Changes in "
     f"Equity (Group) p.96 and (Company) p.97 — {AR_2021_URL}\n"
     f"FY2020: OneSavings Bank plc Annual Report and Financial Statements for the year ended 31 December 2020, Company comparative columns — https://www.onesavingsbank.com/media/03kpilxl/onesavings-bank-plc-2020-accounts.pdf\n"
-    f"FY2019: OneSavings Bank plc Annual Report and Accounts for the year ended 31 December 2019, Statements pp.163-165 — {AR_2019_URL}\n\n" + ENTITY_NOTE
+    f"FY2019: OneSavings Bank plc Annual Report and Accounts for the year ended 31 December 2019, Statements pp.163-165 — {AR_2019_URL}\n\n"
+    "Investment securities measurement-basis breakdown (Company column, £m) — 'Investment securities' note:\n"
+    f"FY2025 & FY2024: Note 15, p.129 — {AR_2025_URL}\n"
+    f"FY2024 & FY2023 (2024 filing's own comparative): Note 15, p.128 — {AR_2024_URL}\n"
+    f"FY2023 & FY2022: Note 15, p.122 — {AR_2023_URL}\n"
+    f"FY2021 & FY2020: Note 18, p.135 — {AR_2021_URL}\n"
+    "The 2023-2025 Companies House filings are scanned/image-only and were OCR'd; each year's amortised "
+    "cost + FVOCI + FVTPL legs were checked to sum exactly to that year's own 'Investment securities' "
+    "Balance Sheet total above.\n\n" + ENTITY_NOTE
 )
 
 bs_rows = [
@@ -99,6 +107,9 @@ bs_rows = [
     ("DATA", "Cash in hand", {"FY2025": 0.4, "FY2024": 0.3, "FY2023": 0.4, "FY2022": 0.4, "FY2021": 0.5}),
     ("DATA", "Loans and advances to credit institutions", {"FY2025": 1424.8, "FY2024": 1129.4, "FY2023": 1002.7, "FY2022": 1506.1, "FY2021": 1405.0}),
     ("DATA", "Investment securities", {"FY2025": 633.2, "FY2024": 528.7, "FY2023": 396.2, "FY2022": 211.4, "FY2021": 16.2}),
+    ("DATA", "Investment securities held at amortised cost", {"FY2025": 390.1, "FY2024": 302.4, "FY2023": 99.9, "FY2022": 61.1, "FY2021": 0.0}),
+    ("DATA", "Investment securities held at FVOCI", {"FY2025": 243.0, "FY2024": 226.0, "FY2023": 296.0, "FY2022": 149.8, "FY2021": 15.5}),
+    ("DATA", "Investment securities held at FVTPL", {"FY2025": 0.1, "FY2024": 0.3, "FY2023": 0.3, "FY2022": 0.5, "FY2021": 0.7}),
     ("DATA", "Loans and advances to customers", {"FY2025": 12656.1, "FY2024": 11958.8, "FY2023": 11432.2, "FY2022": 10531.9, "FY2021": 9476.4}),
     ("DATA", "Fair value adjustments on hedged assets", {"FY2025": 56.1, "FY2024": -68.7, "FY2023": -11.6, "FY2022": -200.8, "FY2021": 1.3}),
     ("DATA", "Derivative assets", {"FY2025": 60.9, "FY2024": 157.0, "FY2023": 180.8, "FY2022": 234.0, "FY2021": 50.5}),
@@ -171,11 +182,14 @@ bw.add_balance_sheet_sheet(
               "unchanged FY2021-FY2023) is not disclosed as its own line from FY2024 onward - either redeemed "
               "or folded into 'Subordinated liabilities' (which itself stays flat at 156.4 across FY2023-FY2025); "
               "shown as a genuine presentation change, not forced together. All 5 years' Total assets = Total "
-              "liabilities + Total equity exactly.",
+              "liabilities + Total equity exactly. The three 'Investment securities held at ...' rows are the "
+              "Company-level measurement-basis breakdown from the Investment securities note (amortised cost / "
+              "FVOCI / FVTPL) and sum exactly to the 'Investment securities' line above each year - not an "
+              "additional asset, just its own sub-analysis.",
     rows=bs_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=64,
-    source_height=260,
+    source_height=310,
     unit_suffix=" (£m)",
 )
 

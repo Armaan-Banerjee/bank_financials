@@ -41,17 +41,30 @@ BS_RESTATEMENT_NOTE = (
     "Liabilities/Accruals and Deferred Income were regrouped. Per project convention, each year's own "
     "originally published figures are used rather than a later restated comparative."
 )
+DEBT_SECURITIES_NOTE = (
+    "DEBT SECURITIES COMPOSITION: the 'Debt Securities' note (numbered variously 10, 11 or 9 across years - "
+    "FY2019/FY2020 Report and Accounts p.38, FY2021 p.43, FY2023 p.43, FY2024 p.49, FY2025 p.52, FY2026 p.62) "
+    "discloses a single line, '[Sterling Certificates of Deposit/Securities] Issued by [Commercial] Banks/Building "
+    "Societies' (wording varies slightly by year), for every year FY2019-FY2026: 100% of the balance in every year "
+    "is issued by banks/building societies (no UK government/gilts/sovereign or corporate/supranational/ABS "
+    "component disclosed) and valued at amortised cost less impairment (the note states securities are 'generally "
+    "held to maturity and valued at amortised cost'; the FY2026 accounting-policy note confirms subsequent "
+    "measurement at amortised cost using the effective interest method - no FVOCI/FVTPL portion is disclosed in "
+    "any year). Each year's note gives only a maturity-band breakdown (e.g. <3 months, 3-6 months, etc.), not a "
+    "further measurement-basis or issuer-type split - there is nothing to sub-divide against, so the row is "
+    "relabelled in place rather than split into sub-rows."
+)
 BS_SOURCES = "Sources - Reliance Bank Limited entity balance sheet, £:\n" + "\n".join(
     f"{y}: Annual Report and Accounts for year ended 31 March {y[-4:]}, Balance Sheet, {AR_URLS[y]}"
     for y in YEARS
-) + "\n\n" + ENTITY_NOTE + "\n\n" + BS_RESTATEMENT_NOTE
+) + "\n\n" + ENTITY_NOTE + "\n\n" + BS_RESTATEMENT_NOTE + "\n\n" + DEBT_SECURITIES_NOTE
 
 bs_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at central bank", {"FY2026": 65404792, "FY2025": 68150991, "FY2024": 99657428, "FY2023": 83261986, "FY2022": 91287306, "FY2021": 73927250, "FY2020": 51769502, "FY2019": 36565164}),
     ("DATA", "Loans and advances to banks / Balances at banks", {"FY2026": 8415747, "FY2025": 5729293, "FY2024": 9342232, "FY2023": 12342225, "FY2022": 23726132, "FY2021": 46802990, "FY2020": 29850667, "FY2019": 32119504}),
     ("DATA", "Loans and advances to customers", {"FY2026": 146696075, "FY2025": 142039997, "FY2024": 125748749, "FY2023": 118818336, "FY2022": 96522411, "FY2021": 77505973, "FY2020": 53204878, "FY2019": 47220230}),
-    ("DATA", "Debt securities", {"FY2026": 47845043, "FY2025": 31152108, "FY2024": 25735400, "FY2023": 32981508, "FY2022": 34201068, "FY2021": 40540011, "FY2020": 60210153, "FY2019": 65285621}),
+    ("DATA", "Debt securities (amortised cost, issued by banks/building societies)", {"FY2026": 47845043, "FY2025": 31152108, "FY2024": 25735400, "FY2023": 32981508, "FY2022": 34201068, "FY2021": 40540011, "FY2020": 60210153, "FY2019": 65285621}),
     ("DATA", "Intangible fixed assets", {"FY2026": 126970, "FY2025": 175064, "FY2024": 147533, "FY2023": 284207, "FY2022": 443170, "FY2021": 392501, "FY2020": 394287, "FY2019": 301903}),
     ("DATA", "Tangible fixed assets", {"FY2026": 4845723, "FY2025": 4745873, "FY2024": 4035112, "FY2023": 3620828, "FY2022": 3153335, "FY2021": 3282956, "FY2020": 2599924, "FY2019": 2450094}),
     ("DATA", "Investment property", {"FY2023": 603774, "FY2022": 1573962, "FY2021": 1573962}),

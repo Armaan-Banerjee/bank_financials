@@ -3,7 +3,7 @@ import unittest
 from in041_spend_metrics import cost_base, capital_deployment
 
 
-def obs(frn, sheet, row_label, year, value, bank="Bank", unit="£"):
+def obs(frn, sheet, row_label, year, value, bank="Bank", unit="£", row_kind=None):
     return {
         "frn": frn,
         "bank": bank,
@@ -15,16 +15,17 @@ def obs(frn, sheet, row_label, year, value, bank="Bank", unit="£"):
         "value_numeric": value,
         "value_raw": str(value),
         "unit": unit,
+        "row_kind": row_kind,
     }
 
 
 class CostBaseTests(unittest.TestCase):
     def test_selects_personnel_other_opex_and_total_opex(self):
         rows = [
-            obs(1, "Profit & Loss", "Operating expenses - Personnel expenses", 2024, -50),
-            obs(1, "Profit & Loss", "Operating expenses - Other operating expenses", 2024, -30),
-            obs(1, "Profit & Loss", "Operating expenses - Total operating expenses", 2024, -80),
-            obs(1, "Profit & Loss", "Income - Total operating income", 2024, 200),
+            obs(1, "Profit & Loss", "Operating expenses - Personnel expenses", 2024, -50, row_kind="DATA"),
+            obs(1, "Profit & Loss", "Operating expenses - Other operating expenses", 2024, -30, row_kind="DATA"),
+            obs(1, "Profit & Loss", "Operating expenses - Total operating expenses", 2024, -80, row_kind="TOTAL"),
+            obs(1, "Profit & Loss", "Income - Total operating income", 2024, 200, row_kind="TOTAL"),
         ]
         result = cost_base(rows)
         self.assertEqual(result["personnel_expense"][1][2024], -50)
@@ -34,15 +35,68 @@ class CostBaseTests(unittest.TestCase):
         self.assertEqual(result["cost_to_income_pct"][1][2024], 40.0)
         self.assertEqual(result["personnel_expense_pct_of_revenue"][1][2024], 25.0)
 
-    def test_excludes_pre_addback_total_opex_variant(self):
-        rows = [obs(1, "Profit & Loss", "Income - Total operating expenses before impairment losses", 2024, -80)]
+    def test_includes_total_opex_before_impairment_variant(self):
+        # UBI UK/Arab Bank Europe/HBL Bank UK/Close Brothers each label their
+        # genuine, complete opex TOTAL row "... before impairment/provisions/
+        # amortisation" - excluding credit losses and one-off items from
+        # opex is the standard cost-to-income convention, so this must be
+        # INCLUDED, not rejected merely for containing "before ".
+        rows = [obs(1, "Profit & Loss", "Income - Total operating expenses before impairment losses", 2024, -80, row_kind="TOTAL")]
+        result = cost_base(rows)
+        self.assertEqual(result["total_operating_expense"][1][2024], -80)
+
+    def test_excludes_revenue_row_describing_expenses_as_before(self):
+        # LHV/Persia International Bank's revenue TOTAL row is "Net operating
+        # income (... BEFORE operating expenses ...)" - the phrase "operating
+        # expense" in its own descriptive text must not get it mistaken for
+        # the opex total itself.
+        rows = [obs(1, "Profit & Loss", "Income - Net operating income (FY2024's own subtotal, BEFORE operating expenses)", 2024, 200, row_kind="TOTAL")]
         result = cost_base(rows)
         self.assertEqual(result["total_operating_expense"], {})
 
     def test_prefers_total_operating_income_over_net_operating_income(self):
         rows = [
-            obs(1, "Profit & Loss", "Income - Total operating income", 2024, 200),
-            obs(1, "Profit & Loss", "Income - Net Operating Income", 2024, 150),
+            obs(1, "Profit & Loss", "Income - Total operating income", 2024, 200, row_kind="TOTAL"),
+            obs(1, "Profit & Loss", "Income - Net Operating Income", 2024, 150, row_kind="TOTAL"),
+        ]
+        result = cost_base(rows)
+        self.assertEqual(result["revenue"][1][2024], 200)
+
+    def test_keeps_total_income_under_other_income_section(self):
+        # UBP's source workbook uses "Other operating income" as the
+        # section heading.  The residual line of that name is not revenue,
+        # but its section must not suppress the reported total beneath it.
+        rows = [
+            obs(1, "Profit & Loss", "Other operating income - Total operating income", 2012, 200, row_kind="TOTAL"),
+            obs(1, "Profit & Loss", "Operating expenses - Total operating expenses", 2012, -80, row_kind="TOTAL"),
+        ]
+        result = cost_base(rows)
+        self.assertEqual(result["revenue"][1][2012], 200)
+        self.assertEqual(result["cost_to_income_pct"][1][2012], 40.0)
+
+    def test_excludes_opex_total_that_only_matches_via_section_prefix(self):
+        # Punjab National Bank International places "Profit/(loss) before
+        # tax" inside a SECTION literally named "Operating expenses"
+        # (alongside the genuine "Total operating expenses" TOTAL row) - the
+        # resulting full label matches _TOTAL_OPEX_RE purely because of the
+        # section name, not the row's own text, and must not be selected
+        # over (or instead of) the real opex total.
+        rows = [
+            obs(1, "Profit & Loss", "Operating expenses - Total operating expenses", 2024, -80, row_kind="TOTAL"),
+            obs(1, "Profit & Loss", "Operating expenses - Profit/(loss) before tax", 2024, 120, row_kind="TOTAL"),
+            obs(1, "Profit & Loss", "Income - Total operating income", 2024, 200, row_kind="TOTAL"),
+        ]
+        result = cost_base(rows)
+        self.assertEqual(result["total_operating_expense"][1][2024], -80)
+
+    def test_prefers_total_operating_income_with_descriptive_suffix_over_net(self):
+        # HSBC Bank Plc's own revenue TOTAL row is "Total operating income
+        # (IFRS 4 presentation, pre-FY2023)" - the descriptive suffix must
+        # not stop it beating a shorter but non-gross "Net operating income"
+        # (post credit-loss-charge) row on the tie-break.
+        rows = [
+            obs(1, "Profit & Loss", "Income - Total operating income (IFRS 4 presentation, pre-FY2023)", 2024, 200, row_kind="TOTAL"),
+            obs(1, "Profit & Loss", "Income - Net operating income", 2024, 150, row_kind="TOTAL"),
         ]
         result = cost_base(rows)
         self.assertEqual(result["revenue"][1][2024], 200)
@@ -54,8 +108,8 @@ class CostBaseTests(unittest.TestCase):
         # cost_to_income_pct RATIO still computes fine since both sides
         # share the same (unconverted) currency.
         rows = [
-            obs(1, "Profit & Loss", "Operating expenses - Total operating expenses", 2024, -80, unit="$m"),
-            obs(1, "Profit & Loss", "Income - Total operating income", 2024, 200, unit="$m"),
+            obs(1, "Profit & Loss", "Operating expenses - Total operating expenses", 2024, -80, unit="$m", row_kind="TOTAL"),
+            obs(1, "Profit & Loss", "Income - Total operating income", 2024, 200, unit="$m", row_kind="TOTAL"),
         ]
         result = cost_base(rows)
         self.assertEqual(result["total_operating_expense"], {1: {2024: None}})

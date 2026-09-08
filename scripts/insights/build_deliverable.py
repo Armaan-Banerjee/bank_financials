@@ -56,6 +56,7 @@ from in010_parent_groups import build_in010_payload  # noqa: E402
 from in009_analysis import CORE_METRICS, detect_outliers  # noqa: E402
 from analysis_queries import AnalysisQueries  # noqa: E402
 from build_workbook_viewer import render_workbook_viewer  # noqa: E402
+from statement_row_selection import in_assets_section, own_label  # noqa: E402
 
 # "Profit or loss for the year" headline-figure selector. Deliberately two
 # separate co-occurring patterns rather than one combined regex requiring
@@ -270,6 +271,46 @@ BANKS = {
     "Zopa": "800542",
 }
 
+# Hand-curated business-model tag for the "how does this bank make money"
+# view (business-model.html). No existing data in this repo (Banks List
+# 2608.xlsx, bank_parent_groups.md, bank_clusters.csv's k-means clustering -
+# which is built purely from Pillar 3 capital/liquidity ratios) hints at
+# business model, so this is a manual classification, reviewed by the user
+# before being treated as authoritative - expect corrections.
+#
+# "digital": app-first/branchless neobanks and direct digital lenders with
+# no branch network, judged on channel and origin, not size or age.
+# "other": banks whose core revenue is fee/markets/wealth-driven rather than
+# a classic loan book - private/wealth banks, trading/markets desks, asset
+# managers - genuinely a different shape of business, not a compromise
+# between the other two. Everything else defaults to "traditional"
+# (branch-based retail/commercial banks, and the many specialist, wholesale,
+# and foreign-subsidiary lenders whose balance sheet is still fundamentally
+# loan-and-interest-driven even without a branch network) - matches this
+# project's own observation that the vast majority of the 145 banks here
+# are traditional, not that "other" is some large leftover bucket.
+_DIGITAL_BANKS = {
+    "Monzo", "Starling Bank", "Atom Bank", "Chetwood", "Tandem", "Zopa",
+    "Kroo Bank", "GB Bank", "Griffin Bank", "Recognise Bank", "Redwood Bank",
+    "Perenna", "Oxbury", "Allica", "Zempler", "Clearbank", "Monument Bank",
+    "LHV", "Cynergy Bank", "DF Capital Bank", "Streambank", "This Bank",
+    "iFAST Global Bank", "Gatehouse Bank",
+}
+_OTHER_BUSINESS_MODEL_BANKS = {
+    "Rathbones Investment Management", "Schroder", "NatWest Markets",
+    "JP Morgan Securities", "Goldman Sachs International Bank",
+    "ICBC Standard Bank", "Coutts", "Investec Bank", "Brown Shipley",
+    "Arbuthnot Latham", "Weatherbys", "Hampden & Co", "C. Hoare & Co",
+}
+BANK_TYPE = {
+    name: (
+        "digital" if name in _DIGITAL_BANKS else
+        "other" if name in _OTHER_BUSINESS_MODEL_BANKS else
+        "traditional"
+    )
+    for name in BANKS
+}
+
 
 def slugify(name):
     return re.sub(r"^-+|-+$", "", re.sub(r"[^a-z0-9]+", "-", name.lower()))
@@ -331,7 +372,20 @@ def render_bank_heading(bank_name):
     )
 
 
-_RATIO_KEYWORDS = ["ratio", "coverage", "share", "of which"]
+_RATIO_KEYWORDS = ["ratio", "coverage", "share"]
+# "of which" used to be a blanket keyword here too, on the theory that a
+# stage-loan category retaining that structural IN-039 label prefix was
+# always a sub-ratio breakout. But "of which" is also a genuine structural
+# prefix that survives on real BALANCE categories (FidBank UK's "...of
+# which: Stage 1 and Stage 2 impairment allowance", NatWest Markets' "of
+# which: individual"/"of which: collective" provision splits) - this only
+# sees category-name text, not the row's own value, so it can't tell those
+# apart from a genuinely ratio-valued "of which" category (Morgan Stanley
+# Bank International's "...Of which: Stage 1 (IFRS 9...)" with value_raw
+# "100%"). loan_concentration_quality() in in040_risk_metrics.py now
+# excludes genuine percentage rows (value_raw containing "%") before they
+# ever reach this filter, so that distinction is already made upstream on
+# the actual value rather than guessed from the label here.
 # A bare "/" is otherwise a strong ratio signal ("allowance / gross loans"),
 # but this dataset also uses "/" in note references ("Note 11/12") and
 # short-form fiscal-year ranges ("FY2024/23", "FY2022/21") - neither is a
@@ -345,6 +399,16 @@ _RATIO_KEYWORDS = ["ratio", "coverage", "share", "of which"]
 # ratio-indicating "/" - a genuine ratio's slash separates two named
 # concepts ("Stage 3 gross / Total gross"), never two bare numbers.
 _DIGIT_SLASH_RE = re.compile(r"\d\s*/\s*\d")
+# A slash inside a parenthetical is often part of an explanatory footnote
+# ("IAS 39/UK GAAP total provision") rather than a genuine ratio ("X /
+# Y") - Julian Hodge Bank's Stage 1/2/3 impairment-provision category
+# carries a disclosure-scope parenthetical explaining when IFRS 9 was
+# adopted, and "IAS 39/UK GAAP" inside it tripped the ratio-slash check,
+# wrongly dropping a real balance category (found via a 2026-09-07
+# systematic audit of the one-off empty-note messages). Strip parenthetical
+# content before the slash check; a genuine ratio's defining "X / Y" is
+# never itself parenthesised in this dataset.
+_PAREN_RE = re.compile(r"\([^)]*\)")
 
 
 def is_ratio_category(name):
@@ -372,7 +436,7 @@ def is_ratio_category(name):
     # isn't a coverage ratio. Narrowly re-check using only the segments
     # after a header matching that "X and coverage" shape, rather than
     # dropping every parent header.
-    if "%" in name or "/" in _DIGIT_SLASH_RE.sub("", name):
+    if "%" in name or "/" in _DIGIT_SLASH_RE.sub("", _PAREN_RE.sub("", name)):
         return True
     n = name.lower()
     if not any(k in n for k in _RATIO_KEYWORDS):
@@ -381,7 +445,7 @@ def is_ratio_category(name):
     if len(segments) > 1 and re.search(r"\band\s+coverage\b", segments[0], re.I):
         tail = " - ".join(segments[1:])
         tn = tail.lower()
-        return "%" in tail or "/" in _DIGIT_SLASH_RE.sub("", tail) or any(k in tn for k in _RATIO_KEYWORDS)
+        return "%" in tail or "/" in _DIGIT_SLASH_RE.sub("", _PAREN_RE.sub("", tail)) or any(k in tn for k in _RATIO_KEYWORDS)
     return True
 
 
@@ -393,13 +457,47 @@ def normalize_pnl_year(year):
     return m.group(1) if m else year.replace("FY", "")
 
 
+# Genuine phrasing variety found across banks' own P&L labels for what is
+# structurally the same net fee/commission line ("Net fee income" - HSBC UK
+# Bank; "Net fees and commissions income"; "Net fee & commission income";
+# the swing-order "Net fees and commission (expense)/income") or net
+# interest line ("Net interest and similar income") - a literal substring
+# match on only the single most common phrasing ("net fee and commission
+# income") silently dropped these banks' fee/interest data entirely, found
+# via a 2026-09-07 user request for a fee-vs-loan-reliance comparison where
+# HSBC UK Bank (a MAJOR bank whose data is clearly present, just differently
+# worded) was one of 69 banks missing from the result. Deliberately does
+# NOT match a blended line that mixes the other side in - "Net fee,
+# commission and other operating income" (some banks' FY2015-FY2018 filings
+# sum fees into a broader other-income subtotal) or "Net interest and fee
+# income" - counting either as a pure fee or pure interest figure would
+# misattribute one category's revenue to the other and distort the ratio;
+# a bank-year with only a blended disclosure has no clean split available,
+# so it's correctly left uncategorized rather than forced.
+_NET_FEE_LINE_RE = re.compile(
+    r"net\s+fees?\s*(?:(?:and|&)\s*commissions?)?\s*(?:\(expense\)/income|\(income\)/expense|income|expense)\b", re.I
+)
+_NET_INTEREST_LINE_RE = re.compile(
+    r"net\s+interest\s*(?:and\s+similar\s+)?(?:income|expense)\b", re.I
+)
+
+
 def canonical_income_category(item):
     l = item.lower()
     if l.startswith("other"):
         return None
-    if "net interest income" in l:
+    # A bank whose net fee/interest position is negative for the year
+    # discloses its own headline line as "... expense", not "... income"
+    # (Atom Bank's "Net fee and commission expense" - it pays out more in
+    # card/processing fees than it earns; found via a 2026-09-07 user
+    # request for a fee-vs-loan-reliance view, where this line's absence
+    # silently dropped Atom Bank - a digital bank whose negative fee
+    # contribution is itself a genuine, telling data point, not a gap - from
+    # the whole comparison). Same category, just the net-negative case of
+    # the same line, matched by the same regex as the income case.
+    if _NET_INTEREST_LINE_RE.search(l) and "fee" not in l:
         return "Net interest income"
-    if "net fee and commission income" in l:
+    if _NET_FEE_LINE_RE.search(l) and "interest" not in l and "other operating" not in l:
         return "Net fee and commission income"
     if "net trading income" in l or "net investment income" in l:
         return "Trading & investment income"
@@ -488,6 +586,251 @@ def curate_total_assets(conn, frn):
             continue
         out[normalize_pnl_year(year)] = amount
     return out
+
+
+def _latest_of(series):
+    """Most recent non-None value in a {year: value} series - shared by
+    curate_business_model and curate_investment_composition_records, both of
+    which capture the same handful of scatter-view y-axis candidates
+    (total_assets, cost_to_income_pct, leverage_ratio_pct, rwa_to_assets_pct)
+    each at its OWN latest available year, independent of whichever year the
+    page's primary metric lands on."""
+    years = sorted((y for y, v in series.items() if v is not None), reverse=True)
+    return series[years[0]] if years else None
+
+
+def _scatter_y_axis_fields(data, conn, label, frn):
+    bd = data[label]
+    return {
+        "total_assets": _latest_of(curate_total_assets(conn, frn)),
+        "cost_to_income_pct": _latest_of({y: v.get("cost_to_income_pct") for y, v in bd.get("cost_base", {}).items()}),
+        "leverage_ratio_pct": _latest_of(bd.get("leverage", {}).get("leverage_ratio_reported_pct", {})),
+        "rwa_to_assets_pct": _latest_of(bd.get("rwa_to_assets_pct", {})),
+    }
+
+
+def curate_business_model(data, conn):
+    """"How does this bank make money" view (business-model.html, user
+    request 2026-09-07): fee income as a share of total income (fee / (fee
+    + net interest), NOT fee per unit of assets - a mix question, not an
+    intensity one), latest year with both lines disclosed, tagged with the
+    hand-curated BANK_TYPE. Reuses income_breakdown/cost_base/leverage/
+    rwa_to_assets_pct already computed in curate() rather than re-deriving
+    them, and curate_total_assets() for a size figure - the same
+    already-established per-bank fields every other page draws from.
+
+    Requires BOTH legs non-negative, not just a positive total. A "share of
+    income" ratio is only bounded in the intuitive [0, 100] range when both
+    components are non-negative contributions to income - a bank whose net
+    interest position is itself an expense that year (funding cost exceeds
+    interest earned) can otherwise produce a nonsense >100% "fee share"
+    (fee=122.7m, interest=-77.3m -> 270%) or a negative one (fee=-2m,
+    interest=412.5m -> -0.5%), neither of which means what the chart's axis
+    label says. Skipping to the next year first (rather than clipping the
+    negative leg to zero) prefers a genuinely comparable earlier year over a
+    silently distorted one, only falling out of the loop with no result when
+    no year has both legs non-negative.
+
+    A handful of y-axis candidates are captured alongside fee_share_pct for
+    the scatter variant (total_assets, cost_to_income_pct,
+    leverage_ratio_reported_pct, rwa_to_assets_pct) - each taken at its OWN
+    latest available year independently, not forced onto fee_share_pct's
+    year, since requiring all four to align on one year would silently drop
+    banks that report a metric in a different year than their income
+    breakdown."""
+    records = []
+    for label, frn in BANKS.items():
+        bd = data[label]
+        income_years = sorted(bd.get("income_breakdown", {}), reverse=True)
+        fee_share_pct, fee_share_year = None, None
+        for y in income_years:
+            cats = bd["income_breakdown"][y]
+            fee, interest = cats.get("Net fee and commission income"), cats.get("Net interest income")
+            if fee is None or interest is None:
+                continue
+            if fee < 0 or interest < 0:
+                continue
+            total = fee + interest
+            if total <= 0:
+                continue
+            fee_share_pct, fee_share_year = round(fee / total * 100, 1), y
+            break
+        if fee_share_pct is None:
+            continue
+
+        records.append({
+            "bank": label, "frn": frn, "bank_type": BANK_TYPE.get(label, "traditional"),
+            "fee_share_pct": fee_share_pct, "fee_share_year": fee_share_year,
+            **_scatter_y_axis_fields(data, conn, label, frn),
+        })
+    return records
+
+
+# investments.html (user request, 2026-09-07, following business-model.html):
+# what kind of investments banks make. A survey of all 164 Balance Sheet
+# investment/securities-related row labels across the 145 banks found that
+# most DON'T name an asset class (government vs corporate bonds vs
+# equities) at all - that level of detail lives in note-level sub-tables
+# that weren't transcribed (see CLAUDE.md: hand-transcribed from primary
+# sources, no scraper) - so a true asset-class breakdown isn't available
+# without a new extraction pass. Two things ARE well-supported by what's
+# already extracted, agreed with the user as the two views to build:
+#   1. Measurement basis: amortised cost/"hold to collect" vs FVOCI+FVTPL+
+#      trading/"mark to market" - a genuinely different but related
+#      question (how exposed is this bank's investment book to short-term
+#      valuation swings), ~30 banks have at least one leg disclosed.
+#   2. Government/sovereign vs other investment securities - a coarser cut
+#      at the original asset-class question, only 11 banks disclose an
+#      explicit government/treasury/gilt/sovereign line separately from a
+#      generic "other" investment-securities line.
+# Both exclude: investments in subsidiaries/associates/joint ventures (an
+# equity stake in group structure, not a markets portfolio position) and
+# repo/securities-financing lines (collateralized funding/lending, not a
+# portfolio holding) - confirmed with the user. Investment property is
+# DELIBERATELY NOT excluded - IAS 40 "Investment property" is itself the
+# accounting term for property held for rental income/capital appreciation
+# as distinct from IAS 16 owner-occupied premises (a different line,
+# "Property, plant and equipment"/"Premises"), so a bank's own use of that
+# exact label is already the verification the user asked for. It simply
+# doesn't carry a measurement-basis or government/other split of its own
+# (property uses IAS 40's separate cost-model/fair-value-model choice, not
+# the amortised-cost/FVOCI/FVTPL scheme for financial instruments), so it
+# naturally doesn't appear in either view below rather than needing a
+# special-case exclusion.
+_INVESTMENT_EXCLUDE_RE = re.compile(
+    r"subsidiar|associat|joint venture|participating interest|group (?:entit|undertaking)|"
+    r"repurchase agreement|securities (?:borrowed|lent|loaned|financing)|cash collateral on securities|"
+    r"loans? and advances|derivative|non.financial|revaluation reserve|fair value reserve|"
+    r"\bin issue\b|of which|\btotal\b",
+    re.I,
+)
+_INVESTMENT_SHAPE_RE = re.compile(
+    r"investment securit|financial investment|debt securit|financial assets?\b|treasury (?:bill|asset|investment)|"
+    r"government (?:bond|securit)|sovereign debt|\bgilt|government and other securit",
+    re.I,
+)
+_AMORTISED_COST_RE = re.compile(r"amortised cost|held.to.maturity", re.I)
+_MARK_TO_MARKET_RE = re.compile(
+    # fvt?o?ci/fvt?pl covers both the common "FVOCI"/"FVTPL" abbreviations
+    # AND the "FVTOCI"/"FVTIS" variant used by a handful of banks (Bank of
+    # Beirut UK, Gatehouse Bank, Alpha Bank London, etc - "fair value
+    # through other comprehensive income"/"fair value through income
+    # statement", the same concepts, different abbreviation convention) -
+    # found via Gatehouse's Balance Sheet already having genuine FVTOCI/
+    # FVTIS rows that this regex was silently dropping entirely.
+    r"fvt?o?ci|fvt?pl|fvtis|fair value through (?:other comprehensive income|profit (?:or|and) loss|income statement)|"
+    r"available.for.sale|\btrading\b",
+    re.I,
+)
+_GOVERNMENT_INVESTMENT_RE = re.compile(r"government bond|treasury bill|sovereign debt|\bgilt|government securit", re.I)
+# "Government AND OTHER securities" is itself a blended line (some banks'
+# own wording) - counting it as pure government would overstate the
+# government share, so it's deliberately excluded from BOTH the government
+# and the "other" bucket rather than guessed into either.
+_GOVERNMENT_BLENDED_RE = re.compile(r"government and other securit", re.I)
+
+# scaled() (used everywhere else in this file) deliberately returns None for
+# a non-GBP unit, since an absolute £ figure genuinely can't mix currencies.
+# curate_investment_composition only ever computes a WITHIN-BANK % share
+# (one bucket's amount / that same bank's total investment-book amount, same
+# year, same reporting currency throughout) - the currency itself cancels
+# out of that ratio, so requiring GBP here was needlessly excluding every
+# USD/EUR-reporting bank (ICBC (London), SMBC, Kuwait Finance House, several
+# foreign-parented subsidiaries) even though their composition split is
+# perfectly readable in their own currency. Only the scale word (thousand /
+# million / unit) matters for summing sibling rows correctly. CAD was added
+# after TD Bank Europe (a CAD-reporting subsidiary) was found to have every
+# one of its otherwise clean, reconciling investment-securities rows
+# silently dropped by classify_amount_unit() never recognizing "CAD'000".
+_ANY_CURRENCY_SCALE_MULTIPLIER = {
+    "GBP_thousand": 1_000, "GBP_million": 1_000_000, "GBP_unit": 1,
+    "USD_thousand": 1_000, "USD_million": 1_000_000, "USD_unit": 1,
+    "EUR_thousand": 1_000, "EUR_million": 1_000_000, "EUR_unit": 1,
+    "CAD_thousand": 1_000, "CAD_million": 1_000_000, "CAD_unit": 1,
+}
+
+
+def _scaled_for_ratio(value, unit):
+    mult = _ANY_CURRENCY_SCALE_MULTIPLIER.get(classify_amount_unit(unit or ""))
+    return None if mult is None else value * mult
+
+
+def curate_investment_composition(conn, frn):
+    """Two investment-book composition breakdowns for one bank, latest year
+    each has usable data: measurement basis (amortised cost vs mark to
+    market) and government vs other investment securities. Sums ALL
+    matching sibling rows per (year, bucket) rather than picking one best
+    row - unlike select_labeled_rows's single-winner selection, several
+    banks genuinely disclose multiple FVOCI/FVTPL sub-lines in the same
+    year (e.g. Santander UK's "Other financial assets at FVTPL" alongside
+    "Financial assets at FVOCI") that would be silently undercounted by a
+    single pick."""
+    rows = conn.execute(
+        "SELECT row_label, year, value_numeric, unit FROM annual_metrics "
+        "WHERE frn=? AND sheet='Balance Sheet' AND value_numeric IS NOT NULL",
+        (frn,),
+    ).fetchall()
+
+    basis_by_year = defaultdict(lambda: {"amortised_cost": 0.0, "mark_to_market": 0.0})
+    govt_by_year = defaultdict(lambda: {"government": 0.0, "other": 0.0})
+    for row_label, year, value, unit in rows:
+        if not in_assets_section(row_label):
+            continue
+        item = own_label(row_label)
+        if _INVESTMENT_EXCLUDE_RE.search(item) or not _INVESTMENT_SHAPE_RE.search(item):
+            continue
+        amount = _scaled_for_ratio(value, unit)
+        if amount is None or amount < 0:
+            continue
+        y = normalize_pnl_year(year)
+        if _AMORTISED_COST_RE.search(item):
+            basis_by_year[y]["amortised_cost"] += amount
+        elif _MARK_TO_MARKET_RE.search(item):
+            basis_by_year[y]["mark_to_market"] += amount
+        if _GOVERNMENT_BLENDED_RE.search(item):
+            continue
+        if _GOVERNMENT_INVESTMENT_RE.search(item):
+            govt_by_year[y]["government"] += amount
+        else:
+            govt_by_year[y]["other"] += amount
+
+    def _latest_composition(by_year, require_positive_keys=()):
+        # require_positive_keys guards against a false "split": e.g. every
+        # bank without an explicit government/sovereign line falls entirely
+        # into "other" once matched at all, which isn't a disclosed split -
+        # it's the absence of one, so government_vs_other only counts as
+        # data when the government leg is actually non-zero for that year.
+        for y in sorted(by_year, reverse=True):
+            legs = by_year[y]
+            total = sum(legs.values())
+            if total > 0 and all(legs[k] > 0 for k in require_positive_keys):
+                return {"year": y, **{k: round(v / total * 100, 1) for k, v in legs.items()}}
+        return None
+
+    return {
+        "measurement_basis": _latest_composition(basis_by_year),
+        "government_vs_other": _latest_composition(govt_by_year, require_positive_keys=("government",)),
+    }
+
+
+def curate_investment_composition_records(data, conn):
+    """records list for investments.html, one entry per bank that has usable
+    data in EITHER composition view - a bank with only a government/other
+    split and no measurement-basis split (or vice versa) still gets a
+    record, since the two views are rendered as independent charts each
+    filtering to banks with data for that view specifically. Also carries
+    the same scatter y-axis candidates as curate_business_model, for the
+    scatter view alongside the primary 100%-stacked bar."""
+    records = []
+    for label, frn in BANKS.items():
+        comp = curate_investment_composition(conn, frn)
+        if comp["measurement_basis"] is None and comp["government_vs_other"] is None:
+            continue
+        records.append({
+            "bank": label, "frn": frn, "bank_type": BANK_TYPE.get(label, "traditional"),
+            **comp, **_scatter_y_axis_fields(data, conn, label, frn),
+        })
+    return records
 
 
 def curate_asset_composition_absolute(conn, frn):
@@ -706,8 +1049,53 @@ def _bucket_equity_movement(label):
 
 
 def _extract_year(label):
-    years = re.findall(r"(20\d{2})", label)
+    years = re.findall(r"(19\d{2}|20\d{2})", label)
     return years[-1] if years else None
+
+
+_FY_TAG_RE = re.compile(r"\(FY(\d{4})[,)]")
+
+
+def _extract_fy_tag_year(label):
+    """A movement row's OWN fiscal year, from the standard "(FYNNNN)" or
+    "(FYNNNN, ...)" tagging convention used throughout these rows (e.g.
+    "Profit for the year (FY2013)", or Credit Suisse UK's own "Total
+    comprehensive income for the year (FY2019, as originally reported)") -
+    stricter than `_extract_year`'s bare "any 4-digit number in the label"
+    search, and deliberately requiring "FYNNNN" to be followed by "," or
+    ")" (not any word boundary): Bank of Africa UK's own "Impact of
+    correction of errors (FY2018 Annual Report restatement)" names the
+    filing the correction was DISCLOSED in, not the fiscal year the
+    correction itself belongs to - a looser `\\b` boundary wrongly tagged
+    it as a "FY2018" movement and collided with the real FY2018 segment.
+    Restatement/
+    reclassification bridge rows (e.g. "Reclassification (per FY2014
+    accounts' own FY2013 restated comparative - see FY2013 RESTATEMENT
+    NOTE)") mention several years in free prose WITHOUT "FY" starting the
+    parenthetical, so they still correctly don't match; `_extract_year` on
+    them picks up whichever year happens to be the LAST 4-digit match,
+    which is not necessarily the segment's real year and previously
+    collided with a genuinely different same-year segment (verified
+    against Union Bancaire Privee UK's FY2013->FY2014 and FY2014->FY2015
+    restatement bridges, and separately against Credit Suisse UK's own
+    FY2019/FY2020 qualifier-tagged rows)."""
+    m = _FY_TAG_RE.search(label)
+    return m.group(1) if m else None
+
+
+_MONTH_YEAR_RE = re.compile(
+    r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})\b", re.I
+)
+
+
+def _extract_month_year(label):
+    """A checkpoint's own "Mon YYYY" (e.g. "At 28 February 1998" ->
+    "Feb 1998") - used to disambiguate archival, pre-cutoff segments that
+    land in the same calendar year (e.g. Union Bancaire Privee UK's own
+    28 Feb 1998 and 31 Dec 1998 balance dates) without resorting to a bare
+    "(i)"/"(ii)" suffix."""
+    m = _MONTH_YEAR_RE.search(label)
+    return f"{m.group(1)[:3].capitalize()} {m.group(2)}" if m else None
 
 
 _PAREN_RE = re.compile(r"\([^)]*\)")
@@ -768,19 +1156,110 @@ def curate_equity_waterfall(rows_by_order, components):
         if _is_balance_checkpoint(rows_by_order[k]["label"])
         and rows_by_order[k]["values"].get(grand_total_component) not in (None, "")
     ]
-    segments = []
+
+    # Pass 1: one raw (opening, closing, movement_keys) pair per adjacent
+    # checkpoint, plus whichever "(FYNNNN)" tag its own movement rows carry
+    # (see `_extract_fy_tag_year`) - before any merging.
+    raw_pairs = []
     for seg_i in range(len(balance_positions) - 1):
         start_pos = balance_positions[seg_i]
         end_pos = balance_positions[seg_i + 1]
         opening_key = order_keys[start_pos]
         closing_key = order_keys[end_pos]
+        movement_keys = order_keys[start_pos + 1:end_pos]
+        tag_year = None
+        for k in movement_keys:
+            tag_year = _extract_fy_tag_year(rows_by_order[k]["label"])
+            if tag_year:
+                break
+        raw_pairs.append({
+            "opening_key": opening_key, "closing_key": closing_key,
+            "movement_keys": movement_keys, "tag_year": tag_year,
+        })
+
+    # Pass 2: merge untagged pairs so every emitted row is either a real,
+    # uniquely-labelled fiscal year or one honest multi-year "no data"
+    # range - never a same-year duplicate or an odd non-year label
+    # (verified against Union Bancaire Privee UK and Aldermore Bank, both
+    # of whose roll-forwards mix genuine multi-year gaps with short,
+    # same/adjacent-year untagged pairs). An untagged pair - whether it's a
+    # pure balance-to-balance gap with no disclosed detail at all, or a
+    # bridging row like "Reclassification (per FY2014 accounts' own
+    # FY2013 restated comparative...)" or Aldermore's "As at 1 January
+    # 2014" GAAP-transition balance - is chained together with any
+    # adjacent untagged pairs (`carry`). At the next real tagged fiscal
+    # year (or the end of the roll-forward), that accumulated run either:
+    #  - spans more than one calendar year (its own opening's year to its
+    #    own closing's year): a genuine multi-year undisclosed gap (e.g.
+    #    Union Bancaire Privee UK's 1997-2012 span, or a stub-period chain
+    #    that adds up to one) - kept as its own row, named the range it
+    #    covers, never folded into a real year's numbers; or
+    #  - spans one calendar year or less: too short to be its own honest
+    #    row and would only collide with (or misname) the fiscal year
+    #    right next to it - folded forward into that year's own bars
+    #    instead (its balance delta, if any, surfaces there as a
+    #    "Reconciling difference" bar rather than a same-year duplicate
+    #    row).
+    # A carry that DOES clear the >1-year bar is emitted as one row PER
+    # checkpoint pair, not one row for the whole run: the "full available
+    # history" toggle on the per-bank page (mirroring the same toggle on
+    # the capital-deployment/income-mix charts) is only useful if the
+    # archival years are actually there to reveal - bundling e.g. Union
+    # Bancaire Privee UK's four 1997-2012 checkpoints into a single
+    # "1997-2012" bar would leave nothing for it to show.
+    groups = []
+    carry = []
+
+    def carry_span_years():
+        if not carry:
+            return None
+        opening_year = _extract_year(rows_by_order[carry[0]["opening_key"]]["label"])
+        closing_year = _extract_year(rows_by_order[carry[-1]["closing_key"]]["label"])
+        if opening_year and closing_year:
+            return int(closing_year) - int(opening_year)
+        return None
+
+    for pair in raw_pairs:
+        if pair["tag_year"]:
+            span = carry_span_years()
+            if span is not None and span > 1:
+                for p in carry:
+                    groups.append(("gap", [p]))
+                carry = []
+            groups.append(("tagged", carry + [pair]))
+            carry = []
+        else:
+            carry.append(pair)
+    if carry:
+        # A TRAILING untagged run (nothing left after it to merge forward
+        # into) needs the same "too short to be its own row" treatment,
+        # just folded backward instead - found via Monzo's real FY2020
+        # "Prior year adjustments" checkpoint (Retained losses/Other
+        # reserves reclass, Total equity net-zero), which sits AFTER its
+        # own fiscal year's tagged movement row with nothing tagged
+        # following it, so the forward-merge branch above never sees it and
+        # it fell straight through to a standalone (near-empty) "gap"
+        # segment - the same spurious-segment shape the fold-forward branch
+        # already prevents in the mirror-image case.
+        span = carry_span_years()
+        if span is not None and span <= 1 and groups and groups[-1][0] == "tagged":
+            kind, group = groups[-1]
+            groups[-1] = (kind, group + carry)
+        else:
+            for p in carry:
+                groups.append(("gap", [p]))
+
+    segments = []
+    for kind, group in groups:
+        opening_key = group[0]["opening_key"]
+        closing_key = group[-1]["closing_key"]
         try:
             opening = float(str(rows_by_order[opening_key]["values"][grand_total_component]).replace(",", ""))
             closing = float(str(rows_by_order[closing_key]["values"][grand_total_component]).replace(",", ""))
         except (TypeError, ValueError):
             continue
 
-        movement_keys = order_keys[start_pos + 1:end_pos]
+        movement_keys = [k for pair in group for k in pair["movement_keys"]]
         emitted = []  # [(bucket, value)] in emission order, subtotal-collapsed
         pending = []  # [(bucket, value)] leaf rows not yet absorbed by a subtotal
         running_base = opening  # opening + every already-emitted bar's value
@@ -832,8 +1311,79 @@ def curate_equity_waterfall(rows_by_order, components):
         gap = closing - (opening + sum(b["value"] for b in bars))
         if abs(gap) > 1.0:
             bars.append({"bucket": "reconciling", "label": "Reconciling difference (source data gap)", "value": gap})
-        year = _extract_year(rows_by_order[closing_key]["label"]) or f"Segment {seg_i + 1}"
-        segments.append({"year": year, "opening": opening, "closing": closing, "bars": bars})
+
+        tag_year = next((p["tag_year"] for p in group if p["tag_year"]), None)
+        opening_year = _extract_year(rows_by_order[opening_key]["label"])
+        closing_year = _extract_year(rows_by_order[closing_key]["label"])
+        if tag_year:
+            # A real, disclosed fiscal year - use its own "(FYNNNN)" tag
+            # rather than either checkpoint's calendar label, which several
+            # banks (verified against Union Bancaire Privee UK) print as the
+            # FOLLOWING year's "At 1 January <year+1>" opening balance
+            # rather than a same-year "At 31 December <year>" closing row.
+            year = tag_year
+        elif opening_year and closing_year and int(closing_year) - int(opening_year) > 1:
+            # A single checkpoint pair spanning more than one calendar year
+            # with no interior movement rows at all (e.g. Union Bancaire
+            # Privee UK's own 1999->2013 pair) - name it as the range it
+            # actually covers.
+            year = f"{opening_year}–{int(closing_year) - 1}"
+        else:
+            year = closing_year or opening_year or None
+        end_year = int(tag_year or closing_year or opening_year) if (tag_year or closing_year or opening_year) else None
+        # `start_year` matters separately from `end_year` for the "full
+        # available history" toggle: a multi-year range segment's CLOSING
+        # edge can be recent even though it covers mostly archival years
+        # (Union Bancaire Privee UK's own "1999-2012" gap closes right at
+        # 2013) - filtering the default view by `start_year` keeps that
+        # kind of segment out of the recent view too, not just its
+        # standalone archival siblings.
+        start_year = int(tag_year or opening_year or closing_year) if (tag_year or opening_year or closing_year) else None
+        segments.append({
+            "year": year, "start_year": start_year, "end_year": end_year, "opening": opening, "closing": closing,
+            "bars": bars, "_kind": kind, "_opening_key": opening_key, "_closing_key": closing_key,
+        })
+
+    # Archival "gap" segments (checkpoints with no disclosed movement detail
+    # at all - see the "one row PER checkpoint pair" note above) can land on
+    # the same bare year as a sibling gap segment (verified against Union
+    # Bancaire Privee UK's own 28 Feb 1998 and 31 Dec 1998 balance dates,
+    # both "1998"). Real fiscal-year segments are already guaranteed unique
+    # by their own "(FYNNNN)" tag, so only gap segments need this pass:
+    # first try each one's own precise "Mon YYYY" checkpoint date, and fall
+    # back to a bare "(i)"/"(ii)" suffix only if that still collides.
+    gap_year_counts = defaultdict(int)
+    for seg in segments:
+        if seg["_kind"] == "gap" and seg["year"]:
+            gap_year_counts[seg["year"]] += 1
+    if any(c > 1 for c in gap_year_counts.values()):
+        for seg in segments:
+            if seg["_kind"] == "gap" and seg["year"] and gap_year_counts[seg["year"]] > 1:
+                month_year = _extract_month_year(rows_by_order[seg["_closing_key"]]["label"])
+                if month_year:
+                    seg["year"] = month_year
+
+    # Final safety net: whatever the cause (two same-year "(FYNNNN)" tagged
+    # segments from a restated/"as originally reported" pair of movements,
+    # or a gap segment the month-date upgrade above couldn't disambiguate),
+    # NO segment should ever reach the chart with a label some other
+    # segment already has - fall back to a bare "(i)"/"(ii)" suffix, in
+    # chronological order, for any label still shared by more than one
+    # segment at this point.
+    label_counts = defaultdict(int)
+    for seg in segments:
+        if seg["year"]:
+            label_counts[seg["year"]] += 1
+    label_seen = defaultdict(int)
+    for seg in segments:
+        if seg["year"] and label_counts[seg["year"]] > 1:
+            label_seen[seg["year"]] += 1
+            seg["year"] = f"{seg['year']} ({'i' * label_seen[seg['year']]})"
+
+    for i, seg in enumerate(segments):
+        if not seg["year"]:
+            seg["year"] = f"Segment {i + 1}"
+        del seg["_kind"], seg["_opening_key"], seg["_closing_key"]
     return segments
 
 
@@ -1889,12 +2439,20 @@ def write_banks_directory(data, banks_index):
             profit_cell = "—"
         comp = bd["loan_composition"]
         basis = {"stage": "IFRS 9 stage", "exposure_class": "exposure class", "none": "not disclosed"}[comp["kind"]]
-        years_count = len(comp["years"])
+        # Span of available history (max year - min year + 1), not a count of
+        # years with actual data points - a bank with disclosures in 2015,
+        # 2019 and 2022 has 8 years of history available, not 3. Both bounds
+        # come straight from the real year keys already resolved via SQL
+        # against annual_metrics further up curate() (the stage_balances and
+        # _EXPOSURE_CLASS_PATTERNS queries), so this stays a deterministic
+        # min/max over real data, not a judgment call.
+        comp_years = [int(y) for y in comp["years"]]
+        history_span = (max(comp_years) - min(comp_years) + 1) if comp_years else 0
         rows_html += f"""<tr>
       <td><a href="bank-{b['slug']}.html">{b['name']}</a></td>
       <td class="num">{profit_cell}</td>
       <td><span class="basis-tag">{basis}</span></td>
-      <td class="num">{years_count}</td>
+      <td class="num">{history_span}</td>
       <td><a href="bank-{b['slug']}.html">View profile</a></td>
     </tr>"""
 
@@ -1902,7 +2460,7 @@ def write_banks_directory(data, banks_index):
     <div class="card" style="padding:0;">
       <table class="bank-table">
         <thead><tr>
-          <th>Bank</th><th>Profit or loss (latest)</th><th>Loan concentration basis</th><th>Years of data</th><th></th>
+          <th>Bank</th><th>Profit or loss (latest)</th><th>Loan concentration basis</th><th>History available (yrs)</th><th></th>
         </tr></thead>
         <tbody>{rows_html}</tbody>
       </table>
@@ -1928,6 +2486,68 @@ renderSidebar('banks', BANKS_INDEX);
 </html>
 """
     (OUT_DIR / "banks.html").write_text(html)
+
+
+def write_business_model_page(records, banks_index):
+    html = HEAD.format(
+        title="Credit risk — business model",
+        back_link='<a class="back" href="comparison.html">← Comparison</a>',
+        h1="Business model",
+        sub_fallback=(
+            "How each bank makes money: fee income as a share of total income (fee + net interest), "
+            "latest year disclosed, grouped by a hand-curated digital / traditional / other tag — "
+            "reviewed, not machine-derived, so treat borderline cases as a starting point."
+        ),
+        body="",
+        todo_note="",
+    )
+    html += """
+<script id="business-model-data" type="application/json">""" + json.dumps(records) + """</script>
+<script id="banks-index" type="application/json">""" + json.dumps(banks_index) + """</script>
+<script src="deliverable_shared.js"></script>
+<script>
+const BUSINESS_MODEL_DATA = JSON.parse(document.getElementById('business-model-data').textContent);
+const BANKS_INDEX = JSON.parse(document.getElementById('banks-index').textContent);
+renderSidebar('business-model', BANKS_INDEX);
+renderBusinessModelPage(BUSINESS_MODEL_DATA);
+</script>
+</body>
+</html>
+"""
+    (OUT_DIR / "business-model.html").write_text(html)
+
+
+def write_investments_page(records, banks_index):
+    html = HEAD.format(
+        title="Credit risk — investments",
+        back_link='<a class="back" href="comparison.html">← Comparison</a>',
+        h1="Investment book composition",
+        sub_fallback=(
+            "What kind of investments banks hold on their balance sheets, latest year disclosed. "
+            "Two independent cuts: measurement basis (amortised cost / “hold to collect” vs "
+            "fair-value-through-P&L or OCI / “mark to market”), and government/sovereign vs other "
+            "investment securities. Excludes investments in subsidiaries, associates and joint ventures, "
+            "and repo/securities-financing lines — those aren't markets portfolio positions. Coverage is "
+            "thin (most banks don't disclose this split at the level this project's source documents capture), "
+            "so absence from a chart means “not disclosed separately”, not “zero”."
+        ),
+        body="",
+        todo_note="",
+    )
+    html += """
+<script id="investments-data" type="application/json">""" + json.dumps(records) + """</script>
+<script id="banks-index" type="application/json">""" + json.dumps(banks_index) + """</script>
+<script src="deliverable_shared.js"></script>
+<script>
+const INVESTMENTS_DATA = JSON.parse(document.getElementById('investments-data').textContent);
+const BANKS_INDEX = JSON.parse(document.getElementById('banks-index').textContent);
+renderSidebar('investments', BANKS_INDEX);
+renderInvestmentsPage(INVESTMENTS_DATA);
+</script>
+</body>
+</html>
+"""
+    (OUT_DIR / "investments.html").write_text(html)
 
 
 def write_bank_page(bank_name, bank_data, banks_index):
@@ -2028,6 +2648,10 @@ def main():
     parent_groups = curate_comparison_parent_groups(data)
     write_comparison(data, banks_index, parent_groups)
     write_banks_directory(data, banks_index)
+    business_model_conn = sqlite3.connect(DB_PATH)
+    write_business_model_page(curate_business_model(data, business_model_conn), banks_index)
+    write_investments_page(curate_investment_composition_records(data, business_model_conn), banks_index)
+    business_model_conn.close()
     for name, bank_data in data.items():
         write_bank_page(name, bank_data, banks_index)
         write_workbook_viewer(name, bank_data)

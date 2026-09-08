@@ -8,12 +8,12 @@ Source database: `/Users/armaan/code/katalysis/scripts/insights/../../research/i
 |---|---|---:|---:|---|---|
 | CET1 Ratio | broad | 904 | 135 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 158, non_numeric_disclosure: 70 |
 | CET1 Ratio | strict | 405 | 59 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 220, missing: 158, non_numeric_disclosure: 70, unknown_basis: 279 |
-| Tier 1 Ratio | broad | 853 | 127 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 166, non_numeric_disclosure: 101 |
-| Tier 1 Ratio | strict | 373 | 58 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 219, missing: 166, non_numeric_disclosure: 101, unknown_basis: 261 |
+| Tier 1 Ratio | broad | 855 | 128 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 166, non_numeric_disclosure: 99 |
+| Tier 1 Ratio | strict | 373 | 58 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 219, missing: 166, non_numeric_disclosure: 99, unknown_basis: 263 |
 | Total Capital Ratio | broad | 888 | 134 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 167, non_numeric_disclosure: 70 |
 | Total Capital Ratio | strict | 384 | 60 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 219, missing: 167, non_numeric_disclosure: 70, unknown_basis: 285 |
-| Leverage Ratio | broad | 1261 | 125 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 642, non_numeric_disclosure: 129 |
-| Leverage Ratio | strict | 540 | 58 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 342, missing: 642, non_numeric_disclosure: 129, unknown_basis: 379 |
+| Leverage Ratio | broad | 1262 | 126 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 642, non_numeric_disclosure: 128 |
+| Leverage Ratio | strict | 540 | 58 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 342, missing: 642, non_numeric_disclosure: 128, unknown_basis: 380 |
 
 Strict mode includes numeric annual observations with an explicitly classified reporting basis.
 Broad mode includes numeric annual observations with a 12-month annual period; unknown basis is retained.

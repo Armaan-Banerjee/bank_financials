@@ -524,6 +524,16 @@ income_statement_rows = [
         "FY2025": 1338, "FY2024": 582, "FY2023": 198, "FY2022": 465, "FY2021": 398,
         "FY2020": 486, "FY2019": 908, "FY2018": 606, "FY2017": 2125, "FY2016": 592,
     }),
+    # Not a line the source statement itself prints - Habib Bank Zurich's own
+    # income statement has no combined income subtotal, going straight from
+    # these three net-income lines to the Operating expenses section. This
+    # row is simply their sum (Net interest income + Net fee and commission
+    # income + Net other income), added 2026-09-07 so cost-to-income
+    # analysis has a "Total operating income" denominator to work from.
+    ("TOTAL", "Total operating income (sum of the three income lines above - not itself a printed subtotal)", {
+        "FY2025": 40872, "FY2024": 40294, "FY2023": 35845, "FY2022": 26139, "FY2021": 20044,
+        "FY2020": 17965, "FY2019": 19613, "FY2018": 18130, "FY2017": 19251, "FY2016": 13586,
+    }),
     ("SECTION", "Operating expenses", {}),
     ("DATA", "Staff costs", {
         "FY2025": -16456, "FY2024": -15738, "FY2023": -13348, "FY2022": -11214, "FY2021": -10151,

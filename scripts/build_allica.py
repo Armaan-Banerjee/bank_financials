@@ -118,7 +118,22 @@ BALANCE_SHEET_SOURCES = (
     f"FY2021: Annual Report and Accounts 2022, p.79-80 (Statements of financial position, FY2021 comparative "
     f"column) — {AR2022_URL}\n"
     f"FY2020: Consolidated Financial Statements for the year ended 31 December 2020, p.23 (Statement of "
-    f"financial position) — {AR2020_URL}\n\n" + ENTITY_NOTE + "\n\n" + BALANCE_SHEET_PRESENTATION_NOTE
+    f"financial position) — {AR2020_URL}\n\n" + ENTITY_NOTE + "\n\n" + BALANCE_SHEET_PRESENTATION_NOTE + "\n\n"
+    "DEBT SECURITIES BREAKDOWN: checked for a measurement-basis / issuer-type split (as in Close Brothers' "
+    "workbook) and found none available to sub-divide — the 'Debt securities' line is relabelled in place "
+    "rather than split into sub-rows. Every year's accounts state debt securities are held to meet liquidity "
+    "requirements and classified in full as Fair Value Through Other Comprehensive Income ('FVOCI') — see "
+    "Annual Report & Accounts 2025 Note 2 'Material accounting policies', p.99, Annual Report and Accounts 2023 "
+    "Note 2 'Basis of preparation and material accounting policies', and Annual Report and Accounts 2022 Note 2 "
+    "'Basis of preparation and significant accounting policies' (all materially identical wording, all years). "
+    "Issuer type: FY2025 & FY2024 Note 10 'Debt securities', p.118, discloses only one "
+    "combined line, 'Issued by governments and supranational bodies' (£1,154.0m / £301.4m) — not split further "
+    "into UK sovereign vs supranational/other. FY2023, FY2022 and FY2021 reports carry no equivalent numbered "
+    "note for debt securities at all (the Statement of financial position line itself has no note reference in "
+    "those vintages) and disclose only the same FVOCI classification plus a fair-value-hierarchy note describing "
+    "the balance as 'Bonds and Treasury Bills' valued from quoted market prices, with no issuer-type split. "
+    "Relabelled to 'Debt securities - Government and supranational bonds, at FVOCI' for all years to reflect "
+    "this."
 )
 
 bw.add_balance_sheet_sheet(
@@ -128,7 +143,7 @@ bw.add_balance_sheet_sheet(
         ("SECTION", "Assets", {}),
         ("DATA", "Cash and balances at central banks", {"FY2025": 1104.3, "FY2024": 1378.0, "FY2023": 718.805, "FY2022": 230.150, "FY2021": 295.291, "FY2020": 92.925}),
         ("DATA", "Loans and advances to banks", {"FY2025": 183.8, "FY2024": 124.6, "FY2023": 87.763, "FY2022": 64.093, "FY2021": 17.290, "FY2020": 10.338}),
-        ("DATA", "Debt securities", {"FY2025": 1154.0, "FY2024": 301.4, "FY2023": 115.774, "FY2022": 65.552, "FY2021": 40.406}),
+        ("DATA", "Debt securities - Government and supranational bonds, at FVOCI", {"FY2025": 1154.0, "FY2024": 301.4, "FY2023": 115.774, "FY2022": 65.552, "FY2021": 40.406}),
         ("DATA", "Derivative financial instruments", {"FY2025": 9.1, "FY2024": 23.5, "FY2023": 19.570, "FY2022": 27.846, "FY2021": 0.058, "FY2020": 0.004}),
         ("DATA", "Loans and advances to customers", {"FY2025": 3742.0, "FY2024": 3048.8, "FY2023": 1976.826, "FY2022": 1348.166, "FY2021": 566.040, "FY2020": 45.040}),
         ("DATA", "Investments", {"FY2025": 1.0, "FY2024": 1.0, "FY2023": 1.000, "FY2022": 1.000, "FY2021": 0}),

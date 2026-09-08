@@ -118,6 +118,43 @@ STATEMENTS_PRESENTATION_NOTE = (
 )
 
 
+INVESTMENT_BREAKDOWN_NOTE = (
+    "INVESTMENT BREAKDOWN NOTE (added ST-insights investment-composition widening, 2026-09-07): 'Financial "
+    "investments' (Note 17 in the FY2022-FY2025 Annual Reports; Note 18 in the FY2021 Annual Report, which "
+    "instead numbers a separate, always-nil 'Financial assets designated at FVTPL' as its own Note 17) and "
+    "'Debt securities: private placement bonds' (Note 16 in every year) are CONFIRMED SEPARATE, non-overlapping "
+    "Balance Sheet asset lines, each with its own note and both summing independently into Total assets - not "
+    "one nested inside the other. Note 17/18 'Financial investments' splits by measurement basis every year "
+    "into 'measured at FVOCI' (fair value, IFRS 9) and 'measured at amortised cost' (net of ECL provision), "
+    "which is reproduced below as 'Financial investments - measured at FVOCI'/'... - measured at amortised "
+    "cost' for FY2021-FY2023 (no further note-level detail disclosed those years), each reconciling to the "
+    "'Financial investments - total' row above (immaterial £1 rounding in FY2023 between the note's own "
+    "component figures and its own stated total). For FY2024 and FY2025, the same note ALSO breaks each "
+    "measurement-basis leg down by type of issuer (public ownership - governments/supranationals/other public "
+    "sector bodies - vs other - banks/other issuers), reproduced below as five FVOCI issuer sub-rows and two "
+    "amortised-cost issuer sub-rows in place of the two coarser measurement-basis rows for just those two "
+    "years (FVOCI issuer sub-rows sum to £141,145,313 against the note's own stated FVOCI total of "
+    "£141,145,314 for FY2025 - £1 rounding; FY2024's five FVOCI issuer sub-rows and both years' two amortised-"
+    "cost issuer sub-rows reconcile exactly). Sources, all from KEXIM Bank (UK) Limited's own Companies House "
+    "filings (image-only scans, visually transcribed), Note 16 'Debt securities: private placement bonds' and "
+    "Note 17/18 'Financial investments':\n"
+    f"FY2025: Annual Report 2025, Note 16 p.55, Note 17 pp.57-58 (issuer-type split p.58) - {FY2025_AR_URL}\n"
+    f"FY2024: Annual Report 2024, Note 16 p.55, Note 17 p.58 (issuer-type split same page) - {FY2024_AR_URL}\n"
+    f"FY2023: Annual Report 2023, Note 16 p.56, Note 17 p.59 (measurement-basis split only, no issuer-type "
+    f"table) - {FY2023_AR_URL}\n"
+    f"FY2022: Annual Report 2022, Note 16 p.55, Note 17 p.58 (measurement-basis split only) - {FY2022_AR_URL}\n"
+    f"FY2021: Annual Report 2021, Note 16 pp.53-54, Note 18 p.56 (measurement-basis split only) - "
+    f"{FY2021_AR_URL}\n\n"
+    "'Debt securities: private placement bonds' shows no measurement-basis or issuer-type split in any of the "
+    "5 years - its own Note 16 breaks it down only by maturity band and by internal credit-quality grade, "
+    "never by FVOCI/amortised cost or by issuer type, in any of the 5 Annual Reports - so it is relabelled "
+    "below to name its single measurement basis ('measured at amortised cost', consistent with its Note 16 "
+    "gross/provision/net presentation, the same presentation used for loans and advances rather than the "
+    "FVOCI/amortised-cost bifurcation Note 17/18 applies to 'Financial investments') rather than being split "
+    "into sub-rows."
+)
+
+
 def p3_sources(extra=""):
     return (
         "Sources - KEXIM Bank (UK) Limited, all figures GBP (no FX conversion needed), from each year's own "
@@ -148,8 +185,17 @@ bw = BankWorkbook(bank_name="KEXIM Bank (UK) Limited", years=YEARS, year_label=Y
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents", {"FY2025": 4915304, "FY2024": 10021152, "FY2023": 2688613, "FY2022": 19199889, "FY2021": 6262744}),
-    ("DATA", "Financial investments", {"FY2025": 179394842, "FY2024": 181605174, "FY2023": 160938795, "FY2022": 143109644, "FY2021": 119019308}),
-    ("DATA", "Debt securities: private placement bonds", {"FY2025": 90653832, "FY2024": 68218209, "FY2023": 72521740, "FY2022": 72526543, "FY2021": 61374708}),
+    ("TOTAL", "Financial investments — total", {"FY2025": 179394842, "FY2024": 181605174, "FY2023": 160938795, "FY2022": 143109644, "FY2021": 119019308}),
+    ("DATA", "Financial investments — measured at FVOCI", {"FY2023": 119238695, "FY2022": 97278017, "FY2021": 86331939}),
+    ("DATA", "Financial investments — measured at amortised cost", {"FY2023": 41700099, "FY2022": 45831627, "FY2021": 32687369}),
+    ("DATA", "Financial investments (FVOCI) — government securities", {"FY2025": 867475, "FY2024": 3276023}),
+    ("DATA", "Financial investments (FVOCI) — supranational organisations", {"FY2025": 10847689, "FY2024": 11311162}),
+    ("DATA", "Financial investments (FVOCI) — other public sector bodies", {"FY2025": 7260851, "FY2024": 7386157}),
+    ("DATA", "Financial investments (FVOCI) — issued by banks", {"FY2025": 72786477, "FY2024": 63380628}),
+    ("DATA", "Financial investments (FVOCI) — other issuers", {"FY2025": 49382821, "FY2024": 54923213}),
+    ("DATA", "Financial investments (amortised cost) — issued by banks", {"FY2025": 15202183, "FY2024": 22007019}),
+    ("DATA", "Financial investments (amortised cost) — other issuers", {"FY2025": 23047345, "FY2024": 19320972}),
+    ("DATA", "Debt securities: private placement bonds (measured at amortised cost)", {"FY2025": 90653832, "FY2024": 68218209, "FY2023": 72521740, "FY2022": 72526543, "FY2021": 61374708}),
     ("DATA", "Loans and advances to banks", {"FY2025": 55353800, "FY2024": 69952929, "FY2023": 64926885, "FY2022": 64280786, "FY2021": 34696210}),
     ("DATA", "Loans and advances to customers", {"FY2025": 272874882, "FY2024": 255692188, "FY2023": 221939171, "FY2022": 219863026, "FY2021": 162324430}),
     ("DATA", "Prepayments and other receivables", {"FY2025": 113759, "FY2024": 127231, "FY2023": 278605, "FY2022": 43913, "FY2021": 1839029}),
@@ -178,9 +224,9 @@ bw.add_balance_sheet_sheet(
     title="KEXIM Bank (UK) Limited — Balance Sheet",
     subtitle="Entity-level basis (Bank has no subsidiaries of its own). Whole £, no FX conversion needed.",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES + STATEMENTS_PRESENTATION_NOTE + "\n\n" + ENTITY_NOTE,
+    sources_text=STATEMENTS_SOURCES + STATEMENTS_PRESENTATION_NOTE + "\n\n" + ENTITY_NOTE + "\n\n" + INVESTMENT_BREAKDOWN_NOTE,
     first_col_width=68,
-    source_height=420,
+    source_height=560,
     unit_suffix=" (£)",
 )
 

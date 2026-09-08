@@ -92,6 +92,20 @@ STATEMENTS_SOURCES = (
     f"FY2021: Annual Report 2021, pp.32,33,34 - {AR2021_URL}\n"
     f"FY2020: Annual Report 2020, pp.29,30,31 - {AR2020_URL}\n"
     f"FY2019: Financial Report 2019, pp.23,24,25 - {AR2019_URL}\n\n"
+    "'Total financial assets' is broken down per each year's own Note 13 (Financial Assets), which is NOT a "
+    "pure investment-securities note - it's the Bank's catch-all measurement-basis note covering Loans and "
+    "advances to banks/customers alongside genuine investment securities, so those loan lines are broken out "
+    "here too (not just the securities legs) to avoid overstating the investment book: FY2026 Financial Report "
+    f"2026, p.72 - {AR2026_URL}; FY2025 Financial Report 2025, p.61 - {AR2025_URL}; FY2024 Financial Report "
+    f"2024, p.61 - {AR2024_URL}; FY2023 Financial Report 2023, p.57 - {AR2023_URL}; FY2022 Annual Report 2022, "
+    f"p.57 - {AR2022_URL}; FY2021 Annual Report 2021, p.60 - {AR2021_URL}; FY2020 Annual Report 2020, p.57 - "
+    f"{AR2020_URL}; FY2019 Financial Report 2019, p.49 - {AR2019_URL}. The 'of which: UK government gilts' "
+    "split within Debt securities is a disclosure introduced for the first time in the FY2026 Financial Report "
+    "(£1,193,292k of the £2,967,631k FY2026 debt securities balance) - it is NOT backfilled to FY2025 or "
+    "earlier years' own reports, which disclosed Debt securities only as one lump 'financial assets measured "
+    "at amortised cost' sub-line with no government/other split; 'Non-UK-government debt securities' nets out "
+    "exactly against 'UK government gilts' for FY2026 only, so the two together equal that year's full Debt "
+    "securities figure without double-counting.\n\n"
     + ENTITY_NOTE
 )
 
@@ -118,8 +132,24 @@ balance_sheet_rows = [
         "FY2026": 316, "FY2025": 136, "FY2024": 266, "FY2023": 240, "FY2022": 330}),
     ("DATA", "Derivative financial instruments (assets)", {
         "FY2026": 215175, "FY2025": 100364, "FY2024": 117813, "FY2023": 126976, "FY2022": 110851}),
-    ("DATA", "Financial assets", {
+    ("DATA", "Total financial assets", {
         "FY2026": 6339519, "FY2025": 5399523, "FY2024": 5229721, "FY2023": 5164686, "FY2022": 5204233}),
+    ("DATA", "Financial assets at fair value through profit or loss", {
+        "FY2026": 371563, "FY2025": 595373, "FY2024": 593212, "FY2023": 352586, "FY2022": 652752}),
+    ("DATA", "Investment in equity shares (financial assets at cost less impairment)", {
+        "FY2026": 2530, "FY2025": 2530, "FY2024": 2529, "FY2023": 2529, "FY2022": 1528}),
+    ("DATA", "Loans and advances to banks, at amortised cost", {
+        "FY2026": 219597, "FY2025": 65834, "FY2024": 123470, "FY2023": 248662, "FY2022": 275813}),
+    ("DATA", "Loans and advances to customers, net of impairment, at amortised cost", {
+        "FY2026": 2579028, "FY2025": 2274402, "FY2024": 2116584, "FY2023": 1966972, "FY2022": 1994820}),
+    ("DATA", "Bank and building society certificates of deposit (financial assets at amortised cost)", {
+        "FY2026": 199170, "FY2025": 106148, "FY2024": 104099, "FY2023": 460996, "FY2022": 220405}),
+    ("DATA", "Debt securities at amortised cost", {
+        "FY2025": 2355236, "FY2024": 2289827, "FY2023": 2132941, "FY2022": 2058915}),
+    ("DATA", "UK government gilts, within debt securities at amortised cost", {
+        "FY2026": 1193292}),
+    ("DATA", "Non-UK-government debt securities, at amortised cost", {
+        "FY2026": 1774339}),
     ("DATA", "Intangible assets", {
         "FY2026": 37247, "FY2025": 31776, "FY2024": 17363, "FY2023": 16765, "FY2022": 17821}),
     ("DATA", "Property and equipment", {
@@ -174,7 +204,13 @@ _HISTORICAL_BALANCE_SHEET = {
     "Cash and balances at central banks": (1709735, 1161138, 1525359),
     "Items in course of collection from banks": (303, 12, 1074),
     "Derivative financial instruments (assets)": (29394, 31, 2105),
-    "Financial assets": (4159605, 3956424, 3227198),
+    "Total financial assets": (4159605, 3956424, 3227198),
+    "Financial assets at fair value through profit or loss": (141084, 6038, 5104),
+    "Investment in equity shares (financial assets at cost less impairment)": (1528, 1528, 1528),
+    "Loans and advances to banks, at amortised cost": (326999, 384872, 217116),
+    "Loans and advances to customers, net of impairment, at amortised cost": (1857015, 1805994, 1698366),
+    "Bank and building society certificates of deposit (financial assets at amortised cost)": (180403, 617362, 519344),
+    "Debt securities at amortised cost": (1652576, 1140630, 785740),
     "Intangible assets": (16067, None, None),
     "Property and equipment": (57697, 82849, 83668),
     "Heritage assets": (9477, 9473, 9438),

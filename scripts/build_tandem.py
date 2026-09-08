@@ -128,7 +128,11 @@ bs_rows = [
     ("DATA", "Cash and balances at central banks", {"FY2025": 584887, "FY2024": 1497095, "FY2023": 2421938, "FY2022": 679659, "FY2021": 360378}),
     ("DATA", "Loans and advances to banks", {"FY2025": 35121, "FY2024": 33267, "FY2023": 34287, "FY2022": 21271, "FY2021": 16310}),
     ("DATA", "Loans and advances to customers", {"FY2025": 1284901, "FY2024": 1219256, "FY2023": 1280896, "FY2022": 1078369, "FY2021": 436845}),
-    ("DATA", "Debt securities", {"FY2025": 554658, "FY2024": 370151, "FY2023": 56609, "FY2022": 91210, "FY2021": 30215}),
+    ("DATA", "Total debt securities", {"FY2025": 554658, "FY2024": 370151, "FY2023": 56609, "FY2022": 91210, "FY2021": 30215}),
+    ("DATA", "Debt securities at amortised cost (Mortgage Backed Loan Notes Class A + Vertical Risk Retention Notes)", {"FY2025": 300970, "FY2024": 213670}),
+    ("DATA", "Debt securities available-for-sale (at market value)", {"FY2025": 253688, "FY2024": 156481, "FY2023": 56609, "FY2022": 91210, "FY2021": 30215}),
+    ("DATA", "UK Government securities (part of Debt securities)", {"FY2025": 31269, "FY2024": 0, "FY2023": 0, "FY2022": 19960, "FY2021": 5078}),
+    ("DATA", "Other debt securities (supranational, European and UK financial institutions, mortgage-backed loan notes)", {"FY2025": 523389, "FY2024": 370151, "FY2023": 56609, "FY2022": 71250, "FY2021": 25137}),
     ("DATA", "Derivative financial instruments", {"FY2025": 6383, "FY2024": 11304, "FY2023": 24353, "FY2022": 29592, "FY2021": 2358}),
     ("DATA", "Equity shares", {"FY2025": 3667, "FY2024": 3533, "FY2023": 2758, "FY2022": 2309, "FY2021": 1970}),
     ("DATA", "Other assets", {"FY2025": 11395, "FY2024": 10296, "FY2023": 27830, "FY2022": 23287, "FY2021": 5639}),
@@ -151,11 +155,28 @@ bs_rows = [
     ("TOTAL", "Total Liabilities and Equity", {"FY2025": 2489828, "FY2024": 3155197, "FY2023": 3859400, "FY2022": 1926197, "FY2021": 853719}),
 ]
 
+DEBT_SECURITIES_NOTE = (
+    "DEBT SECURITIES BREAKDOWN NOTE: the amortised-cost/available-for-sale and UK Government/other sub-rows "
+    "beneath 'Total debt securities' are drawn from the Bank's own 'Debt Securities' note, not estimated: "
+    f"FY2025/FY2024 from Note 12 (Debt Securities), p.42 of the FY2025 Annual Report - {AR2025_URL}; FY2023/FY2022 "
+    f"(as originally reported in that year's own filing) from Note 12, p.50 of the FY2023 Annual Report - "
+    f"{AR2023_URL}; FY2021 from Note 15, p.61 of the FY2022 Annual Report (that filing's own '2021' comparative "
+    f"column) - {AR2022_URL}. From FY2025, the note also splits out amortised-cost holdings (Mortgage Backed Loan "
+    "Notes Class A and Vertical Risk Retention Notes issued by the Bank's own securitisation vehicles, Fylde "
+    "Funding 2025-1 PLC and predecessors) that did not exist in FY2021-FY2023, when the entire debt securities "
+    "book was held available-for-sale at market value for liquidity purposes; FY2024's 'UK Government' leg is a "
+    "genuine disclosed nil (the note shows '-'), not a missing value."
+)
+
+
 bw.add_balance_sheet_sheet(
     title="Tandem Bank Limited — Statement of Financial Position",
     subtitle="Bank (Company-only) basis, £'000. FY2022 shown as originally reported - see source note at bottom (restatement).",
     rows=bs_rows,
-    sources_text=statement_sources("25 (2025)/26 (2024 comparative)", "24 (2025)/25 (2024 comparative)", "26 (2025)/27 (2024 comparative)"),
+    sources_text=statement_sources(
+        "25 (2025)/26 (2024 comparative)", "24 (2025)/25 (2024 comparative)", "26 (2025)/27 (2024 comparative)",
+        note_extra=DEBT_SECURITIES_NOTE,
+    ),
     first_col_width=68,
     source_height=280,
 )

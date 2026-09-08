@@ -35,12 +35,18 @@ def classify_amount_unit(text):
         return "EUR_thousand"
     if re.search(r"€m|eurm|€million|eurmillion", value):
         return "EUR_million"
+    if re.search(r"cad(?:'|’)?000", value):
+        return "CAD_thousand"
+    if re.search(r"cadm|cadmillion", value):
+        return "CAD_million"
     if re.search(r"£|gbp|pounds", value):
         return "GBP_unit"
     if re.search(r"\$|usd", value):
         return "USD_unit"
     if re.search(r"€|eur", value):
         return "EUR_unit"
+    if re.search(r"\bcad\b", value):
+        return "CAD_unit"
     return None
 
 

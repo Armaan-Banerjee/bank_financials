@@ -97,7 +97,7 @@ bw.add_balance_sheet_sheet(
         ("DATA", "Loans and advances to customers", {
             "FY2024": 62534590, "FY2023": 57675796, "FY2022": 61872149, "FY2021": 57660949,
         }),
-        ("DATA", "Investment securities", {
+        ("DATA", "Investment securities (FVOCI - government securities, 100% UK/US/Belgium sovereign)", {
             "FY2024": 146470054, "FY2023": 151922722, "FY2022": 107015424, "FY2021": 82190414,
         }),
         ("DATA", "Property and equipment", {
@@ -155,6 +155,11 @@ bw.add_balance_sheet_sheet(
         "The Bank's own Statement of financial position labels the cash line 'Cash and money market funds'\n"
         "FY2023-FY2024 and 'Cash and cash equivalents' FY2021-FY2022 - same line, presentation relabelled;\n"
         "shown on separate rows above rather than merged, to match each year's own disclosed label.\n\n"
+        "Investment securities note (Note 14, 'Investment securities'): all years' Annual Reports disclose the\n"
+        "entire book as held at Fair Value through Other Comprehensive Income (FVOCI), with the Bank stating no\n"
+        "financial assets are held at amortised cost or FVTPL, and as securities issued solely by government\n"
+        "institutions (UK, US and, per the FY2024 Annual Report, Belgium) - FY2024: p.46; FY2022/FY2021: p.43\n"
+        "of the FY2022 Annual Report (Note 14).\n\n"
         + STATEMENTS_SOURCES
     ),
     first_col_width=62,
@@ -480,7 +485,7 @@ metric(
 )
 
 metric("Total Capital Ratio", "%", [("Total Capital Ratio", {"FY2024": "26.89%", "FY2023": "32.30%", "FY2022": "20.68%", "FY2021": "25.02%"})], p3_sources())
-metric("Total RWAs", "£", [("Total RWAs", {"FY2024": 157370, "FY2023": 105275, "FY2022": 187034, "FY2021": 100287})], p3_sources())
+metric("Total RWAs", "£'000", [("Total RWAs", {"FY2024": 157370, "FY2023": 105275, "FY2022": 187034, "FY2021": 100287})], p3_sources())
 
 bw.add_rwa_breakdown_sheet(
     title="Guaranty Trust Bank (UK) Limited — RWA Breakdown",

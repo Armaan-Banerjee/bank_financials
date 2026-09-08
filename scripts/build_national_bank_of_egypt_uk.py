@@ -65,6 +65,32 @@ STATEMENTS_SOURCES = (
     "at £130,000,000 throughout, and every equity movement is simply that year's own Total comprehensive income."
 )
 
+BALANCE_SHEET_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "DEBT SECURITIES BREAKDOWN: the 'Debt securities - ...' sub-rows below the headline 'Total debt securities' "
+    "line are transcribed from the Bank's own Note 12/Note 10 'Debt securities' of each year's own Notes to the "
+    "Financial Statements, which splits the balance both by issuer type (issued by public bodies - government "
+    "securities - vs other securities) and by an interest rate fair value adjustment relating to hedge accounting "
+    "(see below):\n"
+    "FY2025 & FY2024: Note 12, p.54 - " + AR["FY2025"] + "\n"
+    "FY2023 & FY2022: Note 10, p.52 - " + AR["FY2023"] + "\n"
+    "FY2021 (own, 18-month period to 31 December 2021): Note 10, p.48 - " + AR["FY2021"] + "\n\n"
+    "Each year's 3 sub-rows (Issued by public bodies / Other securities / Interest rate fair value adjustment) sum "
+    "exactly to that year's headline 'Total debt securities' line - verified directly against the note. "
+    "MEASUREMENT BASIS: the Bank's own Note 17/Note 15 'Financial instruments' (same filings, adjoining pages) "
+    "classifies the ENTIRE debt securities book - both the portion 'packaged in asset swaps' and the portion "
+    "held outright - as 'Financial assets at amortised cost'; no FVOCI/FVTPL/available-for-sale/trading leg is "
+    "disclosed in any year reviewed. The 'packaged in asset swaps' portion (FY2025 £215,335,237; FY2024 "
+    "£241,498,548; FY2023 £206,526,248; FY2022 £229,494,910; FY2021 £206,590,056) is the hedged item in an "
+    "effective fair-value interest-rate-hedging relationship and carries a hedge-accounting basis adjustment "
+    "(the 'Interest rate fair value adjustment' sub-row above, refer to Note 18/Note 16/Note 15 per year) added "
+    "to its amortised-cost carrying value - this is a hedge-accounting mechanism, not a change of measurement "
+    "category, so all 3 sub-rows above are labelled '(amortised cost)' rather than introducing a fabricated "
+    "mark-to-market leg. Not added as separate rows here (would double the reconciling total against the issuer-"
+    "type split above), but confirmed identically for all 5 years via each year's own Note 12/Note 10 first table "
+    "('Debt securities packaged in asset swaps' + 'Debt securities at amortised cost' = same headline total)."
+)
+
 ASSET_QUALITY_SOURCES = (
     "Sources - National Bank of Egypt (UK) Limited's own loans-and-advances-to-customers concentration note and "
     "bad-and-doubtful-debt provision note, entity-level basis, £ (Companies House filings, all fully scanned/"
@@ -142,7 +168,10 @@ bs_rows = [
     ("DATA", "Cash and balances at central banks", {"FY2025": 371451, "FY2024": 397639, "FY2023": 398999, "FY2022": 402993, "FY2021": 302328}),
     ("DATA", "Loans and advances to banks", {"FY2025": 651571869, "FY2024": 654586394, "FY2023": 726791733, "FY2022": 709298405, "FY2021": 577213067}),
     ("DATA", "Loans and advances to customers", {"FY2025": 487762621, "FY2024": 181521123, "FY2023": 61860769, "FY2022": 46503635, "FY2021": 37151779}),
-    ("DATA", "Debt securities", {"FY2025": 604021714, "FY2024": 488086660, "FY2023": 505332212, "FY2022": 508564166, "FY2021": 550750341}),
+    ("DATA", "Total debt securities", {"FY2025": 604021714, "FY2024": 488086660, "FY2023": 505332212, "FY2022": 508564166, "FY2021": 550750341}),
+    ("DATA", "Debt securities - Issued by public bodies (government securities, amortised cost)", {"FY2025": 246733992, "FY2024": 181040174, "FY2023": 192504359, "FY2022": 180661405, "FY2021": 189275634}),
+    ("DATA", "Debt securities - Other securities (amortised cost)", {"FY2025": 356026463, "FY2024": 311841237, "FY2023": 320191387, "FY2022": 343276052, "FY2021": 356876457}),
+    ("DATA", "Debt securities - Interest rate fair value adjustment (hedge-accounting basis adjustment on securities packaged in interest rate asset swaps, amortised cost)", {"FY2025": 1261259, "FY2024": -4794751, "FY2023": -7363534, "FY2022": -15373291, "FY2021": 4598250}),
     ("DATA", "Derivative financial instruments", {"FY2025": 4323287, "FY2024": 8754822, "FY2023": 11054880, "FY2022": 16652823, "FY2021": 378832}),
     ("DATA", "Tangible fixed assets", {"FY2025": 41411528, "FY2024": 42218048, "FY2023": 42910866, "FY2022": 42356164, "FY2021": 41363058}),
     ("DATA", "Intangible fixed assets (no separate line FY2021-FY2022 - nil/immaterial)", {"FY2025": 4126398, "FY2024": 1896837, "FY2023": 580386}),
@@ -172,9 +201,9 @@ bw.add_balance_sheet_sheet(
     title="National Bank of Egypt (UK) Limited — Balance Sheet",
     subtitle="Entity-level basis, £. See source note at bottom.",
     rows=bs_rows,
-    sources_text=STATEMENTS_SOURCES,
-    first_col_width=78,
-    source_height=340,
+    sources_text=BALANCE_SHEET_SOURCES,
+    first_col_width=100,
+    source_height=560,
     unit_suffix=" (£)",
 )
 
@@ -194,6 +223,13 @@ pl_rows = [
     ("DATA", "Staff costs (Administrative expenses FY2021 - see note)", {"FY2025": -11077928, "FY2024": -10618557, "FY2023": -10150025, "FY2022": -8523451, "FY2021": -12064461}),
     ("DATA", "Depreciation and amortisation", {"FY2025": -1349478, "FY2024": -1150941, "FY2023": -1183345, "FY2022": -791016, "FY2021": -1273488}),
     ("DATA", "Other operating charges", {"FY2025": -6927010, "FY2024": -6292275, "FY2023": -5846753, "FY2022": -5788032, "FY2021": -7916877}),
+    # Not itself a printed AR subtotal - the sum of Staff costs + Depreciation
+    # and amortisation + Other operating charges above. Excludes Net
+    # impairment (charge)/reversal on financial assets, which sits below
+    # Operating profit in this bank's own presentation, per standard
+    # cost-to-income convention (operating costs only, not credit risk).
+    ("TOTAL", "Total operating expenses (sum of Staff costs + Depreciation and amortisation + Other operating charges - excludes net impairment charge/reversal on financial assets)",
+     {"FY2025": -19354416, "FY2024": -18061773, "FY2023": -17180123, "FY2022": -15102499, "FY2021": -21254826}),
     ("TOTAL", "Operating profit", {"FY2025": 5473983, "FY2024": 7891131, "FY2023": 8831685, "FY2022": 7108566, "FY2021": -144952}),
     ("DATA", "Net impairment (charge)/reversal on financial assets (Provisions for bad and doubtful debts)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 443787}),
     ("TOTAL", "Profit on ordinary activities before tax", {"FY2025": 5473983, "FY2024": 7891131, "FY2023": 8831685, "FY2022": 7108566, "FY2021": 298835}),

@@ -863,6 +863,7 @@ bw.add_rwa_breakdown_sheet(
     ),
     first_col_width=90,
     source_height=340,
+    unit_suffix=" (£m, conv. from USD)",
 )
 
 metric(

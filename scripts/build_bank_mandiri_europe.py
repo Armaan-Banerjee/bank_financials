@@ -105,6 +105,7 @@ FY2024_AR_URL = "https://find-and-update.company-information.service.gov.uk/comp
 FY2023_AR_URL = "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzQyNjk5Njk1M2FkaXF6a2N4/document?format=pdf&download=0"
 # HD-017: FY2014-FY2020 Annual Report filings (Companies House filing history), all scanned/
 # image-only PDFs (0 text blocks/page, confirmed via pdf_tools.py scan) - visually transcribed.
+FY2022_AR_URL = "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzM4ODY3NTM1NGFkaXF6a2N4/document?format=pdf&download=0"
 FY2020_AR_URL = "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzMwMDY0ODM2MWFkaXF6a2N4/document?format=pdf&download=0"
 FY2019_AR_URL = "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzI4MzQzODYxOWFkaXF6a2N4/document?format=pdf&download=0"
 FY2018_AR_URL = "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzI0MzE1NDIyNmFkaXF6a2N4/document?format=pdf&download=0"
@@ -273,6 +274,31 @@ BALANCE_SHEET_USD = {
     "Loan and advances to banks": {"FY2025": 29_404_000, "FY2024": 30_509_000, "FY2023": 34_531_000, "FY2022": 37_011_000, "FY2021": 19_985_000, "FY2020": 19_989_000, "FY2019": 45_985_000, "FY2018": 38_996_000, "FY2017": 17_005_000, "FY2016": 0, "FY2015": 40_000_000, "FY2014": 64_000_000},
     "Loan and advances to customers": {"FY2025": 131_430_000, "FY2024": 88_010_000, "FY2023": 87_428_000, "FY2022": 74_065_000, "FY2021": 59_912_000, "FY2020": 42_748_000, "FY2019": 59_044_000, "FY2018": 76_535_000, "FY2017": 88_506_000, "FY2016": 93_240_000, "FY2015": 74_148_000, "FY2014": 68_247_000},
     "Debt securities": {"FY2025": 132_298_000, "FY2024": 128_310_000, "FY2023": 118_990_000, "FY2022": 99_423_000, "FY2021": 71_107_000, "FY2020": 55_542_000, "FY2019": 49_136_000, "FY2018": 43_158_000, "FY2017": 38_504_000, "FY2016": 49_172_000, "FY2015": 36_240_000, "FY2014": 20_854_000},
+    # ST-011 follow-up (2026-09-07): Note 10 "Debt Securities" in each year's own Annual Report
+    # (Note 12/13 pre-2022, renumbered to Note 10 from the FY2022 Annual Report onward) breaks the
+    # "Debt securities" balance-sheet line into a real, exactly-reconciling split by BOTH
+    # measurement basis (FVOCI, called "available-for-sale"/AFS pre-FY2018) and issuer type
+    # (government/gilts vs other banks/corporates) - see DEBT_SECURITIES_SOURCES below for the
+    # full per-year note/page citations. "Pledged as collateral" sub-amounts shown as a separate
+    # issuer-type line in the FY2020-FY2022 Annual Reports' own note are folded into "other
+    # (banks/corporates)" below - confirmed by the following year's own Annual Report re-presenting
+    # that same prior-year comparative column collapsed into exactly two issuer buckets (government
+    # vs other), with the former "pledged as collateral" amount landing inside "other" every time
+    # this was checked (FY2021's, FY2022's, and FY2023's own comparative columns all confirm this).
+    "Debt securities — FVOCI/AFS, UK government & gilts": {"FY2025": 63_187_000, "FY2024": 59_748_000, "FY2023": 40_521_000, "FY2022": 18_205_000, "FY2021": 24_596_000, "FY2020": 10_103_000, "FY2019": 17_617_000, "FY2018": 16_745_000, "FY2017": 17_391_000, "FY2016": 19_979_000, "FY2015": 13_584_000, "FY2014": 9_684_000},
+    "Debt securities — FVOCI/AFS, other (banks & corporates)": {"FY2025": 28_736_000, "FY2024": 22_299_000, "FY2023": 30_480_000, "FY2022": 35_561_000, "FY2021": 36_311_000, "FY2020": 37_508_000, "FY2019": 18_544_000, "FY2018": 8_501_000, "FY2017": 1_069_000, "FY2016": 14_403_000, "FY2015": 22_656_000, "FY2014": 11_170_000},
+    # Amortised cost (called "held-to-maturity"/HTM pre-FY2018) by issuer only broken out from the
+    # FY2022 Annual Report onward (both years disclosed there — FY2022 and its FY2021 comparative —
+    # each showing a nil/"-" government line, i.e. 100% banks/corporates); FY2016-FY2020's own Annual
+    # Reports show only a single undifferentiated amortised-cost/HTM total with no issuer split at
+    # all (see the "(issuer split not disclosed)" row below for those 5 years); FY2014-FY2015 had no
+    # amortised-cost/HTM holdings whatsoever (both years' own notes show FVOCI/AFS as 100% of the
+    # balance, confirmed by the FVOCI/AFS sub-rows above reconciling to the FULL "Debt securities"
+    # total with nothing left over) - left blank for FY2014-FY2015, not zero, per this project's
+    # missing-vs-nil convention.
+    "Debt securities — amortised cost/HTM, UK government & gilts": {"FY2025": 9_414_000, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0},
+    "Debt securities — amortised cost/HTM, other (banks & corporates)": {"FY2025": 30_962_000, "FY2024": 46_263_000, "FY2023": 47_989_000, "FY2022": 45_657_000, "FY2021": 10_200_000},
+    "Debt securities — amortised cost/HTM (issuer split not disclosed)": {"FY2020": 7_931_000, "FY2019": 12_974_000, "FY2018": 17_911_000, "FY2017": 20_044_000, "FY2016": 14_790_000},
     "Tangible fixed assets": {"FY2025": 14_000, "FY2024": 14_000, "FY2023": 2_000, "FY2022": 6_000, "FY2021": 15_000, "FY2020": 50_000, "FY2019": 86_000, "FY2018": 93_000, "FY2017": 129_000, "FY2016": 162_000, "FY2015": 7_000, "FY2014": 13_000},
     "Intangible fixed assets": {"FY2025": 179_000, "FY2024": 187_000, "FY2023": 3_000, "FY2022": 3_000, "FY2021": 16_000, "FY2020": 50_000, "FY2019": 70_000, "FY2018": 53_000, "FY2017": 43_000, "FY2016": 247_000, "FY2015": 419_000, "FY2014": 431_000},
     "Right of use assets": {"FY2025": 106_000, "FY2024": 235_000, "FY2023": 381_000, "FY2022": 499_000, "FY2021": 37_000, "FY2020": 129_000, "FY2019": 276_000},  # not applicable pre-FY2019 (IFRS 16 adoption) - blank, not zero
@@ -299,7 +325,12 @@ balance_sheet_rows = [
     ("DATA", "Cash and cash equivalent", BS["Cash and cash equivalent"]),
     ("DATA", "Loan and advances to banks", BS["Loan and advances to banks"]),
     ("DATA", "Loan and advances to customers", BS["Loan and advances to customers"]),
-    ("DATA", "Debt securities", BS["Debt securities"]),
+    ("DATA", "Total debt securities", BS["Debt securities"]),
+    ("DATA", "Debt securities — FVOCI/AFS, UK government & gilts", BS["Debt securities — FVOCI/AFS, UK government & gilts"]),
+    ("DATA", "Debt securities — FVOCI/AFS, other (banks & corporates)", BS["Debt securities — FVOCI/AFS, other (banks & corporates)"]),
+    ("DATA", "Debt securities — amortised cost/HTM, UK government & gilts", BS["Debt securities — amortised cost/HTM, UK government & gilts"]),
+    ("DATA", "Debt securities — amortised cost/HTM, other (banks & corporates)", BS["Debt securities — amortised cost/HTM, other (banks & corporates)"]),
+    ("DATA", "Debt securities — amortised cost/HTM (issuer split not disclosed)", BS["Debt securities — amortised cost/HTM (issuer split not disclosed)"]),
     ("DATA", "Tangible fixed assets", BS["Tangible fixed assets"]),
     ("DATA", "Intangible fixed assets", BS["Intangible fixed assets"]),
     ("DATA", "Right of use assets", BS["Right of use assets"]),
@@ -322,10 +353,50 @@ balance_sheet_rows = [
     ("TOTAL", "Total liabilities and shareholders' funds", BS["Total liabilities and shareholders' funds"]),
 ]
 
+DEBT_SECURITIES_SOURCES = (
+    "\n\nDEBT SECURITIES BREAKDOWN (added 2026-09-07): each year's own Annual Report's \"Debt Securities\" note "
+    "(Note 10 from the FY2022 Annual Report onward; Note 12 in the FY2016/FY2020 Annual Reports; Note 13 in the "
+    "FY2015 Annual Report) splits the Balance Sheet's single \"Debt securities\" line by measurement basis "
+    "(FVOCI, called \"available-for-sale\"/AFS pre-FY2018; and amortised cost, called \"held-to-maturity\"/HTM "
+    "pre-FY2018) and, within FVOCI/AFS, by issuer type (government/gilts vs other banks/corporates):\n"
+    f"FY2025/FY2024 — Annual Report FY2025, Note 10 \"Debt Securities\", p.38 — {FY2025_AR_URL}\n"
+    f"FY2024/FY2023 comparative — Annual Report FY2024, Note 10, p.37-38 — {FY2024_AR_URL}\n"
+    f"FY2023/FY2022 comparative — Annual Report FY2023, Note 10, p.37 — {FY2023_AR_URL}\n"
+    f"FY2022/FY2021 comparative — Annual Report FY2022, Note 10, p.36 — {FY2022_AR_URL}\n"
+    f"FY2020/FY2019 comparative — Annual Report FY2020, Note 12, p.36-37 — {FY2020_AR_URL}\n"
+    f"FY2018/FY2017 comparative — Annual Report FY2018, Note 12, p.37-38 — {FY2018_AR_URL}\n"
+    f"FY2016/FY2015 comparative — Annual Report FY2016, Note 12, p.24 — {FY2016_AR_URL}\n"
+    f"FY2015/FY2014 comparative — Annual Report FY2015, Note 13, p.25 — {FY2015_AR_URL}\n"
+    "Each year's own comparative column was cross-checked against the adjacent year's report where both exist — "
+    "all matched exactly except three immaterial ($1k) rounding artefacts already present WITHIN the source "
+    "documents themselves (i.e. not introduced by this transcription): the FY2025 Annual Report's own FY2025 "
+    "FVOCI government+other subtotal (63,187+28,736=91,923) is $1k above its own printed FVOCI total (91,922); "
+    "the FY2020 Annual Report's own FY2019 comparative government+other subtotal (17,617+18,544=36,161) is $1k "
+    "below its own printed FVOCI total (36,162); and the FY2018 Annual Report's own FY2018 government+other "
+    "subtotal (16,745+8,501=25,246) is $1k below its own printed FVOCI total (25,247). The sub-row figures below "
+    "are transcribed exactly as printed in each source; the parent \"Total debt securities\" row is unaffected "
+    "(it is the Balance Sheet's own total, not a re-sum of the sub-rows).\n\n"
+    "\"PLEDGED AS COLLATERAL\" TREATMENT: the FY2020-FY2022 Annual Reports' own FVOCI/AFS note presents amounts "
+    "\"pledged as collateral\" as a third issuer-type line sitting between \"government securities\" and \"other "
+    "debt securities — banks/corporates\". These are folded into \"other (banks & corporates)\" below, not "
+    "government — confirmed because each of those years' own comparative column, when re-presented the "
+    "following year in only two issuer buckets (government vs other), lands the former \"pledged as collateral\" "
+    "amount inside \"other\" every time (checked for the FY2020→FY2021, FY2021→FY2022 and FY2022→FY2023 "
+    "transitions).\n\n"
+    "AMORTISED COST / HTM ISSUER SPLIT: only broken out by issuer from the FY2022 Annual Report onward (both "
+    "FY2022 and its FY2021 comparative show a nil/\"-\" government line, i.e. 100% banks/corporates that both "
+    "years). The FY2016-FY2020 Annual Reports' own amortised-cost/HTM note gives only a single undifferentiated "
+    "total with no issuer breakdown at all — shown in the \"(issuer split not disclosed)\" row rather than "
+    "assumed to be 100% banks/corporates. FY2014-FY2015 held no amortised-cost/HTM investments at all (both "
+    "years' FVOCI/AFS sub-rows reconcile to the FULL \"Debt securities\" total with nothing left over) — left "
+    "blank for FY2014-FY2015, not zero."
+)
+
 BALANCE_SHEET_SOURCES = (
     "Sources — Bank Mandiri (Europe) Limited's own Balance Sheet, converted from USD to £'000 at the Bank of "
     "England GBP/USD spot rate as at each fiscal year-end (point-in-time figures — see FX conversion note below):\n"
     + ST_ENTITY_NOTE
+    + DEBT_SECURITIES_SOURCES
 )
 
 bw.add_balance_sheet_sheet(
@@ -334,7 +405,7 @@ bw.add_balance_sheet_sheet(
     rows=balance_sheet_rows,
     sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=52,
-    source_height=260,
+    source_height=420,
 )
 
 INCOME_STATEMENT_USD = {

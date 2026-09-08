@@ -89,6 +89,24 @@ BS_SOURCES = (
     "statement labels the related-party lines 'Due from/to related entities' rather than 'Amounts owed by/to "
     "related party' - the same balances, mapped onto the same rows as every later year. FY2020's Total assets "
     "(£21,653k) ties exactly to Total liabilities (£3,015k) plus Total equity (£18,638k) with zero rounding gap."
+    "\n\nINVESTMENT SECURITIES COMPOSITION: checked against the 'Investment securities' note in each year's own "
+    "annual accounts - FY2024 Note 12 (also showing the FY2023 comparative column), p.59 of the FY2025 accounts' "
+    "prior-year filing (Annual report and financial statements for year ended 31 March 2024); FY2022 Note 13 "
+    "(also showing the FY2021 comparative column), p.47 of the Annual report and financial statements for year "
+    "ended 31 March 2022; FY2020 Note 11, p.37 of the Annual report and financial statements for the 16-month "
+    "period to 31 March 2020. Every year's note breaks the balance into Gilts, Certificates of Deposit and "
+    "Treasury Bills, all measured at amortised cost - the Bank's own accounting policy note (Note g.2, 'Investment "
+    "Securities') states these 'are UK government bonds and Treasury Bills which are held by the Bank as highly "
+    "liquid assets... held at amortised cost'. Certificates of Deposit are nil in every year reviewed (FY2020, "
+    "FY2021, FY2022, FY2023, FY2024) and there is no FVOCI/FVTPL column with a nonzero value in the Bank's own "
+    "financial-instruments-by-measurement-basis table (Note 32/33) in any year checked - so the balance is 100% "
+    "UK-government-issued (gilts and/or Treasury Bills) and 100% amortised cost throughout, with no cross-category "
+    "split to show: FY2020 Treasury Bills £14,987k (Gilts nil); FY2021 Treasury Bills £26,705k less £5k ECL "
+    "(Gilts nil); FY2022 Gilts £8,536k + Treasury Bills £8,000k + £9k interest receivable less £2k ECL; FY2023 "
+    "Gilts £4,878k + Treasury Bills £40,894k + £293k interest receivable less £6k ECL; FY2024 Treasury Bills "
+    "£16,580k (Gilts nil) + £222k interest receivable less £2k ECL - each reconciling exactly to the row's own "
+    "reported total for that year. FY2025 carries no Investment securities line at all (see above), so no note "
+    "exists to check that year."
 )
 PL_SOURCES = (
     statements_sources("Statement of Profit or Loss and Other Comprehensive Income")
@@ -145,7 +163,7 @@ bw = BankWorkbook(bank_name="THIS BANK LIMITED", years=YEARS, year_label=YEAR_LA
 BS_ROWS = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents", {"FY2025": 90674, "FY2024": 247547, "FY2023": 5264, "FY2022": 4159, "FY2021": 6720, "FY2020": 2066}),
-    ("DATA", "Investment securities", {"FY2024": 16800, "FY2023": 46059, "FY2022": 16543, "FY2021": 26700, "FY2020": 14987}),
+    ("DATA", "Investment securities (UK gilts and Treasury Bills, held at amortised cost)", {"FY2024": 16800, "FY2023": 46059, "FY2022": 16543, "FY2021": 26700, "FY2020": 14987}),
     ("DATA", "Loans and advances to customers", {"FY2025": 277269, "FY2024": 83069, "FY2023": 55364, "FY2022": 57279, "FY2021": 8585, "FY2020": 15}),
     ("DATA", "Amounts owed by related party", {"FY2025": 313, "FY2024": 178, "FY2023": 994, "FY2022": 158, "FY2021": 145, "FY2020": 13}),
     ("DATA", "Other assets", {"FY2025": 403, "FY2024": 607, "FY2023": 408, "FY2022": 403, "FY2021": 429, "FY2020": 156}),
@@ -171,7 +189,7 @@ bw.add_balance_sheet_sheet(
     rows=BS_ROWS,
     sources_text=BS_SOURCES,
     first_col_width=62,
-    source_height=280,
+    source_height=440,
     unit_suffix=" (£'000)",
 )
 
@@ -191,6 +209,12 @@ PL_ROWS = [
     ("DATA", "Depreciation", {"FY2025": -352, "FY2024": -178, "FY2023": -173, "FY2022": -182, "FY2021": -195, "FY2020": -225}),
     ("DATA", "Amortisation", {"FY2025": -101, "FY2024": -241, "FY2023": -480, "FY2022": -631, "FY2021": -482, "FY2020": 0}),
     ("DATA", "Other expenses", {"FY2025": 695, "FY2024": -2000, "FY2023": -360, "FY2022": -80, "FY2021": -2}),
+    # Not itself a printed AR subtotal - the sum of Administrative expenses +
+    # Depreciation + Amortisation + Other expenses above. Excludes Impairment
+    # losses on financial instruments per standard cost-to-income convention
+    # (operating costs only, not credit risk).
+    ("TOTAL", "Total operating expenses (sum of Administrative expenses + Depreciation + Amortisation + Other expenses - excludes impairment losses on financial instruments)",
+     {"FY2025": -13970, "FY2024": -13124, "FY2023": -9664, "FY2022": -7224, "FY2021": -6005, "FY2020": -6820}),
     ("TOTAL", "Loss before tax", {"FY2025": -9616, "FY2024": -11024, "FY2023": -12685, "FY2022": -6495, "FY2021": -6321, "FY2020": -6788}),
     ("DATA", "Income tax expense", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": 0}),
     ("TOTAL", "Loss for the year", {"FY2025": -9616, "FY2024": -11024, "FY2023": -12685, "FY2022": -6495, "FY2021": -6321, "FY2020": -6788}),

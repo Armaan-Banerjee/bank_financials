@@ -131,6 +131,36 @@ STATEMENTS_SOURCES = (
     "FY2024: £219.8m; FY2023: £212.6m; FY2022: £179.7m; FY2021: £149.5m), a genuine Group-vs-Company difference, "
     "not an error - the Statement of Changes in Equity sheet's 'Profit for the year' rows correctly use the "
     "Company's own profit figures, ticking exactly to Company Total equity."
+    "\n\nINVESTMENT SECURITIES MEASUREMENT-BASIS SPLIT: the Company's 'Investment securities' balance is "
+    "disclosed by IFRS 9 measurement category for FY2018-FY2025, splitting into amortised cost and FVOCI "
+    "(mandatorily-at-FVTPL is £nil in every reviewed year). No UK government/gilt/treasury-bill vs other-issuer "
+    "split is disclosed in any reviewed year - the only issuer-type analysis Shawbrook gives (Note 25 of the "
+    "FY2025 Annual Report; Note 16 of the FY2019 Annual Report) is 'covered bonds' vs 'debt securities' (retained "
+    "mortgage-backed notes from the Group's own securitisations), neither of which is a government security, so "
+    "that split is not reproduced here. "
+    "FY2025/FY2024: Note 25 'Investment securities', Annual Report and Accounts 2025 pp.144-145, discloses "
+    "'£178.1 million (2024: £nil) classified as FVOCI'; the Company figures used here (FY2025: £1,986.7m "
+    "amortised cost / £178.1m FVOCI; FY2024: £1,449.3m amortised cost / £nil FVOCI) are taken from the Risk "
+    "Report's 'Exposure to credit risk' table, p.70, which gives the Group/Company split by measurement category "
+    "and ties exactly to each year's Balance Sheet total - " + AR['FY2025'] + "\n"
+    "FY2023/FY2022: Note 38 'Financial assets and financial liabilities' (Classification of financial assets and "
+    "financial liabilities), Annual Report and Accounts 2023 pp.159-160 (Company table p.160), shows Company "
+    "Investment securities entirely in the amortised-cost column (FY2023: £816.3m; FY2022: £716.8m; £nil FVOCI/"
+    "FVTPL in both years) - " + AR['FY2023'] + "\n"
+    "FY2021/FY2020: Note 41 'Financial instruments' (Classification of financial assets and financial "
+    "liabilities), Annual Report and Accounts 2021 pp.156-157, gives the Group table (Investment securities "
+    "entirely amortised cost: FY2021 £521.4m; FY2020 £358.2m) plus a Company narrative confirming that 'the "
+    "measurement categories that the Company's financial assets ... are allocated to are the same as the Group' - "
+    "so the Company's own Investment securities balance (FY2021: £614.8m; FY2020: £421.6m) is taken as entirely "
+    "amortised cost, £nil FVOCI/FVTPL - " + AR['FY2021'] + "\n"
+    "FY2019/FY2018: accounting policy Note 1.7(i), Annual Report and Accounts 2019 p.103, states plainly that "
+    "'Investment securities are classified as financial assets measured at amortised cost' with no FVOCI/FVTPL "
+    "carve-out disclosed for either year (Note 16 'Investment securities', p.128, gives the £245.9m/£139.9m "
+    "Company totals used elsewhere on this sheet, entirely amortised cost) - " + AR['FY2019'] + "\n"
+    "FY2017-FY2013 and FY2012 are left blank for this split: FY2017-FY2013 have no Investment securities balance "
+    "at all (see the row above); FY2012's own Annual Report was not reviewed for a measurement-basis breakdown, "
+    "so rather than assume its £144.9m follows the same amortised-cost-only pattern seen in every other reviewed "
+    "year, it is left blank here."
 )
 
 # ---------------------------------------------------------------
@@ -145,6 +175,8 @@ balance_sheet_rows = [
     ("DATA", "Loans and advances to banks", d([200.2, 248.8, 337.5, 199.9, 49.0, 84.7, 52.3, 50.1, 28.5, 24.1, 30.9, 36.4, 23.7, 117.0])),
     ("DATA", "Loans and advances to customers", d([17801.1, 15129.4, 13157.9, 10472.8, 8278.9, 7061.3, 6637.7, 5805.7, 4799.3, 4050.4, 3319.1, 2284.7, 1346.8, 684.4])),
     ("DATA", "Investment securities", d([2164.8, 1449.3, 816.3, 716.8, 614.8, 421.6, 245.9, 139.9, None, None, None, None, None, 144.9])),
+    ("DATA", "Investment securities at amortised cost", d([1986.7, 1449.3, 816.3, 716.8, 614.8, 421.6, 245.9, 139.9, None, None, None, None, None, None])),
+    ("DATA", "Investment securities at FVOCI", d([178.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None])),
     ("DATA", "Derivative financial assets", d([64.1, 151.8, 182.1, 271.6, 21.5, 0.6, 3.1, 1.6, 1.8, 5.2, 2.8, 3.7, None, None])),
     ("DATA", "Current tax receivable", d([12.3, 17.9, None, None, 4.2, 3.0, None, None, None, None, None, None, None, None])),
     ("DATA", "Property, plant and equipment", d([54.0, 64.3, 38.9, 47.8, 47.8, 53.6, 57.2, 38.1, 39.2, 42.6, 48.2, 49.0, 52.9, 59.7])),
@@ -187,7 +219,9 @@ b.add_balance_sheet_sheet(
               "Total equity for every year; Total equity ties exactly to the Statement of Changes in Equity "
               "sheet's own opening/closing balances - zero plug rows. FY2013/FY2012 added per wayfinder ticket "
               "HD-072 (see source note); FY2013 figures use the already-£m-rounded comparative column in the "
-              "FY2014 Annual Report rather than independently rounding FY2013's own £000 figures.",
+              "FY2014 Annual Report rather than independently rounding FY2013's own £000 figures. 'Investment "
+              "securities at amortised cost'/'at FVOCI' are a sub-split of the 'Investment securities' row above "
+              "(see source note); no government/sovereign-bond vs other-issuer split is disclosed for this bank.",
     rows=balance_sheet_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=68,

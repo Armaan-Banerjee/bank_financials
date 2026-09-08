@@ -24,7 +24,7 @@ import re
 from collections import defaultdict
 
 from in012_absolute_analysis import classify_amount_unit, write_json_atomic
-from statement_row_selection import bare_label, in_assets_section, select_labeled_rows
+from statement_row_selection import bare_label, in_assets_section, own_label, select_labeled_rows
 
 # Absolute P&L figures (personnel/other-opex/total-opex/revenue) are reported
 # in whatever unit each bank's own filing uses - £'000 for most, £m for some
@@ -58,12 +58,53 @@ def _ratio_value(item):
 
 _PERSONNEL_RE = re.compile(r"personnel|staff costs", re.I)
 _OTHER_OPEX_RE = re.compile(r"other operating expense", re.I)
-_TOTAL_OPEX_RE = re.compile(r"total operating expense", re.I)
-_TOTAL_OPEX_EXCLUDE_RE = re.compile(r"before ", re.I)
+# Broadened 2026-09-07 from a literal "total operating expense" - 67 banks
+# tag their aggregate opex row TOTAL under a label that doesn't contain the
+# word "total" at all ("Operating expenses", "Net operating expenses",
+# "Administrative expenses", "Total expenses", "Total operating costs" -
+# found via a user report that Co-operative Bank's derived cost-to-income
+# was empty, which led to auditing every bank and finding 108/145 had none
+# at all). Safe to broaden this far ONLY because cost_base() below now
+# passes require_kind="TOTAL" - "Operating expenses"/"Administrative
+# expenses" are each used as the genuine TOTAL row for some banks and as a
+# DATA sub-component (one cost line among several) for others, confirmed by
+# reading every build_*.py script directly; row_kind (not label text) is
+# what tells them apart, since matching on text alone would silently
+# understate the ratio for whichever banks use the ambiguous label as a
+# sub-component.
+_TOTAL_OPEX_RE = re.compile(r"operating expense|administrative expense|operating cost|total expense", re.I)
+# Narrowed 2026-09-07 from a blanket r"before " (which also killed genuine
+# TOTAL opex rows like UBI UK's "Operating expenses before impairment loss
+# allowances" and Arab Bank Europe/HBL Bank UK/Close Brothers' "before
+# amortisation/provisions" variants - all legitimate opex totals under the
+# standard convention of excluding credit losses/one-off items from opex).
+# What this must still catch: a REVENUE row whose descriptive text happens
+# to mention "before operating/administrative expenses" (LHV's and Persia
+# International Bank's "Net operating income (... BEFORE operating
+# expenses ...)" rows), which would otherwise get mistaken for the opex
+# total itself since the phrase "operating expense" appears in their label.
+_TOTAL_OPEX_EXCLUDE_RE = re.compile(r"before (operating|administrative) (expense|cost)", re.I)
 _OF_WHICH_RE = re.compile(r"of which", re.I)
 
-_REVENUE_RE = re.compile(r"total operating income|total income|net operating income|operating income$", re.I)
+_REVENUE_RE = re.compile(
+    r"total operating income|total income|net operating income|operating income$"
+    r"|net revenue|net income from operations|total net income|operating income before"
+    r"|net interest and fee income|total revenue",
+    re.I,
+)
 _REVENUE_EXACT = {"total operating income", "total income"}
+_REVENUE_PREFERRED_PREFIXES = ("total operating income", "total income", "total net income", "total revenue")
+# "total revenue" added 2026-09-07 (ICICI Bank UK's and Melli Bank's own
+# combined-income lines are captioned "Total revenue / Net Income" and
+# "Total revenue / Total net income" respectively) - confirmed via grep
+# across every build_*.py that "total revenue" is never used as a DATA
+# sub-component elsewhere, only as these two banks' genuine TOTAL row.
+# "net revenue"/"net income from operations"/"total net income" added
+# 2026-09-07 (Credit Suisse International/UK, Mizuho International, Kingdom
+# Bank each label their combined-income line this way instead of any of the
+# phrases above) - confirmed via grep across every build_*.py that none of
+# these three phrases is ever used as a DATA sub-component elsewhere, so
+# there's no ambiguity risk like the opex broadening above.
 # "operating income$" is deliberately loose (94 label variants, no single
 # canonical revenue line) but it must not fall through to "Other operating
 # income" - a residual income line, not total revenue - when a bank's
@@ -71,7 +112,14 @@ _REVENUE_EXACT = {"total operating income", "total income"}
 # FY2025 filing: "Net operating income" is null that year, so without this
 # exclusion the selector picked "Other operating income" alone as revenue,
 # producing a 1544% cost-to-income ratio).
-_REVENUE_EXCLUDE_RE = re.compile(r"of which|from banking activities|other operating income", re.I)
+# Row labels retain their statement-section prefix (for example, UBP's
+# "Other operating income - Total operating income").  Reject the residual
+# *line* "Other operating income", but not a valid total merely because its
+# parent section happens to have that name.
+_REVENUE_EXCLUDE_RE = re.compile(
+    r"of which|from banking activities|(?:^| - )other operating income(?:\s*\([^)]*\))?$",
+    re.I,
+)
 
 _LOANS_RE = re.compile(r"loans (and advances )?to customers", re.I)
 _TREASURY_RE = re.compile(r"treasury|investment securities|debt securities|financial investments|investment in debt securities", re.I)
@@ -85,9 +133,32 @@ _CASH_RE = re.compile(r"cash,?\s+and\s+(other\s+)?(cash equivalents|balances)", 
 _CASH_EXCLUDE_RE = re.compile(r"of which|restricted", re.I)
 _TOTAL_ASSETS_RE = re.compile(r"total assets$", re.I)
 
+# A bank's own directly-disclosed cost:income ratio (currently only
+# Co-operative Bank carries this row - added 2026-09-07 after a user report
+# that the derived cost_to_income_pct below was empty for all but 3 years,
+# since it depends entirely on a "Total operating expense" row this bank
+# only itemises FY2014-FY2016). Preferred over the opex/revenue derivation
+# wherever a bank discloses it directly, since it's the bank's own
+# as-reported figure rather than a reconstruction - falls back to the
+# derived ratio for every other bank-year.
+_COST_INCOME_DISCLOSED_RE = re.compile(r"cost:?\s*income ratio\s*\(as reported\)", re.I)
+
 
 def _revenue_rank(label):
-    return 0 if bare_label(label).lower() in _REVENUE_EXACT else 1
+    # Broadened 2026-09-07 from an exact-match check (bare_label(label) ==
+    # "total operating income"/"total income") to a startswith check on the
+    # row's OWN text (see statement_row_selection.own_label) - found via
+    # HSBC Bank Plc, whose own revenue TOTAL row is "Total operating income
+    # (IFRS 4 presentation, pre-FY2023)": the trailing presentation-era
+    # qualifier meant it never matched the old exact set, so it fell to the
+    # same rank-1 tie as "Net operating income" (post credit-loss-charge)
+    # and "Net operating income before change in expected credit losses" -
+    # all three then tied on sort_key, and the SHORTEST own_label ("Net
+    # operating income") won by default, silently preferring a post-ECL,
+    # non-gross income figure over the bank's actual gross revenue total. A
+    # prefix match keeps genuine "Total operating/net income (...)" variants
+    # at top priority regardless of what descriptive text a bank appends.
+    return 0 if own_label(label).lower().strip().startswith(_REVENUE_PREFERRED_PREFIXES) else 1
 
 
 def cost_base(observations):
@@ -96,11 +167,22 @@ def cost_base(observations):
     view). Revenue is selected via a priority list (94 loose label variants
     exist; "Total operating income"/"Total income" preferred over "Net
     operating income" or narrower "operating income" lines) since P&L has
-    no single canonical revenue label across all 145 banks."""
+    no single canonical revenue label across all 145 banks.
+
+    total_opex/revenue rely on select_labeled_rows's require_own_match
+    default (see statement_row_selection.py) to reject a row that only
+    matches via its SECTION prefix (e.g. Punjab National Bank
+    International's "Profit/(loss) before tax" sitting inside a SECTION
+    literally named "Operating expenses") rather than its own text."""
     personnel, _ = select_labeled_rows(observations, "Profit & Loss", _PERSONNEL_RE, _OF_WHICH_RE)
     other_opex, _ = select_labeled_rows(observations, "Profit & Loss", _OTHER_OPEX_RE, _OF_WHICH_RE)
-    total_opex, opex_ambiguous = select_labeled_rows(observations, "Profit & Loss", _TOTAL_OPEX_RE, _TOTAL_OPEX_EXCLUDE_RE)
-    revenue, revenue_ambiguous = select_labeled_rows(observations, "Profit & Loss", _REVENUE_RE, _REVENUE_EXCLUDE_RE, rank=_revenue_rank)
+    total_opex, opex_ambiguous = select_labeled_rows(
+        observations, "Profit & Loss", _TOTAL_OPEX_RE, _TOTAL_OPEX_EXCLUDE_RE, require_kind="TOTAL",
+    )
+    revenue, revenue_ambiguous = select_labeled_rows(
+        observations, "Profit & Loss", _REVENUE_RE, _REVENUE_EXCLUDE_RE, rank=_revenue_rank,
+    )
+    disclosed_cost_to_income, _ = select_labeled_rows(observations, "Profit & Loss", _COST_INCOME_DISCLOSED_RE)
 
     def series(rows):
         out = defaultdict(dict)
@@ -121,6 +203,13 @@ def cost_base(observations):
             out[frn][year] = round(abs(_ratio_value(item)) / abs(rev_value) * 100, 2)
         return dict(out)
 
+    cost_to_income_pct = defaultdict(dict)
+    for (frn, year), item in disclosed_cost_to_income.items():
+        cost_to_income_pct[frn][year] = float(item["value_numeric"])
+    for frn, years in pct_of_revenue(total_opex).items():
+        for year, value in years.items():
+            cost_to_income_pct[frn].setdefault(year, value)
+
     return {
         "personnel_expense": series(personnel),
         "other_operating_expense": series(other_opex),
@@ -128,12 +217,13 @@ def cost_base(observations):
         "revenue": series(revenue),
         "personnel_expense_pct_of_revenue": pct_of_revenue(personnel),
         "other_operating_expense_pct_of_revenue": pct_of_revenue(other_opex),
-        "cost_to_income_pct": pct_of_revenue(total_opex),
+        "cost_to_income_pct": dict(cost_to_income_pct),
         "coverage": {
             "banks_with_personnel": len({f for f, _ in personnel}),
             "banks_with_other_opex": len({f for f, _ in other_opex}),
             "banks_with_total_opex": len({f for f, _ in total_opex}),
             "banks_with_revenue": len({f for f, _ in revenue}),
+            "banks_with_disclosed_cost_to_income": len({f for f, _ in disclosed_cost_to_income}),
             "ambiguous_total_opex_bank_years_skipped": opex_ambiguous,
             "ambiguous_revenue_bank_years_skipped": revenue_ambiguous,
         },

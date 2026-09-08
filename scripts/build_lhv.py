@@ -34,6 +34,19 @@ DATA_ERROR_NOTE = (
     "printed in the FY2024 report itself."
 )
 
+DATA_ERROR_NOTE_2 = (
+    "DATA ERROR NOTE 2 (2026-09-07): LHV Bank Limited's own FY2025 Annual Report (p.66, Statement of comprehensive "
+    "income) prints 'Total operating income' for FY2025 as £2k - this is the sum of only the last three income "
+    "lines (Other operating income 248, Changes in fair value of financial instruments at FVTPL (183), Foreign "
+    "exchange translation differences (63) = 2), omitting Net interest income (23,515) and Net fee and commission "
+    "income (24,058) entirely, even though both sit directly above it in the same statement with no other "
+    "subtotal in between. This does not reconcile with the same statement's own next line down: 'Net operating "
+    "income' (Total operating income less Operating expenses) is printed as 8,133, which only reconciles against "
+    "a Total operating income of approximately 47,575 (23,515 + 24,058 + 248 - 183 - 63 = 47,575; less Operating "
+    "expenses of 39,443 = 8,132, matching the printed 8,133 to rounding) - not the printed 2. This workbook uses "
+    "the reconciling figure (47,575) for 'Total operating income', not the source's own apparent misprint."
+)
+
 CASH_FLOW_SOURCES = (
     "Sources - all figures are LHV Bank Limited's own Statement of Cash Flows, £'000 (FY2023/FY2024 as originally "
     "reported in whole £, divided by 1,000 here for unit consistency with FY2025's own £'000 presentation):\n"
@@ -92,7 +105,8 @@ STATEMENTS_SOURCES = (
     "its own line (repaid during FY2024); no equivalent exists in FY2025. FY2023/FY2024 disclose a separate "
     "'Merger reserve' component of equity (arising on the LHV Pank branch business transfer, Aug 2023); FY2025's "
     "own equity statement combines this into a single 'Other reserves' line instead - see the Statement of Changes "
-    "in Equity sheet's own note for how this is reconciled."
+    "in Equity sheet's own note for how this is reconciled.\n\n"
+    + DATA_ERROR_NOTE_2
 )
 
 # ---------------------------------------------------------------
@@ -154,8 +168,10 @@ pl_rows = [
     ("DATA", "Other operating income", {"FY2025": 248, "FY2024": 420, "FY2023": 227}),
     ("DATA", "Changes in fair value of financial instruments measured at FVTPL", {"FY2025": -183}),
     ("DATA", "Foreign exchange translation differences", {"FY2025": -63, "FY2024": -102, "FY2023": -62}),
-    ("TOTAL", "Total operating income (FY2025's own subtotal, structured differently from FY2023/FY2024 - see note)",
-     {"FY2025": 2}),
+    ("TOTAL", "Total operating income",
+     # DATA_ERROR_NOTE_2: the FY2025 AR's own printed figure here is 2 -
+     # this workbook uses the reconciling figure instead, see source note.
+     {"FY2025": 47575}),
     ("TOTAL", "Net operating income (FY2023/FY2024's own subtotal, BEFORE operating expenses - structured "
               "differently from FY2025's own subtotals above/below)", {"FY2024": 37241, "FY2023": 31978}),
     ("DATA", "Personnel expenses", {"FY2024": -18715, "FY2023": -12886}),

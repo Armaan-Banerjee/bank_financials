@@ -140,6 +140,31 @@ PRESENTATION_NOTE = (
 )
 
 
+INVESTMENT_SECURITIES_NOTE = (
+    "INVESTMENT SECURITIES BREAKDOWN NOTE: 'Total investment securities' is broken down below by measurement basis "
+    "(FVOCI vs amortised cost) and by issuer type, sourced from the Company's own Note 17/18/13 'Investment "
+    "securities' (numbering varies by year) in the same financial statements cited above for the Balance Sheet - the "
+    "sub-rows reconcile exactly to the total in every year:\n"
+    f"FY2025/FY2024: Note 17 'Investment securities', pp.61-62 - {FS2025_URL}\n"
+    f"FY2023/FY2022: Note 17 'Investment securities', pp.76-77 - {FS2023_URL}\n"
+    f"FY2021/FY2020: Note 17 'Investment securities', p.74 - Companies House filing, 28 April 2022 (scanned/image-"
+    f"only, OCR'd) - {FS2021_URL}\n"
+    f"FY2019/FY2018: Note 18 'Investment securities', p.63 - Companies House filing, 21 April 2020 (scanned/image-"
+    f"only, OCR'd) - {FS2019_URL}\n"
+    f"FY2017/FY2016: Note 13 'Financial instruments - available-for-sale', p.51 - Companies House filing, 17 April "
+    f"2018 (scanned/image-only, OCR'd) - {FS2017_URL}\n"
+    "FY2025-FY2018 all disclose a genuine multi-category issuer-type split (Covered bonds, Government guaranteed, "
+    "Sovereign debt, Sub-Sovereign debt, Supranational debt, plus Non-Agency Residential Mortgage Backed Securities "
+    "FY2025-FY2022 only and Treasuries FY2018 only) within the FVOCI leg, and a small residual Supranational-debt "
+    "amortised-cost leg FY2024-FY2022 (nil FY2025). FY2017-FY2016 (pre-IFRS 9, 'Financial instruments - available-"
+    "for-sale') disclose no further split at all - the Company's own note shows the entire balance as a single line, "
+    "'Debt instruments issued by central governments', i.e. 100% sovereign/government debt those 2 years - reproduced "
+    "on the Sovereign debt sub-row above rather than fabricating a finer split that the source doesn't carry. Blank "
+    "cells on a sub-row mean that year's own note has no such category at all, not that the value is unknown; a 0 "
+    "means the note explicitly shows a nil/dash for that category that year."
+)
+
+
 def p3_sources(page):
     return (
         "Sources - The Bank of New York Mellon (International) Limited Pillar 3 Disclosure, Table 1: UK KM1 - Key "
@@ -180,7 +205,15 @@ balance_sheet_rows = [
     ("DATA", "Cash and balances at central banks", {"FY2025": 2666888, "FY2024": 2687665, "FY2023": 3781275, "FY2022": 4706360, "FY2021": 4949582, "FY2020": 5270609, "FY2019": 4570725, "FY2018": 8487623, "FY2017": 7026059, "FY2016": 4942402}),
     ("DATA", "Loans and advances to banks", {"FY2025": 2037724, "FY2024": 1891637, "FY2023": 1645021, "FY2022": 2520019, "FY2021": 1579113, "FY2020": 795307, "FY2019": 1149814, "FY2018": 2049210, "FY2017": 2085358, "FY2016": 1543683}),
     ("DATA", "Loans and advances to customers", {"FY2025": 28495, "FY2024": 173578, "FY2023": 108153, "FY2022": 138345, "FY2021": 104419, "FY2020": 195590, "FY2019": 117788, "FY2018": 275544, "FY2017": 152291, "FY2016": 112638}),
-    ("DATA", "Investment securities", {"FY2025": 2969599, "FY2024": 2994460, "FY2023": 3072747, "FY2022": 4054942, "FY2021": 4357861, "FY2020": 3824637, "FY2019": 3668276, "FY2018": 1298470, "FY2017": 593296, "FY2016": 20353}),
+    ("TOTAL", "Total investment securities", {"FY2025": 2969599, "FY2024": 2994460, "FY2023": 3072747, "FY2022": 4054942, "FY2021": 4357861, "FY2020": 3824637, "FY2019": 3668276, "FY2018": 1298470, "FY2017": 593296, "FY2016": 20353}),
+    ("DATA", "Investment securities measured at FVOCI (available-for-sale pre-2018) - Sovereign debt (government)", {"FY2025": 707356, "FY2024": 494219, "FY2023": 229920, "FY2022": 503709, "FY2021": 522683, "FY2020": 146329, "FY2019": 1156170, "FY2018": 145112, "FY2017": 593296, "FY2016": 20353}),
+    ("DATA", "Investment securities measured at FVOCI - Covered bonds", {"FY2025": 1131472, "FY2024": 1304511, "FY2023": 1625338, "FY2022": 1517309, "FY2021": 1314732, "FY2020": 1316905, "FY2019": 960811, "FY2018": 382113}),
+    ("DATA", "Investment securities measured at FVOCI - Government guaranteed", {"FY2025": 328582, "FY2024": 379110, "FY2023": 390682, "FY2022": 527317, "FY2021": 680887, "FY2020": 564413, "FY2019": 352699, "FY2018": 292892}),
+    ("DATA", "Investment securities measured at FVOCI - Sub-Sovereign debt", {"FY2025": 489248, "FY2024": 377500, "FY2023": 370732, "FY2022": 352322, "FY2021": 514317, "FY2020": 388374, "FY2019": 296081, "FY2018": 0}),
+    ("DATA", "Investment securities measured at FVOCI - Supranational debt", {"FY2025": 277536, "FY2024": 355747, "FY2023": 374002, "FY2022": 1099825, "FY2021": 1325242, "FY2020": 1408616, "FY2019": 902515, "FY2018": 274388}),
+    ("DATA", "Investment securities measured at FVOCI - Non-Agency Residential Mortgage Backed Securities", {"FY2025": 35405, "FY2024": 45886, "FY2023": 44613, "FY2022": 17027}),
+    ("DATA", "Investment securities measured at FVOCI - Treasuries", {"FY2019": 0, "FY2018": 203965}),
+    ("DATA", "Investment securities measured at amortised cost - Supranational debt", {"FY2025": 0, "FY2024": 37487, "FY2023": 37460, "FY2022": 37433}),
     ("DATA", "Investments in affiliates", {"FY2025": 118150, "FY2024": 127028, "FY2023": 181821, "FY2022": 188620, "FY2021": 174576, "FY2020": 173549, "FY2019": 177636, "FY2018": 181386, "FY2017": 171163, "FY2016": 182342}),
     ("DATA", "Intangible assets", {"FY2025": 2909, "FY2024": 156, "FY2023": 209, "FY2022": 12, "FY2019": 0, "FY2018": 52, "FY2017": 12, "FY2016": 41}),
     ("DATA", "Tangible fixed assets", {"FY2025": 31, "FY2024": 47, "FY2023": 65, "FY2022": 1, "FY2021": 1, "FY2020": 6, "FY2019": 26, "FY2018": 699, "FY2017": 272, "FY2016": 447}),
@@ -211,7 +244,7 @@ bw.add_balance_sheet_sheet(
     title="The Bank of New York Mellon (International) Limited — Balance Sheet",
     subtitle="Entity-level basis, £'000s.",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE + "\n\n" + INVESTMENT_SECURITIES_NOTE,
     first_col_width=64,
     source_height=440,
     unit_suffix=" (£'000s)",
@@ -548,6 +581,7 @@ bw.add_rwa_breakdown_sheet(
     sources_text=RWA_SOURCES,
     first_col_width=64,
     source_height=280,
+    unit_suffix=" (£m)",
 )
 
 metric(

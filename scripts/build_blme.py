@@ -204,8 +204,22 @@ balance_sheet_rows = [
      "FY2020": 339629, "FY2019": 23508, "FY2018": 8045, "FY2017": 28544, "FY2016": 107182, "FY2015": 18875, "FY2014": 176526}),
     ("DATA", "Due from customers", {"FY2022": 0, "FY2021": 24993, "FY2020": 34465, "FY2019": 14081, "FY2018": 14612,
      "FY2017": 9027, "FY2016": 0, "FY2015": 0, "FY2014": 5038}),
-    ("DATA", "Investment securities", {"FY2025": 29228, "FY2024": 44584, "FY2023": 44927, "FY2022": 35734, "FY2021": 59807,
+    ("DATA", "Total investment securities", {"FY2025": 29228, "FY2024": 44584, "FY2023": 44927, "FY2022": 35734, "FY2021": 59807,
      "FY2020": 90835, "FY2019": 111039, "FY2018": 135043, "FY2017": 126250, "FY2016": 112422, "FY2015": 191543, "FY2014": 197290}),
+    ("DATA", "Investment securities - Sukuk (amortised cost)", {"FY2025": 29228, "FY2024": 31515, "FY2023": 15774, "FY2022": 10005,
+     "FY2021": 15045, "FY2020": 24264, "FY2019": 23502, "FY2018": 9637}),
+    ("DATA", "Investment securities - Sukuk (held to maturity, IAS 39)", {"FY2017": 9075, "FY2016": 18000}),
+    ("DATA", "Investment securities - Sukuk (FVOCI)", {"FY2024": 12722, "FY2021": 23568, "FY2020": 37542, "FY2019": 59038, "FY2018": 93894}),
+    ("DATA", "Investment securities - Sukuk (available-for-sale, IAS 39)", {"FY2017": 104883, "FY2016": 90991, "FY2015": 125807, "FY2014": 136847}),
+    ("DATA", "Investment securities - Sukuk (fair value through profit and loss, IAS 39)", {"FY2014": 3417}),
+    ("DATA", "Investment securities - Equity (FVOCI)", {"FY2024": 347, "FY2023": 341, "FY2022": 659, "FY2021": 321,
+     "FY2020": 318, "FY2019": 328, "FY2018": 341}),
+    ("DATA", "Investment securities - Equity (available-for-sale, IAS 39)", {"FY2017": 973, "FY2016": 3170, "FY2015": 4117, "FY2014": 3684}),
+    ("DATA", "Investment securities - Sharia'a compliant funds (fair value through profit and loss)",
+     {"FY2016": 240, "FY2015": 58056, "FY2014": 53325}),
+    ("DATA", "Investment securities - Investment in subsidiaries (at cost, bundled within this line FY2014-FY2023 only)",
+     {"FY2023": 28812, "FY2022": 25070, "FY2021": 20873, "FY2020": 28711, "FY2019": 28171, "FY2018": 31171,
+      "FY2017": 11319, "FY2016": 21, "FY2015": 3563, "FY2014": 17}),
     ("DATA", "Investments in subsidiaries", {"FY2025": 21574, "FY2024": 29151}),
     ("DATA", "Financing arrangements", {"FY2025": 1218128, "FY2024": 1151123, "FY2023": 1010255, "FY2022": 912937, "FY2021": 800318,
      "FY2020": 819162, "FY2019": 847880, "FY2018": 700949, "FY2017": 556642, "FY2016": 474637, "FY2015": 627223, "FY2014": 723280}),
@@ -258,11 +272,36 @@ balance_sheet_rows = [
      "FY2020": 1743397, "FY2019": 1548599, "FY2018": 1272946, "FY2017": 1025888, "FY2016": 1028931, "FY2015": 1241142, "FY2014": 1345983}),
 ]
 
+INVESTMENT_SECURITIES_BREAKDOWN_NOTE = (
+    "INVESTMENT SECURITIES BREAKDOWN: the 'Investment securities - ...' sub-rows below the renamed 'Total "
+    "investment securities' line are transcribed from each year's own 'Investment Securities' note (Bank/BLME "
+    "plc column, not Group), which splits the balance both by measurement basis (fair value through profit or "
+    "loss / fair value through other comprehensive income (FVOCI) / amortised cost under IFRS 9 from FY2018 "
+    "onward; fair value through profit or loss / available-for-sale / held-to-maturity under IAS 39 for "
+    "FY2014-FY2017) and by instrument (Sukuk, listed equity, Sharia'a compliant funds, investment in "
+    "subsidiaries):\n"
+    f"FY2025/FY2024: Note 16 'Investment Securities and Investment in Subsidiaries', p.60 - {FS2025_URL}\n"
+    f"FY2023/FY2022: Note 18 'Investment Securities', p.67 - {FS2023_URL}\n"
+    f"FY2021/FY2020: Note 18 'Investment Securities', p.68 - {FS2021_URL}\n"
+    f"FY2019/FY2018: Note 19 'Investment Securities', p.67 - {FS2019_URL}\n"
+    f"FY2017/FY2016: Note 17 'Investment Securities', p.57 - {FS2017_URL}\n"
+    f"FY2015/FY2014: Note 18 'Investment securities' (Bank column), p.76 - {FS2015_URL}\n\n"
+    "Each year's sub-rows sum exactly to that year's 'Total investment securities' line (verified against the "
+    "note's own IFRS 9 Stage 1/2/3 ECL and impairment-provision deductions, which are netted into the amortised "
+    "cost/held-to-maturity Sukuk sub-row for that year, matching how the note itself nets them before arriving "
+    "at its own total). 'Investment in subsidiaries' is bundled inside this note (and this Balance Sheet line) "
+    "FY2014-FY2023 only - it moves to its own separate 'Investments in subsidiaries' Balance Sheet line "
+    "FY2024-FY2025 (see PRESENTATION_NOTE above); the bundled sub-row here is zero/absent for FY2024-FY2025 to "
+    "avoid double-counting. No sub-row split by issuer type (UK government/gilts/sovereign vs supranational/"
+    "corporate) is disclosed anywhere in BLME's own notes for any year - Sukuk issuers are not broken out "
+    "further than the single 'Sukuk' instrument line shown above."
+)
+
 bw.add_balance_sheet_sheet(
     title="Bank of London and The Middle East plc — Statement of Financial Position",
     subtitle="BLME plc, Bank-solo basis, £'000s.",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE + "\n\n" + INVESTMENT_SECURITIES_BREAKDOWN_NOTE,
     first_col_width=64,
     source_height=460,
     unit_suffix=" (£'000s)",
@@ -727,6 +766,7 @@ bw.add_rwa_breakdown_sheet(
     sources_text=RWA_SOURCES,
     first_col_width=58,
     source_height=340,
+    unit_suffix=" (£m)",
 )
 
 metric("Leverage Ratio", "%",

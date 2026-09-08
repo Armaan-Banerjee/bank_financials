@@ -209,7 +209,7 @@ pl_rows = [
     ("DATA", "Other Income/(Expenditure)", {"FY2025": 169, "FY2024": -104, "FY2023": 22, "FY2022": -35, "FY2021": -10, "FY2020": 24}),
     ("TOTAL", "Total Net Income", {"FY2025": 47405, "FY2024": 31303, "FY2023": 19394, "FY2022": 5643, "FY2021": 352, "FY2020": 24, "FY2019": 0, "FY2018": 0}),
     ("DATA", "Staff Costs", {"FY2025": -14854, "FY2024": -10741, "FY2023": -7844, "FY2022": -5514, "FY2021": -4035, "FY2020": -2361, "FY2019": -1317, "FY2018": -500}),
-    ("DATA", "Other Operating Expense", {"FY2025": -11166, "FY2024": -8039, "FY2023": -5471, "FY2022": -3875, "FY2021": -2797, "FY2020": -1886, "FY2019": -935, "FY2018": -241}),
+    ("TOTAL", "Other Operating Expense", {"FY2025": -11166, "FY2024": -8039, "FY2023": -5471, "FY2022": -3875, "FY2021": -2797, "FY2020": -1886, "FY2019": -935, "FY2018": -241}),
     ("DATA", "Depreciation & Amortisation", {"FY2025": -1932, "FY2024": -1937, "FY2023": -1319, "FY2022": -1298, "FY2021": -898, "FY2020": -116, "FY2019": -44, "FY2018": -1}),
     ("TOTAL", "Operating Profit/(Loss) before expected credit loss provisions", {"FY2025": 19453, "FY2024": 10586, "FY2023": 4760, "FY2022": -5044, "FY2021": -7378, "FY2020": -4339, "FY2019": -2296, "FY2018": -742}),
     ("DATA", "Expected credit loss on loans and advances", {"FY2025": -1219, "FY2024": -1031, "FY2023": -464, "FY2022": -95, "FY2021": -85}),

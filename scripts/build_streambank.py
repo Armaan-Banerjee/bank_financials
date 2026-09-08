@@ -113,6 +113,12 @@ income_statement_rows = [
     ("DATA", "Other operating expenses", {"FY2025": -3141.0, "FY2024": -2670.9, "FY2023": -1980.4, "FY2021": -527.6}),
     ("DATA", "Impairment losses on loans and advances to customers", {"FY2025": -1678.4, "FY2024": -1201.9, "FY2023": -600.8}),
     ("DATA", "Depreciation and amortisation", {"FY2025": -100.3, "FY2024": -89.6, "FY2023": -50.4}),
+    # Not itself a printed AR subtotal - the sum of Staff costs + Other
+    # operating expenses + Depreciation and amortisation above. Excludes
+    # Impairment losses on loans and advances per standard cost-to-income
+    # convention (operating costs only, not credit risk).
+    ("TOTAL", "Total operating expenses (sum of Staff costs + Other operating expenses + Depreciation and amortisation - excludes impairment losses on loans and advances)",
+     {"FY2025": -8484.9, "FY2024": -7461.7, "FY2023": -5785.3, "FY2021": -527.6}),
     ("TOTAL", "Profit/(Loss) before taxation", {"FY2025": 1217.3, "FY2024": -3418.1, "FY2023": -4537.4, "FY2021": -527.6}),
     ("DATA", "Tax (charge)/credit", {"FY2025": -309.0, "FY2024": 1023.1, "FY2023": 892.3, "FY2021": 125.0}),
     ("TOTAL", "Profit/(Loss) for the year", {"FY2025": 908.3, "FY2024": -2395.0, "FY2023": -3645.1, "FY2021": -402.6}),

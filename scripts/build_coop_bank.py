@@ -51,6 +51,29 @@ YEARS = [
     "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014",
     "FY2013", "FY2012", "FY2011", "FY2010", "FY2009", "FY2008",
     "FY2007", "FY2006", "FY2005", "FY2004", "FY2003",
+    # HD-078 follow-up (2026-09-07): FY2002-FY1991 extended further still, sourced
+    # entirely from each year's own Companies House filing (Balance Sheet and
+    # Statement of Changes in Equity only - see HD078_1991_2002_NOTE below for
+    # full methodology, including why Cash Flow Statement and Profit & Loss are
+    # NOT extended for this range).
+    "FY2002", "FY2001", "FY2000", "FY1999", "FY1998", "FY1997", "FY1996",
+    "FY1995", "FY1994", "FY1993", "FY1992", "FY1991",
+    # HD-078 follow-up (2026-09-07): FY1990-FY1981 extended further still, sourced
+    # entirely from each year's own Companies House filing (Balance Sheet and
+    # Statement of Changes in Equity only - see HD078_1981_1990_NOTE below for full
+    # methodology, including why Cash Flow Statement and Profit & Loss are NOT
+    # extended for this range, and why no true Cash Flow Statement exists at all
+    # for this era - see below).
+    "FY1990", "FY1989", "FY1988", "FY1987", "FY1986",
+    "FY1985", "FY1984", "FY1983", "FY1982", "FY1981",
+    # HD-078 follow-up (2026-09-07): FY1980-FY1972 extended further still - the
+    # documented hard floor (incorporated 5 Oct 1970; earliest filed accounts are
+    # for the year ended 13 Jan 1973, whose own comparative column is only a
+    # 26-week stub period, not a full prior year - see HD078_1972_1980_NOTE below
+    # for full methodology, including why Cash Flow Statement and Profit & Loss
+    # (Bank Company-only basis) are NOT extended for this range).
+    "FY1980", "FY1979", "FY1978", "FY1977", "FY1976",
+    "FY1975", "FY1974", "FY1973", "FY1972",
 ]  # most recent first
 # Pillar 3, Asset Quality and RWA Breakdown sheets intentionally still only use
 # the first 11 years above (FY2024-FY2014) - see PILLAR3_YEARS.
@@ -97,82 +120,235 @@ AR2008_CH_URL = f"{CH_BASE}/MjAzMjMzNTAyM2FkaXF6a2N4/document?format=pdf&downloa
 AR2006_CH_URL = f"{CH_BASE}/MTc5MDE4NTg2YWRpcXprY3g/document?format=pdf&download=0"  # accounts made up to 13 Jan 2007 (also FY2005 comparative)
 AR2004_CH_URL = f"{CH_BASE}/OTQ3NzI5NzNhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 8 Jan 2005 (also FY2003 comparative)
 
+# HD-078 follow-up (2026-09-07): FY2002-FY1991 statutory-statement sources, each
+# year's own Companies House filing (same domain confirmed by HD-078 to hold no
+# pre-2014 Annual Reports).
+AR2002_CH_URL = f"{CH_BASE}/MTEyMTAwMDczYWRpcXprY3g/document?format=pdf&download=0"  # accounts made up to 11 Jan 2003
+AR2001_CH_URL = f"{CH_BASE}/MzE5OTExMDdhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 12 Jan 2002
+AR2000_CH_URL = f"{CH_BASE}/NjIxOTc0MTVhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 13 Jan 2001
+AR1999_CH_URL = f"{CH_BASE}/MTI2NTUyNTk5YWRpcXprY3g/document?format=pdf&download=0"  # accounts made up to 8 Jan 2000
+AR1998_CH_URL = f"{CH_BASE}/MTM5OTg0MTEyYWRpcXprY3g/document?format=pdf&download=0"  # accounts made up to 9 Jan 1999
+AR1997_CH_URL = f"{CH_BASE}/MTA1NzY2NjU4YWRpcXprY3g/document?format=pdf&download=0"  # accounts made up to 10 Jan 1998
+AR1996_CH_URL = f"{CH_BASE}/MTM2Nzk5NjI5YWRpcXprY3g/document?format=pdf&download=0"  # accounts made up to 11 Jan 1997
+AR1995_CH_URL = f"{CH_BASE}/MzQwNzE1MTJhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 13 Jan 1996
+AR1994_CH_URL = f"{CH_BASE}/MTQ5NDQxMjA4YWRpcXprY3g/document?format=pdf&download=0"  # accounts made up to 14 Jan 1995
+AR1993_CH_URL = f"{CH_BASE}/OTQ3NzQwNzNhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 8 Jan 1994 (also FY1992 comparative)
+AR1991_CH_URL = f"{CH_BASE}/OTk0ODQ2MjRhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 11 Jan 1992
+
+# HD-078 follow-up (2026-09-07): FY1990-FY1981 statutory-statement sources, each
+# year's own Companies House filing. Confirmed via each year's own filed report's
+# table of contents that no true Cash Flow Statement exists for any of these years
+# (UK companies were not required to publish one until FRS 1, effective for
+# accounting periods beginning on/after 23 March 1992) - only a structurally
+# different "Statement of Source and Application of Funds" (SSAP 10) appears, and
+# it is not force-mapped onto the Cash Flow Statement sheet's row structure.
+AR1990_CH_URL = f"{CH_BASE}/NDE5NjQxMjFhZGlxemtjeA/document?format=pdf&download=0"  # accounts at 12th January 1991 (own Balance Sheet cover date, independently re-verified)
+AR1989_CH_URL = f"{CH_BASE}/NDk0ODQ2MjdhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 14 Jan 1990
+AR1988_CH_URL = f"{CH_BASE}/MzAwNDIyMjdhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 9 Jan 1989
+AR1987_CH_URL = f"{CH_BASE}/NTUxNzgzNDBhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 10 Jan 1988
+AR1986_CH_URL = f"{CH_BASE}/NTg3OTI0NzVhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 11 Jan 1987
+AR1985_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3MmFkaXF6a2N4/document?format=pdf&download=0"  # 'Financial Statement 1985' (own cover title, independently re-verified) - accounts made up to 12 Jan 1986
+AR1984_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3M2FkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 14 Jan 1985
+AR1983_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3NGFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 8 Jan 1984
+AR1982_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2OWFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 9 Jan 1983
+AR1981_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3MGFkaXF6a2N4/document?format=pdf&download=0"  # accounts for the year ended 9th January 1982 (own cover title, independently re-verified) - this is the Bank's own FY1981 filing; also used for the FY1980 comparative column within the same document
+
+# HD-078 (2026-09-07): FY1980-FY1972, the workbook's genuine hard floor - see HD078_1972_1980_NOTE
+# below for full methodology (why P&L/Cash Flow Statement are not extended the same way as FY1990-
+# FY1981, the FY1972 26-week-stub floor confirmation, the FY1973 capitalisation issue, and the
+# FY1979 SSAP15/bad-debt restatement).
+AR1980_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3MWFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to early Jan 1980 (FY1979)
+AR1979_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2NmFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to early Jan 1979 (FY1978)
+AR1978_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2N2FkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 14 Jan 1978 (FY1977)
+AR1977_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2OGFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to early Jan 1977 (FY1976)
+AR1976_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2NGFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to early Jan 1976 (FY1975)
+AR1975_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2NWFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to early Jan 1975 (FY1974)
+AR1974_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2MmFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to early Jan 1974 (FY1973) - the FY1973 capitalisation-issue year
+AR1973_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2M2FkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 13 Jan 1973 (FY1972) - the workbook's earliest filed accounts; comparative column is only a 26-week stub (10 Jul 1971 - 8 Jan 1972), not a full prior year
+
+# Full-length narrative research notes for the HD-078 pre-2014 extension effort
+# (methodology, source-page detail, era-by-era reasoning) are preserved in git
+# history and in this script's own comments near each affected row; the
+# *_NOTE strings below are deliberately condensed before being folded into
+# STATEMENTS_SOURCES, since that text is written into a single Excel cell
+# subject to openpyxl's ~32,767-char hard limit (silent truncation past it -
+# see HD-078 session log, 2026-09-07).
 PRE2014_HISTORY_NOTE = (
-    "PRE-2014 HISTORICAL DEPTH (HD-078, 2026-09-06): FY2003-FY2013 extends only "
-    "the four statutory-statement sheets (Balance Sheet, Profit & Loss, Statement "
-    "of Changes in Equity, Cash Flow Statement) back to FY2003, the real "
-    "statutory floor identified by HD-004's targeted archive scan - Pillar 3, "
-    "Asset Quality and RWA Breakdown are unchanged and still start at FY2014 "
-    "(pre-CRD IV/Basel III Pillar 3 disclosures aren't meaningfully comparable). "
-    "All FY2003-FY2013 figures are transcribed from each year's own scanned "
-    "statutory 'Group of companies' accounts' filing at Companies House (company "
-    "number 00990937) - co-operativebank.co.uk does not host Annual Reports this "
-    "old. Three distinct reporting-basis eras are stacked back to back:\n"
-    "FY2009-FY2013 (IFRS, calendar year end, sole reporting entity): each "
-    "Annual Report's own 'Bank balance sheet' / 'Bank statement of cash flows' / "
-    "'Consolidated and Bank statements of changes in equity' are used, on the "
-    "same individual-entity basis as FY2014 onward. The Bank took the s.408 "
-    "Companies Act 2006 exemption not to present its own income statement in "
-    "every one of these years except FY2013 itself (its 2013 Annual Report, "
-    "published amid the Bank's 2013 recapitalisation, voluntarily disclosed a "
-    "full 'Bank income statement' for both FY2013 and, as its own comparative "
-    "column, FY2012 - the only source for a standalone Bank FY2012 income "
-    "statement, since FY2012's own Annual Report itself took the exemption); "
-    "FY2009-FY2011 accordingly show bottom-line profit plus OCI reserve "
-    "movements only (from the equity roll-forward), not a full income "
-    "statement, the same convention already used for FY2017 onward.\n"
-    "BRITANNIA MERGER NOTE (FY2009): Britannia Building Society transferred its "
-    "engagements to The Co-operative Bank on 1 August 2009 - the single largest "
-    "discontinuity in this workbook's full history. The FY2009 Balance Sheet, "
-    "Cash Flow and Equity sheets roughly double in size year-on-year (e.g. Total "
-    "assets £16.4bn at FY2008 to £47.2bn at FY2009); the Statement of Changes in "
-    "Equity shows this explicitly as an 'Amounts arising on transfer of "
-    "engagements' movement (+£811.2m to Bank retained earnings) and the Cash "
-    "Flow Statement shows a matching 'Cash and cash equivalents acquired on "
-    "transfer of engagements' investing inflow (£889.6m) - both the Bank's own "
-    "disclosed figures for the transaction, not restatements of prior years.\n"
-    "FY2005-FY2008 (IFRS, but a 52/53-week fiscal year, pre-Britannia): the "
-    "Bank's accounting reference date was not yet 31 December - each year's "
-    "accounts cover a 52/53-week period ending on a Friday/Saturday near 10 "
-    "January of the FOLLOWING calendar year (e.g. 'the 52 weeks to 13 January "
-    "2007'), only moving to a calendar 31 December year end with the FY2009 "
-    "accounts. Each such year is headed by the calendar year it substantially "
-    "covers, following the Bank's own stated convention in its Basis of "
-    "Preparation note (e.g. 'the financial year's figures are headed 2006'), "
-    "not by the year in which the accounting period technically ends. These "
-    "years present a 'Statement of recognised income and expense' (SORIE), the "
-    "IFRS predecessor to the Statement of Changes in Equity used from FY2009 "
-    "onward, and a smaller, simpler Bank balance sheet consistent with the much "
-    "smaller pre-Britannia institution (Total assets ~£11-16bn vs. ~£27-38bn "
-    "FY2014 onward).\n"
-    "FY2003-FY2004 (UK GAAP, pre-IFRS): predates the Bank's IFRS transition "
-    "(first effective for 'the 52 weeks to 14 January 2006', i.e. this "
-    "workbook's FY2005) - accounts are prepared under the Companies Act 1985 "
-    "Sch. 9 bank format, with no IFRS-style Available-for-sale/Cashflow-hedging/"
-    "capital-redemption reserve categories (just Called-up share capital, Share "
-    "premium account and Profit and loss account) and no OCI concept at all "
-    "(profit for the year is the whole of total recognised gains and losses in "
-    "both years). The Bank's own accounts of this era do not present a "
-    "standalone Bank-only cash flow statement (only a Consolidated Group one) - "
-    "the Cash Flow Statement sheet uses the CONSOLIDATED GROUP statement for "
-    "FY2003-FY2004 only, clearly flagged in that sheet's own source note; every "
-    "other FY2003-FY2013 year on that sheet is Bank Company-only, consistent "
-    "with the rest of this workbook.\n"
-    "Two further genuine restatement discontinuities were found and are bridged "
-    "with dedicated rows on the Statement of Changes in Equity sheet rather than "
-    "force-matched, the same treatment as the pre-existing FY2016/FY2017 "
-    "restatement: (1) FY2012 closing Total equity per the Bank's own FY2012 "
-    "Annual Report (£1,629.1m) does not equal the FY2013 Annual Report's own "
-    "restated FY2012 comparative Balance Sheet closing position (£1,850.2m, a "
-    "£221.1m difference) - the FY2013 Annual Report does not itself narrate the "
-    "specific cause, so this is shown as an unexplained 'Restatement' row rather "
-    "than attributed; (2) FY2013 closing Total equity per the Bank's own FY2013 "
-    "Annual Report (£1,777.3m) differs marginally from the FY2014 Annual "
-    "Report's own FY2013 comparative opening position already used elsewhere in "
-    "this workbook (£1,768.5m, an £8.8m difference, entirely within the Cashflow "
-    "hedging reserve and Retained earnings columns) - likely a minor "
-    "reclassification between reserve captions, also shown as an unexplained "
-    "'Restatement' row rather than force-matched."
+    "PRE-2014 HISTORICAL DEPTH (HD-078, 2026-09-06): FY2003-FY2013 extends the "
+    "four statutory-statement sheets back to FY2003 (HD-004's real statutory "
+    "floor); Pillar 3/Asset Quality/RWA Breakdown stay FY2014-floored. Figures "
+    "transcribed from each year's own scanned Companies House filing (co "
+    "00990937) - co-operativebank.co.uk hosts nothing this old. Three eras:\n"
+    "FY2009-FY2013 (IFRS, calendar year end): each Annual Report's own Bank "
+    "balance sheet/cash flow/equity statements, individual-entity basis. "
+    "s.408 Companies Act 2006 exemption taken every year except FY2013 (whose "
+    "AR, amid the 2013 recapitalisation, voluntarily disclosed a full Bank "
+    "income statement for FY2013 and FY2012 comparative - the only source for "
+    "a standalone FY2012 income statement); FY2009-FY2011 show bottom-line "
+    "profit + OCI movements only, as FY2017 onward.\n"
+    "BRITANNIA MERGER (FY2009): Britannia Building Society transferred its "
+    "engagements to the Bank 1 Aug 2009 - Total assets roughly double £16.4bn "
+    "to £47.2bn; Equity sheet shows '+£811.2m Amounts arising on transfer of "
+    "engagements'; Cash Flow shows a matching £889.6m acquired-cash inflow. "
+    "Both are the Bank's own disclosed transaction figures, not restatements.\n"
+    "FY2005-FY2008 (IFRS, pre-Britannia, 52/53-week year ending near 10 Jan "
+    "the following calendar year, e.g. 'the 52 weeks to 13 January 2007'): "
+    "headed by the calendar year the period substantially covers, per the "
+    "Bank's own Basis of Preparation note. Presents a SORIE (pre-2009 "
+    "predecessor to the Statement of Changes in Equity); smaller pre-"
+    "Britannia balance sheet (~£11-16bn vs ~£27-38bn FY2014 onward).\n"
+    "FY2003-FY2004 (UK GAAP, pre-IFRS transition, which first applies FY2005): "
+    "Companies Act 1985 Sch. 9 bank format, no IFRS reserve categories, no OCI "
+    "concept. No standalone Bank cash flow statement exists this era - the "
+    "Cash Flow Statement sheet uses the CONSOLIDATED GROUP statement for "
+    "FY2003-FY2004 only (flagged on that sheet); every other year there is "
+    "Bank Company-only.\n"
+    "Two genuine restatement discontinuities are shown as dedicated "
+    "Statement of Changes in Equity rows rather than force-matched (same "
+    "treatment as the FY2016/FY2017 restatement): (1) FY2012 closing Total "
+    "equity per the Bank's own FY2012 AR (£1,629.1m) vs the FY2013 AR's own "
+    "restated FY2012 comparative (£1,850.2m, £221.1m gap, cause not narrated "
+    "by the source); (2) FY2013 closing Total equity per the Bank's own "
+    "FY2013 AR (£1,777.3m) vs the FY2014 AR's own FY2013 comparative "
+    "(£1,768.5m, £8.8m gap, within Cashflow hedging reserve/Retained "
+    "earnings - likely a minor reclassification)."
+)
+
+HD078_1991_2002_NOTE = (
+    "HD-078 FOLLOW-UP (2026-09-07): FY2002-FY1991 extends Balance Sheet and "
+    "Statement of Changes in Equity ONLY (P&L/Cash Flow not extended, see "
+    "below), 12 years below the FY2003 floor. Transcribed from each year's "
+    "own scanned Companies House filing (co 00990937), except FY1992 - "
+    "sourced from the FY1993 AR's own FY1992 comparative (cross-checked "
+    "against FY1991's continuity, e.g. identical £75.0m subordinated Loan "
+    "Stock). 34 years now on both extended sheets: FY2024-FY1991.\n"
+    "P&L NOT EXTENDED: from at least FY1993 the Bank took the Section 230 "
+    "Companies Act 1985 exemption (predecessor to s.408) and disclosed only "
+    "a Group profit-attributable figure, not a Bank income statement - left "
+    "blank per the same FY2003-FY2011 convention rather than fabricated.\n"
+    "CASH FLOW NOT EXTENDED: FRS 1 only applies to periods beginning on/"
+    "after 23 Mar 1992 - FY1991 instead presents an incompatible 'Statement "
+    "of Source and Application of Funds' (SSAP 10). Separately, this "
+    "workbook's own Cash Flow sheet doesn't yet reach past FY2012, so "
+    "extending FY1991-2002 here would leave a disconnected island above an "
+    "unexplained FY2003-2011 gap - self-skipped, closing that gap is a "
+    "separate follow-up.\n"
+    "FY1991 FORMAT: predates the Sch. 9 detail used FY1992+ - 'Liquid "
+    "Assets' maps onto Cash/Items in course of collection/Loans to banks; "
+    "'Certificates of Deposit'+'Investments' combine into Investment "
+    "securities; 'Current, deposit and other accounts' (aggregate, one new "
+    "one-off row - later years split Deposits by banks/Customer accounts); "
+    "'Loan Stock' maps to Other borrowed funds (£75.0m, ties to FY1992); "
+    "'Deferred Taxation' to Provisions. FY1991 Reserves (£51.6m) isn't "
+    "split into share premium/retained earnings like every adjacent year - "
+    "this workbook infers £8.8m/£42.8m (flagged as inferred, not "
+    "disclosed). A ~£0.03m unresolved sub-total gap (degraded scan image) "
+    "is absorbed by anchoring on the disclosed Total assets/liabilities "
+    "figure (£2,572.6m) rather than a component sum; liabilities side ties "
+    "exactly.\n"
+    "EQUITY MOVEMENT ROWS (FY1992-2002): no Bank-only profit/dividends "
+    "split is disclosed before the FY2001 AR introduced one, so FY1992-1999 "
+    "and FY2002 show a single aggregate 'Net movement during the year' row "
+    "(from the Balance Sheet's own opening/closing funds, not a fabricated "
+    "split, as already used FY2004-2008); FY2000-2001 DO show the split, "
+    "per the FY2001 AR's own Bank reconciliation.\n"
+    "RESTATEMENT (FY2001/2002 boundary): FY2001 AR's own closing Bank "
+    "shareholders' funds (£438.4m) vs FY2002 AR's own restated FY2001 "
+    "comparative (£440.0m, £1.6m gap) - both transcribed as disclosed, not "
+    "force-matched, consistent with the FY2016/2017 and FY2012/2013 "
+    "restatement treatment elsewhere in this workbook."
+)
+
+HD078_1981_1990_NOTE = (
+    "HD-078 FOLLOW-UP (2026-09-07): FY1990-FY1981 extends Balance Sheet and "
+    "Statement of Changes in Equity ONLY (P&L/Cash Flow not extended, same "
+    "Section 230 exemption / pre-FRS1 reasons as HD078_1991_2002_NOTE, plus "
+    "the 1948/1967 Companies Act predecessor for FY1981-1984). Transcribed "
+    "from each year's own Companies House filing.\n"
+    "FORMAT: FY1985-1990 continue FY1991's Sch. 9 mapping (see "
+    "HD078_1991_2002_NOTE). FY1981-1984 predate the Companies Act 1985 "
+    "(1948/1967 regime, coarser presentation) but map onto the same rows, "
+    "reusing the 'Deposits by trustees of CWS employees' pension scheme "
+    "(secured)' row (last appears FY1981).\n"
+    "SHARE CAPITAL/PREFERENCE: one-off events, each shown as its own "
+    "Equity-sheet movement row: ordinary share subdivision (14 Jul 1987, "
+    "25.0m £1 shares -> 100.0m 25p) + Nov 1987 20.0m-share issue at par; "
+    "earlier CWS issues at par (13.8m £1 shares, Dec 1984/Jan 1985, in "
+    "FY1984; 3.2m £1 shares, Jan 1983, in FY1982); first preference issue "
+    "(40.0m 8.48% cumulative redeemable £1 shares, Apr 1988), converted 23 "
+    "Jun 1989 to 9.25% non-cumulative irredeemable, +20.0m more 31 May 1989 "
+    "(total £60.0m into FY1991). Preference capital folds into the single "
+    "'Share capital' Equity-sheet column; Balance Sheet shows it as its own "
+    "'Preference share capital (non-equity)' row, FY1988-1990 only.\n"
+    "SHARE PREMIUM: genuinely drifts £9.636m-£9.824m FY1983-1987 (immaterial "
+    "at 1-decimal £m precision); FY1988-1990 use the £8.8m value consistent "
+    "with FY1991+. FY1981/1982 have no disclosed share-premium sub-split "
+    "anywhere (primary or comparative) - left undifferentiated within "
+    "Retained earnings for those two years only.\n"
+    "FY1984 RESERVES TRANSFER: £13.153m Reserves -> P&L account, funding a "
+    "Group deferred-tax provision (Finance Act 1984), per that year's own "
+    "Reserves note - folded into the FY1984 Equity movement row.\n"
+    "FY1984 RESTATEMENT NOT CARRIED: FY1985's AR restates its FY1984 "
+    "comparative (finance-lease/money-at-call reclassification); this "
+    "workbook keeps FY1984's own originally-published figures, per its "
+    "'own year primary source' convention throughout.\n"
+    "FY1988 LIMITATION: liabilities-side detail wasn't independently "
+    "re-captured at the same granularity as adjacent years - 'Current, "
+    "deposit and other accounts (aggregate)' (£1,875.2m) is a residual "
+    "(Total assets less Capital/Reserves, Loan Stock, Deferred Tax); ties "
+    "exactly with this residual approach, same Total-assets-anchor "
+    "precedent as FY1991.\n"
+    "CURIOSITIES (source-disclosed, re-checked, not errors): 'Subsidiaries' "
+    "column negative for FY1983 (-£1.8m); Associated Undertakings drops "
+    "£15.4m (FY1987) to £17k (FY1988, near-nil pattern continues FY1992+); "
+    "£3,192,000 Special Tax on Banking Deposits (Group extraordinary item, "
+    "FY1981 windfall tax) doesn't affect any shown figure (no Bank-only P&L "
+    "this year) - noted for context only.\n"
+    "RECONCILIATION: Total assets = Total liabilities + Total equity ties "
+    "exactly (or sub-£0.1m rounding) for all 10 years FY1990-1981, "
+    "independently re-verified; Equity roll-forward ties at every boundary, "
+    "opening anchor (At 31 Dec 1980, £41.6m) from the FY1981 AR's own "
+    "FY1980 comparative."
+)
+
+HD078_1972_1980_NOTE = (
+    "HD-078 FOLLOW-UP (2026-09-07): FY1980-FY1972 extends the Balance Sheet and "
+    "Statement of Changes in Equity sheets ONLY, a further 9 years below the "
+    "FY1991 floor - and reaches this workbook's genuine hard floor: the Bank was "
+    "incorporated 5 October 1970 and its earliest filed accounts at Companies "
+    "House are for the year ended 13 January 1973 (labelled FY1972). That "
+    "filing's own Note 2 states its comparative column is 'for the 26 weeks' "
+    "period from 10th July, 1971, to 8th January, 1972' - not a full prior year "
+    "- tying to Note 1(a)'s statement that C.W.S.'s banking activities were "
+    "vested in Co-operative Bank Limited on 10 July 1971; no earlier full "
+    "accounting year exists to extend to. All 9 years transcribed from each "
+    "year's own scanned Companies House filing (company 00990937).\n"
+    "P&L NOT EXTENDED (Bank-only): these filings do not present a Bank Company-"
+    "only income statement at all, only a Consolidated Group one, so a new "
+    "Group-basis P&L section is added instead; the existing Bank-only 'Profit/"
+    "(loss) for the year' row is left blank for this range to avoid conflating "
+    "bases.\n"
+    "CASH FLOW NOT EXTENDED: predates SSAP 10 (1975) and FRS 1 (1992); where a "
+    "Source and Application of Funds statement exists (FY1975+) its structure "
+    "is incompatible with this sheet's row layout, same treatment as FY1991.\n"
+    "ROW MAPPING: reuses the FY1991-2002 aggregated presentation (Liquid "
+    "Assets sub-lines, Certificates of Deposit/Investments/Special Deposits "
+    "combined into Investment securities, Customer and Other Accounts, "
+    "Subsidiaries, Associated Companies, Fixed Assets). New one-off rows: "
+    "'Deposits by trustees of CWS employees' pension scheme (secured)' "
+    "(material every year); 'Proposed dividend' (FY1980 only). 'Subordinated "
+    "Loans' (US $25m Floating Rate Capital Notes, first FY1979) maps onto "
+    "Other borrowed funds; 'Deferred Taxation' onto Provisions (from FY1974).\n"
+    "EQUITY/RESERVES: no formal Statement of Changes in Equity is filed this "
+    "era - each year's own 'Reserves' note is reconstructed into a roll-"
+    "forward, cross-validated against the Balance Sheet's own Reserves figure "
+    "for all 9 years (ties exactly). Two genuine discontinuities shown as "
+    "explicit rows: (1) FY1973 bonus/capitalisation issue - Ordinary share "
+    "capital doubled £4.0m to £8.0m, funded by a £4.02m capitalisation of "
+    "Reserves; (2) a FY1979-disclosed restatement of FY1978 closing Reserves "
+    "from £21.563m (as originally reported) to £23.021m, +£1.458m combined for "
+    "a SSAP 15 deferred-tax policy change plus a released general bad-debt "
+    "provision, shown as its own 'Restatement' row."
 )
 
 ENTITY_NOTE = (
@@ -342,129 +518,157 @@ bw = BankWorkbook(bank_name="The Co-operative Bank p.l.c.", years=YEARS, year_la
 STATEMENTS_SOURCES = (
     "Sources - The Co-operative Bank p.l.c.'s own Bank Company-only Balance Sheet / Statement of Changes in "
     "Equity, £m, transcribed from each year's own report (not a later year's comparative column):\n"
-    f"FY2024: 2024 Annual Report and Accounts, p.220-221 (Balance Sheet), p.224 (Statement of Changes in Equity), "
-    f"p.226 (Note 2, Net profit attributable to equity shareholders - Section 408 Companies Act 2006 exemption) "
-    f"- {AR2024_URL}\n"
-    f"FY2023: 2024 Annual Report and Accounts, p.220-221/224/226 (FY2023 comparative columns, same statements) - "
-    f"{AR2024_URL}\n"
-    f"FY2022: 2022 Annual Report and Accounts, p.242-243/246/248 (Balance Sheet, Statement of Changes in Equity, "
-    f"Note 2) - {AR2022_URL}\n"
-    f"FY2021: 2022 Annual Report and Accounts, p.242-243/246/248 (FY2021 comparative columns, same statements) - "
-    f"{AR2022_URL}\n"
-    f"FY2020: 2020 Annual Report and Accounts, p.212-213/216/217 (Balance Sheet, Statement of Changes in Equity, "
-    f"Note 2) - {AR2020_URL}\n"
-    f"FY2019: 2019 Annual Report and Accounts, p.197-198/201 (Bank Company-only Balance Sheet and Statement of "
-    f"Changes in Equity) - {AR2019_URL}\n"
-    f"FY2018: 2018 Annual Report and Accounts, p.183/186-187 (The Bank Company balance sheet and statement of "
-    f"changes in equity, incl. Note 2 profit figure) - {AR2018_URL}\n"
-    f"FY2017: 2017 Annual Report and Accounts, p.175/178 (The Bank Company balance sheet and statement of changes "
-    f"in equity, incl. Note 1 profit figure) - {AR2017_URL}\n"
-    f"FY2016: 2016 Annual Report and Accounts, p.146/149 (The Bank balance sheet and statement of changes in "
-    f"equity - full income statement also disclosed, p.145) - {AR2016_URL}\n"
-    f"FY2015: 2015 Annual Report and Accounts, p.161/164 (The Bank balance sheet and statement of changes in "
-    f"equity - full income statement also disclosed, p.159-160) - {AR2015_URL}\n"
-    f"FY2014: 2014 Annual Report and Accounts, p.149/152 (The Bank balance sheet and statement of changes in "
-    f"equity - full income statement also disclosed, p.147-148) - {AR2014_URL}\n"
-    f"FY2013: 2013 Annual Report and Accounts (Companies House filing), p.130/133 (The Bank balance sheet and "
-    f"statement of changes in equity - full income statement also disclosed, p.128) - {AR2013_CH_URL}\n"
-    f"FY2012: p.36/41 of the Bank's own 2012 Annual Report and Accounts (Companies House filing) for the Balance "
-    f"Sheet and Statement of Changes in Equity - {AR2012_CH_URL} - but its full income statement is only "
-    f"available from the 2013 Annual Report's own FY2012 comparative column, p.128 (see full-income-statement "
-    f"note below) - {AR2013_CH_URL}\n"
-    f"FY2011: 2012 Annual Report and Accounts (Companies House filing), p.36/41 (FY2011 comparative columns, "
-    f"same statements) - {AR2012_CH_URL}\n"
-    f"FY2010: 2010 Annual Report and Accounts (Companies House filing), p.33/36 (Bank balance sheet and "
-    f"statement of changes in equity) - {AR2010_CH_URL}\n"
-    f"FY2009: 2009 Annual Report and Accounts (Companies House filing), p.39/42 (Bank balance sheet and "
-    f"statement of changes in equity, year ended 31 December 2009 - the Britannia merger year) - "
-    f"{AR2009_CH_URL}\n"
-    f"FY2008: 'Financial statements 2008' Annual Report (Companies House filing), p.46/47 (Bank balance sheet "
-    f"and Statement of recognised income and expense, 52 weeks to 10 January 2009) - {AR2008_CH_URL}\n"
-    f"FY2007: 'Financial statements 2008' Annual Report (Companies House filing), p.46/47 (FY2007 comparative "
-    f"columns, same statements, 52 weeks to 12 January 2008) - {AR2008_CH_URL}\n"
-    f"FY2006: 'Financial Statements 2006' Annual Report (Companies House filing), p.42/43 (Bank balance sheet "
-    f"and Statement of recognised income and expense, 52 weeks to 13 January 2007) - {AR2006_CH_URL}\n"
-    f"FY2005: 'Financial Statements 2006' Annual Report (Companies House filing), p.42/43 (FY2005 comparative "
-    f"columns, same statements, 53 weeks to 14 January 2006) - {AR2006_CH_URL}\n"
-    f"FY2004: 'Financial Statements 2004' Annual Report (Companies House filing), p.50/51 (Bank balance sheet "
-    f"and Reconciliation of movements in shareholders' funds - the UK GAAP predecessor to the Statement of "
-    f"Changes in Equity, 52 weeks to 8 January 2005) - {AR2004_CH_URL}\n"
-    f"FY2003: 'Financial Statements 2004' Annual Report (Companies House filing), p.50/51 (FY2003 comparative "
-    f"columns, same statements, 52 weeks to 10 January 2004) - {AR2004_CH_URL}\n\n"
-    "The Bank Company (individual entity) takes advantage of the Section 408 Companies Act 2006 exemption not to "
-    "present its own income statement from FY2017 onward - each such year's Annual Report discloses only the Bank "
-    "Company's bottom-line net profit/(loss) figure (Note 1 or 2) plus, separately, its Other Comprehensive Income "
-    "broken into reserve movements within the Statement of Changes in Equity itself; the Profit & Loss sheet "
-    "reconstructs a P&L from these two disclosed pieces for FY2017-FY2024 rather than fabricating a full income "
-    "statement - all rows tie exactly to the equity roll-forward's own 'Total comprehensive income/(expense) for "
-    "the year' figures. FY2014-FY2016 predate the restructuring that created a holding company above the Bank (see "
-    "HOLDCO RESTRUCTURING HISTORY below) - the Bank itself was the reporting entity and its own Annual Report "
-    "discloses a full income statement (Net interest income through Loss for the financial year) without taking "
-    "the Section 408 exemption; this workbook reproduces that full income statement as additional rows for "
-    "FY2014-FY2016, blank in other years, alongside the same bottom-line/OCI rows used throughout.\n\n"
-    "FY2013/FY2012 FULL INCOME STATEMENT NOTE: the s.408-equivalent exemption (s.230 Companies Act 1985, then "
-    "s.408 Companies Act 2006) was already being taken by the Bank as early as FY2010 - its FY2010-FY2012 Annual "
-    "Reports present only a Consolidated income statement, no standalone Bank one, contrary to what might be "
-    "assumed from the FY2014-FY2016 pattern above. The Bank's 2013 Annual Report, published amid its 2013 "
-    "recapitalisation, is the one exception: it voluntarily discloses a full 'Bank income statement' for FY2013 "
-    "itself, and - as that same statement's own comparative column - for FY2012 as well, even though FY2012's "
-    "own Annual Report did not itself present one. This workbook therefore shows a full income statement for "
-    "FY2012 and FY2013 too (sourced as described above), not just FY2014-FY2016; FY2009-FY2011 (Bank Company the "
-    "sole reporting entity, exemption taken, no comparative rescue available) show bottom-line profit plus OCI "
-    "only, the same convention as FY2017 onward.\n\n"
-    "NON-CONTROLLING INTERESTS NOTE: FY2014's Total equity (£2,014.5m) and FY2015's opening Total equity "
-    "(£2,014.5m) include a small Non-controlling interests balance (£34.5m at FY2014, £33.6m-£34.5m through the "
-    "year) relating to the Bank's then-majority stake in Unity Trust Bank plc; this was disposed of in December "
-    "2015 (see the Statement of Changes in Equity sheet's 'Disposal of UTB' row), after which Total equity is "
-    "attributable to equity shareholders only, consistent with FY2017 onward. The 'Profit/(loss) for the year' "
-    "and OCI rows throughout this workbook use the equity-shareholders-attributable figures (not the NCI-inclusive "
-    "totals also disclosed in FY2014-FY2015's own income statements), for comparability with later years.\n\n"
-    "PRESENTATION NOTE: the Balance Sheet's equity section shows 'Other reserves' as a single aggregate line from "
-    "FY2021 onward (FVOCI + cash flow hedging + capital redemption + defined benefit pension reserves combined); "
-    "FY2020's own Balance Sheet still itemises 'Share premium account' separately (£2,416.9m) - a genuine one-off "
-    "'Reserve reorganisation' movement during FY2021 (disclosed in the FY2022 Annual Report's own equity note) "
-    "wrote the share premium account and capital redemption reserve down to £nil and transferred the combined "
-    "£2,826.9m into retained earnings, a net-zero movement on Total equity; both entries are reproduced explicitly "
-    "in the Statement of Changes in Equity sheet, not silently dropped. 'Equity shares' and 'Prepayments' appear as "
-    "their own Balance Sheet lines FY2020-FY2022 only, folded into 'Other assets' from FY2023 onward per the "
-    "Bank's own presentation. Deferred tax is presented as an asset FY2021-FY2024 but as a liability in FY2020 - "
-    "both reproduced on their own side of the Balance Sheet as originally disclosed, not netted. 'Fair value "
-    "adjustments for hedged risk' appears as separate Balance Sheet lines (both asset- and liability-side) only "
-    "FY2020-FY2022 - embedded within the Loans and advances to customers note instead from FY2023 onward.\n\n"
-    "PRE-2018 PRESENTATION NOTE: 'Investment securities' for FY2014-FY2017 is the sum of the original balance "
-    "sheet's separately-disclosed sub-categories (loans and receivables / available-for-sale / fair value through "
-    "income or expense / held for trading), which the Bank itself later combined into one line from FY2018 - the "
-    "combined figure ties exactly to the credit-risk-exposure note's own 'Investment securities' total in every "
-    "year. 'Investments in joint ventures' (FY2014-FY2016) and 'Investments in subsidiaries/group undertakings' "
-    "(FY2017 onward) are different balance sheet lines reflecting a genuine change in what the Bank held/disclosed "
-    "post-restructuring, reproduced separately rather than merged. 'Non-current assets classified as held for "
-    "sale' (FY2014-FY2016 label) and 'Property, plant and equipment classified as held-for-sale' (FY2017 onward "
-    "label) are the same balance sheet category under different names and share one row. 'Prepayments and accrued "
-    "income' was a single combined line FY2014-FY2018 (own row); FY2019 discloses 'Prepayments' alone since "
-    "accrued income was folded elsewhere from IFRS 16 adoption; FY2020-FY2022 use 'Prepayments' as their own line "
-    "again. 'Customer accounts - capital bonds' and 'Other borrowed funds' were separate liability lines "
-    "FY2014-FY2016 (nil by FY2017), superseded by 'Debt securities in issue' growth and, from FY2019, IFRS 16 "
-    "'Lease liabilities' and Tier 2 note issuance - each reproduced only in the years it was actually disclosed. "
-    "Right-of-use assets/lease liabilities first appear at FY2019 (IFRS 16's effective date, comparatives not "
-    "restated per the standard's own transition option, as stated in the Bank's own FY2019 accounts).\n\n"
-    "RESTATEMENT NOTE (FY2016/FY2017 boundary): the 2016 Annual Report's own closing Total equity (£958.5m) does "
-    "not equal the 2017 Annual Report's own restated FY2016 comparative opening balance (£726.4m, entirely a "
-    "£232.1m retained-earnings difference) - the 2017 Annual Report's own footnote attributes this to 'a "
-    "re-presentation... to more fairly reflect the nature of the balances, and the obligatory netting "
-    "arrangements in place relating to repo and reverse repo transactions', not a transcription error in this "
-    "workbook. The Statement of Changes in Equity sheet shows this as an explicit 'Restatement' row bridging the "
-    "two figures, following the same treatment as the FY2021 'Reserve reorganisation' row already in this "
-    "workbook, rather than silently dropping or force-matching either year's own disclosed figure.\n\n"
-    "PRE-2014 PRESENTATION NOTE: FY2003-FY2013's Balance Sheet uses each era's own line-item captions and "
-    "reserve structure rather than being force-mapped onto FY2014-2024's - see PRE-2014 HISTORICAL DEPTH below "
-    "for the three reporting-basis eras this spans (IFRS calendar year FY2009-2013, IFRS 52/53-week fiscal year "
-    "FY2005-2008, UK GAAP 52/53-week fiscal year FY2003-2004). New rows introduced only for this range: "
-    "'Items in the course of collection/transmission from/to other banks' (FY2003-2004 only), 'Debt securities' "
-    "(FY2003-2008, a single combined line predating the FY2010 onward available-for-sale/loans-and-receivables "
-    "split), 'Retirement benefit obligations' (FY2005 only), 'Preference share capital (non-equity)' (FY2003-2004 "
-    "only, called-up share capital's non-equity component under the old UK GAAP format).\n\n"
+    f"FY2024: 2024 AR, p.220-221 (BS), p.224 (Equity), p.226 (Note 2, Net profit attrib. to equity "
+    f"shareholders - s.408 exemption) - {AR2024_URL}\n"
+    f"FY2023: 2024 AR, p.220-221/224/226 (FY2023 comparative columns) - {AR2024_URL}\n"
+    f"FY2022: 2022 AR, p.242-243/246/248 (BS/Equity/Note 2) - {AR2022_URL}\n"
+    f"FY2021: 2022 AR, p.242-243/246/248 (FY2021 comparative columns) - {AR2022_URL}\n"
+    f"FY2020: 2020 AR, p.212-213/216/217 (BS/Equity/Note 2) - {AR2020_URL}\n"
+    f"FY2019: 2019 AR, p.197-198/201 (Bank Company-only BS+Equity) - {AR2019_URL}\n"
+    f"FY2018: 2018 AR, p.183/186-187 (Bank Company BS+Equity, incl. Note 2 profit) - {AR2018_URL}\n"
+    f"FY2017: 2017 AR, p.175/178 (Bank Company BS+Equity, incl. Note 1 profit) - {AR2017_URL}\n"
+    f"FY2016: 2016 AR, p.146/149 (Bank BS+Equity - full income statement also disclosed, p.145) - "
+    f"{AR2016_URL}\n"
+    f"FY2015: 2015 AR, p.161/164 (Bank BS+Equity - full income statement also disclosed, p.159-160) - "
+    f"{AR2015_URL}\n"
+    f"FY2014: 2014 AR, p.149/152 (Bank BS+Equity - full income statement also disclosed, p.147-148) - "
+    f"{AR2014_URL}\n"
+    f"FY2013: 2013 AR (CH filing), p.130/133 (Bank BS+Equity - full income statement also disclosed, "
+    f"p.128) - {AR2013_CH_URL}\n"
+    f"FY2012: 2012 AR (CH filing), p.36/41 (BS+Equity) - {AR2012_CH_URL} - full income statement only "
+    f"from the 2013 AR's own FY2012 comparative column, p.128 - {AR2013_CH_URL}\n"
+    f"FY2011: 2012 AR (CH filing), p.36/41 (FY2011 comparative columns) - {AR2012_CH_URL}\n"
+    f"FY2010: 2010 AR (CH filing), p.33/36 (Bank BS+Equity) - {AR2010_CH_URL}\n"
+    f"FY2009: 2009 AR (CH filing), p.39/42 (Bank BS+Equity, year ended 31 Dec 2009 - Britannia merger "
+    f"year) - {AR2009_CH_URL}\n"
+    f"FY2008: 'Financial statements 2008' AR (CH filing), p.46/47 (Bank BS+SORIE, 52wk to 10 Jan 2009) - "
+    f"{AR2008_CH_URL}\n"
+    f"FY2007: 'Financial statements 2008' AR (CH filing), p.46/47 (FY2007 comparative columns, 52wk to "
+    f"12 Jan 2008) - {AR2008_CH_URL}\n"
+    f"FY2006: 'Financial Statements 2006' AR (CH filing), p.42/43 (Bank BS+SORIE, 52wk to 13 Jan 2007) - "
+    f"{AR2006_CH_URL}\n"
+    f"FY2005: 'Financial Statements 2006' AR (CH filing), p.42/43 (FY2005 comparative columns, 53wk to "
+    f"14 Jan 2006) - {AR2006_CH_URL}\n"
+    f"FY2004: 'Financial Statements 2004' AR (CH filing), p.50/51 (Bank BS+Reconciliation of movements "
+    f"in shareholders' funds - UK GAAP predecessor to the Equity statement, 52wk to 8 Jan 2005) - "
+    f"{AR2004_CH_URL}\n"
+    f"FY2003: 'Financial Statements 2004' AR (CH filing), p.50/51 (FY2003 comparative columns, 52wk to "
+    f"10 Jan 2004) - {AR2004_CH_URL}\n\n"
+    "HD-078 FOLLOW-UP - FY2002-FY1991 (Balance Sheet/Equity only, all Companies House filings; see "
+    "HD078_1991_2002_NOTE for full methodology):\n"
+    f"FY2002: 'Financial Statements 2002' AR, p.34/35 (BS+Reconciliation of movements in shareholders' funds, "
+    f"52wk to 11 Jan 2003) - {AR2002_CH_URL}\n"
+    f"FY2001: 'Financial Statements 2001' AR, p.34/35 (BS+Reconciliation, Bank section, 52wk to 12 Jan 2002) - "
+    f"{AR2001_CH_URL}\n"
+    f"FY2000: 'Financial Statements 2000' AR, p.34 (BS, 52wk to 13 Jan 2001; profit/dividends from FY2001 AR's "
+    f"own FY2000 comparative Bank reconciliation, since this AR's own reconciliation is Group-level only) - "
+    f"{AR2000_CH_URL}\n"
+    f"FY1999: 'Financial Statements 1999' AR, p.34 (BS, 52wk to 8 Jan 2000) - {AR1999_CH_URL}\n"
+    f"FY1998: 'Financial Statements 1998' AR, p.32 (BS, 52wk to 9 Jan 1999) - {AR1998_CH_URL}\n"
+    f"FY1997: 'Financial Statements 1997' AR, p.29 (BS, 52wk to 10 Jan 1998) - {AR1997_CH_URL}\n"
+    f"FY1996: 'Financial Statements 1996' AR, p.21 (BS, 52wk to 11 Jan 1997) - {AR1996_CH_URL}\n"
+    f"FY1995: 'Financial Statements 1995' AR, p.35 (BS, 52wk to 13 Jan 1996) - {AR1995_CH_URL}\n"
+    f"FY1994: 'Financial Statements 1994' AR, p.29 (BS, 53wk to 14 Jan 1995) - {AR1994_CH_URL}\n"
+    f"FY1993: 'Financial Statements 1993' AR, p.29 (BS, 52wk to 8 Jan 1994) - {AR1993_CH_URL}\n"
+    f"FY1992: 'Financial Statements 1993' AR, p.29 (FY1992 comparative column, same BS - used in place of "
+    f"separately re-opening FY1992's own filing; see HD078_1991_2002_NOTE) - {AR1993_CH_URL}\n"
+    f"FY1991: 'Annual Report and Financial Statements 1991', p.28/29 (BS, 52wk to 11 Jan 1992 - coarser "
+    f"pre-Sch.9 presentation, see HD078_1991_2002_NOTE) - {AR1991_CH_URL}\n\n"
+    "HD-078 FOLLOW-UP - FY1990-FY1981 (Balance Sheet/Equity only, all Companies House filings; see "
+    "HD078_1981_1990_NOTE for full methodology):\n"
+    f"FY1990: Report and Accounts, BS at 12 Jan 1991 + Reserves note - {AR1990_CH_URL}\n"
+    f"FY1989: Report and Accounts, BS+Reserves note (to 14 Jan 1990; discloses restated FY1988 Share premium "
+    f"comparative - see HD078_1981_1990_NOTE) - {AR1989_CH_URL}\n"
+    f"FY1988: Report and Accounts, BS (assets side only re-captured, liabilities a residual - see "
+    f"HD078_1981_1990_NOTE) + Reserves note (to 9 Jan 1989) - {AR1988_CH_URL}\n"
+    f"FY1987: Report and Accounts, BS+Reserves note (to 10 Jan 1988) - {AR1987_CH_URL}\n"
+    f"FY1986: Report and Accounts, BS+Reserves note (to 11 Jan 1987) - {AR1986_CH_URL}\n"
+    f"FY1985: 'Financial Statement 1985' AR, BS+Reserves note (to 12 Jan 1986) - {AR1985_CH_URL}\n"
+    f"FY1984: Report and Accounts, BS+Reserves note, as originally reported (to 14 Jan 1985; not FY1985's "
+    f"restated comparative - see HD078_1981_1990_NOTE) - {AR1984_CH_URL}\n"
+    f"FY1983: Report and Accounts, BS+Reserves note (to 8 Jan 1984) - {AR1983_CH_URL}\n"
+    f"FY1982: Report and Accounts, BS+Reserves note (to 9 Jan 1983) - {AR1982_CH_URL}\n"
+    f"FY1981: 'Report and Accounts for the year ended 9th January 1982', BS+Reserves note - {AR1981_CH_URL}\n\n"
+    "HD-078 FOLLOW-UP - FY1980-FY1972 (Balance Sheet/Equity only, the workbook's genuine hard floor; see "
+    "HD078_1972_1980_NOTE for full methodology):\n"
+    f"FY1980: Report and Accounts, BS+Note 9 Reserves (year ended 10 Jan 1981) - {AR1981_CH_URL}\n"
+    f"FY1979: Report and Accounts, BS+Reserves note (year ended early Jan 1980; discloses the SSAP15/bad-debt "
+    f"restatement of the FY1978 comparative) - {AR1980_CH_URL}\n"
+    f"FY1978: Report and Accounts, BS+Reserves note (year ended early Jan 1979; as originally reported, "
+    f"pre-FY1979 restatement) - {AR1979_CH_URL}\n"
+    f"FY1977: Report and Accounts, BS+Reserves note (year ended 14 Jan 1978) - {AR1978_CH_URL}\n"
+    f"FY1976: Report and Accounts, BS+Reserves note (year ended early Jan 1977) - {AR1977_CH_URL}\n"
+    f"FY1975: Report and Accounts, BS+Reserves note (year ended early Jan 1976) - {AR1976_CH_URL}\n"
+    f"FY1974: Report and Accounts, BS+Reserves note (year ended early Jan 1975) - {AR1975_CH_URL}\n"
+    f"FY1973: Report and Accounts, BS+Reserves note (year ended early Jan 1974; discloses the £4.0m to £8.0m "
+    f"Ordinary share capital bonus issue) - {AR1974_CH_URL}\n"
+    f"FY1972: Report and Accounts, BS+Note 2 (year ended 13 Jan 1973 - earliest filed accounts; Note 2 confirms "
+    f"the comparative is only a 26-week stub, 10 Jul 1971-8 Jan 1972, tying to Note 1(a)'s vesting of C.W.S.'s "
+    f"banking activities in Co-operative Bank Limited on 10 Jul 1971) - {AR1973_CH_URL}\n\n"
+    "The Bank Company takes the Section 408 Companies Act 2006 exemption not to present its own income "
+    "statement from FY2017 onward - each AR discloses only the bottom-line net profit/(loss) figure plus OCI "
+    "reserve movements within the Equity statement; the P&L sheet reconstructs from these two pieces for "
+    "FY2017-FY2024, tying exactly to the equity roll-forward's own Total comprehensive income figures. "
+    "FY2014-FY2016 predate the holdco restructuring (see HOLDCO RESTRUCTURING HISTORY below) - the Bank itself "
+    "was the reporting entity and discloses a full income statement without the exemption; reproduced as "
+    "additional rows FY2014-FY2016 only.\n\n"
+    "FY2013/FY2012: the exemption was already being taken from FY2010 (Consolidated-only income statements "
+    "FY2010-FY2012), except the Bank's 2013 AR, published amid its 2013 recapitalisation, which voluntarily "
+    "discloses a full Bank income statement for FY2013 and, as its own comparative, FY2012 too - the only "
+    "source for a standalone FY2012 income statement. FY2009-FY2011 show bottom-line profit + OCI only, as "
+    "FY2017 onward.\n\n"
+    "NON-CONTROLLING INTERESTS: FY2014 Total equity (£2,014.5m) and FY2015 opening equity include a small NCI "
+    "balance (£34.5m) from the Bank's then-majority stake in Unity Trust Bank plc, disposed December 2015 (see "
+    "Equity sheet's 'Disposal of UTB' row); Profit/OCI rows throughout use equity-shareholder-attributable "
+    "figures only, for comparability with later years.\n\n"
+    "PRESENTATION: 'Other reserves' is a single aggregate line FY2021 onward (FVOCI+hedging+capital "
+    "redemption+pension reserves); FY2020 still itemises Share premium (£2,416.9m) separately - a FY2021 "
+    "'Reserve reorganisation' wrote share premium/capital redemption reserve to £nil into retained earnings "
+    "(net-zero on Total equity, shown explicitly on the Equity sheet). 'Equity shares'/'Prepayments' are their "
+    "own lines FY2020-2022 only (folded into Other assets from FY2023). Deferred tax is an asset FY2021-2024, a "
+    "liability in FY2020 - both shown as originally disclosed, not netted. 'Fair value adjustments for hedged "
+    "risk' appears as separate lines only FY2020-2022 (embedded in the Loans note thereafter).\n\n"
+    "PRE-2018 PRESENTATION: 'Investment securities' FY2014-FY2017 sums the original sub-categories (loans and "
+    "receivables/AFS/FVTPL/held for trading), combined into one line by the Bank from FY2018 - ties to the "
+    "credit-risk note's own total every year. 'Non-current assets held for sale' (FY2014-2016 label) and "
+    "'PP&E classified as held-for-sale' (FY2017+ label) are the same category, one shared row. 'Prepayments and "
+    "accrued income' was combined FY2014-2018; FY2019 shows 'Prepayments' alone (IFRS 16); FY2020-2022 use "
+    "'Prepayments' again. 'Customer accounts - capital bonds'/'Other borrowed funds' were separate FY2014-2016 "
+    "(nil by FY2017), superseded by Debt securities in issue and, from FY2019, IFRS 16 lease liabilities/Tier 2 "
+    "notes - each shown only in years actually disclosed. Right-of-use assets/lease liabilities first appear "
+    "FY2019 (IFRS 16 effective date, comparatives not restated per the Bank's own transition option).\n\n"
+    "RESTATEMENT (FY2016/FY2017 boundary): 2016 AR's own closing Total equity (£958.5m) vs 2017 AR's own "
+    "restated FY2016 comparative (£726.4m, £232.1m retained-earnings gap) - the 2017 AR's footnote attributes "
+    "this to a re-presentation of repo/reverse-repo netting arrangements, not a transcription error. Shown as "
+    "an explicit 'Restatement' row on the Equity sheet, same treatment as the FY2021 'Reserve reorganisation' "
+    "row, rather than force-matched.\n\n"
+    "PRE-2014 PRESENTATION: FY2003-FY2013 uses each era's own captions rather than force-mapped onto FY2014+ "
+    "(see PRE-2014 HISTORICAL DEPTH below for the three reporting-basis eras). New rows for this range: 'Items "
+    "in the course of collection/transmission from/to other banks' (FY2003-2004), 'Debt securities' "
+    "(FY2003-2008, pre-split combined line), 'Retirement benefit obligations' (FY2005), 'Preference share "
+    "capital (non-equity)' (FY2003-2004). FY2002-FY1991 adds: 'Treasury bills and other eligible bills' "
+    "(intermittent throughout), 'Interests in associated undertakings' (~£17k FY1993-1999), and FY1991-only "
+    "'Current, deposit and other accounts (aggregate)' and 'Creditors, accrued expenses and accrued preference "
+    "dividend (FY1991 only)' - see HD078_1991_2002_NOTE for why FY1991 couldn't map onto the finer row set.\n\n"
     + PRE2014_HISTORY_NOTE + "\n\n"
+    + HD078_1991_2002_NOTE + "\n\n"
+    + HD078_1981_1990_NOTE + "\n\n"
+    + HD078_1972_1980_NOTE + "\n\n"
     + ENTITY_NOTE
+)
+
+# P&L-only addition to STATEMENTS_SOURCES (kept separate, not folded into the
+# shared block above, which Balance Sheet and Equity also use and already
+# sits close to openpyxl's 32,000-char citation-cell warning threshold).
+PL_SOURCES = STATEMENTS_SOURCES + (
+    "\n\nCOST:INCOME RATIO (2026-09-07): headline-disclosed every year on the Bank/Group's own KPI page, "
+    "independent of the itemised opex rows above (only exist FY2014-FY2016) - not derived. Basis drifts by "
+    "year, per the source: FY2013-FY2016 Bank; FY2017-FY2018 Group; FY2020+ 'Group and Bank' (converged); "
+    "FY2019 not disambiguated by the source. Own-year figures used, not restated comparatives (AR URLs as "
+    "cited above for the same year):\n"
+    "FY2024/FY2023(comp): 2024 AR p.6\nFY2022/FY2021(comp): 2022 AR p.6\nFY2020: 2020 AR p.6\n"
+    "FY2019: 2019 AR p.6\nFY2018: 2018 AR p.4 (Group)\nFY2017: 2017 AR p.15 (Group)\n"
+    "FY2016: 2016 AR p.19 (Bank)\nFY2015: 2015 AR p.23 (Bank)\nFY2014/FY2013(comp): 2014 AR p.19 (Bank)\n"
 )
 
 ASSET_QUALITY_SOURCES = (
@@ -550,12 +754,35 @@ bw.add_balance_sheet_sheet(
             "FY2019": 2153.5, "FY2018": 1843.8, "FY2017": 4032.0, "FY2016": 2848.2, "FY2015": 2678.5, "FY2014": 4765.3,
             "FY2013": 5418.8, "FY2012": 5433.0, "FY2011": 6696.6, "FY2010": 1735.6, "FY2009": 1706.8,
             "FY2008": 164.7, "FY2007": 172.9, "FY2006": 186.9, "FY2005": 200.2, "FY2004": 172.4, "FY2003": 140.4,
+            # HD-078 follow-up (FY2002-FY1991): FY1991's own 'Coin and bank notes' sub-line of Liquid Assets.
+            "FY2002": 97.5, "FY2001": 113.7, "FY2000": 61.7, "FY1999": 74.9, "FY1998": 47.7, "FY1997": 33.7,
+            "FY1996": 35.1, "FY1995": 33.1, "FY1994": 37.6, "FY1993": 31.7, "FY1992": 19.0, "FY1991": 18.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981, each year's own Companies House filing - see
+            # HD078_1981_1990_NOTE. 'Coin and bank notes' sub-line of Liquid Assets, same mapping.
+            "FY1990": 12.1, "FY1989": 11.0, "FY1988": 10.1, "FY1987": 7.8, "FY1986": 7.1, "FY1985": 8.3,
+            "FY1984": 7.1, "FY1983": 5.5, "FY1982": 7.3, "FY1981": 5.1,
+            # HD-078 (2026-09-07): FY1990-FY1972 (Balance Sheet/Statement of Changes in Equity only, own
+            # filed reports at Companies House) - see HD078_1972_1980_NOTE for the full FY1980-FY1972
+            # leg of this range (FY1990-FY1981 sourced separately). 'Coin and bank notes' sub-line of
+            # Liquid Assets, same as FY1991-2002 mapping above.
+            "FY1980": 4.515, "FY1979": 4.777, "FY1978": 4.210, "FY1977": 4.171, "FY1976": 4.602,
+            "FY1975": 4.531, "FY1974": 3.562, "FY1973": 3.142, "FY1972": 2.106,
         }),
         ("DATA", "Loans and advances to banks", {
             "FY2024": 173.1, "FY2023": 193.7, "FY2022": 312.5, "FY2021": 124.7, "FY2020": 431.6,
             "FY2019": 345.6, "FY2018": 380.4, "FY2017": 460.3, "FY2016": 836.9, "FY2015": 871.0, "FY2014": 1608.4,
             "FY2013": 1594.4, "FY2012": 1047.2, "FY2011": 1300.1, "FY2010": 1728.6, "FY2009": 1220.1,
             "FY2008": 1897.5, "FY2007": 1211.2, "FY2006": 1369.4, "FY2005": 1170.6, "FY2004": 1073.0, "FY2003": 773.2,
+            # FY1991: 'Money at call and short notice' sub-line of Liquid Assets (closest economic match).
+            "FY2002": 1291.0, "FY2001": 733.2, "FY2000": 580.6, "FY1999": 493.9, "FY1998": 431.3, "FY1997": 507.7,
+            "FY1996": 615.7, "FY1995": 905.7, "FY1994": 617.3, "FY1993": 946.6, "FY1992": 910.9, "FY1991": 387.3,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Money at call and short notice' sub-line of
+            # Liquid Assets - see HD078_1981_1990_NOTE.
+            "FY1990": 372.0, "FY1989": 433.6, "FY1988": 334.8, "FY1987": 120.8, "FY1986": 242.9,
+            "FY1985": 98.6, "FY1984": 161.8, "FY1983": 151.6, "FY1982": 129.0, "FY1981": 90.7,
+            # HD-078 (2026-09-07): FY1980-FY1972 'Money at call and short notice' sub-line of Liquid Assets.
+            "FY1980": 114.888, "FY1979": 84.620, "FY1978": 56.668, "FY1977": 45.715, "FY1976": 38.717,
+            "FY1975": 33.718, "FY1974": 44.090, "FY1973": 44.955, "FY1972": 30.065,
         }),
         ("DATA", "Loans and advances to customers", {
             "FY2024": 20370.8, "FY2023": 20147.5, "FY2022": 20919.1, "FY2021": 20998.3, "FY2020": 18676.7,
@@ -564,6 +791,20 @@ bw.add_balance_sheet_sheet(
             "FY2013": 30322.2, "FY2012": 22785.5, "FY2011": 22735.0, "FY2010": 23844.9, "FY2009": 23050.8,
             "FY2008": 11169.8, "FY2007": 8914.4, "FY2006": 8051.8, "FY2005": 7807.9, "FY2004": 7546.4,
             "FY2003": 6073.2,
+            "FY2002": 4329.2, "FY2001": 3817.4, "FY2000": 3305.0, "FY1999": 2925.8, "FY1998": 2732.7,
+            "FY1997": 2453.5, "FY1996": 2152.0, "FY1995": 1903.4, "FY1994": 1717.7, "FY1993": 1655.4,
+            "FY1992": 1586.8,
+            # FY1991: 'Customer and Other Accounts' (asset-side).
+            "FY1991": 1711.9,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Customer and Other Accounts' (asset-side) -
+            # see HD078_1981_1990_NOTE.
+            "FY1990": 1972.6, "FY1989": 1741.3, "FY1988": 1405.0, "FY1987": 1062.8, "FY1986": 954.0,
+            "FY1985": 778.0, "FY1984": 690.6, "FY1983": 590.9, "FY1982": 492.9, "FY1981": 405.8,
+            # HD-078 (2026-09-07): FY1980-FY1972 'Customer and Other Accounts' (Advances less provisions,
+            # plus Debtors, combined - the source does not split these further on the face of the Bank
+            # balance sheet this era).
+            "FY1980": 318.334, "FY1979": 252.929, "FY1978": 141.927, "FY1977": 118.345, "FY1976": 98.913,
+            "FY1975": 69.446, "FY1974": 67.383, "FY1973": 75.970, "FY1972": 33.927,
         }),
         ("DATA", "Fair value adjustments for hedged risk (assets)", {
             "FY2022": -430.7, "FY2021": -90.5, "FY2020": 134.1,
@@ -582,6 +823,30 @@ bw.add_balance_sheet_sheet(
             "FY2013": 4499.4, "FY2012": 6744.7, "FY2011": 4316.6, "FY2010": 4636.9, "FY2009": 6616.2,
             "FY2008": 1810.2, "FY2007": 1985.7, "FY2006": 2369.6, "FY2005": 1912.8, "FY2004": 1378.3,
             "FY2003": 1850.0,
+            # HD-078 follow-up (FY2002-FY1991): 'Debt securities' line each year. FY1991 combines the
+            # source's own separate 'Investments' (£88.5m) and 'Certificates of Deposit' (£59.7m) lines
+            # into this one row, since neither maps independently onto any other year's row set.
+            "FY2002": 2266.0, "FY2001": 2560.6, "FY2000": 2187.6, "FY1999": 2191.8, "FY1998": 1837.7,
+            "FY1997": 1803.0, "FY1996": 1244.8, "FY1995": 586.7, "FY1994": 528.5, "FY1993": 350.2,
+            "FY1992": 205.3, "FY1991": 148.2,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 combines the source's own separate
+            # 'Investments' and 'Certificates of Deposit' lines into this one row, same treatment as
+            # FY1991 above; FY1981 additionally includes that year's own 'Special Deposits with the Bank
+            # of England' line (£1.721m), which no other row on this sheet maps onto - see
+            # HD078_1981_1990_NOTE. FY1990: 92.638+78.249; FY1989: 114.500+45.711; FY1988: 107.446+43.556;
+            # FY1987: 97.576+70.048; FY1986: 62.372+3.466; FY1985: 59.538+8.417; FY1984: 73.638+11.834;
+            # FY1983: 78.307+9.077; FY1982: 86.841+10.038; FY1981: 96.495+28.034+1.721.
+            "FY1990": 170.9, "FY1989": 160.2, "FY1988": 151.0, "FY1987": 167.6, "FY1986": 65.8,
+            "FY1985": 68.0, "FY1984": 85.5, "FY1983": 87.4, "FY1982": 96.9, "FY1981": 126.3,
+            # HD-078 (2026-09-07): FY1980-FY1972 combines the source's own separate 'Investments',
+            # 'Certificates of Deposit' (or 'Sterling Certificates of Deposit') and 'Special Deposits with
+            # the Bank of England' lines into this one row, same treatment as FY1991 above - none of the
+            # three maps independently onto any other row on this sheet. FY1980: 47.151+2.980+0 (nil
+            # Special Deposits that year); FY1979: 63.565+2.697+5.737; FY1978: 86.327+3.403+6.871;
+            # FY1977: 70.800+25.760+6.334; FY1976: 65.635+17.232+9.778; FY1975: 57.552+36.982+4.677;
+            # FY1974: 42.362+3.541+3.385; FY1973: 45.892+9.320+6.331; FY1972: 60.953+31.898+2.192.
+            "FY1980": 50.131, "FY1979": 71.999, "FY1978": 96.601, "FY1977": 102.894, "FY1976": 92.645,
+            "FY1975": 99.211, "FY1974": 49.288, "FY1973": 61.543, "FY1972": 95.043,
         }),
         ("DATA", "Derivative financial instruments", {
             "FY2024": 216.6, "FY2023": 301.0, "FY2022": 488.4, "FY2021": 241.2, "FY2020": 178.8,
@@ -599,16 +864,56 @@ bw.add_balance_sheet_sheet(
             "FY2019": 44.5, "FY2018": 26.4, "FY2017": 24.3, "FY2016": 46.8, "FY2015": 55.6, "FY2014": 2.8,
             "FY2013": 5.8, "FY2012": 5.7, "FY2011": 5.7, "FY2010": 7.2, "FY2009": 7.2,
             "FY2008": 13.0, "FY2007": 8.8, "FY2006": 1.7, "FY2005": 1.2, "FY2004": 1.2, "FY2003": 1.2,
+            "FY2002": 0.9, "FY2001": 1.3, "FY2000": 1.3, "FY1999": 1.2, "FY1998": 1.2, "FY1997": 1.2,
+            "FY1996": 1.1, "FY1995": 0.9, "FY1994": 0.5, "FY1993": 0.5, "FY1992": 0.5,
         }),
         ("DATA", "Investments in joint ventures", {"FY2016": 6.0, "FY2015": 4.9, "FY2014": 5.3, "FY2013": 4.7}),
         ("DATA", "Goodwill", {
             "FY2012": 0.0, "FY2011": 0.6, "FY2010": 0.6, "FY2009": 0.6, "FY2008": 0.0, "FY2007": 0.0,
+        }),
+        ("DATA", "Treasury bills and other eligible bills", {
+            # HD-078 follow-up (FY2002-FY1991): a distinct Bank balance sheet line in this era, recurring
+            # intermittently (nil/not disclosed in FY1998, FY1994, FY1993, FY1992, FY1991 - the last four
+            # of those years' own accounts either state nil or do not present this line at all).
+            "FY2002": 18.0, "FY2001": 1.6, "FY2000": 55.6, "FY1999": 35.6, "FY1997": 13.1, "FY1996": 0.7,
+            "FY1995": 55.5,
+        }),
+        ("DATA", "Interests in associated undertakings", {
+            # HD-078 follow-up: a small, near-constant Bank balance sheet line FY1993-FY1999 (£17k each
+            # year); not separately disclosed FY2000-FY2002 (likely folded into Equity shares) or FY1991.
+            "FY1999": 0.0, "FY1998": 0.0, "FY1997": 0.0, "FY1996": 0.0, "FY1995": 0.0, "FY1994": 0.0,
+            "FY1993": 0.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Associated Companies' - drops from a material
+            # £15-26m across FY1984-FY1987 to the same near-nil ~£17k basis seen FY1993-FY1999 by FY1988,
+            # confirming this is a genuine disposal/write-down over FY1987-FY1988, not a transcription
+            # error - see HD078_1981_1990_NOTE.
+            "FY1990": 0.0, "FY1989": 0.0, "FY1988": 0.0, "FY1987": 15.4, "FY1986": 21.9, "FY1985": 22.5,
+            "FY1984": 25.7, "FY1983": 0.1, "FY1982": 0.1, "FY1981": 0.7,
+            # HD-078 (2026-09-07): FY1980-FY1972 'Associated Companies' - a small Bank balance sheet line
+            # each year of this range.
+            "FY1980": 0.183, "FY1979": 0.096, "FY1978": 0.350, "FY1977": 0.347, "FY1976": 0.360,
+            "FY1975": 0.402, "FY1974": 3.248, "FY1973": 0.001, "FY1972": 0.001,
         }),
         ("DATA", "Investments in subsidiaries/group undertakings", {
             "FY2024": 22.8, "FY2023": 14.9, "FY2022": 15.0, "FY2021": 14.7, "FY2020": 43.3,
             "FY2019": 43.0, "FY2018": 49.4, "FY2017": 51.6,
             "FY2012": 1588.5, "FY2011": 1573.4, "FY2010": 1458.9, "FY2009": 1553.0,
             "FY2008": 969.3, "FY2007": 2.7, "FY2006": 2.7, "FY2005": 2.7, "FY2004": 1.2, "FY2003": 1.2,
+            "FY2002": 1.2, "FY2001": 1.2, "FY2000": 1.2, "FY1999": 1.1, "FY1998": 1.1, "FY1997": 1.1,
+            "FY1996": 1.1, "FY1995": 1.2, "FY1994": 1.2, "FY1993": 1.2, "FY1992": 1.2,
+            # FY1991: 'Subsidiary Undertakings' - a much larger gross figure than FY1992 onward's ~£1.2m,
+            # a genuine measurement-basis difference across the pre-1992 format change, not an error - see
+            # HD078_1991_2002_NOTE.
+            "FY1991": 176.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Subsidiary Undertakings'/'Subsidiaries', same
+            # larger pre-1992-format basis as FY1991 above - see HD078_1981_1990_NOTE.
+            "FY1990": 112.1, "FY1989": 94.2, "FY1988": 93.1, "FY1987": 70.7, "FY1986": 75.2, "FY1985": 41.6,
+            "FY1984": 11.4, "FY1983": -1.8, "FY1982": 1.0, "FY1981": 0.0,
+            # HD-078 (2026-09-07): FY1980-FY1972 'Subsidiaries' (gross cost of investment plus amounts due
+            # by subsidiaries, on the same larger pre-1992-format basis as FY1991 above, not the ~£1.2m
+            # basis used FY1992 onward).
+            "FY1980": 31.911, "FY1979": 35.640, "FY1978": 35.160, "FY1977": 32.612, "FY1976": 28.978,
+            "FY1975": 23.012, "FY1974": 43.800, "FY1973": 13.354, "FY1972": 7.781,
         }),
         ("DATA", "Investment properties", {
             "FY2020": 1.9,
@@ -619,12 +924,16 @@ bw.add_balance_sheet_sheet(
             "FY2019": 43.0, "FY2018": 39.9, "FY2017": 79.3, "FY2016": 96.7, "FY2015": 124.1, "FY2014": 187.6,
             "FY2013": 480.9, "FY2012": 67.3, "FY2011": 29.3, "FY2010": 51.5, "FY2009": 45.8,
             "FY2008": 31.0, "FY2007": 16.4, "FY2006": 43.9, "FY2005": 23.9, "FY2004": 41.4, "FY2003": 58.1,
+            "FY2002": 69.9, "FY2001": 37.2, "FY2000": 33.7, "FY1999": 34.1, "FY1998": 55.1, "FY1997": 24.7,
+            "FY1996": 24.1, "FY1995": 17.9, "FY1994": 15.7, "FY1993": 13.5, "FY1992": 13.8,
         }),
         ("DATA", "Prepayments", {"FY2022": 21.4, "FY2021": 20.3, "FY2020": 13.2}),
         ("DATA", "Prepayments and accrued income", {
             "FY2019": 21.6, "FY2018": 31.8, "FY2017": 24.6, "FY2016": 28.7, "FY2015": 43.5, "FY2014": 12.2,
             "FY2013": 16.5, "FY2012": 14.0, "FY2011": 17.7, "FY2010": 14.5, "FY2009": 27.4,
             "FY2008": 56.8, "FY2007": 44.9, "FY2006": 79.3, "FY2005": 64.1, "FY2004": 89.4, "FY2003": 70.4,
+            "FY2002": 96.2, "FY2001": 100.3, "FY2000": 137.6, "FY1999": 72.9, "FY1998": 73.3, "FY1997": 72.3,
+            "FY1996": 53.8, "FY1995": 47.1, "FY1994": 34.2, "FY1993": 28.4, "FY1992": 24.8,
         }),
         ("DATA", "Amounts owed by Co-operative Bank undertakings", {
             "FY2024": 552.1, "FY2023": 70.6, "FY2022": 65.1, "FY2021": 33.2, "FY2020": 1336.1,
@@ -636,12 +945,38 @@ bw.add_balance_sheet_sheet(
             "FY2017": 2.5, "FY2014": 0.6,
             "FY2012": 154.0, "FY2011": 48.2, "FY2008": 2.5,
         }),
-        ("DATA", "Items in the course of collection from other banks", {"FY2004": 108.0, "FY2003": 116.0}),
+        ("DATA", "Items in the course of collection from other banks", {
+            "FY2004": 108.0, "FY2003": 116.0,
+            # HD-078 follow-up: 'Cheques in course of collection' (FY1994-FY1993) / 'Items in the course of
+            # collection from other banks' (FY2002-FY1995) - same substance. FY1991: sub-line of Liquid
+            # Assets ('Balances with, and amounts in course of collection from, other banks').
+            "FY2002": 164.9, "FY2001": 145.3, "FY2000": 116.7, "FY1999": 135.0, "FY1998": 104.8,
+            "FY1997": 124.2, "FY1996": 120.6, "FY1995": 115.5, "FY1994": 105.4, "FY1993": 155.8,
+            "FY1992": 124.3, "FY1991": 99.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Balances with, and amounts in course of
+            # collection from, other banks' sub-line of Liquid Assets - see HD078_1981_1990_NOTE.
+            "FY1990": 103.6, "FY1989": 73.5, "FY1988": 68.3, "FY1987": 72.8, "FY1986": 59.8, "FY1985": 69.3,
+            "FY1984": 56.6, "FY1983": 54.5, "FY1982": 71.4, "FY1981": 53.6,
+            # HD-078 (2026-09-07): FY1980-FY1972 'Balances with and amounts in course of collection from
+            # other banks' sub-line of Liquid Assets, same mapping as FY1991-2002 above.
+            "FY1980": 46.716, "FY1979": 42.643, "FY1978": 37.690, "FY1977": 27.162, "FY1976": 32.678,
+            "FY1975": 28.895, "FY1974": 25.940, "FY1973": 21.822, "FY1972": 15.240,
+        }),
         ("DATA", "Property, plant and equipment", {
             "FY2024": 24.9, "FY2023": 23.6, "FY2022": 22.8, "FY2021": 24.3, "FY2020": 35.2,
             "FY2019": 38.6, "FY2018": 40.8, "FY2017": 44.4, "FY2016": 35.4, "FY2015": 46.1, "FY2014": 67.5,
             "FY2013": 115.2, "FY2012": 46.2, "FY2011": 61.5, "FY2010": 79.1, "FY2009": 101.6,
             "FY2008": 53.9, "FY2007": 74.0, "FY2006": 87.8, "FY2005": 79.8, "FY2004": 87.3, "FY2003": 84.6,
+            "FY2002": 70.6, "FY2001": 59.1, "FY2000": 60.6, "FY1999": 56.0, "FY1998": 52.0, "FY1997": 55.1,
+            "FY1996": 54.1, "FY1995": 51.0, "FY1994": 43.9, "FY1993": 39.8, "FY1992": 32.5,
+            # FY1991: 'Fixed Assets'.
+            "FY1991": 32.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Fixed Assets' - see HD078_1981_1990_NOTE.
+            "FY1990": 31.5, "FY1989": 30.9, "FY1988": 29.1, "FY1987": 22.3, "FY1986": 22.1, "FY1985": 20.2,
+            "FY1984": 18.1, "FY1983": 17.3, "FY1982": 17.5, "FY1981": 14.0,
+            # HD-078 (2026-09-07): FY1980-FY1972 'Fixed Assets', same mapping as FY1991 above.
+            "FY1980": 11.148, "FY1979": 8.228, "FY1978": 4.621, "FY1977": 3.876, "FY1976": 3.021,
+            "FY1975": 2.772, "FY1974": 1.985, "FY1973": 1.134, "FY1972": 0.953,
         }),
         ("DATA", "Intangible assets", {
             "FY2024": 109.8, "FY2023": 114.0, "FY2022": 90.0, "FY2021": 68.5, "FY2020": 63.4,
@@ -670,6 +1005,22 @@ bw.add_balance_sheet_sheet(
             "FY2013": 43396.1, "FY2012": 51818.5, "FY2011": 50965.7, "FY2010": 48814.9, "FY2009": 47167.7,
             "FY2008": 16403.6, "FY2007": 12523.8, "FY2006": 12293.2, "FY2005": 11365.1, "FY2004": 10498.6,
             "FY2003": 9168.3,
+            "FY2002": 8405.4, "FY2001": 7570.9, "FY2000": 6541.6, "FY1999": 6022.4, "FY1998": 5337.1,
+            "FY1997": 5089.7, "FY1996": 4303.1, "FY1995": 3718.0, "FY1994": 3101.9, "FY1993": 3223.0,
+            "FY1992": 2968.8,
+            # FY1991: disclosed Total assets figure used as the authoritative anchor rather than a
+            # component sum - see HD078_1991_2002_NOTE (a ~£0.03m/0.001% gap could not be resolved to the
+            # individual digit against the severely degraded FY1991 scan image).
+            "FY1991": 2572.6,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 disclosed Total assets figures, each
+            # independently cross-checked against the component sum above (all tie exactly) - see
+            # HD078_1981_1990_NOTE.
+            "FY1990": 2774.8, "FY1989": 2544.6, "FY1988": 2091.4, "FY1987": 1540.1, "FY1986": 1448.8,
+            "FY1985": 1106.5, "FY1984": 1056.6, "FY1983": 905.4, "FY1982": 816.1, "FY1981": 696.3,
+            # HD-078 (2026-09-07): FY1980-FY1972 disclosed Total assets figures, each independently
+            # cross-checked against the component sum above (all tie exactly).
+            "FY1980": 577.826, "FY1979": 500.932, "FY1978": 377.227, "FY1977": 335.122, "FY1976": 299.914,
+            "FY1975": 261.987, "FY1974": 239.296, "FY1973": 221.921, "FY1972": 185.116,
         }),
         ("SECTION", "Liabilities", {}),
         ("DATA", "Deposits by banks", {
@@ -678,6 +1029,9 @@ bw.add_balance_sheet_sheet(
             "FY2014": 615.4,
             "FY2013": 2757.5, "FY2012": 3552.9, "FY2011": 3239.8, "FY2010": 2870.8, "FY2009": 5613.0,
             "FY2008": 1072.3, "FY2007": 661.3, "FY2006": 700.6, "FY2005": 641.1, "FY2004": 659.4, "FY2003": 773.8,
+            "FY2002": 756.4, "FY2001": 733.6, "FY2000": 750.5, "FY1999": 913.7, "FY1998": 599.1, "FY1997": 578.1,
+            "FY1996": 565.5, "FY1995": 404.9, "FY1994": 605.7, "FY1993": 572.4, "FY1992": 560.4,
+            # FY1991: not separately disclosed - see 'Current, deposit and other accounts' below.
         }),
         ("DATA", "Customer accounts", {
             "FY2024": 19974.2, "FY2023": 19215.8, "FY2022": 20107.9, "FY2021": 21136.4, "FY2020": 20366.3,
@@ -686,6 +1040,37 @@ bw.add_balance_sheet_sheet(
             "FY2013": 32463.3, "FY2012": 33750.3, "FY2011": 32670.1, "FY2010": 29912.0, "FY2009": 28660.0,
             "FY2008": 13388.7, "FY2007": 10068.1, "FY2006": 9119.3, "FY2005": 8391.7, "FY2004": 7778.5,
             "FY2003": 7126.2,
+            "FY2002": 6679.5, "FY2001": 5906.8, "FY2000": 4992.0, "FY1999": 4368.1, "FY1998": 4041.8,
+            "FY1997": 3766.1, "FY1996": 3180.7, "FY1995": 2740.5, "FY1994": 2133.0, "FY1993": 2282.2,
+            "FY1992": 2033.8,
+            # FY1991: not separately disclosed - see 'Current, deposit and other accounts' below.
+        }),
+        ("DATA", "Current, deposit and other accounts (aggregate - not split by counterparty)", {
+            # HD-078 follow-up: FY1991's own presentation combines what later years split into 'Deposits
+            # by banks' and 'Customer accounts' into one line - see HD078_1991_2002_NOTE.
+            "FY1991": 2324.6,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981's own 'Current, deposit and other accounts'
+            # line - undifferentiated between banks/customers throughout this era, matching the FY1991
+            # presentation - see HD078_1981_1990_NOTE. FY1988 is a residual computed as Total assets less
+            # Share Capital and Reserves, Loan Stock, and Deferred Tax, since that year's own report did not
+            # split its liabilities page as granularly as adjacent years.
+            "FY1990": 2513.8, "FY1989": 2276.0, "FY1988": 1875.2, "FY1987": 1345.9, "FY1986": 1266.1,
+            "FY1985": 937.7, "FY1984": 941.0, "FY1983": 815.3, "FY1982": 740.2, "FY1981": 626.1,
+            # HD-078 (2026-09-07): FY1980-FY1972's own 'Current, deposit and other accounts' line - the
+            # entire FY1980-FY1972 range uses this same single aggregate line (not split into 'Deposits by
+            # banks' and 'Customer accounts' at all this era) - see HD078_1972_1980_NOTE.
+            "FY1980": 508.468, "FY1979": 436.645, "FY1978": 331.641, "FY1977": 290.494, "FY1976": 255.689,
+            "FY1975": 218.312, "FY1974": 196.561, "FY1973": 178.667, "FY1972": 141.130,
+        }),
+        ("DATA", "Deposits by trustees of CWS employees' pension scheme (secured)", {
+            # HD-078 (2026-09-07): FY1981-FY1972 - a distinct, separately-secured deposit line in this
+            # era's Bank balance sheet (deposits from the trustees of the Co-operative Wholesale Society
+            # employees' pension scheme, secured over specific investments per each year's own notes) -
+            # not present in any FY1982-onward balance sheet in this workbook; FY1981 is the last year it
+            # appears - see HD078_1981_1990_NOTE.
+            "FY1981": 5.6,
+            "FY1980": 8.149, "FY1979": 9.954, "FY1978": 12.264, "FY1977": 14.367, "FY1976": 15.565,
+            "FY1975": 16.676, "FY1974": 18.000, "FY1973": 19.784, "FY1972": 21.880,
         }),
         ("DATA", "Customer accounts – capital bonds", {
             "FY2017": 0.0, "FY2016": 11.8, "FY2015": 77.4, "FY2014": 263.8,
@@ -713,6 +1098,20 @@ bw.add_balance_sheet_sheet(
             # FY2003-FY2004: labelled 'Subordinated liabilities' in the UK GAAP-era balance sheet - same
             # economic substance (subordinated debt funding), reproduced in this existing row.
             "FY2004": 327.6, "FY2003": 179.2,
+            # HD-078 follow-up: 'Subordinated liabilities' (FY2002-FY1993) / 'Loan Stock' (FY1991, £75.0m -
+            # identical to the FY1992 subordinated balance, confirming continuity across the format change).
+            "FY2002": 178.9, "FY2001": 178.7, "FY2000": 178.4, "FY1999": 192.2, "FY1998": 192.0,
+            "FY1997": 191.9, "FY1996": 162.0, "FY1995": 198.9, "FY1994": 75.0, "FY1993": 75.0, "FY1992": 75.0,
+            "FY1991": 75.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Loan Stock' / 'Subordinated Loans' - see
+            # HD078_1981_1990_NOTE.
+            "FY1990": 75.0, "FY1989": 75.0, "FY1988": 75.0, "FY1987": 75.0, "FY1986": 75.0, "FY1985": 75.0,
+            "FY1984": 22.2, "FY1983": 17.8, "FY1982": 15.6, "FY1981": 12.8,
+            # HD-078 (2026-09-07): FY1980-FY1979 'Subordinated Loans' (US $25,000,000 Floating Rate
+            # (minimum 6%) Capital Notes redeemable not later than November 1986) - the Bank's first
+            # subordinated debt issuance, not present in any earlier year in this range (FY1978 and
+            # earlier have no Subordinated Loans line at all).
+            "FY1980": 10.426, "FY1979": 11.074,
         }),
         ("DATA", "Amounts owed to Co-operative Bank undertakings / parent undertakings / Finance Company", {
             "FY2024": 897.3, "FY2023": 937.6, "FY2022": 646.9, "FY2021": 402.1, "FY2020": 408.2,
@@ -725,26 +1124,73 @@ bw.add_balance_sheet_sheet(
             "FY2013": 202.9, "FY2012": 99.5, "FY2011": 169.1, "FY2010": 140.5, "FY2009": 210.8,
             "FY2008": 109.6, "FY2007": 102.5, "FY2006": 106.9, "FY2005": 108.9, "FY2004": 135.0,
             "FY2003": 124.1,
+            "FY2002": 128.4, "FY2001": 86.3, "FY2000": 70.3, "FY1999": 76.7, "FY1998": 92.6, "FY1997": 61.2,
+            "FY1996": 52.3, "FY1995": 41.9, "FY1994": 53.2, "FY1993": 66.3, "FY1992": 42.9,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Creditors' plus accrued preference dividend
+            # (FY1989-FY1988 only) and proposed dividend, combined into this existing row - see
+            # HD078_1981_1990_NOTE. FY1988: genuinely not separable from the aggregate deposits/current
+            # liabilities residual that year (folded there instead) - left blank here for FY1988 only.
+            "FY1990": 34.8, "FY1989": 23.2, "FY1987": 20.4, "FY1986": 19.2, "FY1985": 16.1, "FY1984": 19.8,
+            "FY1983": 13.4, "FY1982": 9.9, "FY1981": 8.5,
+            # HD-078 (2026-09-07): FY1980-FY1972 'Creditors' plus, in the two years it is separately
+            # disclosed within Current Liabilities (FY1977 and FY1973), 'Taxation' - combined into this
+            # existing row since neither maps independently. FY1980: 8.540 (no separate Taxation line that
+            # year); FY1979: 6.218; FY1978: 2.886; FY1977: 1.969+0.224; FY1976: 1.957; FY1975: 1.727;
+            # FY1974: 0.956; FY1973: 0.558+0.262; FY1972: 0.829.
+            "FY1980": 8.540, "FY1979": 6.218, "FY1978": 2.886, "FY1977": 2.193, "FY1976": 1.957,
+            "FY1975": 1.727, "FY1974": 0.956, "FY1973": 0.820, "FY1972": 0.829,
         }),
         ("DATA", "Accruals and deferred income", {
             "FY2024": 46.6, "FY2023": 22.7, "FY2022": 32.4, "FY2021": 36.8, "FY2020": 34.8,
             "FY2019": 58.4, "FY2018": 49.8, "FY2017": 59.9, "FY2016": 115.3, "FY2015": 152.5, "FY2014": 16.0,
             "FY2013": 54.1, "FY2012": 15.5, "FY2011": 33.1, "FY2010": 117.0, "FY2009": 134.3,
             "FY2008": 30.3, "FY2007": 32.5, "FY2006": 75.3, "FY2005": 71.5, "FY2004": 146.9, "FY2003": 127.3,
+            "FY2002": 122.2, "FY2001": 126.1, "FY2000": 111.4, "FY1999": 83.1, "FY1998": 84.8, "FY1997": 94.7,
+            "FY1996": 65.2, "FY1995": 51.9, "FY1994": 30.8, "FY1993": 16.0, "FY1992": 13.7,
         }),
         ("DATA", "Liabilities directly associated with non-current assets classified as held for sale", {
             "FY2014": 7.9,
         }),
-        ("DATA", "Items in the course of transmission to other banks", {"FY2004": 7.5, "FY2003": 7.1}),
+        ("DATA", "Items in the course of transmission to other banks", {
+            "FY2004": 7.5, "FY2003": 7.1,
+            "FY2002": 6.7, "FY2001": 9.9, "FY2000": 11.1, "FY1999": 8.4, "FY1998": 7.1, "FY1997": 7.9,
+            "FY1996": 5.8, "FY1995": 3.7,
+            # FY1994: genuinely not presented as a separate line in that year's own Bank balance sheet.
+        }),
+        ("DATA", "Creditors, accrued expenses and accrued preference dividend (FY1991 only)", {
+            # HD-078 follow-up: FY1991's own 'Creditors and accrued expenses' (£29.7m) plus 'Accrued
+            # preference dividend' (£0.6m), combined - see HD078_1991_2002_NOTE.
+            "FY1991": 30.4,
+        }),
         ("DATA", "Provisions", {
             "FY2024": 10.1, "FY2023": 31.7, "FY2022": 33.1, "FY2021": 33.8, "FY2020": 46.0,
             "FY2019": 86.8, "FY2018": 103.0, "FY2017": 157.4, "FY2016": 276.4, "FY2015": 499.2, "FY2014": 617.5,
             "FY2013": 576.0, "FY2012": 161.6, "FY2011": 93.4, "FY2010": 39.3, "FY2009": 25.6,
             "FY2008": 14.7, "FY2007": 8.8, "FY2006": 5.9, "FY2005": 5.2, "FY2004": 6.0, "FY2003": 6.9,
+            # HD-078 follow-up: 'Deferred taxation' within Provisions for liabilities and charges (nil/not
+            # disclosed FY1996-FY1998).
+            "FY2002": 9.9, "FY2001": 3.6, "FY2000": 2.6, "FY1999": 2.8, "FY1995": 2.8, "FY1994": 2.6,
+            "FY1993": 1.1, "FY1992": 2.6,
+            # FY1991: 'Deferred Taxation'.
+            "FY1991": 1.1,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 'Deferred Taxation' - see HD078_1981_1990_NOTE.
+            "FY1990": 3.0, "FY1989": 3.1, "FY1988": 5.3, "FY1987": 5.6, "FY1986": 5.1, "FY1985": 7.4,
+            "FY1984": 8.3, "FY1983": 1.4, "FY1982": 0.1, "FY1981": 0.4,
+            # HD-078 (2026-09-07): FY1980-FY1974 'Deferred Taxation' - a separate Bank balance sheet line
+            # from FY1974 onward; not yet a distinct line in FY1973-FY1972 (nil/not applicable those two
+            # years - the concept is not presented on the face of the Bank balance sheet that early).
+            "FY1980": 0.260, "FY1979": 0.447, "FY1978": 0.873, "FY1977": 0.658, "FY1976": 0.593,
+            "FY1975": 0.560, "FY1974": 0.025,
         }),
         ("DATA", "Current tax liabilities", {
             "FY2015": 0.3, "FY2014": 0.3,
             "FY2013": 4.2, "FY2010": 17.3, "FY2007": 2.9,
+            # HD-078 follow-up (2026-09-07): FY1989, FY1987, FY1986's own separately-disclosed 'Taxation'
+            # line (Bank Company-only) - see HD078_1981_1990_NOTE. FY1990: nil that year (no separate
+            # taxation liability disclosed on the Bank balance sheet). FY1988 and FY1985-FY1981: not
+            # separately disclosed that year - folded into the aggregate deposits residual (FY1988) or
+            # genuinely not itemised as a distinct balance sheet line (FY1985-FY1981) - left blank.
+            "FY1990": 0.0, "FY1989": 9.1, "FY1987": 6.7, "FY1986": 5.9,
         }),
         ("DATA", "Lease liabilities", {
             "FY2024": 26.2, "FY2023": 30.1, "FY2022": 31.0, "FY2021": 44.1, "FY2020": 53.6,
@@ -760,6 +1206,13 @@ bw.add_balance_sheet_sheet(
             "FY2019": 8.6, "FY2018": 7.6, "FY2017": 11.3,
         }),
         ("DATA", "Retirement benefit obligations", {"FY2005": 90.0}),
+        ("DATA", "Proposed dividend", {
+            # HD-078 (2026-09-07): FY1980 only - a separately-disclosed 'Proposed Dividend' line on
+            # that year's own Bank balance sheet (not present as a separate line FY1979 and earlier -
+            # folded into that era's aggregate Creditors/Current-liabilities figures instead - see
+            # HD078_1972_1980_NOTE).
+            "FY1980": 0.400,
+        }),
         ("TOTAL", "Total liabilities", {
             "FY2024": 24780.0, "FY2023": 25117.3, "FY2022": 27692.9, "FY2021": 28494.7, "FY2020": 26326.9,
             "FY2019": 24772.9, "FY2018": 23291.6, "FY2017": 25436.1, "FY2016": 26629.8, "FY2015": 27665.0,
@@ -767,6 +1220,20 @@ bw.add_balance_sheet_sheet(
             "FY2013": 41618.8, "FY2012": 50189.4, "FY2011": 48805.3, "FY2010": 46711.4, "FY2009": 45300.2,
             "FY2008": 15687.7, "FY2007": 11863.5, "FY2006": 11643.6, "FY2005": 10782.6, "FY2004": 9837.1,
             "FY2003": 8569.3,
+            "FY2002": 7887.0, "FY2001": 7132.5, "FY2000": 6170.4, "FY1999": 5707.4, "FY1998": 5074.2,
+            "FY1997": 4866.9, "FY1996": 4115.8, "FY1995": 3552.0, "FY1994": 2949.8, "FY1993": 3079.7,
+            "FY1992": 2826.7, "FY1991": 2431.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 = component sum (Current-deposit-other
+            # accounts + Deposits by CWS trustees [FY1981 only] + Loan Stock/Other borrowed funds +
+            # Provisions + Current tax liabilities + Other liabilities); ties exactly to Total assets less
+            # Total equity every year - see HD078_1981_1990_NOTE.
+            "FY1990": 2626.6, "FY1989": 2386.5, "FY1988": 1955.5, "FY1987": 1453.5, "FY1986": 1371.3,
+            "FY1985": 1036.3, "FY1984": 991.3, "FY1983": 847.9, "FY1982": 765.9, "FY1981": 653.4,
+            # HD-078 (2026-09-07): FY1980-FY1972 = Total assets less Total equity (component sum of
+            # Subordinated Loans/Deposits by trustees/Current-deposit-other accounts/Creditors/Proposed
+            # dividend/Deferred Taxation ties exactly in every year).
+            "FY1980": 536.243, "FY1979": 464.338, "FY1978": 347.664, "FY1977": 307.712, "FY1976": 273.804,
+            "FY1975": 237.275, "FY1974": 215.542, "FY1973": 199.271, "FY1972": 163.839,
         }),
         ("SECTION", "Equity", {}),
         ("DATA", "Ordinary share capital", {
@@ -774,14 +1241,59 @@ bw.add_balance_sheet_sheet(
             "FY2019": 25.6, "FY2018": 25.6, "FY2017": 25.6, "FY2016": 22.6, "FY2015": 22.6, "FY2014": 22.6,
             "FY2013": 12.5, "FY2012": 410.0, "FY2011": 410.0, "FY2010": 410.0, "FY2009": 230.0,
             "FY2008": 55.0, "FY2007": 55.0, "FY2006": 55.0, "FY2005": 55.0, "FY2004": 55.0, "FY2003": 55.0,
+            "FY2002": 35.0, "FY2001": 35.0, "FY2000": 35.0, "FY1999": 35.0, "FY1998": 35.0,
+            # FY1997: £5.0m ordinary share issue during the year (£30.0m at FY1996).
+            "FY1997": 35.0, "FY1996": 30.0, "FY1995": 30.0, "FY1994": 30.0, "FY1993": 30.0, "FY1992": 30.0,
+            "FY1991": 30.0,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1987 £30.0m following the 14 July 1987 subdivision
+            # of 25,000,000 £1 ordinary shares into 100,000,000 25p shares plus a November 1987 issue of
+            # 20,000,000 new 25p shares at par (£25.0m -> £30.0m). FY1986-FY1985 £25.0m following the
+            # Dec 1984/Jan 1985 issue of 13,800,000 £1 shares at par to CWS (£11.2m -> £25.0m, captured
+            # within FY1984 since the Bank's FY1984 year-end falls in Jan 1985). FY1983 unchanged at
+            # £11.2m following the Jan 1983 issue of 3,200,000 £1 shares at par to CWS (£8.0m -> £11.2m,
+            # captured within FY1982 since the Bank's FY1982 year-end falls in Jan 1983). FY1981 unchanged
+            # at £8.0m - see HD078_1981_1990_NOTE.
+            "FY1990": 30.0, "FY1989": 30.0, "FY1988": 30.0, "FY1987": 30.0, "FY1986": 25.0, "FY1985": 25.0,
+            "FY1984": 25.0, "FY1983": 11.2, "FY1982": 11.2, "FY1981": 8.0,
+            # HD-078 (2026-09-07): FY1980-FY1973 unchanged at £8.0m following the FY1973 bonus/
+            # capitalisation issue (doubled from £4.0m, funded by a £4.02m capitalisation of Reserves -
+            # see HD078_1972_1980_NOTE). FY1972 = £4.0m, the pre-capitalisation-issue amount.
+            "FY1980": 8.000, "FY1979": 8.000, "FY1978": 8.000, "FY1977": 8.000, "FY1976": 8.000,
+            "FY1975": 8.000, "FY1974": 8.000, "FY1973": 8.000, "FY1972": 4.000,
         }),
-        ("DATA", "Preference share capital (non-equity)", {"FY2004": 60.0, "FY2003": 60.0}),
+        ("DATA", "Preference share capital (non-equity)", {
+            "FY2004": 60.0, "FY2003": 60.0,
+            "FY2002": 60.0, "FY2001": 60.0, "FY2000": 60.0, "FY1999": 60.0, "FY1998": 60.0, "FY1997": 60.0,
+            "FY1996": 60.0, "FY1995": 60.0, "FY1994": 60.0, "FY1993": 60.0, "FY1992": 60.0, "FY1991": 60.0,
+            # HD-078 follow-up (2026-09-07): preference shares first issued April 1988 (40,000,000 8.48%
+            # cumulative redeemable £1 shares at 100.06p, converted 23 June 1989 to 9.25% non-cumulative
+            # irredeemable); a further 20,000,000 9.25% preference shares issued 31 May 1989 (total
+            # 60,000,000, £60.0m). No preference share capital in any year before FY1988 - see
+            # HD078_1981_1990_NOTE.
+            "FY1990": 60.0, "FY1989": 60.0, "FY1988": 40.0,
+        }),
         ("DATA", "Share premium account", {
             "FY2020": 2416.9,
             "FY2019": 2416.9, "FY2018": 2416.9, "FY2017": 2416.9, "FY2016": 1736.9, "FY2015": 1736.9,
             "FY2014": 1736.9,
             "FY2013": 1359.8, "FY2012": 8.8, "FY2011": 8.8, "FY2010": 8.8, "FY2009": 8.8,
             "FY2008": 8.8, "FY2007": 8.8, "FY2006": 8.8, "FY2005": 8.8, "FY2004": 8.8, "FY2003": 8.8,
+            "FY2002": 8.8, "FY2001": 8.8, "FY2000": 8.8, "FY1999": 8.8, "FY1998": 8.8, "FY1997": 8.8,
+            "FY1996": 8.8, "FY1995": 8.8, "FY1994": 8.8, "FY1993": 8.8, "FY1992": 8.8,
+            # FY1991: not itemised separately from Retained earnings in that year's own 'Reserves' line -
+            # inferred at £8.8m, consistent with the unchanged balance disclosed in every adjacent year -
+            # see HD078_1991_2002_NOTE.
+            "FY1991": 8.8,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1983 £8.8m-£9.7m range, a genuine year-to-year drift
+            # in the source's own disclosed figure (£9,636,000-£9,824,000 across FY1983-1987, and a
+            # discrepancy between FY1988's own report (£9,176,000) vs FY1989's report's restated FY1988
+            # comparative (£8,814,000)) - treated as immaterial at this workbook's 1-decimal £m precision;
+            # FY1988-FY1990 use the £8.8m value consistent with FY1991 onward. FY1982 and FY1981: no
+            # independently-disclosed share premium sub-split found in either year's own primary source or
+            # its adjacent-year comparative - left fully undifferentiated within Retained earnings below
+            # for these two years only - see HD078_1981_1990_NOTE.
+            "FY1990": 8.8, "FY1989": 8.8, "FY1988": 8.8, "FY1987": 9.6, "FY1986": 9.7, "FY1985": 9.7,
+            "FY1984": 9.7, "FY1983": 9.8,
         }),
         ("DATA", "Retained earnings", {
             "FY2024": 1328.6, "FY2023": 1398.2, "FY2022": 1241.1, "FY2021": 1218.8, "FY2020": -1823.6,
@@ -791,6 +1303,29 @@ bw.add_balance_sheet_sheet(
             "FY2008": 610.7, "FY2007": 597.9, "FY2006": 608.3, "FY2005": 506.8,
             # FY2003-FY2004 label this 'Profit and loss account' (UK GAAP) - same substance.
             "FY2004": 537.7, "FY2003": 475.2,
+            "FY2002": 414.6, "FY2001": 334.6, "FY2000": 267.4, "FY1999": 211.2, "FY1998": 159.1,
+            "FY1997": 119.0, "FY1996": 88.5, "FY1995": 67.2, "FY1994": 53.2, "FY1993": 44.5, "FY1992": 43.2,
+            # FY1991: inferred as 'Reserves' (£51.6m) less the inferred £8.8m share premium above - see
+            # HD078_1991_2002_NOTE.
+            "FY1991": 42.8,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1983 = disclosed Reserves less the Share premium
+            # account figure above. FY1982-FY1981 = the Bank's undifferentiated 'Reserves' note figure in
+            # full (no independently-disclosed share premium sub-split for these two years - see
+            # HD078_1981_1990_NOTE). A genuine FY1984 reserves transfer of £13.153m to the profit and loss
+            # account (funding a Group deferred-tax provision required by Finance Act 1984 changes) is
+            # reflected in the FY1984 figure below, per that year's own Reserves note.
+            "FY1990": 49.4, "FY1989": 59.3, "FY1988": 57.1, "FY1987": 47.0, "FY1986": 42.8, "FY1985": 35.5,
+            "FY1984": 30.6, "FY1983": 36.5, "FY1982": 39.0, "FY1981": 34.9,
+            # HD-078 (2026-09-07): FY1980-FY1972 = the Bank's single, undivided 'Reserves' note figure
+            # (no separate Share premium disclosed this era - see HD078_1972_1980_NOTE) - i.e. the sum
+            # of the 'Reserves proper' and 'Investment suspense account' sub-components tracked on the
+            # Statement of Changes in Equity sheet. FY1978 restated from 21.563 to 23.021 by a FY1979
+            # SSAP15/bad-debt-provision prior-year adjustment (+1.458); figure shown here for FY1978 is
+            # the AS-ORIGINALLY-REPORTED 21.563, with the restatement itself shown as its own row on the
+            # Statement of Changes in Equity sheet, consistent with the FY2001 restatement treatment
+            # above.
+            "FY1980": 33.583, "FY1979": 28.594, "FY1978": 21.563, "FY1977": 19.410, "FY1976": 18.110,
+            "FY1975": 16.712, "FY1974": 15.754, "FY1973": 14.650, "FY1972": 17.277,
         }),
         ("DATA", "Other reserves", {
             "FY2024": -81.3, "FY2023": 7.9, "FY2022": 27.6, "FY2021": 502.6, "FY2020": 832.4,
@@ -812,6 +1347,31 @@ bw.add_balance_sheet_sheet(
             "FY2013": 1777.3, "FY2012": 1629.1, "FY2011": 2160.4, "FY2010": 2103.5, "FY2009": 1867.5,
             "FY2008": 715.9, "FY2007": 660.3, "FY2006": 649.6, "FY2005": 582.5, "FY2004": 661.5,
             "FY2003": 599.0,
+            # FY2002 = ordinary 35.0 + preference 60.0 + share premium 8.8 + retained earnings 414.6.
+            "FY2002": 518.4,
+            # FY2001 restated - see 'Restatement' row on the Statement of Changes in Equity sheet and
+            # HD078_1991_2002_NOTE (FY2001 as originally reported = 438.4; carried forward into FY2002's
+            # own opening balance as 440.0).
+            "FY2001": 438.4, "FY2000": 371.2, "FY1999": 315.0, "FY1998": 262.9, "FY1997": 222.8,
+            "FY1996": 187.3, "FY1995": 166.0,
+            # FY1994/FY1992: component sum (30.0+60.0+8.8+53.2=152.0; 30.0+60.0+8.8+43.2=142.0) rounds
+            # 0.1 below Total assets less Total liabilities (3101.9-2949.8=152.1; 2968.8-2826.7=142.1) -
+            # a sub-£0.1m independent-rounding artefact between the two source totals, not a real
+            # discrepancy; the Total equity row here is plugged to the disclosed totals so Total assets =
+            # Total liabilities + Total equity ties exactly, consistent with the FY1991 anchoring approach
+            # documented in HD078_1991_2002_NOTE.
+            "FY1994": 152.1, "FY1993": 143.3, "FY1992": 142.1,
+            "FY1991": 141.6,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 = component sum (Ordinary share capital +
+            # Preference share capital + Share premium account + Retained earnings); ties exactly to Total
+            # assets less Total liabilities every year - see HD078_1981_1990_NOTE.
+            "FY1990": 148.2, "FY1989": 158.1, "FY1988": 135.9, "FY1987": 86.6, "FY1986": 77.5, "FY1985": 70.2,
+            "FY1984": 65.3, "FY1983": 57.5, "FY1982": 50.2, "FY1981": 42.9,
+            # HD-078 (2026-09-07): FY1980-FY1972 = Ordinary share capital + Retained earnings (no
+            # Preference share capital, Share premium, or Other reserves lines disclosed this era) -
+            # ties exactly to Total assets less Total liabilities in every year.
+            "FY1980": 41.583, "FY1979": 36.594, "FY1978": 29.563, "FY1977": 27.410, "FY1976": 26.110,
+            "FY1975": 24.712, "FY1974": 23.754, "FY1973": 22.650, "FY1972": 21.277,
         }),
         ("TOTAL", "Total liabilities and equity", {
             "FY2024": 26052.9, "FY2023": 26549.0, "FY2022": 28987.2, "FY2021": 30241.7, "FY2020": 27778.2,
@@ -820,6 +1380,18 @@ bw.add_balance_sheet_sheet(
             "FY2013": 43396.1, "FY2012": 51818.5, "FY2011": 50965.7, "FY2010": 48814.9, "FY2009": 47167.7,
             "FY2008": 16403.6, "FY2007": 12523.8, "FY2006": 12293.2, "FY2005": 11365.1, "FY2004": 10498.6,
             "FY2003": 9168.3,
+            "FY2002": 8405.4, "FY2001": 7570.9, "FY2000": 6541.6, "FY1999": 6022.4, "FY1998": 5337.1,
+            "FY1997": 5089.7, "FY1996": 4303.1, "FY1995": 3718.0, "FY1994": 3101.9, "FY1993": 3223.0,
+            "FY1992": 2968.8, "FY1991": 2572.6,
+            # HD-078 follow-up (2026-09-07): FY1990-FY1981 = disclosed Total assets figures (identical to
+            # the 'Total assets' row above - independently re-checked, ties exactly every year) - see
+            # HD078_1981_1990_NOTE.
+            "FY1990": 2774.8, "FY1989": 2544.6, "FY1988": 2091.4, "FY1987": 1540.1, "FY1986": 1448.8,
+            "FY1985": 1106.5, "FY1984": 1056.6, "FY1983": 905.4, "FY1982": 816.1, "FY1981": 696.3,
+            # HD-078 (2026-09-07): FY1980-FY1972 = disclosed Total assets figures (identical to the
+            # 'Total assets' row above - independently re-checked, ties exactly every year).
+            "FY1980": 577.826, "FY1979": 500.932, "FY1978": 377.227, "FY1977": 335.122, "FY1976": 299.914,
+            "FY1975": 261.987, "FY1974": 239.296, "FY1973": 221.921, "FY1972": 185.116,
         }),
     ],
     sources_text=STATEMENTS_SOURCES,
@@ -889,6 +1461,14 @@ bw.add_income_statement_sheet(
             "FY2013": -748.0,
             "FY2012": -509.1,
         }),
+        ("SECTION", "Cost:income ratio - as separately headline-disclosed each year (basis varies; "
+                    "see source note) - NOT derived from the detail rows above, which only exist "
+                    "FY2014-FY2016", {}),
+        ("DATA", "Cost:income ratio (as reported)", {
+            "FY2024": "86.7%", "FY2023": "86.1%", "FY2022": "73%", "FY2021": "91%", "FY2020": "113.8%",
+            "FY2019": "106.2%", "FY2018": "97.1%", "FY2017": "108.1%", "FY2016": "103.7%",
+            "FY2015": "100.0%", "FY2014": "100.1%", "FY2013": "97.8%",
+        }),
         ("SECTION", "Other comprehensive income/(expense), net of tax", {}),
         ("DATA", "Fair value through OCI (FVOCI) reserve movement", {
             "FY2024": -0.3, "FY2023": -2.7, "FY2022": -8.2, "FY2021": -1.9, "FY2020": 0.7,
@@ -911,8 +1491,61 @@ bw.add_income_statement_sheet(
             "FY2019": -126.5, "FY2018": 256.5, "FY2017": 54.2, "FY2016": -404.8, "FY2015": -616.7,
             "FY2014": -142.0,
         }),
+        ("SECTION", "HD-078 (2026-09-07): Consolidated Group P&L, FY1980-FY1972 (Group basis, NOT "
+                    "Bank Company-only, since no Bank-only income statement is disclosed at all this "
+                    "era; see HD078_1972_1980_NOTE. The existing 'Profit/(loss) for the year' row above "
+                    "is deliberately left blank for these years rather than populated with a Group "
+                    "figure that would conflate two different consolidation bases.)", {}),
+        ("DATA", "Operating profit/Profit for the year (Group, before exceptional items)", {
+            # HD-078 (2026-09-07): each year's own source label varies ('Operating Profit' FY1974-1980;
+            # 'Profit for the year' FY1972-1973, where no separate exceptional-item line is disclosed).
+            "FY1980": 5.422, "FY1979": 6.244, "FY1978": 5.429, "FY1977": 3.974, "FY1976": 3.018,
+            "FY1975": 3.569, "FY1974": 4.763, "FY1973": 4.867, "FY1972": 3.699,
+        }),
+        ("DATA", "Exceptional items", {
+            # HD-078 (2026-09-07): FY1976 = Pension Fund provision (0.350); FY1975 = Additional
+            # provision (1.400); FY1974 = Additional provision (2.650) + Special contribution to
+            # Pension Fund (0.146). Not disclosed as a separate line FY1972-1973 or FY1977-1980.
+            "FY1976": -0.350, "FY1975": -1.400, "FY1974": -2.796,
+        }),
+        ("DATA", "Share of profits/(losses) of associated companies", {
+            # HD-078 (2026-09-07): not disclosed as a separate line on the face of this statement
+            # FY1978-FY1980 (folded into Operating profit that era).
+            "FY1977": 0.028, "FY1976": 0.002, "FY1975": -0.011, "FY1974": -0.714, "FY1973": -0.113,
+            "FY1972": 0.149,
+        }),
+        ("TOTAL", "Profit before taxation (and extraordinary item, FY1974)", {
+            "FY1980": 5.769, "FY1979": 6.028, "FY1978": 3.569, "FY1977": 4.002, "FY1976": 2.670,
+            "FY1975": 2.158, "FY1974": 1.253, "FY1973": 4.754, "FY1972": 3.848,
+        }),
+        ("DATA", "Taxation", {
+            # HD-078 (2026-09-07): FY1980/FY1979 shown as tax CREDITS (reconciling the disclosed
+            # Operating profit to the disclosed post-tax subtotal); all other years are tax charges.
+            "FY1980": 0.347, "FY1979": -0.216, "FY1978": -1.860, "FY1977": -2.036, "FY1976": -1.457,
+            "FY1975": -1.047, "FY1974": -0.676, "FY1973": -2.269, "FY1972": -1.108,
+        }),
+        ("DATA", "Minority interest", {
+            "FY1980": -0.025, "FY1979": -0.087, "FY1978": -0.173, "FY1977": -0.163, "FY1976": -0.090,
+            "FY1975": -0.085, "FY1974": 0.015, "FY1973": -0.187, "FY1972": -0.233,
+        }),
+        ("DATA", "Extraordinary item", {
+            # HD-078 (2026-09-07): FY1974 only - disclosed as a separate item below the tax/minority-
+            # interest line, per that year's own presentation (Note 7).
+            "FY1974": 0.186,
+        }),
+        ("DATA", "Proposed/final dividend", {
+            # HD-078 (2026-09-07): FY1980 = first year with a proposed dividend (£0.4m, 5p per £1
+            # share); FY1972 = Nil (the comparative 26-week stub period to 8 Jan 1972 had a final
+            # dividend of £0.2m/5%, not shown here since it is not a full prior year - see
+            # HD078_1972_1980_NOTE).
+            "FY1980": -0.400,
+        }),
+        ("TOTAL", "Retained earnings (Group)", {
+            "FY1980": 5.344, "FY1979": 5.941, "FY1978": 3.396, "FY1977": 1.803, "FY1976": 1.123,
+            "FY1975": 1.026, "FY1974": 0.778, "FY1973": 2.298, "FY1972": 2.507,
+        }),
     ],
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=PL_SOURCES,
     first_col_width=68,
     source_height=280,
     unit_suffix=" (£m)",
@@ -942,6 +1575,180 @@ bw.add_equity_changes_sheet(
         # dividends, share issuance, etc. are not separately itemised pre-2014 in this workbook)
         # rather than force-splitting into per-cause rows the source documents did not tabulate
         # for the Bank Company-only column in a directly reusable way.
+        # HD-078 follow-up (2026-09-07): FY1991-FY2002 roll-forward below, reconstructed the same way
+        # as the FY2003-FY2013 block above, from each year's own Balance Sheet sheet equity components
+        # (Ordinary + Preference share capital combined into the single "Share capital" column here, to
+        # match how the existing FY2003 row already combines its own 55.0 ordinary + 60.0 preference into
+        # 115.0). FY1992 and FY1994's Total equity is plugged £0.1m above its own component sum (142.0->
+        # 142.1; 152.0->152.1) to tie exactly to the Balance Sheet sheet's own Total assets less Total
+        # liabilities - see the matching comment on that sheet and HD078_1991_2002_NOTE; the adjacent
+        # "Net movement" rows absorb that same £0.1m as an offsetting rounding artefact, not a real
+        # additional movement. Profit and loss and Cash Flow Statement are NOT extended for this range
+        # (see HD078_1991_2002_NOTE) so, as with FY2004-2008 above, movements are shown as a single
+        # aggregate "Net movement" line rather than split into profit/dividend/issuance components the
+        # sources do not tabulate for the Bank Company-only column across this whole range.
+        # HD-078 follow-up (2026-09-07): FY1990-FY1981 roll-forward below, reconstructed the same way as
+        # the FY1991-2002 block above, from each year's own already-verified Balance Sheet sheet equity
+        # components (Ordinary + Preference share capital combined into the single "Share capital" column
+        # here, matching the FY1991 anchor row's own style). The opening anchor below is sourced from the
+        # Bank's own FY1981 Annual Report's FY1980 comparative column. Movements combine genuine profit/
+        # loss, dividends, and share issuances/reclassifications into a single aggregate line per year
+        # (Profit & Loss is not independently disclosed on a Bank Company-only basis for this era - see
+        # HD078_1981_1990_NOTE) - each labelled with the specific structural event(s) it embeds where one
+        # occurred. FY1982 and FY1981 pre-date the Bank's own separate disclosure of a Share premium
+        # sub-balance, so their "Share premium" column is left blank (undifferentiated within Retained
+        # earnings, per the Balance Sheet sheet's own note); the reclassification when Share premium is
+        # first separately disclosed (FY1983) is folded into that year's Net movement line rather than
+        # shown as a distinct restatement row, since the underlying total is unaffected.
+        # HD-078 follow-up (2026-09-07): FY1980-FY1972 roll-forward below, the workbook's genuine hard
+        # floor - see HD078_1972_1980_NOTE. Reconstructed from each year's own Reserves note (Note 6, 7,
+        # 8 or 9 depending on the year), cross-validated against the Balance Sheet sheet's own single
+        # "Reserves" figure for every one of these 9 years (all tie exactly). "Retained earnings" here is
+        # the Bank's whole undivided Reserves figure (no separate Share premium disclosed this era). Two
+        # genuine discontinuities are shown as explicit rows: the FY1973 bonus/capitalisation share issue,
+        # and the FY1979-disclosed restatement of the FY1978 closing Reserves figure (SSAP15 deferred tax
+        # policy change plus a released general bad-debt provision, +£1.458m combined).
+        ("TOTAL", "At 8 January 1972 (Bank company-only; Companies Act 1948 basis; the workbook's "
+                  "earliest reachable balance - FY1972's own comparative column is only a 26-week stub "
+                  "period, 10 July 1971 - 8 January 1972, not a full prior year, so no earlier opening "
+                  "balance exists - see HD078_1972_1980_NOTE)",
+         (4.0, None, None, None, None, None, 17.277, None, 21.277)),
+        ("DATA", "Net movement during the year (FY1973, incl. £4.0m bonus/capitalisation share issue - "
+                 "Ordinary share capital doubled from £4.0m to £8.0m, funded by a £4.02m capitalisation "
+                 "of Reserves)",
+         (4.0, None, None, None, None, None, -2.627, None, 1.373)),
+        ("TOTAL", "At 31 December 1973 (post-capitalisation issue)",
+         (8.0, None, None, None, None, None, 14.650, None, 22.650)),
+        ("DATA", "Net movement during the year (FY1974)",
+         (0.0, None, None, None, None, None, 1.104, None, 1.104)),
+        ("TOTAL", "At 31 December 1974",
+         (8.0, None, None, None, None, None, 15.754, None, 23.754)),
+        ("DATA", "Net movement during the year (FY1975)",
+         (0.0, None, None, None, None, None, 0.958, None, 0.958)),
+        ("TOTAL", "At 31 December 1975",
+         (8.0, None, None, None, None, None, 16.712, None, 24.712)),
+        ("DATA", "Net movement during the year (FY1976)",
+         (0.0, None, None, None, None, None, 1.398, None, 1.398)),
+        ("TOTAL", "At 31 December 1976",
+         (8.0, None, None, None, None, None, 18.110, None, 26.110)),
+        ("DATA", "Net movement during the year (FY1977)",
+         (0.0, None, None, None, None, None, 1.300, None, 1.300)),
+        ("TOTAL", "At 14 January 1978 (FY1977 year-end, per that filing's own Directors' Report)",
+         (8.0, None, None, None, None, None, 19.410, None, 27.410)),
+        ("DATA", "Net movement during the year (FY1978, as originally reported - see restatement below)",
+         (0.0, None, None, None, None, None, 2.153, None, 2.153)),
+        ("TOTAL", "At 31 December 1978 (as originally reported; restated below per the FY1979 Annual "
+                  "Report's own disclosure)",
+         (8.0, None, None, None, None, None, 21.563, None, 29.563)),
+        ("DATA", "Restatement (SSAP15 deferred tax policy change + released general bad-debt provision, "
+                 "per the FY1979 Annual Report's own prior-year adjustment disclosure)",
+         (0.0, None, None, None, None, None, 1.458, None, 1.458)),
+        ("TOTAL", "At 31 December 1978, restated",
+         (8.0, None, None, None, None, None, 23.021, None, 31.021)),
+        ("DATA", "Net movement during the year (FY1979, incl. the Bank's first Subordinated Loan "
+                 "issuance - US $25,000,000 Floating Rate Capital Notes)",
+         (0.0, None, None, None, None, None, 5.573, None, 5.573)),
+        ("TOTAL", "At 31 December 1979",
+         (8.0, None, None, None, None, None, 28.594, None, 36.594)),
+        ("DATA", "Net movement during the year (FY1980, incl. first separately-disclosed Proposed "
+                 "dividend of £0.4m)",
+         (0.0, None, None, None, None, None, 4.989, None, 4.989)),
+        ("TOTAL", "At 31 December 1980 (Bank company-only; UK GAAP; per the Bank's own FY1981 Annual "
+                  "Report's FY1980 comparative column)",
+         (8.0, None, None, None, None, None, 33.6, None, 41.6)),
+        ("DATA", "Net movement during the year (FY1981)",
+         (0.0, None, None, None, None, None, 1.3, None, 1.3)),
+        ("TOTAL", "At 31 December 1981 (share premium undifferentiated within Retained earnings - see "
+                  "HD078_1981_1990_NOTE)",
+         (8.0, None, None, None, None, None, 34.9, None, 42.9)),
+        ("DATA", "Net movement during the year (FY1982, incl. £3.2m ordinary share issue at par to CWS, "
+                 "Jan 1983, captured within the Bank's FY1982 year-end)",
+         (3.2, None, None, None, None, None, 4.1, None, 7.3)),
+        ("TOTAL", "At 31 December 1982 (share premium undifferentiated within Retained earnings - see "
+                  "HD078_1981_1990_NOTE)",
+         (11.2, None, None, None, None, None, 39.0, None, 50.2)),
+        ("DATA", "Net movement during the year (FY1983, incl. first separate disclosure of a £9.8m Share "
+                 "premium balance, reclassified out of the undifferentiated Reserves/Retained earnings "
+                 "figure above)",
+         (0.0, 9.8, None, None, None, None, -2.5, None, 7.3)),
+        ("TOTAL", "At 31 December 1983", (11.2, 9.8, None, None, None, None, 36.5, None, 57.5)),
+        ("DATA", "Net movement during the year (FY1984, incl. £13.8m ordinary share issue at par to CWS, "
+                 "Dec 1984/Jan 1985, captured within the Bank's FY1984 year-end, and a £13.153m reserves "
+                 "transfer to the profit and loss account funding a Group deferred-tax provision required "
+                 "by Finance Act 1984 changes)",
+         (13.8, -0.1, None, None, None, None, -5.9, None, 7.8)),
+        ("TOTAL", "At 31 December 1984", (25.0, 9.7, None, None, None, None, 30.6, None, 65.3)),
+        ("DATA", "Net movement during the year (FY1985)",
+         (0.0, 0.0, None, None, None, None, 4.9, None, 4.9)),
+        ("TOTAL", "At 31 December 1985", (25.0, 9.7, None, None, None, None, 35.5, None, 70.2)),
+        ("DATA", "Net movement during the year (FY1986)",
+         (0.0, 0.0, None, None, None, None, 7.3, None, 7.3)),
+        ("TOTAL", "At 31 December 1986", (25.0, 9.7, None, None, None, None, 42.8, None, 77.5)),
+        ("DATA", "Net movement during the year (FY1987, incl. 14 July 1987 subdivision of 25,000,000 £1 "
+                 "ordinary shares into 100,000,000 25p shares and a November 1987 issue of 20,000,000 new "
+                 "25p shares at par)",
+         (5.0, -0.1, None, None, None, None, 4.2, None, 9.1)),
+        ("TOTAL", "At 31 December 1987", (30.0, 9.6, None, None, None, None, 47.0, None, 86.6)),
+        ("DATA", "Net movement during the year (FY1988, incl. April 1988 issue of 40,000,000 8.48% "
+                 "cumulative redeemable preference shares of £1 each at 100.06p, £40.0m)",
+         (40.0, -0.8, None, None, None, None, 10.1, None, 49.3)),
+        ("TOTAL", "At 31 December 1988 (share capital incl. £40.0m preference)",
+         (70.0, 8.8, None, None, None, None, 57.1, None, 135.9)),
+        ("DATA", "Net movement during the year (FY1989, incl. 23 June 1989 conversion of the existing "
+                 "preference shares to 9.25% non-cumulative irredeemable and a further 31 May 1989 issue "
+                 "of 20,000,000 9.25% preference shares of £1 each, £20.0m, taking total preference share "
+                 "capital to £60.0m)",
+         (20.0, 0.0, None, None, None, None, 2.2, None, 22.2)),
+        ("TOTAL", "At 31 December 1989 (share capital incl. £60.0m preference)",
+         (90.0, 8.8, None, None, None, None, 59.3, None, 158.1)),
+        ("DATA", "Net movement during the year (FY1990)",
+         (0.0, 0.0, None, None, None, None, -9.9, None, -9.9)),
+        ("TOTAL", "At 31 December 1990 (Bank company-only; UK GAAP; share capital incl. £60.0m preference)",
+         (90.0, 8.8, None, None, None, None, 49.4, None, 148.2)),
+        ("TOTAL", "At 31 December 1991 (Bank company-only; UK GAAP; share capital incl. £60.0m preference)",
+         (90.0, 8.8, None, None, None, None, 42.8, None, 141.6)),
+        ("DATA", "Net movement during the year (FY1992)",
+         (0.0, 0.0, None, None, None, None, 0.4, None, 0.5)),
+        ("TOTAL", "At 31 December 1992", (90.0, 8.8, None, None, None, None, 43.2, None, 142.1)),
+        ("DATA", "Net movement during the year (FY1993)",
+         (0.0, 0.0, None, None, None, None, 1.3, None, 1.2)),
+        ("TOTAL", "At 31 December 1993", (90.0, 8.8, None, None, None, None, 44.5, None, 143.3)),
+        ("DATA", "Net movement during the year (FY1994)",
+         (0.0, 0.0, None, None, None, None, 8.7, None, 8.8)),
+        ("TOTAL", "At 31 December 1994", (90.0, 8.8, None, None, None, None, 53.2, None, 152.1)),
+        ("DATA", "Net movement during the year (FY1995)",
+         (0.0, 0.0, None, None, None, None, 14.0, None, 13.9)),
+        ("TOTAL", "At 31 December 1995", (90.0, 8.8, None, None, None, None, 67.2, None, 166.0)),
+        ("DATA", "Net movement during the year (FY1996)",
+         (0.0, 0.0, None, None, None, None, 21.3, None, 21.3)),
+        ("TOTAL", "At 31 December 1996", (90.0, 8.8, None, None, None, None, 88.5, None, 187.3)),
+        ("DATA", "Net movement during the year (FY1997, incl. £5.0m ordinary share capital increase)",
+         (5.0, 0.0, None, None, None, None, 30.5, None, 35.5)),
+        ("TOTAL", "At 31 December 1997", (95.0, 8.8, None, None, None, None, 119.0, None, 222.8)),
+        ("DATA", "Net movement during the year (FY1998)",
+         (0.0, 0.0, None, None, None, None, 40.1, None, 40.1)),
+        ("TOTAL", "At 31 December 1998", (95.0, 8.8, None, None, None, None, 159.1, None, 262.9)),
+        ("DATA", "Net movement during the year (FY1999)",
+         (0.0, 0.0, None, None, None, None, 52.1, None, 52.1)),
+        ("TOTAL", "At 31 December 1999", (95.0, 8.8, None, None, None, None, 211.2, None, 315.0)),
+        ("DATA", "Net movement during the year (FY2000)",
+         (0.0, 0.0, None, None, None, None, 56.2, None, 56.2)),
+        ("TOTAL", "At 31 December 2000", (95.0, 8.8, None, None, None, None, 267.4, None, 371.2)),
+        ("DATA", "Net movement during the year (FY2001)",
+         (0.0, 0.0, None, None, None, None, 67.2, None, 67.2)),
+        ("TOTAL", "At 31 December 2001 (as originally reported in the Bank's FY2001 Annual Report)",
+         (95.0, 8.8, None, None, None, None, 334.6, None, 438.4)),
+        ("DATA", "Restatement (FY2002 Annual Report's restated FY2001 comparative closing position vs. "
+                 "the Bank's own FY2001 Annual Report; cause not narrated in the source - see "
+                 "HD078_1991_2002_NOTE)",
+         (0.0, 0.0, None, None, None, None, 1.6, None, 1.6)),
+        ("TOTAL", "At 1 January 2002 (restated)", (95.0, 8.8, None, None, None, None, 336.2, None, 440.0)),
+        ("DATA", "Net movement during the year (FY2002)",
+         (0.0, 0.0, None, None, None, None, 78.4, None, 78.4)),
+        ("TOTAL", "At 31 December 2002", (95.0, 8.8, None, None, None, None, 414.6, None, 518.4)),
+        ("DATA", "Net movement during the year (FY2003, incl. £20.0m ordinary share capital increase - "
+                 "cause not disclosed in the sources reviewed for this range)",
+         (20.0, 0.0, None, None, None, None, 60.6, None, 80.6)),
         ("TOTAL", "At 31 December 2003 (Bank company-only; UK GAAP; share capital incl. £60.0m preference)",
          (115.0, 8.8, None, None, None, None, 475.2, None, 599.0)),
         ("DATA", "Net movement during the year (FY2004)",

@@ -310,7 +310,7 @@ income_statement_rows = [
     ("DATA", "Other operating income", {"FY2025": 0, "FY2024": 2, "FY2023": 3, "FY2022": 0, "FY2021": 0, "FY2020": 2, "FY2019": 2, "FY2018": 9, "FY2017": 2, "FY2016": 6, "FY2015": 1, "FY2014": 5, "FY2013": 1}),
     ("TOTAL", "Total operating income", {"FY2025": 476, "FY2024": 498, "FY2023": 571, "FY2022": 533, "FY2021": 535, "FY2020": 495, "FY2019": 501, "FY2018": 525, "FY2017": 471, "FY2016": 494, "FY2015": 492, "FY2014": 512, "FY2013": 422}),
     ("SECTION", "Expenses and impairment", {}),
-    ("DATA", "Operating expenses", {"FY2025": -485, "FY2024": -382, "FY2023": -222, "FY2022": -247, "FY2021": -272, "FY2020": -310, "FY2019": -317, "FY2018": -351, "FY2017": -328, "FY2016": -313, "FY2015": -300, "FY2014": -287, "FY2013": -274}),
+    ("TOTAL", "Operating expenses", {"FY2025": -485, "FY2024": -382, "FY2023": -222, "FY2022": -247, "FY2021": -272, "FY2020": -310, "FY2019": -317, "FY2018": -351, "FY2017": -328, "FY2016": -313, "FY2015": -300, "FY2014": -287, "FY2013": -274}),
     ("TOTAL", "Operating profit/(loss) before impairment charges on financial assets", {"FY2025": -9, "FY2024": 116, "FY2023": 349, "FY2022": 286, "FY2021": 263, "FY2020": 185, "FY2019": 184, "FY2018": 174, "FY2017": 143, "FY2016": 181, "FY2015": 192, "FY2014": 225, "FY2013": 148}),
     ("DATA", "Net impairment (losses)/gains on financial instruments", {"FY2025": -25, "FY2024": 8, "FY2023": -43, "FY2022": -64, "FY2021": 54, "FY2020": -151, "FY2019": -40, "FY2018": -34, "FY2017": -26, "FY2016": -23, "FY2015": -44, "FY2014": -61, "FY2013": -125}),
     ("TOTAL", "Operating profit/(loss)", {"FY2025": -34, "FY2024": 124, "FY2023": 306, "FY2022": 222, "FY2021": 317, "FY2020": 34, "FY2019": 144, "FY2018": 140, "FY2017": 117, "FY2016": 158, "FY2015": 148, "FY2014": 164, "FY2013": 23}),
@@ -768,6 +768,7 @@ bw.add_rwa_breakdown_sheet(
     subtitle="Consolidated Group basis, £m. Category breakdown not publicly disclosed - see source note.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
+    unit_suffix=" (£m)",
 )
 
 metric(

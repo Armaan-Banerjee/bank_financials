@@ -71,7 +71,7 @@ STATEMENTS_SOURCES = (
     "Statement of Changes in Equity p.37, Note 14 (Loans and Advances to Customers) p.52, Note 22 (Risk "
     "Management - Credit Risk) p.57 - " + AR2023_URL + "\n"
     "FY2022: Annual Report 2022, Statement of Comprehensive Income p.24, Statement of Financial Position p.25-26, "
-    "Statement of Changes in Equity p.27 - " + AR2022_URL + "\n"
+    "Statement of Changes in Equity p.27, Note 12 (Debt Securities) p.37 - " + AR2022_URL + "\n"
     "FY2021: Annual Report 2021, Statement of Comprehensive Income p.24, Statement of Financial Position p.25, "
     "Statement of Changes in Equity p.26 - " + AR2021_URL + "\n\n"
     "PRESENTATION NOTE: FY2021's own accounts use a single 'Cash at bank' line (£8,891,191) with no separate "
@@ -86,6 +86,14 @@ STATEMENTS_SOURCES = (
     "labels (Debtors -> Other assets; Creditors -> Other liabilities) for a consistent workbook shape. FY2021 had "
     "no live customer lending or deposit-taking yet (Kroo was only authorised with restrictions from 7 July "
     "2021) - Loans and advances to customers/Customer accounts are genuinely nil, not undisclosed, for that year.\n"
+    "'Debt securities' is only ever held/disclosed in FY2022 (Note 12, Annual Report 2022 p.37): a single line of "
+    "UK treasury bills maturing 13 Feb 2023, carried at an amortised cost of £9,972,583 (mark-to-market value "
+    "£9,963,894) - no further sub-split by measurement basis or issuer type exists, since the whole balance is "
+    "one bucket on both dimensions already, so the row is labelled to name both rather than split into sub-rows. "
+    "Annual Report 2023's own Note 12 (p.51) confirms 'No debt securities were held on 31 December 2023', and "
+    "Annual Report 2024's own Statement of Cash Flows (no 'Purchase of debt securities' line, only a nil "
+    "'Sale of debt securities' line) likewise shows none held at 31 December 2024 - genuinely nil for those "
+    "years, not undisclosed.\n"
     + ENTITY_NOTE
 )
 
@@ -98,7 +106,7 @@ bs_rows = [
         "FY2024": 940875108, "FY2023": 848278623, "FY2022": 9833288, "FY2021": 8891191,
     }),
     ("DATA", "Loans and advances to banks", {"FY2024": 12224304, "FY2023": 17480800, "FY2022": 1801808}),
-    ("DATA", "Debt securities", {"FY2022": 9972583}),
+    ("DATA", "Debt securities (UK Treasury bills, amortised cost)", {"FY2022": 9972583}),
     ("DATA", "Loans and advances to customers", {"FY2024": 16140896, "FY2023": 2278905, "FY2022": 10446}),
     ("DATA", "Other assets", {"FY2024": 5917566, "FY2023": 5489956, "FY2022": 3807507, "FY2021": 1406463}),
     ("DATA", "Tangible fixed assets", {"FY2024": 183956, "FY2023": 390173, "FY2022": 286147, "FY2021": 110458}),
@@ -436,6 +444,7 @@ bw.add_rwa_breakdown_sheet(
     sources_text=p3_sources(),
     first_col_width=54,
     source_height=170,
+    unit_suffix=" (£)",
 )
 
 metric(

@@ -142,9 +142,11 @@ CASH_FLOW_SOURCES = (
     "presentation' to distinguish them from the FY2021-onward financing-section rows of the same name, which are "
     "left blank for FY2008-FY2020 rather than merged into a single row spanning two different statement "
     "sections); 'Cash flows from financing activities' is genuinely nil every year FY2008-FY2019 and, in FY2020's "
-    "own report, contains only the new lease-liability repayment line. FY2014's cash flow reconciles a genuine "
-    "£100k discrepancy against the Balance Sheet (see the Balance Sheet sheet's own source note); every other "
-    "year's cash-flow closing balance ties exactly to that year's own Balance Sheet cash figure. Individual "
+    "own report, contains only the new lease-liability repayment line. FY2014's cash flow figure (£199,854k) was "
+    "confirmed against the Balance Sheet's own internal subtotal arithmetic (see the Balance Sheet sheet's own "
+    "source note, HD-081 2026-09-07) - the Balance Sheet's originally-transcribed £199,954k was a single-digit "
+    "misread that broke its own 'Total assets' subtotal by £100k; every year's cash-flow closing balance ties "
+    "exactly to that year's own Balance Sheet cash figure. Individual "
     "reconciling items were independently verified by summing each year's disclosed components back to that "
     "year's own reported 'Net cash generated from operating activities' total (all matched exactly), used as a "
     "correction check against several PDFs' garbled OCR text (e.g. FY2014's 'Acquisition of intangible assets' "
@@ -246,7 +248,7 @@ AR2024_OWN_NOTE = (
 
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances at central banks", {"FY2025": 982512, "FY2024": 975201, "FY2023": 687070, "FY2022": 657656, "FY2021": 716133, "FY2020": 481379, "FY2019": 332542, "FY2018": 333275, "FY2017": 281944, "FY2016": 311917, "FY2015": 344019, "FY2014": 199954, "FY2013": 159219, "FY2012": 197622, "FY2011": 275821, "FY2010": 215155, "FY2009": 127812, "FY2008": 40069}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 982512, "FY2024": 975201, "FY2023": 687070, "FY2022": 657656, "FY2021": 716133, "FY2020": 481379, "FY2019": 332542, "FY2018": 333275, "FY2017": 281944, "FY2016": 311917, "FY2015": 344019, "FY2014": 199854, "FY2013": 159219, "FY2012": 197622, "FY2011": 275821, "FY2010": 215155, "FY2009": 127812, "FY2008": 40069}),
     ("DATA", "Government bonds", {"FY2025": 142529, "FY2024": 144495, "FY2023": 118328, "FY2022": 44264}),
     ("DATA", "Loans and advances to banks", {"FY2025": 90733, "FY2024": 73658, "FY2023": 86477, "FY2022": 29357, "FY2021": 69065, "FY2020": 110446, "FY2019": 85247, "FY2018": 61391, "FY2017": 83706, "FY2016": 24270, "FY2015": 62633, "FY2014": 207026, "FY2013": 168898, "FY2012": 48779, "FY2011": 12865, "FY2010": 12817, "FY2009": 36933, "FY2008": 67272}),
     ("DATA", "Loans and advances to customers", {"FY2025": 810985, "FY2024": 941507, "FY2023": 990763, "FY2022": 1122459, "FY2021": 1194653, "FY2020": 1138583, "FY2019": 1064347, "FY2018": 1044570, "FY2017": 1054454, "FY2016": 1159696, "FY2015": 810776, "FY2014": 722307, "FY2013": 581030, "FY2012": 464479, "FY2011": 290752, "FY2010": 214623, "FY2009": 504743, "FY2008": 551148}),
@@ -324,11 +326,17 @@ BALANCE_SHEET_SOURCES = (
     "earnings' line appears to combine the SOCE's separate retained-earnings and FX-translation-reserve columns "
     "(£56,706k + £70k = £56,776k); the same pattern recurs one year earlier at FY2020 (SOCE retained earnings "
     "£92,228k + FX reserve -£64k = Balance Sheet's own £92,164k); total equity ties out exactly either way in "
-    "both years. FY2014 cash: the Balance Sheet (via FY2015's comparative) shows £199,954k while the Cash Flow "
-    "Statement's own closing balance for the same date shows £199,854k - a genuine £100k digit discrepancy "
-    "between the two notes of the same FY2015 filing (likely one OCR-affected digit somewhere upstream of both "
-    "extractions), left unresolved and shown as each note's own figure rather than force-matched, since FY2014's "
-    "own primary report cannot be read to arbitrate (see AR2014_SCAN_NOTE).\n"
+    "both years. FY2014 cash resolved (HD-081, 2026-09-07): FY2015's own filing originally appeared to show two "
+    "different FY2014 cash figures - £199,954k on the Balance Sheet's comparative column vs. £199,854k on the "
+    "Cash Flow Statement's own comparative closing balance. Re-summing FY2014's own 9 asset line items as "
+    "originally transcribed (199,954 + 207,026 + 722,307 + 16,173 + 27,820 + 37,469 + 751 + 3,390 + 326) gives "
+    "£1,215,216k, £100k more than the Balance Sheet's own stated 'Total assets' of £1,215,116k for that column; "
+    "substituting £199,854k for the cash line instead sums to exactly £1,215,116k. The Balance Sheet's own "
+    "internal subtotal therefore only ties out with £199,854k, confirming £199,954k was a single-digit "
+    "transcription/OCR misread of the FY2015 filing's FY2014 comparative column (a 9 misread for an 8 in the "
+    "thousands place) and that £199,854k, matching the Cash Flow Statement, is the correct figure. Corrected "
+    "here to £199,854k; FY2014's own primary report remains unreadable as text (see AR2014_SCAN_NOTE), so this "
+    "arithmetic cross-check within FY2015's own filing is the resolving evidence.\n"
     + ENTITY_NOTE
 )
 
@@ -367,6 +375,14 @@ income_statement_rows = [
     ("DATA", "Other expenses", {"FY2025": -10029, "FY2024": -9735, "FY2023": -9543, "FY2022": -9818, "FY2021": -8924, "FY2020": -18816, "FY2019": -23048, "FY2018": -7857, "FY2017": -7870, "FY2016": -6914, "FY2015": -6544, "FY2014": -6402, "FY2013": -4987, "FY2012": -5779, "FY2011": -4657, "FY2010": -4044, "FY2009": -3702, "FY2008": -5767}),
     ("DATA", "Depreciation of plant and equipment", {"FY2025": -1870, "FY2024": -1540, "FY2023": -1572, "FY2022": -1462, "FY2021": -1802, "FY2020": -2342, "FY2019": -2498, "FY2018": -691, "FY2017": -794, "FY2016": -918, "FY2015": -965, "FY2014": -859, "FY2013": -831, "FY2012": -589, "FY2011": -507, "FY2010": -516, "FY2009": -496, "FY2008": -292}),
     ("DATA", "Amortisation of intangible assets", {"FY2025": -161, "FY2024": -104, "FY2023": -52, "FY2022": -271, "FY2021": -237, "FY2020": -256, "FY2019": -100, "FY2018": -53, "FY2017": -45, "FY2016": -144, "FY2015": -146, "FY2014": -129, "FY2013": -47, "FY2012": -105, "FY2011": -160, "FY2010": -161, "FY2009": -106, "FY2008": -84}),
+    # Derived subtotal, not itself a printed AR line - sum of the four genuine operating-cost
+    # rows above (Staff costs + Other expenses + Depreciation + Amortisation). Deliberately
+    # excludes "Credit/(provision) for expected credit losses", "Impairment of investment in
+    # subsidiary", and "Gain/(loss) on disposal of subsidiary" below, since those are credit-risk
+    # / one-off items rather than operating expenses under standard cost-to-income convention.
+    # Added so the cross-bank insights cost-to-income-ratio pipeline (in041_spend_metrics.py) has
+    # a TOTAL-tagged opex row to divide into "Total income" above.
+    ("TOTAL", "Total operating expenses (sum of Staff costs + Other expenses + Depreciation + Amortisation - excludes credit loss provisions and subsidiary items per standard cost-to-income convention, not itself a printed AR subtotal)", {"FY2025": -98139, "FY2024": -83573, "FY2023": -79225, "FY2022": -70759, "FY2021": -61117, "FY2020": -69021, "FY2019": -72925, "FY2018": -50469, "FY2017": -50074, "FY2016": -40797, "FY2015": -37155, "FY2014": -37568, "FY2013": -30354, "FY2012": -25700, "FY2011": -21527, "FY2010": -18480, "FY2009": -16065, "FY2008": -17772}),
     ("DATA", "Credit/(provision) for expected credit losses", {"FY2025": 217, "FY2024": 3953, "FY2023": 11235, "FY2022": 11526, "FY2021": -23665, "FY2020": -3172, "FY2019": -377, "FY2018": 458, "FY2017": 187, "FY2016": -527, "FY2015": 155, "FY2014": -722, "FY2013": -60, "FY2012": -4455, "FY2011": -8272, "FY2010": -35, "FY2009": -1827, "FY2008": -9386}),
     ("DATA", "Impairment of investment in subsidiary", {"FY2011": -31432, "FY2010": -8432}),
     ("DATA", "Gain/(loss) on disposal of subsidiary", {"FY2015": -1707, "FY2013": 1632, "FY2012": -1074}),

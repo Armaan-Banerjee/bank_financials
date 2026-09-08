@@ -87,7 +87,23 @@ BALANCE_SHEET_SOURCES = (
     "PRESENTATION NOTE: 'Cash and cash equivalents' (FY2025) is labelled 'Cash and due from credit institutions' "
     "in FY2024-FY2019 - same line, relabelled; both are shown under this sheet's 'Cash and cash equivalents' "
     "label. All TOTAL rows (Total assets/Total liabilities/Total equity/Total liabilities and equity) tie out "
-    "exactly for every year."
+    "exactly for every year.\n"
+    "INVESTMENT SECURITIES COMPOSITION: Note 18 'Investment securities' (rendered/read visually via "
+    "pdf_tools.py, since the FY2025/FY2024/FY2022 Companies House filings are fully scanned/image-only) discloses "
+    "the entire balance as a single line, 'Measured at FVTOCI', for every year reviewed - there is no further "
+    "£-value split by measurement basis (100% FVTOCI/mark-to-market; no amortised-cost or FVTPL holdings in any "
+    "year) or by issuer type. FY2025: Note 18, p.44 - " + AR25_URL + " (FY2025: £39,897k; FY2024 comparative: "
+    "£42,230k). FY2023: Note 18, p.45 - " + AR24_URL + " (FY2024: £42,230k; FY2023 comparative: £78,097k). "
+    "FY2022 & FY2021: Note 18, p.43 - " + AR22_URL + " (FY2022: £92,051k; FY2021 comparative: £85,647k). "
+    "FY2020 & FY2019: Note 18, p.45 - " + AR20_URL + " (FY2020: £149,729k; FY2019 comparative: £174,633k). "
+    "The line item's own label changes over time: FY2019-FY2020 it reads 'Multilateral development bank bonds' "
+    "only (100% supranational); FY2021-FY2025 it reads 'Multilateral development bank bonds and sovereign debt' "
+    "- the FY2022 report's Note 18 adds two qualitative (non-£-split) paragraphs stating the sovereign portion "
+    "pays 0%-2.25% p.a. and matures Apr-Jun 2023, while the multilateral development bank portion pays "
+    "3.7924%-5.1747% p.a. and matures 2023-2026, but does not give a £ amount for either sub-component in any "
+    "year - so no reconciling sub-row split is possible; the single row is relabelled in place instead. The "
+    "'sovereign debt' wording is not confirmed to mean UK gilts specifically (no country/currency is stated for "
+    "it), so it is not classified as 'UK Government' in this workbook."
 )
 
 INCOME_STATEMENT_SOURCES = (
@@ -160,7 +176,7 @@ balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents", {"FY2025": 44211, "FY2024": 36967, "FY2023": 40658, "FY2022": 38160, "FY2021": 80857, "FY2020": 97765, "FY2019": 106249}),
     ("DATA", "Derivative financial instruments", {"FY2025": 263, "FY2024": 2868, "FY2023": 345, "FY2022": 3261, "FY2020": 452, "FY2019": 213}),
-    ("DATA", "Investment securities", {"FY2025": 39897, "FY2024": 42230, "FY2023": 78097, "FY2022": 92051, "FY2021": 85647, "FY2020": 149729, "FY2019": 174633}),
+    ("DATA", "Investment securities - Multilateral development bank & sovereign debt bonds, all at FVTOCI (mark-to-market)", {"FY2025": 39897, "FY2024": 42230, "FY2023": 78097, "FY2022": 92051, "FY2021": 85647, "FY2020": 149729, "FY2019": 174633}),
     ("DATA", "Loans and advances to customers", {"FY2025": 454489, "FY2024": 397459, "FY2023": 330090, "FY2022": 325461, "FY2021": 357822, "FY2020": 337615, "FY2019": 339047}),
     ("DATA", "Property and equipment", {"FY2025": 1020, "FY2024": 1987, "FY2023": 2861, "FY2022": 3804, "FY2021": 4787, "FY2020": 5743, "FY2019": 6596}),
     ("DATA", "Intangible assets", {"FY2025": 3021, "FY2024": 1367, "FY2023": 87, "FY2022": 69, "FY2021": 116, "FY2019": 15}),

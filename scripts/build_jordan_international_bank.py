@@ -183,7 +183,19 @@ bw.add_balance_sheet_sheet(
         ("DATA", "Loans and advances to shareholder banks", {"FY2025": 30164, "FY2024": 25200, "FY2023": 19587, "FY2022": 23214, "FY2021": 24957, "FY2020": 35099, "FY2019": 58803, "FY2018": 39954, "FY2017": 36129, "FY2016": 29264}),
         ("DATA", "Loans and advances to other banks", {"FY2025": 52477, "FY2024": 59154, "FY2023": 44479, "FY2022": 65900, "FY2021": 36380, "FY2020": 34600, "FY2019": 39787, "FY2018": 36766, "FY2017": 47919, "FY2016": 41094}),
         ("DATA", "Loans and advances to customers", {"FY2025": 224760, "FY2024": 282222, "FY2023": 288383, "FY2022": 233986, "FY2021": 201093, "FY2020": 180402, "FY2019": 152660, "FY2018": 168221, "FY2017": 157923, "FY2016": 162860}),
-        ("DATA", "Debt securities", {"FY2025": 110877, "FY2024": 105602, "FY2023": 75603, "FY2022": 94004, "FY2021": 105371, "FY2020": 107999, "FY2019": 120917, "FY2018": 125371, "FY2017": 137846, "FY2016": 160356}),
+        ("DATA", "Total debt securities", {"FY2025": 110877, "FY2024": 105602, "FY2023": 75603, "FY2022": 94004, "FY2021": 105371, "FY2020": 107999, "FY2019": 120917, "FY2018": 125371, "FY2017": 137846, "FY2016": 160356}),
+        ("DATA", "Debt securities - Government securities (amortised cost)", {"FY2025": 17176, "FY2024": 15682, "FY2023": 5945, "FY2022": 6284, "FY2021": 5607, "FY2020": 3652, "FY2019": 3768, "FY2018": 3904}),
+        ("DATA", "Debt securities - Government securities (FVOCI)", {"FY2025": 59472, "FY2024": 65295, "FY2023": 58657, "FY2022": 62463, "FY2021": 63974, "FY2020": 67105, "FY2019": 77745, "FY2018": 84035}),
+        ("DATA", "Debt securities - Government securities (expected credit losses)", {"FY2025": -336, "FY2024": -458, "FY2023": -419, "FY2022": -582, "FY2021": -454, "FY2020": -592, "FY2019": -337, "FY2018": -355}),
+        ("DATA", "Debt securities - Other debt securities (amortised cost)", {"FY2025": 31322, "FY2024": 21477, "FY2023": 9912, "FY2022": 19267, "FY2021": 19518, "FY2020": 22032, "FY2019": 17190, "FY2018": 4780}),
+        ("DATA", "Debt securities - Other debt securities (FVOCI)", {"FY2025": 3401, "FY2024": 3631, "FY2023": 1527, "FY2022": 6607, "FY2021": 16749, "FY2020": 15826, "FY2019": 22573, "FY2018": 33033}),
+        ("DATA", "Debt securities - Other debt securities (expected credit losses)", {"FY2025": -158, "FY2024": -25, "FY2023": -19, "FY2022": -35, "FY2021": -23, "FY2020": -24, "FY2019": -22, "FY2018": -26}),
+        ("DATA", "Debt securities - Government securities (held to maturity)", {"FY2017": 2968, "FY2016": 3250}),
+        ("DATA", "Debt securities - Government securities (available for sale)", {"FY2017": 105187, "FY2016": 120469}),
+        ("DATA", "Debt securities - Government securities (designated at FVTPL)", {"FY2017": 251, "FY2016": 580}),
+        ("DATA", "Debt securities - Other debt securities (held to maturity)", {"FY2017": 4551, "FY2016": 0}),
+        ("DATA", "Debt securities - Other debt securities (available for sale)", {"FY2017": 24889, "FY2016": 36057}),
+        ("DATA", "Debt securities - Other debt securities (designated at FVTPL)", {"FY2017": 0, "FY2016": 0}),
         ("DATA", "Derivatives", {"FY2025": 193, "FY2024": 1985}),
         ("DATA", "Assets held for sale", {"FY2025": 16825}),
         ("DATA", "Tangible fixed assets", {"FY2025": 1049, "FY2024": 1306, "FY2023": 1343, "FY2022": 1576, "FY2021": 1629, "FY2020": 1765, "FY2019": 1759, "FY2018": 1859, "FY2017": 1132, "FY2016": 856}),
@@ -232,7 +244,35 @@ bw.add_balance_sheet_sheet(
         "liabilities: acceptances, guarantees and irrevocable letters of credit, undrawn "
         "commitments) below the Total Liabilities and Shareholders' Funds line - not carried into "
         "this sheet as it sits outside the balance sheet total itself, consistent with how later "
-        "years' equivalent disclosures are also excluded.\n" + STATEMENTS_ENTITY_NOTE
+        "years' equivalent disclosures are also excluded.\n\n"
+        "DEBT SECURITIES BREAKDOWN: the 'Debt securities - ...' sub-rows below the renamed 'Total "
+        "debt securities' line are transcribed from each year's own 'Debt securities'/'Investments "
+        "in debt securities' note, which cross-tabs the balance by issuer type (Government "
+        "securities vs Other debt securities) and by measurement basis (Amortised cost vs FVOCI "
+        "vs Expected credit losses FY2018-FY2025, once IFRS 9 was adopted 1 January 2018; "
+        "Held-to-maturity vs Available-for-sale vs Designated at FVTPL FY2016-FY2017, the "
+        "pre-IFRS-9 IAS 39 categories) - each year's own note, not a later restated comparative:\n"
+        f"FY2025: Annual Report and Financial Statements 2025, Note 16 'Debt Securities', p.48 - {AR2025_URL}\n"
+        f"FY2024: Annual Report and Financial Statements 2024, Note 16 'Debt Securities', p.48 - {AR2024_URL}\n"
+        f"FY2023: Annual Report and Financial Statements 2023, Note 16 'Debt Securities', p.46 - {AR2023_URL}\n"
+        f"FY2022: Annual Report and Financial Statements 2022, Note 16 'Debt Securities', p.44 - {AR2022_URL}\n"
+        f"FY2021: Annual Report and Financial Statements 2021, Note 16 'Debt Securities', p.45 - {AR2021_URL}\n"
+        f"FY2020: Annual Report and Financial Statements 2020, Note 16 'Debt Securities', p.43 - {AR2020_URL}\n"
+        f"FY2019: Annual Report and Financial Statements 2019, Note 15 'Debt Securities', p.39 - {AR2019_URL}\n"
+        f"FY2018: Annual Report and Financial Statements 2018, Note 15 'Investments in Debt "
+        f"Securities', p.37 - {AR2018_URL}\n"
+        f"FY2017: Annual Report and Financial Statements 2017, Note 13 'Investments in Debt "
+        f"Securities', p.29 - {AR2017_URL}\n"
+        f"FY2016: Annual Report and Financial Statements 2016, Note 13 'Investments in Debt "
+        f"Securities', p.24 - {AR2016_URL}\n"
+        "Each year's Government-securities and Other-debt-securities sub-rows sum exactly to that "
+        "year's 'Total debt securities' line, as do each year's measurement-basis sub-rows "
+        "(Amortised cost + FVOCI + Expected credit losses for FY2018-FY2025; Held-to-maturity + "
+        "Available-for-sale + Designated at FVTPL for FY2016-FY2017) - both cuts are genuine, "
+        "reconciling splits of the same underlying note, not independently-sized estimates. "
+        "'Government securities' is the Bank's own note heading in every year (not merely "
+        "inferred); the 'Other debt securities' column is not further itemised by instrument or "
+        "issuer in any year's note.\n" + STATEMENTS_ENTITY_NOTE
     ),
     first_col_width=64,
     source_height=280,
@@ -260,7 +300,7 @@ bw.add_income_statement_sheet(
         ("DATA", "Other gains/(losses)", {"FY2024": -102, "FY2022": 352}),
         ("DATA", "Gain on sale of assets held for sale", {"FY2025": 899}),
         ("TOTAL", "Total operating income", {"FY2025": 18670, "FY2024": 21179, "FY2023": 20197, "FY2022": 16109, "FY2021": 13701, "FY2020": 12068, "FY2019": 11759, "FY2018": 12569, "FY2017": 11699, "FY2016": 13351}),
-        ("DATA", "Administrative expenses", {"FY2025": -7377, "FY2024": -8045, "FY2023": -7986, "FY2022": -6922, "FY2021": -6021, "FY2020": -5482, "FY2019": -5504, "FY2018": -5255, "FY2017": -5807, "FY2016": -5819}),
+        ("TOTAL", "Administrative expenses", {"FY2025": -7377, "FY2024": -8045, "FY2023": -7986, "FY2022": -6922, "FY2021": -6021, "FY2020": -5482, "FY2019": -5504, "FY2018": -5255, "FY2017": -5807, "FY2016": -5819}),
         ("DATA", "Depreciation (and amortisation)", {"FY2025": -528, "FY2024": -509, "FY2023": -546, "FY2022": -517, "FY2021": -583, "FY2020": -548, "FY2019": -513, "FY2018": -426, "FY2017": -451, "FY2016": -409}),
         ("DATA", "Other operating charges", {"FY2025": -5516, "FY2024": -5388, "FY2023": -4299, "FY2022": -3721, "FY2021": -3931, "FY2020": -3609, "FY2019": -2930, "FY2018": -2984, "FY2017": -2267, "FY2016": -2102}),
         ("DATA", "Provision for expected credit losses", {"FY2025": -3874, "FY2024": -616, "FY2023": -916, "FY2022": -702, "FY2021": -449, "FY2020": -368, "FY2019": -40, "FY2018": 102, "FY2017": -116, "FY2016": -106}),

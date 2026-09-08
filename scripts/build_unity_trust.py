@@ -251,7 +251,7 @@ income_statement_rows = [
     ("DATA", "Fee and commission expense", {"FY2025": -1561, "FY2024": -1360, "FY2023": -1169, "FY2022": -1159, "FY2021": -774, "FY2020": -968, "FY2019": -1175, "FY2018": -1124}),
     ("TOTAL", "Net fee and commission income", {"FY2025": 2801, "FY2024": 2845, "FY2023": 3236, "FY2022": 3389, "FY2021": 3648, "FY2020": 3289, "FY2019": 3308, "FY2018": 2820}),
     ("TOTAL", "Total income", {"FY2025": 95026, "FY2024": 102097, "FY2023": 92421, "FY2022": 47183, "FY2021": 25137, "FY2020": 21948, "FY2019": 22642, "FY2018": 18371}),
-    ("DATA", "Operating expenses", {"FY2025": -41377, "FY2024": -33314, "FY2023": -25011, "FY2022": -17354, "FY2021": -13614, "FY2020": -12614, "FY2019": -13315, "FY2018": -10623}),
+    ("TOTAL", "Operating expenses", {"FY2025": -41377, "FY2024": -33314, "FY2023": -25011, "FY2022": -17354, "FY2021": -13614, "FY2020": -12614, "FY2019": -13315, "FY2018": -10623}),
     ("DATA", "Losses on financial instruments held at fair value", {"FY2025": -28, "FY2024": -2015}),
     ("DATA", "Impairment charge/(credit) on loans and advances", {"FY2025": -1206, "FY2024": -1017, "FY2023": -3548, "FY2022": -2477, "FY2021": -470, "FY2020": -1788, "FY2019": -251, "FY2018": 52}),
     ("DATA", "Exceptional pension scheme related costs (exit from Pace multi-employer DB scheme, FY2018 only)", {"FY2018": -1045}),

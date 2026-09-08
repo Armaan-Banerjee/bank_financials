@@ -86,7 +86,9 @@ bw = BankWorkbook(bank_name="Griffin Bank Limited", years=YEARS, year_label=YEAR
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents", {"FY2025": 7326998, "FY2024": 2364540, "FY2023": 270150}),
-    ("DATA", "Debt securities", {"FY2025": 106511170, "FY2024": 12709240, "FY2023": 8551308}),
+    ("TOTAL", "Total debt securities", {"FY2025": 106511170, "FY2024": 12709240, "FY2023": 8551308}),
+    ("DATA", "Money market funds, FVTPL (UK gilts/sovereign-backed)", {"FY2025": 100587287, "FY2024": 12709240, "FY2023": 8551308}),
+    ("DATA", "UK Treasury bills, FVTPL", {"FY2025": 5923883, "FY2024": 0, "FY2023": 0}),
     ("DATA", "Trade and other receivables", {"FY2025": 1380080, "FY2024": 1430220, "FY2023": 1085821}),
     ("DATA", "Intangible assets", {"FY2025": 4194662, "FY2024": 2073199, "FY2023": 197614}),
     ("DATA", "Property, plant and equipment", {"FY2025": 138510, "FY2024": 148461, "FY2023": 126821}),
@@ -115,10 +117,26 @@ bw.add_balance_sheet_sheet(
     sources_text=STATEMENTS_SOURCES + (
         "\n\nPRESENTATION NOTE: Customer deposits first appear as a Balance Sheet line in FY2024 - the Bank "
         "held no customer deposits at all as at 30 September 2023, its first full period as an authorised "
-        "bank (confirmed by that year's own Balance Sheet having no such line) - genuinely nil, not a gap."
+        "bank (confirmed by that year's own Balance Sheet having no such line) - genuinely nil, not a gap.\n\n"
+        "DEBT SECURITIES BREAKDOWN (Note 12, 'Investments in financial assets'): FY2025: Annual Report and "
+        "Financial Statements 2025, p.73-74 - " + AR2025_URL + " - splits the FY2025/FY2024 comparative "
+        "into 'Debt securities (solely Money Market Funds)' 100,587,287 / 12,709,240 and 'Treasury bills' "
+        "5,923,883 / 0, both classified as 'Financial assets recorded as FVTPL', reconciling exactly to the "
+        "Total investments row (106,511,170 / 12,709,240). The note explains the Money Market Funds invest "
+        "in government bonds, notes and bills issued or guaranteed by the UK government (or another "
+        "sovereign government), and that Treasury bills are issued by the UK government via the Debt "
+        "Management Office - both sub-rows are UK government/sovereign-backed, all FVTPL. FY2024: Annual "
+        "Report and Financial Statements 2024, p.77-78 - " + AR2024_URL + " - shows the FY2024/FY2023 "
+        "comparative as 100% 'Debt securities (solely Money Market Funds)' (12,709,240 / 8,551,308, no "
+        "Treasury bills held in either year - genuinely nil, not a gap), describing the fund as a 'UK "
+        "Sovereign Gilt Money Market Fund'. FY2023 (15mo): Annual Report and Financial Statements 2023, "
+        "p.65-66 - " + AR2023_URL + " - confirms the same, 100% in a single 'UK Sovereign Gilt Money "
+        "Market Fund' (8,551,308), also described elsewhere in that report (p.66/4184) as valued at an "
+        "active quoted market price. No amortised-cost or held-to-maturity/AFS portion is disclosed in any "
+        "year - the entire debt securities book is FVTPL in every published Annual Report."
     ),
     first_col_width=64,
-    source_height=260,
+    source_height=340,
     unit_suffix=" (£)",
 )
 

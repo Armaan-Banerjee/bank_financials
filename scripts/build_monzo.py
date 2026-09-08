@@ -120,7 +120,18 @@ BALANCE_SHEET_PRESENTATION_NOTE = (
     "product Monzo held). 'Collateral held with third parties' first appears in FY2019 (blank for FY2018, before "
     "the product existed on balance sheet). 'Intangible assets' is only its own line in FY2018 (GBP14k) - folded "
     "into 'Other assets' in every later year. Total assets / Total liabilities / Total equity / Total "
-    "liabilities and equity are consistent and comparable across all 8 years regardless of the above."
+    "liabilities and equity are consistent and comparable across all 8 years regardless of the above.\n\n"
+    "TREASURY INVESTMENTS BREAKDOWN NOTE: 'Total treasury investments' (renamed from 'Treasury investments' "
+    "so it reads unambiguously as an aggregate) is broken down by both measurement basis and issuer type using "
+    "Note 12 'Treasury investments' (Note 11 in the FY2020 Annual Report) in each year's Annual Report - both "
+    "splits are sourced from that note's table, not estimated. Measurement basis: FY2020-24 were disclosed "
+    "entirely 'at amortised cost' (0 FVOCI/FVTPL each year - a genuine zero, not a missing figure); FY2025 is "
+    "the first year Monzo also holds treasury investments at FVOCI and at FVTPL, per the FY2025 Annual Report's "
+    "three-way split. Issuer type: 'UK government bonds (Gilts)' sums each year's UK Government debt line "
+    "(across whichever measurement-basis sub-tables it appears in); 'other securities' sums every remaining "
+    "line in the note (supranational debt, covered bonds, asset-backed securities, certificates of deposit, "
+    "commercial paper, fixed term deposits) - see the per-year note breakdown in each row for the underlying "
+    "components. Both breakdowns reconcile exactly to 'Total treasury investments' for all 6 years."
 )
 
 BALANCE_SHEET_SOURCES = (
@@ -137,6 +148,16 @@ BALANCE_SHEET_SOURCES = (
     f"restated comparative, as at 28 February 2021) - {AR22_URL}\n"
     f"FY2020: Monzo Bank Limited Group Annual Report 2020, p.94 (Statement of financial position, Group, as at "
     f"29 February 2020) - {AR20_URL}\n"
+    "\nTreasury investments breakdown rows (measurement basis and UK government vs other securities) sourced "
+    "from Note 12 'Treasury investments' (Note 11 for FY2020), Group column, £'000:\n"
+    f"FY2025: Monzo Annual Report and Accounts 2025, p.136 (Note 12: Treasury investments) - {AR25_URL}\n"
+    f"FY2024: Monzo Bank Holding Group Limited Annual Report and Group Financial Statements 2024, p.114 "
+    f"(Note 12: Treasury investments) - {AR24_URL}\n"
+    f"FY2023: Monzo Bank Limited Annual Report and Accounts 2023, p.118 (Note 12: Treasury investments) - {AR23_URL}\n"
+    f"FY2022: Monzo Bank Limited Group Annual Report 2022, p.129 (Note 12: Treasury investments) - {AR22_URL}\n"
+    f"FY2021: Monzo Bank Limited Group Annual Report 2022, p.129 (Note 12: Treasury investments, comparative "
+    f"column) - {AR22_URL}\n"
+    f"FY2020: Monzo Bank Limited Group Annual Report 2020, p.115 (Note 11: Treasury investments) - {AR20_URL}\n"
     f"FY2019: Monzo Bank Limited Annual Report and Financial Statements 2019, p.50 (Statement of financial "
     f"position, Group, as at 28 February 2019) - {CH_FY2019_URL}\n"
     f"FY2018: Monzo Bank Limited Annual Report and Financial Statements 2018, p.24 (Statement of financial "
@@ -147,7 +168,12 @@ BALANCE_SHEET_SOURCES = (
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents", {"FY2025": 11021763, "FY2024": 7624300, "FY2023": 3101242, "FY2022": 3134540, "FY2021": 2977368, "FY2020": 1373722, "FY2019": 549847, "FY2018": 96943}),
-    ("DATA", "Treasury investments", {"FY2025": 5381870, "FY2024": 3634401, "FY2023": 2727520, "FY2022": 1675478, "FY2021": 376641, "FY2020": 98953}),
+    ("DATA", "Total treasury investments", {"FY2025": 5381870, "FY2024": 3634401, "FY2023": 2727520, "FY2022": 1675478, "FY2021": 376641, "FY2020": 98953}),
+    ("DATA", "Treasury investments at amortised cost", {"FY2025": 2188961, "FY2024": 3634401, "FY2023": 2727520, "FY2022": 1675478, "FY2021": 376641, "FY2020": 98953}),
+    ("DATA", "Treasury investments at FVOCI (fair value through other comprehensive income)", {"FY2025": 596586, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": 0}),
+    ("DATA", "Treasury investments at FVTPL (fair value through profit or loss)", {"FY2025": 2596323, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": 0}),
+    ("DATA", "Treasury investments - UK government bonds (Gilts)", {"FY2025": 2142409, "FY2024": 1068284, "FY2023": 931051, "FY2022": 857717, "FY2021": 0, "FY2020": 98953}),
+    ("DATA", "Treasury investments - other securities (supranational debt, covered bonds, ABS, certificates of deposit, commercial paper, fixed term deposits)", {"FY2025": 3239461, "FY2024": 2566117, "FY2023": 1796469, "FY2022": 817761, "FY2021": 376641, "FY2020": 0}),
     ("DATA", "Loans and advances to customers", {"FY2025": 1602470, "FY2024": 1190215, "FY2023": 653733, "FY2022": 235083, "FY2021": 87147, "FY2020": 123913, "FY2019": 16054, "FY2018": 160}),
     ("DATA", "Other assets", {"FY2025": 186290, "FY2024": 411228, "FY2023": 113495, "FY2022": 75200, "FY2021": 105642, "FY2020": 87925, "FY2019": 29434, "FY2018": 41880}),
     ("DATA", "Collateral held with third parties", {"FY2024": 78506, "FY2023": 76461, "FY2022": 76292, "FY2021": 56314, "FY2020": 15642, "FY2019": 16777}),

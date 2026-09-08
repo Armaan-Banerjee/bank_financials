@@ -122,7 +122,15 @@ BALANCE_SHEET_SOURCES = (
     "'Debtors' £19,562 is a single undifferentiated line (no prepayments split existed yet) - reproduced under "
     "'Receivables' with FY2021's own 'Prepayments' cell left blank rather than zero. (4) 'Receivables' for "
     "FY2023 combines the current £147,604 and non-current £19,200 other-receivables notes into one face-equivalent "
-    "figure, consistent with how FY2024's own single 'Receivables' row is presented.\n"
+    "figure, consistent with how FY2024's own single 'Receivables' row is presented. (5) 'Treasury assets' note "
+    "10 (Listed investments, non-current, printed p. 44) discloses only the single lump £9,767,797 figure with no "
+    "further split - the note's narrative and the accounting policy note (note 1.7 'Financial asset investments "
+    f"under IFRS 9', printed p. 38) both state these are UK government securities (gilts and Treasury bills) "
+    "classified as debt instruments measured at fair value through other comprehensive income (FVOCI). Note 1.7's "
+    "own fair-value disclosure (p. 38) further splits the £9,767,797 total by instrument as UK Gilts £5,813,980 + "
+    "Treasury Bills £3,953,817 (reconciles exactly), but since both instruments share the same issuer type (UK "
+    "government) and the same measurement basis (FVOCI), there is no real split by either dimension - the row is "
+    f"labelled in place rather than broken into sub-rows - {AR_2024_URL}\n"
     + FY2020_SKIP_NOTE
 )
 
@@ -191,7 +199,7 @@ bw.add_balance_sheet_sheet(
     rows=[
         ("SECTION", "Assets", {}),
         ("DATA", "Cash and cash equivalents", {"FY2024": 3155921, "FY2023": 971678, "FY2022": 7333, "FY2021": 86318}),
-        ("DATA", "Treasury assets", {"FY2024": 9767797}),
+        ("DATA", "Treasury assets - UK Government gilts & Treasury bills, at FVOCI", {"FY2024": 9767797}),
         ("DATA", "Receivables", {"FY2024": 450628, "FY2023": 166804, "FY2022": 6859, "FY2021": 19562}),
         ("DATA", "Prepayments", {"FY2024": 372022, "FY2023": 50123, "FY2022": 0}),
         ("DATA", "Property, plant and equipment", {"FY2024": 57172, "FY2023": 152189, "FY2022": 360, "FY2021": 487}),

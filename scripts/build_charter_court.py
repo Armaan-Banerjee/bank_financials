@@ -66,6 +66,10 @@ STATEMENTS_SOURCES = (
     f"FY2023: Full accounts made up to 31 Dec 2023, pp.53-55 - {AR2023_URL}\n"
     f"FY2022: Full accounts made up to 31 Dec 2023, pp.53-55 (FY2022 own comparative column) - {AR2023_URL}\n"
     f"FY2021: Full accounts made up to 31 Dec 2021, pp.48-50 - {AR2021_URL}\n"
+    "Investment securities measurement-basis/instrument-type breakdown: Note 14 'Investment "
+    f"securities' (FY2025 p.96, FY2024 own comparative column same note) - {AR2025_URL}; "
+    f"Note 14 'Investment securities' (FY2023 p.81, FY2022 own comparative column same note) - {AR2023_URL}; "
+    f"Note 15 'Investment securities' (FY2021 p.78) - {AR2021_URL}\n"
     + ENTITY_NOTE
     + "\n\nPRESENTATION NOTE: FY2025's equity statement shows two separate 'Coupon paid on AT1 "
     "securities' rows in the same year (one nil, one -£4.0m) because the AT1 instrument in issue "
@@ -84,7 +88,12 @@ STATEMENTS_SOURCES = (
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Loans and advances to credit institutions", {"FY2025": 2890.4, "FY2024": 2081.5, "FY2023": 1570.0, "FY2022": 1632.0, "FY2021": 1269.1}),
-    ("DATA", "Investment securities", {"FY2025": 1181.3, "FY2024": 905.7, "FY2023": 225.5, "FY2022": 202.3, "FY2021": 477.8}),
+    ("TOTAL", "Total investment securities", {"FY2025": 1181.3, "FY2024": 905.7, "FY2023": 225.5, "FY2022": 202.3, "FY2021": 477.8}),
+    ("DATA", "Investment securities held at amortised cost - UK Sovereign debt (government)", {"FY2025": 58.9, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 100.0}),
+    ("DATA", "Investment securities held at amortised cost - RMBS loan notes and covered bonds", {"FY2025": 516.0, "FY2024": 495.9, "FY2023": 225.5, "FY2022": 201.6, "FY2021": 223.1}),
+    ("DATA", "Investment securities held at FVOCI - UK Sovereign debt (government)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 152.0}),
+    ("DATA", "Investment securities held at FVOCI - supranational bonds, covered bonds and RMBS loan notes", {"FY2025": 205.9, "FY2024": 0, "FY2023": 0, "FY2022": 0.7, "FY2021": 2.7}),
+    ("DATA", "Investment securities held at FVTPL - RMBS loan notes", {"FY2025": 400.5, "FY2024": 409.8, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
     ("DATA", "Loans and advances to customers", {"FY2025": 9346.1, "FY2024": 9785.5, "FY2023": 11229.3, "FY2022": 10260.9, "FY2021": 8789.3}),
     ("DATA", "Fair value adjustments on hedged assets", {"FY2025": 6.0, "FY2024": -79.0, "FY2023": -151.7, "FY2022": -375.5, "FY2021": -68.4}),
     ("DATA", "Derivative assets", {"FY2025": 22.8, "FY2024": 84.1, "FY2023": 234.0, "FY2022": 447.2, "FY2021": 86.9}),

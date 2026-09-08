@@ -70,7 +70,17 @@ def statement_sources():
         "Statement of Changes in Equity (p.32) shows $34,895k / $(27,134)k for the same closing balances - "
         "a genuine $1k rounding inconsistency between the Bank's own two primary statements (Total Equity "
         "is identical, $262,761k, on both). Each sheet here reproduces its own source statement's figures "
-        "exactly rather than silently reconciling the $1k gap."
+        "exactly rather than silently reconciling the $1k gap.\n"
+        "INVESTMENT COMPOSITION NOTE: 'Financial investments' is the Bank's sole investment-securities-type "
+        "Balance Sheet line; it is not split by issuer type (no UK government/gilt vs corporate/supranational "
+        "breakdown is disclosed - the balance is too small, $11k-$20k, to warrant one) but Note 8 'Financial "
+        "Instruments' (Analysis of the Company's financial assets and financial liabilities by IFRS 9 "
+        "classification) shows the entire balance sits 100% in the 'Mandatorily at fair value through profit "
+        "or loss' column in every one of the 5 years checked, none at amortised cost: FY2025 $13k (AR2025 "
+        "Note 8, p.49), FY2024 $11k (AR2025 Note 8 comparative, p.50), FY2023 $11k (AR2023 Note 9, p.54), "
+        "FY2022 $20k (AR2023 Note 9 comparative, p.55), FY2021 $20k (AR2021 Note 9, p.48). Since the whole "
+        "balance is one measurement basis in every year, and no issuer-type split is disclosed, the row is "
+        "relabelled in place rather than split into sub-rows."
     )
 
 INTERIM_SOURCES = {
@@ -176,7 +186,7 @@ BS = {
     "Prepayments and accrued income": {"FY2025": 64844, "FY2024": 57011, "FY2023": 21899, "FY2022": 4371, "FY2021": 5161},
     "Other assets": {"FY2025": 3652, "FY2024": 6032, "FY2023": 399, "FY2022": 5146, "FY2021": 7476},
     "Right-of-use assets": {"FY2024": 0, "FY2023": 316, "FY2022": 396, "FY2021": 91},
-    "Financial investments": {"FY2025": 13, "FY2024": 11, "FY2023": 11, "FY2022": 20, "FY2021": 20},
+    "Financial investments (mandatorily at fair value through profit or loss)": {"FY2025": 13, "FY2024": 11, "FY2023": 11, "FY2022": 20, "FY2021": 20},
     "Deferred tax asset": {"FY2025": 2286, "FY2024": 1920, "FY2022": 1256, "FY2021": 24615},
     "Total Assets": {"FY2025": 7722511, "FY2024": 6422803, "FY2023": 5845949, "FY2022": 5873933, "FY2021": 6608950},
     "Customer accounts/deposits": {"FY2025": 10000, "FY2022": 0, "FY2021": 166},
@@ -208,7 +218,7 @@ BS_ROWS = [
     ("DATA", "Prepayments and accrued income", BS["Prepayments and accrued income"]),
     ("DATA", "Other assets", BS["Other assets"]),
     ("DATA", "Right-of-use assets", BS["Right-of-use assets"]),
-    ("DATA", "Financial investments", BS["Financial investments"]),
+    ("DATA", "Financial investments (mandatorily at fair value through profit or loss)", BS["Financial investments (mandatorily at fair value through profit or loss)"]),
     ("DATA", "Deferred tax asset", BS["Deferred tax asset"]),
     ("TOTAL", "Total Assets", BS["Total Assets"]),
     ("SECTION", "Liabilities", {}),
@@ -265,7 +275,11 @@ IS_ROWS = [
     ("DATA", "Fee and commission expense", IS["Fee and commission expense"]),
     ("DATA", "Gains and losses from financial instruments at fair value through profit or loss", IS["Gains and losses from financial instruments at fair value through profit or loss"]),
     ("TOTAL", "Total operating income", IS["Total operating income"]),
-    ("DATA", "General and administrative expenses", IS["General and administrative expenses"]),
+    # Retagged TOTAL (was DATA) 2026-09-07: this is the Bank's sole,
+    # complete operating-expense line (no personnel/other-opex split
+    # disclosed), so it IS the genuine opex total, not a sub-component of a
+    # larger opex section - needed so cost-to-income analysis can find it.
+    ("TOTAL", "General and administrative expenses", IS["General and administrative expenses"]),
     ("DATA", "Credit impairment release/(charge)", IS["Credit impairment release/(charge)"]),
     ("TOTAL", "Profit before tax", IS["Profit before tax"]),
     ("DATA", "Tax charge on profit on ordinary activities", IS["Tax charge on profit on ordinary activities"]),

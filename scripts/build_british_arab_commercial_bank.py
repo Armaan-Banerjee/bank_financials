@@ -169,6 +169,41 @@ STATEMENTS_NOTE = (
     "that year, not assumed zero."
 )
 
+FINANCIAL_INVESTMENTS_BREAKDOWN_NOTE = (
+    "FINANCIAL INVESTMENTS BREAKDOWN: the 'Financial investments - ...' sub-rows below the renamed 'Total "
+    "financial investments' line are transcribed from each year's own 'Financial investments'/'Debt securities' "
+    "note, which splits the balance by issuer type (government and multilateral development banks; other listed "
+    "debt securities issued by banks; other listed debt securities issued by non-banks; equity shares and "
+    "investment funds) and, within debt securities, by measurement basis (FVOCI/available-for-sale vs a small "
+    "FVTPL/held-for-trading portion disclosed as its own line in most years):\n"
+    f"FY2025: Annual Report YE2025, Note 17 'Financial investments', p.122 - {AR_URL['FY2025']}\n"
+    f"FY2024: Annual Report YE2024, Note 17 'Financial Investments', p.115 - {AR_URL['FY2024']}\n"
+    f"FY2023: Annual Report YE2023, Note 17 'Financial Investments' - {AR_URL['FY2023']}\n"
+    f"FY2022: Annual Report YE2022, Note 19 'Financial investments' - {AR_URL['FY2022']}\n"
+    f"FY2021: Annual Report YE2021, Note 19 'Financial investments' - {AR_URL['FY2021']}\n"
+    f"FY2020: Annual Report YE2020, Note 19 'Financial investments' - {AR_URL['FY2020']}\n"
+    f"FY2019: Annual Report YE2019, Note 19 'Financial investments', p.2.59 - {AR_URL['FY2019']}\n"
+    f"FY2018: Annual Report YE2018, Note 15 'Financial investments' - {AR_URL['FY2018']}\n"
+    f"FY2017: Annual Report (filename says 2018, cover/profit figures confirm FY2017), Note 15 'Financial "
+    f"investments' - {AR_URL['FY2017']}\n"
+    f"FY2016: Annual Report (filename says 2017, cover confirms FY2016), Note 14 'Financial investments', p.65 - "
+    f"{AR_URL['FY2016']}\n"
+    f"FY2015: Annual Report YE2015, Note 14 'Financial investments', p.60 - {AR_URL['FY2015']}\n"
+    f"FY2014: Annual Report YE2014, Note 14 'Financial investments', p.63 - {AR_URL['FY2014']}\n"
+    f"FY2013: Full accounts made up to 31 December 2013, filed with Companies House 18 Mar 2014, Note 13 'Debt "
+    f"securities' (issuer-type split: OECD government securities/banks/non-banks/held for trading) + Note 16 "
+    f"'Equity shares and investments' (equity shares + investment funds) + Note 17 'Shares in Bank undertakings' "
+    f"(GBP0, no subsidiaries held at FY2013 year-end) - {AR_URL['FY2013']}\n\n"
+    "Each year's 5 sub-rows sum exactly to that year's 'Total financial investments' line (verified for every "
+    "year FY2013-FY2025). No 'amortised cost' bucket exists in any year - accounting policy notes confirm the "
+    "whole book is classified FVOCI/available-for-sale (IAS 39-era) or FVOCI (IFRS 9-era from FY2018), aside from "
+    "the small FVTPL/held-for-trading line shown as its own sub-row. 'Debt securities designated as FVTPL / held "
+    "for trading' is genuinely nil (not a gap) in FY2025/FY2024/FY2023/FY2016 - the note itself either omits the "
+    "line entirely (FY2025/FY2024) or states an explicit nil (FY2023). FY2013's 'banks' sub-row is the note's "
+    "'Other listed debt securities issued by banks' figure only - a separate 'Unlisted certificates of deposit "
+    "(CDs)' line in that same note is GBP0 at FY2013 year-end, so nothing is folded in or lost."
+)
+
 STATEMENTS_SOURCES = (
     "Sources - British Arab Commercial Bank PLC's own Statement of Comprehensive Income / Statement of Financial "
     "Position / Statement of Changes in Equity, each year from that year's own Annual Report:\n"
@@ -188,6 +223,7 @@ STATEMENTS_SOURCES = (
     f"(Statement of Comprehensive Income / Statement of Financial Position / Statement of Changes in Equity) - "
     f"{AR_URL['FY2013']}\n\n"
     + STATEMENTS_NOTE
+    + "\n\n" + FINANCIAL_INVESTMENTS_BREAKDOWN_NOTE
 )
 
 # ---------------------------------------------------------------
@@ -211,7 +247,7 @@ balance_sheet_rows = [
      {"FY2025": 353562, "FY2024": 387260, "FY2023": 388567, "FY2022": 463780, "FY2021": 484536,
       "FY2020": 582529, "FY2019": 651514, "FY2018": 1081161, "FY2017": 1068589, "FY2016": 864311,
       "FY2015": 685680, "FY2014": 471375, "FY2013": 456896}),
-    ("DATA", "Financial investments",
+    ("DATA", "Total financial investments",
      {"FY2025": 1317406, "FY2024": 1427440, "FY2023": 1621748, "FY2022": 1695000, "FY2021": 1456288,
       "FY2020": 1306280, "FY2019": 891682, "FY2018": 1774166, "FY2017": 788066, "FY2016": 1288442,
       "FY2015": 1399383, "FY2014": 1122262,
@@ -219,6 +255,30 @@ balance_sheet_rows = [
       # undertakings 0 = 760,316 (FY2014's own restated FY2013 comparative shows 766,373 with an offsetting
       # -6,057 shift in Loans and advances to customers - FY2013's own originally-filed figures used, see note).
       "FY2013": 760316}),
+    ("DATA", "Financial investments - Government and multilateral development bank debt securities (FVOCI)",
+     {"FY2025": 1145125, "FY2024": 1270722, "FY2023": 1371471, "FY2022": 1383707, "FY2021": 1036703,
+      "FY2020": 909297, "FY2019": 617809, "FY2018": 1456160, "FY2017": 652731, "FY2016": 1081179,
+      "FY2015": 966567, "FY2014": 793001,
+      # FY2013's own Companies House filing (Note 13, Debt securities): "OECD government securities" 359,091.
+      "FY2013": 359091}),
+    ("DATA", "Financial investments - Debt securities issued by banks (FVOCI)",
+     {"FY2025": 166713, "FY2024": 150004, "FY2023": 242430, "FY2022": 278007, "FY2021": 401151,
+      "FY2020": 372533, "FY2019": 248169, "FY2018": 297132, "FY2017": 112681, "FY2016": 178667,
+      "FY2015": 393260, "FY2014": 291308,
+      # FY2013's own filing: "Other listed debt securities issued by banks" 327,882 (the note's separate
+      # "Unlisted certificates of deposit (CDs)" line is GBP0 in FY2013, so nothing folded in here).
+      "FY2013": 327882}),
+    ("DATA", "Financial investments - Debt securities issued by non-banks (FVOCI)",
+     {"FY2025": 2213, "FY2024": 3115, "FY2023": 2986, "FY2022": 23340, "FY2021": 3595, "FY2020": 3063,
+      "FY2019": 4657, "FY2018": 9342, "FY2017": 11426, "FY2016": 19806, "FY2015": 10032, "FY2014": 3779,
+      "FY2013": 30461}),
+    ("DATA", "Financial investments - Debt securities designated as FVTPL / held for trading",
+     {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 4037, "FY2021": 8554, "FY2020": 14964, "FY2019": 14576,
+      "FY2018": 4922, "FY2017": 3690, "FY2016": 0, "FY2015": 13994, "FY2014": 18493, "FY2013": 29041}),
+    ("DATA", "Financial investments - Equity shares and investment funds (FVOCI)",
+     {"FY2025": 3355, "FY2024": 3599, "FY2023": 4861, "FY2022": 5909, "FY2021": 6285, "FY2020": 6423,
+      "FY2019": 6471, "FY2018": 6610, "FY2017": 7538, "FY2016": 8790, "FY2015": 15530, "FY2014": 15681,
+      "FY2013": 13841}),
     ("DATA", "Prepayments, accrued income and other debtors",
      {"FY2025": 14721, "FY2024": 8497, "FY2023": 10424, "FY2022": 3014, "FY2021": 3437, "FY2020": 14370,
       "FY2019": 22181, "FY2018": 16815, "FY2017": 62573, "FY2016": 11016, "FY2015": 10562, "FY2014": 13877,
@@ -365,7 +425,7 @@ income_statement_rows = [
      {"FY2025": 96004, "FY2024": 100291, "FY2023": 90001, "FY2022": 55956, "FY2021": 53466, "FY2020": 52936,
       "FY2019": 45466, "FY2018": 5793, "FY2017": 43265, "FY2016": 35617, "FY2015": 19706, "FY2014": 43114,
       "FY2013": 41685}),
-    ("DATA", "Administrative expenses",
+    ("TOTAL", "Administrative expenses",
      {"FY2025": -64363, "FY2024": -62082, "FY2023": -53594, "FY2022": -42031, "FY2021": -38763, "FY2020": -37014,
       "FY2019": -37388, "FY2018": -38018, "FY2017": -36000, "FY2016": -33038, "FY2015": -34777, "FY2014": -37603,
       "FY2013": -23837}),

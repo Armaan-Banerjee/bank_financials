@@ -125,6 +125,28 @@ CASH_FLOW_SOURCES = (
 
 bw = BankWorkbook(bank_name="CAF Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="2E7D32")
 
+DEBT_SECURITIES_BREAKDOWN_NOTE = (
+    "DEBT SECURITIES BREAKDOWN: the 'Debt securities - ...' sub-rows below the renamed 'Total debt securities' "
+    "line are transcribed from each year's own 'Debt securities'/'Investments' note, which splits the balance by "
+    "issuer type (UK government, multilateral financial institutions, fixed/floating coupon corporate bonds, "
+    "certificates of deposit) but not by measurement basis - accounting policy note 1.5/1.6 states debt "
+    "securities held for investment purposes are 'held to redemption at par' and 'measured at amortised cost "
+    "using the effective interest method' in every year covered, so all sub-rows are amortised cost (no FVOCI/"
+    "FVTPL instruments held in any year):\n"
+    f"FY2025/FY2024: Note 10 'Debt securities', Investments table, p.89 - {AR2025_URL}\n"
+    f"FY2023/FY2022: Note 10 'Debt securities', Investments table, p.67 - {AR2023_URL}\n"
+    f"FY2021: Note 11 'Debt securities', section 11.1 Investments, p.44 - {AR2021_URL}\n"
+    f"FY2020: FY2021 filing's own FY2020 comparative column (same note/page as above); independently cross-checked "
+    f"against FY2020's own filing, Note 11 'Debt securities', section 11.1 Investments, p.44 - {AR2020_URL} "
+    "(both agree exactly on all 5 sub-row figures).\n\n"
+    "Each year's sub-rows sum exactly to that year's 'Total debt securities' line. 'UK government' is disclosed "
+    "as its own line only in FY2020 (£63,036k) and FY2021 (explicitly £0 - the note still prints the line with a "
+    "nil balance); no 'UK government' line appears in the FY2022-FY2025 notes at all (fully divested by FY2022), "
+    "not a gap. 'Certificates of deposit' (the note's 'Unlisted:' section) is disclosed FY2020-FY2023 only - the "
+    "FY2024/FY2025 notes present a 'Listed:' section only with no unlisted holdings, again a genuine change in "
+    "composition rather than missing data."
+)
+
 STATEMENTS_SOURCES = (
     "Sources - all figures are CAF Bank Limited's own Profit and Loss Account / Balance Sheet / Statement of "
     "Changes in Equity, transcribed from each year's own Companies House filing (or, for FY2024/FY2022, that "
@@ -186,7 +208,12 @@ balance_sheet_rows = [
     ("DATA", "Balances at Bank of England", {"FY2025": 610671, "FY2024": 630526, "FY2023": 620476, "FY2022": 602553, "FY2021": 417756, "FY2020": 327571}),
     ("DATA", "Loans and advances to banks", {"FY2025": 4214, "FY2024": 23998, "FY2023": 6116, "FY2022": 7471, "FY2021": 7897, "FY2020": 6273}),
     ("DATA", "Loans and advances to customers", {"FY2025": 219101, "FY2024": 197701, "FY2023": 177734, "FY2022": 160407, "FY2021": 124506, "FY2020": 103625}),
-    ("DATA", "Debt securities", {"FY2025": 682783, "FY2024": 637376, "FY2023": 752100, "FY2022": 777145, "FY2021": 885876, "FY2020": 771083}),
+    ("DATA", "Total debt securities", {"FY2025": 682783, "FY2024": 637376, "FY2023": 752100, "FY2022": 777145, "FY2021": 885876, "FY2020": 771083}),
+    ("DATA", "Debt securities - UK government (sovereign, amortised cost)", {"FY2021": 0, "FY2020": 63036}),
+    ("DATA", "Debt securities - Multilateral financial institutions (supranational, amortised cost)", {"FY2025": 563083, "FY2024": 511053, "FY2023": 670370, "FY2022": 679925, "FY2021": 758564, "FY2020": 536545}),
+    ("DATA", "Debt securities - Fixed coupon corporate bonds (amortised cost)", {"FY2025": 59570, "FY2024": 49368, "FY2023": 23498, "FY2022": 23723, "FY2021": 24093, "FY2020": 43521}),
+    ("DATA", "Debt securities - Floating rate corporate bonds (amortised cost)", {"FY2025": 60130, "FY2024": 76955, "FY2023": 48232, "FY2022": 63497, "FY2021": 83398, "FY2020": 107981}),
+    ("DATA", "Debt securities - Certificates of deposit (other, amortised cost)", {"FY2023": 10000, "FY2022": 10000, "FY2021": 19821, "FY2020": 20000}),
     ("DATA", "Prepayments and accrued income", {"FY2025": 11882, "FY2024": 10566, "FY2023": 8775, "FY2022": 3792, "FY2021": 4067, "FY2020": 4378}),
     ("DATA", "Intangible assets", {"FY2025": 15908, "FY2024": 10758, "FY2023": 6333, "FY2022": 4676, "FY2021": 1194}),
     ("TOTAL", "Total assets", {"FY2025": 1544559, "FY2024": 1510925, "FY2023": 1571534, "FY2022": 1556044, "FY2021": 1441296, "FY2020": 1212930}),
@@ -210,9 +237,9 @@ bw.add_balance_sheet_sheet(
     title="CAF Bank Limited — Balance Sheet",
     subtitle="CAF Bank Limited's own basis, £'000. See source note at bottom.",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + DEBT_SECURITIES_BREAKDOWN_NOTE,
     first_col_width=88,
-    source_height=280,
+    source_height=420,
     unit_suffix=" (£'000)",
 )
 

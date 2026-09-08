@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T17:12:17.535023+00:00",
+  "generated_at": "2026-09-07T19:02:59.701441+00:00",
   "policy": "screening only: observed headroom and multi-year movement are ranked; no breach date or future value is projected",
   "records": [
     {
@@ -10143,9 +10143,47 @@
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 0.0,
-      "trend_direction": "unchanged",
-      "trend_magnitude": 0.0
+      "trend_change": 0.40000000000000036,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.40000000000000036
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "ARAB BANK EUROPE PLC",
+      "comparable_pair_count": 0,
+      "comparable_year_count": 1,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 11.7,
+      "frn": "446951",
+      "latest_year": 2022,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": null,
+      "trend_direction": null,
+      "trend_magnitude": null
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "ARAB BANK EUROPE PLC",
+      "comparable_pair_count": 1,
+      "comparable_year_count": 2,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 15.5,
+      "frn": "446951",
+      "latest_year": 2022,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": -0.09999999999999964,
+      "trend_direction": "declining",
+      "trend_magnitude": 0.09999999999999964
     },
     {
       "applicable_buffer": null,
@@ -10162,9 +10200,9 @@
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 1.0,
+      "trend_change": 0.6000000000000014,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.0
+      "trend_magnitude": 0.6000000000000014
     },
     {
       "applicable_buffer": null,

@@ -96,6 +96,12 @@ STATEMENTS_SOURCES = (
     f"FY2021: 2021 accounts, Income statement p.17, Statement of comprehensive income p.18, "
     f"Statement of financial position p.19, Statement of changes in equity p.20, Note 10 (Loans and advances to "
     f"customers) p.35, Note 13(a) (expected credit losses) p.43 - {AR_URL['FY2021']}\n\n"
+    f"Other financial assets breakdown by measurement basis and instrument (bank/building society CDs at "
+    f"amortised cost; floating rate notes and government bonds at fair value through other comprehensive "
+    f"income; derivative contracts at fair value through profit or loss): FY2025/FY2024 - 2025 accounts, "
+    f"Note 11 'Other financial assets' p.32 - {AR_URL['FY2025']}; FY2023/FY2022 - 2023 accounts, Note 9 "
+    f"'Other financial assets' p.31 - {AR_URL['FY2023']}; FY2021 - 2021 accounts, Note 9 'Other financial "
+    f"assets' - {AR_URL['FY2021']}.\n\n"
     f"Entity verification: Companies House {CH_URL}; PRA register {PRA_URL}.\n\n"
     + ENTITY_NOTE
     + "\n\nFY2024 figures for the Balance Sheet, Profit & Loss and Statement of Changes in Equity are taken from "
@@ -112,7 +118,11 @@ STATEMENTS_SOURCES = (
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Loans and advances to banks", {"FY2025": 2935361, "FY2024": 2723942, "FY2023": 2455855, "FY2022": 2540496, "FY2021": 2007276}),
-    ("DATA", "Other financial assets", {"FY2025": 1046693, "FY2024": 977035, "FY2023": 702664, "FY2022": 407352, "FY2021": 245144}),
+    ("DATA", "Total other financial assets", {"FY2025": 1046693, "FY2024": 977035, "FY2023": 702664, "FY2022": 407352, "FY2021": 245144}),
+    ("DATA", "Other financial assets at amortised cost (bank and building society certificates of deposit)", {"FY2025": 249845, "FY2024": 189881, "FY2023": 239850, "FY2022": 129947, "FY2021": 39983}),
+    ("DATA", "Other financial assets at fair value through other comprehensive income (floating rate notes)", {"FY2025": 482805, "FY2024": 344208, "FY2023": 281124, "FY2022": 246467, "FY2021": 203602}),
+    ("DATA", "Other financial assets at fair value through other comprehensive income (government bonds)", {"FY2025": 312713, "FY2024": 438991, "FY2023": 176781, "FY2022": 24728, "FY2021": 0}),
+    ("DATA", "Other financial assets at fair value through profit or loss (derivative contracts)", {"FY2025": 1330, "FY2024": 3955, "FY2023": 4909, "FY2022": 6210, "FY2021": 1559}),
     ("DATA", "Loans and advances to customers", {"FY2025": 212217, "FY2024": 201141, "FY2023": 216217, "FY2022": 322466, "FY2021": 307037}),
     ("DATA", "Trade and other receivables", {"FY2025": 1520, "FY2024": 1503, "FY2023": 1012, "FY2022": 4413, "FY2021": 3470}),
     ("DATA", "Prepayments and accrued income", {"FY2025": 86310, "FY2024": 70329, "FY2023": 96284, "FY2022": 56794, "FY2021": 64574}),
@@ -139,7 +149,7 @@ bw.add_balance_sheet_sheet(
     rows=balance_sheet_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=75,
-    source_height=420,
+    source_height=480,
     unit_suffix=" (GBP'000)",
 )
 

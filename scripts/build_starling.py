@@ -133,6 +133,22 @@ STATEMENTS_SOURCES = (
     "disclosed, not reconciled into a common split. FY2021 combines Property, Plant and Equipment with Intangible "
     "Assets into one line (no separate Goodwill line - Goodwill first arose on the Fleet Mortgages acquisition in "
     "FY2022); FY2022 onward splits these three lines out.\n\n"
+    "PRESENTATION NOTE (Debt securities breakdown): the 'Debt securities' Balance Sheet line is broken out by "
+    "issuer type per each year's own 'Debt securities' note - government/supranational bonds vs. covered bonds "
+    "and RMBS issued by banks and building societies, plus the fair value adjustment for hedged risk that "
+    "reconciles the gross note total to the Balance Sheet's net carrying value (all four sub-lines sum exactly "
+    "to 'Total debt securities' every year). Source notes: FY2026: Starling Group Holdings Limited Annual Report "
+    f"and Accounts 2026, note 13 'Debt securities', p.195 - {AR26_SGHL_URL}\n"
+    f"FY2025 & FY2024: Starling Bank Limited Annual Report and Accounts 2025, note 10 'Debt securities', p.189 "
+    f"- {AR25_URL}. FY2025's breakdown independently cross-checked against AR26's own FY2025 comparative column "
+    "(note 13, p.195), which agrees exactly.\n"
+    f"FY2023 & FY2022: Starling Bank Limited Annual Report 2023, note 11 'Debt Securities', p.154 - {AR23_URL}\n"
+    f"FY2021: Starling Bank Limited Annual Report and Consolidated Financial Statements, period ended 31 March "
+    f"2021, note 12 'Debt Securities', p.111 - {AR21_URL}. That year's note also states 'All Debt Securities are "
+    "held at amortised cost' - no FVOCI/FVTPL/trading leg is disclosed for any year covered (the FY2025 Annual "
+    "Report's own risk section likewise states 'The Group's debt securities are measured at amortised cost'), "
+    "so no measurement-basis (amortised cost vs. mark-to-market) split is shown here - it would be a "
+    "100%-amortised-cost/0%-mark-to-market non-split, not a genuine disclosed breakdown.\n\n"
     "PRESENTATION NOTE (Profit & Loss): FY2021-FY2025 use a 'Net interest income / Net fees and commissions / "
     "Total income' structure; FY2026 (Starling Group Holdings Limited's own first Annual Report) uses a "
     "'Revenue / Cost of revenue / Gross profit' structure instead - both are shown as separate blocks, each with "
@@ -160,7 +176,11 @@ balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at central banks", {"FY2026": 4188830, "FY2025": 6686688, "FY2024": 6420115}),
     ("DATA", "Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)", {"FY2026": 36508, "FY2025": 30489, "FY2024": 36879, "FY2023": 6109704, "FY2022": 6107281, "FY2021": 3196349}),
-    ("DATA", "Debt securities", {"FY2026": 6843426, "FY2025": 3934922, "FY2024": 3284867, "FY2023": 2479550, "FY2022": 2306886, "FY2021": 1513278}),
+    ("DATA", "Total debt securities", {"FY2026": 6843426, "FY2025": 3934922, "FY2024": 3284867, "FY2023": 2479550, "FY2022": 2306886, "FY2021": 1513278}),
+    ("DATA", "Debt securities - issued by governments and supranational bodies (government securities)", {"FY2026": 3043972, "FY2025": 1711624, "FY2024": 1535013, "FY2023": 1544706, "FY2022": 1705167, "FY2021": 1119687}),
+    ("DATA", "Debt securities - covered bonds issued by banks and building societies", {"FY2026": 1867695, "FY2025": 1258616, "FY2024": 1109808, "FY2023": 925494, "FY2022": 613430, "FY2021": 382638}),
+    ("DATA", "Debt securities - residential mortgage-backed securities (RMBS) issued by banks and building societies", {"FY2026": 1963242, "FY2025": 993778, "FY2024": 675881, "FY2023": 48040, "FY2022": 11664, "FY2021": 13652}),
+    ("DATA", "Debt securities - fair value adjustment for hedged risk (reconciling item, see source note)", {"FY2026": -31483, "FY2025": -29096, "FY2024": -35835, "FY2023": -38690, "FY2022": -23375, "FY2021": -2699}),
     ("DATA", "Derivative assets", {"FY2026": 110908, "FY2025": 156615, "FY2024": 246541, "FY2023": 221774, "FY2022": 98056, "FY2021": 13488}),
     ("DATA", "Loans and advances to customers", {"FY2026": 5161359, "FY2025": 4670567, "FY2024": 4537663, "FY2023": 4731997, "FY2022": 3234673, "FY2021": 2232846}),
     ("DATA", "Other assets", {"FY2026": 63120, "FY2025": 54474, "FY2024": 100047, "FY2023": 71851, "FY2022": 66635, "FY2021": 63460}),
@@ -199,11 +219,11 @@ balance_sheet_rows = [
 # are carried into the extended ladder.
 _OLD_BS = {
     "FY2018": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 37544,
-               "Debt securities": 18039, "Loans and advances to customers": 8698,
+               "Total debt securities": 18039, "Loans and advances to customers": 8698,
                "Other assets": 20924, "Total assets": 234669, "Customer deposits": 202323,
                "Total liabilities": 206670, "Total equity": 27999, "Total liabilities and equity": 234669},
     "FY2017": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 37544,
-               "Debt securities": 3014, "Loans and advances to customers": 804,
+               "Total debt securities": 3014, "Loans and advances to customers": 804,
                "Property, plant and equipment and right of use assets": 253,
                "Intangible assets": 9330, "Other assets": 2332, "Total assets": 53277,
                "Customer deposits": 18083, "Total liabilities": 20559, "Share capital": 5,
@@ -224,7 +244,7 @@ bw.add_balance_sheet_sheet(
     rows=balance_sheet_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=76,
-    source_height=290,
+    source_height=380,
     unit_suffix=" (£'000)",
 )
 
@@ -283,7 +303,7 @@ bw.add_income_statement_sheet(
     rows=income_statement_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=76,
-    source_height=290,
+    source_height=380,
     unit_suffix=" (£'000)",
 )
 
@@ -347,7 +367,7 @@ bw.add_equity_changes_sheet(
     rows=equity_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=58,
-    source_height=290,
+    source_height=380,
 )
 
 # ---------------------------------------------------------------

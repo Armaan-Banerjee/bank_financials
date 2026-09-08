@@ -219,6 +219,46 @@ STATEMENTS_SOURCES = (
     + ENTITY_NOTE
 )
 
+BALANCE_SHEET_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "DEBT SECURITIES BREAKDOWN: the 'Debt securities - ...' sub-rows below the headline 'Total debt securities' "
+    "line are transcribed from each year's own 'Financial instruments and risk management' note (categorising "
+    "the balance by measurement basis - available for sale ('AFS') vs held to maturity ('HTM') - and, for "
+    "FY2020/FY2021 only, by issuer sector as well):\n"
+    f"FY2025: Note 25, p.52 (2025 table, 100% AFS - no FVPL/amortised-cost component for debt securities) - {AR2025_URL}\n"
+    f"FY2024: same FY2025 filing's own FY2024 comparative column, Note 25, p.53 (100% AFS)\n"
+    f"FY2023: Note 26, p.59 (2023 table, 100% AFS) - {AR2023_URL}\n"
+    f"FY2022: Note 24, p.56 (2022 table, 100% AFS - this is the Company's own FY2022 filing, not the FY2023 "
+    f"filing's restated comparative, per this workbook's own-year-filing convention) - {AR2022_URL}\n"
+    f"FY2021 and FY2020: Note 24, p.58 ('Analysis of sector concentration' table - Central government / Financial "
+    f"institutions / Corporates), both years' own columns disclosed side-by-side in the FY2021 filing - {AR2021_URL}. "
+    f"FY2020's own filing (Note 25, p.49-50) confirms the same 100% AFS carrying value (£148,064,178) but does not "
+    f"itself disclose the sector-concentration split - only the FY2021 filing's comparative column does.\n"
+    f"FY2019: Note 23, p.53 (2019 table, 100% AFS), cross-checked against the FY2020 filing's own FY2019 "
+    f"comparative (Note 25, p.50, same figure) - {AR2019_URL}\n"
+    f"FY2018: Note 22, p.48 (2018 table - AFS/HTM/FVTPL/Loans&receivables category table with an HTM column "
+    f"present but £Nil that year, i.e. already 100% AFS) - {AR2018_URL}\n"
+    f"FY2017 and FY2016: Note 22, p.48 (both years' own AFS/HTM/FVTPL/Loans&receivables category table, stated "
+    f"to the nearest £'000) - {AR2017_URL}\n\n"
+    "Every year's sub-rows sum to that year's headline 'Total debt securities' line: exactly for FY2018-FY2025 "
+    "(each sourced to the exact £ from its own category table) and to within £205 (FY2016) / £10 (FY2017) for the "
+    "two years where the only available category table is stated at the nearest £'000 rather than the exact £ "
+    "used in the primary statements - both genuine source-rounding gaps, not transcription errors, consistent "
+    "with how £'000-only disclosures are already handled elsewhere in this workbook (see e.g. the Leverage Ratio "
+    "sheet's FY2018 note).\n"
+    "MEASUREMENT BASIS: 100% of the debt securities balance was classified as available for sale ('AFS' - the "
+    "FRS 102/IAS 39 predecessor to the mark-to-market 'FVOCI' terminology used at most other banks in this "
+    "project) in every year FY2018-FY2025; FY2016 and FY2017 alone also carried a held-to-maturity ('HTM', "
+    "amortised-cost) component (£53.5m and £57.2m respectively) that had been fully run off/reclassified by "
+    "FY2018. No fair-value-through-profit-or-loss ('FVTPL') debt securities were disclosed in any year (the "
+    "'FVTPL' figures in each year's own category table relate only to derivatives, not debt securities).\n"
+    "ISSUER TYPE: only the FY2021 filing's own 'Analysis of sector concentration' table splits debt securities by "
+    "issuer sector (for both FY2021 and its FY2020 comparative) - no other year's filing (FY2016-FY2019, "
+    "FY2022-FY2025) discloses an equivalent issuer-type/country breakdown of the debt securities balance, only "
+    "the Fitch-rating breakdown reproduced in the entity note above; this is a genuine year-by-year disclosure "
+    "gap in the Company's own filings, not an omission on this workbook's part."
+)
+
 # ---------------------------------------------------------------
 # Sheet: Balance Sheet
 # ---------------------------------------------------------------
@@ -228,7 +268,12 @@ balance_sheet_rows = [
     ("DATA", "Loans and advances to customers", {"FY2025": 1540326075, "FY2024": 1032354956, "FY2023": 718597663, "FY2022": 638315902, "FY2021": 505967194, "FY2020": 371849345, "FY2019": 283814684, "FY2018": 194150630, "FY2017": 224061810, "FY2016": 180722026}),
     ("DATA", "Loans and advances to banks", {"FY2025": 23388100, "FY2024": 22616365, "FY2023": 13576284, "FY2022": 2000329, "FY2021": 2253488, "FY2020": 570000, "FY2018": 0, "FY2017": 3500173}),
     ("DATA", "Derivative financial assets", {"FY2025": 245277, "FY2024": 331288, "FY2023": 632792, "FY2022": 3137104, "FY2021": 414198, "FY2020": 2819986, "FY2019": 3482846, "FY2018": 350369, "FY2017": 2868194, "FY2016": 930058}),
-    ("DATA", "Debt securities", {"FY2025": 297504303, "FY2024": 178309427, "FY2023": 138342935, "FY2022": 122536714, "FY2021": 92219766, "FY2020": 148064178, "FY2019": 137827144, "FY2018": 229966518, "FY2017": 207095990, "FY2016": 234153205}),
+    ("DATA", "Total debt securities", {"FY2025": 297504303, "FY2024": 178309427, "FY2023": 138342935, "FY2022": 122536714, "FY2021": 92219766, "FY2020": 148064178, "FY2019": 137827144, "FY2018": 229966518, "FY2017": 207095990, "FY2016": 234153205}),
+    ("DATA", "Debt securities - Available for sale (AFS)", {"FY2025": 297504303, "FY2024": 178309427, "FY2023": 138342935, "FY2022": 122536714, "FY2019": 137827144, "FY2018": 229966518, "FY2017": 149912000, "FY2016": 180624000}),
+    ("DATA", "Debt securities - Held to maturity (HTM, amortised cost)", {"FY2017": 57184000, "FY2016": 53529000}),
+    ("DATA", "Debt securities - Central government (government securities, available for sale)", {"FY2021": 25791136, "FY2020": 67124074}),
+    ("DATA", "Debt securities - Financial institutions (available for sale)", {"FY2021": 54297596, "FY2020": 62870405}),
+    ("DATA", "Debt securities - Corporates (available for sale)", {"FY2021": 12131034, "FY2020": 18069699}),
     ("DATA", "Prepayments and accrued income", {"FY2025": 1387861, "FY2024": 1002759, "FY2023": 1140078, "FY2022": 772017, "FY2021": 827884, "FY2020": 546073, "FY2019": 389754, "FY2018": 434839, "FY2017": 293327, "FY2016": 643737}),
     ("DATA", "Other assets", {"FY2025": 6369330, "FY2024": 8673325, "FY2023": 6382510, "FY2022": 1906588, "FY2021": 1503458, "FY2020": 2556378, "FY2019": 1826419, "FY2018": 3377080, "FY2017": 4856662, "FY2016": 3924840}),
     ("DATA", "Investment property", {"FY2025": 2900000, "FY2024": 2960000, "FY2023": 9604343, "FY2022": 9446895, "FY2021": 9446895, "FY2020": 8239267, "FY2019": 8187309, "FY2018": 8757309, "FY2017": 7970068, "FY2016": 7970068}),
@@ -259,9 +304,9 @@ bw.add_balance_sheet_sheet(
     title="United National Bank Limited — Balance Sheet",
     subtitle="Company basis, exact £ (not £'000/£m) - see source note at bottom.",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=76,
-    source_height=280,
+    source_height=420,
     unit_suffix=" (£)",
 )
 
@@ -293,6 +338,13 @@ income_statement_rows = [
     ("DATA", "Administrative expenses", {"FY2025": -16827131, "FY2024": -14816212, "FY2023": -12549595, "FY2022": -12752766, "FY2021": -12688136, "FY2020": -11839897, "FY2019": -11671393, "FY2018": -12302513, "FY2017": -11642444, "FY2016": -10854031}),
     ("DATA", "Remeasurement of financial liability", {"FY2025": -291571, "FY2024": -2561700, "FY2023": -2650000}),
     ("DATA", "Depreciation and amortisation", {"FY2025": -297373, "FY2024": -344925, "FY2023": -597021, "FY2022": -755530, "FY2021": -721946, "FY2020": -540113, "FY2019": -699285, "FY2018": -912170, "FY2017": -890889, "FY2016": -883599}),
+    # Not itself a printed AR subtotal - the sum of Administrative expenses +
+    # Depreciation and amortisation above. Excludes the financial-liability
+    # remeasurement, impairment (losses)/recoveries, and other debt recoveries
+    # per standard cost-to-income convention (operating costs only, not
+    # credit risk or fair-value items).
+    ("TOTAL", "Total operating expenses (sum of Administrative expenses + Depreciation and amortisation - excludes financial liability remeasurement, impairment (losses)/recoveries, and other debt recoveries)",
+     {"FY2025": -17124504, "FY2024": -15161137, "FY2023": -13146616, "FY2022": -13508296, "FY2021": -13410082, "FY2020": -12380010, "FY2019": -12370678, "FY2018": -13214683, "FY2017": -12533333, "FY2016": -11737630}),
     ("DATA", "Impairment (losses)/recoveries", {"FY2025": -555015, "FY2024": -277396, "FY2023": 177172, "FY2022": -5620263, "FY2021": 579196, "FY2020": -2263480, "FY2019": 523476, "FY2018": -2651807, "FY2017": -4798824, "FY2016": -557756}),
     ("DATA", "Other debt recoveries", {"FY2018": 218430, "FY2017": 267203, "FY2016": 150000}),
     ("TOTAL", "Profit before tax on ordinary activities", {"FY2025": 14576858, "FY2024": 5243939, "FY2023": 6911228, "FY2022": 5296311, "FY2021": 3225686, "FY2020": -2378560, "FY2019": -1009163, "FY2018": -3778731, "FY2017": 710882, "FY2016": 7400449}),

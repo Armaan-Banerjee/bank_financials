@@ -183,7 +183,11 @@ bs_rows = [
     ("DATA", "Cash and balances at central bank", {"FY2025": 2184464, "FY2024": 2689013, "FY2023": 1637314, "FY2022": 1235711, "FY2021": 446374, "FY2020": 469459, "FY2019": 540035, "FY2018": 356881, "FY2017": 148340, "FY2016": 51175}),
     ("DATA", "Loans and advances to banks", {"FY2025": 96776, "FY2024": 80632, "FY2023": 38474, "FY2022": 42127, "FY2021": 30019, "FY2020": 11532, "FY2019": 11298, "FY2018": 6394, "FY2017": 5362, "FY2016": 9161, "FY2015": 21571}),
     ("DATA", "Loans and advances to customers", {"FY2025": 4889874, "FY2024": 4393100, "FY2023": 3817344, "FY2022": 3127950, "FY2021": 2886305, "FY2020": 2492249, "FY2019": 2062985, "FY2018": 1297937, "FY2017": 604937, "FY2016": 225508, "FY2015": 14906}),
-    ("DATA", "Investment securities / Debt securities", {"FY2025": 599436, "FY2024": 331238, "FY2023": 237660, "FY2022": 204005, "FY2021": 191849, "FY2020": 131053, "FY2019": 105337, "FY2018": 104420, "FY2017": 2115, "FY2016": 500, "FY2015": 53238}),
+    ("DATA", "Total investment securities / Debt securities", {"FY2025": 599436, "FY2024": 331238, "FY2023": 237660, "FY2022": 204005, "FY2021": 191849, "FY2020": 131053, "FY2019": 105337, "FY2018": 104420, "FY2017": 2115, "FY2016": 500, "FY2015": 53238}),
+    ("DATA", "Investment securities - Long-term UK Gilts & Treasury bills, at amortised cost", {"FY2025": 299979}),
+    ("DATA", "Investment securities - Senior tranches in CLOs, at amortised cost", {"FY2025": 111965}),
+    ("DATA", "Investment securities - Short-term UK Gilts & Treasury bills, at FVOCI", {"FY2025": 0, "FY2024": 207231, "FY2023": 205872, "FY2022": 204005, "FY2021": 191849, "FY2020": 131053}),
+    ("DATA", "Investment securities - Money market funds, at FVOCI", {"FY2025": 187492, "FY2024": 124007, "FY2023": 31788}),
     ("DATA", "Derivative assets held for risk management", {"FY2025": 33742, "FY2024": 2809, "FY2023": 5765, "FY2022": 0}),
     ("DATA", "Goodwill", {"FY2025": 11647, "FY2024": 11647, "FY2023": 11647, "FY2022": 11647}),
     ("DATA", "Intangible assets", {"FY2025": 14238, "FY2024": 8967, "FY2023": 5639, "FY2022": 4293, "FY2021": 28, "FY2020": 168, "FY2019": 204, "FY2018": 240, "FY2017": 276, "FY2016": 312, "FY2015": 350}),
@@ -221,7 +225,17 @@ bw.add_balance_sheet_sheet(
     title="OakNorth Bank plc — Balance Sheet",
     subtitle="Bank Group (consolidated) basis from FY2022, Bank standalone basis FY2015-FY2021, £'000 (FY2021 is "
               "the Bank's own officially IFRS-restated comparative - see basis note below). Blank cells indicate "
-              "a line not disclosed that year (0 indicates a line disclosed as nil, not a gap).",
+              "a line not disclosed that year (0 indicates a line disclosed as nil, not a gap). Investment "
+              "securities breakdown (by measurement basis and by UK Gilts/Treasury bills vs money market funds/CLO "
+              "tranches) sourced from: FY2025/FY2024 - Annual Report 2025, Note 14 'Investment securities', p.130 "
+              f"- {AR_URLS['FY2025']}; FY2024/FY2023 - Annual Report 2024, Note 16 'Investment securities', "
+              f"pp.114-115 - {AR_URLS['FY2024']}; FY2023/FY2022 - Annual Report 2023, Note 15 'Investment "
+              f"securities (Applicable to Bank only)', p.108 - {AR_URLS['FY2023']}; FY2022/FY2021/FY2020 - Annual "
+              f"Report 2022, Note 14 'Debt securities (Applicable to Bank only)', p.136 - {AR_URLS['FY2022']}. "
+              "All years to date are backed 100% by UK Gilts/Treasury bills except FY2023-FY2025, which also hold "
+              "US money market funds, and FY2025, which additionally holds senior CLO tranches and long-term "
+              "gilts at amortised cost (the Bank's first amortised-cost investment securities; all prior years' "
+              "holdings were entirely at FVOCI).",
     rows=bs_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=68,

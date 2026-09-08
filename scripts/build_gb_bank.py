@@ -130,7 +130,13 @@ balance_sheet_rows = [
     ("DATA", "Cash and cash equivalents / balances at central banks", {"FY2025": 475776, "FY2024": 419999, "FY2023": 287322, "FY2022": 22030, "FY2021": 4940}),
     ("DATA", "Loans and advances to banks / credit institutions", {"FY2025": 29695, "FY2024": 3642, "FY2023": 390, "FY2022": 446, "FY2021": 2644}),
     ("DATA", "Loans and advances to customers", {"FY2025": 464042, "FY2024": 86293, "FY2023": 25388}),
-    ("DATA", "Debt securities", {"FY2025": 1595626, "FY2024": 645254, "FY2023": 19731, "FY2022": 10477, "FY2021": 9498}),
+    ("DATA", "Total debt securities", {"FY2025": 1595626, "FY2024": 645254, "FY2023": 19731, "FY2022": 10477, "FY2021": 9498}),
+    ("DATA", "Debt securities - Issued by public bodies (amortised cost)", {"FY2025": 129870, "FY2024": 80362, "FY2023": 19731, "FY2022": 10477, "FY2021": 9498}),
+    ("DATA", "Debt securities - Covered bonds (amortised cost)", {"FY2025": 378252, "FY2024": 256810}),
+    ("DATA", "Debt securities - RMBS bonds (amortised cost)", {"FY2025": 837188, "FY2024": 287096}),
+    ("DATA", "Debt securities - Other bonds (amortised cost)", {"FY2025": 44218, "FY2024": 20986}),
+    ("DATA", "Debt securities - Hedged item (amortised cost)", {"FY2025": 191}),
+    ("DATA", "Debt securities - Other bonds (fair value through profit or loss)", {"FY2025": 205907}),
     ("DATA", "Investments", {"FY2025": 3714}),
     ("DATA", "Derivative financial instruments", {"FY2025": 5953, "FY2024": 1001}),
     ("DATA", "Goodwill", {"FY2025": 5497}),
@@ -166,10 +172,30 @@ bw.add_balance_sheet_sheet(
         "customers line in either year's own Balance Sheet) - genuinely nil, not a gap. FY2023's own report "
         "labelled the FY2022 comparative Total equity £22,147k; FY2024's own report restated the FY2023 "
         "comparative Accumulated losses to £(37,452)k, a £1k rounding difference from FY2023's own £(37,451)k - "
-        "FY2023's own originally-published figure is used here per project convention."
+        "FY2023's own originally-published figure is used here per project convention.\n\n"
+        "DEBT SECURITIES BREAKDOWN: the 'Debt securities - ...' sub-rows below the renamed 'Total debt "
+        "securities' line are transcribed from each year's own 'Debt securities' note in its Companies House "
+        "accounts, which splits the balance by issuer/instrument type (issued by public bodies / covered bonds "
+        "/ RMBS bonds / other bonds) and, from FY2025, by measurement basis (amortised cost vs fair value "
+        "through profit or loss): FY2021 Note 11 p.30 - 'Debt securities represents UK Treasury Bills which "
+        "are being held as high-quality liquid assets' - 100% Issued by public bodies, amortised cost - "
+        f"{AA2021_URL}; FY2022 Note 10 p.37 - 'UK Treasury Bills and UK Gilts' - 100% Issued by public bodies, "
+        f"amortised cost - {AA2022_URL}; FY2023 Note 10 p.41 - 'UK Treasury Bills and UK Gilts' - 100% Issued "
+        f"by public bodies, amortised cost - {AA2023_URL}; FY2024 Note 11 p.43 - 'UK Treasury Bills, "
+        "Supranational, Sovereign and Agency bonds (SSAs), Residential Mortgage Backed Securities (RMBS) and "
+        "Covered Bonds' - split across all 4 categories, entirely amortised cost (no fair-value line disclosed "
+        f"that year) - {AA2024_URL}; FY2025 (Consolidated) Note 12 p.66 - same 4 categories plus a £191k "
+        "'Debt securities - hedged item' line, all measured at amortised cost, plus a separate £205,907k "
+        f"'Other bonds' line newly measured at fair value through profit or loss - {AA2025_URL}. Each year's "
+        "sub-rows sum exactly to that year's headline 'Total debt securities' line. ISSUER-TYPE CAVEAT: the "
+        "'Issued by public bodies' line is UK-government-only (UK Treasury Bills / UK Gilts) per FY2021-FY2023's "
+        "own narrower note wording, but FY2024/FY2025's own note broadens the same line's composition to include "
+        "Supranational, Sovereign and Agency (SSA) bonds - the note does not separately quantify the UK "
+        "government vs supranational/agency split within that combined line in either year, so it is shown as "
+        "one line as reported, matching each year's own disclosure."
     ),
     first_col_width=64,
-    source_height=460,
+    source_height=620,
 )
 
 # ---------------------------------------------------------------

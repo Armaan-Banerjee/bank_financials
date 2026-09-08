@@ -74,6 +74,37 @@ def sources():
     )
 
 
+INVESTMENT_SECURITIES_NOTE = (
+    "INVESTMENT SECURITIES BREAKDOWN: the 'Investment securities - ...' sub-rows below the renamed 'Total "
+    "Investment securities' line are transcribed from Note 3.9 'Investment securities' of each year's own "
+    "Notes to the Financial Statements (Note 3.11 in the FY2019 Annual Statement, which uses different note "
+    "numbering), which splits the balance both by measurement basis (Available for Sale, i.e. mark-to-"
+    "market / Held to Maturity, i.e. amortised cost) and by issuer type (Government Issued vs Other public "
+    "sector securities & corporates):\n"
+    f"FY2025/FY2024: Note 3.9, p.52 - {FS2025}\n"
+    f"FY2023/FY2022: Note 3.9, p.51 - {FS2023}\n"
+    f"FY2021: Note 3.9, p.47 - {FS2021}\n"
+    f"FY2020: Note 3.9, p.47 - {FS2020} (used in preference to the FY2021 report's own FY2020 comparative "
+    "column, which nets a 'Depreciation in Mark to market' line into the Available for Sale carrying "
+    f"amounts differently but sums to the same totals - each year's own originally-published figures are "
+    "used, per project convention)\n"
+    f"FY2019: Note 3.11, p.43 - {FS2019} (cross-checked against the FY2020 report's own FY2019 comparative "
+    "column, Note 3.9, p.47, which shows the identical figures)\n\n"
+    "Each year's sub-rows sum exactly to that year's headline 'Total Investment securities' line. The "
+    "Available for Sale 'Loss due to market rate movement' line (a mark-to-market adjustment) is disclosed "
+    "as a single blended figure covering both issuer types, not split between Government Issued and Other "
+    "public sector securities & corporates, so it is shown as its own row rather than force-allocated - a "
+    "presentation choice of the source note, not a gap. Held to Maturity issuer-type rows are net of the "
+    "'fair value adjustment of hedged bonds' shown in the source table, so they already equal the source's "
+    "own 'Total' column per issuer type. FY2020 alone also carries a 'Collective provision' deduction line "
+    "(-£490k, a portfolio-level impairment allowance) not present in any other year; FY2019 and FY2020 do "
+    "not disclose a separate 'Loss due to market rate movement' line (their own report presents Available "
+    "for Sale carrying amounts net of any revaluation, with no separate adjustment line that year) - blank "
+    "cells reflect the note's own year-by-year composition, not a gap. No Government Issued Held to "
+    "Maturity holdings are disclosed for FY2025/FY2024/FY2023 (explicit nil/dash in the source note, shown "
+    "as 0)."
+)
+
 STATEMENTS_SOURCES = (
     "Sources - State Bank of India (UK) Limited Annual Report and Financial Statements, £'000:\n"
     f"FY2025/FY2024: Annual Report 2025, Income statement/Statement of comprehensive income/Statement of "
@@ -114,6 +145,8 @@ STATEMENTS_SOURCES = (
     "shown in the existing 'Profit/(loss) on sale of loans' row with FY2019 recorded as 0, matching the "
     "source's own dash."
 )
+
+BALANCE_SHEET_SOURCES = STATEMENTS_SOURCES + "\n\n" + INVESTMENT_SECURITIES_NOTE
 
 EQUITY_SOURCES = (
     "Sources - State Bank of India (UK) Limited Statement of Changes in Equity, £'000, chronological "
@@ -196,7 +229,13 @@ bw.add_balance_sheet_sheet(
         ("DATA", "Cash and balances with banks", {"FY2025": 70262, "FY2024": 90746, "FY2023": 144199, "FY2022": 86381, "FY2021": 113623, "FY2020": 72555, "FY2019": 19472}),
         ("DATA", "Loans and advances to banks", {"FY2025": 7752, "FY2024": 20607, "FY2023": 79912, "FY2022": 100000, "FY2021": 125000, "FY2020": 195000, "FY2019": 165712}),
         ("DATA", "Loans and advances to customers", {"FY2025": 1529812, "FY2024": 1415920, "FY2023": 1403369, "FY2022": 1201300, "FY2021": 1140238, "FY2020": 1101038, "FY2019": 1044412}),
-        ("DATA", "Investment securities", {"FY2025": 329255, "FY2024": 292784, "FY2023": 323130, "FY2022": 367831, "FY2021": 339418, "FY2020": 375150, "FY2019": 345303}),
+        ("DATA", "Total Investment securities", {"FY2025": 329255, "FY2024": 292784, "FY2023": 323130, "FY2022": 367831, "FY2021": 339418, "FY2020": 375150, "FY2019": 345303}),
+        ("DATA", "Investment securities - Government issued (Available for Sale, mark-to-market)", {"FY2025": 16231, "FY2024": 32262, "FY2023": 61488, "FY2022": 19622, "FY2021": 3662, "FY2020": 59963, "FY2019": 21948}),
+        ("DATA", "Investment securities - Other public sector securities & corporates (Available for Sale, mark-to-market)", {"FY2025": 203640, "FY2024": 125466, "FY2023": 123224, "FY2022": 86832, "FY2021": 50021, "FY2020": 18425, "FY2019": 0}),
+        ("DATA", "Investment securities - Loss due to market rate movement (Available for Sale, mark-to-market adjustment)", {"FY2025": -958, "FY2024": -3188, "FY2023": -6801, "FY2022": -3862, "FY2021": -92}),
+        ("DATA", "Investment securities - Government issued (Held to Maturity, amortised cost)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 20414, "FY2021": 19334, "FY2020": 21459, "FY2019": 7116}),
+        ("DATA", "Investment securities - Other public sector securities & corporates (Held to Maturity, amortised cost)", {"FY2025": 110342, "FY2024": 138244, "FY2023": 145219, "FY2022": 244825, "FY2021": 266493, "FY2020": 275793, "FY2019": 316239}),
+        ("DATA", "Investment securities - Collective provision (FY2020 only, see note)", {"FY2020": -490}),
         ("DATA", "Derivative financial instruments", {"FY2025": 14341, "FY2024": 13186, "FY2023": 12060, "FY2022": 8430, "FY2021": 25114, "FY2020": 0, "FY2019": 7194}),
         ("DATA", "Fixed assets (tangible & intangible)", {"FY2025": 3870, "FY2024": 4425, "FY2023": 3130, "FY2022": 3463, "FY2021": 2807, "FY2020": 3281, "FY2019": 3846}),
         ("DATA", "Other assets", {"FY2025": 4877, "FY2024": 5269, "FY2023": 11162, "FY2022": 8600, "FY2021": 9210, "FY2020": 10275, "FY2019": 9340}),
@@ -215,9 +254,9 @@ bw.add_balance_sheet_sheet(
         ("TOTAL", "Total equity", {"FY2025": 277460, "FY2024": 272262, "FY2023": 260152, "FY2022": 249606, "FY2021": 243817, "FY2020": 185689, "FY2019": 183137}),
         ("TOTAL", "Total liabilities and equity", {"FY2025": 1960169, "FY2024": 1842936, "FY2023": 1976962, "FY2022": 1776005, "FY2021": 1755410, "FY2020": 1757299, "FY2019": 1595279}),
     ],
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=64,
-    source_height=340,
+    source_height=480,
 )
 
 bw.add_income_statement_sheet(

@@ -390,6 +390,14 @@ income_statement_rows = [
     ("DATA", "Efficiency, quality and service initiatives (FY2010-FY2011 only, as disclosed)", {"FY2011": -11, "FY2010": -19}),
     ("DATA", "Other operating expenses (FY2009-FY2013)", {"FY2013": -477, "FY2012": -481, "FY2011": -442, "FY2010": -435, "FY2009": -419}),
     ("DATA", "Restructuring expenses (FY2012 only, as disclosed)", {"FY2012": -149}),
+    # Derived total-opex row bridging the two presentations: FY2014 onward, "Operating and
+    # administrative expenses" alone is the full operating-expense figure (nothing else precedes
+    # the profit TOTAL row for those years); FY2009-FY2013 predate that single-line presentation,
+    # so the full figure is the sum of that era's own sub-component rows above (Personnel +
+    # Depreciation + Efficiency initiatives (FY2010-FY2011 only) + Other operating + Restructuring
+    # (FY2012 only)) - see basis note.
+    ("TOTAL", "Total operating expenses (FY2014+ = 'Operating and administrative expenses' as reported; FY2009-FY2013 = sum of Personnel + Depreciation + Efficiency initiatives (FY2010-FY2011) + Other operating + Restructuring (FY2012) expenses, that era's own presentation)",
+     {"FY2026": -1462, "FY2025": -2126, "FY2023": -1173, "FY2022": -1069, "FY2021": -1202, "FY2020": -1101, "FY2019": -1703, "FY2018": -1246, "FY2017": -1250, "FY2016": -1311, "FY2015": -1234, "FY2014": -1105, "FY2013": -699, "FY2012": -874, "FY2011": -733, "FY2010": -726, "FY2009": -658}),
     ("TOTAL", "Operating profit before impairment losses", {"FY2026": 371, "FY2025": 615, "FY2023": 653, "FY2022": 642, "FY2021": 285, "FY2020": 334, "FY2019": 70, "FY2018": -235, "FY2017": -213, "FY2016": -313, "FY2015": -230, "FY2014": -142, "FY2013": 111, "FY2012": 123, "FY2011": 318, "FY2010": 410, "FY2009": 442}),
     ("DATA", "Impairment losses/(credit) on credit exposures", {"FY2026": -180, "FY2025": -429, "FY2023": -309, "FY2022": -52, "FY2021": 131, "FY2020": -507, "FY2019": -252, "FY2018": -41, "FY2017": -48, "FY2016": -39, "FY2015": -78, "FY2014": -74, "FY2013": -144, "FY2012": -737, "FY2011": -297, "FY2010": -362, "FY2009": -399}),
     ("TOTAL", "Group operating profit (FY2009-FY2010 only, as disclosed - see basis note)", {"FY2010": 48, "FY2009": 43}),
@@ -819,6 +827,7 @@ bw.add_rwa_breakdown_sheet(
     first_col_width=54,
     source_height=280,
     years=PILLAR3_YEARS,
+    unit_suffix=" (£m)",
 )
 
 metric(

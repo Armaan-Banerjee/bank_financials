@@ -139,6 +139,17 @@ class BankWorkbook:
             ws.column_dimensions[get_column_letter(i)].width = w
 
     def _write_source_cell(self, ws, row, ncols, text, height=150):
+        # openpyxl silently truncates any cell string past 32,767 chars
+        # (its own hard limit) rather than raising - caught the hard way in
+        # HD-078 (Co-operative Bank), where citation text had grown past it
+        # unnoticed. Fail loudly instead.
+        if text and len(text) > 32000:
+            raise ValueError(
+                f"Source citation text for sheet {ws.title!r} is {len(text)} "
+                "chars, over openpyxl's 32,767-char cell limit (32,000 "
+                "warning threshold) - it would be silently truncated. Trim "
+                "it before saving."
+            )
         cell = ws.cell(row=row, column=1, value=text)
         ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=ncols)
         cell.font = SOURCE_FONT

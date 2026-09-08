@@ -616,19 +616,13 @@ function equityMovementsChart(canvas, equity){
     label: labelFor[k], backgroundColor: colorFor(k),
     data: segments.map(seg => (seg.bars.find(b => b.bucket === k) || {}).value ?? 0),
   }));
-  // A handful of banks have two roll-forward segments landing on the same
-  // calendar-year label (e.g. a mid-year restatement checkpoint alongside
-  // the calendar year-end) - disambiguate with (i)/(ii) rather than showing
-  // two identical "FY2023" rows.
-  const yearCounts = {};
-  segments.forEach(s => { yearCounts[s.year] = (yearCounts[s.year] || 0) + 1; });
-  const yearSeen = {};
-  const rowLabels = segments.map(s => {
-    if (yearCounts[s.year] <= 1) return `FY${s.year}`;
-    yearSeen[s.year] = (yearSeen[s.year] || 0) + 1;
-    return `FY${s.year} (${'i'.repeat(yearSeen[s.year])})`;
-  });
-  new Chart(canvas, {
+  // `seg.year` is already unique and pre-formatted server-side (curate_
+  // equity_waterfall in build_deliverable.py) - a plain year or year range
+  // ("2013", "1999–2012") gets the usual "FY" prefix, but an archival
+  // same-year checkpoint disambiguated by its own date ("Feb 1998") reads
+  // fine as-is and would look broken as "FYFeb 1998".
+  const rowLabels = segments.map(s => /^\d/.test(s.year) ? `FY${s.year}` : s.year);
+  return new Chart(canvas, {
     type: 'bar',
     data: { labels: rowLabels, datasets },
     options: {
@@ -647,17 +641,54 @@ function equityMovementsChart(canvas, equity){
       },
     },
   });
-  return true;
 }
-function equityMixChart(canvas, equity){
-  const years = Object.keys(equity.mix_by_year || {}).sort();
-  if (!years.length) return false;
-  const comps = equity.components.filter(c => years.some(y => c in equity.mix_by_year[y]));
+// Same "recent by default, full history behind a toggle" treatment as
+// `mountHistoryChart` (capital deployment, income mix, etc.), adapted for
+// a horizontal one-row-per-segment chart whose natural size axis is
+// height, not width: archival segments (`start_year` before
+// ARCHIVE_HISTORY_CUTOFF - Union Bancaire Privee UK's own pre-2013
+// checkpoints, several of them undisclosed-movement gaps, PLUS any range
+// segment that starts archival even if it closes more recently) are
+// hidden by default rather than always rendered, so a bank with decades
+// of history doesn't force every viewer to scroll past it to reach the
+// recent years.
+function mountEquityMovementsChart(id, equity){
+  const host = document.getElementById(id);
+  if (!host) return;
+  const allSegments = (equity && equity.waterfall) || [];
+  const recentSegments = allSegments.filter(s => s.start_year == null || s.start_year >= ARCHIVE_HISTORY_CUTOFF);
+  const toggle = host.querySelector('[data-history-toggle]');
+  const caption = host.querySelector('[data-history-caption]');
+  const wrap = host.querySelector('.mini-chart-wrap');
+  const canvas = host.querySelector('canvas');
+  let fullHistory = false;
+  let chart = null;
+  function redraw(){
+    const shown = fullHistory ? allSegments : recentSegments;
+    wrap.style.height = `${Math.max(150, shown.length * 34 + 50)}px`;
+    if (chart) chart.destroy();
+    chart = equityMovementsChart(canvas, { ...equity, waterfall: shown }) || null;
+    if (toggle) toggle.textContent = fullHistory ? `Show FY${ARCHIVE_HISTORY_CUTOFF} onwards` : 'Show full available history';
+    if (caption) {
+      const oldestYear = allSegments.length ? Math.min(...allSegments.map(s => s.start_year).filter(y => y != null)) : null;
+      const newestYear = allSegments.length ? Math.max(...allSegments.map(s => s.end_year).filter(y => y != null)) : null;
+      caption.textContent = fullHistory
+        ? `Showing FY${oldestYear}–FY${newestYear}`
+        : `Showing FY${ARCHIVE_HISTORY_CUTOFF} onwards`;
+    }
+  }
+  if (toggle) toggle.addEventListener('click', () => { fullHistory = !fullHistory; redraw(); });
+  redraw();
+}
+function equityMixChart(canvas, equity, years){
+  const shown = years || Object.keys(equity.mix_by_year || {}).sort();
+  if (!shown.length) return false;
+  const comps = equity.components.filter(c => shown.some(y => c in equity.mix_by_year[y]));
   if (!comps.length) return false;
-  new Chart(canvas, {
+  return new Chart(canvas, {
     type: 'bar',
-    data: { labels: years, datasets: comps.map((c, i) => ({
-      label: c, data: years.map(y => equity.mix_by_year[y][c] ?? 0),
+    data: { labels: shown, datasets: comps.map((c, i) => ({
+      label: c, data: shown.map(y => equity.mix_by_year[y][c] ?? 0),
       backgroundColor: CATEGORICAL_PALETTE[i % CATEGORICAL_PALETTE.length],
     })) },
     options: {
@@ -672,7 +703,6 @@ function equityMixChart(canvas, equity){
       },
     },
   });
-  return true;
 }
 function equityChangesTableHtml(equity){
   if (!equity || !equity.rows || !equity.rows.length) {
@@ -793,10 +823,59 @@ function leverageChart(canvas, leverage){
   });
   return true;
 }
-function incomeVolatilityChart(canvas, iVol){
-  const years = Object.keys(iVol.yoy_change_pct||{}).sort();
+const ARCHIVE_HISTORY_CUTOFF = 2008;
+
+// Span of available history (max year - min year + 1), not a count of years
+// with actual data points - mirrors the same computation build_deliverable.py
+// uses for the banks.html "History available (yrs)" column.
+function compHistorySpan(comp){
+  const yrs = Object.keys(comp.years).map(Number);
+  return yrs.length ? (Math.max(...yrs) - Math.min(...yrs) + 1) : 0;
+}
+
+function historyChartHtml(id, years){
+  const hasArchive = years.some(y => Number(y) < ARCHIVE_HISTORY_CUTOFF);
+  const control = hasArchive ? `<div class="history-chart-control">
+    <button type="button" data-history-toggle>Show full available history</button>
+    <span data-history-caption>Showing FY${ARCHIVE_HISTORY_CUTOFF} onwards</span>
+  </div>` : '';
+  return `<div class="history-chart" id="${id}">${control}
+    <div class="history-chart-scroll"><div class="mini-chart-wrap tall"><canvas></canvas></div></div>
+  </div>`;
+}
+
+function mountHistoryChart(id, years, draw){
+  const host = document.getElementById(id);
+  if (!host) return;
+  const allYears = [...years].sort();
+  const recentYears = allYears.filter(y => Number(y) >= ARCHIVE_HISTORY_CUTOFF);
+  const toggle = host.querySelector('[data-history-toggle]');
+  const caption = host.querySelector('[data-history-caption]');
+  const wrap = host.querySelector('.mini-chart-wrap');
+  const canvas = host.querySelector('canvas');
+  let fullHistory = false;
+  let chart = null;
+  function redraw(){
+    const shownYears = fullHistory ? allYears : recentYears;
+    host.classList.toggle('showing-full-history', fullHistory);
+    // Preserve legible labels in archival mode instead of squeezing 50+
+    // annual observations into a standard dashboard card.
+    wrap.style.minWidth = fullHistory ? `${Math.max(720, shownYears.length * 44)}px` : '';
+    if (chart) chart.destroy();
+    chart = draw(canvas, shownYears);
+    if (toggle) toggle.textContent = fullHistory ? `Show FY${ARCHIVE_HISTORY_CUTOFF} onwards` : 'Show full available history';
+    if (caption) caption.textContent = fullHistory
+      ? `Showing FY${allYears[0]}–FY${allYears[allYears.length - 1]}`
+      : `Showing FY${ARCHIVE_HISTORY_CUTOFF} onwards`;
+  }
+  if (toggle) toggle.addEventListener('click', () => { fullHistory = !fullHistory; redraw(); });
+  redraw();
+}
+
+function incomeVolatilityChart(canvas, iVol, selectedYears){
+  const years = selectedYears || Object.keys(iVol.yoy_change_pct||{}).sort();
   if (!years.length) return false;
-  new Chart(canvas, {
+  return new Chart(canvas, {
     type: 'bar',
     data: { labels: years, datasets: [{
       label: 'YoY change in profit/(loss) for the year',
@@ -812,7 +891,6 @@ function incomeVolatilityChart(canvas, iVol){
       },
     },
   });
-  return true;
 }
 function efficiencyChart(canvas, efficiency){
   const windows = efficiency.windows||[];
@@ -1033,6 +1111,273 @@ function cashFlowChart(canvas, cashFlow){
   return true;
 }
 
+// ---- business-model.html ----
+const BUSINESS_MODEL_TAG_COLOR = { digital: "#2b5f63", traditional: "#1e3a5f", other: "#a6741f" };
+const BUSINESS_MODEL_TAG_LABEL = { digital: "Digital / challenger", traditional: "Traditional", other: "Fee / markets-driven" };
+// total_assets spans many orders of magnitude (a few million to over a
+// trillion £ across 145 banks of wildly different scale) - a linear axis
+// crushes every bank except the largest handful into an unreadable clump
+// against the origin, so it gets a logarithmic scale; the three % ratios
+// are already naturally bounded to a comparable range and stay linear.
+const BUSINESS_MODEL_Y_AXIS_OPTIONS = [
+  { key: "total_assets", label: "Total assets", fmt: (v) => fmtK(v), scaleType: "logarithmic" },
+  { key: "cost_to_income_pct", label: "Cost-to-income (%)", fmt: (v) => v + "%", scaleType: "linear" },
+  { key: "leverage_ratio_pct", label: "Leverage ratio (%)", fmt: (v) => v + "%", scaleType: "linear" },
+  { key: "rwa_to_assets_pct", label: "RWA / Total assets (%)", fmt: (v) => v + "%", scaleType: "linear" },
+];
+
+function renderBusinessModelPage(records){
+  const sorted = [...records].sort((a, b) => b.fee_share_pct - a.fee_share_pct);
+  const legend = Object.entries(BUSINESS_MODEL_TAG_LABEL)
+    .map(([tag, label]) => `<span><span class="sw" style="background:${BUSINESS_MODEL_TAG_COLOR[tag]}"></span>${label}</span>`).join('');
+
+  document.getElementById('app').innerHTML = `
+    ${blockOpen('Fee income share of total income', `${sorted.length} banks · fee / (fee + net interest), latest year each discloses both`)}
+    <div class="card">
+      <div class="view-toggle" id="bm-view-toggle">
+        <button type="button" data-view="bar" class="active">Ranked bar</button>
+        <button type="button" data-view="scatter">Scatter</button>
+      </div>
+      <div id="bm-bar-view">
+        <div class="mini-chart-wrap" id="bm-bar-chart" style="height:${Math.max(320, sorted.length * 20)}px"><canvas></canvas></div>
+      </div>
+      <div id="bm-scatter-view" hidden>
+        <div class="chart-controls">
+          <label for="bm-y-axis">Y-axis</label>
+          <select id="bm-y-axis">${BUSINESS_MODEL_Y_AXIS_OPTIONS.map(o => `<option value="${o.key}">${o.label}</option>`).join('')}</select>
+        </div>
+        <div class="mini-chart-wrap tall" id="bm-scatter-chart" style="height:420px"><canvas></canvas></div>
+      </div>
+      <div class="legend-row">${legend}</div>
+    </div>
+    ${blockClose()}
+  `;
+
+  let barChart = null, scatterChart = null;
+
+  function drawBar(){
+    const canvas = document.querySelector('#bm-bar-chart canvas');
+    barChart = new Chart(canvas, {
+      type: 'bar',
+      data: { labels: sorted.map(r => r.bank), datasets: [{
+        data: sorted.map(r => r.fee_share_pct),
+        backgroundColor: sorted.map(r => BUSINESS_MODEL_TAG_COLOR[r.bank_type]),
+      }] },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { min: 0, max: 100, title: { display: true, text: 'Fee income share of total income (%)' }, ticks: { callback: (v) => v + '%' }, grid: { color: '#edece7' } },
+          y: { grid: { display: false }, ticks: { font: { size: 9 } } },
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: (ctx) => {
+            const r = sorted[ctx.dataIndex];
+            return `${r.fee_share_pct}% fee share (FY${r.fee_share_year}) — ${BUSINESS_MODEL_TAG_LABEL[r.bank_type]}`;
+          } } },
+        },
+      },
+    });
+  }
+
+  function drawScatter(yKey){
+    const opt = BUSINESS_MODEL_Y_AXIS_OPTIONS.find(o => o.key === yKey);
+    // A log scale can't plot zero/negative - only relevant for total_assets,
+    // and every bank with a real Total assets row reports a positive value,
+    // so this drops no genuine data point.
+    const points = sorted.filter(r => r[yKey] != null && (opt.scaleType !== 'logarithmic' || r[yKey] > 0));
+    if (scatterChart) scatterChart.destroy();
+    const canvas = document.querySelector('#bm-scatter-chart canvas');
+    scatterChart = new Chart(canvas, {
+      type: 'scatter',
+      data: { datasets: Object.keys(BUSINESS_MODEL_TAG_LABEL).map((tag) => ({
+        label: BUSINESS_MODEL_TAG_LABEL[tag],
+        data: points.filter(r => r.bank_type === tag).map(r => ({ x: r.fee_share_pct, y: r[yKey], bank: r.bank })),
+        backgroundColor: BUSINESS_MODEL_TAG_COLOR[tag] + 'cc', borderColor: BUSINESS_MODEL_TAG_COLOR[tag],
+        pointRadius: 5, pointHoverRadius: 7,
+      })) },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { min: 0, max: 100, title: { display: true, text: 'Fee income share of total income (%)' }, ticks: { callback: (v) => v + '%' }, grid: { color: '#edece7' } },
+          y: { type: opt.scaleType, title: { display: true, text: opt.label }, grid: { color: '#edece7' } },
+        },
+        plugins: {
+          // The persistent .legend-row below the chart already carries the
+          // tag colors (and matches the bar view's legend, which has no
+          // per-dataset Chart.js legend of its own) - a second, duplicate
+          // legend here just repeats it.
+          legend: { display: false },
+          tooltip: { callbacks: { label: (ctx) => `${ctx.raw.bank}: ${ctx.raw.x}% fee share, ${opt.fmt(ctx.raw.y)}` } },
+        },
+      },
+    });
+  }
+
+  drawBar();
+  const toggle = document.getElementById('bm-view-toggle');
+  toggle.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-view]');
+    if (!btn) return;
+    toggle.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+    const isBar = btn.dataset.view === 'bar';
+    document.getElementById('bm-bar-view').hidden = !isBar;
+    document.getElementById('bm-scatter-view').hidden = isBar;
+    if (!isBar && !scatterChart) drawScatter(document.getElementById('bm-y-axis').value);
+  });
+  document.getElementById('bm-y-axis').addEventListener('change', (e) => drawScatter(e.target.value));
+  initCollapsibleBlocks();
+}
+
+// ---- investments.html ----
+const INVESTMENT_BASIS_COLOR = { amortised_cost: "#1e3a5f", mark_to_market: "#a6741f" };
+const INVESTMENT_BASIS_LABEL = { amortised_cost: "Amortised cost (hold to collect)", mark_to_market: "Mark to market (FVOCI / FVTPL / trading)" };
+const INVESTMENT_GOVT_COLOR = { government: "#1f6e52", other: "#5c6b73" };
+const INVESTMENT_GOVT_LABEL = { government: "Government / sovereign", other: "Other investment securities" };
+// Each view's scatter plots its own primary leg (% mark-to-market, %
+// government) on X against the SAME reusable y-axis candidates
+// business-model.html's scatter already offers - both pages share the same
+// per-bank size/efficiency fields (curate()'s _scatter_y_axis_fields), so
+// there's no reason to invent a second set of y-axis options.
+const INVESTMENT_SCATTER_X = {
+  "inv-basis": { field: "measurement_basis", key: "mark_to_market", label: "Mark-to-market share of investment book (%)", color: INVESTMENT_BASIS_COLOR.mark_to_market },
+  "inv-govt": { field: "government_vs_other", key: "government", label: "Government/sovereign share of investment securities (%)", color: INVESTMENT_GOVT_COLOR.government },
+};
+
+function renderInvestmentsPage(records){
+  document.getElementById('app').innerHTML = `
+    ${investmentBlockHtml('inv-basis', 'Measurement basis', INVESTMENT_BASIS_LABEL,
+      records.filter(r => r.measurement_basis).length,
+      'banks with an amortised-cost / mark-to-market split disclosed, latest year each discloses it')}
+    ${investmentBlockHtml('inv-govt', 'Government vs other investment securities', INVESTMENT_GOVT_LABEL,
+      records.filter(r => r.government_vs_other).length,
+      'banks that disclose a government/sovereign line separately from other investment securities, latest year')}
+  `;
+  drawInvestmentStackedBar('inv-basis', records, 'measurement_basis', INVESTMENT_BASIS_LABEL, INVESTMENT_BASIS_COLOR, 'amortised_cost');
+  drawInvestmentStackedBar('inv-govt', records, 'government_vs_other', INVESTMENT_GOVT_LABEL, INVESTMENT_GOVT_COLOR, 'government');
+  initInvestmentViewToggle('inv-basis', records);
+  initInvestmentViewToggle('inv-govt', records);
+  initCollapsibleBlocks();
+}
+
+function investmentBlockHtml(id, title, labelMap, count, hint){
+  const colorMap = id === 'inv-basis' ? INVESTMENT_BASIS_COLOR : INVESTMENT_GOVT_COLOR;
+  const legend = Object.entries(labelMap)
+    .map(([key, label]) => `<span><span class="sw" style="background:${colorMap[key]}"></span>${label}</span>`).join('');
+  const tagLegend = Object.entries(BUSINESS_MODEL_TAG_LABEL)
+    .map(([tag, label]) => `<span><span class="sw" style="background:${BUSINESS_MODEL_TAG_COLOR[tag]}"></span>${label}</span>`).join('');
+  return `
+    ${blockOpen(title, `${count} banks · ${hint}`)}
+    <div class="card">
+      <div class="view-toggle" id="${id}-view-toggle">
+        <button type="button" data-view="bar" class="active">Stacked bar</button>
+        <button type="button" data-view="scatter">Scatter</button>
+      </div>
+      <div id="${id}-bar-view">
+        <div class="mini-chart-wrap" id="${id}-chart" style="height:${Math.max(320, count * 20)}px"><canvas></canvas></div>
+        <div class="legend-row" style="margin-top:2px;"><span class="hint" style="margin-right:6px;">Bank name colored by:</span>${tagLegend}</div>
+      </div>
+      <div id="${id}-scatter-view" hidden>
+        <div class="chart-controls">
+          <label for="${id}-y-axis">Y-axis</label>
+          <select id="${id}-y-axis">${BUSINESS_MODEL_Y_AXIS_OPTIONS.map(o => `<option value="${o.key}">${o.label}</option>`).join('')}</select>
+        </div>
+        <div class="mini-chart-wrap tall" id="${id}-scatter-chart" style="height:420px"><canvas></canvas></div>
+        <div class="legend-row" style="margin-top:2px;">${tagLegend}</div>
+      </div>
+      <div class="legend-row">${legend}</div>
+    </div>
+    ${blockClose()}
+  `;
+}
+
+function drawInvestmentStackedBar(id, records, field, labelMap, colorMap, sortKey){
+  const rows = records.filter(r => r[field]).sort((a, b) => b[field][sortKey] - a[field][sortKey]);
+  const keys = Object.keys(labelMap);
+  const canvas = document.querySelector(`#${id}-chart canvas`);
+  if (!canvas || !rows.length) return;
+  new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: rows.map(r => r.bank),
+      datasets: keys.map(key => ({
+        label: labelMap[key],
+        data: rows.map(r => r[field][key]),
+        backgroundColor: colorMap[key],
+      })),
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { stacked: true, min: 0, max: 100, ticks: { callback: (v) => v + '%' }, grid: { color: '#edece7' } },
+        y: {
+          stacked: true, grid: { display: false },
+          ticks: { font: { size: 9 }, color: (ctx) => BUSINESS_MODEL_TAG_COLOR[rows[ctx.index].bank_type] || '#3a3a38' },
+        },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          label: (ctx) => {
+            const r = rows[ctx.dataIndex];
+            return `${ctx.dataset.label}: ${ctx.raw}% (FY${r[field].year})`;
+          },
+          footer: (items) => BUSINESS_MODEL_TAG_LABEL[rows[items[0].dataIndex].bank_type],
+        } },
+      },
+    },
+  });
+}
+
+const _investmentScatterCharts = {};
+
+function drawInvestmentScatter(id, records, yKey){
+  const xConf = INVESTMENT_SCATTER_X[id];
+  const opt = BUSINESS_MODEL_Y_AXIS_OPTIONS.find(o => o.key === yKey);
+  const rows = records.filter(r => r[xConf.field] && r[yKey] != null && (opt.scaleType !== 'logarithmic' || r[yKey] > 0));
+  if (_investmentScatterCharts[id]) _investmentScatterCharts[id].destroy();
+  const canvas = document.querySelector(`#${id}-scatter-chart canvas`);
+  _investmentScatterCharts[id] = new Chart(canvas, {
+    type: 'scatter',
+    data: { datasets: Object.keys(BUSINESS_MODEL_TAG_LABEL).map((tag) => ({
+      label: BUSINESS_MODEL_TAG_LABEL[tag],
+      data: rows.filter(r => r.bank_type === tag)
+        .map(r => ({ x: r[xConf.field][xConf.key], y: r[yKey], bank: r.bank, year: r[xConf.field].year })),
+      backgroundColor: BUSINESS_MODEL_TAG_COLOR[tag] + 'cc', borderColor: BUSINESS_MODEL_TAG_COLOR[tag],
+      pointRadius: 5, pointHoverRadius: 7,
+    })) },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { min: 0, max: 100, title: { display: true, text: xConf.label }, ticks: { callback: (v) => v + '%' }, grid: { color: '#edece7' } },
+        y: { type: opt.scaleType, title: { display: true, text: opt.label }, grid: { color: '#edece7' } },
+      },
+      plugins: {
+        // Points are colored by bank_type here (unlike the stacked bar,
+        // which is already using its 2 colors for the composition legs) -
+        // the persistent tag legend below the chart carries this, so the
+        // built-in per-dataset legend would just duplicate it.
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.raw.bank}: ${ctx.raw.x}% (FY${ctx.raw.year}), ${opt.fmt(ctx.raw.y)}` } },
+      },
+    },
+  });
+}
+
+function initInvestmentViewToggle(id, records){
+  const toggle = document.getElementById(`${id}-view-toggle`);
+  toggle.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-view]');
+    if (!btn) return;
+    toggle.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+    const isBar = btn.dataset.view === 'bar';
+    document.getElementById(`${id}-bar-view`).hidden = !isBar;
+    document.getElementById(`${id}-scatter-view`).hidden = isBar;
+    if (!isBar && !_investmentScatterCharts[id]) drawInvestmentScatter(id, records, document.getElementById(`${id}-y-axis`).value);
+  });
+  document.getElementById(`${id}-y-axis`).addEventListener('change', (e) => drawInvestmentScatter(id, records, e.target.value));
+}
+
 // ---- sidebar: nav + compact search only (the full bank list lives on
 // banks.html now, not in the sidebar, so it stays a fixed size regardless
 // of how many banks the real build eventually covers) ----
@@ -1041,6 +1386,8 @@ function renderSidebar(activeNav, banksIndex){
   document.getElementById('sidebar-nav').innerHTML = `
     <a href="comparison.html" class="${activeNav==='comparison'?'active':''}">Comparison</a>
     <a href="banks.html" class="${activeNav==='banks'?'active':''}">Banks</a>
+    <a href="business-model.html" class="${activeNav==='business-model'?'active':''}">Business model</a>
+    <a href="investments.html" class="${activeNav==='investments'?'active':''}">Investments</a>
   `;
   const wrap = document.getElementById('bank-search-wrap');
   wrap.innerHTML = `
@@ -1073,8 +1420,8 @@ function blockClose(){ return `</div></div>`; }
 // liquidity & RWA" bundles 4 genuinely distinct comparisons). Native
 // <details>/<summary> - no extra JS wiring needed, unlike .block's
 // click-to-toggle, and it degrades fine with JS disabled.
-function subOpen(title, hint){
-  return `<details class="subsection" open><summary><h3>${title}</h3>${hint ? `<span class="hint">${hint}</span>` : ''}</summary><div class="subsection-body">`;
+function subOpen(title, hint, startClosed){
+  return `<details class="subsection"${startClosed ? '' : ' open'}><summary><h3>${title}</h3>${hint ? `<span class="hint">${hint}</span>` : ''}</summary><div class="subsection-body">`;
 }
 function subClose(){ return `</div></details>`; }
 function initCollapsibleBlocks(){
@@ -1093,6 +1440,13 @@ function initCollapsibleBlocks(){
 // sharing one bank list across every section.
 function hasLoanData(bd){ return !!latestChartableLoanYear(bd.loan_composition); }
 function hasRwaData(bd){ return !!latestYear(bd.rwa_category_composition); }
+// Distinct from hasRwaData: a bank can have an RWA composition breakdown
+// (rwa_category_composition) for the latest year without ever having a
+// disclosed RWA/total-assets density series (rwa_to_assets_pct) - e.g.
+// Union Bancaire Privee UK. The trend chart/bank-picker needs its own,
+// narrower filter so banks with nothing to plot there don't still get a
+// checkbox and an empty line.
+function hasRwaDensityData(bd){ return Object.keys(bd.rwa_to_assets_pct||{}).length > 0; }
 function hasPillar3Sheets(bd, sheets){ return sheets.some(s => Object.keys((bd.pillar3||{})[s]||{}).length); }
 function hasCapitalDeployment(bd){ return !!latestChartableCapitalYear(bd.capital_deployment); }
 function hasCostBase(bd){ return !!latestYear(bd.cost_base); }
@@ -1105,6 +1459,7 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
   // shows on that bank's own per-bank page (see renderDrilldownPage).
   const loanBanks = banks.filter(b => data[b].loan_composition.kind === 'stage' && hasLoanData(data[b]));
   const rwaBanks = banks.filter(b => hasRwaData(data[b]));
+  const rwaDensityBanks = banks.filter(b => hasRwaDensityData(data[b]));
   const capitalBanks = banks.filter(b => hasPillar3Sheets(data[b], PILLAR3_CAPITAL_SHEETS));
   const liquidityBanks = banks.filter(b => hasPillar3Sheets(data[b], PILLAR3_LIQUIDITY_SHEETS));
   const deploymentBanks = banks.filter(b => hasCapitalDeployment(data[b]));
@@ -1170,8 +1525,8 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
 
   html += subOpen('RWA breakdown', `${rwaBanks.length} of ${banks.length} banks`);
   html += `<div class="card chart-card">
-    <div class="bank-picker" id="rwa-bank-picker">${rwaBanks.map(b => `<label><input type="checkbox" value="${b}"><span class="sw" style="background:${BANK_COLOR[b]}"></span>${b}</label>`).join('')}</div>
-    <div class="bank-picker-note">Trend line above compares up to ${RWA_PICKER_MAX} banks at once — pick which ones. All ${rwaBanks.length} banks with an RWA breakdown still appear in the composition cards below.</div>
+    <div class="bank-picker" id="rwa-bank-picker">${rwaDensityBanks.map(b => `<label><input type="checkbox" value="${b}"><span class="sw" style="background:${BANK_COLOR[b]}"></span>${b}</label>`).join('')}</div>
+    <div class="bank-picker-note">Trend line above compares up to ${RWA_PICKER_MAX} banks at once (${rwaDensityBanks.length} banks disclose an RWA/total-assets density series) — pick which ones. All ${rwaBanks.length} banks with an RWA breakdown still appear in the composition cards below.</div>
     <div class="mini-chart-wrap tall" data-chart="rwa-trend"><canvas></canvas></div>
   </div>`;
   html += `<div class="grid cols" style="margin-top:14px;" id="rwa-grid">`;
@@ -1338,7 +1693,7 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     const ok = year && rwaCatMiniChart(canvas, data[bank].rwa_category_composition[year]);
     if (!ok) el.outerHTML = '<div class="empty-note">No RWA category breakdown this year.</div>';
   });
-  initRwaBankPicker(document.getElementById('rwa-bank-picker'), document.querySelector('[data-chart="rwa-trend"] canvas'), rwaBanks, data);
+  initRwaBankPicker(document.getElementById('rwa-bank-picker'), document.querySelector('[data-chart="rwa-trend"] canvas'), rwaDensityBanks, data);
   document.querySelectorAll('[data-chart="pillar3-capital"]').forEach(el => {
     const bank = el.dataset.bank;
     const canvas = el.querySelector('canvas');
@@ -1377,70 +1732,71 @@ function renderDrilldownPage(bank, bankData){
     <div class="kpi"><div class="val" style="color:${lProfit==null?'inherit':(lProfit>=0?'var(--green)':'var(--red)')}">${lProfit!=null?fmtK(lProfit):'—'}</div><div class="lbl">Profit for the year${lProfitYear?' (FY'+lProfitYear+')':''}</div></div>
     <div class="kpi"><div class="val">${latestRwa!==null?latestRwa+'%':'—'}</div><div class="lbl">RWA / Total assets (latest)</div></div>
     <div class="kpi"><div class="val">${stage3Pct!==null?stage3Pct.toFixed(1)+'%':(comp.kind==='exposure_class'?'n/a — no stage data':'n/d')}</div><div class="lbl">Stage 3 share of book (latest)</div></div>
-    <div class="kpi"><div class="val">${Object.keys(comp.years).length}</div><div class="lbl">Years with loan-concentration data</div></div>
+    <div class="kpi"><div class="val">${compHistorySpan(comp)}</div><div class="lbl">Years of loan-concentration history available</div></div>
   </div>`;
 
-  html += `<div class="block"><div class="block-head"><h2>Loan concentration &amp; quality</h2><span class="hint">${bank}, by year</span></div><div class="card">`;
+  html += blockOpen('Loan concentration &amp; quality', `${bank}, by year`) + `<div class="card">`;
   const years = Object.keys(comp.years).sort();
   if (!years.length) {
     html += `<div class="empty-note">No loan concentration data disclosed for ${bank} in any year.</div>`;
   } else if (comp.kind === 'stage') {
-    html += `<div class="mini-chart-wrap tall" id="drilldown-stage-chart"><canvas></canvas></div>`;
+    html += historyChartHtml('drilldown-stage-chart', years);
   } else {
     html += `<div class="empty-note">No IFRS&nbsp;9 stage split disclosed — showing Pillar&nbsp;3 credit-risk exposure by class instead (a different, product-level concentration view).</div>`;
-    html += `<div class="mini-chart-wrap tall" id="drilldown-exposure-chart"><canvas></canvas></div>`;
+    html += historyChartHtml('drilldown-exposure-chart', years);
   }
   html += `<div style="margin-top:12px;">${coverageNplChipsHtml(bankData, lYear || latestCoverageYear(bankData))}</div>`;
-  html += `</div></div>`;
+  html += `</div>` + blockClose();
 
-  html += `<div class="block"><div class="block-head"><h2>RWA density</h2><span class="hint">${bank}, by year</span></div>`;
-  html += `<div class="card chart-card"><div class="mini-chart-wrap tall"><canvas id="drilldown-rwa-trend"></canvas></div></div>`;
+  html += blockOpen('RWA density', `${bank}, by year`);
+  if (!rwaYears.length) {
+    html += `<div class="card"><div class="empty-note">No RWA / total assets figures disclosed for ${bank} in any year.</div></div>`;
+  } else {
+    html += `<div class="card chart-card"><div class="mini-chart-wrap tall"><canvas id="drilldown-rwa-trend"></canvas></div></div>`;
+  }
   const catYear = latestYear(bankData.rwa_category_composition);
   const isDerived = bank === 'Weatherbys';
-  html += `<div class="card" style="margin-top:14px;">
-    <h3 style="margin-top:0;font-size:13px;">RWA composition, ${catYear||'—'}${isDerived?` <span class="kind-flag" data-tip="This bank's RWA Breakdown is a documented derived reconstruction, not a directly-disclosed total — see IN-039/ST-037.">ⓘ</span>`:''}</h3>
-    <div class="mini-chart-wrap tall" id="drilldown-rwa-cat"><canvas></canvas></div>
-  </div>`;
-  html += `</div>`;
+  html += subOpen(`RWA composition, ${catYear||'—'}${isDerived?` <span class="kind-flag" data-tip="This bank's RWA Breakdown is a documented derived reconstruction, not a directly-disclosed total — see IN-039/ST-037.">ⓘ</span>`:''}`)
+    + `<div class="card"><div class="mini-chart-wrap tall" id="drilldown-rwa-cat"><canvas></canvas></div></div>`
+    + subClose();
+  html += blockClose();
 
   const pillar3 = bankData.pillar3 || {};
   const capitalP3Sheets = PILLAR3_CAPITAL_SHEETS.filter(s => Object.keys(pillar3[s]||{}).length);
   const liquidityP3Sheets = PILLAR3_LIQUIDITY_SHEETS.filter(s => Object.keys(pillar3[s]||{}).length);
-  html += `<div class="block"><div class="block-head"><h2>Capital &amp; liquidity (Pillar 3)</h2><span class="hint">${bank}, by year</span></div>`;
+  html += blockOpen('Capital &amp; liquidity (Pillar 3)', `${bank}, by year`);
   if (!capitalP3Sheets.length && !liquidityP3Sheets.length) {
     html += `<div class="card"><div class="empty-note">No Pillar 3 capital or liquidity ratios disclosed for ${bank} in any year.</div></div>`;
   } else {
-    html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:0 0 10px;">Capital ratios</h3>`;
-    html += `<div class="card chart-card">` + (capitalP3Sheets.length
+    html += subOpen('Capital ratios') + `<div class="card chart-card">` + (capitalP3Sheets.length
       ? `<div class="mini-chart-wrap tall" id="drilldown-pillar3-capital-chart"><canvas></canvas></div>`
-      : `<div class="empty-note">No capital ratios disclosed for ${bank} in any year.</div>`) + `</div>`;
-    html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Liquidity ratios</h3>`;
-    html += `<div class="card chart-card">` + (liquidityP3Sheets.length
+      : `<div class="empty-note">No capital ratios disclosed for ${bank} in any year.</div>`) + `</div>` + subClose();
+    html += subOpen('Liquidity ratios') + `<div class="card chart-card">` + (liquidityP3Sheets.length
       ? `<div class="mini-chart-wrap tall" id="drilldown-pillar3-liquidity-chart"><canvas></canvas></div>`
-      : `<div class="empty-note">No LCR/NSFR disclosed for ${bank} in any year.</div>`) + `</div>`;
+      : `<div class="empty-note">No LCR/NSFR disclosed for ${bank} in any year.</div>`) + `</div>` + subClose();
   }
   const leverage = bankData.leverage || {};
   const hasLeverage = Object.keys(leverage.equity_to_assets_pct||{}).length || Object.keys(leverage.leverage_ratio_reported_pct||{}).length;
   if (hasLeverage) {
-    html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Leverage</h3>`;
-    html += `<div class="card chart-card"><div class="mini-chart-wrap tall" id="drilldown-leverage-chart"><canvas></canvas></div></div>`;
+    html += subOpen('Leverage') + `<div class="card chart-card"><div class="mini-chart-wrap tall" id="drilldown-leverage-chart"><canvas></canvas></div></div>` + subClose();
   }
   const headroomTable = bankHeadroomTableHtml(bankData.headroom);
   if (headroomTable) {
-    html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Regulatory headroom</h3>`;
-    html += `<p class="sub" style="margin:0 0 10px;">How far above the applicable regulatory minimum (plus buffer) ${bank}'s latest disclosed ratio sits, per metric — an early-warning screen, not a forecast. <em>Change</em> is the move from the first to latest comparable year.</p>`;
-    html += `<div class="card" style="overflow-x:auto;padding:0;">${headroomTable}</div>`;
+    html += subOpen('Regulatory headroom')
+      + `<p class="sub" style="margin:0 0 10px;">How far above the applicable regulatory minimum (plus buffer) ${bank}'s latest disclosed ratio sits, per metric — an early-warning screen, not a forecast. <em>Change</em> is the move from the first to latest comparable year.</p>`
+      + `<div class="card" style="overflow-x:auto;padding:0;">${headroomTable}</div>`
+      + subClose();
   }
-  html += `</div>`;
+  html += blockClose();
 
   const capYears = Object.keys(bankData.capital_deployment).sort();
   const costYears = Object.keys(bankData.cost_base).sort();
   const lCostYear = costYears.length ? costYears[costYears.length-1] : null;
-  html += `<div class="block"><div class="block-head"><h2>Balance sheet &amp; P&amp;L</h2><span class="hint">${bank}, by year — where the bank is making money</span></div>`;
-  html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:0 0 10px;">Capital deployment</h3>`;
+  html += blockOpen('Balance sheet &amp; P&amp;L', `${bank}, by year — where the bank is making money`);
+  html += subOpen('Capital deployment');
   html += `<div class="card chart-card">`;
   html += capYears.length
-    ? `<div class="mini-chart-wrap tall" id="drilldown-capital-chart"><canvas></canvas></div>
+    ? `${historyChartHtml('drilldown-capital-chart', capYears)}
        <div class="legend-row">
          <span><span class="sw" style="background:${ASSET_COLOR.cash_pct_of_assets}"></span>Cash</span>
          <span><span class="sw" style="background:${ASSET_COLOR.loans_pct_of_assets}"></span>Customer loans</span>
@@ -1448,127 +1804,145 @@ function renderDrilldownPage(bank, bankData){
          <span><span class="sw" style="background:${ASSET_COLOR.other}"></span>Other assets</span>
        </div>`
     : `<div class="empty-note">No capital-deployment data disclosed for ${bank} in any year.</div>`;
-  html += `</div>`;
+  html += `</div>` + subClose();
 
   const incomeYears = Object.keys(bankData.income_breakdown||{}).sort();
-  html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Income mix</h3>`;
+  html += subOpen('Income mix');
   html += `<div class="card chart-card">`;
   html += incomeYears.length
-    ? `<div class="mini-chart-wrap tall" id="drilldown-income-chart"><canvas></canvas></div>
+    ? `${historyChartHtml('drilldown-income-chart', incomeYears)}
        <div class="legend-row">
          ${INCOME_ORDER.map(k => `<span><span class="sw" style="background:${INCOME_COLOR[k]}"></span>${k}</span>`).join('')}
        </div>`
     : `<div class="empty-note">No income-mix data disclosed for ${bank} in any year.</div>`;
-  html += `</div>`;
+  html += `</div>` + subClose();
 
   const iVol = bankData.income_volatility || {};
   const iVolYears = Object.keys(iVol.yoy_change_pct||{}).sort();
   if (iVolYears.length) {
-    html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Income volatility</h3>`;
+    html += subOpen('Income volatility');
     html += `<div class="card chart-card">`;
     if (iVol.volatility_stdev_of_yoy_pct != null) {
       html += `<div class="chip-row" style="margin-bottom:12px;"><span class="chip raw"><b>${iVol.volatility_stdev_of_yoy_pct.toFixed(1)}pp</b> YoY swing, std. dev.</span></div>`;
     }
-    html += `<div class="mini-chart-wrap tall" id="drilldown-income-volatility-chart"><canvas></canvas></div>`;
-    html += `</div>`;
+    html += historyChartHtml('drilldown-income-volatility-chart', iVolYears);
+    html += `</div>` + subClose();
   }
 
-  html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Cost base</h3>`;
+  html += subOpen('Cost base');
   html += `<div class="card" style="margin-bottom:14px;">${costBaseChipsHtml(lCostYear ? bankData.cost_base[lCostYear] : null)}</div>`;
   const hasCostToIncomeTrend = costYears.some(y => bankData.cost_base[y].cost_to_income_pct != null);
   if (hasCostToIncomeTrend) {
-    html += `<div class="card chart-card"><div class="mini-chart-wrap tall" id="drilldown-cti-chart"><canvas></canvas></div></div>`;
+    html += `<div class="card chart-card">${historyChartHtml('drilldown-cti-chart', costYears)}</div>`;
   }
-  html += `</div>`;
+  html += subClose();
+  html += blockClose();
 
   const cashFlowYears = Object.keys(bankData.cash_flow||{}).sort();
-  html += `<div class="block"><div class="block-head"><h2>Cash flow</h2><span class="hint">${bank}, by year</span></div>`;
+  html += blockOpen('Cash flow', `${bank}, by year`);
   html += `<div class="card chart-card">`;
   html += cashFlowYears.length
     ? `<div class="mini-chart-wrap tall" id="drilldown-cashflow-chart"><canvas></canvas></div>`
     : `<div class="empty-note">No cash flow statement data disclosed for ${bank} in any year.</div>`;
-  html += `</div></div>`;
+  html += `</div>` + blockClose();
 
   const equity = bankData.equity_changes;
   const hasMovements = equity && equity.waterfall && equity.waterfall.length;
-  html += `<div class="block"><div class="block-head"><h2>Statement of Changes in Equity</h2><span class="hint">${bank}, chronological roll-forward</span></div>`;
+  html += blockOpen('Statement of Changes in Equity', `${bank}, chronological roll-forward`);
   if (hasMovements) {
-    // One horizontal row per fiscal year plus room for the bottom legend -
-    // the fixed 150px "tall" wrap (sized for line/vertical-bar charts) left
-    // no room for the legend once there were more than ~3 years of rows.
-    const movementsHeight = Math.max(150, equity.waterfall.length * 34 + 50);
-    html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:0 0 10px;">Where each year's equity change came from</h3>`;
-    html += `<div class="card chart-card"><div class="mini-chart-wrap" style="height:${movementsHeight}px" id="drilldown-equity-movements"><canvas></canvas></div></div>`;
+    // Same recent-by-default / full-history-behind-a-toggle treatment as
+    // the capital deployment and income mix charts below (see
+    // `mountEquityMovementsChart`) - archival, pre-cutoff segments (some
+    // of which are undisclosed-movement gaps, e.g. Union Bancaire Privee
+    // UK's own pre-2013 checkpoints) are hidden by default.
+    const hasArchive = equity.waterfall.some(s => s.start_year != null && s.start_year < ARCHIVE_HISTORY_CUTOFF);
+    const control = hasArchive ? `<div class="history-chart-control">
+      <button type="button" data-history-toggle>Show full available history</button>
+      <span data-history-caption>Showing FY${ARCHIVE_HISTORY_CUTOFF} onwards</span>
+    </div>` : '';
+    html += subOpen('Where each year\'s equity change came from');
+    html += `<div class="card chart-card"><div class="history-chart" id="drilldown-equity-movements">${control}<div class="mini-chart-wrap"><canvas></canvas></div></div></div>` + subClose();
   }
-  html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Equity mix over time</h3>`;
-  html += `<div class="card chart-card">` + (equity && equity.mix_by_year && Object.keys(equity.mix_by_year).length
-    ? `<div class="mini-chart-wrap tall" id="drilldown-equity-mix"><canvas></canvas></div>`
-    : `<div class="empty-note">No year-by-year equity composition available for ${bank}.</div>`) + `</div>`;
-  html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:24px 0 10px;">Full roll-forward</h3>`;
-  html += `<div class="card">${equityChangesTableHtml(equity)}</div></div>`;
+  const mixYears = equity && equity.mix_by_year ? Object.keys(equity.mix_by_year) : [];
+  html += subOpen('Equity mix over time');
+  html += `<div class="card chart-card">` + (mixYears.length
+    ? historyChartHtml('drilldown-equity-mix', mixYears)
+    : `<div class="empty-note">No year-by-year equity composition available for ${bank}.</div>`) + `</div>` + subClose();
+  html += subOpen('Full roll-forward', `${equity && equity.rows ? equity.rows.length : ''} rows`, true);
+  html += `<div class="card">${equityChangesTableHtml(equity)}</div>` + subClose();
+  html += blockClose();
 
   if (bankData.source_workbook) {
-    html += `<div class="block"><div class="block-head"><h2>Full workbook</h2><span class="hint">${bank}, every sheet as published</span></div>
+    html += blockOpen('Full workbook', `${bank}, every sheet as published`) + `
       <div class="card" style="padding:0;">
         <iframe src="workbook-${slugify(bank)}.html" style="width:100%;height:560px;border:0;display:block;" loading="lazy" title="${bank} workbook"></iframe>
       </div>
       <div class="workbook-link-block"><a href="../../../banks/${encodeURIComponent(bankData.source_workbook)}">Open the full workbook (.xlsx) for ${bank} ↗</a></div>
-    </div>`;
+    ` + blockClose();
   }
 
   document.getElementById('app').innerHTML = html;
+  initCollapsibleBlocks();
 
   if (capitalP3Sheets.length) pillar3TrendChart(document.querySelector('#drilldown-pillar3-capital-chart canvas'), pillar3, PILLAR3_CAPITAL_SHEETS);
   if (liquidityP3Sheets.length) pillar3TrendChart(document.querySelector('#drilldown-pillar3-liquidity-chart canvas'), pillar3, PILLAR3_LIQUIDITY_SHEETS);
   if (hasLeverage) leverageChart(document.querySelector('#drilldown-leverage-chart canvas'), leverage);
-  if (iVolYears.length) incomeVolatilityChart(document.querySelector('#drilldown-income-volatility-chart canvas'), iVol);
+  if (iVolYears.length) mountHistoryChart('drilldown-income-volatility-chart', iVolYears,
+    (canvas, chartYears) => incomeVolatilityChart(canvas, iVol, chartYears));
   if (cashFlowYears.length) cashFlowChart(document.querySelector('#drilldown-cashflow-chart canvas'), bankData.cash_flow);
-  if (hasMovements) equityMovementsChart(document.querySelector('#drilldown-equity-movements canvas'), equity);
-  if (equity) equityMixChart(document.querySelector('#drilldown-equity-mix canvas'), equity);
+  if (hasMovements) mountEquityMovementsChart('drilldown-equity-movements', equity);
+  if (mixYears.length) mountHistoryChart('drilldown-equity-mix', mixYears,
+    (canvas, chartYears) => equityMixChart(canvas, equity, chartYears));
 
   if (comp.kind === 'stage' && years.length) {
-    const totalsByYear = years.map(y => {
-      const t = {stage_1:0,stage_2:0,stage_3:0};
-      Object.values(comp.years[y]).forEach(c => Object.entries(c).forEach(([k,v]) => { if (k in t) t[k]+=v; }));
-      return t;
-    });
-    new Chart(document.querySelector('#drilldown-stage-chart canvas'), {
-      type: 'bar',
-      data: { labels: years, datasets: [
-        {label:'Stage 1', data: totalsByYear.map(t=>t.stage_1), backgroundColor: STAGE_COLOR.stage_1},
-        {label:'Stage 2', data: totalsByYear.map(t=>t.stage_2), backgroundColor: STAGE_COLOR.stage_2},
-        {label:'Stage 3', data: totalsByYear.map(t=>t.stage_3), backgroundColor: STAGE_COLOR.stage_3},
-      ]},
-      options: { responsive:true, maintainAspectRatio:false,
-        scales: { x:{stacked:true, grid:{display:false}}, y:{stacked:true, grid:{color:'#edece7'}} },
-        plugins: { legend: { display:true, position:'bottom' } },
-      },
+    mountHistoryChart('drilldown-stage-chart', years, (canvas, chartYears) => {
+      const totalsByYear = chartYears.map(y => {
+        const t = {stage_1:0,stage_2:0,stage_3:0};
+        Object.values(comp.years[y]).forEach(c => Object.entries(c).forEach(([k,v]) => { if (k in t) t[k]+=v; }));
+        return t;
+      });
+      return new Chart(canvas, {
+        type: 'bar',
+        data: { labels: chartYears, datasets: [
+          {label:'Stage 1', data: totalsByYear.map(t=>t.stage_1), backgroundColor: STAGE_COLOR.stage_1},
+          {label:'Stage 2', data: totalsByYear.map(t=>t.stage_2), backgroundColor: STAGE_COLOR.stage_2},
+          {label:'Stage 3', data: totalsByYear.map(t=>t.stage_3), backgroundColor: STAGE_COLOR.stage_3},
+        ]},
+        options: { responsive:true, maintainAspectRatio:false,
+          scales: { x:{stacked:true, grid:{display:false}}, y:{stacked:true, grid:{color:'#edece7'}} },
+          plugins: { legend: { display:true, position:'bottom' } },
+        },
+      });
     });
   } else if (comp.kind === 'exposure_class' && years.length) {
-    const cats = [...new Set(years.flatMap(y => Object.keys(comp.years[y])))];
-    new Chart(document.querySelector('#drilldown-exposure-chart canvas'), {
-      type: 'bar',
-      data: { labels: years, datasets: cats.map((cat,i) => ({
-        label: cat, data: years.map(y => comp.years[y][cat] ?? 0),
-        backgroundColor: CATEGORICAL_PALETTE[i % CATEGORICAL_PALETTE.length],
-      })) },
-      options: { responsive:true, maintainAspectRatio:false,
-        scales: { x:{stacked:true, grid:{display:false}}, y:{stacked:true, grid:{color:'#edece7'}} },
-        plugins: { legend: { display:true, position:'bottom', labels:{boxWidth:10, font:{size:10}} } },
-      },
+    mountHistoryChart('drilldown-exposure-chart', years, (canvas, chartYears) => {
+      const cats = [...new Set(chartYears.flatMap(y => Object.keys(comp.years[y])))];
+      return new Chart(canvas, {
+        type: 'bar',
+        data: { labels: chartYears, datasets: cats.map((cat,i) => ({
+          label: cat, data: chartYears.map(y => comp.years[y][cat] ?? 0),
+          backgroundColor: CATEGORICAL_PALETTE[i % CATEGORICAL_PALETTE.length],
+        })) },
+        options: { responsive:true, maintainAspectRatio:false,
+          scales: { x:{stacked:true, grid:{display:false}}, y:{stacked:true, grid:{color:'#edece7'}} },
+          plugins: { legend: { display:true, position:'bottom', labels:{boxWidth:10, font:{size:10}} } },
+        },
+      });
     });
   }
 
-  new Chart(document.getElementById('drilldown-rwa-trend'), {
-    type: 'line',
-    data: { labels: rwaYears.map(([y])=>y), datasets: [{
-      label: bank, data: rwaYears.map(([,v])=>v),
-      borderColor: BANK_COLOR[bank] || '#2563eb', backgroundColor: BANK_COLOR[bank] || '#2563eb', tension:0.15, pointRadius:4,
-    }] },
-    options: { responsive:true, maintainAspectRatio:false,
-      scales: { y:{ ticks:{callback: v=>v+'%'}, grid:{color:'#edece7'} }, x:{grid:{display:false}} },
-    },
-  });
+  if (rwaYears.length) {
+    new Chart(document.getElementById('drilldown-rwa-trend'), {
+      type: 'line',
+      data: { labels: rwaYears.map(([y])=>y), datasets: [{
+        label: bank, data: rwaYears.map(([,v])=>v),
+        borderColor: BANK_COLOR[bank] || '#2563eb', backgroundColor: BANK_COLOR[bank] || '#2563eb', tension:0.15, pointRadius:4,
+      }] },
+      options: { responsive:true, maintainAspectRatio:false,
+        scales: { y:{ ticks:{callback: v=>v+'%'}, grid:{color:'#edece7'} }, x:{grid:{display:false}} },
+      },
+    });
+  }
 
   if (catYear) {
     const rows = bankData.rwa_category_composition[catYear].filter(r=>r.pct_of_total_rwa>0.05);
@@ -1587,10 +1961,11 @@ function renderDrilldownPage(bank, bankData){
   }
 
   if (capYears.length) {
-    const mixes = capYears.map(y => assetMixForYear(bankData.capital_deployment[y]));
-    new Chart(document.querySelector('#drilldown-capital-chart canvas'), {
+    mountHistoryChart('drilldown-capital-chart', capYears, (canvas, chartYears) => {
+    const mixes = chartYears.map(y => assetMixForYear(bankData.capital_deployment[y]));
+    return new Chart(canvas, {
       type: 'bar',
-      data: { labels: capYears, datasets: [
+      data: { labels: chartYears, datasets: [
         {label: ASSET_LABEL.cash_pct_of_assets, data: mixes.map(m=>m.cash_pct_of_assets), backgroundColor: ASSET_COLOR.cash_pct_of_assets},
         {label: ASSET_LABEL.loans_pct_of_assets, data: mixes.map(m=>m.loans_pct_of_assets), backgroundColor: ASSET_COLOR.loans_pct_of_assets},
         {label: ASSET_LABEL.treasury_investments_pct_of_assets, data: mixes.map(m=>m.treasury_investments_pct_of_assets), backgroundColor: ASSET_COLOR.treasury_investments_pct_of_assets},
@@ -1601,12 +1976,14 @@ function renderDrilldownPage(bank, bankData){
         plugins: { tooltip: { callbacks: { label: (ctx) => ctx.raw != null ? `${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%` : `${ctx.dataset.label}: n/d` } } },
       },
     });
+    });
   }
   if (incomeYears.length) {
-    const mixes = incomeYears.map(y => incomeMixPct(bankData.income_breakdown[y]));
-    new Chart(document.querySelector('#drilldown-income-chart canvas'), {
+    mountHistoryChart('drilldown-income-chart', incomeYears, (canvas, chartYears) => {
+    const mixes = chartYears.map(y => incomeMixPct(bankData.income_breakdown[y]));
+    return new Chart(canvas, {
       type: 'bar',
-      data: { labels: incomeYears, datasets: INCOME_ORDER.map(k => ({
+      data: { labels: chartYears, datasets: INCOME_ORDER.map(k => ({
         label: k, data: mixes.map(m => m[k] != null ? Math.max(0, m[k]) : null),
         backgroundColor: INCOME_COLOR[k],
       })) },
@@ -1615,18 +1992,19 @@ function renderDrilldownPage(bank, bankData){
         plugins: { tooltip: { callbacks: { label: (ctx) => ctx.raw != null ? `${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%` : `${ctx.dataset.label}: n/d` } } },
       },
     });
+    });
   }
   if (hasCostToIncomeTrend) {
-    new Chart(document.querySelector('#drilldown-cti-chart canvas'), {
+    mountHistoryChart('drilldown-cti-chart', costYears, (canvas, chartYears) => new Chart(canvas, {
       type: 'line',
-      data: { labels: costYears, datasets: [{
-        label: 'Cost-to-income', data: costYears.map(y => bankData.cost_base[y].cost_to_income_pct ?? null),
+      data: { labels: chartYears, datasets: [{
+        label: 'Cost-to-income', data: chartYears.map(y => bankData.cost_base[y].cost_to_income_pct ?? null),
         borderColor: BANK_COLOR[bank] || '#1e3a5f', backgroundColor: BANK_COLOR[bank] || '#1e3a5f', tension:0.15, spanGaps:true, pointRadius:4,
       }] },
       options: { responsive:true, maintainAspectRatio:false,
         scales: { y:{ ticks:{callback: v=>v+'%'}, grid:{color:'#edece7'} }, x:{grid:{display:false}} },
       },
-    });
+    }));
   }
 }
 
@@ -1654,21 +2032,19 @@ function renderGroupPage(groupData, banksIndex){
     <div class="kpi"><div class="val">${pnlYears.length}</div><div class="lbl">Years with every member reporting</div></div>
   </div>`;
 
-  html += `<div class="block"><div class="block-head"><h2>Members</h2><span class="hint">${group}</span></div><div class="card" style="padding:0;">
+  html += blockOpen('Members', group) + `<div class="card" style="padding:0;">
     <table class="bank-table"><thead><tr><th>Bank</th><th></th></tr></thead><tbody>
     ${meta.members.map(m => `<tr><td><a href="bank-${slugify(m.bank)}.html">${m.bank}</a></td><td>${m.caveat ? `<span class="hint">${m.caveat}</span>` : ''}</td></tr>`).join('')}
     </tbody></table>
-  </div></div>`;
+  </div>` + blockClose();
 
-  html += `<div class="block"><div class="block-head"><h2>Total P&amp;L</h2><span class="hint">summed only across years every member discloses</span></div>
-    <div class="card chart-card">` + (pnlYears.length
+  html += blockOpen('Total P&amp;L', 'summed only across years every member discloses') + `<div class="card chart-card">` + (pnlYears.length
       ? `<div class="mini-chart-wrap tall" id="group-pnl-chart"><canvas></canvas></div>`
-      : `<div class="empty-note">No year where every member of ${group} discloses profit or loss.</div>`) + `</div></div>`;
+      : `<div class="empty-note">No year where every member of ${group} discloses profit or loss.</div>`) + `</div>` + blockClose();
 
-  html += `<div class="block"><div class="block-head"><h2>Balance sheet contribution</h2><span class="hint">each member's own Total assets, by year</span></div>
-    <div class="card chart-card">` + (chartAssetYears.length
+  html += blockOpen('Balance sheet contribution', `each member's own Total assets, by year`) + `<div class="card chart-card">` + (chartAssetYears.length
       ? `<div class="mini-chart-wrap tall" id="group-assets-chart"><canvas></canvas></div>`
-      : `<div class="empty-note">No member of ${group} has a usable Total assets figure (non-GBP disclosures are excluded, not converted).</div>`) + `</div></div>`;
+      : `<div class="empty-note">No member of ${group} has a usable Total assets figure (non-GBP disclosures are excluded, not converted).</div>`) + `</div>` + blockClose();
 
   const membersWithAssetMix = meta.members.filter(m => latestChartableCapitalYear(meta.member_capital_deployment[m.bank]));
   const membersWithLiabilityMix = meta.members.filter(m => Object.keys(meta.member_liability_composition[m.bank] || {}).length);
@@ -1678,7 +2054,7 @@ function renderGroupPage(groupData, banksIndex){
   const combinedLiabYear = combinedLiabYears.length ? combinedLiabYears[combinedLiabYears.length-1] : null;
   const combinedLiabMix = combinedLiabYear ? meta.group_liability_composition[combinedLiabYear] : null;
 
-  html += `<div class="block"><div class="block-head"><h2>What those assets &amp; liabilities are</h2><span class="hint">each member's own latest-year composition, plus the whole group combined</span></div>`;
+  html += blockOpen('What those assets &amp; liabilities are', `each member's own latest-year composition, plus the whole group combined`);
   html += `<h3 style="font-family:var(--font-serif);font-size:14px;margin:0 0 10px;">Assets</h3>`;
   if (combinedAssetMix) {
     html += `<p class="sub" style="margin:0 0 12px;">Combining every member's own £ figures for FY${combinedAssetYear}: <strong>${combinedAssetMix.loans_pct_of_assets.toFixed(1)}%</strong> of ${group}'s combined assets are customer loans, <strong>${combinedAssetMix.cash_pct_of_assets.toFixed(1)}%</strong> cash &amp; central bank balances, <strong>${combinedAssetMix.treasury_investments_pct_of_assets.toFixed(1)}%</strong> treasury investments, and <strong>${combinedAssetMix.other.toFixed(1)}%</strong> other assets.</p>`;
@@ -1702,30 +2078,28 @@ function renderGroupPage(groupData, banksIndex){
          ${LIABILITY_ORDER.map(k => `<span><span class="sw" style="background:${LIABILITY_COLOR[k]}"></span>${LIABILITY_LABEL[k]}</span>`).join('')}
        </div>`
     : `<div class="empty-note">No member of ${group} has a usable liability-mix figure.</div>`) + `</div>`;
-  html += `</div>`;
+  html += blockClose();
 
   const groupIncomeYears = Object.keys(meta.total_income_breakdown_by_year).sort();
-  html += `<div class="block"><div class="block-head"><h2>Where the group made its profit &amp; loss</h2><span class="hint">income mix, summed only across years every member discloses</span></div>
-    <div class="card chart-card">` + (groupIncomeYears.length
+  html += blockOpen('Where the group made its profit &amp; loss', 'income mix, summed only across years every member discloses') + `<div class="card chart-card">` + (groupIncomeYears.length
       ? `<div class="mini-chart-wrap tall" id="group-income-chart"><canvas></canvas></div>
          <div class="legend-row">
            ${INCOME_ORDER.map(k => `<span><span class="sw" style="background:${INCOME_COLOR[k]}"></span>${k}</span>`).join('')}
          </div>`
-      : `<div class="empty-note">No year where every member of ${group} discloses an income mix.</div>`) + `</div></div>`;
+      : `<div class="empty-note">No year where every member of ${group} discloses an income mix.</div>`) + `</div>` + blockClose();
 
-  html += `<div class="block"><div class="block-head"><h2>Pillar 3 ratios — each member's contribution</h2><span class="hint">${group}, latest comparable year per metric</span></div>
-    <div class="card">${groupMetricChartsHtml(metrics)}</div>
-  </div>`;
+  html += blockOpen(`Pillar 3 ratios — each member's contribution`, `${group}, latest comparable year per metric`) + `<div class="card">${groupMetricChartsHtml(metrics)}</div>` + blockClose();
 
   const glmSheets = Object.keys(group_level_metrics || {});
   if (glmSheets.length) {
-    html += `<div class="block"><div class="block-head"><h2>Reported only at the parent-group level</h2><span class="hint">${glmSheets.length} metric${glmSheets.length===1?'':'s'} some members don't disclose solo</span></div>
+    html += blockOpen('Reported only at the parent-group level', `${glmSheets.length} metric${glmSheets.length===1?'':'s'} some members don't disclose solo`) + `
       <p class="sub" style="margin:0 0 12px;">Found while building each member's own workbook: these metrics aren't disclosed by every member on its own account, because the figure is only set/published at a wider group level. Where a sibling member's own disclosure IS that group-consolidated figure, it's shown here as the best available stand-in for the whole group.</p>
       <div class="card">${groupLevelMetricsHtml(group_level_metrics)}</div>
-    </div>`;
+    ` + blockClose();
   }
 
   document.getElementById('app').innerHTML = html;
+  initCollapsibleBlocks();
   mountGroupMetricCharts(metrics);
 
   if (pnlYears.length) {

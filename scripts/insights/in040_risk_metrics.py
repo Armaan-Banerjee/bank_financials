@@ -21,13 +21,94 @@ from statistics import pstdev
 
 from in009_analysis import _select_metric_observations
 from in012_absolute_analysis import write_json_atomic
-from statement_row_selection import bare_label as _bare_label, select_labeled_rows as _select_labeled_rows
+from statement_row_selection import (
+    bare_label as _bare_label,
+    own_label as _own_label,
+    select_labeled_rows as _select_labeled_rows,
+)
 
 STATEMENT_SHEETS = ("Balance Sheet", "Profit & Loss", "Asset Quality", "RWA Breakdown")
 
 
 def _numeric(observation):
     return observation is not None and observation.get("value_status") in ("numeric", "special_numeric") and observation.get("value_numeric") is not None
+
+
+_CURRENCY_RE = re.compile(r"£|GBP|\$|USD|€|EUR|CAD", re.I)
+_SCALE_THOUSAND_RE = re.compile(r"'?000")
+_SCALE_BILLION_RE = re.compile(r"\bbn\b|\bbillions?\b", re.I)
+# \bm\b alone misses two real shapes found in the wild: "USD million"
+# (ICICI Bank UK - "m" isn't its own token, it's the start of "million") and
+# "CAD MM" (TD Bank Europe - "MM" is a standard finance abbreviation for
+# millions, not matched by a single-m pattern at all). "millions?" (not just
+# "million") matters too - Mizuho International's Total RWAs sheet uses the
+# plural "£ millions", and \bmillion\b's trailing \b doesn't match between
+# the "n" and "s" of "millions" (both word characters, no boundary there),
+# so this unit silently fell through to the scale=1.0 default. That made
+# _normalized_ratio_pct compare Mizuho's RWA figure unscaled against its
+# Balance Sheet's correctly-scaled "£m" Total Assets, producing a
+# ~1,000,000x-too-small ratio that the implausibility guard then correctly
+# rejected as garbage - silently dropping every year's RWA/assets figure
+# even though both sides were genuinely disclosed (found via a 2026-09-07
+# systematic audit of the one-off empty-note messages).
+_SCALE_MILLION_RE = re.compile(r"\bm\b|\bmillions?\b|\bmm\b", re.I)
+
+
+def _currency_and_scale(unit):
+    """Parses a sheet's own unit string (e.g. "£m", "£'000", "£m, conv. from
+    USD") into (currency, scale_to_base_units). Added 2026-09-07 alongside
+    extract_metrics.py capturing `unit` for the Pillar 3 absolute-currency
+    sheets (Total RWAs, CET1/Tier 1/Total Capital) for the first time - a
+    cross-sheet ratio (RWA / Total assets, RWA category / Total RWAs) can
+    now be normalized to the same scale before dividing, rather than only
+    being able to reject the resulting nonsense ratio after the fact via a
+    plausibility-range guess. `currency` is None when the unit string names
+    no recognizable currency (so a caller can't tell whether it's genuinely
+    the same currency as the other side - safest to not normalize then);
+    `scale` defaults to 1.0 (bare/whole units) when no '000/m/bn marker is
+    found."""
+    if not unit:
+        return None, 1.0
+    currency = None
+    if _CURRENCY_RE.search(unit):
+        currency = "GBP" if re.search(r"£|GBP", unit, re.I) else (
+            "USD" if re.search(r"\$|USD", unit, re.I) else (
+                "EUR" if re.search(r"€|EUR", unit, re.I) else (
+                    "CAD" if re.search(r"CAD", unit, re.I) else None
+                )
+            )
+        )
+    if _SCALE_THOUSAND_RE.search(unit):
+        scale = 1_000.0
+    elif _SCALE_BILLION_RE.search(unit):
+        scale = 1_000_000_000.0
+    elif _SCALE_MILLION_RE.search(unit):
+        scale = 1_000_000.0
+    else:
+        scale = 1.0
+    return currency, scale
+
+
+def _normalized_ratio_pct(numerator, denominator):
+    """(numerator, denominator) are observations with their own `unit`
+    string - returns numerator/denominator*100 rescaled to the same base
+    units, or None when normalization can't be done with confidence (either
+    side has no captured unit at all, or the two sides name recognizable
+    but DIFFERENT currencies - never guesses a scale in either case; a
+    caller should fall back to its own pre-existing raw-ratio +
+    plausibility-range guard, unchanged, when this returns None)."""
+    num_unit, den_unit = numerator.get("unit"), denominator.get("unit")
+    if not num_unit or not den_unit:
+        return None
+    num_ccy, num_scale = _currency_and_scale(num_unit)
+    den_ccy, den_scale = _currency_and_scale(den_unit)
+    if num_ccy and den_ccy and num_ccy != den_ccy:
+        return None
+    den_value = float(denominator["value_numeric"]) * den_scale
+    if den_value == 0:
+        return None
+    num_value = float(numerator["value_numeric"]) * num_scale
+    return num_value / den_value * 100
 
 
 _TOTAL_ASSETS_RE = re.compile(r"total assets$", re.I)
@@ -39,7 +120,20 @@ _PROFIT_LOSS_EXACT = {
     "(loss)/profit for the year", "profit/(loss) for the year",
     "(loss) for the year", "profit for the period", "loss for the period",
 }
-_PROFIT_LOSS_RE = re.compile(r"(profit|loss)\s+for\s+the\s+(year|period)", re.I)
+# Allows a "/(...)" swing construction ("Profit/(loss) for the year",
+# "(Loss)/profit for the year") or a bare parenthesised word ("(Loss) for
+# the year") between the profit/loss word and "for the year" - the plain
+# \s+ literal boundary used to require the two to sit directly adjacent,
+# which silently excluded the single most common UK-bank phrasing for this
+# line ("Profit/(loss) for the year") since "Profit" is followed by
+# "/(loss)" rather than whitespace. Found via a 2026-09-07 user report that
+# Co-operative Bank's income-volatility chart was empty despite its
+# "Profit/(loss) for the year" row being present, numeric, and unambiguous
+# for FY2012-FY2024 - the include regex was silently dropping every
+# candidate for those years, leaving only its unrelated FY1972-FY1980
+# Group-basis rows (a different metric on a different consolidation basis)
+# to populate the series.
+_PROFIT_LOSS_RE = re.compile(r"(profit|loss)[\s/()]*for\s+the\s+(year|period)", re.I)
 _PROFIT_LOSS_EXCLUDE_RE = re.compile(r"discontinued|comprehensive|before tax", re.I)
 # "attributable"/"minority"/"non-controlling" used to be hard-excluded
 # alongside the above, to avoid picking a parent-only or NCI-split figure
@@ -55,7 +149,46 @@ _PROFIT_LOSS_SOFT_EXCLUDE_RE = re.compile(r"attributable|minority|non-controllin
 
 _RWA_CATEGORY_EXCLUDE_RE = re.compile(r"of which|total", re.I)
 _STAGE_RE = re.compile(r"stage\s*([123])\b", re.I)
-_COVERAGE_NPL_RE = re.compile(r"coverage ratio|npl ratio|non-?performing loan", re.I)
+# Broadened 2026-09-07 from the exact phrase "coverage ratio" (missed
+# HSBC UK Bank's own "ECL coverage - overall (total allowance / total
+# gross)", Coutts' "ECL provisions coverage - Overall coverage (%)",
+# National Westminster Bank's "ECL provision coverage ... - Stage 1
+# coverage", and 30+ other banks' own genuine coverage/NPL disclosures - a
+# puppeteer sweep of the live deliverable found 39 banks whose "no coverage/
+# NPL data" chart was empty despite their own Asset Quality sheet carrying
+# a real coverage figure, just phrased "X coverage" rather than "coverage
+# ratio"). Also covers "reserve ratio" (Handelsbanken's own "Credit loss
+# reserve ratio") and a Stage-3-as-% shape (Handelsbanken's "Proportion of
+# loans in Stage 3 (%)", RBC Europe's "Stage 2+3 as % of total gross
+# carrying amount") - both NPL-ratio equivalents under different wording,
+# since Stage 3/credit-impaired is this framework's NPL concept.
+_COVERAGE_NPL_RE = re.compile(
+    r"coverage|reserve ratio|npl ratio|non-?performing loan|"
+    r"stage\s*2?\+?3\s*as\s*a?\s*%|proportion.*stage\s*3",
+    re.I,
+)
+# Deliberately matched against the FULL section-prefixed label (not just a
+# row's own text) - unlike select_labeled_rows's single-winner selection,
+# this catalogue wants every row a bank files under a coverage/NPL-themed
+# SECTION, even when the row's own text doesn't repeat "coverage"/"NPL"
+# (e.g. "Coverage ratios (as disclosed) - Stage 3 as a % of gross core
+# loans subject to ECL"). What must still be excluded is a row that is
+# neither a ratio nor an NPL balance figure and only landed here via its
+# SECTION title - a P&L-style flow item (a "charge"/"release"/"movement"
+# figure - found via National Bank of Egypt UK's "Bad and doubtful debt
+# provision movement and non-performing loans" section, whose "Net
+# (release)/charge of provisions for bad and doubtful debts" row is a P&L
+# charge, not an NPL figure at all), or one of a few other concrete
+# non-ratio shapes found via Tandem's "Impairment and Coverage" section:
+# "Fair value adjustments" (a hedge-accounting P&L item), a bare "Net Loans
+# and Advances to Customers" balance (not a ratio, and already covered by
+# capital_deployment's loans series), and a bare "Provision for impairment"
+# balance/charge with no ratio qualifier attached.
+_COVERAGE_NPL_FLOW_EXCLUDE_RE = re.compile(
+    r"charge|release\)|movement|fair value adjustment|"
+    r"^net loans and advances|^provision for impairment$",
+    re.I,
+)
 # Boilerplate IFRS 9 stage-basis wording ("12-month ECL", "lifetime ECL",
 # "credit-impaired", "SICR") restates which stage a row belongs to - it's
 # redundant given _STAGE_RE already captured the stage number, and it
@@ -114,6 +247,26 @@ _STAGE_BASIS_EXTRA_RE = re.compile(
 # entirely, found in the same 2026-09-04 investigation as the BACB paren
 # fix above).
 _STAGE_SCOPE_NOTE_RE = re.compile(r"\(\s*incl\.?\s+poci[^)]*\)", re.I)
+# Phrases that mention "Stage N" only to relate a DIFFERENT, non-IFRS-9
+# classification to it - not a genuine per-stage row. TSB Bank's FY2014-2017
+# pre-IFRS 9 IAS 39 "Impaired loans" total is captioned "... broadly
+# equivalent to Stage 3 above"; British Arab Commercial Bank's pre-IFRS 9
+# impairment-provision rows are captioned "... not a Stage 1/2/3 equivalent,
+# see note" (explicitly disclaiming the mapping). Both phrasings contain a
+# literal "Stage N" that _STAGE_RE would otherwise match, mislabelling a
+# pre-IFRS 9 IAS 39 figure as a real IFRS 9 stage balance and, for TSB,
+# fabricating a spurious partial (stage_3-only) bar for years that have no
+# real stage split at all (IFRS 9 wasn't adopted until FY2018) - found via a
+# 2026-09-07 user report that TSB Bank's loan-concentration chart looked odd
+# before 2018. Stripped from the label before _STAGE_RE runs, rather than
+# excluded by row, so a label that ALSO carries a genuine trailing "Stage N"
+# marker elsewhere (e.g. a bank's "no equivalent stage table found ... -
+# Stage 1 gross exposure") still matches on that real marker.
+_STAGE_NON_MATCH_RE = re.compile(
+    r"(?:broadly\s+)?equivalent\s+to\s+stage\s*[123](?:\s*/\s*[123])*|"
+    r"not\s+a\s+stage\s*[123](?:\s*/\s*[123])*\s+equivalent",
+    re.I,
+)
 
 
 def _profit_loss_rank(label):
@@ -147,17 +300,68 @@ def _stage_num_and_category(label):
     category ("Gross carrying amount by IFRS 9 stage") into three, one per
     stage. A genuine metric-type descriptor that ISN'T stage-basis
     boilerplate (Metro Bank's "gross carrying amount") survives unchanged."""
-    match = _STAGE_RE.search(label)
+    cleaned = _STAGE_NON_MATCH_RE.sub("", label)
+    match = _STAGE_RE.search(cleaned)
     if not match:
         return None, None
-    without_stage = label[:match.start()] + label[match.end():]
+    without_stage = cleaned[:match.start()] + cleaned[match.end():]
     without_stage = _STAGE_BASIS_PAREN_RE.sub("", without_stage)
     without_stage = _STAGE_BASIS_BARE_RE.sub("", without_stage)
     without_stage = _STAGE_BASIS_EXTRA_RE.sub("", without_stage)
     without_stage = _STAGE_SCOPE_NOTE_RE.sub("", without_stage)
-    segments = [s.strip(" ,:()") for s in without_stage.split(" - ")]
+    segments = [_trim_stray_parens(s.strip(" ,:")) for s in _split_outside_parens(without_stage)]
     category = " - ".join(s for s in segments if s) or "Total"
     return match.group(1), category
+
+
+def _trim_stray_parens(s):
+    """Strip a leading "(" or trailing ")" left dangling (no matching
+    partner within this segment) by an earlier basis-wording removal - but
+    never a BALANCED trailing ")" that closes an opening "(" earlier in the
+    same segment. A blind strip(")") here ate the genuine closing paren of
+    Julian Hodge Bank's disclosure-scope footnote ("...IAS 39/UK GAAP total
+    provision above)"), since _split_outside_parens correctly kept that
+    whole parenthetical in one segment but the old strip(" ,:()") then
+    stripped its very real, balanced closing paren anyway - leaving an
+    unbalanced "(" whose category text then false-positived on a
+    ratio-indicating "/" downstream (found via a 2026-09-07 systematic audit
+    of the one-off empty-note messages)."""
+    while s.endswith(")") and s.count("(") < s.count(")"):
+        s = s[:-1]
+    while s.startswith("(") and s.count(")") < s.count("("):
+        s = s[1:]
+    return s
+
+
+def _split_outside_parens(text):
+    """Split on " - " the way the category-derivation above wants, but never
+    inside an open "(...)" - Julian Hodge Bank's disclosure-scope footnote
+    ("(IFRS 9 adopted 1 November 2018 - stage data only exists FY2019
+    onward...)") contains its own " - " inside the parenthetical, and a
+    naive split() breaks the footnote across segments; the per-segment
+    strip(" ,:()") then removes the footnote's own genuine closing paren
+    because it lands at a segment boundary, leaving every year's category an
+    unbalanced-paren string with a stray "/" inside it ("IAS 39/UK GAAP")
+    that downstream falsely reads as a ratio-indicating slash (found via a
+    2026-09-07 systematic audit of the one-off empty-note messages)."""
+    segments = []
+    depth = 0
+    start = 0
+    i = 0
+    while i < len(text):
+        ch = text[i]
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth = max(0, depth - 1)
+        elif depth == 0 and text[i:i + 3] == " - ":
+            segments.append(text[start:i])
+            i += 3
+            start = i
+            continue
+        i += 1
+    segments.append(text[start:])
+    return segments
 
 
 def loan_concentration_quality(observations):
@@ -175,6 +379,18 @@ def loan_concentration_quality(observations):
         label = item.get("row_label", "")
         stage_num, category = _stage_num_and_category(label)
         if stage_num is None:
+            continue
+        # A derived category string can retain a structural "of which:"
+        # prefix (an IN-039 label convention) even when the underlying
+        # figure is a genuine balance, not a ratio - build_deliverable.py's
+        # is_ratio_category() only sees this category text and blanket-
+        # excludes anything containing "of which", which silently dropped
+        # real impairment-allowance balances for FidBank UK and NatWest
+        # Markets. Checking the row's own value_raw for a literal "%" here
+        # (mirroring in009_analysis.py's _is_percent_value() pattern) is a
+        # more reliable ratio-vs-balance signal than the category name, so
+        # skip only rows that are actually percentages.
+        if "%" in str(item.get("value_raw") or ""):
             continue
         stage = f"stage_{stage_num}"
         # Banks disclose ECL/allowance/impairment/collateral rows as a
@@ -194,7 +410,10 @@ def loan_concentration_quality(observations):
             continue
         if item.get("value_status") not in ("numeric", "special_numeric"):
             continue
-        if not _COVERAGE_NPL_RE.search(item.get("row_label", "")):
+        label = item.get("row_label", "")
+        if not _COVERAGE_NPL_RE.search(label):
+            continue
+        if _COVERAGE_NPL_FLOW_EXCLUDE_RE.search(_own_label(label)):
             continue
         coverage_npl[item["frn"]].append({
             "year": item["fiscal_year"], "label": item["row_label"],
@@ -241,7 +460,12 @@ def rwa_density(observations):
         rwa = total_rwas.get(key)
         if rwa is None or float(rwa["value_numeric"]) == 0:
             continue
-        pct = round(float(item["value_numeric"]) / float(rwa["value_numeric"]) * 100, 2)
+        normalized = _normalized_ratio_pct(item, rwa)
+        pct = round(
+            normalized if normalized is not None
+            else float(item["value_numeric"]) / float(rwa["value_numeric"]) * 100,
+            2,
+        )
         row = {"label": label, "value": float(item["value_numeric"]), "pct_of_total_rwa": pct}
         if _RWA_CATEGORY_EXCLUDE_RE.search(bare):
             if "of which" not in bare.lower():
@@ -334,7 +558,12 @@ def rwa_density(observations):
         if assets is None or float(assets["value_numeric"]) == 0:
             continue
         frn, year = key
-        pct = round(float(rwa["value_numeric"]) / float(assets["value_numeric"]) * 100, 2)
+        normalized = _normalized_ratio_pct(rwa, assets)
+        pct = round(
+            normalized if normalized is not None
+            else float(rwa["value_numeric"]) / float(assets["value_numeric"]) * 100,
+            2,
+        )
         if pct > _IMPLAUSIBLE_RWA_DENSITY_PCT or pct < _IMPLAUSIBLE_RWA_DENSITY_LOW_PCT:
             implausible_skipped += 1
             continue
@@ -416,18 +645,31 @@ def income_volatility(observations):
     banks) - ambiguous bank-years (multiple equally-ranked candidates) are
     counted and skipped rather than guessed. Year-over-year swings and a
     per-bank volatility measure (population stdev of YoY % change) are
-    computed now; visualization is deferred to IN-046."""
+    computed now; visualization is deferred to IN-046.
+
+    require_kind="TOTAL" (added 2026-09-07) rejects a DATA row that merely
+    mentions "profit for the year" in passing - found via Co-operative
+    Bank's FY1972-1980 HD-078 block, whose DATA row "Operating profit/
+    Profit for the year (Group, before exceptional items)" is explicitly
+    NOT the bank's real profit-for-the-year figure (its own SECTION note
+    says the genuine row is deliberately left blank for these years, since
+    no Bank-only figure is disclosed and a Group figure would conflate two
+    consolidation bases) but still matched _PROFIT_LOSS_RE. Confirmed safe
+    against the other ~682 currently-selected bank-years, all of which are
+    already TOTAL rows."""
     combined_exclude_re = re.compile(
         _PROFIT_LOSS_EXCLUDE_RE.pattern + "|" + _PROFIT_LOSS_SOFT_EXCLUDE_RE.pattern, re.I
     )
     selected, ambiguous = _select_labeled_rows(
         observations, "Profit & Loss", _PROFIT_LOSS_RE, combined_exclude_re, rank=_profit_loss_rank,
+        require_kind="TOTAL",
     )
     # Bank-years with no clean (non-attributable) match fall back to the
     # attributable/NCI-labeled line rather than being left empty - see the
     # soft-exclude comment above.
     fallback_selected, _ = _select_labeled_rows(
         observations, "Profit & Loss", _PROFIT_LOSS_RE, _PROFIT_LOSS_EXCLUDE_RE, rank=_profit_loss_rank,
+        require_kind="TOTAL",
     )
     for key, item in fallback_selected.items():
         selected.setdefault(key, item)
@@ -444,6 +686,13 @@ def income_volatility(observations):
         years = sorted(values)
         changes = {}
         for left, right in zip(years, years[1:]):
+            if right - left != 1:
+                # Non-consecutive fiscal years (e.g. Co-operative Bank's
+                # FY1972-FY1980 Group-basis series followed by a FY2012+
+                # gap) aren't a real year-over-year swing - treating them
+                # as adjacent produced a nonsensical -146,814% "change"
+                # across the gap and inflated volatility accordingly.
+                continue
             if values[left] == 0:
                 continue
             changes[right] = round((values[right] - values[left]) / abs(values[left]) * 100, 2)

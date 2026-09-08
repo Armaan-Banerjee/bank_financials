@@ -13,6 +13,9 @@ P3_2023_URL = "https://www.ghanabank.co.uk/app/uploads/2024/11/GHIB-2023-Pillar-
 P3_2022_URL = "https://www.ghanabank.co.uk/app/uploads/2023/09/GHIB-2022-Pillar-3-Disclosures.pdf"
 P3_2021_URL = "https://www.ghanabank.co.uk/app/uploads/2022/10/GHIB-2021-Pillar-3-Disclosures.pdf"
 
+CH_2020_URL = "https://find-and-update.company-information.service.gov.uk/company/03468216/filing-history/MzI5NzMxNjk1NWFkaXF6a2N4/document?format=pdf&download=0"
+CH_2019_URL = "https://find-and-update.company-information.service.gov.uk/company/03468216/filing-history/MzI1OTU0MzQ4NmFkaXF6a2N4/document?format=pdf&download=0"
+
 CASH_FLOW_NOTE = (
     "Note: FY2023/FY2024/FY2025 statements include an additional adjustment line, 'Net interest "
     "income and other non-cash items', not present in the FY2021/FY2022 presentation - this is a "
@@ -112,6 +115,32 @@ ASSET_QUALITY_SOURCES = (
     + STATEMENTS_ENTITY_NOTE
 )
 
+GOV_OTHER_SPLIT_SOURCES = (
+    "'Government securities' / 'Other investment securities' sub-split of 'Total government and other "
+    "securities' - Ghana International Bank Plc's own 'Government and other securities' note, which breaks "
+    "the carrying amount down by issuer type, £:\n"
+    f"FY2025 & FY2024: Annual Report and Financial Statements 2025, Note 14, p.96-97 - Treasury bills, "
+    f"Supranational and multilateral development bank bonds, Other corporate bonds, African sovereign bonds "
+    f"- {AR2025_URL}\n"
+    f"FY2024 & FY2023: Annual Report and Financial Statements 2024, Note 14, p.99-100 (own-year FY2024 split; "
+    f"the FY2024 comparative column in the FY2025 report re-labels part of this year's 'Other corporate "
+    f"bonds' as a separate 'Supranational and multilateral development bank bonds' line, but the combined "
+    f"'other' total is identical either way, and Treasury bills/African sovereign bonds are unchanged) - "
+    f"{AR2024_URL}\n"
+    f"FY2022 & FY2021: Annual Report and Financial Statements 2022, Note 13, p.68 - Sovereign bonds - Africa, "
+    f"Other corporate bonds, US and German treasury bills - {AR2022_URL}\n"
+    f"FY2020 & FY2019: Annual Report and Financial Statements 2020, Note 13, p.53 (Companies House filing, "
+    f"company basis) - Sovereign bonds - Africa, Other corporate bonds, US Treasury bills - {CH_2020_URL}\n"
+    "'Government securities' = Treasury bills + sovereign/government bonds of any jurisdiction (US, German, "
+    "African sovereign, or generic 'Sovereign bonds' lines); 'Other investment securities' = corporate bonds "
+    "+ supranational/multilateral development bank bonds (non-sovereign issuers). Both sub-rows reconcile "
+    "exactly to 'Total government and other securities' every year - verified by direct summation against "
+    "each year's own note.\n"
+    "Note: no separate FY2019 Annual Report/Companies House filing was refetched for this split - the "
+    "FY2019 figures above are the FY2020 Annual Report's own FY2019 comparative column in the same note, "
+    "which is that year's own originally-published breakdown."
+)
+
 # ---------------------------------------------------------------
 # Sheet: Balance Sheet (Statement of Financial Position), £, own-year
 # figures throughout - built FIRST per the equity reconciliation ladder,
@@ -126,8 +155,12 @@ bs_rows = [
         "FY2025": 426835273, "FY2024": 471210664, "FY2023": 353387088, "FY2022": 510389547, "FY2021": 499653769, "FY2020": 517900464, "FY2019": 453894935}),
     ("DATA", "Loans and advances to customers", {
         "FY2025": 152082149, "FY2024": 57178671, "FY2023": 53066533, "FY2022": 65038106, "FY2021": 89440019, "FY2020": 72138823, "FY2019": 80109596}),
-    ("DATA", "Government and other securities", {
+    ("TOTAL", "Total government and other securities", {
         "FY2025": 428235831, "FY2024": 366183607, "FY2023": 119321238, "FY2022": 170000415, "FY2021": 93657043, "FY2020": 73283983, "FY2019": 54352460}),
+    ("DATA", "Government securities", {
+        "FY2025": 229201258, "FY2024": 264479047, "FY2023": 111641532, "FY2022": 166175781, "FY2021": 89141697, "FY2020": 71728019, "FY2019": 53558982}),
+    ("DATA", "Other investment securities", {
+        "FY2025": 199034573, "FY2024": 101704560, "FY2023": 7679706, "FY2022": 3824634, "FY2021": 4515346, "FY2020": 1555964, "FY2019": 793478}),
     ("DATA", "Prepayments and other receivables", {
         "FY2025": 4074887, "FY2024": 5172009, "FY2023": 2778164, "FY2022": 2289462, "FY2021": 2333255, "FY2020": 1940133, "FY2019": 1878511}),
     ("DATA", "Property, plant and equipment", {
@@ -171,9 +204,9 @@ bw.add_balance_sheet_sheet(
     title="Ghana International Bank Plc — Statement of Financial Position",
     subtitle="Company basis (GHIB has no subsidiaries or branches), £. See source note at bottom.",
     rows=bs_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + GOV_OTHER_SPLIT_SOURCES,
     first_col_width=68,
-    source_height=340,
+    source_height=460,
     unit_suffix=" (£)",
 )
 

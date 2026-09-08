@@ -147,6 +147,19 @@ BALANCE_SHEET_SOURCES = (
     f"FY2018: taken from the FY2019 Annual Report's own restated FY2018 comparative column (same document as "
     f"above) - see FY2018_RESTATEMENT_NOTE (on the Cash Flow Statement sheet's source note) for why the restated "
     f"figures are used in place of Belmont Green's originally-filed FY2018 Annual Report ({AR2018_URL}).\n\n"
+    "DEBT SECURITIES BREAKDOWN: the 'Debt securities - ...' sub-rows below the headline 'Total debt securities' "
+    "line are transcribed from each year's own Note 15 'Debt securities'. All debt securities are held at "
+    "fair value through other comprehensive income (FVOCI) in both years - Note 11 'Financial instruments' "
+    "(FY2025 AR, pp.75-76) shows the full £819,770k FY2025 balance and £34,135k FY2024 balance classified "
+    "entirely as FVOCI, with nothing at amortised cost or FVTPL - so no measurement-basis split applies. "
+    "Note 15 does split by issuer type:\n"
+    f"FY2025: UK Government securities £537,441k, Supranational bonds £167,080k, Covered bonds £115,248k - "
+    f"Note 15, p.81 - {AR2025_URL}. These three lines sum to £819,769k against the note's own stated total "
+    f"of £819,770k - a £1k rounding difference present in the source document itself, not a transcription "
+    f"error (the UK Government securities sub-row above is left at the source's own £537,441k rather than "
+    f"plugged to force an exact tie-out).\n"
+    f"FY2024: 100% UK Government securities (labelled 'Gilts' in this year's own note) - Note 15, p.102 - "
+    f"{AR2024_URL}. No issuer-type split applies for FY2024 since the full £34,135k balance is one category.\n\n"
     + STATEMENTS_ENTITY_NOTE
 )
 
@@ -263,7 +276,10 @@ def rwa_not_disclosed_note():
 bs_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents", {"FY2025": 254874, "FY2024": 143485, "FY2023": 17161, "FY2022": 14919, "FY2021": 13500, "FY2020": 18109, "FY2019": 4079, "FY2018": 5680}),
-    ("DATA", "Debt securities", {"FY2025": 819770, "FY2024": 34135}),
+    ("DATA", "Total debt securities", {"FY2025": 819770, "FY2024": 34135}),
+    ("DATA", "Debt securities - UK Government securities (FVOCI)", {"FY2025": 537441, "FY2024": 34135}),
+    ("DATA", "Debt securities - Supranational bonds (FVOCI)", {"FY2025": 167080}),
+    ("DATA", "Debt securities - Covered bonds (FVOCI)", {"FY2025": 115248}),
     ("DATA", "Loans to customers", {"FY2025": 2301831, "FY2024": 1866006, "FY2023": 1712271, "FY2022": 1761996, "FY2021": 1811577, "FY2020": 1635572, "FY2019": 1599800, "FY2018": 1197862}),
     ("DATA", "Derivative financial instruments", {"FY2025": 10198, "FY2024": 2123, "FY2022": 731}),
     ("DATA", "Other receivables", {"FY2025": 71715, "FY2024": 16412, "FY2023": 34000, "FY2022": 13982, "FY2021": 11399, "FY2020": 15207, "FY2019": 21901, "FY2018": 25813}),
@@ -311,7 +327,7 @@ pl_rows = [
     ("DATA", "Other operating income/(expense)", {"FY2025": 7035, "FY2024": 1158, "FY2023": 920, "FY2022": -6174, "FY2021": 987, "FY2020": 779}),
     ("DATA", "Net fair value gain/(loss) on financial instruments", {"FY2025": 3331, "FY2024": 6045, "FY2023": 3903, "FY2022": -706, "FY2021": -1404, "FY2020": -50, "FY2019": -3900, "FY2018": -473}),
     ("TOTAL", "Net operating income", {"FY2025": 57655, "FY2024": 41023, "FY2023": 38536, "FY2022": 36024, "FY2021": 34088, "FY2020": 24666, "FY2019": -1281, "FY2018": 16996}),
-    ("DATA", "Administrative expenses", {"FY2025": -42450, "FY2024": -34231, "FY2023": -32438, "FY2022": -35502, "FY2021": -30932, "FY2020": -28043, "FY2019": -31642, "FY2018": -25132}),
+    ("TOTAL", "Administrative expenses", {"FY2025": -42450, "FY2024": -34231, "FY2023": -32438, "FY2022": -35502, "FY2021": -30932, "FY2020": -28043, "FY2019": -31642, "FY2018": -25132}),
     ("TOTAL", "Operating profit before impairment", {"FY2025": 15205, "FY2024": 6792, "FY2023": 6098, "FY2022": 522, "FY2021": 3156, "FY2020": -3377, "FY2019": -32923, "FY2018": -8136}),
     ("DATA", "Provisions", {"FY2023": 0, "FY2022": 310, "FY2021": 223, "FY2020": -350}),
     ("DATA", "Impairment (losses)/releases", {"FY2025": -2736, "FY2024": -128, "FY2023": -55, "FY2022": 543, "FY2021": -725, "FY2020": -3371, "FY2019": -2402, "FY2018": -1105}),

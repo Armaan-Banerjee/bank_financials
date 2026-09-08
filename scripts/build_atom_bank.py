@@ -145,8 +145,13 @@ balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents (FY2016 pre-product-launch presentation)", {"FY2016": 7240}),
     ("DATA", "Cash and balances at central banks", {"FY2025": 1902200, "FY2024": 2405000, "FY2023": 4177488, "FY2022": 1453596, "FY2021": 316826, "FY2020": 269915, "FY2019": 225153, "FY2018": 364309, "FY2017": 419765}),
-    ("DATA", "Financial investments (FY2016 pre-IFRS 9 presentation)", {"FY2016": 6559}),
-    ("DATA", "Debt instruments at fair value through other comprehensive income", {"FY2025": 1384500, "FY2024": 474700, "FY2023": 323978, "FY2022": 297334, "FY2021": 151052, "FY2020": 176733, "FY2019": 99072, "FY2018": 322361, "FY2017": 87249}),
+    ("DATA", "Financial investments - UK Treasury Bills and Gilts (FY2016 pre-IFRS 9 presentation)", {"FY2016": 6559}),
+    ("DATA", "Debt instruments at fair value through other comprehensive income (total)", {"FY2025": 1384500, "FY2024": 474700, "FY2023": 323978, "FY2022": 297334, "FY2021": 151052, "FY2020": 176733, "FY2019": 99072, "FY2018": 322361, "FY2017": 87249}),
+    ("DATA", "Debt securities at FVOCI - UK Gilts & T-Bills", {"FY2025": 982600, "FY2024": 174600, "FY2023": 142297, "FY2022": 191363, "FY2021": 65036, "FY2020": 103717, "FY2019": 22032, "FY2018": 238136, "FY2017": 33970}),
+    ("DATA", "Debt securities at FVOCI - Covered Bonds", {"FY2025": 351600, "FY2024": 290100, "FY2023": 142784, "FY2022": 70051, "FY2021": 79513, "FY2020": 54584, "FY2019": 49975, "FY2018": 20939, "FY2017": 20752}),
+    ("DATA", "Debt securities at FVOCI - Residential Mortgage Backed Securities (RMBS)", {"FY2025": 50300, "FY2024": 7800, "FY2020": 1807, "FY2019": 10564, "FY2018": 11132, "FY2017": 10192}),
+    ("DATA", "Debt securities at FVOCI - Multilateral Development Bank and Government Sponsored Debt", {"FY2024": 2200, "FY2023": 38897, "FY2022": 35920, "FY2021": 6503, "FY2020": 16625, "FY2019": 16501, "FY2018": 52154, "FY2017": 13295}),
+    ("DATA", "Debt securities at FVOCI - Money Market Funds", {"FY2017": 9040}),
     ("DATA", "Debt instruments held at amortised cost", {"FY2025": 202500, "FY2024": 23000, "FY2023": 150273, "FY2022": 295103, "FY2021": 649503, "FY2020": 223311}),
     ("DATA", "Derivatives held for hedging purposes", {"FY2025": 55800, "FY2024": 62400, "FY2023": 76882, "FY2022": 36021, "FY2021": 4058, "FY2020": 736, "FY2018": 8008}),
     ("DATA", "Loans and advances to customers", {"FY2025": 5301500, "FY2024": 4100900, "FY2023": 2958769, "FY2022": 2384066, "FY2021": 1638851, "FY2020": 1970818, "FY2019": 2399861, "FY2018": 1219356, "FY2017": 99209}),
@@ -198,6 +203,34 @@ BALANCE_SHEET_SOURCES = (
     "retrospectively to the FY2018 comparative in the FY2019 report) are the same underlying facility, shown "
     "under one row name. 'Repurchase agreements' first (and only) appears FY2019 - a real one-year financing "
     "instrument, not disclosed before or after."
+    "\n\nINVESTMENT COMPOSITION EXTENSION NOTES: 'Financial investments' (FY2016) comprised entirely UK Treasury "
+    "Bills and Gilts per Note 9 (Financial Investments), which states the balance 'comprise[s] UK Treasury Bills "
+    "and Gilts and are valued by reference to a quoted market price, therefore included in IFRS13 Level 1' - "
+    "Atom Bank Plc full accounts made up to 31 March 2016, p.44 - " + AR16_URL + ". Relabelled in place to name "
+    "this single disclosed issuer type (100% one bucket, nothing to sub-split against) rather than left as a "
+    "generic 'Financial investments' label that would otherwise fall into a default 'other' issuer-type bucket. "
+    "The FY2016 filing predates IFRS 9/the FVOCI-vs-amortised-cost measurement-basis distinction entirely (see "
+    "HD-025 note above) and doesn't use an AFS/trading/FVTPL label for this balance either, so no measurement-"
+    "basis classification is asserted for this row - genuinely no further detail available on that dimension.\n\n"
+    "'Debt instruments at fair value through other comprehensive income' is renamed to end '(total)' and split "
+    "into disclosed issuer-type sub-rows for every year it has a value (FY2017-FY2025), each reconciling EXACTLY "
+    "to the total - sourced from each report's own 'Assets held for liquidity management' note (or, for FY2023/"
+    "FY2022, the equivalent Level 1 fair-value-hierarchy table in the fair values note, which breaks the same "
+    "FVOCI total down by the same issuer categories): FY2025/FY2024 - Note 23, Atom Bank Plc full accounts made "
+    "up to 31 March 2025, p.107 - " + AR25_URL + "; FY2023/FY2022 - Note 27 (Accounting for financial assets and "
+    "liabilities - fair values), Atom Bank Plc full accounts made up to 31 March 2023, pp.118-119 - " + AR23_URL +
+    "; FY2021 - Note 19, Atom Bank Plc full accounts made up to 31 March 2021, p.93 (Bank column) - " + AR21_URL +
+    "; FY2020/FY2019 - Note 18, Atom Bank Plc full accounts made up to 31 March 2020, pp.85-86 (Bank column) - " +
+    AR20_URL + "; FY2018/FY2017 - Note 18, Atom Bank Plc full accounts made up to 31 March 2018, p.81 - " +
+    AR18_URL + ". 'Money Market Funds' appears as its own issuer-type sub-line in FY2017 only (£9,040k) - not "
+    "disclosed in any other year. A 'Residential Mortgage Backed Securities (RMBS)' issuer-type sub-line is nil/"
+    "not disclosed in FY2025/FY2023/FY2022/FY2021 (left blank rather than assumed zero, consistent with this "
+    "workbook's convention); likewise 'Multilateral Development Bank and Government Sponsored Debt' is nil/not "
+    "disclosed in FY2025. 'Debt instruments held at amortised cost' is NOT split - FY2020/FY2021's own note "
+    "confirms this entire balance is retained RMBS notes from Atom's own Elvet mortgage securitisations (already "
+    "correctly falling into the 'other' issuer-type bucket with no relabelling needed), and FY2022-FY2025's own "
+    "notes disclose only the total with no further issuer-type breakdown - genuinely no further detail available "
+    "for that row in those years."
     "\n\n" + STATEMENT_ENTITY_NOTE
 )
 
@@ -207,7 +240,7 @@ bw.add_balance_sheet_sheet(
     rows=balance_sheet_rows,
     sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=62,
-    source_height=220,
+    source_height=430,
 )
 
 # ---------------------------------------------------------------

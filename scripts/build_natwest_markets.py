@@ -60,6 +60,26 @@ STATEMENTS_SOURCES = (
     + ENTITY_NOTE
 )
 
+BALANCE_SHEET_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "OTHER FINANCIAL ASSETS BREAKDOWN: the 'Other financial assets - ...' sub-rows below the headline 'Total "
+    "other financial assets' line are transcribed from Note 15 'Other financial assets' (NWM Plc entity column) "
+    "of each year's own Notes to the (consolidated) financial statements, which splits the balance both by "
+    "measurement basis (mandatory fair value through profit or loss / fair value through other comprehensive "
+    "income (FVOCI) / amortised cost) and, for debt securities, by issuer (UK central/local government, "
+    "US/other overseas sovereign, other debt):\n"
+    f"FY2025/FY2024: Annual Report and Accounts 2025, Note 15, p.128-129 - {AR_URLS['FY2025']}\n"
+    f"FY2023/FY2022: Annual Report and Accounts 2023, Note 15, p.142-143 - {AR_URLS['FY2023']}\n"
+    f"FY2021: Annual Report and Accounts 2021, Note 15, p.156-158 (page numbering approximate - the source PDF "
+    f"is laid out as two-page spreads with the note split across a dual-column block) - {AR_URLS['FY2021']}\n\n"
+    "Each year's sub-rows sum exactly to that year's headline 'Total other financial assets' line. NWM Plc held "
+    "no UK government debt securities in FY2024/FY2023/FY2022 (the note's own UK column is explicitly 0 in the "
+    "FY2025 Annual Report's FY2024 comparative, and is omitted entirely - implying nil - from the FY2023 Annual "
+    "Report's FY2023/FY2022 table). The 'Loans' sub-row is the small FVOCI/mandatory-FVTPL loan component "
+    "carried within this note - it is distinct from, and additional to, the Balance Sheet's own amortised-cost "
+    "'Loans to banks' and 'Loans to customers' lines."
+)
+
 # ---------------------------------------------------------------
 # Balance Sheet - equity reconciliation ladder step 1: built first so each
 # year's own Total equity is the independent check value for the equity
@@ -76,7 +96,14 @@ bs_rows = [
     ("DATA", "Loans to banks (amortised cost)", {"FY2025": 603, "FY2024": 897, "FY2023": 910, "FY2022": 815, "FY2021": 712}),
     ("DATA", "Loans to customers (amortised cost)", {"FY2025": 22154, "FY2024": 17089, "FY2023": 12104, "FY2022": 9154, "FY2021": 6810}),
     ("DATA", "Amounts due from holding company and fellow subsidiaries", {"FY2025": 3611, "FY2024": 3341, "FY2023": 6472, "FY2022": 6665, "FY2021": 6723}),
-    ("DATA", "Other financial assets", {"FY2025": 17354, "FY2024": 16081, "FY2023": 13444, "FY2022": 10377, "FY2021": 7743}),
+    ("DATA", "Total other financial assets", {"FY2025": 17354, "FY2024": 16081, "FY2023": 13444, "FY2022": 10377, "FY2021": 7743}),
+    ("DATA", "Other financial assets - UK government debt securities (FVOCI)", {"FY2025": 378, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 86}),
+    ("DATA", "Other financial assets - Overseas government debt securities (US/other sovereign, FVOCI)", {"FY2025": 3621, "FY2024": 2868, "FY2023": 2745, "FY2022": 4273, "FY2021": 4003}),
+    ("DATA", "Other financial assets - Other debt securities (FVOCI)", {"FY2025": 1577, "FY2024": 1140, "FY2023": 900, "FY2022": 465, "FY2021": 459}),
+    ("DATA", "Other financial assets - Other debt securities (amortised cost)", {"FY2025": 11582, "FY2024": 11927, "FY2023": 9641, "FY2022": 5428, "FY2021": 3014}),
+    ("DATA", "Other financial assets - Other debt securities (mandatory fair value through profit or loss)", {"FY2025": 1, "FY2024": 1, "FY2023": 1, "FY2022": 2, "FY2021": 1}),
+    ("DATA", "Other financial assets - Equity shares (FVOCI)", {"FY2025": 52, "FY2024": 51, "FY2023": 46, "FY2022": 42, "FY2021": 43}),
+    ("DATA", "Other financial assets - Loans (FVOCI/mandatory FVTPL - not the amortised-cost loan book on the Balance Sheet)", {"FY2025": 143, "FY2024": 94, "FY2023": 111, "FY2022": 167, "FY2021": 137}),
     ("DATA", "Investments in group undertakings", {"FY2025": 2403, "FY2024": 2263, "FY2023": 2320, "FY2022": 2626, "FY2021": 2481}),
     ("DATA", "Other assets", {"FY2025": 436, "FY2024": 479, "FY2023": 390, "FY2022": 712, "FY2021": 732}),
     ("TOTAL", "Total assets", {"FY2025": 136288, "FY2024": 152937, "FY2023": 150658, "FY2022": 169061, "FY2021": 182554}),
@@ -107,9 +134,9 @@ bw.add_balance_sheet_sheet(
     subtitle="NWM Plc entity basis (not NWM Group consolidated). £m. NWM Plc carries no non-controlling "
               "interests in any year, so Owners' equity = Total equity throughout.",
     rows=bs_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=70,
-    source_height=260,
+    source_height=420,
     unit_suffix=" (£m)",
 )
 

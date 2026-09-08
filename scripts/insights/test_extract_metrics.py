@@ -336,6 +336,33 @@ class NewStatementSheetExtraction(unittest.TestCase):
         self.assertIn("Assets - Loans and advances to customers", labels)
         self.assertIn("Assets - Total assets", labels)
 
+    def test_statement_subtitle_assigns_units_by_explicit_year_range(self):
+        """A currency transition must remain per-observation, never become a
+        single sheet-wide unit (the National Bank of Kuwait case)."""
+        bw = BankWorkbook(
+            bank_name="CURRENCYBANK",
+            years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
+            header_color="336699",
+        )
+        bw.add_balance_sheet_sheet(
+            title="CURRENCYBANK — Balance Sheet",
+            subtitle="As reported: £'000 (FY2024-FY2025); US$'000 (FY2021-FY2023).",
+            rows=[("TOTAL", "Total assets", {
+                "FY2025": 500, "FY2024": 400, "FY2023": 300,
+                "FY2022": 200, "FY2021": 100,
+            })],
+            sources_text="Test fixture.",
+            unit_suffix="",  # Kuwait's real headers are bare FY labels.
+        )
+        path = os.path.join(self.tmpdir, "CURRENCYBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
+        units = {row["year"]: row["unit"] for row in extracted_rows if row["sheet"] == "Balance Sheet"}
+        self.assertEqual(units, {
+            "FY2025": "£'000", "FY2024": "£'000", "FY2023": "US$'000",
+            "FY2022": "US$'000", "FY2021": "US$'000",
+        })
+
     def test_same_label_in_two_sections_is_disambiguated_not_a_conflict(self):
         """Reproduces The Access Bank UK Limited's real Balance Sheet:
         "Derivative financial instruments" appears once under Assets

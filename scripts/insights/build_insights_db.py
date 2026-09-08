@@ -102,6 +102,7 @@ CREATE TABLE IF NOT EXISTS annual_metrics (
     reporting_basis TEXT,
     restatement_note TEXT,
     source_note TEXT,
+    row_kind TEXT,
     UNIQUE(frn, sheet, row_label, year)
 );
 CREATE INDEX IF NOT EXISTS idx_annual_metrics_frn ON annual_metrics(frn);
@@ -249,6 +250,7 @@ _COLUMN_MIGRATIONS = [
     ("annual_metrics", "reporting_basis", "TEXT"),
     ("annual_metrics", "restatement_note", "TEXT"),
     ("annual_metrics", "source_note", "TEXT"),
+    ("annual_metrics", "row_kind", "TEXT"),
     ("parent_group_edges", "effective_from", "TEXT"),
     ("parent_group_edges", "effective_to", "TEXT"),
     ("refresh_metadata", "equity_changes_count", "INTEGER"),
@@ -336,15 +338,26 @@ def write_banks_and_metrics(conn, rows, metrics_source):
                 "reporting_basis": r.get("reporting_basis") or None,
                 "restatement_note": r.get("restatement_note") or None,
                 "source_note": r.get("source_note") or None,
+                # "TOTAL"/"DATA" for a statement-sheet row (from the source
+                # workbook's own bold-column-A convention, see
+                # extract_metrics.py's extract_statement_rows()), NULL for a
+                # single-metric Pillar 3-style sheet row where the
+                # distinction doesn't apply. Added 2026-09-07 after several
+                # in04x selectors were found silently picking up a DATA
+                # sub-component (e.g. one bank's "Administrative expenses"
+                # line, not its aggregate) instead of the real TOTAL row
+                # whenever both share the same bare label across banks -
+                # row_label text alone can't tell them apart.
+                "row_kind": r.get("row_kind") or None,
             }
             for r in rows
         ]
         conn.executemany(
             "INSERT INTO annual_metrics (frn, sheet, row_label, year, "
             "value_raw, value_numeric, is_numeric, unit, reporting_basis, "
-            "restatement_note, source_note) VALUES "
+            "restatement_note, source_note, row_kind) VALUES "
             "(:frn, :sheet, :row_label, :year, :value_raw, :value_numeric, :is_numeric, "
-            ":unit, :reporting_basis, :restatement_note, :source_note)",
+            ":unit, :reporting_basis, :restatement_note, :source_note, :row_kind)",
             metric_rows,
         )
 
@@ -440,11 +453,11 @@ METRICS_CSV_FIELDNAMES = [
     "bank", "canonical_bank", "source_filename_bank", "source_workbook",
     "frn", "workbook_kind", "sheet", "row_label", "year",
     "value_raw", "value_numeric", "is_numeric", "basis_note",
-    "unit", "reporting_basis", "restatement_note", "source_note",
+    "unit", "reporting_basis", "restatement_note", "source_note", "row_kind",
 ]
 
 _METRICS_CSV_STRING_COLUMNS = (
-    "value_raw", "basis_note", "unit", "reporting_basis", "restatement_note", "source_note",
+    "value_raw", "basis_note", "unit", "reporting_basis", "restatement_note", "source_note", "row_kind",
 )
 
 
@@ -473,7 +486,8 @@ def export_metrics_csv(conn, out_path):
                m.unit AS unit,
                m.reporting_basis AS reporting_basis,
                m.restatement_note AS restatement_note,
-               m.source_note AS source_note
+               m.source_note AS source_note,
+               m.row_kind AS row_kind
         FROM annual_metrics m JOIN banks b ON b.frn = m.frn
         ORDER BY m.id
     """)
@@ -522,7 +536,8 @@ def load_rows_from_db(path):
                    m.unit AS unit,
                    m.reporting_basis AS reporting_basis,
                    m.restatement_note AS restatement_note,
-                   m.source_note AS source_note
+                   m.source_note AS source_note,
+                   m.row_kind AS row_kind
             FROM annual_metrics m JOIN banks b ON b.frn = m.frn
             ORDER BY m.id
         """)
@@ -532,7 +547,7 @@ def load_rows_from_db(path):
             for key in ("frn", "is_numeric"):
                 row[key] = str(row[key])
             for key in ("value_raw", "value_numeric", "basis_note", "unit",
-                        "reporting_basis", "restatement_note", "source_note"):
+                        "reporting_basis", "restatement_note", "source_note", "row_kind"):
                 if row[key] is None:
                     row[key] = ""
                 elif key == "value_numeric":

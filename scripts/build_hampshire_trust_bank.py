@@ -184,7 +184,16 @@ BS_SOURCES = (
     f"FY2018: Annual Report and Accounts for the year ended 31 December 2018 (Companies House, filed 24 Jun 2019, scanned/image-only), p.37 - {AR2018_CH_URL}\n"
     f"FY2017: Annual Report and Accounts 2017 (HTB website copy, text-native), p.36 - {AR2017_WEBSITE_URL}\n"
     f"FY2016: Annual Report and Accounts 2016 (HTB website copy, text-native), p.28 - {AR2016_WEBSITE_URL}\n"
-    + STATEMENTS_ENTITY_NOTE
+    + STATEMENTS_ENTITY_NOTE +
+    "\n'Investment securities' is relabelled 'Investment securities, held at amortised cost' per Note 26 "
+    "'Investment securities held at amortised cost' (Group Annual Report and Accounts 2025, p.109 - "
+    f"{AR2025_WEBSITE_URL}), which shows the entire book (FY2025 and FY2024 columns: £693,673k / £219,980k) "
+    "as a single 'Debt securities - Floating rate' line, all Aaa-rated, with no FVOCI/FVTPL or "
+    "government/other split disclosed - covered bonds and RMBS measured at amortised cost per the report's "
+    "own accounting policy note 7.9. FY2020-FY2023 figures are transcribed from scanned/image-only "
+    "Companies House filings that could not be text-searched to reconfirm this same-basis wording, but the "
+    "bank's investment book composition (covered bonds/RMBS) and accounting policy are unchanged across "
+    "those years per the annual reports' own disclosures."
 )
 
 bs_rows = [
@@ -197,7 +206,7 @@ bs_rows = [
         "FY2025": 13326, "FY2024": 51588, "FY2023": 75076, "FY2022": 113319, "FY2021": 19458,
         "FY2020": 1763, "FY2019": 1457, "FY2018": 1708, "FY2017": 903, "FY2016": 622,
     }),
-    ("DATA", "Investment securities", {
+    ("DATA", "Investment securities, held at amortised cost", {
         "FY2025": 693673, "FY2024": 219980, "FY2023": 234509, "FY2022": 217722, "FY2021": 196712,
         "FY2020": 20072, "FY2018": 15098,
     }),
@@ -392,7 +401,7 @@ pl_rows = [
         "FY2025": 170623, "FY2024": 157995, "FY2023": 134642, "FY2022": 108813, "FY2021": 73069,
         "FY2020": 49770, "FY2019": 45507, "FY2018": 37590, "FY2017": 34492, "FY2016": 20909,
     }),
-    ("DATA", "Administrative expenses", {
+    ("TOTAL", "Administrative expenses", {
         "FY2025": -83039, "FY2024": -75545, "FY2023": -69237, "FY2022": -56984, "FY2021": -46313,
         "FY2020": -32236, "FY2019": -28587, "FY2018": -24700, "FY2017": -20110, "FY2016": -15502,
     }),

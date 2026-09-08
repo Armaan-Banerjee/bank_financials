@@ -218,6 +218,16 @@ income_statement_rows = [
     ("DATA", "Administrative expenses", {"FY2025": -6270069, "FY2024": -5184705, "FY2023": -4992840, "FY2022": -4669692}),
     ("DATA", "Other impairment", {"FY2024": -6, "FY2022": -177}),
     ("DATA", "Other expenses", {"FY2024": -122500}),
+    # Not a line the source statement itself prints - the Company's own
+    # income statement has no combined opex subtotal, going straight from
+    # these three expense lines to Profit before taxation. This row is
+    # simply their sum (ties exactly to Net operating income - Profit before
+    # taxation in every year: e.g. FY2025 9542478-6270069=3272409), added
+    # 2026-09-07 so cost-to-income analysis has a "Total operating expenses"
+    # numerator to work from.
+    ("TOTAL", "Total operating expenses (sum of the expense lines above - not itself a printed subtotal)", {
+        "FY2025": -6270069, "FY2024": -5307211, "FY2023": -4992840, "FY2022": -4669869,
+    }),
     ("TOTAL", "Profit before taxation", {"FY2025": 3272409, "FY2024": 3836861, "FY2023": 3567470, "FY2022": 3196958}),
     ("DATA", "Tax on profit", {"FY2025": -928331, "FY2024": -1240412, "FY2023": -989297, "FY2022": -750277}),
     ("TOTAL", "Profit for the financial year", {"FY2025": 2344078, "FY2024": 2596449, "FY2023": 2578173, "FY2022": 2446681}),

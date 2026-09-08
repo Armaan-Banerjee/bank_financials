@@ -153,7 +153,22 @@ STATEMENTS_SOURCES = (
     "Derivative financial instruments, Deferred tax asset, Current tax liabilities) genuinely did not exist as "
     "separate balance sheet lines before FY2022 (the Bank started using interest rate hedges and holding debt "
     "securities that year) - left blank for FY2021 rather than assumed nil, except where that year's own report "
-    "explicitly shows a dash ('-'), which is transcribed as a disclosed nil (0)."
+    "explicitly shows a dash ('-'), which is transcribed as a disclosed nil (0).\n"
+    "DEBT SECURITIES COMPOSITION: checked each year's own Note 19 'Financial instruments' ('Categories of financial "
+    "instruments' table) for a measurement-basis / issuer-type breakdown. No numeric split exists in any year - the "
+    "table shows the entire balance in a single 'Amortised cost' column with £nil in the 'Fair value through profit "
+    "or loss' column every year (no FVOCI column at all), so the row is relabelled in place rather than split into "
+    "sub-rows. Issuer-type composition (100% sovereign government debt throughout, narrative-only, no per-country "
+    f"split of the total is disclosed): FY2023: 'All debt securities held are UK Government debt securities' - "
+    f"Hampden & Co Plc Annual Report and Financial Statements 2023, Note 19, p.65 - {AR2023_URL}. FY2024: 'All debt "
+    "securities held are UK Government or US Department of Treasury debt securities' per that year's own Note 19 "
+    "(p.69), though the same report's Note 21 credit-risk section (p.74) instead states 'Debt securities are all "
+    "issued by the UK Government' - an internal inconsistency in the FY2024 Annual Report itself, transcribed as "
+    f"printed rather than resolved - Hampden Bank Annual Report and Financial Statements 2024, Note 19, p.69 - "
+    f"{AR2024_URL}. FY2025: 'All debt securities held are issued by the UK, US and Australian governments' - "
+    f"Hampden Bank Annual Report and Financial Statements 2025, Note 19, p.69 (also carries the FY2024 comparative "
+    f"column) - {AR2025_URL}. FY2022: nil balance, no securities held. No supranational, corporate or ABS holdings "
+    "are disclosed in any year."
 )
 
 # ---------------------------------------------------------------
@@ -169,7 +184,7 @@ bs_rows = [
         "FY2025": 137120, "FY2024": 203664, "FY2023": 274523, "FY2022": 241254, "FY2021": 189686,
         "FY2020": 108358, "FY2019": 129085, "FY2018": 81759, "FY2017": 58618, "FY2016": 26499,
     }),
-    ("DATA", "Debt securities", {
+    ("DATA", "Debt securities (sovereign government debt, amortised cost)", {
         "FY2025": 362399, "FY2024": 224751, "FY2023": 67066, "FY2022": 0,
     }),
     ("DATA", "Loans and advances to clients", {

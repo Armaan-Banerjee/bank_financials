@@ -16,13 +16,20 @@ from bank_workbook import BankWorkbook
 # sheet omits the cash-flow chart.
 
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016",
-         "FY2015", "FY2014"]  # most recent first. FY2021-FY2025 fiscal year-end 30 September; FY2020 is an
-# 11-month transition PERIOD ended 30 September 2020 (the year the fiscal year-end changed from 31 October to
-# 30 September - the Bank's own Annual Report 2020 explicitly covers "the 11-month period ended 30 September
-# 2020" with its FY2019 comparative column covering the full prior year ended 31 October 2019); FY2014-FY2019
-# fiscal year-end is 31 October. Capped at FY2014 per HD-049 (project-wide policy decision) even though this
-# entity's real Companies House/website disclosure archive extends to FY2010 (confirmed HD-002).
+         "FY2015", "FY2014", "FY2013", "FY2012", "FY2011", "FY2010", "FY2009"]  # most recent first. FY2021-FY2025
+# fiscal year-end 30 September; FY2020 is an 11-month transition PERIOD ended 30 September 2020 (the year the
+# fiscal year-end changed from 31 October to 30 September - the Bank's own Annual Report 2020 explicitly covers
+# "the 11-month period ended 30 September 2020" with its FY2019 comparative column covering the full prior year
+# ended 31 October 2019); FY2009-FY2019 fiscal year-end is 31 October.
 YEAR_LABEL = {y: y for y in YEARS}
+
+# HD-074 (2026-09-07): Pillar 3 (all 11 metric sheets), Asset Quality, and RWA Breakdown stay out of scope for
+# this statutory-statement-only extension - pin them to the original project-wide FY2014-FY2025 window via this
+# override. FY2010-FY2013 is HD-004's confirmed real statutory floor for this entity; FY2009 is a bonus beyond
+# that floor (found readily as a genuine comparative in the FY2010 Annual Report's own Balance Sheet/Profit and
+# Loss Account - see HD074_NOTE below), not force-searched further per the ticket's "don't force it" guidance.
+PILLAR3_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016",
+                 "FY2015", "FY2014"]
 
 AR2025_URL = "https://hodgebank.co.uk/wp-content/uploads/2026/02/Hodge-AR-28.01.26.pdf"
 AR2024_URL = "https://hodgebank.co.uk/wp-content/uploads/2025/02/Hodge-annual-report-21.02.25.pdf"
@@ -53,6 +60,43 @@ P3_2015_URL = "https://web.archive.org/web/20220620025429id_/https://hodgebank.c
 AR2014_URL = "https://web.archive.org/web/20220620025529id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20141031.pdf"
 P3_2014_URL = "https://web.archive.org/web/20220620025434id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2014.pdf"
 
+# HD-074 (2026-09-07): FY2010-FY2013 extension, down to this entity's real statutory floor (HD-004/HD-002).
+# Same Wayback archive as HD-049's FY2014-FY2020 batch, at the same /wp-content/uploads/2019/01/ path - all 3
+# are text-native PDFs (no OCR needed). FY2012's own standalone Annual Report is NOT present anywhere in this
+# archive (confirmed via the Wayback CDX API - a genuine gap, not a search failure) - FY2012 figures are instead
+# sourced from the FY2013 Annual Report's own FY2012 comparative column (a document-level self-skip of the
+# FY2012 standalone report only, not of the year itself, following this project's established convention for
+# this kind of gap - see e.g. Vanquis Bank's FY2016 Pillar 3 treatment). FY2009 is a bonus year beyond the
+# HD-004 floor, likewise sourced from the FY2010 Annual Report's own FY2009 comparative column (no standalone
+# FY2009 report found in this archive either - not force-searched further per the ticket's guidance).
+AR2013_URL_HD074 = "https://web.archive.org/web/20220620025323id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20131031.pdf"
+AR2011_URL_HD074 = "https://web.archive.org/web/20220620025317id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20111031.pdf"
+AR2010_URL_HD074 = "https://web.archive.org/web/20220620025334id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20101031.pdf"
+
+HD074_NOTE = (
+    "HISTORICAL-DEPTH NOTE (HD-074, added 2026-09-07): extends Balance Sheet, Profit & Loss and Statement of "
+    "Changes in Equity back to FY2009 (one year beyond HD-004's confirmed FY2010 statutory floor) - Pillar 3, "
+    "Asset Quality and RWA Breakdown remain capped at FY2014 as a deliberate project-wide scope decision, not a "
+    "sourcing gap. This entity has no Cash Flow Statement in any year (see EXEMPTION_NOTE on the Cash Flow "
+    "Statement sheet) - the FRS1 predecessor exemption (identical grounds: a parent undertaking includes the "
+    "Bank in its own published consolidated accounts) is confirmed explicitly stated in each of the FY2013/"
+    "FY2011/FY2010 Annual Reports too, so this extension adds no Cash Flow Statement columns. "
+    f"FY2013 (and its own FY2012 comparative): Directors' report and financial statements 2013 - {AR2013_URL_HD074}\n"
+    f"FY2011 (and its own FY2010 comparative): Directors' report and financial statements 2011 - {AR2011_URL_HD074}\n"
+    f"FY2010 (and its own FY2009 comparative): Directors' report and financial statements 2010 - {AR2010_URL_HD074}\n"
+    "All 3 new filings are old UK GAAP (pre-FRS101), consistent with the existing FY2014/FY2015 treatment "
+    "already on this sheet - no basis-transition gap exists at the FY2013/FY2014 boundary (FY2013's own closing "
+    "Total equity of GBP128.2m ties exactly to FY2014's own opening position). 'Equity shares' is a genuine "
+    "small distinct holding line disclosed in the FY2010-FY2012 Balance Sheets (nil in FY2013) - not folded into "
+    "Debt securities or another line, since it is its own numbered note in the source accounts. FY2012's own "
+    "Profit and Loss Account (per the FY2013 Annual Report's own comparative) reclassified certain cost/income "
+    "sub-lines from how they were originally presented (a reclassification only, explained in that report's own "
+    "Note 1 - profit for the year and net assets are unaffected). Every one of the 5 new years' Balance Sheet "
+    "ties exactly (Total assets = Total liabilities + Total equity, verified to the exact £000) and every new "
+    "year's disclosed Profit on ordinary activities before taxation and Total recognised gains and losses in the "
+    "financial year are reproduced exactly by the rows on this sheet and the Profit & Loss sheet."
+)
+
 ENTITY_NOTE = (
     "ENTITY NOTE: Julian Hodge Bank Limited (company 00743437, FRN 204439, incorporated 1962) is a "
     "privately-owned Cardiff-based bank; immediate parent Hodge Limited, ultimate parent The Carlyle Trust "
@@ -69,15 +113,17 @@ EXEMPTION_NOTE = (
     "predecessor exemption under FRS 1 ('the Bank is exempt from the requirement to prepare a cash flow statement "
     "on the grounds that a parent undertaking includes the Bank in its own published consolidated financial "
     f"statements') - e.g. Julian Hodge Bank Limited Directors' report and financial statements 2015, p.19 - "
-    f"{AR2015_URL}. No Statement of Cash Flows exists in any of the entity's published accounts for any year "
-    "FY2014-FY2025 - a standing structural feature spanning both the old-UK-GAAP and FRS101 eras, not a one-off or "
+    f"{AR2015_URL}. The same FRS 1 exemption wording is confirmed present in each of the FY2009-FY2013 Directors' "
+    "report and financial statements sourced for HD-074 (e.g. FY2010, FY2011, FY2013 reports, each Note 1) - see "
+    "HD074_NOTE below. No Statement of Cash Flows exists in any of the entity's published accounts for any year "
+    "FY2009-FY2025 - a standing structural feature spanning both the old-UK-GAAP and FRS101 eras, not a one-off or "
     "data gap. Per the project's established policy for this exemption (see The Bank of New York Mellon "
     "(International) Limited / ABC International Bank plc), this workbook is built as a PILLAR-3-ONLY variant: "
     "all 11 Pillar 3 metric sheets are populated below, but no cash flow figures exist to show. See the Overview "
     "sheet for the equivalent treatment there."
 )
 
-CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE
+CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE + "\n\n" + HD074_NOTE
 
 BASIS_NOTE = (
     "FY2021-FY2023: full UK KM1-format 'Key Regulatory Metrics' table from each year's own standalone Pillar 3 "
@@ -173,41 +219,42 @@ STATEMENTS_SOURCES = (
 # ---------------------------------------------------------------
 bs_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances held at central banks", {"FY2025": 69.5, "FY2024": 151.3, "FY2023": 93.7, "FY2022": 118.1, "FY2021": 412.2, "FY2020": 147.9, "FY2019": 321.9, "FY2018": 153.2, "FY2017": 87.0, "FY2016": 168.0, "FY2015": 101.6, "FY2014": 18.5}),
-    ("DATA", "Loans and advances to credit institutions", {"FY2025": 7.9, "FY2024": 4.5, "FY2023": 11.2, "FY2022": 0.2, "FY2021": 45.9, "FY2020": 105.2, "FY2019": 86.1, "FY2018": 96.2, "FY2017": 107.6, "FY2016": 128.3, "FY2015": 20.5, "FY2014": 28.8}),
+    ("DATA", "Cash and balances held at central banks", {"FY2025": 69.5, "FY2024": 151.3, "FY2023": 93.7, "FY2022": 118.1, "FY2021": 412.2, "FY2020": 147.9, "FY2019": 321.9, "FY2018": 153.2, "FY2017": 87.0, "FY2016": 168.0, "FY2015": 101.6, "FY2014": 18.5, "FY2013": 35.6, "FY2012": 37.0}),
+    ("DATA", "Loans and advances to credit institutions", {"FY2025": 7.9, "FY2024": 4.5, "FY2023": 11.2, "FY2022": 0.2, "FY2021": 45.9, "FY2020": 105.2, "FY2019": 86.1, "FY2018": 96.2, "FY2017": 107.6, "FY2016": 128.3, "FY2015": 20.5, "FY2014": 28.8, "FY2013": 25.6, "FY2012": 90.6, "FY2011": 78.4, "FY2010": 188.5, "FY2009": 91.8}),
     ("DATA", "Derivative financial instruments (asset)", {"FY2025": 16.8, "FY2024": 27.9, "FY2023": 58.5, "FY2022": 75.8}),
-    ("DATA", "Government bonds (called 'Treasury bills' in FY2014-FY2019 reports)", {"FY2025": 27.9, "FY2024": 27.7, "FY2023": 61.7, "FY2022": 111.2, "FY2021": 29.8, "FY2020": 48.6, "FY2019": 25.1, "FY2018": 81.2, "FY2017": 87.3, "FY2016": 84.7, "FY2015": 81.0, "FY2014": 75.5}),
-    ("DATA", "Debt securities", {"FY2025": 135.8, "FY2024": 70.7, "FY2023": 82.0, "FY2022": 116.2, "FY2021": 42.3, "FY2020": 50.7, "FY2019": 57.0, "FY2018": 87.5, "FY2017": 77.0, "FY2016": 89.1, "FY2015": 81.5, "FY2014": 85.1}),
-    ("DATA", "Loans and advances to customers", {"FY2025": 1839.7, "FY2024": 1699.3, "FY2023": 1488.5, "FY2022": 1404.6, "FY2021": 1061.5, "FY2020": 930.8, "FY2019": 766.9, "FY2018": 827.9, "FY2017": 757.9, "FY2016": 706.9, "FY2015": 557.5, "FY2014": 440.8}),
-    ("DATA", "Shares in group undertakings and participating interests (Hodge Life Assurance Company - sold/reclassified out by FY2018)", {"FY2017": 16.0, "FY2016": 16.0, "FY2015": 16.0, "FY2014": 16.0}),
-    ("DATA", "Stock and work in progress (UK GAAP line, folded into other line items after the FY2016 FRS101 transition)", {"FY2015": 3.4, "FY2014": 3.2}),
-    ("DATA", "Reversionary interests in properties (UK GAAP line, folded into Investment properties after the FY2016 FRS101 transition)", {"FY2015": 55.0, "FY2014": 57.4}),
+    ("DATA", "Government bonds (called 'Treasury bills' in FY2009-FY2019 reports)", {"FY2025": 27.9, "FY2024": 27.7, "FY2023": 61.7, "FY2022": 111.2, "FY2021": 29.8, "FY2020": 48.6, "FY2019": 25.1, "FY2018": 81.2, "FY2017": 87.3, "FY2016": 84.7, "FY2015": 81.0, "FY2014": 75.5, "FY2013": 78.1, "FY2012": 81.3, "FY2011": 35.3, "FY2010": 42.5, "FY2009": 17.9}),
+    ("DATA", "Debt securities", {"FY2025": 135.8, "FY2024": 70.7, "FY2023": 82.0, "FY2022": 116.2, "FY2021": 42.3, "FY2020": 50.7, "FY2019": 57.0, "FY2018": 87.5, "FY2017": 77.0, "FY2016": 89.1, "FY2015": 81.5, "FY2014": 85.1, "FY2013": 87.6, "FY2012": 89.5, "FY2011": 67.4, "FY2010": 54.2, "FY2009": 31.6}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 1839.7, "FY2024": 1699.3, "FY2023": 1488.5, "FY2022": 1404.6, "FY2021": 1061.5, "FY2020": 930.8, "FY2019": 766.9, "FY2018": 827.9, "FY2017": 757.9, "FY2016": 706.9, "FY2015": 557.5, "FY2014": 440.8, "FY2013": 384.0, "FY2012": 358.8, "FY2011": 362.8, "FY2010": 398.4, "FY2009": 470.2}),
+    ("DATA", "Shares in group undertakings and participating interests (Hodge Life Assurance Company - sold/reclassified out by FY2018)", {"FY2017": 16.0, "FY2016": 16.0, "FY2015": 16.0, "FY2014": 16.0, "FY2013": 16.0, "FY2012": 16.1, "FY2011": 16.1, "FY2010": 16.1, "FY2009": 16.1}),
+    ("DATA", "Equity shares (a small distinct holding, genuinely nil/absent in some years - not a residual)", {"FY2012": 0.8, "FY2011": 0.8, "FY2010": 0.4, "FY2009": 0.4}),
+    ("DATA", "Stock and work in progress (UK GAAP line, folded into other line items after the FY2016 FRS101 transition)", {"FY2015": 3.4, "FY2014": 3.2, "FY2013": 4.5, "FY2012": 5.2}),
+    ("DATA", "Reversionary interests in properties (UK GAAP line, folded into Investment properties after the FY2016 FRS101 transition)", {"FY2015": 55.0, "FY2014": 57.4, "FY2013": 59.4, "FY2012": 61.2, "FY2011": 62.6, "FY2010": 63.3, "FY2009": 57.3}),
     ("DATA", "Intangible assets", {"FY2025": 14.5, "FY2024": 15.1, "FY2023": 12.7, "FY2022": 9.7, "FY2021": 7.4, "FY2020": 7.3, "FY2019": 5.8, "FY2018": 3.1, "FY2017": 1.7, "FY2016": 1.2}),
-    ("DATA", "Property and equipment", {"FY2025": 0.6, "FY2024": 1.0, "FY2023": 1.2, "FY2022": 1.5, "FY2021": 1.6, "FY2020": 1.9, "FY2019": 1.9, "FY2018": 2.2, "FY2017": 2.0, "FY2016": 2.1, "FY2015": 1.3, "FY2014": 0.6}),
-    ("DATA", "Investment properties", {"FY2025": 0.2, "FY2024": 1.5, "FY2023": 2.6, "FY2022": 9.2, "FY2021": 94.6, "FY2020": 97.4, "FY2019": 97.3, "FY2018": 100.3, "FY2017": 118.6, "FY2016": 107.8, "FY2015": 7.7, "FY2014": 9.2}),
+    ("DATA", "Property and equipment", {"FY2025": 0.6, "FY2024": 1.0, "FY2023": 1.2, "FY2022": 1.5, "FY2021": 1.6, "FY2020": 1.9, "FY2019": 1.9, "FY2018": 2.2, "FY2017": 2.0, "FY2016": 2.1, "FY2015": 1.3, "FY2014": 0.6, "FY2013": 0.1, "FY2012": 0.1, "FY2011": 0.0, "FY2010": 0.0, "FY2009": 0.1}),
+    ("DATA", "Investment properties", {"FY2025": 0.2, "FY2024": 1.5, "FY2023": 2.6, "FY2022": 9.2, "FY2021": 94.6, "FY2020": 97.4, "FY2019": 97.3, "FY2018": 100.3, "FY2017": 118.6, "FY2016": 107.8, "FY2015": 7.7, "FY2014": 9.2, "FY2013": 8.9, "FY2012": 8.9, "FY2011": 9.3, "FY2010": 10.3, "FY2009": 10.3}),
     ("DATA", "Deferred tax assets", {"FY2025": 2.2, "FY2024": 3.7, "FY2023": 5.6, "FY2022": 6.3, "FY2021": 11.5, "FY2020": 9.5, "FY2019": 6.6, "FY2018": 6.5, "FY2017": 7.3, "FY2016": 8.3}),
-    ("DATA", "Other assets (includes prepayments/accrued income in FY2014-FY2015)", {"FY2025": 6.6, "FY2024": 5.9, "FY2023": 5.4, "FY2022": 8.0, "FY2021": 6.6, "FY2020": 9.9, "FY2019": 10.1, "FY2018": 5.3, "FY2017": 5.0, "FY2016": 4.4, "FY2015": 73.5, "FY2014": 49.7}),
+    ("DATA", "Other assets (includes prepayments/accrued income in FY2009-FY2015)", {"FY2025": 6.6, "FY2024": 5.9, "FY2023": 5.4, "FY2022": 8.0, "FY2021": 6.6, "FY2020": 9.9, "FY2019": 10.1, "FY2018": 5.3, "FY2017": 5.0, "FY2016": 4.4, "FY2015": 73.5, "FY2014": 49.7, "FY2013": 26.7, "FY2012": 53.0, "FY2011": 78.2, "FY2010": 51.7, "FY2009": 42.4}),
     ("DATA", "Pension asset", {"FY2025": 0.9, "FY2024": 0.2}),
-    ("TOTAL", "Total assets", {"FY2025": 2122.6, "FY2024": 2008.8, "FY2023": 1823.1, "FY2022": 1860.8, "FY2021": 1713.4, "FY2020": 1409.2, "FY2019": 1378.7, "FY2018": 1363.4, "FY2017": 1267.4, "FY2016": 1316.8, "FY2015": 999.0, "FY2014": 784.7}),
+    ("TOTAL", "Total assets", {"FY2025": 2122.6, "FY2024": 2008.8, "FY2023": 1823.1, "FY2022": 1860.8, "FY2021": 1713.4, "FY2020": 1409.2, "FY2019": 1378.7, "FY2018": 1363.4, "FY2017": 1267.4, "FY2016": 1316.8, "FY2015": 999.0, "FY2014": 784.7, "FY2013": 726.5, "FY2012": 802.5, "FY2011": 710.9, "FY2010": 825.3, "FY2009": 738.0}),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Deposits from banks (called 'amounts owed to credit institutions and central banks' in FY2014-FY2015)", {"FY2025": 67.0, "FY2024": 167.7, "FY2023": 240.7, "FY2022": 221.0, "FY2021": 145.0, "FY2020": 87.5, "FY2019": 72.5, "FY2018": 72.5, "FY2017": 2.8, "FY2016": 2.8, "FY2015": 2.8, "FY2014": 10.0}),
-    ("DATA", "Deposits from customers (called 'customer accounts' in FY2014-FY2015)", {"FY2025": 1860.3, "FY2024": 1639.4, "FY2023": 1368.1, "FY2022": 1425.0, "FY2021": 1381.0, "FY2020": 1071.4, "FY2019": 1042.8, "FY2018": 994.6, "FY2017": 947.7, "FY2016": 991.7, "FY2015": 848.6, "FY2014": 633.2}),
+    ("DATA", "Deposits from banks (called 'amounts owed to credit institutions and central banks' in FY2014-FY2015)", {"FY2025": 67.0, "FY2024": 167.7, "FY2023": 240.7, "FY2022": 221.0, "FY2021": 145.0, "FY2020": 87.5, "FY2019": 72.5, "FY2018": 72.5, "FY2017": 2.8, "FY2016": 2.8, "FY2015": 2.8, "FY2014": 10.0, "FY2013": 5.0, "FY2012": 8.9, "FY2011": 1.1, "FY2010": 0.5}),
+    ("DATA", "Deposits from customers (called 'customer accounts' in FY2014-FY2015)", {"FY2025": 1860.3, "FY2024": 1639.4, "FY2023": 1368.1, "FY2022": 1425.0, "FY2021": 1381.0, "FY2020": 1071.4, "FY2019": 1042.8, "FY2018": 994.6, "FY2017": 947.7, "FY2016": 991.7, "FY2015": 848.6, "FY2014": 633.2, "FY2013": 583.6, "FY2012": 658.9, "FY2011": 579.6, "FY2010": 696.2, "FY2009": 610.5}),
     ("DATA", "Derivative financial instruments (liability)", {"FY2025": 5.1, "FY2024": 5.6, "FY2023": 9.7, "FY2022": 11.4, "FY2021": 14.7, "FY2020": 82.0, "FY2019": 80.4, "FY2018": 107.8, "FY2017": 131.1, "FY2016": 150.6}),
-    ("DATA", "Other liabilities (includes accruals/deferred income and other provisions in FY2014-FY2020)", {"FY2025": 10.4, "FY2024": 12.9, "FY2023": 16.5, "FY2022": 13.9, "FY2021": 9.9, "FY2020": 6.3, "FY2019": 6.1, "FY2018": 4.0, "FY2017": 5.5, "FY2016": 11.9, "FY2015": 10.3, "FY2014": 6.6}),
-    ("DATA", "Pension liabilities", {"FY2023": 4.3, "FY2022": 4.5, "FY2021": 14.2, "FY2020": 21.0, "FY2019": 16.6, "FY2018": 12.8, "FY2017": 13.0, "FY2016": 13.5, "FY2015": 3.6, "FY2014": 2.9}),
-    ("TOTAL", "Total liabilities", {"FY2025": 1942.8, "FY2024": 1825.6, "FY2023": 1639.3, "FY2022": 1675.8, "FY2021": 1564.8, "FY2020": 1268.2, "FY2019": 1218.4, "FY2018": 1191.7, "FY2017": 1100.1, "FY2016": 1170.5, "FY2015": 865.3, "FY2014": 652.7}),
+    ("DATA", "Other liabilities (includes accruals/deferred income and other provisions in FY2009-FY2020)", {"FY2025": 10.4, "FY2024": 12.9, "FY2023": 16.5, "FY2022": 13.9, "FY2021": 9.9, "FY2020": 6.3, "FY2019": 6.1, "FY2018": 4.0, "FY2017": 5.5, "FY2016": 11.9, "FY2015": 10.3, "FY2014": 6.6, "FY2013": 7.5, "FY2012": 7.7, "FY2011": 4.9, "FY2010": 4.3, "FY2009": 4.5}),
+    ("DATA", "Pension liabilities", {"FY2023": 4.3, "FY2022": 4.5, "FY2021": 14.2, "FY2020": 21.0, "FY2019": 16.6, "FY2018": 12.8, "FY2017": 13.0, "FY2016": 13.5, "FY2015": 3.6, "FY2014": 2.9, "FY2013": 2.2, "FY2012": 1.4, "FY2011": 0.6, "FY2010": 0.1, "FY2009": 0.9}),
+    ("TOTAL", "Total liabilities", {"FY2025": 1942.8, "FY2024": 1825.6, "FY2023": 1639.3, "FY2022": 1675.8, "FY2021": 1564.8, "FY2020": 1268.2, "FY2019": 1218.4, "FY2018": 1191.7, "FY2017": 1100.1, "FY2016": 1170.5, "FY2015": 865.3, "FY2014": 652.7, "FY2013": 598.3, "FY2012": 676.9, "FY2011": 586.2, "FY2010": 701.1, "FY2009": 615.9}),
     ("SECTION", "Equity", {}),
-    ("DATA", "Called up share capital", {"FY2025": 130.0, "FY2024": 130.0, "FY2023": 130.0, "FY2022": 130.0, "FY2021": 105.0, "FY2020": 105.0, "FY2019": 105.0, "FY2018": 105.0, "FY2017": 105.0, "FY2016": 100.0, "FY2015": 100.0, "FY2014": 100.0}),
-    ("DATA", "Other reserves (retained earnings + pension reserve; profit and loss account + revaluation reserve in FY2014-FY2015 UK GAAP)", {"FY2025": 49.8, "FY2024": 53.2, "FY2023": 53.8, "FY2022": 55.0, "FY2021": 43.6, "FY2020": 36.0, "FY2019": 55.3, "FY2018": 66.7, "FY2017": 62.3, "FY2016": 46.3, "FY2015": 33.7, "FY2014": 32.0}),
-    ("TOTAL", "Total equity", {"FY2025": 179.8, "FY2024": 183.2, "FY2023": 183.8, "FY2022": 185.0, "FY2021": 148.6, "FY2020": 141.0, "FY2019": 160.3, "FY2018": 171.7, "FY2017": 167.3, "FY2016": 146.3, "FY2015": 133.7, "FY2014": 132.0}),
-    ("TOTAL", "Total equity and liabilities", {"FY2025": 2122.6, "FY2024": 2008.8, "FY2023": 1823.1, "FY2022": 1860.8, "FY2021": 1713.4, "FY2020": 1409.2, "FY2019": 1378.7, "FY2018": 1363.4, "FY2017": 1267.4, "FY2016": 1316.8, "FY2015": 999.0, "FY2014": 784.7}),
+    ("DATA", "Called up share capital", {"FY2025": 130.0, "FY2024": 130.0, "FY2023": 130.0, "FY2022": 130.0, "FY2021": 105.0, "FY2020": 105.0, "FY2019": 105.0, "FY2018": 105.0, "FY2017": 105.0, "FY2016": 100.0, "FY2015": 100.0, "FY2014": 100.0, "FY2013": 100.0, "FY2012": 100.0, "FY2011": 100.0, "FY2010": 100.0, "FY2009": 100.0}),
+    ("DATA", "Other reserves (retained earnings + pension reserve; profit and loss account + revaluation reserve in FY2009-FY2015 UK GAAP)", {"FY2025": 49.8, "FY2024": 53.2, "FY2023": 53.8, "FY2022": 55.0, "FY2021": 43.6, "FY2020": 36.0, "FY2019": 55.3, "FY2018": 66.7, "FY2017": 62.3, "FY2016": 46.3, "FY2015": 33.7, "FY2014": 32.0, "FY2013": 28.2, "FY2012": 25.6, "FY2011": 24.7, "FY2010": 24.1, "FY2009": 22.1}),
+    ("TOTAL", "Total equity", {"FY2025": 179.8, "FY2024": 183.2, "FY2023": 183.8, "FY2022": 185.0, "FY2021": 148.6, "FY2020": 141.0, "FY2019": 160.3, "FY2018": 171.7, "FY2017": 167.3, "FY2016": 146.3, "FY2015": 133.7, "FY2014": 132.0, "FY2013": 128.2, "FY2012": 125.6, "FY2011": 124.7, "FY2010": 124.1, "FY2009": 122.1}),
+    ("TOTAL", "Total equity and liabilities", {"FY2025": 2122.6, "FY2024": 2008.8, "FY2023": 1823.1, "FY2022": 1860.8, "FY2021": 1713.4, "FY2020": 1409.2, "FY2019": 1378.7, "FY2018": 1363.4, "FY2017": 1267.4, "FY2016": 1316.8, "FY2015": 999.0, "FY2014": 784.7, "FY2013": 726.5, "FY2012": 802.5, "FY2011": 710.9, "FY2010": 825.3, "FY2009": 738.0}),
 ]
 
 bw.add_balance_sheet_sheet(
     title="Julian Hodge Bank Limited — Balance Sheet",
     subtitle="Entity-level (Company-only, FRS 101). £m.",
     rows=bs_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + HD074_NOTE,
     first_col_width=64,
     source_height=280,
     unit_suffix=" (£m)",
@@ -219,21 +266,35 @@ bw.add_balance_sheet_sheet(
 pl_rows = [
     ("SECTION", "Income", {}),
     ("DATA", "Interest revenue calculated using the EIR method (FY2014-FY2015: UK GAAP interest receivable, not EIR-method - same row for comparability, see note)",
-     {"FY2025": 122.9, "FY2024": 92.1, "FY2023": 67.3, "FY2022": 50.5, "FY2021": 39.6, "FY2020": 38.4, "FY2019": 48.3, "FY2018": 46.0, "FY2017": 41.3, "FY2016": 42.2, "FY2015": 33.3, "FY2014": 28.9}),
+     {"FY2025": 122.9, "FY2024": 92.1, "FY2023": 67.3, "FY2022": 50.5, "FY2021": 39.6, "FY2020": 38.4, "FY2019": 48.3, "FY2018": 46.0, "FY2017": 41.3, "FY2016": 42.2, "FY2015": 33.3, "FY2014": 28.9,
+      "FY2013": 27.5, "FY2012": 26.9, "FY2011": 28.4, "FY2010": 33.5, "FY2009": 32.6}),
     ("DATA", "Interest expense calculated using the EIR method (FY2014-FY2015: UK GAAP interest payable)",
-     {"FY2025": -81.1, "FY2024": -52.4, "FY2023": -27.9, "FY2022": -21.1, "FY2021": -22.0, "FY2020": -22.8, "FY2019": -28.1, "FY2018": -27.7, "FY2017": -27.4, "FY2016": -29.0, "FY2015": -27.7, "FY2014": -26.0}),
-    ("TOTAL", "Net interest income", {"FY2025": 41.8, "FY2024": 39.7, "FY2023": 39.4, "FY2022": 29.4, "FY2021": 17.6, "FY2020": 15.6, "FY2019": 20.2, "FY2018": 18.3, "FY2017": 13.9, "FY2016": 13.2, "FY2015": 5.6, "FY2014": 2.9}),
-    ("DATA", "Fees and commission income", {"FY2025": 1.0, "FY2024": 2.9, "FY2023": 2.5, "FY2022": 2.6, "FY2021": 2.5, "FY2020": 1.8, "FY2019": 0.7, "FY2018": 2.5, "FY2017": 0.5, "FY2016": 1.1, "FY2015": 2.8, "FY2014": 2.2}),
-    ("DATA", "Fees and commission expense", {"FY2025": -3.6, "FY2024": -1.2, "FY2023": -0.1, "FY2022": -0.1, "FY2019": -0.1, "FY2018": -1.1, "FY2017": -1.2, "FY2016": -0.7, "FY2015": -0.8, "FY2014": -1.5}),
-    ("TOTAL", "Net fee and commission income/(expense)", {"FY2025": -2.6, "FY2024": 1.7, "FY2023": 2.4, "FY2022": 2.5, "FY2021": 2.5, "FY2020": 1.8, "FY2019": 0.6, "FY2018": 1.4, "FY2017": -0.7, "FY2016": 0.4, "FY2015": 2.0, "FY2014": 0.7}),
-    ("DATA", "Investment income (FY2014-FY2015: 'Other finance income')", {"FY2025": 0.6, "FY2024": 0.5, "FY2023": 4.6, "FY2022": 6.7, "FY2021": 6.0, "FY2020": 3.5, "FY2019": 7.2, "FY2018": 6.4, "FY2017": 4.8, "FY2015": 0.4, "FY2014": 0.8}),
-    ("DATA", "Other operating income", {"FY2023": 0.2, "FY2021": 0.1, "FY2018": 0.1, "FY2017": 1.0, "FY2016": 0.8, "FY2015": 5.0, "FY2014": 4.9}),
+     {"FY2025": -81.1, "FY2024": -52.4, "FY2023": -27.9, "FY2022": -21.1, "FY2021": -22.0, "FY2020": -22.8, "FY2019": -28.1, "FY2018": -27.7, "FY2017": -27.4, "FY2016": -29.0, "FY2015": -27.7, "FY2014": -26.0,
+      "FY2013": -29.4, "FY2012": -28.7, "FY2011": -28.3, "FY2010": -31.0, "FY2009": -25.3}),
+    ("TOTAL", "Net interest income", {"FY2025": 41.8, "FY2024": 39.7, "FY2023": 39.4, "FY2022": 29.4, "FY2021": 17.6, "FY2020": 15.6, "FY2019": 20.2, "FY2018": 18.3, "FY2017": 13.9, "FY2016": 13.2, "FY2015": 5.6, "FY2014": 2.9,
+      "FY2013": -1.9, "FY2012": -1.8, "FY2011": 0.2, "FY2010": 2.4, "FY2009": 7.4}),
+    ("DATA", "Fees and commission income", {"FY2025": 1.0, "FY2024": 2.9, "FY2023": 2.5, "FY2022": 2.6, "FY2021": 2.5, "FY2020": 1.8, "FY2019": 0.7, "FY2018": 2.5, "FY2017": 0.5, "FY2016": 1.1, "FY2015": 2.8, "FY2014": 2.2,
+      "FY2013": 1.1, "FY2012": 1.2, "FY2011": 1.3, "FY2010": 1.6, "FY2009": 2.6}),
+    ("DATA", "Fees and commission expense", {"FY2025": -3.6, "FY2024": -1.2, "FY2023": -0.1, "FY2022": -0.1, "FY2019": -0.1, "FY2018": -1.1, "FY2017": -1.2, "FY2016": -0.7, "FY2015": -0.8, "FY2014": -1.5,
+      "FY2013": -0.3, "FY2011": -0.1, "FY2010": -0.4, "FY2009": -1.0}),
+    ("TOTAL", "Net fee and commission income/(expense)", {"FY2025": -2.6, "FY2024": 1.7, "FY2023": 2.4, "FY2022": 2.5, "FY2021": 2.5, "FY2020": 1.8, "FY2019": 0.6, "FY2018": 1.4, "FY2017": -0.7, "FY2016": 0.4, "FY2015": 2.0, "FY2014": 0.7,
+      "FY2013": 0.8, "FY2012": 1.2, "FY2011": 1.3, "FY2010": 1.2, "FY2009": 1.6}),
+    ("DATA", "Investment income (FY2014-FY2015: 'Other finance income')", {"FY2025": 0.6, "FY2024": 0.5, "FY2023": 4.6, "FY2022": 6.7, "FY2021": 6.0, "FY2020": 3.5, "FY2019": 7.2, "FY2018": 6.4, "FY2017": 4.8, "FY2015": 0.4, "FY2014": 0.8,
+      "FY2013": 0.3, "FY2012": 0.4, "FY2011": -0.1, "FY2010": 0.1, "FY2009": 0.2}),
+    ("DATA", "Dividend income from listed equity shares and subsidiary companies (FY2009-FY2013 only)",
+     {"FY2012": 0.2, "FY2011": 0.2, "FY2010": 0.1, "FY2009": 0.4}),
+    ("DATA", "Other operating income", {"FY2023": 0.2, "FY2021": 0.1, "FY2018": 0.1, "FY2017": 1.0, "FY2016": 0.8, "FY2015": 5.0, "FY2014": 4.9,
+      "FY2013": 9.0, "FY2012": 8.2, "FY2011": 7.5, "FY2010": 12.2, "FY2009": 3.4}),
     ("DATA", "Bad debt recovery", {"FY2022": 0.4}),
-    ("TOTAL", "Net operating income", {"FY2025": 39.8, "FY2024": 41.9, "FY2023": 46.6, "FY2022": 38.6, "FY2021": 26.2, "FY2020": 20.9, "FY2019": 28.0, "FY2018": 18.2, "FY2017": 19.3, "FY2016": 33.5, "FY2015": 13.0, "FY2014": 9.3}),
-    ("DATA", "Administrative expenses", {"FY2025": -33.7, "FY2024": -36.4, "FY2023": -35.3, "FY2022": -34.2, "FY2021": -25.9, "FY2020": -22.3, "FY2019": -16.4, "FY2018": -12.0, "FY2017": -9.9, "FY2016": -8.1, "FY2015": -6.7, "FY2014": -5.4}),
-    ("DATA", "Depreciation and amortisation", {"FY2025": -3.1, "FY2024": -2.9, "FY2023": -2.9, "FY2022": -2.5, "FY2021": -2.4, "FY2020": -1.8, "FY2019": -1.2, "FY2018": -0.9, "FY2017": -0.5, "FY2016": -0.2}),
-    ("DATA", "Impairment (losses)/gains on loans and advances to customers", {"FY2025": -6.5, "FY2024": -2.2, "FY2023": -1.6, "FY2020": -5.4, "FY2019": -3.9, "FY2018": 1.0, "FY2017": 1.6, "FY2016": -2.4, "FY2015": -2.1, "FY2014": -0.7}),
-    ("DATA", "Movement in valuation of stock/work-in-progress (UK GAAP line, FY2014-FY2015 only)", {"FY2015": 0.9, "FY2014": 1.1}),
+    ("TOTAL", "Net operating income", {"FY2025": 39.8, "FY2024": 41.9, "FY2023": 46.6, "FY2022": 38.6, "FY2021": 26.2, "FY2020": 20.9, "FY2019": 28.0, "FY2018": 18.2, "FY2017": 19.3, "FY2016": 33.5, "FY2015": 13.0, "FY2014": 9.3,
+      "FY2013": 8.2, "FY2012": 8.1, "FY2011": 9.0, "FY2010": 16.1, "FY2009": 13.0}),
+    ("DATA", "Administrative expenses", {"FY2025": -33.7, "FY2024": -36.4, "FY2023": -35.3, "FY2022": -34.2, "FY2021": -25.9, "FY2020": -22.3, "FY2019": -16.4, "FY2018": -12.0, "FY2017": -9.9, "FY2016": -8.1, "FY2015": -6.7, "FY2014": -5.4,
+      "FY2013": -4.5, "FY2012": -4.9, "FY2011": -4.9, "FY2010": -5.7, "FY2009": -7.5}),
+    ("DATA", "Depreciation and amortisation", {"FY2025": -3.1, "FY2024": -2.9, "FY2023": -2.9, "FY2022": -2.5, "FY2021": -2.4, "FY2020": -1.8, "FY2019": -1.2, "FY2018": -0.9, "FY2017": -0.5, "FY2016": -0.2,
+      "FY2013": 0.0, "FY2012": 0.0, "FY2011": 0.0, "FY2010": 0.0, "FY2009": -0.2}),
+    ("DATA", "Impairment (losses)/gains on loans and advances to customers", {"FY2025": -6.5, "FY2024": -2.2, "FY2023": -1.6, "FY2020": -5.4, "FY2019": -3.9, "FY2018": 1.0, "FY2017": 1.6, "FY2016": -2.4, "FY2015": -2.1, "FY2014": -0.7,
+      "FY2013": -0.1, "FY2012": 0.8, "FY2011": -1.5, "FY2010": -8.2, "FY2009": -4.2}),
+    ("DATA", "Movement in valuation of stock/work-in-progress (UK GAAP line, FY2009-FY2015 only)", {"FY2015": 0.9, "FY2014": 1.1, "FY2013": -0.1, "FY2012": -0.9}),
     ("TOTAL", "Operating profit/(loss) (FY2021-FY2024 subtotal; see Net operating (loss)/income for FY2025's own equivalent line)",
      {"FY2024": 0.4, "FY2023": 6.8, "FY2022": 2.3, "FY2021": -2.1, "FY2020": -8.6, "FY2019": 6.5}),
     ("TOTAL", "Net operating (loss)/income (FY2025's own subtotal, structured differently from FY2021-FY2024's 'Operating profit')",
@@ -242,13 +303,19 @@ pl_rows = [
     ("DATA", "Other fair value gains/(losses)", {"FY2025": -2.3, "FY2024": -1.5, "FY2023": -7.0, "FY2022": 4.3, "FY2021": 11.3, "FY2020": -16.7, "FY2019": -12.8, "FY2018": -8.0, "FY2017": 0.3, "FY2016": 19.2}),
     ("DATA", "Loss on disposal of loans and advances to customers held at fair value", {"FY2021": -5.5, "FY2019": -4.6}),
     ("TOTAL", "Profit/(loss) before taxation (FY2014-FY2015: 'Profit on ordinary activities before taxation')",
-     {"FY2025": -5.8, "FY2024": -2.1, "FY2023": -0.2, "FY2022": 6.6, "FY2021": 3.7, "FY2020": -21.1, "FY2019": -7.8, "FY2018": 6.3, "FY2017": 10.5, "FY2016": 22.8, "FY2015": 5.0, "FY2014": 4.3}),
-    ("DATA", "Tax credit/(charge) on profit/(loss) before taxation", {"FY2025": 1.9, "FY2024": 0.4, "FY2022": -1.8, "FY2021": 2.1, "FY2020": 5.2, "FY2019": 2.1, "FY2018": -0.8, "FY2017": -0.3, "FY2016": -5.2, "FY2015": -0.8, "FY2014": -0.2}),
-    ("TOTAL", "Profit/(loss) for the financial year", {"FY2025": -3.9, "FY2024": -1.7, "FY2023": -0.2, "FY2022": 4.8, "FY2021": 5.8, "FY2020": -15.9, "FY2019": -5.7, "FY2018": 5.5, "FY2017": 10.2, "FY2016": 17.6, "FY2015": 4.3, "FY2014": 4.1}),
+     {"FY2025": -5.8, "FY2024": -2.1, "FY2023": -0.2, "FY2022": 6.6, "FY2021": 3.7, "FY2020": -21.1, "FY2019": -7.8, "FY2018": 6.3, "FY2017": 10.5, "FY2016": 22.8, "FY2015": 5.0, "FY2014": 4.3,
+      "FY2013": 3.5, "FY2012": 3.1, "FY2011": 2.6, "FY2010": 2.1, "FY2009": 1.2}),
+    ("DATA", "Tax credit/(charge) on profit/(loss) before taxation", {"FY2025": 1.9, "FY2024": 0.4, "FY2022": -1.8, "FY2021": 2.1, "FY2020": 5.2, "FY2019": 2.1, "FY2018": -0.8, "FY2017": -0.3, "FY2016": -5.2, "FY2015": -0.8, "FY2014": -0.2,
+      "FY2013": 0.1, "FY2012": -0.5, "FY2011": -0.6, "FY2010": -0.8, "FY2009": -0.4}),
+    ("TOTAL", "Profit/(loss) for the financial year", {"FY2025": -3.9, "FY2024": -1.7, "FY2023": -0.2, "FY2022": 4.8, "FY2021": 5.8, "FY2020": -15.9, "FY2019": -5.7, "FY2018": 5.5, "FY2017": 10.2, "FY2016": 17.6, "FY2015": 4.3, "FY2014": 4.1,
+      "FY2013": 3.5, "FY2012": 2.6, "FY2011": 2.0, "FY2010": 1.3, "FY2009": 0.7}),
     ("SECTION", "Other comprehensive income", {}),
     ("DATA", "Re-measurement of defined benefit pension plan (FY2014-FY2015: 'Actuarial loss recognised in the pension scheme')",
-     {"FY2025": 0.7, "FY2024": 1.7, "FY2023": -1.7, "FY2022": 9.0, "FY2021": 2.6, "FY2020": -4.4, "FY2019": -3.3, "FY2018": 0.6, "FY2017": 0.4, "FY2016": -9.1, "FY2015": -1.1, "FY2014": -1.4}),
-    ("DATA", "Deferred tax on pension plan re-measurement", {"FY2025": -0.2, "FY2024": -0.4, "FY2023": 0.4, "FY2022": -2.2, "FY2021": -0.4, "FY2020": 0.7, "FY2019": 0.6, "FY2018": -0.1, "FY2017": -0.1, "FY2016": 1.5}),
+     {"FY2025": 0.7, "FY2024": 1.7, "FY2023": -1.7, "FY2022": 9.0, "FY2021": 2.6, "FY2020": -4.4, "FY2019": -3.3, "FY2018": 0.6, "FY2017": 0.4, "FY2016": -9.1, "FY2015": -1.1, "FY2014": -1.4,
+      "FY2013": -1.2, "FY2012": -1.4, "FY2011": -0.5, "FY2010": 0.7, "FY2009": -2.8}),
+    ("DATA", "Deferred tax on pension plan re-measurement", {"FY2025": -0.2, "FY2024": -0.4, "FY2023": 0.4, "FY2022": -2.2, "FY2021": -0.4, "FY2020": 0.7, "FY2019": 0.6, "FY2018": -0.1, "FY2017": -0.1, "FY2016": 1.5,
+      "FY2013": 0.2, "FY2012": 0.2, "FY2011": 0.1}),
+    ("DATA", "Deficit on revaluation of investment properties (FY2011-FY2012 only)", {"FY2012": -0.4, "FY2011": -1.0}),
     ("DATA", "Movement of pension scheme reimbursement asset/(liability) (FY2014-FY2015: net of deferred tax)",
      {"FY2024": -0.3, "FY2023": 0.4, "FY2022": -0.2, "FY2021": -1.0, "FY2020": 0.4, "FY2019": 0.5, "FY2018": -0.1, "FY2017": -0.9, "FY2016": 2.3, "FY2015": 0.1, "FY2014": 0.7}),
     ("DATA", "Deferred tax on pension reimbursement movement", {"FY2024": 0.1, "FY2023": -0.1, "FY2021": 0.6, "FY2020": -0.1, "FY2019": -0.1, "FY2017": 0.1, "FY2016": -0.4}),
@@ -256,8 +323,10 @@ pl_rows = [
      {"FY2018": -1.8, "FY2017": -0.1, "FY2016": 1.1}),
     ("DATA", "Deferred tax on available-for-sale fair value movements", {"FY2018": 0.3, "FY2017": -0.8}),
     ("DATA", "Revaluation of investment properties (UK GAAP line, FY2014-FY2015 only, net of deferred tax)", {"FY2015": -1.5, "FY2014": 0.3}),
-    ("TOTAL", "Total other comprehensive income/(loss)", {"FY2025": 0.5, "FY2024": 1.1, "FY2023": -1.0, "FY2022": 6.6, "FY2021": 1.8, "FY2020": -3.4, "FY2019": -2.3, "FY2018": -1.1, "FY2017": -1.4, "FY2016": -4.6, "FY2015": -2.5, "FY2014": -0.3}),
-    ("TOTAL", "Total comprehensive (loss)/income for the year", {"FY2025": -3.4, "FY2024": -0.6, "FY2023": -1.2, "FY2022": 11.4, "FY2021": 7.6, "FY2020": -19.3, "FY2019": -8.0, "FY2018": 4.4, "FY2017": 8.8, "FY2016": 13.0, "FY2015": 1.8, "FY2014": 3.8}),
+    ("TOTAL", "Total other comprehensive income/(loss)", {"FY2025": 0.5, "FY2024": 1.1, "FY2023": -1.0, "FY2022": 6.6, "FY2021": 1.8, "FY2020": -3.4, "FY2019": -2.3, "FY2018": -1.1, "FY2017": -1.4, "FY2016": -4.6, "FY2015": -2.5, "FY2014": -0.3,
+      "FY2013": -1.0, "FY2012": -1.6, "FY2011": -1.4, "FY2010": 0.7, "FY2009": -2.8}),
+    ("TOTAL", "Total comprehensive (loss)/income for the year", {"FY2025": -3.4, "FY2024": -0.6, "FY2023": -1.2, "FY2022": 11.4, "FY2021": 7.6, "FY2020": -19.3, "FY2019": -8.0, "FY2018": 4.4, "FY2017": 8.8, "FY2016": 13.0, "FY2015": 1.8, "FY2014": 3.8,
+      "FY2013": 2.6, "FY2012": 1.0, "FY2011": 0.5, "FY2010": 2.0, "FY2009": -2.1}),
 ]
 
 bw.add_income_statement_sheet(
@@ -268,7 +337,7 @@ bw.add_income_statement_sheet(
               "comparative column is separately labelled 'Restated' (Note 33 interest revenue/expense reclassification) - "
               "that restated column is NOT used here, FY2024's own contemporaneous report is used instead, per project convention.",
     rows=pl_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + HD074_NOTE,
     first_col_width=90,
     source_height=280,
     unit_suffix=" (£m)",
@@ -288,6 +357,22 @@ bw.add_income_statement_sheet(
 # ---------------------------------------------------------------
 equity_headers = ["Called up share capital", "Retained earnings", "Other reserves (see sheet note)", "Total"]
 equity_rows = [
+    ("TOTAL", "Opening balance at 1 November 2009 (FY2010 opening, per the FY2010 Annual Report; FY2009's own "
+     "1 November 2008 opening and component movement are not available from the sourced documents - see HD074_NOTE - "
+     "so the ladder begins here, one year later than the Balance Sheet/P&L sheets)", (100.0, 22.1, None, 122.1)),
+    ("DATA", "Profit for the financial year", (None, 1.3, None, 1.3)),
+    ("TOTAL", "At 31 October 2010 (FY2010 closing)", (100.0, 24.1, None, 124.1)),
+    ("DATA", "Profit for the financial year", (None, 2.0, None, 2.0)),
+    ("DATA", "Deficit on revaluation of investment properties", (None, None, -1.0, -1.0)),
+    ("DATA", "Actuarial loss recognised in the pension scheme (net of deferred tax)", (None, -0.4, None, -0.4)),
+    ("TOTAL", "At 31 October 2011 (FY2011 closing)", (100.0, 25.7, -1.0, 124.7)),
+    ("DATA", "Profit for the financial year", (None, 2.6, None, 2.6)),
+    ("DATA", "Deficit on revaluation of investment properties", (None, None, -0.4, -0.4)),
+    ("DATA", "Actuarial loss recognised in the pension scheme (net of deferred tax)", (None, -1.2, None, -1.2)),
+    ("TOTAL", "At 31 October 2012 (FY2012 closing, per the FY2013 Annual Report's own comparative - see HD074_NOTE "
+     "on the FY2012 standalone-document gap)", (100.0, 27.1, -1.4, 125.6)),
+    ("DATA", "Profit for the financial year", (None, 3.5, None, 3.5)),
+    ("DATA", "Actuarial loss recognised in the pension scheme (net of deferred tax)", (None, -1.0, None, -1.0)),
     ("TOTAL", "Opening balance at 1 November 2013 (FY2014 opening)", (100.0, 29.7, -1.4, 128.2)),
     ("DATA", "Profit for the financial year", (None, 4.1, None, 4.1)),
     ("DATA", "Actuarial loss recognised in the pension scheme (net of deferred tax)", (None, -1.4, None, -1.4)),
@@ -351,7 +436,7 @@ bw.add_equity_changes_sheet(
               "(FY2016-FY2019) / Pension reserve only (FY2020 onward, post-IFRS 9). £m.",
     headers=equity_headers,
     rows=equity_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + HD074_NOTE,
 )
 
 # ---------------------------------------------------------------
@@ -423,13 +508,14 @@ bw.add_asset_quality_sheet(
     first_col_width=76,
     source_height=380,
     unit_suffix=" (£m)",
+    years=PILLAR3_YEARS,
 )
 
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=170)
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=170, years=PILLAR3_YEARS)
 
 
 metric(
@@ -540,6 +626,7 @@ bw.add_rwa_breakdown_sheet(
     first_col_width=90,
     source_height=280,
     unit_suffix=" (£m)",
+    years=PILLAR3_YEARS,
 )
 
 metric(

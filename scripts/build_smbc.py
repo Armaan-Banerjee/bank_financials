@@ -237,6 +237,16 @@ BS_TRADING_ASSETS = {"FY2025": 1497.7}
 BS_INVESTMENT_SEC = {"FY2025": 764.1, "FY2024": 668.5, "FY2023": 1045.1, "FY2022": 1009.2, "FY2021": 496.5,
                      "FY2020": 624.9, "FY2019": 426.5, "FY2018": 751.1, "FY2017": 455.3, "FY2016": 783.7,
                      "FY2015": 882.9, "FY2014": 1001.7, "FY2013": 476.1}
+# Note 12 "Investment securities" breakdown by measurement basis - available FY2020-FY2025 only (see BS_SOURCES'
+# INVESTMENT SECURITIES BREAKDOWN paragraph for exact note/page citations per year; FY2013-FY2019 comes from
+# scanned/image-only Companies House filings with no extractable text, so no breakdown is available for those years).
+# Each year's three figures sum exactly to that year's BS_INVESTMENT_SEC total above.
+BS_INV_SEC_AMORTISED = {"FY2025": 18.0, "FY2024": 10.3, "FY2023": 29.3, "FY2022": 65.4, "FY2021": 130.1,
+                        "FY2020": 186.2}
+BS_INV_SEC_FVOCI = {"FY2025": 724.0, "FY2024": 637.0, "FY2023": 997.0, "FY2022": 925.7, "FY2021": 354.9,
+                    "FY2020": 433.4}
+BS_INV_SEC_FVTPL = {"FY2025": 22.1, "FY2024": 21.2, "FY2023": 18.8, "FY2022": 18.1, "FY2021": 11.5,
+                    "FY2020": 5.3}
 BS_DERIVATIVE_ASSETS = {"FY2025": 1757.9, "FY2024": 1973.0, "FY2023": 2085.6, "FY2022": 1430.4, "FY2021": 1255.7,
                         "FY2020": 1776.3, "FY2019": 996.0, "FY2018": 1568.2, "FY2017": 1093.6, "FY2016": 1260.9,
                         "FY2015": 1496.5, "FY2014": 468.7, "FY2013": 483.0}
@@ -345,6 +355,22 @@ BS_SOURCES = (
     "(both blank/not disclosed for FY2014-2018) - a genuine, cited presentation change introduced as at 31 March "
     "2019 per that year's own report ('Changes to the balance sheet were introduced as at 31 March 2018 as a "
     "result of the adoption of IFRS 9 on 1 April 2018'), not a data gap.\n\n"
+    "INVESTMENT SECURITIES BREAKDOWN: the 'Investment securities - ...' sub-rows below the headline 'Total "
+    "investment securities' line are transcribed from Note 12 'Investment securities' of each year's own Notes to "
+    "the financial statements, which splits the balance by measurement basis (amortised cost / fair value through "
+    "other comprehensive income (FVOCI) / fair value through profit and loss (FVTPL)):\n"
+    f"FY2025: Note 12, p.108 - {AR2025_URL}\n"
+    "FY2024: same FY2025 filing's own FY2024 comparative column, Note 12, p.108\n"
+    f"FY2023: Note 12, p.134 - {AR2023_URL}\n"
+    "FY2022: same FY2023 filing's own FY2022 comparative column, Note 12, p.134\n"
+    f"FY2021: Note 12, p.120 - {AR2021_URL}\n"
+    "FY2020: same FY2021 filing's own FY2020 comparative column, Note 12, p.120\n"
+    "Each year's sub-rows sum exactly to that year's headline 'Total investment securities' line. No breakdown is "
+    "available for FY2013-FY2019: those years' own Annual Reports are scanned/image-only Companies House filings "
+    "(TIFF-derived PDFs with no extractable text layer, per Companies House filing history for company 04684034) "
+    "and Note 12 in this later, text-native format was in any case only introduced following IFRS 9 adoption on "
+    "1 April 2018 (see the pre-FY2019 presentation note above) - no issuer-type (e.g. UK government/sovereign vs. "
+    "supranational/corporate) breakdown of Investment securities is disclosed in any year's Note 12.\n\n"
     + ENTITY_NOTE + "\n\n" + FX_NOTE
 )
 
@@ -356,7 +382,10 @@ BS_ROWS = [
     ("DATA", "Loans and advances to customers", gbp_spot(BS_LOANS_CUSTOMERS)),
     ("DATA", "Reverse repurchase agreements", gbp_spot(BS_REVERSE_REPO)),
     ("DATA", "Trading assets", gbp_spot(BS_TRADING_ASSETS)),
-    ("DATA", "Investment securities", gbp_spot(BS_INVESTMENT_SEC)),
+    ("DATA", "Total investment securities", gbp_spot(BS_INVESTMENT_SEC)),
+    ("DATA", "Investment securities - Amortised cost", gbp_spot(BS_INV_SEC_AMORTISED)),
+    ("DATA", "Investment securities - Fair value through other comprehensive income (FVOCI)", gbp_spot(BS_INV_SEC_FVOCI)),
+    ("DATA", "Investment securities - Fair value through profit and loss (FVTPL)", gbp_spot(BS_INV_SEC_FVTPL)),
     ("DATA", "Derivative assets", gbp_spot(BS_DERIVATIVE_ASSETS)),
     ("DATA", "Other assets", gbp_spot(BS_OTHER_ASSETS)),
     ("DATA", "Intangible assets and goodwill", gbp_spot(BS_INTANGIBLES)),
@@ -392,7 +421,7 @@ bw.add_balance_sheet_sheet(
     rows=BS_ROWS,
     sources_text=BS_SOURCES,
     first_col_width=64,
-    source_height=340,
+    source_height=410,
     unit_suffix=" (£m, conv. from USD)",
     years=YEARS,
 )

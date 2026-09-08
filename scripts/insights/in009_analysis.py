@@ -15,13 +15,17 @@ from datetime import datetime
 from collections import defaultdict
 
 
-_FISCAL_YEAR = re.compile(r"^FY(?P<year>20\d{2})(?P<qualifier>.*)$", re.I)
+# Statutory accounts in the collection extend before 2000.  Keep the period
+# grammar shared by annual, interim, and dated observations so older history
+# reaches the same canonical model as current disclosures.
+_HISTORICAL_YEAR = r"(?:1[6-9]\d{2}|20\d{2})"
+_FISCAL_YEAR = re.compile(rf"^FY(?P<year>{_HISTORICAL_YEAR})(?P<qualifier>.*)$", re.I)
 _MONTHS = re.compile(r"(?P<months>\d{1,2})\s*m(?:o(?:nths?)?)?\b", re.I)
-_QUARTER = re.compile(r"(?P<year>20\d{2})\s*[- ]?Q(?P<quarter>[1-4])\b", re.I)
-_HALF = re.compile(r"(?P<year>20\d{2})\s*[- ]?H(?P<half>[12])\b", re.I)
-_REVERSE_HALF = re.compile(r"H(?P<half>[12])\s+(?P<year>20\d{2})$", re.I)
-_ISO_DATE = re.compile(r"(?P<year>20\d{2})-(?P<month>\d{2})-(?P<day>\d{2})$")
-_DATE = re.compile(r"(?P<day>\d{1,2})[ -](?P<month>[A-Za-z]{3,9})[ -](?P<year>20\d{2})$")
+_QUARTER = re.compile(rf"(?P<year>{_HISTORICAL_YEAR})\s*[- ]?Q(?P<quarter>[1-4])\b", re.I)
+_HALF = re.compile(rf"(?P<year>{_HISTORICAL_YEAR})\s*[- ]?H(?P<half>[12])\b", re.I)
+_REVERSE_HALF = re.compile(rf"H(?P<half>[12])\s+(?P<year>{_HISTORICAL_YEAR})$", re.I)
+_ISO_DATE = re.compile(rf"(?P<year>{_HISTORICAL_YEAR})-(?P<month>\d{{2}})-(?P<day>\d{{2}})$")
+_DATE = re.compile(rf"(?P<day>\d{{1,2}})[ -](?P<month>[A-Za-z]{{3,9}})[ -](?P<year>{_HISTORICAL_YEAR})$")
 _MONTH_YEAR = re.compile(r"(?P<month>[A-Za-z]{3,9})[- ](?P<year>\d{2,4})$")
 
 
@@ -214,6 +218,11 @@ def comparison_diagnostics(observations, mode="broad", fiscal_year=None):
     return selected, dict(sorted(exclusions.items()))
 
 
+_RWA_COMPONENT_ONLY_RE = re.compile(
+    r"^total (credit|market|operational|counterparty credit) risk-?weighted assets\b", re.I,
+)
+
+
 def _label_rank(label):
     value = re.sub(r"\s+", " ", (label or "").strip().lower())
     preferred = {
@@ -225,7 +234,24 @@ def _label_rank(label):
         "leverage ratio excluding claims on central banks": 1,
         "leverage ratio": 2,
     }
-    return preferred.get(value, 10)
+    if value in preferred:
+        return preferred[value]
+    # A Total RWAs sheet with a Credit/Market/Operational RWA breakdown
+    # ALSO carries its own genuine grand total under a separate label
+    # ("Total Risk Exposure Amount", "Total RWAs", ...) - the generic
+    # alphabetical tie-break below would otherwise pick "Total Credit
+    # Risk-Weighted Assets (CRWA)" over "Total Risk Exposure Amount" purely
+    # because "C" < "R", silently reporting the credit-risk component alone
+    # as if it were the bank's Total RWA figure (found via Bank of the
+    # Philippine Islands (Europe) PLC, whose RWA/Total-assets chart showed
+    # 71.25% - the CRWA-only ratio - instead of the true 76.48% computed
+    # from its own "Total Risk Exposure Amount" row, which sums CRWA+MRWA+
+    # ORWA). Ranked worse than the default so any generic total label wins
+    # the tie-break; still selectable on its own if it's the sheet's only
+    # row for that bank-year (no other candidate to lose to).
+    if _RWA_COMPONENT_ONLY_RE.match(value):
+        return 15
+    return 10
 
 
 PERCENT_ONLY_SHEETS = {

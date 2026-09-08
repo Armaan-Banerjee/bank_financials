@@ -76,13 +76,36 @@ STATEMENTS_SOURCES = (
     + ENTITY_NOTE
 )
 
+BALANCE_SHEET_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "INVESTMENT SECURITIES BREAKDOWN: the 'Investment securities - ...' sub-rows below the headline 'Total "
+    "investment securities' line are transcribed from each year's own Note 15 'Investment securities' (Note 13 "
+    "in the FY2020-FY2022 reports, renumbered to Note 15 from FY2023 onward), which splits the balance solely "
+    "by IFRS 9 measurement basis/business model - Note 15(a) 'Hold to collect' (securities measured at "
+    "amortised cost) and Note 15(b) 'Hold to collect and sell' (securities measured FVOCI). Each note states "
+    "the underlying bonds are 'primarily UK government securities and highly rated covered, sovereign, "
+    "supra-national and agency bonds' but does NOT itemise the balance numerically by issuer type - only the "
+    "measurement-basis split is disclosed as figures, so no issuer-type sub-rows are shown here.\n"
+    f"FY2025: Note 15(a)/15(b), p.108 - {AR_URLS['FY2025']}\n"
+    f"FY2024: Note 15(a)/15(b), p.153 - {AR_URLS['FY2024']}\n"
+    f"FY2023: Note 15(a)/15(b), p.153 - {AR_URLS['FY2023']}\n"
+    f"FY2022: Note 13(a)/13(b), p.140 - {AR_URLS['FY2022']}\n"
+    f"FY2021: Note 13(a)/13(b), p.124 - {AR_URLS['FY2021']}\n"
+    f"FY2020: Note 13(a)/13(b), p.91 - {AR_URLS['FY2020']}\n\n"
+    "Each year's two sub-rows sum exactly to that year's own headline 'Total investment securities' line "
+    "(verified for all 6 years, including cross-checks against each report's own prior-year comparative "
+    "column)."
+)
+
 bs_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at central bank", {"FY2025": 2975799, "FY2024": 3468175, "FY2023": 3299543, "FY2022": 3350828, "FY2021": 4388161, "FY2020": 4225153}),
     ("DATA", "Items in the course of collection from other banks", {"FY2025": 23389, "FY2024": 25069, "FY2023": 41191, "FY2022": 32139, "FY2021": 21839, "FY2020": 20190}),
     ("DATA", "Due from other banks", {"FY2025": 4236, "FY2024": 5731, "FY2023": 10283, "FY2022": 41711, "FY2021": 48023, "FY2020": 50639}),
     ("DATA", "Derivative financial instruments", {"FY2025": 77518, "FY2024": 76537, "FY2023": 75457, "FY2022": 89324, "FY2021": 8586, "FY2020": 17284}),
-    ("DATA", "Investment securities", {"FY2025": 4637481, "FY2024": 3724852, "FY2023": 3367408, "FY2022": 3369156, "FY2021": 2226346, "FY2020": 1409536}),
+    ("DATA", "Total investment securities", {"FY2025": 4637481, "FY2024": 3724852, "FY2023": 3367408, "FY2022": 3369156, "FY2021": 2226346, "FY2020": 1409536}),
+    ("DATA", "Investment securities - Hold to collect (amortised cost)", {"FY2025": 3130670, "FY2024": 2951816, "FY2023": 2403390, "FY2022": 2294601, "FY2021": 1318484, "FY2020": 531555}),
+    ("DATA", "Investment securities - Hold to collect and sell (FVOCI)", {"FY2025": 1506811, "FY2024": 773036, "FY2023": 964018, "FY2022": 1074555, "FY2021": 907862, "FY2020": 877981}),
     ("DATA", "Loans and advances to customers", {"FY2025": 8054390, "FY2024": 7030843, "FY2023": 6739732, "FY2022": 6334707, "FY2021": 6206664, "FY2020": 6229841}),
     ("DATA", "Investment in subsidiaries", {"FY2025": 250, "FY2024": 250, "FY2023": 250, "FY2022": 250, "FY2021": 250, "FY2020": 250}),
     ("DATA", "Intangible assets", {"FY2025": 2466, "FY2024": 1859, "FY2023": 1608, "FY2022": 522, "FY2021": 34, "FY2020": 157}),
@@ -126,9 +149,9 @@ bw.add_balance_sheet_sheet(
               "for comparability). 'Assets held for sale' is not disclosed as a standalone line for FY2025 (merged "
               "into Other assets that year, per the Bank's own presentation).",
     rows=bs_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=72,
-    source_height=280,
+    source_height=340,
     unit_suffix=" (£'000)",
 )
 
@@ -335,7 +358,8 @@ bw.add_cash_flow_sheet(
     subtitle="Entity-level annual cash flows, £'000. Trading name: Danske Bank.",
     rows=cash_flow,
     sources_text=sources("cash flow statement", {"FY2025": 91, "FY2024": 91, "FY2023": 66, "FY2022": 119, "FY2021": 107, "FY2020": 75})
-    + "\n\nCASH FLOW PRESENTATION NOTE: The workbook retains the principal reported cash-flow lines and reported annual totals. The reports change the presentation and reconciliation detail over time; the generic verifier may therefore flag subtotal arithmetic where omitted underlying adjustments or comparative restatements are not represented in this compact view. The reported net-change-to-opening/closing cash chain is preserved.",
+    + "\n\nCASH FLOW PRESENTATION NOTE: The workbook retains the principal reported cash-flow lines and reported annual totals. The reports change the presentation and reconciliation detail over time; the generic verifier may therefore flag subtotal arithmetic where omitted underlying adjustments or comparative restatements are not represented in this compact view. The reported net-change-to-opening/closing cash chain is preserved."
+    + "\n\nFY2021/FY2022 CASH-DEFINITION RECLASSIFICATION NOTE (re-checked in full per HD-081, 2026-09-07): FY2021's own Annual Report (p.107) reports 'Cash and cash equivalents, end of year' of £2,969,677k, made up of non-mandatory deposits with central banks (£2,921,654k) and deposits with credit institutions with terms shorter than 3 months (£48,023k) - mandatory central-bank deposits are explicitly excluded from that year's own definition of cash equivalents. FY2022's own Annual Report (p.119) restates the FY2021 comparative 'Cash and cash equivalents, end of year' as £4,436,184k - the same £2,921,654k and £48,023k components plus a newly-added £1,466,507k of 'mandatory deposits' with central banks (its own Note 10 balance), which FY2021's report held outside the cash-equivalents boundary. The £1,466,507k gap (~£1.47bn) between this sheet's FY2021 closing cash (2,969,677) and FY2022 opening cash (4,436,184) is exactly this mandatory-deposits component - i.e. a genuine, source-documented change in which balances the Bank classifies as 'cash and cash equivalents' between report vintages (FY2022's report does not flag this as a formal restatement or describe the change in its Note 1(c) 'Changes to accounting policies and presentation', so the cause is inferred from directly comparing both years' own reconciliation tables, not from an explicit restatement disclosure). Consistent with this workbook's standing practice, each year's own originally-published figure is retained on this sheet rather than force-matched; FY2020-FY2021 and FY2022-FY2023 both tie exactly within their own report vintage.",
     first_col_width=62,
     source_height=220,
     unit_suffix=" (£'000)",

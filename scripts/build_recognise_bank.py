@@ -108,7 +108,21 @@ BS_SOURCES = (
     "a new 'Loans and advances to subsidiary' asset row (the Bank lent TO its PFS subsidiary that year); "
     "this reverses direction from FY2022 onward, where 'Loans and advances from subsidiary' is a liability "
     "(the subsidiary lending to the Bank) - a genuine change in the intercompany funding relationship, not an "
-    "error."
+    "error.\n\n"
+    "DEBT SECURITIES: in every year disclosed, the balance is 100% UK Government Treasury Bills and Gilts - "
+    "there is no supranational/corporate/other-issuer component to split out, and no note-level split by "
+    "issuer type is possible or needed. The measurement basis, however, genuinely changed over time: FY2021 "
+    "Note 13 'Debt Securities' (Company Statement of Financial Position, p.29, and the Fair Value note, p.47-"
+    "48 of the FY2021 accounts - " + CH21_URL + ") states the balance is 'Debt securities at FVOCI' (fair "
+    "value through other comprehensive income, Level 1 fair value hierarchy), consistent with the FY2021 "
+    "accounting-policy note 2.7 (p.36) that the Bank's debt securities were held under a Hold-to-Collect-and-"
+    "Sell business model. By FY2026, Note 17 'Debt securities' (Annual Report 2026, printed p.74 - " + AR26_URL + ") "
+    "instead states 'UK Government Treasury Bills and Gilts - at amortised cost', consistent with the FY2026 "
+    "accounting-policy note 2.7.2(b) (p.56) that debt securities are now held under a Hold-to-Collect business "
+    "model. No note discloses the exact year this reclassification took effect (no debt securities were held "
+    "at all in FY2022-FY2024); the FY2025 balance in Note 17 is disclosed only under the amortised-cost "
+    "heading, so the same balance is shown there. Because the entire balance is one issuer/bucket in every "
+    "year, the row is labelled by issuer type only, not renamed to a 'Total ...' line (no sub-rows apply)."
 )
 PL_SOURCES = (
     "Sources - Recognise Bank Limited Statement of Comprehensive Income, £'000:\n"
@@ -210,7 +224,7 @@ bw = BankWorkbook(bank_name="Recognise Bank Limited", years=YEARS, header_color=
 BS_ROWS = [
         ("SECTION", "Assets", {}),
         ("DATA", "Cash and cash equivalents", {"FY2026": 160949, "FY2025": 238732, "FY2024": 164292, "FY2023": 138354, "FY2022": 36233, "FY2021": 11225, "FY2020": 533, "FY2019": 511, "FY2018": 874}),
-        ("DATA", "Debt securities", {"FY2026": 29999, "FY2025": 9932, "FY2021": 6500}),
+        ("DATA", "Debt securities - UK government (gilts and Treasury bills)", {"FY2026": 29999, "FY2025": 9932, "FY2021": 6500}),
         ("DATA", "Investment in subsidiaries", {"FY2024": 349, "FY2023": 3349, "FY2021": 0}),
         ("DATA", "Loans and advances to customers", {"FY2026": 461863, "FY2025": 305596, "FY2024": 302710, "FY2023": 121441, "FY2022": 98941, "FY2021": 6485}),
         ("DATA", "Loans and advances to subsidiary", {"FY2021": 4572}),
@@ -241,7 +255,7 @@ bw.add_balance_sheet_sheet(
     rows=BS_ROWS,
     sources_text=BS_SOURCES,
     first_col_width=60,
-    source_height=260,
+    source_height=330,
     unit_suffix=" (£'000)",
 )
 

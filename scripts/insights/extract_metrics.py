@@ -125,6 +125,11 @@ import openpyxl
 # one level up from this scripts/insights/ package.
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from bank_workbook import PILLAR3_SHEET_NAMES
+
+# The 4 of 11 PILLAR3_SHEET_NAMES sheets that hold an absolute currency
+# figure rather than a ratio/percentage (see the capture site below for why
+# this distinction matters).
+_PILLAR3_CURRENCY_SHEETS = {"CET1 Capital", "Tier 1 Capital", "Total Capital", "Total RWAs"}
 from in009_analysis import normalize_period
 
 # The 4 year-column statement sheets the ST- wayfinder rollout added
@@ -336,7 +341,16 @@ def extract_statement_rows(ws, header_row, years):
     Any row whose label starts with "Of which" is prefixed with its
     nearest preceding non-"Of which" row's label instead of the section
     label, for the same disambiguation reason.
-    Returns list of (label, {year: value})."""
+
+    Also returns each row's own kind ("TOTAL" if column A is bold, "DATA"
+    otherwise - the same bold-vs-not distinction already used just below
+    to tell a SECTION divider apart from a real row). Added 2026-09-07:
+    several downstream in04x selectors matched on row_label text alone
+    (e.g. "operating expenses"), which silently picked up a DATA
+    sub-component for some banks and the genuine TOTAL for others
+    whenever both happened to share the same bare label - text alone
+    can't disambiguate that, only the row's own kind can.
+    Returns list of (label, {year: value}, row_kind)."""
     rows = []
     last_row = header_row
     for r in range(header_row + 1, ws.max_row + 1):
@@ -370,7 +384,8 @@ def extract_statement_rows(ws, header_row, years):
         is_sub_item = isinstance(label, str) and label.strip().lower().startswith("of which")
         prefix = parent_label if (is_sub_item and parent_label) else section
         full_label = f"{prefix} - {label}" if prefix else label
-        rows.append((full_label, row_values))
+        row_kind = "TOTAL" if is_bold(ws, r, 1) else "DATA"
+        rows.append((full_label, row_values, row_kind))
         if not is_sub_item:
             parent_label = label
     return rows
@@ -584,6 +599,16 @@ def build_interim_records(path, frn):
 
 
 _UNIT_SUFFIX_RE = re.compile(r"\(([^)]*)\)\s*$")
+# A small number of statement workbooks disclose a real currency transition
+# in their subtitle rather than repeat the unit in every year header.  Keep
+# the unit on each observation: the schema supports that, whereas assigning
+# one unit to the whole sheet would silently conflate the pre- and post-
+# transition figures.
+_STATEMENT_UNIT_RANGE_RE = re.compile(
+    r"(?P<unit>(?:US\$|\$|£)\s*'?(?:0{3}|m))\s*"
+    r"\(FY(?P<start>\d{4})\s*[-–]\s*FY(?P<end>\d{4})\)",
+    re.I,
+)
 
 
 def get_years(ws, header_row):
@@ -615,6 +640,36 @@ def get_cash_flow_unit(ws, header_row, ncols):
             if match:
                 return match.group(1).strip()
     return None
+
+
+def get_statement_units(ws, header_row, ncols):
+    """Return a ``{FYyyyy: unit}`` mapping for a statement sheet.
+
+    The ordinary workbook convention puts the unit beside every year header.
+    When no header carries one, accept the equally explicit subtitle form
+    ``US$'000 (FY2021-FY2023); £'000 (FY2024-FY2025)``.  It is deliberately
+    range-only: a free-text currency mention without years is not enough to
+    infer which observations it applies to.
+    """
+    units = {}
+    for c in range(2, ncols + 1):
+        value = ws.cell(row=header_row, column=c).value
+        if not value:
+            continue
+        match = _UNIT_SUFFIX_RE.search(str(value))
+        if match:
+            year = re.sub(r"\s*\([^)]*\)\s*$", "", str(value)).strip()
+            units[year] = match.group(1).strip()
+    if units:
+        return units
+
+    subtitle = str(ws.cell(row=2, column=1).value or "")
+    for match in _STATEMENT_UNIT_RANGE_RE.finditer(subtitle):
+        unit = re.sub(r"\s+", "", match.group("unit"))
+        start, end = int(match.group("start")), int(match.group("end"))
+        for year in range(min(start, end), max(start, end) + 1):
+            units[f"FY{year}"] = unit
+    return units
 
 
 def get_entity_title(wb):
@@ -700,6 +755,31 @@ def process_workbook(path, bank_list):
         metric_rows, restatement_note, source_note = extract_metric_sheet_full(ws, years, header_row)
         if not metric_rows:
             warnings.append(f"{sheet_name}: no extractable rows")
+        # add_metric_sheet (bank_workbook.py) always writes its `unit` arg to
+        # row 2 col A ("%" for a ratio sheet, "£m"/"£'000"/etc for an
+        # absolute-currency sheet like Total RWAs/CET1 Capital/Tier 1
+        # Capital/Total Capital) - previously discarded here on the
+        # assumption every Pillar 3 sheet is a self-contained percentage
+        # string needing no unit (true for the ratio sheets, false for the
+        # four absolute-currency ones). Capturing it lets a caller detect a
+        # genuine cross-sheet scale mismatch (e.g. Credit Suisse UK's Total
+        # RWAs in £m against its Balance Sheet's £'000) instead of only
+        # being able to reject the resulting nonsense ratio after the fact.
+        #
+        # Deliberately scoped to ONLY the four absolute-currency sheets, not
+        # every PILLAR3_SHEET_NAMES entry: a ratio sheet's unit was always
+        # None before this, and at least one downstream consumer
+        # (in020_regulatory_context.py's match_context) uses `unit != "%"`
+        # as an implicit "this observation has a real numeric value" guard
+        # - AIB Group UK's FY2025 Leverage Ratio row has unit "%" but a
+        # genuinely blank value, which crashed match_context's float()
+        # conversion the moment Leverage Ratio's real unit started flowing
+        # through. Fixing that guard is a separate, unrelated concern; capture
+        # stays limited to the sheets this fix actually needs.
+        metric_unit = None
+        if sheet_name in _PILLAR3_CURRENCY_SHEETS:
+            metric_unit = ws.cell(row=2, column=1).value
+            metric_unit = str(metric_unit).strip() if metric_unit not in (None, "") else None
         for label, values in metric_rows:
             for y, v in values.items():
                 if y is None:
@@ -707,7 +787,7 @@ def process_workbook(path, bank_list):
                 rows_out.append(_row(
                     bank_name, canonical_bank, frn, source_workbook, workbook_kind,
                     sheet_name, label, y, v, basis_note,
-                    unit=None, reporting_basis=None,
+                    unit=metric_unit, reporting_basis=None,
                     restatement_note=restatement_note, source_note=source_note,
                 ))
 
@@ -719,7 +799,7 @@ def process_workbook(path, bank_list):
         if header_row is not None:
             years, ncols = get_years(ws, header_row)
             stmt_rows = extract_statement_rows(ws, header_row, years)
-            stmt_unit = get_cash_flow_unit(ws, header_row, ncols)
+            stmt_units = get_statement_units(ws, header_row, ncols)
             stmt_source_note = get_cash_flow_source_note(ws, header_row)
             if not stmt_rows:
                 warnings.append(f"{sheet_name}: no extractable rows")
@@ -737,19 +817,24 @@ def process_workbook(path, bank_list):
                 continue
             years, ncols = get_years(ws, metric_header_row)
             metric_rows, _, stmt_source_note = extract_metric_sheet_full(ws, years, metric_header_row)
-            stmt_unit = None
-            stmt_rows = metric_rows
+            stmt_units = {}
+            # A single-metric Pillar 3-style sheet row has no TOTAL/DATA
+            # concept (extract_metric_sheet_full() returns 2-tuples) -
+            # padded to the same 3-tuple shape as extract_statement_rows()
+            # with row_kind=None so the loop below can stay unified.
+            stmt_rows = [(label, values, None) for label, values in metric_rows]
             if not stmt_rows:
                 warnings.append(f"{sheet_name}: no extractable rows")
-        for label, values in stmt_rows:
+        for label, values, row_kind in stmt_rows:
             for y, v in values.items():
                 if y is None:
                     continue
                 rows_out.append(_row(
                     bank_name, canonical_bank, frn, source_workbook, workbook_kind,
                     sheet_name, label, y, v, basis_note,
-                    unit=stmt_unit, reporting_basis=None,
+                    unit=stmt_units.get(y), reporting_basis=None,
                     restatement_note=None, source_note=stmt_source_note,
+                    row_kind=row_kind,
                 ))
 
     if "Statement of Changes in Equity" in wb.sheetnames:
@@ -772,7 +857,7 @@ def process_workbook(path, bank_list):
 
 
 def _row(bank, canonical_bank, frn, source_workbook, workbook_kind, sheet, label, year, value_raw, basis_note,
-         unit=None, reporting_basis=None, restatement_note=None, source_note=None):
+         unit=None, reporting_basis=None, restatement_note=None, source_note=None, row_kind=None):
     value_numeric = parse_numeric(value_raw)
     return {
         "bank": bank,
@@ -796,6 +881,7 @@ def _row(bank, canonical_bank, frn, source_workbook, workbook_kind, sheet, label
         "reporting_basis": reporting_basis or "",
         "restatement_note": restatement_note or "",
         "source_note": source_note or "",
+        "row_kind": row_kind or "",
     }
 
 

@@ -158,7 +158,34 @@ STATEMENTS_ENTITY_NOTE = (
     "type). RWA by category is CALCULATED as (capital requirement / 8%) for each row, independently "
     "cross-checked against the Bank's own disclosed Total RWA/TREA figure (Total RWAs sheet) - the "
     "calculated Total Pillar 1 RWA ties to the disclosed TREA within rounding for every year (e.g. "
-    "FY2025: $29,485k / 8% = $368,563k calculated vs $368,569k disclosed TREA)."
+    "FY2025: $29,485k / 8% = $368,563k calculated vs $368,569k disclosed TREA).\n"
+    "INVESTMENT SECURITIES BREAKDOWN: the 'Investment securities - ...' sub-rows below the 'Total "
+    "investment securities' line are transcribed from Note 15 'Investment securities' of each year's own "
+    "Notes to the Financial Statements, which splits the balance both by measurement basis (fair value "
+    "through other comprehensive income (FVOCI) vs fair value through profit or loss (FVTPL) - there is "
+    "no amortised-cost investment securities balance in any year) and by instrument type (Government "
+    "Bonds; Bank bonds; HQLA Investments, described in the note as 'high quality liquid assets [that] "
+    "include US Treasury bills and bonds issued by International Bank of Restructuring and Development "
+    "(IBRD)' - i.e. a sovereign/supranational mix not broken down further; an allowance for impairment "
+    "losses against the FVOCI book; and Fund Investments - Government / Fund Investments - Other, both "
+    "FVTPL): "
+    f"FY2025: Audited Accounts 2025, Note 15, p.62 - {AR2025_URL}\n"
+    f"FY2024: Audited Accounts 2024, Note 15, p.49 (own-year figures - see reclassification note above; "
+    f"the FY2025 report's own FY2024 comparative column shows different Note 15 sub-figures totalling "
+    f"$192,066,892, consistent with the same reclassification) - {AR2024_URL}\n"
+    f"FY2023: Audited Accounts 2023, Note 15, p.51 - {AR2023_URL}\n"
+    f"FY2022: Annual Report & Financial Statements 2022, Note 15, p.50 - {AR2022_URL}\n"
+    f"FY2021: Audited Accounts 2021, Note 15, p.46 - {AR2021_URL}\n"
+    f"FY2020: Audited Accounts 2021, Note 15, p.46 (audited comparative column; FY2020 predates the "
+    f"'HQLA Investments' sub-line introduced from FY2022 onwards, so that FY2020 sub-row is £0) - "
+    f"{AR2021_URL}\n"
+    "FY2019: no breakdown available - the FY2019 Note 15 was not among the pages transcribed from the "
+    "user-supplied primary PDF (since deleted after extraction), so the FY2019 sub-rows are left blank "
+    "rather than estimated.\n"
+    "Each year's sub-rows sum exactly to that year's headline 'Total investment securities' line in "
+    "underlying USD; after this project's independent per-row £'000 FX conversion (each row rounded to "
+    "1 decimal place separately) the sub-rows tie to the total within rounding (at most £0.1k) for any "
+    "given year."
 )
 
 STATEMENTS_SOURCES = (
@@ -200,6 +227,12 @@ BS_USD = {
     "Loans and advances to banks": {"FY2025": 272182290, "FY2024": 215293067, "FY2023": 179580081, "FY2022": 139928644, "FY2021": 132348155, "FY2020": 117798590, "FY2019": 112085852},
     "Loans and advances to customers": {"FY2025": 115746735, "FY2024": 86092409, "FY2023": 74582276, "FY2022": 71445494, "FY2021": 79441478, "FY2020": 51668458, "FY2019": 37370618},
     "Investment securities": {"FY2025": 195435410, "FY2024": 196761703, "FY2023": 187900449, "FY2022": 284747448, "FY2021": 174077450, "FY2020": 189651477, "FY2019": 189652928},
+    "Investment securities - Government bonds (sovereign debt, FVOCI)": {"FY2025": 0, "FY2024": 5625803, "FY2023": 5498440, "FY2022": 5495131, "FY2021": 7455147, "FY2020": 0},
+    "Investment securities - Bank bonds (financial institution debt, FVOCI)": {"FY2025": 0, "FY2024": 15208790, "FY2023": 16525823, "FY2022": 15143439, "FY2021": 17212630, "FY2020": 3230250},
+    "Investment securities - HQLA: US Treasury bills & IBRD supranational bonds (FVOCI)": {"FY2025": 5110015, "FY2024": 19914165, "FY2023": 29464278, "FY2022": 19430955, "FY2021": 0, "FY2020": 0},
+    "Investment securities - Allowance for impairment losses on FVOCI investments": {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": -139266, "FY2020": 0},
+    "Investment securities - Fund investments - Government (FVTPL)": {"FY2025": 188571800, "FY2024": 147574098, "FY2023": 127321582, "FY2022": 235843987, "FY2021": 139770139, "FY2020": 186421227},
+    "Investment securities - Fund investments - Other (FVTPL)": {"FY2025": 1753595, "FY2024": 8438847, "FY2023": 9090326, "FY2022": 8833936, "FY2021": 9778800, "FY2020": 0},
     "Derivative financial instruments (asset)": {"FY2025": 2970155, "FY2024": 1432396, "FY2023": 1597744, "FY2022": 1851462, "FY2021": 834132, "FY2020": 3716102},
     "Other assets": {"FY2025": 9227109, "FY2024": 13004808, "FY2023": 9099146, "FY2022": 7569349, "FY2021": 6590091, "FY2020": 3528046, "FY2019": 3828574},
     "Deferred tax asset": {"FY2025": 357362, "FY2023": 19819, "FY2022": 159008, "FY2021": 660811, "FY2020": 149356},
@@ -226,7 +259,19 @@ bs_rows = [
     ("DATA", "Cash and cash equivalents", stock(BS_USD["Cash and cash equivalents"])),
     ("DATA", "Loans and advances to banks", stock(BS_USD["Loans and advances to banks"])),
     ("DATA", "Loans and advances to customers", stock(BS_USD["Loans and advances to customers"])),
-    ("DATA", "Investment securities", stock(BS_USD["Investment securities"])),
+    ("DATA", "Total investment securities", stock(BS_USD["Investment securities"])),
+    ("DATA", "Investment securities - Government bonds (sovereign debt, FVOCI)",
+     stock(BS_USD["Investment securities - Government bonds (sovereign debt, FVOCI)"])),
+    ("DATA", "Investment securities - Bank bonds (financial institution debt, FVOCI)",
+     stock(BS_USD["Investment securities - Bank bonds (financial institution debt, FVOCI)"])),
+    ("DATA", "Investment securities - HQLA: US Treasury bills & IBRD supranational bonds (FVOCI)",
+     stock(BS_USD["Investment securities - HQLA: US Treasury bills & IBRD supranational bonds (FVOCI)"])),
+    ("DATA", "Investment securities - Allowance for impairment losses on FVOCI investments",
+     stock(BS_USD["Investment securities - Allowance for impairment losses on FVOCI investments"])),
+    ("DATA", "Investment securities - Fund investments - Government (FVTPL)",
+     stock(BS_USD["Investment securities - Fund investments - Government (FVTPL)"])),
+    ("DATA", "Investment securities - Fund investments - Other (FVTPL)",
+     stock(BS_USD["Investment securities - Fund investments - Other (FVTPL)"])),
     ("DATA", "Derivative financial instruments", stock(BS_USD["Derivative financial instruments (asset)"])),
     ("DATA", "Other assets", stock(BS_USD["Other assets"])),
     ("DATA", "Deferred tax asset", stock(BS_USD["Deferred tax asset"])),

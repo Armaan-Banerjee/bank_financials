@@ -314,6 +314,22 @@ PL_ROWS = [
     ("SECTION", "Expenses", {}),
     ("DATA", "Administrative expenses", {"FY2025": -51266, "FY2024": -46758, "FY2023": -37348, "FY2022": -38960, "FY2021": -35531, "FY2020": -37402, "FY2019": -33314, "FY2018": -34135, "FY2017": -33050, "FY2016": -33142, "FY2015": -37259, "FY2014": -35318, "FY2013": -35523, "FY2012": -37630, "FY2011": -42153, "FY2010": -46814, "FY2009": -58413, "FY2008": -45704}),
     ("DATA", "Depreciation", {"FY2025": -786, "FY2024": -709, "FY2023": -956, "FY2022": -1229, "FY2021": -1157, "FY2020": -994, "FY2019": -796, "FY2018": -782, "FY2017": -867, "FY2016": -1026, "FY2015": -1414, "FY2014": -1472, "FY2013": -1476, "FY2012": -1540, "FY2011": -2338, "FY2010": -2490, "FY2009": -1610, "FY2008": -1301}),
+    # Not a line the source statement itself prints - the Bank's own P&L
+    # goes straight from these two expense lines to the impairment lines,
+    # with no combined opex subtotal. This row is simply their sum
+    # (Administrative expenses + Depreciation, excluding the two impairment
+    # lines below, consistent with this project's convention of keeping
+    # credit-loss/impairment charges out of "operating expenses" - ties
+    # exactly to Total revenue - Profit on ordinary activities before tax
+    # net of the two impairment lines in every year, e.g. FY2025
+    # 87322-51266-786-27-3207=32036), added 2026-09-07 so cost-to-income
+    # analysis has a "Total operating expenses" numerator to work from.
+    ("TOTAL", "Total operating expenses (sum of Administrative expenses + Depreciation above - not itself a printed subtotal)", {
+        "FY2025": -52052, "FY2024": -47467, "FY2023": -38304, "FY2022": -40189, "FY2021": -36688,
+        "FY2020": -38396, "FY2019": -34110, "FY2018": -34917, "FY2017": -33917, "FY2016": -34168,
+        "FY2015": -38673, "FY2014": -36790, "FY2013": -36999, "FY2012": -39170, "FY2011": -44491,
+        "FY2010": -49304, "FY2009": -60023, "FY2008": -47005,
+    }),
     ("DATA", "Impairment on investment securities", {"FY2025": -27, "FY2024": -23, "FY2023": -79, "FY2022": -20, "FY2021": 49, "FY2020": -3432, "FY2019": -992, "FY2018": 0, "FY2017": 0, "FY2016": -5917, "FY2015": -13538, "FY2014": -5632, "FY2013": -7015, "FY2012": -8916, "FY2011": 1112, "FY2010": 0, "FY2009": -91434}),
     ("DATA", "Impairment on loans and advances", {"FY2025": -3207, "FY2024": -7145, "FY2023": -5867, "FY2022": -2906, "FY2021": -8414, "FY2020": -8902, "FY2019": -104401, "FY2018": -78710, "FY2017": -68181, "FY2016": -53525, "FY2015": -37945, "FY2014": -14590, "FY2013": -20209, "FY2012": 4356, "FY2011": -18868, "FY2010": -20549, "FY2009": -16111, "FY2008": -6026}),
     ("TOTAL", "Profit on ordinary activities before tax", {"FY2025": 32036, "FY2024": 31056, "FY2023": 15802, "FY2022": 11342, "FY2021": 17524, "FY2020": 28580, "FY2019": -59661, "FY2018": -30404, "FY2017": -18589, "FY2016": 6011, "FY2015": 22770, "FY2014": 36117, "FY2013": 19158, "FY2012": 35450, "FY2011": 51052, "FY2010": 52293, "FY2009": 10080, "FY2008": 56728}),

@@ -97,6 +97,18 @@ STATEMENTS_SOURCES = (
     "categories (e.g. accrued interest between 'Other assets'/'Other liabilities' and the posts they relate to) - "
     "Total assets/Total liabilities/Total equity are unaffected by the restatement, only the individual line-item "
     "split.\n\n"
+    "INVESTMENT SECURITIES COMPOSITION: 'Investment securities' is 100% one bucket in every year shown - each "
+    "year's own Note 19 'Investment securities' discloses it as entirely Preference Shares in Visa Inc./Visa "
+    "Europe, an equity investment (arising from the 2016 Visa Europe/Visa Inc. reorganisation) held at fair value "
+    "through other comprehensive income (FVOCI), with a same-note 'Origin of investment securities' analysis "
+    "showing 100% USA issuer origin every year - not a debt security and not UK/government-issued, so there is no "
+    "amortised-cost-vs-FVOCI or UK-government-vs-other split to make; the row is relabelled in place rather than "
+    "broken into sub-rows. FY2025/FY2024 (GBP2,224k/GBP2,133k): Annual Report and Financial Statements for the "
+    f"year ended 31 December 2025, Note 19, p.46 (table) - {AR2025_URL} (scanned filing, OCR'd). FY2023/FY2022 "
+    f"(GBP1,631k/GBP1,380k): Annual Report and Financial Statements 2023, Note 19, p.44 - {AR2023_URL}. FY2022/"
+    f"FY2021 (GBP1,380k/GBP1,132k): Annual Report and Financial Statements 2022, Note 19, p.45 - {AR2022_URL}. "
+    f"FY2021 (GBP1,132k): Annual Report and Financial Statements 2021, Note 19, p.45 - {AR2021_URL} (scanned "
+    "filing, OCR'd).\n\n"
     + ENTITY_NOTE
 )
 
@@ -180,7 +192,7 @@ balance_sheet_rows = [
     ("DATA", "Cash and cash equivalents", {"FY2025": 44666, "FY2024": 43449, "FY2023": 71933, "FY2022": 93264, "FY2021": 59279}),
     ("DATA", "Loans and advances to banks", {"FY2025": 49346, "FY2024": 50170, "FY2023": 31369, "FY2022": 15493, "FY2021": 39954}),
     ("DATA", "Loans and advances to customers", {"FY2025": 73278, "FY2024": 76518, "FY2023": 69249, "FY2022": 75754, "FY2021": 78062}),
-    ("DATA", "Investment securities", {"FY2025": 2224, "FY2024": 2133, "FY2023": 1631, "FY2022": 1380, "FY2021": 1132}),
+    ("DATA", "Investment securities (Visa Inc./Visa Europe preference shares, FVOCI equity)", {"FY2025": 2224, "FY2024": 2133, "FY2023": 1631, "FY2022": 1380, "FY2021": 1132}),
     ("DATA", "Swap derivative assets", {"FY2024": 15, "FY2022": 182}),
     ("DATA", "Other assets", {"FY2025": 1298, "FY2024": 2192, "FY2023": 1830, "FY2022": 1307, "FY2021": 2909}),
     ("DATA", "Current tax assets", {"FY2025": 90, "FY2024": 163}),

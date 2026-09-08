@@ -179,7 +179,18 @@ STATEMENTS_SOURCES = (
     f"Balance Sheet p.50, Cash Flow Statement p.51 - "
     f"https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n\n"
     + ENTITY_NOTE +
-    "\n\nPRESENTATION NOTE: FY2023-FY2025's Balance Sheet carries a standalone 'Investment "
+    "\n\nINVESTMENT SECURITIES ISSUER-TYPE SPLIT: FY2025 Annual Report (Companies House filing "
+    "dated 10 Mar 2026, 157pp), Note 13 'Investment securities', p.68, breaks the FY2025/FY2024 "
+    "carrying value down between UK Government securities ('gilts', FY2025: £509.4m, FY2024: "
+    "£404.4m) and Covered bonds (FY2025: £116.8m, FY2024: £23.0m) - both figures sum exactly to "
+    "the Balance Sheet's own 'Investment securities' total each year. The note states the entire "
+    "balance is carried at amortised cost in both years (confirmed separately by Note 49(b), "
+    "'Assets and liabilities carried at amortised cost', same filing p.148) - i.e. there is no "
+    "FVOCI/FVTPL leg to split out, so no measurement-basis rows are added here (a single-leg "
+    "'100% amortised cost' row would also double-count against this issuer-type split in the "
+    "downstream investment-composition view, since both views sum sibling Balance Sheet rows "
+    "independently) - https://find-and-update.company-information.service.gov.uk/company/05390593/filing-history\n\n"
+    "PRESENTATION NOTE: FY2023-FY2025's Balance Sheet carries a standalone 'Investment "
     "securities' line (FY2023: nil, not separately listed that year - folded into the table's "
     "absence; FY2024-25: populated); FY2021-FY2022 instead show a 'Short term investments' line "
     "(both nil) - shown here on one combined row since they are the same conceptual line, "
@@ -199,7 +210,9 @@ bs_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash - central banks", {"FY2025": 2175.7, "FY2024": 2315.5, "FY2023": 2783.3, "FY2022": 1612.5, "FY2021": 1142.0, "FY2020": 1637.06, "FY2019": 816.40, "FY2018": 917.55, "FY2017": 629.89}),
     ("DATA", "Cash - retail banks", {"FY2025": 56.2, "FY2024": 62.9, "FY2023": 76.7, "FY2022": 33.6, "FY2021": 52.1, "FY2020": 36.51, "FY2019": 20.83}),
-    ("DATA", "Investment securities (FY2021-22: 'Short term investments', both nil)", {"FY2025": 626.2, "FY2024": 427.4, "FY2022": 0.0, "FY2021": 0.0, "FY2020": 0.0, "FY2019": 0.0}),
+    ("DATA", "UK Government securities (gilts) - carrying value", {"FY2025": 509.4, "FY2024": 404.4}),
+    ("DATA", "Covered bonds - other financial assets, not UK government-backed", {"FY2025": 116.8, "FY2024": 23.0}),
+    ("TOTAL", "Investment securities - total (FY2021-22: 'Short term investments', both nil)", {"FY2025": 626.2, "FY2024": 427.4, "FY2022": 0.0, "FY2021": 0.0, "FY2020": 0.0, "FY2019": 0.0}),
     ("DATA", "Loans to customers", {"FY2025": 12446.0, "FY2024": 11671.6, "FY2023": 11161.2, "FY2022": 8952.8, "FY2021": 8144.6, "FY2020": 7146.78, "FY2019": 5848.32, "FY2018": 4655.43, "FY2017": 3086.70}),
     ("DATA", "Investment in structured entities", {"FY2025": 1959.3, "FY2024": 2154.9, "FY2023": 1427.9, "FY2022": 1791.2, "FY2021": 1944.1, "FY2018": 8.22, "FY2017": 9.02}),
     ("DATA", "Derivative financial assets", {"FY2025": 241.1, "FY2024": 319.1, "FY2023": 518.2, "FY2022": 605.9, "FY2021": 28.5, "FY2020": 17.98, "FY2019": 9.72, "FY2018": 22.40, "FY2017": 9.37}),
@@ -252,7 +265,7 @@ pl_rows = [
     ("TOTAL", "Net interest income", {"FY2025": 390.8, "FY2024": 342.9, "FY2023": 315.6, "FY2022": 221.0, "FY2021": 142.6, "FY2020": 125.32, "FY2019": 111.15, "FY2018": 78.88, "FY2017": 56.29}),
     ("DATA", "Other income / other operating income", {"FY2025": 51.9, "FY2024": 81.8, "FY2023": 108.7, "FY2022": 174.4, "FY2021": 95.5, "FY2020": 58.85, "FY2019": 72.76, "FY2018": 140.21, "FY2017": 0.96}),
     ("TOTAL", "Total operating income", {"FY2025": 442.7, "FY2024": 424.7, "FY2023": 424.3, "FY2022": 395.4, "FY2021": 238.1, "FY2020": 184.17, "FY2019": 183.91, "FY2018": 219.09, "FY2017": 57.25}),
-    ("DATA", "Operating expenses", {"FY2025": -132.6, "FY2024": -132.5, "FY2023": -117.4, "FY2022": -99.8, "FY2021": -81.5, "FY2020": -64.04, "FY2019": -61.54, "FY2018": -50.70, "FY2017": -32.49}),
+    ("TOTAL", "Operating expenses", {"FY2025": -132.6, "FY2024": -132.5, "FY2023": -117.4, "FY2022": -99.8, "FY2021": -81.5, "FY2020": -64.04, "FY2019": -61.54, "FY2018": -50.70, "FY2017": -32.49}),
     ("DATA", "Provisions for losses", {"FY2025": -6.4, "FY2024": -10.5, "FY2023": -10.5, "FY2022": -6.6, "FY2021": 10.9, "FY2020": -15.50, "FY2019": -3.82, "FY2018": -2.13, "FY2017": -1.06}),
     ("DATA", "Provision for liabilities", {"FY2025": -25.5}),
     ("TOTAL", "Operating profit before fair value items", {"FY2025": 278.2, "FY2024": 281.7, "FY2023": 296.4, "FY2022": 289.0, "FY2021": 167.5, "FY2020": 104.63, "FY2019": 118.55, "FY2018": 166.26, "FY2017": 23.70}),

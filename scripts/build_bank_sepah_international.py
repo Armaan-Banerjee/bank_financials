@@ -513,6 +513,7 @@ bw.add_rwa_breakdown_sheet(
           ("DATA", "Market risk", {y: round(RWA_MARKET_EUR_M[y] * YEAR_END_RATE[y], 1) for y in YEARS}),
           ("DATA", "Operational risk", {y: round(RWA_OPERATIONAL_EUR_M[y] * YEAR_END_RATE[y], 1) for y in YEARS}),
           ("TOTAL", "Total Risk Exposure", RWA_GBP_M)],
+    unit_suffix=" (£m, conv. from EUR)",
     sources_text=p3_sources() + "\n\nThe Bank's own Pillar 3 Table 4 directly discloses the risk-type split "
                  "Bank's own Pillar 3 Disclosures documents (see the Leverage Ratio/LCR/NSFR sheets' citations - "
                  "these were successfully fetched despite the site's expired TLS certificate). Those documents' "

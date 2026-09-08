@@ -52,12 +52,12 @@
     },
     "Leverage Ratio": {
       "broad": {
-        "banks": 125,
+        "banks": 126,
         "exclusions": {
           "missing": 642,
-          "non_numeric_disclosure": 129
+          "non_numeric_disclosure": 128
         },
-        "observations": 1261,
+        "observations": 1262,
         "years": [
           2014,
           2015,
@@ -79,8 +79,8 @@
         "exclusions": {
           "basis_mismatch": 342,
           "missing": 642,
-          "non_numeric_disclosure": 129,
-          "unknown_basis": 379
+          "non_numeric_disclosure": 128,
+          "unknown_basis": 380
         },
         "observations": 540,
         "years": [
@@ -102,12 +102,12 @@
     },
     "Tier 1 Ratio": {
       "broad": {
-        "banks": 127,
+        "banks": 128,
         "exclusions": {
           "missing": 166,
-          "non_numeric_disclosure": 101
+          "non_numeric_disclosure": 99
         },
-        "observations": 853,
+        "observations": 855,
         "years": [
           2014,
           2015,
@@ -129,8 +129,8 @@
         "exclusions": {
           "basis_mismatch": 219,
           "missing": 166,
-          "non_numeric_disclosure": 101,
-          "unknown_basis": 261
+          "non_numeric_disclosure": 99,
+          "unknown_basis": 263
         },
         "observations": 373,
         "years": [
@@ -2196,7 +2196,7 @@
           "level below 5th percentile"
         ],
         "reporting_basis": "entity",
-        "source_note": "Sources - Bank-specific Pillar 3: FY2021 Appendix 4 pp.54-58; FY2022 Bank tables 17 and KM1 pp.18-21; FY2023 Bank tables 14-15 pp.19-22; FY2024 Bank tables 11-12 pp.16-19; FY2020/FY2019 'Key risk metrics for Shawbrook Bank Limited' table, Appendix 1 (Pillar 3 Disclosures 2020); FY2018/FY2017/FY2016 Appendix 1 capital-composition tables (no Bank RWA breakdown disclosed those 3 years - see note); FY2015 Appendix 1 pp.33-34; FY2014 Appendix (Disclosures for Shawbrook Bank Limited) pp.39-40.\nFY2025: https://www.shawbrook.co.uk/media/w5chxn4q/shawbrook-pillar-3-disclosures-2025.pdf\nFY2024: https://www.shawbrook.co.uk/media/rzpdavyj/shawbrook-2024-pillar-3-disclosures.pdf\nFY2023: https://www.shawbrook.co.uk/media/wrpglj2h/shawbrook-pillar-3-disclosures-2023.pdf\nFY2022: https://www.shawbrook.co.uk/media/pljhf2fo/2022-shawbrook-pillar-3-disclosures.pdf\nFY2021: https://www.shawbrook.co.uk/media/hlbpmnjm/pillar-3-2021.pdf\nFY2020: https://www.shawbrook.co.uk/media/xexpjjkq/shawbrook-pillar-3-disclosures-2020.pdf\nFY2019: https://www.shawbrook.co.uk/media/2azlz2vz/shawbrook-pillar-3-disclosures-2019.pdf\nFY2018: https://www.shawbrook.co.uk/media/kfnfg0oe/shawbrook-pillar-3-disclosures-2018.pdf\nFY2017: https://www.shawbrook.co.uk/media/3lifgtxe/shawbrook-pillar-3-disclosures-2017.pdf\nFY2016: https://www.shawbrook.co.uk/media/1lhngswy/shawbrook-pillar-3-disclosures-2016.pdf\nFY2015: https://www.shawbrook.co.uk/media/wdvhqxsn/shawbrook-pillar-3-disclosures-2015.pdf\nFY2014: https://www.shawbrook.co.uk/media/qsxpg41l/shawbrook-pillar-3-disclosures-2014.pdf\nBlank cells mean not publicly disclosed/not applicable; FY2025 Group-only data is not used as a Bank proxy.",
+        "source_note": "Sources - Bank-specific Pillar 3: FY2021 Appendix 4 pp.54-58; FY2022 Bank tables 17 and KM1 pp.18-21; FY2023 Bank tables 14-15 pp.19-22; FY2024 Bank tables 11-12 pp.16-19; FY2020/FY2019 'Key risk metrics for Shawbrook Bank Limited' table, Appendix 1 (Pillar 3 Disclosures 2020); FY2018/FY2017/FY2016 Appendix 1 capital-composition tables (no Bank RWA breakdown disclosed those 3 years - see note); FY2015 Appendix 1 pp.33-34; FY2014 Appendix (Disclosures for Shawbrook Bank Limited) pp.39-40.\nFY2025: https://www.shawbrook.co.uk/media/w5chxn4q/shawbrook-pillar-3-disclosures-2025.pdf\nFY2024: https://www.shawbrook.co.uk/media/rzpdavyj/shawbrook-2024-pillar-3-disclosures.pdf\nFY2023: https://www.shawbrook.co.uk/media/wrpglj2h/shawbrook-pillar-3-disclosures-2023.pdf\nFY2022: https://www.shawbrook.co.uk/media/pljhf2fo/2022-shawbrook-pillar-3-disclosures.pdf\nFY2021: https://www.shawbrook.co.uk/media/hlbpmnjm/pillar-3-2021.pdf\nFY2020: https://www.shawbrook.co.uk/media/xexpjjkq/shawbrook-pillar-3-disclosures-2020.pdf\nFY2019: https://www.shawbrook.co.uk/media/2azlz2vz/shawbrook-pillar-3-disclosures-2019.pdf\nFY2018: https://www.shawbrook.co.uk/media/kfnfg0oe/shawbrook-pillar-3-disclosures-2018.pdf\nFY2017: https://www.shawbrook.co.uk/media/3lifgtxe/shawbrook-pillar-3-disclosures-2017.pdf\nFY2016: https://www.shawbrook.co.uk/media/1lhngswy/shawbrook-pillar-3-disclosures-2016.pdf\nFY2015: https://www.shawbrook.co.uk/media/wdvhqxsn/shawbrook-pillar-3-disclosures-2015.pdf\nFY2014: https://www.shawbrook.co.uk/media/qsxpg41l/shawbrook-pillar-3-disclosures-2014.pdf\nBlank cells mean not publicly disclosed/not applicable; FY2025 Group-only data is not used as a Bank proxy. FY2013/FY2012 are out of scope for this workbook's Pillar 3 sheets (see wayfinder ticket HD-072) and are simply blank, same as any other undisclosed year.",
         "value": 15.9
       },
       {
@@ -2523,11 +2523,11 @@
         "up": 39
       },
       {
-        "down": 64,
+        "down": 65,
         "end_year": 2022,
         "metric": "CET1 Ratio",
         "n": 114,
-        "same": 2,
+        "same": 1,
         "start_year": 2021,
         "up": 48
       },
@@ -2573,9 +2573,9 @@
         "horizon": "long_run",
         "metric": "CET1 Ratio",
         "n": 133,
-        "same": 2,
+        "same": 1,
         "start_year": 2014,
-        "up": 57
+        "up": 58
       },
       {
         "down": 12,
@@ -2641,10 +2641,10 @@
         "up": 38
       },
       {
-        "down": 60,
+        "down": 61,
         "end_year": 2022,
         "metric": "Tier 1 Ratio",
-        "n": 110,
+        "n": 111,
         "same": 1,
         "start_year": 2021,
         "up": 49
@@ -2686,11 +2686,11 @@
         "up": 1
       },
       {
-        "down": 66,
+        "down": 67,
         "end_year": 2026,
         "horizon": "long_run",
         "metric": "Tier 1 Ratio",
-        "n": 124,
+        "n": 125,
         "same": 0,
         "start_year": 2014,
         "up": 58

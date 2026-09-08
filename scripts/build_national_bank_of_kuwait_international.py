@@ -78,6 +78,26 @@ STATEMENTS_SOURCES = annual_sources(
     "own currency column \"$000\" without the \"US\" prefix; treated as US$'000, consistent with "
     "later years' explicit US$ labelling and the unbroken equity roll-forward against FY2022's own "
     "restated FY2021 comparative).\n\n"
+    "INVESTMENT SECURITIES BREAKDOWN: the 'Investment securities - ...' sub-rows below the renamed "
+    "'Total investment securities' line are transcribed from each year's own Note 15 'Investment "
+    "Securities' of the Notes to the Financial Statements, which splits the balance by measurement "
+    "basis (equities at FVOCI / equities at FVPL / debt securities at FVOCI / debt securities at "
+    "FVPL) plus a combined 'Less: ECL' line and (FY2022-FY2025 only) a combined interest-receivable "
+    "line. No issuer-type split (e.g. UK government/gilts vs supranational/corporate) is disclosed "
+    "anywhere in Note 15 or elsewhere in any year's report; the Bank's own repurchase-agreement note "
+    "(Note 20, FY2025 AR p.50) states that Gilts pledged as repo collateral 'remain on the statement "
+    "of financial position within investment securities' but gives no total gilts holding, so an "
+    "issuer-type split cannot be derived:\n"
+    "FY2025: Note 15, p.48 - " + AR_URLS["FY2025"] + "\n"
+    "FY2024: same FY2025 filing's own FY2024 comparative column, Note 15, p.48\n"
+    "FY2023: Note 15, p.43 - " + AR_URLS["FY2023"] + "\n"
+    "FY2022: same FY2023 filing's own FY2022 comparative column, Note 15, p.43\n"
+    "FY2021: Note 15, p.43 - " + AR_URLS["FY2021"] + "\n\n"
+    "Each year's sub-rows sum exactly to that year's renamed 'Total investment securities' line. "
+    "'Debt securities (FVPL)' is FY2021-only (reclassified out of the portfolio by FY2022); "
+    "'Interest receivable (accrued)' is not disclosed as a separate line in the FY2021 note (folded "
+    "into the FVOCI/FVPL debt balances that year) - blank cells reflect the note's own year-by-year "
+    "composition, not a gap.\n\n"
     "CURRENCY NOTE: the Bank's presentation currency changed from USD to GBP between the FY2023 and "
     "FY2024 statutory accounts (matching the change already documented on the Pillar 3 sheets' "
     "CAPITAL_UNIT note). The FY2023 closing US$533,729k equity was retranslated to the FY2024 opening "
@@ -107,7 +127,13 @@ bs_rows = [
     ("DATA", "Deposits with banks", {"FY2025": 666586, "FY2024": 840214, "FY2023": 1156167, "FY2022": 832185, "FY2021": 644300}),
     ("DATA", "Loans and advances to banks", {"FY2025": 156952, "FY2024": 96803, "FY2023": 104012, "FY2022": 78750, "FY2021": 26012}),
     ("DATA", "Loans and advances to customers", {"FY2025": 2205331, "FY2024": 1975643, "FY2023": 2028637, "FY2022": 1610422, "FY2021": 1585574}),
-    ("DATA", "Investment securities", {"FY2025": 550717, "FY2024": 398439, "FY2023": 357952, "FY2022": 264917, "FY2021": 213944}),
+    ("DATA", "Total investment securities", {"FY2025": 550717, "FY2024": 398439, "FY2023": 357952, "FY2022": 264917, "FY2021": 213944}),
+    ("DATA", "Investment securities - Equities (FVOCI)", {"FY2025": 2145, "FY2024": 2025, "FY2023": 1772, "FY2022": 1407, "FY2021": 1018}),
+    ("DATA", "Investment securities - Equities (FVPL)", {"FY2025": 85, "FY2024": 46, "FY2023": 137, "FY2022": 11361, "FY2021": 252}),
+    ("DATA", "Investment securities - Debt securities (FVOCI)", {"FY2025": 543552, "FY2024": 392799, "FY2023": 352409, "FY2022": 249601, "FY2021": 170839}),
+    ("DATA", "Investment securities - Debt securities (FVPL)", {"FY2021": 41872}),
+    ("DATA", "Investment securities - Interest receivable (accrued)", {"FY2025": 5039, "FY2024": 3634, "FY2023": 3691, "FY2022": 2577}),
+    ("DATA", "Investment securities - Less: ECL allowance", {"FY2025": -104, "FY2024": -65, "FY2023": -57, "FY2022": -29, "FY2021": -37}),
     ("DATA", "Investment in group entity", {"FY2023": 0, "FY2022": 44000, "FY2021": 45792}),
     ("DATA", "Derivative assets", {"FY2025": 20557, "FY2024": 23453, "FY2023": 11890, "FY2022": 15296, "FY2021": 6401}),
     ("DATA", "Fixed assets", {"FY2025": 41862, "FY2024": 39969, "FY2023": 50764, "FY2022": 49253, "FY2021": 55230}),
@@ -134,8 +160,11 @@ bw.add_balance_sheet_sheet(
     title="National Bank of Kuwait (International) Plc — Balance Sheet",
     subtitle="Entity basis. As reported: £'000 (FY2024-FY2025); US$'000 (FY2021-FY2023) - see Currency Note. "
               "The Bank sold its Investment in group entity (NBK France S.A.) in June 2023; the line is blank from "
-              "FY2024 rather than zero. Repurchase agreements is a new FY2025 line (not previously used).",
-    rows=bs_rows, sources_text=STATEMENTS_SOURCES, first_col_width=68, source_height=340, unit_suffix="",
+              "FY2024 rather than zero. Repurchase agreements is a new FY2025 line (not previously used). "
+              "'Investment securities - ...' sub-rows below the renamed 'Total investment securities' line are a "
+              "measurement-basis breakdown per Note 15 - see Investment Securities Breakdown note; no issuer-type "
+              "split is disclosed in any year's report.",
+    rows=bs_rows, sources_text=STATEMENTS_SOURCES, first_col_width=68, source_height=460, unit_suffix="",
 )
 
 pl_rows = [
@@ -171,7 +200,7 @@ bw.add_income_statement_sheet(
     subtitle="Entity basis. As reported: £'000 (FY2024-FY2025); US$'000 (FY2021-FY2023) - see Currency Note. "
               "FY2023 Total comprehensive income is shown before a small FY2023-only fair-value/retained-earnings "
               "transfer (US$3,321k, net-zero within equity) disclosed on the Statement of Changes in Equity.",
-    rows=pl_rows, sources_text=STATEMENTS_SOURCES, first_col_width=82, source_height=340, unit_suffix="",
+    rows=pl_rows, sources_text=STATEMENTS_SOURCES, first_col_width=82, source_height=460, unit_suffix="",
 )
 
 equity_headers = ["Share capital", "Retained earnings", "Cumulative changes in fair values", "Translation / exchange reserve", "Total equity"]

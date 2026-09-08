@@ -201,7 +201,17 @@ STATEMENTS_SOURCES = (
     "column here uses that year's own originally-reported figures (not the later restated comparative), "
     "consistent with every other bank in this project; the restatement is instead shown as its own explicit "
     "bridging row in the Statement of Changes in Equity, between FY2023's originally-reported closing balance "
-    "and FY2024's own restated opening balance, per the Bank's own Note 33."
+    "and FY2024's own restated opening balance, per the Bank's own Note 33.\n\n"
+    "DEBT SECURITIES BREAKDOWN: Note 12 (Debt securities) of both the FY2015 (p.23 of the scanned Companies House "
+    "filing) and FY2016 (p.23 of the scanned Companies House filing) Annual Reports states the entire Debt securities "
+    "balance is one unlisted Sukuk (Islamic) bond, classified as \"Available for sale securities - other debt "
+    "securities\" and \"Issued by other than public bodies\" - i.e. 100% one measurement-basis bucket "
+    "(available-for-sale/mark-to-market, no amortised-cost or FVTPL component) and 100% one issuer-type bucket "
+    "(not UK government/gilts/sovereign - a non-public-body, corporate-type issuer) in both years, so no sub-row "
+    "split is added; the Balance Sheet row is instead relabelled in place to state both classifications. FY2015's "
+    "note carries a 90.56% impairment provision against this bond; FY2016's note raises that provision to 100% (an "
+    "additional EUR 416k impairment, matching the P&L's 'Impairment charge for available-for-sale financial assets' "
+    "row), which is why the FY2016 balance is nil."
 )
 
 # ---------------------------------------------------------------
@@ -219,7 +229,7 @@ bs_rows_eur = [
         "FY2020": 151026, "FY2019": 117079, "FY2018": 130981, "FY2017": 78708, "FY2016": 14732, "FY2015": 10336}),
     ("DATA", "Loans and advances to customers", {"FY2025": 27178, "FY2024": 49438, "FY2023": 24653, "FY2022": 32356, "FY2021": 36278,
         "FY2020": 34366, "FY2019": 13853, "FY2018": 15512, "FY2017": 28316, "FY2016": 44775, "FY2015": 50022}),
-    ("DATA", "Debt securities (FY2015/FY2016 own reports only; no equivalent line FY2017 onward)", {"FY2016": 0, "FY2015": 435}),
+    ("DATA", "Debt securities - other debt securities, available-for-sale, issued by other than public bodies (unlisted Sukuk/Islamic Bonds; FY2015/FY2016 own reports only; no equivalent line FY2017 onward)", {"FY2016": 0, "FY2015": 435}),
     ("DATA", "Property, plant and equipment", {"FY2025": 2855, "FY2024": 3193, "FY2023": 4510, "FY2022": 3432, "FY2021": 3318,
         "FY2020": 4195, "FY2019": 4357, "FY2018": 4199, "FY2017": 4479, "FY2016": 4353, "FY2015": 4456}),
     ("DATA", "Intangible assets (FY2023 report shows this line as nil/dash; FY2015-FY2017 own reports have no separate line)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 89, "FY2021": 268,

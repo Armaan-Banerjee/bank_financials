@@ -310,7 +310,7 @@ bw.add_income_statement_sheet(
         ("DATA", "Expected credit loss impairment charges", {"FY2026": -97349, "FY2025": -97040, "FY2024": -85997, "FY2023": -66740, "FY2022": -25363, "FY2021": -71134, "FY2020": -75706, "FY2019": -24991}),
         ("DATA", "Impairment losses on loans and advances (pre-IFRS 9 incurred loss model)", {"FY2018": -106085}),
         ("TOTAL", "Operating income after expected credit loss impairment charges", {"FY2026": 1064344, "FY2025": 1060255, "FY2024": 1050198, "FY2023": 1241837, "FY2022": 1047969, "FY2021": 865198, "FY2020": 881501, "FY2019": 1024309, "FY2018": 934062}),
-        ("DATA", "Operating costs", {"FY2026": -607310, "FY2025": -597719, "FY2024": -626732, "FY2023": -833061, "FY2022": -760286, "FY2021": -757758, "FY2020": -707033, "FY2019": -819169, "FY2018": -797049}),
+        ("TOTAL", "Operating costs", {"FY2026": -607310, "FY2025": -597719, "FY2024": -626732, "FY2023": -833061, "FY2022": -760286, "FY2021": -757758, "FY2020": -707033, "FY2019": -819169, "FY2018": -797049}),
         ("DATA", "Depreciation on operating leased assets", {"FY2019": -2137, "FY2018": -2350}),
         ("DATA", "Impairment of goodwill", {"FY2023": -805, "FY2021": -8787}),
         ("DATA", "Amortisation of acquired intangibles", {"FY2025": 0, "FY2024": -940, "FY2023": -12625, "FY2022": -12936, "FY2021": -12851, "FY2020": -12915, "FY2019": -12958, "FY2018": -13273}),

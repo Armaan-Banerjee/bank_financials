@@ -111,6 +111,17 @@ BALANCE_SHEET_SOURCES = (
       "£54m) - this £54m gap exactly reconciled the previous Total assets tie-out for FY2024. Also added the "
       "explicitly-disclosed nil ('—') FY2025 Investment securities and FY2024 Investments in group undertakings "
       "values (both £0m, not blank) for consistency with how every other year on this row is shown."
+    + "\n\nINVESTMENT SECURITIES NOTE-LEVEL BREAKDOWN (checked for all 5 years against each year's own annual "
+      "report note, not just the balance sheet page): the 'Investment securities' note discloses only a single "
+      "line item, 'Equity shares (unlisted) - measured at FVTPL', which reconciles exactly to 'Total investment "
+      "securities' in every year - there is no further split by measurement basis or issuer type to break out, and "
+      "no UK government/gilts/treasury exposure sits in this line (that would be unlisted equity shares, not debt "
+      "securities). Row relabelled in place (not split into sub-rows) since there is nothing to sum against. "
+      "Sourced from: FY2025 Annual Financial Report, note 21 'Investment securities', p.81 (FY2025: £0m; FY2024: "
+      f"£54m) - {AR2025_URL}; FY2024 Annual Financial Report, note 20 'Investment securities', p.103 (FY2024: £54m; "
+      f"FY2023: £73m) - {AR2024_URL}; FY2023 Annual Financial Report, note 21 'Investment securities' (FY2023: "
+      f"£73m; FY2022: £50m) - {AR2023_URL}; FY2022 Annual Financial Report, note 22 'Investment securities', p.129 "
+      f"(FY2022: £50m; FY2021: £40m, 'AIB UK Group & AIB UK' basis) - {AR2022_URL}."
 )
 
 balance_sheet_rows = [
@@ -120,7 +131,7 @@ balance_sheet_rows = [
     ("DATA", "Loans and advances to banks", {"FY2025": 696, "FY2024": 714, "FY2023": 502, "FY2022": 555, "FY2021": 637}),
     ("DATA", "Loans and advances to customers", {"FY2025": 5291, "FY2024": 4708, "FY2023": 5647, "FY2022": 5718, "FY2021": 6198}),
     ("DATA", "Securities financing", {"FY2025": 921}),
-    ("DATA", "Investment securities", {"FY2025": 0, "FY2024": 54, "FY2023": 73, "FY2022": 50, "FY2021": 40}),
+    ("DATA", "Investment securities - Equity shares (unlisted), measured at FVTPL", {"FY2025": 0, "FY2024": 54, "FY2023": 73, "FY2022": 50, "FY2021": 40}),
     ("DATA", "Investments in group undertakings", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}),
     ("DATA", "Intangible assets", {"FY2025": 15, "FY2024": 14, "FY2023": 13, "FY2022": 15, "FY2021": 21}),
     ("DATA", "Property, plant and equipment", {"FY2025": 30, "FY2024": 31, "FY2023": 33, "FY2022": 27, "FY2021": 31}),

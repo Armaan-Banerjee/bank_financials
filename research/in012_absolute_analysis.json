@@ -5,8 +5,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 917,
-        "unknown_unit_observations": 917,
+        "observations": 919,
+        "unknown_unit_observations": 919,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -324,6 +324,10 @@
           "400972": {
             "amount_unit": null,
             "reporting_basis": "entity"
+          },
+          "446951": {
+            "amount_unit": null,
+            "reporting_basis": null
           },
           "451720": {
             "amount_unit": null,
@@ -625,6 +629,7 @@
           "229148": 208.2,
           "400712": 41233.3,
           "400972": 15808.0,
+          "446951": 224350.4,
           "451720": 320.8,
           "454750": 41047.0,
           "455378": 90882.0,
@@ -760,6 +765,7 @@
           "229148": 2024,
           "400712": 2025,
           "400972": 2025,
+          "446951": 2022,
           "451720": 2025,
           "454750": 2025,
           "455378": 2025,
@@ -822,7 +828,7 @@
         "banks": 0,
         "exclusions": {
           "missing_rwa": 86,
-          "unknown_unit": 831
+          "unknown_unit": 833
         },
         "observations": 0,
         "years": []
@@ -836,8 +842,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 906,
-        "unknown_unit_observations": 906,
+        "observations": 908,
+        "unknown_unit_observations": 908,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -1156,6 +1162,10 @@
             "amount_unit": null,
             "reporting_basis": "entity"
           },
+          "446951": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
           "451720": {
             "amount_unit": null,
             "reporting_basis": null
@@ -1452,6 +1462,7 @@
           "229148": 211.2,
           "400712": 41233.3,
           "400972": 15808.0,
+          "446951": 224350.4,
           "451720": 320.8,
           "454750": 41047.0,
           "455378": 90882.0,
@@ -1586,6 +1597,7 @@
           "229148": 2024,
           "400712": 2025,
           "400972": 2025,
+          "446951": 2022,
           "451720": 2025,
           "454750": 2025,
           "455378": 2025,
@@ -1647,7 +1659,7 @@
         "banks": 0,
         "exclusions": {
           "missing_rwa": 90,
-          "unknown_unit": 816
+          "unknown_unit": 818
         },
         "observations": 0,
         "years": []
@@ -1661,8 +1673,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 914,
-        "unknown_unit_observations": 914,
+        "observations": 916,
+        "unknown_unit_observations": 916,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -1984,6 +1996,10 @@
           "400972": {
             "amount_unit": null,
             "reporting_basis": "entity"
+          },
+          "446951": {
+            "amount_unit": null,
+            "reporting_basis": null
           },
           "451720": {
             "amount_unit": null,
@@ -2282,6 +2298,7 @@
           "229148": 224.9,
           "400712": 41233.3,
           "400972": 15808.0,
+          "446951": 328101.4,
           "451720": 320.8,
           "454750": 56485.0,
           "455378": 90882.0,
@@ -2417,6 +2434,7 @@
           "229148": 2024,
           "400712": 2025,
           "400972": 2025,
+          "446951": 2022,
           "451720": 2025,
           "454750": 2025,
           "455378": 2025,
@@ -2478,7 +2496,7 @@
         "banks": 0,
         "exclusions": {
           "missing_rwa": 87,
-          "unknown_unit": 827
+          "unknown_unit": 829
         },
         "observations": 0,
         "years": []
@@ -2492,8 +2510,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 842,
-        "unknown_unit_observations": 842,
+        "observations": 844,
+        "unknown_unit_observations": 844,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -2800,6 +2818,10 @@
             "amount_unit": null,
             "reporting_basis": null
           },
+          "446951": {
+            "amount_unit": null,
+            "reporting_basis": null
+          },
           "451720": {
             "amount_unit": null,
             "reporting_basis": null
@@ -3089,6 +3111,7 @@
           "223304": 26251.7,
           "229148": 1307.8,
           "400712": 106648.0,
+          "446951": 1446306.6,
           "451720": 1370.7,
           "454750": 235076.0,
           "455378": 150420.0,
@@ -3219,6 +3242,7 @@
           "223304": 2025,
           "229148": 2024,
           "400712": 2024,
+          "446951": 2022,
           "451720": 2025,
           "454750": 2025,
           "455378": 2025,

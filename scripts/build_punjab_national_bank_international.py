@@ -11,8 +11,16 @@ from bank_workbook import BankWorkbook
 # were already published when that ticket ran. FY2014-FY2020 are prepended here per HD-048's
 # FY2014 historical-depth cap; FY2021 was subsequently recovered from the Bank's own filings.
 YEARS = ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022",
-         "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]
+         "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014",
+         "FY2013", "FY2012", "FY2011", "FY2010", "FY2009"]
 YEAR_LABEL = {y: y for y in YEARS}
+
+# HD-073 (2026-09-06/07): extends Balance Sheet, Profit & Loss, Statement of Changes in Equity,
+# and Cash Flow Statement back to FY2009 only. Pillar 3 (all 11 metric sheets), Asset Quality, and
+# RWA Breakdown stay FY2014-onward - every call building one of those sheets passes
+# years=PILLAR3_YEARS explicitly, since BankWorkbook otherwise defaults to the full (now
+# FY2009-extended) self.years for any sheet-builder call with no override.
+PILLAR3_YEARS = [y for y in YEARS if y not in ("FY2013", "FY2012", "FY2011", "FY2010", "FY2009")]
 
 BASE = "https://www.pnbint.com/PNBIL/pdf/Financial_Reports/"
 AR_URL = {
@@ -30,6 +38,17 @@ AR_URL = {
     "FY2015": BASE + "Annual%20Report%2031.03.2015.pdf",
     "FY2014": BASE + "Annualreport31-03-2014.pdf",
 }
+# HD-073 (2026-09-06/07): FY2009-FY2013 are no longer hosted on the Bank's own site; these are
+# Companies House statutory filings (company 05781326) instead, native-text PDFs, no OCR needed.
+CH_BASE = "https://find-and-update.company-information.service.gov.uk/company/05781326/filing-history/"
+AR_URL_CH = {
+    "FY2013": CH_BASE + "MzA3ODE0ODk4NWFkaXF6a2N4/document?format=pdf&download=0",
+    "FY2012": CH_BASE + "MzA1ODIxNjY3NGFkaXF6a2N4/document?format=pdf&download=0",
+    "FY2011": CH_BASE + "MzAzNzc2OTM0OWFkaXF6a2N4/document?format=pdf&download=0",
+    "FY2010": CH_BASE + "MzAxNjI2OTk3OGFkaXF6a2N4/document?format=pdf&download=0",
+    "FY2009": CH_BASE + "MjAzNDA5MDE2NWFkaXF6a2N4/document?format=pdf&download=0",
+}
+AR_URL.update(AR_URL_CH)
 P3_URL = {
     "FY2026": BASE + "Basel-III-Pillar-3-Disclosure-31-03-2026.pdf",
     "FY2025": BASE + "Basel%20III%20Pillar%203%20Disclosures%2031-03-2025.pdf",
@@ -60,21 +79,30 @@ P3_URL = {
 # export mechanism for this ticket, so both blocks are the same series. Averages are the simple
 # mean of all daily XUDLUSS observations from 1 April to 31 March; spot is the last available
 # observation on or before 31 March.
+# HD-073 (2026-09-06/07): FY2009-FY2013 spot/average rates pulled the same way, from the BoE
+# XUDLUSS series' CSV export endpoint, over each 1 April-31 March financial year.
 FX_SPOT = {"FY2026": 1.3188, "FY2025": 1.2910, "FY2024": 1.2632,
            "FY2023": 1.2364, "FY2022": 1.3162, "FY2021": 1.3796,
            "FY2020": 1.2403, "FY2019": 1.3030, "FY2018": 1.4033,
            "FY2017": 1.2507, "FY2016": 1.4378, "FY2015": 1.4847,
-           "FY2014": 1.6673, "FY2013": 1.5181}
+           "FY2014": 1.6673, "FY2013": 1.5181,
+           "FY2012": 1.5981, "FY2011": 1.6030, "FY2010": 1.5167, "FY2009": 1.4331,
+           # FY2008 spot (31 March 2008) is used only as FY2009's opening-balance conversion rate,
+           # not as a reporting-year column of its own (FY2009 is this workbook's statutory floor).
+           "FY2008": 1.9875}
 FX_AVG = {"FY2026": 1.3404, "FY2025": 1.2763, "FY2024": 1.2568,
           "FY2023": 1.2045, "FY2022": 1.3662, "FY2021": 1.3193,
           "FY2020": 1.2708, "FY2019": 1.3130, "FY2018": 1.3273,
           "FY2017": 1.3067, "FY2016": 1.5082, "FY2015": 1.6125,
-          "FY2014": 1.5900}
+          "FY2014": 1.5900,
+          "FY2013": 1.5804, "FY2012": 1.5949, "FY2011": 1.5572, "FY2010": 1.5975, "FY2009": 1.7190}
 PREVIOUS_SPOT = {"FY2022": "FY2021", "FY2021": "FY2020", "FY2023": "FY2022", "FY2024": "FY2023",
                  "FY2025": "FY2024", "FY2026": "FY2025",
                  "FY2020": "FY2019", "FY2019": "FY2018", "FY2018": "FY2017",
                  "FY2017": "FY2016", "FY2016": "FY2015", "FY2015": "FY2014",
-                 "FY2014": "FY2013"}
+                 "FY2014": "FY2013",
+                 "FY2013": "FY2012", "FY2012": "FY2011", "FY2011": "FY2010", "FY2010": "FY2009",
+                 "FY2009": "FY2008"}
 
 
 def flow(values):
@@ -108,6 +136,17 @@ FX_NOTE = (
     "1.3796/1.3193 and is now included from the Bank's own 2021 filings."
 )
 
+# FX_NOTE_HD073 adds the FY2009-FY2013 rate paragraph on top of FX_NOTE. It must be used ONLY by
+# in-scope sheets (Cash Flow Statement / Balance Sheet / Profit & Loss / Statement of Changes in
+# Equity) - Asset Quality's citation reuses plain FX_NOTE via STATEMENTS_SOURCES and must not pick
+# up this HD-073-only paragraph (see the STATUTORY_SOURCES note below for the same rule).
+FX_NOTE_HD073 = FX_NOTE + (
+    "\n\nHD-073 (2026-09-06/07) FY2009-FY2013 extension: same BoE XUDLUSS series, same average/spot convention. "
+    "Rates (£1 = $X) were FY2009 1.7190 average/1.4331 spot, FY2010 1.5975/1.5167, FY2011 1.5572/1.6030, FY2012 "
+    "1.5949/1.5981, FY2013 1.5804/1.5181. The FY2009 opening balance uses the 31 March 2008 spot rate; the Bank's "
+    "own FY2009 report does not disclose that comparative in the same cash-flow basis, so no FY2008 column is shown."
+)
+
 CASH_FLOW_SOURCES = (
     "Sources - Punjab National Bank (International) Limited entity-level Statement of Cash Flows (native unit $'000):\n"
     "FY2026: Annual Report and Accounts 2026, printed p.50 - " + AR_URL["FY2026"] + "\n"
@@ -128,12 +167,27 @@ CASH_FLOW_SOURCES = (
     "FY2014: Annual Report and Accounts 2014, printed p.21 - " + AR_URL["FY2014"] + " (OCR'd from a scanned PDF; "
     "the Statement of Financial Position on the same page range was additionally verified against a 250dpi page "
     "render, see BS_DISCREPANCY_NOTE-style verification below)\n\n"
-    + ENTITY_NOTE + "\n" + FX_NOTE + "\n\n"
+    "HD-073 (2026-09-06/07) FY2009-FY2013 extension, sourced from the Bank's own Companies House statutory filings "
+    "(company 05781326), native-text PDFs, no OCR needed:\n"
+    "FY2013: Financial Statements for the year ended 31 March 2013, printed p.19 - " + AR_URL["FY2013"] + "\n"
+    "FY2012: Financial Statements as at 31 March 2012, printed pp.17-18 - " + AR_URL["FY2012"] + "\n"
+    "FY2011: Financial Statements as at 31 March 2011, printed pp.13-14 - " + AR_URL["FY2011"] + "\n"
+    "FY2010: Financial Statements as at 31 March 2010, printed pp.13-14 - " + AR_URL["FY2010"] + "\n"
+    "FY2009: Financial Statements as at 31 March 2009, printed p.12 - " + AR_URL["FY2009"] + "\n\n"
+    + ENTITY_NOTE + "\n" + FX_NOTE_HD073 + "\n\n"
     "HD-048 EXCHANGE-EFFECTS NOTE: the Bank's own Statement of Cash Flows discloses a separate 'unrealised "
     "(gain)/loss on exchange rate difference' reconciling line (after the net change in cash, before the closing "
     "balance) only in the FY2017 and FY2018 reports; FY2014-FY2016, FY2019 and FY2020 close exactly from opening + "
     "net change with no such line disclosed that year - a genuine year-to-year presentation difference, not a gap "
-    "in this transcription."
+    "in this transcription.\n\n"
+    "HD-073 CASH-BASIS DISCONTINUITY NOTE: each year's own opening/closing cash figures are used as originally "
+    "published, but the definition of 'cash and cash equivalents' the Bank uses genuinely changes twice in this "
+    "period - FY2010's own report first splits out a 'Customer overdrafts' balance that FY2009's own report had "
+    "included within cash (closing cash FY2009 $221,853k vs FY2010's own opening cash of $191,660k, a $30,193k gap "
+    "matching FY2010's own 'Customer overdrafts' comparative exactly), and a further reclassification of short-term "
+    "interbank placements out of cash occurs between FY2011 and FY2012 (FY2011's own closing cash of $103,937k vs "
+    "FY2012's own opening cash of $49,302k). Both are genuine, Bank-disclosed presentational changes, not "
+    "transcription gaps; the opening/net-change/closing chain reconciles exactly within each individual year shown."
 )
 
 
@@ -173,6 +227,7 @@ OPERATING = {
     "FY2021": 102557,
     "FY2020": -21456, "FY2019": 31802, "FY2018": -334192, "FY2017": 158164,
     "FY2016": 81196, "FY2015": -55376, "FY2014": 5386,
+    "FY2013": 32960, "FY2012": 3299, "FY2011": -92215, "FY2010": -21353, "FY2009": 129853,
 }
 INVESTING = {
     "FY2026": -28192, "FY2025": -7088, "FY2024": 22199,
@@ -180,6 +235,7 @@ INVESTING = {
     "FY2021": -9878,
     "FY2020": 455, "FY2019": -2387, "FY2018": -40085, "FY2017": -8449,
     "FY2016": 103, "FY2015": 1945, "FY2014": 1949,
+    "FY2013": 12631, "FY2012": -48, "FY2011": -17088, "FY2010": -7067, "FY2009": -15343,
 }
 FINANCING = {
     "FY2026": -15391, "FY2025": -15689, "FY2024": -5568,
@@ -187,6 +243,7 @@ FINANCING = {
     "FY2021": -3490,
     "FY2020": -4222, "FY2019": -3432, "FY2018": 17072, "FY2017": 100000,
     "FY2016": 8864, "FY2015": 8918, "FY2014": 53889,
+    "FY2013": 23832, "FY2012": 11354, "FY2011": 25000, "FY2010": 25000, "FY2009": 25000,
 }
 NET_CHANGE = {
     "FY2026": 23169, "FY2025": -17279, "FY2024": -10789,
@@ -194,6 +251,7 @@ NET_CHANGE = {
     "FY2021": 89190,
     "FY2020": -25223, "FY2019": 25985, "FY2018": -357205, "FY2017": 249715,
     "FY2016": 90163, "FY2015": -44513, "FY2014": 61224,
+    "FY2013": 69423, "FY2012": 14605, "FY2011": -84303, "FY2010": -3420, "FY2009": 139510,
 }
 EXCHANGE = {"FY2026": 2870, "FY2025": 1980, "FY2024": 1780,
             "FY2023": 998, "FY2022": 582,
@@ -207,13 +265,15 @@ OPENING_USD = {"FY2026": 116753, "FY2025": 134032, "FY2024": 144821,
                "FY2021": 132130,
                "FY2020": 157353, "FY2019": 131368, "FY2018": 490010,
                "FY2017": 240205, "FY2016": 150042, "FY2015": 194555,
-               "FY2014": 133331}
+               "FY2014": 133331,
+               "FY2013": 63908, "FY2012": 49302, "FY2011": 188240, "FY2010": 191660, "FY2009": 82343}
 CLOSING_USD = {"FY2026": 139922, "FY2025": 116753, "FY2024": 134032,
                "FY2023": 144821, "FY2022": 149798,
                "FY2021": 221320,
                "FY2020": 132130, "FY2019": 157353, "FY2018": 131368,
                "FY2017": 490010, "FY2016": 240205, "FY2015": 150042,
-               "FY2014": 194555}
+               "FY2014": 194555,
+               "FY2013": 133331, "FY2012": 63908, "FY2011": 103937, "FY2010": 188240, "FY2009": 221853}
 
 opening = {
     y: round(OPENING_USD[y] / FX_SPOT[PREVIOUS_SPOT[y]], 1) for y in YEARS
@@ -283,6 +343,49 @@ STATEMENTS_SOURCES = (
     "in some FY2014-FY2016 years and are shown as their own rows, blank elsewhere."
 )
 
+# STATUTORY_SOURCES is used ONLY by the three in-scope statement sheets this ticket touches
+# (Balance Sheet, Profit & Loss, Statement of Changes in Equity). Asset Quality's own citation text
+# (built elsewhere in this file) reuses STATEMENTS_SOURCES as its base, unmodified, so it must not
+# pick up this HD-073-only note - see the coordinator's PILLAR3_YEARS/STATUTORY_SOURCES fix pattern
+# (scripts/build_morgan_stanley_bank_international.py is the reference implementation).
+STATUTORY_SOURCES = STATEMENTS_SOURCES + (
+    "\n\nHD-073 (2026-09-06/07) FY2009-FY2013 extension: same BoE XUDLUSS series, same average/spot convention as "
+    "FX_NOTE above. Rates (£1 = $X) were FY2009 1.7190 average/1.4331 spot, FY2010 1.5975/1.5167, FY2011 "
+    "1.5572/1.6030, FY2012 1.5949/1.5981, FY2013 1.5804/1.5181. The FY2009 opening balance uses the 31 March 2008 "
+    "spot rate; the Bank's own FY2009 report does not disclose that comparative in the same cash-flow basis, so no "
+    "FY2008 column is shown.\n\n"
+    "HD-073 (2026-09-06/07) FY2009-FY2013 extension, sourced from the Bank's own Companies House statutory "
+    "filings (company 05781326), native-text PDFs, no OCR needed:\n"
+    "FY2013: Financial Statements for the year ended 31 March 2013, Statement of Financial Position printed p.14, "
+    "Income Statement printed p.15 - " + AR_URL["FY2013"] + "\n"
+    "FY2012: Financial Statements as at 31 March 2012, Income Statement printed p.12, Statement of Financial "
+    "Position printed pp.15-16, Statement of Changes in Equity printed p.14 - " + AR_URL["FY2012"] + " (also used, "
+    "for the FY2013 Balance Sheet/Profit & Loss sheet's FY2012 comparative-column cross-check: FY2013's own clean "
+    "$'000 comparative column, same document as the FY2013 row above)\n"
+    "FY2011: Financial Statements as at 31 March 2011, Income Statement printed p.9, Statement of Financial "
+    "Position printed p.12, Statement of Changes in Equity printed p.11 - " + AR_URL["FY2011"] + "\n"
+    "FY2010: Financial Statements as at 31 March 2010, Income Statement printed p.9, Statement of Financial "
+    "Position printed p.12, Statement of Changes in Equity printed p.11 - " + AR_URL["FY2010"] + "\n"
+    "FY2009: Financial Statements as at 31 March 2009, Income Statement printed p.9, Balance Sheet printed p.11, "
+    "Statement of Changes in Equity printed p.10 - " + AR_URL["FY2009"] + "\n\n"
+    "HD-073 PRE-2013 PRESENTATION BRIDGE NOTE: FY2009-FY2012 predate the Bank's split of the balance sheet into "
+    "the FY2013-onward category set (Loans and advances to banks/customers shown separately, Deposits from banks/"
+    "customers shown separately, a standalone Derivative financial instruments line). FY2012's Balance Sheet is "
+    "taken from FY2013's own Annual Report FY2012 comparative column (a clean, native-text $'000 table using the "
+    "newer categories directly - cross-checked against FY2012's own Annual Report for all totals, which matched "
+    "exactly). FY2009-FY2011 predate that split entirely in every report reviewed; this workbook maps their own "
+    "combined 'Loans and receivables' (plus, where separately disclosed, 'Customer overdrafts' and 'Bills "
+    "purchased') onto 'Loans and advances to customers', and their combined 'Interest bearing borrowings' (plus "
+    "'Non-interest bearing borrowings') onto 'Deposits from customers', since none of the three years' own filings "
+    "separately discloses a banks/customers split - a genuine, disclosed structural absence, not an omission. "
+    "FY2010's own report separately introduces a 'Customer overdrafts' balance sheet line not present in FY2009's "
+    "own report (which shows a single combined 'Cash and cash equivalents' figure instead) - see the Cash Flow "
+    "sheet's CASH-BASIS DISCONTINUITY NOTE for the matching effect on cash. A further, genuine restatement is "
+    "disclosed in the FY2013 Annual Report's own Note 35 affecting the 1 April 2011 (FY2011 closing) balances; "
+    "this workbook shows FY2011's own as-originally-published closing Balance Sheet and Statement of Changes in "
+    "Equity figures rather than that later restated comparative, per this project's standing convention."
+)
+
 # FY2022's own Balance Sheet (Annual Report and Accounts 2022, p.34) shows Total assets $1,126,259k and Loans
 # and advances to customers $791,237k; the FOLLOWING year's report (AR2023, p.37) later gives a different FY2022
 # comparative ($1,123,130k / $788,108k respectively) with no explanatory note found in AR2023. Each year's own
@@ -302,85 +405,109 @@ BS_DISCREPANCY_NOTE = (
 BS_ASSETS = {
     "Cash and balances with banks": {"FY2026": 139922, "FY2025": 116753, "FY2024": 134032, "FY2023": 144821, "FY2022": 149798, "FY2021": 221320,
                                       "FY2020": 132130, "FY2019": 157353, "FY2018": 131368, "FY2017": 490010,
-                                      "FY2016": 240205, "FY2015": 150042, "FY2014": 194555},
+                                      "FY2016": 240205, "FY2015": 150042, "FY2014": 194555,
+                                      "FY2013": 133331, "FY2012": 63908, "FY2011": 103937, "FY2010": 188240, "FY2009": 221853},
     "Financial assets at fair value through profit or loss": {"FY2026": 1014, "FY2025": 964, "FY2024": 3029, "FY2023": 0, "FY2022": 10001, "FY2021": 10071,
                                       "FY2020": 33585, "FY2019": 24232, "FY2018": 32588, "FY2017": 59968,
-                                      "FY2016": 49727, "FY2015": 81667, "FY2014": 62113},
+                                      "FY2016": 49727, "FY2015": 81667, "FY2014": 62113,
+                                      "FY2013": 119857},
     "Derivative financial instruments (asset)": {"FY2026": 2925, "FY2025": 156, "FY2024": 14, "FY2023": 7, "FY2022": 1064, "FY2021": 1871,
                                       "FY2020": 3014, "FY2019": 2532, "FY2018": 11932, "FY2017": 4319,
-                                      "FY2016": 5994, "FY2015": 3626, "FY2014": 1973},
+                                      "FY2016": 5994, "FY2015": 3626, "FY2014": 1973,
+                                      "FY2013": 1169, "FY2012": 3014},
     "Loans and advances to banks": {"FY2026": 1453, "FY2025": 1352, "FY2024": 10496, "FY2023": 836, "FY2022": 700, "FY2021": 30478,
                                       "FY2020": 125044, "FY2019": 155671, "FY2018": 335509, "FY2017": 205154,
-                                      "FY2016": 310453, "FY2015": 338882, "FY2014": 299720},
+                                      "FY2016": 310453, "FY2015": 338882, "FY2014": 299720,
+                                      "FY2013": 274216, "FY2012": 346899},
     "Loans and advances to customers": {"FY2026": 1131159, "FY2025": 903981, "FY2024": 772119, "FY2023": 748698, "FY2022": 791237, "FY2021": 690599,
                                       "FY2020": 566366, "FY2019": 602733, "FY2018": 568317, "FY2017": 605202,
-                                      "FY2016": 1071990, "FY2015": 1196008, "FY2014": 1170545},
+                                      "FY2016": 1071990, "FY2015": 1196008, "FY2014": 1170545,
+                                      "FY2013": 895209, "FY2012": 662152, "FY2011": 693395, "FY2010": 563375, "FY2009": 340630},
     "Investment securities at amortised cost": {"FY2026": 63199, "FY2025": 75947, "FY2024": 65117, "FY2023": 108096, "FY2022": 89114, "FY2021": 58332,
                                       "FY2020": 49467, "FY2019": 50648, "FY2018": 48624, "FY2017": 8936,
-                                      "FY2016": 1171, "FY2015": 1568, "FY2014": 4839},
+                                      "FY2016": 1171, "FY2015": 1568, "FY2014": 4839,
+                                      "FY2013": 6210, "FY2012": 20264, "FY2011": 44830, "FY2010": 32013, "FY2009": 25573},
     "Financial assets at amortised cost (subtotal, as disclosed FY2024-FY2026)": {"FY2026": 1195811, "FY2025": 981280, "FY2024": 847732},
     "Financial assets at fair value through other comprehensive income": {"FY2026": 110830, "FY2025": 71606, "FY2024": 72866, "FY2023": 55263, "FY2022": 54753, "FY2021": 39311,
                                       "FY2020": 35651, "FY2019": 42588, "FY2018": 46547, "FY2017": 53936,
-                                      "FY2016": 122080, "FY2015": 120760, "FY2014": 166328},
+                                      "FY2016": 122080, "FY2015": 120760, "FY2014": 166328,
+                                      "FY2013": 85171, "FY2012": 99177, "FY2011": 47514, "FY2010": 10379},
     "Right of use lease assets": {"FY2026": 4394, "FY2025": 2946, "FY2024": 3685, "FY2023": 4395, "FY2022": 3073, "FY2021": 4066, "FY2020": 4383},
     "Property, plant and equipment": {"FY2026": 1034, "FY2025": 237, "FY2024": 287, "FY2023": 311, "FY2022": 391, "FY2021": 493,
                                       "FY2020": 460, "FY2019": 534, "FY2018": 694, "FY2017": 962,
-                                      "FY2016": 1526, "FY2015": 2071, "FY2014": 1472},
+                                      "FY2016": 1526, "FY2015": 2071, "FY2014": 1472,
+                                      "FY2013": 1727, "FY2012": 1014, "FY2011": 1320, "FY2010": 1142, "FY2009": 952},
     "Intangible assets": {"FY2026": 485, "FY2025": 126, "FY2024": 180, "FY2023": 230, "FY2022": 589, "FY2021": 962,
                                       "FY2020": 539, "FY2019": 362, "FY2018": 504, "FY2017": 556,
-                                      "FY2016": 170, "FY2015": 136, "FY2014": 168},
+                                      "FY2016": 170, "FY2015": 136, "FY2014": 168,
+                                      "FY2013": 192, "FY2012": 270, "FY2011": 174, "FY2010": 232, "FY2009": 456},
     "Deferred tax assets": {"FY2026": 24463, "FY2025": 24441, "FY2024": 24862, "FY2023": 24990, "FY2022": 25155, "FY2021": 24657,
                                       "FY2020": 25023, "FY2019": 24301, "FY2018": 25310, "FY2017": 25802,
-                                      "FY2016": 3836, "FY2014": 20},
+                                      "FY2016": 3836, "FY2014": 20,
+                                      "FY2013": 49, "FY2012": 33, "FY2009": 5},
     "Current tax assets": {"FY2016": 3891},
     "Prepayments and other receivables": {"FY2026": 1575, "FY2025": 1117, "FY2024": 591, "FY2023": 533, "FY2022": 384, "FY2021": 587,
                                       "FY2020": 469, "FY2019": 636, "FY2018": 627, "FY2017": 524,
-                                      "FY2016": 696, "FY2015": 3977, "FY2014": 925},
+                                      "FY2016": 696, "FY2015": 3977, "FY2014": 925,
+                                      "FY2013": 298, "FY2012": 521, "FY2011": 6163, "FY2010": 4173, "FY2009": 3630},
 }
 BS_TOTAL_ASSETS = {"FY2026": 1482453, "FY2025": 1199626, "FY2024": 1087278, "FY2023": 1088180, "FY2022": 1126259, "FY2021": 1082747,
                     "FY2020": 976131, "FY2019": 1061590, "FY2018": 1202020, "FY2017": 1455369,
-                    "FY2016": 1811739, "FY2015": 1898737, "FY2014": 1902658}
+                    "FY2016": 1811739, "FY2015": 1898737, "FY2014": 1902658,
+                    "FY2013": 1517429, "FY2012": 1197252, "FY2011": 897332, "FY2010": 799554, "FY2009": 593099}
 
 BS_LIABILITIES = {
     "Deposits from banks": {"FY2026": 50355, "FY2025": 2311, "FY2024": 3292, "FY2023": 1967, "FY2022": 1106, "FY2021": 865,
                                       "FY2020": 16126, "FY2019": 56464, "FY2018": 54342, "FY2017": 73692,
-                                      "FY2016": 176964, "FY2015": 135260, "FY2014": 280764},
+                                      "FY2016": 176964, "FY2015": 135260, "FY2014": 280764,
+                                      "FY2013": 115808, "FY2012": 167636},
     "Deposits from customers": {"FY2026": 1184925, "FY2025": 916442, "FY2024": 811182, "FY2023": 816636, "FY2022": 858073, "FY2021": 819493,
                                       "FY2020": 685120, "FY2019": 731971, "FY2018": 876208, "FY2017": 1134852,
-                                      "FY2016": 1358109, "FY2015": 1454943, "FY2014": 1361155},
+                                      "FY2016": 1358109, "FY2015": 1454943, "FY2014": 1361155,
+                                      "FY2013": 1194617, "FY2012": 861441, "FY2011": 780219, "FY2010": 711848, "FY2009": 535078},
     "Derivative financial instruments (liability)": {"FY2026": 16, "FY2025": 1471, "FY2024": 159, "FY2023": 155, "FY2022": 295, "FY2021": 25,
                                       "FY2020": 1458, "FY2019": 1262, "FY2018": 1295, "FY2017": 455,
-                                      "FY2016": 14944, "FY2015": 21668, "FY2014": 202},
+                                      "FY2016": 14944, "FY2015": 21668, "FY2014": 202,
+                                      "FY2013": 5836, "FY2012": 198},
     "Current tax liability": {"FY2023": 0, "FY2022": 0,
-                                      "FY2019": 316, "FY2016": 0, "FY2015": 2387, "FY2014": -254},
-    "Deferred tax liabilities": {"FY2016": 57, "FY2015": 90},
+                                      "FY2019": 316, "FY2016": 0, "FY2015": 2387, "FY2014": -254,
+                                      "FY2013": 1085, "FY2012": 610, "FY2011": 57, "FY2010": 860, "FY2009": 572},
+    "Deferred tax liabilities": {"FY2016": 57, "FY2015": 90,
+                                      "FY2011": 10, "FY2010": 5},
     "Repurchase agreement - non trading": {"FY2026": 0, "FY2025": 20868},
     "Lease liability": {"FY2026": 4603, "FY2025": 3173, "FY2024": 3870, "FY2023": 4522, "FY2022": 3205, "FY2021": 4181, "FY2020": 4443},
     "Other liabilities": {"FY2026": 2182, "FY2025": 3092, "FY2024": 2639, "FY2023": 1572, "FY2022": 5314, "FY2021": 4095,
                                       "FY2020": 3399, "FY2019": 4708, "FY2018": 6553, "FY2017": 4513,
-                                      "FY2016": 8034, "FY2015": 11262, "FY2014": 11460},
+                                      "FY2016": 8034, "FY2015": 11262, "FY2014": 11460,
+                                      "FY2013": 6500, "FY2012": 6468, "FY2011": 9396, "FY2010": 5201, "FY2009": 4822},
     "Subordinated bonds and other borrowed funds": {"FY2026": 30997, "FY2025": 41108, "FY2024": 51252, "FY2023": 50000, "FY2022": 50000,
                                       "FY2020": 50000, "FY2019": 50000, "FY2018": 50000, "FY2017": 50000,
-                                      "FY2016": 75000, "FY2015": 65000, "FY2014": 55000},
+                                      "FY2016": 75000, "FY2015": 65000, "FY2014": 55000,
+                                      "FY2013": 50000, "FY2012": 37500},
 }
 BS_TOTAL_LIABILITIES = {"FY2026": 1273078, "FY2025": 988465, "FY2024": 872394, "FY2023": 874852, "FY2022": 917993, "FY2021": 878659,
                          "FY2020": 760546, "FY2019": 844721, "FY2018": 988398, "FY2017": 1263512,
-                         "FY2016": 1633108, "FY2015": 1690610, "FY2014": 1708327}
+                         "FY2016": 1633108, "FY2015": 1690610, "FY2014": 1708327,
+                         "FY2013": 1373846, "FY2012": 1073853, "FY2011": 789682, "FY2010": 717914, "FY2009": 540472}
 
 BS_EQUITY_NATIVE = {
     "Share capital": {"FY2026": 319631, "FY2025": 319631, "FY2024": 319631, "FY2023": 319631, "FY2022": 319631, "FY2021": 319631,
                                       "FY2020": 319631, "FY2019": 319631, "FY2018": 319631, "FY2017": 299631,
-                                      "FY2016": 174631, "FY2015": 174631, "FY2014": 174631},
+                                      "FY2016": 174631, "FY2015": 174631, "FY2014": 174631,
+                                      "FY2013": 124631, "FY2012": 112131, "FY2011": 99631, "FY2010": 74631, "FY2009": 49631},
     "Fair value reserve": {"FY2026": -123, "FY2025": 279, "FY2024": -807, "FY2023": -986, "FY2022": -1293, "FY2021": 68,
                                       "FY2020": -1256, "FY2019": -608, "FY2018": -1157, "FY2017": -34,
-                                      "FY2016": 390, "FY2015": 1751, "FY2014": -5006},
+                                      "FY2016": 390, "FY2015": 1751, "FY2014": -5006,
+                                      "FY2013": 125, "FY2012": -3353, "FY2011": -234, "FY2010": 157, "FY2009": 0},
     "Retained earnings": {"FY2026": -110133, "FY2025": -108749, "FY2024": -103940, "FY2023": -105317, "FY2022": -110072, "FY2021": -115611,
                                       "FY2020": -102790, "FY2019": -102154, "FY2018": -104852, "FY2017": -107740,
-                                      "FY2016": 3610, "FY2015": 31745, "FY2014": 24706},
+                                      "FY2016": 3610, "FY2015": 31745, "FY2014": 24706,
+                                      "FY2013": 18827, "FY2012": 14621, "FY2011": 8254, "FY2010": 6852, "FY2009": 2997},
 }
 BS_TOTAL_EQUITY_NATIVE = {"FY2026": 209375, "FY2025": 211161, "FY2024": 214884, "FY2023": 213328, "FY2022": 208266, "FY2021": 204088,
                            "FY2020": 215585, "FY2019": 216869, "FY2018": 213622, "FY2017": 191857,
-                           "FY2016": 178631, "FY2015": 208127, "FY2014": 194331}
+                           "FY2016": 178631, "FY2015": 208127, "FY2014": 194331,
+                           "FY2013": 143583, "FY2012": 123399, "FY2011": 107650, "FY2010": 81640, "FY2009": 52628}
 
 
 def stock_rows(native_dict):
@@ -405,7 +532,7 @@ bw.add_balance_sheet_sheet(
     subtitle="Entity-level Statement of Financial Position, £'000 converted from the Bank's native US$'000 "
              "presentation. Blank cells indicate a line not disclosed/not applicable that year.",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES + "\n\n" + BS_DISCREPANCY_NOTE,
+    sources_text=STATUTORY_SOURCES + "\n\n" + BS_DISCREPANCY_NOTE,
     first_col_width=90,
     source_height=380,
     unit_suffix=" (£'000, conv. from USD)",
@@ -417,7 +544,8 @@ bw.add_balance_sheet_sheet(
 # every year.
 PL_PROFIT = {"FY2026": 2937, "FY2025": 750, "FY2024": 6211, "FY2023": 8333, "FY2022": 7906, "FY2021": -10234,
              "FY2020": 2726, "FY2019": 8318, "FY2018": 5893, "FY2017": -111328,
-             "FY2016": -27225, "FY2015": 8121, "FY2014": 6990}
+             "FY2016": -27225, "FY2015": 8121, "FY2014": 6990,
+             "FY2013": 5374, "FY2012": 7513, "FY2011": 1402, "FY2010": 3855, "FY2009": 2593}
 PL_OCI_OLD = {  # FY2021-FY2024 presentation
     "FVOCI gains/(losses) arising during the year": {"FY2024": 248, "FY2023": -79, "FY2022": -2066, "FY2021": 1534},
     "Tax credit/(charge) relating to change in fair value": {"FY2024": -62, "FY2023": -9, "FY2022": 496, "FY2021": -281},
@@ -434,28 +562,136 @@ PL_OCI_NEW = {  # FY2025-FY2026 presentation
 PL_OCI_AFS = {
     "Net change in fair value on AFS/FVTOCI investments (gross)": {
         "FY2020": -794, "FY2019": 513, "FY2018": -1122, "FY2017": -679,
-        "FY2016": -1612, "FY2015": 5818, "FY2014": -6280},
+        "FY2016": -1612, "FY2015": 5818, "FY2014": -6280,
+        # HD-073: FY2013-FY2011's own Statement of Comprehensive Income splits this the same way;
+        # FY2010 discloses only a single combined "Fair value gains taken to equity" line (no gross/
+        # tax/reclass split that year - shown here in full, with tax/reclass left blank for FY2010);
+        # FY2009 has no separate Statement of Comprehensive Income at all (see PL_OCI_TOTAL note).
+        "FY2013": 524, "FY2012": -4688, "FY2011": -325, "FY2010": 157},
     "Tax (charge)/credit relating to fair value change": {
         "FY2020": 134, "FY2019": -66, "FY2018": 237, "FY2017": -77,
-        "FY2016": 322, "FY2015": -1222, "FY2014": 1444},
+        "FY2016": 322, "FY2015": -1222, "FY2014": 1444,
+        "FY2013": -126, "FY2012": 1219, "FY2011": 91},
     "Reclassification adjustment transferred to profit and loss": {
         "FY2020": 12, "FY2019": 102, "FY2018": -238, "FY2017": 332,
-        "FY2016": -71, "FY2015": 2161, "FY2014": -295},
+        "FY2016": -71, "FY2015": 2161, "FY2014": -295,
+        "FY2013": 3080, "FY2012": 350, "FY2011": -157},
 }
 PL_OCI_TOTAL = {"FY2026": -402, "FY2025": 396, "FY2024": 179, "FY2023": 307, "FY2022": -1361, "FY2021": 1324,
                 "FY2020": -648, "FY2019": 549, "FY2018": -1123, "FY2017": -424,
-                "FY2016": -1361, "FY2015": 6757, "FY2014": -5131}
+                "FY2016": -1361, "FY2015": 6757, "FY2014": -5131,
+                # HD-073: FY2009's own Financial Statements have no separate Statement of
+                # Comprehensive Income (a genuine structural absence in that year's own filing, not
+                # a missing document) - its Statement of Changes in Equity shows only a reclassification
+                # between equity reserves with zero net effect that year, so OCI is genuinely nil.
+                "FY2013": 3478, "FY2012": -3119, "FY2011": -391, "FY2010": 157, "FY2009": 0}
 PL_TOTAL_COMPREHENSIVE = {"FY2026": 2535, "FY2025": 1146, "FY2024": 6390, "FY2023": 8640, "FY2022": 6545, "FY2021": -8910,
                            "FY2020": 2078, "FY2019": 8867, "FY2018": 4770, "FY2017": -111752,
-                           "FY2016": -28586, "FY2015": 14878, "FY2014": 1859}
+                           "FY2016": -28586, "FY2015": 14878, "FY2014": 1859,
+                           "FY2013": 8852, "FY2012": 4394, "FY2011": 1011, "FY2010": 4012, "FY2009": 2593}
+
+# HD-089 (2026-09-07): granular Income Statement detail, FY2017-FY2026 only. Sourced from each year's
+# own Income Statement (native-text PDFs; see PL_DETAIL_SOURCES below for exact page numbers/URLs).
+# FY2009-FY2016 could not be added at this granularity: FY2014-FY2016's own Annual Reports and the
+# FY2009-FY2013 Companies House statutory filings are all scanned/TIFF image PDFs with no extractable
+# text layer (confirmed via pdftotext / pdfinfo - each is "Producer: libtiff / tiff2pdf"), and no OCR
+# pass was run for this ticket; those years keep only the single bottom-line "Profit after tax" row
+# already present. Every year below reconciles exactly to this file's existing PL_PROFIT bottom line
+# (Net interest income + other income = Total operating income; Total operating income - Total
+# operating expenses - Impairment provision = Profit before tax; Profit before tax + tax = Profit
+# after tax), cross-checked independently for all ten years.
+PL_INTEREST_INCOME = {"FY2026": 85823, "FY2025": 79660, "FY2024": 72874, "FY2023": 50548, "FY2022": 41351,
+                       "FY2021": 36654, "FY2020": 43216, "FY2019": 46348, "FY2018": 47445, "FY2017": 65554}
+PL_INTEREST_EXPENSE = {"FY2026": -45854, "FY2025": -37875, "FY2024": -28972, "FY2023": -13358, "FY2022": -9158,
+                        "FY2021": -10970, "FY2020": -12647, "FY2019": -13497, "FY2018": -17816, "FY2017": -31412}
+PL_NET_INTEREST_INCOME = {"FY2026": 39969, "FY2025": 41785, "FY2024": 43902, "FY2023": 37190, "FY2022": 32193,
+                           "FY2021": 25684, "FY2020": 30569, "FY2019": 32851, "FY2018": 29629, "FY2017": 34142}
+PL_NET_TRADING = {"FY2026": 313, "FY2025": -213, "FY2024": 635, "FY2023": 676, "FY2022": 13,
+                   "FY2021": -2386, "FY2020": 2569, "FY2019": -1108, "FY2018": -3544, "FY2017": -1240}
+# "Charge/income on interest rate derivatives" - a separate disclosed line only FY2017-FY2020; folded into
+# "Net trading profit/(loss)" by the Bank's own presentation from FY2021 onward.
+PL_IR_DERIVATIVES = {"FY2020": -85, "FY2019": -528, "FY2018": 357, "FY2017": 1508}
+PL_FEE_INCOME = {"FY2026": 774, "FY2025": 1432, "FY2024": 1229, "FY2023": 927, "FY2022": 882,
+                  "FY2021": 859, "FY2020": 842, "FY2019": 527, "FY2018": 692, "FY2017": 630}
+PL_OTHER_OPERATING_INCOME = {"FY2026": 4248, "FY2025": 685, "FY2024": 252, "FY2023": 257, "FY2022": 130,
+                              "FY2021": 127, "FY2020": 158, "FY2019": 161, "FY2018": 219, "FY2017": 227}
+PL_TOTAL_OPERATING_INCOME = {"FY2026": 45304, "FY2025": 43689, "FY2024": 46018, "FY2023": 39050, "FY2022": 33218,
+                              "FY2021": 24284, "FY2020": 34053, "FY2019": 31903, "FY2018": 27353, "FY2017": 35267}
+PL_STAFF_COSTS = {"FY2026": -20151, "FY2025": -16784, "FY2024": -13927, "FY2023": -12515, "FY2022": -13204,
+                   "FY2021": -12748, "FY2020": -9883, "FY2019": -9051, "FY2018": -8715, "FY2017": -6752}
+# "Interest on lease liabilities" (IFRS 16, first applied FY2020) replaces the pre-IFRS 16 "Operating
+# lease expenses" line (FY2018-FY2019); FY2017 predates any lease expense line being separately shown.
+PL_LEASE_INTEREST = {"FY2023": -140, "FY2022": -116, "FY2021": -135, "FY2020": -147}
+PL_OPERATING_LEASE_EXPENSE = {"FY2019": -914, "FY2018": -540}
+PL_DEPRECIATION = {"FY2026": -1211, "FY2025": -1022, "FY2024": -1216, "FY2023": -1347, "FY2022": -1468,
+                    "FY2021": -1372, "FY2020": -1396, "FY2019": -664, "FY2018": -717, "FY2017": -862}
+PL_ADMIN_EXPENSES = {"FY2026": -8358, "FY2025": -7151, "FY2024": -6873, "FY2023": -5961, "FY2022": -6140,
+                      "FY2021": -6258, "FY2020": -5609, "FY2019": -4847, "FY2018": -5452, "FY2017": -8101}
+PL_TOTAL_OPERATING_EXPENSES = {
+    y: PL_STAFF_COSTS.get(y, 0) + PL_LEASE_INTEREST.get(y, 0) + PL_OPERATING_LEASE_EXPENSE.get(y, 0)
+    + PL_DEPRECIATION.get(y, 0) + PL_ADMIN_EXPENSES.get(y, 0)
+    for y in PL_STAFF_COSTS
+}
+PL_IMPAIRMENT = {"FY2026": -12536, "FY2025": -17922, "FY2024": -17723, "FY2023": -10659, "FY2022": -4429,
+                  "FY2021": -13722, "FY2020": -15197, "FY2019": -6476, "FY2018": -5308, "FY2017": -152134}
+PL_PBT = {"FY2026": 3048, "FY2025": 810, "FY2024": 6279, "FY2023": 8428, "FY2022": 7861,
+          "FY2021": -9951, "FY2020": 1821, "FY2019": 9951, "FY2018": 6621, "FY2017": -133338}
+PL_TAX = {"FY2026": -111, "FY2025": -60, "FY2024": -68, "FY2023": -95, "FY2022": 45,
+          "FY2021": -283, "FY2020": 905, "FY2019": -1633, "FY2018": -728, "FY2017": 22010}
+
+PL_DETAIL_SOURCES = (
+    "HD-089 (2026-09-07) GRANULAR INCOME STATEMENT ADD, FY2017-FY2026, Punjab National Bank (International) "
+    "Limited entity-level Income Statement (native unit $'000), each year's own current-year column:\n"
+    "FY2026/FY2025: Annual Report and Accounts 2026, Income Statement, printed p.45 - " + AR_URL["FY2026"] + "\n"
+    "FY2024/FY2023: Annual Report and Accounts 2024, Income Statement, printed p.39 - " + AR_URL["FY2024"] + "\n"
+    "FY2023/FY2022: Annual Report and Accounts 2023, Income Statement, printed p.34 - " + AR_URL["FY2023"] + "\n"
+    "FY2022/FY2021: Annual Report and Accounts 2022, Income Statement, printed p.31 - " + AR_URL["FY2022"] + "\n"
+    "FY2021/FY2020: Annual Report and Accounts 2021, Income Statement, printed p.23 - " + AR_URL["FY2021"] + "\n"
+    "FY2020/FY2019: Annual Report and Accounts 2020, Income Statement, printed p.25 - " + AR_URL["FY2020"] + "\n"
+    "FY2019/FY2018: Annual Report and Accounts 2019, Income Statement, printed p.27 - " + AR_URL["FY2019"] + "\n"
+    "FY2018/FY2017: Annual Report and Accounts 2018, Income Statement, printed p.28 - " + AR_URL["FY2018"] + "\n\n"
+    "Each of the ten years above is independently cross-checked as its own current-year column AND (except "
+    "FY2026) as the following year's comparative column, both matching exactly. All ten years also reconcile "
+    "exactly to this file's existing PL_PROFIT bottom-line figures (Net interest income = Interest income + "
+    "Interest expense; Total operating income = Net interest income + Net trading profit/(loss) + [Charge/"
+    "income on interest rate derivatives, FY2017-FY2020 only] + Fee and commission income + Other operating "
+    "income; Profit before tax = Total operating income - Total operating expenses - Impairment provision; "
+    "Profit after tax = Profit before tax + tax charge/credit).\n\n"
+    "FY2009-FY2016 GAP NOTE: this granular breakdown could not be extended to FY2009-FY2016. FY2014-FY2016's "
+    "own Annual Reports and the FY2009-FY2013 Companies House statutory filings (company 05781326) are all "
+    "scanned/TIFF image PDFs with no extractable text layer (confirmed via pdftotext/pdfinfo - each shows "
+    "'Producer: libtiff / tiff2pdf'); no OCR pass was run for this ticket, so those seven years keep only the "
+    "single bottom-line 'Profit after tax for the year' row already present in this sheet, plus their existing "
+    "OCI detail."
+)
 
 income_statement_rows = (
-    [("SECTION", "Income", {}), ("TOTAL", "Profit after tax for the year", flow(PL_PROFIT))]
+    [("SECTION", "Income", {})]
+    + [("DATA", "Interest income", flow(PL_INTEREST_INCOME))]
+    + [("DATA", "Interest expense", flow(PL_INTEREST_EXPENSE))]
+    + [("TOTAL", "Net interest income", flow(PL_NET_INTEREST_INCOME))]
+    + [("DATA", "Net trading profit/(loss)", flow(PL_NET_TRADING))]
+    + [("DATA", "Charge/income on interest rate derivatives (FY2017-FY2020 only; folded into net trading "
+                "profit/(loss) from FY2021)", flow(PL_IR_DERIVATIVES))]
+    + [("DATA", "Fee and commission income", flow(PL_FEE_INCOME))]
+    + [("DATA", "Other operating income", flow(PL_OTHER_OPERATING_INCOME))]
+    + [("TOTAL", "Total operating income", flow(PL_TOTAL_OPERATING_INCOME))]
+    + [("SECTION", "Operating expenses", {})]
+    + [("DATA", "Staff costs", flow(PL_STAFF_COSTS))]
+    + [("DATA", "Interest on lease liabilities (IFRS 16, FY2020-FY2023)", flow(PL_LEASE_INTEREST))]
+    + [("DATA", "Operating lease expenses (pre-IFRS 16, FY2018-FY2019)", flow(PL_OPERATING_LEASE_EXPENSE))]
+    + [("DATA", "Depreciation and amortisation expenses", flow(PL_DEPRECIATION))]
+    + [("DATA", "General administrative expenses", flow(PL_ADMIN_EXPENSES))]
+    + [("TOTAL", "Total operating expenses", flow(PL_TOTAL_OPERATING_EXPENSES))]
+    + [("DATA", "Impairment provision", flow(PL_IMPAIRMENT))]
+    + [("TOTAL", "Profit/(loss) before tax", flow(PL_PBT))]
+    + [("DATA", "Tax (charge)/credit", flow(PL_TAX))]
+    + [("TOTAL", "Profit after tax for the year", flow(PL_PROFIT))]
     + [("SECTION", "Other comprehensive income - FY2022-FY2024 presentation", {})]
     + [("DATA", label, flow(values)) for label, values in PL_OCI_OLD.items()]
     + [("SECTION", "Other comprehensive income - FY2025-FY2026 presentation", {})]
     + [("DATA", label, flow(values)) for label, values in PL_OCI_NEW.items()]
-    + [("SECTION", "Other comprehensive income - FY2014-FY2020 presentation (IAS 39 available-for-sale)", {})]
+    + [("SECTION", "Other comprehensive income - FY2009-FY2020 presentation (IAS 39 available-for-sale)", {})]
     + [("DATA", label, flow(values)) for label, values in PL_OCI_AFS.items()]
     + [("TOTAL", "Other comprehensive income for the year, net of tax", flow(PL_OCI_TOTAL))]
     + [("TOTAL", "Total comprehensive income for the year, net of tax", flow(PL_TOTAL_COMPREHENSIVE))]
@@ -464,13 +700,18 @@ income_statement_rows = (
 bw.add_income_statement_sheet(
     title="Punjab National Bank (International) Limited — Profit & Loss",
     subtitle="Entity-level Statement of Comprehensive Income, £'000 converted from the Bank's native US$'000 "
-             "presentation. OCI's underlying line-item structure changed between FY2024 and FY2025, and again "
-             "predates IFRS 9 for FY2014-FY2020 - each era shown on its own contemporaneous basis; only Profit "
-             "after tax and the two Total rows are directly comparable across all 13 years.",
+             "presentation. Full Income Statement detail (interest income/expense, fee income, operating "
+             "income/expenses, impairment, profit before tax) is shown FY2017-FY2026 only - see the "
+             "FY2009-FY2016 GAP NOTE in this sheet's citation for why the earlier ten years keep only the "
+             "single bottom-line Profit after tax row. OCI's underlying line-item structure changed between "
+             "FY2024 and FY2025, and again predates IFRS 9 for FY2009-FY2020 - each era shown on its own "
+             "contemporaneous basis; only Profit after tax and the two OCI Total rows are directly comparable "
+             "across all 18 years. FY2009 has no OCI (no separate Statement of Comprehensive Income exists in "
+             "that year's own filing).",
     rows=income_statement_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=STATUTORY_SOURCES + "\n\n" + PL_DETAIL_SOURCES,
     first_col_width=92,
-    source_height=340,
+    source_height=420,
     unit_suffix=" (£'000, conv. from USD)",
 )
 
@@ -495,11 +736,51 @@ def eq_flow(share, fv, re_, total, year_for_rate):
 
 
 equity_rows = []
+# HD-073 (2026-09-06/07): FY2009-FY2013 prepended, oldest first, sourced from the Bank's own
+# Companies House statutory filings. Equity ladder confirmed exactly in native USD terms across all
+# five years by summing each year's own disclosed movements against its own disclosed opening/closing
+# balances - every closing TOTAL below ties exactly to that year's own Balance Sheet Total equity.
+# FY2009 (no separate Statement of Comprehensive Income exists in this year's own filing - see
+# PL_OCI_TOTAL's note; the reclassification below has zero net effect on Total equity, not OCI)
+equity_rows.append(("TOTAL", "Balance at 1 April 2008 (FY2009 opening)", eq_stock(49631, 30, 374, 50035, "FY2009")))
+equity_rows.append(("DATA", "Profit for the year", eq_flow(None, None, 2593, 2593, "FY2009")))
+equity_rows.append(("DATA", "Transferred to retained earnings on sale of available-for-sale investments", eq_flow(None, -30, 30, 0, "FY2009")))
+equity_rows.append(("DATA", "GBP translation adjustment (this workbook's conversion line)", (None, None, None, None)))
+equity_rows.append(("TOTAL", "Balance at 31 March 2009 (FY2009 closing)", eq_stock(49631, 0, 2997, 52628, "FY2009")))
+# FY2010
+equity_rows.append(("DATA", "Profit for the year", eq_flow(None, None, 3855, 3855, "FY2010")))
+equity_rows.append(("DATA", "Fair value gains taken to equity on AFS securities", eq_flow(None, 157, None, 157, "FY2010")))
+equity_rows.append(("DATA", "Issue of share capital", eq_flow(25000, None, None, 25000, "FY2010")))
+equity_rows.append(("DATA", "GBP translation adjustment (this workbook's conversion line)", (None, None, None, None)))
+equity_rows.append(("TOTAL", "Balance at 31 March 2010 (FY2010 closing)", eq_stock(74631, 157, 6852, 81640, "FY2010")))
+# FY2011
+equity_rows.append(("DATA", "Profit for the year", eq_flow(None, None, 1402, 1402, "FY2011")))
+equity_rows.append(("DATA", "Net change in fair value of AFS investments", eq_flow(None, -234, None, -234, "FY2011")))
+equity_rows.append(("DATA", "Net amount transferred to profit and loss", eq_flow(None, -157, None, -157, "FY2011")))
+equity_rows.append(("DATA", "Issue of Perpetual Notes (Upper Tier II capital)", eq_flow(25000, None, None, 25000, "FY2011")))
+equity_rows.append(("DATA", "GBP translation adjustment (this workbook's conversion line)", (None, None, None, None)))
+equity_rows.append(("TOTAL", "Balance at 31 March 2011 (FY2011 closing)", eq_stock(99631, -234, 8254, 107650, "FY2011")))
+# FY2012
+equity_rows.append(("DATA", "Profit for the year", eq_flow(None, None, 7513, 7513, "FY2012")))
+equity_rows.append(("DATA", "Net change in fair value of AFS investments", eq_flow(None, -3469, None, -3469, "FY2012")))
+equity_rows.append(("DATA", "Net amount transferred to profit and loss", eq_flow(None, 350, None, 350, "FY2012")))
+equity_rows.append(("DATA", "Issue of share capital", eq_flow(12500, None, None, 12500, "FY2012")))
+equity_rows.append(("DATA", "Dividend on subordinated debt", eq_flow(None, None, -1146, -1146, "FY2012")))
+equity_rows.append(("DATA", "GBP translation adjustment (this workbook's conversion line)", (None, None, None, None)))
+equity_rows.append(("TOTAL", "Balance at 31 March 2012 (FY2012 closing)", eq_stock(112131, -3353, 14621, 123399, "FY2012")))
+# FY2013
+equity_rows.append(("DATA", "Profit for the year", eq_flow(None, None, 5374, 5374, "FY2013")))
+equity_rows.append(("DATA", "Net change in fair value of AFS investments", eq_flow(None, 398, None, 398, "FY2013")))
+equity_rows.append(("DATA", "Net amount transferred to profit and loss", eq_flow(None, 3080, None, 3080, "FY2013")))
+equity_rows.append(("DATA", "Issue of share capital", eq_flow(12500, None, None, 12500, "FY2013")))
+equity_rows.append(("DATA", "Dividend to subordinated debt holders", eq_flow(None, None, -1168, -1168, "FY2013")))
+equity_rows.append(("DATA", "GBP translation adjustment (this workbook's conversion line)", (None, None, None, None)))
+
 # HD-048 (2026-09-05/06): FY2014-FY2020 prepended, oldest first. Equity ladder confirmed exactly in native
 # USD terms across all seven years by summing each year's own disclosed movements against its own disclosed
 # opening/closing balances (see the Session/Progress notes accompanying this build for the reconciliation).
 # FY2014
-equity_rows.append(("TOTAL", "Balance at 1 April 2013 (FY2014 opening)", eq_stock(124631, 125, 18827, 143583, "FY2013")))
+equity_rows.append(("TOTAL", "Balance at 31 March 2013 / 1 April 2013 (FY2013 closing / FY2014 opening)", eq_stock(124631, 125, 18827, 143583, "FY2013")))
 equity_rows.append(("DATA", "Profit for the year", eq_flow(None, None, 6990, 6990, "FY2014")))
 equity_rows.append(("DATA", "Net change in fair value of AFS investments", eq_flow(None, -4836, None, -4836, "FY2014")))
 equity_rows.append(("DATA", "Net amount transferred to profit and loss", eq_flow(None, -295, None, -295, "FY2014")))
@@ -637,7 +918,7 @@ for opening_idx, closing_idx in zip(_total_indices, _total_indices[1:]):
 bw.add_equity_changes_sheet(
     title="Punjab National Bank (International) Limited — Statement of Changes in Equity",
     subtitle="Chronological roll-forward, oldest to newest, entity-level, £'000 converted from the Bank's native "
-              "US$'000 presentation. Equity ladder confirmed exactly in native USD terms across all 13 years - the "
+              "US$'000 presentation. Equity ladder confirmed exactly in native USD terms across all 18 years - the "
               "bridging rows (FY2018's prior period adjustment, FY2019's IFRS 9 transition, and AR2025's own Note "
               "28/Note 35 restatement) are genuine, Bank-disclosed items, not errors. FY2021 is intentionally "
               "absent (see this file's YEARS comment), so the 1 April 2021 opening balance does not equal the "
@@ -646,7 +927,7 @@ bw.add_equity_changes_sheet(
               "conversion note.",
     headers=EQUITY_HEADERS,
     rows=equity_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=STATUTORY_SOURCES,
     first_col_width=100,
     source_height=280,
     col_width=17,
@@ -765,12 +1046,13 @@ bw.add_asset_quality_sheet(
     first_col_width=88,
     source_height=340,
     unit_suffix=" (£'000, conv. from USD)",
+    years=PILLAR3_YEARS,
 )
 
 
 def metric(name, unit, data, note=None):
     bw.add_metric_sheet(name, unit, data, p3_sources(), note=note,
-                        first_col_width=54, source_height=180)
+                        first_col_width=54, source_height=180, years=PILLAR3_YEARS)
 
 
 CAPITAL_NOTE = ("Directly disclosed in the annual Pillar 3 UK KM1 table (FY2018-FY2026) or its pre-KM1 'Capital "
@@ -878,6 +1160,7 @@ bw.add_rwa_breakdown_sheet(
     first_col_width=60,
     source_height=320,
     unit_suffix=" (£m, conv. from USD)",
+    years=PILLAR3_YEARS,
 )
 
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE)],
@@ -891,11 +1174,13 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)])
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
     per_note={"MREL Ratio": "No MREL ratio or MREL target is disclosed in any FY2014-FY2026 Pillar 3 report or annual report reviewed; left explicitly undisclosed."},
+    years=PILLAR3_YEARS,
 )
 
 EQ_OPENING_NATIVE = {"FY2026": 211161, "FY2025": 214651, "FY2024": 213328, "FY2023": 208266, "FY2022": 204088,
                       "FY2020": 216869, "FY2019": 211038, "FY2018": 191780, "FY2017": 178631,
-                      "FY2016": 208127, "FY2015": 194331, "FY2014": 143583}
+                      "FY2016": 208127, "FY2015": 194331, "FY2014": 143583,
+                      "FY2013": 123399, "FY2012": 107650, "FY2011": 81640, "FY2010": 52628, "FY2009": 50035}
 # HD-048: FY2014-FY2020's "other movements" also include share capital issuances (FY2014 $50,000k, FY2017
 # $125,000k, FY2018 $20,000k) and, for FY2016/FY2019, small deferred-tax items alongside the AT1 dividend -
 # this row absorbs whatever is needed to close Opening + Total comprehensive income + Other = Closing exactly
@@ -903,7 +1188,8 @@ EQ_OPENING_NATIVE = {"FY2026": 211161, "FY2025": 214651, "FY2024": 213328, "FY20
 # folded in here rather than broken out on this summary sheet).
 EQ_OTHER_MOVEMENTS_NATIVE = {"FY2026": -4321, "FY2025": -4636, "FY2024": -4834, "FY2023": -3578, "FY2022": -2367,
                               "FY2020": -3362, "FY2019": -3036, "FY2018": 17072, "FY2017": 124978,
-                              "FY2016": -910, "FY2015": -1082, "FY2014": 48889}
+                              "FY2016": -910, "FY2015": -1082, "FY2014": 48889,
+                              "FY2013": 11332, "FY2012": 11354, "FY2011": 25000, "FY2010": 25000, "FY2009": 0}
 
 bw.add_overview_sheet(
     balance_sheet_totals=[

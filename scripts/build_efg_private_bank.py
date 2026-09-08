@@ -123,6 +123,38 @@ BS_IS_EQ_SOURCES = (
     "FY2024's own comparative columns."
 )
 
+INVESTMENT_SECURITIES_NOTE = (
+    "\n\nINVESTMENT SECURITIES MEASUREMENT-BASIS SPLIT: each year's own accounts break the 'Investment "
+    "securities' balance down by IFRS 9 measurement category (debt securities at amortised cost vs debt "
+    "securities at FVOCI, fair value through other comprehensive income), which the 'Investment "
+    "securities at amortised cost'/'at FVOCI' rows above reproduce as a genuine sub-split - each year's "
+    "two legs reconcile exactly to that year's 'Total investment securities' figure:\n"
+    f"FY2024: Annual Report and Financial Statements 2024, Note 12 'Investment securities', p.41 - "
+    f"{AR2024_URL} (£1,799,311k amortised cost / £469,390k FVOCI; the note states the Company acquired "
+    "bonds within the 'Hold to Collect and Sell' business model during 2024 - its first such acquisition "
+    "since the November 2022 business-model reclassification described below).\n"
+    f"FY2023: Annual Report and Financial Statements 2023, Note 12 'Investment securities', p.40 - "
+    f"{AR2023_URL} (£2,066,635k amortised cost, £nil FVOCI - wholly held-to-collect that year, following "
+    "a business-model reclassification from 'Hold to Collect and Sell' to 'Hold to Collect' that the same "
+    "note states took effect 1 January 2023).\n"
+    f"FY2022: Annual Report and Financial Statements 2022, Note 12 'Financial assets at fair value "
+    f"through Other Comprehensive Income', p.33 - {AR2022_URL} (£nil amortised cost, £1,487,411k FVOCI - "
+    "wholly FVOCI; the 'Hold to Collect' reclassification above was not yet effective at this year end, "
+    "and this year's own accounts have no separate amortised-cost investment-securities note at all).\n"
+    "FY2021: as stated in the FY2022 Annual Report's own FY2021 comparative column, same note and page - "
+    f"{AR2022_URL} (£nil amortised cost, £852,764k FVOCI).\n"
+    "The same note also breaks the balance down a second way, by issuer type (Government vs Banks), for "
+    "every year (net carrying amounts - FY2024: £1,702,937k/£565,764k; FY2023: £1,647,410k/£419,225k; "
+    "FY2022: £1,005,478k/£481,933k; FY2021: £384,256k/£468,508k - each pair also reconciling exactly to "
+    "the same year's Total investment securities figure). This issuer-type split is NOT added as its own "
+    "set of rows on this sheet: the cross-bank curation that consumes this Balance Sheet sums ALL matching "
+    "sibling rows under a given total per bucket, and a second, independent 2-way split of the same total "
+    "would double-count against the measurement-basis split already added above (a row not naming "
+    "'Government' falls into that logic's 'other' bucket by default, which would then wrongly include the "
+    "amortised-cost/FVOCI rows a second time). The issuer-type figures are recorded here in the source "
+    "note instead, so they remain available without creating that double-counting sibling-row conflict."
+)
+
 # ---------------------------------------------------------------
 # Sheet: Balance Sheet
 # ---------------------------------------------------------------
@@ -137,8 +169,12 @@ bw.add_balance_sheet_sheet(
          {"FY2024": 55991, "FY2023": 87593, "FY2022": 95177, "FY2021": 124974}),
         ("DATA", "Derivative financial instruments",
          {"FY2024": 20591, "FY2023": 24974, "FY2022": 58670, "FY2021": 10099}),
-        ("DATA", "Investment securities",
+        ("TOTAL", "Total investment securities",
          {"FY2024": 2268701, "FY2023": 2066635, "FY2022": 1487411, "FY2021": 852764}),
+        ("DATA", "Investment securities at amortised cost",
+         {"FY2024": 1799311, "FY2023": 2066635}),
+        ("DATA", "Investment securities at FVOCI (fair value through other comprehensive income)",
+         {"FY2024": 469390, "FY2022": 1487411, "FY2021": 852764}),
         ("DATA", "Loans and advances to customers",
          {"FY2024": 3398294, "FY2023": 2907872, "FY2022": 2967101, "FY2021": 2764761}),
         ("DATA", "Investment in subsidiaries",
@@ -184,9 +220,9 @@ bw.add_balance_sheet_sheet(
         ("TOTAL", "Total liabilities and equity",
          {"FY2024": 6608716, "FY2023": 5856160, "FY2022": 5889606, "FY2021": 5054532}),
     ],
-    sources_text=BS_IS_EQ_SOURCES,
+    sources_text=BS_IS_EQ_SOURCES + INVESTMENT_SECURITIES_NOTE,
     first_col_width=64,
-    source_height=260,
+    source_height=420,
 )
 
 # ---------------------------------------------------------------
@@ -605,6 +641,7 @@ bw.add_rwa_breakdown_sheet(
     ),
     first_col_width=54,
     source_height=280,
+    unit_suffix=" (£m)",
 )
 
 metric(

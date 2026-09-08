@@ -135,7 +135,14 @@ STATEMENTS_SOURCES = (
     "income and other items that differ between the solo and consolidated bases.\n\n"
     "BASIS NOTE - Balance Sheet and Statement of Changes in Equity: both are shown on the NWB Plc entity-level column "
     "of each report's Group/Plc comparative tables, consistent with the Cash Flow Statement and Pillar 3 sheets. "
-    "NWB Plc's own Total equity carries no non-controlling interests (NCI only arises at NWB Group level)."
+    "NWB Plc's own Total equity carries no non-controlling interests (NCI only arises at NWB Group level).\n\n"
+    "BASIS NOTE - 'Other financial assets' measurement-basis breakdown (MFVTPL/FVTPL, FVOCI, amortised cost rows): "
+    "sourced from Note 9 'Financial instruments - classification' (NWB Plc column) in each year's own Annual Report - "
+    f"FY2025/FY2024: NWB Group Annual Report and Accounts 2025, Note 9, p.120 (NWB Plc column) - {AR2025_URL}\n"
+    f"FY2023/FY2022: NWB Group Annual Report and Accounts 2023, Note 9, p.125 (NWB Plc column) - {AR2023_URL}\n"
+    f"FY2021 (comparative column): NWB Group Annual Report and Accounts 2022, Note 9, p.127 (NWB Plc column) - {AR2022_URL}\n"
+    "These three rows are a note-level sub-split of the already-reported 'Other financial assets' TOTAL row above "
+    "(they sum exactly to it each year) - not additional assets, so no double-counting."
 )
 
 # ---------------------------------------------------------------
@@ -152,6 +159,15 @@ balance_sheet_rows = [
     ("DATA", "Amounts due from holding companies and fellow subsidiaries", {"FY2025": 38965, "FY2024": 36383, "FY2023": 33499, "FY2022": 32133, "FY2021": 27122, "FY2020": 28176, "FY2019": 31705, "FY2018": 30780}),
     ("DATA", "Securities subject to repurchase agreements", {"FY2025": 15004, "FY2024": 8984, "FY2023": 6469, "FY2022": 2140, "FY2021": 10813, "FY2020": 11438, "FY2019": 4175, "FY2018": 9890, "FY2017": 0, "FY2016": 0, "FY2015": 0, "FY2014": 0, "FY2013": 0, "FY2012": 0}),
     ("DATA", "Other financial assets excluding securities subject to repurchase agreements", {"FY2025": 37152, "FY2024": 29814, "FY2023": 24623, "FY2022": 12040, "FY2021": 17836, "FY2020": 26168, "FY2019": 36383, "FY2018": 30944, "FY2017": 1066, "FY2016": 120, "FY2015": 51, "FY2014": 829, "FY2013": 2592, "FY2012": 2616}),
+    # IN-INVEST-NOTE9 (2026-09-07): note-level measurement-basis breakdown of the "Other
+    # financial assets" TOTAL below, sourced from each Annual Report's own Note 9 "Financial
+    # instruments - classification" table (NWB Plc column). These three rows sum EXACTLY to
+    # the existing TOTAL row for every year shown (e.g. FY2025: 639+29,643+21,874=52,156) -
+    # they are a note-level sub-split of the same reported total, not additional assets, so
+    # the TOTAL row itself is intentionally left unchanged to avoid double-counting.
+    ("DATA", "Other financial assets - mandatorily at fair value through profit or loss (MFVTPL/FVTPL)", {"FY2025": 639, "FY2024": 534, "FY2023": 453, "FY2022": 417, "FY2021": 226}),
+    ("DATA", "Other financial assets - fair value through other comprehensive income (FVOCI)", {"FY2025": 29643, "FY2024": 28836, "FY2023": 23013, "FY2022": 9713, "FY2021": 26148}),
+    ("DATA", "Other financial assets - amortised cost", {"FY2025": 21874, "FY2024": 9428, "FY2023": 7626, "FY2022": 4050, "FY2021": 2275}),
     ("TOTAL", "Other financial assets", {"FY2025": 52156, "FY2024": 38798, "FY2023": 31092, "FY2022": 14180, "FY2021": 28649, "FY2020": 37606, "FY2019": 40558, "FY2018": 40834, "FY2017": 1066, "FY2016": 120, "FY2015": 51, "FY2014": 829, "FY2013": 2592, "FY2012": 2616}),
     ("DATA", "Investment in group undertakings", {"FY2025": 2477, "FY2024": 2520, "FY2023": 2615, "FY2022": 2030, "FY2021": 2319, "FY2020": 2374, "FY2019": 2394, "FY2018": 2466, "FY2017": 2546, "FY2016": 6931, "FY2015": 6554, "FY2014": 7866, "FY2013": 5412, "FY2012": 5083}),
     ("DATA", "Other assets", {"FY2025": 5652, "FY2024": 5503, "FY2023": 5735, "FY2022": 5641, "FY2021": 5183, "FY2020": 4967, "FY2019": 5271, "FY2018": 4993, "FY2017": 2598, "FY2016": 2840, "FY2015": 3250, "FY2014": 2642, "FY2013": 2712, "FY2012": 2896}),

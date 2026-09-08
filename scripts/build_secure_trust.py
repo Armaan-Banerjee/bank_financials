@@ -70,14 +70,20 @@ BS_SOURCES = (
     + " Group basis throughout (Company figures are near-identical but not substituted). FY2023's own report restated the FY2022 comparative for a land & buildings "
     "accounting policy change (historical cost, not revaluation); the FY2022 column above uses AR2022's own originally-published figures, not that restated "
     "comparative - see the Statement of Changes in Equity sheet for the resulting 0.5m reconciling break. FY2025's Balance Sheet reflects the Consumer Finance "
-    "business (Vehicle Finance) being reclassified to \"Assets held for sale\" - not present as a separate held-for-sale line in earlier years."
+    "business (Vehicle Finance) being reclassified to \"Assets held for sale\" - not present as a separate held-for-sale line in earlier years. "
+    "Debt securities' composition comes from each year's own Note 14 'Debt securities': FY2025 (p.211, note 14) states the balance \"consisted "
+    "solely of sterling UK Government securities ('gilts')\", held at amortised cost with intent to hold to collect; FY2021 (p.169, note 14), "
+    "FY2018 (p.115, note 14) and FY2020's report (p.169, note 13, giving the FY2019 comparative) each state the balance \"consist(s) solely of "
+    "sterling UK Government Treasury Bills ('T-Bills')\", also held to collect at amortised cost. Every disclosed year is thus 100% UK Government "
+    "paper at amortised cost, with no FVOCI/FVTPL leg (\"The Group currently has no financial instruments classified as FVOCI\" per each year's "
+    "own Note 1/2 accounting policy) - not a genuine two-way split, so no separate 'other'/mark-to-market row is added alongside it."
 )
 
 BS_ROWS = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and Bank of England reserve account", {"FY2025": 528.1, "FY2024": 445.0, "FY2023": 351.6, "FY2022": 370.1, "FY2021": 235.7, "FY2020": 181.5, "FY2019": 105.8, "FY2018": 169.7, "FY2017": 226.1}),
     ("DATA", "Loans and advances to banks", {"FY2025": 36.8, "FY2024": 24.0, "FY2023": 53.7, "FY2022": 50.5, "FY2021": 50.3, "FY2020": 63.3, "FY2019": 48.4, "FY2018": 44.8, "FY2017": 34.3}),
-    ("DATA", "Debt securities", {"FY2025": 1.0, "FY2021": 25.0, "FY2020": 0.0, "FY2019": 25.0, "FY2018": 149.7, "FY2017": 5.0}),
+    ("DATA", "Debt securities - UK Government Treasury Bills/gilts (amortised cost)", {"FY2025": 1.0, "FY2021": 25.0, "FY2020": 0.0, "FY2019": 25.0, "FY2018": 149.7, "FY2017": 5.0}),
     ("DATA", "Loans and advances to customers", {"FY2025": 3295.8, "FY2024": 3608.5, "FY2023": 3315.3, "FY2022": 2919.5, "FY2021": 2530.6, "FY2020": 2358.9, "FY2019": 2450.1, "FY2018": 2028.9, "FY2017": 1598.3}),
     ("DATA", "Fair value adjustment for portfolio hedged risk", {"FY2025": 7.3, "FY2024": -6.8, "FY2023": -3.9, "FY2022": -32.0, "FY2021": -3.5, "FY2020": 5.7, "FY2019": -0.9, "FY2018": 0.0, "FY2017": 0.0}),
     ("DATA", "Derivative financial instruments", {"FY2025": 0.2, "FY2024": 14.3, "FY2023": 25.5, "FY2022": 34.9, "FY2021": 3.8, "FY2020": 4.8, "FY2019": 0.9, "FY2018": 0.0, "FY2017": 0.0}),
@@ -114,7 +120,7 @@ BS_ROWS = [
 bw.add_balance_sheet_sheet(
     "Secure Trust Bank PLC - Group Balance Sheet",
     "Consolidated Group basis, £million; each year uses that year's own originally-published figures, not later restated comparatives.",
-    BS_ROWS, BS_SOURCES, first_col_width=62, source_height=260, unit_suffix=" (£m)",
+    BS_ROWS, BS_SOURCES, first_col_width=62, source_height=340, unit_suffix=" (£m)",
 )
 
 IS_SOURCES = (
@@ -148,7 +154,7 @@ IS_ROWS = [
     ("DATA", "Fair value gains/(losses) on financial instruments", {"FY2025": 0.1, "FY2024": 1.2, "FY2023": 0.5, "FY2022": -0.3, "FY2021": -0.1}),
     ("DATA", "Loss on disposal of loan books", {"FY2021": -1.4}),
     ("DATA", "Losses from derivatives and hedge accounting", {"FY2021": -0.1}),
-    ("DATA", "Operating expenses", {"FY2025": -74.7, "FY2024": -103.8, "FY2023": -99.7, "FY2022": -93.2, "FY2021": -104.0, "FY2020": -91.6, "FY2019": -94.2, "FY2018": -84.5, "FY2017": -71.6}),
+    ("TOTAL", "Operating expenses", {"FY2025": -74.7, "FY2024": -103.8, "FY2023": -99.7, "FY2022": -93.2, "FY2021": -104.0, "FY2020": -91.6, "FY2019": -94.2, "FY2018": -84.5, "FY2017": -71.6}),
     ("TOTAL", "Profit before income tax from continuing operations before exceptional items", {"FY2025": 59.3, "FY2024": 39.1, "FY2023": 42.6, "FY2022": 39.0, "FY2021": 56.0, "FY2020": 20.1, "FY2019": 38.7, "FY2018": 34.7, "FY2017": 29.3}),
     ("DATA", "Exceptional items", {"FY2025": 0.0, "FY2024": -9.9, "FY2023": -6.5}),
     ("TOTAL", "Profit before income tax from continuing operations", {"FY2025": 59.3, "FY2024": 29.2, "FY2023": 36.1, "FY2022": 39.0, "FY2021": 56.0, "FY2020": 20.1, "FY2019": 38.7, "FY2018": 34.7, "FY2017": 29.3}),

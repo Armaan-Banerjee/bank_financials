@@ -169,6 +169,18 @@ BALANCE_SHEET_SOURCES = (
     "Statement of financial position and the Statement of Changes in Equity's closing balance in some years "
     "(e.g. FY2021: £987.1m here vs £987.2m per the FY2021 accounts' own Statement of Changes in Equity) — "
     "both are presented exactly as disclosed in their respective source tables, not reconciled.\n\n"
+    "Debt securities breakdown (measurement basis + issuer type), added as sub-rows directly beneath the "
+    "'Debt securities' line, sourced from the 'Debt securities' note of each year's own full statutory "
+    "accounts (same Companies House filings/pages as above): FY2025/FY2024 — Note 12, p.79 of the FY2025 "
+    f"filing ({CH_2025_URL}); FY2023/FY2022 — Note 11, p.78 of the FY2023 filing ({CH_2023_URL}); "
+    f"FY2021/FY2020 — Note 16, p.86 of the FY2021 filing ({CH_2021_URL}). FY2020's 'UK Government gilts / "
+    "treasury bills' sub-row (£235.0m) combines that year's own 'UK Government gilts and treasury bills' "
+    "line (£188.9m) with a separate 'Treasury Bills' line (£46.1m) disclosed only as a FY2020 comparative in "
+    "the FY2021 accounts. Sub-row sums reconcile to the 'Debt securities' total in every sourced year except "
+    "FY2023 (£2,048.8m per the note vs £2,048.9m on the face of the Statement of financial position) and "
+    "FY2022 (£2,339.3m vs £2,339.2m) — both are pre-existing £0.1m rounding artefacts in the Bank's own "
+    "disclosures, not reconciled here. No equivalent note-level breakdown was sourced for FY2019 and earlier "
+    "within this pass's scope (FY2020-FY2025 prioritised).\n\n"
     "HD-073 extension (FY2009-FY2013): sourced from the Bank's own full statutory accounts filed at Companies "
     "House, scanned/OCR'd (no text layer in the filed PDFs), prepared under old UK GAAP (not IFRS) as these "
     "pre-date the Bank's IFRS transition:\n"
@@ -196,7 +208,13 @@ balance_sheet_rows = [
     ("DATA", "Cash and balances at central banks", {"FY2025": 1182.3, "FY2024": 2172.2, "FY2023": 1923.4, "FY2022": 838.3, "FY2021": 688.5, "FY2020": 542.4, "FY2019": 482.9, "FY2018": 508.8, "FY2016": 116.4, "FY2015": 105.3, "FY2014": 79.6, "FY2013": 192.8, "FY2012": 1.7, "FY2011": 0.1}),
     ("DATA", "Loans and advances to banks", {"FY2025": 183.6, "FY2024": 170.1, "FY2023": 206.5, "FY2022": 132.8, "FY2021": 106.4, "FY2020": 177.5, "FY2019": 110.6, "FY2018": 80.4, "FY2016": 43.4, "FY2015": 64.0, "FY2014": 86.8, "FY2013": 223.9, "FY2012": 83.1, "FY2011": 123.1, "FY2010": 219.3, "FY2009": 83.5}),
     ("DATA", "Amounts owed by / receivable from other Group undertakings", {"FY2025": 3779.6, "FY2024": 3720.5, "FY2023": 3525.1, "FY2022": 3072.5, "FY2021": 2303.8, "FY2020": 1615.2, "FY2019": 390.7, "FY2018": 20.7, "FY2016": 1.5, "FY2015": 0.9, "FY2014": 1.6}),
-    ("DATA", "Debt securities", {"FY2025": 2704.2, "FY2024": 2436.5, "FY2023": 2048.9, "FY2022": 2339.2, "FY2021": 1999.5, "FY2020": 1941.1, "FY2019": 1207.8, "FY2018": 829.9, "FY2016": 699.8, "FY2015": 640.1, "FY2014": 542.3, "FY2013": 339.4, "FY2012": 312.2, "FY2011": 228.0, "FY2010": 35.8, "FY2009": 37.4}),
+    ("DATA", "Total debt securities", {"FY2025": 2704.2, "FY2024": 2436.5, "FY2023": 2048.9, "FY2022": 2339.2, "FY2021": 1999.5, "FY2020": 1941.1, "FY2019": 1207.8, "FY2018": 829.9, "FY2016": 699.8, "FY2015": 640.1, "FY2014": 542.3, "FY2013": 339.4, "FY2012": 312.2, "FY2011": 228.0, "FY2010": 35.8, "FY2009": 37.4}),
+    ("DATA", "Debt securities: FVOCI (fair value through other comprehensive income) — UK Government gilts / treasury bills", {"FY2025": 259.1, "FY2024": 187.2, "FY2023": 113.6, "FY2022": 156.8, "FY2021": 133.3, "FY2020": 235.0}),
+    ("DATA", "Debt securities: FVOCI (fair value through other comprehensive income) — Supranational bonds", {"FY2025": 1188.8, "FY2024": 871.7, "FY2023": 742.0, "FY2022": 963.9, "FY2021": 1061.2, "FY2020": 990.7}),
+    ("DATA", "Debt securities: FVOCI (fair value through other comprehensive income) — Asset-backed securities (other investment securities)", {"FY2025": 255.2, "FY2024": 200.7, "FY2023": 112.8, "FY2022": 146.0, "FY2021": 115.4, "FY2020": 114.4}),
+    ("DATA", "Debt securities: FVOCI (fair value through other comprehensive income) — Covered bonds (other investment securities)", {"FY2025": 672.0, "FY2024": 802.0, "FY2023": 553.1, "FY2022": 681.2, "FY2021": 495.9, "FY2020": 529.7}),
+    ("DATA", "Debt securities: amortised cost — UK Government gilts", {"FY2025": 256.8, "FY2024": 176.8, "FY2023": 270.8, "FY2022": 150.3, "FY2021": 107.3, "FY2020": 48.4}),
+    ("DATA", "Debt securities: amortised cost — Supranational bonds (other investment securities)", {"FY2025": 72.3, "FY2024": 198.1, "FY2023": 256.5, "FY2022": 241.1, "FY2021": 86.4, "FY2020": 22.9}),
     ("DATA", "Derivatives held for risk management", {"FY2025": 170.1, "FY2024": 344.2, "FY2023": 666.3, "FY2022": 259.9, "FY2021": 18.9, "FY2020": 9.1, "FY2019": 9.1, "FY2018": 24.0, "FY2016": 17.5, "FY2015": 17.5, "FY2014": 25.6}),
     ("DATA", "Loans and advances to customers", {"FY2025": 12523.4, "FY2024": 11416.3, "FY2023": 10998.9, "FY2022": 10777.3, "FY2021": 10393.6, "FY2020": 10602.2, "FY2019": 10230.3, "FY2018": 8990.5, "FY2016": 7477.3, "FY2015": 6144.8, "FY2014": 4801.1, "FY2013": 3370.8, "FY2012": 2059.6, "FY2011": 1160.4, "FY2010": 475.0, "FY2009": 160.6}),
     ("DATA", "Fair value adjustment for portfolio hedged risk", {"FY2025": 18.8, "FY2024": -129.0, "FY2023": -400.1, "FY2022": -180.2, "FY2021": 15.2, "FY2020": 55.8, "FY2019": 17.9, "FY2018": -15.7, "FY2016": -3.5, "FY2015": 1.1}),

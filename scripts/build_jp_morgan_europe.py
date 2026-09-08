@@ -402,6 +402,7 @@ bw.add_rwa_breakdown_sheet(
     ),
     first_col_width=78,
     source_height=340,
+    unit_suffix=" (£m)",
 )
 
 metric("Leverage Ratio", "%", "Leverage ratio", LEVERAGE, GAP_NOTE)

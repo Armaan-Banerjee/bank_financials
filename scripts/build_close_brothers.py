@@ -93,6 +93,25 @@ STATEMENTS_SOURCES = (
 )
 
 
+BALANCE_SHEET_SOURCES = (
+    STATEMENTS_SOURCES + "\n\n"
+    "DEBT SECURITIES BREAKDOWN: the 'Debt securities - ...' sub-rows below the headline 'Debt securities' "
+    "line are transcribed from Note 11 'Debt securities' of each year's own Notes to the Consolidated "
+    "Accounts, which splits the balance both by measurement basis (fair value through profit or loss / "
+    "fair value through other comprehensive income / amortised cost) and by instrument type (sovereign and "
+    "central bank debt, supranational/sub-sovereign/agency ('SSA') bonds, covered bonds, certificates of "
+    "deposit, other debt securities):\n"
+    "FY2025: Note 11, p.126 - " + AR2025_URL + "\n"
+    "FY2024: same FY2025 filing's own FY2024 comparative column, Note 11, p.126\n"
+    "FY2023: Note 11, p.94 - " + AR2023_URL + "\n"
+    "FY2022: same FY2023 filing's own FY2022 comparative column, Note 11, p.95\n"
+    "FY2021: Note 11, p.76 - " + AR2021_URL + "\n\n"
+    "Each year's sub-rows sum exactly to that year's headline 'Debt securities' line. Certificates of "
+    "deposit and Supranational/sub-sovereign/agency (SSA) bonds are not disclosed as separate lines in "
+    "every year (e.g. no SSA bonds line FY2021-FY2023, no Certificates of deposit FY2024-FY2025) - blank "
+    "cells reflect the note's own year-by-year composition, not a gap."
+)
+
 bw.add_balance_sheet_sheet(
     title="Close Brothers Limited — Consolidated Balance Sheet",
     subtitle="Consolidated Statement of Financial Position, £m. Consolidated basis (Close Brothers Limited + subsidiaries). See source note at bottom.",
@@ -104,8 +123,20 @@ bw.add_balance_sheet_sheet(
          {"FY2025": 156.9, "FY2024": 177.3, "FY2023": 261.5, "FY2022": 85.6, "FY2021": 66.8}),
         ("DATA", "Loans and advances to customers",
          {"FY2025": 9459.4, "FY2024": 9830.8, "FY2023": 9255.0, "FY2022": 8858.9, "FY2021": 8444.5}),
-        ("DATA", "Debt securities",
+        ("DATA", "Total debt securities",
          {"FY2025": 859.2, "FY2024": 724.5, "FY2023": 292.4, "FY2022": 600.4, "FY2021": 457.2}),
+        ("DATA", "Debt securities - Sovereign and central bank debt (sovereign debt, FVOCI)",
+         {"FY2025": 601.6, "FY2024": 383.7, "FY2023": 186.1, "FY2022": 415.4, "FY2021": 192.5}),
+        ("DATA", "Debt securities - Supranational, sub-sovereign and agency (SSA) bonds (FVOCI)",
+         {"FY2025": 146.2, "FY2024": 145.5}),
+        ("DATA", "Debt securities - Covered bonds (FVOCI)",
+         {"FY2025": 105.6, "FY2024": 187.7, "FY2023": 106.3}),
+        ("DATA", "Debt securities - Certificates of deposit (amortised cost)",
+         {"FY2022": 185.0, "FY2021": 264.7}),
+        ("DATA", "Debt securities - Other debt securities at fair value through profit or loss (FVTPL)",
+         {"FY2025": 1.1, "FY2024": 0.8}),
+        ("DATA", "Debt securities - Other debt securities at amortised cost",
+         {"FY2025": 4.7, "FY2024": 6.8}),
         ("DATA", "Derivative financial instruments",
          {"FY2025": 103.0, "FY2024": 101.2, "FY2023": 88.5, "FY2022": 71.1, "FY2021": 18.3}),
         ("DATA", "Intangible assets",
@@ -159,9 +190,9 @@ bw.add_balance_sheet_sheet(
         ("TOTAL", "Total liabilities and equity",
          {"FY2025": 13132.8, "FY2024": 13053.2, "FY2023": 12488.1, "FY2022": 11508.3, "FY2021": 10950.9}),
     ],
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=68,
-    source_height=340,
+    source_height=400,
     unit_suffix=" (£m)",
 )
 

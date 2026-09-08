@@ -170,6 +170,24 @@ STATEMENTS_SOURCES = (
     "report's comparative figure exactly). The equity statement page in the same FY2024 report similarly corrupts "
     "one FY2024 'Total comprehensive income' cell (prints -8,605 instead of -8,685) - the FY2025 report's own "
     "FY2023-25 equity table and the P&L's own OCI total agree exactly on -8,685, so -8,685 is used here.\n\n"
+    "INVESTMENT IN DEBT SECURITIES BREAKDOWN NOTE (added 2026-09-07): 'Investment in debt securities' is split into "
+    "'UK government treasury bills, measured at FVOCI' and 'Other debt securities (ABS loan notes / fixed rate bonds "
+    "/ covered bonds / senior loan notes), at amortised cost', sourced from each year's own Note 14/15/16 "
+    "('Investment in debt securities'), which reconciles exactly to the original total in every year it is "
+    "disclosed:\n"
+    f"FY2025/FY2024: Annual Report 2025, p.71 (Note 14) - {AR25_URL}. FY2025: FVOCI Treasury Bills £202,151k; "
+    "amortised cost £1,119,515k (ABS £525,248k + Fixed rate bonds £384,031k + Covered bonds £39,059k + Senior loan "
+    "notes £171,177k). FY2024: no Treasury Bills held (FVOCI leg £nil); amortised cost £537,291k (ABS £435,075k + "
+    "Fixed rate bonds £102,216k).\n"
+    f"FY2023: Annual Report 2024, p.40 (Note 15, FY2023 comparative column) - {AR24_URL}. FVOCI Treasury Bills "
+    "£4,825k; amortised cost £124,770k (ABS loan notes only).\n"
+    f"FY2022: Annual Report 2022, p.39 (Note 16) - {AR22_URL}. The entire £4,883k balance is Treasury Bills measured "
+    "at FVOCI ('all instruments are investments in UK sovereign treasury bills') - no amortised-cost leg that year.\n"
+    "FY2020/FY2019: no note breaks down this line at all in either year's own Annual Report - the Statement of "
+    "Financial Position shows 'Investment in debt securities' with no note-reference number next to it (unlike "
+    "every other line, which cross-references a numbered note), confirmed by reading both years' full note set "
+    "(pages 23-39 of the FY2020 AR, pages 18-32 of the FY2019 AR) - genuinely no further detail available for "
+    "these two years.\n\n"
     "PRESENTATION NOTE: 'Cash and cash equivalents' (FY2023-25) and 'Loans and advances to banks' (FY2021-22) are "
     "the same balance-sheet line under two labels - shown on one row. 'Capital redemption reserve' (FY2023-25) and "
     "'Capital contribution' (FY2022, first appearing that year as a debt waiver from the ultimate controlling "
@@ -189,7 +207,9 @@ balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash equivalents / Loans and advances to banks", {"FY2025": 387550, "FY2024": 586134, "FY2023": 688362, "FY2022": 74498, "FY2021": 52173, "FY2020": 88480, "FY2019": 27607}),
     ("DATA", "Derivative financial assets", {"FY2025": 49410, "FY2024": 58475, "FY2023": 4565, "FY2022": 138, "FY2021": 19, "FY2020": 4}),
-    ("DATA", "Investment in debt securities", {"FY2025": 1321666, "FY2024": 537291, "FY2023": 129595, "FY2022": 4883, "FY2020": 30170, "FY2019": 1994}),
+    ("DATA", "UK government treasury bills, measured at FVOCI", {"FY2025": 202151, "FY2024": 0, "FY2023": 4825, "FY2022": 4883}),
+    ("DATA", "Other debt securities (ABS loan notes / fixed rate bonds / covered bonds / senior loan notes), at amortised cost", {"FY2025": 1119515, "FY2024": 537291, "FY2023": 124770, "FY2022": 0}),
+    ("TOTAL", "Investment in debt securities - total", {"FY2025": 1321666, "FY2024": 537291, "FY2023": 129595, "FY2022": 4883, "FY2020": 30170, "FY2019": 1994}),
     ("DATA", "Loans and advances to customers", {"FY2025": 2691247, "FY2024": 1833411, "FY2023": 649179, "FY2022": 302546, "FY2021": 156249, "FY2020": 145022, "FY2019": 46269}),
     ("DATA", "Fair value adjustments on hedged assets", {"FY2025": 5615, "FY2024": 12926, "FY2023": -1069}),
     ("DATA", "Other assets", {"FY2025": 63998, "FY2024": 43910, "FY2023": 18897, "FY2022": 8620, "FY2021": 3486, "FY2020": 605, "FY2019": 448}),

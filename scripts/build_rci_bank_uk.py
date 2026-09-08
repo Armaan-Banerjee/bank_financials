@@ -136,6 +136,13 @@ BS_SOURCES = (
     f"FY2019: Annual Report and Financial Statements for year ended 31 December 2019, printed p.31 (PDF p.31, no "
     f"cover-page offset in this filing), Consolidated and Company Balance Sheets, Group column - {AR19_URL}\n\n"
     + ENTITY_NOTE + "\n\n"
+    "INVESTMENT SECURITIES NOTE: the Group's Investment securities balance is 100% UK Treasury Bills held at "
+    "fair value through OCI (no amortised-cost leg at Group level - that leg in Note 15b/14b is Company-only, "
+    "relating to Notes issued through Cars Alliance Master UK plc) in every disclosed year - Note 15/15a "
+    "'Investment securities'/'Financial assets at FVOCI' (FY2024 Annual Report, PDF p.83), Note 14/'Investment "
+    f"Securities held by the Company...include GBP157.9m of Treasury Bills' (FY2022 Annual Report - {AR22_URL}), "
+    "and Note 'Investment Securities - UK Treasury bills'/'Financial Assets at FVOCI' (FY2020 Annual Report, "
+    f"printed p.15 of the notes - {AR20_URL}).\n\n"
     "PRESENTATION NOTE: Deferred tax asset, Investment in associate and Intangible assets are only disclosed as "
     "separate Group balance sheet lines from FY2023 (associate) / FY2025-vintage FY2024 report (intangibles) "
     "onward; earlier years genuinely did not carry these balances as separate lines and are left blank, not "
@@ -152,7 +159,7 @@ BS_ROWS = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and cash at central banks", {"FY2024": 959888, "FY2023": 1048510, "FY2022": 1201094, "FY2021": 737871, "FY2020": 1088501, "FY2019": 120556}),
     ("DATA", "Derivative financial instruments", {"FY2024": 11829, "FY2023": 37622, "FY2022": 55475, "FY2021": 10254, "FY2020": 1388, "FY2019": 35}),
-    ("DATA", "Investment securities", {"FY2024": 123749, "FY2023": 105575, "FY2022": 157926, "FY2021": 419939, "FY2020": 0, "FY2019": 548818}),
+    ("DATA", "Investment securities - UK Treasury Bills at FVOCI", {"FY2024": 123749, "FY2023": 105575, "FY2022": 157926, "FY2021": 419939, "FY2020": 0, "FY2019": 548818}),
     ("DATA", "Inventory", {"FY2024": 46891, "FY2023": 18260, "FY2022": 9792, "FY2021": 3295, "FY2020": 15729, "FY2019": 30264}),
     ("DATA", "Loans and advances to customers", {"FY2024": 5170678, "FY2023": 4925312, "FY2022": 4290231, "FY2021": 3414627, "FY2020": 3487236, "FY2019": 3916076}),
     ("DATA", "Property, plant and equipment", {"FY2024": 679541, "FY2023": 575015, "FY2022": 419670, "FY2021": 266068, "FY2020": 206448, "FY2019": 157891}),

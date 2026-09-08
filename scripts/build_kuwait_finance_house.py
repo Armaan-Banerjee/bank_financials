@@ -93,6 +93,31 @@ BASIS_NOTE = (
     "line-by-line but both are genuine, source-disclosed figures, not derived or estimated."
 )
 
+INVESTMENTS_BREAKDOWN_NOTE = (
+    "FINANCIAL INVESTMENTS BREAKDOWN: the 'Financial investments - ...' sub-rows below the headline "
+    "'Total financial investments' line are transcribed from Note 14 'Financial investments' (Note "
+    "14(a) 'Financial Investments by category' and Note 14(b) ECL impairment summary) of each year's "
+    "own Notes to the Financial Statements, which splits the balance both by measurement basis "
+    "(amortised cost / fair value through profit or loss (FVTPL) / fair value through other "
+    "comprehensive income (FVOCI)) and, within the amortised-cost bucket, by issuer type (GCC "
+    "government bonds/Sukuk and similar instruments; issued by banks and other financial "
+    "institutions; issued by corporate bodies):\n"
+    f"FY2025/FY2024 (own): Annual Report and Financial Statements 2025, Note 14, p.52 - {AR2025_URL}\n"
+    f"FY2023 (own) / FY2022 (comparative): Annual Report and Financial Statements 2023, Note 14, "
+    f"p.48 - {AR2023_URL}\n"
+    f"FY2022 (own) / FY2021 (comparative): Annual Report and Financial Statements 2022, Note 14, "
+    f"p.47 - {AR2022_URL}\n"
+    f"FY2021 (own): Annual Report and Financial Statements 2021, Note 14, p.38 - {AR2021_URL}\n\n"
+    "The three amortised-cost issuer-type sub-rows are gross carrying amounts (Note 14(a)'s own "
+    "'Quoted investments' lines); the 'ECL impairment provision' sub-row is that same note's single "
+    "aggregate impairment allowance (Note 14(b), not broken down by issuer), so the four amortised-"
+    "cost sub-rows plus the FVTPL and FVOCI sub-rows sum exactly to that year's headline 'Total "
+    "financial investments' line every year. GCC government bonds and debt securities are labelled "
+    "'GCC government Sukuk and similar instruments' from FY2024 onward, reflecting the FY2024 "
+    "Shariah conversion (see ENTITY_NOTE) - the same amortised-cost sovereign-debt line, kept under "
+    "each year's own originally-printed wording rather than forced into a single common label."
+)
+
 STATEMENTS_SOURCES = (
     "Sources - all figures are Kuwait Finance House Plc's (formerly Ahli United Bank (UK) PLC's) own "
     "Annual Report and Financial Statements, from Companies House filings:\n"
@@ -111,6 +136,8 @@ STATEMENTS_SOURCES = (
     + ENTITY_NOTE + "\n\n" + BASIS_NOTE
 )
 
+BALANCE_SHEET_SOURCES = STATEMENTS_SOURCES + "\n\n" + INVESTMENTS_BREAKDOWN_NOTE
+
 # ---------------------------------------------------------------
 # Sheet: Balance Sheet (Bank/solo basis)
 # ---------------------------------------------------------------
@@ -122,8 +149,20 @@ bs_rows = [
      {"FY2025": 242489, "FY2024": 275127, "FY2023": 365605, "FY2022": 245974, "FY2021": 221740}),
     ("DATA", "Financing receivables / Loans and advances",
      {"FY2025": 1524604, "FY2024": 1512591, "FY2023": 1536066, "FY2022": 1454873, "FY2021": 1602103}),
-    ("DATA", "Financial investments",
+    ("DATA", "Total financial investments",
      {"FY2025": 419996, "FY2024": 397718, "FY2023": 658778, "FY2022": 582585, "FY2021": 412144}),
+    ("DATA", "Financial investments - GCC government bonds/Sukuk (sovereign debt, amortised cost)",
+     {"FY2025": 99438, "FY2024": 67285, "FY2023": 164797, "FY2022": 222762, "FY2021": 194626}),
+    ("DATA", "Financial investments - Issued by banks and other financial institutions (amortised cost)",
+     {"FY2025": 141838, "FY2024": 139475, "FY2023": 248594, "FY2022": 147794, "FY2021": 145262}),
+    ("DATA", "Financial investments - Issued by corporate bodies (amortised cost)",
+     {"FY2025": 138332, "FY2024": 146784, "FY2023": 196476, "FY2022": 164546, "FY2021": 17308}),
+    ("DATA", "Financial investments - ECL impairment provision on amortised-cost investments (amortised cost)",
+     {"FY2025": -129, "FY2024": -100, "FY2023": -747, "FY2022": -709, "FY2021": -358}),
+    ("DATA", "Financial investments - Investments not directly quoted (FVTPL)",
+     {"FY2025": 143, "FY2024": 215, "FY2023": 516, "FY2022": 420, "FY2021": 928}),
+    ("DATA", "Financial investments - Private equity investments at net asset value (FVOCI)",
+     {"FY2025": 40374, "FY2024": 44059, "FY2023": 49142, "FY2022": 47772, "FY2021": 54378}),
     ("DATA", "Derivative financial instruments",
      {"FY2025": 6952, "FY2024": 41151, "FY2023": 34717, "FY2022": 56979, "FY2021": 18040}),
     ("DATA", "Investment in joint venture", {"FY2023": 64, "FY2022": 60, "FY2021": 69}),
@@ -174,9 +213,9 @@ bw.add_balance_sheet_sheet(
     title="Kuwait Finance House Plc — Bank Balance Sheet",
     subtitle="Bank/solo basis, US$'000. Formerly Ahli United Bank (UK) PLC. See source note at bottom.",
     rows=bs_rows,
-    sources_text=STATEMENTS_SOURCES,
+    sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=95,
-    source_height=420,
+    source_height=520,
     unit_suffix=" (US$'000)",
 )
 
