@@ -26,7 +26,9 @@ P3_2023_URL = "https://cms.griffin.com/griffin-assets/Griffin_Bank_Ltd_Pillar_3_
 ENTITY_NOTE = (
     "Griffin Bank Limited (Companies House 10842931) was renamed from Griffin Financial Technology "
     "Limited on 12 April 2023 and held only an Authorisation-with-Restrictions (mobilisation) banking "
-    "licence until it obtained a full unrestricted licence on 29 February 2024. During the mobilisation "
+    "licence - granted in February 2023, per its own 2023 Pillar 3 Report, which is why that year's LCR and "
+    "NSFR are eight-month post-authorisation averages - until it obtained a full unrestricted licence on "
+    "29 February 2024. During the mobilisation "
     "period the Company also changed its financial year-end from 30 June to 30 September, so its first "
     "published period (FY2023) is a 15-month period from 1 July 2022 to 30 September 2023, not a "
     "standard 12-month year - both figures are as originally reported, not annualised. FY2023's cash "
@@ -51,12 +53,121 @@ def p3_sources():
         "Sources - Griffin Bank Limited Pillar 3 basis:\n"
         "FY2023: 2023 Pillar 3 Report (30 September 2023), p.21 (4.1 Disclosure of key metrics - KM1) - "
         + P3_2023_URL + "\n"
-        "FY2024/FY2025: no Pillar 3 disclosure document has been published for either period - only the "
-        "2023 Pillar 3 Report exists on the Bank's own site (checked https://griffin.com/reports, which "
-        "lists exactly 6 documents across FY2023-FY2025 and only one Pillar 3 report). Not a data-access "
-        "gap - confirmed genuinely unpublished, not guessed. The Bank's own FY2023 KM1 table notes it "
-        "does not provide comparative information for the prior (pre-authorisation) period either, since "
-        "it was first authorised as a bank (with restrictions) only in 2023.\n"
+        "FY2025 CET1 ratio (112%): Annual Report and Financial Statements 2025, p.3 (Chief Executive's "
+        "review) and p.13 (Financial review), both stating 112% (2024: 64%) - " + AR2025_URL + "\n"
+        "FY2024 CET1 ratio (64%): Annual Report and Financial Statements 2024, p.4 (Chief Executive's "
+        "review) and p.13 (Financial review), both stating 64% (2023: 456%), and independently confirmed "
+        "by the FY2025 report's own comparative - " + AR2024_URL + "\n"
+        "FY2024/FY2025 (all other metrics): no Pillar 3 disclosure document has been published for either "
+        "period - only the 2023 Pillar 3 Report exists on the Bank's own site (re-checked 2026-09-12: "
+        "https://griffin.com/reports still lists exactly 6 PDFs across FY2023-FY2025, of which only one is "
+        "a Pillar 3 report). Not a data-access gap - confirmed genuinely unpublished, not guessed. Both "
+        "Annual Reports were read in full for this re-verification: they disclose the CET1 ratio in "
+        "narrative form (captured above) but give no CET1/Tier 1/Total Capital amount, no RWA figure, no "
+        "leverage ratio and no numeric LCR - the LCR is described only qualitatively ('materially in "
+        "excess of internal risk appetite and regulatory requirements', FY2025 p.92 / FY2024 p.104), which "
+        "is not a disclosed value, so those sheets stay blank rather than being inferred. The Bank's own "
+        "FY2023 KM1 table notes it does not provide comparative information for the prior "
+        "(pre-authorisation) period either, since it was first authorised as a bank (with restrictions) "
+        "only in 2023.\n"
+        "INDEPENDENTLY RE-VERIFIED 2026-09-15 (multi-year trailing-gap investigation), and the finding above "
+        "stands. What was checked this time, and what it rules out:\n"
+        "  (a) griffin.com/reports was re-fetched and every PDF link on it enumerated. It still carries "
+        "exactly six documents, and the complete list is: Annual Report 2025, Annual Impact Report 2025/2026, "
+        "Annual Report 2024, Annual Impact Report 2024/2025, 2023 Annual Report & Financial Statements, and "
+        "'Griffin Bank Ltd Pillar 3 30 Sept 2023'. There is no FY2024 or FY2025 Pillar 3 report. griffin.com's "
+        "own sitemap.xml contains no other reports/disclosures page, and /pillar-3, /disclosures, /legal and "
+        "/regulatory-disclosures all return 404 - so there is no second location to look in.\n"
+        "  (b) The FY2024 and FY2025 Annual Reports were re-downloaded and full-text searched again. The only "
+        "regulatory-capital number in either is the CET1 ratio already captured above (FY2025 p.3/p.13: '112% "
+        "(2024: 64%)'; FY2024 p.4/p.13: '64% (2023: 456%)'). Searching both for 'risk weighted'/'RWA'/'own "
+        "funds'/'total capital'/'Tier 2'/'leverage'/'MREL'/'NSFR' returns no figure at all, and the LCR "
+        "passage is verbatim identical in both years and purely qualitative.\n"
+        "  (c) IT IS A REGULATORY EXEMPTION AFTER ALL - this paragraph CORRECTS the earlier conclusion "
+        "recorded here, which read 'NOT a regulatory exemption' on the strength of Griffin's own 2023 Pillar 3 "
+        "Report describing it as a 'small and non-complex institution'. That earlier reading conflated two "
+        "different reliefs and mis-dated the evidence. Corrected 2026-09-15 (cross-bank SDDT date-fit pass) "
+        "against the PRA's own firm-level register.\n"
+        "      THE REGISTER ROW: Bank of England consolidated list of waivers and modifications granted to "
+        "PRA-authorised firms (downloaded 2026-09-15, "
+        "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+        "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries a row for FRN 970920, "
+        "'Griffin Bank Ltd': 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime "
+        "- General Application Part', rule 'SDDT Regime - General Application', sub rule 'Ru 3.1', waiver ref "
+        "'A00007614P.pdf', START DATE 05/03/2024, NO END DATE. Rule 3.1 is the actual opt-in by which a firm "
+        "becomes a Small Domestic Deposit Taker; it is the operative rule, not one of the eligibility-criteria "
+        "modifications (rules 1.2 / 2.1(9) / 2.6) that some firms hold without being SDDTs. Griffin holds no "
+        "such criteria-only row - the 3.1 row is the only SDDT entry against FRN 970920. The register's dating "
+        "was validated on two independent controls in the same pass (Cynergy's 3.1 row starts 17/01/2025, "
+        "matching its annual report's stated approval date to the day; Vanquis's starts 13/03/2024, matching "
+        "its recorded 'March 2024').\n"
+        "      WHY BOTH FACTS ARE TRUE AT ONCE - it is a matter of dates, not a contradiction. The SNCI "
+        "statement is real but it is dated: the 2023 Pillar 3 Report is explicitly 'the Pillar 3 disclosures "
+        "for Griffin Bank Ltd (we or Griffin) as of 30 September 2023' (Introduction, p.2) and says at section "
+        "1.2 'As a small and non-complex institution, we have prepared these disclosures in line with the "
+        "relevant guidance in the Disclosure (CRR) part of the PRA Rulebook'. That report covers the period "
+        "ended 30 SEPTEMBER 2023 and therefore PREDATES the 5 March 2024 modification by roughly five months. "
+        "Griffin published as an SNCI for FY2023 because on that reference date it was one and had not yet "
+        "opted in; it then took the SDDT modification on 5 March 2024. The two routes are NOT the same and "
+        "must not be conflated in this workbook: Article 433b (small and non-complex institution) REDUCES "
+        "disclosure to an annual subset, so an SNCI still owes a Pillar 3 report; Rule 3.1 of the SDDT Regime "
+        "REMOVES the Pillar 3 disclosure obligation outright. Only the second explains a total absence.\n"
+        "      DATE FIT - the modification covers BOTH outstanding gap years, on either reading of when SDDT "
+        "disclosure relief bites. Griffin's accounting reference date is 30 SEPTEMBER, confirmed at Companies "
+        "House (company 10842931, accounts filed for periods ended 30 June 2021, 30 June 2022, then 30 "
+        "September 2023, 2024 and 2025 - the year-end moved mid-history, which is why FY2023 is a 15-month "
+        "period). So FY2024 ended 30 September 2024 and FY2025 ended 30 September 2025, both AFTER the "
+        "05/03/2024 start date, and both also after 1 July 2024, the date PS15/23 made the SDDT disclosure "
+        "requirements effective. (RE-DOWNLOADED AND RE-CHECKED 2026-09-15 under a maximum-effort sweep that "
+        "treated every prior 'unavailable' verdict in this project as unproven: the register was pulled fresh "
+        "from the Bank of England - 2,919 rows, 135 of them SDDT Rule 3.1 modifications - and Griffin's row "
+        "reproduces the citation above to the character, including waiver ref A00007614P.pdf and start date "
+        "05/03/2024 with no end date. The register is a living document, so this confirms the row has not "
+        "been withdrawn or re-dated since the original check.) FY2024 and FY2025 are therefore an EVIDENCED "
+        "STRUCTURAL ABSENCE, not a "
+        "sourcing failure and not merely the Bank neglecting to publish.\n"
+        "      WHAT THE EXEMPTION DOES NOT EXPLAIN: nothing is read back onto FY2023. FY2023 predates the "
+        "modification, Griffin did publish a full Pillar 3 report for it, and this workbook's FY2023 KM1 "
+        "figures are transcribed from that report in the normal way. There is no earlier gap year to consider "
+        "- see (e), no reporting period exists for this entity before the 15 months ended 30 September 2023.\n"
+        "      Consistent with the register, neither the FY2024 nor the FY2025 Annual Report mentions 'SDDT', "
+        "'Small Domestic Deposit Taker', 'Strong and Simple' or a modification by consent - both were "
+        "re-downloaded and full-text searched again on 2026-09-15 (text-native, 306k and 258k extracted "
+        "characters respectively, so not scanned images producing a false negative), and neither contains the "
+        "string 'Pillar 3' even once. A firm that has opted out has nothing to say about Pillar 3, so silence "
+        "in the Annual Reports corroborates the register rather than undercutting it - but note that the "
+        "register, not the Annual Report, is the evidence here; Griffin does not state the opt-in in its own "
+        "words anywhere this pass could find. Separately, do not confuse this SDDT DISCLOSURE exemption, which "
+        "is in force now, with the SDDT CAPITAL regime that starts 1 January 2027.\n"
+        "  (d) NOT an entity cessation either. Griffin Bank Ltd (FRN 970920) appears in the Bank of England's "
+        "own 'List of banks' as at 30 September 2026, and its FY2024 and FY2025 Annual Reports were both "
+        "published normally - the bank is trading and its balance sheet grew from £18.7m to £119.6m over "
+        "FY2025.\n"
+        "  (e) The early years are genuinely outside any disclosure obligation: Griffin was authorised as a "
+        "bank by the PRA (with restrictions) in FEBRUARY 2023 and exited mobilisation with a full unrestricted "
+        "licence on 29 February 2024. Its FY2023 Pillar 3 report says so directly ('our liquidity levels ... "
+        "have remained comfortably above the minimum regulatory and internal requirements since authorisation "
+        "(with restrictions) in February 2023') and footnotes its KM1/OV1 tables 'We were authorised as a bank "
+        "by the PRA (with restrictions) in 2023, and so we do not provide comparative information for the "
+        "prior period'; its FY2023 LCR and NSFR are explicitly eight-month post-authorisation averages "
+        "(Feb-Sep 2023). The 15-month period ended 30 September 2023 is therefore the first reporting period "
+        "for which any Pillar 3 metric can exist for this entity.\n"
+        "CELL CONVENTION (introduced 2026-09-15): FY2024 and FY2025 now read 'Not required (SDDT)' on every "
+        "Pillar 3 metric sheet rather than being left blank. A blank cell is indistinguishable from an "
+        "unresearched gap and had caused this bank to be re-chased repeatedly; the explicit marker records "
+        "that the obligation itself does not exist for those years. The sole exception is the CET1 Ratio "
+        "sheet, which does carry FY2024/FY2025 values - not from a Pillar 3 document (none exists) but from "
+        "the Annual Report narrative, which continues to state the ratio voluntarily.\n"
+        "SOURCE-DATE RESTATEMENT of the 30 September 2023 Pillar 3, checked against the document's own text "
+        "on 2026-09-15 because the file is dated to a SEPTEMBER reference date rather than a December "
+        "year-end and could otherwise be mis-mapped: its Introduction (p.2) reads 'Griffin) as of 30 "
+        "September 2023' and 'This Pillar 3 document should be read in conjunction with the 2023 Annual "
+        "Report and Financial Statements for the period ended 30th September 2023'. Griffin's accounting "
+        "reference date IS 30 September (moved from 30 June during mobilisation, which is why FY2023 spans "
+        "15 months from 1 July 2022). The document therefore maps to FY2023 in this workbook - the same "
+        "reference date as the FY2023 Annual Report - and is not a stub or interim period.\n"
+        "USER-ACTIONABLE: there is nothing further to fetch online. FY2024/FY2025 KM1 figures would have to be "
+        "requested from Griffin directly (or read from PRA regulatory returns, which are not public).\n"
         + ENTITY_NOTE
     )
 
@@ -320,7 +431,29 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
+# FY2024 and FY2025 are STRUCTURALLY EXEMPT, not unresearched. Griffin Bank Ltd
+# (FRN 970920) holds a Modification by Consent of Rule 3.1 of the SDDT Regime -
+# General Application Part (waiver ref A00007614P.pdf, start date 05/03/2024, no
+# end date) on the Bank of England's consolidated register of waivers and
+# modifications granted to PRA-authorised firms. Rule 3.1 is the Small Domestic
+# Deposit Taker opt-in and it REMOVES the Pillar 3 disclosure obligation outright
+# (unlike Article 433b / small-and-non-complex status, which merely REDUCES it,
+# and unlike the eligibility-criteria rules 1.2 / 2.1(9) / 2.6, which have no
+# disclosure effect at all). Griffin's accounting reference date is 30 September,
+# so FY2024 (30 Sep 2024) and FY2025 (30 Sep 2025) both end after that start date.
+# Independently re-confirmed 2026-09-15 by enumerating every PDF link on
+# https://griffin.com/reports: six documents, exactly one of which is a Pillar 3
+# report, and it is dated 30 September 2023.
+#
+# These cells are written explicitly rather than left blank because an empty cell
+# is indistinguishable from an unresearched gap and gets re-chased indefinitely.
+SDDT_EXEMPT_YEARS = ["FY2025", "FY2024"]
+SDDT_CELL = "Not required (SDDT)"
+
+
 def metric(name, unit, rows_data, sources_text, note=None):
+    rows_data = [(label, {**{y: SDDT_CELL for y in SDDT_EXEMPT_YEARS}, **values})
+                 for label, values in rows_data]
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
                          rows_data, sources_text, note=note, first_col_width=44, source_height=130)
 
@@ -332,12 +465,15 @@ metric(
 )
 metric(
     "CET1 Ratio", "%",
-    [("CET1 ratio", {"FY2023": "456%"})],
+    [("CET1 ratio", {"FY2025": "112%", "FY2024": "64%", "FY2023": "456%"})],
     p3_sources(),
-    note="An extreme ratio reflecting the Bank's genuine early-mobilisation position (capital raised "
-         "ahead of loan-book/RWA growth, per the Bank's own FY2023 Pillar 3 report), not a transcription "
-         "error - the KM1 table's own RWA figure (£1,879k) against £8,564k of CET1 capital is internally "
-         "consistent.",
+    note="An extreme FY2023 ratio reflecting the Bank's genuine early-mobilisation position (capital "
+         "raised ahead of loan-book/RWA growth, per the Bank's own FY2023 Pillar 3 report), not a "
+         "transcription error - the KM1 table's own RWA figure (£1,879k) against £8,564k of CET1 capital "
+         "is internally consistent. The ratio falls to 64% (FY2024) and rises to 112% (FY2025) as the "
+         "balance sheet grows; FY2024/FY2025 come from the Annual Report narrative (no Pillar 3 document "
+         "exists for those years), which discloses the CET1 ratio only - no CET1 capital amount, RWA "
+         "figure or other KM1 line is given, so those sheets stay blank for FY2024/FY2025.",
 )
 metric(
     "Tier 1 Capital", "£'000",
@@ -373,9 +509,12 @@ metric(
 # Sourced from the FY2023 Pillar 3 Report's own OV1 table.
 # ---------------------------------------------------------------
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2023": 706}),
-    ("DATA", "Operational risk", {"FY2023": 1174}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2023": 1879}),
+    ("DATA", "Credit risk (excluding counterparty credit risk)",
+     {"FY2023": 706, "FY2024": SDDT_CELL, "FY2025": SDDT_CELL}),
+    ("DATA", "Operational risk",
+     {"FY2023": 1174, "FY2024": SDDT_CELL, "FY2025": SDDT_CELL}),
+    ("TOTAL", "Total risk-weighted exposure amount",
+     {"FY2023": 1879, "FY2024": SDDT_CELL, "FY2025": SDDT_CELL}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -453,16 +592,32 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£",
     ratios=[
-        ("CET1 Ratio", {"FY2023": "456%"}),
-        ("Tier 1 Ratio", {"FY2023": "456%"}),
-        ("Total Capital Ratio", {"FY2023": "456%"}),
-        ("Leverage Ratio", {"FY2023": "91%"}),
-        ("LCR", {"FY2023": "2,675%"}),
-        ("NSFR", {"FY2023": "1,034%"}),
+        ("CET1 Ratio", {"FY2025": "112%", "FY2024": "64%", "FY2023": "456%"}),
+        ("Tier 1 Ratio", {"FY2025": SDDT_CELL, "FY2024": SDDT_CELL, "FY2023": "456%"}),
+        ("Total Capital Ratio", {"FY2025": SDDT_CELL, "FY2024": SDDT_CELL, "FY2023": "456%"}),
+        ("Leverage Ratio", {"FY2025": SDDT_CELL, "FY2024": SDDT_CELL, "FY2023": "91%"}),
+        ("LCR", {"FY2025": SDDT_CELL, "FY2024": SDDT_CELL, "FY2023": "2,675%"}),
+        ("NSFR", {"FY2025": SDDT_CELL, "FY2024": SDDT_CELL, "FY2023": "1,034%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page. Only FY2023 has any Pillar 3 data - no "
-         "Pillar 3 report has been published for FY2024 or FY2025 (confirmed, not an access gap). The Bank "
+         "Pillar 3 report has been published for FY2024 or FY2025 (re-confirmed 2026-09-15 by enumerating "
+         "every PDF on griffin.com/reports: six documents, of which one Pillar 3 report, dated 30 Sept 2023). "
+         "That absence is a REGULATORY EXEMPTION, not an access gap and not mere non-publication - a "
+         "correction, made 2026-09-15, to the previous note here. Griffin Bank Ltd (FRN 970920) holds a "
+         "Modification by Consent of Rule 3.1 of the SDDT Regime - General Application Part (waiver ref "
+         "A00007614P.pdf, start date 05/03/2024, no end date) on the Bank of England's consolidated register "
+         "of waivers and modifications granted to PRA-authorised firms. Rule 3.1 is the Small Domestic Deposit "
+         "Taker opt-in, and it removes the Pillar 3 disclosure obligation outright. Griffin's year-end is 30 "
+         "September (Companies House 10842931), so FY2024 (30 Sep 2024) and FY2025 (30 Sep 2025) both fall "
+         "after that 5 March 2024 start date and are structurally exempt. This does NOT extend back to FY2023: "
+         "that period ended 30 September 2023, before the modification, and Griffin duly published a full "
+         "Pillar 3 report for it as a 'small and non-complex institution' under Article 433b - a route that "
+         "REDUCES disclosure, unlike Rule 3.1 which REMOVES it. The two must not be conflated; see the Pillar "
+         "3 sheets' own source note for the full reasoning. Griffin "
+         "Bank Ltd (FRN 970920) is still on the Bank of England's List of banks as at 30 September 2026. The "
+         "only FY2024/FY2025 regulatory figure disclosed anywhere is the CET1 ratio, in the Annual Report "
+         "narrative (64% / 112%). The Bank "
          "has no customer lending at all in any of the 3 published years - Asset Quality is 'Not publicly "
          "disclosed' for this genuine reason (see that sheet's own source note).",
 )

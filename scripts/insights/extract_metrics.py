@@ -339,8 +339,15 @@ def extract_statement_rows(ws, header_row, years):
     e.g. Clydesdale's RWA Breakdown has it once under "Credit risk
     (excluding CCR)" and once under "Counterparty credit risk (CCR)".
     Any row whose label starts with "Of which" is prefixed with its
-    nearest preceding non-"Of which" row's label instead of the section
-    label, for the same disambiguation reason.
+    nearest preceding non-"Of which" row's label, for the same
+    disambiguation reason - AND that parent label is itself still
+    prefixed with the section, because a third collision exists ACROSS
+    sections: multiple SECTION blocks in one RWA Breakdown sheet
+    (different provenance/basis, e.g. FirstBank UK's "UK OV1 template"
+    vs "Table 11 EU OV1 (FY2020)" blocks) can each contain a row
+    literally labelled "Counterparty Credit Risk (CCR)" - identical
+    parent text - so a bare parent-only prefix would collide the same
+    way the un-prefixed case above does, just one level down.
 
     Also returns each row's own kind ("TOTAL" if column A is bold, "DATA"
     otherwise - the same bold-vs-not distinction already used just below
@@ -382,7 +389,10 @@ def extract_statement_rows(ws, header_row, years):
             # a section divider either, so section/parent state is untouched.
             continue
         is_sub_item = isinstance(label, str) and label.strip().lower().startswith("of which")
-        prefix = parent_label if (is_sub_item and parent_label) else section
+        if is_sub_item and parent_label:
+            prefix = f"{section} - {parent_label}" if section else parent_label
+        else:
+            prefix = section
         full_label = f"{prefix} - {label}" if prefix else label
         row_kind = "TOTAL" if is_bold(ws, r, 1) else "DATA"
         rows.append((full_label, row_values, row_kind))

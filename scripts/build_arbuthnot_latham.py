@@ -9,6 +9,7 @@ CH2023_URL = "https://find-and-update.company-information.service.gov.uk/company
 CH2021_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzM0MTEwODM3MmFkaXF6a2N4/document?format=pdf&download=0"
 AR2017_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Report_and_Accounts_Final_2017.pdf"
 
+P3_H1_2026_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG-Pillar-3-Disclosures-2026-Interim.pdf"
 P3_2024_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/abg-pillar-3-disclosures-december-24.pdf"
 P3_2023_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2023_Final.pdf"
 P3_2022_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2022_Final.pdf"
@@ -25,7 +26,24 @@ ENTITY_NOTE = (
     "CET1/Tier 1 ratio 13.15%, Total capital ratio 15.28%, LCR 175%) - the Pillar 3 sheets in this workbook use "
     "the formal ABG PLC Pillar 3 (Article 447 CRR) disclosures, since that is the entity's actual published "
     "Pillar 3 document; the small basis difference vs. the Bank's own Annual Report figures is not explained in "
-    "either source and is flagged here rather than silently blended."
+    "either source and is flagged here rather than silently blended.\n"
+    "SDDT status (checked 2026-09-15): the PRA's consolidated register of waivers and modifications for "
+    "PRA-regulated firms ('Consolidated Waivers list for PRA-regulated firms - as of 1 July 2026', "
+    "bankofengland.co.uk/prudential-regulation/authorisations/waivers-and-modifications-of-rules) records that "
+    "ARBUTHNOT LATHAM & CO., LIMITED (FRN 143336) holds a 'Modification by Consent - PRA Rulebook - CRR Firms - "
+    "Rule 3.1 of the SDDT Regime - General Application Part', sub-rule 'Ru 3.1', with a start date of 02/03/2024 "
+    "and no end date (still in force). That modification removes the Pillar 3 disclosure obligation outright, and "
+    "is a different and stronger relief than UK CRR Article 433b, which merely reduces disclosure frequency and "
+    "content for small and non-complex institutions - the two must not be conflated.\n"
+    "Why that does NOT make the Pillar 3 sheets here structurally blank: the modification is held by the BANK "
+    "(Arbuthnot Latham & Co., Limited, FRN 143336), whereas the Pillar 3 documents this workbook cites are "
+    "published by the LSE-listed parent, Arbuthnot Banking Group PLC, which is not itself an SDDT and continues "
+    "to disclose on a consolidated basis. ABG in fact published a Pillar 3 report for the six months ended 30 "
+    "June 2026 - over two years after the Bank's opt-in - so the relief demonstrably was not used to stop group "
+    "disclosure. The absence of a standalone FY2025 ANNUAL ABG Pillar 3 is therefore a reporting-cadence change "
+    "(KM1 continues in the interim reports; the annual-only OV1 does not), not a structural exemption. Holding a "
+    "Rule 3.1 modification is necessary but not sufficient evidence that a firm stopped disclosing, and it is "
+    "not treated as sufficient here."
 )
 
 CASH_FLOW_SOURCES = (
@@ -49,16 +67,27 @@ CASH_FLOW_SOURCES = (
 )
 
 
-def p3_sources(page_24="6", page_23="6", page_22="6", page_21="31"):
+def p3_sources(page_24="6", page_23="6", page_22="6", page_21="31", page_h1_26="4"):
     return (
         "Sources - Arbuthnot Banking Group PLC Pillar 3 disclosures (UK KM1 Key Metrics template; FY2021 uses the "
         "pre-KM1 'Key Regulatory Metrics' template), £'000 unless stated:\n"
+        f"FY2025: Pillar 3 disclosures for the six months ended 30 June 2026, p.{page_h1_26} (Template UK KM1), "
+        f"column c '31-Dec-25' - {P3_H1_2026_URL}\n"
         f"FY2024 & FY2023 comparative: Pillar 3 disclosures for the year ended 31 December 2024, p.{page_24} (Template UK KM1) - {P3_2024_URL}\n"
         f"FY2023 (own year) & FY2022 comparative: Pillar 3 disclosures for the year ended 31 December 2023, p.{page_23} (Template UK KM1) - {P3_2023_URL}\n"
         f"FY2022 (own year) & FY2021 comparative: Pillar 3 disclosures for the year ended 31 December 2022, p.{page_22} (Template UK KM1) - {P3_2022_URL}\n"
         f"FY2021 (own year): Pillar 3 disclosures for the year ended 31 December 2021, p.{page_21} (Key Regulatory Metrics) - {P3_2021_URL}\n"
-        "FY2025 Pillar 3 disclosures have not been published yet (checked against the site's naming pattern from "
-        "prior years; none found) - FY2025 is left blank on every Pillar 3 sheet rather than guessed.\n"
+        "FY2025 sourcing note: ABG has not published a standalone FY2025 ANNUAL Pillar 3 report (every plausible "
+        "filename under the site's prior-year patterns returns 404, and the Wayback CDX index for the domain lists "
+        "no 2025 annual document). The 31 December 2025 figures here are instead taken from the 30 June 2026 "
+        "INTERIM Pillar 3 report, whose UK KM1 template carries 31-Dec-25 as its column c comparative. That "
+        "document footnotes the column '* Includes year end verified reserves', i.e. it is the audited year-end "
+        "position rather than an interim estimate. The same document's 30-Jun-25 column and the equivalent 30 June "
+        "2025 interim report's 31-Dec-24 column were used to verify the reading: every FY2024 figure recovered that "
+        "way (CET1 £234,477k, Total capital £272,459k, RWAs £1,782,645k, CET1/Tier 1 ratio 13.15%, Total capital "
+        "ratio 15.28%, leverage exposure £3,828,489k / 6.12%, LCR HQLA £1,275,612k / net outflows £730,580k / 175%, "
+        "NSFR ASF £2,995,437k / RSF £2,274,318k / 132%) matches the FY2024 annual report's own figures exactly, so "
+        "the interim KM1 is on an identical basis, not a different one.\n"
         + ENTITY_NOTE
     )
 
@@ -385,44 +414,44 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 metric(
     "CET1 Capital", "£'000",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2024": 234477, "FY2023": 222291, "FY2022": 175375, "FY2021": 176235})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 241598, "FY2024": 234477, "FY2023": 222291, "FY2022": 175375, "FY2021": 176235})],
     p3_sources(),
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 ratio", {"FY2024": "13.15%", "FY2023": "12.98%", "FY2022": "11.57%", "FY2021": "12.3%"})],
+    [("Common Equity Tier 1 ratio", {"FY2025": "13.26%", "FY2024": "13.15%", "FY2023": "12.98%", "FY2022": "11.57%", "FY2021": "12.3%"})],
     p3_sources(),
 )
 
 metric(
     "Tier 1 Capital", "£'000",
-    [("Tier 1 capital", {"FY2024": 234477, "FY2023": 222291, "FY2022": 175375, "FY2021": 176235})],
+    [("Tier 1 capital", {"FY2025": 241598, "FY2024": 234477, "FY2023": 222291, "FY2022": 175375, "FY2021": 176235})],
     p3_sources(),
     note="Equal to CET1 capital every year - no AT1 instruments in issue.",
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2024": "13.15%", "FY2023": "12.98%", "FY2022": "11.57%", "FY2021": "12.3%"})],
+    [("Tier 1 ratio", {"FY2025": "13.26%", "FY2024": "13.15%", "FY2023": "12.98%", "FY2022": "11.57%", "FY2021": "12.3%"})],
     p3_sources(),
 )
 
 metric(
     "Total Capital", "£'000",
-    [("Total capital", {"FY2024": 272459, "FY2023": 260017, "FY2022": 212969, "FY2021": 213007})],
+    [("Total capital", {"FY2025": 280270, "FY2024": 272459, "FY2023": 260017, "FY2022": 212969, "FY2021": 213007})],
     p3_sources(),
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2024": "15.28%", "FY2023": "15.18%", "FY2022": "14.05%", "FY2021": "14.9%"})],
+    [("Total capital ratio", {"FY2025": "15.38%", "FY2024": "15.28%", "FY2023": "15.18%", "FY2022": "14.05%", "FY2021": "14.9%"})],
     p3_sources(),
 )
 
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted exposure amount", {"FY2024": 1782645, "FY2023": 1713146, "FY2022": 1516141, "FY2021": 1427724})],
+    [("Total risk-weighted exposure amount", {"FY2025": 1822551, "FY2024": 1782645, "FY2023": 1713146, "FY2022": 1516141, "FY2021": 1427724})],
     p3_sources(),
 )
 
@@ -437,7 +466,13 @@ rwa_breakdown_rows = [
 
 RWA_BREAKDOWN_SOURCES = (
     p3_sources(page_24="7", page_23="15", page_22="16", page_21="6") +
-    "\nFY2021's Total row (£1,427,725k) is £1k higher than the Total RWAs sheet's own FY2021 figure "
+    "\nFY2025 is blank on this sheet even though the Total RWAs sheet carries an FY2025 figure. This is a real "
+    "scope difference, not a missing transcription: ABG discloses as an SDDT, and the 30 June 2026 interim Pillar "
+    "3 report (the source of the FY2025 KM1 headline) states in its own scope section that the Article 438(d) "
+    "'Own Funds Requirements and Risk-Weighted Exposure Amounts' template (UK OV1) is disclosed only 'On an annual "
+    "basis'. The interim report therefore contains KM1 but no OV1, and no FY2025 annual Pillar 3 report has been "
+    "published. The FY2025 RWA split will only become available with that annual document.\n"
+    "FY2021's Total row (£1,427,725k) is £1k higher than the Total RWAs sheet's own FY2021 figure "
     "(£1,427,724k) - both are read directly off their respective source tables (the OV1 breakdown here vs. the "
     "KM1 headline total there); an immaterial rounding gap between the two templates in ABG's own Pillar 3 "
     "reports, not corrected here."
@@ -456,8 +491,8 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£'000 / %",
     [
-        ("Total exposure measure excluding claims on central banks", {"FY2024": 3828489, "FY2023": 3559597, "FY2022": 2923193}),
-        ("Leverage ratio excluding claims on central banks (%)", {"FY2024": "6.12%", "FY2023": "6.24%", "FY2022": "6.00%"}),
+        ("Total exposure measure excluding claims on central banks", {"FY2025": 4568671, "FY2024": 3828489, "FY2023": 3559597, "FY2022": 2923193}),
+        ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "5.29%", "FY2024": "6.12%", "FY2023": "6.24%", "FY2022": "6.00%"}),
         ("Total Basel III leverage ratio measure (FY2021 basis, includes claims on central banks)", {"FY2021": 3409123}),
         ("Basel III leverage ratio (%) (FY2021 basis)", {"FY2021": "5.2%"}),
     ],
@@ -470,9 +505,9 @@ metric(
 metric(
     "LCR", "£'000 / %",
     [
-        ("Total high-quality liquid assets (HQLA), weighted value", {"FY2024": 1275612, "FY2023": 1046604, "FY2022": 710180, "FY2021": 897493}),
-        ("Total net cash outflows, adjusted value", {"FY2024": 730580, "FY2023": 476548, "FY2022": 405819, "FY2021": 487009}),
-        ("Liquidity Coverage Ratio (%)", {"FY2024": "175%", "FY2023": "220%", "FY2022": "175%", "FY2021": "184.3%"}),
+        ("Total high-quality liquid assets (HQLA), weighted value", {"FY2025": 1891643, "FY2024": 1275612, "FY2023": 1046604, "FY2022": 710180, "FY2021": 897493}),
+        ("Total net cash outflows, adjusted value", {"FY2025": 994752, "FY2024": 730580, "FY2023": 476548, "FY2022": 405819, "FY2021": 487009}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "190%", "FY2024": "175%", "FY2023": "220%", "FY2022": "175%", "FY2021": "184.3%"}),
     ],
     p3_sources(),
     note="FY2021 figures are from the FY2021 report's own 'Key Regulatory Metrics' table (pre-KM1 format). The "
@@ -485,9 +520,9 @@ metric(
 metric(
     "NSFR", "£'000 / %",
     [
-        ("Total available stable funding", {"FY2024": 2995437, "FY2023": 2784678, "FY2022": 2464147, "FY2021": 2389237}),
-        ("Total required stable funding", {"FY2024": 2274318, "FY2023": 2043499, "FY2022": 1940538, "FY2021": 1794905}),
-        ("NSFR ratio (%)", {"FY2024": "132%", "FY2023": "136%", "FY2022": "127%", "FY2021": "133.1%"}),
+        ("Total available stable funding", {"FY2025": 3126629, "FY2024": 2995437, "FY2023": 2784678, "FY2022": 2464147, "FY2021": 2389237}),
+        ("Total required stable funding", {"FY2025": 2058754, "FY2024": 2274318, "FY2023": 2043499, "FY2022": 1940538, "FY2021": 1794905}),
+        ("NSFR ratio (%)", {"FY2025": "152%", "FY2024": "132%", "FY2023": "136%", "FY2022": "127%", "FY2021": "133.1%"}),
     ],
     p3_sources(),
     note="FY2021 is from the FY2021 report's own table; the UK NSFR regime's KM1 disclosure only became a formal "
@@ -500,8 +535,11 @@ metric(
     "MREL Ratio", None,
     [("MREL ratio", {y: "Not disclosed" for y in YEARS})],
     p3_sources(),
-    note="No MREL disclosure found in any of the 4 available Pillar 3 reports (FY2021-FY2024) - Arbuthnot Banking "
-         "Group is not designated as a resolution entity subject to MREL reporting at this level.",
+    note="No MREL disclosure found in any of the available Pillar 3 reports (FY2021-FY2024 annual, plus the 2025 "
+         "and 2026 interim reports) - Arbuthnot Banking Group is not designated as a resolution entity subject to "
+         "MREL reporting at this level. The 30 June 2026 interim report states this directly: the Article 447(h) "
+         "own funds and eligible liabilities ratios are calculated under CRR Articles 92a/92b, which 'only apply "
+         "to G-SIIs and so are not applicable to the Group'.",
 )
 
 # ---------------------------------------------------------------

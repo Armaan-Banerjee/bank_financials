@@ -281,16 +281,73 @@ asset_quality_rows = [
     ("DATA", "Stage 3 coverage (Stage 3 allowance / Stage 3 gross)", {"FY2025": "25.7%", "FY2024": "21.7%", "FY2023": "33.5%", "FY2022": "34.2%", "FY2021": "44.4%"}),
 ]
 
+P3_2025_URL = (
+    "https://home.barclays/content/dam/home-barclays/documents/investor-relations/ResultAnnouncements/"
+    "FullYear2025Results/FY25-BBPLC-Pillar-3.pdf"
+)
+P3_2024_URL = (
+    "https://home.barclays/content/dam/home-barclays/documents/investor-relations/ResultAnnouncements/"
+    "FullYear2024Results/FY24-Barclays-Bank-PLC-Pillar-3-Report.pdf"
+)
+P3_2023_URL = (
+    "https://home.barclays/content/dam/home-barclays/documents/investor-relations/reports-and-events/"
+    "annual-reports/2023/BB-PLC-Pillar-3-Report-2023.pdf"
+)
+P3_2022_URL = (
+    "https://home.barclays/content/dam/home-barclays/documents/investor-relations/reports-and-events/"
+    "annual-reports/2022/Pillar-3/Barclays-Bank-PLC-Pillar-3-Report%202022.pdf"
+)
+
 RWA_BREAKDOWN_SOURCES = (
-    "Sources — Barclays Bank PLC's own 'Capital risk' section of the Risk review (see p3_sources() URLs above):\n"
-    "NOT PUBLICLY DISCLOSED within the Annual Report: the Capital risk section (p.231 of the FY2025 Annual "
-    "Report) discloses only the single aggregate Total RWAs figure and capital ratios, not a UK OV1-style "
-    "breakdown by credit/counterparty credit/market/operational risk - confirmed by reading that section in full. "
-    "The Annual Report itself references a separate, standalone 'Barclays Bank PLC 2025 Pillar 3 Report' as the "
-    "source for further risk-profile detail, but that document was not sourced within this batch's reviewed pages."
+    "Sources — Barclays Bank PLC's own dedicated Pillar 3 Reports (solo-consolidated basis, matching the Total "
+    "RWAs sheet's own basis and figures every year below - confirmed by cross-checking each year's Total row "
+    "against the Total RWAs sheet), not the Annual Report's Capital risk section (which discloses only the "
+    "aggregate Total RWAs figure and capital ratios, no category breakdown):\n"
+    f"FY2025 & FY2024 (DIRECTLY DISCLOSED): Barclays Bank PLC Pillar 3 Report 2025, Table 5 'UK OV1 - Overview of "
+    f"risk weighted exposure amounts', p.11 (FY2025 own-year column and FY2024 comparative column, both £m) — "
+    f"{P3_2025_URL}\n"
+    f"FY2023 (DIRECTLY DISCLOSED, cross-checked against the FY2024 own-year Pillar 3 Report below): Barclays Bank "
+    f"PLC Pillar 3 Report 2024, Table 6 'UK OV1 - Overview of risk weighted exposure amounts', p.12 (31.12.2023 "
+    f"comparative column) — {P3_2024_URL}\n"
+    f"FY2022 (DIRECTLY DISCLOSED): Barclays Bank PLC Pillar 3 Report 2022, Table 6 'UK OV1 - Overview of risk "
+    f"weighted exposure amounts', p.11 (31.12.2022 column) — {P3_2022_URL}\n"
+    "All four years reconcile exactly to their own Total row and to the Total RWAs sheet's own figure for that "
+    "year (£222,247m / £223,648m / £211,193m / £203,833m respectively). Each report's own UK OV1 table additionally "
+    "discloses a 'credit valuation adjustment (CVA)' sub-line (row UK8b: £2,150m/£1,938m/£2,510m/£2,465m for "
+    "FY2025-FY2022 respectively) nested inside, and already included within, the Counterparty credit risk (CCR) "
+    "row shown below - not broken out as its own row here, and not separately additive to the Total.\n\n"
+    "FY2021 (DIRECTLY DISCLOSED, but a DIFFERENT table/categorisation - Barclays Bank PLC's dedicated Pillar 3 "
+    "Report does not exist as a standalone document for FY2021, so this year is instead sourced from the FY2021 "
+    "comparative column of the FY2022 Pillar 3 Report's own separate 'Table 5: RWAs by risk type' - not that "
+    "report's UK OV1 table, which only carries a current-year/Q3 comparative, not FY2021): Barclays Bank PLC "
+    f"Pillar 3 Report 2022, Table 5 'RWAs by risk type', p.10 ('As at 31 December 2021' row) — {P3_2022_URL}\n"
+    "This table splits Credit risk / Counterparty credit risk (CCR) / Market risk each into their Standardised and "
+    "internal-model-approach sub-columns (summed here into one Credit risk / CCR / Market risk row apiece) and, "
+    "unlike the UK OV1 template, shows Credit valuation adjustment (CVA) as its own separate row rather than a "
+    "sub-line nested inside CCR, and carries no separate Securitisation exposures row at all - so FY2021's row "
+    "boundaries are NOT directly comparable line-for-line to the UK OV1 rows used for FY2022-FY2025 above (e.g. "
+    "FY2021's 'Credit risk' may include exposures the OV1 years would classify as Securitisation); every FY2021 "
+    "category is shown exactly as this table discloses it, in its own labelled section below, and its Total row "
+    "reconciles exactly to the Total RWAs sheet's own FY2021 figure (£185,467m)."
 )
 rwa_breakdown_rows = [
-    ("DATA", "RWA category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
+    ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts (solo-consolidated)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 109036, "FY2024": 106697, "FY2023": 99934, "FY2022": 105321}),
+    ("DATA", "Counterparty credit risk (CCR, incl. CVA)", {"FY2025": 41109, "FY2024": 45839, "FY2023": 37163, "FY2022": 33746}),
+    ("DATA", "Settlement risk", {"FY2025": 153, "FY2024": 115, "FY2023": 67, "FY2022": 53}),
+    ("DATA", "Securitisation exposures in the non-trading book", {"FY2025": 23512, "FY2024": 20407, "FY2023": 16159, "FY2022": 15043}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 25534, "FY2024": 28172, "FY2023": 37010, "FY2022": 29642}),
+    ("DATA", "Operational risk", {"FY2025": 22903, "FY2024": 22418, "FY2023": 20860, "FY2022": 20028}),
+    ("TOTAL", "Total risk weighted exposure amount", {"FY2025": 222247, "FY2024": 223648, "FY2023": 211193, "FY2022": 203833}),
+    ("SECTION", "Table 5: RWAs by risk type (Barclays Bank PLC's own table, solo-consolidated - different "
+                "categorisation to the UK OV1 rows above, see sources note)", {}),
+    ("DATA", "Credit risk (Standardised + AIRB approaches)", {"FY2021": 100280}),
+    ("DATA", "Counterparty credit risk (Standardised + AIRB approaches)", {"FY2021": 31251}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2021": 1862}),
+    ("DATA", "Settlement risk", {"FY2021": 63}),
+    ("DATA", "Market risk (Standardised + IMA approaches)", {"FY2021": 34827}),
+    ("DATA", "Operational risk", {"FY2021": 17184}),
+    ("TOTAL", "Total RWAs", {"FY2021": 185467}),
 ]
 
 bw = BankWorkbook(bank_name="Barclays Bank PLC", years=YEARS, header_color="7B241C")
@@ -464,10 +521,13 @@ metric(
 
 bw.add_rwa_breakdown_sheet(
     title="Barclays Bank PLC — RWA Breakdown",
-    subtitle="Solo-consolidated basis",
+    subtitle="Solo-consolidated basis, £m. FY2025-FY2022 per the UK OV1 template; FY2021 per a differently-"
+              "categorised table - see source note at bottom.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
-    unit_suffix="",
+    first_col_width=58,
+    source_height=240,
+    unit_suffix=" (£m)",
 )
 
 metric(

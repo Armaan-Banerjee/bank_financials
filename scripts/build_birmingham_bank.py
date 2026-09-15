@@ -10,6 +10,17 @@ AR2024_URL = CH_URL + "/filing-history/MzQ2MDU0MTMzM2FkaXF6a2N4/document?format=
 AR2023_URL = CH_URL + "/filing-history/MzQxNDU2Njk3NGFkaXF6a2N4/document?format=pdf&download=0"
 AR2022_URL = CH_URL + "/filing-history/MzM5NzY1NjE1N2FkaXF6a2N4/document?format=pdf&download=0"
 P3_URL = "https://www.birminghambank.com/hubfs/Birmingham%20Bank%202024%20Theme/PDFs/09i-Pillar-3-Disclosures-Report-as-at-140425.pdf"
+# FY2022 Pillar 3, recovered 2026-09-15 via a Wayback CDX sweep of birminghambank.com.
+# MUST be cited as the Wayback snapshot, NOT the bare live URL: the bank has since
+# re-uploaded its FY2023 report OVER this filename, so the live
+# .../wp-content/uploads/Birmingham-Bank-Pillar-3-Disclosures-2022-final.pdf returns
+# HTTP 200 but serves the year-ended-31-December-2023 document. Verified 2026-09-15.
+P3_2022_URL = (
+    "https://web.archive.org/web/20240224223816id_/"
+    "https://www.birminghambank.com/wp-content/uploads/Birmingham-Bank-Pillar-3-Disclosures-2022-final.pdf"
+)
+# FY2023 Pillar 3 - what that re-used filename currently serves.
+P3_2023_URL = "https://www.birminghambank.com/wp-content/uploads/Birmingham-Bank-Pillar-3-Disclosures-2022-final.pdf"
 SR2023_URL = AR2023_URL  # Strategic Report KPI table is in the same FY2023 Annual Report filing
 
 ENTITY_NOTE = (
@@ -95,28 +106,73 @@ def p3_sources():
         f"FY2024 & FY2023: Pillar 3 Disclosures Report as at 14 Apr 2025 (covers year ended 31 Dec 2024, "
         f"FY2023 comparative), Section 1.4 'Summary Analysis' (headline figures) and Section 5 (RWA/Pillar 1 "
         f"detail table) - {P3_URL}\n"
-        f"FY2022: Strategic Report 'key financial performance indicators' table in the Full accounts made up "
-        f"to 31 Dec 2023 (filed 20 Mar 2024), p.4 - {SR2023_URL}. Ratio only - no GBP capital/RWA breakdown "
-        "was published for FY2022 (the bank's only Pillar 3 document covers FY2023-FY2024 only).\n"
-        f"FY2021: CET1/Tier 1/Total Capital Ratio (96.69%, rounded here to 97%) and LCR (16,250%) - Strategic "
-        f"Report 'key financial performance indicators' table in the Amended full accounts made up to 31 Dec "
-        f"2022 (filed 25 Oct 2023), p.5 - {AR2022_URL}. Corrected 2026-09-06 audit: this ratio was previously "
-        "marked as not disclosed for FY2021, but this same KPI table (already cited elsewhere on this "
-        "workbook for its FY2022 column) also carries a FY2021 comparative column that was missed on first "
-        "build. Ratio only, same as FY2022 - no GBP CET1/Tier 1/Total Capital or RWA figure for FY2021 was "
-        "found in any document (the bank's only Pillar 3 document covers FY2023-FY2024 only), so those GBP "
-        "metric sheets remain blank for FY2021.\n"
+        f"FY2022 & FY2021 (capital amounts, capital ratios, leverage ratio): Pillar 3 Disclosures 'For the "
+        f"year ended 31 December 2022', Section 1.4 summary table (Tier 1 capital, Risk Weighted assets, Tier "
+        f"1 Capital ratio, Leverage ratio, Liquidity coverage ratio - both years side by side), Section 5.1 "
+        f"'regulatory capital resources' table (CET1 build-up, both years) and Section 10 'Own Funds "
+        f"Disclosure' table (FY2022) - {P3_2022_URL}\n"
+        "ADDED 2026-09-15. This document was recovered via a Wayback CDX sweep and supersedes the previous "
+        "statement that 'the bank's only Pillar 3 document covers FY2023-FY2024 only' - a second, earlier "
+        "Pillar 3 report does exist and covers FY2022 with a full FY2021 comparative. MUST be cited at the "
+        "Wayback snapshot above: the live URL bearing this filename now serves the FY2023 document (the Bank "
+        "re-uploaded over it), so the bare URL would silently point at the wrong year. See the capital "
+        "sheets' own CAPITAL_2022_NOTE for the full citation-trap warning and the ratio restatement.\n"
+        f"FY2022 & FY2021 (superseded ratio source, retained for the record): the Strategic Report 'key "
+        f"financial performance indicators' tables - Full accounts made up to 31 Dec 2023 (filed 20 Mar "
+        f"2024) p.4 for FY2022 ({SR2023_URL}), and Amended full accounts made up to 31 Dec 2022 (filed 25 "
+        f"Oct 2023) p.5 for FY2021 ({AR2022_URL}, disclosing 96.69%). These were the only source for these "
+        "years before the FY2022 Pillar 3 report was recovered, and gave 91% (FY2022) and 97% (FY2021). The "
+        "Pillar 3 report gives 90% and 96% on the same dates; its figures are now carried because they are "
+        "internally consistent with the capital amounts and RWAs this workbook holds. The difference is a "
+        "genuine source-basis difference between two of the Bank's own documents - documented, not resolved. "
+        "The LCR cells (2,983% / 16,250%) are unaffected: both sources agree exactly.\n"
         "The Bank has no Additional Tier 1 or Tier 2 capital in any year (per the Pillar 3 report's own "
         "statement), so CET1 Capital = Tier 1 Capital = Total Capital, and CET1 Ratio = Tier 1 Ratio = Total "
-        "Capital Ratio, throughout."
+        "Capital Ratio, throughout.\n"
+        "SDDT - EXPLICIT NEGATIVE, recorded 2026-09-15 (cross-bank SDDT date-fit pass) so that a future pass "
+        "does not wrongly apply the Small Domestic Deposit Taker exemption to this workbook's gap years. "
+        "Birmingham Bank DOES hold the SDDT opt-in, but it is far too recent to explain anything here. The Bank "
+        "of England consolidated list of waivers and modifications granted to PRA-authorised firms (downloaded "
+        "2026-09-15, https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+        "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries two SDDT rows for FRN "
+        "204478, 'BIRMINGHAM BANK LIMITED': (a) 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 "
+        "of the SDDT Regime - General Application Part', sub rule 'Ru 3.1', waiver ref 'A00012036P.pdf', START "
+        "DATE 14/04/2026, no end date; and (b) a modification of the criterion in rule 2.1(9) ('any parent "
+        "undertaking of the firm is a UK undertaking'), sub rule 'Ru 2.1(9)', ref 'A0011828P.pdf', start "
+        "16/03/2026, end 16/03/2029. Only row (a) is evidence of a disclosure exemption. Row (b) modifies an "
+        "ELIGIBILITY CRITERION only - it is what let the Bank qualify despite its overseas ownership - and a "
+        "firm holding only such a row is not a confirmed SDDT at all.\n"
+        "DATE FIT - IT DOES NOT FIT. The Bank's accounting reference date is 31 DECEMBER, confirmed at Companies "
+        "House (company 00555071, accounts filed to 31 December for 2019 through 2025). The outstanding gap "
+        "years are FY2021 and FY2022, which ended 31 December 2021 and 31 December 2022. The Rule 3.1 "
+        "modification began 14 APRIL 2026 - more than three years after the later of those two year-ends. A "
+        "modification cannot explain a gap that predates it, so the SDDT regime explains NEITHER the FY2021 nor "
+        "the FY2022 blanks.\n"
+        "Those gaps keep an entirely separate explanation, though it is now much narrower than when this note "
+        "was written: the FY2022 Pillar 3 report recovered on 2026-09-15 supplies capital amounts, capital "
+        "ratios and the leverage ratio for BOTH FY2022 and FY2021, so those years are no longer "
+        "Strategic-Report-only and are no longer materially blank. What remains genuinely unavailable for "
+        "them is an RWA category breakdown reconciled to the restated basis, and NSFR. Either way this is a "
+        "narrower-source gap, not a regulatory exemption. The register finding changes no cell in this "
+        "workbook. Forward-looking only: from 14 April "
+        "2026 the Bank is an SDDT, so no further Pillar 3 document should be expected for FY2026 onward. This is "
+        "the SDDT DISCLOSURE exemption, in force now - not the separate SDDT CAPITAL regime beginning 1 January "
+        "2027."
     )
 
 
 RWA_NOTE = (
-    "FY2023 RWA shown here (GBP5,229k) is the Pillar 3 report's own Section 1.4 'Summary Analysis' headline "
-    "figure. Its Section 5 RWA detail table (credit risk GBP4,056k + operational risk GBP1,045k = GBP5,101k) "
-    "gives a slightly different total for the same year - both are the entity's own genuine disclosures, "
-    "~2.5% apart; the headline summary figure is used for consistency with how FY2024 is sourced."
+    "FY2023 RWA shown here (GBP5,229k) is the figure the FY2024 Pillar 3 report carries as its FY2023 "
+    "comparative in Section 1.4 'Summary Analysis'. The FY2023 Pillar 3 report's OWN Section 1.4 states "
+    "GBP5,101k for that year, and its Section 5 detail table agrees exactly (credit risk GBP4,056k + "
+    "operational risk GBP1,045k = GBP5,101k). So the ~2.5% difference is a RESTATEMENT between two "
+    "documents, not an internal inconsistency within one: GBP5,229k is the later, restated view. The "
+    "restated figure is retained here for consistency with how FY2024 is sourced (both from the FY2024 "
+    "report), while the RWA Breakdown sheet's FY2023 column ticks to GBP5,101k because its category rows "
+    "are the as-originally-disclosed ones. Corrected 2026-09-15: this note previously described both "
+    "figures as coming from the same report's Section 1.4 and Section 5, which is not what the documents "
+    "say. FY2022 and FY2021 are unaffected - for those years the summary and detail tables agree exactly "
+    "(6,822 and 8,648 respectively)."
 )
 
 bw = BankWorkbook(bank_name="Birmingham Bank Limited", years=YEARS, year_label=YEAR_LABEL, header_color="946B2D")
@@ -300,13 +356,52 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=52, source_height=190)
 
 
-TOTAL_CAPITAL = {"FY2024": 35985, "FY2023": 18617}
-CAPITAL_RATIO = {"FY2024": "76%", "FY2023": "365%", "FY2022": "91%", "FY2021": "97%"}
-RWA = {"FY2024": 47333, "FY2023": 5229}
-LEVERAGE = {"FY2024": "24%", "FY2023": "63%"}
+# FY2022/FY2021 added 2026-09-15 from the recovered FY2022 Pillar 3 report - see CAPITAL_2022_NOTE.
+TOTAL_CAPITAL = {"FY2024": 35985, "FY2023": 18617, "FY2022": 6172, "FY2021": 8314}
+# FY2022/FY2021 RESTATED 2026-09-15 from the Strategic Report's 91%/97% onto the Pillar 3's own
+# 90%/96% - same basis as the capital amounts above and the RWAs below. See CAPITAL_2022_NOTE.
+CAPITAL_RATIO = {"FY2024": "76%", "FY2023": "365%", "FY2022": "90%", "FY2021": "96%"}
+RWA = {"FY2024": 47333, "FY2023": 5229, "FY2022": 6822, "FY2021": 8648}
+LEVERAGE = {"FY2024": "24%", "FY2023": "63%", "FY2022": "36%", "FY2021": "37%"}
 LCR = {"FY2024": "725%", "FY2023": "11,351%", "FY2022": "2,983%", "FY2021": "16,250%"}
 
 SINGLE_TIER_NOTE = "No Additional Tier 1 or Tier 2 capital in any year - equals CET1 Capital exactly."
+
+CAPITAL_2022_NOTE = (
+    "FY2022 & FY2021 ADDED/RESTATED 2026-09-15 from the recovered FY2022 Pillar 3 report, which prints "
+    "both years side by side and which earlier builds did not have. This supersedes the previous position "
+    "that 'no GBP CET1/Tier 1/Total Capital figure for FY2021 was found in any document'.\n"
+    "AMOUNTS (new cells): Total CET1 capital GBP6,172k (FY2022) and GBP8,314k (FY2021), from the "
+    "'regulatory capital resources' table, Section 5.1. Both foot exactly within that table - FY2022 Total "
+    "Equity 6,206 less regulatory deductions 34 = 6,172; FY2021 Total Equity 8,363 less 49 = 8,314 - and "
+    "FY2022 is independently repeated in the report's own Section 10 'Own Funds Disclosure' table (CET1 "
+    "before regulatory adjustments 6,206, total regulatory adjustments (34), CET1 capital 6,172, Tier 1 "
+    "capital 6,172, Total capital 6,172). The report states 'The Bank holds only tier 1 capital', so CET1 = "
+    "Tier 1 = Total Capital for both years, consistent with every other year on these sheets.\n"
+    "CROSS-CHECK PASSED: the same Section 1.4 summary table gives Risk Weighted assets of 6,822 (FY2022) "
+    "and 8,648 (FY2021), which reproduce this workbook's existing Total RWAs figures for both years "
+    "exactly, and Liquidity coverage ratio 2,983% / 16,250%, which reproduce the existing LCR cells "
+    "exactly. That is what confirms the document is the right entity, basis and years.\n"
+    "RATIOS RESTATED, AND THE SUPERSEDED VALUES ARE RECORDED HERE RATHER THAN DISCARDED: this workbook "
+    "previously carried FY2022 91% and FY2021 97% (the latter disclosed as 96.69%), taken from the "
+    "Strategic Report 'key financial performance indicators' table, which was the only source available "
+    "before the Pillar 3 report was recovered. The Pillar 3 report gives 90% and 96% for the same two "
+    "years - in its Section 1.4 summary ('Tier 1 Capital ratio') and, for FY2022, again in its Section 10 "
+    "own-funds table, where CET1, Tier 1 and Total capital ratios are each printed as 90%. The Pillar 3 "
+    "figures are now carried because they are internally consistent with the capital amounts and RWAs on "
+    "these same sheets (6,172/6,822 = 90.5%; 8,314/8,648 = 96.1%), whereas retaining 91%/97% alongside "
+    "those amounts would have left the sheets arithmetically self-contradictory. The ~0.5pp difference is "
+    "a genuine source-basis difference between the two documents, NOT a rounding artefact and NOT an error "
+    "in either - it is documented, not resolved. No ratio here is back-solved: every value is printed in "
+    "the source.\n"
+    "CITATION TRAP - DO NOT 'SIMPLIFY' THE SOURCE URL. The FY2022 report is cited above at a Wayback "
+    "snapshot. The live URL bearing the FY2022 filename "
+    "(birminghambank.com/wp-content/uploads/Birmingham-Bank-Pillar-3-Disclosures-2022-final.pdf) returns "
+    "HTTP 200 but now serves the FY2023 DOCUMENT - the Bank re-uploaded over it. Only the snapshot reaches "
+    "the real FY2022 edition, verified on fetch by its own cover line 'For the year ended 31 December "
+    "2022'. Rewriting the citation to the live URL would silently repoint every figure above at the wrong "
+    "year."
+)
 
 CAPITAL_FIGURE_NOTE = (
     "The Pillar 3 report's own Section 1.4 'Summary Analysis' headline FY2024 Tier 1 capital (GBP35,985k, "
@@ -318,18 +413,24 @@ CAPITAL_FIGURE_NOTE = (
     "no such discrepancy - both of the report's tables agree at GBP18,617k."
 )
 
-metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", TOTAL_CAPITAL)], note=CAPITAL_FIGURE_NOTE)
-metric("CET1 Ratio", "%", [("CET1 Ratio (= Capital Adequacy Ratio)", CAPITAL_RATIO)])
-metric("Tier 1 Capital", "£'000", [("Tier 1 capital", TOTAL_CAPITAL)], note=SINGLE_TIER_NOTE + " " + CAPITAL_FIGURE_NOTE)
-metric("Tier 1 Ratio", "%", [("Tier 1 Capital ratio", CAPITAL_RATIO)])
-metric("Total Capital", "£'000", [("Total capital", TOTAL_CAPITAL)], note=SINGLE_TIER_NOTE + " " + CAPITAL_FIGURE_NOTE)
-metric("Total Capital Ratio", "%", [("Total Capital Ratio (= Capital Adequacy Ratio)", CAPITAL_RATIO)])
+metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", TOTAL_CAPITAL)],
+       note=CAPITAL_FIGURE_NOTE + "\n" + CAPITAL_2022_NOTE)
+metric("CET1 Ratio", "%", [("CET1 Ratio (= Capital Adequacy Ratio)", CAPITAL_RATIO)],
+       note=CAPITAL_2022_NOTE)
+metric("Tier 1 Capital", "£'000", [("Tier 1 capital", TOTAL_CAPITAL)],
+       note=SINGLE_TIER_NOTE + " " + CAPITAL_FIGURE_NOTE + "\n" + CAPITAL_2022_NOTE)
+metric("Tier 1 Ratio", "%", [("Tier 1 Capital ratio", CAPITAL_RATIO)],
+       note=CAPITAL_2022_NOTE)
+metric("Total Capital", "£'000", [("Total capital", TOTAL_CAPITAL)],
+       note=SINGLE_TIER_NOTE + " " + CAPITAL_FIGURE_NOTE + "\n" + CAPITAL_2022_NOTE)
+metric("Total Capital Ratio", "%", [("Total Capital Ratio (= Capital Adequacy Ratio)", CAPITAL_RATIO)],
+       note=CAPITAL_2022_NOTE)
 metric("Total RWAs", "£'000", [("Total risk-weighted assets", RWA)], note=RWA_NOTE)
 
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk", {"FY2024": 46037, "FY2023": 4056}),
-    ("DATA", "Operational risk", {"FY2024": 1296, "FY2023": 1045}),
-    ("TOTAL", "Total RWAs (Pillar 1)", {"FY2024": 47333, "FY2023": 5101}),
+    ("DATA", "Credit risk", {"FY2024": 46037, "FY2023": 4056, "FY2022": 5797, "FY2021": 7133}),
+    ("DATA", "Operational risk", {"FY2024": 1296, "FY2023": 1045, "FY2022": 1025, "FY2021": 1515}),
+    ("TOTAL", "Total RWAs (Pillar 1)", {"FY2024": 47333, "FY2023": 5101, "FY2022": 6822, "FY2021": 8648}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -338,14 +439,36 @@ bw.add_rwa_breakdown_sheet(
     rows=rwa_breakdown_rows,
     sources_text=p3_sources()
     + "\n\nThe Bank has no exposure to market risk under Pillar 1 (per the Pillar 3 report's own statement) "
-    "- credit risk and operational risk are the only two categories. FY2022/FY2021 not disclosed: no Pillar 3 "
-    "document covers those years (matches the gap already documented on the Total RWAs sheet).",
+    "- credit risk and operational risk are the only two categories.\n\n"
+    "FY2022 & FY2021 ADDED 2026-09-15, correcting a prior claim. This sheet previously stated that 'no "
+    "Pillar 3 document covers those years'. That was wrong: a Wayback CDX sweep of birminghambank.com "
+    "recovered 'Birmingham-Bank-Pillar-3-Disclosures-2022-final.pdf', a genuine text-layer Pillar 3 report "
+    "headed 'For the year ended 31 December 2022', whose Section 5.2 RWA detail table gives both FY2022 and "
+    "its FY2021 comparative:\n"
+    "  FY2022 - total credit risk exposure 5,797 + operational risk 1,025 = 6,822\n"
+    "  FY2021 - total credit risk exposure 7,133 + operational risk 1,515 = 8,648\n"
+    "Both tie exactly to that same document's Section 1.4 'Summary Analysis' headline Risk Weighted assets "
+    f"row (6,822 and 8,648). Source: {P3_2022_URL}\n"
+    "FY2022 is further corroborated INDEPENDENTLY by the FY2023 Pillar 3 report, whose own comparative "
+    "column reproduces 5,797 + 1,025 = 6,822 exactly. A third consistency check: this document's Section "
+    "1.4 liquidity coverage ratios (FY2022 2,983%, FY2021 16,250%) reproduce the LCR figures already "
+    "carried on this workbook's LCR sheet for those years, confirming the same entity and basis.\n\n"
+    "CITATION TRAP - do not 'simplify' the FY2022 URL to the live one. The bank has re-uploaded its FY2023 "
+    "report OVER that filename, so the live "
+    "https://www.birminghambank.com/wp-content/uploads/Birmingham-Bank-Pillar-3-Disclosures-2022-final.pdf "
+    "returns HTTP 200 but serves the year-ended-31-December-2023 document. The Wayback snapshot above is "
+    "the only reliable route to the real FY2022 edition. (Verified 2026-09-15: the live file's first page "
+    "reads 'For the year ended 31 December 2023'.)\n\n"
+    "Also recovered but NOT used: a 'Birmingham-Bank-Pillar-3.pdf' for the year ended 31 December 2020, "
+    "archived 2021-08-05. FY2020 is outside this workbook's YEARS range, so it is recorded here only as a "
+    "known-existing document should the range ever be extended.",
     first_col_width=46,
     source_height=200,
     unit_suffix=" (£'000)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE)])
+metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE)],
+       note=CAPITAL_2022_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)],
        note="FY2022/FY2023 figures (2,983% / 11,351%) are genuinely this large - a small, low-loan-volume "
             "bank holding a large liquidity buffer relative to its (paused) lending book during its 2023 "

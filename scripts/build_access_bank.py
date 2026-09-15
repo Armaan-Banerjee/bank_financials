@@ -160,12 +160,30 @@ def p3_sources():
         f"column) & Pillar 3 Disclosures 2021, p.15 (UK CC1) & p.21 (LR2) - {P3_2022_URL}\n"
         f"FY2019: Pillar 3 Disclosures 2020, p.6 (Section 1.7 FY2019 comparative) and p.17/p.20 (Pillar 1 / leverage "
         f"comparatives) - {P3_2020_URL}\n"
-        "No FY2024 Pillar 3 Disclosures document has been found (the Bank's Reports page showed only the 2023 "
-        "edition as of the most recent available Wayback Machine snapshot, 16 Nov 2025). However, the FY2024 "
-        "Annual Report's KPI table provides entity-level Tier 1 capital ratio (20.18%) and point-in-time LCR "
-        "(176.65%); these are populated where the workbook's metric basis matches. FY2020 LCR/NSFR were not found in any source (narrative-only LCR in the FY2021 "
-        "Pillar 3 report gives a single FY2021 point figure, no FY2020 comparative; the UK NSFR framework may not "
-        "yet have covered FY2020) - left blank."
+        f"FY2024 (capital amounts): Report & Financial Statements 2024, p.59, Note 27g 'Capital management "
+        f"(Bank)', 'Capital Resources' table - Total tier 1 capital / Total regulatory capital $750,775,693 "
+        f"(shown here as 750,776 $'000 before conversion) - {AR2024_URL}\n"
+        "No FY2024 Pillar 3 Disclosures document exists. Re-verified 15 September 2026: nine filename "
+        "permutations under the Bank's /wp-content/uploads/ CDN (2025/06, 2025/09, 2025/12, 2026/01, 2026/06, "
+        "2026/07 folders) all return the site's 404 page, and a Wayback CDX sweep of the whole domain filtered "
+        "on 'pillar' returns exactly five documents, the newest being the 2023 edition. The Bank's HTML pages "
+        "return HTTP 403 to both curl and automated fetchers (Cloudflare), so the CDN and Wayback are the only "
+        "routes; both agree. The Bank publishes its Pillar 3 roughly 18 months after year-end (the 2023 edition "
+        "was uploaded in the 2025/06 folder), so a FY2024 edition would be expected around mid-to-late 2026.\n"
+        "For FY2024 the Annual Report substitutes ONLY where the basis is verified identical. The AR's Note 27g "
+        "capital table is the same basis as the Pillar 3: its FY2023 comparative of $676,943,850 reproduces the "
+        "FY2023 Pillar 3 CET1/Tier 1/Total capital figure of 676,944 $'000 EXACTLY, and the note confirms "
+        "'the Bank's regulatory capital consists only of Tier 1 capital', matching the CET1 = Tier 1 = Total "
+        "capital treatment used in every other year. The AR's Tier 1 Capital Ratio (20.18%) likewise ties to the "
+        "Pillar 3 basis (its FY2023 figure, 22.38%, matches the workbook's 22.4%).\n"
+        "NOT substituted for FY2024, and left blank rather than derived: Total RWAs (the AR gives no RWA figure; "
+        "back-solving $750,775,693 / 20.18% is refused because the ratio is rounded to 2dp, which spans an RWA "
+        "range of roughly $3,719.5m-$3,721.3m); Leverage Ratio (the AR discloses no leverage ratio and no "
+        "leverage exposure measure - total assets of $6,125.4m is NOT the exposure measure, which includes "
+        "off-balance-sheet items); and NSFR (the AR contains no NSFR or stable-funding disclosure at all - "
+        "'stable funding' returns zero hits in the document). FY2020 LCR/NSFR were not found in any source "
+        "(narrative-only LCR in the FY2021 Pillar 3 report gives a single FY2021 point figure, no FY2020 "
+        "comparative; the UK NSFR framework may not yet have covered FY2020) - left blank."
     )
 
 
@@ -582,7 +600,7 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=130)
 
 
-CET1_TIER1_TOTAL_USD = {"FY2023": 676944, "FY2022": 486842, "FY2021": 377827, "FY2020": 338920}
+CET1_TIER1_TOTAL_USD = {"FY2024": 750776, "FY2023": 676944, "FY2022": 486842, "FY2021": 377827, "FY2020": 338920}
 RWA_USD = {"FY2023": 3024867, "FY2022": 2459345, "FY2021": 1726764, "FY2020": 1841957}
 LEVERAGE_EXPOSURE_USD = {"FY2023": 4246733, "FY2022": 4061990, "FY2021": 3379955, "FY2020": 2595307}
 HQLA_USD = {"FY2023": 902038, "FY2022": 1053232, "FY2021": 807121}
@@ -592,7 +610,10 @@ NSFR_RSF_USD = {"FY2023": 1114383, "FY2022": 992570, "FY2021": 906296}
 
 CET1_RATIO = {"FY2024": "20.18%", "FY2023": "22.4%", "FY2022": "19.8%", "FY2021": "21.88%", "FY2020": "18.40%"}
 LEVERAGE_RATIO = {"FY2023": "15.9%", "FY2022": "12.0%", "FY2021": "11.18%", "FY2020": "13.07%"}
-LCR_RATIO = {"FY2024": "176.65%", "FY2023": "365.6%", "FY2022": "450.5%", "FY2021": "370.6%"}
+LCR_RATIO = {"FY2023": "365.6%", "FY2022": "450.5%", "FY2021": "370.6%"}
+# Point-in-time year-end LCR - a DIFFERENT basis from the KM1 12-month-average row
+# above, kept as its own row rather than blended into it. See the LCR sheet note.
+LCR_POINT_IN_TIME = {"FY2024": "176.65%", "FY2023": "275.47%"}
 NSFR_RATIO = {"FY2023": "168.6%", "FY2022": "147.9%", "FY2021": "196.8%"}
 
 metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", p3_stock(CET1_TIER1_TOTAL_USD))], p3_sources())
@@ -664,16 +685,23 @@ metric(
     [
         ("Total high-quality liquid assets (HQLA), weighted value", p3_stock(HQLA_USD)),
         ("Total net cash outflows, adjusted value", p3_stock(NET_CASH_OUTFLOWS_USD)),
-        ("Liquidity Coverage Ratio (%)", LCR_RATIO),
+        ("Liquidity Coverage Ratio (%) (KM1, average of preceding 12 months)", LCR_RATIO),
+        ("Liquidity Coverage Ratio (%) (point-in-time at 31 December)", LCR_POINT_IN_TIME),
     ],
     p3_sources(),
-    note="FY2021's $ breakdown (HQLA/net cash outflows) is sourced from the FY2022 Pillar 3 report's comparative "
-        "column - the FY2021 Pillar 3 report itself only states a single narrative LCR percentage (343.9%, "
-         "a slightly different figure from the 370.6% shown here), not a KM1-style table with a $ breakdown. The "
-         "two FY2021 percentages differ slightly, most likely because the narrative figure is a different point-"
-         "in-time/averaging convention than the KM1 template's 'average of preceding twelve months' basis used "
-         "here - both are the Bank's own disclosures, this workbook uses the KM1-consistent figure. FY2020 not "
-         "found in any source.",
+    note="TWO DIFFERENT BASES, deliberately kept on separate rows. The KM1 row is the Bank's 'average of "
+         "preceding twelve months' figure and is the basis used for FY2021-FY2023. The point-in-time row is the "
+         "Bank's year-end spot LCR. They are NOT comparable: for FY2023 the Bank discloses BOTH - 365.6% on the "
+         "KM1 average basis (Pillar 3 Disclosures 2023, p.6 row 17) and 275.5% at 31 December 2023 (same "
+         "document, Section 8 narrative), a 90-point gap. FY2024 has no Pillar 3 report, so only the "
+         "point-in-time figure (176.65%, per the Annual Report 2024 KPI table) exists; it is shown on the "
+         "point-in-time row and the KM1 average row is left BLANK for FY2024 rather than continued with a "
+         "different-basis number. An earlier revision of this workbook placed 176.65% directly in the KM1 "
+         "average row, which made the ratio appear to fall 365.6% -> 176.65%; the like-for-like point-in-time "
+         "move is 275.47% -> 176.65%. FY2021's $ breakdown (HQLA/net cash outflows) is sourced from the FY2022 "
+         "Pillar 3 report's comparative column - the FY2021 Pillar 3 report itself only states a single "
+         "narrative LCR percentage (343.9%), not a KM1-style table with a $ breakdown; that narrative figure is "
+         "again a different convention from the 370.6% KM1 figure shown here. FY2020 not found in any source.",
 )
 
 metric(

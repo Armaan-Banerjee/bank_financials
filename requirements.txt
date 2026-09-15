@@ -1,0 +1,30 @@
+# Runtime dependencies for the katalysis bank-financials pipeline.
+#
+# Pinned to the versions this project is developed against (see the Dockerfile).
+# Deliberately NOT included: scipy, scikit-learn and pandas. cluster_banks.py
+# implements k-means on NumPy alone precisely so the pipeline stays runnable in
+# a bare-Python environment - see its module docstring.
+
+# Workbook read/write - every scripts/build_<bank>.py and the insights extractor.
+openpyxl==3.1.5
+
+# k-means clustering in scripts/insights/cluster_banks.py.
+numpy==2.0.2
+
+# NOT listed here on purpose: playwright.
+#
+# It is needed by exactly two files - build_in006_pdf.py (step 22 of
+# refresh_all.py, the client PDF render) and test_pipeline.py - and it drags in
+# a ~400MB Chromium download. The Dockerfile's `full` stage installs it and
+# pins the same version; the `pipeline` and `serve` stages deliberately skip it.
+# Install manually with:  pip install playwright==1.60.0 && playwright install chromium
+#
+# Note the 47-test unit suite (test_build_deliverable, test_extract_metrics)
+# does NOT need it - only test_pipeline.py does.
+
+# PDF text/page extraction in scripts/pdf_tools.py (imported as `fitz`).
+PyMuPDF==1.26.5
+
+# Optional: only scripts/insights/inspect_db_polars.py, a read-only DB explorer
+# that no pipeline step imports. Uncomment if you want that utility available.
+# polars==1.17.1

@@ -613,8 +613,10 @@ metric(
 
 bw.add_rwa_breakdown_sheet(
     title="EFG Private Bank Limited — RWA Breakdown",
-    subtitle="FY2024/FY2023 (UK OV1 template, from Pillar 3 report); FY2022/FY2021 not publicly "
-             "disclosed. £m. See source note at bottom.",
+    subtitle="FY2024/FY2023 (UK OV1 template, from Pillar 3 report, £m); FY2022/FY2021 a coarser "
+             "2-category split (Credit risk vs. all other risk types combined) recovered from the "
+             "Strategic Report (2026-09-12 re-verification) - not the same category basis as FY2023/FY2024, "
+             "see source note.",
     rows=[
         ("DATA", "Credit risk (excluding CCR)", {"FY2024": 1430.2, "FY2023": 1246.2}),
         ("DATA", "  of which standardised approach", {"FY2024": 1430.2, "FY2023": 1246.2}),
@@ -624,17 +626,32 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Settlement risk", {"FY2024": 0, "FY2023": 0}),
         ("DATA", "Operational risk", {"FY2024": 269.0, "FY2023": 279.4}),
         ("DATA", "  of which standardised approach", {"FY2024": 269.0, "FY2023": 279.4}),
-        ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1763.3, "FY2023": 1581.0}),
-        ("DATA", "FY2022 / FY2021: Not publicly disclosed", {}),
+        ("DATA", "Credit RWA (FY2022/FY2021 basis - pre-OV1, likely combines CCR; not directly "
+                 "comparable to the 'Credit risk (excluding CCR)' row above)", {"FY2022": 1273.5, "FY2021": 1086.9}),
+        ("DATA", "Other risk types combined (market, operational, settlement, non-counterparty-related - "
+                 "derived residual: Total RWA less disclosed Credit RWA)", {"FY2022": 250.2, "FY2021": 230.9}),
+        ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1763.3, "FY2023": 1581.0, "FY2022": 1523.7, "FY2021": 1317.8}),
     ],
     sources_text=(
         "Sources - EFG Private Bank Limited's own accounts, Note 34 (Capital management), and its own "
         "standalone Pillar 3 Disclosures report:\n"
         + NOT_DISCLOSED_NOTE +
-        " Even in FY2022/FY2021, when a Total risk weighted assets figure is disclosed (Note 34), it "
-        "is a single aggregate figure only - no breakdown by risk category appears anywhere in Note 34 "
-        "or elsewhere in the accounts in any of the 4 years, confirmed by reading the note in full. "
-        "FY2023 similarly has no breakdown (that year's accounts disclose no RWA figure at all).\n"
+        " Note 34 (Capital management) itself is aggregate-only in every year checked, confirmed by reading "
+        "the note in full each time - no breakdown by risk category appears there.\n"
+        f"FY2022/FY2021 (2026-09-12 re-verification, real data recovered - NOT a genuine non-disclosure as "
+        f"previously claimed): the FY2022 Annual Report and Financial Statements' own Strategic Report, "
+        f"'Capital' section, p.3 - {AR2022_URL} - states: 'Credit RWA increased by £186.6 million to £1,273.5 "
+        f"million (2021: £1,086.9 million) largely due to the increased mortgage book and Treasury investment "
+        f"securities holdings' - a genuine disclosed Credit RWA figure for both years (FY2021 as that year's "
+        f"own comparative). This basis pre-dates the UK OV1 template used from FY2023 onward and does not "
+        f"separately break out CCR/market/operational/settlement risk - Note 34's own text that year describes "
+        f"RWAs as covering 'credit risk, market risk, non-counterparty-related risk, settlement risk, and "
+        f"operational risk' without a category-level table, so 'Other risk types combined' here is a derived "
+        f"residual (Total RWA per Note 34/Strategic Report, less the disclosed Credit RWA figure), not itself "
+        f"a directly disclosed line. The FY2021 Annual Report and Financial Statements' own Strategic Report, "
+        f"p.4 - {AR2021_URL} - was independently checked and confirmed to give only the aggregate Total RWA "
+        f"(£1,317.8m) with no Credit RWA breakdown that year - the FY2021 Credit RWA figure used here comes "
+        f"from the FY2022 report's own comparative column instead.\n"
         "FY2024 IS now available, from the UK OV1 'Overview of risk weighted exposure amounts' "
         "template, p.14 (not p.3, unlike the other Pillar 3 metrics below):\n"
         + PILLAR3_2025_NOTE

@@ -511,7 +511,17 @@ metric(
          "December 2021 to 20.22% in March 2022' following a PRA leverage-framework methodology change, PRA "
          "Policy Statement 21/21). No FY2022-FY2025 year-end leverage ratio figure appears anywhere in any of the "
          "five Annual Financial Reports - AIB UK's 'Capital management and liquidity' section covers CET1/Total "
-         "Capital/RWA/LCR/NSFR every year but never a leverage ratio outside that single FY2021 mention.",
+         "Capital/RWA/LCR/NSFR every year but never a leverage ratio outside that single FY2021 mention.\n"
+         "The FY2022 break is STRUCTURAL, not an unsourced document. PS21/21 (October 2021, effective "
+         "1 January 2022) set the scope of the UK leverage ratio requirement at firms with UK retail deposits "
+         ">= GBP 50bn or non-UK assets >= GBP 10bn (PS21/21 paras 1.6, 2.4 and 5.8). AIB Group (UK) p.l.c. is far "
+         "below both - GBP 10.3bn TOTAL assets and GBP 7.6bn customer deposits at FY2025 - so it ceased to be an "
+         "'LREQ firm' from 1 January 2022, exactly when the disclosure stops. PS21/21 Table 4 (para 5.79) confirms "
+         "the 'additional' leverage disclosures (averaged metrics, buffers, distance to requirement) apply on an "
+         "LREQ basis only. Consistent with this, AIB UK publishes no Pillar 3 document at all: the string "
+         "'Pillar 3' does not appear anywhere in the FY2025 Annual Financial Report, and every capital/liquidity "
+         "figure in this workbook is taken from the Annual Report's own narrative capital section. "
+         "PS21/21 - https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2021/october/ps2121.pdf",
 )
 
 metric(

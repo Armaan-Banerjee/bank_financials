@@ -246,6 +246,32 @@ class FeatureMatrixRowSelection(unittest.TestCase):
         banks, frns, matrix, years, coverage = build_feature_matrix(rows, ratio_sheets=["Leverage Ratio"])
         self.assertEqual(matrix[0, 0], 11.0)  # latest year of the more-populated row A
 
+    def test_blank_ratio_row_does_not_fall_back_to_an_absolute_currency_sibling(self):
+        """Regression for a real bug (found 2026-09-08 via a bug-sweep
+        fork): ICBC Standard Bank's NSFR row is blank every year, so the old
+        fallback picked "Total available stable funding ($m)" - an absolute
+        £m/$m balance, not a percentage - and clustered it alongside every
+        other bank's genuine ~100-300% NSFR values. A currency-labeled row
+        must never stand in for a genuinely undisclosed ratio."""
+        rows = [
+            self._row("ICBC", "1", "NSFR", "Total available stable funding ($m)", "FY2025", "9393", "9393", "1"),
+            self._row("ICBC", "1", "NSFR", "Total required stable funding ($m)", "FY2025", "7000", "7000", "1"),
+        ]
+        banks, frns, matrix, years, coverage = build_feature_matrix(rows, ratio_sheets=["NSFR"])
+        self.assertTrue(np.isnan(matrix[0, 0]), "a currency-labeled absolute row must not stand in for a missing ratio")
+
+    def test_a_regulatory_requirement_row_is_not_clustered_as_the_actual_ratio(self):
+        """Regression for a real bug (found 2026-09-08): Unity Trust Bank's
+        MREL Ratio sheet only ever numerically discloses a "MREL requirement
+        (%)" row - the regulatory minimum, not the bank's actual held MREL
+        ratio. The old logic picked it anyway since it was the only row and
+        carried a "%" marker."""
+        rows = [
+            self._row("UNITY", "1", "MREL Ratio", "MREL requirement (= Total Capital Requirement, %)", "FY2025", "10.69%", "10.69", "1"),
+        ]
+        banks, frns, matrix, years, coverage = build_feature_matrix(rows, ratio_sheets=["MREL Ratio"])
+        self.assertTrue(np.isnan(matrix[0, 0]), "a regulatory requirement row must not be clustered as the actual ratio")
+
     def test_a_bank_with_many_more_disclosed_years_than_its_peer_still_gets_exactly_one_row(self):
         """The historical-depth (HD-series) extension effort gave some real
         banks 10+ years of disclosed data against most banks' standard 5 -

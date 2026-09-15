@@ -486,7 +486,13 @@ RWA_SOURCES = (
     f"FY2018: Pillar 3 Disclosure 2018, Table 8 'EU OV1 - Overview of RWAs', p.13 - {P3_2018_URL}\n"
     f"FY2017: Pillar 3 Disclosure 2017, 'Risk Exposure Amount by Risk Type' chart, p.10 (no OV1-format table "
     f"published that year - the chart's own figures tie exactly to the FY2018 report's restated FY2017 OV1 "
-    f"comparative) - {P3_2017_URL}\n\n"
+    f"comparative) - {P3_2017_URL}\n"
+    f"FY2016: Pillar 3 Disclosure 2016, Table 6 'Capital requirements', p.20 (pre-OV1-template era; shows "
+    f"consolidated Risk Exposure Amount by risk type directly, not a capital-requirement figure needing "
+    f"conversion - Credit risk SA 383 + Counterparty Credit Risk SA 4 + Market risk SA 43 + Operational risk 359 "
+    f"+ Credit Valuation Adjustment 4 = Total 793, tying exactly to that year's Consolidated Total RWA from "
+    f"Table 1 'Capital ratios'; CCR and CVA combined into the 'Counterparty credit risk' row, same treatment as "
+    f"FY2021 above) - {P3_2016_URL}\n\n"
     "Note: FY2021's own report uses the older EU OV1 template, which separately discloses Credit Valuation "
     "Adjustment (CVA) as its own risk type; combined here into the 'Counterparty credit risk' row (£2m CCR + £2m "
     "CVA = £4m) to match the UK OV1 template's grouping used FY2022 onward - the combined figure ties to that "
@@ -496,19 +502,39 @@ RWA_SOURCES = (
     "only (no separate Solo-basis RWA-by-type breakdown exists in any of these 4 reports) - their totals therefore "
     "tie to the Consolidated Total RWA column on the CET1/Tier1/Total Capital Ratio sheets, not the Solo-basis "
     "Total RWAs figure used elsewhere in this workbook (a small, documented gap each year: FY2017 936 vs Solo 881; "
-    "FY2018 1,233 vs Solo 1,211; FY2019 996 vs Solo 994; FY2020 939 = Solo 939, exact tie that year only). FY2016 "
-    "is self-skipped for this sheet specifically - no risk-type breakdown of any kind (OV1 or otherwise) is "
-    "published in the FY2016 Pillar 3 Disclosure, which shows only the aggregate Total RWA figure.\n\n" + ENTITY_NOTE
+    "FY2018 1,233 vs Solo 1,211; FY2019 996 vs Solo 994; FY2020 939 = Solo 939, exact tie that year only; FY2016 "
+    "793 vs Solo 765). FY2016 is now included (2026-09-08 correction): the FY2016 Pillar 3 Disclosure does carry a "
+    "risk-type breakdown after all - not an OV1-format table, but Table 6 'Capital requirements', which discloses "
+    "the same consolidated Risk Exposure Amount (= RWA) by risk type directly (a prior review of this document "
+    "had missed this table).\n\n"
+    "RE-VERIFIED 2026-09-15 (RWA cross-sheet sweep - do not re-flag). A sweep comparing every bank's Total "
+    "RWAs sheet against its own RWA Breakdown total flagged FY2016 (765 vs 793), FY2017 (881 vs 936) and "
+    "FY2018 (1,211 vs 1,233). All three were re-read from the primary documents and the gap is a genuine, "
+    "bank-stated basis difference, NOT the credit-risk-subtotal defect found at Redwood and Ghana "
+    "International. Each of those Pillar 3 Disclosures prints BOTH totals side by side in a two-column "
+    "'Consolidated | Solo' key-metrics table: FY2016 Own Funds table 'Total risk-weighted assets (RWA) 793 "
+    "... 765'; FY2017 'Total risk-weighted assets (RWA) 936 793 881 765' (current and prior year for each "
+    "basis); FY2018 'Total risk-weighted assets (RWA) 1,233 936 1,211 881'. The FY2018 report states the "
+    "reason the breakdown exists on one basis only, in terms: 'There is no material difference in the risk "
+    "profile between solo and consolidated and therefore Capital Requirements and Credit Risk Adjustments "
+    "information is only shown at the consolidated level' (the FY2017 report carries the same sentence). "
+    "The ratio sheets confirm which basis each sheet is on: CET1 412/765 = 53.9% (FY2016), 448/881 = 50.8% "
+    "(FY2017), 618/1,211 = 51.0% (FY2018) - all matching the Solo ratios the documents print, so the Total "
+    "RWAs and ratio sheets are consistently Solo while this sheet is Consolidated for FY2016-FY2019. Note "
+    "'Consolidated' here is BNYMIL's OWN consolidation (the Company plus its subsidiaries - see the FY2018 "
+    "report's 'Basis of consolidation' table listing the Luxembourg Branch, BNY Trust Company Limited and "
+    "BNY Mellon Trust & Depositary (UK) Limited), not a parent-group figure, so no group number has been put "
+    "on an entity-level sheet. Neither figure is to be changed to make the two sheets agree.\n\n" + ENTITY_NOTE
 )
 
 rwa_breakdown_rows = [
     ("SECTION", "RWA by risk category (£m)", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 435, "FY2024": 519, "FY2023": 539, "FY2022": 569, "FY2021": 466, "FY2020": 538, "FY2019": 582, "FY2018": 804, "FY2017": 504}),
-    ("DATA", "Counterparty credit risk (incl. CVA where separately disclosed)", {"FY2025": 1, "FY2024": 1, "FY2023": 0, "FY2022": 0, "FY2021": 4, "FY2020": 8, "FY2019": 6, "FY2018": 4, "FY2017": 0}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 435, "FY2024": 519, "FY2023": 539, "FY2022": 569, "FY2021": 466, "FY2020": 538, "FY2019": 582, "FY2018": 804, "FY2017": 504, "FY2016": 383}),
+    ("DATA", "Counterparty credit risk (incl. CVA where separately disclosed)", {"FY2025": 1, "FY2024": 1, "FY2023": 0, "FY2022": 0, "FY2021": 4, "FY2020": 8, "FY2019": 6, "FY2018": 4, "FY2017": 0, "FY2016": 8}),
     ("DATA", "Securitisation exposures", {"FY2025": 7, "FY2024": 9, "FY2023": 9, "FY2022": 3, "FY2021": 0}),
-    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 12, "FY2024": 12, "FY2023": 14, "FY2022": 12, "FY2021": 16, "FY2020": 10, "FY2019": 14, "FY2018": 32, "FY2017": 66}),
-    ("DATA", "Operational risk", {"FY2025": 592, "FY2024": 577, "FY2023": 489, "FY2022": 415, "FY2021": 352, "FY2020": 383, "FY2019": 394, "FY2018": 393, "FY2017": 366}),
-    ("TOTAL", "Total RWAs", {"FY2025": 1047, "FY2024": 1118, "FY2023": 1051, "FY2022": 999, "FY2021": 838, "FY2020": 939, "FY2019": 996, "FY2018": 1233, "FY2017": 936}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 12, "FY2024": 12, "FY2023": 14, "FY2022": 12, "FY2021": 16, "FY2020": 10, "FY2019": 14, "FY2018": 32, "FY2017": 66, "FY2016": 43}),
+    ("DATA", "Operational risk", {"FY2025": 592, "FY2024": 577, "FY2023": 489, "FY2022": 415, "FY2021": 352, "FY2020": 383, "FY2019": 394, "FY2018": 393, "FY2017": 366, "FY2016": 359}),
+    ("TOTAL", "Total RWAs", {"FY2025": 1047, "FY2024": 1118, "FY2023": 1051, "FY2022": 999, "FY2021": 838, "FY2020": 939, "FY2019": 996, "FY2018": 1233, "FY2017": 936, "FY2016": 793}),
 ]
 
 # ---------------------------------------------------------------
@@ -571,12 +597,22 @@ metric(
     note="FY2024 shown as originally reported (1,118); the FY2025 Pillar 3 Disclosure's comparative column restates "
          "this to 1,091 - see the CET1 Ratio sheet note. FY2016-FY2020 figures are the Solo-basis RWA (the same "
          "basis used FY2021-FY2025) - see the RWA Breakdown sheet's note on the Consolidated-basis EU OV1 tables, "
-         "which show a slightly different total for FY2017-FY2019.",
+         "which show a slightly different total for FY2017-FY2019.\n"
+         "Re-verified 2026-09-15: every FY2016-FY2018 Pillar 3 Disclosure prints the Consolidated and Solo RWA "
+         "side by side (FY2016 793 / 765; FY2017 936 / 881; FY2018 1,233 / 1,211) and this sheet takes the Solo "
+         "column throughout, matching the basis of the ratio sheets (412/765 = 53.9%, 448/881 = 50.8%, "
+         "618/1,211 = 51.0%, all reproducing the documents' own printed Solo ratios). The RWA Breakdown sheet's "
+         "Total is the Consolidated column for FY2016-FY2019 because BNYMIL publishes the risk-type split at "
+         "the consolidated level only - the reports say so explicitly. The difference between the two sheets "
+         "those years is expected and must not be reconciled.",
 )
 
 bw.add_rwa_breakdown_sheet(
     title="The Bank of New York Mellon (International) Limited — RWA Breakdown",
-    subtitle="Entity-level basis, £m.",
+    subtitle="£m. FY2020-FY2025 BNYMIL Solo basis (matching the Total RWAs sheet); FY2016-FY2019 BNYMIL "
+             "Consolidated basis (the Company and its own subsidiaries - the only basis on which those years' "
+             "reports publish a risk-type split), so this sheet's Total exceeds the Total RWAs sheet those "
+             "years by design - see source note.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_SOURCES,
     first_col_width=64,

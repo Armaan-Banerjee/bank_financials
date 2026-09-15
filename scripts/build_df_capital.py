@@ -29,9 +29,35 @@ ENTITY_NOTE = (
     "The FY2021 Pillar 3 document uniquely also discloses a Bank-solo column alongside Group - the "
     "Group column is used throughout for consistency with every later year, which only shows Group. "
     "NSFR was disclosed FY2021-FY2023 but stops appearing in the FY2024 and FY2025 Pillar 3 documents "
-    "entirely (checked directly, not assumed) - plausibly linked to the Group's disclosed opt-in to the "
-    "PRA's Small Domestic Deposit Takers (SDDT) reduced-disclosure regime. MREL not disclosed any year, "
-    "no exemption stated - consistent with a small SDDT-regime institution.\n"
+    "entirely (checked directly, not assumed).\n"
+    "REASON ESTABLISHED 2026-09-15 (cross-bank SDDT pass), replacing the earlier 'plausibly linked' / "
+    "'consistent with' wording, which was an inference rather than evidence. The FY2024 and FY2025 "
+    "NSFR (and MREL) gaps are an EVIDENCED STRUCTURAL REDUCTION IN DISCLOSURE SCOPE, stated by the Group "
+    "itself in the documents concerned. DF Capital is unusual among the SDDTs in this project in that it "
+    "keeps publishing a Pillar 3 document - it just publishes a shorter one - so the gap is a narrowed "
+    "template, not a missing document.\n"
+    "Evidence 1 - the Group's own words, identically in both editions, section 1.3: 'The Group has opted "
+    "into the Small Domestic Deposit Takers ('SDDT') regime at both Consolidated and Bank levels. Having "
+    "received PRA approval, disclosures are prepared in accordance with the regime's reduced disclosure "
+    f"requirements as prescribed by Article 433b.' - Pillar 3 Disclosures at 31 December 2024, p.3 "
+    f"({P3_2024_URL}) and Pillar 3 Disclosures 2025, p.3 ({P3_2025_URL}).\n"
+    "Evidence 2 - Annual Report and Accounts 2025, p.37: 'The Group decided to use the Smaller Domestic "
+    f"Deposit Taker (\"SDDT\") approach to prudential regulation.' - {AR2025_URL}\n"
+    "Evidence 3 - the PRA's own firm-level register. Bank of England consolidated list of waivers and "
+    "modifications granted to PRA-authorised firms (downloaded 2026-09-15) carries the row: FRN 848291, "
+    "'DF Capital Bank Limited', 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT "
+    "Regime - General Application Part', sub rule 'Ru 3.1', waiver ref 'A00009982P.pdf', start date "
+    "'07/03/2025', no end date - https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/"
+    "authorisations/waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv\n"
+    "DATE FIT: the modification took effect 7 March 2025 and the FY2024 Pillar 3 document was published in "
+    "April 2025 - after it - which is why that FY2024 document is already the reduced Article 433b form and "
+    "already states 'Having received PRA approval'. The exemption therefore explains the FY2024 and FY2025 "
+    "narrowing and explains NOTHING about FY2020-FY2023, whose Pillar 3 documents are full-scope and whose "
+    "own MREL absence has a separate cause (no MREL requirement disclosed for an institution of this size in "
+    "any year). Do not read SDDT back onto FY2023 or earlier. No Simplified Retail Deposit Ratio value is "
+    "disclosed, so nothing replaces the NSFR series here. Note also that the Annual Report's reference to "
+    "moving to 'the new SDDT Capital Regime ... from 1st January 2027' (p.82) is the separate, later "
+    "simplified CAPITAL regime, not the disclosure exemption that already applies.\n"
     "HISTORICAL FLOOR NOTE (HD-023, re-verified from primary sources, not assumed from HD-001's GLEIF-"
     "grouping guess): the Bank entity (company 10198535) was incorporated 25 May 2016 as 'Distribution "
     "Finance Capital Ltd', a non-bank specialist lender - it did NOT hold a banking licence and was not "
@@ -491,8 +517,15 @@ NSFR = {"FY2023": "148.2%", "FY2022": "163%", "FY2021": "214%", "FY2020": "253%"
 NO_AT1_NOTE = "No Additional Tier 1 or Tier 2 instruments disclosed any year - Tier 1/Total Capital equal CET1 Capital throughout."
 NSFR_NOTE = (
     "NSFR was disclosed for FY2020-FY2023 but does not appear anywhere in the FY2024 or FY2025 Pillar "
-    "3 documents (confirmed by direct search of both, not assumed) - plausibly linked to the Group's "
-    "disclosed opt-in to the PRA's Small Domestic Deposit Takers (SDDT) reduced-disclosure regime."
+    "3 documents (confirmed by direct search of both, not assumed). STRUCTURALLY EXEMPT, not undisclosed "
+    "(established 2026-09-15): both of those documents state at p.3 that 'The Group has opted into the "
+    "Small Domestic Deposit Takers ('SDDT') regime at both Consolidated and Bank levels. Having received "
+    "PRA approval, disclosures are prepared in accordance with the regime's reduced disclosure requirements "
+    "as prescribed by Article 433b.' The PRA's own register confirms the underlying instrument - Rule 3.1 "
+    "SDDT modification by consent, ref A00009982P.pdf, effective 07/03/2025. NSFR is one of the items the "
+    "reduced template drops; becoming an SDDT also replaces the full NSFR with a Simplified Retail Deposit "
+    "Ratio, which this Group does not publish a value for. So FY2024/FY2025 NSFR is a regulatory absence, "
+    "not a search miss. This says nothing about FY2020-FY2023, which are disclosed in full above."
 )
 
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)], "4")
@@ -505,22 +538,22 @@ metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", TOTAL_RW
 
 bw.add_rwa_breakdown_sheet(
     title="DF Capital Bank Limited — RWA Breakdown",
-    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000 (UK OV1 template). See source note at bottom.",
+    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000 (UK OV1 template). FY2023 category split OCR-recovered from an image-rendered table (2026-09-12). See source note at bottom.",
     rows=[
         ("DATA", "Credit risk (excluding CCR)",
-        {"FY2025": 533039, "FY2024": 388533, "FY2022": 369638, "FY2021": 211065, "FY2020": 90139}),
+        {"FY2025": 533039, "FY2024": 388533, "FY2023": 323338, "FY2022": 369638, "FY2021": 211065, "FY2020": 90139}),
         ("DATA", "Counterparty credit risk (CCR) - of which standardised approach",
-         {"FY2025": 2259, "FY2024": 1635, "FY2022": 662}),
+         {"FY2025": 2259, "FY2024": 1635, "FY2023": 1651, "FY2022": 662}),
         ("DATA", "Counterparty credit risk (CCR) - of which credit valuation adjustment (CVA)",
-         {"FY2025": 1027, "FY2024": 2371, "FY2022": 367}),
+         {"FY2025": 1027, "FY2024": 2371, "FY2023": 751, "FY2022": 367}),
         ("TOTAL", "Counterparty credit risk (CCR), total",
-         {"FY2025": 3286, "FY2024": 4006, "FY2022": 1029}),
+         {"FY2025": 3286, "FY2024": 4006, "FY2023": 2402, "FY2022": 1029}),
         ("DATA", "Operational risk (Basic Indicator Approach)",
-         {"FY2025": 87281, "FY2024": 65026, "FY2022": 11305, "FY2021": 5288, "FY2020": 5288}),
+         {"FY2025": 87281, "FY2024": 65026, "FY2023": 21294, "FY2022": 11305, "FY2021": 5288, "FY2020": 5288}),
         ("TOTAL", "Total RWAs",
          {"FY2025": 623607, "FY2024": 457565, "FY2023": 347034, "FY2022": 381972, "FY2021": 216353, "FY2020": 95427}),
         ("DATA", "Securitisation exposures in the non-trading book (after the cap, deducted from CET1 - not part of Total RWAs)",
-         {"FY2025": 10942, "FY2024": 10095, "FY2020": 0}),
+         {"FY2025": 10942, "FY2024": 10095, "FY2023": 11281, "FY2020": 0}),
     ],
     sources_text=(
         "Sources - Distribution Finance Capital Holdings plc Pillar 3 Disclosures, 'Overview of risk "
@@ -536,10 +569,13 @@ bw.add_rwa_breakdown_sheet(
         f"explicit GBP0k rather than blank) - {P3_2020_URL}\n"
         f"FY2022: DF Capital Pillar 3 Disclosures at 31 December 2022, p.22 (FY2022 OV1-style table) - {P3_2022_URL}; "
         "the FY2022 table discloses credit risk £369,638k and operational risk £11,305k, with CCR £1,029k "
-        "(including standardised £662k and CVA £367k), all summing to total RWA £381,972k. FY2023: the "
-        "FY2023 Pillar 3 document (DF Capital Pillar III 2024) was checked but its available UK KM1 table did "
-        "not yield an OV1-style category breakdown, so FY2023 category cells remain blank while aggregate total "
-        "RWA £347,034k remains populated.\n"
+        "(including standardised £662k and CVA £367k), all summing to total RWA £381,972k. "
+        f"FY2023 (2026-09-12 re-verification): DF Capital Pillar III 2024, p.15 - {P3_2023_URL}. The OV1-style "
+        "table is rendered as an image within the PDF (no text layer for this specific table, hence the earlier "
+        "'not recoverable' claim - confirmed via OCR at 300dpi, p.15, section 3.4 'Approach to RWAs'): credit "
+        "risk (excl. CCR) £323,338k [standardised approach, same figure], CCR £2,402k (of which standardised "
+        "£1,651k, of which CVA £751k), operational risk £21,294k, securitisation exposures (after cap) £11,281k "
+        "(n/a for own-funds deduction that year), total RWA £347,034k - ties exactly to the Total RWAs sheet.\n"
         + ENTITY_NOTE
     ),
     first_col_width=70,
@@ -553,7 +589,13 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "4", note=NSFR_NOTE)
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources("n/a"),
-    per_note={"MREL Ratio": "Not publicly disclosed any year, no exemption stated - consistent with a small SDDT-regime institution."},
+    per_note={"MREL Ratio": (
+        "Not publicly disclosed in any year (FY2020-FY2025), and no document states an MREL exemption. "
+        "The earlier gloss 'consistent with a small SDDT-regime institution' was removed 2026-09-15 as an "
+        "unevidenced inference: the Group's SDDT opt-in is now separately evidenced (see ENTITY NOTE) but "
+        "it is dated 07/03/2025 and so cannot account for the FY2020-FY2023 MREL blanks, and no source "
+        "links SDDT status to the MREL absence in any year. Recorded simply as not disclosed."
+    )},
 )
 
 # ---------------------------------------------------------------

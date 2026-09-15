@@ -14,6 +14,8 @@ P3_2024_URL = "https://assets.gatehousebank.com/production/downloads/Gatehouse-B
 P3_2023_URL = "https://assets.gatehousebank.com/production/downloads/Gatehouse-Bank-Pillar-III-Disclosure-2023-FINAL.pdf"
 P3_2022_URL = "https://gatehousebank.com/downloads/gatehouse-bank-pillar-3-disclosure-2022"
 P3_2021_URL = "https://assets.gatehousebank.com/production/downloads/Gatehouse-Bank-Pillar-III-Disclosure-2021-FINAL_2022-08-23-154942_nofu.pdf"
+P3_2017_URL = "https://assets.gatehousebank.com/production/downloads/gatehousebankpillariiidisclosure2017.pdf"
+PUBLICATIONS_INDEX_URL = "https://gatehousebank.com/about-us/corporate-governance"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: Gatehouse Bank Plc (FRN 475346, company 06260053) is a UK Shariah-compliant "
@@ -44,8 +46,12 @@ ENTITY_NOTE = (
     "originally-published Annual Report figures are used here, consistent with every other year using "
     "its own primary source rather than a later restated comparative.\n\n"
     f"FY2017: Annual Report and Financial Statements 2017, pp.33-36 - {AR2017_URL}\n"
-    "FY2017 Pillar 3 key metrics were not published in the 2017 annual report; regulatory metric cells are "
-    "left blank rather than inferred from the financial statements.\n\n"
+    "FY2017 Pillar 3 key metrics are not in the 2017 annual report, but they ARE published - in the Bank's "
+    "separate Pillar III Disclosure 2017, which was located and read on 2026-09-15 and now populates the "
+    f"FY2017 column of every regulatory metric sheet except NSFR - {P3_2017_URL}\n"
+    "(This supersedes an earlier note here which said FY2017 regulatory cells were 'left blank rather than "
+    "inferred from the financial statements'. Nothing needed to be inferred: the wrong document had been "
+    "checked. See the FY2017 note on the metric sheets for the full derivation and cross-checks.)\n\n"
     "Full opening-to-closing cash balance chain (including the separately-disclosed FX effect on cash) "
     "ties exactly across all available years."
 )
@@ -66,6 +72,10 @@ CASH_FLOW_SOURCES = (
 def p3_sources(page, extra=""):
     return (
         f"Sources - Gatehouse Bank Plc Pillar 3 disclosures, Article 447 Key Metrics table, p.{page}:\n"
+        f"FY2017: Pillar III Disclosure 2017 - Key Metrics table p.3, s.5 Capital Resources p.11, s.6 p.12, "
+        f"s.9 p.19, Appendix 1 (Own Funds Disclosure) p.26 and Appendix II (Analysis of Leverage Ratio) p.27. "
+        f"This is the CRD IV-era predecessor of the Article 447 template, not the template itself - "
+        f"{P3_2017_URL}\n"
         f"FY2024: Pillar III Disclosure 2024 (Dec-24 column) - {P3_2024_URL}\n"
         f"FY2023: Pillar III Disclosure 2023 (Dec-23 column) - {P3_2023_URL}\n"
         f"FY2022: Pillar III Disclosure 2022 (Dec-22 column, own year's disclosure - see restatement "
@@ -73,8 +83,60 @@ def p3_sources(page, extra=""):
         f"FY2021: Annual Report and Financial Statements 2021, s.5 Capital Resources, p.11 (own "
         f"year-end capital resources note, cross-validated against the 2022 Pillar 3 disclosure's "
         f"Dec-21 comparative column) - {AR2021_URL}\n"
-        f"FY2025: not yet published as at build date - Pillar 3 disclosures are typically published "
-        f"some months after the Annual Report; left blank rather than guessed.\n"
+        f"SDDT DATE TEST (checked 2026-09-15): the PRA's consolidated register of waivers and modifications "
+        f"('Consolidated Waivers list for PRA-regulated firms - as of 1 July 2026', bankofengland.co.uk/"
+        f"prudential-regulation/authorisations/waivers-and-modifications-of-rules) records that Gatehouse Bank "
+        f"Plc (FRN 475346) holds a 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT "
+        f"Regime - General Application Part', sub-rule 'Ru 3.1', starting 08/01/2026 with no end date. That "
+        f"modification removes the Pillar 3 disclosure obligation outright (a stronger relief than UK CRR "
+        f"Article 433b, which only reduces frequency and content for small and non-complex institutions).\n"
+        f"Crucially, 08/01/2026 falls EIGHT DAYS AFTER the FY2025 year-end of 31 December 2025 (year-end "
+        f"confirmed 31 December throughout the Bank's Companies House accounts filing history, company "
+        f"06260053). FY2025 therefore PREDATES the modification and is NOT structurally exempt - the Bank was "
+        f"still subject to the disclosure obligation for that year. This is corroborated independently by the "
+        f"fact that the FY2025 Pillar 3 document demonstrably EXISTS (the Annual Report says it is 'available "
+        f"on request', see below): the obligation was live and was met, just not by general publication. The "
+        f"FY2025 blanks below are therefore an ACCESS gap, not a structural one, and are recoverable by "
+        f"requesting the document from the Bank.\n"
+        f"Forward-looking: FY2026 (year ending 31 December 2026) is the first year that falls after the "
+        f"modification took effect, so from FY2026 onward these blanks are expected to become structural.\n"
+        f"FY2025: no FY2025 Pillar 3 disclosure has been published. The Bank's own Annual Report 2025 "
+        f"confirms the document is not on general release - 'Pillar 3 disclosures are presented in the \"Pillar 3 "
+        f"Disclosures\" document, available on request' (Notes to the Financial Statements, p.125) - and no "
+        f"2025 file exists under the CDN naming pattern that serves every prior year, nor in the site's "
+        f"downloads sitemap, nor in the Wayback CDX index for the domain (newest Pillar 3 capture is the "
+        f"2024 report, 11 June 2026).\n"
+        f"RE-VERIFIED 2026-09-15 against the Bank's own LIVE publications index rather than by URL guessing - "
+        f"{PUBLICATIONS_INDEX_URL}. That page lists Pillar 3 disclosures for 2017, 2018, 2019, 2020, 2021, "
+        f"2022, 2023 and 2024 and NO 2025 edition, while listing the Annual Report 2025 - i.e. the Bank has "
+        f"published its FY2025 annual report but not its FY2025 Pillar 3, exactly as the annual report says "
+        f"('published as soon as practicable AFTER the publication of the annual report'). An unfiltered "
+        f"Wayback CDX sweep of the whole gatehousebank.com domain (6,938 captures) independently returns the "
+        f"same eight Pillar 3 documents and no 2025 one. So FY2025 is a live access gap that may simply close "
+        f"on its own when the Bank publishes; it is worth re-checking this index before requesting the "
+        f"document. The same index is what exposed the FY2017 disclosure this project had been missing.\n"
+        f"FY2025 is therefore populated ONLY where the Annual Report 2025 prints a figure that is provably "
+        f"on the same basis as the Pillar 3 series. That is true of the capital AMOUNTS and false of the "
+        f"RATIOS, so they are treated differently:\n"
+        f"  - AMOUNTS (same basis, used): the regulatory capital note on p.126 gives Total regulatory "
+        f"capital of GBP111,120k for 2025 and GBP127,083k for 2024. That 2024 comparative equals the "
+        f"GBP127.1m this workbook already carries from the FY2024 Pillar 3 disclosure, so the note is "
+        f"like-for-like and FY2025 Total Capital is taken from it - {AR2025_URL}\n"
+        f"  - RATIOS (different basis, NOT used): the Annual Report's KPI table (p.21) gives a 2025 CET1 "
+        f"ratio of 15.74% and leverage ratio of 6.53%, but its own 2024 comparatives (16.56% and 7.29%) do "
+        f"NOT match the FY2024 Pillar 3 figures carried here (17.1% and 7.4%). The Annual Report defines "
+        f"its CET1 ratio as 'Tier 1 common equity / risk weighted assets' and its leverage ratio as 'Tier 1 "
+        f"Capital / Total exposures' on an accounting exposure measure, which is not the Article 447 "
+        f"basis. Mixing the two would create a false break in the series, so the CET1 Ratio, Tier 1 Ratio, "
+        f"Total Capital Ratio and Leverage Ratio sheets are left blank for FY2025 rather than blended.\n"
+        f"  - NOT PRINTED AT ALL: the Annual Report gives no RWA total, no LCR and no NSFR for 2025, so "
+        f"those sheets are blank too. Its capital note also stops at components - Core Tier 1 subtotal "
+        f"GBP109,790k less Deductions from CET1 GBP(17,609)k, plus Tier 2 GBP18,939k, totalling "
+        f"GBP111,120k - without printing CET1 net of deductions, so the CET1 Capital and Tier 1 Capital "
+        f"sheets are blank for FY2025 rather than carrying a figure this project would have had to compute "
+        f"itself. (For reference, that subtraction on the 2024 column reproduces GBP108.6m, exactly the "
+        f"FY2024 Pillar 3 CET1 figure used here, so the missing FY2025 CET1 is recoverable the moment the "
+        f"Pillar 3 document is obtained - it is requestable from the Bank.)\n"
         f"RESTATEMENT NOTE: the FY2023 Pillar 3 disclosure's own Dec-22 comparative column shows CET1 "
         f"capital of GBP98.0m / RWA of GBP579.1m / ratios of 16.9%/16.9%/18.5% / leverage 7.1% - "
         f"different from the FY2022 disclosure's own Dec-22 ('T') figures used here (GBP103.2m / "
@@ -502,25 +564,74 @@ def metric(name, unit, rows_data, page, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(page), note=note, first_col_width=48, source_height=260)
 
 
-CET1_CAPITAL = {"FY2024": 108.6, "FY2023": 108.2, "FY2022": 103.2, "FY2021": 94.5}
-TOTAL_CAPITAL = {"FY2024": 127.1, "FY2023": 126.7, "FY2022": 112.2, "FY2021": 103.5}
-TOTAL_RWA = {"FY2024": 636.7, "FY2023": 644.8, "FY2022": 594.7, "FY2021": 523.0}
-CET1_RATIO = {"FY2024": "17.1%", "FY2023": "16.8%", "FY2022": "17.4%", "FY2021": "18.1%"}
-TOTAL_CAPITAL_RATIO = {"FY2024": "20.0%", "FY2023": "19.6%", "FY2022": "18.9%", "FY2021": "19.8%"}
-LEVERAGE_RATIO = {"FY2024": "7.4%", "FY2023": "7.3%", "FY2022": "7.5%", "FY2021": "9.2%"}
-LCR = {"FY2024": "447.6%", "FY2023": "691.6%", "FY2022": "350.7%", "FY2021": "365.4%"}
+CET1_CAPITAL = {"FY2024": 108.6, "FY2023": 108.2, "FY2022": 103.2, "FY2021": 94.5, "FY2017": 95.6}
+CET1_CAPITAL_DERIVED = {"FY2025": 92.2}
+TOTAL_CAPITAL = {"FY2025": 111.1, "FY2024": 127.1, "FY2023": 126.7, "FY2022": 112.2, "FY2021": 103.5, "FY2017": 95.6}
+TOTAL_RWA = {"FY2024": 636.7, "FY2023": 644.8, "FY2022": 594.7, "FY2021": 523.0, "FY2017": 256.2}
+CET1_RATIO = {"FY2024": "17.1%", "FY2023": "16.8%", "FY2022": "17.4%", "FY2021": "18.1%", "FY2017": "37.3%"}
+TOTAL_CAPITAL_RATIO = {"FY2024": "20.0%", "FY2023": "19.6%", "FY2022": "18.9%", "FY2021": "19.8%", "FY2017": "37.3%"}
+LEVERAGE_RATIO = {"FY2024": "7.4%", "FY2023": "7.3%", "FY2022": "7.5%", "FY2021": "9.2%", "FY2017": "37.8%"}
+LEVERAGE_EXPOSURE = {"FY2017": 253.3}
+LCR = {"FY2024": "447.6%", "FY2023": "691.6%", "FY2022": "350.7%", "FY2021": "365.4%", "FY2017": "641.3%"}
+LCR_BUFFER = {"FY2017": 25.4}
+LCR_OUTFLOWS = {"FY2017": 4.0}
 NSFR = {"FY2024": "153.5%", "FY2023": "151.1%", "FY2022": "150.6%"}
 
-NO_AT1_NOTE = "No Additional Tier 1 or Tier 2 instruments disclosed any year - Tier 1 capital equals CET1 capital throughout."
-NSFR_NOTE = "Not disclosed for FY2021 - the Article 447 Key Metrics NSFR rows first appear from the FY2022 Pillar 3 disclosure onward."
+FY2017_NOTE = (
+    "FY2017 RECOVERED 2026-09-15. These cells were previously blank on the stated ground that 'FY2017 "
+    "Pillar 3 key metrics were not published in the 2017 annual report'. That was true of the annual "
+    "report but the wrong document was checked: Gatehouse Bank published a standalone 'Pillar III "
+    "Disclosure 2017', and it is listed on the Bank's own live publications index to this day "
+    "(gatehousebank.com/about-us/corporate-governance, link 'gatehouse-bank-pillar-3-disclosure-2017'). "
+    "It was retrieved and read this session. Its Key Metrics table (p.3) prints CET1 ratio 37.3%, Tier 1 "
+    "ratio 37.3%, Total Capital Ratio 37.3%, Leverage Ratio 37.8% and LCR 641.3% at 31-Dec-17; s.5 "
+    "Capital Resources (p.11) and Appendix 1 (Own Funds Disclosure, p.26) give Total regulatory capital "
+    "of GBP95.6m; s.6 (p.12) states 'Total Risk Weighted assets as at 31 December 2017 amount to "
+    "GBP256.2m'; Appendix II (p.27) gives Total leverage ratio exposure of GBP253.3m; and s.9 (p.19) "
+    "gives a liquidity buffer of GBP25.4m against total net cash outflows of GBP4.0m.\n"
+    "All three ratios reconcile to the amounts: 95.6/256.2 = 37.3%, 95.6/253.3 = 37.7% and the LCR "
+    "buffer/outflow pair is consistent with 641.3% at the disclosed rounding of the outflow figure. "
+    "BASIS NOTE: FY2017 predates the Bank's Article 447/UK KM1 template series (which begins FY2021 "
+    "here), so the FY2017 figures come from the equivalent CRD IV-era disclosure rather than the KM1 "
+    "template. The capital stack also differs in shape - in FY2017 the Bank held no Tier 2 at all, so "
+    "CET1, Tier 1 and Total capital are all GBP95.6m and all three ratios are identically 37.3%; the "
+    "GBP(19.7)m deduction for the significant investment in Gatehouse Capital is a FY2017-specific item "
+    "that does not recur in the later years."
+)
 
-metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)], "32")
-metric("CET1 Ratio", "%", [("CET1 ratio", CET1_RATIO)], "32")
-metric("Tier 1 Capital", "£m", [("Tier 1 capital", CET1_CAPITAL)], "32", note=NO_AT1_NOTE)
-metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], "32", note=NO_AT1_NOTE)
-metric("Total Capital", "£m", [("Total capital", TOTAL_CAPITAL)], "32")
-metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)], "32")
-metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", TOTAL_RWA)], "32")
+NO_AT1_NOTE = ("No Additional Tier 1 instruments disclosed in any year, so Tier 1 capital equals CET1 capital "
+               "throughout. (Correction, this pass: the earlier wording here also claimed no Tier 2 "
+               "instruments. That was wrong - the Bank does hold Tier 2 capital, which is why Total capital "
+               "exceeds CET1 capital every year. Its own Annual Report 2025 regulatory capital note states "
+               "Tier 2 Capital of GBP18,939k at 31 December 2025 and GBP18,500k at 31 December 2024.)")
+NSFR_NOTE = ("Not disclosed for FY2021 - the Article 447 Key Metrics NSFR rows first appear from the FY2022 "
+             "Pillar 3 disclosure onward. CONFIRMED 2026-09-15 by reading the FY2022 edition directly: its NSFR "
+             "section prints 150.6% at 31 December 2022 and a four-quarter table for 2022 alone (Q4 150.6%, Q3 "
+             "144.0%, Q2 144.5%, Q1 137.6%, average 144.2%) with NO 2021 comparative column anywhere - so there "
+             "is no back-route to FY2021 through the later edition, and the blank is structural rather than "
+             "unsourced.")
+
+CET1_DERIVED_LABEL = ("Common Equity Tier 1 (CET1) capital — derived from Annual Report 2025 capital note "
+                      "components (memo, not Pillar 3)")
+CET1_DERIVED_NOTE = (
+    "FY2025 MEMO ROW (added 2026-09-15). The Pillar 3 row above is deliberately blank for FY2025 because no "
+    "FY2025 Pillar 3 disclosure has been published (see the source note). The Annual Report 2025 regulatory "
+    "capital note (p.126) does not print CET1 net of deductions either, but it does print every component of "
+    "it: Core Tier 1 subtotal GBP109,790k less Deductions from CET1 GBP(17,609)k = GBP92,181k, which plus "
+    "Tier 2 GBP18,939k gives the GBP111,120k Total regulatory capital the note states. The same subtraction "
+    "on that note's 2024 column yields GBP108,583k = the GBP108.6m FY2024 Pillar 3 CET1 figure carried above, "
+    "exactly - so the arithmetic is validated against a known year. It is shown as a separate, clearly "
+    "labelled memo row rather than merged into the Pillar 3 series: this is a subtotal completed from "
+    "disclosed components of a single table, NOT a figure back-solved from a ratio, but it is still not the "
+    "Bank's own published Pillar 3 number.")
+
+metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL), (CET1_DERIVED_LABEL, CET1_CAPITAL_DERIVED)], "32", note=FY2017_NOTE + "\n\n" + CET1_DERIVED_NOTE)
+metric("CET1 Ratio", "%", [("CET1 ratio", CET1_RATIO)], "32", note=FY2017_NOTE)
+metric("Tier 1 Capital", "£m", [("Tier 1 capital", CET1_CAPITAL), (CET1_DERIVED_LABEL.replace("Common Equity Tier 1 (CET1)", "Tier 1"), CET1_CAPITAL_DERIVED)], "32", note=NO_AT1_NOTE + "\n\n" + FY2017_NOTE + "\n\n" + CET1_DERIVED_NOTE)
+metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], "32", note=NO_AT1_NOTE + "\n\n" + FY2017_NOTE)
+metric("Total Capital", "£m", [("Total capital", TOTAL_CAPITAL)], "32", note=FY2017_NOTE)
+metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)], "32", note=FY2017_NOTE)
+metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", TOTAL_RWA)], "32", note=FY2017_NOTE)
 
 bw.add_rwa_breakdown_sheet(
     title="Gatehouse Bank Plc — RWA Breakdown",
@@ -573,6 +684,28 @@ bw.add_rwa_breakdown_sheet(
         "own Pillar 3 narrative states it has 'no material exposure to market risk.' FY2025 blank - "
         "Pillar 3 disclosures not yet published as at build date (same gap as the other Pillar 3 sheets "
         "in this workbook).\n"
+        "FY2025 RE-CHECKED 2026-09-15 AND STILL GENUINELY UNPUBLISHED, not a sourcing gap: the Bank's own "
+        f"publications index ({PUBLICATIONS_INDEX_URL}) was fetched live on that date and lists Pillar III "
+        "editions for 2017, 2018, 2019, 2020, 2021, 2022, 2023 and 2024 - and no 2025. Gatehouse's pattern is "
+        "to publish the Pillar 3 well AFTER the Annual Report (the 2024 edition's asset-server timestamp is "
+        "August 2025, five months behind the 2024 Annual Report), so the FY2025 column is expected to fill on "
+        "a later pass rather than to require a different search. The 2018, 2019 and 2020 editions listed on "
+        "that index are outside this workbook's year columns (FY2025-FY2021 plus FY2017) and were not "
+        "transcribed; the 2018 edition was read to check whether it carried a FY2017 RWA comparative for this "
+        "sheet, and it does not - its exposure/RWA tables are 31 December 2018 only.\n"
+        "FY2017 BLANK - EXPLAINED, NOT UNCHECKED (2026-09-15): the Pillar III Disclosure 2017 was located "
+        "and read this session, and it did populate the FY2017 column of every other regulatory metric "
+        f"sheet in this workbook ({P3_2017_URL}). It cannot populate THIS sheet because it contains no "
+        "credit-risk-RWA-by-exposure-class table at all. What it does give is only a whole-Bank split: "
+        "Total RWA GBP256.2m against a Pillar 1 capital requirement of GBP20.5m (s.6, p.12; 20.5/0.08 = "
+        "256.25, consistent), operational risk capital of GBP5.8m (s.9, p.24, implying c.GBP72.5m of "
+        "operational risk RWA on the 8% basis this sheet already uses) and a nil Pillar 1 market risk "
+        "charge (s.8, p.22). Appendix II (p.27) does break exposures down by class - sovereigns GBP13.0m, "
+        "regional govt/MDB/PSE GBP13.9m, institutions GBP59.2m, secured by immovable property GBP82.0m, "
+        "other GBP109.1m - but those are LEVERAGE EXPOSURE amounts, not risk-weighted amounts, and must "
+        "not be entered in an RWA sheet. So FY2017 is a genuine absence of this particular breakdown in "
+        "an otherwise complete disclosure, and is left blank rather than assembled from mismatched "
+        "measures.\n"
         + ENTITY_NOTE
     ),
     first_col_width=76,
@@ -580,9 +713,9 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)], "32")
-metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "32")
-metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "32", note=NSFR_NOTE)
+metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO), ("Total leverage ratio exposure (£m)", LEVERAGE_EXPOSURE)], "32", note=FY2017_NOTE)
+metric("LCR", "%", [("Liquidity coverage ratio", LCR), ("Liquidity buffer (£m)", LCR_BUFFER), ("Total net cash outflows (£m)", LCR_OUTFLOWS)], "32", note=FY2017_NOTE)
+metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "32", note=NSFR_NOTE + " FY2017 likewise predates the UK NSFR regime entirely (the PRA's NSFR requirement and its disclosure template took effect 1 January 2022 under PS17/21 and PS22/21), so the FY2017 blank here is structural, not a sourcing gap - the 2017 Pillar 3 disclosure, which supplied every other FY2017 metric in this workbook, contains no NSFR because none was required.")
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources("n/a"),

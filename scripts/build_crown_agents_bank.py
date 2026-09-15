@@ -475,27 +475,56 @@ metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", CET1_RATIO)],
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", RWA)], p3_sources(), note=RWA_NOTE)
 
 RWA_BREAKDOWN_NOTE = (
-    "FY2021's own Pillar 3 disclosure, p.18, provides the following RWA category breakdown (all £'000): "
-    "Credit Risk 106,588; Counterparty Risk (Derivatives) 1,720; Total Credit Risk Weighted Assets 108,308; "
-    "Settlement Risk and Credit Value Adjustment (CVA) 1,047; Market Risk 5,110; Operational Risk 72,390; "
-    "Total Risk Weighted Assets 186,856. The other years' documents disclose aggregate RWA only in the "
-    "reviewed sections, so their category rows remain not publicly disclosed."
+    "RE-VERIFIED 2026-09-12 (independent fresh check, not just re-reading this note): all 4 previously-blank "
+    "years' Pillar 3 Disclosures were re-downloaded and read in full - each DOES contain a genuine category-"
+    "level RWA breakdown, previously missed.\n\n"
+    "FY2021/FY2022 use an older 'Risk Weighted Assets - Pillar 1' table format (both years' figures, £'000): "
+    "FY2021 - Pillar 3 Disclosures 2021, p.18 - Credit Risk 106,588; Counterparty Risk (Derivatives) 1,720; "
+    "Total Credit Risk Weighted Assets 108,308; Settlement Risk and CVA 1,047; Market Risk 5,110; Operational "
+    "Risk 72,390; Total Risk Weighted Assets 186,856. FY2022 - Pillar 3 Disclosures 2022 (v3), p.5 - Credit "
+    "Risk 136,308; Counterparty Risk (Derivatives) 4,207; Total Credit Risk Weighted Assets 140,515; "
+    "Settlement Risk and CVA 975; Market Risk 5,240; Operational Risk 122,529; Total Risk Weighted Assets "
+    "269,258 (ties exactly to the Total RWAs sheet's FY2022 figure).\n\n"
+    "FY2023-FY2025 use the newer 'UK OV1 - Overview of risk weighted exposure amounts' template (own-year "
+    "column each time, £'000): FY2023 - Pillar 3 Disclosures 2023, p.21 - Credit risk (excl. CCR) 234,740; "
+    "Counterparty credit risk (CCR) 8,971 (of which CVA 1,194); Market risk 3,299; Operational risk 187,635; "
+    "Amounts below thresholds for deduction (memo, not in Total) 1,575; Total 434,645. FY2024 - Pillar 3 "
+    "Disclosures 2024, p.20-21 - Credit risk (excl. CCR) 396,867; CCR 6,299 (of which CVA 1,432); Market risk "
+    "3,577; Operational risk 220,273; Total 627,016 (ties exactly to the Total RWAs sheet's FY2024 figure). "
+    "FY2025 - Pillar 3 Disclosures 2025, p.20-21 - Credit risk (excl. CCR) 379,430; CCR 4,705 (of which CVA "
+    "1,568); Market risk 9,497; Operational risk 225,782; Total 619,414 (ties exactly to the Total RWAs "
+    "sheet's FY2025 figure).\n\n"
+    "GENUINE UNRESOLVED DISCREPANCY, documented not forced: FY2023's own OV1 table Total (434,645) does not "
+    "match the SAME FY2023 document's own KM1 Key Metrics table Total risk-weighted exposure amount (436,220, "
+    "the figure used on the Total RWAs sheet) - the difference (1,575) exactly equals the OV1 table's own "
+    "memo-only 'Amounts below thresholds for deduction' row, which is excluded from the OV1 Total but "
+    "apparently included in the KM1 Total. Both figures are shown exactly as each table states them."
 )
 bw.add_rwa_breakdown_sheet(
     title="Crown Agents Bank Limited — RWA Breakdown",
-    subtitle="FY2021 category breakdown disclosed; other years aggregate-only. See source note at bottom.",
+    subtitle="FY2021/FY2022: Pillar 1 category format. FY2023-FY2025: UK OV1 template (different category "
+              "granularity - see source note). All £'000.",
     rows=[
-        ("DATA", "Credit risk", {"FY2021": 106588}),
-        ("DATA", "Counterparty risk (derivatives)", {"FY2021": 1720}),
-        ("TOTAL", "Total credit risk weighted assets", {"FY2021": 108308}),
-        ("DATA", "Settlement risk and CVA", {"FY2021": 1047}),
-        ("DATA", "Market risk", {"FY2021": 5110}),
-        ("DATA", "Operational risk", {"FY2021": 72390}),
-        ("TOTAL", "Total risk weighted assets", RWA),
+        ("SECTION", "FY2021-FY2022 (Pillar 1 category format, as originally disclosed)", {}),
+        ("DATA", "Credit risk", {"FY2021": 106588, "FY2022": 136308}),
+        ("DATA", "Counterparty risk (derivatives)", {"FY2021": 1720, "FY2022": 4207}),
+        ("TOTAL", "Total credit risk weighted assets", {"FY2021": 108308, "FY2022": 140515}),
+        ("DATA", "Settlement risk and CVA", {"FY2021": 1047, "FY2022": 975}),
+        ("DATA", "Market risk", {"FY2021": 5110, "FY2022": 5240}),
+        ("DATA", "Operational risk", {"FY2021": 72390, "FY2022": 122529}),
+        ("TOTAL", "Total risk weighted assets (Pillar 1 format)", {"FY2021": 186856, "FY2022": 269258}),
+        ("SECTION", "FY2023-FY2025 (UK OV1 template, as disclosed from FY2023 onward)", {}),
+        ("DATA", "Credit risk (excluding CCR)", {"FY2023": 234740, "FY2024": 396867, "FY2025": 379430}),
+        ("DATA", "Counterparty credit risk (CCR)", {"FY2023": 8971, "FY2024": 6299, "FY2025": 4705}),
+        ("DATA", "  of which: credit valuation adjustment (CVA)", {"FY2023": 1194, "FY2024": 1432, "FY2025": 1568}),
+        ("DATA", "Market risk (position, FX and commodities)", {"FY2023": 3299, "FY2024": 3577, "FY2025": 9497}),
+        ("DATA", "Operational risk", {"FY2023": 187635, "FY2024": 220273, "FY2025": 225782}),
+        ("DATA", "Amounts below thresholds for deduction (memo, excluded from Total)", {"FY2023": 1575}),
+        ("TOTAL", "Total (UK OV1 format)", {"FY2023": 434645, "FY2024": 627016, "FY2025": 619414}),
     ],
     sources_text=p3_sources() + "\n\n" + RWA_BREAKDOWN_NOTE,
     first_col_width=54,
-    source_height=280,
+    source_height=420,
 )
 
 metric("Leverage Ratio", "%, excluding claims on central banks", [("Leverage ratio", LEVERAGE_RATIO)], p3_sources())

@@ -11,10 +11,15 @@ from bank_workbook import BankWorkbook
 # data is available for FY2019-FY2024 (full statutory accounts, 3 source
 # documents each covering 2 years); Pillar 3 (capital/RWA/liquidity) data
 # is available for FY2019-FY2023 (standalone CUKL Pillar 3 reports located
-# for FY2019 and FY2020 during the HD-056 extend-to-FY2018 pass; no
-# standalone CUKL Pillar 3 report was located for FY2024) - FY2024 is
-# therefore populated for the 3 statement sheets + Asset Quality but left
-# blank on every Pillar 3 sheet. FY2025 is omitted entirely: statutory
+# for FY2019 and FY2020 during the HD-056 extend-to-FY2018 pass). No
+# standalone CUKL Pillar 3 report exists for FY2024 - Citi's own naming
+# scheme predicts b3p3d241231_uk.pdf and that URL returns 'asset does not
+# exist' while the FY2023 equivalent still serves, so it is a genuine
+# non-publication. FY2024 is therefore populated for the 3 statement sheets
+# + Asset Quality, plus Total Capital / Total Capital Ratio / Leverage Ratio
+# taken from section 4 of the FY2024 audited accounts (validated against the
+# FY2023 Pillar 3 figures via that table's own comparative column - see
+# P3_SOURCES); the remaining Pillar 3 sheets stay blank for FY2024. FY2025 is omitted entirely: statutory
 # accounts not yet filed as at this build and no Pillar 3 document located.
 #
 # FY2018 is deliberately NOT included, despite HD-056 naming FY2018 as
@@ -85,6 +90,23 @@ ENTITY_NOTE = (
 
 P3_SOURCES = (
     "Sources - official Citibank UK Limited standalone Pillar 3 disclosures, UK KM1 and related tables:\n"
+    f"FY2024: no standalone CUKL Pillar 3 report exists for year-end 31 December 2024. The document would sit "
+    f"at the same path as every prior year under Citi's own naming scheme (b3p3d<YYMMDD>_uk.pdf, i.e. "
+    f"b3p3d241231_uk.pdf), and that URL returns 'asset does not exist' while the equivalent FY2023 URL still "
+    f"serves its PDF - so this is a genuine non-publication, not a broken link or a naming change. The three "
+    f"FY2024 figures that ARE populated below instead come from section 4 of CUKL's own audited financial "
+    f"statements for the year ended 31 December 2024: '4.3. Regulatory Capital (unaudited)' (Regulatory "
+    f"capital and Total capital ratio) and '4. Financial Highlights' (Leverage Ratio) - {FS_2024_URL}. Those "
+    f"tables are on the same basis as the Pillar 3 KM1 they replace: their own FY2023 comparative column "
+    f"(Regulatory capital GBP521,953k = GBP522.0m, Total capital ratio 90.8%, Leverage Ratio 16.71%) matches "
+    f"this workbook's FY2023 Pillar 3 Total capital, Total capital ratio and Leverage ratio exactly. Note the "
+    f"accounts' surrounding narrative loosely describes that line as comprising 'CET1 capital'; numerically it "
+    f"is unambiguously the TOTAL capital line (FY2023 CET1 was GBP418.0m, Tier 1 GBP470.0m, Total GBP522.0m), "
+    f"so it is recorded on the Total Capital sheet and NOT on the CET1 or Tier 1 sheets. CUKL redeemed its "
+    f"GBP52m of Additional Tier 1 capital on 5 December 2024, so the FY2024 CET1/Tier 1/Total split cannot be "
+    f"inferred from the FY2023 split either; those sheets stay blank. The accounts disclose no RWA total, no "
+    f"leverage exposure measure, no LCR and no NSFR, so those stay blank rather than being back-solved from "
+    f"the ratio.\n"
     f"FY2023: CUKL Pillar 3 Disclosures December 2023, pp. 3-5 and 8 - {P3_2023_URL}\n"
     f"FY2022: FY2022 comparative column in the CUKL Pillar 3 Disclosures December 2023, p. 5 - {P3_2023_URL}\n"
     f"FY2021: CUKL Pillar 3 Disclosures December 2021, pp. 6 and 15 - {P3_2021_URL}\n"
@@ -339,10 +361,10 @@ metric("Tier 1 Ratio", "% of RWA", [
     ("Tier 1 ratio", {"FY2023": "81.8%", "FY2022": "66.4%", "FY2021": "44.2%", "FY2020": "38.3%", "FY2019": "39.4%"}),
 ])
 metric("Total Capital", "£m", [
-    ("Total capital", {"FY2023": 522.0, "FY2022": 521.0, "FY2021": 408.2, "FY2020": 420.7, "FY2019": 395.8}),
+    ("Total capital", {"FY2024": 514.5, "FY2023": 522.0, "FY2022": 521.0, "FY2021": 408.2, "FY2020": 420.7, "FY2019": 395.8}),
 ])
 metric("Total Capital Ratio", "% of RWA", [
-    ("Total capital ratio", {"FY2023": "90.8%", "FY2022": "73.8%", "FY2021": "50.7%", "FY2020": "43.7%", "FY2019": "45.3%"}),
+    ("Total capital ratio", {"FY2024": "138.6%", "FY2023": "90.8%", "FY2022": "73.8%", "FY2021": "50.7%", "FY2020": "43.7%", "FY2019": "45.3%"}),
 ])
 metric("Total RWAs", "£m", [
     ("Total risk-weighted exposure amount", {"FY2023": 574.7, "FY2022": 706.1, "FY2021": 805.3, "FY2020": 961.6, "FY2019": 873.2}),
@@ -365,8 +387,8 @@ bw.add_rwa_breakdown_sheet(
 )
 metric("Leverage Ratio", "£m / %", [
     ("Total exposure measure", {"FY2023": 2812.0, "FY2022": 4733.0, "FY2021": 6818.1, "FY2020": 5424.1, "FY2019": 4773.6}),
-    ("Leverage ratio", {"FY2023": "16.7%", "FY2022": "9.9%", "FY2021": "5.2%", "FY2020": "6.8%", "FY2019": "7.2%"}),
-], note="FY2019-FY2021 are reported on the pre-2022 Basel III basis; FY2022-FY2023 use the UK KM1 leverage measure excluding claims on central banks.")
+    ("Leverage ratio", {"FY2024": "76.67%", "FY2023": "16.7%", "FY2022": "9.9%", "FY2021": "5.2%", "FY2020": "6.8%", "FY2019": "7.2%"}),
+], note="FY2019-FY2021 are reported on the pre-2022 Basel III basis; FY2022-FY2023 use the UK KM1 leverage measure excluding claims on central banks. FY2024 has no Pillar 3 report; its 76.67% is the Leverage Ratio printed in the FY2024 audited accounts' own '4. Financial Highlights' table, whose FY2023 comparative (16.71%) matches the FY2023 Pillar 3 figure here. That table gives the ratio only - no total exposure measure - so the exposure row is blank for FY2024 rather than back-solved.")
 metric("LCR", "£m / %", [
     ("Total HQLA (weighted value / average)", {"FY2023": 2988.6, "FY2022": 4476.6, "FY2021": 4219.7, "FY2020": 3069.7, "FY2019": 3474.2}),
     ("Total net cash outflows (adjusted value)", {"FY2023": 357.5, "FY2022": 687.1, "FY2021": 639.8, "FY2020": 434.5, "FY2019": 436.6}),

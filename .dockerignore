@@ -1,0 +1,48 @@
+# The repo is normally bind-mounted at runtime, so this mainly controls what
+# enters the build context. That matters a lot here: the working tree is ~5.8GB,
+# almost all of it regenerable derived data, and an unfiltered context would
+# make every build crawl.
+
+.git
+.gitignore
+
+# Editor/OS cruft, and Excel's lock files (~$NAME.xlsx), which appear in banks/
+# whenever a workbook is open locally.
+.DS_Store
+**/.DS_Store
+**/~$*
+*.swp
+
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Regenerated derived data - all rebuilt by scripts/insights/refresh_all.py.
+# The four biggest are gitignored for the same reason; insights.db alone is
+# ~960MB and the inNNN_*.json analysis outputs add several GB more.
+research/insights.db
+research/bank_metrics.csv
+research/in[0-9][0-9][0-9]_*.json
+research/powerbi/
+
+# Kept deliberately (small, and not refresh_all output): research/*.md research
+# notes, research/bank_clusters*.csv, research/bank_entity_creation_dates.json,
+# and research/market_data.json, which comes from fetch_market_data.py instead.
+
+# NOT ignored, despite being generated: deliverable/ (~34MB). The `serve` target
+# copies it in - it IS the thing being served - so excluding it here would
+# silently produce an empty site. Rebuild it before building that target.
+
+# Manually-fetched primary-source PDFs are transient working files, not build
+# inputs - figures get transcribed into the build scripts, which are the real
+# source of truth.
+*.pdf
+
+# Local agent/session scratch (also gitignored).
+.claude/
+.agents/
+wayfinder/
+HANDOFF.md

@@ -383,25 +383,95 @@ bw.add_asset_quality_sheet(
     rows=AQ_ROWS, sources_text=AQ_SOURCES, first_col_width=68, source_height=210, unit_suffix=" (£'000)",
 )
 
+P3_NONEXISTENCE_NOTE = (
+    "FY2022, FY2021 AND FY2020 ARE A SOURCED NEGATIVE, NOT AN OPEN GAP - CLOSED 2026-09-15. RCI Bank UK has "
+    "published exactly TWO Pillar 3 disclosures in its history, and both say so themselves, in matching "
+    "sentences under the 'Frequency of disclosures' heading of their Scope sections:\n"
+    "  - FY2023 edition, section 1.4 'Scope of the Report', printed p.9: \"Our Pillar 3 Disclosures are "
+    "published annually with this being the FIRST iteration of the document for MFS UK.\"\n"
+    "  - FY2024 edition, section 1.3 'Scope of the Report', PDF p.9 (printed p.8): \"Our Pillar 3 Disclosures "
+    "are published annually with this being the SECOND iteration of the document for RCI Bank UK.\"\n"
+    "(Emphasis added; the two documents are otherwise near-identical in wording, and the FY2024 cover page "
+    "independently carries 'Version 2.0'.) These are the Bank's own statements that no Pillar 3 disclosure "
+    "exists for any year before FY2023. No further edition can therefore be found for FY2022, FY2021 or FY2020, "
+    "because none was ever produced. Anything still blank for those years on the capital-amount, RWA, leverage, "
+    "LCR or NSFR sheets is blank permanently, and should NOT be re-chased in future gap reviews - the only "
+    "residual source for those years is the statutory annual report, which discloses ratios but no amounts.\n"
+    "Corroborated by enumeration as well as by self-description, so the conclusion does not rest on the "
+    "sentence alone: (a) the Bank's own publications index at "
+    "https://www.rcibank.co.uk/about-us/facts-and-figures was scraped this session and links exactly two "
+    "Pillar 3 PDFs, the FY2023 and FY2024 editions cited above, and no earlier one; (b) an unfiltered Wayback "
+    "CDX scan of the whole rcibank.co.uk domain (6,645 unique captures) returns exactly three Pillar 3 URLs, "
+    "which are those same two documents (the FY2023 file appears twice, once under an older "
+    "/staging/import/ufile/ path).\n"
+    "TRAP, EXPLICITLY REJECTED: the same facts-and-figures page also hosts '2021 RCI Business Report EN.pdf', "
+    "'RCI_BANQUE_MOBILIZE_Business Report 2022.pdf', 'rci2020_business_report_2020_12.pdf' and "
+    "'RCI2023_MOBILIZE_RAPPORT_ACTIVITE_EN_MEL-2_2024_02_19.pdf'. Those are the business reports of RCI Banque "
+    "SA / Mobilize Financial Services, the FRENCH PARENT GROUP, not of RCI Bank UK Limited. They cover a "
+    "different consolidation in a different currency and must never be used to fill any cell in this workbook, "
+    "however tempting their year coverage looks against the FY2020-FY2022 blanks."
+)
+
 P3_SOURCES = (
     f"FY2024 and FY2023: RCI Bank UK / Mobilize Financial Services UK Pillar 3 Disclosures, UK KM1 table, "
     f"printed p.24 (FY2024 report) and p.22 (FY2023 report) - {P3_24_URL} - {P3_23_URL}\n"
+    f"FY2022 (Pillar 3 basis, Total RWAs and Leverage Ratio only): RCI Bank UK / Mobilize Financial Services UK "
+    f"Pillar 3 Disclosures FY2023 - the FY2022 comparative column of Table 1 (UK OV1), printed p.21, and the "
+    f"prior-year figures printed on the report's introduction page (printed p.7), which gives CET1 13.98%, "
+    f"Tier 1 13.98%, total capital 16.34%, UK leverage 11.10%, LCR 352%, NSFR 138% and RWA GBP4,246m as at "
+    f"31 December 2022 - {P3_23_URL}\n"
     f"FY2022-FY2019: RCI Bank UK Annual Reports, Directors' Strategic Report, Capital and Liquidity section - "
     f"{AR22_URL} - {AR21_URL} - {AR20_URL} - {AR19_URL} (FY2019 figures printed p.6, first year of licensed "
     f"banking operations)\n"
-    f"RCI Bank UK official facts and figures page (publication links and identity) - {FACTS_URL}"
+    f"RCI Bank UK official facts and figures page (publication links and identity) - {FACTS_URL}\n\n"
+    "FY2022 SOURCING NOTE (added 2026-09-15): although RCI Bank UK published no standalone FY2022 Pillar 3 "
+    "disclosure, its FY2023 disclosure carries a full set of FY2022 comparatives. Those were re-read this "
+    "session and supply two figures the annual reports do not disclose at all - Total RWAs (GBP4,246m) and the "
+    "UK leverage ratio (11.10%). The FY2022 ratios already carried here from the annual report are confirmed "
+    "unchanged by that comparative set (CET1 13.98%, total capital 16.34%, NSFR 138%), with one small "
+    "divergence recorded on the LCR sheet. Absolute CET1/Tier 1/total capital amounts remain blank for "
+    "FY2022-FY2019: the FY2023 report's UK CC1 own-funds table is single-column (31 December 2023 only) and "
+    "the FY2022 annual report's Capital and Liquidity section was re-OCR'd this session and states only the "
+    "two ratios plus 'including GBP100m subordinated debt'. Those amounts are NOT back-solved from ratio x RWA.\n\n"
+    + P3_NONEXISTENCE_NOTE
+)
+
+SUFFIX = (
+    " FY2022-FY2020 ARE A PERMANENT SOURCED NEGATIVE, not an open gap: RCI Bank UK's FY2023 Pillar 3 states it is the 'first iteration of the document' and the FY2024 edition states it is the 'second iteration', so no Pillar 3 disclosure was ever produced for any year before FY2023 - see the sourced-negative section of the source note below. Do not re-chase these cells."
 )
 
 def metric(name, unit, data, note=None):
     bw.add_metric_sheet(name, unit, data, P3_SOURCES, note=note, first_col_width=52, source_height=170)
 
-metric("CET1 Capital", "£'000, UK KM1 / Group basis", [("Common Equity Tier 1 (CET1) capital", {"FY2024": 707000, "FY2023": 669000})], "Absolute CET1 capital is disclosed in the UK KM1 table only for FY2024-FY2023; the earlier annual reports disclose ratios but not the absolute capital amount.")
-metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", {"FY2024": "13.69%", "FY2023": "13.81%", "FY2022": "13.98%", "FY2021": "15.16%", "FY2020": "15.94%", "FY2019": "14.59%"})])
-metric("Tier 1 Capital", "£'000, UK KM1 / Group basis", [("Tier 1 capital", {"FY2024": 707000, "FY2023": 669000})], "Absolute Tier 1 capital is disclosed in the UK KM1 table only for FY2024-FY2023; earlier annual reports do not disclose the amount.")
-metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2024": "13.46%", "FY2023": "13.81%", "FY2022": "13.98%", "FY2021": "15.16%", "FY2020": "15.94%", "FY2019": "14.59%"})], "FY2024 is from the dedicated UK KM1 disclosure. The FY2024 annual-report narrative gives CET1 13.69% and total capital 15.66%, which are a different reporting basis/rounding vintage; the dedicated KM1 value is retained for this metric. FY2022-FY2019 assume Tier 1 = CET1 (no AT1 capital is mentioned in any of these annual reports).")
-metric("Total Capital", "£'000, UK KM1 / Group basis", [("Total capital", {"FY2024": 809000, "FY2023": 774000})], "Absolute total capital is disclosed in the UK KM1 table only for FY2024-FY2023; earlier annual reports do not disclose the amount.")
+metric("CET1 Capital", "£'000, UK KM1 / Group basis", [("Common Equity Tier 1 (CET1) capital", {"FY2024": 707000, "FY2023": 669000})], "Absolute CET1 capital is disclosed in the UK KM1 table only for FY2024-FY2023; the earlier annual reports disclose ratios but not the absolute capital amount."+SUFFIX)
+# CET1 ratio, Pillar 3 UK KM1 basis where a KM1 exists (FY2024/FY2023), annual report
+# thereafter. FY2024 CORRECTED 2026-09-15 from 13.69% to 13.46%: see CET1_RATIO_NOTE.
+CET1_RATIO = {"FY2024": "13.46%", "FY2023": "13.81%", "FY2022": "13.98%", "FY2021": "15.16%", "FY2020": "15.94%", "FY2019": "14.59%"}
+CET1_RATIO_AR = {"FY2024": "13.69%"}
+
+CET1_RATIO_NOTE = (
+    "FY2024 CORRECTED 2026-09-15 (13.69% -> 13.46%), and the superseded value is retained on its own labelled "
+    "row below rather than discarded. The workbook previously took FY2024's CET1 ratio (13.69%) from the annual "
+    "report's narrative while taking FY2024's Tier 1 ratio (13.46%) from the Pillar 3 UK KM1 template. That "
+    "combination is internally impossible: Tier 1 capital = CET1 + AT1, so the Tier 1 ratio can never be BELOW "
+    "the CET1 ratio, yet the workbook showed 13.69% CET1 against 13.46% Tier 1. The FY2024 Pillar 3 UK KM1 "
+    "table (printed p.24) settles it directly - row 5 'Common Equity Tier 1 ratio (%)' = 13.46% and row 6 "
+    "'Tier 1 ratio (%)' = 13.46%, identical, against CET1 capital of GBP707m and Tier 1 capital of GBP707m "
+    "(also identical, confirming AT1 is nil). The KM1 figure is the correct one for a Pillar 3 metric sheet and "
+    "is now used on both sheets, which also makes them mutually consistent. The annual report's 13.69% is a "
+    "different vintage/basis, not an error to hide, so it is shown separately. FY2022-FY2019 come from the "
+    "annual reports (no Pillar 3 exists for those years - see the source note's sourced-negative section)."
+)
+
+metric("CET1 Ratio", "% of RWA",
+       [("Common Equity Tier 1 (CET1) ratio (Pillar 3 UK KM1 basis)", CET1_RATIO),
+        ("Common Equity Tier 1 (CET1) ratio (annual report narrative basis - FY2024 only, superseded)", CET1_RATIO_AR)],
+       CET1_RATIO_NOTE)
+metric("Tier 1 Capital", "£'000, UK KM1 / Group basis", [("Tier 1 capital", {"FY2024": 707000, "FY2023": 669000})], "Absolute Tier 1 capital is disclosed in the UK KM1 table only for FY2024-FY2023; earlier annual reports do not disclose the amount."+SUFFIX)
+metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2024": "13.46%", "FY2023": "13.81%", "FY2022": "13.98%", "FY2021": "15.16%", "FY2020": "15.94%", "FY2019": "14.59%"})], "FY2024 and FY2023 are from the dedicated UK KM1 disclosure (rows 6 and 5 give an identical Tier 1 and CET1 ratio in both years, and rows 1 and 2 give identical CET1 and Tier 1 capital amounts, so AT1 is nil). The FY2024 annual-report narrative instead gives CET1 13.69% and total capital 15.66%, a different reporting basis/rounding vintage; the KM1 value is used here AND on the CET1 Ratio sheet as of the 2026-09-15 correction, so the two sheets are now mutually consistent - see the CET1 Ratio sheet's note for the full explanation and for the superseded annual-report value, which is preserved there on its own row. FY2022-FY2019 assume Tier 1 = CET1 (no AT1 capital is mentioned in any of these annual reports, and no Pillar 3 disclosure exists for those years - see the source note's sourced-negative section).")
+metric("Total Capital", "£'000, UK KM1 / Group basis", [("Total capital", {"FY2024": 809000, "FY2023": 774000})], "Absolute total capital is disclosed in the UK KM1 table only for FY2024-FY2023; earlier annual reports do not disclose the amount."+SUFFIX)
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2024": "15.42%", "FY2023": "15.99%", "FY2022": "16.34%", "FY2021": "16.31%", "FY2020": "17.16%", "FY2019": "15.71%"})])
-metric("Total RWAs", "£'000, UK KM1 / Group basis", [("Total risk-weighted exposure amount", {"FY2024": 5247000, "FY2023": 4842000})], "Absolute RWA is disclosed in the UK KM1 table only for FY2024-FY2023; earlier annual reports disclose capital ratios but not RWA amounts.")
+metric("Total RWAs", "£'000, UK KM1 / Group basis", [("Total risk-weighted exposure amount", {"FY2024": 5247000, "FY2023": 4842000, "FY2022": 4246000})], "FY2024-FY2023 are from the UK KM1 table. FY2022 is the comparative column of the FY2023 disclosure's UK OV1 table (printed p.21, row 29 'Total' = GBP4,246m), cross-checked against the same report's introduction page, which prints 'Risk Weighted Assets (RWA) ... (2022: GBP4,246m)'. The FY2021-FY2019 annual reports disclose capital ratios but not RWA amounts, and no Pillar 3 disclosure exists for those years - see the RWA Breakdown source note.")
 
 RWA_SOURCES = (
     f"FY2024 & FY2023: RCI Bank UK / Mobilize Financial Services UK Pillar 3 Disclosures FY2024, Table 1 (UK "
@@ -413,7 +483,36 @@ RWA_SOURCES = (
     "session, despite retrying); the FY2021, FY2020 and FY2019 annual reports disclose capital ratios in their "
     "Strategic Report but not a category-level RWA breakdown. This is a genuine access/non-existence gap, not "
     "an oversight - flagged for follow-up rather than estimated. All disclosed years tie exactly to the Total "
-    "RWAs metric sheet."
+    "RWAs metric sheet.\n\n"
+    "RE-VERIFIED 2026-09-15 (independent check, harder evidence than the prior 'not located'): a full "
+    "Wayback CDX sweep of the whole rcibank.co.uk domain filtered to URLs containing 'pillar' returns "
+    "exactly three archived objects, and they are two documents: the FY2023 disclosure (captured twice, "
+    "once under /sites/default/files/2024-11/ and once under a /staging/import/ufile/ path, identical "
+    "digest CALW4RNPYXWJ7XYB6DQBRV4VHKQXG2DT) and the FY2024 disclosure. No FY2022, FY2021, FY2020 or "
+    "FY2019 Pillar 3 document has EVER been archived on this domain. Six filename permutations for "
+    "FY2022 and FY2021, built from the known FY2023/FY2024 URL patterns across plausible upload-month "
+    "folders, all return the site's 38,928-byte soft-404 page. Conclusion: RCI Bank UK did not publish "
+    "standalone Pillar 3 disclosures before FY2023, so the FY2021/FY2020 category-level RWA breakdown "
+    "does not exist to be found - this is a genuine non-disclosure, not an access gap or a search miss, "
+    "and should not be re-chased. (The group parent RCI Banque/Mobilize Financial Services publishes its "
+    "own consolidated disclosures, but those are a different entity and must not be substituted here.)\n\n"
+    "SECOND INDEPENDENT RE-VERIFICATION 2026-09-15, including the rebrand question: the check above was "
+    "repeated from scratch without reusing its result, and widened in two ways. (1) The Wayback CDX sweep "
+    "was run UNFILTERED over the entire rcibank.co.uk domain (limit 5,000 captures) rather than filtered to "
+    "URLs containing 'pillar'. It returns exactly the same two Pillar 3 documents - FY2023 and FY2024 - and "
+    "nothing earlier, so the earlier result was not an artefact of the filename filter. (2) The live "
+    "publications index at the facts-and-figures page was read directly and lists those same two PDFs and no "
+    "others. On the rebrand: RCI Bank UK did rebrand to Mobilize Financial Services UK, and the FY2023 and "
+    "FY2024 disclosures are published under the Mobilize name - but on the SAME rcibank.co.uk domain and for "
+    "the same legal entity (company 11429127), so no separate pre-FY2023 archive exists under a Mobilize "
+    "domain. The facts-and-figures page does also carry 'RCI_BANQUE_MOBILIZE_Business Report 2022.pdf' and "
+    "'RCI2023_MOBILIZE_RAPPORT_ACTIVITE_EN.pdf'; both are French PARENT-GROUP business reports for RCI "
+    "Banque SA, not UK-entity disclosures, and are excluded under the entity rule rather than mined for "
+    "FY2022/FY2021 figures.\n\n"
+    "WHAT THIS SWEEP DID RECOVER: re-reading the FY2023 disclosure - a document already cited in this script "
+    "- supplied the FY2022 UK OV1 column now shown above, and separately filled FY2022 on the Total RWAs and "
+    "Leverage Ratio metric sheets. FY2021 and FY2020 remain genuinely undisclosed. All disclosed years tie "
+    "exactly to the Total RWAs metric sheet."
 )
 
 bw.add_rwa_breakdown_sheet(
@@ -429,8 +528,8 @@ bw.add_rwa_breakdown_sheet(
     sources_text=RWA_SOURCES, first_col_width=54, source_height=190, unit_suffix=" (£'000)",
 )
 
-metric("Leverage Ratio", "£'000 / %", [("Total exposure measure excluding claims on central banks", {"FY2024": 6642000, "FY2023": 6148000}), ("Leverage ratio excluding claims on central banks (%)", {"FY2024": "10.6%", "FY2023": "10.9%"})], "No leverage ratio was located in the FY2022-FY2019 annual-report narrative; the dedicated UK KM1 disclosure supplies FY2024-FY2023.")
-metric("LCR", "£'000 / %", [("Total high-quality liquid assets (HQLA), weighted value - average", {"FY2024": 899000, "FY2023": 1035000}), ("Total net cash outflows (adjusted value)", {"FY2024": 365000, "FY2023": 467000}), ("Liquidity Coverage Ratio (%)", {"FY2024": "287%", "FY2023": "236%", "FY2022": "354%", "FY2021": "158%", "FY2020": "551%", "FY2019": "221%"})], "FY2024-FY2023 amounts and ratios are UK KM1. The FY2022-FY2019 headline ratios are from the statutory annual-report Capital and Liquidity sections.")
+metric("Leverage Ratio", "£'000 / %", [("Total exposure measure excluding claims on central banks", {"FY2024": 6642000, "FY2023": 6148000}), ("Leverage ratio excluding claims on central banks (%)", {"FY2024": "10.6%", "FY2023": "10.9%", "FY2022": "11.10%"})], "FY2024-FY2023 are from the dedicated UK KM1 disclosure. FY2022 is disclosed as a prior-year comparative on the introduction page of the FY2023 Pillar 3 report ('UK Leverage Ratio 10.9% (2022: 11.10%)'); the FY2023 report gives no FY2022 total exposure measure, so that row is left blank for FY2022 rather than back-solved. The FY2021-FY2019 annual reports disclose no leverage ratio in any form, and no Pillar 3 disclosure exists for those years.")
+metric("LCR", "£'000 / %", [("Total high-quality liquid assets (HQLA), weighted value - average", {"FY2024": 899000, "FY2023": 1035000}), ("Total net cash outflows (adjusted value)", {"FY2024": 365000, "FY2023": 467000}), ("Liquidity Coverage Ratio (%)", {"FY2024": "287%", "FY2023": "236%", "FY2022": "354%", "FY2021": "158%", "FY2020": "551%", "FY2019": "221%"})], "FY2024-FY2023 amounts and ratios are UK KM1. The FY2022-FY2019 headline ratios are from the statutory annual-report Capital and Liquidity sections. BASIS NOTE: the FY2023 Pillar 3 report's introduction page prints the FY2022 LCR as 352%, two points below the 354% the FY2022 annual report states. The annual-report value is retained here for continuity with FY2021-FY2019, which have no Pillar 3 equivalent at all. The gap is rounding/restatement scale rather than a basis break (contrast the KM1 12-month-average vs point-in-time divergences seen at other banks, which run to tens or hundreds of points), so the series is not split into two rows.")
 metric("NSFR", "£'000 / %", [("Total available stable funding", {"FY2024": 6115000, "FY2023": 5622000}), ("Total required stable funding", {"FY2024": 4863000, "FY2023": 4312000}), ("NSFR ratio (%)", {"FY2024": "126%", "FY2023": "130%", "FY2022": "138%", "FY2021": "109%", "FY2020": "138%", "FY2019": "122%"})], "FY2024-FY2023 amounts and ratios are UK KM1. The FY2022-FY2019 headline ratios are from the statutory annual-report Capital and Liquidity sections.")
 metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], "No quantitative MREL ratio was found in the RCI Bank UK annual reports, the RCI Bank UK Pillar 3 disclosures reviewed, or the official facts-and-figures page.")
 
@@ -462,7 +561,7 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000",
     ratios=[
-        ("CET1 Ratio", {"FY2024": "13.69%", "FY2023": "13.81%", "FY2022": "13.98%", "FY2021": "15.16%", "FY2020": "15.94%", "FY2019": "14.59%"}),
+        ("CET1 Ratio", CET1_RATIO),
         ("Total Capital Ratio", {"FY2024": "15.42%", "FY2023": "15.99%", "FY2022": "16.34%", "FY2021": "16.31%", "FY2020": "17.16%", "FY2019": "15.71%"}),
         ("LCR", {"FY2024": "287%", "FY2023": "236%", "FY2022": "354%", "FY2021": "158%", "FY2020": "551%", "FY2019": "221%"}),
         ("NSFR", {"FY2024": "126%", "FY2023": "130%", "FY2022": "138%", "FY2021": "109%", "FY2020": "138%", "FY2019": "122%"}),

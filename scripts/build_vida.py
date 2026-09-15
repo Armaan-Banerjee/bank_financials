@@ -109,10 +109,64 @@ def p3_sources():
         "separately published):\n"
         f"FY2025: Vida Group Holdings plc Pillar 3 Disclosures 2025, p.5 (3.1 Key Metrics / Table KM1) - {P3_2025_URL}\n"
         f"FY2024: Vida Group Holdings Limited Pillar 3 Disclosures 2024, p.5 (3.1 Key Metrics / Table KM1) - {P3_2024_URL}\n"
+        "BASIS DETERMINATION, made 2026-09-15 by reading section 1.3 'Scope' of both reports directly (they are "
+        "word-for-word identical on this point). Verbatim: 'VGHL is a financial holding company and it is a CRR "
+        "consolidation entity. This Pillar 3 report is prepared on a consolidated basis. Vida Bank Limited (\"VBL\") "
+        "is the principal regulated subsidiary of the Group. The same basis of consolidation is used for the "
+        "preparation of the Group's Annual Report and Accounts as is used for regulatory reporting.' Section 1.2 "
+        "'Basis of Disclosure' adds, equally verbatim: 'Regulatory ratios are presented on a Group-basis only.' "
+        "Three consequences follow, and they are why the figures above are kept rather than demoted to memo rows. "
+        "(1) VGHL is not an incidental parent that merely happens to contain the bank - it is the CRR CONSOLIDATION "
+        "ENTITY, i.e. the level at which the PRA actually sets and measures Vida's regulatory capital requirement, "
+        "with VBL as the principal regulated subsidiary. This is the smallest regulatory group VBL belongs to. "
+        "(2) No VBL-solo ratio exists to prefer over it: 'Group-basis only' is the publisher's own statement that "
+        "the solo figures are not disclosed anywhere, so the choice is between the consolidated figure and nothing "
+        "at all - not between a group figure and a suppressed entity figure. (3) The Group and the Annual Report "
+        "use the same basis of consolidation, so these ratios are reconcilable to the accounts in this workbook "
+        "rather than sitting on an unrelated perimeter. Accordingly every Pillar 3 sheet in this workbook carries "
+        "the subtitle 'Vida Group Holdings basis' so the reader is never shown a consolidated ratio labelled as an "
+        "entity one - the project rule this workbook observes is that group figures are never SUBSTITUTED for "
+        "entity figures unlabelled, which is a different thing from refusing to report the only regulatory ratio "
+        "that exists. Note also that both reports are reduced-scope Article 433b disclosures ('small and non-"
+        "complex institution', UK CRR Article 4(145)), which is why the metric set here is narrower than a large "
+        "bank's - it is a permitted reduction, not an omission.\n"
         "No Pillar 3 disclosure exists for FY2018-FY2023: Pillar 3 only applies once PRA-authorised as a deposit-"
         "taker, which happened 19 November 2024 (see ENTITY_NOTE on the Cash Flow Statement sheet). FY2018-FY2020 "
         "the company was FCA-regulated only (not PRA-authorised at all, no banking licence); its FY2019 and FY2020 "
-        "Annual Reports confirm the banking licence application was still in progress/delayed those years."
+        "Annual Reports confirm the banking licence application was still in progress/delayed those years.\n"
+        "RE-VERIFIED 2026-09-12 (disclosure audit): the pre-authorisation gap is STRUCTURAL, independently "
+        "confirmed against the Companies House register rather than the workbook's own prior claim. Company "
+        "09837692 was incorporated 22 October 2015 and traded as 'Belmont Green Finance Ltd' (22 Oct 2015 - 10 Jun "
+        "2019) and then 'Belmont Green Finance Limited' (10 Jun 2019 - 25 Nov 2024), only taking the name 'Vida "
+        "Bank Limited' on 25 November 2024 - six days after the 19 November 2024 PRA authorisation. No Pillar 3 "
+        "obligation can therefore exist for FY2018-FY2023, so those years are blank by regulation, not by omission.\n"
+        "SDDT - EXPLICIT NEGATIVE, recorded 2026-09-15 (cross-bank SDDT date-fit pass) so that a future pass does "
+        "not wrongly apply the Small Domestic Deposit Taker exemption to this workbook's gap years. Vida DOES "
+        "hold the SDDT opt-in, but it is far too recent to explain anything here. The Bank of England "
+        "consolidated list of waivers and modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+        "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+        "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries three SDDT rows for FRN "
+        "738741, 'Vida Bank Limited': (a) 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the "
+        "SDDT Regime - General Application Part', sub rule 'Ru 3.1', waiver ref 'A00011924P.pdf', START DATE "
+        "03/04/2026, no end date; plus two eligibility-criteria modifications under sub rules 'Ru 1.2' and 'Ru "
+        "2.1(9)', both ref 'A00010069P.pdf', start 25/03/2026, end 25/03/2029. Only row (a) matters: Rule 3.1 is "
+        "the actual opt-in that removes the Pillar 3 disclosure obligation, whereas rules 1.2 and 2.1(9) merely "
+        "modify eligibility CRITERIA (2.1(9) waives the 'any parent undertaking of the firm is a UK undertaking' "
+        "test) and are not themselves evidence of any disclosure exemption.\n"
+        "DATE FIT - IT DOES NOT FIT. Vida's accounting reference date is 31 DECEMBER, confirmed at Companies "
+        "House (company 09837692, an unbroken run of accounts to 31 December from 2019 to 2025). The outstanding "
+        "Pillar 3 gap years are FY2021, FY2022 and FY2023, which ended 31 December 2021, 2022 and 2023 "
+        "respectively. The Rule 3.1 modification began 3 APRIL 2026 - between two and four and a half years "
+        "AFTER every one of those year-ends, and after the FY2025 year-end too. A modification cannot explain a "
+        "gap that predates it, so the SDDT regime explains NONE of the FY2021-FY2023 blanks.\n"
+        "Those gaps already have a different and fully sufficient explanation, set out immediately above, and it "
+        "is left exactly as it stands: the entity was not PRA-authorised as a deposit-taker until 19 November "
+        "2024, so no Pillar 3 obligation existed in any of those years. That is a structural pre-authorisation "
+        "absence, not an exemption. The register finding changes no cell in this workbook. Its only forward-"
+        "looking value is that from 3 April 2026 Vida is an SDDT, so Pillar 3 documents of the kind used for "
+        "FY2024 and FY2025 should not be expected for FY2026 onward. Note finally that this is the SDDT "
+        "DISCLOSURE exemption, which is in force now - not the separate SDDT CAPITAL regime that begins 1 "
+        "January 2027; the two are easy to conflate and must not be."
     )
 
 
@@ -466,7 +520,18 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
+# FY2018-FY2023 predate the 19 November 2024 banking licence, so no Pillar 3 metric
+# can ever exist for them. They were left blank until 2026-09-15, which made them
+# indistinguishable from years nobody had researched yet - a cross-bank coverage audit
+# counted all 30 of them as chaseable gaps. Marking them explicitly matches what the
+# RWA Breakdown sheet on this same workbook already does, and build_afin_bank.py's
+# handling of the identical situation.
+PRE_LICENCE_YEARS = ["FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018"]
+
+
 def metric(name, unit, rows_data, note=None):
+    rows_data = [(label, {**{y: "Not applicable" for y in PRE_LICENCE_YEARS}, **values})
+                 for label, values in rows_data]
     bw.add_metric_sheet(name, f"Vida Group Holdings basis, {unit}" if unit else "Vida Group Holdings basis",
                          rows_data, p3_sources(), note=note, first_col_width=48, source_height=130)
 
@@ -483,12 +548,54 @@ metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2025": "1
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", {"FY2025": 1105780, "FY2024": 986809})])
 bw.add_rwa_breakdown_sheet(
     title="Vida Bank Limited — RWA Breakdown",
-    subtitle="Vida Group Holdings basis",
-    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
-    sources_text=rwa_not_disclosed_note(),
-    first_col_width=54,
-    source_height=120,
-    unit_suffix="",
+    subtitle="Vida Group Holdings (Group/consolidated) basis, £'000. Table (OV1) - RWEAs by risk type, as "
+             "disclosed. FY2018-FY2023: no Pillar 3 disclosure exists at all (see ENTITY_NOTE).",
+    rows=[
+        ("DATA", "Credit risk (excluding CCR)", {"FY2025": 936924, "FY2024": 766886}),
+        ("DATA", "Counterparty credit risk (CCR), of which credit valuation adjustment (CVA)", {"FY2025": 83044, "FY2024": 155027}),
+        ("DATA", "Securitisation exposures in the non-trading book (after the cap)", {"FY2025": 6391, "FY2024": 0}),
+        ("DATA", "Operational risk", {"FY2025": 79420, "FY2024": 64896}),
+        ("TOTAL", "Total risk weighted exposure amount (Table OV1)", {"FY2025": 1105779, "FY2024": 986809}),
+        ("SECTION", "Not applicable - entity was not a PRA-authorised bank", {}),
+        ("DATA", "Not applicable (no banking licence held in these years)", {
+            "FY2023": "Not applicable",
+            "FY2022": "Not applicable",
+            "FY2021": "Not applicable",
+            "FY2020": "Not applicable",
+            "FY2019": "Not applicable",
+            "FY2018": "Not applicable",
+        }),
+    ],
+    sources_text=(
+        "Sources - Vida Group Holdings Limited/plc Pillar 3 disclosures, Table (OV1) 'RWEAs and total own funds "
+        "requirements by risk type', £'000, as disclosed (DIRECTLY DISCLOSED, not derived):\n"
+        f"FY2025 & FY2024: Vida Group Holdings plc Pillar 3 Disclosures 2025, section 3.2 'Risk-Weighted "
+        f"Exposures', Table (OV1), p.6 - {P3_2025_URL}. FY2024's category rows sum exactly to that table's own "
+        f"stated Total (986,809), matching the Total RWAs sheet's FY2024 figure exactly. FY2025's category rows "
+        f"sum to 1,105,779 - £1k below the table's own stated Total (1,105,780) and the Total RWAs sheet's own "
+        f"FY2025 figure - a one £'000 rounding artifact in the source table itself (each row independently "
+        f"rounded to the nearest £'000 before summing), not a transcription error here; the TOTAL row above "
+        f"shows the reconciling sum of the category rows, not the source's stated Total, per this project's "
+        f"convention of the category breakdown always ticking to its own components.\n\n"
+        "This table was not identified in an earlier review of these documents (which found only the KM1 Key "
+        "Metrics table used on the other Pillar 3 sheets) - a 2026-09-08 re-check located it in section 3.2 of "
+        "the FY2025 report (which also carries the FY2024 comparative column, so the standalone FY2024 report "
+        "did not need separately re-checking for this sheet).\n\n"
+        "FY2018-FY2023: no Pillar 3 disclosure exists at all for any year before FY2024 (Pillar 3 only applies "
+        "once the entity holds a banking licence, obtained 19 November 2024) - see ENTITY_NOTE on the Cash Flow "
+        "Statement sheet.\n\n"
+        "2026-09-15: those pre-licence years are now marked explicitly as 'Not applicable' in the rows above, "
+        "rather than being left as empty cells. They were previously blank, which made them indistinguishable "
+        "from a bank that simply has not been researched yet - an audit of RWA Breakdown coverage counted them "
+        "as open, chaseable gaps when in fact no document can ever exist for them. This follows the same "
+        "convention already used in build_afin_bank.py for the identical situation. Corroborating evidence for "
+        "the licence date: Companies House (company 09837692) shows the entity's first full bank accounts made "
+        "up to 31 December 2024, and FY2024 is the first year for which any Pillar 3 disclosure of any kind "
+        "exists."
+    ),
+    first_col_width=68,
+    source_height=200,
+    unit_suffix=" (£'000)",
 )
 metric(
     "Leverage Ratio", "£'000 / %",
@@ -515,10 +622,13 @@ metric(
         ("Net Stable Funding Ratio (%)", {"FY2025": "138%", "FY2024": "110%"}),
     ],
 )
-metric("MREL Ratio", None, [("MREL ratio", {y: "Not disclosed" for y in YEARS})],
-       note="No MREL disclosure (numeric or qualitative) found in either Pillar 3 report - Vida is a small, "
-            "recently-authorised bank and does not appear to be within scope of an MREL-above-minimum-capital "
-            "requirement based on its own disclosures.")
+metric("MREL Ratio", None,
+       [("MREL ratio", {y: "Not disclosed" for y in YEARS if y not in PRE_LICENCE_YEARS})],
+       note="FY2025/FY2024: no MREL disclosure (numeric or qualitative) found in either Pillar 3 report - Vida is a "
+            "small, recently-authorised bank and does not appear to be within scope of an MREL-above-minimum-capital "
+            "requirement based on its own disclosures. FY2018-FY2023 read 'Not applicable' rather than 'Not "
+            "disclosed' because the entity held no banking licence in those years, so no MREL requirement could "
+            "attach to it in the first place - the two are different findings and were previously conflated here.")
 
 # ---------------------------------------------------------------
 # Overview sheet

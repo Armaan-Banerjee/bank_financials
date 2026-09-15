@@ -32,14 +32,45 @@ ENTITY_NOTE = (
     "as the following year's comparative column and match exactly - no source-document arithmetic errors found."
 )
 
+PRA_WAIVERS_CSV = (
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv"
+)
+
 PILLAR3_NOTE = (
     "PILLAR 3 NOTE: Charity Bank published an annual standalone Pillar 3 disclosure document every year through "
     "the FY2023 edition (retrieved via the Wayback Machine - the current live site no longer links to any Pillar "
     "3 document, only Annual Reports). No FY2024 or FY2025 edition has been published anywhere as of the "
-    "research date. Charity Bank's own FY2023 Annual Report (p.35) states it 'was accepted into the Small "
-    f"Domestic Deposit Taker (SDDT) regime in January 2024' ({AR2023_URL}) - noted as context for when the "
-    "standalone Pillar 3 disclosures stopped, though no document explicitly states SDDT status as the reason "
-    "Pillar 3 publication ceased, so this is not asserted as a confirmed causal link. For FY2024 and FY2025, "
+    "research date.\n"
+    "CAUSAL LINK NOW ESTABLISHED, 2026-09-15 (cross-bank SDDT pass) - this supersedes the earlier hedged "
+    "wording, which said SDDT status was 'noted as context' but 'not asserted as a confirmed causal link'. "
+    "The absence of a FY2024 and FY2025 Pillar 3 document is an EVIDENCED STRUCTURAL EXEMPTION, not a "
+    "sourcing failure: becoming a Small Domestic Deposit Taker removes the Pillar 3 disclosure obligation "
+    "outright, so no such document will ever exist for those years.\n"
+    "Evidence 1 - the PRA's own firm-level register. Bank of England consolidated list of waivers and "
+    "modifications granted to PRA-authorised firms (downloaded 2026-09-15) carries the row: FRN 207701, 'The "
+    "Charity Bank Limited', 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime "
+    "- General Application Part', rule 'SDDT Regime - General Application', sub rule 'Ru 3.1', waiver ref "
+    f"'A00007506P.pdf', start date '01/02/2024', no end date - {PRA_WAIVERS_CSV}\n"
+    "Evidence 2 - Charity Bank in its own words, in both recent Annual Reports, under the heading 'Capital "
+    "regulatory framework': 'In 2024, Charity Bank opted-in to the PRA's Small Domestic Deposit-Takers "
+    "('SDDT') regime, also known as 'Strong & Simple'.' - Charity Bank 2024 Annual Report p.32 "
+    f"({AR2024_URL}) and, repeated verbatim, Charity Bank 2025 Annual Report p.30 ({AR2025_URL}). This "
+    "corroborates the register's 01/02/2024 start date and the FY2023 Annual Report's (p.35) 'was accepted "
+    f"into the Small Domestic Deposit Taker (SDDT) regime in January 2024' ({AR2023_URL}).\n"
+    "Evidence 3 - what the Rule 3.1 modification does to Pillar 3, stated by a peer holding the identical "
+    "register row: Cynergy Bank plc Annual Report & Accounts 2024, p.71 - 'The Bank applied for the "
+    "Modification by Consent to become an SDDT and received approval on 17 January 2025. As a result, we are "
+    "not required to publish Pillar 3 disclosures as at 31 December 2024 and will submit only a simplified "
+    "retail deposit ratio instead of a full Net Stable Funding Ratio (NSFR) going forward.'\n"
+    "DATE FIT: the modification took effect 1 February 2024, i.e. before the 31 December 2024 year-end, so it "
+    "covers FY2024 and FY2025 - exactly the two years with no Pillar 3 document. It covers NEITHER FY2021, "
+    "FY2022 nor FY2023, all of which have their own published Pillar 3 editions in any case. Do not read the "
+    "exemption back onto FY2023 or earlier. Note also that the Annual Reports' statement that the SDDT regime "
+    "'takes full effect from 1 January 2027' refers to the SDDT simplified CAPITAL regime, which is a "
+    "separate and later matter from the disclosure exemption that already applies. Charity Bank does not "
+    "disclose a Simplified Retail Deposit Ratio value, so nothing replaces the NSFR series here.\n"
+    "For FY2024 and FY2025, "
     "capital amounts (Tier 1/Tier 2/Total capital, £), RWAs, leverage exposure, and CET1/Total Capital/Leverage "
     "ratios were instead sourced from the 'Capital risk' section of each year's own Annual Report (Strategic "
     "Report and Note 28) - the Annual Reports do not disclose LCR, NSFR, or MREL at all, so those sheets are "
@@ -483,7 +514,8 @@ bw.add_rwa_breakdown_sheet(
     title="The Charity Bank Limited — RWA Breakdown",
     subtitle="£'000. No market risk or counterparty credit risk exposure (Charity Bank holds no trading book) - "
               "category split not published for FY2025/FY2024 (standalone Pillar 3 disclosure ceased after the "
-              "FY2023 edition). See source note at bottom.",
+              "FY2023 edition; re-confirmed 2026-09-12, Wayback CDX shows no Pillar 3 filename crawled on "
+              "charitybank.org past the 2023 edition). See source note at bottom.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=54,

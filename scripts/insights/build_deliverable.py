@@ -56,7 +56,7 @@ from in010_parent_groups import build_in010_payload  # noqa: E402
 from in009_analysis import CORE_METRICS, detect_outliers  # noqa: E402
 from analysis_queries import AnalysisQueries  # noqa: E402
 from build_workbook_viewer import render_workbook_viewer  # noqa: E402
-from statement_row_selection import in_assets_section, own_label  # noqa: E402
+from statement_row_selection import in_assets_section, in_equity_section, in_liabilities_section, own_label  # noqa: E402
 
 # "Profit or loss for the year" headline-figure selector. Deliberately two
 # separate co-occurring patterns rather than one combined regex requiring
@@ -104,10 +104,168 @@ def scaled(value, unit):
     mult = UNIT_MULTIPLIER.get(classify_amount_unit(unit or ""))
     return None if mult is None else value * mult
 
+# Static ticker/exchange metadata for the subset of BANKS entities whose
+# ultimate parent is a separately, currently LSE-listed company (user
+# request, 2026-09-02: "for the banks that are public, maybe we also bring
+# in some data like that as well eg stock price, market cap"; verified
+# 2026-09-09). Scoped to LSE only, not every listed parent worldwide - most
+# tracked entities are wholly-owned subsidiaries. The actual price/market-
+# cap figures are NOT hardcoded here - they live in research/market_data.json,
+# refreshed by fetch_market_data.py (2026-09-09 follow-up: "connect to an
+# API... every weekday... include the stock history for the years we have
+# balance sheet data") and merged onto each entry in curate(). Explicitly
+# excluded after verification: Aldermore Group plc (taken private by
+# FirstRand in 2018), AIB Group plc and Bank of Ireland Group plc (both
+# Euronext Dublin only, no current LSE listing).
+_BARCLAYS = {"parent": "Barclays plc", "ticker": "BARC", "exchange": "LSE Main Market"}
+_HSBC = {"parent": "HSBC Holdings plc", "ticker": "HSBA", "exchange": "LSE Main Market"}
+_NATWEST = {"parent": "NatWest Group plc", "ticker": "NWG", "exchange": "LSE Main Market"}
+_LLOYDS = {"parent": "Lloyds Banking Group plc", "ticker": "LLOY", "exchange": "LSE Main Market"}
+_OSB = {"parent": "OSB Group plc", "ticker": "OSB", "exchange": "LSE Main Market"}
+
+PARENT_MARKET_DATA = {
+    "Barclays Bank": _BARCLAYS,
+    "Barclays Bank UK": _BARCLAYS,
+    "HSBC Bank": _HSBC,
+    "HSBC UK Bank": _HSBC,
+    "HSBC Innovation Bank": _HSBC,
+    "Standard Chartered Bank": {"parent": "Standard Chartered plc", "ticker": "STAN", "exchange": "LSE Main Market"},
+    "RBS": _NATWEST,
+    "National Westminster Bank": _NATWEST,
+    "NatWest Markets": _NATWEST,
+    "Coutts": _NATWEST,
+    "Lloyds Bank": _LLOYDS,
+    "Bank of Scotland": _LLOYDS,
+    "Lloyds Bank Corporate Markets": _LLOYDS,
+    "Close Brothers": {"parent": "Close Brothers Group plc", "ticker": "CBG", "exchange": "LSE Main Market"},
+    "Arbuthnot Latham": {"parent": "Arbuthnot Banking Group plc", "ticker": "ARBB", "exchange": "LSE Main Market"},
+    "Investec Bank": {"parent": "Investec plc", "ticker": "INVP", "exchange": "LSE Main Market (dual LSE/JSE)"},
+    "Schroder": {"parent": "Schroders plc", "ticker": "SDR", "exchange": "LSE Main Market"},
+    "Secure Trust Bank": {"parent": "Secure Trust Bank plc", "ticker": "STB", "exchange": "LSE Main Market"},
+    "Vanquis Bank": {"parent": "Vanquis Banking Group plc", "ticker": "VANQ", "exchange": "LSE Main Market"},
+    "Metro Bank": {"parent": "Metro Bank Holdings plc", "ticker": "MTRO", "exchange": "LSE Main Market"},
+    "Charter Court Financial Services": _OSB,
+    "Paragon": {"parent": "Paragon Banking Group plc", "ticker": "PAG", "exchange": "LSE Main Market"},
+    "Crown Agents Bank": {"parent": "CAB Payments Holdings plc", "ticker": "CABP", "exchange": "LSE Main Market"},
+    "DF Capital Bank": {"parent": "Distribution Finance Capital Holdings plc", "ticker": "DFCH", "exchange": "LSE AIM"},
+    "Rathbones Investment Management": {"parent": "Rathbones Group plc", "ticker": "RAT", "exchange": "LSE Main Market"},
+    "Shawbrook Bank": {"parent": "Shawbrook Group plc", "ticker": "SHAW", "exchange": "LSE Main Market"},
+}
+
+MARKET_DATA_PATH = ROOT / "research" / "market_data.json"
+
+
+def load_market_data():
+    """ticker -> {"current": {...}, "history": {year: price_gbx}} from
+    research/market_data.json, refreshed by fetch_market_data.py. Missing
+    file (never refreshed) or a ticker fetch_market_data.py hasn't reached
+    yet both degrade to "nothing to show" for that bank, not a crash -
+    this table is a secondary reference, not load-bearing data."""
+    if not MARKET_DATA_PATH.exists():
+        return {}
+    return json.loads(MARKET_DATA_PATH.read_text())
+
+
+# Hand-verified full-year results announcement dates (ticker -> {FY year:
+# announcement date}), 2026-09-09 (fourth pass, back-filled against every
+# year we actually have balance-sheet data for) - NOT the fiscal year-end
+# (period-end) date, the actual RNS "Final Results"/"Annual Report and
+# Accounts" publication date, so the share-price chart can mark when the
+# market actually saw each year's numbers. Sourced from each company's own
+# investor-relations financial-calendar/results-history page where
+# available, and otherwise from Investegate's RNS archive.
+#
+# Still-missing years fall into two kinds:
+#  - Genuinely inapplicable (no announcement could ever exist) - CABP
+#    FY2021/FY2022 (IPO'd 11 Jul 2023) and MTRO FY2010-2015 (listed 7-8 Mar
+#    2016), both confirmed against the oldest entry in their own RNS
+#    archives. These are correctly absent, not a research gap.
+#  - Genuine research gap not yet closed - SHAW FY2015/FY2016 only, from
+#    its brief original 2015-2017 LSE listing before being taken private
+#    and then relisting in Oct 2025, not reachable through its current
+#    Investegate company code. Every other ticker (BARC/HSBA/STAN/NWG/
+#    LLOY/CBG/MTRO/INVP/SDR/VANQ/ARBB/STB/OSB/PAG/DFCH/RAT) is now fully
+#    covered for every year it has balance-sheet data in this project.
+#
+# A bank/year missing here just isn't marked on the chart, never guessed.
+# CBG (FYE 31 July), INVP (FYE 31 March), and PAG (FYE 30 September) report
+# on non-calendar fiscal years, so their FY label may not line up with
+# this project's own year keys for those banks - if so the date simply
+# won't intersect and won't show, rather than being misapplied to the
+# wrong year. SHAW's FY2024 date (2025-03-27, found in an earlier pass) is
+# deliberately dropped: it predates Shawbrook's Oct 2025 LSE equity
+# relisting, so it almost certainly belongs to a pre-existing listed-debt/
+# bond-issuer RNS registration under the same company, not the newly
+# listed equity this chart is plotting. MTRO FY2023 and STB FY2018 use an
+# "Annual Report"-type RNS entry in place of a distinct "Final Results"
+# one, since neither company issued a separate Final Results announcement
+# that year.
+REPORT_ANNOUNCEMENT_DATES = {
+    "BARC": {"2018": "2019-02-21", "2019": "2020-02-13", "2020": "2021-02-18", "2021": "2022-02-23",
+             "2022": "2023-02-15", "2023": "2024-02-20", "2024": "2025-02-13", "2025": "2026-02-10"},
+    "HSBA": {"2018": "2019-02-19", "2019": "2020-02-18", "2020": "2021-02-23", "2021": "2022-02-22",
+             "2022": "2023-02-21", "2023": "2024-02-21", "2024": "2025-02-19", "2025": "2026-02-25"},
+    "STAN": {"2024": "2025-02-21", "2025": "2026-02-24"},
+    # NWG's RNS archive under its current code runs continuously back
+    # through its "Royal Bank of Scotland Group plc" years (renamed 2020) -
+    # same company record throughout, no ticker-history caveat needed.
+    "NWG": {"2012": "2013-02-28", "2013": "2014-02-27", "2014": "2015-02-26", "2015": "2016-02-26",
+            "2016": "2017-02-24", "2017": "2018-02-23", "2018": "2019-02-15", "2019": "2020-02-14",
+            "2020": "2021-02-19", "2021": "2022-02-18", "2022": "2023-02-17", "2023": "2024-02-16",
+            "2024": "2025-02-14", "2025": "2026-02-13"},
+    "LLOY": {"2017": "2018-02-21", "2018": "2019-02-20", "2019": "2020-02-20", "2020": "2021-02-24",
+             "2021": "2022-02-24", "2022": "2023-02-22", "2023": "2024-02-22",
+             "2024": "2025-02-20", "2025": "2026-01-29"},
+    # CBG's fiscal year ends 31 July (not January, as an earlier pass
+    # mistakenly assumed from its Half-Year Report date) - these are the
+    # actual Final Results/Annual Report dates, ~2 months after FYE.
+    "CBG": {"2020": "2020-09-22", "2021": "2021-09-28", "2022": "2022-09-27", "2023": "2023-09-26",
+            "2024": "2024-09-19", "2025": "2025-09-30"},
+    # MTRO FY2023 has no distinct "Final Results" RNS entry (Metro Bank was
+    # mid-crisis with a delayed capital raise that period) - "Publication
+    # of Annual Report" (2024-04-17) is the best available date, flagged
+    # as slightly less certain than its other years.
+    "MTRO": {"2016": "2017-02-22", "2017": "2018-02-21", "2018": "2019-02-26", "2019": "2020-02-26",
+             "2020": "2021-02-24", "2021": "2022-02-23", "2022": "2023-03-02", "2023": "2024-04-17",
+             "2024": "2025-04-23", "2025": "2026-03-04"},
+    "INVP": {"2018": "2018-05-17", "2019": "2019-05-16", "2020": "2020-05-21", "2021": "2021-05-21",
+             "2022": "2022-05-19", "2023": "2023-05-18", "2024": "2024-05-23", "2025": "2025-05-22",
+             "2026": "2026-05-21"},
+    "SDR": {"2021": "2022-03-03", "2022": "2023-03-02", "2023": "2024-02-29", "2024": "2025-03-19", "2025": "2026-02-12"},
+    "VANQ": {"2010": "2011-03-01", "2011": "2012-02-28", "2012": "2013-02-26", "2013": "2014-02-25",
+             "2014": "2015-02-24", "2015": "2016-02-23", "2016": "2017-02-28", "2017": "2018-02-27",
+             "2018": "2019-03-13", "2019": "2020-02-27", "2020": "2021-05-10", "2021": "2022-04-04",
+             "2022": "2023-03-29", "2023": "2024-03-27", "2024": "2025-03-14", "2025": "2026-02-26"},
+    "ARBB": {"2017": "2018-03-28", "2018": "2019-03-28", "2019": "2020-03-26", "2020": "2021-03-25",
+             "2021": "2022-03-24", "2022": "2023-03-30", "2023": "2024-03-28", "2024": "2025-03-27",
+             "2025": "2026-03-31"},
+    # STB FY2018's date is from an "Annual Financial Report" RNS entry (no
+    # separate "Final Results" entry that year), same convention as
+    # MTRO's FY2023 above.
+    "STB": {"2017": "2018-03-22", "2018": "2019-03-28", "2019": "2020-05-07", "2020": "2021-03-25",
+            "2021": "2022-03-24", "2022": "2023-03-30", "2023": "2024-03-21", "2024": "2025-03-13",
+            "2025": "2026-03-12"},
+    "OSB": {"2021": "2022-03-17", "2022": "2023-03-16", "2023": "2024-03-14",
+            "2024": "2025-03-13", "2025": "2026-03-05"},
+    "PAG": {"2017": "2017-11-23", "2018": "2018-11-21", "2019": "2019-11-26", "2020": "2020-12-03",
+            "2021": "2021-12-07", "2022": "2022-12-06", "2023": "2023-12-06", "2024": "2024-12-03",
+            "2025": "2025-12-03"},
+    # CABP FY2021/FY2022 have no possible announcement: CAB Payments only
+    # listed on the LSE 11 July 2023, confirmed against the oldest entry
+    # in its own RNS archive.
+    "CABP": {"2023": "2024-03-26", "2024": "2025-03-13", "2025": "2026-03-05"},
+    "DFCH": {"2020": "2021-04-21", "2021": "2022-04-13", "2022": "2023-04-19", "2023": "2024-04-09",
+             "2024": "2025-04-02", "2025": "2026-03-23"},
+    "RAT": {"2021": "2022-02-24", "2022": "2023-03-01", "2023": "2024-03-06",
+            "2024": "2025-02-26", "2025": "2026-02-27"},
+    "SHAW": {"2025": "2026-03-12"},
+}
+
 CAPITAL_METRICS = ["cash_pct_of_assets", "loans_pct_of_assets", "treasury_investments_pct_of_assets"]
 COST_METRICS = [
     "cost_to_income_pct", "revenue", "total_operating_expense",
     "personnel_expense", "other_operating_expense",
+    "personnel_expense_pct_of_revenue", "other_operating_expense_pct_of_revenue",
 ]
 
 # Widened from the original 4 stress-test banks to ~20 for IN-042's "how does
@@ -876,6 +1034,271 @@ def curate_asset_composition_absolute(conn, frn):
     return out
 
 
+# balance-sheet.html (user request, 2026-09-08, following business-model.html
+# and investments.html): "how many assets do different banks have, and what
+# are they" - size (Total assets) plus the same coarse cash/loans/treasury
+# composition already computed for capital_deployment, but built here from
+# curate_asset_composition_absolute() rather than referencing
+# data[label]["capital_deployment"] directly. That dict's own year keys are
+# ints (see the normalize_pnl_year comment a few hundred lines up, where
+# cost_years needs an explicit str(y) cast to line up with the revenue
+# fallback's string years) while curate_total_assets()'s keys are the
+# normalize_pnl_year() bare-string form - picking the SAME year for the size
+# figure and the composition %'s would need reconciling those two key types
+# for every bank. curate_asset_composition_absolute() sidesteps that
+# entirely: it already ties loans/treasury/cash to the exact same year as
+# its own Total assets figure, in one £ amount, under one string-year key.
+ASSET_COMPOSITION_COLOR = {
+    "loans_pct_of_assets": "#1f6e52", "treasury_investments_pct_of_assets": "#45566b",
+    "cash_pct_of_assets": "#a6741f", "other": "#a39a86",
+}
+ASSET_COMPOSITION_LABEL = {
+    "loans_pct_of_assets": "Customer loans", "treasury_investments_pct_of_assets": "Treasury investments",
+    "cash_pct_of_assets": "Cash & central bank balances", "other": "Other assets",
+}
+
+# Size tiers (2026-09-08 follow-up: "compare banks with a similar amount of
+# assets on what those specific assets are" - a flat 133-bank composition
+# chart makes that comparison hard because it's dominated by scale, not
+# mix, so the page adds a peer-group filter keyed off these bands). Bands
+# are fixed £ thresholds rather than e.g. quintiles, so a tier's meaning
+# ("under £250m") doesn't silently shift as more banks are added or removed
+# from the dataset. Originally 5 bands (16/22/58/28/9 banks); the
+# £1bn-£10bn band alone held 58 of 133 banks - visibly crowded once
+# charted (2026-09-08 user report) - so it's split three ways here
+# (£1-2bn/£2-5bn/£5-10bn: 17/26/15) for 7 bands total, each a manageable
+# size to actually compare on one chart.
+_SIZE_TIERS = [
+    (250e6, "Under £250m"), (1e9, "£250m – £1bn"), (2e9, "£1bn – £2bn"),
+    (5e9, "£2bn – £5bn"), (10e9, "£5bn – £10bn"), (100e9, "£10bn – £100bn"),
+    (float("inf"), "£100bn+"),
+]
+
+
+def _size_tier(total_assets):
+    for threshold, label in _SIZE_TIERS:
+        if total_assets < threshold:
+            return label
+    return _SIZE_TIERS[-1][1]
+
+
+def curate_balance_sheet_size(data, conn):
+    """records for balance-sheet.html: Total assets (size) plus three
+    composition breakdowns - assets (cash / customer loans / treasury
+    investments / other), liabilities (customer deposits / bank deposits /
+    wholesale funding / other), and equity (share capital / retained
+    earnings / other) - one entry per bank with a usable Total assets
+    figure. Each of the three sides is captured at ITS OWN latest
+    disclosed year independently (a bank can have a more recent Balance
+    Sheet Assets section than its Equity section is fully populated for,
+    or vice versa) rather than forcing all three onto the size figure's
+    year, the same "each field its own latest year" convention as
+    _scatter_y_axis_fields. "Other" in every composition is a residual,
+    not a separately-sourced figure - reported honestly as one bucket
+    instead of guessed apart, same convention as group_asset_composition's
+    "other" and liability_composition's other_pct."""
+    records = []
+    for label, frn in BANKS.items():
+        comp = curate_asset_composition_absolute(conn, frn)
+        if not comp:
+            continue
+        year = max(comp, key=lambda y: int(y))
+        c = comp[year]
+        total = c["total"]
+        if not total:
+            continue
+        other = max(0.0, total - (c["loans"] + c["treasury"] + c["cash"]))
+        assets = {
+            "loans_pct_of_assets": round(c["loans"] / total * 100, 2),
+            "treasury_investments_pct_of_assets": round(c["treasury"] / total * 100, 2),
+            "cash_pct_of_assets": round(c["cash"] / total * 100, 2),
+            "other": round(other / total * 100, 2),
+            "year": year,
+        }
+
+        liab_series = curate_liability_composition(conn, frn)
+        liab_year = max(liab_series, key=lambda y: int(y)) if liab_series else None
+        liabilities = {**liab_series[liab_year], "year": liab_year} if liab_year else None
+
+        equity_series = curate_equity_composition(conn, frn)
+        equity_year = max(equity_series, key=lambda y: int(y)) if equity_series else None
+        equity = {**equity_series[equity_year], "year": equity_year} if equity_year else None
+
+        records.append({
+            "bank": label, "frn": frn, "bank_type": BANK_TYPE.get(label, "traditional"),
+            "total_assets": total, "year": year, "size_tier": _size_tier(total),
+            "assets": assets, "liabilities": liabilities, "equity": equity,
+        })
+    return records
+
+
+def curate_balance_sheet_deployment(data):
+    """Multi-year cash/loans/treasury-investments composition (% of
+    assets) per bank, for balance-sheet.html's cross-bank distribution
+    boxplot - reuses curate()'s already-built capital_deployment
+    (CAPITAL_METRICS) rather than re-deriving it. Unlike
+    curate_balance_sheet_size above (one snapshot at each bank's own
+    latest year, for the composition bar charts), the boxplot needs the
+    full year-by-year series to show how the spread across banks moves
+    year to year, the same shape comparison.html's Pillar 3 boxplot uses."""
+    return {label: entry["capital_deployment"] for label, entry in data.items() if entry.get("capital_deployment")}
+
+
+# The % subset of COST_METRICS only - the absolute-£ entries (revenue,
+# personnel_expense, etc.) aren't comparable bank to bank on one shared
+# axis, same reasoning as the Pillar 3 boxplot excluding LCR/NSFR's very
+# different scale from the capital ratios rather than mixing them.
+PNL_BOXPLOT_METRICS = ["cost_to_income_pct", "personnel_expense_pct_of_revenue", "other_operating_expense_pct_of_revenue"]
+
+
+def curate_pnl_deployment(data):
+    """Multi-year cost-to-income / personnel- and other-operating-expense
+    -as-%-of-revenue series per bank, for profit-loss.html's cross-bank
+    distribution boxplot - the P&L counterpart to
+    curate_balance_sheet_deployment, trimmed to PNL_BOXPLOT_METRICS."""
+    out = {}
+    for label, entry in data.items():
+        trimmed = {
+            year: {m: v for m, v in vals.items() if m in PNL_BOXPLOT_METRICS and v is not None}
+            for year, vals in (entry.get("cost_base") or {}).items()
+        }
+        trimmed = {year: vals for year, vals in trimmed.items() if vals}
+        if trimmed:
+            out[label] = trimmed
+    return out
+
+
+# profit-loss.html (2026-09-08 follow-up, same shape as balance-sheet.html:
+# "do something similar for profit and loss" - size (Total operating
+# income) plus two composition breakdowns, income and expenses, with the
+# same size-tier peer-group filter). Unlike the Balance Sheet composition
+# curators above, this needs no fresh SQL scan - the absolute-£ per-
+# category series already exist on `data`: income_breakdown (from
+# curate_income_pnl(), a few hundred lines up) and cost_base (from
+# in041_spend_metrics.cost_base(), reshaped into data[label]["cost_base"]
+# in curate() - see the COST_METRICS loop above data[label]["capital_deployment"]).
+_PNL_SIZE_TIERS = [
+    (10e6, "Under £10m"), (25e6, "£10m – £25m"), (50e6, "£25m – £50m"),
+    (100e6, "£50m – £100m"), (250e6, "£100m – £250m"), (500e6, "£250m – £500m"),
+    (1e9, "£500m – £1bn"), (float("inf"), "£1bn+"),
+]
+
+
+def _pnl_size_tier(total_income):
+    for threshold, label in _PNL_SIZE_TIERS:
+        if total_income < threshold:
+            return label
+    return _PNL_SIZE_TIERS[-1][1]
+
+
+INCOME_COMPOSITION_COLOR = {
+    "net_interest_pct": "#1f6e52", "net_fee_pct": "#45566b",
+    "trading_investment_pct": "#a6741f", "other_pct": "#a39a86",
+}
+INCOME_COMPOSITION_LABEL = {
+    "net_interest_pct": "Net interest income", "net_fee_pct": "Net fee & commission income",
+    "trading_investment_pct": "Trading & investment income", "other_pct": "Other income",
+}
+EXPENSE_COMPOSITION_COLOR = {"personnel_pct": "#45566b", "other_operating_pct": "#1f6e52", "other_pct": "#a39a86"}
+EXPENSE_COMPOSITION_LABEL = {
+    "personnel_pct": "Personnel expense", "other_operating_pct": "Other operating expense", "other_pct": "Other",
+}
+
+
+def curate_pnl_composition(data):
+    """records for profit-loss.html: Total operating income (size) plus
+    income composition (net interest / net fee & commission / trading &
+    investment / other, % of total operating income) and expense
+    composition (personnel / other operating / other, % of total operating
+    expenses) - the P&L counterpart to curate_balance_sheet_size. Income
+    and expenses are each captured at THEIR OWN latest year independently
+    (a bank's cost_base and income_breakdown coverage don't always align -
+    see COST_METRICS's own coverage note), same "each field its own latest
+    year" convention as _scatter_y_axis_fields and curate_balance_sheet_size.
+    "Other" in both compositions is a residual against the disclosed TOTAL
+    (revenue / total operating expense), not a separately-sourced figure -
+    same honest-residual convention as every Balance Sheet composition
+    curator above; income's residual can be negative in principle (a
+    disclosed revenue total lower than the sum of its own named lines -
+    seen for equity, not yet for income, but not clamped here either, for
+    the same reason)."""
+    def pct(numerator, denominator):
+        # `or 0.0` turns a Python -0.0 (e.g. 0 / a negative total_opex,
+        # since expenses are stored as negative figures throughout
+        # cost_base) into a plain 0.0 before rounding - -0.0 is falsy in
+        # Python, so this is a real normalization, not a no-op comment.
+        return round(numerator / denominator * 100, 2) or 0.0
+
+    records = []
+    for label, frn in BANKS.items():
+        cost_years = data[label].get("cost_base", {})
+        income_years = data[label].get("income_breakdown", {})
+
+        size_year = next(
+            (y for y in sorted(cost_years, key=lambda y: int(y), reverse=True) if cost_years[y].get("revenue")),
+            None,
+        )
+        if size_year is None:
+            continue
+        revenue = cost_years[size_year]["revenue"]
+        # A negative "Total operating income" year (a genuine, if rare,
+        # outcome - net interest expense exceeding all other income) can't
+        # be a size figure (nothing to plot on a log-scale bar) or a %
+        # denominator (every share would flip sign against intuition), so
+        # it's skipped here rather than shown as a nonsensical composition.
+        if not revenue or revenue <= 0:
+            continue
+
+        expenses = None
+        for y in sorted(cost_years, key=lambda y: int(y), reverse=True):
+            total_opex = cost_years[y].get("total_operating_expense")
+            if not total_opex:
+                continue
+            personnel = cost_years[y].get("personnel_expense") or 0
+            other_opex = cost_years[y].get("other_operating_expense") or 0
+            other = total_opex - (personnel + other_opex)
+            expenses = {
+                "personnel_pct": pct(personnel, total_opex),
+                "other_operating_pct": pct(other_opex, total_opex),
+                "other_pct": pct(other, total_opex),
+                "year": y,
+            }
+            break
+
+        income = None
+        for y in sorted(income_years, key=lambda y: int(y), reverse=True):
+            cats = income_years[y]
+            # Prefer the same year's disclosed revenue as the % base (ties
+            # this chart to the same "Total operating income" figure the
+            # size chart and cost-to-income ratio both use); fall back to
+            # summing this bank's own known categories when that year's
+            # revenue wasn't itself selected by cost_base (own_match/rank
+            # requirements there are stricter than income_breakdown's).
+            total = cost_years.get(y, {}).get("revenue") or sum(v for v in cats.values() if v)
+            if not total or total <= 0:
+                continue
+            interest = cats.get("Net interest income") or 0
+            fee = cats.get("Net fee and commission income") or 0
+            trading = cats.get("Trading & investment income") or 0
+            other_disclosed = cats.get("Other income") or 0
+            residual = total - (interest + fee + trading + other_disclosed)
+            income = {
+                "net_interest_pct": pct(interest, total),
+                "net_fee_pct": pct(fee, total),
+                "trading_investment_pct": pct(trading, total),
+                "other_pct": pct(other_disclosed + residual, total),
+                "year": y,
+            }
+            break
+
+        records.append({
+            "bank": label, "frn": frn, "bank_type": BANK_TYPE.get(label, "traditional"),
+            "total_income": revenue, "year": size_year, "size_tier": _pnl_size_tier(revenue),
+            "income": income, "expenses": expenses,
+        })
+    return records
+
+
 _TOTAL_LIABILITIES_RE = re.compile(r"total liabilities$", re.I)
 # Balance Sheet liability labels are as heterogeneous as everywhere else in
 # this hand-transcribed dataset - "Customer deposits" vs "Customer accounts"
@@ -885,8 +1308,25 @@ _TOTAL_LIABILITIES_RE = re.compile(r"total liabilities$", re.I)
 # Deliberately coarse (3 named buckets + a remainder), same spirit as
 # capital_deployment's cash/loans/treasury/other - a finer split would need
 # per-bank label review this feature doesn't warrant.
-_CUSTOMER_DEPOSITS_RE = re.compile(r"customer (deposit|account)|deposits? by customer|client account", re.I)
-_BANK_DEPOSITS_RE = re.compile(r"bank deposit|deposits? (by|from) bank|due to bank|deposits from .*undertaking", re.I)
+# Word order varies as much as vocabulary here: several banks (e.g. both
+# Barclays entities, IFRS 9-style "Deposits at amortised cost from
+# customers"/"...from banks") put "customer"/"bank" AFTER "deposit" rather
+# than before it - a fixed "customer deposit"/"bank deposit"/"deposit by/
+# from bank" phrase order (the original form of these two regexes) misses
+# that construction entirely. Found via Barclays Bank UK showing 0% on
+# BOTH customer_deposits_pct and bank_deposits_pct despite its Balance
+# Sheet plainly having "Deposits at amortised cost from customers" as its
+# single largest liability line. Loosened to a wildcard between "deposit"
+# and "customer"/"bank" to catch this - which is why the loop below now
+# also requires in_liabilities_section(row_label): an unanchored wildcard
+# can otherwise cross onto an ASSET-side row using the same two words in
+# the other sense (a bank's own money placed "Deposits with banks" is an
+# asset, not a liability, and would otherwise wrongly count as a bank
+# deposit).
+_CUSTOMER_DEPOSITS_RE = re.compile(r"customer (?:deposit|account)|deposits?\b.*\bcustomers?\b|client account", re.I)
+_BANK_DEPOSITS_RE = re.compile(
+    r"bank deposit|deposits?\b.*\bbanks?\b|due to bank|deposits?\b.*\bundertakings?\b", re.I
+)
 _WHOLESALE_FUNDING_RE = re.compile(r"debt securities in issue|debt in issuance|notes in circulation|long.?term debt|subordinated", re.I)
 
 
@@ -895,7 +1335,11 @@ def curate_liability_composition(conn, frn):
     wholesale funding (debt securities in issue + subordinated liabilities)
     / other, as a % of total liabilities per year - the liabilities-side
     counterpart to capital_deployment's asset mix, built fresh here since
-    curate() never needed a liability breakdown before this."""
+    curate() never needed a liability breakdown before this. Restricted to
+    Liabilities-section rows (see the regex comment above for why the
+    wildcard word-order fix makes this necessary, not just tidy) - the
+    "Total liabilities" row is itself under that section too, so this
+    doesn't need a separate carve-out."""
     rows = conn.execute(
         "SELECT row_label, year, value_numeric, unit FROM annual_metrics "
         "WHERE frn=? AND sheet='Balance Sheet' AND value_numeric IS NOT NULL",
@@ -903,6 +1347,8 @@ def curate_liability_composition(conn, frn):
     ).fetchall()
     totals, by_year = {}, {}
     for row_label, year, value, unit in rows:
+        if not in_liabilities_section(row_label):
+            continue
         item = row_label.split(" - ", 1)[1] if " - " in row_label else row_label
         amount = scaled(value, unit)
         if amount is None:
@@ -938,6 +1384,107 @@ def curate_liability_composition(conn, frn):
             "total": total, "customer_deposits": cats.get("customer_deposits", 0),
             "bank_deposits": cats.get("bank_deposits", 0), "wholesale_funding": cats.get("wholesale_funding", 0),
             "other": other,
+        }
+    return out
+
+
+# Equity section label vocabulary is the most heterogeneous of the three
+# Balance Sheet sections in this hand-transcribed dataset - ~140 distinct
+# labels surveyed across the 145 build scripts (share capital naming alone:
+# "Called up share capital"/"Issued share capital"/"Ordinary shares"/
+# "Common shares"/... ; a long tail of reserve types: AFS/FVOCI/cash flow
+# hedge/translation/revaluation/merger/capital redemption/share-based
+# payment/pension/AT1 "other equity instruments"/non-controlling interests/
+# treasury shares/warrant reserve). Same coarse "2 named buckets + residual"
+# approach as curate_liability_composition rather than chasing every reserve
+# type - only share capital (+ share premium, almost always disclosed
+# together or combined into one line) and retained earnings are unambiguous
+# enough across banks to name; everything else, INCLUDING a handful of
+# build scripts' own blended "Other reserves (retained earnings + pension
+# reserve...)" style labels (which would otherwise substring-match
+# "retained earnings" and be miscounted as pure retained earnings), is left
+# unclassified and folds into the residual "other" bucket below rather than
+# guessed apart.
+_TOTAL_EQUITY_RE = re.compile(
+    r"total equity|total shareholders?[’']?\s*(?:funds|equity)|shareholders?[’']?\s*funds$|^net assets$",
+    re.I,
+)
+_TOTAL_EQUITY_EXCLUDE_RE = re.compile(r"liabilit", re.I)
+_EQUITY_BLENDED_OR_OTHER_RESERVE_RE = re.compile(r"^other\b|^reserves?\b", re.I)
+_SHARE_CAPITAL_RE = re.compile(
+    r"share capital|share premium|ordinary shares?\b|common shares?\b|paid.?in equity|shares? to be issued", re.I
+)
+_RETAINED_EARNINGS_RE = re.compile(
+    r"retained earnings?|retained (?:income|profits?|losses?)|accumulated (?:profit|loss|income|gain)s?|"
+    r"profit(?:s)? (?:and|&) loss(?:es)? account|profit or loss account",
+    re.I,
+)
+
+
+def curate_equity_composition(conn, frn):
+    """Total equity split into share capital (+ share premium) / retained
+    earnings / other, as a % of total equity per year - the equity-side
+    counterpart to curate_liability_composition, same structure: a row
+    that doesn't unambiguously match either named category is simply left
+    unclassified (not summed into a third bucket), so "other" falls out
+    of total - known as a residual, exactly like liability composition's
+    other_pct - never risking a double-count between an explicit "other"
+    tally and the residual subtraction. Restricted to Equity-section rows
+    (same reasoning as curate_liability_composition's in_liabilities_section
+    filter) - "Net assets" in particular is too generic a phrase to trust
+    outside its own section."""
+    rows = conn.execute(
+        "SELECT row_label, year, value_numeric, unit FROM annual_metrics "
+        "WHERE frn=? AND sheet='Balance Sheet' AND value_numeric IS NOT NULL",
+        (frn,),
+    ).fetchall()
+    totals, by_year = {}, {}
+    for row_label, year, value, unit in rows:
+        if not in_equity_section(row_label):
+            continue
+        item = row_label.split(" - ", 1)[1] if " - " in row_label else row_label
+        amount = scaled(value, unit)
+        if amount is None:
+            continue
+        y = normalize_pnl_year(year)
+        if _TOTAL_EQUITY_RE.search(item) and not _TOTAL_EQUITY_EXCLUDE_RE.search(item):
+            totals[y] = amount
+            continue
+        if _EQUITY_BLENDED_OR_OTHER_RESERVE_RE.search(item):
+            continue
+        if _SHARE_CAPITAL_RE.search(item):
+            cat = "share_capital"
+        elif _RETAINED_EARNINGS_RE.search(item):
+            cat = "retained_earnings"
+        else:
+            continue
+        year_cats = by_year.setdefault(y, {})
+        year_cats[cat] = year_cats.get(cat, 0) + amount
+    out = {}
+    for y, total in totals.items():
+        if not total:
+            continue
+        cats = by_year.get(y, {})
+        known = sum(cats.values())
+        # NOT clamped at 0, unlike every other composition curator's
+        # residual in this file (assets/liabilities always have non-
+        # negative categories by construction, so their residuals can't go
+        # negative either) - equity's unclassified reserves genuinely can
+        # be negative (cash flow hedge / FX translation / AFS-FVOCI
+        # reserves regularly run negative), and clamping here would hide
+        # that rather than report it. Confirmed via NatWest Markets FY2025:
+        # share_capital (51.42%) + retained_earnings (51.41%) already sums
+        # past 100% because -£214m of unclassified negative reserves
+        # (cash flow hedging -£97m, FX -£117m) pull total equity below
+        # their combined total - clamping other_pct at 0 there would leave
+        # the 3 legs summing to 102.83% with no visible explanation.
+        other = total - known
+        out[y] = {
+            "share_capital_pct": round(cats.get("share_capital", 0) / total * 100, 2),
+            "retained_earnings_pct": round(cats.get("retained_earnings", 0) / total * 100, 2),
+            "other_pct": round(other / total * 100, 2),
+            "total": total, "share_capital": cats.get("share_capital", 0),
+            "retained_earnings": cats.get("retained_earnings", 0), "other": other,
         }
     return out
 
@@ -1096,6 +1643,27 @@ def _extract_month_year(label):
     "(i)"/"(ii)" suffix."""
     m = _MONTH_YEAR_RE.search(label)
     return f"{m.group(1)[:3].capitalize()} {m.group(2)}" if m else None
+
+
+_QUALIFIER_STRIP_RE = re.compile(r"^FY\d{4}\s*(?:closing|opening)?,?\s*", re.I)
+
+
+def _extract_checkpoint_qualifier(label):
+    """The descriptive tag a checkpoint's OWN label already carries, once
+    its date is stripped - e.g. "At 31 March 2025 (restated to Bank-solo
+    basis)" -> "restated to Bank-solo basis", or "At 30 September 2024
+    (FY2024 closing, as restated)" -> "as restated". Used as a readable
+    tie-breaker for two checkpoints that genuinely share the same
+    calendar date (Clydesdale Bank's Group-basis/Bank-solo-basis
+    restatement, Paragon's originally-reported/as-restated pair) instead
+    of a bare "(i)"/"(ii)" suffix, which reads as an error rather than the
+    real disclosed distinction it stands for."""
+    parens = _PAREN_RE.findall(label)
+    if not parens:
+        return None
+    qualifier = parens[-1][1:-1].strip()
+    qualifier = _QUALIFIER_STRIP_RE.sub("", qualifier).strip(" ,")
+    return qualifier or None
 
 
 _PAREN_RE = re.compile(r"\([^)]*\)")
@@ -1344,6 +1912,49 @@ def curate_equity_waterfall(rows_by_order, components):
             "bars": bars, "_kind": kind, "_opening_key": opening_key, "_closing_key": closing_key,
         })
 
+    # A checkpoint-to-checkpoint segment can end up with literally no
+    # movement rows between it and its neighbour at all - the source
+    # printed a same-value "at 1 January" opening line immediately after
+    # the prior year's "at 31 December" closing line (a common statutory-
+    # accounts convention, not a real economic event), yielding an empty
+    # bars list and a zero opening-to-closing delta. The 2026-09-06 fix
+    # (see `CurateEquityWaterfallTests`) only catches this AFTER a
+    # genuinely FY-tagged segment, via pass 2's trailing-carry merge; many
+    # banks never tag any movement row with "(FYNNNN)" at all (Hampshire
+    # Trust Bank, ICBC (London), Clydesdale Bank, Paragon, United National
+    # and 20 others - confirmed via a full-database sweep, 101 blank chart
+    # rows across 24 banks), so every one of their checkpoint pairs stays
+    # "gap"-kind and that fold never triggers. Fold any such genuinely-
+    # empty segment into its nearest real neighbour here instead, kind-
+    # agnostic, so no blank chart row survives regardless of whether
+    # either side was ever FY-tagged. This also naturally resolves same-
+    # date collisions that were only colliding BECAUSE of one side being
+    # this kind of uninformative filler (Hampshire Trust Bank's and ICBC
+    # (London)'s own "Jan NNNN"/"Restated ... Jan NNNN" IFRS 9/16
+    # transition pairs) - only genuine two-real-segment same-date pairs
+    # (Clydesdale Bank's Group/Bank-solo restatement, Paragon's originally-
+    # reported/as-restated pair) still need the "(i)"/"(ii)" safety net
+    # below.
+    i = 0
+    while i < len(segments):
+        seg = segments[i]
+        if len(segments) > 1 and not seg["bars"] and abs(seg["opening"] - seg["closing"]) <= 1.0:
+            if i + 1 < len(segments):
+                nxt = segments[i + 1]
+                nxt["opening"] = seg["opening"]
+                nxt["_opening_key"] = seg["_opening_key"]
+                if seg["start_year"] is not None and (nxt["start_year"] is None or seg["start_year"] < nxt["start_year"]):
+                    nxt["start_year"] = seg["start_year"]
+            else:
+                prev = segments[i - 1]
+                prev["closing"] = seg["closing"]
+                prev["_closing_key"] = seg["_closing_key"]
+                if seg["end_year"] is not None and (prev["end_year"] is None or seg["end_year"] > prev["end_year"]):
+                    prev["end_year"] = seg["end_year"]
+            del segments[i]
+            continue
+        i += 1
+
     # Archival "gap" segments (checkpoints with no disclosed movement detail
     # at all - see the "one row PER checkpoint pair" note above) can land on
     # the same bare year as a sibling gap segment (verified against Union
@@ -1367,16 +1978,45 @@ def curate_equity_waterfall(rows_by_order, components):
     # segments from a restated/"as originally reported" pair of movements,
     # or a gap segment the month-date upgrade above couldn't disambiguate),
     # NO segment should ever reach the chart with a label some other
-    # segment already has - fall back to a bare "(i)"/"(ii)" suffix, in
-    # chronological order, for any label still shared by more than one
-    # segment at this point.
+    # segment already has. By this point the empty-segment fold above has
+    # already removed every uninformative same-date filler, so what's left
+    # colliding is always two REAL, distinct disclosed checkpoints on the
+    # same date (Clydesdale Bank's "Group basis"/"restated to Bank-solo
+    # basis", Paragon's "as originally reported"/"as restated") - try that
+    # checkpoint's own descriptive tag first, since it reads as the real
+    # disclosed distinction rather than an arbitrary ordinal; fall back to
+    # a bare "(i)"/"(ii)" suffix, in chronological order, only if no
+    # qualifier is available or it still collides.
     label_counts = defaultdict(int)
     for seg in segments:
         if seg["year"]:
             label_counts[seg["year"]] += 1
+    if any(c > 1 for c in label_counts.values()):
+        for seg in segments:
+            if seg["year"] and label_counts[seg["year"]] > 1:
+                qualifier = _extract_checkpoint_qualifier(rows_by_order[seg["_closing_key"]]["label"])
+                if qualifier:
+                    seg["_qualified_year"] = f"{seg['year']} ({qualifier})"
+        qualified_counts = defaultdict(int)
+        for seg in segments:
+            if seg.get("_qualified_year"):
+                qualified_counts[seg["_qualified_year"]] += 1
+        for seg in segments:
+            if seg.get("_qualified_year") and qualified_counts[seg["_qualified_year"]] == 1:
+                seg["year"] = seg.pop("_qualified_year")
+            elif "_qualified_year" in seg:
+                del seg["_qualified_year"]
+        # Recompute: a qualifier may have resolved a collision for just one
+        # side of a pair, leaving the other side's plain year genuinely
+        # unique again - the ordinal fallback below must judge uniqueness
+        # against what's left, not the pre-qualifier counts.
+        label_counts = defaultdict(int)
+        for seg in segments:
+            if seg["year"]:
+                label_counts[seg["year"]] += 1
     label_seen = defaultdict(int)
     for seg in segments:
-        if seg["year"] and label_counts[seg["year"]] > 1:
+        if seg["year"] and label_counts.get(seg["year"], 0) > 1:
             label_seen[seg["year"]] += 1
             seg["year"] = f"{seg['year']} ({'i' * label_seen[seg['year']]})"
 
@@ -1694,6 +2334,14 @@ def curate_comparison_bubbles(data, parent_groups):
             raw = (entry.get("pillar3") or {}).get(key) or {}
         elif kind == "cost_base":
             raw = {y: v.get(key) for y, v in (entry.get("cost_base") or {}).items() if v.get(key) is not None}
+        elif kind == "capital_deployment":
+            raw = {
+                y: v.get(key) for y, v in (entry.get("capital_deployment") or {}).items() if v.get(key) is not None
+            }
+        elif kind == "leverage":
+            raw = (entry.get("leverage") or {}).get(key) or {}
+        elif kind == "income_volatility":
+            raw = (entry.get("income_volatility") or {}).get(key) or {}
         else:
             raise ValueError(kind)
         return {str(k): v for k, v in raw.items()}
@@ -1721,7 +2369,257 @@ def curate_comparison_bubbles(data, parent_groups):
         "risk_vs_capital": build(("top", "rwa_to_assets_pct"), ("pillar3", "CET1 Ratio")),
         "efficiency_vs_capital": build(("cost_base", "cost_to_income_pct"), ("pillar3", "CET1 Ratio")),
         "leverage_vs_liquidity": build(("pillar3", "Leverage Ratio"), ("pillar3", "LCR")),
+        # Added 2026-09-08 (user request to bring Balance Sheet / P&L
+        # dimensions into the Gapminder-style bubble charts alongside the
+        # three Pillar-3-only pairings above): customer loans as a share of
+        # total assets (Balance Sheet asset mix, from capital_deployment)
+        # against the cost-to-income ratio (P&L cost structure) - does a
+        # loan-heavy balance sheet run leaner or costlier than a
+        # treasury/cash-heavy one.
+        "balance_sheet_vs_pnl": build(
+            ("capital_deployment", "loans_pct_of_assets"), ("cost_base", "cost_to_income_pct"),
+        ),
+        # Three more added 2026-09-08 (user asked to bring in a few more
+        # Balance Sheet / P&L pairings and see how they look):
+        # - capital_cushion_vs_growth: equity as a share of total assets
+        #   (Balance Sheet capital structure, from leverage()'s own
+        #   equity_to_assets_pct - not a Pillar 3 ratio, so it's disclosed
+        #   for banks that don't report CET1/leverage under Pillar 3 at
+        #   all) against the bank's own income YoY growth (P&L, from
+        #   income_volatility()) - does a thinly-capitalised bank grow
+        #   income faster.
+        # - cost_structure: personnel expense vs. other operating expense,
+        #   both as a % of revenue (both P&L, both from cost_base) - staff-
+        #   heavy vs. overhead-heavy cost bases, independent of overall
+        #   cost-to-income level.
+        # - liquidity_vs_loans: cash vs. customer loans, both as a % of
+        #   total assets (both Balance Sheet, both from capital_deployment)
+        #   - the two ends of the same asset-mix decision.
+        "capital_cushion_vs_growth": build(
+            ("leverage", "equity_to_assets_pct"), ("income_volatility", "yoy_change_pct"),
+        ),
+        "cost_structure": build(
+            ("cost_base", "personnel_expense_pct_of_revenue"), ("cost_base", "other_operating_expense_pct_of_revenue"),
+        ),
+        "liquidity_vs_loans": build(
+            ("capital_deployment", "cash_pct_of_assets"), ("capital_deployment", "loans_pct_of_assets"),
+        ),
     }
+
+
+# Per-bank radar/spider chart (user request, 2026-09-08): "strengths, one
+# point per field". The 6 Pillar 3 ratios below all read "higher is
+# stronger" (unlike, say, cost-to-income), so plotting them directly on one
+# radar would still be pointless - CET1 (~10-25%) and LCR (~100-300%+) share
+# no readable scale, so CET1 would flatten to an invisible sliver next to
+# LCR the same way pillar3TrendChart's own docstring already found for the
+# line-chart version of this problem. Converted to a percentile rank (0-100,
+# this bank vs. every other bank's own latest disclosed value for that same
+# metric) instead of raw %, so all 6 axes share one honest 0-100 scale and
+# "further out" always means "stronger than more peers", regardless of the
+# metric's native units.
+RADAR_METRICS = ["CET1 Ratio", "Leverage Ratio", "LCR", "NSFR", "MREL Ratio", "Total Capital Ratio"]
+
+
+def _percentile_rank(value, all_values):
+    """Where `value` sits among `all_values`, 0-100, counting ties as half
+    a rank each (the standard tie-handling for a percentile rank) so a
+    bank tied for best doesn't silently outrank another bank tied with it."""
+    n = len(all_values)
+    if n <= 1:
+        return 50.0
+    below = sum(1 for v in all_values if v < value)
+    tied = sum(1 for v in all_values if v == value)
+    return round((below + 0.5 * tied) / n * 100, 1)
+
+
+def curate_radar_percentiles(data):
+    """Per-bank {metric: {value, percentile}} for RADAR_METRICS, keyed by
+    each bank's own latest disclosed year per metric (independently per
+    metric, same "each field its own latest year" convention used
+    throughout this file) - the payload bank-<slug>.html's radar chart
+    plots directly."""
+    latest_by_metric = {}
+    for metric in RADAR_METRICS:
+        latest = {}
+        for label, entry in data.items():
+            years = (entry.get("pillar3") or {}).get(metric) or {}
+            if not years:
+                continue
+            y = max(years, key=lambda yy: int(yy))
+            latest[label] = years[y]
+        latest_by_metric[metric] = latest
+
+    out = {}
+    for label in data:
+        metrics = {}
+        for metric in RADAR_METRICS:
+            latest = latest_by_metric[metric]
+            if label not in latest:
+                continue
+            all_values = list(latest.values())
+            metrics[metric] = {
+                "value": latest[label],
+                "percentile": _percentile_rank(latest[label], all_values),
+                "n_peers": len(all_values),
+            }
+        if metrics:
+            out[label] = metrics
+    return out
+
+
+# Per-bank Sankey diagrams (user request, 2026-09-08, via chartjs-chart-
+# sankey - vendored under vendor/chartjs-chart-sankey/ the same way
+# Chart.js itself is vendored, so the deliverable stays a zero-CDN static
+# site). Both reuse absolute-£ figures already curated elsewhere rather
+# than re-deriving anything: the P&L flow from income_breakdown/
+# profit_for_year (curate_income_pnl), the Balance Sheet flow from
+# curate_asset_composition_absolute/curate_liability_composition/
+# curate_equity_composition (all already used for profit-loss.html and
+# balance-sheet.html respectively).
+def curate_bank_pnl_sankey(entry):
+    """Multi-stage P&L waterfall (user request, 2026-09-08, modeled on the
+    Flourish "Apple earnings" Sankey template): income sources -> Total
+    income -> Operating expenses / Operating profit -> Personnel / Other
+    operating / Other costs (under expenses) and Profit for the year /
+    Provisions & tax (under operating profit) - as many stages as the
+    bank's own disclosures actually support, rather than the flatter
+    2-column income-vs-profit split this replaces. A category with a
+    genuinely negative disclosed value (e.g. Atom Bank's own net fee
+    EXPENSE line) is flipped to flow OUT of "Total income" instead of in -
+    a Sankey link can't carry a negative flow, and modeling it as an
+    outflow is what it actually is (a net cost embedded in the income
+    statement, not income).
+
+    Every stage past "Total income" needs its own year's figures to line
+    up coherently (an opex/profit split against a mismatched year would
+    show a diagram that doesn't actually net out) - so the opex breakdown
+    is only added when THIS SAME year also has a disclosed
+    total_operating_expense strictly between 0 and total income, and the
+    profit split under it only when that same year's profit_for_year is
+    strictly between 0 and the resulting operating profit. Falls back to
+    the simpler income -> profit/costs split (no opex stage at all) when
+    the bank's cost_base doesn't cover this year - most small/simple
+    banks - rather than forcing a stage the disclosures don't support."""
+    breakdown = entry.get("income_breakdown") or {}
+    if not breakdown:
+        return None
+    cost_years = entry.get("cost_base") or {}
+    profit_years = entry.get("profit_for_year") or {}
+
+    # Prefer a year where a total_operating_expense figure exists too, so
+    # the richer 4-stage diagram can be drawn; fall back to
+    # income_breakdown's own latest year alone otherwise.
+    candidate_years = [y for y in breakdown if (cost_years.get(y) or {}).get("total_operating_expense")]
+    year = max(candidate_years, key=lambda y: int(y)) if candidate_years else max(breakdown, key=lambda y: int(y))
+
+    cats = breakdown[year]
+    total_income = sum(cats.values())
+    if not total_income:
+        return None
+
+    links = []
+    for cat, value in cats.items():
+        if not value:
+            continue
+        if value > 0:
+            links.append({"from": cat, "to": "Total income", "flow": value})
+        else:
+            links.append({"from": "Total income", "to": f"{cat} (net cost)", "flow": abs(value)})
+
+    cb = cost_years.get(year) or {}
+    # cost_base's expense figures carry the P&L's own sign (negative), same
+    # as income_breakdown's own occasional negative income line above -
+    # abs() here since a Sankey flow is a magnitude, and every value in this
+    # branch is already known to be an expense by which dict field it came
+    # from, not by its sign.
+    total_opex = cb.get("total_operating_expense")
+    total_opex = abs(total_opex) if total_opex is not None else None
+    if total_opex is not None and 0 < total_opex < total_income:
+        operating_profit = total_income - total_opex
+        links.append({"from": "Total income", "to": "Operating expenses", "flow": total_opex})
+        links.append({"from": "Total income", "to": "Operating profit", "flow": operating_profit})
+
+        personnel = abs(cb.get("personnel_expense") or 0)
+        other_opex = abs(cb.get("other_operating_expense") or 0)
+        if personnel:
+            links.append({"from": "Operating expenses", "to": "Personnel expense", "flow": personnel})
+        if other_opex:
+            links.append({"from": "Operating expenses", "to": "Other operating expense", "flow": other_opex})
+        residual_opex = total_opex - (personnel + other_opex)
+        if residual_opex > 0:
+            links.append({"from": "Operating expenses", "to": "Other costs", "flow": residual_opex})
+
+        profit = profit_years.get(year)
+        if profit is not None and 0 < profit < operating_profit:
+            links.append({"from": "Operating profit", "to": "Profit for the year", "flow": profit})
+            links.append({"from": "Operating profit", "to": "Provisions & tax", "flow": operating_profit - profit})
+    else:
+        profit = profit_years.get(year)
+        if profit is not None:
+            cost = total_income - profit
+            if profit > 0 and cost > 0:
+                links.append({"from": "Total income", "to": "Profit for the year", "flow": profit})
+                links.append({"from": "Total income", "to": "Costs, provisions & tax", "flow": cost})
+    return {"year": year, "links": links}
+
+
+def curate_bank_balance_sheet_sankey(conn, frn):
+    """Asset categories -> Total assets -> Liability + Equity categories,
+    for one bank. Each of the three sides (assets/liabilities/equity) is
+    read at ITS OWN latest disclosed year, same convention as
+    curate_balance_sheet_size - so the diagram is an approximation when a
+    bank's three sections aren't all current as of the same year, not a
+    literal accounting identity for one instant in time. Equity's
+    unclassified "other" can be genuinely negative (see
+    curate_equity_composition's own NatWest Markets note) - clamped to 0
+    here only, since a Sankey link can't render a negative flow; the real
+    signed figure is still shown correctly on balance-sheet.html and the
+    per-bank equity mix chart, this is a display simplification for the
+    flow diagram alone."""
+    assets = curate_asset_composition_absolute(conn, frn)
+    if not assets:
+        return None
+    a_year = max(assets, key=lambda y: int(y))
+    a = assets[a_year]
+    total_assets = a["total"]
+    if not total_assets:
+        return None
+    other_assets = max(0.0, total_assets - (a["loans"] + a["treasury"] + a["cash"]))
+    links = [
+        {"from": "Customer loans", "to": "Total assets", "flow": a["loans"]},
+        {"from": "Treasury investments", "to": "Total assets", "flow": a["treasury"]},
+        {"from": "Cash & central bank balances", "to": "Total assets", "flow": a["cash"]},
+        {"from": "Other assets", "to": "Total assets", "flow": other_assets},
+    ]
+    links = [l for l in links if l["flow"]]
+
+    liab_series = curate_liability_composition(conn, frn)
+    liab_year = max(liab_series, key=lambda y: int(y)) if liab_series else None
+    if liab_year:
+        liab = liab_series[liab_year]
+        for label, key in [
+            ("Customer deposits", "customer_deposits"), ("Bank deposits", "bank_deposits"),
+            ("Wholesale funding", "wholesale_funding"), ("Other liabilities", "other"),
+        ]:
+            v = liab.get(key, 0)
+            if v:
+                links.append({"from": "Total assets", "to": label, "flow": v})
+
+    equity_series = curate_equity_composition(conn, frn)
+    equity_year = max(equity_series, key=lambda y: int(y)) if equity_series else None
+    if equity_year:
+        eq = equity_series[equity_year]
+        for label, key in [
+            ("Share capital", "share_capital"), ("Retained earnings", "retained_earnings"), ("Other equity", "other"),
+        ]:
+            v = max(0.0, eq.get(key, 0))
+            if v:
+                links.append({"from": "Total assets", "to": label, "flow": v})
+
+    if len(links) < 2:
+        return None
+    return {"asset_year": a_year, "liability_year": liab_year, "equity_year": equity_year, "links": links}
 
 
 CLUSTER_DIMS = [
@@ -2202,13 +3100,54 @@ def curate():
         out[label]["cost_base"] = cost_years
 
     conn = sqlite3.connect(DB_PATH)
+    market_data = load_market_data()
     for label, frn in BANKS.items():
         income_breakdown, profit_for_year = curate_income_pnl(conn, frn)
         out[label]["income_breakdown"] = income_breakdown
         out[label]["profit_for_year"] = profit_for_year
         out[label]["pillar3"] = curate_pillar3(conn, frn)
+        out[label]["total_assets"] = curate_total_assets(conn, frn)
         out[label]["cash_flow"] = curate_cashflow(conn, frn)
         out[label]["equity_changes"] = curate_equity_changes(conn, frn)
+        # Merge the static ticker/exchange metadata above with
+        # fetch_market_data.py's live snapshot+history (2026-09-09 follow-
+        # up). History is trimmed to the years this bank actually has
+        # balance-sheet data for - the chart is "share price over the years
+        # we can also show a balance sheet for", not the ticker's full
+        # trading history. A bank with metadata but no live fetch yet (file
+        # missing, or that ticker not reached this run) shows nothing,
+        # rather than fabricating a figure.
+        meta = PARENT_MARKET_DATA.get(label)
+        pmd = None
+        if meta:
+            md = market_data.get(meta["ticker"])
+            if md and md.get("current"):
+                bs_years = set(out[label]["total_assets"] or {})
+                # Trim to the SPAN from earliest to latest balance-sheet
+                # year, not the exact year set - a bank entity can have a
+                # real internal gap (e.g. Lloyds Bank plc's own extracted
+                # Balance Sheet skips 2018-2020 between 2017 and 2021).
+                # Filtering to the literal year set silently drops those
+                # trading days from history_daily, so Chart.js's category
+                # axis connects 2017 straight to 2021 with no visual gap -
+                # 3 real years of price history collapse into what reads
+                # as one sharp move, misrepresenting a rendering artifact
+                # as a market event. Spanning the full min-max range keeps
+                # the days continuous so the chart (and any report-date
+                # marker that happens to fall in a gap year) stays a true
+                # reading of the real trading history.
+                if bs_years:
+                    min_year, max_year = min(bs_years), max(bs_years)
+                    in_span = lambda y: min_year <= y <= max_year
+                else:
+                    in_span = lambda y: False
+                history = {y: p for y, p in (md.get("history") or {}).items() if in_span(y)}
+                history_daily = {d: p for d, p in (md.get("history_daily") or {}).items() if in_span(d[:4])}
+                report_dates = REPORT_ANNOUNCEMENT_DATES.get(meta["ticker"], {})
+                report_dates = {y: d for y, d in report_dates.items() if in_span(y)}
+                pmd = {**meta, **md["current"], "history": history,
+                       "history_daily": history_daily, "report_dates": report_dates}
+        out[label]["parent_market_data"] = pmd
         source_workbook = conn.execute(
             "SELECT source_workbook FROM banks WHERE frn=?", (frn,)
         ).fetchone()
@@ -2355,6 +3294,8 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="deliverable_shared.css">
 <script src="chart.umd.min.js"></script>
+<script src="chartjs-chart-sankey.min.js"></script>
+<script src="chartjs-chart-boxplot.min.js"></script>
 </head>
 <body>
 
@@ -2550,6 +3491,72 @@ renderInvestmentsPage(INVESTMENTS_DATA);
     (OUT_DIR / "investments.html").write_text(html)
 
 
+def write_balance_sheet_page(records, deployment, banks_index):
+    html = HEAD.format(
+        title="Credit risk — balance sheet",
+        back_link='<a class="back" href="comparison.html">← Comparison</a>',
+        h1="Balance sheet size &amp; composition",
+        sub_fallback=(
+            f"How big is each bank's balance sheet, and what is it made of: Total assets (latest year disclosed), "
+            f"and a coarse cash / customer loans / treasury investments / other split as a % of assets. "
+            f"“Other” is a residual — property, intangibles, and anything not disclosed under one of the "
+            f"three named categories that year — not zero. Both charts share the same bank order (largest total "
+            f"assets first) so size and composition can be read side by side."
+        ),
+        body="",
+        todo_note="",
+    )
+    html += """
+<script id="balance-sheet-data" type="application/json">""" + json.dumps(records) + """</script>
+<script id="balance-sheet-deployment-data" type="application/json">""" + json.dumps(deployment) + """</script>
+<script id="banks-index" type="application/json">""" + json.dumps(banks_index) + """</script>
+<script src="deliverable_shared.js"></script>
+<script>
+const BALANCE_SHEET_DATA = JSON.parse(document.getElementById('balance-sheet-data').textContent);
+const BALANCE_SHEET_DEPLOYMENT = JSON.parse(document.getElementById('balance-sheet-deployment-data').textContent);
+const BANKS_INDEX = JSON.parse(document.getElementById('banks-index').textContent);
+renderSidebar('balance-sheet', BANKS_INDEX);
+renderBalanceSheetPage(BALANCE_SHEET_DATA, BALANCE_SHEET_DEPLOYMENT);
+</script>
+</body>
+</html>
+"""
+    (OUT_DIR / "balance-sheet.html").write_text(html)
+
+
+def write_pnl_page(records, deployment, banks_index):
+    html = HEAD.format(
+        title="Credit risk — profit &amp; loss",
+        back_link='<a class="back" href="comparison.html">← Comparison</a>',
+        h1="Profit &amp; loss size &amp; composition",
+        sub_fallback=(
+            "How big is each bank's income statement, and what is it made of: Total operating income "
+            "(latest year disclosed), plus income composition (net interest / net fee &amp; commission / "
+            "trading &amp; investment / other) and expense composition (personnel / other operating / other). "
+            "“Other” is a residual against the disclosed total, not zero. Use the peer-group filter to compare "
+            "banks with a similar amount of income rather than the full range at once."
+        ),
+        body="",
+        todo_note="",
+    )
+    html += """
+<script id="pnl-data" type="application/json">""" + json.dumps(records) + """</script>
+<script id="pnl-deployment-data" type="application/json">""" + json.dumps(deployment) + """</script>
+<script id="banks-index" type="application/json">""" + json.dumps(banks_index) + """</script>
+<script src="deliverable_shared.js"></script>
+<script>
+const PNL_DATA = JSON.parse(document.getElementById('pnl-data').textContent);
+const PNL_DEPLOYMENT = JSON.parse(document.getElementById('pnl-deployment-data').textContent);
+const BANKS_INDEX = JSON.parse(document.getElementById('banks-index').textContent);
+renderSidebar('profit-loss', BANKS_INDEX);
+renderPnlPage(PNL_DATA, PNL_DEPLOYMENT);
+</script>
+</body>
+</html>
+"""
+    (OUT_DIR / "profit-loss.html").write_text(html)
+
+
 def write_bank_page(bank_name, bank_data, banks_index):
     slug = slugify(bank_name)
     html = HEAD.format(
@@ -2643,6 +3650,19 @@ def main():
     # Reconciled onto the same vendored bundle everywhere, not just the
     # trajectories section being migrated in this pass.
     shutil.copy(ROOT / "vendor" / "chartjs" / "chart.umd.min.js", OUT_DIR / "chart.umd.min.js")
+    # chartjs-chart-sankey's browser bundle auto-registers its 'sankey'
+    # chart type once loaded after chart.umd.min.js - same vendoring
+    # convention as Chart.js itself, so this stays a zero-CDN static site.
+    shutil.copy(
+        ROOT / "vendor" / "chartjs-chart-sankey" / "chartjs-chart-sankey.min.js",
+        OUT_DIR / "chartjs-chart-sankey.min.js",
+    )
+    # Same self-registering UMD vendoring convention, for comparison.html's
+    # cross-bank ratio-distribution boxplot.
+    shutil.copy(
+        ROOT / "vendor" / "chartjs-chart-boxplot" / "chartjs-chart-boxplot.min.js",
+        OUT_DIR / "chartjs-chart-boxplot.min.js",
+    )
     data = curate()
     banks_index = [{"name": name, "slug": slugify(name)} for name in data]
     parent_groups = curate_comparison_parent_groups(data)
@@ -2651,6 +3671,13 @@ def main():
     business_model_conn = sqlite3.connect(DB_PATH)
     write_business_model_page(curate_business_model(data, business_model_conn), banks_index)
     write_investments_page(curate_investment_composition_records(data, business_model_conn), banks_index)
+    write_balance_sheet_page(curate_balance_sheet_size(data, business_model_conn), curate_balance_sheet_deployment(data), banks_index)
+    write_pnl_page(curate_pnl_composition(data), curate_pnl_deployment(data), banks_index)
+    radar = curate_radar_percentiles(data)
+    for name, bank_data in data.items():
+        bank_data["radar"] = radar.get(name)
+        bank_data["pnl_sankey"] = curate_bank_pnl_sankey(bank_data)
+        bank_data["balance_sheet_sankey"] = curate_bank_balance_sheet_sankey(business_model_conn, bank_data["frn"])
     business_model_conn.close()
     for name, bank_data in data.items():
         write_bank_page(name, bank_data, banks_index)

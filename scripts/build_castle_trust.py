@@ -15,6 +15,27 @@ P3_2024_URL = "https://www.castletrust.co.uk/wp-content/uploads/fy-30_sept-2024-
 P3_2023_URL = "https://www.castletrust.co.uk/wp-content/uploads/fy-30-sept-2023-ctb-pillar-3-disclosures.pdf"
 P3_2022_URL = "https://www.castletrust.co.uk/wp-content/uploads/fy-30-sept-2022-ctb-pillar-3-disclosures.pdf"
 P3_2021_URL = "https://www.castletrust.co.uk/wp-content/uploads/fy-30-sept-2021-ctb-pillar-3-disclosures.pdf"
+# Sixth live edition. Outside this workbook's FY2021-FY2025 window, so it supplies no column here;
+# recorded because it is the earliest edition published and because its Appendix 4 independently
+# confirms the FY2020 comparatives printed in the FY2021 edition (CET1/Total capital GBP72,042k,
+# total RWA GBP372,306k, CET1 ratio 19.35%, leverage 9.86%).
+P3_2020_URL = "https://www.castletrust.co.uk/wp-content/uploads/fy-30-sept-2020-ctb-pillar-3-disclosures.pdf"
+# A byte-identical copy of the FY2024 document (verified 2026-09-15: same MD5, 1,434,534 bytes),
+# NOT a separate edition. Recorded so it is never counted or cited as one.
+P3_2024_DUPLICATE_URL = "https://www.castletrust.co.uk/wp-content/uploads/2025/05/Pillar-3-Document.pdf"
+
+URL_PROVENANCE_NOTE = (
+    "PILLAR 3 URL PROVENANCE (re-verified 2026-09-15 - every URL above and below was fetched and confirmed to "
+    "return real PDF content, i.e. '%PDF' magic bytes and a readable text layer, not a soft-404 HTML page):\n"
+    "  * Castle Trust's filename separator is INCONSISTENT between years and must not be permuted or "
+    "'corrected'. FY2020-FY2023 use 'fy-30-sept-<year>-...' (hyphen); FY2024 and FY2025 use "
+    "'fy-30_sept-<year>-...' (UNDERSCORE between '30' and 'sept'). Six editions are live in total, one per "
+    "financial year FY2020 through FY2025, all under https://www.castletrust.co.uk/wp-content/uploads/ .\n"
+    f"  * {P3_2024_DUPLICATE_URL} is byte-identical to the FY2024 edition (same MD5) and is a duplicate copy, "
+    "not a seventh edition or a separate reporting period.\n"
+    "  * Period dates were taken from each document's own cover and scope paragraph, not from its filename; "
+    "all six agree with their filenames."
+)
 
 ENTITY_NOTE = (
     "Castle Trust Capital plc (company 07454474, FRN 541910, trading as 'Castle Trust Bank') is a "
@@ -50,6 +71,63 @@ CASH_FLOW_SOURCES = (
 )
 
 
+ENTITY_BASIS_NOTE = (
+    "ENTITY BASIS - determined 2026-09-15 by reading the scope/basis section of all SIX live editions.\n"
+    "Every edition is PUBLISHED BY the holding company and carries 'Registered No: 12161224' on its cover - "
+    "that is Castle Trust Holdings Limited, NOT the bank. It is not the basis of the figures used here, and the\n"
+    "cover number must not be read as one. Each document nonetheless presents the Bank separately from the\n"
+    "Group, and every figure in this workbook is taken from the BANK presentation.\n"
+    "Verbatim, from each edition's own Scope section:\n"
+    "  FY2020: 'This document sets out the consolidated Pillar 3 disclosures of Castle Trust Holdings Limited\n"
+    "    (\"the Group\") which includes Castle Trust Capital plc (\"the Bank\") and its directly owned\n"
+    "    subsidiaries as at 30 September 2020.'\n"
+    "  FY2021: identical wording, '...as at 30 September 2021.'\n"
+    "  FY2022: identical wording, '...as at 30 September 2022.'\n"
+    "  FY2023: 'Castle Trust Holdings Limited (the \"Group\") was incorporated on 16 August 2019 to act as a\n"
+    "    holding company of the Castle Trust Capital (CTC) group... This document sets out the consolidated\n"
+    "    Pillar 3 disclosures of the Group which includes Castle Trust Capital plc (\"the Bank\") and its\n"
+    "    directly owned subsidiaries as at 30 September 2023.'\n"
+    "  FY2024 and FY2025: same two-paragraph wording as FY2023, with their own year.\n"
+    "All six also state that Castle Trust Capital plc is the PRA/FCA-authorised firm, 'registered number\n"
+    "541910', and the FY2021, FY2022, FY2024 and FY2025 editions carry a closing legal line reading 'Castle\n"
+    "Trust Bank means Castle Trust Capital plc, a company incorporated in England and Wales with company\n"
+    "number 07454474' - i.e. the document's own definition of 'the Bank' is this workbook's entity.\n"
+    "\n"
+    "SINGLE CONSOLIDATED SET, OR SEPARATE BANK AND GROUP COLUMNS? Separate, in every edition, but in two\n"
+    "different formats:\n"
+    "  FY2022-FY2025 (KM1-era): each document has TWO full key-metrics tables, headed 'Key Metrics for the\n"
+    "    Group' and 'Key Metrics for the Bank' (pp.5 and 6; the FY2025 edition adds 'Overview of RWEAs for\n"
+    "    Group' and 'Overview of RWEAs for Bank' on p.7). The FY2024 edition's basis section says so directly:\n"
+    "    'These disclosures are based upon the Group's Financial Statements... Both the Group and the Bank\n"
+    "    calculate capital resources and requirements using the Basel III framework'; the FY2022 edition says\n"
+    "    'The key metrics disclosures have been prepared for both the Group and the Bank as required per\n"
+    "    Article 18 of the CRR.'\n"
+    "  FY2020-FY2021 (pre-KM1): the MAIN BODY is Group-only and its headline table is captioned 'Key Metrics\n"
+    "    for the Business... for the Group'. The Bank appears only in 'Appendix 4. Bank Disclosures'. Both\n"
+    "    editions' basis sections say: 'These disclosures have been prepared for the Group with the exception\n"
+    "    of Appendix 4 which shows the required disclosures for the Bank as per Article 18 of the Capital\n"
+    "    Requirements Regulation EU 575/2013 (\"CRR\").' The FY2021 Appendix 4 opens: 'The following tables\n"
+    "    detail the capital reporting disclosures for Castle Trust Capital plc (\"the Bank\") as a standalone\n"
+    "    solo legal entity.'\n"
+    "\n"
+    "WHICH COLUMN THIS WORKBOOK USES: the Bank column, in every year and on every sheet - FY2022-FY2025 from\n"
+    "'Key Metrics for the Bank', FY2021 from 'Appendix 4. Bank Disclosures'. Confirmed 2026-09-15 against all\n"
+    "six primary documents. The divergence is large enough that the two bases could never be blended: FY2023\n"
+    "Bank CET1 83,177 / RWA 413,907 / CET1 ratio 20.10% against Group 99,699 / 592,678 / 16.82%; FY2022 Bank\n"
+    "357,870 against Group 530,968. NO Holdings-basis figure is written into any sheet of this workbook.\n"
+    "\n"
+    "ONE BASIS CAVEAT INSIDE THE BANK COLUMN ITSELF, flagged not smoothed over. The FY2021 Appendix 4 defines\n"
+    "the Bank as 'a standalone solo legal entity', and adds: 'In the prior year the Bank's disclosures also\n"
+    "incorporated the financial performance and balances of Castle Trust Capital Management Limited and Castle\n"
+    "Trust Direct plc.' The FY2020 edition confirms this from the other side: 'For capital reporting purposes,\n"
+    "Castle Trust Capital plc's (\"the Bank\") disclosures also incorporate the financial performance and\n"
+    "balances of Castle Trust Capital Management Limited and Castle Trust Direct plc.' So the FY2020 Bank\n"
+    "column is Castle Trust Capital plc plus two of its own subsidiaries, while FY2021 onward is CTC plc solo.\n"
+    "This affects no cell here - FY2020 is outside this workbook's five-year window - but it is the reason\n"
+    "FY2020 is not backfilled from that edition without a basis label."
+)
+
+
 def p3_sources(page="6"):
     return (
         "Sources - Castle Trust Bank Pillar 3 Disclosures, 'Key Metrics for the Bank' table (Castle Trust "
@@ -59,7 +137,33 @@ def p3_sources(page="6"):
         f"FY2023: Pillar 3 Disclosures FY ended 30 Sept 2023, p.{page} - {P3_2023_URL}\n"
         f"FY2022: Pillar 3 Disclosures FY ended 30 Sept 2022, p.{page} - {P3_2022_URL}\n"
         "FY2021: Pillar 3 Disclosures FY ended 30 Sept 2021 (pre-KM1 template - 'Appendix 4. Bank "
-        f"Disclosures'), p.40-43 - {P3_2021_URL}"
+        f"Disclosures'), p.40-43 - {P3_2021_URL}\n\n"
+        + ENTITY_BASIS_NOTE + "\n\n" + URL_PROVENANCE_NOTE + "\n\n"
+        "SDDT - EXPLICIT NEGATIVE, recorded 2026-09-15 (cross-bank SDDT date-fit pass) so that a future pass "
+        "does not wrongly apply the Small Domestic Deposit Taker exemption to this workbook's gap year. Castle "
+        "Trust DOES hold the SDDT opt-in, but it is far too recent to explain anything here. The Bank of England "
+        "consolidated list of waivers and modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+        "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+        "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries three SDDT rows for FRN "
+        "541910, 'Castle Trust Capital PLC': (a) Rule 3.1 of the SDDT Regime - General Application Part, sub "
+        "rule 'Ru 3.1', waiver ref 'A00011417P.pdf', START DATE 06/01/2026, no end date; (b) Rule 3.2, ref "
+        "'A00011424P.pdf', same start date; and (c) 'CRR firms: SDDT Regime - General Application Part 1.2 & "
+        "2.1(9)', ref 'A00011283P.pdf', start 01/12/2025, end 01/12/2028. Only row (a) is the opt-in that "
+        "removes the Pillar 3 disclosure obligation; row (c) modifies ELIGIBILITY CRITERIA only and would not by "
+        "itself make the firm a confirmed SDDT.\n"
+        "DATE FIT - IT DOES NOT FIT. Castle Trust's accounting reference date is 30 SEPTEMBER, confirmed at "
+        "Companies House (company 07454474, an unbroken run of accounts to 30 September from 2015 to 2025) - "
+        "note this is NOT a December year-end. The outstanding gap year is FY2021, which ended 30 SEPTEMBER "
+        "2021. The Rule 3.1 modification began 6 JANUARY 2026 - more than four years later. A modification "
+        "cannot explain a gap that predates it, so the SDDT regime explains NONE of the FY2021 blanks.\n"
+        "FY2021's gap keeps its existing and entirely separate explanation, unchanged: Castle Trust published a "
+        "full Pillar 3 document for FY2021, but on the PRE-KM1 template ('Appendix 4. Bank Disclosures'), which "
+        "simply does not carry every line the later KM1 tables do. That is a template-vintage gap in a document "
+        "that exists, which is the opposite of an exemption from publishing one. The register finding changes no "
+        "cell in this workbook. Note too that the Bank published a Pillar 3 document for FY2025, whose 30 "
+        "September 2025 year-end precedes the 6 January 2026 modification - consistent with the dates, and a "
+        "reminder that the exemption bites only from FY2026 onward. This is the SDDT DISCLOSURE exemption, in "
+        "force now - not the separate SDDT CAPITAL regime beginning 1 January 2027."
     )
 
 
@@ -386,47 +490,82 @@ LEV_RATIO = {"FY2025": "7.22%", "FY2024": "9.66%", "FY2023": "8.94%", "FY2022": 
 LCR_RATIO = {"FY2025": "189.07%", "FY2024": "296.84%", "FY2023": "324.90%", "FY2022": "401.68%", "FY2021": "575.71%"}
 NSFR_RATIO = {"FY2025": "178.27%", "FY2024": "156.44%", "FY2023": "171.97%", "FY2022": "169.82%"}
 
+# FY2021 is the one year for which two Bank-basis sources exist and disagree, found 2026-09-15 when all
+# six editions were read side by side. Row 1 of each affected sheet is the FY2021 Pillar 3's own
+# Appendix 4 (the same-year original, this workbook's convention); these are the FY2022 edition's
+# restated FY2021 comparative, carried on their own labelled row rather than overwriting it.
+FY2021_ALT = {"FY2021": 71644}
+FY2021_ALT_RATIO = {"FY2021": "19.94%"}
+FY2021_ALT_LEV = {"FY2021": "11.07%"}
+FY2021_ALT_NOTE = (
+    "FY2021 CROSS-EDITION DIVERGENCE (recorded 2026-09-15). Two Bank-basis sources cover FY2021 and they do "
+    "not agree, so both are shown and neither overwrites the other:\n"
+    "  (a) the FY2021 Pillar 3 Disclosures' own 'Appendix 4. Bank Disclosures' (p.40-43), which states CET1 = "
+    "Tier 1 = Total capital of GBP71,677k and a CET1/Tier 1/Total capital ratio of 20.0%, and shows its own "
+    "build-up (share capital 15,217 + share premium 124,195 - retained earnings 47,654 + other reserves 205 - "
+    "prudent valuation 6 - intangibles 4,186 - DTA 8,743 - significant investments 8,217 + IFRS 9 transitional "
+    "867 = 71,677); and\n"
+    "  (b) the FY2022 Pillar 3 Disclosures' 'Key Metrics for the Bank' FY2021 comparative column, which "
+    "restates the same three capital figures to GBP71,644k and the ratio to 19.94%.\n"
+    "The gap is GBP33k of capital, 6bp of ratio - immaterial in size but a real restatement, and the later "
+    "edition gives no reconciliation for it. Everything else about FY2021 is IDENTICAL between the two "
+    "editions, which is why only these rows are duplicated: total RWA GBP359,249k and leverage exposure "
+    "measure GBP647,358k both appear unchanged in both. The leverage ratio differs only by rounding "
+    "(Appendix 4 prints one decimal, 11.1%; the KM1 comparative prints two, 11.07%) - 71,677 / 647,358 and "
+    "71,644 / 647,358 both round to 11.07%, so that pair is a precision difference, not a restatement."
+)
+
 metric(
     "CET1 Capital", "£'000",
-    [("Common Equity Tier 1 (CET1) capital", CET1_TIER1)],
+    [("Common Equity Tier 1 (CET1) capital", CET1_TIER1),
+     ("FY2021 as restated in the FY2022 Pillar 3 'Key Metrics for the Bank' comparative", FY2021_ALT)],
     p3_sources(),
-    note="No AT1 instruments in issue in any year to date, so CET1 = Tier 1 capital throughout.",
+    note="No AT1 instruments in issue in any year to date, so CET1 = Tier 1 capital throughout.\n\n"
+         + FY2021_ALT_NOTE,
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO)],
+    [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO),
+     ("FY2021 as restated in the FY2022 Pillar 3 'Key Metrics for the Bank' comparative", FY2021_ALT_RATIO)],
     p3_sources(),
     note="FY2021 sourced from the pre-KM1-template 'Appendix 4. Bank Disclosures' section of the FY2021 "
          "Pillar 3 document (own funds/RWA breakdown, not a KM1 template - this format was only introduced "
-         "from 1 Jan 2022).",
+         "from 1 Jan 2022).\n\n" + FY2021_ALT_NOTE,
 )
 
 metric(
     "Tier 1 Capital", "£'000",
-    [("Tier 1 capital", CET1_TIER1)],
+    [("Tier 1 capital", CET1_TIER1),
+     ("FY2021 as restated in the FY2022 Pillar 3 'Key Metrics for the Bank' comparative", FY2021_ALT)],
     p3_sources(),
-    note="= CET1 capital (no AT1 instruments in issue in any year to date).",
+    note="= CET1 capital (no AT1 instruments in issue in any year to date).\n\n" + FY2021_ALT_NOTE,
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", CET1_RATIO)],
+    [("Tier 1 ratio", CET1_RATIO),
+     ("FY2021 as restated in the FY2022 Pillar 3 'Key Metrics for the Bank' comparative", FY2021_ALT_RATIO)],
     p3_sources(),
+    note=FY2021_ALT_NOTE,
 )
 
 metric(
     "Total Capital", "£'000",
-    [("Total capital", TOTAL_CAPITAL)],
+    [("Total capital", TOTAL_CAPITAL),
+     ("FY2021 as restated in the FY2022 Pillar 3 'Key Metrics for the Bank' comparative", FY2021_ALT)],
     p3_sources(),
     note="Total capital exceeds Tier 1 capital from FY2024 onward (Tier 2 instruments: £7.0m FY2024, "
-         "£15.0m FY2025) - no Tier 2 in issue FY2021-FY2023, when Total Capital = CET1 = Tier 1.",
+         "£15.0m FY2025) - no Tier 2 in issue FY2021-FY2023, when Total Capital = CET1 = Tier 1.\n\n"
+         + FY2021_ALT_NOTE,
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", TOTAL_CAP_RATIO)],
+    [("Total capital ratio", TOTAL_CAP_RATIO),
+     ("FY2021 as restated in the FY2022 Pillar 3 'Key Metrics for the Bank' comparative", FY2021_ALT_RATIO)],
     p3_sources(),
+    note=FY2021_ALT_NOTE,
 )
 
 metric(
@@ -441,13 +580,21 @@ rwa_breakdown_rows = [
     ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 6560, "FY2024": 3412}),
     ("DATA", "  of which: credit valuation adjustment (CVA)", {"FY2025": 2755, "FY2024": 1465}),
     ("DATA", "Operational risk", {"FY2025": 61318, "FY2024": 56237}),
-    ("TOTAL", "Total", {"FY2025": 634489, "FY2024": 499532, "FY2023": "Not publicly disclosed", "FY2022": "Not publicly disclosed", "FY2021": "Not publicly disclosed"}),
+    ("TOTAL", "Total", {"FY2025": 634489, "FY2024": 499532}),
+    ("SECTION", "Breakdown of Risk Weighted Assets (pre-KM1/OV1 format, Bank/solo basis, as disclosed)", {}),
+    ("DATA", "Credit risk", {"FY2021": 311424}),
+    ("DATA", "Market risk", {"FY2021": 0}),
+    ("DATA", "Operational risk", {"FY2021": 47825}),
+    ("TOTAL", "Total", {"FY2021": 359249}),
+    ("SECTION", "FY2022-FY2023", {}),
+    ("TOTAL", "Total", {"FY2023": "Not publicly disclosed", "FY2022": "Not publicly disclosed"}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Castle Trust Capital plc — RWA Breakdown",
-    subtitle="£'000, Bank basis. Only disclosed FY2024-FY2025 (UK OV1 template introduced from the FY2025 "
-             "Pillar 3 Disclosures document) - see note below for FY2021-FY2023.",
+    subtitle="£'000, Bank basis. UK OV1-format breakdown only from FY2024-FY2025; FY2021 uses an earlier, "
+             "coarser-grained 'Breakdown of Risk Weighted Assets' table from the same Bank/solo entity (no "
+             "OV1 template existed pre-2022) - see note below for FY2022-FY2023, where nothing usable was found.",
     rows=rwa_breakdown_rows,
     sources_text=(
         f"Sources - Castle Trust Bank Pillar 3 Disclosures, 'Overview of RWEAs for Bank' table (Bank, not "
@@ -455,16 +602,38 @@ bw.add_rwa_breakdown_sheet(
         f"FY2024 as its own comparative column, used here since FY2024's own Pillar 3 Disclosures document "
         f"predates the OV1 template and doesn't carry this breakdown itself - flagged, not a same-year "
         f"original disclosure for FY2024)\n\n"
-        "FY2023/FY2022: not publicly disclosed - confirmed by reading both years' Pillar 3 Disclosures "
-        "documents in full; they contain only the 7-page 'Key Metrics' (KM1) template, with no RWA-by-category "
-        "breakdown. FY2021: the FY2021 Pillar 3 Disclosures document's Appendix 4 'Bank Disclosures' discloses "
-        "a Pillar 1 capital *requirement* by category (Credit Risk £24,914k, Operational Risk £3,826k, Total "
-        "£28,740k, i.e. 8% of RWA) but not an RWA figure by category itself - back-calculating an implied RWA "
-        "split (dividing by 8%) was deliberately not done here, since that would be a derived estimate "
-        "presented as a disclosed figure, not a genuine same-year disclosure."
+        f"FY2021: Pillar 3 Disclosures FY ended 30 Sept 2021, Appendix 4 'Bank Disclosures' (Castle Trust "
+        f"Capital plc standalone solo legal entity), 'Capital Adequacy - Breakdown of Risk Weighted Assets' "
+        f"table, p.40 - {P3_2021_URL}. Directly disclosed RWA by risk type (Credit Risk £311,424k, Market Risk "
+        f"£0k, Operational Risk £47,825k, Total £359,249k) - reconciles exactly to the Total RWAs sheet's own "
+        f"FY2021 figure (£359,249k, same document's Appendix 4 Capital Adequacy table). Not an OV1-format "
+        f"disclosure (no CCR/CVA sub-lines existed in this pre-2022 table format) and on a different granularity "
+        f"from the FY2024-FY2025 OV1 section above - kept in a separate section rather than blended in.\n\n"
+        "FY2023/FY2022: not publicly disclosed. Confirmed by reading both years' Pillar 3 Disclosures documents "
+        "in full - they contain only the 7-page 'Key Metrics' (KM1) template, with no RWA-by-category "
+        "breakdown. Also checked the FY2023 Annual Report (Companies House filing, same document already cited "
+        "for the cash-flow statement) in full: its Notes to the Financial Statements run straight from Note "
+        "23.1 (credit risk) to 23.2 (liquidity risk) to Note 25 (share capital) with no capital-risk/RWA note "
+        "in between - no risk-type RWA breakdown exists in that document either.\n\n"
+        "RE-VERIFIED (2026-09-12, independent re-check): re-downloaded both FY2022 and FY2023 Pillar 3 "
+        "Disclosures directly from the Bank's own site and re-read them page by page (both are exactly 8 "
+        "pages) - each contains only the Group and Bank 'Key Metrics' (KM1) tables (Total RWA £530,968k/"
+        "£357,870k Bank basis FY2022; £592,678k Group/£413,907k Bank basis FY2023), with no OV1 or any other "
+        "category-level RWA table present in either document. Confirms the gap is genuine, not a prior "
+        "session's access failure.\n\n"
+        "THIRD INDEPENDENT CHECK (2026-09-15, RWA-backfill sweep - this bank was flagged because its FY2022/"
+        "FY2023 gap sits BETWEEN disclosed years, which usually indicates a sourcing miss rather than a real "
+        "absence; here it does not). Both documents re-downloaded and machine-read again: each has a real text "
+        "layer (no OCR needed) and its own table of contents settles the question without relying on a page-by-"
+        "page search - both list exactly Scope / Background / Business Overview / Basis for this Requirement / "
+        "Frequency of Disclosure / Verification / Location of Document / Key Metrics for the Group / Key Metrics "
+        "for the Bank / Additional Information. There is no OV1 section to have been missed. The Bank's "
+        "disclosure format simply changed twice: a pre-2022 'Breakdown of Risk Weighted Assets' table through "
+        "FY2021, a minimal KM1-only document for FY2022-FY2023, then the full UK OV1 template from FY2024. "
+        "Treat this gap as closed - it does not need chasing again."
     ),
     first_col_width=58,
-    source_height=280,
+    source_height=310,
 )
 
 metric(
@@ -472,10 +641,15 @@ metric(
     [
         ("Total exposure measure excluding claims on central banks (£'000)", LEV_EXPOSURE),
         ("Leverage ratio excluding claims on central banks (%)", LEV_RATIO),
+        ("FY2021 leverage ratio as printed in the FY2022 Pillar 3 'Key Metrics for the Bank' comparative (%)",
+         FY2021_ALT_LEV),
     ],
     p3_sources(),
     note="FY2021 figure/basis from the FY2021 Pillar 3 document's own 'Leverage Ratio' appendix table "
-         "(pre-KM1 template, same underlying 'excluding claims on central banks' concept).",
+         "(pre-KM1 template, same underlying 'excluding claims on central banks' concept), which shows its "
+         "own reconciliation: total assets per the published financial statements £659,269k, plus £2,515k of "
+         "off-balance-sheet items converted to credit equivalent amounts, less £14,426k of other adjustments, "
+         "giving the £647,358k exposure measure used above.\n\n" + FY2021_ALT_NOTE,
 )
 
 metric(

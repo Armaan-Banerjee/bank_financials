@@ -24,6 +24,12 @@ P3_25_URL = "https://chetwoodbank.co.uk/documents/chetwood-bank-pillar-three-dis
 P3_23_URL = "http://web.archive.org/web/20240315022245/https://chetwood.co/static/330c40d433df90b83d3b3e5c673e21cc/Pillar3Disclosures.pdf"
 P3_22_URL = "http://web.archive.org/web/20230131235943/https://chetwood.co/static/815e2dd174c4655ddf55a93ca1029ce3/Pillar3Disclosures.pdf"
 P3_21_URL = "http://web.archive.org/web/20211128171331/https://chetwood.co/static/221a3946677e4d8c49c5525d22f9b534/Pillar3Disclosures.pdf"
+# Located 2026-09-15 via a Wayback CDX scan of the whole chetwood.co domain. This
+# is a genuine 8-page "Pillar 3 Disclosures, June 2020 / as at 31st March 2020"
+# PDF (767KB, real text layer) that earlier sessions missed - it predates the
+# "as at 31 March 2021" edition previously believed to be Chetwood's earliest,
+# and it populates the FY2020 column on every Pillar 3 sheet below.
+P3_20_URL = "http://web.archive.org/web/20200929085826/https://chetwood.co/static/ea27728be3ae831ddb0ef7888e332546/Pillar3Disclosures.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: Chetwood Financial Limited (trading as Chetwood Bank) is the entity on the PRA register - no "
@@ -54,10 +60,15 @@ ENTITY_NOTE = (
     "Chetwood only adopted IFRS (and IFRS 9 stage-based credit-quality disclosure, and Pillar 3 reporting) from "
     "FY2021 onward, per its own accounting-policy notes ('in compliance with...FRS 102') each year 2018-2020. "
     "This is analogous to the ticket's flagged Basel II/CET1 terminology shift, but for the whole accounting "
-    "framework: FY2019-FY2020 (marked ‡) have no IFRS 9 loan-stage table and no Pillar 3 disclosure at all (the "
-    "FY2018/FY2019 strategic reports say a Pillar 3 document 'will be published...in due course' - it wasn't yet). "
-    "All 11 Pillar 3 metric sheets and the RWA Breakdown sheet are genuinely 'Not publicly disclosed' for FY2019 "
-    "and FY2020 - a real self-skip, not a gap in transcription.\n"
+    "framework: FY2019-FY2020 (marked ‡) have no IFRS 9 loan-stage table. "
+    "SUPERSEDED IN PART (2026-09-15): this note previously also claimed FY2019 and FY2020 had 'no Pillar 3 "
+    "disclosure at all' and that all 11 Pillar 3 metric sheets plus the RWA Breakdown sheet were genuinely not "
+    "disclosed for both years. That holds for FY2019 only. A 'Pillar 3 Disclosures June 2020 (as at 31st March "
+    "2020)' document was located 2026-09-15 and FY2020 is now populated across the Pillar 3 sheets - see the "
+    "source note on any Pillar 3 sheet for the document and the correction. The accounting-framework point "
+    "itself is unaffected: FY2019 and FY2020 statutory accounts remain FRS 102, and that FY2020 Pillar 3 "
+    "document says so itself ('Chetwood currently prepares its Financial Statements under FRS 102. Chetwood has "
+    "developed an IFRS9 expected loss model that will be adopted in due course').\n"
     "- A further consequence of the FRS 102-to-IFRS transition: the FY2021 Annual Report's own FY2020 comparative "
     "equity balance (used as the prior-year opening figure in that report) does not exactly match FY2020's own "
     "originally-filed Statement of Changes in Equity (originally-filed closing Profit and Loss account -£36,357k, "
@@ -128,6 +139,23 @@ def p3_sources(extra_note=""):
         f"(which hosts only the current edition at a non-dated URL) and no snapshot was captured by the Internet "
         f"Archive Wayback Machine between the FY2023 edition (published Jan 2024) and the FY2025 edition "
         f"(published Sept 2025). Left blank.\n"
+        f"FY2024 RE-VERIFIED 2026-09-15 (interior-gap sweep). The FY2024 Pillar 3 document remains genuinely "
+        f"unobtainable, checked four ways: (1) the FY2025 Pillar 3 document's own KM1 template has a SINGLE "
+        f"'2025' column with no prior-year comparative at all, so it cannot supply FY2024; (2) the live site "
+        f"hosts only {P3_25_URL} - chetwoodbank.co.uk/documents/ is not browsable and six plausible dated URL "
+        f"variants (…-2024.pdf, …-pillar-3-…, …-march-2024.pdf etc.) all return the site's HTML 404 page; (3) "
+        f"a Wayback CDX scan of BOTH domains found only the four chetwood.co/static/… Pillar 3 snapshots "
+        f"already cited here (plus one Sept-2020 snapshot, see the FY2019/FY2020 line below) and NO archived "
+        f"chetwoodbank.co.uk/documents/ URL of any kind; (4) the FY2024 and FY2025 Annual Reports were read in "
+        f"full for regulatory-capital content - see the CET1 Ratio sheet for the one FY2024 figure they do "
+        f"yield, and the FY2024 gap note on each sheet for what they do not.\n"
+        f"OUT-OF-SCOPE LEAD (not acted on here): that CDX scan also turned up an un-cited Pillar 3 snapshot at "
+        f"http://web.archive.org/web/20200929085826/https://chetwood.co/static/"
+        f"ea27728be3ae831ddb0ef7888e332546/Pillar3Disclosures.pdf, captured Sept 2020 - i.e. predating the "
+        f"'as at 31 March 2021' edition this workbook currently treats as Chetwood's earliest. It was not "
+        f"opened or transcribed in this pass (the FY2019/FY2020 columns are an exterior, not interior, gap and "
+        f"were out of scope), but it should be checked before the FY2019/FY2020 'no Pillar 3 was ever "
+        f"published' claim below is relied on.\n"
         f"FY2023: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31 March 2023, Section 6 (Key Metrics - KM1) "
         f"and Section 7.1 (Capital Resources) - {P3_23_URL}\n"
         f"FY2022: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31 March 2022, Annex B (Key Metrics - KM1) "
@@ -135,8 +163,23 @@ def p3_sources(extra_note=""):
         f"FY2021: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31 March 2021, Section 1.2 (Summary Analysis) "
         f"and Section 4 (Capital Resources) - {P3_21_URL} (pre-dates the formal KM1 template; Chetwood adopted the "
         f"CRR KM1 annex from the FY2022 report onward)\n"
-        f"FY2019/FY2020: No Pillar 3 disclosure was ever published for these years - as at 31 March 2021 is "
-        f"Chetwood's earliest published/archived Pillar 3 document. Left blank." + (f"\n{extra_note}" if extra_note else "")
+        f"FY2020: Chetwood Financial Ltd Pillar 3 Disclosures, June 2020 ('as at 31st March 2020'), Section 1.2 "
+        f"(Summary analysis, p.3), Section 3.3 (Capital Resources, p.15), Section 3.6 (The leverage ratio, p.16) "
+        f"and Section 5.2 (Liquidity ratios, p.18) - {P3_20_URL}\n"
+        f"CORRECTION (2026-09-15): earlier versions of this workbook stated that 'no Pillar 3 disclosure was ever "
+        f"published' for FY2019/FY2020 and that the 'as at 31 March 2021' edition was Chetwood's earliest. That "
+        f"was wrong for FY2020. A Wayback CDX scan of the whole chetwood.co domain surfaced an 8-page 'Pillar 3 "
+        f"Disclosures June 2020' PDF at an un-cited static path (captured 29 Sept 2020, real text layer, 767KB - "
+        f"not a soft 404), carrying a full FY2020 capital/leverage/liquidity set. Every FY2020 Pillar 3 figure in "
+        f"this workbook comes from that document. It pre-dates the formal KM1 template (like the FY2021 edition), "
+        f"so its figures are narrative/summary-table style rather than KM1 rows; the capital-resources table's "
+        f"build-up (share capital 84,688 + share premium 2,851 + retained earnings (36,357) - intangibles (485) = "
+        f"CET1 50,697) ties exactly to the FY2020 Balance Sheet sheet's own as-filed FRS 102 figures, an "
+        f"independent confirmation that the document is Chetwood's own and is for the right year.\n"
+        f"FY2019: still genuinely blank. The FY2020 document is a single-column 'as at 31 March 2020' disclosure "
+        f"with no FY2019 comparative anywhere in it, and no earlier Pillar 3 snapshot exists in the Wayback CDX "
+        f"index for either chetwood.co or chetwoodbank.co.uk (Chetwood's own FY2018/FY2019 strategic reports say "
+        f"a Pillar 3 document 'will be published...in due course')." + (f"\n{extra_note}" if extra_note else "")
     )
 
 bw = BankWorkbook(bank_name="Chetwood Financial Limited", years=YEARS, year_label=YEAR_LABEL, header_color="003232")
@@ -488,59 +531,139 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=46, source_height=150)
 
 FY2024_GAP_NOTE = (
-    "FY2024 is blank - no Pillar 3 disclosure 'as at 31 March 2024' was published/archived. FY2019 and FY2020 are "
-    "also blank on every Pillar 3 sheet - Chetwood published no Pillar 3 disclosure at all for those two years "
-    "(its FY2018/FY2019 statutory accounts say a Pillar 3 document 'will be published...in due course', but the "
-    "earliest one actually published/archived is 'as at 31 March 2021'). See source note."
+    "FY2024 is blank - no Pillar 3 disclosure 'as at 31 March 2024' was published/archived, re-verified "
+    "2026-09-15 four ways (see source note). Critically, the FY2025 Pillar 3 document's KM1 template has a "
+    "SINGLE '2025' column with no prior-year comparative, so it cannot fill FY2024 the way a comparative column "
+    "normally would; the one exception is its OV1 table, which does carry a full FY2024 comparative and so "
+    "populates the Total RWAs and RWA Breakdown sheets. Both Annual Reports were also read in full: the FY2024 "
+    "and FY2025 reports disclose a Group CET1 capital RATIO (rounded to a whole percent) in their KPI tables - "
+    "shown as a separate, clearly-labelled row on the CET1 Ratio sheet - and a 'Total regulatory capital' "
+    "capital-management note, but that note's figure is NOT CET1 (it differs from the Pillar 3 CET1 by "
+    "-£2.3m in FY2023 and +£5.7m in FY2025, an undisclosed set of prudential deductions/filters), and neither "
+    "report states RWAs, Tier 1/Total capital, leverage, LCR or NSFR at all. Those cells therefore stay blank.\n"
+    "FY2019 is likewise blank - Chetwood published no Pillar 3 disclosure for that year. FY2020 WAS previously "
+    "blank on this basis and is now populated: see the source note's 2026-09-15 correction.\n"
+    "SDDT RULED OUT, 2026-09-15 (cross-bank SDDT pass) - recorded as a negative result so this line of enquiry "
+    "is not reopened. Many small UK deposit-takers' FY2024/FY2025 Pillar 3 gaps turn out to be the Small "
+    "Domestic Deposit Taker (SDDT) exemption, which removes the Pillar 3 disclosure obligation outright. That "
+    "is NOT the explanation here. Chetwood Financial Limited does not appear at all in the SDDT rows of the "
+    "PRA's own firm-level register - the Bank of England consolidated list of waivers and modifications "
+    "granted to PRA-authorised firms (downloaded 2026-09-15, "
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv). FRN 740551 'Chetwood Financial "
+    "Limited' holds four modifications in that register (two Capital Requirements Regulation entries from "
+    "2017/2018, a Capital Buffers Part 5.1-5.3/5.5 direction from 10/09/2021, and an Individual Consolidation "
+    "permission from 19/08/2024) and NONE is a modification by consent under Rule 3.1 of the 'SDDT Regime - "
+    "General Application' Part - the instrument by which a firm becomes an SDDT, and which ten other banks "
+    "checked in this same pass do hold.\n"
+    "Corroborated by Chetwood's own documents. The FY2024 and FY2025 Annual Reports and the FY2025 Pillar 3 "
+    "disclosure were downloaded and text-extracted in full (all three have readable text layers - 523k, 457k "
+    "and 60k characters respectively, so these are true negatives, not scanned-PDF false negatives) and "
+    "searched for 'SDDT', 'Small Domestic Deposit Taker', 'modification by consent', 'Simplified Retail "
+    "Deposit Ratio', 'SRDR', 'Strong and Simple', 'Interim Capital Regime' and 'Basel 3.1'. Zero hits in any "
+    "of the three - Chetwood does not mention the SDDT regime anywhere.\n"
+    "What the FY2025 Pillar 3 document DOES state is a different proportionality regime, and it is the "
+    "evidenced reason that document is short and single-column: section 2.3 'Basis of Preparation', p.3 - "
+    "'Chetwood meets the definition of a \"small and non-complex institution\" and is therefore subject to "
+    "proportional disclosure requirements in accordance with Article 433b of the Disclosure (CRR) Part of the "
+    "PRA Rulebook.' Article 433b is the reduced annual-disclosure article; unlike the SDDT modification it "
+    "does not remove the obligation to publish, which is consistent with Chetwood still publishing a Pillar 3 "
+    "document. The FY2024 absence therefore remains what it was: an unexplained non-publication for the year "
+    "ended 31 March 2024, with no waiver, exemption or replacement disclosure located - NOT a structural "
+    "exemption. Do not upgrade it to one."
+)
+
+FY2020_P3_NOTE = (
+    "FY2020 added 2026-09-15 from Chetwood's own 'Pillar 3 Disclosures June 2020 (as at 31st March 2020)' - a "
+    "document earlier sessions concluded did not exist (see the source note's correction). That edition pre-dates "
+    "the KM1 template, so it reports a narrative Summary-analysis table plus a capital-resources build-up rather "
+    "than KM1 rows, and it states its ratios and RWA to whole percents / one decimal place of £m only."
+)
+
+# The FY2024 and FY2025 Annual Reports' own KPI tables publish a Group CET1
+# capital ratio rounded to a whole percent. This is the ONLY FY2024 Pillar 3
+# figure obtainable anywhere (no FY2024 Pillar 3 document exists and the FY2025
+# one has no comparative column), but it is not on the same basis as the KM1
+# rows above - FY2025 prints 16% against KM1's 15.2%, which is not even a
+# rounding of it - so it is carried as its own clearly-labelled row rather than
+# merged into the primary series, per the project's basis-discipline rule.
+AR_CET1_RATIO_ROW = (
+    "Common Equity Tier 1 (CET1) capital ratio per Annual Report KPI table (whole %, alternative basis - see note)",
+    {"FY2025": "16%", "FY2024": "21%", "FY2023": "27%"},
 )
 
 metric(
-    "CET1 Capital", "£'000, Group/consolidated basis (FY2021: standalone entity)",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554, "FY2021": 50637})],
+    "CET1 Capital", "£'000, Group/consolidated basis (FY2020-FY2021: standalone entity)",
+    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554, "FY2021": 50637, "FY2020": 50697})],
     p3_sources(),
-    note=FY2024_GAP_NOTE,
+    note=FY2024_GAP_NOTE + "\n" + FY2020_P3_NOTE,
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%"})],
+    [
+        ("Common Equity Tier 1 (CET1) ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%", "FY2020": "30%"}),
+        AR_CET1_RATIO_ROW,
+    ],
     p3_sources(),
-    note=FY2024_GAP_NOTE + " FY2021 is as stated in the source (rounded to the nearest whole percent; no decimal figure was disclosed that year).",
+    note=FY2024_GAP_NOTE + " FY2021 is as stated in the source (rounded to the nearest whole percent; no decimal "
+         "figure was disclosed that year).\n" + FY2020_P3_NOTE + " The FY2020 document's Summary-analysis table "
+         "prints a 'Tier 1 Ratio' of 30% and no separate CET1 ratio line; its own capital-resources table shows "
+         "CET1 £50,697k going straight to Tier 2 with no Additional Tier 1 line, so Tier 1 = CET1 that year and "
+         "30% is the CET1 ratio as well - the same treatment already applied to every other year on this sheet.\n"
+         "SECOND ROW (alternative basis, added 2026-09-15): the Annual Reports' KPI tables are the only source "
+         "that states any FY2024 capital ratio, so their whole-percent Group CET1 ratio is carried on its own "
+         "row - FY2024 21% (stated identically in the FY2024 report's own year column and the FY2025 report's "
+         "FY2024 comparative column, two independent confirmations). It is NOT merged into the primary row "
+         "because the two series do not agree: for FY2025 the KPI table says 16% where the Pillar 3 KM1 says "
+         "15.2%, a difference too large to be rounding, cause not explained in either document (FY2023 does "
+         "reconcile: 27% vs 26.6%). Treat the FY2024 21% as indicative of level, not as a KM1-basis figure.",
 )
 
 metric(
     "Tier 1 Capital", "£'000",
-    [("Tier 1 capital", {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554, "FY2021": 50637})],
+    [("Tier 1 capital", {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554, "FY2021": 50637, "FY2020": 50697})],
     p3_sources(),
-    note=FY2024_GAP_NOTE + " Equal to CET1 capital in every year shown - Chetwood has no Additional Tier 1 (AT1) instruments.",
+    note=FY2024_GAP_NOTE + " Equal to CET1 capital in every year shown - Chetwood has no Additional Tier 1 (AT1) "
+         "instruments (in FY2020 confirmed by its capital-resources table running CET1 -> Tier 2 -> Total with no "
+         "AT1 line).\n" + FY2020_P3_NOTE,
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%"})],
+    [("Tier 1 ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%", "FY2020": "30%"})],
     p3_sources(),
-    note=FY2024_GAP_NOTE,
+    note=FY2024_GAP_NOTE + "\n" + FY2020_P3_NOTE,
 )
 
 metric(
     "Total Capital", "£'000",
-    [("Total capital", {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554, "FY2021": 50637})],
+    [("Total capital", {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554, "FY2021": 50637, "FY2020": 52835})],
     p3_sources(),
-    note=FY2024_GAP_NOTE + " Equal to CET1/Tier 1 capital in every year shown - Chetwood has no Tier 2 capital either.",
+    note=FY2024_GAP_NOTE + " Equal to CET1/Tier 1 capital in FY2021-FY2025 - Chetwood had no Tier 2 capital in "
+         "those years. FY2020 is the exception and the only year that differs: its capital-resources table "
+         "discloses £2,138k of Tier 2 capital on top of CET1 £50,697k, giving Total regulatory capital £52,835k "
+         "as printed.\n" + FY2020_P3_NOTE,
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%"})],
+    [("Total capital ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%", "FY2020": "31%"})],
     p3_sources(),
-    note=FY2024_GAP_NOTE,
+    note=FY2024_GAP_NOTE + "\n" + FY2020_P3_NOTE + " FY2020's 31% is higher than that year's 30% Tier 1 ratio "
+         "because of the £2,138k of Tier 2 capital described on the Total Capital sheet - both figures are "
+         "printed in the document's own Summary-analysis table, neither is derived.",
 )
 
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted exposure amount", {"FY2025": 1233321, "FY2024": 824623, "FY2023": 343668, "FY2022": 196750, "FY2021": 178987})],
+    [("Total risk-weighted exposure amount", {"FY2025": 1233321, "FY2024": 824623, "FY2023": 343668, "FY2022": 196750, "FY2021": 178987, "FY2020": 171000})],
     p3_sources(),
-    note="FY2024 is populated (unlike the other Pillar 3 sheets) because the FY2025 Pillar 3 document's own OV1 "
+    note=FY2020_P3_NOTE + " FY2020's £171,000k is the document's own printed 'Risk Weighted Assets (£m) £171.0m' "
+         "- disclosed to one decimal place of £m only, so the trailing three digits are the unit conversion, not "
+         "spurious precision. It reconciles exactly to that document's own two components (Credit Risk RWAs "
+         "£119.4m + operational-risk RWAs £51.6m = £171.0m), shown on the RWA Breakdown sheet.\n"
+         "FY2024 is populated (unlike the other Pillar 3 sheets) because the FY2025 Pillar 3 document's own OV1 "
          "table (Section 6.3) discloses a full FY2024 comparative Total row (824,623) - the same figure the RWA "
          "Breakdown sheet's FY2024 column sums to. The KM1 template (Section 5) and LCR/NSFR/Overall Capital "
          "Requirement tables (Sections 5-6.6) that supply every other Pillar 3 metric on this workbook are all "
@@ -561,7 +684,14 @@ RWA_BREAKDOWN_SOURCES = (
     f"FY2023/FY2022: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31 March 2023, Section 8.3 (OV1 table with "
     f"FY2022 comparative) - {P3_23_URL}\n"
     f"FY2021: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31 March 2021, Section 5.4 (pre-KM1 category "
-    f"table) - {P3_21_URL}\n\n" + ENTITY_NOTE + "\n\n"
+    f"table) - {P3_21_URL}\n"
+    f"FY2020: Chetwood Financial Ltd Pillar 3 Disclosures, June 2020 (as at 31st March 2020), Section 1.2 "
+    f"('Credit Risk Weighted Assets', p.3) and Section 8 (Operational risk, p.19) - {P3_20_URL}. This edition "
+    f"has no OV1 or category table at all; it states only Credit Risk RWAs of £119.4m (itself split in the "
+    f"narrative into £112.1m customer lending + £5.5m other assets + £1.8m lending to banks) and an "
+    f"operational-risk RWA requirement of £51.6m, which together make its printed £171.0m total exactly. "
+    f"Counterparty credit risk and securitisation are left blank rather than assumed nil - the document never "
+    f"mentions either, and Chetwood had no securitised exposures that early.\n\n" + ENTITY_NOTE + "\n\n"
     "FINDING: the other Pillar 3 sheets in this workbook leave FY2024 blank because no dedicated 'as at 31 March "
     "2024' Pillar 3 document was ever published - true for the CET1/Tier 1/Total Capital/ratio figures. However "
     "the FY2025 Pillar 3 document's own OV1 table (used here) discloses a full FY2024 comparative RWEA-by-category "
@@ -572,15 +702,15 @@ RWA_BREAKDOWN_SOURCES = (
 )
 rwa_breakdown_rows = [
     ("SECTION", "RWA by risk category", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 1017779, "FY2024": 703828, "FY2023": 290536, "FY2022": 179962, "FY2021": 126942}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 1017779, "FY2024": 703828, "FY2023": 290536, "FY2022": 179962, "FY2021": 126942, "FY2020": 119400}),
     ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 23777, "FY2024": 13638, "FY2023": 4143, "FY2022": 1937, "FY2021": 450}),
     ("DATA", "Securitisation exposures in the non-trading book", {"FY2025": 102610, "FY2024": 62980, "FY2023": 18124}),
-    ("DATA", "Operational risk", {"FY2025": 89154, "FY2024": 44177, "FY2023": 30865, "FY2022": 14852, "FY2021": 51595}),
-    ("TOTAL", "Total", {"FY2025": 1233321, "FY2024": 824623, "FY2023": 343668, "FY2022": 196750, "FY2021": 178987}),
+    ("DATA", "Operational risk", {"FY2025": 89154, "FY2024": 44177, "FY2023": 30865, "FY2022": 14852, "FY2021": 51595, "FY2020": 51600}),
+    ("TOTAL", "Total", {"FY2025": 1233321, "FY2024": 824623, "FY2023": 343668, "FY2022": 196750, "FY2021": 178987, "FY2020": 171000}),
 ]
 bw.add_rwa_breakdown_sheet(
     title="Chetwood Financial Limited — RWA Breakdown",
-    subtitle="£'000, Group/consolidated basis (FY2021: standalone entity). FY2019-FY2020 blank - no Pillar 3 disclosure was ever published for those years. See source note at bottom.",
+    subtitle="£'000, Group/consolidated basis (FY2020-FY2021: standalone entity). FY2019 blank - Chetwood published no Pillar 3 disclosure that year. FY2020 added 2026-09-15 and is stated to 0.1 of £m only. See source note at bottom.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=54,
@@ -591,13 +721,16 @@ metric(
     "Leverage Ratio", "£'000 / %",
     [
         ("Leverage ratio total exposure measure", {"FY2025": 3615720, "FY2023": 1519817, "FY2022": 394658, "FY2021": 216375}),
-        ("Leverage ratio (%)", {"FY2025": "5.19%", "FY2023": "6.01%", "FY2022": "14.58%", "FY2021": "23.4%"}),
+        ("Leverage ratio (%)", {"FY2025": "5.19%", "FY2023": "6.01%", "FY2022": "14.58%", "FY2021": "23.4%", "FY2020": "19%"}),
     ],
     p3_sources(),
     note=FY2024_GAP_NOTE + " Unlike Barclays/Monzo, Chetwood's disclosures do not distinguish an 'excluding/including "
          "claims on central banks' basis in any year - a single leverage ratio definition is used throughout "
          "(Tier 1 capital / total exposure measure). FY2021 used a pre-KM1 narrative table; FY2022 onward uses the "
-         "formal KM1 rows 13-14.",
+         "formal KM1 rows 13-14.\n" + FY2020_P3_NOTE + " FY2020 discloses only the headline ratio (19%, stated "
+         "twice - in the Summary-analysis table and again in Section 3.6, 'At 31 March 2020, the leverage ratio "
+         "stood at 19%'); no total exposure measure is given anywhere in that document, so that row stays blank "
+         "for FY2020 rather than being back-solved from the ratio.",
 )
 
 metric(
@@ -607,14 +740,17 @@ metric(
         ("Cash outflows - total weighted value", {"FY2025": 489794, "FY2023": 52035, "FY2022": 5627}),
         ("Cash inflows - total weighted value", {"FY2025": 28009, "FY2023": 15169, "FY2022": 13656}),
         ("Total net cash outflows (adjusted value)", {"FY2025": 461785, "FY2023": 36865, "FY2022": 1407}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "194%", "FY2023": "1,015%", "FY2022": "4,823%", "FY2021": "51,086%"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "194%", "FY2023": "1,015%", "FY2022": "4,823%", "FY2021": "51,086%", "FY2020": "68,110%"}),
     ],
     p3_sources(),
-    note=FY2024_GAP_NOTE + " FY2021 disclosed only the headline ratio in narrative form (no HQLA/outflow £ breakdown "
-         "was published that year - the formal KM1 liquidity rows were introduced from FY2022). Chetwood's LCR "
-         "ratios are extremely high because, as a young/small deposit-taker at the time, its regulatory outflow "
-         "assumptions were small relative to its liquid asset holdings - this is as disclosed by Chetwood, not a "
-         "transcription error.",
+    note=FY2024_GAP_NOTE + " FY2020 and FY2021 disclosed only the headline ratio in narrative form (no HQLA/outflow "
+         "£ breakdown was published those years - the formal KM1 liquidity rows were introduced from FY2022). "
+         "Chetwood's LCR ratios are extremely high because, as a young/small deposit-taker at the time, its "
+         "regulatory outflow assumptions were small relative to its liquid asset holdings - this is as disclosed "
+         "by Chetwood, not a transcription error; the FY2020 document says so in terms ('Given the early stage of "
+         "Chetwood's development and the limited value of outflows the calculation of the Liquidity Coverage "
+         "Ratio (LCR) results in a very high value. Chetwood's LCR ratio as at 31st March 2020 was 68,110%').\n"
+         + FY2020_P3_NOTE,
 )
 
 metric(
@@ -622,14 +758,17 @@ metric(
     [
         ("Total available stable funding", {"FY2025": 3677559, "FY2023": 1387511, "FY2022": 380549}),
         ("Total required stable funding", {"FY2025": 2536343, "FY2023": 572002, "FY2022": 233566}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "145%", "FY2023": "243%", "FY2022": "162.9%", "FY2021": "146.5%"})
+        ("Net Stable Funding Ratio (%)", {"FY2025": "145%", "FY2023": "243%", "FY2022": "162.9%", "FY2021": "146.5%", "FY2020": "193%"})
     ],
     p3_sources(),
     note=FY2024_GAP_NOTE + " FY2021's NSFR figure (146.5%) is quoted exactly as printed in the FY2021 Pillar 3 "
          "report, which oddly labels it 'as at the 31 March 2020' in a document otherwise dated 'as at 31 March "
          "2021' - this looks like a typo in Chetwood's own document, but it is reproduced verbatim rather than "
-         "silently corrected; no £ breakdown was published for FY2021 (the formal KM1 NSFR rows were introduced "
-         "from FY2022).",
+         "silently corrected; no £ breakdown was published for FY2020 or FY2021 (the formal KM1 NSFR rows were "
+         "introduced from FY2022).\n" + FY2020_P3_NOTE + " FY2020's own 193% comes from that year's own document "
+         "('The Company's Net Stable Funding Ratio (NSFR) as at the 31 March 2020 was 193%') and is a genuinely "
+         "different figure from the 146.5% the FY2021 report mislabels as 'at the 31 March 2020' - further "
+         "evidence that the FY2021 label is the typo, and that 146.5% belongs to FY2021 as carried here.",
 )
 
 metric(
@@ -641,8 +780,11 @@ metric(
          "Pillar 3 reports ('...has no minimum requirements for Own funds and Eligible Liabilities (MREL) above "
          "its [minimum capital requirement]'). The FY2025 report uses a shorter reduced-disclosure format that "
          "omits this narrative section, but there is no indication Chetwood's MREL/SNCI status has changed. "
-         "FY2019/FY2020 are left blank rather than 'Not applicable' - no Pillar 3 disclosure was published for "
-         "those years, so Chetwood's SNCI/MREL status at that time was never publicly stated.",
+         "FY2019/FY2020 are left blank rather than 'Not applicable'. For FY2019 no Pillar 3 disclosure was "
+         "published at all. For FY2020 one was (located 2026-09-15 - see the source note), but it was read in "
+         "full and the word MREL does not appear anywhere in it, so Chetwood's SNCI/MREL status as at 31 March "
+         "2020 was still never publicly stated - blank remains correct for that year, now on evidence rather "
+         "than on the absence of a document.",
 )
 
 # ---------------------------------------------------------------
@@ -677,16 +819,18 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000",
     ratios=[
-        ("CET1 Ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%"}),
-        ("Tier 1 Ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%"}),
-        ("Total Capital Ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%"}),
-        ("Leverage Ratio", {"FY2025": "5.19%", "FY2023": "6.01%", "FY2022": "14.58%", "FY2021": "23.4%"}),
-        ("LCR", {"FY2025": "194%", "FY2023": "1,015%", "FY2022": "4,823%", "FY2021": "51,086%"}),
-        ("NSFR", {"FY2025": "145%", "FY2023": "243%", "FY2022": "162.9%", "FY2021": "146.5%"}),
+        ("CET1 Ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%", "FY2020": "30%"}),
+        ("Tier 1 Ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%", "FY2020": "30%"}),
+        ("Total Capital Ratio", {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%", "FY2021": "28%", "FY2020": "31%"}),
+        ("Leverage Ratio", {"FY2025": "5.19%", "FY2023": "6.01%", "FY2022": "14.58%", "FY2021": "23.4%", "FY2020": "19%"}),
+        ("LCR", {"FY2025": "194%", "FY2023": "1,015%", "FY2022": "4,823%", "FY2021": "51,086%", "FY2020": "68,110%"}),
+        ("NSFR", {"FY2025": "145%", "FY2023": "243%", "FY2022": "162.9%", "FY2021": "146.5%", "FY2020": "193%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page. Ratios are blank for FY2019/FY2020 (no Pillar 3 disclosure "
-         "published for those years). Note the ~£8.1m FY2020-closing/FY2021-opening equity gap explained on the "
+         "citation for the underlying document/page. Ratios are blank for FY2019 (Chetwood published no Pillar 3 "
+         "disclosure that year); FY2020 was blank on the same basis until 2026-09-15, when its own 'as at 31 "
+         "March 2020' Pillar 3 document was located - see any Pillar 3 sheet's source note for that correction. "
+         "Note the ~£8.1m FY2020-closing/FY2021-opening equity gap explained on the "
          "Statement of Changes in Equity sheet (FRS 102-to-IFRS transition). " + FY2024_GAP_NOTE,
 )
 

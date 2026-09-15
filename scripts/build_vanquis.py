@@ -964,7 +964,30 @@ metric(
          "applies uniformly across FY2014-FY2021, consistent with the pre-existing FY2021 treatment. Not required "
          "from the 30 June 2024 reporting date onward: in March 2024 the Group was confirmed as a Small Domestic "
          "Deposit Taker consolidation entity, exempting it from NSFR reporting - so no FY2024 or FY2025 figures "
-         "exist either, despite falling in the middle of the window where NSFR was otherwise required.",
+         "exist either, despite falling in the middle of the window where NSFR was otherwise required.\n"
+         "EVIDENCE STRENGTHENED 2026-09-15 (cross-bank SDDT pass), which confirmed this pre-existing 'Not "
+         "required' treatment from the PRA's own firm-level register and pinned it to the BANK entity, not just "
+         "the Group. The Bank of England consolidated list of waivers and modifications granted to PRA-authorised "
+         "firms (downloaded 2026-09-15, https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/"
+         "authorisations/waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries the row: "
+         "FRN 221156, 'Vanquis Bank Limited', 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of "
+         "the SDDT Regime - General Application Part', rule 'SDDT Regime - General Application', sub rule 'Ru "
+         "3.1', waiver ref 'A00007643P.pdf', start date '13/03/2024', no end date. That is the same March 2024 "
+         "date already recorded above, now sourced to the register and to this legal entity's own FRN.\n"
+         "Rule 3.1 is the modification by which a firm becomes a Small Domestic Deposit Taker (SDDT) under the "
+         "PRA's 'Strong and Simple' framework, and becoming one replaces the full NSFR with a Simplified Retail "
+         "Deposit Ratio (and removes the Pillar 3 disclosure obligation entirely). That consequence is stated by "
+         "a peer holding the identical register row - Cynergy Bank plc Annual Report & Accounts 2024, p.71: 'The "
+         "Bank applied for the Modification by Consent to become an SDDT and received approval on 17 January "
+         "2025. As a result, we are not required to publish Pillar 3 disclosures as at 31 December 2024 and will "
+         "submit only a simplified retail deposit ratio instead of a full Net Stable Funding Ratio (NSFR) going "
+         "forward.' (Cynergy's own row is Rule 3.1 starting '17/01/2025', matching its stated approval date to "
+         "the day - which is what ties the register row to the firm-stated effect.)\n"
+         "DATE FIT: the modification took effect 13 March 2024. It therefore covers FY2024 and FY2025 and has "
+         "NOTHING to do with the FY2014-FY2021 'Not required' cells, which have an entirely separate and earlier "
+         "cause (the UK NSFR requirement simply did not exist before 1 January 2022). FY2022 and FY2023 are "
+         "disclosed in the normal way above. Do not read SDDT back onto FY2023 or earlier. Vanquis does not "
+         "publish a Simplified Retail Deposit Ratio value, so nothing is added in the NSFR's place.",
 )
 
 metric(

@@ -366,26 +366,43 @@ metric(
 )
 
 rwa_rows = [
+    ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts", {}),
     ("DATA", "Credit risk (excluding CCR)", {"FY2025": 338558, "FY2024": 237670, "FY2023": 80249, "FY2022": 47985}),
     ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 405, "FY2024": 152, "FY2023": 534, "FY2022": 535}),
     ("DATA", "Of which credit valuation adjustment (CVA)", {"FY2025": 590, "FY2024": 301, "FY2023": 778, "FY2022": 779}),
     ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 36743, "FY2024": 15850, "FY2023": 4524, "FY2022": 1184}),
     ("DATA", "Operational risk", {"FY2025": 16311, "FY2024": 19746, "FY2023": 21454, "FY2022": 35546}),
     ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 392607, "FY2024": 273718, "FY2023": 107539, "FY2022": 86029}),
+    # Own SECTION block: FY2021 (BFC Bank Limited, pre-rename) has no UK OV1
+    # table - its Pillar 3 report only discloses the Pillar 1 CAPITAL
+    # REQUIREMENT by risk category (8% of RWA per CRR Article 92), so each
+    # figure below is that table's own capital-requirement figure x 12.5,
+    # the standard, exact Basel/CRR identity, not an estimate.
+    ("SECTION", "Pillar 1 capital requirement × 12.5 (derived from disclosed capital requirement)", {}),
+    ("DATA", "Credit risk & counterparty risk (derived)", {"FY2021": 31162.5}),
+    ("DATA", "Market risk (derived)", {"FY2021": 9950}),
+    ("DATA", "Credit valuation adjustment (CVA) (derived)", {"FY2021": 25}),
+    ("DATA", "Operational risk (derived)", {"FY2021": 17850}),
+    ("TOTAL", "Total risk-weighted exposure amount (derived)", {"FY2021": 58987.5}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="iFAST Global Bank Limited — RWA Breakdown",
-    subtitle="Solo basis, £'000. FY2021 not publicly disclosed at category level.",
+    subtitle="Solo basis, £'000. FY2025-FY2022 as directly disclosed (UK OV1); FY2021 derived from disclosed "
+             "Pillar 1 capital requirement x 12.5 - see the two SECTION blocks below and the sources note.",
     rows=rwa_rows,
     sources_text=(
         "Sources - iFAST Global Bank Limited's own Table UK OV1 (Overview of risk weighted exposure amounts):\n"
         f"FY2025/FY2024: iFAST Global Bank Limited Pillar 3 Disclosures 2025, p.21 (Table 4: UK OV1) — {P3_25_URL}\n"
         f"FY2023/FY2022: iFAST Global Bank Limited Pillar 3 Disclosures 2023, p.15 (Table 4: UK OV1) — {P3_23_URL}\n"
-        "FY2021: not publicly disclosed at category level — the FY2021 (BFC Bank Limited) Pillar 3 Disclosures "
-        "document's Section 6.3 'Pillar 1 capital requirement' promises a category breakdown but the table "
-        "itself is absent from the published document (confirmed by reading the full section) - only the "
-        f"aggregate Total RWA figure exists that year (see the Total RWAs sheet) — {P3_21_URL}\n"
+        "FY2021 (derived, not directly disclosed as RWA): the FY2021 (BFC Bank Limited) Pillar 3 Disclosures "
+        "document's Section 6.3 'Pillar 1 capital requirement', p.27, does carry the promised table (a scanned/"
+        "rasterised table, missed by a prior session's plain-text extraction, which is why it was previously "
+        "marked absent here - confirmed present by visually rendering the page): 'Capital Resources Requirement "
+        "- Pillar 1' broken into Credit Risk & Counterparty Risk (£2,493k) / Operational Risk (£1,428k) / Market "
+        "Risk (£796k) / CVA (£2k), totalling £4,719k. Each figure below is that table's own capital-requirement "
+        "figure divided by 8% (multiplied by 12.5), the standard, exact Basel/CRR Article 92 identity. Reconciles "
+        "to within £5.5k of the Total RWAs sheet's own FY2021 figure (58,982) - {url}\n".format(url=P3_21_URL) +
         "Genuine, not-force-reconciled discrepancy: the FY2025 Pillar 3 document's own FY2024 comparative "
         "differs slightly between its two tables - this OV1 table's FY2024 Total is £273,718k, while the "
         "same document's Table 1 (UK KM1) FY2024 Total is £273,772k (used on the Total RWAs sheet for "

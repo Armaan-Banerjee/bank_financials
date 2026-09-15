@@ -741,7 +741,13 @@ RWA_SOURCES = (
     f"using the 8%-of-RWA identity (each category's RWA = that category's capital requirement / 0.08).\n"
     f"FY2022-FY2025: Pillar III Disclosures for those years ({P32022_URL}, {P32023_URL}, {P32024_URL}, "
     f"{P32025_URL}) each checked in full (4-5 pages each) - none contains an RWA-by-category breakdown, only the "
-    f"single Key metrics 'Total risk-weighted exposure amount' figure (already shown on the Total RWAs sheet).\n\n"
+    f"single Key metrics 'Total risk-weighted exposure amount' figure (already shown on the Total RWAs sheet). "
+    f"Independently RE-VERIFIED 2026-09-12: all 4 PDFs re-downloaded and re-read directly (not just re-checked "
+    f"against this note) - each is confirmed still 5 pages, KM1-template-only, no category split. A Wayback "
+    f"Machine CDX search of blme.com's full media archive confirms no '-appendices.pdf' companion document (the "
+    f"format that carried the FY2019-FY2021 OV1-style category breakdown) was ever published alongside the "
+    f"FY2022-FY2025 disclosures - this is a genuine, continuing change in the Bank's own disclosure format, not "
+    f"a missed document.\n\n"
     + ENTITY_NOTE
 )
 
@@ -793,13 +799,19 @@ metric("LCR", "%",
 
 metric("NSFR", "%",
        [("Net Stable Funding Ratio", {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%",
+         "FY2021": "113.85%",
          "FY2020": "114.46%", "FY2019": "112.48%", "FY2018": "104%", "FY2017": "Not publicly disclosed",
          "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"})],
-       p3_sources(),
-       note="FY2021 shown as N/A in the FY2022 report's own comparative column - UK NSFR requirement not yet in "
-            "force for the FY2021 reporting date. FY2018-2020 NSFR was voluntarily disclosed by BLME ahead of the "
-            "UK's binding NSFR requirement (which only took effect FY2022) - FY2014-2017 pre-date this voluntary "
-            "disclosure entirely.")
+       p3_sources(
+           f"FY2021 NSFR ONLY: Pillar III Disclosure - 31 December 2021, section 1.3 Table 2 'Key ratios', p.7 - "
+           f"{P32021_URL}. The FY2022 report's FY2021 comparative column (used for every other FY2021 metric here) "
+           f"prints 'N/A' for NSFR rows 18-20, so the FY2021 edition's own Table 2 is the only source for it.\n"),
+       note="FY2018-FY2021 NSFR was voluntarily disclosed by BLME in Table 2 'Key ratios' of its own Pillar III "
+            "Disclosure, ahead of the UK's binding NSFR requirement (PRA PS17/21 and PS22/21, in force 1 January "
+            "2022); FY2014-2017 pre-date this voluntary disclosure entirely. BASIS NOTE: FY2018-FY2021 are therefore "
+            "spot ratios at the reporting date, whereas FY2022 onward are the UK KM1 measure, which PS17/21 requires "
+            "to be an average of four quarter-ends - the two are not strictly like-for-like. The FY2022 report's own "
+            "FY2021 comparative column shows 'N/A' on that KM1 basis.")
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
@@ -875,13 +887,15 @@ bw.add_overview_sheet(
         ("LCR", {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%", "FY2021": "315%",
          "FY2020": "234.15%", "FY2019": "261.23%", "FY2018": "184.86%", "FY2017": "403%", "FY2016": "4,115%",
          "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"}),
-        ("NSFR", {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%",
+        ("NSFR", {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%", "FY2021": "113.85%",
          "FY2020": "114.46%", "FY2019": "112.48%", "FY2018": "104%", "FY2017": "Not publicly disclosed",
          "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page. NSFR blank/not disclosed FY2014-2017 and FY2021 (not yet in "
-         "force / not yet voluntarily disclosed). BLME plc solo basis throughout except the FY2014-2016 Income "
+         "citation for the underlying document/page. NSFR not disclosed FY2014-2017 (pre-dates BLME's voluntary "
+         "disclosure of it; the UK NSFR requirement itself only took effect 1 January 2022), and FY2018-FY2021 are "
+         "spot ratios rather than the four-quarter average the UK KM1 template requires from FY2022 - see the NSFR "
+         "sheet's own note. BLME plc solo basis throughout except the FY2014-2016 Income "
          "Statement figures, which are Group-consolidated (see ENTITY_NOTE) - not the wider BLME Holdings group in "
          "either case. FY2014 leverage ratio and FY2014-2015 LCR not publicly disclosed (pre-dates those "
          "frameworks/templates); FY2014's CET1/Tier1/Total Capital ratios and RWA are derived from the FY2014 "

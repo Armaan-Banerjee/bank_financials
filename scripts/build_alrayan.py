@@ -2,9 +2,9 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-# Full 6 years of cash flow AND Pillar 3 coverage for FY2020-FY2024; FY2025 Pillar 3
-# not yet published (accounts filed but the Pillar 3 disclosure typically lags ~9
-# months - none found as of this build). No FRS 101/102 cash-flow exemption at all.
+# Full 6 years of cash flow AND Pillar 3 coverage for FY2020-FY2025. FY2025's Pillar 3
+# disclosure lagged its accounts by ~9 months and only appeared in September 2026; it
+# was picked up and transcribed on 2026-09-15. No FRS 101/102 cash-flow exemption at all.
 # FY2020 extension (HD-062): re-verified directly against the primary-source PDFs
 # (Companies House's own FY2020 Annual Report filing, plus the bank's own standalone
 # FY2020 Pillar 3 Disclosures document, recovered via a Wayback CDX domain scan of
@@ -35,6 +35,7 @@ P3_2020_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uplo
 P3_2021_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2022-10/inv-rep-2021-pillar-3.pdf"
 P3_2023_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2024-08/pb7703_al_rayan_pillar_3_disclosures_2023_v2.pdf"
 P3_2024_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2025-09/alrayan_pillar_3_disclosures_2024_web_-_010925.pdf"
+P3_2025_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2026-09/pb8084_alrayan_pillar_3_disclosures_2025.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: Alrayan Bank Limited (FRN 229148, Companies House 04483430, matches Banks List 2608.xlsx "
@@ -92,6 +93,7 @@ CASH_FLOW_SOURCES = (
 def p3_sources(extra=""):
     return (
         "Sources - Alrayan Bank Limited's own Pillar 3 Disclosures, £m capital amounts / % ratios, all years:\n"
+        f"FY2025: Pillar 3 Disclosures - 31 December 2025, Annex I KM1 table, p.39 - {P3_2025_URL}\n"
         f"FY2024: Pillar 3 Disclosures - 31 December 2024, Annex I KM1 table, p.38 - {P3_2024_URL}\n"
         f"FY2023: Pillar 3 Disclosures - 31 December 2023, Annex I KM1 table, p.33 - {P3_2023_URL}\n"
         f"FY2022: sourced from the FY2023 Pillar 3 Disclosures' own FY2022 comparative column, Annex I KM1 table, "
@@ -104,10 +106,16 @@ def p3_sources(extra=""):
         f"genuine text layer, unlike the scanned Annual Reports, so figures are machine-read not visually "
         f"transcribed), p.3 - {P3_2020_URL}. Cross-checked against the FY2021 Annual Report's own FY2020 credit-"
         "risk comparative note and ties exactly.\n"
-        "FY2025: the standalone Pillar 3 document is now published on the Bank's investor-relations page, but "
-        "the FY2025 Annual Report's KPI table independently provides CET1 ratio (15.41%), which is populated. "
-        "Its LCR (598%) is point-in-time rather than this sheet's twelve-month-average basis, so it remains blank "
-        "pending transcription of the newly published DOCX. Other FY2025 Pillar 3 cells likewise remain blank.\n"
+        "FY2025 FILLED 2026-09-15: the FY2025 Pillar 3 Disclosures PDF is now live on the Bank's "
+        "investor-relations regulatory-information page (published 2026-09), and every FY2025 Pillar 3 cell in "
+        "this workbook is transcribed from its Annex I KM1/OV1 templates - nothing is carried over from the "
+        "Annual Report. One consequence: the CET1 ratio cell for FY2025 was previously 15.41% (the FY2025 "
+        "Annual Report's own KPI table, the only capital figure available before the Pillar 3 document "
+        "appeared) and is now 15.45%, the KM1 Annex figure. The two are different bases, not a correction of "
+        "an error - the same AR-KPI-vs-KM1 spread this project keeps blank elsewhere - and the KM1 figure is "
+        "used here for consistency with FY2020-FY2024 and with every other bank in this project. Likewise the "
+        "LCR cell uses KM1 line 17's twelve-month average (481%), not the Executive Summary's point-in-time "
+        "598%.\n"
         "This bank's own Pillar 3 documents show small internal discrepancies between their Executive Summary "
         "narrative tables and their formal KM1 Annex tables in a couple of instances (e.g. FY2023 NSFR: 160% "
         "exec summary vs 157% KM1 annex; FY2022 Leverage Ratio: 6.8% exec summary vs 6.7% KM1 annex) - this "
@@ -591,44 +599,44 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 metric(
     "CET1 Capital", "£m",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2024": 208.2, "FY2023": 183.9, "FY2022": 152.7, "FY2021": 142.4, "FY2020": 135.7})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 227.3, "FY2024": 208.2, "FY2023": 183.9, "FY2022": 152.7, "FY2021": 142.4, "FY2020": 135.7})],
     p3_sources(),
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("CET1 ratio", {"FY2025": "15.41%", "FY2024": "15.95%", "FY2023": "17.36%", "FY2022": "14.93%", "FY2021": "15.1%", "FY2020": "13.4%"})],
+    [("CET1 ratio", {"FY2025": "15.45%", "FY2024": "15.95%", "FY2023": "17.36%", "FY2022": "14.93%", "FY2021": "15.1%", "FY2020": "13.4%"})],
     p3_sources("FY2020-FY2021 are from the pre-KM1 Executive Summary table (rounded to 1dp in the source); "
                "FY2022-FY2024 are from the formal KM1 Annex template (2dp)."),
 )
 
 metric(
     "Tier 1 Capital", "£m",
-    [("Tier 1 capital", {"FY2024": 211.2, "FY2023": 186.9, "FY2022": 155.7, "FY2021": 145.4, "FY2020": 138.7})],
+    [("Tier 1 capital", {"FY2025": 230.3, "FY2024": 211.2, "FY2023": 186.9, "FY2022": 155.7, "FY2021": 145.4, "FY2020": 138.7})],
     p3_sources(),
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2024": "16.15%", "FY2023": "17.65%", "FY2022": "15.23%", "FY2021": "15.4%", "FY2020": "13.7%"})],
+    [("Tier 1 ratio", {"FY2025": "15.65%", "FY2024": "16.15%", "FY2023": "17.65%", "FY2022": "15.23%", "FY2021": "15.4%", "FY2020": "13.7%"})],
     p3_sources(),
 )
 
 metric(
     "Total Capital", "£m",
-    [("Total capital", {"FY2024": 224.9, "FY2023": 205.5, "FY2022": 178.4, "FY2021": 170.4, "FY2020": 163.7})],
+    [("Total capital", {"FY2025": 232.8, "FY2024": 224.9, "FY2023": 205.5, "FY2022": 178.4, "FY2021": 170.4, "FY2020": 163.7})],
     p3_sources(),
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2024": "17.19%", "FY2023": "19.41%", "FY2022": "17.45%", "FY2021": "18.1%", "FY2020": "16.2%"})],
+    [("Total capital ratio", {"FY2025": "15.82%", "FY2024": "17.19%", "FY2023": "19.41%", "FY2022": "17.45%", "FY2021": "18.1%", "FY2020": "16.2%"})],
     p3_sources(),
 )
 
 metric(
     "Total RWAs", "£m",
-    [("Total risk-weighted assets", {"FY2024": 1307.8, "FY2023": 1059.1, "FY2022": 1022.3, "FY2021": 943.9, "FY2020": 1012.5})],
+    [("Total risk-weighted assets", {"FY2025": 1471.7, "FY2024": 1307.8, "FY2023": 1059.1, "FY2022": 1022.3, "FY2021": 943.9, "FY2020": 1012.5})],
     p3_sources(),
 )
 
@@ -636,9 +644,8 @@ metric(
 # Sheet: RWA Breakdown
 # ---------------------------------------------------------------
 RWA_BREAKDOWN_PRESENTATION_NOTE = (
-    "Presentation note: FY2025 has no RWA Breakdown - no Pillar 3 Disclosures document has been published "
-    "yet as of this build (same reason the Pillar 3 ratio sheets are also blank for FY2025 - see "
-    "CASH_FLOW_SOURCES/p3_sources above). FY2020-FY2021's Pillar 3 editions pre-date the bank's adoption of the "
+    "Presentation note: FY2025 was added 2026-09-15 from the newly published FY2025 Pillar 3 Disclosures' "
+    "own Annex I OV1 template (p.40). FY2020-FY2021's Pillar 3 editions pre-date the bank's adoption of the "
     "standardised UK OV1 template - their 'Table 7/8: Pillar 1 capital requirements: credit risk' presents "
     "credit risk RWA together with small counterparty-credit-risk-like 'Commitment to finance' and 'Sharia "
     "compliant derivatives' categories as one combined total (£937.3m FY2020, £865.1m FY2021), rather than the "
@@ -650,13 +657,13 @@ RWA_BREAKDOWN_PRESENTATION_NOTE = (
 
 rwa_breakdown_rows = [
     ("SECTION", "Risk-weighted exposure amounts (£m)", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2024": 1184.1, "FY2023": 950.5, "FY2022": 936.3}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 1335.0, "FY2024": 1184.1, "FY2023": 950.5, "FY2022": 936.3}),
     ("DATA", "Credit risk (incl. commitments/Sharia-compliant derivatives, pre-OV1 combined basis)",
      {"FY2021": 865.1, "FY2020": 937.3}),
-    ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 6.4, "FY2023": 3.2, "FY2022": 0.1}),
-    ("DATA", "Operational risk", {"FY2024": 117.3, "FY2023": 105.4, "FY2022": 85.9, "FY2021": 78.8, "FY2020": 75.2}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 14.2, "FY2024": 6.4, "FY2023": 3.2, "FY2022": 0.1}),
+    ("DATA", "Operational risk", {"FY2025": 122.5, "FY2024": 117.3, "FY2023": 105.4, "FY2022": 85.9, "FY2021": 78.8, "FY2020": 75.2}),
     ("TOTAL", "Total risk-weighted exposure amounts",
-     {"FY2024": 1307.8, "FY2023": 1059.1, "FY2022": 1022.3, "FY2021": 943.9, "FY2020": 1012.5}),
+     {"FY2025": 1471.7, "FY2024": 1307.8, "FY2023": 1059.1, "FY2022": 1022.3, "FY2021": 943.9, "FY2020": 1012.5}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -666,6 +673,7 @@ bw.add_rwa_breakdown_sheet(
     sources_text=(
         "Sources - Alrayan Bank Limited's own Pillar 3 Disclosures, UK OV1 'Overview of risk weighted exposure "
         "amounts' template (or its pre-KM1 equivalent for FY2020-FY2021), £m, all years:\n"
+        f"FY2025: Pillar 3 Disclosures - 31 December 2025, Annex I OV1 table, p.40 - {P3_2025_URL}\n"
         f"FY2024: Pillar 3 Disclosures - 31 December 2024, Annex I OV1 table, p.39 - {P3_2024_URL}\n"
         f"FY2023: Pillar 3 Disclosures - 31 December 2023, Annex I OV1 table, p.34 - {P3_2023_URL}\n"
         f"FY2022: sourced from the FY2023 Pillar 3 Disclosures' own FY2022 comparative column, Annex I OV1 "
@@ -674,8 +682,6 @@ bw.add_rwa_breakdown_sheet(
         f"risk' + Table 29 'Operational risk RWAs flow statement', pp.18, 31 - {P3_2021_URL}\n"
         f"FY2020: Pillar 3 Disclosures - 31 December 2020, Table 34 'Overview of RWA & Pillar I' + Table 29 "
         f"'Operational risk RWAs flow statement', pp.30, 26 - {P3_2020_URL}\n"
-        "FY2025: no Pillar 3 Disclosures document has been published yet as of this build - left blank rather "
-        "than guessed.\n\n"
         + RWA_BREAKDOWN_PRESENTATION_NOTE
     ),
     first_col_width=64,
@@ -685,7 +691,7 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {"FY2024": "7.7%", "FY2023": "7.8%", "FY2022": "6.7%", "FY2021": "6.4%", "FY2020": "5.9%"})],
+    [("Leverage ratio", {"FY2025": "7.6%", "FY2024": "7.7%", "FY2023": "7.8%", "FY2022": "6.7%", "FY2021": "6.4%", "FY2020": "5.9%"})],
     p3_sources(),
     note="FY2022-FY2024 are on the 'excluding claims on central banks' KM1 basis; FY2020-FY2021 (5.9%/6.4%) are "
          "on the older CRR/LRSum basis, from before the PRA's leverage-framework methodology change (PRA "
@@ -696,7 +702,7 @@ metric(
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (12-month average, KM1 basis)",
-      {"FY2024": "523%", "FY2023": "641%", "FY2022": "442%", "FY2021": "316%", "FY2020": "352%"})],
+      {"FY2025": "481%", "FY2024": "523%", "FY2023": "641%", "FY2022": "442%", "FY2021": "316%", "FY2020": "352%"})],
     p3_sources(),
     note="This bank's Pillar 3 documents disclose TWO different LCR figures each year: a spot/point-in-time "
          "figure in the Executive Summary (FY2020 288%, FY2021 635%, FY2022 458%, FY2023 786%, FY2024 746% - "
@@ -708,7 +714,7 @@ metric(
 
 metric(
     "NSFR", "%",
-    [("Net Stable Funding Ratio", {"FY2024": "161%", "FY2023": "157%", "FY2022": "155%", "FY2021": "146%", "FY2020": "145%"})],
+    [("Net Stable Funding Ratio", {"FY2025": "151%", "FY2024": "161%", "FY2023": "157%", "FY2022": "155%", "FY2021": "146%", "FY2020": "145%"})],
     p3_sources(),
 )
 
@@ -716,7 +722,7 @@ bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
     per_note={
-        "MREL Ratio": "MREL is not mentioned anywhere in the FY2020, FY2023 or FY2024 Pillar 3 Disclosures "
+        "MREL Ratio": "MREL is not mentioned anywhere in the FY2020, FY2023, FY2024 or FY2025 Pillar 3 Disclosures "
                       "(searched directly, no hits) - consistent with a bank of this size not being its own "
                       "resolution entity under the Bank of England's MREL framework.",
     },

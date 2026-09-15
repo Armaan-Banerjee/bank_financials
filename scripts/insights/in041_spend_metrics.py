@@ -83,17 +83,47 @@ _TOTAL_OPEX_RE = re.compile(r"operating expense|administrative expense|operating
 # International Bank's "Net operating income (... BEFORE operating
 # expenses ...)" rows), which would otherwise get mistaken for the opex
 # total itself since the phrase "operating expense" appears in their label.
-_TOTAL_OPEX_EXCLUDE_RE = re.compile(r"before (operating|administrative) (expense|cost)", re.I)
+_TOTAL_OPEX_EXCLUDE_RE = re.compile(
+    r"before (operating|administrative) (expense|cost)|(?:^| - )other operating expenses?$", re.I,
+)
+# "(?:^| - )other operating expenses?$" added 2026-09-08 (Oxbury tags its own bare
+# "Other Operating Expense" row TOTAL - a genuine bolded subtotal in its own
+# filing, but only of the OTHER-expense sub-items, not of opex overall: it
+# sits alongside a separate "Staff Costs" DATA row, and their sum plus
+# Depreciation & Amortisation is what actually nets against Total Net Income
+# to Operating Profit before ECL. Because require_kind="TOTAL" trusted the
+# row_kind tag alone, this bare label was picked as total_operating_expense,
+# leaving personnel_expense (Staff Costs) at 133% of it and other_operating
+# at 100%, i.e. double-counted against a total that was really just the
+# "other" component (personnel_pct 133.03%, other_pct -133.03% on the
+# profit-loss.html expense chart). Anchored so it only excludes the BARE
+# label, not a genuine combined total that happens to mention the phrase
+# (e.g. Streambank's "Total operating expenses (sum of Staff costs + Other
+# operating expenses + Depreciation and amortisation...)" still matches).
 _OF_WHICH_RE = re.compile(r"of which", re.I)
 
 _REVENUE_RE = re.compile(
     r"total operating income|total income|net operating income|operating income$"
     r"|net revenue|net income from operations|total net income|operating income before"
-    r"|net interest and fee income|total revenue",
+    r"|net interest and fee income|total revenue|operating income/profit",
     re.I,
 )
 _REVENUE_EXACT = {"total operating income", "total income"}
-_REVENUE_PREFERRED_PREFIXES = ("total operating income", "total income", "total net income", "total revenue")
+_REVENUE_PREFERRED_PREFIXES = (
+    "total operating income", "total income", "total net income", "total revenue", "operating income/profit",
+)
+# "operating income/profit" added 2026-09-08 (Bank Saderat's own P&L labels
+# its genuine pre-expense income total this way, then separately reports a
+# "Net operating income" TOTAL row further down that's already net of
+# Administrative expenses and Depreciation & amortisation - confirmed
+# against the bank's own build script, where the two TOTAL rows straddle
+# those expense DATA rows in statement order). Without this,
+# "net operating income" alone matched and was selected as revenue,
+# understating it by exactly those two expense lines and producing
+# >100%-of-revenue composition percentages (net_interest_pct 398.97%,
+# other_pct -302.06% on the profit-loss.html income chart). Confirmed via
+# grep across every build_*.py that no other bank uses this exact label, so
+# widening the match/preference is safe.
 # "total revenue" added 2026-09-07 (ICICI Bank UK's and Melli Bank's own
 # combined-income lines are captioned "Total revenue / Net Income" and
 # "Total revenue / Total net income" respectively) - confirmed via grep
@@ -121,15 +151,39 @@ _REVENUE_EXCLUDE_RE = re.compile(
     re.I,
 )
 
-_LOANS_RE = re.compile(r"loans (and advances )?to customers", re.I)
-_TREASURY_RE = re.compile(r"treasury|investment securities|debt securities|financial investments|investment in debt securities", re.I)
+# Broadened 2026-09-08 after a bug-sweep fork found 20 real label variants
+# this missed entirely: singular "Loan and advances to customers", "to
+# clients" (not "customers"), "... at amortised cost to customers" (extra
+# text between "advances" and "to"), and bare "Loans and advances" with no
+# "to X" suffix at all. The bare-form branch excludes anything followed by
+# "to " (e.g. "Loans and advances to banks"/"to related parties"/"to group
+# undertakings") so it only catches genuine customer-loan totals that simply
+# don't spell out "to customers".
+_LOANS_RE = re.compile(
+    r"loans?\s+(and\s+advances\s+)?(at\s+amortised\s+cost\s+)?to\s+(customers|clients)"
+    r"|loans\s+and\s+advances(?!\s+to\b)",
+    re.I,
+)
+_TREASURY_RE = re.compile(
+    r"treasury|investment securities|investment in securities|debt securities|debt investments"
+    r"|financial investments|investment in debt securities",
+    re.I,
+)
 _TREASURY_EXCLUDE_RE = re.compile(r"of which|revaluation reserve|fair value reserve|in issue", re.I)
 # "cash and" doesn't cover every real phrasing - Cater Allen's own Balance
 # Sheet row is "Cash, and other balances at central banks" (a comma plus
 # "other" between "Cash" and "balances"), which the tighter pattern missed
 # entirely, silently dropping its cash figure (found via a 2026-09-04 user
 # report that Cater Allen's capital-deployment chart was missing).
-_CASH_RE = re.compile(r"cash,?\s+and\s+(other\s+)?(cash equivalents|balances)", re.I)
+# Broadened further 2026-09-08 after a bug-sweep fork found many more real
+# variants the phrase-based pattern still missed ("Cash", "Cash and cash
+# equivalent" singular, "Cash at Bank", "Cash in hand", "Cash and bank
+# balances", "Cash and due from banks", "Cash, notes and coins", "Cash, cash
+# balances at central banks and other demand deposits") - a bare keyword
+# match is safe here since this only ever runs against the Balance Sheet
+# sheet's Assets section (via extra_filter=in_assets_section below) and
+# already excludes "of which"/"restricted" sub-lines.
+_CASH_RE = re.compile(r"\bcash\b", re.I)
 _CASH_EXCLUDE_RE = re.compile(r"of which|restricted", re.I)
 _TOTAL_ASSETS_RE = re.compile(r"total assets$", re.I)
 
@@ -158,7 +212,29 @@ def _revenue_rank(label):
     # non-gross income figure over the bank's actual gross revenue total. A
     # prefix match keeps genuine "Total operating/net income (...)" variants
     # at top priority regardless of what descriptive text a bank appends.
-    return 0 if own_label(label).lower().strip().startswith(_REVENUE_PREFERRED_PREFIXES) else 1
+    #
+    # Middle rank (1, added 2026-09-08) for a "before change in expected
+    # credit losses"/"before impairment" variant, ranked ABOVE a bare "Net
+    # operating income" (rank 2): found via Marks and Spencer Financial
+    # Services, whose own two TOTAL rows are "Net operating income" (124749,
+    # already net of a -62260 impairment charge) and "Net operating income
+    # before change in expected credit losses" (187009, the true gross
+    # total). Both used to tie at rank 1 and lose to the SHORTER bare label,
+    # selecting the impairment-netted figure as revenue even though
+    # net_interest_pct/net_fee_pct are computed from gross, pre-impairment
+    # income components elsewhere - so their sum came out to 145% of that
+    # revenue, and the residual "other" swallowed the impairment charge as a
+    # nonsensical -44.62% of income on the profit-loss.html chart. The gross
+    # "before" variant is what's actually commensurate with those
+    # components. Doesn't fire for HSBC Bank/HSBC UK Bank, which already win
+    # via the preferred-prefix branch above through their own third row
+    # ("Total operating income (IFRS 4 presentation...)").
+    own = own_label(label).lower().strip()
+    if own.startswith(_REVENUE_PREFERRED_PREFIXES):
+        return 0
+    if re.search(r"before.*(?:expected credit loss|impairment)", own, re.I):
+        return 1
+    return 2
 
 
 def cost_base(observations):

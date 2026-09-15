@@ -10,6 +10,16 @@ AR24_URL = "https://find-and-update.company-information.service.gov.uk/company/0
 AR22_URL = "https://find-and-update.company-information.service.gov.uk/company/00185070/filing-history/MzM3OTU0ODM0NWFkaXF6a2N4/document?format=pdf&download=0"
 AR20_URL = "https://www.alphabanklondon.co.uk/sites/default/files/2025-10/ABL-Financial-Statements-2020.pdf"
 AR19_URL = "https://alphabanklondon.co.uk/wp-content/uploads/2020/05/ABL-Financial-Statements-2019-1.pdf"
+# ADDED 2026-09-15: the FY2021 statements as a standalone primary source. Until now
+# FY2021 was taken only from the FY2022 report's comparative column; this is the
+# FY2021 report itself, and it is a full text-layer PDF, so Note 34.6 could be read
+# by search rather than by eye. The bank's live Drupal host returns HTTP 403 to
+# every non-browser request regardless of user-agent or header set, so this cites
+# the Wayback capture, which serves the file intact.
+AR21_URL = (
+    "https://web.archive.org/web/20260118042750id_/https://www.alphabanklondon.co.uk/"
+    "sites/default/files/2025-10/ABL%20Financial%20Statements%202021%20Final%20contents%20page%20fixed.pdf"
+)
 
 CASH_FLOW_SOURCES = (
     "Sources — Alpha Bank London Limited (FRN 135327, company 00185070) own Statement of Cash Flows, £000's:\n"
@@ -51,7 +61,38 @@ def p3_sources():
         f"management, Regulatory analysis) — {AR24_URL}\n"
         f"FY2022 & FY2021: Annual Report 2022, p.65 Note 34.6 (Capital management, Regulatory analysis) — {AR22_URL}\n"
         f"FY2020 & FY2019: Annual Report 2020, p.67 Note 33.6 (Capital management, Regulatory analysis) — {AR20_URL}\n"
+        f"FY2021 & FY2020 (standalone primary source, added 2026-09-15): Annual Report 2021, p.68 Note 34 "
+        f"'Capital management — Regulatory analysis' — {AR21_URL}\n"
         f"Companies House filing history — {CH_URL}\n"
+        "INDEPENDENT RE-VERIFICATION 2026-09-15: the FY2021 report was obtained as a text-layer PDF and its "
+        "regulatory-capital note re-extracted from scratch, without reference to the figures already in this "
+        "script. It prints, in £000's for 2021 and 2020: Share capital 30,000 / 30,000; Retained earnings "
+        "26,318 / 24,814; FVTOCI reserve 52 / (29); Intangible assets (116) / -; Total Tier 1 capital 56,254 / "
+        "54,785; Subordinated debt (excluding accrued interest) 6,000 / 8,000; Total Tier 2 capital 6,000 / "
+        "8,000; Total Tier 1 and Tier 2 capital 62,254 / 62,785; Total regulatory capital 62,254 / 62,785. Both "
+        "columns foot exactly and every figure matches what this script already carried for FY2021 and FY2020, "
+        "so those years are now confirmed against the original report rather than resting on the following "
+        "year's comparative alone. The note also confirms the Tier 1 build-up contains no AT1 instrument of any "
+        "kind, which is the basis for treating CET1 and Tier 1 as equal throughout.\n"
+        "MACHINE-VERIFIED ABSENCE OF AN RWA DENOMINATOR: a full-text search of the FY2021 report for "
+        "'risk-weighted', 'RWA', 'capital requirement' and 'Pillar 1' returns only narrative — the sentence "
+        "explaining that the PRA's Individual Capital Guidance 'is expressed as a percentage of total capital to "
+        "total risk-weighted assets together with a capital planning buffer'. No RWA amount is printed. This "
+        "matters because it independently closes the last route to a CRR ratio for these years: the Bank's own "
+        "'Capital adequacy ratio' KPI (shareholders' funds ÷ RWA) does not appear in the FY2021 report at all, "
+        "confirming that KPI was introduced only from the FY2023 report, and with no published RWA there is no "
+        "denominator from which a CET1, Tier 1 or Total Capital ratio could be sourced. Deriving RWA by dividing "
+        "shareholders' funds by that KPI would be back-solving and is barred by project convention.\n"
+        "NO-PILLAR-3 EVIDENCE (established 2026-09-15; the claim above was previously asserted without a stated "
+        "check): a Wayback Machine CDX scan of the whole alphabanklondon.co.uk domain, unfiltered by path and "
+        "covering both generations of the site (the pre-2025 WordPress /wp-content/uploads/ tree and the current "
+        "Drupal /sites/default/files/ tree), returns 39 distinct PDFs ever captured. Not one is a Pillar 3 "
+        "disclosure: the set is 8 Annual Report editions (FY2018-FY2023), tariff and key-information sheets, FSCS "
+        "leaflets, terms of business, a GDPR privacy notice and a fraud-warning client letter. So the absence is "
+        "an evidenced absence rather than an unfound document. Note also that the Bank's own Note 34.7 "
+        "'Regulatory analysis (unaudited)' was re-read in full this session and contains ONLY the capital "
+        "build-up (Tier 1 components, Tier 2 subordinated debt, and the two totals) — it carries no "
+        "risk-weighted-asset amount, no OV1-equivalent table and no capital ratio.\n"
         "DATA QUALITY NOTE: the FY2024 Annual Report's own Key Performance Indicators table (p.6) shows a "
         "'Total regulatory capital' line of £68.4m (FY2024) / £66.0m (FY2023) that does NOT match the same report's "
         "own Note 34.7 'Total regulatory capital' figure of £77,015k / £67,916k for the identical years. Comparing "
@@ -317,7 +358,13 @@ RWA_BREAKDOWN_SOURCES = (
     "2024/2022 Annual Reports — it discloses only the aggregate Tier 1/Tier 2/Total regulatory capital build-up, "
     "not a risk-category RWA split). Total RWAs (a single aggregate figure) is calculated on the Total RWAs "
     "sheet from Total Capital ÷ Capital adequacy ratio, per that sheet's own note; no further breakdown by "
-    "credit/market/operational risk is available for any year."
+    "credit/market/operational risk is available for any year.\n\n"
+    "RE-VERIFIED 2026-09-12: independently re-downloaded and OCR'd the live FY2025 Annual Report "
+    "(a scanned, no-text-layer PDF) directly from Companies House and re-read Note 34.7 in full "
+    "(pp.66-67) - confirmed it still contains only the Tier 1/Tier 2 regulatory-capital build-up "
+    "table shown above, with no risk-weighted-assets figure or category split anywhere on that page "
+    "or the surrounding notes. No standalone Pillar 3 document was found on the bank's own site or "
+    "in the Wayback Machine archive. The non-disclosure is confirmed current."
 )
 rwa_breakdown_rows = [
     ("DATA", "RWA category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
@@ -449,11 +496,13 @@ metric(
     "CET1 Ratio", "% of RWA",
     [("CET1 ratio", {y: "Not separately disclosed" for y in YEARS})],
     p3_sources(),
-    note="The source discloses only a single combined 'Capital adequacy ratio' (see Total Capital Ratio sheet), "
-         "not separately-stated CET1/Tier 1/Total Capital ratios. Since Tier 2 capital (subordinated debt) is a "
-         "material part of total regulatory capital in every year, a CET1-only ratio would differ measurably from "
-         "the disclosed combined ratio — left blank rather than assume which capital measure the disclosed ratio "
-         "uses.",
+    note="The source discloses only a single 'Capital adequacy ratio' (see Total Capital Ratio sheet), not "
+         "separately-stated CET1/Tier 1/Total Capital ratios, and as of 2026-09-15 that ratio is known NOT to be a "
+         "CRR capital ratio at all: the Annual Report defines its numerator as the Bank's shareholders' funds, "
+         "i.e. Total equity before the intangible-assets deduction and excluding the £10,000k of Tier 2 "
+         "subordinated debt. It therefore cannot be reused as a CET1 ratio. A true CET1 ratio is not computable "
+         "either, since the Bank discloses no RWA denominator in any year (see the Total RWAs sheet) — left blank "
+         "rather than estimated.",
 )
 
 metric(
@@ -468,7 +517,9 @@ metric(
     "Tier 1 Ratio", "% of RWA",
     [("Tier 1 ratio", {y: "Not separately disclosed" for y in YEARS})],
     p3_sources(),
-    note="Same basis issue as the CET1 Ratio sheet — only a single combined 'Capital adequacy ratio' is disclosed.",
+    note="Same basis issue as the CET1 Ratio sheet — the only ratio disclosed is the Bank's own 'Capital adequacy "
+         "ratio', whose numerator is shareholders' funds rather than any CRR capital measure, and no RWA "
+         "denominator is disclosed in any year from which a Tier 1 ratio could be computed.",
 )
 
 metric(
@@ -480,23 +531,42 @@ metric(
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Capital adequacy ratio (as disclosed; source does not specify whether the numerator is Total Capital or "
-      "Tier 1 only — treated as Total Capital ratio per standard Basel/PRA usage of this exact term)",
+    [("Memo: Bank's own 'Capital adequacy ratio' = shareholders' funds ÷ RWA (NOT a CRR total capital ratio)",
       {"FY2025": "20%", "FY2024": "23%", "FY2023": "25%"})],
     p3_sources(),
-    note="Not disclosed at all for FY2021/FY2022 — the Annual Report's KPI table for those years lists only "
-         "Profit before tax, Total equity, and Return on equity; the Capital adequacy/LCR/Leverage ratio KPI trio "
-         "was introduced from the FY2023 report onward.",
+    note="BASIS CORRECTED 2026-09-15. This row was previously labelled as the Total Capital ratio on the stated "
+         "grounds that the 'source does not specify whether the numerator is Total Capital or Tier 1 only'. The "
+         "source does specify: 'Capital adequacy ratio is a measure of capital strength and calculated by dividing "
+         "the Bank's shareholders funds by its risk weighted assets' (FY2025 Annual Report p.6; the FY2024 report "
+         "uses the identical sentence). Shareholders' funds is Total equity — share capital + retained earnings + "
+         "FVTOCI reserve — which is neither the CRR Total Capital measure (it excludes the £10,000k Tier 2 "
+         "subordinated debt) nor CET1 (it is struck before the intangible-assets deduction: £3,021k at FY2025). "
+         "The figure is genuine and correctly sourced, so it is kept, but as an explicitly-labelled memo row on "
+         "the Bank's own definition rather than as a CRR total capital ratio. The true CRR ratio is not "
+         "derivable, because no RWA denominator is disclosed — see the Total RWAs sheet. Not disclosed at all for "
+         "FY2019-FY2022: the Annual Report KPI table for those years lists only Profit before tax, Total equity "
+         "and Return on equity; the Capital adequacy/LCR/Leverage ratio KPI trio was introduced from the FY2023 "
+         "report onward.",
 )
 
 metric(
     "Total RWAs", "£000's",
-    [("Total risk-weighted assets (calculated: Total Capital ÷ Capital adequacy ratio, as reported)",
-      {"FY2025": 372640, "FY2024": 334848, "FY2023": 271664})],
+    [("Total risk-weighted assets", {y: "Not publicly disclosed" for y in YEARS})],
     p3_sources(),
-    note="Not directly disclosed any year — calculated from the two most literal disclosed figures for the years "
-         "the capital adequacy ratio exists (FY2023-FY2025). Not calculable for FY2021/FY2022 since no ratio is "
-         "disclosed for those years either.",
+    note="CORRECTED 2026-09-15 — this sheet previously carried £372,640k/£334,848k/£271,664k for "
+         "FY2025/FY2024/FY2023, back-solved as Total regulatory capital ÷ Capital adequacy ratio. Those figures "
+         "have been withdrawn: no risk-weighted asset amount is disclosed by this Bank in any year, and the "
+         "back-solve was unsound on two independent grounds. (1) WRONG NUMERATOR: the Annual Report defines the "
+         "ratio explicitly — 'Capital adequacy ratio is a measure of capital strength and calculated by dividing "
+         "the Bank's shareholders funds by its risk weighted assets' (FY2025 Annual Report p.6, identical wording "
+         "in the FY2024 report) — so the numerator is shareholders' funds/Total equity (£67,549k FY2025, £68,382k "
+         "FY2024, £66,003k FY2023), NOT the Note 34.7 Total regulatory capital of £74,528k/£77,015k/£67,916k that "
+         "the old calculation divided. The old figures therefore overstated RWA by roughly 10% even on their own "
+         "logic. (2) INSUFFICIENT PRECISION: the ratio is published to two significant figures ('20%', '23%', "
+         "'25%'), so even with the correct numerator the implied FY2025 RWA spans roughly £329.5m-£346.4m — a "
+         "±2.5% band that cannot honestly be presented as a disclosed figure. This also aligns the sheet with the "
+         "treatment applied elsewhere in this project (Ghana International, Weatherbys, SBI (UK), Nomura, Havin), "
+         "where back-solved RWAs are refused rather than published.",
 )
 
 bw.add_rwa_breakdown_sheet(
@@ -565,14 +635,18 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000",
     ratios=[
-        ("Total Capital Ratio", {"FY2025": "20%", "FY2024": "23%", "FY2023": "25%"}),
+        ("Capital adequacy ratio (Bank's own definition — not a CRR ratio)",
+         {"FY2025": "20%", "FY2024": "23%", "FY2023": "25%"}),
         ("Leverage Ratio", {"FY2025": "11%", "FY2024": "13%", "FY2023": "13%"}),
         ("LCR", {"FY2025": "310%", "FY2024": "323%", "FY2023": "349%"}),
     ],
-    note="CET1/Tier 1 ratios not shown here — only a single combined 'Capital adequacy ratio' is disclosed by this "
-         "bank (see the Total Capital Ratio sheet's note). No ratios of any kind disclosed for FY2021/FY2022. "
-         "Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page.",
+    note="No CRR capital ratio (CET1, Tier 1 or Total Capital) is disclosed by this bank in any year. The single "
+         "ratio shown above is the Bank's own 'Capital adequacy ratio', which the Annual Report defines as "
+         "shareholders' funds divided by risk-weighted assets — a numerator that excludes the £10,000k Tier 2 "
+         "subordinated debt and is struck before the intangible-assets deduction, so it is neither a Total Capital "
+         "nor a CET1 ratio; see the Total Capital Ratio sheet's note. No ratios of any kind are disclosed for "
+         "FY2019-FY2022, and no RWA amount is disclosed in any year. Figures are duplicated from the detail sheets "
+         "for at-a-glance trend viewing; see each sheet's own source citation for the underlying document/page.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ALPHA BANK LONDON FINANCIALS.xlsx")

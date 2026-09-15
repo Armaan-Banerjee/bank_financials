@@ -162,7 +162,24 @@ def p3_sources(km1_page="10-11"):
         "FY2018-FY2020, not the mismatched summary-table figure - a genuine, recurring source-document "
         "inconsistency, not a transcription error introduced here. FY2016/FY2017 have no COREP template to "
         "cross-check against, so their summary-table RWA figures (430,807/529,157) are used as-is despite a "
-        "smaller (~1pp) rounding gap against their own printed ratios."
+        "smaller (~1pp) rounding gap against their own printed ratios.\n"
+        "RESOLVED 2026-09-15 (RWA cross-sheet sweep - do not re-flag): what HTB's headline 'Risk weighted "
+        "assets' line actually measures in FY2016-FY2017 is now established from the documents, not inferred. "
+        "The FY2017 Pillar 3 p.12 credit-risk exposure-class table foots to exactly 529,157 in its own RWAs "
+        "column (42,100 + 67,276 + 264,058 + 142,500 + 6,229 + 0 + 2,233 + 4,763), i.e. the headline line is "
+        "CREDIT-RISK RWA ONLY and excludes the separately-disclosed operational risk requirement (FY2017 "
+        "3,136 -> 39,200 RWA; FY2016 1,189 -> 14,863 RWA). The FY2018 document proves the same structure "
+        "directly: its summary line reads 687,497 while its own COREP row 010 'Total risk exposure amount' on "
+        "the same document reads 746,201 - a 58,704 difference matching that year's operational risk RWA "
+        "(4,677/0.08 = 58,463). HTB's own printed ratios are computed on the credit-only denominator too "
+        "(total regulatory capital 113,435 / 529,157 = 21.44%, matching the printed 21%; against 568,357 it "
+        "would be 19.96%, i.e. 20%), so the printed ratio cannot be used to overturn the printed total the way "
+        "it was for Redwood. HTB has never published a FY2016 or FY2017 total risk exposure amount in any "
+        "document (Pillar 3 or Annual Report - AR2017 and AR2016 repeat the same 529,157/430,807), so there is "
+        "no transcribable replacement; credit + operational would be arithmetic, which this project does not "
+        "substitute for a disclosed figure. FY2016/FY2017 therefore knowingly hold a credit-risk-only figure, "
+        "and the FY2017 -> FY2018 step in this series carries a basis change (credit-only -> COREP total) on "
+        "top of real balance-sheet growth. See the RWA Breakdown sheet for the two components."
     )
 
 
@@ -1019,7 +1036,13 @@ metric(
     p3_sources(),
     note="FY2018-FY2020 use each year's own COREP 'Total risk exposure amount' figure, not that same "
          "document's own (internally inconsistent) 'Summary of key ratios' table RWA line - see the note in "
-         "the sources above for why.",
+         "the sources above for why. FY2016 (430,807) and FY2017 (529,157) are HTB's own headline 'Risk "
+         "weighted assets' line, which those years' documents show to be CREDIT-RISK RWA ONLY: the FY2017 "
+         "Pillar 3 p.12 exposure-class table foots to exactly 529,157, and FY2018's COREP total (746,201) "
+         "sits beside the same summary line reading 687,497. HTB published no total risk exposure amount for "
+         "FY2016/FY2017 in any document, so these two years are knowingly below the true total by that year's "
+         "operational risk RWA (~14,863 / ~39,200) rather than being restated on arithmetic. Treat the "
+         "FY2017 -> FY2018 step as a basis change as well as growth. Checked and resolved 2026-09-15.",
 )
 
 # ---------------------------------------------------------------
@@ -1055,7 +1078,16 @@ RWA_BREAKDOWN_SOURCES = (
     "weighted assets' summary-table figure appears to exclude Operational risk RWA entirely, unlike "
     "FY2018 onward - a genuine, structural difference in what that year's summary line actually measures, "
     "not a transcription error. Both risk categories are shown here regardless, so this sheet's own Total "
-    "row does not match the Total RWAs sheet for FY2016/FY2017 - flagged rather than force-matched."
+    "row does not match the Total RWAs sheet for FY2016/FY2017 - flagged rather than force-matched.\n"
+    "RESOLVED 2026-09-15 (RWA cross-sheet sweep - do not re-flag): the FY2016/FY2017 divergence between this "
+    "sheet's Total row and the Total RWAs sheet is confirmed from the primary documents and is expected. The "
+    "FY2017 Pillar 3 p.12 credit-risk exposure-class table foots to exactly 529,157 in its RWAs column, "
+    "which is the same number HTB prints as headline 'Risk weighted assets' - so the headline line is "
+    "credit-only. FY2018 proves it independently: headline 687,497 alongside that document's own COREP row "
+    "010 'Total risk exposure amount' of 746,201 (difference 58,704 ~= that year's operational risk RWA of "
+    "58,463). HTB never published a FY2016/FY2017 total risk exposure amount anywhere, so the Total RWAs "
+    "sheet keeps the only disclosed figure rather than adopting this sheet's derived Total - the two are "
+    "measuring different things by design, and neither number is to be changed to make them agree."
 )
 
 rwa_breakdown_rows = [

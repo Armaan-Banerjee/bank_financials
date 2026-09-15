@@ -379,31 +379,46 @@ metric(
 
 RWA_BREAKDOWN_SOURCES = (
     "Sources - Bank of Beirut (UK) Ltd's own Pillar 3 Disclosures, £'000s, all years:\n"
-    f"FY2025: Pillar 3 Disclosures - 31 December 2025, s.3.6 Key Metrics (UK KM1) - {P3_2025_URL}\n"
-    f"FY2024: Pillar 3 Disclosures - 31 December 2024, s.3.6 Key Metrics (UK KM1) - {P3_2024_URL}\n"
-    f"FY2023: Pillar 3 Disclosures - 31 December 2023, s.4.2 Key Metrics (UK KM1) - {P3_2023_URL}\n"
-    f"FY2022: FY2023 Pillar 3 Disclosures' own FY2022 KM1 comparative column - {P3_2023_URL}\n"
-    f"FY2021: FY2022 Pillar 3 Disclosures' own 5-year ICAAP summary table (s.4.1), pre-KM1 basis - {P3_2022_URL}\n"
-    "NOT PUBLICLY DISCLOSED (category split): checked all 4 available Pillar 3 Disclosures (FY2022-FY2025) "
-    "directly for a UK OV1-style risk-category breakdown (credit risk / counterparty credit risk / "
-    "securitisation / market risk / operational risk) - none exists in any year. Each report's 'Risk-Weighted "
-    "Exposure Amounts' section is KM1-only (a single aggregate Total RWA figure), consistent with a bank of "
-    "this size. Only the Total row below is populated (ties exactly to the Total RWAs sheet).\n\n"
+    f"FY2025/FY2024: Pillar 3 Disclosures - 31 December 2025, s.3.5 'Overview of Risk Weighted Exposures "
+    f"Amounts (RWEA)', Template UK OV1 (FY2024 is that table's own FY2024 comparative column) - {P3_2025_URL}\n"
+    f"FY2023/FY2022: Pillar 3 Disclosures - 31 December 2023, s.4.1 'Overview of Risk Weighted Exposures "
+    f"Amounts (RWEA)', Template UK OV1 (FY2022 is that table's own FY2022 comparative column) - {P3_2023_URL}\n"
+    f"FY2021: Pillar 3 Disclosures - 31 December 2022, s.4.1.2 'Total Risk Exposure Amount (TREA) breakdown' "
+    f"(pre-KM1/OV1 ICAAP-basis 5-year table, own FY2021 column) - {P3_2022_URL}\n\n"
+    "CORRECTION (fresh re-verification, 2026-09-12): the prior version of this sheet claimed no category-level "
+    "breakdown was disclosed in any year. That was wrong - a full UK OV1 template (Credit risk excl. CCR/CVA, "
+    "Counterparty credit risk/CVA, Operational risk) is published every year FY2022-FY2025 (the FY2023 "
+    "Pillar 3 Disclosures document's own s.4.1, checked directly, carries the FY2022 comparative; the FY2025 "
+    "document's own s.3.5 carries the FY2024 comparative), and FY2021's older pre-OV1 TREA breakdown (Credit "
+    "Risk Component, Operational Risk Exposure Amount, CVA, Market risk) is in the FY2022 document's own "
+    "s.4.1.2 5-year table. Every year's Total ties to the Total RWAs sheet's own figure (FY2022's OV1-basis "
+    "£317,552k vs the FY2022 document's own ICAAP-basis £314,615k is the same ~1% methodology difference "
+    "already documented on the Total RWAs sheet - KM1/OV1 basis used here for consistency). The Bank has no "
+    "trading book (explicitly stated in the FY2025 document), so no separate market-risk RWA line is carried "
+    "under the OV1 template FY2022-FY2025; FY2021's own table does carry an explicit Market risk = nil line.\n\n"
     + ENTITY_NOTE
 )
 
 rwa_breakdown_rows = [
-    ("SECTION", "RWA by risk category", {}),
-    ("DATA", "Not publicly disclosed (see sources - KM1-only Pillar 3 report, no UK OV1 category breakdown)", {}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 294900, "FY2024": 250100, "FY2023": 248500, "FY2022": 317600, "FY2021": 295900}),
+    ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts (as disclosed)", {}),
+    ("DATA", "Credit risk (excluding CCR/CVA)", {"FY2025": 249173, "FY2024": 208563, "FY2023": 220069, "FY2022": 289747}),
+    ("DATA", "Counterparty credit risk (CCR/CVA)", {"FY2025": 0, "FY2024": 110, "FY2023": 151, "FY2022": 128}),
+    ("DATA", "Operational risk", {"FY2025": 45747, "FY2024": 41433, "FY2023": 28314, "FY2022": 27678}),
+    ("SECTION", "Pre-OV1 ICAAP-basis TREA breakdown (FY2021)", {}),
+    ("DATA", "Credit Risk Component (on- and off-balance sheet combined)", {"FY2021": 264718}),
+    ("DATA", "Operational Risk Exposure Amount", {"FY2021": 31220}),
+    ("DATA", "Market risk", {"FY2021": 0}),
+    ("DATA", "CVA", {"FY2021": 0}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 294920, "FY2024": 250107, "FY2023": 248534, "FY2022": 317552, "FY2021": 295938}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Bank of Beirut (UK) Ltd — RWA Breakdown",
-    subtitle="Entity-level basis, £'000s. Full 5 years. Category split not publicly disclosed - see sources.",
+    subtitle="Entity-level basis, £'000s. UK OV1 template FY2022-FY2025; older pre-OV1 ICAAP-basis breakdown for FY2021.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=68,
+    source_height=260,
 )
 
 metric(

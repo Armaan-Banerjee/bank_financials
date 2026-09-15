@@ -161,6 +161,32 @@ class CapitalDeploymentTests(unittest.TestCase):
         result = capital_deployment(rows)
         self.assertEqual(result["cash_pct_of_assets"][1][2024], 40.0)
 
+    def test_matches_bare_cash_and_loan_and_advances_label_variants(self):
+        # Broadened 2026-09-08 after a bug-sweep fork found many real label
+        # variants missed entirely: singular "Loan and advances to
+        # customers", bare "Loans and advances" with no "to X" suffix, and
+        # bare "Cash".
+        rows = [
+            obs(1, "Balance Sheet", "Assets - Total assets", 2024, 1000),
+            obs(1, "Balance Sheet", "Assets - Loan and advances to customers", 2024, 600),
+            obs(1, "Balance Sheet", "Assets - Cash", 2024, 150),
+        ]
+        result = capital_deployment(rows)
+        self.assertEqual(result["loans_pct_of_assets"][1][2024], 60.0)
+        self.assertEqual(result["cash_pct_of_assets"][1][2024], 15.0)
+
+    def test_bare_loans_and_advances_excludes_interbank_variant(self):
+        # A bare "Loans and advances" total (no "to customers" suffix) is a
+        # real, undisclosed-otherwise customer-loan total for some banks -
+        # but "Loans and advances to banks" is a different (interbank) line
+        # and must not be picked up by the same broadened pattern.
+        rows = [
+            obs(1, "Balance Sheet", "Assets - Total assets", 2024, 1000),
+            obs(1, "Balance Sheet", "Assets - Loans and advances to banks", 2024, 200),
+        ]
+        result = capital_deployment(rows)
+        self.assertEqual(result["loans_pct_of_assets"], {})
+
     def test_matches_loans_to_customers_without_and_advances(self):
         # Coutts labels its own row "Loans to customers - amortised cost" -
         # without "and advances" - which the exact-phrase-only pattern

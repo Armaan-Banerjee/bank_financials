@@ -7,7 +7,7 @@ import os
 from datetime import datetime, timezone
 
 import build_insights_db
-from in009_analysis import normalize_observation
+from in009_analysis import _is_percent_value, normalize_observation
 
 
 SCHEMA_VERSION = "1.0"
@@ -31,7 +31,16 @@ def match_context(observation, metric=None, year=None):
     candidates = [item for item in CONTEXT if item["metric"] == metric and item["effective_from"] <= (year or 0) and (item["effective_to"] is None or year <= item["effective_to"])]
     if not candidates:
         return {"status": "context_unavailable", "reason": "no dated context record for metric/period"}
-    if observation.get("unit") != "%":
+    # `unit` alone is NULL for virtually every row in `annual_metrics` (never
+    # populated at extraction time), so the original `observation.get("unit")
+    # != "%"` check here returned "context_unavailable" for 100% of real
+    # observations, silently emptying the whole observation_context.csv
+    # export. `_is_percent_value()` (in009_analysis.py) is the existing,
+    # already-correct pattern for this same check - it falls back to the
+    # literal "%" in `value_raw`, which does survive extraction - and is
+    # already used by in021_headroom_trajectory.py's applicable_context()
+    # against this identical CONTEXT table; the two must agree.
+    if not _is_percent_value(observation):
         return {"status": "context_unavailable", "reason": "observation unit does not match percentage context"}
     if not observation.get("reporting_basis"):
         return {"status": "context_unavailable", "reason": "observation reporting basis is not classified"}

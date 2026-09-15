@@ -206,6 +206,39 @@ P3_SOURCES = (
     f"(Mar-26 through Mar-22 comparatives) - {P3_26_URL}\n"
     "The 2026 KM1 table supplies all five most recent year-ends on a bank/entity basis."
 )
+# FY2018-FY2020 are structurally pre-authorisation, not undisclosed - see
+# PRE_AUTHORISATION_NOTE. Injected as explicit "Not applicable" defaults by the local
+# metric() wrapper, following the build_vida.py / build_afin_bank.py convention, so an
+# empty cell is never mistaken for an unresearched gap.
+PRE_AUTHORISATION_YEARS = ["FY2020", "FY2019", "FY2018"]
+
+PRE_AUTHORISATION_NOTE = (
+    "FY2018-FY2020 READ 'Not applicable', NOT BLANK AND NOT 'Not disclosed' (set 2026-09-15). Recognise Bank Limited held no PRA "
+    "authorisation of any kind at the 31 March 2018, 2019 or 2020 year-ends, so no Pillar 3 disclosure obligation existed and there is no "
+    "capital, RWA, leverage or liquidity figure that could exist to be found. The entity's own FY2022 Annual Report states the timeline in "
+    "its own words - 'After receiving its Authorisation with Restrictions (AwR) in November 2020, Recognise Bank became fully authorised in "
+    "September 2021 and was able to accept savings deposits' (PDF p.23, going-concern note) - and note 1 repeats it: the Bank 'became fully "
+    "authorised in September 2021 when restrictions set by the PRA were lifted after all mobilisation conditions were met' (PDF p.45). "
+    "Source: Recognise Bank Limited Annual Report and Financial Statements 2022 - " + AR22_URL + "\n"
+    "FY2021 IS DIFFERENT AND IS DELIBERATELY NOT MARKED 'Not applicable'. Authorisation with Restrictions was already in force at the "
+    "31 March 2021 year-end (granted November 2020), so the Bank was a PRA-authorised firm for that whole year-end even though it was still "
+    "in mobilisation. Its FY2021 blanks (Total RWAs, Leverage Ratio, LCR, NSFR, MREL) are therefore genuine non-disclosure, not structural "
+    "inapplicability, and stay distinguishable from the FY2018-FY2020 cells above."
+)
+
+ENUMERATED_NEGATIVE_NOTE = (
+    "ENUMERATED NEGATIVE for FY2018-FY2021 (re-verified 2026-09-15). The bank's own investor index at "
+    "https://recognisebank.co.uk/investors/ was fetched and its document list read in full. It offers Pillar 3 Disclosures for 2023, 2024, "
+    "2025 and 2026 only, and Annual Report & Accounts for 2022, 2023, 2024, 2025 and 2026 only. There is no FY2018, FY2019, FY2020 or FY2021 "
+    "Pillar 3 document listed, linked or hosted - the four PDF hrefs on that page for Pillar 3 are the March 2023, March 2024, March 2025 and "
+    "March 2026 editions and nothing else. This is enumeration of the publisher's own index, not a failed URL guess, so it proves absence "
+    "rather than merely failing to find. The pre-2023 annual reports used in this workbook for FY2018-FY2021 come from Companies House "
+    "instead (see CH_SOURCES_NOTE); they are statutory accounts, not Pillar 3 disclosures.\n"
+    "The March 2026 Pillar 3 was also downloaded and read in full on 2026-09-15 to check for backfill: its UK KM1 (Table 1, printed p.4) "
+    "carries five columns, Mar-26 through Mar-22, and every one of those values already matches what is recorded in this workbook. It reaches "
+    "no further back than Mar-22 and contains no MREL row, so it yields nothing new for FY2018-FY2021."
+)
+
 P3_21_SOURCES = (
     f"Source - Recognise Bank Limited FY2021 Annual Report, Strategic Report, 'Capital' section capital-"
     f"adequacy note, printed p.43 - {CH21_URL}\n"
@@ -409,7 +442,16 @@ bw.add_asset_quality_sheet(
 )
 
 def metric(name, unit, data, note=None, sources=None):
-    bw.add_metric_sheet(name, unit, data, sources or P3_SOURCES, note=note, first_col_width=54, source_height=130)
+    # Pre-authorisation years are written as an explicit "Not applicable" default and
+    # only overridden if a real figure exists for them (none does, by construction).
+    rows_data = [
+        (label, {**{y: "Not applicable" for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in values.items() if v is not None}})
+        for label, values in data
+    ]
+    full_note = PRE_AUTHORISATION_NOTE + "\n\n" + ENUMERATED_NEGATIVE_NOTE
+    if note:
+        full_note = note + "\n\n" + full_note
+    bw.add_metric_sheet(name, unit, rows_data, sources or P3_SOURCES, note=full_note, first_col_width=54, source_height=200)
 
 km1 = {
     "FY2026": (74617, 356376, "20.9%", 509006, "14.7%", 220955, 82309, 8630, 73679, "299.9%", 520393, 295089, "176.4%"),
@@ -439,8 +481,14 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Counterparty credit risk (CCR)", {"FY2026": 61, "FY2025": 91}),
         ("DATA", "Operational risk", {"FY2026": 30874, "FY2025": 21800, "FY2024": 12893, "FY2023": 5065, "FY2022": 5292}),
         ("TOTAL", "Total risk-weighted exposure amount", {"FY2026": 356376, "FY2025": 220421, "FY2024": 200213, "FY2023": 88249, "FY2022": 87216}),
+        ("SECTION", "Not applicable - entity held no PRA authorisation in these years", {}),
+        ("DATA", "Not applicable (no banking licence, and no authorisation of any kind, held at these year-ends)", {
+            "FY2020": "Not applicable",
+            "FY2019": "Not applicable",
+            "FY2018": "Not applicable",
+        }),
     ],
-    sources_text=RWA_SOURCES,
+    sources_text=RWA_SOURCES + "\n\n" + PRE_AUTHORISATION_NOTE + "\n\n" + ENUMERATED_NEGATIVE_NOTE,
     first_col_width=54,
     source_height=220,
     unit_suffix=" (£'000)",
@@ -449,7 +497,7 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio", "£'000 / %", [("Total exposure measure excluding claims on central banks", col(3)), ("Leverage ratio excluding claims on central banks", col(4))])
 metric("LCR", "£'000 / %", [("Total high-quality liquid assets (HQLA), weighted value - average", col(5)), ("Cash outflows - total weighted value", col(6)), ("Cash inflows - total weighted value", col(7)), ("Total net cash outflows (adjusted value)", col(8)), ("Liquidity coverage ratio", col(9))])
 metric("NSFR", "£'000 / %", [("Total available stable funding", col(10)), ("Total required stable funding", col(11)), ("NSFR ratio", col(12))])
-metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], "No quantitative MREL ratio was located in the official Recognise Bank annual reports or Pillar 3 disclosures reviewed.")
+metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS if y not in PRE_AUTHORISATION_YEARS})], "No quantitative MREL ratio was located in the official Recognise Bank annual reports or Pillar 3 disclosures reviewed. The March 2023, 2024, 2025 and 2026 Pillar 3 disclosures contain no MREL row in their UK KM1 tables at all (the 2026 edition was re-read in full on 2026-09-15 to confirm). FY2018-FY2020 read 'Not applicable' rather than 'Not publicly disclosed' because the entity was not PRA-authorised in those years.")
 
 def row_values(label, rows_list=rows):
     return next(values for kind, name, values in rows_list if name == label)
@@ -460,7 +508,13 @@ equity_other_movements = {"FY2026": 5000, "FY2025": 20001, "FY2024": 5090, "FY20
 bw.add_overview_sheet(
     cash_flow_totals=[(label, row_values(label)) for label in ["Net cash (used in)/generated from operating activities", "Net cash (used in)/generated from investing activities", "Net cash generated from financing activities", "Cash and cash equivalents at end of year"]],
     cash_flow_unit="£'000",
-    ratios=[("CET1 Ratio", col(2)), ("Total Capital Ratio", col(2)), ("Leverage Ratio", col(4)), ("LCR", col(9)), ("NSFR", col(12))],
+    ratios=[
+        ("CET1 Ratio", {**{y: "Not applicable" for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in col(2).items() if v is not None}}),
+        ("Total Capital Ratio", {**{y: "Not applicable" for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in col(2).items() if v is not None}}),
+        ("Leverage Ratio", {**{y: "Not applicable" for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in col(4).items() if v is not None}}),
+        ("LCR", {**{y: "Not applicable" for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in col(9).items() if v is not None}}),
+        ("NSFR", {**{y: "Not applicable" for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in col(12).items() if v is not None}}),
+    ],
     balance_sheet_totals=[
         ("Total assets", row_values("Total assets", BS_ROWS)),
         ("Loans and advances to customers", row_values("Loans and advances to customers", BS_ROWS)),
@@ -481,6 +535,6 @@ bw.add_overview_sheet(
         ("Closing equity", row_values("Total equity", BS_ROWS)),
     ],
     equity_changes_unit="£'000",
-    note="Cash flows and Balance Sheet are Company/standalone figures. P&L detail rows are Group-level for FY2021-FY2024 (Company P&L not separately presented under s.408 exemption); 'Profit/(loss) for the year' is the Company-level figure throughout, consistent with the rest of the workbook. Pillar 3 metrics are Recognise Bank Limited UK KM1 figures, except FY2021's CET1/Tier 1/Total Capital figures, which come from an Annual Report capital-adequacy note (no standalone Pillar 3 document existed yet). FY2025 accounts were not consolidated after CAML entered liquidation; the 2026 report supplies the FY2025 comparative. FY2018-FY2020 predate any banking licence: no loan book, no deposits, no Pillar 3 metrics, and no Asset Quality/RWA Breakdown sheets exist for those years (genuinely not applicable, not merely undisclosed) - see HISTORICAL_NOTE on the Balance Sheet sheet for the full account of what was self-skipped and why. FY2017 itself has no separate accounts at all (folded into the first, 14-month FY2018 period). Blank cells mean not disclosed, not zero.",
+    note="Cash flows and Balance Sheet are Company/standalone figures. P&L detail rows are Group-level for FY2021-FY2024 (Company P&L not separately presented under s.408 exemption); 'Profit/(loss) for the year' is the Company-level figure throughout, consistent with the rest of the workbook. Pillar 3 metrics are Recognise Bank Limited UK KM1 figures, except FY2021's CET1/Tier 1/Total Capital figures, which come from an Annual Report capital-adequacy note (no standalone Pillar 3 document existed yet). FY2025 accounts were not consolidated after CAML entered liquidation; the 2026 report supplies the FY2025 comparative. FY2018-FY2020 predate any banking licence: no loan book, no deposits, no Pillar 3 metrics, and no Asset Quality/RWA Breakdown sheets exist for those years (genuinely not applicable, not merely undisclosed) - see HISTORICAL_NOTE on the Balance Sheet sheet for the full account of what was self-skipped and why. FY2017 itself has no separate accounts at all (folded into the first, 14-month FY2018 period). Blank cells mean not disclosed, not zero. UPDATED 2026-09-15: FY2018-FY2020 regulatory cells now read 'Not applicable' explicitly rather than sitting blank, because the Bank held no PRA authorisation of any kind at those year-ends (Authorisation with Restrictions was granted only in November 2020, full authorisation in September 2021, per the FY2022 Annual Report's own going-concern note and note 1) - a blank cell was indistinguishable from an unresearched gap and was being re-chased. FY2021 is deliberately NOT marked 'Not applicable': the Bank was authorised-with-restrictions for that whole year-end, so its remaining blanks are genuine non-disclosure. The bank's own investor index was re-enumerated on 2026-09-15 and lists Pillar 3 only for 2023-2026 and annual reports only for 2022-2026, confirming that no FY2018-FY2021 Pillar 3 document exists to be found; the March 2026 Pillar 3 was re-read in full and its KM1 reaches back only to Mar-22, every value of which already matches this workbook.",
 )
 bw.save("/Users/armaan/code/katalysis/banks/RECOGNISE BANK FINANCIALS.xlsx")

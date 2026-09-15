@@ -53,6 +53,45 @@ AR2013_CH_URL = CH_DOC_URL.format("MzA5OTE1OTY0MGFkaXF6a2N4")  # filed 30 Apr 20
 P3_2018_URL = "https://www.cynergybank.co.uk/media/2534/pillar-3-disclosures-2018.pdf"
 P3_2019_URL = "https://www.cynergybank.co.uk/media/ioueypnz/pillar-3-disclosures-2019.pdf"
 P3_2020_URL = "https://www.cynergybank.co.uk/media/liqngpna/pillar-3-disclosures-2020.pdf"
+P3_2021_URL = "https://www.cynergybank.co.uk/media/drcj252b/cynergy-bank-pillar-3-2021.pdf"
+P3_2022_URL = "https://www.cynergybank.co.uk/media/bkhp10sd/cynergy-bank-2022-pillar-3-disclosures.pdf"
+# Neither 2021 nor 2022 is linked from the live site any more; both are archived in full:
+P3_2021_WAYBACK = "https://web.archive.org/web/20230808000642if_/" + P3_2021_URL
+P3_2022_WAYBACK = "https://web.archive.org/web/20230807203320if_/" + P3_2022_URL
+
+# FOUND 2026-09-15, overturning this script's own prior "unreachable" finding for FY2023 (see
+# p3_sources()). The FY2023 Pillar 3 is live on the Contentful CDN behind the current site. It is
+# linked ONLY from https://www.cynergybank.co.uk/strong-and-prudent-management -- NOT from
+# /about-us/company-performance or /document-library, which is why four earlier search routes all
+# missed it. That page's links are JavaScript-rendered, so a fetcher sees no href; curling the raw
+# HTML and grepping for the CDN host exposes them:
+#   curl -sL https://www.cynergybank.co.uk/strong-and-prudent-management \
+#     | grep -o 'assets\.ctfassets\.net[^"'"'"' ]*' | sort -u
+# That enumeration (run 2026-09-15) returns 15 assets in Contentful space xzmqg68ot16t, of which
+# exactly SIX are Pillar 3 editions -- FY2018, FY2019, FY2020, FY2021, FY2022, FY2023 -- and the
+# rest are Gender Pay Gap reports (2017-2026) plus an FSCS information sheet. See ENUMERATION_NOTE.
+P3_2023_URL = ("https://assets.ctfassets.net/xzmqg68ot16t/5lTzyJuIg2zRrc7GGyH6Gv/"
+               "6eb39217d6164e649f946b7aed50a0cb/Cynergy_Bank_Pillar_3_Disclosures_2023.pdf")
+# Same page also re-serves the 2021 and 2022 editions on the CDN (different hash segment from the
+# old cynergybank.co.uk/media/ URLs above, which is why permutation on the old paths never found
+# them); both resolve, and both agree with the archived copies already used as sources below.
+P3_2021_CDN_URL = ("https://assets.ctfassets.net/xzmqg68ot16t/2v6FmkY7vFJwKVYPsdkTkg/"
+                   "2c74d882695a4854e99edf9a78ac6b00/cynergy-bank-pillar-3-2021.pdf")
+P3_2022_CDN_URL = ("https://assets.ctfassets.net/xzmqg68ot16t/3qKJzsAiu3dGAA2EQBSzPo/"
+                   "bbb85f662bef802d29fb7144d087c761/cynergy-bank-2022-pillar-3-disclosures.pdf")
+P3_INDEX_URL = "https://www.cynergybank.co.uk/strong-and-prudent-management"
+
+ENUMERATION_NOTE = (
+    "FY2024/FY2025 Pillar 3 - ENUMERATED NEGATIVE (2026-09-15), not a failed search. The Bank's own "
+    "Pillar 3 landing page (https://www.cynergybank.co.uk/strong-and-prudent-management) has "
+    "JavaScript-rendered links; curling its raw HTML and grepping for the Contentful asset host "
+    "enumerates every PDF the page can serve. The result is 15 assets, of which exactly six are "
+    "Pillar 3 editions: FY2018, FY2019, FY2020, FY2021, FY2022 and FY2023. There is no FY2024 and no "
+    "FY2025 edition. The absence is meaningful rather than merely unfound because the same page is "
+    "demonstrably current - it carries a Gender Pay Gap report dated 2026 - and because it agrees "
+    "with the Bank's own narrative reason for stopping (SDDT approval on 17 January 2025, quoted "
+    "below from both Annual Reports)."
+)
 
 ENTITY_NOTE = (
     "Entity: Cynergy Bank Plc, company 04728421 (formerly Bank of Cyprus UK Limited / Bank of Cyprus "
@@ -127,15 +166,128 @@ CASH_FLOW_SOURCES = (
 def p3_sources():
     return (
         "Sources - Cynergy Bank Plc Consolidated (Company-only FY2014-2017, see note) basis:\n"
-        f"FY2024 & FY2023: Cynergy Bank plc Annual Report & Accounts 2024, p.146 (Note 32, Capital resources) - {AR2024_URL}\n"
-        "FY2025, FY2022, FY2021: no quantitative capital or liquidity figures were found in the corresponding "
-        "Annual Report - only qualitative narrative in the 'Capital, liquidity and funding risk' section of "
-        "each report's Risk report (e.g. 'we held surplus regulatory capital', 'the liquidity coverage ratio "
-        "has exceeded the regulatory requirements'), with no £ or % figures stated. Note this batch (HD-051) "
-        "found real standalone Pillar 3 PDFs for FY2018-2020 via the Wayback Machine even though none is "
-        "linked from the live site - FY2021's own equivalent document was not searched for (out of scope for "
-        "this batch; flagged for the wayfinder map) and may well also exist despite this note's absence-claim "
-        "for FY2021.\n"
+        f"FY2025: Cynergy Bank plc Annual Report & Accounts 2025, p.85 (Note 32, Capital management - 'Capital "
+        f"resources' table, Consolidated column: Ordinary share capital 202,000 + Retained earnings 226,322 + "
+        f"Property revaluation reserve nil - Regulatory deductions (unaudited) 79,716 = Total eligible tier 1 "
+        f"capital (CET1) 348,606; plus Tier 2 subordinated loans 50,000 = Total eligible regulatory capital "
+        f"398,606). The same table's FY2024 comparative column (321,877 / 15,000 / 336,877) agrees exactly with "
+        f"FY2024's own Annual Report figures already used below - {AR2025_URL}\n"
+        f"FY2023 (ratios, RWAs, leverage, LCR, NSFR): Cynergy Bank Limited 2023 Pillar 3 Disclosures, "
+        f"'Key metrics' table (UK KM1) p.7, 'Overview of risk-weighted exposure amounts' (UK OV1) p.8 and "
+        f"'Composition of regulatory own funds' (CC1) p.9 - {P3_2023_URL} (found 2026-09-15; see the "
+        f"FY2023 correction below)\n"
+        f"FY2024 & FY2023 (capital AMOUNTS): Cynergy Bank plc Annual Report & Accounts 2024, p.146 (Note 32, Capital resources) - {AR2024_URL}\n"
+        f"FY2024 CET1 ratio (13.59%): Cynergy Bank plc Annual Report & Accounts 2024, p.6 (Chief Executive's "
+        f"review): 'The common equity tier 1 (CET1) ratio remains stable at 13.59%. This level provides a solid "
+        f"capital buffer...'. This is the only capital or liquidity RATIO stated numerically anywhere in the "
+        f"FY2023-FY2025 Annual Reports; FY2023's and FY2025's equivalent narrative passages are purely "
+        f"qualitative ('Our common equity tier 1 ratio remained robust', AR2023 p.6) - {AR2024_URL}\n"
+        f"FY2022: Cynergy Bank Limited 2022 Pillar 3, 'Key metrics' table p.5 and 'Overview of "
+        f"risk-weighted exposure amounts' p.6 - {P3_2022_URL} (delisted from the live site; archived copy "
+        f"used: {P3_2022_WAYBACK})\n"
+        f"FY2021: Cynergy Bank Limited Pillar 3 - 31 December 2021, 'Key capital, liquidity and leverage "
+        f"metrics' table p.20 and NSFR table p.21, cross-checked against the 2022 edition's own FY2021 "
+        f"comparative column (which restates the same figures at full precision) - {P3_2021_URL} "
+        f"(delisted from the live site; archived copy used: {P3_2021_WAYBACK})\n"
+        "RESOLVED 2026-09-12: this note previously claimed FY2021 and FY2022 had no quantitative capital "
+        "or liquidity figures, on the basis that their Annual Reports carry only qualitative narrative. "
+        "It also flagged, correctly, that an FY2021 standalone Pillar 3 'may well also exist'. It does - "
+        "and so does FY2022. Both were found via a Wayback CDX search of cynergybank.co.uk and are now "
+        "the source for those two years above. The Annual-Report observation still stands and is why "
+        "those documents are not used for these metrics.\n"
+        "RESOLVED 2026-09-15 (multi-year trailing-gap investigation). The FY2024 and FY2025 Pillar 3 gaps "
+        "are a DOCUMENTED STRUCTURAL ABSENCE, not a sourcing failure: Cynergy Bank became a Small Domestic "
+        "Deposit Taker (SDDT) and is no longer required to publish Pillar 3 disclosures at all. The Bank "
+        "states this itself, twice, in its own Annual Reports:\n"
+        f"  - Annual Report & Accounts 2024, p.71 (Risk report, 'Basel 3.1 Strong and Simple Regime'): 'The "
+        f"Bank applied for the Modification by Consent to become an SDDT and received approval on 17 January "
+        f"2025. As a result, we are not required to publish Pillar 3 disclosures as at 31 December 2024 and "
+        f"will submit only a simplified retail deposit ratio instead of a full Net Stable Funding Ratio "
+        f"(NSFR) going forward.' - {AR2024_URL}\n"
+        f"  - Annual Report & Accounts 2025, p.45 (Emerging risks): 'On 17 January 2025, the Bank's "
+        f"application for modification by consent to be treated as an SDDT was approved. Consequently, the "
+        f"Bank is no longer required to publish Pillar 3 disclosures for the period ended 31 December 2025. "
+        f"Furthermore, liquidity reporting has been streamlined, with the Simplified Retail Deposit Ratio "
+        f"(SRDR) replacing the full Net Stable Funding Ratio (NSFR) requirement.' The same page records that "
+        f"Interim Capital Regime modification-by-consent applications for both Cynergy Capital Ltd and "
+        f"Cynergy Bank plc were approved on 22 May 2025 - {AR2025_URL}\n"
+        "So for FY2024 and FY2025 there is no Pillar 3 document to find, and NSFR in particular is no longer "
+        "even a metric the Bank is required to compute (SRDR replaces it). The Bank remains fully PRA-"
+        "authorised throughout - it appears as 'Cynergy Bank Plc', FRN 575105, in the Bank of England's own "
+        "'List of banks' as at 30 September 2026 (banks-list-2609.csv) - so this is a disclosure-regime "
+        "change, not an entity cessation.\n"
+        "INDEPENDENTLY CORROBORATED 2026-09-15 against the PRA's own firm-level register (found while "
+        "generalising this finding across the rest of the bank set, and recorded here because it is the "
+        "control that validates the method). The Bank of England consolidated list of waivers and "
+        "modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+        "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+        "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries the row: FRN 575105, "
+        "'Cynergy Bank Plc', 'Description - Modification by Consent - PRA Rulebook- CRR Firms- Rule 3.1 of "
+        "the SDDT Regime - General Application Part 3.1', rule 'SDDT Regime - General Application', sub rule "
+        "'Ru 3.1', waiver ref 'A00009569P.pdf', start date '17/01/2025', no end date. That start date matches "
+        "the Bank's own stated approval date to the day, which establishes that a Rule 3.1 row in this "
+        "register is exactly the instrument the Bank describes - the basis on which the same register is used "
+        "to evidence SDDT status for other banks in this project that do not narrate it themselves (Methodist "
+        "Chapel Aid, Julian Hodge, Cambridge & Counties, Triodos UK, Monument, among others).\n"
+        "**FY2023 CORRECTION, 2026-09-15 - THE 'UNREACHABLE' FINDING RECORDED BELOW WAS WRONG, AND THE "
+        "FY2023 PILLAR 3 DOCUMENT IS NOW THE SOURCE FOR THAT YEAR'S RATIOS, RWAs, LEVERAGE AND LIQUIDITY.** "
+        f"It is live on the Bank's own current site at {P3_2023_URL} .\n"
+        "WHY EVERY EARLIER ROUTE MISSED IT, since the failure mode is reusable across this project: the "
+        "FY2023 edition is linked from exactly one page - /strong-and-prudent-management - and from nowhere "
+        "else. The pages the earlier passes enumerated (/about-us/company-performance and /document-library) "
+        "genuinely do not list it, so each negative result recorded below was individually accurate and "
+        "collectively wrong. In particular the claim that the Contentful space 'exposes exactly 15 PDFs, "
+        "every one an Annual Report' was an artefact of enumerating from the company-performance page: that "
+        "page's asset set is 15 Annual Reports, while the strong-and-prudent-management page's asset set is a "
+        "DIFFERENT 15 assets containing six Pillar 3 editions. A Contentful space is not enumerable from any "
+        "one rendered page, so treating a single page's asset list as 'the whole asset set' is what produced "
+        "a confident false negative. The Wayback CDX sweep missed it for a second, independent reason: the "
+        "FY2023 edition never lived on the old cynergybank.co.uk /media/ tree at all, only on "
+        "assets.ctfassets.net, so no CDX search of the bank's own domain could ever have returned it.\n"
+        + ENUMERATION_NOTE + "\n"
+        "Consequence for the sheets: FY2023 is now populated from its own Pillar 3 - Total RWAs 2,084,246; "
+        "CET1 and Tier 1 ratio 14.69%; Total capital ratio 15.41%; leverage ratio 6.96% (on a leverage "
+        "exposure measure of 4,398,669); LCR 304.44%; NSFR 148.67%. Nothing already in the workbook was "
+        "overwritten: the FY2023 capital AMOUNTS previously taken from AR2024's Note 32 are independently "
+        "confirmed by this document's own CC1 table (CET1 306,251 and Total capital 321,251 in both), and "
+        "its FY2022 comparative column reproduces the FY2022 capital, RWA, ratio and leverage figures "
+        "already held here exactly. FY2024 and FY2025 keep only the AR2025 Note 32 capital amounts and the "
+        "AR2024 narrative CET1 ratio; those two years are an enumerated structural absence, not an open gap. "
+        "Nothing is back-solved.\n"
+        "--- superseded reasoning, retained so the same dead ends are not re-walked ---\n"
+        "FY2023 is a different, weaker case and is deliberately NOT claimed as structurally absent: the SDDT "
+        "approval post-dates it (17 January 2025), so a 31 December 2023 Pillar 3 disclosure was still "
+        "required, and the FY2023 Annual Report's own Board Risk Committee agenda (p.43) lists 'Pillar 3 "
+        "disclosure' among the items the committee reviewed during 2023 - i.e. the document almost certainly "
+        "existed. [SUPERSEDED] It simply cannot be reached any more: cynergybank.co.uk migrated off its old Umbraco "
+        "/media/ tree (which hosted the 2018-2022 editions) onto a Contentful-backed Next.js site during "
+        "2024, and re-checked 2026-09-15 the replacement pages carry no Pillar 3 document at all - "
+        "/about-us/company-performance lists 15 Annual Reports (FY2012-FY2025) and nothing else, and "
+        "/document-library lists only product terms/fee documents. A full Wayback CDX enumeration of every "
+        "PDF ever captured on the domain returns no Pillar 3 edition later than 2022. USER-ACTIONABLE: the "
+        "FY2023 edition would have to be requested from the Bank directly.\n"
+        "RE-VERIFIED 2026-09-15 under a maximum-effort sweep that treated this script's own 'unreachable' "
+        "finding as unproven (five comparable claims elsewhere in this project were disproved the same day). "
+        "Four independent routes, all negative: (1) the Contentful asset space behind the current site "
+        "(xzmqg68ot16t) exposes exactly 15 PDFs, every one an Annual Report FY2012-FY2025 and not one a "
+        "Pillar 3 - enumerated from the rendered company-performance page rather than the 3 reports it "
+        "links, so this is the whole asset set, not the page's selection; (2) a full Wayback CDX sweep of "
+        "cynergybank.co.uk with no filename filter returns 125 distinct PDFs ever captured, of which exactly "
+        "3 are Pillar 3 editions (FY2020, FY2021, FY2022) and none later; (3) the archived Next.js "
+        "document-library.json payloads from 25 Sep 2024 and 11 Mar 2025 - i.e. after the FY2023 edition "
+        "would have been due - contain zero occurrences of 'pillar', so the replacement site never listed "
+        "one; (4) the FY2023 Annual Report's own capital narrative is qualitative only ('Our common equity "
+        "tier 1 ratio remained robust', 'The liquidity coverage ratio has continued to exceed the regulatory "
+        "requirements throughout 2023') with no RWA figure and no ratio anywhere in the document. Its Note 32 "
+        "capital table is already the source for the FY2023 capital AMOUNTS carried above. [SUPERSEDED - the "
+        "document was reached on 2026-09-15 via the /strong-and-prudent-management page; the four routes "
+        "listed here were each accurate about the pages they checked and wrong about the conclusion.]\n"
+        "--- end of superseded reasoning ---\n"
+        "FY2025 capital AMOUNTS come from the Annual Report's own Note 32 capital-management table (above), "
+        "and the FY2024 CET1/Tier 1 RATIO from the AR2024 narrative (above). The remaining FY2024-FY2025 "
+        "cells - Total RWAs, Total Capital Ratio, LCR, Leverage Ratio, NSFR, and the FY2025 CET1 and Tier 1 "
+        "ratios - stay blank. They are not derived from the disclosed capital amounts (that would require "
+        "back-solving RWAs out of a ratio, which this project does not do).\n"
         f"FY2020: Cynergy Bank Pillar 3 Disclosures 2020, capital and leverage tables (pp.7-11) and liquidity "
         f"tables (pp.13-14) - {P3_2020_URL}\n"
         f"FY2019: Cynergy Bank Pillar 3 Disclosures 2019, capital and RWA tables (pp.6-9) - {P3_2019_URL}\n"
@@ -712,8 +864,51 @@ NOT_DISCLOSED_NOTE = (
     "Not publicly disclosed. Cynergy Bank's Annual Reports discuss capital/liquidity/funding risk only "
     "qualitatively (e.g. 'we held surplus regulatory capital', 'the liquidity coverage ratio has exceeded "
     "the regulatory requirements') with no £ or % figures stated in any year reviewed for this metric, and "
-    "no standalone Pillar 3 document was found on the bank's own site. See the Cash Flow Statement sheet's "
-    "source note for the SDDT-regime context that plausibly explains this."
+    "no standalone Pillar 3 document was found on the bank's own site. MREL in particular is not a metric "
+    "Cynergy Bank has ever disclosed, in any year or any document reviewed, including the 2018-2022 Pillar 3 "
+    "editions. For FY2024/FY2025 the SDDT exemption below removes the Pillar 3 obligation entirely."
+)
+
+SDDT_NOTE = (
+    "WHY PILLAR 3 DATA STOPS AFTER FY2022 - A DOCUMENTED STRUCTURAL REASON, not a sourcing failure (the "
+    "capital AMOUNTS on the CET1/Tier 1/Total Capital sheets continue because the Annual Report's own "
+    "capital-management note states them; every ratio, RWA, leverage and liquidity metric stops because only "
+    "a Pillar 3 document ever carried them). Cynergy Bank's "
+    "modification-by-consent application to be treated as a Small Domestic Deposit Taker (SDDT) was approved "
+    "on 17 January 2025, and the Bank states in its own Annual Reports that it is consequently 'not required "
+    "to publish Pillar 3 disclosures as at 31 December 2024' (AR2024 p.71) and 'no longer required to publish "
+    "Pillar 3 disclosures for the period ended 31 December 2025' (AR2025 p.45). There is therefore no Pillar 3 "
+    "document to find for either year. FY2023 predates that approval and its Pillar 3 disclosure was still "
+    "required (the FY2023 Annual Report's own Board Risk Committee agenda, p.43, lists 'Pillar 3 disclosure' "
+    "among the items reviewed during the year) - but the 2018-2022 editions' /media/ hosting was decommissioned "
+    "when the site moved to Contentful during 2024 and no FY2023 edition is reachable anywhere, live or "
+    "archived. See this sheet's source note for the full evidence and the exact quotations."
+)
+
+NSFR_SDDT_NOTE = (
+    SDDT_NOTE
+    + " NSFR SPECIFICALLY: the SDDT approval does not merely stop publication of this metric, it replaces it. "
+    "AR2024 p.71 says the Bank 'will submit only a simplified retail deposit ratio instead of a full Net "
+    "Stable Funding Ratio (NSFR) going forward', and AR2025 p.45 confirms 'the Simplified Retail Deposit Ratio "
+    "(SRDR) replacing the full Net Stable Funding Ratio (NSFR) requirement'. From FY2025 the Bank does not "
+    "report a full NSFR at all, so no figure exists to disclose - the blank is the correct answer, not a gap."
+)
+
+FY25_CAP = (
+    "\n\nFY2025 (added 2026-09-15) is the Annual Report & Accounts 2025's own Note 32 'Capital management' "
+    "capital-resources table, p.85 (Consolidated column), the same note and table this sheet already uses for "
+    "FY2024 and FY2023. That table's FY2024 comparative column reproduces FY2024's own reported figures "
+    "exactly, so there is no restatement to reconcile."
+)
+
+FY24_RATIO = (
+    "\n\nFY2024 (added 2026-09-15) is the Annual Report & Accounts 2024's own narrative figure (p.6: 'The "
+    "common equity tier 1 (CET1) ratio remains stable at 13.59%'), the only capital or liquidity ratio stated "
+    "numerically anywhere in the FY2023-FY2025 Annual Reports. It is carried onto the Tier 1 Ratio sheet too "
+    "because the Bank's own capital table labels its Tier 1 line 'Total eligible tier 1 capital (CET1)' - the "
+    "source itself asserts Tier 1 = CET1, with no Additional Tier 1 in issue; that is the source's identity, "
+    "not a derivation by this workbook. FY2023 and FY2025 state no equivalent figure - their narrative is "
+    "purely qualitative - so they stay blank."
 )
 
 TIER1_NOTE = (
@@ -726,6 +921,44 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, f"Consolidated basis, {unit}" if unit else "Consolidated basis",
                          rows_data, p3_sources(), note=note, first_col_width=52, source_height=170)
 
+
+P3_2021_2022_NOTE = (
+    "FY2022 and FY2021 were recovered on 2026-09-12 from Cynergy Bank's own standalone Pillar 3 "
+    "documents, which are no longer linked from the live cynergybank.co.uk site but are archived in "
+    "full on the Wayback Machine (see the sources note). The prior claim that no standalone Pillar 3 "
+    "document existed for this bank was incorrect - editions for 2018, 2019, 2020, 2021 and 2022 are "
+    "all archived. FY2021 figures are taken from the 2022 edition's own FY2021 comparative column, "
+    "which restates them at full precision; the 2021 edition's own rounded figures agree (CET1 £197m, "
+    "Total capital £227m, RWAs £1,417m, CET1 ratio 13.9%, Total capital ratio 16.0%, leverage 5.5%, "
+    "LCR 243%)."
+)
+
+FY2023_P3_NOTE = (
+    "FY2023 was filled on 2026-09-15 from Cynergy Bank's own 2023 Pillar 3 Disclosures (UK KM1 table, "
+    "p.7), a document two earlier passes of this script had concluded did not exist or could not be "
+    "reached. It does exist and is live on the Bank's site - linked only from "
+    "/strong-and-prudent-management, which is the single page neither earlier pass checked. The full "
+    "correction, including why each earlier negative result was individually accurate and collectively "
+    "wrong, is in this sheet's Sources note.\n"
+    "VALIDATION GATE PASSED: this document's FY2022 comparative column reproduces the FY2022 figures "
+    "already in this workbook exactly - CET1/Tier 1 capital 287,447, Total capital 287,447, Total RWAs "
+    "1,822,159, CET1/Tier 1/Total capital ratio 15.78%, leverage ratio 7.40% - and its CC1 table "
+    "independently confirms the FY2023 capital amounts already carried here from AR2024's Note 32 "
+    "(CET1 306,251, Total capital 321,251). No existing figure was overwritten."
+)
+
+FY2023_RESTATEMENT_NOTE = (
+    "TWO FY2022 LIQUIDITY FIGURES ARE NOT RECONCILED, DELIBERATELY. The 2023 Pillar 3 edition's FY2022 "
+    "comparative column disagrees with the 2022 edition's own FY2022 column on the liquidity metrics "
+    "only - LCR 249.66% (2023 edition) vs 315.98% (2022 edition), and NSFR 144.09% vs 149.48% - with "
+    "the underlying components restated too (FY2022 HQLA 525,228 vs 602,317; net outflows 212,745 vs "
+    "190,621; available stable funding 3,546,316 vs 3,721,028). Both editions label the LCR inputs the "
+    "same way ('Weighted value - average'), so this is not the average-vs-point-in-time basis trap; it "
+    "is a genuine restatement by the Bank between editions. Every capital, RWA and leverage figure in "
+    "the same two columns agrees exactly, which is what makes the liquidity divergence conspicuous. "
+    "Per this project's standing convention each year keeps its own edition's figure, so FY2022 retains "
+    "315.98% / 149.48% and the divergence is recorded here rather than silently resolved."
+)
 
 FY2017_RWA_CAVEAT = (
     "FY2017 Total Capital (£) and Total RWAs are left blank deliberately, not omitted by oversight: the "
@@ -743,67 +976,91 @@ metric(
     "CET1 Capital", "£'000",
     [
         ("Total eligible Tier 1 capital (CET1)",
-         {"FY2024": 321877, "FY2023": 306251, "FY2020": 182844, "FY2019": 156836, "FY2018": 135416, "FY2017": 109910}),
+         {"FY2025": 348606, "FY2024": 321877, "FY2023": 306251, "FY2022": 287447, "FY2021": 197331,
+          "FY2020": 182844, "FY2019": 156836, "FY2018": 135416, "FY2017": 109910}),
         ("Core Tier 1 capital (Basel II/CRD III era terminology; shown as the closest equivalent to CET1 - see note)",
          {"FY2016": 65017, "FY2015": 69180, "FY2014": 65533}),
     ],
+    note=P3_2021_2022_NOTE + FY25_CAP + "\n\n" + SDDT_NOTE,
 )
 
 metric(
     "CET1 Ratio", "%",
     [
-        ("CET1 ratio", {"FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%"}),
+        ("CET1 ratio", {"FY2024": "13.59%", "FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%",
+                        "FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%"}),
         ("Core Tier 1 / Tier 1 ratio (Basel II/CRD III era terminology; closest equivalent to CET1 ratio)",
          {"FY2016": "12.1%", "FY2015": "16.6%", "FY2014": "16.9%"}),
     ],
+    note=FY2023_P3_NOTE + "\n\n" + P3_2021_2022_NOTE + FY24_RATIO + "\n\n" + SDDT_NOTE,
 )
 
 metric(
     "Tier 1 Capital", "£'000",
     [
         ("Total eligible Tier 1 capital (CET1)",
-         {"FY2024": 321877, "FY2023": 306251, "FY2020": 182844, "FY2019": 156836, "FY2018": 135416, "FY2017": 109910}),
+         {"FY2025": 348606, "FY2024": 321877, "FY2023": 306251, "FY2022": 287447, "FY2021": 197331,
+          "FY2020": 182844, "FY2019": 156836, "FY2018": 135416, "FY2017": 109910}),
         ("Core Tier 1 capital (Basel II/CRD III era terminology; shown as the closest equivalent - see note)",
          {"FY2016": 65017, "FY2015": 69180, "FY2014": 65533}),
     ],
-    note=TIER1_NOTE,
+    note=TIER1_NOTE + FY25_CAP + "\n\n" + SDDT_NOTE,
 )
 
 metric(
     "Tier 1 Ratio", "%",
     [
         ("Tier 1 ratio (= CET1 ratio; no Additional Tier 1 instrument in issue any year reviewed)",
-         {"FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%",
+         {"FY2024": "13.59%", "FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%",
+          "FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%",
           "FY2016": "12.1%", "FY2015": "16.6%", "FY2014": "16.9%"}),
     ],
-    note=TIER1_NOTE,
+    note=FY2023_P3_NOTE + "\n\n" + TIER1_NOTE + FY24_RATIO + "\n\n" + SDDT_NOTE,
 )
 
 metric(
     "Total Capital", "£'000",
     [("Total eligible regulatory capital (CET1/Core Tier 1 + Tier 2 subordinated debt)",
-      {"FY2024": 336877, "FY2023": 321251, "FY2020": 212588, "FY2019": 186465, "FY2018": 165416,
+      {"FY2025": 398606, "FY2024": 336877, "FY2023": 321251, "FY2022": 287447, "FY2021": 227200,
+       "FY2020": 212588, "FY2019": 186465, "FY2018": 165416,
        "FY2016": 96777, "FY2015": 101139, "FY2014": 98022})],
-    note=FY2017_RWA_CAVEAT,
+    note=FY2017_RWA_CAVEAT + FY25_CAP + "\n\n" + SDDT_NOTE,
 )
 
 metric(
     "Total Capital Ratio", "%",
     [("Total capital ratio",
-      {"FY2020": "16.42%", "FY2019": "16.3%", "FY2018": "20.7%", "FY2017": "21.0%",
+      {"FY2023": "15.41%", "FY2022": "15.78%", "FY2021": "16.03%",
+       "FY2020": "16.42%", "FY2019": "16.3%", "FY2018": "20.7%", "FY2017": "21.0%",
        "FY2016": "18.2%", "FY2015": "24.4%", "FY2014": "25.4%"})],
+    note=FY2023_P3_NOTE
+         + "\n\nFY2024 and FY2025 are blank because no total capital ratio is stated anywhere in those "
+           "years' Annual Reports (the FY2024 report states only a CET1 ratio) and no Pillar 3 document "
+           "exists for them - it is NOT derived from the disclosed Total Capital amount, which would "
+           "require back-solving RWAs. FY2024's disclosed CET1 ratio of 13.59% is on the CET1/Tier 1 "
+           "Ratio sheets.\n\n"
+         + SDDT_NOTE,
 )
 
 metric(
     "Total RWAs", "£'000",
     [("Total risk-weighted assets",
-      {"FY2020": 1294931, "FY2019": 1144428, "FY2018": 796565,
+      {"FY2023": 2084246, "FY2022": 1822159, "FY2021": 1417123,
+       "FY2020": 1294931, "FY2019": 1144428, "FY2018": 796565,
        "FY2016": 531742, "FY2015": 416813, "FY2014": 385638})],
-    note=FY2017_RWA_CAVEAT
+    note=FY2023_P3_NOTE + "\n\n"
+    + FY2017_RWA_CAVEAT
     + "\nFY2020 is the document's own directly-stated Total RWA figure; FY2014-2016, FY2018 and FY2019 are "
       "derived from that year's own disclosed Total Capital (or minimum capital requirement) divided by that "
       "year's own disclosed Total Capital ratio (or x12.5 of the minimum capital requirement) - both inputs "
-      "to each derivation come from the same source document/year, not mixed across years.",
+      "to each derivation come from the same source document/year, not mixed across years.\n\n"
+    + SDDT_NOTE
+    + " No FY2024 or FY2025 RWA figure is stated in any Annual Report (the word 'risk weighted assets' "
+      "appears in AR2025 only inside a restatement note, with no amount), and none is back-solved here from "
+      "the FY2024 CET1 ratio and CET1 capital amount - that is exactly the derivation this project does not "
+      "make. FY2023 is no longer in that category: it is the 2023 Pillar 3's own directly-stated UK KM1 "
+      "figure (2,084,246), which its UK OV1 table independently corroborates at the source's own £m "
+      "granularity (1,905 credit + 179 operational + nil CCR = 2,084).",
 )
 
 RWA_BREAKDOWN_NOTE = (
@@ -818,12 +1075,19 @@ RWA_BREAKDOWN_NOTE = (
     "FY2018/FY2019 only Credit risk RWA was located (no Operational/Market risk category breakdown found in "
     "either Pillar 3 document), so Total RWA on this sheet for those two years is Credit risk RWA alone and "
     "will not tie to the (higher) Total RWAs sheet figure for the same year - that gap is the other, "
-    "undisclosed risk categories, not an error."
+    "undisclosed risk categories, not an error.\n"
+    "FY2023 (added 2026-09-15) has none of those problems: its OV1 components (credit risk 1,905 + "
+    "operational risk 179 + CCR nil) foot exactly to the stated total of 2,084, which in turn matches the "
+    "same document's UK KM1 total RWA of 2,084,246 once the £m presentation is allowed for. CCR is shown as "
+    "0 rather than blank because the source prints a dash for it in 2023, i.e. it is a disclosed nil, not an "
+    "undisclosed component. 'Securitisations' (13) is again an 'of which' line inside credit risk, not a "
+    "fourth component."
 )
 bw.add_rwa_breakdown_sheet(
     title="Cynergy Bank Plc — RWA Breakdown",
-    subtitle="Consolidated (Company-only FY2014-2015) basis, £'000. FY2020 credit-risk exposure-class RWA "
-             "summary is shown separately; FY2016/FY2017 remain unavailable - see source note at bottom.",
+    subtitle="Consolidated (Company-only FY2014-2015) basis, £'000. FY2023 added 2026-09-15 from the 2023 "
+             "Pillar 3's UK OV1 table. FY2020 credit-risk exposure-class RWA summary is shown separately; "
+             "FY2016/FY2017 remain unavailable - see source note at bottom.",
     rows=[
         ("SECTION", "Risk-weighted assets by category", {}),
         ("SECTION", "FY2020 credit-risk RWA by exposure class (source summary; not complete Pillar 1 total)", {}),
@@ -836,12 +1100,35 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Items associated with particularly high risk", {"FY2020": 24000}),
         ("DATA", "Other items", {"FY2020": 19000}),
         ("TOTAL", "Total credit-risk RWA (FY2020 source summary)", {"FY2020": 1195000}),
+        ("SECTION", "UK OV1 basis (2023 and 2022 Pillar 3 editions)", {}),
+        ("DATA", "Total credit risk (excluding CCR)", {"FY2023": 1905000, "FY2022": 1685000, "FY2021": 1272000}),
+        ("DATA", "of which: securitisations", {"FY2023": 13000, "FY2022": 19000}),
+        ("DATA", "Counterparty credit risk (CCR)", {"FY2023": 0, "FY2022": 2000}),
+        ("DATA", "Total operational risk (standardised approach)", {"FY2023": 179000, "FY2022": 136000, "FY2021": 117000}),
+        ("TOTAL", "Total Pillar 1 RWA per the OV1 table", {"FY2023": 2084000, "FY2022": 1822000, "FY2021": 1389000}),
+        ("SECTION", "Earlier editions", {}),
         ("DATA", "Credit risk RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2015": 385977, "FY2014": 355707}),
         ("DATA", "Operational risk RWA (derived from disclosed capital requirement x12.5)",
          {"FY2015": 30838, "FY2014": 29938}),
         ("TOTAL", "Total RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2015": 416815, "FY2014": 385645}),
     ],
-    sources_text=p3_sources() + "\nFY2020: Cynergy Bank Pillar 3 Disclosures 2020, 'Summary of On Balance Sheet Credit Risk Exposure', p.25 (source reports £m; converted to £'000) - " + P3_2020_URL + "\n\n" + RWA_BREAKDOWN_NOTE,
+    sources_text=p3_sources() + "\nFY2020: Cynergy Bank Pillar 3 Disclosures 2020, 'Summary of On Balance Sheet Credit Risk Exposure', p.25 (source reports £m; converted to £'000) - " + P3_2020_URL
+                 + "\nFY2023: Cynergy Bank Limited 2023 Pillar 3 Disclosures, 'Overview of risk-weighted "
+                   "exposure amounts' (UK OV1) table, p.8 (source reports £m; converted to £'000) - "
+                   + P3_2023_URL
+                 + "\nFY2022 & FY2021: Cynergy Bank Limited 2022 Pillar 3, 'Overview of risk-weighted "
+                   "exposure amounts' table, p.6 (source reports £m; converted to £'000) - " + P3_2022_URL
+                 + "\n\nTWO DOCUMENTED INCONSISTENCIES IN THE 2022 SOURCE TABLE, shown as published rather "
+                   "than silently reconciled. (1) Its FY2021 comparative column totals £1,389m (credit "
+                   "1,272 + operational 117), but the SAME document's own FY2021 Key-metrics comparative - "
+                   "and the 2021 edition's own Key-metrics table - both state total RWAs of £1,417m, a "
+                   "£28m (2.0%) difference. The Total RWAs sheet uses the Key-metrics figure (£1,417m) "
+                   "because that is the figure both editions agree on and the one the disclosed FY2021 "
+                   "ratios are computed against; this OV1 row is kept at its own stated £1,389m. (2) Its "
+                   "FY2022 components (1,685 credit + 2 CCR + 136 operational) sum to £1,823m against a "
+                   "stated total of £1,822m - a £1m rounding artifact of the source's own £m presentation. "
+                   "'Securitisations' (£19m) is shown as an 'of which' line because including it as a "
+                   "fourth component would overstate the total by that amount.\n\n" + RWA_BREAKDOWN_NOTE,
     first_col_width=60,
     source_height=280,
 )
@@ -849,29 +1136,55 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio",
-      {"FY2020": "6.1%", "FY2019": "6.3%", "FY2018": "6.9%", "FY2017": "5.8%",
+      {"FY2023": "6.96%", "FY2022": "7.40%", "FY2021": "5.46%",
+       "FY2020": "6.1%", "FY2019": "6.3%", "FY2018": "6.9%", "FY2017": "5.8%",
        "FY2016": "4.7%", "FY2015": "6.0%", "FY2014": "6.1%"})],
-    note="FY2020's Pillar 3 document states two different leverage exposure measure figures on different "
+    note=FY2023_P3_NOTE
+         + " The FY2023 leverage ratio of 6.96% is stated directly in the 2023 UK KM1 table, on a leverage "
+           "ratio total exposure measure of 4,398,669 (against Tier 1 capital of 306,251); it is not "
+           "recomputed here from those two inputs.\n\n"
+         + "FY2020's Pillar 3 document states two different leverage exposure measure figures on different "
          "pages (£3,006,579k in the reconciliation table vs £2,953,625k in the common disclosure table) that "
          "would imply slightly different ratios from the same £182,844k Tier 1 capital - the document's own "
          "stated 6.1% ratio is used here rather than recomputing from either exposure figure. FY2018's own "
          "Pillar 3 document states 6.9% for FY2018; FY2019's Pillar 3 document's own FY2018 comparative "
          "instead shows 6.8% - each year's own report is used for its own figure (FY2018 = 6.9%), per this "
-         "project's standing convention; the two documents disagree on FY2018 by 0.1pp.",
+         "project's standing convention; the two documents disagree on FY2018 by 0.1pp.\n\n"
+         + SDDT_NOTE
+         + " No leverage ratio figure appears anywhere in the FY2024 or FY2025 Annual Reports (full-text "
+           "searched 2026-09-15 - the only hits for 'leverage' are unrelated lending/business usages), and "
+           "there is no Pillar 3 edition for either year, so those two years stay blank.",
 )
 
 metric(
     "LCR", "%",
-    [("Liquidity Coverage Ratio", {"FY2020": "340%"})],
+    [("Liquidity Coverage Ratio (12-month average basis; source labels the HQLA input 'Weighted value - average')",
+      {"FY2023": "304.44%", "FY2022": "315.98%", "FY2021": "242.91%", "FY2020": "340%"})],
+    note=FY2023_P3_NOTE + "\n\n" + FY2023_RESTATEMENT_NOTE + "\n\n"
+         + P3_2021_2022_NOTE + " NOTE ON FY2020: this sheet's FY2020 figure (340%) comes from the 2020 "
+         "Pillar 3 edition's own statement, but the 2021 edition's FY2020 comparative column instead "
+         "shows 330%. Each year's own report is used for its own figure per this project's standing "
+         "convention, so 340% is retained for FY2020; the 1.0pp disagreement between the two documents "
+         "is recorded here rather than silently reconciled.\n\n"
+         + SDDT_NOTE
+         + " The FY2024 and FY2025 Annual Reports describe the LCR only qualitatively ('the liquidity "
+           "coverage ratio has exceeded the regulatory requirements throughout 2025', AR2025 p.37) - a "
+           "statement, not a value - so nothing is transcribed from them, and there is no Pillar 3 edition "
+           "for either year. FY2023's Annual Report is equally qualitative, but its Pillar 3 edition is not, "
+           "which is where this sheet's FY2023 figure comes from.",
 )
 
 metric(
     "NSFR", "%",
-    [("Net Stable Funding Ratio", {"FY2020": "132%"})],
+    [("Net Stable Funding Ratio", {"FY2023": "148.67%", "FY2022": "149.48%", "FY2021": "130%", "FY2020": "132%"})],
+    note=FY2023_P3_NOTE + "\n\n" + FY2023_RESTATEMENT_NOTE + "\n\n"
+         + P3_2021_2022_NOTE + " FY2021's NSFR is taken from the 2021 edition's own ratio table (130%); "
+         "the 2022 edition shows a dash rather than an FY2021 NSFR comparative, so the 2021 edition is "
+         "the only source for that year.\n\n" + NSFR_SDDT_NOTE,
 )
 
 bw.add_not_disclosed_metric_sheets(
-    ["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE},
+    ["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE + "\n\n" + SDDT_NOTE},
 )
 
 # ---------------------------------------------------------------
@@ -906,16 +1219,31 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000",
     ratios=[
-        ("CET1/Core Tier 1 ratio", {"FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%", "FY2016": "12.1%", "FY2015": "16.6%", "FY2014": "16.9%"}),
-        ("Total Capital ratio", {"FY2020": "16.42%", "FY2019": "16.3%", "FY2018": "20.7%", "FY2017": "21.0%", "FY2016": "18.2%", "FY2015": "24.4%", "FY2014": "25.4%"}),
-        ("Leverage ratio", {"FY2020": "6.1%", "FY2019": "6.3%", "FY2018": "6.9%", "FY2017": "5.8%", "FY2016": "4.7%", "FY2015": "6.0%", "FY2014": "6.1%"}),
+        ("CET1/Core Tier 1 ratio", {"FY2024": "13.59%", "FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%", "FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%", "FY2016": "12.1%", "FY2015": "16.6%", "FY2014": "16.9%"}),
+        ("Total Capital ratio", {"FY2023": "15.41%", "FY2022": "15.78%", "FY2021": "16.03%", "FY2020": "16.42%", "FY2019": "16.3%", "FY2018": "20.7%", "FY2017": "21.0%", "FY2016": "18.2%", "FY2015": "24.4%", "FY2014": "25.4%"}),
+        ("Leverage ratio", {"FY2023": "6.96%", "FY2022": "7.40%", "FY2021": "5.46%", "FY2020": "6.1%", "FY2019": "6.3%", "FY2018": "6.9%", "FY2017": "5.8%", "FY2016": "4.7%", "FY2015": "6.0%", "FY2014": "6.1%"}),
+        ("LCR (12-month average)", {"FY2023": "304.44%", "FY2022": "315.98%", "FY2021": "242.91%", "FY2020": "340%"}),
     ],
-    note="This batch (HD-051) found real Pillar 3 capital/leverage ratios for FY2014-FY2020 (see the "
-         "individual Pillar 3 sheets) - shown here even though FY2021-FY2025 have none disclosed (a prior "
-         "sourcing note claiming no ratio-type Pillar 3 metric exists in any year was wrong; corrected on "
-         "each affected sheet, see the Cash Flow Statement sheet's source note). CET1 Capital, Tier 1 Capital "
-         "and Total Capital (£'000) are disclosed for FY2014-FY2020 and FY2023-FY2024 - see their own sheets. "
-         "Cash flow figures are duplicated from the Cash Flow Statement sheet for at-a-glance trend viewing.",
+    note="Pillar 3 ratio coverage runs FY2014-FY2023 (from the Bank's own Pillar 3 documents - editions "
+         "2018-2022 recovered from the Wayback Machine, and the 2023 edition found on 2026-09-15 on the "
+         "Contentful CDN behind the current site, linked only from the Bank's /strong-and-prudent-management "
+         "page) plus a FY2024 CET1 ratio of 13.59% taken from the Annual Report & Accounts 2024's own "
+         "narrative (p.6), the only ratio stated numerically in either of the FY2024/FY2025 Annual Reports. "
+         "FY2025 has no ratio of any kind disclosed. FY2023's row was blank until 2026-09-15 on the basis of "
+         "an earlier conclusion, now overturned, that its Pillar 3 document was unreachable. "
+         "WHY THE RATIO ROWS STOP: Cynergy Bank's modification-by-consent application to be treated as a "
+         "Small Domestic Deposit Taker (SDDT) was approved on 17 January 2025, and the Bank states in its own "
+         "Annual Reports that it is consequently not required to publish Pillar 3 disclosures for either "
+         "31 December 2024 (AR2024 p.71) or 31 December 2025 (AR2025 p.45); the same passages record that the "
+         "full NSFR has been replaced by a Simplified Retail Deposit Ratio. That absence is enumerated, not "
+         "merely unfound: the Bank's Pillar 3 page serves exactly six editions (FY2018-FY2023) and no later "
+         "one, and the same page is demonstrably current (it also carries a 2026 Gender Pay Gap report). "
+         "FY2023 predates the exemption and its Pillar 3 disclosure was both produced and published. This is "
+         "a disclosure-regime change, not an entity cessation - Cynergy Bank Plc (FRN 575105) is still on "
+         "the Bank of England's List of banks as at 30 September 2026. "
+         "CET1 Capital, Tier 1 Capital and Total Capital (£'000) are disclosed for FY2014-FY2020 and "
+         "FY2023-FY2025 - see their own sheets. Cash flow figures are duplicated from the Cash Flow Statement "
+         "sheet for at-a-glance trend viewing.",
 )
 
 # ---------------------------------------------------------------

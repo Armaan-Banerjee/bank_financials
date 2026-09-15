@@ -1,0 +1,6686 @@
+{
+ "CET1 Capital": [
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021"
+   ],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RCI Bank UK Limited",
+   "missing": [
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RELIANCE BANK LIMITED",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Weatherbys Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "CET1 Ratio": [
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "DB UK Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021"
+   ],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Santander Financial Services plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "TURKISH BANK (UK) LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Egypt (UK) Limited",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FidBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Habib Bank Zurich Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "United National Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "Tier 1 Capital": [
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "FCMB Bank (UK) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2020"
+   ],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RCI Bank UK Limited",
+   "missing": [
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RELIANCE BANK LIMITED",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Weatherbys Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "Tier 1 Ratio": [
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "DB UK Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "FCMB Bank (UK) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2020"
+   ],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021"
+   ],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Santander Financial Services plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "TURKISH BANK (UK) LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2024",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Egypt (UK) Limited",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "REDWOOD BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "C. HOARE & CO.",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FidBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FirstBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Habib Bank Zurich Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "United National Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Weatherbys Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "Total Capital": [
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RCI Bank UK Limited",
+   "missing": [
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RELIANCE BANK LIMITED",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "Total Capital Ratio": [
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "KINGDOM BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021"
+   ],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Santander Financial Services plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RELIANCE BANK LIMITED",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "TURKISH BANK (UK) LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Alpha Bank London Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2024",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Habib Bank Zurich Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "Total RWAs": [
+  {
+   "bank": "Alpha Bank London Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "DB UK Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "KINGDOM BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Santander Financial Services plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "THIS BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2016",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RELIANCE BANK LIMITED",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Bank Saderat Plc",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "RCI Bank UK Limited",
+   "missing": [
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "REDWOOD BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FidBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Habib Bank Zurich Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Egypt (UK) Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "State Bank Of India (UK) Limited",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "StreamBank PLC",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "The Access Bank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "United National Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Weatherbys Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "Leverage Ratio": [
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank Saderat Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Close Brothers Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "MARKS AND SPENCER FINANCIAL SERVICES PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Melli Bank plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Santander Financial Services plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "THIS BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "AIB GROUP (UK) P.L.C.",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2018",
+    "FY2016"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Credit Suisse (UK) Limited",
+   "missing": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2018",
+    "FY2017"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "TURKISH BANK (UK) LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Alpha Bank London Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BROWN SHIPLEY & CO. LIMITED",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Bank of the Philippine Islands (Europe) PLC",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "EFG Private Bank Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "J.P. Morgan Europe Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Julian Hodge Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Paragon Bank Plc",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "RCI Bank UK Limited",
+   "missing": [
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "REDWOOD BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "StreamBank PLC",
+   "missing": [
+    "FY2026",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank of Africa United Kingdom Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank of Beirut (UK) Ltd",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank of Scotland plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "C. HOARE & CO.",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Cambridge & Counties Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Coutts & Company",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FidBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FirstBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Habib Bank Zurich Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Kuwait (International) Plc",
+   "missing": [
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "The Access Bank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Triodos Bank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "United National Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Zopa Bank Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "LCR": [
+  {
+   "bank": "Bank of Scotland plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Coutts & Company",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "MARKS AND SPENCER FINANCIAL SERVICES PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2018"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "HSBC INNOVATION BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "TURKISH BANK (UK) LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "United National Bank Limited",
+   "missing": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Alpha Bank London Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "EFG Private Bank Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Itau BBA International PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "J.P. Morgan Europe Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Julian Hodge Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Shawbrook Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "StreamBank PLC",
+   "missing": [
+    "FY2026",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "THIS BANK LIMITED",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "The Charity Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank of Beirut (UK) Ltd",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "C. HOARE & CO.",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Close Brothers Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Clydesdale Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2026",
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Credit Suisse (UK) Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FCE Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FirstBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "HSBC Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "HSBC UK Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Investec Bank PLC",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Lloyds Bank Corporate Markets Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Egypt (UK) Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Kuwait (International) Plc",
+   "missing": [
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "OakNorth Bank plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "RBC Europe Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "SECURE TRUST BANK PUBLIC LIMITED COMPANY",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Standard Chartered Bank",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "The Access Bank UK Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Zopa Bank Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "NSFR": [
+  {
+   "bank": "Alpha Bank London Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank Saderat Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank of Scotland plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Coutts & Company",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "KINGDOM BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "MARKS AND SPENCER FINANCIAL SERVICES PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Melli Bank plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "RELIANCE BANK LIMITED",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "THIS BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "United National Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "BIRMINGHAM BANK LIMITED",
+   "missing": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Bank of Africa United Kingdom Plc",
+   "missing": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024",
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "HSBC INNOVATION BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Itau BBA International PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Metro Bank PLC",
+   "missing": [
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "THE CO-OPERATIVE BANK P.L.C.",
+   "missing": [
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "TURKISH BANK (UK) LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "The Charity Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "BROWN SHIPLEY & CO. LIMITED",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Cambridge & Counties Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "DF Capital Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "EFG Private Bank Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "FirstBank UK Limited",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Guaranty Trust Bank (UK) Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "J.P. Morgan Europe Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2016"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Julian Hodge Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Lloyds Bank PLC",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Egypt (UK) Limited",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "OneSavings Bank Plc",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "REDWOOD BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Shawbrook Bank Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "StreamBank PLC",
+   "missing": [
+    "FY2026",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "The Access Bank UK Limited",
+   "missing": [
+    "FY2024",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Triodos Bank UK Limited",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Zenith Bank (UK) Limited",
+   "missing": [
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "ABC International Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "ALLICA BANK LIMITED",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank of Beirut (UK) Ltd",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank of the Philippine Islands (Europe) PLC",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Barclays Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Barclays Bank UK PLC",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "C. HOARE & CO.",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "CREDIT SUISSE INTERNATIONAL",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Castle Trust Capital PLC",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Chetwood Financial Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Credit Suisse (UK) Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FCE Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FidBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Goldman Sachs International Bank",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gulf International Bank (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "HSBC Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "HSBC UK Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Habib Bank Zurich Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Handelsbanken plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "ICBC Standard Bank Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "IFAST GLOBAL BANK LIMITED",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Investec Bank PLC",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "KEXIM BANK (UK) LIMITED",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Kroo Bank Ltd",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Lloyds Bank Corporate Markets Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "MONZO BANK LIMITED",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Mizuho International plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Morgan Stanley Bank International Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "NatWest Markets Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Kuwait (International) Plc",
+   "missing": [
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "OakNorth Bank plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "RBC Europe Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "SECURE TRUST BANK PUBLIC LIMITED COMPANY",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Santander UK Plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "TSB Bank plc",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Tandem Bank Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "United Trust Bank Limited",
+   "missing": [
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ],
+ "RWA Breakdown": [
+  {
+   "bank": "Alpha Bank London Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank Mandiri (Europe) Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Cater Allen Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Charter Court Financial Services Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "DB UK Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Havin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "KINGDOM BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Melli Bank plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Nomura Bank International Plc.",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "PERENNA BANK PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Rathbones Investment Management Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "SCHRODER & CO. LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Santander Financial Services plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "THIS BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [],
+   "n": 5,
+   "all5": true
+  },
+  {
+   "bank": "Bank of London and The Middle East plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "Persia International Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015"
+   ],
+   "n": 4,
+   "all5": false
+  },
+  {
+   "bank": "The Bank of London Group Limited",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [],
+   "n": 4,
+   "all5": true
+  },
+  {
+   "bank": "Cynergy Bank Plc",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2015",
+    "FY2014"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "HSBC INNOVATION BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "Oxbury Bank PLC",
+   "missing": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "RELIANCE BANK LIMITED",
+   "missing": [
+    "FY2026",
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "StreamBank PLC",
+   "missing": [
+    "FY2026",
+    "FY2023",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024"
+   ],
+   "n": 3,
+   "all5": false
+  },
+  {
+   "bank": "ARAB BANK EUROPE PLC",
+   "missing": [
+    "FY2024",
+    "FY2023"
+   ],
+   "ever": [
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Bank Saderat Plc",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Castle Trust Capital PLC",
+   "missing": [
+    "FY2023",
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2021"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Griffin Bank Ltd",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "HAMPDEN & CO PLC",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Habib Bank Zurich Plc",
+   "missing": [
+    "FY2025",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "J.P. Morgan Europe Limited",
+   "missing": [
+    "FY2022",
+    "FY2021"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Julian Hodge Bank Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "Methodist Chapel Aid Limited",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "RCI Bank UK Limited",
+   "missing": [
+    "FY2021",
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "REDWOOD BANK LIMITED",
+   "missing": [
+    "FY2025",
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017"
+   ],
+   "n": 2,
+   "all5": false
+  },
+  {
+   "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "BANK OF CEYLON (UK) LIMITED",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Bank of Africa United Kingdom Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "C. HOARE & CO.",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "CAF BANK LIMITED",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Cambridge & Counties Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016",
+    "FY2015"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Citibank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FidBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "FirstBank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Gatehouse Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Guaranty Trust Bank (UK) Limited",
+   "missing": [
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Jordan International Bank Plc",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "MONUMENT BANK LIMITED",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Egypt (UK) Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "National Bank of Kuwait (International) Plc",
+   "missing": [
+    "FY2023"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Philippine National Bank (Europe) Plc",
+   "missing": [
+    "FY2022"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "State Bank Of India (UK) Limited",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "The Access Bank UK Limited",
+   "missing": [
+    "FY2024"
+   ],
+   "ever": [
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Triodos Bank UK Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "UNION BANK OF INDIA (UK) LIMITED",
+   "missing": [
+    "FY2026"
+   ],
+   "ever": [
+    "FY2025",
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Union Bancaire Priv\u00e9e (UK) Limited",
+   "missing": [
+    "FY2020"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "United National Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020",
+    "FY2019",
+    "FY2018",
+    "FY2017",
+    "FY2016"
+   ],
+   "n": 1,
+   "all5": false
+  },
+  {
+   "bank": "Weatherbys Bank Limited",
+   "missing": [
+    "FY2025"
+   ],
+   "ever": [
+    "FY2024",
+    "FY2023",
+    "FY2022",
+    "FY2021",
+    "FY2020"
+   ],
+   "n": 1,
+   "all5": false
+  }
+ ]
+}

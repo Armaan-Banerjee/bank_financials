@@ -399,7 +399,9 @@ class NewStatementSheetExtraction(unittest.TestCase):
         ("RWA by risk category"), once under "Credit risk" and once under
         "Counterparty credit risk (CCR)" - section-prefixing alone can't
         tell these apart, only tracking the nearest non-"Of which" parent
-        row can."""
+        row can. The parent is itself still section-prefixed (see the
+        cross-section test below), so within one section that prefix is
+        constant and the parent label is what actually disambiguates."""
         bw = BankWorkbook(bank_name="OFWHICHBANK", years=["FY2025"], header_color="336699")
         bw.add_rwa_breakdown_sheet(
             title="OFWHICHBANK — RWA Breakdown", subtitle="Test fixture",
@@ -416,8 +418,51 @@ class NewStatementSheetExtraction(unittest.TestCase):
         bw.save(path)
         _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
         by_label = {r["row_label"]: r["value_numeric"] for r in extracted_rows if r["sheet"] == "RWA Breakdown"}
-        self.assertEqual(by_label["Credit risk (excluding CCR) - Of which: standardised approach"], 6186.0)
-        self.assertEqual(by_label["Counterparty credit risk (CCR) - Of which: standardised approach"], 35.0)
+        self.assertEqual(
+            by_label["RWA by risk category - Credit risk (excluding CCR) - Of which: standardised approach"], 6186.0)
+        self.assertEqual(
+            by_label["RWA by risk category - Counterparty credit risk (CCR) - Of which: standardised approach"],
+            35.0)
+
+    def test_of_which_sub_item_disambiguated_across_sections_with_identical_parent(self):
+        """Reproduces FirstBank UK's real RWA Breakdown: two different
+        SECTION blocks (different provenance/basis, disjoint years) each
+        contain a row literally labelled "Counterparty Credit Risk (CCR)"
+        with an "Of which CVA" sub-item under it. A parent-only prefix
+        (dropping the section) would give both "Of which CVA" rows the
+        identical composite label, and since bank_workbook.py always
+        spans every DATA row across every year (blank outside its own
+        section), deduplicate() would see the same (row_label, year) key
+        with one blank and one real value for years outside a section -
+        a spurious mixed-type conflict that crashes deduplicate() outright
+        rather than just mis-attributing a fact."""
+        bw = BankWorkbook(bank_name="TWOSECTIONBANK", years=["FY2025", "FY2024"], header_color="336699")
+        bw.add_rwa_breakdown_sheet(
+            title="TWOSECTIONBANK — RWA Breakdown", subtitle="Test fixture",
+            rows=[
+                ("SECTION", "UK OV1 template (FY2025)", {}),
+                ("DATA", "Counterparty Credit Risk (CCR)", {"FY2025": 4007}),
+                ("DATA", "Of which CVA", {"FY2025": 611}),
+                ("SECTION", "Table 11 EU OV1 (FY2024)", {}),
+                ("DATA", "Counterparty Credit Risk (CCR)", {"FY2024": 13681}),
+                ("DATA", "Of which CVA", {"FY2024": 1921}),
+            ],
+            sources_text="Test fixture.",
+        )
+        path = os.path.join(self.tmpdir, "TWOSECTIONBANK FINANCIALS.xlsx")
+        bw.save(path)
+        _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
+        by_label = {
+            (r["row_label"], r["year"]): r["value_numeric"]
+            for r in extracted_rows if r["sheet"] == "RWA Breakdown" and r["value_numeric"] != ""
+        }
+        self.assertEqual(by_label[("UK OV1 template (FY2025) - Counterparty Credit Risk (CCR) - Of which CVA",
+                                    "FY2025")], 611)
+        self.assertEqual(by_label[("Table 11 EU OV1 (FY2024) - Counterparty Credit Risk (CCR) - Of which CVA",
+                                    "FY2024")], 1921)
+        # Must not raise - this is the crash this test exists to prevent.
+        deduped, n_dup_groups, _ = deduplicate(extracted_rows)
+        self.assertEqual(len(deduped), len(extracted_rows))
 
     def test_genuinely_blank_data_row_is_not_mistaken_for_a_section(self):
         """Reproduces GIB UK's real Asset Quality: "Stage 3 (Classified

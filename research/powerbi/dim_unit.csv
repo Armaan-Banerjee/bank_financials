@@ -21,13 +21,14 @@ m_conv_from_eur,"£m, conv. from EUR"
 m_bank_s_disclosed_capital_base_consisting_of_cet1_capital,"£m (Bank's disclosed capital base, consisting of CET1 Capital)"
 m_cet1_capital_no_at1_instruments,£m (= CET1 Capital; no AT1 instruments)
 m_cet1_capital_no_tier_2_instruments,£m (= CET1 Capital; no Tier 2 instruments)
+m_converted_from_000_at_each_year_s_own_period_end_spot_rate,£m (converted from €'000 at each year's own period-end spot rate)
 m_conv_from_eur,£m (conv. from EUR)
 solo_consolidated_basis_m,"Solo-consolidated basis, £m"
 consolidated_basis_m,"Consolidated basis, £m"
 000_cet1_capital_no_at1_instruments,£'000 (= CET1 capital; no AT1 instruments)
 000_cet1_capital_no_at1_instruments,£'000 (= CET1 Capital; no AT1 instruments)
 000_cet1_capital_no_tier_2_instruments,£'000 (= CET1 Capital; no Tier 2 instruments)
-000_group_consolidated_basis_fy2021_standalone_entity,"£'000, Group/consolidated basis (FY2021: standalone entity)"
+000_group_consolidated_basis_fy2020_fy2021_standalone_entity,"£'000, Group/consolidated basis (FY2020-FY2021: standalone entity)"
 m_cet1_capital_no_at1_instruments,£m (= CET1 capital; no AT1 instruments)
 m_cet1_capital_no_tier_2_instruments,£m (= CET1 capital; no Tier 2 instruments)
 cb_consolidated_basis_m,"CB consolidated basis, £m"
@@ -35,6 +36,7 @@ m_conv_from_usd,"£m, conv. from USD"
 m_conv_from_usd_see_note,£m (conv. from USD) - see note
 m_conv_from_usd,£m (conv. from USD)
 consolidated_basis_000,"Consolidated basis, £'000"
+000_unaudited,£'000 (unaudited)
 000_fy2021_conv_from,"$'000, FY2021 conv. from £"
 000,$'000
 uk_group_consolidated_basis_m,"UK Group consolidated basis, £m"
@@ -46,6 +48,7 @@ usd_000,USD'000
 solo_basis_000,"Solo basis, £'000"
 group_consolidated_basis_usd_m,"Group/consolidated basis, USD m"
 usd_m,USD m
+gbp,GBP
 bank_solo_basis_000,"Bank/solo basis, £'000"
 us_000,US$'000
 eur_000,EUR '000
@@ -61,10 +64,11 @@ rfb_group_consolidated_basis_m,"RFB Group consolidated basis, £m"
 gbp_000,GBP'000
 not_disclosed,Not disclosed
 smbc_bi_basis_m_conv_from_usd,"SMBC BI basis, £m (conv. from USD)"
-million,$million / %
+million,$million
 tml_group_basis_000,"TML Group basis, £'000"
 cad_mm,CAD MM
 cad_000,CAD'000
+gbp_millions_as_narrated_in_the_strategic_report,GBP millions (as narrated in the Strategic Report)
 tbuk_entity_level_basis_000,"TBUK entity-level basis, £'000"
 company_basis,"Company basis, £"
 vanquis_banking_group_consolidated_basis_m,"Vanquis Banking Group consolidated basis, £m"

@@ -51,6 +51,15 @@ def p3_sources(extra=""):
         "for further capital/risk detail):\n"
         f"FY2025/FY2024: Full accounts to 31 Dec 2025, p.44 (KPIs table, CET1 only) - {AR2025_URL}\n"
         f"FY2023/FY2022: Full accounts to 31 Dec 2023, p.19 (Solvency Risk narrative) - {AR2023_URL}\n"
+        "RE-VERIFIED 2026-09-12 (independent disclosure audit): OSB Group's own Pillar 3 disclosures were "
+        "searched for Charter Court entity-level data, since CCFSL is one of the group's two PRA-regulated "
+        "banking entities and the OSB Group Pillar 3 confirms it must calculate and maintain capital on an "
+        "individual as well as a consolidated basis (Article 436(h) CRR section). The 2022 edition does "
+        "disclose CCFSL's OWN solo LCR alongside OSB's - now used on the LCR sheet - but no CCFSL solo "
+        "CET1/Tier 1/Total Capital amount, RWA figure or RWA category breakdown appears in any edition "
+        "checked (2022, Q4 2023, Q4 2024); those tables are presented on a Group consolidated basis only. "
+        "Group figures are deliberately NOT substituted for this entity. Editions checked are listed on "
+        "the LCR sheet.\n"
         + ("\n" + extra if extra else "")
     )
 
@@ -389,9 +398,45 @@ metric(
          "FY2021 not found within this build's research budget.",
 )
 
+metric(
+    "LCR", "%",
+    [("Liquidity coverage ratio, CCFSL solo (entity) basis",
+      {"FY2022": "148%", "FY2021": "158%"})],
+    note="RECOVERED 2026-09-12. These are Charter Court's OWN solo entity ratios, not OSB Group figures: "
+         "the OSB Group Pillar 3 states them separately for each of the group's two banking entities "
+         "(\"OSB had a Liquidity Coverage Ratio (LCR) of 229% and CCFSL 148% (31 December 2021: 240% and "
+         "158%, respectively) and the Group LCR was 185%\"). The same document confirms CCFSL is required "
+         "to calculate and maintain capital and liquidity on an individual as well as consolidated basis, "
+         "and that liquidity risk management is carried out at solo bank level. FY2025/FY2024/FY2023 are "
+         "blank because OSB Group changed its presentation from the FY2023 edition onward to disclose only "
+         "a single Group 12-month-average LCR (197.1% FY2023, 188.0% FY2024, 169.5% FY2025) with no CCFSL "
+         "solo split - verified directly in the Q4 2023, Q4 2024 and Q4 2025 editions. Those Group figures "
+         "are NOT substituted here: the entity-basis rule applies.",
+    extra_source=(
+        "LCR (CCFSL solo entity basis) - OSB Group Pillar 3 Disclosures 2022, 'Liquidity Ratio' section: "
+        "https://osb.co.uk/media/cqepdkda/osb-group-pillar-3-disclosures-2022.pdf (FY2022 148%, with "
+        "FY2021 158% as that document's own comparative). Checked and found NOT to carry a CCFSL solo "
+        "LCR: Q4 2023 edition https://www.osb.co.uk/media/kn3nulae/q4-2023-osb-pillar-3-disclosures.pdf "
+        "and Q4 2024 edition https://www.osb.co.uk/media/143pzceq/q4-2024-osbg-pillar-3-disclosure.pdf - "
+        "both give only a Group-level 12-month average LCR.\n"
+        "MAXIMUM-EFFORT RE-SEARCH 2026-09-15 (prior verdict treated as unproven). OSB's full Pillar 3 "
+        "archive was enumerated live from https://osb.co.uk/investors/results-reports-presentations/ - 30 "
+        "editions spanning 2012 to Q2 2026. The FY2025 year-end edition was located and downloaded for the "
+        "first time (Q4 2025: https://www.osb.co.uk/media/hbymiii2/q4-2025-osbg-pillar-3-disclosure.pdf) "
+        "along with Q4 2024 and Q4 2023, and all three were text-extracted and searched in full. RESULT: "
+        "CCFSL is named throughout all three (risk appetite, solo liquidity management, survival-horizon "
+        "days, the brand/entity list) but carries NO attributed numeric ratio anywhere - a regex for any "
+        "percentage within 120 characters of 'CCFSL' or 'solo' returns ZERO matches in all three documents. "
+        "Every LCR figure is explicitly Group: 'The Group had a 12-month average Liquidity Coverage Ratio "
+        "(LCR) of 169.5% as at 31 December 2025' (Q4 2025), 188.0% (Q4 2024), 197.1% (Q4 2023). The "
+        "presentation change from the FY2023 edition onward is therefore confirmed on three independent "
+        "year-end documents, and FY2023-FY2025 CCFSL solo LCR does not exist to be found."
+    ),
+)
+
 bw.add_not_disclosed_metric_sheets(
-    ["LCR", "NSFR", "MREL Ratio"], p3_sources(),
-    per_note={m: NOT_DISCLOSED_NOTE for m in ["LCR", "NSFR", "MREL Ratio"]},
+    ["NSFR", "MREL Ratio"], p3_sources(),
+    per_note={m: NOT_DISCLOSED_NOTE for m in ["NSFR", "MREL Ratio"]},
 )
 
 # ---------------------------------------------------------------

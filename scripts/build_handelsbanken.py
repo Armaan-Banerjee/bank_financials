@@ -497,10 +497,15 @@ RWA_BREAKDOWN_SOURCES = (
     f"FY2025 & FY2024: Risk and Capital Information according to Pillar 3 - 2025, p.9 - {P3_2025_URL}\n"
     f"FY2023 & FY2022: Pillar 3 Disclosure 2023, p.7 - {P3_2023_URL}\n"
     f"FY2020 & FY2019: Report and Financial Statements for the year ended 31 December 2020, p.50 - {AA2020_URL}\n"
-    f"FY2018: Report and Financial Statements for the 9 month period ended 31 December 2018, p.21 - {AA2018_URL}\n\n"
+    f"FY2018: Report and Financial Statements for the 9 month period ended 31 December 2018, p.21 - {AA2018_URL}\n"
+    f"FY2021: Report and Financial Statements for the year ended 31 December 2021, 'Capital requirements' section, "
+    f"the table introduced 'The following table summarises the Bank's RWAs', p.36 - {AR2021_URL}. This table breaks "
+    f"RWA into exactly the same 3 categories as the FY2018-FY2020 tables below (Credit risk according to "
+    f"standardised approach / Operational risk according to BIA / Market risks, explicitly nil), on the same "
+    f"entity-own (Bank=Group) basis per FY2021_BASIS_NOTE - directly disclosed, not derived. Total ties exactly to "
+    f"the Total RWAs sheet's own FY2021 figure (12,176).\n\n"
     + ENTITY_NOTE + "\n\n"
-    + FY2021_BASIS_NOTE + " No RWA-by-category breakdown exists for FY2021 for the same reason - left blank rather "
-    "than guessed. FY2018-FY2020's own tables only ever break RWA into 'Credit risk according to standardised "
+    + FY2021_BASIS_NOTE + " FY2018-FY2020's own tables only ever break RWA into 'Credit risk according to standardised "
     "approach' and 'Operational risk according to BIA' (Market risk RWA is explicitly nil in all three years - the "
     "Bank holds no trading book - and no 'Amounts below thresholds for deduction' line existed yet); mapped to the "
     "'Credit risk (excluding CCR)' and 'Operational risk' rows below respectively. Totals reconcile exactly to the "
@@ -509,10 +514,10 @@ RWA_BREAKDOWN_SOURCES = (
 
 rwa_breakdown_rows = [
     ("SECTION", "Risk weighted exposure amounts (UK OV1)", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 10634, "FY2024": 10184, "FY2023": 9940, "FY2022": 10364, "FY2020": 12483, "FY2019": 14320, "FY2018": 12337}),
-    ("DATA", "Operational risk", {"FY2025": 1675, "FY2024": 1421, "FY2023": 1126, "FY2022": 1040, "FY2020": 965, "FY2019": 867, "FY2018": 786}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 10634, "FY2024": 10184, "FY2023": 9940, "FY2022": 10364, "FY2021": 11181, "FY2020": 12483, "FY2019": 14320, "FY2018": 12337}),
+    ("DATA", "Operational risk", {"FY2025": 1675, "FY2024": 1421, "FY2023": 1126, "FY2022": 1040, "FY2021": 995, "FY2020": 965, "FY2019": 867, "FY2018": 786}),
     ("DATA", "Amounts below thresholds for deduction (subject to 250% risk weight)", {"FY2025": 2, "FY2024": 2, "FY2023": 4, "FY2022": 10}),
-    ("TOTAL", "Total RWA", {"FY2025": 12309, "FY2024": 11605, "FY2023": 11066, "FY2022": 11404, "FY2020": 13448, "FY2019": 15187, "FY2018": 13123}),
+    ("TOTAL", "Total RWA", {"FY2025": 12309, "FY2024": 11605, "FY2023": 11066, "FY2022": 11404, "FY2021": 12176, "FY2020": 13448, "FY2019": 15187, "FY2018": 13123}),
 ]
 
 bw.add_rwa_breakdown_sheet(

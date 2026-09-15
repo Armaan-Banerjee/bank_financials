@@ -235,9 +235,62 @@ bw.add_asset_quality_sheet(
 )
 
 NOT_DISCLOSED = "Not publicly disclosed at Rathbones Investment Management Limited entity level. Rathbones Group Plc's official Pillar 3 reports are consolidated and state that no large subsidiary meets the definition requiring individual disclosure; group metrics must not be substituted for this Company's metrics. See the source note."
-_pillar3_before_rwa = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs"]
+
+# Re-verified 2026-09-15 against the FY2025 Pillar 3, which confirms the
+# consolidated-only position verbatim: "Disclosures are made on a consolidated
+# group level, as the group have no large subsidiaries meeting the requirements
+# for individual disclosure under the definition within CRR Article 4(146)."
+# That document also records that Rathbones "is required to calculate and
+# monitor the ratio on a RIM-solo and group consolidated basis, reporting the
+# positions quarterly" - so a RIM-solo position exists but goes to the
+# regulator only and is not published.  The Pillar 3 templates therefore stay
+# blank at entity level.
+#
+# BUT the Company's OWN statutory accounts do disclose one entity-level
+# regulatory figure, which had been missed: a single own-funds total in the
+# capital-management note.  That is transcribed into Total Capital below.
+RCR_SOURCES = CASH_SOURCES + (
+    "\n\nENTITY-LEVEL REGULATORY CAPITAL RESOURCES (added 2026-09-15). Each year's own Annual Report and Financial "
+    "Statements, capital-management note (scanned filings - figures read by OCR at 300-400 dpi and confirmed "
+    "visually):\n"
+    "FY2025 and FY2024 comparative: 'At 31 December 2025, the Company's regulatory capital resources, including "
+    "retained earnings for 2025, were GBP467,062,000 (2024: GBP261,190,000).' - " + AR2025_URL + "\n"
+    "FY2024 own-year, and FY2023 comparative: 'At 31 December 2024 ... were GBP261,190,000 (2023: "
+    "GBP267,182,000).' - " + AR2024_URL + "\n"
+    "FY2023 own-year, and FY2022 comparative: 'At 31 December 2023 ... were GBP267,182,000 (2022: "
+    "GBP256,378,000).' - " + AR2023_URL + "\n"
+    "FY2021 own-year: 'At 31 December 2021 ... were GBP237,897,000 (2020: GBP247,786,000).' - " + AR2021_URL + "\n"
+    "VALIDATION: every year except FY2022 and FY2025 appears in two separate filings and agrees in both - FY2024 "
+    "reads GBP261,190,000 in both the FY2025 comparative and the FY2024 own-year note, and FY2023 reads "
+    "GBP267,182,000 in both the FY2024 comparative and the FY2023 own-year note.\n"
+    "BASIS: this is the Company's total regulatory capital RESOURCES (own funds) as defined in its own note - "
+    "'accounting capital and certain deductions from accounting capital, the latter largely in respect of "
+    "intangible assets', measured against Pillar I and Pillar II requirements under the PRA's application of CRD. "
+    "The note gives NO tier split and NO risk-weighted assets, so CET1 Capital, Tier 1 Capital, all three capital "
+    "ratios and Total RWAs remain blank rather than derived - in particular this figure has NOT been copied into "
+    "CET1 or Tier 1, because the Company nowhere states that its capital is wholly CET1."
+)
+
+_pillar3_pre = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio"]
+_pillar3_post = ["Total Capital Ratio", "Total RWAs"]
 _pillar3_after_rwa = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
-bw.add_not_disclosed_metric_sheets(_pillar3_before_rwa, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_before_rwa})
+bw.add_not_disclosed_metric_sheets(_pillar3_pre, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_pre})
+bw.add_metric_sheet(
+    "Total Capital",
+    "£'000",
+    [("Regulatory capital resources (own funds) — Company entity level",
+      {"FY2025": 467062, "FY2024": 261190, "FY2023": 267182, "FY2022": 256378, "FY2021": 237897})],
+    RCR_SOURCES,
+    note="ENTITY-LEVEL own-funds total taken from the Company's own statutory accounts, not from a Pillar 3 "
+         "template - Rathbones Group Plc's Pillar 3 is consolidated only and discloses nothing at this entity's "
+         "level. No tier split or RWA accompanies it, so no ratio on this sheet or the Total Capital Ratio / Total "
+         "RWAs sheets is derivable from it. The FY2024-to-FY2025 near-doubling is genuine and reflects the "
+         "migration of Investec Wealth & Investment clients into this entity, which also drives the Balance Sheet "
+         "and equity jump visible on the Overview sheet.",
+    first_col_width=60,
+    source_height=300,
+)
+bw.add_not_disclosed_metric_sheets(_pillar3_post, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_post})
 bw.add_rwa_breakdown_sheet(
     title="Rathbones Investment Management Limited — RWA Breakdown",
     subtitle="Not publicly disclosed at entity level.",

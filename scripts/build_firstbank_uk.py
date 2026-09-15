@@ -107,8 +107,33 @@ def p3_sources(page2024=None, page2023=None, page2022=None, page2021=None, table
     lines.append(f"FY2020/FY2019: Pillar 3 Disclosures (as FBN Bank (UK) Limited), 31st December 2021, Table 1 "
                  f"comparative columns (£ as originally reported; FY2020/FY2019 balance metrics converted at "
                  f"year-end spot rates; ratios unchanged) - {P3_2021_URL}\n")
-    lines.append("FY2025: not yet published as of this workbook's build date - no FY2025 Pillar 3 Disclosures "
-                 "document has been released.\n")
+    lines.append("FY2025: no FY2025 Pillar 3 Disclosures document has been published. The Bank has in fact "
+                 "withdrawn its Pillar 3 documents from its own website entirely - even the FY2024 URL cited "
+                 "above (last archived 18 October 2025) now returns 404, and no Pillar 3 file appears anywhere "
+                 "under fbnbank.co.uk/wp-content/uploads/2026/, in the site's WordPress media index, or in the "
+                 "Wayback CDX index for the domain (whose newest Pillar 3 capture is the Dec-2024 report). The "
+                 "FY2025 figures populated below therefore come from the Bank's own audited Annual Report and "
+                 "Financial Statements for the year ended 31 December 2025, a DocuSign-flattened scan with no "
+                 "text layer, read via OCR at 400 dpi:\n"
+                 "  - CET1/Tier 1 capital and Total capital: note 32 'Capital management', p.109 (printed), "
+                 "PDF p.112 - 'Tier one capital' $413,014,692 and 'Total available capital' $451,590,815, "
+                 "restated here in $'000.\n"
+                 "  - Total RWAs, CET1 ratio and Total capital ratio: Strategic Report, 'Capital and Liquidity "
+                 "Management' table, p.8 (printed), PDF p.11 - Risk Weighted Assets $1,879mn, CET 1 Ratio "
+                 "22.0%, Total Capital Adequacy Ratio 24.0%.\n"
+                 f"  - Source document: {AR2025_URL}\n"
+                 "Both tables are on the same basis as the Pillar 3 KM1 they replace: their own FY2024 "
+                 "comparative columns (Tier one capital $363,762,866, Total available capital $414,073,903, "
+                 "RWAs $1,396mn, CET 1 Ratio 26.1%, Total Capital Adequacy Ratio 29.7%) match this workbook's "
+                 "FY2024 Pillar 3 figures ($363,763k, $414,074k, $1,395,598k, 26.07%, 29.67%) exactly. The "
+                 "Strategic Report table also labels the $413mn figure 'CET 1 Capital' while note 32 labels the "
+                 "same amount 'Tier one capital', which is why FY2025 is recorded on both the CET1 Capital and "
+                 "Tier 1 Capital sheets.\n"
+                 "Metrics the Annual Report does NOT print, left blank for FY2025 rather than derived: Tier 1 "
+                 "ratio (only the CET1 ratio is labelled, even though the Bank holds no AT1), leverage ratio, "
+                 "LCR and NSFR. In particular the Strategic Report's 'Liquidity Capital Ratio (Pillar 1)' "
+                 "(FY2025 282%, FY2024 278%) is NOT the LCR and has not been used as one: this workbook's "
+                 "FY2024 LCR from the Pillar 3 report is 409.09%, so that line is a different measure.\n")
     return "".join(lines)
 
 
@@ -686,7 +711,7 @@ def metric(name, unit, rows_data, sources_text, note=None):
 metric(
     "CET1 Capital", "$'000",
     [("Common Equity Tier 1 (CET1) capital", {
-        "FY2024": 363763, "FY2023": 309460, "FY2022": 276585, "FY2021": 272998,
+        "FY2025": 413015, "FY2024": 363763, "FY2023": 309460, "FY2022": 276585, "FY2021": 272998,
         "FY2020": 248055, "FY2019": 227974,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
@@ -697,7 +722,7 @@ metric(
 metric(
     "CET1 Ratio", "%",
     [("Common Equity Tier 1 (CET1) ratio", {
-        "FY2024": "26.07%", "FY2023": "25.05%", "FY2022": "22.47%", "FY2021": "17.79%",
+        "FY2025": "22.0%", "FY2024": "26.07%", "FY2023": "25.05%", "FY2022": "22.47%", "FY2021": "17.79%",
         "FY2020": "20.20%", "FY2019": "19.49%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
@@ -706,7 +731,7 @@ metric(
 metric(
     "Tier 1 Capital", "$'000",
     [("Tier 1 capital", {
-        "FY2024": 363763, "FY2023": 309460, "FY2022": 276585, "FY2021": 272998,
+        "FY2025": 413015, "FY2024": 363763, "FY2023": 309460, "FY2022": 276585, "FY2021": 272998,
         "FY2020": 248055, "FY2019": 227974,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
@@ -725,7 +750,7 @@ metric(
 metric(
     "Total Capital", "$'000",
     [("Total capital (TC = T1 + T2)", {
-        "FY2024": 414074, "FY2023": 353999, "FY2022": 320951, "FY2021": 326148,
+        "FY2025": 451591, "FY2024": 414074, "FY2023": 353999, "FY2022": 320951, "FY2021": 326148,
         "FY2020": 295303, "FY2019": 270979,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
@@ -734,7 +759,7 @@ metric(
 metric(
     "Total Capital Ratio", "%",
     [("Total capital ratio", {
-        "FY2024": "29.67%", "FY2023": "28.65%", "FY2022": "26.08%", "FY2021": "21.25%",
+        "FY2025": "24.0%", "FY2024": "29.67%", "FY2023": "28.65%", "FY2022": "26.08%", "FY2021": "21.25%",
         "FY2020": "24.05%", "FY2019": "23.17%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
@@ -743,11 +768,18 @@ metric(
 metric(
     "Total RWAs", "$'000",
     [("Total risk-weighted exposure amounts", {
-        "FY2024": 1395598, "FY2023": 1235478, "FY2022": 1230686, "FY2021": 1534738,
+        "FY2025": 1879000, "FY2024": 1395598, "FY2023": 1235478, "FY2022": 1230686, "FY2021": 1534738,
         "FY2020": 1228011, "FY2019": 1169414,
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
-    note="FY2022 corrected to $1,230,686k (2026-09-03 follow-up): the Bank's FY2023 Pillar 3 Disclosures "
+    note="PRECISION NOTE - FY2025 is the one year here that is NOT exact to the nearest $'000. Every other "
+         "year comes from a Pillar 3 KM1 table stated in $'000; FY2025 has no Pillar 3 report and its only "
+         "published RWA figure is the Strategic Report's 'Risk Weighted Assets $1,879mn', rounded to the "
+         "nearest $ million, shown here as $1,879,000k. Treat the last three digits as rounding, not precision. "
+         "The rounding is corroborated by the same table's own ratios: $413,015k/$1,879,000k = 21.98% against a "
+         "printed CET 1 Ratio of 22.0%, and $451,591k/$1,879,000k = 24.03% against a printed Total Capital "
+         "Adequacy Ratio of 24.0%.\n"
+         "FY2022 corrected to $1,230,686k (2026-09-03 follow-up): the Bank's FY2023 Pillar 3 Disclosures "
          "Table 1 (KM1) shows FY2022's own restated $ Total risk-weighted exposure amount as $1,230,686k, "
          "confirmed identical to Table 3 (OV1)'s FY2022 comparative in the same document - this workbook "
          "previously carried $1,019,070, which is actually the Bank's own as-originally-reported £'000 FY2022 "
@@ -755,50 +787,99 @@ metric(
 )
 
 RWA_BREAKDOWN_SOURCES = (
-    "Sources - FirstBank UK Limited Pillar 3 Disclosures, Table 2/3 'OV1 Risk Weighted Assets' (category-"
-    "level RWA breakdown):\n"
+    "Sources - FirstBank UK Limited Pillar 3 Disclosures, category-level RWA breakdown (all solo/individual "
+    "basis throughout - the Bank discloses Pillar 3 on an individual basis only, per its own 'solo basis'/"
+    "'individual basis' wording in every dated report below):\n"
     f"FY2024/FY2023: Pillar 3 Disclosures, 31st December 2024, p.5 (Table 2, $) - {P3_2024_URL}\n"
-    f"FY2023/FY2022 (as also shown in the prior year's own report, $): Pillar 3 Disclosures, 31st December "
-    f"2023, p.5 (Table 3, $) - {P3_2023_URL}\n"
-    "FY2022/FY2021: genuinely not disclosed at category level - the FY2022 and FY2021 Pillar 3 Disclosures "
-    "documents contain no OV1-style RWA-by-category table, confirmed by reading both documents in full; only "
-    "the aggregate Total RWA figure appears (in the KM1 Key Metrics table, see the Total RWAs sheet).\n\n"
-    "This OV1 table's own FY2022 Total ($1,230,686k) matches the Total RWAs metric sheet's FY2022 figure "
-    "exactly (corrected 2026-09-03 - see that sheet's own note for the earlier £/$ mislabelling this fixed).\n"
+    f"FY2023/FY2022 (2026-09-12 CORRECTION - a real FY2022 category breakdown DOES exist; the prior 'genuinely "
+    f"not disclosed' claim below was wrong): Pillar 3 Disclosures, 31st December 2023, Table 3 'OV1 Risk "
+    f"Weighted Assets', p.5 (both the FY2023 own-year column and the FY2022 comparative column, both already "
+    f"in $'000, the Bank's own restatement) - {P3_2023_URL} (live URL now 404s; re-fetched via Wayback Machine "
+    "archive, snapshot 20240527034030). FY2022 column: Credit risk (excl. CCR) $967,989k, CCR $23,857k "
+    "(standardised $23,857k, of which CVA $5,202k), Settlement risk $55k, Market risk $98,823k, Operational "
+    "risk $134,759k, Total $1,230,686k - ties exactly to the Total RWAs sheet's existing FY2022 figure.\n\n"
+    "(The earlier claim that the FY2022 Pillar 3 Disclosures document itself, as FBN Bank (UK) Limited, 31st "
+    "December 2022, has no OV1 table was independently re-checked and is FALSE: that document's own Table 9 "
+    "'UK OV1 - Overview of RWAs' (p.23, via Wayback Machine snapshot 20231206084043, the live URL also now "
+    "404s) discloses the same FY2022 year natively in £'000: credit risk £801,544k, CCR £19,755k (of which CVA "
+    "£4,308k), settlement risk £46k, market risk £81,831k, operational risk £111,587k, total £1,019,070k - a "
+    "different total from the $1,230,686k figure above because this is the £-denominated table pre-dating the "
+    "Bank's later $ restatement; not used here since the $ comparative in the FY2023 report is the more "
+    "directly comparable, already-consistent-currency source, but this independently confirms a genuine OV1 "
+    "category table did exist for FY2022 all along - it was simply not found by the earlier research pass.)\n\n"
+    "FY2021 (2026-09-08 follow-up - found where the earlier pass missed it): Pillar 3 Disclosures (as FBN Bank "
+    f"(UK) Limited), 31st December 2021, Table 9 'UK OV1 - Overview of RWAs' (own-year 2021 column, £'000) - "
+    f"{P3_2021_URL} (via Wayback Machine archive - the live fbnbank.co.uk copy now 404s). This table's own "
+    "Total (£1,137,015k) does not tie to this same document's own KM1 Key Metrics table (Table 6: £1,135,077k, "
+    "the figure the Total RWAs sheet is built from) - a £1,938k / 0.17% discrepancy internal to the Bank's own "
+    "FY2021 report between its two RWA tables. Both are the Bank's own genuine disclosures on the same solo "
+    "basis; this workbook flags rather than resolves the mismatch. £ converted to $ at the FY2021 year-end "
+    "spot rate (£1 = $1.3521, see CURRENCY NOTE); the DATA rows below sum to $1,537,358k, i.e. the $ "
+    "equivalent of this table's own £1,137,015k Total, not the Total RWAs sheet's $1,534,738k.\n\n"
+    "FY2020/FY2019 (2026-09-08 follow-up): each year's own dedicated Pillar 3 report, both found where the "
+    "earlier pass missed them:\n"
+    f"  FY2020: Pillar 3 Disclosures (as FBN Bank (UK) Limited), 31 December 2020, p.18, Table 11 'EU OV1 - "
+    f"Overview of RWAs' (own-year 2020 column, £'000) - {P3_2020_URL} (via Wayback Machine archive). Converted "
+    "to $ at the FY2020 year-end spot rate (£1 = $1.3661); DATA rows sum to $1,228,011k, matching the Total "
+    "RWAs sheet's FY2020 figure exactly.\n"
+    f"  FY2019: Pillar 3 Disclosures (as FBN Bank (UK) Limited), 31st December 2019, p.4, Table 1 'Analysis of "
+    f"Pillar 1 Capital Requirement' (RWA column, £'000; this report predates the OV1 template and doesn't "
+    f"split CCR out of credit risk - shown as one combined 'Credit risk (including CCR)' row) - "
+    f"{P3_2019_URL} (via Wayback Machine archive). Converted to $ at the FY2019 year-end spot rate (£1 = "
+    "$1.3210); DATA rows sum to $1,169,415k, matching the Total RWAs sheet's FY2019 figure of $1,169,414k "
+    "within $1k rounding.\n"
     + CURRENCY_NOTE
 )
 
 bw.add_rwa_breakdown_sheet(
     title="FirstBank UK Limited — RWA Breakdown",
-    subtitle="UK OV1 template, $'000. See source note (incl. a flagged discrepancy vs the Total RWAs sheet) at bottom.",
+    subtitle="Solo basis throughout, $'000. FY2019 combines CCR into credit risk (pre-OV1 template report); "
+             "FY2021 carries a small flagged discrepancy vs the Total RWAs sheet (see source note). See source "
+             "note at bottom.",
     rows=[
+        ("SECTION", "UK OV1 template (FY2024-FY2021)", {}),
         ("DATA", "Credit risk (excluding CCR)", {
-            "FY2024": 1196695, "FY2023": 1060740,
+            "FY2024": 1196695, "FY2023": 1060740, "FY2022": 967989, "FY2021": 1293719,
         }),
         ("DATA", "Counterparty Credit Risk (CCR)", {
-            "FY2024": 4007, "FY2023": 8023,
+            "FY2024": 4007, "FY2023": 8023, "FY2022": 23857, "FY2021": 11788,
         }),
         ("DATA", "Of which CVA", {
-            "FY2024": 611, "FY2023": 922,
+            "FY2024": 611, "FY2023": 922, "FY2022": 5202, "FY2021": 1774,
         }),
         ("DATA", "Settlement risk", {
-            "FY2024": 30, "FY2023": 2,
+            "FY2024": 30, "FY2023": 2, "FY2022": 55, "FY2021": 14,
         }),
         ("DATA", "Market risk", {
-            "FY2024": 4235, "FY2023": 9945,
+            "FY2024": 4235, "FY2023": 9945, "FY2022": 98823, "FY2021": 80096,
         }),
         ("DATA", "Operational risk", {
-            "FY2024": 190020, "FY2023": 155846,
+            "FY2024": 190020, "FY2023": 155846, "FY2022": 134759, "FY2021": 149967,
         }),
         ("TOTAL", "Total RWAs", {
             "FY2024": 1395598, "FY2023": 1235478,
-            "FY2022": 1230686,  # OV1 table's own $ restatement - not category-broken-down, see DISCREPANCY NOTE
-            "FY2021": "Not publicly disclosed",  # aggregate-only, no category breakdown found - see source note
+            "FY2022": 1230686,  # now category-broken-down - see FY2022 note below (2026-09-12 re-verification)
+            "FY2021": 1537358,  # this table's own total - see source note re: discrepancy vs Total RWAs sheet
         }),
+        ("SECTION", "Table 11 EU OV1 (FY2020)", {}),
+        ("DATA", "Credit risk (excluding CCR)", {"FY2020": 1042450}),
+        ("DATA", "Counterparty Credit Risk (CCR)", {"FY2020": 13681}),
+        ("DATA", "Of which CVA", {"FY2020": 1921}),
+        ("DATA", "Settlement risk", {"FY2020": 0}),
+        ("DATA", "Market risk", {"FY2020": 18446}),
+        ("DATA", "Operational risk", {"FY2020": 151513}),
+        ("TOTAL", "Total RWAs", {"FY2020": 1228011}),
+        ("SECTION", "Table 1 Analysis of Pillar 1 Capital Requirement (FY2019, pre-OV1 template)", {}),
+        ("DATA", "Credit risk (including CCR)", {"FY2019": 1011400}),
+        ("DATA", "Settlement risk", {"FY2019": 8}),
+        ("DATA", "Market risk", {"FY2019": 14534}),
+        ("DATA", "Operational risk", {"FY2019": 142881}),
+        ("DATA", "Of which CVA", {"FY2019": 592}),
+        ("TOTAL", "Total RWAs", {"FY2019": 1169415}),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=68,
-    source_height=280,
+    source_height=340,
     unit_suffix=" ($'000)",
 )
 

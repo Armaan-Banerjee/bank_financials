@@ -396,7 +396,15 @@ metric("Tier 1 Capital","£m","Tier 1 capital",capital,"No AT1 capital is report
 metric("Tier 1 Ratio","%","Tier 1 ratio",cetr)
 metric("Total Capital","£m","Total regulatory capital",total)
 metric("Total Capital Ratio","%","Total capital ratio",tcr)
-metric("Total RWAs","£m","Total risk-weighted exposure amount",rwa)
+metric("Total RWAs","£m","Total risk-weighted exposure amount",rwa,
+       "FY2022 verified 2026-09-15 against the FY2022 Pillar III document itself: £7,515.0m is printed there "
+       "four separate times (UK KM1 row 4, own-funds template row 60, IFRS 9 transitional template row 7, and "
+       "the leverage section's 'Total risk exposure amount'), and Paragon's own printed FY2022 CET1 ratio of "
+       "16.3% matches it (1,221.8/7,515.0 = 16.26%; against the OV1 total it would be 16.0%). The same "
+       "document's UK OV1 total of £7,645.8m is the outlier and the FY2023 edition restates the FY2022 "
+       "category split to tie to £7,515.0m. The RWA Breakdown sheet deliberately keeps the "
+       "originally-published OV1 figures, so its Total row does not equal this sheet for FY2022 (nor for "
+       "FY2025, a separate Annual-Report-vs-Pillar-3 difference) - see that sheet's note. Do not reconcile.")
 
 # ---------------------------------------------------------------
 # RWA Breakdown - Pillar 3 UK OV1 template risk-type category split, placed
@@ -435,7 +443,26 @@ RWA_BREAKDOWN_SOURCES = (
     "restatement flagged rather than silently blended in. FY2021 predates the UK OV1 template - its "
     "'Total risk exposure' table categorises differently (Credit risk/Operational risk/Market risk/"
     "Other, no separate CCR line) but ties closely to the Total RWAs sheet (£6,836.9m vs £6,836.8m, "
-    "rounding)."
+    "rounding).\n\n"
+    "FY2022 RESOLVED 2026-09-15 (RWA cross-sheet sweep - do not re-flag). The FY2022 Pillar III "
+    "document was re-read in full to establish which of its two totals is the real one. Within that ONE "
+    "document, £7,515.0m is printed four times - UK KM1 row 4 'Total risk-weighted exposure amount', the "
+    "own-funds template row 60 'Total risk exposure amount', the IFRS 9 transitional template row 7 'Total "
+    "risk-weighted assets', and the leverage section's 'Total risk exposure amount (£m)' - while £7,645.8m "
+    "appears once, as UK OV1 row 29. The Total RWAs sheet's £7,515.0m is therefore the figure Paragon's own "
+    "FY2022 document states as its total, corroborated three ways, and the OV1 total is the outlier. This "
+    "is NOT the credit-risk-subtotal defect found at Redwood and Ghana International: the Total RWAs sheet "
+    "holds the larger, complete figure and the breakdown holds the inflated one, i.e. the opposite pattern. "
+    "The FY2022 OV1 is visibly internally inconsistent in several places - its own rows 1 and 2 disagree for "
+    "the 30 Sept 21 column (6,186.1 vs 6,247.1) and its CCR 'of which' rows sum to 256.9 against a printed "
+    "CCR line of 249.9. What the FY2023 edition's restatement shows is that OV1's credit-risk line "
+    "double-counted part of counterparty credit risk: the restated credit-risk figure (£6,632.5m) is lower "
+    "than the originally-published one (£6,763.3m) by exactly £130.8m, which is precisely the amount the "
+    "FY2022 OV1 reports on its own row 7, 'CCR - of which the standardised approach', and the OV1 total "
+    "exceeds the KM1 total by exactly that same £130.8m. Per this project's standing rule on restatements, "
+    "each year keeps its own contemporaneous edition's figures rather than being reconciled, so the "
+    "originally-published FY2022 OV1 numbers stay on this sheet as published and the Total RWAs sheet keeps "
+    "the KM1 figure. Neither is to be changed to make the two sheets agree."
 )
 rwa_breakdown_rows = [
     ("DATA", "Credit risk (excluding CCR)", {"FY2025": 7658.8, "FY2024": 7351.1, "FY2023": 6817.1, "FY2022": 6763.3, "FY2021": 6247.1}),

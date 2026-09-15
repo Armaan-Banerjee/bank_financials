@@ -8,11 +8,11 @@ from bank_workbook import BankWorkbook
 # Annual Report: "there is no requirement to prepare a statement of cash flows in
 # accordance with Financial Reporting Standard 101." No Statement of Cash Flows
 # exists in any year's accounts. Pillar 3 / capital disclosures are available for all
-# 12 years - FY2025's Total RWA/Capital/ratios come from the FY2025 Annual Report's own
-# Financial Highlights table (same table used for FY2021-FY2022; visually transcribed,
-# see AR2025_URL note below), not a separate Pillar 3 report - no FY2025 Pillar 3 OV1/
-# leverage/LCR/NSFR breakdown could be located, so those 4 sheets stay FY2021-FY2024
-# only. This follows the BNY Mellon International precedent: standard 13-sheet
+# 12 years. FY2025 is sourced from the ABCIB Pillar 3 Report 2025 on the CONSOLIDATED
+# basis (restated from solo on 2026-09-15 - see BASIS_NOTE), and FY2021/FY2022 from
+# each year's own dedicated Pillar 3 report (located 2026-09-15; an earlier pass had
+# wrongly recorded those as non-existent and used the Annual Report Financial
+# Highlights table instead). This follows the BNY Mellon International precedent: standard 13-sheet
 # structure, but the Cash Flow Statement sheet documents the exemption instead of line
 # items, and the Overview sheet omits the cash-flow chart.
 #
@@ -43,6 +43,13 @@ YEAR_LABEL = {y: y for y in YEARS}
 AR2024_URL = "https://www.bank-abc.com/en/ShareholderRelations/Annual%20Reports/ABC%20IB%20Annual%20Report%202024%20_%20Spreads%20for%20web.pdf"
 AR2022_URL = "https://www.bank-abc.com/en/ShareholderRelations/Annual%20Reports/ABCIB%20Annual%20Report%202022.pdf"
 P3_2024_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/ABCIB%20Pillar%203%20final%20Board%202024%20.pdf"
+# NOTE ON FINDING THIS FILE: the FY2025 edition abandons every previous naming
+# convention ("Bank-ABC-IB-Pillar-Report-2025.pdf", dropping both the "ABCIB"
+# prefix and the "3" from "Pillar 3"), so no filename permutation of the FY2024
+# URL locates it. It is linked only from the disclosures index at
+# https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/basel-pillar-3-disclosures
+# (note: the older .../Pages/Basel-Pillar-3-Disclosure.aspx path now 404s).
+P3_2025_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/Bank-ABC-IB-Pillar-Report-2025.pdf"
 P3_2023_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/BH2407109%20-%20Bank%20ABC%20Pillar%203%20Disclosures%202023%20-%20Final%20website%20version.pdf"
 # FY2025 Companies House filing (accounts made up to 31 December 2025, filed 2026) IS available - it is
 # scanned/image-only (no text layer), so figures below were transcribed by rendering each page to PNG and
@@ -64,6 +71,18 @@ AR2014_URL = "https://www.bank-abc.com/en/ShareholderRelations/Annual%20Reports/
 CH2016_URL = "https://find-and-update.company-information.service.gov.uk/company/02564490/filing-history/MzE3MDg4MzM5M2FkaXF6a2N4/document?format=pdf&download=0"
 CH2017_URL = "https://find-and-update.company-information.service.gov.uk/company/02564490/filing-history/MzE5OTA1ODc1MWFkaXF6a2N4/document?format=pdf&download=0"
 
+# FY2021/FY2022 dedicated Pillar 3 reports, located 2026-09-15 on the disclosures
+# index. An earlier pass recorded these years as having "no Pillar 3 document" and
+# sourced them from the Annual Report's Financial Highlights table instead; that was
+# wrong. Both documents exist, have a real text layer, and print a two-column
+# "Solo | Consolidated" Key Regulatory Metrics table (NOT a year-comparative table -
+# the single date column is Dec-21 / Dec-22 respectively). The Solo column is used
+# here, matching the basis of every other FY2014-FY2022 year in this workbook, and
+# its Tier 1 / Total capital ratios reproduce the existing Financial-Highlights
+# figures exactly (FY2021 16.7%/18.3%, FY2022 17.0%/18.2%) - the validation gate
+# that confirms the two sources describe the same basis.
+P3_2021_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/ABCIB-Pillar3Disclosure-2021.pdf"
+P3_2022_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/ABCIB-Pillar3Disclosure-2022.pdf"
 P3_2020_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/ABCIB-Pillar3Disclosure-2020.pdf"
 P3_2019_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/ABCIB-Pillar3Disclosure2019-postBRC.pdf"
 P3_2017_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel%20Pillars/Pillar-3-Disclosure-2018.pdf"  # filename says "2018" but the document's own title page and content are "Pillar 3 Report 2017" (FY2017 figures) - confirmed by opening it, not a mistaken re-use of the FY2018 file (a separate Pillar-3-Disclosure_2018.pdf exists with FY2018 figures, cited as P3_2018_URL)
@@ -100,20 +119,33 @@ EXEMPTION_NOTE = (
 CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE
 
 BASIS_NOTE = (
-    "FY2023-FY2024 shown on a CONSOLIDATED basis (ABCIB Pillar 3 Disclosures, UK KM1 template); every other year "
-    "(FY2014-FY2022, FY2025) is shown on a SOLO basis - FY2017-FY2020 from ABCIB's own dedicated Pillar 3 report "
-    "(which itself states its basis explicitly - only FY2020/FY2021's reports carry a Consolidated column "
-    "alongside Solo, and the Solo column is used throughout for continuity with the other years - see below), "
-    "FY2014-FY2016 and FY2021/FY2022/FY2025 from the Annual Report's own Financial Highlights table (no "
-    "consolidated Pillar 3 KM1-format disclosure exists for those years). See the Cash Flow Statement sheet's "
-    "entity note for detail. FY2025's Financial Highlights table (Total RWA £3,132m, Capital base £517m, Tier 1 "
-    "ratio 15.0%, Total ratio 16.5%) does not split CET1 from Tier 1, so CET1/Tier 1 capital £m figures for FY2025 "
-    "are CALCULATED (RWA x Tier 1 ratio), same convention as FY2014-FY2016/FY2021/FY2022 - see the CET1 Capital "
-    "sheet note. No Leverage Ratio, LCR or NSFR figure appears in any Financial-Highlights-sourced year "
-    "(FY2014-FY2016, FY2021/FY2022, FY2025) - those metrics are only available for FY2017-FY2020 (dedicated "
-    "Pillar 3 reports) and FY2023-FY2024. NSFR and MREL are not disclosed in ANY year 2014-2025, including the "
-    "dedicated FY2017-FY2020 Pillar 3 reports (which discuss NSFR only in qualitative/narrative terms, never as a "
-    "figure).\n\n"
+    "FY2023-FY2025 shown on a CONSOLIDATED basis (ABCIB Pillar 3 Disclosures, UK KM1 template); FY2014-FY2022 on "
+    "a SOLO basis - FY2017-FY2022 from ABCIB's own dedicated Pillar 3 report for each year (which itself states "
+    "its basis explicitly; the FY2020/FY2021/FY2022 reports carry a Consolidated column alongside Solo, and the "
+    "Solo column is used throughout for continuity with the other years), FY2014-FY2016 from the Annual Report's "
+    "own Financial Highlights table (no Pillar 3 report exists for those years). See the Cash Flow Statement "
+    "sheet's entity note for detail.\n\n"
+    "FY2025 BASIS RESTATEMENT (2026-09-15): FY2025's capital sheets originally used the Annual Report's solo "
+    "Financial Highlights table (Total RWA £3,132m, Capital base £517m, Tier 1 ratio 15.0%, Total ratio 16.5%), "
+    "which left the FY2025 column internally mixed once the Pillar 3 Report 2025 supplied consolidated "
+    "leverage/LCR/NSFR. On the user's explicit instruction the whole FY2025 column was moved onto the "
+    "CONSOLIDATED basis (CET1/Tier 1 £579.993m, Total capital £628.255m, RWAs £3,880.104m, CET1/Tier 1 ratio "
+    "14.9%, total capital ratio 16.2%), giving a clean consolidated run FY2023-FY2025. The superseded solo "
+    "figures are preserved: quoted in each capital sheet's note, and kept as a full risk-type split in the RWA "
+    "Breakdown sheet's SOLO block. Note this removes a presentational artefact - the old mixed column made RWAs "
+    "appear to FALL from FY2024 to FY2025, whereas like-for-like they rose.\n\n"
+    "FY2021/FY2022 SOURCE CORRECTION (2026-09-15): an earlier pass recorded these years as having no Pillar 3 "
+    "document and sourced them from the Annual Report Financial Highlights table. That was wrong - "
+    "ABCIB-Pillar3Disclosure-2021.pdf and -2022.pdf both exist on the disclosures index. Mining them added "
+    "Leverage Ratio and LCR for both years and NSFR for FY2022, and upgraded CET1/Tier 1 capital from CALCULATED "
+    "(RWA x Tier 1 ratio) to DIRECTLY DISCLOSED. Their ratio columns reproduce the previously-held Financial "
+    "Highlights figures exactly, confirming the two sources share a basis. CET1/Tier 1 capital £m remain "
+    "CALCULATED only for FY2014-FY2016, whose Financial Highlights tables do not split CET1 from Tier 1 - see "
+    "the CET1 Capital sheet note.\n\n"
+    "No Leverage Ratio or LCR figure is available for FY2014-FY2016 (no Pillar 3 report exists and the Financial "
+    "Highlights table carries neither metric). NSFR is disclosed from FY2022 onward only; FY2021 and earlier are "
+    "structurally absent because the UK had no NSFR requirement or disclosure template before 1 January 2022 "
+    "(PRA PS17/21 / PS22/21) - see the NSFR sheet note. MREL is not disclosed in any year.\n\n"
     "BASEL II/EARLY-CRD IV TERMINOLOGY CAVEAT: FY2014-FY2016's Financial Highlights tables report 'Risk asset "
     "ratio - Tier 1' and 'Risk asset ratio - Total' only - no separate CET1 concept is disclosed for those years "
     "(CET1 as a defined capital tier is a CRD IV/Basel III introduction phased in in the UK from 2014). Per this "
@@ -130,10 +162,24 @@ def p3_sources(extra=""):
         f"metrics template\", p.14 - {P3_2024_URL}\n"
         f"FY2023 (consolidated, as originally reported): ABC International Bank plc Pillar 3 Disclosures 2023, "
         f"Table 3: Key Regulatory Metrics, p.13 - {P3_2023_URL}\n"
-        f"FY2022 & FY2021 (solo): ABC International Bank plc Annual Report 2022, Financial Highlights, p.31 - "
-        f"{AR2022_URL}\n"
-        f"FY2025 (solo): ABC International Bank plc Annual Report 2025, Financial Highlights, p.20 (scanned "
-        f"Companies House filing, visually transcribed) - {AR2025_URL}\n"
+        f"FY2022 (solo): ABC International Bank plc Pillar 3 Disclosures 2022, Table 3 'Key Regulatory Metrics' "
+        f"(Solo column), Table 17 'LCR components (Average)' and Table 18 'NSFR components (Average)' - "
+        f"{P3_2022_URL}\n"
+        f"FY2021 (solo): ABC International Bank plc Pillar 3 disclosures 2021, Table 3 'Key Regulatory Metrics' "
+        f"(Solo column), p.8, Table 6 'RWAs and Capital ratio', p.10, and Table 17 'LCR components (Average)', "
+        f"p.17 - {P3_2021_URL}\n"
+        f"FY2022 & FY2021 (solo, Total Capital/RWA cross-check only): ABC International Bank plc Annual Report "
+        f"2022, Financial Highlights, p.31 - {AR2022_URL}\n"
+        f"FY2025 (CONSOLIDATED - all capital, RWA, leverage, LCR and NSFR sheets): ABC International Bank plc "
+        f"Pillar 3 Report 2025, Table 3 'Key Regulatory Metrics', 'ABCIB CONSOLIDATED' UK KM1 table, p.16, and "
+        f"'ABCIB CONSOLIDATED' UK OV1 table, p.17 - {P3_2025_URL}\n"
+        f"FY2024 (consolidated): as the FY2025 report's own comparative column (validation gate - reproduces this "
+        f"workbook's existing FY2024 figures exactly) - {P3_2025_URL}\n"
+        f"FY2025 (solo - superseded 2026-09-15, retained in the RWA Breakdown sheet's SOLO block and quoted in "
+        f"each capital sheet's note): ABC International Bank plc Pillar 3 Report 2025, 'ABCIB SOLO' UK KM1 table, "
+        f"p.15, and 'ABCIB SOLO' UK OV1 table, p.17 - {P3_2025_URL}; ABC International Bank plc Annual Report "
+        f"2025, Financial Highlights, p.20 (scanned Companies House filing, visually transcribed) - "
+        f"{AR2025_URL}\n"
         f"FY2020 (solo): ABC International Bank plc Pillar 3 Disclosures 2020, Table 3 \"Key Regulatory Metrics\", "
         f"p.8 - {P3_2020_URL}\n"
         f"FY2019 (solo): ABC International Bank plc Pillar 3 Disclosures 2019, p.7-8 - {P3_2019_URL}\n"
@@ -315,16 +361,51 @@ ASSET_QUALITY_SOURCES = (
 )
 
 RWA_BREAKDOWN_SOURCES = (
-    "Sources - ABC International Bank plc (CONSOLIDATED basis, matching the Total RWAs sheet):\n"
-    f"FY2024 & FY2023 (FY2023 as originally reported by the FY2024 report's own comparative column - no separate "
-    f"OV1 breakdown exists in ABCIB's own FY2023 Pillar 3 Disclosures document, which only carries Table 3's "
-    f"single Total RWA figure, not a category breakdown): ABC International Bank plc Pillar 3 Report 2024, Table "
-    f"\"UK OV1 - Overview of risk weighted exposure amounts\", ABCIB CONSOLIDATED, p.14 - {P3_2024_URL}\n"
-    "Every other year (FY2014-FY2022, FY2025): not available - no OV1-format RWA category breakdown exists for "
-    "these years, only the single Total RWA figure (either the Annual Report's Financial Highlights table, or - "
-    "for FY2017-FY2020 - the dedicated Pillar 3 report's Table 3/Table 4, neither of which carries a category "
-    "breakdown; see the Total RWAs sheet). No separate FY2025 Pillar 3 report could be located on ABCIB's website, "
-    "and no FY2014-FY2016 ABCIB-entity Pillar 3 document could be located at all (see p3_sources note)."
+    "Sources - ABC International Bank plc:\n"
+    f"FY2025 (CONSOLIDATED basis, matching the Total RWAs sheet's restated FY2025 figure of 3,880,104; added "
+    f"2026-09-15): ABC International Bank plc Pillar 3 Report 2025, Table \"UK OV1 - Overview of risk weighted "
+    f"exposure amounts\", ABCIB CONSOLIDATED, p.17 - {P3_2025_URL}\n"
+    f"FY2024 & FY2023 (CONSOLIDATED basis, matching the Total RWAs sheet's FY2024/FY2023 figures; FY2023 as "
+    f"originally reported by the FY2024 report's own comparative column - no separate OV1 breakdown exists in "
+    f"ABCIB's own FY2023 Pillar 3 Disclosures document, which only carries Table 3's single Total RWA figure, not "
+    f"a category breakdown): ABC International Bank plc Pillar 3 Report 2024, Table \"UK OV1 - Overview of risk "
+    f"weighted exposure amounts\", ABCIB CONSOLIDATED, p.14 - {P3_2024_URL}\n"
+    f"NOTE ON THE 'Of which: CVA' ROW: the UK OV1 template labels CVA as an 'of which' subset of counterparty "
+    f"credit risk, and this sheet copies that label verbatim, but in ABCIB's own tables the CVA figure is "
+    f"ADDITIVE, not a subset - FY2025 consolidated foots only as 3,554,768 + 45,144 + 13,124 + 23,741 + 243,327 "
+    f"= 3,880,104, and FY2024 likewise needs its 10,131 CVA added to reach 3,486,256. The source's label is "
+    f"therefore internally inconsistent with its own arithmetic; the figures are transcribed as printed and each "
+    f"block's TOTAL row is the document's own stated total, so no derived value is affected.\n"
+    f"FY2025 (SOLO basis - SUPERSEDED as the Total RWAs sheet's basis on 2026-09-15 but retained here so the solo "
+    f"split stays legible), FY2022 & FY2021 (SOLO basis, matching the Total RWAs sheet's own figures for those "
+    f"years - a "
+    f"coarser 3-category split than the OV1 template above, not a separate CCR/CVA breakout; DIRECTLY DISCLOSED "
+    f"as risk-weighted assets, not derived): ABC International Bank plc Annual Report 2025, Note 26 'Regulatory "
+    f"capital', 'Risk-weighted assets (unaudited)' table, p.66 (scanned Companies House filing, visually "
+    f"transcribed) - {AR2025_URL}; ABC International Bank plc Annual Report 2022, Note 25 'Regulatory capital', "
+    f"'Risk-weighted assets (unaudited)' table, p.66 - {AR2022_URL}. The FY2025 solo split also appears as a "
+    f"true UK OV1 table in the Pillar 3 Report 2025 ('ABCIB SOLO', p.17: credit 2,862,420 + CCR 47,494 + CVA "
+    f"13,252 + market 24,739 + operational 183,713 = 3,131,618), which reconciles exactly to the Annual Report's "
+    f"coarser 3-category figures used here - {P3_2025_URL}\n"
+    f"FY2020, FY2019, FY2018 & FY2017 (SOLO basis, matching the Total RWAs sheet's own figures for those years - "
+    f"DERIVED, not directly disclosed as RWA: each dedicated Pillar 3 report only discloses the Pillar 1 MINIMUM "
+    f"CAPITAL REQUIREMENT by risk type, i.e. 8% of RWA per CRR Article 92 - so each category figure below is that "
+    f"report's own capital-requirement figure divided by 8% (multiplied by 12.5), the standard, exact Basel/CRR "
+    f"identity, not an estimate. Verified against each year's own Total RWA figure (already in the Total RWAs "
+    f"sheet) to within a few £'000 - the residual gap is the source table's own £'000 rounding of the capital-"
+    f"requirement figures before this multiplication, not a data-quality issue here. FY2020's report additionally "
+    f"discloses a Consolidated column alongside Solo - Solo is used throughout for continuity with every other "
+    f"year, per the Total RWAs sheet's own basis note): ABC International Bank plc Pillar 3 Disclosures 2020, "
+    f"Table 5 'Pillar 1 Capital Requirements', p.10 - {P3_2020_URL}; ABC International Bank plc Pillar 3 "
+    f"Disclosures 2019, Table 4 'Pillar 1 Capital Requirements', p.10 - {P3_2019_URL}; ABC International Bank plc "
+    f"Pillar 3 Report 2018, Table 4 'Pillar 1 Capital Requirements', p.10 - {P3_2018_URL}; ABC International Bank "
+    f"plc Pillar 3 Report 2017, Table 3 'Pillar 1 Capital Requirements', p.9 - {P3_2017_URL}\n"
+    "FY2014-FY2016: not available in the credit/market/operational risk-TYPE split used above. Their Annual "
+    "Reports' own 'Regulatory capital'/'Called up share capital' notes DO carry a risk-weighted-assets breakdown "
+    "(checked directly), but only by BOOK type (Banking book / Trading book) - a different, non-comparable "
+    "dimension to the risk-type categories used in every other year on this sheet, so deliberately not added "
+    "here rather than mixed in under misleading category labels. No FY2014-FY2016 ABCIB-entity Pillar 3 document "
+    "could be located at all (see p3_sources note)."
 )
 
 
@@ -517,48 +598,76 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 metric(
     "CET1 Capital", "£m",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 469.8, "FY2024": 564.579, "FY2023": 547.665, "FY2022": 416.5, "FY2021": 418.8, "FY2020": 393.198, "FY2019": 495.422, "FY2018": 487.265, "FY2017": 469.029, "FY2016": 449.664, "FY2015": 439.008, "FY2014": 421.08})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 579.993, "FY2024": 564.579, "FY2023": 547.665, "FY2022": 416.914, "FY2021": 419.517, "FY2020": 393.198, "FY2019": 495.422, "FY2018": 487.265, "FY2017": 469.029, "FY2016": 449.664, "FY2015": 439.008, "FY2014": 421.08})],
     p3_sources(),
-    note="FY2025/FY2022/FY2021/FY2016/FY2015/FY2014 are calculated (RWA x Tier 1 ratio, all solo basis) - no "
-         "separate CET1/Tier 1 £m figure is disclosed for those years, only the ratio and total 'Capital base'. "
-         "Assumes CET1 = Tier 1 (no AT1 instruments in issue), consistent with the pattern directly confirmed in "
-         "every FY2017-FY2024 Pillar 3 report reviewed. FY2017-FY2020 are directly disclosed (Appendix 2 Own "
-         "Funds / Table 3 Key Regulatory Metrics of each year's dedicated Pillar 3 report); FY2018/FY2019 use the "
-         "'IFRS9 Transitional arrangements applied' column for continuity with FY2020's single reported figure.",
+    note="FY2025 RESTATED 2026-09-15 from SOLO to CONSOLIDATED basis (469.8 -> 579.993), on the user's explicit "
+         "instruction, so that the whole FY2025 column sits on one basis: its Leverage/LCR/NSFR rows were already "
+         "consolidated, while the capital rows were still solo. Superseded solo value: 469.8 (itself calculated as "
+         "RWA x Tier 1 ratio); the Pillar 3 Report 2025's own SOLO column gives a directly-disclosed 469.209. "
+         "Now directly disclosed, not calculated - ABCIB CONSOLIDATED UK KM1 row 1, p.16. FY2022/FY2021 UPGRADED "
+         "2026-09-15 from calculated to DIRECTLY DISCLOSED (416.5 -> 416.914, 418.8 -> 419.517) using each year's "
+         "own dedicated Pillar 3 report (solo column), located that day - see P3_2021_URL/P3_2022_URL. "
+         "FY2016/FY2015/FY2014 remain calculated (RWA x Tier 1 ratio, solo basis) - no separate CET1/Tier 1 £m "
+         "figure is disclosed for those years, only the ratio and total 'Capital base'. Assumes CET1 = Tier 1 (no "
+         "AT1 instruments in issue), consistent with the pattern directly confirmed in every FY2017-FY2025 Pillar "
+         "3 report reviewed. FY2017-FY2020 are directly disclosed (Appendix 2 Own Funds / Table 3 Key Regulatory "
+         "Metrics of each year's dedicated Pillar 3 report); FY2018/FY2019 use the 'IFRS9 Transitional "
+         "arrangements applied' column for continuity with FY2020's single reported figure.",
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "15.0%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"})],
+    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "14.9%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"})],
     p3_sources(),
-    note="FY2023 shown as originally reported (17.6%, consolidated); the FY2024 Pillar 3 Report's FY2023 "
+    note="FY2025 RESTATED 2026-09-15 from SOLO to CONSOLIDATED basis (15.0% -> 14.9%) - see the CET1 Capital "
+         "sheet note for the reason. Superseded solo value: 15.0% (ABCIB SOLO UK KM1 row 5, p.15, and the Annual "
+         "Report's Financial Highlights table). FY2025 now matches FY2023/FY2024's consolidated basis, giving a "
+         "clean consolidated run FY2023-FY2025. "
+         "FY2023 shown as originally reported (17.6%, consolidated); the FY2024 Pillar 3 Report's FY2023 "
          "comparative column restates this to 17.7% alongside a small RWA restatement (see Total RWAs sheet) - "
-         "immaterial, but shown as originally reported per this project's convention. FY2022/FY2021/FY2025 and "
+         "immaterial, but shown as originally reported per this project's convention. FY2022/FY2021 and "
          "FY2014-FY2020 all labelled 'Tier 1 Capital Ratio' (a.k.a. 'Risk asset ratio - Tier 1') in the source "
-         "(solo basis) - assumed equal to CET1 ratio, see CET1 Capital sheet note. FY2014-FY2016 predate the "
+         "(solo basis) - assumed equal to CET1 ratio, see CET1 Capital sheet note. FY2025's consolidated figure "
+         "is labelled 'Common Equity Tier 1 ratio' outright (UK KM1 row 5), so no such assumption is needed for "
+         "that year. FY2014-FY2016 predate the "
          "CET1 concept entirely (Basel II/early-CRD IV terminology) - see BASIS_NOTE's caveat.",
 )
 
 metric(
     "Tier 1 Capital", "£m",
-    [("Tier 1 capital", {"FY2025": 469.8, "FY2024": 564.579, "FY2023": 547.665, "FY2022": 416.5, "FY2021": 418.8, "FY2020": 393.198, "FY2019": 495.422, "FY2018": 487.265, "FY2017": 469.029, "FY2016": 449.664, "FY2015": 439.008, "FY2014": 421.08})],
+    [("Tier 1 capital", {"FY2025": 579.993, "FY2024": 564.579, "FY2023": 547.665, "FY2022": 416.914, "FY2021": 419.517, "FY2020": 393.198, "FY2019": 495.422, "FY2018": 487.265, "FY2017": 469.029, "FY2016": 449.664, "FY2015": 439.008, "FY2014": 421.08})],
     p3_sources(),
-    note="Tier 1 = CET1 every year (no AT1 instruments in issue). FY2025/FY2022/FY2021/FY2016/FY2015/FY2014 "
-         "calculated - see CET1 Capital sheet note.",
+    note="Tier 1 = CET1 every year (no AT1 instruments in issue) - the FY2021/FY2022/FY2025 Pillar 3 reports each "
+         "print identical CET1 and Tier 1 rows, confirming this directly rather than by assumption. FY2025 "
+         "RESTATED 2026-09-15 from SOLO to CONSOLIDATED (469.8 -> 579.993); FY2022/FY2021 upgraded from "
+         "calculated to directly disclosed (416.5 -> 416.914, 418.8 -> 419.517) - see CET1 Capital sheet note for "
+         "both. FY2016/FY2015/FY2014 remain calculated - see CET1 Capital sheet note.",
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": "15.0%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"})],
+    [("Tier 1 ratio", {"FY2025": "14.9%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"})],
     p3_sources(),
-    note="FY2023 shown as originally reported (consolidated) - see CET1 Ratio sheet note.",
+    note="FY2025 RESTATED 2026-09-15 from SOLO to CONSOLIDATED basis (15.0% -> 14.9%); superseded solo value "
+         "15.0%. FY2023 shown as originally reported (consolidated) - see CET1 Ratio sheet note.",
 )
 
 metric(
     "Total Capital", "£m",
-    [("Total capital", {"FY2025": 517, "FY2024": 616.448, "FY2023": 598.786, "FY2022": 447, "FY2021": 460, "FY2020": 443.198, "FY2019": 545.422, "FY2018": 537.265, "FY2017": 524.729, "FY2016": 506, "FY2015": 493, "FY2014": 423})],
+    [("Total capital", {"FY2025": 628.255, "FY2024": 616.448, "FY2023": 598.786, "FY2022": 446.942, "FY2021": 459.544, "FY2020": 443.198, "FY2019": 545.422, "FY2018": 537.265, "FY2017": 524.729, "FY2016": 506, "FY2015": 493, "FY2014": 423})],
     p3_sources(),
-    note="FY2022/FY2021/FY2025 ('Capital base'), FY2014-FY2016 ('Capital base', Financial Highlights table) and "
+    note="FY2025 RESTATED 2026-09-15 from SOLO to CONSOLIDATED basis (517 -> 628.255) - see the CET1 Capital "
+         "sheet note for the reason. Superseded solo value: 517 (Annual Report 'Capital base'); the Pillar 3 "
+         "Report 2025's own SOLO column gives a more precise 517.472. "
+         "SOURCE TYPO, verified visually at 8x zoom on p.16: the FY2025 consolidated KM1 prints Total capital as "
+         "'628.255' with a DECIMAL POINT where the thousands separator belongs (every other figure in the same "
+         "column uses a comma). Read as 628,255 £'000: the printed digits are unchanged, only the separator is "
+         "wrong, and 628,255 / 3,880,104 = 16.19% reproduces the same table's printed 16.2% total capital ratio, "
+         "whereas a literal 628.255 (£628k) would be absurd against CET1 of £580m. Not a derived figure. "
+         "FY2022/FY2021 UPGRADED 2026-09-15 to each year's own Pillar 3 report ('Total regulatory capital', solo "
+         "column): 447 -> 446.942 and 460 -> 459.544. Same measure and same basis as the Annual Report 'Capital "
+         "base' figures they replace - the AR simply rounds to £m - so this is a precision gain, not a "
+         "restatement. FY2014-FY2016 ('Capital base', Financial Highlights table) and "
          "FY2023-FY2024/FY2017-FY2020 ('Total capital'/'Total regulatory capital') are directly disclosed, not "
          "calculated. FY2020's solo Total capital (443.198m) is genuinely lower than FY2019's (545.422m) - "
          "reflects the new investment in ABCSA (the Paris subsidiary) reducing solo-basis capital resources, per "
@@ -568,37 +677,88 @@ metric(
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2025": "16.5%", "FY2024": "17.7%", "FY2023": "19.3%", "FY2022": "18.2%", "FY2021": "18.3%", "FY2020": "18.5%", "FY2019": "19.3%", "FY2018": "18.3%", "FY2017": "20.4%", "FY2016": "21.5%", "FY2015": "22.9%", "FY2014": "22.1%"})],
+    [("Total capital ratio", {"FY2025": "16.2%", "FY2024": "17.7%", "FY2023": "19.3%", "FY2022": "18.2%", "FY2021": "18.3%", "FY2020": "18.5%", "FY2019": "19.3%", "FY2018": "18.3%", "FY2017": "20.4%", "FY2016": "21.5%", "FY2015": "22.9%", "FY2014": "22.1%"})],
     p3_sources(),
-    note="FY2025 labelled 'Risk asset ratio - Total' in the Financial Highlights table; same for FY2014-FY2016.",
+    note="FY2025 RESTATED 2026-09-15 from SOLO to CONSOLIDATED basis (16.5% -> 16.2%) - see the CET1 Capital "
+         "sheet note for the reason. Superseded solo value: 16.5% (ABCIB SOLO UK KM1 row 7, p.15, and the Annual "
+         "Report's 'Risk asset ratio - Total'). FY2022/FY2021 are confirmed unchanged against each year's own "
+         "Pillar 3 report ('Total Capital' ratio, solo column: 18.2% and 18.3%) - the validation gate for the "
+         "FY2021/FY2022 documents located 2026-09-15. FY2014-FY2016 labelled 'Risk asset ratio - Total' in the "
+         "Financial Highlights table.",
 )
 
 metric(
     "Total RWAs", "£m",
-    [("Total risk-weighted exposure amount", {"FY2025": 3132, "FY2024": 3486.256, "FY2023": 3104.763, "FY2022": 2450, "FY2021": 2508, "FY2020": 2397.973, "FY2019": 2824.811, "FY2018": 2940.867, "FY2017": 2574.027, "FY2016": 2342, "FY2015": 2152, "FY2014": 1914})],
+    [("Total risk-weighted exposure amount", {"FY2025": 3880.104, "FY2024": 3486.256, "FY2023": 3104.763, "FY2022": 2450.11, "FY2021": 2507.675, "FY2020": 2397.973, "FY2019": 2824.811, "FY2018": 2940.867, "FY2017": 2574.027, "FY2016": 2342, "FY2015": 2152, "FY2014": 1914})],
     p3_sources(),
-    note="FY2023 shown as originally reported (consolidated, 3,104.763m); the FY2024 Pillar 3 Report's FY2023 "
+    note="FY2025 RESTATED 2026-09-15 from SOLO to CONSOLIDATED basis (3,132m -> 3,880.104m) - see the CET1 "
+         "Capital sheet note for the reason. Superseded solo value: 3,132m (Annual Report Financial Highlights); "
+         "the Pillar 3 Report 2025's own SOLO column gives a more precise 3,131.618m, which is retained in the "
+         "RWA Breakdown sheet's SOLO block so the solo basis stays visible. This removes the apparent FY2024 -> "
+         "FY2025 fall that the old mixed presentation created: on a like-for-like consolidated basis RWAs ROSE "
+         "from 3,486.256m to 3,880.104m. "
+         "FY2022/FY2021 refined 2026-09-15 to each year's own Pillar 3 report (solo, Table 6 'RWAs and Capital "
+         "ratio' / Key Regulatory Metrics): 2,450m -> 2,450.110m and 2,508m -> 2,507.675m - the same figures the "
+         "Annual Report rounds to £m. "
+         "FY2023 shown as originally reported (consolidated, 3,104.763m); the FY2024 Pillar 3 Report's FY2023 "
          "comparative column restates this to 3,101.197m - immaterial (~0.1%), shown as originally reported per "
-         "this project's convention. FY2025 (3,132m, solo basis, Financial Highlights table 'Risk weighted "
-         "assets') is genuinely lower than FY2024's consolidated 3,486.256m - a basis effect (solo excludes "
-         "Alphabet Nominees Limited), not a real risk reduction; see BASIS_NOTE. FY2016 (2,342m, own-year Annual "
+         "this project's convention. FY2016 (2,342m, own-year Annual "
          "Report figure) differs immaterially (~0.2%) from the FY2018 Annual Report's restated FY2016 comparative "
          "(2,347m) - shown as originally reported, same convention as the FY2023 restatement above.",
 )
 
 rwa_breakdown_rows = [
     ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts (CONSOLIDATED)", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2024": 3198514, "FY2023": 2842771}),
-    ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 45144, "FY2023": 55407}),
-    ("DATA", "Of which: credit valuation adjustment (CVA)", {"FY2024": 10131, "FY2023": 11788}),
-    ("DATA", "Position, foreign exchange and commodities risks (Market risk)", {"FY2024": 14469, "FY2023": 5670}),
-    ("DATA", "Operational risk", {"FY2024": 217998, "FY2023": 185561}),
-    ("TOTAL", "Total risk weighted exposure amount", {"FY2024": 3486256, "FY2023": 3101197}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 3554768, "FY2024": 3198514, "FY2023": 2842771}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 45144, "FY2024": 45144, "FY2023": 55407}),
+    ("DATA", "Of which: credit valuation adjustment (CVA)", {"FY2025": 13124, "FY2024": 10131, "FY2023": 11788}),
+    ("DATA", "Position, foreign exchange and commodities risks (Market risk)", {"FY2025": 23741, "FY2024": 14469, "FY2023": 5670}),
+    ("DATA", "Operational risk", {"FY2025": 243327, "FY2024": 217998, "FY2023": 185561}),
+    ("TOTAL", "Total risk weighted exposure amount", {"FY2025": 3880104, "FY2024": 3486256, "FY2023": 3101197}),
+    # Own SECTION block, not folded into the OV1 block above: this source
+    # (the Annual Report's own "Regulatory capital" note, not a Pillar 3
+    # report) is a coarser 3-category split on a different basis (SOLO,
+    # matching the Total RWAs sheet's own figures for these years) - it
+    # doesn't separate CCR/CVA out of credit risk, so its "Credit and
+    # counterparty credit risk" row isn't directly comparable to the OV1
+    # block's "Credit risk (excluding CCR)" row above. Directly disclosed
+    # as risk-weighted assets (not derived), unlike the Pillar 1 block below.
+    # FY2025 deliberately appears in BOTH this SOLO block and the CONSOLIDATED
+    # block above. The Total RWAs sheet now carries FY2025 on the consolidated
+    # basis (restated 2026-09-15), and keeping the solo split here is how the
+    # superseded solo basis stays legible rather than being silently dropped -
+    # the Pillar 3 Report 2025 prints both tables in full (pp.16-17).
+    ("SECTION", "Regulatory capital note — risk-weighted assets (SOLO, unaudited, as disclosed)", {}),
+    ("DATA", "Credit and counterparty credit risk", {"FY2025": 2923166, "FY2022": 2311968, "FY2021": 2362339}),
+    ("DATA", "Market risk", {"FY2025": 24739, "FY2022": 3197, "FY2021": 1121}),
+    ("DATA", "Operational risk", {"FY2025": 183713, "FY2022": 134945, "FY2021": 144216}),
+    ("TOTAL", "Total risk weighted exposure amount", {"FY2025": 3131618, "FY2022": 2450110, "FY2021": 2507676}),
+    # Third SECTION block, own basis note: these 4 years' dedicated Pillar 3
+    # reports never disclose RWA by risk type directly - only the Pillar 1
+    # MINIMUM CAPITAL REQUIREMENT by risk type (8% of RWA, per CRR Article
+    # 92). Each figure below is that report's own capital-requirement figure
+    # multiplied by 12.5 (= divided by 8%) - an exact regulatory identity,
+    # not an estimate. Each year's Total below reconciles to within a few
+    # £'000 of the Total RWAs sheet's own figure for that year (the residual
+    # is the source table's own £'000 rounding before this multiplication).
+    ("SECTION", "Pillar 1 capital requirement × 12.5 (SOLO, derived from disclosed capital requirement)", {}),
+    ("DATA", "Credit risk", {"FY2020": 2245800, "FY2019": 2664138, "FY2018": 2794500, "FY2017": 2440150}),
+    ("DATA", "Market risk", {"FY2020": 2100, "FY2019": 8988, "FY2018": 5250, "FY2017": 7425}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2020": 613, "FY2019": 475, "FY2018": 513, "FY2017": 525}),
+    ("DATA", "Operational risk", {"FY2020": 149463, "FY2019": 151213, "FY2018": 140613, "FY2017": 125925}),
+    ("TOTAL", "Total risk weighted exposure amount (derived)", {"FY2020": 2397976, "FY2019": 2824814, "FY2018": 2940876, "FY2017": 2574025}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="ABC International Bank plc — RWA Breakdown",
-    subtitle="CONSOLIDATED basis, all figures in £'000. Matches the Total RWAs sheet.",
+    subtitle="All figures in £'000. FY2025/FY2024/FY2023 CONSOLIDATED basis (UK OV1); FY2025 ALSO shown in the "
+             "SOLO block below, since the Pillar 3 Report 2025 prints both tables in full and the solo basis is "
+             "retained there for continuity after FY2025's restatement onto the consolidated basis (2026-09-15); "
+             "FY2022/FY2021 SOLO basis, as disclosed; FY2020-FY2017 SOLO basis, derived from disclosed Pillar 1 "
+             "capital requirement x 12.5 - see the three SECTION blocks below and the sources note. Each year's "
+             "TOTAL matches (within rounding) the Total RWAs sheet's figure for that year, on that year's own "
+             "basis - FY2025's Total RWAs figure is now the CONSOLIDATED 3,880,104. FY2016-FY2014: no "
+             "risk-type breakdown available - see sources note.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
 )
@@ -606,42 +766,83 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£m / %",
     [
-        ("Total exposure measure excluding claims on central banks (£m)", {"FY2024": 5540.164, "FY2023": 5155.039, "FY2020": 2937.195, "FY2019": 3683.204, "FY2018": 4738.858, "FY2017": 3726.262}),
-        ("Leverage ratio excluding claims on central banks (%)", {"FY2024": "10.2%", "FY2023": "10.62%", "FY2020": "13.39%", "FY2019": "13.45%", "FY2018": "10.28%", "FY2017": "12.59%"}),
+        ("Total exposure measure excluding claims on central banks (£m)", {"FY2025": 5990.509, "FY2024": 5540.164, "FY2023": 5155.039, "FY2022": 3393.925, "FY2021": 3047.344, "FY2020": 2937.195, "FY2019": 3683.204, "FY2018": 4738.858, "FY2017": 3726.262}),
+        ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "9.7%", "FY2024": "10.2%", "FY2023": "10.62%", "FY2022": "12.28%", "FY2021": "13.77%", "FY2020": "13.39%", "FY2019": "13.45%", "FY2018": "10.28%", "FY2017": "12.59%"}),
     ],
     p3_sources(),
-    note="FY2022/FY2021/FY2025/FY2014-FY2016 not available - the Annual Report Financial Highlights table (the "
-         "only source located for those years) does not include a leverage ratio. FY2017-FY2020 are from each "
-         "year's dedicated Pillar 3 report (solo basis; FY2018/FY2019 use the 'IFRS9 Transitional arrangements "
-         "applied' column, same convention as the CET1 Capital sheet).",
+    note="FY2025 added 15 September 2026 from the ABCIB Pillar 3 Report 2025, which was located only via the "
+         "bank's disclosures index (its filename abandons every prior naming convention - see the P3_2025_URL "
+         "comment). CONSOLIDATED basis, matching FY2023/FY2024: that report prints separate 'ABCIB SOLO' and "
+         "'ABCIB CONSOLIDATED' UK KM1 tables, and its consolidated FY2024 comparative column reproduces this "
+         "workbook's existing FY2024 figures exactly (exposure 5,540,164k; ratio 10.2%), which is what identifies "
+         "the basis. The solo table gives a materially different FY2025 (exposure 4,352,399k; ratio 10.8%) and is "
+         "deliberately NOT used here. "
+         "FY2022/FY2021 ADDED 2026-09-15 from each year's own dedicated Pillar 3 report, located that day on the "
+         "disclosures index - the 'live lead' this note previously flagged is now closed. Both are SOLO basis "
+         "(each report's Key Regulatory Metrics table prints a 'Solo | Consolidated' pair for a single date; the "
+         "solo column is used, matching FY2017-FY2020 and this workbook's basis for every FY2014-FY2022 year). "
+         "Their consolidated columns, NOT used, give FY2021 exposure 3,843,784k / 13.56% and FY2022 exposure "
+         "4,509,683k / 11.69%. BASIS CAVEAT: FY2017-FY2022 are therefore solo and FY2023-FY2025 consolidated, so "
+         "the two portions of this row are not strictly like-for-like - the step down from FY2022's 12.28% to "
+         "FY2023's 10.62% is partly that basis change, not solely a real leverage increase. "
+         "FY2014-FY2016 remain unavailable (the Annual Report Financial Highlights table carries no leverage "
+         "metric and no dedicated Pillar 3 report exists for those years).",
 )
 
 metric(
     "LCR", "£m / %",
     [
-        ("Total high-quality liquid assets (HQLA), weighted value - average (£m)", {"FY2024": 854.893, "FY2023": 699.862, "FY2020": 362.315, "FY2019": 634.602, "FY2018": 566.611, "FY2017": 1002.101}),
-        ("Total net cash outflows, adjusted value (£m)", {"FY2024": 252.133, "FY2023": 189.675, "FY2020": 127.560, "FY2019": 168.941, "FY2018": 192.084, "FY2017": 405.144}),
-        ("Liquidity Coverage Ratio (%)", {"FY2024": "339.1%", "FY2023": "369.0%", "FY2020": "281%", "FY2019": "391%", "FY2018": "325%", "FY2017": "281%"}),
+        ("Total high-quality liquid assets (HQLA), weighted value - average (£m)", {"FY2025": 748.628, "FY2024": 854.893, "FY2023": 699.862, "FY2022": 427.736, "FY2021": 362.210, "FY2020": 362.315, "FY2019": 634.602, "FY2018": 566.611, "FY2017": 1002.101}),
+        ("Total net cash outflows, adjusted value (£m)", {"FY2025": 299.370, "FY2024": 252.133, "FY2023": 189.675, "FY2022": 139.904, "FY2021": 133.186, "FY2020": 127.560, "FY2019": 168.941, "FY2018": 192.084, "FY2017": 405.144}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "250.1%", "FY2024": "339.1%", "FY2023": "369.0%", "FY2022": "310%", "FY2021": "276%", "FY2020": "281%", "FY2019": "391%", "FY2018": "325%", "FY2017": "281%"}),
     ],
     p3_sources(),
-    note="FY2023 LCR is sourced from the FY2024 Pillar 3 Report's comparative column - ABCIB's own FY2023 Pillar 3 "
-         "Disclosures document (Table 3) does not include LCR at all (only capital and leverage metrics). "
-         "FY2022/FY2021/FY2025/FY2014-FY2016 not available. FY2017-FY2020 are from each year's dedicated Pillar 3 "
-         "report (solo basis).",
+    note="FY2025 added 15 September 2026 from the ABCIB Pillar 3 Report 2025, 'ABCIB CONSOLIDATED' UK KM1 table - "
+         "same consolidated basis as FY2023/FY2024, confirmed by that table's FY2024 comparative column "
+         "reproducing this workbook's existing HQLA 854,893k / outflows 252,133k / 339.1% exactly. Internal "
+         "cross-check: 748,628 / 299,370 = 250.07%, consistent with the printed 250.1%. The report's separate "
+         "solo table gives a different FY2025 LCR (231.0%) and is not used. FY2023 LCR is sourced from the FY2024 "
+         "Pillar 3 Report's comparative column - ABCIB's own FY2023 Pillar 3 Disclosures document (Table 3) does "
+         "not include LCR at all (only capital and leverage metrics). "
+         "FY2022/FY2021 ADDED 2026-09-15 from each year's own dedicated Pillar 3 report (Table 17 'LCR components "
+         "(Average)'), located that day - closing the 'live lead' this note previously flagged. SOLO column used, "
+         "matching FY2017-FY2020; the consolidated columns, NOT used, give FY2021 327% and FY2022 330%. Both "
+         "years' reports state the components are 'based on the average of the twelve monthly reported data "
+         "items', i.e. the same 12-month-average basis as the UK KM1 years - NOT a point-in-time year-end ratio. "
+         "NOTE the component rows do not divide to the printed ratio (FY2021 362,210/133,186 = 272.0% vs 276% "
+         "printed; FY2022 427,736/139,904 = 305.7% vs 310% printed): the disclosed ratio is the average of the "
+         "twelve monthly LCRs, whereas the components are averaged separately, so a ratio-of-averages does not "
+         "reproduce an average-of-ratios. The printed ratio is carried as disclosed; nothing is derived. "
+         "'Liquidity Buffer' is that table's label for the HQLA row. FY2014-FY2016 not available. "
+         "FY2017-FY2022 are all SOLO basis, "
+         "so they are not strictly like-for-like with the consolidated FY2023-FY2025 figures.",
 )
 
 metric(
     "NSFR", "£m / %",
     [
-        ("Total available stable funding (£m)", {"FY2024": 2339.367, "FY2023": 2053.004}),
-        ("Total required stable funding (£m)", {"FY2024": 1802.627, "FY2023": 1504.583}),
-        ("Net Stable Funding Ratio (%)", {"FY2024": "129.8%", "FY2023": "136.4%"}),
+        ("Total available stable funding (£m)", {"FY2025": 2391.315, "FY2024": 2339.367, "FY2023": 2053.004, "FY2022": 1660.479}),
+        ("Total required stable funding (£m)", {"FY2025": 1902.311, "FY2024": 1802.627, "FY2023": 1504.583, "FY2022": 1325.875}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "125.7%", "FY2024": "129.8%", "FY2023": "136.4%", "FY2022": "125.24%"}),
     ],
     p3_sources(),
-    note="FY2023 NSFR is sourced from the FY2024 Pillar 3 Report's comparative column - same reason as the LCR "
-         "sheet. Every other year (FY2014-FY2022, FY2025) not available - NSFR is discussed only in qualitative/"
-         "narrative terms (e.g. 'well on the way to becoming fully compliant') in ABCIB's FY2016-FY2020 Pillar 3 "
-         "reports, never disclosed as a figure.",
+    note="FY2025 added 15 September 2026 from the ABCIB Pillar 3 Report 2025, 'ABCIB CONSOLIDATED' UK KM1 table - "
+         "same consolidated basis as FY2023/FY2024, confirmed by that table's FY2024 comparative column "
+         "reproducing this workbook's existing ASF 2,339,367k / RSF 1,802,627k / 129.8% exactly. Internal "
+         "cross-check: 2,391,315 / 1,902,311 = 125.7%, matching the printed ratio. FY2023 NSFR is sourced from the "
+         "FY2024 Pillar 3 Report's comparative column - same reason as the LCR sheet. "
+         "FY2022 ADDED 2026-09-15 from the ABCIB Pillar 3 Disclosures 2022, Table 18 'NSFR components (Average)', "
+         "located that day - SOLO basis ('Solo Avg 2022' column; the consolidated column, NOT used, gives "
+         "123.91%). Internal cross-check: 1,660,479 / 1,325,875 = 125.24%, matching the printed ratio exactly. "
+         "This is ABCIB's FIRST disclosed NSFR and it correctly falls in the first year the UK requirement "
+         "applied. "
+         "FY2021 and earlier are STRUCTURALLY absent, not an oversight: the FY2021 Pillar 3 report was re-read in "
+         "full on 2026-09-15 and contains zero occurrences of 'stable funding' anywhere, and NSFR is discussed "
+         "only in qualitative/narrative terms (e.g. 'well on the way to becoming fully compliant') in ABCIB's "
+         "FY2016-FY2020 reports, never as a figure. That is exactly what PRA PS17/21 / PS22/21 require: the UK "
+         "had no NSFR requirement and no NSFR disclosure template before 1 January 2022, and firms were not "
+         "required to disclose comparatives for periods before the rule bit. Blank rather than derived. "
+         "FY2014-FY2016 likewise unavailable.",
 )
 
 metric(
@@ -680,21 +881,30 @@ bw.add_overview_sheet(
     cash_flow_totals=[],
     cash_flow_unit=None,
     ratios=[
-        ("CET1 Ratio", {"FY2025": "15.0%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"}),
-        ("Tier 1 Ratio", {"FY2025": "15.0%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"}),
-        ("Total Capital Ratio", {"FY2025": "16.5%", "FY2024": "17.7%", "FY2023": "19.3%", "FY2022": "18.2%", "FY2021": "18.3%", "FY2020": "18.5%", "FY2019": "19.3%", "FY2018": "18.3%", "FY2017": "20.4%", "FY2016": "21.5%", "FY2015": "22.9%", "FY2014": "22.1%"}),
-        ("Leverage Ratio (excl. central bank claims)", {"FY2024": "10.2%", "FY2023": "10.62%", "FY2020": "13.39%", "FY2019": "13.45%", "FY2018": "10.28%", "FY2017": "12.59%"}),
-        ("LCR", {"FY2024": "339.1%", "FY2023": "369.0%", "FY2020": "281%", "FY2019": "391%", "FY2018": "325%", "FY2017": "281%"}),
-        ("NSFR", {"FY2024": "129.8%", "FY2023": "136.4%"}),
+        ("CET1 Ratio", {"FY2025": "14.9%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"}),
+        ("Tier 1 Ratio", {"FY2025": "14.9%", "FY2024": "16.2%", "FY2023": "17.6%", "FY2022": "17.0%", "FY2021": "16.7%", "FY2020": "16.4%", "FY2019": "17.5%", "FY2018": "16.6%", "FY2017": "18.2%", "FY2016": "19.2%", "FY2015": "20.4%", "FY2014": "22.0%"}),
+        ("Total Capital Ratio", {"FY2025": "16.2%", "FY2024": "17.7%", "FY2023": "19.3%", "FY2022": "18.2%", "FY2021": "18.3%", "FY2020": "18.5%", "FY2019": "19.3%", "FY2018": "18.3%", "FY2017": "20.4%", "FY2016": "21.5%", "FY2015": "22.9%", "FY2014": "22.1%"}),
+        ("Leverage Ratio (excl. central bank claims)", {"FY2025": "9.7%", "FY2024": "10.2%", "FY2023": "10.62%", "FY2022": "12.28%", "FY2021": "13.77%", "FY2020": "13.39%", "FY2019": "13.45%", "FY2018": "10.28%", "FY2017": "12.59%"}),
+        ("LCR", {"FY2025": "250.1%", "FY2024": "339.1%", "FY2023": "369.0%", "FY2022": "310%", "FY2021": "276%", "FY2020": "281%", "FY2019": "391%", "FY2018": "325%", "FY2017": "281%"}),
+        ("NSFR", {"FY2025": "125.7%", "FY2024": "129.8%", "FY2023": "136.4%", "FY2022": "125.24%"}),
     ],
     note="ABC International Bank plc takes the FRS 101 cash-flow-statement exemption every year (see the Cash Flow "
          "Statement sheet), so no cash flow summary or chart is shown here - only the Balance Sheet / P&L / Equity "
          "blocks (all entity/solo basis) and the Pillar 3 Key Metrics trend chart below. Pillar 3 ratios are "
-         "consolidated basis for FY2023-FY2024 and solo basis for every other year - a different basis to the "
-         "statement blocks above, see the Cash Flow Statement sheet's entity note. FY2025's statement/asset-"
-         "quality figures were transcribed from a scanned Companies House filing via visual reading (OCR-style); "
-         "FY2025 Leverage Ratio/LCR/NSFR remain unavailable (not in the Annual Report's Financial Highlights "
-         "table, and no separate FY2025 Pillar 3 report could be located) - see each sheet's own source citation. "
+         "consolidated basis for FY2023-FY2025 and solo basis for FY2014-FY2022 - a different basis to the "
+         "statement blocks above, see the Cash Flow Statement sheet's entity note. "
+         "FY2025 BASIS MIX RESOLVED (2026-09-15): the FY2025 column previously held CONSOLIDATED "
+         "Leverage/LCR/NSFR alongside SOLO capital ratios. On the user's explicit instruction the capital ratios "
+         "were restated onto the consolidated basis (CET1/Tier 1 15.0% -> 14.9%, total capital 16.5% -> 16.2%, "
+         "RWAs £3,132m -> £3,880.104m), so the whole FY2025 column is now one basis. Superseded solo figures are "
+         "preserved in each capital sheet's note and as a full risk-type split in the RWA Breakdown sheet's SOLO "
+         "block. "
+         "FY2022/FY2021 Leverage Ratio and LCR, and FY2022 NSFR, were ADDED the same day from each year's own "
+         "dedicated Pillar 3 report (ABCIB-Pillar3Disclosure-2021.pdf / -2022.pdf), which an earlier pass had "
+         "wrongly recorded as non-existent. Note the resulting FY2022 -> FY2023 step in the Leverage/LCR rows is "
+         "partly the solo-to-consolidated basis change, not solely a real movement - see those sheets' notes. "
+         "FY2025's statement/asset-"
+         "quality figures were transcribed from a scanned Companies House filing via visual reading (OCR-style). "
          "HD-018 extended this workbook's window from FY2021-FY2025 back to FY2014-FY2025 (2026-09-05); FY2018's "
          "'Other equity movements' figure (-£6,549k) is the IFRS 9 transition adjustment recognised on 1 January "
          "2018, not a dividend - see the Statement of Changes in Equity sheet.",

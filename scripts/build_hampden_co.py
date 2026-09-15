@@ -21,13 +21,37 @@ AR2018_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2019_URL = "https://find-and-update.company-information.service.gov.uk/company/SC386922/filing-history/MzI2NzQzODEwNWFkaXF6a2N4/document?format=pdf&download=0"
 AR2020_URL = "https://find-and-update.company-information.service.gov.uk/company/SC386922/filing-history/MzMwNTYzNTA1MmFkaXF6a2N4/document?format=pdf&download=0"
 
-P3_2021_URL = "https://hampdenandco.com/content/hampden/content/Hampden-Co-plc-2021-Pillar-3-Disclosures-FINAL.pdf"
-P3_2022_URL = "https://hampdenandco.com/content/hampden/content/Hampden-Co-2022-Pillar-3-Disclosures.pdf"
+# ===============================================================================================
+# DOMAIN RENAME - READ THIS BEFORE SEARCHING FOR ANY HAMPDEN DOCUMENT (recorded 2026-09-15)
+# The bank rebranded from "Hampden & Co" to "Hampden Bank" and moved its website from
+# hampdenandco.com to www.hampdenbank.com. hampdenandco.com is a redirect shell: it still 301s
+# document URLs through to www.hampdenbank.com (verified 2026-09-15 - all three old Pillar 3
+# URLs below resolve 200 after redirect), but it is NOT the live document host and must not be
+# treated as the authoritative index. DO NOT run Wayback CDX or permutation sweeps against
+# hampdenandco.com and conclude anything from the result: that domain has no new captures.
+# The live document index pages are:
+#   https://www.hampdenbank.com/investors                         (primary)
+#   https://www.hampdenbank.com/about-us/shareholder-information  (same document set)
+# Both were scraped for every PDF href on 2026-09-15 and AGREE: Annual Reports for 2017-2025
+# plus exactly ONE Pillar 3 document, the 2023 edition. See p3_sources() for the full result.
+# Documents live on two interchangeable hosts, both current:
+#   https://www.hampdenbank.com/content/hampden/content/<file>
+#   https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/<file>
+# The older editions (2019/2021/2022) are still served by both hosts even though neither index
+# page links them any more - so a document being absent from the index does NOT mean it 404s,
+# and the converse trap applies too: the FY2024/FY2025 permutations below genuinely do 404.
+# ===============================================================================================
+P3_HOST = "https://www.hampdenbank.com/content/hampden/content"
+P3_INDEX_URL = "https://www.hampdenbank.com/investors"
+P3_INDEX_ALT_URL = "https://www.hampdenbank.com/about-us/shareholder-information"
+
+P3_2021_URL = f"{P3_HOST}/Hampden-Co-plc-2021-Pillar-3-Disclosures-FINAL.pdf"
+P3_2022_URL = f"{P3_HOST}/Hampden-Co-2022-Pillar-3-Disclosures.pdf"
 P3_2023_URL = "https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/Hampden-Co-plc-2023-Pillar-3-Disclosures.pdf"
-# FY2019 Pillar 3 document is still live on the Bank's own domain; it also carries a full FY2018
-# comparative column (used below for FY2018's metrics, since no standalone FY2018 Pillar 3 PDF
-# was found anywhere - confirmed via a full Wayback CDX domain search of hampdenandco.com).
-P3_2019_URL = "https://hampdenandco.com/content/hampden/content/Hampden-Co-plc-2019-Pillar-3-Disclosures-FINAL.pdf"
+# FY2019 Pillar 3 document is still live on the Bank's own (new) domain; it also carries a full
+# FY2018 comparative column (used below for FY2018's metrics, since no standalone FY2018 Pillar 3
+# PDF was found anywhere).
+P3_2019_URL = f"{P3_HOST}/Hampden-Co-plc-2019-Pillar-3-Disclosures-FINAL.pdf"
 # FY2020 Pillar 3 document 404s on the live domain today; retrieved via its own Wayback Machine
 # snapshot instead. It carries a full UK KM1-format Own Funds/Leverage Ratio appendix with an
 # FY2019 comparative column (more precise than the FY2019 document's own rounded whole-percent
@@ -129,7 +153,89 @@ def p3_sources():
         "FY2024/FY2025: no standalone Pillar 3 document was found published for either year (last located Pillar 3 disclosure "
         "covers FY2023) - Total Capital Ratio only is sourced from each year's own Annual Report Key Performance Indicators "
         f"table instead (FY2024 AR p.7, FY2025 AR p.11) - {AR2024_URL} / {AR2025_URL}. All other metrics are not publicly "
-        "disclosed for FY2024/FY2025."
+        "disclosed for FY2024/FY2025.\n"
+        "SDDT DATE TEST (checked 2026-09-15) - this explains WHY the series stops exactly where it does, and upgrades "
+        "FY2024/FY2025 from 'not found' to evidenced structural absence. The PRA's 'Consolidated Waivers list for "
+        "PRA-regulated firms - as of 1 July 2026' (bankofengland.co.uk/prudential-regulation/authorisations/"
+        "waivers-and-modifications-of-rules) records that HAMPDEN & CO PLC (FRN 606934) holds a 'Modification by Consent - "
+        "PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - General Application Part', sub-rule 'Ru 3.1', starting "
+        "25/04/2024 with no end date (still in force). That modification removes the Pillar 3 disclosure obligation "
+        "outright - a stronger and different relief from UK CRR Article 433b, which merely reduces disclosure frequency "
+        "and content for small and non-complex institutions; the two must not be conflated. The Bank's year-end is 31 "
+        "December, stable across its Companies House accounts filing history (company SC386922). Applying the date test: "
+        "FY2023 (y/e 31 December 2023) PREDATES the modification, so a Pillar 3 was still required for that year - and one "
+        "was duly published, which is exactly why FY2023 is the last edition that exists. FY2024 (y/e 31 December 2024) "
+        "and FY2025 (y/e 31 December 2025) both fall AFTER it, so no Pillar 3 was required for either year. The document "
+        "search below and the register therefore agree independently: these are structural blanks, permanent unless the "
+        "Bank opts back in, not documents that are merely late or hard to reach.\n"
+        "RE-VERIFIED 2026-09-12 (independent disclosure audit): confirmed still genuinely unpublished, not an access gap. "
+        "A full Wayback Machine CDX listing of hampdenandco.com returns Pillar 3 PDFs for FY2019-FY2023 only, with nothing "
+        "dated FY2024 or FY2025; six FY2024/FY2025 filename permutations on the Bank's live craft.cloud CDN (the host that "
+        "serves its FY2023 Pillar 3 document) all return HTTP 404. Both Annual Reports were downloaded and read in full: "
+        "neither discloses a risk-weighted assets figure, a leverage ratio or a numeric LCR/NSFR anywhere.\n"
+        "DELIBERATE BASIS DECISION (do not 'fix' by propagating): the FY2025 AR's Note 31 does state that 'The Bank's "
+        "regulatory capital is all Common Equity Tier 1 capital' (a sentence absent from the FY2024 AR's own Note 31), which "
+        "would in principle let the 17% Total Capital Ratio be shown as the CET1 and Tier 1 ratio too, as this workbook does "
+        "for FY2018-FY2023. It is deliberately NOT done for FY2024/FY2025, because the Annual Report KPI table and the Pillar "
+        "3 KM1 table are demonstrably different bases: the FY2024 AR's own KPI table gives the prior year (FY2023) as 19%, "
+        "whereas the FY2023 Pillar 3 KM1 gives 20.53% for that same year. Propagating an AR-KPI figure into the CET1/Tier 1 "
+        "Ratio sheets - which are otherwise populated purely from Pillar 3 KM1 figures - would silently mix the two bases "
+        "mid-series. The AR-KPI figure is therefore confined to the Total Capital Ratio sheet, where it is labelled as such.\n"
+        "RE-CONFIRMED AGAIN 2026-09-15 against a source the earlier audits could not have used: the bank has rebranded "
+        "from Hampden & Co to Hampden Bank and moved its website from hampdenandco.com to hampdenbank.com, so the "
+        "Wayback CDX scan of the OLD domain was no longer sufficient evidence on its own (and archive.org was returning "
+        "HTTP 503 'Temporarily Offline' on the day of this check, so it could not be re-run anyway). The new site's "
+        "shareholder-information page - https://www.hampdenbank.com/about-us/shareholder-information - is now this "
+        "entity's definitive public document index, and it lists Annual Reports for 2017-2025 alongside exactly ONE "
+        "Pillar 3 document, the 2023 edition already cited above. There is no FY2024 or FY2025 Pillar 3. The FY2025 "
+        "Annual Report was also re-downloaded from the new CDN and re-read: its Note 31 'Capital management policy' "
+        "(p.79) is narrative only and contains no RWA, no capital amount in GBP, and no leverage/LCR/NSFR figure, "
+        "and the KPI table's only capital metric remains the 17% Total Capital Ratio (2024: 17%). So the nine blank "
+        "FY2025 Pillar 3 cells are a genuine disclosure gap, not a sourcing failure.\n"
+        "CLOSED BY ENUMERATION 2026-09-15 (maximum-effort sweep). The checks above rest on filename permutations, "
+        "which can only ever fail to find something; this one is positive evidence of the complete set. Every PDF "
+        "link on the shareholder-information page was extracted rather than eyeballed, giving 16 documents on the "
+        "craft.cloud CDN: Annual Reports/financial statements for 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 "
+        "and 2025 (two variants of the 2025 file), two Articles of Association, an AGM shareholder information "
+        "pack, a shareholder privacy notice, a Jun-26 factsheet - and exactly ONE Pillar 3 document, the 2023 "
+        "edition. A further ten FY2021/FY2022/FY2024/FY2025 filename permutations were tried across both the old "
+        "'Hampden-Co-plc' and new 'Hampden-Bank' naming conventions (hyphen and underscore forms); all ten "
+        "returned HTTP 404 with an identical 35-byte body, against the 2023 edition which serves a real PDF from "
+        "the same directory. Combined with the Rule 3.1 modification starting 25/04/2024 against a 31 December "
+        "year-end, FY2024 and FY2025 are structurally exempt and no document exists to find.\n"
+        "FY2021 footnote: the only FY2021 Pillar 3 cell still blank on this entity is NSFR, and that is "
+        "structural rather than missing - the UK had no NSFR requirement and no NSFR disclosure template before "
+        "1 January 2022 (PRA PS17/21 / PS22/21 'Implementation of Basel standards'), and the PRA's four-quarter-"
+        "averaging rule pushed first required disclosure later still. Every other FY2021 metric on this entity is "
+        "populated from the Pillar 3 series. FY2021 therefore needs no further chasing. RESOLVED 2026-09-15: that "
+        "cell, and the FY2016-FY2020 NSFR cells alongside it, are now written as 'Not applicable' on the NSFR "
+        "sheet instead of being left empty, so the structural reason is visible in the workbook itself and the "
+        "six cells stop reading as an open gap.\n"
+        "RE-ENUMERATED 2026-09-15 (independent re-run on the RENAMED domain, treating the earlier findings as "
+        "unproven). Four checks, all consistent with the conclusion above:\n"
+        f"  (1) Every PDF href was scraped from {P3_INDEX_URL} - 16 documents on the craft.cloud CDN: Annual "
+        f"Reports/financial statements for 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 and 2025 (the 2025 "
+        f"file in two variants), two Articles of Association, an AGM shareholder information pack, a "
+        f"shareholder privacy notice, a Jun-26 factsheet, and exactly ONE Pillar 3 document - the 2023 edition.\n"
+        f"  (2) The same scrape of the alternative index {P3_INDEX_ALT_URL} returns the identical single Pillar 3 "
+        f"href, so the two pages agree and neither is a stale copy of the other.\n"
+        "  (3) Ten FY2024/FY2025 filename candidates were tried across BOTH live hosts "
+        "(www.hampdenbank.com/content/hampden/content and the craft.cloud CDN), i.e. twenty requests, "
+        "covering the 'Hampden-Bank', 'Hampden-Co-plc' and 'Hampden-Co' naming conventions in hyphen and "
+        "underscore forms, year-first and year-last. All twenty returned HTTP 404 with an identical 9-byte "
+        "body, against a control request for the 2023 edition on the same two hosts which returned a real "
+        "426,753-byte PDF from each. The control matters: it proves the 404s are genuine absences rather "
+        "than a host-level block or a soft-404 trap.\n"
+        "  (4) The FY2024 and FY2025 Annual Reports were re-downloaded from the new CDN and full-text searched "
+        "again. Neither contains an RWA figure, a leverage ratio, an LCR, an NSFR, or any capital amount in "
+        "GBP. Note 31 'Capital management policy' is narrative in both (the FY2025 edition adds only the "
+        "sentence about all capital being CET1). The sole capital figure in either document remains the KPI "
+        "table's Total capital ratio - 17% for FY2025 and 17% for FY2024 - already carried on that sheet.\n"
+        "One incidental finding worth keeping, because it is the kind of thing that produces false negatives "
+        "elsewhere: the 2019, 2021 and 2022 Pillar 3 editions are still served with HTTP 200 by both live "
+        "hosts even though NEITHER index page links them any more. Absence from an index page is therefore "
+        "not evidence that a document has been withdrawn at this bank - which is precisely why the FY2024/"
+        "FY2025 conclusion rests on the 404s and the Rule 3.1 date test rather than on the index alone."
     )
 
 
@@ -914,13 +1020,23 @@ metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio (4-quarter average)", {
         "FY2023": "186%", "FY2022": "186%",
+        "FY2021": "Not applicable", "FY2020": "Not applicable", "FY2019": "Not applicable",
+        "FY2018": "Not applicable", "FY2017": "Not applicable", "FY2016": "Not applicable",
     })],
     p3_sources(),
-    note="Not disclosed for FY2021 or earlier - none of the Bank's Pillar 3 reports back to and including FY2019 "
-         "contain an NSFR section at all, consistent with the UK's NSFR reporting requirement only commencing "
-         "during 2022 for firms of this size (the same commencement pattern already seen at Ghana International "
-         "Bank). Not disclosed for FY2024/FY2025 or FY2016-FY2018 (no Pillar 3 document exists at all for "
-         "FY2016/FY2017; the FY2019 document's own FY2018 comparative column likewise carries no NSFR section).",
+    note="FY2016-FY2021 are marked 'Not applicable' rather than left blank (changed 2026-09-15). These are "
+         "STRUCTURAL blanks, not undisclosed data and not an unresearched gap: the UK had no NSFR requirement "
+         "and no NSFR disclosure template at all before 1 January 2022 (PRA PS17/21 / PS22/21, 'Implementation "
+         "of Basel standards'), so there was no ratio for the Bank to compute or publish in any of those six "
+         "years. The documentary record agrees - none of the Bank's Pillar 3 reports back to and including "
+         "FY2019 contains an NSFR section, and the FY2019 document's own FY2018 comparative column carries "
+         "none either. The distinction matters for coverage measurement: an empty cell is indistinguishable "
+         "from a metric that was never chased, and these six will never yield a figure however often they are "
+         "re-chased.\n"
+         "FY2024/FY2025 are a DIFFERENT case and are deliberately left blank rather than marked 'Not "
+         "applicable'. The metric existed and applied in both years; the Bank simply has no duty to publish "
+         "it, having held a PRA Rule 3.1 SDDT modification since 25/04/2024 (see the Sources note). That is a "
+         "genuine disclosure limitation, so it stays counted as a gap - unlike the six structural years above.",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -1022,18 +1138,31 @@ bw.add_overview_sheet(
             "FY2025": "17%", "FY2024": "17%", "FY2023": "20.53%", "FY2022": "20.77%", "FY2021": "19%",
             "FY2020": "20.2%", "FY2019": "26.1%", "FY2018": "41%",
         }),
-        ("LCR", {
-            "FY2023": "262%", "FY2022": "213%", "FY2021": "180%",
-            "FY2020": "286%", "FY2019": "467%", "FY2018": "509%",
+        ("LCR (12-month average)", {
+            "FY2023": "262%", "FY2022": "213%",
+        }),
+        ("LCR (point-in-time, FY2018-FY2021 basis)", {
+            "FY2021": "180%", "FY2020": "286%", "FY2019": "467%", "FY2018": "509%",
         }),
         ("NSFR", {
             "FY2023": "186%", "FY2022": "186%",
+            "FY2021": "Not applicable", "FY2020": "Not applicable", "FY2019": "Not applicable",
+            "FY2018": "Not applicable", "FY2017": "Not applicable", "FY2016": "Not applicable",
         }),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page. FY2024/FY2025 ratios other than Total Capital Ratio "
-         "are blank - no standalone Pillar 3 document was found published for either year. FY2016/FY2017 ratios "
-         "are blank throughout - no Pillar 3 document exists at all for either year.",
+         "are blank - no standalone Pillar 3 document exists for either year (the Bank has held a PRA Rule 3.1 "
+         "SDDT modification since 25/04/2024, which removes the disclosure duty outright). FY2016/FY2017 ratios "
+         "are blank throughout - no Pillar 3 document exists at all for either year.\n"
+         "TWO CORRECTIONS MADE HERE 2026-09-15, both to stop this sheet contradicting its own detail sheets. "
+         "(1) The LCR was previously shown as ONE row spanning FY2018-FY2023, which silently merged two "
+         "different series: FY2022/FY2023 are 12-month averages under the UK KM1 template, while FY2018-FY2021 "
+         "predate that template and are point-in-time figures whose disclosures state no averaging basis. The "
+         "LCR detail sheet has always kept these apart; this sheet now does too, so the apparent FY2021-to-"
+         "FY2022 collapse from 180% to 213% is no longer presented as a single comparable trend. (2) NSFR "
+         "FY2016-FY2021 now read 'Not applicable' rather than blank - the UK had no NSFR requirement before "
+         "1 January 2022 (PRA PS17/21), so those six years are structural, not undisclosed.",
 )
 
 # ---------------------------------------------------------------

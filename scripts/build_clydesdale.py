@@ -870,14 +870,29 @@ metric(
     [
         ("Total available stable funding", {"FY2026": 78219, "FY2025": 77427, "FY2023": 79295}),
         ("Total required stable funding", {"FY2026": 54560, "FY2025": 54375, "FY2023": 58450}),
-        ("NSFR ratio (%)", {"FY2026": "143%", "FY2025": "142%", "FY2023": "136%", "FY2022": "Not disclosed", "FY2021": "Not disclosed", "FY2020": "131%", "FY2019": "128%", "FY2018": "125%", "FY2017": "118%", "FY2016": "124%", "FY2015": "120%", "FY2014": "108%"}),
+        ("NSFR ratio (%)", {"FY2026": "143%", "FY2025": "142%", "FY2023": "136%", "FY2022": "136%", "FY2021": "134%", "FY2020": "131%", "FY2019": "128%", "FY2018": "125%", "FY2017": "118%", "FY2016": "124%", "FY2015": "120%", "FY2014": "108%"}),
     ],
-    p3_sources(),
-    note="Per PRA guidance, NSFR disclosures were not required until reporting reference dates after 1 January "
-         "2023 (per the FY2023 Pillar 3 report), so no FY2022 or FY2021 figures exist. FY2014-FY2020 NSFR is the "
-         "Bank's own voluntary/early estimate under its own interpretation of then-draft Basel III guidance (the "
-         "Annual Reports say so explicitly), narrative-only (no £m components disclosed), and not directly "
-         "comparable to the later PRA-mandated NSFR regime.",
+    p3_sources() + (
+        f"\n\nFY2022 & FY2021 NSFR ONLY: not in the Pillar 3 reports above - the UK NSFR disclosure regime (PRA "
+        f"PS17/21 / PS22/21, in force 1 January 2022) requires a four-quarter average, which PS17/21 states makes "
+        f"'the first disclosures being required after Sunday 1 January 2023'; with a 30 September year-end, CB's "
+        f"first KM1 NSFR is therefore FY2023. The Bank did however continue its own voluntary narrative disclosure "
+        f"in both years:\n"
+        f"FY2022 (136%, y/e 30 Sep 2022): Clydesdale Bank PLC Annual Report and Accounts 2022, Business and "
+        f"Financial Review 'Funding and liquidity', p.2 - {AR2022_URL}\n"
+        f"FY2021 (134%, y/e 30 Sep 2021): Clydesdale Bank PLC Annual Report and Accounts 2021, Risk Report "
+        f"'Liquidity and funding risk' asset-encumbrance commentary ('The introduction of a binding NSFR is due to "
+        f"be implemented in the UK on 1 January 2022. Based on current interpretations of European regulatory "
+        f"requirements and guidance, the ratio as at 30 September 2021 is 134% (2020: 131%)') - {AR2021_URL}. Note "
+        f"the FY2021 report's own front-section highlights mis-state this as 'at 30 September 2020'; the Risk "
+        f"Report wording above is unambiguous and its 2020 comparative of 131% ties to this workbook's FY2020.\n"
+    ),
+    note="FY2014-FY2022 NSFR is the Bank's own voluntary/early estimate under its own interpretation of then-draft "
+         "Basel III / CRD IV guidance (the Annual Reports say so explicitly), narrative-only (no £m components "
+         "disclosed). FY2023 onward is the PRA-mandated UK KM1 measure, a four-quarter average - the two bases are "
+         "not directly comparable, which is why only FY2023+ carry available/required stable funding components. "
+         "The UK NSFR requirement itself only took effect 1 January 2022, and the four-quarter-average disclosure "
+         "basis meant no KM1 NSFR was required of a 30 September year-end firm until FY2023.",
 )
 
 metric(
@@ -939,7 +954,7 @@ bw.add_overview_sheet(
         ("Total Capital Ratio", {"FY2026": "19.3%", "FY2025": "19.4%", "FY2023": "21.1%", "FY2022": "21.9%", "FY2021": "21.9%", "FY2020": "20.2%", "FY2019": "20.2%", "FY2018": "15.9%", "FY2017": "17.4%", "FY2016": "18.1%", "FY2015": "19.1%", "FY2014": "18.6%"}),
         ("Leverage Ratio", {"FY2026": "6.3%", "FY2025": "5.5%", "FY2023": "4.9%", "FY2022": "5.1%", "FY2021": "5.1%", "FY2020": "4.8%", "FY2019": "4.4%", "FY2018": "5.6%", "FY2017": "6.2%", "FY2016": "6.8%", "FY2015": "7.2%", "FY2014": "5.7%"}),
         ("LCR", {"FY2026": "164%", "FY2025": "158%", "FY2023": "146%", "FY2022": "140%", "FY2020": "140%", "FY2019": "152%", "FY2018": "137%", "FY2017": "164%", "FY2016": "140%", "FY2015": "136%", "FY2014": "110%"}),
-        ("NSFR", {"FY2026": "143%", "FY2025": "142%", "FY2023": "136%", "FY2020": "131%", "FY2019": "128%", "FY2018": "125%", "FY2017": "118%", "FY2016": "124%", "FY2015": "120%", "FY2014": "108%"}),
+        ("NSFR", {"FY2026": "143%", "FY2025": "142%", "FY2023": "136%", "FY2022": "136%", "FY2021": "134%", "FY2020": "131%", "FY2019": "128%", "FY2018": "125%", "FY2017": "118%", "FY2016": "124%", "FY2015": "120%", "FY2014": "108%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. FY2026 cash flow is blank because the FY2026 Annual Report "

@@ -551,20 +551,27 @@ metric("Total RWAs", "£'000", [("Total risk-weighted assets", {
 # Pillar 3 document - this entity discloses its RWA category split within the
 # Annual Report itself). All 5 years tie exactly to the Total RWAs figure above.
 rwa_breakdown_rows = [
-    ("DATA", "Credit RWAs", {"FY2025": 438035, "FY2024": 427744, "FY2023": 513578, "FY2022": 619276, "FY2021": 736089}),
-    ("DATA", "Market RWAs", {"FY2025": 1004032, "FY2024": 964352, "FY2023": 1537651, "FY2022": 1254480, "FY2021": 1098855}),
-    ("DATA", "Operational risk RWAs", {"FY2025": 143947, "FY2024": 127173, "FY2023": 110484, "FY2022": 194600, "FY2021": 246839}),
-    ("TOTAL", "Total RWAs", {"FY2025": 1586014, "FY2024": 1519269, "FY2023": 2161713, "FY2022": 2068356, "FY2021": 2081783}),
+    ("DATA", "Credit RWAs", {"FY2025": 438035, "FY2024": 427744, "FY2023": 513578, "FY2022": 619276, "FY2021": 736089, "FY2020": 962391}),
+    ("DATA", "Market RWAs", {"FY2025": 1004032, "FY2024": 964352, "FY2023": 1537651, "FY2022": 1254480, "FY2021": 1098855, "FY2020": 1219637}),
+    ("DATA", "Operational risk RWAs", {"FY2025": 143947, "FY2024": 127173, "FY2023": 110484, "FY2022": 194600, "FY2021": 246839, "FY2020": 280610}),
+    ("TOTAL", "Total RWAs", {"FY2025": 1586014, "FY2024": 1519269, "FY2023": 2161713, "FY2022": 2068356, "FY2021": 2081783, "FY2020": 2462638}),
 ]
 bw.add_rwa_breakdown_sheet(
     title="Morgan Stanley Bank International Limited — RWA Breakdown",
     subtitle="Company's own 'RWAs' table (Strategic Report), by risk category. £'000. Ties exactly to the Total "
-              "RWAs sheet in every year FY2021-FY2025. FY2014-FY2020: not disclosed - those years' annual reports "
-              "give only a single Total RWAs figure (and only from FY2019 onward; see the Total RWAs sheet), with "
-              "no credit/market/operational risk category split found anywhere in the Strategic Report or notes "
-              "reviewed.",
+              "RWAs sheet in every year FY2020-FY2025. FY2020 is sourced from the FY2021 Annual Report's own "
+              "FY2020 comparative column (the FY2020 Annual Report itself gives only a single Total RWAs figure, "
+              "with no risk-category split anywhere in its Strategic Report or notes). FY2014-FY2019: not "
+              "disclosed - those years' annual reports (and, for FY2019, the FY2020 Annual Report's FY2019 "
+              "comparative column) give only a single Total RWAs figure (and only from FY2019 onward; see the "
+              "Total RWAs sheet), with no credit/market/operational risk category split found anywhere in the "
+              "Strategic Report or notes reviewed.",
     rows=rwa_breakdown_rows,
-    sources_text=annual_sources(),
+    sources_text=annual_sources() + "\n"
+        "RWA Breakdown detail - FY2020: Annual Report and Financial Statements for year ended 31 December 2021, "
+        "p.7 ('Liquidity and capital management and regulation' - RWAs table, FY2020 comparative column) - "
+        f"{AR_URLS['FY2021']}. FY2021-FY2025: each year's own Annual Report, same table in the same section of "
+        "that year's Strategic Report.",
     first_col_width=54,
     source_height=220,
     unit_suffix=" (£'000)",

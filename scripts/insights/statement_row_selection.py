@@ -62,6 +62,27 @@ def in_assets_section(label):
     return bool(re.search(r"assets", section, re.I)) and not re.search(r"liabilit|equity", section, re.I)
 
 
+def in_liabilities_section(label):
+    """True when a Balance Sheet row's own section prefix names it a
+    liability - the liabilities-side counterpart to in_assets_section
+    above. Needed once a deposit-matching regex is loosened to a wildcard
+    (e.g. "deposits?.*customers?" to also catch "Deposits at amortised
+    cost from customers" phrasing) - a wildcard match is no longer
+    anchored to one specific phrase order, so it can otherwise cross onto
+    an asset-side row that happens to share the same words in a different
+    sense (e.g. "Deposits with banks" as an ASSET - money the bank itself
+    placed with other banks - vs "Deposits from banks" as a LIABILITY)."""
+    section = label.split(" - ", 1)[0] if " - " in (label or "") else (label or "")
+    return bool(re.search(r"liabilit", section, re.I)) and not re.search(r"assets|equity", section, re.I)
+
+
+def in_equity_section(label):
+    """True when a Balance Sheet row's own section prefix names it an
+    equity row - the equity-side counterpart to in_assets_section above."""
+    section = label.split(" - ", 1)[0] if " - " in (label or "") else (label or "")
+    return bool(re.search(r"equity", section, re.I)) and not re.search(r"assets|liabilit", section, re.I)
+
+
 def select_labeled_rows(observations, sheet, include_re, exclude_re=None, rank=None, extra_filter=None,
                          require_kind=None, require_own_match=True):
     """Select one row per (frn, fiscal_year) whose label matches `include_re`

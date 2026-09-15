@@ -2,8 +2,23 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018"]  # most recent first
+# FY2013 (2026-09-15) is a DELIBERATELY NON-CONTIGUOUS column. The Bank's 31
+# December 2013 Pillar 3 edition was recovered from the Internet Archive; the
+# 2014-2017 editions were not, and the Wayback CDX sweep of the whole
+# bankofceylon.co.uk domain lists Pillar 3 captures for 2013, 2018, 2019, 2020,
+# 2021, 2024 and 2025 only. Rather than insert four wholly empty FY2017-FY2014
+# columns to make the series look continuous, the one recovered year is placed
+# next to FY2018 and the four-year break is stated in its column label and in
+# every sheet note. (Same shape as build_national_bank_of_egypt_uk.py, whose
+# YEARS jumps FY2021 -> FY2017.)
+#
+# FY2013 is a REGULATORY-ONLY column: it carries Pillar 3 capital figures only.
+# No Companies House statutory filing for 2013 was sourced in this pass, so the
+# Balance Sheet, Profit & Loss, Cash Flow and Asset Quality sheets are blank for
+# it - blank because unsourced, not because the Bank published nothing.
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2013"]  # most recent first
 YEAR_LABEL = {y: y for y in YEARS}
+YEAR_LABEL["FY2013"] = "FY2013 (Pillar 3 only - 4-year gap, see notes)"
 
 CH2025_URL = "https://find-and-update.company-information.service.gov.uk/company/06736473/filing-history/MzUyMjY1MjQxM2FkaXF6a2N4/document?format=pdf&download=0"
 CH2023_URL = "https://find-and-update.company-information.service.gov.uk/company/06736473/filing-history/MzQyMTM2NzE0MWFkaXF6a2N4/document?format=pdf&download=0"
@@ -18,6 +33,9 @@ P3_2021_URL = "https://www.bankofceylon.co.uk/downloads/corporate/BOCUK_Pillar%2
 P3_2020_URL = "https://www.bankofceylon.co.uk/downloads/corporate/BOCUK_Pillar%203%20Disclosures%2031%20December%202020.pdf"
 P3_2019_URL = "https://www.bankofceylon.co.uk/downloads/corporate/BOCUK_Pillar%203%20Disclosures%2031%20December%202019.pdf"
 P3_2018_URL = "https://www.bankofceylon.co.uk/downloads/corporate/BOCUK_Pillar%203%20Disclosures%2031%20December%202018.pdf"
+# Recovered from the Internet Archive 2026-09-15 (the live site no longer serves it;
+# it sat under the older /documents/corporate/ path, not today's /downloads/corporate/).
+P3_2013_URL = "https://web.archive.org/web/20150813084438id_/http://www.bankofceylon.co.uk:80/documents/corporate/BOCUK_Pillar_3_2013.pdf"
 
 ENTITY_NOTE = (
     "Entity note: Bank of Ceylon (UK) Limited (company 06736473, FRN 514744) is a wholly-owned UK subsidiary of "
@@ -65,6 +83,51 @@ CASH_FLOW_SOURCES = (
 )
 
 
+FY2013_NOTE = (
+    "  FY2013 FIGURES AS TRANSCRIBED (£'000, entity-level, Company Registration no. 06736473 printed on the "
+    "cover - the same entity as every other column here). Capital Resources table, p.7: Share capital 15,000; "
+    "Fair value reserve 31; Cumulative revenue losses (1,073); sub-total 13,958; less Intangible assets (522); "
+    "CORE TIER 1 CAPITAL 13,436. Tier 2 Capital: Revaluation reserve 463. TOTAL REGULATORY CAPITAL 13,899. "
+    "Minimum Capital Requirement - Pillar 1 table, p.8: Credit Risk 2,454; Market Risk 24; Operational Risk "
+    "(basic indicator approach) 292; TOTAL PILLAR 1 REQUIREMENT 2,770. Credit-risk capital requirement at 8% "
+    "by exposure class, p.9: Central Governments and Central Banks 0; Financial Institutions 1,620; Personal "
+    "loans and advances 156; Secured on real estate 231; Commercial loans and advances 227; Fixed and other "
+    "assets 220; total 2,454. Gross credit risk exposure before mitigation, p.9: 63,175 at 31 December 2013 "
+    "(81,691 average for the period). This edition has a genuine text layer - figures were read directly, not "
+    "by OCR.\n"
+    "  FY2013 BASIS CAVEATS. (1) NO RISK-WEIGHTED-ASSET FIGURE AND NO CAPITAL RATIO IS DISCLOSED ANYWHERE IN "
+    "THIS EDITION. It publishes the Pillar 1 CAPITAL requirement (expressly '8% of the risk weighted exposure "
+    "amounts') instead. So Total RWAs, CET1 Ratio, Tier 1 Ratio and Total Capital Ratio are blank for FY2013 "
+    "and are NOT back-solved - dividing the 2,770 Pillar 1 requirement by 8% would give an apparent ~£34.6m "
+    "that no document states, and this project does not derive. The capital requirements that ARE disclosed "
+    "appear on the RWA Breakdown sheet as capital, on their own labelled rows. (2) Leverage ratio, LCR and "
+    "NSFR are blank: none existed as a UK disclosure requirement at 31 December 2013 and the edition contains "
+    "none of them - its liquidity section describes the then-current BIPRU 12 / ILAA / Individual Liquidity "
+    "Guidance regime narratively, with no ratio. (3) The edition's capital table is headed 'CRD IV' even "
+    "though CRD IV did not apply until 1 January 2014; transcribed as printed, with no attempt to reclassify "
+    "the components onto a Basel II presentation.\n"
+    "  FY2013 MATERIALLY REVISES THIS WORKBOOK'S TIER 2 NOTE - recorded so a later pass does not re-derive it. "
+    "The Total Capital sheet previously described the Bank's recognition of its revaluation reserve as Tier 2 "
+    "capital as something that began 'from FY2020 on'. The FY2013 edition shows it was already doing exactly "
+    "that seven years earlier: Tier 2 Capital consists of the Revaluation reserve, 463. So the real anomaly is "
+    "FY2018/FY2019, the two years with NO Tier 2 at all, not FY2020 onward. The FY2020-onward wording is left "
+    "in place on that sheet because it correctly describes the FY2018-FY2025 window it was written about, but "
+    "it should not be read as the start of the practice.\n"
+    "  EDITIONS BETWEEN FY2013 AND FY2018 - NOT RECOVERED, and the gap is genuine rather than unsearched: the "
+    "Wayback CDX sweep of the whole bankofceylon.co.uk domain (already run for the FY2022/FY2023 closure "
+    "below) returns Pillar 3 captures for 2013, 2018, 2019, 2020, 2021, 2024 and 2025 only. No 2014-2017 "
+    "edition is captured, and the FY2018 edition's comparative column is FY2017 in its Key Metrics table only "
+    "(already used on these sheets), not a full capital table, so nothing further is recoverable from it. "
+    "FY2017-FY2014 are therefore omitted as columns entirely rather than added blank.\n"
+    "  VALIDATION GATE: FY2013 is additive - it occupies a column that did not exist before this pass and "
+    "overlaps no existing column, so nothing was overwritten. No cross-edition check was possible (the "
+    "nearest surviving edition is FY2018, five years later, and carries no FY2013 comparative), so the column "
+    "rests on this single document. It is internally consistent: 15,000 + 31 - 1,073 = 13,958, less 522 = "
+    "13,436 Core Tier 1; 13,436 + 463 = 13,899 Total Regulatory Capital; and 2,454 + 24 + 292 = 2,770 Total "
+    "Pillar 1 Requirement, with the p.9 exposure-class column summing to the same 2,454."
+)
+
+
 def p3_sources(page_25="3", page_24="4", page_21="12"):
     return (
         "Sources - Bank of Ceylon (UK) Limited Pillar 3 disclosures (own entity-level basis; UK KM1-style Key "
@@ -80,9 +143,68 @@ def p3_sources(page_25="3", page_24="4", page_21="12"):
         f"December 2019, p.6 (Key metrics) - {P3_2019_URL}\n"
         f"FY2018 (own year, as originally published) & FY2017 comparative: Pillar 3 Disclosures as at 31st "
         f"December 2018, p.5 (Key metrics) - {P3_2018_URL}\n"
-        "FY2022: no standalone Pillar 3 document was found on the bank's site (2022 and 2023 editions are both "
-        "absent from its published list; FY2023 is covered here only via FY2024's own comparative column) - left "
-        "blank rather than guessed.\n"
+        f"FY2013 (own year, RECOVERED 2026-09-15 from the Internet Archive): Capital & Risk Management - Pillar 3 "
+        f"Disclosures 31st December 2013, p.7 (Capital Resources), p.8 (Minimum Capital Requirement - Pillar 1) "
+        f"and p.9 (Capital Resource Requirement at 8% by exposure class; Gross credit risk exposure) - "
+        f"{P3_2013_URL}\n" + FY2013_NOTE + "\n"
+        "FY2022: no standalone Pillar 3 document exists (2022 and 2023 editions are both absent from the bank's "
+        "own published list; FY2023 is covered here only via FY2024's own comparative column).\n"
+        f"FY2022 PARTIAL FILL (2026-09-15, interior-gap sweep): the CET1 Capital and Tier 1 Capital sheets are "
+        f"no longer blank for FY2022. The figure comes not from a Pillar 3 document but from the Bank's own "
+        f"audited FY2022 statutory accounts, Note 28 'Capital Management' (Annual Financial Report 2022, p.60), "
+        f"which states in terms: 'As at 31 December 2022, after deducting book value of intangible assets from "
+        f"shareholder funds is GBP 13,734,398 on a fully loaded basis. The regulatory CET1 capital after "
+        f"adjusting for transitional relief under IFRS9 would be GBP 13,958,648. (GBP 13,425,750 at 31 December "
+        f"2021).' Source: https://www.bankofceylon.co.uk/downloads/corporate/BOCUK_Financial_statements_2022.pdf "
+        f"(image-only scan; OCR'd with tesseract and re-read at 400dpi to confirm every digit). The £13,425,750 "
+        f"comparative in that same sentence is within £2k of the FY2021 Pillar 3 document's own CET1 of "
+        f"£13,424k already on this sheet, which is what confirms the two are the same measure - i.e. the FY2022 "
+        f"figure is on the same transitional basis as the surrounding years, not a differently-defined one.\n"
+        "SUPERSEDED IN PART, 2026-09-15 (second pass): the statement below that 'neither the FY2022 nor the "
+        "FY2023 statutory accounts state ... a capital ratio anywhere' was WRONG, and is corrected here rather "
+        "than deleted so the error is traceable. The FY2023 accounts' Strategic Report, p.8 ('CAPITAL'), states "
+        "in terms: 'The Bank maintained a strong CET1 capital position of GBP 13,684,688 (2022- GBP 12,852,280) "
+        "with a CET1 ratio of 43% (2022: 44 %) and a total capital of GBP 14,788,668 (2022-13,818,899) with a "
+        "ratio of 46% at 31st of December 2023 (2022: 48%).' That single sentence supplies four previously-blank "
+        "FY2022 cells (CET1 capital, CET1 ratio, Total capital, Total capital ratio) - all four are now entered "
+        "on clearly-labelled separate rows, see the CONFLICT note below. Source: "
+        "https://bankofceylon.co.uk/downloads/corporate/BOCUK_Financial_statements_2023.pdf (image-only scan; "
+        "OCR'd with tesseract AND re-rendered at 400dpi and read visually digit by digit to confirm, per this "
+        "project's OCR rule). The earlier pass evidently searched the notes (Note 32) and not the Strategic "
+        "Report narrative.\n"
+        "FY2022 CELLS STILL DELIBERATELY LEFT BLANK after that correction: Total RWAs and Leverage Ratio. "
+        "Neither the FY2022 nor the FY2023 statutory accounts state an RWA figure or a leverage ratio anywhere "
+        "(both OCR'd page by page in full), and the FY2023 accounts' own Note 32 gives only that year's "
+        "available capital (GBP 13,684,668) with no FY2022 comparative. RWA is NOT back-solved from the newly "
+        "found FY2022 capital and ratio - 12,852,280 / 0.44 would give an apparent ~GBP 29.2m, but a ratio "
+        "rounded to a whole percent cannot support that, and this project does not derive. Similarly, the "
+        "observation that in every disclosed year the Bank's Tier 2 capital equals its revaluation reserve is "
+        "left as an observation: FY2022's Total capital is now entered from the FY2023 accounts' stated "
+        "GBP 13,818,899, NOT from CET1 + reserve.\n"
+        "FY2022/FY2023 DOCUMENT SEARCH (2026-09-15, exhausted): eight URL variants of the bank's own stable "
+        "'BOCUK_Pillar 3 Disclosures 31 December <year>.pdf' naming pattern were probed on both www and apex "
+        "hosts - all returned the site's HTML 404, not a PDF. A Wayback CDX scan of the whole "
+        "bankofceylon.co.uk domain lists Pillar 3 captures for 2013, 2018, 2019, 2020, 2021 and 2024 only. The "
+        "bank's redesigned WordPress site's own Financial Statements page (and its July 2026 Wayback capture) "
+        "links Pillar 3 PDFs for 2018, 2019, 2020, 2021, 2024 and 2025 and nothing for 2022 or 2023 - i.e. the "
+        "two editions were never published, rather than published and lost.\n"
+        "SOURCED NEGATIVE, RE-RUN WITH CONTROLS 2026-09-15: the FY2022/FY2023 absence is evidence, not merely a "
+        "failure to find, because the probe was run against both a POSITIVE and a NEGATIVE control on the one "
+        "naming pattern the site uses uniformly. POSITIVE CONTROLS: the 2021 file returned HTTP 200, 503,885 "
+        "bytes, Content-Type application/pdf, first five bytes '%PDF-'; the 2024 file returned HTTP 200, 978,715 "
+        "bytes, application/pdf, '%PDF-'. TEST CASES: the 2022 and 2023 files on that identical pattern each "
+        "returned HTTP 404, 146 bytes, Content-Type text/html. NEGATIVE CONTROL: an invented path "
+        "(BOCUK_THIS_FILE_DOES_NOT_EXIST_CONTROL.pdf) in the same directory returned the same HTTP 404, 146 "
+        "bytes, text/html - and the three 404 bodies are BYTE-IDENTICAL (md5 8eec510e57f5f732fd2cce73df7b73ef "
+        "for all three). A server that returns a real 404 for a made-up path and the same real 404 for the 2022 "
+        "and 2023 paths is not soft-404ing a file it actually holds; combined with the index and the Wayback "
+        "sweep, the two editions do not exist.\n"
+        "CAVEAT RECORDED HONESTLY, NOT USED AS EVIDENCE: the FY2022 accounts' Board Audit and Compliance "
+        "Committee focus list (p.23) includes 'Approved the Pillar 3 disclosures as 31 December 2021', and no "
+        "equivalent line appears in the FY2023, FY2024 or FY2025 accounts. It is tempting to read that silence "
+        "as confirmation that no 2022/2023 Pillar 3 was approved - but the FY2024 and FY2025 Pillar 3 editions "
+        "demonstrably exist and are fetched by this script, so the absence of the line proves nothing either "
+        "way. It is noted here only so a later pass does not rediscover it and mistake it for proof.\n"
         "CROSS-VINTAGE NOTE (Leverage Ratio only): the FY2024 Pillar 3 document's own figures for FY2024 (Total "
         "exposure £75,247k, Leverage ratio 18.5%) differ slightly from the FY2025 document's restated FY2024 "
         "comparative (£76,247k, 18.3%). This workbook uses each year's own originally-published figure as the "
@@ -99,10 +221,19 @@ def p3_sources(page_25="3", page_24="4", page_21="12"):
         "documented on the Statement of Changes in Equity sheet (the FY2020 document explicitly states '2019 "
         "comparative numbers have been restated in 2020, following the decision to include the revaluation of "
         "the office building in the 2019 accounts'), plus an apparent change in how RWA is computed (the "
-        "FY2019 document's own £23,604k appears to be credit-risk RWA only - see the RWA Breakdown sheet's "
-        "note - while the FY2020 document's £28,513k restated figure is the fuller Pillar 1 total). This "
-        "workbook uses each year's own originally-published figure as the primary column, per this project's "
-        "standard convention; the restated comparative is not silently blended in.\n"
+        "FY2019 document's own £23,604k is credit-risk RWA only - now PROVEN, see the RWA Breakdown and Total "
+        "RWAs sheets' notes - while the FY2020 document's £28,513k restated figure is the full Pillar 1 "
+        "total). This workbook uses each year's own originally-published figure as the primary column, per "
+        "this project's standard convention, with ONE deliberate exception created 2026-09-15: the Total RWAs "
+        "sheet's FY2019 cell now carries the FY2020 edition's restated £28,513k, because the FY2019 edition's "
+        "own £23,604k is not a total RWA at all but a credit-risk subtotal, and no total exists in the FY2019 "
+        "edition. That is the Ghana International route (take the corrected total from the following "
+        "edition's own statement of the prior year) and it is preferred here to leaving a knowingly wrong "
+        "measure in place. The consequence is that FY2019 is the one year where the Total RWAs sheet and the "
+        "capital sheets come from different editions - CET1/Total capital stay at the FY2019 edition's "
+        "£13,569k, so 13,569/28,513 reproduces neither the FY2019 edition's printed 57.5% nor the FY2020 "
+        "edition's restated 46.1% (which is 13,143/28,513). Divide across those sheets for FY2019 at your own "
+        "risk; both editions' full sets are recorded here and on the Total RWAs sheet's memo row.\n"
         + ENTITY_NOTE
     )
 
@@ -398,51 +529,261 @@ bw.add_asset_quality_sheet(
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=46, source_height=200)
 
+FY2022_CAPITAL_NOTE = (
+    "FY2022 (£13,959k) added 2026-09-15 and is the ONLY Pillar 3 metric recoverable for that year. It is not "
+    "from a Pillar 3 document - none was ever published for FY2022 - but from the Bank's own audited FY2022 "
+    "statutory accounts, Note 28 'Capital Management', which states the regulatory CET1 capital after IFRS 9 "
+    "transitional relief as GBP 13,958,648 (and, on a fully loaded basis, GBP 13,734,398). The transitional "
+    "figure is used because it is the basis the surrounding Pillar 3 years are on: the same sentence's own "
+    "31 December 2021 comparative (GBP 13,425,750) matches the FY2021 Pillar 3 document's £13,424k to within "
+    "£2k. See the source note for the full quotation, URL and the OCR method."
+)
+
+# ---------------------------------------------------------------
+# FY2022 capital: three different figures, three different sources, NOT reconciled.
+# Recorded on separate labelled rows per this project's validation-gate rule.
+# ---------------------------------------------------------------
+FY2022_CONFLICT_NOTE = (
+    "UNRESOLVED FY2022 CONFLICT (documented 2026-09-15, deliberately NOT resolved). Three different FY2022 CET1 "
+    "figures are stated by the Bank's own audited accounts, on three different (or unstated) bases. They are "
+    "shown on separate labelled rows above; none is preferred, averaged, or inferred to be 'the right one'.\n"
+    "  (a) GBP 13,958,648 -> £13,959k. FY2022 Annual Financial Report, Note 28 'Capital Management' (p.60): "
+    "'The regulatory CET1 capital after adjusting for transitional relief under IFRS9 would be GBP 13,958,648.' "
+    "BASIS: IFRS 9 transitional relief applied - that same report's Strategic Report (p.20) states 'The Bank has "
+    "adopted the CET1 addback percentage of 50% for relevant provisions raised from 1 January 2022 in arriving "
+    "at the regulatory capital, as set out in note 28.' This is the figure the earlier pass entered, on the "
+    "reasoning that the same sentence's 31 December 2021 comparative (GBP 13,425,750) matches the FY2021 Pillar "
+    "3 document's own £13,424k to within £2k, i.e. it is the basis the surrounding Pillar 3 years are on. It is "
+    "retained unchanged as the primary series rather than silently overwritten.\n"
+    "  (b) GBP 13,734,398 -> £13,734k. Same Note 28, same sentence: 'after deducting book value of intangible "
+    "assets from shareholder funds is GBP 13,734,398 on a fully loaded basis.' BASIS: fully loaded (IFRS 9 "
+    "transitional relief NOT applied). Stated explicitly by the Bank.\n"
+    "  (c) GBP 12,852,280 -> £12,852k. FY2023 Annual Financial Report, Strategic Report p.8 'CAPITAL', as the "
+    "2022 comparative to that year's own GBP 13,684,688. BASIS: NOT STATED anywhere in the FY2023 document. It "
+    "is £1,106k below (a) and £882k below (b), so it is neither the transitional nor the fully loaded figure "
+    "from the FY2022 accounts - it is either a different basis again or an unannounced restatement. The FY2023 "
+    "accounts contain no restatement note covering it, and its own Note 32 carries no 2022 comparative at all, "
+    "so this workbook cannot and does not determine which.\n"
+    "The FY2022 ratios (CET1 44%, Total capital 48%) and Total capital (GBP 13,818,899) come from that same "
+    "FY2023 p.8 sentence and therefore belong with basis (c). They are kept on rows labelled as (c) so they are "
+    "never read as ratios of the basis-(a) capital sitting on the primary row.\n"
+    "ALL FOUR OCR'd FIGURES WERE VISUALLY VERIFIED: the FY2022 and FY2023 accounts are image-only scans, so "
+    "each page was re-rendered at 400 dpi and read directly to confirm every digit, in addition to the tesseract "
+    "pass. Digit-level confirmation obtained for 13,958,648 / 13,734,398 / 13,425,750 (FY2022 Note 28) and for "
+    "13,684,688 / 12,852,280 / 43% / 44% / 14,788,668 / 13,818,899 / 46% / 48% (FY2023 p.8).\n"
+    "VALIDATION GATE - the FY2023 figures in that same sentence PASS and confirm the sentence is being read "
+    "correctly: its GBP 13,684,688 CET1 and GBP 14,788,668 total capital reproduce the FY2024 Pillar 3 "
+    "document's own 2023 comparative column exactly (£13,685k and £14,789k), and its 43%/46% are those same "
+    "sheets' 42.5%/45.9% rounded to whole percents. So the sentence is reliable as to FY2023; it is only its "
+    "FY2022 comparative that cannot be reconciled.\n"
+    "MINOR INTERNAL INCONSISTENCY, noted not corrected: the FY2023 accounts state FY2023 CET1 as GBP 13,684,688 "
+    "in the Strategic Report (p.8) and GBP 13,684,668 in Note 32 (p.67) - a GBP 20 discrepancy inside one "
+    "document. Both were visually verified at 400 dpi; both round to £13,685k, which is what this workbook holds "
+    "and what the FY2024 Pillar 3 independently confirms."
+)
+
 metric(
     "CET1 Capital", "£'000",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 14217, "FY2024": 13940, "FY2023": 13685, "FY2021": 13424, "FY2020": 13338, "FY2019": 13569, "FY2018": 13393})],
+    [
+        ("Common Equity Tier 1 (CET1) capital", {"FY2025": 14217, "FY2024": 13940, "FY2023": 13685, "FY2022": 13959, "FY2021": 13424, "FY2020": 13338, "FY2019": 13569, "FY2018": 13393, "FY2013": 13436}),
+        ("FY2022 alternative (b): CET1 capital, fully loaded basis (FY2022 accounts, Note 28)", {"FY2022": 13734}),
+        ("FY2022 alternative (c): CET1 capital per the FY2023 accounts' 2022 comparative (basis not stated)", {"FY2022": 12852}),
+    ],
+    note=FY2022_CAPITAL_NOTE + "\n\n" + FY2022_CONFLICT_NOTE
+         + "\n\nFY2013 13,436 is the recovered 31 December 2013 edition's own printed 'Core Tier 1 capital' line "
+           "(Share capital 15,000 + Fair value reserve 31 - Cumulative revenue losses 1,073 = 13,958, less Intangible "
+           "assets 522). It is placed on the primary row on the same convention as every other year here: the Bank has "
+           "no Additional Tier 1 capital in any year, and that edition's capital table shows Tier 1 consisting only of "
+           "share capital and reserves. Strictly, CET1 as a defined CRD IV measure did not apply at 31 December 2013 - "
+           "though this edition heads its own capital table 'CRD IV' - so the figure is a Core Tier 1 measure carried "
+           "under a CET1 heading. Four intervening editions (FY2017-FY2014) are not recoverable and those columns are "
+           "omitted rather than shown blank; see the source note.",
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "20.1%", "FY2024": "22.7%", "FY2023": "42.5%", "FY2021": "54.8%", "FY2020": "34.3%", "FY2019": "57.5%", "FY2018": "46.9%"})],
+    [
+        ("Common Equity Tier 1 (CET1) ratio", {"FY2025": "20.1%", "FY2024": "22.7%", "FY2023": "42.5%", "FY2021": "54.8%", "FY2020": "34.3%", "FY2019": "57.5%", "FY2018": "46.9%"}),
+        ("FY2022 per the FY2023 accounts' 2022 comparative, basis (c) (whole percent as stated)", {"FY2022": "44%"}),
+    ],
+    note="FY2022 ADDED 2026-09-15 on a separate row, not on the primary row. The FY2023 accounts' Strategic "
+         "Report (p.8) states the FY2022 CET1 ratio as 44% alongside a FY2022 CET1 capital of GBP 12,852,280 - "
+         "basis (c) in the conflict note below. It is NOT placed on the primary row because the primary CET1 "
+         "Capital row for FY2022 holds basis (a) (GBP 13,958,648, IFRS 9 transitional), and a 44% derived from a "
+         "different capital figure must never be read as a ratio of that one. No FY2022 ratio is available on "
+         "basis (a) or (b): the FY2022 accounts state no capital ratio anywhere, and no FY2022 Pillar 3 document "
+         "exists. The 44% is also a whole percent as printed, not a one-decimal regulatory figure like the "
+         "surrounding Pillar 3 years.\n"
+         "FY2013 IS BLANK BY DESIGN, not unresearched: the recovered 31 December 2013 edition discloses no "
+         "risk-weighted-asset figure and no capital ratio of any kind - it publishes the Pillar 1 CAPITAL "
+         "requirement (expressly '8% of the risk weighted exposure amounts') instead - so there is no denominator "
+         "to state and no ratio to transcribe. Grossing the 2,770 Pillar 1 requirement up to an implied ~34,625 RWA "
+         "and dividing would be back-solving, and is deliberately not done.\n\n" + FY2022_CONFLICT_NOTE,
 )
 
 metric(
     "Tier 1 Capital", "£'000",
-    [("Tier 1 capital", {"FY2025": 14217, "FY2024": 13940, "FY2023": 13685, "FY2021": 13424, "FY2020": 13338, "FY2019": 13569, "FY2018": 13393})],
-    note="BOCUK has no Additional Tier 1 capital in any year - Tier 1 capital equals CET1 capital throughout.",
+    [("Tier 1 capital", {"FY2025": 14217, "FY2024": 13940, "FY2023": 13685, "FY2022": 13959, "FY2021": 13424, "FY2020": 13338, "FY2019": 13569, "FY2018": 13393, "FY2013": 13436})],
+    note="BOCUK has no Additional Tier 1 capital in any year - Tier 1 capital equals CET1 capital throughout. "
+         "For FY2022 specifically this is stated by the Bank itself in the same FY2022 accounts: its Strategic "
+         "Report's 'Capital Adequacy' section says 'The Bank's regulatory capital comprises ordinary share "
+         "capital, revaluation reserves and retained earnings' - no AT1 instrument exists, so the CET1 figure "
+         "below is also the Tier 1 figure.\n" + FY2022_CAPITAL_NOTE
+         + "\n\nFY2022 ALTERNATIVE BASES: two further FY2022 CET1 figures exist (fully loaded GBP 13,734,398, and "
+           "GBP 12,852,280 per the FY2023 accounts' comparative). They are carried on the CET1 Capital sheet's "
+           "own labelled rows and are deliberately NOT mirrored here, because the Bank never states a Tier 1 "
+           "figure on either of those bases - equating them to Tier 1 would be this workbook's inference rather "
+           "than the Bank's statement. See the CET1 Capital sheet for the full conflict.",
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
     [("Tier 1 ratio", {"FY2025": "20.1%", "FY2024": "22.7%", "FY2023": "42.5%", "FY2021": "54.8%", "FY2020": "34.3%", "FY2019": "57.5%", "FY2018": "46.9%"})],
-    note="Equal to the CET1 ratio - no Additional Tier 1 capital in any year.",
+    note="Equal to the CET1 ratio - no Additional Tier 1 capital in any year. FY2022 stays blank here: the only "
+         "FY2022 ratio the Bank ever states (44%) is captioned a CET1 ratio in the FY2023 accounts' Strategic "
+         "Report p.8, and is carried on the CET1 Ratio sheet's own labelled row. It is not copied across, "
+         "because restating a CET1-captioned ratio as a Tier 1 ratio would be this workbook's inference; the "
+         "FY2022 accounts state no capital ratio at all and no FY2022 Pillar 3 document exists. FY2013 is likewise "
+         "blank: the recovered 31 December 2013 edition discloses no RWA and no capital ratio at all, only the "
+         "Pillar 1 capital requirement, and nothing is derived from it. See the CET1 Ratio sheet and sources.",
 )
 
 metric(
     "Total Capital", "£'000",
-    [("Total capital (own funds)", {"FY2025": 15353, "FY2024": 15076, "FY2023": 14789, "FY2021": 14169, "FY2020": 14242, "FY2019": 13569, "FY2018": 13393})],
-    note="FY2018/FY2019: Total capital equals CET1 capital - the Pillar 3 documents for those years show no "
+    [
+        ("Total capital (own funds)", {"FY2025": 15353, "FY2024": 15076, "FY2023": 14789, "FY2021": 14169, "FY2020": 14242, "FY2019": 13569, "FY2018": 13393, "FY2013": 13899}),
+        ("FY2022 per the FY2023 accounts' 2022 comparative, basis (c)", {"FY2022": 13819}),
+    ],
+    note="FY2022 ADDED 2026-09-15 on a separate row (GBP 13,818,899 -> £13,819k), correcting this sheet's "
+         "previous 'no FY2022 total capital is disclosed anywhere' claim. It IS disclosed: the FY2023 accounts' "
+         "Strategic Report p.8 gives 'a total capital of GBP 14,788,668 (2022-13,818,899)'. It sits on its own "
+         "row rather than the primary row because it belongs to basis (c) - the same sentence's FY2022 CET1 of "
+         "GBP 12,852,280 - whereas the primary CET1/Tier 1 row for FY2022 holds basis (a) (GBP 13,958,648). "
+         "Putting £13,819k on the primary row would create an internally inconsistent FY2022 capital stack "
+         "across sheets. Note also that £13,819k - £12,852k = £967k, which is NOT the FY2022 revaluation reserve "
+         "of £820k, so the 'Tier 2 = revaluation reserve' pattern observed in other years does not hold on this "
+         "basis - one more reason the basis is genuinely different and is not resolved here. Total capital on "
+         "bases (a) and (b) remains undisclosed and blank: the FY2022 accounts state no Tier 2 figure at all. "
+         "In the years it IS disclosed, Tier 2 does equal the revaluation reserve exactly "
+         "(FY2021 14,169-13,424 = 745 = the reserve; FY2023 14,789-13,685 = 1,104 = the reserve), so a basis-(a) "
+         "FY2022 total of 13,959 + 820 = 14,779 is plausible - but that is an arithmetic inference from a "
+         "pattern, not a disclosed figure, and is not entered. "
+         "FY2018/FY2019: Total capital equals CET1 capital - the Pillar 3 documents for those years show no "
          "Tier 2 capital. From FY2020 on, the Bank's revaluation reserve is recognised as Tier 2 capital, "
          "adding to Total capital over and above CET1 - see the FY2020 Pillar 3 document's own Section 4.1. "
-         "This is a genuine methodology change disclosed by the Bank, not a transcription inconsistency.",
+         "This is a genuine methodology change disclosed by the Bank, not a transcription inconsistency. "
+         "REVISED 2026-09-15 BY THE RECOVERED FY2013 EDITION: 'from FY2020 on' describes the FY2018-FY2025 window "
+         "correctly but is not the start of the practice. The 31 December 2013 edition already recognises the "
+         "revaluation reserve as Tier 2 capital (Tier 2 Capital: Revaluation reserve 463), so the genuine anomaly "
+         "is FY2018/FY2019, the two years with no Tier 2 at all. FY2013's 13,899 on the primary row above is that "
+         "edition's own printed 'Total Regulatory Capital' line - a stated total, not Core Tier 1 plus the reserve "
+         "computed here (though it does equal 13,436 + 463, which is what confirms the reading)."
+         + "\n\n" + FY2022_CONFLICT_NOTE,
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2025": "21.7%", "FY2024": "24.6%", "FY2023": "45.9%", "FY2021": "57.8%", "FY2020": "36.7%", "FY2019": "57.5%", "FY2018": "46.9%"})],
+    [
+        ("Total capital ratio", {"FY2025": "21.7%", "FY2024": "24.6%", "FY2023": "45.9%", "FY2021": "57.8%", "FY2020": "36.7%", "FY2019": "57.5%", "FY2018": "46.9%"}),
+        ("FY2022 per the FY2023 accounts' 2022 comparative, basis (c) (whole percent as stated)", {"FY2022": "48%"}),
+    ],
+    note="FY2022 ADDED 2026-09-15 on a separate row: the FY2023 accounts' Strategic Report p.8 states the total "
+         "capital ratio as '46% at 31st of December 2023 (2022: 48%)'. Basis (c), same sentence as that year's "
+         "GBP 12,852,280 CET1 and GBP 13,818,899 total capital - see the conflict note below. Kept off the "
+         "primary row for the same reason as the CET1 Ratio sheet. The FY2023 value in that sentence (46%) is "
+         "this sheet's own 45.9% rounded to a whole percent, which is what confirms the sentence is being read "
+         "correctly.\n\n"
+         "LABEL TRAP CHECKED AND RESOLVED (FY2024) - recorded because this project has mapped a ratio to the "
+         "wrong sheet three times (Bank Saderat, Monument, Alpha Bank). The FY2024 accounts contain the sentence "
+         "'The CET1 total capital ratio at the end of 2024 was 24% (2023 46%) see note 32.' Despite saying "
+         "'CET1', BOTH figures are TOTAL capital ratios, not CET1 ratios. Verified against the FY2024 Pillar 3 "
+         "document's own Key Metrics table (section 1.1) and its section 6 capital table, which independently "
+         "agree: FY2024 CET1 ratio 22.7% and total capital ratio 24.6%; FY2023 CET1 ratio 42.5% and total "
+         "capital ratio 45.9%. 24% matches 24.6% and cannot be 22.7%; 46% matches 45.9% exactly (and matches "
+         "the FY2023 accounts' own 46% total capital ratio) and is nowhere near the 43%/42.5% CET1 ratio. So "
+         "neither figure was mapped anywhere - this sheet and the CET1 Ratio sheet already carry the correct "
+         "Pillar 3 KM1 values for FY2024/FY2023, and the FY2024 narrative sentence is simply mislabelled.\n"
+         "RELATED FY2024 UNRELIABILITY, flagged not merged: the FY2024 accounts' Strategic Report p.6 CAPITAL "
+         "paragraph gives FY2024 CET1 as GBP 13,939,366 (agrees with the Pillar 3's £13,940k) but its FY2023 "
+         "comparatives as GBP 14,573,608 and 45% - neither of which matches the FY2023 accounts' own "
+         "GBP 13,684,688 / 43% nor the Pillar 3's £13,685k / 42.5%. Two independent sources agree at £13,685k, "
+         "so the validation gate keeps the existing figure and the FY2024 comparative is treated as the outlier. "
+         "That same paragraph also gives FY2024 total capital as GBP 14,717,109 against the Pillar 3 KM1's "
+         "£15,076k; the KM1 regulatory template is retained on the primary row above and the narrative figure is "
+         "not blended in.\n"
+         "FY2013 is blank for the same structural reason as the other FY2013 ratio cells: the recovered 31 December "
+         "2013 edition publishes the Pillar 1 capital requirement and no RWA or ratio anywhere. See sources.\n\n" + FY2022_CONFLICT_NOTE,
 )
 
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32187, "FY2021": 24509, "FY2020": 38848, "FY2019": 23604, "FY2018": 24492})],
-    note="FY2018/FY2019/FY2021's own Pillar 3 'Total RWAs' figure equals only the Credit and Counterparty "
-         "Credit Risk component of the Bank's own Own Funds Requirement table, excluding Market and "
-         "Operational risk RWA - see the RWA Breakdown sheet's own note for the full, internally-corrected "
-         "total each year. FY2020's own Pillar 3 document is the first to state a comprehensive Total RWA "
-         "figure (matching the full Own Funds Requirement total) directly - this discrepancy pattern, present "
-         "FY2018-FY2019 and FY2021, is resolved from FY2020 on.",
+    [("Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32187, "FY2021": 29052, "FY2020": 38848, "FY2019": 28513, "FY2018": 24492}),
+     ("Memo - figure the Bank itself printed as 'Total RWAs' that year (credit and counterparty credit risk ONLY; superseded above for FY2019/FY2021 - see note)",
+      {"FY2021": 24509, "FY2019": 23604, "FY2018": 24492})],
+    note="FY2013 IS BLANK, AND DELIBERATELY SO. The recovered 31 December 2013 edition discloses no "
+         "risk-weighted-asset amount anywhere - it publishes the Pillar 1 CAPITAL requirement instead (Credit "
+         "2,454 + Market 24 + Operational 292 = Total Pillar 1 Requirement 2,770), which its own text defines as "
+         "'8% of the risk weighted exposure amounts'. Dividing 2,770 by 8% would yield an apparent ~34,625 that "
+         "no document states. Given that this bank's printed 'Total RWAs' has already been shown to be a "
+         "credit-risk subtotal in FY2018/FY2019/FY2021, inventing a FY2013 total by arithmetic is exactly the "
+         "wrong move; the disclosed capital requirements are carried on the RWA Breakdown sheet's own labelled "
+         "rows instead. See sources.\n"
+         "CORRECTION 2026-09-15 (RWA cross-sheet sweep). FY2021 corrected 24,509 -> 29,052 and FY2019 corrected "
+         "23,604 -> 28,513. Both superseded values are retained on the memo row above rather than discarded.\n"
+         "WHY FY2021 WAS WRONG: the FY2021 Pillar 3 Disclosures' own section 5.4 'Own Funds Requirement' table "
+         "(p.16) carries an explicit RWA column, and in that column it prints Credit and Counterparty Credit "
+         "Risk 24,509 (the exposure-class subtotal: Central Governments & Central Banks 2,079 + Institutions "
+         "704 + Corporates-SME 4,523 + Financial corporates 6,556 + Mortgages 6,426 + Retail 529 + Other 3,692), "
+         "Market Risk 302, Operational Risk (Basic Indicator Approach) 4,241, and 'Total Pillar 1 Requirement "
+         "29,052'. So 29,052 is a figure the Bank PRINTS in its own RWA column - it is transcribed here, not "
+         "derived - and the 24,509 that section 4.1 labels 'Risk Weighted Assets' is that same table's "
+         "credit-risk subtotal. Section 4.1's accompanying claim that 'the total for Risk Weighted Assets is "
+         "the amount reported in the Bank's regulatory returns' is contradicted by its own section 5.4. Note "
+         "that BOCUK's printed FY2021 ratios are computed on the credit-only denominator (CET1 13,424 / 24,509 "
+         "= 54.77%, matching the printed 54.8%), so - unlike Redwood - the printed ratio here does NOT disprove "
+         "the printed total; the same document's own RWA column does. The CET1/Tier 1/Total Capital Ratio "
+         "sheets therefore still carry the Bank's printed percentages and will NOT reproduce if divided against "
+         "this sheet; that divergence is the Bank's, is deliberate, and must not be 'fixed'.\n"
+         "WHY FY2019 WAS WRONG, AND WHERE 28,513 COMES FROM: the FY2019 document has no RWA column at all - its "
+         "sections 5.3/5.4 are capital-requirement only (Credit risk 1,888 + Market risk 7 + Operational risk "
+         "335 = Total Pillar 1 Requirement 2,230) - and its KM1 'Total RWAs 23,604' is the credit-risk figure "
+         "(its printed CET1 ratio of 57.5% uses it: 13,569/23,604 = 57.49%). 28,513 is NOT derived: it is "
+         "printed directly in the FY2020 Pillar 3 Disclosures' section 4.1 capital table, whose Risk Weighted "
+         "Assets line reads '38,848   28,513' for 2020 and 2019. This is the same route used for Ghana "
+         "International's FY2019 correction - the following edition's own statement of the prior year - and is "
+         "legitimate where back-solving from a ratio would not be. It is on the FY2020 edition's RESTATED basis "
+         "(that edition also restates FY2019's Pillar 1 requirement to 2,281 = credit 1,888 + market 77 + "
+         "operational 316, versus the FY2019 edition's own 2,230, alongside the office-building revaluation "
+         "restatement documented on the Statement of Changes in Equity sheet), so it will not tie to the RWA "
+         "Breakdown sheet's FY2019 own-edition total of 27,876 - that divergence is a restatement and is not to "
+         "be reconciled.\n"
+         "WHY FY2018 WAS **NOT** CHANGED, THOUGH IT IS WRONG THE SAME WAY: the FY2018 defect is proven "
+         "Redwood-style by the document's own arithmetic - its KM1 prints CET1 capital 13,393, Total RWAs "
+         "24,492 and a CET1 ratio of 46.9%, but 13,393/24,492 = 54.7%, not 46.9%. The same table's FY2017 "
+         "column is internally consistent (13,263/36,385 = 36.45% = the printed 36.5%), so FY2018 is the year "
+         "the line switched to credit-only (1,959/0.08 = 24,488, effectively the printed 24,492). No BOCUK "
+         "document anywhere prints a FY2018 total risk exposure amount, however: the FY2018 and FY2019 editions "
+         "have no RWA column, and the FY2019 edition's comparative simply repeats 24,492. The only candidate "
+         "(28,538 = the FY2018 document's own Total Pillar 1 Requirement of 2,283 divided by 8%, which does "
+         "reproduce the printed 46.9%) would be a derivation, and this project does not substitute a derived "
+         "figure for a disclosed one on this sheet. FY2018 therefore knowingly carries a credit-risk-only "
+         "figure, understated by roughly the market + operational component. Treat FY2018 -> FY2019 as a basis "
+         "break, not growth.\n"
+         "FY2022 is genuinely unobtainable, re-verified 2026-09-15: no FY2022 or FY2023 Pillar 3 document was "
+         "ever published, and the FY2022 and FY2023 statutory accounts (both image-only scans, OCR'd page by "
+         "page in full) state no RWA figure anywhere - the FY2022 accounts' Note 28 gives only a CET1 amount "
+         "and the FY2023 accounts' Note 32 only that year's available capital. "
+         "CORRECTION 2026-09-15: this note previously also said 'no ratio is disclosed for FY2022 either' - that "
+         "was wrong. The FY2023 accounts' Strategic Report p.8 does state FY2022 ratios (CET1 44%, total capital "
+         "48%) alongside a FY2022 CET1 of GBP 12,852,280 and total capital of GBP 13,818,899; all four are now "
+         "on the relevant sheets' own labelled rows. That does NOT unblank this sheet: RWA is not back-solved "
+         "from capital and a ratio here, and in any case 12,852,280 / 0.44 = ~GBP 29.2m is meaningless precision "
+         "off a whole-percent ratio (a 44% printed to the nearest percent spans roughly GBP 28.9m-GBP 29.9m of "
+         "RWA). FY2022 Total RWAs stays blank. "
+         "FY2020 is the first year whose own Pillar 3 document states a comprehensive Total RWA directly: its "
+         "section 5.4 RWA column prints Credit and Counterparty Credit Risk 34,473, Market Risk 187, "
+         "Operational Risk 4,188 and 'Total Pillar 1 Requirement 38,848', and its section 4.1 prints the same "
+         "38,848 as 'Risk Weighted Assets'. FY2023-FY2025 follow the same (correct) pattern.",
 )
 
 RWA_BREAKDOWN_SOURCES = (
@@ -456,35 +797,95 @@ RWA_BREAKDOWN_SOURCES = (
     f"derived total (£32,188k) is £1k above the pre-existing Total RWAs sheet's FY2023 figure (£32,187k) due "
     f"to rounding in this back-calculation - not treated as an error, both are within £1k of each other.\n"
     f"FY2021: Pillar 3 Disclosures as at 31st December 2021, p.16 (5.4 Own Funds Requirement) - {P3_2021_URL}\n"
-    f"FY2020: Pillar 3 Disclosures as at 31st December 2020, p.15 (5.3 Pillar 1 Capital Requirement / Own "
-    f"Funds Requirement) - {P3_2020_URL}. RWA per risk type DERIVED from the document's own capital-requirement "
-    f"figures (RWA = capital requirement / 8%); the resulting total (£38,839k) is within £9k (0.02%) of the "
-    f"document's own directly-reported Total RWA (£38,848k, from Section 4.1, presumably from the Bank's "
-    f"regulatory returns rather than a simple /8% back-calculation) - immaterial, not treated as an error.\n"
+    f"FY2020: Pillar 3 Disclosures as at 31st December 2020, p.16 (5.4 Own Funds Requirement) - {P3_2020_URL}. "
+    f"CORRECTED 2026-09-15: these four figures are now TRANSCRIBED from that table's own RWA column (Credit "
+    f"and Counterparty Credit Risk 34,473, Market Risk 187, Operational Risk 4,188, 'Total Pillar 1 "
+    f"Requirement' 38,848) instead of being derived from the capital-requirement column at /8%. The earlier "
+    f"derived values (34,463 / 188 / 4,188 / 38,839) were each within £10k but were an unnecessary derivation "
+    f"where the document states the RWAs directly, and the derived total left a spurious £9k gap against the "
+    f"Total RWAs sheet. FY2020 now ties exactly.\n"
     f"FY2019: DERIVED the same way from the Pillar 3 Disclosures as at 31st December 2019, p.13 (Own funds "
     f"Requirement) - {P3_2019_URL}. Derived total £27,876k.\n"
     f"FY2018: DERIVED the same way from the Pillar 3 Disclosures as at 31st December 2018, p.12 (Own funds "
     f"Requirement) - {P3_2018_URL}. Derived total £28,538k.\n"
     "FY2022: no standalone Pillar 3 document was found (see other Pillar 3 sheets' note) - left blank rather "
     "than guessed.\n"
-    "DISCREPANCY FLAGGED (FY2018, FY2019 and FY2021): the pre-existing/Total RWAs sheet's figure for each of "
-    "these years (£24,492k FY2018, £23,604k FY2019, £24,509k FY2021) equals only the Credit and Counterparty "
-    "Credit Risk subtotal from that year's own Pillar 3 table - it does NOT include that same table's Market "
-    "Risk and Operational Risk RWA, whose sum is each document's own printed 'Total Pillar 1 Requirement' "
-    "(£28,538k FY2018, £27,876k FY2019, £29,052k FY2021 - see derivations above). This RWA Breakdown sheet "
-    "uses the correct full total for each year, which is materially higher than the pre-existing Total RWAs "
-    "sheet's value - flagged here for correction there rather than silently matched to the (apparently "
-    "understated) existing figures. FY2020 on, the Bank's own Pillar 3 'Total RWAs' figure is already the "
-    "full Pillar 1 total (see the Total RWAs sheet's own note) - this discrepancy resolves itself from FY2020.\n"
+    "FY2022 EXHAUSTIVELY RE-VERIFIED 2026-09-15 - a genuine publication gap, not a sourcing miss, proven four "
+    "independent ways. (1) The Bank's own financial-statements index page lists its Pillar 3 documents for "
+    "2018, 2019, 2020, 2021, 2024 and 2025 and skips 2022 and 2023 entirely, while listing Financial Statements "
+    "for every year 2010-2025 without a break. (2) Both predicted URLs, built on the site's completely regular "
+    "'BOCUK_Pillar 3 Disclosures 31 December YYYY.pdf' pattern, return HTTP 404 for 2022 and 2023 while the "
+    "2021 and 2024 files on that identical pattern serve real PDFs. (3) A full Wayback CDX sweep of the whole "
+    "bankofceylon.co.uk domain returns Pillar 3 filenames for 2013, 2018, 2019, 2020, 2021, 2024 and 2025 and "
+    "no 2022 or 2023 capture has ever existed, so the documents were not published and later withdrawn - they "
+    "were never published. (4) No surviving document's comparative column reaches FY2022: the FY2024 "
+    "document's section 5.4 table carries exactly two columns, 'Capital Requirements 2024' and 'Capital "
+    "Requirements 2023' (which is where this sheet's FY2023 figures come from), and the FY2021 document's "
+    "comparative is FY2020. The FY2022 Annual Report was also checked directly and is not a usable substitute: "
+    "it is a scanned, image-only filing with no text layer, and OCR of all 64 pages at 200 dpi finds only "
+    "narrative capital-adequacy and risk-management prose with no risk-weighted-asset table of any kind. "
+    "Nothing further to chase for this year.\n"
+    "DISCREPANCY RESOLVED 2026-09-15 (was 'DISCREPANCY FLAGGED' here; do not re-flag). The flag was correct: "
+    "the Total RWAs sheet's FY2018/FY2019/FY2021 figures (£24,492k / £23,604k / £24,509k) were the Credit and "
+    "Counterparty Credit Risk subtotal only, excluding Market and Operational risk - the same "
+    "credit-subtotal-as-total defect found at Redwood and Ghana International. It has now been acted on, with "
+    "each year settled from the primary documents rather than by arithmetic:\n"
+    "  - FY2021 CORRECTED on the Total RWAs sheet, 24,509 -> 29,052. 29,052 is not derived: the FY2021 "
+    "document's section 5.4 table has an explicit RWA column and prints 'Total Pillar 1 Requirement 29,052' "
+    "in it, directly beneath Credit and Counterparty Credit Risk 24,509, Market Risk 302 and Operational Risk "
+    "4,241. This sheet already carried the transcribed column and is unchanged.\n"
+    "  - FY2019 CORRECTED on the Total RWAs sheet, 23,604 -> 28,513, transcribed from the FY2020 edition's "
+    "section 4.1 capital table ('Risk Weighted Assets 38,848  28,513'), the same following-edition route used "
+    "for Ghana International. That is the FY2020 edition's RESTATED FY2019 (it also restates FY2019's Pillar 1 "
+    "requirement to 2,281 vs the FY2019 edition's own 2,230), so it deliberately does NOT equal this sheet's "
+    "FY2019 own-edition total of £27,876k. Per the project's restatement rule each year keeps its own "
+    "edition's components here; the ~£637k difference is a restatement and is not to be reconciled.\n"
+    "  - FY2018 NOT CHANGED, though the defect is proven there too: the FY2018 KM1 prints CET1 13,393, Total "
+    "RWAs 24,492 and a CET1 ratio of 46.9%, and 13,393/24,492 = 54.7%, not 46.9% (13,393/28,538 = 46.93% "
+    "does reproduce it, and the FY2017 column of that same table is internally consistent at 13,263/36,385 = "
+    "36.5%). But no BOCUK document anywhere prints a FY2018 total risk exposure amount - the FY2018 and FY2019 "
+    "editions have no RWA column and the FY2019 comparative repeats 24,492 - so the only available replacement "
+    "(£28,538k = Total Pillar 1 Requirement 2,283 / 8%, shown on this sheet's Total row) would be a "
+    "derivation, and a derived figure is not substituted for a disclosed one on the Total RWAs sheet. FY2018 "
+    "is therefore the one year where this sheet's Total legitimately exceeds the Total RWAs sheet.\n"
+    "From FY2020 on the Bank's own section 4.1 'Risk Weighted Assets' line is already the full Pillar 1 total, "
+    "so the pattern does not recur.\n"
+    "FY2013 HAS NO RWA ROWS AT ALL, AND THE TWO BLOCKS AT THE FOOT OF THIS SHEET ARE NOT RWA. The recovered "
+    "31 December 2013 edition (see the metric sheets' source note for the URL) never discloses a "
+    "risk-weighted-asset amount - not by risk type, not by exposure class, not in total. What it publishes is "
+    "the Pillar 1 CAPITAL requirement, which its own text defines as '8% of the risk weighted exposure "
+    "amounts'. Those figures are transcribed exactly as printed, in £'000 of capital, on their own clearly "
+    "labelled rows, and are NOT divided by 8% to manufacture an RWA. Doing so would imply a total of roughly "
+    "34,625 that no document states - and this is precisely the bank where a printed 'Total RWAs' has already "
+    "been shown to be a credit-risk subtotal three times over, so an invented total is the last thing these "
+    "sheets need. The two FY2013 blocks are internally consistent (2,454 + 24 + 292 = 2,770; and the six "
+    "exposure-class lines sum to the same 2,454), which is the only check available: the nearest surviving "
+    "edition is FY2018, five years later, and carries no FY2013 comparative. Source: Capital & Risk "
+    "Management - Pillar 3 Disclosures 31st December 2013, p.8 (Minimum Capital Requirement - Pillar 1) and "
+    "p.9 (Capital Resource Requirement at 8%; Gross credit risk exposure) - " + P3_2013_URL + "\n"
     + ENTITY_NOTE
 )
 
 rwa_breakdown_rows = [
     ("SECTION", "Risk-weighted exposure amounts by risk type", {}),
-    ("DATA", "Credit and counterparty credit risk", {"FY2025": 65343, "FY2024": 56022, "FY2023": 26888, "FY2021": 24509, "FY2020": 34463, "FY2019": 23600, "FY2018": 24488}),
-    ("DATA", "Market risk", {"FY2025": 37, "FY2024": 557, "FY2023": 1150, "FY2021": 302, "FY2020": 188, "FY2019": 88, "FY2018": 100}),
+    ("DATA", "Credit and counterparty credit risk", {"FY2025": 65343, "FY2024": 56022, "FY2023": 26888, "FY2021": 24509, "FY2020": 34473, "FY2019": 23600, "FY2018": 24488}),
+    ("DATA", "Market risk", {"FY2025": 37, "FY2024": 557, "FY2023": 1150, "FY2021": 302, "FY2020": 187, "FY2019": 88, "FY2018": 100}),
     ("DATA", "Operational risk (Basic Indicator Approach)", {"FY2025": 5353, "FY2024": 4765, "FY2023": 4150, "FY2021": 4241, "FY2020": 4188, "FY2019": 4188, "FY2018": 3950}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32188, "FY2021": 29052, "FY2020": 38839, "FY2019": 27876, "FY2018": 28538}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32188, "FY2021": 29052, "FY2020": 38848, "FY2019": 27876, "FY2018": 28538}),
+    ("SECTION", "FY2013 only - Pillar 1 CAPITAL requirement by risk type (£'000 of CAPITAL, not RWA - deliberately NOT divided by 8%; do not read down the same column as the RWA rows above)", {}),
+    ("DATA", "Capital requirement - credit risk (standardised approach)", {"FY2013": 2454}),
+    ("DATA", "Capital requirement - market risk (foreign currency position risk requirement)", {"FY2013": 24}),
+    ("DATA", "Capital requirement - operational risk (Basic Indicator Approach)", {"FY2013": 292}),
+    ("TOTAL", "Total Pillar 1 Requirement as printed", {"FY2013": 2770}),
+    ("SECTION", "FY2013 only - credit-risk capital requirement at 8% by exposure class (£'000 of CAPITAL, not RWA)", {}),
+    ("DATA", "Central Governments and Central Banks", {"FY2013": 0}),
+    ("DATA", "Financial Institutions", {"FY2013": 1620}),
+    ("DATA", "Personal loans and advances", {"FY2013": 156}),
+    ("DATA", "Secured on real estate", {"FY2013": 231}),
+    ("DATA", "Commercial loans and advances", {"FY2013": 227}),
+    ("DATA", "Fixed and other assets", {"FY2013": 220}),
+    ("TOTAL", "Total credit-risk Pillar 1 capital requirement as printed", {"FY2013": 2454}),
+    ("DATA", "Memo: gross credit risk exposure before credit risk mitigation (an exposure measure, not an RWA)", {"FY2013": 63175}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -499,7 +900,7 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£'000 / %",
     [
-        ("Tier 1 capital available (£'000)", {"FY2025": 14217, "FY2024": 13940, "FY2023": 13685, "FY2021": 13424, "FY2020": 13338, "FY2019": 13569, "FY2018": 13393}),
+        ("Tier 1 capital available (£'000)", {"FY2025": 14217, "FY2024": 13940, "FY2023": 13685, "FY2021": 13424, "FY2020": 13338, "FY2019": 13569, "FY2018": 13393, "FY2013": 13436}),
         ("Total leverage ratio exposure measure (£'000)", {"FY2025": 99213, "FY2024": 75247, "FY2023": 47579, "FY2021": 29072, "FY2020": 37808, "FY2019": 39619, "FY2018": 28733}),
         ("Leverage ratio (%)", {"FY2025": "14.3%", "FY2024": "18.5%", "FY2023": "28.8%", "FY2021": "46.2%", "FY2020": "35.3%", "FY2019": "34.2%", "FY2018": "46.6%"}),
     ],
@@ -509,7 +910,11 @@ metric(
          "FY2019 likewise uses the FY2019 document's own originally-published figures (£39,619k / 34.2%); the "
          "FY2020 document's own restated FY2019 comparative (£40,135k / 32.7%, alongside a restated Tier 1 "
          "capital of £13,143k) is materially different, driven by the office-building revaluation restatement "
-         "described on the Statement of Changes in Equity sheet - see the p3_sources cross-vintage note.",
+         "described on the Statement of Changes in Equity sheet - see the p3_sources cross-vintage note.\n"
+         "FY2013 carries the Tier 1 capital row only (13,436, the recovered edition's own Core Tier 1 line). The "
+         "exposure-measure and ratio rows are blank for a structural reason, not a sourcing one: the leverage ratio "
+         "did not exist as a UK regulatory measure or disclosure at 31 December 2013 - it arrived with CRD IV/CRR - "
+         "and the recovered edition contains no leverage exposure measure and no leverage ratio in any form.",
 )
 
 metric(
@@ -523,7 +928,11 @@ metric(
          "FY2021 Pillar 3 disclosure, and no FY2022 document was found (see source note). FY2020's Pillar 3 "
          "document discloses only the headline Liquidity Ratio (109%, from its infographic-style 'Key Metrics' "
          "summary) with no HQLA/net cash outflow breakdown anywhere in that document - the two absolute £'000 "
-         "rows are left blank for FY2020 rather than guessed, while the ratio itself is populated.",
+         "rows are left blank for FY2020 rather than guessed, while the ratio itself is populated. FY2013 is blank "
+         "on all three rows for a structural reason: the LCR did not exist as a UK requirement or disclosure at "
+         "31 December 2013 (it was phased in from October 2015), and the recovered 31 December 2013 edition "
+         "contains no liquidity ratio at all - its liquidity section describes the then-applicable BIPRU 12 / "
+         "ILAA / Individual Liquidity Guidance regime narratively, with no figure.",
 )
 
 metric(
@@ -538,7 +947,9 @@ metric(
          "absolute figures genuinely differ. Not disclosed for FY2018/FY2019/FY2020/FY2021/FY2022 - no NSFR "
          "line appears in any of the Key Metrics/Own Funds/Leverage sections of the FY2018, FY2019, FY2020 or "
          "FY2021 Pillar 3 documents, and no FY2022 document was found (see LCR sheet note for the same cause "
-         "re FY2021/FY2022).",
+         "re FY2021/FY2022). FY2013 is blank on firmer ground still: 31 December 2013 predates even the Basel III "
+         "NSFR observation period in the UK, the UK NSFR requirement did not take effect until 1 January 2022, and "
+         "the recovered 31 December 2013 edition contains no NSFR.",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -586,8 +997,16 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2025": "185%", "FY2024": "141%", "FY2023": "141%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
-         "source citation for the underlying document/page. FY2022 Pillar 3 data (all ratios) and FY2021/FY2022/"
-         "FY2020/FY2019/FY2018 NSFR are genuinely absent from the source documents, not omitted in error. "
+         "source citation for the underlying document/page. FY2021/FY2022/FY2020/FY2019/FY2018 NSFR are "
+         "genuinely absent from the source documents, not omitted in error. "
+         "FY2022 RATIOS - UPDATED 2026-09-15: FY2022 CET1 and Total capital ratios (44% and 48%) ARE stated, in "
+         "the FY2023 accounts' Strategic Report p.8, and are now carried on the CET1 Ratio and Total Capital "
+         "Ratio detail sheets. They are deliberately NOT copied into this trend view, because they belong to a "
+         "different and unstated capital basis from the Pillar 3 series plotted here (that same sentence's "
+         "FY2022 CET1 of GBP 12,852,280 is GBP 1.1m below the FY2022 accounts' own Note 28 figure, unreconciled "
+         "- see the CET1 Capital sheet's conflict note) and are printed to whole percents rather than the one "
+         "decimal used by every other year. Dropping them into the same trend line would present a basis break "
+         "as a movement. The FY2022 Leverage Ratio and Total RWAs remain genuinely undisclosed. "
          "FY2020's opening equity (13,982) reflects a prior-year restatement (office building revaluation) "
          "disclosed in the FY2020 filing itself, not FY2019's own originally-published closing equity (13,476) "
          "- see the Statement of Changes in Equity sheet for the full bridge.",

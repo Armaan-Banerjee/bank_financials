@@ -419,16 +419,57 @@ metric(
     p3_sources(),
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["RWA Breakdown"],
-    p3_sources(),
-    per_note={
-        "RWA Breakdown": "TML's Pillar 3 Disclosures do not include a UK OV1-style RWA breakdown-by-risk-category "
-                          "table in any year FY2021-FY2025 (all 4 available editions checked directly - each is a "
-                          "short document, 9-15 pages, consistent with the Group's stated 'small, non-complex' "
-                          "institution status under UK CRR Article 4(145) and the reduced Pillar 3 disclosure "
-                          "regime of Article 433(b), the same basis already noted for MREL Ratio's non-disclosure).",
-    },
+RWA_BREAKDOWN_SOURCES = (
+    "Sources - TML Group (consolidated) basis, £'000, all figures DIRECTLY DISCLOSED (no derivation needed) - "
+    "matching the Total RWAs sheet's own figures for every year exactly:\n"
+    "FY2025 & FY2024 (comparative column): TML Pillar 3 Disclosures, 31 December 2025, p.5, Table 'UK OV1 - "
+    f"Overview of risk weighted exposure amounts' - {P3_2025_URL}\n"
+    "FY2024 (own-year column, used above) & FY2023 (comparative column): TML Pillar 3 Disclosures, 31 December "
+    f"2024, p.5, Table 'UK OV1 - Overview of risk weighted exposure amounts' - {P3_2024_URL}\n"
+    "FY2023 (own-year column, used above) & FY2022 (comparative column): TML Pillar 3 Disclosures, 31 December "
+    f"2023, p.4, Table 'UK OV1 - Overview of risk weighted exposure amounts' - {P3_2023_URL}\n"
+    "FY2021: TML Pillar 3 Disclosures, 31 December 2021, p.22, 'Pillar 1 Capital Requirement' table (its own "
+    f"dedicated 'Risk Weighted Assets' column, not the adjacent 'Pillar 1 Requirement' capital column - no x12.5 "
+    f"derivation needed) - {P3_2021_URL}\n"
+    "CATEGORY NOTE: FY2022-FY2025 follow the UK OV1 template (Credit Risk excl. CCR / Counterparty Credit Risk - "
+    "the CCR figure itself already comprises 'of which OEM' and 'of which CVA' sub-lines per the source table's "
+    "own rows 7/UK8b, so CVA is not broken out as a separate summed row here to avoid double-counting / "
+    "Securitisation exposures in the non-trading book, first appearing FY2024 / Operational Risk). FY2021 "
+    "predates TML's adoption of the OV1 template and instead "
+    "discloses a Standardised-Exposure-Class Pillar 1 table with a coarser split (Total Credit Risk / Operational "
+    "Risk / Credit Valuation Adjustment, with CVA shown as its own top-level category rather than nested under "
+    "CCR, and no separate CCR line at all) - shown as its own SECTION block rather than blended into the OV1 rows "
+    "above. Every year's TOTAL below reconciles exactly to the Total RWAs sheet's own figure for that year "
+    "(FY2025: 1,083,333; FY2024: 951,607; FY2023: 931,650; FY2022: 790,158; FY2021: 280,843)."
+)
+
+rwa_breakdown_rows = [
+    ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts (TML GROUP, CONSOLIDATED)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 870361, "FY2024": 786363, "FY2023": 816990, "FY2022": 699002}),
+    ("DATA", "Counterparty credit risk (CCR) (includes credit valuation adjustment - see sources note)", {"FY2025": 6519, "FY2024": 4759, "FY2023": 8096, "FY2022": 6168}),
+    ("DATA", "Securitisation exposures in the non-trading book (after the cap)", {"FY2025": 42004, "FY2024": 29907}),
+    ("DATA", "Operational risk", {"FY2025": 164449, "FY2024": 130578, "FY2023": 106564, "FY2022": 84988}),
+    ("TOTAL", "Total risk weighted exposure amount", {"FY2025": 1083333, "FY2024": 951607, "FY2023": 931650, "FY2022": 790158}),
+    # FY2021 predates the OV1 template - own SECTION block, coarser/different
+    # category split (own dedicated "Risk Weighted Assets" column, disclosed
+    # directly, not derived from the adjacent Pillar 1 Requirement column).
+    ("SECTION", "Pillar 1 Capital Requirement table (TML GROUP, CONSOLIDATED, as disclosed)", {}),
+    ("DATA", "Total credit risk", {"FY2021": 251021}),
+    ("DATA", "Operational risk", {"FY2021": 26340}),
+    ("DATA", "Credit valuation adjustment", {"FY2021": 3482}),
+    ("TOTAL", "Total Pillar 1 / risk weighted assets", {"FY2021": 280843}),
+]
+
+bw.add_rwa_breakdown_sheet(
+    title="Tandem Bank Limited — RWA Breakdown",
+    subtitle="TML Group (consolidated) basis, £'000, all directly disclosed. FY2022-FY2025 follow the UK OV1 "
+             "template; FY2021 predates it and uses a different, coarser category split - see the two SECTION "
+             "blocks below and the sources note. Each year's TOTAL matches the Total RWAs sheet's figure for "
+             "that year exactly.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=48,
+    source_height=220,
 )
 
 metric(

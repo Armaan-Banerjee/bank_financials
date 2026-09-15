@@ -7,10 +7,16 @@ from bank_workbook import BankWorkbook
 
 # STANDARD CHARTERED BANK (ZC000018 / FRN 114276)
 # The annual reports provide distinct Group and Company columns.  Cash-flow
-# values below are the standalone Bank Company column.  Regulatory capital
-# disclosures in the reports are explicitly for Standard Chartered Bank Group
-# on a solo-consolidated basis (including four subsidiaries), so Group Pillar 3
-# figures are intentionally not imported into this Bank-level workbook.
+# values below are the standalone Bank Company column.
+#
+# The regulatory sheets use a different basis, deliberately.  The annual
+# reports' own capital disclosures are for Standard Chartered Bank Group, and
+# those are NOT imported here.  What is imported, as of 2026-09-15, is the
+# solo-consolidation section of Standard Chartered PLC's Pillar 3 reports: the
+# PRA sets this entity's capital requirements on a solo-consolidated basis (the
+# Company plus four named subsidiaries), and that section discloses this entity
+# under the full UK templates.  It is this entity's own regulatory basis, not a
+# parent's consolidated figures standing in for it.  See SOLO_BASIS_NOTE.
 
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
 YEAR_LABEL = {y: y for y in YEARS}
@@ -32,12 +38,14 @@ ENTITY_NOTE = (
 )
 
 REGULATORY_GAP_NOTE = (
-    "REGULATORY BASIS LIMITATION: the reports state that capital disclosures are provided on the Standard "
-    "Chartered Bank Group basis and that PRA requirements are set on a solo-consolidated basis. That basis includes "
-    "four subsidiaries (Standard Chartered Holdings (International) B.V., Standard Chartered Grindlays Pty "
-    "Limited, SCMB Overseas Limited and Corrasi Covered Bonds LLP). No complete five-year standalone Company KM1 "
-    "series was located. Group Pillar 3/capital figures have therefore not been substituted for the requested "
-    "Bank-level series."
+    "REGULATORY BASIS: no standalone Company KM1 series exists, because the PRA sets this entity's capital "
+    "requirements on a SOLO-CONSOLIDATED basis - the Company plus four subsidiaries (Standard Chartered Holdings "
+    "(International) B.V., Standard Chartered Grindlays Pty Limited, SCMB Overseas Limited and Corrasi Covered "
+    "Bonds LLP). The Pillar 3 metric sheets and the RWA Breakdown sheet in this workbook therefore carry "
+    "solo-consolidated figures, taken from the solo-consolidation section of Standard Chartered PLC's Pillar 3 "
+    "reports (added 2026-09-15). Standard Chartered PLC GROUP figures are a different and much larger basis and "
+    "have NOT been substituted anywhere. The balance sheet, cash flow, equity and asset quality sheets remain on "
+    "the standalone Company basis, so figures must not be divided across the two."
 )
 
 SOURCE_NOTE = (
@@ -391,37 +399,260 @@ def unavailable(name, note):
     )
 
 
-for metric_name in [
-    "CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio",
-    "Total Capital", "Total Capital Ratio", "Total RWAs",
+# ---------------------------------------------------------------------------
+# Standard Chartered Bank — SOLO CONSOLIDATION (the PRA's own basis for this
+# entity).  Added 2026-09-15, replacing a "Not publicly disclosed" block.
+#
+# The earlier claim that no entity-level regulatory series existed was wrong.
+# Standard Chartered PLC's annual Pillar 3 report carries a dedicated "Solo
+# consolidation" section disclosing Standard Chartered Bank's own regulatory
+# position under the full UK templates (UK CC1 own funds, UK LR2 leverage,
+# UK LIQ1 LCR, UK LIQ2 NSFR).  Table 109 of the FY2023 edition lists it among
+# the Group's significant subsidiaries with "Local Regulator: PRA".
+#
+# This is NOT a parent-group substitution.  The SCB Bank Report states:
+# "Capital requirements are set by the PRA for Standard Chartered Bank on a
+# solo consolidation basis. The solo-consolidated group differs from Standard
+# Chartered Bank (Company) in that it includes the full consolidation of four
+# subsidiaries, namely Standard Chartered Holdings (International) B.V.,
+# Standard Chartered Grindlays PTY Limited, SCMB Overseas Limited and Corrasi
+# Covered Bonds LLP."  Solo consolidation is a permission that widens the
+# firm's own INDIVIDUAL prudential position; the perimeter is headed by this
+# entity, not by Standard Chartered PLC.
+#
+# Entity distinctness is proved by the numbers: SC PLC group total RWA at
+# FY2023 is 244,151 $m against 122,408 $m here.
+# ---------------------------------------------------------------------------
+SOLO = {
+    "CET1 Capital":        {"FY2025": 14526, "FY2024": 14730, "FY2023": 14730, "FY2022": 14079, "FY2021": 16475},
+    "CET1 Ratio":          {"FY2025": "11.1%", "FY2024": "11.7%", "FY2023": "12.0%", "FY2022": "10.7%", "FY2021": "11.6%"},
+    "Tier 1 Capital":      {"FY2025": 18678, "FY2024": 19003, "FY2023": 18601, "FY2022": 18257, "FY2021": 21151},
+    "Tier 1 Ratio":        {"FY2025": "14.3%", "FY2024": "15.0%", "FY2023": "15.2%", "FY2022": "13.9%", "FY2021": "14.9%"},
+    "Total Capital":       {"FY2025": 24375, "FY2024": 27186, "FY2023": 27714, "FY2022": 29058, "FY2021": 32016},
+    "Total Capital Ratio": {"FY2025": "18.7%", "FY2024": "21.5%", "FY2023": "22.6%", "FY2022": "22.1%", "FY2021": "22.5%"},
+    "Total RWAs":          {"FY2025": 130608, "FY2024": 126383, "FY2023": 122408, "FY2022": 131175, "FY2021": 142161},
+}
+
+P3_URLS = {
+    "FY2025": "https://www.sc.com/en/uploads/sites/66/content/docs/standard-chartered-plc-full-year-2025-pillar3-disclosure.pdf",
+    "FY2024": "https://www.sc.com/en/uploads/sites/66/content/docs/standard-chartered-plc-full-year-2024-pillar3-disclosure.pdf",
+    "FY2023": "https://www.sc.com/en/uploads/sites/66/content/docs/standard_chartered_plc_pillar3_full_year_2023_report.pdf",
+    "FY2022": "https://www.sc.com/en/uploads/sites/66/content/docs/standard_chartered_plc_pillar3_full_year_2022_report.pdf",
+}
+
+SOLO_SOURCES = (
+    "SOLO-CONSOLIDATION REGULATORY SOURCES (added 2026-09-15). Each year is taken from that year's OWN Pillar 3 "
+    "edition, and every year was additionally cross-checked against the following edition's comparative column:\n"
+    "FY2025: Standard Chartered PLC Full Year 2025 Pillar 3 Disclosure, Table 109 'Composition of regulatory own "
+    "funds (UK CC1) - Solo consolidation', rows 29/45/59/60/61/62/63 - " + P3_URLS["FY2025"] + "\n"
+    "FY2024: Standard Chartered PLC Full Year 2024 Pillar 3 Disclosure, Table 113 (same UK CC1 solo template) - "
+    + P3_URLS["FY2024"] + "\n"
+    "FY2023: Standard Chartered PLC Full Year 2023 Pillar 3 Disclosure, Table 110 (same UK CC1 solo template) - "
+    + P3_URLS["FY2023"] + "\n"
+    "FY2022: Standard Chartered PLC Full Year 2022 Pillar 3 Disclosure, Table 106 (same UK CC1 solo template) - "
+    + P3_URLS["FY2022"] + "\n"
+    "FY2021: the FY2022 edition's 2021 comparative column (Table 106). The FY2021 Pillar 3 edition contains NO solo-"
+    "consolidation section at all - the section was introduced in the FY2022 edition - so the comparative is the "
+    "only source for that year.\n\n"
+    "SOURCE DEFECT FOUND AND AVOIDED: the FY2025 edition's 2024 comparative column misprints the three capital "
+    "RATIO rows, showing 12.0%/15.2%/22.6% - which are FY2023's ratios - against FY2024 amounts. Those ratios do "
+    "not reconcile with the amounts printed beside them (14,730/126,383 = 11.7%, not 12.0%). FY2024's ratios here "
+    "are taken from the FY2024 edition's own column (11.7%/15.0%/21.5%), which reconcile exactly and whose FY2023 "
+    "comparative reproduces the FY2023 edition line for line. Do not 'correct' these to the FY2025 edition's "
+    "comparative.\n\n"
+    "ENTITY CHECK: Standard Chartered PLC group total RWA at FY2023 is 244,151 $m (group UK KM1) against 122,408 "
+    "$m on this solo-consolidated basis, confirming these are the Bank entity's figures and not the listed "
+    "parent's."
+)
+
+SOLO_BASIS_NOTE = (
+    "BASIS: Standard Chartered Bank on the SOLO-CONSOLIDATED basis, which is the basis on which the PRA sets this "
+    "entity's capital requirements. It comprises Standard Chartered Bank (Company) plus the full consolidation of "
+    "four subsidiaries (Standard Chartered Holdings (International) B.V., Standard Chartered Grindlays PTY Limited, "
+    "SCMB Overseas Limited and Corrasi Covered Bonds LLP). This is a regulatory perimeter headed by this entity, "
+    "NOT the Standard Chartered PLC listed group. It is therefore a different basis from the Balance Sheet, Cash "
+    "Flow and Statement of Changes in Equity sheets in this workbook, which use the narrower standalone Bank "
+    "Company column - do not divide figures across the two bases."
+)
+
+for _metric, _unit in [
+    ("CET1 Capital", "$million"), ("CET1 Ratio", "% of RWA"),
+    ("Tier 1 Capital", "$million"), ("Tier 1 Ratio", "% of RWA"),
+    ("Total Capital", "$million"), ("Total Capital Ratio", "% of RWA"),
+    ("Total RWAs", "$million"),
 ]:
-    unavailable(
-        metric_name,
-        "No complete five-year standalone Company regulatory series was located in the Bank reports. The available "
-        "capital review and Pillar 3 materials use the Bank Group solo-consolidated basis; those figures are not "
-        "appropriate substitutes for this Bank-level workbook.",
+    bw.add_metric_sheet(
+        _metric,
+        _unit,
+        [(_metric + " — solo-consolidated basis", SOLO[_metric])],
+        SOLO_SOURCES,
+        note=SOLO_BASIS_NOTE,
+        first_col_width=58,
+        source_height=300,
     )
 
-RWA_NOT_DISCLOSED_NOTE = (
-    "Not publicly disclosed at standalone Bank Company level. " + REGULATORY_GAP_NOTE
+# RWA breakdown, solo-consolidated basis.  Added 2026-09-15, replacing a
+# "Not publicly disclosed" block.  The same Pillar 3 annex that carries the
+# solo-consolidation capital templates also prints a full OV1-shaped RWA
+# breakdown for this entity, in the "Overview of RWA - Significant
+# Subsidiaries" table (named "Large Subsidiaries" in the FY2022 edition).
+# Its first column is headed "Standard Chartered - Solo consolidation" with
+# "Local Regulator: PRA", the same column heading used by the capital tables
+# above.
+RWA_BREAKDOWN = {
+    "Credit risk (excluding CCR)":      {"FY2025": 65489, "FY2024": 65425, "FY2023": 66630, "FY2022": 74581, "FY2021": 89824},
+    "Of which the standardised approach": {"FY2025": 13796, "FY2024": 11425, "FY2023": 11038, "FY2022": 10548, "FY2021": 18575},
+    "Of which slotting approach":        {"FY2025": 2842, "FY2024": 2313, "FY2023": 1999, "FY2022": 2284, "FY2021": 2415},
+    "Of which the advanced IRB (AIRB) approach": {"FY2025": 48851, "FY2024": 51688, "FY2023": 53593, "FY2022": 61749, "FY2021": 68834},
+    "Counterparty credit risk (CCR)":    {"FY2025": 16773, "FY2024": 15638, "FY2023": 14087, "FY2022": 15888, "FY2021": 16384},
+    "Of which the standardised approach (CCR)": {"FY2025": 2891, "FY2024": 2435, "FY2023": 2476, "FY2022": 2971, "FY2021": 2875},
+    "Of which internal model method (IMM)": {"FY2025": 7840, "FY2024": 7798, "FY2023": 7080, "FY2022": 7436, "FY2021": 6340},
+    "Of which exposures to a CCP":       {"FY2025": 1022, "FY2024": 717, "FY2023": 719, "FY2022": 688, "FY2021": 1009},
+    "Of which credit valuation adjustment (CVA)": {"FY2025": 1639, "FY2024": 1824, "FY2023": 1381, "FY2022": 1961, "FY2021": 2890},
+    "Of which other CCR":                {"FY2025": 3382, "FY2024": 2864, "FY2023": 2431, "FY2022": 2832, "FY2021": 3270},
+    "Settlement risk":                   {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 6, "FY2021": 4},
+    "Securitisation exposures in the banking book": {"FY2025": 3429, "FY2024": 3712, "FY2023": 4457, "FY2022": 4830, "FY2021": 3606},
+    "Position, foreign exchange and commodities risks (Market risk)": {"FY2025": 22466, "FY2024": 21914, "FY2023": 18436, "FY2022": 17070, "FY2021": 18582},
+    "Of which the standardised approach (market risk)": {"FY2025": 10859, "FY2024": 7905, "FY2023": 7077, "FY2022": 5664, "FY2021": 8039},
+    "Of which IMA":                      {"FY2025": 11607, "FY2024": 14008, "FY2023": 11360, "FY2022": 11406, "FY2021": 10542},
+    "Large exposures":                   {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0},
+    "Operational risk":                  {"FY2025": 15632, "FY2024": 14258, "FY2023": 13045, "FY2022": 12880, "FY2021": 12701},
+    "Amounts below the thresholds for deduction (subject to 250% risk weight)": {"FY2025": 6819, "FY2024": 5427, "FY2023": 5753, "FY2022": 5920, "FY2021": 1060},
+    "Floor adjustment":                  {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0},
+    "Total risk weighted assets":        {"FY2025": 130608, "FY2024": 126375, "FY2023": 122408, "FY2022": 131175, "FY2021": 142161},
+}
+
+RWA_BREAKDOWN_ROWS = [
+    ("SECTION", "Credit risk", {}),
+    ("DATA", "Credit risk (excluding CCR)", RWA_BREAKDOWN["Credit risk (excluding CCR)"]),
+    ("DATA", "  of which: standardised approach", RWA_BREAKDOWN["Of which the standardised approach"]),
+    ("DATA", "  of which: slotting approach", RWA_BREAKDOWN["Of which slotting approach"]),
+    ("DATA", "  of which: advanced IRB (AIRB) approach", RWA_BREAKDOWN["Of which the advanced IRB (AIRB) approach"]),
+    ("SECTION", "Counterparty credit risk", {}),
+    ("DATA", "Counterparty credit risk (CCR)", RWA_BREAKDOWN["Counterparty credit risk (CCR)"]),
+    ("DATA", "  of which: standardised approach", RWA_BREAKDOWN["Of which the standardised approach (CCR)"]),
+    ("DATA", "  of which: internal model method (IMM)", RWA_BREAKDOWN["Of which internal model method (IMM)"]),
+    ("DATA", "  of which: exposures to a CCP", RWA_BREAKDOWN["Of which exposures to a CCP"]),
+    ("DATA", "  of which: credit valuation adjustment (CVA)", RWA_BREAKDOWN["Of which credit valuation adjustment (CVA)"]),
+    ("DATA", "  of which: other CCR", RWA_BREAKDOWN["Of which other CCR"]),
+    ("SECTION", "Other risk categories", {}),
+    ("DATA", "Settlement risk", RWA_BREAKDOWN["Settlement risk"]),
+    ("DATA", "Securitisation exposures in the banking book", RWA_BREAKDOWN["Securitisation exposures in the banking book"]),
+    ("DATA", "Position, foreign exchange and commodities risks (Market risk)", RWA_BREAKDOWN["Position, foreign exchange and commodities risks (Market risk)"]),
+    ("DATA", "  of which: standardised approach", RWA_BREAKDOWN["Of which the standardised approach (market risk)"]),
+    ("DATA", "  of which: internal model approach (IMA)", RWA_BREAKDOWN["Of which IMA"]),
+    ("DATA", "Large exposures", RWA_BREAKDOWN["Large exposures"]),
+    ("DATA", "Operational risk", RWA_BREAKDOWN["Operational risk"]),
+    ("DATA", "Amounts below the thresholds for deduction (subject to 250% risk weight)", RWA_BREAKDOWN["Amounts below the thresholds for deduction (subject to 250% risk weight)"]),
+    ("DATA", "Floor adjustment", RWA_BREAKDOWN["Floor adjustment"]),
+    ("TOTAL", "Total risk weighted assets", RWA_BREAKDOWN["Total risk weighted assets"]),
+]
+
+RWA_BREAKDOWN_SOURCES = (
+    "SOLO-CONSOLIDATION RWA BREAKDOWN (added 2026-09-15, replacing a 'Not publicly disclosed' block). The same "
+    "annex of Standard Chartered PLC's Pillar 3 report that carries this entity's capital templates also prints a "
+    "full OV1-shaped RWA breakdown for it. In each edition the table's FIRST column is headed 'Standard Chartered "
+    "- Solo consolidation' with 'Local Regulator: PRA' - the identical column heading used by the capital "
+    "resources table - and the remaining columns are other significant subsidiaries (Standard Chartered Bank (HK) "
+    "Ltd, Standard Chartered Bank Korea Ltd, Standard Chartered Bank (Singapore) Ltd), which are NOT used here.\n"
+    "FY2025: Full Year 2025 Pillar 3 Disclosure, Table 132 'Overview of RWA - Significant Subsidiaries', 2025 "
+    "column, p.147 - " + P3_URLS["FY2025"] + "\n"
+    "FY2024: Full Year 2024 Pillar 3 Disclosure, Table 136 'Overview of RWA - Significant Subsidiaries', 2024 "
+    "column, p.170 - " + P3_URLS["FY2024"] + "\n"
+    "FY2023: Full Year 2023 Pillar 3 Disclosure, Table 133 'Overview of RWA - Significant Subsidiaries', 2023 "
+    "column, p.168 - " + P3_URLS["FY2023"] + "\n"
+    "FY2022: Full Year 2022 Pillar 3 Disclosure, Table 128 'Overview of RWA - Large Subsidiaries' (the table was "
+    "renamed 'Significant Subsidiaries' from the FY2023 edition), 2022 column, p.132 - " + P3_URLS["FY2022"] + "\n"
+    "FY2021: the FY2022 edition's 2021 comparative column (Table 128 continued). The FY2021 Pillar 3 edition has "
+    "no solo-consolidation section at all, so this comparative is the only source for that year - the same "
+    "position as the capital sheets.\n\n"
+    "VALIDATION: every year's categories sum to that year's own printed total with no residual (FY2025 "
+    "65,489+16,773+3,429+22,466+15,632+6,819 = 130,608; FY2023 = 122,408; FY2022 including 6 of settlement risk = "
+    "131,175; FY2021 including 4 of settlement risk = 142,161). Four of the five totals also reproduce the Total "
+    "RWAs sheet exactly.\n\n"
+    "KNOWN 8 $M DIFFERENCE AT FY2024 - NOT AN ERROR IN EITHER SHEET. This sheet's FY2024 total is 126,375, while "
+    "the Total RWAs sheet carries 126,383. Both figures are printed in the SAME FY2024 Pillar 3 edition, in two "
+    "different tables: Table 112 'Capital resources of significant subsidiaries' (p.153) gives 126,383, and Table "
+    "136 (this sheet's source, p.170) gives 126,375. The document itself flags why, in the narrative above Table "
+    "112: 'The significant subsidiary data is subject to change due to local timing and local regulatory "
+    "requirements.' Each sheet carries the figure printed in its own source table and neither has been adjusted "
+    "toward the other. The FY2025 edition's 2024 comparative reproduces 126,375, confirming the OV1 figure is "
+    "stable rather than a misprint. DO NOT reconcile these by editing either sheet. The other four years agree "
+    "across both tables.\n\n"
+    "Values are $million on the solo-consolidated basis. 'Settlement risk', 'Large exposures' and 'Floor "
+    "adjustment' are printed as nil ('-') in the source and are carried as 0; settlement risk is genuinely "
+    "non-zero only at FY2022 (6) and FY2021 (4).\n\n" + SOLO_BASIS_NOTE
 )
+
 bw.add_rwa_breakdown_sheet(
     title="Standard Chartered Bank — RWA Breakdown",
-    subtitle="Not publicly disclosed at Company level - see source note.",
-    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
-    sources_text=RWA_NOT_DISCLOSED_NOTE,
+    subtitle="Solo-consolidated basis (the PRA's basis for this entity) - see source note.",
+    rows=RWA_BREAKDOWN_ROWS,
+    sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=58,
-    source_height=230,
+    source_height=330,
     unit_suffix=" ($m)",
 )
 
-for metric_name in ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]:
-    unavailable(
-        metric_name,
-        "No complete five-year standalone Company regulatory series was located in the Bank reports. The available "
-        "capital review and Pillar 3 materials use the Bank Group solo-consolidated basis; those figures are not "
-        "appropriate substitutes for this Bank-level workbook.",
-    )
+# Leverage / LCR / NSFR, same solo-consolidated basis and same editions.
+bw.add_metric_sheet(
+    "Leverage Ratio",
+    "% (UK leverage exposure)",
+    [("Leverage ratio excluding claims on central banks — solo-consolidated basis",
+      {"FY2025": "4.2%", "FY2024": "4.5%", "FY2023": "4.4%", "FY2022": "4.2%", "FY2021": "4.1%"})],
+    SOLO_SOURCES + "\n\nLEVERAGE: Table 'LRCom: Leverage ratio common disclosure (UK LR2) - Solo consolidation', "
+    "row 25, in each edition (FY2025 Table 114; FY2024 Table 118; FY2023 Table 115; FY2022 Table 111; FY2021 from "
+    "the FY2022 edition's comparative). Every year appears in two consecutive editions and agrees in both.",
+    note=SOLO_BASIS_NOTE + " Row 25 of the UK LR2 template is reported as 'Leverage ratio EXCLUDING claims on "
+    "central banks' - that is the only leverage ratio the UK template discloses, not a variant chosen here.",
+    first_col_width=58,
+    source_height=300,
+)
+
+bw.add_metric_sheet(
+    "LCR",
+    "% (12-month average)",
+    [("Liquidity coverage ratio — solo-consolidated basis, 12-month average to 31 December",
+      {"FY2025": "169.2%", "FY2024": "152.7%", "FY2023": "162.1%", "FY2022": "154%",
+       "FY2021": "Not publicly disclosed"})],
+    SOLO_SOURCES + "\n\nLCR: Table 'Liquidity Coverage Ratio (LCR) (UK LIQ1) - Solo consolidation', row 23, in each "
+    "edition (FY2025 Table 125; FY2024; FY2023 Table 126; FY2022). The template reports four quarterly columns, "
+    "each a 12-month average; the figure carried here is the 31 December column, i.e. the average of the 12 months "
+    "to the year end. FY2021: the FY2021 Pillar 3 edition has no solo-consolidation section (that section begins "
+    "with the FY2022 edition) and the FY2022 edition's LIQ1 solo table covers only 2022's own four quarters, so no "
+    "solo FY2021 LCR exists. Not derived.",
+    note=SOLO_BASIS_NOTE + " This is a 12-month AVERAGE, not a point-in-time year-end ratio - the two are not "
+    "interchangeable.",
+    first_col_width=58,
+    source_height=300,
+)
+
+bw.add_metric_sheet(
+    "NSFR",
+    "% (average)",
+    [("Net stable funding ratio — solo-consolidated basis",
+      {"FY2025": "122.7%", "FY2024": "121.4%", "FY2023": "121.9%", "FY2022": "117.6%",
+       "FY2021": "Not applicable"})],
+    SOLO_SOURCES + "\n\nNSFR: Table 'Net Stable Funding Ratio (UK LIQ2) - Solo consolidation', row 34, in each "
+    "edition (FY2025 Table 126; FY2024 Table 130; FY2023 Table 127; FY2022 Table 123). Each edition prints row 34 "
+    "twice - the first occurrence is that edition's own year and the second is the prior-year comparative - which "
+    "gives a complete cross-check: FY2024 reads 121.4% in both the FY2024 edition's own column and the FY2025 "
+    "edition's comparative; FY2023 reads 121.9% in both the FY2023 and FY2024 editions; FY2022 reads 117.6% in "
+    "both the FY2022 and FY2023 editions.\n"
+    "FY2021 is 'Not applicable' rather than blank: the UK had no NSFR requirement and no NSFR disclosure template "
+    "before 1 January 2022 (PRA PS17/21 / PS22/21, 'Implementation of Basel standards'), and the FY2021 Pillar 3 "
+    "edition accordingly contains no solo-consolidation section or NSFR table.",
+    note=SOLO_BASIS_NOTE,
+    first_col_width=58,
+    source_height=300,
+)
+
+unavailable(
+    "MREL Ratio",
+    "No solo-consolidated MREL ratio is disclosed. MREL requirements are set for UK resolution entities; the "
+    "resolution entity in this group is Standard Chartered PLC, not this Bank entity, so a group MREL figure "
+    "would not be an entity-level substitute.",
+)
 
 EQUITY_CHANGES_OVERVIEW = [
     ("Profit for the year (Company)", {"FY2025": 2517, "FY2024": 2325, "FY2023": 2585, "FY2022": 2372, "FY2021": 2146}),
@@ -456,9 +687,17 @@ bw.add_overview_sheet(
         "Bank Company column throughout. The Profit & Loss figures use the Bank GROUP consolidated income "
         "statement instead, because the Company takes the s.408 Companies Act 2006 exemption and does not publish "
         "its own income statement (see the Profit & Loss sheet's source note for the Company's own profit-after-tax "
-        "figures, which tie exactly to this Overview's equity-changes block). Regulatory Pillar 3 metric sheets "
-        "(including RWA Breakdown) are left as not publicly disclosed because the available regulatory capital "
-        "basis is Bank Group solo-consolidated, not the standalone Company."
+        "figures, which tie exactly to this Overview's equity-changes block). The regulatory Pillar 3 metric sheets "
+        "use a THIRD basis: Standard Chartered Bank on the solo-consolidated basis, which is how the PRA sets this "
+        "entity's capital requirements (the Company plus four named subsidiaries). Those figures were added on "
+        "2026-09-15 from the solo-consolidation section of Standard Chartered PLC's annual Pillar 3 reports, which "
+        "discloses this entity under the full UK templates; an earlier note recording them as not publicly "
+        "disclosed was incorrect. They are NOT the Standard Chartered PLC group's figures - group RWA at FY2023 is "
+        "244,151 $m against 122,408 $m here. Do not divide figures across the Company and solo-consolidated bases. "
+        "The RWA Breakdown sheet was filled on the same date and from the same solo-consolidation annex, and so "
+        "shares the Pillar 3 sheets' basis - but note the 8 $m FY2024 difference between it and the Total RWAs "
+        "sheet, which the FY2024 Pillar 3 report itself creates by printing two different totals in two tables. "
+        "That difference is documented on both sheets and is not to be reconciled away."
     ),
 )
 

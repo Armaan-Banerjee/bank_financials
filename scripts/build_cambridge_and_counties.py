@@ -55,7 +55,49 @@ ENTITY_NOTE = (
     "every year. Cash flow figures for FY2021-FY2025 are internally consistent to the pound across every source "
     "document checked (each year cross-verified against its appearance as the following year's comparative "
     "column). The 2023 and 2024 Pillar 3 disclosures are published as .docx files (not PDF) with the Key Metrics "
-    "table embedded as an image rather than as text/a real table - extracted by rendering the embedded image."
+    "table embedded as an image rather than as text/a real table - extracted by rendering the embedded image.\n"
+    "SDDT EXEMPTION - REASON FOR THE FY2025 PILLAR 3 GAP, established 2026-09-15 (cross-bank SDDT pass). The "
+    "FY2025 Pillar 3 blanks are an EVIDENCED STRUCTURAL EXEMPTION, not a 'not published YET' timing gap, and "
+    "no FY2025 Pillar 3 document should be expected to appear later: Cambridge & Counties Bank is a Small "
+    "Domestic Deposit Taker (SDDT), and becoming one removes the Pillar 3 disclosure obligation outright. "
+    "Evidence - the PRA's own firm-level register, the Bank of England consolidated list of waivers and "
+    "modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv), row: FRN 579415, 'Cambridge & "
+    "Counties Bank Limited', 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT "
+    "Regime - General Application Part', rule 'SDDT Regime - General Application', sub rule 'Ru 3.1', waiver "
+    "ref 'A00009927P.pdf', start date '20/02/2025', no end date. What Rule 3.1 does to Pillar 3 is stated by "
+    "a peer holding the identical register row - Cynergy Bank plc Annual Report & Accounts 2024, p.71: 'The "
+    "Bank applied for the Modification by Consent to become an SDDT and received approval on 17 January 2025. "
+    "As a result, we are not required to publish Pillar 3 disclosures as at 31 December 2024 and will submit "
+    "only a simplified retail deposit ratio instead of a full Net Stable Funding Ratio (NSFR) going forward.' "
+    "(Cynergy's own register row is Rule 3.1 starting '17/01/2025', matching its stated approval date to the "
+    "day - which is what ties the register row to the firm-stated effect.)\n"
+    "DATE FIT: the Bank's accounting reference date is 31 DECEMBER, confirmed at Companies House (company "
+    "07972522, an unbroken run of accounts to 31 December from 2016 to 2025). The modification took effect 20 "
+    "February 2025, before the 31 December 2025 year-end, so it covers FY2025 - the year in which every Pillar "
+    "3 metric is blank because no Pillar 3 document exists. It covers FY2024 and earlier NOT AT ALL, and none "
+    "of those years needs it: FY2015-FY2024 each have their own published Pillar 3 document, cited above. Do "
+    "not read the SDDT exemption back onto FY2024 or earlier.\n"
+    "WHAT IT DOES NOT EXPLAIN - FY2021. There is one further outstanding gap year in this workbook and the "
+    "SDDT modification has NOTHING to do with it. FY2021 ended 31 December 2021, more than three years before "
+    "the 20 February 2025 start date, and the Bank published a full Pillar 3 report for FY2021 which this "
+    "workbook draws on throughout. The only FY2021 blank is the NSFR, and it already has its own separate and "
+    "entirely sufficient cause: the UK NSFR requirement took effect only for periods beginning after 1 January "
+    "2022, so no FY2021 figure was ever required and the FY2021 Pillar 3 report carries no NSFR section at "
+    "all. That explanation stands unchanged - it is not an SDDT matter, and a future pass must not relabel it "
+    "as one.\n"
+    "The Bank's own Annual Reports corroborate the SDDT move but stop short of stating the disclosure "
+    "consequence. Both were downloaded and text-extracted in full (readable text layers) and searched: AR2025 "
+    "p.36 records the Board 'reviewing and approving our application to operate under the SDDT framework', "
+    "p.6 that 'the new Small Domestic Deposit Takers (SDDT) regime will yield further benefits in terms of "
+    "capital levels and reporting requirements', and p.28 that the Bank is 'actively preparing for the full "
+    "implementation of the Strong & Simple SDDT' framework; AR2024 mentions SDDT only as forthcoming "
+    "regulatory change (pp.5, 12, 20, 25). AR2025 p.25 says 'We are currently planning for the implementation "
+    "of the SDDT capital framework in 2027' - that is the separate, later simplified CAPITAL regime, NOT the "
+    "disclosure exemption, which the register shows already in force from February 2025; the two must not be "
+    "conflated. Neither Annual Report discusses Pillar 3 disclosure obligations at all. No Simplified Retail "
+    "Deposit Ratio value is disclosed, so nothing replaces the NSFR series."
 )
 
 RWA_RESTATEMENT_NOTE = (
@@ -90,7 +132,7 @@ LCR_NOTE = (
     "521%, materially different from the FY2024 Pillar 3 KM1 table's 605% for the same year - two different "
     "figures for what should be the same average-basis metric, not reconciled anywhere in the source documents. "
     "The formal Pillar 3 KM1 figures are used throughout FY2021-FY2024 for internal consistency across this "
-    "workbook series; FY2025 (no standalone Pillar 3 document published yet) falls back to the Annual Report's "
+    "workbook series; FY2025 (no standalone Pillar 3 document published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE) falls back to the Annual Report's "
     "own narrative figure of 587%, on a basis that may not be directly comparable to the KM1 years - flagged. "
     "FY2018's own Pillar 3 document similarly shows two different LCR figures on the same page: a point-in-time "
     "'31/12/2018' ratio of 331%, and a separate 'Q4 2018' quarterly table (HQLA £334.6m / Net Cash Outflows "
@@ -149,7 +191,7 @@ def p3_sources(extra=""):
     return (
         "Sources - Cambridge & Counties Bank Limited Pillar 3 Disclosures (entity-level, no subsidiaries):\n"
         f"FY2025: Annual Report 2025 Strategic Report 'Capital'/'Loans and liquid assets' sections, p.22-23 (no "
-        f"standalone Pillar 3 document published yet for FY2025) - {AR2025_URL}\n"
+        f"standalone Pillar 3 document published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE) - {AR2025_URL}\n"
         f"FY2024: Pillar 3 Disclosures 2024, Table 1: Key metrics (own year, 31-Dec-24 column) - {P3_2024_URL}\n"
         f"FY2023: Pillar 3 Disclosures 2023, Table 1: Key metrics (own year, 31-Dec-23 column) - {P3_2023_URL}\n"
         f"FY2022: Pillar 3 Disclosures 2022, Table 1: Key metrics, p.18 (own year, 31-Dec-22 column) - {P3_2022_URL}\n"
@@ -264,7 +306,7 @@ RWA_BREAKDOWN_SOURCES = (
     f"FY2017: Pillar 3 Disclosures 2017, 'Overview of RWA (OV1)' (own year, 2017 column) - {P3_2017_URL}\n"
     f"FY2016: Pillar 3 Disclosures 2016, 'Overview of RWA (OV1)' (own year, 2016 column; also carries FY2015 "
     f"comparative) - {P3_2016_URL}\n"
-    "FY2025: not publicly disclosed - no standalone Pillar 3 document has been published yet for FY2025 (same "
+    "FY2025: not publicly disclosed - no standalone Pillar 3 document has been published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE (same "
     "gap as the other Pillar 3 metric sheets this year).\n"
     "FY2015: the OV1 template was not yet in use in the Bank's own FY2015 Pillar 3 Disclosures (it reports "
     "credit risk on an exposure-value basis, not risk-weighted-asset basis, with no risk-category RWA "
@@ -541,7 +583,7 @@ TIER1_RATIO = {"FY2025": "21.3%", "FY2024": "24.09%", "FY2023": "25.40%", "FY202
 TOTAL_CAPITAL_RATIO = {"FY2025": "21.7%", "FY2024": "24.60%", "FY2023": "25.99%", "FY2022": "23.61%", "FY2021": "23.00%", "FY2020": "24.32%", "FY2019": "22.99%", "FY2018": "20.48%", "FY2017": "13.80%", "FY2016": "14.08%", "FY2015": "15.4%"}
 
 CALC_NOTE_2025 = (
-    "FY2025: no standalone Pillar 3 document has been published yet - CALCULATED from the Annual Report 2025's own "
+    "FY2025: no standalone Pillar 3 document has been published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE - CALCULATED from the Annual Report 2025's own "
     "disclosed RWA (£1,138m) and ratio (see Overview/Strategic Report), not directly disclosed as a £ figure "
     "anywhere in the source. FY2021-FY2024 are directly disclosed, not calculated."
 )
@@ -573,7 +615,8 @@ rwa_breakdown_rows = [
 bw.add_rwa_breakdown_sheet(
     title="Cambridge & Counties Bank Limited — RWA Breakdown",
     subtitle="Bank-only basis (no subsidiaries), £'000. FY2025 not publicly disclosed (no standalone Pillar 3 "
-              "document published yet). See source note at bottom.",
+              "document published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE; re-confirmed 2026-09-12 via site check + Wayback CDX, no Pillar 3 URL "
+              "of any kind crawled for this domain in 2026). See source note at bottom.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=58,
@@ -588,7 +631,7 @@ metric(
         ("Leverage ratio (%)", {"FY2024": "14.71%", "FY2023": "14.88%", "FY2022": "13.92%", "FY2021": "12.90%", "FY2020": "13.96%", "FY2019": "13.85%", "FY2018": "12.10%", "FY2017": "7.39%", "FY2016": "6.91%", "FY2015": "6.30%"}),
     ],
     p3_sources(LEVERAGE_NOTE),
-    note="FY2025 not publicly disclosed (no standalone Pillar 3 document published yet for FY2025, and the Annual "
+    note="FY2025 not publicly disclosed (no standalone Pillar 3 document published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE; and the Annual "
          "Report's own Strategic Report narrative does not state a leverage ratio figure).",
 )
 
@@ -612,7 +655,7 @@ metric(
     p3_sources(),
     note="FY2021 and FY2025 not publicly disclosed - the UK NSFR requirement only took effect for periods "
          "starting after 1 Jan 2022 (FY2021's Pillar 3 report has no NSFR section at all), and no standalone "
-         "Pillar 3 document has been published yet for FY2025.",
+         "Pillar 3 document has been published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE.",
 )
 
 bw.add_not_disclosed_metric_sheets(

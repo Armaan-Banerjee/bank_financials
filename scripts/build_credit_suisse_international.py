@@ -74,7 +74,37 @@ AR_URLS = {
 # original credit-suisse.com URLs, confirmed via a CDX API re-scan this
 # session). Real PDF text layers (not scanned), independently confirmed by
 # extracting and reading each one.
+CSI_P3_2025_URL = ("https://www.ubs.com/global/en/collections/credit-suisse/investment-bank/regulatory-directory/"
+                    "international/_jcr_content/root/contentarea/mainpar/toplevelgrid_840462106/col_1/accordion/"
+                    "accordionsplit/linklistnewlook/link_copy_copy_20862_2004292923.958213743.file/"
+                    "PS9jb250ZW50L2RhbS9hc3NldHMvZ2xvYmFsL2VuL2NvbGxlY3Rpb25zL2NyZWRpdC1zdWlzc2UvZG9jdW1lbnRzL2ludGVy"
+                    "bmF0aW9uYWwtZG9jdW1lbnRzL2NzaS1waWxsYXItMjAyNS1kaXNjbG9zdXJlLXY2LnBkZg==/"
+                    "csi-pillar-2025-disclosure-v6.pdf")
+CSI_P3_2024_URL = ("https://www.ubs.com/global/en/collections/credit-suisse/investment-bank/regulatory-directory/"
+                    "international/_jcr_content/root/contentarea/mainpar/toplevelgrid_840462106/col_1/accordion/"
+                    "accordionsplit/linklistnewlook/link_copy_copy_20862.0656872784.file/"
+                    "PS9jb250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9y"
+                    "bWF0aW9uL2FyY2hpdmUvMjAyNC8yMDI0LWNzaS1waWxsYXItMy1kaXNjbG9zdXJlcy5wZGY=/"
+                    "2024-csi-pillar-3-disclosures.pdf")
+CSI_P3_2023_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
+                    "disclosure-legal-entities/archive-credit-suisse/_jcr_content/root/contentarea/mainpar/"
+                    "toplevelgrid_1145414446/col_1/accordionbox/accordionsplit_485894160/table.0884404004.file/"
+                    "dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5j"
+                    "aWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAyMy8yMDIzLWNzaS1waWxsYXItMy1kaXNjbG9zdXJlcy5wZGY=/"
+                    "2023-csi-pillar-3-disclosures.pdf")
+CSI_P3_2022_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
+                    "disclosure-legal-entities/archive-credit-suisse/_jcr_content/root/contentarea/mainpar/"
+                    "toplevelgrid_1145414446/col_1/accordionbox/accordionsplit_1343042181/innergrid/col_1/"
+                    "table.0589413556.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2Nv"
+                    "bXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAyMi9jc2ktcGlsbGFyLTMtZGlzY2xvc3VyZXMt"
+                    "MjAyMi5wZGY=/csi-pillar-3-disclosures-2022.pdf")
+
 P3_URLS = {
+    # FY2021/FY2022 located 2026-09-12: the same pre-migration credit-suisse.com
+    # path as FY2015-FY2020 below still serves these two years via Wayback, which
+    # an earlier session's "not locatable" conclusion had missed.
+    "FY2022": "https://web.archive.org/web/2024id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2022.pdf",
+    "FY2021": "https://web.archive.org/web/2024id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2021.pdf",
     "FY2020": "https://web.archive.org/web/20210627075334if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2020.pdf",
     "FY2019": "https://web.archive.org/web/20210627075339if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2019.pdf",
     "FY2018": "https://web.archive.org/web/20210627075317if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2018.pdf",
@@ -140,11 +170,46 @@ def p3_sources():
         "Performance Indicators' table (p.6), which discloses Risk Weighted Assets, Tier 1 capital, and Tier 1 "
         "capital ratio for all 5 years (2021-2025) as at each year-end - "
         f"{AR_URLS['FY2025']}. This report explicitly states 'Pillar 3 disclosures required under the Capital "
-        "Requirements Regulation (CRR) can be found separately at http://www.ubs.com' - a standalone CSI Pillar "
-        "3 document was not locatable this session (the UBS regulatory-disclosures URL pattern returned 404, "
-        "and the session's WebSearch quota was already exhausted by parallel forks) - revisit if this bank is "
-        "ever rebuilt. Converted from USD to GBP using the same FX methodology as the Cash Flow Statement sheet "
-        "(SPOT rate at each year-end); % ratios shown exactly as disclosed, not converted.\n\n"
+        "Requirements Regulation (CRR) can be found separately at http://www.ubs.com'. Converted from USD to "
+        "GBP using the same FX methodology as the Cash Flow Statement sheet (SPOT rate at each year-end); "
+        "% ratios shown exactly as disclosed, not converted.\n\n"
+        "FY2021-FY2024 PILLAR 3 DOCUMENTS RECOVERED (2026-09-12): an earlier session concluded the standalone "
+        "CSi Pillar 3 document 'was not locatable' for FY2021-FY2025 and left Total Capital, Total Capital "
+        "Ratio, Leverage Ratio, LCR and NSFR blank on that basis. That conclusion was wrong for four of those "
+        "five years. CSi publishes a full KM1 key-metrics template every year, recovered as follows:\n"
+        f"FY2024: KM1, p.5 - UBS-hosted '2024-csi-pillar-3-disclosures.pdf' (the same document already cited on "
+        f"the RWA Breakdown sheet for its OV1 table), retrieved via web.archive.org - {CSI_P3_2024_URL}\n"
+        f"FY2023: KM1, p.5 - UBS-hosted '2023-csi-pillar-3-disclosures.pdf', likewise already cited on the RWA "
+        f"Breakdown sheet, retrieved via web.archive.org - {CSI_P3_2023_URL}\n"
+        f"FY2022: KM1, p.5 - Credit Suisse International Pillar 3 Disclosures 2022, retrieved via "
+        f"web.archive.org from the pre-migration credit-suisse.com pattern - {P3_URLS['FY2022']}\n"
+        f"FY2021: capital composition/'Capital ratios' tables, p.4-5, plus the leverage-ratio (LRCom, p.9) and "
+        f"LCR (p.11) tables - Credit Suisse International Pillar 3 Disclosures 2021, same pre-migration pattern "
+        f"via web.archive.org - {P3_URLS['FY2021']}\n"
+        "Each recovered year's figures were cross-checked against the following year's own KM1 comparative "
+        "column and agree exactly (FY2021 CET1/Tier 1 $15,022m, Total capital $15,027m, Total RWA $62,643m all "
+        "confirmed in both FY2021's and FY2022's own documents).\n"
+        "FY2022/FY2023 CET1 GAP CLOSED (2026-09-15): the same three KM1 templates also carry the separate CET1 "
+        "amount and CET1 ratio lines that the CET1 Capital / CET1 Ratio sheets previously left blank for these "
+        "two years (see those sheets' own note for the figures, the two-document cross-check and the FY2022 "
+        "restated-vs-originally-published ratio point). The FY2024 and FY2023 UBS-hosted documents both return "
+        "HTTP 403 to scripted requests against ubs.com from this environment; both were retrieved instead "
+        "through the Wayback Machine's id_ replay of those exact UBS URLs "
+        "(https://web.archive.org/web/2025id_/<the UBS URL below>), and the FY2022 document from the "
+        "pre-migration credit-suisse.com URL already listed here. All three are genuine PDFs (0.8-2.6MB), not "
+        "soft-404 HTML.\n"
+        "FY2025 NOW OBTAINED (2026-09-15) - the access block is resolved. ubs.com returns HTTP 403 to scripted "
+        "requests from this environment and the Wayback Machine has no capture, so the PDF was downloaded "
+        "manually in an ordinary browser and transcribed from the local copy. Source: Credit Suisse "
+        "International Pillar 3 Disclosures 2025, 'KM1 - Key metrics template', p.6 (Total capital, Total "
+        "capital ratio, Leverage ratio, LCR, NSFR; CET1/Tier 1/Total RWA on the same table confirm the figures "
+        "already carried here from the Annual Report's KPI table). That document's own 2024 comparative column "
+        "reproduces every FY2024 figure already on these sheets exactly (CET1/Tier 1/Total capital $6,883m, "
+        "Total RWA $10,951m, ratios 62.86%, leverage 21.16%, LCR 363.29%, NSFR 214.78%), confirming an "
+        "unbroken basis across the two years. Its 'Own Funds' section (p.7) states 'CSi has no AT1 capital or "
+        "Tier 2 capital instruments', so CET1 = Tier 1 = Total capital = $3,014m for FY2025 as disclosed, not "
+        "inferred. The live URL, fetchable in an ordinary browser, is:\n"
+        f"{CSI_P3_2025_URL}\n\n"
         "FY2015-FY2020 (added for HD-020): CSI's own standalone Pillar 3 disclosure PDFs (real text layers, not "
         "scanned), each headed 'Capital management' and each containing its own capital composition/capital "
         "ratios table plus (from FY2017 onward) an 'OV1 - Overview of RWA' breakdown table. These are no longer "
@@ -655,37 +720,75 @@ TIER1_RATIO = {"FY2025": "146.9%", "FY2024": "62.9%", "FY2023": "40.0%", "FY2022
                "FY2020": "19.3%", "FY2019": "26.4%", "FY2018": "20.5%", "FY2017": "20%", "FY2016": "16.6%", "FY2015": "13.0%"}
 RWA_USD = {"FY2025": 2052, "FY2024": 10951, "FY2023": 34698, "FY2022": 60646, "FY2021": 62643,
            "FY2020": 106476, "FY2019": 77110, "FY2018": 103983, "FY2017": 104871, "FY2016": 126723, "FY2015": 163722}
-TOTAL_CAPITAL_USD = {"FY2020": 20536, "FY2019": 20372, "FY2018": 22267, "FY2017": 23715, "FY2016": 26741, "FY2015": 28956}
-TOTAL_CAPITAL_RATIO = {"FY2020": "19.3%", "FY2019": "26.4%", "FY2018": "21.4%", "FY2017": "23%", "FY2016": "21.1%", "FY2015": "17.7%"}
-LEVERAGE_RATIO = {"FY2020": "9.9%", "FY2019": "11.9%", "FY2018": "11.8%", "FY2017": "11.7%", "FY2016": "9.2%", "FY2015": "7.6%"}
-LCR_RATIO = {"FY2020": "224%", "FY2019": "229%", "FY2018": "199%", "FY2017": "237%"}
+TOTAL_CAPITAL_USD = {"FY2025": 3014, "FY2024": 6883, "FY2023": 13889, "FY2022": 15812, "FY2021": 15027,
+                     "FY2020": 20536, "FY2019": 20372, "FY2018": 22267, "FY2017": 23715, "FY2016": 26741, "FY2015": 28956}
+TOTAL_CAPITAL_RATIO = {"FY2025": "146.90%", "FY2024": "62.86%", "FY2023": "40.03%", "FY2022": "26.07%", "FY2021": "23.99%",
+                       "FY2020": "19.3%", "FY2019": "26.4%", "FY2018": "21.4%", "FY2017": "23%", "FY2016": "21.1%", "FY2015": "17.7%"}
+LEVERAGE_RATIO = {"FY2025": "53.08%", "FY2024": "21.16%", "FY2023": "17.78%", "FY2022": "12.51%", "FY2021": "7.47%",
+                  "FY2020": "9.9%", "FY2019": "11.9%", "FY2018": "11.8%", "FY2017": "11.7%", "FY2016": "9.2%", "FY2015": "7.6%"}
+LCR_RATIO = {"FY2025": "341.45%", "FY2024": "363.29%", "FY2023": "280.3%", "FY2022": "150.4%", "FY2021": "152.7%",
+             "FY2020": "224%", "FY2019": "229%", "FY2018": "199%", "FY2017": "237%"}
+# NSFR only became a disclosed KM1 line for CSi from FY2022 - the FY2022
+# report's own KM1 shows "-" in its FY2021 comparative column, and FY2021's
+# own report never states an NSFR figure (the term appears only in narrative
+# risk-management text). FY2015-FY2020 likewise pre-date its disclosure.
+NSFR_RATIO = {"FY2025": "384.98%", "FY2024": "214.78%", "FY2023": "125.6%", "FY2022": "127.5%"}
 
 tier1_gbp = {y: stock(v, y) for y, v in TIER1_USD.items()}
 rwa_gbp = {y: stock(v, y) for y, v in RWA_USD.items()}
 
+# FY2022/FY2023 are the only two years in which CSi's CET1 differs from its
+# Tier 1 capital (the $1,200m AT1 instrument was outstanding at both those
+# year-ends). Both years' CET1 amount and CET1 ratio ARE separately printed on
+# CSi's own Pillar 3 KM1 template - recovered 2026-09-15, see CET1_GAP_NOTE.
+CET1_USD = {"FY2023": 12689, "FY2022": 14609}
+CET1_RATIO = {"FY2023": "36.57%", "FY2022": "24.09%"}
+
+CET1_GAP_NOTE = (
+    "FY2022/FY2023 CET1 FILLED 2026-09-15 (was blank): CSi's own KM1 key-metrics template DOES print a "
+    "separate 'Common Equity Tier 1 (CET1) capital' amount and 'Common Equity Tier 1 ratio (%)' line in every "
+    "year, including the two years in which CET1 differs from Tier 1 - an earlier session's note (kept below) "
+    "wrongly stated CET1 was 'NOT separately disclosed anywhere in the FY2021-FY2025 source', which was true "
+    "only of the Annual Report's KPI table, not of the Pillar 3 documents. Both years were confirmed from TWO "
+    "independent documents that agree exactly on the amounts: CSi Pillar 3 Disclosures 2023 (KM1, p.5; Q4 2023 "
+    "CET1 $12,689m / 36.57% and its own Q4 2022 comparative CET1 $14,609m / 24.09%) and CSi Pillar 3 "
+    "Disclosures 2024 (KM1, p.5; its 2023 comparative column repeats $12,689m / 36.57%) and CSi Pillar 3 "
+    "Disclosures 2022 (KM1, p.5; own-year 2022 CET1 $14,609m). Each year's Tier 1 less CET1 is exactly $1,200m, "
+    "matching the AT1 instrument's carrying value in the Statement of Changes in Equity.\n"
+    "FY2022 RATIO BASIS: the FY2022 document's own originally-published CET1 ratio is 24.02%, computed against "
+    "that document's own then-current Total RWA of $60,818m; the FY2023 document restates FY2022 RWA to "
+    "$60,646m and the CET1 ratio to 24.09%. This workbook already carries the RESTATED $60,646m on its Total "
+    "RWAs sheet and the restated 26.07% on its Total Capital Ratio sheet, so the restated 24.09% is used here "
+    "too, keeping the sheet internally consistent (14,609/60,646 = 24.09%); the originally-published 24.02% is "
+    "recorded here rather than silently dropped."
+)
+
 AT1_NOTE = (
-    "CET1 is NOT separately disclosed anywhere in the FY2021-FY2025 source - only a combined 'Tier 1 capital' "
-    "figure and ratio are given. The Statement of Changes in Equity shows Additional Tier 1 (AT1) instruments of "
+    CET1_GAP_NOTE + "\n\n"
+    "AT1 BACKGROUND (original note, retained): the Annual Report's own KPI table gives only a combined 'Tier 1 "
+    "capital' figure and ratio. The Statement of Changes in Equity shows Additional Tier 1 (AT1) instruments of "
     "$1,200m outstanding at 31 Dec 2022 and 31 Dec 2023 only (issued during FY2022, repatriated during FY2024) - "
-    "so CET1 = Tier 1 for FY2021/FY2024/FY2025 (confirmed zero AT1 those years), but CET1 < Tier 1 for FY2022/"
-    "FY2023 by an unknown regulatory-capital amount (the $1,200m accounting carrying value of the AT1 "
-    "instrument itself isn't necessarily identical to its CRR-recognised capital amount) - left blank rather "
-    "than guessed for those two years. FY2015-FY2020 (added for HD-020): each year's own standalone Pillar 3 "
+    "so CET1 = Tier 1 for FY2021/FY2024/FY2025 (confirmed zero AT1 those years), while CET1 < Tier 1 for FY2022/"
+    "FY2023. FY2015-FY2020 (added for HD-020): each year's own standalone Pillar 3 "
     "disclosure states explicitly 'CSi has no AT1 capital' (or shows a combined 'Tier 1 (and CET1) capital' "
     "line, same treatment) - CSI held no Additional Tier 1 instruments at all in this window, so CET1 = Tier 1 "
     "exactly for all of FY2015-FY2020, not estimated."
 )
 
+cet1_gbp = dict(tier1_gbp)
+for _y, _v in CET1_USD.items():
+    cet1_gbp[_y] = stock(_v, _y)
+
 metric(
     "CET1 Capital", "£m (conv. from USD) - see note",
-    [("Common Equity Tier 1 (CET1) capital", {y: tier1_gbp[y] for y in
-        ["FY2025", "FY2024", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015"]})],
+    [("Common Equity Tier 1 (CET1) capital", {y: cet1_gbp[y] for y in
+        ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015"]})],
     note=AT1_NOTE,
 )
 metric(
     "CET1 Ratio", "% - see note",
-    [("CET1 Ratio", {y: TIER1_RATIO[y] for y in
-        ["FY2025", "FY2024", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015"]})],
+    [("CET1 Ratio", {y: CET1_RATIO.get(y, TIER1_RATIO[y]) for y in
+        ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015"]})],
     note=AT1_NOTE,
 )
 metric(
@@ -700,17 +803,26 @@ total_capital_gbp = {y: stock(v, y) for y, v in TOTAL_CAPITAL_USD.items()}
 metric(
     "Total Capital", "£m (conv. from USD) - see note",
     [("Total capital", total_capital_gbp)],
-    note="Not publicly disclosed for FY2021-FY2025 - only Tier 1 capital is given in the Annual Report's KPI "
-         "table, and the standalone Pillar 3 document (referenced at ubs.com) was not locatable for those years "
-         "this session. FY2015-FY2020 (added for HD-020): each year's own standalone Pillar 3 disclosure DOES "
-         "publish Total capital ('own funds') - Tier 1 plus Tier 2 - located via Wayback Machine (see this "
-         "sheet's source note).",
+    note="FY2021-FY2024 added 2026-09-12: a prior session's claim that the standalone Pillar 3 document was "
+         "'not locatable' for these years was WRONG - CSi's own Pillar 3 KM1 template publishes Total capital "
+         "('own funds') every year. FY2021/FY2022 recovered from the pre-migration credit-suisse.com URL "
+         "pattern via Wayback; FY2023/FY2024 from the UBS-hosted documents already cited on the RWA Breakdown "
+         "sheet (which had used them for OV1 data while these capital sheets still claimed they didn't exist). "
+         "FY2025 added 2026-09-15 from that same KM1 template (p.6), obtained by manual browser download "
+         "after ubs.com blocked scripted access - see this sheet's source note. FY2015-FY2020 (HD-020): "
+         "each year's own standalone Pillar 3 disclosure, located via Wayback Machine.",
 )
 metric(
     "Total Capital Ratio", "% - see note",
     [("Total Capital Ratio", TOTAL_CAPITAL_RATIO)],
-    note="Not publicly disclosed for FY2021-FY2025 - see Total Capital sheet note. FY2015-FY2020 sourced from "
-         "each year's own standalone Pillar 3 disclosure.",
+    note="FY2021-FY2024 added 2026-09-12 from CSi's own Pillar 3 KM1 template - see Total Capital sheet note "
+         "for how the documents were recovered. FY2025 added 2026-09-15 from that document's KM1 (p.6). "
+         "NOTE on FY2022: CSi restated its "
+         "own FY2022 Total RWA between reports (FY2022's own report states $60,818m; the FY2023 report's "
+         "FY2022 comparative states $60,646m). This workbook's Total RWAs sheet already carries the restated "
+         "$60,646m, so the FY2022 ratio shown here is the FY2023 report's 26.07% (= 15,812/60,646) rather than "
+         "the FY2022 report's own 26.00% (= 15,812/60,818), keeping capital / RWA / ratio internally consistent "
+         "across the three sheets. FY2015-FY2020 sourced from each year's own standalone Pillar 3 disclosure.",
 )
 metric(
     "Total RWAs", "£m (conv. from USD)",
@@ -731,30 +843,6 @@ metric(
 # additive category rows sum to that year's own disclosed Total RWAs figure
 # (cross-checked in USD before conversion), which also ties exactly to the
 # Total RWAs sheet.
-CSI_P3_2025_URL = ("https://www.ubs.com/global/en/collections/credit-suisse/investment-bank/regulatory-directory/"
-                    "international/_jcr_content/root/contentarea/mainpar/toplevelgrid_840462106/col_1/accordion/"
-                    "accordionsplit/linklistnewlook/link_copy_copy_20862_2004292923.958213743.file/"
-                    "PS9jb250ZW50L2RhbS9hc3NldHMvZ2xvYmFsL2VuL2NvbGxlY3Rpb25zL2NyZWRpdC1zdWlzc2UvZG9jdW1lbnRzL2ludGVy"
-                    "bmF0aW9uYWwtZG9jdW1lbnRzL2NzaS1waWxsYXItMjAyNS1kaXNjbG9zdXJlLXY2LnBkZg==/"
-                    "csi-pillar-2025-disclosure-v6.pdf")
-CSI_P3_2024_URL = ("https://www.ubs.com/global/en/collections/credit-suisse/investment-bank/regulatory-directory/"
-                    "international/_jcr_content/root/contentarea/mainpar/toplevelgrid_840462106/col_1/accordion/"
-                    "accordionsplit/linklistnewlook/link_copy_copy_20862.0656872784.file/"
-                    "PS9jb250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9y"
-                    "bWF0aW9uL2FyY2hpdmUvMjAyNC8yMDI0LWNzaS1waWxsYXItMy1kaXNjbG9zdXJlcy5wZGY=/"
-                    "2024-csi-pillar-3-disclosures.pdf")
-CSI_P3_2023_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
-                    "disclosure-legal-entities/archive-credit-suisse/_jcr_content/root/contentarea/mainpar/"
-                    "toplevelgrid_1145414446/col_1/accordionbox/accordionsplit_485894160/table.0884404004.file/"
-                    "dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5j"
-                    "aWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAyMy8yMDIzLWNzaS1waWxsYXItMy1kaXNjbG9zdXJlcy5wZGY=/"
-                    "2023-csi-pillar-3-disclosures.pdf")
-CSI_P3_2022_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
-                    "disclosure-legal-entities/archive-credit-suisse/_jcr_content/root/contentarea/mainpar/"
-                    "toplevelgrid_1145414446/col_1/accordionbox/accordionsplit_1343042181/innergrid/col_1/"
-                    "table.0589413556.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2Nv"
-                    "bXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAyMi9jc2ktcGlsbGFyLTMtZGlzY2xvc3VyZXMt"
-                    "MjAyMi5wZGY=/csi-pillar-3-disclosures-2022.pdf")
 
 RWA_BD_USD = {
     "Credit risk (excluding CCR)": {"FY2025": 266, "FY2024": 810, "FY2023": 4338, "FY2022": 7086, "FY2021": 7424,
@@ -869,27 +957,41 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "% - see note",
     [("Leverage Ratio", LEVERAGE_RATIO)],
-    note="Not publicly disclosed for FY2021-FY2025 - the Annual Report itself doesn't carry a leverage ratio, "
-         "and the standalone Pillar 3 document (referenced at ubs.com) was not locatable for those years this "
-         "session. FY2015-FY2020 (added for HD-020) sourced from each year's own standalone Pillar 3 disclosure "
-         "(located via Wayback Machine - see source note on other Pillar 3 sheets).",
+    note="FY2021-FY2024 added 2026-09-12 from the 'Leverage ratio' line of CSi's own Pillar 3 KM1 template - "
+         "the prior 'not locatable' claim was wrong (see Total Capital sheet note). The Annual Report itself "
+         "still doesn't carry a leverage ratio; these come from the Pillar 3 documents. FY2025 added "
+         "2026-09-15 from that same KM1 line (p.6). FY2015-FY2020 (HD-020) sourced from each year's own "
+         "standalone Pillar 3 disclosure.",
 )
 metric(
     "LCR", "% - see note",
     [("Liquidity Coverage Ratio", LCR_RATIO)],
-    note="Not publicly disclosed for FY2021-FY2025 or FY2015-FY2016 - not carried in the Annual Report, and "
-         "either not disclosed in the relevant year's own Pillar 3 document (FY2015-FY2016, pre-dating the LCR's "
-         "phased-in UK application) or the document wasn't locatable this session (FY2021-FY2025). FY2017-FY2020 "
+    note="FY2021-FY2024 added 2026-09-12 from the 'Liquidity coverage ratio (%)' line of CSi's own Pillar 3 "
+         "KM1 template - the prior 'not locatable' claim was wrong (see Total Capital sheet note). Each is the "
+         "12-month-average LCR as that year's KM1 states it. FY2021's figure (152.7%) is taken from the FY2022 "
+         "report's own FY2021 comparative column; FY2021's own report presents the same metric only as four "
+         "quarterly averages (Q4 2021: 153%), so the comparative is the like-for-like annual figure. FY2025 "
+         "added 2026-09-15 from that same KM1 line (p.6). FY2015-FY2016 genuinely pre-date the LCR's phased-in "
+         "UK application. FY2017-FY2020 "
          "sourced from each year's own standalone Pillar 3 disclosure (located via Wayback Machine).",
 )
+metric(
+    "NSFR", "% - see note",
+    [("Net Stable Funding Ratio", NSFR_RATIO)],
+    note="FY2022-FY2024 added 2026-09-12 from the 'NSFR ratio (%)' line of CSi's own Pillar 3 KM1 template - "
+         "the prior blanket 'not disclosed for any year' claim was wrong for these three years (see Total "
+         "Capital sheet note for how the documents were recovered). FY2021 and earlier are a genuine "
+         "non-disclosure rather than an access gap: the FY2022 report's own KM1 prints '-' in its FY2021 NSFR "
+         "comparative column, and FY2021's own report mentions the NSFR only in narrative risk-management text "
+         "with no figure. FY2025 added 2026-09-15 from that same KM1 line (p.6) - see this sheet's source note.",
+)
 bw.add_not_disclosed_metric_sheets(
-    ["NSFR", "MREL Ratio"],
+    ["MREL Ratio"],
     p3_sources(),
-    per_note={m: "Not publicly disclosed for any year FY2015-FY2025. Checked the Annual Report and, for "
-                 "FY2015-FY2020, each year's own standalone Pillar 3 disclosure (located via Wayback Machine "
-                 "this session) - neither term appears in any of them. For FY2021-FY2025 the standalone Pillar 3 "
-                 "document (referenced at ubs.com) was not locatable this session."
-              for m in ["NSFR", "MREL Ratio"]},
+    per_note={"MREL Ratio": "Not publicly disclosed for any year FY2015-FY2025, and not expected to be: CSi is "
+                            "not a UK resolution entity, so no entity-level MREL requirement applies to it. "
+                            "Re-checked 2026-09-12 against the recovered FY2021-FY2024 Pillar 3 documents - the "
+                            "term appears in none of them, nor in any Annual Report."},
 )
 
 # ---------------------------------------------------------------

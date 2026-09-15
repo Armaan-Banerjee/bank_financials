@@ -290,37 +290,99 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 NOT_DISCLOSED_SOURCES = (
     "No standalone Pillar 3 disclosure document is published by The Bank of London Group Limited - checked the "
-    "Bank's website (no investor-relations/regulatory-disclosures page exists) and general web search; nothing "
-    "found. The only capital metric found anywhere in the public domain is the Common Equity Tier 1 (CET1) ratio "
-    "disclosed in a note within the statutory Annual Report - see the CET1 Ratio sheet. No CET1/Tier 1/Total "
-    "capital amounts, RWA figure, leverage ratio, LCR, NSFR or MREL data could be found for any year.\n\n"
+    "Bank's website (no investor-relations/regulatory-disclosures page exists); nothing found. The only "
+    "capital metrics disclosed anywhere in the public domain are the CET1 capital AMOUNT and the CET1 RATIO, "
+    "both narrated in the statutory Annual Report - see those two sheets. No Tier 1 or Total Capital amount, "
+    "no Tier 1/Total Capital ratio, no RWA figure, no leverage ratio, no LCR, no NSFR and no MREL figure is "
+    "disclosed for any year.\n\n"
+    "RE-VERIFIED 2026-09-12: all of this entity's Companies House filings are image-only scans with no text "
+    "layer. Full page-image OCR of the FY2023 and FY2025 Annual Reports was run specifically to defeat that "
+    "limitation, and searched for 'risk-weighted'/'RWA'/'leverage ratio'/'liquidity coverage'/'LCR'/'NSFR'/"
+    "'own funds'/'total capital'. That search recovered the CET1 amounts and the FY2023 ratio now populated "
+    "on their own sheets, and confirmed the metrics below genuinely appear nowhere in either filing. Given "
+    "the entity's size and mobilisation history there is no reason to expect a separate Pillar 3 document to "
+    "exist.\n\n"
+    "MAXIMUM-EFFORT RE-SEARCH 2026-09-15 (prior 'unavailable' verdict treated as unproven; rotated user agents). "
+    "Three new routes, all negative:\n"
+    "  (1) THE FY2024 ANNUAL REPORT WAS OCR'D IN FULL FOR THE FIRST TIME (50 pages at 250 dpi; the 2026-09-12 "
+    "audit had covered only FY2023 and FY2025, leaving FY2024 untested). It confirms the two metrics already "
+    "carried - 'CET1 stood at GBP22.1m (2023: GBP26.7m)' and 'As at 31 December 2024, the CET1 Capital ratio was "
+    "88.91% (2023: 95.34%)' - and contains NO risk-weighted-asset figure, no leverage ratio, no LCR, no NSFR and "
+    "no MREL figure anywhere. It also repeats the capital-structure sentence in the Capital and Liquidity "
+    "Oversight section: 'Our capital structure comprises Tier 1 instruments only.'\n"
+    "  NOTE ON THAT SENTENCE: a full-document search of the FY2024 OCR for 'Additional Tier 1', 'AT1', 'Tier 2' "
+    "and 'subordinated' returns ZERO matches. That strengthens, but does not complete, the case for treating "
+    "Tier 1 = CET1: the sentence directly establishes only that there is no Tier 2 (so Total Capital = Tier 1), "
+    "and it never states the CET1 = Tier 1 equality outright. Other banks in this workbook set DO have that "
+    "equality populated - Reliance Bank and Philippine National Bank (Europe) - but in both cases the source "
+    "document states it in terms ('all capital resources are CET1, with no AT1 in issue'; 'being CET1 capital the "
+    "same as Tier 1 capital and Total capital...'). The Bank of London's wording is weaker than either, and no "
+    "absolute Tier 1 or Total Capital amount is published in any year, so those sheets stay unpopulated. This is "
+    "a deliberate, re-affirmed decision, not an unexplored gap.\n"
+    "  (2) thebankoflondon.com was crawled live under two user agents (Chrome/Firefox, both HTTP 200). Its full "
+    "link set (30 site paths) contains no investor-relations, regulatory-disclosures or Pillar 3 page; "
+    "/regulatory, /legal and /investors all return HTTP 404 under both agents.\n"
+    "  (3) A full Wayback CDX sweep of the domain WITHOUT a filter (2,000 archived URLs) shows the site's only "
+    "PDF directory is /pdf/, holding three FSCS depositor-protection leaflets and nothing else. No Pillar 3, "
+    "capital or regulatory-disclosure document has ever existed on the domain.\n\n"
+    + REGULATORY_NOTE
+)
+
+CET1_CAPITAL_SOURCES = (
+    "Sources - the Bank's own Strategic Report, 'Capital, liquidity and balance sheet' section, which states "
+    "the CET1 capital amount in narrative form each year with a prior-year comparator:\n"
+    f"FY2025 and FY2024: Annual Report and Financial Statements, year ended 31 December 2025, Strategic Report "
+    f"- \"CET1 stood at GBP23.2m (2024: GBP22.1m)\" - {AR25_URL}\n"
+    f"FY2023 and FY2022: Annual Report and Financial Statements, year ended 31 December 2023, Strategic Report "
+    f"- \"CET1 stood at GBP26.7m (2022 restated: GBP18.1m)\" - {AR23_URL}\n\n"
+    "Figures are the Bank's own narrative presentation to one decimal place in GBP millions (not GBP'000), "
+    "reproduced exactly as stated rather than re-scaled. FY2022 is explicitly labelled \"restated\" by the "
+    "Bank's own FY2023 report. Both FY2023 and FY2022 figures correspond to that report's own 'Funding "
+    "Position' table Total equity line (26,686 / 18,109 GBP'000) to within the narrative's rounding, an "
+    "internal consistency check, though the Bank presents them as separate disclosures.\n\n"
+    "FOUND IN 2026-09-12 RE-AUDIT: these amounts were previously recorded as \"not publicly disclosed\". All "
+    "of this entity's Companies House filings are image-only scans with no extractable text layer; full "
+    "page-image OCR surfaced the Strategic Report narrative that earlier text-based passes could not read.\n\n"
     + REGULATORY_NOTE
 )
 
 bw.add_metric_sheet(
-    "CET1 Capital", None,
-    [("Common Equity Tier 1 (CET1) capital", {y: "Not publicly disclosed" for y in YEARS})],
-    NOT_DISCLOSED_SOURCES,
-    note="No absolute CET1 capital amount is disclosed anywhere publicly - only the CET1 ratio (see CET1 Ratio sheet).",
-    first_col_width=46, source_height=210,
+    "CET1 Capital", "GBP millions (as narrated in the Strategic Report)",
+    [("Common Equity Tier 1 (CET1) capital", {
+        "FY2025": "£23.2m", "FY2024": "£22.1m", "FY2023": "£26.7m", "FY2022": "£18.1m (restated)",
+    })],
+    CET1_CAPITAL_SOURCES,
+    note="Disclosed only as a narrative sentence in the Strategic Report, not in a capital-adequacy table, and "
+         "to one decimal place in GBP millions - shown here exactly as the Bank states it. Note the "
+         "non-monotonic path (FY2022 18.1 -> FY2023 26.7 -> FY2024 22.1 -> FY2025 23.2): this is the Bank's own "
+         "reported sequence, reflecting successive parent capital injections against continuing losses, not a "
+         "transcription error. The FY2022 figure is the Bank's own restated comparative. IMPORTANT: read these "
+         "alongside the regulatory note below - the PRA has since found that capital was recognised as "
+         "CET1-qualifying during FY2022-FY2024 when it had not in fact been received.",
+    first_col_width=46, source_height=250,
 )
 
 bw.add_metric_sheet(
     "CET1 Ratio", "% (unaudited, as disclosed in the Annual Report's capital note)",
-    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "82.94%", "FY2024": "88.91%"})],
+    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "82.94%", "FY2024": "88.91%", "FY2023": "95.34%"})],
     (
         "FY2025: Annual Report and Financial Statements, year ended 31 December 2025, note 'Capital and Liquidity "
         f"Oversight', p.51 (labelled 'unaudited') - {AR25_URL} (also gives the FY2024 comparator shown here)\n"
-        "FY2023/FY2022: not found - no equivalent capital note was located in those years' annual reports, and no "
-        "standalone Pillar 3 disclosure exists.\n\n" + REGULATORY_NOTE
+        f"FY2023: Annual Report and Financial Statements, year ended 31 December 2023 - stated twice in that "
+        f"report, in the Strategic Report ('As at 31 December 2023, the CET1 Capital ratio was 95.34%') and "
+        f"again in the 'Capital and Liquidity Oversight' note ('As of 31 December 2023, the unaudited CET1 "
+        f"capital ratio was 95.34%') - {AR23_URL}. Added in the 2026-09-12 re-audit via page-image OCR; the "
+        f"earlier pass recorded FY2023 as 'not found' because these filings carry no extractable text layer.\n"
+        "FY2022: genuinely not disclosed - the FY2023 report gives FY2022's CET1 capital AMOUNT as a restated "
+        "comparative (see CET1 Capital sheet) but states no FY2022 ratio, and no separate FY2022 capital note "
+        "or standalone Pillar 3 disclosure exists.\n\n" + REGULATORY_NOTE
     ),
-    note="This is the only Pillar 3-style metric found publicly disclosed anywhere for this bank, in any year. The "
-         "Annual Report separately states 'Our capital structure comprises Tier 1 instruments only', implying the "
-         "Tier 1 ratio and Total Capital ratio would equal this CET1 ratio - but neither is explicitly stated, so "
-         "they are not populated as data (see those sheets). The very high ratio (82.94%/88.91%) reflects a small, "
-         "cash-heavy balance sheet with minimal risk-weighted lending, typical of a young payments/clearing-focused "
-         "bank - not a transcription error.",
-    first_col_width=46, source_height=210,
+    note="The Annual Report separately states 'Our capital structure comprises Tier 1 instruments only', implying "
+         "the Tier 1 ratio and Total Capital ratio would equal this CET1 ratio - but neither is explicitly stated, "
+         "so they are not populated as data (see those sheets). The very high ratios (82.94%-95.34%) reflect a "
+         "small, cash-heavy balance sheet with minimal risk-weighted lending, typical of a young payments/"
+         "clearing-focused bank - not a transcription error.",
+    first_col_width=46, source_height=250,
 )
 
 bw.add_metric_sheet(

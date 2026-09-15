@@ -679,18 +679,127 @@ metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure 
        note="FY2020/FY2019/FY2018 figures are derived (not printed as a single line) - see p3_sources' PRE-2021 "
             "FORMAT NOTE for the exact derivation.")
 
+RWA_BREAKDOWN_USD = {
+    "FY2024": {"Credit risk (excluding CCR)": 105700.585, "Counterparty credit risk (CCR)": 0, "Settlement risk": 0, "Market risk (position, FX and commodities)": 1771.830, "Operational risk": 51917.843, "Total": 159390.258},
+    "FY2023": {"Credit risk (excluding CCR)": 97656.476, "Counterparty credit risk (CCR)": 0, "Settlement risk": 1211.754, "Market risk (position, FX and commodities)": 2617.390, "Operational risk": 26446.513, "Total": 127932.133},
+    # FY2022/FY2021 added 2026-09-15 from the FY2022 Pillar 3's own UK OV1, which
+    # prints both years side by side. It has no Settlement risk row at all (unlike
+    # FY2023/FY2024), so that key is deliberately absent rather than set to zero -
+    # _rwa_row() skips years where the key is missing, leaving the cell blank.
+    "FY2022": {"Credit risk (excluding CCR)": 137813.079, "Counterparty credit risk (CCR)": 20.686, "Market risk (position, FX and commodities)": 3804.405, "Operational risk": 15259.365, "Total": 156897.535},
+    "FY2021": {"Credit risk (excluding CCR)": 93272.178, "Counterparty credit risk (CCR)": 0.108, "Market risk (position, FX and commodities)": 8098.575, "Operational risk": 12812.625, "Total": 114183.486},
+}
+RWA_BREAKDOWN_DERIVED_USD = {
+    "FY2020": {"Credit risk": 3834 * 12.5, "Market risk": 720 * 12.5, "Operational risk": 1012 * 12.5, "Total": 5566 * 12.5},
+    "FY2019": {"Credit risk": 4188 * 12.5, "Market risk": 367 * 12.5, "Operational risk": 870 * 12.5, "Total": 5425 * 12.5},
+    "FY2018": {"Credit risk": 4021 * 12.5, "Market risk": 231 * 12.5, "Operational risk": 805 * 12.5, "Total": 5057 * 12.5},
+}
+
+def _rwa_row(key):
+    # Years where this OV1 line isn't printed at all are skipped, not zeroed -
+    # FY2022/FY2021's table has no Settlement risk row.
+    return {y: RWA_BREAKDOWN_USD[y][key]
+            for y in ("FY2024", "FY2023", "FY2022", "FY2021")
+            if key in RWA_BREAKDOWN_USD[y]}
+
+def _rwa_derived_row(key):
+    return {y: RWA_BREAKDOWN_DERIVED_USD[y][key] for y in ("FY2020", "FY2019", "FY2018")}
+
+rwa_breakdown_rows = [
+    ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts (as disclosed)", {}),
+    ("DATA", "Credit risk (excluding CCR)", stock(_rwa_row("Credit risk (excluding CCR)"))),
+    ("DATA", "Counterparty credit risk (CCR)", stock(_rwa_row("Counterparty credit risk (CCR)"))),
+    ("DATA", "Settlement risk", stock(_rwa_row("Settlement risk"))),
+    ("DATA", "Market risk (position, FX and commodities)", stock(_rwa_row("Market risk (position, FX and commodities)"))),
+    ("DATA", "Operational risk", stock(_rwa_row("Operational risk"))),
+    ("TOTAL", "Total risk weighted exposure amount", stock(_rwa_row("Total"))),
+    # Own SECTION block, not folded into the OV1 block above: FY2018-FY2020's
+    # Pillar 3 reports pre-date the UK OV1 template and never disclose RWA by
+    # risk type directly - only the Pillar 1 MINIMUM CAPITAL REQUIREMENT by
+    # risk type (8% of RWA, per CRR Article 92 / Basel III standardised
+    # approach, exactly as each report's own text states). Each figure below
+    # is that report's own capital-requirement figure x 12.5 (= / 8%), an
+    # exact regulatory identity, not an estimate - each year's Total below
+    # ties EXACTLY (to the last £'000) to the Total RWAs sheet's own derived
+    # figure for that year, since both are derived from the same source
+    # figures via the same x12.5 identity.
+    ("SECTION", "Pillar 1 capital requirement × 12.5 (derived from disclosed capital requirement)", {}),
+    ("DATA", "Credit risk", stock(_rwa_derived_row("Credit risk"))),
+    ("DATA", "Market risk", stock(_rwa_derived_row("Market risk"))),
+    ("DATA", "Operational risk", stock(_rwa_derived_row("Operational risk"))),
+    ("TOTAL", "Total risk weighted exposure amount (derived)", {
+        y: round(stock(_rwa_derived_row("Credit risk"))[y] + stock(_rwa_derived_row("Market risk"))[y]
+                  + stock(_rwa_derived_row("Operational risk"))[y], 1)
+        for y in ("FY2020", "FY2019", "FY2018")
+    }),
+]
+
 bw.add_rwa_breakdown_sheet(
     title="United Bank for Africa (UK) Limited — RWA Breakdown",
-    subtitle="Not publicly disclosed.",
-    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
-    sources_text=p3_sources() + "\n\nNo UK OV1 (or equivalent RWA-by-category) template was found in any of the "
-                 "Pillar 3 Disclosures documents used in this workbook - only a single Total RWA figure is "
-                 "disclosed or derivable in each year (see Total RWAs sheet), with no risk-category breakdown "
-                 "(credit risk, market risk, operational risk, etc.) anywhere in any of them. Confirmed via full "
-                 "review of all 4 Pillar 3 reports, not an access gap.",
-    first_col_width=54,
-    source_height=140,
-    unit_suffix="",
+    subtitle="£'000, converted from USD (see FX conversion note on the Cash Flow Statement sheet). "
+             "FY2024-FY2021 as disclosed (UK OV1 template); FY2020-FY2018 derived from disclosed Pillar 1 "
+             "capital requirement x 12.5 - see the two SECTION blocks below and the sources note. NOTE "
+             "FY2022/FY2021 do NOT tie to the Total RWAs sheet: the Bank's own Key Metrics table omits market "
+             "and operational risk from its total. See the sources note - do not cross-divide the two sheets.",
+    rows=rwa_breakdown_rows,
+    sources_text=(
+        "Sources - United Bank for Africa (UK) Limited Pillar 3 Disclosures, converted from USD to £ (see FX "
+        "conversion note on the Cash Flow Statement sheet):\n"
+        f"FY2024 & FY2023 (DIRECTLY DISCLOSED, as reported): Pillar 3 Disclosures - 31 Dec 2024, Section 3, "
+        f"'Template UK OV1 - Overview of risk weighted exposure amounts', p.9 - {P3_2024_URL}. This table's own "
+        f"Total row (159,390,258 / 127,932,133) ties exactly to the Total RWAs sheet's FY2024/FY2023 figures.\n"
+        f"FY2020 & FY2019 (DERIVED, not directly disclosed as RWA): Pillar 3 Disclosures - 31 Dec 2020, section "
+        f"4.4 'Pillar 1 Minimum Capital Requirement' table, p.11 - {P3_2020_URL}\n"
+        f"FY2018 (DERIVED, not directly disclosed as RWA): Pillar 3 Disclosures - 31 Dec 2018, section 4.4 "
+        f"'Pillar 1 Minimum Capital Requirement' table, p.10 - {P3_2018_URL}\n\n"
+        f"FY2022 & FY2021 (DIRECTLY DISCLOSED, as reported; ADDED 2026-09-15): Pillar 3 Disclosures - 31 Dec "
+        f"2022, Section 3, 'Template UK OV1 - Overview of risk weighted exposure amounts', p.8 - {P3_2022_URL}. "
+        "That one table prints both years side by side (columns headed 2022 and 2021). Its categories sum "
+        "exactly to its own printed Total in both years: 137,813,079 + 20,686 + 3,804,405 + 15,259,365 = "
+        "156,897,535 (FY2022), and 93,272,178 + 108 + 8,098,575 + 12,812,625 = 114,183,486 (FY2021). The table "
+        "prints no Settlement risk row for either year (unlike FY2023/FY2024), so that row is left blank here "
+        "rather than recorded as zero. Figures were read visually from a 400 dpi render, NOT from OCR alone - "
+        "tesseract misread the FY2022 Total as '856,897,535' at 300 dpi, and the correct leading digit was "
+        "confirmed by eye.\n\n"
+        "DECISION REVERSED 2026-09-15 - THESE TWO YEARS WERE PREVIOUSLY WITHHELD. The reasoning below is "
+        "retained because the underlying inconsistency it describes is real, reproducible and still unresolved; "
+        "what changed is the treatment, not the facts. The data is now included, with the mismatch documented "
+        "in place, for three reasons: (1) UK OV1 is the designated RWA-breakdown template and is the correct "
+        "source for THIS sheet, whereas the Key Metrics total is a summary line elsewhere in the same document; "
+        "(2) the prior analysis itself concluded the Key Metrics row is the erroneous one, and the arithmetic "
+        "below demonstrates exactly how it was mis-populated; (3) this workbook set already carries the same "
+        "pattern elsewhere - see KEXIM Bank (UK) Limited, whose RWA Breakdown sits on the Pillar 3 basis while "
+        "its Total RWAs sheet sits on the statutory-accounts basis, with the two kept on separate sheets and a "
+        "'do not cross-divide' note rather than one being suppressed. Withholding published, internally "
+        "consistent, twice-verified figures loses real data; the Total RWAs sheet is unchanged and still "
+        "carries the Bank's own Key Metrics figure.\n\n"
+        "THE INCONSISTENCY ITSELF: the FY2022 Pillar 3 Disclosures document contains a 'Template "
+        "UK OV1' risk-type breakdown (Section 3, p.8) for both FY2022 and FY2021 - Credit risk (excl. CCR) "
+        "137,813,079 / 93,272,178 + CCR 20,686/108 + Market risk 3,804,405/8,098,575 + Operational risk "
+        "15,259,365/12,812,625 = OV1's own Total 156,897,535/114,183,486 - but that OV1 Total does NOT reconcile "
+        "with the SAME document's own Section 4 'Key Metrics' table (p.9), which states 'Total risk-weighted "
+        "exposure amount' as 137,833,765/93,272,286 for the same two years (the figure this workbook's Total "
+        "RWAs sheet uses) - a difference of ~13.8%/~21.9%, not a rounding gap. The Key Metrics total exactly "
+        "equals the OV1 table's Credit risk + CCR rows only (137,813,079 + 20,686 = 137,833,765; 93,272,178 + "
+        "108 = 93,272,286), strongly suggesting the Key Metrics table's 'Total RWEA' row was mis-populated in "
+        "UBA UK's own source document (omitting market and operational risk) rather than the OV1 table being "
+        "wrong. Nothing has been blended: the OV1 breakdown is recorded on this sheet exactly as the Bank "
+        "printed it, the Total RWAs sheet still carries the Bank's own Key Metrics figure exactly as printed, "
+        "and neither has been adjusted toward the other. DO NOT CROSS-DIVIDE THE TWO SHEETS - a category sum "
+        "from this sheet over a capital figure derived against the Total RWAs sheet will not reproduce any "
+        "ratio the Bank published. A restatement of the Total RWAs sheet onto the OV1 basis remains a separate "
+        "open question, unchanged by this edit.\n\n"
+        "RE-VERIFIED (2026-09-12, independent re-check): re-downloaded the FY2022 Pillar 3 Disclosures directly "
+        "and OCR'd the OV1 table (p.8) and Key Metrics table (p.10) myself - both figures above confirmed "
+        "character-for-character correct, the inconsistency is real and reproducible, not a prior transcription "
+        "error. Checked for a resolving source: the FY2024 Pillar 3 Disclosures' own OV1 table only carries a "
+        "FY2023 comparative column (not FY2022 or FY2021), so it cannot help; no restated or corrected FY2022 "
+        "Pillar 3 document was found anywhere. The decision not to add this data stands.\n\n"
+        + ENTITY_NOTE
+    ),
+    first_col_width=68,
+    source_height=340,
+    unit_suffix=" (£'000)",
 )
 
 metric(

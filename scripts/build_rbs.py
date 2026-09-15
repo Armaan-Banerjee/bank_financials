@@ -11,6 +11,11 @@ AR2023_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/resul
 AR2022_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/17022023/rbs-plc-annual-report.pdf"
 AR2021_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/18022022/rbs-plc-annual-report-2021.pdf"
 
+# UK DoLSub liquidity (LCR/NSFR) is disclosed by NatWest Holdings Group, not by
+# RBS plc - see liquidity_sources() and the LCR sheet note.
+NWH_AR2025_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/nwh-annual-report.pdf"
+NWH_AR2024_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/nwh-annual-report.pdf"
+
 P3_2025_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/rbs-pillar-3-report.pdf"
 P3_2024_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/rbs-plc-pillar-3-report.pdf"
 P3_2023_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/16022024/rbs-plc-pillar-3-report.pdf"
@@ -36,8 +41,15 @@ ENTITY_NOTE = (
     "level rather than at the individual RBS plc entity level - the LCR/NSFR figures on those sheets are UK DoLSub "
     "figures, consistently across every year in this workbook, not RBS plc solo. From FY2024 onward, RBS plc's own "
     "Annual Report and Pillar 3 Report no longer state a numeric UK DoLSub LCR/NSFR at all (that disclosure moved "
-    "entirely to the NatWest Holdings Group Annual Report, a different reporting entity not covered by this "
-    "project) - FY2024/FY2025 LCR/NSFR are therefore blank, not a gap in RBS plc's own reporting."
+    "entirely to NatWest Holdings Group's own reports) - so FY2024/FY2025 are not a gap in RBS plc's own reporting. "
+    "The UK DoLSub is a liquidity sub-group of which RBS plc is a constituent, NOT the NatWest Holdings Group or "
+    "NatWest Group consolidated entity; taking the UK DoLSub figure from a NatWest Holdings Group document "
+    "therefore continues the same sub-group measure this workbook has always used, and is not a substitution of a "
+    "parent-group figure into an entity-level sheet. FY2024 UK DoLSub spot LCR/NSFR are recorded on that basis. "
+    "FY2025 spot is genuinely unpublished - NatWest Holdings Group dropped the Spot column from FY2025 and now "
+    "reports these metrics on an average basis only - so the FY2025 figures appear on the separate average-basis "
+    "row instead. See the LCR sheet note for the spot-vs-average distinction, which is material (11 points apart "
+    "for FY2023)."
 )
 
 CASH_FLOW_SOURCES = (
@@ -57,6 +69,48 @@ CASH_FLOW_SOURCES = (
     "exactly across all 5 years (FY2021 opening £46,426m through FY2025 closing £48,316m).\n\n"
     + ENTITY_NOTE
 )
+
+
+def liquidity_sources():
+    """Citations for the LCR/NSFR sheets.
+
+    These differ from p3_sources() because UK DoLSub liquidity is not disclosed
+    in RBS plc's own Pillar 3 Report at all - its UK KM1 rows 15-20 are blank in
+    every year, footnoted to the sub-group waiver, with UK LIQ1/LIQB/LIQ2 marked
+    'Refer to the NatWest Holdings Group Pillar 3 report'.
+    """
+    return (
+        "Sources - UK DoLSub sub-group basis (RBS plc + National Westminster Bank Plc + Coutts & Company):\n"
+        "SPOT (point-in-time at 31 December) row:\n"
+        f"  FY2024: NatWest Holdings Group Annual Report and Accounts 2024, 'Liquidity key metrics' table (Risk and "
+        f"capital management - Capital, liquidity and funding risk), UK DoLSub 'Spot' column - LCR 142%, NSFR 129% "
+        f"- {NWH_AR2024_URL}\n"
+        f"  FY2023: RBS plc Annual Report and Accounts 2023, p.57 ('Liquidity key metrics', UK DoLSub) - LCR 138%, "
+        f"NSFR 126%. Independently corroborated by the NatWest Holdings Group Annual Report and Accounts 2024, whose "
+        f"2023 UK DoLSub 'Spot' column gives the identical 138%/126% (and whose 2023 'Average' column gives a "
+        f"materially different 127%/129%, which is what establishes that this workbook's pre-FY2024 series is the "
+        f"spot measure) - {AR2023_URL}\n"
+        f"  FY2022: RBS plc Annual Report and Accounts 2023, p.57 (2022 comparative block of the same 'Liquidity key "
+        f"metrics' table) - {AR2023_URL}\n"
+        f"  FY2021: RBS plc Annual Report and Accounts 2021 ('Liquidity key metrics', UK DoLSub) - {AR2021_URL}\n"
+        "AVERAGE row:\n"
+        f"  FY2025: NatWest Holdings Group Annual Report and Accounts 2025, 'Liquidity key metrics' table, UK DoLSub "
+        f"column - LCR 135% (average of the preceding 12 months), NSFR 129% (average of the preceding four "
+        f"quarters). This table is stated 'on an average basis' and no longer carries a Spot column - "
+        f"{NWH_AR2025_URL}\n"
+        f"  FY2024/FY2023: NatWest Holdings Group Annual Report and Accounts 2024, 'Liquidity key metrics' table, UK "
+        f"DoLSub 'Average' columns - {NWH_AR2024_URL}\n"
+        "Cross-check: the NatWest Holdings Group Pillar 3 Report 2025's UK LIQ1 (Quantitative information of LCR) "
+        "and UK LIQ2 (Net Stable Funding Ratio) tables, UK DoLSub sections, independently give a 31 December 2025 "
+        "12-month-average LCR of 135% and an NSFR of 129% (ASF GBP353,089m / RSF GBP273,869m = 128.9%), matching the "
+        "average row above - "
+        "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/nwh-pillar-3-report.pdf\n"
+        "Checked 15 September 2026: RBS plc's own Annual Report and Accounts 2025 replaces the former 'Liquidity key "
+        "metrics' figures with the 100% minimum-requirement table only, stating that disclosures relating to these "
+        "metrics 'are completed at UK DoLSub level and published in the NatWest Holdings Group 2025 Annual Report "
+        "and Accounts'.\n\n"
+        + ENTITY_NOTE
+    )
 
 
 def p3_sources(cap_source="AR own-report 'Capital, RWAs and leverage' table (Risk and capital management section)"):
@@ -506,21 +560,47 @@ metric(
 
 metric(
     "LCR", "%",
-    [("Liquidity Coverage Ratio (%) - UK DoLSub level", {"FY2023": "138%", "FY2022": "131%", "FY2021": "169%"})],
-    p3_sources(),
+    [
+        ("Liquidity Coverage Ratio (%) - UK DoLSub, spot at 31 December",
+         {"FY2024": "142%", "FY2023": "138%", "FY2022": "131%", "FY2021": "169%"}),
+        ("Liquidity Coverage Ratio (%) - UK DoLSub, 12-month average",
+         {"FY2025": "135%", "FY2024": "142%", "FY2023": "127%"}),
+    ],
+    liquidity_sources(),
     note="UK DoLSub (RBS plc + National Westminster Bank Plc + Coutts & Company) sub-group figure throughout, per "
-         "the PRA waiver described in the entity note - RBS plc solo LCR is not disclosed at all in any year. No "
-         "£m HQLA/net-outflow breakdown is given in RBS plc's own Annual Report or Pillar 3 Report (only the "
-         "headline %). FY2024 and FY2025: not disclosed in any RBS plc document - moved entirely to the NatWest "
-         "Holdings Group Annual Report (a separate reporting entity, out of scope for this project).",
+         "the PRA waiver described in the entity note - RBS plc solo LCR is not disclosed at all in any year, and "
+         "rows 15-17 of RBS plc's own UK KM1 table are printed blank in every year with the footnote 'Under the UK "
+         "DoLSub waiver RBS plc liquidity is managed and disclosed at the sub-group level rather than entity "
+         "level'.\n\n"
+         "TWO BASES, DELIBERATELY KEPT AS SEPARATE ROWS. The spot row is the point-in-time ratio at 31 December; "
+         "the average row is the average of the preceding 12 months. They are NOT interchangeable - for FY2023 the "
+         "same sub-group is 138% spot but 127% average, an 11-point gap. FY2021-FY2023 spot figures come from RBS "
+         "plc's own Annual Report; FY2024 spot comes from the NatWest Holdings Group Annual Report 2024, which "
+         "prints an explicit Spot/Average split per entity and whose FY2023 UK DoLSub spot column reproduces this "
+         "workbook's existing 138% exactly (that tie is what identifies the pre-FY2024 series as spot rather than "
+         "average).\n\n"
+         "FY2025 SPOT IS GENUINELY UNAVAILABLE: from FY2025 the NatWest Holdings Group Annual Report dropped the "
+         "Spot column and now states its liquidity key metrics 'on an average basis' only, so no point-in-time "
+         "31 December 2025 UK DoLSub LCR is published anywhere. The FY2025 average (135%) is recorded on the "
+         "average row rather than being spliced into the spot series. No £m HQLA/net-outflow breakdown appears in "
+         "any RBS plc document; the UK LIQ1 £m tables exist only at NatWest Holdings Group level.",
 )
 
 metric(
     "NSFR", "%",
-    [("Net Stable Funding Ratio (%) - UK DoLSub level", {"FY2023": "126%", "FY2022": "137%", "FY2021": "151%"})],
-    p3_sources(),
-    note="Same UK DoLSub sub-group basis and same FY2024/FY2025 disclosure gap as the LCR sheet - see that sheet's "
-         "note.",
+    [
+        ("Net Stable Funding Ratio (%) - UK DoLSub, spot at 31 December",
+         {"FY2024": "129%", "FY2023": "126%", "FY2022": "137%", "FY2021": "151%"}),
+        ("Net Stable Funding Ratio (%) - UK DoLSub, four-quarter average",
+         {"FY2025": "129%", "FY2024": "130%", "FY2023": "129%"}),
+    ],
+    liquidity_sources(),
+    note="Same UK DoLSub sub-group basis, same two-row spot/average split, and same FY2025 spot-disclosure gap as "
+         "the LCR sheet - see that sheet's note for the full explanation. The NSFR average is defined by the source "
+         "as the average of the preceding four quarters (not twelve months, as for the LCR). The FY2023 UK DoLSub "
+         "spot figure of 126% in the NatWest Holdings Group Annual Report 2024 reproduces this workbook's existing "
+         "FY2023 value exactly, confirming the pre-FY2024 series is spot. Note the spot and average rows happen to "
+         "coincide at 129% for FY2024/FY2025 respectively while measuring different things.",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -570,13 +650,17 @@ bw.add_overview_sheet(
         ("Tier 1 Ratio", {"FY2025": "13.8%", "FY2024": "14.0%", "FY2023": "13.9%", "FY2022": "16.8%", "FY2021": "18.6%"}),
         ("Total Capital Ratio", {"FY2025": "17.0%", "FY2024": "17.5%", "FY2023": "16.4%", "FY2022": "25.4%", "FY2021": "26.1%"}),
         ("Leverage Ratio (excl. claims on central banks)", {"FY2025": "5.6%", "FY2024": "5.8%", "FY2023": "5.8%", "FY2022": "6.4%"}),
-        ("LCR (UK DoLSub)", {"FY2023": "138%", "FY2022": "131%", "FY2021": "169%"}),
-        ("NSFR (UK DoLSub)", {"FY2023": "126%", "FY2022": "137%", "FY2021": "151%"}),
+        ("LCR (UK DoLSub, spot)", {"FY2024": "142%", "FY2023": "138%", "FY2022": "131%", "FY2021": "169%"}),
+        ("NSFR (UK DoLSub, spot)", {"FY2024": "129%", "FY2023": "126%", "FY2022": "137%", "FY2021": "151%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. See the Cash Flow Statement sheet's ENTITY NOTE for an "
          "important entity-lineage flag (this is NOT the historic 1727 'Royal Bank of Scotland plc' entity, which "
-         "is now named NatWest Markets Plc) and for the UK DoLSub liquidity-disclosure basis.",
+         "is now named NatWest Markets Plc) and for the UK DoLSub liquidity-disclosure basis. The LCR/NSFR rows "
+         "here show the SPOT (31 December point-in-time) UK DoLSub series only, so that the trend stays on one "
+         "consistent basis; FY2025 spot is not published by any source. The LCR and NSFR sheets additionally carry "
+         "an average-basis row covering FY2023-FY2025 - do not read across the two bases, they differ by 11 points "
+         "for FY2023.",
 )
 
 # ---------------------------------------------------------------

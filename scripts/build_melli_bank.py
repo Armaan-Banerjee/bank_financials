@@ -352,7 +352,11 @@ bw.add_rwa_breakdown_sheet(
         "the 'Capital and Liquidity Position' KPI table on p.10) discloses only the aggregate Total Risk Exposure "
         "Amount shown on the Total RWAs sheet, consistent with the reports' own statement that full Pillar 3 "
         "disclosure is available on request rather than published. Confirmed a genuine non-disclosure, not an "
-        "access gap - all 5 Annual Reports were fully read this session, including the current FY2025 report."
+        "access gap - all 5 Annual Reports were fully read this session, including the current FY2025 report.\n\n"
+        "RE-VERIFIED 2026-09-12 (independent second pass, same day as the above): re-downloaded and OCR'd the "
+        "live FY2025 Annual Report directly and confirmed the same 'Basel III - Pillar 3 Disclosure / The Pillar "
+        "3 disclosure is available on request' statement, plus the KPI table's Total Risk Exposure Amount (EUR "
+        "458m FY2025 / EUR 466m FY2024) with no category split anywhere in the document."
     ),
     first_col_width=54,
     source_height=280,

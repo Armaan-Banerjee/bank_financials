@@ -609,6 +609,8 @@ RWA_BREAKDOWN_PRESENTATION_NOTE = (
     "PRESENTATION NOTE: FY2025 category breakdown not available - no FY2025 Pillar 3 "
     "disclosure has been published yet (same gap already noted on the Total RWAs and other "
     "Pillar 3 sheets), so only the aggregate Total RWA figure exists for that year and it is "
+    "(re-confirmed 2026-09-12: bank's own finances.html page still lists Pillar3-Disclosures-2024.pdf "
+    "as the latest, no 2025 edition) "
     "not repeated on this sheet. FY2023's category breakdown (Credit risk 167,168 + CCR 447 + "
     "Market risk 45,736 + Operational risk 39,255 = 252,606) is £2k below the Total RWAs "
     "sheet's own FY2023 total of 252,608 - both figures are transcribed exactly as each "
@@ -654,14 +656,27 @@ metric(
       {"FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%",
        "FY2017": "12.08%", "FY2016": "9.62%"})],
     p3_sources(
-        "\n\nFY2025 leverage ratio not found - no Pillar 3 edition published yet and the "
-        "FY2025 Annual Report's Strategic Report does not state a leverage ratio; left blank "
-        "rather than guessed. FY2015/FY2014: leverage ratio not disclosed in either year's "
+        "\n\nFY2025 leverage ratio not found - left blank rather than guessed. Re-verified "
+        "independently on 15 September 2026, three ways: (1) the bank's own finances.html "
+        "index still lists Pillar3-Disclosures-2024.pdf as the newest Pillar 3 edition, with "
+        "no 2025 entry; (2) four filename permutations for a 2025 edition "
+        "(Pillar3-Disclosures-2025.pdf, BOA_UK_Pillar_III_2025.pdf, "
+        "Pillar3_Disclosures_2025.pdf, Pillar3-Disclosures-2025_.pdf) all return HTTP 404 "
+        "while the 2024 file at the same path still serves a real 929KB PDF, so the site is "
+        "live and the absence is real rather than a broken path; (3) the FY2025 Annual Report "
+        "(Companies House, a 100-page scanned image-only filing, Creator 'go-tiff2pdf', with "
+        "no text layer at all) was rendered at 200 dpi and OCR'd in full - all 100 pages - "
+        "and contains ZERO occurrences of the word 'leverage' anywhere in the document, not "
+        "merely in the Strategic Report. Its capital note discloses Tier 1 capital of £41.05m "
+        "(2024: £41.44m) but no exposure measure and no leverage ratio, so the ratio is not "
+        "derivable either. FY2015/FY2014: leverage ratio not disclosed in either year's "
         "Pillar 3 document - plausible, since the UK leverage ratio framework (and its "
         "public disclosure requirement) only phased in from 2016 onward; left blank rather "
         "than guessed. FY2018-FY2020: no Pillar 3 disclosure at all (see entity note)."
     ),
-    note="No FY2025 figure - see source note.",
+    note="No FY2025 figure - a confirmed disclosure gap, not an unchecked one. See the source note for the "
+         "three-way verification (site index, filename permutations against a live control file, and a full "
+         "100-page OCR of the scanned FY2025 Annual Report) carried out on 15 September 2026.",
 )
 
 metric(

@@ -24,11 +24,21 @@ Checks performed:
        chart if any Pillar 3 metric sheet is present. This is a heuristic
        (a block's totals could have been passed empty even if its sheet
        exists) so a mismatch is printed as informational, not asserted.
-    3. Cash Flow Statement: for every contiguous run of plain DATA rows that is
-       immediately followed by a bold TOTAL row (the standard SECTION/DATA*/TOTAL
-       block shape from add_cash_flow_sheet), verify the DATA rows sum to that
-       TOTAL, per year column. This is a fully generic structural check - it
-       doesn't know or care what the rows are called.
+    3. For every statement sheet sharing the standard SECTION/DATA*/TOTAL
+       year-column block shape from bank_workbook.py's `_add_statement_sheet`
+       - Cash Flow Statement, Balance Sheet, Profit & Loss, Asset Quality,
+       RWA Breakdown - verify every contiguous run of plain DATA rows
+       immediately followed by a bold TOTAL row sums to that TOTAL, per year
+       column. This is a fully generic structural check - it doesn't know or
+       care what the rows are called, so it runs unchanged whichever of the
+       5 sheets are present in a given workbook. (Statement of Changes in
+       Equity is deliberately excluded: it's a chronological roll-forward,
+       not this year-column shape.) Originally only ran against Cash Flow
+       Statement (this check predates the other 4 ST- sheets) - widened
+       2026-09-08 after a bug sweep found it was the exact class of check
+       that would have caught this project's real Close Brothers/Aldermore
+       double-counting bug had it run against a Balance Sheet or Asset
+       Quality sheet.
     4. Prints every TOTAL row's values per year, so the "tail" reconciliation
        (net change / opening / closing, which varies bank-to-bank - e.g. extra
        FX lines) can be eyeballed quickly rather than re-deriving it by hand.
@@ -213,13 +223,33 @@ def main():
                 "even with its sheet present)"
             )
 
-    if "Cash Flow Statement" not in wb.sheetnames:
+    # Sheets sharing the standard SECTION/DATA*/TOTAL year-column block shape
+    # from bank_workbook.py's `_add_statement_sheet` - Statement of Changes
+    # in Equity is deliberately excluded (chronological roll-forward, not
+    # this shape).
+    reconciliation_sheet_names = [
+        "Cash Flow Statement",
+        "Balance Sheet",
+        "Profit & Loss",
+        "Asset Quality",
+        "RWA Breakdown",
+    ]
+    any_reconciliation_sheet = any(n in wb.sheetnames for n in reconciliation_sheet_names)
+    if not any_reconciliation_sheet:
         print(
-            "\nNo 'Cash Flow Statement' sheet found - skipping reconciliation checks."
+            "\nNo statement sheet with the standard SECTION/DATA/TOTAL shape found - "
+            "skipping reconciliation checks."
         )
         return
-    ws = wb["Cash Flow Statement"]
+    for sheet_name in reconciliation_sheet_names:
+        if sheet_name in wb.sheetnames:
+            check_statement_sheet(wb[sheet_name], sheet_name)
 
+
+def check_statement_sheet(ws, sheet_name):
+    """Run the generic DATA-block -> TOTAL reconciliation check (and print
+    every TOTAL row for manual tail-chain review) against one statement
+    sheet sharing the standard SECTION/DATA*/TOTAL year-column shape."""
     # Locate the header row (first row with >1 non-empty cell after the title/subtitle)
     header_row = None
     for r in range(1, 6):
@@ -228,11 +258,11 @@ def main():
             header_row = r
             break
     if header_row is None:
-        print("\nCouldn't locate the header row - skipping reconciliation checks.")
+        print(f"\nCouldn't locate the header row for {sheet_name!r} - skipping reconciliation checks.")
         return
     ncols = ws.max_column
     years = [ws.cell(row=header_row, column=c).value for c in range(2, ncols + 1)]
-    print(f"\n=== Cash Flow Statement structure (header row {header_row}) ===")
+    print(f"\n=== {sheet_name} structure (header row {header_row}) ===")
     print("Years:", years)
 
     def is_bold(row, col):
@@ -241,7 +271,6 @@ def main():
 
     def row_kind(r):
         a_bold = is_bold(r, 1)
-        b_val = ws.cell(row=r, column=2).value
         if not a_bold:
             return "DATA" if ws.cell(row=r, column=1).value else "BLANK"
         # bold col A: SECTION has no data-column values written; TOTAL does
@@ -260,7 +289,6 @@ def main():
     print("\n=== TOTAL rows (for manual/tail reconciliation) ===")
     totals = []
     run = []  # pending DATA rows since the last SECTION/TOTAL
-    block_start_r = None
     checks_run = 0
     checks_passed = 0
     for r in range(header_row + 1, last_row + 1):
@@ -294,7 +322,7 @@ def main():
                     )
             run = []
 
-    print(f"\n=== Block reconciliation summary ===")
+    print(f"\n=== {sheet_name} block reconciliation summary ===")
     print(
         f"{checks_passed}/{checks_run} DATA-block -> TOTAL checks passed"
         f"{' (all clean)' if checks_passed == checks_run else '  !! see mismatches above'}"

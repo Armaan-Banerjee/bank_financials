@@ -12,6 +12,18 @@ AR2023 = "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:8da5f087-d
 AR2022 = "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:f15fea69-5780-484a-bb22-ce42b29eeac3/original/as/santander_financial_services_plc_2022_annual_report.pdf"
 AR2021 = "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:58592004-0ef9-4156-9df8-367908fc81a9/original/as/sfs_2021_annual_report.pdf"
 
+# Added 2026-09-15. The AR* URLs above are Adobe AEM asset links keyed by opaque
+# GUID; these are the same documents on Santander's own public site under stable,
+# human-readable paths, and they are what the 2026-09-15 re-verification actually
+# read. The FY2024 report was not previously cited at all - FY2024 had been taken
+# from the FY2025 report's comparative column - and the FY2020 report is the
+# primary source for the FY2021 LCR/liquidity comparatives.
+AR2024_SANT = "https://www.santander.co.uk/assets/s3fs-public/documents/Santander%20Financial%20Services%20plc%202024%20Annual%20Report.pdf"
+AR2023_SANT = "https://www.santander.co.uk/assets/s3fs-public/documents/sfs_annual_report_2023.pdf"
+AR2022_SANT = "https://www.santander.co.uk/assets/s3fs-public/documents/santander_financial_services_plc_2022_annual_report.pdf"
+AR2021_SANT = "https://www.santander.co.uk/assets/s3fs-public/documents/sfs_2021_annual_report.pdf"
+AR2020_SANT = "https://www.santander.co.uk/assets/s3fs-public/documents/sfs_2020_annual_report.pdf"
+
 ENTITY_NOTE = (
     "ENTITY NOTE: Santander Financial Services plc (company 02338548, FRN 146003) is the legal entity covered. "
     "It operates in the UK, Jersey and the Isle of Man and is a subsidiary of Santander UK Group Holdings plc. "
@@ -260,7 +272,33 @@ CAPITAL_SOURCES = (
     f"FY2025/FY2024: SFS 2025 Annual Report, Risk review p.39 - {AR2025}\n"
     f"FY2023/FY2022: SFS 2023 Annual Report, Risk review p.39 - {AR2023}\n"
     f"FY2022/FY2021: SFS 2022 Annual Report, Risk review p.39 - {AR2022}\n"
-    f"FY2021: SFS 2021 Annual Report, Risk review p.39 - {AR2021}\n\n" + ENTITY_NOTE
+    f"FY2021: SFS 2021 Annual Report, Risk review p.39 - {AR2021}\n"
+    f"FY2024 (primary, added 2026-09-15): SFS 2024 Annual Report, Risk review p.38-39 "
+    f"'Regulatory capital resources (audited)' - {AR2024_SANT}\n"
+    f"FY2020 (context for the FY2021 comparative): SFS 2020 Annual Report - {AR2020_SANT}\n\n"
+    "TEXT-LAYER RE-VERIFICATION 2026-09-15: all five SFS Annual Reports for FY2020-FY2024 were "
+    "independently re-downloaded from santander.co.uk as full text-layer PDFs and the regulatory "
+    "capital table re-extracted from each. Every capital figure on these sheets reconciles "
+    "exactly, and each year is corroborated twice because each report carries the prior year as "
+    "a comparative: CET1 capital FY2021 293 (FY2021 and FY2022 reports), FY2022 256 (FY2022 and "
+    "FY2023 reports), FY2023 288 (FY2023 and FY2024 reports), FY2024 266 (FY2024 report). "
+    "AT1 capital is 50 in FY2022-FY2024 and nil in FY2021, and Total regulatory capital equals "
+    "CET1 + AT1 in every single year, confirming no Tier 2 instruments exist - which is why the "
+    "Tier 1 Capital and Total Capital sheets carry identical figures. That identity is read off "
+    "the disclosed rows, not assumed.\n\n"
+    "RATIOS, RWA AND LEVERAGE - PROVEN ABSENT, not an unresearched gap. The 2026-09-15 pass "
+    "searched the full extracted text of all five reports for any capital ratio, risk-weighted "
+    "asset figure or leverage ratio at this entity's level and found none. The 'Regulatory "
+    "capital resources (audited)' table is the entity's only capital disclosure and it contains "
+    "five rows only: CET1 capital before regulatory adjustments, CET1 regulatory adjustments, "
+    "CET1 capital, AT1 capital, Total regulatory capital. There is no denominator anywhere in "
+    "the document, so no ratio can be sourced and none may be derived - deriving RWA from "
+    "capital divided by a ratio is barred by project convention, and here there is not even a "
+    "ratio to divide by. The only percentages the reports attach to capital are the 7% CET1 "
+    "trigger written into the terms of the AT1 securities and the auditors' 0.5%-of-total-assets "
+    "materiality threshold; neither is a disclosed capital ratio. Santander's site hosts no "
+    "FY2025 SFS report under any tested filename, and an unfiltered Wayback CDX sweep of "
+    "santander.co.uk returns SFS annual reports for FY2019-FY2024 only.\n\n" + ENTITY_NOTE
 )
 
 def metric(name, unit, data, note=None):
@@ -284,7 +322,19 @@ bw.add_rwa_breakdown_sheet(
         "measurement of its exposures and does not publish its own standalone RWA figure or risk-category "
         "breakdown (UK OV1 template) at the SFS entity level in any of the reviewed reports - confirmed via direct "
         "reading of the Capital Risk section of each report, not an access gap. Santander UK Group Holdings plc's "
-        "own disclosures are a different regulatory entity and were not substituted.\n\n" + ENTITY_NOTE
+        "own disclosures are a different regulatory entity and were not substituted.\n\n"
+        "RE-VERIFIED 2026-09-12 (independent re-check): the FY2025 Annual Report was re-downloaded and read "
+        "directly. Its Capital Risk section states verbatim: 'We apply Banco Santander's approach to capital "
+        "measurement and risk management for CRD IV. For more on the CRD IV risk measurement of our exposures, "
+        "see Banco Santander's Pillar 3 report.' The report gives CET1 capital as a GBP amount (FY2025 GBP249m, "
+        "FY2024 GBP266m - already on the CET1 Capital sheet) but no RWA figure anywhere, which is why every "
+        "RWA-denominated ratio (CET1/Tier 1/Total Capital Ratio) and the RWA breakdown are absent: SFS's "
+        "risk-weighted exposures are measured and published only within Banco Santander's group Pillar 3, never "
+        "at SFS entity level. This is a structural consequence of the group's disclosure architecture, not a "
+        "document this project failed to obtain. Entity-level LCR and NSFR ARE disclosed and are captured on "
+        "their own sheets - SFS states its liquidity risk 'is monitored and managed separately from the rest of "
+        "the Santander UK group', which is why those two exist at entity level while the capital ratios do "
+        "not.\n\n" + ENTITY_NOTE
     ),
     first_col_width=54, source_height=190, unit_suffix="",
 )
@@ -300,7 +350,27 @@ LIQ_SOURCES = (
     f"FY2025/FY2024: SFS 2025 Annual Report, Risk review p.37 - {AR2025}\n"
     f"FY2023/FY2022: SFS 2023 Annual Report, Risk review p.37 - {AR2023}\n"
     f"FY2022/FY2021: SFS 2022 Annual Report, Risk review p.37 - {AR2022}\n"
-    f"FY2021: SFS 2021 Annual Report, Risk review p.37 - {AR2021}\n\n" + ENTITY_NOTE
+    f"FY2021: SFS 2021 Annual Report, Risk review p.37 - {AR2021}\n"
+    f"FY2024 (primary, added 2026-09-15): SFS 2024 Annual Report, Risk review p.36-37 - {AR2024_SANT}\n\n"
+    "BASIS WARNING - THESE ARE POINT-IN-TIME RATIOS, NOT 12-MONTH AVERAGES. SFS does not publish "
+    "a UK KM1 template. The figure captured here is the row the reports label 'Eligible liquidity "
+    "pool as a percentage of anticipated net cash flows', measured at the 31 December balance "
+    "sheet date. Most banks in this project whose LCR comes from a Pillar 3 KM1 table are "
+    "reporting a 12-month average instead, and the two bases can diverge very widely - "
+    "divergences of 89 to 470 percentage points have been found elsewhere in this dataset. Do "
+    "not rank or trend SFS's LCR directly against a KM1-sourced LCR without noting the "
+    "difference. SFS's own reports show how large the gap can be within a single entity: the "
+    "FY2021 report's table prints the LCR measure at 206% (2021) and 165% (2020) beside an LRA "
+    "stress measure of 184% and 168% for the same two dates.\n\n"
+    "RE-VERIFICATION 2026-09-15: re-extracted from text-layer PDFs of the FY2020-FY2024 reports. "
+    "Every LCR and NSFR value below FY2025 is confirmed by two independent reports, since each "
+    "year's figure reappears as the following year's comparative - LCR FY2021 206%, FY2022 218%, "
+    "FY2023 240%, FY2024 186%; NSFR FY2021 137%, FY2022 127%, FY2023 142%, FY2024 149%. The "
+    "FY2021 NSFR is genuine and deliberately retained: the UK NSFR requirement only took effect "
+    "on 1 January 2022, and across this project pre-2022 NSFR blanks are treated as structural, "
+    "but SFS chose to monitor and publish the ratio a year early and its FY2021 report states "
+    "the figure outright ('At 31 December 2021, the SFS NSFR was 137%'), corroborated by the "
+    "FY2022 report's comparative.\n\n" + ENTITY_NOTE
 )
 bw.add_metric_sheet("LCR", "£bn / %", [("Eligible liquidity pool", {"FY2025": 3.5, "FY2024": 3.5, "FY2023": 2.6, "FY2022": 2.7, "FY2021": 2.8}), ("Net stress outflows", {"FY2025": -1.5, "FY2024": -1.9, "FY2023": -1.1, "FY2022": -1.3, "FY2021": -1.4}), ("Eligible liquidity pool as percentage of anticipated net cash flows", {"FY2025": "227%", "FY2024": "186%", "FY2023": "240%", "FY2022": "218%", "FY2021": "206%"})], LIQ_SOURCES, note="LCR is presented in the SFS risk review as the eligible liquidity pool divided by anticipated/net stress cash outflows; the underlying table is in £bn and rounded.", first_col_width=58, source_height=180)
 bw.add_metric_sheet("NSFR", "%", [("NSFR ratio", {"FY2025": "148%", "FY2024": "149%", "FY2023": "142%", "FY2022": "127%", "FY2021": "137%"})], LIQ_SOURCES, note="NSFR was described by SFS as implemented from 1 January 2022, but the 2021 report nevertheless states the SFS NSFR at 31 December 2021; values are reproduced as reported.", first_col_width=58, source_height=180)

@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]
+YEARS = ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]
 YEAR_LABEL = {y: y for y in YEARS}
 
 P3 = {
@@ -26,6 +26,7 @@ AQ_PAGES = dict(PAGES)
 AQ_PAGES.update({"FY2020": "25-26", "FY2019": "25"})
 RWA_PAGES = dict(PAGES)
 RWA_PAGES.update({"FY2020": "17-18", "FY2019": "18-19"})
+FS2026 = "https://find-and-update.company-information.service.gov.uk/company/10436460/filing-history/MzU0MjU0NTEyMWFkaXF6a2N4/document?format=pdf&download=0"
 FS2025 = "https://sbiuk.statebank/documents/274771/0/SBIUK%2B-%2BAnnual%2BReport%2B2025%2Bapproved.pdf/4d165f25-8596-0935-9c39-80cf4c7202b8?t=1767022144810"
 FS2024 = "http://sbiuk.statebank/documents/274771/0/SBIUK+Ltd+-+Annual+Report+++2024.pdf/80699e7d-ba2e-8cc6-6726-f8bc7058261f?t=1730125796286"
 FS2023 = "https://sbiuk.statebank/documents/274771/0/Annual+Financial+22+23.pdf/77b485b2-332e-c7b0-63bf-30991ce5238b?t=1699459677034"
@@ -65,11 +66,26 @@ HISTORICAL_FLOOR_NOTE = (
 )
 
 
+P3_PENDING_NOTE = (
+    "FY2026 PILLAR 3 NOT YET PUBLISHED: SBI UK's FY2026 (year ended 31 March 2026) statutory "
+    "accounts were filed at Companies House on 9 September 2026 and are the source for this "
+    "workbook's FY2026 Balance Sheet, Profit & Loss and Statement of Changes in Equity. Its FY2026 "
+    "Pillar 3 disclosure had not been published as of 15 September 2026 - the Bank publishes each "
+    "year's Pillar 3 document several months after the accounts (FY2025's went up 29 December 2025, "
+    "FY2024's 28 October 2024), and no FY2026 document appears on sbiuk.statebank or in the Internet "
+    "Archive. FY2026 is therefore blank on the Asset Quality and RWA Breakdown sheets and on the "
+    "Total RWAs metric, and the FY2026 capital/leverage/NSFR figures that ARE shown come from the "
+    "Annual Report's own disclosures rather than from a KM1 table - see each sheet's own note."
+)
+
+
 def sources():
     return (
         "Sources - State Bank of India (UK) Limited standalone UK KM1 / Key Metrics disclosures, £m and %:\n"
-        + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {PAGES[y]} - {P3[y]}" for y in YEARS)
+        + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {PAGES[y]} - {P3[y]}" for y in YEARS if y in P3)
+        + "\nFY2026: no Pillar 3 disclosure published yet - see note below."
         + "\n\n"
+        + P3_PENDING_NOTE + "\n\n"
         + ENTITY_NOTE
     )
 
@@ -81,6 +97,11 @@ INVESTMENT_SECURITIES_NOTE = (
     "numbering), which splits the balance both by measurement basis (Available for Sale, i.e. mark-to-"
     "market / Held to Maturity, i.e. amortised cost) and by issuer type (Government Issued vs Other public "
     "sector securities & corporates):\n"
+    f"FY2026: Note 3.9, p.56 - {FS2026} (FY2026 has no Held-to-Maturity Government Issued balance, so "
+    f"that row is blank; the Held to Maturity 'Other public sector securities & corporates' figure of "
+    f"93,278 is shown net of the (89) fair-value adjustment of hedged bonds, the same convention used "
+    f"for every earlier year. The sub-rows sum exactly to the 364,408 headline: 28,296 + 245,875 - "
+    f"3,041 + 93,278.)\n"
     f"FY2025/FY2024: Note 3.9, p.52 - {FS2025}\n"
     f"FY2023/FY2022: Note 3.9, p.51 - {FS2023}\n"
     f"FY2021: Note 3.9, p.47 - {FS2021}\n"
@@ -107,6 +128,7 @@ INVESTMENT_SECURITIES_NOTE = (
 
 STATEMENTS_SOURCES = (
     "Sources - State Bank of India (UK) Limited Annual Report and Financial Statements, £'000:\n"
+    f"FY2026: Annual Report and Financial Statements for the year ended 31 March 2026 (Companies House filing, full accounts made up to 31 March 2026, filed 9 September 2026; scanned/image-only PDF with no text layer - read by OCR at 250 dpi), Income statement p.34 / Statement of comprehensive income p.35 / Statement of financial position p.36 / Statement of changes in equity p.37 - {FS2026}. Added 2026-09-15. Every FY2026 statement was verified to foot internally (Total assets GBP 2,079,942k = Total liabilities GBP 1,800,967k + Total equity GBP 278,975k; Net interest income, Operating income, Total operating expenses, Profit before tax and Profit after tax each recompute exactly from their own component lines) and every FY2025 comparative printed in the FY2026 accounts reproduces this workbook's existing FY2025 figures exactly, so no prior year was restated. The FY2026 balance sheet prints Tangible and Intangible fixed assets as two lines (3,682 + 235); they are combined here into the single 'Fixed assets (tangible & intangible)' row of 3,917, matching how every earlier year in this sheet is already presented. The 'Borrowings from banks' line does not appear at all in the FY2026 balance sheet and is left blank rather than set to zero.\n"
     f"FY2025/FY2024: Annual Report 2025, Income statement/Statement of comprehensive income/Statement of "
     f"financial position/Statement of changes in equity, pp. 33-36 - {FS2025}\n"
     f"FY2023/FY2022: Annual Report 2023, same statements, pp. 31-34 - {FS2023}\n"
@@ -156,6 +178,9 @@ EQUITY_SOURCES = (
     f"FY2021 movements: Annual Report 2021, p.28 - {FS2021}\n"
     f"FY2022/FY2023 movements: Annual Report 2023, p.34 - {FS2023}\n"
     f"FY2024/FY2025 movements: Annual Report 2025, p.36 - {FS2025}\n"
+    f"FY2026 movements: Annual Report 2026, p.37 - {FS2026} (the FY2026 statement's own 31 March 2025 "
+    f"opening row, 225,000 / 53,177 / (717) / 52,460 / 277,460, ties exactly to the FY2025 closing row "
+    f"already in this sheet)\n"
     "Every closing balance ties exactly to the next year's own opening balance and to that year's own "
     "Balance Sheet Total equity - confirmed via a sixth independent source (the FY2023 report's own SOCE "
     "restates the FY2021 closing balance as its own 1 April 2021 opening row: 225,000 / 18,891 / (74) / "
@@ -181,7 +206,8 @@ EQUITY_SOURCES = (
 ASSET_QUALITY_SOURCES = (
     "Sources - State Bank of India (UK) Limited Pillar 3 credit risk exposures (loans and advances to "
     "customers, maximum exposure by degree of risk of financial loss), £m:\n"
-    + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {AQ_PAGES[y]} - {P3[y]}" for y in YEARS)
+    + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {AQ_PAGES[y]} - {P3[y]}" for y in YEARS if y in P3)
+    + "\nFY2026: no Pillar 3 disclosure published yet - see note below."
     + "\n\nEach year's Total maximum exposure figure reconciles to the source table's own total (FY2022's "
     "reconciles to within £0.01m of its own reported total; FY2019's within £0.06m - a source rounding "
     "artifact, not an error in this workbook). This Total does not tie to the Balance Sheet's narrower "
@@ -193,12 +219,14 @@ ASSET_QUALITY_SOURCES = (
     "value and Gross loans and advances figures are taken from the FY2020 Pillar 3 document's own FY2019 "
     f"comparative column (p.26 - {P3['FY2020']}), which carries them to the nearest £'000, in preference to "
     "the FY2019 document's own £m-rounded figures, for precision.\n\n"
+    + P3_PENDING_NOTE + "\n\n"
     + ENTITY_NOTE
 )
 
 RWA_BREAKDOWN_SOURCES = (
     "Sources - State Bank of India (UK) Limited UK OV1 (Overview of risk-weighted exposure amounts), £m:\n"
-    + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {RWA_PAGES[y]} - {P3[y]}" for y in YEARS)
+    + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {RWA_PAGES[y]} - {P3[y]}" for y in YEARS if y in P3)
+    + "\nFY2026: no Pillar 3 disclosure published yet - see note below."
     + "\n\nEach year's category rows sum to that year's own reported Total, except FY2025: 1,216.73 + "
     "7.60 + 95.33 = 1,319.66m against a reported Total of 1,320.25m, a genuine ~£0.59m gap present in the "
     "source document's own UK OV1 table (confirmed by direct visual inspection of the source PDF page, "
@@ -216,6 +244,8 @@ RWA_BREAKDOWN_SOURCES = (
     "(shown in a dedicated row below rather than forced into the 'Credit risk (excluding CCR)' row, which "
     "is left blank for these two years). FY2020's Market Risk is reported as nil (the Bank's open position "
     "was below the 2% of own-funds threshold requiring a capital charge under CRR Article 351)."
+    + "\n\n"
+    + P3_PENDING_NOTE
 )
 
 
@@ -226,33 +256,33 @@ bw.add_balance_sheet_sheet(
     subtitle="Entity basis, £'000. See source note at bottom.",
     rows=[
         ("SECTION", "Assets", {}),
-        ("DATA", "Cash and balances with banks", {"FY2025": 70262, "FY2024": 90746, "FY2023": 144199, "FY2022": 86381, "FY2021": 113623, "FY2020": 72555, "FY2019": 19472}),
-        ("DATA", "Loans and advances to banks", {"FY2025": 7752, "FY2024": 20607, "FY2023": 79912, "FY2022": 100000, "FY2021": 125000, "FY2020": 195000, "FY2019": 165712}),
-        ("DATA", "Loans and advances to customers", {"FY2025": 1529812, "FY2024": 1415920, "FY2023": 1403369, "FY2022": 1201300, "FY2021": 1140238, "FY2020": 1101038, "FY2019": 1044412}),
-        ("DATA", "Total Investment securities", {"FY2025": 329255, "FY2024": 292784, "FY2023": 323130, "FY2022": 367831, "FY2021": 339418, "FY2020": 375150, "FY2019": 345303}),
-        ("DATA", "Investment securities - Government issued (Available for Sale, mark-to-market)", {"FY2025": 16231, "FY2024": 32262, "FY2023": 61488, "FY2022": 19622, "FY2021": 3662, "FY2020": 59963, "FY2019": 21948}),
-        ("DATA", "Investment securities - Other public sector securities & corporates (Available for Sale, mark-to-market)", {"FY2025": 203640, "FY2024": 125466, "FY2023": 123224, "FY2022": 86832, "FY2021": 50021, "FY2020": 18425, "FY2019": 0}),
-        ("DATA", "Investment securities - Loss due to market rate movement (Available for Sale, mark-to-market adjustment)", {"FY2025": -958, "FY2024": -3188, "FY2023": -6801, "FY2022": -3862, "FY2021": -92}),
-        ("DATA", "Investment securities - Government issued (Held to Maturity, amortised cost)", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 20414, "FY2021": 19334, "FY2020": 21459, "FY2019": 7116}),
-        ("DATA", "Investment securities - Other public sector securities & corporates (Held to Maturity, amortised cost)", {"FY2025": 110342, "FY2024": 138244, "FY2023": 145219, "FY2022": 244825, "FY2021": 266493, "FY2020": 275793, "FY2019": 316239}),
+        ("DATA", "Cash and balances with banks", {"FY2026": 26835, "FY2025": 70262, "FY2024": 90746, "FY2023": 144199, "FY2022": 86381, "FY2021": 113623, "FY2020": 72555, "FY2019": 19472}),
+        ("DATA", "Loans and advances to banks", {"FY2026": 19440, "FY2025": 7752, "FY2024": 20607, "FY2023": 79912, "FY2022": 100000, "FY2021": 125000, "FY2020": 195000, "FY2019": 165712}),
+        ("DATA", "Loans and advances to customers", {"FY2026": 1655683, "FY2025": 1529812, "FY2024": 1415920, "FY2023": 1403369, "FY2022": 1201300, "FY2021": 1140238, "FY2020": 1101038, "FY2019": 1044412}),
+        ("DATA", "Total Investment securities", {"FY2026": 364408, "FY2025": 329255, "FY2024": 292784, "FY2023": 323130, "FY2022": 367831, "FY2021": 339418, "FY2020": 375150, "FY2019": 345303}),
+        ("DATA", "Investment securities - Government issued (Available for Sale, mark-to-market)", {"FY2026": 28296, "FY2025": 16231, "FY2024": 32262, "FY2023": 61488, "FY2022": 19622, "FY2021": 3662, "FY2020": 59963, "FY2019": 21948}),
+        ("DATA", "Investment securities - Other public sector securities & corporates (Available for Sale, mark-to-market)", {"FY2026": 245875, "FY2025": 203640, "FY2024": 125466, "FY2023": 123224, "FY2022": 86832, "FY2021": 50021, "FY2020": 18425, "FY2019": 0}),
+        ("DATA", "Investment securities - Loss due to market rate movement (Available for Sale, mark-to-market adjustment)", {"FY2026": -3041, "FY2025": -958, "FY2024": -3188, "FY2023": -6801, "FY2022": -3862, "FY2021": -92}),
+        ("DATA", "Investment securities - Government issued (Held to Maturity, amortised cost)", {"FY2026": 0, "FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 20414, "FY2021": 19334, "FY2020": 21459, "FY2019": 7116}),
+        ("DATA", "Investment securities - Other public sector securities & corporates (Held to Maturity, amortised cost)", {"FY2026": 93278, "FY2025": 110342, "FY2024": 138244, "FY2023": 145219, "FY2022": 244825, "FY2021": 266493, "FY2020": 275793, "FY2019": 316239}),
         ("DATA", "Investment securities - Collective provision (FY2020 only, see note)", {"FY2020": -490}),
-        ("DATA", "Derivative financial instruments", {"FY2025": 14341, "FY2024": 13186, "FY2023": 12060, "FY2022": 8430, "FY2021": 25114, "FY2020": 0, "FY2019": 7194}),
-        ("DATA", "Fixed assets (tangible & intangible)", {"FY2025": 3870, "FY2024": 4425, "FY2023": 3130, "FY2022": 3463, "FY2021": 2807, "FY2020": 3281, "FY2019": 3846}),
-        ("DATA", "Other assets", {"FY2025": 4877, "FY2024": 5269, "FY2023": 11162, "FY2022": 8600, "FY2021": 9210, "FY2020": 10275, "FY2019": 9340}),
-        ("TOTAL", "Total assets", {"FY2025": 1960169, "FY2024": 1842936, "FY2023": 1976962, "FY2022": 1776005, "FY2021": 1755410, "FY2020": 1757299, "FY2019": 1595279}),
+        ("DATA", "Derivative financial instruments", {"FY2026": 2855, "FY2025": 14341, "FY2024": 13186, "FY2023": 12060, "FY2022": 8430, "FY2021": 25114, "FY2020": 0, "FY2019": 7194}),
+        ("DATA", "Fixed assets (tangible & intangible)", {"FY2026": 3917, "FY2025": 3870, "FY2024": 4425, "FY2023": 3130, "FY2022": 3463, "FY2021": 2807, "FY2020": 3281, "FY2019": 3846}),
+        ("DATA", "Other assets", {"FY2026": 6804, "FY2025": 4877, "FY2024": 5269, "FY2023": 11162, "FY2022": 8600, "FY2021": 9210, "FY2020": 10275, "FY2019": 9340}),
+        ("TOTAL", "Total assets", {"FY2026": 2079942, "FY2025": 1960169, "FY2024": 1842936, "FY2023": 1976962, "FY2022": 1776005, "FY2021": 1755410, "FY2020": 1757299, "FY2019": 1595279}),
         ("SECTION", "Liabilities", {}),
         ("DATA", "Borrowings from banks", {"FY2025": 0, "FY2024": 16199, "FY2023": 121408, "FY2022": 164120, "FY2021": 128696, "FY2020": 65072, "FY2019": 37137}),
-        ("DATA", "Deposit from customers", {"FY2025": 1655992, "FY2024": 1530535, "FY2023": 1568185, "FY2022": 1339203, "FY2021": 1360344, "FY2020": 1418658, "FY2019": 1310363}),
-        ("DATA", "Derivative financial instruments", {"FY2025": 654, "FY2024": 538, "FY2023": 0, "FY2022": 6061, "FY2021": 0, "FY2020": 22930, "FY2019": 892}),
-        ("DATA", "Other liabilities", {"FY2025": 26063, "FY2024": 23402, "FY2023": 27217, "FY2022": 17015, "FY2021": 22553, "FY2020": 14950, "FY2019": 13750}),
+        ("DATA", "Deposit from customers", {"FY2026": 1784374, "FY2025": 1655992, "FY2024": 1530535, "FY2023": 1568185, "FY2022": 1339203, "FY2021": 1360344, "FY2020": 1418658, "FY2019": 1310363}),
+        ("DATA", "Derivative financial instruments", {"FY2026": 2453, "FY2025": 654, "FY2024": 538, "FY2023": 0, "FY2022": 6061, "FY2021": 0, "FY2020": 22930, "FY2019": 892}),
+        ("DATA", "Other liabilities", {"FY2026": 14140, "FY2025": 26063, "FY2024": 23402, "FY2023": 27217, "FY2022": 17015, "FY2021": 22553, "FY2020": 14950, "FY2019": 13750}),
         ("DATA", "Subordinated debt liabilities (FY2019-FY2020 only; converted to share capital during FY2021, see note)", {"FY2020": 50000, "FY2019": 50000}),
-        ("TOTAL", "Total liabilities", {"FY2025": 1682709, "FY2024": 1570674, "FY2023": 1716810, "FY2022": 1526399, "FY2021": 1511593, "FY2020": 1571610, "FY2019": 1412142}),
+        ("TOTAL", "Total liabilities", {"FY2026": 1800967, "FY2025": 1682709, "FY2024": 1570674, "FY2023": 1716810, "FY2022": 1526399, "FY2021": 1511593, "FY2020": 1571610, "FY2019": 1412142}),
         ("SECTION", "Shareholders' funds", {}),
-        ("DATA", "Share capital", {"FY2025": 225000, "FY2024": 225000, "FY2023": 225000, "FY2022": 225000, "FY2021": 225000, "FY2020": 175000, "FY2019": 175000}),
-        ("DATA", "Investment revaluation reserve", {"FY2025": -717, "FY2024": -2390, "FY2023": -5100, "FY2022": -2896, "FY2021": -74, "FY2020": -779, "FY2019": 24}),
-        ("DATA", "Retained earnings", {"FY2025": 53177, "FY2024": 49652, "FY2023": 40252, "FY2022": 27502, "FY2021": 18891, "FY2020": 11468, "FY2019": 8113}),
-        ("TOTAL", "Total equity", {"FY2025": 277460, "FY2024": 272262, "FY2023": 260152, "FY2022": 249606, "FY2021": 243817, "FY2020": 185689, "FY2019": 183137}),
-        ("TOTAL", "Total liabilities and equity", {"FY2025": 1960169, "FY2024": 1842936, "FY2023": 1976962, "FY2022": 1776005, "FY2021": 1755410, "FY2020": 1757299, "FY2019": 1595279}),
+        ("DATA", "Share capital", {"FY2026": 225000, "FY2025": 225000, "FY2024": 225000, "FY2023": 225000, "FY2022": 225000, "FY2021": 225000, "FY2020": 175000, "FY2019": 175000}),
+        ("DATA", "Investment revaluation reserve", {"FY2026": -2280, "FY2025": -717, "FY2024": -2390, "FY2023": -5100, "FY2022": -2896, "FY2021": -74, "FY2020": -779, "FY2019": 24}),
+        ("DATA", "Retained earnings", {"FY2026": 56255, "FY2025": 53177, "FY2024": 49652, "FY2023": 40252, "FY2022": 27502, "FY2021": 18891, "FY2020": 11468, "FY2019": 8113}),
+        ("TOTAL", "Total equity", {"FY2026": 278975, "FY2025": 277460, "FY2024": 272262, "FY2023": 260152, "FY2022": 249606, "FY2021": 243817, "FY2020": 185689, "FY2019": 183137}),
+        ("TOTAL", "Total liabilities and equity", {"FY2026": 2079942, "FY2025": 1960169, "FY2024": 1842936, "FY2023": 1976962, "FY2022": 1776005, "FY2021": 1755410, "FY2020": 1757299, "FY2019": 1595279}),
     ],
     sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=64,
@@ -264,31 +294,31 @@ bw.add_income_statement_sheet(
     subtitle="Entity basis, £'000. See source note at bottom.",
     rows=[
         ("SECTION", "Income", {}),
-        ("DATA", "Interest receivable and similar income", {"FY2025": 101825, "FY2024": 98608, "FY2023": 71035, "FY2022": 43575, "FY2021": 40339, "FY2020": 46232, "FY2019": 51556}),
-        ("DATA", "Interest payable and similar charges", {"FY2025": -56644, "FY2024": -47190, "FY2023": -23899, "FY2022": -8914, "FY2021": -16735, "FY2020": -20114, "FY2019": -26214}),
-        ("TOTAL", "Net interest income", {"FY2025": 45181, "FY2024": 51418, "FY2023": 47136, "FY2022": 34661, "FY2021": 23604, "FY2020": 26118, "FY2019": 25342}),
-        ("DATA", "Fees and commissions income", {"FY2025": 1772, "FY2024": 1486, "FY2023": 1543, "FY2022": 912, "FY2021": 1303, "FY2020": 2258, "FY2019": 1992}),
-        ("DATA", "Net gains from Forex and derivative financial instruments", {"FY2025": 1615, "FY2024": 1607, "FY2023": 1652, "FY2022": 1484}),
+        ("DATA", "Interest receivable and similar income", {"FY2026": 105641, "FY2025": 101825, "FY2024": 98608, "FY2023": 71035, "FY2022": 43575, "FY2021": 40339, "FY2020": 46232, "FY2019": 51556}),
+        ("DATA", "Interest payable and similar charges", {"FY2026": -59967, "FY2025": -56644, "FY2024": -47190, "FY2023": -23899, "FY2022": -8914, "FY2021": -16735, "FY2020": -20114, "FY2019": -26214}),
+        ("TOTAL", "Net interest income", {"FY2026": 45674, "FY2025": 45181, "FY2024": 51418, "FY2023": 47136, "FY2022": 34661, "FY2021": 23604, "FY2020": 26118, "FY2019": 25342}),
+        ("DATA", "Fees and commissions income", {"FY2026": 1815, "FY2025": 1772, "FY2024": 1486, "FY2023": 1543, "FY2022": 912, "FY2021": 1303, "FY2020": 2258, "FY2019": 1992}),
+        ("DATA", "Net gains from Forex and derivative financial instruments", {"FY2026": 1258, "FY2025": 1615, "FY2024": 1607, "FY2023": 1652, "FY2022": 1484}),
         ("DATA", "Net income/(expense) on foreign exchange (FY2019-FY2021 only, see note)", {"FY2021": 991, "FY2020": -218, "FY2019": 60}),
         ("DATA", "Net gain/(loss) on realised financial instruments (FY2019-FY2021 only, see note)", {"FY2021": 537, "FY2020": 687, "FY2019": -192}),
-        ("DATA", "Gain/(Loss) on sale of investments", {"FY2025": 10, "FY2024": 51, "FY2023": -1314, "FY2022": 536}),
-        ("DATA", "Other operating income", {"FY2025": 7, "FY2024": 37, "FY2023": 28, "FY2022": 30, "FY2021": 195, "FY2020": 20, "FY2019": 7}),
-        ("TOTAL", "Operating income", {"FY2025": 48585, "FY2024": 54599, "FY2023": 49045, "FY2022": 37623, "FY2021": 26630, "FY2020": 28865, "FY2019": 27209}),
+        ("DATA", "Gain/(Loss) on sale of investments", {"FY2026": 715, "FY2025": 10, "FY2024": 51, "FY2023": -1314, "FY2022": 536}),
+        ("DATA", "Other operating income", {"FY2026": 4, "FY2025": 7, "FY2024": 37, "FY2023": 28, "FY2022": 30, "FY2021": 195, "FY2020": 20, "FY2019": 7}),
+        ("TOTAL", "Operating income", {"FY2026": 49466, "FY2025": 48585, "FY2024": 54599, "FY2023": 49045, "FY2022": 37623, "FY2021": 26630, "FY2020": 28865, "FY2019": 27209}),
         ("SECTION", "Expenses", {}),
-        ("DATA", "Administrative expenses", {"FY2025": -23568, "FY2024": -21916, "FY2023": -21791, "FY2022": -17610, "FY2021": -15515, "FY2020": -15704, "FY2019": -14752}),
-        ("DATA", "Depreciation", {"FY2025": -856, "FY2024": -743, "FY2023": -731, "FY2022": -711, "FY2021": -695, "FY2020": -818, "FY2019": -832}),
-        ("TOTAL", "Total operating expenses", {"FY2025": -24424, "FY2024": -22659, "FY2023": -22522, "FY2022": -18321, "FY2021": -16210, "FY2020": -16522, "FY2019": -15584}),
-        ("TOTAL", "Operating profit before profit/(loss) on sale of loans, impairment and taxes", {"FY2025": 24161, "FY2024": 31940, "FY2023": 26523, "FY2022": 19302, "FY2021": 10420, "FY2020": 12343, "FY2019": 11625}),
-        ("DATA", "Profit/(loss) on sale of loans", {"FY2025": -158, "FY2024": -194, "FY2023": 9, "FY2022": -44, "FY2021": 129, "FY2020": -4528, "FY2019": 0}),
-        ("DATA", "Impairment reversal/(charge) on loans", {"FY2025": 651, "FY2024": 106, "FY2023": -219, "FY2022": -1546, "FY2021": -1352, "FY2020": -3900, "FY2019": -1852}),
-        ("TOTAL", "Profit on ordinary activities before tax", {"FY2025": 24654, "FY2024": 31852, "FY2023": 26313, "FY2022": 17712, "FY2021": 9197, "FY2020": 3915, "FY2019": 9773}),
-        ("DATA", "Tax on profit of ordinary activities", {"FY2025": -6129, "FY2024": -8052, "FY2023": -5125, "FY2022": -3476, "FY2021": -1774, "FY2020": -560, "FY2019": -1989}),
-        ("TOTAL", "Profit on ordinary activities after tax", {"FY2025": 18525, "FY2024": 23800, "FY2023": 21188, "FY2022": 14236, "FY2021": 7423, "FY2020": 3355, "FY2019": 7784}),
+        ("DATA", "Administrative expenses", {"FY2026": -27420, "FY2025": -23568, "FY2024": -21916, "FY2023": -21791, "FY2022": -17610, "FY2021": -15515, "FY2020": -15704, "FY2019": -14752}),
+        ("DATA", "Depreciation", {"FY2026": -796, "FY2025": -856, "FY2024": -743, "FY2023": -731, "FY2022": -711, "FY2021": -695, "FY2020": -818, "FY2019": -832}),
+        ("TOTAL", "Total operating expenses", {"FY2026": -28216, "FY2025": -24424, "FY2024": -22659, "FY2023": -22522, "FY2022": -18321, "FY2021": -16210, "FY2020": -16522, "FY2019": -15584}),
+        ("TOTAL", "Operating profit before profit/(loss) on sale of loans, impairment and taxes", {"FY2026": 21250, "FY2025": 24161, "FY2024": 31940, "FY2023": 26523, "FY2022": 19302, "FY2021": 10420, "FY2020": 12343, "FY2019": 11625}),
+        ("DATA", "Profit/(loss) on sale of loans", {"FY2026": 0, "FY2025": -158, "FY2024": -194, "FY2023": 9, "FY2022": -44, "FY2021": 129, "FY2020": -4528, "FY2019": 0}),
+        ("DATA", "Impairment reversal/(charge) on loans", {"FY2026": 250, "FY2025": 651, "FY2024": 106, "FY2023": -219, "FY2022": -1546, "FY2021": -1352, "FY2020": -3900, "FY2019": -1852}),
+        ("TOTAL", "Profit on ordinary activities before tax", {"FY2026": 21500, "FY2025": 24654, "FY2024": 31852, "FY2023": 26313, "FY2022": 17712, "FY2021": 9197, "FY2020": 3915, "FY2019": 9773}),
+        ("DATA", "Tax on profit of ordinary activities", {"FY2026": -5422, "FY2025": -6129, "FY2024": -8052, "FY2023": -5125, "FY2022": -3476, "FY2021": -1774, "FY2020": -560, "FY2019": -1989}),
+        ("TOTAL", "Profit on ordinary activities after tax", {"FY2026": 16078, "FY2025": 18525, "FY2024": 23800, "FY2023": 21188, "FY2022": 14236, "FY2021": 7423, "FY2020": 3355, "FY2019": 7784}),
         ("SECTION", "Other comprehensive income", {}),
-        ("DATA", "Revaluation of available-for-sale investment/debt securities", {"FY2025": 2230, "FY2024": 3613, "FY2023": -2939, "FY2022": -3770, "FY2021": 870, "FY2020": -992, "FY2019": 29}),
-        ("DATA", "Deferred tax adjustment on available-for-sale investment securities", {"FY2025": -557, "FY2024": -903, "FY2023": 735, "FY2022": 948, "FY2021": -165, "FY2020": 189, "FY2019": -5}),
-        ("TOTAL", "Total other comprehensive income", {"FY2025": 1673, "FY2024": 2710, "FY2023": -2204, "FY2022": -2822, "FY2021": 705, "FY2020": -803, "FY2019": 24}),
-        ("TOTAL", "Total comprehensive income for the year", {"FY2025": 20198, "FY2024": 26510, "FY2023": 18984, "FY2022": 11414, "FY2021": 8128, "FY2020": 2552, "FY2019": 7808}),
+        ("DATA", "Revaluation of available-for-sale investment/debt securities", {"FY2026": -2083, "FY2025": 2230, "FY2024": 3613, "FY2023": -2939, "FY2022": -3770, "FY2021": 870, "FY2020": -992, "FY2019": 29}),
+        ("DATA", "Deferred tax adjustment on available-for-sale investment securities", {"FY2026": 520, "FY2025": -557, "FY2024": -903, "FY2023": 735, "FY2022": 948, "FY2021": -165, "FY2020": 189, "FY2019": -5}),
+        ("TOTAL", "Total other comprehensive income", {"FY2026": -1563, "FY2025": 1673, "FY2024": 2710, "FY2023": -2204, "FY2022": -2822, "FY2021": 705, "FY2020": -803, "FY2019": 24}),
+        ("TOTAL", "Total comprehensive income for the year", {"FY2026": 14515, "FY2025": 20198, "FY2024": 26510, "FY2023": 18984, "FY2022": 11414, "FY2021": 8128, "FY2020": 2552, "FY2019": 7808}),
     ],
     sources_text=STATEMENTS_SOURCES,
     first_col_width=68,
@@ -332,6 +362,11 @@ bw.add_equity_changes_sheet(
         ("DATA", "Movement in valuation of available-for-sale debt securities", (0, 0, 2230, 2230, 2230)),
         ("DATA", "Deferred tax", (0, 0, -557, -557, -557)),
         ("TOTAL", "As at 31 March 2025", (225000, 53177, -717, 52460, 277460)),
+        ("DATA", "Interim dividends paid", (0, -13000, 0, -13000, -13000)),
+        ("DATA", "Profit on ordinary activities after tax", (0, 16078, 0, 16078, 16078)),
+        ("DATA", "Movement in valuation of available-for-sale debt securities", (0, 0, -2083, -2083, -2083)),
+        ("DATA", "Deferred tax", (0, 0, 520, 520, 520)),
+        ("TOTAL", "As at 31 March 2026", (225000, 56255, -2280, 53975, 278975)),
     ],
     sources_text=EQUITY_SOURCES,
     source_height=340,
@@ -382,13 +417,16 @@ def metric(name, unit, rows, note=None):
     bw.add_metric_sheet(name, unit, rows, sources(), note=note, first_col_width=52, source_height=150)
 
 
-metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", {"FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 243.50, "FY2020": 185.5, "FY2019": 183.1})])
-metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 ratio", {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"})])
-metric("Tier 1 Capital", "£m", [("Tier 1 capital", {"FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 243.50, "FY2020": 185.5, "FY2019": 183.1})], "Tier 1 equals CET1 in every year shown; no AT1 capital is reported.")
-metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"})])
-metric("Total Capital", "£m", [("Total capital", {"FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 247.76, "FY2020": 238.7, "FY2019": 235.0})], "Total capital exceeds CET1/Tier 1 in FY2019-FY2021 because the source reports Tier 2 capital (subordinated debt, £53.2m FY2020/£51.9m FY2019, most of which was converted to CET1 share capital during FY2021, leaving a small residual £4.26m of Tier 2 in FY2021 - see the Statement of Changes in Equity's 'Conversion of subordinated debt to equity capital' row); from FY2022 onward, with no Tier 2 remaining, total capital equals CET1/Tier 1.")
-metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "18.25%", "FY2020": "17.4%", "FY2019": "17.5%"})])
-metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", {"FY2025": 1320.25, "FY2024": 1213.02, "FY2023": 1227.04, "FY2022": 1276.68, "FY2021": 1357.75, "FY2020": 1375.0, "FY2019": 1339.4})])
+metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", {"FY2026": 278.47, "FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 243.50, "FY2020": 185.5, "FY2019": 183.1})], "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
+metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 ratio", {"FY2026": "19.6%", "FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"})], "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
+metric("Tier 1 Capital", "£m", [("Tier 1 capital", {"FY2026": 278.47, "FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 243.50, "FY2020": 185.5, "FY2019": 183.1})], "Tier 1 equals CET1 in every year shown; no AT1 capital is reported. " + "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
+metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2026": "19.6%", "FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"})], "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
+metric("Total Capital", "£m", [("Total capital", {"FY2026": 278.47, "FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 247.76, "FY2020": 238.7, "FY2019": 235.0})], "Total capital exceeds CET1/Tier 1 in FY2019-FY2021 because the source reports Tier 2 capital (subordinated debt, £53.2m FY2020/£51.9m FY2019, most of which was converted to CET1 share capital during FY2021, leaving a small residual £4.26m of Tier 2 in FY2021 - see the Statement of Changes in Equity's 'Conversion of subordinated debt to equity capital' row); from FY2022 onward, with no Tier 2 remaining, total capital equals CET1/Tier 1. "
+    "FY2026's Total capital is set equal to Tier 1 on the same footing: the FY2026 Annual Report "
+    "states a common Tier 1 capital ratio of 19.6% and a total capital adequacy ratio of 19.6%, i.e. "
+    "no Tier 2, and its Regulatory Capital resources table (p.61) shows Tier 1 capital only. " + "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
+metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2026": "19.6%", "FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "18.25%", "FY2020": "17.4%", "FY2019": "17.5%"})], "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
+metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", {"FY2025": 1320.25, "FY2024": 1213.02, "FY2023": 1227.04, "FY2022": 1276.68, "FY2021": 1357.75, "FY2020": 1375.0, "FY2019": 1339.4})], "FY2026 is blank: SBI UK's FY2026 Pillar 3 disclosure - the only source that publishes a total risk-weighted exposure amount - is not yet out, and the FY2026 Annual Report discloses capital ratios and capital amounts but no RWA figure. It has deliberately NOT been back-solved from Tier 1 capital divided by the 19.6% ratio: that ratio is rounded to one decimal place, so the implied RWA would be a derived estimate spanning roughly GBP 1,417-1,424m, not a disclosed figure. See the source note.")
 
 bw.add_rwa_breakdown_sheet(
     title="State Bank of India (UK) Limited — RWA Breakdown",
@@ -411,7 +449,7 @@ bw.add_rwa_breakdown_sheet(
 
 metric("Leverage Ratio", "£m / %", [
     ("Total exposure measure excluding claims on central banks", {"FY2025": 1919.23, "FY2024": 1774.80, "FY2023": 1864.49, "FY2022": 1749.04}),
-    ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "14.43%", "FY2024": "15.32%", "FY2023": "13.93%", "FY2022": "14.25%"}),
+    ("Leverage ratio excluding claims on central banks (%)", {"FY2026": "13.4%", "FY2025": "14.43%", "FY2024": "15.32%", "FY2023": "13.93%", "FY2022": "14.25%"}),
     ("Leverage ratio (financial-ratios presentation; basis not specified)", {"FY2021": "13.5%"}),
     ("Total leverage ratio exposure (CRD IV basis, FY2019-FY2020 only, see note)", {"FY2020": 1810.3, "FY2019": 1617.7}),
     ("Leverage ratio (CRD IV basis, FY2019-FY2020 only, see note)", {"FY2020": "10.3%", "FY2019": "11.3%"}),
@@ -421,47 +459,61 @@ metric("LCR", "£m / %", [
     ("Cash outflows - total weighted value", {"FY2025": 80.05, "FY2024": 105.33, "FY2023": 135.01, "FY2022": 124.25}),
     ("Cash inflows - total weighted value", {"FY2025": 48.09, "FY2024": 49.57, "FY2023": 43.28, "FY2022": 37.66}),
     ("Total net cash outflows (adjusted value)", {"FY2025": 36.64, "FY2024": 55.75, "FY2023": 91.72, "FY2022": 86.59}),
-    ("Liquidity coverage ratio (%)", {"FY2025": "572.38%", "FY2024": "331.15%", "FY2023": "205.87%", "FY2022": "164.00%", "FY2021": "156%", "FY2020": "179%", "FY2019": "292.9%"}),
-], "FY2021/FY2020/FY2019's Pillar 3 reports disclose only the headline LCR ratio in their financial-ratios/Key Metrics presentation; no HQLA/outflow/inflow component amounts were found for these three years, so they remain blank.")
+    ("Liquidity coverage ratio (%) - Pillar 3 KM1, 12-month average of weighted values", {"FY2025": "572.38%", "FY2024": "331.15%", "FY2023": "205.87%", "FY2022": "164.00%", "FY2021": "156%", "FY2020": "179%", "FY2019": "292.9%"}),
+    ("Liquidity coverage ratio (%) - Annual Report financial-ratios presentation (year-end basis)", {"FY2026": "181%", "FY2025": "319%"}),
+], "FY2021/FY2020/FY2019's Pillar 3 reports disclose only the headline LCR ratio in their financial-ratios/Key Metrics presentation; no HQLA/outflow/inflow component amounts were found for these three years, so they remain blank. "
+   "FY2026 LCR IS ON A DIFFERENT BASIS AND IS SHOWN ON ITS OWN ROW: SBI UK's FY2026 Pillar 3 disclosure is not yet published, so no FY2026 figure exists on the KM1 12-month-average basis used by the row above. "
+   "The FY2026 Annual Report's financial-ratios summary (p.7) does print an LCR of 181% (2025: 319%), but that is a year-end point-in-time figure, not the KM1 average: for FY2025 the same Annual Report basis gives 319% against the Pillar 3 KM1's 572.38%. "
+   "The two are therefore kept on separate rows rather than continued as one series, and the FY2025 Annual-Report comparative is shown alongside FY2026 so the size of the basis difference is visible. "
+   "For the same reason the Overview sheet's LCR trend row is left blank for FY2026 rather than mixing the two bases in one chart.")
 metric("NSFR", "£m / %", [
     ("Total available stable funding", {"FY2025": 1782.87, "FY2024": 1687.00, "FY2023": 1765.00, "FY2022": 1571.94}),
     ("Total required stable funding", {"FY2025": 1311.47, "FY2024": 1200.00, "FY2023": 1231.00, "FY2022": 1209.80}),
-    ("NSFR ratio (%)", {"FY2025": "135.94%", "FY2024": "140.48%", "FY2023": "143.36%", "FY2022": "129.93%", "FY2021": "124%", "FY2020": "120%", "FY2019": "123%"}),
+    ("NSFR ratio (%)", {"FY2026": "130%", "FY2025": "135.94%", "FY2024": "140.48%", "FY2023": "143.36%", "FY2022": "129.93%", "FY2021": "124%", "FY2020": "120%", "FY2019": "123%"}),
 ], "FY2021/FY2020/FY2019's Pillar 3 reports disclose only the headline NSFR ratio; no ASF/RSF component amounts were found for these three years, so they remain blank.")
 metric("MREL Ratio", "£m / %", [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], "No numeric MREL ratio was disclosed in the five SBI UK Pillar 3 documents reviewed; it is not inferred from capital or liquidity metrics.")
 
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 1960169, "FY2024": 1842936, "FY2023": 1976962, "FY2022": 1776005, "FY2021": 1755410, "FY2020": 1757299, "FY2019": 1595279}),
-        ("Loans and advances to customers", {"FY2025": 1529812, "FY2024": 1415920, "FY2023": 1403369, "FY2022": 1201300, "FY2021": 1140238, "FY2020": 1101038, "FY2019": 1044412}),
-        ("Deposit from customers", {"FY2025": 1655992, "FY2024": 1530535, "FY2023": 1568185, "FY2022": 1339203, "FY2021": 1360344, "FY2020": 1418658, "FY2019": 1310363}),
-        ("Total equity", {"FY2025": 277460, "FY2024": 272262, "FY2023": 260152, "FY2022": 249606, "FY2021": 243817, "FY2020": 185689, "FY2019": 183137}),
+        ("Total assets", {"FY2026": 2079942, "FY2025": 1960169, "FY2024": 1842936, "FY2023": 1976962, "FY2022": 1776005, "FY2021": 1755410, "FY2020": 1757299, "FY2019": 1595279}),
+        ("Loans and advances to customers", {"FY2026": 1655683, "FY2025": 1529812, "FY2024": 1415920, "FY2023": 1403369, "FY2022": 1201300, "FY2021": 1140238, "FY2020": 1101038, "FY2019": 1044412}),
+        ("Deposit from customers", {"FY2026": 1784374, "FY2025": 1655992, "FY2024": 1530535, "FY2023": 1568185, "FY2022": 1339203, "FY2021": 1360344, "FY2020": 1418658, "FY2019": 1310363}),
+        ("Total equity", {"FY2026": 278975, "FY2025": 277460, "FY2024": 272262, "FY2023": 260152, "FY2022": 249606, "FY2021": 243817, "FY2020": 185689, "FY2019": 183137}),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
-        ("Operating income", {"FY2025": 48585, "FY2024": 54599, "FY2023": 49045, "FY2022": 37623, "FY2021": 26630, "FY2020": 28865, "FY2019": 27209}),
-        ("Total operating expenses", {"FY2025": -24424, "FY2024": -22659, "FY2023": -22522, "FY2022": -18321, "FY2021": -16210, "FY2020": -16522, "FY2019": -15584}),
-        ("Profit on ordinary activities after tax", {"FY2025": 18525, "FY2024": 23800, "FY2023": 21188, "FY2022": 14236, "FY2021": 7423, "FY2020": 3355, "FY2019": 7784}),
+        ("Operating income", {"FY2026": 49466, "FY2025": 48585, "FY2024": 54599, "FY2023": 49045, "FY2022": 37623, "FY2021": 26630, "FY2020": 28865, "FY2019": 27209}),
+        ("Total operating expenses", {"FY2026": -28216, "FY2025": -24424, "FY2024": -22659, "FY2023": -22522, "FY2022": -18321, "FY2021": -16210, "FY2020": -16522, "FY2019": -15584}),
+        ("Profit on ordinary activities after tax", {"FY2026": 16078, "FY2025": 18525, "FY2024": 23800, "FY2023": 21188, "FY2022": 14236, "FY2021": 7423, "FY2020": 3355, "FY2019": 7784}),
     ],
     income_statement_unit="£'000",
     equity_changes_totals=[
-        ("Opening equity", {"FY2025": 272262, "FY2024": 260152, "FY2023": 249606, "FY2022": 243817, "FY2021": 185689, "FY2020": 183137, "FY2019": 175329}),
-        ("Total comprehensive income for the year", {"FY2025": 20198, "FY2024": 26510, "FY2023": 18984, "FY2022": 11414, "FY2021": 8128, "FY2020": 2552, "FY2019": 7808}),
-        ("Other equity movements, net", {"FY2025": -15000, "FY2024": -14400, "FY2023": -8438, "FY2022": -5625, "FY2021": 50000, "FY2020": 0, "FY2019": 0}),
-        ("Closing equity", {"FY2025": 277460, "FY2024": 272262, "FY2023": 260152, "FY2022": 249606, "FY2021": 243817, "FY2020": 185689, "FY2019": 183137}),
+        ("Opening equity", {"FY2026": 277460, "FY2025": 272262, "FY2024": 260152, "FY2023": 249606, "FY2022": 243817, "FY2021": 185689, "FY2020": 183137, "FY2019": 175329}),
+        ("Total comprehensive income for the year", {"FY2026": 14515, "FY2025": 20198, "FY2024": 26510, "FY2023": 18984, "FY2022": 11414, "FY2021": 8128, "FY2020": 2552, "FY2019": 7808}),
+        ("Other equity movements, net", {"FY2026": -13000, "FY2025": -15000, "FY2024": -14400, "FY2023": -8438, "FY2022": -5625, "FY2021": 50000, "FY2020": 0, "FY2019": 0}),
+        ("Closing equity", {"FY2026": 278975, "FY2025": 277460, "FY2024": 272262, "FY2023": 260152, "FY2022": 249606, "FY2021": 243817, "FY2020": 185689, "FY2019": 183137}),
     ],
     equity_changes_unit="£'000",
     cash_flow_totals=[],
     cash_flow_unit=None,
     ratios=[
-        ("CET1 Ratio", {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"}),
-        ("Tier 1 Ratio", {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"}),
-        ("Total Capital Ratio", {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "18.25%", "FY2020": "17.4%", "FY2019": "17.5%"}),
-        ("Leverage Ratio (excl. central bank claims)", {"FY2025": "14.43%", "FY2024": "15.32%", "FY2023": "13.93%", "FY2022": "14.25%"}),
+        ("CET1 Ratio", {"FY2026": "19.6%", "FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"}),
+        ("Tier 1 Ratio", {"FY2026": "19.6%", "FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%", "FY2020": "13.5%", "FY2019": "13.7%"}),
+        ("Total Capital Ratio", {"FY2026": "19.6%", "FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "18.25%", "FY2020": "17.4%", "FY2019": "17.5%"}),
+        ("Leverage Ratio (excl. central bank claims)", {"FY2026": "13.4%", "FY2025": "14.43%", "FY2024": "15.32%", "FY2023": "13.93%", "FY2022": "14.25%"}),
         ("LCR", {"FY2025": "572.38%", "FY2024": "331.15%", "FY2023": "205.87%", "FY2022": "164.00%", "FY2021": "156%", "FY2020": "179%", "FY2019": "292.9%"}),
-        ("NSFR", {"FY2025": "135.94%", "FY2024": "140.48%", "FY2023": "143.36%", "FY2022": "129.93%", "FY2021": "124%", "FY2020": "120%", "FY2019": "123%"}),
+        ("NSFR", {"FY2026": "130%", "FY2025": "135.94%", "FY2024": "140.48%", "FY2023": "143.36%", "FY2022": "129.93%", "FY2021": "124%", "FY2020": "120%", "FY2019": "123%"}),
     ],
-    note="PILLAR-3-ONLY WORKBOOK: SBI UK takes the FRS 102 cash-flow-statement exemption, so the cash-flow sheet documents the exemption and the Overview contains the Pillar 3 trend chart only. "
+    note="FY2026 ADDED 2026-09-15 from the Companies House filing of the year-ended-31-March-2026 accounts "
+         "(filed 9 September 2026). SBI UK's FY2026 Pillar 3 disclosure is NOT yet published, so FY2026 is "
+         "blank on Asset Quality, RWA Breakdown and Total RWAs, and the FY2026 capital, leverage and NSFR "
+         "figures shown come from the Annual Report's own Regulatory Capital resources table and "
+         "financial-ratios summary (a basis the Annual Report's FY2025 comparatives confirm matches the "
+         "Pillar 3 KM1, to 1 decimal place). The LCR trend row above is deliberately blank for FY2026: the "
+         "Annual Report's LCR is a year-end figure (FY2026 181%) while the Pillar 3 series is a 12-month "
+         "average (FY2025 572.38% against the Annual Report's own 319% for the same year), so the two are "
+         "not continued as one chart series - see the LCR sheet, which shows both on separate rows. "
+         "PILLAR-3-ONLY WORKBOOK: SBI UK takes the FRS 102 cash-flow-statement exemption, so the cash-flow sheet documents the exemption and the Overview contains the Pillar 3 trend chart only. "
          "HISTORICAL DEPTH (HD-024): extended back to FY2019, SBI UK's first full 12-month trading year and "
          "first Pillar 3 disclosure - its true confirmed floor. FY2018 (an 18-month pre-operational first "
          "accounting period from incorporation) is self-skipped; see the Balance Sheet/P&L source note.",

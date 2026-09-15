@@ -127,8 +127,41 @@ def build_feature_matrix(rows, ratio_sheets=None):
             # Prefer any row where a disclosed value is written as "12.3%".
             return any("%" in (v_raw or "") for _, _, _, v_raw in series)
 
-        percent_rows = [ls for ls in label_series_list if is_percent_row(ls[1])]
-        candidates = percent_rows if percent_rows else label_series_list
+        # A row can be the wrong CONCEPT even when it's the only one on the
+        # sheet: a regulatory requirement/target rather than the bank's own
+        # actual/held ratio (e.g. Unity Trust Bank's MREL Ratio sheet only
+        # ever numerically discloses "MREL requirement (= Total Capital
+        # Requirement, %)" - its regulatory minimum, not an actual MREL
+        # resources figure). Drop these before either the percent-row or
+        # fallback selection below, so a bank with ONLY a requirement row
+        # gets neither - not the requirement mislabeled as its real ratio.
+        _REQUIREMENT_RE = re.compile(r"requirement|\btarget\b|\bminimum\b", re.I)
+        eligible = [ls for ls in label_series_list if not _REQUIREMENT_RE.search(ls[0])]
+        percent_rows = [ls for ls in eligible if is_percent_row(ls[1])]
+        if percent_rows:
+            candidates = percent_rows
+        else:
+            # Found 2026-09-08 (bug-sweep fork): falling back to every
+            # remaining row here let an absolute-currency sibling row stand
+            # in for a genuinely undisclosed ratio - e.g. ICBC Standard
+            # Bank's NSFR row is blank every year, so this used to pick
+            # "Total available stable funding ($m)" (value ~9393) and
+            # cluster it alongside every other bank's real ~100-300% NSFR
+            # values. Only exclude rows whose own label carries a currency
+            # marker (the actual observed failure shape) - a genuinely
+            # unlabeled/ambiguous row with no such marker still falls back
+            # as before, since there's no positive signal it's the wrong
+            # concept.
+            _CURRENCY_LABEL_RE = re.compile(r"[$£€]|\bgbp\b|\busd\b|\beur\b|\bcad\b", re.I)
+            candidates = [ls for ls in eligible if not _CURRENCY_LABEL_RE.search(ls[0])]
+        if not candidates:
+            # No genuine ratio row and nothing safe to fall back to - this
+            # dimension is undisclosed for this bank-sheet. Skip it and let
+            # the existing missing-data handling (median-impute or
+            # "insufficient data") apply, per this module's own documented
+            # policy of treating non-disclosure as missing, never as a
+            # substituted absolute figure.
+            continue
         candidates.sort(key=lambda ls: -numeric_count(ls[1]))
         _, best_series = candidates[0]
         numeric_points = [(y, float(v)) for y, v, is_num, _ in best_series if is_num == "1"]

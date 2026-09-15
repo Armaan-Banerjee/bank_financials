@@ -108,6 +108,8 @@ PRINT_HEAD = """<!doctype html>
 <script id="efficiency-data" type="application/json">__EFFICIENCY_JSON__</script>
 <script id="bubbles-data" type="application/json">__BUBBLES_JSON__</script>
 <script id="clusters-data" type="application/json">__CLUSTERS_JSON__</script>
+<script src="chartjs-chart-sankey.min.js"></script>
+<script src="chartjs-chart-boxplot.min.js"></script>
 <script src="deliverable_shared.js"></script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
@@ -220,12 +222,11 @@ def assemble_print_payload(db_path):
     efficiency = bd.curate_comparison_efficiency(data)
     bubbles = bd.curate_comparison_bubbles(data, parent_groups)
     clusters = bd.curate_comparison_clusters()
-    return data, parent_groups, trends, outliers, efficiency, bubbles
+    return data, parent_groups, trends, outliers, efficiency, bubbles, clusters
 
 
 def write_print_html(work_dir, db_path):
-    data, parent_groups, trends, outliers, efficiency, bubbles = assemble_print_payload(db_path)
-    clusters = bd.curate_comparison_clusters()
+    data, parent_groups, trends, outliers, efficiency, bubbles, clusters = assemble_print_payload(db_path)
 
     group_meta = parent_groups["group_meta"]
     group_summaries_html = "".join(
@@ -252,6 +253,8 @@ def write_print_html(work_dir, db_path):
     shutil.copy(ROOT / "scripts" / "insights" / "deliverable_shared.css", work_dir / "deliverable_shared.css")
     shutil.copy(ROOT / "scripts" / "insights" / "deliverable_shared.js", work_dir / "deliverable_shared.js")
     shutil.copy(ROOT / "vendor" / "chartjs" / "chart.umd.min.js", work_dir / "chart.umd.min.js")
+    shutil.copy(ROOT / "vendor" / "chartjs-chart-sankey" / "chartjs-chart-sankey.min.js", work_dir / "chartjs-chart-sankey.min.js")
+    shutil.copy(ROOT / "vendor" / "chartjs-chart-boxplot" / "chartjs-chart-boxplot.min.js", work_dir / "chartjs-chart-boxplot.min.js")
 
     return work_dir / "print_report.html", len(data)
 

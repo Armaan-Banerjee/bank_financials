@@ -30,6 +30,19 @@ AR2019_URL = (
     "filing-history/MzI2MzQzNDY1MmFkaXF6a2N4/document?format=pdf&download=0"
 )
 
+# Standalone Pillar 3 disclosures. The Bank DOES publish these - a "Basel
+# Disclosures Archive" page on its own live site carries every edition from 2010
+# to 2023. Earlier passes on this bank recorded "no standalone Pillar 3 document
+# was found"; that was wrong, and the archive page is linked from the site's own
+# top-level navigation. Newest edition is 2023: FY2024 and FY2025 have not been
+# published (checked 2026-09-15, see P3_ARCHIVE_NOTE).
+P3_ARCHIVE_URL = "https://www.saderat-plc.com/Basel_Disclosures.htm"
+P3_2023_URL = "https://www.saderat-plc.com/Reports/Pillar%203%20Disclosures%202023.pdf"
+P3_2022_URL = "https://www.saderat-plc.com/Reports/Pillar%203%20%20%20disclosures%202022.pdf"
+P3_2021_URL = "https://www.saderat-plc.com/Reports/Pillar%203%20disclosures%202021.pdf"
+P3_2020_URL = "https://www.saderat-plc.com/Reports/Pillar%203%20%20%20disclosures%202020%20ver%207.pdf"
+P3_2019_URL = "https://www.saderat-plc.com/Reports/Basel%20III%20Pillar%203%20Disclosures%202019.pdf"
+
 # ---------------------------------------------------------------
 # FX conversion: rates in market convention "£1 = €X" (Bank of England GBP/EUR
 # spot reference rate). Reuses the FY2020-FY2024 rates already established for
@@ -96,18 +109,22 @@ ENTITY_NOTE = (
     "this project, which IS in insolvency administration), but it materially affects FY2025's figures - operating "
     "cash flow swings to a large outflow (see Cash Flow Statement) and interest income fell sharply. Flagged "
     "prominently here since it's a genuinely new, still-unfolding development, not a historical footnote.\n\n"
-    "CAPITAL RATIO CAVEAT: the Bank's own disclosures give a 'Capital Cover' percentage every year (used below as "
-    "the CET1/Tier 1/Total Capital Ratio series, since capital = CET1 = Tier 1 = Total Capital per the Bank's own "
-    "description - no AT1/Tier 2 instruments) - but this does NOT appear to be a conventional CET1/RWA-style ratio "
-    "as disclosed by every other bank in this project. The FY2025 Annual Report separately states 'the CET1 "
-    "capital ratio to the total risk exposure is 88.70%' - a very different figure from the 331% 'Capital Cover' "
-    "value for the same year, implying 'Capital Cover' uses a different denominator (plausibly capital versus the "
-    "Bank's Total Capital Requirement including a Pillar 2A add-on, not capital versus RWA). The 88.70% figure is "
-    "only disclosed for FY2025 (no equivalent figure found for FY2021-FY2024), so 'Capital Cover' was used "
-    "throughout for a consistent 5-year series - readers should treat this bank's ratio row as NOT directly "
-    "comparable to other banks' CET1/Tier1/Total Capital Ratio sheets in this project. Total RWAs is left 'Not "
-    "publicly disclosed' rather than calculated from either figure, since which one (if either) 'Capital Cover' "
-    "actually divides into isn't confirmed.\n\n"
+    "CAPITAL RATIO CAVEAT (SUBSTANTIALLY RESOLVED 2026-09-15 - this bank DOES publish Pillar 3 disclosures): the "
+    "Bank's own Annual Reports give a 'Capital Cover' percentage every year, and earlier passes used it as the "
+    "CET1/Tier 1/Total Capital Ratio series while flagging that it is not a conventional CET1/RWA ratio. That "
+    "flag was right and the reason is now confirmed: 'Capital Cover' measures capital against the Bank's total "
+    "capital REQUIREMENT (Pillar 1 plus a Pillar 2A add-on), not against the risk exposure amount, which is why "
+    "it reads in the 300s where the CRR ratio reads in the 80s-90s for the same year. The genuine CRR ratios and "
+    "the risk exposure amounts they divide into are now carried for FY2019-FY2023, transcribed from the Bank's "
+    "own standalone Pillar 3 disclosures, which are published on its live website and had simply not been found "
+    "by earlier passes (see the detailed correction note on the Total RWAs and RWA Breakdown sheets). The ratio "
+    "sheets therefore now carry TWO labelled rows - the CRR ratio, comparable with every other bank in this "
+    "project, and the Bank's own Capital Cover metric, retained because it is the only measure available for all "
+    "seven years. FY2024 has neither a Pillar 3 edition nor a disclosed risk exposure amount, so its CRR row is "
+    "blank; FY2025's CRR ratio comes from the Annual Report's own narrative. No RWA is back-solved from a ratio "
+    "in any year. One caveat specific to FY2019: the 2019 edition prints a CET1 ratio (81.0%) different from its "
+    "Tier 1 and total capital ratios (84.4%) despite nil Tier 2, so those sheets' FY2019 cells differ from each "
+    "other - as printed, and explained in full on each ratio sheet's own note.\n\n"
     "LIQUIDITY RATIO CAVEAT: the Bank's LCR disclosure is genuinely inconsistent across filing vintages - each "
     "year's OWN report is used as the primary figure below (project convention), but later reports' comparative "
     "columns for the SAME years show materially different values: FY2022 368% (own report) vs. 328% (per the "
@@ -143,7 +160,10 @@ def p3_sources(page):
         f"FY2025: Full accounts made up to 31 December 2025, p.{page['FY2025']} - {AR2025_URL}\n"
         f"FY2024/FY2023: Full accounts made up to 31 December 2024, p.{page['FY2024']} - {AR2024_URL}\n"
         f"FY2022/FY2021: Full accounts made up to 31 December 2022, p.{page['FY2022']} - {AR2022_URL}\n"
-        f"FY2020/FY2019: own Capital management Note 15, FY2020 p.35 and FY2019 p.35 - {AR2020_URL} / {AR2019_URL}"
+        f"FY2020/FY2019: own Capital management Note 15, FY2020 p.35 and FY2019 p.35 - {AR2020_URL} / {AR2019_URL}\n"
+        f"FY2019-FY2023 CRR capital ratios and risk exposure amounts: each year's own standalone Pillar 3 "
+        f"disclosure, from the Bank's Basel Disclosures Archive - {P3_ARCHIVE_URL} (see the detailed source note "
+        f"on the Total RWAs and RWA Breakdown sheets, including the FY2019 CET1-ratio caveat)"
     )
 
 
@@ -516,6 +536,32 @@ CAPITAL_BASE = {"FY2025": 196228824, "FY2024": 196287187, "FY2023": 194469375, "
 CAPITAL_COVER = {"FY2025": "331%", "FY2024": "349%", "FY2023": "325%", "FY2022": "339%", "FY2021": "313%", "FY2020": "330%", "FY2019": "324%"}
 LCR_ALL_CCY = {"FY2025": "477%", "FY2024": "331%", "FY2023": "334%", "FY2022": "368%", "FY2021": "376%"}
 
+# The genuine CRR ratio (own funds / total risk exposure amount), as printed.
+# FY2021-FY2023 from each year's own Pillar 3 disclosure, section 4.3 "Capital
+# Buffers"; FY2025 from the Annual Report's own narrative. The Bank holds no AT1
+# or Tier 2 ("The Bank does not hold any Tier 2 or Tier 3 Capital"), so CET1 =
+# Tier 1 = Total Capital and one printed ratio serves all three sheets - the
+# FY2021 Pillar 3 states this explicitly by printing all three at 83.57%.
+# FY2024 is blank: no Pillar 3 edition exists for it and its Annual Report gives
+# only the Capital Cover chart.
+# FY2019 and FY2020 added 2026-09-15 from the 2019 and 2020 Pillar 3 editions
+# on the same archive page (the earlier pass read only the 2021-2023 files).
+# FY2020 prints all three ratios at 83.44%, like FY2021-FY2023. FY2019 is the
+# one year where the three DIVERGE - see FY2019_RATIO_NOTE - so the three ratio
+# sheets take three separate dicts rather than one shared CRR_RATIO.
+CRR_RATIO = {"FY2025": "88.70%", "FY2023": "86.62%", "FY2022": "90.31%", "FY2021": "83.57%",
+             "FY2020": "83.44%"}
+CRR_RATIO_CET1 = dict(CRR_RATIO, **{"FY2019": "81.0%"})
+CRR_RATIO_TIER1 = dict(CRR_RATIO, **{"FY2019": "84.4%"})
+CRR_RATIO_TOTAL = dict(CRR_RATIO, **{"FY2019": "84.4%"})
+
+# Total risk exposure amount, €'000 as printed in each year's Pillar 3.
+# Components foot exactly to the total in all five years.
+P3_RWA_CREDIT_EUR = {"FY2023": 214136000, "FY2022": 204055000, "FY2021": 220810000, "FY2020": 220485000, "FY2019": 216933000}
+P3_RWA_FX_EUR = {"FY2023": 765000, "FY2022": 748000, "FY2021": 722000, "FY2020": 655000, "FY2019": 1088000}
+P3_RWA_OP_EUR = {"FY2023": 9615000, "FY2022": 9124000, "FY2021": 8934000, "FY2020": 8715000, "FY2019": 8288000}
+P3_RWA_TOTAL_EUR = {"FY2023": 224516000, "FY2022": 213927000, "FY2021": 230466000, "FY2020": 229855000, "FY2019": 226309000}
+
 capital_base_gbp = gbp_m_spot(CAPITAL_BASE)
 
 
@@ -525,45 +571,148 @@ def metric(name, unit, rows_data, note=None):
 
 
 CAPITAL_COVER_NOTE = (
-    "This is the Bank's own 'Capital Cover' metric (disclosed every year as a chart in the Strategic Report), "
-    "used here for CET1/Tier 1/Total Capital Ratio since capital = CET1 = Tier 1 = Total Capital per the Bank's "
-    "own description (no AT1/Tier 2 instruments). See the CAPITAL RATIO CAVEAT in the Cash Flow Statement sheet's "
-    "ENTITY_NOTE - this figure does not appear to be a conventional CET1/RWA ratio like other banks in this "
-    "project (the FY2025 report separately states a genuine CET1-to-total-risk-exposure ratio of 88.70%, only "
-    "disclosed for that one year)."
+    "TWO ROWS, TWO DIFFERENT MEASURES - read the labels before comparing.\n"
+    "ROW 1 is the genuine CRR ratio (own funds divided by the total risk exposure amount), the measure every "
+    "other bank in this project reports on these sheets. FY2019-FY2023 are transcribed from each year's own "
+    "standalone Pillar 3 disclosure, 'Capital Requirement, Resources & Ratios' table (and its section 4.3 "
+    "'Capital Buffers' restatement, where the edition has one); FY2025 is from the Annual Report's own "
+    "narrative ('The CET1 capital ratio to the total risk exposure is 88.70%'). Each Pillar 3 ratio reconciles "
+    "against that same document's own capital and total-risk-exposure figures: FY2023 194,469/224,516 = 86.62%, "
+    "FY2021 192,598/230,466 = 83.57% and FY2020 191,794/229,855 = 83.44% reproduce the printed values exactly, "
+    "FY2022 193,221/213,927 = 90.32% against a printed 90.31% (a 0.01pp rounding difference inside the Bank's "
+    "own figures; the printed value is carried, nothing is back-solved). FY2024 is blank because no Pillar 3 "
+    "edition exists for it and its Annual Report gives only the Capital Cover chart - it is NOT zero.\n"
+    "FY2019 IS THE ONE YEAR WHERE THE THREE RATIO SHEETS DIFFER, AND THAT IS AS PRINTED. The 2019 Pillar 3's "
+    "ratio table gives a CET1 capital ratio of 81.0% but a Tier 1 capital ratio and total capital ratio of "
+    "84.4%, even though the same table shows Tier 2 capital as nil - so on the CRR definitions all three should "
+    "be identical, as they are in every other year. Reconstructing both: 191,102/226,309 = 84.44%, matching the "
+    "Tier 1 and total figures; 183,220/226,309 = 80.96%, matching the CET1 figure - i.e. the printed CET1 ratio "
+    "appears to have been computed on SHARE CAPITAL ALONE (EUR183,220k), excluding the general banking risk "
+    "reserve and profit and loss account that the same table includes in CET1 capital. The 2020 edition does "
+    "not repeat this: it prints all three at 83.44% on the full CET1 base. The figures are carried here exactly "
+    "as printed in each sheet's own line and NOT restated to 84.4%, per this project's transcribe-as-reported "
+    "convention - but treat FY2019's CET1 Ratio cell as the Bank's own presentation quirk rather than a real "
+    "3.4pp gap between its CET1 and Tier 1 ratios.\n"
+    "ROW 2 is the Bank's own 'Capital Cover' percentage, disclosed every year as a Strategic Report chart. It "
+    "is NOT a CET1/RWA ratio - it measures capital against the Bank's total capital REQUIREMENT (Pillar 1 plus "
+    "a Pillar 2A add-on), which is why it reads in the 300s while the CRR ratio reads in the 80s-90s for the "
+    "same year. It is retained because it is the only measure available for all seven years and was the series "
+    "these sheets previously carried; it must not be compared with other banks' ratio sheets.\n"
+    "Capital = CET1 = Tier 1 = Total Capital throughout, per the Bank's own statement that it holds no Tier 2 "
+    "or Tier 3 capital, so one printed ratio serves all three sheets - the FY2021 Pillar 3 confirms this by "
+    "printing the CET1, Tier 1 and Total capital ratios all at 83.57%.\n"
+    "UNRESOLVED, RECORDED NOT SILENTLY CORRECTED: the FY2025 Annual Report's narrative (p.14, confirmed by "
+    "page-image reading at 450 dpi) states a capital cover of 333.16%, where the Capital Cover row carries "
+    "331% for FY2025 sourced from the Strategic Report chart. Charts and narrative may legitimately differ in "
+    "rounding or vintage within the same filing, and the chart itself was not re-read at image level this "
+    "session, so the existing 331% is left untouched and the discrepancy is flagged here instead."
+)
+
+P3_SOURCES_NOTE = (
+    "PRIOR CLAIM CORRECTED (2026-09-15): earlier passes on this bank recorded that \"no standalone Pillar 3 "
+    "document was found\" and attributed the absence to correspondent-banking/website constraints. That was "
+    "wrong. Bank Saderat Plc publishes a 'Basel Disclosures Archive' page, linked from the top-level navigation "
+    f"of its own live site ({P3_ARCHIVE_URL}), carrying every Pillar 3 edition from 2010 to 2023 as downloadable "
+    "PDFs with full text layers. The FY2019-FY2023 editions were downloaded and read directly:\n"
+    f"FY2023: Bank Saderat PLC Pillar 3 disclosures 2023, p.12 (capital and risk exposure table) and p.13 "
+    f"(section 4.3 'Capital Buffers', ratio table) - {P3_2023_URL}\n"
+    f"FY2022: Bank Saderat PLC Pillar 3 disclosures 2022, p.12 and section 4.3 - {P3_2022_URL}\n"
+    f"FY2021: Bank Saderat PLC Pillar 3 disclosures 2021, capital resources/capital ratios table and section 4.3 "
+    f"- {P3_2021_URL}\n"
+    f"FY2020: Bank Saderat PLC Pillar 3 disclosures 2020 (ver 7), pp.14-15, 'Capital Requirement, Resources & "
+    f"Ratios' table and section 4.3 - {P3_2020_URL}\n"
+    f"FY2019: Bank Saderat PLC Basel III Pillar 3 Disclosures 2019, pp.6-7, 'Capital Requirement, Resources & "
+    f"Ratios' table - {P3_2019_URL}\n"
+    "FY2019 AND FY2020 ADDED 2026-09-15, CORRECTING A SECOND CLAIM ON THIS BANK. The pass that found the "
+    "archive read only the 2021-2023 files and left a note here saying FY2019/FY2020 had no Pillar 3 edition. "
+    "The archive page links both directly - 'Basel III Pillar 3 Disclosures 2019.pdf' and 'Pillar 3   "
+    "disclosures 2020 ver 7.pdf' - and both return HTTP 200 with a full text layer. What is genuinely absent is "
+    "only FY2024/FY2025, the years after the archive stops.\n"
+    "VALIDATION: each Pillar 3's own funds figure reproduces the CAPITAL_BASE figure already carried on the CET1 "
+    "Capital sheet from the statutory accounts, to the euro (FY2023 EUR194,469k vs 194,469,375; FY2022 "
+    "EUR193,221k vs 193,220,561; FY2021 EUR192,598k vs 192,597,935; FY2020 EUR191,794k vs 191,793,736; FY2019 "
+    "EUR191,102k vs 191,101,891) - independent confirmation of entity and year before any new figure was "
+    "accepted. The risk-type components foot exactly to the printed total in all five years (FY2023 "
+    "214,136+765+9,615 = 224,516; FY2022 204,055+748+9,124 = 213,927; FY2021 220,810+722+8,934 = 230,466; "
+    "FY2020 220,485+655+8,715 = 229,855; FY2019 216,933+1,088+8,288 = 226,309).\n"
+    "ONE INTERNAL INCONSISTENCY IN THE 2020 EDITION, RECORDED NOT CORRECTED: its section 8 operational-risk "
+    "table derives an operational risk exposure of EUR7,839k (three-year average income EUR4,181k x 15% = "
+    "EUR627k capital, / 8%), while its capital table on p.14 - the source used here - carries EUR8,715k with a "
+    "capital requirement of EUR697k. Only the p.14 figure foots to that document's own printed total risk "
+    "exposure amount of EUR229,855k, which in turn reproduces the printed 83.44% ratio against the known "
+    "capital base, so the p.14 figure is the one carried. The 2019 edition has no such conflict.\n"
+    "TAXONOMY: the Bank presents its risk exposure amount as credit risk / FX risk / operational risk, not as a "
+    "UK OV1 template, so the RWA Breakdown sheet follows the Bank's own three-way presentation rather than "
+    "mapping it onto OV1 categories it does not use.\n"
+    "FY2024 AND FY2025 ARE GENUINELY UNPUBLISHED, not unsourced: the archive page's newest entry is the 2023 "
+    "edition, and eight filename permutations for 2024/2025 all return HTTP 404 from the same /Reports/ path "
+    "that serves the 2023 file with HTTP 200 (checked 2026-09-15). Leverage Ratio, LCR and NSFR are absent from "
+    "all five Pillar 3 editions as well - a case-insensitive search for 'leverage', 'liquidity coverage', "
+    "'LCR', 'net stable funding' and 'NSFR' across the full text of each returns no match - so those sheets "
+    "remain on their existing Annual Report basis or blank. The LCR sheet's FY2019/FY2020 cells therefore stay "
+    "blank: the Pillar 3 editions for those years do not carry the ratio, and the FY2021 edition prints no "
+    "2020 comparative for it either."
 )
 
 NOT_DISCLOSED_NOTE = (
-    "Not disclosed anywhere in the Bank's own Annual Reports - no standalone Pillar 3 document was found "
-    "(correspondent-banking/website constraints, see ENTITY_NOTE), and the Strategic Report's capital/liquidity "
-    "disclosure is limited to the 'Capital Cover' and Liquidity Coverage Ratio charts plus the CET1 capital base "
-    "figure (see the other Pillar 3 sheets)."
+    "Not disclosed in the Bank's own Annual Reports, and absent from its standalone Pillar 3 disclosures for "
+    "FY2021-FY2023 (which do exist - see the Total RWAs and RWA Breakdown sheets - but contain no leverage, LCR "
+    "or NSFR figures). The Strategic Report's capital/liquidity disclosure is limited to the 'Capital Cover' and "
+    "Liquidity Coverage Ratio charts plus the CET1 capital base figure (see the other Pillar 3 sheets)."
 )
 
 metric("CET1 Capital", "£m (Bank's disclosed capital base, consisting of CET1 Capital)",
        [("Common Equity Tier 1 (CET1) capital", capital_base_gbp)])
 
-metric("CET1 Ratio", "%", [("Capital Cover", CAPITAL_COVER)], note=CAPITAL_COVER_NOTE)
+metric("CET1 Ratio", "%",
+       [("CET1 capital ratio (CRR: own funds / total risk exposure amount)", CRR_RATIO_CET1),
+        ("Capital Cover (Bank's own metric - NOT a CRR ratio)", CAPITAL_COVER)],
+       note=CAPITAL_COVER_NOTE)
 
 metric("Tier 1 Capital", "£m (= CET1 Capital; no AT1 instruments)", [("Tier 1 capital", capital_base_gbp)])
 
-metric("Tier 1 Ratio", "%", [("Capital Cover", CAPITAL_COVER)], note=CAPITAL_COVER_NOTE)
+metric("Tier 1 Ratio", "%",
+       [("Tier 1 capital ratio (CRR: own funds / total risk exposure amount)", CRR_RATIO_TIER1),
+        ("Capital Cover (Bank's own metric - NOT a CRR ratio)", CAPITAL_COVER)],
+       note=CAPITAL_COVER_NOTE)
 
 metric("Total Capital", "£m (= CET1 Capital; no Tier 2 instruments)", [("Total capital", capital_base_gbp)])
 
-metric("Total Capital Ratio", "%", [("Capital Cover", CAPITAL_COVER)], note=CAPITAL_COVER_NOTE)
+metric("Total Capital Ratio", "%",
+       [("Total capital ratio (CRR: own funds / total risk exposure amount)", CRR_RATIO_TOTAL),
+        ("Capital Cover (Bank's own metric - NOT a CRR ratio)", CAPITAL_COVER)],
+       note=CAPITAL_COVER_NOTE)
 
-metric("Total RWAs", None, [("Total risk-weighted assets", {y: "Not publicly disclosed" for y in YEARS})],
-       note=NOT_DISCLOSED_NOTE + " Not calculated from Capital Cover either, since which denominator that "
-                                  "metric actually uses isn't confirmed - see CAPITAL RATIO CAVEAT.")
+metric("Total RWAs", "£m (converted from €'000 at each year's own period-end spot rate)",
+       [("Total risk exposure amount", gbp_m_spot(P3_RWA_TOTAL_EUR))],
+       note="FY2019-FY2023 are the total risk exposure amount printed in each year's own standalone Pillar 3 "
+            "disclosure (EUR '000, converted to £m at that year's period-end spot rate per this workbook's FX "
+            "convention): FY2023 EUR224,516k, FY2022 EUR213,927k, FY2021 EUR230,466k, FY2020 EUR229,855k, "
+            "FY2019 EUR226,309k. Each reconciles against that document's own capital figure and printed capital "
+            "ratio (see the CET1 Ratio sheet), and each year's Pillar 3 capital amount reproduces the "
+            "statutory-accounts capital base on the CET1 Capital sheet to the euro - which is what confirms "
+            "these are the same entity and basis. FY2019 and FY2020 were added 2026-09-15 from the 2019 and "
+            "2020 Pillar 3 editions, which the earlier pass on this bank had recorded as non-existent; they are "
+            "linked from the same archive page as the others (see the RWA Breakdown sheet's note). FY2024 and "
+            "FY2025 remain blank because the archive genuinely stops at the 2023 edition and the Annual Reports "
+            "disclose no risk exposure amount. NOT back-solved from the FY2025 Annual Report's 88.70% ratio, "
+            "even though the capital base for that year is known.")
 
 bw.add_rwa_breakdown_sheet(
     title="Bank Saderat Plc — RWA Breakdown",
-    subtitle="Not publicly disclosed - see note below.",
-    rows=[("DATA", "RWA by risk category (UK OV1)", {y: "Not publicly disclosed" for y in YEARS})],
-    sources_text=p3_sources(RATIO_PAGES) + "\n\n" + NOT_DISCLOSED_NOTE,
+    subtitle="FY2019-FY2023 from each year's own Pillar 3 disclosure (EUR '000 converted to £m at period-end "
+             "spot). FY2024/FY2025 not disclosed - no Pillar 3 edition published. See note below.",
+    rows=[
+        ("SECTION", "Risk exposure amount by risk type (Bank's own Pillar 3 presentation)", {}),
+        ("DATA", "Credit risk (risk weighted assets)", gbp_m_spot(P3_RWA_CREDIT_EUR)),
+        ("DATA", "Foreign exchange (FX) risk", gbp_m_spot(P3_RWA_FX_EUR)),
+        ("DATA", "Operational risk", gbp_m_spot(P3_RWA_OP_EUR)),
+        ("TOTAL", "Total risk exposure amount", gbp_m_spot(P3_RWA_TOTAL_EUR)),
+    ],
+    sources_text=p3_sources(RATIO_PAGES) + "\n\n" + P3_SOURCES_NOTE,
     first_col_width=54,
-    source_height=200,
+    source_height=300,
+    unit_suffix=" (£m)",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -618,18 +767,24 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£m (conv. from EUR)",
     ratios=[
-        ("CET1 Ratio", CAPITAL_COVER),
-        ("Tier 1 Ratio", CAPITAL_COVER),
-        ("Total Capital Ratio", CAPITAL_COVER),
+        ("CET1 Ratio", CRR_RATIO_CET1),
+        ("Tier 1 Ratio", CRR_RATIO_TIER1),
+        ("Total Capital Ratio", CRR_RATIO_TOTAL),
         ("LCR", LCR_ALL_CCY),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing. ALL £ figures in this "
          "workbook are converted from Bank Saderat Plc's native EUR reporting - see the Cash Flow Statement "
          "sheet's source note for the full FX methodology and rates used. Ratios (%) are shown exactly as "
-         "reported in EUR and were not converted. IMPORTANT: the CET1/Tier1/Total Capital Ratio row uses the "
-         "Bank's own 'Capital Cover' metric, which is NOT confirmed to be a conventional CET1/RWA-style ratio - "
-         "see the CAPITAL RATIO CAVEAT on the Cash Flow Statement sheet before comparing this bank's ratios to "
-         "others in this project. FY2025 was also materially affected by UK 'snapback' sanctions from 29 "
+         "reported in EUR and were not converted. CHANGED 2026-09-15: the CET1/Tier 1/Total Capital Ratio rows "
+         "now carry the genuine CRR ratio (own funds / total risk exposure amount), transcribed from the Bank's "
+         "own Pillar 3 disclosures for FY2019-FY2023 and from the Annual Report narrative for FY2025. They "
+         "previously carried the Bank's 'Capital Cover' metric, which reads in the 300s because it measures "
+         "capital against the capital REQUIREMENT rather than against risk exposure, and so was not comparable "
+         "with any other bank in this project; Capital Cover is still shown, labelled, as the second row on each "
+         "ratio detail sheet. FY2024 is blank here because no Pillar 3 edition exists for it - it is not zero, "
+         "and its Capital Cover of 349% is on the detail sheets. FY2019's CET1 cell (81.0%) differs from its "
+         "Tier 1/Total cells (84.4%) because the 2019 Pillar 3 prints them that way - see the ratio sheets' "
+         "note. FY2025 was also materially affected by UK 'snapback' sanctions from 29 "
          "September 2025 - see ENTITY_NOTE. Leverage Ratio, NSFR and MREL Ratio are not publicly disclosed for "
          "this entity and are omitted from this chart.",
 )

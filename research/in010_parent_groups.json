@@ -1253,6 +1253,26 @@
               "agreement": 1.0,
               "direction": "+",
               "down": 0,
+              "end_year": 2022,
+              "n": 2,
+              "same": 0,
+              "start_year": 2021,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "-",
+              "down": 2,
+              "end_year": 2023,
+              "n": 2,
+              "same": 0,
+              "start_year": 2022,
+              "up": 0
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
               "end_year": 2024,
               "n": 2,
               "same": 0,
@@ -1402,6 +1422,26 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 2
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 1
+            },
             {
               "agreement": 0.6666666666666666,
               "direction": "mixed",
@@ -2308,6 +2348,36 @@
               "n": 2,
               "same": 0,
               "start_year": 2020,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2022,
+              "n": 2,
+              "same": 0,
+              "start_year": 2021,
+              "up": 2
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2023,
+              "n": 2,
+              "same": 0,
+              "start_year": 2022,
+              "up": 1
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2024,
+              "n": 2,
+              "same": 0,
+              "start_year": 2023,
               "up": 2
             },
             {
@@ -6120,6 +6190,26 @@
           ],
           "trends": [
             {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 1
+            },
+            {
+              "agreement": 1.0,
+              "direction": "-",
+              "down": 2,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 0
+            },
+            {
               "agreement": 1.0,
               "direction": "+",
               "down": 0,
@@ -6961,17 +7051,17 @@
         {
           "group": "UBS group (current)",
           "latest_level": {
-            "max": 11.8,
-            "median": 9.8,
-            "min": 7.8,
+            "max": 87.0,
+            "median": 70.03999999999999,
+            "min": 53.08,
             "n": 2,
-            "range": 4.000000000000001,
+            "range": 33.92,
             "status": "comparable",
             "values": {
-              "124269": 7.8,
-              "146702": 11.8
+              "124269": 87.0,
+              "146702": 53.08
             },
-            "year": 2018
+            "year": 2025
           },
           "member_count": 2,
           "members": [
@@ -6995,6 +7085,16 @@
               "n": 2,
               "same": 0,
               "start_year": 2017,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2025,
+              "n": 2,
+              "same": 0,
+              "start_year": 2024,
               "up": 2
             }
           ]
@@ -10685,6 +10785,26 @@
           ],
           "trends": [
             {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2022,
+              "n": 2,
+              "same": 0,
+              "start_year": 2021,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "-",
+              "down": 2,
+              "end_year": 2023,
+              "n": 2,
+              "same": 0,
+              "start_year": 2022,
+              "up": 0
+            },
+            {
               "agreement": 0.5,
               "direction": "mixed",
               "down": 1,
@@ -10837,6 +10957,26 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "-",
+              "down": 2,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 0
+            },
             {
               "agreement": 0.6666666666666666,
               "direction": "mixed",
@@ -15473,6 +15613,26 @@
           ],
           "trends": [
             {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2022,
+              "n": 2,
+              "same": 0,
+              "start_year": 2021,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "-",
+              "down": 2,
+              "end_year": 2023,
+              "n": 2,
+              "same": 0,
+              "start_year": 2022,
+              "up": 0
+            },
+            {
               "agreement": 0.5,
               "direction": "mixed",
               "down": 1,
@@ -15625,6 +15785,26 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 0.5,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2020,
+              "n": 2,
+              "same": 1,
+              "start_year": 2019,
+              "up": 1
+            },
+            {
+              "agreement": 0.5,
+              "direction": "-",
+              "down": 1,
+              "end_year": 2021,
+              "n": 2,
+              "same": 1,
+              "start_year": 2020,
+              "up": 0
+            },
             {
               "agreement": 0.6666666666666666,
               "direction": "mixed",
@@ -16467,8 +16647,17 @@
         {
           "group": "UBS group (current)",
           "latest_level": {
-            "reason": "fewer than two entities share a comparable year",
-            "status": "insufficient"
+            "max": 191.1,
+            "median": 169.0,
+            "min": 146.9,
+            "n": 2,
+            "range": 44.19999999999999,
+            "status": "comparable",
+            "values": {
+              "124269": 191.1,
+              "146702": 146.9
+            },
+            "year": 2025
           },
           "member_count": 2,
           "members": [
@@ -16483,7 +16672,48 @@
               "frn": "146702"
             }
           ],
-          "trends": []
+          "trends": [
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2022,
+              "n": 2,
+              "same": 0,
+              "start_year": 2021,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2023,
+              "n": 2,
+              "same": 0,
+              "start_year": 2022,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2024,
+              "n": 2,
+              "same": 0,
+              "start_year": 2023,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2025,
+              "n": 2,
+              "same": 0,
+              "start_year": 2024,
+              "up": 2
+            }
+          ]
         },
         {
           "group": "UTB Partners group",

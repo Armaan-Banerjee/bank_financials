@@ -20,7 +20,24 @@ AR2017_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2016_URL = "https://find-and-update.company-information.service.gov.uk/company/04146820/filing-history/MzE4MjAzNTU0NWFkaXF6a2N4/document?format=pdf"
 P3_2023_URL = "https://www.ubluk.com/media/lupbssja/annual-report-unb-2023-pillar3-final-approved.pdf"
 P3_2022_URL = "https://web.archive.org/web/20230923163742if_/https://www.ubluk.com/media/1368/ubl-2022-pillar-3-final-published.pdf"
-P3_2024_URL = "https://www.ubluk.com/media/vsvfbmui/pillar260825.pdf"
+# CORRECTION (2026-09-15). This used to point at
+# https://www.ubluk.com/media/vsvfbmui/pillar260825.pdf , found by Wayback CDX and
+# noted at the time as "not linked from the live site's own resources page". That
+# turned out to be the reason: it is a PRE-FINAL DRAFT, not the published edition.
+# Proof, not inference - that file still contains an unresolved internal reviewer
+# query inside the CCR Mark to Market Method table, printed in the document body:
+# "Interest rate contract (Why is this blank - we had IRS notional of 66.019 m?)".
+# Its PDF creation date is 26 Aug 2025 (matching the "260825" in its filename).
+# The URL below is the edition actually linked from the bank's own document index
+# at https://www.ubluk.com/footer-pages/annual-reports/ , is titled "UNB 2024
+# Pillar3", is dated 1 July 2026, and has that reviewer query removed (the row
+# reads plain "Interest rate contract"). Every figure this workbook takes from the
+# FY2024 edition is unchanged between the two - CET1/Tier 1 capital 97,948,100,
+# Total capital 98,654,693, Total RWAs 493,153k and the Tier 2 collective
+# provision 706,593 all appear identically in both - so this is a provenance fix,
+# not a data restatement, and no FY2024 value moved.
+P3_2024_URL = "https://www.ubluk.com/media/sr5puvji/unb-2024-pillar3-approved-finalplusamended.pdf"
+P3_2024_SUPERSEDED_DRAFT_URL = "https://www.ubluk.com/media/vsvfbmui/pillar260825.pdf"
 P3_2021_URL = "https://web.archive.org/web/20250726151714if_/https://www.ubluk.com/media/pqqda2ng/pillar-iii-disclosure-2021.pdf"
 P3_2020_URL = "https://web.archive.org/web/20250803030355if_/https://www.ubluk.com/media/xq1lvuuj/pillar-iii-disclosure-2020.pdf"
 P3_2019_URL = "https://web.archive.org/web/20250804025501if_/https://www.ubluk.com/media/sqgdszjz/pillar-iii-disclosure-2019.pdf"
@@ -50,10 +67,23 @@ ENTITY_NOTE = (
     "was truncated at exactly 1,048,576 bytes (1 MiB), a known crawl-truncation artefact also seen on other banks' "
     "Wayback-recovered PDFs on this project - a second, later (2024-2025) snapshot of each document's newer "
     "media/<slug> URL was untruncated and used instead, confirmed via `file`/`pdftotext` page-count and "
-    "character-count checks before transcribing any figure). No FY2025 edition exists yet as of this build "
-    "(2026-09) - the FY2025 Annual Report itself was signed 23 April 2026, so a Pillar 3 disclosure for that year, "
-    "if produced, would likely not be published until later in 2026; this is a genuine access gap (document may "
-    "not yet exist), not a confirmed non-disclosure."
+    "character-count checks before transcribing any figure).\n\n"
+    "FY2025 PILLAR 3 - ENUMERATED ABSENCE ON A CURRENT INDEX (upgraded from 'access gap' on 2026-09-15). The "
+    "bank's own document index at https://www.ubluk.com/footer-pages/annual-reports/ was fetched and fully "
+    "parsed on 15 September 2026. It is organised year by year, and each year from 2016 to 2024 carries BOTH an "
+    "'Annual Report' link and a 'Pillar III Disclosure' link. The 2025 block carries the Annual Report "
+    "(/media/405naqby/ye2025-statutory-accounts-final-23apr2026_signed.pdf) but NO Pillar III Disclosure link at "
+    "all. That distinction matters: because the index has already been updated with the 2025 statutory accounts, "
+    "this is not a stale page lagging behind publication - the page is current and the FY2025 Pillar 3 is absent "
+    "from it. So the gap is an enumerated negative, not a failure to find.\n"
+    "It is NOT, however, a permanent non-publication, and should stay on the re-check list. This bank publishes "
+    "its Pillar 3 extremely late: the FY2024 edition linked from that same index is dated 1 July 2026, roughly 18 "
+    "months after its year-end and over two months after the FY2025 Annual Report was signed (23 April 2026). On "
+    "that cadence an FY2025 edition would not be due until well into 2027. The FY2025 Annual Report also still "
+    "refers readers to 'the unaudited Pillar III disclosures' for capital management policy, so the bank has not "
+    "said it has stopped publishing them.\n"
+    "Nothing exists before FY2016 on any basis: the index's earliest year block is 2016, for both document types.\n"
+    "Where a FY2025 figure appears on a sheet it is therefore Annual-Report-sourced and labelled as such."
 )
 
 CASH_FLOW_SOURCES = (
@@ -120,9 +150,15 @@ def p3_sources():
         f"requirements), p.48-49 (Leverage Ratio), p.22-23 (Own Funds) - {P3_2022_URL} (recovered via Wayback "
         f"Machine; the live ubluk.com URL for this document now 301-redirects to the site's generic resources page).\n"
         f"FY2024: UBL UK Pillar 3 and Remuneration Code Disclosures at 31 December 2024, p.26 (Pillar 1 capital "
-        f"requirements), p.46-47 (Leverage Ratio), p.22 (Own Funds) - {P3_2024_URL} (also recovered via Wayback "
-        f"Machine CDX search - not linked from the live site's own resources page, but the direct URL still "
-        f"resolves).\n"
+        f"requirements), p.46-47 (Leverage Ratio), p.22 (Own Funds) - {P3_2024_URL} (the approved final edition, "
+        f"linked from the bank's own index at https://www.ubluk.com/footer-pages/annual-reports/ and dated 1 July "
+        f"2026). PROVENANCE CORRECTION 2026-09-15: an earlier build cited {P3_2024_SUPERSEDED_DRAFT_URL} instead, "
+        f"recovered via Wayback CDX and flagged then as 'not linked from the live site's resources page'. That "
+        f"file is a PRE-FINAL DRAFT - it still prints an unresolved internal reviewer query inside the CCR Mark "
+        f"to Market Method table ('Interest rate contract (Why is this blank - we had IRS notional of 66.019 m?)') "
+        f"and is dated 26 August 2025. Every FY2024 figure used in this workbook is byte-identical between the two "
+        f"documents (CET1/Tier 1 capital 97,948,100; Total capital 98,654,693; Total RWAs 493,153k; Tier 2 "
+        f"collective provision 706,593), so no value changed - only the citation.\n"
         f"FY2021: UBL UK Pillar 3 and Remuneration Code Disclosures at 31 December 2021, p.4 (Key metrics), p.21-22 "
         f"(Own Funds), p.25 (Pillar 1 capital requirements), p.46-48 (Leverage Ratio) - {P3_2021_URL}\n"
         f"FY2020: UBL UK Pillar 3 and Remuneration Code Disclosures at 31 December 2020, p.3 (Key metrics), p.21 "
@@ -135,8 +171,15 @@ def p3_sources():
         f"(Own Funds), p.25 (Pillar 1 capital requirements), p.45-46 (Leverage Ratio) - {P3_2017_URL}\n"
         f"FY2016: UBL UK Pillar 3 and Remuneration Code Disclosures at 31 December 2016, p.3 (Key metrics), p.20-21 "
         f"(Own Funds), p.25 (Pillar 1 capital requirements), p.45-46 (Leverage Ratio) - {P3_2016_URL}\n"
-        f"FY2025: no Pillar 3 document exists yet as of this build - see entity note on the Cash Flow Statement "
-        f"sheet.\n"
+        f"FY2025: NO Pillar 3 edition is published. This is an enumerated absence, not a failed search - the "
+        f"bank's own index (https://www.ubluk.com/footer-pages/annual-reports/, fetched and fully parsed 15 "
+        f"September 2026) lists BOTH an Annual Report and a Pillar III Disclosure for every year 2016-2024, but "
+        f"its 2025 block lists the Annual Report ONLY. The index is demonstrably current, since it already "
+        f"carries the 2025 statutory accounts. Re-checkable rather than permanent: this bank publishes very late "
+        f"(its FY2024 edition is dated 1 July 2026), so an FY2025 edition would not be due until well into 2027. "
+        f"Where a FY2025 figure IS shown on a sheet, it is taken from the Annual report and financial "
+        f"statements 2025 instead: p.5 (Key Performance Indicators table) for the Capital Adequacy Ratio and LCR, "
+        f"p.13 (Capital resources table) for the Tier 1 / Total capital amounts - {AR2025_URL}\n"
         f"CET1/Tier 1/Total Capital ratios for FY2022 and FY2024 are computed here (capital ÷ Total RWAs, both "
         f"directly from the sources above) since neither document states the ratio as text, unlike FY2023's "
         f"document, which states its ratios directly; FY2016-FY2021 all state CET1/Tier1/Total Capital ratios "
@@ -618,7 +661,7 @@ metric(
     note="FY2023 is directly stated in that year's Pillar 3 document (equal to its stated Tier 1 ratio, since "
          "CET1=Tier 1 capital exactly that year). FY2022 and FY2024 are computed here (CET1 capital ÷ Total RWAs, "
          "both from that year's own Pillar 3 document - see Total RWAs sheet) since neither document states the "
-         "ratio as text. FY2025: no Pillar 3 document exists yet - genuine access gap, not confirmed non-disclosure. "
+         "ratio as text. FY2025: no Pillar 3 edition is published - an ENUMERATED absence, since the bank's own index lists a Pillar III Disclosure for every year 2016-2024 but only an Annual Report for 2025, and that index is current (it already carries the 2025 statutory accounts). Re-checkable, not permanent: this bank publishes very late (FY2024's edition is dated 1 July 2026). "
          "FY2016-FY2021 are each stated directly as text in that year's own front-page Key Metrics box (unlike "
          "FY2022/FY2024, which are computed) - reproduced as stated even though the same document's detailed Table "
          "CC1 shows a different (in FY2021's case, implausibly halved: 11% vs this 22.2%) percentage in its row 61; "
@@ -646,7 +689,7 @@ metric(
     p3_sources(),
     note="Equal to the CET1 Ratio in every year - the Company has no Additional Tier 1 (AT1) instruments. FY2023 is "
          "directly stated in that year's Pillar 3 document (Table CC1, row 62); FY2022/FY2024 computed (see CET1 "
-         "Ratio sheet note); FY2025 not disclosed (no Pillar 3 document exists yet); FY2016-FY2021 stated directly "
+         "Ratio sheet note); FY2025 not disclosed (no Pillar 3 edition is published - enumerated absence on the bank's own current index); FY2016-FY2021 stated directly "
          "in that year's own Key Metrics box (see CET1 Ratio sheet note re the FY2021 Table CC1 discrepancy).",
 )
 
@@ -665,16 +708,24 @@ metric(
 metric(
     "Total Capital Ratio", "% of RWA",
     [("Total capital ratio", {
-        "FY2023": "21.56%", "FY2022": "19.18%", "FY2024": "20.00%", "FY2025": "Not disclosed",
+        "FY2023": "21.56%", "FY2022": "19.18%", "FY2024": "20.00%", "FY2025": "16.3%",
         "FY2021": "22.3%", "FY2020": "24%", "FY2019": "21.6%", "FY2018": "21.4%",
         "FY2017": "19.0%", "FY2016": "18.3%",
     })],
     p3_sources(),
     note="FY2023 directly stated in that year's Pillar 3 document (Table CC1, row 63). FY2022/FY2024 computed "
-         "(Total capital ÷ Total RWAs, both from that year's own Pillar 3 document). FY2025 not disclosed (no "
-         "Pillar 3 document exists yet). FY2016-FY2021 stated directly in that year's own Key Metrics box (see "
+         "(Total capital ÷ Total RWAs, both from that year's own Pillar 3 document). FY2016-FY2021 stated directly "
+         "in that year's own Key Metrics box (see "
          "CET1 Ratio sheet note re the FY2021 Table CC1 discrepancy, which is also present in this ratio: 11.1% vs "
-         "22.3%).",
+         "22.3%). "
+         "BASIS CAVEAT - FY2025 (16.3%) is the ONLY year here taken from the Annual Report rather than a Pillar 3 "
+         "document: no FY2025 Pillar 3 edition is published (enumerated absence on the bank's own current index), but the FY2025 Annual Report's own KPI table (p.5, 'Capital "
+         "Adequacy Ratio = Total Capital / risk-weighted assets') states it directly. That table is NOT on the same "
+         "basis as the Pillar 3-derived years above it - it restates FY2024 as 18.8%, against the 20.00% computed "
+         "here from the FY2024 Pillar 3's own Total capital and Total RWAs. The two sources disagree by ~120bps on "
+         "the same year, so FY2025 is not strictly comparable with FY2016-FY2024 in this row. Retained because it "
+         "is a genuine, directly-stated disclosure; revisit and restate onto the Pillar 3 basis once the FY2025 "
+         "Pillar 3 is published - which on this bank's demonstrated cadence (its FY2024 edition is dated 1 July 2026, some 18 months after that year-end) would not be before well into 2027.",
 )
 
 metric(
@@ -687,7 +738,7 @@ metric(
     p3_sources(),
     note="Each year's own Pillar 1 Capital Requirement table (Credit & Counterparty Credit Risk + Market Risk + "
          "CVA Risk + Operational Risk RWAs, summed) - see the RWA Breakdown sheet for the category-level split. "
-         "FY2025: no Pillar 3 document exists yet - genuine access gap, not confirmed non-disclosure. FY2016's "
+         "FY2025: no Pillar 3 edition is published - an ENUMERATED absence, since the bank's own index lists a Pillar III Disclosure for every year 2016-2024 but only an Annual Report for 2025, and that index is current (it already carries the 2025 statutory accounts). Re-checkable, not permanent: this bank publishes very late (FY2024's edition is dated 1 July 2026). FY2016's "
          "figure here (£434,265,000, Table CC1 row 60 / Key Metrics box) does NOT equal the FY2016 Pillar 1 table's "
          "own category sum (£424,125,000) - a genuine ~£10.1m internal inconsistency in that year's own document, "
          "reproduced as stated rather than forced to tie (see RWA Breakdown sheet note); FY2017-FY2021 all sum "
@@ -734,7 +785,7 @@ bw.add_rwa_breakdown_sheet(
         "table's own 'Pillar 1 Capital Resources Requirement' line) do not sum to the £434,265,000 Total RWAs "
         "figure used on the Total RWAs sheet (from Table CC1 row 60 / the Key Metrics box) - both figures are each "
         "exactly as stated in the FY2016 document's own two tables, reproduced without forcing a tie. FY2025: no "
-        "Pillar 3 document exists yet - genuine access gap, not confirmed non-disclosure."
+        "Pillar 3 edition is published - an enumerated absence on the bank's own current index, re-checkable given its very late publication cadence (FY2024's edition is dated 1 July 2026)."
     ),
     first_col_width=58,
     source_height=180,
@@ -767,7 +818,7 @@ metric(
          "capital figure used elsewhere in this workbook for FY2024 (£97,948,100, per that same document's own "
          "Appendix VI Own Funds disclosure) - both figures are reproduced exactly as each table states, not forced "
          "to tie; the FY2022 document shows no such gap (£73,599,000 vs £73,598,731, a rounding-only difference). "
-         "FY2025 not disclosed (no Pillar 3 document exists yet - see entity note on the Cash Flow Statement sheet). "
+         "FY2025 not disclosed (no Pillar 3 edition is published - enumerated absence on the bank's own current index; see entity note on the Cash Flow Statement sheet). "
          "FY2016-FY2021's Table LRCom Tier 1 capital also diverges from the CET1/Tier 1 Capital sheet figure in "
          "every one of these years (by amounts ranging from a rounding-only ~£300 in FY2017/FY2018 up to ~£3.3m in "
          "FY2021) - each year's Table LRCom is its own distinct disclosure from the Own Funds Disclosure table and "
@@ -776,7 +827,51 @@ metric(
          "nearest £'000 (multiplied by 1,000 here).",
 )
 
-bw.add_not_disclosed_metric_sheets(["LCR", "NSFR"], p3_sources())
+metric(
+    "LCR", "%",
+    [("Liquidity Coverage Ratio (%) (Annual Report KPI basis)", {
+        "FY2025": "196.0%", "FY2024": "199.8%",
+    })],
+    p3_sources()
+    + "\nFY2025/FY2024 LCR SOURCE (added 2026-09-15): United National Bank Limited, Annual Report and "
+      "Financial Statements for the year ended 31 December 2025, Strategic Report, \"Key Performance "
+      "Indicators ('KPI')\" table, p.5 - the row labelled \"LCR / Liquidity Coverage Ratio\", which prints "
+      "196.0% for 2025 against 199.8% for 2024. Retrieved from the Bank's own annual-reports page "
+      "(https://www.ubluk.com/footer-pages/annual-reports/, document "
+      "/media/405naqby/ye2025-statutory-accounts-final-23apr2026_signed.pdf).\n",
+    note="CORRECTION (2026-09-15): this sheet previously stated that no LCR figure was disclosed in any year. "
+         "That was wrong for FY2025 and FY2024 - the FY2025 Annual Report introduces an LCR row in its Key "
+         "Performance Indicators table, giving 196.0% with a 199.8% comparative.\n\n"
+         "BASIS CAVEAT - THIS IS NOT A PILLAR 3 LCR, and it is labelled accordingly. Every other liquidity or "
+         "capital figure on this workbook's Pillar-3-sourced sheets comes from the Bank's own Pillar 3 "
+         "documents, which do NOT disclose a numeric LCR in any year: the FY2024 Pillar 3 discusses the LCR "
+         "and the NSFR only in narrative terms (\"the principal measure used by the Bank for managing "
+         "liquidity risk is the Liquidity Coverage Ratio\"; \"the Bank is also required to report the Net "
+         "Stable Funding Ratio... monitored on a daily basis\") and prints no figure for either. The KPI "
+         "table gives no definition beyond the metric name, so whether it is a year-end point-in-time ratio "
+         "or a 12-month average is not stated. Treat these two values as an Annual-Report KPI series in their "
+         "own right, not as the start of a Pillar 3 LCR series.\n\n"
+         "RELATED BASIS EVIDENCE: the same KPI table reports the Capital Adequacy Ratio as 16.3% (2025) and "
+         "18.8% (2024), where the FY2024 Pillar 3 gives 20.00% for FY2024 - a ~120bp disagreement between the "
+         "Bank's own two documents for the same year-end. That is the clearest demonstration that the AR-KPI "
+         "and Pillar 3 bases are genuinely different for this bank, and why these LCR values are kept on a "
+         "distinctly labelled row.\n\n"
+         "FY2016-FY2023 remain blank: no LCR figure, numeric or tabular, appears in any of those years' "
+         "Pillar 3 documents, and the FY2021-FY2024 Annual Reports were each searched in full (real text "
+         "layers) with zero occurrences of \"LCR\" or \"liquidity coverage ratio\" - the KPI row is new in the "
+         "FY2025 report.",
+)
+
+bw.add_not_disclosed_metric_sheets(
+    ["NSFR"], p3_sources(),
+    per_note={"NSFR": "No numeric NSFR is disclosed in any year. Re-verified 2026-09-15 against the FY2024 "
+                      "Pillar 3 document and the FY2021-FY2025 Annual Reports: the FY2024 Pillar 3 refers to "
+                      "the NSFR only in narrative terms (\"the Bank is also required to report the Net Stable "
+                      "Funding Ratio (NSFR), and to ensure that the ratio remains above 100%. The NSFR "
+                      "position is monitored on a daily basis\") without ever printing the ratio, and no "
+                      "Annual Report carries an NSFR figure. Note the FY2025 Annual Report DID introduce an "
+                      "LCR row into its KPI table (see the LCR sheet) but added no NSFR row alongside it. "
+                      "Nothing has been derived."})
 
 metric(
     "MREL Ratio", None,
@@ -826,7 +921,8 @@ bw.add_overview_sheet(
          "citation for the underlying document/page. Pillar 3 ratios/RWA now available for all 10 years FY2016-"
          "FY2024 (FY2016-FY2021 recovered from the Wayback Machine after an initial 1-MiB crawl-truncation of the "
          "first-found snapshots was identified and resolved by locating later, complete captures); FY2025 remains "
-         "not disclosed since no Pillar 3 document for that year exists yet (see Cash Flow Statement sheet entity "
+         "not disclosed because no FY2025 Pillar 3 edition is published - an enumerated absence on the bank's own "
+         "current document index, re-checkable given its very late cadence (see Cash Flow Statement sheet entity "
          "note). LCR/NSFR/MREL: not disclosed in any year reviewed. Balance Sheet/Profit & Loss/Statement of "
          "Changes in Equity/Asset Quality use FY2022's own originally-published figures, not the FY2023 report's "
          "restated FY2022 comparative - see those sheets' own source notes for the resulting ~£2.26m net-loans "

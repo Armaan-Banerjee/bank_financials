@@ -47,7 +47,40 @@ ENTITY_NOTE = (
     "Markets Act 2000), and TBUK's own Annual Report 2019 explicitly states 'the figures presented ... represent "
     "eight months of trading.' FY2019's P&L, cash flow, and equity-movement figures are therefore not directly "
     "comparable on a run-rate basis to any other year in this workbook, which are all full 12-month periods (FY2020 "
-    "onward). This is flagged on every sheet FY2019 appears on, not silently normalised to a pro-rated annual figure."
+    "onward). This is flagged on every sheet FY2019 appears on, not silently normalised to a pro-rated annual figure.\n\n"
+    "SDDT EXEMPTION - REASON FOR THE FY2025 PILLAR 3 GAP, established 2026-09-15 (cross-bank SDDT pass). Every "
+    "FY2025 Pillar 3 blank in this workbook is an EVIDENCED STRUCTURAL EXEMPTION, not a 'not published yet' "
+    "timing gap: Triodos Bank UK Limited is a Small Domestic Deposit Taker (SDDT), and becoming one removes the "
+    "Pillar 3 disclosure obligation outright, so no FY2025 Pillar 3 Report should be expected to appear later. "
+    "Evidence - the PRA's own firm-level register, the Bank of England consolidated list of waivers and "
+    "modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv), which carries TWO SDDT rows for "
+    "FRN 817008, 'Triodos Bank UK Limited': (a) 'CRR firms: SDDT Regime - General Application Part 1.2 & "
+    "2.1(9)', sub rule 'Ru 1.2, 2.1(9)', ref 'A00010046P.pdf', start '06/03/2025', end '06/03/2028'; and (b) "
+    "'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - General Application "
+    "Part', sub rule 'Ru 3.1', ref 'A00010060P.pdf', start '11/03/2025', no end date. Rule 3.1 is the "
+    "modification by which a firm becomes an SDDT. What it does to Pillar 3 is stated by a peer holding the "
+    "identical register row - Cynergy Bank plc Annual Report & Accounts 2024, p.71: 'The Bank applied for the "
+    "Modification by Consent to become an SDDT and received approval on 17 January 2025. As a result, we are "
+    "not required to publish Pillar 3 disclosures as at 31 December 2024 and will submit only a simplified "
+    "retail deposit ratio instead of a full Net Stable Funding Ratio (NSFR) going forward.' (Cynergy's own row "
+    "is Rule 3.1 starting '17/01/2025', matching its stated approval date to the day - which is what ties the "
+    "register row to the firm-stated effect.)\n"
+    "DATE FIT: the modification took effect 11 March 2025, before the 31 December 2025 year-end, so it covers "
+    "FY2025 - the only year with a Pillar 3 gap - and NOTHING earlier. FY2020-FY2024 each have their own "
+    "published Pillar 3 Report, and FY2019's absence has a completely separate, earlier cause (TBUK's first, "
+    "eight-month period, for which no standalone Pillar 3 report was ever produced). Do not read the SDDT "
+    "exemption back onto FY2024 or earlier, and in particular not onto FY2019.\n"
+    "TBUK's own FY2025 Annual Report is a fully scanned, image-only Companies House filing with no text layer "
+    "(pdftotext extracted 0 characters across 108 pages), so it was OCR'd page-by-page at 200dpi with tesseract "
+    "before being searched - a plain text search would have returned a false negative here. The OCR'd text "
+    "(261k characters) mentions SDDT once, as forward-looking capital-regime context only: the Bank refers to "
+    "moving to a new regime from 'January 2027 under the Small Domestic Deposit Takers (SDDT) regime'. That is "
+    "the separate, later simplified CAPITAL regime, NOT the disclosure exemption, which the register shows "
+    "already in force from March 2025 - the two must not be conflated. The report does not state the Pillar 3 "
+    "consequence itself, and discloses no Simplified Retail Deposit Ratio value, so nothing replaces the NSFR "
+    "series here."
 )
 
 CASH_FLOW_SOURCES = (
@@ -117,11 +150,11 @@ def p3_sources(pages="7-14"):
         "current-year CET1 capital figure 'agrees to equity and reserves in the Annual Report', i.e. this "
         "comparative column is itself an audited regulatory figure, not a narrative estimate) - see the sheet's own "
         "note for which figures this applies to.\n"
-        "FY2025: no standalone Pillar 3 report has been published yet as of this workbook's build date (2026-08-26) "
+        "FY2025: no standalone Pillar 3 report has been published, and none will be (the Bank is an SDDT, exempt from the Pillar 3 disclosure obligation - see ENTITY NOTE) as of this workbook's build date (2026-08-26) "
         "- the FY2025 Annual Report was only filed 28 Apr 2026 and TBUK's Pillar 3 report has historically followed "
         "several months after its Annual Report (e.g. the FY2024 edition above was published well after the "
         "FY2024 Annual Report). Where marked '(derived)' below, a FY2025 figure was calculated from Annual Report "
-        "disclosures rather than transcribed from a Pillar 3 table, since no such table exists yet - see the "
+        "disclosures rather than transcribed from a Pillar 3 table, since no such table exists, nor will one (SDDT exemption - see ENTITY NOTE) - see the "
         "sheet's own note.\n"
         + ENTITY_NOTE
     )
@@ -516,7 +549,7 @@ metric(
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 193448, "FY2024": 193259, "FY2023": 192544, "FY2022": 185772, "FY2021": 177905, "FY2020": 174426, "FY2019": 170452})],
     p3_sources(),
     note="FY2025 is from the Annual Report's own 'Total capital resources' note (Note 26/27, audited) since no "
-         "FY2025 Pillar 3 report has been published yet - not derived, directly stated. FY2020 is directly stated "
+         "FY2025 Pillar 3 report has been published, and none will be (the Bank is an SDDT, exempt from the Pillar 3 disclosure obligation - see ENTITY NOTE) - not derived, directly stated. FY2020 is directly stated "
          "in TBUK's own FY2020 Pillar 3 Report (Table 3); FY2019 has no standalone Pillar 3 report (see p3_sources "
          "note) so is taken from that same FY2020 Pillar 3 Report's own audited FY2019 comparative column, which "
          "the report itself states 'agrees to equity and reserves in the Annual Report' - an audited regulatory "
@@ -581,7 +614,7 @@ metric(
       {"FY2025": 908207, "FY2024": 876076, "FY2023": 861016, "FY2022": 861273, "FY2021": 840391, "FY2020": 770444, "FY2019": 840575})],
     p3_sources(),
     note="FY2025 is CALCULATED (Total capital £193,448k / Total capital ratio 21.3% = ~£908.2m), not directly "
-         "stated, since no FY2025 Pillar 3 report exists yet to give the audited RWA breakdown - simple arithmetic "
+         "stated, since no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see ENTITY NOTE) to give the audited RWA breakdown - simple arithmetic "
          "on two audited/stated figures, not an estimate, flagged per this project's convention (see Bank of "
          "Ireland UK workbook for the same approach). FY2024-FY2020 are Total RWA figures directly stated in each "
          "year's own Pillar 3 Report (Credit + Operational risk RWA; Market risk and Counterparty Credit risk RWA "
@@ -602,7 +635,7 @@ RWA_BREAKDOWN_SOURCES = (
     f"{P3_2020_URL}\n"
     f"FY2019: that same FY2020 Pillar 3 Report's own audited FY2019 comparative column (Table 6) - no standalone "
     f"FY2019 Pillar 3 report exists (see p3_sources note) - {P3_2020_URL}\n"
-    "FY2025: no standalone Pillar 3 report has been published yet as of this workbook's build date - blank, "
+    "FY2025: no standalone Pillar 3 report has been published, and none will be (the Bank is an SDDT, exempt from the Pillar 3 disclosure obligation - see ENTITY NOTE) as of this workbook's build date - blank, "
     "consistent with every other Pillar 3 sheet in this workbook.\n"
     "PRESENTATION NOTE: FY2019-FY2021's own Pillar 3 Reports all combine Credit risk and Counterparty Credit risk "
     "into a single exposure-class table (no separate CCR line existed as a distinct category in these earlier "
@@ -631,7 +664,8 @@ bw.add_rwa_breakdown_sheet(
               "for every year with a Pillar 3 report. FY2019-FY2021's Credit and Counterparty Credit risk are "
               "combined as those years' own reports presented them (see source note); FY2019/FY2020 also carry "
               "an 'Amounts below thresholds for deduction' line not present in later years. No FY2025 Pillar 3 "
-              "report exists yet, consistent with the rest of this workbook's Pillar 3 sheets.",
+              "report exists, nor will one (SDDT exemption - see ENTITY NOTE) (re-confirmed 2026-09-12: only the FY2022-FY2024 reports are linked from the "
+              "bank's press-and-media page), consistent with the rest of this workbook's Pillar 3 sheets.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=68,
@@ -655,7 +689,7 @@ metric(
          "of not blending non-comparable methodology vintages. FY2020's figures are directly stated in TBUK's own "
          "FY2020 Pillar 3 Report (Table 14/15); FY2019's are that same report's own audited FY2019 comparative "
          "column (no standalone FY2019 Pillar 3 report exists - see p3_sources note). No FY2025 figure: not "
-         "disclosed in the Annual Report and no FY2025 Pillar 3 report exists yet.",
+         "disclosed in the Annual Report and no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see ENTITY NOTE).",
 )
 
 metric(
@@ -668,7 +702,7 @@ metric(
     p3_sources(),
     note="All ratios are the year-end point-in-time LCR (not the 12-month average-by-quarter tables each Pillar 3 "
          "report also separately discloses). FY2025's ratio (446%) is from the Annual Report narrative only (p.15) "
-         "- no £ HQLA/outflow breakdown is available since no FY2025 Pillar 3 report exists yet. FY2020's figures "
+         "- no £ HQLA/outflow breakdown is available since no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see ENTITY NOTE). FY2020's figures "
          "are from TBUK's own FY2020 Pillar 3 Report's narrative ('As at 31 December 2020, the Bank's LCR was at "
          "414.1%...calculated as a total HQLA of £519.5m against net outflows of £125.4m'). FY2019: NOT DISCLOSED "
          "- no standalone FY2019 Pillar 3 report exists, the FY2020 Pillar 3 Report's own Table 17 quarterly "
@@ -695,7 +729,7 @@ metric(
          "FY2020: no NSFR section appears in either year's own Pillar 3 Report at all (the metric was not yet "
          "part of that era's disclosure - both reports' full contents pages were reviewed to confirm this). "
          "FY2019: no standalone Pillar 3 report exists for FY2019 at all (see p3_sources note), and AR2019 gives "
-         "no NSFR figure either. FY2025: not disclosed - no FY2025 Pillar 3 report exists yet and the Annual "
+         "no NSFR figure either. FY2025: not disclosed - no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see ENTITY NOTE) and the Annual "
          "Report gives no NSFR percentage (only confirms the ratio is monitored).",
 )
 
@@ -749,7 +783,7 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2024": "206%", "FY2023": "188%", "FY2022": "181%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page. No FY2025 Pillar 3 report has been published yet, so Leverage "
+         "citation for the underlying document/page. No FY2025 Pillar 3 report has been published, and none will be (the Bank is an SDDT, exempt from the Pillar 3 disclosure obligation - see ENTITY NOTE), so Leverage "
          "Ratio and NSFR are blank for FY2025 (Total RWAs on that sheet is a calculated figure for FY2025 - see "
          "its own note). TBUK does not take the FRS 101/102 cash-flow exemption used by several other single-"
          "parent foreign subsidiary banks in this project - a full Statement of Cash Flows exists for all 7 years "

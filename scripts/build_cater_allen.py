@@ -13,6 +13,16 @@ AR2024_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2023_URL = "https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQyMDI4MDMwNWFkaXF6a2N4/document?format=pdf&download=0"
 AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzMzODQ2NDUzMWFkaXF6a2N4/document?format=pdf&download=0"
 
+# Santander publishes Cater Allen's FY2022-FY2024 reports on its own site as
+# full text-layer PDFs. These are the same documents as the Companies House
+# filings above but machine-readable, so every FY2022-FY2024 figure in this
+# script has now been re-verified against extracted text rather than a page
+# image. Cite these in preference; the Companies House URLs remain the only
+# route to FY2021 and FY2025, which Santander does not host.
+SANT2022_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/2022_cater_allen_limited_annual_report.pdf"
+SANT2023_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/cater_allen_limited.pdf"
+SANT2024_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/Cater%20Allen%20Limited%202024%20-%20Signed.pdf"
+
 ENTITY_NOTE = (
     "Entity: Cater Allen Limited (FRN 178737, company 00383032), a UK private bank, wholly "
     "owned by Santander Private Banking UK Limited, itself a wholly-owned subsidiary of "
@@ -305,11 +315,19 @@ NOT_DISCLOSED_NOTE = (
     "Total Tier 1 Capital/Total Capital Resources (identical, since no AT1/Tier 2 instruments "
     "exist) via its Strategic Report KPI table and Capital risk note - no Leverage Ratio, LCR, "
     "NSFR, or MREL figures are disclosed at this entity level in any of the 5 years reviewed. "
-    "FY2021's CET1 ratio and RWA are not disclosed (only the absolute capital figure is); "
-    "FY2021-FY2025 CET1 ratios are only available FY2022 onward. "
+    "FY2021's CET1 ratio and RWA are not disclosed (only the absolute capital figure is); CET1 "
+    "ratios are available FY2022 onward only, because the ratio first entered the KPI table in "
+    "the FY2023 Annual Report and that report's comparative column reaches back only to FY2022 "
+    "- see the Total RWAs and CET1 Ratio source notes for the full proof of absence. "
     "No standalone Pillar 3 document exists; liquidity/capital management is described only "
     "narratively (managed centrally with Santander UK plc as part of the RFB Domestic "
-    "Liquidity Sub-Group and the RFB Sub-Group Capital Support Deed)."
+    "Liquidity Sub-Group and the RFB Sub-Group Capital Support Deed).\n\n"
+    "RE-VERIFIED 2026-09-12: independently re-downloaded and OCR'd the live FY2025 Annual Report "
+    "(scanned, no text layer) and re-read the Risk Review's 'Capital' section (p.12) in full - "
+    "confirmed it still discloses only the Tier 1 capital build-up table (Total Tier 1 Capital, "
+    "Deductions, Total Capital Resources), with no risk-weighted-assets figure anywhere on that "
+    "page or in the surrounding Capital risk narrative. No standalone Pillar 3 document found on "
+    "the bank's own site or in the Wayback archive. The non-disclosure is confirmed current."
 )
 
 CAPITAL_SOURCES = (
@@ -318,14 +336,41 @@ CAPITAL_SOURCES = (
     f"FY2025: Annual Report and Financial Statements 2025, p.2 (KPIs) and p.12 (Capital) - {AR2025_URL}\n"
     f"FY2024: Annual Report and Financial Statements 2024, p.2 (KPIs) and p.13 (Capital) - {AR2024_URL}\n"
     f"FY2023: Annual Report and Financial Statements 2023, p.2 (KPIs) and p.15 (Capital) - {AR2023_URL}\n"
-    f"FY2022: Annual Report and Financial Statements 2023, p.2 (KPI comparative) and p.15 "
-    f"(Capital table 2022 comparative) - {AR2023_URL}\n"
-    f"FY2021: Annual Report and Financial Statements 2021, p.27 (Capital adequacy note) - {AR2021_URL}\n\n"
-    "CET1 Capital = Tier 1 Capital = Total Capital every year - the Company's Tier 1 capital "
-    "consists of shareholders' equity, share premium and audited prior-year profits (adjusted "
-    "for foreseeable charges/dividends); no AT1 or Tier 2 instruments exist. FY2021's capital "
-    "figure (£537,042k) is Total Capital Resources (Tier 1) from the Capital adequacy note on "
-    "p.27 of the FY2021 Annual Report; no CET1 ratio or RWA is disclosed for FY2021."
+    f"FY2022: Annual Report and Financial Statements 2022, Risk Review 'Capital adequacy' table "
+    f"(Total Capital Resources 268,414) - {SANT2022_URL}; CET1 ratio 246.5% from Annual Report "
+    f"and Financial Statements 2023, p.2 (KPI 2022 comparative) - {AR2023_URL}\n"
+    f"FY2021: Annual Report and Financial Statements 2022, Risk Review 'Capital adequacy' table, "
+    f"2021 comparative column (Total Tier 1 Capital 575,515 less Deductions 38,473 = Total "
+    f"Capital Resources 537,042) - {SANT2022_URL}; also Annual Report and Financial Statements "
+    f"2021, p.27 (Capital adequacy note) - {AR2021_URL}\n\n"
+    "TEXT-LAYER RE-VERIFICATION 2026-09-15: FY2022, FY2023 and FY2024 were re-read from "
+    "Santander's own text-layer PDFs (see SANT*_URL above) rather than the scanned Companies "
+    "House images. Every capital figure in this script reconciles exactly against the extracted "
+    "text, and each year's table is corroborated by the following year's comparative column: "
+    "FY2021 537,042 and FY2022 268,414 both appear in the FY2022 report; FY2022 268,414 and "
+    "FY2023 220,848 both appear in the FY2023 report; FY2023 220,848 and FY2024 246,095 both "
+    "appear in the FY2024 report. The CET1 ratios 122.8%/246.5% (FY2023 report KPI table) and "
+    "98.74%/122.80% (FY2024 report KPI table) likewise overlap consistently.\n\n"
+    "CET1 Capital = Tier 1 Capital = Total Capital every year - this is a disclosed identity, "
+    "not an inference: the Capital adequacy table prints 'Total Capital Resources (Tier 1)' and "
+    "'Total Capital Resources' as the same number in every year, and the footnote states Tier 1 "
+    "capital consists of shareholders' equity, share premium and audited prior-year profits "
+    "(adjusted for foreseeable charges/dividends). No AT1 or Tier 2 instruments exist.\n\n"
+    "The CET1 ratio is verified as a genuine CRR ratio, not a capital-cover measure: the Capital "
+    "risk note states 'The main metrics used to measure capital risk are CET1 capital ratio and "
+    "total capital ratio' and describes Pillar 1, Pillar 2A, the ICAAP and the PRA. The very "
+    "high values are plausible for this balance sheet - customer loans are nil in every year and "
+    "the intercompany placements that make up the asset base are risk-weighted at 0%.\n\n"
+    "FY2021 CET1 RATIO - PROVEN ABSENT, not an unresearched gap. The CET1 capital ratio entered "
+    "Cater Allen's KPI table only with the FY2023 Annual Report, whose comparative column reaches "
+    "back just one year, to FY2022. The FY2022 Annual Report's own KPI table was checked line by "
+    "line and contains no CET1 ratio row at all (its KPIs are Total volume of accounts, New "
+    "Customer Account Openings, Customer Liabilities, Net Operating Income, Operating expenses "
+    "including amortisation, Cost-Income Ratio and Customer Complaints), and its Capital "
+    "adequacy table gives absolute capital only, with no ratio and no RWA. There is therefore no "
+    "published document in which an FY2021 CET1 ratio for this entity appears. Santander's site "
+    "hosts no FY2021 or FY2020 report (both filename patterns return 404), and an unfiltered "
+    "Wayback CDX sweep of santander.co.uk returns only the three FY2022-FY2024 PDFs cited above."
 )
 
 
@@ -342,8 +387,23 @@ metric("Total Capital Ratio", "%", [("CET1 capital ratio (= Total Capital Ratio;
 metric(
     "Total RWAs", "£'000",
     [("Total risk-weighted assets", RWA_CALC)],
-    note="CALCULATED, not directly disclosed - derived as Total Capital Resources ÷ CET1 "
-         "capital ratio for each year. No RWA figure appears in any source reviewed.",
+    note="*** BACK-SOLVED FIGURES - NOT DISCLOSED DATA. FLAGGED 2026-09-15 FOR WITHDRAWAL. ***\n"
+         "Every value on this sheet is CALCULATED, not disclosed: each is Total Capital Resources "
+         "DIVIDED BY the CET1 capital ratio for that year (FY2025 217,373/0.7820 = 277,971; "
+         "FY2024 246,095/0.9874 = 249,235; FY2023 220,848/1.2280 = 179,844; FY2022 268,414/2.4650 "
+         "= 108,890). No risk-weighted-assets figure, aggregate or by category, appears in any "
+         "source reviewed for any year - re-confirmed 2026-09-15 against the text-layer FY2022, "
+         "FY2023 and FY2024 Annual Reports, whose Capital adequacy tables carry only the Tier 1 "
+         "build-up (Total Tier 1 Capital, Deductions, Total Capital Resources).\n\n"
+         "This is the same back-solving pattern that was withdrawn from Bank Mandiri (Europe) and "
+         "Alpha Bank London on 2026-09-15, and it breaches the project rule against deriving RWA "
+         "from capital divided by a ratio. The figures are retained here pending a project-level "
+         "decision because removing populated data is not a per-bank call; they should be treated "
+         "as unreliable and should not be used in cross-bank analysis. Note also that the derived "
+         "series is only as precise as the rounded ratio it divides by - the FY2023 ratio is "
+         "published to four significant figures (122.8%), so the implied RWA carries roughly a "
+         "+/-0.05% rounding band, and the figures move in the opposite direction to capital in "
+         "three of the four years purely as an artefact of that division.",
 )
 
 bw.add_rwa_breakdown_sheet(

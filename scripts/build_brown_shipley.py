@@ -16,6 +16,14 @@ AR2023_URL = f"{CH_BASE}/MzQzMTg2OTM1MGFkaXF6a2N4/document?format=pdf&download=0
 AR2022_URL = f"{CH_BASE}/MzM5MTEwMDM3NGFkaXF6a2N4/document?format=pdf&download=0"
 AR2021_URL = f"{CH_BASE}/MzM0NzY3MjI5MmFkaXF6a2N4/document?format=pdf&download=0"
 
+# Brown Shipley's OWN standalone Pillar 3 Disclosures report - found 2026-09-15
+# by the maximum-effort disclosure sweep. It is not linked from any current
+# page of brownshipley.com (its "Important information > Annual report" page
+# lists only the TCFD report, the Quintet/PlusPlus group annual report and
+# sundry policy PDFs), which is why earlier passes concluded no such document
+# existed. The PDF is live and directly fetchable on the Bank's own domain.
+P3_2024_URL = "https://brownshipley.com/media/o4tl2pod/pillar-3-disclosure-2024-final-draft_cleanv2.pdf"
+
 ENTITY_NOTE = (
     "ENTITY NOTE: Brown Shipley & Co. Limited (Companies House 00398426, FRN 124548) is a UK-authorised private "
     "bank, a subsidiary of Quintet Private Bank (Europe) S.A. (Luxembourg). It files full statutory accounts "
@@ -37,13 +45,17 @@ ENTITY_NOTE = (
     "Capital, Risk Exposure Amount (= Total RWAs), a Pillar 1 capital-requirement breakdown by Credit Risk and "
     "Operational Risk, and CET1/Tier 1 Capital ratios - re-verified against each year's own primary source and "
     "now populated on the CET1 Capital, Tier 1 Capital, Tier 1 Ratio, Total RWAs and RWA Breakdown sheets "
-    "accordingly. What remains genuinely undisclosed in any year 2021-2024 (confirmed by reading each year's own "
-    "Note 35/36 'Capital' and Note 36/37 'Financial Risk Management' sections in full, not assumed): Total "
-    "Capital/Total Capital Ratio (no Tier 2 capital instrument is ever mentioned, so Total Capital cannot be "
-    "assumed equal to Tier 1 Capital without the Bank stating so itself), Leverage Ratio, NSFR, and MREL Ratio - "
-    "these remain 'Not publicly disclosed'. No standalone Pillar 3 disclosure document (as opposed to this "
-    "statutory-accounts note) was found on Brown Shipley's own website (which links only to Quintet Group-level "
-    "annual reports and TCFD/sustainability documents, not a Brown Shipley-specific Pillar 3 filing)."
+    "accordingly. What the statutory accounts alone do not disclose in any year 2021-2024 (confirmed by reading "
+    "each year's own Note 35/36 'Capital' and Note 36/37 'Financial Risk Management' sections in full, not "
+    "assumed): Total Capital/Total Capital Ratio, Leverage Ratio, NSFR and MREL Ratio. SECOND CORRECTION "
+    "(2026-09-15, maximum-effort disclosure sweep): the earlier statement here that 'no standalone Pillar 3 "
+    "disclosure document was found on Brown Shipley's own website' was wrong. Brown Shipley does publish its own "
+    "entity-level Pillar 3 report, hosted on its own domain, and the 2024 edition is live and directly "
+    "fetchable; it is simply unlinked from every current page of that site (the 'Important information > Annual "
+    "report' page lists only the TCFD report, the Quintet/PlusPlus group annual report and policy PDFs), so site "
+    "navigation alone will never reach it. That report supplies Total Capital, Total Capital Ratio, Leverage "
+    "Ratio and NSFR - see those sheets. Only MREL Ratio is now 'Not publicly disclosed' in every year, and "
+    "Leverage Ratio/NSFR remain blank for FY2022 and FY2021 (no Pillar 3 report of those years exists)."
 )
 
 CASH_FLOW_SOURCES = (
@@ -103,10 +115,53 @@ def capital_note_sources():
         "wrongly marked CET1 Capital, Tier 1 Capital, Tier 1 Ratio and Total RWAs 'Not publicly disclosed' - this "
         "note discloses all four, plus a Pillar 1 capital-requirement breakdown by Credit Risk and Operational "
         "Risk (used on the RWA Breakdown sheet - see that sheet's own note on how RWA-by-category is derived from "
-        "the disclosed capital-requirement figures). Total Capital/Total Capital Ratio remain 'Not publicly "
-        "disclosed': no Tier 2 capital instrument is mentioned in this note or elsewhere in any year's accounts, "
-        "so Total Capital cannot be assumed equal to Total Tier 1 Capital without the Bank stating so itself.\n\n"
+        "the disclosed capital-requirement figures). This note itself discloses no Tier 2 capital instrument in "
+        "any year, and none appears elsewhere in any year's accounts; the Bank's own Pillar 3 Disclosures 2024 "
+        "(Template UK KM1 rows 2-3) states Total capital = Tier 1 capital, confirming Tier 2 = nil, which is "
+        "what now allows the Total Capital and Total Capital Ratio sheets to be populated - see those sheets for "
+        "the full derivation.\n\n"
         + ENTITY_NOTE
+    )
+
+
+PILLAR3_DOC_NOTE = (
+    "PILLAR 3 DOCUMENT NOTE: 'Brown Shipley & Co. Limited - Pillar 3 Disclosures 2024' (38pp, prepared on a "
+    "consolidated basis for the Brown Shipley group, which the report itself states is the same reporting "
+    "perimeter as the Company because 'all its subsidiaries were dormant in the year') is the Bank's own "
+    "entity-level Pillar 3 report - NOT a Quintet group document. It carries the full UK templates KM1 (key "
+    "metrics), OV1, LR1/LR2/LR3 (leverage), LIQ1 (LCR) and LIQ2 (NSFR). Only the 2024 edition is retrievable: no "
+    "2021, 2022 or 2023 edition appears anywhere on brownshipley.com or in that domain's full Wayback Machine URL "
+    "index (7,140 archived URLs checked on 2026-09-15; 'pillar-3-disclosure-2024-final-draft_cleanv2.pdf' is the "
+    "only Pillar 3 document of any year), nor on quintet.com (11,645 archived URLs checked - that domain holds "
+    "only Quintet GROUP Pillar 3 reports, which are consolidated Luxembourg-group disclosures and are therefore "
+    "not usable here; Quintet's own 2021 group Pillar 3 mentions Brown Shipley exactly once, and only in respect "
+    "of large-exposure limits, with no Brown Shipley own-funds table). INTERNAL INCONSISTENCY IN THE SOURCE: the "
+    "2024 report states its LCR and NSFR twice with different values - template UK KM1 (and the report's own "
+    "front 'Key Prudential Risk Ratios' summary, s.1.1) give LCR 236% and NSFR 162%, while the narrative "
+    "ss.11.3-11.4 and templates UK LIQ1/LIQ2 give LCR 216% and NSFR 157% off different underlying totals (KM1 "
+    "row 19 total RSF 514,666 vs LIQ2 row 33 total RSF 547,524). This workbook uses the KM1 values throughout, "
+    "both because KM1 is the headline prescribed key-metrics template the report's own summary table reproduces, "
+    "and because the LCR already carried here for every year comes from the Strategic Report KPI line, which "
+    "agrees with KM1 (236% for FY2024). The same report's KM1 row 14 prints 'Leverage ratio 0.00%', an obvious "
+    "template-population error in the Bank's own file (its row 13 exposure measure is also printed in £ rather "
+    "than the £000 the template declares, and its LIQ2 row 7 prints '#VALUE!'); the leverage figures used here "
+    "are instead taken from template UK LR2 row 25 and s.6.1's narrative, which agree with each other and with "
+    "the front summary table."
+)
+
+
+def pillar3_report_sources(extra=""):
+    return (
+        "Sources - Brown Shipley & Co. Limited's own standalone Pillar 3 Disclosures report:\n"
+        f"FY2024: Pillar 3 Disclosures 2024, Appendix 15.1 (Template UK KM1 - Key metrics template), p.31, "
+        f"cross-checked against s.1.1 'Key Prudential Risk Ratios' (p.4) - {P3_2024_URL}\n"
+        f"FY2023: Pillar 3 Disclosures 2024, s.1.1 'Key Prudential Risk Ratios' prior-year comparative column "
+        f"(p.4), cross-checked against Template UK LR2 row 25's own 2023 comparative (p.32) - {P3_2024_URL}\n"
+        "FY2022 and FY2021: no Brown Shipley Pillar 3 report for those years could be retrieved (see Pillar 3 "
+        "document note below), and the Bank's own statutory accounts for those years disclose neither metric - "
+        "left blank rather than filled from a group-level source.\n"
+        + (extra + "\n" if extra else "")
+        + "\n" + PILLAR3_DOC_NOTE + "\n\n" + ENTITY_NOTE
     )
 
 
@@ -424,6 +479,32 @@ TIER1_CAPITAL = {"FY2024": 104885, "FY2023": 100201, "FY2022": 94594, "FY2021": 
 TIER1_RATIO = {"FY2024": "23.9%", "FY2023": "24.7%", "FY2022": "22.7%", "FY2021": "22.6%"}
 TOTAL_RWAS = {"FY2024": 439621, "FY2023": 405524, "FY2022": 417077, "FY2021": 344361}
 
+# Total Capital / Total Capital Ratio - opened 2026-09-15 by the maximum-effort
+# disclosure sweep, which located Brown Shipley's own Pillar 3 Disclosures 2024
+# (P3_2024_URL). Its Template UK KM1 prints row 2 "Tier 1 capital" and row 3
+# "Total capital" as the SAME figure (105, in £m - that template's own rows are
+# in £m despite its £000 header, since its row 4 RWA 439,621 is in £000 and ties
+# exactly to the FY2024 accounts' Risk Exposure Amount), and row 6 "Tier 1 ratio"
+# and row 7 "Total capital ratio" as the same 23.86%. That is the Bank stating
+# for itself that it holds no Tier 2 capital - the exact confirmation the earlier
+# version of this script said was missing, and which it (correctly) declined to
+# assume. FY2021-FY2023 are therefore derived, not assumed: each year's own
+# "Capital" note table runs share capital -> reserves -> deductions -> Total CET1
+# -> Additional Tier 1 -> Total Tier One Capital and then stops, with no Tier 2
+# row and no "total regulatory capital" row, and no year's Statement of Financial
+# Position carries a subordinated-liabilities line. With Tier 2 evidenced as nil
+# on the same capital structure (£81,824k permanent share capital + reserves +
+# an unchanged £10,000k AT1) in all four years, Total Capital = Total Tier 1
+# Capital and Total Capital Ratio = Tier 1 Capital ratio throughout.
+TOTAL_CAPITAL = {"FY2024": 104885, "FY2023": 100201, "FY2022": 94594, "FY2021": 77645}
+TOTAL_CAPITAL_RATIO = {"FY2024": "23.86%", "FY2023": "24.7%", "FY2022": "22.7%", "FY2021": "22.6%"}
+
+# Leverage Ratio and NSFR - FY2024 and FY2023 only, from the Pillar 3 2024
+# report (the Bank's statutory accounts disclose neither in any year, which is
+# why FY2022 and FY2021 stay blank).
+LEVERAGE_RATIO = {"FY2024": "11.23%", "FY2023": "9.96%"}
+NSFR_RATIO = {"FY2024": "162%", "FY2023": "181%"}
+
 # Pillar 1 CAPITAL REQUIREMENT by risk type, as literally disclosed (not RWA itself -
 # see the RWA Breakdown sheet's own note for how RWA-by-category is derived from these).
 RWA_CREDIT_RISK_CAPREQ = {"FY2024": 24024, "FY2023": 21885, "FY2022": 23868, "FY2021": 18347}
@@ -456,15 +537,40 @@ metric(
     capital_note_sources(),
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["Total Capital", "Total Capital Ratio"],
-    capital_note_sources(),
-    per_note={
-        "Total Capital": NOT_DISCLOSED_NOTE + " The 'Capital' note discloses Total Tier 1 Capital but never "
-                          "mentions a Tier 2 capital instrument in any year, so Total Capital cannot be assumed "
-                          "equal to Total Tier 1 Capital without the Bank stating so itself.",
-        "Total Capital Ratio": NOT_DISCLOSED_NOTE + " Same reasoning as Total Capital.",
-    },
+TOTAL_CAPITAL_SOURCES = (
+    "Sources - FY2024 as disclosed by Brown Shipley & Co. Limited's own Pillar 3 report; FY2021-FY2023 derived "
+    "from the Bank's own 'Capital' note on the Tier 2 = nil finding that same Pillar 3 report establishes:\n"
+    f"FY2024: Pillar 3 Disclosures 2024, Appendix 15.1, Template UK KM1 rows 2-3 and 6-7 (p.31) - Tier 1 capital "
+    f"and Total capital are printed as the same amount, and Tier 1 ratio and Total capital ratio as the same "
+    f"23.86% - {P3_2024_URL}\n"
+    f"FY2023: Annual Report 2023, p.71 (Note 35, 'Capital', 'Unaudited Regulatory Capital at 31 December'): "
+    f"Total Tier One Capital £100,201k, Tier 1 Capital ratio 24.7%, no Tier 2 row - {AR2023_URL}\n"
+    f"FY2022: Annual Report 2022 (Note 35, 'Capital'): Total Tier One Capital £94,594k, Tier 1 Capital ratio "
+    f"22.7%, no Tier 2 row - {AR2022_URL}\n"
+    f"FY2021: Annual Report 2021, p.71 (Note 36, 'Capital'): Total Tier One Capital £77,645k, Tier 1 Capital "
+    f"ratio 22.6%, no Tier 2 row - {AR2021_URL}\n"
+    "DERIVATION NOTE for FY2021-FY2023: these are derived, not assumed. Total Capital = CET1 + Additional Tier 1 "
+    "+ Tier 2. The Bank's own FY2024 Pillar 3 KM1 states Total capital = Tier 1 capital (and Total capital ratio "
+    "= Tier 1 ratio), i.e. Tier 2 = nil on this capital structure. That structure is unchanged across the whole "
+    "window - permanent share capital £81,824k in every year, an unchanged £10,000k Additional Tier 1 instrument "
+    "in every year, and no subordinated-liabilities line anywhere on any year's Statement of Financial Position - "
+    "and each year's own 'Capital' note table ends at 'Total Tier One Capital' with no Tier 2 row and no separate "
+    "'total regulatory capital' row. A prior version of this script marked all four years 'Not publicly "
+    "disclosed' precisely because the Bank had not itself stated the Tier 2 = nil identity; the FY2024 Pillar 3 "
+    "report, located on 2026-09-15, is that statement.\n\n"
+    + PILLAR3_DOC_NOTE + "\n\n" + ENTITY_NOTE
+)
+
+metric(
+    "Total Capital", "£'000",
+    [("Total Capital (CET1 + Additional Tier 1; Tier 2 = nil)", TOTAL_CAPITAL)],
+    TOTAL_CAPITAL_SOURCES,
+)
+
+metric(
+    "Total Capital Ratio", "% of RWA",
+    [("Total Capital ratio", TOTAL_CAPITAL_RATIO)],
+    TOTAL_CAPITAL_SOURCES,
 )
 
 metric(
@@ -495,11 +601,17 @@ bw.add_rwa_breakdown_sheet(
     source_height=260,
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["Leverage Ratio"],
-    capital_note_sources(),
-    per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' note and "
-              "'Financial Risk Management' note in full - neither mentions a leverage ratio."},
+metric(
+    "Leverage Ratio", "%",
+    [("UK leverage ratio (excluding claims on central banks)", LEVERAGE_RATIO)],
+    pillar3_report_sources(
+        "FY2024 11.23% and FY2023 9.96% are template UK LR2 row 25 ('Leverage ratio excluding claims on central "
+        "banks'), which agrees with s.6.1's narrative ('Brown Shipley's leverage ratio stands at 11.23% as at 31 "
+        "December 2024') and with the front summary table's rounded 11.2%/10.0%. The same report also discloses "
+        "row UK-25c 'Leverage ratio including claims on central banks' at 8.55% (2023: 6.53%); the excluding-"
+        "central-banks measure is the UK's binding definition and is the one used here. The Bank's statutory "
+        "accounts disclose no leverage ratio in any year - each year's own 'Capital' note and 'Financial Risk "
+        "Management' note were read in full and neither mentions one."),
 )
 
 metric(
@@ -508,14 +620,25 @@ metric(
     p3_sources(),
 )
 
+metric(
+    "NSFR", "%",
+    [("Net Stable Funding Ratio (NSFR)", NSFR_RATIO)],
+    pillar3_report_sources(
+        "FY2024 162% and FY2023 181% are the report's own front summary table (s.1.1) figures, which agree with "
+        "template UK KM1 row 20 (162%) and with KM1's own rows 18-19 (available stable funding 832,003 / required "
+        "stable funding 514,666 = 161.7%). See the inconsistency paragraph below on the 157% that the same "
+        "report's narrative s.11.4 and template UK LIQ2 row 34 print instead. The Bank's statutory accounts "
+        "disclose no NSFR in any year - each year's own 'Capital' and 'Financial Risk Management'/'Liquidity "
+        "risk' notes were read in full and LCR is the only liquidity metric given. FY2021 additionally predates "
+        "the UK NSFR requirement, which became binding on 1 January 2022 (PRA PS17/21)."),
+)
+
 bw.add_not_disclosed_metric_sheets(
-    ["NSFR", "MREL Ratio"],
+    ["MREL Ratio"],
     capital_note_sources(),
     per_note={
-        "NSFR": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' and 'Financial Risk "
-                "Management'/'Liquidity risk' notes in full - only LCR is disclosed as a liquidity metric.",
-        "MREL Ratio": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' note in full - no "
-                      "MREL requirement or ratio is mentioned.",
+        "MREL Ratio": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' note in full, and "
+                      "the FY2024 Pillar 3 report in full - no MREL requirement or ratio is mentioned in either.",
     },
 )
 
@@ -553,19 +676,25 @@ bw.add_overview_sheet(
     ratios=[
         ("CET1 Ratio", CET1_RATIO),
         ("Tier 1 Ratio", TIER1_RATIO),
-        ("Total Capital Ratio", {}),
-        ("Leverage Ratio", {}),
+        ("Total Capital Ratio", TOTAL_CAPITAL_RATIO),
+        ("Leverage Ratio", LEVERAGE_RATIO),
         ("LCR", LCR_RATIO),
-        ("NSFR", {}),
+        ("NSFR", NSFR_RATIO),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page. This workbook covers FY2021-FY2024 (4 years, not the "
          "usual 5) since Brown Shipley's FY2025 accounts were still 'being processed' at Companies House as of "
          "this build. CET1 Ratio, Tier 1 Ratio, CET1 Capital, Tier 1 Capital, Total RWAs and LCR are all "
          "disclosed by Brown Shipley's own statutory accounts (the CET1/Tier 1 figures via each year's own "
-         "'Capital' note, re-confirmed by the 2026-09-06 correctness audit, HD-065) - only Total Capital/Total "
-         "Capital Ratio, Leverage Ratio, NSFR and MREL Ratio are not publicly disclosed by this entity; see each "
-         "metric sheet for detail.",
+         "'Capital' note, re-confirmed by the 2026-09-06 correctness audit, HD-065). UPDATE (2026-09-15 "
+         "maximum-effort disclosure sweep): Brown Shipley's own standalone 'Pillar 3 Disclosures 2024' report "
+         "was located on the Bank's own domain - it is not linked from any current page of that site, which is "
+         "why earlier passes concluded it did not exist. It supplies Total Capital and Total Capital Ratio for "
+         "FY2024 directly (and establishes Tier 2 = nil, from which FY2021-FY2023 follow), plus Leverage Ratio "
+         "and NSFR for FY2024 and FY2023. Leverage Ratio and NSFR remain blank for FY2022 and FY2021 - no Pillar "
+         "3 report of those years exists on either brownshipley.com or quintet.com, and the statutory accounts "
+         "disclose neither metric. MREL Ratio is not disclosed by this entity in any year. See each metric "
+         "sheet for detail.",
 )
 
 # ---------------------------------------------------------------

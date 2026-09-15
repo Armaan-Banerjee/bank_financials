@@ -135,7 +135,28 @@ def p3_sources(extra=""):
         "entity-level Pillar 3 disclosures for FY2021-FY2024. The FY2023/FY2024 UK KM1 tables disclose "
         "CET1, Tier 1, total capital, RWA, capital ratios, leverage, LCR and NSFR; FY2021/FY2022's older "
         "disclosures give the capital base and RWA components. These replace the prior incorrect blanket "
-        "claim that no Pillar 3 document existed. MREL remains not disclosed.\n"
+        "claim that no Pillar 3 document existed. MREL remains not disclosed.\n\n"
+        "FY2025 PILLAR 3 STATUS (re-verified 15 September 2026): no FY2025 Pillar 3 disclosure has been "
+        "published. Four filename permutations under the Bank's own /assets/Uploads/ paths return a genuine "
+        "404 while the FY2024 file at the same path still serves a 775KB PDF, so the site is live and the "
+        "FY2025 document simply is not there; a Wayback CDX sweep of the whole fidbank.co.uk domain filtered "
+        "on 'pillar' returns exactly three documents, the newest being the FY2024 edition (archived 17 January "
+        "2026). FidBank publishes its Pillar 3 roughly 12-13 months after year-end, so the FY2025 edition "
+        "would be expected around January 2027.\n"
+        "Consequently CET1 Ratio, Tier 1 Ratio, Total RWAs, Leverage Ratio and NSFR are all BLANK for FY2025 "
+        "and are NOT derived. The FY2025 Annual Report (a scanned, image-only filing with no text layer - "
+        "Creator 'go-tiff2pdf' - read here by rendering all 69 pages at 250 dpi and OCRing, with every figure "
+        "used re-checked visually at 450 dpi) discloses the capital AMOUNT (Total Tier 1 = Total Regulatory "
+        "Capital = US$55,665k, Note 30, p.64) and the LCR (178%, Performance Metrics, p.7), but gives NO "
+        "risk-weighted-asset amount, NO leverage ratio and NO NSFR anywhere in the document ('stable funding' "
+        "returns zero hits). Total RWAs is specifically NOT back-solved from capital / the 21.99% ratio: the "
+        "ratio is rounded to 2dp and the document contradicts itself on its value (see the Total Capital Ratio "
+        "sheet), so any implied RWA would be both imprecise and basis-ambiguous.\n"
+        "COMPARATIVE DISCREPANCY, recorded not resolved: the FY2025 Annual Report's capital table shows a "
+        "FY2024 comparative of US$55,005k, whereas this workbook carries US$55,029k for FY2024 sourced from "
+        "the FY2024 Pillar 3 disclosure itself. The US$24k difference is unexplained in the document. Per this "
+        "project's convention of preferring each year's own report, the FY2024 figure is left at 55,029 from "
+        "its own Pillar 3; the AR's differing comparative is flagged here rather than silently overwritten.\n"
         + extra
     )
 
@@ -450,7 +471,7 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=220)
 
 
-CAPITAL_RATIO = {"FY2025": "21.46%", "FY2024": "43%", "FY2023": "98%", "FY2022": "54%", "FY2021": "40%"}
+CAPITAL_RATIO = {"FY2025": "21.99%", "FY2024": "43%", "FY2023": "98%", "FY2022": "54%", "FY2021": "40%"}
 LCR = {"FY2025": "178%", "FY2024": "243%"}
 CAPITAL_AMOUNT = stock({"FY2025": 55665, "FY2024": 55029, "FY2023": 57034, "FY2022": 35045, "FY2021": 40718})
 REGULATORY_RWA = stock({"FY2024": 133310, "FY2023": 60485, "FY2022": 65571, "FY2021": 102825})
@@ -476,7 +497,20 @@ metric("Total Capital", "£'000 (conv. from USD)", [("Total Regulatory Capital",
 
 metric("Total Capital Ratio", "%", [("Total capital ratio", {"FY2024": "41.28%", "FY2023": "94.29%", "FY2022": "53.45%", "FY2021": "39.60%"}),
                                          ("Annual Report capital-ratio proxy (Shareholders' Funds ÷ RWA)", CAPITAL_RATIO)],
-       p3_sources(), note="The first row is the standard regulatory ratio from FidBank UK's own Pillar 3 disclosures. The Annual Report's different accounting-equity proxy is retained separately for comparability.")
+       p3_sources(), note="The first row is the standard regulatory ratio from FidBank UK's own Pillar 3 disclosures. "
+       "The Annual Report's different accounting-equity proxy is retained separately for comparability - the two bases "
+       "demonstrably differ (FY2024: 41.28% on the KM1 basis vs 43% on the AR proxy), which is why no FY2025 KM1-basis "
+       "ratio is inferred from the AR. "
+       "FY2025 PROXY VALUE CORRECTED AND A SOURCE INCONSISTENCY FLAGGED (verified 15 September 2026): this cell "
+       "previously read 21.46%, a figure that appears NOWHERE in the FY2025 Annual Report and was a transcription "
+       "error. The Annual Report itself states the FY2025 capital ratio TWO DIFFERENT WAYS: the 'Key Performance "
+       "Indicators' section (p.12) gives 21.99% twice - 'FBUK's capital over risk weighted assets was 21.99% (2024: "
+       "43%)' and 'decreased from 43% in 2024 to 21.99% in 2025' - while the 'Performance Metrics' infographic (p.7) "
+       "gives 21.64% for the same measure and year. Both readings were confirmed visually at 450 dpi, not by OCR "
+       "alone. This workbook uses the 21.99% figure because it appears in the formal KPI section of the Strategic "
+       "Report, is stated twice, and is accompanied by a narrative explanation of the movement, whereas p.7 is a "
+       "summary infographic; the 21.64% alternative is recorded here rather than discarded, and the inconsistency is "
+       "the Bank's own, not this workbook's.")
 
 metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", REGULATORY_RWA)], p3_sources(),
        note="FY2024-FY2022 are directly disclosed in UK KM1. FY2021 is the sum of the source's own Pillar 1 capital requirements divided by 8%; it reconciles to the Annual Report's rounded 40% capital proxy.")

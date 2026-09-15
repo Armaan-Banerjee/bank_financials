@@ -575,12 +575,12 @@ metric(
 # Sheet: RWA Breakdown - HSBC Bank plc's own entity-level UK OV1 table
 # ---------------------------------------------------------------
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2025": 56633, "FY2024": 57911, "FY2023": 58620, "FY2021": 60450, "FY2020": 69671, "FY2019": 75389, "FY2018": 88822}),
-    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 20958, "FY2024": 18201, "FY2023": 17037, "FY2021": 16389, "FY2020": 19342, "FY2019": 21173, "FY2018": 24669}),
-    ("DATA", "Settlement risk", {"FY2025": 41, "FY2024": 27, "FY2023": 29, "FY2021": 45, "FY2020": 2, "FY2019": 113}),
-    ("DATA", "Securitisation exposures in the non-trading book", {"FY2025": 2908, "FY2024": 3545, "FY2023": 3363, "FY2021": 3734, "FY2020": 4744, "FY2019": 3819}),
-    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 16799, "FY2024": 18519, "FY2023": 15525, "FY2021": 9828, "FY2020": 14589, "FY2019": 13107, "FY2018": 17534}),
-    ("DATA", "Operational risk", {"FY2025": 15001, "FY2024": 14048, "FY2023": 12875, "FY2021": 10512, "FY2020": 11245, "FY2019": 11812, "FY2018": 12850}),
+    ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2025": 56633, "FY2024": 57911, "FY2023": 58620, "FY2022": 65365, "FY2021": 60450, "FY2020": 69671, "FY2019": 75389, "FY2018": 88822}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 20958, "FY2024": 18201, "FY2023": 17037, "FY2022": 17834, "FY2021": 16389, "FY2020": 19342, "FY2019": 21173, "FY2018": 24669}),
+    ("DATA", "Settlement risk", {"FY2025": 41, "FY2024": 27, "FY2023": 29, "FY2022": 147, "FY2021": 45, "FY2020": 2, "FY2019": 113}),
+    ("DATA", "Securitisation exposures in the non-trading book", {"FY2025": 2908, "FY2024": 3545, "FY2023": 3363, "FY2022": 3456, "FY2021": 3734, "FY2020": 4744, "FY2019": 3819}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 16799, "FY2024": 18519, "FY2023": 15525, "FY2022": 15822, "FY2021": 9828, "FY2020": 14589, "FY2019": 13107, "FY2018": 17534}),
+    ("DATA", "Operational risk", {"FY2025": 15001, "FY2024": 14048, "FY2023": 12875, "FY2022": 11547, "FY2021": 10512, "FY2020": 11245, "FY2019": 11812, "FY2018": 12850}),
     ("DATA", "Amounts below the thresholds for deduction (FY2020/FY2021 own separate line only)", {"FY2021": 3356, "FY2020": 2799}),
     ("TOTAL", "Total RWAs", {"FY2025": 112340, "FY2024": 112251, "FY2023": 107449, "FY2022": 114171, "FY2021": 104314, "FY2020": 122392, "FY2019": 125413, "FY2018": 143875}),
 ]
@@ -591,9 +591,17 @@ RWA_BREAKDOWN_SOURCES = (
     f"FY2025: HSBC Bank plc Pillar 3 Disclosures at 31 December 2025, Table 4, p.10 - {P32025_URL}\n"
     f"FY2024: HSBC Bank plc Pillar 3 Disclosures at 31 December 2024, Table 4, p.10 - {P32024_URL}\n"
     f"FY2023: HSBC Bank plc Pillar 3 Disclosures at 31 December 2023, Table 7, p.13 - {P32023_URL}\n"
-    f"FY2022: genuinely not disclosed at category level - confirmed by reading the FY2022 Pillar 3 Disclosures "
-    f"in full - only an aggregate Total RWAs figure appears in Table 1 (KM1), no RWA-by-risk-type breakdown "
-    f"table exists in this vintage of the document - {P32022_URL}\n"
+    f"FY2022: HSBC Bank plc Pillar 3 Disclosures at 31 December 2022, Table 2 'Overview of risk-weighted "
+    f"exposure amounts (OV1)', p.3 - {P32022_URL}. CORRECTION (2026-09-12 independent re-verification): this "
+    f"sheet previously stated FY2022's category breakdown was 'genuinely not disclosed' and that 'no RWA-by-"
+    f"risk-type breakdown table exists in this vintage of the document' - that claim was factually wrong; "
+    f"Table 2 (OV1) is present on p.3 of the same document already cited elsewhere on this sheet and gives "
+    f"the full category split. Figures used here: Credit risk (excl. CCR) 65,365; CCR 17,834; Settlement risk "
+    f"147; Securitisation 3,456; Market risk 15,822; Operational risk 11,547 - these sum exactly to the "
+    f"document's own printed Total of 114,171, which also ties to this workbook's Total RWAs sheet. The "
+    f"document's own line 24 ('of which: Amounts below the thresholds for deduction', £6,025m) is a footnoted "
+    f"memo item nested inside the Credit risk row (as in FY2023-FY2025), not a separately-addable component - "
+    f"left blank for FY2022 for the same reason it's blank FY2023-FY2025.\n"
     f"FY2021: HSBC Bank plc Pillar 3 Disclosures at 31 December 2021, Table 2, p.3 - {P32021_URL}\n"
     f"FY2020: HSBC Bank plc Pillar 3 Disclosures at 31 December 2020, Table 2 'Overview of RWAs', p.9 - {P32020_URL}\n"
     f"FY2019: HSBC Bank plc Pillar 3 Disclosures at 31 December 2019, Table 2 'Overview of RWAs (OV1)', p.3 - {P32019_URL}\n"
@@ -616,7 +624,7 @@ RWA_BREAKDOWN_SOURCES = (
 
 bw.add_rwa_breakdown_sheet(
     title="HSBC Bank plc — RWA Breakdown",
-    subtitle="£m, entity-level Pillar 3 UK OV1 template (or FY2018's coarser pre-OV1 equivalent). FY2022 genuinely not disclosed at category level - see source note.",
+    subtitle="£m, entity-level Pillar 3 UK OV1 template (or FY2018's coarser pre-OV1 equivalent).",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=88,

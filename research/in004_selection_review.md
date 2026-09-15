@@ -5,7 +5,7 @@ label or period variant was available. It is the manual-review queue
 for deciding whether the current explicit priorities are appropriate.
 Rows are from `research/insights.db` (source of truth); no workbook was read or changed.
 
-## Leverage ratio (48 FRN-year collisions)
+## Leverage ratio (49 FRN-year collisions)
 
 | FRN | Bank | Year | Candidate label | Value | Basis note |
 |---:|---|---:|---|---:|---|
@@ -73,6 +73,8 @@ Rows are from `research/insights.db` (source of truth); no workbook was read or 
 | 223304 | SMBC | 2024 | Leverage ratio including claims on central banks (%) | 9.2 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
 | 223304 | SMBC | 2025 | Leverage ratio excluding claims on central banks (%) | 10.1 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
 | 223304 | SMBC | 2025 | Leverage ratio including claims on central banks (%) | 7.0 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
+| 223304 | SMBC | 2026 | Leverage ratio excluding claims on central banks (%) | 8.3 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
+| 223304 | SMBC | 2026 | Leverage ratio including claims on central banks (%) | 7.2 | £m, converted from USD - see source note at bottom for FX methodology and rates used. |
 | 629564 | OAKNORTH BANK | 2017 | Leverage ratio excluding central banks | 41.0 | Bank Group basis for FY2022–FY2025; standalone Bank basis for FY2015–FY2021, £'000 |
 | 629564 | OAKNORTH BANK | 2017 | Leverage ratio including central banks | 30.1 | Bank Group basis for FY2022–FY2025; standalone Bank basis for FY2015–FY2021, £'000 |
 | 629564 | OAKNORTH BANK | 2018 | Leverage ratio excluding central banks | 25.2 | Bank Group basis for FY2022–FY2025; standalone Bank basis for FY2015–FY2021, £'000 |
@@ -140,4 +142,4 @@ leverage and group-versus-bank or restatement variants in cash flow.
 The aggregate trend counts should not be treated as final for affected
 metrics until material exceptions are resolved.
 
-Total exception groups: 58.
+Total exception groups: 59.

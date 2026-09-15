@@ -28,6 +28,19 @@ class In020RegulatoryContextTests(unittest.TestCase):
         self.assertEqual(result["value"], 7.0)
         self.assertEqual(result["distance"], 5.0)
 
+    def test_matches_when_unit_column_is_unset_but_value_raw_carries_percent(self):
+        # Regression: `unit` is NULL for virtually every real row in
+        # annual_metrics (never populated at extraction time) - the original
+        # `observation.get("unit") != "%"` check here returned
+        # "context_unavailable" for 100% of real observations, silently
+        # emptying the whole observation_context.csv Power BI export. Must
+        # fall back to the literal "%" surviving in value_raw, exactly like
+        # in021_headroom_trajectory.py's applicable_context() already does
+        # against this identical CONTEXT table.
+        result = match_context({"metric": "CET1 Ratio", "fiscal_year": 2025, "value_raw": "10%", "reporting_basis": "entity", "value_numeric": "10"})
+        self.assertEqual(result["status"], "matched")
+        self.assertEqual(result["value"], 7.0)
+
     def test_unclassified_basis_is_not_given_a_threshold(self):
         result = match_context({"metric": "CET1 Ratio", "fiscal_year": 2025, "unit": "%", "value_numeric": "10"})
         self.assertEqual(result["status"], "context_unavailable")

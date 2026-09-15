@@ -174,20 +174,23 @@ RWA_NOTE = (
     " Total differs immaterially (<0.02%) from the Total RWAs metric sheet's KM1-sourced figure - both are"
     " the bank's own published numbers; the gap is a KM1-vs-OV1 rounding difference of the same kind already"
     " documented on the Total RWAs sheet, not a data error.\n\n"
-    "FY2020 GENUINE WHOLE-YEAR SELF-SKIP FOR THIS SHEET ONLY: no OV1-format category split (Credit risk /"
-    " CCR / Securitisation / Operational risk) exists for FY2020 anywhere. FY2020's own solo Pillar 3"
-    " disclosure predates the OV1 template just as FY2021's does, but unlike FY2021, no later disclosure"
-    " carries a FY2020 comparative OV1 column to fall back on (the FY2022 disclosure's own OV1 table only"
-    " goes back to its 2021 (T-1) comparative, one year, not two). FY2020's own document instead publishes a"
-    " differently-structured 'Pillar 1 capital requirement' table (8%-capital by CRR exposure class: Central"
-    " government, Institutions, Retail, Secured by mortgages, Exposures in default, Other items), which is"
-    " not a like-for-like mapping onto OV1's Credit risk/CCR/Securitisation/Operational categories - in"
-    " particular, FY2020's securitisation exposure (the BBB Enable Guarantee) is deducted directly from Own"
-    " Funds under that year's own disclosure, not carved out of credit risk RWA the way the OV1 template's"
-    " negative 'Securitisation exposures' line does in later years - so forcing FY2020's numbers into the"
-    " OV1 row structure would misrepresent the source rather than merely reformat it. FY2020's own Total RWA"
-    " figure (1,294,667) is still captured on the Total RWAs Pillar 3 metric sheet, sourced directly from"
-    " that year's own Appendix 1 (row 60); only this sheet's category breakdown is left blank for FY2020."
+    "FY2020 (2026-09-08 correction — now included on its own SOLO basis, derived, not OV1-format): no"
+    " OV1-format category split (Credit risk / CCR / Securitisation / Operational risk) exists for FY2020"
+    " anywhere, and no later disclosure carries a FY2020 comparative OV1 column to fall back on (the FY2022"
+    " disclosure's own OV1 table only goes back to its 2021 (T-1) comparative, one year, not two). FY2020's own"
+    " document instead publishes a differently-structured 'Pillar 1 capital requirement' table (section 5.2,"
+    " p.28) which DOES split by RISK TYPE - not the exposure-class table (8%-capital by CRR exposure class:"
+    " Central government, Institutions, Retail, Secured by mortgages, Exposures in default, Other items, which"
+    " sits ABOVE it in the same table and is itself only a further breakdown of the credit risk row, not used"
+    " here): 'Credit risk minimum Pillar 1 capital requirement' (93,316), 'Operational risk Pillar 1 capital"
+    " requirement (basic indicator approach)' (10,257), and market risk is a genuine disclosed nil ('the Bank"
+    " does not have a trading book and as such its exposure to market risk is immaterial') - summing to the"
+    " table's own 'Pillar 1 capital requirement' total (103,573). Each figure is that capital requirement x 12.5"
+    " (= / 8%), the standard Basel/CRR identity - not an estimate. This FY2020 breakdown is SOLO basis (United"
+    " Trust Bank Limited entity-level, per that year's own document title), NOT consolidated UTB Partners Plc"
+    " basis like every other year on this sheet - shown in its own separate SECTION block, not blended with the"
+    " OV1 rows above. FY2020's own Total RWA figure (1,294,667, from Appendix 1 row 60) is also on the Total"
+    " RWAs Pillar 3 metric sheet; this derived breakdown's own total (1,294,662.5) ties to within £5k."
 )
 
 
@@ -201,8 +204,9 @@ def rwa_sources():
         "FY2022: UTB Partners Pillar 3 Disclosure 2022, Table UK OV1, p.32 - " + P3["FY2022"] + "\n"
         "FY2021: UTB Partners Pillar 3 Disclosure 2022, Table UK OV1, 2021 (T-1) comparative column,"
         " p.32 - " + P3["FY2022"] + "\n"
-        "FY2020: United Trust Bank Limited Pillar 3 disclosures as at 31 December 2020 (solo basis), Pillar 1"
-        " capital requirement table p.28 and Appendix 1 row 60 (Total RWA figure only) - " + P3["FY2020"] + "\n\n"
+        "FY2020 (SOLO basis, DERIVED via x12.5, see note): United Trust Bank Limited Pillar 3 disclosures as at"
+        " 31 December 2020, section 5.2 'Pillar 1 capital requirement' table, p.28, and Appendix 1 row 60 (Total"
+        " RWA figure, used on the Total RWAs sheet) - " + P3["FY2020"] + "\n\n"
         + RWA_NOTE
     )
 
@@ -537,8 +541,11 @@ metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", {
 
 bw.add_rwa_breakdown_sheet(
     title="United Trust Bank Limited — RWA Breakdown",
-    subtitle="Consolidated UTB Partners Plc basis, £'000. Table UK OV1 - Overview of risk-weighted exposure amounts.",
+    subtitle="FY2025-FY2021: Consolidated UTB Partners Plc basis, Table UK OV1 - Overview of risk-weighted "
+             "exposure amounts, £'000. FY2020: United Trust Bank Limited SOLO basis, derived from disclosed "
+             "Pillar 1 capital requirement x 12.5 - see the second SECTION block below and the sources note.",
     rows=[
+        ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts (CONSOLIDATED)", {}),
         ("DATA", "Credit risk (excluding CCR)", {
             "FY2025": 2654604, "FY2024": 2420072, "FY2023": 2198914, "FY2022": 1702127, "FY2021": 1261719,
         }),
@@ -554,10 +561,25 @@ bw.add_rwa_breakdown_sheet(
         ("TOTAL", "Total risk-weighted exposure amount (Table UK OV1)", {
             "FY2025": 2785964, "FY2024": 2535339, "FY2023": 2277865, "FY2022": 1738778, "FY2021": 1340342,
         }),
+        # Own SECTION block, not folded into the OV1 block above: FY2020's own
+        # Pillar 3 disclosure predates the OV1 template and is on a different
+        # basis entirely (United Trust Bank Limited SOLO, not consolidated
+        # UTB Partners Plc). It publishes a Pillar 1 capital requirement table
+        # (section 5.2, p.28) that DOES split by risk type (credit / operational;
+        # market risk is a genuine disclosed nil - "the Bank does not have a
+        # trading book") - each figure below is that table's own capital-
+        # requirement figure x 12.5 (= / 8%), the standard Basel/CRR identity,
+        # not an estimate. Total ties to within £5k of the Total RWAs sheet's
+        # own FY2020 figure (1,294,667).
+        ("SECTION", "Pillar 1 capital requirement × 12.5 (SOLO, derived from disclosed capital requirement)", {}),
+        ("DATA", "Credit risk", {"FY2020": 93316 * 12.5}),
+        ("DATA", "Market risk (nil — Bank has no trading book)", {"FY2020": 0}),
+        ("DATA", "Operational risk", {"FY2020": 10257 * 12.5}),
+        ("TOTAL", "Total risk-weighted exposure amount (derived)", {"FY2020": 103573 * 12.5}),
     ],
     sources_text=rwa_sources(),
     first_col_width=68,
-    source_height=200,
+    source_height=260,
 )
 
 metric("Leverage Ratio", "£'000 / %", [

@@ -55,6 +55,16 @@ const CASHFLOW_COLOR = {
   "Financing activities": "#a6741f", "Net change in cash": "#52585f",
 };
 function fmtK(v){ return (v<0?'-£':'£') + Math.round(Math.abs(v)).toLocaleString(); }
+// Total assets spans a few million to over a trillion £ across 145 banks -
+// fmtK's full-digit form is unreadable as a chart axis tick at that range,
+// so balance-sheet.html's size chart abbreviates to £Xbn/£Xm instead;
+// tooltips still use fmtK for the exact figure.
+function fmtBn(v){
+  const sign = v < 0 ? '-£' : '£', abs = Math.abs(v);
+  if (abs >= 1e9) return sign + (abs / 1e9).toFixed(abs >= 1e11 ? 0 : 1) + 'bn';
+  if (abs >= 1e6) return sign + (abs / 1e6).toFixed(abs >= 1e8 ? 0 : 1) + 'm';
+  return fmtK(v);
+}
 const CATEGORICAL_PALETTE = ["#1e3a5f","#1f6e52","#a6741f","#9c3b2e","#5b3a5c","#45566b","#2b5f63","#8c4a2f","#5c6b73","#8a7f64","#3f4b3a"];
 function rwaCatColor(label){
   const l = label.toLowerCase();
@@ -208,6 +218,54 @@ function rwaCatMiniChart(canvas, rows){
       indexAxis: 'y', responsive: true, maintainAspectRatio: false,
       scales: { x: { stacked:true, display:false, max: 100 }, y: { stacked:true, display:false } },
       plugins: { tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%` } } },
+    },
+  });
+  return true;
+}
+// Fuller RWA-category chart (one horizontal bar per category, with axis
+// labels/%'s shown) - used by the per-bank drilldown page, which has a full
+// detail panel to draw into rather than rwaCatMiniChart's small card space.
+// Resizes its own `.mini-chart-wrap` to fit however many categories this
+// bank discloses.
+function rwaCatChart(canvas, rows){
+  if (!rows) return false;
+  const filtered = rows.filter(r => r.pct_of_total_rwa > 0.05);
+  if (!filtered.length) return false;
+  const wrap = canvas.closest('.mini-chart-wrap');
+  if (wrap) wrap.style.height = Math.max(150, filtered.length * 28) + 'px';
+  new Chart(canvas, {
+    type: 'bar',
+    data: { labels: distinguishingLabels(filtered), datasets: [{
+      data: filtered.map(r => r.pct_of_total_rwa), backgroundColor: filtered.map(r => rwaCatColor(r.label)),
+    }] },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      scales: { x: { ticks: { callback: v => v+'%' }, grid: { color: '#edece7' } }, y: { grid: { display: false } } },
+    },
+  });
+  return true;
+}
+// Same rows/threshold/coloring as rwaCatChart above - just a pie instead of
+// a bar, as an alternate view (user request, 2026-09-08) toggled from the
+// per-bank drilldown page rather than replacing the bar outright, since a
+// stacked bar is still the easier read when one category dominates.
+function rwaCatPieChart(canvas, rows){
+  if (!rows) return false;
+  const filtered = rows.filter(r => r.pct_of_total_rwa > 0.05);
+  if (!filtered.length) return false;
+  const wrap = canvas.closest('.mini-chart-wrap');
+  if (wrap) wrap.style.height = '340px';
+  new Chart(canvas, {
+    type: 'pie',
+    data: { labels: distinguishingLabels(filtered), datasets: [{
+      data: filtered.map(r => r.pct_of_total_rwa), backgroundColor: filtered.map(r => rwaCatColor(r.label)),
+      borderColor: '#fff', borderWidth: 1,
+    }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: true, position: 'right', labels: { boxWidth: 10, font: { size: 11 } } },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.label}: ${ctx.raw.toFixed(1)}%` } },
+      },
     },
   });
   return true;
@@ -372,6 +430,38 @@ function initTrajectoryBankPicker(container, canvas, metric, banks, trends, frnN
     });
   });
   redraw();
+}
+
+// A searchable, scrollable sidebar version of the plain .bank-picker
+// checkbox grid (see initRwaBankPicker above) - same checkbox-driven
+// overlay-chart behavior, just findable in a list of ~145 banks instead of
+// scanning a flat wall of checkboxes. The returned root keeps idPrefix as
+// its own id, so it's a drop-in replacement anywhere a plain .bank-picker
+// checkbox container was expected (initTrajectoryBankPicker etc. just
+// query `input[type=checkbox]` inside it).
+function bankPickerSidebarHtml(idPrefix, banks){
+  return `<div class="bank-picker-sidebar" id="${idPrefix}">
+    <div class="bank-picker-search"><input type="text" placeholder="Search banks…" autocomplete="off"></div>
+    <div class="bank-picker-list">
+      ${banks.map(b => `<label><input type="checkbox" value="${b}"><span class="sw" style="background:${BANK_COLOR[b]}"></span><span class="n">${b}</span></label>`).join('')}
+    </div>
+    <div class="bank-picker-none" hidden>No banks match.</div>
+  </div>`;
+}
+function wireBankPickerSearch(container){
+  const search = container.querySelector('.bank-picker-search input');
+  const none = container.querySelector('.bank-picker-none');
+  if (!search) return;
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    let anyVisible = false;
+    container.querySelectorAll('.bank-picker-list label').forEach(el => {
+      const match = el.querySelector('.n').textContent.toLowerCase().includes(q);
+      el.style.display = match ? '' : 'none';
+      if (match) anyVisible = true;
+    });
+    none.hidden = anyVisible;
+  });
 }
 
 // ---- comparison.html: regulatory headroom trajectory (IN-052) ----
@@ -765,6 +855,204 @@ function incomeMixPct(yearCats){
 
 const PILLAR3_CAPITAL_SHEETS = ["CET1 Ratio", "Tier 1 Ratio", "Total Capital Ratio", "Leverage Ratio", "MREL Ratio"];
 const PILLAR3_LIQUIDITY_SHEETS = ["LCR", "NSFR"];
+// Per-bank strength scorecard (user request, 2026-09-08): a radar/spider
+// chart, one point per Pillar 3 metric, plotting this bank's PERCENTILE
+// RANK (0-100, pre-computed server-side by curate_radar_percentiles - see
+// that function's own docstring for why raw %'s can't share one radar
+// scale) rather than the raw ratio. A dashed "peer median" ring at 50 on
+// every axis gives an immediate visual reference: past the ring on an axis
+// is stronger than the median bank, short of it is weaker.
+const RADAR_METRIC_ORDER = ["CET1 Ratio", "Leverage Ratio", "LCR", "NSFR", "MREL Ratio", "Total Capital Ratio"];
+const RADAR_METRIC_SHORT_LABEL = {
+  "CET1 Ratio": "CET1", "Leverage Ratio": "Leverage", "LCR": "LCR", "NSFR": "NSFR",
+  "MREL Ratio": "MREL", "Total Capital Ratio": "Total cap.",
+};
+// Small corner card next to the headline KPIs (moved here + shrunk 2026-
+// 09-08 per user feedback - a full-width 420px chart read as more
+// prominent than the KPI figures themselves). No legend (no room at this
+// size - a title attribute on the card's own wrapper carries the
+// explanation instead) and a much lighter fill (0x14 ~= 8% alpha, down
+// from 0x33 ~= 20%) so the shape reads as a light wash under the outline,
+// not a solid block competing with the KPI numbers beside it.
+function radarChart(canvas, radar, bank){
+  const labels = RADAR_METRIC_ORDER.filter(m => radar[m]);
+  const shortLabels = labels.map(m => RADAR_METRIC_SHORT_LABEL[m] || m);
+  const values = labels.map(m => radar[m].percentile);
+  const color = BANK_COLOR[bank] || '#2563eb';
+  // BANK_COLOR values are hsl(...) strings, not hex - appending a hex alpha
+  // suffix (the previous approach) produces an invalid CSS color string
+  // that canvas silently ignores, rendering fully opaque instead of faint.
+  // Chart.js's own bundled color parser (Chart.helpers.color) understands
+  // hsl() and hex alike, so it's used here instead of string concatenation.
+  const fill = Chart.helpers.color(color).alpha(0.12).rgbString();
+  return new Chart(canvas, {
+    type: 'radar',
+    data: {
+      labels: shortLabels,
+      datasets: [
+        {
+          label: 'Peer median', data: labels.map(() => 50),
+          borderColor: '#c7c2b4', backgroundColor: 'transparent', borderDash: [3, 3],
+          pointRadius: 0, borderWidth: 1,
+        },
+        {
+          label: bank, data: values,
+          borderColor: color, backgroundColor: fill, pointBackgroundColor: color,
+          borderWidth: 1.5, pointRadius: 2,
+        },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      layout: { padding: 4 },
+      scales: {
+        r: {
+          min: 0, max: 100, ticks: { display: false }, backdropColor: 'transparent',
+          grid: { color: '#edece7' }, angleLines: { color: '#edece7' }, pointLabels: { font: { size: 9.5 } },
+        },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => {
+          if (ctx.dataset.label === 'Peer median') return 'Peer median: 50th percentile';
+          const m = labels[ctx.dataIndex];
+          const info = radar[m];
+          return `${bank}: ${info.value}% (${info.percentile}th percentile of ${info.n_peers} banks)`;
+        } } },
+      },
+    },
+  });
+}
+
+// Per-bank Sankey flow diagrams (user request, 2026-09-08), via the
+// vendored chartjs-chart-sankey plugin (registers a 'sankey' chart type
+// once loaded after Chart.js itself - see chartjs-chart-sankey.min.js's
+// own script tag in every page's <head>). `centerLabels` names the pass-
+// through node(s) ("Total income"/"Total assets") that get a fixed neutral
+// color; every other node is colored by first-seen order from the same
+// categorical palette used elsewhere in this file, so a bank's Sankey
+// doesn't invent a new color language.
+function sankeyNodeColorFn(links, centerLabels){
+  const seen = [];
+  links.forEach(l => { [l.from, l.to].forEach(n => { if (!centerLabels.includes(n) && !seen.includes(n)) seen.push(n); }); });
+  const map = {};
+  centerLabels.forEach(c => { map[c] = '#45566b'; });
+  seen.forEach((n, i) => { map[n] = CATEGORICAL_PALETTE[i % CATEGORICAL_PALETTE.length]; });
+  return (name) => map[name] || '#a39a86';
+}
+function sankeyChart(canvas, links, centerLabels, nodeLabels){
+  if (!links || links.length < 2) return null;
+  const colorFor = sankeyNodeColorFn(links, centerLabels);
+  return new Chart(canvas, {
+    type: 'sankey',
+    data: { datasets: [{
+      data: links,
+      colorFrom: (c) => colorFor(c.dataset.data[c.dataIndex].from),
+      colorTo: (c) => colorFor(c.dataset.data[c.dataIndex].to),
+      colorMode: 'gradient',
+      labels: nodeLabels || {},
+    }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => {
+          const p = ctx.raw;
+          return `${p.from} → ${p.to}: ${fmtK(p.flow)}`;
+        } } },
+      },
+    },
+  });
+}
+
+// Derives an ordered build-up/bridge sequence from the exact same links
+// data as the P&L Sankey above (curate_bank_pnl_sankey in build_deliverable.py)
+// - single source of truth in Python, this is just a different lens on it:
+// a step-by-step "income sources -> Total income -> Operating profit ->
+// Profit for the year" bridge instead of a flow diagram. User request,
+// 2026-09-08 (modeled on the classic "Apple earnings" waterfall alongside
+// its Sankey counterpart).
+function pnlWaterfallSteps(sankey){
+  const links = sankey.links;
+  const find = (from, to) => links.find(l => l.from === from && l.to === to);
+  const steps = [];
+  let running = 0;
+  links.forEach(l => {
+    if (l.to === 'Total income') {
+      steps.push({ label: l.from, value: l.flow, kind: 'increase' });
+      running += l.flow;
+    } else if (l.from === 'Total income' && l.to.endsWith(' (net cost)')) {
+      steps.push({ label: l.to.replace(/ \(net cost\)$/, ''), value: -l.flow, kind: 'decrease' });
+      running -= l.flow;
+    }
+  });
+  steps.push({ label: 'Total income', value: running, kind: 'subtotal' });
+
+  const opex = find('Total income', 'Operating expenses');
+  if (opex) {
+    steps.push({ label: 'Operating expenses', value: -opex.flow, kind: 'decrease' });
+    running -= opex.flow;
+    steps.push({ label: 'Operating profit', value: running, kind: 'subtotal' });
+    const provisions = find('Operating profit', 'Provisions & tax');
+    if (provisions) {
+      steps.push({ label: 'Provisions & tax', value: -provisions.flow, kind: 'decrease' });
+      running -= provisions.flow;
+      steps.push({ label: 'Profit for the year', value: running, kind: 'total' });
+    }
+  } else {
+    const costs = find('Total income', 'Costs, provisions & tax');
+    if (costs) {
+      steps.push({ label: 'Costs, provisions & tax', value: -costs.flow, kind: 'decrease' });
+      running -= costs.flow;
+      steps.push({ label: 'Profit for the year', value: running, kind: 'total' });
+    }
+  }
+  return steps;
+}
+// Chart.js has no native waterfall type, but a floating bar (a 'bar'
+// dataset whose data points are [low, high] pairs instead of a single
+// value) is a first-class, documented Chart.js feature - not a hand-rolled
+// chart - and is the standard way this shape gets built with it. A
+// grounded [0, value] bar marks each subtotal/total; every other bar
+// floats between the running total before and after its own step.
+const WATERFALL_COLOR = { increase: '#1f6e52', decrease: '#9c3b2e', subtotal: '#8a8f98', total: '#1e3a5f' };
+function pnlWaterfallChart(canvas, sankey){
+  const steps = pnlWaterfallSteps(sankey);
+  if (!steps.length) return false;
+  let running = 0;
+  const ranges = steps.map(s => {
+    if (s.kind === 'subtotal' || s.kind === 'total') {
+      running = s.value;
+      return [0, s.value];
+    }
+    const from = running;
+    running += s.value;
+    return [Math.min(from, running), Math.max(from, running)];
+  });
+  new Chart(canvas, {
+    type: 'bar',
+    data: { labels: steps.map(s => s.label), datasets: [{
+      data: ranges, backgroundColor: steps.map(s => WATERFALL_COLOR[s.kind]),
+    }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 30, minRotation: 0 } },
+        y: { ticks: { callback: v => fmtK(v) }, grid: { color: '#edece7' } },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => {
+          const s = steps[ctx.dataIndex];
+          const sign = s.kind === 'increase' ? '+' : (s.kind === 'decrease' ? '−' : '');
+          return `${s.label}: ${sign}${fmtK(Math.abs(s.value))}`;
+        } } },
+      },
+    },
+  });
+  return true;
+}
+
 function pillar3TrendChart(canvas, pillar3, sheetSubset, opts){
   // Capital ratios (roughly 0-60%) and liquidity ratios (LCR/NSFR, often
   // 100-1200%) share no readable scale - plotted together the capital lines
@@ -793,6 +1081,169 @@ function pillar3TrendChart(canvas, pillar3, sheetSubset, opts){
   });
   return true;
 }
+
+function percentile(sortedArr, p){
+  if (!sortedArr.length) return 0;
+  const idx = (sortedArr.length - 1) * p;
+  const lo = Math.floor(idx), hi = Math.ceil(idx);
+  return lo === hi ? sortedArr[lo] : sortedArr[lo] + (sortedArr[hi] - sortedArr[lo]) * (idx - lo);
+}
+// Cross-bank distribution, one box per year - shared by the Pillar 3
+// boxplot (comparison.html), the balance-sheet composition boxplot
+// (balance-sheet.html), and the P&L cost-ratio boxplot (profit-loss.html).
+// The `boxplot` type comes from the vendored chartjs-chart-boxplot plugin
+// (vendor/chartjs-chart-boxplot/), which self-registers on load same as
+// chartjs-chart-sankey does; it computes quartiles/whiskers/outliers
+// itself from a plain array of values per year. `years`/`boxes` are
+// already reduced by the caller (each page's own data shape differs -
+// pillar3 is keyed metric-then-year, capital_deployment/cost_base are
+// keyed year-then-metric - so the reduction stays in the caller, not here).
+function boxplotByYear(canvas, existingChart, years, boxes, opts){
+  opts = opts || {};
+  if (existingChart) existingChart.destroy();
+  if (!years.length) return null;
+  const color = opts.color || '#1e3a5f';
+  const unit = opts.unit || '%';
+  // A single small bank's freak ratio (e.g. a tiny denominator can put
+  // CET1 in the hundreds of %) auto-scales the whole y-axis around it,
+  // squashing every other bank's box into a sliver near zero - the same
+  // shared-linear-scale problem the bubble charts above already solve
+  // with a fixed axis cap. Here the cap is data-driven (95th percentile *
+  // 1.6) rather than a hand-picked constant, since one selector can cover
+  // several metrics with very different typical ranges (e.g. capital
+  // ratios vs LCR/NSFR).
+  const allValues = boxes.flat().sort((a, b) => a - b);
+  const rawMax = Math.max(percentile(allValues, 0.95) * 1.6, 10);
+  // Round up to a "nice" gridline step - a flat 10-unit step reads fine
+  // for a 0-150% range but produces an ugly axis top like "2370%" for
+  // LCR/NSFR, which can run into the thousands.
+  const niceStep = rawMax < 100 ? 10 : rawMax < 1000 ? 50 : rawMax < 5000 ? 100 : 500;
+  const yMax = Math.ceil(rawMax / niceStep) * niceStep;
+  const clipped = allValues.filter(v => v > yMax).length;
+  if (opts.noteEl) {
+    opts.noteEl.textContent = clipped
+      ? `Chart is capped at ${Math.round(yMax)}${unit} to keep the typical spread readable — ${clipped} bank-year value${clipped === 1 ? '' : 's'} above that are real disclosures, not errors, and sit off-chart.`
+      : '';
+  }
+  return new Chart(canvas, {
+    type: 'boxplot',
+    data: { labels: years, datasets: [{
+      label: opts.label || '',
+      data: boxes,
+      backgroundColor: color + '2e', borderColor: color, borderWidth: 1.5,
+      outlierColor: '#9c3b2e', itemRadius: 2, itemStyle: 'circle', medianColor: color,
+    }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { max: yMax, ticks: { callback: v => v + unit }, grid: { color: '#edece7' } },
+        x: { grid: { display: false } },
+      },
+      plugins: { legend: { display: false } },
+    },
+  });
+}
+
+function pillar3BoxplotChart(canvas, existingChart, data, banks, metric, noteEl){
+  const years = [...new Set(banks.flatMap(b => Object.keys(data[b].pillar3?.[metric] || {})))].sort();
+  const boxes = years.map(y => banks.map(b => data[b].pillar3?.[metric]?.[y]).filter(v => v != null));
+  return boxplotByYear(canvas, existingChart, years, boxes, {
+    color: (PILLAR3_STYLE[metric] || {}).color, label: PILLAR3_LABEL[metric] || metric, noteEl,
+  });
+}
+
+// `seriesByBank` is {bank: {year: {metric: value}}} - the shape
+// capital_deployment and cost_base already use (unlike pillar3, which is
+// metric-then-year), so this covers balance-sheet.html and profit-loss.html
+// both without re-deriving anything server-side.
+function yearMetricBoxplotChart(canvas, existingChart, seriesByBank, metric, opts){
+  // Years come from whichever have data for THIS metric specifically, not
+  // the union across every metric in seriesByBank - personnel/other-opex
+  // expense-as-%-of-revenue only starts in 2007 while cost-to-income goes
+  // back to 1997, so unioned years left the chart half-empty (real boxes
+  // 2007 on, blank axis space 1997-2006) whenever the metric switched to
+  // one with a shorter history.
+  const allYears = [...new Set(Object.values(seriesByBank).flatMap(s => Object.keys(s)))].sort();
+  const withData = allYears
+    .map(y => [y, Object.values(seriesByBank).map(s => s[y]?.[metric]).filter(v => v != null)])
+    .filter(([, vals]) => vals.length);
+  return boxplotByYear(canvas, existingChart, withData.map(([y]) => y), withData.map(([, vals]) => vals), opts);
+}
+
+// A denser, Yahoo/Google-Finance-style read on the parent's share price
+// (user request, 2026-09-09: "more of the graph you would see on Google
+// or yahoo finance than a simple once a year thing") - real daily closes
+// where fetch_market_data.py has them, falling back to the coarser
+// year-end series for stale data files from before history_daily existed.
+// Overlays a second, marker-only dataset at each verified full-year
+// results announcement date (REPORT_ANNOUNCEMENT_DATES in
+// build_deliverable.py) - "highlight the days when these financial
+// reports came out" - snapped to the nearest trading day actually present
+// in the series (RNS dates are weekdays, but a specific day can still be
+// a data gap) within a 5-day window either side.
+function parentMarketDataChart(canvas, pmd){
+  const daily = Object.entries(pmd.history_daily || {}).sort((a, b) => a[0] < b[0] ? -1 : 1);
+  let dates, prices;
+  if (daily.length > 1) {
+    dates = daily.map(e => e[0]);
+    prices = daily.map(e => e[1]);
+  } else {
+    dates = Object.keys(pmd.history || {}).sort();
+    if (dates.length < 2) return false;
+    prices = dates.map(y => pmd.history[y]);
+  }
+  const dateIndex = new Map(dates.map((d, i) => [d, i]));
+  const markerData = new Array(dates.length).fill(null);
+  const markerLabels = new Array(dates.length).fill(null);
+  Object.entries(pmd.report_dates || {}).forEach(([year, dateStr]) => {
+    let idx = dateIndex.get(dateStr);
+    for (let offset = 1; idx === undefined && offset <= 5; offset++) {
+      for (const dir of [1, -1]) {
+        const cand = new Date(dateStr);
+        cand.setUTCDate(cand.getUTCDate() + dir * offset);
+        idx = dateIndex.get(cand.toISOString().slice(0, 10));
+        if (idx !== undefined) break;
+      }
+    }
+    if (idx !== undefined) {
+      markerData[idx] = prices[idx];
+      markerLabels[idx] = `FY${year} results announced — ${dateStr}`;
+    }
+  });
+  const hasMarkers = markerData.some(v => v != null);
+
+  new Chart(canvas, {
+    type: 'line',
+    data: { labels: dates, datasets: [
+      {
+        label: 'Share price', data: prices,
+        borderColor: '#5c3d8f', backgroundColor: 'rgba(92,61,143,0.08)',
+        fill: true, tension: 0.05, pointRadius: 0, borderWidth: 1.5,
+      },
+      ...(hasMarkers ? [{
+        label: 'Results announced', data: markerData,
+        showLine: false, pointStyle: 'rectRot', pointRadius: 5, pointHoverRadius: 7,
+        borderColor: '#a6741f', backgroundColor: '#a6741f',
+      }] : []),
+    ] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        y: { ticks: { callback: v => v + 'p' }, grid: { color: '#edece7' } },
+        x: { grid: { display: false }, ticks: { autoSkip: true, maxTicksLimit: 8, maxRotation: 0 } },
+      },
+      plugins: {
+        legend: hasMarkers
+          ? { display: true, position: 'bottom', labels: { boxWidth: 10, font: { size: 10 }, usePointStyle: true } }
+          : { display: false },
+        tooltip: { callbacks: { label: (ctx) => ctx.datasetIndex === 1 ? markerLabels[ctx.dataIndex] : `${ctx.raw.toFixed(2)}p` } },
+      },
+    },
+  });
+  return true;
+}
+
 function leverageChart(canvas, leverage){
   const years = [...new Set([
     ...Object.keys(leverage.equity_to_assets_pct||{}),
@@ -824,14 +1275,6 @@ function leverageChart(canvas, leverage){
   return true;
 }
 const ARCHIVE_HISTORY_CUTOFF = 2008;
-
-// Span of available history (max year - min year + 1), not a count of years
-// with actual data points - mirrors the same computation build_deliverable.py
-// uses for the banks.html "History available (yrs)" column.
-function compHistorySpan(comp){
-  const yrs = Object.keys(comp.years).map(Number);
-  return yrs.length ? (Math.max(...yrs) - Math.min(...yrs) + 1) : 0;
-}
 
 function historyChartHtml(id, years){
   const hasArchive = years.some(y => Number(y) < ARCHIVE_HISTORY_CUTOFF);
@@ -955,9 +1398,9 @@ function initBubbleChart(spec, payload){
   const datasets = [
     ...groups.map(g => ({
       label: g, data: initial.byGroup[g],
-      backgroundColor: groupColor(g) + 'b3', borderColor: groupColor(g), borderWidth: 1,
+      backgroundColor: groupColor(g) + 'b3', borderColor: groupColor(g), borderWidth: 1, clip: false,
     })),
-    { label: 'Standalone', data: initial.standalone, backgroundColor: '#c7c2b499', borderColor: '#a39a86', borderWidth: 1 },
+    { label: 'Standalone', data: initial.standalone, backgroundColor: '#c7c2b499', borderColor: '#a39a86', borderWidth: 1, clip: false },
   ];
 
   const chart = new Chart(canvas, {
@@ -965,6 +1408,14 @@ function initBubbleChart(spec, payload){
     data: { datasets },
     options: {
       responsive: true, maintainAspectRatio: false,
+      // A bubble centered exactly on an axis min (e.g. 0% customer loans)
+      // draws half its radius past that edge - without headroom here, that
+      // half gets clipped by the chart area boundary. `clip: false` above
+      // lets each dataset draw past the chart area, and this padding (sized
+      // to the biggest bubble on the chart) keeps the canvas itself large
+      // enough that the overflow doesn't then get clipped by the canvas
+      // edge instead.
+      layout: { padding: maxR },
       scales: {
         // Fixed across every year (not recalculated per frame) so bubble
         // movement between years is real, not an artifact of the axes
@@ -976,8 +1427,8 @@ function initBubbleChart(spec, payload){
         // "Flagged as noise, not signal" in Cross-Bank Trends Analysis.md.
         // Those banks simply sit off-chart in the years they're this
         // extreme, rather than compressing everyone else into one corner.
-        x: { title: { display: true, text: spec.xLabel }, min: 0, max: spec.xMax, grid: { color: '#edece7' } },
-        y: { title: { display: true, text: spec.yLabel }, min: 0, max: spec.yMax, grid: { color: '#edece7' } },
+        x: { title: { display: true, text: spec.xLabel }, min: spec.xMin ?? 0, max: spec.xMax, grid: { color: '#edece7' } },
+        y: { title: { display: true, text: spec.yLabel }, min: spec.yMin ?? 0, max: spec.yMax, grid: { color: '#edece7' } },
       },
       plugins: {
         legend: { display: true, position: 'bottom', labels: { boxWidth: 10, font: { size: 10 }, usePointStyle: true } },
@@ -1378,6 +1829,326 @@ function initInvestmentViewToggle(id, records){
   document.getElementById(`${id}-y-axis`).addEventListener('change', (e) => drawInvestmentScatter(id, records, e.target.value));
 }
 
+// ---- balance-sheet.html ----
+const ASSET_COMPOSITION_COLOR = {
+  loans_pct_of_assets: "#1f6e52", treasury_investments_pct_of_assets: "#45566b",
+  cash_pct_of_assets: "#a6741f", other: "#a39a86",
+};
+const ASSET_COMPOSITION_LABEL = {
+  loans_pct_of_assets: "Customer loans", treasury_investments_pct_of_assets: "Treasury investments",
+  cash_pct_of_assets: "Cash & central bank balances", other: "Other assets",
+};
+const ASSET_COMPOSITION_ORDER = ["loans_pct_of_assets", "treasury_investments_pct_of_assets", "cash_pct_of_assets", "other"];
+
+// Same color roles as ASSET_COMPOSITION_COLOR/LIABILITY_COLOR (primary
+// line = green, secondary = slate, tertiary = amber, residual = tan) -
+// kept consistent across all three balance-sheet-side charts so a color
+// means the same *kind* of thing (biggest named line vs residual)
+// everywhere on this page, even though the actual categories differ.
+const EQUITY_COMPOSITION_COLOR = { share_capital_pct: "#45566b", retained_earnings_pct: "#1f6e52", other_pct: "#a39a86" };
+const EQUITY_COMPOSITION_LABEL = { share_capital_pct: "Share capital & premium", retained_earnings_pct: "Retained earnings", other_pct: "Other reserves" };
+const EQUITY_COMPOSITION_ORDER = ["share_capital_pct", "retained_earnings_pct", "other_pct"];
+
+// Peer-size filter (2026-09-08 follow-up: "compare banks with a similar
+// amount of assets on what those specific assets are") - the tier labels
+// must match _size_tier()'s output in build_deliverable.py exactly, since
+// they're compared as plain strings against each record's size_tier.
+const BALANCE_SHEET_SIZE_TIERS = [
+  "Under £250m", "£250m – £1bn", "£1bn – £2bn", "£2bn – £5bn", "£5bn – £10bn", "£10bn – £100bn", "£100bn+",
+];
+
+function renderBalanceSheetPage(records, deployment){
+  // The size chart always shows every bank (that's the point of it - see
+  // the whole distribution at once); the three composition charts below
+  // are filtered by the peer-group select, defaulting to "All banks".
+  // All three composition charts share one bank order (largest Total
+  // assets first, within whatever the current filter includes) so a
+  // reader can scan down all three at once - unlike business-model.html/
+  // investments.html, which each sort by their own single leg.
+  const sorted = [...records].sort((a, b) => b.total_assets - a.total_assets);
+  const tagLegend = Object.entries(BUSINESS_MODEL_TAG_LABEL)
+    .map(([tag, label]) => `<span><span class="sw" style="background:${BUSINESS_MODEL_TAG_COLOR[tag]}"></span>${label}</span>`).join('');
+  const tierOptions = ['<option value="">All banks</option>']
+    .concat(BALANCE_SHEET_SIZE_TIERS.map(t => `<option value="${t}">${t} (${records.filter(r => r.size_tier === t).length} banks)</option>`))
+    .join('');
+
+  // Box-and-whisker distribution of one asset-composition metric across
+  // every bank, by year (user request, 2026-09-09) - the same "median,
+  // quartiles, outliers per year" lens the Pillar 3 boxplot already gives
+  // comparison.html, applied to the balance-sheet side instead of Pillar 3
+  // ratios. `deployment` is {bank: {year: {metric: value}}}, already
+  // curated server-side from the same capital_deployment series the
+  // per-bank drilldown page's own "Capital deployment" chart uses.
+  const bsBoxplotMetrics = ["cash_pct_of_assets", "loans_pct_of_assets", "treasury_investments_pct_of_assets"];
+
+  document.getElementById('app').innerHTML = `
+    ${blockOpen('Total assets', `${sorted.length} banks · latest year disclosed, log scale (spans a few million to over £1tn)`)}
+    <div class="card">
+      <div class="mini-chart-wrap" id="bs-size-chart" style="height:${Math.max(320, sorted.length * 20)}px"><canvas></canvas></div>
+      <div class="legend-row" style="margin-top:2px;"><span class="hint" style="margin-right:6px;">Bank name colored by:</span>${tagLegend}</div>
+    </div>
+    ${blockClose()}
+    ${blockOpen('Balance sheet composition', 'What each side of the balance sheet is made of, latest year each discloses it')}
+    <div class="card">
+      <div class="chart-controls">
+        <label for="bs-tier-filter">Compare banks with a similar amount of assets</label>
+        <select id="bs-tier-filter">${tierOptions}</select>
+      </div>
+      ${compositionSubsectionHtml('bs-assets', 'Assets', ASSET_COMPOSITION_LABEL, ASSET_COMPOSITION_COLOR, true)}
+      ${compositionSubsectionHtml('bs-liabilities', 'Liabilities', LIABILITY_LABEL, LIABILITY_COLOR, true)}
+      ${compositionSubsectionHtml('bs-equity', 'Equity', EQUITY_COMPOSITION_LABEL, EQUITY_COMPOSITION_COLOR, false)}
+    </div>
+    ${blockClose()}
+    ${blockOpen('Distribution across banks', 'spread of one asset-mix ratio across all banks, by year')}
+    <div class="card chart-card">
+      <div class="chart-controls">
+        <label for="bs-boxplot-metric">Metric</label>
+        <select id="bs-boxplot-metric">${bsBoxplotMetrics.map(m => `<option value="${m}">${ASSET_COMPOSITION_LABEL[m]}</option>`).join('')}</select>
+      </div>
+      <div class="mini-chart-wrap tall" id="bs-boxplot-chart" style="height:340px;"><canvas></canvas></div>
+      <p class="sub" id="bs-boxplot-note" style="margin:8px 0 0;"></p>
+    </div>
+    ${blockClose()}
+  `;
+
+  new Chart(document.querySelector('#bs-size-chart canvas'), {
+    type: 'bar',
+    data: { labels: sorted.map(r => r.bank), datasets: [{
+      data: sorted.map(r => r.total_assets),
+      backgroundColor: sorted.map(r => BUSINESS_MODEL_TAG_COLOR[r.bank_type]),
+    }] },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { type: 'logarithmic', title: { display: true, text: 'Total assets' }, ticks: { callback: (v) => fmtBn(v) }, grid: { color: '#edece7' } },
+        y: { grid: { display: false }, ticks: { font: { size: 9 } } },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => {
+          const r = sorted[ctx.dataIndex];
+          return `${fmtK(r.total_assets)} (FY${r.year}) — ${BUSINESS_MODEL_TAG_LABEL[r.bank_type]}`;
+        } } },
+      },
+    },
+  });
+
+  const compCharts = {};
+  function drawAll(tier){
+    const rows = tier ? sorted.filter(r => r.size_tier === tier) : sorted;
+    compCharts.assets = drawBalanceSheetCompositionBar(
+      'bs-assets', compCharts.assets, rows, 'assets', ASSET_COMPOSITION_ORDER, ASSET_COMPOSITION_LABEL, ASSET_COMPOSITION_COLOR, true);
+    compCharts.liabilities = drawBalanceSheetCompositionBar(
+      'bs-liabilities', compCharts.liabilities, rows.filter(r => r.liabilities), 'liabilities', LIABILITY_ORDER, LIABILITY_LABEL, LIABILITY_COLOR, true);
+    compCharts.equity = drawBalanceSheetCompositionBar(
+      'bs-equity', compCharts.equity, rows.filter(r => r.equity), 'equity', EQUITY_COMPOSITION_ORDER, EQUITY_COMPOSITION_LABEL, EQUITY_COMPOSITION_COLOR, false);
+  }
+  drawAll('');
+  document.getElementById('bs-tier-filter').addEventListener('change', (e) => drawAll(e.target.value));
+
+  const bsBoxplotCanvas = document.querySelector('#bs-boxplot-chart canvas');
+  const bsBoxplotNote = document.getElementById('bs-boxplot-note');
+  let bsBoxplotChart = null;
+  const drawBsBoxplot = (metric) => {
+    bsBoxplotChart = yearMetricBoxplotChart(bsBoxplotCanvas, bsBoxplotChart, deployment, metric, {
+      color: ASSET_COMPOSITION_COLOR[metric], label: ASSET_COMPOSITION_LABEL[metric], noteEl: bsBoxplotNote,
+    });
+  };
+  drawBsBoxplot(bsBoxplotMetrics[0]);
+  document.getElementById('bs-boxplot-metric').addEventListener('change', (e) => drawBsBoxplot(e.target.value));
+
+  initCollapsibleBlocks();
+}
+
+function compositionSubsectionHtml(id, title, labelMap, colorMap, startOpen){
+  const legend = Object.entries(labelMap)
+    .map(([key, label]) => `<span><span class="sw" style="background:${colorMap[key]}"></span>${label}</span>`).join('');
+  return `
+    ${subOpen(title, '% of the total, by bank', !startOpen)}
+    <div class="mini-chart-wrap" id="${id}-chart" style="height:340px"><canvas></canvas></div>
+    <div class="legend-row" style="margin-top:2px;">${legend}</div>
+    ${subClose()}
+  `;
+}
+
+// Shared by all three balance-sheet-side composition charts. `fixedScale`
+// is true for assets/liabilities (every leg is a non-negative % of a
+// positive total, by construction - see curate_asset_composition_absolute/
+// curate_liability_composition, both clamp their residual at 0), so a
+// fixed 0-100% x-axis is always safe there. It's false for equity: retained
+// earnings is genuinely negative for a bank still working through
+// accumulated losses (real example: Monzo's FY2025 retained_earnings_pct
+// is -25%, offset by a correspondingly larger "other reserves" share, not
+// a bug), so equity's x-axis is left to auto-scale rather than clipped at a
+// fixed 0-100 - a fixed range would silently clip that segment off-chart.
+function drawBalanceSheetCompositionBar(id, existing, rows, field, order, labelMap, colorMap, fixedScale){
+  if (existing) existing.destroy();
+  const canvas = document.querySelector(`#${id}-chart canvas`);
+  if (!canvas || !rows.length) return null;
+  return new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: rows.map(r => r.bank),
+      datasets: order.map(key => ({
+        label: labelMap[key],
+        data: rows.map(r => r[field][key]),
+        backgroundColor: colorMap[key],
+      })),
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: {
+          stacked: true, ...(fixedScale ? { min: 0, max: 100 } : {}),
+          ticks: { callback: (v) => v + '%' }, grid: { color: '#edece7' },
+        },
+        y: {
+          stacked: true, grid: { display: false },
+          ticks: { font: { size: 9 }, color: (ctx) => BUSINESS_MODEL_TAG_COLOR[rows[ctx.index].bank_type] || '#3a3a38' },
+        },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          label: (ctx) => {
+            const r = rows[ctx.dataIndex];
+            return `${ctx.dataset.label}: ${ctx.raw}% (FY${r[field].year})`;
+          },
+          footer: (items) => BUSINESS_MODEL_TAG_LABEL[rows[items[0].dataIndex].bank_type],
+        } },
+      },
+    },
+  });
+}
+
+// ---- profit-loss.html ----
+const INCOME_COMPOSITION_COLOR = {
+  net_interest_pct: "#1f6e52", net_fee_pct: "#45566b", trading_investment_pct: "#a6741f", other_pct: "#a39a86",
+};
+const INCOME_COMPOSITION_LABEL = {
+  net_interest_pct: "Net interest income", net_fee_pct: "Net fee & commission income",
+  trading_investment_pct: "Trading & investment income", other_pct: "Other income",
+};
+const INCOME_COMPOSITION_ORDER = ["net_interest_pct", "net_fee_pct", "trading_investment_pct", "other_pct"];
+const EXPENSE_COMPOSITION_COLOR = { personnel_pct: "#45566b", other_operating_pct: "#1f6e52", other_pct: "#a39a86" };
+const EXPENSE_COMPOSITION_LABEL = { personnel_pct: "Personnel expense", other_operating_pct: "Other operating expense", other_pct: "Other" };
+const EXPENSE_COMPOSITION_ORDER = ["personnel_pct", "other_operating_pct", "other_pct"];
+// Must match _pnl_size_tier()'s output in build_deliverable.py exactly -
+// same "compare banks with a similar amount of [X]" filter mechanic as
+// balance-sheet.html's BALANCE_SHEET_SIZE_TIERS, keyed to income scale
+// instead of asset scale (income runs roughly 2 orders of magnitude
+// smaller than assets for a typical bank, so the bands are separate, not
+// reused).
+const PNL_SIZE_TIERS = [
+  "Under £10m", "£10m – £25m", "£25m – £50m", "£50m – £100m",
+  "£100m – £250m", "£250m – £500m", "£500m – £1bn", "£1bn+",
+];
+
+const PNL_BOXPLOT_LABEL = {
+  cost_to_income_pct: "Cost-to-income ratio",
+  personnel_expense_pct_of_revenue: "Personnel expense (% of revenue)",
+  other_operating_expense_pct_of_revenue: "Other operating expense (% of revenue)",
+};
+const PNL_BOXPLOT_COLOR = { cost_to_income_pct: "#9c3b2e", personnel_expense_pct_of_revenue: "#45566b", other_operating_expense_pct_of_revenue: "#1f6e52" };
+
+function renderPnlPage(records, deployment){
+  const sorted = [...records].sort((a, b) => b.total_income - a.total_income);
+  const tagLegend = Object.entries(BUSINESS_MODEL_TAG_LABEL)
+    .map(([tag, label]) => `<span><span class="sw" style="background:${BUSINESS_MODEL_TAG_COLOR[tag]}"></span>${label}</span>`).join('');
+  const tierOptions = ['<option value="">All banks</option>']
+    .concat(PNL_SIZE_TIERS.map(t => `<option value="${t}">${t} (${records.filter(r => r.size_tier === t).length} banks)</option>`))
+    .join('');
+  // Same cross-bank distribution lens as balance-sheet.html's boxplot,
+  // applied to P&L cost ratios (server-side trimmed to PNL_BOXPLOT_METRICS
+  // in curate_pnl_deployment - the absolute-£ cost_base entries aren't
+  // comparable bank to bank on one axis).
+  const pnlBoxplotMetrics = Object.keys(PNL_BOXPLOT_LABEL)
+    .filter(m => Object.values(deployment).some(byYear => Object.values(byYear).some(vals => vals[m] != null)));
+
+  document.getElementById('app').innerHTML = `
+    ${blockOpen('Total operating income', `${sorted.length} banks · latest year disclosed, log scale`)}
+    <div class="card">
+      <div class="mini-chart-wrap" id="pnl-size-chart" style="height:${Math.max(320, sorted.length * 20)}px"><canvas></canvas></div>
+      <div class="legend-row" style="margin-top:2px;"><span class="hint" style="margin-right:6px;">Bank name colored by:</span>${tagLegend}</div>
+    </div>
+    ${blockClose()}
+    ${blockOpen('Profit & loss composition', 'What makes up income and expenses, latest year each discloses it')}
+    <div class="card">
+      <div class="chart-controls">
+        <label for="pnl-tier-filter">Compare banks with a similar amount of income</label>
+        <select id="pnl-tier-filter">${tierOptions}</select>
+      </div>
+      ${compositionSubsectionHtml('pnl-income', 'Income', INCOME_COMPOSITION_LABEL, INCOME_COMPOSITION_COLOR, true)}
+      ${compositionSubsectionHtml('pnl-expenses', 'Expenses', EXPENSE_COMPOSITION_LABEL, EXPENSE_COMPOSITION_COLOR, true)}
+    </div>
+    ${blockClose()}
+    ${pnlBoxplotMetrics.length ? `${blockOpen('Distribution across banks', 'spread of one cost ratio across all banks, by year')}
+    <div class="card chart-card">
+      <div class="chart-controls">
+        <label for="pnl-boxplot-metric">Metric</label>
+        <select id="pnl-boxplot-metric">${pnlBoxplotMetrics.map(m => `<option value="${m}">${PNL_BOXPLOT_LABEL[m]}</option>`).join('')}</select>
+      </div>
+      <div class="mini-chart-wrap tall" id="pnl-boxplot-chart" style="height:340px;"><canvas></canvas></div>
+      <p class="sub" id="pnl-boxplot-note" style="margin:8px 0 0;"></p>
+    </div>
+    ${blockClose()}` : ''}
+  `;
+
+  new Chart(document.querySelector('#pnl-size-chart canvas'), {
+    type: 'bar',
+    data: { labels: sorted.map(r => r.bank), datasets: [{
+      data: sorted.map(r => r.total_income),
+      backgroundColor: sorted.map(r => BUSINESS_MODEL_TAG_COLOR[r.bank_type]),
+    }] },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { type: 'logarithmic', title: { display: true, text: 'Total operating income' }, ticks: { callback: (v) => fmtBn(v) }, grid: { color: '#edece7' } },
+        y: { grid: { display: false }, ticks: { font: { size: 9 } } },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => {
+          const r = sorted[ctx.dataIndex];
+          return `${fmtK(r.total_income)} (FY${r.year}) — ${BUSINESS_MODEL_TAG_LABEL[r.bank_type]}`;
+        } } },
+      },
+    },
+  });
+
+  const compCharts = {};
+  function drawAll(tier){
+    const rows = tier ? sorted.filter(r => r.size_tier === tier) : sorted;
+    // Neither chart gets a fixed 0-100% x-axis, unlike assets/liabilities
+    // on balance-sheet.html - income and expense categories here are NOT
+    // clamped at 0 in curate_pnl_composition (a negative net fee line, or
+    // unclassified expenses exceeding total opex, are real disclosed
+    // outcomes, not bugs), so a fixed range could silently clip a segment
+    // off-chart. Same reasoning as equity's chart there.
+    compCharts.income = drawBalanceSheetCompositionBar(
+      'pnl-income', compCharts.income, rows.filter(r => r.income), 'income', INCOME_COMPOSITION_ORDER, INCOME_COMPOSITION_LABEL, INCOME_COMPOSITION_COLOR, false);
+    compCharts.expenses = drawBalanceSheetCompositionBar(
+      'pnl-expenses', compCharts.expenses, rows.filter(r => r.expenses), 'expenses', EXPENSE_COMPOSITION_ORDER, EXPENSE_COMPOSITION_LABEL, EXPENSE_COMPOSITION_COLOR, false);
+  }
+  drawAll('');
+  document.getElementById('pnl-tier-filter').addEventListener('change', (e) => drawAll(e.target.value));
+
+  if (pnlBoxplotMetrics.length) {
+    const pnlBoxplotCanvas = document.querySelector('#pnl-boxplot-chart canvas');
+    const pnlBoxplotNote = document.getElementById('pnl-boxplot-note');
+    let pnlBoxplotChart = null;
+    const drawPnlBoxplot = (metric) => {
+      pnlBoxplotChart = yearMetricBoxplotChart(pnlBoxplotCanvas, pnlBoxplotChart, deployment, metric, {
+        color: PNL_BOXPLOT_COLOR[metric], label: PNL_BOXPLOT_LABEL[metric], noteEl: pnlBoxplotNote,
+      });
+    };
+    drawPnlBoxplot(pnlBoxplotMetrics[0]);
+    document.getElementById('pnl-boxplot-metric').addEventListener('change', (e) => drawPnlBoxplot(e.target.value));
+  }
+
+  initCollapsibleBlocks();
+}
+
 // ---- sidebar: nav + compact search only (the full bank list lives on
 // banks.html now, not in the sidebar, so it stays a fixed size regardless
 // of how many banks the real build eventually covers) ----
@@ -1388,6 +2159,8 @@ function renderSidebar(activeNav, banksIndex){
     <a href="banks.html" class="${activeNav==='banks'?'active':''}">Banks</a>
     <a href="business-model.html" class="${activeNav==='business-model'?'active':''}">Business model</a>
     <a href="investments.html" class="${activeNav==='investments'?'active':''}">Investments</a>
+    <a href="balance-sheet.html" class="${activeNav==='balance-sheet'?'active':''}">Balance sheet</a>
+    <a href="profit-loss.html" class="${activeNav==='profit-loss'?'active':''}">Profit &amp; loss</a>
   `;
   const wrap = document.getElementById('bank-search-wrap');
   wrap.innerHTML = `
@@ -1525,9 +2298,13 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
 
   html += subOpen('RWA breakdown', `${rwaBanks.length} of ${banks.length} banks`);
   html += `<div class="card chart-card">
-    <div class="bank-picker" id="rwa-bank-picker">${rwaDensityBanks.map(b => `<label><input type="checkbox" value="${b}"><span class="sw" style="background:${BANK_COLOR[b]}"></span>${b}</label>`).join('')}</div>
-    <div class="bank-picker-note">Trend line above compares up to ${RWA_PICKER_MAX} banks at once (${rwaDensityBanks.length} banks disclose an RWA/total-assets density series) — pick which ones. All ${rwaBanks.length} banks with an RWA breakdown still appear in the composition cards below.</div>
-    <div class="mini-chart-wrap tall" data-chart="rwa-trend"><canvas></canvas></div>
+    <div class="bank-picker-panel">
+      ${bankPickerSidebarHtml('rwa-bank-picker', rwaDensityBanks)}
+      <div class="bank-picker-chart-area">
+        <div class="bank-picker-note">Trend line above compares up to ${RWA_PICKER_MAX} banks at once (${rwaDensityBanks.length} banks disclose an RWA/total-assets density series) — pick which ones. All ${rwaBanks.length} banks with an RWA breakdown still appear in the composition cards below.</div>
+        <div class="mini-chart-wrap tall" data-chart="rwa-trend"><canvas></canvas></div>
+      </div>
+    </div>
   </div>`;
   html += `<div class="grid cols" style="margin-top:14px;" id="rwa-grid">`;
   rwaBanks.forEach(bank => {
@@ -1547,12 +2324,38 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     const metricBanks = trends.trajectories.metrics[metric].map(r => frnName[r.frn] || r.bank).filter(b => banks.includes(b));
     html += `<div class="book-label" style="margin:14px 0 6px;">${metric} <span style="color:var(--ink-faint);">(${metricBanks.length} of ${banks.length} banks)</span></div>
     <div class="card chart-card">
-      <div class="bank-picker" id="trend-picker-${metricSlug}">${metricBanks.map(b => `<label><input type="checkbox" value="${b}"><span class="sw" style="background:${BANK_COLOR[b]}"></span>${b}</label>`).join('')}</div>
-      <div class="bank-picker-note">Trend line compares up to ${TRAJECTORY_PICKER_MAX} banks at once — default picks banks with data across every year shown (FY${trends.trajectories.years[0]}–FY${trends.trajectories.years[trends.trajectories.years.length-1]}).</div>
-      <div class="mini-chart-wrap tall" data-chart="trend" data-metric="${metric}"><canvas></canvas></div>
+      <div class="bank-picker-panel">
+        ${bankPickerSidebarHtml(`trend-picker-${metricSlug}`, metricBanks)}
+        <div class="bank-picker-chart-area">
+          <div class="bank-picker-note">Trend line compares up to ${TRAJECTORY_PICKER_MAX} banks at once — default picks banks with data across every year shown (FY${trends.trajectories.years[0]}–FY${trends.trajectories.years[trends.trajectories.years.length-1]}).</div>
+          <div class="mini-chart-wrap tall" data-chart="trend" data-metric="${metric}"><canvas></canvas></div>
+        </div>
+      </div>
     </div>`;
   });
   html += subClose();
+
+  // Box-and-whisker distribution of one Pillar 3 ratio across every bank,
+  // by year (user request, 2026-09-09) - a genuinely different lens from
+  // the per-bank trend lines and trajectory picker above: instead of
+  // following individual banks, this shows the whole peer group's spread
+  // (median, quartiles, outliers) per year for whichever metric is picked.
+  // Computed client-side from `data` (already embedded in full on this
+  // page) rather than a new Python curation step - no new server-side
+  // shape needed, just a reduction over pillar3[metric][year] across banks.
+  const boxplotMetrics = [...PILLAR3_CAPITAL_SHEETS, ...PILLAR3_LIQUIDITY_SHEETS]
+    .filter(m => banks.some(b => Object.keys(data[b].pillar3?.[m] || {}).length));
+  if (boxplotMetrics.length) {
+    html += subOpen('Distribution across banks', 'spread of one ratio across all banks, by year');
+    html += `<div class="card chart-card">
+      <div class="chart-controls">
+        <label for="pillar3-boxplot-metric">Metric</label>
+        <select id="pillar3-boxplot-metric">${boxplotMetrics.map(m => `<option value="${m}">${PILLAR3_LABEL[m]}</option>`).join('')}</select>
+      </div>
+      <div class="mini-chart-wrap tall" id="pillar3-boxplot-chart" style="height:340px;"><canvas></canvas></div>
+      <p class="sub" id="pillar3-boxplot-note" style="margin:8px 0 0;"></p>
+    </div>` + subClose();
+  }
 
   // Three Gapminder-style bubble charts (user request, 2026-09-05: the
   // user picked risk_vs_capital first, then asked for the other two axis
@@ -1583,6 +2386,38 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
       xLabel: 'Leverage Ratio (%)', yLabel: 'LCR (%)',
       xShort: 'Leverage Ratio', yShort: 'LCR', xMax: 50, yMax: 1000,
       note: 'Bottom-left (thin on both fronts) is the quadrant worth watching. A few small banks\' LCR denominators produce five- to six-figure percentages (real disclosures, not comparable moves) and sit off-chart here.',
+    },
+    {
+      key: 'balance_sheet_vs_pnl', idPrefix: 'bs-pnl-bubble',
+      title: 'Balance sheet mix vs. cost efficiency',
+      hint: 'Customer loans as % of total assets vs. cost-to-income ratio, bubble size = total assets — drag the year slider to watch banks move',
+      xLabel: 'Customer loans (% of total assets)', yLabel: 'Cost-to-income ratio (%)',
+      xShort: 'loans/assets', yShort: 'cost-to-income', xMax: 100, yMax: 200,
+      note: 'Top-right (loan-heavy and costly to run) is the quadrant worth watching. Coverage is limited to banks disclosing both a clean asset-mix split and a cost-to-income figure.',
+    },
+    {
+      key: 'capital_cushion_vs_growth', idPrefix: 'capital-growth-bubble',
+      title: 'Capital cushion vs. income growth',
+      hint: 'Equity as % of total assets vs. year-on-year income growth, bubble size = total assets — drag the year slider to watch banks move',
+      xLabel: 'Equity (% of total assets)', yLabel: 'Income growth, year-on-year (%)',
+      xShort: 'equity/assets', yShort: 'income growth', xMax: 100, yMin: -150, yMax: 300,
+      note: 'Does a thinly-capitalised bank grow income faster? A handful of small/young banks swing 1,000%+ in a single year off a near-zero prior-year income base (real, not a data error) and sit off-chart.',
+    },
+    {
+      key: 'cost_structure', idPrefix: 'cost-structure-bubble',
+      title: 'Cost structure: staff vs. overhead',
+      hint: 'Personnel expense vs. other operating expense, both as % of revenue, bubble size = total assets — drag the year slider to watch banks move',
+      xLabel: 'Personnel expense (% of revenue)', yLabel: 'Other operating expense (% of revenue)',
+      xShort: 'personnel/revenue', yShort: 'other opex/revenue', xMax: 150, yMax: 100,
+      note: 'Top-left is overhead-heavy, bottom-right is staff-heavy. Needs both cost lines cleanly disclosed against revenue, so coverage is the smallest of these charts — read it as illustrative, not comprehensive. A few very small-revenue banks push either ratio well past 100% and sit off-chart.',
+    },
+    {
+      key: 'liquidity_vs_loans', idPrefix: 'liquidity-loans-bubble',
+      title: 'Cash buffer vs. loan book',
+      hint: 'Cash vs. customer loans, both as % of total assets, bubble size = total assets — drag the year slider to watch banks move',
+      xLabel: 'Cash (% of total assets)', yLabel: 'Customer loans (% of total assets)',
+      xShort: 'cash/assets', yShort: 'loans/assets', xMax: 100, yMax: 100,
+      note: 'The two ends of the same asset-mix decision — a bank sitting high on both isn\'t possible for long, since both draw from the same pool of total assets.',
     },
   ];
   BUBBLE_SPECS.forEach(spec => {
@@ -1694,6 +2529,7 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     if (!ok) el.outerHTML = '<div class="empty-note">No RWA category breakdown this year.</div>';
   });
   initRwaBankPicker(document.getElementById('rwa-bank-picker'), document.querySelector('[data-chart="rwa-trend"] canvas'), rwaDensityBanks, data);
+  wireBankPickerSearch(document.getElementById('rwa-bank-picker'));
   document.querySelectorAll('[data-chart="pillar3-capital"]').forEach(el => {
     const bank = el.dataset.bank;
     const canvas = el.querySelector('canvas');
@@ -1710,8 +2546,18 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     const metric = el.dataset.metric;
     const metricSlug = slugify(metric);
     const metricBanks = trends.trajectories.metrics[metric].map(r => frnName[r.frn] || r.bank).filter(b => banks.includes(b));
-    initTrajectoryBankPicker(document.getElementById(`trend-picker-${metricSlug}`), el.querySelector('canvas'), metric, metricBanks, trends.trajectories, frnName);
+    const container = document.getElementById(`trend-picker-${metricSlug}`);
+    initTrajectoryBankPicker(container, el.querySelector('canvas'), metric, metricBanks, trends.trajectories, frnName);
+    wireBankPickerSearch(container);
   });
+  if (boxplotMetrics.length) {
+    const boxplotCanvas = document.querySelector('#pillar3-boxplot-chart canvas');
+    const boxplotNote = document.getElementById('pillar3-boxplot-note');
+    let boxplotChart = null;
+    const drawBoxplot = (metric) => { boxplotChart = pillar3BoxplotChart(boxplotCanvas, boxplotChart, data, banks, metric, boxplotNote); };
+    drawBoxplot(boxplotMetrics[0]);
+    document.getElementById('pillar3-boxplot-metric').addEventListener('change', (e) => drawBoxplot(e.target.value));
+  }
   initSortableTables();
 }
 
@@ -1728,12 +2574,36 @@ function renderDrilldownPage(bank, bankData){
   const lProfitYear = profitYears.length ? profitYears[profitYears.length-1] : null;
   const lProfit = lProfitYear ? bankData.profit_for_year[lProfitYear] : null;
 
-  let html = `<div class="kpi-row">
-    <div class="kpi"><div class="val" style="color:${lProfit==null?'inherit':(lProfit>=0?'var(--green)':'var(--red)')}">${lProfit!=null?fmtK(lProfit):'—'}</div><div class="lbl">Profit for the year${lProfitYear?' (FY'+lProfitYear+')':''}</div></div>
-    <div class="kpi"><div class="val">${latestRwa!==null?latestRwa+'%':'—'}</div><div class="lbl">RWA / Total assets (latest)</div></div>
-    <div class="kpi"><div class="val">${stage3Pct!==null?stage3Pct.toFixed(1)+'%':(comp.kind==='exposure_class'?'n/a — no stage data':'n/d')}</div><div class="lbl">Stage 3 share of book (latest)</div></div>
-    <div class="kpi"><div class="val">${compHistorySpan(comp)}</div><div class="lbl">Years of loan-concentration history available</div></div>
-  </div>`;
+  // Balance sheet headline figures (user request, 2026-09-09): total assets
+  // (size) and equity/assets (capital cushion, an accounting leverage
+  // measure distinct from the Pillar 3 Leverage Ratio further down the
+  // page) - both already curated per-bank, just not previously surfaced at
+  // the top. Replaces the old "years of history available" tile, which
+  // was a data-coverage stat rather than something about the bank itself.
+  const totalAssetsYears = Object.entries(bankData.total_assets||{}).sort();
+  const latestTotalAssets = totalAssetsYears.length ? totalAssetsYears[totalAssetsYears.length-1][1] : null;
+  const latestTotalAssetsYear = totalAssetsYears.length ? totalAssetsYears[totalAssetsYears.length-1][0] : null;
+  const equityPctYears = Object.entries((bankData.leverage||{}).equity_to_assets_pct||{}).sort();
+  const latestEquityPct = equityPctYears.length ? equityPctYears[equityPctYears.length-1][1] : null;
+
+  const radar = bankData.radar;
+  const radarLabels = radar ? RADAR_METRIC_ORDER.filter(m => radar[m]) : [];
+  const hasRadar = radarLabels.length >= 3;
+
+  let html = `<div style="display:flex;gap:14px;align-items:stretch;margin-bottom:20px;">
+    <div class="kpi-row" style="margin-bottom:0;flex:1;">
+      <div class="kpi"><div class="val">${latestTotalAssets!=null?fmtBn(latestTotalAssets):'—'}</div><div class="lbl">Total assets${latestTotalAssetsYear?' (FY'+latestTotalAssetsYear+')':''}</div></div>
+      <div class="kpi"><div class="val" style="color:${lProfit==null?'inherit':(lProfit>=0?'var(--green)':'var(--red)')}">${lProfit!=null?fmtBn(lProfit):'—'}</div><div class="lbl">Profit for the year${lProfitYear?' (FY'+lProfitYear+')':''}</div></div>
+      <div class="kpi"><div class="val">${latestEquityPct!=null?latestEquityPct+'%':'—'}</div><div class="lbl">Equity / Total assets (latest)</div></div>
+      <div class="kpi"><div class="val">${latestRwa!==null?latestRwa+'%':'—'}</div><div class="lbl">RWA / Total assets (latest)</div></div>
+      <div class="kpi"><div class="val">${stage3Pct!==null?stage3Pct.toFixed(1)+'%':(comp.kind==='exposure_class'?'n/a — no stage data':'n/d')}</div><div class="lbl">Stage 3 share of book (latest)</div></div>
+    </div>`;
+  if (hasRadar) {
+    html += `<div class="card" style="flex:0 0 190px;padding:8px;" title="${bank} vs. every other bank, percentile rank per Pillar 3 metric — further out means stronger than more peers">
+      <div style="height:170px;"><canvas id="drilldown-radar-chart"></canvas></div>
+    </div>`;
+  }
+  html += `</div>`;
 
   html += blockOpen('Loan concentration &amp; quality', `${bank}, by year`) + `<div class="card">`;
   const years = Object.keys(comp.years).sort();
@@ -1757,7 +2627,14 @@ function renderDrilldownPage(bank, bankData){
   const catYear = latestYear(bankData.rwa_category_composition);
   const isDerived = bank === 'Weatherbys';
   html += subOpen(`RWA composition, ${catYear||'—'}${isDerived?` <span class="kind-flag" data-tip="This bank's RWA Breakdown is a documented derived reconstruction, not a directly-disclosed total — see IN-039/ST-037.">ⓘ</span>`:''}`)
-    + `<div class="card"><div class="mini-chart-wrap tall" id="drilldown-rwa-cat"><canvas></canvas></div></div>`
+    + `<div class="card" id="drilldown-rwa-cat-card">
+        <div class="view-toggle" id="drilldown-rwa-cat-toggle">
+          <button type="button" data-view="bar" class="active">Bar</button>
+          <button type="button" data-view="pie">Pie</button>
+        </div>
+        <div id="drilldown-rwa-cat-bar-view"><div class="mini-chart-wrap tall" id="drilldown-rwa-cat"><canvas></canvas></div></div>
+        <div id="drilldown-rwa-cat-pie-view" hidden><div class="mini-chart-wrap tall" id="drilldown-rwa-cat-pie"><canvas></canvas></div></div>
+      </div>`
     + subClose();
   html += blockClose();
 
@@ -1806,6 +2683,15 @@ function renderDrilldownPage(bank, bankData){
     : `<div class="empty-note">No capital-deployment data disclosed for ${bank} in any year.</div>`;
   html += `</div>` + subClose();
 
+  const bsSankey = bankData.balance_sheet_sankey;
+  if (bsSankey) {
+    html += subOpen('How the balance sheet is funded', `assets → total assets → liabilities &amp; equity`);
+    html += `<div class="card chart-card">
+      <div class="mini-chart-wrap tall" id="drilldown-bs-sankey" style="height:380px;"><canvas></canvas></div>
+    </div>`;
+    html += subClose();
+  }
+
   const incomeYears = Object.keys(bankData.income_breakdown||{}).sort();
   html += subOpen('Income mix');
   html += `<div class="card chart-card">`;
@@ -1816,6 +2702,20 @@ function renderDrilldownPage(bank, bankData){
        </div>`
     : `<div class="empty-note">No income-mix data disclosed for ${bank} in any year.</div>`;
   html += `</div>` + subClose();
+
+  const pnlSankey = bankData.pnl_sankey;
+  if (pnlSankey) {
+    html += subOpen('Where the income goes', `income sources → total income → expenses / operating profit → costs / profit for the year`);
+    html += `<div class="card chart-card">
+      <div class="view-toggle" id="drilldown-pnl-flow-toggle">
+        <button type="button" data-view="sankey" class="active">Sankey</button>
+        <button type="button" data-view="waterfall">Waterfall</button>
+      </div>
+      <div id="drilldown-pnl-flow-sankey-view"><div class="mini-chart-wrap tall" id="drilldown-pnl-sankey" style="height:460px;"><canvas></canvas></div></div>
+      <div id="drilldown-pnl-flow-waterfall-view" hidden><div class="mini-chart-wrap tall" id="drilldown-pnl-waterfall" style="height:380px;"><canvas></canvas></div></div>
+    </div>`;
+    html += subClose();
+  }
 
   const iVol = bankData.income_volatility || {};
   const iVolYears = Object.keys(iVol.yoy_change_pct||{}).sort();
@@ -1872,6 +2772,32 @@ function renderDrilldownPage(bank, bankData){
   html += `<div class="card">${equityChangesTableHtml(equity)}</div>` + subClose();
   html += blockClose();
 
+  // Parent-company market data (user request, 2026-09-09; demoted lower on
+  // the page and out of the KPI row per 2026-09-09 follow-up - a secondary,
+  // hand-fetched reference point, not a headline figure). Only rendered
+  // for the subset of banks whose ultimate parent is a separately,
+  // currently LSE-listed company - most tracked entities are wholly-owned
+  // subsidiaries with nothing to show here.
+  const pmd = bankData.parent_market_data;
+  const pmdChartable = pmd && (Object.keys(pmd.history_daily || {}).length > 1 || Object.keys(pmd.history || {}).length > 1);
+  if (pmd) {
+    const priceStr = pmd.share_price_gbx.toFixed(2) + 'p';
+    const capStr = fmtBn(pmd.market_cap_gbp);
+    html += blockOpen('Parent company market data', `${pmd.parent} (${pmd.exchange}: ${pmd.ticker})`);
+    html += `<div class="card" style="padding:12px 16px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
+      <div><span class="sub">Share price</span> <strong>${priceStr}</strong></div>
+      <div><span class="sub">Market cap</span> <strong>${capStr}</strong></div>
+      <div class="sub">as of ${pmd.as_of} — <a href="${pmd.source}" target="_blank" rel="noopener">source</a></div>
+    </div>`;
+    if (pmdChartable) {
+      html += `<div class="card chart-card" style="margin-top:10px;">
+        <div class="mini-chart-wrap tall" id="drilldown-parent-market-chart"><canvas></canvas></div>
+        <p class="sub" style="margin:8px 0 0;">Daily share price, spanning the years ${bank} also has balance-sheet data${Object.keys(pmd.report_dates||{}).length ? ' — markers show when that year\'s full-year results were announced' : ''}.</p>
+      </div>`;
+    }
+    html += blockClose();
+  }
+
   if (bankData.source_workbook) {
     html += blockOpen('Full workbook', `${bank}, every sheet as published`) + `
       <div class="card" style="padding:0;">
@@ -1884,9 +2810,28 @@ function renderDrilldownPage(bank, bankData){
   document.getElementById('app').innerHTML = html;
   initCollapsibleBlocks();
 
+  if (hasRadar) radarChart(document.getElementById('drilldown-radar-chart'), radar, bank);
+  if (bsSankey) sankeyChart(document.querySelector('#drilldown-bs-sankey canvas'), bsSankey.links, ['Total assets'], {'Total assets': 'Total assets / Liabilities + Equity'});
+  if (pnlSankey) {
+    sankeyChart(document.querySelector('#drilldown-pnl-sankey canvas'), pnlSankey.links, ['Total income', 'Operating expenses', 'Operating profit']);
+    let pnlWaterfallDrawn = false;
+    const pnlFlowToggle = document.getElementById('drilldown-pnl-flow-toggle');
+    pnlFlowToggle.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-view]');
+      if (!btn) return;
+      pnlFlowToggle.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+      const isSankey = btn.dataset.view === 'sankey';
+      document.getElementById('drilldown-pnl-flow-sankey-view').hidden = !isSankey;
+      document.getElementById('drilldown-pnl-flow-waterfall-view').hidden = isSankey;
+      if (!isSankey && !pnlWaterfallDrawn) {
+        pnlWaterfallDrawn = pnlWaterfallChart(document.querySelector('#drilldown-pnl-waterfall canvas'), pnlSankey);
+      }
+    });
+  }
   if (capitalP3Sheets.length) pillar3TrendChart(document.querySelector('#drilldown-pillar3-capital-chart canvas'), pillar3, PILLAR3_CAPITAL_SHEETS);
   if (liquidityP3Sheets.length) pillar3TrendChart(document.querySelector('#drilldown-pillar3-liquidity-chart canvas'), pillar3, PILLAR3_LIQUIDITY_SHEETS);
   if (hasLeverage) leverageChart(document.querySelector('#drilldown-leverage-chart canvas'), leverage);
+  if (pmdChartable) parentMarketDataChart(document.querySelector('#drilldown-parent-market-chart canvas'), pmd);
   if (iVolYears.length) mountHistoryChart('drilldown-income-volatility-chart', iVolYears,
     (canvas, chartYears) => incomeVolatilityChart(canvas, iVol, chartYears));
   if (cashFlowYears.length) cashFlowChart(document.querySelector('#drilldown-cashflow-chart canvas'), bankData.cash_flow);
@@ -1944,20 +2889,25 @@ function renderDrilldownPage(bank, bankData){
     });
   }
 
-  if (catYear) {
-    const rows = bankData.rwa_category_composition[catYear].filter(r=>r.pct_of_total_rwa>0.05);
-    document.getElementById('drilldown-rwa-cat').style.height = Math.max(150, rows.length * 28) + 'px';
-    new Chart(document.querySelector('#drilldown-rwa-cat canvas'), {
-      type: 'bar',
-      data: { labels: distinguishingLabels(rows), datasets: [{
-        data: rows.map(r=>r.pct_of_total_rwa), backgroundColor: rows.map(r=>rwaCatColor(r.label)),
-      }] },
-      options: { indexAxis:'y', responsive:true, maintainAspectRatio:false,
-        scales: { x:{ ticks:{callback:v=>v+'%'}, grid:{color:'#edece7'} }, y:{grid:{display:false}} },
-      },
-    });
-  } else {
-    document.getElementById('drilldown-rwa-cat').outerHTML = '<div class="empty-note">No data.</div>';
+  {
+    const catRows = catYear ? bankData.rwa_category_composition[catYear] : null;
+    if (!catRows || !rwaCatChart(document.querySelector('#drilldown-rwa-cat canvas'), catRows)) {
+      document.getElementById('drilldown-rwa-cat-card').outerHTML = '<div class="empty-note">No data.</div>';
+    } else {
+      let rwaPieDrawn = false;
+      const rwaCatToggle = document.getElementById('drilldown-rwa-cat-toggle');
+      rwaCatToggle.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-view]');
+        if (!btn) return;
+        rwaCatToggle.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+        const isBar = btn.dataset.view === 'bar';
+        document.getElementById('drilldown-rwa-cat-bar-view').hidden = !isBar;
+        document.getElementById('drilldown-rwa-cat-pie-view').hidden = isBar;
+        if (!isBar && !rwaPieDrawn) {
+          rwaPieDrawn = rwaCatPieChart(document.querySelector('#drilldown-rwa-cat-pie canvas'), catRows);
+        }
+      });
+    }
   }
 
   if (capYears.length) {

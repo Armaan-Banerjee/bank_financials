@@ -42,23 +42,27 @@ Order and why:
     10. in017_quality.py             DB -> IN-017 quality JSON output
     11. in023_distribution_visuals.py DB -> IN-023 visualisation payload
        (needs IN-016 distributions and IN-017 quality classifications)
-    12. in018_powerbi.py             DB -> Power BI hand-off tables
-    13. in019_report_experience.py   DB -> report experience contract
-    14. in020_regulatory_context.py  DB -> regulatory context outputs
-    15. in021_headroom_trajectory.py DB -> headroom trajectory output
-    16. review_trend_selection.py    DB -> in004_selection_review.md
+    12. in024_trajectory.py          DB -> IN-024 trajectory JSON output
+       (needs IN-016's percentile_rank helper)
+    13. in025_quality_views.py       DB -> IN-025 quality-views JSON output
+       (reads the DB directly; no upstream step dependency)
+    14. in018_powerbi.py             DB -> Power BI hand-off tables
+    15. in019_report_experience.py   DB -> report experience contract
+    16. in020_regulatory_context.py  DB -> regulatory context outputs
+    17. in021_headroom_trajectory.py DB -> headroom trajectory output
+    18. review_trend_selection.py    DB -> in004_selection_review.md
        (needs annual_metrics from step 1)
-    17. in040_risk_metrics.py        DB -> in040_risk_metrics.json
+    19. in040_risk_metrics.py        DB -> in040_risk_metrics.json
        (needs annual_metrics from step 1; kept fresh for consumers other
        than build_deliverable.py, which reads the DB directly - see below)
-    18. in041_spend_metrics.py       DB -> in041_spend_metrics.json
+    20. in041_spend_metrics.py       DB -> in041_spend_metrics.json
        (same freshness note as in040_risk_metrics.py above)
-    19. build_deliverable.py         DB -> deliverable/*.html
+    21. build_deliverable.py         DB -> deliverable/*.html
        (needs steps 1-3; reads research/insights.db directly via
        in040_risk_metrics.py's and in041_spend_metrics.py's payload
-       builders, in-process - never depends on steps 17-18's JSON files
+       builders, in-process - never depends on steps 19-20's JSON files
        staying fresh, only on their functions)
-    20. build_in006_pdf.py            DB -> uk_bank_insights.pdf
+    22. build_in006_pdf.py            DB -> uk_bank_insights.pdf
        (needs steps 1-3; per IN-053, mirrors deliverable/comparison.html's
        own sections via headless-Chromium print-to-PDF (Playwright) instead
        of in011_deliverables.py's older hand-rolled PDF writer - see

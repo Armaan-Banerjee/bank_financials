@@ -1,0 +1,234 @@
+<title>Disclosure Gap Register</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#f6f7f5; --card:#ffffff; --ink:#141d24; --muted:#63717b;
+  --rule:#dfe3df; --rule-soft:#ecefec;
+  --accent:#0e5f5c; --accent-soft:#e2eeec;
+  --s1:#cfe0de; --s2:#a3c7c4; --s3:#6ea9a5; --s4:#3a8683; --s5:#0e5f5c;
+  --warn:#8a5a14;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#10171c; --card:#162026; --ink:#e6eceb; --muted:#8fa0a8;
+    --rule:#26333a; --rule-soft:#1c272d;
+    --accent:#5fbdb7; --accent-soft:#14312f;
+    --s1:#1f3a39; --s2:#2c5c58; --s3:#3f807c; --s4:#57a9a3; --s5:#7fd0c9;
+    --warn:#d2a24e;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10171c; --card:#162026; --ink:#e6eceb; --muted:#8fa0a8;
+  --rule:#26333a; --rule-soft:#1c272d;
+  --accent:#5fbdb7; --accent-soft:#14312f;
+  --s1:#1f3a39; --s2:#2c5c58; --s3:#3f807c; --s4:#57a9a3; --s5:#7fd0c9;
+  --warn:#d2a24e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.5; font-variant-numeric:tabular-nums;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:40px 24px 80px}
+header{border-bottom:2px solid var(--ink); padding-bottom:18px; margin-bottom:8px}
+h1{
+  font-family:Archivo,sans-serif; font-weight:700; font-size:30px;
+  letter-spacing:-.015em; margin:0 0 6px; text-wrap:balance;
+}
+.sub{color:var(--muted); max-width:62ch; margin:0}
+.meta{
+  display:flex; flex-wrap:wrap; gap:22px; margin-top:16px;
+  font-size:13px; color:var(--muted);
+}
+.meta b{font-family:Archivo,sans-serif; color:var(--ink); font-size:19px; font-weight:600; display:block}
+
+.controls{
+  display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+  margin:26px 0 18px; padding:12px 0; border-bottom:1px solid var(--rule);
+  position:sticky; top:0; background:var(--paper); z-index:5;
+}
+.seg{display:flex; border:1px solid var(--rule); border-radius:2px; overflow:hidden}
+.seg button{
+  font:inherit; font-size:13px; padding:6px 13px; border:0; cursor:pointer;
+  background:transparent; color:var(--muted); border-right:1px solid var(--rule);
+}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent); color:#fff}
+input[type=search]{
+  font:inherit; font-size:13px; padding:6px 11px; flex:1; min-width:180px;
+  border:1px solid var(--rule); border-radius:2px;
+  background:var(--card); color:var(--ink);
+}
+input[type=search]:focus-visible,.seg button:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent); outline-offset:1px;
+}
+
+.chart{margin:8px 0 34px}
+.row{
+  display:grid; grid-template-columns:150px 1fr 96px; gap:12px;
+  align-items:center; padding:5px 0; cursor:pointer;
+  border-bottom:1px solid var(--rule-soft);
+}
+.row:hover .lbl{color:var(--accent)}
+.lbl{font-family:Archivo,sans-serif; font-weight:600; font-size:13px}
+.bar{height:16px; background:var(--rule-soft); position:relative}
+.bar i{display:block; height:100%; background:var(--accent)}
+.bar em{
+  position:absolute; inset:0; display:block; font-style:normal;
+  background:var(--warn); opacity:.85;
+}
+.num{font-size:13px; color:var(--muted); text-align:right}
+.num b{color:var(--ink); font-weight:600}
+
+details{
+  background:var(--card); border:1px solid var(--rule);
+  border-radius:2px; margin-bottom:8px;
+}
+summary{
+  cursor:pointer; padding:11px 14px; list-style:none;
+  display:flex; align-items:baseline; gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::before{
+  content:"+"; font-family:Archivo,sans-serif; color:var(--accent);
+  font-weight:700; width:12px;
+}
+details[open] summary::before{content:"\2212"}
+details[open] summary{border-bottom:1px solid var(--rule)}
+.mname{font-family:Archivo,sans-serif; font-weight:600; flex:1}
+.mcount{font-size:13px; color:var(--muted)}
+.banks{padding:4px 14px 14px}
+.bank{
+  display:grid; grid-template-columns:1fr auto auto; gap:14px;
+  align-items:center; padding:6px 0; border-bottom:1px solid var(--rule-soft);
+  font-size:14px;
+}
+.bank:last-child{border-bottom:0}
+.bn{display:flex; flex-direction:column; gap:1px}
+.has{font-size:12px; color:var(--muted)}
+.has.none{color:var(--warn)}
+.yrs{display:flex; gap:3px}
+.yr{
+  font-size:11px; padding:1px 5px; border-radius:2px;
+  background:var(--accent-soft); color:var(--accent); font-weight:600;
+}
+.pill{
+  font-size:11px; font-weight:600; padding:2px 7px; border-radius:2px;
+  white-space:nowrap;
+}
+.p5{background:var(--s5); color:#fff}
+.p1{background:var(--s1); color:var(--ink)}
+.empty{color:var(--muted); font-size:13px; padding:10px 0}
+footer{
+  margin-top:44px; padding-top:16px; border-top:1px solid var(--rule);
+  font-size:13px; color:var(--muted); max-width:70ch;
+}
+footer p{margin:0 0 8px}
+@media (max-width:640px){
+  .row{grid-template-columns:110px 1fr 64px; gap:8px}
+  .bank{grid-template-columns:1fr; gap:4px}
+}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>Disclosure Gap Register</h1>
+  <p class="sub">Which Pillar 3 metrics are missing, for which UK PRA-authorised banks, across each bank's last five reported financial years.</p>
+  <div class="meta">
+    <span><b>145</b>banks covered</span>
+    <span><b>944</b>open cells</span>
+    <span><b>86.6%</b>coverage, MREL excluded</span>
+    <span><b>15 Sep 2026</b>generated</span>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="seg" role="group" aria-label="Filter scope">
+    <button data-f="all" aria-pressed="true">All gaps</button>
+    <button data-f="proven" aria-pressed="false">Disclosed before</button>
+    <button data-f="persistent" aria-pressed="false">Never disclosed</button>
+    <button data-f="latest" aria-pressed="false">Latest year only</button>
+  </div>
+  <input type="search" id="q" placeholder="Filter by bank name...">
+</div>
+
+<div class="chart" id="chart"></div>
+<div id="list"></div>
+
+<footer>
+  <p><b>Disclosed before</b> is the cohort that matters most: the bank has published this metric in at least one year, so the missing years are far more likely to be a sourcing miss than a real absence. Each row shows what the bank does disclose, so a gap sitting between two disclosed years stands out. <b>Never disclosed</b> means absent in all five reported years — usually a bank publishing no Pillar 3 at all, or disclosing only at group level. <b>Latest year only</b> is most often publication lag, which resolves itself with time.</p>
+  <p>MREL is excluded throughout: only UK resolution entities carry an MREL requirement, so its absence is structural for roughly 130 of the 145 banks. Pre-2022 NSFR blanks are likewise structural — the UK had no NSFR requirement or disclosure template before 1 January 2022 (PRA PS17/21).</p>
+  <p>Years a bank could not have reported — before it held a banking licence, or before the metric existed as a requirement — now leave the denominator rather than counting as gaps, and are marked in the workbooks themselves so they read as settled rather than as work nobody has done. 79 such cells sit inside the five-year windows. An earlier version of this page counted them, which overstated the remaining work and sent researchers after figures that can never exist.</p>
+</footer>
+</div>
+
+<script>
+const DATA = {"CET1 Capital":[["Charter Court Financial Services Limited",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[2021]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Bank Mandiri (Europe) Limited",[2025,2024,2023,2022],[2021,2020]],["Oxbury Bank PLC",[2025,2024,2021],[2023,2022]],["RCI Bank UK Limited",[2022,2021,2020],[2024,2023]],["RELIANCE BANK LIMITED",[2026,2025,2024],[2023,2022]],["ARAB BANK EUROPE PLC",[2024,2023],[2022,2021]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["CAF BANK LIMITED",[2025],[2024,2023,2022,2021,2020]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["Citibank UK Limited",[2024],[2023,2022,2021,2020,2019]],["Philippine National Bank (Europe) Plc",[2022],[2025,2024,2023,2021,2020,2019,2017,2016]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["Weatherbys Bank Limited",[2025],[2024,2023,2022,2021,2020]]],"CET1 Ratio":[["Bank Mandiri (Europe) Limited",[2025,2024,2023,2022,2021],[]],["DB UK Bank Limited",[2025,2024,2023,2022,2021],[]],["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[2021]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Santander Financial Services plc",[2025,2024,2023,2022,2021],[]],["Persia International Bank Plc",[2025,2024,2023,2022],[2021,2020,2019,2018,2017,2016]],["TURKISH BANK (UK) LIMITED",[2025,2022,2021],[2024,2023]],["Cynergy Bank Plc",[2025,2023],[2024,2022,2021,2020,2019,2018,2017,2016,2015,2014]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["National Bank of Egypt (UK) Limited",[2025,2021],[2024,2023,2022]],["Oxbury Bank PLC",[2025,2024],[2023,2022,2021]],["BANK OF CEYLON (UK) LIMITED",[2022],[2025,2024,2023,2021,2020,2019,2018]],["CAF BANK LIMITED",[2025],[2024,2023,2022,2021,2020]],["Cater Allen Limited",[2021],[2025,2024,2023,2022]],["Charter Court Financial Services Limited",[2021],[2025,2024,2023,2022]],["Citibank UK Limited",[2024],[2023,2022,2021,2020,2019]],["FidBank UK Limited",[2025],[2024,2023,2022,2021]],["Gatehouse Bank Plc",[2025],[2024,2023,2022,2021,2017]],["Habib Bank Zurich Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Jordan International Bank Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["MONUMENT BANK LIMITED",[2020],[2024,2023,2022,2021]],["Philippine National Bank (Europe) Plc",[2022],[2025,2024,2023,2021,2020,2019,2017,2016]],["The Bank of London Group Limited",[2022],[2025,2024,2023]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["United National Bank Limited",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]]],"Tier 1 Capital":[["Charter Court Financial Services Limited",[2025,2024,2023,2022,2021],[]],["FCMB Bank (UK) Limited",[2025,2024,2023,2022,2021],[2020]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Bank Mandiri (Europe) Limited",[2025,2024,2023,2022],[2021,2020]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["Oxbury Bank PLC",[2025,2024,2021],[2023,2022]],["RCI Bank UK Limited",[2022,2021,2020],[2024,2023]],["RELIANCE BANK LIMITED",[2026,2025,2024],[2023,2022]],["ARAB BANK EUROPE PLC",[2024,2023],[2022,2021]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["CAF BANK LIMITED",[2025],[2024,2023,2022,2021,2020]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["Citibank UK Limited",[2024],[2023,2022,2021,2020,2019]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["Weatherbys Bank Limited",[2025],[2024,2023,2022,2021,2020]]],"Tier 1 Ratio":[["Bank Mandiri (Europe) Limited",[2025,2024,2023,2022,2021],[]],["Charter Court Financial Services Limited",[2025,2024,2023,2022,2021],[]],["DB UK Bank Limited",[2025,2024,2023,2022,2021],[]],["FCMB Bank (UK) Limited",[2025,2024,2023,2022,2021],[2020]],["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[2021]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Santander Financial Services plc",[2025,2024,2023,2022,2021],[]],["Persia International Bank Plc",[2025,2024,2023,2022],[2021,2020,2019,2018,2017,2016,2015]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["TURKISH BANK (UK) LIMITED",[2025,2022,2021],[2024,2023]],["ARAB BANK EUROPE PLC",[2024,2023],[2022,2021]],["Cynergy Bank Plc",[2025,2023],[2024,2022,2021,2020,2019,2018,2017,2016,2015,2014]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["MONUMENT BANK LIMITED",[2024,2020],[2023,2022,2021]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["National Bank of Egypt (UK) Limited",[2025,2021],[2024,2023,2022]],["Oxbury Bank PLC",[2025,2024],[2023,2022,2021]],["REDWOOD BANK LIMITED",[2025,2024],[2023,2022,2021,2020,2019,2018,2017]],["BANK OF CEYLON (UK) LIMITED",[2022],[2025,2024,2023,2021,2020,2019,2018]],["C. HOARE & CO.",[2026],[2025,2024,2023,2022,2021,2020]],["CAF BANK LIMITED",[2025],[2024,2023,2022,2021,2020]],["Cater Allen Limited",[2021],[2025,2024,2023,2022]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["Citibank UK Limited",[2024],[2023,2022,2021,2020,2019]],["FidBank UK Limited",[2025],[2024,2023,2022,2021]],["FirstBank UK Limited",[2025],[2024,2023,2022,2021,2020,2019]],["Gatehouse Bank Plc",[2025],[2024,2023,2022,2021,2017]],["Habib Bank Zurich Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Jordan International Bank Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Philippine National Bank (Europe) Plc",[2022],[2025,2024,2023,2021,2020,2019,2017,2016]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["United National Bank Limited",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Weatherbys Bank Limited",[2025],[2024,2023,2022,2021,2020]]],"Total Capital":[["Charter Court Financial Services Limited",[2025,2024,2023,2022,2021],[]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["Oxbury Bank PLC",[2025,2024,2021],[2023,2022]],["RCI Bank UK Limited",[2022,2021,2020],[2024,2023]],["RELIANCE BANK LIMITED",[2026,2025,2024],[2023,2022]],["ARAB BANK EUROPE PLC",[2024,2023],[2022,2021]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["BANK OF CEYLON (UK) LIMITED",[2022],[2025,2024,2023,2021,2020,2019,2018]],["Bank Mandiri (Europe) Limited",[2021],[2025,2024,2023,2022]],["CAF BANK LIMITED",[2025],[2024,2023,2022,2021,2020]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]]],"Total Capital Ratio":[["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["KINGDOM BANK LIMITED",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[2021]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Santander Financial Services plc",[2025,2024,2023,2022,2021],[]],["Persia International Bank Plc",[2025,2024,2023,2022],[2021,2020,2019,2018,2017,2016,2015]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["Charter Court Financial Services Limited",[2025,2024,2021],[2023,2022]],["Cynergy Bank Plc",[2025,2024,2023],[2022,2021,2020,2019,2018,2017,2016,2015,2014]],["RELIANCE BANK LIMITED",[2026,2025,2024],[2023,2022,2021,2020,2019]],["TURKISH BANK (UK) LIMITED",[2025,2022,2021],[2024,2023]],["Alpha Bank London Limited",[2022,2021],[2025,2024,2023]],["Griffin Bank Ltd",[2025,2024],[2023]],["MONUMENT BANK LIMITED",[2024,2020],[2023,2022,2021]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["BANK OF CEYLON (UK) LIMITED",[2022],[2025,2024,2023,2021,2020,2019,2018]],["Bank Mandiri (Europe) Limited",[2021],[2025,2024,2023,2022]],["Cater Allen Limited",[2021],[2025,2024,2023,2022]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["Gatehouse Bank Plc",[2025],[2024,2023,2022,2021,2017]],["Habib Bank Zurich Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Jordan International Bank Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Philippine National Bank (Europe) Plc",[2022],[2025,2024,2023,2021,2020,2019,2017,2016]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]]],"Total RWAs":[["Alpha Bank London Limited",[2025,2024,2023,2022,2021],[]],["Bank Mandiri (Europe) Limited",[2025,2024,2023,2022,2021],[]],["Charter Court Financial Services Limited",[2025,2024,2023,2022,2021],[]],["DB UK Bank Limited",[2025,2024,2023,2022,2021],[]],["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["KINGDOM BANK LIMITED",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Santander Financial Services plc",[2025,2024,2023,2022,2021],[]],["THIS BANK LIMITED",[2025,2024,2023,2022,2021],[]],["Persia International Bank Plc",[2025,2024,2023,2022],[2021,2020,2019,2018,2017,2016,2015]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["Cynergy Bank Plc",[2025,2024,2023],[2022,2021,2020,2019,2018,2016,2015,2014]],["Oxbury Bank PLC",[2025,2024,2021],[2023,2022]],["RELIANCE BANK LIMITED",[2026,2025,2024],[2023,2022]],["ARAB BANK EUROPE PLC",[2024,2023],[2022,2021]],["Bank Saderat Plc",[2025,2024],[2023,2022,2021,2020,2019]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["RCI Bank UK Limited",[2021,2020],[2024,2023,2022]],["REDWOOD BANK LIMITED",[2025,2024],[2023,2022,2021,2020,2019,2018,2017]],["BANK OF CEYLON (UK) LIMITED",[2022],[2025,2024,2023,2021,2020,2019,2018]],["CAF BANK LIMITED",[2025],[2024,2023,2022,2021,2020]],["Cater Allen Limited",[2021],[2025,2024,2023,2022]],["Citibank UK Limited",[2024],[2023,2022,2021,2020,2019]],["FidBank UK Limited",[2025],[2024,2023,2022,2021]],["GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",[2025],[2024,2023,2022,2021]],["Gatehouse Bank Plc",[2025],[2024,2023,2022,2021,2017]],["Habib Bank Zurich Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Jordan International Bank Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["MONUMENT BANK LIMITED",[2020],[2024,2023,2022,2021]],["National Bank of Egypt (UK) Limited",[2025],[2024,2023,2022,2021]],["Philippine National Bank (Europe) Plc",[2022],[2025,2024,2023,2021,2020,2019,2017,2016]],["State Bank Of India (UK) Limited",[2026],[2025,2024,2023,2022,2021,2020,2019]],["StreamBank PLC",[2026],[2025,2024,2023]],["The Access Bank UK Limited",[2024],[2023,2022,2021,2020]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["United National Bank Limited",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Weatherbys Bank Limited",[2025],[2024,2023,2022,2021,2020]]],"Leverage Ratio":[["Bank Mandiri (Europe) Limited",[2025,2024,2023,2022,2021],[]],["Bank Saderat Plc",[2025,2024,2023,2022,2021],[]],["Cater Allen Limited",[2025,2024,2023,2022,2021],[]],["Close Brothers Limited",[2025,2024,2023,2022,2021],[]],["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["MARKS AND SPENCER FINANCIAL SERVICES PLC",[2025,2024,2023,2022,2021],[]],["Melli Bank plc",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[]],["Philippine National Bank (Europe) Plc",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Santander Financial Services plc",[2025,2024,2023,2022,2021],[]],["THIS BANK LIMITED",[2025,2024,2023,2022,2021],[]],["AIB GROUP (UK) P.L.C.",[2025,2024,2023,2022],[2021]],["Persia International Bank Plc",[2025,2024,2023,2022],[2021,2020,2018,2016]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["ARAB BANK EUROPE PLC",[2024,2023,2021],[2022]],["Charter Court Financial Services Limited",[2025,2024,2021],[2023,2022]],["Credit Suisse (UK) Limited",[2023,2022,2021],[2025,2024,2018,2017]],["Cynergy Bank Plc",[2025,2024,2023],[2022,2021,2020,2019,2018,2017,2016,2015,2014]],["TURKISH BANK (UK) LIMITED",[2025,2022,2021],[2024,2023]],["Alpha Bank London Limited",[2022,2021],[2025,2024,2023]],["BROWN SHIPLEY & CO. LIMITED",[2022,2021],[2024,2023]],["Bank of the Philippine Islands (Europe) PLC",[2022,2021],[2025,2024,2023]],["EFG Private Bank Limited",[2022,2021],[2024,2023]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["J.P. Morgan Europe Limited",[2022,2021],[2025,2024,2023]],["Julian Hodge Bank Limited",[2025,2024],[2023,2022,2021,2020,2019,2018,2017,2016]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["Paragon Bank Plc",[2022,2021],[2025,2024,2023]],["RCI Bank UK Limited",[2021,2020],[2024,2023,2022]],["REDWOOD BANK LIMITED",[2025,2024],[2023,2022,2021,2020,2019,2018,2017]],["StreamBank PLC",[2026,2023],[2025,2024]],["BANK OF CEYLON (UK) LIMITED",[2022],[2025,2024,2023,2021,2020,2019,2018]],["Bank of Africa United Kingdom Plc",[2025],[2024,2023,2022,2021,2017,2016]],["Bank of Beirut (UK) Ltd",[2021],[2025,2024,2023,2022]],["Bank of Scotland plc",[2021],[2025,2024,2023,2022]],["C. HOARE & CO.",[2026],[2025,2024,2023,2022,2021,2020]],["Cambridge & Counties Bank Limited",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016,2015]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["Coutts & Company",[2021],[2025,2024,2023,2022]],["FidBank UK Limited",[2025],[2024,2023,2022]],["FirstBank UK Limited",[2025],[2024,2023,2022,2021,2020,2019]],["GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",[2025],[2024,2023,2022,2021]],["Gatehouse Bank Plc",[2025],[2024,2023,2022,2021,2017]],["Habib Bank Zurich Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017]],["Jordan International Bank Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["MONUMENT BANK LIMITED",[2020],[2024,2023,2022,2021]],["National Bank of Kuwait (International) Plc",[2023],[2025,2024,2022,2021]],["The Access Bank UK Limited",[2024],[2023,2022,2021,2020]],["Triodos Bank UK Limited",[2025],[2024,2023,2022,2021,2020,2019]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["United National Bank Limited",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Zopa Bank Limited",[2021],[2025,2024,2023,2022]]],"LCR":[["Bank of Scotland plc",[2025,2024,2023,2022,2021],[]],["Cater Allen Limited",[2025,2024,2023,2022,2021],[]],["Coutts & Company",[2025,2024,2023,2022,2021],[]],["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["MARKS AND SPENCER FINANCIAL SERVICES PLC",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Philippine National Bank (Europe) Plc",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["Persia International Bank Plc",[2025,2024,2023,2022],[2021,2020,2018]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["Charter Court Financial Services Limited",[2025,2024,2023],[2022,2021]],["Cynergy Bank Plc",[2025,2024,2023],[2022,2021,2020]],["HSBC INNOVATION BANK LIMITED",[2025,2024,2023],[2022]],["TURKISH BANK (UK) LIMITED",[2025,2022,2021],[2024,2023]],["United National Bank Limited",[2023,2022,2021],[2025,2024]],["ARAB BANK EUROPE PLC",[2024,2023],[2022,2021]],["Alpha Bank London Limited",[2022,2021],[2025,2024,2023]],["BANK OF CEYLON (UK) LIMITED",[2022,2021],[2025,2024,2023,2020,2019,2018]],["EFG Private Bank Limited",[2022,2021],[2024,2023]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Itau BBA International PLC",[2025,2024],[2023,2022,2021,2020,2019,2018,2017,2016,2015]],["J.P. Morgan Europe Limited",[2022,2021],[2025,2024,2023]],["Julian Hodge Bank Limited",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021]],["Shawbrook Bank Limited",[2025,2021],[2024,2023,2022]],["StreamBank PLC",[2026,2023],[2025,2024]],["THIS BANK LIMITED",[2022,2021],[2025,2024,2023]],["The Charity Bank Limited",[2025,2024],[2023,2022,2021]],["Bank Mandiri (Europe) Limited",[2021],[2025,2024,2023,2022]],["Bank of Beirut (UK) Ltd",[2021],[2025,2024,2023,2022]],["C. HOARE & CO.",[2026],[2025,2024,2023,2022]],["CAF BANK LIMITED",[2021],[2025,2024,2023,2022]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["Citibank UK Limited",[2024],[2023,2022,2021,2020,2019]],["Close Brothers Limited",[2021],[2025,2024,2023,2022]],["Clydesdale Bank Plc",[2021],[2026,2025,2023,2022,2020,2019,2018,2017,2016,2015,2014]],["Credit Suisse (UK) Limited",[2021],[2025,2024,2023,2022,2018]],["FCE Bank Plc",[2021],[2025,2024,2023,2022]],["FirstBank UK Limited",[2025],[2024,2023,2022,2021,2020]],["Gatehouse Bank Plc",[2025],[2024,2023,2022,2021,2017]],["HSBC Bank Plc",[2021],[2025,2024,2023,2022]],["HSBC UK Bank Plc",[2021],[2025,2024,2023,2022]],["Investec Bank PLC",[2022],[2026,2025,2024,2023]],["Jordan International Bank Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Lloyds Bank Corporate Markets Plc",[2021],[2025,2024,2023,2022]],["MONUMENT BANK LIMITED",[2020],[2024,2023,2022,2021]],["National Bank of Egypt (UK) Limited",[2021],[2025,2024,2023,2022]],["National Bank of Kuwait (International) Plc",[2023],[2025,2024,2022,2021]],["OakNorth Bank plc",[2021],[2025,2024,2023,2022,2020,2019,2018,2017]],["RBC Europe Limited",[2021],[2025,2024,2023,2022]],["SECURE TRUST BANK PUBLIC LIMITED COMPANY",[2021],[2025,2024,2023,2022]],["Standard Chartered Bank",[2021],[2025,2024,2023,2022]],["The Access Bank UK Limited",[2020],[2024,2023,2022,2021]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["Zopa Bank Limited",[2021],[2025,2024,2023,2022]]],"NSFR":[["Alpha Bank London Limited",[2025,2024,2023,2022,2021],[]],["Bank Saderat Plc",[2025,2024,2023,2022,2021],[]],["Bank of Scotland plc",[2025,2024,2023,2022,2021],[]],["Cater Allen Limited",[2025,2024,2023,2022,2021],[]],["Charter Court Financial Services Limited",[2025,2024,2023,2022,2021],[]],["Coutts & Company",[2025,2024,2023,2022,2021],[]],["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["KINGDOM BANK LIMITED",[2025,2024,2023,2022,2021],[]],["MARKS AND SPENCER FINANCIAL SERVICES PLC",[2025,2024,2023,2022,2021],[]],["Melli Bank plc",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Persia International Bank Plc",[2025,2024,2023,2022,2021],[]],["Philippine National Bank (Europe) Plc",[2025,2024,2023,2022,2021],[]],["RELIANCE BANK LIMITED",[2026,2025,2024,2023,2022],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["THIS BANK LIMITED",[2025,2024,2023,2022,2021],[]],["United National Bank Limited",[2025,2024,2023,2022,2021],[]],["BIRMINGHAM BANK LIMITED",[2024,2023,2022,2021],[]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["ARAB BANK EUROPE PLC",[2024,2023,2021],[2022]],["Bank of Africa United Kingdom Plc",[2023,2022,2021],[2025,2024]],["Citibank UK Limited",[2024,2021,2020],[2023,2022]],["Cynergy Bank Plc",[2025,2024,2023],[2022,2021,2020]],["HAMPDEN & CO PLC",[2025,2024,2021],[2023,2022]],["HSBC INNOVATION BANK LIMITED",[2025,2024,2023],[2022]],["Itau BBA International PLC",[2025,2024,2021],[2023,2022]],["Metro Bank PLC",[2021,2020,2019],[2025,2024,2023,2022]],["Oxbury Bank PLC",[2025,2024,2021],[2023,2022]],["THE CO-OPERATIVE BANK P.L.C.",[2022,2021,2020],[2024,2023]],["TURKISH BANK (UK) LIMITED",[2025,2022,2021],[2024,2023]],["The Charity Bank Limited",[2025,2024,2021],[2023,2022]],["BANK OF CEYLON (UK) LIMITED",[2022,2021],[2025,2024,2023]],["BROWN SHIPLEY & CO. LIMITED",[2022,2021],[2024,2023]],["CAF BANK LIMITED",[2025,2021],[2024,2023,2022]],["Cambridge & Counties Bank Limited",[2025,2021],[2024,2023,2022]],["DF Capital Bank Limited",[2025,2024],[2023,2022,2021,2020]],["EFG Private Bank Limited",[2022,2021],[2024,2023]],["FirstBank UK Limited",[2025,2021],[2024,2023,2022]],["GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",[2025,2021],[2024,2023,2022]],["Gatehouse Bank Plc",[2025,2021],[2024,2023,2022]],["Griffin Bank Ltd",[2025,2024],[2023]],["Guaranty Trust Bank (UK) Limited",[2022,2021],[2025,2024,2023]],["J.P. Morgan Europe Limited",[2022,2021],[2025,2024,2023]],["Jordan International Bank Plc",[2025,2021],[2024,2023,2022,2016]],["Julian Hodge Bank Limited",[2025,2024],[2023,2022,2021,2020,2019]],["Lloyds Bank PLC",[2022,2021],[2025,2024,2023]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021]],["National Bank of Egypt (UK) Limited",[2025,2021],[2024,2023,2022]],["OneSavings Bank Plc",[2022,2021],[2025,2024,2023]],["REDWOOD BANK LIMITED",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Shawbrook Bank Limited",[2022,2021],[2025,2024,2023]],["StreamBank PLC",[2026,2023],[2025,2024]],["The Access Bank UK Limited",[2024,2020],[2023,2022,2021]],["Triodos Bank UK Limited",[2025,2021],[2024,2023,2022]],["Zenith Bank (UK) Limited",[2021,2020],[2025,2024,2023,2022]],["ABC International Bank Plc",[2021],[2025,2024,2023,2022]],["ALLICA BANK LIMITED",[2021],[2025,2024,2023,2022]],["BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",[2021],[2025,2024,2023,2022]],["Bank Mandiri (Europe) Limited",[2021],[2025,2024,2023,2022]],["Bank of Beirut (UK) Ltd",[2021],[2025,2024,2023,2022]],["Bank of the Philippine Islands (Europe) PLC",[2021],[2025,2024,2023,2022]],["Barclays Bank Plc",[2021],[2025,2024,2023,2022]],["Barclays Bank UK PLC",[2021],[2025,2024,2023,2022]],["C. HOARE & CO.",[2026],[2025,2024,2023,2022]],["CREDIT SUISSE INTERNATIONAL",[2021],[2025,2024,2023,2022]],["Castle Trust Capital PLC",[2021],[2025,2024,2023,2022]],["Chetwood Financial Limited",[2024],[2025,2023,2022,2021,2020]],["Credit Suisse (UK) Limited",[2021],[2025,2024,2023,2022]],["FCE Bank Plc",[2021],[2025,2024,2023,2022]],["FidBank UK Limited",[2025],[2024,2023,2022]],["Goldman Sachs International Bank",[2021],[2025,2024,2023,2022]],["Gulf International Bank (UK) Limited",[2020],[2024,2023,2022,2021]],["HSBC Bank Plc",[2021],[2025,2024,2023,2022]],["HSBC UK Bank Plc",[2021],[2025,2024,2023,2022]],["Habib Bank Zurich Plc",[2025],[2024,2023,2022,2021]],["Handelsbanken plc",[2021],[2025,2024,2023,2022,2018]],["ICBC Standard Bank Plc",[2021],[2025,2024,2023,2022]],["IFAST GLOBAL BANK LIMITED",[2021],[2025,2024,2023,2022]],["Investec Bank PLC",[2022],[2026,2025,2024,2023]],["KEXIM BANK (UK) LIMITED",[2021],[2025,2024,2023,2022]],["Kroo Bank Ltd",[2021],[2024,2023,2022]],["Lloyds Bank Corporate Markets Plc",[2021],[2025,2024,2023,2022]],["MONUMENT BANK LIMITED",[2020],[2024,2023,2022,2021]],["MONZO BANK LIMITED",[2021],[2025,2024,2023,2022]],["Mizuho International plc",[2021],[2025,2024,2023,2022]],["Morgan Stanley Bank International Limited",[2021],[2025,2024,2023,2022]],["NatWest Markets Plc",[2021],[2025,2024,2023,2022]],["National Bank of Kuwait (International) Plc",[2023],[2025,2024,2022,2021]],["OakNorth Bank plc",[2021],[2025,2024,2023,2022]],["RBC Europe Limited",[2021],[2025,2024,2023,2022]],["SECURE TRUST BANK PUBLIC LIMITED COMPANY",[2021],[2025,2024,2023,2022]],["Santander UK Plc",[2021],[2025,2024,2023,2022]],["TSB Bank plc",[2021],[2025,2024,2023,2022]],["Tandem Bank Limited",[2021],[2025,2024,2023,2022]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["United Trust Bank Limited",[2021],[2025,2024,2023,2022]]],"RWA Breakdown":[["Alpha Bank London Limited",[2025,2024,2023,2022,2021],[]],["Bank Mandiri (Europe) Limited",[2025,2024,2023,2022,2021],[]],["Cater Allen Limited",[2025,2024,2023,2022,2021],[]],["Charter Court Financial Services Limited",[2025,2024,2023,2022,2021],[]],["DB UK Bank Limited",[2025,2024,2023,2022,2021],[]],["Havin Bank Ltd",[2025,2024,2023,2022,2021],[]],["KINGDOM BANK LIMITED",[2025,2024,2023,2022,2021],[]],["Melli Bank plc",[2025,2024,2023,2022,2021],[]],["Nomura Bank International Plc.",[2026,2025,2024,2023,2022],[]],["PERENNA BANK PLC",[2025,2024,2023,2022,2021],[]],["Rathbones Investment Management Limited",[2025,2024,2023,2022,2021],[]],["SCHRODER & CO. LIMITED",[2025,2024,2023,2022,2021],[]],["Santander Financial Services plc",[2025,2024,2023,2022,2021],[]],["THIS BANK LIMITED",[2025,2024,2023,2022,2021],[]],["Bank of London and The Middle East plc",[2025,2024,2023,2022],[2021,2020,2019,2018,2017,2016,2015,2014]],["Persia International Bank Plc",[2025,2024,2023,2022],[2021,2020,2019,2018,2017,2016,2015]],["The Bank of London Group Limited",[2025,2024,2023,2022],[]],["Cynergy Bank Plc",[2025,2024,2023],[2022,2021,2020,2019,2018,2015,2014]],["HSBC INNOVATION BANK LIMITED",[2025,2024,2023],[2022]],["Oxbury Bank PLC",[2025,2024,2021],[2023,2022]],["RELIANCE BANK LIMITED",[2026,2025,2024],[2023,2022]],["StreamBank PLC",[2026,2023,2021],[2025,2024]],["ARAB BANK EUROPE PLC",[2024,2023],[2022,2021]],["Bank Saderat Plc",[2025,2024],[2023,2022,2021,2020,2019]],["Castle Trust Capital PLC",[2023,2022],[2025,2024,2021]],["Griffin Bank Ltd",[2025,2024],[2023]],["HAMPDEN & CO PLC",[2025,2024],[2023,2022,2021,2020,2019,2018]],["Habib Bank Zurich Plc",[2025,2021],[2024,2023,2022]],["J.P. Morgan Europe Limited",[2022,2021],[2025,2024,2023]],["Julian Hodge Bank Limited",[2025,2024],[2023,2022,2021,2020,2019,2018,2017,2016]],["Methodist Chapel Aid Limited",[2025,2024],[2023,2022,2021,2020,2019]],["RCI Bank UK Limited",[2021,2020],[2024,2023,2022]],["REDWOOD BANK LIMITED",[2025,2024],[2023,2022,2021,2020,2019,2018,2017]],["ARBUTHNOT LATHAM & CO., LIMITED",[2025],[2024,2023,2022,2021]],["BANK OF CEYLON (UK) LIMITED",[2022],[2025,2024,2023,2021,2020,2019,2018]],["Bank of Africa United Kingdom Plc",[2025],[2024,2023,2022,2021,2017,2016]],["C. HOARE & CO.",[2026],[2025,2024,2023,2022,2021,2020]],["CAF BANK LIMITED",[2025],[2024,2023,2022,2021,2020]],["Cambridge & Counties Bank Limited",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016,2015]],["Citibank UK Limited",[2024],[2023,2022,2021,2020,2019]],["FidBank UK Limited",[2025],[2024,2023,2022,2021]],["FirstBank UK Limited",[2025],[2024,2023,2022,2021,2020,2019]],["GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",[2025],[2024,2023,2022,2021]],["Gatehouse Bank Plc",[2025],[2024,2023,2022,2021]],["Guaranty Trust Bank (UK) Limited",[2023],[2025,2024,2022,2021]],["Jordan International Bank Plc",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["MONUMENT BANK LIMITED",[2020],[2024,2023,2022,2021]],["National Bank of Egypt (UK) Limited",[2025],[2024,2023,2022,2021]],["National Bank of Kuwait (International) Plc",[2023],[2025,2024,2022,2021]],["Philippine National Bank (Europe) Plc",[2022],[2025,2024,2023,2021,2020,2019,2017,2016]],["State Bank Of India (UK) Limited",[2026],[2025,2024,2023,2022,2021,2020,2019]],["The Access Bank UK Limited",[2024],[2023,2022,2021,2020]],["Triodos Bank UK Limited",[2025],[2024,2023,2022,2021,2020,2019]],["UNION BANK OF INDIA (UK) LIMITED",[2026],[2025,2024,2023,2022,2021,2020,2019,2018]],["Union Bancaire Priv\u00e9e (UK) Limited",[2020],[2024,2023,2022,2021]],["United National Bank Limited",[2025],[2024,2023,2022,2021,2020,2019,2018,2017,2016]],["Weatherbys Bank Limited",[2025],[2024,2023,2022,2021,2020]]]};
+const ORDER = ["NSFR","RWA Breakdown","Leverage Ratio","LCR","Total RWAs","Tier 1 Ratio","Total Capital Ratio","CET1 Ratio","Tier 1 Capital","CET1 Capital","Total Capital"];
+let filter = "all", query = "";
+
+function rows(sheet){
+  let r = DATA[sheet] || [];
+  if (filter === "proven") r = r.filter(b => (b[2] || []).length > 0);
+  if (filter === "persistent") r = r.filter(b => b[1].length >= 5);
+  if (filter === "latest") r = r.filter(b => b[1].length === 1);
+  if (query) r = r.filter(b => b[0].toLowerCase().includes(query));
+  return r;
+}
+
+function drawChart(){
+  const counts = ORDER.map(s => {
+    const all = rows(s);
+    return {s, n: all.length, persistent: all.filter(b => b[1].length >= 5).length,
+            cells: all.reduce((a,b) => a + b[1].length, 0)};
+  });
+  const max = Math.max(1, ...counts.map(c => c.n));
+  document.getElementById("chart").innerHTML = counts.map(c => `
+    <div class="row" data-go="${c.s.replace(/"/g,'&quot;')}">
+      <span class="lbl">${c.s}</span>
+      <span class="bar" title="${c.n} banks, ${c.persistent} never disclosing">
+        <i style="width:${c.n/max*100}%"></i>
+        <em style="width:${c.persistent/max*100}%"></em>
+      </span>
+      <span class="num"><b>${c.n}</b> banks</span>
+    </div>`).join("");
+  document.querySelectorAll("[data-go]").forEach(el => el.onclick = () => {
+    const d = document.getElementById("d-" + el.dataset.go.replace(/\s/g,"_"));
+    if (d){ d.open = true; d.scrollIntoView({behavior:"smooth", block:"start"}); }
+  });
+}
+
+function drawList(){
+  document.getElementById("list").innerHTML = ORDER.map(s => {
+    const r = rows(s);
+    const cells = r.reduce((a,b) => a + b[1].length, 0);
+    const body = r.length ? r.map(b => {
+      const persistent = b[1].length >= 5, ever = b[2] || [];
+      const has = ever.length
+        ? `<span class="has">discloses ${ever.slice(0,4).map(y => "FY"+y).join(", ")}${ever.length>4 ? " +"+(ever.length-4) : ""}</span>`
+        : `<span class="has none">no year on record</span>`;
+      return `<div class="bank">
+        <span class="bn">${b[0]}${has}</span>
+        <span class="yrs">${b[1].map(y => `<span class="yr">FY${y}</span>`).join("")}</span>
+        <span class="pill ${persistent ? "p5" : "p1"}">${persistent ? "never" : b[1].length + "y"}</span>
+      </div>`;
+    }).join("") : `<div class="empty">No banks match this filter.</div>`;
+    return `<details id="d-${s.replace(/\s/g,"_")}">
+      <summary><span class="mname">${s}</span><span class="mcount">${r.length} banks &middot; ${cells} cells</span></summary>
+      <div class="banks">${body}</div>
+    </details>`;
+  }).join("");
+}
+
+function render(){ drawChart(); drawList(); }
+
+document.querySelectorAll(".seg button").forEach(btn => btn.onclick = () => {
+  filter = btn.dataset.f;
+  document.querySelectorAll(".seg button").forEach(b =>
+    b.setAttribute("aria-pressed", String(b === btn)));
+  render();
+});
+document.getElementById("q").oninput = e => { query = e.target.value.toLowerCase().trim(); render(); };
+render();
+</script>

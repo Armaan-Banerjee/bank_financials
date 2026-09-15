@@ -32,6 +32,10 @@ CH_AR_URLS = {
     "FY2016": "https://find-and-update.company-information.service.gov.uk/company/02943300/filing-history/MzE3NTA2MDU3MmFkaXF6a2N4/document?format=pdf&download=0",
     "FY2015": "https://find-and-update.company-information.service.gov.uk/company/02943300/filing-history/MzE1MDMxNDcxNGFkaXF6a2N4/document?format=pdf&download=0",
 }
+# The FY2025 annual report is served from weatherbys.bank as a 301 redirect from the
+# AR_URLS["FY2025"] page slug to this direct PDF; cited explicitly where FY2025 Pillar 3-style
+# metrics are sourced from it, since no FY2025 Pillar 3 document exists (see FY2025_P3_NOTE).
+AR2025_PDF_URL = "https://www.weatherbys.bank/app/uploads/2026/05/Weatherbys-Banking-Group-Annual-report-2025.pdf"
 P3_URLS = {
     "FY2024": "https://www.weatherbys.bank/app/uploads/2025/04/Weatherbys-Bank-Pillar-3-Disclosures-2024.pdf",
     "FY2023": "https://weatherbys.bank/app/uploads/2024/05/Weatherbys-Bank-Pillar-3-Dislcosures-2023.pdf",
@@ -529,6 +533,61 @@ bw.add_asset_quality_sheet(
     unit_suffix=" (GBP'000)",
 )
 
+FY2025_P3_NOTE = (
+    "FY2025: NO Weatherbys Pillar 3 disclosure document for 2025 exists as at 15 September 2026 - the "
+    "Bank's own annual-reporting page (https://www.weatherbys.bank/about-us/corporate-information/"
+    "annual-reporting/) still lists the 2024 edition as the latest Pillar 3 document, and every 2026 "
+    "upload-folder permutation of the FY2024 filename returns 404. Independently re-confirmed the same "
+    "date by a Wayback CDX sweep of the whole weatherbys.bank domain for 'pillar' URLs, which returns no "
+    "Pillar 3 document later than Weatherbys-Bank-Pillar-3-Disclosures-2024.pdf (first archived 20 July "
+    "2025).\n"
+    "SDDT DATE TEST (checked 2026-09-15) - IMPORTANT, this SUPERSEDES the publication-lag reading of that "
+    "absence. An earlier pass on 2026-09-15 reasoned that because Weatherbys publishes its Pillar 3 alongside "
+    "the April/May annual report, an FY2025 edition would be expected around April-May 2027 and the blank was "
+    "merely a document not yet due. The PRA register shows that is wrong: no FY2025 edition is expected at all. "
+    "The 'Consolidated Waivers list for PRA-regulated firms - as of 1 July 2026' (bankofengland.co.uk/"
+    "prudential-regulation/authorisations/waivers-and-modifications-of-rules) records that Weatherbys Bank "
+    "Limited (FRN 204571) holds a 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT "
+    "Regime - General Application Part', sub-rule 'Ru 3.1', starting 02/04/2025 with no end date (still in "
+    "force). That modification removes the Pillar 3 disclosure obligation outright - a stronger relief than UK "
+    "CRR Article 433b, which only reduces frequency and content for small and non-complex institutions. The "
+    "Bank's year-end is 31 December, stable across its Companies House accounts filing history (company "
+    "02943300). FY2025 (y/e 31 December 2025) therefore falls AFTER the modification took effect, so no FY2025 "
+    "Pillar 3 was ever required. Consistent with that, FY2024 (y/e 31 December 2024) PREDATES the modification - "
+    "which is exactly why the 2024 edition exists and is the last one. The FY2025 blanks here are structural and "
+    "permanent unless the Bank opts back in; they should NOT be re-chased in April-May 2027 or at any later "
+    "date. By the same logic the FY2025 Annual-Report-sourced figures below will NOT be restated onto a Pillar 3 "
+    "basis later, because no such document is coming - see the precision caveat on Total Capital.\n"
+    "The FY2025 figures that ARE populated "
+    "below therefore come from the Bank's own Annual Report and Financial Accounts 2025, NOT from a "
+    "Pillar 3 document - and on the CONSOLIDATED (Banking Group) basis, matching the basis of the "
+    f"FY2020-FY2024 Pillar 3 figures in this sheet ({AR2025_PDF_URL}):\n"
+    "  - CET1 Ratio 13.1%, Total Capital Ratio 15.3%, LCR 1,080%, NSFR 252%, Leverage Ratio 6.05%: "
+    "Annual Report and Financial Accounts 2025, '3. Financial key performance indicators', p.19 (the "
+    "five-KPI panel, each figure shown with its 2024 comparative), corroborated for CET1/total capital/"
+    "leverage by '2. Business review: the Group', p.19-20 ('a Common Equity Tier 1 ratio of 13.1% (2024: "
+    "13.8%)... the Group's total capital ratio at the year end was 15.3% (2024: 16.3%). The leverage "
+    "ratio at the year end was 6.05% (2024: 7.08%)').\n"
+    "  - Total Capital GBP105.5m: Annual Report and Financial Accounts 2025, Report of the Directors, "
+    "section 4.1 'Capital and leverage ratios', p.45 ('On a consolidated basis total regulatory capital "
+    "and the total capital ratio were GBP105.5 million and 15.3% respectively (2024: GBP99.8 million and "
+    "16.3%)'). Stated only to GBP0.1m, so FY2025's 105,500 carries less precision than the exact "
+    "Pillar 3-sourced figures for FY2020-FY2024. This is now a PERMANENT precision limit, not a temporary one: "
+    "per the SDDT date test above, no FY2025 Pillar 3 will be published, so there is no future document to "
+    "restate this figure against.\n"
+    "  - BASIS CHECK: the Annual Report and Pillar 3 bases agree for this bank. Every FY2024 comparative "
+    "printed alongside the FY2025 figures above reproduces this workbook's Pillar 3-sourced FY2024 values "
+    "- total capital GBP99.8m vs 99,753; total capital ratio 16.3% vs 16.26%; CET1 ratio 13.8% vs 13.84%; "
+    "leverage 7.08% vs 7.08%; LCR 1,017% vs 1017%; NSFR 266% vs 266% - so the FY2025 figures sit on the "
+    "same consolidated basis as the rest of the series, not a different one.\n"
+    "  - CET1 Capital, Tier 1 Capital, Tier 1 Ratio and Total RWAs are left BLANK for FY2025: the FY2025 "
+    "Annual Report states no CET1 or Tier 1 capital amount, no Tier 1 ratio and no risk-weighted-assets "
+    "figure anywhere (it confirms the Bank holds Additional Tier 1 securities and Tier 2 subordinated "
+    "notes, so CET1/Tier 1/Total Capital are genuinely different numbers and neither may be inferred from "
+    "the other). Total RWAs has deliberately NOT been back-solved from GBP105.5m / 15.3%, since both "
+    "inputs are rounded."
+)
+
 P3_SOURCES = (
     "Sources - Weatherbys Bank 3 Pillar Disclosures, Group/Solo columns, GBP'000 except ratios: "
     f"FY2024, pp.5-6 and 20-26 - {P3_URLS['FY2024']}; "
@@ -537,7 +596,7 @@ P3_SOURCES = (
     f"FY2021, pp.5-6 and 14, 18-22 - {P3_URLS['FY2021']}; "
     f"FY2020, Pillar 3 Disclosures - Year Ended 31st December 2020, Tables 1-2 and 10 (pp.5-6, 13-14) - {P3_URLS['FY2020']}.\n\n"
     + ENTITY_NOTE
-    + " FY2025 is blank for regulatory metrics because the 2025 annual report does not reproduce the requested Pillar 3 capital/liquidity tables and no 2025 Pillar 3 disclosure was located in the official archive."
+    + " " + FY2025_P3_NOTE
     + " " + PRE2021_NOTE
     + " FY2020's Table 1 mislabels its Total Capital Ratio row as 'Tier 2 Ratio' (14.53% Group/14.32% Solo) - "
     "verified as Total Capital / RWAs (58,286/401,130 = 14.53%), reproduced here under 'Total Capital Ratio' "
@@ -545,6 +604,10 @@ P3_SOURCES = (
 )
 
 capital = {
+    # FY2025 is sourced from the Annual Report and Financial Accounts 2025 (consolidated basis), NOT
+    # from a Pillar 3 document - none exists for 2025. CET1 Capital, Tier 1 Capital, Tier 1 Ratio and
+    # Total RWAs are genuinely absent from that report and stay None. See FY2025_P3_NOTE.
+    "FY2025": {"cet1": None, "tier1": None, "total": 105500, "rwa": None, "cet1r": "13.1%", "tier1r": None, "totalr": "15.3%", "lev": "6.05%", "lcr": "1080%", "nsfr": "252%"},
     "FY2024": {"cet1": 84898, "tier1": 87898, "total": 99753, "rwa": 613559, "cet1r": "13.84%", "tier1r": "14.33%", "totalr": "16.26%", "lev": "7.08%", "lcr": "1017%", "nsfr": "266%"},
     "FY2023": {"cet1": 73192, "tier1": 76192, "total": 87815, "rwa": 543090, "cet1r": "13.48%", "tier1r": "14.03%", "totalr": "16.17%", "lev": "7.13%", "lcr": "896%", "nsfr": "254%"},
     "FY2022": {"cet1": 57524, "tier1": 57524, "total": 69108, "rwa": 476472, "cet1r": "12.07%", "tier1r": "12.07%", "totalr": "14.50%", "lev": "5.30%", "lcr": "650%", "nsfr": "259.7%"},
@@ -616,7 +679,12 @@ bw.add_overview_sheet(
     cash_flow_unit="GBP'000",
     ratios=[("CET1 Ratio", series("cet1r")), ("Total Capital Ratio", series("totalr"))],
     note=(
-        "FY2025 Pillar 3 metrics are blank because no 2025 official disclosure was located; FY2021-FY2024 "
+        "FY2025 has no Weatherbys Pillar 3 disclosure document (none published as at 15 September 2026), so "
+        "its CET1 Ratio, Total Capital, Total Capital Ratio, Leverage Ratio, LCR and NSFR are taken from the "
+        "Annual Report and Financial Accounts 2025 instead (consolidated basis, same basis as the Pillar 3 "
+        "series - every FY2024 comparative printed there reproduces this workbook's Pillar 3-sourced FY2024 "
+        "value); FY2025 CET1 Capital, Tier 1 Capital, Tier 1 Ratio and Total RWAs stay blank because that "
+        "report states no such figure. FY2021-FY2024 "
         "values are the official Weatherbys Group/Solo disclosures. FY2020's Pillar 3 metrics are populated "
         "from Weatherbys' own FY2020 Pillar 3 Disclosures document (already reported under CRD IV/Basel III "
         "CET1/Tier 1/Tier 2 terminology - no Basel-II-era Tier-1/Total-Capital-only caveat applies). FY2015-"

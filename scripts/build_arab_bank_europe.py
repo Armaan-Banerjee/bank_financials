@@ -235,12 +235,116 @@ AQ_SOURCES = (
     "elsewhere.\n\n" + ENTITY_NOTE + "\n\n" + FX_NOTE
 )
 
+SDDT_NOTE = (
+    "THESE BLANKS ARE NOT A LAWFUL EXEMPTION - THEY ARE A MISSING DISCLOSURE. Arab Bank Europe is NOT an SDDT. "
+    "The PRA's consolidated register of waivers and modifications for PRA-authorised firms carries exactly three "
+    "rows for FRN 446951 'Europe Arab Bank plc' - Article 9 CRR (28/03/2018), Capital Buffers 5.1-5.3 "
+    "(15/05/2023) and Article 400(2)(c) non-core large exposures (15/04/2024-15/04/2027) - and NO Disclosure "
+    "(CRR) Rule 3.1 SDDT modification, which is the only waiver that removes the Pillar 3 duty. Unlike Cynergy, "
+    "Methodist Chapel Aid, Griffin or Hampden, this bank therefore had a LIVE Pillar 3 disclosure obligation "
+    "throughout FY2023, FY2024 and FY2025. The documents were required to exist; they simply are not published "
+    "on any reachable host. USER-ACTIONABLE: request the FY2023-FY2025 editions from the Bank directly - there "
+    "is a live regulatory obligation behind the request, which is not true of the SDDT cases elsewhere in this "
+    "series.\n"
+    "AVAILABILITY RE-ENUMERATED 2026-09-15 (positive evidence, not filename permutation). (a) The two "
+    "Google-indexed paths https://www.eabplc.com/downloads/Pillar3EAB_PLC_2024.pdf and "
+    ".../Pillar3EABplc2023.pdf were re-fetched this session: both return HTTP 200 but with Content-Type "
+    "text/html and an identical 95,415-byte body, redirecting to https://arabbankeurope.com/ - they serve the "
+    "Arab Bank Europe homepage, not a PDF. (b) An unfiltered Wayback CDX scan of the entire eabplc.com domain "
+    "(1,546 unique captures) filtered for 'pillar' returns 12 Pillar 3 documents: a continuous annual series "
+    "for 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 and 2020, and then a single 2024-07 "
+    "capture of the FY2022 edition cited on these sheets. There is NO FY2021, NO FY2023 and NO FY2024 capture. "
+    "(c) A CDX scan of the successor domain arabbankeurope.com returns 20 captures and no PDFs at all. FY2021's "
+    "absence costs nothing beyond leverage/NSFR (see those sheets - the FY2022 edition's own comparative column "
+    "supplies FY2021 capital, RWA and LCR, and flags leverage/NSFR 'n/a' as structural)."
+)
+
+BASIS_NOTE = (
+    "BASIS DETERMINATION (verified 2026-09-15 by reading the document's own 'Scope' section, not inferred). The "
+    "recovered Pillar 3 document is headed \"This document comprises EAB Group's ('the Group') Pillar 3 "
+    "disclosures as at 31 DEC 2022\", and its Scope section (PDF p.5) states verbatim: \"The EAB Group comprising "
+    "EAB plc and its subsidiary, Europe Arab Bank SA ('EAB SA'), operates through offices in four European "
+    "countries.\" and \"In line with the requirements of the UK CRR, Pillar 3 disclosures have been prepared on "
+    "consolidated basis, and where relevant, provide quantitative disclosures for both, Group and EAB plc solo "
+    "entity.\" and \"EAB Group is subject to consolidated supervision, with EAB plc also subject to solo "
+    "regulatory supervision by the PRA. Therefore, it is a requirement to calculate and maintain regulatory "
+    "capital ratios on both a Group basis and on a solo basis for the EAB plc. Capital requirements for both "
+    "Group and EAB plc have been presented in these disclosures.\" "
+    "So 'EAB Group' is the UK entity's OWN consolidated basis (EAB plc consolidating its French subsidiary) and "
+    "NOT the Jordanian parent Arab Bank plc's group - it would have been usable. This workbook nevertheless uses "
+    "the narrower 'EAB plc' SOLO column throughout, because every other sheet in this workbook is entity-only and "
+    "mixing a solo statement set with a consolidated capital set would breach this project's entity-basis rule. "
+    "The two bases differ materially and must never be interchanged: at 31 Dec 2022, Group CET1 EUR290m / RWA "
+    "EUR1,810m / CET1 ratio 16.0% / LCR 249% / NSFR 128% / leverage 11.4%, against solo CET1 EUR253m / RWA "
+    "EUR1,631m / CET1 ratio 15.5% / LCR 218% / NSFR 120% / leverage 11.7%. Every Pillar 3 figure in this workbook "
+    "is the solo column."
+)
+
 RWA_NOT_DISCLOSED_NOTE = (
     "Not disclosed in either sourced Annual Report (FY2021/FY2022 or FY2023/FY2024) - the Bank's only capital "
     "disclosure anywhere in these documents is the 'Other Key Performance Indicators' table's two headline ratios "
     "(Capital adequacy/Total Capital ratio, CET1 ratio - see the Total Capital Ratio and CET1 Ratio Pillar 3 "
     "sheets). No RWA amount, UK OV1 exposure-class breakdown, or standalone Pillar 3 document was obtainable (see "
-    "ENTITY_NOTE on the Cash Flow Statement sheet)."
+    "ENTITY_NOTE on the Cash Flow Statement sheet).\n"
+    "RE-VERIFIED 2026-09-12 (independent re-check of whether a post-FY2022 Pillar 3 has since appeared): it has "
+    "not, and the FY2022 one is no longer live. The live https://www.eabplc.com/downloads/Pillar3.pdf path now "
+    "returns HTTP 200 but serves the Arab Bank Europe HOMEPAGE as HTML (title 'Home - Arab Bank Europe'), not a "
+    "PDF - the document was withdrawn in the site migration, so the web.archive.org capture cited on the other "
+    "Pillar 3 sheets is now the only copy in existence. A Wayback CDX scan of the whole eabplc.com domain "
+    "filtered for 'pillar' returns 12 documents, all FY2020 or earlier apart from that single 2024-07 capture, "
+    "which was re-downloaded and re-read this session and confirmed to cover the year ended 31 Dec 2022 only "
+    "(with FY2021 comparatives) - it does not reach FY2023. The FY2024 Annual Report was also re-read in full: "
+    "its 'Other Key Performance Indicators' table gives only the two headline ratios already captured (Capital "
+    "adequacy 23%/24%, CET1 16%/17% for FY2024/FY2023) and Note 37 'Capital management and risk' gives only net "
+    "equity as a EUR amount - no RWA, leverage ratio, LCR or NSFR figure appears anywhere in it. FY2023-FY2025 "
+    "therefore remain a genuine post-migration availability gap rather than a document this session failed to "
+    "fetch.\n"
+    "RE-VERIFIED AGAIN 2026-09-15, independently and via the FY2025 Annual Report (which was NOT available to "
+    "the earlier checks in usable form). That report is now live and directly downloadable at "
+    "https://arabbankeurope.com/wp-content/uploads/202602_EABAnnualReport_v9.pdf (111pp, real text layer, "
+    "reached via arabbankeurope.com/downloads/annual-report-2025/, which 302s to that CDN path) - recording the "
+    "resolved URL here because the migrated site exposes no document index. It CONFIRMS the FY2024 figures "
+    "already held: its Key Performance Indicators table (p.6) gives Capital adequacy ratio 2024 = 23% and "
+    "Common Equity Tier 1 capital ratio 2024 = 16%, both reproducing this workbook's FY2024 values exactly, so "
+    "the basis is validated. It adds NOTHING further for FY2024: Note 36.6 'Capital management and risk' "
+    "(p.109) again discloses only net equity (EUR330m 2025, EUR320m 2024) and perpetual/subordinated "
+    "liabilities (EUR107m 2025, EUR121m 2024), and explicitly warns that 'The regulatory capital base differs "
+    "slightly from amounts reported above due to differing treatment of certain reserves and consolidation "
+    "adjustments' - an express statement by the Bank that net equity is NOT its regulatory capital, so CET1 / "
+    "Tier 1 / Total Capital amounts are not derivable from it and remain blank. No RWA amount, no leverage "
+    "ratio, no LCR and no NSFR figure appears anywhere in the FY2025 report either (liquidity is narrative "
+    "only: 'liquidity coverage ratio above the regulatory requirements'). A Tier 1 RATIO is likewise not "
+    "disclosed in any year: the Bank publishes only a CET1 ratio and a total capital ratio, and because it "
+    "holds upper tier 2 subordinated liabilities, the Tier 1 ratio is a genuinely distinct third number that "
+    "cannot be inferred from the other two. Five further Pillar 3 filename permutations were tried under the "
+    "new /wp-content/uploads/ CDN path discovered above (all 404), and the migrated site has no "
+    "regulatory-disclosures or downloads index page at all (arabbankeurope.com/regulatory-disclosures/ returns "
+    "404). Conclusion unchanged and now doubly evidenced: Arab Bank Europe stopped publishing Pillar 3 after "
+    "the FY2022 edition, and FY2023 onward is a genuine disclosure gap, not an access failure.\n"
+    "CLOSED BY ENUMERATION 2026-09-15 (maximum-effort sweep, prior verdicts treated as unproven). The checks "
+    "above all rest on filename permutations, which can only fail to find; these two are positive evidence of "
+    "the complete set. (1) The migrated site runs WordPress, and its REST media endpoint "
+    "(/wp-json/wp/v2/media?mime_type=application/pdf) enumerates the ENTIRE uploaded file set: 64 PDFs, of "
+    "which exactly one is any kind of financial report (202602_EABAnnualReport_v9.pdf, the FY2025 Annual "
+    "Report already cited) and NOT ONE is a Pillar 3 document. (2) The site's hidden downloads index was also "
+    "recovered - /sitemap.xml chains to /eab_download-sitemap.xml, listing 53 download slugs including "
+    "https://arabbankeurope.com/downloads/pillar-iii-disclosures/. That page still exists and still resolves "
+    "HTTP 200, but carries NO attached file of any kind: the slug survived the migration and the document did "
+    "not. The old host is fully collapsed - https://www.eabplc.com/ and .../downloads/Pillar3.pdf both now "
+    "return the same 18,400-byte Arab Bank Europe homepage HTML under two different user agents.\n"
+    "MATERIALLY NEW FINDING, AND IT CHANGES THE CLASSIFICATION: this entity is NOT exempt. The PRA's "
+    "consolidated register of waivers and modifications for PRA-authorised firms (downloaded 2026-09-15 from "
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv, UTF-16 TSV, 2,919 rows, of which "
+    "135 are SDDT Rule 3.1 rows) carries exactly three rows for FRN 446951 'Europe Arab Bank plc': Article 9 "
+    "CRR (28/03/2018), Capital Buffers 5.1-5.3 (15/05/2023), and Article 400(2)(c) non-core large exposures "
+    "(15/04/2024-15/04/2027). There is NO Rule 3.1 SDDT modification. So unlike Cynergy, Methodist Chapel "
+    "Aid, Griffin or Hampden - whose post-opt-in blanks are a lawful structural exemption - Arab Bank Europe "
+    "remained under a live Pillar 3 disclosure obligation throughout FY2023, FY2024 and FY2025. These blanks "
+    "are therefore NOT structural. The documents were required to exist, and the bank's own disclosure "
+    "practice simply stopped being published on a reachable host. USER-ACTIONABLE: the FY2023-FY2025 "
+    "editions should be requested from the Bank directly - unlike an SDDT case, there is a live obligation "
+    "behind the request."
 )
 
 # --- Balance Sheet ---
@@ -659,7 +763,8 @@ PILLAR3_SOURCES = (
     "Recovered 2026-09-07 (HD-081 item 4 re-check) - this document was previously found archived at the same "
     "Wayback URL but was corrupted/truncated on every earlier download attempt; it now downloads intact as a "
     "readable 35-page PDF. No equivalent standalone document could be found for FY2023 or FY2024 (see "
-    "ENTITY_NOTE)."
+    "ENTITY_NOTE).\n\n"
+    + BASIS_NOTE
 )
 
 
@@ -674,7 +779,8 @@ NOT_DISCLOSED_NOTE = (
     "Not disclosed in any of the two sourced Annual Reports (FY2021/FY2022 or FY2023/FY2024) - the Bank's only "
     "capital/liquidity disclosure is the 'Other Key Performance Indicators' table's two headline ratios (Capital "
     "adequacy ratio, Common Equity Tier 1 ratio). No standalone Pillar 3 document was obtainable (see ENTITY_NOTE "
-    "on the Cash Flow Statement sheet) and no other figure for this metric appears anywhere in either report."
+    "on the Cash Flow Statement sheet) and no other figure for this metric appears anywhere in either report.\n"
+    + SDDT_NOTE
 )
 
 FY2324_ONLY_NOTE = (
@@ -683,7 +789,8 @@ FY2324_ONLY_NOTE = (
     "two years is the Annual Report's 'Other Key Performance Indicators' table's two headline ratios (Capital "
     "adequacy ratio, Common Equity Tier 1 ratio); no standalone Pillar 3 document could be recovered for either "
     "year despite a re-check of both eabplc.com/arabbankeurope.com directly and a broader Wayback CDX search "
-    "(2026-09-07, HD-081 item 4)."
+    "(2026-09-07, HD-081 item 4), re-confirmed independently 2026-09-15.\n"
+    + SDDT_NOTE
 )
 
 metric("CET1 Capital", None,
@@ -772,8 +879,14 @@ metric("Leverage Ratio", None,
             "(not a sourcing gap). FY2023/FY2024: " + NOT_DISCLOSED_NOTE,
        extra_sources=PILLAR3_SOURCES)
 
-metric("LCR", None, [("Liquidity Coverage Ratio", LCR_RATIO)],
-       note="FY2023/FY2024: " + NOT_DISCLOSED_NOTE, extra_sources=PILLAR3_SOURCES)
+metric("LCR", None, [("Liquidity Coverage Ratio (12-month average basis)", LCR_RATIO)],
+       note="BASIS: these are 12-MONTH AVERAGE LCRs, not point-in-time. The source document's own footnote 3 "
+            "states verbatim: 'The weighted values represent the simple average of the 12 preceding month-end "
+            "observations used to calculate the LCR.' They are therefore NOT comparable with a point-in-time "
+            "year-end LCR of the kind annual reports usually quote, and must never be merged into one series "
+            "with one. The underlying EAB plc solo components are HQLA EUR291m/EUR355m, net cash outflows "
+            "EUR137m/EUR137m for FY2022/FY2021. FY2023/FY2024: " + NOT_DISCLOSED_NOTE,
+       extra_sources=PILLAR3_SOURCES)
 
 metric("NSFR", None, [("Net Stable Funding Ratio", NSFR_RATIO)],
        note="FY2022 only - Pillar3.pdf's own FY2021 comparative is flagged 'n/a': the PRA's NSFR disclosure "
@@ -787,7 +900,10 @@ bw.add_not_disclosed_metric_sheets(
     per_note={
         "MREL Ratio": NOT_DISCLOSED_NOTE + " Not disclosed in the recovered Pillar3.pdf either (no MREL section "
                                             "anywhere in that document) - EAB plc is likely below the MREL "
-                                            "threshold that would require this disclosure.",
+                                            "threshold that would require this disclosure. MREL is the one "
+                                            "metric here whose absence is plausibly structural rather than a "
+                                            "withheld disclosure; every other blank metric is not (see the "
+                                            "SDDT note above).",
     },
 )
 

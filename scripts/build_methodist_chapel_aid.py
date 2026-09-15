@@ -10,8 +10,36 @@ YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "
 AR_2025 = "https://www.mcafundingforchurches.co.uk/media/4bcl2vk5/mca-ar-2025.pdf"
 AR_2024 = "https://www.mcafundingforchurches.co.uk/media/keybconk/annual-report-2024.pdf"
 AR_2022 = "https://www.mcafundingforchurches.co.uk/sitefiles/resources/pdf/annualreport2022.pdf"
-P3_2023 = "https://www.mcafundingforchurches.co.uk/media/ngqlqg5o/pillar-3-disclosures-2023.pdf"
+# ---------------------------------------------------------------------------
+# Pillar 3 document URLs. LINK-ROT STATUS RE-VERIFIED 2026-09-15: every URL
+# below was fetched and checked for the `%PDF-` magic bytes, not merely for an
+# HTTP 200 (soft-404s returning 200 with an HTML body are a known trap on this
+# project). Results are recorded against each constant.
+#
+# Convention: when a live URL dies, cite a Wayback `id_` snapshot (the `id_`
+# modifier returns the raw archived bytes rather than a Wayback-wrapped HTML
+# page) and KEEP the dead original alongside it, labelled as such, so the
+# provenance chain stays readable.
+# ---------------------------------------------------------------------------
+
+# FY2023: the Company's own URL now 404s. Two good Wayback captures exist
+# (20240722103538 and 20250407005711) with an IDENTICAL content digest
+# (IBZRVVYWANAYMDURC7ETVSZEWBFVN5CL), so the archived file is stable across
+# captures; the later one is cited. Retrieved 2026-09-15: 318,898 bytes,
+# begins `%PDF-`.
+P3_2023_DEAD = "https://www.mcafundingforchurches.co.uk/media/ngqlqg5o/pillar-3-disclosures-2023.pdf"
+P3_2023_WAYBACK = "https://web.archive.org/web/20250407005711id_/" + P3_2023_DEAD
+
+# FY2022: this edition is the one case where a LIVE URL still works, so the
+# live URL is cited in preference to any archive copy. The Company published
+# the same file at two paths; the newer Umbraco /media/honer1yl/ path has since
+# 404'd, but the older /siteFiles/resources/pdf/ path is still served.
+# Confirmed 2026-09-15 that they are the same document rather than two
+# editions: the live file and the Wayback copy of the dead /media/honer1yl/
+# path are BYTE-IDENTICAL - both 314,344 bytes, both SHA-256 44326e0da4312b73...
 P3_2022 = "https://www.mcafundingforchurches.co.uk/siteFiles/resources/pdf/Pillar3disclosures2022.pdf"
+P3_2022_DEAD = "https://www.mcafundingforchurches.co.uk/media/honer1yl/pillar3disclosures2022.pdf"
+P3_2022_WAYBACK = "https://web.archive.org/web/20240517201255id_/https://mcafundingforchurches.co.uk/media/honer1yl/pillar3disclosures2022.pdf"
 
 # HD-027 extension (2026-09-06): statutory accounts for FY2016-FY2020 were re-verified directly
 # from Companies House filing history (not just the HD-004 domain/earliest-snapshot signal) -
@@ -26,8 +54,13 @@ CH_FY2016 = "https://find-and-update.company-information.service.gov.uk/company/
 # in the Wayback CDX index for this domain (a full-domain PDF listing was checked, not just a
 # single guessed filename), consistent with Pillar 3 disclosure only starting for this small
 # firm from FY2019.
-P3_2020_WAYBACK = "https://web.archive.org/web/20210515024743/https://www.mcafundingforchurches.co.uk/sitefiles/resources/pdf/pillar3disclosures2020.pdf"
-P3_2019_WAYBACK = "https://web.archive.org/web/20200930032441/http://mcafundingforchurches.co.uk/sitefiles/resources/pdf/pillar3disclosures2019.pdf"
+# Both re-fetched 2026-09-15 with the `id_` modifier and confirmed to begin
+# `%PDF-` (FY2020: 311,788 bytes; FY2019: 274,658 bytes). The Company's own
+# URLs for both remain dead.
+P3_2020_DEAD = "https://www.mcafundingforchurches.co.uk/sitefiles/resources/pdf/pillar3disclosures2020.pdf"
+P3_2020_WAYBACK = "https://web.archive.org/web/20210515024743id_/" + P3_2020_DEAD
+P3_2019_DEAD = "http://mcafundingforchurches.co.uk/sitefiles/resources/pdf/pillar3disclosures2019.pdf"
+P3_2019_WAYBACK = "https://web.archive.org/web/20200930032441id_/" + P3_2019_DEAD
 
 ENTITY = (
     "ENTITY NOTE: Methodist Chapel Aid Limited (Companies House 00030546, FRN 204508, "
@@ -40,9 +73,11 @@ ENTITY = (
     "Equity, Cash Flow Statement, Asset Quality, the 11 Pillar 3 key metric sheets, RWA "
     "Breakdown), extended back to FY2016 - the Company's confirmed floor per HD-004 (Companies "
     "House filing history for this entity, 00030546, goes back further, but FY2016 is the year "
-    "confirmed for this batch). FY2024 and FY2025 absolute regulatory capital metrics were "
-    "not separately disclosed in the located sources and are left blank rather than inferred "
-    "from statutory net assets. Pillar 3 disclosure (CET1/Tier 1/Total Capital, RWAs, leverage "
+    "confirmed for this batch). FY2024 and FY2025 Pillar 3 metrics are blank because the Company "
+    "is an SDDT and is exempt from publishing Pillar 3 disclosures - a PRA modification by "
+    "consent under Rule 3.1 of the SDDT Regime - General Application Part, effective 11 April "
+    "2024 (see the dated evidence in the Pillar 3 source note); this is a structural exemption, "
+    "not a sourcing gap, and nothing is inferred from statutory net assets. Pillar 3 disclosure (CET1/Tier 1/Total Capital, RWAs, leverage "
     "ratio) was not published for this entity before FY2019 - see the Wayback Machine note "
     "above - so CET1/Tier1/TotalCapital/RWA/Leverage sheets are genuinely blank for FY2016-"
     "FY2018 (not a search miss). LCR and NSFR were not disclosed for FY2019-FY2021 either: the "
@@ -70,12 +105,128 @@ def cash_sources():
     )
 
 
+# Bank of England consolidated list of waivers and modifications granted to PRA-authorised firms
+# (the PRA's own firm-level register), linked from
+# https://www.bankofengland.co.uk/prudential-regulation/authorisations/waivers-and-modifications-of-rules
+PRA_WAIVERS_CSV = (
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv"
+)
+
+SDDT_NOTE = (
+    "REASON FOR THE CESSATION ESTABLISHED 2026-09-15 (cross-bank SDDT pass) - the FY2024 and FY2025 Pillar 3 "
+    "gaps are an EVIDENCED STRUCTURAL EXEMPTION, not a sourcing failure, and no Pillar 3 document for those "
+    "years will ever exist to be found. Methodist Chapel Aid Limited holds a PRA modification by consent "
+    "under Rule 3.1 of the 'SDDT Regime - General Application' Part of the PRA Rulebook - the instrument by "
+    "which a firm becomes a Small Domestic Deposit Taker (SDDT) under the PRA's 'Strong and Simple' "
+    "framework. The register row reads, verbatim: FRN 204508, 'Methodist Chapel Aid Limited', 'Modification "
+    "by Consent - PRA Rulebook- CRR Firms- Rule 3.1 of the SDDT Regime - General Application Part 3.1', rule "
+    "'SDDT Regime - General Application', sub rule 'Ru 3.1', waiver ref 'A00007737P.pdf', start date "
+    "'11/04/2024', no end date. Source: Bank of England consolidated list of waivers and modifications "
+    f"granted to PRA-authorised firms, downloaded 2026-09-15 - {PRA_WAIVERS_CSV}\n"
+    "What that modification does to Pillar 3 is stated in a peer bank's own words, and the same register "
+    "carries the identical Rule 3.1 row for that peer, so the register row and the firm-stated effect are "
+    "demonstrably the same instrument: Cynergy Bank plc Annual Report & Accounts 2024, p.71 - 'The Bank "
+    "applied for the Modification by Consent to become an SDDT and received approval on 17 January 2025. As "
+    "a result, we are not required to publish Pillar 3 disclosures as at 31 December 2024 and will submit "
+    "only a simplified retail deposit ratio instead of a full Net Stable Funding Ratio (NSFR) going forward.' "
+    "(Cynergy's register row: FRN 575105, Rule 3.1, start '17/01/2025' - matching its own stated approval "
+    "date to the day.)\n"
+    "DATE FIT: MCA's modification took effect 11 April 2024, i.e. BEFORE its 31 December 2024 year-end and "
+    "before the 30 September 2025 period-end, so it cleanly covers both FY2024 and FY2025 - the two years "
+    "with no Pillar 3 document - and the five published editions FY2019-FY2023 all predate it. The "
+    "exemption therefore explains the cessation exactly and explains NOTHING about FY2016-FY2018, whose "
+    "blanks have an entirely separate and unrelated cause (no Pillar 3 document was ever published that "
+    "early - see the Wayback CDX note below). Do not read the SDDT exemption back onto FY2023 or earlier.\n"
+    "RE-DOWNLOADED AND RE-CHECKED 2026-09-15 under a maximum-effort sweep that treated every prior "
+    "'unavailable' verdict in this project as unproven. The PRA register was pulled fresh from the Bank of "
+    "England (2,919 rows, 135 of them SDDT Rule 3.1 modifications) and MCA's row reproduces the citation "
+    "above exactly: FRN 204508, 'Methodist Chapel Aid Limited', 'Modification by Consent - PRA Rulebook- CRR "
+    "Firms- Rule 3.1 of the SDDT Regime - General Application Part 3.1', sub-rule 'Ru 3.1', ref "
+    "A00007737P.pdf, start 11/04/2024, no end date - so the modification is still in force and has not been "
+    "re-dated. The register also shows MCA's separate Capital Buffers 5.1-5.3 direction (06/11/2024), which "
+    "is NOT a disclosure exemption and is not relied on here. The date fit above therefore stands unchanged, "
+    "and both FY2024 (31 December 2024) and FY2025 (the nine months to 30 September 2025, after the "
+    "accounting reference date change) fall after 11 April 2024.\n"
+    "Neither Annual Report names SDDT: both the FY2024 and FY2025 Annual Reports were downloaded fresh and "
+    "text-extracted in full (readable text layers, 144k and 157k characters respectively) and searched for "
+    "'SDDT', 'Small Domestic Deposit Taker', 'modification by consent', 'Simplified Retail Deposit Ratio', "
+    "'SRDR', 'Strong and Simple', 'Interim Capital Regime' and 'Basel 3.1' - zero hits, and the word "
+    "'Pillar' appears once in each, only in the phrase 'Pillar 1 plus Pillar 2A'. The Company simply does "
+    "not discuss the change; the PRA register is what evidences it. No Simplified Retail Deposit Ratio "
+    "value is disclosed by the Company either, so nothing replaces the NSFR series here.\n"
+)
+
+
 def p3_sources():
     return (
         "Sources - Methodist Chapel Aid Limited entity-level Pillar 3 / regulatory capital disclosures, £'000 unless stated:\n"
-        f"FY2023: Pillar 3 Disclosures for year ended 31 December 2023, Key Metrics table, p. 3 - {P3_2023}\n"
-        f"FY2022 and FY2021: Pillar 3 Disclosures for year ended 31 December 2022, Key Metrics table, p. 3 - {P3_2022}\n"
-        "FY2024/FY2025: no separate absolute Key Metrics table was located; values left blank.\n"
+        f"FY2023: Pillar 3 Disclosures for year ended 31 December 2023, Key Metrics table (p. 3) and the "
+        f"quarterly LCR/NSFR averaging tables in section 6.2 (pp. 10-11) - {P3_2023} (this live URL 404s as "
+        f"of 2026-09-15; retrieved via the Wayback Machine snapshot - {P3_2023_WAYBACK})\n"
+        f"FY2022 and FY2021: Pillar 3 Disclosures for year ended 31 December 2022, Key Metrics table (p. 3) "
+        f"and the quarterly LCR/NSFR averaging tables in section 6.2 (pp. 10-11) - {P3_2022}\n"
+        "FY2024/FY2025: no separate absolute Key Metrics table was located; values left blank. "
+        "RE-VERIFIED 2026-09-12 (independent disclosure audit): confirmed genuinely unpublished rather than "
+        "an access gap. The Company's own live 'Financial information' page "
+        "(https://www.mcafundingforchurches.co.uk/about-us/financial-information/) lists only the FY2025 Annual "
+        "Report and a country-by-country reporting PDF - no Pillar 3 document of any vintage - and a full Wayback "
+        "Machine CDX listing of the domain returns Pillar 3 PDFs for FY2019-FY2023 only, nothing later. The FY2025 "
+        "Annual Report was downloaded and read in full: its capital and liquidity discussion is entirely "
+        "policy/appetite language, not disclosed outturns - it gives the Total Capital Requirement as 17.72% of RWAs "
+        "(a regulatory REQUIREMENT set for the Company, not its actual ratio, p.20), a CET1 risk appetite of 'at "
+        "least 35% of risk weighted assets' (a target floor, p.20), and an LCR 'policy ... to maintain at least 200%' "
+        "(a policy minimum, p.16). Note 24 confirms actual regulatory capital 'remained above that required' without "
+        "stating an amount. None of these is a disclosed value for the metric concerned, so nothing is transcribed "
+        "from them - no RWA figure, capital amount, or outturn ratio appears anywhere in the document.\n"
+        "RE-VERIFIED INDEPENDENTLY 2026-09-15, extending the 2026-09-12 audit to the FY2024 Annual Report, which "
+        "that audit had not itself opened (it had read only the FY2025 one). Both Annual Reports were downloaded "
+        "fresh and text-extracted in full, and they behave identically: each states the Total Capital Requirement "
+        "as 17.72% of risk-weighted assets (FY2024 as at 31 December 2024, FY2025 as at 30 September 2025) - a "
+        "requirement SET FOR the Company, not its outturn; each states the same 'at least 35% of risk weighted "
+        "assets' CET1 risk appetite and the same 'at least 200%' LCR policy minimum; and each closes its Financial "
+        "Instruments note with the identical sentence that the Company's actual regulatory capital, all CET1, "
+        "'remained above that required by the regulatory limit and internal policy' - naming no amount, no RWA "
+        "denominator and no ratio. Neither report contains a Key Metrics/UK KM1 table, an own-funds table, an RWA "
+        "figure, a leverage ratio, an outturn LCR or any NSFR reference. So all 20 FY2024+FY2025 Pillar 3 cells are "
+        "genuinely undisclosed at source. Nothing is derived from the 17.72% TCR or the 35% CET1 appetite: both are "
+        "requirement/appetite percentages, and back-solving an RWA or capital amount from a capital REQUIREMENT is "
+        "barred by this project's no-derivation rule.\n"
+        "Publication-side re-check the same date, to separate 'not published' from 'published but not found': the "
+        "Company's own live 'Financial information' page lists exactly three PDFs (the FY2025 Annual Report, a "
+        "country-by-country reporting 2025 PDF, and an FSCS leaflet) and no Pillar 3 document; the site's own "
+        "sitemap.xml lists only 11 pages in total, with no Pillar-3 page among them; and a Wayback CDX scan of the "
+        "whole mcafundingforchurches.co.uk domain filtered to Pillar-3 URLs returns editions for FY2019, FY2020, "
+        "FY2021, FY2022 and FY2023 and nothing later, while a separate CDX listing of every PDF captured on the "
+        "domain since January 2025 shows Annual Reports and country-by-country reports continuing but no Pillar 3 "
+        "document. The Company therefore published a Pillar 3 disclosure annually for five consecutive years and "
+        "then stopped after FY2023. Its own stated Pillar 3 policy is annual (see ENTITY NOTE).\n"
+        "RE-ENUMERATED INDEPENDENTLY 2026-09-15 (third pass, run without assuming the two above were right). "
+        "This bank cannot be searched by filename permutation - it uses a different naming style every "
+        "single year ('pillar3disclosures2019.pdf', 'pillar3disclosures2020.pdf', "
+        "'2021-pillar-3-disclosures.pdf', 'pillar3disclosures2022.pdf', then the Umbraco opaque-key form "
+        "'/media/ngqlqg5o/pillar-3-disclosures-2023.pdf') - so the only method that can prove anything here "
+        "is domain enumeration. An unfiltered Wayback CDX listing of the whole domain "
+        "(http://web.archive.org/cdx/search/cdx?url=mcafundingforchurches.co.uk&output=json&matchType="
+        "domain&collapse=urlkey&limit=5000) returns 160 distinct URLs ever captured, of which exactly SIX "
+        "are Pillar 3 documents, covering FIVE editions - FY2019, FY2020, FY2021, FY2022 and FY2023 - with "
+        "the FY2022 edition appearing twice because it was captured both on the old "
+        "/sitefiles/resources/pdf/ path and again after the site migrated to Umbraco's opaque /media/<key>/ "
+        "paths. Nothing later exists in the index, and "
+        "the archive is current for this domain - its most recent captures are dated June 2026, well after "
+        "an FY2024 or FY2025 edition would have been due.\n"
+        "The live site was separately re-scraped the same day, page by page from its own sitemap.xml (11 "
+        "pages, the complete site), collecting every PDF href rather than reading any single page: five "
+        "PDFs total - the FY2025 Annual Report, a 2025 country-by-country reporting PDF, an FSCS leaflet, a "
+        "privacy notice and a 'funding you can trust' brochure. No Pillar 3 document of any vintage. IMPORTANT "
+        "CAVEAT ON THAT EVIDENCE, which is why it is cited second and not first: the Company's "
+        "/about-us/financial-information page has never linked its Pillar 3 documents even in the years when "
+        "they demonstrably existed, so its silence proves nothing on its own and must NOT be cited as proof "
+        "of absence. The weight here rests on the CDX enumeration and on the SDDT date test below.\n"
+        + SDDT_NOTE +
+        "Note also that FY2025 is a 9-month period (the accounting reference date moved from 31 December "
+        "to 30 September during 2025), so even a future FY2025 Pillar 3 edition would not be period-comparable with "
+        "the FY2019-FY2023 12-month series without an explicit basis caveat.\n"
         f"FY2020: Pillar 3 Disclosures for year ended 31 December 2020, Section 5 Capital Adequacy, p. 7 (Wayback Machine snapshot - live URL 404s) - {P3_2020_WAYBACK}\n"
         f"FY2019: Pillar 3 Disclosures for year ended 31 December 2019, Section 5 Capital Adequacy, p. 7 (Wayback Machine snapshot - live URL 404s) - {P3_2019_WAYBACK}\n"
         "FY2018/FY2017/FY2016: no Pillar 3 document exists anywhere in the Wayback Machine CDX "
@@ -85,7 +236,9 @@ def p3_sources():
     )
 
 
-P3_2023_WAYBACK = "https://web.archive.org/web/20250407005711/https://www.mcafundingforchurches.co.uk/media/ngqlqg5o/pillar-3-disclosures-2023.pdf"
+# (P3_2023_WAYBACK is defined with the other Pillar 3 URL constants at the top
+# of this file, alongside its dead original - a second, non-`id_` definition
+# used to sit here and silently overwrote it. Removed 2026-09-15.)
 
 STATEMENTS_SOURCES = (
     "Sources - Methodist Chapel Aid Limited entity-level Statement of Income and Retained Earnings / "
@@ -143,11 +296,24 @@ RWA_BREAKDOWN_SOURCES = (
     f"FY2023: Pillar 3 Disclosures for year ended 31 December 2023, Section 5 Capital Adequacy table, p.7 - "
     f"{P3_2023} (URL 404s as of this session; retrieved via Wayback Machine snapshot - {P3_2023_WAYBACK})\n"
     f"FY2022: Pillar 3 Disclosures for year ended 31 December 2022, Section 5 Capital Adequacy table, p.8 - {P3_2022}\n"
-    "FY2021: no category-level breakdown was located - only the Key Metrics table's single Total "
-    "risk-weighted exposure amount (26,369) is disclosed for FY2021, in the FY2022 Pillar 3 document's "
-    "comparative column; the underlying Section 5 capital-adequacy table there is 'as at 31 December 2022' "
-    "only, with no FY2021 equivalent table. Category rows left blank for FY2021; the Total RWAs row is "
-    "populated from that comparative figure.\n"
+    f"FY2021: Pillar 3 Disclosures for year ended 31 December 2021, Section 5 Capital Adequacy table, p.6 - "
+    f"{P3_2021_WAYBACK}. CORRECTION 2026-09-15: this sheet previously said no category-level breakdown "
+    "existed for FY2021 and left every category row blank. That was a sourcing miss, not an absence. The "
+    "FY2021 standalone Pillar 3 document does exist and carries the same Section 5 capital-adequacy table as "
+    "every other year; it was missed because the Company changed its filename convention for this one "
+    "edition - every other year is 'pillar3disclosures<YYYY>.pdf', but FY2021 is "
+    "'2021-pillar-3-disclosures.pdf', so guessing filenames by pattern could never reach it. It was found by "
+    "listing the whole mcafundingforchurches.co.uk domain from the Wayback CDX index instead of constructing "
+    "candidate URLs. FY2021 uses the pre-FY2022 aggregate presentation of customer loans (a single 'drawn' "
+    "and '50% of undrawn' pair, not the property/car split introduced in FY2022), which is why those rows "
+    "carry FY2021 alongside FY2020/FY2019.\n"
+    "FY2021 RECONCILIATION - the category rows deliberately do NOT sum to the Total RWAs row, and this is a "
+    "real difference between two of the Company's own documents rather than a transcription error. The "
+    "FY2021 document's own table gives credit risk RWA of 25,171 and an operational risk capital requirement "
+    "of 92 (= 1,150 RWA at x12.5, the document's own Pillar 1 formula), totalling 26,321. The FY2022 "
+    "document's Key Metrics comparative column states 26,369 for the same date, £48k higher. The Total RWAs "
+    "row keeps the 26,369 Key Metrics figure so that this sheet ties to the Total RWAs sheet, and the £48k "
+    "gap is flagged here rather than silently reconciled by adjusting either source.\n"
     "FY2024/FY2025: no Pillar 3 Key Metrics table or capital-adequacy breakdown was located for these "
     "periods (consistent with the existing Total RWAs sheet, which is also blank for these years).\n"
     f"FY2020: Pillar 3 Disclosures for year ended 31 December 2020, Section 5 Capital Adequacy table, p.7 "
@@ -334,6 +500,37 @@ def metric(name, unit, label, data, note=None):
     bw.add_metric_sheet(name, unit, [(label, data)], p3_sources(), note=note, first_col_width=50, source_height=190)
 
 
+def metric_rows(name, unit, rows, note=None):
+    """Same as metric() but for sheets that must carry more than one basis on separate rows."""
+    bw.add_metric_sheet(name, unit, rows, p3_sources(), note=note, first_col_width=50, source_height=190)
+
+
+# Shared explanation for the LCR and NSFR sheets, both of which were corrected on 2026-09-15.
+LIQUIDITY_BASIS_NOTE = (
+    "TWO BASES, KEPT ON SEPARATE ROWS (corrected 2026-09-15). This sheet previously carried a single row "
+    "labelled as the AVERAGE ratio which in fact mixed two different series, and the mixture was not "
+    "visible to a reader. Each of the Company's Pillar 3 documents publishes the metric twice, on "
+    "different bases:\n"
+    "  (a) an AVERAGE for the financial year, described by the document itself as 'based on quarterly "
+    "end-of-month positions over the preceding 12 months', shown beneath a four-column quarterly table; and\n"
+    "  (b) a YEAR-END point-in-time figure, in the UK KM1 Key Metrics table at the front of the document.\n"
+    "The old single row took the average for FY2023 but the KM1 year-end figure for FY2022 and FY2021, so a "
+    "reader comparing FY2023 with FY2022 was comparing an average against a point-in-time value. Both "
+    "series are now shown in full, each on its own labelled row, and neither is merged into the other.\n"
+    "ONE SOURCE QUIRK, RECORDED RATHER THAN CORRECTED: in both the FY2022 and FY2023 editions the KM1 "
+    "table's HQLA input row is captioned '(Weighted value - average)', yet the ratio the KM1 states is "
+    "demonstrably the year-end point-in-time value - it reproduces the 31-December column of that same "
+    "document's own quarterly table exactly (FY2023: KM1 970% = the quarterly table's 31-Dec-23 column; "
+    "FY2022: KM1 833% = its 31-Dec-22 column), while the document's separately-stated average for the same "
+    "year is a different number (835% and 827% respectively). The KM1 caption is therefore inaccurate in "
+    "the source. The year-end rows here are labelled for what the figures demonstrably are, not for what "
+    "the KM1 caption says, and the caption discrepancy is left as published.\n"
+    "FY2021 appears on the year-end row only, and that is not an oversight: the FY2021 standalone Pillar 3 "
+    "document contains no KM1 table and no quarterly averaging table at all, so no FY2021 average was ever "
+    "published. Its year-end figure survives solely as the comparative column of the FY2022 edition's KM1."
+)
+
+
 metric("CET1 Capital", "£'000", "CET1 capital", {"FY2023": 13354, "FY2022": 12952, "FY2021": 13919, "FY2020": 13032, "FY2019": 12307}, "FY2024 and FY2025 absolute regulatory capital was not separately disclosed in the located sources. FY2016-FY2018: no Pillar 3 document was located (genuinely not disclosed, not a search miss - see note above).")
 metric("CET1 Ratio", "%", "CET1 ratio", {"FY2023": "52.88%", "FY2022": "53.85%", "FY2021": "52.79%", "FY2020": "51.48%", "FY2019": "58.68%"}, "FY2024 and FY2025 ratio not separately disclosed in the located sources. FY2020/FY2019 ratios are calculated as disclosed CET1 capital divided by this workbook's derived Total RWAs (not stated as a ready-made ratio in the source, which only gives the £ components). FY2016-FY2018 not disclosed.")
 metric("Tier 1 Capital", "£'000", "Tier 1 capital", {"FY2023": 13354, "FY2022": 12952, "FY2021": 13919, "FY2020": 13032, "FY2019": 12307}, "All disclosed Tier 1 capital was CET1; FY2024 and FY2025 were not separately disclosed. FY2016-FY2018 not disclosed.")
@@ -344,21 +541,21 @@ metric("Total RWAs", "£'000", "Total risk-weighted exposure amount", {"FY2023":
 
 rwa_breakdown_rows = [
     ("SECTION", "Credit risk exposure by class (Risk Weighted Exposure)", {}),
-    ("DATA", "Credit institutions", {"FY2023": 1825, "FY2022": 2713, "FY2020": 3255, "FY2019": 2835}),
-    ("DATA", "UK Treasury Stocks", {"FY2023": 0, "FY2022": 0, "FY2020": 0, "FY2019": 0}),
+    ("DATA", "Credit institutions", {"FY2023": 1825, "FY2022": 2713, "FY2021": 3233, "FY2020": 3255, "FY2019": 2835}),
+    ("DATA", "UK Treasury Stocks", {"FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": 0, "FY2019": 0}),
     ("DATA", "Multilateral Development Banks", {"FY2019": 0}),
     ("DATA", "Sterling Corporate Bonds", {"FY2019": 961}),
-    ("DATA", "Collective investment undertakings", {"FY2023": 3271, "FY2022": 3092, "FY2020": 4097, "FY2019": 1607}),
-    ("DATA", "Equity investments", {"FY2023": 7101, "FY2022": 7160, "FY2020": 8138, "FY2019": 7678}),
-    ("DATA", "Loans and advances to customers (drawn) (aggregate, pre-2021 disclosure)", {"FY2020": 7315, "FY2019": 5916}),
-    ("DATA", "Loans and advances to customers (50% of undrawn) (aggregate, pre-2021 disclosure)", {"FY2020": 1440, "FY2019": 857}),
+    ("DATA", "Collective investment undertakings", {"FY2023": 3271, "FY2022": 3092, "FY2021": 3449, "FY2020": 4097, "FY2019": 1607}),
+    ("DATA", "Equity investments", {"FY2023": 7101, "FY2022": 7160, "FY2021": 9123, "FY2020": 8138, "FY2019": 7678}),
+    ("DATA", "Loans and advances to customers (drawn) (aggregate, pre-FY2022 disclosure form)", {"FY2021": 7197, "FY2020": 7315, "FY2019": 5916}),
+    ("DATA", "Loans and advances to customers (50% of undrawn) (aggregate, pre-FY2022 disclosure form)", {"FY2021": 2066, "FY2020": 1440, "FY2019": 857}),
     ("DATA", "Higher Risk Weighted Equities", {"FY2022": 30}),
     ("DATA", "Property loans and advances to customers (drawn)", {"FY2023": 10320, "FY2022": 8470}),
     ("DATA", "Property loans and advances to customers (50% of undrawn)", {"FY2023": 1125, "FY2022": 1195}),
     ("DATA", "Car loans and advances to customers", {"FY2023": 7, "FY2022": 12}),
-    ("DATA", "Fixed and other assets", {"FY2023": 436, "FY2022": 145, "FY2020": 83, "FY2019": 133}),
-    ("TOTAL", "Total credit risk exposure (RWA)", {"FY2023": 24085, "FY2022": 22817, "FY2020": 24328, "FY2019": 19987}),
-    ("DATA", "Operational risk capital requirement (RWA)", {"FY2023": 1168, "FY2022": 1235, "FY2020": 988, "FY2019": 988}),
+    ("DATA", "Fixed and other assets", {"FY2023": 436, "FY2022": 145, "FY2021": 103, "FY2020": 83, "FY2019": 133}),
+    ("TOTAL", "Total credit risk exposure (RWA)", {"FY2023": 24085, "FY2022": 22817, "FY2021": 25171, "FY2020": 24328, "FY2019": 19987}),
+    ("DATA", "Operational risk capital requirement (RWA)", {"FY2023": 1168, "FY2022": 1235, "FY2021": 1150, "FY2020": 988, "FY2019": 988}),
     ("TOTAL", "Total RWAs (Pillar 1)", {"FY2023": 25253, "FY2022": 24052, "FY2021": 26369, "FY2020": 25316, "FY2019": 20975}),
 ]
 bw.add_rwa_breakdown_sheet(
@@ -371,8 +568,57 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%", "Leverage ratio", {"FY2023": "35.4%", "FY2022": "33.49%", "FY2021": "33.05%", "FY2020": "~30%", "FY2019": "~30%"}, "The Company states that the smaller-bank leverage requirement does not apply; reported ratios are included as disclosed. FY2024 and FY2025 were not separately disclosed. FY2020/FY2019 are transcribed as disclosed - the narrative Pillar 3 documents for these years state only 'approximately 30%', not an exact figure (the FY2021 standalone Pillar 3 document uses the same approximate wording, but a more precise 33.05% is used for FY2021 above, sourced from the newer FY2022 Pillar 3 document's comparative column). FY2016-FY2018 not disclosed.")
-metric("LCR", "%", "Average liquidity coverage ratio", {"FY2023": "835%", "FY2022": "833%", "FY2021": "603%"}, "FY2023 is the average based on quarterly end-of-month positions; FY2024 and FY2025 were not separately disclosed. FY2019-FY2021: the standalone Pillar 3 documents for these years state only a policy of maintaining LCR at or above 200% and do not disclose an actual measured ratio; left blank rather than treating the policy floor as an actual value. FY2016-FY2018 not disclosed.")
-metric("NSFR", "%", "Average net stable funding ratio", {"FY2023": "182%", "FY2022": "192%", "FY2021": "184%"}, "FY2023 is the average based on quarterly end-of-month positions; FY2024 and FY2025 were not separately disclosed. FY2019/FY2020: no NSFR was disclosed anywhere in the standalone Pillar 3 documents for these years (no Key Metrics table format existed yet). FY2016-FY2018 not disclosed.")
+metric_rows(
+    "LCR", "%",
+    [
+        ("Average liquidity coverage ratio (12-month average of quarterly end-of-month positions)",
+         {"FY2023": "835%", "FY2022": "827%"}),
+        ("Liquidity coverage ratio at year-end (point-in-time, per UK KM1)",
+         {"FY2023": "970%", "FY2022": "833%", "FY2021": "603%"}),
+    ],
+    LIQUIDITY_BASIS_NOTE
+    + "\n\nFY2022's average of 827% is newly added here (2026-09-15) from the FY2022 Pillar 3 document's own "
+      "narrative - 'The Company's average LCR for the financial year to 31 December 2022 ... was 827%' - which "
+      "had not previously been transcribed; the 833% that the old single row carried for FY2022 was that "
+      "document's KM1 year-end figure and is retained, correctly labelled, on the year-end row. FY2023's "
+      "year-end 970% is likewise newly added from the FY2023 KM1.\n"
+      "FY2019-FY2021 have no average: the standalone Pillar 3 documents for those years state only a policy "
+      "of maintaining LCR at or above 200% and disclose no actual measured ratio, and a policy floor is not "
+      "an outturn, so nothing is transcribed from them. FY2021's year-end value comes from the FY2022 "
+      "edition's KM1 comparative column. FY2016-FY2018: no Pillar 3 document exists. FY2024 and FY2025 are "
+      "blank because the Company is exempt from publishing Pillar 3 disclosures (SDDT, PRA Rule 3.1, "
+      "effective 11 April 2024) - see the Sources note.",
+)
+metric_rows(
+    "NSFR", "%",
+    [
+        ("Average net stable funding ratio (12-month average of quarterly end-of-month positions)",
+         {"FY2023": "182%", "FY2022": "194%"}),
+        ("Net stable funding ratio at year-end (point-in-time, per UK KM1)",
+         {"FY2023": "174%", "FY2022": "192%", "FY2021": "184%",
+          "FY2020": "Not applicable", "FY2019": "Not applicable", "FY2018": "Not applicable",
+          "FY2017": "Not applicable", "FY2016": "Not applicable"}),
+    ],
+    LIQUIDITY_BASIS_NOTE
+    + "\n\nFY2022's average of 194% is newly added here (2026-09-15) from the FY2022 Pillar 3 document's own "
+      "narrative - 'The Company's average NSFR for the financial year to 31 December 2022 ... was 194%' - "
+      "which had not previously been transcribed; the 192% that the old single row carried for FY2022 was "
+      "that document's KM1 year-end figure and is retained, correctly labelled, on the year-end row. "
+      "FY2023's year-end 174% is likewise newly added from the FY2023 KM1.\n"
+      "FY2016-FY2020 are marked 'Not applicable' rather than left blank (changed 2026-09-15). These are "
+      "STRUCTURAL blanks: the UK had no NSFR requirement and no NSFR disclosure template before 1 January "
+      "2022 (PRA PS17/21 / PS22/21, 'Implementation of Basel standards'), so there was no ratio for the "
+      "Company to compute or publish in those years - consistent with the FY2019 and FY2020 Pillar 3 "
+      "documents, which exist but contain no NSFR section at all, and with FY2016-FY2018, for which no "
+      "Pillar 3 document exists. An empty cell would be indistinguishable from an unresearched gap and "
+      "would be re-chased indefinitely; these five will never yield a figure.\n"
+      "FY2021 is deliberately NOT marked 'Not applicable' even though it also predates the requirement, "
+      "because a figure was in fact published for it - as the comparative column of the FY2022 edition's "
+      "KM1 - and a disclosed figure always outranks the structural argument.\n"
+      "FY2024 and FY2025 are left blank rather than 'Not applicable'. The metric applied in both periods; "
+      "only the duty to publish was removed, by the SDDT Rule 3.1 modification effective 11 April 2024. "
+      "That is a genuine disclosure limitation and stays counted as a gap.",
+)
 bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": "No MREL ratio was disclosed in the located Methodist Chapel Aid Pillar 3 documents."})
 
 bw.add_overview_sheet(
@@ -387,9 +633,24 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2023": "52.88%", "FY2022": "53.85%", "FY2021": "52.79%", "FY2020": "51.48%", "FY2019": "58.68%"}),
         ("Total Capital Ratio", {"FY2023": "52.88%", "FY2022": "53.85%", "FY2021": "52.79%", "FY2020": "51.48%", "FY2019": "58.68%"}),
         ("Leverage Ratio", {"FY2023": "35.4%", "FY2022": "33.49%", "FY2021": "33.05%", "FY2020": "~30%", "FY2019": "~30%"}),
-        ("LCR", {"FY2023": "835%", "FY2022": "833%", "FY2021": "603%"}),
+        ("LCR (12-month average of quarterly end-of-month positions)", {"FY2023": "835%", "FY2022": "827%"}),
+        ("LCR at year-end (point-in-time, per UK KM1)", {"FY2023": "970%", "FY2022": "833%", "FY2021": "603%"}),
+        ("NSFR (12-month average of quarterly end-of-month positions)", {"FY2023": "182%", "FY2022": "194%"}),
+        ("NSFR at year-end (point-in-time, per UK KM1)",
+         {"FY2023": "174%", "FY2022": "192%", "FY2021": "184%",
+          "FY2020": "Not applicable", "FY2019": "Not applicable", "FY2018": "Not applicable",
+          "FY2017": "Not applicable", "FY2016": "Not applicable"}),
     ],
-    note=ENTITY,
+    note="CORRECTED 2026-09-15. This sheet previously showed ONE LCR row reading 835% / 833% / 603% for "
+         "FY2023 / FY2022 / FY2021, which silently mixed two different series: 835% is the FY2023 "
+         "12-month average, while 833% and 603% are year-end point-in-time figures from the UK KM1 tables. "
+         "The FY2022 average (827%) and the FY2023 year-end value (970%) had never been transcribed at all, "
+         "so the row read as a flat trend when the two real series in fact move differently. Both series are "
+         "now shown in full on separate labelled rows, for NSFR as well as LCR, and an NSFR row has been "
+         "added here for the first time. NSFR FY2016-FY2020 read 'Not applicable' because the UK had no "
+         "NSFR requirement before 1 January 2022 (PRA PS17/21). See the LCR and NSFR sheets for the full "
+         "basis note, including the caption error in the source's own KM1 tables.\n\n"
+         + ENTITY,
     balance_sheet_totals=[
         ("Total Assets", {"FY2025": 35956037, "FY2024": 36147101, "FY2023": 36293524, "FY2022": 37194488, "FY2021": 40154805, "FY2020": 38940466, "FY2019": 36369860, "FY2018": 33535815, "FY2017": 33576835, "FY2016": 32972669}),
         ("Loans and advances to customers", {"FY2025": 8262627, "FY2024": 9138711, "FY2023": 10330064, "FY2022": 8485497, "FY2021": 7197340, "FY2020": 7314586, "FY2019": 7888087, "FY2018": 6315264, "FY2017": 5210921, "FY2016": 4295209}),

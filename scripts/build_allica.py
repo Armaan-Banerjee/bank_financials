@@ -560,7 +560,16 @@ RWA_BREAKDOWN_SOURCES = (
     "only disclosure (explicitly published under CRR Article 433b, the small/non-complex institution regime) - "
     "none contains a UK OV1 'Overview of risk weighted exposure amounts' table breaking RWA down by risk "
     "category (credit/market/operational/CVA etc.). Only the single aggregate Total RWA figure exists for every "
-    "year (see the Total RWAs sheet, which this sheet's Total row ties out to exactly)."
+    "year (see the Total RWAs sheet, which this sheet's Total row ties out to exactly).\n\n"
+    "RE-VERIFIED 2026-09-12: re-downloaded and read the live FY2025 Pillar 3 Report directly (not "
+    "just re-reading this note) - confirmed it is still exactly a 1-page KM1 table with 'Total "
+    "risk-weighted exposure amount' as its only RWA-related row, published under Article 433b as "
+    "before. Checked allica.bank/regulatory-disclosures for any second, fuller Pillar 3 document "
+    "(404, no such page) and the Wayback Machine CDX index for allica.bank (a much larger 405KB "
+    "'Pillar_3_disclosure_2019' PDF exists from the bank's earlier, pre-2021 disclosure format, but "
+    "it predates this workbook's FY2021-FY2025 window and its own KM1-era successors - FY2020 - are "
+    "already the same 2-3 page format shown above). No category-level breakdown was found anywhere; "
+    "the non-disclosure is confirmed current, not a stale assumption."
 )
 
 bw.add_rwa_breakdown_sheet(

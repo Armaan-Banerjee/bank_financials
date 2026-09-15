@@ -879,18 +879,24 @@ metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", RWA)], p
        note="See CET1 Ratio sheet for the FY2022 restatement note.")
 
 # ---------------------------------------------------------------
-# RWA Breakdown. GENUINE CORRECTNESS FINDING (out of this fork's HD-051 scope to
-# fix, flagged for follow-up): the FY2021-FY2025 note below claims none of those
-# 5 years' own Pillar 3 Disclosures contain an RWA-by-risk-category table - but
-# BACB_Pillar3-2021_v3.pdf (already cited elsewhere in this script for FY2021)
-# DOES contain exactly such a table (its own "Table 12: Overview of RWAs..."),
-# and the same table appears consistently in every one of FY2014-FY2019's own
-# Pillar 3 Disclosures, each verified to foot to that year's own Total RWA
-# figure within GBP1k. Populated below for FY2014-FY2019; FY2020 has no
-# standalone Pillar 3 document (see p3_sources()) and back-deriving RWA-by-
-# category from the FY2021 comparative's capital-requirement-only figures via
-# /8% would introduce ~GBP250k of rounding error against the known FY2020
-# Total RWA, so FY2020 is left "Not publicly disclosed" rather than estimated.
+# RWA Breakdown. FY2024/FY2025 UK OV1 tables (2024/2025 Pillar 3 Disclosures,
+# section 4.2 "RISK WEIGHTED ASSETS") were located and added below - they
+# directly disclose the same risk-type split as FY2021-FY2023's own UK OV1
+# rows, each footing exactly to that year's Total RWAs figure. FY2020 has no
+# standalone Pillar 3 document (see p3_sources()); the 2021 Pillar 3
+# Disclosures' own FY2020 comparative column of "Table 12: Overview of RWAs
+# and the Bank's minimum capital requirement...under Pillar 1" discloses only
+# capital REQUIREMENT (not RWA) at category level for FY2020 - RWA per
+# category is derived here as capital requirement x 12.5 (Basel/CRR Article
+# 92: Pillar 1 minimum = 8% of RWA), shown in its own separate section since
+# it is derived, not directly disclosed, unlike the neighbouring FY2014-2019
+# rows. GENUINE CORRECTNESS FINDING (out of this fork's HD-051 scope to fully
+# resolve, flagged for follow-up): BACB_Pillar3-2021_v3.pdf (already cited
+# elsewhere in this script for FY2021) contains that same "Table 12" with a
+# full FY2021 RWA column, and the same table appears consistently in every
+# one of FY2014-FY2019's own Pillar 3 Disclosures, each verified to foot to
+# that year's own Total RWA figure within GBP1k. Populated below for
+# FY2014-FY2019.
 # ---------------------------------------------------------------
 RWA_BD_YEARS = ["FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]
 
@@ -904,17 +910,35 @@ rwa_breakdown_rows = [
     # the older exposure-class table. Keep them separate and non-additive.
     ("SECTION", "Modern UK OV1 aggregate risk types (not additive to legacy rows)", {}),
     ("DATA", "Credit risk (excluding counterparty credit risk) — UK OV1 aggregate",
-     {"FY2023": 1128031, "FY2022": 1147518, "FY2021": 976627}),
+     {"FY2025": 1716881, "FY2024": 1407753, "FY2023": 1128031, "FY2022": 1147518, "FY2021": 976627}),
     ("DATA", "Counterparty credit risk — UK OV1 aggregate",
-     {"FY2023": 318, "FY2022": 2127, "FY2021": 1986}),
+     {"FY2025": 3564, "FY2024": 3051, "FY2023": 318, "FY2022": 2127, "FY2021": 1986}),
     ("DATA", "Market risk — UK OV1 aggregate",
-     {"FY2023": 1651, "FY2022": 3163, "FY2021": 13550}),
+     {"FY2025": 22443, "FY2024": 9432, "FY2023": 1651, "FY2022": 3163, "FY2021": 13550}),
     ("DATA", "Operational risk — UK OV1 aggregate",
-     {"FY2023": 110666, "FY2022": 78637, "FY2021": 93056}),
+     {"FY2025": 181296, "FY2024": 150870, "FY2023": 110666, "FY2022": 78637, "FY2021": 93056}),
     ("DATA", "Amounts below deduction thresholds — UK OV1 memo",
-     {"FY2023": 0, "FY2022": 2681, "FY2021": 0}),
+     {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 2681, "FY2021": 0}),
     ("TOTAL", "Total risk-weighted exposure amount — UK OV1",
-     {"FY2023": 1240666, "FY2022": 1231445, "FY2021": 1085220}),
+     {"FY2025": 1924184, "FY2024": 1571106, "FY2023": 1240666, "FY2022": 1231445, "FY2021": 1085220}),
+    ("SECTION", "Pillar 1 capital requirement × 12.5, FY2020 (derived — 2021 Pillar 3 Disclosures' own FY2020 "
+                "comparative column, Table 12; RWA itself was not disclosed for FY2020, only capital requirement)",
+     {}),
+    ("DATA", "Central governments/central banks", {"FY2020": 20150}),
+    ("DATA", "Regional governments/local authorities", {"FY2020": 150}),
+    ("DATA", "Institutions", {"FY2020": 175888}),
+    ("DATA", "Corporates", {"FY2020": 389713}),
+    ("DATA", "Covered bonds", {"FY2020": 4063}),
+    ("DATA", "Secured by mortgages on immovable property", {"FY2020": 299550}),
+    ("DATA", "Exposures in default", {"FY2020": 12900}),
+    ("DATA", "Equity exposures", {"FY2020": 2613}),
+    ("DATA", "Items associated with particularly high risk", {"FY2020": 30938}),
+    ("DATA", "Other items", {"FY2020": 27950}),
+    ("DATA", "Interest Rate PRR", {"FY2020": 21225}),
+    ("DATA", "Foreign Exchange PRR", {"FY2020": 8300}),
+    ("DATA", "Operational Risk (Basic Indicator Approach)", {"FY2020": 107163}),
+    ("DATA", "Credit Valuation Adjustment", {"FY2020": 550}),
+    ("TOTAL", "Total Pillar 1 RWA, FY2020 (derived)", {"FY2020": 1101153}),
     ("SECTION", "Legacy Table 12 risk categories", {}),
     ("SECTION", "Credit and Counterparty Credit Risk", {}),
     ("DATA", "Central governments/central banks",
@@ -951,31 +975,41 @@ rwa_breakdown_rows = [
 
 bw.add_rwa_breakdown_sheet(
     title="British Arab Commercial Bank PLC — RWA Breakdown",
-    subtitle="Pillar 1 RWA by risk category, £'000. FY2021-FY2023 UK OV1 aggregates are shown separately from "
-             "the legacy exposure-class rows; FY2024-FY2025 are not disclosed at this granularity (see note); "
-             "FY2020 not disclosed (no standalone document); FY2019-FY2014 populated from each year's own Table 12.",
+    subtitle="Pillar 1 RWA by risk category, £'000. FY2021-FY2025 UK OV1 aggregates are shown separately from "
+             "the legacy exposure-class rows; FY2020 is derived from that year's own capital-requirement figures "
+             "x 12.5 (own separate section, see note); FY2019-FY2014 populated from each year's own Table 12.",
     rows=rwa_breakdown_rows,
     sources_text=p3_sources(
-        extra="FY2024-FY2025: no exposure-class breakdown was found in the own-year Pillar 3 documents. FY2021-FY2023 "
-              "do contain UK OV1 aggregate risk-type rows, reproduced above; these are not the older exposure-class "
-              "rows and are not additive to them. GENUINE FINDING (2026-09-05, HD-051): this appears to be incorrect - "
+        extra="FY2025: 2025 Pillar 3 Disclosures, section 4.2 'RISK WEIGHTED ASSETS', UK OV1 table, p.19 (own year) "
+              "- " + P3_URL["FY2025"] + "\n"
+              "FY2024: 2024 Pillar 3 Disclosures, section 4.2 'RISK WEIGHTED ASSETS', UK OV1 table, p.20 (own year) "
+              "- " + P3_URL["FY2024"] + "\n"
+              "FY2021-FY2023 also contain UK OV1 aggregate risk-type rows, reproduced above; these are not the "
+              "older exposure-class rows and are not additive to them. GENUINE FINDING (2026-09-05, HD-051): "
               "BACB_Pillar3-2021_v3.pdf (cited above for FY2021) itself contains 'Table 12: Overview of RWAs and "
               "the Bank's minimum capital requirement...under Pillar 1', with the same table present in every one "
               "of FY2014-FY2019's own Pillar 3 Disclosures (see below) - flagged here for a follow-up fix by "
               "whoever next touches this bank; out of scope to correct under HD-051 (years FY2014-FY2020 only).\n\n"
+              "FY2020 (2026-09-08 follow-up): no standalone Pillar 3 document exists (see main sources above). "
+              "The 2021 Pillar 3 Disclosures' own Table 12, p.34, has a FY2020 comparative column, but it discloses "
+              "only capital REQUIREMENT (not RWA) at category level for FY2020 - " + P3_URL["FY2021"] + ". Per "
+              "Basel III/CRR Article 92, the Pillar 1 minimum capital requirement is exactly 8% of RWA, so RWA per "
+              "category = capital requirement x 12.5 (an exact regulatory identity, not an estimate); shown in its "
+              "own separate section above (not blended with FY2014-2019's directly-disclosed RWA figures), rounded "
+              "to the nearest £'000 per category. The derived FY2020 total of 1,101,153 is within £12k (~0.001%) "
+              "of the independently-sourced Total RWAs sheet figure of 1,101,165 (also drawn from this same 2021 "
+              "Pillar 3 Disclosures document's FY2020 comparative column, KM1 template) - the residual gap is "
+              "rounding noise from the underlying capital-requirement figures already being rounded to the "
+              "nearest £'000 before the x12.5 conversion.\n\n"
               "FY2019: 2019 Pillar 3 Disclosures, Table 12 (own year) - " + P3_URL["FY2019"] + "\n"
               "FY2018: 2018 Pillar 3 Disclosures, Table 12 (own year) - " + P3_URL["FY2018"] + "\n"
               "FY2017: 2017 Pillar 3 Disclosures, Table 12 (own year) - " + P3_URL["FY2017"] + "\n"
               "FY2016: 2016 Pillar 3 Disclosures, Table 7 (own year) - " + P3_URL["FY2016"] + "\n"
               "FY2015: 2015 Pillar 3 Disclosures, Table 9 (own year) - " + P3_URL["FY2015"] + "\n"
-              "FY2014: 2014 Pillar 3 Disclosures, Table 9 (own year) - " + P3_URL["FY2014"] + "\n"
-              "FY2020: no standalone Pillar 3 document exists (see main sources above) and the FY2021 document's "
-              "FY2020 comparative only discloses capital-requirement figures (not RWA) at category level; "
-              "back-deriving RWA via /8% would introduce ~GBP250k of rounding error against the independently-"
-              "known FY2020 Total RWA of 1,101,165 - left 'Not publicly disclosed' rather than estimated."
+              "FY2014: 2014 Pillar 3 Disclosures, Table 9 (own year) - " + P3_URL["FY2014"]
     ),
     first_col_width=54,
-    source_height=340,
+    source_height=420,
     unit_suffix=" (£'000)",
 )
 metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)], p3_sources(

@@ -95,6 +95,72 @@ def p3_sources():
         "No separate Perenna Pillar 3/KM1 disclosure was located on the Bank's website or in its Companies "
         "House filings. The Annual Reports disclose only CET1 ratio and leverage ratio as named key metrics; "
         "the other fixed workbook metrics are therefore left explicitly not publicly disclosed.\n"
+        "RE-VERIFIED 2026-09-12 (independent disclosure audit): the FY2025 Annual Report was re-downloaded "
+        "from Companies House and OCR'd in full (76 pages, scanned/no text layer) - the only regulatory "
+        "metrics anywhere in it are the two on the Key Metrics table, p.1: Leverage ratio 21.47% (2024: "
+        "46.38%) and CET1 ratio 48% (2024: 133%), matching what this workbook already carries. A Wayback "
+        "CDX search of perenna.com for any archived Pillar 3 or regulatory-disclosure PDF returned zero "
+        "results, and the live site exposes no legal/regulatory document page (perenna.com/legal-and-"
+        "regulatory returns HTTP 404; the homepage is JS-rendered and links only to /about). Confirmed a "
+        "genuine non-disclosure rather than an access gap.\n"
+        "MAXIMUM-EFFORT RE-SEARCH 2026-09-15 (prior 'unavailable' verdicts treated as unproven; rotated user "
+        "agents, both curl and WebFetch). Four NEW routes were tried that no earlier pass had used, and all four "
+        "are negative:\n"
+        "  (1) perenna.com runs WordPress, so its REST media library was enumerated directly - "
+        "/wp-json/wp/v2/media?mime_type=application/pdf and ?media_type=application both return an EMPTY ARRAY: "
+        "the site hosts no PDF of any kind. Targeted searches (?search=pillar / disclosure / regulatory / "
+        "prudential) likewise return nothing.\n"
+        "  (2) A SIBLING HOST exists and was found and probed: static.perenna.com carries every Perenna PDF. A "
+        "full Wayback CDX sweep of the domain WITHOUT a filter (1,095 archived URLs) lists 13 PDFs there - all "
+        "product, broker, complaints and tariff documents; zero matches for pillar/disclos/regulat/capital/"
+        "prudent across the entire archived URL set. Twelve Pillar 3 filename permutations were then probed "
+        "live against static.perenna.com and ALL returned 404 against a known-good control "
+        "(tariff_of_mortgage_charges.pdf, HTTP 200) - so the 404s are real absences, not a blanket block.\n"
+        "  (3) perenna.com/legal and /regulatory both return HTTP 404, and the homepage's full link set (24 "
+        "site paths) contains no regulatory or investor-relations page.\n"
+        "  (4) The FY2024 Annual Report was downloaded from Companies House and OCR'd IN FULL for the first "
+        "time (90 pages, scanned/no text layer, rendered at 200 dpi). The ONLY regulatory metrics anywhere in "
+        "those 90 pages are the two KPI-table ratios on p.1 - Leverage Ratio 46.38% (2023: 91.97%) and CET1 "
+        "Ratio 133% (2023: 269%) - which independently reproduce the four values this workbook already carries "
+        "for FY2024/FY2023. No risk-weighted-asset figure, no capital amount, no LCR and no NSFR appears in any "
+        "note, including the ALCo/capital-surplus discussion in the risk section.\n"
+        "CONCLUSION: Perenna's non-disclosure is confirmed on much stronger evidence than before. The gap is "
+        "genuine, not an access failure, and the Annual Report KPI table is the only source that will ever "
+        "exist for these metrics.\n"
+        "SDDT - CHECKED 2026-09-15 (cross-bank SDDT date-fit pass). This REPLACES the earlier closing remark "
+        "here, which read 'Perenna is a small, recently-authorised specialist lender, consistent with the "
+        "reduced Pillar 3 requirements for such firms'. That was an inference, not evidence, and it also blurred "
+        "two different reliefs. Perenna does hold the Small Domestic Deposit Taker opt-in: the Bank of England "
+        "consolidated list of waivers and modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+        "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+        "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries one SDDT row for FRN "
+        "956138, 'Perenna Bank PLC': 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT "
+        "Regime - General Application Part', sub rule 'Ru 3.1', waiver ref 'A00010865P.pdf', START DATE "
+        "10/06/2025, no end date. Rule 3.1 is the operative opt-in and REMOVES the Pillar 3 disclosure "
+        "obligation outright; Perenna holds no criteria-only rows (1.2 / 2.1(9) / 2.6) alongside it. Note that "
+        "this is a different and stronger relief than the 'reduced requirements' the old wording gestured at - "
+        "the Article 433b small-and-non-complex-institution route reduces disclosure to an annual subset, "
+        "whereas Rule 3.1 removes it. The two must not be conflated.\n"
+        "DATE FIT - IT DOES NOT FIT THE GAP YEAR. Perenna's accounting reference date is 31 DECEMBER, confirmed "
+        "at Companies House (company 13084174, accounts filed to 31 December for 2021 through 2025). The "
+        "outstanding gap year is FY2021, whose reporting period ran from incorporation on 16 December 2020 to 31 "
+        "DECEMBER 2021 - three and a half years BEFORE the 10 June 2025 start date. A modification cannot "
+        "explain a gap that predates it, so the SDDT regime explains NONE of the FY2021 blanks.\n"
+        "FY2021's gap keeps its existing and entirely separate explanation, unchanged and in fact stronger than "
+        "an exemption: Perenna held NO banking licence at all during that period - it received a restricted "
+        "licence only in August 2022 and a full licence in 2023 - so no Pillar 3 obligation existed to be "
+        "exempted from. Do not read SDDT back onto FY2021, or onto FY2022 and FY2023 either, both of which also "
+        "predate 10 June 2025.\n"
+        "What the modification DOES establish is forward-looking, and it is worth recording because it settles a "
+        "question this note previously left open: from 10 June 2025 Perenna is an SDDT, so the standalone Pillar "
+        "3/KM1 document searched for above will never be published for FY2025 or later, and the Annual Report "
+        "KPI table will remain the only source for these metrics. A future session should not spend further "
+        "effort hunting for one. Perenna does not state its SDDT status in its own words - the FY2025 Annual "
+        "Report was OCR'd in full for the 2026-09-12 audit recorded above (76 scanned pages, no text layer) and "
+        "the only regulatory metrics anywhere in it are the leverage and CET1 ratios already carried here. No "
+        "Simplified Retail Deposit Ratio value is disclosed, so nothing replaces the NSFR series. This is the "
+        "SDDT DISCLOSURE exemption, in force now - not the separate SDDT CAPITAL regime beginning 1 January "
+        "2027.\n"
         + ENTITY_NOTE
     )
 
@@ -299,13 +365,29 @@ bw.add_asset_quality_sheet(
 )
 
 
+# FY2021 is marked explicitly rather than left blank. Perenna held no banking
+# licence at all in that period - a restricted licence came only in August 2022
+# and a full licence in 2023 - so no Pillar 3 obligation existed and no figure
+# can ever be sourced. The reasoning was already written into the notes below,
+# but the cells themselves were empty, which is indistinguishable from a year
+# nobody had researched: a cross-bank coverage audit counted all ten as
+# chaseable gaps. Matches build_vida.py and build_afin_bank.py.
+PRE_LICENCE_YEARS = ["FY2021"]
+
+
 def metric(name, unit, rows_data, note=None):
+    rows_data = [(label, {**{y: "Not applicable" for y in PRE_LICENCE_YEARS}, **values})
+                 for label, values in rows_data]
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=48, source_height=170)
 
 
 metric("CET1 Capital", None, [("CET1 capital", {y: "Not publicly disclosed" for y in YEARS})])
 metric("CET1 Ratio", "%", [("CET1 ratio", {"FY2025": "48%", "FY2024": "133%", "FY2023": "269%", "FY2022": "101.66%"})],
-       note="The Annual Reports disclose this ratio as a Key Performance Indicator, but do not provide a separate Pillar 3/KM1 capital amount. No FY2021 ratio is disclosed.")
+       note="The Annual Reports disclose this ratio as a Key Performance Indicator, but do not provide a "
+            "separate Pillar 3/KM1 capital amount. FY2021 is blank for a STRUCTURAL reason, not a sourcing "
+            "gap: Perenna did not hold a banking licence at all during that period (restricted licence "
+            "granted August 2022, full licence 2023 - see the entity note), so no regulatory capital ratio "
+            "existed to disclose for the period ended 31 December 2021. Re-verified 2026-09-12.")
 metric("Tier 1 Capital", None, [("Tier 1 capital", {y: "Not publicly disclosed" for y in YEARS})])
 metric("Tier 1 Ratio", None, [("Tier 1 ratio", {y: "Not publicly disclosed" for y in YEARS})])
 metric("Total Capital", None, [("Total capital", {y: "Not publicly disclosed" for y in YEARS})])
@@ -328,7 +410,9 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2025": "21.47%", "FY2024": "46.38%", "FY2023": "91.97%", "FY2022": "91.05%"})],
-       note="The Annual Reports disclose this ratio as a Key Performance Indicator. No FY2021 ratio is disclosed.")
+       note="The Annual Reports disclose this ratio as a Key Performance Indicator. FY2021 is blank for the "
+            "same STRUCTURAL reason as the CET1 Ratio sheet - the entity held no banking licence during the "
+            "period ended 31 December 2021. Re-verified 2026-09-12.")
 metric("LCR", None, [("Liquidity coverage ratio", {y: "Not publicly disclosed" for y in YEARS})])
 metric("NSFR", None, [("Net stable funding ratio", {y: "Not publicly disclosed" for y in YEARS})])
 metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})])

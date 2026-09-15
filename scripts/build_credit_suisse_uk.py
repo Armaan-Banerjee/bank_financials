@@ -234,18 +234,41 @@ ASSET_QUALITY_SOURCES = (
 )
 
 RWA_BREAKDOWN_SOURCES = (
-    "Not publicly disclosed in any of the 10 years (FY2016-FY2025) - confirmed by reading each year's "
-    "Annual Report in full (all numbered notes through to the final note in each filing - Note 36 "
-    "'Subsequent events' in the FY2025 report, similarly the last note in each of the FY2023/FY2021/FY2020/"
-    "FY2019/FY2018/FY2017/FY2016 reports), plus the existing Pillar 3 KPI-table sourcing already used for "
-    "the CET1/Tier 1/Total RWAs/Leverage/LCR/NSFR sheets. No 'Capital Adequacy' note with an RWA category "
-    "breakdown (credit risk/counterparty credit risk/market risk/operational risk) exists in any of the 8 "
-    "Companies House filings reviewed (each year's own Capital adequacy note gives only a single Own Funds/"
-    "Total-eligible-capital figure and a general statement that RWAs 'reflect the credit, market, "
-    "operational and other risks of the institution', with no numeric category breakdown), and (per the "
-    "existing Pillar 3 sheets' own source note) no standalone Pillar 3 document for this entity was located "
-    "either - only the single aggregate Total RWA figure already used on the Total RWAs sheet is disclosed "
-    "anywhere."
+    "CORRECTION (fresh re-verification, 2026-09-12): the prior version of this sheet claimed no category-level "
+    "RWA breakdown was disclosed in any year, based only on a check of the Companies House Annual Report "
+    "filings. That check was incomplete - a standalone Pillar 3 disclosure document for this entity DOES exist "
+    "(UBS-hosted, since UBS's acquisition of Credit Suisse), and it carries a full risk-category RWA breakdown "
+    "for FY2021-FY2025 (FY2016-FY2020 remain genuinely undisclosed - no standalone Pillar 3 document for this "
+    "entity has been found for those years, consistent with the existing CET1/Tier 1/Total RWAs sheets' own "
+    "source notes).\n\n"
+    "Sources - Credit Suisse (UK) Limited Pillar 3 Disclosures, £'000s, each year's own originally-published "
+    "figures used as primary (not a later restated comparative), per project convention:\n"
+    "FY2025: Pillar 3 Disclosures 2025, 'OV1 - Overview of risk weighted exposure amounts', p.18 - "
+    "https://www.ubs.com/global/en/investor-relations/complementary-financial-information/other-subsidiaries.html "
+    "(csuk-pillar-3-disclosures-2026.pdf)\n"
+    "FY2024: Pillar 3 Disclosures 2024, 'OV1 - Overview of risk weighted exposure amounts', p.26 - same page "
+    "(csuk-pillar-3-disclosures-2024.pdf)\n"
+    "FY2023: sourced from the FY2024 Pillar 3 Disclosures' own FY2023 comparative column (same table/page) - "
+    "FY2023's own standalone Pillar 3 document was not located separately.\n"
+    "FY2022: Pillar 3 Disclosures 2022, 'OV1 - Overview of risk weighted exposure amounts' - "
+    "https://www.ubs.com/global/en/investor-relations/complementary-financial-information/disclosure-legal-"
+    "entities/archive-credit-suisse.html (csuk-pillar-3-disclosures-2022.pdf)\n"
+    "FY2021: Pillar 3 Disclosures 2021, 'RWA and Capital Requirements' table (pre-dates the OV1 template/label, "
+    "same underlying disclosure, broken down further by credit-risk exposure class) - same archive page "
+    "(2021-csuk-pillar-3-disclosures.pdf)\n\n"
+    "Every year's Total ties to the Total RWAs sheet's own figure (to the nearest £m). FY2021's own document "
+    "uses an older, pre-OV1 layout (exposure-class detail within credit risk; three summary lines 'Total credit "
+    "and counterparty credit risk' / 'Total market risk' / 'Total other risks') rather than the UK OV1 template "
+    "used from FY2022 onward - shown here collapsed to the three summary lines for consistency, with a "
+    "£3k Settlement risk line disclosed only in FY2022 (immaterial, included in that year's Total). No separate "
+    "Market risk RWA line is disclosed for FY2022/FY2024 (each document's own notes state there is no market "
+    "risk RWA those years, non-GBP FX exposure below the 2%-of-capital threshold) - left blank rather than "
+    "forced to zero, consistent with each year's own template only carrying the rows it actually discloses.\n\n"
+    "FY2016-FY2020: not publicly disclosed - confirmed by reading each year's Annual Report in full (all "
+    "numbered notes through to the final note in each filing), plus the existing Pillar 3 KPI-table sourcing "
+    "already used for the CET1/Tier 1/Total RWAs/Leverage/LCR/NSFR sheets. No 'Capital Adequacy' note with an "
+    "RWA category breakdown exists in any of these Companies House filings, and no standalone Pillar 3 document "
+    "for this entity has been found covering these years."
 )
 
 bw = BankWorkbook(bank_name="Credit Suisse (UK) Limited", years=YEARS, year_label=YEAR_LABEL, header_color="50B633")
@@ -756,15 +779,28 @@ metric("Total RWAs", "£m", [("Risk Weighted Assets (RWA)", RWA)], p3_sources())
 # Sheet: RWA Breakdown (placed right after Total RWAs)
 # ---------------------------------------------------------------
 rwa_breakdown_rows = [
-    ("SECTION", "RWA by risk category", {}),
-    ("TOTAL", "Total RWAs", {y: "Not publicly disclosed" for y in YEARS}),
+    ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts (FY2022-FY2025)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 4053, "FY2024": 449009, "FY2023": 750436, "FY2022": 884443}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 887, "FY2024": 33553, "FY2023": 30969, "FY2022": 30213}),
+    ("DATA", "Market risk", {"FY2025": 7791, "FY2023": 15933}),
+    ("DATA", "Operational risk", {"FY2025": 147290, "FY2024": 189114, "FY2023": 202259, "FY2022": 209312}),
+    ("DATA", "Settlement risk", {"FY2022": 3}),
+    ("SECTION", "Pre-OV1 format, collapsed to summary lines (FY2021)", {}),
+    ("DATA", "Total credit and counterparty credit risk", {"FY2021": 1109433}),
+    ("DATA", "Total market risk", {"FY2021": 0}),
+    ("DATA", "Total other risks (operational risk)", {"FY2021": 230434}),
+    ("TOTAL", "Total RWAs", {"FY2025": 160021, "FY2024": 671676, "FY2023": 999597, "FY2022": 1123970, "FY2021": 1339867,
+                             "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed",
+                             "FY2017": "Not publicly disclosed", "FY2016": "Not publicly disclosed"}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Credit Suisse (UK) Limited — RWA Breakdown",
-    subtitle="Not publicly disclosed in any year. See source note at bottom.",
+    subtitle="£'000s. UK OV1 template FY2022-FY2025; older pre-OV1 format for FY2021. Not publicly disclosed FY2016-FY2020 - see source note.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=58,
+    source_height=340,
 )
 
 metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources(

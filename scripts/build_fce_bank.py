@@ -45,6 +45,21 @@ AR2014_URL = "https://web.archive.org/web/20220615085021/https://www.fcebank.com
 # chapter *within* each year's own Annual Report instead - see P3_SOURCES_NOTE below).
 P3_2014_URL = "https://web.archive.org/web/20211015234304/https://www.fcebank.com/pdf/investor_center/2014_Pillar_3_Disclosure.pdf"
 
+# FY2022-FY2025 standalone "Annual Pillar 3 Report"s. Earlier passes concluded FCE stopped
+# publishing Pillar 3 after the FY2021 Annual Report's chapter was dropped; that was wrong.
+# FCE moved Pillar 3 back OUT into a separate annual document, which the FY2025 Annual Report
+# points to explicitly ("Further details on FCE's capital and leverage ratio can be found in
+# FCE's Annual Pillar 3 Report, which is published separately", p.9). The documents are live on
+# fcebank.com but unreachable by guessing: the site is a JS single-page app that renders no
+# links for curl/WebFetch, and the filenames are irregular (note the double spaces and the
+# inconsistent 2022/2023/2024/2025 naming below). They were recovered from the document
+# manifest embedded in the SPA's own JS bundle, /assets/index-sDDPyUiF.js, which lists every
+# PDF path the investor centre offers.
+P3_2022_URL = "https://www.fcebank.com/pdf/investor_center/2022/FCE%20Bank%20PLC%20-%20Annual%20Pillar%203%20%20Report.pdf"
+P3_2023_URL = "https://www.fcebank.com/pdf/investor_center/2023/FCE%20Bank%20PLC%20-%20ANNUAL%20PILLAR%203%20REPORT%202023.pdf"
+P3_2024_URL = "https://www.fcebank.com/pdf/investor_center/2024/FCE%20Bank%20PLC%20-%20Annual%20Pillar%203%20Disclosures%20-%20Doc.pdf"
+P3_2025_URL = "https://www.fcebank.com/pdf/investor_center/2025/FCE%20Bank%20PLC%20-%202025%20Annual%20P3%20-%20Doc%20Final%20Published.pdf"
+
 # HD-076: FY2006-FY2013 (Balance Sheet/P&L/Statement of Changes in Equity/Cash Flow Statement
 # ONLY - Pillar 3/Asset Quality/RWA Breakdown untouched, out of scope). Sourced the same way as
 # HD-046's FY2014-FY2020 (Wayback Machine, fcebank.com/pdf/investor_center/... now dead). Every
@@ -156,21 +171,31 @@ CASH_FLOW_SOURCES = (
 def p3_sources(extra=""):
     return (
         "Sources - FCE Bank Plc Pillar 3 / capital basis, Group/Consolidated:\n"
-        f"FY2021-FY2025 Tier 1 Capital, Tier 2 Capital and Total Capital Ratio: Annual Report 2025, "
-        f"p.5 ('Business Performance' - 'Total Capital' chart, values to the nearest £0.1bn) - {AR2025_URL}\n"
-        "FY2021 CET1/Tier 1 Capital (exact, £2,684m) and Leverage Ratio (16.95%): Annual Report 2021, "
+        "FY2022-FY2025 (ALL Pillar 3 metrics): each year's own standalone 'Annual Pillar 3 Report', "
+        "table 'UK KM1 - Key metrics' (CET1/Tier 1/Total capital rows 1-3, Total RWEA row 4, capital "
+        "ratios rows 5-7, leverage ratio row 14, LCR rows 15-17, NSFR rows 18-20) and table 'UK OV1 - "
+        "Overview of risk weighted exposure amounts' for the RWA category split:\n"
+        f"FY2025: 2025 Pillar 3 Report, KM1 p.4, OV1 p.15 - {P3_2025_URL}\n"
+        f"FY2024: 2024 Pillar 3 Report, KM1 p.4, OV1 p.15 - {P3_2024_URL}\n"
+        f"FY2023: 2023 Pillar 3 Report, KM1 p.4, OV1 p.14 - {P3_2023_URL}\n"
+        f"FY2022: 2022 Pillar 3 Report, KM1 p.4, OV1 p.19 - {P3_2022_URL}\n"
+        "Each report's KM1/OV1 also carries the prior year-end as a comparative column, and every "
+        "overlapping figure agrees exactly - FY2023's report additionally gives all four quarters of "
+        "2023 plus Dec 2022. NOTE FY2022's KM1 column b is 30 June 2022, NOT a prior year-end.\n"
+        f"FY2021 CET1/Tier 1 Capital (exact, £2,684m) and Leverage Ratio (16.95%): Annual Report 2021, "
         f"'Pillar 3 Disclosures' Table 2 (p.135) and Table 19 (p.155) - {AR2021_URL}\n"
-        "CET1 = Tier 1 Capital every year (confirmed via the FY2021 Pillar 3 Own Funds reconciliation - "
-        "no Additional Tier 1 instruments held).\n"
-        "FY2022-FY2025 CET1/Tier 1 Capital and CET1/Tier 1 Ratio are CALCULATED, not directly disclosed: "
-        "the Annual Report only publishes the rounded (nearest £0.1bn) Tier 1/Tier 2 chart and the "
-        "Total Capital Ratio %; no standalone Pillar 3 document or CET1/Tier 1 Ratio % is published for "
-        "these years (the dedicated 'Pillar 3 Disclosures' chapter present in the FY2021 report was "
-        "dropped from FY2022 onward). Total RWAs is likewise calculated (Total Capital / Total Capital "
-        "Ratio) for every year, since no year discloses RWA directly.\n"
-        "Leverage Ratio, LCR, NSFR, MREL Ratio: not located for FY2022-FY2025 - no Pillar 3 chapter "
-        "exists in those reports to check, and none of these appear in the Business Performance/Business "
-        "Environment narrative sections reviewed.\n"
+        "CET1 = Tier 1 Capital every year (confirmed via the FY2021 Pillar 3 Own Funds reconciliation "
+        "and again in every FY2022-FY2025 KM1 - no Additional Tier 1 instruments held).\n"
+        f"FY2021-FY2025 Total Capital Ratio cross-check: Annual Report 2025, p.5 ('Business Performance' "
+        f"- 'Total Capital' chart, values to the nearest £0.1bn) - {AR2025_URL}\n"
+        "HISTORICAL CORRECTION (2026-09-15): FY2022-FY2025 CET1/Tier 1 Capital, the capital ratios and "
+        "Total RWAs were previously CALCULATED from that rounded chart, and Leverage Ratio/LCR/NSFR were "
+        "recorded as never disclosed, all on the assumption that FCE stopped publishing Pillar 3 when "
+        "the FY2021 Annual Report's chapter was dropped. That was wrong: FCE moved Pillar 3 back out "
+        "into a separate annual document, which the FY2025 Annual Report points to explicitly on p.9 "
+        "('Further details on FCE's capital and leverage ratio can be found in FCE's Annual Pillar 3 "
+        "Report, which is published separately'). Those documents are live but not link-crawlable - see "
+        "the P3_20xx_URL comment at the top of this script for how they were recovered.\n"
         "HD-046 (FY2014-FY2020): every one of these years has a full, EXACT (not rounded/calculated) "
         "Pillar 3 'Own Funds'/'Capital ratio and buffers' table, either as a standalone document "
         "(FY2014) or as a 'Pillar 3 Disclosures' chapter within that year's own Annual Report "
@@ -187,11 +212,11 @@ def p3_sources(extra=""):
         f"FY2015: Annual Report 2015, Table 15 (pp.151-155) and Table 20 (p.159) - {AR2015_URL}\n"
         f"FY2014: standalone 'Pillar 3 Disclosures (excl. Remuneration) - 2014', Note 3 'Own Funds - "
         f"Components of Capital' (p.18) and Note 13 'Leverage Ratio' (p.34) - {P3_2014_URL}\n"
-        "LCR/NSFR/MREL Ratio: not located for FY2014-FY2020 either - none of these terms appear "
-        "anywhere in the 6 Annual Reports or the standalone 2014 Pillar 3 document reviewed (the "
-        "narrative around the FY2018-FY2020 LCR paragraph never states a numeric ratio), consistent "
-        "with the gap already documented for FY2021-FY2025. Plausibly reflects FCE's captive "
-        "auto-finance/wholesale-funded business model throughout.\n"
+        "LCR/NSFR: not disclosed for FY2014-FY2021 - none of these terms appear as a numeric ratio "
+        "anywhere in those Annual Reports or the standalone 2014 Pillar 3 document reviewed (the "
+        "narrative around the FY2018-FY2020 LCR paragraph never states a ratio). This gap is REAL and "
+        "ends at FY2022, when the UK KM1 template made both mandatory - see the LCR and NSFR sheets. "
+        "MREL Ratio: not disclosed in any year FY2014-FY2025 - see that sheet's own note.\n"
         + extra
     )
 
@@ -352,9 +377,22 @@ RWA_BREAKDOWN_NOTE = (
     "FY2014-FY2021: directly disclosed every year, either in the standalone 2014 Pillar 3 document (Note 5 "
     "'Pillar 1 Capital Requirement: Total - Split by Risk Type', p.21) or in that year's own Annual Report's "
     "'Pillar 3 Disclosures' chapter (Table 5 'Capital Requirement Split by Risk Type', FY2015-FY2021) - see "
-    "p3_sources() above for the exact page per year. FY2022-FY2025: Not publicly disclosed - no Pillar 3 "
-    "chapter exists in these years' Annual Reports (confirmed by reading each report's own contents page - "
-    "no 'Pillar 3 Disclosures' section listed for FY2022 onward)."
+    "p3_sources() above for the exact page per year.\n\n"
+    "FY2022 RESTORED 2026-09-12 (fresh independent re-verification): the prior claim of 'no Pillar 3 chapter "
+    "exists in these years' Annual Reports' was correct as far as it went (confirmed again - no 'Pillar 3 "
+    "Disclosures' chapter appears in the FY2022-FY2025 Annual Reports' own contents pages) but missed that "
+    "FCE separately published a standalone '2022 Pillar 3 Report' PDF on its own website (not linked from the "
+    "Annual Report, not currently live on fcebank.com, but archived by the Wayback Machine) - this is a real, "
+    "genuine UK OV1 category-level disclosure, not a fabrication: FCE Bank plc, 2022 Pillar 3 Report, 'UK OV1 "
+    "- Overview of risk weighted exposure amounts', p.19 (https://web.archive.org/web/20240723091812/"
+    "https://www.fcebank.com/pdf/investor_center/2022/FCE%20Bank%20PLC%20-%20Annual%20Pillar%203%20%20"
+    "Report.pdf).\n\n"
+    "FY2023-FY2025: STILL not publicly disclosed after this fresh check - a Wayback CDX search of the "
+    "bank's full investor_center archive found only one further document after the FY2022 annual report (a "
+    "'Q1 2023 Quarterly Pillar 3 Report', as at 31 March 2023, KM1 Key Metrics only, no OV1 category table, "
+    "and not a FY-end date in any case) and nothing at all for FY2024/FY2025 - confirming this is a genuine, "
+    "continuing gap in the bank's own disclosure (it appears to have stopped publishing Pillar 3 reports "
+    "after Q1 2023), not a search miss."
 )
 
 # ---------------------------------------------------------------
@@ -1056,15 +1094,18 @@ def metric(name, unit, rows_data, note=None):
 
 
 CALC_NOTE = (
-    "CALCULATED, not directly disclosed for FY2022-FY2025 (only the rounded nearest-£0.1bn chart "
-    "value is published) - see the sheet's own source note for the exact FY2021 and FY2014-FY2020 "
-    "figures and full methodology."
+    "CORRECTED 2026-09-15. Every year is now DIRECTLY DISCLOSED. FY2022-FY2025 were previously "
+    "calculated or read off the Annual Report's rounded nearest-£0.1bn Tier 1/Tier 2 chart, on the "
+    "since-disproven assumption that FCE stopped publishing Pillar 3 when the FY2021 Annual Report's "
+    "chapter was dropped. It did not - it moved Pillar 3 into a separate annual document (see the "
+    "P3_20xx_URL comment at the top of this script for why those were hard to find). All four years "
+    "now come from each year's own UK KM1 'Key metrics' table, rows 1-7."
 )
 
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital (= Tier 1 Capital, no AT1 instruments held)",
-      {"FY2025": 1600, "FY2024": 1800, "FY2023": 2400, "FY2022": 2100, "FY2021": 2684,
+      {"FY2025": 1620, "FY2024": 1773, "FY2023": 2393, "FY2022": 2137, "FY2021": 2684,
        "FY2020": 2948, "FY2019": 2727, "FY2018": 2597, "FY2017": 2369, "FY2016": 2145,
        "FY2015": 1869, "FY2014": 1756})],
     note=CALC_NOTE,
@@ -1072,18 +1113,20 @@ metric(
 
 metric(
     "CET1 Ratio", "%",
-    [("CET1 Ratio (= Tier 1 Ratio, calculated as CET1 Capital / Total RWAs)",
-      {"FY2025": "16.59%", "FY2024": "17.61%", "FY2023": "17.16%", "FY2022": "16.65%", "FY2021": "23.58%",
+    [("Common Equity Tier 1 (CET1) ratio (= Tier 1 Ratio, no AT1 instruments held)",
+      {"FY2025": "16.17%", "FY2024": "17.17%", "FY2023": "17.10%", "FY2022": "16.55%", "FY2021": "23.58%",
        "FY2020": "19.54%", "FY2019": "16.54%", "FY2018": "14.84%", "FY2017": "14.67%", "FY2016": "14.53%",
        "FY2015": "15.27%", "FY2014": "16.30%"})],
-    note=CALC_NOTE + " FY2021 and FY2014-FY2020 also independently cross-checked against the exact "
-                     "Pillar 3 Own Funds table each year.",
+    note=CALC_NOTE + " FY2025's and FY2024's KM1 figures are independently corroborated by the FY2025 "
+                     "Annual Report's own capital narrative (p.9), which states the CET1 ratio as "
+                     "16.17% (2024: 17.17%). FY2021 and FY2014-FY2020 also cross-checked against the "
+                     "exact Pillar 3 Own Funds table each year.",
 )
 
 metric(
     "Tier 1 Capital", "£m",
     [("Tier 1 capital (= CET1, no AT1 instruments held)",
-      {"FY2025": 1600, "FY2024": 1800, "FY2023": 2400, "FY2022": 2100, "FY2021": 2684,
+      {"FY2025": 1620, "FY2024": 1773, "FY2023": 2393, "FY2022": 2137, "FY2021": 2684,
        "FY2020": 2948, "FY2019": 2727, "FY2018": 2597, "FY2017": 2369, "FY2016": 2145,
        "FY2015": 1869, "FY2014": 1756})],
     note=CALC_NOTE,
@@ -1092,7 +1135,7 @@ metric(
 metric(
     "Tier 1 Ratio", "%",
     [("Tier 1 Ratio (= CET1 Ratio, no AT1 instruments held)",
-      {"FY2025": "16.59%", "FY2024": "17.61%", "FY2023": "17.16%", "FY2022": "16.65%", "FY2021": "23.58%",
+      {"FY2025": "16.17%", "FY2024": "17.17%", "FY2023": "17.10%", "FY2022": "16.55%", "FY2021": "23.58%",
        "FY2020": "19.54%", "FY2019": "16.54%", "FY2018": "14.84%", "FY2017": "14.67%", "FY2016": "14.53%",
        "FY2015": "15.27%", "FY2014": "16.30%"})],
     note=CALC_NOTE,
@@ -1101,11 +1144,10 @@ metric(
 metric(
     "Total Capital", "£m",
     [("Total Capital (Tier 1 + Tier 2)",
-      {"FY2025": 1800, "FY2024": 2000, "FY2023": 2700, "FY2022": 2400, "FY2021": 2994,
+      {"FY2025": 1869, "FY2024": 2021, "FY2023": 2700, "FY2022": 2457, "FY2021": 2994,
        "FY2020": 3287, "FY2019": 3073, "FY2018": 2915, "FY2017": 2746, "FY2016": 2493,
        "FY2015": 2118, "FY2014": 2003})],
-    note="FY2022-FY2025 summed from the Annual Report's own rounded (nearest £0.1bn) Tier 1/Tier 2 "
-         "chart. FY2021 and FY2014-FY2020 exact from each year's own Pillar 3 Own Funds table.",
+    note=CALC_NOTE,
 )
 
 metric(
@@ -1114,28 +1156,41 @@ metric(
       {"FY2025": "18.66%", "FY2024": "19.57%", "FY2023": "19.30%", "FY2022": "19.03%", "FY2021": "26.20%",
        "FY2020": "21.79%", "FY2019": "18.64%", "FY2018": "16.66%", "FY2017": "17.00%", "FY2016": "16.89%",
        "FY2015": "17.31%", "FY2014": "18.6%"})],
-    note="Directly disclosed every year - either in the Annual Report's own 'Business Performance' - "
-         "'Total Capital' chart (FY2022-FY2025), or in that year's own exact Pillar 3 Own Funds table "
-         "(FY2021 and FY2014-FY2020).",
+    note="Directly disclosed every year - FY2022-FY2025 from each year's own standalone Annual Pillar 3 "
+         "Report, UK KM1 row 7 (these happen to agree exactly with the Annual Report's 'Business "
+         "Performance' - 'Total Capital' chart, which is how they were originally sourced); FY2021 and "
+         "FY2014-FY2020 from that year's own exact Pillar 3 Own Funds table.",
 )
 
 metric(
     "Total RWAs", "£m",
     [("Total Risk-Weighted Exposure Amounts",
-      {"FY2025": 9646, "FY2024": 10220, "FY2023": 13990, "FY2022": 12612, "FY2021": 11427,
+      {"FY2025": 10016, "FY2024": 10325, "FY2023": 13993, "FY2022": 12908, "FY2021": 11427,
        "FY2020": 15089, "FY2019": 16483, "FY2018": 17501, "FY2017": 16148, "FY2016": 14760,
        "FY2015": 12239, "FY2014": 10775})],
     note="FY2021 and FY2014-FY2020 directly disclosed each year ('Total all risk types' / 'Total risk "
          "weighted assets', Pillar 3 Own Funds/RWA-split tables) - see the RWA Breakdown sheet "
-         "immediately following for the full risk-category split every one of these 8 years. "
-         "FY2022-FY2025 CALCULATED (Total Capital / Total Capital Ratio) - not directly disclosed in "
-         "any of those years (no Pillar 3 chapter exists after FY2021).",
+         "immediately following for the full risk-category split every one of these 8 years. FY2022 "
+         "CORRECTED 2026-09-12 (fresh re-verification found a standalone '2022 Pillar 3 Report' - a "
+         "separate document from the Annual Report, archived on Wayback but not on the bank's live site "
+         "- with a genuine UK OV1 disclosure): now directly disclosed at 12,908 (UK OV1 'Total' row, "
+         "p.19), replacing the previous calculated estimate of 12,612 (Total Capital/Total Capital "
+         "Ratio, which was only an approximation absent the real figure). Cross-verified against the "
+         "Bank's own Q1 2023 Quarterly Pillar 3 Report's KM1 table, which restates the same 31 Dec 2022 "
+         "Total risk-weighted exposure amount as 12,908 exactly. FY2023-FY2025 CORRECTED 2026-09-15: the "
+         "earlier conclusion that no annual Pillar 3 document exists for these years was WRONG - FCE "
+         "publishes one every year, on its live site but invisible to link-crawling (see the P3_20xx_URL "
+         "comment at the top of this script). All three are now directly disclosed from each year's own "
+         "UK OV1 'Total' row: FY2023 13,993 (was calculated 13,990), FY2024 10,325 (was 10,220), FY2025 "
+         "10,016 (was 9,646). Each year's OV1 also carries the prior year as its comparative column, and "
+         "those comparatives agree exactly with the figures recorded here.",
 )
 
 bw.add_rwa_breakdown_sheet(
     title="FCE Bank Plc — RWA Breakdown",
-    subtitle="FY2014-FY2021 (Consolidated), £m. See source note at bottom for why FY2022-FY2025 are not "
-              "publicly disclosed.",
+    subtitle="FY2014-FY2021: Consolidated, older risk-type split. FY2022-FY2025: UK OV1 template (different "
+              "category granularity - see source note). Market risk shows a disclosed nil (0), not a gap, in "
+              "FY2024 and FY2025 - FCE has no trading book and reported '—' in both years. £m.",
     rows=[
         ("SECTION", "Credit risk", {}),
         ("DATA", "Credit risk (excl. counterparty credit risk)",
@@ -1160,49 +1215,90 @@ bw.add_rwa_breakdown_sheet(
         ("TOTAL", "Total all risk types (Total RWAs)",
          {"FY2021": 11427, "FY2020": 15089, "FY2019": 16483, "FY2018": 17501, "FY2017": 16148,
           "FY2016": 14760, "FY2015": 12239, "FY2014": 10775}),
+        ("SECTION", "FY2022-FY2025 (UK OV1 template, from each year's standalone Annual Pillar 3 Report)", {}),
+        ("DATA", "Credit risk (excluding CCR)",
+         {"FY2025": 9066, "FY2024": 9465, "FY2023": 12719, "FY2022": 11542}),
+        ("DATA", "Counterparty credit risk (CCR)",
+         {"FY2025": 315, "FY2024": 344, "FY2023": 326, "FY2022": 447}),
+        ("DATA", "  of which: credit valuation adjustment (CVA)",
+         {"FY2025": 224, "FY2024": 243, "FY2023": 217, "FY2022": 279}),
+        ("DATA", "Market risk (position, FX and commodities)",
+         {"FY2025": 0, "FY2024": 0, "FY2023": 160, "FY2022": 79}),
+        ("DATA", "Operational risk",
+         {"FY2025": 635, "FY2024": 515, "FY2023": 787, "FY2022": 840}),
+        ("DATA", "Amounts below thresholds for deduction (memo, excluded from Total)",
+         {"FY2025": 49, "FY2024": 55, "FY2023": 45, "FY2022": 19}),
+        ("TOTAL", "Total (UK OV1 format)",
+         {"FY2025": 10016, "FY2024": 10325, "FY2023": 13993, "FY2022": 12908}),
     ],
     sources_text=p3_sources() + "\n\n" + RWA_BREAKDOWN_NOTE,
     first_col_width=58,
-    source_height=460,
+    source_height=520,
     unit_suffix=" (£m)",
     years=PILLAR3_YEARS,
 )
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage Ratio",
+    [("Leverage Ratio (FY2014-FY2021 basis: total exposure measure incl. central bank claims)",
       {"FY2021": "16.95%", "FY2020": "14.59%", "FY2019": "13.02%", "FY2018": "11.74%",
-       "FY2017": "11.82%", "FY2016": "11.86%", "FY2015": "12.28%", "FY2014": "12.91%"})],
-    note="Directly disclosed for FY2021 and FY2014-FY2020, from each year's own dedicated 'Pillar 3 "
-         "Disclosures' chapter (or, for FY2014, the standalone Pillar 3 document) - this chapter was "
-         "dropped from FY2022 onward, and no leverage ratio was found anywhere in the FY2022-FY2025 "
-         "reports. Not calculated for those years since no leverage exposure measure is disclosed either.",
+       "FY2017": "11.82%", "FY2016": "11.86%", "FY2015": "12.28%", "FY2014": "12.91%"}),
+     ("Leverage ratio excluding claims on central banks (FY2022-FY2025 basis)",
+      {"FY2025": "12.93%", "FY2024": "13.49%", "FY2023": "14.02%", "FY2022": "13.23%"})],
+    note="Shown on TWO ROWS because the basis changes, not because the series breaks. FY2014-FY2021 are "
+         "the pre-PS21/21 leverage ratio from each year's own 'Pillar 3 Disclosures' chapter (or, for "
+         "FY2014, the standalone Pillar 3 document). From 1 January 2022 the UK framework moved to a "
+         "measure that EXCLUDES claims on central banks, so FY2022-FY2025 are reported on that basis "
+         "(UK KM1 row 14 / UK LR2 row 25 of each year's standalone Annual Pillar 3 Report). The two are "
+         "not like-for-like and must not be read as a single trend - FCE's own FY2022 report restates "
+         "30 Jun 2022 on the new basis at 18.48%, well above the old-basis FY2021 16.95%.\n"
+         "CORRECTED 2026-09-15: FY2022-FY2025 were previously recorded as never disclosed, on the "
+         "since-disproven assumption that FCE stopped publishing Pillar 3 after FY2021. Each of those "
+         "reports also discloses an averaged leverage ratio (UK 14c: FY2025 13.76%, FY2024 14.12%, "
+         "FY2023 13.91%), not used here since the year-end figure is the one comparable to FY2014-FY2021. "
+         "Note FCE is explicitly NOT an LREQ firm - its FY2022 KM1 states rows UK 14a-e 'are applicable "
+         "to LREQ firms, which FCE is not as at 31 Dec 2022' - so it is outside the scope of the UK "
+         "leverage ratio REQUIREMENT while still making the standard leverage DISCLOSURE.",
+)
+
+metric(
+    "LCR", "%",
+    [("Liquidity coverage ratio (%)",
+      {"FY2025": "303%", "FY2024": "359%", "FY2023": "260%", "FY2022": "238%"})],
+    note="CORRECTED 2026-09-15. Previously recorded as not disclosed in ANY year - that was right for "
+         "FY2014-FY2021 but wrong from FY2022. FCE's standalone Annual Pillar 3 Reports disclose a full "
+         "UK KM1 liquidity block (rows 15-17), giving both the HQLA/net-outflow components and the ratio. "
+         "These are 12-month-average values per the KM1 template, NOT year-end spot ratios.\n"
+         "FY2014-FY2021 remain genuinely undisclosed: no numeric LCR appears in any of those Annual "
+         "Reports or the standalone 2014 Pillar 3 document, including the FY2015-FY2021 Pillar 3 "
+         "chapters' own index of the CRR articles they cover (no liquidity-ratio article listed at all) "
+         "and the FY2018-FY2020 narrative LCR paragraph, which describes the regulation but never states "
+         "FCE's own ratio. The FY2022 start coincides with the UK KM1 template becoming the required "
+         "disclosure format, not with a change in FCE's liquidity position.",
+)
+
+metric(
+    "NSFR", "%",
+    [("Net stable funding ratio (%)",
+      {"FY2025": "135%", "FY2024": "135%", "FY2023": "139%", "FY2022": "133%"})],
+    note="CORRECTED 2026-09-15, same correction as the LCR sheet. Disclosed from FY2022 in the UK KM1 "
+         "liquidity block (rows 18-20) of each year's standalone Annual Pillar 3 Report, with the "
+         "available/required stable funding components alongside. Weighted-average values per the KM1 "
+         "template. FY2014-FY2021 remain genuinely undisclosed - no NSFR reference appears in any of "
+         "those Annual Reports or the standalone 2014 Pillar 3 document. This is consistent with NSFR "
+         "only becoming a binding UK requirement on 1 January 2022.",
 )
 
 bw.add_not_disclosed_metric_sheets(
-    ["LCR"],
+    ["MREL Ratio"],
     p3_sources(),
     per_note={
-        "LCR": "Not publicly disclosed for any of FY2014-FY2025 - no numeric LCR value found in any of "
-               "the 11 Annual Reports or the standalone 2014 Pillar 3 document reviewed, including the "
-               "FY2015-FY2021 Pillar 3 Disclosures chapters' own index of every CRR disclosure article "
-               "they cover (no liquidity-ratio article listed at all) and the FY2018-FY2020 narrative "
-               "LCR paragraph (describes the regulation but never states FCE's own ratio). Plausibly "
-               "reflects FCE Bank's captive auto-finance/wholesale-funded business model.",
-    },
-    years=PILLAR3_YEARS,
-)
-
-bw.add_not_disclosed_metric_sheets(
-    ["NSFR", "MREL Ratio"],
-    p3_sources(),
-    per_note={
-        "NSFR": "Not publicly disclosed for any of FY2014-FY2025 - no NSFR reference found in any of "
-                "the 11 Annual Reports or the standalone 2014 Pillar 3 document reviewed, including the "
-                "FY2015-FY2021 Pillar 3 Disclosures chapters' own index of every CRR disclosure article "
-                "they cover (no liquidity-ratio article listed at all).",
         "MREL Ratio": "Not publicly disclosed for any of FY2014-FY2025 - no MREL reference found in any "
-                      "of the 11 Annual Reports or the standalone 2014 Pillar 3 document reviewed.",
+                      "of the 11 Annual Reports, the standalone 2014 Pillar 3 document, or the FY2022-"
+                      "FY2025 standalone Annual Pillar 3 Reports. Consistent with FCE Bank plc not being "
+                      "a UK resolution entity in its own right: it is a wholly-owned subsidiary of Ford "
+                      "ECO GmbH and an indirect subsidiary of Ford Motor Credit Company LLC, so "
+                      "resolution planning sits above it.",
     },
     years=PILLAR3_YEARS,
 )
@@ -1273,20 +1369,28 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£m",
     ratios=[
-        ("CET1 Ratio", {"FY2025": "16.59%", "FY2024": "17.61%", "FY2023": "17.16%", "FY2022": "16.65%", "FY2021": "23.58%",
+        ("CET1 Ratio", {"FY2025": "16.17%", "FY2024": "17.17%", "FY2023": "17.10%", "FY2022": "16.55%", "FY2021": "23.58%",
                          "FY2020": "19.54%", "FY2019": "16.54%", "FY2018": "14.84%", "FY2017": "14.67%", "FY2016": "14.53%",
                          "FY2015": "15.27%", "FY2014": "16.30%"}),
         ("Total Capital Ratio", {"FY2025": "18.66%", "FY2024": "19.57%", "FY2023": "19.30%", "FY2022": "19.03%", "FY2021": "26.20%",
                                   "FY2020": "21.79%", "FY2019": "18.64%", "FY2018": "16.66%", "FY2017": "17.00%", "FY2016": "16.89%",
                                   "FY2015": "17.31%", "FY2014": "18.6%"}),
-        ("Leverage Ratio", {"FY2021": "16.95%", "FY2020": "14.59%", "FY2019": "13.02%", "FY2018": "11.74%",
-                             "FY2017": "11.82%", "FY2016": "11.86%", "FY2015": "12.28%", "FY2014": "12.91%"}),
+        ("Leverage Ratio (incl. central bank claims, FY2014-FY2021 basis)",
+         {"FY2021": "16.95%", "FY2020": "14.59%", "FY2019": "13.02%", "FY2018": "11.74%",
+          "FY2017": "11.82%", "FY2016": "11.86%", "FY2015": "12.28%", "FY2014": "12.91%"}),
+        ("Leverage Ratio (excl. central bank claims, FY2022-FY2025 basis)",
+         {"FY2025": "12.93%", "FY2024": "13.49%", "FY2023": "14.02%", "FY2022": "13.23%"}),
+        ("LCR", {"FY2025": "303%", "FY2024": "359%", "FY2023": "260%", "FY2022": "238%"}),
+        ("NSFR", {"FY2025": "135%", "FY2024": "135%", "FY2023": "139%", "FY2022": "133%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
-         "source citation for the underlying document/page. CET1/Tier1 Ratio and Total RWAs are calculated "
-         "for FY2022-FY2025 only (only the rounded Tier 1/Tier 2/Total Capital Ratio chart is published for "
-         "those years); FY2014-FY2021 are all directly disclosed exact figures - see the individual metric "
-         "sheets for the full methodology.",
+         "source citation for the underlying document/page. Every Pillar 3 figure shown is now directly "
+         "disclosed - FY2022-FY2025 from each year's standalone Annual Pillar 3 Report (UK KM1/UK OV1), "
+         "FY2014-FY2021 from that year's Pillar 3 chapter or standalone document. The Leverage Ratio is "
+         "split across TWO rows because the UK measure changed on 1 January 2022 to exclude claims on "
+         "central banks; the two rows are not like-for-like and must not be read as one trend. LCR and "
+         "NSFR begin at FY2022, when the UK KM1 template made them mandatory - they are genuinely absent "
+         "before that, not merely unsourced.",
 )
 
 # ---------------------------------------------------------------

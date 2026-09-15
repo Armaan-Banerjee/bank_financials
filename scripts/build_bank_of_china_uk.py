@@ -857,36 +857,61 @@ metric(
 )
 
 RWA_BREAKDOWN_SOURCES = (
-    "Sources - Bank of China (UK) Limited's UK KM1 Key Metrics tables (same 5 Pillar 3 documents as the Total "
-    "RWAs sheet):\n"
-    f"FY2025 & FY2024 comparative: Pillar 3 Disclosure 31 December 2025, p.15 - {P3_2025_URL}\n"
-    f"FY2023-FY2021: see p3_sources() citations on the Total RWAs sheet.\n\n"
-    "NOT DISCLOSED (category breakdown) for FY2014-FY2018 and FY2021-FY2025: none of those Pillar 3 documents "
-    "contains a UK OV1/'Overview of risk weighted assets' table breaking RWA down by risk category - confirmed "
-    "by reading the FY2025 document's own table of contents and KM1 template in full, and each of the FY2014-"
-    "FY2018 documents' own Table 1 in full. Only the single aggregate Total RWA figure exists for those 10 years "
-    "(see the Total RWAs sheet, which this sheet's Total row ties out to exactly).\n"
+    "Sources - Bank of China (UK) Limited's own UK OV1/EU OV1 'Overview of risk weighted exposure amounts' "
+    "tables (same 5 Pillar 3 documents as the Total RWAs sheet), each year's own originally-published figures "
+    "used as primary (not a later restated comparative), per project convention:\n"
+    f"FY2025: Pillar 3 Disclosure 2025, Table 'UK OV1' - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosure 2024, Table 'UK OV1' - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosure 2023, Table 'UK OV1', p.15 - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosure 2022, Table 'UK OV1', p.16 - {P3_2022_URL}\n"
+    f"FY2021: Pillar 3 Disclosure 2021, Table 1 'Template EU OV1', p.14 - {P3_2021_URL}\n"
     f"FY2020 (own year) & FY2019 comparative: the FY2020 Pillar 3 document's own Table 9 'Overview of risk "
-    "weighted assets' (UK OV1 template), p.20-22 - {P3_2020_URL}. The only year in this bank's whole 12-year "
-    "history where a category breakdown was found - it splits Credit risk (standardised approach only), Credit "
-    "valuation adjustment (CVA), Market risk (standardised approach only) and Operational risk, each tying "
-    "exactly to the Total RWAs sheet's own aggregate figure for both years."
+    f"weighted assets' (UK OV1 template), p.20-22 - {P3_2020_URL}\n\n"
+    "CORRECTION (fresh re-verification, 2026-09-12): the prior version of this sheet claimed FY2021-FY2025 (and "
+    "FY2014-FY2018) had no category-level breakdown disclosed. That was wrong for FY2021-FY2025 - every one of "
+    "those 5 Pillar 3 documents was re-read directly and each contains a full OV1/EU OV1 table, with every "
+    "year's Total tying exactly to the Total RWAs sheet's own figure. FY2014-FY2018 were not re-checked in this "
+    "pass (out of scope - this re-verification targeted the last-5-years gap) and remain as previously "
+    "documented pending a future check.\n"
+    "TEMPLATE FORMAT CHANGE: FY2021's own document does not carry a separate 'Counterparty credit risk (CCR)' "
+    "line (only Credit risk, CVA, Market risk, Operational risk) - the following year's own document's FY2021 "
+    "comparative column DOES split out a CCR figure (£16,535k) with a correspondingly smaller credit-risk figure "
+    "(£776,521k vs £793,055k as FY2021's own document states it, a difference of £16,534k), confirming the CCR "
+    "amount was folded into the 'credit risk' line in FY2021's own original publication rather than omitted "
+    "entirely. FY2021's own originally-published split is used here per project convention, with the later "
+    "restatement noted rather than silently substituted. FY2022 onward carries CCR as its own explicit line "
+    "every year."
 )
 
 bw.add_rwa_breakdown_sheet(
     title="Bank of China (UK) Limited — RWA Breakdown",
     subtitle="Bank of China (UK) Limited (solo entity basis), £'000",
     rows=[
-        ("DATA", "Not publicly disclosed — category breakdown", {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed", "FY2023": "Not publicly disclosed", "FY2022": "Not publicly disclosed", "FY2021": "Not publicly disclosed", "FY2018": "Not publicly disclosed", "FY2017": "Not publicly disclosed", "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"}),
-        ("DATA", "Credit risk (excluding counterparty credit risk, standardised approach)", {"FY2020": 822496, "FY2019": 783214}),
-        ("DATA", "Credit valuation adjustment (CVA)", {"FY2020": 114722, "FY2019": 12598}),
-        ("DATA", "Market risk (standardised approach)", {"FY2020": 11621, "FY2019": 5448}),
-        ("DATA", "Operational risk", {"FY2020": 202676, "FY2019": 187641}),
+        ("DATA", "Not publicly disclosed — category breakdown", {"FY2018": "Not publicly disclosed", "FY2017": "Not publicly disclosed", "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"}),
+        ("DATA", "Credit risk (excluding counterparty credit risk, standardised approach)", {
+            "FY2025": 606687, "FY2024": 662567, "FY2023": 641596, "FY2022": 730027, "FY2021": 793055,
+            "FY2020": 822496, "FY2019": 783214,
+        }),
+        ("DATA", "Counterparty credit risk (CCR, standardised approach)", {
+            "FY2025": 5053, "FY2024": 8763, "FY2023": 6946, "FY2022": 19086,
+        }),
+        ("DATA", "Credit valuation adjustment (CVA)", {
+            "FY2025": 31552, "FY2024": 94533, "FY2023": 74760, "FY2022": 198501, "FY2021": 93581,
+            "FY2020": 114722, "FY2019": 12598,
+        }),
+        ("DATA", "Market risk (standardised approach)", {
+            "FY2025": 1231, "FY2024": 1143, "FY2023": 766, "FY2022": 4394, "FY2021": 14056,
+            "FY2020": 11621, "FY2019": 5448,
+        }),
+        ("DATA", "Operational risk", {
+            "FY2025": 363586, "FY2024": 339893, "FY2023": 300383, "FY2022": 224618, "FY2021": 218688,
+            "FY2020": 202676, "FY2019": 187641,
+        }),
         ("TOTAL", "Total risk exposure amount", {"FY2025": 1008110, "FY2024": 1106898, "FY2023": 1024452, "FY2022": 1176625, "FY2021": 1119380, "FY2020": 1151516, "FY2019": 988901, "FY2018": 941052, "FY2017": 931206, "FY2016": 1003913, "FY2015": 895473, "FY2014": 800993}),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=58,
-    source_height=220,
+    source_height=280,
 )
 
 metric(

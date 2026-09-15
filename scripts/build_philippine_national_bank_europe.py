@@ -23,6 +23,12 @@ P3_2023_URL = ("https://web.archive.org/web/20240807151122/"
                "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures.pdf")
 P3_2016_URL = "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2016.pdf"
 P3_2015_URL = "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2015.pdf"
+# FY2021/FY2020 recovered 2026-09-15: live on the pnb-website S3 bucket at the same predictable
+# filename pattern as the years above, both with a real text layer. The long-standing "genuinely
+# unobtainable" claim rested on the www.pnb.com.ph/europe host, which 403s every path - including
+# years that ARE present - so a 403 there is not evidence of absence.
+P3_2021_URL = "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures_for_2021.pdf"
+P3_2020_URL = "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures_for_2020.pdf"
 
 CH_PROFILE_URL = "https://find-and-update.company-information.service.gov.uk/company/02939223"
 CH_ACCOUNTS_URL = CH_PROFILE_URL + "/filing-history?category=accounts"
@@ -60,8 +66,31 @@ HD022_NOTE = (
     "breakdown) for FY2015-FY2023 was originally not found, but a renewed primary-source check "
     "recovered the live FY2015 and FY2016 documents from the Bank's historical document host. "
     "Those documents add FY2015 Total Capital and FY2016 capital, ratios and RWA breakdown. "
-    "FY2018, FY2020, FY2021 and FY2022 remain genuinely unobtainable after the Wayback CDX search "
-    "of both historical hosts. FY2015 uses older Basel II/BIPRU terminology and does not disclose "
+    "UPDATED 2026-09-15: FY2021 and FY2020 are no longer unobtainable - both editions are live on the "
+    "pnb-website S3 bucket and are now fully transcribed (capital, ratios and RWA breakdown). Only "
+    "FY2018 and FY2022 remain unobtainable. That verdict now rests on ENUMERATION rather than on "
+    "filename guessing, which can only ever fail to find a document and never show it is absent "
+    "(2026-09-15 sweep): (i) an unfiltered Wayback CDX sweep of the whole pnb.com.ph domain returned "
+    "3,617 archived PDF captures, of which the ONLY PNBE Pillar 3 files are the FY2017 and FY2019 "
+    "editions already cited below; (ii) an unfiltered CDX sweep of the whole pnb-website S3 bucket "
+    "returned 1,564 captures containing exactly one capture of uploads/docs/Pillar3_Disclosures.pdf "
+    "(2024-08-07, the FY2023 edition cited below) - the live overwriting URL was never archived at any "
+    "other date, which is precisely why FY2022 was lost; (iii) all 31 archived PDFs under the Bank's "
+    "newer /storage/asset-libraries/ hashed-filename path were downloaded and read, and none is a "
+    "Pillar 3 document (they are credit-card forms, holiday advisories and product terms); and (iv) "
+    "PNBE's Pillar 3 template carries NO prior-year comparative column - the Own Fund Composition, "
+    "Pillar 1 capital requirements and Capital Buffers tables are each headed by a single 'As at 31 "
+    "Dec <year>' column, verified in the FY2019 and FY2023 editions - so neither hole can be filled "
+    "from the adjacent year's document the way many banks' KM1 tables allow. Separately, the live "
+    "www.pnb.com.ph host now returns HTTP 403 to every request from this environment regardless of "
+    "user agent, including the FY2025 asset-libraries URL cited below that was successfully fetched "
+    "earlier; that is an access block on the host, NOT evidence about any document's existence, and a "
+    "future pass from a different network should re-probe rather than treat these two years as closed. "
+    "NOT DERIVED, deliberately: in all four years where both are known (FY2019, FY2021, FY2023, FY2025) "
+    "PNBE's Pillar 3 Own Funds equals its Balance Sheet Total equity exactly, which would make FY2022 "
+    "Own Funds 'obviously' 10,115. That figure is NOT written to any Pillar 3 sheet here - it would be "
+    "a derived number in a disclosure cell, which this project does not do. "
+    "FY2015 uses older Basel II/BIPRU terminology and does not disclose "
     "a CET1 ratio; it is populated only in Tier 1/Total Capital where the source supports it. "
     "FY2016 onward uses CRR/CET1 terminology and the Bank states it holds no Tier 2 capital."
 )
@@ -73,6 +102,12 @@ P3_SOURCES = (
     f"FY2023: Pillar 3 Disclosures for 31 December 2023 (April 2024), pp.5-7 - recovered via Wayback "
     f"Machine (snapshot 2024-08-07) of the pnb-website S3 bucket, since overwritten by the FY2024 "
     f"document at the same live URL - {P3_2023_URL}\n"
+    f"FY2021: Pillar 3 Disclosures for 31 December 2021 (April 2022), p.5 Own Fund Composition "
+    f"table, p.6 Pillar 1 capital requirements table, p.7 Capital Buffers CET1 capital ratio table "
+    f"- {P3_2021_URL}\n"
+    f"FY2020: Pillar 3 Disclosures for 31 December 2020 (March 2021), p.5 Own Fund Composition "
+    f"table, p.6 Pillar 1 capital requirements table, p.7 Capital Buffers CET1 capital ratio table "
+    f"- {P3_2020_URL}\n"
     f"FY2019: Pillar 3 Disclosures for 31 December 2019 (May 2020), pp.5-7 - recovered via Wayback "
     f"Machine (snapshot 2020-09-22) - {P3_2019_URL}\n"
     f"FY2017: Pillar 3 Disclosures for 31 December 2017 (April 2018), pp.5-7 - recovered via Wayback "
@@ -80,6 +115,42 @@ P3_SOURCES = (
     f"FY2016: Pillar 3 Disclosures for 31 December 2016 (April 2017), pp.5-9 - {P3_2016_URL}\n"
     f"FY2015: Pillar 3 Disclosures for 31 December 2015 (April 2016), pp.5-8 - {P3_2015_URL}\n"
     f"Entity identity and accounts filing history: Companies House - {CH_PROFILE_URL}; {CH_ACCOUNTS_URL}\n"
+    "SDDT - EXPLICIT NEGATIVE, recorded 2026-09-15 (cross-bank SDDT date-fit pass) so that a future pass does "
+    "not wrongly apply the Small Domestic Deposit Taker exemption to this workbook's gap years. PNBE DOES hold "
+    "the SDDT opt-in, but it is too recent to explain anything here. The Bank of England consolidated list of "
+    "waivers and modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv) carries two SDDT rows for FRN "
+    "204532, 'Philippine National Bank (Europe) Plc': (a) 'Modification by Consent - PRA Rulebook - CRR Firms - "
+    "Rule 3.1 of the SDDT Regime - General Application Part', sub rule 'Ru 3.1', waiver ref 'A00011144P.pdf', "
+    "START DATE 10/11/2025, no end date; and (b) 'SDDT MbA', sub rule 'Ru 2.1(9)', ref 'A00009160P.pdf', start "
+    "27/11/2024, end 27/11/2027. The distinction matters here more than for most firms in this project. Row (b) "
+    "modifies an ELIGIBILITY CRITERION only - rule 2.1(9) requires that 'any parent undertaking of the firm is "
+    "a UK undertaking', which PNBE plainly fails as a subsidiary of Philippine National Bank, so the "
+    "modification is what made it eligible at all. It is NOT a disclosure exemption, and had only row (b) "
+    "existed this firm would not be a confirmed SDDT. Only row (a), Rule 3.1, is the opt-in that removes the "
+    "Pillar 3 disclosure obligation.\n"
+    "DATE FIT - IT DOES NOT FIT. PNBE's accounting reference date is 31 DECEMBER, confirmed at Companies House "
+    "(company 02939223, an unbroken run of accounts to 31 December from 2013 to 2025). The outstanding Pillar 3 "
+    "gap years are FY2018 and FY2022, which ended 31 December 2018 and 31 December 2022 (this sentence "
+    "previously read 'FY2021 and FY2022'; FY2021 was recovered on 2026-09-15 and the date-fit reasoning below "
+    "is unaffected, since FY2018 is earlier still). The Rule 3.1 "
+    "modification began 10 NOVEMBER 2025 - nearly three years after the later of those year-ends, and nearly "
+    "seven after the earlier. Even the "
+    "earlier criteria-only row (b) starts 27 November 2024, itself almost two years after FY2022's year-end, "
+    "and would not evidence an exemption in any case. So the SDDT regime explains NEITHER the FY2018 nor the "
+    "FY2022 blanks.\n"
+    "Those gaps keep their existing and entirely separate explanation, unchanged: PNBE's own Pillar 3 documents "
+    "are published to a single overwritten live URL, so the FY2022 edition was displaced by a later "
+    "one and no Wayback snapshot of it was recovered (FY2018 predates that URL scheme and was never archived "
+    "under the older /europe/images/stories/docs/ path either). That is a document-availability gap, not a "
+    "regulatory exemption, and it is materially different in kind - PNBE was subject to the obligation in both "
+    "years and, so far as anything here shows, discharged it; the documents are simply no longer reachable. The "
+    "register finding changes no cell in this workbook. Forward-looking only: from 10 November 2025 PNBE is an "
+    "SDDT, so no Pillar 3 document should be expected for FY2026 onward - note that the FY2025 disclosure "
+    "sourced above still exists, its 31 December 2025 year-end falling after the modification, which is a "
+    "reminder that the exemption permits a firm to stop disclosing but does not force it to. This is the SDDT "
+    "DISCLOSURE exemption, in force now - not the separate SDDT CAPITAL regime beginning 1 January 2027.\n"
     + ENTITY_NOTE + "\n\n" + HD022_NOTE
 )
 
@@ -439,17 +510,79 @@ def metric(name, unit, rows, note=None):
 
 # FY2015 uses the older Basel II/BIPRU disclosure convention: only Tier 1/Total Capital is reported.
 # FY2018, FY2020, FY2021 and FY2022 remain self-skipped after the renewed Wayback/live-host search.
-CET1_FUNDS = {"FY2025": 10344, "FY2024": 10467, "FY2023": 10341, "FY2019": 10145,
-              "FY2017": 10747, "FY2016": 11228}
-TIER1_FUNDS = {**CET1_FUNDS, "FY2015": 11197}
-CAPITAL_RATIO = {"FY2025": "127.55%", "FY2024": "136.95%", "FY2023": "121.95%", "FY2019": "96.76%",
-                 "FY2017": "96.63%", "FY2016": "92.23%"}
-TOTAL_RWA = {"FY2025": 8110, "FY2024": 7643, "FY2023": 8480, "FY2019": 10485, "FY2017": 11122,
-             "FY2016": 12174}
-PILLAR3_SKIP_NOTE = ("SELF-SKIPPED YEARS: FY2015, FY2018, FY2020, FY2021 and FY2022 have no "
-                     "surviving Pillar 3 document on either historical host (pnb.com.ph/europe or the "
-                     "pnb-website S3 bucket) per a Wayback Machine CDX search - genuinely unobtainable, "
-                     "not interpolated. See HD022_NOTE in the source citations.")
+CET1_FUNDS = {"FY2025": 10344, "FY2024": 10467, "FY2023": 10341, "FY2021": 9996, "FY2020": 9879,
+              "FY2019": 10145, "FY2017": 10747, "FY2016": 11228}
+# FY2022/FY2021/FY2020 were first recovered 2026-09-12 from the Bank's OWN statutory accounts (the
+# "Capital management" table in Note 18/20 "Risk management"). That table labels its two rows exactly
+# "Tier 1 Capital" and "Total Capital" and gives an identical amount for both.
+#
+# UPDATED 2026-09-15: the FY2021 and FY2020 Pillar 3 documents have since been recovered, and their
+# "Own Fund Composition" tables independently reproduce those same two amounts to the pound -
+# GBP9,996k (FY2021) and GBP9,879k (FY2020). No cell value changes; what changes is that these two
+# years are now corroborated by the like-for-like Pillar 3 source used for every other year here,
+# and the Pillar 3 documents DO use the CET1 label ("Being CET1 capital the same as Tier 1 capital
+# and Total capital"), which is what now justifies populating CET1 Capital for them.
+#
+# FY2022 is unchanged and remains statutory-accounts-only: no FY2022 Pillar 3 document survives, the
+# accounts never use the CET1 label, and inferring it would go beyond what that source states - so
+# FY2022 still populates Tier 1 Capital and Total Capital but NOT CET1 Capital or any ratio.
+AR_CAPITAL = {"FY2022": 10147, "FY2021": 9996, "FY2020": 9879}
+TIER1_FUNDS = {**CET1_FUNDS, "FY2015": 11197, **AR_CAPITAL}
+CAPITAL_RATIO = {"FY2025": "127.55%", "FY2024": "136.95%", "FY2023": "121.95%", "FY2021": "124.45%",
+                 "FY2020": "95.80%", "FY2019": "96.76%", "FY2017": "96.63%", "FY2016": "92.23%"}
+TOTAL_RWA = {"FY2025": 8110, "FY2024": 7643, "FY2023": 8480, "FY2021": 8031, "FY2020": 10312,
+             "FY2019": 10485, "FY2017": 11122, "FY2016": 12174}
+PILLAR3_SKIP_NOTE = ("CORRECTED 2026-09-15 - THE FY2021 AND FY2020 PILLAR 3 DOCUMENTS DO SURVIVE AND ARE "
+                     "NOW USED. This note previously read that FY2015, FY2018, FY2020, FY2021 and FY2022 "
+                     "were 'genuinely unobtainable'. That was wrong for FY2021 and FY2020: both are live "
+                     "on the pnb-website S3 bucket right now, at the same predictable filename pattern as "
+                     "the years already cited - "
+                     "pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures_for_2021"
+                     ".pdf (452KB) and .../Pillar3_Disclosures_for_2020.pdf (411KB), both with a real text "
+                     "layer. The earlier conclusion appears to have rested on the www.pnb.com.ph/europe "
+                     "host, which returns HTTP 403 to every path including the years that ARE present, so "
+                     "a 403 there proves nothing about whether a document exists. FY2022, FY2018 and "
+                     "FY2015 were re-probed on the S3 bucket this session across seven filename "
+                     "permutations and do genuinely 403 while FY2021/FY2020 return 200 from the identical "
+                     "pattern - so those three remain unobtainable, now on much better evidence.\n"
+                     "NOW TRANSCRIBED 2026-09-15 (this supersedes the follow-up note that previously stood "
+                     "here): both editions' capital tables have been read and are in this workbook. FY2021 "
+                     "p.5 'Own Fund Composition' gives Own Funds (Total capital) GBP9,996k, built as share "
+                     "capital 10,914 + merger reserve 6,768 + profit and loss reserve (7,686); FY2020 p.5 "
+                     "gives GBP9,879k as 10,914 + 6,768 + (7,803). Both foot exactly, and both reproduce "
+                     "the amount this workbook already held for that year from the statutory accounts - "
+                     "independent confirmation of entity and year. Each document states 'Tier 1 capital "
+                     "comprises ordinary share capital plus reserves. The Bank does not hold any Tier 2 "
+                     "capital', so CET1 = Tier 1 = Total capital, and CET1 Capital is now populated for "
+                     "both years on the Bank's own explicit statement rather than by inference.\n"
+                     "RATIOS: the 'Capital Buffers' table (p.7 of each) prints a single CET1 capital ratio "
+                     "- 124.45% at 31 Dec 2021 and 95.80% at 31 Dec 2020 - under footnote 1/ 'Being CET1 "
+                     "capital the same as Tier 1 capital and Total capital, the CET1 capital ratio is equal "
+                     "to Tier 1 capital ratio and Total capital ratio.' That footnote is why one printed "
+                     "figure populates all three ratio sheets for these years; it is the Bank's own stated "
+                     "equivalence, not a derivation. FY2020 ties exactly against this workbook's own "
+                     "figures (9,879 / 10,312 = 95.80%). FY2021 gives 9,996 / 8,031 = 124.47% against the "
+                     "124.45% printed - a 0.02pp rounding difference inside the Bank's own calculation. The "
+                     "PRINTED value is carried, not the recomputed one; no ratio in this workbook is "
+                     "back-solved from capital and RWAs.\n"
+                     "PARTIAL RECOVERY 2026-09-12 (disclosure audit): FY2022, FY2021 and FY2020 Tier 1 "
+                     "Capital and Total Capital are now populated from the Bank's own statutory accounts "
+                     "instead - the 'Capital management' table in Note 18 (FY2021 accounts) and Note 20 "
+                     "(FY2023 accounts) gives Tier 1 Capital = Total Capital of GBP10,147k (FY2022), "
+                     "GBP9,996k (FY2021) and GBP9,879k (FY2020). SUPERSEDED IN PART 2026-09-15: FY2021 and "
+                     "FY2020 now have their own Pillar 3 documents (above), so only FY2022 still rests on "
+                     "the accounts alone, and only FY2022's CET1 Capital, ratios and Total RWAs remain "
+                     "blank. The reason is unchanged for that year: the accounts' capital note discloses no "
+                     "CET1 figure, no RWA figure and no ratio, only the two capital amounts plus the PRA's "
+                     "total capital requirement in GBP (FY2022 GBP4,812k; FY2021 GBP4,634k; FY2020 "
+                     "GBP5,088k), which is a capital requirement and not an RWA - it must not be converted "
+                     "to an RWA by dividing by 8%.\n"
+                     "BASIS DIFFERENCE WORTH KNOWING: for FY2023 the statutory accounts' capital note "
+                     "states Tier 1/Total Capital of GBP10,378k, whereas this workbook's FY2023 figure "
+                     "(GBP10,341k) comes from that year's Pillar 3 document. The GBP37k difference is a "
+                     "genuine source-basis difference, left as each document states it rather than "
+                     "reconciled; the Pillar 3 figure is retained for FY2023 because it is the like-for-"
+                     "like source used for every other Pillar-3-sourced year.")
 
 metric("CET1 Capital", "GBP '000", [("Common Equity Tier 1 (CET1) capital", CET1_FUNDS)],
        note=PILLAR3_SKIP_NOTE)
@@ -467,12 +600,16 @@ metric("Total RWAs", "GBP '000", [("Total risk-weighted assets", TOTAL_RWA)],
 # --- RWA Breakdown (placed right after Total RWAs, per the locked sheet order) ---
 rwa_breakdown_rows = [
     ("DATA", "Credit and counterparty credit risk", {"FY2025": 4568, "FY2024": 4486, "FY2023": 5236,
+                                                      "FY2021": 4751, "FY2020": 6194,
                                                       "FY2019": 6444, "FY2017": 6845, "FY2016": 7635}),
-    ("DATA", "Market risk", {"FY2025": 370, "FY2024": 36, "FY2023": 220, "FY2019": 661, "FY2017": 358,
-                              "FY2016": 351}),
-    ("DATA", "Operational risk", {"FY2025": 3172, "FY2024": 3121, "FY2023": 3024, "FY2019": 3380,
-                                  "FY2017": 3919, "FY2016": 4188}),
+    ("DATA", "Market risk", {"FY2025": 370, "FY2024": 36, "FY2023": 220,
+                              "FY2021": 138, "FY2020": 837,
+                              "FY2019": 661, "FY2017": 358, "FY2016": 351}),
+    ("DATA", "Operational risk", {"FY2025": 3172, "FY2024": 3121, "FY2023": 3024,
+                                  "FY2021": 3142, "FY2020": 3281,
+                                  "FY2019": 3380, "FY2017": 3919, "FY2016": 4188}),
     ("TOTAL", "Total Pillar 1 risk-weighted assets", {"FY2025": 8110, "FY2024": 7643, "FY2023": 8480,
+                                                       "FY2021": 8031, "FY2020": 10312,
                                                        "FY2019": 10485, "FY2017": 11122, "FY2016": 12174}),
 ]
 
@@ -484,7 +621,18 @@ bw.add_rwa_breakdown_sheet(
         "\n\nEach year's table (\"The Bank's Pillar 1 capital requirements are presented in the table "
         f"below\") - FY2025/FY2024 p.6, FY2023 p.6, FY2019 p.6, FY2017 p.6 of the respective Pillar 3 "
         "Disclosures. Every year shown ties exactly to that year's Total RWAs sheet figure and to that "
-        "year's own Own Funds/Total Capital figure on the Balance Sheet / equity sheets. "
+        "year's own Own Funds/Total Capital figure on the Balance Sheet / equity sheets.\n\n"
+        "FY2021 & FY2020 ADDED 2026-09-15 from the same table in those years' own Pillar 3 Disclosures "
+        "(p.6 of each), headed 'As at 31 Dec 2021' and 'As at 31 Dec 2020' respectively, in the same "
+        "'GBP 000 / RWAs / Capital Requirements' two-column format as every other year on this sheet. "
+        "Both are internally exact: FY2021 credit and counterparty 4,751 + market 138 + operational "
+        "3,142 = the document's own printed Total of 8,031; FY2020 6,194 + 837 + 3,281 = its own printed "
+        "Total of 10,312. Each category's Capital Requirements column is 8% of its RWA column to the "
+        "rounding (4,751 x 8% = 380; 6,194 x 8% = 496), confirming the first column is RWA and not a "
+        "capital requirement. The Total RWAs sheet's FY2021/FY2020 figures were previously blank and are "
+        "now populated from these same two Total rows - the figures are the same disclosure, so leaving "
+        "one sheet blank while the other showed a total would have been internally inconsistent. "
+        "Both documents have a real text layer; no OCR was involved. "
         + PILLAR3_SKIP_NOTE
     ),
     first_col_width=54,
@@ -497,7 +645,23 @@ bw.add_not_disclosed_metric_sheets(
     UNDISCLOSED, P3_SOURCES,
     per_note={name: "No quantitative standalone PNBE disclosure was located in any Pillar 3 document "
                     "reviewed (FY2017, FY2019, FY2023, FY2024 or FY2025); left blank rather than "
-                    "estimated for every year in scope." for name in UNDISCLOSED},
+                    "estimated for every year in scope.\n"
+                    "RE-CHECKED 2026-09-12 (disclosure audit) - this is now partly an ACCESS problem, "
+                    "not only a disclosure one, and the distinction matters for anyone retrying it. "
+                    "The whole pnb.com.ph host now returns HTTP 403 to automated requests, including "
+                    "the FY2016 and FY2017 Pillar 3 URLs this workbook already cites as live sources "
+                    "and the site root itself, so a live fetch can no longer distinguish 'document "
+                    "absent' from 'document present but blocked'. A Wayback CDX sweep of the whole "
+                    "pnb.com.ph domain returns only two archived Pillar 3 PDFs ever (2017 and 2019), "
+                    "so the missing years are genuinely unarchived. A human with a browser could "
+                    "confirm whether FY2018/FY2020/FY2021/FY2022 documents exist at the site's own "
+                    "naming convention, https://www.pnb.com.ph/europe/images/stories/docs/"
+                    "Pillar3_Disclosures_for_<YEAR>.pdf. Separately confirmed this pass: the Bank's "
+                    "statutory accounts carry no leverage ratio, LCR or NSFR in any year - their "
+                    "capital note covers capital amounts only - so these metrics would have to come "
+                    "from a Pillar 3 document even if one were reachable. MREL is additionally "
+                    "inapplicable: PNBE is not a UK resolution entity."
+              for name in UNDISCLOSED},
 )
 
 bw.add_overview_sheet(
@@ -547,9 +711,11 @@ bw.add_overview_sheet(
     ],
     equity_changes_unit="£'000",
     note=("HD-022 extension (2026-09): FY2015-FY2025 Balance Sheet / P&L / Equity coverage in full "
-          "(11 years); Pillar 3 capital ratios and RWA breakdown only for the five years with a "
-          "surviving Pillar 3 document (FY2017, FY2019, FY2023, FY2024, FY2025) - see the Pillar 3 "
-          "sheets' own notes for the self-skipped years. No cash-flow statement in any year "
+          "(11 years); Pillar 3 capital ratios and RWA breakdown for the seven years with a "
+          "surviving Pillar 3 document - FY2016, FY2017, FY2019, FY2023, FY2024, FY2025 and, added "
+          "2026-09-15 after both editions were recovered live from the pnb-website S3 bucket, FY2021 "
+          "and FY2020 - see the Pillar 3 sheets' own notes for the years that remain self-skipped "
+          "(FY2015 partial, FY2018 and FY2022). No cash-flow statement in any year "
           "(qualifying-entity exemption). No parent-group data is used in any year. FY2017's opening "
           "equity above (11,228) is FY2016's own closing balance; FY2018's opening equity (10,646) "
           "reflects a documented prior-period restatement - see the Statement of Changes in Equity "

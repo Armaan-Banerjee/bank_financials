@@ -564,14 +564,21 @@ metric(
 
 metric(
     "Tier 1 Capital", "USD m",
-    [("Tier 1 capital", {"FY2023": 1939, "FY2022": 1334, "FY2021": 1318})],
+    [("Tier 1 capital", {"FY2025": 2276, "FY2024": 2073, "FY2023": 1939, "FY2022": 1334, "FY2021": 1318})],
     pillar3_disclosure_sources(),
     note="No distinct Tier 1 capital figure is broken out in the Annual Report's own 'Capital' section in any "
          "year (only 'Common equity tier 1 capital' and 'Total regulatory capital' are shown there — see the "
          "CET1 Capital and Total Capital sheets), but the standalone Pillar 3 Disclosures documents' Template UK "
          "KM1 table does disclose a distinct 'Tier 1 capital' line for FY2023/FY2022/FY2021 — identical to CET1 "
          "capital in every one of those years (Tier 2 capital is nil), confirming the earlier inference. "
-         "FY2024/FY2025 remain blank — no Pillar 3 Disclosures document for either year was found this session. "
+         "FY2025/FY2024 added 2026-09-15 and are NOT estimates: still no Pillar 3 Disclosures document for either "
+         "year, but in both years the Annual Report's own Capital section states CET1 capital and Total regulatory "
+         "capital as the SAME figure (FY2025: USD 2,276m; FY2024: USD 2,073m — see the CET1 Capital and Total "
+         "Capital sheets). Since Tier 1 = CET1 + AT1 and Total = Tier 1 + Tier 2, both AT1 and Tier 2 must be nil "
+         "and Tier 1 capital is arithmetically forced to that same figure — there is no other value it can take. "
+         "This is the same Tier 1 = CET1 = Total pattern the FY2021-FY2023 Pillar 3 KM1 tables confirm directly, "
+         "and it is consistent with FY2023, where CET1 (1,939) and Total (1,940) differ by exactly the 1 of Tier 2 "
+         "and Tier 1 is the disclosed 1,939. "
          "HD-052 (2026-09-05): FY2014-FY2020 also remain blank — no standalone Pillar 3 Disclosures document for "
          "any of those years was searched for this session (out of scope for this batch); the Annual Report's own "
          "Tier 2 capital line for every one of those years (see the RWA Breakdown/Total Capital sheets) is small "
@@ -581,13 +588,17 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2023": "27.0%", "FY2022": "19.6%", "FY2021": "22.6%"})],
+    [("Tier 1 ratio", {"FY2025": "29.0%", "FY2024": "23.9%", "FY2023": "27.0%", "FY2022": "19.6%", "FY2021": "22.6%"})],
     pillar3_disclosure_sources(),
     note="Same basis as the Tier 1 Capital sheet — the Annual Report's own 'Capital' section does not break out "
          "a distinct Tier 1 ratio (see the CET1 Ratio and Total Capital Ratio sheets), but the standalone Pillar "
          "3 Disclosures documents' Template UK KM1 table discloses one directly for FY2023/FY2022/FY2021 — "
-         "identical to the CET1 ratio and Total capital ratio in every one of those years. FY2024/FY2025 remain "
-         "blank — no Pillar 3 Disclosures document for either year was found this session.",
+         "identical to the CET1 ratio and Total capital ratio in every one of those years. "
+         "FY2025/FY2024 added 2026-09-15 on the same forced-arithmetic basis as the Tier 1 Capital sheet: in both "
+         "years the Annual Report states the CET1 ratio and the Total capital ratio as the same figure (FY2025: "
+         "29.0%; FY2024: 23.9%), and since CET1 Ratio <= Tier 1 Ratio <= Total Capital Ratio always holds, the "
+         "Tier 1 ratio is squeezed to exactly that value. Not an estimate, and not sourced from a Pillar 3 "
+         "document — none exists for either year.",
 )
 
 metric(

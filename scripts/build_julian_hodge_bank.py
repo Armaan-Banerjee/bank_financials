@@ -131,7 +131,45 @@ BASIS_NOTE = (
     "information page lists a Pillar 3 disclosure link for FY2018-FY2023 only) - CET1/RWA/ratio figures instead "
     "come from each year's own Annual Report 'Capital risk management (unaudited)' note, which does not include "
     "Leverage Ratio, LCR, or NSFR - those 3 metrics are genuinely unavailable for FY2024/FY2025 this session, not "
-    "assumed absent."
+    "assumed absent.\n"
+    "SDDT EXEMPTION - REASON FOR THE FY2025 CESSATION, established 2026-09-15 (cross-bank SDDT pass). Julian "
+    "Hodge Bank is a Small Domestic Deposit Taker (SDDT) and is therefore not required to publish Pillar 3 "
+    "disclosures, so the FY2025 absence is an EVIDENCED STRUCTURAL EXEMPTION and no FY2025 Pillar 3 document "
+    "will ever appear. Evidence - the PRA's own firm-level register, the Bank of England consolidated list of "
+    "waivers and modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
+    "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv), which carries TWO SDDT rows for "
+    "FRN 204439, 'Julian Hodge Bank Limited': (a) 'CRR firms: SDDT Regime - General Application Part 1.2 & "
+    "2.1(9)', sub rule 'Ru 1.2 & 2.1(9)', ref 'A00009819P.pdf', start '11/02/2025', end '11/02/2028'; and (b) "
+    "'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - General Application "
+    "Part', sub rule 'Ru 3.1', ref 'A00009917P.pdf', start '18/02/2025', no end date. Rule 3.1 is the "
+    "modification by which a firm becomes an SDDT. What it does to Pillar 3 is stated by a peer holding the "
+    "identical register row - Cynergy Bank plc Annual Report & Accounts 2024, p.71: 'The Bank applied for the "
+    "Modification by Consent to become an SDDT and received approval on 17 January 2025. As a result, we are "
+    "not required to publish Pillar 3 disclosures as at 31 December 2024 and will submit only a simplified "
+    "retail deposit ratio instead of a full Net Stable Funding Ratio (NSFR) going forward.' (Cynergy's row: "
+    "FRN 575105, Rule 3.1, start '17/01/2025' - matching its own stated approval date exactly, which is what "
+    "ties the register row to the firm-stated effect.)\n"
+    "DATE FIT, stated precisely because the two years differ. This bank's year-end is 30 September. FY2025 "
+    "(period ended 30 September 2025) falls wholly after the 18 February 2025 modification, so FY2025 is "
+    "unambiguously covered. FY2024 (period ended 30 September 2024) ENDED BEFORE the modification took "
+    "effect, so the exemption does not straightforwardly cover it. It may still explain the FY2024 "
+    "non-publication - Cynergy's 17 January 2025 approval expressly removed its obligation for the 31 "
+    "December 2024 reporting date that preceded it, and Hodge's FY2024 Pillar 3 would have fallen due at "
+    "almost exactly the point its own modification landed - but Julian Hodge Bank has not said so, so FY2024 "
+    "is left as NOT ESTABLISHED rather than claimed as structurally exempt. It is recorded as: no FY2024 "
+    "Pillar 3 document published; SDDT exemption effective from 18 February 2025 is a plausible but "
+    "unconfirmed cause.\n"
+    "The exemption explains NOTHING about FY2014-FY2023, every one of which has its own published Pillar 3 "
+    "document cited above. Do not read SDDT back onto FY2023 or earlier. Neither Annual Report claims SDDT "
+    "status in the bank's own words: both the FY2024 and FY2025 Annual Reports were downloaded and "
+    "text-extracted in full (readable text layers, ~737k and ~751k characters) and searched for 'SDDT', "
+    "'Small Domestic Deposit Taker', 'modification by consent', 'Simplified Retail Deposit Ratio', 'SRDR', "
+    "'Strong and Simple', 'Interim Capital Regime' and 'Basel 3.1'. SDDT appears only as regulatory-"
+    "developments context - AR2024 p.18 refers to 'the draft Small Domestic Deposit Takers' rules and AR2025 "
+    "p.18 to 'the ongoing Basel 3.1 and Small Domestic Deposit Takers (SDDT) consultations' - and neither "
+    "report mentions Pillar 3 disclosure obligations at all (the word 'Pillar' appears only in 'Pillar 1' and "
+    "'Pillar 2'). No Simplified Retail Deposit Ratio value is disclosed, so nothing replaces the NSFR series."
 )
 
 
@@ -588,43 +626,88 @@ metric(
 )
 
 # ---------------------------------------------------------------
-# RWA Breakdown - FY2023/FY2022/FY2021 sourced from each year's own
-# standalone Pillar 3 document's "Risk Type Breakdown" (UK OV1-style)
-# table; FY2025/FY2024 have no standalone Pillar 3 document (see
-# BASIS_NOTE) so no category-level split exists, only the aggregate
-# Total RWAs figure already shown on that sheet.
+# RWA Breakdown - FY2023-FY2017 sourced from each year's own (or, for
+# FY2017, the following year's) standalone Pillar 3 document's
+# "Risk Type Breakdown"/"Overview of RWA" (UK OV1-style) table;
+# FY2016 only has a coarser 2-category Pillar 1 CAPITAL REQUIREMENT
+# table (no OV1-style RWA-by-risk-type table), so its figures are
+# DERIVED via x12.5 (Pillar 1 capital required = 8% of RWA under CRR
+# Article 92) and kept in their own SECTION block, not blended with
+# the as-disclosed years above; FY2025/FY2024 have no standalone
+# Pillar 3 document (see BASIS_NOTE) and their Annual Report's brief
+# "Capital risk management" note gives only the aggregate Total RWAs
+# figure (already shown on that sheet), not a category split.
 # ---------------------------------------------------------------
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk (excluding CCR)", {"FY2023": 629.2, "FY2022": 644, "FY2021": 639.9}),
+    ("SECTION", "Risk type breakdown (as disclosed) - Pillar 3 \"Risk Type Breakdown\"/\"Overview of RWA\" table", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2023": 629.2, "FY2022": 644, "FY2021": 639.9, "FY2020": 627.3, "FY2019": 626.8, "FY2018": 699.4, "FY2017": 661.5}),
     ("DATA", "Counterparty credit risk (CCR) - includes CVA memo below for FY2023/FY2022 (this year's own template "
-             "shows CVA as a memo item within CCR, not a separately additive line); FY2021's own template shows CVA "
-             "as its own separately additive line instead (see next row)",
-     {"FY2023": 2.7, "FY2022": 1, "FY2021": 4.6}),
+             "shows CVA as a memo item within CCR, not a separately additive line); FY2021-FY2017's own templates "
+             "show CVA as its own separately additive line instead (see next-but-one row)",
+     {"FY2023": 2.7, "FY2022": 1, "FY2021": 4.6, "FY2020": 4.2, "FY2019": 2.1, "FY2018": 4.0, "FY2017": 4.3}),
     ("DATA", "Of which: Credit valuation adjustment (CVA) - memo only for FY2023/FY2022, already included in CCR above, not separately additive",
      {"FY2023": 0.2, "FY2022": 0}),
-    ("DATA", "Credit valuation adjustment (CVA) - shown as its own separately additive risk type in FY2021's own Pillar 3 template only",
-     {"FY2021": 0.8}),
-    ("DATA", "Operational risk", {"FY2023": 58.9, "FY2022": 44, "FY2021": 36.5}),
-    ("DATA", "Amounts below the threshold for deduction (250% risk weight)", {"FY2023": 13.9, "FY2022": 16, "FY2021": 29.2}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2023": 704.7, "FY2022": 705, "FY2021": 711.0}),
+    ("DATA", "Credit valuation adjustment (CVA) - shown as its own separately additive risk type in FY2021-FY2017's own Pillar 3 templates "
+             "(unlike the FY2023/FY2022 memo treatment above); Market risk is a separate nil/blank line in the FY2020-FY2017 source tables "
+             "and is not shown as its own row here since it is nil in every disclosed year",
+     {"FY2021": 0.8, "FY2020": 2.3, "FY2019": 2.5, "FY2018": 5.0, "FY2017": 5.7}),
+    ("DATA", "Operational risk", {"FY2023": 58.9, "FY2022": 44, "FY2021": 36.5, "FY2020": 36.2, "FY2019": 34.0, "FY2018": 29.9, "FY2017": 16.5}),
+    ("DATA", "Amounts below the threshold for deduction (250% risk weight)", {"FY2023": 13.9, "FY2022": 16, "FY2021": 29.2, "FY2020": 23.8, "FY2019": 16.5, "FY2018": 16.3, "FY2017": 18.3}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2023": 704.7, "FY2022": 705, "FY2021": 711.0, "FY2020": 693.8, "FY2019": 681.9, "FY2018": 754.6, "FY2017": 706.3}),
+    ("SECTION", "Pillar 1 capital requirement x 12.5 (derived from disclosed capital requirement - see sources note)", {}),
+    ("DATA", "Credit risk (including CCR/CVA - not separately itemised in this year's own document)", {"FY2016": 661.25}),
+    ("DATA", "Operational risk", {"FY2016": 11.25}),
+    ("TOTAL", "Total risk-weighted exposure amount (derived)", {"FY2016": 672.5}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Julian Hodge Bank Limited — RWA Breakdown",
-    subtitle="FY2023-FY2021 only (see source note - no category-level RWA breakdown was located for any other year). £m.",
+    subtitle="FY2023-FY2017 as disclosed (Pillar 3 \"Risk Type Breakdown\"/\"Overview of RWA\" table); FY2016 derived "
+             "from the disclosed Pillar 1 capital requirement x 12.5 (a coarser 2-category split - see SECTION blocks "
+             "and source note). FY2025/FY2024/FY2015/FY2014: no category-level RWA breakdown was located - see source "
+             "note. £m.",
     rows=rwa_breakdown_rows,
     sources_text=p3_sources(
-        "\nFY2025/FY2024: Not publicly disclosed at category level - no standalone Pillar 3 document is published for "
-        "these years (see BASIS_NOTE above); only the aggregate Total RWAs figure exists, already shown on the Total "
-        "RWAs sheet, sourced from each year's own Annual Report 'Capital risk management' note instead.\n"
-        "FY2020-FY2016: each year's own standalone Pillar 3 document was reviewed in full but none contains a "
-        "risk-type RWA breakdown table (no OV1-equivalent) - only the aggregate Total RWAs figure, already shown "
-        "on the Total RWAs sheet.\n"
+        "\nRWA Breakdown-specific sources (in addition to the Total RWAs sources above):\n"
+        "FY2023: Hodge Bank Pillar 3 Disclosures - Period ended 30 September 2023, \"Risk Type Breakdown\" table, "
+        f"p.14 - {P3_2023_URL}\n"
+        "FY2022: Hodge Bank Pillar 3 Disclosures - Period ended 30 September 2022, \"Risk Type Breakdown\" table, "
+        f"p.17 - {P3_2022_URL}\n"
+        "FY2021: Hodge Bank Pillar 3 Disclosures - Period ended 30 September 2021, \"Risk Type Breakdown\" table, "
+        f"p.21 - {P3_2021_URL}\n"
+        f"FY2020: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 30 September 2020, \"Overview of "
+        f"RWA\" table (own-year column), p.23 - {P3_2020_URL}\n"
+        f"FY2019: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 31 October 2019, \"Overview of RWA\" "
+        f"table (own-year column), p.14 - {P3_2019_URL}\n"
+        f"FY2018: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 31 October 2018, \"Overview of RWA\" "
+        f"table (own-year column), p.14 - {P3_2018_URL}\n"
+        "FY2017: this year's own Pillar 3 document only discloses a coarser Pillar 1 capital-requirement-by-exposure-"
+        "class table (no risk-type RWA split); the FY2017 figures above are instead the FY2017 comparator column of "
+        f"the FOLLOWING year's \"Overview of RWA\" table - Julian Hodge Bank Limited Pillar 3 Disclosures - Period "
+        f"ended 31 October 2018, \"Overview of RWA\" table, FY2017 comparator column, p.14 - {P3_2018_URL} - which "
+        "reconciles exactly (706.3) to the Total RWAs sheet's own FY2017 figure sourced from that year's own report.\n"
+        "FY2016: no OV1-style RWA-by-risk-type table exists in this year's own Pillar 3 document (or the following "
+        "year's) - only a 2-category \"Pillar 1 Capital Requirement\" table (Total Credit Risk, which bundles in CCR/"
+        "CVA per this document's own categorisation with no separate line for either, and Operational risk - "
+        "standardised approach). DERIVED (not disclosed): each category's Pillar 1 capital requirement x 12.5 (= "
+        "divided by 8%, the CRR Article 92 Pillar 1 minimum ratio) - Julian Hodge Bank Limited Pillar 3 Disclosures - "
+        f"Period ended 31 October 2016, \"6.1 Pillar 1 Capital Requirement\" table, p.17 - {P3_2016_URL} (Credit Risk "
+        "capital 52.9 x 12.5 = 661.25; Operational risk capital 0.9 x 12.5 = 11.25; derived total 672.5 reconciles "
+        "to within 0.3 - immaterial source-table rounding before x12.5 - of the Total RWAs sheet's own FY2016 figure "
+        "of 672.8). Market risk is not itemised in this document at all for FY2016 (assumed nil, consistent with "
+        "every disclosed later year showing nil/blank market risk, but not confirmed for FY2016 itself).\n"
+        "FY2025/FY2024: Not publicly disclosed at category level - no standalone Pillar 3 document is published for "
+        "these years (see BASIS_NOTE above); each year's own Annual Report 'Capital risk management' note gives only "
+        "Total RWAs and CET1/capital ratios, no risk-type split - already shown on the Total RWAs sheet. "
+        "Re-confirmed 2026-09-12: a Wayback CDX scan of hodgebank.co.uk's full 2025-2026 crawl history found no "
+        "newly-dated Pillar 3 filename beyond the FY2023 document already cited above; the bank's own regulatory-"
+        "disclosures pages returned HTTP 403 (bot-blocked) on direct fetch, so this remains an access-limited "
+        "re-confirmation, not a from-scratch guarantee no such document exists.\n"
         "FY2015/FY2014: no RWA figure of any kind is disclosed for these two years (pre-CRD IV regime) - see the "
         "Total RWAs sheet note."
     ),
     first_col_width=90,
-    source_height=280,
+    source_height=460,
     unit_suffix=" (£m)",
     years=PILLAR3_YEARS,
 )

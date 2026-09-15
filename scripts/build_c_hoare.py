@@ -29,9 +29,24 @@ ENTITY_NOTE = (
     "FY2024's own report folded into a single net-change figure; FY2024's own presentation (no separate FX "
     "line) is preserved here rather than using FY2025's restated split. FY2024's own printed 'Net decrease in "
     "cash and cash equivalents' (164,034) is £1k off from summing its own three section totals (164,033) - an "
-    "immaterial rounding artifact in the source document itself, kept as printed. FY2026 Pillar 3 has not yet "
-    "been published (the bank's Pillar 3 editions consistently lag the Annual Report by several months) - "
-    "left blank, not estimated."
+    "immaterial rounding artifact in the source document itself, kept as printed. The bank stopped publishing "
+    "Pillar 3 disclosures entirely after FY2025: its Financial Report 2026 records that it was approved under "
+    "the PRA's Small Domestic Deposit Taking (SDDT) regime in December 2025 and 'no longer prepares Pillar III "
+    "disclosures'. FY2026 Pillar 3 figures here therefore come from the Annual Report's own capital note "
+    "instead, and the metrics that note does not print are blank rather than estimated.\n"
+    "SDDT DATE TEST (independently corroborated 2026-09-15): the PRA's 'Consolidated Waivers list for "
+    "PRA-regulated firms - as of 1 July 2026' (bankofengland.co.uk/prudential-regulation/authorisations/"
+    "waivers-and-modifications-of-rules) records that C. HOARE & CO. (FRN 122093) holds a 'Modification by "
+    "Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - General Application Part', sub-rule 'Ru "
+    "3.1', with a start date of 09/12/2025 and no end date (still in force). That register date matches the "
+    "Bank's own Financial Report 2026 statement of approval 'in December 2025' exactly, so the regulatory record "
+    "and the Bank's own account agree. Rule 3.1 removes the Pillar 3 disclosure obligation outright, which is a "
+    "stronger and distinct relief from UK CRR Article 433b (that one merely reduces disclosure frequency and "
+    "content for small and non-complex institutions); the two must not be conflated. Applying the date test to "
+    "this Bank's 31 March year-end: FY2025 (y/e 31 March 2025) PREDATES the modification, so a Pillar 3 was "
+    "still required - and the Pillar 3 Disclosures 2025 duly exists and is cited throughout this workbook. "
+    "FY2026 (y/e 31 March 2026) falls after it, so the FY2026 blanks are a permanent structural end to the "
+    "series rather than a document that is late or merely hard to obtain."
 )
 
 CASH_FLOW_SOURCES = (
@@ -61,7 +76,19 @@ def p3_sources(page):
         f"FY2023/FY2022: Pillar 3 Disclosures 2023, p.{page.get('older','26')} - {P3_2023_URL}\n"
         f"FY2021/FY2020: Pillar 3 Disclosures 2021, pp.12-18 - {P3_2021_URL}\n"
         "FY2019: no primary Pillar 3 disclosure is available in the Bank's official archive; left blank, not estimated.\n"
-        "FY2026: not yet published as of this build - left blank, not estimated.\n"
+        "FY2026: the bank no longer publishes Pillar 3 disclosures at all. Its own Annual Report 2026 states "
+        "that 'In December 2025 the bank was approved under the Small Domestic Deposit Taking regime by the "
+        "PRA and, as such, it no longer prepares Pillar III disclosures.' FY2026 is therefore a permanent "
+        "structural end to this series, not a document that is merely late. Where the FY2026 column IS "
+        "populated below, the figure comes from the Directors' Report capital note in the Financial Report "
+        "2026, p.32 ('The bank's regulatory capital, risk-weighted assets and capital ratios at 31st of March "
+        f"were as follows') - {AR2026_URL}. That note is on the same basis as the Pillar 3 KM1 it replaces: "
+        "its own 2025 comparative column (CET1 and Tier 1 capital GBP526,455k, total regulatory capital "
+        "GBP531,333k, RWAs GBP2,289,414k) matches the Pillar 3 Disclosures 2025 KM1 rows 1-4 exactly. The "
+        "note prints capital amounts and the CET1 and total capital ratios only - it carries no leverage "
+        "ratio, LCR or NSFR, and no separately-labelled Tier 1 ratio row, so those sheets stay blank for "
+        "FY2026 rather than being derived. Note also that the capital note rounds ratios to 1dp (22.7%, "
+        "22.9%) where the Pillar 3 KM1 used 2dp; both are shown as printed.\n"
         + ENTITY_NOTE
     )
 
@@ -546,31 +573,32 @@ def metric(name, unit, rows_data, note=None):
 
 
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", {
-    "FY2025": 526455, "FY2024": 483235, "FY2023": 428543, "FY2022": 381989, "FY2021": 381441, "FY2020": 375716})])
+    "FY2026": 567436, "FY2025": 526455, "FY2024": 483235, "FY2023": 428543, "FY2022": 381989, "FY2021": 381441, "FY2020": 375716})])
 
 metric("CET1 Ratio", "%", [("Common Equity Tier 1 ratio", {
-    "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%", "FY2022": "20.96%", "FY2021": "21.61%", "FY2020": "21.11%"})])
+    "FY2026": "22.7%", "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%", "FY2022": "20.96%", "FY2021": "21.61%", "FY2020": "21.11%"})])
 
 metric("Tier 1 Capital", "£'000 (= CET1 capital; no AT1 instruments)", [("Tier 1 capital", {
-    "FY2025": 526455, "FY2024": 483235, "FY2023": 428543, "FY2022": 381989, "FY2021": 381441, "FY2020": 375716})])
+    "FY2026": 567436, "FY2025": 526455, "FY2024": 483235, "FY2023": 428543, "FY2022": 381989, "FY2021": 381441, "FY2020": 375716})])
 
 metric("Tier 1 Ratio", "%", [("Tier 1 ratio", {
     "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%", "FY2022": "20.96%", "FY2021": "21.61%", "FY2020": "21.11%"})])
 
 metric("Total Capital", "£'000", [("Total capital", {
-    "FY2025": 531333, "FY2024": 488113, "FY2023": 433856, "FY2022": 386392, "FY2021": 385764, "FY2020": 379876})])
+    "FY2026": 572740, "FY2025": 531333, "FY2024": 488113, "FY2023": 433856, "FY2022": 386392, "FY2021": 385764, "FY2020": 379876})])
 
 metric("Total Capital Ratio", "%", [("Total capital ratio", {
-    "FY2025": "23.21%", "FY2024": "23.34%", "FY2023": "21.72%", "FY2022": "21.20%", "FY2021": "21.86%", "FY2020": "21.34%"})])
+    "FY2026": "22.9%", "FY2025": "23.21%", "FY2024": "23.34%", "FY2023": "21.72%", "FY2022": "21.20%", "FY2021": "21.86%", "FY2020": "21.34%"})])
 
 metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", {
-    "FY2025": 2289414, "FY2024": 2091044, "FY2023": 1997896, "FY2022": 1822244, "FY2021": 1764829, "FY2020": 1779927})])
+    "FY2026": 2499834, "FY2025": 2289414, "FY2024": 2091044, "FY2023": 1997896, "FY2022": 1822244, "FY2021": 1764829, "FY2020": 1779927})])
 
 # ---------------------------------------------------------------
 # RWA Breakdown (Pillar 3's UK OV1 template - Table 6/Table 5 "Risk
 # weighted assets and Pillar 1 capital requirements by exposure class").
-# FY2026 not yet published (Pillar 3 editions consistently lag the Annual
-# Report, per ENTITY_NOTE) - left blank, not estimated.
+# No FY2026 OV1: the bank left the Pillar 3 regime entirely (SDDT approval,
+# December 2025), and the Annual Report capital note that replaces it gives
+# only a single RWA total with no exposure-class split.
 # ---------------------------------------------------------------
 RWA_SOURCES = (
     "Sources - C. Hoare & Co. Pillar 3 Disclosures, UK OV1 'Risk weighted assets and Pillar 1 capital "
@@ -579,7 +607,12 @@ RWA_SOURCES = (
     f"FY2023/FY2022: Pillar 3 Disclosures 2023, Table 5, p.14 - {P3_2023_URL}\n"
     f"FY2021/FY2020: Pillar 3 Disclosures 2021, Table 5, p.14 - {P3_2021_URL}\n"
     "FY2019: no primary Pillar 3 disclosure is available in the Bank's official archive; left blank, not estimated.\n"
-    "FY2026: not yet published as of this build - left blank, not estimated.\n"
+    "FY2026: the bank no longer publishes Pillar 3 disclosures at all - its Financial Report 2026 (p.32) "
+    "states it was approved under the PRA's Small Domestic Deposit Taking regime in December 2025 and 'no "
+    "longer prepares Pillar III disclosures'. The FY2026 Annual Report capital note that supplies the FY2026 "
+    "headline capital figures on the other Pillar 3 sheets gives a single Risk weighted assets total only, "
+    "with no exposure-class split, so there is no FY2026 OV1 breakdown to transcribe. This is a permanent "
+    "end to the series, not a late document.\n"
     + ENTITY_NOTE
 )
 
@@ -625,7 +658,7 @@ for _kind, _label, _values in rwa_breakdown_rows:
 
 bw.add_rwa_breakdown_sheet(
     title="C. Hoare & Co. — RWA Breakdown",
-    subtitle="UK OV1 exposure-class split, £'000. FY2026 not yet published.",
+    subtitle="UK OV1 exposure-class split, £'000. No FY2026: bank left the Pillar 3 regime (SDDT, Dec 2025).",
     rows=rwa_breakdown_rows,
     sources_text=RWA_SOURCES,
     first_col_width=64,

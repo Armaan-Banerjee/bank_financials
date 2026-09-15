@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-07T19:02:59.701441+00:00",
+  "generated_at": "2026-09-15T17:04:31.121749+00:00",
   "policy": "screening only: observed headroom and multi-year movement are ranked; no breach date or future value is projected",
   "records": [
     {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "MONUMENT BANK LIMITED",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
@@ -21,9 +21,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": -0.19999999999999973,
+      "trend_change": -86.58,
       "trend_direction": "declining",
-      "trend_magnitude": 0.19999999999999973
+      "trend_magnitude": 86.58
     },
     {
       "applicable_buffer": 0,
@@ -190,8 +190,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "Chetwood Financial Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
@@ -205,32 +205,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": -18.209999999999997,
+      "trend_change": -13.809999999999999,
       "trend_direction": "declining",
-      "trend_magnitude": 18.209999999999997
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 3.25,
-      "bank": "Lloyds Bank PLC",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
-      "context_ids": [
-        "leverage_uk_325_2024"
-      ],
-      "current_headroom": 1.9500000000000002,
-      "current_value": 5.2,
-      "frn": "119278",
-      "latest_year": 2025,
-      "metric": "Leverage Ratio",
-      "regulatory_floor": 3.25,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
-      ],
-      "status": "screened",
-      "trend_change": -0.09999999999999964,
-      "trend_direction": "declining",
-      "trend_magnitude": 0.09999999999999964
+      "trend_magnitude": 13.809999999999999
     },
     {
       "applicable_buffer": 0,
@@ -327,11 +304,36 @@
       "trend_magnitude": 24.7
     },
     {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "Standard Chartered Bank",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 4.1,
+      "current_value": 11.1,
+      "frn": "114276",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -0.5,
+      "trend_direction": "declining",
+      "trend_magnitude": 0.5
+    },
+    {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "Gatehouse Bank Plc",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
@@ -345,9 +347,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": -1.799999999999999,
+      "trend_change": -30.4,
       "trend_direction": "declining",
-      "trend_magnitude": 1.799999999999999
+      "trend_magnitude": 30.4
     },
     {
       "applicable_buffer": 0,
@@ -569,6 +571,31 @@
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
+      "bank": "Close Brothers Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 5.9,
+      "current_value": 12.9,
+      "frn": "124750",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -1.6999999999999993,
+      "trend_direction": "declining",
+      "trend_magnitude": 1.6999999999999993
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
       "bank": "SECURE TRUST BANK PUBLIC LIMITED COMPANY",
       "comparable_pair_count": 4,
       "comparable_year_count": 5,
@@ -590,6 +617,29 @@
       "trend_change": -1.5999999999999996,
       "trend_direction": "declining",
       "trend_magnitude": 1.5999999999999996
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 3.25,
+      "bank": "National Bank of Egypt (UK) Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "leverage_uk_325_2024"
+      ],
+      "current_headroom": 5.949999999999999,
+      "current_value": 9.2,
+      "frn": "204520",
+      "latest_year": 2025,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
+      ],
+      "status": "screened",
+      "trend_change": -3.2700000000000014,
+      "trend_direction": "declining",
+      "trend_magnitude": 3.2700000000000014
     },
     {
       "applicable_buffer": 0,
@@ -715,9 +765,34 @@
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
+      "bank": "Cynergy Bank Plc",
+      "comparable_pair_count": 9,
+      "comparable_year_count": 10,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 6.59,
+      "current_value": 13.59,
+      "frn": "575105",
+      "latest_year": 2024,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -3.3099999999999987,
+      "trend_direction": "declining",
+      "trend_magnitude": 3.3099999999999987
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
       "bank": "Lloyds Bank PLC",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
@@ -733,9 +808,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -3.0999999999999996,
+      "trend_change": -0.7000000000000011,
       "trend_direction": "declining",
-      "trend_magnitude": 3.0999999999999996
+      "trend_magnitude": 0.7000000000000011
     },
     {
       "applicable_buffer": 2.5,
@@ -885,8 +960,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "Chetwood Financial Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "totalcapital_pillar1_uk_2021"
       ],
@@ -900,9 +975,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -12.8,
+      "trend_change": -15.8,
       "trend_direction": "declining",
-      "trend_magnitude": 12.8
+      "trend_magnitude": 15.8
     },
     {
       "applicable_buffer": 0,
@@ -954,8 +1029,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "RCI Bank UK Limited",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
+      "comparable_pair_count": 2,
+      "comparable_year_count": 3,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
@@ -969,9 +1044,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": -0.3000000000000007,
+      "trend_change": -0.5,
       "trend_direction": "declining",
-      "trend_magnitude": 0.3000000000000007
+      "trend_magnitude": 0.5
     },
     {
       "applicable_buffer": 0,
@@ -1092,6 +1167,29 @@
     },
     {
       "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "Cynergy Bank Plc",
+      "comparable_pair_count": 9,
+      "comparable_year_count": 10,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 7.59,
+      "current_value": 13.59,
+      "frn": "575105",
+      "latest_year": 2024,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -3.3099999999999987,
+      "trend_direction": "declining",
+      "trend_magnitude": 3.3099999999999987
+    },
+    {
+      "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "Castle Trust Capital PLC",
       "comparable_pair_count": 4,
@@ -1161,6 +1259,29 @@
     },
     {
       "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "Cynergy Bank Plc",
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 7.779999999999999,
+      "current_value": 15.78,
+      "frn": "575105",
+      "latest_year": 2022,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -9.62,
+      "trend_direction": "declining",
+      "trend_magnitude": 9.62
+    },
+    {
+      "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY",
       "comparable_pair_count": 4,
@@ -1204,6 +1325,29 @@
       "trend_change": -4.399999999999999,
       "trend_direction": "declining",
       "trend_magnitude": 4.399999999999999
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "ALRAYAN BANK LIMITED",
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 7.82,
+      "current_value": 15.82,
+      "frn": "229148",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -0.379999999999999,
+      "trend_direction": "declining",
+      "trend_magnitude": 0.379999999999999
     },
     {
       "applicable_buffer": 2.5,
@@ -1376,8 +1520,8 @@
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "Chetwood Financial Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
@@ -1393,9 +1537,32 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -12.8,
+      "trend_change": -14.8,
       "trend_direction": "declining",
-      "trend_magnitude": 12.8
+      "trend_magnitude": 14.8
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "Standard Chartered Bank",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 8.3,
+      "current_value": 14.3,
+      "frn": "114276",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -0.5999999999999996,
+      "trend_direction": "declining",
+      "trend_magnitude": 0.5999999999999996
     },
     {
       "applicable_buffer": 0,
@@ -1419,29 +1586,6 @@
       "trend_change": -0.09999999999999787,
       "trend_direction": "declining",
       "trend_magnitude": 0.09999999999999787
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 3.25,
-      "bank": "National Bank of Egypt (UK) Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
-      "context_ids": [
-        "leverage_uk_325_2024"
-      ],
-      "current_headroom": 8.35,
-      "current_value": 11.6,
-      "frn": "204520",
-      "latest_year": 2024,
-      "metric": "Leverage Ratio",
-      "regulatory_floor": 3.25,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
-      ],
-      "status": "screened",
-      "trend_change": -0.870000000000001,
-      "trend_direction": "declining",
-      "trend_magnitude": 0.870000000000001
     },
     {
       "applicable_buffer": 0,
@@ -1636,6 +1780,29 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
+      "bank": "Close Brothers Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 9.100000000000001,
+      "current_value": 17.1,
+      "frn": "124750",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -0.1999999999999993,
+      "trend_direction": "declining",
+      "trend_magnitude": 0.1999999999999993
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
       "bank": "Atom Bank PLC",
       "comparable_pair_count": 9,
       "comparable_year_count": 10,
@@ -1655,6 +1822,31 @@
       "trend_change": -8.099999999999998,
       "trend_direction": "declining",
       "trend_magnitude": 8.099999999999998
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "FCE Bank Plc",
+      "comparable_pair_count": 11,
+      "comparable_year_count": 12,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 9.170000000000002,
+      "current_value": 16.17,
+      "frn": "204469",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -0.129999999999999,
+      "trend_direction": "declining",
+      "trend_magnitude": 0.129999999999999
     },
     {
       "applicable_buffer": 0,
@@ -1683,8 +1875,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "Chetwood Financial Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "tier1_pillar1_uk_2021"
       ],
@@ -1698,9 +1890,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -12.8,
+      "trend_change": -14.8,
       "trend_direction": "declining",
-      "trend_magnitude": 12.8
+      "trend_magnitude": 14.8
     },
     {
       "applicable_buffer": 0,
@@ -1871,8 +2063,8 @@
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "REDWOOD BANK LIMITED",
-      "comparable_pair_count": 7,
-      "comparable_year_count": 8,
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
@@ -1943,6 +2135,29 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
+      "bank": "REDWOOD BANK LIMITED",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 10.0,
+      "current_value": 16.0,
+      "frn": "755924",
+      "latest_year": 2023,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -43.78,
+      "trend_direction": "declining",
+      "trend_magnitude": 43.78
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
       "bank": "Barclays Bank Plc",
       "comparable_pair_count": 4,
       "comparable_year_count": 5,
@@ -1967,8 +2182,8 @@
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "Gatehouse Bank Plc",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
@@ -1984,9 +2199,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -1.0,
+      "trend_change": -20.199999999999996,
       "trend_direction": "declining",
-      "trend_magnitude": 1.0
+      "trend_magnitude": 20.199999999999996
     },
     {
       "applicable_buffer": 0,
@@ -2033,6 +2248,29 @@
       "trend_change": -1.0500000000000007,
       "trend_direction": "declining",
       "trend_magnitude": 1.0500000000000007
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "FCE Bank Plc",
+      "comparable_pair_count": 11,
+      "comparable_year_count": 12,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 10.170000000000002,
+      "current_value": 16.17,
+      "frn": "204469",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -0.129999999999999,
+      "trend_direction": "declining",
+      "trend_magnitude": 0.129999999999999
     },
     {
       "applicable_buffer": 0,
@@ -2084,8 +2322,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "Lloyds Bank PLC",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
       "context_ids": [
         "tier1_pillar1_uk_2021"
       ],
@@ -2099,9 +2337,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -3.3000000000000007,
+      "trend_change": -1.9000000000000021,
       "trend_direction": "declining",
-      "trend_magnitude": 3.3000000000000007
+      "trend_magnitude": 1.9000000000000021
     },
     {
       "applicable_buffer": 0,
@@ -2194,6 +2432,29 @@
       "trend_change": -0.5999999999999979,
       "trend_direction": "declining",
       "trend_magnitude": 0.5999999999999979
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "Standard Chartered Bank",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 10.7,
+      "current_value": 18.7,
+      "frn": "114276",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -3.8000000000000007,
+      "trend_direction": "declining",
+      "trend_magnitude": 3.8000000000000007
     },
     {
       "applicable_buffer": 0,
@@ -2364,8 +2625,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "Gatehouse Bank Plc",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "tier1_pillar1_uk_2021"
       ],
@@ -2379,9 +2640,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -1.0,
+      "trend_change": -20.199999999999996,
       "trend_direction": "declining",
-      "trend_magnitude": 1.0
+      "trend_magnitude": 20.199999999999996
     },
     {
       "applicable_buffer": 0,
@@ -2664,6 +2925,29 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
+      "bank": "Gatehouse Bank Plc",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 12.0,
+      "current_value": 20.0,
+      "frn": "475346",
+      "latest_year": 2024,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -17.299999999999997,
+      "trend_direction": "declining",
+      "trend_magnitude": 17.299999999999997
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
       "bank": "Barclays Bank UK PLC",
       "comparable_pair_count": 7,
       "comparable_year_count": 8,
@@ -2711,8 +2995,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "Lloyds Bank PLC",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
       "context_ids": [
         "totalcapital_pillar1_uk_2021"
       ],
@@ -2726,9 +3010,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -3.3999999999999986,
+      "trend_change": -2.0,
       "trend_direction": "declining",
-      "trend_magnitude": 3.3999999999999986
+      "trend_magnitude": 2.0
     },
     {
       "applicable_buffer": 0,
@@ -2968,8 +3252,8 @@
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "MONUMENT BANK LIMITED",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
@@ -2985,9 +3269,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -2.0,
+      "trend_change": -88.99,
       "trend_direction": "declining",
-      "trend_magnitude": 2.0
+      "trend_magnitude": 88.99
     },
     {
       "applicable_buffer": 2.5,
@@ -3113,6 +3397,29 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
+      "bank": "StreamBank PLC",
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 13.600000000000001,
+      "current_value": 21.6,
+      "frn": "954876",
+      "latest_year": 2026,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -29.0,
+      "trend_direction": "declining",
+      "trend_magnitude": 29.0
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
       "bank": "BANK OF CEYLON (UK) LIMITED",
       "comparable_pair_count": 6,
       "comparable_year_count": 7,
@@ -3229,6 +3536,29 @@
     },
     {
       "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "MONUMENT BANK LIMITED",
+      "comparable_pair_count": 2,
+      "comparable_year_count": 3,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 14.120000000000001,
+      "current_value": 22.12,
+      "frn": "849724",
+      "latest_year": 2023,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -86.86999999999999,
+      "trend_direction": "declining",
+      "trend_magnitude": 86.86999999999999
+    },
+    {
+      "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "HAMPDEN & CO PLC",
       "comparable_pair_count": 5,
@@ -3249,6 +3579,31 @@
       "trend_change": -20.47,
       "trend_direction": "declining",
       "trend_magnitude": 20.47
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "StreamBank PLC",
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 14.600000000000001,
+      "current_value": 21.6,
+      "frn": "954876",
+      "latest_year": 2026,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -29.0,
+      "trend_direction": "declining",
+      "trend_magnitude": 29.0
     },
     {
       "applicable_buffer": 0,
@@ -3297,6 +3652,29 @@
       "trend_magnitude": 58.02
     },
     {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "StreamBank PLC",
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 15.600000000000001,
+      "current_value": 21.6,
+      "frn": "954876",
+      "latest_year": 2026,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -29.0,
+      "trend_direction": "declining",
+      "trend_magnitude": 29.0
+    },
+    {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "Crown Agents Bank Limited",
@@ -3320,6 +3698,29 @@
       "trend_change": -7.600000000000001,
       "trend_direction": "declining",
       "trend_magnitude": 7.600000000000001
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "MONUMENT BANK LIMITED",
+      "comparable_pair_count": 2,
+      "comparable_year_count": 3,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 16.12,
+      "current_value": 22.12,
+      "frn": "849724",
+      "latest_year": 2023,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -86.86999999999999,
+      "trend_direction": "declining",
+      "trend_magnitude": 86.86999999999999
     },
     {
       "applicable_buffer": 0,
@@ -3559,8 +3960,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "BIRMINGHAM BANK LIMITED",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
@@ -3574,9 +3975,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": -39.0,
+      "trend_change": -13.0,
       "trend_direction": "declining",
-      "trend_magnitude": 39.0
+      "trend_magnitude": 13.0
     },
     {
       "applicable_buffer": 2.5,
@@ -3675,6 +4076,29 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
+      "bank": "Persia International Bank Plc",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 32.99,
+      "current_value": 40.99,
+      "frn": "208020",
+      "latest_year": 2021,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -27.949999999999996,
+      "trend_direction": "declining",
+      "trend_magnitude": 27.949999999999996
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
       "bank": "Bank of Beirut (UK) Ltd",
       "comparable_pair_count": 4,
       "comparable_year_count": 5,
@@ -3697,26 +4121,26 @@
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "MONUMENT BANK LIMITED",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
+      "applicable_minimum": 6.0,
+      "bank": "Persia International Bank Plc",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
       "context_ids": [
-        "totalcapital_pillar1_uk_2021"
+        "tier1_pillar1_uk_2021"
       ],
-      "current_headroom": 36.0,
-      "current_value": 44.0,
-      "frn": "849724",
-      "latest_year": 2022,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
+      "current_headroom": 34.99,
+      "current_value": 40.99,
+      "frn": "208020",
+      "latest_year": 2021,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -315.0,
+      "trend_change": -6.93,
       "trend_direction": "declining",
-      "trend_magnitude": 315.0
+      "trend_magnitude": 6.93
     },
     {
       "applicable_buffer": 2.5,
@@ -4046,9 +4470,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -21.0,
+      "trend_change": -20.0,
       "trend_direction": "declining",
-      "trend_magnitude": 21.0
+      "trend_magnitude": 20.0
     },
     {
       "applicable_buffer": 2.5,
@@ -4071,9 +4495,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -21.0,
+      "trend_change": -20.0,
       "trend_direction": "declining",
-      "trend_magnitude": 21.0
+      "trend_magnitude": 20.0
     },
     {
       "applicable_buffer": 0,
@@ -4094,9 +4518,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -21.0,
+      "trend_change": -20.0,
       "trend_direction": "declining",
-      "trend_magnitude": 21.0
+      "trend_magnitude": 20.0
     },
     {
       "applicable_buffer": 0,
@@ -4170,41 +4594,18 @@
       "trend_magnitude": 168.3
     },
     {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "J.P. Morgan Europe Limited",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 241.23,
-      "current_value": 249.23,
-      "frn": "124579",
-      "latest_year": 2025,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": -75.77000000000001,
-      "trend_direction": "declining",
-      "trend_magnitude": 75.77000000000001
-    },
-    {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
-      "bank": "J.P. Morgan Europe Limited",
+      "bank": "Griffin Bank Ltd",
       "comparable_pair_count": 2,
       "comparable_year_count": 3,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
       ],
-      "current_headroom": 242.23,
-      "current_value": 249.23,
-      "frn": "124579",
+      "current_headroom": 105.0,
+      "current_value": 112.0,
+      "frn": "970920",
       "latest_year": 2025,
       "metric": "CET1 Ratio",
       "regulatory_floor": 7.0,
@@ -4213,32 +4614,32 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -75.77000000000001,
+      "trend_change": -344.0,
       "trend_direction": "declining",
-      "trend_magnitude": 75.77000000000001
+      "trend_magnitude": 344.0
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "J.P. Morgan Europe Limited",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
+      "applicable_minimum": 3.25,
+      "bank": "Standard Chartered Bank",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
-        "tier1_pillar1_uk_2021"
+        "leverage_uk_325_2024"
       ],
-      "current_headroom": 243.23,
-      "current_value": 249.23,
-      "frn": "124579",
+      "current_headroom": 0.9500000000000002,
+      "current_value": 4.2,
+      "frn": "114276",
       "latest_year": 2025,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
       "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": -75.77000000000001,
-      "trend_direction": "declining",
-      "trend_magnitude": 75.77000000000001
+      "trend_change": 0.10000000000000053,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.10000000000000053
     },
     {
       "applicable_buffer": 0,
@@ -4335,6 +4736,52 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
+      "bank": "Lloyds Bank PLC",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "leverage_uk_325_2024"
+      ],
+      "current_headroom": 1.9500000000000002,
+      "current_value": 5.2,
+      "frn": "119278",
+      "latest_year": 2025,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
+      ],
+      "status": "screened",
+      "trend_change": 0.10000000000000053,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.10000000000000053
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 3.25,
+      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "leverage_uk_325_2024"
+      ],
+      "current_headroom": 2.04,
+      "current_value": 5.29,
+      "frn": "143336",
+      "latest_year": 2025,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
+      ],
+      "status": "screened",
+      "trend_change": 0.08999999999999986,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.08999999999999986
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 3.25,
       "bank": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY",
       "comparable_pair_count": 4,
       "comparable_year_count": 5,
@@ -4427,25 +4874,25 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
-      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "bank": "Weatherbys Bank Limited",
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
-      "current_headroom": 2.87,
-      "current_value": 6.12,
-      "frn": "143336",
-      "latest_year": 2024,
+      "current_headroom": 2.8,
+      "current_value": 6.05,
+      "frn": "204571",
+      "latest_year": 2025,
       "metric": "Leverage Ratio",
       "regulatory_floor": 3.25,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": 0.9199999999999999,
+      "trend_change": 2.13,
       "trend_direction": "increasing",
-      "trend_magnitude": 0.9199999999999999
+      "trend_magnitude": 2.13
     },
     {
       "applicable_buffer": 0,
@@ -4496,29 +4943,6 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
-      "bank": "Weatherbys Bank Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
-      "context_ids": [
-        "leverage_uk_325_2024"
-      ],
-      "current_headroom": 3.83,
-      "current_value": 7.08,
-      "frn": "204571",
-      "latest_year": 2024,
-      "metric": "Leverage Ratio",
-      "regulatory_floor": 3.25,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
-      ],
-      "status": "screened",
-      "trend_change": 3.16,
-      "trend_direction": "increasing",
-      "trend_magnitude": 3.16
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 3.25,
       "bank": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
       "comparable_pair_count": 10,
       "comparable_year_count": 11,
@@ -4543,47 +4967,47 @@
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "ALRAYAN BANK LIMITED",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
-      "current_headroom": 4.45,
-      "current_value": 7.7,
+      "current_headroom": 4.35,
+      "current_value": 7.6,
       "frn": "229148",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Leverage Ratio",
       "regulatory_floor": 3.25,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": 1.7999999999999998,
+      "trend_change": 1.6999999999999993,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.7999999999999998
+      "trend_magnitude": 1.6999999999999993
     },
     {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "Shawbrook Bank Limited",
-      "comparable_pair_count": 10,
-      "comparable_year_count": 11,
+      "comparable_pair_count": 11,
+      "comparable_year_count": 12,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
-      "current_headroom": 4.85,
-      "current_value": 8.1,
+      "current_headroom": 4.55,
+      "current_value": 7.8,
       "frn": "204574",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Leverage Ratio",
       "regulatory_floor": 3.25,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": 2.0,
+      "trend_change": 1.7000000000000002,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.0
+      "trend_magnitude": 1.7000000000000002
     },
     {
       "applicable_buffer": 0,
@@ -4609,27 +5033,29 @@
       "trend_magnitude": 4.6000000000000005
     },
     {
-      "applicable_buffer": 0,
-      "applicable_minimum": 3.25,
-      "bank": "Aldermore Bank Plc",
-      "comparable_pair_count": 7,
-      "comparable_year_count": 8,
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "Shawbrook Bank Limited",
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
       "context_ids": [
-        "leverage_uk_325_2024"
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
       ],
-      "current_headroom": 5.65,
-      "current_value": 8.9,
-      "frn": "204503",
+      "current_headroom": 5.4,
+      "current_value": 12.4,
+      "frn": "204574",
       "latest_year": 2025,
-      "metric": "Leverage Ratio",
-      "regulatory_floor": 3.25,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
       "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 2.6000000000000005,
+      "trend_change": 0.9000000000000004,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.6000000000000005
+      "trend_magnitude": 0.9000000000000004
     },
     {
       "applicable_buffer": 0,
@@ -4653,6 +5079,29 @@
       "trend_change": 3.51,
       "trend_direction": "increasing",
       "trend_magnitude": 3.51
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 3.25,
+      "bank": "Aldermore Bank Plc",
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
+      "context_ids": [
+        "leverage_uk_325_2024"
+      ],
+      "current_headroom": 5.75,
+      "current_value": 9.0,
+      "frn": "204503",
+      "latest_year": 2026,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
+      ],
+      "status": "screened",
+      "trend_change": 2.7,
+      "trend_direction": "increasing",
+      "trend_magnitude": 2.7
     },
     {
       "applicable_buffer": 0,
@@ -4701,31 +5150,6 @@
       "trend_magnitude": 4.4399999999999995
     },
     {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "Shawbrook Bank Limited",
-      "comparable_pair_count": 7,
-      "comparable_year_count": 8,
-      "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
-      ],
-      "current_headroom": 6.0,
-      "current_value": 13.0,
-      "frn": "204574",
-      "latest_year": 2024,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 1.5,
-      "trend_direction": "increasing",
-      "trend_magnitude": 1.5
-    },
-    {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "C. HOARE & CO.",
@@ -4751,17 +5175,17 @@
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
-      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "bank": "Weatherbys Bank Limited",
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
       ],
-      "current_headroom": 6.15,
-      "current_value": 13.15,
-      "frn": "143336",
-      "latest_year": 2024,
+      "current_headroom": 6.1,
+      "current_value": 13.1,
+      "frn": "204571",
+      "latest_year": 2025,
       "metric": "CET1 Ratio",
       "regulatory_floor": 7.0,
       "sources": [
@@ -4769,9 +5193,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 0.8499999999999996,
+      "trend_change": 1.4100000000000001,
       "trend_direction": "increasing",
-      "trend_magnitude": 0.8499999999999996
+      "trend_magnitude": 1.4100000000000001
     },
     {
       "applicable_buffer": 0,
@@ -4870,6 +5294,31 @@
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
+      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 6.26,
+      "current_value": 13.26,
+      "frn": "143336",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 0.9599999999999991,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.9599999999999991
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
       "bank": "Investec Bank PLC",
       "comparable_pair_count": 8,
       "comparable_year_count": 9,
@@ -4918,31 +5367,6 @@
       "trend_magnitude": 0.0
     },
     {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "Weatherbys Bank Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
-      "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
-      ],
-      "current_headroom": 6.84,
-      "current_value": 13.84,
-      "frn": "204571",
-      "latest_year": 2024,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 2.1500000000000004,
-      "trend_direction": "increasing",
-      "trend_magnitude": 2.1500000000000004
-    },
-    {
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "The Charity Bank Limited",
@@ -4967,49 +5391,49 @@
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
-      "context_ids": [
-        "tier1_pillar1_uk_2021"
-      ],
-      "current_headroom": 7.15,
-      "current_value": 13.15,
-      "frn": "143336",
-      "latest_year": 2024,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 0.8499999999999996,
-      "trend_direction": "increasing",
-      "trend_magnitude": 0.8499999999999996
-    },
-    {
-      "applicable_buffer": 0,
       "applicable_minimum": 8.0,
-      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "bank": "Shawbrook Bank Limited",
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
       "context_ids": [
         "totalcapital_pillar1_uk_2021"
       ],
-      "current_headroom": 7.279999999999999,
-      "current_value": 15.28,
-      "frn": "143336",
-      "latest_year": 2024,
+      "current_headroom": 6.9,
+      "current_value": 14.9,
+      "frn": "204574",
+      "latest_year": 2025,
       "metric": "Total Capital Ratio",
       "regulatory_floor": 8.0,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 0.379999999999999,
+      "trend_change": 1.0999999999999996,
       "trend_direction": "increasing",
-      "trend_magnitude": 0.379999999999999
+      "trend_magnitude": 1.0999999999999996
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 7.26,
+      "current_value": 13.26,
+      "frn": "143336",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 0.9599999999999991,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.9599999999999991
     },
     {
       "applicable_buffer": 2.5,
@@ -5038,6 +5462,52 @@
     },
     {
       "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "Weatherbys Bank Limited",
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 7.300000000000001,
+      "current_value": 15.3,
+      "frn": "204571",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 0.7700000000000014,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.7700000000000014
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "ARBUTHNOT LATHAM & CO., LIMITED",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 7.380000000000001,
+      "current_value": 15.38,
+      "frn": "143336",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 0.4800000000000004,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.4800000000000004
+    },
+    {
+      "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "QIB (UK) Plc",
       "comparable_pair_count": 6,
@@ -5058,6 +5528,29 @@
       "trend_change": 0.6699999999999999,
       "trend_direction": "increasing",
       "trend_magnitude": 0.6699999999999999
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "Shawbrook Bank Limited",
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 7.5,
+      "current_value": 13.5,
+      "frn": "204574",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 2.0,
+      "trend_direction": "increasing",
+      "trend_magnitude": 2.0
     },
     {
       "applicable_buffer": 2.5,
@@ -5086,26 +5579,26 @@
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "Shawbrook Bank Limited",
-      "comparable_pair_count": 7,
-      "comparable_year_count": 8,
+      "applicable_minimum": 3.25,
+      "bank": "BROWN SHIPLEY & CO. LIMITED",
+      "comparable_pair_count": 1,
+      "comparable_year_count": 2,
       "context_ids": [
-        "totalcapital_pillar1_uk_2021"
+        "leverage_uk_325_2024"
       ],
-      "current_headroom": 7.9,
-      "current_value": 15.9,
-      "frn": "204574",
+      "current_headroom": 7.98,
+      "current_value": 11.23,
+      "frn": "124548",
       "latest_year": 2024,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
       "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": 2.0999999999999996,
+      "trend_change": 1.2699999999999996,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.0999999999999996
+      "trend_magnitude": 1.2699999999999996
     },
     {
       "applicable_buffer": 0,
@@ -5129,52 +5622,6 @@
       "trend_change": 5.049999999999999,
       "trend_direction": "increasing",
       "trend_magnitude": 5.049999999999999
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "Weatherbys Bank Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 8.260000000000002,
-      "current_value": 16.26,
-      "frn": "204571",
-      "latest_year": 2024,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 1.7300000000000022,
-      "trend_direction": "increasing",
-      "trend_magnitude": 1.7300000000000022
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "Shawbrook Bank Limited",
-      "comparable_pair_count": 7,
-      "comparable_year_count": 8,
-      "context_ids": [
-        "tier1_pillar1_uk_2021"
-      ],
-      "current_headroom": 8.3,
-      "current_value": 14.3,
-      "frn": "204574",
-      "latest_year": 2024,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 2.8000000000000007,
-      "trend_direction": "increasing",
-      "trend_magnitude": 2.8000000000000007
     },
     {
       "applicable_buffer": 0,
@@ -5234,8 +5681,8 @@
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
       ],
-      "current_headroom": 8.41,
-      "current_value": 15.41,
+      "current_headroom": 8.45,
+      "current_value": 15.45,
       "frn": "229148",
       "latest_year": 2025,
       "metric": "CET1 Ratio",
@@ -5245,9 +5692,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 2.01,
+      "trend_change": 2.049999999999999,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.01
+      "trend_magnitude": 2.049999999999999
     },
     {
       "applicable_buffer": 2.5,
@@ -5325,6 +5772,29 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
+      "bank": "Close Brothers Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 9.0,
+      "current_value": 15.0,
+      "frn": "124750",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 0.40000000000000036,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.40000000000000036
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
       "bank": "Investec Bank PLC",
       "comparable_pair_count": 8,
       "comparable_year_count": 9,
@@ -5370,29 +5840,6 @@
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "ALRAYAN BANK LIMITED",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 9.190000000000001,
-      "current_value": 17.19,
-      "frn": "229148",
-      "latest_year": 2024,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 0.990000000000002,
-      "trend_direction": "increasing",
-      "trend_magnitude": 0.990000000000002
-    },
-    {
-      "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "Tandem Bank Limited",
       "comparable_pair_count": 4,
@@ -5415,29 +5862,50 @@
       "trend_magnitude": 1.33
     },
     {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "ALRAYAN BANK LIMITED",
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 9.65,
+      "current_value": 15.65,
+      "frn": "229148",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 1.950000000000001,
+      "trend_direction": "increasing",
+      "trend_magnitude": 1.950000000000001
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 3.25,
       "bank": "FCE Bank Plc",
       "comparable_pair_count": 11,
       "comparable_year_count": 12,
       "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
+        "leverage_uk_325_2024"
       ],
-      "current_headroom": 9.59,
-      "current_value": 16.59,
+      "current_headroom": 9.68,
+      "current_value": 12.93,
       "frn": "204469",
       "latest_year": 2025,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
       "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": 0.28999999999999915,
+      "trend_change": 0.019999999999999574,
       "trend_direction": "increasing",
-      "trend_magnitude": 0.28999999999999915
+      "trend_magnitude": 0.019999999999999574
     },
     {
       "applicable_buffer": 0,
@@ -5487,26 +5955,26 @@
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "ALRAYAN BANK LIMITED",
+      "applicable_minimum": 8.0,
+      "bank": "National Bank of Egypt (UK) Limited",
       "comparable_pair_count": 4,
       "comparable_year_count": 5,
       "context_ids": [
-        "tier1_pillar1_uk_2021"
+        "totalcapital_pillar1_uk_2021"
       ],
-      "current_headroom": 10.149999999999999,
-      "current_value": 16.15,
-      "frn": "229148",
-      "latest_year": 2024,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
+      "current_headroom": 10.239999999999998,
+      "current_value": 18.24,
+      "frn": "204520",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 2.4499999999999993,
+      "trend_change": 3.089999999999998,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.4499999999999993
+      "trend_magnitude": 3.089999999999998
     },
     {
       "applicable_buffer": 0,
@@ -5632,29 +6100,6 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
-      "bank": "FCE Bank Plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
-      "context_ids": [
-        "tier1_pillar1_uk_2021"
-      ],
-      "current_headroom": 10.59,
-      "current_value": 16.59,
-      "frn": "204469",
-      "latest_year": 2025,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 0.28999999999999915,
-      "trend_direction": "increasing",
-      "trend_magnitude": 0.28999999999999915
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
       "bank": "Clydesdale Bank Plc",
       "comparable_pair_count": 11,
       "comparable_year_count": 12,
@@ -5720,6 +6165,31 @@
       "trend_change": 0.05999999999999872,
       "trend_direction": "increasing",
       "trend_magnitude": 0.05999999999999872
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "Aldermore Bank Plc",
+      "comparable_pair_count": 11,
+      "comparable_year_count": 12,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 10.7,
+      "current_value": 17.7,
+      "frn": "204503",
+      "latest_year": 2026,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 7.399999999999999,
+      "trend_direction": "increasing",
+      "trend_magnitude": 7.399999999999999
     },
     {
       "applicable_buffer": 0,
@@ -5841,29 +6311,6 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
-      "bank": "National Bank of Egypt (UK) Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 11.280000000000001,
-      "current_value": 19.28,
-      "frn": "204520",
-      "latest_year": 2024,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 4.130000000000001,
-      "trend_direction": "increasing",
-      "trend_magnitude": 4.130000000000001
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
       "bank": "Bank of London and The Middle East plc",
       "comparable_pair_count": 11,
       "comparable_year_count": 12,
@@ -5954,31 +6401,6 @@
       "trend_change": 0.5,
       "trend_direction": "increasing",
       "trend_magnitude": 0.5
-    },
-    {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "Aldermore Bank Plc",
-      "comparable_pair_count": 10,
-      "comparable_year_count": 11,
-      "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
-      ],
-      "current_headroom": 11.399999999999999,
-      "current_value": 18.4,
-      "frn": "204503",
-      "latest_year": 2025,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 8.099999999999998,
-      "trend_direction": "increasing",
-      "trend_magnitude": 8.099999999999998
     },
     {
       "applicable_buffer": 0,
@@ -6102,29 +6524,6 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
-      "bank": "Gatehouse Bank Plc",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 12.0,
-      "current_value": 20.0,
-      "frn": "475346",
-      "latest_year": 2024,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 0.1999999999999993,
-      "trend_direction": "increasing",
-      "trend_magnitude": 0.1999999999999993
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
       "bank": "Handelsbanken plc",
       "comparable_pair_count": 7,
       "comparable_year_count": 8,
@@ -6218,26 +6617,26 @@
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
+      "applicable_minimum": 6.0,
       "bank": "Aldermore Bank Plc",
-      "comparable_pair_count": 8,
-      "comparable_year_count": 9,
+      "comparable_pair_count": 9,
+      "comparable_year_count": 10,
       "context_ids": [
-        "totalcapital_pillar1_uk_2021"
+        "tier1_pillar1_uk_2021"
       ],
-      "current_headroom": 12.5,
-      "current_value": 20.5,
+      "current_headroom": 12.3,
+      "current_value": 18.3,
       "frn": "204503",
-      "latest_year": 2025,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
+      "latest_year": 2026,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 5.800000000000001,
+      "trend_change": 5.200000000000001,
       "trend_direction": "increasing",
-      "trend_magnitude": 5.800000000000001
+      "trend_magnitude": 5.200000000000001
     },
     {
       "applicable_buffer": 2.5,
@@ -6357,29 +6756,6 @@
       "trend_magnitude": 0.8999999999999986
     },
     {
-      "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "Aldermore Bank Plc",
-      "comparable_pair_count": 8,
-      "comparable_year_count": 9,
-      "context_ids": [
-        "tier1_pillar1_uk_2021"
-      ],
-      "current_headroom": 13.100000000000001,
-      "current_value": 19.1,
-      "frn": "204503",
-      "latest_year": 2025,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 6.000000000000002,
-      "trend_direction": "increasing",
-      "trend_magnitude": 6.000000000000002
-    },
-    {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "The Access Bank UK Limited",
@@ -6497,6 +6873,29 @@
       "trend_change": 1.0,
       "trend_direction": "increasing",
       "trend_magnitude": 1.0
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "Aldermore Bank Plc",
+      "comparable_pair_count": 9,
+      "comparable_year_count": 10,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 14.0,
+      "current_value": 22.0,
+      "frn": "204503",
+      "latest_year": 2026,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 7.300000000000001,
+      "trend_direction": "increasing",
+      "trend_magnitude": 7.300000000000001
     },
     {
       "applicable_buffer": 0,
@@ -6669,24 +7068,49 @@
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "C. HOARE & CO.",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
       "context_ids": [
         "totalcapital_pillar1_uk_2021"
       ],
-      "current_headroom": 15.21,
-      "current_value": 23.21,
+      "current_headroom": 14.899999999999999,
+      "current_value": 22.9,
       "frn": "122093",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Total Capital Ratio",
       "regulatory_floor": 8.0,
       "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 1.870000000000001,
+      "trend_change": 1.5599999999999987,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.870000000000001
+      "trend_magnitude": 1.5599999999999987
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "FirstBank UK Limited",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 15.0,
+      "current_value": 22.0,
+      "frn": "216772",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 2.5100000000000016,
+      "trend_direction": "increasing",
+      "trend_magnitude": 2.5100000000000016
     },
     {
       "applicable_buffer": 0,
@@ -6781,6 +7205,31 @@
       "trend_magnitude": 8.330000000000002
     },
     {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "C. HOARE & CO.",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 15.7,
+      "current_value": 22.7,
+      "frn": "122093",
+      "latest_year": 2026,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 1.5899999999999999,
+      "trend_direction": "increasing",
+      "trend_magnitude": 1.5899999999999999
+    },
+    {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "Bank of Ireland (UK) Plc",
@@ -6802,6 +7251,29 @@
       "trend_change": 1.1999999999999993,
       "trend_direction": "increasing",
       "trend_magnitude": 1.1999999999999993
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "RELIANCE BANK LIMITED",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 15.8,
+      "current_value": 21.8,
+      "frn": "204537",
+      "latest_year": 2026,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 3.75,
+      "trend_direction": "increasing",
+      "trend_magnitude": 3.75
     },
     {
       "applicable_buffer": 0,
@@ -6829,6 +7301,29 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
+      "bank": "BROWN SHIPLEY & CO. LIMITED",
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 15.86,
+      "current_value": 23.86,
+      "frn": "124548",
+      "latest_year": 2024,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 1.259999999999998,
+      "trend_direction": "increasing",
+      "trend_magnitude": 1.259999999999998
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
       "bank": "IFAST GLOBAL BANK LIMITED",
       "comparable_pair_count": 4,
       "comparable_year_count": 5,
@@ -6850,29 +7345,27 @@
       "trend_magnitude": 1.8999999999999986
     },
     {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "C. HOARE & CO.",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "FirstBank UK Limited",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
       "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
+        "totalcapital_pillar1_uk_2021"
       ],
       "current_headroom": 16.0,
-      "current_value": 23.0,
-      "frn": "122093",
+      "current_value": 24.0,
+      "frn": "216772",
       "latest_year": 2025,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
       "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 1.8900000000000006,
+      "trend_change": 0.8299999999999983,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.8900000000000006
+      "trend_magnitude": 0.8299999999999983
     },
     {
       "applicable_buffer": 0,
@@ -6919,29 +7412,6 @@
       "trend_change": 5.029999999999998,
       "trend_direction": "increasing",
       "trend_magnitude": 5.029999999999998
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "StreamBank PLC",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 16.8,
-      "current_value": 24.8,
-      "frn": "954876",
-      "latest_year": 2025,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 2.6000000000000014,
-      "trend_direction": "increasing",
-      "trend_magnitude": 2.6000000000000014
     },
     {
       "applicable_buffer": 0,
@@ -7038,31 +7508,6 @@
       "trend_magnitude": 5.300000000000001
     },
     {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "StreamBank PLC",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
-      "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
-      ],
-      "current_headroom": 17.8,
-      "current_value": 24.8,
-      "frn": "954876",
-      "latest_year": 2025,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 2.6000000000000014,
-      "trend_direction": "increasing",
-      "trend_magnitude": 2.6000000000000014
-    },
-    {
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "BROWN SHIPLEY & CO. LIMITED",
@@ -7155,54 +7600,6 @@
       "trend_magnitude": 5.029999999999998
     },
     {
-      "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "StreamBank PLC",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
-      "context_ids": [
-        "tier1_pillar1_uk_2021"
-      ],
-      "current_headroom": 18.8,
-      "current_value": 24.8,
-      "frn": "954876",
-      "latest_year": 2025,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 2.6000000000000014,
-      "trend_direction": "increasing",
-      "trend_magnitude": 2.6000000000000014
-    },
-    {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "FirstBank UK Limited",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
-      ],
-      "current_headroom": 19.07,
-      "current_value": 26.07,
-      "frn": "216772",
-      "latest_year": 2024,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 6.580000000000002,
-      "trend_direction": "increasing",
-      "trend_magnitude": 6.580000000000002
-    },
-    {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "AIB GROUP (UK) P.L.C.",
@@ -7252,29 +7649,6 @@
     },
     {
       "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "Itau BBA International PLC",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
-      "context_ids": [
-        "tier1_pillar1_uk_2021"
-      ],
-      "current_headroom": 21.0,
-      "current_value": 27.0,
-      "frn": "575225",
-      "latest_year": 2023,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 4.399999999999999,
-      "trend_direction": "increasing",
-      "trend_magnitude": 4.399999999999999
-    },
-    {
-      "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "Itau BBA International PLC",
       "comparable_pair_count": 11,
@@ -7318,29 +7692,6 @@
       "trend_change": 7.399999999999999,
       "trend_direction": "increasing",
       "trend_magnitude": 7.399999999999999
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "FirstBank UK Limited",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 21.67,
-      "current_value": 29.67,
-      "frn": "216772",
-      "latest_year": 2024,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": 6.5,
-      "trend_direction": "increasing",
-      "trend_magnitude": 6.5
     },
     {
       "applicable_buffer": 2.5,
@@ -7412,6 +7763,29 @@
       "trend_change": 8.190000000000001,
       "trend_direction": "increasing",
       "trend_magnitude": 8.190000000000001
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "Itau BBA International PLC",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 23.0,
+      "current_value": 29.0,
+      "frn": "575225",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 6.399999999999999,
+      "trend_direction": "increasing",
+      "trend_magnitude": 6.399999999999999
     },
     {
       "applicable_buffer": 0,
@@ -7556,6 +7930,31 @@
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
+      "bank": "Persia International Bank Plc",
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 33.99,
+      "current_value": 40.99,
+      "frn": "208020",
+      "latest_year": 2021,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 8.0,
+      "trend_direction": "increasing",
+      "trend_magnitude": 8.0
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
       "bank": "Morgan Stanley Bank International Limited",
       "comparable_pair_count": 10,
       "comparable_year_count": 11,
@@ -7605,8 +8004,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "ICBC (London) plc",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
@@ -7620,9 +8019,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
       ],
       "status": "screened",
-      "trend_change": 12.07,
+      "trend_change": 16.729999999999997,
       "trend_direction": "increasing",
-      "trend_magnitude": 12.07
+      "trend_magnitude": 16.729999999999997
     },
     {
       "applicable_buffer": 0,
@@ -7674,8 +8073,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "ICBC (London) plc",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "totalcapital_pillar1_uk_2021"
       ],
@@ -7689,16 +8088,16 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 24.790000000000006,
+      "trend_change": 20.1,
       "trend_direction": "increasing",
-      "trend_magnitude": 24.790000000000006
+      "trend_magnitude": 20.1
     },
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "ICBC (London) plc",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
@@ -7714,16 +8113,16 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 24.790000000000006,
+      "trend_change": 20.1,
       "trend_direction": "increasing",
-      "trend_magnitude": 24.790000000000006
+      "trend_magnitude": 20.1
     },
     {
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "ICBC (London) plc",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "tier1_pillar1_uk_2021"
       ],
@@ -7737,9 +8136,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 24.790000000000006,
+      "trend_change": 20.1,
       "trend_direction": "increasing",
-      "trend_magnitude": 24.790000000000006
+      "trend_magnitude": 20.1
     },
     {
       "applicable_buffer": 0,
@@ -7932,16 +8331,87 @@
     {
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
-      "bank": "Griffin Bank Ltd",
+      "bank": "J.P. Morgan Europe Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 241.23,
+      "current_value": 249.23,
+      "frn": "124579",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 2.2299999999999898,
+      "trend_direction": "increasing",
+      "trend_magnitude": 2.2299999999999898
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "J.P. Morgan Europe Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 242.23,
+      "current_value": 249.23,
+      "frn": "124579",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 2.2299999999999898,
+      "trend_direction": "increasing",
+      "trend_magnitude": 2.2299999999999898
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "J.P. Morgan Europe Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 243.23,
+      "current_value": 249.23,
+      "frn": "124579",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 2.2299999999999898,
+      "trend_direction": "increasing",
+      "trend_magnitude": 2.2299999999999898
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "Nomura Bank International Plc.",
       "comparable_pair_count": 0,
       "comparable_year_count": 1,
       "context_ids": [
         "totalcapital_pillar1_uk_2021"
       ],
-      "current_headroom": 448.0,
-      "current_value": 456.0,
-      "frn": "970920",
-      "latest_year": 2023,
+      "current_headroom": 271.68,
+      "current_value": 279.68,
+      "frn": "204419",
+      "latest_year": 2021,
       "metric": "Total Capital Ratio",
       "regulatory_floor": 8.0,
       "sources": [
@@ -7955,21 +8425,67 @@
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
-      "bank": "Griffin Bank Ltd",
+      "bank": "Nomura Bank International Plc.",
       "comparable_pair_count": 0,
       "comparable_year_count": 1,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
       ],
-      "current_headroom": 449.0,
-      "current_value": 456.0,
-      "frn": "970920",
-      "latest_year": 2023,
+      "current_headroom": 272.68,
+      "current_value": 279.68,
+      "frn": "204419",
+      "latest_year": 2021,
       "metric": "CET1 Ratio",
       "regulatory_floor": 7.0,
       "sources": [
         "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "insufficient_evidence",
+      "trend_change": null,
+      "trend_direction": null,
+      "trend_magnitude": null
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "Nomura Bank International Plc.",
+      "comparable_pair_count": 0,
+      "comparable_year_count": 1,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 273.68,
+      "current_value": 279.68,
+      "frn": "204419",
+      "latest_year": 2021,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "insufficient_evidence",
+      "trend_change": null,
+      "trend_direction": null,
+      "trend_magnitude": null
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "Griffin Bank Ltd",
+      "comparable_pair_count": 0,
+      "comparable_year_count": 1,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 448.0,
+      "current_value": 456.0,
+      "frn": "970920",
+      "latest_year": 2023,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "insufficient_evidence",
@@ -8327,8 +8843,27 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "DB UK Bank Limited",
-      "comparable_pair_count": 2,
-      "comparable_year_count": 3,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 24.0,
+      "frn": "140848",
+      "latest_year": 2025,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": -13.0,
+      "trend_direction": "declining",
+      "trend_magnitude": 13.0
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "DB UK Bank Limited",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 536.0,
@@ -8422,8 +8957,8 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "CREDIT SUISSE INTERNATIONAL",
-      "comparable_pair_count": 8,
-      "comparable_year_count": 9,
+      "comparable_pair_count": 10,
+      "comparable_year_count": 11,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 146.9,
@@ -8441,20 +8976,20 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "CREDIT SUISSE INTERNATIONAL",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "comparable_pair_count": 10,
+      "comparable_year_count": 11,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 9.9,
+      "current_value": 53.08,
       "frn": "146702",
-      "latest_year": 2020,
+      "latest_year": 2025,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 2.3000000000000007,
+      "trend_change": 45.48,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.3000000000000007
+      "trend_magnitude": 45.48
     },
     {
       "applicable_buffer": null,
@@ -8479,20 +9014,20 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "CREDIT SUISSE INTERNATIONAL",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "comparable_pair_count": 10,
+      "comparable_year_count": 11,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 19.3,
+      "current_value": 146.9,
       "frn": "146702",
-      "latest_year": 2020,
+      "latest_year": 2025,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 1.6000000000000014,
+      "trend_change": 129.20000000000002,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.6000000000000014
+      "trend_magnitude": 129.20000000000002
     },
     {
       "applicable_buffer": null,
@@ -8502,35 +9037,35 @@
       "comparable_year_count": 12,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 15.0,
+      "current_value": 14.9,
       "frn": "149025",
       "latest_year": 2025,
       "metric": "CET1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -7.0,
+      "trend_change": -7.1,
       "trend_direction": "declining",
-      "trend_magnitude": 7.0
+      "trend_magnitude": 7.1
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "ABC International Bank Plc",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 10.2,
+      "current_value": 9.7,
       "frn": "149025",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -2.3900000000000006,
+      "trend_change": -2.8900000000000006,
       "trend_direction": "declining",
-      "trend_magnitude": 2.3900000000000006
+      "trend_magnitude": 2.8900000000000006
     },
     {
       "applicable_buffer": null,
@@ -8540,16 +9075,16 @@
       "comparable_year_count": 12,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 15.0,
+      "current_value": 14.9,
       "frn": "149025",
       "latest_year": 2025,
       "metric": "Tier 1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -7.0,
+      "trend_change": -7.1,
       "trend_direction": "declining",
-      "trend_magnitude": 7.0
+      "trend_magnitude": 7.1
     },
     {
       "applicable_buffer": null,
@@ -8559,16 +9094,16 @@
       "comparable_year_count": 12,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 16.5,
+      "current_value": 16.2,
       "frn": "149025",
       "latest_year": 2025,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -5.600000000000001,
+      "trend_change": -5.900000000000002,
       "trend_direction": "declining",
-      "trend_magnitude": 5.600000000000001
+      "trend_magnitude": 5.900000000000002
     },
     {
       "applicable_buffer": null,
@@ -9409,40 +9944,21 @@
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
-      "bank": "FCE Bank Plc",
-      "comparable_pair_count": 7,
-      "comparable_year_count": 8,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 16.95,
-      "frn": "204469",
-      "latest_year": 2021,
-      "metric": "Leverage Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": 4.039999999999999,
-      "trend_direction": "increasing",
-      "trend_magnitude": 4.039999999999999
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
       "bank": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 22.37,
+      "current_value": 21.5,
       "frn": "204471",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "CET1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -12.929999999999996,
+      "trend_change": -13.799999999999997,
       "trend_direction": "declining",
-      "trend_magnitude": 12.929999999999996
+      "trend_magnitude": 13.799999999999997
     },
     {
       "applicable_buffer": null,
@@ -9467,39 +9983,39 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 22.37,
+      "current_value": 21.5,
       "frn": "204471",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Tier 1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -12.929999999999996,
+      "trend_change": -13.799999999999997,
       "trend_direction": "declining",
-      "trend_magnitude": 12.929999999999996
+      "trend_magnitude": 13.799999999999997
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "GHANA INTERNATIONAL BANK PUBLIC LIMITED COMPANY",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 22.37,
+      "current_value": 21.5,
       "frn": "204471",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -12.929999999999996,
+      "trend_change": -13.799999999999997,
       "trend_direction": "declining",
-      "trend_magnitude": 12.929999999999996
+      "trend_magnitude": 13.799999999999997
     },
     {
       "applicable_buffer": null,
@@ -9570,6 +10086,44 @@
       "frn": "204490",
       "latest_year": 2025,
       "metric": "CET1 Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": -9.5,
+      "trend_direction": "declining",
+      "trend_magnitude": 9.5
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "KEXIM BANK (UK) LIMITED",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 16.9,
+      "frn": "204490",
+      "latest_year": 2025,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": -6.100000000000001,
+      "trend_direction": "declining",
+      "trend_magnitude": 6.100000000000001
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "KEXIM BANK (UK) LIMITED",
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 20.5,
+      "frn": "204490",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
@@ -9619,8 +10173,8 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Philippine National Bank (Europe) Plc",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 127.55,
@@ -9638,8 +10192,8 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Philippine National Bank (Europe) Plc",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 127.55,
@@ -9657,8 +10211,8 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Philippine National Bank (Europe) Plc",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 127.55,
@@ -9733,39 +10287,20 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "United National Bank Limited",
-      "comparable_pair_count": 8,
-      "comparable_year_count": 9,
+      "comparable_pair_count": 9,
+      "comparable_year_count": 10,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 20.0,
+      "current_value": 16.3,
       "frn": "207381",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 1.6999999999999993,
-      "trend_direction": "increasing",
-      "trend_magnitude": 1.6999999999999993
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
-      "bank": "Persia International Bank Plc",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 28.76,
-      "frn": "208020",
-      "latest_year": 2020,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": -4.23,
+      "trend_change": -2.0,
       "trend_direction": "declining",
-      "trend_magnitude": 4.23
+      "trend_magnitude": 2.0
     },
     {
       "applicable_buffer": null,
@@ -9785,44 +10320,6 @@
       "trend_change": 3.3299999999999983,
       "trend_direction": "increasing",
       "trend_magnitude": 3.3299999999999983
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
-      "bank": "Persia International Bank Plc",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 28.76,
-      "frn": "208020",
-      "latest_year": 2020,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": -19.16,
-      "trend_direction": "declining",
-      "trend_magnitude": 19.16
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
-      "bank": "Persia International Bank Plc",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 38.35,
-      "frn": "208020",
-      "latest_year": 2020,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": -30.589999999999996,
-      "trend_direction": "declining",
-      "trend_magnitude": 30.589999999999996
     },
     {
       "applicable_buffer": null,
@@ -9904,153 +10401,153 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "ICICI Bank UK Plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
+      "comparable_pair_count": 12,
+      "comparable_year_count": 13,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 19.57,
+      "current_value": 17.07,
       "frn": "223268",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "CET1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 2.870000000000001,
+      "trend_change": 0.370000000000001,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.870000000000001
+      "trend_magnitude": 0.370000000000001
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "ICICI Bank UK Plc",
-      "comparable_pair_count": 7,
-      "comparable_year_count": 8,
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 14.18,
+      "current_value": 11.54,
       "frn": "223268",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 0.20999999999999908,
-      "trend_direction": "increasing",
-      "trend_magnitude": 0.20999999999999908
+      "trend_change": -2.4300000000000015,
+      "trend_direction": "declining",
+      "trend_magnitude": 2.4300000000000015
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "ICICI Bank UK Plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
+      "comparable_pair_count": 12,
+      "comparable_year_count": 13,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 19.57,
+      "current_value": 17.07,
       "frn": "223268",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Tier 1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 2.870000000000001,
+      "trend_change": 0.370000000000001,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.870000000000001
+      "trend_magnitude": 0.370000000000001
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "ICICI Bank UK Plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
+      "comparable_pair_count": 12,
+      "comparable_year_count": 13,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 22.6,
+      "current_value": 19.67,
       "frn": "223268",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 0.8000000000000007,
-      "trend_direction": "increasing",
-      "trend_magnitude": 0.8000000000000007
+      "trend_change": -2.129999999999999,
+      "trend_direction": "declining",
+      "trend_magnitude": 2.129999999999999
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "SMBC Bank International plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
+      "comparable_pair_count": 12,
+      "comparable_year_count": 13,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 17.1,
+      "current_value": 21.0,
       "frn": "223304",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "CET1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -5.799999999999997,
+      "trend_change": -1.8999999999999986,
       "trend_direction": "declining",
-      "trend_magnitude": 5.799999999999997
+      "trend_magnitude": 1.8999999999999986
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "SMBC Bank International plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
+      "comparable_pair_count": 12,
+      "comparable_year_count": 13,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 10.1,
+      "current_value": 8.3,
       "frn": "223304",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 2.3999999999999995,
+      "trend_change": 0.6000000000000005,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.3999999999999995
+      "trend_magnitude": 0.6000000000000005
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "SMBC Bank International plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
+      "comparable_pair_count": 12,
+      "comparable_year_count": 13,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 17.1,
+      "current_value": 21.0,
       "frn": "223304",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Tier 1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -5.799999999999997,
+      "trend_change": -1.8999999999999986,
       "trend_direction": "declining",
-      "trend_magnitude": 5.799999999999997
+      "trend_magnitude": 1.8999999999999986
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "SMBC Bank International plc",
-      "comparable_pair_count": 11,
-      "comparable_year_count": 12,
+      "comparable_pair_count": 12,
+      "comparable_year_count": 13,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 17.1,
+      "current_value": 21.0,
       "frn": "223304",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -5.799999999999997,
+      "trend_change": -1.8999999999999986,
       "trend_direction": "declining",
-      "trend_magnitude": 5.799999999999997
+      "trend_magnitude": 1.8999999999999986
     },
     {
       "applicable_buffer": null,
@@ -10117,16 +10614,16 @@
       "comparable_year_count": 5,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 21.46,
+      "current_value": 21.99,
       "frn": "400712",
       "latest_year": 2025,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -18.54,
+      "trend_change": -18.01,
       "trend_direction": "declining",
-      "trend_magnitude": 18.54
+      "trend_magnitude": 18.01
     },
     {
       "applicable_buffer": null,
@@ -10208,8 +10705,8 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Zenith Bank (UK) Limited",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 23.4,
@@ -10227,8 +10724,8 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Zenith Bank (UK) Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 12.08,
@@ -10238,16 +10735,16 @@
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 3.7200000000000006,
+      "trend_change": 1.4000000000000004,
       "trend_direction": "increasing",
-      "trend_magnitude": 3.7200000000000006
+      "trend_magnitude": 1.4000000000000004
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Zenith Bank (UK) Limited",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 23.4,
@@ -10265,8 +10762,8 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Zenith Bank (UK) Limited",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 23.4,
@@ -10360,77 +10857,77 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Guaranty Trust Bank (UK) Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 26.89,
+      "current_value": 36.69,
       "frn": "466611",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "CET1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 1.870000000000001,
+      "trend_change": 11.669999999999998,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.870000000000001
+      "trend_magnitude": 11.669999999999998
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Guaranty Trust Bank (UK) Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 8.02,
+      "current_value": 9.11,
       "frn": "466611",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 2.9799999999999995,
+      "trend_change": 4.069999999999999,
       "trend_direction": "increasing",
-      "trend_magnitude": 2.9799999999999995
+      "trend_magnitude": 4.069999999999999
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Guaranty Trust Bank (UK) Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 26.89,
+      "current_value": 36.69,
       "frn": "466611",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Tier 1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 1.870000000000001,
+      "trend_change": 11.669999999999998,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.870000000000001
+      "trend_magnitude": 11.669999999999998
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Guaranty Trust Bank (UK) Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 26.89,
+      "current_value": 36.69,
       "frn": "466611",
-      "latest_year": 2024,
+      "latest_year": 2025,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 1.870000000000001,
+      "trend_change": 11.669999999999998,
       "trend_direction": "increasing",
-      "trend_magnitude": 1.870000000000001
+      "trend_magnitude": 11.669999999999998
     },
     {
       "applicable_buffer": null,
@@ -10664,77 +11161,20 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Cynergy Bank Plc",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
+      "comparable_pair_count": 8,
+      "comparable_year_count": 9,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 14.12,
+      "current_value": 7.4,
       "frn": "575105",
-      "latest_year": 2020,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": -2.7799999999999994,
-      "trend_direction": "declining",
-      "trend_magnitude": 2.7799999999999994
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
-      "bank": "Cynergy Bank Plc",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 6.1,
-      "frn": "575105",
-      "latest_year": 2020,
+      "latest_year": 2022,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 0.0,
-      "trend_direction": "unchanged",
-      "trend_magnitude": 0.0
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
-      "bank": "Cynergy Bank Plc",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 14.12,
-      "frn": "575105",
-      "latest_year": 2020,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": -2.7799999999999994,
-      "trend_direction": "declining",
-      "trend_magnitude": 2.7799999999999994
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
-      "bank": "Cynergy Bank Plc",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 16.42,
-      "frn": "575105",
-      "latest_year": 2020,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": -8.979999999999997,
-      "trend_direction": "declining",
-      "trend_magnitude": 8.979999999999997
+      "trend_change": 1.3000000000000007,
+      "trend_direction": "increasing",
+      "trend_magnitude": 1.3000000000000007
     },
     {
       "applicable_buffer": null,
@@ -11214,78 +11654,97 @@
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
-      "bank": "State Bank Of India (UK) Limited",
+      "bank": "REDWOOD BANK LIMITED",
       "comparable_pair_count": 6,
       "comparable_year_count": 7,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 20.98,
-      "frn": "757156",
-      "latest_year": 2025,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": null,
-      "sources": [],
-      "status": "no_regulatory_context",
-      "trend_change": 7.280000000000001,
-      "trend_direction": "increasing",
-      "trend_magnitude": 7.280000000000001
-    },
-    {
-      "applicable_buffer": null,
-      "applicable_minimum": null,
-      "bank": "State Bank Of India (UK) Limited",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
-      "context_ids": [],
-      "current_headroom": null,
-      "current_value": 14.43,
-      "frn": "757156",
-      "latest_year": 2025,
+      "current_value": 9.3,
+      "frn": "755924",
+      "latest_year": 2023,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 3.129999999999999,
-      "trend_direction": "increasing",
-      "trend_magnitude": 3.129999999999999
+      "trend_change": -16.89,
+      "trend_direction": "declining",
+      "trend_magnitude": 16.89
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "State Bank Of India (UK) Limited",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 20.98,
+      "current_value": 19.6,
       "frn": "757156",
-      "latest_year": 2025,
+      "latest_year": 2026,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": 5.900000000000002,
+      "trend_direction": "increasing",
+      "trend_magnitude": 5.900000000000002
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "State Bank Of India (UK) Limited",
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 13.4,
+      "frn": "757156",
+      "latest_year": 2026,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": 2.0999999999999996,
+      "trend_direction": "increasing",
+      "trend_magnitude": 2.0999999999999996
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "State Bank Of India (UK) Limited",
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 19.6,
+      "frn": "757156",
+      "latest_year": 2026,
       "metric": "Tier 1 Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 7.280000000000001,
+      "trend_change": 5.900000000000002,
       "trend_direction": "increasing",
-      "trend_magnitude": 7.280000000000001
+      "trend_magnitude": 5.900000000000002
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "State Bank Of India (UK) Limited",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 20.98,
+      "current_value": 19.6,
       "frn": "757156",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 3.4800000000000004,
+      "trend_change": 2.1000000000000014,
       "trend_direction": "increasing",
-      "trend_magnitude": 3.4800000000000004
+      "trend_magnitude": 2.1000000000000014
     },
     {
       "applicable_buffer": null,
@@ -11310,20 +11769,20 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Citibank UK Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 16.7,
+      "current_value": 76.67,
       "frn": "805574",
-      "latest_year": 2023,
+      "latest_year": 2024,
       "metric": "Leverage Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 9.5,
+      "trend_change": 69.47,
       "trend_direction": "increasing",
-      "trend_magnitude": 9.5
+      "trend_magnitude": 69.47
     },
     {
       "applicable_buffer": null,
@@ -11348,27 +11807,27 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "Citibank UK Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [],
       "current_headroom": null,
-      "current_value": 90.8,
+      "current_value": 138.6,
       "frn": "805574",
-      "latest_year": 2023,
+      "latest_year": 2024,
       "metric": "Total Capital Ratio",
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": 45.5,
+      "trend_change": 93.3,
       "trend_direction": "increasing",
-      "trend_magnitude": 45.5
+      "trend_magnitude": 93.3
     },
     {
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "The Bank of London Group Limited",
-      "comparable_pair_count": 1,
-      "comparable_year_count": 2,
+      "comparable_pair_count": 2,
+      "comparable_year_count": 3,
       "context_ids": [],
       "current_headroom": null,
       "current_value": 82.94,
@@ -11378,9 +11837,9 @@
       "regulatory_floor": null,
       "sources": [],
       "status": "no_regulatory_context",
-      "trend_change": -5.969999999999999,
+      "trend_change": -12.400000000000006,
       "trend_direction": "declining",
-      "trend_magnitude": 5.969999999999999
+      "trend_magnitude": 12.400000000000006
     },
     {
       "applicable_buffer": null,

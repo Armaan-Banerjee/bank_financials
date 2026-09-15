@@ -66,7 +66,13 @@ NOT_APPLICABLE_P3_NOTE = (
     "not a PRA-authorised bank during FY2021-FY2023 and had no Pillar 3 disclosure obligation - its own filed "
     "accounts for those years contain no capital/liquidity/leverage/RWA figures of any kind. This is a genuine "
     "'not applicable' (no obligation existed), distinct from 'not publicly disclosed' (an obligated but unpublished "
-    "figure), which is how FY2024's own non-disclosures are marked."
+    "figure), which is how FY2024's own non-disclosures are marked.\n"
+    "RE-VERIFIED 2026-09-12 (disclosure audit): confirmed independently against the Companies House register - "
+    "company 13090556 was incorporated 18 December 2020 and was named 'ALL AFRICA CAPITAL LIMITED' from "
+    "18 Dec 2020 until 22 October 2024, when it was renamed Afin Bank Limited on receiving banking authorisation "
+    "with restrictions. FY2021-FY2023 therefore sit wholly inside the pre-authorisation period and the blanks are "
+    "structural. Also confirmed the workbook's FY2024 endpoint is still current: the latest accounts on the "
+    "register are made up to 31 December 2024, with FY2025 accounts not yet filed (due 30 September 2026)."
 )
 
 CASH_FLOW_SOURCES = (
@@ -182,10 +188,15 @@ ASSET_QUALITY_SOURCES = (
 
 RWA_BREAKDOWN_SOURCES = (
     "Sources - Afin Bank Limited standalone Pillar 3 Disclosures for the year ended 31 December 2024:\n"
-    f"UK KM1 Key Metrics, printed pp. 4-5 - {P3_2024_URL}\n" + ENTITY_NOTE
-    + "\nNOT DISCLOSED (FY2024): as a small non-complex institution under CRR Article 433b, Afin Bank's 2024 "
-    "Pillar 3 disclosure contains only the single aggregate Total RWA figure in UK KM1 (see the Total RWAs "
-    "sheet) - no UK OV1 exposure-class breakdown is published.\n"
+    f"FY2024: UK OV1 - Overview of risk weighted exposure amounts (Table 2), printed p. 5 - {P3_2024_URL}\n"
+    "FY2024 figures are directly disclosed (not derived): Credit risk (excluding CCR) £2,489k + Operational risk "
+    "£598k = £3,087k, which reconciles exactly to the Total RWAs sheet's own FY2024 figure of £3,087k (UK KM1, "
+    "row 4). No counterparty credit risk, securitisation or market risk rows are shown in Afin Bank's own OV1 "
+    "table (rows 2-22 and 24-28 of the standard OV1 template are blank/not populated), consistent with a small, "
+    "newly-authorised institution with no trading book or derivatives exposure - not a gap in transcription.\n"
+    + ENTITY_NOTE
+    + "\nNOT APPLICABLE / NOT DISCLOSED (FY2023-FY2021): as above (see NOT_APPLICABLE_P3_NOTE) - the entity had no "
+    "Pillar 3 disclosure obligation for these years.\n"
     + NOT_APPLICABLE_P3_NOTE
 )
 
@@ -376,10 +387,17 @@ metric("Total RWAs", "£'000", [
 ])
 bw.add_rwa_breakdown_sheet(
     title="Afin Bank Limited — RWA Breakdown",
-    subtitle="Afin Bank Limited risk-weighted exposure amount breakdown; amounts in £'000.",
+    subtitle=(
+        "Afin Bank Limited risk-weighted exposure amount breakdown; amounts in £'000. FY2024 per the Pillar 3 "
+        "UK OV1 template; FY2023-FY2021 not applicable (entity not yet a PRA-authorised bank)."
+    ),
     rows=[
+        ("SECTION", "UK OV1 — Overview of risk weighted exposure amounts", {}),
+        ("DATA", "Credit risk (excluding CCR)", {"FY2024": 2489}),
+        ("DATA", "Operational risk", {"FY2024": 598}),
+        ("TOTAL", "Total risk weighted exposure amount", {"FY2024": 3087}),
+        ("SECTION", "Not applicable", {}),
         ("DATA", "Not publicly disclosed / Not applicable", {
-            "FY2024": "Not publicly disclosed",
             "FY2023": "Not applicable",
             "FY2022": "Not applicable",
             "FY2021": "Not applicable",

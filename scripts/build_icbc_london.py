@@ -21,6 +21,13 @@ AR14_URL = "https://find-and-update.company-information.service.gov.uk/company/0
 
 P3_25_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2025/2025_pillar_3_disclosure.pdf"
 P3_24_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2024/2024_pillar_3_disclosure.pdf"
+# FY2023/FY2022/FY2021 Pillar 3 documents: all live on the Bank's own CDN, but the FY2023, FY2022
+# and FY2021 files are each MISFILED one year forward (2023 doc under .../2024/, 2022 doc under
+# .../2023/, 2021 doc under .../2022/), and the two older ones use a no-underscore filename style.
+# Located via a Wayback CDX listing of the CDN path in the 2026-09-12 disclosure audit.
+P3_23_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2024/2023_pillar_3_disclosure.pdf"
+P3_22_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2023/2022Pillar3Disclosure.pdf"
+P3_21_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2022/2021Pillar3Disclosure.pdf"
 
 CASH_FLOW_SOURCES = (
     "Sources — all figures are ICBC (London) plc Statement of Cash Flows, $'000:\n"
@@ -77,21 +84,44 @@ def p3_sources(note_disclosure_start=True):
         "Sources — ICBC (London) plc (solo basis), Annex 2 — UK KM1 - Key metric template:\n"
         f"FY2025: ICBC (London) plc Pillar 3 Disclosures 2025, p.13-14 (31/12/2025 column) — {P3_25_URL}\n"
         f"FY2024: ICBC (London) plc Pillar 3 Disclosures 2024, p.12-13 (31/12/2024 column) — {P3_24_URL}\n"
-        f"FY2023: ICBC (London) plc Pillar 3 Disclosures 2024, p.12-13 (31/12/2023 comparative column, the only "
-        f"public source for this year) — {P3_24_URL}"
+        f"FY2023: ICBC (London) plc Pillar 3 Disclosures 2023, p.12-13 (31/12/2023 column, the year's own "
+        f"authoritative document) — {P3_23_URL}\n"
+        f"FY2022: ICBC (London) plc Pillar 3 Disclosures 2022, p.12-13 (31/12/2022 column) — {P3_22_URL}\n"
+        f"FY2021: ICBC (London) plc Pillar 3 Disclosures 2021, p.13-14 (31/12/2021 column) — {P3_21_URL}\n"
+        "FY2021/FY2022 LOCATED 2026-09-12 (independent disclosure audit) — these two years were previously "
+        "recorded as 'not publicly disclosed'. Both documents are live on the Bank's own CDN but each is MISFILED "
+        "ONE YEAR FORWARD (the 2021 disclosure sits in the .../download/2022/ folder, the 2022 disclosure in "
+        ".../download/2023/), and both use a different filename convention ('2021Pillar3Disclosure.pdf') from the "
+        "later underscore style ('2024_pillar_3_disclosure.pdf'), which is why earlier folder-matched searches "
+        "missed them. Found via a Wayback Machine CDX listing of the CDN path, then confirmed live. Cross-verified: "
+        "the FY2022 document's own T-4 (31/12/2021) comparative column reproduces every FY2021 figure used here "
+        "exactly (CET1 451,197.05; RWA 739,776.26; leverage 30.75%; LCR 492.91%; NSFR 150.16%).\n"
+        "FY2022 ratio basis: 50.54% is the FY2022 document's OWN 31/12/2022 figure. The FY2023 document's "
+        "31/12/2022 comparative column instead shows 50.67% (a small later restatement); this workbook follows the "
+        "project convention of using each year's own primary presentation rather than a later restated comparative.\n"
+        "FY2023 NSFR CORRECTED 2026-09-12: this sheet previously carried FY2023 NSFR as 135.79% (ASF 694,607 / RSF "
+        "511,527), taken from the FY2024 document's 31/12/2023 comparative column. That comparative is demonstrably "
+        "wrong in the source itself - it reproduces the FY2022 NSFR row to the cent (the FY2022 document's own "
+        "31/12/2022 column reads ASF 694,606.62 / RSF 511,526.78 / 135.79%), i.e. the FY2024 document carried the "
+        "prior year's row forward. The FY2023 document's own 31/12/2023 column gives ASF 798,010.24 / RSF "
+        "477,595.45 / 167.09%, which is what is now shown. Only the NSFR row is affected: FY2023 capital, RWA, "
+        "ratio, leverage and LCR figures all agree exactly between the FY2023 and FY2024 documents."
     )
     if note_disclosure_start:
         text += (
-            "\nNote: ICBC (London) plc's formal Pillar 3/KM1-style RWA and ratio disclosures are only publicly "
-            "available from FY2023 onward (no Pillar 3 disclosure document, and no risk-weighted-assets figure of "
-            "any kind, exists anywhere in the Bank's own FY2014-FY2022 Annual Reports - each year's own accounts "
-            "instead point readers to a web address for the (not separately filed) Pillar 3 disclosure). CET1/Tier 1/"
-            "Total Capital £ amounts, however, ARE disclosed every year back to FY2014 via each year's own "
-            "'Regulatory capital' note (see the CET1/Tier 1/Total Capital sheets' own FY2014-FY2020 source note); "
-            "it is only the RWA denominator - and therefore the CET1/Tier1/Total Capital Ratio, Total RWAs, RWA "
-            "Breakdown, Leverage Ratio and NSFR sheets - that remains genuinely undisclosed for FY2014-FY2020. This "
-            "is a real widening of the Pillar 3 disclosure-start finding already recorded in this note for FY2021-"
-            "2022 (that gap remains a separate, smaller finding from a follow-up out of this ticket's scope)."
+            "\nNote: ICBC (London) plc's formal Pillar 3/KM1-style RWA and ratio disclosures are publicly "
+            "available from FY2021 onward (standalone Pillar 3 documents exist for FY2021-FY2025; see the misfiling "
+            "note above for why FY2021/FY2022 were previously thought absent). No Pillar 3 disclosure document, and "
+            "no risk-weighted-assets figure of any kind, exists anywhere in the Bank's own FY2014-FY2020 Annual "
+            "Reports - each year's own accounts instead point readers to a web address for the (not separately "
+            "filed) Pillar 3 disclosure. CET1/Tier 1/Total Capital $ amounts, however, ARE disclosed every year back "
+            "to FY2014 via each year's own 'Regulatory capital' note (see the CET1/Tier 1/Total Capital sheets' own "
+            "FY2014-FY2020 source note); it is only the RWA denominator - and therefore the CET1/Tier1/Total Capital "
+            "Ratio, Total RWAs, RWA Breakdown, Leverage Ratio and NSFR sheets - that remains genuinely undisclosed "
+            "for FY2014-FY2020. Basis note: the Annual Report 'Regulatory capital' figure and the Pillar 3 KM1 "
+            "figure are not identical where they overlap (FY2020: AR 456,128 vs the FY2021 KM1 document's own "
+            "31/12/2020 comparative of 445,536.92); the FY2014-FY2020 cells keep the Annual Report basis they were "
+            "sourced on, and FY2021 onward use the Pillar 3 KM1 basis, as each sheet's citations state."
         )
     return text
 
@@ -252,23 +282,46 @@ ASSET_QUALITY_SOURCES = (
 
 def rwa_sources():
     return (
-        "Sources — ICBC (London) plc (solo basis), Annex 1 — UK OV1 template (Overview "
+        "Sources — ICBC (London) plc (solo basis), Annex 1 / UK OV1 template (Overview "
         "of risk weighted exposure amounts), $'000:\n"
         f"FY2025: ICBC (London) plc Pillar 3 Disclosures 2025, p.14-15 (31/12/2025 "
         f"column) — {P3_25_URL}\n"
         f"FY2024: ICBC (London) plc Pillar 3 Disclosures 2024, p.15-16 (31/12/2024 "
         f"column) — {P3_24_URL}\n"
-        "Note: the OV1 category-level RWA breakdown table is only publicly available "
-        "from FY2024 onward (same disclosure-start limitation as the other Pillar 3 "
-        "sheets in this workbook - see the CET1/Tier 1/etc. sheets' own source note). "
-        "No FY2023, FY2022 or FY2021 OV1 table exists; only the aggregate Total RWA "
-        "figure for those years is disclosed (in the KM1 template, see the Total RWAs "
-        "sheet), not a category-level split. FY2025's OV1 Total ($675,423.74k) and "
-        "FY2024's OV1 Total ($719,040.48k, matching the Total RWAs sheet's disclosed "
-        "figure exactly) both come from the Bank's own Pillar 3 documents; FY2025's OV1 "
-        "Total differs slightly ($675,423.74k vs. $675,668k) from the Total RWAs sheet's "
-        "KM1-sourced figure for the same date - both are the Bank's own official "
-        "disclosures, reproduced as reported rather than force-reconciled."
+        f"FY2023: ICBC (London) plc Pillar 3 Disclosures 2023, p.15, 'UK OV1 - Overview "
+        f"of risk weighted exposure amounts' (31/12/2023 column) — "
+        f"https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2024/2023_pillar_3_disclosure.pdf\n\n"
+        "CORRECTION (2026-09-12 independent re-verification): this sheet previously stated "
+        "'No FY2023 ... OV1 table exists' - that was wrong. The document is live on the "
+        "Bank's own site (filed under its 2024 download folder, not 2023) and its own OV1 "
+        "table gives Credit risk (excl. CCR) $795,488.58k, Counterparty credit risk (CCR) "
+        "nil, Operational risk $47,249.90k, summing exactly to the document's own printed "
+        "Total of $842,738.48k - which ties to the Total RWAs sheet's FY2023 figure "
+        "($842,738k, KM1-sourced) to the nearest thousand.\n"
+        f"FY2022: ICBC (London) plc Pillar 3 Disclosures 2022, p.15-16, 'UK OV1 - Overview "
+        f"of risk weighted exposure amounts' (column a, 31/12/2022) — {P3_22_URL}\n"
+        f"FY2021: ICBC (London) plc Pillar 3 Disclosures 2021, p.14, 'UK OV1 - Overview of "
+        f"risk weighted exposure amounts' (column a, 31/12/2021) — {P3_21_URL}\n\n"
+        "SECOND CORRECTION (2026-09-15): this sheet previously stated 'No FY2022 or FY2021 "
+        "OV1 table has been located' - that was also wrong, and for the same reason as the "
+        "FY2023 error above. Both documents carry a full UK OV1 table, and both were "
+        "already cited elsewhere in this very script for other metrics - they had simply "
+        "never been read for their OV1. Note the same year-forward misfiling: the FY2021 "
+        "document sits in the Bank's /2022/ download folder and the FY2022 document in its "
+        "/2023/ folder. Both tables have a real text layer; no OCR was needed.\n"
+        "Both tie exactly to the Total RWAs sheet's existing KM1-sourced figures. FY2022: "
+        "Credit risk (excl. CCR) $848,322.89k + CCR nil (printed '-') + Operational risk "
+        "$54,534.06k = the document's own printed Total of $902,856.95k, against the Total "
+        "RWAs sheet's $902,857k. FY2021: Credit risk (excl. CCR) $671,772.29k + CCR "
+        "$20.86k + Operational risk $67,983.12k = the document's own printed Total of "
+        "$739,776.26k, against the Total RWAs sheet's $739,776k. Both documents report all "
+        "credit and counterparty risk under the standardised approach and operational risk "
+        "under the basic indicator approach, matching FY2023-FY2025. FY2025's OV1 Total "
+        "($675,423.74k) and FY2024's OV1 Total ($719,040.48k, matching the Total RWAs "
+        "sheet's disclosed figure exactly) both come from the Bank's own Pillar 3 "
+        "documents; FY2025's OV1 Total differs slightly ($675,423.74k vs. $675,668k) from "
+        "the Total RWAs sheet's KM1-sourced figure for the same date - both are the Bank's "
+        "own official disclosures, reproduced as reported rather than force-reconciled."
     )
 
 bw = BankWorkbook(bank_name="ICBC (London) plc", years=Y_CORE, year_label={y: y for y in YEARS}, header_color="2E5395")
@@ -556,51 +609,55 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 metric(
     "CET1 Capital", "$'000",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451})],
     p3_sources() + "\n\n" + p3_capital_sources_1420(),
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%"})],
+    [("Common Equity Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"})],
     p3_sources(),
 )
 
 metric(
     "Tier 1 Capital", "$'000",
-    [("Tier 1 capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451})],
+    [("Tier 1 capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451})],
     p3_sources() + "\n\n" + p3_capital_sources_1420(),
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%"})],
+    [("Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"})],
     p3_sources(),
 )
 
 metric(
     "Total Capital", "$'000",
-    [("Total capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2020": 456128, "FY2019": 443521, "FY2018": 518606, "FY2017": 500128, "FY2016": 480067, "FY2015": 459354, "FY2014": 425451})],
+    [("Total capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 518606, "FY2017": 500128, "FY2016": 480067, "FY2015": 459354, "FY2014": 425451})],
     p3_sources() + "\n\n" + p3_capital_sources_1420(),
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%"})],
+    [("Total capital ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"})],
     p3_sources(),
 )
 
 metric(
     "Total RWAs", "$'000",
-    [("Total risk-weighted exposure amount", {"FY2025": 675668, "FY2024": 719040, "FY2023": 842738})],
+    [("Total risk-weighted exposure amount", {"FY2025": 675668, "FY2024": 719040, "FY2023": 842738, "FY2022": 902857, "FY2021": 739776})],
     p3_sources(),
 )
 
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 590477.63, "FY2024": 660913.86}),
-    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 748.81, "FY2024": 294.72}),
-    ("DATA", "Operational risk", {"FY2025": 84197.30, "FY2024": 57831.90}),
-    ("TOTAL", "Total risk weighted exposure amount", {"FY2025": 675423.74, "FY2024": 719040.48}),
+    ("DATA", "Credit risk (excluding CCR)",
+     {"FY2025": 590477.63, "FY2024": 660913.86, "FY2023": 795488.58, "FY2022": 848322.89, "FY2021": 671772.29}),
+    ("DATA", "Counterparty credit risk (CCR)",
+     {"FY2025": 748.81, "FY2024": 294.72, "FY2023": 0, "FY2022": 0, "FY2021": 20.86}),
+    ("DATA", "Operational risk",
+     {"FY2025": 84197.30, "FY2024": 57831.90, "FY2023": 47249.90, "FY2022": 54534.06, "FY2021": 67983.12}),
+    ("TOTAL", "Total risk weighted exposure amount",
+     {"FY2025": 675423.74, "FY2024": 719040.48, "FY2023": 842738.48, "FY2022": 902856.95, "FY2021": 739776.26}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -616,8 +673,8 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "$'000 / %",
     [
-        ("Leverage ratio total exposure measure ($'000)", {"FY2025": 1153889, "FY2024": 1493767, "FY2023": 1339718}),
-        ("Leverage ratio (%)", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%"}),
+        ("Leverage ratio total exposure measure ($'000)", {"FY2025": 1153889, "FY2024": 1493767, "FY2023": 1339718, "FY2022": 1436983, "FY2021": 1467315}),
+        ("Leverage ratio (%)", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%"}),
     ],
     p3_sources(),
 )
@@ -625,9 +682,9 @@ metric(
 metric(
     "LCR", "$'000 / %",
     [
-        ("Total high-quality liquid assets (HQLA), weighted value ($'000)", {"FY2025": 1374779, "FY2024": 328482, "FY2023": 384069}),
-        ("Total net cash outflows, adjusted value ($'000)", {"FY2025": 956680, "FY2024": 187564, "FY2023": 136060}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%"}),
+        ("Total high-quality liquid assets (HQLA), weighted value ($'000)", {"FY2025": 1374779, "FY2024": 328482, "FY2023": 384069, "FY2022": 288785, "FY2021": 351222}),
+        ("Total net cash outflows, adjusted value ($'000)", {"FY2025": 956680, "FY2024": 187564, "FY2023": 136060, "FY2022": 168073, "FY2021": 71254}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%"}),
     ],
     p3_sources(),
     note="LCR figures are single month-end (31 December) spot observations as disclosed in the KM1 template, not a "
@@ -642,9 +699,9 @@ metric(
 metric(
     "NSFR", "$'000 / %",
     [
-        ("Total available stable funding ($'000)", {"FY2025": 581574, "FY2024": 608924, "FY2023": 694607}),
-        ("Total required stable funding ($'000)", {"FY2025": 335509, "FY2024": 407762, "FY2023": 511527}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "135.79%"}),
+        ("Total available stable funding ($'000)", {"FY2025": 581574, "FY2024": 608924, "FY2023": 798010, "FY2022": 694607, "FY2021": 839389}),
+        ("Total required stable funding ($'000)", {"FY2025": 335509, "FY2024": 407762, "FY2023": 477595, "FY2022": 511527, "FY2021": 558997}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "167.09%", "FY2022": "135.79%", "FY2021": "150.16%"}),
     ],
     p3_sources(),
 )
@@ -686,20 +743,23 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="$'000",
     ratios=[
-        ("CET1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%"}),
-        ("Tier 1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%"}),
-        ("Total Capital Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%"}),
-        ("Leverage Ratio", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%"}),
-        ("LCR", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%"}),
-        ("NSFR", {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "135.79%"}),
+        ("CET1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
+        ("Tier 1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
+        ("Total Capital Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
+        ("Leverage Ratio", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%"}),
+        ("LCR", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%"}),
+        ("NSFR", {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "167.09%", "FY2022": "135.79%", "FY2021": "150.16%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. RWA-denominated Pillar 3 ratios (CET1/Tier1/Total Capital "
-         "Ratio, Leverage Ratio, NSFR) are only publicly disclosed from FY2023 onward - no risk-weighted-assets "
-         "figure of any kind exists in the Bank's own FY2014-FY2022 Annual Reports, even though the underlying "
-         "CET1/Tier1/Total Capital £ amounts are disclosed back to FY2014 (see those sheets' own source note); "
-         "blank cells for those years/ratios are intentional, not zeros. LCR is the one ratio disclosed earlier, "
-         "as a narrative percentage from FY2017 (see the LCR sheet's own source note for FY2014-2016's absence).",
+         "Ratio, Leverage Ratio, NSFR) are publicly disclosed from FY2021 onward - the FY2021 and FY2022 standalone "
+         "Pillar 3 documents were located on the Bank's own CDN in the 2026-09-12 disclosure audit (each misfiled "
+         "one year forward, see the Pillar 3 source note) and supersede the prior claim that nothing before FY2023 "
+         "was disclosed. No risk-weighted-assets figure of any kind exists in the Bank's own FY2014-FY2020 Annual "
+         "Reports, even though the underlying CET1/Tier1/Total Capital $ amounts are disclosed back to FY2014 (see "
+         "those sheets' own source note); blank cells for those years/ratios are intentional, not zeros. LCR is the "
+         "one ratio disclosed earlier, as a narrative percentage from FY2017 (see the LCR sheet's own source note "
+         "for FY2014-2016's absence).",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ICBC (LONDON) PLC FINANCIALS.xlsx")

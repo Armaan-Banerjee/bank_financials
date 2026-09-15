@@ -137,9 +137,45 @@ def p3_sources():
         f"FY2016: Pillar 3 Report 2016, Section 3 'Summary of key capital ratios' infographic "
         f"plus Section 4 'Capital resources, requirements and leverage' detail tables - "
         f"{P3_2016_URL}\n"
-        "FY2025: no standalone Pillar 3 Report was published on the Bank's website as of this "
-        "session (only 2016-2024 reports are listed) - genuinely not yet disclosed, left blank "
-        "rather than guessed. No Total Capital / Tier 2 capital is disclosed separately from "
+        "FY2025: no standalone Pillar 3 Report has been published as at 15 September 2026. "
+        "Re-checked that date: the Bank's own Annual Report and Accounts page "
+        "(https://www.jordanbank.co.uk/annual-report-and-accounts/) lists Pillar 3 Reports for "
+        "2016-2024 only, while already carrying the FY2025 company accounts, and a Wayback CDX "
+        "sweep of the whole jordanbank.co.uk domain for 'pillar' URLs returns nothing later than "
+        "the FY2024 report (first archived 10 December 2025). JIB publishes its Pillar 3 around "
+        "November/December, so the FY2025 edition is expected ~December 2026. The FY2025 accounts "
+        "themselves state the detail 'will be provided in the Bank's Pillar 3 Report' and disclose "
+        "no ratios, so CET1 Ratio, Tier 1 Ratio, Total Capital Ratio, Total RWAs, Leverage Ratio, "
+        "LCR and NSFR are all genuinely undisclosed for FY2025 and are left blank rather than "
+        "derived. The ONE FY2025 figure that is available is capital itself, and it is "
+        "ANNUAL-REPORT-BASIS, not Pillar 3: Annual Report and Financial Statements 2025, Note 33 "
+        "'Risk management - Capital risk - Capital management / Tier 1 capital', p.84 ('For the "
+        "purposes of capital management, the Group considers equity as presented on the balance "
+        "sheet to be its capital. Total equity at 31 December 2025 was GBP96m (2024: GBP94m)', and "
+        "'The Bank's regulatory capital base consists solely of Common Equity Tier 1 (CET1) "
+        "instruments, and there are no instruments which would be eligible as regulatory capital "
+        "under Additional Tier 1 or Tier 2') - "
+        + AR2025_URL + " (also published by the Bank at "
+        "https://www.jordanbank.co.uk/media/tlihy44n/company_accounts_2025.pdf). BASIS CHECK: that "
+        "same sentence's own FY2024 comparative of GBP94m reproduces the FY2024 Pillar 3 CET1 of "
+        "GBP94m exactly, and the FY2025 Balance Sheet (p.31) shows shareholders' funds of "
+        "GBP95,728k (2024: GBP93,921k), consistent with both. Caveat: the Bank states this capital "
+        "figure only to the nearest GBP1m, so the FY2025 entry of 96 is accurate only to +/-GBP0.5m "
+        "and rests on the Bank's own stated equivalence of balance-sheet equity with regulatory "
+        "capital rather than on a published CET1 line. That equivalence was independently tested "
+        "across all nine Pillar 3-sourced years by comparing each year's own Balance Sheet "
+        "shareholders' funds against that year's own published Pillar 3 CET1 figure, and it holds "
+        "within +/-GBP0.15m every time (GBP'000 shareholders' funds vs GBP'm Pillar 3 CET1: FY2024 "
+        "93,921 vs 94; FY2023 88,961 vs 89; FY2022 83,789 vs 83.8; FY2021 93,319 vs 93.3; FY2020 "
+        "91,392 vs 91.3; FY2019 89,005 vs 88.9; FY2018 84,570 vs 84.5; FY2017 83,148 vs 83.0; "
+        "FY2016 80,115 vs 80.1 fully loaded) - i.e. this Bank historically takes no material "
+        "regulatory deduction against equity. ONE FORWARD-LOOKING CAVEAT on that: FY2025 is the "
+        "first year in the whole series in which the Bank reports intangible assets (GBP193k, a new "
+        "Balance Sheet line that year), and intangibles ARE deducted from regulatory CET1. If the "
+        "FY2025 Pillar 3 Report applies that deduction, its published CET1 will be nearer GBP95.5m "
+        "(shareholders' funds 95,728 less intangibles 193 = 95,535) than the GBP96m recorded here, "
+        "so this cell should be revisited - and restated to the exact figure - once that report is "
+        "published (expected ~December 2026). No Total Capital / Tier 2 capital is disclosed separately from "
         "CET1 in any year (Tier 1 = Total Capital = CET1 throughout, per the Bank's own table "
         "labelling) FY2016-FY2025. FY2016 discloses both a 'fully loaded' and a 'PRA "
         "transitional' CET1/Tier1/Total Capital and ratio basis (a Basel III/CRD IV phase-in "
@@ -620,14 +656,11 @@ def metric(name, unit, rows_data, sources_text, note=None):
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {
-        "FY2024": 94, "FY2023": 89, "FY2022": 83.8, "FY2021": 93.3,
+        "FY2025": 96, "FY2024": 94, "FY2023": 89, "FY2022": 83.8, "FY2021": 93.3,
         "FY2020": 91.3, "FY2019": 88.9, "FY2018": 84.5, "FY2017": 83.0, "FY2016": 80.1,
     })],
     p3_sources(),
-    note="FY2025 not yet published (see sources). No Additional Tier 1/Tier 2 capital is "
-         "disclosed in any year, so CET1 = Tier 1 = Total Capital throughout. FY2016 figure is "
-         "the 'fully loaded' basis (see sources note on the fully-loaded/PRA-transitional split "
-         "unique to that year).",
+    note="FY2025 is ANNUAL-REPORT-BASIS, not Pillar 3 (no FY2025 Pillar 3 Report published as at 15 September 2026): the Bank states it 'considers equity as presented on the balance sheet to be its capital', giving total equity at 31 December 2025 of GBP96m (2024: GBP94m), and that its regulatory capital base consists solely of CET1 with no AT1/Tier 2 eligible instruments. That FY2024 comparative reproduces the FY2024 Pillar 3 CET1 of GBP94m exactly. Stated only to the nearest GBP1m, so accurate to +/-GBP0.5m - see sources. No Additional Tier 1/Tier 2 capital is disclosed in any year, so CET1 = Tier 1 = Total Capital throughout. FY2016 figure is the 'fully loaded' basis (see sources note on the fully-loaded/PRA-transitional split unique to that year).",
 )
 metric(
     "CET1 Ratio", "%",
@@ -640,11 +673,11 @@ metric(
 metric(
     "Tier 1 Capital", "£m",
     [("Tier 1 capital", {
-        "FY2024": 94, "FY2023": 89, "FY2022": 83.8, "FY2021": 93.3,
+        "FY2025": 96, "FY2024": 94, "FY2023": 89, "FY2022": 83.8, "FY2021": 93.3,
         "FY2020": 91.3, "FY2019": 88.9, "FY2018": 84.5, "FY2017": 83.0, "FY2016": 80.1,
     })],
     p3_sources(),
-    note="Equal to CET1 capital - no Additional Tier 1 instruments are disclosed in any year.",
+    note="Equal to CET1 capital - no Additional Tier 1 instruments are disclosed in any year. FY2025 is ANNUAL-REPORT-BASIS, not Pillar 3 (no FY2025 Pillar 3 Report published as at 15 September 2026): the Bank states it 'considers equity as presented on the balance sheet to be its capital', giving total equity at 31 December 2025 of GBP96m (2024: GBP94m), and that its regulatory capital base consists solely of CET1 with no AT1/Tier 2 eligible instruments. That FY2024 comparative reproduces the FY2024 Pillar 3 CET1 of GBP94m exactly. Stated only to the nearest GBP1m, so accurate to +/-GBP0.5m - see sources. ",
 )
 metric(
     "Tier 1 Ratio", "%",
@@ -657,11 +690,11 @@ metric(
 metric(
     "Total Capital", "£m",
     [("Total capital", {
-        "FY2024": 94, "FY2023": 89, "FY2022": 83.8, "FY2021": 93.3,
+        "FY2025": 96, "FY2024": 94, "FY2023": 89, "FY2022": 83.8, "FY2021": 93.3,
         "FY2020": 91.3, "FY2019": 88.9, "FY2018": 84.5, "FY2017": 83.0, "FY2016": 80.1,
     })],
     p3_sources(),
-    note="Equal to CET1/Tier 1 capital - no Tier 2 instruments are disclosed in any year.",
+    note="Equal to CET1/Tier 1 capital - no Tier 2 instruments are disclosed in any year. FY2025 is ANNUAL-REPORT-BASIS, not Pillar 3 (no FY2025 Pillar 3 Report published as at 15 September 2026): the Bank states it 'considers equity as presented on the balance sheet to be its capital', giving total equity at 31 December 2025 of GBP96m (2024: GBP94m), and that its regulatory capital base consists solely of CET1 with no AT1/Tier 2 eligible instruments. That FY2024 comparative reproduces the FY2024 Pillar 3 CET1 of GBP94m exactly. Stated only to the nearest GBP1m, so accurate to +/-GBP0.5m - see sources. ",
 )
 metric(
     "Total Capital Ratio", "%",
@@ -757,9 +790,13 @@ metric(
     })],
     p3_sources(),
     note="Not disclosed for FY2017-FY2021 - genuinely absent from every one of those years' own "
-         "Pillar 3 Reports (checked directly, not assumed); disclosed once in FY2016's own summary "
-         "infographic (123%) before dropping out of the Bank's disclosure until it reappears from "
-         "the FY2022 KM1 template onward.",
+         "Pillar 3 Reports (checked directly, not assumed; the FY2021 report was re-read on "
+         "2026-09-15 and contains an LCR but no NSFR anywhere); disclosed once in FY2016's own "
+         "summary infographic (123%) before dropping out of the Bank's disclosure until it "
+         "reappears from the FY2022 KM1 template onward. This matches the UK regime: there was no "
+         "NSFR requirement or NSFR disclosure template in the UK until PRA PS17/21 / PS22/21 took "
+         "effect on 1 January 2022, so any FY2021-or-earlier NSFR - including this Bank's FY2016 "
+         "one - was voluntary.",
 )
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),

@@ -14,14 +14,20 @@ from bank_workbook import BankWorkbook
 # documents the exemption instead of line items, Overview sheet omits the cash-flow
 # chart.
 #
-# No dedicated Pillar 3 document exists and no standalone Pillar 3 page was found on
-# db.com. The ONLY capital/liquidity figures found anywhere in the Annual Reports
-# are: a single generic "regulatory capital ratio" (unaudited) mentioned once in the
-# Going Concern paragraph of Note 1 (no CET1/Tier 1/Total Capital breakdown, no RWA,
-# no £ capital amount - just the one ratio, for the report's own year only, never a
-# prior-year comparative), and a Liquidity Risk KPI table (note 27/29 "Risk Report")
-# giving LCR and NSFR for the current and one comparative year. All figures reported
-# in GBP (the Company's functional currency) - no FX conversion needed.
+# No entity-level Pillar 3 document exists, and the Company's own Directors' Report
+# explains why: its PRA Disclosure (CRR) obligation is discharged "at the level of its
+# UK regulatory consolidated group, including its ultimate UK holding company DBIGB"
+# (Annual Report 2025, p.17). Any Pillar 3 RWA/ratio that exists is therefore a
+# DBIGB-consolidated figure, barred from these entity sheets by the entity-basis rule.
+#
+# What the entity's OWN accounts do disclose: a Strategic Report KPI/KRI table
+# (Regulatory Capital Ratio, Leverage Ratio, LCR, NSFR) and - found in the 2026-09-15
+# re-audit, correcting an earlier "no GBP capital amount is disclosed anywhere" claim -
+# a "Composition of regulatory own funds (unaudited)" note giving CET1 capital in GBP
+# for every year, which the Company states is also its Tier 1 and Total Capital since
+# it holds no AT1 or Tier 2. Risk-weighted assets remain genuinely absent at entity
+# level, so no CRR capital RATIO is derivable. All figures reported in GBP (the
+# Company's functional currency) - no FX conversion needed.
 
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first, calendar year-end (31 December)
 YEAR_LABEL = {y: y for y in YEARS}
@@ -79,12 +85,73 @@ EXEMPTION_NOTE = (
 
 CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE
 
+# DB UK Bank Limited's Pillar 3 disclosures, published by Deutsche Bank Wealth Management at
+# https://www.deutschewealth.com/en/uk/regulatory-information.html (the address the reports
+# themselves name). Found 2026-09-15. These are DBUKB's own PRA-mandated disclosures, made at
+# its UK consolidation group level - see DBIGB_BASIS_NOTE for why that is this entity's own
+# disclosure basis rather than a parent substitution.
+P3_2025_URL = "https://wealth.db.com/dam/deutschewealth/location-assets/emea/uk/docs/dbigb-pillar-3-report-2025-final.pdf"
+P3_2024_URL = "https://wealth.db.com/dam/deutschewealth/location-assets/emea/uk/docs/2025-04-29-DBIGB-Pillar-3-Report-2024-Final.pdf"
+P3_2023_URL = "https://wealth.db.com/dam/deutschewealth/location-assets/emea/uk/docs/2023-db-investments-gb-limited-pillar-3-report.pdf"
+
 NOT_DISCLOSED_NOTE = (
-    "No dedicated Pillar 3 document is published by this entity, and no separate regulatory-disclosures page for "
-    "DB UK Bank Limited was found on db.com. The only capital/liquidity figures found anywhere in the FY2021, "
-    "FY2023 and FY2025 Annual Reports (the three filings checked) are a single generic \"regulatory capital ratio\" "
-    "(see Total Capital Ratio sheet) and LCR/NSFR (see those sheets) - this metric is not disclosed in any form in "
-    "any of the three filings checked."
+    "Not disclosed at DB UK Bank Limited entity level in any year. CORRECTED 2026-09-15: an earlier version of "
+    "this note claimed the only capital figure published anywhere was a single generic \"regulatory capital "
+    "ratio\". That was wrong - the Company's own accounts carry a \"Composition of regulatory own funds\" note "
+    "giving CET1 capital in GBP for every year (see the CET1 Capital / Tier 1 Capital / Total Capital sheets, "
+    "populated 2026-09-15). What remains genuinely absent at entity level is RISK-WEIGHTED ASSETS, and the "
+    "Company's own Directors' Report explains why: \"The Company is required, by PRA Rulebook Disclosure (CRR), "
+    "to publish certain disclosures covering, inter alia, regulatory ratios and remuneration information AT THE "
+    "LEVEL OF ITS UK REGULATORY CONSOLIDATED GROUP, including its ultimate UK holding company DBIGB\" (Annual "
+    "Report 2025, Directors' Report, p.17). The Pillar 3 obligation therefore sits on the DB Investments (GB) "
+    "Limited UK consolidation group, not on this entity - so any Pillar 3 RWA or RWA-based ratio that exists is "
+    "a CONSOLIDATED GROUP figure and is barred from these entity-level sheets by the project's entity-basis "
+    "rule. With no entity RWA denominator disclosed, no CET1/Tier 1/Total Capital RATIO can be stated without "
+    "deriving one, which this project does not do.\n\n"
+    "PARTIALLY OUT OF DATE, flagged 2026-09-15, NOT yet acted on. One factual claim elsewhere in this script - "
+    "that \"no dedicated Pillar 3 document is published by this entity\" (see the RWA Breakdown sheet) - is "
+    "wrong. Three DBIGB Group Pillar 3 reports were retrieved and read on 2026-09-15 (2023, 2024 and 2025 "
+    "editions, from the Deutsche Bank Wealth Management regulatory-information page rather than Companies "
+    "House), and they carry full UK KM1 and UK OV1 templates covering FY2022-FY2025. Whether those DBIGB Group "
+    "figures may be written into this entity's sheets is a basis question that was deliberately NOT decided "
+    "here and is awaiting the user's decision: DBIGB Group is a sub-consolidation that exists because of "
+    "DBUKB's own PRA requirement, which is neither the solo basis these sheets use nor the foreign-parent "
+    "substitution the entity-basis rule was written to prevent. Until that is settled these sheets stay blank. "
+    "The figures, sources and the exact scope wording were reported to the user on 2026-09-15."
+)
+
+# CET1 capital, all 5 years, from the Company's own "Composition of regulatory own
+# funds" / "Capital Management" note (FY2021 heading differs, same table). Every year
+# ties EXACTLY to this workbook's own Balance Sheet: Shareholder's funds less
+# intangible fixed assets (FY2021 also adds back the then-extant revaluation reserve,
+# which that year's table lists as a CET1 component in its own right).
+CET1_CAPITAL = {"FY2025": 603375, "FY2024": 611352, "FY2023": 612181, "FY2022": 594219, "FY2021": 600138}
+
+OWN_FUNDS_SOURCES = (
+    "Sources - DB UK Bank Limited's own \"Composition of regulatory own funds (unaudited)\" note (headed "
+    "\"Capital Management (unaudited)\" in the FY2021 filing, same table). All Companies House filings for this "
+    "entity are image-only scans with no text layer, so every figure below was recovered by page-image OCR and "
+    "visually re-checked:\n"
+    f"FY2025 (and FY2024 comparative): Annual Report 2025, Note 27(j), p.73 - {FY2025_AR_URL}\n"
+    f"FY2023 (and FY2022 comparative): Annual Report 2023, Note 27(j) - {FY2023_AR_URL}\n"
+    f"FY2021 (and FY2020 comparative): Annual Report 2021, Note 30(j) \"Capital Management (unaudited)\" - "
+    f"{FY2021_AR_URL}. The FY2021 column was dropped by a 200 DPI OCR pass and was recovered by re-rendering "
+    "that page at 450 DPI and reading it visually: 385,000 + 214,518 - 5,937 + 6,557 = 600,138.\n\n"
+    "VALIDATION - each year's CET1 reconciles exactly to this workbook's own Balance Sheet sheet: FY2025 "
+    "614,874 - 11,499 = 603,375; FY2024 621,712 - 10,360 = 611,352; FY2023 621,870 - 9,689 = 612,181; FY2022 "
+    "601,838 - 7,619 = 594,219; FY2021 606,075 - 5,937 + 6,557 (revaluation reserve, a CET1 component that "
+    "year) = 600,138. FY2022 and FY2024 each additionally appear as the comparative column of the following "
+    "year's own filing, so every figure has been seen in at least two places.\n\n"
+    "FOUND IN 2026-09-15 MAXIMUM-EFFORT RE-AUDIT: this note was previously recorded as not disclosed in any "
+    "year, on the basis that the Annual Reports carried no GBP capital amount. A full 75-page OCR pass of the "
+    "FY2025 filing found the own-funds note, and the FY2023 and FY2021 filings were then re-OCR'd to complete "
+    "the series.\n\n"
+    "BASIS: the Company states \"The Company's regulatory own funds consist of Common Equity Tier 1 Capital "
+    "only and the Company has not issued any Additional Tier 1 or Tier 2 instruments\" - so CET1 = Tier 1 = "
+    "Total Capital is the Company's own stated position, not an inference. Figures are stated after regulatory "
+    "adjustments (intangible fixed assets deducted) and are explicitly marked unaudited; they are based on PRA "
+    "returns filed at each year-end, adjusted for statutory account adjustments, and the IFRS 9 transitional "
+    "arrangements have not been applied.\n\n" + ENTITY_NOTE
 )
 
 
@@ -318,9 +385,19 @@ bw.add_asset_quality_sheet(
 # Total Capital Ratio sheet).
 # ---------------------------------------------------------------
 rwa_breakdown_rows = [
-    ("DATA", "Not publicly disclosed - no RWA figure (aggregate or by category) appears anywhere in the "
-             "FY2021, FY2023 or FY2025 Annual Reports checked, and no dedicated Pillar 3 document is published "
-             "by this entity. See the Total Capital Ratio sheet for the only capital-related ratio disclosed.", {}),
+    ("DATA", "Not publicly disclosed at DB UK Bank Limited entity level - no RWA figure (aggregate or by "
+             "category) appears anywhere in the FY2021, FY2023 or FY2025 Annual Reports checked. See the "
+             "Total Capital Ratio sheet for the only capital-related ratio disclosed at entity level.", {}),
+    ("DATA", "CORRECTION 2026-09-15: this sheet previously added that \"no dedicated Pillar 3 document is "
+             "published by this entity\". That is wrong. DB UK Bank's Pillar 3 disclosures are published, but "
+             "at its PRA UK consolidation group level (DB Investments (GB) Limited UK Regulated Group) and on "
+             "the Deutsche Bank Wealth Management regulatory-information page rather than at Companies House. "
+             "The 2023, 2024 and 2025 editions were retrieved and read on 2026-09-15 and carry full UK KM1 and "
+             "UK OV1 templates giving Total RWA and a four-way risk-type split for FY2022-FY2025. Those "
+             "figures are deliberately NOT written to this sheet: whether a sub-consolidation that exists "
+             "because of this bank's own PRA requirement may stand in for the entity is an open basis question "
+             "referred to the user on 2026-09-15, not one settled here. Nothing before FY2022 exists on any "
+             "basis.", {}),
 ]
 
 # ---------------------------------------------------------------
@@ -330,30 +407,94 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=170)
 
 
-TOTAL_CAPITAL_RATIO = {"FY2025": "536%", "FY2023": "491%", "FY2021": "473%"}
+TOTAL_CAPITAL_RATIO = {"FY2025": "536%", "FY2024": "418%", "FY2023": "491%", "FY2022": "145%", "FY2021": "473%"}
 LCR = {"FY2025": "381%", "FY2024": "351%", "FY2023": "437%", "FY2022": "304%", "FY2021": "459%"}
-NSFR = {"FY2025": "202%", "FY2024": "140%", "FY2023": "213%", "FY2022": "235%"}
+NSFR = {"FY2025": "202%", "FY2024": "140%", "FY2023": "213%", "FY2022": "235%", "FY2021": "244%"}
+LEVERAGE_RATIO = {"FY2025": "24%", "FY2024": "19%", "FY2023": "28%", "FY2022": "25%", "FY2021": "37%"}
+
+FY2024_AR_URL = "https://find-and-update.company-information.service.gov.uk/company/00315841/filing-history/MzQ2NTUwMzg4OGFkaXF6a2N4/document?format=pdf&download=0"
+FY2022_AR_URL = "https://find-and-update.company-information.service.gov.uk/company/00315841/filing-history/MzM4NjU0ODMxOWFkaXF6a2N4/document?format=pdf&download=0"
+
+KPI_TABLE_SOURCES = (
+    "Sources - the Company's own Strategic Report KPI/KRI table, headed \"The key regulatory indicators are "
+    "presented in the table below\", which carries four rows (Regulatory Capital Ratio, Leverage Ratio, "
+    "Liquidity Coverage Ratio, Net Stable Funding Ratio) with each year's own figure plus a prior-year "
+    "comparative column. Every figure below therefore appears in two consecutive filings and has been "
+    "cross-checked between them:\n"
+    f"FY2025 (and FY2024 comparative): Annual Report 2025, Strategic Report KPI/KRI table - {FY2025_AR_URL}\n"
+    f"FY2024 (and FY2023 comparative): Annual Report 2024, Strategic Report KPI/KRI table - {FY2024_AR_URL}\n"
+    f"FY2023 (and FY2022 comparative): Annual Report 2023, Strategic Report KPI/KRI table - {FY2023_AR_URL}\n"
+    f"FY2022 (and FY2021 comparative): Annual Report 2022, Strategic Report KPI/KRI table - {FY2022_AR_URL}\n\n"
+    "FOUND IN 2026-09-12 RE-AUDIT: the FY2024 and FY2022 Annual Reports were not previously on file for this "
+    "entity (only FY2025, FY2023 and FY2021 were), and all of this entity's Companies House filings are "
+    "image-only scans with no extractable text layer. Both gaps were closed by pulling the full accounts "
+    "filing history and running page-image OCR on every page of the FY2022-FY2025 filings. One OCR ambiguity "
+    "was resolved by re-rendering the source page at 500 DPI: the FY2023 NSFR reads 213% (the FY2024 report's "
+    "own prior-year column confirms 213%, not the 243% a lower-resolution pass produced).\n\n"
+    "ATTRIBUTION WARNING: these filings also quote Deutsche Bank GROUP figures in their narrative (e.g. a "
+    "\"Common Equity Tier 1 capital ratio of 13.4% at 31 December 2022\" and a group LCR of 142%/NSFR of 119%, "
+    "all explicitly attributed to \"DB Group\" in the FY2022 report's market-commentary section). Those are "
+    "the parent Deutsche Bank AG group's consolidated metrics, NOT DB UK Bank Limited's own, and are "
+    "deliberately excluded from this workbook - only the Company's own KPI table is used."
+)
 
 # Sheet order matches the project-wide standard (CET1 Capital/Ratio, Tier 1 Capital/Ratio,
 # Total Capital/Ratio, Total RWAs, Leverage Ratio, LCR, NSFR, MREL Ratio) even though this
 # entity only discloses Total Capital Ratio/LCR/NSFR.
+CAPITAL_EQUIVALENCE_NOTE = (
+    "The Company states in the same note that \"The Company's regulatory own funds consist of Common Equity "
+    "Tier 1 Capital only and the Company has not issued any Additional Tier 1 or Tier 2 instruments\", so CET1 "
+    "= Tier 1 = Total Capital is the Company's own stated position rather than an inference drawn here. "
+    "Figures are after regulatory adjustments (intangible fixed assets deducted) and are marked unaudited in "
+    "the source. Added 2026-09-15; see the source note for the full reconciliation of every year to this "
+    "workbook's own Balance Sheet."
+)
+
+metric(
+    "CET1 Capital", "£'000 (unaudited)",
+    [("CET1 after regulatory adjustments", CET1_CAPITAL)],
+    OWN_FUNDS_SOURCES,
+    note="Common Equity Tier 1 capital as disclosed in the Company's own \"Composition of regulatory own "
+         "funds\" note. " + CAPITAL_EQUIVALENCE_NOTE + " No CET1 RATIO is shown, because no entity-level "
+         "risk-weighted assets figure is disclosed anywhere - see the CET1 Ratio and Total RWAs sheets.",
+)
+
 bw.add_not_disclosed_metric_sheets(
-    ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital"],
-    p3_sources(),
-    per_note={m: NOT_DISCLOSED_NOTE for m in
-              ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital"]},
+    ["CET1 Ratio"], p3_sources(), per_note={"CET1 Ratio": NOT_DISCLOSED_NOTE},
+)
+
+metric(
+    "Tier 1 Capital", "£'000 (unaudited)",
+    [("Tier 1 capital (= CET1; no AT1 in issue)", CET1_CAPITAL)],
+    OWN_FUNDS_SOURCES,
+    note="Equal to CET1 capital. " + CAPITAL_EQUIVALENCE_NOTE,
+)
+
+bw.add_not_disclosed_metric_sheets(
+    ["Tier 1 Ratio"], p3_sources(), per_note={"Tier 1 Ratio": NOT_DISCLOSED_NOTE},
+)
+
+metric(
+    "Total Capital", "£'000 (unaudited)",
+    [("Total capital (= CET1; no AT1 or Tier 2 in issue)", CET1_CAPITAL)],
+    OWN_FUNDS_SOURCES,
+    note="Equal to CET1 and Tier 1 capital. " + CAPITAL_EQUIVALENCE_NOTE,
 )
 
 metric(
     "Total Capital Ratio", "% (unaudited)",
     [("Regulatory capital ratio", TOTAL_CAPITAL_RATIO)],
-    p3_sources(),
-    note="Only a single generic 'regulatory capital ratio' is disclosed, mentioned once in each report's Going "
-         "Concern paragraph - no CET1/Tier 1 breakdown exists anywhere, and no £ capital amount or RWA figure is "
-         "disclosed either (so Total RWAs cannot be calculated). This ratio is described only as 'well above the "
-         "regulatory minimum of 100%' and is explicitly marked unaudited in the source. Placed on Total Capital "
-         "Ratio (the broadest measure) rather than assumed equal to CET1/Tier 1, since the source never specifies "
-         "which capital tier(s) the ratio uses.",
+    KPI_TABLE_SOURCES,
+    note="IMPORTANT - THIS IS NOT A CRR CAPITAL RATIO. The Company's own KPI table defines this row as "
+         "\"Regulatory Capital Ratio is a measure of total Regulatory Capital Resources relative to total PRA "
+         "Capital Resources [requirement]\" - i.e. capital held as a percentage of capital REQUIRED, monitored "
+         "against a Board appetite of >120%. It is NOT capital as a percentage of risk-weighted assets, which "
+         "is why the values (145%-536%) sit far above a normal CET1/Total Capital ratio and must not be "
+         "compared with other banks' RWA-based ratios in this workbook. It is shown on this sheet as the "
+         "broadest capital measure the Company publishes, not as an equivalent metric. No CET1/Tier 1 "
+         "breakdown, no GBP capital amount and no RWA figure is disclosed anywhere, so a true CRR ratio cannot "
+         "be derived. Explicitly marked unaudited in the source. FY2024 and FY2022 added in the 2026-09-12 "
+         "re-audit from the FY2024 and FY2022 Annual Reports, which were not previously on file.",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -371,27 +512,44 @@ bw.add_rwa_breakdown_sheet(
     source_height=220,
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["Leverage Ratio"],
-    p3_sources(),
-    per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE},
+metric(
+    "Leverage Ratio", "% (unaudited)",
+    [("Leverage ratio", LEVERAGE_RATIO)],
+    KPI_TABLE_SOURCES,
+    note="Disclosed as the \"Leverage Ratio\" row of the Company's own Strategic Report KPI/KRI table, defined "
+         "there as \"a measure of Tier 1 Capital relative to on Balance Sheet assets and certain Off Balance "
+         "Sheet exposures\" and monitored against a Board risk appetite of >6%. SCOPE CAVEAT, stated by the "
+         "Company itself in the same table's footnotes: \"The Company is out of scope of the PRA's formal "
+         "leverage regime and monitors its leverage ratio against Board risk appetite and PRA guidance\" - so "
+         "this is a Board-appetite measure computed on the Company's own basis, not a formally-reported CRR "
+         "leverage ratio, and is not strictly like-for-like with banks in this workbook that are inside the "
+         "PRA leverage regime. FOUND IN 2026-09-12 RE-AUDIT: previously recorded as not disclosed in any year; "
+         "all 5 years are in fact published in this table (each cross-confirmed against the following year's "
+         "own prior-year comparative column).",
 )
 
 metric(
     "LCR", "% (unaudited)",
     [("Liquidity Coverage Ratio", LCR)],
-    p3_sources(),
+    KPI_TABLE_SOURCES,
     note="No £ breakdown (HQLA, net cash outflows) is disclosed anywhere - only the ratio itself. Explicitly "
-         "marked unaudited in the source (Risk Report note (c) Liquidity Risk is headed '(unaudited)').",
+         "marked unaudited in the source. Re-verified 2026-09-12 against the Strategic Report KPI/KRI tables in "
+         "all four of the FY2022-FY2025 filings: every year's figure matches, in both its own-year and "
+         "prior-year comparative appearances.",
 )
 
 metric(
     "NSFR", "% (unaudited)",
     [("Net Stable Funding Ratio", NSFR)],
-    p3_sources(),
+    KPI_TABLE_SOURCES,
     note="No £ breakdown (available/required stable funding) is disclosed anywhere - only the ratio itself. "
-         "FY2021 genuinely blank: the Company's own FY2023 Annual Report states NSFR only became a regulatory "
-         "requirement from 1 January 2022, and no NSFR figure appears anywhere in the FY2021 Annual Report.",
+         "FY2021 (244%) added in the 2026-09-12 re-audit: it is published as the prior-year comparative column "
+         "of the FY2022 Annual Report's KPI table. The previous note recorded FY2021 as permanently blank on "
+         "the grounds that NSFR only became a binding regulatory requirement from 1 January 2022 - that "
+         "remains true as to when the ratio became binding (the FY2022 report footnotes it explicitly), but "
+         "the Company nonetheless reported a 31/12/2021 figure as its comparative, so the year is not blank. "
+         "FY2023 is 213%, confirmed at 500 DPI against both the FY2023 report's own column and the FY2024 "
+         "report's prior-year column.",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -431,10 +589,15 @@ bw.add_overview_sheet(
     ],
     note="No cash flow summary or chart is shown here: DB UK Bank Limited takes the FRS 101 cash-flow-statement "
          "exemption every year (see the Cash Flow Statement sheet). Balance Sheet, Profit & Loss and Statement of "
-         "Changes in Equity headline blocks are all fully populated below. No dedicated Pillar 3 document is "
-         "published by this entity; only a single generic 'regulatory capital ratio' (no CET1/Tier 1 breakdown, 3 "
-         "of 5 years only), LCR (5 of 5 years) and NSFR (4 of 5 years, not applicable pre-2022) are disclosed, "
-         "each in a different part of the Annual Report's own Notes - see each sheet's own source citation.",
+         "Changes in Equity headline blocks are all fully populated below. No ENTITY-LEVEL Pillar 3 document is "
+         "published: the Company's Directors' Report states its PRA Disclosure (CRR) obligation is met at the "
+         "level of its UK regulatory consolidated group (DBIGB), so any Pillar 3 RWA or RWA-based ratio is a "
+         "consolidated group figure and is excluded here. From the Company's own accounts this workbook carries "
+         "CET1 = Tier 1 = Total Capital in GBP for all 5 years (its own 'Composition of regulatory own funds' "
+         "note, added 2026-09-15), the Regulatory Capital Ratio shown above (which is capital against PRA "
+         "capital REQUIREMENT, not against RWAs - see that sheet), Leverage Ratio (5 of 5), LCR (5 of 5) and "
+         "NSFR (5 of 5). Risk-weighted assets are not disclosed at entity level in any year, so no CRR "
+         "CET1/Tier 1/Total Capital ratio can be stated - see each sheet's own source citation.",
 )
 
 # ---------------------------------------------------------------
