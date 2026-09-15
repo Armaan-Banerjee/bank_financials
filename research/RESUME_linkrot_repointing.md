@@ -12,8 +12,8 @@ cover to confirm year and entity.
 | # | Bank | Script | Status |
 |---|------|--------|--------|
 | 1 | Shawbrook | `scripts/build_shawbrook.py` | DONE |
-| 2 | Rathbones | `scripts/build_rathbones.py` | in progress |
-| 3 | UBA (UK) | `scripts/build_uba_uk.py` | pending |
+| 2 | Rathbones | `scripts/build_rathbones.py` | DONE |
+| 3 | UBA (UK) | `scripts/build_uba_uk.py` | in progress |
 | 4 | Redwood Bank | `scripts/build_redwood_bank.py` | pending |
 | 5 | Alpha Bank London | `scripts/build_alpha_bank_london.py` | pending |
 | 6 | Persia International | `scripts/build_persia_international_bank.py` | pending |
@@ -102,3 +102,60 @@ the workbook.
   of P3 2020, cited as p.49. Left as found; flagged only.
 
 Rebuilt: `python3 scripts/build_shawbrook.py` → 18 sheets.
+
+---
+
+## 2. RATHBONES — DONE
+
+- **Dead** (HTTP 404, confirmed 2026-09-15):
+  `https://www.rathbones.com/sites/rathbones.com/files/results_and_presentations/files/31_december_2024_pillar_3_disclosures.pdf`
+- **Replacement** (verified `%PDF`, 49 pp, cover "PILLAR 3 DISCLOSURES / 31 DECEMBER 2024 /
+  RATHBONES GROUP PLC"):
+  `https://www.rathbones.com/sites/main/files/results_and_presentations/files/31_december_2024_pillar_3_disclosures.pdf`
+  Only the one path segment changed: `/sites/rathbones.com/` -> `/sites/main/`.
+
+### Other URLs in the script — none exposed to the same rename
+It is the **only** rathbones.com URL in the file. The other five sources are all Companies
+House filing-history documents for company 01448919 (AR2021–AR2025). All five re-fetched
+2026-09-15: HTTP 200 + `%PDF`. Nothing pre-emptive to fix.
+
+### Figure reproduction — N/A, and this is the important finding
+`PILLAR_URL` was **defined at line 12 and never referenced anywhere else in the script.**
+It fed no citation. So no figure in the workbook ever came from it, and there is nothing to
+reproduce. Its only role is evidentiary: `ENTITY_NOTE` asserts that Rathbones Group Plc's
+Pillar 3 is consolidated-only and therefore entity-level Pillar 3 metrics are blank — but
+it named the document without printing its URL on any sheet. That claim was effectively
+uncited in the delivered workbook.
+
+Fixed: re-pointed the URL **and wired it into `ENTITY_NOTE`**, so the claim now carries its
+source. Verified the claim verbatim against the replacement document, p.6 (section 1,
+Executive summary): *"Disclosures are made on a consolidated group level, as we have no
+large subsidiaries meeting the requirements for individual disclosure under the definition
+within CRR Article 4(146)."*
+
+### Entity basis — checked, correct
+Workbook entity is **Rathbones Investment Management Limited** (FRN 116316, company
+01448919), entity-only accounts under the s.400 exemption. The replacement document is
+**Rathbones Group Plc** — the parent. Per the standing rule I checked for a
+significant-subsidiaries annex or solo-consolidation section that would legitimately carry
+entity data. **There is none.** The one near-miss: the NSFR section (p.25) says Rathbones
+"is required to calculate and monitor the ratio on a RIM-solo and group consolidated basis,
+reporting the positions quarterly" — but it prints only group figures; UK KM1, UK LIQ1 and
+UK LIQ2 are all group-level, and no RIM-solo number appears anywhere in the 49 pages.
+
+So the Group document is cited **only as evidence of absence**. No Group figure sits in any
+entity-level sheet. Added an explicit BASIS WARNING to the note saying exactly that, so a
+future reader cannot mistake the Group citation for a Group data substitution.
+
+### Deliberately NOT changed
+- No figures touched.
+- The five Companies House URLs (verified live).
+
+Rebuilt: `python3 scripts/build_rathbones.py` → 18 sheets.
+
+### Library change made here (affects other banks — backward-compatible)
+`scripts/bank_workbook.py`: `add_not_disclosed_metric_sheets()` gained an optional
+`source_height=150` kwarg, passed through to `add_metric_sheet`. It previously had no way
+to set the citation-cell height, and that cell has a **fixed** height and silently clips
+overflowing text. Rathbones' now-longer citation needed 430. Default is unchanged (150 =
+`_write_source_cell`'s own default), so every existing caller behaves exactly as before.

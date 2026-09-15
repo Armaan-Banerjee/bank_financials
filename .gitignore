@@ -5,6 +5,7 @@ wayfinder/
 HANDOFF.md
 CLAUDE.md
 skills-lock.json
+CODING_STANDARDS.md
 
 # OS, editor, and application-generated files.
 .DS_Store

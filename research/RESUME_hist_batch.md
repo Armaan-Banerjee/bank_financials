@@ -149,3 +149,61 @@ defective on purpose), and the three labelled FY2022 CET1 rows
 (13,959 / 13,734 / 12,852) all verified intact after rebuild.
 
 Rebuilt: 18 sheets.
+
+## 4. Persia International Bank — DONE
+
+**Three of the four URLs were already in the script** (FY2016/FY2018/FY2020 —
+`PILLAR3_2016_URL` / `_2018_URL` / `_2020_URL`, added under HD-021). Re-audited
+them anyway; the existing treatment holds (FY2016 prints an explicit "Total
+Pillar 1 risk 319,767"; FY2018's €131m "Own Funds" vs €144,802k statutory Total
+Capital is the already-documented CRR Tier 2 1/3-of-Tier-1 cap). Nothing changed
+for those years.
+
+The genuinely new document is the **standalone FY2015 Pillar 3** (year ended
+31 MARCH 2015). Added as `PILLAR3_2015_URL`. 18-page image-only scan; OCR'd at
+250dpi and every used figure re-read visually off pp.8-9 and pp.14-15.
+
+Also recorded in the script: the **v6 capture of the FY2020 edition is truncated
+at exactly 1 MiB** — a capture artefact, not a different edition; v7 (1,109,265
+bytes, 28 pages) is the one cited.
+
+**MAJOR FINDING — FY2015 "Total RWA" of €221,221k is CREDIT-RISK ONLY.**
+The 221,221 is the total of that edition's "Breakdown of exposure classes" table
+(= its Template CR4 total); all six rows are credit exposure classes and the
+printed €17,698k capital charge is exactly 8% of it. The same document separately
+discloses, in two narrative sentences elsewhere, an **FX spot position risk of
+€4,128,000** (s.6, p.14) and an **operational risk RWE of €11,501,000** (s.7,
+p.15) — neither included — and prints **no Pillar 1 total anywhere**. Fourth
+confirmed instance of this defect (after Redwood, Ghana International, Bank of
+Ceylon). FY2016+ editions do NOT share it.
+
+Filled (EUR '000 — FY2015 stays unconverted, no year-end rate disclosed):
+- RWA Breakdown FY2015: credit 221,221 / market 4,128 / operational 11,501; Total
+  row left BLANK for FY2015 (no total printed), with the arithmetic sum 236,850 on
+  a separate explicitly-labelled "NOT a disclosed figure" row.
+- Total RWAs: second labelled row carrying the 15,629 of separately-disclosed
+  market + operational RWE excluded from the 221,221; primary row relabelled to
+  flag FY2015 as credit-only.
+- Source note now traces the €518k Pillar 3 vs statutory Tier 1 divergence to the
+  retained-earnings line (P3: 100,000,000 + 5,479,000 = 105,479,000; statutory
+  105,997,000).
+
+**DELIBERATELY NOT WRITTEN / NEEDS A USER DECISION:**
+The FY2015 **Total Capital Ratio 68.94%** and **Tier 1 Ratio 47.92%** already in
+this workbook are *this workbook's own calculations*, and the FY2015 edition is now
+confirmed to print no capital ratio of any kind. Worse, their denominator (221,221)
+is the credit-only subtotal, so both are **overstated** — on the 236,850 component
+sum they'd be ~64.4% and ~44.8%. **Left unchanged and loudly flagged**, because
+swapping one calculated ratio for another is not a transcription improvement and no
+FY2015 total RWA exists in any document. This is the same class of open item as
+RESUME_SESSION §2a (Cater Allen back-solved RWA) and should go to the user.
+
+Also untouched, as instructed: FY2021 40.99% ratios; FY2023-FY2025 declared
+non-publication; FY2022 published-then-removed.
+
+Rebuilt: 18 sheets.
+
+## Batch complete
+
+All four scripts edited and rebuilt 2026-09-15. `python3 -m py_compile` clean on
+all four. refresh_all.py NOT run, test suite NOT run, nothing committed by me.

@@ -84,8 +84,52 @@ def flow(usd):
 
 
 def stock(usd):
-    """Point-in-time (balance/capital) figures, £'000, at that year's period-end spot rate."""
+    """Point-in-time (balance/capital) figures, £'000, at that year's period-end spot rate.
+
+    Input is RAW USD (whole dollars) - the Annual Report statements are transcribed at full
+    precision, e.g. Share Capital US$136,701,620 - so reaching £'000 needs BOTH the FX divide
+    and a divide by 1,000. Use stock_k() instead for any figure already denominated in
+    thousands. See the comment on stock_k() for why the two must stay separate.
+    """
     return {y: round(v / FX_SPOT[y] / 1000, 1) for y, v in usd.items()}
+
+
+def stock_k(usd_thousands):
+    """Point-in-time figures ALREADY IN US$'000, converted to £'000 at that year's spot rate.
+
+    *** DO NOT MERGE THIS BACK INTO stock(). THE TWO VARIANTS EXIST FOR A REAL REASON. ***
+    This script transcribes from two source families that publish at two different scales,
+    and a single helper cannot serve both:
+
+      - The Annual Report statements (Balance Sheet, P&L, Statement of Changes in Equity,
+        Cash Flow Statement, Asset Quality) print WHOLE DOLLARS and are transcribed that way
+        -> stock() / flow(), which divide by 1,000 on top of the FX rate.
+      - The Pillar 3 disclosures (all 11 metric sheets and the RWA Breakdown sheet) print
+        US$'000 and are transcribed that way -> stock_k(), FX only, NO divide by 1,000.
+
+    The FY2024 Pillar 3's UK KM1 and UK OV1 tables suffix every figure with a literal " k"
+    ("Common Equity Tier 1 (CET1) capital 378,325 k"), and its own footnote writes the unit
+    out in prose ("the average ASF US$1,136,904k / the average RSF US$768,308k = 147.98%").
+    The FY2015 edition heads its capital tables "US$000's". The decisive cross-check: the
+    Bank's share capital is "136,701,620 ordinary shares of US$1", which the Annual Report
+    carries as 136701620 and the Pillar 3 prints as "136,702 k" - the same money, two scales.
+
+    Applying stock()'s extra /1,000 to the Pillar 3 dicts is exactly the defect fixed on
+    2026-09-15: it made every Pillar 3 and RWA Breakdown cell 1000x too small for its "£'000"
+    label (effectively £m), so CET1 read 302.3 against a Balance Sheet Total equity of
+    305,356.2. Ratios hid it, being scale-invariant. See P3_SCALE_FIX_NOTE.
+
+    There is deliberately no flow_k(): every Pillar 3 figure on these sheets is a
+    point-in-time stock, so no averaging-rate variant is needed. If a thousands-denominated
+    FLOW figure is ever added, add flow_k() alongside rather than reusing flow().
+
+    Native-GBP years (NATIVE_GBP_YEARS, FY2009-FY2013) never reach this helper: the only
+    pre-redenomination Pillar 3 figures are FY2011's, which are native GBP'000 and are
+    written straight onto their own rows (FY2011_TIER1_ACCOUNTS / FY2011_REG_AVAILABLE)
+    with no conversion of any kind. FX_SPOT has no key before FY2013, so an accidental
+    native-GBP year passed in here raises KeyError rather than converting silently.
+    """
+    return {y: round(v / FX_SPOT[y], 1) for y, v in usd_thousands.items()}
 
 
 def opening_cash(usd):
@@ -316,22 +360,38 @@ CASH_FLOW_SOURCES = (
 )
 
 
-P3_UNIT_DEFECT_NOTE = (
-    "*** PRE-EXISTING UNIT-SCALE DEFECT ON THIS SHEET, FOUND 2026-09-15, NOT FIXED IN THIS PASS ***\n"
-    "Every absolute-amount cell on the Pillar 3 metric sheets and the RWA Breakdown sheet of this workbook is "
-    "1000x smaller than the \"£'000\" unit label claims: the figures are effectively GBP MILLIONS. Demonstration "
-    "from this workbook's own numbers: the Balance Sheet sheet shows FY2024 Total equity as 305,356.2 under the "
-    "same \"£'000, conv. from USD\" header, while the CET1 Capital sheet shows FY2024 CET1 capital as 302.3 - two "
-    "figures that should be within a few percent of each other, three orders of magnitude apart. CAUSE: the "
-    "statement sheets pass raw USD amounts into stock()/flow(), which divide by 1,000 to reach GBP'000, but the "
-    "Pillar 3 source dictionaries hold US$'000 amounts taken straight from the KM1/OV1 tables, so that same "
-    "divide-by-1,000 is applied to figures that are already in thousands. RATIOS ARE UNAFFECTED (numerator and "
-    "denominator are both scaled identically, and each printed ratio still reproduces), and the sheets are "
-    "internally consistent, so year-on-year comparison within a sheet is safe; what is wrong is the unit LABEL "
-    "and any comparison against the statement sheets. This was found while adding the FY2011 figures and is "
-    "reported as a defect needing its own ticket rather than corrected here: the fix touches every year including "
-    "the current five-year window, the Overview copies and the extracted insights database, and it is outside "
-    "this pass's scope."
+P3_SCALE_FIX_NOTE = (
+    "*** UNIT-SCALE DEFECT FOUND AND FIXED 2026-09-15 - READ BEFORE COMPARING AGAINST ANY EARLIER COPY ***\n"
+    "For a period earlier on 2026-09-15, every absolute-amount cell on the 11 Pillar 3 metric sheets and the RWA "
+    "Breakdown sheet of this workbook was 1000x smaller than its \"£'000\" unit label claimed - the figures were "
+    "effectively GBP MILLIONS. The symptom: FY2024 CET1 capital read 302.3 while the Balance Sheet sheet showed "
+    "FY2024 Total equity as 305,356.2 under the same \"£'000, conv. from USD\" header - two figures that should be "
+    "within a few percent of each other, three orders of magnitude apart.\n"
+    "CAUSE (a units-handling bug in this build script, NOT a transcription error - no source figure was ever "
+    "wrong): the Annual Report statements print WHOLE DOLLARS and are transcribed that way, so stock()/flow() "
+    "divide by 1,000 on top of the FX rate to reach £'000. The Pillar 3 disclosures print US$'000 and are "
+    "transcribed that way, but were being passed through that same stock(), applying the divide-by-1,000 twice "
+    "over to figures that were already in thousands. FIX: a separate stock_k() helper (FX conversion only, no "
+    "divide by 1,000) now serves every Pillar 3 and RWA Breakdown call site; the transcribed source figures were "
+    "not touched.\n"
+    "THE SOURCE SCALE IS EXPLICIT IN THE DOCUMENTS, not inferred. The FY2024 edition's UK KM1 and UK OV1 tables "
+    "suffix every figure with a literal \" k\" (\"Common Equity Tier 1 (CET1) capital 378,325 k\"; \"Total "
+    "risk-weighted exposure amount 1,475,750 k\") and its own footnote writes it out in prose: \"the average ASF "
+    "US$1,136,904k / the average RSF US$768,308k = 147.98%\". The FY2015 edition heads its capital tables "
+    "\"US$000's\". The decisive cross-check: the Bank's share capital is \"136,701,620 ordinary shares of US$1\", "
+    "which the Annual Report carries as 136,701,620 and the Pillar 3 prints as \"136,702 k\" - the same money at "
+    "two scales.\n"
+    "WHAT DID NOT CHANGE, AND WHY THE DEFECT SURVIVED SO LONG: every ratio on these sheets (CET1/Tier 1/Total "
+    "Capital/Leverage/LCR/NSFR) is dimensionless, so numerator and denominator were scaled identically and every "
+    "printed ratio reproduced both before and after the fix - there was no ratio symptom to catch. The statement "
+    "sheets (Balance Sheet, Profit & Loss, Statement of Changes in Equity, Cash Flow Statement, Asset Quality) "
+    "were never affected: they are sourced from the Annual Reports in whole dollars and stock()/flow() were "
+    "always correct for them. The Overview sheet carries no Pillar 3 absolute amount at all (only statement "
+    "totals and ratios), so it needed no rescaling either.\n"
+    "FY2011 FOOTNOTE: the two Basel II capital figures on the Tier 1 Capital and Total Capital sheets were "
+    "entered as 43.6 and 40.0 during the window in which the defect stood, deliberately matching the wrong scale "
+    "so as not to create a mixed-unit defect inside a single sheet. They now read 43,631 and 40,002 - the figures "
+    "the FY2011 edition actually prints, in GBP'000."
 )
 
 HIST_P3_NOTE = (
@@ -465,7 +525,7 @@ def p3_sources():
         "(regulatory available capital / derived RWA) is NOT the same figure as the Bank's own headline "
         "'Solvency Ratio against Pillar 1' (available capital / capital REQUIREMENT, i.e. roughly 12.5x this "
         "ratio) - both are shown in the RWA Breakdown sheet's source note for transparency.\n\n"
-        + HIST_P3_NOTE + "\n\n" + P3_UNIT_DEFECT_NOTE
+        + HIST_P3_NOTE + "\n\n" + P3_SCALE_FIX_NOTE
     )
 
 
@@ -1263,17 +1323,19 @@ def hist_nd(fy2011):
 # redenomination to USD). Both figures the edition prints are carried; see
 # HIST_P3_NOTE for the dating caveat on Regulatory Available Capital.
 #
-# SCALE, DELIBERATE - READ P3_UNIT_DEFECT_NOTE BEFORE CHANGING THESE. The source
-# figures are GBP 43,631k and GBP 40,002k. They are entered here as 43.6 and 40.0
-# to sit on the SAME numeric scale as every other cell on these metric sheets,
-# which is GBP millions despite the sheets' "£'000" label - a pre-existing defect
-# documented below. Entering the true £'000 figures would be correct against the
-# label but 1000x out of line with the neighbouring cells, i.e. a within-sheet
-# mixed-unit defect, which is worse. The exact source figures are preserved in
-# HIST_P3_NOTE. When the scale defect is fixed sheet-wide, these two become
-# 43631 and 40002.
-FY2011_TIER1_ACCOUNTS = {"FY2011": 43.6}
-FY2011_REG_AVAILABLE = {"FY2011": 40.0}
+# SCALE: these are the figures the FY2011 edition prints, verbatim, in GBP'000 -
+# "Total tier 1 capital 43,631" and "Regulatory Available Capital 40,002" (see
+# HIST_P3_NOTE). They now sit on the same £'000 scale as every other cell on these
+# metric sheets, and match the sheets' "£'000" label.
+#
+# HISTORY, so this is not "corrected" back: between being added and the scale fix
+# later the same day (2026-09-15) these read 43.6 and 40.0. That was a deliberate
+# stopgap - the rest of the sheet was then 1000x understated for its label (the
+# defect fixed by stock_k(), see P3_SCALE_FIX_NOTE), and matching the neighbouring
+# cells was judged less bad than a mixed-unit defect inside one sheet. With the
+# sheet-wide scale now correct, the true source figures are restored.
+FY2011_TIER1_ACCOUNTS = {"FY2011": 43631}
+FY2011_REG_AVAILABLE = {"FY2011": 40002}
 
 
 PRE_CRDIV_NOTE = (
@@ -1297,28 +1359,28 @@ HIST_CAPITAL_NOTE = (
     "satisfying all the criteria for a Tier 1 instrument (as outlined in GENPRU 2.2.83 R) and audited reserves' - "
     "so the absence of AT1 and Tier 2 in FY2011 is the Bank's statement, not an inference. Both figures the "
     "edition prints are carried, with a dating caveat on the second; see the source note below. The source "
-    "figures are GBP 43,631k and GBP 40,002k; they appear here as 43.6 and 40.0 to match the numeric scale the "
-    "rest of this sheet actually uses - see the unit-scale defect note below, which explains why that is not the "
-    "same as the sheet's stated '£'000' label.\n"
+    "figures are GBP 43,631k and GBP 40,002k and they appear here exactly as printed, in £'000, on the same scale "
+    "as the CRR-basis row above. (They briefly read 43.6/40.0 earlier on 2026-09-15, while the sheet-wide "
+    "unit-scale defect described in the source note below still stood; that defect is now fixed.)\n"
     "FY2009/FY2010/FY2012/FY2013 read 'No Pillar 3 edition exists in any archive' rather than being left blank, "
     "so the distinction between 'searched and genuinely absent' and 'never looked at' survives in the sheet "
     "itself. See the source note for how that differs from FY2016/FY2019 (published but lost) and "
     "FY2017/FY2018/FY2020 (apparently never posted).\n\n"
 )
 
-metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", dict(stock(CET1_TIER1_TOTAL_USD), **hist_na()))], p3_sources(),
+metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", dict(stock_k(CET1_TIER1_TOTAL_USD), **hist_na()))], p3_sources(),
        note="FY2009-FY2013 'Not applicable (Basel II)': the CET1 concept is a CRD IV construct and does not exist in the recovered FY2011 Basel II edition, which discloses a single undifferentiated Tier 1 capital figure (carried on the Tier 1 Capital and Total Capital sheets).\n\n" + PRE_CRDIV_NOTE)
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", dict(CAPITAL_RATIO, **hist_na()))], p3_sources(),
        note="FY2009-FY2013 'Not applicable (Basel II)' - no CET1 concept existed (see CET1 Capital sheet).\n\n" + PRE_CRDIV_NOTE)
-metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital (CRR/CRD IV basis)", stock(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS, p3_sources(),
+metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital (CRR/CRD IV basis)", stock_k(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS, p3_sources(),
        note=HIST_CAPITAL_NOTE + "Equal to CET1 capital in every year - the Bank holds no Additional Tier 1 (AT1) instruments.\n\n" + PRE_CRDIV_NOTE)
 metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", dict(CAPITAL_RATIO, **hist_nd("Not publicly disclosed")))], p3_sources(),
        note="FY2011 'Not publicly disclosed': the recovered FY2011 edition states no capital/RWA ratio at all. It DOES print a 'Solvency Ratio against Pillar 1' of 203%, but that is capital divided by the capital REQUIREMENT - a capital-cover multiple, roughly 12.5x a true capital ratio - and putting it here would overstate the Bank's capitalisation by an order of magnitude. See the source note. Nothing is back-solved from the capital and capital-requirement figures either.\n\n" + PRE_CRDIV_NOTE)
-metric("Total Capital", "£'000 (conv. from USD)", [("Total capital (CRR/CRD IV basis)", stock(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS, p3_sources(),
+metric("Total Capital", "£'000 (conv. from USD)", [("Total capital (CRR/CRD IV basis)", stock_k(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS, p3_sources(),
        note=HIST_CAPITAL_NOTE + "Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.\n\n" + PRE_CRDIV_NOTE)
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", dict(CAPITAL_RATIO, **hist_nd("Not publicly disclosed")))], p3_sources(),
        note="FY2011 'Not publicly disclosed' - see the Tier 1 Ratio sheet's note on the 203% capital-cover trap.\n\n" + PRE_CRDIV_NOTE)
-metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", dict(stock(RWA_USD), **hist_nd("Not publicly disclosed")))], p3_sources(),
+metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", dict(stock_k(RWA_USD), **hist_nd("Not publicly disclosed")))], p3_sources(),
        note="FY2011 'Not publicly disclosed' (2026-09-15): the recovered FY2011 Basel II edition discloses Pillar 1 capital "
             "REQUIREMENTS (Credit 18,156 / Market 27 / Operational 1,503 / Total 19,686, GBP'000), not risk-weighted amounts. "
             "Dividing those by 8% would give a total RWA of 246,075, but that is a derivation and this project transcribes only "
@@ -1326,7 +1388,7 @@ metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure 
             "verbatim in the source note. NOTE THE INCONSISTENCY THIS EXPOSES: the FY2014/FY2015 figures on this very row WERE "
             "produced by exactly that division in an earlier pass. That pre-existing derivation was not removed here (withdrawing "
             "populated data is not this pass's decision) but it is flagged, and it was not propagated backwards.\n\n"
-            "FY2023's figure (own report, £m equivalent of $1,167,888k) differs from the FY2024 report's restated FY2023 "
+            "FY2023's figure (own report, the £'000 equivalent of $1,167,888k) differs from the FY2024 report's restated FY2023 "
             "comparative ($1,203,364k) - a Basic Indicator Approach operational-risk methodology update. FY2023's own "
             "report figure is used, consistent with this project's convention of preferring each year's own report.\n\n"
             + PRE_CRDIV_NOTE)
@@ -1349,7 +1411,7 @@ rwa_rows_usd = [
 bw.add_rwa_breakdown_sheet(
     title="Zenith Bank (UK) Limited — RWA Breakdown (UK OV1)",
     subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used.",
-    rows=[(k, l, stock(v)) for k, l, v in rwa_rows_usd],
+    rows=[(k, l, stock_k(v)) for k, l, v in rwa_rows_usd],
     sources_text=p3_sources()
         + "\n\nUK OV1 template (Overview of risk weighted exposure amounts). Each year's own Pillar 3 report is "
           "used. FY2024's own report splits Credit Risk (excl. CCR) $1,205,520k / CCR $98,068k, while the FY2025 "
@@ -1408,7 +1470,7 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
     [
-        ("Total exposure measure excluding claims on central banks", stock({"FY2025": 3171798, "FY2024": 2987483, "FY2023": 2872422, "FY2022": 3409175, "FY2021": 3219954, "FY2020": 2483697})),
+        ("Total exposure measure excluding claims on central banks", stock_k({"FY2025": 3171798, "FY2024": 2987483, "FY2023": 2872422, "FY2022": 3409175, "FY2021": 3219954, "FY2020": 2483697})),
         ("Leverage ratio excluding claims on central banks (%)", dict({"FY2025": "12.08%", "FY2024": "11.25%", "FY2023": "9.76%", "FY2022": "7.32%", "FY2021": "8.36%", "FY2020": "10.68%"}, **hist_na())),
     ],
     p3_sources(),
@@ -1432,8 +1494,8 @@ metric(
 metric(
     "LCR", "£'000 / % (conv. from USD)",
     [
-        ("Total high-quality liquid assets (HQLA), weighted value", stock({"FY2025": 952538, "FY2024": 1013789, "FY2023": 1147653, "FY2022": 1227530, "FY2021": 932821, "FY2020": 782801})),
-        ("Total net cash outflows, adjusted value", stock({"FY2025": 352543, "FY2024": 306820, "FY2023": 369648, "FY2022": 374822, "FY2021": 337730, "FY2020": 179896})),
+        ("Total high-quality liquid assets (HQLA), weighted value", stock_k({"FY2025": 952538, "FY2024": 1013789, "FY2023": 1147653, "FY2022": 1227530, "FY2021": 932821, "FY2020": 782801})),
+        ("Total net cash outflows, adjusted value", stock_k({"FY2025": 352543, "FY2024": 306820, "FY2023": 369648, "FY2022": 374822, "FY2021": 337730, "FY2020": 179896})),
         ("Liquidity Coverage Ratio (%) (12-month simple average)", {"FY2025": "270.19%", "FY2024": "330.42%", "FY2023": "310%", "FY2022": "343%"}),
         ("Liquidity Coverage Ratio (%) (point-in-time at year-end)", dict({"FY2021": "276%", "FY2020": "435%"},
             **hist_na("Not applicable (pre-LCR regime)"))),
@@ -1469,8 +1531,8 @@ metric(
 metric(
     "NSFR", "£'000 / % (conv. from USD)",
     [
-        ("Total available stable funding", stock({"FY2025": 1316936, "FY2024": 1136904, "FY2023": 1066880, "FY2022": 912816})),
-        ("Total required stable funding", stock({"FY2025": 948441, "FY2024": 768308, "FY2023": 744377, "FY2022": 735763})),
+        ("Total available stable funding", stock_k({"FY2025": 1316936, "FY2024": 1136904, "FY2023": 1066880, "FY2022": 912816})),
+        ("Total required stable funding", stock_k({"FY2025": 948441, "FY2024": 768308, "FY2023": 744377, "FY2022": 735763})),
         ("Net Stable Funding Ratio (%)", dict({"FY2025": "138.85%", "FY2024": "147.98%", "FY2023": "143%", "FY2022": "124%", "FY2021": "Not disclosed"},
             **hist_na("Not applicable"))),
     ],
