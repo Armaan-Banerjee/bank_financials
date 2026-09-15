@@ -401,6 +401,29 @@ which IS a real coverage limitation and still counts as a gap.
 
 ---
 
+## 8a. OPEN DEFECT — Zenith 1000x scale error, IN THE LIVE WINDOW
+
+**Every absolute-amount cell on Zenith's Pillar 3 and RWA Breakdown sheets is 1000x too
+small for its `£'000` label** — they are effectively £m. Proof from the workbook's own
+sheets: Balance Sheet FY2024 Total equity **305,356.2** against CET1 Capital sheet FY2024
+**302.3**, both labelled `£'000`.
+
+**Diagnosis (verified 2026-09-15):** `stock()` and `flow()` in `scripts/build_zenith.py`
+(lines ~81-88) divide by both the FX rate and 1,000. That is correct for the Balance
+Sheet / P&L dicts, which hold **raw USD**. It is wrong for the Pillar 3 dicts, which
+already hold **US$'000** — e.g. `CET1_TIER1_TOTAL_USD["FY2024"] = 378325`. Those need
+`v / FX_SPOT[y]` with **no** `/1000`.
+
+Ratios are unaffected and every printed ratio still reproduces, which is why this survived
+undetected. Unlike the NBE defect below, this one sits **inside the current five-year
+window** and reaches the Overview copies and the insights DB.
+
+A dispatched agent entered FY2011 as 43.6/40.0 to match the sheet's existing (wrong) scale
+rather than create a mixed-unit defect within one sheet, preserving the true £'000 figures
+in the note. **If the scale is fixed, that FY2011 row must be rescaled with everything else.**
+
+---
+
 ## 8b. OPEN DEFECT — not fixed, needs its own ticket
 
 **National Bank of Egypt (UK): FY2017 Balance Sheet and P&L column is in £'000 while those

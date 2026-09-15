@@ -22,17 +22,53 @@ AR={"FY2025":"https://www.shawbrook.co.uk/media/vkkpos4a/shawbrook-bank-limited-
 "FY2013":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2013, as filed with Companies House, filed 09 Jun 2014)",
 "FY2012":"https://find-and-update.company-information.service.gov.uk/company/00388466/filing-history (Shawbrook Bank Limited Annual Report and Accounts 2012, as filed with Companies House, filed 20 May 2013)"}
 P3={"FY2025":"https://www.shawbrook.co.uk/media/w5chxn4q/shawbrook-pillar-3-disclosures-2025.pdf","FY2024":"https://www.shawbrook.co.uk/media/rzpdavyj/shawbrook-2024-pillar-3-disclosures.pdf","FY2023":"https://www.shawbrook.co.uk/media/wrpglj2h/shawbrook-pillar-3-disclosures-2023.pdf","FY2022":"https://www.shawbrook.co.uk/media/pljhf2fo/2022-shawbrook-pillar-3-disclosures.pdf","FY2021":"https://www.shawbrook.co.uk/media/hlbpmnjm/pillar-3-2021.pdf",
-"FY2020":"https://www.shawbrook.co.uk/media/xexpjjkq/shawbrook-pillar-3-disclosures-2020.pdf","FY2019":"https://www.shawbrook.co.uk/media/2azlz2vz/shawbrook-pillar-3-disclosures-2019.pdf",
-"FY2018":"https://www.shawbrook.co.uk/media/kfnfg0oe/shawbrook-pillar-3-disclosures-2018.pdf","FY2017":"https://www.shawbrook.co.uk/media/3lifgtxe/shawbrook-pillar-3-disclosures-2017.pdf",
-"FY2016":"https://www.shawbrook.co.uk/media/1lhngswy/shawbrook-pillar-3-disclosures-2016.pdf","FY2015":"https://www.shawbrook.co.uk/media/wdvhqxsn/shawbrook-pillar-3-disclosures-2015.pdf",
+"FY2020":"https://www.shawbrook.co.uk/media/zlibpqlt/pillar-3-2020.pdf","FY2019":"https://www.shawbrook.co.uk/media/yhdl0kcs/pillar-3-2019.pdf",
+"FY2018":"https://www.shawbrook.co.uk/media/vypjeoat/pillar-3-2018.pdf","FY2017":"https://www.shawbrook.co.uk/media/3wefl2tu/pillar-3-2017.pdf",
+"FY2016":"https://www.shawbrook.co.uk/media/koignkmo/pillar-3-2016.pdf","FY2015":"https://www.shawbrook.co.uk/media/4galhsik/pillar-3-2015.pdf",
+"FY2014":"https://www.shawbrook.co.uk/media/cc5dq5j0/pillar-3-2014.pdf"}
+# Dead originals, retained for provenance - do NOT delete. shawbrook.co.uk
+# relocated its investor documents to /about-us/investors/results-centre/ and
+# re-issued new Umbraco media GUIDs for the FY2014-FY2020 Pillar 3 PDFs; the
+# URLs below were confirmed HTTP 404 (not blocked, not soft-404) on
+# 15 September 2026 and replaced by the /media/... URLs now in P3 above.
+P3_DEAD={
+"FY2020":"https://www.shawbrook.co.uk/media/xexpjjkq/shawbrook-pillar-3-disclosures-2020.pdf",
+"FY2019":"https://www.shawbrook.co.uk/media/2azlz2vz/shawbrook-pillar-3-disclosures-2019.pdf",
+"FY2018":"https://www.shawbrook.co.uk/media/kfnfg0oe/shawbrook-pillar-3-disclosures-2018.pdf",
+"FY2017":"https://www.shawbrook.co.uk/media/3lifgtxe/shawbrook-pillar-3-disclosures-2017.pdf",
+"FY2016":"https://www.shawbrook.co.uk/media/1lhngswy/shawbrook-pillar-3-disclosures-2016.pdf",
+"FY2015":"https://www.shawbrook.co.uk/media/wdvhqxsn/shawbrook-pillar-3-disclosures-2015.pdf",
 "FY2014":"https://www.shawbrook.co.uk/media/qsxpg41l/shawbrook-pillar-3-disclosures-2014.pdf"}
+LINK_PROVENANCE=(
+"LINK PROVENANCE (checked 15 September 2026): the FY2014-FY2020 Pillar 3 URLs cited here are REPLACEMENT URLs. "
+"shawbrook.co.uk moved its investor documents to /about-us/investors/results-centre/ and re-issued the media GUIDs, "
+"so the URLs originally cited in this workbook now return HTTP 404. The dead originals are recorded here so the "
+"provenance chain stays readable - each replacement was fetched, confirmed to be a real PDF (%PDF magic bytes, not "
+"merely HTTP 200), and its cover and Appendix 1 read to confirm the year and the entity before substitution:\n"
++"\n".join(f"  {y}: DEAD (404 as at 15 Sep 2026) {P3_DEAD[y]}  ->  LIVE {P3[y]}" for y in ["FY2020","FY2019","FY2018","FY2017","FY2016","FY2015","FY2014"])+
+"\nREPRODUCTION CHECK: because the replacements were matched on year and entity rather than byte-compared with the "
+"dead originals, every FY2014-FY2020 figure in this workbook was re-read from the replacement documents. All "
+"reproduce exactly, with no restatement between editions: FY2020/FY2019 from the Pillar 3 Disclosures 2020 "
+"'Key risk metrics for Shawbrook Bank Limited', capital-composition, LRCom and 'Risk-weighted assets and minimum "
+"capital requirements under Pillar 1 for Shawbrook Bank Limited' tables in Appendix 1; FY2018/FY2017 from the "
+"Pillar 3 Disclosures 2018 Appendix 1 capital-composition and LRCom tables; FY2016 from the Pillar 3 Disclosures "
+"2016 Appendix 1 (independently cross-checked against the FY2016 comparative column in the 2017 Appendix 1, which "
+"agrees exactly); FY2015 and FY2014 from the Pillar 3 Disclosures 2015 and 2014 Appendix 1 tables respectively.\n"
+"ENTITY BASIS CHECK: all seven replacement documents are published by Shawbrook GROUP plc, but every figure taken "
+"from them is read from the Bank-level section - 'Appendix 1: Disclosures for Shawbrook Bank Limited' (present in "
+"the 2014, 2015, 2016, 2017, 2018 and 2020 editions), which is the Article 13 CRR reduced disclosure of Shawbrook "
+"Bank Limited as the Group's significant subsidiary, i.e. the entity's own figures, not the Group consolidation. "
+"Confirmed by the Group/Bank divergence in the same documents: the 2018 edition's GROUP leverage ratio is 9.2% "
+"(2017: 9.4%) whereas its Bank Appendix 1 gives 9.2% (2017: 9.5%) - this workbook records 9.2%/9.5%, the Bank "
+"figures. No Group figure sits in any entity-level sheet."
+)
 def d(vals): return dict(zip(Y,vals))
 note=("Shawbrook Bank Limited (Companies House 00388466; FRN 204574; LEI 213800XSHRKUIZK86B68) is the matched legal entity. "
 "Cash flows use the Company column, £m, from the Bank's consolidated-and-company accounts. Bank-specific Pillar 3 metrics are used for FY2015-FY2024 (all years with a Bank-specific figure disclosed). "
 "The FY2025 Pillar 3 publication is Group-only after the listing and is not substituted for Bank data - independently re-confirmed 15 September 2026: shawbrook-pillar-3-disclosures-2025.pdf is headed 'Shawbrook Group plc Company No: 07240248', states that the PRA supervises Shawbrook Group plc on a consolidated basis, and contains a single reporting section with no Shawbrook Bank Limited solo or sub-consolidated disclosure. FY2025 Bank-level capital, RWA, leverage and NSFR figures are therefore taken from Shawbrook Bank Limited's own Annual Report and Accounts 2025 instead: Key Performance Indicators table p.9 (CET1 ratio 12.4%, Total Tier 1 capital ratio 13.5%, Total capital ratio 14.9%, Leverage ratio 7.8%, Risk-weighted assets 12,000.4), Risk Report - Regulatory capital (audited) p.90 (Common Equity Tier 1 capital 1,495.7; Additional Tier 1 125.0; Total Tier 1 capital 1,620.7; Tier 2 163.8; Total regulatory capital 1,784.5) and Risk Report - Net stable funding ratio p.89 (NSFR 124.9% at 31 December 2025, 2024: 134.5%). The FY2025 LCR is the one metric deliberately left blank: the Annual Report's 147.2% is a point-in-time year-end ratio, not the 12-month-average UK KM1 measure used for FY2022-FY2024 here (the same Annual Report reports FY2024 as 176.0% against the 265.0% recorded here from that year's Bank Pillar 3) - see the LCR sheet. Every other FY2024 comparative in the Annual Report reproduces this workbook's Bank-level Pillar 3 figures exactly. FY2022 RWA/capital comparatives use the restatement in the 2023 Pillar 3 disclosure; FY2021 and FY2022 leverage bases differ. "
 "FY2014-FY2018 statements were sourced from Companies House filing-history (scanned filings, OCR'd) because shawbrook.co.uk's own hosted 'Annual Report' links for those years are Shawbrook Group plc (holdco) documents, not Bank-entity accounts; FY2019-FY2020 statements use the Bank-entity reports hosted on shawbrook.co.uk directly. "
 "FY2016-FY2018 Bank-level Total RWAs, CET1/Tier1/Total Capital ratios are blank: those years' Pillar 3 disclosures give a Bank-level credit-risk RWA figure but never an operational-risk RWA component at Bank level, so Total RWA cannot be assembled without substituting a Group figure, which this workbook does not do. FY2019 Bank Total RWA/ratios use the comparative column in the FY2020 Pillar 3 disclosure (the first year Shawbrook disclosed a full Bank-level RWA-by-category table); FY2019's own Pillar 3 document did not itself disclose this breakdown. "
-"FY2014/FY2015 Bank Total RWAs are derived from the Bank's own disclosed Pillar 1 capital requirement (Credit risk + Operational risk) grossed up at 8%, per each year's own Pillar 3 disclosure; FY2015's derived total (£2,173.8m) is used in preference to the £2,175.9m 'Total risk exposure amount' shown in that year's countercyclical-buffer table, which nets to the same figure within rounding. "
+"FY2015's Bank Total RWA (£2,175.9m) is the 'Total risk exposure amount' of £2,175,860k stated directly in the Bank's own countercyclical-capital-buffer table, Pillar 3 Disclosures 2015 Appendix 1 p.34 - a disclosed figure, not a derived one. FY2014's Bank Total RWA (£1,460.0m) has no such directly stated equivalent (the 2014 disclosure predates the countercyclical-buffer template) and is the one derived figure on this sheet: the Bank's own disclosed Pillar 1 capital requirement (Credit risk £112.4m + Operational risk £4.4m) grossed up at 8%. CORRECTION (15 September 2026): this paragraph previously stated that FY2015 used a derived £2,173.8m total 'in preference to' the disclosed £2,175.9m; that was the wrong way round - the workbook has always carried the disclosed £2,175.9m, and the prose has been corrected to match rather than the figure changed. CONSEQUENCE, stated rather than smoothed: on the RWA Breakdown sheet FY2015's two category rows (Credit risk £2,051.3m and Operational risk £122.5m, each grossed up at 8% from the disclosed £164.1m and £9.8m Pillar 1 requirements, since no Bank-level RWA-by-category template existed in 2015) sum to £2,173.8m, £2.1m short of the disclosed £2,175.9m total - a rounding artefact of grossing up capital requirements stated to £0.1m. FY2015 is therefore the one populated year on that sheet whose categories do not foot exactly to the total. "
 "Per wayfinder ticket HD-072 (2026-09-06), FY2013 and FY2012 were added to the four statutory-statement sheets only "
 "(Balance Sheet, Profit & Loss, Statement of Changes in Equity, Cash Flow Statement) - Pillar 3, Asset Quality and "
 "RWA Breakdown remain FY2014-floored, since Pillar 3 disclosures genuinely aren't comparable pre-CRD IV/Basel III.")
@@ -546,8 +582,8 @@ b.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-ps="Sources - Bank-specific Pillar 3: FY2021 Appendix 4 pp.54-58; FY2022 Bank tables 17 and KM1 pp.18-21; FY2023 Bank tables 14-15 pp.19-22; FY2024 Bank tables 11-12 pp.16-19; FY2020/FY2019 'Key risk metrics for Shawbrook Bank Limited' table, Appendix 1 (Pillar 3 Disclosures 2020); FY2018/FY2017/FY2016 Appendix 1 capital-composition tables (no Bank RWA breakdown disclosed those 3 years - see note); FY2015 Appendix 1 pp.33-34; FY2014 Appendix (Disclosures for Shawbrook Bank Limited) pp.39-40.\n"+"\n".join(f"{y}: {P3[y]}" for y in Y if y in P3)+"\nBlank cells mean not publicly disclosed/not applicable; FY2025 Group-only data is not used as a Bank proxy. FY2013/FY2012 are out of scope for this workbook's Pillar 3 sheets (see wayfinder ticket HD-072) and are simply blank, same as any other undisclosed year."
-def m(name,unit,data,n=None): b.add_metric_sheet(name,unit,[(name,data)],ps,note=n,first_col_width=54,source_height=180)
+ps="Sources - Bank-specific Pillar 3: FY2021 Appendix 4 pp.54-58; FY2022 Bank tables 17 and KM1 pp.18-21; FY2023 Bank tables 14-15 pp.19-22; FY2024 Bank tables 11-12 pp.16-19; FY2020/FY2019 'Key risk metrics for Shawbrook Bank Limited' table, Appendix 1 (Pillar 3 Disclosures 2020); FY2018/FY2017/FY2016 Appendix 1 capital-composition tables (no Bank RWA breakdown disclosed those 3 years - see note); FY2015 Appendix 1 pp.33-34; FY2014 Appendix (Disclosures for Shawbrook Bank Limited) pp.39-40.\n"+"\n".join(f"{y}: {P3[y]}" for y in Y if y in P3)+"\nBlank cells mean not publicly disclosed/not applicable; FY2025 Group-only data is not used as a Bank proxy. FY2013/FY2012 are out of scope for this workbook's Pillar 3 sheets (see wayfinder ticket HD-072) and are simply blank, same as any other undisclosed year.\n\n"+LINK_PROVENANCE
+def m(name,unit,data,n=None): b.add_metric_sheet(name,unit,[(name,data)],ps,note=n,first_col_width=54,source_height=280)
 AR2025_BANK_BASIS = (
     " FY2025 is sourced from Shawbrook Bank Limited's OWN Annual Report and Accounts 2025 (Bank entity, "
     "Companies House 00388466), NOT from a Pillar 3 disclosure: the FY2025 Pillar 3 publication covers "
@@ -585,7 +621,7 @@ m("Tier 1 Capital","£m",d([1620.7,1422.0,1247.7,1076.5,900.7,788.8,719.4,639.4,
 m("Tier 1 Ratio","%",d(["13.5%","14.3%","14.3%","14.6%","14.7%","15.0%","14.5%",None,None,None,"14.2%","11.5%"]),AR2025_BANK_BASIS+" FY2018-FY2016 blank: no Bank-level Total RWA is available those years (see Total RWAs note).")
 m("Total Capital","£m",d([1784.5,1586.2,1431.7,1171.5,995.7,883.8,814.3,714.4,642.4,452.4,388.2,202.2]),AR2025_BANK_BASIS.strip())
 m("Total Capital Ratio","%",d(["14.9%","15.9%","16.4%","15.9%","16.2%","16.8%","16.4%",None,None,None,"17.9%","13.8%"]),AR2025_BANK_BASIS+" FY2018-FY2016 blank: no Bank-level Total RWA is available those years (see Total RWAs note).")
-m("Total RWAs","£m",d([12000.4,9952.2,8707.3,7466.4,6134.0,5268.4,4972.5,None,None,None,2175.9,1460.0]),AR2025_BANK_BASIS+" FY2016-FY2018 blank: those years' Pillar 3 disclosures give a Bank-level credit-risk RWA figure but never disclose a Bank-level operational-risk RWA component, so Total RWA cannot be assembled without substituting a Group figure - not done, per this workbook's convention. FY2019 uses the comparative column in the FY2020 Pillar 3 disclosure (the first year with a full Bank RWA-by-category table); FY2019's own document did not disclose this breakdown. FY2015/FY2014 are derived from the Bank's own disclosed Pillar 1 capital requirement (Credit risk + Operational risk) grossed up at 8%.")
+m("Total RWAs","£m",d([12000.4,9952.2,8707.3,7466.4,6134.0,5268.4,4972.5,None,None,None,2175.9,1460.0]),AR2025_BANK_BASIS+" FY2016-FY2018 blank: those years' Pillar 3 disclosures give a Bank-level credit-risk RWA figure but never disclose a Bank-level operational-risk RWA component, so Total RWA cannot be assembled without substituting a Group figure - not done, per this workbook's convention. FY2019 uses the comparative column in the FY2020 Pillar 3 disclosure (the first year with a full Bank RWA-by-category table); FY2019's own document did not disclose this breakdown. FY2015 is the 'Total risk exposure amount' stated directly in that year's Bank countercyclical-buffer table; FY2014 alone is derived from the Bank's own disclosed Pillar 1 capital requirement (Credit risk + Operational risk) grossed up at 8%, no directly stated total existing for that year.")
 
 # ---------------------------------------------------------------
 # RWA Breakdown - Pillar 3 UK OV1 (FY2022-FY2024)/EU OV1 (FY2021) template,
@@ -618,8 +654,10 @@ b.add_rwa_breakdown_sheet(
               "source note). FY2016-FY2018 blank - no Bank-level operational-risk RWA is disclosed those years. "
               "FY2015/FY2014 categories are derived from the Bank's own disclosed Pillar 1 capital requirement "
               "(Credit risk + Operational risk) grossed up at 8%, since no RWA-by-category template existed yet; "
-              "no CCR/securitisation breakout is available at Bank level for those two years. All other populated "
-              "years sum exactly to Total RWAs.",
+              "no CCR/securitisation breakout is available at Bank level for those two years. FY2015's categories "
+              "sum to £2,173.8m against a disclosed Total risk exposure amount of £2,175.9m - a £2.1m rounding "
+              "artefact of grossing up capital requirements stated to £0.1m, kept rather than smoothed (see source "
+              "note). Every other populated year sums exactly to Total RWAs.",
     rows=rwa_breakdown_rows,
     sources_text=(
         "Sources - Shawbrook Bank Limited, UK OV1 / EU OV1: Overview of risk-weighted exposure amounts:\n"
@@ -654,10 +692,10 @@ b.add_rwa_breakdown_sheet(
         f"FY2015 (derived): Pillar 3 Disclosures 2015, Appendix 1 'Pillar 1 requirements' table, p.33 (Credit "
         f"risk £164.1m, Operational risk £9.8m, each grossed up at 8%) - {P3['FY2015']}\n"
         f"FY2014 (derived): Pillar 3 Disclosures 2014, Appendix 1 'Pillar 1 requirements' table, p.39-40 (Credit "
-        f"risk £112.4m, Operational risk £4.4m, each grossed up at 8%) - {P3['FY2014']}\n\n" + note
+        f"risk £112.4m, Operational risk £4.4m, each grossed up at 8%) - {P3['FY2014']}\n\n" + LINK_PROVENANCE + "\n\n" + note
     ),
     first_col_width=64,
-    source_height=220,
+    source_height=300,
     unit_suffix=" (£m)",
 )
 

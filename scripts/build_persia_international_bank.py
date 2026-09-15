@@ -38,6 +38,23 @@ PILLAR3_2016_URL = (
     "http://web.archive.org/web/20161024202355if_/http://www.persiabank.co.uk/"
     "Pillar%203%20Disclosure%20as%20at%2031%20March%202016.pdf"
 )
+# FY2015 STANDALONE PILLAR 3 (2026-09-15). The FY2015 regulatory figures in this
+# workbook were previously cited only via the copy embedded in the FY2015 Annual
+# Report at pp.35-52. The Bank's own standalone edition has now been recovered
+# from the Internet Archive and read directly. It is an 18-page image-only scan
+# with no text layer: rendered at 250dpi, OCR'd with tesseract, and then re-read
+# visually off the page images for every figure used (pp.8-9 capital tables,
+# pp.14-15 market and operational risk), per this project's standing OCR rule.
+PILLAR3_2015_URL = (
+    "http://web.archive.org/web/20160316221826if_/http://www.persiabank.co.uk/"
+    "Pillar3_disclosures_March%202015.pdf"
+)
+
+# NOTE ON THE FY2020 CAPTURE (recorded so a later pass does not "upgrade" the URL).
+# The Internet Archive holds two captures of the FY2020 edition. The one cited in
+# PILLAR3_2020_URL above is the v7 file and is complete (1,109,265 bytes, 28
+# pages). There is also a "v6" capture which is TRUNCATED at exactly 1 MiB -
+# a capture artefact, not a different edition. Use v7 only.
 
 # The Bank reports in EUR and discloses its own EUR/GBP rates in the accounting
 # policies.  Rates are EUR per GBP, so EUR / rate = GBP.  FY2015 and FY2016's own
@@ -215,6 +232,47 @@ P3_CESSATION_NOTE = (
 )
 
 
+FY2015_P3_NOTE = (
+    "FY2015 STANDALONE PILLAR 3 RECOVERED 2026-09-15 (year ended 31 MARCH 2015; this Bank's year-end is 31 March "
+    "throughout). 'Pillar 3 Disclosures March 2015', recovered from the Internet Archive - " + PILLAR3_2015_URL + "\n"
+    "  - Section 3 'Capital Resources', p.8, capital structure as at 31 March 2015, in euro: Ordinary share capital "
+    "100,000,000; Retained Earnings 5,479,000; TOTAL TIER 1 CAPITAL 105,479,000; Tier 2 capital 46,500,000; TOTAL "
+    "CAPITAL 151,979,000. The Tier 2 is described as loan capital, floating rate notes redeemable in 2043 and listed "
+    "on the Luxembourg stock exchange.\n"
+    "  - Section 4 'Capital Adequacy', p.9: Capital charge under Pillar 1 17,698,000; Pillar 2 requirements (stated "
+    "as 225% of Pillar 1) 39,821,000; Total capital resources 151,979,000; Surplus of capital resources 112,158,000. "
+    "'Breakdown of exposure classes' table, same page: Central Government/Bank risk-weighted exposure 144,039,000 "
+    "(risk capital 11,523,000); Credit institutions 2,514,000 (201,000); Corporate companies 50,022,000 (4,002,000); "
+    "Securities 435,000 (35,000); Short term claims on institutions 7,822,000 (626,000); Others 16,389,000 "
+    "(1,311,000); TOTAL 221,221,000 (17,698,000).\n"
+    "  - Section 6 'Market risk', p.14: 'As at 31 March 2015 the FX spot position risk: EUR 4,128,000'.\n"
+    "  - Section 7 'Operational risk', p.15: the Basic Indicator Approach Operational Risk Requirement multiplied by "
+    "12.5 gives a Risk Weighted Exposure 'which as at 31 March 2015 was EUR 11,501,000'.\n"
+    "  - WHAT THIS EDITION SETTLES. (1) It confirms the composition of the EUR 518,000 divergence already recorded "
+    "in this workbook's entity note: the Pillar 3's Tier 1 of 105,479,000 is ordinary share capital 100,000,000 plus "
+    "retained earnings 5,479,000, where the FY2015 statutory accounts' capital-management note gives 105,997,000 and "
+    "ties to the Balance Sheet. This workbook's existing convention is unchanged - the statutory figure remains the "
+    "authoritative Tier 1/Total Capital on those sheets - but the divergence is now traced to the retained-earnings "
+    "line specifically, not merely asserted. (2) It confirms that NO capital ratio of any kind is printed anywhere "
+    "in the FY2015 edition, which is why the FY2015 ratio cells are this workbook's own calculation - see the "
+    "warning on those sheets. (3) It supplies two figures this workbook did not previously hold at all: the market "
+    "risk and operational risk risk-weighted exposures, now on the RWA Breakdown sheet.\n"
+    "  - THE BIG ONE: THE FY2015 'TOTAL RWA' OF EUR 221,221,000 IS CREDIT-RISK ONLY. The 221,221,000 is the total "
+    "line of the 'Breakdown of exposure classes' table (and of the same document's Template CR4), whose six rows are "
+    "all credit exposure classes; 17,698,000 is exactly 8% of it. The market risk RWE (4,128,000) and the "
+    "operational risk RWE (11,501,000) are disclosed in separate narrative sentences elsewhere in the document and "
+    "are NOT included in that total, and the edition prints no Pillar 1 total RWA anywhere. This is the same "
+    "credit-subtotal-presented-as-total defect confirmed at Redwood, Ghana International and Bank of Ceylon. It is "
+    "flagged on the Total RWAs, Total Capital Ratio and Tier 1 Ratio sheets and the FY2015 figure is left as "
+    "disclosed there rather than replaced - no document states a FY2015 total. Note that the later editions do NOT "
+    "share the defect: the FY2016 edition prints an explicit 'Total Pillar 1 risk 319,767' row summing credit "
+    "306,733, market 3,036 and operational 9,998, and FY2017-FY2021 follow the same layout.\n"
+    "  - No leverage ratio, LCR or NSFR appears anywhere in the FY2015 edition - structurally so, since none was a "
+    "UK disclosure requirement at 31 March 2015. Its liquidity discussion is the then-current ILAA regime, "
+    "narrative only."
+)
+
+
 def p3_sources():
     return (
         "Sources - Persia International Bank Plc entity-level capital disclosures:\n"
@@ -222,6 +280,7 @@ def p3_sources():
         f"FY2023/FY2022: Annual Report and Financial Statements 2023, Note 26 (Capital management), p.62 - {AR2023_URL}\n"
         f"FY2021: Annual Report and Financial Statements 2022, Note 26 (Capital management), p.58 - {AR2022_URL}\n"
         f"FY2021 Pillar 3: Persia International Bank Pillar 3 Disclosure 2021, pp.16-20 and 26 - {PILLAR3_2021_URL}\n"
+        + FY2015_P3_NOTE + "\n"
         "The Bank states in the FY2023-FY2025 annual reports that Pillar 3 disclosures are made separately and can "
         "be made available on request; no public 2022-2025 Pillar 3 document was locatable. The 2021 Pillar 3 document "
         "is unaudited and provides the only directly disclosed FY2021 RWA, LCR and leverage values used here.\n\n"
@@ -798,13 +857,46 @@ EXT_RATIO_NOTE = (
     "on the Total Capital Ratio / Tier 1 Ratio sheets is this workbook's own calculation from the FY2015 statutory "
     "Total Capital/Tier 1 figures divided by the FY2015 Pillar 3 disclosure's own Total RWA figure (EUR 221,221k, "
     "the 'Breakdown of exposure classes' table's own total - not the same total as its mislabelled Template CR4 "
-    "table, see the RWA Breakdown sheet's note)."
+    "table, see the RWA Breakdown sheet's note).\n"
+    "FY2015 RATIO WARNING, ADDED 2026-09-15 - READ BEFORE USING THE FY2015 RATIO CELLS. The Bank's standalone "
+    "FY2015 Pillar 3 edition has now been recovered from the Internet Archive and read in full, and it confirms "
+    "two things. First, that no capital ratio of ANY kind is printed anywhere in it - so the FY2015 ratio cells "
+    "are, as stated above, calculated here rather than transcribed, which already makes them weaker than every "
+    "other cell on these sheets. Second, and worse, that the denominator they use is wrong: the EUR 221,221k is "
+    "the CREDIT-RISK RWA only. That edition separately discloses an FX spot position risk of EUR 4,128k and an "
+    "operational risk risk-weighted exposure of EUR 11,501k, neither of which is inside the 221,221k, and it "
+    "prints no Pillar 1 total at all. The FY2015 ratios shown are therefore OVERSTATED: on the three components' "
+    "arithmetic sum of EUR 236,850k, the Total Capital Ratio would be about 64.4% rather than 68.94% and the "
+    "Tier 1 Ratio about 44.8% rather than 47.92%.\n"
+    "THE CELLS ARE LEFT AS THEY WERE, on purpose. Replacing one calculated ratio with another calculated ratio is "
+    "not a transcription improvement, and no FY2015 total RWA exists in any document to divide by. This workbook "
+    "does not have a defensible FY2015 capital ratio and the honest reading of these two cells is that they are "
+    "an upper bound, not a measurement. Flagged for a decision rather than silently adjusted or silently left."
 )
 EXT_RWA_NOTE = (
     "FY2015-FY2020 (added under HD-021): FY2016-FY2020 RWA (credit/market/operational) are directly disclosed in "
-    "the Bank's own standalone Pillar 3 disclosures, same sourcing as the ratio sheets. FY2015's own Pillar 3 "
-    "disclosure does not break RWA down by credit/market/operational risk type at all - only by exposure class (see "
-    "the RWA Breakdown sheet's note) - so only a FY2015 total is shown here, not a risk-type split."
+    "the Bank's own standalone Pillar 3 disclosures, same sourcing as the ratio sheets, and each of those editions "
+    "prints its own explicit Pillar 1 total (FY2016's reads 'Total Pillar 1 risk 319,767'), so those years' figures "
+    "on this sheet are genuine totals.\n"
+    "FY2015 IS NOT A TOTAL AND MUST NOT BE READ AS ONE - corrected 2026-09-15 after the Bank's standalone FY2015 "
+    "Pillar 3 edition was recovered from the Internet Archive and read in full. The EUR 221,221k shown for FY2015 "
+    "is the total line of that edition's 'Breakdown of exposure classes' table (repeated as its Template CR4 "
+    "total), and all six rows of that table are CREDIT exposure classes; the printed 17,698k capital charge beside "
+    "it is exactly 8% of it. The same document separately discloses, in two narrative sentences elsewhere, an FX "
+    "spot position risk of EUR 4,128k (section 6, p.14) and an operational risk risk-weighted exposure of EUR "
+    "11,501k (section 7, p.15) - NEITHER of which is in the 221,221k. The edition prints no Pillar 1 total "
+    "anywhere. So FY2015's true total RWA is materially higher than 221,221k, by roughly 7%. This is the same "
+    "credit-risk-subtotal-presented-as-a-total defect confirmed at Redwood, Ghana International and Bank of "
+    "Ceylon.\n"
+    "IT IS FLAGGED RATHER THAN FIXED, deliberately. No document states a FY2015 total, so adding the three "
+    "components to 236,850k and putting that here would substitute a figure this workbook computed for one the "
+    "Bank disclosed - which this project does not do on this sheet. The component sum is instead shown on its own "
+    "clearly-labelled row of the RWA Breakdown sheet, where it can be seen but cannot be mistaken for a "
+    "disclosure. CONSEQUENCE FOR THE RATIO SHEETS: the FY2015 Total Capital Ratio (68.94%) and Tier 1 Ratio "
+    "(47.92%) in this workbook are this workbook's own calculations using 221,221k as the denominator, so they are "
+    "OVERSTATED - on the 236,850k component sum they would be about 64.4% and 44.8%. Those cells are flagged on "
+    "their own sheets and left unchanged pending a decision, because replacing a calculated ratio with a "
+    "differently-calculated ratio is not an improvement in transcription terms."
 )
 EXT_LEVERAGE_LCR_NOTE = (
     "FY2015-FY2020 (added under HD-021): directly disclosed in the Bank's own standalone Pillar 3 disclosures where "
@@ -824,7 +916,11 @@ metric("Tier 1 Capital", "£'000 (conv. from EUR)", [("Tier one / total regulato
 metric("Tier 1 Ratio", "%", [("Tier 1 ratio", {"FY2021": "40.99%", **CET1_RATIO_EXT, "FY2015": TIER1_RATIO_FY2015})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
 metric("Total Capital", "£'000 (conv. from EUR)", [("Total regulatory capital base", {**CAPITAL_GBP, **TOTAL_CAPITAL_STATUTORY_GBP})], note=CAPITAL_NOTE + "\n\n" + EXT_TOTAL_CAPITAL_NOTE)
 metric("Total Capital Ratio", "%", [("Total capital ratio", {"FY2021": "40.99%", **TOTAL_CAPITAL_RATIO_EXT})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
-metric("Total RWAs", "£'000 (conv. from EUR)", [("Pillar 1 risk-weighted assets", {**RWA_GBP, **RWA_TOTAL_GBP_EXT})],
+metric("Total RWAs", "£'000 (conv. from EUR)", [
+    ("Pillar 1 risk-weighted assets (FY2016-FY2021 are each edition's own printed Pillar 1 total; FY2015 is CREDIT-RISK RWA ONLY and understates the total - see note)",
+     {**RWA_GBP, **RWA_TOTAL_GBP_EXT}),
+    ("FY2015 only - risk-weighted exposures the FY2015 edition discloses SEPARATELY and does NOT include in the 221,221 above: market risk (FX spot position risk) 4,128 and operational risk 11,501",
+     {"FY2015": 15629})],
     note="Only FY2021 is directly disclosed among FY2021-FY2025: €318.824m in the 2021 Pillar 3 disclosure, p.18. FY2022-FY2025 "
          "are not publicly disclosed and are not calculated from capital because no corresponding capital ratio is stated.\n\n"
          + P3_CESSATION_NOTE + "\n\n" + EXT_RWA_NOTE)
@@ -839,15 +935,26 @@ metric("Total RWAs", "£'000 (conv. from EUR)", [("Pillar 1 risk-weighted assets
 # later Annual Reports state Pillar 3 disclosure is available on request,
 # and no public standalone Pillar 3 document for those years was located.
 # ---------------------------------------------------------------
+# FY2015 added 2026-09-15 from the recovered standalone FY2015 Pillar 3 edition.
+# Credit 221,221 is that document's own 'Breakdown of exposure classes'/Template
+# CR4 total; market risk 4,128 is its section 6 'FX spot position risk'; and
+# operational risk 11,501 is its section 7 Basic-Indicator RWE. All three are
+# transcribed. Unlike FY2016-FY2021, the FY2015 edition prints NO Pillar 1 total,
+# so its three components are shown but its Total row is handled separately below.
 RWA_BREAKDOWN_EUR = {
-    "Credit and counterparty credit risk": {"FY2021": 298566, **RWA_CREDIT_EUR},
-    "Market risk": {"FY2021": 15321, **RWA_MARKET_EUR},
-    "Operational risk": {"FY2021": 4937, **RWA_OPERATIONAL_EUR},
+    "Credit and counterparty credit risk": {"FY2021": 298566, **RWA_CREDIT_EUR, "FY2015": 221221},
+    "Market risk": {"FY2021": 15321, **RWA_MARKET_EUR, "FY2015": 4128},
+    "Operational risk": {"FY2021": 4937, **RWA_OPERATIONAL_EUR, "FY2015": 11501},
 }
 rwa_breakdown_rows = [
     ("DATA", label, {y: stock_v(v, y) for y, v in values.items()})
     for label, values in RWA_BREAKDOWN_EUR.items()
-] + [("TOTAL", "Total Pillar 1 risk-weighted assets", {**RWA_GBP, **RWA_TOTAL_GBP_EXT})]
+] + [
+    ("TOTAL", "Total Pillar 1 risk-weighted assets (as printed in each edition; FY2015 blank - no total is printed there)",
+     {**RWA_GBP, **RWA_TOTAL_GBP_EXT, "FY2015": None}),
+    ("DATA", "FY2015 ONLY - arithmetic sum of the three FY2015 rows above (NOT a disclosed figure; shown here so the gap against the Total RWAs sheet's credit-only 221,221 is visible, and deliberately NOT carried onto the Total RWAs sheet - see note)",
+     {"FY2015": stock_v(236850, "FY2015")}),
+]
 
 bw.add_rwa_breakdown_sheet(
     title="Persia International Bank Plc — RWA Breakdown",
@@ -857,10 +964,12 @@ bw.add_rwa_breakdown_sheet(
               "the Total RWAs sheet for every year shown. FY2022-FY2025 not publicly disclosed - the Bank stopped publishing "
               "Pillar 3 after its 31 March 2021 edition (its FY2022 report still said the disclosures were published on its "
               "website; FY2023-FY2025 all say they can be made available on request instead), and its live site carries no "
-              "later edition - see the source note below. FY2015 is NOT shown on this sheet (see Total RWAs instead): the FY2015 Pillar 3 disclosure "
-              "breaks its RWA down by exposure class (Central Government/Bank, Credit institutions, Corporate companies, "
-              "Securities, Short term claims on institutions, Others), not by credit/market/operational risk type, so it "
-              "does not map onto this sheet's three rows without inventing a category split the source does not provide.",
+              "later edition - see the source note below. FY2015 IS NOW SHOWN (added 2026-09-15, correcting this subtitle's previous "
+              "claim that it could not be): the recovered standalone FY2015 Pillar 3 edition does break its risk down by the "
+              "three types after all - the 'Breakdown of exposure classes' table's 221,221 total IS the credit-risk RWA, and "
+              "the market and operational risk risk-weighted exposures (4,128 and 11,501) are disclosed separately in that "
+              "document's sections 6 and 7. The earlier conclusion came from reading only the exposure-class table. FY2015's "
+              "Total row is BLANK because that edition prints no Pillar 1 total, unlike every later one - see the note below.",
     rows=rwa_breakdown_rows,
     sources_text=(
         "Sources - Persia International Bank Plc Pillar 3 disclosures, Pillar 1 capital requirements tables:\n"
@@ -874,7 +983,20 @@ bw.add_rwa_breakdown_sheet(
         f"FY2018/FY2017: Pillar 3 Disclosure as at 31/03/2018, p.16, recovered via Wayback Machine (captured 2 September "
         f"2018) - {PILLAR3_2018_URL}\n"
         f"FY2016: Pillar 3 Disclosure as at 31 March 2016, p.13, recovered via Wayback Machine (captured 24 October 2016) "
-        f"- {PILLAR3_2016_URL}\n\n"
+        f"- {PILLAR3_2016_URL}\n"
+        f"FY2015: Pillar 3 Disclosures March 2015, p.9 (Breakdown of exposure classes - credit risk), p.14 (section 6, "
+        f"FX spot position risk) and p.15 (section 7, operational risk RWE), recovered via Wayback Machine (captured "
+        f"16 March 2016) - {PILLAR3_2015_URL}\n\n"
+        "FY2015 TOTAL ROW IS BLANK, AND THAT IS THE POINT. Every edition from FY2016 on prints an explicit total - "
+        "FY2016's reads 'Total Pillar 1 risk 319,767' directly beneath credit 306,733, market 3,036 and operational "
+        "9,998. The FY2015 edition prints no such row. Its three components are disclosed in three different places "
+        "(an exposure-class table on p.9, one sentence on p.14, one sentence on p.15) and are never added up. The "
+        "consequence is that the 221,221 carried on the Total RWAs sheet for FY2015 is the CREDIT-RISK RWA ONLY - "
+        "the same credit-subtotal-as-total defect confirmed at Redwood, Ghana International and Bank of Ceylon. It "
+        "is left there because no document states a FY2015 total and this project does not substitute a derived "
+        "figure for a disclosed one on that sheet; the arithmetic sum of the three components (236,850) is shown on "
+        "its own explicitly-labelled row here, and nowhere else, so the size of the understatement is visible "
+        "without being presented as a disclosure. See the FY2015 note on the metric sheets for the full extract.\n\n"
         + ENTITY_NOTE + "\n" + FX_NOTE
     ),
     first_col_width=54,

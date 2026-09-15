@@ -29,9 +29,64 @@ documented on both rows, never silently overwritten; Overview sheets are copies.
 - Asset Quality: new labelled SECTION with the incurred-loss provision + past-due rows.
 - ENTITY_NOTE expanded with the LI3 evidence; Overview note records that nothing from
   the Basel II editions reaches the Overview (by design — they disclose no ratios).
-- [ ] Zenith — documents downloaded
-- [ ] Zenith — transcribed
-- [ ] Zenith — rebuilt
+- [x] Zenith — 4 documents downloaded (FY2008/FY2011 new; FY2014/FY2015 already in the script)
+- [x] Zenith — transcribed
+- [x] Zenith — rebuilt (18 sheets)
+
+### Zenith — what was written
+- `PILLAR3_YEARS` un-pinned to full `YEARS` (now reaches FY2009).
+- New `P3_2011_URL` / `P3_2008_URL` timestamped Wayback constants + `HIST_P3_NOTE`
+  + `P3_UNIT_DEFECT_NOTE`, both appended to `p3_sources()`.
+- Tier 1 Capital / Total Capital: **two new rows** carrying FY2011 Basel II capital
+  (Total Tier 1 per audited accounts 43,631k; Regulatory Available Capital 40,002k).
+- FY2009-FY2013 explicit markers on every metric sheet, differentiating
+  "Not applicable (Basel II)" from "No Pillar 3 edition exists in any archive"
+  from "Not publicly disclosed" (FY2011, where the edition survives and is silent).
+- `add_not_disclosed_metric_sheets` for MREL replaced with an explicit `metric()` call
+  so FY2009-FY2013 read "Not applicable (pre-dates MREL regime)".
+- Archive-status taxonomy recorded: published-but-lost (FY2016/FY2019) vs apparently
+  never posted (FY2017/FY2018/FY2020, WITH the Feb-2019-to-Jan-2021 capture-gap caveat)
+  vs no capture at all (FY2009/FY2010/FY2012/FY2013).
+- LCR two-basis split NOT touched; no back-solving introduced.
+
+### Zenith — FY2008: recovered, read, NO CELL WRITTEN (deliberate)
+Cover says "year ending 31 December 2008" but the only numeric table is introduced
+"Tier 1 capital based on our 31 December 2007 audited accounts as adjusted for a £15
+million capital injection in May 2008" (35,001 / (1,473) / 33,528, £'000). Also: the
+corresponding accounts "will be published in March 2009"; ICAAP "last approved in
+September 2008"; "This Disclosure will be published in December 2008". It is an in-year
+disclosure written before the 2008 year-end. The figure is neither an FY2008 nor an
+FY2007 position, so it maps to no year column. No RWA, no requirement, no ratio in it.
+
+### Zenith — TRAPS CAUGHT
+1. **Capital-cover ratio**: FY2011 prints "Solvency Ratio against Pillar 1 203%",
+   self-annotated "(capital divided by Total amount)" — capital ÷ capital REQUIREMENT,
+   ~12.5x a true ratio. Kept OUT of the ratio sheets, documented in the note.
+2. **Capital requirements ≠ RWA**: FY2011 gives Pillar 1 requirements (18,156 / 27 /
+   1,503 / 19,686). Grossing up by 8% would give 246,075. NOT done (project rule).
+   Flags that FY2014/FY2015 RWA on that same row WERE produced that way in an earlier pass.
+3. **Assessment-date caveat**: FY2011 "Regulatory Available Capital 40,002" is labelled
+   "Capital resources (at assessment date)" in the Pillar 2 table, and equals this
+   workbook's FY2010 closing Total equity (£40,002,338) to the £'000. Recorded as an
+   unresolved caveat, no conclusion asserted.
+4. **NEW PRE-EXISTING DEFECT (not fixed)**: Zenith's Pillar 3 metric + RWA Breakdown
+   sheets are 1000x understated vs their "£'000" label — they are effectively £m.
+   Balance Sheet FY2024 Total equity 305,356.2 vs CET1 Capital sheet FY2024 302.3.
+   Cause: `stock()`/`flow()` divide by 1000 (right for raw-USD statement inputs) but the
+   Pillar 3 dicts already hold US$'000. Ratios unaffected. FY2011 entered at 43.6/40.0 to
+   match the sheet's real scale rather than create a within-sheet mixed-unit defect.
+
+### VALIDATION GATE — Zenith FY2011: PASSED, three years, six lines
+The FY2011 edition's operational-risk income table reproduces the P&L sheet to the pound
+for 2009, 2010 and 2011 (interest receivable/payable, NII, fees, exchange, operating
+income). Independently corroborates the HD-073 Companies House recovery.
+One divergence documented, not corrected: P&L reserve 8,630 vs workbook retained earnings
+8,623,795 (£6.2k, not explained by rounding); share capital agrees exactly at 35,001.
+
+## NOTE ON GIT
+The user committed the Metro work themselves at 21:39 (commit d187632 "more bank
+updates"), while this pass was still running. This agent committed nothing.
+The Zenith changes remain uncommitted, as instructed.
 
 Docs at: /private/tmp/claude-501/-Users-armaan-code-katalysis/20f20984-c24d-413e-b487-68c0d0793341/scratchpad/docs
 

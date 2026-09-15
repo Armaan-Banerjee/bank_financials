@@ -9,7 +9,18 @@ AR2024_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2023_URL = "https://find-and-update.company-information.service.gov.uk/company/01448919/filing-history/MzQyMjI5MjUwM2FkaXF6a2N4/document?download=0&format=pdf"
 AR2022_URL = "https://find-and-update.company-information.service.gov.uk/company/01448919/filing-history/MzM4MTE3NjI0OGFkaXF6a2N4/document?download=0&format=pdf"
 AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company/01448919/filing-history/MzM0MjM1MjU5OWFkaXF6a2N4/document?download=0&format=pdf"
-PILLAR_URL = "https://www.rathbones.com/sites/rathbones.com/files/results_and_presentations/files/31_december_2024_pillar_3_disclosures.pdf"
+PILLAR_URL = "https://www.rathbones.com/sites/main/files/results_and_presentations/files/31_december_2024_pillar_3_disclosures.pdf"
+# Dead original, retained for provenance - do NOT delete. rathbones.com renamed
+# the site directory from /sites/rathbones.com/ to /sites/main/; only that one
+# path segment changed. The URL below was confirmed HTTP 404 (not blocked, not
+# a soft-404) on 15 September 2026 and replaced by PILLAR_URL above, which was
+# fetched and confirmed to be a real PDF (%PDF magic bytes, not merely HTTP
+# 200): 49 pages, cover "PILLAR 3 DISCLOSURES / 31 DECEMBER 2024 / RATHBONES
+# GROUP PLC". It is the only rathbones.com URL in this script; every other
+# source here is a Companies House filing-history document (all five
+# re-verified live and serving %PDF on 15 September 2026), so no other URL in
+# this file is exposed to the same rename.
+PILLAR_URL_DEAD = "https://www.rathbones.com/sites/rathbones.com/files/results_and_presentations/files/31_december_2024_pillar_3_disclosures.pdf"
 
 ENTITY_NOTE = (
     "Entity: Rathbones Investment Management Limited (FRN 116316, company 01448919), formerly "
@@ -20,7 +31,25 @@ ENTITY_NOTE = (
     "Pillar 3 metrics are not substituted from Rathbones Group Plc: the official 2024 Pillar 3 report "
     "states that disclosures are consolidated and that no large subsidiary meets the definition requiring "
     "individual disclosure. Accordingly, entity-level CET1, Tier 1, Total Capital, RWA, leverage, LCR, "
-    "NSFR and MREL figures are not publicly disclosed in the Company's accounts. The 2021 own-account "
+    "NSFR and MREL figures are not publicly disclosed in the Company's accounts.\n"
+    "SOURCE FOR THAT STATEMENT (citation added 15 September 2026 - the document was named here but its URL "
+    "was previously not printed on any sheet): Rathbones Group Plc, Pillar 3 Disclosures 31 December 2024, "
+    "section 1 'Executive summary', p.6 - 'Disclosures are made on a consolidated group level, as we have no "
+    "large subsidiaries meeting the requirements for individual disclosure under the definition within CRR "
+    "Article 4(146).' - " + PILLAR_URL + "\n"
+    "BASIS WARNING - this Group document is cited ONLY as evidence of ABSENCE, i.e. as the reason the "
+    "entity-level Pillar 3 sheets in this workbook are blank. Not one figure in this workbook is taken from "
+    "it. Every figure here comes from Rathbones Investment Management Limited's own entity-only statutory "
+    "accounts filed at Companies House under company number 01448919. Re-checked 15 September 2026 against "
+    "the replacement document in full: it discloses no RIM-solo quantitative metric anywhere. Its NSFR "
+    "section (p.25) does say Rathbones 'is required to calculate and monitor the ratio on a RIM-solo and "
+    "group consolidated basis, reporting the positions quarterly', but it prints only the group consolidated "
+    "figures - templates UK KM1, UK LIQ1 and UK LIQ2 are all group-level - so there is no solo-consolidation "
+    "or significant-subsidiary annex to draw entity data from, and no Group figure has been substituted.\n"
+    "LINK PROVENANCE (15 September 2026): the URL above is a REPLACEMENT. rathbones.com renamed its site "
+    "directory from /sites/rathbones.com/ to /sites/main/, so the URL originally cited for this document now "
+    "returns HTTP 404. Dead original, kept so the provenance chain stays readable: " + PILLAR_URL_DEAD + "\n\n"
+    "The 2021 own-account "
     "closing cash (£1,530,445k) does not equal the 2022 account's comparative opening cash (£1,527,887k); "
     "both source-presented figures are retained and the difference is not inferred or forced."
 )
@@ -198,7 +227,7 @@ bw.add_equity_changes_sheet(
     source_height=260,
 )
 
-bw.add_cash_flow_sheet(title="Rathbones Investment Management Limited — Cash Flow Statement", subtitle="Entity basis, £'000. All figures transcribed from the Company's statutory accounts.", rows=rows, sources_text=CASH_SOURCES, first_col_width=86, source_height=330, unit_suffix=" (£'000)")
+bw.add_cash_flow_sheet(title="Rathbones Investment Management Limited — Cash Flow Statement", subtitle="Entity basis, £'000. All figures transcribed from the Company's statutory accounts.", rows=rows, sources_text=CASH_SOURCES, first_col_width=86, source_height=470, unit_suffix=" (£'000)")
 
 asset_quality_rows = [
     ("SECTION", "Loans and advances to customers, by product", {}),
@@ -274,7 +303,7 @@ RCR_SOURCES = CASH_SOURCES + (
 _pillar3_pre = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio"]
 _pillar3_post = ["Total Capital Ratio", "Total RWAs"]
 _pillar3_after_rwa = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
-bw.add_not_disclosed_metric_sheets(_pillar3_pre, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_pre})
+bw.add_not_disclosed_metric_sheets(_pillar3_pre, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_pre}, source_height=430)
 bw.add_metric_sheet(
     "Total Capital",
     "£'000",
@@ -288,19 +317,19 @@ bw.add_metric_sheet(
          "migration of Investec Wealth & Investment clients into this entity, which also drives the Balance Sheet "
          "and equity jump visible on the Overview sheet.",
     first_col_width=60,
-    source_height=300,
+    source_height=470,
 )
-bw.add_not_disclosed_metric_sheets(_pillar3_post, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_post})
+bw.add_not_disclosed_metric_sheets(_pillar3_post, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_post}, source_height=430)
 bw.add_rwa_breakdown_sheet(
     title="Rathbones Investment Management Limited — RWA Breakdown",
     subtitle="Not publicly disclosed at entity level.",
     rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
     sources_text=CASH_SOURCES,
     first_col_width=54,
-    source_height=180,
+    source_height=430,
     unit_suffix="",
 )
-bw.add_not_disclosed_metric_sheets(_pillar3_after_rwa, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_after_rwa})
+bw.add_not_disclosed_metric_sheets(_pillar3_after_rwa, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_after_rwa}, source_height=430)
 
 bw.add_overview_sheet(
     cash_flow_totals=[("Net cash inflow/(outflow) from operating activities", {"FY2025":988180,"FY2024":200256,"FY2023":-99468,"FY2022":276728,"FY2021":-249109}), ("Net cash used in investing activities", {"FY2025":-559268,"FY2024":-2375,"FY2023":-256406,"FY2022":-285059,"FY2021":-126903}), ("Cash and cash equivalents at the end of the year", {"FY2025":1609394,"FY2024":1249482,"FY2023":1078601,"FY2022":1484475,"FY2021":1530445})],

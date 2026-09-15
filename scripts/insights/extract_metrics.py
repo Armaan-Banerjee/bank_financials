@@ -143,7 +143,9 @@ from in009_analysis import normalize_period
 STATEMENT_SHEET_NAMES = ["Balance Sheet", "Profit & Loss", "Asset Quality", "RWA Breakdown"]
 
 BANKS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "banks")
-BANK_LIST_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "Banks List 2608.xlsx")
+BANK_LIST_PATH = os.path.join(
+    os.path.dirname(__file__), "..", "..", "data", "reference", "Banks List 2608.xlsx"
+)
 DEFAULT_OUT = os.path.join(os.path.dirname(__file__), "..", "..", "research", "bank_metrics.csv")
 
 # Bump on any column addition/removal/rename or semantic change to an

@@ -316,6 +316,24 @@ CASH_FLOW_SOURCES = (
 )
 
 
+P3_UNIT_DEFECT_NOTE = (
+    "*** PRE-EXISTING UNIT-SCALE DEFECT ON THIS SHEET, FOUND 2026-09-15, NOT FIXED IN THIS PASS ***\n"
+    "Every absolute-amount cell on the Pillar 3 metric sheets and the RWA Breakdown sheet of this workbook is "
+    "1000x smaller than the \"£'000\" unit label claims: the figures are effectively GBP MILLIONS. Demonstration "
+    "from this workbook's own numbers: the Balance Sheet sheet shows FY2024 Total equity as 305,356.2 under the "
+    "same \"£'000, conv. from USD\" header, while the CET1 Capital sheet shows FY2024 CET1 capital as 302.3 - two "
+    "figures that should be within a few percent of each other, three orders of magnitude apart. CAUSE: the "
+    "statement sheets pass raw USD amounts into stock()/flow(), which divide by 1,000 to reach GBP'000, but the "
+    "Pillar 3 source dictionaries hold US$'000 amounts taken straight from the KM1/OV1 tables, so that same "
+    "divide-by-1,000 is applied to figures that are already in thousands. RATIOS ARE UNAFFECTED (numerator and "
+    "denominator are both scaled identically, and each printed ratio still reproduces), and the sheets are "
+    "internally consistent, so year-on-year comparison within a sheet is safe; what is wrong is the unit LABEL "
+    "and any comparison against the statement sheets. This was found while adding the FY2011 figures and is "
+    "reported as a defect needing its own ticket rather than corrected here: the fix touches every year including "
+    "the current five-year window, the Overview copies and the extracted insights database, and it is outside "
+    "this pass's scope."
+)
+
 HIST_P3_NOTE = (
     "HISTORICAL PILLAR 3 RECOVERY (2026-09-15) - FY2008 and FY2011 editions recovered from the Wayback Machine\n"
     f"FY2011: Zenith Bank (UK) Limited, \"Pillar 3 Disclosures for the year ended 31 December 2011\" (17pp, "
@@ -447,7 +465,7 @@ def p3_sources():
         "(regulatory available capital / derived RWA) is NOT the same figure as the Bank's own headline "
         "'Solvency Ratio against Pillar 1' (available capital / capital REQUIREMENT, i.e. roughly 12.5x this "
         "ratio) - both are shown in the RWA Breakdown sheet's source note for transparency.\n\n"
-        + HIST_P3_NOTE
+        + HIST_P3_NOTE + "\n\n" + P3_UNIT_DEFECT_NOTE
     )
 
 
@@ -577,6 +595,14 @@ ASSET_QUALITY_SOURCES = (
     "own report figures are used throughout (not a later year's restated comparative) - e.g. FY2017's own report "
     "restates FY2016's corporates/individual-impairment comparatives, but FY2016's own report figures are used "
     "for the FY2016 column here, consistent with this project's convention.\n\n"
+    "FY2009-FY2013 COLUMNS (added 2026-09-15): these columns appear on this sheet because the Pillar 3 year "
+    "range was extended back to FY2009 to carry the newly-recovered FY2011 Pillar 3 edition. They are EMPTY of "
+    "asset-quality data on purpose. The FY2011 edition is a Basel II / BIPRU capital-adequacy disclosure and "
+    "contains no impairment provision figure, no arrears or default table and no exposure-quality breakdown of "
+    "any kind; no Pillar 3 edition exists at all for FY2009, FY2010, FY2012 or FY2013. Nothing was carried over "
+    "from the Annual Reports for these years either, since that would mix a different source basis into rows "
+    "sourced from Pillar 3 disclosures. See the Pillar 3 sources note on the metric sheets for the full "
+    "archive-status breakdown.\n\n"
     + ENTITY_NOTE + "\n\n" + FX_NOTE
 )
 
@@ -1233,11 +1259,22 @@ def hist_nd(fy2011):
     return dict({y: NO_EDITION for y in HIST_P3_YEARS}, FY2011=fy2011)
 
 
-# FY2011 Basel II / BIPRU capital, native GBP'000 - NOT FX-converted (this pre-dates the
-# Bank's redenomination to USD). Both figures the edition prints are carried; see
+# FY2011 Basel II / BIPRU capital - NOT FX-converted (this pre-dates the Bank's
+# redenomination to USD). Both figures the edition prints are carried; see
 # HIST_P3_NOTE for the dating caveat on Regulatory Available Capital.
-FY2011_TIER1_ACCOUNTS = {"FY2011": 43631.0}
-FY2011_REG_AVAILABLE = {"FY2011": 40002.0}
+#
+# SCALE, DELIBERATE - READ P3_UNIT_DEFECT_NOTE BEFORE CHANGING THESE. The source
+# figures are GBP 43,631k and GBP 40,002k. They are entered here as 43.6 and 40.0
+# to sit on the SAME numeric scale as every other cell on these metric sheets,
+# which is GBP millions despite the sheets' "£'000" label - a pre-existing defect
+# documented below. Entering the true £'000 figures would be correct against the
+# label but 1000x out of line with the neighbouring cells, i.e. a within-sheet
+# mixed-unit defect, which is worse. The exact source figures are preserved in
+# HIST_P3_NOTE. When the scale defect is fixed sheet-wide, these two become
+# 43631 and 40002.
+FY2011_TIER1_ACCOUNTS = {"FY2011": 43.6}
+FY2011_REG_AVAILABLE = {"FY2011": 40.0}
+
 
 PRE_CRDIV_NOTE = (
     "PRE-CRD IV NOTE (FY2014/FY2015): see the PRE-CRD IV METHODOLOGY NOTE in the Pillar 3 sources above for full "
@@ -1248,8 +1285,8 @@ PRE_CRDIV_NOTE = (
 )
 
 BASEL2_CAPITAL_ROWS = [
-    ("Total Tier 1 capital per audited accounts, Basel II / GENPRU 2.2 basis (native GBP'000, NOT FX-converted)", FY2011_TIER1_ACCOUNTS),
-    ("Regulatory Available Capital, Basel II basis, post regulatory deductions (native GBP'000, NOT FX-converted)", FY2011_REG_AVAILABLE),
+    ("Total Tier 1 capital per audited accounts, Basel II / GENPRU 2.2 basis (native GBP, NOT FX-converted)", FY2011_TIER1_ACCOUNTS),
+    ("Regulatory Available Capital, Basel II basis, post regulatory deductions (native GBP, NOT FX-converted)", FY2011_REG_AVAILABLE),
 ]
 HIST_CAPITAL_NOTE = (
     "FY2011 ADDED 2026-09-15 on its own two rows, not on the row above. The recovered FY2011 Pillar 3 is a "
@@ -1259,7 +1296,10 @@ HIST_CAPITAL_NOTE = (
     "own words: 'The Bank's entire capital base is Tier 1 capital which consists of fully issued ordinary shares "
     "satisfying all the criteria for a Tier 1 instrument (as outlined in GENPRU 2.2.83 R) and audited reserves' - "
     "so the absence of AT1 and Tier 2 in FY2011 is the Bank's statement, not an inference. Both figures the "
-    "edition prints are carried, with a dating caveat on the second; see the source note below.\n"
+    "edition prints are carried, with a dating caveat on the second; see the source note below. The source "
+    "figures are GBP 43,631k and GBP 40,002k; they appear here as 43.6 and 40.0 to match the numeric scale the "
+    "rest of this sheet actually uses - see the unit-scale defect note below, which explains why that is not the "
+    "same as the sheet's stated '£'000' label.\n"
     "FY2009/FY2010/FY2012/FY2013 read 'No Pillar 3 edition exists in any archive' rather than being left blank, "
     "so the distinction between 'searched and genuinely absent' and 'never looked at' survives in the sheet "
     "itself. See the source note for how that differs from FY2016/FY2019 (published but lost) and "
@@ -1345,7 +1385,20 @@ bw.add_rwa_breakdown_sheet(
           "FY2016-FY2019 remain blank - no Pillar 3 disclosure document is recoverable for those years, and no "
           "surviving document's comparative column reaches them (the FY2021 report is the earliest modern "
           "edition, and its comparative reaches only FY2020; see Pillar 3 sources note above for the search "
-          "performed).",
+          "performed).\n\n"
+          "FY2009-FY2013 COLUMNS (added 2026-09-15) ARE BLANK ON PURPOSE, AND NO RWA WAS DERIVED FOR THEM. The "
+          "recovered FY2011 Pillar 3 edition discloses Pillar 1 CAPITAL REQUIREMENTS, not risk-weighted amounts: "
+          "Credit Risk 18,156 / Market Risk 27 / Operational Risk 1,503 / Total 19,686 (GBP'000, native, not "
+          "FX-converted), with credit risk further split by exposure class as Financial Institutions 5,768, "
+          "Corporates 7,461, Retail 25, Bonds 3,899, Sovereigns 896, Multilateral Development Banks 0 and Fixed "
+          "and other assets 107. Every one of those is 8% of the corresponding risk weighted exposure amount by "
+          "the source's own definition, so each could be grossed up - and that is exactly what an earlier pass "
+          "did to produce the FY2014/FY2015 rows on this sheet. It was NOT done here, because grossing up is a "
+          "derivation and this project's standing rule is to transcribe only what a document states directly. "
+          "The requirement figures are preserved verbatim in this note instead, which loses nothing. This does "
+          "leave FY2014/FY2015 on a derived basis and FY2011 on a stated-absence basis on the same sheet; that "
+          "inconsistency is flagged rather than resolved by adding a second derivation. FY2009, FY2010, FY2012 "
+          "and FY2013 have no Pillar 3 edition in any archive.",
     first_col_width=64,
     source_height=440,
     unit_suffix=" (£'000, conv. from USD)",
@@ -1418,10 +1471,14 @@ metric(
     [
         ("Total available stable funding", stock({"FY2025": 1316936, "FY2024": 1136904, "FY2023": 1066880, "FY2022": 912816})),
         ("Total required stable funding", stock({"FY2025": 948441, "FY2024": 768308, "FY2023": 744377, "FY2022": 735763})),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "138.85%", "FY2024": "147.98%", "FY2023": "143%", "FY2022": "124%", "FY2021": "Not disclosed"}),
+        ("Net Stable Funding Ratio (%)", dict({"FY2025": "138.85%", "FY2024": "147.98%", "FY2023": "143%", "FY2022": "124%", "FY2021": "Not disclosed"},
+            **hist_na("Not applicable"))),
     ],
     p3_sources(),
-    note="STRUCTURAL, NOT MISSING - and the Bank says so in its own words. The FY2021 Pillar 3, section 10 "
+    note="FY2009-FY2013 'Not applicable' (2026-09-15): the NSFR did not exist as a UK requirement until 1 January "
+         "2022, so those years are structurally inapplicable, not gaps. (Plain 'Not applicable' rather than the "
+         "'(Basel II)' qualifier used on the neighbouring sheets, because the NSFR post-dates CRD IV too.)\n\n"
+         "STRUCTURAL, NOT MISSING - and the Bank says so in its own words. The FY2021 Pillar 3, section 10 "
          "(p.22), states: \"From 1st January 2022 the new UK Net Stable Funding Ratio (NSFR) was adopted and "
          "will be shown in the next Pillar 3 disclosure.\" So FY2021 and every earlier year genuinely have no "
          "NSFR to disclose, and FY2022 is correctly the first year populated. This matches the UK-wide "
@@ -1434,12 +1491,21 @@ metric(
          "document could be recovered for FY2016-FY2020; that is now narrowed to FY2016-FY2019.",
 )
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(),
-    per_note={"MREL Ratio": "No MREL disclosure (numeric or qualitative) or UK KM2 template found in any year's "
-                             "Pillar 3 report - not explicitly stated as an exemption, but consistent with the "
-                             "Bank's small size relative to typical MREL-in-scope thresholds. MREL did not exist "
-                             "as a UK regime for FY2014-FY2020 in any case."},
-    years=PILLAR3_YEARS)
+# Written out explicitly rather than via add_not_disclosed_metric_sheets so that
+# FY2009-FY2013 can be marked "Not applicable" (MREL did not exist as a UK regime
+# then) instead of "Not publicly disclosed", which would imply a real gap.
+metric("MREL Ratio", None,
+       [("MREL Ratio", dict({y: "Not publicly disclosed" for y in PILLAR3_YEARS},
+                            **hist_na("Not applicable (pre-dates MREL regime)")))],
+       p3_sources(),
+       note="No MREL disclosure (numeric or qualitative) or UK KM2 template found in any year's "
+            "Pillar 3 report - not explicitly stated as an exemption, but consistent with the "
+            "Bank's small size relative to typical MREL-in-scope thresholds. MREL did not exist "
+            "as a UK regime for FY2014-FY2020 in any case.\n\n"
+            "FY2009-FY2013 changed from 'Not publicly disclosed' to 'Not applicable (pre-dates MREL regime)' "
+            "2026-09-15: MREL was introduced by the BRRD and had no UK existence in those years, so those cells "
+            "are structurally inapplicable rather than a disclosure gap. The recovered FY2011 Basel II edition "
+            "contains no occurrence of 'MREL'.")
 
 # ---------------------------------------------------------------
 # Overview sheet
@@ -1517,7 +1583,17 @@ bw.add_overview_sheet(
          "explicit user decision - see the HD-048 extension note on the Cash Flow Statement sheet); CET1/Tier "
          "1/Total Capital Ratio for FY2014/FY2015 use a pre-CRD IV methodology (see Pillar 3 sources note on "
          "those sheets) and Leverage Ratio/LCR/NSFR are blank for all of FY2014-FY2020 (not yet in force, and/or "
-         "no Pillar 3 document recoverable for FY2016-FY2020).",
+         "no Pillar 3 document recoverable for FY2016-FY2020). "
+         "2026-09-15 HISTORICAL PILLAR 3: a FY2011 Basel II Pillar 3 edition was recovered and transcribed, so the "
+         "Pillar 3, RWA Breakdown and Asset Quality sheets now run to FY2009 alongside the statutory statements. "
+         "NOTHING FROM IT APPEARS ON THIS OVERVIEW, and the FY2009-FY2013 ratio cells above are blank by design: "
+         "that edition states no capital ratio, no leverage ratio and no liquidity metric, and the only ratio it "
+         "does print (a 203% 'Solvency Ratio against Pillar 1') is capital over the capital REQUIREMENT, not over "
+         "RWA - it is excluded deliberately rather than by omission, because showing it on a ratio trend line "
+         "would overstate capitalisation by roughly 12.5x. Its Basel II capital figures sit on their own separate "
+         "rows on the Tier 1 Capital and Total Capital sheets. A FY2008 edition was also recovered but produced no "
+         "cell anywhere - its only figure is dated to 31 December 2007 accounts adjusted for a May 2008 event, so "
+         "it belongs to no year column; see the Pillar 3 sources note.",
 )
 
 # ---------------------------------------------------------------

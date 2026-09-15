@@ -1,2 +1,0 @@
-1) Change headline figure lof years with loan concetration data, to number showing maximum amount of history available (implemented using SQL not AI judgement)
-2) In banks with more data than 2008, we should have a button ro setting that toggles between showing all years or jus till 2008, like Union Bank privee does 

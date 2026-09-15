@@ -1,8 +1,34 @@
-wayfinder/
+# Local agent/session state.
 .claude/
 .agents/skills/
+wayfinder/
 HANDOFF.md
 CLAUDE.md
+skills-lock.json
+
+# OS, editor, and application-generated files.
+.DS_Store
+**/.DS_Store
+**/~$*
+*.swp
+*.swo
+
+# Python environments and caches.
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local environment and coverage output.
+.env
+.env.*
+!.env.example
+.coverage
+htmlcov/
 
 # Regenerated derived-data artifacts that exceed GitHub's 100MB file limit.
 # Rebuild with `python3 scripts/insights/refresh_all.py`.

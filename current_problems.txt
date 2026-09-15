@@ -1,3 +1,0 @@
-1) The filter for RWA density has not worked on all banks, for example Union Bancaire Privee UK seems to have no RWA density to plot, but the chart is still there
-2) THe duplication of years still affects some banks statment of changes in equity, for example Union Bancaire Privee UK has 2015, 2018 and 2021 having i and ii sections on the chart, you can verify with pupetter
-3) Sections are still not collapsable in the per bank overview

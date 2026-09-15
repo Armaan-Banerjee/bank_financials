@@ -54,6 +54,15 @@ CH_FY2016 = "https://find-and-update.company-information.service.gov.uk/company/
 # in the Wayback CDX index for this domain (a full-domain PDF listing was checked, not just a
 # single guessed filename), consistent with Pillar 3 disclosure only starting for this small
 # firm from FY2019.
+# FY2021 is the one edition that breaks the 'pillar3disclosures<YYYY>.pdf'
+# naming convention - it is published as '2021-pillar-3-disclosures.pdf'
+# instead, which is why filename-pattern guessing never found it. Located
+# 2026-09-15 by listing the whole domain from the Wayback CDX index. The live
+# URL 404s and this remains the only capture of it in the index. Re-fetched
+# 2026-09-15: 319,857 bytes, begins `%PDF-`.
+P3_2021_DEAD = "https://www.mcafundingforchurches.co.uk/sitefiles/resources/pdf/2021-pillar-3-disclosures.pdf"
+P3_2021_WAYBACK = "https://web.archive.org/web/20220625084136id_/" + P3_2021_DEAD
+
 # Both re-fetched 2026-09-15 with the `id_` modifier and confirmed to begin
 # `%PDF-` (FY2020: 311,788 bytes; FY2019: 274,658 bytes). The Company's own
 # URLs for both remain dead.
@@ -155,17 +164,54 @@ SDDT_NOTE = (
     "'Pillar' appears once in each, only in the phrase 'Pillar 1 plus Pillar 2A'. The Company simply does "
     "not discuss the change; the PRA register is what evidences it. No Simplified Retail Deposit Ratio "
     "value is disclosed by the Company either, so nothing replaces the NSFR series here.\n"
+    "THE COMPANY'S OWN DOCUMENT INDEX IS CONSISTENT WITH THE EXEMPTION, checked 2026-09-15 across three "
+    "dated Wayback captures of https://www.mcafundingforchurches.co.uk/about-us/financial-information/ "
+    "spanning a year: 22 April 2025 (20250422192754), 15 September 2025 (20250915123834) and 17 January "
+    "2026 (20260117041203). Each capture was retrieved and every PDF link on it extracted. All three list "
+    "the same short set - annual-report-2024.pdf, country-by-country-reporting-2024.pdf and an FSCS "
+    "leaflet - and none lists a Pillar 3 document of any vintage; the live page today lists the FY2025 "
+    "Annual Report, the 2025 country-by-country report and the same FSCS leaflet, again with no Pillar 3. "
+    "So the index kept being updated with new statutory documents across the whole period in which an "
+    "FY2024 edition would have been due, and no Pillar 3 document was ever added back. This is supporting "
+    "evidence only, and deliberately weighted as such: as noted above, this page did not link the Pillar 3 "
+    "documents even in the years they demonstrably existed, so it cannot prove absence on its own. The "
+    "weight rests on the Rule 3.1 register row and its date fit.\n"
+)
+
+
+LINK_ROT_NOTE = (
+    "LINK-ROT REPAIR, 2026-09-15. Four of this Company's five Pillar 3 editions are no longer served from "
+    "its own site: the FY2019, FY2020 and FY2021 URLs died some time ago, and the FY2023 URL "
+    "(/media/ngqlqg5o/) and one of the two FY2022 URLs (/media/honer1yl/) have BOTH gone dead since this "
+    "workbook was last touched. Rather than delete the citations - which would leave the figures on these "
+    "sheets unverifiable - each dead URL is cited via a Wayback `id_` snapshot, with the Company's own "
+    "dead URL kept alongside it and labelled as such, so the provenance chain stays readable. The `id_` "
+    "modifier is deliberate: it returns the raw archived bytes instead of a Wayback-wrapped HTML page.\n"
+    "EVERY REPLACEMENT WAS VERIFIED BY RETRIEVAL, not by status code. Each URL below was downloaded on "
+    "2026-09-15 and confirmed to begin with the `%PDF-` magic bytes; byte sizes are quoted against each "
+    "one. An HTTP 200 alone is not accepted as proof on this project - soft-404s that return 200 with an "
+    "HTML body have been encountered repeatedly.\n"
+    "The FY2022 edition is the one that is still live, and its live URL is cited in preference to any "
+    "archive copy.\n"
 )
 
 
 def p3_sources():
     return (
         "Sources - Methodist Chapel Aid Limited entity-level Pillar 3 / regulatory capital disclosures, £'000 unless stated:\n"
+        + LINK_ROT_NOTE +
         f"FY2023: Pillar 3 Disclosures for year ended 31 December 2023, Key Metrics table (p. 3) and the "
-        f"quarterly LCR/NSFR averaging tables in section 6.2 (pp. 10-11) - {P3_2023} (this live URL 404s as "
-        f"of 2026-09-15; retrieved via the Wayback Machine snapshot - {P3_2023_WAYBACK})\n"
+        f"quarterly LCR/NSFR averaging tables in section 6.2 (pp. 10-11) - {P3_2023_WAYBACK} (Wayback "
+        f"`id_` snapshot of 7 April 2025. The Company's own URL, {P3_2023_DEAD}, returns HTTP 404 - "
+        f"re-checked 2026-09-15.)\n"
         f"FY2022 and FY2021: Pillar 3 Disclosures for year ended 31 December 2022, Key Metrics table (p. 3) "
-        f"and the quarterly LCR/NSFR averaging tables in section 6.2 (pp. 10-11) - {P3_2022}\n"
+        f"and the quarterly LCR/NSFR averaging tables in section 6.2 (pp. 10-11) - {P3_2022} (THIS ONE IS "
+        f"STILL LIVE and is cited in preference to any archive copy - re-fetched 2026-09-15, HTTP 200, "
+        f"314,344 bytes, begins `%PDF-`. The Company also published this same edition at "
+        f"{P3_2022_DEAD}, which now returns HTTP 404; that dead path's Wayback copy "
+        f"({P3_2022_WAYBACK}) was downloaded and is BYTE-IDENTICAL to the live file - same 314,344 bytes, "
+        f"same SHA-256 44326e0da4312b73... - which is what establishes the two paths served one document "
+        f"rather than two editions.)\n"
         "FY2024/FY2025: no separate absolute Key Metrics table was located; values left blank. "
         "RE-VERIFIED 2026-09-12 (independent disclosure audit): confirmed genuinely unpublished rather than "
         "an access gap. The Company's own live 'Financial information' page "
@@ -227,8 +273,12 @@ def p3_sources():
         "Note also that FY2025 is a 9-month period (the accounting reference date moved from 31 December "
         "to 30 September during 2025), so even a future FY2025 Pillar 3 edition would not be period-comparable with "
         "the FY2019-FY2023 12-month series without an explicit basis caveat.\n"
-        f"FY2020: Pillar 3 Disclosures for year ended 31 December 2020, Section 5 Capital Adequacy, p. 7 (Wayback Machine snapshot - live URL 404s) - {P3_2020_WAYBACK}\n"
-        f"FY2019: Pillar 3 Disclosures for year ended 31 December 2019, Section 5 Capital Adequacy, p. 7 (Wayback Machine snapshot - live URL 404s) - {P3_2019_WAYBACK}\n"
+        f"FY2020: Pillar 3 Disclosures for year ended 31 December 2020, Section 5 Capital Adequacy, p. 7 - "
+        f"{P3_2020_WAYBACK} (Wayback `id_` snapshot of 15 May 2021; re-fetched 2026-09-15, 311,788 bytes, "
+        f"begins `%PDF-`. The Company's own URL, {P3_2020_DEAD}, is dead.)\n"
+        f"FY2019: Pillar 3 Disclosures for year ended 31 December 2019, Section 5 Capital Adequacy, p. 7 - "
+        f"{P3_2019_WAYBACK} (Wayback `id_` snapshot of 30 September 2020; re-fetched 2026-09-15, 274,658 "
+        f"bytes, begins `%PDF-`. The Company's own URL, {P3_2019_DEAD}, is dead.)\n"
         "FY2018/FY2017/FY2016: no Pillar 3 document exists anywhere in the Wayback Machine CDX "
         "index for mcafundingforchurches.co.uk before FY2019 (a full-domain PDF listing was "
         "checked); values left blank as genuinely not disclosed, not a search miss.\n\n"
@@ -293,11 +343,17 @@ ASSET_QUALITY_SOURCES = (
 RWA_BREAKDOWN_SOURCES = (
     "Sources - Methodist Chapel Aid Limited entity-level Pillar 1 capital requirement / RWA breakdown by "
     "exposure class, £'000:\n"
+    + LINK_ROT_NOTE +
     f"FY2023: Pillar 3 Disclosures for year ended 31 December 2023, Section 5 Capital Adequacy table, p.7 - "
-    f"{P3_2023} (URL 404s as of this session; retrieved via Wayback Machine snapshot - {P3_2023_WAYBACK})\n"
-    f"FY2022: Pillar 3 Disclosures for year ended 31 December 2022, Section 5 Capital Adequacy table, p.8 - {P3_2022}\n"
+    f"{P3_2023_WAYBACK} (Wayback `id_` snapshot of 7 April 2025; the Company's own URL, {P3_2023_DEAD}, "
+    f"returns HTTP 404 - re-checked 2026-09-15)\n"
+    f"FY2022: Pillar 3 Disclosures for year ended 31 December 2022, Section 5 Capital Adequacy table, p.8 - "
+    f"{P3_2022} (still live; the Company's duplicate copy at {P3_2022_DEAD} is dead but byte-identical in "
+    f"the archive - see the FY2022 entry on the Pillar 3 metric sheets for the full check)\n"
     f"FY2021: Pillar 3 Disclosures for year ended 31 December 2021, Section 5 Capital Adequacy table, p.6 - "
-    f"{P3_2021_WAYBACK}. CORRECTION 2026-09-15: this sheet previously said no category-level breakdown "
+    f"{P3_2021_WAYBACK} (Wayback `id_` snapshot of 25 June 2022, the only capture of this file in the CDX "
+    f"index; re-fetched 2026-09-15, 319,857 bytes, begins `%PDF-`. The Company's own URL, {P3_2021_DEAD}, "
+    f"is dead). CORRECTION 2026-09-15: this sheet previously said no category-level breakdown "
     "existed for FY2021 and left every category row blank. That was a sourcing miss, not an absence. The "
     "FY2021 standalone Pillar 3 document does exist and carries the same Section 5 capital-adequacy table as "
     "every other year; it was missed because the Company changed its filename convention for this one "
@@ -317,11 +373,13 @@ RWA_BREAKDOWN_SOURCES = (
     "FY2024/FY2025: no Pillar 3 Key Metrics table or capital-adequacy breakdown was located for these "
     "periods (consistent with the existing Total RWAs sheet, which is also blank for these years).\n"
     f"FY2020: Pillar 3 Disclosures for year ended 31 December 2020, Section 5 Capital Adequacy table, p.7 "
-    f"(Wayback Machine snapshot - live URL 404s) - {P3_2020_WAYBACK}. Operational risk RWA is derived as "
+    f"- {P3_2020_WAYBACK} (Wayback `id_` snapshot of 15 May 2021; the Company's own URL, {P3_2020_DEAD}, "
+    f"is dead). Operational risk RWA is derived as "
     "capital requirement x 12.5 (i.e. /8%), the same Pillar 1 formula the document itself states, since the "
     "table discloses operational risk only as a capital requirement, not directly as RWA.\n"
     f"FY2019: Pillar 3 Disclosures for year ended 31 December 2019, Section 5 Capital Adequacy table, p.7 "
-    f"(Wayback Machine snapshot - live URL 404s) - {P3_2019_WAYBACK}. Operational risk RWA derived the same way.\n"
+    f"- {P3_2019_WAYBACK} (Wayback `id_` snapshot of 30 September 2020; the Company's own URL, "
+    f"{P3_2019_DEAD}, is dead). Operational risk RWA derived the same way.\n"
     "FY2018/FY2017/FY2016: no Pillar 3 document exists anywhere in the Wayback Machine CDX index for "
     "mcafundingforchurches.co.uk before FY2019; category rows left blank as genuinely not disclosed.\n\n"
     + ENTITY

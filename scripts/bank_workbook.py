@@ -1042,11 +1042,16 @@ class BankWorkbook:
 
         return ws
 
-    def add_not_disclosed_metric_sheets(self, names, sources_text, per_note=None, years=None):
+    def add_not_disclosed_metric_sheets(self, names, sources_text, per_note=None, years=None,
+                                        source_height=150):
         """Convenience for the common "no Pillar 3 doc exists" case - fills a
         list of metric sheets with a single "Not publicly disclosed" row each.
         per_note: optional {name: note_text} for sheet-specific notes.
-        years: optional per-sheet override - see _add_statement_sheet."""
+        years: optional per-sheet override - see _add_statement_sheet.
+        source_height: row height of the merged source-citation cell. The
+        default matches _write_source_cell's own default; raise it when
+        sources_text is long, since that cell has a fixed height and simply
+        clips any citation text that overflows it."""
         per_note = per_note or {}
         years = years if years is not None else self.years
         for name in names:
@@ -1057,6 +1062,7 @@ class BankWorkbook:
                 sources_text,
                 note=per_note.get(name),
                 years=years,
+                source_height=source_height,
             )
 
     def save(self, path):

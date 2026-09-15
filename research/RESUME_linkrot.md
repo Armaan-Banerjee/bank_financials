@@ -11,7 +11,9 @@ repeatedly).
 ## Status
 
 - [x] Kingdom Bank — `scripts/build_kingdom_bank.py` — DONE, rebuilt, 18 sheets
-- [ ] Methodist Chapel Aid — `scripts/build_methodist_chapel_aid.py`
+- [x] Methodist Chapel Aid — `scripts/build_methodist_chapel_aid.py` — DONE, rebuilt, 18 sheets
+
+Both complete. Not run, per instruction: `refresh_all.py`, the test suite. Nothing committed.
 
 ## 1. Kingdom Bank Limited (FRN 400972)
 
@@ -99,4 +101,61 @@ required in future years").
 says £3,249k was the Pillar 1 requirement "as at 31 December 2020"; the table header and the
 FY2020 edition's own £3,171k establish it is the 2021 figure.
 
-## 2. Methodist Chapel Aid — in progress
+## 2. Methodist Chapel Aid (FRN 204508) — DONE
+
+### URL verification (2026-09-15) — all fetched, `%PDF-` magic bytes checked
+
+| Edition | Status | Cited URL | Bytes |
+|---|---|---|---|
+| FY2023 | live `/media/ngqlqg5o/` **404** | `…/web/20250407005711id_/…/media/ngqlqg5o/pillar-3-disclosures-2023.pdf` | 318,898 |
+| FY2022 | **LIVE — preferred over any archive** | `…/siteFiles/resources/pdf/Pillar3disclosures2022.pdf` | 314,344 |
+| FY2022 dup | live `/media/honer1yl/pillar3disclosures2022.pdf` **404** | archived at `…/web/20240517201255id_/…` | 314,344 |
+| FY2021 | live 404, only one capture exists | `…/web/20220625084136id_/…/2021-pillar-3-disclosures.pdf` | 319,857 |
+| FY2020 | live 404 | `…/web/20210515024743id_/…/pillar3disclosures2020.pdf` | 311,788 |
+| FY2019 | live 404 | `…/web/20200930032441id_/…/pillar3disclosures2019.pdf` | 274,658 |
+
+Annual report URLs (AR2025, AR2024, AR2022) all still live, `%PDF-`. Companies House
+citation pattern spot-checked for both banks — still returns real PDFs.
+
+### What changed
+
+1. **`id_` added to all four pre-existing Wayback URLs.** They were plain
+   `/web/<ts>/…`, which returns a Wayback-wrapped HTML page rather than the raw
+   archived bytes. All now use the `id_` modifier.
+2. **Reconciled the FY2023 duplicate definition.** `P3_2023_WAYBACK` was defined
+   *twice* — once at line 206 (non-`id_`) which silently overwrote nothing but sat
+   after its own first use inside `p3_sources()`. Consolidated into one `id_`
+   definition at the top of the file alongside its dead original `P3_2023_DEAD`.
+   The timestamp the earlier pass found (20250407005711) is the same one specified
+   for this task, so no conflict — just the `id_` modifier added. A second good
+   capture exists (20240722103538) with an identical content digest, noted in the
+   script as evidence the archived file is stable across captures.
+3. **FY2022 kept on its live URL**, as instructed. Proved the live file and the dead
+   `/media/honer1yl/` path served *one document, not two editions*: both are
+   314,344 bytes with the same SHA-256 (`44326e0da4312b73…`). The dead path and its
+   archive copy are cited alongside as provenance.
+4. **New `LINK_ROT_NOTE`** prepended to both `p3_sources()` and
+   `RWA_BREAKDOWN_SOURCES`, stating the convention, the `%PDF` verification method
+   and why HTTP 200 alone is not accepted.
+5. **SDDT evidence strengthened** with the three dated index captures: 22 Apr 2025,
+   15 Sep 2025, 17 Jan 2026 of `/about-us/financial-information/`. Retrieved each and
+   extracted every PDF link — all three list annual report + CBCR + FSCS leaflet, no
+   Pillar 3. Explicitly weighted as *supporting* evidence only, because that page never
+   linked Pillar 3 even when the documents existed. The Rule 3.1 register row carries
+   the weight: **Ru 3.1, ref A00007737P.pdf, start 11/04/2024, no end date** — verified
+   firsthand from the BoE CSV this session. Date fit: FY2024 (y/e 31 Dec 2024) and
+   FY2025 (9 months to 30 Sep 2025) both fall after it; FY2019–FY2023 all predate it.
+
+### Deliberately NOT changed (earlier pass's work, independently re-verified)
+
+I re-read the FY2022 and FY2023 documents from source and confirmed every one of these
+before leaving them alone:
+
+- LCR/NSFR split into labelled average and year-end rows. The KM1 row captioned
+  "average" really does print **year-end** values at this bank. Section 6.2 quarterly
+  tables confirm: FY2022 LCR average **827%** (KM1's 833% is the 31-Dec-22 column);
+  FY2023 LCR average **835%** (KM1's 970% is year-end). NSFR FY2022 average **194%**
+  (KM1's 192% is year-end); FY2023 average **182%** (KM1's 174% is year-end).
+- NSFR FY2016–FY2020 marked "Not applicable"; FY2021 deliberately not so marked.
+- The £48k FY2021 discrepancy (26,321 vs the FY2022 comparative's 26,369) left
+  documented rather than reconciled.
