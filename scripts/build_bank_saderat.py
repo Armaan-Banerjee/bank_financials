@@ -654,11 +654,97 @@ P3_SOURCES_NOTE = (
     "2020 comparative for it either."
 )
 
+# EVIDENCE BEHIND THIS NOTE, re-established 2026-09-16.
+#
+# The previous wording enumerated only "no leverage, LCR or NSFR figures" yet
+# was reused verbatim for the MREL Ratio sheet, so the MREL claim rested on a
+# search that never included the term MREL. That is the shared-constant trap:
+# one sentence, four sheets, and only three of the four metrics actually
+# checked. (Now map rule 14 in wayfinder/km1/map.md.)
+#
+# Re-checked by searching the full text of TEN primary documents - all five
+# standalone Pillar 3 editions (FY2019-FY2023) and all five Annual Reports on
+# file. Every one verified as a real PDF first (HTTP 200, application/pdf,
+# %PDF magic bytes). The Annual Reports are scanned image-only - pdftotext
+# returns 37-63 characters from a 1.4-2.9 MB file - so they were searched via
+# the OCR sidecars in research/ocr_text/ instead; the FY2019 sidecar did not
+# exist and was produced for this check.
+#
+# "mrel", "minimum requirement for own funds" and "loss-absorb" all return
+# ZERO across all ten documents. Per map rule 15, a zero only counts once the
+# extraction is shown to be rich: these run 47-114 hits for "capital", 49-118
+# for "ratio", 53-89 for "pillar" in the Pillar 3 set, and 13-51 for
+# "liquidity" in the reports. So the absence is a fact about the documents,
+# not about our tooling.
 NOT_DISCLOSED_NOTE = (
     "Not disclosed in the Bank's own Annual Reports, and absent from its standalone Pillar 3 disclosures for "
-    "FY2021-FY2023 (which do exist - see the Total RWAs and RWA Breakdown sheets - but contain no leverage, LCR "
-    "or NSFR figures). The Strategic Report's capital/liquidity disclosure is limited to the 'Capital Cover' and "
-    "Liquidity Coverage Ratio charts plus the CET1 capital base figure (see the other Pillar 3 sheets)."
+    "FY2021-FY2023 (which do exist - see the Total RWAs and RWA Breakdown sheets - but contain no leverage, LCR, "
+    "NSFR or MREL figures). Verified 2026-09-16 by full-text search of all five Pillar 3 editions (FY2019-FY2023) "
+    "and all five Annual Reports; the Annual Reports are scanned image-only, so they were searched via OCR rather "
+    "than by text extraction, which returns almost nothing from them. The Strategic Report's capital/liquidity "
+    "disclosure is limited to the 'Capital Cover' and Liquidity Coverage Ratio charts plus the CET1 capital base "
+    "figure (see the other Pillar 3 sheets)."
+)
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE. This bank DOES publish Pillar 3
+# disclosures - a continuous annual series back to 2008 on its own Reports
+# page - but none of them contains the UK KM1 key-metrics template. That is a
+# different statement from "publishes no Pillar 3", and the distinction is the
+# point of this sheet.
+#
+# THE TEST APPLIED: a table is the KM1 template if it carries the template's
+# ROW SET, whatever it is titled and whether or not its rows are numbered.
+# Some banks print the template headed only "Key metrics" with no numbers at
+# all, and those count. Bank Saderat's capital disclosure fails the test on
+# every count: it is a single-column bespoke narrative table of the Bank's own
+# design (share capital / general reserve / reserves / CET1 / Tier 1 / total
+# own funds, then a Pillar 1 and Pillar 2A build-up by risk type, then a
+# buffer stack), with no template row numbers, no rows 5-7 capital-ratio
+# block, no UK 7a-7d SREP rows, no UK 11a, and no rows 15-20 for LCR or NSFR.
+# Mapping it onto KM1 row numbers would invent a correspondence the Bank never
+# published.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources — none. Bank Saderat PLC publishes Pillar 3 disclosures, but no edition contains the UK KM1 "
+    "key-metrics template, so there is nothing to reproduce on this sheet.\n\n"
+    "Latest-edition check, 2026-09-16: the Bank's own Reports index at https://www.saderat-plc.com/Reports "
+    "was read directly. It lists a continuous Pillar 3 series — Basel II editions for 2010–2015, Basel III "
+    "for 2016–2019, and untitled-series editions for 2020, 2021, 2022 and 2023. THE NEWEST IS 2023; there is "
+    "no 2024 or 2025 Pillar 3 document, which is why those years are blank or Annual-Report-sourced on the "
+    "metric sheets. Checked, none newer.\n\n"
+    "WHY THIS IS 'NO KM1' RATHER THAN 'NO PILLAR 3'. The FY2020–FY2023 editions were downloaded and read "
+    "(HTTP 200, Content-Type application/pdf, %PDF magic bytes verified). Each carries a capital disclosure "
+    "of the Bank's own design: a single undated column listing share capital, general reserve, reserves, "
+    "CET1 capital, Tier 1 capital and total own funds; then risk-weighted assets split into credit, FX and "
+    "operational risk; then a Pillar 1 minimum and a long Pillar 2A add-on build-up by risk type "
+    "(settlement/residual, market, concentration by single name/country/sector, operational, IRRBB, sanction "
+    "risk, payment risk, and financial risk due to climate change); then a buffer stack (capital "
+    "conservation, PRA buffer, countercyclical) and the Bank's own 'Capital Cover' measure.\n\n"
+    "That is a genuine Pillar 3 capital disclosure, and every figure this workbook takes from it is on the "
+    "individual metric sheets. But it is NOT the KM1 template: it has no template row numbers, no capital-"
+    "ratio block in rows 5-7 form, no UK 7a-7d SREP rows, no UK 11a overall capital requirement row, and no "
+    "rows 15-20 for LCR or NSFR. The string 'KM1' appears nowhere in any edition, and neither do the "
+    "template's own row captions.\n\n"
+    "The test this project applies is the ROW SET, not the title and not the numbering — a bank that prints "
+    "the template headed merely 'Key metrics', with no row numbers, still has a KM1 (Allica and Europe Arab "
+    "Bank both do). Bank Saderat's table fails that test on every count, so mapping it onto KM1 row numbers "
+    "would assert a correspondence the Bank never published. Nothing has been reconstructed here."
+)
+
+bw.add_km1_sheet(
+    title="Bank Saderat PLC — KM1 Key Metrics",
+    subtitle="Not applicable — the Bank publishes Pillar 3 disclosures (a continuous series back to 2010, "
+             "newest edition 2023) but none of them contains the UK KM1 key-metrics template. Its capital "
+             "disclosure is a bespoke single-column table of the Bank's own design, which is a different "
+             "thing; see the source note below for the test applied and the individual Pillar 3 metric "
+             "sheets for what that table does disclose.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template", {y: "Not used in any Pillar 3 edition" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=48,
+    source_height=300,
 )
 
 metric("CET1 Capital", "£m (Bank's disclosed capital base, consisting of CET1 Capital)",

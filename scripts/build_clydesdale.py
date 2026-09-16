@@ -736,6 +736,194 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          years=PILLAR3_YEARS)
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics
+# ---------------------------------------------------------------
+# ENTITY DISCIPLINE. Every figure below is Clydesdale Bank PLC's own, never
+# Virgin Money UK PLC's. For FY2026 that is easy - the document is CB PLC's own
+# Pillar 3. For FY2025/FY2023/FY2022 the KM1 sits in APPENDIX 1 of a report
+# titled "Virgin Money UK PLC Pillar 3", whose body carries a VMUK-consolidated
+# KM1 of exactly the same shape a few dozen pages earlier. Taking the body table
+# instead of the appendix table would put the parent group's figures in a
+# Clydesdale workbook and would look entirely plausible (FY2023 VMUK CET1 is
+# 3,711 against CB's 3,685). The appendix's own table caption is the anchor:
+# "UK KM1 - Key metrics template - CB Solo-Consolidated Group" / "Appendix 1:
+# Disclosures for CB Group Consolidated".
+KM1_SOURCES = (
+    "Sources - Clydesdale Bank PLC's own UK KM1, each year from the edition in which that date is the "
+    "REPORTING date. Amounts £m; ratios as each edition prints them.\n"
+    f"FY2026 (31 Mar 2026): Clydesdale Bank PLC Pillar 3 Disclosures 2026, section 2.1 'UK KM1 - Key "
+    f"metrics', printed pp.5-6, column a - {P3_2026_URL}\n"
+    f"FY2025 (18mo, to 31 Mar 2025): Virgin Money UK PLC Pillar 3 Disclosures 2025, APPENDIX 1 "
+    f"'Disclosures for CB Solo-Consolidated Group', section 21.1.2 'UK KM1 - Key metrics', printed "
+    f"pp.140-141, column a - {P3_2025_URL}\n"
+    f"FY2023 (30 Sep 2023): Virgin Money UK PLC Pillar 3 Disclosures 2023, APPENDIX 1 'Disclosures for "
+    f"CB Group Consolidated', section 21.1.2, printed pp.123-124, column A - {P3_2023_URL}\n"
+    f"FY2022 (30 Sep 2022): Virgin Money UK PLC Pillar 3 Disclosures 2022, APPENDIX 1 'Disclosures for "
+    f"CB Group Consolidated', section 21.1.2, printed pp.103-104, column A - {P3_2022_URL}\n"
+    "FY2021 and earlier: BLANK - see below.\n\n"
+    "THE APPENDIX, NOT THE BODY. Three of the four editions above are titled 'Virgin Money UK PLC Pillar "
+    "3 Disclosures' and print TWO UK KM1 tables: one in the body, on the VMUK (sub-)consolidated basis, "
+    "and one in Appendix 1 on Clydesdale Bank PLC's own basis. Only the appendix table is used here. The "
+    "two are close enough to be mistaken for each other and far enough apart to matter - at 30 Sep 2023 "
+    "VMUK's CET1 is 3,711 against CB's 3,685, and at 30 Sep 2021 VMUK's is 3,616 against CB's 3,603.\n\n"
+    "COLUMN SET BELONGS TO THE TABLE. Each edition prints four to six columns, being the reporting date "
+    "plus the preceding quarter-ends (FY2026: a-e, 31 Mar 26 back to 31 Mar 25; FY2025: a-f, 31 Mar 25 "
+    "back to 31 Dec 23; FY2023 and FY2022: A-E, five quarter-ends). Only the column whose date is the "
+    "financial year end is carried; the intra-year quarter columns are recorded here and not used.\n\n"
+    "BASIS CAPTION CHANGES MID-SERIES, WITH NO STATED CHANGE OF PERIMETER. FY2022 and FY2023 head the "
+    "appendix 'CB Group Consolidated'; FY2025 heads it 'CB Solo-Consolidated Group' and explains it as "
+    "'the individual (or solo) consolidated disclosures required for Clydesdale Bank PLC..., which "
+    "aligns with... the CRR article 9 individual consolidation permission the Bank holds'; FY2026's own "
+    "report says 'The numbers presented within this report (with the exception of liquidity metrics) are "
+    "on an individual (or solo) consolidated basis'. No edition says the perimeter itself moved, and the "
+    "FY2026 edition's 31 Mar 25 comparative column reproduces every FY2025 figure here identically, so "
+    "the change reads as a caption rather than a restatement - but it is recorded rather than smoothed "
+    "over, because this workbook cannot verify a perimeter it was never shown.\n\n"
+    "ROW-SET DRIFT BETWEEN EDITIONS, all reproduced as printed:\n"
+    "- Rows 9 (institution-specific countercyclical buffer) and UK 10a (O-SII buffer) are NOT PRINTED at "
+    "all by the FY2022 edition, so FY2022 is blank on both. The FY2023 edition's own 30 Sept 2022 "
+    "comparative does print them, both as 0.0% - that figure is deliberately not back-filled here, "
+    "because a row the bank did not print is not the same thing as a row printed zero.\n"
+    "- Rows 18-20 (NSFR) are absent from the FY2022 edition entirely, and blank in the FY2023 edition's "
+    "31 Dec 2022 and 30 Sept 2022 columns, footnoted 'In line with PRA guidance, disclosures for the "
+    "NSFR were not required until reporting reference dates after 1 January 2023.' With a 30 September "
+    "year end that makes FY2023 the Bank's first KM1 NSFR. The 136% this workbook's NSFR sheet shows for "
+    "FY2022 is the Bank's own voluntary Annual Report figure on a different basis - see that sheet.\n"
+    "- Row 10 (G-SII buffer) and rows UK 8a / UK 9a are not printed in any edition.\n"
+    "- Row numbering style differs: the FY2022/FY2023 editions print 'UK-7a', 'UK-10a', 'UK-11a' with a "
+    "hyphen and write ratios with a per-cent sign ('14.9%'); FY2025/FY2026 print 'UK 7a' with a space "
+    "and write ratios bare ('14.2'). The most recent form is used for the row labels here and the "
+    "variants recorded in this note; no figure is affected.\n\n"
+    "RULE 1 PAID OFF ON THE LEVERAGE ROWS. FY2022's own edition prints a 30 Sep 2022 leverage exposure "
+    "measure of 83,758 (row 13) and 5.1% (row 14). The FY2023 edition's 30 Sept 2022 comparative prints "
+    "85,921 and 5.0% for the same date, footnoted 'The comparative figures include a restatement to "
+    "qualifying central bank claims which have been adjusted to exclude encumbered note cover and "
+    "payments system collateral balances.' FY2022's own-edition figures are the ones shown; the restated "
+    "comparative is recorded here and not used. The FY2022 edition carries a restatement footnote of its "
+    "own in the other direction ('Following the implementation of PS22/21 effective from 1 January 2022, "
+    "the comparative figures have been restated to reflect the exclusion of the BBLS from the exposure "
+    "value'), which affects only its own 31 Dec 2021 / 30 Sept 2021 comparative columns, none of which "
+    "are used.\n\n"
+    "FY2021 AND EARLIER ARE BLANK, AND NOT FOR WANT OF LOOKING. Virgin Money UK PLC's Pillar 3 "
+    f"Disclosures 2021 ({P3_2021_URL}) contains no UK KM1 for CB or for VMUK: the template arrived with "
+    "the Disclosure (CRR) Part of the PRA Rulebook, applicable from 1 January 2022, and that edition's "
+    "reporting date is 30 September 2021. Its Appendix 1 'Disclosures for CB Group consolidated' "
+    "(printed pp.77-81) carries Table 57 'Capital composition' (the UK CC1 own-funds build-up), Table 58 "
+    "'Capital flow statement', Table 59 'IFRS 9-FL', Table 60 'Reconciliation of statutory equity to "
+    "regulatory capital' and Tables 61/62 (LRSum/LRCom) - a different row set, not an unnumbered KM1, so "
+    "mapping it onto template row numbers would invent a correspondence the Bank never published. "
+    "Checked three ways rather than one: the string 'KM1' occurs zero times in the whole 108-page "
+    "document while 'capital' occurs 463 times, 'ratio' 284 and 'leverage' 71 (so the zero is a fact "
+    "about the document, not a failed extraction); the document's own contents page lists every table by "
+    "name and none is a key-metrics template; and 'pdfimages -list' over the appendix pages returns "
+    "nothing at all, so no table is hiding in a bitmap. FY2020 and earlier pre-date CB PLC's Pillar 3 "
+    "archive at this entity level altogether - those years' capital metrics come from the Annual "
+    "Report's Risk Report, which is not this template and is not back-filled onto it.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: read off virginmoneyukplc.com's own 'Annual reports' and "
+    "'Financial results' pages (which is where Clydesdale Bank PLC's own documents are hosted - the "
+    "entity has no separate investor site), not from the URLs previously cited here. The newest annual "
+    "Pillar 3 of any kind is the Clydesdale Bank PLC Pillar 3 Disclosures 2026 already used above; the "
+    "newest document of any kind is the CB PLC quarterly Pillar 3 disclosure at 31 December 2025 "
+    "(cbplc-dec25-quarterly-pillar3-disclosure.pdf), which is an interim date already carried as column "
+    "b of the FY2026 annual KM1 and so adds nothing. No FY2027 edition exists and, on the Bank's own "
+    "statement, none ever will: 'Post Part VII transfer, the Company no longer meets the thresholds for "
+    "Large subsidiary reporting, and it is therefore not expected that the Company will produce Pillar 3 "
+    "disclosures for subsequent financial periods' (2026 report, Introduction). Checked, none newer. "
+    "YEARS unchanged.\n\n"
+    + ENTITY_NOTE + "\n\n" + NATIONWIDE_NOTE
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — £m", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2026": 4248, "FY2025": 3900, "FY2023": 3685, "FY2022": 3606}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2026": 4946, "FY2025": 4593, "FY2023": 4279, "FY2022": 4268}),
+    ("DATA", "3    Total capital",
+     {"FY2026": 5747, "FY2025": 5347, "FY2023": 5301, "FY2022": 5288}),
+    ("SECTION", "Risk-weighted exposure amounts — £m", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2026": 29742, "FY2025": 27555, "FY2023": 25172, "FY2022": 24128}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2026": "14.3%", "FY2025": "14.2%", "FY2023": "14.6%", "FY2022": "14.9%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2026": "16.6%", "FY2025": "16.7%", "FY2023": "17.0%", "FY2022": "17.7%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2026": "19.3%", "FY2025": "19.4%", "FY2023": "21.1%", "FY2022": "21.9%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2026": "2.0%", "FY2025": "2.1%", "FY2023": "1.7%", "FY2022": "1.7%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2026": "0.7%", "FY2025": "0.7%", "FY2023": "0.6%", "FY2022": "0.6%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2026": "0.9%", "FY2025": "1.0%", "FY2023": "0.7%", "FY2022": "0.8%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2026": "11.6%", "FY2025": "11.8%", "FY2023": "11.0%", "FY2022": "11.1%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2026": "2.5%", "FY2025": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2026": "2.0%", "FY2025": "2.0%", "FY2023": "2.0%"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer (%)",
+     {"FY2026": "0.0%", "FY2025": "0.0%", "FY2023": "0.0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2026": "4.5%", "FY2025": "4.5%", "FY2023": "4.5%", "FY2022": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2026": "16.1%", "FY2025": "16.3%", "FY2023": "15.5%", "FY2022": "13.6%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2026": "7.8%", "FY2025": "7.5%", "FY2023": "8.4%", "FY2022": "8.7%"}),
+    ("SECTION", "Leverage ratio — amounts £m", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2026": 78792, "FY2025": 83120, "FY2023": 86545, "FY2022": 83758}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2026": "6.3%", "FY2025": "5.5%", "FY2023": "4.9%", "FY2022": "5.1%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a    Fully loaded Expected Credit Loss (ECL) accounting model leverage ratio excluding claims on central banks (%)",
+     {"FY2026": "6.3%", "FY2025": "5.5%", "FY2023": "4.8%", "FY2022": "5.0%"}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)",
+     {"FY2026": "5.3%", "FY2025": "5.0%", "FY2023": "4.5%", "FY2022": "4.5%"}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)",
+     {"FY2026": "6.1%", "FY2025": "5.3%", "FY2023": "4.9%", "FY2022": "5.0%"}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)",
+     {"FY2026": "5.3%", "FY2025": "4.8%", "FY2023": "4.4%", "FY2022": "4.4%"}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)",
+     {"FY2026": "0.7%", "FY2025": "0.7%", "FY2023": "0.7%", "FY2022": "0.0%"}),
+    ("SECTION", "Liquidity Coverage Ratio — amounts £m, 12-month average of month-end observations", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value - average)",
+     {"FY2026": 16246, "FY2025": 14868, "FY2023": 13798, "FY2022": 11503}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2026": 10312, "FY2025": 9857, "FY2023": 9933, "FY2022": 8764}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2026": 400, "FY2025": 443, "FY2023": 509, "FY2022": 543}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2026": 9912, "FY2025": 9414, "FY2023": 9424, "FY2022": 8222}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2026": "164%", "FY2025": "158%", "FY2023": "146%", "FY2022": "140%"}),
+    ("SECTION", "Net Stable Funding Ratio — amounts £m", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2026": 78219, "FY2025": 77427, "FY2023": 79295}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2026": 54560, "FY2025": 54375, "FY2023": 58450}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2026": "143%", "FY2025": "142%", "FY2023": "136%"}),
+]
+
+bw.add_km1_sheet(
+    title="Clydesdale Bank PLC — KM1 Key Metrics",
+    subtitle="UK KM1 as published, Clydesdale Bank PLC's own basis (CB Group Consolidated for FY2022/"
+             "FY2023, CB Solo-Consolidated Group / CRR article 9 individual consolidation for FY2025/"
+             "FY2026) - taken from Appendix 1 of the Virgin Money UK PLC Pillar 3 reports, never from "
+             "their VMUK-consolidated body tables. Amounts £m, ratios as printed. FY2021 and earlier "
+             "pre-date the template - see source note at bottom.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=640,
+    years=PILLAR3_YEARS,
+)
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2026": 4248, "FY2025": 3900, "FY2023": 3685, "FY2022": 3606, "FY2021": 3603, "FY2020": 3508, "FY2019": 3462, "FY2018": 2148, "FY2017": 2440, "FY2016": 2393, "FY2015": 2420, "FY2014": 2227})],

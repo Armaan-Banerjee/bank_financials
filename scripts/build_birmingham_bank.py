@@ -350,6 +350,59 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE (no such table in any edition)
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Birmingham Bank Limited has never published the UK KM1 'Key metrics' template. This is a bounded "
+    "negative, not a gap: every Pillar 3 disclosure the Bank has issued was fetched and read in full "
+    "(checked 2026-09-16).\n\n"
+    "EDITIONS CHECKED - three exist, one per year, and each is a different document:\n"
+    f"FY2024 (cover: 'For the year ended 31 December 2024'), 24pp - {P3_URL}\n"
+    f"FY2023 (cover: 'For the year ended 31 December 2023'), 24pp, md5 ae21adfa2ee6000cf6a8df9801b28487 - "
+    f"{P3_2023_URL}\n"
+    f"FY2022 (cover: 'For the year ended 31 December 2022'), 24pp, md5 e1a32b0e3f4a9f64576a9092859f45ab - "
+    f"{P3_2022_URL}\n"
+    "NOTE ON THOSE LAST TWO URLs: they are the SAME path. The Bank overwrites its Pillar 3 file in place, so "
+    "the live URL now serves the FY2023 edition while the dated Wayback capture still serves the FY2022 one - "
+    "which is exactly why the FY2022 citation is pinned to a capture. The two files differ (md5s above). "
+    "Do not 'simplify' the FY2022 citation to the live URL; that would silently swap the edition.\n\n"
+    "WHY 'NOT APPLICABLE' RATHER THAN 'NOT FOUND'. Searching each edition's text: 'KM1' occurs 0 times and "
+    "'key metric' 0 times, while the same extraction returns CET1/Common Equity 18 times, 'own funds' 3, "
+    "'leverage' 5 and LCR 7-9 times in every edition. The extraction demonstrably reaches the capital and "
+    "liquidity vocabulary where it is printed, so the absence of the template is a property of the documents, "
+    "not of the tool. The Bank instead publishes a narrative Pillar 3 whose Section 1.4 'Summary Analysis' "
+    "carries the headline figures; those feed the individual metric sheets in this workbook and are cited "
+    "there. Nothing on this sheet is back-filled from the statutory accounts.\n\n"
+    "PARENT CHECKED TOO (a subsidiary's KM1 is often published inside its parent's Pillar 3, as extra columns "
+    "or an appendix table). Companies House PSC register for company 00555071, read 2026-09-16, shows the "
+    "controlling party has been: Bira Trading Limited (England, reg 11628600, 75%+) until it CEASED on 8 "
+    "January 2021; and Better Home And Finance Holding Company (ACTIVE, notified 22 December 2025, 75%+ of "
+    "shares and voting rights, 3 World Trade Center, New York; governing law Delaware Corporate Law; place "
+    "registered Delaware; registration number 1484882; incorporated in the United States). A UK private "
+    "holding company and a US Delaware corporation respectively - neither is a UK CRR institution carrying a "
+    "Pillar 3 / Article 433 disclosure duty, nor an EU CRR institution carrying an Article 13(1) large-"
+    "subsidiary duty. So there is no parent Pillar 3 in which a Birmingham Bank KM1 could appear, in any "
+    "year this workbook covers. (The FY2024 Annual Report could not answer this: it is an image-only scan - "
+    "39 pages carrying 38 characters of text layer.)\n\n"
+    "SDDT IS NOT THE EXPLANATION - see the fuller note on the Total Capital sheet. The Bank does hold the "
+    "SDDT Rule 3.1 opt-in, but it starts 14/04/2026, which post-dates all three editions above and therefore "
+    "explains none of them. It is consistent with no FY2025 edition having appeared as at 2026-09-16, when "
+    "the Bank's own site linked exactly one Pillar 3 document (the FY2024 one)."
+)
+
+bw.add_km1_sheet(
+    title="Birmingham Bank Limited - KM1 Key Metrics",
+    subtitle="Not applicable - the Bank publishes a narrative Pillar 3 and has never printed the UK KM1 template",
+    rows=[
+        ("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=520,
+    years=YEARS,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):

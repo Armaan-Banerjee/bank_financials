@@ -582,6 +582,73 @@ FY2022_CONFLICT_NOTE = (
     "and what the FY2024 Pillar 3 independently confirms."
 )
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-005) - documented NOT APPLICABLE
+# ---------------------------------------------------------------
+# BOCUK publishes a bank-styled key-metrics summary, not the prescribed
+# template. Applying the row-set test (map rule 8) to every edition it has ever
+# published, in full, rather than keying on the token "KM1" or on numbering.
+KM1_SOURCES = (
+    "UK KM1 - KEY METRICS TEMPLATE: NOT USED BY THIS BANK IN ANY YEAR.\n"
+    "BOCUK publishes a Pillar 3 disclosure in most years and does head a section 'Key metrics' in several of "
+    "them - but what it prints there is the bank's own summary, not the prescribed template. That is a "
+    "different finding from 'no Pillar 3 is published', and it is reached by the row-set test (map rule 8) "
+    "rather than by searching for the token 'KM1'. Every edition the bank has published was fetched and read "
+    "for this, 2026-09-16.\n"
+    "\n"
+    "WHAT EACH EDITION ACTUALLY PRINTS:\n"
+    f"  FY2025 (p.3, '1.1 Key Metrics') - {P3_2025_URL}: an UNNUMBERED table, £'000, two dates, with sections "
+    "Available Capital / Risk-Weighted Exposure Amount / Capital Ratios / Leverage / Liquidity Coverage Ratio "
+    "/ Net Stable Funding Ratio.\n"
+    f"  FY2024 (p.4, '1.1 Key Metrics') - {P3_2024_URL}: the same unnumbered table, plus a buffer block "
+    "(capital conservation, countercyclical, combined buffer, overall capital requirements) that the FY2025 "
+    "edition drops.\n"
+    f"  FY2021 (p.3) and FY2020 (p.3) - {P3_2021_URL} / {P3_2020_URL}: 'KEY METRICS' is not a table at all but "
+    "six INFOGRAPHIC TILES (for FY2021: £13.4M common equity tier 1 capital, £14.3M regulatory capital, 54.8% "
+    "common equity tier 1 ratio, 57.8% total capital ratio, £24.5M total risk weighted, 345% liquidity "
+    "ratio).\n"
+    f"  FY2019 (p.6) and FY2018 (p.5) - {P3_2019_URL} / {P3_2018_URL}: an unnumbered 'Key metrics' table, "
+    "£000s, two dates, which additionally carries IFRS 9 transitional-arrangement variants of most rows, has "
+    "an LCR block but NO NSFR block at all.\n"
+    "  FY2022 and FY2023: no Pillar 3 document exists - both are absent from the bank's own published list "
+    "(re-confirmed against that list 2026-09-16).\n"
+    "\n"
+    "WHY NONE OF THESE IS THE TEMPLATE. The row-set test asks whether a table carries the template's ROW SET, "
+    "whatever its title and whether or not its rows are numbered - an unnumbered table can certainly be the "
+    "template. These are not, and the reason is the same in every edition: NO edition, in any year, prints "
+    "Tier 1 capital (row 2), Tier 1 ratio (row 6), or ANY of the SREP rows (UK 7a, UK 7b, UK 7c, UK 7d). "
+    "Those are the spine of the template, not optional extras, and their absence is structural rather than a "
+    "year's drift: it holds across 2018, 2019, 2020, 2021, 2024 and 2025 alike. No edition numbers its rows "
+    "either, and the row set itself moves materially between editions (NSFR absent before FY2024; the buffer "
+    "block present in FY2024 and gone in FY2025; tiles instead of a table in FY2020-FY2021). Mapping this "
+    "summary onto template row numbers would invent a correspondence the bank never published, which is the "
+    "specific error map rule 8 exists to prevent.\n"
+    "\n"
+    "WHAT THIS BANK'S FIGURES DO SUPPORT is the eleven single-metric sheets in this workbook, which carry "
+    "them under their own citations, on their own stated bases, and with their own documented FY2022 "
+    "conflict. Nothing on those sheets is affected by this one being blank.\n"
+    "\n"
+    "LATEST-EDITION CHECK, 2026-09-16: the bank's own index "
+    "(https://bankofceylon.co.uk/financial-statements/, HTTP 200, not blocked) lists Pillar 3 disclosures for "
+    "31 December 2025, 2024, 2021, 2020, 2019 and 2018 - and nothing for 2022 or 2023, which corroborates the "
+    "gap recorded above from the bank's own publication list. The newest is the 31 December 2025 edition, "
+    "already carried and cited by this script. NONE NEWER."
+)
+
+bw.add_km1_sheet(
+    title="Bank of Ceylon (UK) Limited - KM1 Key Metrics",
+    subtitle="Not applicable: this bank publishes Pillar 3 disclosures but does not use the UK KM1 template in "
+             "any year. What it heads 'Key metrics' is its own unnumbered summary (and, in FY2020-FY2021, six "
+             "infographic tiles), which omits Tier 1 capital, the Tier 1 ratio and every SREP row in every "
+             "edition. See the sources note for the row-set test applied edition by edition.",
+    rows=[("DATA", "UK KM1 - Key metrics template: not used by this bank in any year",
+           {y: "Not applicable" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=300,
+    years=YEARS,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [

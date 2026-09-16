@@ -555,6 +555,212 @@ RATIO_RESTATEMENT_NOTE = (
     "and no attempt is made to recompute them."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - GTBank UK's own published key-metrics table.
+#
+# UNNUMBERED AND ABRIDGED. The table is headed "Table 2: Key Metrics (GBP
+# '000')" (just "Key Metrics (GBP '000')" in the FY2023 edition) and carries
+# the template's section headings and row labels in the template's order, but
+# prints NO template row numbers. It also omits whole blocks the template
+# defines: there is no "Additional own funds requirements based on SREP"
+# section (no UK 7a-7d), no UK 8a / UK 9a / 10 / UK 10a buffer rows, no
+# 14a-14f leverage block, and - unusually - no "Leverage ratio total exposure
+# measure" AMOUNT row, only the ratio. That is the Bank's own row set and is
+# reproduced as such; the missing rows are not a transcription gap.
+#
+# EDITION PER COLUMN. Every edition prints two columns, the reporting year and
+# the prior year. FY2025, FY2024 and FY2023 each come from the edition in
+# which that year is the reporting year - which matters here more than for
+# most banks, because GTBank restates heavily (see KM1_SOURCES). FY2022 has no
+# own-edition KM1 at all: the FY2022 Pillar 3 report predates the template and
+# uses bespoke tables instead (Table 3 "Eligible Capital", Table 4 "Capital
+# Adequacy Ratio (CAR) %", Table 5 "CRR Leverage Ratio %"), and never mentions
+# NSFR. FY2022 therefore comes from the FY2023 edition's comparative column,
+# the earliest KM1 that carries it. FY2021 appears in no KM1 in any edition
+# and is blank.
+#
+# SOURCE DEFECT REPRODUCED: the "Common Equity Tier 1 ("CET1") capital" row
+# prints 37,000 in EVERY year and every edition - the Bank's issued share
+# capital - while the CET1 ratio in the same column is struck on the Tier 1 /
+# Total capital figure. See KM1_SOURCES; it is not corrected here.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available Own Funds (Amounts in GBP '000')", {}),
+    ("DATA", "Common Equity Tier 1 (\"CET1\") capital  [printed as 37,000 in every year — see note]",
+     {"FY2025": 37000, "FY2024": 37000, "FY2023": 37000, "FY2022": 37000}),
+    ("DATA", "Tier 1 Capital",
+     {"FY2025": 54604, "FY2024": 48075, "FY2023": 39391, "FY2022": 28345}),
+    ("DATA", "Total Capital",
+     {"FY2025": 54604, "FY2024": 48075, "FY2023": 39391, "FY2022": 28345}),
+    ("SECTION", "Risk-Weighted Exposure Amount", {}),
+    ("DATA", "Total Risk-Weighted Exposure Amount",
+     {"FY2025": 148821, "FY2024": 157370, "FY2023": 105275, "FY2022": 187034}),
+    ("SECTION", "Capital Ratios (as a percentage of Risk-Weighted Exposure Amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2025": "36.69%", "FY2024": "26.89%", "FY2023": "32.34%", "FY2022": "20.68%"}),
+    ("DATA", "Tier 1 ratio (%)",
+     {"FY2025": "36.69%", "FY2024": "26.89%", "FY2023": "32.34%", "FY2022": "20.68%"}),
+    ("DATA", "Total Capital Ratio (%)",
+     {"FY2025": "36.69%", "FY2024": "26.89%", "FY2023": "32.34%", "FY2022": "20.68%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of Risk-Weighted Exposure Amount)", {}),
+    ("DATA", "Capital Conversion Buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+    ("DATA", "Institution specific Countercyclical Capital Buffer (%)",
+     {"FY2025": "2.00%", "FY2024": "2.00%", "FY2023": "2.00%", "FY2022": "1.00%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2025": "4.50%", "FY2024": "4.50%", "FY2023": "4.50%", "FY2022": "3.50%"}),
+    ("DATA", "Overall capital requirement (%)*",
+     {"FY2025": "15.53%", "FY2024": "14.61%", "FY2023": "14.67%", "FY2022": "15.98%"}),
+    ("DATA", "CET1 available after the total SREP own funds requirements (%)",
+     {"FY2025": "21.16%", "FY2024": "12.28%", "FY2023": "17.67%", "FY2022": "4.70%"}),
+    ("SECTION", "Leverage Ratio", {}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "9.11%", "FY2024": "8.02%", "FY2023": "6.00%", "FY2022": "4.38%"}),
+    ("SECTION", "Liquidity Coverage Ratio (\"LCR\") — GBP '000 / %", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value) average of last 12mths",
+     {"FY2025": 228692, "FY2024": 188372, "FY2023": 230533, "FY2022": 176600}),
+    ("DATA", "Cash outflows - Total weighted value",
+     {"FY2025": 410004, "FY2024": 260717, "FY2023": 199752, "FY2022": 252991}),
+    ("DATA", "Cash inflows -  Total weighted value",
+     {"FY2025": 175251, "FY2024": 218234, "FY2023": 125298, "FY2022": 189743}),
+    ("DATA", "Total net cash outflows (adjusted value)",
+     {"FY2025": 234753, "FY2024": 42483, "FY2023": 74454, "FY2022": 63248}),
+    ("DATA", "Liquidity Coverage Ratio (%)",
+     {"FY2025": "197%", "FY2024": "309%", "FY2023": "250%", "FY2022": "274%"}),
+    ("SECTION", "Net Stable Funding Ratio (\"NSFR\") — GBP '000 / %", {}),
+    ("DATA", "Total available stable funding",
+     {"FY2025": 198459, "FY2024": 200729, "FY2023": 194572, "FY2022": 214036}),
+    ("DATA", "Total required stable funding",
+     {"FY2025": 94033, "FY2024": 77347, "FY2023": 62864, "FY2022": 84527}),
+    ("DATA", "Net Stable Funding Ratio (%)",
+     {"FY2025": "211%", "FY2024": "260%", "FY2023": "310%", "FY2022": "253%"}),
+    ("DATA", "* The asterisk is the Bank's own, on the \"Overall capital requirement (%)\" row of the "
+             "FY2024 and FY2025 editions. Neither edition carries a matching footnote anywhere in the "
+             "document: it is a dangling marker, reproduced rather than removed.", {}),
+]
+
+KM1_SOURCES = (
+    "Sources - Guaranty Trust Bank (UK) Limited's own key-metrics table, GBP '000 and percentages exactly "
+    "as printed:\n"
+    f"FY2025: Pillar 3 Disclosure 2025, p.13-14, \"Table 2: Key Metrics (GBP '000')\", column 31st December "
+    f"2025 - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosure 2024, p.14, \"Table 2: Key Metrics (GBP '000')\", column 31st December "
+    f"2024 - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 2023, p.13-14, \"Key Metrics (GBP '000')\", column 31st December 2023 - {P3_2023_URL}\n"
+    f"FY2022: the comparative column of that same FY2023 edition, p.13-14 - see the edition note below - "
+    f"{P3_2023_URL}\n"
+    "TABLE BREAKS ACROSS TWO PAGES in the FY2025 and FY2023 editions (capital, RWA, ratios and the start of "
+    "the buffer block on the first page; the rest of the buffers, leverage, LCR and NSFR on the next), and "
+    "sits whole on p.14 in the FY2024 edition. Page ranges above reflect that, so a later session verifying "
+    "a citation does not stop at the first page and conclude the lower rows are missing.\n"
+    f"FY2021: no KM1 in any edition - blank.\n"
+    "\n"
+    "GTBANK PRINTS THE TEMPLATE UNNUMBERED AND ABRIDGED. The table carries the template's section headings "
+    "and row labels in the template's order but no template row numbers at all, so none are shown here - "
+    "supplying them from the PRA template would put words in the Bank's mouth. It also omits whole blocks "
+    "the template defines: no \"Additional own funds requirements based on SREP\" section (no UK 7a-UK 7d), "
+    "no UK 8a / UK 9a / 10 / UK 10a buffer rows, no UK 14a-14f leverage block, and no \"Leverage ratio total "
+    "exposure measure\" amount row - only the ratio. Those absences are the Bank's own row set, not gaps in "
+    "transcription. GTBank also drifts in capitalisation between editions (\"Total Capital Ratio (%)\" in "
+    "FY2024/FY2025 against \"Total capital ratio (%)\" in FY2023, and likewise the buffer rows); the labels "
+    "above follow the most recent edition.\n"
+    "\n"
+    "EDITION PER COLUMN, AND WHY IT MATTERS MORE HERE THAN USUAL. Every edition prints two columns, the "
+    "reporting year and the prior year, and GTBank RESTATES its prior-year column materially. Taking each "
+    "year from the edition in which it is the reporting year is therefore not a formality: the FY2024 "
+    "edition restates FY2023 RWAs from 105,275 to 108,387 (3.0%), the CET1/Tier 1/Total ratio from 32.34% to "
+    "32.30%, the leverage ratio from 6.00% to 8.30%, HQLA from 230,533 to 197,710, the overall capital "
+    "requirement from 14.67% to 14.07% and CET1-available from 17.67% to 18.23%. This sheet carries the "
+    "as-first-published figures throughout. The restated FY2023 comparatives are recorded on their own "
+    "labelled rows of the CET1 Ratio, Tier 1 Ratio, Total Capital Ratio, Total RWAs and Leverage Ratio "
+    "sheets, so neither version is lost and neither overwrites the other.\n"
+    "\n"
+    "FY2022 COMES FROM THE FY2023 EDITION BECAUSE ITS OWN EDITION HAS NO KM1. The FY2022 Pillar 3 report "
+    "predates the template: it presents bespoke tables instead - \"Table 3: Eligible Capital\", \"Table 4: "
+    "Capital Adequacy Ratio (CAR) %\" and \"Table 5: CRR Leverage Ratio %\" - with no template row labels or "
+    "section headings, and the string NSFR does not occur in that document at all. Confirmed by reading the "
+    "PDF rather than by a text search alone: its three embedded images (pages 1, 6 and 12) were listed and "
+    "are a cover logo, the leverage-ratio table that extracts fine as text, and a risk-category diagram - "
+    "there is no key-metrics table hidden as a bitmap. FY2021 appears inside no KM1 in any edition, so it is "
+    "blank here; the FY2021 figures elsewhere in this workbook come from the FY2022 edition's bespoke "
+    "tables.\n"
+    "\n"
+    "SOURCE DEFECT, REPRODUCED AND FLAGGED: THE CET1 CAPITAL ROW. GTBank prints \"Common Equity Tier 1 "
+    "(\"CET1\") capital  37,000\" in every year of every edition - its paid-up share capital, unchanged since "
+    "before this workbook's window - while the CET1 RATIO printed two rows below in the same column is "
+    "struck on the Tier 1 / Total capital figure (FY2025: 54,604 / 148,821 = 36.69%, the printed ratio; "
+    "37,000 / 148,821 would be 24.86%). The Bank's own table is therefore internally inconsistent.\n"
+    "A CONSTANT ACROSS FOUR YEARS IS NORMALLY A TRANSCRIPTION FAULT, SO THIS ONE WAS RE-INVESTIGATED FROM "
+    "SCRATCH ON 16 SEPTEMBER 2026 BEFORE BEING ACCEPTED. Three candidate explanations were tested and all "
+    "three were ruled out. (1) ROW MISALIGNMENT - ruled out by rendering each edition's page at 300 dpi and "
+    "reading the ruled table cells directly rather than trusting `pdftotext`. That mattered: in the FY2025 "
+    "edition the text layer emits the 2025 column of several rows on its own line ABOVE the row label (an "
+    "artefact of vertical centring in taller cells), which is exactly what a column shift would look like. "
+    "The rendered cell borders show it is not one - CET1 capital is a single-height row reading 37,000 | "
+    "37,000, while Tier 1 Capital and Total Capital read 54,604 | 48,075. The FY2024 and FY2023 editions "
+    "have no vertical offset at all and print the same 37,000 in both of their columns. (2) A UNIT CHANGE "
+    "BETWEEN EDITIONS - ruled out: all three editions head the table \"Key Metrics (GBP '000')\" and repeat "
+    "\"Amounts in GBP '000'\" inside the header cell, so there is no unit break to mistake for a level shift. "
+    "(3) THE TEMPLATE PRINTED TWICE ON TWO ENTITY BASES - ruled out: the key-metrics rows occur on exactly "
+    "one page of each edition (FY2025 p.13, FY2024 p.14, FY2023 p.13), and the Bank states it has no "
+    "subsidiaries in the UK or abroad, so there is no second basis to confuse.\n"
+    "(4) A PARENT-LEVEL BLOCK READ BY MISTAKE - ruled out by the COLUMN HEADERS, which are the only thing "
+    "that identifies an entity when a group and a subsidiary share a table. A constant that does not move "
+    "while the entity's own capital moves is exactly what reading a parent column produces, so this was "
+    "checked rather than assumed. GTBank's table is not of that shape: its two value columns are headed "
+    "by DATES (\"31st December 2025\" and \"31st December 2024\"), not by entity names - there is no "
+    "Group-beside-Individual split, no second table in an appendix, and the document is titled for "
+    "Guaranty Trust Bank (UK) Limited throughout. Decisively, 37,000 is identified INSIDE THIS SAME "
+    "DOCUMENT as the UK entity's own paid-up share capital by its section 7.1 build-up, which adds the UK "
+    "entity's own P&L reserve to it to reach the UK entity's own total capital. It is the right entity "
+    "and the wrong LINE of that entity's build-up - a row-population error by the Bank, not a "
+    "group-vs-subsidiary mix-up. The Nigerian parent (Guaranty Trust Bank Nigeria, under Guaranty Trust "
+    "Holding Company) is outside the UK disclosure regime and publishes no UK KM1 for this subsidiary; "
+    "nothing here is sourced from it.\n"
+    "WHAT 37,000 ACTUALLY IS, from the Bank's own build-up. Each edition's section 7.1 \"Table 4: Available "
+    "Capital\" derives capital as paid-up share capital 37,000 + Profit and Loss reserve 17,563 + fair value "
+    "reserve 41 - intangibles nil = 54,604 \"Total Capital Available\" (FY2025 figures; FY2024 the same shape, "
+    "37,000 + 11,019 + 56 = 48,075), with Tier 2 and subordinated debt both nil, and the same section says in "
+    "words that \"Tier 1 Capital comprises paid-up share capital and the Profit & Loss reserve less intangible "
+    "assets\". So the KM1 CET1 row has been populated with the FIRST LINE of that build-up instead of its "
+    "total. That is the defect, and it is the Bank's, not this transcription's.\n"
+    "BOTH FIGURES AND BOTH SOURCES, since the two sides of this workbook deliberately disagree. KM1 row = "
+    "37,000 in all four years, from the \"Common Equity Tier 1 (\"CET1\") capital\" row of Table 2 / \"Key "
+    f"Metrics\" in the FY2025 (p.13 - {P3_2025_URL}), FY2024 (p.14 - {P3_2024_URL}) and FY2023 (p.13 - "
+    f"{P3_2023_URL}) editions. CET1 Capital sheet = 54,604,000 / 48,075,379 / 39,390,993 / 28,344,378, from "
+    f"each year's Annual Report Note 23.8(a) regulatory-capital table ({AR2024_URL}) and, for FY2025, from "
+    "the FY2025 Pillar 3's own Table 4 \"Total Capital Available\" of 54,604 - the figure the ratios are "
+    "actually struck on. The 37,000 is reproduced here unchanged because reproducing the template is the "
+    "point of this sheet; NOTHING WAS EDITED ON EITHER SIDE TO MAKE THE TWO AGREE, and the four "
+    "cross-check disagreements this raises in verify_workbook.py are expected and correct.\n"
+    "\n"
+    "ZERO GLYPHS. There are none: GTBank leaves no cell dashed or zeroed in this table. Every cell shown is "
+    "a printed figure and every blank is a row or column the Bank did not print.\n"
+    "\n"
+    "LATEST-EDITION CHECK, 16 September 2026, against the Bank's own site rather than this script's citation "
+    "list. gtbankuk.com publishes documents only from /about-gtbank-uk/our-company (the /investor-relations "
+    "page renders no document links at all, in the HTML or in the sitemap). That page links exactly two "
+    "reports: \"GTBank-UK-Pillar-3-Disclosure-2025.pdf\" and \"GTBank-UK-Annual-Report-and-Financial-"
+    "Statement-2024.pdf\". The FY2025 Pillar 3 is the newest edition and is already cited here. Companies "
+    "House (05969821) confirms the FY2025 Annual Report is not yet filed - the latest accounts are made up "
+    "to 31 December 2024 - which is why FY2025 is Pillar 3-sourced throughout this workbook. Checked, none "
+    "newer."
+)
+
+bw.add_km1_sheet(
+    title="Guaranty Trust Bank (UK) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published key-metrics table, reproduced in GTBank's row order with its own "
+             "labels and printed precision. GTBank prints the template WITHOUT row numbers and omits the "
+             "SREP and additional-buffer blocks entirely, so neither is shown. Amounts in GBP '000, ratios "
+             "as printed. Each year is as FIRST published in its own edition - this bank restates its "
+             "comparatives materially, see the source note. FY2022 comes from the FY2023 edition because "
+             "the FY2022 report predates the template; FY2021 appears in no KM1 at all.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=420,
+)
+
 metric(
     "CET1 Capital", "£",
     [("Common Equity Tier 1 (CET1) capital", REG_CAPITAL)],

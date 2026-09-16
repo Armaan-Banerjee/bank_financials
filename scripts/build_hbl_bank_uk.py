@@ -553,6 +553,117 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics (KM1-016)
+#
+# FINDING: HBL Bank UK Limited PUBLISHES a Pillar 3 disclosure every year, but
+# it DOES NOT USE the UK KM1 "Key metrics" template in any edition. This is the
+# middle of the three findings the KM1 map distinguishes - it is NOT "no Pillar 3
+# is published" (four editions were downloaded and read in full for this ticket),
+# and it is NOT an Article 432 materiality/confidentiality exclusion (the FY2025
+# edition states the opposite in terms: "The Bank has not taken any exemptions
+# from these disclosures with regards to confidential or proprietary
+# information", section 1.3, p.4).
+#
+# What HBL prints under its own heading "2. Key Metrics" is three separate,
+# bespoke, UNNUMBERED tables - "Regulatory Capital and Capital Ratios",
+# "Leverage Ratio", and "Liquidity Ratios - Liquidity Coverage (LCR) and Stable
+# Funding (NSFR)" - each with a 2-column current-year/prior-year header. Applying
+# the map's row-set test, this fails it the same way ABC International Bank's
+# "Table 3 Key Regulatory Metrics" does:
+#   * The ENTIRE SREP and buffer block of the template is absent - there is no
+#     equivalent of rows UK 7a-UK 7d (additional CET1/AT1/T2 SREP requirements,
+#     total SREP own funds requirement), 8/UK 8a (capital conservation buffer),
+#     9/UK 9a (countercyclical and systemic risk buffers), 10/UK 10a (G-SII and
+#     O-SII buffers), 11 (combined buffer requirement), UK 11a (overall capital
+#     requirements) or 12 (CET1 available after meeting total SREP own funds
+#     requirements) anywhere in the section, in any of the four editions read.
+#   * It ADDS rows the template does not have, as separate line items:
+#     "Additional Tier 1 Capital (AT 1)" and "Tier 2 Capital (T 2)".
+#   * Its labels are its own, not the template's ("Total Net Flow" where KM1
+#     row 16 reads "Total net cash outflows", "Total Risk Weighted Assets" where
+#     KM1 row 4 reads "Total risk-weighted exposure amount").
+#   * No row numbers of any kind are printed. (Under map rule 8 that alone would
+#     NOT disqualify it - Europe Arab Bank prints the real template unnumbered -
+#     which is precisely why the row-set test, not the numbering, is what decides
+#     this one.)
+# Mapping these three short tables onto KM1 row numbers would invent a
+# correspondence HBL has never published, so no KM1 sheet is reproduced.
+#
+# HBL does use at least one prescribed UK template elsewhere: the FY2022-FY2025
+# editions print the UK CCyB1 countercyclical-buffer template with its own
+# numbered rows. So the absence of KM1 is a choice about that template, not an
+# inability to render templates at all.
+#
+# The eleven single-metric Pillar 3 sheets in this workbook are built from these
+# three bespoke tables directly, which is why they are populated while this sheet
+# is not - they are not derived from a KM1 that does not exist.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - every Pillar 3 disclosure HBL Bank UK Limited makes available was downloaded "
+    "and read in full for this check (all four verified by HTTP 200, Content-Type "
+    "application/pdf and %PDF magic bytes; none was a blocked fetch or a soft-404):\n"
+    f"FY2025: Pillar III Disclosures 2025 - section 2 'Key Metrics', p.4-5 - {P3_2025_URL}\n"
+    f"FY2024: Pillar III Disclosure 2024 - section 2 'Key Metrics', p.4-5 - {P3_2024_URL}\n"
+    f"FY2022: Pillar III Disclosure - 31 December 2022 - section 2 'Key Metrics', p.6-7 - "
+    f"{P3_2022_URL}\n"
+    f"FY2021: Pillar III Disclosures - 31 December 2021 - section 2 'Key Metrics', p.4-5 - "
+    f"{P3_2021_URL}\n"
+    "FY2023: no standalone FY2023 Pillar 3 document is reachable (see the p3_sources() note on "
+    "the metric sheets); FY2023's figures elsewhere in this workbook come from the FY2024 "
+    "edition's comparative column, which is itself one of the three bespoke tables described "
+    "below, not a KM1.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: checked HBL Bank UK's own website rather than this "
+    "project's cited URLs. hblbankuk.com/regulatory-disclosures/ returns HTTP 404 - the bank "
+    "has no dedicated regulatory-disclosures page; its documents are published on the general "
+    "downloads page hblbankuk.com/pdf-downloads/, which as at that date lists exactly one "
+    "Pillar 3 document ('HBL-UK-2025-Pillar-III-Disclosure.pdf') and one set of financial "
+    "statements ('FS-HBL-Bank-UK-2025.pdf'), both for the year ended 31 December 2025. FY2025 "
+    "is therefore the newest edition published, and this workbook already holds it. Checked, "
+    "none newer.\n\n"
+    "WHY THIS SHEET IS 'Not applicable':\n"
+    "HBL Bank UK Limited publishes a Pillar 3 disclosure annually but has never used the UK "
+    "KM1 'Key metrics' template. Its own section headed '2. Key Metrics' is three separate, "
+    "unnumbered, bespoke tables ('Regulatory Capital and Capital Ratios'; 'Leverage Ratio'; "
+    "'Liquidity Ratios - Liquidity Coverage (LCR) and Stable Funding (NSFR)'), each with a "
+    "current-year and prior-year column. That is not the template rendered without numbering - "
+    "it is a shorter and different table. Positive evidence, from reading all four editions "
+    "end to end:\n"
+    "  * The template's entire SREP and buffer block is absent. There is no equivalent of rows "
+    "UK 7a-UK 7d, 8, UK 8a, 9, UK 9a, 10, UK 10a, 11, UK 11a or 12 anywhere in the Key Metrics "
+    "section of any edition.\n"
+    "  * Rows the template does not contain are added as separate line items: 'Additional Tier "
+    "1 Capital (AT 1)' and 'Tier 2 Capital (T 2)'.\n"
+    "  * The labels are HBL's own, not the template's - e.g. 'Total Net Flow' for what KM1 row "
+    "16 calls 'Total net cash outflows', and 'Total Risk Weighted Assets' for what KM1 row 4 "
+    "calls 'Total risk-weighted exposure amount'.\n"
+    "This is NOT a case of 'no Pillar 3 is published', and it is NOT an Article 432 exclusion: "
+    "the FY2025 edition states at section 1.3 (p.4) that 'The Bank has not taken any exemptions "
+    "from these disclosures with regards to confidential or proprietary information', and no "
+    "edition carries an excluded-templates appendix. HBL does render other prescribed UK "
+    "templates - the FY2022-FY2025 editions print UK CCyB1 with its own numbered rows - so the "
+    "absence is specific to KM1.\n\n"
+    "Nothing on this sheet has been back-filled from the statutory accounts, and the three "
+    "bespoke tables have NOT been re-labelled into template row numbers, which would invent a "
+    "correspondence the bank never published. The eleven single-metric Pillar 3 sheets in this "
+    "workbook are built directly from those bespoke tables and remain fully populated."
+)
+
+bw.add_km1_sheet(
+    title="HBL Bank UK Limited — KM1 Key Metrics",
+    subtitle="Not applicable — HBL Bank UK Limited publishes a Pillar 3 disclosure every year but has "
+             "never used the UK KM1 'Key metrics' template in any edition (FY2021, FY2022, FY2024 and "
+             "FY2025 all read in full). See the source note below for the positive evidence and for why "
+             "this is 'the template is not used' rather than 'no Pillar 3 is published' or an Article 432 "
+             "exclusion.",
+    rows=[
+        ("DATA", "Not applicable — the UK KM1 template is not used in HBL Bank UK Limited's Pillar 3 disclosures",
+         {y: "Not applicable" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    source_height=330,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None, source_height=190):

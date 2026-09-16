@@ -392,6 +392,108 @@ bw.add_asset_quality_sheet(
 )
 
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics (wayfinder KM1-022, 2026-09-16) - "Not applicable", and the
+# Bank says so itself, in its own accounts, with the legal basis.
+#
+# Called BEFORE the first add_metric_sheet() so the sheet lands immediately
+# after Asset Quality and immediately before CET1 Capital.
+DB_GROUP_RM_2025_URL = "https://danskebank.com/-/media/danske-bank-com/file-cloud/2026/2/risk-management-2025.pdf?rev=d803f349b39f43f58c7b3d4aef1455a3"
+DB_GROUP_P3_Q4_2025_URL = "https://danskebank.com/-/media/danske-bank-com/file-cloud/2026/2/additional-pillar-3-disclosures-q4-2025.xls"
+
+KM1_SOURCES = (
+    "KM1 Key Metrics - NOT APPLICABLE, and unusually this rests on the Bank's own written declaration of the "
+    "legal basis rather than on an inference from absence.\n\n"
+    "THE BANK STATES IT, IN ITS OWN AUDITED ACCOUNTS, IN A NOTE DEDICATED TO THE QUESTION. Note 40 \"Pillar 3 "
+    "disclosure reporting\" of the FY2025 Annual Report (printed p.137) reads in full: \"The Bank's capital "
+    "position is set out from page 59 and applies all relevant Capital Requirements Directive V requirements "
+    "that were in force during 2025. THE BANK DOES NOT PUBLISH PILLAR 3 DISCLOSURE REPORTING ON AN INDIVIDUAL "
+    "BASIS, ON THE BASIS THAT IT DOES NOT MEET THE CAPITAL REQUIREMENT REGULATIONS 2 DEFINITION OF 'LARGE "
+    "INSTITUTION'.\" The same note appears verbatim, with only the year and page reference changed, as Note 40 "
+    "of the FY2024 and FY2023 reports and as Note 43 of the FY2022 report (printed p.182). That is a "
+    "declaration in the document naming the rule it relies on - the same class of evidence as Bank of "
+    "Scotland's Article 432 excluded-templates appendix, and stronger than a failed search could ever be.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16. The Bank's OWN site was read live: "
+    "https://danskebank.co.uk/about-us/corporate-governance lists exactly one documents page, "
+    "\"Annual report and financial statements\", and that page (HTTP 200, 270 KB) links nine PDFs - the "
+    "2017 through 2025 Annual Reports and nothing else. NEWEST EDITION = the Annual Report and Financial "
+    "Statements 2025, which this workbook already holds; the Bank's year-end is 31 December, so FY2026 is not "
+    "yet a reporting year and no year was added. All six editions used here (FY2020-FY2025) were re-downloaded "
+    "and verified HTTP 200 / Content-Type application/pdf / %PDF magic bytes.\n"
+    "THERE IS NO PILLAR 3 PAGE ON THE SITE AT ALL, and that was tested rather than assumed: the Bank's own "
+    "sitemap.xml (99 KB, fetched live) contains ZERO occurrences of the string \"pillar\", as do all three "
+    "corporate-governance pages fetched. Candidate paths /about-us/regulatory-disclosures and /pillar-3 return "
+    "a genuine HTTP 404 from a server that returns HTTP 200 for the pages that do exist, so this is a fact "
+    "about publication, not about reach.\n\n"
+    "THE PARENT'S PILLAR 3 WAS CHECKED FIRST, NOT LAST (map rule 18), because UK Disclosure (CRR) subsidiary "
+    "reporting normally puts a non-large subsidiary's figures in the consolidating parent's document - which is "
+    "exactly what the Bank's own Note 40 implies. IT IS NOT THERE EITHER, and here is what was read:\n"
+    "- Danske Bank A/S's Pillar 3 comes in two parts. The narrative is \"Risk Management 2025\" (45 pages, "
+    + DB_GROUP_RM_2025_URL + "), which says in terms that the quantitative templates live elsewhere: "
+    "\"Additional Pillar 3 disclosures required under the Capital Requirements Regulation ... can be downloaded "
+    "from www.danskebank.com/investor-relations.\" It mentions Northern Bank exactly once, in a securitisation "
+    "exposure-scope list, and contains no KM1.\n"
+    "- Those quantitative templates are \"Additional Pillar 3 disclosures Q4 2025\" (" + DB_GROUP_P3_Q4_2025_URL +
+    "), a 79-sheet workbook running EU CC1, CC2, KM1, KM2, TLAC1/3, INS1, OV1, LI1-LI3, CQ/CR/CCR/MR/LR/LIQ/AE "
+    "and IRRBB1. EVERY CELL OF ALL 79 SHEETS was searched for \"Northern\", \"Northern Ireland\" and \"Danske "
+    "Bank UK\". The Bank appears in exactly one template - EU LI3, the entity-by-entity scope-of-consolidation "
+    "table, where \"Northern Bank Limited\" is listed alongside Northern Bank Factors Limited, Northern Bank "
+    "Executor and Trustee Company Limited, Northern Bank Nominees Limited and Northern Bank Pension Trust "
+    "Limited. It is NAMED AS A CONSOLIDATED ENTITY AND NOWHERE ELSE.\n"
+    "- The Group's \"EU KM1\" sheet is a single-entity Group template whose five value columns are QUARTERLY "
+    "DATES (31 Dec 2025, 30 Sep 2025, 30 Jun 2025, 31 Mar 2025, 31 Dec 2024), denominated in DKK millions. "
+    "There is no Northern Bank column, so there is no rule-19 subsidiary block hiding in a column or an "
+    "appendix - and note it is the EU KM1 template in Danish kroner, a different template and a different "
+    "currency from the UK KM1 this sheet would carry.\n\n"
+    "THE BRAND IS NOT THE ENTITY, which is the trap on this bank. Northern Bank Limited TRADES AS \"Danske "
+    "Bank\" in Northern Ireland and its reports are hosted on danskebank.co.uk, but the legal entity is "
+    "Northern Bank Limited (Companies House R0000568, FRN 122261) and every document used here is titled "
+    "\"Northern Bank Limited Annual Report and Financial Statements\". Danske Bank A/S is the Danish parent, a "
+    "separate legal entity reporting under EU CRR; its Pillar 3 is NOT Northern Bank's, and none of its "
+    "figures has been carried onto any sheet in this workbook.\n\n"
+    "THE BANK'S OWN CAPITAL TABLES ARE NOT A KM1 AND ARE NOT RESHAPED INTO ONE (map rule 8). The unaudited "
+    "capital section of each Annual Report (FY2025: printed pp.59-61) holds four bespoke tables - \"Regulatory "
+    "capital\" (a CET1 build-up), \"Capital and leverage position\", \"Risk weighted exposure amounts\" and a "
+    "\"Regulatory capital to statutory total equity reconciliation\" - plus an MREL table. The closest of them "
+    "to the template, \"Capital and leverage position\", has FIVE rows: CET1 ratio, Tier 1 ratio, Total capital "
+    "ratio, Total Capital Requirement and Leverage ratio, over two date columns. No row numbers, no own-funds "
+    "amounts in that table, no RWA row, no SREP breakdown (only a single TCR figure), no combined-buffer block, "
+    "no LCR row and no NSFR row. That is a different and shorter table - the ABC International Bank pattern - "
+    "not an unnumbered KM1. Its figures, and those of the tables beside it, already populate the eleven "
+    "single-metric sheets of this workbook; mapping them onto KM1 row numbers would invent a correspondence "
+    "Northern Bank has never published.\n\n"
+    "FY2020 AND FY2021 ARE COVERED BY A DIFFERENT AND SIMPLER ARGUMENT, stated separately rather than folded "
+    "into the one above, because the Note 40/43 declaration first appears in the FY2022 report: neither the "
+    "FY2020 nor the FY2021 Annual Report mentions Pillar 3 at all, and the UK KM1 template only came into "
+    "force with the Disclosure (CRR) Part of the PRA Rulebook on 1 January 2022. A KM1 could not have existed "
+    "for those years (map rule 22).\n\n"
+    "SEARCH QUALITY, recorded so the zeroes can be trusted (map rule 15). All six of the Bank's Annual Reports "
+    "were converted and searched: ZERO occurrences of \"KM1\" in any of them, against 125-178 occurrences of "
+    "\"capital\", 8-17 of \"leverage\" and 2-4 of \"liquidity coverage\" in the same files. The extraction is "
+    "demonstrably rich on neighbouring terms, so the zero is a fact about the documents rather than about the "
+    "tool. The two \"key metric\" hits (FY2023, FY2024) are in risk-appetite narrative, not table captions.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Northern Bank Limited (trading as Danske Bank) — KM1 Key Metrics",
+    subtitle="Not applicable, and the Bank says so itself. Note 40 \"Pillar 3 disclosure reporting\" of its own "
+             "accounts states that \"The Bank does not publish Pillar 3 disclosure reporting on an individual "
+             "basis, on the basis that it does not meet the Capital Requirement Regulations 2 definition of "
+             "'large institution'\" - the same note in every edition from FY2022. Its Danish parent Danske Bank "
+             "A/S was checked too: across all 79 templates of the Group's Q4 2025 Pillar 3 workbook, Northern "
+             "Bank Limited appears only in EU LI3 as a consolidated entity, and the Group's EU KM1 is a "
+             "Group-only template in DKK with quarterly date columns - no Northern Bank block anywhere. The "
+             "Annual Report's own five-row \"Capital and leverage position\" table is not the template and is "
+             "not reshaped into it.",
+    rows=[("DATA", "Not applicable — the Bank publishes no individual Pillar 3 disclosure, and no UK KM1 "
+                   "template for this entity exists in any document, its parent's included", {})],
+    sources_text=KM1_SOURCES,
+    first_col_width=92,
+    source_height=1500,
+)
+
+
 def metric(name, unit, label, values, page_map, note=None):
     bw.add_metric_sheet(name, unit, [(label, values)], sources(name, page_map), note=note, first_col_width=54, source_height=180)
 

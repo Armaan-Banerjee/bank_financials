@@ -592,7 +592,11 @@ def metric(name, unit, rows_data, note=None, page="4-5"):
 CET1_CAPITAL = {"FY2025": 161700, "FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301,
                 "FY2020": 131539, "FY2019": 137828}
 TOTAL_RWA = {"FY2024": 700374, "FY2023": 493080, "FY2022": 537708, "FY2021": 450231,
-             "FY2020": 372287, "FY2019": 329260}
+             "FY2020": 372287, "FY2019": 329256}
+# FY2019 CORRECTED 2026-09-16 from 329,260 to 329,256. The old figure was rounded off
+# the FY2020 edition's narrative ("£329.26m"); 329,256 is printed directly as row 4 of
+# the KM1 key-metrics table in GHIB's FY2022 and FY2023 Pillar 3 editions. Same figure
+# to the stated precision, now transcribed rather than derived - see the KM1 sheet.
 # FY2019's own Table 1 prints a "Total Risk-Weighted Assets" of 281,553, which is
 # demonstrably the CREDIT-RISK SUBTOTAL rather than total RWAs - see TOTAL_RWA_NOTE.
 # Kept on its own labelled row rather than discarded or silently substituted.
@@ -636,6 +640,258 @@ FY2025_AR_BASIS_NOTE = (
 
 CET1_CAP_NOTE = FY2025_AR_BASIS_NOTE + " FY2025 is stated only to £0.1m (\"£161.7m\"), so it carries less precision than the Pillar 3-sourced years."
 NO_AT1_FY2025_NOTE = NO_AT1_NOTE + " " + FY2025_AR_BASIS_NOTE
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - GHIB's own published template, reproduced as printed.
+#
+# HOW THIS TABLE WAS FOUND, AND WHY A TEXT SEARCH SAID IT DID NOT EXIST.
+# In EVERY GHIB Pillar 3 edition the key-metrics table is a PASTED IMAGE, not
+# live text. The PDFs are otherwise fully text-extractable, so `pdftotext`
+# returns the caption ("Table1: Key Metrics ratios as at 31 December 2024")
+# followed by white space where the table should be, and any token- or
+# label-based detector reports NO KM1 for this bank in all six years. The
+# table is plainly there on the rendered page. Every figure below was read
+# VISUALLY - not OCR'd - which is the same method this script already uses for
+# the FY2019 Table 2, and read TWICE from two independent renderings: the whole
+# page rasterised at 200 dpi, and the embedded bitmap extracted at its native
+# resolution with pdfimages. The two reads agree digit for digit.
+#
+# WHICH EDITION EACH COLUMN COMES FROM. GHIB did not adopt the KM1 template
+# until its FY2022 edition. The FY2022, FY2023 and FY2024 editions each print
+# the full five-column template (T to T-4):
+#   FY2024 edition -> 2024 2023 2022 2021 2020
+#   FY2023 edition -> 2023 2022 2021 2020 2019
+#   FY2022 edition -> 2022 2021 2020 2019 2018
+# So FY2024, FY2023 and FY2022 each come from the edition in which that year
+# is the reporting year, per the project's standing rule. FY2021, FY2020 and
+# FY2019 have NO own-edition KM1 at all - their own editions (and the FY2019
+# one) print a bespoke single-column "Key Metrics" list with no row numbers,
+# no SREP/buffer rows and no UK 16a/16b split, which is not the template - so
+# those three columns are taken from the FY2022 edition, the EARLIEST edition
+# that prints them inside the template. Same treatment as Allica's FY2021.
+#
+# FY2025 is blank: no FY2025 Pillar 3 exists yet (checked against the Bank's
+# own WordPress media index 16 September 2026 - see KM1_SOURCES). The FY2025
+# figures on the metric sheets are Annual Report-sourced and are deliberately
+# NOT reassembled into a KM1 shape here.
+#
+# ROWS GHIB DOES NOT PRINT. UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a and the
+# 14a-14e leverage block appear in no GHIB edition and are not shown: this is
+# the bank's own row set, not a gap in transcription.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — £'000", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
+      "FY2019": 137827.8}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
+      "FY2019": 137827.8}),
+    ("DATA", "3    Total capital",
+     {"FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
+      "FY2019": 137827.8}),
+    ("SECTION", "Risk-weighted exposure amounts — £'000", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2024": 700374, "FY2023": 493080, "FY2022": 537708, "FY2021": 450231, "FY2020": 372287,
+      "FY2019": 329256}),
+    ("SECTION", "Capital ratios  (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
+      "FY2019": "41.86%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
+      "FY2019": "41.86%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
+      "FY2019": "41.86%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted "
+                "exposure amount) pillar 2A", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2024": "5.85%", "FY2023": "5.85%", "FY2022": "7.37%", "FY2021": "7.37%", "FY2020": "7.37%",
+      "FY2019": "5.80%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2024": "13.85%", "FY2023": "13.85%", "FY2022": "15.37%", "FY2021": "15.37%", "FY2020": "15.37%",
+      "FY2019": "13.80%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%", "FY2020": "2.50%",
+      "FY2019": "2.50%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2024": "0.32%", "FY2023": "0.17%", "FY2022": "0.05%", "FY2021": "0.00%", "FY2020": "0.00%",
+      "FY2019": "0.01%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2024": "2.82%", "FY2023": "2.67%", "FY2022": "2.55%", "FY2021": "2.50%", "FY2020": "2.50%",
+      "FY2019": "2.51%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2024": "16.67%", "FY2023": "16.52%", "FY2022": "17.92%", "FY2021": "17.87%", "FY2020": "17.87%",
+      "FY2019": "16.31%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2024": "8.52%", "FY2023": "17.19%", "FY2022": "12.90%", "FY2021": "11.35%", "FY2020": "19.96%",
+      "FY2019": "28.06%"}),
+    ("SECTION", "Leverage ratio — £'000 / %", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2024": 1071784, "FY2023": 591309, "FY2022": 637251, "FY2021": 791289, "FY2020": 767198,
+      "FY2019": 686553}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2024": "14.66%", "FY2023": "25.88%", "FY2022": "23.86%", "FY2021": "15.18%", "FY2020": "17.10%",
+      "FY2019": "19.99%"}),
+    ("SECTION", "Liquidity Coverage Ratio — £'000 / %", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2024": 428070, "FY2023": 263896, "FY2022": 306067, "FY2021": 236427, "FY2020": 199128,
+      "FY2019": 206996}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2024": 466537, "FY2023": 285221, "FY2022": 298700, "FY2021": 249962, "FY2020": 256894,
+      "FY2019": 221049}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2024": 299522, "FY2023": 275604, "FY2022": 345041, "FY2021": 249320, "FY2020": 248271,
+      "FY2019": 146701}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2024": 167015, "FY2023": 71305, "FY2022": 74675, "FY2021": 62491, "FY2020": 64224,
+      "FY2019": 74348}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2024": "256.31%", "FY2023": "370.09%", "FY2022": "409.87%", "FY2021": "378.34%",
+      "FY2020": "310.06%", "FY2019": "278.41%"}),
+    ("SECTION", "Net Stable Funding Ratio* — £'000 / %", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2024": 391313, "FY2023": 317974, "FY2022": 370817}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2024": 152868, "FY2023": 116361, "FY2022": 126647}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2024": "255.98%", "FY2023": "273.27%", "FY2022": "292.79%"}),
+    ("DATA", "* Comparable figures for other periods are not available because the new NSFR rules from "
+             "CRR2 only commenced in 2022 (GHIB's own footnote to the table)", {}),
+]
+
+KM1_SOURCES = (
+    "Sources - Ghana International Bank Plc's own key-metrics (UK KM1) template, £'000 and percentages as "
+    "printed, entity basis (GHIB plc is a single entity with no consolidated group):\n"
+    f"FY2024: Pillar 3 Disclosures 31 December 2024, p.5, \"Table1: Key Metrics ratios as at 31 December "
+    f"2024\" - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 31 December 2023, p.5, \"Table1: Key Metrics ratios as at 31 December "
+    f"2023\" - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 31 December 2022, p.4, \"Table1: Key Metrics ratios as at 31 December "
+    f"2022\" - {P3_2022_URL}\n"
+    f"FY2021, FY2020 and FY2019: the comparative columns of that same FY2022 edition (see the note on "
+    f"edition choice below) - {P3_2022_URL}\n"
+    "\n"
+    "THE TABLE IS AN IMAGE IN EVERY EDITION - A SOURCE DEFECT, RECORDED NOT HIDDEN. In all six GHIB Pillar 3 "
+    "PDFs the key-metrics table is a pasted picture, not live text, even though the surrounding document "
+    "extracts perfectly (pdfimages confirms one embedded bitmap on each of those pages: 940x665 px in the "
+    "FY2024 edition, 915x668 in FY2023, 597x630 in FY2022). A text search of these PDFs returns the caption "
+    "and then nothing, so any automated KM1 detector reports that GHIB publishes no KM1 - which is false.\n"
+    "HOW IT WAS READ, AND HOW THAT READING WAS CHECKED. Every figure above was read VISUALLY, never OCR'd, "
+    "and read TWICE from two INDEPENDENT renderings: (a) the whole page rasterised from the PDF at 200 dpi, "
+    "and (b) the embedded bitmap extracted at its own native resolution with pdfimages. The two reads were "
+    "compared cell by cell and agree digit for digit across every column of all three editions, including "
+    "the two figures most likely to be misread - the FY2022 edition's \"137827.8\" for 2019 and its 0.05%/"
+    "2.55% for 2022. A single read of a bitmap would not be good enough to stand behind.\n"
+    "\n"
+    "EDITION CHOICE. GHIB adopted the KM1 template in its FY2022 edition. The FY2022, FY2023 and FY2024 "
+    "editions each print the full five-column template (T to T-4), so FY2024, FY2023 and FY2022 are each "
+    "taken from the edition in which that year is the reporting year. FY2021, FY2020 and FY2019 have no "
+    "own-edition KM1: the FY2021, FY2020 and FY2019 Pillar 3 reports print instead a bespoke single-column "
+    "list headed \"Key Metrics\" (Available capital / Risk-Weighted Assets / Risk-based capital ratios / "
+    "leverage / LCR / NSFR) with no template row numbers, no SREP or buffer rows and no cash-inflow/outflow "
+    "split. That is not the KM1 template, so it is not reproduced here; those three columns come from the "
+    "FY2022 edition, the earliest edition that carries them inside the template.\n"
+    "\n"
+    "FY2025 IS BLANK, NOT MISSING. No FY2025 Pillar 3 has been published. Checked 16 September 2026 "
+    "against the Bank's OWN index rather than against this script's citation list: GHIB's WordPress media "
+    "endpoint (/wp-json/wp/v2/media?search=pillar) enumerates exactly six Pillar 3 PDFs ever uploaded, the "
+    "newest being GHIB-2024-Pillar-3-Disclosures.pdf uploaded 12 November 2025. GHIB publishes its Pillar 3 "
+    "roughly seven months after the Annual Report, so the FY2025 edition is expected around November 2026. "
+    "The FY2025 figures on the metric sheets come from the Annual Report and are deliberately NOT "
+    "reassembled into a KM1 shape: a table built from statutory accounts would look like the template "
+    "without being it.\n"
+    "\n"
+    "ROW SET. GHIB prints rows 1-9, 11, UK 7a, UK 7d, UK 11a, 12-17, UK 16a, UK 16b and 18-20 and no "
+    "others. UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a and the 14a-14e additional-leverage block appear in no "
+    "GHIB edition at all. Those rows are therefore absent from this sheet because the Bank does not print "
+    "them, not because they were not found. The row set is identical across the FY2022, FY2023 and FY2024 "
+    "editions.\n"
+    "\n"
+    "ZERO GLYPHS. GHIB uses no dashes in this table. Rows 18-20 for FY2021, FY2020 and FY2019 are printed "
+    "as EMPTY cells (with the asterisked footnote reproduced above), and are left blank here. Every \"0.00%\" "
+    "in row 9 is a printed measured zero and is kept as such.\n"
+    "\n"
+    "RESTATEMENTS BETWEEN GHIB'S OWN EDITIONS, recorded and not reconciled. (a) Row 9 for 2022: the FY2022 "
+    "edition prints 0.05% and row 11 prints 2.55%, while the FY2023 and FY2024 editions restate the same "
+    "2022 column to 0.00% and 2.50%. The FY2022 edition's own figures are used, per the standing rule. "
+    "(b) Rows 1-3 for 2019: the FY2022 edition prints \"137827.8\" - one decimal place, unique in the whole "
+    "table - where the FY2023 edition prints \"137,828\". Reproduced as the FY2022 edition printed it.\n"
+    "\n"
+    "DIFFERENCES AGAINST THE SINGLE-METRIC SHEETS IN THIS WORKBOOK, all of them real basis differences "
+    "rather than transcription slips:\n"
+    "• Leverage Ratio, FY2021, FY2020 and FY2019 - A CROSS-EDITION DIVERGENCE, NOT A BASIS DIFFERENCE. "
+    "Row 14 here shows 15.18% / 17.10% / 19.99%; the Leverage Ratio sheet shows 15.20% / 17.14% / 20.06%. "
+    "WHICH SOURCE EACH SIDE COMES FROM: this sheet's three figures are the COMPARATIVE columns of the "
+    f"FY2022 edition's KM1 (p.4, Table1, read from the embedded bitmap - {P3_2022_URL}); the Leverage Ratio "
+    f"sheet's three figures come from each year's OWN edition - the FY2021 Pillar 3 p.4 Table1 ({P3_2021_URL}), "
+    f"the FY2020 Pillar 3 p.8 Table1 ({P3_2020_URL}) and the FY2019 Pillar 3 p.9 Table1 ({P3_2019_URL}). "
+    "AN EARLIER VERSION OF THIS NOTE ATTRIBUTED THE GAP TO THE UK-vs-Basel III BASIS. That explanation was "
+    "tested against the documents on 16 September 2026 and does NOT hold, so it has been withdrawn. Two "
+    "findings rule it out. (a) The FY2021 edition's own table is headed \"UK leverage ratio\" and its line is "
+    "\"Total UK leverage ratio exposure measure (%)\" - already the UK basis - yet it still prints 15.20% "
+    "against the KM1's 15.18%. (b) Excluding GHIB's Bank of England reserves (£161m of a £791m FY2021 "
+    "exposure) would move the ratio by whole percentage points, not by four hundredths of one. THE ACTUAL "
+    "PATTERN, which is arithmetic and checkable in the FY2022 table itself: row 14 ties exactly to that "
+    "table's own rows 1 and 13 in the REPORTING year (152,019/637,251 = 23.855% -> the 23.86% printed) but "
+    "falls slightly BELOW its own rows 1/13 in EVERY comparative column - 120,301/791,289 = 15.203% against "
+    "15.18% printed, 131,539/767,198 = 17.145% against 17.10%, 137,827.8/686,553 = 20.075% against 19.99%, "
+    "and 137,348/716,336 = 19.174% against the 19.07% printed for 2018. In each case the quotient of the "
+    "FY2022 table's own rows reproduces that year's OWN edition figure (15.20% / 17.14% / 20.06%), which is "
+    "what the Leverage Ratio sheet carries. So the FY2022 edition restated row 14 alone in its comparative "
+    "columns, leaving it inconsistent with rows 1 and 13 printed beside it. Every other comparative in that "
+    "table agrees with the earlier editions exactly - the FY2020 edition's own Table1 prints the same "
+    "131,539 CET1, 372,287 RWAs, 199,128 HQLA, 64,224 net outflow and 310.06% LCR that the FY2022 KM1's 2020 "
+    "column prints - so row 14 is the single divergent line. BOTH SETS ARE GHIB'S OWN PUBLISHED FIGURES AND "
+    "NEITHER HAS BEEN ADJUSTED: each sheet carries the figure from the source appropriate to it (KM1 from "
+    "the template, the metric sheet from each year's own edition), the divergence is recorded here rather "
+    "than reconciled, and no value was changed to make the two sides agree. A further wrinkle on FY2021 "
+    "only: that edition contradicts ITSELF, its Table1 printing 15.20% while its own narrative two "
+    "paragraphs below says \"The leverage ratio as at 31 December 2021 was 15.18%\" - so the FY2022 "
+    "comparative reproduces the FY2021 narrative while the Leverage Ratio sheet reproduces the FY2021 "
+    "table.\n"
+    "WHAT MOST LIKELY DRIVES THE GAP - a footnote found on 2026-09-16 that reclassifies the metric-sheet "
+    "side, recorded as the well-evidenced reading it is and NOT as a figure change. Section 5.14 'Risk of "
+    "Excessive Leverage' of EVERY GHIB edition captions its leverage ratio as computed 'using a "
+    "TRANSITIONAL definition of Tier 1 capital' - FY2021 15.2%, FY2020 17.14%, FY2019 20.06%, the very "
+    "figures the Leverage Ratio sheet carries. The FY2022 KM1's row 14 carries no such caption. Back out "
+    "the numerator implied by each printed row 14 against that table's own row 13 exposure and the "
+    "shortfall against its own row 1 capital is 743 (2018), 586 (2019), 348 (2020), 183 (2021) and "
+    "effectively nil (2022, the reporting year) - a monotonic decay to zero, which is the characteristic "
+    "shape of an IFRS 9 transitional relief add-back amortising away. So the most likely reading is that "
+    "row 14 is struck on FULLY LOADED Tier 1 while row 1 and the earlier editions are on the TRANSITIONAL "
+    "definition. THIS IS AN INFERENCE FROM THE ARITHMETIC PLUS THAT CAPTION, NOT SOMETHING GHIB STATES: "
+    "the Bank prints no fully-loaded/transitional split (it prints none of the 14a-14e rows where that "
+    "split normally lives), so it is offered as the best available explanation and not as a sourced fact. "
+    "Nothing above was recomputed or adjusted on the strength of it - both sides keep the figures their "
+    "own sources print.\n"
+    "• NSFR, FY2021 and FY2020: rows 18-20 are blank here because GHIB's KM1 leaves them blank, while the "
+    "NSFR sheet carries 195% (FY2021) and 198% (FY2020) from those years' own bespoke tables, with "
+    "available/required stable funding of 318,949/163,592 and 293,588/148,293 respectively. The KM1 "
+    "footnote explains the blanks: the CRR2 NSFR rules only commenced in 2022.\n"
+    "• Total RWAs, FY2019: row 4 here is 329,256, transcribed directly from the FY2022 edition's KM1. The "
+    "Total RWAs sheet previously carried 329,260, rounded off the FY2020 edition's narrative \"£329.26m\"; "
+    "it has now been corrected to the KM1's directly-disclosed 329,256. The FY2019 edition's own Table 1 "
+    "figure of 281,553 is the credit-risk subtotal and is preserved on its own labelled row of that sheet - "
+    "see its note.\n"
+    "\n"
+    + P3_DISCOVERY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Ghana International Bank Plc — KM1 Key Metrics",
+    subtitle="The Bank's own published UK key-metrics (KM1) template, reproduced in GHIB's row order with "
+             "its own template row numbers, labels and printed precision. Amounts in £'000, ratios as "
+             "printed. Entity basis. The table is an IMAGE in every GHIB Pillar 3 PDF and was read visually "
+             "from the rendered page. FY2025 is blank because no FY2025 Pillar 3 exists yet; FY2021-FY2019 "
+             "come from the FY2022 edition because GHIB published no KM1 template before it.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=460,
+)
 
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)], note=CET1_CAP_NOTE)
 metric("CET1 Ratio", "%", [("Common Equity Tier 1 ratio", CET1_RATIO)], note=FY2025_AR_BASIS_NOTE)
@@ -740,16 +996,30 @@ metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central bank
             "from the newly-located editions of those years. BASIS CAVEAT for those two years only: the "
             "FY2019/FY2020 Table 1 labels this line 'Total Basel III leverage ratio exposure measure (%)' "
             "- which is itself a mislabel by the Bank, since the value is plainly the ratio and not an "
-            "exposure amount - and does NOT state whether central bank claims are excluded. The FY2021 "
-            "edition, by contrast, heads the same line 'UK leverage ratio', and it is the UK measure that "
-            "excludes central bank claims; that is where this row's title comes from. So FY2019/FY2020 sit "
-            "on a Basel III label and FY2021-FY2024 on a UK label, and the earlier two may well be on the "
-            "wider, central-bank-inclusive denominator. They are reported as the Bank labels them, with the "
-            "basis flagged as unstated rather than assumed to match the later years, and are NOT "
-            "force-fitted onto the later basis. Treat FY2019/FY2020 as indicative when comparing across "
-            "the run. Separately, the FY2021 edition contradicts itself by a rounding step: Table 1 prints "
+            "exposure amount - while the FY2021 edition heads the same line 'UK leverage ratio' / 'Total UK "
+            "leverage ratio exposure measure (%)', which is where this row's title comes from. The labels "
+            "differ across the run and are reported as the Bank writes them. THE LABEL CHANGE DOES NOT "
+            "APPEAR TO BE A BASIS CHANGE, though: all three figures reconcile to the central-bank-EXCLUDING "
+            "exposure measure that the FY2022 edition's KM1 prints on its row 13 (131,539/767,198 = 17.145% "
+            "for FY2020 and 137,827.8/686,553 = 20.075% for FY2019, against the 17.14% and 20.06% carried "
+            "here). An earlier version of this note suggested FY2019/FY2020 might sit on the wider, "
+            "central-bank-inclusive denominator; that was checked against the documents on 16 September 2026 "
+            "and withdrawn, since excluding GHIB's Bank of England reserves would move these ratios by whole "
+            "percentage points rather than by hundredths. DIVERGENCE AGAINST THE KM1 SHEET, recorded not "
+            "reconciled: the FY2022 edition's KM1 comparative columns print 15.18% / 17.10% / 19.99% for "
+            "FY2021 / FY2020 / FY2019 where this sheet carries each year's own edition figure of 15.20% / "
+            "17.14% / 20.06%. That KM1 row 14 ties to its own rows 1 and 13 in its reporting year but falls "
+            "below them in every comparative column, so the two sides are both GHIB's own and neither has "
+            "been adjusted to agree - the full arithmetic is set out in the KM1 Key Metrics sheet's note. "
+            "Separately, the FY2021 edition contradicts itself by a rounding step: Table 1 prints "
             "15.20% (the value carried here) while that document's own narrative says 15.18% - reproduced "
-            "as printed, not reconciled.")
+            "as printed, not reconciled. BASIS CAPTION FOUND 2026-09-16 (applies to every year on this "
+            "sheet, not just FY2019/FY2020): section 5.14 'Risk of Excessive Leverage' of every GHIB "
+            "edition states these ratios are computed 'using a transitional definition of Tier 1 "
+            "capital'. The row title is therefore a TRANSITIONAL-basis leverage ratio, which is most "
+            "likely why it sits slightly above the FY2022 KM1's comparative row 14 in each of FY2021, "
+            "FY2020 and FY2019 - see the KM1 Key Metrics sheet's note for the arithmetic behind that "
+            "reading, and note that it is an inference rather than something the Bank states.")
 metric("LCR", "%", [("Liquidity coverage ratio", LCR)],
        note=FY2025_AR_BASIS_NOTE + " The AR and Pillar 3 LCR bases agree for this bank: the FY2024 "
             "Annual Report's year-end LCR of 256% matches the FY2024 Pillar 3 LCR of 256.31%. FY2019 "

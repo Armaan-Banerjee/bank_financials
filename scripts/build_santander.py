@@ -473,6 +473,246 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics (KM1-026, 2026-09-16)
+#
+# THE ENTITY CALL COMES FIRST. Every ACRMD prints the key-metrics table TWICE,
+# in two separate Parts of the same document: Part 1 is Santander UK Group
+# Holdings plc group (p.5 in the FY2025 edition) and Part 2 is Santander UK plc
+# Group / "RFB Group" (p.48). This workbook is on the RFB Group basis
+# throughout, so EVERY figure below is read from Part 2. The two differ
+# materially - FY2025 CET1 capital is 10,711 in Part 1 against 10,601 in Part 2,
+# and the O-SII buffer row is blank in Part 1 but 1.00% in Part 2 - so taking
+# the first table an anchor finds would be wrong by a plausible-looking margin.
+#
+# THREE TEMPLATE REGIMES ACROSS SIX YEARS, SHOWN AS THREE BLOCKS, NEVER MERGED:
+#
+#   (C) FY2025-FY2022 - the UK KM1 template: numbered 1-20 with the UK-prefixed
+#       rows (UK 7a-7d, UK 8a, UK 9a, UK 10a, UK 11a, UK 16a/16b), headed
+#       "Key metrics (KM1)".
+#   (B) FY2021 - the earlier EU/EBA KM1 template: numbered 1-17 with fully
+#       loaded ECL twins of every capital row, unnumbered buffer and LCR rows,
+#       NO SREP block and NO NSFR block, headed "Key metrics (KM1)".
+#   (A) FY2020 - the same row set as (B) but printed entirely UNNUMBERED and
+#       headed just "Key metrics", with "Basel III leverage ratio" captions
+#       where FY2021 says "UK CRR leverage ratio".
+#
+# The row NUMBERS mean different things between (B) and (C): (B)'s row 3 is
+# Tier 1 capital where (C)'s row 3 is Total capital; (B)'s row 7 is Total RWA
+# where (C)'s row 7 is the Total capital ratio. Mapping one onto the other
+# would be exactly the invented correspondence the map's row-set rule forbids,
+# so the two blocks stay separate and each keeps its own edition's numbering.
+# (A) and (B) are shown as one block because their row LABELS are identical
+# word for word - the only differences are that (A) prints no numbers and uses
+# the "Basel III" leverage caption, and both of those are recorded: the numbers
+# shown are FY2021's, and the two leverage captions get their own rows.
+#
+# UNIT DRIFT WITHIN ONE ROW (map rule 17). Row 13, the leverage exposure
+# measure, is printed in £m by the FY2024 and FY2025 editions (238,445 /
+# 247,722) but in £bn by the FY2022 and FY2023 editions (244.0 / 242.9) - under
+# a column header that says £m in both cases. It therefore gets two caption
+# blocks, one per unit. Neither is restated into the other.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "UK KM1 template (FY2025-FY2022 editions) - Available own funds (amounts) (£m)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 10601, "FY2024": 9791, "FY2023": 10443, "FY2022": 10799}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 12461, "FY2024": 11651, "FY2023": 12399, "FY2022": 12755}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 14315, "FY2024": 13744, "FY2023": 14571, "FY2022": 14303}),
+    ("SECTION", "Risk-weighted exposure amounts (£m)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 67231, "FY2024": 65528, "FY2023": 67839, "FY2022": 70089}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "15.8%", "FY2024": "14.9%", "FY2023": "15.39%", "FY2022": "15.41%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "18.5%", "FY2024": "17.8%", "FY2023": "18.28%", "FY2022": "18.20%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "21.3%", "FY2024": "21.0%", "FY2023": "21.48%", "FY2022": "20.41%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.44%", "FY2024": "2.28%", "FY2023": "2.31%", "FY2022": "3.19%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.81%", "FY2024": "0.76%", "FY2023": "0.77%", "FY2022": "1.06%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "1.09%", "FY2024": "1.01%", "FY2023": "1.03%", "FY2022": "1.42%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "4.34%", "FY2024": "4.05%", "FY2023": "4.11%", "FY2022": "5.68%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.98%", "FY2024": "1.97%", "FY2023": "1.97%", "FY2022": "1.00%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer",
+     {"FY2025": "1.00%", "FY2024": "1.00%", "FY2023": "1.00%", "FY2022": "1.00%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "5.48%", "FY2024": "5.47%", "FY2023": "5.47%", "FY2022": "4.50%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "17.82%", "FY2024": "17.52%", "FY2023": "17.85%", "FY2022": "18.17%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "3.47%", "FY2024": "3.45%", "FY2023": "3.90%", "FY2022": "2.24%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£m, as printed by the FY2025 and FY2024 editions)",
+     {"FY2025": 247722, "FY2024": 238445}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£bn, as printed by the FY2023 and FY2022 editions)",
+     {"FY2023": 242.9, "FY2022": 244.0}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.0%", "FY2024": "4.9%", "FY2023": "5.1%", "FY2022": "5.2%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.0%", "FY2024": "4.9%", "FY2023": "5.1%", "FY2022": "5.2%"}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.5%", "FY2024": "4.3%", "FY2023": "4.4%", "FY2022": "4.4%"}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "4.6%", "FY2024": "5.0%", "FY2023": "5.4%", "FY2022": "5.3%"}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.1%", "FY2024": "4.5%", "FY2023": "4.6%", "FY2022": "4.4%"}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)",
+     {"FY2025": "0.7%", "FY2024": "0.7%", "FY2023": "0.7%", "FY2022": "0.3%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£m / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value - average)",
+     {"FY2025": 46888, "FY2024": 43681, "FY2023": 47824, "FY2022": 46160}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 30740, "FY2024": 30324, "FY2023": 31831, "FY2022": 31345}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 1789, "FY2024": 2001, "FY2023": 1846, "FY2022": 1897}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 28951, "FY2024": 28323, "FY2023": 29985, "FY2022": 29448}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "162%", "FY2024": "154%", "FY2023": "159.49%", "FY2022": "156.75%"}),
+    ("SECTION", "Net Stable Funding Ratio (£m / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 211913, "FY2024": 208000, "FY2023": 218975, "FY2022": 233408}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 156768, "FY2024": 151457, "FY2023": 158693, "FY2022": 170615}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "135%", "FY2024": "137%", "FY2023": "137.99%", "FY2022": "136.80%"}),
+
+    ("SECTION", "EARLIER EU/EBA KM1 TEMPLATE (FY2021 and FY2020 editions) - a different row set and a different "
+                "numbering; not continuous with the block above. Row numbers are the FY2021 edition's; the FY2020 "
+                "edition prints the same rows unnumbered.", {}),
+    ("SECTION", "Available Capital (amounts) (£m)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital", {"FY2021": 10820, "FY2020": 11057}),
+    ("DATA", "2    Fully loaded Expected Credit Loss (ECL) accounting model CET1", {"FY2021": 10799, "FY2020": 10984}),
+    ("DATA", "3    Tier 1 capital", {"FY2021": 12939, "FY2020": 13338}),
+    ("DATA", "4    Fully loaded ECL accounting model Tier 1", {"FY2021": 12918, "FY2020": 13265}),
+    ("DATA", "5    Total capital", {"FY2021": 14755, "FY2020": 15247}),
+    ("DATA", "6    Fully loaded ECL accounting model total capital", {"FY2021": 14734, "FY2020": 15174}),
+    ("SECTION", "Risk-weighted assets (amounts) (£m)", {}),
+    ("DATA", "7    Total risk-weighted assets (RWA)", {"FY2021": 67148, "FY2020": 71860}),
+    ("DATA", "8    Fully loaded ECL accounting model total RWA", {"FY2021": 67146, "FY2020": 71732}),
+    ("SECTION", "Risk-based capital ratios as a percentage of RWA", {}),
+    ("DATA", "9    Common Equity Tier 1 ratio", {"FY2021": "16.1%", "FY2020": "15.4%"}),
+    ("DATA", "10    Fully loaded ECL accounting model Common Equity Tier 1 (%)", {"FY2021": "16.1%", "FY2020": "15.3%"}),
+    ("DATA", "11    Tier 1 ratio", {"FY2021": "19.2%", "FY2020": "18.6%"}),
+    ("DATA", "12    Fully loaded ECL accounting model Tier 1 ratio (%)", {"FY2021": "19.2%", "FY2020": "18.5%"}),
+    ("DATA", "13    Total capital ratio", {"FY2021": "21.9%", "FY2020": "21.2%"}),
+    ("DATA", "14    Fully loaded ECL accounting model total capital ratio (%)", {"FY2021": "21.9%", "FY2020": "21.2%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "Capital conservation buffer requirement (2.5% from 2019) (%)", {"FY2021": "2.5%", "FY2020": "2.5%"}),
+    ("DATA", "Countercyclical buffer requirement (%)", {}),
+    ("DATA", "Bank G-SIB and/or D-SIB additional requirements (%)", {}),
+    ("DATA", "Other Systemically Important Institution Buffer (%)", {"FY2021": "1.00%", "FY2020": "1.00%"}),
+    ("DATA", "Systemic Risk Buffer requirement (%)", {}),
+    ("DATA", "Total of bank CET1 specific buffer requirements (%)", {"FY2021": "3.50%", "FY2020": "3.50%"}),
+    ("DATA", "CET1 available after meeting the banks minimum capital requirements (%)", {"FY2021": "8.11%", "FY2020": "7.39%"}),
+    ("SECTION", "UK CRR leverage ratio (FY2021 edition's caption)", {}),
+    ("DATA", "15    Total UK CRR leverage ratio exposure measure (£bn)", {"FY2021": 293.8}),
+    ("DATA", "16    UK CRR leverage ratio", {"FY2021": "4.3%"}),
+    ("DATA", "17    Fully loaded ECL accounting model leverage Ratio", {"FY2021": "4.3%"}),
+    ("SECTION", "Basel III leverage ratio (FY2020 edition's caption for the same three rows)", {}),
+    ("DATA", "Total Basel III leverage ratio exposure measure (£bn)", {"FY2020": 299.9}),
+    ("DATA", "Basel III leverage ratio", {"FY2020": "4.3%"}),
+    ("DATA", "Fully loaded ECL accounting model leverage Ratio (Basel III basis)", {"FY2020": "4.3%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£m / %)", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA)", {"FY2021": 51266, "FY2020": 51232}),
+    ("DATA", "Total net cash outflow", {"FY2021": 30439, "FY2020": 33766}),
+    ("DATA", "Liquidity coverage ratio (LCR)", {"FY2021": "168.4%", "FY2020": "151.7%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Santander UK plc Group (\"RFB Group\") basis, from PART 2 of each year's Additional Capital and "
+    "Risk Management Disclosures (ACRMD), Santander UK's Pillar 3 document. Each year is read from the edition "
+    "in which it is the REPORTING year, never from a later edition's comparative column:\n"
+    f"FY2025: ACRMD 31 December 2025, p.48 (Key metrics (KM1), RFB Group) - {ACRMD2025_URL}\n"
+    f"FY2024: ACRMD 31 December 2024, Part 2 (Key metrics (KM1), RFB Group) - {ACRMD2024_URL}\n"
+    f"FY2023: ACRMD 31 December 2023, Part 2 (Key metrics (KM1), RFB Group) - {ACRMD2023_URL}\n"
+    f"FY2022: ACRMD 31 December 2022, Part 2 (Key metrics (KM1), RFB Group) - {ACRMD2022_URL}\n"
+    f"FY2021: ACRMD 31 December 2021, p.42 (Key metrics (KM1), RFB Group) - {ACRMD2021_URL}\n"
+    f"FY2020: ACRMD 31 December 2020, p.42 (Key metrics, Part 2: Santander UK plc Group) - {ACRMD2020_URL}\n\n"
+    "TRANSCRIPTION NOTES:\n"
+    "- ENTITY: every ACRMD prints the key-metrics table TWICE, once per Part. Part 1 covers the Santander UK "
+    "Group Holdings plc group (the resolution entity) and Part 2 covers Santander UK plc Group, the ring-fenced "
+    "bank, which is this workbook's basis. Only Part 2 is used. The two are close but not equal - in the FY2025 "
+    "edition Part 1 shows CET1 capital 10,711 / RWEA 68,335 / O-SII buffer blank against Part 2's 10,601 / "
+    "67,231 / 1.00% - so reading the first matching table in the file would give a wrong entity that looks "
+    "entirely plausible.\n"
+    "- FIVE COLUMNS PER EDITION. Each annual ACRMD's KM1 prints 31 December, 30 September, 30 June, 31 March and "
+    "the PRIOR 31 December. Only the edition's own year-end column is carried here; the three intra-year quarters "
+    "and the prior-year comparative are not.\n"
+    "- THREE TEMPLATE REGIMES, NOT MERGED. FY2025-FY2022 use the UK KM1 template (rows 1-20 plus the UK-prefixed "
+    "rows). FY2021 uses the earlier EU/EBA KM1 template: rows numbered 1-17, a fully loaded ECL twin of every "
+    "capital row, unnumbered buffer and LCR rows, no SREP block at all and no NSFR block at all. FY2020 prints "
+    "that same row set completely UNNUMBERED and titles it just \"Key metrics\" rather than \"Key metrics (KM1)\". "
+    "The numbers mean different things between the regimes - the earlier template's row 3 is Tier 1 capital where "
+    "the UK template's row 3 is Total capital, and its row 7 is Total RWA where the UK template's row 7 is the "
+    "Total capital ratio - so the two blocks are kept separate rather than folded onto one numbering. FY2020 and "
+    "FY2021 share a block because their row labels are word-for-word identical; the numbers shown there are the "
+    "FY2021 edition's, and the leverage rows, whose captions DO differ (\"UK CRR leverage ratio\" in FY2021, "
+    "\"Basel III leverage ratio\" in FY2020), are given separate rows rather than merged.\n"
+    "- UNIT CHANGE INSIDE ONE ROW. Row 13, the leverage exposure measure, is printed in £m by the FY2025 and "
+    "FY2024 editions (247,722 and 238,445) but in £bn by the FY2023 and FY2022 editions (242.9 and 244.0) - in "
+    "both cases under a column header that reads \"£m\". The £bn reading is confirmed by each edition's own Key "
+    "Movements paragraph (\"UK leverage exposure broadly stable at £242.9bn (Dec-22: £244.0bn)\"). The row is "
+    "therefore split into two caption blocks, one per unit, and neither is restated into the other. The header "
+    "mismatch is the source's, recorded not corrected.\n"
+    "- PRECISION DRIFT IS THE BANK'S. The FY2022 and FY2023 editions print capital ratios and LCR/NSFR to two "
+    "decimal places (15.41%, 156.75%, 136.80%); the FY2024 and FY2025 editions print them to one or none (14.9%, "
+    "154%, 137%). Each cell keeps its own edition's precision.\n"
+    "- DASHES LEFT BLANK. Rows UK 8a, UK 9a and 10 are printed \"-\" in every UK-template edition and are left "
+    "blank here, as are Countercyclical buffer requirement, Bank G-SIB and/or D-SIB additional requirements and "
+    "Systemic Risk Buffer requirement in the FY2021/FY2020 block. No zero is recorded where the bank printed a "
+    "dash.\n"
+    "- TWO CROSS-EDITION DISAGREEMENTS, RECORDED AND NOT RECONCILED. (1) Row UK 11a (Overall capital "
+    "requirements) for FY2023: the FY2023 edition's own column prints 17.85%, while the FY2024 edition's "
+    "31 December 2023 comparative prints 17.58%. 17.58% is what the same edition's own components add to "
+    "(4.11% total SREP + 8% Pillar 1 + 5.47% combined buffer), so the FY2023 edition's 17.85% looks like an "
+    "error the next edition corrected - but the figure shown here is the one from the edition in which FY2023 "
+    "is the reporting year, per the map's rule 1. (2) Row 12 (CET1 available after meeting the total SREP own "
+    "funds requirements) for FY2022: the FY2022 edition prints 2.24% and the FY2023 edition's comparative "
+    "prints 2.23%. 2.24% is shown. Every other row agrees digit for digit across adjacent editions, checked "
+    "row by row for all five boundaries.\n"
+    "- A SOURCE TYPO NOT CARRIED HERE because it is in a column this sheet does not use: the FY2022 edition "
+    "prints its 31 March 2022 LCR as \"176,12%\" (comma for decimal point).\n"
+    "- FY2021 AND FY2020 HAVE NO NSFR ROWS AT ALL, and that is a property of the template of the day rather "
+    "than an omission: the UK NSFR regime took effect on 1 January 2022. Likewise, the earlier template has no "
+    "SREP block, so rows UK 7a-7d simply do not exist for those two years.\n"
+    "- THE 1 JANUARY 2022 LEVERAGE BASIS BREAK is visible here as the change of caption between the two blocks. "
+    "The FY2021 and FY2020 rows are the total exposure measure INCLUDING claims on central banks (293.8bn and "
+    "299.9bn); the FY2022-FY2025 rows EXCLUDE them. The Leverage Ratio sheet carries both bases for FY2021 and "
+    "FY2020 - its excluding-central-banks figures for those two years come from a differently-labelled table, "
+    "not from this KM1 - and the two are never blended into one series.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Santander UK Plc - KM1 Key Metrics",
+    subtitle="Santander UK plc Group (\"RFB Group\") consolidated basis - Part 2 of each year's ACRMD, not the "
+             "Santander UK Group Holdings plc table in Part 1. Reproduced in the bank's own row order, row "
+             "numbers and printed precision. Amounts in £m unless a row says otherwise; ratios as printed. "
+             "Three template regimes are shown as separate blocks and are deliberately not merged - see the "
+             "source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=86,
+    source_height=460,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):

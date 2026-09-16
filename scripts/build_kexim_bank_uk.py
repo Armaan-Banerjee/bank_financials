@@ -633,6 +633,197 @@ P3_CAPITAL_AMOUNT_NOTE = (
     + P3_VS_NOTE28_BASIS_NOTE
 )
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-018)
+#
+# KEXIM UK prints the UK KM1 template in ONE edition only - the FY2025
+# "Pillar 3 and Remuneration Code Disclosures at 31 December 2025", where it is
+# headed "UK KM1 - Key metrics" and sits in Appendix I, printed page 38 of 42.
+# All five editions FY2021-FY2025 were retrieved from the Bank's own board and
+# read; FY2021-FY2024 do NOT use the template, and that is a row-set finding
+# from the entity's own documents, not an access failure:
+#
+#   * Each of those four editions has an "Key metrics" block on p.3, but it is a
+#     three-tile dashboard (Total Assets / Profit after taxation / Shareholders'
+#     funds) plus a short ratio strip - not the template, and not even a table.
+#   * Their capital, RWA, leverage and liquidity figures are spread across
+#     section 4 "Own Funds", section 5.2 "Pillar 1 capital requirements" and
+#     section 7 "Leverage Ratio" instead, with no SREP row set, no UK-numbered
+#     buffer rows and no LCR build-up rows.
+#   * Their contents pages list Appendix I as "Reconciliation from regulatory
+#     capital to balance sheet items"; the FY2025 edition is the first to extend
+#     that to "...and key metrics", which is where the template appears.
+#   * Rule 15 check: text extraction on all four is RICH, not silent - each
+#     yields ~145 hits for "capital", ~135 for "ratio" and 21 for "CET1" against
+#     ZERO for "KM1" and ZERO for "OV1", so the zero is a fact about the
+#     documents. Rule 13 check: `pdfimages -list` finds a handful of bitmaps in
+#     each; the only one near the capital section (FY2024 p.28) was rendered at
+#     110dpi and LOOKED AT - it is the PRA's capital-stack diagram, not a table.
+#
+# FY2024 IS BLANK ON THIS SHEET EVEN THOUGH A FIGURE EXISTS FOR IT. The FY2025
+# edition's KM1 carries a full comparative column, but map rule 1 takes each
+# year from its own edition and the FY2024 edition has no template at all. Those
+# comparative figures are not lost - they are on the single-metric sheets, which
+# is the right home for them.
+#
+# TWO SOURCE DEFECTS, both reproduced and flagged rather than corrected (rule 7):
+#   1. THE COMPARATIVE COLUMN IS MIS-LABELLED. The template's comparative
+#      figures are printed in column "e", which the Bank's own header row labels
+#      T-4 (i.e. FY2021), leaving columns b/c/d (T-1/T-2/T-3) empty. They are in
+#      fact T-1 = FY2024 - already established four independent ways in
+#      P3_SOURCES. Since rule 1 blanks FY2024 here anyway, the defect changes no
+#      figure on this sheet, but it is recorded so a reader does not read column
+#      "e" as 2021.
+#   2. ROW UK 8a REPEATS ROW 8. Both print 2.50% in both columns, yet row 11
+#      "Combined buffer requirement" is 2.80% = 2.50% + 0.30% (row 8 + row 9)
+#      only - i.e. the Bank's own combined buffer does NOT include the UK 8a
+#      amount it prints. Confirmed by rendering p.38 at 130dpi and reading it,
+#      not inferred from the text layer.
+#
+# CORROBORATION (rule 23): the same edition's UK CC2 table on the facing page
+# (p.37) foots "Total shareholders' equity 108,444,112" - identical to KM1 rows
+# 1/2/3 - and its section 4 "Own Funds" table on p.22 gives the same amount
+# under an explicit "31-12-2025" heading. Three independent tables agree.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — £, whole pounds", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital", {"FY2025": 108444112}),
+    ("DATA", "2    Tier 1 capital", {"FY2025": 108444112}),
+    ("DATA", "3    Total capital", {"FY2025": 108444112}),
+    ("SECTION", "Risk-weighted exposure amounts — £, whole pounds", {}),
+    ("DATA", "4    Total risk-weighted exposure amount", {"FY2025": 502801056}),
+    ("SECTION", "Capital ratios  (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)", {"FY2025": "21.6%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2025": "21.6%"}),
+    ("DATA", "7    Total capital ratio (%)", {"FY2025": "21.6%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)", {"FY2025": "4.41%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)", {}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)", {}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)", {"FY2025": "12.41%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)", {"FY2025": "2.50%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2025": "2.50%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)", {"FY2025": "0.30%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    ("DATA", "11    Combined buffer requirement (%)", {"FY2025": "2.80%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)", {"FY2025": "15.21%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)", {"FY2025": "6.36%"}),
+    ("SECTION", "Leverage ratio — amounts £, whole pounds; ratio %", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks", {"FY2025": 627033389}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)", {"FY2025": "17.29%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)", {"FY2025": "17.29%"}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity Coverage Ratio — amounts £, whole pounds; ratio %", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)", {"FY2025": 13356306}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value", {"FY2025": 3884937}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value", {"FY2025": 10253421}),
+    ("DATA", "16    Total net cash outflows (adjusted value)", {"FY2025": 971234}),
+    ("DATA", "17    Liquidity coverage ratio (%)", {"FY2025": "1,375%"}),
+    ("SECTION", "Net Stable Funding Ratio — amounts £, whole pounds; ratio %", {}),
+    ("DATA", "18    Total available stable funding", {"FY2025": 492037595}),
+    ("DATA", "19    Total required stable funding", {"FY2025": 442729289}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2025": "111.1%"}),
+]
+
+KM1_SOURCES = (
+    "Source - KEXIM Bank (UK) Limited, \"Pillar 3 and Remuneration Code Disclosures at 31 December 2025\", "
+    "\"UK KM1 - Key metrics\", Appendix I, printed page 38 of 42. Column \"a\" (T) only. Amounts are in WHOLE "
+    "POUNDS, as the Bank prints them - not £'000 and not £m - and the ratios keep the Bank's own mixed "
+    "precision (21.6% beside 21.25%, 1,375% with its thousands separator, 111.1%). Every dash in the source is "
+    "left BLANK here and no blank is a zero (map rule 2).\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: checked the Bank's own site, not this project's cited URLs and not "
+    "Wayback. KEXIM UK's disclosures are published on Korea Eximbank's \"What's New\" board at "
+    "https://www.koreaexim.go.kr/uk/HPHYEU015M01 (HTTP 200 with a cookie jar - see the route note below). As at "
+    "2026-09-16 its newest entries are \"Pillar 3 Disclosure for 2025\", posted 2 July 2026, and \"Annual Report "
+    "for 2025\", posted 4 May 2026. Both are FY2025, which this workbook already holds; the Bank's year end is "
+    "31 December so FY2026 is not a complete year. CHECKED, NONE NEWER.\n\n"
+    "ENTITY: KEXIM Bank (UK) Limited (Companies House 02693038), a UK-incorporated bank authorised by the PRA "
+    "and a wholly-owned subsidiary of the Export-Import Bank of Korea (Korea Eximbank), itself 100% owned by "
+    "the Government of the Republic of Korea. THE PARENT'S DISCLOSURE IS NOT THE UK ENTITY'S and none of it is "
+    "used here. Verified from the document itself rather than assumed: every page is footed \"Kexim Bank (UK) "
+    "Limited\", section 1 identifies the subject as \"KEXIM Bank (UK) Limited ('KEXIM UK' or 'the Bank') ... a "
+    "UK-incorporated bank authorised by the Prudential Regulation Authority\", and section 1.2 states \"The Bank "
+    "is a single entity and no consolidation is performed\" - so this is a solo disclosure with no "
+    "consolidation and no group column to confuse it with.\n\n"
+    "WHY FY2024 AND EARLIER ARE BLANK - 'the template is not used', on positive evidence from the documents "
+    "themselves, not an access failure. All five editions FY2021-FY2025 were retrieved for this ticket from the "
+    "Bank's own board (ids: FY2025=114962, FY2024=111505, FY2023=108650, FY2022=104242, FY2021=101611) and each "
+    "verified by HTTP 200 and %PDF magic bytes, with the FY2021 file re-downloaded after a truncated first "
+    "attempt and confirmed complete to its %%EOF. The FY2021-FY2024 editions carry a p.3 block also headed "
+    "\"Key metrics\", but it is a three-tile dashboard (Total Assets / Profit after taxation / Shareholders' "
+    "funds) and not a table at all - it fails the row-set test outright, with no SREP rows, no UK-numbered "
+    "buffer rows, no LCR build-up and no NSFR rows. Their contents pages list Appendix I as \"Reconciliation "
+    "from regulatory capital to balance sheet items\"; only the FY2025 edition extends it to \"...and key "
+    "metrics\". Text extraction on all four is rich rather than silent (~145 hits for 'capital', ~135 for "
+    "'ratio', 21 for 'CET1', against ZERO for 'KM1' and ZERO for 'OV1'), so the zero is a fact about the "
+    "documents (rule 15); and the one embedded bitmap anywhere near the capital sections was rendered and "
+    "looked at rather than guessed at - it is the PRA capital-stack diagram (rule 13). Those years' capital, "
+    "RWA, leverage and liquidity figures ARE carried on this workbook's single-metric sheets, from the Bank's "
+    "own bespoke tables; they are deliberately NOT re-labelled onto KM1 row numbers here.\n"
+    "FY2024 is blank for a narrower reason: the FY2025 edition's KM1 does print a full FY2024 comparative "
+    "column (CET1/Tier 1/Total capital 104,741,303; RWA 492,924,960; ratios 21.25%; leverage 632,612,498 / "
+    "16.56%; LCR 1,164%; NSFR 124.5%), but rule 1 takes each year from its own edition and the FY2024 edition "
+    "has no template. Those figures are on the metric sheets instead.\n\n"
+    "TWO DEFECTS IN THE BANK'S OWN TABLE, reproduced and flagged, never corrected (rule 7):\n"
+    "  1. THE COMPARATIVE COLUMN IS MIS-LABELLED. The comparative figures sit in column \"e\", which the "
+    "Bank's own header labels T-4 (= FY2021), with columns b/c/d (T-1/T-2/T-3) left empty. They are in fact "
+    "T-1 = FY2024, established four independent ways: the UK OV1 table on p.26 carries the identical totals "
+    "(502,801,056 / 492,924,960) in columns properly labelled a=T and b=T-1; the section 4 Own Funds table on "
+    "p.22 gives the identical capital amounts under explicit \"31-12-2025\"/\"31-12-2024\" headings; the "
+    "document's own narrative describes the movements as year-on-year (\"capital adequacy ratio year-on-year "
+    "from 21.25% to 21.6%\", \"Leverage Ratio from 16.56% to 17.29%\"); and this workbook's FY2021 figures "
+    "(30.0% ratio, 23.0% leverage, RWA 316,997,557) bear no resemblance to them. Because rule 1 blanks FY2024 "
+    "here in any case, the defect changes no figure on this sheet.\n"
+    "  2. ROW UK 8a REPEATS ROW 8. Both print 2.50%, in both columns - yet row 11 \"Combined buffer "
+    "requirement\" is 2.80%, which is row 8 (2.50%) plus row 9 (0.30%) and nothing else. The Bank's own "
+    "combined buffer therefore does not include the UK 8a amount it prints beside it. Confirmed by rendering "
+    "page 38 at 130dpi and reading it, not inferred from a text layer (rule 22).\n\n"
+    "CORROBORATED BY THE SAME DOCUMENT'S OTHER TABLES (rule 23): the UK CC2 table on the facing page (p.37) "
+    "foots \"Total shareholders' equity 108,444,112\", identical to KM1 rows 1/2/3, and the section 4 Own Funds "
+    "table on p.22 gives the same amount again. CET1 = Tier 1 = Total capital exactly because that Own Funds "
+    "table shows Additional Tier 1 and Total Tier 2 as \"-\" - disclosed, not assumed.\n\n"
+    "THE RETRIEVAL ROUTE, re-walked and re-confirmed 2026-09-16, recorded so it can be re-walked again: "
+    "www.koreaexim.go.kr does not block scripted access and is not geo-restricted - it runs a COOKIE "
+    "CHALLENGE. A first request returns HTTP 302 redirecting to itself while issuing Set-Cookie, so curl "
+    "without a cookie jar follows the redirect forever and appears to hang. `curl -c/-b` with a cookie jar (and "
+    "`--http1.1`) returns HTTP 200 immediately. The documents are NOT under /site/uk, the address the Bank's "
+    "own Directors' Report signposts; they are attachments on the \"What's New\" board, of the form "
+    "/comm/getFile?srvcId=BBSTY1&upperNo=<id>&fileTy=ATTACH&fileNo=1. The board also lists the FY2018-FY2020 "
+    "editions if those years are ever wanted.\n\n"
+    "THIS SHEET IS ON THE PILLAR 3 BASIS AND WILL NOT TIE TO SEVERAL METRIC SHEETS. That is a documented basis "
+    "difference, not a transcription error, and the two must not be reconciled - see P3_VS_NOTE28_BASIS_NOTE, "
+    "reproduced below. Specifically, for FY2025: KM1 row 4 Total RWA 502,801,056 against the Total RWAs sheet's "
+    "517,644,568; KM1 rows 5/6/7 ratios 21.6% against the CET1/Tier 1/Total Capital Ratio sheets' 20.5%; and "
+    "KM1 row 14 leverage 17.29% against the Leverage Ratio sheet's 16.9%. The metric sheets in question are "
+    "built on the statutory accounts' Note 28 \"Capital risk management (unaudited)\" basis; this sheet "
+    "reproduces the Pillar 3 template. KM1 rows 1/2/3 (capital), 17 (LCR 1,375%) and 20 (NSFR 111.1%) DO tie "
+    "exactly, because those metric sheets are themselves Pillar 3-sourced.\n\n"
+    + P3_VS_NOTE28_BASIS_NOTE
+)
+
+bw.add_km1_sheet(
+    title="KEXIM Bank (UK) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published \"UK KM1 - Key metrics\" template, reproduced in its row order with its own "
+             "row references, labels and printed precision. Amounts in WHOLE POUNDS (£) as printed, ratios as "
+             "printed (%). Solo basis — the Bank is a single entity and performs no consolidation. FY2025 is the "
+             "ONLY year for which this template exists: the FY2021–FY2024 editions were all retrieved and read and "
+             "none of them uses it, and FY2024's figures, though printed as a comparative in the FY2025 edition, "
+             "are left blank here because each year is taken from its own edition. On the Pillar 3 basis, which "
+             "differs from the Note 28 basis used by several metric sheets — see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=520,
+)
+
 metric(
     "CET1 Capital", "GBP",
     [("Common Equity Tier 1 (CET1) capital", P3_CAPITAL_AMOUNT)],

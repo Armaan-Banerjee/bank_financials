@@ -346,6 +346,82 @@ CET1_CAPITAL_SOURCES = (
     + REGULATORY_NOTE
 )
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE. The Bank of London Group Limited publishes
+# no Pillar 3 disclosure document of any kind, so there is no KM1 template to
+# reproduce. The single "Not applicable" row below carries the positive
+# evidence for that, re-established first-hand on 2026-09-16.
+# ---------------------------------------------------------------------------
+KM1_SOURCES = (
+    "NOT APPLICABLE - NO PILLAR 3 DISCLOSURE DOCUMENT IS PUBLISHED BY THIS ENTITY, so the UK KM1 'Key metrics' "
+    "template does not exist for any year. This is the strongest of the three kinds of non-disclosure finding to "
+    "have to make and the weakest to assert, so the evidence is set out in full below. It is POSITIVE evidence "
+    "from live checks, not a failed fetch: nothing here rests on a timeout, a 403 or a block.\n\n"
+    "1. THE BANK'S OWN WEBSITE, CRAWLED 2026-09-16. thebankoflondon.com was fetched under a browser user agent "
+    "(HTTP 200, 119,332 bytes) and every link extracted: 30 site paths covering products, who-we-serve, "
+    "newsroom, our-people and /legals/*. There is NO investor-relations, regulatory-disclosures or Pillar 3 "
+    "page. Probed the same day and all returning a genuine HTTP 404 (3,909-byte error page, clearly distinct "
+    "from the 100kB+ real pages, so a soft-404 cannot be hiding here): /investors, /regulatory, /pillar-3, "
+    "/legals/pillar-3, /legals/regulatory-disclosures and /annual-report. The strings 'Pillar' and 'KM1' appear "
+    "ZERO times on the homepage, the newsroom page, the /legals index or /who-we-are.\n"
+    "      THE WHOLE DOMAIN CARRIES EXACTLY TWO PDFs, and neither is a regulatory-capital disclosure: a 'BOL "
+    "FSCS Fact Sheet' (depositor protection) and a 'Quarterly Performance Report Q2 2026'. THE QUARTERLY REPORT "
+    "IS NEW SINCE THIS WORKBOOK'S LAST AUDIT AND WAS DOWNLOADED AND READ RATHER THAN ASSUMED (2,677,457 bytes, "
+    "Content-Type application/pdf, %PDF magic bytes, text-native): it is the FCA-mandated ONLINE-CHANNEL "
+    "AVAILABILITY report - service uptime, API response times in milliseconds and error rates for April-June "
+    "2026 - and contains no capital, RWA, leverage or liquidity figure whatsoever. A future pass that sees a new "
+    "PDF appear on this domain should open it before drawing any conclusion from its existence.\n\n"
+    "2. THE FY2025 ANNUAL REPORT, OCR'D AND SEARCHED FIRST-HAND 2026-09-16. This is the newest filing (Companies "
+    "House 'Full accounts made up to 31 December 2025', filed 18 August 2026, 58 pages) and, like every filing "
+    "this entity has made, it is an IMAGE-ONLY SCAN - pdftotext returns 58 characters from 58 pages, so a plain "
+    "text search of it returns a false negative and any conclusion drawn from one is worthless. All 58 pages "
+    "were rendered at 200dpi and OCR'd (143,766 characters recovered). Whole-document, case-insensitive counts "
+    "on that OCR: 'pillar' 0, 'km1' 0, 'key metric' 0, 'risk-weighted' 0, 'leverage ratio' 0, 'liquidity "
+    "coverage' 0, 'lcr' 0, 'nsfr' 0, 'net stable' 0, 'own funds' 0, 'countercyclical' 0.\n"
+    "      THOSE ZEROES ARE FACTS ABOUT THE DOCUMENT, NOT A BROKEN INSTRUMENT, because the same extraction is "
+    "RICH on neighbouring terms: 'capital' 61, 'ratio' 80, 'cet1' 3. Simultaneous zeroes across many patterns "
+    "are an instrument failure until the extraction is shown rich, and here it is.\n"
+    "      BEWARE ONE NAIVE-SUBSTRING TRAP IN THIS DOCUMENT: a search for 'srep' returns exactly one hit, and it "
+    "is inside the word 'misrepresentations' in the auditors' report - not the regulatory term at all. A future "
+    "pass counting that as a disclosure hit will reach the wrong conclusion.\n"
+    "      WHAT THE REPORT DOES DISCLOSE is two narrative sentences and nothing else: 'CET1 stood at £23.2m "
+    "(2024: £22.1m)' and 'As at 31 December 2025, the CET1 Capital ratio was 82.94% (2024: 88.91%)' (repeated in "
+    "the Capital and Liquidity Oversight section as 'the unaudited CET1 Capital ratio was 82.94%'), together "
+    "with 'Our capital structure comprises Tier 1 instruments only.' Those two figures are on the CET1 Capital "
+    "and CET1 Ratio sheets. Two narrative sentences are NOT the KM1 template - they are not a table, they carry "
+    "no template row set, no SREP block, no buffer rows, no leverage rows and no liquidity rows - so nothing is "
+    "mapped onto template row numbers here. Mapping them would invent a correspondence the Bank never "
+    "published, and back-filling this sheet from the statutory accounts would be a different basis besides.\n\n"
+    "3. THE PARENT WAS CHECKED, BECAUSE A SUBSIDIARY'S FIGURES USUALLY LIVE IN THE PARENT'S PILLAR 3. It does "
+    "not help here, for two independent reasons. (a) The Bank of London Group Limited IS itself the entity on "
+    "the PRA register (company 12844788) - there is no holding-company substitution to make, unlike the "
+    "subsidiary cases elsewhere in this project where the authorised firm's numbers surface in a group "
+    "document's 'Individual' column. (b) The parent - company 10511092, now named TBOL HOLDINGS UK LIMITED, "
+    "previously OPLYSE HOLDINGS LIMITED and before that THE BANK OF LONDON GROUP HOLDINGS LIMITED (confirmed at "
+    "Companies House 2026-09-16; the PRA Final Notice names it under the Oplyse name) - has no separate public "
+    "disclosures site. Both entities are presented to the public through the single thebankoflondon.com domain "
+    "enumerated at point 1, which carries no Pillar 3 document and no Pillar 3 page for either of them.\n\n"
+    "4. THE DATES MAKE THE ABSENCE UNSURPRISING, but the finding above does not depend on that. The company was "
+    "incorporated 28 August 2020, authorised by the PRA only on 7 October 2021, and remained in 'mobilisation' - "
+    "the restricted post-authorisation set-up phase - until 3 February 2023. FY2022, the earliest year in this "
+    "workbook, is largely a mobilisation year.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: Companies House filing history for company 12844788 was read directly and "
+    "its newest accounts filing is 'Full accounts made up to 31 December 2025' (filed 18 August 2026), which is "
+    "the FY2025 column this workbook already holds - CHECKED, NONE NEWER. The bank's own website carries no "
+    "annual report at all. No year was added.\n\n"
+    + ENTITY_NOTE + "\n\n" + REGULATORY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="The Bank of London Group Limited — KM1 Key Metrics",
+    subtitle="Not applicable - this entity publishes no Pillar 3 disclosure document, so there is no UK KM1 "
+             "template to reproduce for any year. See the source note below for the positive evidence.",
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=340,
+)
+
 bw.add_metric_sheet(
     "CET1 Capital", "GBP millions (as narrated in the Strategic Report)",
     [("Common Equity Tier 1 (CET1) capital", {

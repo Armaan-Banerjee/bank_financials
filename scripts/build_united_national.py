@@ -19,7 +19,21 @@ AR2018_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2017_URL = "https://find-and-update.company-information.service.gov.uk/company/04146820/filing-history/MzIwMzc4OTY1M2FkaXF6a2N4/document?format=pdf"
 AR2016_URL = "https://find-and-update.company-information.service.gov.uk/company/04146820/filing-history/MzE4MjAzNTU0NWFkaXF6a2N4/document?format=pdf"
 P3_2023_URL = "https://www.ubluk.com/media/lupbssja/annual-report-unb-2023-pillar3-final-approved.pdf"
-P3_2022_URL = "https://web.archive.org/web/20230923163742id_/https://www.ubluk.com/media/1368/ubl-2022-pillar-3-final-published.pdf"
+P3_2022_URL = "https://www.ubluk.com/media/2unkh0m2/pillar-iii-disclosure-2022.pdf"
+P3_2022_WAYBACK_SUPERSEDED_URL = "https://web.archive.org/web/20230923163742id_/https://www.ubluk.com/media/1368/ubl-2022-pillar-3-final-published.pdf"
+# PROVENANCE UPGRADE (2026-09-16, KM1-030). Six of these nine Pillar 3 URLs used
+# to be Wayback captures (FY2016-FY2022), on the understanding - written into
+# ENTITY_NOTE at the time - that "the live site no longer links to most of
+# these". That is no longer true, and was re-tested rather than assumed: the
+# bank's own index at https://www.ubluk.com/footer-pages/annual-reports/ links
+# a Pillar III Disclosure for every year 2016-2024, and all nine were fetched
+# live on 16 September 2026 returning HTTP 200 / Content-Type application/pdf /
+# %PDF magic bytes (0.94-1.97 MB each). The live FY2022 file is the SAME
+# EDITION as the Wayback /media/1368/ copy it replaces - CET1 GBP 73,598,731,
+# Total regulatory capital GBP 73,967,261, Total RWAs 385,707 and Credit/CCR
+# RWA 363,317 all appear in it identically - so no figure in this workbook
+# moved; only the citations did. The superseded Wayback URLs are kept below for
+# traceability.
 # CORRECTION (2026-09-15). This used to point at
 # https://www.ubluk.com/media/vsvfbmui/pillar260825.pdf , found by Wayback CDX and
 # noted at the time as "not linked from the live site's own resources page". That
@@ -38,12 +52,12 @@ P3_2022_URL = "https://web.archive.org/web/20230923163742id_/https://www.ubluk.c
 # not a data restatement, and no FY2024 value moved.
 P3_2024_URL = "https://www.ubluk.com/media/sr5puvji/unb-2024-pillar3-approved-finalplusamended.pdf"
 P3_2024_SUPERSEDED_DRAFT_URL = "https://www.ubluk.com/media/vsvfbmui/pillar260825.pdf"
-P3_2021_URL = "https://web.archive.org/web/20250726151714id_/https://www.ubluk.com/media/pqqda2ng/pillar-iii-disclosure-2021.pdf"
-P3_2020_URL = "https://web.archive.org/web/20250803030355id_/https://www.ubluk.com/media/xq1lvuuj/pillar-iii-disclosure-2020.pdf"
-P3_2019_URL = "https://web.archive.org/web/20250804025501id_/https://www.ubluk.com/media/sqgdszjz/pillar-iii-disclosure-2019.pdf"
-P3_2018_URL = "https://web.archive.org/web/20250804031750id_/https://www.ubluk.com/media/5avboizc/pillar-iii-disclosure-2018.pdf"
-P3_2017_URL = "https://web.archive.org/web/20250802155220id_/https://www.ubluk.com/media/o0bp44wd/pillar-iii-disclosure-2017.pdf"
-P3_2016_URL = "https://web.archive.org/web/20250805064645id_/https://www.ubluk.com/media/sp5brt0v/pillar-iii-disclosure-2016.pdf"
+P3_2021_URL = "https://www.ubluk.com/media/pqqda2ng/pillar-iii-disclosure-2021.pdf"
+P3_2020_URL = "https://www.ubluk.com/media/xq1lvuuj/pillar-iii-disclosure-2020.pdf"
+P3_2019_URL = "https://www.ubluk.com/media/sqgdszjz/pillar-iii-disclosure-2019.pdf"
+P3_2018_URL = "https://www.ubluk.com/media/5avboizc/pillar-iii-disclosure-2018.pdf"
+P3_2017_URL = "https://www.ubluk.com/media/o0bp44wd/pillar-iii-disclosure-2017.pdf"
+P3_2016_URL = "https://www.ubluk.com/media/sp5brt0v/pillar-iii-disclosure-2016.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: United National Bank Limited (Companies House 04146820) was formed in 2001 from the merger of the "
@@ -59,15 +73,23 @@ ENTITY_NOTE = (
     "year's own filing rather than a later filing's restated comparative - all fully scanned/image-only PDFs, "
     "transcribed directly from the source page images; pdftotext extracts 0 real characters from every one of "
     "them, confirmed before transcription). Pillar 3: the pre-Bestway entity ('UBL UK') published 'Pillar 3 and "
-    "Remuneration Code Disclosures' on its own site (ubluk.com) for every year FY2016-FY2024; the live site no "
-    "longer links to most of these (only the current year's edition is navigable from ubluk.com/resources), but "
-    "every year's PDF is still reachable at its original URL or via the Wayback Machine once located via a CDX "
-    "search - FY2016 through FY2024 were all recovered this way (FY2016-FY2021 recovered/re-verified in the "
-    "2026-09-06 extension: the first Wayback snapshot found for each of these 6 years' original media/NNNN URL "
-    "was truncated at exactly 1,048,576 bytes (1 MiB), a known crawl-truncation artefact also seen on other banks' "
-    "Wayback-recovered PDFs on this project - a second, later (2024-2025) snapshot of each document's newer "
-    "media/<slug> URL was untruncated and used instead, confirmed via `file`/`pdftotext` page-count and "
-    "character-count checks before transcribing any figure).\n\n"
+    "Remuneration Code Disclosures' on its own site (ubluk.com) for every year FY2016-FY2024, and ALL NINE of "
+    "those editions are live on the bank's own site today. CITATION CORRECTION 2026-09-16: an earlier build of "
+    "this workbook said 'the live site no longer links to most of these (only the current year's edition is "
+    "navigable from ubluk.com/resources)' and cited Wayback captures for FY2016-FY2022 accordingly. That "
+    "statement is withdrawn - it was true of the /resources page but not of the bank's own document index at "
+    "https://www.ubluk.com/footer-pages/annual-reports/, which links a 'Pillar III Disclosure' for every year "
+    "2016 to 2024. All nine were re-fetched from those live ubluk.com/media/<slug> paths on 16 September 2026, "
+    "each returning HTTP 200, Content-Type application/pdf and %PDF magic bytes (0.94-1.97 MB), and every "
+    "citation on every sheet now points at the bank's own live URL rather than a Wayback copy. No figure "
+    "changed: the live FY2022 file is the same edition as the Wayback /media/1368/ copy it replaces (CET1 "
+    "GBP 73,598,731, Total regulatory capital GBP 73,967,261, Total RWAs 385,707, Credit/CCR RWA 363,317 all "
+    "present in it). Historical note, retained because it explains how these were first recovered: in the "
+    "2026-09-06 extension the first Wayback snapshot found for each of FY2016-FY2021's original media/NNNN URL "
+    "was truncated at exactly 1,048,576 bytes (1 MiB), a known crawl-truncation artefact also seen on other "
+    "banks' Wayback-recovered PDFs on this project, and a second, later (2024-2025) snapshot of each document's "
+    "newer media/<slug> URL was untruncated and used instead, confirmed via `file`/`pdftotext` page-count and "
+    "character-count checks before transcribing any figure.\n\n"
     "FY2025 PILLAR 3 - ENUMERATED ABSENCE ON A CURRENT INDEX (upgraded from 'access gap' on 2026-09-15). The "
     "bank's own document index at https://www.ubluk.com/footer-pages/annual-reports/ was fetched and fully "
     "parsed on 15 September 2026. It is organised year by year, and each year from 2016 to 2024 carries BOTH an "
@@ -147,8 +169,10 @@ def p3_sources():
         f"FY2023: UBL UK Pillar 3 and Remuneration Code Disclosures at 31 December 2023, various pages (Table LRSum/"
         f"LRCom p.47-48; Appendix VI Own funds disclosure p.61-63) - {P3_2023_URL}\n"
         f"FY2022: UBL UK Pillar 3 and Remuneration Code Disclosures at 31 December 2022, p.27 (Pillar 1 capital "
-        f"requirements), p.48-49 (Leverage Ratio), p.22-23 (Own Funds) - {P3_2022_URL} (recovered via Wayback "
-        f"Machine; the live ubluk.com URL for this document now 301-redirects to the site's generic resources page).\n"
+        f"requirements), p.48-49 (Leverage Ratio), p.22-23 (Own Funds) - {P3_2022_URL} (the bank's own live URL, "
+        f"verified 16 September 2026: HTTP 200, application/pdf, %PDF. It supersedes the Wayback capture of the "
+        f"older path {P3_2022_WAYBACK_SUPERSEDED_URL} that this workbook used to cite; same edition, same "
+        f"figures).\n"
         f"FY2024: UBL UK Pillar 3 and Remuneration Code Disclosures at 31 December 2024, p.26 (Pillar 1 capital "
         f"requirements), p.46-47 (Leverage Ratio), p.22 (Own Funds) - {P3_2024_URL} (the approved final edition, "
         f"linked from the bank's own index at https://www.ubluk.com/footer-pages/annual-reports/ and dated 1 July "
@@ -627,6 +651,99 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE for this bank (KM1-030, 2026-09-16)
+#
+# This is the middle verdict of the three the KM1 map distinguishes: not "no
+# Pillar 3 is published" (UBL UK publishes one every year FY2016-FY2024) and
+# not "the rows are formally excluded under Article 432" (no excluded-templates
+# appendix exists here) - but "Pillar 3 is published and the UK KM1 template is
+# not used". Each edition DOES carry a front-of-document section headed "Key
+# metrics", and it is deliberately NOT transcribed as a KM1: it fails the
+# template's row-set test, which is the test that decides what a KM1 is.
+#
+# Nothing on the sheet is reconstructed from the bank's other tables. The
+# individual metric sheets that follow carry what the bank does disclose, each
+# with its own basis stated; assembling those into a KM1 shape would produce a
+# table that looks like a published template without being one.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - none, because no UK KM1 key-metrics template exists to reproduce. United National Bank Limited "
+    "('UBL UK') publishes a Pillar 3 disclosure every year from FY2016 to FY2024, and NOT ONE of those nine "
+    "editions contains the KM1 template.\n\n"
+    "This is the 'Pillar 3 is published but the template is not used' finding, which is a different and much "
+    "narrower statement than 'no Pillar 3 is published'. The evidence is affirmative, and the instrument was "
+    "checked before the conclusion was drawn:\n"
+    "1. ALL NINE editions were downloaded from the bank's OWN live media paths on 16 September 2026 (not from "
+    "Wayback, not from this project's citation list) and each verified by HTTP status, Content-Type "
+    "application/pdf and %PDF magic bytes. Nothing here rests on a blocked or partial fetch.\n"
+    "2. The string 'KM1' appears ZERO times in all nine, and a zero was not taken at face value: text "
+    "extraction is demonstrably RICH in every edition on neighbouring terms - case-insensitively, 220-242 hits "
+    "for 'capital', 174-197 for 'ratio', 16-28 for 'leverage' and 30-40 for 'buffer' per edition. The zero is "
+    "therefore a fact about the documents rather than about the search.\n"
+    "3. Each edition's 'Key metrics' section (printed p.4 in the FY2021-FY2024 editions, p.3 in FY2016-FY2020) "
+    "was read in full and is NOT the template. It is a nine-tile infographic dashboard: CET1 / Tier 1 / Total "
+    "capital ratios, CET1 / Tier 1 / Total capital amounts, Total RWAs, Total Assets and Profit After Tax, each "
+    "tile showing the prior year beneath it. It has no row numbers, no 'Additional own funds requirements' "
+    "(SREP) block, no combined-buffer block, no leverage row, no LCR rows and no NSFR rows - and it carries "
+    "Total Assets and Profit After Tax, which are not KM1 rows at all. Mapping it onto template row numbers "
+    "would invent a correspondence the bank never published.\n"
+    "4. The template is absent rather than merely unfindable in the text layer. Every embedded image larger "
+    "than 300x200 pixels across the nine editions was listed and traced back to its page: the UBL UK masthead, "
+    "a footer logo mark, the 'Board and Management Committees' reporting-lines chart, two pie charts on the "
+    "FY2022 edition's p.5 ('Capital Requirement by Risk Type' and 'Geographical concentration of loans and "
+    "advances'), and the 'revised capital framework' Pillar 2B/PRA-buffer diagram. There is no page-filling "
+    "table bitmap in any edition, and no page where a key-metrics heading is followed by blank space.\n"
+    "5. The templates this bank DOES publish are enumerated in its own contents page: Own Funds (section 4), "
+    "Leverage Ratio (section 7, an LRSum/LRCom-style pair), Asset Encumbrance (section 8), Capital Instruments "
+    "main features (Appendix V) and the Own funds disclosure / CC1 composition table (Appendix VI). Appendix "
+    "VI's rows 64 and 65 are CC1's institution-specific capital-requirement rows, not KM1 rows, and are not "
+    "treated as such anywhere in this workbook.\n"
+    "6. No parent's Pillar 3 can supply one either, which is the question a missing entity-level disclosure "
+    "always raises. The FY2024 edition states its own basis: 'The Bank is a single entity and no consolidation "
+    "is performed' (section 1.2), and its capital-instruments template row 6 - 'Eligible at solo/(sub-)"
+    "consolidated/solo and (sub-)consolidated' - reads Solo. Above the Bank sits Bestway Group Financial "
+    "Services Limited (95.1% since 4 July 2024), a wholly-owned subsidiary of Bestway Group, described in the "
+    "same document as 'a diversified multinational business with annual turnover in excess of GBP 4.5 billion' "
+    "- a non-financial conglomerate, not a UK financial holding company under consolidated supervision, and "
+    "its website carries no Pillar 3 disclosure of any kind. The two former parents, United Bank Limited and "
+    "National Bank of Pakistan, are Pakistani banks disclosing under State Bank of Pakistan rules, not under "
+    "the UK Disclosure (CRR) Part. So there is no UK Pillar 3 anywhere above this entity that could carry a "
+    "subsidiary KM1 block for it.\n\n"
+    "FY2025 is a separate and already-documented absence: no FY2025 Pillar 3 edition exists at all yet (the "
+    "bank's own current index lists an Annual Report for 2025 but no Pillar III Disclosure, and this bank "
+    "publishes very late - its FY2024 edition is dated 1 July 2026). See the Cash Flow Statement sheet's entity "
+    "note for that in full.\n\n"
+    "Editions checked, all live on the bank's own site on 16 September 2026:\n"
+    f"FY2024 - {P3_2024_URL}\n"
+    f"FY2023 - {P3_2023_URL}\n"
+    f"FY2022 - {P3_2022_URL}\n"
+    f"FY2021 - {P3_2021_URL}\n"
+    f"FY2020 - {P3_2020_URL}\n"
+    f"FY2019 - {P3_2019_URL}\n"
+    f"FY2018 - {P3_2018_URL}\n"
+    f"FY2017 - {P3_2017_URL}\n"
+    f"FY2016 - {P3_2016_URL}\n"
+    "Index: https://www.ubluk.com/footer-pages/annual-reports/"
+)
+
+bw.add_km1_sheet(
+    title="United National Bank Limited (UBL UK) - KM1 Key Metrics",
+    subtitle="Not applicable - this bank publishes a Pillar 3 disclosure every year FY2016-FY2024 but does "
+             "not use the UK KM1 key-metrics template in any of them. The 'Key metrics' section each edition "
+             "does carry is a nine-tile infographic, not the template; it is described in the source note "
+             "below rather than reproduced here, because it does not carry the template's row set. See the "
+             "individual Pillar 3 metric sheets that follow for what the bank does disclose.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: ("No Pillar 3 edition published" if y == "FY2025" else "Pillar 3 published; template not used")
+          for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=46,
+    source_height=330,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -919,8 +1036,10 @@ bw.add_overview_sheet(
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. Pillar 3 ratios/RWA now available for all 10 years FY2016-"
-         "FY2024 (FY2016-FY2021 recovered from the Wayback Machine after an initial 1-MiB crawl-truncation of the "
-         "first-found snapshots was identified and resolved by locating later, complete captures); FY2025 remains "
+         "FY2024 (FY2016-FY2021 were first recovered from the Wayback Machine, after an initial 1-MiB crawl-"
+         "truncation of the first-found snapshots was identified and resolved by locating later, complete "
+         "captures; as of 16 September 2026 all nine editions are cited from the bank's own live ubluk.com URLs "
+         "instead, each re-verified by status, Content-Type and %PDF magic bytes); FY2025 remains "
          "not disclosed because no FY2025 Pillar 3 edition is published - an enumerated absence on the bank's own "
          "current document index, re-checkable given its very late cadence (see Cash Flow Statement sheet entity "
          "note). LCR/NSFR/MREL: not disclosed in any year reviewed. Balance Sheet/Profit & Loss/Statement of "

@@ -335,6 +335,184 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          note=note, first_col_width=52, source_height=220)
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-005)
+# ---------------------------------------------------------------
+# The Bank heads this table "Template UK KM1 / Key metrics template" and numbers
+# its rows, so it is the template on any reading of the row-set test (map rule 8).
+# It appears in the FY2023, FY2024 and FY2025 editions ONLY.
+#
+# FY2022 IS BLANK, AND THAT IS A RULE-1 DECISION, NOT A FAILED SEARCH.
+# The FY2023 edition prints a full 2022 comparative column (CET1 103,161,031,
+# TREA 317,552,478, LCR 468.51%, NSFR 417.71%). It is deliberately not used,
+# because the FY2022 edition ITSELF published no KM1: its contents list runs
+# Introduction / Governance and Risk Management / Risk Assessment and Policy
+# Response / Capital Resources with no Key Metrics section at any level, and
+# the document contains zero occurrences of "CET1" or "Common Equity" anywhere.
+# Verified 2026-09-16 on the live PDF (366,318 bytes, 16pp, text-native: its
+# whole contents page extracts cleanly, and the only images in the file are
+# 20x21px bullet glyphs, so this is not a hidden-bitmap case - map rule 13).
+# The same holds further back: the 2021, 2020, 2019 and 2018 editions each
+# contain zero "KM1" and zero "CET1", and their single "key metric" hit is the
+# phrase "the key metrics and outputs of these workstreams" in a compliance
+# paragraph. FY2021 and FY2017 are blank for that reason (map rule 16).
+#
+# EDITIONS RESTATE, WHICH IS WHY EACH COLUMN IS ITS OWN EDITION'S (rule 1):
+#   FY2023 row 9   0.50% (own)  vs 0.55% (FY2024 edition's comparative)
+#   FY2023 UK 11a 15.95%        vs 16.00%
+#   FY2023 row 12 84.05%        vs 84.00%
+#   FY2024 row 13 446,181,573   vs 515,479,917 (FY2025 edition's comparative)
+#
+# SOURCE DEFECT IN ROW 13, REPRODUCED NOT CORRECTED (rule 7). In the FY2024
+# edition, row 13 does not tie to its own printed row 14: 108,973,693 /
+# 446,181,573 = 24.42%, while the edition prints 21.19%. The FY2025 edition's
+# 2024 comparative (515,479,917) DOES tie - 108,973,693 / 515,479,917 = 21.14%
+# - as does the FY2023 edition's own 2023 figure (105,763,661 / 400,870,711 =
+# 26.38%, exactly as printed). So the FY2024 edition's row 13 is understated in
+# both of its columns. Each year is still taken from its own edition and the
+# defect is recorded here rather than silently replaced by the comparative.
+km1_rows = [
+    ("SECTION", "AVAILABLE OWN FUNDS (AMOUNTS)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£)",
+     {"FY2025": 110569881, "FY2024": 108973693, "FY2023": 105763661}),
+    ("DATA", "2  Tier 1 capital (£)",
+     {"FY2025": 110569881, "FY2024": 108973693, "FY2023": 105763661}),
+    ("DATA", "3  Total capital (£)",
+     {"FY2025": 123648458, "FY2024": 124916300, "FY2023": 121468412}),
+    ("SECTION", "RISK-WEIGHTED EXPOSURE AMOUNTS", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£)",
+     {"FY2025": 294919899, "FY2024": 250106567, "FY2023": 248533572}),
+    ("SECTION", "CAPITAL RATIOS (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "37.49%", "FY2024": "43.57%", "FY2023": "42.56%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "37.49%", "FY2024": "43.57%", "FY2023": "42.56%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "41.93%", "FY2024": "49.95%", "FY2023": "48.87%"}),
+    ("SECTION", "ADDITIONAL OWN FUNDS REQUIREMENTS BASED ON SREP (AS A PERCENTAGE OF "
+                "RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2025": "14.09%", "FY2024": "14.09%", "FY2023": "12.95%"}),
+    ("SECTION", "COMBINED BUFFER REQUIREMENT (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "0.52%", "FY2024": "0.81%", "FY2023": "0.50%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "3.02%", "FY2024": "3.31%", "FY2023": "3.00%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "17.11%", "FY2024": "17.40%", "FY2023": "15.95%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "82.89%", "FY2024": "82.60%", "FY2023": "84.05%"}),
+    ("SECTION", "LEVERAGE RATIO", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£)",
+     {"FY2025": 546074420, "FY2024": 446181573, "FY2023": 400870711}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "20.42%", "FY2024": "21.19%", "FY2023": "26.38%"}),
+    ("SECTION", "LIQUIDITY COVERAGE RATIO", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value-average) (£)",
+     {"FY2025": 152067762, "FY2024": 125107054, "FY2023": 93520027}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£)",
+     {"FY2025": 192084585, "FY2024": 149151238, "FY2023": 95745955}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£)",
+     {"FY2025": 195820282, "FY2024": 236297324, "FY2023": 158792278}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£)",
+     {"FY2025": 48021146, "FY2024": 37287810, "FY2023": 23936489}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2025": "316.67%", "FY2024": "335.52%", "FY2023": "390.70%"}),
+    ("SECTION", "NET STABLE FUNDING RATIO", {}),
+    ("DATA", "18  Total available stable funding (£)",
+     {"FY2025": 252487260, "FY2024": 255073231, "FY2023": 228783713}),
+    ("DATA", "19  Total required stable funding (£)",
+     {"FY2025": 81337991, "FY2024": 78431888, "FY2023": 61635979}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2025": "310.42%", "FY2024": "325.22%", "FY2023": "371.19%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Bank of Beirut (UK) Ltd's own \"Template UK KM1 / Key metrics template\", reproduced in the "
+    "Bank's own row order, row numbers, labels and precision. EVERY COLUMN COMES FROM THE EDITION IN WHICH "
+    "THAT YEAR IS THE REPORTING YEAR, never from a later edition's comparative:\n"
+    f"FY2025: Pillar 3 Disclosures - 31 December 2025, p.16, s.3.6 Key Metrics - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures - 31 December 2024, p.16, s.3.6 Key Metrics - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures - 31 December 2023, p.17, s.4.2 Key Metrics - {P3_2023_URL}\n"
+    "\n"
+    "UNIT IS PLAIN POUNDS (£), EXACTLY AS THE BANK PUBLISHES IT. The template's own column header reads '£', "
+    "not £'000 or £m, and CET1 is printed as 110,569,881. It is reproduced at that scale rather than rescaled, "
+    "while the eleven single-metric sheets in this workbook are in £m. The cross-check in "
+    "scripts/verify_workbook.py resolves this without help: amount rows here carry '(£)' in the row label, "
+    "which is not a scale token, so the KM1 side resolves to units of 1 and the £m side to 1e6, and every "
+    "amount lands inside the checker's 0.1% tolerance (CET1 110,569,881 against 110.6m differs by 30,119 "
+    "against a tolerance of 110,570). No cell here has been rounded, converted or recomputed.\n"
+    "\n"
+    "FY2022, FY2021 AND FY2017 ARE BLANK BECAUSE THOSE EDITIONS PUBLISH NO KM1 - NOT BECAUSE ONE WAS NOT "
+    "FOUND (map rules 4 and 16). A full FY2022 comparative column DOES exist, inside the FY2023 edition "
+    "(CET1 103,161,031, TREA 317,552,478, LCR 468.51%, NSFR 417.71%), and is deliberately unused. The FY2022 "
+    "edition itself has no Key Metrics section at any level of its contents list and contains zero "
+    "occurrences of 'CET1' or 'Common Equity'; it is a narrative, pre-template Pillar 3 whose capital "
+    "disclosure is a five-year ICAAP summary. Verified on the live PDF 2026-09-16 (366,318 bytes, 16pp, "
+    "text-native - its contents page extracts in full, and the only embedded images are 20x21px bullet "
+    "glyphs, so this is not a table-hidden-in-a-bitmap case). The 2021, 2020, 2019 and 2018 editions were "
+    "checked the same way and are the same: zero 'KM1', zero 'CET1', and their one 'key metric' hit is the "
+    "phrase 'the key metrics and outputs of these workstreams' in a compliance paragraph. The single-metric "
+    "sheets continue to carry FY2022 and FY2021 under their own citations and on their own stated bases, "
+    "which is why those sheets and this one legitimately differ for those years.\n"
+    "\n"
+    "ROWS THE BANK DOES NOT PRINT, in any of the three editions, are omitted rather than shown blank: UK 7a, "
+    "UK 7b and UK 7c (it prints only the UK 7d total), UK 9a, 10 and UK 10a. Rows 13 and 14 are captioned "
+    "'excluding claims on central banks' in all three years, so there is no 1 January 2022 basis break inside "
+    "this sheet (map rule 5).\n"
+    "\n"
+    "EDITIONS RESTATE - the reason for the rule-1 discipline above. Comparing each edition against the next "
+    "one's comparative column: FY2023 row 9 is 0.50% in its own edition and 0.55% in the FY2024 edition; "
+    "FY2023 UK 11a is 15.95% against 16.00%; FY2023 row 12 is 84.05% against 84.00%; and FY2024 row 13 is "
+    "446,181,573 against 515,479,917 in the FY2025 edition. Capital, RWAs and every ratio bar those agree "
+    "exactly across editions.\n"
+    "\n"
+    "SOURCE DEFECT IN ROW 13, RECORDED NOT CORRECTED (map rule 7). In the FY2024 edition row 13 does not tie "
+    "to its own printed row 14: 108,973,693 / 446,181,573 = 24.42%, while the edition prints 21.19%. Both "
+    "neighbouring editions are internally consistent on this row - the FY2025 edition's 2024 comparative "
+    "(515,479,917) gives 21.14%, and the FY2023 edition's own figure (400,870,711) gives 26.38% exactly as "
+    "printed - so the FY2024 edition's exposure measure is understated in both its columns. The figure is "
+    "carried here as the Bank printed it for its own year; the Leverage Ratio sheet's 21.19% is that same "
+    "edition's printed ratio, so the two sheets agree on the ratio and the defect stays visible.\n"
+    "\n"
+    "TYPOGRAPHY: all three editions print row 14 as 'excluding claims on centraI banks', with a capital I in "
+    "place of the second l. The label above is spelled correctly; no figure is affected.\n"
+    "\n"
+    "LATEST-EDITION CHECK, 2026-09-16: the Bank's own Pillar 3 index "
+    "(https://www.bankofbeirut.co.uk/AboutUs/PillarDisclosures, HTTP 200, not blocked) lists eight editions, "
+    "2018 through 2025. The newest is the 31 December 2025 edition already carried here and already cited by "
+    "this script. NONE NEWER. The index also linked two editions this project had never recorded (2021 and "
+    "2019); both were fetched and read for this sheet and neither contains a KM1.\n"
+    "\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Bank of Beirut (UK) Ltd - KM1 Key Metrics",
+    # HISTORICAL NOTE, kept because it explains this sheet's careful wording.
+    # When first built (2026-09-16) this sheet cross-checked 1,000x high,
+    # because verify_workbook.py resolved a KM1 sheet's unit by scanning
+    # column A above the header row, and this subtitle then read "...as
+    # published - NOT £'000 or £m". The substring match read a unit out of the
+    # sentence denying it. The checker was corrected the same day: a KM1 sheet
+    # has NO sheet-level unit by design - it is the one sheet mixing amounts
+    # and ratios down a single column - so the resolution chain is now row
+    # label, then section divider, then column header, then as-printed, and
+    # this cell is never read as a unit declaration. The wording below is left
+    # token-free anyway; nothing depends on it.
+    subtitle="The Bank's own 'Template UK KM1 - Key metrics template', reproduced whole in its own row order, "
+             "row numbers, labels and precision. Amounts are in plain pounds exactly as published - unrounded "
+             "and not rescaled; ratios as printed. FY2022, FY2021 and FY2017 are blank because those editions "
+             "publish no KM1 - see the sources note, which also records a restatement across editions and a "
+             "defect in row 13.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=300,
+    years=YEARS,
+)
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 110.6, "FY2024": 109.0, "FY2023": 105.8, "FY2022": 103.2, "FY2021": 104.0})],

@@ -1,0 +1,4583 @@
+(y Union Bank
+
+of India (UK) Ltd
+
+ANNUAL ACCOUNTS
+
+For the year ended on 31 March 2025
+
+Company number 07653660
+Table of Contents
+
+Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+Contents Page No
+Officers and Professional Advisers 1
+Strategic Report 2
+Directors' Report 17
+Statement of Directors' Responsibilities 21
+Independent Auditor's Report to the Members of Union Bank of India (UK) Ltd 22
+Income Statement 30
+Statement of Other Comprehensive Income 31
+Statement of Financial Position 32
+Statement of Changes in Equity 34
+Statement of Cash Flows 35
+
+Notes to the Financial Statements 36
+'U) Union Bank
+
+of India (UK) Ltd
+
+OFFICERS AND PROFESSIONAL ADVISERS
+
+FOR THE YEAR ENDED 31 March 2025
+
+Company Registration Number
+
+The Board of Directors
+
+Registered Office
+
+Statutory Auditor
+
+07653660
+
+Ms. A Manimekhalai
+Chair
+
+Dr Anand Kumar
+Non-Executive Director
+
+Mr. Joseph Jerry Liow Yune Loy
+Independent Non-Executive Director
+
+Mr. Patrick Joseph Quinn (resigned 28.02.2025)
+Independent Non-Executive Director
+
+Mrs Dawn Brown (appointed on 26.09.2024)
+Independent Non-Executive Director
+
+Mr Pankaj Dwivedi (appointed on 13.05.2024)
+Nominee Director
+
+Mr. Arbind Choudhary
+Managing Director & Chief Executive Officer
+
+Mr. Rahul Kumar
+Executive Director & Chief Operating Officer
+
+12 Arthur Street
+London
+
+England
+
+EC4R 9AB
+
+Forvis Mazars LLP
+30 Old Bailey
+London
+
+EC4M 7AU
+(9) Union Bank
+of India (UK) Ltd
+
+The Directors present the Strategic Report of Union Bank of India (UK) Ltd ("UBI UK" or "the Bank") for
+the financial year ended 31% March 2025. UBI UK is a wholly owned subsidiary of Union Bank of India
+(UBI), a major public sector bank primarily owned by the Government of India and regulated by the
+Reserve Bank of India (RBI). This report should be read in conjunction with the Directors' Report.
+
+STRATEGIC REPORT
+
+PRINCIPAL ACTIVITIES AND BUSINESS REVIEW
+
+Union Bank of India (UK) Ltd is an authorised banking institution operating in the United Kingdom,
+offering a comprehensive suite of retail and commercial banking services. The Bank's primary focus is
+on lending to corporate clients and Small and Medium Enterprises (SMEs), complemented by a range
+of related financial services.
+
+UBI UK is authorised and regulated by the Prudential Regulation Authority (PRA) and Financial Conduct
+Authority (FCA) in the United Kingdom. The Bank's strategic objective is to establish itself as a
+profitable and self-sustainable UK-based financial institution, positioned prominently in the retail and
+business banking segments. Concurrently, UBI UK contributes to the broader strategic goals of its
+parent institution, leveraging the global reach of the Indian economy, which has seen substantial
+growth through the expansion of Indian corporations overseas, a significant diaspora of Non-Resident
+Indians (NRIs), and increasing foreign investments in India.
+
+Business Model
+
+UBI UK's business model is centred on its core activities in Commercial and Retail Banking, with a
+primary focus on lending to UK-based business entities across diverse sectors such as hospitality,
+student accommodation, retail, buy-to-let (BTL) real estate, commercial investments, and Small and
+Medium Enterprises (SMEs). The Bank also extends its lending operations to international businesses,
+providing loans mainly in GBP and USD through syndicated and bilateral lending arrangements.
+Additionally, UBI UK engages in investments in government treasuries and highly rated bonds as part
+of its liquidity management strategy, ensuring optimal capital deployment while maintaining financial
+stability. These lending and investment activities are predominantly funded through a well-diversified
+deposit base, comprising Savings Deposits, Current Accounts, and Fixed-Term Deposits, which are
+strategically managed to align with the growth and maturity profile of the loan portfolio. This balanced
+funding strategy enables the Bank to maintain liquidity and support its sustainable growth objectives.
+The business model is further strengthened by effective governance and risk management practices
+set by the Board, ensuring alignment with the Bank's strategic goals and regulatory requirements,
+while maintaining a strong commitment to financial stability and integrity.
+
+Strategic Direction and Risk Management
+
+The strategic direction of UBI UK is determined by its Board of Directors, which defines the Bank's
+vision, mission, and risk appetite. Governance and regulatory compliance remain at the forefront of
+the Bank's priorities, reflecting a strong commitment to maintaining stability, integrity, and resilience
+within its operations.
+
+Risk management is integral to UBI UK's business strategy, focusing on prudent practices that support
+the Bank's long-term goal of achieving responsible and sustainable growth. The Bank’s risk governance
+framework is designed to identify, measure, monitor, and control risks effectively, ensuring alignment
+with both regulatory expectations and strategic objectives.
+(J Union Bank
+
+of india (UK) Ltd
+
+UBI UK remains committed to strengthening its market position, enhancing stakeholder value, and
+contributing positively to the economic landscape of the United Kingdom, while aligning with the
+broader objectives of UBI.
+
+Key Performance Indicators
+
+2025 2024
+USD ‘000 USD ‘000
+Profit or Loss Account:
+Operating income 13,327 16,429
+Operating expenses before impairment loss (9,734) (9,473)
+allowances
+Operating profit before impairment loss allowances 3,593 6,956
+Impairment loss allowances (10,245) (5,593)
+(Loss) / profit After tax (6,608) 1,488
+2025 2024
+USD ‘000 USD ‘000
+Balance Sheet:
+Loans and advances to customers 340,434 339,650
+Loans and advances to banks 20,202 43,027
+Financial Investments 99,581 111,811
+Repurchase Agreements 15,240 :
+Deposits from customers 348,633 387,541
+Shareholders’ equity 111,600 116,883
+
+Key Performance Overview
+
+In 2025, the Bank reported operating income of USD 13.3 million, compared to USD 16.4 million in
+2024. The year-on-year decline primarily reflects the effects of a more accommodative interest rate
+environment, which exerted downward pressure on net interest margins across key markets. The Bank
+continued to exercise cost discipline, with operating expenses before impairment loss allowances
+increasing moderately to USD 9.7 million (2024: USD 9.5 million), largely driven by inflationary input
+costs and general macroeconomic headwinds. The Bank reported an operating profit before
+impairment of USD 3.6 million, down from USD 7.0 million in the previous year.
+
+Impairment loss allowances rose to USD 10.2 million (2024: USD 5.6 million), reflecting elevated
+provisioning in respect of credit exposures assessed under Stage 2 and Stage 3 of IFRS 9. The increase
+was primarily attributable to a combination of deterioration in a small number of legacy exposures and
+stress in specific sectors and geographies. The Provision Coverage Ratio for Stage 3 loans stood at
+34.90% (2024: 37.87%). The reduction in PCR is mainly due to write-off of two accounts during the
+year having 100% provisioning. Provisions for Stage 1 and Stage 2 exposures increased to USD 6.0
+million (2024: USD 2.1 million), reflecting the Bank’s measured and forward-looking provisioning
+(‘) Union Bank
+of India (UK) Ltd
+
+methodology, in line with its internal governance framework and the prevailing macroeconomic
+outlook.
+
+As a result, the Bank recorded a post-tax loss of USD 6.6 million, compared to a profit after tax of USD
+1.5 million in 2024. While this reflects a temporary impact on earnings, the Bank continues to prioritise
+asset quality, disciplined risk management, and the prudent resolution of legacy exposures within the
+loan book. The Bank continues to apply prudent underwriting practices to enhance credit quality and
+reduce risk.
+
+The Balance Sheet remained stable and resilient over the reporting period. Loans and advances to
+customers stood at USD 340.4 million (2024: USD 339.7 million), reflecting consistent credit activity
+within the Bank’s approved risk appetite. On the liability side, customer deposits declined to USD 348.6
+million (2024: USD 387.5 million), in line with strategic efforts to optimise the liquidity mix, reduce
+depositor concentration, and enhance funding quality. Deposits from banks, including repurchase
+agreements, rose to USD 15.2 million (2024: nil), further diversifying funding sources and reinforcing
+liquidity resilience.
+
+The Bank maintained a strong capital position and robust liquidity profile throughout the year. The
+Capital Adequacy Ratio remained well above regulatory requirements, providing a buffer against stress
+and capacity for strategic investment. Both the Liquidity Coverage Ratio (LCR) and Net Stable Funding
+Ratio (NSFR) remained well within Board-approved thresholds, supported by sound asset-liability
+management, conservative treasury practices, and regular forward-looking stress testing aligned with
+PRA and Basel expectations.
+
+The Bank also remained responsive to strategic opportunities. The India-UK Free Trade Agreement,
+finalised in early 2025 and projected to increase bilateral trade by £25.5 billion, is expected to support
+cross-border financing activity. The Bank is well-positioned to expand its India—UK corridor
+proposition, particularly within SME, corporate, and structured trade finance, in alignment with its
+international strategy.
+
+In conclusion, while 2025 presented significant headwinds—most notably margin compression and
+elevated credit provisioning driven by back book exposures—the Bank maintained a high standard of
+financial governance, preserved balance sheet strength, and reinforced its capacity for long-term value
+creation. It enters 2026 with a robust capital and liquidity position, clear strategic focus, and continued
+commitment to prudent underwriting practices, sound risk and financial management.
+
+MACROECONOMIC AND STRATEGIC OUTLOOK
+
+The Bank’s strategic focus remains firmly aligned with its core markets—the United Kingdom, United
+States, and India—underpinned by continuous monitoring of global economic and geopolitical
+developments to inform its risk posture and forward-looking strategy.
+
+As per the World Bank forecast, global growth is projected to stabilise at approximately 2.7% in 2025—
+26, reflecting a low-growth equilibrium that may prove insufficient to drive inclusive or sustained
+development. The global outlook remains subject to a complex array of persistent and emerging
+headwinds, including heightened policy uncertainty, shifting trade dynamics, geopolitical tensions,
+entrenched core inflation, and climate-related natural disasters.
+
+Market volatility remains elevated. Ongoing conflict in Ukraine, instability in the Middle East, and
+renewed escalation in the Israel-Gaza region continue to drive inflationary pressures and disrupt
+supply chains, fueling commodity market volatility. In parallel, the recent imposition of higher tariffs
+by the United States on a range of Chinese imports, including electric vehicles, batteries, and critical
+(J Union Bank
+
+of india (UK) Ltd
+minerals, reflects a more assertive stance on industrial policy and economic security. While these
+developments have limited direct impact on the Bank, they contribute to broader trade fragmentation
+and global supply chain realignments, with second-order effects on investment flows, manufacturing
+costs, and inflation dynamics in key sectors.
+
+In the United Kingdom, the economic environment remains subdued. An uncertain trading outlook
+and rising tax burdens pose material downside risks. Despite temporary support from household
+savings and fiscal measures, according to the Office for Budget Responsibility (UK), GDP growth is
+expected to remain modest at 0.8% in both 2025 and 2026. Inflation is forecast to peak at 3.6% by
+Autumn 2025, driven by labour market tightness and energy costs, before returning to the Bank of
+England’s 2% target by mid-2026. (Source: KPMG UK Economic Outlook-April 2025)
+
+In India, growth prospects remain robust but have been moderated by external pressures. As reported
+in the April 2025 Monetary Policy Statement, The Reserve Bank of India (RBI) revised its 2025 growth
+forecast downward to 6.5%, citing the impact of escalating global trade frictions, particularly following
+recent US tariff actions. In response, the RBI cut its policy rate to 6%, marking a second rate cut in
+2025, and adopted an accommodative stance to support domestic demand and private investment—
+reinforcing India's position as one of the fastest-growing major economies.
+
+In the United States, recent trade policy reversals and geopolitical uncertainty have introduced greater
+volatility. A temporary 90-day reduction in tariffs on Chinese goods (from 145% to 30%) was met with
+reciprocal measures from China (cutting tariffs from 125% to 10%). Additionally, the establishment of
+a US-UK trade framework highlights a strategic pivot toward trade diversification. However,
+uncertainty surrounding the ceiling-floor mechanism and the upcoming expiry of the Reciprocal Tariffs
+Policy suspension in July 2025 presents renewed risks. The broader US macroeconomic outlook is
+further constrained by fiscal sustainability concerns, highlighted by a recent sovereign credit rating
+downgrade, elevated bond yields, and a weakening US dollar. While early 2025 labour market data
+appeared resilient, signs of slowing job growth and softening consumer demand have emerged as
+tariff-driven inflation begins to weigh on household purchasing power.
+
+Amid these challenges, the finalisation of the India-UK Free Trade Agreement in early 2025 represents
+a significant strategic milestone. Covering tariff reductions across 90% of goods, the agreement is
+projected to increase bilateral trade by £25.5 billion, enhance UK GDP by £4.8 billion, and raise UK
+wages by £2.2 billion annually over the long term—while offering substantial reciprocal gains for India.
+Similarly, the US-UK trade framework is expected to strengthen transatlantic commercial ties, with
+positive implications for UK exports, financial services, and supply chain resilience. (Source: UK
+Department for Business and Trade, 2025)
+
+The Bank strategically leverages trade agreements to expand cross-border business opportunities and
+enhance client service capabilities. Recognising the increasing challenges posed by global
+protectionism and regional fragmentation, we are actively reinforcing our prudent lending practices.
+This deliberate approach ensures the Bank remains resilient and responsive to potential secondary
+effects—such as shifts in GDP growth, labour market dynamics, and inflationary trends—that could
+influence credit quality and investment performance across our key jurisdictions
+
+RISK MANAGEMENT AND STRATEGIC MONITORING
+
+The Bank remains focused on managing the broader implications of sustained high interest rates, tight
+financial conditions, and heightened volatility across key macroeconomic indicators. While no direct
+operational impacts have been observed to date, prudent lending practices remain in place, and credit
+risk controls have been reinforced. The Board continues to adopt a cautious stance, recognising the
+YY Union Bank
+
+of India (UK) Ltd
+
+rapidly evolving global environment in which geopolitical instability, policy divergence, and trade
+realignments are contributing to latent systemic vulnerabilities.
+
+In response to the PRA’s continued focus on credit risk, the Bank has taken decisive action to further
+strengthen its credit risk management framework. This includes tightening underwriting standards,
+enhancing sectoral exposure monitoring, and intensifying portfolio reviews to identify and mitigate
+emerging vulnerabilities. These measures are designed to safeguard asset quality in an increasingly
+uncertain macroeconomic environment.
+
+The potential secondary effects of these developments—such as shifts in GDP trajectories, labour
+market pressures, inflation volatility, and fiscal stress across the Bank’s core markets—may affect credit
+quality, borrower behaviour, and investment performance in the near to medium term.
+
+In response, the Bank has adopted a cautious and proactive risk management framework. This
+includes:
+
+e Regular stress testing under a range of adverse macro-financial scenarios
+¢ Close monitoring of sectoral and cross-border exposures
+e Maintaining strong capital and liquidity buffers to ensure operational resilience
+
+This measured and disciplined approach enables the Bank to respond with agility to downside risks,
+while remaining well-positioned to capitalise on emerging strategic opportunities aligned with its long-
+term objectives. In parallel, the Bank remains firmly committed to upholding the FCA’s Consumer Duty.
+This includes ensuring fair outcomes for customers, proactively identifying and addressing potential
+harms, and embedding customer-centric principles across its products, services, and decision-making
+frameworks.
+
+Principal Risk and uncertainties
+
+The Bank’s overarching objective in risk management is to uphold a sustainable, resilient, and
+strategically aligned operating environment that supports the delivery of its long-term objectives while
+maintaining strict adherence to its defined risk appetite. This is guided by a comprehensive Risk
+Appetite Statement (RAS), developed under the leadership of the Chief Risk Officer (CRO) and
+approved by the Board of Directors.
+
+The RAS outlines the Bank’s risk tolerance across all principal risk categories and serves as a critical
+reference point in shaping strategic decision-making, capital deployment, portfolio management, and
+day-to-day operational conduct. It is fully embedded within the industry standard Three Lines of
+Defence (3LoD) governance model, which underpins the Bank’s risk culture by establishing clear
+accountability and reinforcing independence across the enterprise.
+
+Three Lines of Defence Model
+
+= First Line of Defence
+Business units and operational functions are directly accountable for the identification,
+ownership, and active management of risks. These teams are responsible for adhering to
+internal policies, procedures, board approved risk appetite and control frameworks in the
+execution of their responsibilities.
+
+= Second Line of Defence
+The Risk and Compliance functions provide independent oversight, set risk management and
+compliance policies, conduct monitoring activities, and deliver constructive challenge to first-
+0] Union Bank
+of India (UK) Ltd
+
+line decisions. This line monitors adherence to the Bank’s risk appetite and regulatory
+obligations.
+
+= Third Line of Defence
+The Internal Audit function delivers independent assurance to the Board and senior
+leadership regarding the effectiveness of the Bank’s risk management framework, internal
+controls, and governance arrangements. It evaluates the robustness of the first and second
+lines, highlighting areas for continuous improvement.
+
+This structured approach promotes clarity in roles and responsibilities, strengthens internal control,
+and ensures that risk governance is embedded across all levels of the organisation. It provides the Bank
+with a robust platform for early identification and escalation of emerging risks, while fostering a culture
+of accountability, compliance, and continuous enhancement of risk management practices.
+
+The following table sets out the Bank’s principal risk categories, along with associated key mitigants
+and control mechanisms, reflecting the organisation’s proactive and integrated approach to
+enterprise-wide risk management.
+
+Credit Risk The Bank operates under a well-defined Credit and
+Credit risk is the risk of financial loss arising from a | Investment Policy Framework, which is subject to
+borrower or counterparty failing to meet their | regular review and enhancement. All new credit and
+contractual obligations. It spans not only loan | investment exposures, as well as material renewals
+defaults but also treasury exposures, securities, and | and reviews, are independently assessed by the Risk
+placements with financial institutions, and may arise | function to ensure alignment with the Bank’s Risk
+from both on- and off-balance sheet items. Appetite Statement (RAS).
+
+The Bank undertakes ongoing monitoring of portfolio
+performance, applying a range of risk mitigation
+techniques such as collateralisation, appropriate
+guarantees, and exposure limits by counterparty,
+sector, and geography to manage concentration risk
+and preserve asset quality.
+
+Credit risk is initially managed through the Credit and
+Investment Committees, with escalation to the
+Management Committee of the Board (MCB) for
+significant exposures. Strategic oversight is provided
+by the Risk and Compliance Committee (RCC) and/or
+the Board, ensuring robust governance and
+accountability.
+
+The Bank actively manages credit risk through robust
+underwriting standards, continuous _ portfolio
+monitoring, and a well-established early warning
+framework that enables timely risk mitigation and
+client engagement. Oversight is provided by the
+Credit Committee, which ensures that exposures
+remain aligned with the Bank’s defined risk appetite
+and regulatory expectations. These measures
+support prudent lending practices, enabling the
+Bank to manage risk exposures effectively.
+
+Union Bank
+
+(J of India (UK) Ltd
+
+Liquidity Risk
+Efficient management of liquidity is crucial for the
+Bank as it forms an integral part of its risk
+management framework, ensuring business stability.
+Liquidity risk refers to the risk of the Bank being
+unable to meet its financial obligations as they
+become due. The Bank also recognizes Maturity
+Mismatch as a component of Liquidity Risk.
+
+Liquidity risk is defined by the Overall Liquidity
+Adequacy Rule (OLAR) and assessed and managed by
+the Board through the annual Internal Liquidity
+Adequacy Assessment Process (‘ILAAP’) and Risk
+Appetite Parameters. The Treasury department
+implements effective processes to manage and
+control liquidity and funding, with oversight from the
+Risk team. The Bank aims to always maintain
+adequate liquid assets to cover client commitments
+and comply with regulatory requirements. The Bank
+maintains a conservative liquidity profile with
+sufficient, high-quality, and stable funding sources to
+always survive a 120-day severe but plausible stress.
+
+The Bank manages liquidity risks, including Maturity
+Mismatch Risk, through the Asset Liability
+Committee (‘ALCO’), oversight is provided by the Risk
+and Compliance Committee (RCC) and/or the Board
+through periodic review. The Bank also uses other
+important regulatory measures, such as the Liquidity
+Coverage Ratio (LCR) and Net Stable Funding Ratio
+(NSFR), to manage liquidity risks effectively.
+
+Market Risk
+
+Market risk is the risk of loss in both on and off-
+balance sheet positions that result from fluctuations
+in market prices and changes in interest rates, foreign
+exchange rates, and asset prices that will affect
+Bank’s income and the value of its holdings.
+
+The Bank actively manages market risk exposures
+through regular monitoring of interest rate
+sensitivity, foreign exchange positions, and liquidity
+gap limits. The Bank mitigates foreign exchange risk
+particularly from currency mismatches in asset and
+liability positions, through the use of cross-currency
+swaps and other hedging strategies. A significant
+portion of the Bank’s market risk arises from interest
+rate movements and foreign currency volatility.
+
+Market risk is managed through the Asset and
+Liability Committee (ALCO), with oversight and
+periodic review by the Risk and Compliance
+Committee (RCC) and/or the Board, ensuring
+alignment with the Bank’s Risk Appetite Statement
+and regulatory expectations.
+
+Capital Risk
+
+Capital risk is the risk of the Bank having insufficient
+capital to cover unexpected losses, meet regulatory
+requirement or support growth plans.
+
+The Bank conducts an annual ICAAP stress test to
+assess its capital planning throughout its business
+planning horizon, the Board manages Capital Risk
+through the Internal Capital Adequacy Assessment
+Process (ICAAP) and Risk Appetite Parameters.
+
+The Executive Management Committee (EMC)
+oversees the day-to-day management of capital risk,
+with periodic review and strategic oversight provided
+by the Risk and Compliance Committee (RCC) and/or
+the Board.
+
+The Bank maintains its capital levels to ensure a
+sufficient level of solvency and aims to establish a
+sustainable business model that generates stable
+income, enabling organic capital accumulation. The
+Bank regularly reviews its capital and leverage ratios,
+
+Union Bank
+
+(Y of India (UK) Ltd
+
+including the quantity and quality of its capital, as
+part of its Risk Appetite.
+
+Operational Risk
+
+Operational risk is the risk of financial loss resulting
+from inadequate or failed internal processes,
+systems, people, or from external events. This
+includes risks related to IT disruptions, human error,
+fraud, third-party dependencies, and physical events.
+
+The Bank manages operational risk through a formal
+Operational Risk Policy and a comprehensive
+Business Continuity Plan (BCP), both of which are
+regularly reviewed to enhance resilience and ensure
+preparedness for disruption.
+
+Operational risk exposure is assessed through a
+structured Risk and Control Self-Assessment (RCSA)
+process, supported by ongoing incident reporting
+and tracking to identify control weaknesses and
+inform corrective action. The Bank actively promotes
+a culture of operational discipline and continuous
+improvement.
+
+Operational risk is managed through the IT and
+Operations Committee (ITOC), with strategic
+oversight provided by the Risk and Compliance
+Committee (RCC) and/or the Board. Escalation
+mechanisms are in place to ensure that significant
+incidents and emerging risks receive appropriate
+attention at the senior governance level.
+
+Cyber Risk
+
+Cyber risk refers to the potential for financial loss,
+operational disruption, or reputational damage
+arising from a failure or compromise of the Bank’s
+information systems, digital infrastructure, or data
+integrity due to malicious cyber activity or security
+vulnerabilities. This includes threats such as
+ransomware, phishing, data breaches, and other
+forms of cyberattack.
+
+The Bank recognises cyber risk as a material com-
+ponent of its operational risk profile and has em-
+bedded it within its broader risk management and
+governance frameworks. A multi-layered cyber de-
+fence strategy is in place, incorporating preventive
+controls, real-time monitoring, incident response
+protocols, and regular penetration testing. The
+Bank’s Information Security team works closely
+with the Risk, Compliance, and IT Operations func-
+tions to ensure a proactive approach to threat de-
+tection, vulnerability management, and regulatory
+alignment.
+
+Cyber resilience is further supported by staff
+awareness programmes, _ third-party risk
+assessments, and oversight by the IT and
+Operations Committee (ITOC). The Board and
+Risk & Compliance Committee (RCC) receive
+regular updates on the Bank’s cyber risk
+posture, including emerging threats, control
+effectiveness, and response readiness. As the
+threat landscape continues to evolve, the Bank
+remains committed to ongoing investment in
+cyber capabilities and to maintaining a secure
+and resilient technology environment.
+
+Compliance Risk
+
+Compliance risk refers to the potential for legal or
+regulatory sanctions, significant financial loss, or
+reputational damage that may arise from the
+Bank’s failure to adhere to applicable laws, regula-
+tions, rules, standards issued by self-regulatory or-
+ganisations, and codes of conduct relevant to its
+
+The Second Line Compliance function plays a
+pivotal role in supporting the Bank’s regulatory
+compliance framework through a combination
+of advisory and assurance activities. This
+includes the development and delivery of an
+annual Compliance Monitoring Plan, aligned
+with the Bank’s_ risk profile, regulatory
+
+Union Bank
+
+( of India (UK) Ltd
+
+banking operations.
+
+This risk category encompasses the following
+components:
+
+e Integrity Risk, including the management
+of actual or perceived conflicts of inter-
+est.
+
+e Financial Crime Risk, covering areas such
+as anti-money laundering (AML), sanc-
+tions, and external fraud; and
+
+e Regulatory Compliance Risk, which per-
+tains to the Bank’s adherence to all appli-
+cable statutory and supervisory require-
+ments.
+
+requirements, and strategic priorities. The plan
+is designed to complement First Line Quality
+Assurance and control oversight activities,
+particularly in areas where control gaps or
+emerging risks have been identified. During the
+year, the Compliance team has strengthened its
+collaboration with First Line Risk and Control
+functions—a key area of ongoing focus as the
+Bank continues to enhance its risk maturity and
+embed a strong culture of compliance across
+the organisation.
+
+Conduct Risk
+
+Conduct risk is the risk that the actions or behaviours
+of the Bank, its employees, or partners may lead to
+poor outcomes for customers, regulatory breaches,
+or reputational harm.
+
+The Bank embeds high standards of conduct across
+all operational activities, Senior Management, via the
+Executive Management Committee (EMC), holds
+primary responsibility for identifying and managing
+conduct risk, with formal oversight by the Risk and
+Compliance Committee (RCC) and/or the Board.
+
+Conduct risk is monitored through a suite of
+indicators, including customer complaints, sales
+practices, and product governance metrics. These
+are reviewed on a monthly basis by both Executive
+and Board-level committees to ensure timely
+identification of issues and to promote
+accountability.
+
+The Bank places strong emphasis on fair customer
+treatment, particularly in relation to vulnerable
+customers, and is committed to ensuring its products
+and services are clear, equitable, and aligned with
+customer needs.
+
+As part of its regulatory alignment, the Bank
+implemented the FCA’s Consumer Duty regime in
+July 2023 and continues to monitor progress to
+ensure good outcomes for retail customers. Regular
+reviews are undertaken to assess adherence to the
+Consumer Duty principles and embed a customer-
+first culture across all business lines.
+
+CLIMATE-RELATED FINANCIAL DISCLOSURES
+
+In accordance with the Companies (Strategic Report) (Climate-related Financial Disclosure) Regulations
+
+2022, and in alignment with the recommendations of the Task Force on Climate-related Financial
+
+Disclosures (TCFD), the Bank recognises climate change as a financially material and strategic risk. Its
+implications span the Bank’s lending, investment, and operational activities, and it is therefore
+
+embedded within the Bank’s broader risk management and governance frameworks.
+
+The Bank is committed to integrating climate-related risks, macro-economic risk, financial crime risk,
+strategic risk and opportunities into its long-term strategic planning, governance structures, and risk
+
+oversight processes, thereby enhancing resilience and contributing to sustainable finance objectives.
+
+10
+Governance and Oversight
+
+A comprehensive climate governance framework has been established, with clearly defined
+roles and responsibilities:
+
+The Board of Directors retains ultimate accountability for climate-related risk and
+approves the Bank’s Climate Risk Policy.
+
+The Risk & Compliance Committee (RCC) provides oversight of climate-related risk
+identification, monitoring, and escalation processes.
+
+The Audit Committee (ACB) ensures the integrity, transparency, and reliability of
+climate-related financial disclosures.
+
+The Executive Management Committee (EMC) is responsible for operationalising the
+Bank’s climate strategy and implementation roadmap.
+
+The Chief Risk Officer (CRO) has executive responsibility for climate risk management
+and strategy. The CRO ensures that climate risk is integrated across the Bank’s risk
+taxonomy, policies, and controls, and leads reporting to the RCC and Board.
+
+The Credit and Investment Committees incorporate climate-related considerations
+into lending, credit risk, and investment decision-making, particularly in relation to
+high-emission or climate-sensitive sectors.
+
+Climate Risk Policy and Implementation Framework
+
+The Bank’s Climate Risk Policy is structured around four key pillars to enable consistent and
+measurable implementation:
+
+1.
+
+Data Collection: Capturing climate-relevant data—such as Energy Performance
+Certificate (EPC) ratings and sectoral risk classifications—at the point of loan
+origination, in collaboration with Credit and Treasury teams.
+
+Due Diligence Integration: Embedding qualitative and quantitative climate risk
+assessments into credit underwriting, investment decisions, and client onboarding
+processes.
+
+Metric Development: Establishing internal metrics and Key Risk Indicators (KRIs) to
+monitor climate-related exposures, data coverage, and transition risk sensitivity.
+
+Training and Awareness: Delivering ongoing training to frontline staff, risk functions,
+and senior management to promote climate risk literacy across the organisation.
+
+Risk Monitoring and Scenario Analysis
+
+The Bank actively monitors climate-related financial risk through a range of quantitative and
+qualitative indicators. These include EPC ratings, counterparty ESG profiles, and climate stress
+testing methodologies aligned with the PRA’s Climate Biennial Exploratory Scenarios (CBES).
+To date, these assessments have not identified material climate-related exposures under
+baseline or stressed conditions.
+
+Climate considerations have been formally integrated into the Bank’s Credit, Investment, and
+Outsourcing Policies, and relevant disclosures and controls are embedded within the Bank’s
+Internal Capital Adequacy Assessment Process (ICAAP).
+
+11
+YY Union Bank
+
+of india (UK) Ltd
+The Risk Management function, under the leadership of the CRO, is responsible for advancing
+the Bank’s climate strategy, supported by cross-functional engagement and periodic reporting
+to the RCC and the Board.
+
+Forward Strategy
+
+The Bank recognises that climate risk management is a dynamic area, subject to regulatory
+evolution, market expectations, and data availability. It remains committed to refining its
+approach in line with emerging best practices, enhancing scenario modelling capability,
+improving data granularity, and developing sector-specific climate risk frameworks
+
+STRATEGIC OVERSIGHT AND GOVERNANCE
+
+The Bank’s governance framework is underpinned by effective Board leadership, a clearly defined
+organisational purpose, and a strong commitment to integrity, accountability, and long-term value
+creation. The Board of Directors provides strategic direction and independent oversight of the Bank’s
+activities, ensuring that operational execution remains aligned with its stated objectives, risk appetite,
+and regulatory obligations.
+
+The Board maintains a close working relationship with senior management to monitor strategic
+implementation, assess financial and non-financial performance, and challenge key decisions where
+appropriate. It operates within a well-defined governance framework and adheres to the expectations
+of the Senior Managers and Certification Regime (SM&CR).
+
+Board composition reflects an appropriate balance of skills, experience, and independence. The Board
+comprises both UK-based independent Non-Executive Directors (INEDs) and senior representatives
+from the Parent Bank, ensuring that decisions benefit from a blend of local market knowledge and
+institutional continuity. This structure enhances the quality of Board deliberations, facilitates
+constructive challenge, and supports well-informed decision-making across all aspects of governance.
+
+The Bank’s governance framework is supported by a well-established Board committee structure that
+enables effective oversight and delegation. The key Board-level committees, as defined in their
+respective Terms of Reference, are:
+
+* Board of Directors: The Board is responsible for the overall governance of the Bank, including
+setting strategic direction, providing oversight of executive management, and ensuring robust
+corporate governance standards are maintained. The Board meets at least quarterly, with
+additional meetings held as required.
+
+« ACB: Sub-committee of the Board, the ACB oversees the integrity of the Bank’s financial
+reporting, the effectiveness of the internal control environment, and the work of both internal
+and external auditors. It ensures that financial statements and disclosures are accurate,
+comply with applicable standards, and are subject to rigorous assurance. The Committee
+meets at least four times a year, in line with its Terms of Reference.
+
+e RCC: Sub-committee of the Board provides oversight of the Bank’s risk management and
+compliance frameworks. Its remit includes monitoring key risk exposures across credit,
+market, operational, and liquidity risk categories, as well as ensuring compliance with
+regulatory requirements and conduct standards. The Committee meets at least quarterly.
+
+e Management Committee of the Board (MCB): Sub-committee of the Board, the MCB is
+responsible for reviewing and approving credit proposals within its delegated authority and
+
+42
+1} Union Bank
+of India (UK) Ltd
+
+approval of capital & revenue expenditure beyond the delegated power of MD&CEO. It meets
+at least quarterly, or more frequently as required.
+
+Board Engagement and Continuous Improvement
+
+All Directors actively participated in Board and Committee meetings throughout the year,
+demonstrating a high level of engagement and a strong collective commitment to effective
+governance. The Board has also fostered a culture of continuous improvement by undertaking
+periodic effectiveness reviews, supporting ongoing training and development for Directors,
+and engaging in regular regulatory horizon scanning. These practices ensure that the Board
+remains well-informed, responsive to emerging risks, and aligned with evolving supervisory
+expectations.
+
+Board Changes and Cultural Leadership
+
+After 11 years of distinguished service, Patrick Quinn retired from the Board in February 2025.
+Patrick made a significant and lasting contribution to the Bank, particularly in strengthening its
+risk governance and committee structures. The Board extends its sincere thanks for his
+dedication and leadership, and we wish him well in his retirement.
+
+We were pleased to welcome Dawn Brown as an Independent Non-Executive Director and
+Chair of the Board Risk Committee. Dawn brings deep cross-sector expertise in risk and
+governance, strategy, transformation, ESG, and cultural leadership. Her appointment
+reinforces the Board’s commitment to progressive governance and stakeholder-focused
+oversight.
+
+Ongoing Commitment
+
+The Bank remains committed to maintaining a governance framework that is proportionate,
+resilient, and fit for purpose. Transparent decision-making, strong oversight, and cultural
+accountability are embedded across the organisation. This integrated approach supports the
+Bank’s ability to deliver sustainable value to stakeholders, maintain regulatory confidence, and
+adapt to evolving expectations while fostering an engaged, high-performing workforce.
+
+OPERATIONAL RESILIENCE
+
+The Bank continues to prioritise operational resilience as a critical element of sustainable service
+delivery and regulatory compliance, in line with the UK Prudential Regulation Authority’s (PRA)
+Supervisory Statement $S1/21 and FCA guidance. Operational resilience underpins the Bank's
+commitment to ensuring the continuity of Important Business Services (IBS) during periods of
+disruption and supporting wider financial system stability.
+
+In FY 2025-26, the Bank successfully completed Phase II of its Operational Resilience Framework,
+achieving full compliance with regulatory expectations ahead of the March 2025 deadline. A
+comprehensive Self-Assessment Document, approved by the Board on 30" March 2025, outlines the
+Bank's approach to identifying IBS, setting impact tolerances, mapping resources, conducting stress
+testing across five key disruption scenarios, and implementing corrective actions.
+
+13
+(9) Union Bank
+of India (UK) Ltd
+Stress scenarios included:
+
+¢ Third-party service failures
+e Internal technology outages
+e Data feed interruptions
+
+e Physical access restrictions
+e Cybersecurity incidents
+
+Each scenario was assessed for plausibility and impact, with documented testing, remediation, and
+integration into the Bank’s broader risk and continuity frameworks.
+
+Completion of Phase II marks a significant milestone in the Bank’s resilience journey. Operational re-
+silience capabilities are now embedded, with IBS actively monitored, impact tolerances clearly de-
+fined, and governance structures in place to support ongoing enhancement. The Bank remains com-
+mitted to continuous improvement, with regular scenario testing, framework updates, and alignment
+with evolving regulatory expectations.
+
+DIRECTORS STATEMENT OF COMPLIANCE WITH SECTION 172(1) OF THE COMPANIES ACT 2006
+
+The Directors of Union Bank of India (UK) Ltd. recognise their duty under Section 172(1) of the
+Companies Act 2006 to act in good faith and promote the long-term success of the Bank for the
+benefit of its members. In discharging this duty, the Directors consider the interests of the Bank’s
+employees, customers, suppliers, and other key stakeholders, while maintaining high standards
+of conduct, business responsibility, and governance.
+
+The Board also recognises that its decisions affect not only the Bank’s shareholder, but also a wide
+range of stakeholders, including customers, employees, regulators, suppliers, and the
+communities in which the Bank operates. The Directors seek to balance these interests in a
+manner that promotes the long-term sustainability and reputation of the Bank.
+
+Throughout the year, the Directors have taken a range of actions consistent with these obliga-
+tions. Key examples include:
+
+ENGAGEMENT WITH STAKEHOLDERS
+
+Stakeholder Management & Engagement of stakeholder
+
+Employees During the year, the Bank placed renewed emphasis on shaping and
+embedding a strong, inclusive, and purpose-led culture. A Culture
+Steering Committee was formally established to drive this agenda,
+supported by regular employee engagement initiatives, culture sur-
+veys, and open feedback mechanisms. These efforts helped the
+Bank better understand employee sentiment, identify key areas for
+improvement, and monitor progress in building an environment
+aligned with its values.
+
+To provide strategic oversight, the Board appointed a Non-Execu-
+tive Director as Culture Sponsor, who provides leadership and chal-
+lenge to the Steering Committee and ensures regular reporting to
+the Board. Under this governance structure, a detailed Culture Ac-
+tion Plan was developed, focused on improving communication,
+leadership behaviours, recognition, diversity and inclusion, and
+
+14
+(J Union Bank
+
+of India (UK) Ltd
+
+alignment with the Bank’s long-term purpose. Staff feedback has
+been central to this process, and culture remains a standing item
+on relevant Board and Committee agendas.
+
+Employee wellbeing, engagement, and ethical conduct are viewed
+as critical enablers of sustainable business performance. Initiatives
+such as the 'Employee of the Quarter' programme, enhanced train-
+ing and development offerings, and regular two-way communica-
+tion forums have supported a positive working environment. The
+Bank’s Whistleblowing Policy and escalation framework continue
+to provide safe, confidential channels for raising concerns.
+
+Customers
+
+Customer-centricity remains central to the Bank’s strategy. In line
+with the Financial Conduct Authority’s (FCA) Consumer Duty require-
+ments, the Bank has conducted comprehensive product gap anal-
+yses, fair value assessments, and enhancements to customer com-
+munications to ensure clarity and accessibility. These activities are
+part of a broader programme to embed the Consumer Duty princi-
+ples across the Bank’s operations.
+
+The Bank provides a bespoke, relationship-led service for lending
+customers and delivers a quick, straightforward, and efficient ac-
+count opening and servicing experience for savings customers. Cus-
+tomers can engage with the Bank through multiple channels, includ-
+ing the London branch, which continues to serve as an important hub
+for personalised service—particularly for SMEs and retail depositors.
+
+Ongoing initiatives such as targeted staff training, regular client feed-
+back mechanisms, and improvements to multi-channel service deliv-
+ery ensure that customer needs are addressed fairly, promptly, and
+transparently. Customer satisfaction and advocacy are actively
+measured and monitored, during the year.
+
+Insights gathered from customer surveys and direct engagement are
+regularly reported to the Board to inform strategic and operational
+improvements. To reinforce Board-level oversight, an independent
+Non-Executive Director has been appointed as the Bank’s Consumer
+Duty Champion, ensuring that good customer outcomes remain a
+core consideration in decision-making across all levels of the
+organisation.
+
+Suppliers
+
+The Bank maintains collaborative and well-governed relationships with
+suppliers and third-party service providers. Key practices include semi-
+annual vendor risk assessments, robust outsourcing oversight, and
+timely payment reviews. All supplier engagements are governed by clear
+contractual arrangements and subject to Board-level scrutiny to
+safeguard operational resilience.
+
+Regulators
+
+The Bank places strong emphasis on maintaining transparent and
+compliant relationships with all its regulators in an open and co-
+Operative manner. Directors, through active oversight and timely
+interventions, ensure that regulatory changes are fully adopted,
+
+15
+1] Union Bank
+of India (UK) Ltd
+
+embedded, and adhered to. The Board Risk & Compliance Committee
+holds direct oversight of regulatory, risk, and compliance matters.
+Senior Management and Directors actively engage with PRA and FCA
+supervisory teams through structured meetings and ongoing dialogue.
+These interactions take place both directly and through membership in
+key industry associations, such as Association of Foreign Banks. The Bank
+is committed to maintaining regulatory confidence through clarity,
+responsiveness, and a culture of compliance.
+
+This repart w;
+
+approved by the Board of Directors on 12" June 2025 and signed on its behalf by
+
+16
+'U) Union Bank
+
+of India (UK) Ltd
+DIRECTOR’S REPORT
+
+The Directors have pleasure in presenting the Annual Report and the audited financial statements of
+Union Bank of India (UK) Ltd (the "Bank") for the financial year ended 31 March 2025. The financial
+statements have been prepared in accordance with applicable UK company law and UK-adopted
+International Accounting Standards.
+
+Union Bank of India (UK) Ltd is a wholly owned subsidiary of Union Bank of India (the “Parent Bank”),
+one of India’s leading public sector banks. The Bank operates in the United Kingdom, offering a range
+of banking services to corporate and individual clients, while maintaining strategic alignment with the
+values, risk appetite, and global aspirations of the Parent Bank.
+
+Directors
+
+The Directors who served during the year and to the date of signing the financial statements, are listed
+on page 1. The significant changes in the directors for the period are as under:
+
+e Mr. Patrick Joseph Quinn (resigned 28 February 2025)
+e Mrs Dawn Brown (appointed 28 September 2025)
+
+Results and Dividend
+
+The Bank reported a net loss after tax of USD 6.6 million for the financial year ended 31 March 2025
+(2024: profit of USD 1.5 million). The loss was primarily driven by increased impairment loss
+allowances.
+
+Total operating income for the year stood at USD 13.3 million (2024: USD 16.4 million), while operating
+expenses before impairment loss allowances were USD 9.7 million (2024: USD 9.5 million).
+
+The Directors do not recommend the payment of a dividend for the year under review (2024: Nil).
+
+Business Focus and Strategy
+
+Throughout the financial year 2024-25, the Bank remained firmly focused on delivering against its
+strategic priorities, which include:
+
+e Concentrating on UK-based assets and optimising origination through the syndication channel.
+e Minimising stressed assets and building a resilient, sustainable balance sheet.
+e Actively managing market risk within the investment portfolio.
+
+Despite macroeconomic headwinds, the Bank’s continued emphasis on responsible, moderate growth
+has provided a stable foundation. While the financial results reflect the impact of higher impairment
+allowances, our underlying strategy remains sound and aligned with long-term value creation for all
+stakeholders. The Bank remains committed to prudent risk management as a key enabler of
+sustainable performance. Losses stemmed from legacy exposures. The Bank now applies tighter
+underwriting standards.
+
+The Board of Directors is responsible for setting the strategic direction of the Bank. A comprehensive
+five-year business plan outlines projected growth, capital and liquidity needs, and operational
+capabilities. This is supported by a detailed annual budgeting process, which sets short-term objectives
+and enables ongoing performance monitoring through robust monthly management reviews.
+YY Union Bank
+
+of india (UK) Ltd
+Going Concern
+
+The financial statements have been prepared on a going concern basis. The Directors have a
+reasonable expectation that the Bank has adequate resources to continue in operational existence
+for at least 12 months from the date of approval of these financial statements, and for the foreseeable
+future.
+
+In reaching this conclusion, the Directors have undertaken a thorough assessment of the Bank’s
+current financial position and future prospects. This included detailed consideration of:
+
+e The principal risks and uncertainties facing the Bank, as set out in the Strategic Report.
+e The strength of the Bank’s balance sheet.
+
+e Forecast profitability and cash flows.
+
+e Capital and liquidity resources; and
+
+e Alignment with the Bank’s long-term strategic plan.
+
+The Bank’s capital and liquidity management frameworks, including the Internal Capital Adequacy
+Assessment Process (ICAAP) and the Internal Liquidity Adequacy Assessment Process (ILAAP), have
+been rigorously tested under severe but plausible stress scenarios. These stress tests incorporated
+macroeconomic factors, including the potential impact of geopolitical tensions, regulatory shifts, and
+India’s sovereign credit rating.
+
+Based on this analysis, the Board is satisfied that the Bank will remain in compliance with all
+regulatory capital and liquidity requirements throughout the forecast period. No material
+uncertainties have been identified that would cast significant doubt on the Bank’s ability to continue
+as a going concern.
+
+Accordingly, the Directors consider it appropriate to prepare the financial statements on a going
+concern basis.
+
+Diversity and Inclusion
+
+The Bank is committed to fostering a culture of inclusion, respect, and equal opportunity across all
+aspects of its operations. Diversity and inclusion are integral to the Bank’s values and decision-making
+processes, enhancing innovation, collaboration, and long-term sustainability.
+
+We actively promote a working environment where all individuals—regardless of ethnicity, gender,
+age, disability, sexual orientation, religion, or any other personal characteristic—feel welcomed,
+supported, and empowered to contribute. This approach extends to our interactions with colleagues,
+customers, suppliers, and stakeholders, reinforcing our goal of building a fair and inclusive financial
+institution.
+
+The Bank continues to implement inclusive policies and practices, regularly reviewing them to ensure
+alignment with evolving standards and societal expectations.
+
+Supplier Payment Policy
+
+The Bank is committed to maintaining strong and transparent relationships with its suppliers. As part
+of this commitment, the Bank strictly adheres to its policy of meeting all payment obligations
+promptly and in accordance with agreed contractual terms.
+
+18
+YY Union Bank
+
+of India (UK) Ltd
+The Bank ensures that all creditors are paid within the timeframes stipulated on invoices, thereby
+promoting ethical and responsible business practices throughout its supply chain. This policy
+supports the Bank’s broader commitment to operational integrity and supplier trust.
+
+Capital Structure
+
+The Bank has maintained an adequate and robust capital base throughout the year, in compliance
+with the minimum regulatory capital requirements established by the Prudential Regulation
+Authority (PRA).
+
+As of 31 March 2025, the Bank’s issued and fully paid-up share capital remained unchanged from the
+prior year, comprising USD 150 million and GBP 2. There were no changes to the issued share capital
+during the financial year.
+
+All shares are held by Union Bank of India, the Parent Bank, which owns 100% of the equity share
+capital of the Union Bank of India (UK) Ltd.
+
+Principal Risk and uncertainties
+
+The Bank has developed, and will continue to enhance the risk management framework, including
+granular articulation of risk appetite, to ensure that the key risks are clearly identified, understood,
+measured, monitored and mitigated. The Bank is primarily exposed to Credit Risk, Market Risk,
+Liquidity Risk, Capital Risk, Operational Risk and Conduct Risk. These are discussed in detail in the
+Strategic report page 7. Further details are also discussed under Notes to financial Statements (Note
+25).
+
+Political and Charitable Donations
+
+The Bank did not make any political and charitable donations in this financial year (2024: Nil).
+Directors’ Indemnities
+
+The Bank maintains Directors’ and Officers’ Liability Insurance for all members of the Board. This
+insurance provides cover for legal defence costs and liabilities that may arise in connection with their
+duties as directors or officers of the Bank, subject to the terms and conditions of the policy.
+
+In accordance with the provisions of the Companies Act 2006, each Director has been granted a deed
+of indemnity covering liabilities that may be incurred in connection with their role, including liabilities
+to third parties. These indemnities were in force throughout the financial year and remain in place as
+at the date of this report.
+
+Any Director appointed during the year was granted such an indemnity on appointment.
+
+Internal Audit
+
+The Internal Audit function operates independently and provides objective assurance to the Board
+and senior management regarding the effectiveness of the Bank’s governance, risk management, and
+
+internal control systems.
+
+The Board Audit Committee oversees the Internal Audit function, approves its annual audit plan and
+budget, and monitors its performance. At each Committee meeting, the Internal Auditor presents a
+
+19
+YY Union Bank
+
+of India (UK) Ltd
+
+comprehensive status report outlining progress against the audit plan, findings from completed
+audits, and the implementation status of agreed recommendations.
+
+The Committee ensures that Internal Audit has adequate resources, independence, and access to all
+levels of management. It also evaluates the implications of audit findings and monitors the timely
+resolution of identified issues to ensure continuous improvement in control effectiveness.
+
+Statement as to Disclosure of Information to the Auditor
+
+Each of the Directors who held office at the date of approval of this report confirms that:
+e So far as the Director is aware, there is no relevant audit information of which the Bank’s Au-
+ditor is unaware; and
+e The Director has taken all the steps that they ought to have taken as a Director in order to
+make themselves aware of any relevant audit information and to ensure that the Bank’s Audi-
+tor is aware of such information.
+
+This confirmation is given in accordance with Section 418 of the Companies Act 2006.
+Statutory Auditor
+
+There was no change in the Auditor of the Bank for the year ended 31 March 2025.
+Forvis Mazars LLP were reappointed under Section 487 of the Companies Act 2006 for the financial
+year 2023-24. Mazars LLP are the Statutory Auditor of the Bank, and they have expressed their
+willingness to continue as Auditor of the Bank.
+
+Events after Balance Sheet Date
+
+Ms. A Manimekhalai completed her tenure at the parent bank on 2" June 2025 and, consequently,
+ceased to be a Director and Chair of Union Bank of India (UK) Ltd. with effect from 3 June 2025. As
+this event occurred after the reporting date, it does not affect the financial position of the Bank as at
+31 March 2025. However, given the significance of the Chair’s role in the Bank’s governance
+framework, it is disclosed as a non-adjusting post balance sheet event in accordance with IAS 10.
+
+General Meeting
+
+In accordance with the Companies Act 2006, the Bank is not required to hold an Annual General
+Meeting (AGM).
+
+Company law requires the directors to prepare financial statements for each financial year. Under
+that law the directors are required to prepare the financial statements in accordance with applicable
+law and UK-adopted international accounting standards.
+
+This regort ved by the Board of Directors on 12th June 2025 and signed on its behalf by
+
+20
+(Y Union Bank
+
+of India (UK) Ltd
+
+STATEMENT OF DIRECTORS’ RESPONSIBILITIES
+FOR THE YEAR ENDED 31 March 2025
+
+The Directors are responsible for preparing the Annual Report and the financial statements in
+accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that
+law the directors are required to prepare the financial statements in accordance with international
+accounting standards in conformity with the requirements of the Companies Act 2006. The financial
+statements also comply with International Financial Reporting Standards as issued by the IASB. Under
+company law the Directors must not approve the financial statements unless they are satisfied that
+they give a true and fair view of the state of affairs of the Bank and of the profit or loss of the Bank for
+that period. In preparing these financial statements, International Accounting Standard 1 requires that
+directors:
+
+e Properly select and apply accounting policies;
+
+e Present information, including accounting policies, in a manner that provides relevant, relia-
+ble, comparable and understandable information;
+
+e Provide additional disclosures when compliance with the specific requirements in IFRSs are
+insufficient to enable users to understand the impact of particular transactions, other events
+and conditions on the entity's financial position and financial performance; and
+
+e Make an assessment of the Banks’ ability to continue as a going concern.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to show and
+explain the Banks’ transactions and disclose with reasonable accuracy at any time the financial position
+of the Bank and enable them to ensure that the financial statements comply with the Companies Act
+2006. They are also responsible for safeguarding the assets of the Bank and hence for taking
+reasonable steps for the prevention and detection of fraud and other irregularities.
+
+The Directors are responsible for the maintenance and integrity of the corporate and financial
+information included on the Bank’s website. Legislation in the United Kingdom governing the
+preparation and dissemination of financial statements may differ from legislation in other jurisdictions.
+
+We confirm that to the best of our knowledge:
+¢ the financial statements, prepared in accordance with the relevant financial reporting frame-
+work, give a true and fair view of the assets, liabilities, financial position and profit or loss of the
+Bank and the undertakings included in the consolidation taken as a whole.
+
+e the strategic report includes a fair review of the development and performance of the business
+and the position of the Bank, and the undertakings included in the consolidation taken as a
+whole, together with a description of the principal risks and uncertainties that they face; and
+
+* the annual report and financial statements, taken as a whole, are fair, balanced, and under-
+standable and provide the information necessary for the shareholder to assess the Banks’ posi-
+
+tion, performance, business model and strategy.
+
+By order of the Board and signed on its behalf
+
+Rahul Kumar 4 Arbind
+
+Exec! irector & COO Managing Ditéc
+
+21
+Independent auditor’s report to the members of Union
+Bank of India (UK) Limited
+
+Opinion
+
+We have audited the financial statements of Union Bank of India (UK) Limited (the ‘Bank’) for the year
+ended 31 March 2025 which comprise the Income Statement, the Statement of Other Comprehensive
+Income, the Statement of Financial Position, the Statement of Changes in Equity, the Statement of
+Cash Flows, and Notes to the Financial Statements, including material accounting policy information.
+
+The financial reporting framework that has been applied in their preparation is applicable law and UK-
+adopted international accounting standards.
+
+In our opinion, the financial statements:
+e give a true and fair view of the state of the Bank’s affairs as at 31 March 2025 and of its loss
+for the year then ended;
+« have been properly prepared in accordance with UK-adopted international accounting
+standards; and
+« have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and
+applicable law. Our responsibilities under those standards are further described in the “Auditor's
+responsibilities for the audit of the financial statements” section of our report. We are independent of
+the Bank in accordance with the ethical requirements that are relevant to our audit of the financial
+statements in the UK, including the Financial Reporting Council's (‘FRC’) Ethical Standard as applied
+to public interest entities, and we have fulfilled our other ethical responsibilities in accordance with these
+requirements. We believe that the audit evidence we have obtained is sufficient and appropriate to
+provide a basis for our opinion.
+
+Conclusions relating to going concern
+
+In auditing the financial statements, we have concluded that the directors’ use of the going concern
+basis of accounting in the preparation of the financial statements is appropriate.
+
+Our audit procedures to evaluate the directors’ assessment of the Bank's ability to continue to adopt
+the going concern basis of accounting included but were not limited to:
+
+* Undertaking an initial assessment at the planning stage of the audit to identify events or
+conditions that may cast significant doubt on the Bank's ability to continue as a going concern;
+
+* Making enquiries of the directors to understand the period of assessment considered by them,
+the assumptions they considered and the implication of those when assessing the Bank's future
+financial performance;
+
++ Assessing the sufficiency of the Bank’s capital and liquidity taking into consideration the most
+recent Internal Capital Adequacy Assessment Process (‘ICAAP’) and Internal Liquidity
+Assessment Process (‘ILAAP’), and evaluating the results of management stress testing,
+including consideration of principal risks on liquidity and regulatory capital;
+
+* Challenging the appropriateness of the directors’ key assumptions used in the forecasts such
+as net business growth, net interest margins, profitability, reviewing supporting and
+contradictory evidence in relation to these assumptions, and assessing the directors’
+considerations of severe but plausible scenarios;
+
++ Assessing the historical accuracy and the arithmetical accuracy of the forecasts prepared by
+the directors;
+
+22
+* Performing sensitivity analysis by incorporating various stress scenarios to assess the impact
+on the capital and liquidity position of the Bank;
+
++ Inspecting correspondence with the Prudential Regulation Authority (‘PRA’) and with the
+Financial Conduct Authority (‘FCA’) and holding bi-lateral discussions with the PRA;
+
++ — Inspecting minutes of risk and compliance committee of the board, the audit committee of the
+board, the management committee of the board and the board of directors meetings;
+
++ Considering the consistency of the directors’ forecasts with other areas of the annual accounts
+and our audit;
+
+* Considering whether there were events subsequent to the balance sheet date which could have
+a bearing on the going concern conclusion; and
+
++ Evaluating the appropriateness of the directors’ disclosures in the financial statements in
+relation to the description of the directors’ assessment of going concern.
+
+Based on the work we have performed, we have not identified any material uncertainties relating to
+events or conditions that, individually or collectively, may cast significant doubt on the Bank's ability to
+continue as a going concern for a period of at least twelve months from when the financial statements
+are authorised for issue.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described
+in the relevant sections of this report.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in
+our audit of the financial statements of the current period and include the most significant assessed
+risks of material misstatement (whether or not due to fraud) we identified, including those which had the
+greatest effect on: the overall audit strategy; the allocation of resources in the audit; and directing the
+efforts of the engagement team. These matters were addressed in the context of our audit of the
+financial statements as a whole, and in forming our opinion thereon, and we do not provide a separate
+opinion on these matters.
+
+We summarise below the key audit matter in forming our audit opinion above, together with an overview
+of the principal audit procedures performed to address each matter and our key observations arising
+from those procedures.
+
+This matter, together with our findings, was communicated to those charged with governance through
+our Audit Completion Report.
+
+Key Audit Matter How our scope addressed this matter
+
+Credit risk in relation to impairment on | jn relation to the overall ECL process, our
+
+loans and advances to customers procedures included, but were not limited to:
+
+Impairment provision- $26.0 million * Obtaining an understanding of the ECL
+
+(2024: $21.8 million) process and assessing the design and
+implementation of key controls;
+
+[Refer to Notes 1, 11 and 26 of the e Performing a stand-back assessment of the
+
+financial statements] overall adequacy of the ECL coverage,
+taking into consideration the credit risk
+
+Credit risk is an inherently judgemental area profile of the portfolio and benchmarking
+
+due to the use of subjective assumptions across comparable lenders; and
+
+and a high degree of estimation. IFRS 9
+
+requires allowance for impairment losses to e Reviewing the financial _—_ statement
+
+be determined on an expected credit loss disclosures to ensure compliance with IFRS
+
+(‘ECL’) basis. 9.
+
+23
+The largest element of credit risk relates to
+loans and advances to customers where the
+Bank is exposed to secured and unsecured
+lending to corporate clients.
+
+The Bank calculates ECL using an externally
+developed model which is complex.
+
+The key areas of judgement and
+management estimation that give rise to a
+significant audit risk relate to:
+
+Utilising proxy data as a result of
+limited default history in estimating
+the probability of default ('PD’);
+
+- Applying management judgement in
+determining the loss given default
+
+(‘LGD’);
+
+- Staging of loans and_ the
+identification of Significant
+Increases in Credit Risk (‘SICR’);
+and
+
+- Valuation of stage 3 loans based on
+individual cash flow forecasts.
+
+Given the level of judgement and
+significance of these into the ECL
+calculation, we have identified a significant
+risk of error over the appropriateness of the
+judgements and the application of these.
+
+With respect to the key areas of judgement and
+management estimation giving rise to a significant
+risk, our procedures included, but were not limited
+
+to:
+
+With the assistance of our in-house credit
+modelling specialists:
+
+- Assessing compliance of the Bank's
+impairment methodology with the
+requirements of IFRS 9;
+
+- Reviewing the Bank’s ECL model
+design, model implementation and
+validation procedures;
+
+- Challenging and = assessing the
+reasonableness of key assumptions
+applied to determine PDs and LGDs
+including testing the completeness and
+accuracy of key data elements that are
+used within the PD and LGD
+assumptions;
+
+- Performing independent credit review
+testing and challenging management
+on the application of Significant
+increase in credit risk (‘SICR’) for a
+sample of counterparties to identify
+indicators of deterioration in credit
+quality and assess the appropriateness
+of the staging and associated ECL
+estimate;
+
+Obtaining an understanding of the
+scorecard review process and assessing
+the design and implementation, and testing
+the operating effectiveness of key controls
+related to this process;
+
+With the assistance of our in-house
+economist experts, assessing and
+challenging the reasonableness of
+economic scenarios and the probability
+weightings applied in the ECL model;
+
+Engaging our property valuation experts to
+check on a sample basis, the Bank's
+collateral valuation which is a key input into
+the model;
+
+Checking inputs of stage 3 loans with the
+underlying evidence; and
+
+Independently recalculating the ECL for all
+stage 3 loans to assess the present value of
+future cash flows under various recovery
+scenarios. This included evaluating
+management's assessment of _ the
+probability weighting for each scenario and
+
+24
+the incorporation of forward-looking
+information.
+
+Our observations
+
+Based on the procedures performed we found that
+the impairment provision on loans and advances to
+customers as at 31 March 2025 is not materially
+misstated and is materially consistent with the
+requirements of IFRS 9.
+
+Our application of materiality and an overview of the scope of our audit
+
+The scope of our audit was influenced by our application of materiality. We set certain quantitative
+thresholds for materiality. These, together with qualitative considerations, helped us to determine the
+scope of our audit and the nature, timing and extent of our audit procedures on the individual financial
+statement line items and disclosures and in evaluating the effect of misstatements, both individually and
+on the financial statements as a whole. Based on our professional judgement, we determined materiality
+for the financial statements as a whole as follows:
+
+Overall materiality $1,128,000 (2024: $1,753,000)
+How we determined it 1% of net assets (2024: 1.5% of net assets).
+Rationale for benchmark applied Due to the volatility of profits, net assets are
+
+considered to most appropriately reflect the size
+of the Bank’s operations. Furthermore, net assets
+is the main focus at this time for the users of the
+financial statements due to being an
+approximation of regulatory capital resources and
+the importance of regulatory capital to the Bank's
+solvency.
+
+Performance materiality Performance materiality is set to reduce to an
+appropriately low level the probability that the
+aggregate of uncorrected and undetected
+misstatements in the financial statements
+exceeds materiality for the financial statements
+as a whole.
+
+We set performance materiality at $789,600
+(2024: $1,052,000), which represents 70%
+(2024: 60%) of overall materiality.
+
+In determining the performance materiality, we
+considered a number of factors, including the
+level and nature of uncorrected and corrected
+misstatements in the prior year, and the
+robustness of the control environment and
+concluded that an amount towards the middle of
+our normal range was appropriate.
+
+25
+Reporting threshold We agreed with the directors that we would report
+to them misstatements identified during our audit
+above $33,800 (2024: $52,000) as well as
+misstatements below that amount that, in our
+| view, warranted reporting for qualitative reasons.
+
+As part of designing our audit, we assessed the risk of material misstatement in the financial statements,
+whether due to fraud or error, and then designed and performed audit procedures responsive to those
+risks. In particular, we looked at where the directors made subjective judgements such as assumptions
+on significant accounting estimates.
+
+We tailored the scope of our audit to ensure that we performed sufficient work to be able to give an
+opinion on the financial statements as a whole. We used the outputs of our risk assessment, our
+understanding of the Bank, its environment, controls and critical business processes, to consider
+qualitative factors in order to ensure that we obtained sufficient coverage across all financial statement
+line items.
+
+Other information
+
+The other information comprises the information included in the annual accounts other than the financial
+statements and our auditor's report thereon. The directors are responsible for the other information. Our
+opinion on the financial statements does not cover the other information and, except to the extent
+otherwise explicitly stated in our report, we do not express any form of assurance conclusion thereon.
+
+Our responsibility is to read the other information and, in doing so, consider whether the other
+information is materially inconsistent with the financial statements or our knowledge obtained in the
+course of the audit or otherwise appears to be materially misstated. If we identify such material
+inconsistencies or apparent material misstatements, we are required to determine whether this gives
+rise to a material misstatement in the financial statements themselves. If, based on the work we have
+performed, we conclude that there is a material misstatement of this other information, we are required
+to report that fact.
+
+We have nothing to report in this regard.
+
+Opinions on other matters prescribed by the Companies Act 2006
+In our opinion, based on the work undertaken in the course of the audit:
+e the information given in the strategic report and the directors’ report for the financial year for
+which the financial statements are prepared is consistent with the financial statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable
+legal requirements
+
+Matters on which we are required to report by exception
+
+In light of the knowledge and understanding of the Bank and its environment obtained in the course of
+the audit, we have not identified material misstatements in the strategic report or the directors’ report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act
+2006 requires us to report to you if, in our opinion:
+e adequate accounting records have not been kept by the Bank, or returns adequate for our audit
+have not been received from branches not visited by us; or
+e the Bank's financial statements are not in agreement with the accounting records and returns;
+or
+* certain disclosures of directors’ remuneration specified by law are not made; or
+
+26
+e we have not received all the information and explanations we require for our audit.
+
+Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement set out on page 16, the directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a true
+and fair view, and for such internal control as the directors determine is necessary to enable the
+preparation of financial statements that are free from material misstatement, whether due to fraud or
+error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank's ability to
+continue as a going concern, disclosing, as applicable, matters related to going concern and using the
+going concern basis of accounting unless the directors either intend to liquidate the Bank or to cease
+operations, or have no realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole
+are free from material misstatement, whether due to fraud or error, and to issue an auditor's report that
+includes our opinion. Reasonable assurance is a high level of assurance, but is not a guarantee that an
+audit conducted in accordance with ISAs (UK) will always detect a material misstatement when it exists.
+Misstatements can arise from fraud or error and are considered material if, individually or in the
+aggregate, they could reasonably be expected to influence the economic decisions of users taken on
+the basis of these financial statements.
+
+The extent to which our procedures are capable of detecting irregularities, including fraud is detailed
+below.
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design
+procedures in line with our responsibilities, outlined above, to detect material misstatements in respect
+of irregularities, including fraud.
+
+Based on our understanding of the Bank and its industry, we considered that non-compliance with the
+following laws and regulations might have a material effect on the financial statements: regulatory and
+supervisory requirements of the PRA and of the FCA and financial crime regulations.
+
+To help us identify instances of non-compliance with these laws and regulations, and in identifying
+and assessing the risks of material misstatement in respect to non-compliance, our procedures
+included but were not limited to:
+
+e Gaining an understanding of the legal and regulatory framework applicable to the Bank and the
+industry in which it operates, and considering the risk of acts by the Bank which were contrary
+to the applicable laws and regulations, including fraud;
+
+e Inquiring of the directors, management and, where appropriate, those charged with
+governance, as to whether the Bank is in compliance with laws and regulations, and discussing
+their policies and procedures regarding compliance with laws and regulations;
+
+e Inspecting correspondence with relevant regulatory authorities including the PRA and FCA and
+holding bilateral discussions with the PRA;
+
+e Inspecting minutes of the board of directors’ meetings in the year and up until the date of
+approval of the financial statements;
+
+« Attending audit committee of the board meetings held during the year and up until the date of
+approval of the financial statements and inspecting minutes of those meetings; and
+
+« Discussing amongst the engagement team the laws and regulation listed above, and remaining
+alert to any indications of non-compliance throutghout our audit.
+
+27
+We also considered those laws and regulations that have a direct effect on the preparation of the
+financial statements, such as UK tax legislation and the Companies Act 2006.
+
+In addition, we evaluated the directors’ and management's incentives and opportunities for fraudulent
+manipulation of the financial statements, including the risk of management override of controls, and
+determined that the principal risks related to posting manual journal entries to manipulate financial
+performance and management bias through judgements and assumptions in significant accounting
+estimates, in particular in relation to revenue recognition (which we pinpointed to the accuracy
+assertion).
+
+Our procedures in relation to fraud included but were not limited to:
+
+e Making enquiries of the directors and management on whether they had knowledge of any
+actual, suspected or alleged fraud;
+
+e Inspecting the Bank’s regulatory and legal correspondence and reviewing minutes of the board
+of directors’ meetings in the year;
+
+e Gaining an understanding of the internal controls established to mitigate risks related to fraud;
+
+¢ Being sceptical to the potential of management bias in key judgements and assumptions in
+significant accounting estimates;
+
+¢ Introducing elements of unpredictability in audit testing;
+
+e Addressing the risks of fraud through management override of controls by performing journal
+entry testing; and
+
+¢ Discussing amongst the engagement team the risks of fraud.
+
+The primary responsibility for the prevention and detection of irregularities including fraud rests with
+both those charged with governance and management. As with any audit, there remained a risk of non-
+detection of irregularities, as these may involve collusion, forgery, intentional omissions,
+misrepresentations or the override of internal controls.
+
+The risks of material misstatement that had the greatest effect on our audit, are discussed in the “Key
+audit matters” section of this report.
+
+A further description of our responsibilities is available on the FRC’s website at
+www. frc.org.uk/auditorsresponsibilities. This description forms part of our auditor's report.
+
+Other matters which we are required to address
+
+Following the recommendation of the audit committee of the board, we were appointed by the Bank's
+board of directors on 6 July 2021 to audit the financial statements for the year ended 31 March 2022
+and subsequent financial periods. The period of total uninterrupted engagement is four years, covering
+the years ended 31 March 2022 to 31 March 2025.
+
+The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the Bank and we
+remain independent of the Bank in conducting our audit.
+
+Our audit opinion is consistent with our additional report to the audit committee of the board.
+
+28
+Use of the audit report
+
+This report is made solely to the Bank's members as a body in accordance with Chapter 3 of Part 16 of
+the Companies Act 2006. Our audit work has been undertaken so that we might state to the Bank's
+members those matters we are required to state to themin an auditor's report and for no other purpose.
+To the fullest extent permitted by law, we do not accept or assume responsibility to anyone other than
+the Bank and the Bank’s members as a body for our audit work, for this report, or for the opinions we
+have formed.
+
+fs to
+
+Rudi Lang (Senior Statutory Auditor)
+
+for and on behalf of Forvis Mazars LLP
+Chartered Accountants and Statutory Auditor
+30 Old Bailey
+
+London
+
+EC4M 7AU
+
+26 June 2025
+
+29
+INCOME STATEMENT *
+
+FOR THE YEAR ENDED 31 March 2025
+
+Interest and similar income
+Interest and similar expense
+
+Net interest income
+
+Fees and commission income
+Net trading (loss) / income
+Net other operating income
+
+Total Operating income
+
+Personnel costs
+
+Depreciation and amortisation
+Finance Cost
+
+Other expenses
+
+Operating expenses before impairment loss allowances
+
+Operating profit before impairment loss allowances
+
+Impairment loss allowances
+
+Fair value gain on Foreign Exchange Derivatives
+
+(Loss) / Profit before tax
+
+Corporation tax (charge) / credit
+
+(Loss) / Profit after tax
+
+* There were no discontinued operations during the year
+
+The notes on pages 36 to 69 form part of these financial statements.
+
+Notes
+
+16&17
+
+(7 Union Bank
+
+of india (UK) Lid
+
+2025 2024
+
+USD '000 USD ‘000
+32,247 31,029
+(19,934) (16,852)
+12,313 14,177
+
+583 712
+
+(204) 46
+
+635 1,494
+
+13,327 16,429
+(5,063) (4,456)
+(685) (649)
+(466) (304)
+(3,520) (4,064)
+(9,734) (9,473)
+3,593 6,956
+(10,245) (5,593)
+
+44 125
+
+(6,608) 1,488
+(6,608) 1,488
+
+30
+FOR THE YEAR ENDED 31 March 2025
+
+STATEMENT OF OTHER COMPREHENSIVE INCOME YY Union Bank
+
+of india (UK) Ltd
+
+2025 2024
+USD ‘000 USD '000
+Total (Loss) / Profit for the year attributable to equity shareholder (6,608) 1,488
+Other comprehensive income net of tax
+Items that may be reclassified subsequently to profit or loss
+- Fair value gain on FVTOCI debt instruments 1,325 1,558
+Net other comprehensive Income 1,325 1,558
+Total comprehensive (loss) / income attributable to equity (5,283) 3,046
+
+shareholders for the year
+
+The notes on pages 36 to 69 form part of these financial statements.
+
+34
+STATEMENT OF FINANCIAL POSITION
+AS AT 31 March 2025 Y Union Bank
+of India (UK) Ltd
+Notes 2025 2024
+USD ‘000 USD ‘000
+
+Assets
+
+Cash and cash equivalents 9 14,195 8,336
+
+Financial assets at amortised cost:
+
+- Loans and advances to Banks 10 20,202 43,027
+
+- Loans and advances to customers 14 340,434 339,650
+
+- Financial investments 12 1,997 4,983
+
+Financial assets at FVTPL:
+
+- Financial investments 15.2 2,761 3,270
+
+Financial assets at FVOCI:
+
+- Financial investments 14 94,823 103,558
+
+Property, plant and equipment 16 4,586 5,207
+
+Intangible assets 17 18 71
+
+Other assets 19 2,001 1,402
+
+Total Assets 481,017 509,504
+
+Liabilities
+
+Financial liabilities at amortised cost:
+
+- Deposits from customers 20 348,633 387,541
+
+- Repurchase agreements 21 15,240 -
+
+Financial Liabilities at FVTPL:
+
+- Derivative financial instruments 13 1,436 194
+
+Provisions 22 184 172
+
+Other liabilities 22 3,924 4714
+369,417 392,621
+
+Total Liabilities
+
+32
+STATEMENT OF FINANCIAL POSITION ‘4
+AS AT 31 March 2025 ( | Union Bank
+
+of india (UK) Ltd
+
+Notes 2025 2024
+USD ‘000 USD '000
+
+Equity
+Share capital 23 150,000 150,000
+Fair value reserves (1,699) (3,024)
+Accumulated losses (36,701) (30,093)
+Total Sharehoilder's equity 111,600 116,883
+Total Equity and liabilities 481,017 509,504
+
+The notes on pages 36 to 69 form part of these financial statements.
+The financial statements were approved by the Board of Directors and authorised for issue on 12th June 2025.
+
+WD
+
+Rahul Kumar— | = Arbi ough
+Executtve 'Brectoraid' coor Managin ragto¥& C
+
+Company registration no: 07653660
+
+33
+STATEMENT OF CHANGES IN EQUITY
+
+FOR THE YEAR ENDED 31 March 2025
+
+U)
+
+Union Bank
+
+of india (UK) Ltd
+
+7 Fair value Retained Total
+Notes Issued capital 3 =
+reserves earnings equity
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+Balance as at 1 April 2024 23 150,000 (3,024) (30,093) 116,883
+Total Comprehensive Loss - 1,325 (6,608) (5,283)
+Loss for the year - - (6,608) (6,608)
+Profit on fair value reserve - 1,325 - 1,325
+Balance as at 31 March 20285 attributable 150,000 (1,699) (36,701) 111,600
+to shareholders of the Bank
+Notes Issued capital Fair value Retained Total
+reserves earnings equity
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+Balance as at 1 April 2023 23 150,000 (4,582) (31,581) 113,837
+Total Comprehensive profit - 1,558 1,488 3,046
+Profit for the year - - 1,488 1,488
+Other Comprehensive Profit : 1,558 - 1,558
+Balance as at 31 March 2024 attributable 150,000 (3,024) (30,093) 116,883
+
+to shareholders of the Bank
+
+The notes on pages 36 to 69 form part of these financial statements.
+
+34
+
+STATEMENT OF CASH FLOWS -
+FOR THE YEAR ENDED 31 March 2025
+
+Notes
+Cash flows from operating activities
+(Loss) / profit before tax for the year
+Adjustments to reconcile profit from operations:
+Interest Income 2
+Interest Expense 3
+Amortisation of intangible 17
+Impairment loss allowances
+Depreciation for property, plant and equipment 16
+
+FV movement in derivatives
+
+Effects of exchange rate changes on cash and cash equivalents
+FV movement of investments at FVTPL
+
+Finance Charge on Lease 22
+Cash flows before changes in working capital
+
+Movement in working capital
+
+(Increase) in receivables & prepayments
+
+(Decrease) / Increase in other liabilities
+
+Change in working capital
+
+Cash flows from operating activities
+
+(Decrease) in loans and advances to customers
+
+Interest received on loans and advances to customers
+Decrease in loans and advances to banks
+
+Interest received on loans and advances to banks
+
+(Decrease) / Increase in deposits from customers
+
+Interest paid on deposits from customers
+
+Decrease in derivative financial instruments - Assets
+
+Increase on derivative financial instruments - Liab.
+
+Net cash flows (used in) / from operating activities (A)
+
+Cash flows from investing activities
+
+Acquisition of Investments
+
+Proceeds from Investments
+
+Interest received on Investments
+
+Acquisition of property, plant and equipment 16
+Acquisition of intangible assets 17
+Net cash flows from /(used in) investing activities (B)
+
+Cash flows from financing activities
+
+Repayment of Inter Bank borrowings
+
+Interest Paid on Inter bank borrowings
+
+Proceeds from Repurchase agreements
+
+Interest Paid on Repurchase agreements
+
+Repayment of Lease 22
+Net cash flows from /(used in) financing activities (C)
+
+Net increase /(decrease) in cash and cash equivalents (A+B+C)
+
+Cash and cash equivalents at beginning of the year
+
+Effects of exchange rate changes on cash and cash equivalents
+
+Cash and cash equivalents at close of the year 9
+The notes on pages 36 to 69 form part of these financial statements.
+
+) Union Bank
+of india (UK) Lte
+2025 2024
+USD ‘000 USD ‘000
+(6,608) 1,488
+(32,247) (31,029)
+19,934 16,852
+57 62
+10,245 5,593
+628 587
+(44) (125)
+126 122
+509 (1,038)
+247 166
+(545) (8,810)
+(599) (702)
+(584) 794
+(1,183) 92
+(8,058) (24,458)
+22,391 22,218
+22,748 15,018
+3,769 3,509
+(37,899) 47,737
+(20,076) (8,478)
+- 224
+1,286 316
+(15,839) 56,086
+(24,175) 48,856
+(15,132) (24,308)
+28,142 1,892
+3,228 1,980
+(12) (1,745)
+(4) :
+16,222 (22,181)
+- (35,000)
+(23) (1,880)
+15,052 -
+(656)
+(435) (193)
+13,938 (37,073)
+5,985 (10,399)
+8,336 18,856
+14,195 8,336
+
+35
+134
+
+1.3.2
+
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Material Accounting Policies
+
+These financial statements are prepared for Union Bank of India (UK) Ltd. (the "Bank") in accordance with
+applicable law and UK-adopted international accounting standards. Union Bank of India (UK) Limited is a Private
+limited company, limited by share incorporated in the United Kingdom under the Companies Act 2006 and
+registered in England and Wales. The Bank is a wholly owned subsidiary of Union Bank of India, one of the
+leading public-sector banks of India. The address of the registered office is 12 Arthur Street, London, England,
+EC4R 9AB. The nature of the Bank's operations and its principal activity is set out in Director's report, page 2.
+
+Basis of Preparation
+
+The financial statements have been prepared in accordance with applicable law and UK-adopted international
+accounting standards and with the requirements of the Companies Act 2006,
+
+The financial statements have been prepared under the historical cost convention, except for the revaluation of
+certain financial instruments that are measured at revalued amounts or fair values at the end of each reporting
+period, as explained in the accounting policies below. In estimating the fair value of an asset or a liability, the
+Bank takes into account the characteristics of the asset or liability if market participants would take those
+characteristics into account when pricing the asset or liability at the measurement date. Fair value for
+measurement and/or disclosure purposes in these financial statements is determined on such a basis, except for,
+measurements that have some similarities to fair value but are not fair value, such as value in use (‘VIU') in IAS
+36 Impairment of Assets.
+
+The Bank has prepared its financial statement on the basis that it will continue to operate as a going concern.
+
+Disclosures
+
+Disclosures required by IFRS 7 ‘Financial Instruments: Disclosure’ relating to the nature and extent of risks arising
+from financial instruments, and IAS 1 ‘Presentation of Financial Statements’ relating to objectives, policies and
+processes for managing capital, can be found in the Risk Management section (Note 25). Those disclosures form
+an integral part of these financial statements.
+
+Changes in Accounting Policies and Disclosures
+
+New and Amended Standards and Interpretations Issued but not yet Effective for the Financial Year ended
+31 March 2025
+
+At the date of authorisation of these financial statements, several new, but not yet effective, Standards and
+amendments to existing Standards, and Interpretations have been published by the IASB or IFRIC. None of these
+Standards or amendments to existing Standards have been adopted early by the Bank and no Interpretations
+have been issued that are applicable and need to be taken into consideration by the Bank at either reporting date.
+Management anticipates that all relevant pronouncements will be adopted for the first period beginning on or after
+the effective date of the pronouncement. New Standards, amendments and Interpretations not adopted in the
+current year have not been disclosed as they are not expected to have a material impact on the Bank's financial
+statements.
+
+New and Amended Standards and Interpretations Effective for the Financial Year Ended 31 March 2025
+
+The IASB has issued a number of minor amendments to IFRSs which do not have any impact on the Bank's
+financial statements.
+
+Foreign Currencies
+
+The Bank's financial statements are presented in US dollars because the US dollar and currencies linked to it
+form the major currency block in which the Bank transacts and funds its business. Therefore, the US dollar is also
+the Bank's functional currency. Transactions in foreign currencies are recorded at the rate of exchange on the
+date of the transaction. Assets and liabilities denominated in foreign currencies are translated at the rate of
+exchange at the balance sheet date, except non-monetary assets and liabilities measured at historical cost, which
+are translated using the rate of exchange at the initial transaction date.
+
+Exchange differences are included in other comprehensive income or in the income statement depending on
+where the gain or loss on the underlying item is recognised.
+
+36
+15
+
+1.5.4
+
+1.5.2
+
+1.5.3
+
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Material Accounting Policies (Contd.)
+Revenue Recognition
+Interest Income and Expense
+
+The notes on pages 36 to 69 form part of these financial statements.
+
+Interest income and expenses on financial instruments are recognised using the effective interest rate method.
+The effective interest rate is the rate that exactly discounts the estimated future cash payments or receipts over
+the expected life of the financial instrument to the gross carrying amount of the financial asset (before adjusting
+for expected credit losses) or to the amortised cost of the financial liability. Interest income from non-credit
+impaired financial assets is determined by applying the effective interest rate to the gross carrying amount of the
+asset for assets moved from stage 1 or 2 to stage 3 during the year and; for other credit impaired financial assets
+(or ‘stage 3 assets’), the effective interest rate is applied to the net carrying amount after deducting the allowance
+for expected credit losses.
+
+Fees and commissions that are not an integral part of the effective interest rate are recognised when the service
+is performed.
+
+Fee and Commission Income and Expense
+
+Fees and commissions that are not an integral part of the effective interest rate are recognised as income when
+the Bank fulfils its performance obligations. Most fee and commission incomes are recognised at a point in time,
+except the processing fees earned on loans and advances (at the time of approval or renewal) which are
+recognised on a straight line basis over the life of facility. Certain commitments, upfront and management fees are
+recognised over time but are not material.
+
+Fees and Commission income are earned from following services provided by the Bank to its customers and
+accounted for as follows;
+
+income earned on the execution of a significant act is recognised as revenue when the act is completed (for
+example, fees arising from negotiating, facilitating, coordinating, or participating in the negotiation of, a transaction
+for a third-party);
+
+income earned from the provision of services is recognised as revenue as the services are provided at Point in
+time.
+
+Processing/ upfront fees income collected on the processing of loan, renewal/ extension of existing loans or
+modification in the existing sanction are deferred and recognised as revenue using effective interest rate.
+
+Fee and commission income (other than processing/ upfront fees) which forms an integral part of the effective
+interest rate of a financial instrument is recognised as an adjustment to the effective interest rate and recorded in
+‘Interest income’. The Bank does not have Fee and Commission income of this nature.
+
+Dividend Income
+Dividend income is recognised when the right to receive payment is established.
+Net Trading and Other Income
+
+Net trading and other income includes all gains and losses from changes in the fair value of financial assets and
+liabilities held at fair value through profit or loss (financial assets and liabilities at fair value through profit or loss
+and derivatives).Other income includes profits and losses arising on the sale of financial assets held at fair value
+through other comprehensive income, which has been recognised in the Other Comprehensive Income and
+recycled to other income on sale or derecognition.
+
+Borrowing Costs
+
+Borrowing costs directly attributable to the acquisition, construction or production of qualifying assets, including
+computer software, which are assets that necessarily take a substantial period of time to develop for their
+intended use, are added to the cost of those assets, until the assets are substantially ready for their intended use.
+All other borrowing costs are recognised in profit or loss in the period in which they occur.
+
+37
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Material Accounting Policies (Contd.)
+1.7 Intangible Assets
+
+The value of intangible assets is amortised on a straight-line basis over their useful economic life. At each
+reporting date, intangible assets are reviewed for impairment indicators and tested for impairment. Intangible
+assets not yet available for use are tested for impairment annually.
+
+Software development costs are capitalised when they are direct costs associated with identifiable and unique
+software products that are expected to provide future economic benefits and the cost of those products can be
+measured reliably. The software development costs are recognised under capital work in progress until the
+software is ready to use.
+
+Externally purchased software are classified in intangible assets on the balance sheet and amortised on a straight-
+line basis over their useful life of three years, unless the software is an integral part of the related computer
+hardware, in which case it is treated as property, plant and equipment as described below. Capitalisation of costs
+ceases when the software is capable of operating as intended. Costs of maintaining software are expensed as
+incurred.
+
+1.8 Property, Plant and Equipment
+
+Property, plant and equipment include owner-occupied properties (including leasehold properties), office fixtures
+and equipment, capital work in progress. Property, plant and equipment are carried at cost less accumulated
+depreciation and accumulated provision of impairment losses, if any.
+
+Gains and losses on disposal are determined by reference to the carrying amount and are reported in net trading
+and other income. Repairs and renewals are charged to the income statement when the expenditure is incurred.
+At each balance sheet date, or more frequently when events or changes in circumstances dictate, property plant
+and equipment are assessed for indicators of impairment. If indications exist, these assets are subject to an
+impairment review. The impairment review comprises a comparison of the carrying amount of the asset or cash
+generating unit with its recoverable amount: the higher of the asset's or cash-generating unit's fair value less
+costs to sell or its value in use.
+
+The fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly
+transaction between market participants at the measurement date. Value in use is calculated by discounting
+management's expected future cash flows obtainable as a result of the asset's continued use, including those
+resulting from its ultimate disposal, at a market based discount rate on a pre-tax basis.
+
+In the event that assets’ carrying amount is greater than its recoverable amount, the carrying values of property,
+plant and equipment are written down by the amount of any impairment and the loss is recognised in the income
+statement in the period in which it occurs.
+
+Classes of property, plant and equipment are depreciated on a straight-line basis over their estimated useful life,
+as follows:
+
+Leasehold improvements over the lease period
+Furniture and office equipment up to 5 years
+Computer hardware up to 3 years
+
+19 Financial Instruments
+
+The Bank applies IFRS 9 Financial Instruments for the recognition, classification and measurement, and
+derecognition of financial assets, financial liabilities and the impairment of financial assets.
+
+The financial statements have been prepared on a historical cost basis, except for derivative financial instruments,
+and debt instruments held for trading at fair value through profit or loss (FVPL) and debt instruments at fair value
+through other comprehensive income (FVOC)) all of which have been measured at fair value.
+
+1.9.4 Initial Recognition and Measurement
+
+Financial assets and liabilities are initially recognised when the Bank becomes a party to the contractual terms of
+the instrument. The Bank determines the classification of its financial assets and liabilities at initial recognition and
+measures a financial asset or financial liability at its fair value plus or minus, in the case of a financial asset or
+financial liability other than FVTPL, transaction costs that are incremental and directly attributable to the
+acquisition or issue of the financial asset or financial liability. Transaction costs of financial assets and financial
+liabilities carried at fair value through profit or loss are expensed in profit or loss.
+
+38
+19.2
+
+NOTES TO THE FINANCIAL STATEMENTS Uy) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Ltd
+
+Material Accounting Policies (Contd.)
+Financial Instruments (Contd.)
+
+Classification and Subsequent Measurement
+
+As per IFRS 9 Financial Instruments, Bank classifies its financial assets and liabilities in the measurement
+categories of amortised cost, FVOCI and FVTPL.
+
+Financial assets and financial liabilities are classified as FVTPL where there is a requirement to do so or where
+they are otherwise designated at FVTPL on initial recognition. Financial assets and financial liabilities which are
+required to be held at FVTPL include:
+
+— Financial assets and financial liabilities held for trading;
+
+— Debt instruments that do not have solely payments of principal and interest (SPPI) characteristics;
+
+— As per the Business model, such instruments are originated not with a motive to hold to collect or hold to collect
+and sell; and
+
+— Equity instruments that have not been designated as held at FVOCI.
+
+Financial assets and financial liabilities are measured at FVTPL if they are derivatives or if they are acquired or
+incurred principally for the purpose of selling or repurchasing in the near-term, or form part of a portfolio of
+financial instruments that are managed together and for which there is evidence of short-term profit taking.
+
+An expected credit loss (ECL) allowance is recognised for financial assets measured at amortised cost and
+investments in debt instruments measured at FVOCI.
+
+The classification and measurement requirements for financial asset debt and equity instruments and financial
+liabilities are set out below.
+
+Business Model
+
+The Bank assesses the business model criteria by considering various factors. Factors considered in determining
+the applicable business model for a group of assets include
+
+i) past experience on how the cash flows for these assets were collected like the frequency, volume and timing of
+sales in prior periods, sales expectation for future periods, and the reasons for such sales,
+
+iii) the strategies, policies and objectives for holding those assets, and
+
+iii) management and evaluation of performance and risk of the assets.
+
+Solely Payments of Principal and Interest (SPPI)
+
+Where the business model is to hold assets to collect contractual cash flows or to collect contractual cash flows
+and sell, the Bank assesses whether the assets’ cash flows represent SPPI.
+
+In the assessment, the Bank considers whether the contractual cash flows are consistent with a basic lending
+arrangement i.e. Interest is the consideration for the time value of money, for the credit risk associated with the
+principal amount outstanding during a particular period of time and for other basic lending risks (e.g., liquidity
+risks) and costs (e.g., administrative costs), as well as a profit margin. Where the contractual terms introduce
+exposure to risk or volatility that is inconsistent with a basic lending arrangement, the related asset is classified
+and measured at FVTPL.
+
+Based on these criteria, the Bank classifies its debt instruments into the following measurement categories:
+
++ Amortised Cost — Financial assets that are held for collection of contractual cash flows where those cash flows
+represent SPPI, and that are not designated at FVTPL, are measured at amortised cost. The carrying amount of
+these assets is adjusted by any ECL recognised. Interest income from these financial assets is included in
+‘Interest and similar income’ using the effective interest rate method . When estimates of future cash flows are
+revised, the carrying amount of the respective financial assets or financial liabilities is adjusted to reflect the new
+estimate discounted using the original effective interest rate. Any changes are recognised in the income
+statement. Changes in fair value are recognized in profit and loss when the asset is derecognized or reclassified.
+
++ FVOCI — Financial assets that are held for both collection of contractual cash flows and for sale of the assets,
+where the assets’ cash flows represent SPPI, and that are not designated at FVTPL, are measured at FVOCI.
+Interest income from these financial assets is included in ‘Interest and similar income’ using the effective interest
+rate method. Interest revenue, and foreign exchange gains and losses, are recognized in profit and loss on the
+same basis as for Amortized Cost assets. Changes in fair value and impairment gains and losses are recognized
+initially in Other Comprehensive Income (OCI). When the asset is derecognized, changes in fair value previously
+recognized in OCI and accumulated in equity are reclassified to profit and loss and recognised in ‘Net trading and
+other income’.
+
+39
+NOTES TO THE FINANCIAL STATEMENTS (W)] Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Material Accounting Policies (Contd.)
+
+Financial Instruments (Contd.)
+
++ FVTPL - Financial assets that do not meet the criteria for amortised cost or FVOCI are measured at FVTPL. A
+gain or loss on a debt instrument that is subsequently measured at FVTPL, including any debt instruments
+designated at fair value, is recognised in profit or loss and presented in the income statement as ‘Net trading and
+other income’ in the period in which it arises.
+
+The Bank reclassifies financial assets only when its business model for managing those assets changes. The
+reclassification takes place from the start of the first reporting period following the change. Such changes are
+expected to be very infrequent.
+
+Financial Assets: Debt Instruments
+
+Debt instruments are those instruments that meet the definition of a financial liability from the issuer's perspective,
+such as loans and government and corporate bonds. Classification and subsequent measurement of debt
+instruments depend on the Bank’s business model for managing the asset, and the cash flow characteristics of
+the asset.
+
+Financial Assets: Equity Instruments
+
+Equity instruments are instruments that meet the definition of equity from the issuer's perspective, being
+instruments that do not contain a contractual obligation to pay cash and evidences a residual interest in the assets
+of an issuer after deducting all of its liabilities. All equity investments are subsequently measured at FVTPL,
+except where management has elected, at initial recognition, to irrevocably designate an equity investment at
+FVOCI. When the election is made, fair value gains and losses are recognised in OCI and are never reclassified
+to profit or loss, even if the asset is sold or impaired. ECLs (and reversal of ECLs) are not reported separately
+from other changes in fair value. Dividends representing a return on such investments are recognised in profit or
+loss as other income when the right to receive payments is established. Gains and losses on equity investments
+measured at FVTPL are included as ‘Net trading and other income’ in income statement.
+
+Derivative Financial Instruments (Derivatives)
+
+Derivatives are contracts or agreements whose value is derived from one or more underlying indices or asset
+values inherent in the contract or agreement, which require no or little initial net investment and are settled at a
+future date. Currently the Bank deals in transactions hedged by cross currency swaps.
+
+Derivatives are recognised initially (on the date on which a derivative contract is entered into), and are
+subsequently remeasured, at their fair value. Fair values of cross currency swaps are calculated using forward
+currency exchange rate.
+
+All derivatives are carried as assets when their fair value is positive and as liabilities when their fair value is
+negative, except where netting is permitted. Gains and losses from changes in the fair value of derivatives are
+recognised in the income statement, and included as non operating gain or loss under fair value gain or loss.
+
+Financial Liabilities
+
+Financial liabilities are classified as subsequently measured at amortised cost, except for following:
+
++ Financial liabilities at fair value through profit or loss: this classification is applied to derivatives, financial liabilities
+held for trading and other financial liabilities designated as such at initial recognition. Gains or losses on financial
+liabilities designated at fair value through profit or loss are presented partially in other comprehensive income (the
+amount of change in the fair value of the financial liability that is attributable to changes in the credit risk of that
+liability) and partially in profit or loss (the remaining amount of change in the fair value of the liability); and
+
++ Financial guarantee contracts and loan commitments.
+
+Offsetting of Financial Assets and Liabilities
+
+Financial asset and liability balances are offset, i.e. reported in the consolidated balance sheet at their net
+amount, only if the Group entities currently have a legally enforceable right to set off the recognised amounts and
+intend either to settle on a net basis, or to realise the asset and settle the liability simultaneously.
+
+40
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Lid
+
+Material Accounting Policies (Contd.)
+Financial Instruments (Contd.)
+Sale and Repurchase Agreements (Including Stock Borrowing and Lending)
+
+Securities sold subject to a commitment to repurchase them at a predetermined price (repos) under which
+substantially all the risks and rewards of ownership are retained by the Bank remain on the balance sheet and a
+financial liability is recorded in respect of the consideration received. Securities purchased under commitments to
+resale (reverse repos) are not recognised on the balance sheet and the consideration paid is recorded as an
+financial asset. The difference between resale or repurchase price and consideration received or paid is treated
+as interest income or expenses over the life of the transaction, except when the repo is treated as part of the
+trading book, in such case the difference is recognised as trading income.
+
+Modifications and Derecognition of Financial Assets
+
+The Bank derecognise a financial asset in any the following circumstances:
+
++ When the rights to the cash flows from the asset expired;
+
++ When the Bank transferred its rights to receive the cash flows from the asset;
++ When the Bank transferred substantially all risks and rewards from the asset;
++ When the Bank does not retain control of the asset;
+
++ Substantially modified assets as described below;
+
+Quantitative Criteria
+
+The Bank applies the principle of analogy and uses the guidance stipulated by IFRS 9 for modification of financial
+liabilities in applying it to financial assets. Thus, a modification would lead to derecognition of an existing financial
+asset and recognition of a new financial asset if there is a substantial modification, i.e. if the discounted present
+value of the cash flows under the new terms, including any fees received net of any fees paid and discounted
+using the original effective interest rate, is at least 10 per cent different from the discounted present value of the
+temaining cash flows of the original financial asset.
+
+If the difference is less than 10%, derecognition may still occur if other terms and conditions of the financial
+asset(s) have substantially changed, especially if multiple changes occur with respect to the same asset (e.g.
+currency, collateral, governing law, type of facility, maturity, etc.).
+
+Qualitative Criteria
+
+A qualitative assessment shall be performed in all cases when the 10% test is passed, in order to establish
+whether other changes in the terms and condition of the financial asset(s) represent a substantial modification. In
+all cases, the decision are finalised by the respective approving authority.
+
+Additionally, when a counterparty changes as a result of a novation, the financial instrument is derecognised and
+a new financial instrument is recognised, unless it is a novation to a Central Counterparty (CCP) as result of the
+introduction of new laws or regulations.
+
+Distressed Restructuring
+
+A distressed restructuring shall be considered to have occurred when concessions have been extended towards a
+customer facing or about to face financial difficulties (defined in detail below) in meeting its financial commitments.
+In such cases, the Bank calculate diminished financial obligation. Customer is considered credit impaired, if the
+diminished financial obligation is 1% or above.
+
+Financial Guarantee Contracts and Loan Commitments
+
+Financial guarantee contracts are initially measured at fair value and subsequently measured at the higher of the
+amount of the loss allowance, and the premium received on initial recognition less income recognised in
+accordance with the principles of IFRS 15. Loan commitments are initially and subsequently measured in line with
+the respective loan contract and are subject to impairment assessment in terms of the IFRS 9, this is assessed by
+making an addition to the EAD, as a conversion factor application. The Bank considers total credit risk it is
+exposed to, under a contractual agreement, which includes the loan commitments, i.e. undrawn balances, etc. for
+calculation of ECL. The Bank has not provided any commitment to provide loans at a below-market interest rate,
+or that can be settled net in cash or by delivering or issuing another financial instrument.
+1.9.3
+
+1.9.4
+
+1.9.5
+
+1.9.6
+
+NOTES TO THE FINANCIAL STATEMENTS an Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Lid
+
+Material Accounting Policies (Contd.)
+Financial Instruments (Contd.)
+
+For financial guarantee contracts and loan commitments, the loss allowance is recognised as a provision and
+charged to credit impairment losses in the income statement. The loss allowance in respect of revolving facilities
+is classified in loans and advances to customers to the extent of any drawn balances. The loss allowance in
+respect of undrawn amounts is classified in provisions. When amounts are drawn, any related loss allowance is
+transferred from provisions to loans and advances to customers.
+
+Recognition of Expected Credit Losses
+
+The Bank uses Expected Credit Loss (ECL) framework to calculate impairment allowance on financial assets. The
+Bank uses ECL model developed by the third party vendors Ernst & Young LLP and S&P Global Market
+Intelligence, considering the IFRS 9 policies approved by the Board.
+
+Under the ECL model, the Bank calculates the allowance for credit losses by considering on a discounted basis
+the cash shortfalls it would incur in various default scenarios for prescribed future periods and multiplying the
+shortfalls by the probability of each scenario occurring. The allowance is the sum of these probability weighted
+outcomes. The allowance is calculated depending on the asset's classification under the three stage model as
+detailed under Note 1.9.11.
+
+Quantitative modelling is used in conjunction with internal &/or external credit grades and ratings in assessing
+whether credit risk has significantly increased. The rating score is performed by the Bank using S&P Rating
+Agency's scorecard methodology for Loans and advances to customers. The Bank considers external ratings for
+the other credit counterparties i.e. for Investments and inter-bank. The Bank also monitor the effectiveness of the
+criteria used to identify any increase through regular reviews and the maintenance of a watchlist.
+
+Under IFRS 9 the Bank considers a financial asset to be in default and or credit impaired primarily when either the
+borrower is unlikely to pay its credit obligations or the borrower is more than 3-month past due. Detailed definition
+of default adopted by the Bank is mentioned in the later part of the note.
+
+Macroeconomic Scenario
+
+IFRS 9's impairment recognition model requires anticipating future expectations and analysing macroeconomic
+scenarios. The purpose of evaluating macroeconomic scenarios is to understand how fluctuations in economic
+conditions affect the allocation of instrument stages and the resulting calculation of expected credit losses. To
+account for the impact of changing macroeconomic scenarios on staging and ECL calculation, the Bank has
+incorporated three scenarios: Base Case, Upturn, and Downturn. The Upturn scenario is an optimistic view of the
+relevant cluster's exposure, while the Downturn scenario represents a pessimistic forecast of various
+macroeconomic factors. The Bank employs expert judgment to determine the appropriate probability of
+occurrence for each scenario, informed by global economic reports such as World Bank forecasts or external
+vendors like Oxford Economics or Moody's Analytics. The ECL is calculated by weighting the base case, upturn,
+and downturn scenarios according to the Bank's IFRS 9 policies, which consider loss history and management
+experience.
+
+Embedding of IFRS 9 Credit Provisions
+
+Management evaluated the results of the ECL model last year and after analysis, management concluded that the
+output from the model was not sufficient to reflect the credit risk in the portfolio. The model has been updated to
+reflect Bank's history of PDs and LGDs
+
+The model and methodology changes were approved by the Audit Committee.
+
+The credit portfolio is regularly reviewed to ensure that all contracts that have experienced Significant increases in
+credit risk ("SICR") are identified in time.
+
+Apart from credit, other exposures such as Investments, inter-bank borrowing, etc. are also reviewed to ensure
+that there has been no SICR that could warrant an increase in provision.
+
+The ECL is calculated using three main components : i) Probability of default (PD), ii) Loss given default (LGD)
+and iii) Exposure at default.
+
+Recognising PD (Probability of Default)
+
+Bank determines an exposure’s 12-month PD as follows;
+
+An appropriate rating of the counterparty is determined through the application of either the relevant Rating
+Scorecard (for the lending portfolio, sourced from S&P) or through the long term rating (for the investment
+portfolio).
+
+42
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Material Accounting Policies (Contd.)
+Financial Instruments (Contd.)
+
+A credit cycle adjustment is applied to the sourced rating to produce a forward-looking PD calibrated with Banks’
+own data. A forward-looking PD term structure (up to 30 years) is determined for three macroeconomic scenarios
+(i.e. base case, upturn and downturn) applicable to that counterparty; and
+
+The Lifetime PD is the estimated probability of a default occurring over the remaining life of the financial
+instrument. This is used to calculate lifetime ECLs for ‘stage 2’ and ‘stage 3’ exposures. PDs may be broken down,
+further into marginal probabilities for sub-periods within the remaining life.
+
+1.9.7 Recognising LGD (Loss Given Default)
+
+The Basel Foundation Internal Rating Based Approach (“F-IRB”) was used in deriving LGDs for the Bank's IFRS 9
+implementation. Given that the Bank has been operating for a few years, the data available is being used and
+Bank has performed monitoring based on that to support a more logical and historically supported LGD in the ECL
+computation.
+
+1.9.8 Exposure at Default (EAD)
+
+EAD is computed on the basis of exposure type and the exposure's Credit Conversion Factor (CCF). Given that
+the Bank is still in its infancy, insufficient behavioural data is available to model its own CCFs. In light of this, the
+CCFs as prescribed by Basel are applied. An estimate of the exposure at a future default date, taking into account
+expected changes in the exposure after the reporting date (Off balance sheet exposure), including repayments of
+principal and interest, and expected drawdowns on committed facilities.
+
+1.9.9 Post Model Adjustment (PMA)
+
+Management on a quarterly basis evaluates the output of the ECL model. Post Model Adjustments (PMA's) are
+made where management deems the model does not accurately reflect credit risk as experienced by the Bank or
+where it is necessary to incorporate the most recent data available. These include PMA's that have been made to
+compensate for data or model limitations as well as those which are informed by management judgement and/or
+a higher level of quantitative analysis in respect of uncertainties and events that are difficult to model.
+
+1.9.10 Write-off
+
+For secured loans, a write-off is made only when all collection procedures have been exhausted and the security
+has been sold or the status of the account reaches a point where continuing attempts to recover are no longer
+appropriate. In the corporate portfolio, there may be occasions where a write-off might occur for other reasons,
+such as following a consensual restructure or refinancing of the debt or where the debt is sold for strategic
+reasons into the secondary market at a value lower than its face value.
+
+1.9.11 Significant Increase in Credit Risk (SICR)
+
+The Bank applies following indicators to determine whether there has been a significant increase in credit risk. If
+any of the below criteria is met, the exposure is considered to have increased in credit risk and this shall then be
+transferred to stage 2.
+
+1) Primary indicator — Rating variation approach (minimum 2 notch downgrade) using lifetime probability of default
+2) Secondary indicator — Entry to the watch list
+
+3) Backstop — more than “one month past due” (MPD) from the “end of the month” in which the interest/principle
+is due.
+
+Loans which have suffered a SICR since origination are subject to a lifetime ECL assessment which extends to a
+maximum of the contractual maturity of the loan, or behavioural term for revolving facilities. Loans which have not
+experienced a SICR are subject to 12 month ECL. Assessment is made for each facility's credit risk profile to
+determine which of three stages to allocate them to:
+
+Stage 1: when there has been no SICR since initial recognition. Bank has applied a loss allowance equal to a 12
+month ECL i.e. the proportion of lifetime expected losses that relate to that default event expected in the next 12
+months
+
+* Stage 2: when there has been a SICR since initial recognition, but no credit impairment has materialised. Bank
+has applied a loss allowance equal to the lifetime ECL i.e. lifetime expected loss resulting from all possible
+defaults throughout the residual life of a facility
+
+* Stage 3: In case where the exposure is considered credit impaired, the Bank has applied a loss allowance equal
+to the lifetime ECL. Objective evidence of credit impairment is required.
+1.9.12
+
+1.9.13
+
+1.9.14
+
+1.10
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 March 2025
+
+Union Bank
+
+of india (UK) Ltd
+
+Material Accounting Policies (Contd.)
+Financial Instruments (Contd.)
+Significant Increase in Credit Risk (SICR) (Contd.)
+
+Definition of Default
+
+A facility is considered as “default” when:
+
++ The facility is 3-month past due; or
+
++ "Unlikeliness to pay" event is triggered such as
+
+- in case of bankruptcy, insolvency, legal receivership or other legal blocks (perhaps by regulators) to the timely
+payment of interest and/or principal; or
+
+- if the debtor has been declared bankrupt or has become insolvent, claim on the debtor will be classified as
+default from the date, bankruptcy/ insolvency was declared, unless it was already classified as such.
+
+However, if the debtor has paid the interest due on an asset but has been unable to make repayments of the
+principal, the asset shall not be classified as default if Bank along with the debtor have agreed on a new payment
+schedule and the account remains in the performing category, as a result of which, the Customer makes payment
+in line with the new schedule which enables to classify the customer in performing category.
+
+Recoveries under Stage 3 Loans
+
+Recoveries from Stage 3 loans are adjusted against the respective loans accounts. Accordingly, it reduces the
+Stage 3 loan balances and generally associated impairment loss allowances. Management overlay on Stage 3
+accounts was assessed on individual account level. The management considered various forecast scenarios and
+their probability of their occurrence for calculation of the Expected Credit Loss in these accounts. The provisions
+are then challenged by the credit committee and placed before management committee for its appropriateness
+and recognition in financial statements.
+
+Forbearance
+
+Forbearance occurs when the contractual cash flows of a financial asset are renegotiated or otherwise modified,
+on the request of the Borrower.
+
+The details on modification and derecognition of financial assets / liabilities is mentioned in the later part of the
+notes.
+
+Leases
+
+The lease liability is initially measured at an amount equal to the present value of the lease payments during the
+lease term that are not yet paid, discounted at the rate implicit in the lease. If this rate cannot be readily
+determined, the Bank uses its incremental borrowing rate. The lease liability is measured in subsequent periods
+using the effective interest rate method.
+
+The right-of-use assets is initially measured at the amount of corresponding lease liability, plus lease payments
+made at or before the commencement date and any initial direct costs. The right-of-use asset is depreciated in
+accordance with the accounting policy of 'Property, Plant and Equipment’. They are subsequently measured at
+cost less accumulated depreciation. The right-of-use assets are also tested for impairment in accordance with IAS
+36 Impairment of Assets.
+
+The Bank does not recognise a lease liability for short term leases (leases with an expected term of 12 months or
+less) or for leases of low value assets. Payments made under such leases are expensed on a straight-line basis.
+
+Provision for dilapidation is a provision made in advance for payments due at the end of the lease in respect of
+any damage done to the premises. It allows tenants to anticipate the cost of future repairs and renovations that
+will need to be made in line with their lease obligations. The Provision for Dilapidation is initially measured as an
+amount equal to the present value of estimate for the dilaps over the period of lease, discounted at the rate used
+for discounting the lease liability.
+
+44
+Av
+
+As
+
+A
+
+1
+
+=
+
+4144
+
+NOTES TO THE FINANCIAL STATEMENTS Uy) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Ltd
+
+Material Accounting Policies (Contd.)
+Income taxes, including Deferred Taxes
+
+The tax expense represents the sum of the income tax currently payable and deferred income tax.
+
+Income tax expense on taxable profits is recognised as an expense in the period which profits arise. The provision
+is made for the income tax at tax rates that have been enacted or substantively enacted at the balance sheet
+date. Where the amount of the final tax liability is uncertain or where a position is challenged by a taxation
+authority, the most likely outcome is recognised the liability.
+
+Taxable profit differs from net profit as reported in the income statement because it excludes items of income or
+expense that are taxable or deductible in different years or never taxable or deductible under tax rules.
+
+Deferred tax is the tax expected to be payable or recoverable on income tax losses available to carry forward and
+on temporary differences arising between the tax bases of assets and liabilities and their carrying amounts in the
+Financial Statements. Deferred tax liabilities are generally recognised for all taxable temporary differences and
+deferred tax assets are recognised only to the extent that it is probable that taxable profits will be available against
+which the assets may be utilised as they reverse.
+
+The Bank reviews the carrying amount of deferred tax assets at each balance sheet date and recognise only the
+portion whose recovery is deemed probable.
+
+Deferred and current tax assets and liabilities are only offset when they relate to income taxes levied by the same
+taxation authority and the Bank has intention to settle on a net basis or to realise the asset and settle the liability
+simultaneously.
+
+Cash and Cash Equivalents
+
+Cash and cash equivalents include notes and coins on hand, balances with other Banks and highly liquid financial
+assets with original maturities of three months or less and that are subject to an insignificant risk of change in their
+fair value and are used by the Bank in the management of its short-term commitments.
+
+Employee Benefits
+
+The Bank operates a stakeholder defined contribution pension scheme. Contributions to this scheme are charged
+to Profit and loss account as incurred.
+
+Provisions
+
+Provisions are recognised for present obligations arising as consequences of past events where an outflow of
+economic resources to settle the obligation is probable, and it can be reliably estimated.
+
+Provisions are reviewed at the end of each reporting date to reflect the current best estimate. If it is no longer
+probable that an outflow will be required to settle the obligation, the provisions are reversed.
+
+Contingent liabilities are possible obligations depending on whether some uncertain future event occurs or
+present obligations where the outflow of economic benefit is uncertain or amount cannot be reliably measured.
+Contingent liabilities are not recognised but are disclosed unless the possibility of an outflow of economic
+resources is remote.
+
+Critical Judgements and Key Sources of Estimation Uncertainty
+
+The preparation of the Financial Statements requires management to make judgements and accounting
+estimates that affect the reported amount of assets and liabilities at the date of the Financial Statements and the
+reported amount of income and expenses during the reporting period. Management continuously evaluates these
+judgements and accounting estimates, which are based on historical experience and on various other factors,
+including expectations of future events that are believed to be reasonable under the circumstances. Actual results
+may differ from these accounting estimates under different assumptions or conditions.
+
+The following accounting estimates and judgements are considered important for the Bank's financial results and
+financial condition because:
+
++ they are highly vulnerable and change from period to period as calculations are based on assumptions and
+estimates, and
+
++ any significant difference between the estimated amounts and actual amounts could have a material impact on
+the Bank's future financial results and financial condition.
+
+Credit Impairment Allowance
+
+Expected credit losses are the unbiased probability-weighted credit losses determined by evaluating a range of
+possible outcomes, the time value of money and current conditions and forecasts of future economic conditions.
+The application of the ECL impairment methodology to calculate credit impairment allowances involves
+complexity and judgement and is highly susceptible to change from period to period. Management may require to
+make a number of judgemental assumptions while determining the impairment allowance.
+
+45
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Lid
+Material Accounting Policies (Contd.)
+
+Critical Judgements and Key Sources of Estimation Uncertainty (Contd.)
+
+Critical Judgements
+
+The key judgements made by management in applying the ECL impairment methodology are set out below.
+
+* Forward-Looking Information: - The assessment of future economic condition is dependent on forward-looking
+
+information which can be subjective. The macroeconomic data from various sources such as S&P, OECD, World
+Bank, BoE, etc are considered appropriate for this purpose to incorporate the forward-looking information in the
+computation of ECL. The methodology has been documented in the Board approved IFRS 9 policy of the Bank.
+
+* Probability of Default:- The Bank uses internal rating models as provided by S&P. The rating models takes into
+
+consideration apart from financial and quantitative data, qualitative parameters as well. These qualitative
+parameters are assessed based on the credit analyst experience and in line with the Handbook on Rating
+published by S&P. These rating are also subject to independent evaluation by 2LOD, i.e. Chief Risk Officer. The
+ratings are a key input to determine PD of the respective contract and therefore governance in line with Bank's
+credit risk management policy and S&P handbook are followed for mitigating the risk of error.
+
+* Loss Given Default: - LGD calculation takes into consideration the valuation of collaterals received by the Bank
+
+and their applicable haircuts. The judgement on appropriate valuation and haircut is based on the general market
+practice, valuation of external expert, regulatory guidance and the Bank's loss history.
+
+* SICR: - The Bank considers both qualitative and quantitative definitions for recognising SICR. The judgement
+
+1.14.2
+
+1.14.3
+
+1.14.4
+
+around its definition and its parameters are based on the various regulatory guidance, experience of the
+management and present portfolio of the Bank.
+
+Deferred Tax Asset
+
+Deferred tax assets are recognised in respect of tax losses to the extent that it is probable that future taxable profit
+will be available against which the tax losses can be utilised. Although tax losses can be utilised indefinitely,
+judgement is required to determine the amount of deferred tax assets that can be recognised, based on the likely
+timing and level of future taxable profits, together with future tax-planning strategies.
+
+Estimating the incremental borrowing rate for a lease
+
+The Bank cannot readily determine the interest rate implicit in the lease, therefore, it uses its incremental
+borrowing rate (IBR) to measure lease liabilities. The IBR is the rate of interest that the Bank would have to pay to
+borrow over a similar term, and with a similar security, the funds necessary to obtain an asset of a similar value to
+the right-of-use asset in a similar economic environment. The Bank estimates the IBR using observable inputs
+(such as market interest rates) when available. The rate used to discount the lease is 6.85% which is based on
+the average APRC for UK 10 Yr. mortgage loans.
+
+Key Sources of Estimation Uncertainty
+
+To give the impact of forward looking economic outlook on the Bank's portfolio, the following economic indicators
+are used to predict the credit cycle
+
++ GDP Growth (%)
+
++ Change in Unemployment (%)
+
+* Change in S&P 500 (%)
+
++ Change in Energy Index (%)
+
++ Change in Non-Energy Index (%)
+
++ Change in the Proportion of Downgrades (%)
+
+The forecast of above economic indicators for next five years (apart from Change in S&P500 index and Proportion
+
+46
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 March 2025
+
+2 Interest and Similar Income
+
+Interest income from loans - Amortised cost
+
+Interest income from investments - FVOCI
+
+Interest income from investments - Amortised cost
+Interest income on interbank placements - Amortised cost
+
+3 Interest and Similar Expense
+
+Interest expenses on deposit from customers
+Interest expenses on deposit from banks
+Interest expenses on Repurchase agreements
+
+4 Fees and Commission Income
+
+Processing fees and commission
+
+5 Personnel Costs
+
+Wages and salaries (including Directors' emoluments)
+Social security costs
+
+Pension contribution
+
+Other employee benefits
+
+n Union Bank
+of india (UK) Lid
+
+The average number of monthly employees (Excluding Non-executive Directors) was as follows:
+
+Commercial and retail banking activities
+
+Directors’ Emoluments
+
+Emoluments
+Post-employment benefits (Defined Contribution)
+
+Highest Paid Director:
+Emoluments
+Pension contributions
+
+6 Other Expenses
+
+Other premises costs
+
+IT costs
+
+Other administrative expenses
+Legal and professional costs
+
+2025 2024
+USD ‘000 USD ‘000
+25,396 25,093
+2,990 2,165
+182 188
+3,679 3,583
+32,247 31,029
+2025 2024
+USD ‘000 USD ‘000
+19,067 15,798
+23 1,054
+844 -
+19,934 16,852
+2025 2024
+USD ‘000 USD '000
+58312
+583 712
+2025 2024
+USD '000 USD ‘000
+4,276 3,722
+469 449
+193 177
+125 108
+5,063 4,456
+2025 2024
+Number Number
+
+35 34
+
+2025 2024
+usp ‘000 usp ‘000
+640 549
+640 549
+234 190
+234 190
+2025 2024
+usp ‘000 usD ‘000
+659
+
+859
+
+830
+
+1,716
+
+4,064
+
+47
+NOTES TO THE FINANCIAL STATEMENTS Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+Other Expenses (Contd.)
+Legal and Professional Costs include the following:
+Auditor's remuneration - Auditing of Financial Statements 404 368
+404 368
+The above amount is exclusive of taxes.
+7 Impairment Loss Allowance
+2025 2024
+USD ‘000 USD ‘000
+Loans & Advances to customers 10,280 5,500
+Financial Investments (20) 90
+Other Financials Instruments (15) 3
+10,245 5,593
+
+8 Corporation tax (charge) / credit
+
+As at year end, the Bank has not recognised any deferred tax asset (DTA) on its accumulated losses. This is due
+to uncertainty of present/future economic environment in which the Bank operates.
+
+2025 2024
+
+USD '000 USD ‘000
+
+Corporate tax credit = .
+Deferred tax (see note 18): . z=
+Reversal of DTA - :
+Effect of rate changes - -
+Relating to originating and reversal of temporary differences - -
+Adjustments in respect of prior years - =
+Total deferred tax credit - .
+Total tax (charge) / credit m Fy
+
+Factors affecting tax charge/(credit) for year
+
+The differences between the tax assessed for the year and the standard rate of corporation tax are explained as
+follows:-
+
+2025 2024
+USD ‘000 USD '000
+Profit/(Loss) on ordinary activities before tax (6,608) 1,489
+Standard rate of corporation tax in the UK 25.0% 25.0%
+Tax credit at the domestic income tax rate (1,652) 372
+Effects of: -
+Reversal of DTA for prior years - -
+Tax effect of non - deductible depreciation 1 1
+Tax effect of other non - deductible expenses/non-taxable 1 13
+Tax effect of rate changes - -
+Unutilised losses 1,635 (84)
+Deferred tax not recognised 5 (302)
+Adjustment in respect of prior years - :
+Total tax (charge) / credit for the year - -
+2025 2024
+USD ‘000 USD ‘000
+Tax (credit) / expense relating to change in fair value of Investment measured . 390
+
+at OCI
+
+Factors that may affect Future Tax Charges: Nil
+NOTES TO THE FINANCIAL STATEMENTS W)] Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Pillar I
+
+Under-Taxed Payments Rule (UTPR) — Pillar Two Exposure
+
+The UK Finance Act 2025, enacted on 20 March 2025, introduces the OECD Pillar Two rules in the UK, including
+the Undertaxed Profits Rule (UTPR), which will apply to the Bank from 1 April 2025. The UTPR enables the UK to
+impose a top-up tax on UK constituent entities where group entities in other jurisdictions are subject to an
+effective tax rate below the agreed 15% minimum and no corresponding top-up tax is levied under a qualifying
+Income Inclusion Rule (IIR) or Domestic Minimum Top-up Tax (DMTT) in the jurisdiction of the Ultimate Parent
+Entity (UPE).
+
+As of the reporting date, India has not enacted Pillar Two legislation, including IIR or DMTT provisions.
+Accordingly, the Bank's UPE jurisdiction is currently considered a non-implementing jurisdiction for Pillar Two
+purposes,
+
+Management has undertaken a preliminary assessment in line of the Group's structure. The Group operates in
+fewer than six jurisdictions, and tangible assets located outside its reference jurisdiction (India) are below the €50
+million threshold. On this basis, the Group expects to qualify for the “initial phase of international activity”
+exclusion under the UTPR Safe Harbour provisions introduced in OECD Administrative Guidance.
+
+As a result, no UTPR-related top-up tax is expected to arise for the financial year ending 31 March 2026. This
+position will be reassessed annually as part of the Bank's ongoing Pillar Two compliance and monitoring
+framework
+
+49
+NOTES TO THE FINANCIAL STATEMENTS
+
+FOR THE YEAR ENDED 31 March 2025
+
+©
+
+Cash and Cash Equivalents
+
+Cash on hand
+Cash at Bank of England
+Cash at Bank
+
+10 Loans and advances to banks
+
+Interbank placements
+
+Less: Impairment provision
+
+N Union Bank
+of India (UK) Ltd
+
+2025 2024
+USD "000 USD '000
+15 19
+11,078 4,516
+3,102 3,801
+14,195 8,336
+2025 2024
+USD ‘000 USD ‘000
+20,202 43,040
+Gross 20,202
+
+(0) 13)
+Net 20,202 43,027
+
+Note: - The carrying value of loans and advances to banks is not materially different to the fair value. Loans and
+
+advances to banks are all Stage |
+
+Set out below is the movement in the impairment provision of Loans and advances to banks:
+
+As at 1st April
+
+Impairment loss allowances for the year
+
+As at 31st March
+
+11 Loans and Advances to Customers
+
+Term loan
+Working Capital / Overdraft
+
+Less: Impairment provision
+
+Less: Unamortized portion of processing fees
+
+2025 2024
+USD ‘000 USD "000
+(13) (12)
+
+13 1)
+
+(0) (13)
+
+2025 2024
+
+USD ‘000 USD '000
+
+343,568 338,550
+
+18,495 | 23,777
+
+Gross 362,327
+(20,843) (21,807)
+
+(786) '870)
+Net 340,434 339,650
+
+Note: - The fair value of loans and advances to customers is given below:
+
+Loans and advances to customers
+
+2025 2024
+USD ‘000 USD ‘000
+349,216 340,789
+
+Fair value of loans and advances to customers is calculated using non- observable market data (Level 3) and
+estimated by discounted cash flow models that incorporate assumptions for credit risks, foreign exchange risk,
+probability of default and loss given default estimates. The staging of loans and advances to customer is detailed
+
+in Note 25.
+
+12 Financial Investment at Amortised Cost
+
+Quoted Investments
+Corporate Bonds
+
+Less: Impairment provision
+
+2025 2024
+
+USD ‘000 uUsD ‘000
+
+2,001 4,988
+
+Gross 2,001 4,988
+(4.0) (6)
+
+Net ‘1,997. 4,983
+
+The carrying value of financial assets at amortised cost is not materially different to the fair value. Financial
+
+Investments are all Stage |.
+
+50
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Financial Investment at Amortised Cost (Contd.)
+Set out below is the movement in the impairment provision of financial investments at amortized cost:
+
+2025 2024
+
+USD ‘000 USD ‘000
+
+As at 1st April (5) (5)
+Impairment loss allowances for the year 1 -
+As at 31st March (4) (5)
+
+13 Derivative Financial Instruments
+
+The Bank deals in various currencies and it is not always possible to match the asset and liability in each
+currency. As a result, the Bank uses currency swaps to eliminate currency risks in long or short-term currency
+positions, These derivatives are revalued daily and any change in their fair value is recognised in the income
+statement.
+
+The table below shows the fair value of derivative financial instruments recorded as assets or liabilities together
+with their notional amounts. The notional amount, recorded gross, is the amount of a derivative's underlying asset,
+reference rate or index and is the basis upon which changes in the value of derivatives are measured. The
+notional amounts indicate the volume of transactions outstanding at the year end and are indicative of neither the
+market risk nor the credit risk.
+
+31-Mar-25
+Derivatives used as: Assets Liabilities Notional
+amount
+USD ‘000 USD ‘000 USD ‘000
+Currency swaps - (1,436) 110,297
+a (1,436) 440,297
+31-Mar-24
+Assets Liabilities Notional
+amount
+USD '000 USD '000 USD '000
+Currency swaps - (194) 71,182
+: (194) 71,182
+
+There is no incidence of default of any counterparty with whom the Bank has entered into such contracts. The
+Bank does not anticipate deterioration of the credit quality of issuers of any such derivative contracts. All the
+contracts are double legged with the same institution, and as such maximum risk on account of default is the
+marked to market value, which is already provided in the financial statements. No exchange of principal is
+required in any of the trades.
+
+=
+
+Financial Investments at Fair Value Through OCI
+
+2025 2024
+USD ‘000 USD ‘000
+
+Quoted Investments
+Government debt securities 24,726 31,553
+Other securities 70,097 72,005
+94,823 103,558
+
+As per IFRS 9, the carrying amount of the financial asset measured at FVTOCI is always measured at fair value in
+the statement of financial position, irrespective of the size of the loss allowance. The amount of loss allowance is
+the same as if the financial asset was measured at amortised cost. However the loss allowance shall be
+recognised in fair value reserve and shall not reduce the carrying amount of the financial asset in the statement of
+financial position.
+
+51
+154
+
+15.2
+
+NOTES TO THE FINANCIAL STATEMENTS G Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Ltd
+Financial Instruments
+
+The table below sets out the carrying value of the Bank's financial assets and liabilities in accordance with the
+categories of financial instruments set out in IFRS 9 as at 31 March 2025
+
+FVTOCI FVTPL Amortised Total
+cost
+
+USD ‘000 USD ‘000 USD ‘000 USD "000
+At 31 March 2025
+Assets
+Cash and cash equivalents - - 14,195 14,195
+Amounts receivable from customers - - 340,434 340,434
+Loans and advances to Banks - - 20,202 20,202
+Financial investments 94,823 2,761 1,997 99,581
+Total Financial assets 94,823 2,761 376,827 474,412
+Liabilities
+Repurchase agreements - - 15,240 15,240
+Derivative liabilities - 1,436 : 1,436
+Customer deposits - : 348,633 348,633
+Other Liabilities and Provisions - - 4,108 4,108
+Total Financial liabilities - 1,436 367,981 369,417
+
+FVTOCI FVTPL
+
+assets / assets / ‘Amortiged Total
+
+liabilities liabilities sot
+
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+At 31 March 2024
+Assets
+Cash and cash equivalents - - 8,336 8,336
+Loans and advances to Banks - : 339,650 339,650
+Amounts receivable from customers - - 43,027 43,027
+Financial investments 103,558 3,270 4,983, 111,811
+Derivative assets 2 = « =
+Total Financial assets 103,558 3,270 395,996 502,824
+Liabilities
+Bank borrowing - - - -
+Repurchase agreements - * = a
+Derivative liabilities - 194 - 194
+Customer deposits - - 387,541 387,541
+Other Liabilities and Provisions - - 4,886 4,886
+Total Financial liabilities - 194 392,427 392,621
+Fair Value
+
+IFRS 13 Fair Value Measurement requires an entity to classify its assets and liabilities according to a hierarchy
+that reflects the observability of significant market inputs. The three levels of the fair value hierarchy are defined
+below.
+
+Level 1 Financial Instruments: The fair value for financial instruments traded in active markets is based on their
+quoted market price or dealer price quotations without any deduction for transaction costs.
+
+Level 2 Financial Instruments: For all other financial instruments not traded in an active market, the fair value is
+determined by using appropriate valuation techniques. Valuation techniques include the discounted cash flow
+method, comparison to similar instruments for which market observable prices exist, options pricing models, credit
+models and other relevant valuation models.
+
+Level 3 Financial Instruments: A fair value for financial instrument cannot be determined by using readily
+observable inputs or measures, such as market prices or models. They are calculated using estimates or risk-
+adjusted value ranges, methods open to interpretation.
+
+52
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Ltd
+
+Fair Value of Financial Instruments (Contd.)
+Determination of Fair Value
+
+The Bank categorizes financial instruments carried on the balance sheet at fair value using a three-level hierarchy
+as follows:
+
+The Bank uses quoted market prices in an active market to calculate the fair value of a financial asset or liability
+and classified as Level 1. All investment securities are included in level 1.
+
+The Bank uses spot rates, cross currency forward / Swap rates as inputs for the valuation of Forex derivative
+transactions classified as Level 2. Observable data obtained from Bloomberg have been used to determine the
+fair value. All derivatives are included in level 2.
+
+The Bank holds non-listed preference shares in its portfolio and classified as level 3 which have no observable
+inputs like quoted price. The Fair value of CCPS (Compulsorily convertible Preference shares) is calculated
+considering non observable data i.e. EIR of the June 2036 Indian Govt bond + 3.75% (the contractual interest rate
+for Term Loan). Any change in fair value is routed through Income Statement.
+
+Considering the 12 months high and low yields for the June 2036 Indian Govt. bond, the fair value shifts by (USD
+44.5k) and USD 2.3k respectively.
+
+No transfers between Level 1, Level 2 and Level 3 have been made during the year.
+
+The following tables set out the valuation methodologies adopted by asset and liability categories measured at fair
+value in the financial statements:
+341 March 2025
+
+Quoted market Valuation Valuation
+prices (Level techniques techniques
+1) using using non-
+
+observable observable
+market data market data
+
+(Level 2) (Level 3)
+USD ‘000 USD ‘000 USD ‘000
+Financial Assets
+
+Financial investments — FVOCI 94,823 : a
+Financial investments — FVTPL 1,441 : 1,320
+96,264 : 1,320
+
+Financial Liabilities
+Derivative financial instruments ae, 1,436 as
+: 1,436 -
+
+31 March 2024
+
+Quoted market Valuation Valuation
+prices (Level techniques techniques
+1) using using non-
+
+observable observable
+
+marketdata = market data
+
+(Level 2) (Level 3)
+
+Financial Assets USD ‘000 USD ‘000 USD ‘000
+Derivative financial instruments - - -
+Financial investments — FVOCI 103,558 : :
+Financial investments — FVTPL 2,108 - 1,162
+105,666 : 1,162
+
+Financial Liabilities USD ‘000 USD ‘000 USD ‘000
+Derivative financial instruments : 194 :
+
+= 194 =
+
+NOTES TO THE FINANCIAL STATEMENTS Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Fair Value of Financial Instruments (Contd.)
+Movements in Level 3 financial instruments measured at fair value
+341 March 2025
+As at31 March Revaluation As at 31
+2024 Profit / (Loss) March 2025
+
+USD ‘000 USD ‘000 USD ‘000
+Financial investments — FVTPL 1,162 158 1,320
+
+31 March 2024
+As at 31 March Revaluation As at 31
+2023 Profit / (Loss) March 2024
+
+USD "000 USD ‘000 USD ‘000
+Financial investments — FVTPL 1,029 133 1,162
+
+The fair value of financial assets and financial liabilities that are not measured at fair value but require fair value
+disclosure have been disclosed in their respective notes.
+
+Property, Plant and Equipment
+
+Right to Use
+Asset & Furniture & Computer Total
+Leasehold equipment hardware
+Improvement
+
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+Cost
+As at 31 March 2023 2,054 368 303 2,725
+Additions 5,384 82 95 5,561
+Disposals (2,054) (226) : (2,280)
+As at 31 March 2024 5,384 224 398 6,006
+Additions - - 12 12
+Other adjustments - (5) - (5)
+Disposals : - (2) (2)
+As at 31 March 2025 5,384 219 408 6,011
+Cumulative depreciation
+As at 31 March 2023 (1,901) (316) (269) (2,486)
+Depreciation charge (624) (19) (44) (587)
+Disposals 2,054 220 : 2,274
+As at 31 March 2024 (374) (145) (313) (799)
+Depreciation charge (557) (23) (48) (628)
+Disposals : : 2 2
+As at 31 March 2025 (928) (138) (359) (1,425)
+Net book value
+As at 31 March 2024 5,013 109 85 5,207
+
+As at 31 March 2025 4,456 81 49 4,586
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+FOR THE YEAR ENDED 31 March 2025
+
+17 Intangible Assets
+
+Cost
+
+As at 31 March 2023
+Additions
+
+Disposal
+
+As at 31 March 2024
+Additions
+
+Disposal
+
+As at 31 March 2025
+Amortisation
+
+As at 31 March 2023
+Amortisations for the period
+Disposals
+
+Other adjustments
+
+As at 31 March 2024
+Amortisation charge for the year
+Disposals
+
+As at 31 March 2025
+Carrying value
+
+As at 31 March 2024
+
+As at 31 March 2025
+
+Note: Intangible assets comprise mainly of capitalized software costs. None of the intangible assets are pledged
+
+as securities for liabilities.
+
+18 Deferred Tax
+
+Uy) Union Bank
+
+of india (UK) Lid
+
+Capitalised software
+USD ‘000
+824
+
+ral
+18
+
+The Bank reviews the carrying amount of deferred tax assets at each balance sheet date and reduces it to the
+extent that it is no longer probable that sufficient taxable profits will be available to allow all or part of the asset to
+
+be recovered.
+
+The current accumulated losses of the bank are $ 36.7 m (2024: $ 30.1 m) with no expiry date. The Bank has not
+recognised DTA during the financial year on its accumulated losses due to ongoing uncertainty of recovery of the
+
+historical Stage 3 loans.
+
+The Bank has a deductible temporary difference on the unrealised losses on Financial investments held under
+FVOCI as of March 2025. Deferred tax assets have not been recognised in respect of these losses as they may
+not be used to offset against taxable profits in foreseeable future. The Bank is having accumulated losses as on
+the reporting date and against which the DTA is not proposed, due to the reasons mentioned above.
+
+19 Other Assets
+
+Other receivables
+Capital Work in progress
+Prepayments and accrued income
+
+20 Deposits from Customers
+
+Current accounts
+
+Savings accounts
+Fixed term deposits
+
+Note: - The fair value of deposits from customers is given below:
+
+Deposits from Customers
+
+2025 2024
+USD '000 USD ‘000
+126 547
+
+105 92
+1,770 763
+
+2,001 1,402
+
+2025 2024
+
+USD ‘000 USD ‘000
+5,299 6.411
+1,102 2,659
+
+342,232 378,471 _
+348,633 541
+
+2025 2024
+USD ‘000 USD ‘000
+
+____ 350,082. _386,800_
+
+The carrying value of Deposits from customers is not materially different to the fair value.
+
+55
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 March 2025
+
+21 Repurchase Agreements
+
+(J Union Bank
+
+of india (UK) Lid
+
+The Bank enters into repurchase agreements in the normal course of business by which it transfers recognised
+financial assets directly to third parties. As the substance of the sale and repurchase is secured borrowings, the
+asset collateral continues to be recognised in full and the related liability reflecting the Bank's obligation to
+repurchase the transferred assets for a fixed price at a future date is recognised as liability. As a result of these
+transactions, the Bank is unable to use, sell or pledge the transferred assets for the duration of the transaction.
+The Bank remains exposed to interest rate risk and credit risk on these pledged transactions. The counterparty's
+
+recourse is not limited to the transferred assets.
+
+2025 2025 2024 2024
+USD ‘000 USD '000 USD ‘000 USD ‘000
+Carrying Liabilities Carrying Liabilities
+amount of under amount of under
+securities repurchase securities repurchase
+pledged agreements pledged agreements
+Repurchase agreements 18,418 15,240 - -
+Note: - The carrying value of Repurchase agreements is not materially different to the fair value.
+22 Provisions & other Liabilities
+2025 2024
+USD '000 USD '000
+Accruals and other liabilities (including lease liabilities) 3,924 4,714
+Provisions for dilapidation 184 113
+4,108 4,827
+
+- Other liabilities include funds received from a Deposits customers of USD 0.09 Mn (2024: USD 0.6 Mn) which
+have not been adjusted due to pending documentation from Customer and the same has been received on 2nd
+
+June and credited into Deposits from Customers.
+
+Lease liabilities
+
+Opening lease liabilities 3,622 4
+Add: New Lease during the year - 3,645
+Add: Finance charge for year 166
+Less: Payments made towards lease liability (193)
+Closing Lease Liability 3,622
+Within one year* 311
+More than one year* 4,583
+4,894
+“The ageing includes interest/ finance charge.
+23 Share Capital
+2025 2024 2025 2024
+Number Number USD ‘000 USD ‘000
+Authorised Capital
+Ordinary shares of GBP 1 each 2) 2 0.003 0.003
+Ordinary shares of USD 1 each 200,000,000 200,000,000 200,000 200,000
+Issued and fully paid
+Ordinary shares of GBP 1 each 2 2 0.003 0,003
+Ordinary shares of USD 1 each
+As at 1 April 150,000,000 150,000,000 150,000 150,000
+Issue of Share Capital - - - -
+As at 31 March 150,000,000 150,000,000 150,000 150,000
+
+- All ordinary shares are non redeemable conferring equal rights to each member.
+
+Fair Value reserve consists of non-distributable profits (fair value gains / losses) and as such is used to ring-fence
+
+* fair value gains and losses. This type of reserve is part of restricted equity.
+
+56
+NOTES TO THE FINANCIAL STATEMENTS 1] Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Other Commitments and Contingencies
+Commitments in respect of financial instruments are as follows:
+
+2025 2024
+
+USD ‘000 USD ‘000
+
+Foreign exchange - Assets 110,304 71,413
+Foreign exchange - Liabilities 111,740 71,607
+Bank guarantee 148 145
+Undrawn committed facilities 107 6,090
+
+Foreign exchange - Assets & Liabilities pertains to FX Swap deals which are normally having original maturity less
+than one year.
+
+Bank Guarantees - Performance Guarantees issued in favour of existing customers.
+
+Contracted maturities of above commitments and contingencies (other than revolving nature accounts) varies
+from 90 days to 5 years.
+
+Undrawn Commitments - This is the amount which is available to draw for the Loan Customers.
+
+Principal Risks
+
+The Bank is exposed to the following principal risks in relation to its financial assets and liabilities:
+* Credit Risk
+
++ Country Risk
+
++ Liquidity Risk
+
++ Market Risk: Currency Risk
+
++ Interest rate Risk
+
++ Operational Risk
+
+* Capital Risk
+
+Credit risk
+
+Credit risk refers to the risk of direct or indirect losses in on and off-balance sheet positions because of the failure
+of a borrower or counterparty to meet its obligations in accordance with agreed terms, The Bank has appropriate
+policies in place that describes the principles which underpin and drive the Bank's approach to credit risk
+management together with the systems and processes through which they are implemented and administered.
+
+The asset quality of the Bank book has improved through disciplined credit risk management. Bank continuously
+monitors portfolio concentration by borrower, groups, sectors, industry, geography, etc. and constantly strives to
+improve credit quality and maintain a risk profile that is diverse in terms of borrowers, products, industry types and
+geography.
+
+The Bank's credit portfolio is subject to internal credit rating. Bank uses separate models of credit risk assessment
+for different exposure segments. Bank has adopted a standardized and well-defined approval process for all
+advances, which involves a committee approach for credit sanctions/approvals.
+
+The gross carrying amount of financial assets recorded in the financial statements represents the Bank's
+maximum exposure to credit risk. There are no financial assets to related parties which are past due or impaired.
+
+Gross Loans and advances to customers before any impact of loss allowances are given as per their payment
+status: -
+
+2025 2024
+
+USD 000 USD '000
+
+Neither past due nor overdue 281,344 290,852
+Overdue but not default 38,295 19,502
+Default 42,424 51,973
+Gross ___ 362,063 362,327_
+
+Financial assets are individually assessed to identify the event of impairment. The Bank considers several events
+including credit rating deterioration, negative media report, economic outlook of industry & geography, breach in
+key financial covenants, past due days etc. as significant increase in credit risk that may lead to impairment.
+
+If the SICR is noticed, then the Bank considers the options of forbearance (if it's feasible for the counterparty to
+remain going concern) and liquidation. In case of forbearance, NPV (Net present value) loss arising from NPV
+comparison from existing and revised contract, is treated as impairment loss. In case of liquidation of the borrower
+entity, available securities and hierarchy of Bank's debt in the scheme of liquidation is also considered to calculate
+the impairment loss.
+
+57
+NOTES TO THE FINANCIAL STATEMENTS
+
+FOR THE YEAR ENDED 31 March 2025
+
+Principal Risks (Contd.)
+Credit risk (Contd.)
+IFRS 9 Credit Quality
+
+LU)
+
+Union Bank
+
+of India (UK) Ltd
+
+During this financial year, there is no accounts slippage to stage 3. Recovery of USD 1.7 Mn (2024: USD 15K) has
+been made during the year. Specific impairment loss for Stage 3 stood at USD 14.8 Mn (2024: USD 19.7 Mn)
+
+(including interest thereon) as on 31 March 2025.
+
+Loans and advances to customers 2025 2024
+USD ‘000 USD ‘000
+Gross Exposure 362,063 362,327
+Less:- Loan loss provision (20,843) (21,807)
+Less: Unamortized portion of processing fees 786) (870)
+Net Exposure 340,434 339,650
+Maximum Exposure to Credit Risk
+Financial Instruments (excluding Derivatives)
+Finai Assets at Fair Value Through Profit or Loss: 2025 2024
+USD ‘000 USD '000
+Financial Investments 2,761 3,270
+1 \
+Financial Assets at Amortised Cost: 2025 2024
+USD "000 USD ‘000
+Loans and advances to customers (gross) 362,063 362,327
+Financial investments 2,001 4,988
+Loans and advances to Banks 20,202 43,040
+Other financial assets at amortised cost 14,195 8,336
+398,461 418,691
+| FT
+Financial Assets at Fair Value Through Other Comprehensive Income: 2025 2024
+USD ‘000 USD ‘000
+Financial investments 94,823 103,558
+Total 496,046 525,519
+Analysis of Financial Instruments (excluding Derivatives) 2025 2024
+USD "000 USD ‘000
+Due within one year 207,561 170,194
+Due in more than one year 288,485 355,324
+Total 496,046 525,518
+\ pa.
+2025 2024
+Rectan usp‘000 =——_usD ‘000
+Neither past due nor overdue 415,327 454,043
+Overdue but not default 38,295 19,502
+Default 42,424 51,973
+Total 496,046 525,518
+Loans and advances to customers as at 31 March 2025
+Stage 1 Stage 2 Stage 3 Total
+Partictlire usb ‘000 usb ‘000 usb ‘000 usb ‘000
+Gross carrying amount 281,344 38,295 42,424 362,063
+Impairment provision (1,598) (4,440) (14,805) (20,843)
+Net amounts receivable 279,746 33,855 27,619 341,220
+
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Lid
+
+Principal Risks (Contd.)
+Credit risk (Contd.)
+IFRS 9 Credit Quality (Contd.)
+
+Loans and advances to customers as at 31 March 2024
+
+Particulars Stage 1 Stage 2 Stage 3 Total
+
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+Gross carrying amount 290,852 19,502 51,973 362,327
+Impairment provision (1,776) (349) (19,682) (21,807)
+Net amounts receivable 289,076 19,153 32,291 340,520
+
+The impairment provision recognised in the period is impacted by a variety of factors, as described below:
+
+Transfers between stage 1 and stage 2 or 3 due to financial instruments experiencing significant increases (or
+decreases) of credit risk or becoming credit-impaired in the period and the consequent ‘step up’ (or ‘step down’)
+between 12 months or lifetime ECL.
+
+Additional loan loss provisions for new financial instruments recognised during the period, as well as releases for
+financial instruments de-recognised in the period.
+
+e Impact on the measurement of ECL due to changes in PDs, EADs and LGDs in the period, arising from regular
+refreshing of inputs to models.
+
+e Financial assets de-recognised during the period and write-offs of loan loss provisions related to assets that were
+
+written off during the period.
+e Financial assets modified during the period.
+
+Stage 1 Stage 2 Stage 3 Total
+Evans's0:Gustomers usp ‘000 usp‘000 —- USD'000.«SS«USD "000
+Se mraene Staep ae at tee AeN 290,851 19,503 51,973 362,327
+Transfer from stage 1 to 2 (17,510) 17,510 - 7
+Transfer from stage 2 to 1 - = - -
+Transfer from stage 2 to 3 - - - -
+Transfer from stage 3 to 2 - - - -
+New receivables originated or purchased 108,299 1,283 - 109,582,
+Increase / (decrease) in receivables due
+le iiereet (118) (1) (119)
+Increase / (decrease) in stage 3 Interest - - 3,389 3,389
+Net Repayments of loans (100,178) - - (100,178),
+Write off of Credit Impaired Assets quer Uridine somal Qagy — _ (11}242))
+Gross carrying amount as at 31 March |
+2025 281,344 38,295 42,424 362,063 |
+*Note: The amount under stage 2 includes account opened during the year and moved to stage 2.
+
+Stage 1 Stage 2 Stage 3 Total
+
+ro usD ‘000 USD ‘000 USD ‘000 USD ‘000
+
+ECL Provision as at 1 April 2024 1,776 349 19,682 21,807,
+Transfer from stage 1 to 2 (84) 84 - +|
+Transfer from stage 2 to 1 - - - +
+Transfer from stage 2 to 3 - = - -|
+Transfer from stage 3 to 2 - ’ - ‘
+Net re-measurement of ECL - 4,007 3,409 7,415)
+New receivables originated or purchased 397 - - 397
+Increase / (decrease) in stage 3 Interest - - 1,343 1,343)
+Net Repayments of loans (491) - 1,678 41 87
+Write off of Credit Impaired Assets - 5 (14,307) (14,307)
+ECL Provision as at 31 March 2025 1,598 4,440 14,805 20,843 |
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+FOR THE YEAR ENDED 31 March 2025
+
+Principal Risks (Contd.)
+Credit risk (Contd.)
+IFRS 9 Credit Quality (Contd.)
+
+'U) Union Bank
+
+of India (UK) Lid
+
+Stage 1 Stage 2 Stage 3 Total,
+eee pp Customers usb ‘000 usp'000 ~—« USD ‘000 usp ‘000]
+be carrying smiount'as at tst Apel 286,278 8,700 40,298 335,276
+Transfer from stage 1 to 2 (18,629) 18,629 * -
+Transfer from stage 1 to 3 (75) - 75 =
+Transfer from stage 2 to 1 620 (620) - *
+Transfer from stage 2 to 3 - (8,079) 8,079 -
+Transfer from stage 3 to 2 - - - -
+New receivables originated or purchased 88,296 - - 88,296 |
+Increase in receivables due to interest - 873 717 1,590 |
+Increase / (decrease) in stage 3 Interest - - 2,804 2,804
+Net Repayments of loans (65,639) = : (65,639)
+Write off of Credit Impaired Assets 3 - : =]
+Gross carrying amount as at 31 March 290,851 19,503 51,973 362,327
+2024 |
+Stage 1 Stage 2 Stage 3 Total
+Eanieunre USD ‘000 usb ‘000 usb ‘000 USD ‘000,
+ECL Provision as at 1 April 2023 789 48 15,470 16,307
+Transfer from stage 1 to 2 (35) 35 - +
+Transfer from stage 1 to 3 (11) : "1 .
+Transfer from stage 2 to 1 13 (13) - |
+Transfer from stage 2 to 3 - (34) 34 |
+Transfer from stage 3 to 2 - - - +
+Net re-measurement of ECL - 313 3,289 3,602
+New receivables originated or purchased 1,239 - - 1,239
+Increase / (decrease) in stage 3 Interest . . 4,403 4,403
+Net Repayments of loans (219) - (525) (744)
+Recovery from Credit Impaired Assets - - - -|
+Write off of Credit Impaired Assets - - : =
+ECL Provision as at 31 March 2024 41,776 349 19,682 21,807
+
+“This includes the additional provision made in the same stage
+
+Financial assets (with loss amount based on lifetime ECL) modified as at the balance sheet date
+
+Forbearance / Rescheduled loans:
+
+Term loan
+
+The below tables provides detail on the staging of rescheduled loans:
+
+As at 31 March 2025
+Term loan
+
+Overdraft
+
+Other Loans
+
+Gross carrying amount
+Term loan
+
+Overdraft
+
+Other Loans
+Impairment provision
+Term loan
+
+Overdraft
+
+Other Loans
+
+Net amounts receivable
+
+2025 2024
+USD ‘000 USD ‘000
+30,897 19,502
+30,897 19,502
+Stage 1 Stage 2 Stage 3 Total
+USD "000 USD ‘000 USD ‘000 USD ‘000
+- 23,795 7,102 30,897
+: 23,795 7,102 30,897
+- 3,860 2,685 6,545
+= 3,860 2,685, 6,545,
+- 19,935 4,417 24,352
+: 19,935 4,417 24,352
+
+60
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+The below tables provides detail on the staging of rescheduled loans:
+Stage 1 Stage 2 Stage 3 Total
+USD '000 USD '000 USD ‘000 USD ‘000
+As at 31 March 2024
+Term loan - 19,502 - 19,502
+Overdraft = = e -
+Other Loans = oS = BD
+Gross carrying amount - 19,502 - 19,502
+Term loan - 349 : 349
+Overdraft - - - ~
+Other Loans - a : =
+Impairment provision - 349 : 349
+Term loan - 19,153 - 19,153
+Overdraft oa 7 7 a
+Other Loans = * : rm
+Net amounts receivable - 19,153 - 19,153
+Principal Risks (Contd.)
+Credit risk (Contd.)
+IFRS 9 Credit Quality (Contd.)
+Collateral:
+Collateral is held to mitigate credit risk exposure and may include one or more of:
+1. Bank Deposits under Lien including those with third party institutions
+2. Marketable Securities
+3. Current Assets
+4. Bank Guarantees & Letters of Credit
+5. Fixed Assets (Movable & Immovable )
+6. Real Estate
+7. Corporate/Personal Guarantee
+Loans & Advances Collateral Analysis
+Loans value as a percentage of collateral is summarised in below table
+2025 2024
+USD ’000 USD '000
+Security coverage=0% 57,582 58,290
+Security coverage>0%<=50% 26,243 21,811
+Security coverage>50%<=100% 13,694 25,813
+Security coverage>100% 264,544 256,413
+Total 362,063 3 7
+Security coverage above is calculated as value of collateral to loan exposure for the respective accounts.
+Bifurcation of loan book according to available security is give below:
+2025 2024
+USD ’000 USD ’000
+Secured 304,481 304,037
+Unsecured 57,582 58,290
+Total 362,063 362,327
+2025
+Exposure Collateral
+USD ‘000 USD '000
+Stage 1 Assets (Standard Advances) 281,344 469,979
+Stage 2 Assets (Assets having experienced SICR) 38,295 48,035
+Stage 3 Assets (Default Assets) 42,424 107,146
+362,063 625,160
+2024
+Exposure Collateral
+USD ‘000 USD ‘000
+Stage 1 Assets (Standard Advances) 290,852 397,158
+Stage 2 Assets (Assets having experienced SICR) 19,502 20,359
+Stage 3 Assets (Default Assets) 51,973 462,127
+
+61
+NOTES TO THE FINANCIAL STATEMENTS Uy) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Ltd
+362,327 879,644
+
+Principal Risks (Contd.)
+
+Credit risk (Contd.)
+
+IFRS 9 Credit Quality (Contd.)
+
+The Bank attempts to maintain a asset quality through disciplined credit risk management. The Bank continuously
+monitors portfolio concentrations by borrower, groups, sectors, industry, geography, etc. and constantly strives to
+improve credit quality and maintain a risk profile that is diverse in terms of borrowers, products, industry types and
+
+geography. The table below provides a summary of credit exposure stagewise.
+
+2025 2024
+
+Exposure Exposure
+
+USD ‘000 USD ‘000
+
+Stage 1 Assets (Standard Advances) 281,344 290,852
+Stage 2 Assets (Assets having experienced SICR) 38,295 19,502
+Stage 3 Assets (Default Assets) 42,424 51,973
+362,063 362,327
+
+There is no significant change in quality of collateral during the financial year due to change in accounting policies
+
+or otherwise
+
+An analysis of the Banks’ total credit exposure (including investment securities, loans and advances to customers
+including loan commitments and loans and advances to banks) split by external credit rating is provided below:
+
+2025
+Investment Securities Gross Carrying Amount
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+AAA to AA- 30,405 - - 30,405
+At to A- 13,564 - - 13,564
+BBB+ to BBB- 55,617 - - 55,617
+BB+ and below - - - -
+99,586 : : 99,586
+ECL*
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD '000 USD ‘000 USD ‘000
+AAA to AA- 2 - - 2
+At to A- 13 - - 13
+BBB+ to BBB- 139 - - 139
+BB+ and below - - - -
+154 : - 154
+“Includes loss allowance of USD 150K recognised in fair value reserve.
+Loans and advances to banks Gross Carrying Amount
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD '000 USD ‘000 USD ‘000
+AAA to AA- - - - -
+At to A- - - - -
+BBB+ to BBB- = - - -
+BB+ and below 20,202 - - 20,202
+20,202 : : 20,202
+ECL
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+AAA to AA- = é: e -
+At to A- - - - -
+BBB+ to BBB- - - - =
+BB+ and below O - - it)
+0 - - Qo
+
+62
+FOR THE YEAR ENDED 31 March 2025
+
+NOTES TO THE FINANCIAL STATEMENTS 1] Union Bank
+
+Principal Risks (Contd.)
+Credit risk (Contd.)
+IFRS 9 Credit Quality (Contd.)
+
+of india (UK) Ltd
+
+Loans and advances to customers Gross Carrying Amount
+including loan commitments Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD '000 USD '000 USD '000
+AAA to AA- - - - -
+At to A- 67,242 - - 67,242
+BBB+ to BBB- 187,337 - - 187,337
+BB+ and below 26,872 38,295 42,424 107,591
+281,451 38,295 42,424 362,170
+ECL
+Stage 1 Stage 2 Stage 3 Total
+USD '000 USD '000 USD '000 USD '000
+AAA to AA- - - - -
+At toA- 38 a = 38
+BBB+ to BBB- 1,052 x 3 1,052
+BB+ and below 508 4,440 14,805 19,753
+1,598 4,440 14,805 20,843
+2024
+Investment Securities Gross Carrying Amount
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD '000 USD '000 USD ‘000
+AAA to AA- 31,121 - - 31,121
+At to A- 15,980 - 15,980
+BBB+ to BBB- 64,714 - - 64,714
+BB+ and below - - - -
+111,815 : : 111,815
+ECL*
+Stage 1 Stage 2 Stage 3 Total
+USD '000 USD '000 USD '000 USD '000
+AAA to AA- 5 : : 5
+At to A- 25 - - 25
+BBB+ to BBB- 145 - - 145
+BB+ and below : - - :
+175 : : 175
+“Includes loss allowance of USD 170K recognised in fair value reserve.
+Loans and advances to banks Gross Carrying Amount
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+AAA to AA- - - - -
+At to A- - - - -
+BBB+ to BBB- 17,937 - - 17,937
+BB+ and below 25,103 - - 25,103
+43,040 : : 43,040
+ECL
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD ‘000 USD ‘000 USD '000
+AAA to AA- - - - -
+At to A- = * : .
+BBB+ to BBB- 4 - - 4
+BB+ and below 9 - : 9
+13 : - 13
+
+63
+NOTES TO THE FINANCIAL STATEMENTS
+
+FOR THE YEAR ENDED 31 March 2025
+
+Principal Risks (Contd.)
+
+Credit risk (Contd.)
+
+IFRS 9 Credit Quality (Contd.)
+Loans and advances to customers
+
+U
+
+Gross Carrying Amount
+
+Union Bank
+of India (UK) Lid
+
+including loan commitments Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD ‘000 USD ‘000 USD '000
+AAA to AA- 5,409 - : 5,409
+At to A- 55,409 - - 55,409
+BBB+ to BBB- 199,883 - - 199,883
+BB+ and below 31,398 19,502 51,973 102,873
+292,099 19,502 51,973 363,574
+ECL
+
+Stage 1 Stage 2 Stage 3 Total
+
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+
+AAA to AA- 2 - - 7)
+At to A- 50 - - 50
+BBB+ to BBB- 1,210 - - 1,210
+BB+ and below 514 349 19,682 20,545
+1,776 349 19,682 21,807
+
+Country risk exposure
+
+Country risk is the risk of an adverse effect that an occurrence within a country could have on the Bank. The
+Bank's risk management framework incorporates measures and tools to monitor this risk. The following table
+
+provides a summary by country of risk as of:
+
+Counties. 2025 2024 2025 2024
+Exposure Exposure % of Total % of Total
+USD ‘000 USD ‘000
+United Kingdom 172,471 182,767 34.8% 34.8%
+India 128,233 131,908 25.9% 25.1%
+United States of America 77,412 73,408 15.6% 14.0%
+Singapore 18,465 21,352 3.7% 41%
+United Arab Emirates 447 20,908 0.1% 4.0%
+Jersey 18,108 17,735 3.7% 3.4%
+Mauritius 21,016 17,049 4.2% 3.2%
+Finland 16,255 16,308 3.3% 3.1%
+Switzerland 10,000 16,000 2.0% 3.0%
+Virgin Islands, British 12,497 11,943 2.5% 2.3%
+Saudi Arabia 5,928 5,778 1.2% 1.1%
+Indonesia - 5,733 0.0% 1.1%
+Philippines 5,167 4,629 1.0% 0.9%
+Qatar 10,047 - 2.0% 0.0%
+496,046 525,518 100% 100.0%
+The above included all Financial assets of the Bank.
+Industrywide profile*
+The table below represents the distribution of credit exposures by industry type
+2025 2024
+Exposure Exposure
+USD ‘000 USD ‘000
+Accommodation And Food Service Activities 36,025 30,468
+Administrative And Support Service Activities 38,488 27,681
+Construction 8,325 13,511
+Financial and Insurance activities 74,368 40,295
+Human Health And Social Work Activities 7,957 16,311
+Information And Communication 14,360 20,612
+Manufacturing 27,210 31,576
+Real Estate 147,348 149,299
+Others 7,982 32,574
+362,063 362,327
+
+*the industrywide profile is only for loans and advances to customers.
+
+64
+NOTES TO THE FINANCIAL STATEMENTS Uy) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Ltd
+
+Principal Risks (Contd.)
+
+Credit Risk (Contd.)
+
+Liquidity risk
+
+Liquidity risk is the risk of failure by the Bank to meet its financial obligations as and when they fall due.
+
+Liquidity risk is managed by balancing its cash flows with forward thinking rolling time bands so that under normal
+conditions the Bank is comfortably placed to meet its payment obligations as they fall due. The immediate focus is
+on short and medium-term funding and liquid asset management. This ensures management of liquidity risks as
+part of Bank's ongoing business management within daily operations, strategy and planning. The Bank has
+sufficient liquidity for stressed conditions as per the daily stress testing and HQLA reserves as well. This is
+reflected in the liquidity profile as well where most of the liquidity requirements are in the medium term maturity.
+
+The Bank has developed its Internal Liquidity Adequacy Assessment Process (ILAAP) and stress testing process
+to assess the liquidity adequacy, the results of which have been reviewed by Senior Management during the year.
+
+The liquidity profile as at reporting date is as shown below:
+
+Non-derivative financial
+
+Non-derivative financial assets liabilities
+2025 2024 2025 2024
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+On Demand 23,820 628 7,326 9,420
+Due within 3 months 70,703 88,559 8,584 29,823
+Due between 3 to 12 months 126,478 113,350 290,760 270,573
+Due between 1 to 5 years 388,104 444,957 70,778 94,880
+Due after 5 years 23,468 9,942 : :
+Total 632,573 657,436 377,448 404,696
+
+Derivative financial asset!
+
+(liabilities)
+2025 2024
+USD ‘000 USD ‘000
+On Demand - -
+Due within 3 months - -
+Due between 3 to 12 months (1,436) (194)
+
+Due between 1 to 5 years
+Due after 5 years - -
+Total (1,436) (194)
+The responsibility for ensuring that the Bank can meet its obligations as they fall due rests with the Bank's
+management. Under the PRA regulations the Bank is compliant with its Internal Liquidity Guidelines on an
+ongoing basis. The Bank has a prudent liquidity policy and adequate management systems and controls in place
+to ensure that the policy is adhered to at all times.
+
+The Board of Directors are ultimately responsible for ensuring that the liquidity policy remains relevant and up to
+date at all times and is in line with the Bank's business activities and expressed risk tolerance.
+
+The Asset and Liability Committee ("ALCO") is responsible for reviewing and recommending liquidity policy to the
+Board of Directors. ALCO is supported by the Risk function, which is responsible for monitoring the compliance on
+a daily basis.
+
+The Bank has developed its ILAAP, which includes a series of stress tests and limits.
+
+The responsibility of day-to-day management of the Bank's liquidity position is delegated to the Bank’s Treasury
+department and overseen by CFO
+
+Currency risk
+
+Currency risk is the risk that arises from the change in price of one currency against another.
+
+The Bank is mainly exposed to fluctuations in the value of GBP, EUR and INR. Bank manages the exposures to
+the variability in cash flows of foreign currency denominated assets and liabilities to movements in foreign
+exchange rates by entering into cross currency swaps. These instruments are entered to match the cash flow
+profile. Bank has defined policy and low risk appetite to hold overnight open position in foreign currencies. Open
+position is monitored on daily basis and ensured that it remains within the risk appetite at all times.
+
+The Net open position in foreign currencies at the reporting date is as follows:
+
+65
+NOTES TO THE FINANCIAL STATEMENTS )) Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Ltd
+
+Principal Risks (Contd.)
+
+Currency Risk (Contd.)
+Assets Liabilities
+2025 2024 2025 2024
+USD ‘000 USD ‘000 USD ‘000 USD '000
+INR (462) - - 22
+GBP - - 990 1,120
+EURO (6) J = -
+
+A 5% shift in the open position will have a net impact of USD 0.26 Mn (2024: 0.57 Mn) on the Profits.
+
+Interest Rate Risk
+
+Interest rate risk is the risk that arises due to possibilities of a fluctuation in rates, and how that impacts on the
+pricing structure of the Bank's assets and liabilities. The Bank is also exposed to interest rate risk due to the
+nature of the rate being either fixed or floating. Most liabilities have fixed interest rates while for some assets
+interest rates are floating and are benchmarked to certain index rates like LIBOR, the Bank of England base rates,
+Euribor, Sonia and SOFR
+
+The Bank's ALCO meets monthly to monitor this risk. ALCO in turn reviews the interest rates in various
+currencies arising from repricing of assets, liabilities and derivative instruments. The Bank manages part of this
+risk by carefully matching the cost of liabilities with that of asset pricing and if need be the Bank would use interest
+rate swaps to mitigate the risk.
+
+Following the decision by Global Regulators to phase out IBORs and replace them with alternative reference
+rates, the Bank has formed a LIBOR Transition Steering Committee (LTSC) as an ad hoc sub-committee of ALCO
+which reports directly to the ALCO to develop a transition plan and monitor the implementation of the same. The
+committee is chaired by Head of Credit with members are from functions across the Bank including Branch,
+Finance, Risk and Treasury.
+
+In the past year, the Bank has made effective efforts to complete the transition from Libor. All performing accounts
+have been moved to either the BOE or SONIA or SOFR. The LIBOR Transition Steering Committee (LTSC) has
+therefore been dissolved.
+
+IBOR reform exposes the Bank to various risks which the committee is managing and monitoring closely. These
+risks include but are not limited to:
+
+Conduct risk arising from discussion with clients and market counterparties due to the amendments required to
+existing contracts necessary to effect IBOR Reform.
+
+Financial risk to the Bank and its clients that market are disrupted due to IBOR reform giving rise to financial
+Pricing risk from the potential lack of market information if liquidity in IBORs reduces and RFRs are illiquid and
+unobservable.
+
+Operational risk arising from the changes to the Banks' IT systems and processes, also the risk of payments
+being disrupted if IBOR ceases to be available.
+
+Accounting risk if the Banks' hedging relationships fail and from unrepresentative income statement as financial
+instruments transition to RFRs.
+
+Following is a detail of the carrying amount at 31 March 2025 of financial assets, financial liabilities, derivatives
+and loan commitments that continue to be referenced to the pending transition ratios:
+
+The management of interest rate risk against interest rate gap is supplemented by monitoring the sensitivity of the
+Banks' Financial assets and liabilities to various interest rate scenarios. Total assets and liabilities subject to
+interest rate risk are USD 483.4 Mn and USD 370.6 Mn respectively (2024: USD 471.8 Mn and USD 375.2 Mn
+respectively). The impact of a 200 basis point rise or fall in the interest rate, assuming constant balance sheet
+position is as under:
+
+Effect of 200 basis points increase in interest rates across maturity bands is USD 0.624 Mn (2024: USD 0.25 Mn)
+
+Effect of 200 basis points decrease in interest rates across maturity bands is (USD 0.499 Mn) (2024: (USD 0.03
+Mn))
+
+66
+NOTES TO THE FINANCIAL STATEMENTS n Union Bank
+
+FOR THE YEAR ENDED 31 March 2025 of india (UK) Ltd
+
+Principal Risks (Contd.)
+Operational Risk
+
+Operational risk is defined as the potential risk of financial loss resulting from inadequate or failed internal
+process, systems, people or external events.
+
+The Bank has put in place an Operational Risk Management policy to manage operational risk in an effective,
+efficient and proactive manner. The primary objective of the policy is to identify the operational risks that the Bank
+is exposed to from failed, inadequate and/or missing controls, processes, people, systems or from external events
+or a combination of all the five, assess or measure their magnitude, monitor them and control or mitigate them by
+using a variety of checks. Within the Operational risk framework, new products, processes and services
+introduced by the Bank are subject to rigorous risk evaluation and approval. In addition to the policy, the Bank has
+specific operational policies in place covering (inter alia) IT & Cyber Security, Outsourcing policy and business
+continuity plan.
+
+The Bank has identified various possible risk scenarios and has put in place an internal control framework to
+mitigate identified risks. This framework is set out in the form of departmental policies and procedures, which are
+reviewed on a regular basis.
+
+Capital Risk
+
+The Bank manages its capital to ensure that it will be able to continue as a going concern while maximising the
+return to stakeholders through the optimisation of its capital structure. The Bank's authority to operate as a bank
+is dependent upon the maintenance of adequate capital resources. The Bank is required to meet minimum
+regulatory requirements in the UK.
+
+The Bank's regulatory capital requirements are set by way of the ICG by the PRA. The Bank has had surplus
+capital over and above the capital required as per the ICG during the year.
+
+The Bank's regulatory capital is categorised into Tier one capital, which includes ordinary share capital, and
+retained earnings.
+
+2025 2024
+
+USD ‘000 USD ‘000
+
+Paid up share capital 150,000 150,000
+Retained earnings (36,701) (30,093)
+Fair value reserves (1,699) (3,024)
+Intangible assets (18) (71)
+Regulatory Deductions to Capital (99) (106
+Regulatory Capital 111,483 116,706
+
+26 Related Party
+26.1 Transaction with Parent Bank
+The ultimate parent company is Union Bank of India, a public-sector Bank incorporated in India, which is both the
+immediate and ultimate controlling party. The consolidated financial statements for Union Bank of India are
+available to the public and may be obtained from Union Bank Bhavan, 239, Vidhan Bhavan Marg, Nariman Point,
+Mumbai 400021 or from their website www.unionbankofindia.co.in.
+
+The Bank regards UBI (including all its branches in India and abroad) and its subsidiaries as related party in view
+of its 100% shareholding. No other group company holds any shares in UBIUK. The CEO and MD of the Parent
+Bank is also Chairman of UBIUK. The Bank does not pay any remuneration to her. Other than the Parent Bank
+and Directors, no other related party are present.
+
+Other Commitment
+
+During the year, the Bank entered into the following transactions with various branches of the Union Bank of India,
+(the Parent Bank):
+
+2025 2024
+
+USD ‘000 USD '000
+
+Interest income on placements 460 326
+Interest expense on borrowings =
+460 326
+
+67
+NOTES TO THE FINANCIAL STATEMENTS
+
+FOR THE YEAR ENDED 31 March 2025
+
+Related Party (Contd.)
+
+Transaction with Parent Bank (Contd.)
+Balances with Related Parties as at 31 March:
+
+Assets
+
+Nostro account balance with Union Bank of India
+
+Liabilities
+
+Current account held by UBI in UBIUK
+
+seer Ds geccscs (08)
+weet) (88):
+
+'U) Union Bank
+
+of india (UK) Ltd
+
+Amounts owed by related
+
+parties
+
+2025 2024
+
+USD '000 USD "000
+
+24 24
+ets
+Amounts owed to related
+
+parties
+
+2025 2024
+
+USD 7000 USD ’000
+
+(88)
+
+The amounts outstanding are unsecured and will be settled in cash. No guarantees have been given or received.
+No expense has been recognised in the year for bad or doubtful debts in respect of the amounts owed by related
+
+parties.
+
+The ultimate controlling party of the Bank is Union Bank of India, incorporated in India which is both the parent
+Bank (ownership - 100%) and ultimate controlling party. Other transactions with related party (including
+remuneration paid to Directors who the Bank considers as key management) are disclosed in note below.
+
+26,2 Transaction with Directors
+
+The following key management personnel are considered to be related parties:
+
+Ms. A Manimekhalai (Chair)
+
+Mr. Pankaj Dwivedi (Nominee Director, appointed on 13th May 2024)
+
+Mr. Joseph Jerry Liow Yune Loy (Independent Director)
+
+Dr. Anand Kumar (Independent Director)
+
+Mr. Patrick Joseph Quinn (Independent Director, resigned on 28th Feb 2025)
+
+Mr. Dawn Brown (Independent Director, appointed on 26th Sept 2024)
+Mr. Arbind Choudhary (Managing Director and Chief Executive Officer)
+Mr. Rahul Kumar (Executive Director and Chief Operating Officer)
+
+Management compensation to the above key management personnel is as follows: -
+
+Short-Term Employee Benefits
+Post-Employment Benefits
+Other Long-Term Benefits
+Termination Benefits
+Share-Based Payment Benefits
+Total Compensation
+
+These key personnel have deposit and / or savings accounts with the Bank. They are held under normal terms
+and conditions, and no preferential treatment are being given to them.
+
+27 Capital Requirements Directive V ("CRD V") - Country By Country Reporting
+
+2025
+USD ’000
+640
+
+Union Bank of India (UK) Limited is an authorised credit institution providing a range of financial and banking
+
+Operating income
+
+Average number of employees
+Profit (loss) before tax
+Corporation tax paid
+
+Public subsidies received
+
+2025
+UK
+13,327
+35
+(6,608)
+
+Total
+13,327
+35
+(6,608)
+
+USD 000
+
+2024
+UK Total
+16,429 16,429
+34 34
+1,488 1,488
+
+68
+NOTES TO THE FINANCIAL STATEMENTS 'U) Union Bank
+FOR THE YEAR ENDED 31 March 2025 of India (UK) Lid
+
+28 Events after the Balance Sheet Date
+
+Ms. A Manimekhalai completed her tenure at the parent bank on 2nd June 2025 and, consequently, ceased to be
+a Director and Chair of Union Bank of India (UK) Ltd. with effect from 3rd June 2025. As this event occurred after
+the reporting date, it does not affect the financial position of the Bank as at 31 March 2025. However, given the
+significance of the Chair's role in the Bank’s governance framework, it is disclosed as a non-adjusting post
+balance sheet event in accordance with IAS 10.
+
+The Board is monitoring the impact of current market situation to respond to the US announcement on tariffs in
+the preparation of Annual accounts for FY 2024-25. The Board agreed with management that the impact of US
+tariffs did not pertains to conditions existing as on 31st March 2025 Therefore this matter is a non adjusting post
+balance sheet event with no adjusted made to the financial statements. It is described further in strategic report
+under "Geopolitical and Macroeconomic Commentary".
+
+29 Pillar Ill
+
+Further information concerning the Bank's approach to risk management and its capital adequacy are contained
+in the unaudited disclosures made under the requirements of Pillar 3. These disclosures for 2024 are published
+on the Bank's website at www.unionbankofindiauk.co.uk and the ones for 2025 will be available after the financial
+statements are signed off
+
+69
+

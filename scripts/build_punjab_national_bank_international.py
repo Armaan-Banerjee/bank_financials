@@ -200,7 +200,13 @@ def p3_sources():
             f"FY2025: {P3_URL['FY2025']}, printed p.6 (2025 KM1)",
             f"FY2024: {P3_URL['FY2024']}, printed p.6 (2024 KM1)",
             f"FY2023: {P3_URL['FY2023']}, printed p.6 (2023 KM1)",
-            f"FY2022: {P3_URL['FY2023']}, printed p.6 (2022 comparative in 2023 KM1); the 2022 report's headline ratios are also confirmed at printed p.5 via {P3_URL['FY2022']}",
+            # KM1-024 (2026-09-16): FY2022 was cited to the 2023 edition's COMPARATIVE column. The
+            # 2022 edition carries its OWN full UK KM1 at Appendix 1, printed pp.24-25 - located by
+            # reading that document's own contents page. FY2021 was not cited here at all; its own
+            # edition carries a (pre-UK, Basel III) Table KM1 at printed p.2. Both now cite their own
+            # edition, per the "each year from its own edition" rule.
+            f"FY2022: {P3_URL['FY2022']}, Appendix 1, printed pp.24-25 (own-year UK KM1; the table runs over onto p.25). The 2023 edition's 2022 comparative agrees on every row except precision - it prints LCR 405% and NSFR 128% where the 2022 edition prints 405.1% and 128.2%; the own-edition printing is used",
+            f"FY2021: {P3_URL['FY2021']}, printed p.2 (own-year 'Key metrics - Table KM1', the PRE-2022 Basel III version of the template). NSFR is not a row in that version at all - FY2021's NSFR comes from the same document's separate 'Key Liquidity Metrics' table, printed p.10",
             f"FY2020: {P3_URL['FY2020']}, printed p.2 (2020 KM1 table, with FY2019 comparative)",
             f"FY2019: {P3_URL['FY2019']}, printed p.2 (2019 KM1 table, with FY2018 comparative)",
             f"FY2018: {P3_URL['FY2018']}, printed pp.11-12/16 (own-basis capital/leverage/liquidity tables; FY2017 comparative also sourced here)",
@@ -1094,12 +1100,301 @@ TOTAL_RATIO = {"FY2026": "23.6%", "FY2025": "31.0%", "FY2024": "31.8%", "FY2023"
 LEVERAGE = {"FY2026": "13.6%", "FY2025": "16.7%", "FY2024": "19.1%", "FY2023": "19.9%", "FY2022": "19.3%", "FY2021": "17.3%",
             "FY2020": "20.4%", "FY2019": "15.1%", "FY2018": "12.94%", "FY2017": "9.7%",
             "FY2016": "8.93%", "FY2015": "8.78%", "FY2014": "7.83%"}
-LCR = {"FY2026": "350%", "FY2025": "201%", "FY2024": "647%", "FY2023": "384%", "FY2022": "405%", "FY2021": "748%",
+# KM1-024 (2026-09-16): FY2022's LCR/NSFR were carried at the 2023 edition's rounded comparative
+# (405% / 128%). The 2022 edition's own KM1 prints 405.1% and 128.2%; the own-edition printing is
+# used here and on the KM1 sheet, per the "each year from its own edition" rule.
+LCR = {"FY2026": "350%", "FY2025": "201%", "FY2024": "647%", "FY2023": "384%", "FY2022": "405.1%", "FY2021": "748%",
        "FY2020": "403%", "FY2019": "524%", "FY2018": "1027%", "FY2017": "1040%",
        "FY2016": "167.00%"}
-NSFR = {"FY2026": "118%", "FY2025": "121%", "FY2024": "130%", "FY2023": "135%", "FY2022": "128%", "FY2021": "146%",
+NSFR = {"FY2026": "118%", "FY2025": "121%", "FY2024": "130%", "FY2023": "135%", "FY2022": "128.2%", "FY2021": "146%",
         "FY2020": "126%", "FY2019": "139%", "FY2018": "171%", "FY2017": "180%",
         "FY2016": "119%", "FY2015": "131%", "FY2014": "110%"}
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - PNBIL's own key-metrics template, reproduced as printed.
+# KM1-024, 16 September 2026.
+#
+# CURRENCY: $ million, the Bank's own functional and Pillar 3 currency ("The
+# Pillar 3 disclosures are presented in US Dollars as this is functional
+# currency of the Bank"). The template is reproduced in the currency PNBIL
+# published it in; the 11 metric sheets' £m are this project's conversion.
+# Entity: PNBIL SOLO - the Bank has no subsidiary or joint venture requiring
+# consolidation, and says so.
+#
+# TWO DIFFERENT TEMPLATES, KEPT AS TWO SEPARATE CAPTION BLOCKS AND NEVER
+# MERGED. This is the single most important thing about this sheet:
+#
+#   BLOCK A, FY2022-FY2026 - the UK KM1 template ("Appendix 1 / 1.9 UK KM1 -
+#     Key metrics template"): rows 1-4, 5-7, UK 7a-7d, 8/UK 8a/9/UK 9a/10/UK
+#     10a/11/UK 11a/12, 13-14, 15/UK 16a/UK 16b/16/17, 18-20.
+#
+#   BLOCK B, FY2019-FY2021 - the PRE-2022 Basel III template ("Key metrics -
+#     Table KM1"): rows 1/1a/2/2a/3/3a, 4, 5/5a/6/6a/7/7a, 8/9/11/12,
+#     13/14/14a, 15/16/17. Different section captions ("Available capital",
+#     "Risk weighted assets (RWA)", "Basel III leverage ratio"), IFRS 9
+#     fully-loaded twin rows throughout, NO SREP rows and NO NSFR rows at all.
+#
+# THE ROW NUMBERS COLLIDE AND MEAN DIFFERENT THINGS ACROSS THE BREAK. In the
+# UK template "UK 7a" is "Additional CET1 SREP requirements"; in the pre-2022
+# template plain "7a" is "Fully loaded ECL accounting model Total capital
+# ratio". Likewise 8/9/11/12 are UK buffer rows in block A and Basel "Additional
+# CET 1 buffer requirements" rows in block B, and 16 is "Total net cash
+# outflows (adjusted value)" in A but "Total net cash outflow" in B. Putting
+# the two on one set of rows would invent a correspondence PNBIL never
+# published, so they are two blocks. Each block's rows carry only the years
+# that block's editions actually printed.
+#
+# FY2018 AND EARLIER ARE BLANK. The FY2018 edition publishes a full Pillar 3
+# but NO key-metrics table of any kind - its contents page runs Overview /
+# Risk Management / Capital Resources / Capital Requirements / Leverage /
+# ... with no key-metrics section, and its one hit for "key metrics" is a
+# narrative sentence about risk-appetite limits. (Extraction was rich on that
+# document - 88 hits for "capital", 63 for "ratio", 9 for "cet" - so that is a
+# fact about the document, not a failed search.) The FY2019 edition's
+# comparative column DOES carry a 2018 KM1; it is quoted in the note rather
+# than written into the FY2018 column, because it is a FY2019 disclosure.
+#
+# DIVERGENCES BETWEEN AN EDITION AND A LATER EDITION'S COMPARATIVE, recorded
+# and NOT reconciled - every cell below is from the edition in which that year
+# is the reporting year:
+#   FY2019 rows 13/14 - own edition 1290.7 / 15.1%; FY2020 edition's 2019
+#     comparative 1,034.2 / 18.9%. A leverage-exposure restatement.
+#   FY2019 rows 8/9/11 - own 2.9% / 0.01% / 2.9%; FY2020 comparative 2.50% /
+#     0.54% / 3.04%.
+#   FY2024 row 17 - own edition 647%; FY2025 edition's 2024 comparative 528%.
+#   FY2025 row 15 - own edition 115.7; FY2026 edition's 2025 comparative 115.5.
+#   FY2022 rows 17/20 - own edition 405.1% / 128.2%; FY2023 edition's 2022
+#     comparative rounds them to 405% / 128%.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "UK KM1 — Key metrics template, as printed in the FY2022–FY2026 editions ($ million / %)", {}),
+    ("SECTION", "Available own funds (amounts, $ million)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET 1) capital",
+     {"FY2026": 138.2, "FY2025": 140.8, "FY2024": 144.1, "FY2023": 143.1, "FY2022": 137.9}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2026": 183.2, "FY2025": 185.8, "FY2024": 189.1, "FY2023": 188.1, "FY2022": 182.9}),
+    ("DATA", "3    Total capital",
+     {"FY2026": 210.9, "FY2025": 216.1, "FY2024": 223.1, "FY2023": 226.4, "FY2022": 213.9}),
+    ("SECTION", "Risk-weighted exposure amounts ($ million)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2026": 894.9, "FY2025": 697.1, "FY2024": 701.0, "FY2023": 730.1, "FY2022": 802.6}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2026": "15.4%", "FY2025": "20.2%", "FY2024": "20.6%", "FY2023": "19.6%", "FY2022": "17.2%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2026": "20.5%", "FY2025": "26.7%", "FY2024": "27.0%", "FY2023": "25.8%", "FY2022": "22.8%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2026": "23.6%", "FY2025": "31.0%", "FY2024": "31.8%", "FY2023": "31.0%", "FY2022": "26.7%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2026": "1.9%", "FY2025": "1.9%", "FY2024": "1.9%", "FY2023": "1.9%", "FY2022": "2.5%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2026": "0.6%", "FY2025": "0.6%", "FY2024": "0.6%", "FY2023": "0.6%", "FY2022": "0.8%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2026": "0.9%", "FY2025": "0.9%", "FY2024": "0.8%", "FY2023": "0.8%", "FY2022": "1.1%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2026": "11.5%", "FY2025": "11.5%", "FY2024": "11.4%", "FY2023": "11.4%", "FY2022": "12.4%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2026": "1.7%", "FY2025": "1.6%", "FY2024": "1.4%", "FY2023": "0.7%", "FY2022": "0.0%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2026": "4.2%", "FY2025": "4.1%", "FY2024": "3.9%", "FY2023": "3.1%", "FY2022": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2026": "15.6%", "FY2025": "15.6%", "FY2024": "15.3%", "FY2023": "14.5%", "FY2022": "14.9%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2026": "9.0%", "FY2025": "13.8%", "FY2024": "14.2%", "FY2023": "13.2%", "FY2022": "10.2%"}),
+    ("SECTION", "Leverage ratio ($ million / %)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2026": 1346.4, "FY2025": 1114.5, "FY2024": 987.7, "FY2023": 942.9, "FY2022": 948.2}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2026": "13.6%", "FY2025": "16.7%", "FY2024": "19.1%", "FY2023": "19.9%", "FY2022": "19.3%"}),
+    ("SECTION", "Liquidity Coverage Ratio ($ million / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2026": 203.3, "FY2025": 115.7, "FY2024": 146.5, "FY2023": 166.1, "FY2022": 191.2}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2026": 106.8, "FY2025": 68.5, "FY2024": 62.1, "FY2023": 73.8, "FY2022": 81.3}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2026": 49.9, "FY2025": 44.8, "FY2024": 39.4, "FY2023": 30.6, "FY2022": 34.1}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2026": 57.0, "FY2025": 23.7, "FY2024": 22.6, "FY2023": 43.2, "FY2022": 47.2}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2026": "350%", "FY2025": "201%", "FY2024": "647%", "FY2023": "384%", "FY2022": "405.1%"}),
+    ("SECTION", "Net Stable Funding Ratio ($ million / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2026": 1050.9, "FY2025": 841.2, "FY2024": 801.2, "FY2023": 819.1, "FY2022": 842.6}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2026": 891.4, "FY2025": 693.0, "FY2024": 618.8, "FY2023": 613.3, "FY2022": 657.4}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2026": "118%", "FY2025": "121%", "FY2024": "130%", "FY2023": "135%", "FY2022": "128.2%"}),
+
+    ("SECTION", "Table KM1 — Key metrics, PRE-2022 Basel III version, as printed in the FY2019–FY2021 editions "
+                "($ million / %). A SEPARATE TEMPLATE: the row numbers below are NOT the UK rows above — plain "
+                "'7a' here is the fully-loaded total capital ratio, not a SREP requirement.", {}),
+    ("SECTION", "Available capital ($ million)", {}),
+    ("DATA", "1    Common equity tier 1 (CET 1)",
+     {"FY2021": 134.4, "FY2020": 146.1, "FY2019": 150.4}),
+    ("DATA", "1a    Fully loaded ECL accounting model",
+     {"FY2021": 132.9, "FY2020": 144.3, "FY2019": 146.4}),
+    ("DATA", "2    Tier 1",
+     {"FY2021": 179.4, "FY2020": 191.1, "FY2019": 195.4}),
+    ("DATA", "2a    Fully loaded ECL accounting model Tier 1",
+     {"FY2021": 177.9, "FY2020": 189.3, "FY2019": 191.4}),
+    ("DATA", "3    Total Capital",
+     {"FY2021": 206.6, "FY2020": 225.7, "FY2019": 236.3}),
+    ("DATA", "3a    Fully loaded ECL accounting model total capital",
+     {"FY2021": 205.1, "FY2020": 223.9, "FY2019": 232.3}),
+    ("SECTION", "Risk weighted assets (RWA) ($ million)", {}),
+    ("DATA", "4    Total RWA",
+     {"FY2021": 784.6, "FY2020": 755.9, "FY2019": 797.6}),
+    ("SECTION", "Risk weighted capital ratios as a % of RWA", {}),
+    ("DATA", "5    Common equity tier 1 ratio (%)",
+     {"FY2021": "17.1%", "FY2020": "19.3%", "FY2019": "18.9%"}),
+    ("DATA", "5a    Fully loaded ECL accounting model Common equity tier 1 ratio (%)",
+     {"FY2021": "17.0%", "FY2020": "19.1%", "FY2019": "18.4%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2021": "22.9%", "FY2020": "25.3%", "FY2019": "24.5%"}),
+    ("DATA", "6a    Fully loaded ECL accounting model Tier 1 ratio (%)",
+     {"FY2021": "22.7%", "FY2020": "25.0%", "FY2019": "24.0%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2021": "26.3%", "FY2020": "29.9%", "FY2019": "29.6%"}),
+    ("DATA", "7a    Fully loaded ECL accounting model Total capital ratio (%)",
+     {"FY2021": "26.1%", "FY2020": "29.6%", "FY2019": "29.1%"}),
+    ("SECTION", "Additional CET 1 buffer requirements as a % of RWA", {}),
+    ("DATA", "8    Capital conservation buffer requirement (%)",
+     {"FY2021": "2.5%", "FY2020": "2.50%", "FY2019": "2.9%"}),
+    ("DATA", "9    Countercyclical buffer requirement (%)",
+     {"FY2021": "0.0%", "FY2020": "0.02%", "FY2019": "0.01%"}),
+    ("DATA", "11    Total of bank's CET 1 specific buffer requirements (%)",
+     {"FY2021": "2.5%", "FY2020": "2.52%", "FY2019": "2.9%"}),
+    ("DATA", "12    CET 1 available after meeting bank's minimum capital requirements (%)",
+     {"FY2021": "6.8%", "FY2020": "8.1%", "FY2019": "7.4%"}),
+    ("SECTION", "Basel III leverage ratio ($ million / %)", {}),
+    ("DATA", "13    Total Basel III leverage ratio exposure measure",
+     {"FY2021": 1035.7, "FY2020": 937.4, "FY2019": 1290.7}),
+    ("DATA", "14    Basel III leverage ratio (%)",
+     {"FY2021": "17.3%", "FY2020": "20.4%", "FY2019": "15.1%"}),
+    ("DATA", "14a    Fully loaded ECL accounting model Basel III leverage ratio (%)",
+     {"FY2021": "17.2%", "FY2020": "20.2%", "FY2019": "14.8%"}),
+    ("SECTION", "Liquidity coverage ratio ($ million / %)", {}),
+    ("DATA", "15    Total HQLA",
+     {"FY2021": 239.4, "FY2020": 102.3, "FY2019": 75.9}),
+    ("DATA", "16    Total net cash outflow",
+     {"FY2021": 32.0, "FY2020": 25.4, "FY2019": 14.5}),
+    ("DATA", "17    LCR ratio (%)",
+     {"FY2021": "748%", "FY2020": "403%", "FY2019": "524%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - PNBIL's own key-metrics template, SOLO basis, taken from EACH YEAR'S OWN edition (that "
+    "edition's own reporting-date column), never from a later edition's comparative. Amounts in $ MILLION, "
+    "the Bank's own Pillar 3 currency - not the £m used on the other sheets in this workbook. The FY2022 "
+    "edition states it in terms: 'The Pillar 3 disclosures are presented in US Dollars as this is functional "
+    "currency of the Bank.'\n"
+    f"FY2026: Pillar 3 Disclosures for the year ended 31 March 2026, section 1.9 'UK KM1 - Key metrics template', printed pp.6-7 - {P3_URL['FY2026']}\n"
+    f"FY2025: 31 March 2025 edition, section 1.9, printed pp.6-7 - {P3_URL['FY2025']}\n"
+    f"FY2024: 31 March 2024 edition, section 1.9, printed pp.6-7 - {P3_URL['FY2024']}\n"
+    f"FY2023: 31 March 2023 edition, section 1.9, printed pp.6-7 - {P3_URL['FY2023']}\n"
+    f"FY2022: 31 March 2022 edition, Appendix 1 'UK KM1 - Key metrics template', printed pp.24-25 - {P3_URL['FY2022']}\n"
+    f"FY2021: 31 March 2021 edition, 'Key metrics - Table KM1', printed p.2 - {P3_URL['FY2021']}\n"
+    f"FY2020: 31 March 2020 edition, 'Key metrics - Table KM1', printed p.2 - {P3_URL['FY2020']}\n"
+    f"FY2019: 31 March 2019 edition, 'Table KM1: Key metrics', printed p.2 - {P3_URL['FY2019']}\n\n"
+    "LATEST-EDITION CHECK, 16 September 2026. PNBIL's own library at pnbint.com "
+    "(https://www.pnbint.com/PNBIL/About-Us/Financial-Report) was listed directly rather than relying on the "
+    "URLs already cited in this script. The NEWEST Pillar 3 on it is 'Basel-III-Pillar-3-Disclosure-31-03-"
+    "2026.pdf' and the newest Annual Report is 'PNBIL-Annual-Report-2026.pdf' - BOTH already carried by this "
+    "workbook as FY2026. The Bank's year end is 31 March, so the next edition (31 March 2027) does not yet "
+    "exist. Nothing newer to transcribe; YEARS is unchanged. Every document read for this sheet was verified "
+    "by HTTP status, Content-Type AND %PDF magic bytes. (Note the site's own navigation links "
+    "/financial-reports and /regulatory-disclosures both return HTTP 500; the working path is "
+    "/PNBIL/About-Us/Financial-Report.) PNBIL publishes NO half-year Pillar 3 that could serve as a second "
+    "opinion - its own Article 433c compliance table marks 'the key metrics referred to in Article 447 on a "
+    "semi-annual basis' as 'Not applicable'.\n\n"
+    "TWO DIFFERENT TEMPLATES, SHOWN AS TWO SEPARATE BLOCKS AND DELIBERATELY NOT MERGED.\n"
+    "• FY2022-FY2026 use the UK KM1 template introduced with the PRA's Disclosure (CRR) Part.\n"
+    "• FY2019-FY2021 use the PRE-2022 Basel III 'Table KM1', a genuinely different template: different "
+    "section captions ('Available capital', 'Risk weighted assets (RWA)', 'Basel III leverage ratio'), IFRS 9 "
+    "fully-loaded twin rows (1a/2a/3a/5a/6a/7a/14a) that the UK version does not carry, NO SREP rows at all, "
+    "and NO NSFR rows at all.\n"
+    "• THE ROW NUMBERS COLLIDE AND MEAN DIFFERENT THINGS. In the UK template 'UK 7a' is 'Additional CET1 "
+    "SREP requirements'; in the pre-2022 template plain '7a' is 'Fully loaded ECL accounting model Total "
+    "capital ratio'. Rows 8/9/11/12 are UK buffer rows in one block and Basel 'Additional CET 1 buffer "
+    "requirements' rows in the other, and row 16 is 'Total net cash outflows (adjusted value)' against "
+    "'Total net cash outflow'. Mapping one onto the other would invent a correspondence PNBIL never "
+    "published, so the two are kept as separate caption blocks and no row spans the break.\n"
+    "• PNBIL's NSFR for FY2019-FY2021 is therefore NOT on this sheet: that template has no NSFR row. The "
+    "FY2021 figure on the NSFR metric sheet (146%) comes from a separate 'Key Liquidity Metrics' table at "
+    "printed p.10 of the FY2021 edition, not from a KM1 row.\n\n"
+    "FY2018 AND EARLIER ARE BLANK, and this is a 'the template is not used' finding rather than a failed "
+    "search. The FY2018 edition publishes a full Pillar 3 but no key-metrics table of any kind - its own "
+    "contents page runs Overview / Risk Management Overview / Risk Appetite Framework / Capital Resources / "
+    "Capital Requirements / Leverage / ... with no key-metrics section, and its single hit for 'key metrics' "
+    "is a narrative sentence about risk-appetite limits. The extraction of that document was rich (88 hits "
+    "for 'capital', 63 for 'ratio', 9 for 'cet'), so the absence is a fact about the document rather than a "
+    "tooling failure. The FY2019 edition's comparative column DOES print a 2018 KM1; it is quoted here "
+    "rather than written into the FY2018 column, because it is a FY2019-edition disclosure: 1 142.8; 1a -; "
+    "2 187.8; 2a -; 3 237.2; 3a --; 4 906.2; 5 15.8%; 5a -; 6 20.7%; 6a -; 7 26.2%; 7a -; 8 1.88%; 9 0.02%; "
+    "11 1.9%; 12 5.1%; 13 1451.6; 14 12.9%; 14a -; 15 167.0; 16 16.3; 17 1027%. (Note that edition prints "
+    "two different missing-value glyphs in one column - a single '-' on most fully-loaded rows and a double "
+    "'--' on row 3a. Both are dashes and both would be blank here.)\n\n"
+    "DASHES ARE BLANK, PRINTED ZEROES ARE KEPT (and a later edition's zero does not fill an earlier "
+    "edition's missing row). Rows UK 8a, UK 9a, 10 and UK 10a are printed '-' in every FY2022-FY2026 "
+    "edition, so they are blank here. Row 9 is a printed '0.0%' for FY2022 and a printed '0.02%'/'0.01%' for "
+    "FY2020/FY2019 - disclosed zeroes and near-zeroes, kept as printed.\n\n"
+    "PRECISION IS THE BANK'S OWN AND DRIFTS BETWEEN EDITIONS (rule: keep it). The FY2022 edition prints "
+    "LCR 405.1% and NSFR 128.2%; the FY2023 edition rounds the same 2022 figures to 405% and 128%. The "
+    "FY2021 edition prints the conservation buffer as '2.5%' where the FY2020 edition prints '2.50%'. Each "
+    "cell above is as its own edition printed it, so precision varies along a row. That is not an error.\n\n"
+    "DIVERGENCES BETWEEN AN EDITION AND A LATER EDITION'S COMPARATIVE - RECORDED, NOT RECONCILED:\n"
+    "• FY2019 rows 13 and 14: the FY2019 edition prints exposure 1290.7 and leverage 15.1%; the FY2020 "
+    "edition's 2019 comparative prints 1,034.2 and 18.9%. That is a restatement of the leverage exposure "
+    "measure, not a rounding difference - the same edition's own 2018 comparative prints 1451.6. This sheet "
+    "and the Leverage Ratio metric sheet both carry the FY2019 own-edition 15.1%, and a SECOND TABLE IN THAT "
+    "SAME DOCUMENT settles it: immediately beneath the KM1, the FY2019 edition prints its own 'Key metrics' "
+    "summary strip - CET 1 ratio 18.9%, Total capital ratio 29.6%, Leverage ratio 15.1%, LCR 524%, Total RWA "
+    "$797.6mn, each with a 'Mar 2018' comparative beneath it - which reproduces 15.1% independently of the "
+    "template. The FY2020 and FY2021 editions print the same summary strip, and it agrees with their KM1s "
+    "too (20.4% and 17.3%).\n"
+    "• FY2019 rows 8, 9 and 11: own edition 2.9% / 0.01% / 2.9%; FY2020 comparative 2.50% / 0.54% / 3.04%.\n"
+    "• FY2024 row 17: the FY2024 edition prints LCR 647%; the FY2025 edition's 2024 comparative prints 528%. "
+    "This sheet carries 647%, matching the LCR metric sheet, whose note already records the same pair.\n"
+    "• FY2025 row 15: the FY2025 edition prints HQLA 115.7; the FY2026 edition's 2025 comparative prints "
+    "115.5. This sheet carries 115.7.\n"
+    "• FY2022 rows 17 and 20: see the precision note above.\n\n"
+    "LABEL DRIFT, reproduced from the newest edition where a row's caption changed case only: FY2026 prints "
+    "'Common Equity Tier 1 (CET 1) capital' where FY2022-FY2025 print 'Common equity tier 1 (CET 1) "
+    "capital'. Only the capitalisation differs and the figures are unaffected.\n\n"
+    "OMITTED ROWS ARE A STATED POLICY, not a gap. Each FY2022+ edition says: 'Where the Bank is required to "
+    "disclose fixed format templates, and either a row or column is not applicable to PNBIL, these have been "
+    "omitted. Further, where rows are empty sets in the UK templates, these have also been omitted.' Rows "
+    "14a-14e are absent for that reason.\n\n"
+    "COLUMN LETTERS DO NOT TRANSFER. Each edition prints two columns, its own reporting date and the prior "
+    "year (lettered a and b in the FY2022/FY2023 editions, unlettered in the others). This sheet is one "
+    "column per YEAR, each from that year's own edition's own-date column. NOTE the FY2022 edition prints no "
+    "2021 comparative at all for rows 13-20; that does not affect this sheet, since FY2021 comes from its "
+    "own edition.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Punjab National Bank (International) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published key-metrics template, reproduced in PNBIL's row order with its own row "
+             "numbers, labels and printed precision. AMOUNTS ARE IN $ MILLION - the Bank's own Pillar 3 currency, "
+             "not the £m used on the other sheets here. Solo basis. TWO SEPARATE TEMPLATES are shown as two "
+             "blocks: the UK KM1 (FY2022-FY2026) and the pre-2022 Basel III Table KM1 (FY2019-FY2021), whose row "
+             "numbers collide but do NOT mean the same things. FY2018 and earlier publish no key-metrics table "
+             "at all. See the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    years=PILLAR3_YEARS,
+    first_col_width=80,
+    source_height=620,
+)
 
 metric("CET1 Capital", "£m (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", stock(CET1))], CAPITAL_NOTE)
 metric("CET1 Ratio", "%", [("Common Equity Tier 1 ratio", CET1_RATIO)])

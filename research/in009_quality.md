@@ -6,14 +6,14 @@ Source database: `/Users/armaan/code/katalysis/scripts/insights/../../research/i
 
 | Metric | Mode | Observations | Banks | Years | Exclusions |
 |---|---|---:|---:|---|---|
-| CET1 Ratio | broad | 979 | 138 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 177, non_numeric_disclosure: 76 |
-| CET1 Ratio | strict | 432 | 61 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 247, missing: 177, non_numeric_disclosure: 76, unknown_basis: 300 |
-| Tier 1 Ratio | broad | 938 | 135 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 167, non_numeric_disclosure: 93 |
-| Tier 1 Ratio | strict | 411 | 60 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 241, missing: 167, non_numeric_disclosure: 93, unknown_basis: 286 |
-| Total Capital Ratio | broad | 969 | 139 | 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 164, non_numeric_disclosure: 59 |
-| Total Capital Ratio | strict | 414 | 61 | 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 243, missing: 164, non_numeric_disclosure: 59, unknown_basis: 312 |
-| Leverage Ratio | broad | 1398 | 132 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 826, non_numeric_disclosure: 153 |
-| Leverage Ratio | strict | 591 | 59 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 376, missing: 826, non_numeric_disclosure: 153, unknown_basis: 431 |
+| CET1 Ratio | broad | 980 | 138 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 178, non_numeric_disclosure: 76 |
+| CET1 Ratio | strict | 432 | 61 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 248, missing: 178, non_numeric_disclosure: 76, unknown_basis: 300 |
+| Tier 1 Ratio | broad | 939 | 135 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 168, non_numeric_disclosure: 93 |
+| Tier 1 Ratio | strict | 411 | 60 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 242, missing: 168, non_numeric_disclosure: 93, unknown_basis: 286 |
+| Total Capital Ratio | broad | 970 | 139 | 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 164, non_numeric_disclosure: 59 |
+| Total Capital Ratio | strict | 415 | 66 | 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 243, missing: 164, non_numeric_disclosure: 59, unknown_basis: 312 |
+| Leverage Ratio | broad | 1400 | 132 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 830, non_numeric_disclosure: 153 |
+| Leverage Ratio | strict | 593 | 63 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 376, missing: 830, non_numeric_disclosure: 153, unknown_basis: 431 |
 
 Strict mode includes numeric annual observations with an explicitly classified reporting basis.
 Broad mode includes numeric annual observations with a 12-month annual period; unknown basis is retained.
@@ -48,7 +48,6 @@ Broad mode includes numeric annual observations with a 12-month annual period; u
 | broad | CET1 Ratio | 455378 | BANK OF THE PHILIPPINE ISLANDS EUROPE | 2025 | 56.29 | robust level score at least 3.5 |
 | broad | CET1 Ratio | 488982 | METRO BANK | 2025 | 12.5 | level below 5th percentile |
 | broad | CET1 Ratio | 695048 | UBA UK | 2024 | 49.04 | robust level score at least 3.5 |
-| broad | CET1 Ratio | 730427 | MONZO | 2025 | 55.92 | robust level score at least 3.5 |
 | broad | CET1 Ratio | 754568 | CLEARBANK | 2025 | 49.75 | robust level score at least 3.5 |
 | broad | CET1 Ratio | 805574 | CITIBANK UK | 2023 | 72.7 | robust level score at least 3.5 |
 | broad | CET1 Ratio | 850286 | GB BANK | 2025 | 19.14 | year-over-year movement above 95th percentile |
@@ -80,7 +79,6 @@ Broad mode includes numeric annual observations with a 12-month annual period; u
 | broad | Tier 1 Ratio | 541910 | CASTLE TRUST CAPITAL | 2025 | 13.35 | level below 5th percentile |
 | broad | Tier 1 Ratio | 604551 | PARAGON | 2025 | 12.6 | level below 5th percentile |
 | broad | Tier 1 Ratio | 695048 | UBA UK | 2024 | 49.04 | robust level score at least 3.5 |
-| broad | Tier 1 Ratio | 730427 | MONZO | 2025 | 55.92 | robust level score at least 3.5 |
 | broad | Tier 1 Ratio | 754568 | CLEARBANK | 2025 | 49.75 | robust level score at least 3.5 |
 | broad | Tier 1 Ratio | 805574 | CITIBANK UK | 2023 | 81.8 | robust level score at least 3.5 |
 | broad | Tier 1 Ratio | 815220 | RCI BANK UK | 2024 | 13.46 | level below 5th percentile |
@@ -113,7 +111,6 @@ Broad mode includes numeric annual observations with a 12-month annual period; u
 | broad | Total Capital Ratio | 455378 | BANK OF THE PHILIPPINE ISLANDS EUROPE | 2025 | 56.29 | robust level score at least 3.5 |
 | broad | Total Capital Ratio | 604551 | PARAGON | 2025 | 14.3 | level below 5th percentile |
 | broad | Total Capital Ratio | 695048 | UBA UK | 2024 | 49.04 | robust level score at least 3.5 |
-| broad | Total Capital Ratio | 730427 | MONZO | 2025 | 56.67 | robust level score at least 3.5 |
 | broad | Total Capital Ratio | 740551 | CHETWOOD | 2025 | 15.2 | level below 5th percentile |
 | broad | Total Capital Ratio | 754568 | CLEARBANK | 2025 | 49.75 | robust level score at least 3.5 |
 | broad | Total Capital Ratio | 805574 | CITIBANK UK | 2024 | 138.6 | robust level score at least 3.5; year-over-year movement above 95th percentile |
@@ -129,6 +126,7 @@ Broad mode includes numeric annual observations with a 12-month annual period; u
 | broad | Leverage Ratio | 124579 | JP MORGAN EUROPE | 2025 | 94.12 | level above 95th percentile; robust level score at least 3.5 |
 | broad | Leverage Ratio | 146702 | CREDIT SUISSE INTERNATIONAL | 2025 | 53.08 | robust level score at least 3.5; year-over-year movement above 95th percentile |
 | broad | Leverage Ratio | 169628 | BANK OF SCOTLAND | 2025 | 4.3 | level below 5th percentile |
+| broad | Leverage Ratio | 195430 | MORGAN STANLEY BANK INTERNATIONAL | 2025 | 30.3 | robust level score at least 3.5 |
 | broad | Leverage Ratio | 204478 | BIRMINGHAM BANK | 2024 | 24.0 | year-over-year movement above 95th percentile |
 | broad | Leverage Ratio | 204508 | METHODIST CHAPEL AID | 2023 | 35.4 | robust level score at least 3.5 |
 | broad | Leverage Ratio | 207380 | MELLI BANK | 2016 | 75.0 | level above 95th percentile; robust level score at least 3.5 |
@@ -179,17 +177,20 @@ Broad mode includes numeric annual observations with a 12-month annual period; u
 | strict | Total Capital Ratio | 208019 | BANK SEPAH INTERNATIONAL | 2025 | 102.7 | level above 95th percentile; robust level score at least 3.5 |
 | strict | Total Capital Ratio | 208020 | PERSIA INTERNATIONAL BANK | 2021 | 40.99 | robust level score at least 3.5 |
 | strict | Total Capital Ratio | 219523 | BANK OF BEIRUT UK | 2025 | 41.93 | robust level score at least 3.5 |
-| strict | Total Capital Ratio | 222030 | ICBC (LONDON) PLC | 2025 | 81.09 | robust level score at least 3.5 |
+| strict | Total Capital Ratio | 222030 | ICBC (LONDON) PLC | 2025 | 81.09 | level above 95th percentile; robust level score at least 3.5 |
+| strict | Total Capital Ratio | 229148 | ALRAYAN BANK | 2025 | 15.82 | level below 5th percentile |
 | strict | Total Capital Ratio | 541910 | CASTLE TRUST CAPITAL | 2025 | 15.72 | level below 5th percentile |
 | strict | Total Capital Ratio | 740551 | CHETWOOD | 2025 | 15.2 | level below 5th percentile |
 | strict | Total Capital Ratio | 850286 | GB BANK | 2025 | 19.14 | year-over-year movement above 95th percentile |
+| strict | Leverage Ratio | 114276 | STANDARD CHARTERED BANK | 2025 | 4.2 | level below 5th percentile |
+| strict | Leverage Ratio | 121878 | NATIONAL WESTMINSTER BANK PLC | 2025 | 4.2 | level below 5th percentile |
 | strict | Leverage Ratio | 121885 | CO-OPERATIVE BANK | 2024 | 4.0 | level below 5th percentile |
 | strict | Leverage Ratio | 124269 | CREDIT SUISSE UK | 2025 | 87.0 | level above 95th percentile; robust level score at least 3.5; year-over-year movement above 95th percentile |
 | strict | Leverage Ratio | 204478 | BIRMINGHAM BANK | 2024 | 24.0 | year-over-year movement above 95th percentile |
 | strict | Leverage Ratio | 204508 | METHODIST CHAPEL AID | 2023 | 35.4 | robust level score at least 3.5 |
 | strict | Leverage Ratio | 207380 | MELLI BANK | 2016 | 75.0 | level above 95th percentile; robust level score at least 3.5 |
 | strict | Leverage Ratio | 208019 | BANK SEPAH INTERNATIONAL | 2025 | 55.0 | level above 95th percentile; robust level score at least 3.5 |
-| strict | Leverage Ratio | 208020 | PERSIA INTERNATIONAL BANK | 2021 | 53.32 | robust level score at least 3.5; year-over-year movement above 95th percentile |
+| strict | Leverage Ratio | 208020 | PERSIA INTERNATIONAL BANK | 2021 | 53.32 | level above 95th percentile; robust level score at least 3.5; year-over-year movement above 95th percentile |
 | strict | Leverage Ratio | 222030 | ICBC (LONDON) PLC | 2025 | 47.48 | robust level score at least 3.5 |
 | strict | Leverage Ratio | 849724 | MONUMENT BANK | 2024 | 3.9 | level below 5th percentile |
 | strict | Leverage Ratio | 956138 | PERENNA | 2025 | 21.47 | year-over-year movement above 95th percentile |

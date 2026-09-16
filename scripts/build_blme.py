@@ -669,6 +669,117 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - BLME's own 'Key metrics' table, FY2022-FY2025
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Source - BLME plc's own 'Key metrics' table, p.4 of each year's Pillar III Disclosure, amounts in "
+    "GBP'000 exactly as printed:\n"
+    f"FY2025: Pillar III Disclosure 31 December 2025, p.4 - {P32025_URL}\n"
+    f"FY2024: Pillar III Disclosure 31 December 2024, p.4 - {P32024_URL}\n"
+    f"FY2023: Pillar III Disclosure 31 December 2023, p.4 - {P32023_URL}\n"
+    f"FY2022: Pillar III Disclosure 31 December 2022, p.4 - {P32022_URL}\n\n"
+    "EACH YEAR IS TAKEN FROM ITS OWN EDITION'S FIRST COLUMN. Every edition prints two columns (its own "
+    "year-end and the prior year's comparative); only the own-year column is used here, so no figure on this "
+    "sheet is a later report's restatement of an earlier year.\n\n"
+    "THE TABLE IS UNNUMBERED AND UNTITLED AS 'KM1'. BLME captions it simply 'Key metrics' and prints no "
+    "template row numbers at all. It is nonetheless the template: it carries the template's row set in the "
+    "template's order - available own funds, then risk-weighted exposure amounts, then capital ratios, then "
+    "the SREP block, then the combined buffer block, then leverage, then the LCR with its component rows, "
+    "then the NSFR with its component rows. Identified by row set rather than by caption, per the map's "
+    "row-set test. Row labels are reproduced as BLME prints them, so they carry no row numbers here either.\n\n"
+    "WHY THIS SHEET STOPS AT FY2022 while the rest of the workbook runs back to FY2014. BLME adopted this "
+    "table in its 2022 edition. The FY2021 and FY2020 editions instead print '1.3/1.4 Table 2: Key ratios' "
+    "(56 and 59 pages respectively, both fetched and read: FY2021 p.7, FY2020 p.7), a much smaller summary in "
+    "£m carrying CET1/Tier 1/Total regulatory capital, RWAs, the three capital ratios, leverage exposure and "
+    "ratio, LCR%, NSFR% and 'Total capital requirement (Pillar 1 + Pillar 2A)'. It has no SREP block, no "
+    "buffer block, and none of the LCR or NSFR component rows, so it fails the row-set test and is NOT this "
+    "template. Those years are therefore left off this sheet rather than part-filled from a different table; "
+    "their figures remain on the individual metric sheets, cited to their own editions.\n"
+    "FOR THE RECORD, AND DELIBERATELY NOT USED: the FY2022 edition does print an FY2021 comparative column in "
+    "this template's shape (CET1/Tier 1/Total capital 238,839; RWEA 1,313,776; all three ratios 18.18%; "
+    "additional CET1 SREP 1.94%; total SREP 9.94%; CCB 2.50%; CCyB 0.00%; combined buffer 2.50%; overall "
+    "12.44%; CET1 available 5.74%; leverage exposure 1,600,428; leverage 14.92%; HQLA 71,695; outflows "
+    "90,975; inflows 140,123; net outflows 22,744; LCR 315%; and 'N/A' against all three NSFR rows). It is "
+    "quoted here so the choice stays recoverable, but it is not carried into the FY2021 column, because the "
+    "FY2021 edition itself published no such table.\n\n"
+    "LATEST-EDITION CHECK: BLME's own Financial Results and Reporting page "
+    "(https://www.blme.com/about-us/investors/financial-results-and-reporting/) was read on 2026-09-16. It "
+    "lists Pillar III Disclosures for every year from 2009 to 2025; 2025 is the newest and this workbook "
+    "already holds it. BLME's year-end is 31 December, so no 2026 edition is due yet.\n\n"
+    "ENTITY: BLME plc, the UK-authorised bank and a subsidiary of Boubyan Bank (Kuwait). This is the Bank's "
+    "own disclosure, published under its own name - not a parent figure."
+)
+
+km1_rows = [
+    ("SECTION", "AVAILABLE OWN FUNDS (AMOUNTS)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (£'000)",
+     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212}),
+    ("DATA", "Tier 1 capital (£'000)",
+     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212}),
+    ("DATA", "Total capital (£'000)",
+     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212}),
+    ("SECTION", "RISK-WEIGHTED EXPOSURE AMOUNTS", {}),
+    ("DATA", "Total risk-weighted exposure amount (£'000)",
+     {"FY2025": 1170428, "FY2024": 1279034, "FY2023": 1342418, "FY2022": 1376389}),
+    ("SECTION", "CAPITAL RATIOS (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%"}),
+    ("DATA", "Tier 1 ratio (%)",
+     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%"}),
+    ("DATA", "Total capital ratio (%)",
+     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%"}),
+    ("SECTION", "ADDITIONAL OWN FUNDS REQUIREMENTS BASED ON SREP (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)",
+     {"FY2025": "3.59%", "FY2024": "3.59%", "FY2023": "3.59%", "FY2022": "1.94%"}),
+    ("DATA", "Total SREP own funds requirements (%)",
+     {"FY2025": "11.59%", "FY2024": "11.59%", "FY2023": "11.59%", "FY2022": "9.94%"}),
+    ("SECTION", "COMBINED BUFFER REQUIREMENT (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.58%", "FY2024": "1.67%", "FY2023": "1.76%", "FY2022": "0.95%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2025": "4.08%", "FY2024": "4.17%", "FY2023": "4.26%", "FY2022": "3.45%"}),
+    ("DATA", "Overall capital requirements (%)",
+     {"FY2025": "15.67%", "FY2024": "15.76%", "FY2023": "15.85%", "FY2022": "13.39%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "3.62%", "FY2024": "2.04%", "FY2023": "1.02%", "FY2022": "3.11%"}),
+    ("SECTION", "LEVERAGE RATIO", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£'000)",
+     {"FY2025": 1510175, "FY2024": 1519554, "FY2023": 1521865, "FY2022": 1622691}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "14.95%", "FY2024": "14.98%", "FY2023": "14.88%", "FY2022": "14.00%"}),
+    ("SECTION", "LIQUIDITY COVERAGE RATIO", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)",
+     {"FY2025": 63913, "FY2024": 57829, "FY2023": 60522, "FY2022": 92894}),
+    ("DATA", "Cash outflows - Total weighted value (£'000)",
+     {"FY2025": 83047, "FY2024": 74573, "FY2023": 83950, "FY2022": 105540}),
+    ("DATA", "Cash inflows - Total weighted value (£'000)",
+     {"FY2025": 78968, "FY2024": 69733, "FY2023": 113997, "FY2022": 109725}),
+    ("DATA", "Total net cash outflows (adjusted value) (£'000)",
+     {"FY2025": 20762, "FY2024": 18643, "FY2023": 20987, "FY2022": 26385}),
+    ("DATA", "Liquidity coverage ratio (%)",
+     {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%"}),
+    ("SECTION", "NET STABLE FUNDING RATIO", {}),
+    ("DATA", "Total available stable funding (£'000)",
+     {"FY2025": 1289527, "FY2024": 1281180, "FY2023": 1401110, "FY2022": 1502432}),
+    ("DATA", "Total required stable funding (£'000)",
+     {"FY2025": 1070069, "FY2024": 1025644, "FY2023": 969949, "FY2022": 1053953}),
+    ("DATA", "NSFR ratio (%)",
+     {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%"}),
+]
+
+bw.add_km1_sheet(
+    title="BLME plc - KM1 Key Metrics",
+    subtitle="BLME plc's own 'Key metrics' table, as published each year - amounts in GBP'000 as printed",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=520,
+    years=["FY2025", "FY2024", "FY2023", "FY2022"],
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):

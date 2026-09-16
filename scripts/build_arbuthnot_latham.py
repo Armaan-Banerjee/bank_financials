@@ -462,6 +462,160 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Arbuthnot Banking Group PLC (Pillar 3) basis, {unit}" if unit else "Arbuthnot Banking Group PLC (Pillar 3) basis",
                          rows_data, sources_text, note=note, first_col_width=46, source_height=140)
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - "Template UK KM1 - Key metrics template" exactly as ABG
+# prints it. Points to watch, all reproduced rather than normalised:
+#
+#   * COLUMN LETTERS. Every ABG edition prints a THREE-column table headed
+#     "a c e" - the current period, the prior half-year, and the prior
+#     year-end. Only the year-end columns map onto this workbook's FY years,
+#     so the half-year columns (30-Jun-xx) are not carried here. The FY2025
+#     column is column c of the 30 June 2026 INTERIM report ("31-Dec-25*"),
+#     because ABG published no standalone FY2025 annual Pillar 3 at all - see
+#     p3_sources() above for how that reading was verified against the FY2024
+#     annual report.
+#
+#   * A DASH IS NOT A ZERO. Rows UK 8a, UK 9a, 10 and UK 10a print "-" in
+#     every column of every edition: the requirement does not apply to ABG,
+#     which is not the same statement as "the buffer is measured at zero".
+#     Those cells are left BLANK.
+#
+#   * THE 1 JANUARY 2022 BASIS BREAK. In the FY2022 edition the Dec-21
+#     column of rows 13 and 14 carries, instead of a figure, "NA: For ABG the
+#     Leverage Ratio rules which exclude claims on central banks were
+#     effective from 1 January 2022", and rows 18-20 carry "NA: The current
+#     NSFR rules were effective 1 January 2022." Those five cells are written
+#     as "NA" - the bank's own marker - not blanked and not back-filled from
+#     a different basis.
+#
+#   * Rows 14a-14e are printed with a single note spanning the block, "NA:
+#     Only LREQ firms shall disclose values in rows UK KM1;14a to UK KM1;14e".
+#     The rows are kept (ABG prints them) with blank cells, and the note is
+#     recorded in the source citation.
+#
+#   * FY2017 pre-dates the template: blank. The FY2021 edition uses a
+#     pre-KM1 "Key Regulatory Metrics" layout, so FY2021 here is the Dec-21
+#     comparative column of the FY2022 edition, which IS on the KM1 template.
+# ---------------------------------------------------------------
+_KM1_NA = "NA"
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £'000)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£'000)",
+     {"FY2025": 241598, "FY2024": 234477, "FY2023": 222291, "FY2022": 175375, "FY2021": 176235}),
+    ("DATA", "2    Tier 1 capital (£'000)",
+     {"FY2025": 241598, "FY2024": 234477, "FY2023": 222291, "FY2022": 175375, "FY2021": 176235}),
+    ("DATA", "3    Total capital (£'000)",
+     {"FY2025": 280270, "FY2024": 272459, "FY2023": 260017, "FY2022": 212969, "FY2021": 213007}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4    Total risk-weighted exposure amount (£'000)",
+     {"FY2025": 1822551, "FY2024": 1782645, "FY2023": 1713146, "FY2022": 1516141, "FY2021": 1427724}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "13.26%", "FY2024": "13.15%", "FY2023": "12.98%", "FY2022": "11.57%", "FY2021": "12.34%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "13.26%", "FY2024": "13.15%", "FY2023": "12.98%", "FY2022": "11.57%", "FY2021": "12.34%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "15.38%", "FY2024": "15.28%", "FY2023": "15.18%", "FY2022": "14.05%", "FY2021": "14.92%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "0.03%", "FY2024": "0.18%", "FY2023": "0.18%", "FY2022": "0.18%", "FY2021": "0.63%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.01%", "FY2024": "0.06%", "FY2023": "0.06%", "FY2022": "0.06%", "FY2021": "0.13%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "0.01%", "FY2024": "0.08%", "FY2023": "0.08%", "FY2022": "0.08%", "FY2021": "0.17%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "8.05%", "FY2024": "8.32%", "FY2023": "8.32%", "FY2022": "8.32%", "FY2021": "8.93%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.5%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.92%", "FY2024": "1.91%", "FY2023": "1.88%", "FY2022": "0.88%", "FY2021": "0.02%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.42%", "FY2024": "4.41%", "FY2023": "4.38%", "FY2022": "3.38%", "FY2021": "2.52%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "12.47%", "FY2024": "12.73%", "FY2023": "12.70%", "FY2022": "11.70%", "FY2021": "11.45%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.22%", "FY2024": "6.91%", "FY2023": "6.74%", "FY2022": "5.33%", "FY2021": "5.59%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£'000)",
+     {"FY2025": 4568671, "FY2024": 3828489, "FY2023": 3559597, "FY2022": 2923193, "FY2021": _KM1_NA}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.29%", "FY2024": "6.12%", "FY2023": "6.24%", "FY2022": "6.00%", "FY2021": _KM1_NA}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average) (£'000)",
+     {"FY2025": 1891643, "FY2024": 1275612, "FY2023": 1046604, "FY2022": 710180, "FY2021": 776633}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 1165658, "FY2024": 912053, "FY2023": 692133, "FY2022": 629384, "FY2021": 547432}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value (£'000)",
+     {"FY2025": 170906, "FY2024": 181473, "FY2023": 215585, "FY2022": 223565, "FY2021": 192514}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£'000)",
+     {"FY2025": 994752, "FY2024": 730580, "FY2023": 476548, "FY2022": 405819, "FY2021": 354918}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "190%", "FY2024": "175%", "FY2023": "220%", "FY2022": "175%", "FY2021": "219%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18    Total available stable funding (£'000)",
+     {"FY2025": 3126629, "FY2024": 2995437, "FY2023": 2784678, "FY2022": 2464147, "FY2021": _KM1_NA}),
+    ("DATA", "19    Total required stable funding (£'000)",
+     {"FY2025": 2058754, "FY2024": 2274318, "FY2023": 2043499, "FY2022": 1940538, "FY2021": _KM1_NA}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "152%", "FY2024": "132%", "FY2023": "136%", "FY2022": "127%", "FY2021": _KM1_NA}),
+]
+
+KM1_SOURCES = p3_sources() + (
+    "\nKM1 presentation notes:\n"
+    "• COLUMN SELECTION. Every ABG edition prints a three-column table headed \"a c e\": the current "
+    "period, the prior half-year and the prior year-end. Only the year-end columns are carried here "
+    "(FY2025 = \"31-Dec-25*\" column c of the 30 June 2026 interim report; FY2024/FY2023/FY2022 = column a "
+    "of their own annual reports; FY2021 = the \"Dec - 21*\" column e of the FY2022 report). The 30-Jun-xx "
+    "columns are half-year positions and are deliberately not shown in a workbook of financial years.\n"
+    "• A DASH IS NOT A ZERO. Rows UK 8a, UK 9a, 10 and UK 10a print \"-\" in every column of every "
+    "edition, meaning the requirement does not apply to ABG. Those cells are left blank rather than "
+    "written as 0%, which would assert a measured value of zero.\n"
+    "• \"NA\" IN FY2021 IS THE BANK'S OWN WORD, in five cells, and marks the 1 January 2022 basis break "
+    "rather than missing data. Rows 13 and 14 print \"NA: For ABG the Leverage Ratio rules which exclude "
+    "claims on central banks were effective from 1 January 2022\"; rows 18, 19 and 20 print \"NA: The "
+    "current NSFR rules were effective 1 January 2022.\" The FY2022 report adds the general footnote "
+    "\"The disclosure of data for previous periods is not required when data is disclosed for the first "
+    "time.\" No FY2021 figure on an older basis has been substituted.\n"
+    "• Rows 14a-14e are printed by ABG with one note spanning the whole block: \"NA: Only LREQ firms "
+    "shall disclose values in rows UK KM1;14a to UK KM1;14e\". The rows are retained with blank cells.\n"
+    "• PRECISION DRIFT: the FY2022 edition prints row 8 as \"2.50%\" in its Dec-22 and Jun-22 columns but "
+    "\"2.5%\" in its Dec-21 column, within one row of one table. Transcribed as printed.\n"
+    "• FOOTNOTED BASES, per ABG's own footnotes in every edition: the year-end columns are marked "
+    "\"* Includes year end verified reserves\"; row 17 LCR is the simple average of month-end positions "
+    "over the preceding 12 months; row 20 NSFR is an average of the preceding four quarters.\n"
+    "• DELIBERATE FY2021 DIVERGENCE FROM THE LCR SHEET, recorded not reconciled. This sheet's FY2021 "
+    "liquidity rows are the KM1 comparative from the FY2022 report (HQLA £776,633k, net outflows "
+    "£354,918k, LCR 219%), which is the 12-month-average basis the KM1 template requires. The separate "
+    "LCR sheet in this workbook carries the FY2021 report's own pre-KM1 'Key Regulatory Metrics' figures "
+    "(HQLA £897,493k, net outflows £487,009k, LCR 184.3%), a point-in-time year-end position. Both are "
+    "ABG's own published numbers for 31 December 2021 on two different bases; neither has been adjusted "
+    "to agree with the other.\n"
+    "• FY2017 is blank: it pre-dates the UK KM1 template entirely."
+)
+
+bw.add_km1_sheet(
+    title="Arbuthnot Banking Group PLC — KM1 Key Metrics",
+    subtitle="The group's own published \"Template UK KM1 - Key metrics template\", reproduced in ABG's row "
+             "order with its own template row numbers and printed precision. Amounts in £'000, ratios as "
+             "printed. Arbuthnot Banking Group PLC (Pillar 3) basis — the consolidated group of which "
+             "Arbuthnot Latham & Co., Limited is the banking subsidiary; ABG publishes no subsidiary-level "
+             "KM1. FY2017 pre-dates the template and is intentionally blank.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 241598, "FY2024": 234477, "FY2023": 222291, "FY2022": 175375, "FY2021": 176235})],

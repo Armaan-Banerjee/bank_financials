@@ -589,6 +589,196 @@ LIQUIDITY_BASIS_NOTE = (
 )
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Company's own "Key Metrics table", reproduced whole.
+#
+# THIS BANK DOES PUBLISH THE TEMPLATE, despite being a ten-person mutual whose
+# whole Pillar 3 document is 22 pages. It is easy to miss, because:
+#
+#   * IT IS UNNUMBERED. The Company prints no row numbers at all - no "1", no
+#     "UK 7a". Under the row-set test that is irrelevant: what makes a table
+#     the template is the ROW SET, not the numbering, and this one carries the
+#     full UK KM1 row set (available own funds, risk-weighted exposure
+#     amounts, capital ratios, C-SREP additional own funds requirements,
+#     combined buffer requirement, leverage ratio, LCR block, NSFR block). It
+#     is the Europe Arab Bank pattern, not the ABC International Bank pattern.
+#   * IT IS NEVER CALLED "KM1". The heading is "1.1 Key Metrics table", and
+#     the string "KM1" appears nowhere in any edition.
+#   * IT EXISTS IN ONLY TWO EDITIONS. The Company published a Pillar 3
+#     disclosure for five consecutive years, FY2019 through FY2023, and then
+#     stopped; only the FY2022 and FY2023 editions contain the table.
+#
+# ROWS THE COMPANY PRINTS THAT THE STANDARD TEMPLATE DOES NOT, kept as
+# published: "Systemic risk buffer (%)" (zero in every year) sits inside the
+# combined buffer block, and the SREP block is captioned against the PRA's
+# C-SREP rather than the generic SREP.
+#
+# SOURCE DEFECTS, REPRODUCED RATHER THAN CORRECTED:
+#   * The combined-buffer section heading is TRUNCATED in both editions - it
+#     reads "Combined buffer requirement (as a percentage of risk-weighted
+#     exposure" with the word "amount" missing. Kept as printed.
+#   * The LCR block's HQLA row is captioned "(Weighted value - average)" but
+#     the figures are year-end point-in-time values, not averages - proven by
+#     the same documents' own quarterly tables (the KM1's 970% for FY2023 is
+#     the 31-Dec-23 column of the quarterly table, while that document's
+#     stated average for FY2023 is 835%). The caption is left as published and
+#     the discrepancy is flagged; the LCR and NSFR metric sheets carry both
+#     bases on separate rows.
+#   * The explanatory note about the 18.27% base capital requirement is
+#     printed ABOVE the table in the FY2023 edition and BELOW it in the
+#     FY2022 edition. Recorded once here.
+#
+# ZERO GLYPHS (map rule 2): every zero in this table is printed as a real
+# "0.00%", never as a dash, so each is recorded as a zero rather than blanked.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (£'000)",
+     {"FY2023": 13354, "FY2022": 12952, "FY2021": 13919}),
+    ("DATA", "Tier 1 capital (£'000)",
+     {"FY2023": 13354, "FY2022": 12952, "FY2021": 13919}),
+    ("DATA", "Total capital (£'000)",
+     {"FY2023": 13354, "FY2022": 12952, "FY2021": 13919}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (£'000)",
+     {"FY2023": 25253, "FY2022": 24052, "FY2021": 26369}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) ratio (%)",
+     {"FY2023": "52.88%", "FY2022": "53.85%", "FY2021": "52.79%"}),
+    ("DATA", "Tier 1 ratio (%)",
+     {"FY2023": "52.88%", "FY2022": "53.85%", "FY2021": "52.79%"}),
+    ("DATA", "Total capital ratio (%)",
+     {"FY2023": "52.88%", "FY2022": "53.85%", "FY2021": "52.79%"}),
+    ("SECTION", "Additional own funds requirements based on PRA Supervisory Review Process (C-SREP) "
+                "(as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional SREP own funds requirements (%)",
+     {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Total SREP own funds requirements (%)",
+     {"FY2023": "18.27%", "FY2022": "18.27%", "FY2021": "18.27%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure "
+                "[heading truncated in the source, which omits the word 'amount'])", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2023": "1.97%", "FY2022": "0.98%", "FY2021": "0.00%"}),
+    ("DATA", "Systemic risk buffer (%)",
+     {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2023": "4.47%", "FY2022": "3.48%", "FY2021": "2.50%"}),
+    ("DATA", "Overall capital requirements (%)",
+     {"FY2023": "22.74%", "FY2022": "21.75%", "FY2021": "20.77%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2023": "30.14%", "FY2022": "32.10%", "FY2021": "32.02%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Leverage ratio total exposure measure (£'000)",
+     {"FY2023": 37777, "FY2022": 38672, "FY2021": 42114}),
+    ("DATA", "Leverage ratio (%)",
+     {"FY2023": "35.35%", "FY2022": "33.49%", "FY2021": "33.05%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)",
+     {"FY2023": 4373, "FY2022": 4231, "FY2021": 4220}),
+    ("DATA", "Cash outflows - Total weighted value (£'000)",
+     {"FY2023": 1803, "FY2022": 2032, "FY2021": 2801}),
+    ("DATA", "Cash inflows - Total weighted value (£'000)",
+     {"FY2023": 5596, "FY2022": 8745, "FY2021": 11248}),
+    ("DATA", "Total net cash outflows (adjusted value) (£'000)",
+     {"FY2023": 451, "FY2022": 508, "FY2021": 700}),
+    ("DATA", "Liquidity coverage ratio (%)",
+     {"FY2023": "970%", "FY2022": "833%", "FY2021": "603%"}),
+    ("SECTION", "Net Stable Funding Ratio (NSFR)", {}),
+    ("DATA", "Total available stable funding (£'000)",
+     {"FY2023": 34839, "FY2022": 35740, "FY2021": 37077}),
+    ("DATA", "Total required stable funding (£'000)",
+     {"FY2023": 20068, "FY2022": 18568, "FY2021": 20165}),
+    ("DATA", "NSFR (%)",
+     {"FY2023": "174%", "FY2022": "192%", "FY2021": "184%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - the Company's own 'Key Metrics table', section 1.1 of its Pillar 3 Disclosures, reproduced in its "
+    "own row order, its own labels and its own printed precision. Each year is taken from the edition in which it "
+    "is the reporting year, except FY2021 as explained below:\n"
+    f"FY2023: Pillar 3 Disclosures for the year ended 31 December 2023, 'Key Metrics table' p.3 (column "
+    f"'31-Dec-23') - {P3_2023_WAYBACK} (Wayback `id_` snapshot; the Company's own URL {P3_2023_DEAD} returns HTTP "
+    f"404 - re-checked 2026-09-16)\n"
+    f"FY2022: Pillar 3 Disclosures for the year ended 31 December 2022, 'Key Metrics table' p.3 (column "
+    f"'31-Dec-22') - {P3_2022} (still live; re-fetched 2026-09-16, HTTP 200, Content-Type application/pdf, "
+    f"314,344 bytes, begins %PDF)\n"
+    f"FY2021: the '31-Dec-21' comparative column of the FY2022 edition above. This is a deliberate departure from "
+    f"this project's use-each-year's-own-edition rule, and the reason is positive rather than convenient: the "
+    f"FY2021 edition EXISTS and was re-read in full for this ticket ({P3_2021_WAYBACK}, HTTP 200, "
+    f"application/pdf, 319,857 bytes, 20pp), and it contains no Key Metrics table at all - its contents page runs "
+    f"Overview / Governance / Risk Management Policies / Capital Resources and Business Strategy / Capital "
+    f"Adequacy / Principal Risks, with no key-metrics entry, and the strings 'KM1' and 'Key Metrics' appear "
+    f"nowhere in it. The FY2022 edition's comparative column is therefore the only published source for FY2021.\n"
+    "FY2024, FY2025, and FY2016-FY2020: blank. See the detailed publication evidence in the Pillar 3 source note "
+    "on the metric sheets - in summary, the Company published a Pillar 3 disclosure for five consecutive years "
+    "(FY2019-FY2023) and then stopped after taking the SDDT exemption, and the FY2019, FY2020 and FY2021 editions "
+    "carry no Key Metrics table.\n\n"
+    "WHAT MAKES THIS A KM1, AND HOW IT WAS ESTABLISHED:\n"
+    "• IT IS UNNUMBERED. The Company prints no row numbers at all - no '1', no 'UK 7a'. That does not matter: what "
+    "makes a table the template is its ROW SET, not its numbering, and this one carries the full UK KM1 row set - "
+    "available own funds, risk-weighted exposure amounts, capital ratios, C-SREP additional own funds "
+    "requirements, combined buffer requirement, leverage ratio, the five-row LCR block and the three-row NSFR "
+    "block. It is the same pattern as Europe Arab Bank's unnumbered template, not the same as a short bespoke "
+    "summary table.\n"
+    "• IT IS NEVER CALLED 'KM1'. The heading is '1.1 Key Metrics table'; the token 'KM1' appears nowhere in any "
+    "edition. No presence test that keys on the token or on row numbering would have found it.\n"
+    "• ROWS THE STANDARD TEMPLATE DOES NOT HAVE, kept as published: 'Systemic risk buffer (%)' sits inside the "
+    "combined buffer block (zero in every year), and the additional-own-funds block is captioned against the PRA's "
+    "C-SREP rather than the generic SREP.\n"
+    "• THE ABSENCE OF THE TABLE IN THE FY2019-FY2021 EDITIONS WAS TESTED AGAINST IMAGES AS WELL AS TEXT, because a "
+    "KM1 can be published as a bitmap inside an otherwise text-native PDF and then extract as nothing. "
+    "`pdfimages -list` on the FY2019, FY2020, FY2021 and FY2022 editions returns exactly ONE image each - the "
+    "286x165 RGB corporate logo, the same object in every edition - and the FY2023 edition two (that logo plus a "
+    "391x200 graphic on p.19). There is no bitmap anywhere in these documents large enough or placed where a "
+    "concealed key-metrics table could sit. The zero hit-counts for 'KM1' and 'Key Metrics' in the FY2019-FY2021 "
+    "editions are also a fact about the documents rather than about the extraction: the same text yields 86-88 "
+    "hits for 'capital', 48-49 for 'ratio', 3 for 'Tier 1' and 3 for 'leverage' in each.\n\n"
+    "SOURCE DEFECTS, REPRODUCED RATHER THAN CORRECTED:\n"
+    "• THE COMBINED-BUFFER SECTION HEADING IS TRUNCATED in both editions. It reads 'Combined buffer requirement "
+    "(as a percentage of risk-weighted exposure' - the word 'amount' is missing, in both the FY2022 and the FY2023 "
+    "document. Kept as printed, with the omission flagged in square brackets.\n"
+    "• THE LCR BLOCK'S HQLA ROW IS CAPTIONED '(Weighted value - average)' BUT THE FIGURES ARE YEAR-END "
+    "POINT-IN-TIME VALUES. This is demonstrable from the same documents: the KM1's 970% for FY2023 reproduces the "
+    "31-Dec-23 column of that document's own quarterly table exactly, while the average it states separately for "
+    "the same year is 835% (FY2022: KM1 833% = the 31-Dec-22 column; stated average 827%). The caption is left "
+    "exactly as published rather than corrected, and both bases are carried on separate rows of the LCR and NSFR "
+    "metric sheets, which is why those sheets and this one can show different numbers for the same year without "
+    "either being wrong.\n"
+    "• THE 18.27% EXPLANATORY NOTE MOVES. 'Note: although there are no C-SREP additional own funds requirements, "
+    "the Company is required to hold 18.27% of risk-weighted exposures or EUR 5 million (the regulatory base "
+    "capital requirement), whichever is the greater' is printed ABOVE the table in the FY2023 edition and BELOW it "
+    "in the FY2022 edition.\n"
+    "• PRECISION. The leverage ratio reads 35.35% here for FY2023, from the Key Metrics table itself; the Leverage "
+    "Ratio metric sheet carries 35.4% for the same year from the same document's narrative. Both are the "
+    "Company's own printed figures at its own two precisions, and neither has been adjusted to match the other.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16. The Company's own live 'Financial information' page "
+    "(https://www.mcafundingforchurches.co.uk/about-us/financial-information/) was fetched directly - HTTP 200, "
+    "27KB, no block and no interstitial - and lists exactly two documents plus an FSCS leaflet: the Annual Report "
+    "2025 (/media/4bcl2vk5/mca-ar-2025.pdf, already cited by this workbook) and a country-by-country reporting "
+    "2025 PDF. NO PILLAR 3 DOCUMENT OF ANY VINTAGE. The Annual Report 2025 was re-downloaded the same day (HTTP "
+    "200, application/pdf, %PDF, 1.06MB) and covers the 9 months ended 30 September 2025, which is the period this "
+    "workbook already holds as FY2025; the string 'Pillar 3' does not occur in it. Nothing newer than FY2025 "
+    "exists, and no Pillar 3 edition later than FY2023 exists.\n\n"
+    + p3_sources()
+)
+
+bw.add_km1_sheet(
+    title="Methodist Chapel Aid Limited — KM1 Key Metrics",
+    subtitle="The Company's own 'Key Metrics table' (section 1.1 of its Pillar 3 Disclosures), reproduced whole in "
+             "its own row order, labels and printed precision. It is the UK KM1 template but the Company prints no "
+             "row numbers and never uses the token 'KM1'. Amounts in £'000, ratios as printed. Only the FY2022 and "
+             "FY2023 editions contain the table; FY2021 is the FY2022 edition's comparative column, because the "
+             "FY2021 edition exists and carries no such table. FY2024 onward: the Company is an SDDT and is exempt "
+             "from publishing Pillar 3 disclosures.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=80,
+    source_height=520,
+)
+
+
 metric("CET1 Capital", "£'000", "CET1 capital", {"FY2023": 13354, "FY2022": 12952, "FY2021": 13919, "FY2020": 13032, "FY2019": 12307}, "FY2024 and FY2025 absolute regulatory capital was not separately disclosed in the located sources. FY2016-FY2018: no Pillar 3 document was located (genuinely not disclosed, not a search miss - see note above).")
 metric("CET1 Ratio", "%", "CET1 ratio", {"FY2023": "52.88%", "FY2022": "53.85%", "FY2021": "52.79%", "FY2020": "51.48%", "FY2019": "58.68%"}, "FY2024 and FY2025 ratio not separately disclosed in the located sources. FY2020/FY2019 ratios are calculated as disclosed CET1 capital divided by this workbook's derived Total RWAs (not stated as a ready-made ratio in the source, which only gives the £ components). FY2016-FY2018 not disclosed.")
 metric("Tier 1 Capital", "£'000", "Tier 1 capital", {"FY2023": 13354, "FY2022": 12952, "FY2021": 13919, "FY2020": 13032, "FY2019": 12307}, "All disclosed Tier 1 capital was CET1; FY2024 and FY2025 were not separately disclosed. FY2016-FY2018 not disclosed.")

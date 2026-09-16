@@ -1,0 +1,2799 @@
+i Ons a Cpt a Rests
+
+Registered number: 13084174
+
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+ANNUAL REPORT AND FINANCIAL STATEMENTS
+
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+ae ce a
+
+Th i
+
+02/08/2023
+i COMPANIES HOUSE
+
+FRIDAY
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+COMPANY INFORMATION
+
+Directors
+
+Company secretary
+
+Registered number
+
+Registered office
+
+Independent auditors
+
+W De Leeuw
+
+W Verbeek
+
+E E Barnett (appointed 3 August 2022)
+
+AH Clist (appointed 3 August 2022)
+
+AF B Cuppage (appointed 9 August 2022)
+K Flaherty (appointed 3 August 2022)
+
+AB Meeks (appointed 3 August 2022)
+
+S J Veitch (appointed 3 August 2022)
+
+K Lindsay-Bayley
+
+13084174
+
+20 Eastbourne Terrace
+London
+W2 6LG
+
+Mazars LLP
+
+Chartered Accountants & Statutory Auditors
+30 Old Bailey
+
+London
+
+EC4M 7AU
+
+Page 1
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+CONTENTS
+
+Strategic Report
+
+Directors’ Report
+
+Independent Auditors’ Report
+
+Statement of Profit or Loss and Other Comprehensive Income
+Statement of Financial Position
+
+Statement of Changes in Equity
+
+Statement of Cash Flows
+
+Notes to the Financial Statements
+
+Page
+3-14
+
+15-17
+
+18 - 22
+
+23
+
+24
+
+25
+
+26
+
+27-49
+
+Page 2
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Introduction
+
+The Directors present their strategic report in relation to Perenna Bank PLC (the “Company”, "Bank" or
+“Perenna’) for the year ended 31 December 2022.
+
+Business review
+Strategy
+
+Perenna received its restricted banking licence from the UK banking regulators (the Prudential Regulation
+Authority and the Financial Conduct Authority) in August 2022. Perenna expects to receive full banking licence
+during the course of 2023,
+
+Perenna is creating the UK's first covered bond bank based on the successful German Pfandbrief and Danish
+mortgage bank models. Our capital markets model provides the financial infrastructure for pension funds,
+insurance companies and other investors to invest in the mortgage market in scale as they do in Europe and
+the US. Mortgages will be fully funded in the capital markets through both covered bond issuances and
+forward-flow structures.
+
+Mortgage market
+
+The UK mortgage market is regarded as a vulnerable market due to its short term interest rate nature. It is
+dominated by the high street banks that offer almost exclusively short-term fixed rate mortgages. Refinancing is
+costly, time-consuming and stressful. Borrowers risk paying a higher rate when they refinance, or risk reversion
+to a variable rate, if they cannot refinance because their circumstances have changed. Rapidly rising inflation,
+increasing interest rates and a cost of living crisis makes this a vulnerable model.
+
+Target borrower groups
+
+The Company will target several very large under-served market segments:
+
+« First time buyers.
+
+e Later life borrowers.
+
+* Borrowers who want financial certainty and protection against future interest rate rises.
+
+First time buyers (and home movers) face serious affordability challenges and many cannot borrow the amount
+needed to purchase the property they require (despite being able to afford the payments) because of the
+interest rate stress tests on short term mortgages which strictly limit the amount that can be borrowed.
+
+Later life borrowers are a very large group which is generally excluded from the mortgage market because of its
+variable rate nature. They are high quality borrowers with defined benefit pension plans and a lot of equity in
+their properties. They have a need to access mortgage credit in large amounts but no suitable products are
+available.
+
+Our product
+
+Perenna’s cornerstone product will help solve these issues. It will be a flexible, 30 year, fixed for life mortgage.
+Borrowers will have the option to refinance when it suits them (after a limited Early Redemption Charge period)
+or they can choose to keep their rate for the full term. It protects against future interest rate rises and allows a
+larger loan amount than is possible with a short-term mortgage, because there is no requirement to ensure
+affordability at much higher interest rates as the rate will never change. For many, the product will unlock their.
+home ownership dream. There is no age limit for our borrowers. They simply need to be able to afford the
+monthly payments. Flexible 30 year fixed rate mortgages are overwhelmingly the most popular mortgage
+product in countries where they are offered’such as the US and Denmark. Our focus is on a flexible and
+customer-centric product allowing borrowers to better manage their financial positions.
+
+Page 3
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Our mortgages will be portable and can be moved to a new property. They will also be transferable and
+intergenerational, meaning that a property could be transferred with the mortgage attached.
+
+Technology
+
+Technology in the UK mortgage market is generally legacy, inflexible and dated. It can lead to slow decision
+times and a very poor user experience and borrower experience. Perenna is building a scalable digital platform
+without the legacy constraints of the incumbent banks. We use the latest technology enabling a low-click
+customer experience and rapid mortgage decisions.
+
+Financial review
+
+The results for the Company shows a net loss for the year ending 31 December 2022 of £10,804k (2021:
+£5,798k loss). Total shareholder funds show a surplus of £15,183k (2021: £5,748k deficit).
+
+The Company raised £31,735k of capital through the issuance of ordinary shares to Perenna Group Limited. Of
+this £21,000k related to new funds raised by Perenna Group Limited in its Series A funding round, whereas the
+remainder was issued to convert the existing intercompany loan between the Company and Perenna Group
+Limited to ordinary shares.
+
+Excess cash was invested in short dated UK T-Bills. The amount invested at year end amounted to a nominal
+value of £13,000k.
+
+Key performance indicators
+
+As a new bank, the Company has developed a range of metrics to cover all aspects of the banks operations.
+These will continue to evolve. The relevant key metrics at this stage are as follows (for 31 December 2022) :
+
+Leverage Ratio: 91.05%
+CET1 Ratio: 101.66%
+
+Risk management
+
+. Risk taking is fundamental to the Company’s business and therefore prudent risk management, limitation and
+_ mitigation, form an integral part of the Bank’s governance structure.
+
+The Company’s risk management strategy is to support the creation of a safe, responsible and sustainable
+covered bond bank through disciplined risk management, enabling all colleagues to take more effective
+decisions through better understanding of risk, contributing to good outcomes for all customers and
+stakeholders.
+
+The strategy invoives creating and maintaining a robust risk culture, with effective risk management embedded
+into decision-making and process design, in order to ensure that the Company remains responsibly managed
+and sustainable, which is trusted by its customers. This is achieved through providing an open and transparent
+environment where well-trained, well-informed colleagues take prudent risk, subject to clear policies, appetite
+boundaries and mandates, in pursuit of the Company’s business strategy.
+
+The risk strategy is delivered through the application of the risk management framework.
+
+Risk management framework
+
+The risk management framework has been designed to ensure a holistic and consistent approach to the
+management of risk. It covers all types of risks facing the Company, defines the approach to managing and
+
+controlling the risks to which we are, or may be, exposed, and this supports us to generate value for
+shareholders, deliver appropriate outcomes for customers and provide confidence to other stakeholders.
+
+Page 4
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+The risk management framework:
+
+Explains how risk appetite is defined.
+
+Confirms business plans are consistent with risk appetite.
+
+Identifies the principal and emerging risks and how they are managed.
+
+Requires the Company’s risk profile to be monitored and reported regularly.
+
+Tests the Company’s vulnerabilities to risks under a range of stressed adverse conditions.
+
+Allows for robust oversight and assurance.
+
+Encourages strong risk culture and behaviours through its linkage with the conduct and culture frameworks.
+
+Risk management processes are designed to ensure that our understanding of risk underpins how we run the
+business, by providing structure to the way we identify, assess, manage, monitor and report risk exposure.
+
+The risk framework is owned by the Board and covers all aspects involved in the management of risk, including
+governance, reporting and policies.
+
+Once operational, we will maintain a risk profile consistent with supporting our business objectives and in line
+with our risk appetite.
+
+The Board has established our appetite for risk with the aim of supporting profitable business development
+within acceptable tolerances. Our appetite for different types of risk is embedded across the business to create
+a culture of confident risk-taking. ,
+
+Central to our risk management approach, and our operating model, is the application of the three lines of
+defence model of governance. The first line of defence is the commercial, business, and operational functions,
+whilst the second line is the Risk and Compliance function, and third line is Internal Audit.
+
+Principal Risks
+
+The most significant risks, to which Perenna may be exposed, once a fully operational bank, are set out below.
+
+This should not be considered as a comprehensive list of all the risks and uncertainties, but rather a summary
+of those which have the potential significantly impact the achievement of strategic objectives.
+
+Page 5
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+JRisk Category Risk Description Risk Management
+Strategic Risk The risk to earnings and Strategic risk. may arise from changes in any of
+profitability arising from the following:
+
+strategic decisions, changes'in
+the external environment,
+improper implementation of
+decisions or lack of
+responsiveness to changes in
+business conditions.
+
+Macro-economic environment.
+
+e Political, legal and regulatory requirements.
+Socio-cultural developments.
+
+© Technological advancements.
+
+‘ = =©Commeradal market movements and
+competitor activity.
+
+Strategic risk is managed through the business
+
+planning process and directly overseen by the
+
+Executive and the Board.
+
+At this stage in the Bank's development, project-
+tevel risks are managed through the Bank’s
+
+‘Steering Committee (SteerCo), escalating to the
+
+Board as required.
+
+The Executive, the SteerCo, and other relevant
+committees, such as the Asset and Liability
+Committee (ALCo), the Marketing and Product
+Committee (M&PCo) and the Credit. Committee
+(CCo) regularly review external environmental
+conditions and propose adjustments to the
+business plan as required.
+
+Page 6
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+JRisk Category Risk Description Risk Management |
+Capital Risk The risk that Perenna has Exposure to capital risk may arise as a result of a
+insuffident capitalto support = depletion of the Bank’s capital resources, an
+its normal business activities increase in minimum capital requirements, if
+and to meet its regulatory committed capital cannot be drawn davwm or the
+capital requirements in both Bank ts unable to raise the capital required to
+normal and stressed support growth.
+environments. The Bank's objective in managing capital is to
+maintain appropriate levels of capital to support
+the Bank's strategy and meet regulatory
+requirements.
+The Bank operates a capital planning approach
+that aims to maintain appropriate levels of
+capital in a range of stressed scenarios. A
+prudent risk appetite has been set by the Board
+and reviewed frequently.
+Capital risk is overseen by the ALCo, that
+monitors the capital position against risk
+appetite metrics and early warning triggers and
+limits. The ALCo regularly review the forward-
+looking capital surplus in the context of the
+’ Bank’s business plans and ensures that
+management has advance warning of any
+potential capital challenges.
+liquidity Risk The risk that Perennais unable The Bank has comprehensive liquidity policies to
+to meet its liabilities as they fall. ensure that it maintains sufficient [quid assets:
+due, orthatitdoesnothave to. be able to meet all of its financial obligations
+| sufficiently stable and diverse and maintain stakeholder confidence.
+i sources of funding tosupport The Bank's treasury function is responsible for
+its business activities. the day-to-day management of the Bank's
+
+exposure to all aspects of liquidity risk within the
+operational limits set out in relevant policies,
+with the overall objective of managing risk in
+line with the Bank’s risk appetite.
+
+Compliance with policy fimits and risk appetites
+are monitored on a daily basis and overseen by
+the finance function and second line risk
+function, who are independent of the treasury
+function, with the ALCo receiving detailed
+monthly management information.
+
+Stress testing is a major component of liquidity
+risk management, and the Bank has developed a
+diverse selection of scenarios covering a range
+of market-wide and firm specific factors. The
+Bank performs liquidity stress tests to ensure
+that it maintains adequate [iquidity for
+operational purposes even under stressed
+conditions.
+
+Acomprehensive review of the Bank's liquidity,
+including stress testing, is conducted at feast
+
+Page 7
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Risk Category Risk Description
+
+Risk Management
+
+annually through the ILAAP. The ALCo, Board
+Risk Committee (BRCo) and the Board are
+heavily involved inthe full ILAAP life cycle, with
+all challenges cearty documented. The ILAAP is
+used to demonstrate the Bank’s compliance
+with the PRA's Overall Liquidity Adequacy Rule
+and assess funding and liquidity risk across the
+actual and budgeted statement of financial
+‘position.
+
+Credit Risk Credit risk is defined as the risk
+of loss resulting from the failure
+of customers or counterparties
+to meet their financial
+
+obligations to Perenna.
+
+The principal source of credit risk will relate to
+the loans advanced to customers.
+
+The Bank will have a disciplined approach to
+fending, which ts governed by the Responsible
+Lending Policy, the Retail Credit Concentration
+Risk Policy and the Arrears and Repossessions
+Policy.
+
+The objective of credit risk management is to
+reduce the potential for loan defaults through
+the application of credit risk assessment
+techniques, at loan origination. These
+techniques include assessments of loan
+affordability, credit worthiness of applicants and
+mortgage lending procedures. Beyond these
+credit risk assessments, the risk of [oss is further
+mitigated by obtaining security to cover the
+lending position. Residential property és the
+source of sequrity. All mortgage lending is
+supported by an appropriate form of valuation.
+Once loans have been advanced, credit risk
+remains continually monitored vie the second
+line risk function and the CCo, at both the loan
+and portfolio levell.
+
+The CCo regularly reviews detailed credit nsk
+management information, incheding risk
+appetite metrics and early warning indicators.
+To reflect potential losses the Bank may
+experience due to defaulting loans, impairment
+provisions are recognised. Impainment
+provisions are calculated using a forward-
+looking expected credit loss (ECL) model, in
+accordance with the requirements of IFRS9
+Financial Instruments’.
+
+Market Risk The risk to capital or earings
+arising from adverse changes in
+the value of Perenna’s on and
+off-balance sheet financial
+positions due to fluctuations in
+financial market variables
+
+induding, but not limited to,
+
+The Bank’s treasury function is responsible for
+the day-to-day management of the Bank’s
+exposure to all aspects of market risk within the
+operational limits set out in relevant policies,
+with the overall objective of managing market
+misk in line with the Bank’s risk appetite.
+
+Page 8
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Risk Category Risk Description
+
+Risk Management
+
+interest rates, credit spreads
+and FX.
+
+Wherever possible, int interest rate structure of
+assets are matched with liabilities to create a
+natural hedge.
+
+Derivative financial instruments are planned to
+be used by the Bank to minimise or eliminate
+the impact of movements in interest rates.
+These instruments are planned to be in place
+when lending begins.
+
+The Asset and Liability Committee approves the
+Bank's treasury policies and receives regular
+reports on all aspects of market risk exposure,
+including interest rete risk.
+
+Technology &
+Operational
+Risk
+
+Technology & Operational risk
+is defined as the risk of loss
+resulting from inadequate or
+failed processes or technology,
+people / human factors, or
+from external events (such as
+cyber-incidents).
+
+The Technology and Operation Risk Policy sets
+out the requirements for the management of
+technology and operational risk exposures. The
+policy is supported by a full suite of technology
+policies, standards and procedures to direct all
+technology related activities. The Bank has put
+in place methods for supervising cyber ;
+resilience; information security controls and
+testing; response and recovery testing; and
+cybersecurity and resilience metrics. A Crisis
+Management Framework is in place to manage
+material inddents, including cyber incidents.
+
+All colleagues receive risk management
+induction training and training in the delivery of
+the risk and control self-assessment (RCSA)
+process.
+
+RCSAs are executed on a quarterly basis to
+ensure all material risks are identified, their
+significance assessed, and their control
+environment appropriate. The RCSA process is
+delivered in partnership with the second line risk
+function who provide challenge and oversight.
+The Bank has a defined Operational Resilience
+Policy, has identified its Important Business
+Services (IBS), their Impact Tolerances (ITols),
+and continues with its operational resilience
+self-assessments.
+
+The Bank has defined its Outsourcing and Third-
+party Arrangements Policy and Procedure,
+including the implementation of a supporting
+technology solution, to mange its end-to-end
+supply chain. Management actions indude
+business continuity plans and tests and
+simulation exercises.
+
+The Enterprise Risk Committee (ERCo} oversees
+the Bank’s technology and operational risks,
+through monthly risk reporting including risk
+
+Page 9
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+|Risk Category
+
+Risk Description
+
+Risk Management
+
+appetite metrics, risk management information,
+risk event analyses and deep dive/themetic
+reviews. The ERCo is supported by the monthly
+Security Forum, which focusses on more
+technical 1f and cyber risks, controls, issues and
+actions.
+
+The Bank operates under the basic indicator
+approach for measurement of operational risk.
+This approach allocates operational risk capital
+using a singte indicator as a proxy for the Bank's
+overall operational risk exposure to be
+maintained under the ICAAP. As part of the
+ICAAP, the key operational risks are assessed,
+stressed and quantified through scenario
+
+analyses.
+
+[Model Risk
+
+Model risk is defined as the risk
+of loss or adverse outcome
+arising from decisions
+principally based on the output
+of models, due to weaknesses
+or failures in the development,
+implementation, inputs or use
+af a model.
+
+The Model Risk Policy sets out the Bank’s
+requirements for the management of risks that
+may transpire. throughout the lifecycle of a
+medel, Le. registration, development,
+govemance, validation, implementation,
+operation and change. The policy requirements
+aim to ensure that the Bank and its customers
+are protected frorn: unintended consequences
+arising from model development, inputs or
+outputs. ;
+
+A model universe is maintained by the second
+line risk function te capture details of the
+models and calculators used across the Bank.
+The relative significance of each model and
+calculator determines the level of independent
+oversight and validation apptied.
+
+Mode! Risk is overseen by the Made Risk
+Working Group and escalated into the relevant
+Committee, e.g. ALCo, CCo etc.
+
+Conduct &
+Compliance
+
+Cenduct & Compliance risk 5
+defined as the risk of [oss to
+Perenna and / or detriment to
+customers, counterparties or
+market integnty arising from
+poor judgement, behaviour or
+estors in the execution of the
+business strategy — including
+negfigent conduct and non-
+compliance with legal or
+regulatory obligations.
+
+The Conduct Risk Framework and its associated
+polides and procedures (induding 2 suite of
+finandal aime polices and procedures)
+establish the operating environment and the
+minimum standard the Bank expects.
+
+Business areas identify and assess conduct,
+compftance and financial crime risks and assess
+the effectiveness of controls that mitigate those
+risks using RCSA process. The RCSA process is
+delivered in partnership with the second fine
+compliance function vho provide challenge and
+oversight.
+
+All colleagues receive compliance and conduct
+induction training and training in the delivery of
+
+Page 10
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+[Risk ‘Category Risk Description Risk Management |
+the risk and contro! self-assessment (RCSA)
+process.
+
+All products and proposition are designed and
+delivered in line with the requirements of the
+Product Governance Policy and the New Product
+Approval Procedure, which incorporated
+Consumer Duty considerations from
+product/proposition concept stage.
+
+New and emerging regulatory driven changes
+are identified and overseen by a system enabled
+horizon scanning process.
+
+The Enterprise Risk Committee (ERCo) oversees
+the Bank's conduct and comptiance risks,
+through monthly risk reporting including risk
+appetite metrics, risk management information,
+risk event analyses and deep dive/themetic
+reviews.
+
+Corporate governance
+
+The Board has an appropriate number of independent non-executive directors with relevant experience, who
+provides the skills and experience needed to govern and oversee the development of the proposed business
+model. In order to fully harness this depth of experience, Perenna has created a governance structure as
+
+follows:
+Board
+. : ]
+[ I | i |
+Executive R board | on Board Nominations Board Risk Board Audit
+
+Committee Committee Committee Committee Committee
+
+1 '
+J H j H
+Marketing and Enterprise Risk Credit Committee Assets & Liabilities
+
+Product Committee! Committee
+
+Committee
+
+Transactional
+Credit Committee
+
+Board
+
+To enable it to provide the appropriate governance and oversight expected of a regulated bank, the Board has
+established, and has regard to advice from, a number of sub-committees and the Executive Committee.
+
+Each of the Board sub-committees deals with specific areas of the Bank’s activities, summarised below. Each
+of these has a chair, clear terms of reference with delegated authorities and meets regularly.
+
+Page 11
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Board Risk Committee
+
+The Board Risk Committee is responsible reviewing the Bank’s adherence to risk appetite and the attendant
+control environment established.
+
+Board Audit Committee
+
+The Board Audit Committee is responsible for monitoring the integrity of the Bank’s financial statements and
+the adequacy of the work performed by its external auditors. It will also monitor and ensure the safeguarding of
+the independence of the internal audit function.
+
+Board Remuneration Committee
+
+The Board Remuneration Committee is responsible for ensuring that the Board and executive committee retain
+an appropriate structure, size and balance of skills to support the strategic objectives and values of the Bank.
+This covers remuneration structure and policy.
+
+Board Nominations Committee
+
+The Board Nominations Committee is responsible for ensuring that the Board and executive committee retain
+an appropriate structure, size and balance of skills to support the strategic objectives and values of the Bank.
+This covers appointments and termination, and succession planning.
+
+‘Executive Committee
+
+The Executive Committee is responsible for overseeing the running and operation of the Bank, including the
+development of the Bank's culture, monitoring business performance against key financial objectives, and
+ensuring business processes and controls align with the risk appetite approved by the Board. The Executive
+Committee delegates aspects of its responsibilities to the Assets & Liabilities Committee, Enterprise Risk
+Committee, Marketing & Product Committee, and the Credit Risk Committee (of which is supported by a
+Transactional Credit Committee).
+
+Future developments
+
+Over time, the Company intends to introduce a diverse suite of mortgage products across the interest rate
+duration and Loan to Value spectrums. We have plans to introduce a green mortgage enabling borrowers to
+retrofit their properties in order to assist with the transition to net-zero We will also consider. other lending
+products such as buy to let.
+
+Engagement with suppliers, customers and others
+
+As a new bank, set up to meet the requirements of underserved borrower segments, we understand that long
+term success for all stakeholders is possible only with a mission focused, customer centric business
+proposition. As we have built up our business model, we have actively engaged with all relevant business
+participants, including potential borrowers, to ensure that we meet needs consistently, with uncompromisingly
+high service standards, and always in a fair and transparent manner consistent with the FCA’s new Consumer
+Duty requirements. The board and management teams are completely aligned with this perspective.
+
+In order to create the business model that best fits our vision, we ‘aim to build strong, collaborative relationships
+with all our suppliers to enable them to understand the environment in which we operate and the
+consumer-focused approach that we take so that they can most effectively partner with us. In turn, this allows
+us to best understand, quantify and manage any supply chain risks present in our model and to ensure the
+appropriate level of business resilience.
+
+Page 12 ~
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Directors’ statement of compliance with duty to promote the success of the Company
+
+The directors are fully aware of their duty under Section 172(1) of the Companies Act 2006 to report on the
+success of the company for the benefit of its shareholders. In this statement, the directors outline how they
+have met the "enlightened shareholder value” requirement through stakeholder engagement activities, which
+help inform Board decisions and ensure the directors are always aware of their stakeholders’ interests.
+
+The key stakeholders of the company include the employees, vendors, customers, regulators, and the
+shareholders.
+
+Employees
+The company actively monitors staff engagment through culture sessions and anonymous staff surveys.
+Regular social events, both virtual and in person, has been particularly important.
+
+Vendors
+
+The Company is reliant on material suppliers for its success and has implemented a robust pre-onboarding
+vendor due diligence process as well as a robust Outsourcing and Third Party Management Procedure to
+ensure ongoing supplier management and monitoring.
+
+Customers
+
+As at the date of this report, the company is in a build phase and has not yet conducted customer business.
+The Company has however engaged with prospective customers through focus groups and has also monitored
+interest through the waiting list on the company website.
+
+Regulators
+
+The Company has regular engagement with both the PRA and FCA as part of its banking licence application
+process, having been granted authorisation with restrictions in August 2022 and having applied for variation of
+permission (VoP) in December 2022.
+
+Sharehoiders
+
+The Company is wholly owned by Perenna Group Limited. The largest shareholders of Perenna Group Limited
+is represented on board of the Company and receives updates as part of their involvement in the board,
+supported by individual interactions with management. Other shareholders are kept up to date via individual
+meetings and/or e-mail updates
+
+The company engages with its suppliers on a regular basis, ensuring that its suppliers’ relationships are built on
+collaboration.
+
+The Board considers it crucial that the Company maintains a reputation for high standards of business conduct.
+The Board is responsible for setting, monitoring and upholding the culture, values, standards, ethics, brand and
+reputation of the Company. Management drives the embedding of the desired culture throughout the Company.
+
+The Company regularly considers and evaluates its long-term strategy. The Directors consider the possible
+long-term consequences of any material proposed course of action, including financial and reputational risks.
+
+The Board has sought to balance the needs of its members with the s.172 matters throughout the year, for
+example in the policies and practices, to ensure that our obligations to our shareholders, employees, suppliers
+and others are met.
+
+Our success depends on the collective performance, contributions and expertise of the Company management.
+
+We are committed to maintaining a culture of diversity and inclusion in which people from all backgrounds can
+fully contribute to the growth and success of our business.
+
+Page 13 -
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STRATEGIC REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+The Directors are committed to supporting sustainable business practices wherever possible and running our
+business in a socially responsible way that helps create long-term value.
+
+The Company has multiple members who are able to directly access the Board. Tne Directors are in regular
+contact with the members through regular financial reporting and ad-hoc communications. This ensures that the
+members are kept informed of events and have opportunity to take part in the strategic direction of the
+business.
+
+This report was approved by the board and signed on its behalf.
+
+W De Leeuw
+Director
+
+Date: 26 April 2023
+
+Page 14
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+DIRECTORS’ REPORT
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+The directors present their report and the financial statements for the year ended 31 December 2022.
+Directors
+The directors who served during the year were:
+
+W De Leeuw
+
+W Verbeek
+
+E E Barnett (appointed 3 August 2022)
+
+AH Clist (appointed 3 August 2022)
+
+A F B Cuppage (appointed 9 August 2022)
+K Flaherty (appointed 3 August 2022)
+
+AB Meeks (appointed 3 August 2022)
+
+S J Veitch (appointed 3 August 2022)
+
+Directors’ responsibilities statement
+
+The directors are responsible for preparing the Strategic Report, Directors’ Report and the financial statements,
+in accordance with applicable law.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law they
+have elected to prepare the financial statements in accordance with International Financial Reporting
+Standards (IFRS) as adopted by the UK.
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they
+give a true and fair view of the state of affairs of the Company and of the profit or loss of the Company for that
+period. In preparing the financial statements, the directors are required to:
+
+° select suitable accounting policies and then apply them consistently;
+° make judgments and estimates that are reasonable and prudent;
+e state whether they have been prepared in accordance with IFRS as adopted by the UK, subject to any
+
+material departures disclosed and explained in the financial statements;
+
+. assess the Company's ability to continue as a going concern, disclosing, as applicable, matters related to
+going concern; and
+
+e use the going concern basis of accounting unless they either intend to liquidate the Company or to cease
+operations, or have no realistic alternative but to do so.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain
+the Company's transactions and disclose with reasonable accuracy at any time the financial position of the
+Company and enable them to ensure that the financial statements comply with the Companies Act 2006. They
+are responsible for such internal control as they determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error, and have general
+responsibility for taking such steps as are reasonably open to them to safeguard the assets of the Company
+and to prevent and detect fraud and other irregularities.
+
+Results and dividends
+The loss for the year, after taxation, amounted to £10,803,687 (2027 - loss £5,672, 429).
+
+The directors do not recommend payment of a dividend.
+
+Page 15
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+DIRECTORS' REPORT (CONTINUED)
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Going concern
+
+The assessment of the appropriateness of the going concern basis of accounting for the Bank has been subject
+to thorough consideration by management, the Board Audit Committee and the Board of Directors. The Board
+has considered the appropriateness of the going concern basis of accounting when preparing the financial
+statements in accordance with the accounting standards.
+
+As part of that assessment, the directors have considered the principal risks and uncertainties and whether
+there are any material uncertainties relating to events or conditions (other than those with a remote probability
+of occurring) that may cast significant doubt upon the use of the going concern basis of accounting.
+
+in performing this assessment, the directors have considered the strategic, financial, and operational outlooks
+over the 12 months from the issue date of the financial statements, as well as all available information about
+the future, the realistically possible outcomes of events and changes in conditions and realistically possible
+responses and conditions that would be available to the directors.
+
+Regulatory Capital Requirements
+
+The Company will require access to further capital to fund its ongoing operations and to enact its growth plans
+whilst meeting its reguiatory capital requirements. The Company may be unable to raise further capital. If the
+Company cannot obtain further capital either from its existing shareholder or from third parties, it would
+potentially need to cease trading.
+
+As well as assessing the Company's capital requirements on a base case scenario, the Board has also
+considered the risks to the base case assessment and reviewed downside scenarios. Under the base scenario,
+itis estimated that the £40m of equity should be raised, whereas the downside scenario would require £30m.
+
+In August 2022, the Company received authorisation with restrictions from the Prudential Regulation Authority
+("PRA") and Financial Conduct Authority ("FCA") and is currently in its mobilisation phase. In order to become
+fully authorised and to commence regulated mortgage lending, it needs to satisfy the mobilisation exit
+conditions set by the regulators. Perenna has made good progress and applied for Variation of permission
+(VoP) in December 2022. All but one mobilisation exit conditions has been submitted to the PRA and FCA. The
+remaining exit condition relates to the firm being appropriately capitalised to operate for one full year after exit
+from mobilisation. The Company continues to work with its advisors and existing shareholders to source
+additional capital from third parties. Discussions and negotiations are ongoing.
+
+However, an inherent risk of a new bank is that it may not be able to raise sufficient regulatory capital to meet
+its business plan and, at worst, to continue as an authorised institution. Even though the Company has a strong
+track record of raising equity, having raised a total of £34.8m in paid up share capital, (including the share
+issuance in Feb 2023) the board has concluded that material uncertainty remains regarding its ability to raise
+the necessary capital to exit mobilisation and achieve full authorisation.
+
+Should future equity raises be unsuccessful, the Directors will need to consider all necessary actions including
+voluntary liquidation of the Company.
+
+Notwithstanding this material uncertainty, the Directors expect that the Company will have adequate resources
+to continue in business over the going concern assessment period..For this reason, they continue to adopt the
+going concern basis in preparing these financial statements.
+
+Future developments
+
+Over time, the Company intends to introduce a diverse suite of mortgage products across the interest rate
+duration and Loan to Value spectrums. We will also consider other asset classes such as buy to let.
+
+Page 16
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+DIRECTORS’ REPORT (CONTINUED)
+
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Research and development activities
+
+No research and development expenditure were expensed during the period. Cost relating to systems
+implementation was capitalised during the period and will be amortised once systems are used in a production
+environment.
+
+Disclosure of information in the Strategic Report
+
+Information regarding financial risk management and engagement with suppliers, customers and others are not
+shown in the Directors’ Report as this information is presented in the Strategic Report in accordance with
+section 414c(11) of the Companies Act 2006.
+
+Directors liabilities
+
+Perenna Group Limited has D&O insurance which indemnifies all the directors of Perenna Bank plc against
+liability in respect of proceedings brought by third parties, subject to conditions set out in the Companies Act
+2006. Such qualifying third-party indemnity provision was put in place prior to the Company becoming
+Authorised with Restrictions by the PRA and FCA in August 2022 and has been in force since.
+
+Disclosure of information to auditors
+
+Each of the persons who are directors at the time when this Directors’ Report is approved has confirmed that:
+
+° so far as the director is aware, there is no relevant audit information of which the Company's auditors are
+unaware, and
+
+° the director has taken all the steps that ought to have been taken as a director in order to be aware of
+any relevant audit information and to establish that the Company's auditors are aware of that information.
+
+Post year end events
+Share issuance
+
+In February 2023, existing shareholders subscribed to 190,476 ordinary shares at a price of £15.75 per
+ordinary share, with an aggregate subscription value of £3.0m.
+
+Auditors
+
+The auditors, Mazars LLP, will be proposed for reappointment in accordance with section 485 of the
+Companies Act 2006.
+
+This report was approved by the board and signed on its behalf.
+
+W De Leeuw
+Director
+
+Date: 26 April 2023
+
+Page 17
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF PERENNA BANK PLC (PREVIOUSLY
+PERENNA FFL PLC)
+
+Opinion
+
+We have audited the financial statements of Perenna Bank Plc (previously Perenna FFL PLC) (the ’Bank’) for
+the year ended 31 December 2022 which comprise the Statement of Profit or Loss and Other Comprehensive
+Income, the Statement of Financial Position, the Statement of Changes in Equity, the Statement of Cash Flows
+and notes to the financial statements, including a summary of significant accounting policies.
+
+The financial reporting framework that has been applied in their preparation is applicable law and UK-adopted
+international accounting standards.
+
+In our opinion, the financial statements:
+
+¢ give a true and fair view of the state of the Bank’s affairs as 31 December 2022 and of its loss for the year
+then ended; and .
+
+* have been properly prepared in accordance with UK-adopted international accounting standards; and
+
+e have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (‘ISAs (UK)’) and
+applicable law. Our responsibilities under those standards are further described in the “Auditor’s responsibilities
+for the audit of the financial statements” section of our report. We are independent of the Bank in accordance
+with the ethical requirements that are relevant to our audit of the financial statements in the UK, including the
+Financial Reporting Council’s ((FRC’) Ethical Standard, as applied to public interest entities, and we have
+fulfilled our other ethical responsibilities in accordance with these requirements. We believe that the audit
+evidence we have obtained is sufficient and appropriate to provide a basis for our opinion.
+
+Material uncertainty related to going concern
+
+We draw attention to note 4.1 in the financial statements which indicates that, when assessing the Bank’s
+ability to continue as a going concern, the directors have concluded that a material uncertainty exists in relation
+to the Bank’s capacity to raise necessary capital to exit mobilisation and achieve full banking authorisation.
+
+As stated in note 4.1 in the financial statements, these events or conditions, along with the other matters as set
+- forth in this note to the financial statements, indicate that a material uncertainty exists that may cast significant
+doubt on the Bank’s ability to continue as a going concern. Our opinion is not modified in respect of this matter.
+
+In auditing the financial statements, we have concluded that the directors’ use of the going concern basis of
+accounting in the preparation of the financial statements is appropriate.
+
+Page 18
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF PERENNA BANK PLC (PREVIOUSLY
+PERENNA FEL. PLC) (CONTINUED)
+
+Our evaluation of the directors’ assessment of the Banks's ability to continue to adopt the going concern basis
+of accounting included, but was not limited to:
+
+Undertook an initial assessment at the planning stage of the audit to identify events or conditions that may
+cast significant doubt on the Bank’s ability to continue as a going concern;
+
+Obtained an understanding of the relevant controls relating to the directors’ going concern assessment;
+Made enquiries of the directors to understand the period of assessment considered by them, the
+assumptions they considered and the implication of those when assessing the Bank’s future financial
+performance;
+
+Tested arithmetical accuracy and assessed the appropriateness of forecasts used by management to
+support the Bank’s going concern assessment;
+
+Challenged the appropriateness and reasonableness of the directors’ key assumptions in their cash flow
+forecasts, by reviewing supporting and contradictory evidence in relation to these key assumptions and
+assessing the directors’ consideration of severe but plausible scenarios, ie. failure to obtain the PRA
+authorisation and/or Series B funding, inability to generate sustainable business and operational issues
+especially in relation to the viability of mitigating actions put in place by directors to manage operational
+disruptions;
+
+Verified consistency of director's forecast (revenue, liquidity, capital) with Internal Capital Adequacy
+Assessment Process (‘ICAAP’) and internal liquidity adequacy assessment process (‘ILAAP’) and other
+documents shared with the Financial Conduct Authority (‘FCA’) and Prudential Regulation Authority
+(‘PRA’);
+
+Assessed the historical accuracy of forecasts prepared by management;
+
+Engaged in regular discussions with the directors and regulators regarding the status of negotiations in
+respect of new financing options and mobilisation status, respectively;
+
+Considered the consistency of the directors’ forecasts with other areas of the financial statements and our
+audit; ,
+Evaluated the appropriateness and completeness of the disclosures in the financial statements in respect
+of the directors’ going concern assessment and their conclusion that a material uncertainty exists in
+relation to the Bank’s capacity to raise necessary capital to exit mobilisation and achieve full banking
+authorisation;
+
+Reviewed the Board of Directors and Audit Committee meeting minutes as well as regulatory
+correspondence with the PRA and the FCA to assess the audit impact of salient discussions and
+communications: and
+
+Reviewed events after the reporting period that may potentially impact the Bank’s ability to continue as a
+going concern, including the share issuance in February 2023.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described in the
+relevant sections of this report.
+
+Page 19
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF PERENNA BANK PLC (PREVIOUSLY
+PERENNA FFL PLC) (CONTINUED)
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit
+of the financial statements of the current period and include the most significant assessed risks of material
+misstatement (whether or not due to fraud) we identified, including those which had the greatest effect on: the
+overall audit strategy; the allocation of resources in the audit; and directing the efforts of the engagement team.
+These matters were addressed in the context of our audit of the financial statements as a whole, and in forming
+our opinion thereon, and we do not provide a separate opinion on these matters.
+
+Except for the matter described in the Material uncertainty related to going concern section of our report, we
+have determined that there are no other key audit matters to communicate in our report. The material
+uncertainty related to going concern, together with our findings, was communicated to those charged with
+governance through our Audit Completion Report.
+
+Our application of materiality and an overview of the scope of our audit
+
+The scope of our audit was influenced by our application of materiality. We set certain quantitative thresholds
+for materiality. These, together with qualitative considerations, helped us to determine the scope of our audit
+and the nature, timing and extent of our audit procedures on the individual financial statement line items and
+disclosures and in evaluating the effect of misstatements, both individually and on the financial statements as a
+whole. Based on our professional judgement, we determined materiality for the financial statements as a whole
+as follows:
+
+Overall materiality £151,834
+How we determined it 1% of net assets
+Rationale for benchmark applied. Though the Bank is profit-oriented, it is still in its
+
+investment and mobilisation phase.
+
+The major users of the financial statements are the
+owners of the business and regulatory authorities. The
+owners of the business are interested in investing and
+ensuring the business is licensed to commence operation
+whilst the regulatory authorities are interested in ensuring
+that the business is adequately capitalised.
+Consequently, in our view, net assets provide the best
+indicator of the level of capitalisation during the period
+and is considered the most appropriate benchmark.
+
+Page 20
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+INDEPENDENT AUDITORS’ REPORT TO THE MEMBERS OF PERENNA BANK PLC (PREVIOUSLY
+PERENNA FFL PLC) (CONTINUED)
+
+Performance materiality Performance materiality is set to reduce to an
+appropriately low level the probability that the aggregate
+of uncorrected and undetected misstatements in the
+financial statements exceeds materiality for the financial
+statements as a whole.
+
+We set performance materiality at £75,916, which
+represents 50% of overall materiality, reflecting our
+consideration of the audit risks and our assessment of the
+control environment and also being a first-year audit.
+
+Reporting threshold We agreed with the directors that we would report to
+them misstatements identified during our audit above
+£7,591 as well as misstatements below that amount that,
+in our view, warranted reporting for qualitative reasons.
+
+As part of designing our audit, we assessed the risk of material misstatement in the financial statements,
+whether due to fraud or error, and then designed and performed audit procedures responsive to those risks. In
+particular, we looked at where the directors made subjective judgements, such as assumptions on significant
+accounting estimates.
+
+We tailored the scope of our audit to ensure that we performed sufficient work to be able to give an opinion on
+the financial statements as a whole. We used the outputs of our risk assessment, our understanding of the
+Bank, its environment, controls, and critical business processes, to consider qualitative factors to ensure that
+we obtained sufficient coverage across all financial statement line items.
+
+Other information
+
+The other information comprises the information included in the Annual Report and Financial Statements other
+than the financial statements and our auditor's report thereon. The directors are responsible for the other
+information. Our opinion on the financial statements does not cover the other information and, except to the
+extent otherwise explicitly stated in our report, we do not express any form of assurance conclusion thereon.
+
+Our responsibility is to read the other. information and, in doing so, consider whether the other information is
+materially inconsistent with the financial statements, or our knowledge obtained in the course of audit or
+otherwise appears to be materially misstated. If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether this gives rise to a material misstatement in the financial
+statements themseives. If, based on the work we have performed, we conclude that there is a material
+misstatement of this other information, we are required to report that fact.
+
+We have nothing to report in this regard.
+
+Opinions on other matters prescribed by the Companies Act 2006
+In our opinion, based on the work undertaken in the course of the audit:
+« the information given in the strategic report and the directors’ report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+e the strategic report and the directors’ report have been prepared in accordance with applicable legal
+requirements.
+
+Page 21
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+INDEPENDENT AUDITORS’ REPORT TO THE MEMBERS OF PERENNA BANK PLC (PREVIOUSLY
+PERENNA FFL PLC) (CONTINUED)
+
+Matters on which we are required to report by exception
+
+In light of the knowledge and understanding of the Bank and its-environment obtained in the course of the audit,
+we have not identified material misstatements in the strategic report or the directors’ report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+* adequate accounting records have not been kept by the Bank or returns adequate for our audit have not
+been received from branches not visited by us; or
+
+« the Bank’s financial statements are not in agreement with the accounting records and returns; or
+
+« certain disclosures of directors’ remuneration specified by law are not made; or
+
+« we have not received all the information and explanations we require for our audit.
+
+Responsibilities of Directors
+
+As explained more fully in the directors’ responsibilities statement set out on page 14, the directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such internal control as the directors determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank’s ability to continue
+as a going concern, disclosing, as applicable, matters related to going concern and using the going concern
+basis of accounting unless the directors either intend to liquidate the Bank or to cease operations, or have no
+realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our
+opinion. Reasonable assurance is a high level of assurance but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise
+from fraud or error and are considered material if, individually or in the aggregate, they could reasonably be
+expected to influence the economic decisions of users taken on the basis of these financial statements.
+
+The extent to which our procedures are capable of detecting irregularities, including fraud is detailed below.
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design
+procedures in line with our responsibilities, outlined above, to detect material misstatements in respect of
+irregularities, including fraud.
+
+Based on our understanding of the Bank and its industry, we considered that non-compliance with the following
+laws and regulations might have a material effect on the financial statements: financial crime regulations, and
+regulatory and supervisory requirements from the regulatory authorities where the Bank conducts its business,
+including primarily the PRA and the FCA.
+
+Page 22
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+INDEPENDENT AUDITORS' REPORT TO THE MEMBERS OF PERENNA BANK PLC (PREVIOUSLY
+PERENNA FFL PLC) (CONTINUED)
+
+To help us identify instances of non-compliance with these laws and regulations, and in identifying and
+assessing the risks of material misstatement in respect to non-compliance, our procedures included, but were
+not limited to:
+
+« Gaining an understanding of the legal and regulatory framework applicable to the Bank, the industry in
+which it operates, and the structure, and considering the risk of acts by the company which were contrary
+to the applicable laws and regulations, including fraud;
+
+e Inquiring of the directors, management and, where appropriate, those charged with governance, as to
+whether the Bank is in compliance with laws and regulations, and discussing their policies and procedures
+regarding compliance with laws and regulations:
+
+« Inspecting correspondence with relevant licensing or regulatory authorities primarily the PRA and the FCA ;
+
+* Reviewing minutes of directors’ meetings in the year; and
+
+« Discussing amongst the engagement team the laws and regulations listed above and remaining alert to
+any indications of non-compliance.
+
+We also considered those laws and regulations that have a direct effect on the preparation of the financial
+statements, such as tax iegislation, pension legislation, the Companies Act 2006.
+
+In addition, we evaluated the directors’ and management's incentives and opportunities for fraudulent
+manipulation of the financial statements, including the risk of management override of controls, and determined
+that the principal risks related to posting manual journal entries to manipulate financial performance,
+management bias through judgements and assumptions in significant accounting estimates.
+
+Our procedures in relation to fraud included but were not limited to:
+
+« Making enquiries of the directors and management on whether they had knowledge of any actual,
+suspected or alleged fraud;
+
+« Gaining an understanding of the internal controls established to mitigate risks related to fraud;
+
+¢ Discussing amongst the engagement team the risks of fraud;
+
+« Addressing the risks of fraud through management override of controls by performing journal entry testing;
+and
+
+« Being skeptical to the potential of management bias through judgements and assumptions in significant
+accounting estimates.
+
+The primary responsibility for the prevention and detection of irregularities, including fraud, rests with both
+those charged with governance and management. As with any audit, there remained a risk of non-detection of
+irregularities, as these may involve collusion, forgery, intentional omissions, misrepresentations or the override
+of internal controls.
+
+The risks of material misstatement that had the greatest effect on our audit are discussed in the “Key audit
+matters” section of this report.
+
+A further description of our responsibilities is available on the FRC’s’ website at
+www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor’s report.
+
+Page 23
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+INDEPENDENT AUDITORS’ REPORT TO THE MEMBERS OF PERENNA BANK PLC (PREVIOUSLY
+PERENNA FFL PLC) (CONTINUED)
+
+Other matters which we are required to address
+
+Following the recommendation of the Audit Committee, we were appointed by the Board of Directors on 10
+February 2023 to audit the financial statements for the year ended 31 December 2022 and subsequent
+financia! periods. The period of total uninterrupted engagement is one year, covering the year ended 31
+December 2022.
+
+The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the Bank and we remain
+independent of the Bank in conducting our audit.
+
+Our audit opinion is consistent with our additional report to the Audit Committee.
+
+Use of the audit report
+
+This report is made solely to the Bank’s members as a body in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Bank’s members those
+matters we are required to state to them in an auditor's report and for no other purpose. To the fullest extent
+permitted by law, we do not accept or assume responsibility to anyone other than the bank and the Bank’s
+members as a body for our audit work, for this report, or for the opinions we have formed.
+
+Pauline Pélissiér (Senior Statutory Auditor)
+for and on behalf of Mazars LLP
+
+Chartered Accountants and Statutory Auditor
+30 Old Bailey
+
+London EC4M 7AU
+
+26 April 2023
+
+Page 24
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STATEMENT OF PROFIT OR LOSS AND OTHER COMPREHENSIVE INCOME
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+2021
+
+2022 (restated)
+
+Note £ £
+
+Administrative expenses 8 (10,476,355) (5,672,429)
+
+Loss from operations (10,476,355) (5,672,429)
+Fair value losses 14 (13,541) -
+Investment income 93,422 -
+
+Loss before tax (10,396,474) (5,672,429)
+Tax expense 10 - -
+
+Loss for the year (10,396,474) _ (5,672,429)
+
+There was no other comprehensive income for 2022 (2021: ENIL).
+
+The notes on pages 32 to 55 form part of these financial statements.
+
+Page 25
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+REGISTERED NUMBER: 13084174
+
+STATEMENT OF FINANCIAL POSITION
+AS AT 31 DECEMBER 2022
+
+Assets
+Non-current assets
+Property, plant and equipment
+
+Intangible assets
+
+Current assets
+Trade and other receivables ~
+Fair value through profit & loss (FVTPL) investments
+
+Cash and cash equivaients
+
+Total assets
+
+Liabilities
+Current liabilities
+
+Trade and other liabilities
+
+Net assets/(liabilities)
+
+Issued capital and reserves
+Share capital
+Share premium reserve
+
+Retained earnings
+
+TOTAL EQUITY
+
+2022 2021
+Note £ £
+11 114,442 70,764
+
+12 2,153,777 1,120,614
+
+2,268,219 1,191,378
+
+13 395,789 136,084
+14 12,887,070 -
+
+913,033 359, 627
+
+14,195,892 495,711
+
+16,464,111 1,687,089
+
+15 1,280,722 = 7,434,797
+
+15,183,389 _ (5,747,708)
+16 70,149 50,000
+
+20 31,307,423 -
+
+(16,194,183) (5,797,708)
+
+15,183,389 — (5,747,708)
+
+Page 27
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+REGISTERED NUMBER: 13084174
+
+STATEMENT OF FINANCIAL POSITION
+AS AT 31 DECEMBER 2022
+
+The financial statements on pages 25 to 55 were approved and authorised for issue by the board of directors
+and were signed on its behalf by:
+
+W De Leeuw
+Director
+
+Date: 26 April 2023
+
+Page 28
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STATEMENT OF CHANGES IN EQUITY
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Share Share Retained Total
+capital premium earnings equity
+£ £ £ £
+Comprehensive income for the year
+Loss for the year (restated) - (5,672,429) (5,672,429)
+Total comprehensive income for the
+year - (5,872,429) _ (5,672,429)
+Issue of share capital (restated) 50,000 - (125,279) (75,279)
+Total contributions by and
+distributions to owners §0,000 - (125,279) (75,279)
+At 31 December 2021 50,000 (5,797,708) (5,747,708)
+At 1 January 2022 50,000 - (5,797,708) (5,747,708)
+Comprehensive income for the year
+Loss for the year - - (10,396.474) (10,396,474)
+Total comprehensive income for the
+year (10,396,474) _(10,396.474)
+issue of share capital 20,149 31,307,423 - 31,327,572
+Total contributions by and 20,149 31,307,423 - 31,327,572
+distributions to owners
+At 31 December 2022 70,149 31,307,423 (16,194,182) 15,183,390
+
+The notes on pages 32 to 55 form part of these financial statements.
+
+Page 29
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STATEMENT OF CASH FLOWS
+
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Cash flows from operating activities
+
+Loss for the year
+
+Adjustments for
+
+Depreciation of property, plant and equipment
+Amortisation of intangible fixed assets
+
+Fair value losses
+
+Investment income
+
+Investment income received
+
+Share-based compensation
+
+Movements in working capital:
+
+Increase in trade and other receivables
+
+Decrease in inter-company liabilities due to capitalisation
+
+Increase in trade and other payables
+
+Cash utilised by operations
+Net cash used in operating activities
+a
+
+Cash flows from investing activities
+Purchases of property, plant and equipment
+Purchase of intangibles ,
+
+Purchases of FVTPL investments
+
+Investment income cash flow on maturity
+
+Net cash used in investing activities
+
+2021
+2022 (restated)
+Note £ £
+(10,396,474) (5,672,429)
+11 43,771 14,212
+12 10,946 -
+13,541 -
+(93,422) -
+20,529 -
+207,333 -
+(10,193,776) (5,658,217)
+(259,705) (136,084)
+- 6,853, 569
+699,493 581,228
+(9,753,988) 1,640,496
+(9,753,988) 1,640,496
+(87,449) (84,976)
+12 (1,044,109) (1,120,614)
+(12,807,189) -
+(20,529) -
+(13,959,276) (1,205,590)
+
+Page 30
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+STATEMENT OF CASH FLOWS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Cash flows from financing activities
+Issue of ordinary shares
+Issue of ordinary shares at a premium
+
+Transaction cost for share issuance
+Net cash from financing activities
+
+Net cash increase in cash and cash equivalents
+
+Cash and cash equivalents at the beginning of year
+
+Cash and cash equivalents at the end of the year
+
+The notes on pages 32 to 55 form part of these financial statements.
+
+20,149 50,000
+24,453,854
+(125,279)
+24,266,670 (75,279)
+553,406 359,627
+359,627 -
+913,033 359,627
+
+Page 31
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+1. Reporting entity
+
+Perenna Bank PLC (previously Perenna FFL PLC) (the 'Company’) is a limited company incorporated in
+England. The Company's registered office is at 20 Eastbourne Terrace, London, W2 6LG. The
+Company's principal activity is that of a mortgage lender. The Company received its restricted banking
+licence from the UK banking regulators (the Prudential Regulation Authority and the Financial Conduct
+Authority) in August 2022 and expects to receive full banking licence during the course of 2023. The
+Company is creating the UK’s first covered bond bank and when live will be funded in the capital markets
+through both covered bond issuances and forward-flow structures.
+
+2. Basis of preparation
+
+The financial statements have been prepared on a going concern basis and in accordance with
+International Financial Reporting Standards (IFRSs) as adopted by the UK and issued by the
+International Accounting Standards Board (IASB) and in conformity with the requirements of the
+Companies Act 2006 ("IFRS").
+
+‘Details of the Company's accounting policies, including changes during the year, are included in note 4.
+In preparing these financial statements, management has made judgments, estimates and assumptions
+that affect the application of the Company's accounting policies and the reported amounts of assets,
+
+liabilities, income and expenses. Actual results may differ from these estimates.
+
+Estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to estimates are
+recognised prospectively.
+
+The areas where judgments and estimates have been made in preparing the financial statements and
+their effects are disclosed in note 5.
+
+2.1 Basis of measurement
+
+The financial statements have been prepared on the historical cost basis except for the following items,
+which are measured on an alternative basis on each reporting date.
+
+Items Measurement basis
+
+FVTPL investments Fair Value
+
+2.2 Changes in accounting policies
+
+i) New standards, interpretations and amendments effective from 1 January 2022
+
+The Company has adopted all of the new or amended Accounting Standards and Interpretations issued
+by the International Accounting Standards Board (‘IASB’) that are mandatory for the current reporting
+period. This has not had a material impact on the results or the position of the company for the financial
+year.
+
+ii) New standards, interpretations and amendments not yet effective
+
+Any new or amended Accounting Standards or Interpretations that are not yet mandatory have not been
+
+early adopted. Adoption would not have had a material impact on the results or the position of the
+company for the financial year.
+
+Page 32
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+3. First time adoption of IFRS
+
+The policies applied under the entity's previous accounting framework are not materially different to IFRS
+and have not impacted on equity or profit or loss.
+
+4. Accounting policies
+
+4.1. Going concern
+
+The assessment of the appropriateness of the going concern basis of accounting for the Company has
+been subject to thorough consideration by management, the Board Audit Committee and the Board of
+Directors. The Board has considered the appropriateness of the going concern basis of accounting when
+preparing the financial statements in accordance with the accounting standards.
+
+As part of that assessment, the directors have considered the principal risks and uncertainties and
+whether there are any material uncertainties relating to events or conditions (other than those with a
+remote probability of occurring) that may cast significant doubt upon the use of the going concern basis
+of accounting.
+
+In performing this assessment, the directors have considered the strategic, financial, and operational
+outlooks over the 12 months from the issue date of the financial statements, as well as all available
+information about the future, the realistically possible outcomes of events and changes in conditions and
+realistically possibile responses and conditions that would be available to the directors.
+
+Regulatory Capital Requirements
+
+The Company will require access to further capital to fund its ongoing operations and to enact its growth
+plans whilst meeting its regulatory capital requirements. The Company may be unable to raise further
+capital. If the Company cannot obtain further capital either from its existing shareholder or from third
+parties, it would potentially need to cease trading.
+
+As well as assessing the Company's capital requirements on a base case scenario, the Board has also
+considered the risks to the base case assessment and reviewed downside scenarios. Under the base
+scenario, it is estimated that the £40m of equity should be raised, whereas the downside scenario would
+require £30m.
+
+In August 2022, the Company received authorisation with restrictions from the Prudential Regulation
+Authority ("PRA") and Financial Conduct Authority ("FCA") and is currently in its mobilisation phase. In
+order to become fuily authorised and to commence regulated mortgage lending, it needs to satisfy the
+mobilisation exit conditions set by the regulators. The Company has made good progress and applied for
+Variation of permission (VoP) in December 2022. All but one mobilisation exit conditions has been
+submitted to the PRA and FCA. The remaining exit condition relates to the firm being appropriately
+capitalised to operate for one full year after exit from mobilisation. The Company continues to work with
+its advisors and existing shareholders to source additional capital from third parties. Discussions and
+negotiations are ongoing.
+
+However, an inherent risk of a new bank is that it may not be able to raise sufficient regulatory capita! to
+meet its business plan and, at worst, to continue as an authorised institution. Even though the Company
+has a strong track record of raising equity, having raised a total of £34.8m in paid up share capital,
+(including the share issuance in February 2023) the board has conciuded that material uncertainty
+remains regarding its ability to raise the necessary capital to exit mobilisation and achieve full
+authorisation.
+
+Should future equity raises be unsuccessful, the Directors will need to consider all necessary actions
+including voluntary liquidation of the Company.
+
+Page 33
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+4.
+
+Accounting policies (continued)
+
+Notwithstanding this material uncertainty, the Directors expect that the Company will have adequate
+resources to continue in business over the going concern assessment period. For this reason, they
+continue to adopt the going concern basis in preparing these financial statements.
+
+4.2 Leasing
+
+The Company as a lessee
+
+The Company assesses whether a contract is or contains a lease, at inception of a contract. The
+Company recognises a right-of-use asset and a corresponding lease liability with respect to all lease
+agreements in which it is the lessee, except for short-term leases (defined as leases with a lease term of
+12 months or less) and leases of low-value assets. For these leases, the Company recognises the lease
+payments as an operating expense on a straight-line basis over the term of the lease unless another
+systematic basis is more representative of the time pattern in which economic benefits from the leased
+asset are consumed.
+
+The lease liability is initially measured at the present value of the lease payments that are not paid at the
+commencement date, discounted by using the rate implicit in the lease. If this rate cannot be readily
+determined, the Company uses its incremental borrowing rate.
+
+Lease payments included in the measurement of the lease liability comprise:
+° fixed lease payments (including in-substance fixed payments), less any lease incentives;
+
+The lease liability is presented as a separate line in the Statement of Financial Position.
+
+The lease liability is subsequently measured by increasing the carrying amount to reflect interest on the
+lease liability (using the effective interest method) and by reducing the carrying amount to reflect the
+lease payments made.
+
+The Company remeasures the lease liability (and makes a corresponding adjustment to the related
+right-of-use asset) whenever:
+
+° a lease contract is modified and the lease modification is not accounted for as a separate lease, in
+which case the lease liability is remeasured by discounting the revised lease payments using a
+revised discount rate.
+
+-The Company did not make any such adjustments during the periods presented.
+
+The right-of-use assets comprise the initial measurement of the corresponding lease liability, lease
+payments made at or before the commencement day and any initial direct costs. They are subsequently
+measured at cost less accumulated depreciation and impairment losses.
+
+Right-of-use assets are depreciated over the shorter period of lease term and useful life of the underlying
+asset. If a lease transfers ownership of the underlying asset or the cost of the right-of-use asset reflects
+that the Company expects to exercise a purchase option, the related right-of-use asset is depreciated
+over the useful life of the underlying asset. The depreciation starts at the commencement date of the
+lease.
+
+The Company applies IAS 36 to determine whether a right-of-use asset is impaired and accounts for any
+identified impairment loss as described in note 4.5.
+
+Page 34
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+4. Accounting policies (continued)
+
+4.2. Leasing
+
+The Company as a lessee (continued)
+
+As a practical expedient, IFRS 16 permits a lessee not to separate non-lease components, and instead
+account for any lease and associated non-lease components as a single arrangement. The Company
+has not used this practical expedient.
+
+All leases are short term operating leases and therefore no right-of-use or lease liability has been
+accounted for in the current financial period.
+
+4.3 Employee benefits
+
+Short-term and other long-term employee benefits
+
+A liability is recognised for benefits accruing to employees in respect of wages and salaries, annual leave
+and sick leave in the period the related service is rendered at the undiscounted amount of the benefits
+
+expected to be paid in exchange for that service.
+
+Liabilities recognised in respect of short-term employee benefits are measured at the undiscounted
+amount of the benefits expected to be paid in exchange for the related service.
+
+Liabilities recognised in respect of other long-term employee benefits are measured at the present value
+of the estimated future cash outflows expected to be made by the Company in respect of services
+provided by employees up to the reporting date.
+
+Defined contribution schemes
+
+The Company operates a defined contribution plan for its employees. A defined contribution plan is a
+pension plan under which the Company pays fixed contributions into a separate entity. Once the
+contributions have been paid the Company has no further payment obligations.
+
+The contributions are recognised as an expense in the statement of comprehensive income when they
+
+fall due. Amounts not paid are shown in accruals as a liability in the Statement of Financial Position. The
+assets of the plan are held separately from the Company in independently administered funds.
+
+Page 35
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+4, Accounting policies (continued)
+4.4 Taxation
+The income tax expense represents the sum of the tax currently payable and deferred tax.
+Current tax
+
+The tax currently payable is based on taxable profit for the year. Taxable profit differs from net profit as
+reported in profit or loss because it excludes items of income or expense that are taxable or deductible in
+other years and it further excludes items that are never taxable or deductible. The Group's liability for
+current tax is calculated using tax rates that have been enacted or substantively enacted by the end of
+the reporting period.
+
+A provision Is recognised for those matters for which the tax determination is uncertain but it is
+considered probable that there will be a future outflow of funds to a tax authority. The provisions are
+measured at the best estimate of the amount expected to become payable. The assessment is based on
+the judgement of tax professionals within the Company supported by previous experience in respect of
+such activities and in certain cases based on specialist independent tax advice.
+
+Deferred tax
+
+Deferred tax is the tax expected to be payable or recoverable on differences between the carrying
+amounts of assets and liabilities in the financial statements and the corresponding tax bases used in the
+computation of taxable profit, and is accounted for using the liability method. Deferred tax liabilities are
+generally recognised for all taxable temporary differences and deferred tax assets are recognised to the
+extent that it is probable that taxable profits will be available against which deductible temporary
+differences can be utilised. Such assets and liabilities are not recognised if the temporary difference
+arises from the initial recognition (other than in a business combination) of other assets and liabilities in a
+transaction that affects neither the taxable profit nor the accounting profit. In addition, a deferred tax
+liability is not recognised if the temporary difference arises from the initial recognition of goodwill.
+
+The carrying amount of deferred tax assets is reviewed at each reporting date and reduced to the extent
+that it is no longer probable that sufficient taxable profits will be available to allow all or part of the asset
+to be recovered.
+
+Deferred tax is calculated at the tax rates that are expected to apply in the period when the liability is
+settled or the asset is realised based on tax laws and rates that have been enacted or substantively
+enacted at the reporting date.
+
+The measurement of deferred tax liabilities and assets reflects the tax consequences that would follow
+from the manner in which the Group expects, at the end of the reporting period, to recover or settle the
+carrying amount of its assets and liabilities.
+
+Deferred tax assets and liabilities are offset when there is a legally enforceable right to offset current tax
+assets against current tax liabilities and when they relate to income taxes levied by the same taxation
+authority and the Group intends to settle its current tax assets and liabilities on a net basis.
+
+A deferred tax asset is recognised only to the extent that it is probable that future taxable profits will be
+available against which the temporary difference can be utilised.
+
+Page 36
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+4, Accounting policies (continued)
+Current tax and deferred tax for the year
+
+Current and deferred tax are recognised in profit or loss, except when they relate to items that are
+recognised in other comprehensive income or directly in equity, in which case the current and deferred
+tax are also recognised in other comprehensive income or directly in equity respectively. Where current
+tax or deferred tax arises from the initial accounting for a business combination, the tax effect is included
+in the accounting for the business combination.
+
+4.5 Property, plant and equipment
+
+Items of property, plant and equipment are measured at cost less accumulated depreciation and any
+accumulated impairment losses.
+
+If significant parts of an item of property, plant and equipment have different useful lives, then they are
+accounted for as separate items (major components) of property, plant and equipment. Any gain or loss
+on disposal of an item of property, plant and equipment is recognised in profit or loss. Subsequent
+expenditure is capitalised only if it is probable that the future economic benefits associated with the
+expenditure will flow to the Company.
+
+Depreciation is provided on all other items of property, plant and equipment so as to write off their
+carrying value over their expected useful economic lives. It is provided at the following rates:
+
+Fixtures and fittings 33%
+Computer equipment 33%
+
+Page 37
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+4, Accounting policies (continued)
+4.6 Intangible assets
+Intangible assets internally developed and acquired separately
+
+Intangible assets with finite useful lives that are acquired separately are carried at cost less accumulated
+amortisation and accumulated impairment losses.
+
+Expenditure on the research phase of projects to develop new customised software for IT is recognised
+as an expense as incurred. Costs that are directly attributable to a project's development phase are
+recognised as intangible assets, provided they meet the following recognition requirements:
+
+- the development costs can be measured reliably
+
+- the project is technically and commercially feasible
+
+- the Company intends to and has sufficient resources to complete the project
+- the Company has the ability to use or sell the software
+
+- the software will generate probable future economic benefits.
+
+Development costs not meeting these criteria for capitalisation are expensed as incurred.
+
+All finite-lived intangible assets, including capitalised internally developed software, are accounted for
+using the cost model whereby capitalised costs are amortised on a straight line basis over their
+estimated useful lives. Residual values and useful lives are reviewed at each reporting date. In addition,
+they are subject to impairment testing. The following useful lives are applied:
+
+Licences 3 years
+Development expenditure 3 years
+
+Any capitalised internally developed software that is not yet complete is not amortised but is subject to
+impairment testing.
+
+Amortisation has been included within ‘Administrative expenses’. Subsequent expenditures on the
+maintenance of computer software are expensed as incurred. When an intangible asset is disposed of,
+the gain or loss on disposal is determined as the difference between the proceeds and the carrying
+amount of the asset, and is recognised in profit or loss within ‘Other expenses’.
+
+For impairment assessment purposes, assets are grouped at the lowest levels.
+
+Page 38
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+4, Accounting policies (continued)
+4.7 Financial instruments
+
+Financial assets and liabilities are recognised on the statement of financial position when the Company
+has become party to the contractual provisions of the instrument. Transaction costs that are directly
+attributable to the acquisition or issue of financial assets and financial liabilities (other than financial
+assets and financial liabilities at fair value through profit or loss) are added to or deducted from the fair
+value of the financial assets or financial liabilities, as appropriate, on initial recognition. Transaction costs
+directly attributabie to the acquisition of financial assets or financial liabilities at fair value through profit or
+loss are recognised immediately in profit or loss.
+
+Trade and other receivables
+Trade and other receivables are stated at their nominal amount (discounted if material) less any
+impairment losses.
+
+Financial assets at FVTPL
+
+Non-derivative financial assets other than those classified as “financial assets at amortised cost” are
+classified as “financial assets at FVTPL”. Subsequent to initial recognition, financial assets at FVTPL are
+measured at fair value and gains or losses arising from changes in fair value, dividend income, and
+interest income are recognised in profit or loss.
+
+Cash and cash equivalents
+
+Cash and cash equivalents comprise cash on hand and demand deposits, together with other short-term,
+highly liquid investments maturing within 90 days from the date of acquisition that are readily convertible
+into known amounts of cash and which are subject to an insignificant risk of changes in value.
+
+Classification and subsequent measurement of financial liabilities
+
+Financial liabilities and equity instruments are classified according to the substance of the contractual
+arrangements entered into. An equity instrument is any contract that evidences a residual interest in the
+assets of the Company after deducting all its liabilities. Financial liabilities are measured subsequently at
+amortised cost using the effective interest rate method.
+
+Trade and other payables
+
+Trade and other payables and borrowings are initially recognised at fair value less transaction costs and
+subsequently measured at amortised cost using the effective interest rate method, with all movements
+being recognised in the statement of comprehensive income. Cost approximates to fair value.
+
+The Company’s financial liabilities include trade and other payables.
+
+Interest income ;
+
+Interest income is recognized in the statement of profit and loss for all interest-bearing financial
+instruments. The effective interest rate is the rate that discounts estimated future cash flows over the
+expected life of the financial asset or liability to the net carrying amount upon initial recognition.
+
+Borrowings
+
+Borrowings that bear interest are recognised initially at fair value less attributable transaction costs.
+Subsequent to initial recognition, interest-bearing borrowings are stated at amortised cost using the
+effective interest method, less any impairment losses.
+
+All interest-related charges and, if applicable, changes in an instrument's fair value that are reported in
+profit or loss are included within finance costs or finance income.
+
+Measurement and recognition of expected credit losses
+The measurement of expected credit losses is a function of the probability of default, loss given default
+
+Page 39
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+4. Accounting policies (continued)
+4.7 Financial instruments (continued)
+
+(i.e. the magnitude of the loss if there is a default) and the exposure at default. The assessment of the
+probability of default and loss given default is based on historical data adjusted by forward-looking
+information. As for the exposure at default, for financial assets, this is represented by the assets’ gross
+carrying amount at the reporting date; for financial guarantee contracts, the exposure includes the
+amount of guaranteed debt that has been drawn down as at the reporting date, together with any
+additional guaranteed amounts expected to be drawn down by the borrower in the future by default date
+determined based on historical trend, the Company’s understanding of the specific future financing
+needs of the debtors, and other relevant forward-looking information.
+
+For financial assets, the expected credit loss is estimated as the difference between all contractual cash
+flows that are due to the Company in accordance with the contract and all the cash flows that the
+Company expects to receive, discounted at the original effective interest rate. For a lease receivable, the
+cash flows used for determining the expected credit losses is consistent with the cash flows used in
+measuring the lease receivable in accordance with IFRS 16.
+
+For a financial guarantee contract, as the Company is required to make payments only in the event of a
+default by the debtor in accordance with the terms of the instrument that is guaranteed, the expected
+loss allowance is the expected payments to reimburse the holder for a credit loss that it incurs less any
+amounts that the Company expects to receive from the holder, the debtor or any other party.
+
+if the Company has measured the loss allowance for a financial instrument at an amount equal to lifetime
+ECL in the previous reporting period, but determines at the current reporting date that the conditions for
+lifetime ECL are no longer met, the Company measures the loss allowance at an amount equal to
+12-month ECL at the current reporting date, except for assets for which the simplified approach was
+used.
+
+The Company recognises an impairment gain or loss in profit or loss for all financial instruments with a
+corresponding adjustment to their carrying amount through a loss allowance account, except for
+investments in debt instruments that are measured at FVTOCI, for which the loss allowance is
+recognised in other comprehensive income and accumulated in the investment revaluation reserve, arid
+does not reduce the carrying amount of the financial asset in the statement of financial position.
+
+Equity ;
+Equity instruments issued are recorded at fair value on initial recognition net of transaction costs.
+
+4.8 Share capital
+
+Ordinary shares are classified as equity. Incremental costs directly attributable to the issue of new
+ordinary shares or options are shown in equity as a deduction, net of tax, from the proceeds.
+
+4.9 Research and development
+
+In the research phase of an internal project it is not possible to demonstrate that the project will generate
+future economic benefits and hence all expenditure on research shall be recognised as an expense
+when it is incurred. Intangible assets are recognised from the development phase of a project if and only
+if certain specific criteria are met in order to demonstrate the asset will generate probable future
+economic benefits and that its cost can be reliably measured. The capitalised development costs are
+subsequently amortised on a straight line basis over their useful economic lives, which range from 3 to 6
+years.
+
+Page 40
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+If it is not possible to distinguish between the research phase and the development phase of an internal
+project, the expenditure is treated as if it were all incurred in the research phase only.
+
+5. Functional and presentation currency
+These financial statements are presented in pound sterling, which is the Company's functional currency.
+All amounts have been rounded to the nearest pound, unless otherwise indicated.
+
+6. Auditors’ remuneration
+
+During the year, the Company obtained the following services from the Company's auditor:
+
+2022 2021
+£ £
+
+Fees payable to the auditor's for the audit of the Company's financial
+statements 55,000 9,500
+
+7. Accounting estimates and judgments
+
+in the application of the company's accounting policies, the directors are required to make judgments,
+estimates and assumptions about the carrying amount of assets and liabilities that are not readily
+apparent from other sources. The estimates and associated assumptions are based on historical
+experience and other factors that are considered to be relevant. Actual results may differ from these
+estimates.
+
+The estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to accounting
+estimates are recognised in the period in which the estimate is revised, if the revision affects only that
+period, or in the period of the revision and future periods of the revision affects both current and future
+periods. Critical accounting judgments, estimates and assumptions are as follows;
+
+(i) Useful economic lives of tangible and intangible assets
+
+The annual depreciation charge for tangible assets is sensitive to changes in the estimated useful
+“economic lives and residual values of the assets. The useful economic lives and.residual values are
+reassessed annually. They are amended when necessary to reflect current estimates, based on
+technological advancement, future investments, economic utilisation and the physical condition of the
+assets. .
+
+(ii) Going concern ;
+
+Notwithstanding a material uncertainty in relation to raising capital to become a fully authorised bank
+(see going concern assessment), the Directors expect that the Company will have adequate resources to
+continue in business over the going concern assessment period. For this reason, they continue to adopt
+the going concern basis in preparing these financial statements
+
+Page 41
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC}:
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Employee benefit expenses
+
+2022 2021
+£ £
+
+Employee benefit expenses (including directors) comprise:
+Wages and salaries 5,590,227 3,701,676
+National insurance 543,853 275,190
+Defined contribution pension cost 424,457 225, 786
+6,558,537 4,202,652
+
+Key management personnel compensation
+
+Key management personnel are those persons having authority and responsibility for planning, directing
+and controlling the activities of the Company, including the directors of the Company listed on page 1,
+and the Financial Controller of the Company.
+
+2022 2021
+
+£ £
+
+Salary 859,500 658,917
+Defined contribution scheme costs 33,667 15,100
+
+The highest paid director received a total remuneration of £304,397, which includes £99,167 of share
+options.
+
+No share options have been exercised during 2022.
+
+The value of the company's contributions paid to a defined contribution pension scheme in respect of the
+highest paid director amounted to £18,083.
+
+The monthly average number of persons, including the directors, employed by the Company during the
+year was as follows:
+
+2022 2021
+
+No. No.
+
+Directors 8 3
+Staff 39 27
+47 30
+
+Page 42
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+9. Directors’ remuneration
+2022 2021
+£ £
+Directors' emoluments 859,500 658,917
+Company contributions to pension schemes 33,667 15,100
+ox 893,167 ____674,077
+
+10. Tax expense
+
+10.1 Income tax recognised in profit or loss
+
+The reasons for the difference between the actual tax charge for the year and the standard rate of
+corporation tax in the United Kingdom applied to losses for the year are as follows:
+
+2022 2021
+
+£ £
+
+Loss for the year (10,396,475) (5,672,429)
+
+Loss before income taxes (10,396,475) (5,672,429)
+
+Tax using the Company's domestic tax rate of 19% (2021 4 9%) (1,975,330) (1,077,762)
+Expenses not deductible for tax purposes, other than goodwill, amortisation
+
+and impairment 71,928 23,851
+
+Capital allowances for the year in excess of depreciation (13,283) (18, 162)
+
+Short term timing difference leading to an increase in taxation 6,534 6,206
+
+Unrelieved tax losses carried forward 1,910,151 1,065,867
+
+Total tax expense : =
+
+Changes in tax rates and factors affecting the future tax charges
+
+Finance Act 2021 enacted an increase in the main UK corporation tax rate from 19% to 25% with effect
+from 1 April 2023. Until this date, the 19% rate remains in place.
+
+At the reporting date, the Company had £14.8m (2021: £4.5m) of unused tax losses available for which
+no deferred tax asset has been recognised.
+
+Page 43
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+11. Property, plant and equipment
+
+Fixtures and Computer
+fittings equipment Total
+
+£ £ £
+Cost or valuation
+At 1 January 2021 - - -
+Additions - 84,976 84,976
+At 31 December 2021 - 84,976 84,976
+Additions 8,729 78,720 87,449
+At 31 December 2022 8,729 163,696 172,425
+
+Fixtures and Computer
+fittings equipment Total
+
+£ £ £
+Accumulated depreciation and impairment
+At 1 January 2021 - - -
+Depreciation - 14,212 14,212
+At 31 December 2021 - 14,212 14,212
+Depreciation 1,457 42,314 43,771
+At 31 December 2022 1,457. BG 526 983,
+Net book value
+At 31 December 2021 - 70,764 70,764
+At 31 December 2022 L2i2 107,170 114,442
+
+Page 44
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+12. Intangible assets
+
+Cost
+At 1 January 2021
+
+Additions - internal
+
+At 31 December 2021
+Additions - domain name
+
+Additions - implementation costs
+
+At 31 December 2022
+
+Accumulated amortisation and impairment
+At 1 January 2021
+
+Amortisation
+
+At 31 December 2022
+
+Net book value
+At 31 December 2021
+
+At 31 December 2022
+
+Development
+
+Licenses expenditure Total
+
+£ £ £
+
+: 4120614 1,120,614
+
+- 1,120,614 1,120,614
+
+14,902 - 14,902
+
+- 1,029,207 1,029,207
+
+14,902 ___2,149,821 __ 2,164,723
+Development
+
+Licenses expenditure Total
+
+£ £ E
+
+- 10,946 10,946
+
+: 10,946 10,946
+
+- 1,120,614 1,120,614
+
+14,902 2,138,875 2,153,777
+
+Development expenditure represents costs incurred on software development (implementation costs)
+which are considered to be commercially viable. No research and development costs expenditure was
+
+expensed during the period.
+
+Development expenditure is reviewed annually for impairment and the review at 31 December 2022
+
+indicated that no impairment provision was required.
+
+Implementation costs for the material components of the development expenditure are:
+
+Mortgage Origination Platform: £420,000
+Mortgage Servicing Platform: £1,137,321
+
+The platforms are not in service yet. Amortisation of the assets will be over 36 months once in production
+
+or the length of the remaining contract if shorter.
+
+Page 45
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+13. Trade and other receivables
+
+Receivables from related parties
+Prepayments and accrued income
+
+Other receivables
+
+Total trade and other receivables
+
+14. FVTPL investments
+
+2022 2021
+
+£ £
+16,391 -
+
+375,652 134,452
+
+3,746 1,632
+
+395,789 136,084
+
+Investments are mandatorily held at fair value through profit and loss and include the following classes:
+
+2022 2021
+£ £
+Current assets
+UK T-bills : —12,887,070 :
+FVTPL investments financial assets are denominated in the following currencies:
+Pounds —12,887,070 =
+Amounts recognised in profit or loss and other comprehensive income:
+2022 2021
+£ £
+Fair value losses recognised in profit or loss 13,541 -
+15. Trade and other liabilities
+2022 2021
+£ £
+Trade payables 17,377 115,997
+
+Page 46
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+Payables to related parties . - 6,853, 569
+Accruals 1,118,552 287,423
+Other payables - tax and social security payments 144,791 177,814
+Total trade and other liabilities 1,280,720 7,434,797
+
+Page 47
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+16. Share capital
+
+Authorised
+2022 2022 2021 2021
+Number £ Number £
+Shares treated as equity
+Ordinary shares of £0.0100 each 7,014,907 70,149 5,000,000 50,000
+7,014,907 __70,149 __5,000,000 50,000
+Issued and fully paid
+2022 2022 2021 2021
+Number £ Number £
+Ordinary shares of £0.0100 each
+At 1 January 5,000,000 50,000 - -
+Shares issued 2,014,907 20,149 5,000,000 50,000
+os 014,907. 70,149. 5,000,000 50,000
+
+At 31 December
+
+A share consolidation was performed on 3 August 2022, whereby 500,000,000 ordinary shares with a
+nominal of £0.0001 was consolidated to 5,000,000 ordinary shares with a nominal value of £0.01.
+
+Transaction costs of £407,213 (2021 £125,279) directly attributable to the issuing of equity instruments
+
+were deducted against equity.
+
+Page 48
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+17.
+
+Financial instruments - fair values and risk management
+
+17.1 Accounting classifications and fair values
+
+The Company’s principal financial instruments, fram which financial risk arises, comprise of the following:
+
+- FVTPL investments
+
+- trade and other receivables
+- cash and cash equivalents
+- trade and other payables
+
+Financial risks which includes market, liquidity, credit risk; is monitored through the board approved risk
+management framework and risk appetite statement. Risk appetite metrics are produced on a regular
+
+basis as required and monitored at board level.
+
+The Company does not issue or use financial instruments of a speculative nature.
+
+The following table shows the carrying amounts and fair values of financial assets and financial liabilities.
+It does not include fair value information for financial assets and financial liabilities not measured at fair
+value if the carrying amount is a reasonable approximation of fair value.
+
+31 December 2022
+
+Financial assets measured at fair value
+
+FVTPL investments
+
+Financial assets not measured at fair value
+
+Trade and other receivables
+
+Cash and cash equivalents
+
+Financial liabilities not measured at fair value
+
+Trade and other payables
+
+Carrying amount
+Not Mandatorily Amortised
+
+e at FVTPL cost Total
+
+£ £ £
+
+12,887,070 - 12,887,070
+12,887,070 - 12,887,070
+
+13 - 395,789 395,789
+
+- 913,033 913,033
+
+- 1,308,822 1,308,822
+
+15 - 1,280,721 1,280,721
+
+= 1,280,721 _ 1,280,721
+
+Page 49
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022.
+
+17.
+
+Financial instruments - fair values and risk management (continued)
+
+17.1 Accounting classifications and fair values (continued)
+
+Carrying amount
+Not Amortised
+31 December 2021 e cost Total
+
+£ £
+
+Financial assets not measured at fair value
+
+Trade and other receivables 13 136,084 136,084
+
+Cash and cash equivalents 359,627 359,627
+
+495,711 495,711
+
+Financial liabilities not measured at fair value
+
+Trade and other payables 15 7,434,797 7,434,797
+
+1,434,797, 7,434,797
+
+17.2 Financial risk management objectives
+
+The Directors monitor the Company's financial risks and management policies. The Directors overall risk
+management strategy seeks to assist the Company in meeting its financial targets whilst minimising
+potential adverse effects on financial performance. The Company is exposed to the following financial
+
+_TiSks:
+
+- Market risk
+
+- Interest rate risk
+
+- Credit risk
+
+- Liquidity risk
+
+- Capital management
+
+17.3 Market risk
+
+The risk to capital or earnings arising from adverse changes in the value of the Company’s on and
+off-balance sheet financial positions due to fluctuations in financial market variables including, but not
+limited to, interest rates and credit spreads.
+
+17.4 Interest rate risk management
+
+Interest rate risk is the risk that the value of financial instruments will fluctuate due to changes in market
+
+interest rates. The Company invests its excess cash resources in UK Treasury bills and are exposed to
+the risk of interest rate changes on the fair value of these assets. Bills are kept to maturity.
+
+Page 50
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+17.
+
+Financial instruments - fair values and risk management (continued)
+
+As at 31 December 2022, the Company’s only interest-bearing assets are short-term T-Bills forming its
+HQLA portfolio, and cash deposited overnight at third party banks.
+
+A 2.5% increase in interest rates would cause the fair value of the £12.9m HQLA portfolio to reduce by
+£108k.
+
+17.5 Credit risk management
+
+Credit risk is the risk of financial loss to the Company if a customer to a financial asset fails to meet its
+contractual obligations.
+
+Exposure to capital risk may arise as a result of a depletion of the Company's capital resources, an
+increase in minimum capital requirements, if committed capital cannot be drawn down or the Company is
+unable to raise the capital required to support growth.
+
+The Company's objective in managing capital is to maintain appropriate levels of capital to support the
+Company's strategy and meet regulatory requirements.
+
+The Company operates a capital planning approach that aims to maintain appropriate levels of capital in
+a range of stressed scenarios. A prudent risk appetite has been set by the Board and reviewed
+frequently.
+
+Capital risk is overseen by the ALCo, that monitors the capital position against risk appetite metrics and
+early warning triggers and limits. The ALCo regularly review the forward looking capital surplus in the
+context of the Company's business plans and ensures that management has advance warning of any
+potential capital challenges.
+
+As at 31 December 2022, due to the nature and materiality of financial assets held, changes in the credit
+loss allowance are not applicable.
+
+17.6 Liquidity risk management
+Liquidity and interest risk tables
+Liquidity risk is the risk that the Company is unable to meet its financial obligations as they fall due. The
+Company employs efficient cash management, credit control and a low cost base to minimise liquidity
+
+risk therefore ensuring funds are available to meet commitments as they fall due.
+
+The contractual maturities of financial liabilities, including estimated interest payments are as follows:
+
+Carrying 1 year or
+amount Total less 1-5 years
+£ £ £ £
+31 December 2022
+Trade payables 17,377 17,377 17,377 -
+
+Accruals 1,118,552 1,118,552 1,118,552 -
+
+1,135,929 1,135,929 1,135,929 -
+
+Page 51
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+17.
+
+Financial instruments - fair values and risk management (continued)
+
+17.6 Liquidity risk management (continued)
+
+Carrying 1 year or
+amount Total less 1-5 years
+£ £ £ £
+31 December 2021
+Trade payables 115,991 115,991 115,991 -
+Accruals 287 423 287,423 287,423 -
+403,414 403.414 403.414 =
+
+17.7 Fair value measurements
+
+This note provides information about how the Company determines fair values of various financial assets
+and liabilities.
+
+Fair value of financial assets and liabilities that are measured at fair value on a recurring basis
+
+Some of the Company's financial assets and financial liabilities are measured at fair value at the end of
+each reporting period using a three level hierarchy based on the lowest level of input that is significant to
+the entire fair value measurement, being:
+
+Level 1: Quoted prices (unadjusted) in active markets for identical assets or liabilities that the entity can
+access at the measurement date
+
+Level 2: Inputs other than quoted prices included within Level 1 that are observable for the asset or
+liability, either directly or indirectly
+
+Level 3: Unobservable inputs for the asset or liability
+
+The following table gives information about how the fair values of these financial assets and financial
+liabilities are determined (in particular, the valuation technique(s) and inputs used).
+
+Valuation
+Financial technique(s) and key
+assets/liabilities Fair value at year end Fair value hierarchy = input(s)
+2022 2021
+FVTPL investments 12,887,070 - Level 1
+
+Page 52
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+18.
+
+19.
+
+Capital management
+
+The Company monitors its capital, which includes all components of equity. The Company's objectives
+when maintaining capital are:
+
+~ To safeguard the Company’s ability to continue as a going concern, so that it can continue to provide
+returns for shareholders and benefits for other stakeholders.
+
+~ To ensure the Company has the cash available to joan to new customers in order to generate future
+adequate returns to shareholders.
+
+The Company sets the amount of capital it requires in proportion to risk. The Company manages its
+capital structure and makes adjustments to it in light of changes in economic conditions and the risk
+
+characteristics of the underlying assets. In order to maintain or adjust the capital structure, the Company
+may issue new shares, or sell assets to reduce debt.
+
+Related party transactions
+Details of transactions between the Company and its related parties are disclosed below.
+
+19.1 Loans to related parties
+
+2022 2021
+£ £
+Trade and other receivables
+Perenna Group Limited ; 16,391 -
+16,391 -
+19.2 Loans from related parties
+2022 2021
+£ £
+Trade and other payables
+Perenna Group Limited - 6,853,569
+a 6,853,569
+
+Perenna Group Limited is the immediate shareholders of Perenna Bank PLC.
+
+The above loans are interest free and repayable on demand.
+
+Page 53
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+SCHEDULE TO THE DETAILED ACCOUNTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+20.
+
+21.
+
+22.
+
+23.
+
+24.
+
+Reserves
+
+Share premium
+
+The share premium account represents the difference between the price paid for and the nominal value
+of shares issued, net of the cost of each share issue.
+
+Retained earnings
+
+The retained earnings account represents accumulated post-tax profits net of dividend payments for the
+Company.
+
+Pension commitments
+
+The Company operates a defined contributions pension scheme. The assets of the scheme are held
+separately from those of the Company in an independently administered fund. The pension cost charge
+represents contributions payable by the Company to the fund and amounted to £424,457 (2021:
+£225,786). Contributions totalling £67,050 (2021: £32,661) were payable to the fund at the reporting date
+and are included in creditors.
+
+Commitments under operating leases
+
+At 31 December 2022 the Company had future minimum lease payments due under an operating lease
+for each of the following periods:
+
+2022 2021
+£ £
+Not later than one year §2,531. 35,334
+
+All leases are short term operating leases and therefore no right-of-use or lease liability has been
+accounted for in the current financial period.
+
+Controlling party
+
+The immediate shareholders is Perenna Group Limited, a company incorporated in England.
+
+In the opinion of the directors there is no ultimate controlling party.
+
+Events after the reporting date
+Share issuance
+
+In February 2023, existing shareholders subscribed to 190,476 ordinary shares at a price of £15.75 per
+ordinary share, with an aggregate subscription value of £3.0m.
+
+Page 54
+PERENNA BANK PLC (PREVIOUSLY PERENNA FFL PLC)
+
+SCHEDULE TO THE DETAILED ACCOUNTS
+FOR THE YEAR ENDED 31 DECEMBER 2022
+
+25. Prior year errors
+
+In the prior year incremental transaction costs directly attributable to the issuing of equity instruments
+were recorded as items of an administrative expenditure nature as opposed to being shown as a direct
+deduction against equity. The impact of the £125,297 adjustment is a decrease to administrative
+expenses resulting in loss for the year of £5,672,429. There has been no impact on figures as previously
+reported in the statement of financial position as a result of this reallocation.
+
+Page 55

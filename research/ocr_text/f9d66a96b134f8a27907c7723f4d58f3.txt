@@ -1,0 +1,1934 @@
+BANK SADERAT PLC
+Reg No: 1126618
+
+Annual Report & Financial Statements
+For the year ended 31st December 2019
+
+|
+
+i
+
+il
+
+~
+1
+
+*A93PSPQ3
+
+>
+e-4
+(a)
+[a
+oo]
+ran
+E
+A07 25/04/2020 #160 |
+
+COMPANIES HOUSE
+
+we
+
+Bank Saderat PLC Page 1 of 38
+CONTENTS
+
+Page
+BOARD OF DIRECTORS AND MANAGEMENT 3
+REPORT OF THE DIRECTORS 4
+STRATEGIC REPORT 6
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF BANK SADERAT PLC 9
+INCOME STATEMENT 15
+STATEMENT OF FINANCIAL POSITION 16
+STATEMENT OF CHANGES IN EQUITY 17
+STATEMENT OF CASH FLOWS 18
+NOTES TO THE FINANCIAL STATEMENTS 19
+
+Bank Saderat PLC Page 2 of 38
+BOARD OF DIRECTORS AND MANAGEMENT
+
+Directors
+
+Dr Saydi
+Non-Executive Chairman
+
+Dr H. Borhani
+Managing Director
+
+Dr D. J. Reid
+Non-Executive Director
+
+R. J. Speedy
+Non-Executive Director
+Key Management Personnel
+
+Dr H. Borhani
+Managing Director
+
+C. R. Wakefield
+Assistant Managing Director
+
+B. Aram
+Financial Controller and Company Secretary
+
+A. Philipowitz
+Head of Compliance & MLRO
+
+Bank Saderat PLC
+
+Page 3 of 38
+REPORT OF THE DIRECTORS
+for the year ended 31st December 2019
+
+The directors present their Annual Report together with the audited Financial Statements for the year ended 31st
+December 2019.
+
+Directors’ Responsibilities
+The directors are responsible for preparing the Report of the Directors, the Strategic Report and the Financial Statements
+in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law the directors
+have elected to prepare the financial statements in accordance with United Kingdom Generally Accepted Accounting
+Practice (United Kingdom Accounting Standards and applicable laws) including FRS 102 “The Financial Reporting Standard
+applicable in the UK and Republic of ireland”. Under company law the directors must not approve the financial statements
+unless they are satisfied that they give a true and fair view of the state of affairs and profit or loss of the company for that
+period. In preparing these Financial Statements, the directors are required to:
+
+* select suitable accounting policies and then apply them consistently; —
+
+* make judgements and accounting estimates that are reasonable and prudent;
+
+* state whether applicable UK Accounting Standards have been followed, subject to any material departures
+disclosed and explained in the financial statements;
+
+“prepare the financial statements on the going concern basis unless it is inappropriate to presume that the
+company will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company's transactions and disclose with reasonable accuracy at any time the financial position of the company and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They are also responsible for
+safeguarding the assets of the company and hence for taking reasonable steps for the prevention and detection of fraud
+and other irregularities. The directors are responsible for the maintenance and integrity of the corporate and financial
+information included on the Bank's website.
+
+Risk management
+The extent to which the risks that are inherent in the Bank's business are managed is considered by the directors to be
+strategically important and is explained in the Strategic Report on pages 6 to 8 of these Financial Statements.
+
+Pillar 3 Disclosure
+
+Financial institutions within the scope of Basel I! are required to disclose information about their risk exposures and the
+risk assessment processes they have used. These disclosures are in addition to those required in the Annual Report and
+Financial Statements and form Pillar 3 of the Basel Itt framework.
+
+Basel Ill is implemented in the European Union (EU) via the Capital Requirements Directive (CRD) which consists of three
+Pillars.
+
+Pillar 1 sets out the minimum capital requirements that banks are required to meet for credit, market and operational
+risk.
+
+Under Pillar 2, banks and their supervisors at the PRA assess whether additional capital is required to cover risks not
+covered in Pillar 1.
+
+Pillar 3 complements the minimum capital requirements (Pillar 1) and the supervisory review process (Pillar 2) with the
+aim of developing a set of disclosure requirements which enable market participants to assess information on the risks
+
+that a bank is subject to and its capital and risk management procedures.
+
+Detailed information relating to Pillar 3, which has not been audited, is available on the Bank's website at www.saderat-
+ple.com
+
+Bank Saderat PLC Page 4 of 38
+REPORT OF THE DIRECTORS (continued)
+for the year ended 31st December 2019
+
+Directors
+The membership of the Board is shown on page 3. The directors had no interest in the capital of the parent company.
+
+The following directors held ordinary shares on behalf of Bank Saderat Iran:
+
+No. of Shares
+31.12.2019 31.12.2018
+
+Dr Saydi
+Dr H. Borhani 1
+
+Results and dividend
+The results of the Bank and proposed dividend are disclosed in the Strategic Report.
+
+Donations
+There were no political or charitable donations during 2019 (2018: None).
+
+The directors confirm that:
+
+® so far as each director is aware, there is no relevant audit information of which the Bank's auditor is unaware;
+and
+
+« the directors have taken all the steps that they ought to have taken as directors in order to make themselves
+aware of any relevant audit information and to establish that the auditors are aware of that information.
+
+To the best of our knowledge:
+
+= the Financial Statements, prepared in accordance with United Kingdom Generally Accepted Accounting Practice
+(United Kingdom Accounting Standards and applicable laws), give a true and fair view of the assets, liabilities,
+financial position and profit or loss of the Bank; and
+
+* the Annual Report, including the Strategic Report, includes a fair review of the development and performance of
+the business and the position of the Bank, together with a description of the principal risks and uncertainties that
+it faces.
+
+Bank Saderat PLC is pleased that its parent company, Bank Saderat Iran, is continuing its intention that the Bank will
+remain as a going concern and will maintain its place in the London market.
+
+Auditors
+Aresolution to appoint MHA Macintyre Hudson LLP as auditors for 2020 will be proposed at the Annual General Meeting.
+
+By order of the Board
+
+B Aram
+Secretary
+London, 8th April 2020
+
+Bank Saderat PLC Page 5 of 38
+STRATEGIC REPORT
+for the year ended 31st December 2019
+
+Business review
+
+The Bank's income is derived principally from its interbank placements, under existing business relationships, rather than
+from commercial activities. However, now the Bank has permission to resume normal business this balance will gradually
+change as commercial activity restarts.
+
+As shown on the Statement of Financial Position total assets have increased from €224.7m at 31st December 2018 to
+€225.5m at 31st December 2019 and shareholders’ funds have increased from €190.7m to €191.1m due to retained
+profits.
+
+Corporate governance statement
+
+The Board is ultimately responsible for the Bank’s system of internal controls and it discharges its duties in this area by
+ensuring management implements effective systems of risk identification, assessment and mitigation. These risk
+management systems are designed to manage, rather than eliminate, the risk of failure to achieve business objectives
+and cannot provide absolute assurance against material misstatement or loss. Management is responsible for establishing
+and maintaining adequate internal controls over financial reporting. Internal controls over financial reporting are designed
+to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements
+for external reporting purposes. A strategic planning and budgeting process is in place. One of the directors'
+responsibilities is regular monitoring of performance against plan on a monthly basis and discussing reasons for variances.
+The Executive Board receives relevant briefings from the Assets and Liabilities Committee (ALCO) and the Credit
+Committee. The Board receives relevant briefings from the Risk Monitoring Committee, Audit Committee and the
+Remuneration and Personnel Policy Committee.
+
+The Risk Monitoring Committee's role is to identify and discuss the nature of the risks encountered and ensure that
+management recognises the full range of risks to which the Bank is exposed, and their relative scale, stress tested under
+various scenarios, in order that controls may be designed and resources deployed to manage those risks effectively, and
+that the residual risk is contained within parameters approved by the Board. The Audit Committee inter alia oversees the
+control environment, ensuring that risks have been adequately recognised, that controls in place are appropriate to
+manage those risks, and particularly that the controls are operating effectively.
+
+ALCO is responsible for monitoring the management of the Bank’s financial resources to ascertain that revenues are
+maximised within the Bank’s policy guidelines and the applicable regulatory framework. ALCO meets on a monthly basis.
+
+Principal risks, uncertainties and risk management
+
+Financial sanctions and the Joint Comprehensive Plan of Action
+
+Financial sanctions were imposed upon the Bank on 27th July 2010 by the Council of the European Union. These sanctions
+were removed on 22nd October 2016 and Bank Saderat PLC is no longer subject to an asset freeze and requires no licences
+from HM Treasury in the United Kingdom to deal with its funds and economic resources.
+
+Although the sanctions were removed, the Bank was still prohibited from undertaking new business and commercial
+lending until receiving confirmation from the Regulators that the Bank was able to resume normal business, which was
+received on 13" September 2018. During 2018 the USA withdrew
+
+from the Joint Comprehensive Plan of Action and re-imposed sanctions on tran, which is affecting the speed and nature
+of the Bank’s return to normal business.
+
+Liquidity and Market risk
+
+The bank operations expose it to liquidity risk, interest rate risk, credit risk and foreign exchange risk. The quantitative
+and qualitative disclosures regarding the Bank's management of these risks are described in detail in note 15 of the
+Financial Statements.
+
+Operational Risk
+The bank also faces operational risk, including the risk of non-compliance with regulatory and legal requirements, is
+
+managed by strict adherence to detailed and comprehensive procedures together with high-level managerial oversight of
+the Bank's operations.
+
+Bank Saderat PLC Page 6 of 38
+STRATEGIC REPORT (continued)
+for the year ended 31st December 2019
+
+Share capital and capital base
+
+The Bank's issued share capital at 31st December 2019 was 183,219,924 ordinary shares of €1 each, fully paid. The capital
+base at 31st December 2019 was €191.1m (2018: €190.7m) which resulted in capital of 324% of the minimum requirement
+calculated in accordance with the Basel Ill convention which equates to a Total Capital Ratio of 84%.
+
+Key performance indicators
+
+The Bank operated under EU sanctions until October 2016 and was not able to enter into any new transactions, other
+than modifications to existing facilities, until it was granted permission to resume normal business by the Regulators,
+which was received on 13" September 2018, when it started to rebuild its business gradually and profitably. The directors
+are of the opinion that the inclusion of key performance indicators in this Strategic Report, at this time, would be of
+relatively limited value. Nevertheless, the following are noted:
+
+2019 4,201,434
+
+3,725,568
+
+2018 | 3,867,041
+
+3,189,627
+
+2017 5,660,738
+
+5,046,876
+
+Interest Income (€’s) Total Costs (€’s)
+2019 |
+2018 |
+2017
+Capital Cover Liquidity Coverage Ratio (LCR)
+
+Return on Equity (ROE)
+
+The fall in interest income was mainly due to the general fall in interest rates (in some cases negative rates) and
+transfer of some customers to non-interest-bearing accounts.
+
+Additionally in 2018, the accounting treatment of interest earned on the impaired portion of loans changed
+which caused a charge of €409,199 in that year.
+
+The rise in total costs of 2019 is mainly caused by roof repair costs of €326,467 and a decrease in the release of
+impairment provisions of €156,029.
+
+Bank Saderat PLC Page 7 of 38
+STRATEGIC REPORT (continued)
+for the year ended 31st December 2019
+
+Future developments
+
+The Bank's capital base at 31st December 2019 was €191.1m (2018: €190.7m) which consists of tier 1 capital. Tier 1 capital
+is the total of the Bank's ordinary share capital, general banking reserve and retained earnings. The Bank has always
+complied with its regulatory capital requirement.
+
+The Bank's plan is to gradually reactivate certain elements of its pre-sanction business activities. Initially the Bank will
+focus on participation in commercial lending facilities and syndicated project finance. However, the ability and timing of
+the Bank’s participation in these opportunities is impacted by the hardening of the US position on sanctions against Iran
+and constraints (see below) on our ability to conduct normal business.
+
+The Bank is going to achieve its targets by its strong capital position, risk awareness, caution and prudent behaviour.
+
+Constraints which are most challenging for the Bank are the availability of: UK clearing system, European clearing,
+correspondent banking services and SWIFT. In order to overcome some of these limitations the Bank has conducted
+studies into the feasibility of opening a branch in the EU to enable access to an EU clearing system and to deposit funds
+that qualify as high quality liquid assets. However, given that Brexit has occurred and the passporting rules for opening a
+branch will not last beyond the end of 2020, the bank has decided to study and prepare the necessary steps in order to
+apply for a third-country licence in 2021.
+
+The directors have considered the impact of Covid-19 and have concluded that it is not going to have a significant impact
+
+on the Bank. This is discussed in more detail in note 24 to the accounts.
+
+By order of the Board
+
+[dho~l
+
+Dr H Borhani
+Managing Director
+London, 8" April 2020
+
+Bank Saderat PLC Page 8 of 38
+Independent auditor’s report to the members of Bank Saderat Pic
+
+1. Our Opinion
+We have audited the financial statements of Bank Saderat Plc.
+
+The financial statements that we have audited comprise:
+e Statement of Comprehensive Income
+e Statement of Financial Position
+*® Statement of Changes In Equity
+e Statement of Cash Flows
+e Notes 2 to 26 of the financial statements, including the accounting policies.
+
+The financial reporting framework that has been applied in their preparation is applicable law and United Kingdom
+Accounting Standards (United Kingdom Generally Accepted Accounting Practice), including Financial Reporting Standard
+102 The Financial Reporting Standard applicable in the UK and Republic of Ireland.
+
+In our opinion:
+
+e The financial statements give a true and fair view of the state of the Bank’s affairs as at 31 December 2019 and
+of its profit for the year then ended;
+
+e The financial statements have been properly prepared in accordance with United Kingdom Generally Accepted
+Accounting Practice; and
+
+e The financial statements have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)}) and applicable law. Our
+responsibilities under those standards are further described in the Auditor's Responsibilities for the Audit of the
+Financial Statements section of our report. We are independent of the Bank in accordance with the ethical
+requirements that are relevant to our audit of the financial statements in the UK, including the FRC’s Ethical Standard as
+applied to listed entities, and we have fulfilled our ethical responsibilities in accordance with those requirements. We
+believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our opinion.
+
+Our audit opinion is consistent with our report to the Audit and Risk Committee.
+
+Overview
+
+Materiality €95Sk 0.5% Net Assets
+
+Key audit matters
+
+by
+
+Recurring
+
+|
+
+| e Valuation of loans and advances to customers
+e Revenue recognition
+
+Bank Saderat PLC Page 9 of 38
+2. Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of the
+financial statements of the current period and include the most significant assessed risks of material misstatement
+
+’ (whether or not due to fraud) that we identified. These matters included those matters which had the greatest effect
+on: the overall audit strategy, the allocation of resources in the audit; and directing the efforts of the engagement team
+and, as required for public interest entities, our results from those procedures. These matters were addressed in the
+context of our audit of the financial statements as a whole, and in forming our opinion thereon, and we do not provide a
+separate opinion on these matters. ,
+
+Valuation of loans and advances to customers
+
+The Risk Our response
+
+The estimation of allowance for Our audit work included, but was not restricted to:
+
+impairment on loans involves a Checking management's assessment of loan impairment.
+significant degree of judgement Substantively testing the repayment history of significant loans.
+and estimation. Testing valuation of shares pledged as collateral by agreeing the
+
+year-end share prices to the applicable stock exchange prices.
+The impairment allowance is
+
+based on the management’s The Bank's accounting policy on impairment of financial assets
+best estimate of the loan losses carried at amortised cost is shown in note 1(e) to the financial
+incurred at the balance sheet statements and related disclosures are included in notes 10 and
+date depending on factorssuch 11.
+
+as likelihood and timing of the
+
+future cash flows.
+
+Result of our procedures
+Based on the audit procedures performed, valuation of loans and advances to customers is
+consistent with the audit evidence obtained.
+
+Revenue Recognition
+The Risk Our response
+Loans made by the bank may
+
+be subject to changing cash
+
+flows or terms and loans may e Obtaining a list of all interest bearing loans.
+
+e Interest on all loans were compared against calculations,
+with those calculations checked to supporting
+documentation and payments received, where
+
+Our work included, but was not restricted to:
+
+mature in the year. There isa
+risk that interest rates are not
+updated correctly or changing
+
+applicable.
+cash flows are not taken into © The loans were also subject to analytical review, with the
+account when calculating overall movements in each being reviewed for
+interest received. reasonableness and variances corroborated with
+evidence
+
+Result of our procedures
+Based on the audit procedures performed, we were satisfied that revenue was properly
+recognised in the financial statements in accordance with the stated accounting policy.
+
+3. Our application of materiality
+
+Our definition of materiality considers the value of error or omission on the financial statements that would change or
+influence the economic decision of a reasonably knowledgeable person. Materiality is used in planning the scope of our
+work, executing that work and evaluating the results.
+
+Materiality in respect of the bank was set at €955k which was determined on the basis of 0.5% of Net Assets.
+
+We agreed to report any corrected or uncorrected adjustments exceeding €47k.
+
+We did not identify any material misstatement during our audit work.
+
+Bank Saderat PLC Page 10 of 38
+4. Capability of the audit in detecting irregularities, including fraud
+
+As part of our audit we identify and assess the risks of material misstatement of the financial statements, whether due
+to fraud or error, and then design and perform audit procedures responsive to those risks, including obtaining audit
+evidence that is sufficient and appropriate to provide a basis for our opinion.
+
+We evaluated management's incentives and opportunities for fraudulent manipulation of the financial statements
+(including the risk of override of controls), and determined that the principal risks were related to posting inappropriate
+journal entries to both reduce costs and inflate operating profit, and management bias in accounting estimates.
+
+Audit procedures performed by the engagement team included, but were not limited to:
+
+¢ Obtaining an understanding of the legal and regulatory frameworks that the bank operates in, focusing on those
+laws and regulations that had a direct effect on the financial statements. The key laws and regulations we
+considered in this context included UK Companies Act, the Financial Services and Markets Act 2000 and
+applicable tax legislation. In addition, we considered compliance with the UK Bribery Act and employee
+legislation, as fundamental to the bank’s operations;
+
+* Discussing among the engagement team and involving relevant internal specialists, including tax, valuations,
+pensions, IT, forensic and industry specialists regarding how and where fraud might occur in the financial
+statements and any potential indicators of fraud;
+
+* Discussions with local management, internal audit and the Bank’s legal counsel, including consideration of
+known or suspected instances of non-compliance with laws and regulations and fraud;
+
+*  Enquiring of the audit and finance committee concerning actual and potential litigation and claims;
+
+¢ Evaluation of the operating effectiveness of management's controls designed to prevent and detect
+irregularities;
+
+* Assessment of matters reported on the Bank’s whistleblowing helpline and the results of management's
+investigation of-such matters;
+
+e Reading key correspondence with regulatory authorities such as the Financial Conduct Authority, Prudential
+Regulatory Authority, and Financial Reporting Council
+
+* Challenging assumptions and judgements made by management in their significant accounting estimates, in
+particular with respect to provisions for claims incurred but not reported
+
+There are inherent limitations in the audit procedures described above and the further removed non-compliance with
+laws and regulations is from the events and transactions reflected in the financial statements, the less likely we would
+become aware of it. Also, the risk of not detecting a material misstatement due to fraud is higher than the risk of not
+detecting one resulting from error, as fraud may involve deliberate concealment by, for example, forgery or intentional
+misrepresentations, or through collusion.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all engagement team
+members including internal specialists and significant component audit teams and remained alert to any indications of
+fraud or non-compliance with laws and regulations throughout the audit.
+
+We did not identify any key audit matters relating to irregularities, including fraud.
+
+Bank Saderat PLC Page 11 of 38
+5. We have nothing to report on going concern
+
+As explained in note 1 section b, the directors have prepared the financial statements on the going concern basis. In
+doing so they have concluded that there are no material uncertainties that would cast significant doubt on over their
+ability to continue as a going concern for the foreseeable future. The foreseeable future is usually defined as a period of
+up to one year from the date of approval of these financial statements.
+
+It is our responsibility to obtain sufficient and appropriate evidence regarding and to conclude on:
+e whether a material uncertainty exists related to events or conditions that may cast significant doubt on the
+Bank’s ability to continue as a going concern and
+
+e the appropriateness of the directors’ use of the going concern basis of accounting in the preparation of the
+financial statements.
+
+Our work on going concern involved:
+i. the consideration of inherent risks to the Bank’s operations and specifically its business mode!
+ii. the evaluation of how those risks might impact on the Bank’s available financial resources.
+
+iii. | where additional resources may be required the reasonableness and practicality of the assumptions made
+by the directors when assessing the probability and likelihood of those resources becoming available.
+
+Our work has concluded that those inherent risks were not so significant as to require us to perform any additional audit
+procedures.
+
+6. We have nothing to report on the other information in the Annual Report
+
+The directors are responsible for the other information. The other information comprises the information included in
+the Annual Report and Accounts, other than the financial statements and our auditor's report thereon. Our opinion of
+the financial statements does not cover the other information and, except to the extent otherwise explicitly stated in
+our report, we do not express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our responsibility is to read the other information and, in doing
+so, consider whether the other information is materially inconsistent with the financial statements or our knowledge
+obtained in the audit or otherwise appears to be materially misstated. If we identify such material inconsistencies or
+apparent material misstatements, we are required to determine whether there is a material misstatement in the
+financial statements or a material misstatement of the other information. If, based on the work we have performed, we
+conclude that there is a material misstatement of this other information, we are required to report that fact.
+
+Strategic report and directors report
+In our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the strategic report and the directors’ report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable legal
+requirements.
+
+Directors remuneration report
+
+Those aspects of the director’s remuneration report which are required to be audited have been prepared in
+accordance with applicable legal requirements.
+
+Bank Saderat PLC Page 12 of 38
+7. Matters on which we are required to report by exception
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006 requires is to
+report to you if, in our opinion:
+
+e adequate accounting records have not been kept, or returns adequate for our audit have not been received by
+branches not visited by us; or
+
+e the financial statements are not in agreement with the accounting records and returns; or
+* certain disclosures of directors’ remuneration specified by law are not made; or
+* we have not received all the information and explanations we require for our audit.
+
+8. Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are responsible for the preparation of
+the financial statements and for being satisfied that they give a true and fair view, and for such internal control as the
+directors determine is necessary to enable the preparation of financial statements that are free from material
+misstatement, whether due to fraud or error.
+
+in preparing the financial statements, the directors are responsible for assessing the Bank’s ability to continue as a going
+concern, disclosing, as applicable, matters related to going concern and using the going concern basis of accounting
+unless the directors either intend to liquidate the Bank or to cease operations, or have no realistic alternative but to do
+So.
+
+9. Auditor's responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from
+material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our opinion.
+Reasonable assurance is a high level of assurance but is not a guarantee that an audit conducted in accordance with ISAs
+(UK) will always detect a material misstatement when it exists. Misstatements can arise from fraud or error and are
+considered material if, individually or in aggregate, they could reasonably be expected to influence the economic
+decisions of users taken on the basis of these financial statements.
+
+As part of an audit in accordance with ISAs (UK), we exercise professional judgement and maintain professional
+scepticism throughout the audit. We also:
+
+e Identified and assessed the risks of material misstatement of the financial statements, whether due to fraud or
+error, design and perform audit procedures responsive to those risks, and obtain audit evidence that is
+sufficient and appropriate to provide a basis for our opinion. The risk of not detecting a material misstatement
+resulting from fraud is higher than for one resulting from error, as fraud may involve collusion, forgery,
+intentional omissions, misrepresentations, or the override of internal control.
+
+¢ Obtained an understanding of internal control relevant to the audit in order to design audit procedures that are
+appropriate in the circumstances, but not for the purpose of expressing an opinion on the effectiveness of the
+
+Bank’s internal control.
+
+e Evaluated the appropriateness of accounting policies used and reasonableness of accounting estimates and
+related disclosures made by the directors.
+
+e Asnoted in Section 5 it is our responsibility to conclude on whether a material uncertainty exists and on the
+appropriateness of the directors’ use of the going concern basis of accounting. and, based on the audit evidence
+
+Bank Saderat PLC Page 13 of 38
+obtained, whether a material uncertainty exists related to events or conditions that may cast significant doubt
+on the Bank’s ability to continue as a going concern. If we conclude that a material uncertainty exists, we are
+required to draw attention in our auditor's report to the related disclosures in the financial statements or, if
+such disclosures are inadequate, to modify our opinion. Our conclusions are based on the audit evidence
+obtained up to the date of our auditor’s report. However, future events or conditions may cause the Bank to
+cease as a going concern.
+
+e Evaluated the overall presentation, structure and content of the financial statements, including the disclosures,
+and whether the financial statements represent the underlying transactions and events in a manner that
+achieves fair presentation.
+
+e Obtained sufficient appropriate audit evidence regarding the financial information of the entities or business
+activities within the Bank to express an opinion on the financial statements. We are responsible for the
+direction, supervision and performance of the Bank audit. We remain solely responsible for our audit opinion.
+
+We communicate with the audit and risk committee regarding, among other matters, the planned scope and timing of
+the audit and significant audit findings, including any significant deficiencies in internal control that we identify during
+our audit.
+
+10. Use of our report
+
+‘This report is made solely to the Company’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Company’s members those
+matters we are required to state to them in an auditor's report and for no other purpose. To the fullest extent
+permitted by law, we do not accept or assume responsibility to anyone other than the Company and the Company’s
+members as a body, for our audit work, for this report, or for the opinions we have formed.
+
+Rakesh Shaunak CTA, FCA, FRSA
+
+(Senior Statutory Auditor)
+
+for and on behalf of MHA Macintyre Hudson
+Chartered Accountants and Statutory Auditor
+6" Floor
+
+2 London Wall Place
+
+London
+
+EC2Y SAU
+
+8" April 2020
+
+Bank Saderat PLC Page 14 of 38
+Bank Saderat PLC - Registration Number 1126618
+
+INCOME STATEMENT
+for the year ended 31st December 2019
+
+Interest receivable
+Less: interest payable
+Net Interest Income
+
+Fees and commissions receivable
+Fees and commissions payable
+Other operating income
+
+Operating Income
+
+Administrative expenses
+Depreciation of fixed assets
+
+Reduction in provisions
+
+Profit on Ordinary Activities Before Taxation
+
+Tax on profit on ordinary activities
+Profit on Ordinary Activities After Taxation
+Other Comprehensive Income
+
+Total Comprehensive Income
+
+Bank Saderat PLC
+
+Notes
+
+12
+11
+
+Year ended Year ended
+
+31.12.2019 31.12.2018
+€ -€
+4,201,434 3,867,041
+(61,451) (70,298)
+4,139,983 3,796,743
+58,382 123,720
+(4,084) (210,849)
+14,167 22,620
+4,208,448 3,732,234
+(3,653,179) (3,268,381)
+(108,286) (113,172)
+35,897 191,926
+482,880 542,607
+(111,853) (122,802)
+371,027 419,805
+371,027 419,805
+
+Page 15 of 38
+Bank Saderat PLC - Registration Number 1126618
+
+STATEMENT OF FINANCIAL POSITION
+as at 31st December 2019
+
+Assets
+
+Cash and balances at central banks
+Loans and advances to banks
+Loans and advances to customers
+Tangible fixed assets
+
+Other assets
+
+Prepayments and accrued income
+
+Total Assets
+
+Liabilities
+
+Deposits by banks
+
+Customer accounts
+
+Other liabilities due within one year
+Total Liabilities
+
+Shareholders’ funds
+
+Called up share capital
+General banking risk reserve
+Retained earnings
+Shareholders’ Funds
+
+Total Liabilities and Shareholders’ Funds
+
+The Financial Statements on pages 14 to 38 were approved by the Board of Directors on 8th April 2020 and signed on its
+
+Notes
+
+10
+12
+13
+
+16
+17
+18
+
+19
+20 & 21
+20
+20
+
+31.12.2019 31.12.2018
+€ €
+
+1,724,643 1,657,213
+187,385,290 196,022,362
+23,622,973 13,916,113
+12,478,397 12,584,627
+95,745 107,953
+218,557 385,062
+225,525,605 224,673,330
+29,185,063 28,746,573
+3,505,884 3,464,653
+1,732,767 1,731,240
+34,423,714 33,942,466
+183,219,924 183,219,924
+6,000,000 6,000,000
+1,881,967 1,510,940
+191,101,891 190,730,864
+225,525,605 224,673,330
+
+behalf by:
+Dr H. Saydi Dr H. Borhani
+
+The statement of accounting policies and the notes on pages 18 to 38 form part of these Financial Statements.
+
+Bank Saderat PLC Page 16 of 38
+Bank Saderat PLC - Registration Number 1126618
+
+STATEMENT OF CHANGES IN EQUITY
+for the year ended 31st December 2019
+
+At 1st January 2018
+Profit and total comprehensive income for the year
+At 31st December 2018
+
+Profit and total comprehensive income for the year
+
+At 31st December 2019
+
+Bank Saderat PLC
+
+General
+Called up banking risk Retained Total
+share capital reserve earnings
+(note 21)
+€ € € €
+183,219,924 6,000,000 1,091,135 190,311,059
+- - 419,805 419,805
+183,219,924 6,000,000 1,510,940 190,730,864
+- - 371,027 371,027
+183,219,924 6,000,000 1,881,967 191,101,891
+
+Page 17 of 38
+STATEMENT OF CASH FLOWS
+for the year ended 31st December 2019
+
+Cash Flow From Operating Activities
+Cash flow from operations
+
+Taxation
+
+Corporation tax paid
+Net Cash Generated From Operating Activities
+
+Cash Flow From Investing Activities
+
+Purchase of tangible fixed assets
+Net Cash Used In Investing Activities
+Increase / (Decrease) in Cash and Cash Equivalents
+
+Opening Cash and Cash Equivalents
+Foreign exchange movements
+
+Closing Cash and Cash Equivalents
+
+Bank Saderat PLC
+
+Notes
+
+23
+
+12
+
+Year ended Year ended
+
+31.12.2019 31.12.2018
+€ €
+213,286 (26,430)
+(164,458) (23,322)
+48,828 (49,752)
+(2,056) (8,970)
+(2,056) (8,970)
+46,772 (58,722)
+1,657,214 1,654,457
+20,657 61,478
+1,724,643 1,657,214
+
+Page 18 of 38
+Report and Financial Statements for the year ended 31st December 2019
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+1. Company information and basis of preparation
+
+(a} Company information
+
+The Bank is registered in the United Kingdom and its principal activities are banking.
+
+These Financial Statements have been prepared in accordance with applicable United Kingdom accounting standards
+including FRS 102 - The Financial Reporting Standard Applicable in the United Kingdom and Republic of Ireland, with
+the Companies Act 2006 and the provisions relating to banking companies in the Large and Medium-Sized Companies
+and Groups (Accounts and Reports) Regulations 2008 and in accordance with provisions of the Regulations related to
+Banking Companies (SI2008/410 Para 5(1)). The Financial Statements have been prepared on the historical cost basis.
+
+(b) Basis of preparation
+
+(i) Basis of accounting
+
+The Financial Statements have been prepared on a going concern basis as the directors consider that the Bank has
+adequate Tier 1 capital to sustain it with sufficient capital adequacy, calculated in accordance with the FCA/PRA Rules,
+for the foreseeable future; and existing assets will provide a sufficient income stream to cover expenses for in excess
+of one year from the date of signing the Financial Statements.
+
+(ii) Functional and presentation currency
+The functional currency of the Bank and the presentation currency of these Financial Statements is the Euro.
+
+(c) Revenue recognition
+
+(i) Interest receivable
+
+Interest receivable from financial assets classified as loans and advances is calculated using the effective interest rate,
+which is the rate that discounts estimated future cash receipts through the expected life of the financial asset to that
+asset's net carrying amount.
+
+When a receivable is impaired recognition of interest income is reduced by calculating it using the original effective
+interest rate method on the carrying amount as reduced by any provisions for impairment. The element of contractual
+income thereby not recognised in the Income Statement is added to the provision for impairment.
+
+(ii) Rendering of services
+Fees earned for services provided are recognised as revenue when the service is provided.
+
+(d) Depreciation of tangible fixed assets
+Freehold land is not depreciated. Depreciation of tangible fixed assets is provided for on a straight-line basis in order
+to write off the cost of the assets over their expected useful lives as follows:
+
+Freehold property 2% p.a.
+Refurbishment costs 12.5% p.a.
+Office equipment and furniture 20% p.a.
+Motor vehicles 25% p.a.
+Computer equipment 25% p.a.
+
+Bank Saderat PLC Page 19 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+(e) Impairment of financial assets carried at amortised cost
+
+If there is objective evidence that an impairment loss on financial assets carried at amortised cost has been incurred,
+the amount of the loss is measured as the difference between the asset's carrying amount and the present value of
+estimated future cash flows (excluding future credit losses that have not been incurred) discounted at the financial
+asset's original effective interest rate (i.e. the effective interest rate computed at initial recognition). The carrying
+amount of the asset is reduced through use of an allowance account. The amount of the loss is recognised in the
+Income Statement.
+
+Factors considered in determining whether or not a financial asset is impaired include the adequacy and ease of
+realisation of any security held; continuing non-payment of interest and/or principal; trading losses of the obligor and
+lack of working capital evidenced by an analysis of published financial statements.
+
+If, in a subsequent period, the amount of the impairment loss decreases and the decrease can be related objectively
+to an event occurring after the impairment was recognised (such as an improvement in the debtor's credit rating), the
+previously recognised impairment loss is reversed by adjusting the allowance account. The reversal shall not result in
+a carrying amount of the financial asset that exceeds what the amortised cost would have been, had the impairment
+not been recognised, at the date the impairment is reversed. The amount of the reversal is recognised in the Income
+Statement.
+
+(f) Foreign exchange
+
+(i) Transactions in currencies other than the Euro are translated into Euros at the closing middle market spot exchange
+rate ruling at the date of the transaction.
+
+(ii) Monetary assets and liabilities denominated in other currencies are translated into Euros in the Statement of
+Financial Position at the middle market spot rate of exchange ruling at the close of business on the reporting date.
+Profits or losses on revaluation of open foreign exchange positions are recognised in the Income Statement.
+
+(iii) Non-monetary assets and liabilities that are measured in terms of historical cost in a foreign currency are translated
+into the functional currency using the rate of exchange at the date of the initial transaction.
+
+(g} Taxation
+
+Current taxation is recognised for the amount of Corporation Tax payable in respect of the taxable profit for the current
+or past reporting periods using the tax rates and laws that have been enacted or substantively enacted by the reporting
+date.
+
+Deferred taxation is provided in full on timing differences that result in an obligation at the reporting date to pay more
+tax, or a right to pay less tax, at a future date, at rates expected to apply when they crystallise, based on rates enacted
+or substantially enacted at the reporting date. Timing differences arise from the inclusion of items of income and
+expenditure in taxation computations in periods different from those in which they are included in the Financial
+Statements.
+
+A deferred tax asset is recognised to the extent that it is regarded as more likely than not that it will be recovered.
+Deferred tax assets and liabilities are not discounted.
+
+(h) Loans to customers
+
+Loans to customers are non-derivative financial assets with fixed or determinable payments that are not quoted in an
+active market. They arise when the Bank provides money to a debtor, with no intention of trading the receivable. They
+are initially recognised at the present value of cash receivable including interest payments and repayments of principal
+and are subsequently measured at amortised cost using the effective interest rate method.
+
+(i) Financial liabilities
+
+All financial liabilities are measured at amortised cost using the effective interest rate method (see (c) (i) above).
+
+Bank Saderat PLC Page 20 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+(j) Significant judgements and estimates
+
+Impairments:
+
+When assessing whether any of the Bank’s assets are impaired the following factors (among others) are considered in
+order to determine expected cash flows; an assessment of the economic and political outlook, past repayment
+performance, the geographic position of the counterparty and its assets and the impact of movements in foreign
+exchange rates. This provides management with a variety of estimates upon which to make a judgement as to the
+impairment provision.
+
+Commercial Loans:
+
+Under the key terms of al! the Bank's commercial loan agreements, the chargeable rate consists of 3 or 6 month
+EURIBOR plus a fixed margin in the facilities which according to definitions in FRS 102 meets the definition of a variable
+rate. At the date they were entered into, all loans provided a market return to the Bank. The Bank's commercial loans
+are therefore treated as basic financial instruments as they satisfy the conditions of FRS 102.11.9.
+
+(k) Employee benefits
+Short term employee benefits and contributions to the defined contribution pension scheme are recognised as an
+expense in the period in which they are incurred.
+
+(I) Going concern
+
+The financial statements have been prepared on a going concern basis. The Directors have taken into account all
+relevant information, including annual budgets, cash flow forecasts, the capital and liquidity positions, and the impact
+of subsequent events in making their assessment.
+
+2. Other operating income
+
+Year ended Year ended
+
+31.12.2019 31.12.2018
+
+€ €
+
+Profit on the revaluation of assets and liabilities 14,167 22,620
+
+The profits only arise from the revaluation of assets and liabilities that are not denominated in Euros. The Bank does
+not undertake proprietary or client foreign exchange trading.
+
+3. Administrative expenses
+The average number of persons employed by the Bank, including the Executive Director, was 18 (2018: 19), of whom
+3 (2018: 3) were employed outside the UK.
+
+Year ended Year ended
+
+31.12.2019 31.12.2018
+
+€ €
+
+Salaries and wages 1,187,434 1,349,993
+Social security costs 163,683 188,990
+Defined contribution pension scheme costs 169,361 195,054
+Other staff costs 504,547 356,888
+Total staff costs 2,025,025 2,090,925
+Premises Expenses 754,376 431,501
+IT and Communication Expenses 94,462 93,359
+Legal, professional and audit 460,528 312,021
+Other administrative expenses 318,788 340,575
+3,653,179 3,268,381
+
+Bank Saderat PLC Page 21 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+4. Directors' emoluments and transactions with directors
+
+Year ended Year ended
+
+31.12.2019 31.12.2018
+
+€ €
+
+Directors’ salaries and fees 398,177 474,502
+Performance bonuses 33,320 56,652
+Pension contributions 25,901 23,922
+457,398 555,076
+
+Number of directors in Money Purchase Pension Schemes is 1 (2018: 1).
+
+The aggregate emoluments of the highest paid director, excluding pension contributions, were €356,624 (2018:
+€448,513). The amount paid into the pension scheme for the highest paid director was €25,901 (2018: €23,922).
+
+Acontract for the provision of consultancy services exists between the Bank and one non-Executive director. During
+
+the year ended 31st December 2019 consultancy services to the value of €483 were provided under this contract
+(2018: €6,364).
+
+Transactions with directors:
+There were no balances with directors outstanding at 31st December 2019 (2018 None) and no transactions during
+
+the year (2018: None), other than as set out above.
+
+5. Profit on ordinary activities before taxation
+
+Year ended Year ended
+31.12.2019 31.12.2018
+Profit on ordinary activities before taxation is stated after € €
+charging fees payable to the Bank's auditor for:
+Auditors’ remuneration:
+- The audit of the annual financial statements 93,237 87,553
+- All other assurance services - 9,203
+
+All other assurance services in 2018 is the cost of reviewing models used to support the Bank’s regulatory returns.
+
+6. Pension costs
+
+The Bank operates a Money Purchase Scheme, managed by a UK insurance company.
+
+The costs of providing pension benefits to staff under the defined contribution scheme are charged to profit and loss
+account each month.
+
+Bank Saderat PLC Page 22.of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+7. Tax on profit on ordinary activities
+Yearended Year ended
+Analysis of tax charge on ordinary activities: 31.12.2019 31.12.2018
+€ €
+
+United Kingdom Corporation Tax based on the profits for the year at 19% (113,181) (117,765)
+Adjustment to tax charge in respect of prior periods (3,905) (1,937)
+
+Total current tax (117,086) (119,702)
+
+Deferred Tax:
+
+Timing differences, origination and reversal 2,033 (4,802)
+Adjustment in respect of prior periods 3,200 1,702
+Deferred Taxation (note 22) 5,233 (3,100)
+Corporation Tax charge for the period (111,853) (122,802)
+Corporation tax charge for the period after adjustments (111,853) (122,802)
+
+Yearended Year ended
+
+The differences are explained below: 31.12.2019 = 31.12.2018
+€ €
+Profit on ordinary activities before tax 482,880 542,607
+Tax at 19% (2018: 19%): (91,747) (103,095)
+Effects of:
+Expenses not deductible for tax purposes (19,401) (19,472)
+Adjustment to tax charge in respect of prior years (705) (235)
+Taxation charge (111,853) (122,802)
+
+Deferred tax has arisen as a result of the excess of depreciation over capital allowances and the impact of
+accrued expenditure not allowed in the current period as a charge against profits for Corporation Tax
+purposes.
+
+8. Cash and balances at central banks
+
+31.12.2019 31.12.2018
+
+€ €
+
+Amounts include:
+Cash 1,724,643 1,657,213
+1,724,643 1,657,213
+
+Bank Saderat PLC Page 23 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+9. Loans and advances to banks
+
+Remaining maturity:
+
+- on demand, including blocked funds
+
+- three months or less but over one day
+
+- one year or less but over three months
+
+Less allowance for losses on loans and advances to
+banks and blocked funds (note 11)
+
+31.12.2019 31.12.2018
+€ €
+87,895,368 85,089,152
+39,813,919 38,584,352
+62,138,047 74,759,972
+(2,462,044) = (2,411,114)
+187,385,290 196,022,362
+
+Management has assessed all loans and advances to banks to be basic financial instruments as
+defined in FRS 102 section 11. Non-performing loans and advances to banks of €2,462,044 were fully
+provided for at 31st December 2019 (2018: €2,411,114). The exchange adjustment arising on this US
+dollar exposure is shown in note 11. Included in loans and advances to banks are amounts, due from
+group companies, with a remaining maturity of one year or less but over three months of €2,727,494
+(2018: €730,664). Loans and advances to banks consisted of loans arising from money market lending.
+
+10. Loans and advances to customers
+
+Remaining maturity:
+
+- three months or less
+
+- one year or less but over three months
+
+- five years or less but over one year
+
+Less allowance for losses on loans and advances to customers (note 11)
+
+31.12.2019 31.12.2018
+€ €
+13,278,277 12,517,147
+1,792,258 597,419
+15,376,776 7,368,174
+(6,824,338) (6,566,627)
+23,622,973 13,916,113
+
+Management has assessed all loans and advances to customers to be basic financial instruments as defined
+
+in FRS 102 section 11.
+
+Bank Saderat PLC
+
+Page 24 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+11. Impairment provisions
+
+31.12.2019 31.12.2018
+€ €
+
+At beginning of period 9,197,615 8,874,045 -
+Exchange adjustments 53,477 106,297
+Amounts written off in year” (85,248) -
+Interest income not recognised in income statement - (note 1c) 441,595 409,199
+Decrease in provisions") (35,897) (191,926)
+At end of period 9,571,542 9,197,615
+
+(i) Shortfall of cash recovered from a debtor, set off the opening provision against the same debt
+
+(ii) Resulting from the Bank's assessment of the amounts recoverable from exposures at
+31 December 2019, compared to provisions outstanding at the same date.
+
+Against loans and advances
+
+- to banks (note 9) 2,462,044 2,411,114
+- to customers (note 10) 6,824,338 6,566,627
+- Other assets (note 13) 285,160 219,874
+9,571,542 9,197,615
+Provision against blocked funds (included in loans to banks)
+At beginning of period 2,411,114 2,304,314
+Exchange adjustments 50,930 106,800
+At end of period 2,462,044 2,411,114
+
+Blocked funds represent an interbank loan, the repayment of which was originally blocked due to the
+international sanctions levied against Libya in 1995. When the Libyan sanctions were removed in 2003,
+repayment of the loan was blocked due to US sanctions against Iranian owned banks, which remain. The
+provision represents 100% of the loan principal and all accrued interest (2018: 100%).
+
+Bank Saderat PLC Page 25 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+12. Tangible Fixed assets
+
+Equipment,
+furniture,
+fixtures and
+fittings and
+Freehold Motor office
+property vehicles —_ refurbishment Total
+Cost € € € €
+At 1st January 2019 15,569,130 19,872 4,017,341 19,606,343
+Additions - - 2,056 2,056
+Disposals - (18,761) - (18,761)
+At 31st December 2019 15,569,130 1,111 4,019,397 19,589,638
+Depreciation
+At 1st January 2019 3,006,351 19,872 3,995,493 7,021,716
+Charge for the period 100,208 - 8,078 108,286
+Disposals - (18,761) ~ (18,761)
+At 31st December 2019 | 3,106,559 1,111 4,003,571 7,111,241
+Net book value at 31st December 2019 12,462,571 0. 15,826 12,478,397
+Net book value at 31st December 2018 12,562,779 - 21,848 12,584,627
+
+Freehold property is occupied for own use. Office refurbishment costs, considered capital in nature, are included in
+
+Office equipment, furniture, fixtures and fittings.
+Freehold land at a carrying value of €10,551,395 (2018: €10,551,395) is not being deprecia
+
+13. Other assets
+
+ted.
+
+31.12.2019 31.12.2018
+
+€ €
+
+Other debtors 318,725 270,880
+Provision (note 11) (285,160) (219,874)
+Other debtors net of provision 33,565 51,006
+Deferred Taxation (note 22) 62,180 56,947
+95,745 107,953
+
+14. Geographical analysis of assets, operating income and profit before tax
+
+The Bank does not specifically match deposit liabilities against assets and therefore, allocation of net assets by
+geographic region is not meaningful. The directors believe that it is more meaningfu! to analyse total assets by
+
+reference to regions of ultimate risk and to similarly analyse operating income.
+
+31.12.2019 31.12.2018
+Operating Profit Operating Profit before
+Assets income before tax Assets income tax
+Region: €000's €000's €000's €000's €000's €000's
+Europe 74,990 S81 (3,129) 87,870 374 (2,887)
+Middle East 150,534 3,627 3,641 136,801 3,268 3,417
+Other 2 - (29) 2 30 13
+Tota I 225,526 4,208 483 224,673 3,732 543
+liabilities (34,424) (33,942)
+Net assets 191,102 190,731
+
+Bank Saderat PLC
+
+Page 26 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+15. Financial risk management
+Loans and advances to banks and customers are carried at amortised cost net of impairment provisions where
+appropriate (See notes 9 and 10).
+
+The activities of the Bank expose it to a variety of risks, the most significant being: market risk, liquidity risk and credit
+risk,
+
+Market risk is the potential adverse change in the Bank's net assets or income arising from movements in interest
+rates, foreign exchange rates or other market prices. Liquidity risk is the risk that the Bank is unable to meet its
+obligations as they fall due owing to insufficient financial resources. Credit risk is the risk of financial loss as
+counterparties and borrowers are unable to meet their obligations as they fall due.
+
+Financial risk management framework
+
+The Board has overall responsibility for the establishment and oversight of the Bank's risk management framework.
+Sub-committees of the Board have been established to manage the various risks including the UK Board, the Audit
+Committee, the Risk Monitoring Committee, the Assets and Liabilities Committee and the Credit Committee. The UK
+Board and the Risk Monitoring Committee have both executive and non-executive members; the Audit Committee has
+only non-executive members; and the Assets and Liabilities Committee and the Credit Committee have only executive
+members. These committees report regularly to the Board.
+
+The Audit Committee is responsible for monitoring compliance with the Bank's risk management policies and
+procedures, and for reviewing the adequacy of the risk management framework in relation to the risks faced by the
+Bank. The Audit Committee is assisted in these functions by Internal Audit. Internal Audit undertakes both regular and
+ad-hoc reviews of risk management controls and procedures, the results of which are reported to the Audit
+Committee.
+
+Financial risks to which the Bank is subject
+
+Liquidity risk
+Liquidity risk is the risk that the Bank will encounter difficulty in meeting its obligations from its financial liabilities as
+they become due.
+
+Management of liquidity risk
+
+During the sanction period and since the removal of sanctions, the Bank has been highly liquid as assets existing at the
+date of sanctions matured into cash. This highly liquid position will change gradually now that the Bank has received
+permission to resume business from the Regulators and is able to operate normally. No additional capital is required,
+therefore, to support liquidity risk.
+
+The maturity profile of deposits is reported monthly to the Assets and Liabilities Committee, which is chaired by the
+Managing Director. Proceedings at the Assets and Liabilities Committee are reported to the UK Board and the Board.
+
+Bank Saderat PLC Page 27 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+Exposure to liquidity risk
+
+Residual undiscounted contractual maturities of assets and liabilities.
+
+31st December 2019
+
+Assets
+Cash, loans and advances to banks and customers
+
+Other assets
+
+Total maturing assets
+
+Liabilities
+
+Deposits by banks/customer accounts
+Other liabilities
+
+Total maturing liabilities
+
+Net liquidity surplus per period
+
+Cumulative surplus
+
+31st December 2018
+
+Assets
+Cash, loans and advances to banks and customers
+
+Other assets
+
+Total maturing assets
+
+Liabilities
+
+Deposits by banks/customer accounts
+Other liabilities
+
+Total maturing liabilities
+
+Net liquidity surplus per periods
+
+Cumulative surplus
+
+Bank Saderat PLC
+
+Sight to en One One year Over five
+Eight ¥ monthto to five Total
+days one one year years years
+month
+€000's €000's €000's €000's €000's €000's
+98,495 1,172 103,412 10,329 - 213,408
+- 1 95 - - 96
+98,495 1,173 = 103,507 10,329 - 213,504
+11,346 - 21,345 - - 32,691
+355 - 1,378 - - 1,733
+11,701 - 22,723 - - 34,424
+86,794 1,173 80,784 10,329 ~ 179,080
+86,794 87,967 168,751 179,080 _179,080
+Sight to hen One One year Over five
+Eight ¥ monthto to five Total
+days one one year years years
+month
+€000's €000's €000's €000's €000's €000's
+96,684 1,005 113,764 802 ~ 212,255
+- 1 107 - - 108
+96,684 1,006 113,871 802 - 212,363
+32,211 - - - - 32,211
+390 - 1,341 - - 1,731
+32,601 - 1,341 - - 33,942
+64,083 1,006 112,530 802 - 178,421
+64,083 65,089 177,619 178,421 178,421
+
+Page 28 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+Credit risk
+
+Credit risk is the risk that companies, financial institutions and other counterparties will be unable to meet their
+obligations to the Bank which may result in financial loss. The Bank will, when appropriate, agree to modify the
+repayment terms of a finance facility. Credit risk arises principally from the Bank's lending book and from discounting
+of letters of credit, also to a lesser extent, from any holdings of investment securities. The Board agrees limits for
+lending based upon country of exposure, industrial sector and individual bank or customer. A report of full credit
+exposures against limits by country is included in the monthly management accounts and circulated to all directors
+and senior managers. A report of credit exposures against limits by industrial sector is presented monthly to the Assets
+and Liabilities Committee. -
+
+Concentrations of credit risk
+The table below shows the Bank's geographic concentrations by credit risk:
+
+United
+
+iran Germany Kingdom Other Total
+At 31st December 2019 : €000's €000's €000's €000's €000's
+Cash and balances at central banks - - 1,725 - 1,725
+Loans and advances to banks 126,683 40,279 20,381 42 187,385
+Loans and advances to customers 23,623 - - - 23,623
+Other assets - - 3 - 3
+150,306 40,279 22,109 42 212,736
+
+At 31st December 2018
+Cash and balances at central banks - - 1,657 - 1,657
+Loans and advances to banks 122,515 39,873 23,584 10,050 196,022
+Loans and advances to customers 13,916 - - - 13,916
+Other assets - - 4 - 4
+
+136,431 39,873 25,245 10,050 211,599
+
+The concentrations of credit risk shown above specifically exclude tangible fixed assets, other assets and prepayments
+as these items do not have a credit risk and are not financial instruments.
+
+Bank Saderat PLC Page 29 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+Non-bank credit exposures by industrial sector
+
+As at 31st December 2019 As at 31st December 2018
+
+Outstanding Limit Capacity Outstanding Limit Capacity
+
+€000's €000's €000's €000's €000's €000's
+
+Automotive - 38,000 38,000 - 46,000 46,000
+industrial - 38,000 38,000 - - -
+Transport - 57,000 57,000 - 69,000 69,000
+Utilities 10,261 57,000 46,739 - - -
+Metals - 38,000 38,000 - 46,000 46,000
+Mining - 38,000 38,000 - - -
+Telecommunications - 38,000 38,000 - - -
+Construction 13,362 57,000 43,638 13,916 69,000 55,084
+Food and Agriculture - 38,000 38,000 - 46,000 46,000
+Oil and Gas - 114,000 114,000 ~- 138,000 138,000
+Investment companies - 76,000 76,000 - 92,000 92,000
+Real Estate - 57,000 57,000 — - - -
+Whole and retail trade - 38,000 38,000 - - -
+Services and other - 38000 38,000 - - -
+23,623 722,000 698,377 13,916 506,000 492,084
+
+The limits are the maximum exposures permitted by the Bank's directors to the various industrial sectors.
+
+Management of collateral & guarantees
+
+The Bank reduces credit risk by taking collateral where management considers the amount of an exposure or the
+covenant to be such that additional security is prudent. This collateral may take the form of listed shares, to a value in
+excess of the exposure, or other market securities or guarantees. Where listed shares or other securities are taken as
+collateral, the open market value of the collateral compared to the credit exposure is regularly monitored. Where a
+guarantee is in place, the underlying ability of the guarantor to meet their obligations is regularly assessed.
+
+Currently the Bank does not secure any of its exposures by mortgages on property or other registered forms of
+collateral. No collateral is held against balances with or loans and advances to banks. The following table summarises
+the loans to customers, secured by collateral and guarantees:
+
+*
+
+Management of collateral & guarantees
+
+Gross _—— Provision Net
+€000 €000 €000
+At 31 December 2019
+Loans backed by collateral* 12,018 (1,516) 10,502
+Loans backed by guarantees 8,168 (5,308) 2,860
+Total 20,186 (6,824) 13,362
+At 31 December 2018
+Loans backed by collateral** 11,551 - 11,551
+Loans backed by guarantees 8,932 (6,567) 2,365
+Total 20,483 (6,567) 13,916
+
+Bank Saderat PLC Page 30 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+*2019: A provision has been made for the shortfall of the value of collateral compared to the exposure.
+
+(** 2018: The security held for the €11.55m of loans and advances to customers which were collateralised by shares
+of companies listed on the Tehran stock exchange were valued at 270% of the amount outstanding at 31st December
+2018.)
+
+The directors are of the opinion that should it be deemed necessary to realise the security, in all the above instances
+sufficient funds would be realised to repay the carrying amount of the loan, net of provisions, outstanding. This
+requires the Bank, through the syndicate manager, to sell the shares in the open market for realisation of the collateral.
+The Bank has obtained legal opinion to the effect that this does not have any negative regulatory or statutory
+implications and is practical.
+
+The internal assessment criteria for business lending purposes
+
+The Bank has developed a rating system which is used in conducting reviews of borrowers to assess their on-going
+credit standing and to consider whether a loan or advance should be placed on a “watch list" due to a deteriorating
+assessment of the borrower. The system is based upon a points scoring method with points awarded against various
+criteria from an analysis of financial statements provided by borrowers, The sum of the points awarded determines
+the classification of each borrower from A (the highest rating) to D (the lowest). It is likely that any D rated borrowers
+would be in default, which may result in the raising of a provision against the debt.
+
+The Bank is careful to detect early on, any deterioration of the financial conditions of the obligors as well as the
+providers of different support forms, Early problem recognition is key to successful risk management. Early warning
+indicators provide signs of credit deterioration and include the following:
+
+- Deterioration in financial ratios, covenants, breaches and waiver requests.
+- Macroeconomic environment deteriorates.
+
+~ Industry comes under pressure.
+
+-  Dectine in share / bond / CDS prices.
+
+- Rating agency downgrades and changes to negative outlook.
+
+- Rapid changes in technology and product life cycles.
+
+- Adverse comments in the media.
+
+A default shall be considered to have occurred when an obligor is unlikely to pay its credit obligations or is past due
+on any material credit obligation.
+
+A period of 90 days past due is the regulatory definition and should be used as a benchmark. However consideration
+must be given to the circumstances of each obligor and a past due period of less than 90 days may indicate payment
+is unlikely. Once a debt is 90 days past due it will be referred monthly to the UK Board or Board meeting for review.
+
+At 31% December 2019, €10.2m of the loans to customers were classified as A and the balance of €13.4m were
+classified as D, net of a provision of €6.8m for impaired loans.
+
+(At 31st December 2018 all loans to customers were classified as D being €13.9m, net of €6.6m of provision for
+impaired loans.)
+
+The credit risk related to exposure to banks is monitored through the analysis of their published accounts. Based upon
+the latest analysis, no counterparty banks appear to present an unacceptable credit risk.
+
+Within loans and advances to banks there are significant concentrations of exposure to a small number of bank
+counterparties and a total €155.1m (2018: €153.7m) is held with four major banks in Iran.
+
+impaired loans and advances
+
+Impaired loans and advances are where the Bank has determined that it is probable that it will be unable to collect all
+principal and interest due according to the contractual terms of the loan agreement through the default of the
+borrower and the inability to realise adequate collateral, for whatever reason. When a loan or advance is deemed to
+be impaired, the Bank raises a provision for the amount which is determined to be unrecoverable and reduces the
+amount of the loan or advance on the Statement of Financial Position by the amount of the provision.
+
+At 31st December 2019, loans and advances to banks totalling €189,847,334 (2018: €196,022,362) included amounts
+
+deemed to be in default of €2,462,044 (2018: €2,411,114) and which had a 100% provision raised against them. Loans
+and advances to customers totalling €30,447,311 (2018: €20,482,739) of which €20,186,755 (2018: €8,931,783) was
+
+Bank Saderat PLC Page 31 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+impaired and had a provision of €6,824,338 against them (2018: €6,566,627). (In 2018, €11,550,956 was deemed to
+be in default but not impaired due to adequate supporting collateral.
+
+Impaired loans and advances represented 6.28% of total loans at 31st December 2019 (2018: 1.12%).
+
+Carrying value of cash, loans and advances
+
+Exposure Collateral
+Neither
+Past Due Past Due Secured
+nor but not by TSE Secured by
+31st December 2019 Total Impaired Impaired Impaired Shares guarantee
+€000's €000's €000's €000's €000's €000's
+Cash 1,725 1,725 - - - -
+Loans and advances to banks 187,385 187,385 - - - -
+Loans and advances to customers 23,623 10,261 . 13,362 10,502 13,121
+212,733 199,371 - 13,362 10,502 13,121
+Exposure Collateral
+Neither
+Past Due Past Due Secured
+
+nor but not by TSE Secured by
+
+31st December 2018 Total Impaired Impaired Impaired Shares guarantee
+
+€000's €000's €000's €000's €000's €000's
+
+Cash 1,657 1,657 - - - -
+
+Loans and advances to banks 196,022 196,022 - - - -
+
+Loans and advances to customers 13,916 . 11,551 2,365 11,551 2,365
+
+211,595 197,679 11,551 2,365 11,551 2,365
+
+As at 31st December 2019 €11.16m (2018: €11.6m) of principal and €1.63m (2018: €1.14m) of interest was overdue
+and awaiting payment.
+
+Interest rate risk
+
+Interest rate risk is the risk of variability of the fair value of future cash flows arising from financial instruments due to
+changes in interest rates and is measured by analysing assets and liabilities into time bands according to their maturity
+or next interest repricing date, whichever is the earlier
+
+interest rate gap sensitivity analysis
+
+Interest rate gaps occur where there is a difference between the next re-pricing date/maturity of assets and liabilities
+within a given time-frame.
+
+Bank Saderat PLC Page 32 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+The following shows the interest rate gaps as at 31st December 2019.
+
+More
+
+than More
+
+three than six
+months — months
+
+Less than but less but less Undated
+three than six thanone Morethan Non-interest
+months months year one year bearing Total
+Assets €000s €000s €000s €000s €000s €000s
+Cash and balances at central banks - - oo - 1,725 1,725
+Cash, loans and advances to banks and customers 137,009 54,061 9,869 15,377 (5,308) 211,008
+Tangible fixed assets - - - - 12,478 12,478
+Other assets - - - - 96 96
+Prepayments and accrued income - - - - 219 219
+Total assets 137,009 54,061 9,869 15,377 9,210 225,526
+Liabilities
+Deposits by banks & customer accounts 11,346 21,345 - - - 32,691
+Other liabilities - - - - 1,733 1,733
+Shareholders’ funds - - - - 191,102 191,102
+Total liabilities 11,346 21,345 . - 192,835 225,526
+Interest rate sensitivity gap 125,663 32,716 9,869 15,377 (183,625) -
+
+The following shows the interest rate gaps as at 31st December 2018.
+
+More than More than
+
+three — six months Undated
+Less than months but but less Non-
+three less than six than one More than interest
+months months year one year bearing Total
+€000's €000's €000's €000's €000's €000's
+Assets
+Cash and balances at central banks - - - - 1,657 1,657
+Cash, loans and advances to banks and customers 133,847 66,399 8,891 7,368 (6,567) 209,938
+Tangible fixed assets - - - - 12,585 12,585
+Other assets - - - - 108 108
+Prepayments and accrued income - - - - 385 385
+Total assets 133,847 66,399 8,891 7,368 8,168 224,673
+Liabilities
+Deposits by banks & customer accounts 32,211 - - - - 32,211
+Other liabilities - - - - 1,731 1,731
+Shareholders’ funds - - - - 190,731 190,731
+Total liabilities 32,211 - - - 192,462 224,673
+Interest rate sensitivity gap 101,636 66,399 8,891 7,368 (184,294) -
+
+The majority of financial assets and liabilities have floating rates of interest. Margins are determined when loans or
+deposits are agreed and do not change during the life of the transaction. Impairment provisions against loans and
+advances to customers are not interest bearing and are shown in the undated non-interest bearing column.
+
+Bank Saderat PLC Page 33 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+An interest rate gap is the timing difference between the resetting of interest rates on assets and liabilities within each
+currency of operation. The cost of closing an interest rate gap is the cost of borrowing, at market rates, an amount
+equal to the gap for the same time period.
+
+The effect on net interest income of a 2% movement in interest rates across all currencies and all periods at 31st
+December 2019 was €884,359 (2018: €943,369). This calculation assumes that all interest rate gaps were closed in the
+market by taking deposits or placing amounts at interest rates 2% above or below the actual rate applied to each gap
+in each currency.
+
+Currency risk
+Currency risk is the risk that the Bank will suffer loss as a result of movements in foreign exchange rates.
+
+Net currency position analysis
+
+The following analysis gives details of the Bank’s financial assets and liabilities in Euros, based on the currencies in
+which they are denominated to identify the extent to which the foreign currency exposures of the Bank are matched
+or unmatched.
+
+United
+Arab
+Emirates Other
+US Dollar Dirhams Currencies Sterling Total
+As at 31st December 2019 €000s €000s €000s €000s €000s
+Assets
+Cash, loans and advances to banks 4,318 1,603 139 9,379 15,439
+Loans and advances to customers - - - - -
+Other assets - - - 3 3
+Prepayments and accrued income : - - 219 219
+Total assets 4,318 1,603 139 9,601 15,661
+Liabilities
+Deposits by banks 2,695 872 116 6,761 10,444
+Customer accounts 1,376 18 3 1,256 2,653
+Other liabilities 84 - - 1,607 1,691
+Total liabilities 4,155 890 119 9,624 14,788
+Net position 163 713 20 (23) 873
+
+Bank Saderat PLC Page 34 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+United
+Arab
+Emirates Other
+US Dollar Dirhams Currencies Sterling Total
+As at 31st December 2018 €000s €000s €000s €000s €000s
+Assets
+Cash, loans and advances to banks 4,237 1,570 270 8,907 14,984
+Loans and advances to customers - - - - -
+Other assets - - - 53 53
+Prepayments and accrued income 7 : - 385 385
+Total assets 4,237 1,570 270 9,345 15,422
+Liabilities
+Deposits by banks 2,623 827 112 6,456 10,018
+Customer accounts 1,400 17 3 1,201 2,621
+Other liabilities 83 - - 1,542 1,625
+Total liabilities 4,106 844 115 9,199 14,264
+Net position 131 726 155 146 1,158
+
+Other assets, prepayments and accrued income and other liabilities are not financial instruments but do attract a
+currency risk.
+Loans and advances to customers are all denominated in Euros and therefore no currency risk exists
+
+Sensitivity to movements in exchange rates
+
+A 5% movement in the value of the Euro against the non-Euro currency assets and liabilities at 31st December 2019
+would change the profit before taxation of the Bank by €43,652 (2018: €48,902). This figure is derived from the impact
+of 5% exchange rate movement on the net currency position shown on the previous page. The exchange rate of the
+United Arab Emirates Dirham is pegged to the US Dollar.
+
+Capital management
+
+The Bank seeks to maximise its capital base within the requirement to provide its shareholder with a return by way of
+dividend that compensates the shareholder for the cost of funding its investment in the share capital of the Bank at a
+level that is commensurate with.its peers in the market and adequately reflects the risk to the shareholder. The Bank's
+regulator, the Prudential Regulation Authority also sets and monitors, a minimum capital requirement based upon a
+prescribed ratio of capital to total risk exposure.
+
+The Bank's capital for regulatory purposes is analysed into two tiers:
+
+Tier 1 capital which includes ordinary share capital, retained earnings and the general banking reserve and Tier 2
+capital which includes qualifying subordinated debt.
+
+Bank Saderat PLC Page 35 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+The regulatory capital of the Bank was:
+
+31.12.2019 31.12.2018
+
+€000s €000s
+
+Ordinary share capital 183,220 183,220
+General banking reserve 6,000 6,000
+Retained earnings 1,882 1,511
+Total regulatory capital base (all Tier 1 capital) 191,102 190,731
+
+The regulatory capital base (unaudited) is stated before the declaration of any dividend payable from the earnings of
+the year and at 31st December 2019 was 324% of the minimum requirement calculated in accordance with the Basel
+iil convention which equates to a Total Capital Ratio of 84%. At all times during the year the Bank complied with its
+
+external capital requirement.
+
+16. Deposits
+
+by banks
+
+With agreed maturity dates or periods of notice:
+
+31.12.2019 31.12.2018
+€ €
+Remaining maturity of three months or less 7,839,640 28,746,573
+Remaining maturity of greater than three months 21,345,423 -
+29,185,063 28,746,573
+Amounts above include:
+Due to group companies 21,351,628 21,187,396
+17. Customer accounts
+31.12.2019 31.12.2018
+€ ‘€
+Repayable on demand 1,454,608 1,435,027
+With agreed maturity dates or periods of notice
+Remaining maturity three months or less 2,051,276 2,029,626
+3,505,884 3,464,653
+18. Other liabilities
+31.12.2019 31.12.2018
+Other liabilities due within one year € €
+Current taxation payable 48,008 95,380
+UK income tax and social security payable - -
+Other liabilities and accrued expenses 1,684,759 1,635,860
+1,732,767 1,731,240
+
+Bank Saderat PLC
+
+Page 36 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+19. Called up share capital
+
+31.12.2019 31.12.2018
+
+Authorised € €
+100,000,000 Ordinary shares of £1 each 111,482,720 111,482,720
+200,000,000 Ordinary shares of €1 each 200,000,000 200,000,000
+
+311,482,720 311,482,720
+
+Issued, allotted and fully paid - ordinary shares of €1 each
+As at 1st January and 31st December 183,219,924 183,219,924
+
+20. Reconciliation of movements in shareholders’ funds and reserves
+
+Called up Retained General Total
+
+share capital earnings banking risk
+
+reserve
+
+(note 21)
+€ € € €
+As at 31st December 2019 183,219,924 1,510,940 6,000,000 190,730,864
+Profit for the year after taxation - 371,027 - 371,027
+Issue of ordinary shares of €1 each - - - -
+As at 3ist December 2019 183,219,924 1,881,967 6,000,000 191,101,891
+
+No dividend is to be proposed at the Bank's Annual General Meeting to be held on 8th April 2020.
+
+21. General banking risk reserve
+
+€
+As at 31st December 2019 and 31st December 2018 6,000,000
+, 6,000,000
+
+The general banking risk reserve is to maintain the regulatory capital base to support the business of the Bank and is
+not available for distribution.
+
+Bank Saderat PLC Page 37 of 38
+NOTES TO THE FINANCIAL STATEMENTS (Continued)
+
+22. Deferred taxation asset
+
+31.12.2019 31.12.2018
+
+€ €
+Opening balance 56,947 60,047
+Exchange adjustments - 146
+Credit / (debit) to income and retained earnings (note 7) 5,233 (3,246)
+Sub-total 5,233 (3,100)
+Closing balance 62,180 56,947
+
+23. Net cash flow from operating activities
+
+Year ended Year ended
+31.12.2019 31.12.2018
+
+€ €
+Profit before taxation 482,880 542,607
+Depreciation of tangible fixed assets 108,286 113,172
+Decrease / (Increase) in interest receivable and prepaid expenses 166,504 (79,567)
+(Increase) / Decrease in loans and advances to banks and customers (1,162,016) 2,505,150
+Increase / { Decrease) in deposits by banks $14,200 (2,006,072)
+Increase / (Decrease) in customer accounts 118,608 (1,103,676)
+(Decrease) in provision for doubtful debts (102,183) (191,926)
+Increase / (Decrease) in other liabilities 3,279 (172,646)
+Decrease in other assets 83,728 366,528
+Net cash flow from operating activities 213,286 (26,430)
+
+24. Going Concern and Covid-19
+
+The Directors have carefully considered the impact of the COVID-19 pandemic on the Bank’s operations, particularly
+the ability of staff to perform key functions and the Bank’s continued ability to meet its financial and regulatory
+obligations satisfactorily. This consideration includes the effectiveness of measures, such as remote access, to assist
+in mitigating the impact. The Directors have concluded that, based on such assessments and having regard to the
+resources available to the Bank, there are no material uncertainties and that the going concern basis can continue to
+be adopted in preparing these annual report and accounts.
+
+25. Related party transactions
+The Bank has taken advantage of the exemptions available under FRS102 s33 “Related Party Disclosures”
+from disclosing transactions with other wholly owned group companies.
+
+26. Immediate and ultimate parent undertaking and controlling party
+
+The Bank’s immediate and ultimate parent undertaking is Bank Saderat Iran, a company incorporated in fran.
+Bank Saderat Iran is the only group into which the company is consolidated. Copies of the Group Financial
+Statements may be obtained from: The Manager, Foreign Department, Bank Saderat Iran, Sepehr Tower,
+
+PO Box 15745-631, Somayeh Avenue, Tehran, Iran.
+
+Bank Saderat PLC Page 38 of 38

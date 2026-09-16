@@ -28,6 +28,17 @@ P3_24_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/do
 P3_23_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2024/2023_pillar_3_disclosure.pdf"
 P3_22_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2023/2022Pillar3Disclosure.pdf"
 P3_21_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2022/2021Pillar3Disclosure.pdf"
+# FY2020/FY2019/FY2018 Pillar 3 documents, LOCATED 2026-09-16 (KM1-016). These three were
+# previously believed not to exist at all - the script asserted in two places that no Pillar 3
+# document existed before FY2021. They do exist, on the Bank's own CDN, under the SAME
+# misfiled-one-year-forward pattern already documented for FY2021/FY2022 and with the same
+# no-underscore filename style, which is why folder-matched searches missed them. Each was
+# verified HTTP 200 + Content-Type application/pdf + %PDF magic bytes on 2026-09-16.
+# Nothing earlier than FY2018 was located under any filename tried; that is "not located",
+# not "does not exist" (map rule 9).
+P3_20_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2021/2020Pillar3Disclosure.pdf"
+P3_19_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2020/2019Pillar3Disclosure.pdf"
+P3_18_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2019/2018Pillar3Disclosure.pdf"
 
 CASH_FLOW_SOURCES = (
     "Sources — all figures are ICBC (London) plc Statement of Cash Flows, $'000:\n"
@@ -109,19 +120,43 @@ def p3_sources(note_disclosure_start=True):
     )
     if note_disclosure_start:
         text += (
-            "\nNote: ICBC (London) plc's formal Pillar 3/KM1-style RWA and ratio disclosures are publicly "
-            "available from FY2021 onward (standalone Pillar 3 documents exist for FY2021-FY2025; see the misfiling "
-            "note above for why FY2021/FY2022 were previously thought absent). No Pillar 3 disclosure document, and "
-            "no risk-weighted-assets figure of any kind, exists anywhere in the Bank's own FY2014-FY2020 Annual "
-            "Reports - each year's own accounts instead point readers to a web address for the (not separately "
-            "filed) Pillar 3 disclosure. CET1/Tier 1/Total Capital $ amounts, however, ARE disclosed every year back "
-            "to FY2014 via each year's own 'Regulatory capital' note (see the CET1/Tier 1/Total Capital sheets' own "
-            "FY2014-FY2020 source note); it is only the RWA denominator - and therefore the CET1/Tier1/Total Capital "
-            "Ratio, Total RWAs, RWA Breakdown, Leverage Ratio and NSFR sheets - that remains genuinely undisclosed "
-            "for FY2014-FY2020. Basis note: the Annual Report 'Regulatory capital' figure and the Pillar 3 KM1 "
-            "figure are not identical where they overlap (FY2020: AR 456,128 vs the FY2021 KM1 document's own "
-            "31/12/2020 comparative of 445,536.92); the FY2014-FY2020 cells keep the Annual Report basis they were "
-            "sourced on, and FY2021 onward use the Pillar 3 KM1 basis, as each sheet's citations state."
+            "\nNote: the UK KM1 key-metrics template is used by ICBC (London) plc from the FY2021 edition "
+            "onward. It is NOT used in the FY2018, FY2019 or FY2020 editions, and the reason is in those "
+            "documents themselves: each states that the CRR II Pillar 3 requirements (articles 433-455) "
+            "'are expected to be applicable from June 2021'. The template post-dates them; they are not an "
+            "absence of disclosure.\n"
+            "CORRECTION 2026-09-16 (KM1-016): this note previously stated that NO Pillar 3 disclosure "
+            "document existed before FY2021. That was wrong. Standalone Pillar 3 Disclosures exist on the "
+            "Bank's own CDN for FY2018, FY2019 and FY2020 as well, misfiled one year forward in exactly the "
+            "way already documented for FY2021/FY2022:\n"
+            f"FY2020: ICBC (London) plc Pillar 3 Disclosures 2020 (31 December 2020) — {P3_20_URL}\n"
+            f"FY2019: ICBC (London) plc Pillar 3 Disclosures 2019 (31 December 2019) — {P3_19_URL}\n"
+            f"FY2018: ICBC (London) plc Pillar 3 Disclosures 2018 (31 December 2018) — {P3_18_URL}\n"
+            "Each verified HTTP 200 + Content-Type application/pdf + %PDF magic bytes. Those three editions "
+            "DO disclose total risk-weighted exposures, the three capital ratios and (FY2018-FY2020) the "
+            "leverage ratio and its exposure measure, in their own 'Table 1 - Own Funds' and 'The Leverage "
+            "Ratio' section - so the Total RWAs, CET1/Tier 1/Total Capital Ratio and Leverage Ratio sheets "
+            "now carry FY2018-FY2020 (and FY2017 from the FY2018 edition's own comparative column, the only "
+            "source for that year located). Those sheets' FY2014-FY2016 cells remain blank: no Pillar 3 "
+            "edition earlier than FY2018 was located under any filename tried, and no RWA figure appears in "
+            "the Annual Reports.\n"
+            "The NSFR and RWA Breakdown sheets are NOT back-filled from these three editions: no NSFR ratio "
+            "of any kind is stated in any of them (the CRR II NSFR disclosure is one of the requirements "
+            "they describe as not yet applicable), and their RWA analysis is a 'Table 7 - Pillar 1 capital "
+            "requirement' breakdown by EXPOSURE CLASS, which is a different cut from the UK OV1 risk-type "
+            "breakdown the RWA Breakdown sheet reproduces; mapping one onto the other would invent a "
+            "correspondence the Bank never published.\n"
+            "CET1/Tier 1/Total Capital $ amounts are disclosed every year back to FY2014 via each year's "
+            "own Annual Report 'Regulatory capital' note (see the CET1/Tier 1/Total Capital sheets' own "
+            "FY2014-FY2020 source note), and for FY2017-FY2020 those Annual Report amounts tie EXACTLY to "
+            "the Pillar 3 editions' own Table 1 (FY2020 456,128; FY2019 443,521; FY2018 422,168 / Total "
+            "Capital 518,606; FY2017 397,848 / Total Capital 500,128).\n"
+            "BASIS NOTE, and it matters when reading FY2020 beside FY2021: the pre-KM1 editions and the "
+            "KM1 editions are not on the same capital basis where they overlap. The FY2020 edition's own "
+            "31 December 2020 column gives CET1 456,128, RWA 1,022,681, all three ratios 44.60%, leverage "
+            "exposure 2,058,837 and leverage ratio 22.17%. The FY2021 KM1's 31/12/2020 comparative column "
+            "gives CET1 445,536.92, RWA 1,022,680.75 (the same RWA), ratios 43.57% and leverage 2,050,570.53 "
+            "/ 21.73%. Each year keeps its OWN edition's figures here; neither set is restated onto the other."
         )
     return text
 
@@ -137,9 +172,13 @@ def p3_capital_sources_1420():
         f"FY2016: Annual Report 2016 (Companies House filing, scanned/OCR'd), Note 33 (own 2016 column) — {AR16_URL}\n"
         f"FY2015: Annual Report 2015 (Companies House filing, scanned/OCR'd), Note ~32 (own 2015 column) — {AR15_URL}\n"
         f"FY2014: Annual Report 2014 (Companies House filing, scanned/OCR'd), Note 33 (own 2014 column) — {AR14_URL}\n"
-        "No risk-weighted-assets figure is disclosed in any of these notes for any year FY2014-2020 (confirmed by "
-        "reading each year's own Annual Report in full, including its Directors'/Strategic Report capital "
-        "narrative) - only the £ capital amounts themselves. CET1 Capital = Tier 1 Capital every year shown here "
+        "No risk-weighted-assets figure is disclosed in any of these ANNUAL REPORT notes for any year FY2014-2020 "
+        "(confirmed by reading each year's own Annual Report in full, including its Directors'/Strategic Report "
+        "capital narrative) - only the $ capital amounts themselves. That is a statement about the Annual Reports "
+        "only: the Bank's own standalone Pillar 3 Disclosures for FY2018, FY2019 and FY2020 DO disclose total risk "
+        "weighted exposures, and were located on 2026-09-16; the Total RWAs and ratio sheets carry them, and their "
+        "Table 1 own-funds figures agree exactly with the Annual Report amounts cited above for FY2017-FY2020. "
+        "CET1 Capital = Tier 1 Capital every year shown here "
         "(no Additional Tier 1 instrument has ever existed for this Bank), matching the convention already used for "
         "FY2023-2025 on this workbook. FY2014's own note separately labels a '$200,000k Common Equity Tier 1 "
         "Capital' line ABOVE the Tier 1 Capital build-up ($322,451k = share capital + retained earnings + AFS "
@@ -149,6 +188,43 @@ def p3_capital_sources_1420():
         "with every other year. 'Tier 1 Capital' before FY2017 is simply total audited equity (share capital + "
         "retained earnings + AFS reserve/other reserves, with no regulatory deduction); from FY2017 a 'Less: "
         "Regulatory adjustments' line first appears, reducing Tier 1 Capital slightly below total equity."
+    )
+
+def p3_prekm1_sources():
+    """FY2017-FY2020 RWA, capital ratios and leverage - from the three pre-KM1
+    standalone Pillar 3 editions located 2026-09-16 (KM1-016). These years were
+    previously left blank on the strength of a claim that no Pillar 3 document
+    existed before FY2021; it does."""
+    return (
+        "Sources FY2017-FY2020 - ICBC (London) plc's own standalone Pillar 3 Disclosures for those years, "
+        "'Table 1 - Own Funds' (total risk weighted exposures and the three capital ratios) and section 5 "
+        "'The Leverage Ratio' (the ratio in the section's own narrative sentence, the exposure measure in "
+        "its 'Summary reconciliation of accounting assets and Leverage ratio exposures' table), $'000:\n"
+        f"FY2020: Pillar 3 Disclosures 2020, Table 1 p.13 and section 5 p.18 (own 2020 column) — {P3_20_URL}\n"
+        f"FY2019: Pillar 3 Disclosures 2019, Table 1 p.12 and section 5 p.17 (own 2019 column) — {P3_19_URL}\n"
+        f"FY2018: Pillar 3 Disclosures 2018, Table 1 p.9 and section 5 p.15 (own 2018 column) — {P3_18_URL}\n"
+        f"FY2017: Pillar 3 Disclosures 2018, Table 1 p.9 (2017 COMPARATIVE column) — {P3_18_URL}. No FY2017 "
+        "or earlier Pillar 3 edition was located under any filename pattern tried, so FY2017 is the one "
+        "year here taken from a later edition's comparative rather than its own document; it is flagged "
+        "rather than silently mixed in. The FY2018 edition prints no 2017 leverage comparative, so FY2017 "
+        "has no leverage figure.\n"
+        "These three editions were located on 2026-09-16, misfiled one year forward on the Bank's own CDN "
+        "in exactly the way already documented for the FY2021 and FY2022 editions, and each was verified "
+        "by HTTP 200, Content-Type application/pdf and %PDF magic bytes. They do NOT use the UK KM1 "
+        "template (it post-dates them - see the KM1 Key Metrics sheet's own note), so these figures come "
+        "from the Bank's own bespoke tables and are not re-labelled onto template row numbers anywhere.\n"
+        "The ratios tie to the CET1/Tier 1/Total Capital amounts already on this workbook for the same "
+        "years, which come from each year's Annual Report 'Regulatory capital' note and agree with these "
+        "Pillar 3 editions' Table 1 exactly. ICBC's own printed ratios are kept as printed even where "
+        "recomputing from the two components would round differently (FY2017 397,848/1,793,374 recomputes "
+        "to 22.18% against a printed 22.17%; FY2020 leverage 456,128/2,058,837 recomputes to 22.15% "
+        "against a printed 22.17%) - the disclosure is reproduced, not recalculated.\n"
+        "BASIS BREAK AT FY2021: these pre-KM1 figures are NOT on the same basis as the KM1 figures for "
+        "FY2021 onward, and the overlap proves it. The FY2020 edition's own 31 December 2020 column gives "
+        "CET1 456,128 and all three ratios 44.60%; the FY2021 edition's KM1 31/12/2020 comparative gives "
+        "CET1 445,536.92 and 43.57% on an identical RWA of 1,022,680.75. Likewise leverage: 2,058,837 / "
+        "22.17% in the FY2020 edition against 2,050,570.53 / 21.73% in the FY2021 KM1's comparative. Each "
+        "year keeps its own edition's figure; the two series are never merged or restated onto each other."
     )
 
 P3_23_KM1_NOTE = (
@@ -601,6 +677,193 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-016)
+#
+# ICBC (London) plc prints the template under its own heading "UK KM1 - Key
+# metric template" in every edition FY2021-FY2025 - as a numbered annex
+# ("Annex 2") in the FY2021 and FY2025 editions and inline in the risk-
+# management section in FY2022-FY2024. The row set, row numbers, labels and
+# printed precision are identical across all five editions; only the column
+# dates move.
+#
+# COLUMNS: each edition prints FIVE columns headed T / T-1 / T-2 / T-3 / T-4 -
+# 31 December of its own year, then the three preceding quarter-ends, then the
+# prior 31 December. Only the leftmost (T, 31 December) column is used, so every
+# cell on this sheet is the figure that year's OWN edition published as its
+# reporting date. This matters for FY2022, where the two editions disagree: the
+# FY2022 edition's own 31/12/2022 column gives RWA 902,856.95 and all three
+# ratios 50.54%, while the FY2023 edition's 31/12/2022 comparative gives
+# 900,460.13 and 50.67%. The FY2022 edition's own figures are used (map rule 1).
+#
+# ROW SET: constant across the five editions, and shorter than the full
+# template - ICBC prints only the rows that carry a value. Rows UK 7a, UK 7b,
+# UK 7c, UK 8a, UK 9a, 10 and UK 10a appear in NO edition, and neither does the
+# IFRS9-FL "as if" block. Only UK 7d is printed from the SREP block. The three
+# buffer rows ICBC does print are 8, 9, 11 and UK 11a, then 12. Nothing has been
+# added to fill the gaps: an omitted row is the Bank's omission, not ours.
+#
+# UNITS (map rule 17): "USD 000's" in all five editions, with no unit change
+# anywhere in the series, so the amount rows need only one caption block. ICBC
+# prints the unit once as a caption above the table rather than on each section
+# heading; it is repeated on the amount section dividers here so each row's unit
+# is readable in isolation, and so the workbook's own unit resolution works.
+# This sheet stays in USD, the currency the Bank published it in, like every
+# other sheet in this workbook.
+#
+# THE TABLE BREAKS ACROSS TWO PAGES in all five editions (map rule 12): the
+# "Liquidity Coverage Ratio" heading is the last line of the first page and rows
+# 15-20 continue on the next, so both pages are cited.
+#
+# FY2020 AND EARLIER ARE BLANK because the template is not used, not because no
+# Pillar 3 exists - see the source note. The FY2018, FY2019 and FY2020 editions
+# were located for this ticket and read; they carry bespoke "Table 1 - Own
+# Funds" and leverage tables instead, whose figures are on the single-metric
+# sheets in this workbook, not re-labelled onto template row numbers here.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) (USD $'000)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 547878.17, "FY2024": 504453.52, "FY2023": 474458.88, "FY2022": 456299.84, "FY2021": 451197.05}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 547878.17, "FY2024": 504453.52, "FY2023": 474458.88, "FY2022": 456299.84, "FY2021": 451197.05}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 547878.17, "FY2024": 504453.52, "FY2023": 474458.88, "FY2022": 456299.84, "FY2021": 451197.05}),
+    ("SECTION", "Risk-weighted exposure amounts (USD $'000)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 675667.75, "FY2024": 719040.48, "FY2023": 842738.48, "FY2022": 902856.95, "FY2021": 739776.26}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "13.05%", "FY2024": "13.05%", "FY2023": "12.89%", "FY2022": "12.89%", "FY2021": "12.89%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.32%", "FY2024": "1.22%", "FY2023": "0.42%", "FY2022": "0.02%", "FY2021": "0.03%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "3.82%", "FY2024": "3.72%", "FY2023": "2.92%", "FY2022": "2.52%", "FY2021": "2.53%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "16.87%", "FY2024": "16.77%", "FY2023": "15.81%", "FY2022": "15.41%", "FY2021": "15.42%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "64.21%", "FY2024": "55.39%", "FY2023": "40.49%", "FY2022": "35.13%", "FY2021": "45.58%"}),
+    ("SECTION", "Leverage ratio (amounts USD $'000; ratio %)", {}),
+    ("DATA", "13    Leverage ratio total exposure measure",
+     {"FY2025": 1153888.52, "FY2024": 1493766.54, "FY2023": 1339718.25, "FY2022": 1436983.22, "FY2021": 1467315.30}),
+    ("DATA", "14    Leverage ratio",
+     {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%"}),
+    ("SECTION", "Liquidity Coverage Ratio (amounts USD $'000; ratio %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 1374778.95, "FY2024": 328481.85, "FY2023": 384068.74, "FY2022": 288785.45, "FY2021": 351221.56}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 1514094.63, "FY2024": 750256.41, "FY2023": 544239.26, "FY2022": 672293.52, "FY2021": 285016.39}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 557414.30, "FY2024": 935548.41, "FY2023": 474499.70, "FY2022": 518663.74, "FY2021": 458374.15}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 956680.33, "FY2024": 187564.10, "FY2023": 136059.82, "FY2022": 168073.38, "FY2021": 71254.10}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%"}),
+    ("SECTION", "Net Stable Funding Ratio (amounts USD $'000; ratio %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 581574.20, "FY2024": 608923.53, "FY2023": 798010.24, "FY2022": 694606.62, "FY2021": 839388.75}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 335509.49, "FY2024": 407761.68, "FY2023": 477595.45, "FY2022": 511526.78, "FY2021": 558997.10}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "167.09%", "FY2022": "135.79%", "FY2021": "150.16%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - ICBC (London) plc's OWN standalone Pillar 3 Disclosures (solo basis), the table the Bank "
+    "heads 'UK KM1 - Key metric template'. Each year is taken from the leftmost (T, 31 December) column of "
+    "the edition in which that year is the reporting year - never from a later edition's comparative. The "
+    "table breaks across two pages in every edition (the 'Liquidity Coverage Ratio' heading ends one page "
+    "and rows 15-20 begin the next), so both pages are cited. Every PDF was re-downloaded for this ticket "
+    "and verified by HTTP 200, Content-Type application/pdf and %PDF magic bytes:\n"
+    f"FY2025: Pillar 3 Disclosures 2025, 'Annex 2 - UK KM1 - Key metric template', pp.33-34 - {P3_25_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 2024, 'UK KM1 - Key metric template', pp.12-13 - {P3_24_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, 'UK KM1 - Key metric template', pp.12-13 - {P3_23_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, 'UK KM1 - Key metric template', pp.12-13 - {P3_22_URL}\n"
+    f"FY2021: Pillar 3 Disclosures 2021, 'UK KM1 - Key metric template', pp.14-15 - {P3_21_URL}\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: checked the Bank's OWN website, not this project's cited URLs and "
+    "not Wayback. ICBC (London) plc's site is www.icbclondon.com; its disclosure list is at About Us > "
+    "ICBC (London) Plc > Annual Report, which returned HTTP 200 and lists Annual Reports for every year "
+    "2003-2025, the newest being the 2025 Annual Report, followed by the line 'Pillar 3 disclosures: "
+    "Please click here for disclosure' whose link points at the 2025 Pillar 3 Disclosure. So the newest "
+    "Annual Report is FY2025 and the newest Pillar 3 is FY2025, both of which this workbook already "
+    "holds. FY2026 is not a complete financial year (the Bank's year end is 31 December) and no 2026 "
+    "document of either kind exists. CHECKED, NONE NEWER. Note that the Bank's own page links only ONE "
+    "Pillar 3 document - the current one - which is why the back catalogue has to be found by direct URL "
+    "rather than by reading the page.\n\n"
+    "ENTITY: ICBC (London) plc, FRN 190017, Companies House 04552753 - a UK-incorporated subsidiary of "
+    "Industrial and Commercial Bank of China Limited. It is NOT ICBC Standard Bank plc, a separate "
+    "PRA-authorised UK bank (FRN 124876) with its own, differently-shaped Pillar 3 disclosures and its own "
+    "workbook in this project; the two publish on adjacent paths of the same v.icbc.com.cn CDN and must "
+    "not be crossed. Every figure on this sheet comes from a document whose running header reads 'Pillar 3 "
+    "Disclosures <year>  ICBC (London) plc'. The Bank has no subsidiaries and the disclosures are solo.\n\n"
+    "WHY FY2020 AND EARLIER ARE BLANK - 'the template is not used', on positive evidence, NOT 'no Pillar 3 "
+    "is published' (map rules 8 and 16). The FY2018, FY2019 and FY2020 Pillar 3 Disclosures were located "
+    "for this ticket and read in full; all three exist on the Bank's own CDN, misfiled one year forward in "
+    "exactly the way already documented for FY2021/FY2022:\n"
+    f"    FY2020 - {P3_20_URL}\n"
+    f"    FY2019 - {P3_19_URL}\n"
+    f"    FY2018 - {P3_18_URL}\n"
+    "None of the three contains the UK KM1 template, and the reason is stated in the documents themselves: "
+    "each says the CRR II Pillar 3 requirements (articles 433-455) 'are expected to be applicable from "
+    "June 2021'. The template post-dates them. What they print instead is a bespoke 'Table 1 - Own Funds' "
+    "(paid-up capital, retained earnings, CET1, Tier 1, Tier 2, Total Capital, Total risk weighted "
+    "exposures, three capital ratios and an 'Institution specific buffer requirement' block) with a "
+    "current-year/prior-year column pair, plus a separate narrative leverage ratio section - which fails "
+    "the row-set test the same way ABC International Bank's 'Table 3' does: no SREP row, no UK-numbered "
+    "buffer rows, no LCR build-up rows, no NSFR rows, and it adds 'Paid up capital' and 'Retained "
+    "earnings' lines the template does not have. Those figures are NOT re-labelled onto KM1 row numbers "
+    "here; they are carried, as published, on this workbook's Total RWAs, CET1/Tier 1/Total Capital Ratio "
+    "and Leverage Ratio sheets, which now run back to FY2017 as a result.\n"
+    "This was checked for an image-only table too (map rule 13). Text extraction on all three is rich, not "
+    "silent - the FY2020 document yields 111 hits for 'capital', 145 for 'ratio' and 26 for 'Leverage' "
+    "against 0 for 'KM1' - so the zero is a fact about the document, not about the tool (rule 15). "
+    "`pdfimages -list` reports four embedded bitmaps in each; the two non-logo ones were rendered at "
+    "120dpi and LOOKED AT rather than inferred from, and are a governance organisation chart and the ECAI "
+    "credit-quality-step mapping table, neither of them a key-metrics table. Page selection was anchored "
+    "on each document's own table of contents rather than on any digit-density heuristic (rule 16).\n"
+    "No Pillar 3 edition earlier than FY2018 was located under any filename pattern tried. That is 'not "
+    "located', not 'does not exist' (rule 9).\n\n"
+    "PRECISION AND GLYPHS, reproduced not normalised: ICBC prints amounts to two decimal places of "
+    "USD '000 and ratios to two decimal places with a per cent sign, in every edition, and this sheet "
+    "keeps both. No cell in any of the five editions' 31 December columns is a dash or a blank, so no "
+    "dash-versus-zero judgement arises.\n\n"
+    "A SOURCE ANOMALY IN THE FY2025 LCR BLOCK, recorded and not corrected (map rule 7). The FY2025 "
+    "edition's 31/12/2025 column reports HQLA of 1,374,778.95 against a leverage ratio total exposure "
+    "measure of 1,153,888.52 for the same date - that is, average high-quality liquid assets larger than "
+    "the whole balance sheet plus off-balance-sheet exposure. The same column's cash outflows "
+    "(1,514,094.63) and net outflows (956,680.33) are roughly three times the previous quarter's, while "
+    "the NSFR block beside them (581,574.20 / 335,509.49) is of an ordinary size. The block is internally "
+    "consistent - UK 16a minus UK 16b equals row 16 exactly, and row 15 divided by row 16 gives the "
+    "printed 143.70% exactly - so it is reproduced verbatim, as is the LCR sheet's FY2025 figure, which "
+    "comes from the same table. A reader comparing FY2025 liquidity with FY2024 should know this."
+    + "\n\n" + p3_sources()
+)
+
+bw.add_km1_sheet(
+    title="ICBC (London) plc — KM1 Key Metrics",
+    subtitle="ICBC (London) plc's own published 'UK KM1 - Key metric template', reproduced in the Bank's row "
+             "order with its own row references, labels and printed precision. Amounts USD $'000, ratios as "
+             "printed (%); the sheet stays in the currency the Bank published it in. Solo basis - the Bank has "
+             "no subsidiaries. Each year is the 31 December (T) column of that year's own edition. FY2020 and "
+             "earlier are blank because those editions predate the template and do not use it — not because no "
+             "Pillar 3 exists; see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020"],
+    first_col_width=70,
+    source_height=460,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -615,8 +878,9 @@ metric(
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"})],
-    p3_sources(),
+    [("Common Equity Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
+                                     "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"})],
+    p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
@@ -627,8 +891,9 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"})],
-    p3_sources(),
+    [("Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
+                       "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"})],
+    p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
@@ -639,14 +904,16 @@ metric(
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"})],
-    p3_sources(),
+    [("Total capital ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
+                              "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%"})],
+    p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
     "Total RWAs", "$'000",
-    [("Total risk-weighted exposure amount", {"FY2025": 675668, "FY2024": 719040, "FY2023": 842738, "FY2022": 902857, "FY2021": 739776})],
-    p3_sources(),
+    [("Total risk-weighted exposure amount", {"FY2025": 675668, "FY2024": 719040, "FY2023": 842738, "FY2022": 902857, "FY2021": 739776,
+                                              "FY2020": 1022681, "FY2019": 1145387, "FY2018": 1572886, "FY2017": 1793374})],
+    p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 rwa_breakdown_rows = [
@@ -673,10 +940,12 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "$'000 / %",
     [
-        ("Leverage ratio total exposure measure ($'000)", {"FY2025": 1153889, "FY2024": 1493767, "FY2023": 1339718, "FY2022": 1436983, "FY2021": 1467315}),
-        ("Leverage ratio (%)", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%"}),
+        ("Leverage ratio total exposure measure ($'000)", {"FY2025": 1153889, "FY2024": 1493767, "FY2023": 1339718, "FY2022": 1436983, "FY2021": 1467315,
+                                                           "FY2020": 2058837, "FY2019": 2327148, "FY2018": 2516920}),
+        ("Leverage ratio (%)", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%",
+                                "FY2020": "22.17%", "FY2019": "19.08%", "FY2018": "16.77%"}),
     ],
-    p3_sources(),
+    p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
@@ -691,7 +960,12 @@ metric(
          "12-month trailing average. FY2017-2020 figures are as-stated percentages from the narrative risk section "
          "of each year's own Annual Report (no HQLA/net-cash-outflow £ breakdown is disclosed for those years, only "
          "the resulting ratio itself) - e.g. Annual Report 2017, p.14: 'the Bank had a Liquidity Coverage Ratio (LCR) "
-         f"of 418%' — {AR17_URL}. No LCR percentage of any kind is disclosed in the FY2014-2016 Annual Reports (those "
+         f"of 418%' — {AR17_URL}. CORROBORATED 2026-09-16: the FY2018, FY2019 and FY2020 standalone Pillar 3 "
+         "Disclosures, located that day (see the Pillar 3 source note), independently state the same year-end "
+         f"figures - 'At 31 December 2018, the LCR closed at 250%' ({P3_18_URL}), 255% for 2019 ({P3_19_URL}) and "
+         f"372% for 2020 ({P3_20_URL}). Those editions also print a 'Table 25 - LCR Disclosure (12-month average)' "
+         "with four quarterly columns, which is a DIFFERENT measure from the year-end spot figure shown here and has "
+         "deliberately not been substituted for it. No LCR percentage of any kind is disclosed in the FY2014-2016 Annual Reports (those "
          "years' own narrative only describes the LCR/NSFR regime being newly implemented, without stating a ratio) "
          "- blank cells for FY2014-2016 are a genuine disclosure gap, not a missing transcription.",
 )
@@ -704,12 +978,19 @@ metric(
         ("Net Stable Funding Ratio (%)", {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "167.09%", "FY2022": "135.79%", "FY2021": "150.16%"}),
     ],
     p3_sources(),
+    note="FY2020 and earlier are blank because no NSFR figure of any kind is stated. This is now a positive "
+         "finding rather than an inference: the FY2018, FY2019 and FY2020 standalone Pillar 3 Disclosures "
+         "were located and read in full on 2026-09-16 (see the Pillar 3 source note for their URLs), and "
+         "none of them states an NSFR - each describes the CRR II net stable funding requirement as one of "
+         "the new disclosure requirements 'expected to be applicable from June 2021'. NSFR therefore first "
+         "appears for this Bank in the FY2021 edition's UK KM1 table.",
 )
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
-    p3_sources(note_disclosure_start=False) + "\nMREL is not referenced anywhere in either available Pillar 3 disclosure document; "
-    "ICBC (London) plc does not appear to be subject to a separate MREL requirement.",
+    p3_sources(note_disclosure_start=False) + "\nMREL is not referenced anywhere in ANY of the eight standalone "
+    "Pillar 3 disclosure documents now located for this Bank (FY2018 through FY2025); ICBC (London) plc does not "
+    "appear to be subject to a separate MREL requirement.",
 )
 
 # ---------------------------------------------------------------
@@ -743,23 +1024,36 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="$'000",
     ratios=[
-        ("CET1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
-        ("Tier 1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
-        ("Total Capital Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%"}),
-        ("Leverage Ratio", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%"}),
+        ("CET1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
+                        "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"}),
+        ("Tier 1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
+                          "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"}),
+        ("Total Capital Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
+                                 "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%"}),
+        ("Leverage Ratio", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%",
+                            "FY2020": "22.17%", "FY2019": "19.08%", "FY2018": "16.77%"}),
         ("LCR", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%"}),
         ("NSFR", {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "167.09%", "FY2022": "135.79%", "FY2021": "150.16%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. RWA-denominated Pillar 3 ratios (CET1/Tier1/Total Capital "
-         "Ratio, Leverage Ratio, NSFR) are publicly disclosed from FY2021 onward - the FY2021 and FY2022 standalone "
-         "Pillar 3 documents were located on the Bank's own CDN in the 2026-09-12 disclosure audit (each misfiled "
-         "one year forward, see the Pillar 3 source note) and supersede the prior claim that nothing before FY2023 "
-         "was disclosed. No risk-weighted-assets figure of any kind exists in the Bank's own FY2014-FY2020 Annual "
-         "Reports, even though the underlying CET1/Tier1/Total Capital $ amounts are disclosed back to FY2014 (see "
-         "those sheets' own source note); blank cells for those years/ratios are intentional, not zeros. LCR is the "
-         "one ratio disclosed earlier, as a narrative percentage from FY2017 (see the LCR sheet's own source note "
-         "for FY2014-2016's absence).",
+         "Ratio, Leverage Ratio) are publicly disclosed from FY2017 onward. Getting to that has taken two "
+         "corrections, both from finding documents rather than from re-reading the ones we had: the 2026-09-12 "
+         "disclosure audit located the FY2021 and FY2022 standalone Pillar 3 documents (superseding a claim that "
+         "nothing before FY2023 was disclosed), and KM1-016 on 2026-09-16 located the FY2018, FY2019 and FY2020 "
+         "editions (superseding a claim that no Pillar 3 document existed before FY2021 at all). All five sit on "
+         "the Bank's own CDN, each misfiled one year forward - see the Pillar 3 source note. The FY2018-FY2020 "
+         "editions do not use the UK KM1 template, which post-dates them, but they do disclose total risk "
+         "weighted exposures, the three capital ratios and the leverage ratio in the Bank's own bespoke tables, "
+         "and FY2017 comes from the FY2018 edition's comparative column. NSFR still begins at FY2021: none of the "
+         "pre-KM1 editions states one. No risk-weighted-assets figure appears in the Bank's own FY2014-FY2020 "
+         "ANNUAL REPORTS, which is why the CET1/Tier1/Total Capital $ amounts run back to FY2014 while the ratios "
+         "stop at FY2017; blank cells for FY2014-FY2016 are intentional, not zeros, and mean no Pillar 3 edition "
+         "for those years has been located. BASIS: the pre-KM1 (FY2017-FY2020) and KM1 (FY2021 onward) figures "
+         "are not on the same capital basis - at 31 December 2020 the FY2020 edition reports 44.60% where the "
+         "FY2021 edition's comparative reports 43.57% - and are deliberately not reconciled. LCR is the one ratio "
+         "disclosed earlier still, as a narrative percentage from FY2017 (see the LCR sheet's own source note for "
+         "FY2014-2016's absence).",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ICBC (LONDON) PLC FINANCIALS.xlsx")

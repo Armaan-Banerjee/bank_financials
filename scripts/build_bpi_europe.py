@@ -344,6 +344,66 @@ LCR = {"FY2025": "206%", "FY2024": "329%", "FY2023": "410%", "FY2022": "166%", "
 NSFR = {"FY2025": "154%", "FY2024": "163%", "FY2023": "117%", "FY2022": "119%"}  # FY2021: see note below
 LEVERAGE = {"FY2025": "51.22%", "FY2024": "58.71%", "FY2023": "64.62%"}  # FY2022/FY2021: not disclosed
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE. This entity publishes no Pillar 3
+# document and therefore no KM1 template. Documented rather than omitted, so
+# the absence is a finding rather than a gap.
+#
+# The evidence is positive, not the result of a search that came up empty:
+# the entity has no website of its own (bpieurope.com and bpieurope.co.uk do
+# not resolve to it - the .com belongs to an unrelated plastics company, and
+# the only PDFs Wayback holds for either host are that company's product
+# sheets), so Companies House is the entity's complete public record, and all
+# five FY2021-FY2025 filings there were read: each contains only the Annual
+# Report, with capital and liquidity figures in the Strategic Report narrative
+# and the Capital Adequacy note. No Pillar 3 document has ever been filed.
+#
+# THE DECOY: the Philippine parent, Bank of the Philippine Islands, publishes
+# extensive Basel III disclosures under BSP rules. Those are a different legal
+# entity, a different consolidation and a different regulator, and under this
+# project's entity-basis rule they must never be used here. Note also that
+# this bank is NOT Philippine National Bank (Europe) Plc, a separate
+# PRA-authorised entity with a similar name and a different parent.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources — none. Bank of the Philippine Islands (Europe) PLC publishes NO Pillar 3 disclosure, and "
+    "therefore no UK KM1 key-metrics template, for any year in this workbook.\n\n"
+    "Evidence, re-checked 2026-09-16:\n"
+    "• The entity has no website of its own. bpieurope.co.uk does not resolve; bpieurope.com resolves to an "
+    "unrelated plastics manufacturer, and the only PDFs the Wayback Machine holds for that host are its "
+    "product certificates. There is therefore no investor or regulatory-disclosures page to check, and no "
+    "blocked host behind which a document could be hiding.\n"
+    "• Companies House (company 05888535) is consequently the entity's complete public record. All five "
+    "FY2021–FY2025 filings were read: each is an Annual Report only. No Pillar 3 document has ever been "
+    "filed, and no key-metrics table of any kind appears in any of them.\n"
+    "• Every capital and liquidity figure in this workbook comes instead from each Annual Report's own "
+    "Strategic Report 'Capital Resources' / 'Liquidity Resources' narrative and the Capital Adequacy note, "
+    "as cited on the individual Pillar 3 metric sheets.\n\n"
+    "DO NOT SUBSTITUTE THE PARENT. Bank of the Philippine Islands publishes extensive Basel III disclosures "
+    "under Bangko Sentral ng Pilipinas rules. That is a different legal entity, a different consolidation and "
+    "a different regulator; using it here would breach the entity-basis rule this workbook follows "
+    "throughout. Separately, this bank is NOT Philippine National Bank (Europe) Plc (company 02939223), a "
+    "distinct PRA-authorised entity with a similar name and a different parent group.\n\n"
+    "The Annual Report figures are deliberately NOT reassembled into a KM1 shape here. This sheet reproduces "
+    "a published template; a table built from an annual report would look like one without being one, and its "
+    "row 4 in particular would not be the total risk exposure amount the PRA template defines."
+)
+
+bw.add_km1_sheet(
+    title="Bank of the Philippine Islands (Europe) PLC — KM1 Key Metrics",
+    subtitle="Not applicable — this entity publishes no Pillar 3 disclosure, and so no UK KM1 key-metrics "
+             "template, in any year. The absence is documented rather than left blank; the entity has no "
+             "website, so its Companies House filings are its complete public record and all five were "
+             "checked. The Philippine parent's Basel III disclosures are a different entity and are "
+             "deliberately not used.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template", {y: "Not published by this entity" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=46,
+    source_height=280,
+)
+
 metric("CET1 Capital", "£'000 (FY2021-22 £ native, FY2023-25 conv. from USD)",
        [("Common Equity Tier 1 (CET1) Capital", OWN_FUNDS_GBP)], p3_sources())
 

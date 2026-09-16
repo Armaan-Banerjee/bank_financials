@@ -56,8 +56,13 @@ CASH_FLOW_SOURCES = (
 def p3_sources(part_label_25="Table 6: KM1 - Key metrics - Part 1", page_25="11",
                part_label_23="Table 6: UK KM1 - Key metrics - Part 1", page_23="11",
                part_label_21="Table 4: Key Metrics (KM1 / IFRS 9-FL)", page_21="9",
-               part_label_20="Table 4: Key Metrics (KM1/IFRS 9-FL)", page_20="7",
-               part_label_19="Table 4: Key Metrics (KM1/IFRS9-FL)", page_19="7",
+               # CITATION CORRECTED 2026-09-16 (KM1-007): these two were "7". The Key Metrics table is on
+               # printed page 8 of BOTH the FY2019 and FY2020 reports - each page's own footer reads
+               # "Barclays Bank UK PLC Pillar 3 report 2019   8" (and ...2020   8), with the preceding and
+               # following sheets footed 7 and 9, so the folio matches the PDF sheet index in these
+               # editions. The same wrong page number appeared in two places in this file; both fixed.
+               part_label_20="Table 4: Key Metrics (KM1/IFRS 9-FL)", page_20="8",
+               part_label_19="Table 4: Key Metrics (KM1/IFRS9-FL)", page_19="8",
                part_label_18="Annual Report 2018 capital risk disclosures (no standalone Pillar 3 report)", page_18="80"):
     return (
         "Sources — Barclays Bank UK Group consolidated (Pillar 3) basis:\n"
@@ -454,6 +459,234 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - two template generations, kept in separate blocks
+# ---------------------------------------------------------------
+# The FY2024 and FY2022 editions are not cited anywhere else in this script - the metric sheets take
+# FY2024 from the FY2025 report and FY2022 from the FY2023 report, as comparatives. The KM1 sheet takes
+# every year from its OWN edition, so those two editions need their own URLs. Both verified 200 /
+# application/pdf / %PDF on 2026-09-16, resolved from the Barclays annual-reports index rather than guessed.
+KM1_P3_24_URL = ("https://home.barclays/content/dam/home-barclays/documents/investor-relations/"
+                 "ResultAnnouncements/FullYear2024Results/FY24-Barclays-Bank-UK-PLC-Pillar-3-Report.pdf")
+KM1_P3_22_URL = ("https://home.barclays/content/dam/home-barclays/documents/investor-relations/"
+                 "reports-and-events/annual-reports/2022/Pillar-3/Barclays-Bank-UK-PLC-Pillar-3-Report-2022.pdf")
+
+KM1_SOURCES = (
+    "Source - Barclays Bank UK PLC's own Pillar 3 Reports, each year taken from its OWN edition's year-end "
+    "column, £m. Page numbers are the reports' own printed folios:\n"
+    f"FY2025: Pillar 3 Report 2025, p.11 (Table 6: UK KM1 - Key metrics - Part 1) and p.12 (Part 2), "
+    f"'As at 31.12.25' column - {P3_25_URL}\n"
+    f"FY2024: Pillar 3 Report 2024, p.11 and p.12 (Table 6: UK KM1 - Key metrics (KM1 / IFRS9-FL), Parts 1 "
+    f"and 2), 'As at 31.12.24' column - {KM1_P3_24_URL}\n"
+    f"FY2023: Pillar 3 Report 2023, p.11 and p.12, 'As at 31.12.23' column - {P3_23_URL}\n"
+    f"FY2022: Pillar 3 Report 2022, p.11 and p.12 (Table 6: UK KM1 - Key metrics (KM1 / IFRS9-FL / Article "
+    f"468-FL / UK LR) - Part 1), 'As at 31.12.22' column - {KM1_P3_22_URL}\n"
+    f"FY2021: Pillar 3 Report 2021, p.9 (Table 4: Key Metrics (KM1 / IFRS 9-FL / Article 468-FL)), "
+    f"'31 Dec 21' column - {P3_21_URL}\n"
+    f"FY2020: Pillar 3 Report 2020, p.8 (Table 4: Key Metrics (KM1/IFRS 9-FL)), '31 December 2020' column - "
+    f"{P3_20_URL}\n"
+    f"FY2019: Pillar 3 Report 2019, p.8 (Table 4: Key Metrics (KM1/IFRS9-FL)), '31 December 2019' column - "
+    f"{P3_19_URL}\n\n"
+    "THE COLUMNS IN THE SOURCE ARE QUARTER-ENDS, NOT YEARS. Each UK-era edition prints five columns - its own "
+    "31 December followed by the three preceding quarter-ends and the prior 31 December (e.g. the 2025 report "
+    "prints 31.12.25, 30.09.25, 30.06.25, 31.03.25, 31.12.24). Only each edition's own 31 December column is "
+    "used here. The earlier editions print two to four columns on the same principle (the 2021 report prints "
+    "31 Dec 21, 30 June 21, 31 Dec 20, 30 Jun 20). Picking the wrong column would look entirely plausible and "
+    "be silently wrong, so every figure on this sheet comes from the first column of the edition named above.\n\n"
+    "TWO TEMPLATE GENERATIONS, DELIBERATELY NOT MERGED. FY2022-FY2025 use the UK KM1 template; FY2019-FY2021 "
+    "use the earlier Basel/EU 'KM1 / IFRS9-FL' template, which Barclays captions 'Table 4: Key Metrics'. THE "
+    "ROW NUMBERS ARE NOT COMPARABLE BETWEEN THE TWO BLOCKS. In the earlier template a bare '7a' is the FULLY "
+    "LOADED TOTAL CAPITAL RATIO; in the UK template 'UK 7a' is the ADDITIONAL CET1 SREP REQUIREMENT. They are "
+    "different disclosures sharing a glyph, so the two generations are kept in separate captioned blocks and "
+    "no row is carried across the break. The earlier template also has no NSFR rows at all (the NSFR became "
+    "a UK requirement on 1 January 2022), so rows 18-20 are blank for FY2019-FY2021 rather than zero.\n\n"
+    "ROWS 13 AND 14 ARE PRINTED TWICE IN EVERY UK-ERA EDITION, FOR TWO DIFFERENT ENTITIES, and the two copies "
+    "genuinely differ. Part 2 carries a 'Barclays Bank UK Group' leverage block and then a 'Barclays Bank UK "
+    "PLC' one - at 31.12.25, exposure of £277,958m against £278,131m. Both are reproduced below under their "
+    "own captions. This workbook is the Barclays Bank UK GROUP consolidation throughout, so the Group block is "
+    "this entity's own figure and the individual Leverage Ratio sheet carries it; the PLC block is included "
+    "because the Bank publishes it, not as a substitute for the Group's. The LCR and NSFR blocks are printed "
+    "once, under a repeated 'Barclays Bank UK Group' sub-heading. Rows UK 14c/14d/14e are printed only in the "
+    "Group block, so they are blank on the PLC block rather than repeated across it.\n\n"
+    "LABEL VARIATION RECORDED, NOT SMOOTHED: the FY2019 edition captions row 11 'Total of bank CET1 specific "
+    "buffer requirements (%) (row 8 + 9 + SRB)', where the FY2020 and FY2021 editions say '(row 8 + 9 + "
+    "O-SII)'. The label below is the later wording; the FY2019 figure is its own edition's.\n\n"
+    "FY2018 IS NOT SHOWN. Barclays Bank UK PLC published no standalone Pillar 3 report for FY2018 and printed "
+    "no KM1-shaped table that year, so FY2018 is omitted from this sheet entirely rather than shown as an "
+    "empty column. Its capital figures remain on the individual metric sheets, cited to the FY2018 Annual "
+    "Report's capital risk section.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: the Barclays annual-reports index "
+    "(https://home.barclays/investor-relations/reports-and-events/annual-reports/) lists 58 Pillar 3 "
+    "documents. The newest for this entity is FY25-BBUKPLC-Pillar-3.pdf, which this workbook holds; probes "
+    "for an FY26 edition return an HTML soft-404, consistent with a 31 December year-end. None newer exists."
+)
+
+km1_rows = [
+    ("SECTION", "UK KM1 TEMPLATE - AS PUBLISHED FY2022-FY2025 (Table 6: UK KM1 - Key metrics, Parts 1 and 2)", {}),
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2025": 12331, "FY2024": 11895, "FY2023": 10638, "FY2022": 10701}),
+    ("DATA", "1a  Fully loaded common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2024": 11862, "FY2023": 10638, "FY2022": 10628}),
+    ("DATA", "2  Tier 1 capital (£m)",
+     {"FY2025": 14558, "FY2024": 14320, "FY2023": 13067, "FY2022": 13261}),
+    ("DATA", "2a  Fully loaded tier 1 capital (£m)",
+     {"FY2024": 14287, "FY2023": 13067, "FY2022": 13188}),
+    ("DATA", "3  Total capital (£m)",
+     {"FY2025": 16996, "FY2024": 17155, "FY2023": 15596, "FY2022": 15828}),
+    ("DATA", "3a  Fully loaded total capital (£m)",
+     {"FY2024": 17122, "FY2023": 15596, "FY2022": 15804}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£m)",
+     {"FY2025": 85065, "FY2024": 83639, "FY2023": 72102, "FY2022": 72719}),
+    ("DATA", "4a  Fully loaded total risk-weighted exposure amount (£m)",
+     {"FY2024": 83637, "FY2023": 72102, "FY2022": 72707}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "14.5%", "FY2024": "14.2%", "FY2023": "14.8%", "FY2022": "14.7%"}),
+    ("DATA", "5a  Fully loaded common Equity Tier 1 ratio (%)",
+     {"FY2024": "14.2%", "FY2023": "14.8%", "FY2022": "14.6%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "17.1%", "FY2024": "17.1%", "FY2023": "18.1%", "FY2022": "18.2%"}),
+    ("DATA", "6a  Fully loaded tier 1 ratio (%)",
+     {"FY2024": "17.1%", "FY2023": "18.1%", "FY2022": "18.1%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "20.0%", "FY2024": "20.5%", "FY2023": "21.6%", "FY2022": "21.8%"}),
+    ("DATA", "7a  Fully loaded total capital ratio (%)",
+     {"FY2024": "20.5%", "FY2023": "21.6%", "FY2022": "21.7%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.6%", "FY2024": "2.9%", "FY2023": "2.9%", "FY2022": "2.8%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.9%", "FY2024": "1.0%", "FY2023": "1.0%", "FY2022": "0.9%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)",
+     {"FY2025": "1.1%", "FY2024": "1.3%", "FY2023": "1.3%", "FY2022": "1.3%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2025": "12.6%", "FY2024": "13.2%", "FY2023": "13.2%", "FY2022": "13.0%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%"}),
+    ("DATA", "UK 10a  Other Systemically Important Institution buffer (%)",
+     {"FY2025": "1.0%", "FY2024": "1.0%", "FY2023": "1.0%", "FY2022": "1.0%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "5.5%", "FY2024": "5.5%", "FY2023": "5.5%", "FY2022": "4.5%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "18.0%", "FY2024": "18.7%", "FY2023": "18.7%", "FY2022": "17.5%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.4%", "FY2024": "6.8%", "FY2023": "7.3%", "FY2022": "7.4%"}),
+    ("SECTION", "Leverage ratio - Barclays Bank UK Group (the first of the two blocks the report prints)", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 277958, "FY2024": 268452, "FY2023": 250163, "FY2022": 250092}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.2%", "FY2024": "5.3%", "FY2023": "5.2%", "FY2022": "5.3%"}),
+    ("DATA", "UK 14a  Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.2%", "FY2024": "5.3%", "FY2023": "5.2%"}),
+    ("DATA", "UK 14b  Leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.8%", "FY2024": "4.7%", "FY2023": "4.5%", "FY2022": "4.3%"}),
+    ("DATA", "UK 14c  Average leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.4%", "FY2024": "5.4%", "FY2023": "5.2%", "FY2022": "5.3%"}),
+    ("DATA", "UK 14d  Average leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.9%", "FY2024": "4.8%", "FY2023": "4.5%", "FY2022": "4.3%"}),
+    ("DATA", "UK 14e  Countercyclical leverage ratio buffer (%)",
+     {"FY2025": "0.7%", "FY2024": "0.7%", "FY2023": "0.7%", "FY2022": "0.3%"}),
+    ("SECTION", "Leverage ratio - Barclays Bank UK PLC (the report's SECOND block; different figures, not a repeat)", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks - Barclays Bank UK PLC (£m)",
+     {"FY2025": 278131, "FY2024": 268870, "FY2023": 250564}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%) - Barclays Bank UK PLC",
+     {"FY2025": "5.2%", "FY2024": "5.3%", "FY2023": "5.2%"}),
+    ("DATA", "UK 14a  Fully loaded ECL accounting model leverage ratio excl. central banks (%) - Barclays Bank UK PLC",
+     {"FY2025": "5.2%", "FY2024": "5.3%", "FY2023": "5.2%"}),
+    ("DATA", "UK 14b  Leverage ratio including claims on central banks (%) - Barclays Bank UK PLC",
+     {"FY2025": "4.8%", "FY2024": "4.7%", "FY2023": "4.5%"}),
+    ("SECTION", "Liquidity Coverage Ratio - Barclays Bank UK Group", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value) (£m)",
+     {"FY2025": 64552, "FY2024": 68446, "FY2023": 68533, "FY2022": 81791}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£m)",
+     {"FY2025": 36199, "FY2024": 35356, "FY2023": 38982, "FY2022": 45306}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£m)",
+     {"FY2025": 1586, "FY2024": 1477, "FY2023": 925, "FY2022": 1340}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£m)",
+     {"FY2025": 34613, "FY2024": 33879, "FY2023": 38057, "FY2022": 43966}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2025": "186.6%", "FY2024": "202.0%", "FY2023": "180%", "FY2022": "186%"}),
+    ("DATA", "17a  Liquidity coverage ratio (%) (period end)",
+     {"FY2022": "183%"}),
+    ("SECTION", "Net Stable Funding Ratio - Barclays Bank UK Group", {}),
+    ("DATA", "18  Total available stable funding (£m)",
+     {"FY2025": 257230, "FY2024": 254755, "FY2023": 258620, "FY2022": 266421}),
+    ("DATA", "19  Total required stable funding (£m)",
+     {"FY2025": 168761, "FY2024": 160041, "FY2023": 156588, "FY2022": 158156}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2025": "152.4%", "FY2024": "159.3%", "FY2023": "165%", "FY2022": "168%"}),
+    ("SECTION", "BASEL / EU KM1 TEMPLATE - AS PUBLISHED FY2019-FY2021 (Table 4: Key Metrics (KM1/IFRS9-FL)). ROW NUMBERS ARE NOT COMPARABLE WITH THE BLOCK ABOVE.", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) (£m)",
+     {"FY2021": 10828, "FY2020": 11247, "FY2019": 10128}),
+    ("DATA", "2  Tier 1 (£m)",
+     {"FY2021": 13388, "FY2020": 13807, "FY2019": 12688}),
+    ("DATA", "2a  Fully loaded ECL accounting model Tier 1 (£m)",
+     {"FY2021": 13132, "FY2020": 13077, "FY2019": 12498}),
+    ("DATA", "3  Total capital (£m)",
+     {"FY2021": 16442, "FY2020": 17178, "FY2019": 16012}),
+    ("DATA", "3a  Fully loaded ECL accounting model total capital (£m)",
+     {"FY2021": 16359, "FY2020": 16677, "FY2019": 15990}),
+    ("DATA", "4  Total risk-weighted assets (RWA) (£m)",
+     {"FY2021": 71213, "FY2020": 72025, "FY2019": 75010}),
+    ("DATA", "4a  Fully loaded ECL accounting model total risk-weighted assets (RWA) (£m)",
+     {"FY2021": 71116, "FY2020": 72039, "FY2019": 75124}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2021": "15.2%", "FY2020": "15.6%", "FY2019": "13.5%"}),
+    ("DATA", "5a  Fully loaded ECL accounting model Common Equity Tier 1 (%)",
+     {"FY2021": "14.9%", "FY2020": "14.6%", "FY2019": "13.2%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2021": "18.8%", "FY2020": "19.2%", "FY2019": "16.9%"}),
+    ("DATA", "6a  Fully loaded ECL accounting model Tier 1 ratio (%)",
+     {"FY2021": "18.5%", "FY2020": "18.2%", "FY2019": "16.6%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2021": "23.1%", "FY2020": "23.9%", "FY2019": "21.3%"}),
+    ("DATA", "7a  Fully loaded ECL accounting model total capital ratio (%)",
+     {"FY2021": "23.0%", "FY2020": "23.1%", "FY2019": "21.3%"}),
+    ("DATA", "8  Capital conservation buffer requirement (%)",
+     {"FY2021": "2.5%", "FY2020": "2.5%", "FY2019": "2.5%"}),
+    ("DATA", "9  Countercyclical buffer requirement (%)",
+     {"FY2021": "0.0%", "FY2020": "0.0%", "FY2019": "1.0%"}),
+    ("DATA", "11  Total of bank CET1 specific buffer requirements (%) (row 8 + 9 + O-SII)",
+     {"FY2021": "3.5%", "FY2020": "3.5%", "FY2019": "4.5%"}),
+    ("DATA", "12  CET1 available after meeting the bank's minimum capital requirements (%)",
+     {"FY2021": "10.7%", "FY2020": "11.1%", "FY2019": "9.0%"}),
+    ("DATA", "13  Total CRR leverage ratio exposure measure (£m)",
+     {"FY2021": 324899, "FY2020": 294242, "FY2019": 264085}),
+    ("DATA", "14  Transitional CRR leverage ratio (%)",
+     {"FY2021": "4.1%", "FY2020": "4.7%", "FY2019": "4.8%"}),
+    ("DATA", "IFRS9-FL 17  Leverage ratio as if IFRS 9 or analogous ECLs transitional arrangement had not been applied (%)",
+     {"FY2021": "4.0%", "FY2020": "4.5%", "FY2019": "4.7%"}),
+    ("DATA", "13a  Total average UK leverage ratio exposure measure (£m)",
+     {"FY2021": 246849, "FY2020": 245992, "FY2019": 240057}),
+    ("DATA", "14a  Transitional average UK leverage ratio (%)",
+     {"FY2021": "5.5%", "FY2020": "5.6%", "FY2019": "5.2%"}),
+    ("DATA", "13b  Total UK leverage ratio exposure measure (£m)",
+     {"FY2021": 241173, "FY2020": 245176, "FY2019": 236026}),
+    ("DATA", "14b  Transitional UK leverage ratio (%)",
+     {"FY2021": "5.6%", "FY2020": "5.6%", "FY2019": "5.4%"}),
+    ("DATA", "15  Total HQLA (£m)",
+     {"FY2021": 85092, "FY2020": 58035, "FY2019": 41293}),
+    ("DATA", "16  Total net cash outflows (£m)",
+     {"FY2021": 41690, "FY2020": 36246, "FY2019": 28741}),
+    ("DATA", "17  LCR ratio (%)",
+     {"FY2021": "204%", "FY2020": "160%", "FY2019": "144%"}),
+]
+
+bw.add_km1_sheet(
+    title="Barclays Bank UK Group - KM1 Key Metrics",
+    subtitle="Each year from its own Pillar 3 edition's year-end column - two template generations, kept separate",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=96,
+    source_height=560,
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"],
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -541,8 +774,13 @@ metric(
     p3_sources(part_label_25="Table 6: KM1 - Key metrics - Part 2", page_25="12",
                part_label_23="Table 6: KM1 - Key metrics - Part 2", page_23="12",
                part_label_21="Table 4: Key Metrics (KM1 / IFRS 9-FL)", page_21="9",
-               part_label_20="Table 4: Key Metrics (KM1/IFRS 9-FL)", page_20="7",
-               part_label_19="Table 4: Key Metrics (KM1/IFRS9-FL)", page_19="7",
+               # CITATION CORRECTED 2026-09-16 (KM1-007): these two were "7". The Key Metrics table is on
+               # printed page 8 of BOTH the FY2019 and FY2020 reports - each page's own footer reads
+               # "Barclays Bank UK PLC Pillar 3 report 2019   8" (and ...2020   8), with the preceding and
+               # following sheets footed 7 and 9, so the folio matches the PDF sheet index in these
+               # editions. The same wrong page number appeared in two places in this file; both fixed.
+               part_label_20="Table 4: Key Metrics (KM1/IFRS 9-FL)", page_20="8",
+               part_label_19="Table 4: Key Metrics (KM1/IFRS9-FL)", page_19="8",
                part_label_18="Annual Report 2018 capital risk disclosures, 'Capital Requirements Regulation (CRR) leverage ratio'", page_18="80"),
     note="FY2021-FY2019 exposure/ratios use the 'UK leverage ratio (Transitional)' and 'CRR leverage ratio "
          "(Transitional)' rows from each year's Pillar 3 report as the closest equivalents to the "
@@ -564,8 +802,13 @@ metric(
     p3_sources(part_label_25="Table 6: KM1 - Key metrics - Part 2", page_25="12",
                part_label_23="Table 6: KM1 - Key metrics - Part 2", page_23="12",
                part_label_21="Table 4: Key Metrics (KM1 / IFRS 9-FL)", page_21="9",
-               part_label_20="Table 4: Key Metrics (KM1/IFRS 9-FL)", page_20="7",
-               part_label_19="Table 4: Key Metrics (KM1/IFRS9-FL)", page_19="7",
+               # CITATION CORRECTED 2026-09-16 (KM1-007): these two were "7". The Key Metrics table is on
+               # printed page 8 of BOTH the FY2019 and FY2020 reports - each page's own footer reads
+               # "Barclays Bank UK PLC Pillar 3 report 2019   8" (and ...2020   8), with the preceding and
+               # following sheets footed 7 and 9, so the folio matches the PDF sheet index in these
+               # editions. The same wrong page number appeared in two places in this file; both fixed.
+               part_label_20="Table 4: Key Metrics (KM1/IFRS 9-FL)", page_20="8",
+               part_label_19="Table 4: Key Metrics (KM1/IFRS9-FL)", page_19="8",
                part_label_18="Annual Report 2018 liquidity risk disclosures, 'Barclays Bank UK Group liquidity coverage ratio'", page_18="74"),
     note="LCR is computed as a trailing average of the last 12 month-end observations from FY2019 onward. FY2018 "
          "predates the BBUKPLC entity's first standalone Pillar 3 report; the FY2018 Annual Report discloses only "

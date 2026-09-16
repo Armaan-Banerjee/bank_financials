@@ -1,0 +1,4763 @@
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+Alpha Bank London Limited
+
+ANNUAL REPORT &
+{FINANCIAL STATEMENTS
+
+31 December 2024
+
+*AE17K9B3*
+
+COMPANIES HOUSE
+ALPHA BANK LONDON LIMITED
+
+Annual Report and Financial Statements
+
+31 December 2024
+
+TABLE OF CONTENTS
+Page
+
+OFFICERS AND COMPANY PARTICULARS 2
+CHAIRMAN’S STATEMENT 3
+STRATEGIC REPORT 4
+DIRECTORS’ REPORT 11
+DIRECTORS’ RESPONSIBILITIES STATEMENT IN RESPECT OF THE ANNUAL REPORT AND FINANCIAL 14
+STATEMENTS
+
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF ALPHA BANK LONDON LIMITED 15
+Financial Statements
+
+STATEMENT OF PROFIT OR LOSS 22
+STATEMENT OF COMPREHENSIVE INCOME 22
+STATEMENT OF FINANCIAL POSITION 23
+STATEMENT OF CHANGES IN EQUITY 24
+STATEMENT OF CASH FLOWS 25
+
+| Notes to the Financial Statements
+
+BASIS OF PRESENTATION 27
+ACCOUNTING POLICIES APPLIED 28
+NOTES TO THE STATEMENT OF PROFIT OR LOSS 40
+NOTES TO THE STATEMENT OF FINANCIAL POSITION 44
+OFF-BALANCE SHEET INFORMATION 50
+FINANCIAL RISK MANAGEMENT 50
+OTHER INFORMATION 68
+
+ALPHA BANK LONDON LIMITED
+
+Annua! Report and Financial Statements
+
+OFFICERS AND COMPANY PARTICULARS
+
+Board of Directors
+
+Mark E. Austen
+
+Greg Ellison
+
+Spyros N. Filaretos
+Clodagh Gunnigle
+George Michalopoulos
+Michael Brierley
+Sanjiv Somani
+
+Company Secretary
+Sue Cane
+Risk & Compliance Committee
+
+Michael Brierley
+Mark-E7 Austen
+Clodagh Gunnigle
+Spyros N. Filaretos
+
+Audit Committee
+
+Michael Brierley
+Clodagh Gunnigle
+Spyros N. Filaretos
+
+Remuneration Committee
+
+Clodagh Gunnigle
+Mark E. Austen
+Michael Brierley
+Spyros N. Filaretos
+
+Executive Committee *
+
+Greg Ellison
+Bill Kalpouzanis
+Joe Neophitou
+Dan Barbalat
+Jennifer Peters
+Nick Smith
+
+(Chair)
+(Chief Executive Officer — appointed 04/04/2024)
+(Resigned 13/03/2025)
+
+(appointed 01/12/2024)
+
+(Chair)
+
+(Resigned 13/03/2025)
+
+(Chair)
+
+(Resigned 13/03/2025)
+
+(Chair)
+
+(Resigned 13/03/2025)
+
+(Chief Executive Officer)
+
+(Chief Operating Officer)
+
+(Chief Commercial Officer)
+
+(Chief Risk Officer, Interim Chief Financia! Officer)
+(Chief People Officer}
+
+(Chief Retail Banking Officer)
+
+* Composition of Executive Committee at the date of signing the Annual Report and Accounts.
+
+Registered Office
+
+Capital House
+
+85 King William Street
+London EC4N 7BL
+England
+
+Tel: 020 7332 6767
+Fax: 020 7332 0013
+
+Registered Number
+00185070 England
+
+Financial Services Register Number
+
+135327
+
+Auditor
+
+Deloitte LLP, Statutory Auditor, London, United Kingdom
+
+31 December 2024
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+CHAIRMAN’S STATEMENT
+
+lam pleased to introduce Alpha Bank London Limited’s 2024 Annual Report and Accounts following an exciting year in developing
+a future strategic plan whilst maintaining a strong core performance.
+
+Strong lending growth has been achieved during the year, increasing the lending portfolio by £67m (20%). The Bank has been
+able to take advantage of competitive pricing and outstanding customer service to facilitate this growth and it has served to
+offset the decrease in net interest margin due to falling Bank of England base rates from 4.65% in December 2023 to 3.84% in
+December 2024.
+
+This year, the Bank has been pleased to be able to expand its offering of deposit products for customers by introducing a one-
+year deposit product across three currencies.
+
+During 2024, the Bank is proud to have developed a transformational programme which will facilitate the future strategic aim of
+becoming a community-based, digital retail bank.
+
+2024 therefore saw an initial investment in costs relating to the new technology required for the creation of a new ecosystem as
+well as costs of new talent necessary to build and develop this future strategy. These costs will continue to be incurred at a
+significant rate in 2025.
+
+The Bank raised capital in 2024 through the extension of a ten year, £10m subordinated debt, in order to facilitate the investment
+in the future growth strategy. The Bank does however anticipate lower capital ratios and profitability in 2025 as a result of the
+significant investment in the new digital bank combined with the expected fall in interest rates in the UK and US markets.
+
+Asset quality remains strong because of credit discipline and the loan portfolio remains resilient to credit risk due to the Bank’s
+conservative risk appetite. The Bank had only two credit-impaired, stage 3 loans in the portfolio at the end of 2024 (2023: nil).
+The Expected Credit Loss (“ECL”) remained immaterial due to a low Loss Given Default (“LGD”). The loan collateral remains of
+good quality with an average Loan to Value (“LTV”) across the portfolio of 48% (2023: 47%).
+
+On behalf of the Board of Directors, | would like to express our thanks to our customers for their continued support and to our
+colleagues in the wider Alpha Bank Group who provide guidance and assistance to us in many ways. Finally, our thanks go to our
+great staff, whose commitment, professionalism and tremendous efforts to lay the foundations of our future business growth
+and to facilitate our future strategic growth are greatly appreciated by the Board.
+
+ht full
+
+Mark E. Austen Capital House
+
+Chairman 85 King William Street
+London EC4N 7BL
+
+16 April 2025
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+STRATEGIC REPORT
+
+History
+
+Alpha Bank London Limited (“ABL” or the “Bank”} was originally founded in 1922 as the Commercial Bank of the Near East PLC,
+providing services to customers located in, or with links to, Greece and neighbouring regions. The Bank continues to serve the
+same communities, offering a range of commercial and private banking products to corporate and retail customers.
+
+The Bank is a wholly owned subsidiary of Alpha Bank S.A. (“Alpha Bank” or the “Parent”). The Parent has operations in Greece,
+Cyprus, and Luxembourg and is one of the largest banks in Greece, operating from 272 branches.
+
+Strategy
+
+The Bank’s overall strategy is to provide a range of banking services to its United Kingdom (“UK”) and international customers,
+supporting their businesses whilst protecting their wealth. The Bank achieves these aims principally through the provision of:
+
+* Secured loans for professional property investment and development purposes;
+* Deposit and transactional accounts for retail and corporate customers; and
+* Execution only services for private banking clients in securities and mutual funds. plus associated custady services.
+
+The Bank’s income is primarily derived from interest and fees earned on its lending and investment securities portfolio plus fees
+and commissions from securities and mutual fund transactions executed for customers.
+
+The majority of the Bank’s depositors and private banking customers are based in Greece, whilst the loan portfolio is
+predominantly comprised of loans secured against properties located in the London area. Our customers are typically high net
+worth individuals, and our borrowers.are experienced in property investment.
+
+During 2024 the Bank concluded a detailed strategic review which resulted in a decision to develop a community-based, digital,
+retail bank over the next few years. An important enabler of this future strategy was the decision to implement a new core
+banking system and in addition there has been significant investment in product, marketing and talent to build and launch the
+digital retail Bank.
+
+The Bank is funded through customer deposits, share capital, retained reserves and a £10.0m subordinated loan which matured
+on 30 December 2024, and was replaced by a new 10-year subordinated loan (2023: £10.0m) from the Parent. The new
+subordinated loan was undertaken in order to support the future strategy. There is no other reliance upon any funding from
+wholesale counterparties or the Parent Group.
+
+The future strategy confirms the strategic importance of the Bank to the group and demonstrates a firm commitment from the
+parent towards strengthening the Alpha Bank brand in the UK and delivering outstanding value to its customers.
+
+Business Review
+
+The Bank achieved a pre-tax profit for the year of £3.2m (2023: £8.3m). This decrease in profitability from 2023 is primarily due
+to costs in relation to the new technology ecosystem required to support the strategic goa! of becoming a community-based,
+digital retail bank, the most significant of which were software licensing fees and professional fees, as well as additional costs for
+new talent and project management necessary for the transformation programme.
+
+Total headcount at the end of 2024 was 79 (2023: 72).
+
+Total assets increased by £32m to £485m, driven mainly by an increase of £67m in loans and advances to customers, facilitated
+by an increase in deposits from customer of £27m as well as a decrease in investment securities held of £36m.
+
+The Bank’s net equity increased from £66m to £68m reflecting the retained 2024 profit. The Bank's capital base for regulatory
+capital purposes also includes a £10m subordinated loan, from the Parent maturing in 2034 and totals £77.0m (2023: £67.9m).
+The capital base was higher than the minimum regulatory requirements throughout the year and it is the intention of the Bank
+to continue to maintain surplus capital resources in the future.
+
+Customer loans increased by 20% during the year (2023:1.5%) from £330m to £397m with the new lending achieved through
+competitive pricing and customer focused relationships. There are two Stage 3 loans in the portfolio (2023: nil). Due to low LGD
+and high-quality collateral with an average LTV of 48% (2023: 47%}, the Expected Credit Loss (“ECL”) in the loan portfolio remains
+very low. The very low level of impairments is testament to the rigorous underwriting process when loans are approved and the
+ongoing monitoring of the portfolio. The Bank undertakes regular stress testing of the loan portfolio using plausible but severe
+assumptions, and these suggest that no materia! impact is likely to the Bank’s capital position.
+‘sdayddns Ady YM $33e1]U09 MalAas Osje
+pseog aus ‘paurejulew si Alaatjap ad1Asas JO psepueys POO e dinsua pue ‘sjusWaaIZe [BAI] BDIAJBS Matas ‘S]DEsJUOD dJeN]}OTaU
+03 siaijddns Aay ym Jaa uayjo JUaWaseUeW JOlUas ‘SaJnpadold jeuoljesado pue Buldunosjno s,yUueg ayy jo ed sy ‘S¥ayddns
+
+"UONIUN) aduUajap JO aulj P4ly} BY Se WpNy jeusaquy Aq
+MAIATI JIYWNJ 0} Yalqns si yromawey YOWS sadosd pue HJ ase yeys paisa9 pue Suadeuew JONAS |/e yyy BUIMa!AaI JO as}uaxa
+penuue ue s}onpuod Juawyedap YH ayy “adsaJ siy) Ul BDUeWOD pue YH WO, Sodas sejnBas SaAiadaJ J pue “JONPuod ssauisnq
+pue jeuosuad Joy Ayyiqeyunozze pue spsepuejys YsIY yNO sjas YUM YD4 ayy Aq aS (YDWS) SwIZaYy UONeDyIIaD pue Jaseue|
+JOIUTS ayy YIM Saljdwos Ayjnj yUeg BY2 EY] Sasinbas pseog aul “JINpuO? ssauisngq fo spsopunys YBty s0f uoyoyndas o Bujulojuioyy
+
+"SaIPIAIIE SH INOYsnosyy yoeduy AsOJe;NBai pasapisuod yueg aul
+*s107e(N3a/ 9y} pue pseog ay} JO sleYyD aU} Uaamjaq S#uljaaW Papnjaul siy | ‘yUueg au) Jo a2ueWJOJJad |euoljesado pue ssauisng ayy
+uO pajepdn Ajjenuljuod Way} daay 0} ssojeinBai sy YM Apanze aSeSua o] panuijuos yueg ayy ‘Wead ayy Buling ‘ssozajnGas nO
+
+“SUOISSAS JELUJOJU! PUe JLLWJOJ J9YIO Ul Se [|aM
+se s8unaatu $i! ye saaAojdwa s,yueg ay} UUM JUatUasesua JIaJIP pey Pseog ayy jo suaquayy ‘sisAjeue pajlejap e apisduoje pueog
+SY? 0} payedUNWWOD a4am YoIYM JO s]iNsau ayy ‘Aanuns aaAa|dwa ue payanpuod osje yueg ayy JeaA ayy BuluNG ‘saeAojdwa J05
+UO!JEAILOW JO (9AB| 1YZlU By) BulplAoid aie asa) eUy Os SasNuOg Buipnyjoul sjanaj UONes@UNWA, JY} SMaIA| Pseog ay! ‘saaAojdwa
+aanInposd Burney JO Jsasaj}UI S,yueg ay} Wo1 puke ‘Busagyam pue jana uoneysnes saahojdwa jo MaiIA JO UIOd ay} WO}
+yjoq pagegua pue pajenijow ase saahojdwa ayy yeyy Aax si “-yueg JNO JO ssazans ayy aALP 03 djay saadojdwa unQ ‘ajdoad uno
+
+‘yZ0Z INOYsNosy} jana] Mo] AJaA e Ye PaUTEas YIIYM S]U!e|dWOD JaLWUOYsNd JO JaquuNU ay SulsiuewUNs soda
+Saniaoas AjseinBas pueog ayy ‘JuUawdojanap JoNpoud Aue jo asjuad ay) ye ale spaau jsqual|> pue ‘Ajsiey payeas) aie suai ayL
+‘padsai pue ysnJj} jenjnw pue papiaoid adiasas Ayyjenb-ysiy e uo paseg squat? uno YM sdiysuolelas dojaaap aM “ZT aydiouldd
+V4 Mau ayy YUM aul UL AIng JawinsuoD pajyuawajdun aaey am pue ‘SsauIsNg JNO jo Jeay ay} Je Ulead SyUat| INO ‘sjuaiD
+
+"S@AJAS 1 SAIUNWUOD a4] pUe “JUBWIUOJIAUA au} ‘Siapjoyaxeys sNOLeA
+S11 SujuJaDuOd sanssi uo JuaWaTeuew J01Uas WO. soda Je|NJal ssapisuo? pseog ayy ‘BuNMewW-UOIS|Dap Pue SUOIesaqI|ap SH Ul
+
+"yUeg a4 JO $sa2INs ayy aJOLWOId 0} ANP say} BuIWOjIad UaYyM 9007 PY
+saluedwos JO Z/T UON2aS Ul }NO Jas Sua}elW aul O} puedes pey aney Aayy MOY Bulquasap juaWaIeys si4y} apiAosd ssO}DAIIG BYL
+
+quawiayeys (T)ZZT UONDas
+
+“sararjoe ssauisng {je
+SSOJD€ JYSISIIAO JuaaseueW ajeldosdde asidsaxa 07 S| asodind ay} pue O3D ayy Aq paseyp si (,,09x3,,) 8a}]1WWWOD aAlIN2axy Tgy
+
+"SZOZ YDJEW ET UO pseog ay} WOsy PaUsisal soyasesig SOJAGS “pZOZ 4AaqWI9AIaQ T UO pleog By} 0} pajyulodde
+sem luewos ailues “pZ0Z JUdY we anndaya pajuess sem Ajjiqisuodsas T4WS PjOY 0} UOSI|Z Bas 404 jeaosdde Arojejnsay
+“ymMols Ano Jo aseyd jxau ayy Ysnoiy) Igy pea 0} parejd [jam SI pue aduey ainyjno Bulaup pue yous jeuoljesiuedso JUeDIJIUTIS
+BuUIpea| JO psOd9J 43e4} Buoys € YIM OFD paduaiadxa ue s! Bag “y7OZ Avenues ygB wold Da}ja YUM OID Mau ay} se UOSsI|Z
+Sai poyuodde pseog aus “€Z0Z 4aquaIA y TE WO Jaya YWM (QJ9D) J29HO BAIWNIAXy JaIyD BY} Se paudisas Aeyoeyy Aespuly
+
+"€ aded UO 4NO Jas SI S9d}JIWWOD asau} jo diysuaquiayy ‘aa}}IWIWO0D
+uonjesaunuiay pue aayiutwo7 adueydwo) pue ysiy ‘aazWWWOD UpNy ay} sulaq asay) ‘sea7WLUOD pueog aay) Aq payoddns s)
+pieog aut ‘(,,SQ4NI,,) $1019a11IP BAINIaXx3Z-UOU JUapUadapU! Bulag 4NOY YIM S10}I9JIP BAIINIAXZ-UOU J4e WOYM JO AAI ‘S1OJAIP XIS
+sey Ajjuasno pieog aul *(,,p420g 3u},,) S10}9a NIG JO pueog BU} Aq jas S! ABajes}s JUaWaseueW je}ded pue ayjadde ys Ss yueg OUL
+
+Juawaseueyy 4SIYy pue B2UEUIBAOD ayesodi0>
+
+"S99} paye(as Julpual paseaioul
+OV anp Ajulew “(wz :€Z07Z) WBZ TF 0} paseasoul Jedd Byj 10} BUIOIU! SUOISSILUWOD pue Sadq4 ‘JeBA JOLId BY} JaAO BSeasIUI %ZE e
+‘(Wt STF E707) We OZF 0} paseasoul Je9A 9y} JOJ asuadxXa ysasajqU| ‘UedA JONId BY} AO YET JO aseasoul ue ‘(WE OEF :EZOZ) WZ THF
+SEM AWODUI JS9JaIUI! SSOID ‘ayes BSeq Pue|sug jo yUueg ayy Sulpnyoul ‘sales Jsasaqu! SulAjsapun ul [jey e aydsap ‘yzOZ ul W795 Jo
+O1[0JJ0d Bulpuay ay} ul aseasou! Ue O} ANP awWooU! |eUOITPpPe BUI YUM “WGE'OZF OF ANYSI|s pamnpa. seaA Uj JOJ BWODU! JS3Ja\U! AN
+
+“SJUBLWWUJaAOS |e1}Ua2 pue syueq JuaWdoOjanap jeuo!eusaqu! Aq panssi $aj}OU ae, SuNneoy payed
+-VVV JO Ajanisnjoxa pasodwiod si pue (WT'8/F :€Z0Z) WZ ZPF 1 seaA BY} Sulpua ‘oosod ued] 343 Ui YIMOIT ay} Yoddns 0} sea
+dy) Sulnp paonpai oojsyod ay ‘oljoyyiod saijinsas yqap Ajyenb-ysiy e ul sjasse sz yo uood JuerjIusIs e SurequlewW yUeg au)
+
+(panuiquod) 14¥Od3y DIDILVULS
+
+pZ0z Joquieceq LE
+s]UdW9}e}5 |eoUeUI4 pue yoday jenuuy
+
+OS.LANT NOONO? INVES YHd1V
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+STRATEGIC REPORT (continued)
+
+Key decisions. Our strategy is focused on the medium term and the Business is planned across a five-year horizon, updated
+annually. We make careful decisions to maintain strategic focus, control costs, invest and ensure sufficient capital and liquidity is
+held.
+
+Key Performance Indicators
+The Bank’s Board and management monitor the overall performance of the business using several Key Performance Indicators
+
+(KPis) and a range of other metrics. in the longer term we aim to generate sustainable returns for our Parent. The most important
+KPls are:
+
+Ratio 2024 2023
+
+£m £m
+
+Profit before tax 3.2 8.3
+Total regulatory capital 68,4 66.0
+Return on equity 3% 10%
+Cost to income ratio 86% 63%
+Liquidity coverage ratio 323% 349%
+~€apitaladequacy ratio 23% 25%
+Leverage ratio 13% 13%
+
+Year to date profit before tax is the primary measure of the Bank's current performance against budgeted expectations. In 2024
+this has been negatively impacted by the costs incurred as a result of the future strategy transformation programme to realise a
+community-based, digital, retail bank. The impact of this investment is expected to continue into 2025.
+
+Total regulatory capital demonstrates the Bank’s underlying strength and resilience to stress and shocks. It is a key factor in
+determining the Bank’s ability to make loans to customers, which ultimately is our core business.
+
+The Return on equity is a key ratio for the shareholders measuring the relative performance against invested resources. This is
+calculated as net profit divided by total equity opening balance. The Board of Directors approves a budget and longer-term
+strategic plan every year details of which can be found in the Strategic Report.
+
+The Cost to income ratio has increased from to 86% in 2024 (2023:63%) due to the costs of implementing the new technological
+ecosystem to enable the strategic goais of the bank to be met. These costs include both costs of licensing the new technology
+and implementing the programme as well as the addition of new talent to support the growth plans.
+
+Liquidity coverage ratio (“LCR”) is a core regulatory ratio which requires a Bank to maintain a level of unencumbered high-quality
+liquid assets that can meet its liquidity needs for a period of thirty days under a severe stress. At year end the LCR was 323%
+(2023:349%), well above the regulatory minimum of 100%.
+
+Capital adequacy ratio is a measure of capital strength and calculated by dividing the Bank’s shareholders funds by its risk
+weighted assets. The ratio has decreased slightly to 23% at the year end (2023: 25%) still well in excess of regulatory
+requirernents.
+
+Principal Risks and Uncertainties Facing the Bank
+The Board of Directors regularly assesses the principal risks and uncertainties faced by the Bank.
+
+Effective risk management is critical to realising our strategic priorities and underpins our day-to-day operational activities and
+strategic change initiatives. We have a clear established risk management framework to manage and report the various risks that
+we face over the course of our daily business.
+
+We define risk appetite as the aggregate level and types of risk that we are willing to accept in our pursuit of our business
+objectives. Qualitative statements are in place which articulate our risk appetite and provide a view on the risk-taking activities
+with which the Board is comfortable, guiding our decision-makers in their strategic and business decisions. The risk appetite
+statements detail the risk parameters within which we seek to operate, promoting good customer outcomes and protecting us
+from excessive risk exposures. The Board-owned statements are reviewed at least annually and include quantitative metrics
+which inform strategies, targets, policies, procedures and other controls. We actively monitor exposure against our stated risk
+appetite on an ongoing basis. Key risk indicators are in place for all principal risks, and these are reported regularly to Executive
+and Board committees together with actions and assessment of the adequacy of response
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+STRATEGIC REPORT (continued)
+
+The most significant risks the Bank has faced during the year are the risks associated with the Bank’s new strategy and financial
+risks. Financial risk covers several categories of risk which have the potential to impact the Bank’s capacity to support its
+customers and continue operating in a safe, sustainable and compliant way. Financial risks include Credit risk, Capital risk,
+Liquidity and Funding risk and Market risk.
+
+e = Strategic Risk
+This is the risk that internal or external challenges may adversely impact the firm's ability to implement its business
+
+strategy including the long-term positioning and performance of the firm. All new business strategy decisions are
+subject to robust analysis and challenge before implementation. The recent strategic decision to develop a community-
+based, digital, retail bank has been rigorously challenged by both the Bank’s Board and the Group Board of Directors.
+Capital ratios throughout the plan implementation period have been analysed to ensure regulatory minimum levels will
+be maintained or exceeded with additional buffers in place to support capital and liquidity stress analysis.
+
+An important enabler of this future strategy was the decision to implement a new core banking system over 2024 and
+2025 and there has been significant investment in product, marketing and talent to build and launch the digital retail
+Bank.
+
+Strategic risk is also managed through having an identified strategic risk appetite which includes the monitoring of key
+strategic ratios and is set out in the Risk Appetite Statement which is approved by the Board and the Risk & Compliance
+Committee of the Board.
+
+*  Qperational Risk
+The risk that events arising from inadequate or failed internal processes, people and systems, or from external events
+cause regulatory censure, reputational damage, financial loss, service disruption and/or detriment to our customers.
+Operational risks are identified, assessed, and monitored by the Operational Risk Committee and recorded in the
+operational risk register, which is reviewed regularly by Management and by the Risk and Compliance Committee of
+the Board. The Bank recognises that operational risk is inherent in all its activities and seeks to mitigate these risks to
+an acceptable level in a cost-effective way. There were no significant operational risk events during the year.
+
+The Bank operates in a competitive business environment and there is a risk that existing clients will transfer their
+custom to another organisation due to a range of factors which might include poor service, uncompetitive pricing,
+poorly designed products, and a poor market reputation. This risk is managed by ensuring that all staff are adequately
+trained for their rales to ensure a high-quality service is delivered as standard.
+
+Key person risk is a subcategory of the operational risk and occurs especially in smaller organisations where there is
+reliance of key individuals. The Bank manages the risk through having succession planning in place as well as having in
+place competitive remuneration.
+
+e Credit Risk
+Credit risk is the risk that an obligor will fail to meet their obligations (principal, interest or fees} on time or in full
+according to the contractual agreed term. This risk arises from the potential that an obligor is either unwilling or unable
+to perform on an obligation, resulting in an impairment obligation and in economic loss to ABL. [In addition, losses may
+result from a reduction in portfolio value due to actual or perceived deterioration in credit quality.
+
+The Bank’s main income generating activity is lending to customers and therefore credit risk is a principal risk. Credit
+risk mainly arises fram loans and advances to customers and other banks (including related commitments to lend such
+as loan facilities, investments in debt securities and derivatives that are an asset position). The Bank considers all
+elements of credit risk exposure such as counterparty default risk, geographical risk and sector risk for risk management
+purposes (see Note 34}.
+
+The Bank’s overall Credit Risk Appetite is expressed through its Risk Appetite Framework and evidenced by its risk
+management policies together with the exposure and quantitative authorisation limits that are in place.
+
+Governance around credit risk includes the Bank’s Board of Directors reviewing and approving the Risk Appetite Policy,
+Classification and Measurement Policy and Impairment policy. The Bank also has a Credit Risk Committee which has
+oversight of the credit risk activities and the implementation of relevant strategies.
+
+e Market Risk:
+The risk of loss arising from movements in market prices. Market risk is the risk posed to earnings, economic value or
+
+capital that arises from changes in interest rates, market prices or foreign exchange rates.
+
+Our market risk appetite is determined by reference to a number of sub-risk appetites:
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+STRATEGIC REPORT (continued)
+
+Earning sensitivity - We have a low appetite for earnings risk, with the Board determining a limit calibrated to ensure
+net interest income does not exceed an amount and approved by the Board. The limit is calibrated using a 2%
+instantaneous shock in both directions.
+
+Economic value sensitivity - We have a low appetite for economic value risk, with the Board determining a limit
+calibrated to ensure that a change to the present value of our balance sheet does not exceed an amount calibrated by
+calculating the impact of a 2% instantaneous shock in both directions.
+
+Foreign exchange risk - We have no appetite for foreign exchange risk, with the Board determining that exposures in
+foreign currencies should not represent a material portion of our capital resources.
+
+The Treasury function has responsibility for managing market risk within our market risk policy and strategy, including
+interest rate risk and foreign exchange risk:
+
+e = Interest Rate Risk
+Interest rate risk is the risk that the fair value of future cash flows of a financial instrument will fall because of changes
+in market interest rates. To monitor this risk, the Bank applies the Basel Ill standardised framework of assessing the
+impact of six shock scenarios for each significant currency daily, and calculating the overall exposure based on the
+maximum floss and comparing to regulatory limits.
+
+The Bank has a structural interest rate exposure to falling interest rates as the vast majority of its lending book is at
+floating rate yet a significant proportion of its liabilities is at 0% (sight deposits and capital). This means that there is a
+higher impact of falling interest rates on assets than on liabilities.
+
+e =. Foreign Exchange Risk
+ABL has exposure to currency risk due to the volatility of foreign exchange rates. Foreign currency exposure arises
+
+through the daily mark to market of forward foreign exchange contracts and currency swaps conducted in the normal
+course of business for asset and liability management purposes.
+
+In addition, ABL offers foreign exchange services to customers however no proprietary positions are taken with any
+small residual open positions being managed within currency limits.
+
+° Liquidity Risk
+Liquidity risk is the risk that the Bank will not have sufficient funds to meet its obligations.
+
+The Board has determined that the Bank shall be able to survive a combined name-specific and market-wide liquidity
+stress event for at least three months, at a level of severity determined by the Bank’s internal risk appetite stress test,
+utilising the Bank’s pool of liquid assets, having identified the Bank’s material liquidity risks.
+
+The Bank’s exposure to liquidity risk is managed based on policies set by the Board. These include the holding of
+sufficient immediately available cash or marketable assets, ensuring asset and liability cash flows are appropriately
+matched and having the ability to arrange further borrowing if required. Customer retail deposits are protected by a
+liquid assets buffer.
+
+In addition, the Bank faces a range of other risks which are regularly monitored by Management and overseen by the
+Audit Committee and the Risk and Compliance Committee of the Board. Principal among the risks are:
+
+* Regulatory Risk
+Regulatory risk is the risk of regulatory sanction, financial loss, fines and reputational damage as a result of failing to
+comply with relevant regulatory requirements. The Bank has a low appetite for regulatory risk and seek to minimise
+this risk by maintaining robust systems and controls that are designed to meet existing regulatory requirements and to
+ensure we comply with future changes to the regulatory landscape.
+e = Business Conduct Risk -
+Failure to conduct business in accordance with regulations and our own internal standards may lead to litigation,
+complaints, and other claims against the Bank. This risk is managed through extensive and regular internal training of
+staff, our commitment to client service and the embedding of the ‘Treating Customers Fairly’ and ‘Consumer Duty’
+principles of the Financial Conduct Authority (FCA).
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+STRATEGIC REPORT (continued)
+Outtook of Business Environment
+Based on our operating model and business environment, the Bank is faced with some uncertainties.
+
+« UK economy
+The Monetary Policy Committee (MPC} report by the Bank of England published in November 2024 projected GDP
+growth by 0.75% to Q4 2025.
+
+CPI inflation is expected rise from the current 2% to around 2.75% by the second half of 2025. Sf inflation remains low
+and stable it is likely that the Bank of England will reduce interest rates gradually.
+
+Unemployment is projected to rise slightly in the second half of 2025.
+
+A Savills report for UK mainstream house prices forecast a 4% price rise in 2025 for Residential Real Estate prices and
+for Commercial Real Estate (CRE) prices, growth is expected to be supported by steady cuts to base rate. The Company’s
+exposure and risk of lass is intrinsically linked to the value of the underlying property collateral. The risk is mitigated by
+following a conservative lending model, whereby the average loan to value is circa 48% (2023: 47%).
+
+@ The Greek economy
+Developments in the macroeconomic environment
+The macroeconomic environment is characterised by uncertainty, which is mainly caused by the following:
+® Geopolitical developments and inflationary pressures, and in particular the continuation and outcome of the
+war in Ukraine and the tensions in the Middle East and the Red Sea. Despite the recent ceasefire in Gaza, a
+possible re-escalation of the conflict between Israel and !ran could trigger a new energy crisis and
+consequently inflationary pressures, especially if Iranian oil facilities are affected.
+e = The risks for the Greek economy arising from possible natural disasters or any impacts of climate change,
+such as the extreme weather events that have affected various regions of the country in recent years.
+e Politica! instability in major European countries and important trading partners of Greece such as France and
+Germany, as well as the effects of USA policy with the possible increase in trade protectionism, which are
+likely to have a negative impact on the external sector of the Greek economy in the coming years.
+
+However, despite the fact that the economic environment is characterised by uncertainty, the Greek economy is
+expected to remain resilient, achieving high GDP growth rates (between 2% and 2.5%) in the two years 2024-2025,
+supported by the continued strengthening of employment, tourism performance, the gradual normalisation of
+inflationary pressures, the implementation of investments both within the framework of the Recovery and Resilience
+Fund and the Public Investment Program, as well as the expected increase in Foreign Direct Investment (FDI) and
+exports.
+
+Future Developments and Going Concern
+
+The Board of Directors considers the Bank’s updated one-year budget and five-year business plan on an annual basis. A five-year
+timeframe for the plan is considered an appropriate period to forecast when considering the Bank’s underlying business and
+economic environment. During 2024 the Bank concluded a detailed strategic review resulting in a decision to develop a
+community-based, digital, retail bank over the coming years. This future strategy confirms the strategic importance of the Bank
+to the group and demonstrates a firm commitment from the parent towards strengthening the Alpha Bank brand in the UK and
+delivering outstanding value to its customers.
+
+The Bank’s capital and liquidity positions are both strong. The Bank holds capital resources well in excess of the minimum levels
+required by regulators. In addition, the Bank expects to continue to be entirely funded by customer deposits, capital, and
+reserves, The Bank also has a £40m committed contingency funding from the Parent (2023: £150m). Please see note 4.1 for more
+details on the going concern assessment. The directors acknowledge that the Bank faces a number of risks and uncertainties but
+believe none of these pose a threat to the Bank’s going concern status. As such, the directors have a reasonable expectation that
+the Bank will continue to operate and meet its obligations as they fall due over the following 12 months.
+
+This report was approved by the board of directors on 16 April 2025 and signed on its behalf by:
+
+tt ull
+
+Mark E. Austen Capital House
+
+Chairman 85 King William Street
+London EC4N 7BL
+
+16 April 2025
+
+10
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+DIRECTORS’ REPORT
+
+The Directors present their report together with the audited financial statements of Alpha Bank London Limited (“ABL”) for the
+year ended 31 December 2024.
+
+Status of the Bank
+
+The Bank is authorised to accept deposits under the Financial Services and Markets Act 2000 and is registered as a limited Bank
+under the provisions of the Companies Act 2006. It is authorised by the Prudential Regulation Authority and regulated by the
+Financial Conduct Authority and Prudential Regulation Authority.
+
+Principal Activities
+
+The Bank provides a range of domestic and international banking services, as detailed in the Strategic Report.
+
+Strategic Report
+
+As permitted by the Companies Act, information required to be disclosed in the Directors’ Report on the review of the business
+of the Bank, a description of the principal risks and uncertainties facing the Bank and future developments has been included in
+the Directors’ report by way of a cross reference to the Strategic Report on pages 5 to 10.
+
+Results and Dividends
+
+Profit on ordinary activities after taxation amounted to £2.4m (2023: £6.3m). No dividend was declared or paid during the year
+(2023: nil).
+
+Events after the reporting period
+
+There were no events after the reporting period expected to have any financial or business impact on the Bank.
+Financial risk management
+
+Note 34 contains a detailed description of the financial risk management framework.
+
+Employee engagement and business relationships
+
+Please see Section 172(1) Statement on page 6 of the Strategic Report.
+
+Directors and their interests
+
+The following persons served as directors of the Bank during the financial year and to the date of this report. None of the directors
+had any interests in the share capital of the Bank.
+
+Mark E. Austen
+
+Spyros N. Filaretos (resigned 13/03/2025)
+Clodagh Gunnigle
+
+George Michalapoulos
+
+Michael Brierley
+
+Sanjiv Somani (appointed 01/12/2024)
+Greg Ellison (appointed 04/04/2024)
+
+The current composition of the Board of Directors is shown on page 3.
+
+None of the directors had a material interest at any time during the year in any contract of significance in relation to the Bank’s
+business.
+
+All directors of the Bank benefited from qualifying third party indemnity provisions in place during the financial year and at the
+date of this report.
+
+Board Committees
+
+There are three sub-committees of the Board.
+
+11
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+DIRECTORS’ REPORT (continued)
+Risk & Compliance Committee
+
+Risk & Compliance Committee normally meets at least four times a year to consider and advise the Board accordingly on risk
+management matters. The Committee’s primary responsibilities are to advise the Board on the company’s overall risk appetite,
+tolerance and strategy; advise the board on the likelihood and the impact of principal risks materialising, and the management
+and mitigation of principal risks to reduce the likelihood of their incidence or their impact; monitor and review the effectiveness
+of the company’s risk management and internal control systems.
+
+Audit Committee
+
+The Audit Committee normally meets at least four times a year. The Committee’s primary responsibilities are to: monitor the
+integrity of the Banks’s Financial Statements, reviewing any significant financial reporting judgements which they contain,
+including that of the Bank’s Going Concern status; keep under review the effectiveness of the Company's internal financial
+controls, internal control and risk management systems; and monitor and assess the role and effectiveness of the Group’s internal
+audit functions in the context of the Group’s overall internal control and risk management systems.
+
+Remuneration Committee
+
+The Remuneration Committee reviews the appropriateness of all aspects of the Bank’s pay and benefit policies, considering the
+remuneration packages of comparable financial organisations and having access to relevant remuneration surveys. The
+Committee can take external advice where it feels this is necessary.
+
+Donations
+Charitable contributions made during the year amounted to £1,851 (2023: £1,700). No political donations were made (2023: nil).
+Future Developments and Going Concern
+
+The directors have performed an assessment of the going concern status of the Bank. Further detail is included within the
+Strategic Report and the Accounting Principles in the financial statements.
+
+Streamline Energy and Carbon Reporting (SECR)
+
+The Bank presents below its analysis of greenhouse emissions (GHG) and energy usage as required by the Companies (Director’s
+Report) and Limited Partnerships (Energy and Carbon Report) Regulations 2018. GHG emissions are split into three categories
+based on the source of the emission:
+
+e Scope 1 (Direct): emissions from sources that the company owns and controls (i.e. generation of electricity, heat or
+steam from combustion of fuels);
+
+e Scope 2 (Energy Indirect): indirect emissions from the consumption of purchased energy (electricity, heat, steam, and
+cooling) consumed in the Bank's operations;
+
+® Scope 3 (Other Indirect): Other emissions that are consequence of the Bank’s actions, which occur at sources which are
+not owned or controlled,
+
+In accordance with the SECR and in fulfilment of the management's commitment to ESG reporting, the Bank has voluntarily
+disclosed its scope 1 and 2 emissions as follows:
+
+GHG emissions and energy usage data
+
+2024 2023
+Energy consumption used to calculate emissions (kWh)
+Gas n/a n/a
+Electricity : 256,933 218,013
+Total Energy consumption 256,933 218,013
+Scope 1
+Emissions from combustion of gas tC02e n/a n/a
+Scope 2
+Emissions from purchased electricity tCO2e 53.14 45.14
+Total gross tC02e based on the above 53.14 45.14
+Normalised tC02e per £’m of income 2.39 2.06
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+DIRECTORS’ REPORT (continued)
+
+The methodology adopted in calculating these emissions is based on energy consumption data provided to the Bank by its energy
+suppliers and converted to emissions based on conversion factors published by the UK government’s Department for Business,
+Energy & Industry Strategy.
+
+Capital Structure
+
+The Bank’s capital structure is detailed in Note 32.
+
+Disclosure of Information to the Auditors
+
+The directors who held office at the date of approval of this directors’ report confirm that, so far as they are each aware, there is
+no relevant audit information of which the Bank’s auditor is unaware; and each director has taken all the steps that he ought to
+have taken as a director to make himself aware of any relevant audit information and to establish that the Bank’s auditor is aware
+of that information.
+
+This confirmation is given and should be interpreted in accordance with the provisions of Section 418 of the Companies Act 2006.
+
+Bank registration number: 00185070.
+
+This report was approved by the board of directors on 16 April 25 and signed on its behalf by:
+
+CG. fle
+
+Greg Ellison , Capital House
+Chief Executive Officer 85 King William Street
+London EC4N 7BL
+
+16 April 2025
+
+13
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statemenis
+31 December 2024
+
+DIRECTORS’ RESPONSIBILITIES STATEMENT IN RESPECT OF THE ANNUAL REPORT AND FINANCIAL
+STATEMENTS
+
+The directors are responsible for preparing the annual report and the financial statements in accordance with applicable law and
+regulations.
+
+Bank law requires the directors to prepare financial statements for each financial year. Under that law the directors have elected
+to prepare the financial statements in accordance with United Kingdom adopted international accounting standards. The financial
+statements also comply with International Financial Reporting Standards (IFRSs) as issued by the IASB.
+
+Under Bank law the directors must not approve the financial statements unless they are satisfied that they give a true and fair
+view of the state of affairs of the Bank and of the profit or loss of the Bank for that period.
+
+In preparing these financial statements, IAS 1 requires that directors:
+* properly select and apply accounting policies;
+
+*® present information, including accounting policies, in a manner that provides relevant, reliable, comparable and
+understandable information.
+
+® provide additional disclosures when compliance with the specific requirements in IFRSs are insufficient to enable users
+to understand the impact of particular transactions, other events and conditions on the entity's financial position and
+performance; and
+
+# make an assessment of the Bank’s ability to continue as a going concern.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial information included on the Bank’s
+website. Legislation in the United Kingdom governing the preparation and dissemination of financial statements may differ from
+legislation in other jurisdictions.
+
+Directors’ responsibility statement
+
+We confirm that to the best of our knowledge:
+
+e the financial statements, prepared in accordance with the relevant financial reporting framework, give a true and fair
+view of the assets, liabilities, financial position and profit or loss of the Bank and the undertakings included in the
+consolidation taken as a whole;
+
+e the strategic report includes a fair review of the development and performance of the business and the position of the
+Bank, and the undertakings included in the consolidation taken as a whole, together with a description of the principal
+risks and uncertainties that they face; and
+
+@ =the annual report and financial statements, taken as a whole, are fair, balanced, and understandable and provide the
+information necessary for shareholders to assess the Bank’s position, performance, business model and strategy.
+
+This responsibility statement was approved by the board of directors on 16 April 2025 and is signed on its behalf by:
+
+It pelle
+
+Mark E. Austen Capital House
+
+Chairman 85 King William Street
+London EC4N 7BL
+
+16 April 2025
+
+14
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF ALPHA BANK LONDON LIMITED
+
+Report on the audit of the financial statements
+
+1. Opinion
+
+In our opinion the financial statements of Alpha Bank London Limited (the ‘company’);
+
+e give a true and fair view of the state of the company’s affairs as at 31 December 2024 and of its profit for the year then
+ended;
+
+e have been properly prepared in accordance with United Kingdom adopted international accounting standards and IFRS
+Accounting Standards as issued by the International Accounting Standards Board (IASB); and
+
+* have been prepared in accordance with the requirements of the Companies Act 2006.
+
+We have audited the financial statements which comprise:
+e the statement of profit or loss;
+e the statement of comprehensive income;
+e ~—_ the statement of financial position;
+. ..%... .the statement of changes in equity;
+e the statement of cash flows;
+e the related notes 1 to 39.
+
+The financial reporting framework that has been applied in their preparation is applicable law and United Kingdom adopted
+international accounting standards and IFRS Accounting Standards as issued by the IASB.
+
+2. Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable law. Our
+responsibilities under those standards are further described in the auditor's responsibilities for the audit of the financial
+statements section of our report.
+
+We are independent of the company in accordance with the ethical requirements that are relevant to our audit of the financial
+statements in the UK, including the Financial Reporting Council’s (the ‘FRC’s’) Ethical Standard as applied to public interest
+entities, and we have fulfilled our other ethical responsibilities in accordance with these requirements. We confirm that we have
+not provided any non-audit services prohibited by the FRC’s Ethical Standard to the company.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our opinion.
+
+3. Summary of our audit approach
+
+The key audit matters that we identified in the current year were:
+« Determination of expected credit losses (“ECL”) under IFRS 9; and
+e Accounting for the core banking system.
+
+Key audit matters
+
+Within this report, key audit matters are identified as follows:
+Newly identified
+
+A Increased level of risk
+
+©) Similar level of risk
+
+Y Decreased level of risk
+
+Materiality The materiality that we used in the current year was £691,500 which was determined on the basis of
+1% of equity.
+Scoping Audit work to respond to the risks of material misstatement was performed directly by the audit
+
+engagement team.
+
+Significant changes in our In the current year, we identified a new key audit matter related to the accounting for the new core
+approach banking system. The risk associated with this has been assessed to be significant considering the
+
+15
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+material nature of this balance and the level of judgement required in relation to the accounting in
+this area.
+
+4. Conclusions relating to going concern
+
+In auditing the financial statements, we have concluded that the directors’ use of the going concern basis of accounting in the
+preparation of the financial statements is appropriate.
+
+Our evaluation of the directors’ assessment of the company’s ability to continue to adopt the going concern basis of accounting
+included:
+
+challenging the director’s evaluation of the company’s profitability, capital, liquidity and funding forecast position by
+assessing the following:
+— Internal Liquidity Adequacy Assessment Process output;
+~ Internal Capital Adequacy Assessment Process output; and
+— Severe stress testing scenarios.
+involving prudential and regulatory specialists in reviewing company’s capital and liquidity position;
+evaluating management's sensitivity analysis on key assumptions used in the going concern assessment;
+inquiring about the strategic review of the activities of the company performed by the parent company, Alpha Bank S.A.
+and evaluating the support provided by parent; and.
+assessing the appropriateness of the disclosure in relation to the going concern in the financial statements.
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or conditions that,
+individually or collectively, may cast significant doubt on the company’s ability to continue as a going concern for a period of at
+least twelve months from when the financial statements are authorised for issue.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described in the relevant sections
+of this report.
+
+5. Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of the financial
+statements of the current period and include the most significant assessed risks of material misstatement (whether or not due
+to fraud) that we identified. These matters included those which had the greatest effect on: the overall audit strategy; the
+allocation of resources in the audit; and directing the efforts of the engagement team.
+
+These matters were addressed in the context of our audit of the financial statements as a whole, and in forming our opinion
+
+thereon, and we do not provide a separate opinion on these matters.
+
+5.1. Determination of expected credit lasses under IFRS 9 ©
+
+Key audit matter description The company recognises expected credit losses (“ECL”) on its financial assets measured at amortised
+
+cost. As detailed in the summary of critical accounting judgements and estimates in note 5 of the
+financial statements and the credit risk disclosures in note 34.3, the estimation of ECL in accordance
+with IFRS 9 Financial Instruments (“IFRS 9”) is inherently uncertain and requires significant
+management judgement. Therefore, we have determined that there is a risk of error in this balance.
+As at 31 December 2024, the company reported £0.009m (2023: £0.01m) of ECL on total gross loans
+and advances of £397.5m (2023: £330.1m). Despite the continued deterioration of the UK’s economic
+situation in 2024, marked by persistently high inflation, ABL observed a slight decrease in its expected
+credit loss (ECL) provision as this reduced by £1k as stated above. As at 31 December 2024, the
+company’s loan book comprises 90.92% stage 1 loans (2023: 88.4%), 8.25% stage 2 loans (2023: 11.6%)
+and 0.83% stage 3 loans (2023: Nil).
+
+The amount of expected credit losses is updated at each reporting date and given the secured nature
+of the lending done by the company is primarily driven by loss given default (‘LGD’) which in turn is
+driven by valuation of the collateral pledged by the customer. The company estimate the value of
+collateral through both independent valuation reports (full and desktop valuations) and internal
+desktop valuations.
+
+ECL has remained an area of focus for us during the audit as it required a significant audit effort on this
+area, therefore it continues to be a key audit matter in our audit report.
+
+How the scope of our audit In order to address the key audit matter identified, we performed the following procedures:
+
+responded to the key audit
+matter e Tested relevant controls in relation to lending, including those related to determination of
+
+16
+ALPHA BANK LONOON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+expected credit losses;
+
+* Assessed the methodology applied by the company for determination of ECL for compliance with
+the requirements of IFRS 9; ,
+
+« For a sample of loans, tested credit risk indicators as per the company’s policy and IFRS 9
+guidance; and
+
+* independently recalculated the ECL based on the company’s inputs.
+
+In addition to the above, we performed the following procedures in order to assess the
+appropriateness of the collateral valuation of exposures with higher loan-to-value:
+
+¢ Obtained an understanding of and assessed the company collateral valuation policy. This included
+the process by which the company assesses the value of collateral both at the time of initial
+lending and periodically thereafter;
+
+« Tested relevant controls relating to the collateral valuation;
+
+* ~ “Inspected external valuation reports from independent valuers, which are obtained at either the
+time of initial lending or more recently;
+
+* Performed a recalculation of the internal desktop valuation in line with the company collateral
+valuation policy;
+
+* Evaluated the competence, capability and objectivity of management's expert;
+
+« Performed an assessment of the potential impact of the current macro-economic environment
+on the valuation of collateral; and
+
+* Assessed the appropriateness of the disclosures with the requirements of IFRS 9.
+
+Key observations
+
+The approach to determination of ECL was found to be compliant with the requirements of IFRS 9. We
+concluded that the ABL’s assessment of the value of collateral for loans and its estimation of ECL was
+reasonable.
+
+Accordingly, the recognised expected credit losses as at 31 December 2024 are reasonably stated.
+
+5.2. Accaunting for the core banking platform
+
+Key audit matter description The company has invested in the development of a core banking platform that provides the basis for
+
+changes in future strategy of the company. As detailed in the summary of critical accounting
+judgements and estimates in note 5 of the financial statements and accounting policy Note 4.10, the
+accounting for the costs associated with this development requires judgements and estimates to be
+taken. Further details are set out in Note [22, 23 & 13].
+
+As at 31 December 2024, the company reported intangible assets of £1.35m and a prepayment asset
+of £0.64m in relation to the development of the core banking platform. The company also reported
+expenses during the year ended 31 December 2024 of £2.57m corresponding to this platform.
+
+The intangible asset recorded relates to costs that the company has assessed are eligible for
+capitalisation, specifically these are the costs related to the integration of the new core banking
+platform as well as the documentation of the end-to-end process. For the casts that have not been
+assessed as eligible for capitalisation, these are recorded as either an expense or a prepayment
+depending on whether the service has been provided in advance. The recognition of these costs as
+intangible assets increases the risk that costs relating to the core banking system could be
+inappropriately capitalised as intangible assets as an opportunity to overstate net assets to meet KPls.
+The software is to go live in 2025, when this happens the costs recognised as intangible assets will be
+amortised over the useful life of the asset and assessed for impairment annually.
+
+The capitalisation of certain costs on intangible assets is subjective and management judgement is
+required to assess whether costs should be capitalised in accordance with tAS 38, intangible Assets.
+The audit of this area required a significant audit effort. This has therefore been assessed as a key audit
+matter in our audit report.
+
+17
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+How the scope of our audit In order to address the key audit matter identified, we performed the following procedures:
+responded to the key audit .
+matter e Assessed the accounting policy in place around the treatment of costs incurred in relation to the
+
+core banking platform;
+
+e Assessed the methodology applied by the company for determination of which costs are eligible
+for capitalisation, to ensure alignment with accounting standards and the platform's economic
+reality;
+
+e Obtained an understanding of relevant controls, which include the approval of the capitalisation
+policy, review and approval of the software costs incurred as well as the review and approval of
+the accounting policy;
+
+e Tested a sample of intangible, prepayment and expense balances, traced costs to signed contracts
+and invoices and assessed whether these costs met the criteria for capitalisation and were
+recorded appropriately;
+
+« Inspected the signed agreements with vendors and third parties used in the development of the
+core banking platform;
+
+e = Evaluated the useful economic life of the core banking platform compared to the content of
+signed vendor agreements and comparison to other institutions in order to ensure that is
+
+reasonable for when the system goes live; and
+
+« Assessed the appropriateness of the associated disclosures in the financial statements,
+
+Key observations We concluded that the accounting for the core banking platform was reasonable.
+
+6. Our application of materiality
+
+6.1. Materiality
+
+We define materiality as the magnitude of misstatement in the financial statements that makes it probable that the economic
+decisions of a reasonably knowledgeable person would be changed or influenced. We use materiality both in planning the scope
+of our audit work and in evaluating the results of our work.
+
+Based on our professional judgement, we determined materiality for the financial statements as a whole as follows:
+
+Materiality £691,500 (2023: £660,000)
+
+Basis for 1% of equity (2023: 1% of equity)
+determining
+
+materiality
+
+Rationale for the We considered equity to be the most appropriate benchmark given the company is a regulated entity
+benchmark applied here its capital position is of importance to the key users of the financial statements. These key users
+' include regulators and the shareholder.
+
+Equity £69m Materiality £0.69m
+
+mw Equity m Materiality
+
+_ Audit Committee
+reporting threshold
+
+£0.0345m
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+6.2. Performance materiality
+We set performance materiality at a level lower than materiality to reduce the probability that, in aggregate, uncorrected and
+undetected misstatements exceed the materiality for the financial statements as a whole. Performance materiality was set at
+70% of materiality for the 2024 audit (2023: 70%). In determining performance materiality, we considered the following factors:
+our risk assessment, including our assessment of the company’s overall control environment and that we consider it appropriate
+to rely on controls over a number of business processes. There is also a low number of corrected and uncorrected misstatements
+identified in prior periods.
+
+6.3. Error reporting threshold
+We agreed with the Audit Committee that we would report to the Committee all audit differences in excess of £34,500 (2023:
+£33,000), as well as differences below that threshold that, in our view, warranted reporting on qualitative grounds. We also
+report to the Audit Committee on disclosure matters that we identified when assessing the overall presentation of the financial
+statements.
+
+7. An overview of the scope of our audit
+
+7.1. Scoping
+Our audit was scoped by obtaining an understanding of the entity and Its environment, including internal control, and assessing
+risks of material misstatement. Audit work to respond to the risks of material misstatement was performed by the audit
+engagement team. We performed our scoping on the basis of whether the account balances are quantitatively or qualitatively
+material.
+
+7.2. Our consideration of the control environment
+
+As part of our audit, we obtained understanding of the control environment. We obtained an understanding of financial reporting
+cycle and tested relevant controls over lending cycle, deposits, fee and commission income, cash and took a controls reliance
+approach in respect of these controls.
+
+With the involvement of our IT specialists, we tested and relied on general information technology controls (GITCs) and
+automated controls over iBIS, which is the Company’s subledger and core banking system.
+
+7.3. Our consideration of climate-related risks
+
+In planning our audit, we have considered the potential impact of climate change on the entity's business and its financial
+statements and also held a discussion with management to understand the process of identifying climate related risks. We
+performed our qualitative risk assessment of the potential impact of climate change on the company’s account balances and
+classes of transactions and did not identify any additional risk of material misstatement.
+
+We read the Director’s report to consider whether the climate related disclosures on page 12 are materially consistent with the
+financial statements and our knowledge obtained in the audit, and also evaluated the appropriateness of disclosures included in
+the financial statements. Management has concluded there to be no material impact arising from climate change on the
+judgements and estimates made in the financial statements as noted in Note 34.6.
+
+8. Other information
+
+The other information comprises the information included in the annual report other than the financial statements and our
+auditor's report thereon. The directors are responsible for the other information contained within the annual report.
+
+Our opinion on the financial statements does not cover the other information and, except to the extent otherwise explicitly stated
+in our repart, we do not express any form of assurance conclusion thereon.
+
+Our responsibility is to read the other information and, in doing so, consider whether the other information is materially
+inconsistent with the financial statements or our knowledge obtained in the course of the audit, or otherwise appears to be
+materially misstated.
+
+If we identify such material inconsistencies or apparent material misstatements, we are required to determine whether this gives
+rise to a material misstatement in the financial statements themselves. If, based on the work we have performed, we conclude
+that there is a material misstatement of this other information, we are required to report that fact.
+
+| We have nothing to report in this regard.
+
+19
+ALPHA BANK LONDON LIMITED
+Annual! Report and Financial Statements
+31 December 2024
+
+9. Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are responsible for the preparation of the
+financial statements and for being satisfied that they give a true and fair view, and for such internal control as the directors
+determine is necessary to enable the preparation of financial statements that are free from material misstatement, whether due
+to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the company’s ability to continue as a going
+concern, disclosing as applicable, matters related to going concern and using the going concern basis of accounting unless the
+directors either intend to liquidate the company or to cease operations, or have no realistic alternative but to do so.
+
+10. Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from material
+misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our opinion. Reasonable assurance is
+a high level of assurance, but is not a guarantee that an audit conducted in accordance with {SAs (UK) will always detect a material
+misstatement when it exists. Misstatements can arise from fraud or error and are considered material if, individually or in the
+aggregate, they could reasonably be expected to influence the economic decisions of users taken on the basis of these financial
+statements.
+
+A further description of our responsibilities for the audit of the financial statements is located on the FRC’s website at:
+www. frc.org.uk/auditorsresponsibilities. This description forms part of our auditor’s report.
+
+11. Extent to which the audit was considered capable of detecting irregularities, including fraud
+
+irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures in line with our
+responsibilities, outlined above, to detect material misstatements in respect of irregularities, including fraud. The extent to which
+our procedures are capable of detecting irregularities, including fraud is detailed below.
+
+11.1. Identifying and assessing potential risks related to irregularities
+
+In identifying and assessing risks of material misstatement in respect of irregularities, including fraud and non-compliance with
+laws and regulations, we considered the following:
+
+e the nature of the industry and sector, control environment and business performance including the design of the
+company’s remuneration policies, key drivers for directors’ remuneration, bonus levels and performance targets;
+° results of our enquiries of management, internal audit, directors, and the audit committee about their own
+identification and assessment of the risks of irregularities, including those that are specific to the company’s sector;
+* any matters we identified having obtained and reviewed the company’s documentation of their policies and procedures
+relating to:
+o identifying, evaluating and complying with laws and regulations and whether they were aware of any instances of
+non-compliance;
+o detecting and responding to the risks of fraud and whether they have knowledge of any actual, suspected or
+alleged fraud; .
+© the internal controls established to mitigate risks of fraud or non-compliance with laws and regulations;
+e the matters discussed among the audit engagement team and relevant internal specialists, including tax, valuations, IT,
+prudential and regulatory specialists regarding how and where fraud might occur in the financial statements and any
+potential indicators of fraud.
+
+As a result of these procedures, we considered the opportunities and incentives that may exist within the organisation for fraud.
+In common with all audits under ISAs (UK), we are also required to perform specific procedures to respond to the risk of
+management override.
+
+We also obtained an understanding of the legal and regulatory framework that the company operates in, focusing on provisions
+of those laws and regulations that had a direct effect on the determination of material amounts and disclosures in the financial
+statements. The key laws and regulations we considered in this context included the UK Companies Act, tax legislation, Prudential
+Regulation Authority and Financial Conduct Authority.
+
+In addition, we considered provisions of other laws and regulations that do not have a direct effect on the financial statements
+but compliance with which may be fundamental to the company’s ability to operate or to avoid a material penalty.
+
+11.2. Audit response to risks identified
+As a result of performing the above, we did not identify any key audit matters related to the potential risk of fraud or non-
+compliance with laws and regulations.
+
+20
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+Our procedures to respond to risks identified included the following:
+
+e = reviewing the financial statement disclosures and testing to supporting documentation to assess compliance with
+provisions of relevant laws and regulations described as having a direct effect on the financial statements;
+
+® enquiring of management, the audit committee and management concerning actual and potential litigation and claims;
+
+e performing analytical procedures to identify any unusual or unexpected relationships that may indicate risks of material
+misstatement due to fraud;
+
+e reading minutes of meetings of those charged with governance, reviewing internal audit reports and reviewing
+correspondence with HMRC, Prudential Regulation Authority and Financial Conduct Authority; and
+
+e —_inaddressing the risk of fraud through management override of controls, testing the appropriateness of journal entries
+and other adjustments; assessing whether the judgements made in making accounting estimates are indicative of a
+potential bias; and evaluating the business rationale of any significant transactions that are unusual or outside the
+normal course of business.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all engagement team members
+including internal specialists, and remained alert to any indications of fraud or non-compliance with laws and regulations
+throughout the audit.
+
+— ~~Report on‘other legal'and'regulatory requirements —— = ee - ee +e
+
+12. Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+. the information given in the strategic report and the directors’ report for the financial year for which the financial
+statements are prepared is consistent with the financial statements; and
+
+. the strategic report and the directors’ report have been prepared in accordance with applicable legal requirements.
+
+In the light of the knowledge and understanding of the company and its environment obtained in the course of the audit, we
+have not identified any material misstatements in the strategic report or the directors’ report.
+
+13. Matters on which we are required to report by exception
+
+13.1. Adequacy of explanations received and accounting records
+Under the Companies Act 2006 we are required to report to you if, in our opinion:
+e we have not received all the information and explanations we require for our audit; or
+e adequate accounting records have not been kept, or returns adequate for our audit have not been received from
+branches not visited by us; or
+e the financial statements are not in agreement with the accounting records and returns.
+
+We have nothing to report in respect of these matters.
+
+13.2. Directors’ remuneration
+
+Under the Companies Act 2006 we are also required to report if in our opinion certain disclosures of directors’ remuneration
+have not been made.
+
+We have nothing to report in respect of this matter.
+
+14. Other matters which we are required to address
+
+14.1. Auditor tenure
+
+Following the recommendation of the audit committee, we were appointed by the directors on 19 May 2017 to audit the financial
+statements for the year ending 31 December 2017 and subsequent financial periods. The period of total uninterrupted
+engagement including previous renewals and reappointments of the firm is 8 years, covering the years ending 31 December 2017
+to December 2024.
+
+14.2. Consistency of the audit report with the additional report to the audit committee
+
+Our audit opinion is consistent with the additional report to the audit committee we are required to provide in accordance with
+ISAs (UK).
+
+21
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+15. Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of Part 16 of the Companies
+Act 2006. Our audit work has been undertaken so that we might state to the company’s members those matters we are
+required to state to them in an auditor's report and for no other purpose. To the fullest extent permitted by law, we do not
+accept or assume responsibility to anyone other than the company and the company’s members as a body, for our audit
+work, for this report, or for the opinions we have formed.
+
+Paul Wilde (Senior statutory auditor)
+For and on behalf of Deloitte LLP
+Statutory Auditor
+
+London, United Kingdom
+
+16 April 2025
+
+22
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+STATEMENT OF PROFIT OR LOSS
+FOR THE YEAR ENDED 31 DECEMBER 2024
+
+Note 2024 2023
+£000's £000's
+Interest and similar income 6 41,240 36,264
+Interest expense and similar charges 6 (20,382) (15,359)
+Net interest income . 20,858 20,905
+Fees and commission income 7 1,284 1,126
+22,142 22,031
+Net trading expense 8 60 (67)
+Other operating income 9 97 36
+Net loss from derecognition of financial assets measured at FVTOCI 10 (34) (82)
+Operating income 22,265 21,918
+Staff costs 11 (9,688) (8,892)
+General administrative expenses 13 {8,415) (3,886)
+Depreciation and amortisation 21, 22 (1,006) (1,044)
+Operating expenses {19,109) (13,822)
+Reversal of impairment /15 7 171
+Profit before tax , 3,163 8,267
+Income tax expense 14 (808) (1,947)
+. Profit after tax , 2,355 6,320
+STATEMENT OF COMPREHENSIVE INCOME
+FOR THE YEAR ENDED 31 DECEMBER 2024
+2024 2023
+, £000's £000's
+Profit after tax recognised in the Statement of Profit or Loss 2,355 6,320
+Items that may be reclassified subsequently to profit or loss:
+Fair value movement of debt instruments at FVTOCI 32 (5) 70
+Allowance for ECL movement of debt instruments at FVTOCI 32 (5} (3)
+Amounts reclassified to profit or loss for debt instruments measured at FVTOCI 10 34 82
+Other comprehensive income / (expense) 24 149
+Total comprehensive income for the year after tax 2,379 6,469
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+23
+STATEMENT OF FINANCIAL POSITION
+AS AT 31 DECEMBER 2024
+
+Assets
+
+Cash and due from credit institutions
+Derivative financial instruments
+Investment securities
+
+Loans and advances to customers
+Property and equipment
+
+Intangible assets
+
+Current tax assets
+
+Deferred tax assets
+
+Other assets
+
+Total assets
+Liabilities
+
+Due to banks
+Derivative financial instruments
+Due to customers
+Subordinated debt
+Deferred tax liabilities
+Lease liabilities
+Provisions
+
+Other liabilities
+
+Total liabilities
+Equity
+
+Share capital
+Retained earnings
+Reserves
+
+Total equity
+
+Total liabilities and equity
+
+Bank registration number: 00185070.
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+These financial statements were approved by the Board of Directors on 16 April 2025 and were signed on its behalf by:
+
+M. t udle
+a
+
+Mark E. Austen
+Chairman
+
+24
+
+Note
+
+16
+17
+18
+19
+21
+22
+27
+28
+23
+
+24
+17
+25
+26
+28
+29
+30
+31
+
+32
+
+32
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+2024 2023
+£000's £000's
+36,967 40,658
+
+2,868 345
+42,230 78,097
+
+397,459 330,090
+1,987 2,861
+1,367 87
+
+402 110
+- 28
+
+1,856 799
+
+485,136 453,075
+1,962 201
+
+899 1,724
+397,172 370,324
+10,004 10,006
+251 16
+1,996 2,811
+
+- 1
+
+4,470 1,989
+416,754 387,072
+30,000 30,000
+38,360 36,005
+22 (2)
+68,382 66,003
+485,136 453,075
+
+C. Glbn
+
+Greg Ellison
+
+Chief Executive Officer
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+STATEMENT OF CHANGES IN EQUITY
+FOR THE YEAR ENDED 31 DECEMBER 2024
+
+Share Retained Fair Total
+capital earnings value equity
+reserve
+£000's £000's £000's £000's
+Balance as at 1 January 2024 30,000 36,005 (2) 66,003
+Profit after tax - 2,355 - 2,355
+Other comprehensive income for the year - - 24 24
+Total comprehensive income for the year - 2,355 24 2,379
+Balance attributable to the owner as at 31 December 2024 30,000 38,360 22 68,382
+Share Retained Fair value Total
+capital earnings reserve equity
+£000's £000's £000's £000's
+Balance as at 1 January 2023 30,000 29,685 (151) 59,534
+Profit after tax - 6,320 - 6,320
+Other comprehensive expense for the year - - 149 149
+Total comprehensive income for the year - 6,320 149 6,469
+Balance attributable to the owner as at 31 December 2023 . 30,000 36,005 (2) 66,003
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+25
+STATEMENT OF CASH FLOWS
+FOR THE YEAR ENDED 31 DECEMBER 2024
+
+Cash flows from operating activities
+
+Profit before tax
+
+Adjustments:
+
+interest (income) / expense on investment securities
+Interest income on loans and advances to customers
+Interest expense on due to banks
+
+Interest expense on due to customers
+
+Interest expense on debt securities in issue and other borrowed funds
+
+Interest expense on lease liabilities
+
+Loss on forward revaluation of FX transactions
+
+Gain on foreign exchange
+
+Gain / (lass) from derecognition of investment securities
+Movement in ECL allowance on investment securities
+
+Movement in ECL allowance on loans and advances to customers
+
+Movement in ECL allowance on undrawn commitments
+Depreciation and amortisation
+
+Provision
+
+Net cash flows used in operating activities
+
+Net increase / (decrease) in assets relating to operating activities:
+
+Derivative financial instruments
+Investment securities
+
+Loans and advances to customers
+Other assets
+
+Net increase / (decrease) in liabilities relating to operating activities:
+
+Derivative financial instruments
+Due to banks
+
+Due to customers
+
+Other borrowed funds
+
+Other liabilities
+
+Interest income on loans and advances to customers
+Interest expense on due to banks
+Interest expense on due to customers
+
+Income tax paid
+Net cash flows used in operating activities
+
+Cash flows from investing activities
+
+Acquisition of investment securities
+
+Disposal of investment securities
+
+Interest income / (expense) on investment securities
+Acquisition of fixed assets (including intangibles)
+Net cash flows from investing activities
+
+26
+
+Note
+
+15
+21, 22
+30
+
+23
+
+24
+25
+
+31
+
+21, 22
+
+ALPHA BANK
+
+LONDON LIMITED
+
+Annual Report and Financiai Siatements
+
+31 December 2024
+
+2024 2023
+£000's £000's
+3,163 8,267
+(2,894) (4,042)
+(29,603) (25,319)
+- 624
+
+7,547 7,383
+726 669
+
+139 185
+
+(60) 67
+(100) (96)
+
+28 152
+
+(5) (3)
+
+(1) (168)
+
+(3) -
+
+992 1,044
+
+- 1
+(20,069) (11,236)
+(2,523) 2,916
+8,164 1,729
+(67,368) (4,461)
+(1,057) 203
+(62,784) 387
+(825) (119).
+1,761 (6,187)
+26,848 ‘(10,414)
+(2) 3
+2,481 250
+30,263 (16,467)
+29,603 25,319
+
+- - (624)
+(7,547) (7,383)
+22,056 17,312
+(836) (2,022)
+(31,370) (12,026)
+(32,554) (44,562)
+60,257 56,786
+2,894 4,042
+(1,398) (119)
+29,199 16,148
+
+STATEMENT OF CASH FLOWS (continued)
+FOR THE YEAR ENDED 31 DECEMBER 2024
+
+Cash flows from financing activities
+
+Repayment of lease liabilities
+Interest expense on other borrowed funds
+
+Interest expense on lease liabilities
+
+Net cash flows used in financing activities
+
+Net increase / (decrease) in cash and due from credit institutions
+Cash and due from credit institutions at beginning of the year
+Net effect of foreign exchange fluctuations
+
+Cash and due from credit institutions at end of the year
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+27
+
+Note
+
+16
+
+16
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financia! Statements
+
+31 December 2024
+
+2024 2023
+£000's £000's
+(815) (800)
+(726) (668)
+(139) (185)
+(1,680) (1,653)
+(3,851) 2,469
+40,658 38,160
+160 29
+36,967 40,658
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS
+1. General information
+
+Alpha Bank London Limited (hereafter the “Bank” or “ABL”) is a Bank limited by shares incorporated and registered in England,
+United Kingdom. The address of the Bank’s registered office is shown on page 3. The Bank is a private Bank limited by shares.
+
+The principal activities of the Bank are set out in the Strategic Report.
+2. Basis of presentation
+
+The financial statements have been prepared in accordance with United Kingdom adopted international accounting standards
+and with International Financial Reporting Standards as issued by the International Accounting Standards Board (IASB).
+
+The Bank is a wholly owned subsidiary of Alpha Bank S.A. (“Alpha Bank” or the “Parent”). Alpha Bank S.A has a 100% shareholding
+in ABL and produces financial statements available for public use in compliance with IFRS, in which subsidiaries are consolidated.
+The Bank has taken advantage of the exemption in IFRS 10 “Consolidated Financial Statements” and the Companies Act 2006 and
+has not prepared consolidated financial statements. Further details on the parent can be found in Note 37.
+
+The financial statements are presented in Sterling and rounded to the nearest thousand unless otherwise indicated. The financial
+statements are prepared on the historical cost basis, except for certain financial instruments that are measured at fair value as
+explained in the accounting policies.
+
+Refer to Note 4.1 for information on going concern.
+
+3. Adoption of new standards and of amendments to standards
+
+The following new accounting standards or amendments to existing standards became effective for accounting periods beginning
+on or after 1 January 2024 and are applicable to the Bank. The Bank’s accounting policies are already consistent with the new
+requirements and / or adoption had no impact on the financial statements of the Bank.
+
+3.1 Amendments to standards:
+
+There were no amendments to existing standards that had an impact on the financial statements of the Bank.
+
+28
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+3.2 Future accounting developments:
+
+The IASB has issued the following standards, interpretations and amendments to standards which are not yet effective, have not
+yet been adopted and have not been early applied by the Bank.
+
+International Financial Reporting Standard 18 “Presentation and Disclosure in Financial Statements”
+Effective for annual periods beginning on or after 1 January 2027.
+
+On 9 April 2024 the International Accounting Standards Board issued IFRS 18. IFRS 18 replaces IAS 1 and sets out presentation
+and disclosure requirements for financial statements.
+
+To meet this objective, IFRS 18 introduces:
+
+~ two new defined subtotals in the statement of profit or loss: operating profit and profit before financing and income taxes,
+- disclosures about management-defined performance measures (“MPM’s”), and
+
+- enhanced requirements for grouping of information (aggregation and disaggregation) in the financial statements.
+
+IFRS 18 requires that a company presents income and expenses in separate operating, investing and financing categories. The
+operating category consists of all income and expenses that are not classified in the investing, financing, income taxes or
+discontinued operations categories.
+
+The Company is examining the impact from the adoption of the above standard on its financial statements.
+4. Accounting policies applied.
+
+The accounting policies applied by the Bank in preparing the financial statements are the same as those stated in the published
+financial statements for the year ended 31 December 2023, after considering the amendments to standards which were issued
+by the International Accounting Standards Board (IASB) and applied on 1 January 2024, regarding which further analysis has been
+provided in the aforementioned Note 3.
+
+4.1 Going concern
+
+The Directors consider that it is appropriate to continue to adopt the going concern basis of accounting in preparing the financial
+statements. In reaching this assessment, the Directors have considered projections for the Bank’s capital and funding position as
+well as other principal risks. As part of this process the Directors have considered and approved the Bank’s most recent Five Year
+Plan including severe but plausible downside scenarios. The Directors also considered the key assumptions and uncertainties that
+feed into these plans alongside management actions and mitigants that would be available if required. Under all scenarios
+considered, the Directors believe the Group to remain a going concern on the basis that it maintains sufficient resources (including
+liquidity and capital) to be able to continue to operate for the foreseeable future (considered to be at least 12 months from the
+date of these financial statements). The Directors do not consider there to be any material uncertainties with regards to the
+assessment on going concern.
+
+In summary, the directors have assessed all financial risks which they believe affect the Bank’s going concern status including
+liquidity risk, credit risk and capital adequacy, and have reviewed the results of stress tests. The stress scenarios tested the
+adequacy of liquidity and capital reserves, including credit, concentration, interest, and operational risks and have shown that
+there is enough capital and liquidity reserves to cover severe stress scenarios. They have concluded that there is no reason to
+believe that a material uncertainty exists that may cast doubt upon the ability of the Bank to continue as a going concern or its
+ability to continue with its current banking arrangements. Based on the above, the directors’ view is that the Bank, at least for
+the next 12 months from the date of the approval of the financial statements, will continue as a going concern and the financial
+statements have therefore been prepared on that basis.
+
+4,2 Foreign currency transactions
+
+The financial statements are presented in Sterling, which is the functional and presentational currency of the Bank and the
+currency of the country of incorporation of the Bank. Transactions in foreign currencies are translated into Sterling at the closing
+exchange rates at the date of the transaction.
+
+Monetary assets and liabilities denominated in foreign currencies at the Statement of Financial Position date are translated to
+
+Sterling at the closing exchange rate at that date. Foreign exchange differences arising on translation are recognised in the
+Statement of Profit or Loss. Non-monetary assets and liabilities are recognised at the exchange rate ruling at initial recognition.
+
+29
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+4.3 Cash and cash equivalents
+For the purposes of the statement of cash flows, cash and cash equivalents consist of:
+
+a) Cash on hand; and
+b) Short-term balances due from credit institutions
+
+Short-term balances due from credit institutions are amounts that mature within three months after the date of the financial
+statements. The carrying amount of these assets is approximately equal to their fair value.
+
+The impact of exchange rate fluctuations is included on the face of the Cash Flow Statement.
+4.4 Expenses
+
+Expenses are on an accrued basis.
+
+4.5 Financial instruments
+
+4.5.1 Initial recognition
+
+Financial assets and financial liabilities are recognised in the Bank’s Statement of Financial Position when the Bank becomes a
+party to the contractual provisions of the instrument.
+
+Financial assets and financial liabilities are initially recognised at fair value, Transactions costs that are directly attributable to the
+acquisition or issue of financial assets and financial liabilities (other than those measured at FVTPL) are added to or deducted
+from the fair value of the financial assets or financial liabilities, as appropriate, on initial recognition. Transaction costs that are
+directly attributable to the acquisition or issue of financial assets and financial liabilities which are measured at FVTPL are
+recognised immediately in profit or loss.
+
+4.5.2 Classification of financial assets
+
+Financial assets are measured subsequently under the following three categories:
+1. At amortised cost
+2. At fair value through other comprehensive income (FVTOCI)
+3. At fair value through profit or loss (FVTPL)
+
+The classification of these three categories is based on:
+
+1. The Bank’s business model for managing the financial assets (Step 1), and
+2. The contractual cash flow characteristics of the financial assets (Step 2).
+
+Step 1 assigns a business model based on relevant business model indicators. Step 2 addresses the assessment that the
+contractual cash flows are solely payments of principal and interest on the principal amount outstanding that are consistent with
+a basic lending agreement, where the most significant elements of interest would be the consideration for the time value of
+money and credit risk.
+
+Debt instruments
+
+A debt instrument is measured at amortised cost if both the following conditions are met:
+
+- The asset is held within a business mode! whose objective is to hold assets to collect contractual cash flows.
+- The contractual terms of the financial asset give rise on specified dates to cash flows that are solely payment of principal
+and interest (“SPPI”} on the principal amount outstanding.
+
+The Bank’s due from banks balances and loans and advances to customers meet the above conditions and are therefore measured
+at amortised cost.
+
+30
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+The above category is measured at amortised cost using the effective interest method and is periodically assessed for expected
+credit losses.
+
+A debt instrument is measured at FVTOCI if both of the following conditions are met:
+
+- The asset is held within a business model in which assets are managed to achieve a particular objective by both
+collecting contractual cash flows and selling financial assets.
+
+- The contractual terms of the financial asset give rise on specified dates to cash flows that are SPPI on the principal
+amount outstanding.
+
+The Bank’s investment securities meet the above conditions and are therefore measured at FVTOCI.
+
+When a debt instrument measured at FVTOCI is derecognised, the cumulative gain or loss previously recognised in other
+comprehensive income is reclassified from equity to profit or loss as a reclassification adjustment.
+
+Debt instruments measured at FVTOCI are subject to impairment.
+
+A debt instrument that is not measured at amortised cost or at FVITOC! must be measured at FVIPL.
+
+Derivatives
+
+Under IFRS 9, all derivative financial instruments are deemed to be held for trading and therefore they are measured at FVTPL.
+The Bank’s derivative financial instruments are measured at FVTPL.
+
+Holding-to-collect contractual cash flows
+
+Financial assets that are held within a business model with the objective of holding assets to collect contractual cash flows are
+measured at amortised cast (provided the asset also meets the contractual cash flow test). Such assets are managed to realise
+cash flows by collecting contractual payments over the life of the instrument.
+
+Factors that could indicate a hold to collect (“HTC”) business model include the following:
+
+e —_ Evaluation of the portfolio’s performance is based e.g. on the contractual return (e.g. margins) and the net interest
+income and credit quality of the financial asset rather than the fair value of the asset;
+
+e Risk management mainly refers to managing the credit risk and aims at minimising potential credit losses, e.g., through
+restructurings or sales;
+
+e Compensation is not linked to the fair value changes of the managed portfolio.
+
+e The business model objective is not to realise cash flows through sales of instruments. However, sales/expected sales
+can be consistent with a HTC business model, i.e., it is not required to hold all the instruments in the portfolio until
+maturity. This may be the case if:
+
+- Sales are infrequent (even if significant in value) or insignificant in value both individually and in aggregate (even
+if frequent);
+
+- Sales are linked to an increase in credit risk;
+
+- Sales are made close to maturity and the proceeds approximate the remaining contractual cash flows.
+
+The Bank must consider information about past sales in terms of the reasons for the sales and the conditions that existed at that
+time compared to current conditions. Based on these considerations, the Bank needs to determine the predictive value of the
+past sales for the expectations of future sales.
+
+The Bank regards all its loans and advances to customers and due from banks balances within a business mode! with the objective
+of holding to collect contractual cash flows, therefore they are all measured at amortised cost.
+
+Holding-to-collect contractual cash flows and selling
+The FVTOCI measurement category is mandatory for portfolios of financial assets that are held within a business model whose
+
+objective is achieved by both collecting contractual cash flows and selling financial assets (provided the asset also meets the
+contractual cash flow test).
+
+31
+ALPHA BANK LONDON LIMITED
+Annua! Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+In this type of business model, the Bank’s management has made the decision that both collecting contractual cash flows and
+selling are fundamental to achieving the objective of the business model. There are various objectives that may be consistent
+with this type of business model. For example, the objective of the business model may be to:
+
+« Manage everyday liquidity needs;
+¢  Tomaintain a particular interest yield profile; or
+e Match the duration of financial assets to the duration of the liabilities that fund those assets.
+
+Compared to the business model with an objective to hold financial assets to collect contractual cash flows, this business model
+will typically involve greater frequency and value of sales. This is because selling financial assets is integral to achieving the
+business model's objective rather than only incidental to it. However, there is no threshold for the frequency or value of sales
+that can or must occur in this business model.
+
+The Bank regards all its investment securities to be within a business model which has the objective of halding to collect
+contractual cash flows and selling, therefore they are all measured at FVTOCI.
+
+Financial assets measured at FVTPL
+
+Financial assets are measured at FVTPL if they are not held within either a business model whose objective is to hold assets to
+collect contractual cash flows or within a business model whose objective is achieved by both collecting contractual cash flows
+and selling financial assets.
+
+A business model that results in measurement at FVTPL is where the financial assets are held for trading. Investments made
+within a held for trading portfolio are those held intentionally for short-term resale or where the position is created with the
+intent of benefiting from actual or expected short-term price movements or to lock in arbitrage profits.
+
+4.5.3 Reclassification of financial assets
+If the business model under which the Bank holds financial assets changes, the financial assets affected are reclassified.
+
+Changes in the business model for managing financial assets are expected to be very infrequent. They must be determined by
+the Bank’s senior management because of external or internal changes and must be significant to the Bank's operations and
+demonstrable to external parties. Accordingly, a change in the objective of the Bank’s business model will occur only when the
+Bank either begins or ceases to carry on an activity that is significant to its operations.
+
+The reclassification should be applied prospectively from the ‘reclassification date', which is defined as, ‘the first day of the first
+reporting period following the change in business model that results in the Bank’s reclassifying financial assets’. This does not
+give rise to a prior period error in the Bank’s financial statements (as defined in IAS 8 Accounting Policies, Changes in Accounting
+Estimates and Errors). Accordingly, any previously recognised gains, losses or interest should not be restated.
+
+4.5.4 Impairment
+
+The Bank recognises an allowance for expected credit losses on the following financial instruments that are not measured at
+FVTPL:
+
+- Loans and advances to customers; |
+- Investment securities;
+
+- Loan commitments; and
+
+- Financial guarantee contracts issued.
+
+{In order to measure an allowance for expected credit losses, a financial instrument must first be classified into stages based on
+its credit risk. The classification into stages is based on the change in credit quality compared to the initial recognition. The
+adoption of this model aims to achieve:
+
+- The timely recognition and measurement of credit losses prior to their realisation;
+
+- The classification of exposures depending on the deterioration of their credit quality; and
+
+- The more accurate measurement of expected credit losses. ‘
+
+The classification into stages is performed as follows:
+
+32
+ce
+
+“yUeg BU) SP4eMO} SUOIIES!|GO }pas2 Way) SuljaaW Ul SaN|NIIGYIP ade 0) INOGe aie 10 |vey AJYy
+JeY) parapisuor si 4 J! dey UONe pul! AYNIYIG [elsUeUl4 ayy pausisse aq Aew Jamossog Aue ‘Buljes ys Was ayy jo ssajpueday
+
+‘(aiNeyap Ul J! E JO
+YSU YBlY JI Z aBeyg se payisseys aq pynom) dey uonesipul ,AyNayjsig [epueuly, ay} pausisse Ayjenqewojne aie (aoueuy
+
+aye]sa (234 10) 7 AlOBa}e9 Buljes S14 [Pas Pue -D MOlaq apess Buljes) ys YBIYy Jo parnejap se paijisses stamosog [jy se
+*(€ aBeIS se paiyissejo aq pjnom) uonepinbl;
+
+[esdyzeyjO INOYUM suoIzes|qo Ypass Aedas Ayjny youUed ‘AjaweU ‘(,dLN,,) A€d OF Ajay!|Ul) Se passasse S| JamoiOg aul oe
+‘(W@W Uaag YA aAeY SIOJEdIPUL OM] Moa AY} JO JaYWaU JI Z aBeIS se palyissej2 aq pjnom)
+
+UONMUOII, jeu! BY] OF patedWod pajesouayap AjjUedIJIUBIS Sey SU Hp|asd YIIYM sO) Saunsodxa sey aMoIJOg ay, —_®
+*(Z adeis se payrissej> aq
+
+PINOM) adueseaqsos BU} 07 JOLId SYJUOLU 3d4y) ISe] BY) BuLNp anp ysed sAep OE UeYY B1OW de SBINSOdXa SJAaMOLIOg AY, ew
+
+:$40}291Pul JuUeOdWI JsowW ayy
+YUM 4s} & SI MOjaq ‘AINIIWIG |eluUeUIy YUM SsaMoiOg JO UONeIIJIUAp! asioaid aJOW e 104 ‘salyed psy, Aq papiAoid saayueien3
+4ayjo Aue 40 je49}e|/09 Ayiadosd Aue Sulpsedsaasip ‘sisAjeue JUeUaAOD UeO] Pue INOIAeYa JeUOIDeSUeI} NAY JO UOIJeN|eAs ay Aq
+Paalap ssOjedIpU! BAIWDaIGo 0} Bulpsooze SUONIPUOD ,SAIMOIIOG BY UO Alajos paseg SI AINdIVyIP [eIDUeUY BY) yO JUaLUSSasse ay]
+
+“snes [EIOUEUL JIA} JO SUJUSSIOM ay} 0} aNp ajnpayss JUawWAeda|s UO] JUaIUND aU} Jad Se sUOIIES!|GO Ypas sayy Burgiasas
+Ul SalyNIWJIp a2ef OJ JNoge aie 410 AjdwWOd 0} ajqeun ase sJamOII0g BY} a4dYyM UOI}ENYS ayy Se pauyap Ss! AyNoYJIP jeIouUeUly
+
+Aynoiffip poisuoury
+
+“AYNIWYIpP jelDUeUY YUM SsaMos10g O} (Bulsueuljas) S}Qap Fuipueysjno JUaINI yo Bulgueuljas |2¥O} 40 jeiyed so (UOIssa2UOD) SW49}
+aiqeunoney iow Suiquesd Aq Sus} /eENIIEIZUOD [e!IU! JO UONEDJIPOW JUeIJIUIS e S| B9Y} Jl BUIOGIOY Se Pasapisuod SI ainsodxa uy
+
+‘sjasso jolguoUlf ausOqIOY
+
+‘JaAa} WUNODIE BUY Je aNp Aep au JaAO SI Jey} SUOISSILULUOD/SaTieYD pue sysasaqul ‘yediouiid ay} JO wuNs ay] Se pasapisuod
+SE anp Junowe ay ‘anp ysed Aep suo uey) asow Ayeayew s| uoNesqo pass s,Ayediaqunod au} jt anp ysed si asinsodxa uy
+
+sjassp jolupulf{ anp 4s0d
+
+“UOISIAOJC 2 Se :aaqUeJeNd JO $19}}3] Pue SUaW}IWILUOD UeO] UMespUN 104 oe
+
+pue ‘|IOA 38 Pasnseaw Spuog 404 ansasai AI}e(a4 JY] Ul P|lIp|sd SI JUNOWe JY! ‘aNjeA sles ye SI JUNOWe SulAued
+9y} se uosod jepueuy JO JUaWA}ze}S BY} Ui PasiUdoOIa, S| BQUeMO]|e OU ?|DOLAI Je Painseaw syuauNsjsul Wap 104 ew
+fsyasse ayy JO JUNQWIE AUjAseD Ssoud BY] WO. UO|INPa|p e Se :3S09 pasNsowe Je paunseaw sjasse jeiueulyJOj se
+
+“SMO}[OJ SB UOISOd jeUeUY Jo JUaWAaJeys ay) U! PayUasaid ae Sasso] jIpas9 payadxe JO} sa2UEMO]|Y
+
+‘ayes JsosaqUl
+JeulWoU ayy ayy] Axoud aaleusaye 3saq JO (,,4)9,,) 9324 IS8s19IUI BANIAWYa $Jasse ayy Je PayUNOdsIp ‘aaladad O} Sedxa yUeG ay} ey)
+SMO}J YSE9 BY) PUB 198I}U02 a4} JapUN yUeg BU) O} ANP SMOY Yser ay} UBaMjaq B2UaIAJJIP ayy JO aNjeA JUasaid ayy se paunseaw
+BIE BSI] “SBSSO] WPasd Jo anjea yuasasd ayy Jo ajewysa payysiam-Ayiqeqoid e $| sasso| pIpas payoadxa Joy aoueMO]e aul,
+
+“sasnsodxa 1910 JOY Ajaaijra||09 JO ‘aunsodxa Bullwwopiad
+-UOU BUO ySea] JE YIM SYBMOIIOY |e JO} SISEG JENPIAIPUL UE UO JAaYYWS INO Paes $) Sasso) Wpass payadxa jo UoNe[Nze9 au,
+“SBSSO| BLUITAJ!| BY] B1e Paye(najed sasso| ypasd payoadxa ayy ‘sainsodxa ynejap /Bulwsojiad-uou sapnjoul - ¢ a6o2g
+
+"S8SSO] SUIIIAJ!) BY} B1e Paye(naje> Sasso) y1paso payoadxa aus ‘Bujwojiad
+-UOU JOU a4 Yd1ym ING a1ep UOIUBOIEL jeIIU! BY} AdU/S 4SI4 pa|s9 Ul aSedsdu JUeIpUBIS YM Sainsodxa pa49 sapnjoul - Z a60IS
+
+“sJUalUayels je!IIUeUIJ BY} JO BJEP BY} WO} SASSO] UJUOW-aAjaM} BU} Je Paze/NI/e9 Sasso| jpas9 payadxe ay]
+“BJEP UOIPUZO/ [eIWU) BY} BOUIS ASH JPas Ul aseasoU! JULDIJIUTIs OU aAeY JEU SauNnsodxa Yipes Suswsojsad sapnjou -  a6o3s
+
+(Panujuos) SINFINALVLS IVIDNVNId aHL OL S3L0N
+
+p207d Jequiaoed LE
+sjuswsje]s jeoueuly pue yodey jenuuy
+
+GS LIN NOGNO1 YNVE VHd1¥
+ALPHA BANK LONDON LIMITED
+Annual Report and Financiai Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Unlikely to Pay (“UTP”)
+
+An exposure is considered UTP when the Bank assesses that the borrower is unlikely to fully meet his credit obligations without
+the liquidation of collateral, regardless of the existence of any past due amount or the number of days past due, with the
+exception of collaterals that are part of the production and trade chain of the borrower (e.g. properties for Real Estate
+companies).
+
+In determining whether or not an exposure is UTP an assessment is made in order to; (a) determine events which when they
+occur, the exposure is identified as Non-Performing (Hard UTP Triggers) without any assessment needed by any Credit
+Committee, (b) determine triggers which when they occur, the borrower should be assessed by the Credit Committee to decide
+
+if the borrower's exposures should be identified as Non-Performing or not (Soft UTP Triggers). This assessment takes place at the
+date of revision of the borrower’s credit limits based on the credit risk rating. if finally, a borrower is flagged as UTP, then his
+credit risk rating should be D in the Bank systems.
+
+It is noted that if a borrower flagged as UTP belongs to a Group of companies, then the Group should also be assessed as a whole
+by the Credit Committee for the existence or not of UTP. An exposure defined as UTP would be classified as Stage 3.
+Non-performing financial assets
+
+An exposure is considered as non-performing (when at least one of the following criteria applies at the time of the credit risk
+rating assessment:
+
+e The exposure is more than 90 days past due (“NPL”)
+
+e —_ Legal actions have been undertaken (“NPL”)
+
+® The exposure is classified as Forborne Non-Performing Exposure (“FNPL”)
+e = [tis assessed as UTP
+
+An exposure is considered as default when the criteria specified by the definition of Non-Performing Exposures are met. An
+exposure defined as non-performing, or default would be classified as Stage 3. ;
+
+Forborne non-performing financial assets
+
+The Forborne Exposures that meet any of the following criteria should be classified as non-performing:
+
+e They are supported by insufficient payment plans (either initial or subsequent payment plans, depending on the case)
+including, among other, repeated failure to comply with the repayment plan, changes to the payment plan for preventing
+breaches or support of payment plan to expectations that are not supported by macroeconomic forecasts or realistic
+assumptions about the ability or the willingness of the borrower to repay.
+
+@ They include contractual terms that delay the timing of regular repayment instalments in a manner that prevents the
+appropriate classification assessment, such as when grace periods over two years for capital repayment are granted.
+
+e They have been reclassified from the performing classification, including remodified exposures or exposures over 30 days
+past due.
+Credit risk at initial recognition
+
+The Bank recognises an exposure in the Statement of Financial Position when it becomes a party to the contractual provisions of
+the exposure. Subsequently, the exposures are classified into stages and follow the credit risk measurement accordingly. The
+initial recognition date is defined as follows:
+
+e = The date of initial recognition is considered the sign off date of the contractual document (overdraft, loan agreement, etc.)
+
+e For off-balance sheet exposures (Letters of Guarantee, Letters of Credit) the date of issuance
+
+In each reporting period, a new assessment of whether there is a significant change in credit risk is performed in order to renew
+classification and measurement of exposures.
+
+It is noted that an exposure is no longer recognised in the Bank’s Statement of Financial Position when; the contractual rights to
+the cash flow from the asset expire, or the Bank transfers the financial asset without retaining control! over them, by transferring
+the risks and rewards.
+
+Significant increase in credit risk
+
+For the timely identification of a significant increase in credit risk for an exposure after the initial recognition (SICR) (and the
+calculation of the lifetime credit loss of the exposure instead of the twelve months credit loss), the default risk at the reference
+date is compared to the default risk at the initial recognition date for all performing exposures, including those with no days past
+due (delinquencies). ,
+
+34
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Siatements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+The assessment for deciding if an exposure shows significant increase in credit risk or not is based on the following three types
+of Indicators:
+
+- Qualitative Indicators: These refer to the use of qualitative information which is not necessarily depicted in the credit
+risk rating, as the Early Warning Triggers for the Real Estate Finance (“REF”) loan book. The qualitative indicators are
+primary drivers for the assessment of the credit risk deterioration. See note 34 for the key triggers’ description.
+
+- Quantitative Indicators: For the REF loan book, this is the relative credit risk rating deterioration compared to their
+credit risk rating at initial recognition, namely from category 1,2 or 3 changing to 4 or D (‘High Risk’ or Default). For the
+portfolios originated in Greece (Cash Backed Loans fully secured by cash held with the Bank) these are classified as
+Stage 1 upon recognition and annually reviewed to identify any significant increase in credit risk.
+
+- Backstop Indicators: In addition to the above, and with a view to addressing cases where there is no evidence of
+significant credit risk deterioration based on the quantitative and qualitative indicators, exposures over 30 days
+
+materially past due are considered by definition to show a significant increase in credit risk.
+
+It is noted that if during the previous reporting period, credit losses were calculated for the lifetime of an exposure, but the same
+conditions no longer apply, then 12-month credit losses will be calculated for the current period.
+
+4.5.5 Modification and derecognition of financial assets
+The Bank shall derecognise a financial asset in the following cases:
+(a) The contractual rights to the cash flows from the asset expire, or
+(b) The Bank transfers the financial asset, and the transfer qualifies for derecognition, or
+(c) The contractual cash flows of the assets are significantly modified.
+No substantial modification has taken place during the period that led to derecognition of financial assets.
+4.5.6 Financial liabilities
+Financia! liabilities are classified as either measured at FVTPL or at amortised cost.
+
+Financial liabilities measured at FVTPL
+
+A financial liability is measured at FVTPL when it meets the definition of held-for-trading, or when it is designated as measured
+at FVTPL.
+
+Liabilities measured at amortised cost
+
+Liabilities measured at amortised cost include deposits, borrowings and other financial liabilities which are initially measured at
+fair value, net of transaction costs and are subsequently measured at amortised cost.
+
+Derecognition of financial liabilities
+
+A financial liability is derecognised when the obligation under the liability is discharged, cancelled, or expired. Where an existing
+financial liability is replaced by another from the same lender on substantially different terms, or the terms of an existing liability
+are substantially modified, such an exchange or modification is treated as a derecognition of the original liability and the
+recognition of a new liability.
+
+4.6 Derivative financial instruments
+
+The Bank holds derivative financial instruments for risk management purposes, principally forward foreign exchange contracts.
+Derivatives are recognised initially at fair value at the date a derivative contract is entered into and are subsequently remeasured
+to their fair value at each reporting date. All derivative financial instruments are recognised as assets when their fair value is
+positive and as liabilities when their fair value is negative. Derivatives are not offset in the financial statements unless the Group
+has both a legally enforceable right and intention to offset. interest received and paid on derivatives held for hedging are
+recognised in income statement on a grossed up basis.
+
+35
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+4.7. Fair value measurement
+
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction between
+market participants at the measurement date.
+
+The Bank measures fair values using the following fair value hierarchy based on the significance of the inputs used in making the
+measurements as follows:
+
+e Level 1: Quoted market price (unadjusted) in an active market for an identical instrument.
+
+e Level 2: Valuation techniques based on observable inputs, either directly (i.e., as prices) or indirectly (i.e., derived
+from prices).
+
+e Level 3: Valuation techniques using significant unobservable inputs. This category includes all instruments where
+the valuation technique includes inputs not based on observable data having a significant effect on the
+instrument’s valuation. This category also includes instruments that are valued based on observable inputs
+that require significant adjustments based on unobservable inputs.
+
+Valuation techniques include net present value and discounted cash flow models, option pricing models and other valuation
+models. Assumptions and inputs used in valuation techniques include risk-free and benchmark interest rates, equity index prices
+and expected price volatilities and correlations.
+
+The aim of valuation techniques is to arrive at a fair value determination that reflects the price of the financial instrument at the
+reporting date that would have been determined by market participants acting at arm’s length.
+
+4.8 Offsetting
+
+Financial assets and liabilities are offset, and the amounts are reported net on the statement of financial position, only in cases
+when the Bank has the legally enforceable right to offset recognised amounts and there is the intention to settle on a net basis,
+or to realise the asset and settle the liability simultaneously.
+
+4.9 Property and equipment
+
+This caption includes right of use assets, leasehold improvements and computer and other equipment. Property and equipment
+are stated at cost less accumulated depreciation. The historical cost includes costs relating to the addition of property and
+equipment. ,
+
+Subsequent expenditure is capitalised or recognised as a separate asset only when it increases future economic benefits and can
+be measured reliably. Expenditure on repairs and maintenance is recognised in the Statement of Profit or Loss as an expense as
+
+incurred.
+
+Depreciation is charged on a straight-line basis over the estimated useful lives of property and equipment taking into account
+residual values.
+
+The estimated useful lives are as follows:
+
+- Right of use of assets 10 years (first break clause of the lease).
+- Leasehold improvements: 10 years (first break clause of the lease).
+- Computer and other equipment: 3 to 10 years.
+
+The residual value of property and equipment and their useful lives is periodically reviewed and adjusted, if necessary, at each
+reporting date.
+
+Property and equipment is reviewed for impairment, in accordance with the general principles and methodology set out in IAS
+36 (“Impairment of Assets”) and the relevant implementation guidance, whenever events or changes in circumstances indicate
+that the carrying amount may not be recoverable. Property and equipment, which is considered to be impaired, is carried at its
+recoverable amount.
+
+36
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+4.10 Intangible assets — computer software
+
+Software acquired by the Bank is stated at cost less accumulated amortisation and accumulated impairment losses.
+
+Costs directly associated with the internal development of computer software are capitalised as intangible assets if the software
+is identifiable, under the control of the Bank and will produce future economic benefits. Such costs are stated at cost less
+accumulated depreciation.
+
+Amortisation for software acquired by the Bank is recognised in the Statement of Profit or Loss on a straight-line basis over the
+estimated useful life of the software, from the date that it is available for use. Amortisation for capitalised costs associated with
+the internal development of computer software are amortised over the useful life of the asset, from the start of the project.
+The estimated useful life of acquired software is three to five years and for capitalised costs associated with the internal
+development of computer software is seven years. Expenditure incurred to maintain software programs is recognised in the
+statement of profit or loss as incurred. The current carrying amount of Intangible assets is shown in note 22. The majority is work
+in progress and not yet amortised.
+
+4.11 Leases
+The Bank as a lessee
+
+The Bank assesses whether a contract is or contains a lease, at inception of the contract. The Bank recognises a right-of-use asset
+and a corresponding lease liability with respect to all lease arrangements in which it is the lessee, except for short-term leases
+(defined as leases with a lease term of 12 months or less) and leases of low value assets (such as small items of office furniture
+and equipment and telephones). For these leases, the Bank recognises the lease payments as an operating expense on a straight-
+
+line basis over the term of the lease unless another systematic basis is more representative of the time pattern in which economic
+benefits from the leased assets are consumed.
+
+The lease liability is initially measured at the present value of the lease payments that are not paid at the commencement date,
+discounted by the Bank’s incremental borrowing rate (as there is no rate implicit in the lease). The incremental borrowing rate is
+determined using as reference rate the secured funding rate of the parent Bank Alpha Bank, adjusted for different currencies,
+and taking into consideration government yield curves, where applicable.
+
+Lease payments included in the measurement of the lease liability comprise:
+
+- Fixed lease payments; and
+- - Payments of penalties for terminating the lease if the lease term reflects the exercise of an option to terminate the
+lease.
+
+The lease liability is presented as a separate line in the statement of financial position.
+
+The lease liability is subsequently measured by increasing the carrying amount to reflect interest on the lease liability by reducing
+the carrying amount to reflect the lease payments made and remeasuring the carrying amount to reflect any reassessment or
+lease modifications.
+
+The Bank remeasures the lease liability (and makes a corresponding adjustment to the related right-of-use asset or is recorded
+in the statement of profit or loss in case of the right-of use asset is zero) whenever:
+
+- The lease term has changed or there is a significant event or change in circumstances resulting in a change in the
+assessment of exercise of a purchase option, in which case the lease liability is remeasured by discounting the revised
+lease payments using a revised discount rate.
+
+- The lease payments change due to changes in an index or rate or a change in expected payment under a guaranteed
+residual value, in which cases the lease liability is remeasured by discounting the revised lease payments using an
+unchanged discount rate (unless the lease payments change is due to a change ina floating interest rate, in which case
+a revised discount rate is used).
+
+- A lease contract is modified, and the lease modification is not accounted for as a separate lease, in which case the lease
+liability is remeasured based on the lease term of the modified lease by discounting the revised lease payments using
+a revised discount rate at the effective date of the modification.
+
+37
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+The right-of-use assets comprise the initial measurement of the corresponding lease liability, lease payments made at or before
+the commencement day, less any lease incentives received and any initial direct costs. They are subsequently measured at cost
+less accumulated depreciation and impairment losses.
+
+Right-of-use assets are depreciated over the earliest period between the lease term and the useful life. The depreciation starts
+at the commencement date of the lease. The Bank applies IAS 36 to determine whether a right-of-use asset is impaired.
+Incremental borrowing rate
+
+The lease liability is initially measured at the present value of the lease payments that are not paid at the commencement date,
+discounted by the Bank’s incremental borrowing rate (as there is no rate implicit in the lease). The incremental borrowing rate is
+determined using as reference rate the secured funding rate of the parent Bank Alpha Bank, adjusted for different currencies,
+and taking into consideration government yield curves, where applicable.
+
+4.12 Taxation
+
+Income tax expense consists of current tax and deferred tax. It is recognised in the Statement of Profit or Loss, except to the
+extent that it relates to items recognised directly in equity, in which case it is recognised directly in equity.
+
+Current tax is the expected tax payable on the taxable income for the year, and any adjustments to the tax payable in respect of
+previous years.
+
+Deferred tax is the tax that will be paid or for which relief will be obtained in the future resulting from the different period that
+certain items are recognised for financial reporting and tax purposes. It is provided for temporary differences arising between
+the tax base of assets and liabilities and their carrying amounts in the financial statements.
+
+Deferred tax assets and liabilities are provided based on the tax rates that are expected to apply to the period of realisation or
+settlement using tax rates (and laws) enacted or substantively enacted at the Statement of Financial Position date. A deferred
+tax asset is recognised to the extent that it is probable that future taxable profits will be available against which the asset can be
+utilised. Deferred tax assets and liabilities are offset if there is a legally enforceable right to offset current assets against current
+tax liabilities, as well as when such taxes relate to the same fiscal authority.
+
+4.13 Employee benefits
+
+The Bank contributes to a defined contribution plan, the expense being charged to the Statement of Profit or Loss as incurred.
+A defined contribution plan is where the Bank pays fixed contributions into a separate entity. The Bank has no legal! or
+constructive obligation to pay further contributions if the fund does not have sufficient assets to pay employees the benefits
+relating to their employment with the Bank in current or prior years.
+
+4.14 Net interest income recognition
+
+Interest income and interest expense are recognised in ‘Net interest income’ as ‘Interest income’ and ‘interest expense’ in the
+profit or loss account using the effective interest method.
+
+When applying the effective interest method, interest is recognised in the statement of profit or loss in the period to which it
+relates, regardless of when it is to be paid. Therefore, interest is recognised in the period in which it accrues, even if payment is
+deferred. In some cases where interest is deemed to be irrecoverable, no interest shall be recognised in profit or loss in the period
+in which it accrues. However, if the unrecognised element of interest is received at a Jater date, it will be recognised in profit or
+loss in the period when it was received.
+
+Effective interest method
+
+This is the method that is used in the calculation of the amortised cost of a financial asset or a financial liability and in the
+allocation and recognition of the interest revenue or interest expense in profit or loss over the relevant period.
+
+38
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Effective interest rate (“EIR”)
+
+This is the rate that exactly discounts estimated future cash payments or receipts through the expected life of the financial asset
+or financial liability to the gross carrying amount of a financial asset or to the amortised cost of a financial liability. When
+calculating the EIR, an entity shall estimate the expected cash flows by considering all the contractual terms of the financial
+instrument (for example, prepayment, extension, call, and similar options) but shall not consider the expected credit losses. The
+calculation includes all fees paid or received between parties to the contract that are an integral part of the EIR, transaction costs,
+and all other premiums or discounts. There is a presumption that the cash flows and the expected life of a group of similar
+financial instruments can be estimated reliably. However, in those rare cases when it is not possible to reliably estimate the cash
+flows or the expected life of a financial instrument (or group of financial instruments), the entity shall use the contractual cash
+flows over the full contractual term of the financial instrument (or group of financial instruments).
+
+For financial! assets with future cash flows that cannot be estimated with certainty (i.e., overdrafts), the Bank’s policy is to assume
+that the EIR is equal to the contractual interest rate. In this case all fees and transaction costs related to the instrument are
+directly recorded to profit or loss as commission income or expense respectively.
+
+For floating interest rate financial assets, the EIR is updated due to the immediate re-estimation of cash flows to reflect
+movements in market rates of interest.
+
+Interest income recognition
+Depending on the classification into staging as described in Note 4.5.2, interest income is recognised as follows:
+
+- Stage 1 and stage 2 financial assets: interest revenue is calculated by applying the EIR to the gross carrying amount of
+the financial asset.
+
+- Stage 3 financial assets: interest revenue is calculated by applying the EIR to the amortised cost of the financial asset,
+net of any ECL provision.
+
+4.15 Fees and commission income
+
+Fees and commission income, which are nat an integral part of the effective interest rate, are recognised on an accrual basis
+when the relevant service has been provided. If it is an integral component of the effective interest rate on a financial asset or
+liability it is included in the measurement of the effective interest rate and reported as part of interest income or expense.
+Incremental costs incurred to generate fee and commission income are charged to fees and commissions expense as they are
+incurred.
+
+4.16 Net income from other financial instruments measured at FVTPL
+
+Net trading income includes all gains and losses from changes in the fair value of financial assets and financial liabilities held for
+trading. Specifically, these include foreign exchanges gains and losses on derivative instruments.
+
+4.17 Entity with only one operating segment
+
+An operating segment is a component of the Bank that engages in business activities from which it may earn revenues and incur
+expenses. The Board performs regular reviews of the operating results of the Bank and makes decisions using financial
+information at the entity level. Accordingly, the Board believes that the Bank has only one operating segment, being interest and
+fees earned on its lending and securities portfolio plus fees and commissions from securities and mutual! fund transactions
+executed for customers. The Bank does not have any debt or equity instruments which are publicly traded and therefore is outside
+the scope of IFRS 8 (Operating Segments}.
+
+4.18 Investments in subsidiary undertakings
+
+The subsidiary undertakings are accounted for at cost less provision for any impairment. Impairment losses on investments in
+subsidiary undertakings are measured as the difference between the carrying amount of the financial asset and the estimated
+recoverable amount.
+
+4.19 Related parties
+
+The Bank records separately transactions with related parties, including its parent, fellow subsidiaries / affiliates, key
+
+management personnel, entities controlled by key management and associated companies. A detailed analysis of these
+transactions can be seen in Note 35.
+
+39
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+5. Critical accounting judgements and key sources of estimation uncertainty
+
+In the application of the accounting policies, management are required to make judgements that may have a significant impact
+on the amounts recognised and make estimates and assumptions about the carrying amounts of the assets and liabilities that are
+not readily apparent from other sources. The estimates and associated assumptions are based on historical experience and other
+factors that are considered to be relevant. Actual results may differ from these estimates.
+
+Estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to accounting estimates are recognised in
+the period in which the estimate is revised if the revision affects only that period or in the period of the revision and future
+periods if the revision affects both current and future periods.
+
+The following are the critical judgements that management have made in the process of applying the accounting policies and
+that have the most significant effect on the amounts recognised in financial statements.
+
+5.1 Critical judgements in applying the Bank’s accounting policies
+The following are the critical judgements, apart from those involving estimations (which are dealt with separately below}, that
+
+the directors have made in the process of applying the Bank’s accounting policies and that have the most significant effect on the
+amounts recognised in financial statements:
+
+Identifying and measuring the intangible assets resulting from impl tation of Software-as-a-Service (SaaS)
+solutions.
+
+The key judgement is whether the implementation of SaaS solutions results in an intangible asset and measuring the cost of the
+recognised intangible assets. In 2024 the Bank made investments to upgrade its main banking system. The upgrade consists of
+replacing the on-premise banking system with SaaS solution where the main costs are annual software licenses. However, there
+is also a one-off implementation cost that results in a recognition of intangible assets. Please see Note 22 for more information
+regarding the costs recognised in 2024.
+
+identifying and measuring prepayments resulting from implementation of SaaS solutions.
+
+The key judgement is whether some expenses related to SaaS implementation which do not meet the intangible assets
+recognition criteria are to be recognised when the supplier provides access to the solution over the life of the contract or are to
+be recognised as and when the services are provided. Please see Note 23 for more information regarding the prepayments
+recognised in 2024,
+
+5.2 Key sources of estimation uncertainty
+implementation costs meeting intangible assets criteria
+
+e IAS 38 Intangible Assets outlines the criteria for intangible assets recognition. The main criteria is that the expense
+needs to meet the definition of intangible assets, which means that the asset needs to be identifiable, controlled by
+the Bank and needs to provide a future economic benefit. The nature of SaaS is that these solutions typically are not
+controlled by the Bank by definition. The Bank applied judgement in determining an approach to defining which
+implementation costs are within the Bank’s control, concluding that a primary part of this is the integration hub which
+acts as the middleware for all the SaaS applications of the solution resulting in creating of an intangible asset.
+Furthermore, estimating exactly how much of the overall costs that relate to this element represents an estimate. The
+Company recognised £1.3m of intangible assets out of the total £2.5m implementation costs. The intangible asset is
+broken down as £531k of costs estimated by the system integrator to be directly relating to middleware build and
+testing (35% of such costs) with another £823k of costs relating to permanent and contractual human resources working
+on integration (90% of such costs based on an estimate by the project manager, excluding the costs of the project
+manager).
+
+40
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+NOTES TO THE STATEMENT OF PROFIT OR LOSS
+
+6. NET INTEREST INCOME
+
+Interest and similar income
+
+Due from banks
+
+Investment securities measured at FVTOCI
+
+Loans and advances to customers
+
+Total interest and similar income relating to financial assets
+
+Interest expense and similar charges
+
+Due to banks
+
+Due to customers
+
+Debt securities in issue and other borrowed funds
+Lease liabilities
+
+Total interest expense and similar charges relating to financial liabilities
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+2024 2023
+£000's £000's
+8,844 7,013
+2,441 3,234
+29,955 26,017
+41,240 36,264
+9,243 7,608
+10,349 6,967
+724 672
+
+66 112
+20,382 15,359
+
+All the Bank’s interest income and interest expense is calculated using the effective interest rate method except for interest
+expense on lease liabilities. Lease liabilities are measured at the present value of future lease payments using the Bank’s internal
+
+borrowing rate.
+
+7. FEES AND COMMISSION INCOME
+
+Client investment transactions
+Sub-participation fees
+
+Loans and advances to customers
+Fund transfers
+
+Other
+
+Total
+
+8. NET TRADING EXPENSE
+
+Revaluation of forward foreign exchange transactions
+Total
+
+9, OTHER OPERATING INCOME
+
+Gain on foreign exchange
+Other
+Total
+
+41
+
+2024 2023
+£000's £000's
+653 641
+275 94
+272 315
+76 64
+
+8 11
+1,284 1,126
+2024 2023
+£000's £000's
+60 (67)
+
+60 (67)
+2024 2023
+£000's £000's
+100 96
+(3) (60)
+
+97 36
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+10. NET LOSS FROM DERECOGNITION OF FINANCIAL ASSETS
+
+During both the year and the comparative period, the Bank made no sales of financial assets measured at amortised cost.
+During the year, the Bank made sales of financial assets measured at FVTOCI for liquidity management purposes. Such sales also
+
+occurred in the comparative period. The below table summarises the carrying amount of the derecognised financial assets
+measured at FVTOCI, and the loss on derecognition, during the current year and the comparative period.
+
+Year ended 2024 Year ended 2023
+
+Carrying amount of Carrying amount of
+derecognised Netloss from derecognised Net loss from
+financial assets at derecognition financial assets at derecognition
+
+FVTOCI FVTOCI
+£000's £000's £000's £000's
+Multilateral development bank bonds 79,065 (34) 105,515 (82)
+Total 79,065 (34) 105,515 (82)
+
+11. STAFF COSTS
+
+2024 2023
+£000's £000's
+Wages and salaries 7,312 6,616
+Social security contributions 914 794
+Expenses of defined contribution plan 658 601
+Other 804 881
+Total 9,688 8,892
+
+The number of employees (including executive directors) employed by the Bank at the end of the financial years is:
+
+2024 2023
+
+Number Number
+
+Front Office / Sales and Marketing 18 17
+Operations and Admin Support 46 40
+Compliance, Risk and Internal Audit 9 9
+EXCO 6 6
+Total 79 72
+
+The average number of employees (including executive directors) is disclosed in line with the Companies Act requirements. For
+2024 this was 78 (2023: 69).
+
+12. EMOLUMENTS OF DIRECTORS
+
+The total amounts for directors’ remuneration in accordance with Schedule 5 to the Accounting Regulations were as follows:
+
+2024 2023
+
+£000's £000's
+
+Salaries, bonuses, and benefits in kind 734 920
+Total 734 920
+
+42
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+12. EMOLUMENTS OF DIRECTORS (continued)
+
+The amounts for remuneration in 2023 included £258,000.00 received as compensation for loss of office by the highest paid
+director.
+
+2024 2023
+£000's £000's
+Emoluments 560 754
+Total 560 754
+One director was member of the Bank’s pension scheme (2023: one).
+As at 31 December 2024 there were no loans to the directors of the Bank (2023: nil).
+13. GENERAL ADMINISTRATIVE EXPENSES
+2024 2023
+£000's £000's
+Professional fees 2,032 768
+Information systems 2,375 738
+Office expenses 2,844 1,217
+Premises 461 549
+Banking costs 347 299
+insurance 136 155
+Communication and travel 128 97
+Marketing 92 63
+Total 8,415 3,886
+Professional fees include:
+2024 2023
+£000’s £000’s
+Auditor’s remuneration:
+Fees payable to the Bank’s auditor for the audit of the Bank’s annual accounts 375 280
+Total audit fees 375 280
+
+43
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+14, INCOME TAX EXPENSE
+
+Corporation income tax
+
+Current year:
+
+UK corporation tax at 25% (2023: 23.25%)
+Sub-total
+
+Deferred tax
+
+Charge for the year
+Total
+
+The charge for the year can be reconciled to the profit befare tax as
+follows:
+
+Profit before tax
+
+Current Tax expense
+
+Current tax on the above at 25% (2023: 23.52%)
+Disallowable expenses
+
+Tax expense for the year
+
+Deferred Tax adjustment
+Deferred tax on depreciation
+
+Total deferred tax expense
+
+Total tax expense /effective tax rate
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+2024 2023
+
+£000's £000’s
+
+531 1,991
+
+531 1,991
+
+277 (44)
+
+808 1,947
+
+2024 2024 2023 2023
+
+£000's % £000's %
+3,163 8,267
+
+791 25 1,944 23.52
+
+(260) (8) 47 0.58
+
+531 7 1,991 24.10
+
+277 8 (44) (0.53)
+
+277 8 (44) (0.53)
+
+808 25 1,947 23.56
+
+An increase in the UK corporation tax rate from 19% to 25% (effective from 1 April 2023) was announced in the March 2022
+
+Budget and substantively enacted on 24 May 2022.
+
+15. IMPAIRMENT LOSSES AND PROVISIONS TO COVER CREDIT RISK
+
+Investment securities impairment
+Loans and advances to customers
+Undrawn commitments
+
+Total
+
+44
+
+2024 2023
+£000's £000's
+(5) (3)
+
+(1) (168)
+
+(1) :
+
+(7) (171)
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+NOTES TO THE STATEMENT OF FINANCIAL POSITION
+
+16. CASH AND DUE FROM CREDIT INSTITUTIONS
+
+31 December 2024
+
+Cash and due from credit institutions as shown in the Statement of Cash Flows reconciles to the related items in the Statement
+
+of Financial Position as shown below.
+
+2024 2023
+£000's £000's
+Due from credit institutions 36,967 40,658
+Total 39,967 40,658
+17. DERIVATIVE FINANCIAL INSTRUMENTS
+2024
+Fair value Fair value
+assets liabilities
+- ; , £000's £000's
+Derivatives held for trading purposes:
+Foreign exchange derivatives:
+Foreign exchange and cross currency swaps 2,868 899
+Derivative financial instruments 2,868 899
+2023
+Fair value Fair value
+assets liabilities
+£000's £000's
+Derivatives held for trading purposes:
+Foreign exchange derivatives:
+Foreign exchange and cross currency swaps 345 1,724
+Derivative financial instruments 345 1,724
+
+Notional amounts as at 31 December 2024 were £285,000,000 (2023: £169,000,000). As at year-end there were 13 foreign
+
+exchange and cross currency swaps outstanding (2023: 11).
+18. INVESTMENT SECURITIES
+
+Measured at FVTOCI
+
+2024 2023
+
+£000's £000's
+
+Multilateral development bank bonds and sovereign debt 42,230 78,097
+Total 42,230 78,097
+
+Allinvestment securities are classified as ‘Level 1’ with valuations using quoted prices from an active market.
+
+45
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+19. LOANS AND ADVANCES TO CUSTOMERS
+
+Measured at amortised cost
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+2024 2023
+£000's £000's
+Loans and advances to customers 397,468 . 330,100
+Expected credit loss (“ECL”) (9) (10)
+Total 397,459 330,090
+As at 31 December 2024 As at 31 December 2023
+Gross . Gross :
+
+carrying ECL Carrying carrying ECL Carrying
+° allowance amount amount
+
+amount amount
+£000's £000's £000's £000's £000's £000's
+Mortgage lending 22,798 - 22,798 24,460 - 24,460
+Consumer lending 11,055 - 11,055 5,891 - 5,891
+Retail lending 33,853 - 33,853 30,351 - 30,351
+Corporate lending 363,615 (9) - 363,606 299,749 (10) 299,739
+Total lending 397,468 (9) 397,459 330,100 (10) 330,090
+
+As at 31 December 2024, £351,400,000 (2023: £259,600,000) of loans and advances to customers are expected to mature more
+
+than 12 months after the reporting date.
+
+20. INVESTMENTS IN SUBSIDIARY UNDERTAKINGS
+
+The subsidiaries of the Bank {registered at the same address as the Bank), which are all wholly owned and have issued only
+
+ordinary shares, are:
+
+Alpha Bank London Nominees Limited — 00318931
+
+ABL Independent Financial Advisers Limited — 03650230
+Flagbright Limited — 01772433
+
+Commercial Bank of London Limited — 02985015
+
+Alpha Bank Limited ~- 06368721
+
+Investments in subsidiary (number of £1 shares)
+
+Alpha Bank London Nominees Limited
+
+ABL Independent Financial Advisers Limited
+Flagbright Limited
+
+Commercial Bank of London Limited
+
+Alpha Bank Limited
+
+Total
+
+Country of Incorporation
+
+Nature of business
+
+United Kingdom Dormant
+United Kingdom Dormant
+United Kingdom Dormant
+United Kingdom Dormant
+United Kingdom Dormant
+As at As at
+
+1 January . ; 31 December
+2024 Movements 2024
+
+50 - 50
+
+1 - 1
+
+100 - 100
+
+1 - 1
+
+1 - 1
+
+153 - 153
+
+46
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+21. PROPERTY AND EQUIPMENT
+
+Cost
+
+As at 1 January 2024
+Additions
+
+Disposals
+
+As at 31 December 2024
+
+Accumulated depreciation
+As at 1 January 2024
+Charge for the year
+Disposals
+
+As at 31 December 2024
+
+Net book value as at 31 December 2024
+
+Cost
+
+As at 1 January 2023
+Additions
+
+Disposal
+
+As at 31 December 2023
+
+Accumulated depreciation
+As at 1 January 2023
+Charge for the year
+Disposal
+
+As at 31 December 2023
+
+Net book value as at 31 December 2023
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+Right of use of Leasehold Computer and other Total
+assets improvements equipment
+£000's £000's £000's £000's
+4,892 2,748 1,228 8,868
+29 - 65 94
+4,921 2,748 1,293 8,962
+3,058 1,911 1,038 6,007
+615 275 78 968
+3,673 2,186 1,116 6,975
+1,248 562 177 1,987
+Right of use of Leasehold Computer and other Total
+assets improvements equipment
+£000's £000's £000's £000's
+4,892 2,748 1,496 9,136
+- - 48 48
+. - (316) (316)
+4,892 2,748 1,228 8,868
+2,446 1,636 1,250 5,332
+612 275 104 991
+- - (316} (316)
+3,088 1,911 1,038 6,007
+1,834 837 190 2,861
+
+No impairment indicator noted during the year for right-of-use assets and all other property and equipment.
+
+The Bank has only one on leased building which serves as its office. The lease term is 15 years (2023: 15 years). The maturity
+analysis of lease liabilities is presented in Note 29.
+
+22. INTANGIBLE ASSETS — COMPUTER SOFTWARE
+
+Software
+
+Cost
+
+As at 1 January
+Acquisition
+Disposals
+
+As at 31 December
+
+Accumulated amortisation
+As at 1 January
+
+Charge for the year
+Disposals
+
+As at 31 December
+
+Net book value as at 31 December
+
+2024 2023
+£000's £000's
+1,449 1,603
+1,354 7
+(50) (225)
+2,753 1,449
+1,362 1,534
+38 53
+(14) (225)
+1,386 1,362
+
+1,367 87
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+No impairment indicator noted during the year for intangible assets.
+
+23. OTHER ASSETS
+
+Prepayments
+Accrued fee income
+Other receivables
+Total
+
+24. DUE TO BANKS
+
+Current accounts
+Total
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+2024 2023
+£000's £000’s
+1,502 678
+357 103
+(3) 18
+1,856 799
+2024 2023
+£000's £000's
+1,962 201
+1,962 201
+
+As at 31 December 2024 there were no term deposits due to banks maturing more than 12 months after the reporting date (2023:
+
+nil).
+
+25, DUE TO CUSTOMERS
+
+Current accounts
+
+Savings accounts
+
+Notice accounts
+
+Deposits received as collateral for loans
+Term deposits
+
+Total
+
+2024 2023
+£000's £000's
+97,409 115,697
+
+1,311 1,077
+58 61
+6,344 5,119
+292,050 248,370
+397,172 370,324
+
+As at 31 December 2024 and at 31 December 2023 all deposits from customers mature within 12 months of the reporting date.
+
+26. SUBORDINATED DEBT
+
+The Bank has a subordinated note of £10,000,000, issued to Alpha Bank A.E (subsequently Aloha Bank S.A.), which matures on
+30 December 2034 and bears a fixed interest rate of 6.9% for the first five years, after which it will reprice (see note 34.7). The
+Bank has not made any defaults of principal, interest, or other breaches with regard to its subordinated liabilities during 2024
+
+(2023: none).
+
+The table below details changes to the Bank’s liabilities arising from financing activities, including both changes arising from
+
+cash flows and non-cash changes:
+
+Balance as at 1 Changes from Other Balance as at 31
+
+January 2024 financing cash flows changes December 2024
+
+£000's £000’s £000's £000's
+
+Subordinated note 10,006 (726) 724 10,004
+Total 10,006 (726) 724 10,004
+Balance as at 1 Changes from Other Balance as at 31
+
+January 2023 financing cash flows changes December 2023
+
+£000's £000's £000's , £000's
+
+Subordinated note 10,003 (669) 672 10,006
+Total 10,003 (669) 672 10,006
+
+48
+ALPHA BANK LONDON LIMITED
+Annuai Report and Financiat Statements
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+27. CURRENT INCOME TAX
+
+Current income tax receivable
+
+Total
+
+28. DEFERRED TAX LIABILITIES / ASSETS
+
+Depreciation/amortisation
+
+Fair value reserve
+Total
+
+Depreciation/amortisation
+
+Fair value reserve
+
+31 December 2024
+
+Total
+
+2024 2023
+
+£000's £000's
+
+(402) (110)
+
+(402) (110)
+
+. As at 31
+
+Asati ened Charge to prom Charge to OCI December
+2024
+
+£000's £000's £000's £000's
+
+28 (277) - (249)
+
+(16) - 14 (2)
+
+12 (277) 14 (251)
+
+. Asat 31
+
+Asati aon Charge to prof Charge to OCI . December
+2023
+
+£000's £000's £000's £000's
+
+(16) 44 - 28
+
+50 - (66) (16)
+
+34 44 (66) 12
+
+The taxation rate as at 31 December 2024 is 25% (2023: 25%). The Bank does not have any non-recognised deferred tax assets.
+
+29. LEASE LIABILITIES
+
+The Bank leases a building. The lease had an original term of 15 years. A maturity analysis of the contractual discounted cash
+
+flows of the lease liabilities is depicted below:
+
+Maturity analysis:
+Year 1
+Year 2
+Year 3
+Year 4
+Year 5
+
+Total
+
+30. PROVISIONS
+
+Provisions for ECL on undrawn facilities
+Total
+
+2024 2023
+£000's £000's
+858 826
+1,138 853
+- 1,132
+1,996 2,811
+2024 2023
+£000's £000's
+- 1
+
+- 1
+
+49
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+31. OTHER LIABILITIES
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+2024 2023
+
+£000's £000's
+
+Accrued expenses 4,470 1,989
+
+Total 4,470 1,989
+32. SHARE CAPITAL AND OTHER RESERVES
+
+2024 2023
+
+Share Capital £000's £000's
+Authorised, issued, allotted and fully paid:
+
+6,000,000 ordinary shares of £5 each 30,000 30,000
+
+Total 30,000 30,000
+
+The Bank has one class of ordinary shares which carry no right to fixed income.
+
+Fair Value Reserve 2024 2023
+
+£000's £000's
+
+As at 1 January (2) (151)
+
+Fair value movement of debt instruments at FVTOC! (5) 70
+
+Amounts reclassified to profit or loss for debt instruments at FVTOCI 34 82
+
+Allowance for ECL on debt instruments at FVTOCI (5) (3)
+
+Balance as at 31 December 22 (2)
+
+OFF-BALANCE SHEET INFORMATION
+33. CONTINGENT ASSETS, LIABILITIES AND COMMITMENTS
+
+a) Regulatory and legal issues
+
+The Bank has engaged with relevant governmental and regulatory authorities, on a regular basis, and in response to informal and
+formal inquiries or investigations, regarding operational, systems and control evaluations and issues including those related to
+compliance with applicable laws and regulations, including consumer protection, business conduct, competition/anti-trust, anti-
+bribery, anti-money laundering and sanctions regimes.
+
+Any matters discussed or identified during such discussions and inquiries may result in, among other things, further inquiry or
+investigation, other action being taken by governmental and regulatory authorities, increased costs being incurred by the Bank,
+remediation of systems and controls, public or private censure, restriction of Bank’s business activities and/or fines.
+
+For legal cases where there is a significant probability of a negative outcome, and the result may be sufficiently estimated, the
+Bank creates a provision that is included in the Statement of Financial Position. There are no pending legal cases in progress which
+may have a material adverse impact on the Bank’s financial position (2023: nane). Therefore, the Bank has recorded no provision
+regarding pending litigation as at 31 December 2024.
+
+Capital Requirements (Country-by-Country Reporting) Regulations 2013 (“Regulations”) requires institutions to publish annually
+certain financial information. The Bank has complied with the Regulations in accordance with the provisions of Article 4 “Group
+disclosure” via the Greek tax authorities.
+
+b) Tax issues
+
+The Bank has no open matters in relation to the possibility that material additional taxes and penalties may be imposed for the
+unaudited years due to the fact that some expenses may not be recognised as deductible by the tax authorities.
+
+50
+ALPHA BANK LONOON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+c) Off-Balance sheet contingent liabilities and asset
+
+2024 2023
+Contingent liabilities £000's £000's
+Undrawn loan commitments 16,704 42,529
+Undrawn overdraft facilities which are revocable . 8,752 8,165
+Total 25,456 50,694
+
+2024 2023
+Contingent assets £000's £000's
+Loan facility commitment from parent , 40,000 150,000
+Total 40,000 150,000
+
+34, FINANCIAL RISK MANAGEMENT
+34.1 Overview
+
+The Board of Directors has overall responsibility for the establishment and oversight of the Bank’s objectives, policies, and
+processes for measuring and managing risk, and the management of capital. The Board has established a Risk and Compliance
+Committee which reviews and assesses the Bank’s risk appetite and recommends it to the Board for approval. On a day-to-day
+basis the Bank’s risk management processes are overseen by the relevant executives, the Executive Committee, Credit Risk
+Committee, Asset and Liability Committee, and the Risk Management Department.
+
+The Bank’s financial instruments, other than derivatives, principally comprise loans and deposits that arise from its operations as
+a lending and deposit-taking institution. It also has a portfolio of debt securities held for investment and liquidity purposes,
+predominantly consisting of securities qualifying as part of the liquid assets buffer.
+
+The main risks arising from the Bank’s financial instruments are credit risk, market risk and liquidity risk. Market risk includes
+market price risk, interest rate risk and foreign exchange risk. The Bank’s objectives, policies, and processes for measuring and
+managing these risks are described below and are the same as those in place in the previous year. The Board approves the Bank’s
+Risk Appetite Framework annually.
+
+34.2 Derivatives and other financial instruments
+
+The Bank enters into a small number of derivative transactions, principally forward foreign exchange contracts and cross currency
+swaps for liability management purposes.
+
+It is, and has been throughout the year under review, the Rank’s policy that no speculative trading in financial instrurnents shall
+be undertaken.
+
+34.3 Credit risk
+
+Credit risk is the risk that a customer or counterparty will default on its contractual obligations resulting in financial loss to the
+Bank. The Bank’s main income generating activity is lending to customers and therefore credit risk is a principal risk. Credit risk
+mainly arises from loans and advances to customers and other banks (including related commitments to lend such as loan
+facilities, investments in debt securities and derivatives that are an asset position). The Bank considers all elements of credit risk
+exposure such as counterparty default risk, geographical risk and sector risk for risk management purposes.
+
+Credit Risk Management
+
+The Bank’s overall Credit Risk Appetite is expressed through its Risk Appetite Framework and evidenced by its risk management
+policies (qualitative/descriptive) together with the exposure and authorisation limits (quantitative) that are in place.
+
+The policy regarding lending to bank and non-bank counterparties, countries and industries is set out in ABL's Lending Policy
+Statement, which is subject to periodic review by the Board.
+
+51
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued}
+
+The Bank has in place an internally defined, limit-based system to facilitate credit risk control and monitor actual risk-taking
+against a predetermined credit risk appetite. Exposure limits are set for individual borrowers and groups of connected borrowers
+as well as for certain industries, economic sectors, and geographic regions to control concentration risk, in line with the Bank’s
+risk appetite and business strategy.
+
+The limits established are constantly monitored and are subject to a regular review by the responsible (based on the amount of
+the limit) approval body. Limits relating to specific sectors and countries are examined and approved by the Board of Directors
+and are included in the Bank’s Risk Appetite Framework.
+
+The Bank’s exposure to credit risk is determined by the counterparties with whom the Bank conducts business, as well as the
+markets and countries in which those counterparties conduct their business. Counterparty and country limits are in place and
+the Bank performs credit appraisal procedures prior to advancing any facilities. The Bank also has policies on the levels of
+collateral required for secured facilities.
+
+The Credit Risk Management has the following governance in place:
+
+- The Bank’s Board of Directors reviews and approves the Risk Appetite Policy, Classification and Measurement Policy
+and impairment policy.
+
+- The Credit Risk Committee of the Bank has an oversight of the credit risk activities and the implementation of
+relevant strategy. The Committee is responsible for the evaluation of the adequacy and the effectiveness of policies
+and procedures of Bank's credit risk management regarding credit risk including portfolio risks, the monitoring and
+management by business line, geographic area, product activity and sector. The Committee will consider, and where
+appropriate approve, any necessary mitigating actions. The Committee is also responsible for adopting and
+maintaining Bank’s risk grading to categorise exposures according to the degree of risk of default and for developing
+and maintaining Bank’s processes for measuring ECL, including monitoring of credit risk, incorporation of forward-
+looking information and the method used to measure ECL.
+
+- Credit Committees approve individual credit limits and loan applications based on their delegated authority by the
+Group.
+
++ The Internal Audit function performs regular audits making sure that the established controls and procedures are
+adequately designed and implemented.
+
+IFRS 9 classification
+The classification summary of assets and liabilities is presented in Note 4.5.2.
+Significant increase in credit risk (Stage 2)
+
+As explained in note 4.5.4 the Bank monitors all financial assets that are subject to impairment requirements to assess whether
+there has been a significant increase in credit risk since initial recognition. If there has been a significant increase in credit risk the
+Bank will measure the loss allowance based on lifetime rather than 12-month ECL.
+
+This is assessed using qualitative and quantitative indicators.
+
+The qualitative indicators are the primary indicators for credit risk deterioration and are used to capture information that is not
+necessarily depicted in a timely fashion through the internal credit rating. The Bank has a comprehensive list of indicators
+described in its Early Warning Credit Risk Triggers document. The trigger events are reported by al! business lines involved in the
+lending process and credit risk monitoring and logged by Credit Risk Management. The events are evaluated every impairment
+cycle by the Credit Risk Committee and an expert judgement is made whether the event represents a significant increase in credit
+risk or not. The most significant types of events are:
+
+- Missed principal or interest repayment
+
+- Moving to watch list status
+
+- Unarranged overdrafts
+
+- Significant deterioration in the market / sector / location in which the borrower operates
+
+52
+ALPHA BANK LONDON LIMITED
+Annual! Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+- Breach of covenants
+- Adverse press publications
+- Accidents and damage to the property collateral
+
+The primary quantitative indicator is the internal credit rating score. The Bank uses an internal credit rating method, where the
+source of repayment and recovery of the loan granted depends primarily on the cash flows generated by the asset. The following
+areas are assessed using the model:
+
+- Financial strength (financial ratios, stress tests)
+
+- + Political and legal environment (country outlook, political environment)
+
+- Asset characteristics (location, lease agreement tenor)
+
+- Strength of sponsor (sponsor quality and willingness to support the property)
+- Security package (nature of lien, insurance, margin accounts)
+
+The assessment using the model will allocate the borrower into the one of the first four ratings in the table below (the assessment
+is performed at origination and annually thereafter):
+
+Rating
+
+i Strong
+
+2 Good
+
+3 Satisfactory
+4 Weak
+
+5 Default
+
+The Bank estimates that a relative change in the internal rating from 1, 2 and 3 at origination to 4 at the reporting date represents
+a significant increase in credit risk and the assets will be reclassified from Stage 1 to Stage 2
+
+In addition, loans will automatically be moved to Stage 2 if certain “backstop” events occur. This includes material arrears of
+greater than 30 days past due and the granting of certain concession events such as forbearance, where full repayment of
+principal and interest is expected.
+
+Non-performing exposures and definition of default (Stage 3)
+
+A loan is non-performing where it is considered unlikely that the borrower will repay its credit obligations in full, without recourse
+to actions such as realising security. Loans will be classified as credit impaired in any of the following circumstances:
+
+- The exposure is more than 90 days past due.
+- Legal actions have been undertaken by the Bank.
+- The borrower is assessed as Unlikely to Pay (UTP)
+
+When the credit worthiness of a loan account has deteriorated to such an extent that a loss seems likely, Credit Unit will decide
+if there should be a partial or total write off of the commitment. Any written off assets which are subject to enforcement actions
+resulting in subsequent recoveries shall first be applied against interest and any surplus applied to any principal.
+
+Use of forward-looking economic information
+
+Forward looking economic information is incorporated into the measurement of provisions in two ways: as an input to the
+calculation of ECL and as a factor in determining the staging of an asset. Expectations of future economic conditions are
+incorporated through modelling of multiple economic scenarios (MES).
+
+The use of multiple economic scenarios ensures that the calculation of ECL captures a range of possible outcomes. The IFRS 9 ECL
+provision reported in the accounts is therefore the probability-weighted sum of the provisions calculated under a range of
+economic scenarios.
+
+The Bank has adopted the use of three economic scenarios (base, upside and downside scenarios). The scenarios and the
+
+weightings are derived using external data and together with management judgement. Below is a summary of assumptions and
+forward-looking information used as at 31 December 2024, together with the sensitivity analysis per scenario:
+
+53
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+ALPHA BANK LONGON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+Scenarios Macroeconomic factor: Scenario ECL before ECL sensitivity to 1%
+property price moves 1 probability probability increase in scenario
+year weighting probability
+Adverse Scenario -32%*** 10% 43,427 434
+Base Scenario -15% 80% 6,142 61
+Upside Scenario 0% 10% - -
+Weighted / Total -19%* 100% 9,256 **
+
+* Bank’s probability weighted price move compared to Savill's 2024 forecast of +43% in 2025, see Savill's website, mainstream
+
+residential forecast data (Savills UK | Mainstream Residential Forecasts 2025-29)
+** Including off-balance sheet loan commitments
+
+*** average by combining residential -28% and commercial -35% price movements
+
+Below is a summary of assumptions and forward-looking information used as at 31 December 2023, together with the sensitivity
+
+analysis per scenario:
+
+Scenarios Macroeconomic factor: Scenario ECL before ECL sensitivity to 1%
+property price moves 1 probability probability increase in scenario
+year weighting probability
+Adverse Scenario -40%*** 15% 77,040 770
+Base Scenario -20% 80% - -
+Upside Scenario -B% 5% - -
+Weighted / Total -15%* 100% 11,556 **
+
+* Bank’s probability weighted price move compared to Savill's 2023 forecast of -3% in 2024, see Savill's website, mainstream
+
+residential forecast data (Savills UK | Mainstream Residential Forecasts 2024-28}
+
+** Including off-balance sheet loan commitments
+
+*** average by combining residential -35% and commercial -45% price movements
+
+54
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Measuring credit losses
+
+Expected Credit Loss (ECL} is calculated using the following formula:
+
+Probability of default (‘PD’) x Exposure at default (‘EAD’) x Loss given default (‘LGD’)
+
+Definition
+
+Probability of default
+(PD)
+
+The probability of a default event occurring based on conditions existing at the reporting date
+and future economic conditions that affect credit risk. Probability of default has been
+determined based on external Credit Rating agencies corporate default studies adjusted for
+ABL business model and UK macroeconomic environment. The lifetime PD forms part of the
+IFRS 9 stage assessment as well as the ECL calculation.
+
+Exposure at default
+
+The expected outstanding balance of the asset at default, considering the repayment of
+principal and interest from the reporting date to the date of default.
+
+Loss given default
+
+The proportion of the exposure that is expected to be lost in the event of default, taking
+
+account of the impact of collateral and its expected value at the point of realisation.
+
+To calculate the lifetime ECL for a loan, separate 12-month ECL calculations are performed for each year of the loan’s expected
+life. The outputs of these calculations for each year are then combined.
+
+The PD, EAD and LGD inputs for the 12-month ECL calculations incorporate management's expectations of future performance,
+including forward looking economic assumptions. To reflect the uncertainty inherent in economic forecasting, multiple ECL
+calculations are performed using different sets of assumptions (scenarios) that are considered possible.
+
+The tables below show the Bank’s exposure to credit risk based on the Bank’s internal credit rating system and the markets and
+countries in which the Bank’s customers conduct their business. As at 31 December, these exposures are as follows:
+
+34.3.1 Credit risk - loans and advances to customers, due from banks and investment securities
+
+Loans and advances to customers at
+
+amortised cost
+
+Credit Rating Zone:
+Strong
+
+Satisfactory
+
+Watch List
+
+Default
+
+Not rated
+
+Total gross carrying amount
+Loss allowance
+
+Net carrying amount
+
+2024 2023
+Stage 1 Stage 2 Stage 3 Total Total
+Lifetime Lifetime
+12-month ECL ECL ECL
+£000’s £000’s £000’s £000's £000’s
+103,360 - - 103,360 75,943
+257,996 29,452 - 287,448 250,813
+- 3,346 - 3,346 3,344
+- - 3,314 3,314 -
+361,356 32,798 3,314 397,648 330,100
+(9) : : (9) (10)
+361,347 32,798 3,314 397,459 330,090
+
+55
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Loan commitments
+
+Credit Rating Zone:
+
+Strong
+
+Satisfactory
+
+Watch List
+
+Default
+
+Not Rated
+
+Total amount committed
+
+Loss allowance
+
+Due from banks at amortised cost
+
+External Credit Ratings:
+
+AAA — AA3
+A1-A3
+BAA1 — BAA3
+B1-B3
+
+CAA1 — CAA3
+Not Rated
+
+Total gross carrying amount
+
+Loss allowance
+
+Net carrying amount
+
+tnvestment securities at FVTOCI
+
+External Credit Ratings:
+
+AAA - AA3
+
+A1~A3
+
+BAA1 — BAA3
+
+Total carrying amount
+
+Loss allowance
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+2024 2023
+Stage 1 Stage 2 Stage 3 Total Total
+12-monthect “FEtiM®  itetime ECL
+ECL
+£000’s £000’s £000’s £000’s £000’s
+13,455 - - 13,455 13,302
+12,001 : - 12,001 37,392
+25,456 - - 25,456 50,694
+- - - - (1)
+2024 2023
+Stage 1 Stage 2 Stage 3 Total Total
+Lifetime... , ,
+12-month ECL ECL Lifetime ECL £000’s £000’s
+3,838 . - 3,838 3,636
+31,909 - - 31,909 33,548
+680 - . 680 1,603
+- - - - 1,238
+120 - - 120 -
+420 - - 420 633
+36,967 - - 36,967 40,658
+36,967 - - 36,967 40,658
+2024 2023
+Stage 1 Stage 2 Stage 3 Total Total
+12-month ECL an Lifetime ECL £000's £000’s
+42,230 . . 42,230 78,097
+42,230 - . 42,230 78,097
+
+(3)
+
+(3)
+
+(8)
+
+The external credit ratings are shown in Moody's scale equivalent.
+
+“Not rated” encompasses exposures where there’s no external rating available from Moody's.
+
+56
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+This table summarises the loss allowance as of the year end by asset class:
+
+Cumulative allowance by asset class
+
+Loans and advances to customers at amortised cost
+Investment securities at FVTOCI
+Undrawn commitments
+
+Total
+
+ALPHA BANK LONDON LIMITED
+
+Annual Report and Financial Statements
+31 December 2024
+
+The tables below analyse the movement of the loss allowance during the year per class of assets.
+
+Loss allowance - Debt investment securities at FVTOCI
+
+Loss allowance as at 1 January 2024
+Changes in the loss allowance
+
+—Transfer to stage 1
+
+—Transfer to stage 2
+
+—Transfer to stage 3
+
+—Increases due to changes in credit risk
+—Decreases due to changes in credit risk
+—Write-offs
+
+New financial assets originated or purchased
+Financial assets that have been derecognised
+Changes in models / risk parameters
+
+FX changes and other movements
+
+Loss allowance as at 31 December 2024
+
+Loss allowance - Debt investment securities at FVTOCI
+
+Loss allowance as at 1 January 2023
+Changes in the loss allowance
+
+—Transfer to stage 1
+
+—tTransfer to stage 2
+
+—Transfer to stage 3
+
+Increases due to changes in credit risk
+—Decreases due to changes in credit risk
+—Write-offs
+
+New financial assets originated or purchased
+Financia! assets that have been derecognised
+Changes in models / risk parameters
+
+FX changes and other movements
+
+Loss allowance as at 31 December 2023
+
+Year ended Year ended °
+
+2024 2023
+
+£’000s £’000s
+
+9 10
+
+3 8
+
+- 1
+
+12 19
+
+Stage 1 Stage 2 Stage 3 Total
+12-month ECL Lifetime ECL Lifetime ECL
+
+£7000s £’000s £'000s £’000s
+
+8 - - 8
+
+(2) - - (2)
+
+2 - - 2
+
+(5) - - (5)
+
+3 - - 3
+
+Stage 1 Stage 2 Stage 3 Total
+12-month ECL Lifetime ECL Lifetime ECL
+
+£’000s £’000s £’000s £’000s
+
+12 . - 12
+
+(3) - - (3)
+
+5 - - 5
+
+(6) - - (6)
+
+8 - - 8
+
+57
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Loss allowance - Loans and advances to customers at
+amortised cost
+
+Loss allowance as at 1 January 2024
+Changes in the loss allowance
+
+—Transfer to stage 1
+
+~~Transfer to stage 2
+
+~—Transfer to stage 3
+
+—Increases due to changes in credit risk
+Decreases due to changes in credit risk
+~~Write-offs
+
+New financial assets originated or purchased
+Financial assets that have been derecognised
+Changes in models / risk parameters
+
+FX changes and other movements
+
+Loss allowance as at 31 December 2024
+
+Loss allowance - Loans and advances to customers at
+amortised cost
+
+Loss allowance as at 1 January 2023
+Changes in the loss allowance
+
+—tTransfer to stage 1
+
+—tTransfer to stage 2
+
+—Transfer to stage 3
+
+~—tIncreases due to changes in credit risk
+~~Decreases due to changes in credit risk
+—Write-offs
+
+New financial assets originated or purchased
+Financial assets that have been derecognised
+Changes in models / risk parameters
+
+FX changes and other movements
+
+Loss allowance as at 31 December 2023
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+Stage 1 Stage 2 Stage 3 Total
+12-month ECL Lifetime ECL Lifetime ECL
+
+£’000s £’000s £’000s £’000s
+
+8 2 - 10
+
+(9) (2) - (11)
+
+10 - - 10
+
+9 - - 9
+
+Stage 1 Stage 2 Stage 3 Total
+12-month ECL Lifetime ECL Lifetime ECL
+
+£'000s £’000s £’000s £’000s
+
+168 11 - 179
+
+{2} 2 - -
+
+(158) (11) - (169)
+
+g 2 - 10
+
+58
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Loss allowance - Loans commitments
+
+Loss allowance as at 1 January 2024
+Changes in the loss allowance
+
+—Transfer to stage 1
+
+—Transfer to stage 2
+
+—Transfer to stage 3
+
+—Increases due to changes in credit risk
+—Decreases due to changes in credit risk
+—wWrite-offs
+
+New financial assets originated or purchased
+Financial assets that have been derecognised
+Changes in models / risk parameters
+
+FX changes and other movements
+
+Loss allowance as at 31 December 2024
+
+Loss allowance - Loans commitments
+
+Loss allowance as at 1 January 2023
+Changes in the loss allowance
+
+—Transfer to stage 1
+
+—Transfer to stage 2
+
+—Transfer to stage 3
+
+—lIncreases due to changes in credit risk
+~—Decreases due to changes in credit risk
+—Write-offs
+
+New financial assets originated or purchased
+Financial assets that have been derecognised
+Changes in models / risk parameters
+
+FX changes and other movements
+
+Loss allowance as at 31 December 2023
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+' 31 December 2024
+
+Stage 1 Stage 2 Stage 3 Total
+12-monthECL Lifetime ECL Lifetime ECL
+
+£'000s £’000s £’000s £’000s
+
+1 - - 1
+
+(1) - - (1)
+
+Stage 1 Stage 2 Stage 3 Total
+12-month ECL Lifetime ECL Lifetime ECL
+
+£7000s £’000s £’000s £’000s
+
+1 - - 1
+
+1 - - 1
+
+Is
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+34.3.2 Concentration by sector as at 31 December 2024
+
+Due from
+banks at Loans and Investment
+amortised advances at securities at
+cost amortised cost FVTOCI Total
+£000’s £000's £000’s £000’s
+Multilateral development banks - - 9,668 9,668
+Sovereigns - - 32,562 32,562
+Banks 36,967 - - 36,967
+Individuals - 33,854 - 33,854
+Real estate companies - 363,605 - 363,605
+Total 36,967 397,459 42,230 476,656
+Concentration by sector as at 31 December 2023
+Due from
+banks at Loans and
+amortised advances at Investment
+cost amortisedcost securities FVTOCI Total
+£000’s £000’s £000’s £000’s
+Multilateral development banks - - 33,209 33,209
+Sovereigns - - 44,888 44,888
+Banks 40,658 - - 40,658
+Individuals - 30,351 - 30,351
+Real estate companies - 299,739 - 299,739
+Total 40,658 330,090 78,097 448,845
+Concentration by location as at 31 December 2024
+Loans and
+Due from advances at Investment
+banks at amortised securities at
+amortised cost cost FVTOCI Total
+Country Group £000’s £000’s £000’s £000’s
+UK Domestic 7,990 385,061 11,876 404,927
+Greece Parent 477 1,803 - 2,280
+Luxembourg Eurozone 680 - - 680
+Germany Eurozone 95 - - 95
+Belgium Eurozone 3,901 - 8,260 12,161
+France Eurozone 18,676 - 12,426 31,102
+Cyprus Eurozone - 10,058 - 10,058
+USA North America 5,148 - - 5,148
+Supranational organisations Supranational - - 9,668 9,668
+Guernsey Offshore - - - -
+Other Other - 537 - 537
+Total 36,967 397,459 42,230 476,656
+
+60
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Concentration by location as at 31 December 2023
+
+Loans and
+
+Due from advances at Investment
+
+banks at amortised securities
+amortised cost cost at FVTOCI Total
+Country Group £000’s £000’s £000’s £000’s
+UK Domestic 11,055 316,080 11,877 339,012
+Greece Parent 1,692 2,301 - 3,993
+Luxembourg Eurozone 1,603 - - 1,603
+Germany Eurozone 412 - - 412
+Belgium Eurozone , 3,815 : 8,771 12,586
+France Eurozone 13,598 1,493 13,145 28,236
+Cyprus Eurozone - 9,878 - 9,878
+USA North America 8,484 - - 8,484
+Supranational organisations Supranational - - 33,209 33,209
+Guernsey Offshore - - - -
+Other Other - 338 11,095 11,433
+Total 40,659 330,090 78,097 448,846
+
+The presentation follows the FINREP convention showing the location of the borrower for all classes of assets.
+Supranational organisations include European Investment Bank debt securities of £nil (2023: £15,765,141).
+
+The Bank’s maximum credit exposure is £504,978,000 (2023: £499,884,000) including derivatives and committed undrawn
+facilities. The table below shows further breakdown.
+
+2024 2023
+£000‘s £000‘s
+Due from banks at amortised cost (including derivatives) 39,834 41,003
+Loans and advances at amortised cost (including committed undrawn facilities) 422,914 380,784
+Investment securities at FVTOCI 42,230 78,097
+Total
+504,978 499,884
+34.3.3 Loans and advances to customers: impairment analysis
+As at 31 December 2024
+Gross
+carrying Net carrying
+amount ECL amount
+£000’s £000’s £000’s
+Not past due (current) 397,234 (9) 397,225
+Past due from 1 to 29 days 234 - 234
+Past due from 30 to 59 days - - -
+Past due from 60 to 89 days ‘ - - -
+Past due over 90 days - - -
+Total 397,468 (9) 397,459
+
+61
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+As at 31 December 2023
+
+Not past due (current)
+
+Past due from 1 to 29 days
+Past due from 30 to 59 days
+Past due from 60 to 89 days
+Past due over 90 days
+
+Total
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+
+31 December 2024
+
+Gross
+carrying Net carrying
+amount ECL amount
+£000’s £000’s £000’s
+330,010 (10) 330,000
+80 - 80
+330,090 (10) 330,080
+
+The carrying amount of loans which are individually impaired is written down to the recoverable amount of all expected future
+cash flows, discounted using the original effective interest rates. There were no loans written off during the year (2022: none).
+
+34.3.4 Loans and advances - collateral analysis
+
+At the year-end, fully secured tending accounts for almost 100% (2023: almost 100%) of the loans and advances to customers. A
+breakdown of the fully collateralised lending is summarised in the table below. Collateral may consist of property, cash or
+guarantees. The fair value of the collateral exceeds the carrying amount of the loan in all cases (except for impaired loans) and
+as such the value of the loan is shown and not the value of the collateral. Formal valuations of collateral are obtained prior to
+disbursement of all loans. These valuations are annually updated to ‘desktop valuations’ using the land price index from the HM
+Land Registry, in the case of residential accommodation, and by using the latest CBRE review of Prime Rents and Yields for
+
+commercial investment properties in the UK.
+
+Collateralised loans 2024 2024 2023 2023
+£000’s £000's £000’s £000’s
+Gross exposure ECL Gross exposure ECL
+LTVs < 40% 73,281 0 56,806 (1)
+LTVs > 40% < 50% 108,230 - 112,266 -
+LTVs > 50% < 60% 200,466 - 161,018 (9)
+LTVs > 60% < 70% 14,241 (9) - -
+LTVs > 70% < 80% 1,248 - - -
+LTVs > 80% < 100% - - - -
+LTVs >= 100% 2 - - -
+Cash collateralised lending - - - -
+Other collateralised lending - - - -
+Unsecured lending (Syndicated Bond Loans
+and other loans) ; " ;
+Total of collateralised fending 397,468 {9} 330,090 (10)
+
+62
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+34.4 Market risk
+34.4.1 Overview
+
+Market risk is the risk of losses arising from unfavourable changes in the value of interest rates, foreign exchange rates and credit
+spreads that will affect the Bank’s income and/or value of its holdings of financial instruments. Losses may also occur either from
+the FVTOCI portfolio or from the asset liability management. The objective of market risk management is to maintain market risk
+exposures within acceptable parameters. The Bank has a portfolio of debt securities held for investment and liquidity purposes,
+predominantly consisting of securities qualifying as part of the liquid assets buffer. It is the Bank’s policy to hold all such securities
+as FVTOCI. Management monitor market price movements of the financial instruments held, and these details are circulated for
+review to the Board of Directors.
+
+34.4.2 Interest rate risk
+
+Interest rate risk is the risk that the fair value of future cash flows of a financial instrument will fall because of changes in market
+interest rates: The Bank principally borrows and lends to customers at floating rates of interest. Occasionally it may lend to
+customers at a fixed interest rate, in which the resulting interest rate risk is naturally hedged through the equity of the liability
+side. At 31 December 2024 the Bank had ten fixed rate loans (2023: the Bank had no fixed rate loans).
+
+Key management personnel monitor interest rate risk via daily interest rate sensitivity reporting as well as a more thorough
+review for regulatory reporting purposes on a quarterly basis.
+
+34.4.3 Interest rate profile
+A 2% fall in benchmark interest rates is estimated to decrease net interest income by £860,000 (2023: increase of £326,000). This
+is calculated in line with guidance from the Prudential Regulation Authority. The decrease in 2024 is caused by the subordinated
+
+debt being fixed rate and repricing after five years whilst loans will reprice to reflect the lower interest rate at the next rollover,
+typically within three months.
+
+The table below summarises the re-pricing mismatches on the Bank’s non-trading book as at 31 December. Items are allocated
+to time bands by reference to the earlier of the next contractual interest rate re-pricing date and the maturity date.
+
+INTEREST RATE PROFILE AT 31 DECEMBER 2024
+
+Non-
+Carrying . 1-3 3-12 > interest
+amount <1 month months months 1-Syears 5Syears bearing
+£000’s £000’s £000’s £000’s £000’s £000’s £000’s
+Assets
+Due from credit institutions 36,967 36,967 - - - - -
+Loans and advances to
+Customers. 397,459 370,746 26,143 569 - - -
+Investment securities 42,230 9,404 26,899 5,927 - - -
+Property, equipment and
+software 3,354 - - - - - 3,354
+Current tax 402 - - - - - 402
+Deferred tax asset - - - - - - -
+Other assets 1,856 - - - - - 1,856
+Derivative financial assets 2,868 - - - - - 2,868
+Total 485,136 417,117 53,042 6,496 - - 8,480
+Liabilities
+Due to banks 1,962 1,962 - - - - -
+Derivative financial liabilities 899 - - - : - 899
+Due to customers 397,172 147,265 98,568 151,340 - - -
+Subordinated debt 10,004 - - - - - -
+Deferred tax liability 251 - - - - - 251
+Lease liabilities 1,996 - - - - - 1,996
+Other liabilities 4,470 - - : - - 4,470
+Equity 68,382 - - - - - 68,382
+Total 485,136 149,227 98,568 151,340 - - 75,998
+
+63
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+INTEREST RATE PROFILE AT 31 DECEMBER 2023
+
+Non-
+Carrying 1-3 3-12 1-5 interest
+amount <1 month months months years > 5 years bearing
+£000’s £000’s £000’s £000’s £000’s £000’s £000’s
+Assets
+Cash - - - - - - -
+Due from credit
+institutions 40,658 40,658 : - - - -
+Loans and advances to 330,090 295,943 34,147 . . . .
+Customers
+Investment securities 78,097 19,311 13,898 44,888 - - -
+Property, equipment and
+software 2,948 - - - ~ - 2,948
+Current tax 110 - - - ~ - 110
+Deferred tax asset 28 - - ~ - 28
+Other assets 799 - - - - 799
+Derivative financial assets 345 - - - - - 345
+Total 453,075 355,912 48,045 44,888 - - 4,230
+Liabilities
+Due to banks 201 201 - - ~ - -
+Derivative financial - - - - 1,724
+liabilities 1,724 -
+Due to customers 370,324 161,494 83,037 125,793 ~ - .
+Subordinated debt 10,006 10,006 . . - - .
+Deferred tax liability 16 - - - - - 16
+Lease liabilities 2,811 - - - - - 2,811
+Other liabilities 1,990 - - - ~ - 1,990
+Equity 66,003 - - - - - 66,003
+Total 453,075 171,701 83,037 125,793 - - 72,544
+
+34.4.4 Foreign currency risk
+
+ABL has exposure to currency risk due to the volatility of foreign exchange rates. Foreign currency exposure arises through the
+daily mark to market of forward foreign exchange contracts and currency swaps conducted in the normal course of business for
+asset and liability management purposes. In addition, ABL offers foreign exchange services to customers however no proprietary
+positions are taken with any small residual open positions being managed within currency limits.
+
+64
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+34.4.5 Currency exposures
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+The table below shows the Bank’s currency exposures. Such exposures comprise the assets and liabilities of the Bank. As at 31
+
+December, these exposures were as follows:
+
+FOREIGN EXCHANGE POSITION AS AT 31 DECEMBER 2024
+
+GBP USD EUR OTHER TOTAL
+ASSETS £000’s £000’s £000's £000’s £000’s
+Due from banks - 8,904 6,463 21,079 521 36,967
+Derivative financial assets 2,868 - - - 2,868
+Loans and advances to customers 383,714 673 13,072 : 397,459
+Investment securities (FVOCI) 11,876 9,668 20,686 - 42,230
+Property, equipment, and software 3,354 - - - 3,354
+Current tax 402 - - - 402
+Deferred tax - - - - -
+Other assets 1,856 - - - 1,856
+Total Assets 412,974 16,804 54,837 521 485,136
+LIABILITIES
+Due to banks . 72 113 1,777 - 1,962
+Derivative financial liabilities 899 - - - 899
+Due to customers 133,917 90,794 171,138 1,323 397,172
+Borrowed funds 10,004 - - - 10,004
+Deferred tax 251 - - - 251
+Lease liabilities 1,996 - - - 1,996
+Provisions - - - - -
+Other liabilities 4,408 28 34 - 4,470
+Equity 68,363 11 8 - 68,382
+Total Liabilities 219,910 90,946 172,957 1,323 485,136
+Net on-balance sheet position 193,064 (74,142) (118,120) (802) -
+Notional off-balance sheet position
+derivatives (190,622) 74,116 118,084 804 2,382
+Net position 2,442 (26) (36) 2 2,382
+
+65
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+FOREIGN EXCHANGE POSITION AS AT 31 DECEMBER 2023
+
+GBP USD EUR OTHER TOTAL
+ASSETS £000’s £000’s £000’s £000's £000’s
+Cash and balances with central banks - - - - -
+Due from banks 11,859 9,757 16,765 2,277 40,658
+Derivative financial assets 345 - - - 345
+Loans and advances to customers 320,681 942 8,467 - 330,090
+Investment securities (FVOCI} 11,878 33,209 33,010 - 78,097
+Property, equipment, and software 2,948 - - - 2,948
+Current tax 110 110
+Deferred tax 28 - - - 28
+Other assets 799 - - - 799
+Total Assets 348,648 43,908 58,242 2,277 453,075
+LIABILITIES
+Due to banks 141 60 - ~ 201
+Derivative financial liabilities 1,724 - - - 1,724
+Due to customers 101,295 34,051 182,701 2,277 370,324
+Borrowed funds 10,006 - - - 10,006
+Deferred tax 16 - - - 16
+Lease liabilities 2,811 - - - 2,811
+Provisions 1 - - - 1
+Other liabilities 1,989 - - - 1,989
+Equity 66,000 (1) 4 - 66,003
+Total Liabilities 183,983 84,110 182,705 2,277 453,075
+Net on-balance sheet position 164,665 (40,203) (124,462) - *
+Notional off-balance sheet position derivatives (165,546) 40,222 124,469 - (855)
+Net position . (881) 19 7 - (855)
+34.5 Liquidity risk
+
+It is Bank policy to maintain a sufficient buffer to meet liquidity requirements as set out in the Internal Liquidity Adequacy
+Assessment Process (“ILAAP”) document.
+
+Liquidity risk is the risk that the Bank will not have sufficient funds to meet its obligations. The Bank's exposure to liquidity risk is
+managed based on policies set by the Board and agreed with the Prudential Regulation Authority. These include the holding of
+sufficient immediately available cash or marketable assets, ensuring asset and liability cash flows are appropriately matched and
+having the ability to arrange further borrowing if required. Customer retail deposits are protected by a liquid assets buffer.
+
+A maturity analysis is set out below. Cash flows arising from all liabilities are estimated and classified into relevant time periods,
+depending on when they occur. Management have used current interest rates to estimate future interest cash flows. The table
+below analyses liabilities into relevant maturity groupings based on the remaining period at the Statement of Financial Position
+date to the contractual maturity date and estimated interest outflows.
+
+66
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+MATURITY ANALYSIS OF FINANCIAL LIABILITIES AS AT 31 DECEMBER 2024
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+Gross
+Carrying nominal 1-3 3-12 1-5
+amount outflow <1 month months months years >5 years
+£000’s £000’s £000’s £000’s £000’s £000’s £000’s
+NON-DERIVATIVE LIABILITIES
+Due to banks 1,962 (1,962) (1,962) - - - -
+Due to customers 397,172 (400,660) (152,729) (93,685) (154,246) - -
+Borrowed funds 10,004 (13,454) - - - (13,454) -
+Other liabilities 6,717 (6,847) (4,721) (211) (853) (1,062) -
+Total 415,855 (422,923) (159,412) (93,896) (155,099) (14,516) -
+MATURITY ANALYSIS OF FINANCIAL LIABILITIES AS AT 31 DECEMBER 2023
+Gross
+Carrying nominal 1-3 3-12 1-5
+amount outflow <1 month months months years >5 years
+£000’s £000's £000's £000’s £000's £000’s £000’s
+NON-DERIVATIVE LIABILITIES
+Due to banks 201 (201) (201) - - - -
+Due to customers 370,324 (372,963) (165,675) (79,555) (127,733) - -
+Borrowed funds 10,006 (10,410) - 163 (10,573) - -
+Other liabilities 4,800 (4,960) (2,007) (205) (826) (1,922) -
+Total 385,331 (388,534) (167,883) (79,597) (139,132) (1,922) -
+MATURITY ANALYSIS OF DERIVATIVE LIABILITIES AS AT 31 DECEMBER 2024
+Gross
+Carrying nominal 1-3 3-12 1-5
+amount outflow <1 month months months years > 5 years
+£000’s £000's £000’s £000's £000’s £000's £000's
+DERIVATIVE LIABILITIES
+Derivative financial liability 899 (899) - (899) - - “
+Total 899 (899) - (899) “ - -
+MATURITY ANALYSIS OF DERIVATIVE LIABILITIES AS AT 31 DECEMBER 2023
+Gross
+Carrying nominal 1-3 3-12 1-5
+amount outflow <1 month months months years >S5 years
+£000’s £000's £000’s £000’s £000’s £000’s £000’s
+DERIVATIVE LIABILITIES
+Derivative financial liability 1,724 (1,724) - (1,724) - - -
+Total 1,724 (1,724) - (1,724) - - -
+
+67
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+34.6 Climate Change risk
+
+Climate Change risk is the risk of financial loss or significant alteration to a firm’s strategic objectives, arising from, or as a result
+of, the manifestation of one or more disruptive weather-related or environmental events. Financial risks from climate change
+arise through two primary channels, or risk factors: physical and transition.
+
+The Bank’s lending policy has been updated to include controls around the physical and transition risk resulting from climate
+change risk.
+
+The Bank has assessed the impact of climate change on its lending business and there was no material exposure to climate
+change risk during the reporting period.
+
+34.7 Capital management
+The Bank’s objectives when managing capital are to:
+
+e Safeguard the Bank’s ability to continue as a going concern;
+e Comply with the capital requirements set by its regulators at al! times; and
+e Maintain a strong capital base to support the future strategy and development of the business.
+
+It is Bank policy to maintain a sufficient buffer to meet capital requirements as set out in the Internal Capital Adequacy
+Assessment Process (“ICAAP”} document.
+
+The Bank is subject to minimum capital requirements imposed by the Prudential Regulatory Authority (“PRA”) following
+guidelines developed by the Basel Committee on Banking Supervision and implemented in the United Kingdom by the European
+Union Capital Requirements Directive and Regulation (together known as “CRD V” /“CRR II”). Under this framework the Bank has
+elected to adopt the standardised approach for credit and market risk, and the basic indicator approach for operational risk. The
+minimum requirement set by the PRA, known as the Bank’s Individual Capital Guidance (“ICG”), is expressed as a percentage of
+total capital to total risk-weighted assets together with a capital planning buffer.
+
+The Bank calculates its capital requirement and compares it with its ICG monthly. During the year no breaches of externally
+imposed capital requirements have been reported.
+
+The Bank’s regulatory capital is set out below and includes Tier | capital (share capital, retained earnings and the fair value reserve)
+and Tier 2 capital (subordinated debt).
+
+Regulatory analysis
+
+2024 2023
+£000's £000’s
+
+Tier 1
+Share capital 30,000 30,000
+Retained earnings 38,360 36,005
+FVTOCI reserve . 22 (2)
+Intangible assets (1,367) (87)
+Total Tier 1 capital 67,015 65,916
+
+Tier 2
+Subordinated debt (excluding accrued interest). 10,000 2,000
+Total Tier 2 capital 10,000 2,000
+Total Tier 1 and Tier 2 capital 77,015 67,916
+Total regulatory capital ; 77,015 67,916
+
+68
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+’ NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+OTHER INFORMATION
+
+35. RELATED PARTY TRANSACTIONS
+
+A number of banking transactions are entered into with related parties in the normal course of business and include loans,
+
+deposits and foreign currency transactions. The outstanding balances at the year-end, and the related income and expense for
+the year are as follows:
+
+As at 31 December 2024 Parent Fellow Key
+subsidiaries/ management
+affiliates personnel
+£000's £000's £000's
+Assets
+Derivative financial instruments 2,868 - -
+Due from banks 120 357 -
+Other _ - 9 -
+Total assets 2,988 366 -
+Liabilities
+Derivative financial instruments 899 - -
+Due to banks 1,962 - -
+Due to customers - 117 -
+Debt securities in issue and other borrowed funds 10,004 - -
+Other Liabilities - 16 -
+Total liabilities ; 12,865 133 -
+Income
+Interest an loans and advances 6,014 - -
+Services provided - 173 -
+Total income 6,014 173 -
+Expenses
+Interest expense on due to banks 7,891 - -
+Interest expense on debt securities in issue and other
+borrowed funds 724 - -
+Employee benefits - - 4,196
+Employee pension contributions - - 206
+Information systems costs - 16 -
+Total expenses 8,615 16 4,402
+Loan facility commitment 40,000
+
+All related party transactions were made on an arm’s length basis. All outstanding assets and liabilities are unsecured and will be
+settled in cash.
+
+The Bank also records related party transactions to entities controlled by key management and associated companies, but there
+were no such transactions during 2024.
+
+The other liabilities consist of an accrual for the IT expenses incurred from a group Bank. The income for services provided is safe
+custody fees from a group Bank.
+
+69
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+As at 31 December 2023 Parent Fellow Key
+subsidiaries/ management
+affiliates personnel
+£000's £000's £000's
+Assets
+Derivative financial instruments 345 - -
+Due from banks 1,238 454 -
+Other - 3 -
+Total assets 1,583 457 -
+Liabilities
+Derivative financial instruments 1,724 - -
+Due to banks 201 - -
+Due to customers - 122 -
+Debt securities in issue and other borrowed funds 10,006 - -
+Other Liabilities - 3 -
+Total liabilities 11,931 125 -
+Income
+Interest on loans and advances 5,631 - -
+Services provided - 83 -
+Total income 5,631 83 -
+Expenses
+Interest expense on due to banks 7,605 - -
+Interest expense on debt securities in issue and other borrowed 672 -
+funds -
+Employee benefits - - 3,499
+Employee pension contributions - - 173
+Information systems costs - 16 -
+Total expenses 8,277 16 , 3,672
+Loan facility commitment 150,000 ~ -
+
+All related party transactions were made on an arm’s length basis. All outstanding assets and liabilities are unsecured and will be
+settled in cash.
+
+The Bank also records related party transactions to entities controlled by key management and associated companies, but there
+were no such transactions during 2023.
+
+The other liabilities consist of an accrual for the IT expenses incurred from a group Bank. The income for services provided is safe
+custody fees from a group Bank.
+
+70
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+36. FAIR VALUE OF FINANCIAL INSTRUMENTS
+
+Financial instruments include financial assets and liabilities. The following sets out the Bank’s basis for establishing fair values for
+each category of financial instrument: :
+
+¢ Due from banks; the fair value of floating rate placements and overnight deposits is their carrying value.
+
+e Loans and advances to customers; the majority of the loans and advances as at 31 December 2024 are at
+variable rates and re-price in response to changes in market rates. Credit spreads are not deemed to have
+changed materially during the year. In addition, the loan portfolio is fully collateralised. Therefore, the fair
+value of this book has been estimated to be approximately equal to the carrying value. The fair value of
+impaired assets is measured as the present value of estimated future cash flows (including any collateral held
+and the costs of realising the collateral) discounted at the asset’s original effective interest rate.
+
+e Deposits from banks and customers; the fair value of deposits with a residual maturity of less than one year
+has been generally estimated to be approximately equal to the carrying value.
+
+« {Investment securities: the fair value is their carrying value as all investment securities are listed and the fair
+value is based upon quoted market prices.
+
+e Derivatives: the fair value is their mark to market value.
+
+« There were no transfers between levels 1, 2 and 3 during the year (2023: none).
+
+Set out below is a comparison by category of book values and fair values of the Bank’s financial assets and liabilities as at 31
+December, grouped into Levels 1 to 3 based on the degree to which the fair value is observable.
+
+* tevel 1 fair value measurements are those derived from quoted prices (unadjusted) in active markets for
+identical assets or liabilities;
+
+e Level 2 fair value measurements are those derived from inputs other than quoted prices included in Level 1 that
+are observable for the asset or liability, either directly (i.e., as prices) or indirectly (i.e., derived from prices);
+and
+
+* Level 3 fair value measurements are those derived from valuation techniques that include inputs for the asset
+or liability that are not based on observable market data (unobservable inputs).
+
+Carrying value Fair value Level 1 Level 2 Level 3
+
+As at 31 December 2024
+£000's £000's £000's £000's £000's
+
+Financial assets
+Derivative financial assets 2,868 2,868 - 2,868 -
+Due from credit institutions 36,967 36,967 36,967 - -
+Investment securities 42,230 42,230 42,230 - -
+Loans and advances to customers 397,459 397,674 , - ~ 397,674
+Total financial assets 479,524 479,739 79,197 2,868 397,674
+Financial liabilities
+Derivative financial liabilities 899 899 - 899 -
+Due to banks 1,962 1,962 1,962 - -
+Due to customers 397,172 397,172 - - 397,172
+Other borrowed funds 10,004 10,004 10,004 - +
+Total financial liabilities 410,037 410,037 11,966 . 899 397,172
+
+71
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+As at 31 December 2023
+
+Financial assets
+
+Cash
+
+Derivative financial assets
+
+Due from credit institutions
+Investment securities
+
+Loans and advances to customers
+Total financial assets
+
+Financial liabilities
+Derivative financial liabilities
+Due to banks
+
+Due to customers
+
+Other borrowed funds
+
+Total financial liabilities
+
+Level 3 Financial Instruments
+
+ALPHA BANK LONDON LIMITED
+Annual Report and Financial Statements
+31 December 2024
+
+canyng Fair value Level1 Level 2 Level 3
+£000's £000's £000's £000's £000's
+345 345 - 345 -
+40,658 40,658 40,658 - -
+78,097 78,097 78,097 - -
+330,090 330,090 - - 330,090
+449,190 449,190 118,755 345 330,090
+1,724 1,724 - 1,724 -
+201 201 201 - -
+370,324 370,324 - - 370,324
+10,006 10,006 10,006 - -
+382,255 382,255 10,207 1,724 370,324
+
+Financial instruments categorised in Level 3 are recognised at their carrying value as noted above, this includes any allowance
+
+for impairment losses.
+
+37. ULTIMATE PARENT BANK
+
+The ultimate parent Bank is Alpha Services and Holdings S.A., a Bank incorporated in Greece. Alpha Services and Holdings S.A. is
+the 100% owner of Alpha Bank S.A. Alpha Bank §.A. is the parent Bank of the Bank. The principal place of business for both the
+parent and the ultimate parent companies is 40 Stadiou Street, 102 52 Athens, Greece.
+
+The consolidated financial statements of the Alpha Services and Holdings S.A. are available to the public and may be obtained
+from the above address, or from their internet website (https://www.alphaholdings.gr/en/investor-relations/group-results-and-
+
+reporting/financial-statements-bank-and-group).
+
+38, EVENTS AFTER THE REPORTING PERIOD
+
+There have been no events after the reporting period which would require disclosure or adjustment to the 31 December 2024
+
+Financial Statements.
+
+39. OBTAINING FINANCIAL STATEMENTS
+
+The Bank’s Financial Statements can be located
+
+on the
+
+Alpha
+
+Services and
+
+Holdings
+
+S.A website
+
+(https://www.alphaholdings.gr/el/enimerosi-ependuton/oikonomika-stoixeia-omilou/aikonomikes- katastaseis-thigatrikon-
+alpha-services-and-holdings?listfilter=C8B2FEC7E58944619B00360219104002). .
+
+72

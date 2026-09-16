@@ -15,9 +15,16 @@ AR2018_URL = "https://clear.bank/uploads/assets/ClearBank-Annual-Report-2018.pdf
 AR2017_URL = "https://clear.bank/uploads/assets/ClearBank-Annual-Report-2017.pdf"
 AR2016_URL = "https://clear.bank/uploads/assets/ClearBank-Annual-Report-2016.pdf"
 P3_2025_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-2025.pdf"
+# ClearBank's own published filename misspells "Disclosure" as "Discolsure".
+P3_2024_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-Discolsure-2024.pdf"
 P3_2023_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-Disclosure-2023.pdf"
 P3_2022_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-2022.pdf"
 P3_2021_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-disclosure-2021.pdf"
+P3_2020_URL = "https://clear.bank/uploads/assets/Clear.Bank-Pillar-3-disclosure-2020.pdf"
+P3_2019_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-disclosure-2019.pdf"
+P3_2018_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-disclosure-2018.pdf"
+P3_2017_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-disclosure-2017.pdf"
+P3_2016_URL = "https://clear.bank/uploads/assets/ClearBank-Pillar-3-disclosure-2016.pdf"
 CBGH_FY2023_URL = "https://find-and-update.company-information.service.gov.uk/company/14254435/filing-history/MzQyMTUzMzg4NGFkaXF6a2N4/document?format=pdf&download=0"
 
 # ---------------------------------------------------------------
@@ -128,7 +135,12 @@ def p3_sources():
         "also includes ClearBank Europe N.V. There is no ClearBank-Limited-only Pillar 3 "
         "publication for FY2023 onward, so these are group-basis figures in an entity-level "
         "workbook and are NOT a like-for-like continuation of the FY2017-FY2022 series.\n"
-        "FY2025/FY2024: ClearBank Pillar 3 Disclosure 2025, p.15 - " + P3_2025_URL + "\n"
+        "FY2025: ClearBank Pillar 3 Disclosure 2025, 'Key metrics' table, p.15 - " + P3_2025_URL + "\n"
+        "FY2024: ClearBank Pillar 3 Disclosure 2024, 'Key metrics' table, p.13 - " + P3_2024_URL + " "
+        "(located 2026-09-16; the file is published under a misspelt name, 'ClearBank-Pillar-3-Discolsure-"
+        "2024.pdf', which is why earlier passes cited the FY2025 edition's comparative column instead. Every "
+        "FY2024 figure is identical in the two, so no value changed - but the citation now points at FY2024's "
+        "own edition, as this project requires.)\n"
         "FY2023: ClearBank Pillar 3 Disclosure 2023, p.5-6 - " + P3_2023_URL + "\n"
         "FY2022/FY2021: ClearBank Pillar 3 Disclosure 2022, p.4-5 (FY2021 as the FY2022 "
         "document's own comparative column, cross-checked against ClearBank Pillar 3 Disclosure "
@@ -146,9 +158,27 @@ def p3_sources():
         "leverage notes - " + AR2018_URL + "\n"
         "FY2017: ClearBank Limited 2017 Annual Report, p.9 KPI table and p.19 capital/leverage "
         "notes - " + AR2017_URL + "\n\n"
-        "PRE-2021 DISCLOSURE FORMAT NOTE: ClearBank did not publish a standalone Pillar 3 document "
-        "for FY2017-FY2020 - these years' capital/leverage/liquidity metrics are instead embedded "
-        "within the ordinary Annual Report's Strategic Report and financial-statement notes. "
+        "PRE-2021 DISCLOSURE FORMAT NOTE, CORRECTED 2026-09-16. This note previously read 'ClearBank did "
+        "not publish a standalone Pillar 3 document for FY2017-FY2020'. That is FALSE and is retracted. "
+        "ClearBank has published a standalone Pillar 3 disclosure every year since FY2016, and all of them "
+        "are live on clear.bank today - they are listed in the site's own sitemap under /pillar-3-disclosure "
+        "but are not all linked from the visible page, which is why earlier passes missed them:\n"
+        "  FY2020 - " + P3_2020_URL + "\n"
+        "  FY2019 - " + P3_2019_URL + "\n"
+        "  FY2018 - " + P3_2018_URL + "\n"
+        "  FY2017 - " + P3_2017_URL + "\n"
+        "  FY2016 - " + P3_2016_URL + "\n"
+        "Each was downloaded and read on 2026-09-16 (HTTP 200, application/pdf, %PDF magic bytes, real text "
+        "layers). What IS true, and is the substantive point the old note was reaching for, is that none of "
+        "those editions uses the KM1 template or anything like it: each has a bespoke 'Summary Analysis' "
+        "section with 'Table 1: Capital and leverage ratios' and 'Table 2: Own funds'. The FY2020 edition's "
+        "Table 1 gives CET1/Tier 1/Total 114%, CRD leverage 3%, UK leverage 30%, and its Table 2 gives CET1 "
+        "capital of £29,952k - which is what this workbook already carries for FY2020, so no figure changes. "
+        "The FY2019 edition prints CET1 capital of £17,460k where this workbook carries £17,461k from "
+        "AR2019; the £1k difference is left as each source printed it. Re-sourcing FY2016-FY2019 from these "
+        "documents rather than from the Annual Reports is a real improvement left for a later pass - it is "
+        "logged here rather than done, because the KM1 rollout ticket that found them covers the KM1 sheet "
+        "and the latest edition, not a re-sourcing of nine-year-old columns.\n"
         "FY2017-FY2019's CET1/leverage ratios are disclosed only to whole-percent precision in "
         "the source (e.g. \"53%\", \"88%\"); FY2020's are disclosed to 1 decimal place via the "
         "FY2021 Pillar 3 document's comparative column. No Basel II/CET1-terminology issue arises "
@@ -753,6 +783,187 @@ LCR = {"FY2025": "396.85%", "FY2024": "381.88%", "FY2023": "445.36%", "FY2022": 
        "FY2020": "186%", "FY2019": "127%", "FY2018": "237%", "FY2017": "3718%"}
 NSFR = {"FY2025": "20366.50%", "FY2024": "15959.22%", "FY2023": "10153.88%", "FY2022": "5429.15%", "FY2021": "11701.32%",
         "FY2020": "3298%", "FY2019": "324%", "FY2018": "432%", "FY2017": "878%"}
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - ClearBank's own published table, reproduced as printed.
+#
+# ClearBank prints the KM1 template WITHOUT its row numbers and under a plain
+# "Key metrics" heading; the string "KM1" appears nowhere in any edition. It
+# is still the template - the rows, their order and the section headings are
+# the UK KM1's line for line - it is simply abridged: the rows ClearBank has
+# nothing to report against (UK 7b/7c, UK 8a, UK 9a, 10, UK 10a, 14a-14e) are
+# not printed at all rather than printed empty. Only the rows the bank
+# actually printed are shown here; a row it never printed is not the same as
+# a row we failed to find, so this note says which.
+#
+# WHICH EDITIONS CARRY IT. FY2022 is the first. Confirmed positively, not by
+# a text search coming up empty: the FY2016-FY2021 editions were each
+# downloaded and read on 2026-09-16, and every one uses a bespoke "Summary
+# Analysis" section ("Table 1: Capital and leverage ratios", "Table 2: Own
+# funds") that reports CET1/Tier 1/Total as PERCENTAGES only, plus two
+# different leverage ratios ("CRD" and "UK"). Those pages were also checked
+# for an image-only table - pdfimages finds nothing on them but cover art -
+# so the absence is real. FY2021 IS shown below, from the FY2022 edition's
+# own comparative column, which is the first time ClearBank presented that
+# year in template shape (same treatment as Allica's FY2021).
+#
+# ENTITY. The column header changes entity mid-series, and the table says so:
+# the FY2022 edition heads its columns "31 Dec 2022 / 31 Dec 2021" with the
+# narrative referring to "the Bank" (ClearBank Limited's own consolidation),
+# while the FY2023 edition heads its single column "ClearBank Group / 31 Dec
+# 2023" (ClearBank Group Holdings Limited, company 14254435, which also
+# includes ClearBank Europe N.V.). FY2023-FY2025 are therefore group-basis
+# and are NOT a like-for-like continuation of FY2021/FY2022. This matches the
+# entity note already carried on every other Pillar 3 sheet here.
+#
+# TWO INTERNAL INCONSISTENCIES IN CLEARBANK'S OWN PRINTING, both recorded and
+# neither reconciled - see the source note.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (£m)", {}),
+    ("DATA", "Common Equity Tier 1 ('CET 1') capital (£m)",
+     {"FY2025": 132, "FY2024": 141, "FY2023": 126, "FY2022": 33, "FY2021": 37}),
+    ("DATA", "Tier 1 capital (£m)",
+     {"FY2025": 132, "FY2024": 141, "FY2023": 126, "FY2022": 33, "FY2021": 37}),
+    ("DATA", "Total capital (£m)",
+     {"FY2025": 132, "FY2024": 141, "FY2023": 126, "FY2022": 33, "FY2021": 37}),
+    ("SECTION", "Risk-weighted assets ('RWA') (£m)", {}),
+    ("DATA", "Total risk-weighted exposure amount (£m)",
+     {"FY2025": 266, "FY2024": 211, "FY2023": 163, "FY2022": 38, "FY2021": 26}),
+    ("SECTION", "Capital ratios (% of RWA)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2025": "49.75%", "FY2024": "67.02%", "FY2023": "77.45%", "FY2022": "87.66%", "FY2021": "139.70%"}),
+    ("DATA", "Tier 1 ratio (%)",
+     {"FY2025": "49.75%", "FY2024": "67.02%", "FY2023": "77.45%", "FY2022": "87.66%", "FY2021": "139.70%"}),
+    ("DATA", "Total Capital ratio (%)",
+     {"FY2025": "49.75%", "FY2024": "67.02%", "FY2023": "77.45%", "FY2022": "87.66%", "FY2021": "139.70%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (% of RWA)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)",
+     {"FY2025": "7.38%", "FY2024": "9.89%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Total SREP own funds requirements (%)",
+     {"FY2025": "13.12%", "FY2024": "17.58%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("SECTION", "Combined buffer requirements (% of RWA)", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.00%", "FY2024": "2.00%", "FY2023": "2.00%", "FY2022": "1.00%", "FY2021": "0.00%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2025": "4.50%", "FY2024": "4.50%", "FY2023": "4.50%", "FY2022": "1.00%", "FY2021": "0.00%"}),
+    ("DATA", "Overall capital requirements (%)",
+     {"FY2025": "17.62%", "FY2024": "22.08%", "FY2023": "22.11%", "FY2022": "17.49%", "FY2021": "21.77%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "36.63%", "FY2024": "49.44%", "FY2023": "77.26%", "FY2022": "79.45%", "FY2021": "83.83%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 658, "FY2024": 542, "FY2023": 289, "FY2022": 241, "FY2021": 94}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "20.05%", "FY2024": "26.07%", "FY2023": "43.51%", "FY2022": "13.87%", "FY2021": "38.79%"}),
+    ("SECTION", "Liquidity Coverage Ratio ('LCR')", {}),
+    ("DATA", "Total high-quality liquid assets ('HQLA') (Weighted value-average) (£m)",
+     {"FY2025": 17909, "FY2024": 10914, "FY2023": 6187, "FY2022": 3081, "FY2021": 2719}),
+    ("DATA", "Cash outflows - Total weighted value (£m)",
+     {"FY2025": 4521, "FY2024": 2873, "FY2023": 1398, "FY2022": 1053, "FY2021": 1462}),
+    ("DATA", "Cash inflows - Total weighted value (£m)",
+     {"FY2025": 9, "FY2024": 15, "FY2023": 9, "FY2022": 16, "FY2021": 0}),
+    ("DATA", "Total net outflows (adjusted value) (£m)",
+     {"FY2025": 4513, "FY2024": 2858, "FY2023": 1389, "FY2022": 1037, "FY2021": 1462}),
+    ("DATA", "Liquidity coverage ratio (%)",
+     {"FY2025": "396.85%", "FY2024": "381.88%", "FY2023": "445.36%", "FY2022": "297.05%", "FY2021": "185.94%"}),
+    ("SECTION", "Net Stable Funding Ratio ('NSFR')", {}),
+    ("DATA", "Total available stable funding (£m)",
+     {"FY2025": 14804, "FY2024": 8718, "FY2023": 5032, "FY2022": 2062, "FY2021": 1190}),
+    ("DATA", "Total required stable funding (£m)",
+     {"FY2025": 72, "FY2024": 55, "FY2023": 50, "FY2022": 38, "FY2021": 10}),
+    ("DATA", "NSFR ratio (%)",
+     {"FY2025": "20366.50%", "FY2024": "15959.22%", "FY2023": "10,153.88%", "FY2022": "5429.15%", "FY2021": "11701.32%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - ClearBank's own published key-metrics table, reproduced as printed. Each column is transcribed "
+    "from the edition in which that year is the reporting year, except FY2021 (see below).\n"
+    "FY2025: ClearBank Pillar 3 Disclosure 2025, 'Key metrics' table, p.15 - " + P3_2025_URL + "\n"
+    "FY2024: ClearBank Pillar 3 Disclosure 2024, 'Key metrics' table, p.13 - " + P3_2024_URL + "\n"
+    "FY2023: ClearBank Pillar 3 Disclosure 2023, 'Key metrics' / 'Key metrics continued', pp.4-5 - "
+    + P3_2023_URL + "\n"
+    "FY2022: ClearBank Pillar 3 disclosure 2022, 'Key metrics', pp.4-5 - " + P3_2022_URL + "\n"
+    "FY2021: the FY2022 edition's own '31 Dec 2021' comparative column, same table - " + P3_2022_URL + ". "
+    "FY2021's OWN edition has no key-metrics table to transcribe (see below), so this is the first time "
+    "ClearBank presented that year in template shape.\n\n"
+    "NO TEMPLATE BEFORE FY2022 - A POSITIVE FINDING, NOT A FAILED SEARCH. Every ClearBank Pillar 3 edition "
+    "from FY2016 to FY2021 was downloaded and read on 2026-09-16 (all live on clear.bank, all HTTP 200 / "
+    "application/pdf / %PDF, all with real text layers). Each uses a bespoke 'Summary Analysis' section - "
+    "'Table 1: Capital and leverage ratios' (CET1 / Tier 1 / Total regulatory capital as PERCENTAGES only, "
+    "plus a 'CRD leverage ratio' and a 'UK leverage ratio' side by side) and 'Table 2: Own funds' (the "
+    "equity-to-CET1 build-up in £'000). That is a different disclosure from KM1, not an earlier version of "
+    "it, so those years are blank on this sheet and their figures live on the single-metric sheets instead. "
+    "Those pages were additionally checked for an image-only table (pdfimages) after a sister bank was found "
+    "publishing its KM1 as a bitmap: ClearBank's pre-FY2022 editions contain only cover art and photography, "
+    "no table images.\n\n"
+    "UNNUMBERED AND ABRIDGED. ClearBank never writes 'KM1' and never prints the template's row numbers; the "
+    "heading is simply 'Key metrics'. The rows it does print are the UK KM1's rows, in the template's order, "
+    "under the template's own section headings. The rows it does NOT print anywhere - UK 7b, UK 7c, UK 8a, "
+    "UK 9a, 10, UK 10a and 14a-14e - are omitted here too rather than shown empty, because ClearBank omits "
+    "them from the table itself; that is a statement about ClearBank's disclosure, and it is recorded here "
+    "rather than represented as blank cells that could be mistaken for a gap in this workbook.\n\n"
+    "ENTITY CHANGES MID-SERIES, AND THE TABLE HEADER SAYS SO. The FY2022 edition heads its columns '31 Dec "
+    "2022 / 31 Dec 2021' and its narrative speaks of 'the Bank' - ClearBank Limited's own consolidation. The "
+    "FY2023 edition heads its single column 'ClearBank Group / 31 Dec 2023', and FY2024/FY2025 continue on "
+    "that basis: ClearBank Group Holdings Limited (company 14254435), which also consolidates ClearBank "
+    "Europe N.V. FY2023-FY2025 are therefore group-basis figures in an entity-level workbook and are NOT a "
+    "like-for-like continuation of the FY2021/FY2022 columns. Same caveat as the other Pillar 3 sheets.\n\n"
+    "TWO INCONSISTENCIES IN CLEARBANK'S OWN PRINTING, recorded and not reconciled:\n"
+    "• FY2023 total risk-weighted exposure amount is 163 in the FY2023 edition and 162 in the FY2024 "
+    "edition's FY2023 comparative. The 163 shown here is FY2023's own edition.\n"
+    "• The FY2025 edition prints FY2024 total RWEA as 211 on its Key metrics table and 212 on its 'Overview "
+    "of risk weighted exposure amounts' table, two pages apart in the same document. This sheet shows 211 "
+    "(the key-metrics figure); the RWA Breakdown sheet shows 212, its own table's total. Both are as "
+    "published.\n\n"
+    "FY2023 SREP ROWS LOOK WRONG IN THE SOURCE, AND ARE REPRODUCED ANYWAY. The FY2023 edition prints "
+    "'Additional CET1 SREP requirements 0.00%' and 'Total SREP own funds requirements 0.00%' - a total SREP "
+    "own funds requirement of zero is not possible (the Pillar 1 minimum alone is 8%), and the same edition's "
+    "own 'Overall capital requirements' row prints 22.11%. The FY2024 edition's FY2023 comparative instead "
+    "prints 9.91% and 17.61% for those two rows, and 59.84% rather than 77.26% for 'CET1 available after "
+    "meeting the total SREP own funds requirements'. Under this project's rule that each year comes from its "
+    "own edition, the FY2023 column here carries the FY2023 edition's figures; the FY2024 edition's restated "
+    "comparatives are recorded in this note so nothing is lost. The FY2022 edition prints 0.00% for those "
+    "rows in both its columns, and a 0.00% capital conservation buffer, which is likewise as published.\n\n"
+    "EXPECTED DISAGREEMENT WITH THE CET1/TIER 1/TOTAL CAPITAL SHEETS, FY2021 ONLY - not an error in either "
+    "place. This sheet shows 37 for FY2021 because that is what the FY2022 edition's comparative column "
+    "prints: ClearBank rounds the whole key-metrics table to whole £m. The CET1 Capital / Tier 1 Capital / "
+    "Total Capital sheets show 36.7, because those sheets take FY2021 from FY2021's OWN Pillar 3 edition, "
+    "whose 'Table 2: Own funds' gives the figure to the pound (£36,739k). Same quantity, two precisions, two "
+    "documents. The workbook's automated KM1-vs-metric-sheet cross-check flags this pair; it is left as "
+    "published rather than re-rounded in either direction, because rounding 36,739 to '37' is ClearBank's "
+    "act, not this workbook's, and re-deriving '36.7' onto a reproduction sheet would print a number the "
+    "key-metrics table never contained.\n\n"
+    "PRINTED PRECISION AND LABELS ARE AS EACH EDITION HAS THEM. The FY2023 edition prints the NSFR ratio "
+    "with a thousands separator ('10,153.88%') where the others do not; the FY2025/FY2024 editions caption "
+    "the LCR row 'Total net outflows (adjusted value)' where the FY2023/FY2022 editions caption it 'Total "
+    "net cash outflows (adjusted value)', and capitalise 'Total Capital ratio' where the earlier ones write "
+    "'Total capital ratio'. The most recent edition's wording is used for the row label and the variants are "
+    "recorded here.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: taken from clear.bank's own sitemap rather than from the URLs "
+    "previously cited here, because the visible /pillar-3-disclosure page does not link every file. The "
+    "newest documents published are the Pillar 3 Disclosure 2025 and the Annual Report and Accounts 2025; "
+    "there is no FY2026 edition of either, which is expected for a 31 December year-end "
+    "(ClearBank-Annual-Report-2026.pdf returns an honest 404 while the 2025 file serves 22.2 MB of PDF). "
+    "Checked, none newer. The same sweep turned up the previously-uncited FY2024 Pillar 3 and the FY2016-"
+    "FY2020 Pillar 3 documents - see the correction on the other Pillar 3 sheets."
+)
+
+bw.add_km1_sheet(
+    title="ClearBank — KM1 Key Metrics",
+    subtitle="ClearBank's own published key-metrics table, reproduced in its row order, labels and printed "
+             "precision. ClearBank prints the UK KM1 template unnumbered, headed simply 'Key metrics', and "
+             "abridged to the rows it reports against. Amounts in £m, ratios as printed. FY2021/FY2022 are "
+             "ClearBank Limited's consolidation; FY2023-FY2025 are ClearBank Group Holdings Limited's. FY2020 "
+             "and earlier are blank - those editions use a different disclosure format entirely, not an "
+             "earlier KM1. See source note below.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=70,
+    source_height=520,
+)
 
 metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)])
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 ratio", CET1_RATIO)])

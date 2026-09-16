@@ -501,6 +501,148 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Consolidated (Group) basis, {unit}" if unit else "Consolidated (Group) basis",
                          rows_data, sources_text, note=note, first_col_width=48, source_height=110)
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics — Allica's own published template, reproduced as printed.
+#
+# Allica's report is an Article 433b (small and non-complex institution)
+# disclosure and NEVER uses the string "KM1" anywhere in the document — the
+# table is headed "Key metrics" / "key regulatory metrics". It is still the UK
+# KM1 template, with the same UK-prefixed row numbering, so it is transcribed
+# here like any other.
+#
+# Two kinds of drift between editions, both reproduced rather than normalised:
+#
+#   (a) ROW SET. The FY2022 and FY2023 editions PRINT rows UK 8a, UK 9a, 10,
+#       UK 10a and 14a-14e with empty value cells. The FY2024 and FY2025
+#       editions OMIT those rows from the table altogether. The union of rows
+#       is shown below in the template's canonical order; every one of those
+#       rows is blank in every year either way, so no figure is lost, but the
+#       rows are kept so the sheet matches the template a reader of the
+#       FY2023 report would recognise. Note Allica prints "14a"-"14e" WITHOUT
+#       the "UK " prefix that the PRA template (and other banks) use.
+#
+#   (b) PRECISION/SPACING. FY2022 and FY2023 print ratios closed up ("17.1%");
+#       FY2024 and FY2025 print them with a space before the sign ("14.5 %").
+#       Each cell is transcribed from the edition in which that year is the
+#       reporting year, so the spacing differs down a row. That is what the
+#       bank published.
+#
+# FY2021 comes from the comparative column of the FY2022 edition, which leaves
+# several rows (UK 7a-7d, 12, UK 16a/16b, 18-20) blank for the comparative
+# year. FY2020 predates the template entirely: the FY2020 and FY2021 Pillar 3
+# disclosures carry no key-metrics table of any kind, so that column is blank.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £'000)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 325689, "FY2024": 276827, "FY2023": 219055, "FY2022": 170322, "FY2021": 68816}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 370566, "FY2024": 321704, "FY2023": 264182, "FY2022": 180208, "FY2021": 86316}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 406393, "FY2024": 359031, "FY2023": 271682, "FY2022": 187708, "FY2021": 93816}),
+    ("SECTION", "Risk-weighted exposure amounts (£'000)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 2422216, "FY2024": 1908286, "FY2023": 1396450, "FY2022": 997945, "FY2021": 486558}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "13.4 %", "FY2024": "14.5 %", "FY2023": "15.7%", "FY2022": "17.1%", "FY2021": "14.1%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "15.3 %", "FY2024": "16.9 %", "FY2023": "18.9%", "FY2022": "18.1%", "FY2021": "17.7%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "16.8 %", "FY2024": "18.8 %", "FY2023": "19.5%", "FY2022": "18.8%", "FY2021": "19.3%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.1 %", "FY2024": "1.9 %", "FY2023": "1.9%", "FY2022": "2.0%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.4 %", "FY2024": "0.6 %", "FY2023": "0.6%", "FY2022": "0.7%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "0.5 %", "FY2024": "0.9 %", "FY2023": "0.9%", "FY2022": "0.9%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "9.9 %", "FY2024": "11.4 %", "FY2023": "11.4%", "FY2022": "11.6%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5 %", "FY2024": "2.5 %", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.0 %", "FY2024": "2.0 %", "FY2023": "2.0%", "FY2022": "1.0%", "FY2021": "0.0%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.5 %", "FY2024": "4.5 %", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "14.5 %", "FY2024": "15.9 %", "FY2023": "15.9%", "FY2022": "15.1%", "FY2021": "14.1%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.8 %", "FY2024": "8.1 %", "FY2023": "9.3%", "FY2022": "7.0%"}),
+    ("SECTION", "Leverage ratio (£'000 / %)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 5092370, "FY2024": 3421039, "FY2023": 2208236, "FY2022": 1595100, "FY2021": 688827}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "7.3 %", "FY2024": "9.4 %", "FY2023": "11.4%", "FY2022": "11.3%", "FY2021": "12.5%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity Coverage Ratio (£'000 / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value – average)",
+     {"FY2025": 1928875, "FY2024": 1137180, "FY2023": 810081, "FY2022": 386347, "FY2021": 171242}),
+    ("DATA", "UK 16a    Cash outflows – Total weighted value",
+     {"FY2025": 1007942, "FY2024": 625000, "FY2023": 343042, "FY2022": 168199}),
+    ("DATA", "UK 16b    Cash inflows – Total weighted value",
+     {"FY2025": 134297, "FY2024": 99079, "FY2023": 62698, "FY2022": 40407}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 873645, "FY2024": 525922, "FY2023": 280344, "FY2022": 127792, "FY2021": 34252}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "220.8 %", "FY2024": "216.2 %", "FY2023": "289.0%", "FY2022": "302.3%", "FY2021": "499.9%"}),
+    ("SECTION", "Net Stable Funding Ratio (£'000 / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 3884410, "FY2024": 2937724, "FY2023": 1876364, "FY2022": 1338171}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 2799038, "FY2024": 2195700, "FY2023": 1385603, "FY2022": 897829}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "138.8 %", "FY2024": "133.8 %", "FY2023": "135.4%", "FY2022": "149.0%"}),
+]
+
+KM1_SOURCES = p3_sources(
+    "KM1 presentation notes:\n"
+    "• Allica discloses under Article 433b (small and non-complex institution). The report never uses the "
+    "string \"KM1\" — the table is headed \"Key metrics\" — but it is the UK KM1 template, with the same "
+    "UK-prefixed row numbering, and is reproduced here as printed.\n"
+    "• ROW SET DRIFT: the FY2022 and FY2023 editions print rows UK 8a, UK 9a, 10, UK 10a and 14a-14e with "
+    "empty value cells; the FY2024 and FY2025 editions omit those rows entirely. The union is shown, in the "
+    "template's canonical order. Every one of those rows is blank in every year in Allica's own reports, so "
+    "no disclosed figure is missing. Allica prints \"14a\"-\"14e\" without the \"UK \" prefix used elsewhere "
+    "in the template.\n"
+    "• PRECISION DRIFT: FY2022/FY2023 print ratios closed up (\"17.1%\"); FY2024/FY2025 print them with a "
+    "space before the percent sign (\"14.5 %\"). Each cell is transcribed from the edition in which that year "
+    "is the reporting year, so the spacing varies along a row. This is as published and is not an error.\n"
+    "• FY2021 is the comparative column of the FY2022 edition and is blank for rows UK 7a-7d, 12, UK 16a/16b "
+    "and 18-20, which that edition did not restate. Rows 13 and 14 for FY2021 were restated by Allica onto "
+    "the post-1 January 2022 leverage basis (central bank claims excluded) per PRA PS21/21, per that "
+    "edition's own footnote 1.\n"
+    "• FY2020 is blank: the FY2020 and FY2021 Pillar 3 disclosures contain no key-metrics table at all. The "
+    "individual FY2020 figures on the CET1 Capital, CET1 Ratio and Total RWAs sheets are taken from the "
+    "narrative capital tables of the FY2020 disclosure, not from a KM1.\n"
+    "• Two small cross-edition inconsistencies in Allica's own printing, recorded but not reconciled: the "
+    "FY2023 edition prints FY2022 total available stable funding as 1,338,711 where the FY2022 edition "
+    "prints 1,338,171 (digit transposition in one of the two); and the FY2021 Pillar 3 disclosure prints "
+    "CET1 capital of 68,817 where the FY2022 edition's comparative column prints 68,816. The value shown "
+    "here in each case is the one from the edition in which that year is the reporting year.\n"
+    "• Row 17 (LCR) is a 12-month average and row 20 (NSFR) a 4-quarter average, per Allica's footnotes, in "
+    "every edition that discloses them."
+)
+
+bw.add_km1_sheet(
+    title="Allica Bank Limited — KM1 Key Metrics",
+    subtitle="The bank's own published UK key-metrics (KM1) template, reproduced in Allica's row order with its "
+             "own template row numbers and printed precision. Amounts in £'000, ratios as printed. Consolidated "
+             "(Group) basis, transitional. FY2020 predates the template and is intentionally blank.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 325689, "FY2024": 276827, "FY2023": 219055, "FY2022": 170322, "FY2021": 68816, "FY2020": 53152})],

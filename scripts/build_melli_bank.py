@@ -551,6 +551,123 @@ NSFR_NOTE = (
     "FY2016 blanks are structural as well as evidenced."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE. Melli Bank plc has never published a UK KM1
+# template, in any year, and the reason is structural rather than a search
+# failure. Three separate findings stack up, and all three are positive:
+#
+#   1. TIMING. The UK KM1 template arrived with the Disclosure (CRR) Part of
+#      the PRA Rulebook, applying from 1 January 2022. The only two Melli
+#      Pillar 3 documents that have ever been public are the FY2014 and FY2016
+#      editions, which pre-date it by five and six years respectively. Both
+#      were re-read cover to cover for this ticket: they are narrative CRD
+#      IV-era documents whose contents pages run "Eligible Regulatory Capital /
+#      Capital Adequacy / Credit Risk Adjustments / Leverage / Liquidity /
+#      Additional Disclosures", with no tabular key-metrics template of any
+#      kind and no occurrence of the string "KM1" or "key metrics" anywhere.
+#
+#   2. PUBLICATION. For every year from 1 January 2022 onward - the years in
+#      which a KM1 would have been required - the Bank's own Directors' report
+#      states that its Pillar 3 disclosure is "available on request" rather
+#      than published. The FY2025 report (p.11 of 54, "Basel III - Pillar 3
+#      Disclosure") reads in full: "The Pillar 3 disclosure is available on
+#      request." A document that is not published has no published KM1.
+#
+#   3. THE ANNUAL REPORT'S OWN TABLE IS NOT A KM1, and is not reshaped into
+#      one. The FY2025 report's "Capital and Liquidity Position" table (p.10 of
+#      54) has eight rows - Shareholders' Equity, Eligible Capital, Total
+#      Assets, Total Risk Exposure Amount, Total Capital Ratio, Equity to
+#      Assets Ratio, Liquidity Coverage Ratio, Total Net Income - with no row
+#      numbers, no SREP rows, no buffer rows, no leverage row and no NSFR row.
+#      That is a different and shorter table, not an unnumbered template (map
+#      rule 8), and the KM1 sheet is not back-filled from it.
+#
+# SEPARATELY: the Bank's own website is UNREACHABLE, which is recorded as
+# BLOCKED and is NOT the basis of any claim above. Re-tested 2026-09-16 -
+# mellibank.com and www.mellibank.com resolve to 62.232.194.164 and
+# mellibank.co.uk to 195.224.32.52, and all four hostnames time out on both
+# http and https (curl exit 28 after 25s), consistent with the 29 September
+# 2025 sanctions designation. None of the three findings above depends on that
+# site; each rests on a document the Bank filed and that was read directly.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - every document behind the 'Not applicable' finding on this sheet, each read directly rather than "
+    "inferred:\n"
+    f"FY2025: Annual Report and Accounts 2025, Directors' Report p.11 of 54, 'Basel III - Pillar 3 Disclosure: The "
+    f"Pillar 3 disclosure is available on request'; and 'Capital and Liquidity Position' p.10 of 54, the eight-row "
+    f"KPI table that is NOT a KM1 - {AR2025_URL}\n"
+    f"FY2024: Annual Report and Accounts 2024, same 'available on request' wording - {AR2024_URL}\n"
+    f"FY2023: Annual Report and Accounts 2023 - {AR2023_URL}\n"
+    f"FY2022: Annual Report and Accounts 2022 - {AR2022_URL}\n"
+    f"FY2021: Annual Report and Accounts 2021 - {AR2021_URL}\n"
+    f"FY2016: Pillar 3 Disclosures as at 31st December 2016, 23pp, re-read in full 2026-09-16 (HTTP 200, "
+    f"application/pdf, %PDF magic bytes) - no KM1 table, no 'key metrics' heading - {P3_2016_URL}\n"
+    f"FY2014: Pillar 3 Disclosures as at 31st December 2014, 16pp - same finding - {P3_2014_URL}\n"
+    f"Companies House filing history (company 04152338), read live 2026-09-16 - {CH_FILING_HISTORY_URL}\n\n"
+    "WHY THIS SHEET IS 'NOT APPLICABLE', in three independent findings:\n"
+    "1. TIMING. The UK KM1 template arrived with the Disclosure (CRR) Part of the PRA Rulebook and applies from 1 "
+    "January 2022. The only two Melli Pillar 3 documents that have ever been public are the FY2014 and FY2016 "
+    "editions, which pre-date it. Both were re-read cover to cover for this ticket. Their contents pages run "
+    "'Eligible Regulatory Capital / Capital Adequacy / Credit Risk Adjustments / Leverage / Liquidity / Additional "
+    "Disclosures'; there is no tabular key-metrics template of any kind and no occurrence of 'KM1' or 'key metrics' "
+    "anywhere in either document. Those zero hit-counts are a fact about the documents rather than about the "
+    "extraction, which was shown to be rich on neighbouring terms first: the FY2016 text yields 112 hits for "
+    "'capital', 65 for 'ratio', 42 for 'liquidity', 13 for 'CET', 9 for 'Tier', 5 for 'leverage' and 252 for "
+    "'risk' (FY2014: 80/52/10/1/7/5/153), against 0 for 'KM1' and 0 for 'key metric'. This was checked against "
+    "images as well as text, because a KM1 table can be "
+    "published as a bitmap inside an otherwise text-native PDF and then extract as nothing at all: `pdfimages "
+    "-list` on both editions returns only the 203x73 letterhead logo repeated on every page, plus one larger "
+    "image on page 5 of each, and both of those were rendered at 150dpi and looked at - they are governance "
+    "organisation charts (FY2016: Main Board / Board Risk Committee / ALCO; FY2014: Board of Directors / "
+    "Executive and Non-Executive Committees), not tables. There is no image anywhere in either document that "
+    "could be concealing a key-metrics table.\n"
+    "2. PUBLICATION. For every year from 2022 onward - exactly the years in which a KM1 would have been required - "
+    "the Bank's own Directors' report says its Pillar 3 disclosure is 'available on request' rather than published. "
+    "The FY2025 report's Basel III - Pillar 3 Disclosure section reads, in full: 'The Pillar 3 disclosure is "
+    "available on request.' An unpublished document has no published KM1. (FY2023 is the one year whose Directors' "
+    "report claims website publication; see the PILLAR 3 PUBLICATION HISTORY below, where that claim and the "
+    "website's own contradicting statement are both recorded and neither is treated as correcting the other.)\n"
+    "3. THE ANNUAL REPORT'S OWN TABLE IS NOT A KM1, and is deliberately not reshaped into one. The FY2025 report's "
+    "'Capital and Liquidity Position' table (p.10 of 54) has eight rows - Shareholders' Equity EUR259m, Eligible "
+    "Capital EUR259m, Total Assets EUR363m, Total Risk Exposure Amount EUR458m, Total Capital Ratio 56%, Equity to "
+    "Assets Ratio 71%, Liquidity Coverage Ratio 679%, Total Net Income EUR12,286k - with no row numbers, no SREP "
+    "rows, no buffer rows, no leverage row and no NSFR row. It is a different and shorter table, in the same class "
+    "as ABC International Bank's 'Table 3 Key Regulatory Metrics' rather than as Europe Arab Bank's unnumbered "
+    "template. Those figures do populate this workbook's individual metric sheets, where they belong; mapping them "
+    "onto KM1 row numbers would invent a correspondence the Bank never published.\n\n"
+    "BLOCKED, NOT ABSENT - recorded so it is never mistaken for evidence. The Bank's own website is unreachable. "
+    "Re-tested 2026-09-16: mellibank.com and www.mellibank.com resolve to 62.232.194.164 and mellibank.co.uk to "
+    "195.224.32.52, and all four hostnames time out on both http and https (curl exit 28 after 25 seconds), "
+    "consistent with the 29 September 2025 sanctions designation recorded in the Bank's own FY2025 report. That is "
+    "a fact about reachability, not about publication, and NONE of the three findings above rests on it - each "
+    "rests on a document the Bank filed and that was read directly.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16. With the Bank's own site unreachable, the two live routes recorded in the "
+    "ACCESS ROUTES note were used instead. Companies House (company 04152338) was read live: the newest accounts "
+    "filed are 'made up to 31 December 2025', filed 21 June 2026, signed 28 April 2026 - which is the FY2025 "
+    "edition this workbook already holds. Nothing newer exists. The Hong Kong Monetary Authority public register "
+    "(institution 100273) currently goes only as far as FY2024: .../ar_24/ar_24_eng.pdf returns a real PDF (HTTP "
+    "200, application/pdf, 2.9MB) while .../ar_25/ar_25_eng.pdf returns HTTP 200 with Content-Type text/html - a "
+    "SOFT-404, not a document. Worth writing down because the status code alone would have said 'found'.\n\n"
+    + PILLAR3_HISTORY_NOTE + "\n\n" + ACCESS_ROUTES_NOTE + "\n\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Melli Bank plc — KM1 Key Metrics",
+    subtitle="Not applicable. The Bank has never published a UK KM1 template. Its only two ever-public Pillar 3 "
+             "documents (FY2014 and FY2016) pre-date the template, and for every year from 2022 onward - when a "
+             "KM1 would have been required - its own Directors' report states the Pillar 3 disclosure is "
+             "'available on request' rather than published. The Annual Report's eight-row 'Capital and Liquidity "
+             "Position' KPI table is not the template and is not reshaped into it. The Bank's website is "
+             "unreachable under sanctions; that is recorded as BLOCKED and is not the basis of this finding.",
+    rows=[("DATA", "Not applicable — no UK KM1 template has ever been published by this entity, in any year "
+                   "covered by this workbook", {})],
+    sources_text=KM1_SOURCES,
+    first_col_width=88,
+    source_height=1500,
+    years=P3_YEARS,
+)
+
+
 metric("CET1 Capital", "EUR '000", [("Common Equity Tier 1 / eligible regulatory capital", CET1_CAPITAL)], note=CAPITAL_NOTE)
 metric("CET1 Ratio", "%", [("CET1 capital ratio", CAPITAL_RATIO)], note=RATIO_NOTE)
 metric("Tier 1 Capital", "EUR '000", [("Tier 1 / eligible regulatory capital", TIER1_CAPITAL)], note=CAPITAL_NOTE)

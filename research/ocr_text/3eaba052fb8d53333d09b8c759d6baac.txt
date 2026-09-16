@@ -1,0 +1,4071 @@
+Weatherbys Bank Limited
+
+Group Report and Financial Statements
+Year Ended
+
+31 December 2019
+
+Company Number 02943300
+
+WEDNESDAY
+
+QM
+
+24/10/2020 #364
+COMPANIES HOUSE
+Weatherbys Bank Limited
+
+Report and financial statements
+for the year ended 31 December 2019
+
+Contents
+Page:
+3 Strategic report
+9 Report of the directors
+14 Independent auditor’s report
+25 Consolidated income statement
+26 Consolidated statement of comprehensive income
+27 ’ Consolidated balance sheet
+28 Company balance sheet
+29 Consolidated statement of changes in equity
+31 Company statement of changes in equity
+33 Consolidated statement of cash flows
+34 Notes forming past of the financial statements
+Directors
+DC Bellamy (Non-executive chairman)
+
+R N Weatherby
+A Turberville Smith
+
+Q.N J Marshall
+
+JR Weatherby (Non-executive)
+B K Bourne (Non-executive)
+JL Eddis. (Non-executive)
+C Machell (Non-executive)
+
+Secretary and registered office
+
+AS McGlynn, Sanders Road, Wellingborough, Northamptonshire, NN8 4BX
+
+Company number
+
+02943300
+
+Auditors
+
+Deloitte LLP, Statutory Auditor, Birmingham
+Weatherbys Bank Limited
+
+Strategic Report
+for the year ended 31 December 2019
+
+The directors present their strategic report on the Banking Group for the year ended 31 December 2019. The Banking
+Group (“Group”) consists of Weatherbys Bank Limited (“the Bank"), Arkle Finance Limited (“Arkle Finance’),
+Weatherbys General Services Limited (“WGS") and Weatherbys Bank (Nominees) Limited.
+
+t
+
+1. Business Review: Market Environment
+
+The 2019 economic and political narrative was dominated by Brexit uncertainty. The political stalemate was finally
+resolved by the result of the December general election, which saw the UK formally leave the EU on 31st January
+2020. However, economic uncertainty remains with the UK now in a ‘transitional phase’ while the terms of a future
+relationship with the EU are negotiated.
+
+This ongoing uncertainty has continued to weigh heavily on domestic business and consumer confidence. Whilst GDP
+growth for the whole of 2019 was consistent with 2018 at 1.4% (2018: 1.3%), growth in the fourth quarter was flat with
+the quarterly annualised rate falling to 1.1%.
+
+National house price inflation was 2.2% in 2019, down from 2.5% in 2018, and 2.7% in 2017. The slowdown continues
+to be driven by the south east of England which experienced growth of 1.2% for the second year running, although
+London prices rebounded from their 0.6% fall during 2018 to report 2.3% growth in 2019.
+
+Notwithstanding this backdrop and our cautious approach, client lending has continued to grow to record levels. The
+Bank does not use wholesale markets to fund its lending activity, nor has the Bank drawn on any of the liquidity access
+platforms put in place by the Bank of England. We believe our financial strength and independence leave us well
+positioned when broader markets begin to revert to their structural norms.
+
+2. Business Review: The Group
+
+Weatherbys Bank Limited is a family owned bank founded on a heritage of traditional values and prudent stewardship
+but one that adopts a progressive and forward looking approach. We provide retail banking services to a client base of
+predominantly high net worth individuals. In addition to private banking and wealth advisory services, we provide
+banking services to the horseracing industry and wider community, asset finance to SMEs, tax and insurance services.
+
+We are a truly independent bank and this independence has enabled us to enjoy a period of sustained growth while
+others have focussed on the structural effects of the 2008 financial crisis.
+
+2019 has been another successful year. The total assets of the Group have increased by 10% to £967 million (2018:
+£878 million). This continuation of sustained growth has seen assets more than double since 2013.
+
+Customer deposit balances have reached £899 million, a 10% increase during the year (2018: £816 million).
+Customer lending balances have grown by 24% to £589 million (2018: £475 million), with a loan-to-deposit ratio of 65%
+(2018: 58%). This increase is in line with the directors’ strategic objective of increasing the loan-to-deposit ratio, but
+without compromising the Bank’s risk profile to achieve this objective.
+
+Net interest income increased by £4.6 million to £28.5 million, reflecting the increase in lending activity.
+Administrative expenses increased by £3.8 million, predominantly through increased investment in people and
+technology. We continue to invest to ensure that we maintain the product and service levels that our customers have
+come to expect.
+
+Arkle Finance, the Bank’s asset finance business, reported growth in assets of 22% to £139 miltion (2018: £114 million),
+together with profit before tax of £2.2 million (2018: £2.5 million).
+Weatherbys Bank Limited
+
+Strategic Report
+for the year ended 31 December 2019 (continued)
+
+2. Business Review: The Group (continued)
+
+Operating profit excluding the market value adjustment for derivatives required by FRS102 was £8.6m, up 19% on the
+prior year (2018: £7.2m). This market value adjustment has no cash impact. As the interest rate swaps taken on to
+match fixed lending to clients mature, the loss will be reversed and credited back to income in future years. Profit
+before tax for the Group was £8.0 million, a 5% increase on prior year (2018: £7.6 million).
+
+Total shareholders’ funds increased by 9% to £47.3 million (2018: £43.6 million). The Group remains well capitalised
+with a Core Equity Tier 1 ratio of 12.7% (2018: 14.0%), well above the regulatory minimum level. The total capital ratio
+was 15.7% (2018: 17.7%).
+
+The leverage ratio at the year end was 4.5% (2018: 4.5%), compared to a minimum level of 3%. At the year end the
+Group held surplus funds of £359 million in gilts, other qualifying liquidity buffer assets, and treasury deposits at well
+rated bank counterparties (2018: £387 million).
+
+3. Financial key performance indicators
+
+The Board and senior management continuously assess the performance of the Bank. A number of key performance
+indicators are used to frame this assessment process. These include inter alia net interest margin, cost to income ratio,
+return on capital, capital headroom ratio, liquidity coverage ratio, net stable funding ratio, customer loan-to-deposit
+ratio, average loan-to-value ratio, loss ratios and net flows into wealth advisory platforms.
+
+Where relevant, these indicators have been included in this Strategic Report or within the Directors Report in the
+context of presenting Bank performance.
+
+4. Future Developments
+
+There are three key themes that the Board continues to monitor closely in regard to their potential to affect the Banking
+Group’s future performance and ability to meet our strategic targets, namely the strength of the UK economy, the
+regulatory landscape and technology developments.
+
+However, of more immediate concern, is the economic impact of the coronavirus pandemic that has taken hold both in
+the UK and around the world. Whilst it is difficult to make accurate predictions of the economic impact of the coronavirus
+pandemic, it would seem inevitable that the global economy will experience a significant slowdown over the next few
+months. Whether it proves to be a “severe but temporary” shock or becomes sustained over a longer period is unknown
+at this point. The reduction in the Bank of England Base Rate to 0.10% in March 2020 in response to the economic
+disruption caused by coronavirus will reduce net interest income in the Banking Group, particularly as it retains a
+significant proportion of its liquidity at the Bank of England.
+
+As highlighted above, Brexit-related economic uncertainty persisted throughout 2019, and is likely to continue for the
+duration of 2020 until the terms of any future trading relationship are finalised. The conclusion of various impact
+analyses remains that the direct impact on our clients and business model is likely to be low. However, we will
+undoubtedly be exposed to the impact of some secondary, indirect effects, particularly if new trading agreements
+produce adverse outcomes.
+
+The impact of regulatory change since 2008 has been felt right across the banking sector. In December 2019 the Bank
+of England announced an industry-wide increase in Countercyclical Buffer requirement, effective from December 2020.
+This was then reversed in March 2020 in response to the coronavirus pandemic as the regulator and Government
+acted to support all banks in the vital role that they play, supporting businesses and retail customers across the country.
+
+Technology continues to evolve and change the way many customers interact with their bank. Whilst recognising and
+where appropriate, embracing these changes for the future, we will not lose sight of the fact that our clients continue
+to value a traditional face-to-face relationship and the associated levels of personalised customer service. We continue
+to invest in our technology and digital platforms, with the objective of offering our clients all possible options in their
+choice of interacting with us.
+Weatherbys Bank Limited
+
+Strategic Report .
+for the year ended 31 December 2019 (continued)
+
+5. Section 172(1} Statement
+
+The Board of Directors are aware of their duty under s.172 of the Companies Act 2006 to act in the way which would
+be most likely to promote the success of the Group for the benefit of its members as a whole, having particular regard
+(amongst others) to:
+
+The likely consequences of any decision in the long term
+
+The interests of the company’s employees
+
+The need to foster relationships with suppliers, customers and others
+
+The impact of operations on the community and the environment
+
+The desirability of maintaining a reputation for high standards of business conduct
+The need to act fairly as between stakeholders of the Group
+
+As a privately owned bank striving to provide the highest levels of customer service, we consider our customers and
+employees as our key stakeholders. During 2019 we have consulted with customers and employee groups to agree
+and define the key characteristics of our service offering in order to enshrine these into a set of corporate values. These
+values — christened the ‘Weatherbys Way’ — will underpin every decision at every level as we seek to protect the Group
+into the long term.
+
+The Weatherbys family of companies has a long tradition of giving back to society and the Board believes that business
+should be a force for good. Profitability is important; being successful gives us the opportunity to make a bigger impact
+but having a positive impact on society and the environment is equally important.
+
+From improving the lives of our employees and creating a better future through our charity work, to ensuring we do not
+harm our environment, we have a proven track record of taking our social responsibility seriously, both for our workers
+and the wider community. We are aiming to become recognised as an accredited B Corporation and become part of
+this growing community aiming to redefine success in business.
+
+We have also created some social impact priorities: Giving Back, Our People and Caring for the Planet.
+
+We recognise that our people are our greatest asset. Providing unbeatable service has been at the heart of the
+Weatherbys Way and now we are focusing on how we can serve our people best too. We know that having a diverse
+workforce creates a more fulfilling place to work as well as better business outcomes. By being better at relating to our
+customers, reflecting different perspectives and seizing opportunities. So, we are working on our equality and diversity
+programmes, allowing internal succession development, creating financial inclusion and flexible working through age,
+gender and diversity.
+
+We are giving our staff 500 days to do good with our new Time Bank programme. We know that taking time out from
+our day jobs and doing something for the greater good, not only enhances our world but also our people.
+
+We partner with a number of charities, both on an ad-hoc and long-term basis with the aim for Creating the Future. For
+the last two years we have also hosted the Creating the Future event where we invite quests: customers and friends,
+to hear twelve eminent and eloquent experts address some of the most topical issues affecting us now and in the future
+The last conference included discussion on the future of democracy, the revolution in healthcare and mental wellbeing
+as well as the state of the environment and how to tackle the climate crisis.
+
+We have also reviewed all the suppliers we work with to make sure we are doing as much to reduce our environmental
+impact and keep our supply chain as local as possible. In the coming months we will refine our standards and goals
+for being a responsible business.
+Weatherbys Bank Limited
+
+Strategic Report
+for the year ended 31 December 2019 (continued)
+
+6. Principal Risks and Uncertainties
+
+In all areas where the Board believes that material risks exist it has taken action to control and mitigate these risks.
+The principal risks to which the Bank is exposed are highlighted in the following sections.
+
+6.1 Economic Risk
+
+The coronavirus outbreak has the potential to cause a significant global economic downturn. Whilst it is difficult to make
+accurate assessments of the long-term economic impact, the Bank has always operated prudently within its financial
+limits and maintained capital and liquidity buffers in order to protect against the impact of unpredictable ‘shocks’. Within
+its Private Banking tending portfolio, which accounts for 78% of the total loan book, customer loans are secured
+principally on residential properties at an average loan to value ratio of approximately 36%. Its high net worth client
+base is well placed to absorb the impact of the economic disruption. The Group's asset finance subsidiary accounts
+for 22% of the total lending portfolio and is directly exposed to the small business sector. The Government has pledged
+significant support to such businesses and Arkle Finance is itself a participant in the Government's Covid Business
+Interruption Loan Scheme that aims to support small businesses through the current pandemic crisis.
+
+6.2 Capital Risk
+
+Capital risk is the risk that the Bank has insufficient capital to support its strategic growth objectives, or to enable it to
+withstand further changes to the regulatory regime.
+
+The Bank has a conservative approach to managing capital risk. in addition to the minimum regulatory capital
+requirements set by the Prudential Regulation Authority (the “PRA’) through its Total Capital Requirement, the Board
+has determined that an appropriate buffer above the regulatory minimum must be maintained at all times. At the year
+end the total capital ratio was 15.7% (2018: 17.7%) and total regulatory capital was £57.4m against a total capital
+requirement of £33.6m.
+
+Management and allocation of the Bank's capital is managed by the Asset and Liability Committee (‘ALCO’). If the
+
+headroom falls to an internal trigger level, ALCO is required to explain to Board whether corrective action is required
+and recommend an appropriate course of action.
+
+The reduction in the Countercyclical Buffer to 0% by the PRA in March 2020 provides additional capital headroom for
+the Group to support new and existing clients through the current pandemic and beyond.
+
+6.3 Liquidity Risk
+Liquidity risk is the risk that the Bank has insufficient financial resources to meet its liabilities as they fall due.
+
+This could be due to an inability to liquidate assets to obtain adequate funding ("funding liquidity risk") or that it cannot
+readily liquidate assets without incurring significant market losses (“market liquidity risk").
+
+The Bank's principal tools to mitigate liquidity risk are the loan-to-deposit ratio limit and the corresponding minimum
+liquidity buffer, both set by the Board. At the year end it held treasury assets of £359m (2018: £387m) of which £261m
+{2018: £298m) was held with the Bank of England and other major UK banks.
+
+The Bank’s liquidity position is monitored daily and managed by ALCO.
+
+6.4 Credit Risk
+
+Credit risk is the risk of financial loss arising from a borrower or counterparty failing to meet their financial obligations
+to the Bank when they fall due. Credit risk arises from loans and advances to clients, and from treasury investment of
+surplus cash.
+Weatherbys Bank Limited
+
+Strategic Report
+for the year ended 31 December 2019 (continued)
+
+6.4 Credit Risk (continued)
+
+To mitigate credit risk in the client loan book the Board has approved lending policies and procedures which are
+reflective of the Bank's risk appetite. All loan applications are considered in accordance with these procedures, and an
+approval hierarchy is in place depending upon the risk characteristics and size of each application. The largest loan
+applications require approval by the Board. Responsibility for the ongoing management of client credit risk rests with
+the Group Risk committee. The average loan to value ratio for lending secured by residential property is approximately
+36%.
+
+To mitigate credit risk in its treasury activities the Board has set minimum short and long term credit ratings for approved
+counterparties where the Bank places its surplus funds, as well as individual monetary limits. These limits are reviewed
+on a regular basis by ALCO and are set by reference to the Bank's assessment of the risk of default for each
+counterparty. The Bank monitors appropriate agencies to provide credit ratings for financial institutions.
+
+6.5 Concentration Risk
+
+Concentration risk is the risk of loss due to either a large individual exposure, or significant exposures to groups of
+counterparties who could be affected by common factors, including geographical region (“geographical risk’).
+
+To mitigate concentration risk the Board has:
+
+e —_ set limits on the maximum percentage exposure to any individual business sectors against the total lending
+book
+* set limits on the geographical concentration of advances.
+
+The Bank regularly monitors concentration risk and geographical risk to ensure that the Bank is not overexposed in a
+particular business sector or geographical region.
+
+6.6 Interest Rate Risk
+
+Interest rate risk is the risk that a significant movement in interest rates will have a material impact on the Bank’s
+profitability, for example by reducing the net interest margin.
+
+The Bank is exposed to interest rate risk that arises from a mismatch between the repricing of assets and liabilities.
+The majority of the Bank’s tending is variable, although its lending to SMEs through its asset finance subsidiary is on
+fixed terms, generally between three and four years. On the liability side, credit interest paid on the majority of deposits
+is also variable. Partly as a consequence of its low loan to deposit ratio and surplus funds, the Bank’s net interest
+margin will generally fall when Base rate falls and correspondingly increase as rates rise.
+
+The Bank regularly measures and reports to ALCO its interest rate risk based on 200bps positive or negative shifts in
+the yield curve, which are then translated into a net present value. The Bank uses interest rate swaps to hedge
+exposures to interest rate risk to ensure these remain within the limits set by the Board.
+
+6.7 Operational Risk
+
+Operational risk is the risk of loss resulting from inadequate or failed internal processes, people and systems, or from
+external events. The Bank recognises that operational risk is inherent in all its products, activities, processes and
+systems and is particularly cognisant of all aspects of data security.
+
+The Board has approved an Operational Risk Poticy to ensure the risks are adequately identified, monitored and
+controlled and any tosses resulting from operational risk are minimised in line with the Bank's risk appetite.
+
+In response to the coronavirus outbreak, the Bank invoked its business continuity plans and has continued to provide
+a full service despite almost ail staff working from home in line with Government advice in March 2020.
+Weatherbys Bank Limited
+
+Strategic Report
+for the year ended 31 December 2019 (continued)
+
+6.8 Cyber Risk
+
+An increasing risk that the Bank is subject to within its operational processes is cyber risk. This is the risk that the Bank
+businesses are subject to some form of disruption arising from an interruption to its IT and data infrastructure.
+
+The Bank continues to invest in both people and technology in the development of robust defence systems against the
+ever increasing cyber threats.
+
+6.9 Reputational Risk
+
+Reputational risk is the risk that the Bank’s reputation is damaged by an event, intemal or external, leading to financial
+loss.
+
+The Board is fully aware of the damage that can be caused if the Bank's reputation is damaged and as such the
+corporate govemance and control environment are designed to manage this risk.
+
+6.10 Regulatory & Conduct Risk
+
+As a provider of financial services, the Bank also faces potential risks arising from failures to meet customer
+expectations, to deal with complaints effectively and to ensure the products it provides are appropriate to their
+customers’ needs. In addition, it must comply with all banking regulations including compliance with Financial Crime
+and Anti-Money Laundering laws.
+
+The Company's internal systems, controls, employee training, and protocols are designed specifically to protect against
+such risks.
+
+6.11 Pension Risk
+
+Pension risk is the potential that the Bank will be unable to meet additional liabilities that might arise under a defined
+benefit pension scheme. This can be due to a number of factors:
+
+e A fall in the market value of investments held reducing the fair value of scheme assets
+° A fall in the discount rate increasing the present value of scheme liabilities
+° An increase in the life expectancy increasing the present value of scheme liabilities.
+
+Weatherbys Bank Limited is part of a group of companies controlled by Weatherby family trusts. It is part of a group
+defined benefit pension scheme and is therefore required to meet its share of the liabilities arising under the scheme.
+
+As with other such schemes the group has a recovery plan in place to meet this liability that has been agreed with the
+Pension Regulator
+
+7. Outlook
+
+The Weatherbys family of companies is celebrating its 250th anniversary in 2020. It has seen many shocks, wars and
+depressions. Whilst the outlook in 2020 is difficult to predict the Banking Group is well capitalised, operationally robust
+and staffed by exceptional people. The Board is confident that the Banking Group will support all its customers through
+the current pandemic crisis and for many years to come.
+
+Approved by the Board and signed on its behalf by:
+
+R N Weatherby
+Director
+30 April 2020
+Weatherbys Bank Limited
+
+Report of the directors
+for the year ended 31 December 2019
+
+The directors present their report together with the audited financial statements for the year ended 31 December 2019.
+1. Principal Activities
+
+The Banking Group (“Group”) consists of Weatherbys Bank Limited (“the Bank”), Arkle Finance Limited (“Arkle
+Finance”), Weatherbys General Services Limited (“WGS’) and Weatherbys Bank (Nominees) Limited. It provides
+banking, wealth management, asset finance, insurance and VAT services in Great Britain. Weatherbys Bank Limited
+is authorised under the Financial Services and Markets Act 2000 to accept deposits in the United Kingdom. Arkle
+Finance Limited is authorised by the Financial Conduct Authority to provide consumer credit as defined by the
+Consumer Credit and Financial Services and Markets Acts.
+
+The Bank is a family owned bank that provides traditional retail banking services to a client base of predominantly high
+net worth individuals. Together with private banking and wealth advisory services it provides banking services to
+racehorse owners and the wider racing industry, asset finance to SMEs, tax and insurance services.
+
+The fair treatment of customers is central to the Bank's culture and remains at the heart of its business model. The
+Bank’s brand vision is to be universally admired for delivering and inspiring new standards in customer service.
+
+2. Results and Dividends
+The financial results for the year are set out in the consolidated income statement on page 21.
+
+Retained consolidated profits for the year amounted to £5.8 million (2018: £6.1 million). The Board recommended an
+interim ordinary share dividend in the year of £2.05 million (2018: £1.75 miltion) and do not recommend the payment
+of a final dividend (2018: £Nil).
+
+3. Risk Management and Governance
+
+The roots of the Group can be traced back to the original Weatherby family business that was started in 1770. The
+heritage, reputation and longevity of the business remains a central objective for the family shareholders and as such
+a conservative approach to risk is adopted in all areas.
+
+The Bank's primary risk management governing body is the Board of Directors. The Board is responsible for:
+e Approving the overall tevel of risk to which the Bank is exposed
+« Approving the framework for reporting and managing risk
+e Ensuring that risk management infrastructure is appropriate and functioning effectively.
+
+The Board discharges these responsibilities through a series of committees that manage all aspects of the Bank's
+activities. The key committees that report to the Board are:
+
+e Executive Committee (EXCO) — chaired by the Chief Executive and comprising the executive directors and
+key members of senior management which meets monthly to review. and discuss all financial and
+operational issues
+
+« Group Risk Committee -— chaired by a non-executive director. It comprises a second non-executive
+director, two executive directors and senior management. The Committee meets bi-monthly to review all
+aspects of the Bank’s risk exposure as well as its systems, control and regulatory environment
+
+e Assetand Liability Committee (ALCO) — chaired by the Chief Executive and comprising executive directors
+and senior management which meets monthly to review:
+- Capital allocation and efficiency
+- Liquidity position and profile
+- Capital allocation and risk-adjusted returns
+- Pricing of assets and liabilities
+Weatherbys Bank Limited
+
+Report of the directors
+for the year ended 31 December 2019 (continued)
+
+3. Risk Management and Governance (continued)
+
+e¢ Credit Committee - comprising two executive directors and senior management which meets regularly to
+review and approve credit proposals and assess ongoing credit risk within the loan portfolio
+
+e¢ Group Audit Committee - this comprises three non-executive directors and meets quarterly. Also in
+attendance are the Chief Risk Officer, the Internal Auditor and two executive directors. Its primary role is
+to ensure that controls are both present and appropriate to mitigate risk in accordance with the Board's
+expectations.
+
+4. Capital Management
+
+The Bank is subject to the European Union Capital Requirements Directive and Capital Requirements Regulation,
+collectively known as “CRD {V’, which came into effect from 1 January 2014.
+
+Under CRD IV, banks must hold sufficient capital to protect against two main categories, or “pillars”, of risk:
+e Pillar 1 — covering those risks common to all organisations - credit, market and operational risk
+e Pillar 2 - covering those risks specific to an individual organisation.
+
+The Bank’s capital is reported in two tiers:
+¢ Tier 1 -— comprised of share capital, retained earnings and reserves, known as “Common Equity Tier 1”
+e Tier 2— principally comprised of subordinated loan notes and the Bank's collective impairment provisions.
+
+The Bank uses the Standardised Approach to assess credit risk and the Basic Indicator Approach to assess operational
+risk. The Bank does not have a trading book and therefore exposure to market risk is minimal.
+
+In accordance with regulatory requirements, the Bank performs an annual internal review of its capital adequacy against
+both pillar 1 and pillar 2 risks known as an Internal Capital Adequacy Assessment Process (“ICAAP”). The ICAAP is
+approved by the Board and reviewed periodically by the PRA.
+
+Where it is assessed that additional pillar 2 capital is required, this is notified in the form of a firm-specific total capital
+requirement (TCR) from the PRA.
+
+Consistent with the Bank's conservative risk appetite, the Board has determined that capital headroom must be
+maintained over and above the TCR set by the PRA. If the capital headroom falls to an internal trigger level, ALCO is
+required to explain to the Board whether corrective action is required and recommend a suitable course of action.
+
+The Bank is a wholly owned subsidiary of Weatherbys Bank Holdings Limited (“WWBHL’). For regulatory reporting
+purposes, the Bank’s regulatory capital is reported to the PRA on both a consolidated and individual basis.
+
+4.1 Capital and Leverage Ratios
+
+On a consolidated basis, total regulatory capital was £57.4 million at 31 December 2019 (2018: £52.8 million) against
+a total capital requirement of £33.6 million (2018: £32.0 million). The capital requirement encapsulates pillar 1 and pillar
+2A requirements but excludes the capital conservation and counter-cyclical buffers. This represents a total capital ratio
+of 15.7%, compared 17.7% in 2018.
+
+The total capital ratio is defined as the level of total capital resources as a percentage of total risk weighted assets.
+
+Under CRO IV firms are required to calculate a leverage ratio as an additional non-risk based monitoring tool. This is
+intended to provide an alternative measure to assess core capital against total assets.
+
+The leverage ratio is defined as the level of Tier 1 capital against balance sheet and off-balance sheet exposures.
+
+At 31 December 2019, the consolidated leverage ratio was 4.5% (2018: 4.5%) against a minimum requirement of 3%.
+
+10
+Weatherbys Bank Limited
+
+Report of the directors
+for the year ended 31 December 2019 (continued)
+
+5. The Board of Directors
+
+The directors of the company during the period and to the date of this report were:
+
+D C Bellamy (Non-executive chairman}
+R N Weatherby
+A Turberville Smith
+
+QN J Marshall
+
+JR Weatherby (Non-executive)
+B K Bourne (Non-executive) *
+JL Eddis (Non-executive) *
+C Machell (Non-executive) *
+
+* member of the Audit Committee
+
+J R Weatherby and R N Weatherby had interests, as trustees, in 100% of the ordinary shares of the ultimate parent
+company.
+
+No other director had any interest in the share capital of the Bank or of any other group company, and none of the
+directors, or members of their immediate families, were awarded or exercised any right to subscribe for any shares or
+debentures during the year.
+
+§.1 Directors’ interest in contracts
+
+J R Weatherby and R N Weatherby had interests as directors of Weatherbys Limited (a company under common
+control) and in the service contracts between that company and Weatherbys Bank Limited.
+
+No other. director had a material interest at any time during the year in any contract with the Bank of significance, other
+than a service contract. Further details concerning related party transactions are provided in note 29 to the financial
+statements.
+
+§.2 Insurance of officers
+
+The directors have the benefit of the indemnity provisions contained in the Company’s Articles of Association, and the
+Company has maintained cover for directors and officers under directors’ and officers’ liability insurance policies. The
+company has entered into qualifying third party indemnity arrangements for the benefit of all its directors within the
+Banking Group, in a form and scope which comply with the requirements of the Companies Act 2006 and which were
+in force throughout the year and remain in force.
+
+6. Employees
+
+At 31 December 2019 the Banking Group had 245 employees (2018: 206) and the Bank itself had 188 emptoyees
+(2018: 156). ‘
+
+The directors give special attention to the health and safety of all employees and endeavour to ensure that as far as
+possible, the training, career development and promotion of disabled persons is the same as for other employees.
+
+Should employees become disabled, every effort is made to ensure that their employment continues and appropriate
+retraining is received.
+
+Regular meetings with employee representatives are held to keep them informed of the development of the business.
+
+11
+Weatherbys Bank Limited
+
+Report of the directors
+for the year ended 31 December 2019 (continued)
+
+7. Future Developments
+
+These are discussed within the Strategic Report.
+
+8. Information presented in other sections
+
+Certain information required to be included in the Directors’ Report can be found in other sections, as stated below. All
+of the information presented in these sections is incorporated by reference into this Directors’ Report and is deemed
+to form part of this report.
+
+(1) A description of the Company’s financial risk management objectives and policies are set out in note 28 to
+these financial statements.
+
+(2) Use of financial instruments are set out in note 32 to these financial statements.
+
+9. Going Concern
+
+In accordance with their responsibilities the directors have considered carefully the going concern statement made in
+note 1 to the financial statements. The Bank's relationship based, traditional banking model, together with its
+conservative approach to credit risk, including counterparty risk, and its overall risk management procedures mean
+that it is built on solid foundations. The wider economic impact of the coronavirus pandemic is though likely to be
+significant and long-lasting. The Board has assessed future profitability, capital, liquidity and funding, as well as
+operational factors, conducting a range of stress scenarios for a period of no tess than 12 months from the date of
+signing the accounts. This included an assessment of arrears levels and loan loss provisioning for the Bank itself and
+its asset finance subsidiary. The Board is satisfied that the business has adequate financial resources to continue as
+a going concern for the foreseeable future and accordingly the directors have continued to adopt the going concern
+assumption in preparing the financial statements.
+
+10. Directors’ Responsibilities
+
+The directors are responsible for preparing the Annual report and the financial statements in accordance with applicable
+law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law the directors
+have elected to prepare the financial statements in accordance with United Kingdom Generally Accepted Accounting
+Practice (United Kingdom Accounting Standards and applicable law) including FRS 102 “The Financial Reporting
+Standard applicable in the UK and Republic of Ireland”. Under company law the directors must not approve the financial
+statements unless they are satisfied that they give a true and fair view of the state of affairs of the company and of the
+profit or loss of the company for that period.
+
+In preparing these financial statements, the directors are required to:
+° select suitable accounting policies and then apply them consistently;
+make judgements and accounting estimates that are reasonable and prudent, and
+
+° state whether applicable UK Accounting Standards have been followed, subject to any material
+departures disclosed and explained in the financial statements;
+e prepare the financial statements on the going concern basis unless it is inappropriate to presume that
+
+the company will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company’s transactions and disclose with reasonable accuracy at any time the financial position of the company and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They are also responsible
+for safeguarding the assets of the company and hence for taking reasonable steps for the prevention and detection of
+fraud and other irregularities.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial information included on
+the Company’s website. Legislation in the United Kingdom governing the preparation and dissemination of financial
+statements may differ from legislation in other jurisdictions.
+
+12
+Weatherbys Bank Limited
+
+Report of the directors
+for the year ended 31 December 2019 (continued)
+
+11. Auditors
+
+Each of the persons who is a director at the date of approval of this report confirms that:
+e so far as the director is aware, there is no relevant audit information of which the Company's auditor
+is unaware; and
+° the director has taken all the steps that he/she ought to have taken as a director in order to make
+himself/herself aware of any relevant audit information and to establish that the company's auditor is
+aware of that information.
+
+This confirmation is given and should be interpreted in accordance with the provisions of s418 of the Companies Act
+2006.
+
+Deloitte LLP have expressed their willingness to continue in office as auditor and appropriate arrangements have been
+put in place for them to be deemed reappointed as auditor in the absence of an Annual General Meeting.
+
+Approved by the Board and signed on Its behalf by:
+R N Weatherby
+
+Director
+30 April 2020
+
+13
+Weatherbys Bank Limited
+
+independent auditor’s report
+To the members of Weatherbys Bank Limited (continued)
+
+Report on the audit of the financial statements
+
+1. Opinion
+
+Jn our opinion the financial statements of Weatherbys E Bank Limited (the ‘parent company” ‘) and its subsidiaries
+
+“(the * group’):
+
+* give a true and fair view of the state of the group’s and of the parent company’s affairs as at 31 December
+2019 and of the group’s profit for the year then ended;
+
+e have been properly prepared in accordance with United Kingdom Generally Accepted Accounting Practice,
+including Financial Reporting Standard 102 “The Financial Reporting Standard applicable in the UK and
+Republic of Ireland”; and
+
+« have been prepared in accordance with the requirements of the Companies Act 2006.
+
+We have audited the financial statements which comprise:
+
+the consolidated income statement;
+
+the consolidated statement of comprehensive income;
+
+the consolidated and parent company balance sheets;
+
+the consolidated and parent company statements of changes in equity;
+
+the consolidated statement of cash flows; and
+
+the related notes 1 to 33.
+
+The financial reporting framework that has been applied in their preparation is applicable law and United Kingdom
+Accounting Standards, including Financial Reporting Standard 102 “The Financial Reporting Standard applicable in
+the UK and Republic of Ireland” (United Kingdom Generally Accepted Accounting Practice).
+
+ss @ @ @
+
+2. Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK}) and applicable
+taw. Our responsibilities under those standards are further described in the auditor’s responsibilities for the audit
+of the financial statements section of our report.
+
+We are independent of the group and the parent company in accordance with the ethical requirements that are
+relevant to our audit of the financial statements in the UK, including the Financial Reporting Council's (the ‘FRC’s’)
+Ethical Standard as applied to public interest entities, and we have fulfilled our other ethical responsibilities in
+accordance with these requirements. We confirm that the non-audit services prohibited by the FRC’s Ethical
+Standard were not provided to the group or the parent company.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our
+opinion.
+
+3. Summary of our audit approach
+
+Key audit matters The key audit matters that we identified in the current year were:
+
+« Coronavirus (“Covid-19") non-adjusting post balance sheet event;
+« Revenue recognition of other interest receivable and similar income; and
+* Loan loss provisioning.
+
+14
+
+Weatherbys Bank Limited
+
+Independent auditor’s report
+To the members of Weatherbys Bank Limited (continued)
+
+Within this report, key audit matters are identified as follows:
+Newly identified
+
+A Increased levet of risk
+
+6) Similar level of risk
+
+Y Decreased level of risk
+
+Materiality The materiality that we used for the group financial statements was £400k which
+was determined on the basis of profit before taxation.
+
+Scoping Audit work to respond to the risks of material misstatement was performed
+directly by the group audit engagement team. Over 99% of the group revenue,
+net assets and profit before tax was subjected to a full scope audit.
+
+Significant changes in There were no significant changes in our approach apart from change in the key
+
+our approach audit matters. The emergence and spread of the Covid-19 has brought about
+uncertainty, disruption to business activities and other wider implications on
+society. As a result, we identified Covid-19 non-adjusting post balance sheet
+event as a key audit matter in the current year.
+
+4. Conclusions relating to going concern
+
+We are required by ISAs (UK) to report in respect of the following matters We have nothing to report in |
+where: respect of these matters. !
+
+e the directors’ use of the going concern basis of accounting in
+preparation of the financial statements is not appropriate; or
+
+« the directors have not disclosed in the financial statements any
+identified material uncertainties that may cast significant doubt about
+the group’s or the parent company’s ability to continue to adopt the
+going concern basis of accounting for a period of at least twelve months
+from the date when the financial statements are authorised for issue.
+
+5. Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of
+the financial statements of the current period and include the most significant assessed risks of material
+misstatement (whether or not due to fraud) that we identified. These matters included those which had the
+greatest effect on: the overall audit strategy, the allocation of resources in the audit; and directing the efforts of
+the engagement team.
+
+These matters were addressed in the context of our audit of the financial statements as a whole, and in forming
+our opinion thereon, and we do not provide a separate opinion on these matters.
+
+5.1. Covid-19 non-adjusting post balance sheet event
+
+Key audit matter As disclosed in Note 33 to the financial statements, non-adjusting post balance
+
+description sheet event, a global pandemic of a new strain of Covid-19 has emerged. The
+responses taken by organisations and governments to manage its spread in
+markets to which the group is exposed, have led to increased volatility and
+economic disruption. Management judge the matter to be a non-adjusting event
+in accardance with accounting standards, since it is indicative of conditions that
+arose after the reporting period. It is therefore not reflected in the measurement
+of assets and liabilities at the balance sheet date.
+
+15
+Weatherbys Bank Limited
+
+Independent auditor's report
+To the members of Weatherbys Bank Limited (continued)
+
+In response to Covid-19, management has made updates to its financial
+statements to disclose Covid-19 as a subsequent event and has assessed the
+impact on going concern. To support this management performed actions to
+assess the financial and operational impacts of Covid-19 up to the date of
+approval of the financial statements. Key actions comprise:
+
+« Revising the going concern forecasts and related assumptions for the
+group,
+
+=» Performing scenario testing including reverse stress testing of the key
+assumptions used in assessing the going concern of the group;
+
+« Monitoring the group’s capital and liquidity position including asset credit
+quality, and taking action where defined triggers are met in relation to
+market and interest rate risks;
+
+= Assessing if the appropriate capital surplus is maintained to meet
+liabilities as they fall due, including consideration of further deterioration
+in the financial markets to which the group is exposed. This includes
+having robust plans for certain management actions if the group falls
+outside its approved risk appetite;
+
+* Frequent monitoring of the group’s outsourced operations and its ability
+to continue to serve customers, comply with conduct regulations and
+maintain appropriate internal controls.
+
+The group has made disclosures throughout the annual report and financial
+statements to reflect the results of its assessment, in line with applicable
+accounting standards and company law. Due to the inherent management
+judgement in, and the increased level of audit effort, focused on the
+appropriateness of the financial statement disclosures, we considered this to be a
+key audit matter. Refer to management’s disclosure in notes 1 and 33 of the
+financial statements. Further detail is also included in the Directors’ Report on
+page 12 and the Strategic Report on pages 4, 6 and 7.
+
+How the scope of our
+audit responded to
+the key audit matter
+
+We evaluated management’s appraach to assessing the impact of Covid-19 on
+the group and its financial statement disclosures by performing the following
+procedures:
+
+We evaluated management's stress and scenario testing including reverse stress
+testing and challenged management's key assumptions, assessing its consistency
+with other available information and our understanding of the business;
+
+We evaluated management’s assessment of the risks facing the group including
+liquidity risk, asset credit risk and operational matters utilising prudential risk
+experts as appropriate;
+
+We made inquiries of senior management in relation to their assessment of the
+impacts of Covid-19 on the group, including further steps the group will take in
+case economic and other factors deteriorate further;
+
+We inspected key regulatory submissions including correspondence between the
+group and its regulators related to the group’s responses to the emergence of
+Covid-19; and
+
+Assessed the disclosures made by management in the financial statements
+against applicable accounting standards and quidance issued by the Financial
+Reporting Council, assessed management's judgment that Covid-19 is a non-
+adjusting event and evaluated the consistency of the disclosures with our
+knowledge of the group.
+
+16
+Weatherbys Bank Limited
+
+independent auditor's report
+To the members of Weatherbys Bank Limited (continued)
+
+Key observations
+
+We agree with management's judgments and consider the disclosure of the
+potential impact of Covid-19 in the financial statements to be appropriately
+stated.
+
+5.2 Revenue recognition of other interest receivable and similar income ©)
+
+Key audit matter
+description
+
+The main revenue streams within WBL group are other interest receivable and
+similar income derived from loans and advances to customers, finance lease and
+hire purchase agreements. The revenue recognised during the year was £30.9m
+(2018: £25.9m).
+
+Under FRS 102, management is required to recognise interest income using the
+Effective Interest Rate (EIR‘) method for loans and advances to customers.
+
+The EIR method requires the modelling of cash flows and amortisation of any
+related fees, finance charges, transaction costs and other premiums or discounts
+over the expected life or over the lease term.
+
+The key assumption in the EIR model is the derivation of the cash flow run-off
+profiles which determine the behavioural life of the loans and advances including
+the timing of the expected future cash flows. Given the degree of judgement
+involved in determining key assumptions, we also identified that there is a
+potential for fraud through possible manipulation of this balance.
+
+Management’s accounting policies are detailed in note 1 to the financial
+statements while the significant judgements involved in the revenue recognition
+process are outlined in note 2, whilst note 7 to the financial statements
+quantifies the revenue recognised during the year.
+
+How the scope of our
+audit responded to
+the key audit matter
+
+We obtained an understanding of the relevant controls over the revenue
+recognition process.
+
+We challenged the appropriateness of the behavioural lives adopted by performing
+independent recalculations of the behavioural lives on a sample of redeemed foans
+and individual loan portfolios.
+
+We challenged amendments made to the behavioural lives by management
+during the course of the year, based on recent customer redemption activity.
+
+We independently recaiculated the EIRs and tested the adjustment posted to
+recognise revenue over the behavioural life on a sample of loans as part of our
+wider assessment of the key audit matter. We also verified the inputs which are
+used to determine revenue by agreeing a sample of customer loans back to
+underlying source data.
+
+We considered evidence which supports or contradicts management’s
+judgements for indicators of bias given the inherent susceptibility to
+misstatements in estimates.
+
+Key observations
+
+We concluded that the key assumptions used within management's revenue
+recognition process were reasonable and the models to be working as intended.
+
+17
+Weatherbys Bank Limited
+
+Independent auditor's report
+To the members of Weatherbys Bank Limited (continued)
+
+We determined the accounting for revenue recognition of other interest receivable
+and similar income to be appropriately stated. -
+
+5.3. Loan loss provisioning ©)
+
+Key audit matter
+description
+
+The loan loss provision totalled £2.0m (2018: £2.0m) for the year, comprising
+collective and specific elements. The collective provision is the incurred but not
+reported loss provision, while the specific provision relates to instances where
+there is objective evidence for impairment.
+
+Under FRS 102, management is required to assess whether there is objective
+evidence of impairment of any financial assets that are measured at cost or
+amortised cost. If there is objective evidence of impairment, management should
+recognise an impairment joss within the income statement immediately.
+
+We have therefore determined our key audit matter as:
+
+* the continued appropriateness of utilising limited customer default
+experience in valuing the collective provision in the parent company; and
+e the accuracy of the provision loss percentages utilised in valuing the
+specific provision for receivables under finance leases and hire purchase
+agreements.
+Given the degree of judgement involved in determining key assumptions, we also
+identified that there is a potential for fraud through possible manipulation of this
+balance is on the basis that amendments to these assumptions could give rise.
+
+Management’s accounting policies are detailed in note 1 to the financial
+statements while the significant judgements involved in loan loss provisioning
+are outlined in note 2 and note 16 to the financial statements quantify the loan
+loss provision as at year end.
+
+How the scope of our
+audit responded to
+the key audit matter
+
+We obtained an understanding of the relevant controls over the loan loss
+provisioning process.
+
+We tested the mechanical accuracy of the models, which are used to determine
+the loan loss provision, and agreed a sample of model inputs back to underlying
+source data.
+
+We challenged the appropriateness of the key assumptions used within the
+collective provision model by reference to historical toss data and using other
+alternative assumptions.
+
+We challenged the appropriateness of the key assumptions used in the specific
+provision, including the loss rates used. This involved independent calculation of
+loss rates using the group’s historical cash collection and default recovery
+experience.
+
+We selected a sample of customers provided for and independently recalculated
+the loss rate percentages and compared the provision output to the amount
+provided by management.
+
+AS a wider audit procedure, we also performed the following:
+
+«= We involved our internal IT specialists in testing the general IT controls
+over the loan administration systems and evaluated the appropriateness
+of the manner in which data is extracted from these systems to
+determine the provision.
+
+18
+Weatherbys Bank Limited
+
+tndependent auditor's report
+To the members of Weatherbys Bank Limited (continued)
+
+* We independently verified the appropriateness of the loan grading
+classifications performed by management based on the extent of security
+attached on a sample of customer loans and advances.
+
+«= We performed testing on loans with no objective impairment recognised
+to identify any customers in financial distress not identified by
+management.
+
+» We performed benchmarking to a range of peer group companies.
+
+» We also considered the potential impact of Brexit and Covid-19 on the
+loan loss provisioning by challenging the reasonableness of the related
+assumptions adopted by management.
+
+» We considered evidence, which supports or contradicts management's
+judgements for indicators of management bias given the inherent
+susceptibility to misstatements in estimates.
+
+Key observations We found the loan loss provision models to be working as intended and
+considered the loan loss provision to be appropriately stated.
+
+6.Our application of materiality
+
+6.1. Materiality
+We define materiality as the magnitude of misstatement in the financial statements that makes it probable that
+the economic decisions of a reasonably knowledgeable person would be changed or influenced. We use
+materiality both in planning the scope of our audit work and in evaluating the results of our work.
+
+Based on our professional judgement, we determined materiality for the financial statements as a whole as
+follows:
+
+Group financial statements Parent company financial statements
+Materiality | £400k (2018: £382k) £276k (2018: £270k)
+j .
+IBasis for ‘5% (2018: 5%) of profit before tax (PBT).
+determining
+imateriality
+
+Rationale for the Management use the benchmark to assess performance of the group and we considered this
+
+‘benchmark -as the most appropriate benchmark for determining materiality. As the majority of the
+
+applied group’s operations are carried out by the parent company, the same materiality basis was
+‘used for both the group and the parent.
+
+19
+Weatherbys Bank Limited
+
+independent auditor’s report
+To the members of Weatherbys Bank Limited (continued)
+
+| ae materiality
+£400k
+
+PBT £8,001k Component
+
+materiality range
+£276k to £19k
+= PBT
+
+Audit Committee
+reporting threshold
+£20k
+
+«a Group materiality
+
+on tee nee ©
+
+6.2. Performance materiality
+We set performance materiality at a level lower than materiality to reduce the probability that, in aggregate,
+uncorrected and undetected misstatements exceed the materiality for the financial statements as a whole. Group
+performance materiality was set at 70% of group materiality for the 2019 audit (2018: 70%).
+
+We determined performance materiality with reference to factors such as our understanding of the Weatherbys
+Bank Limited (‘WBL’) group, the entities’ complexity and purpose within the group, the quality of the control
+environment and the low level of uncorrected misstatements in prior periods.
+
+6.3. Error reporting threshold
+We agreed with the audit committee that we would report to the Committee all audit differences itn excess of
+£20K (2018: £19K), as well as differences below that threshold that, in our view, warranted reporting on
+qualitative grounds. We also report to the audit committee on disclosure matters that we identified when
+assessing the overall presentation of the financial statements.
+
+7.An overview of the scope of our audit
+
+7.1. Identification and scoping of components
+Our group audit was scoped by obtaining an understanding of the group and its environment, including group-
+wide controls, and assessing the risks of material misstatement at the group level. Based on that assessment,
+our group audit scope focused on all material entities within the group and covered all of the material balances of
+the group. Audit work to respond to the risks of material misstatement was performed directly by the group audit
+engagement team.
+
+The group is made up of the main trading entities Weatherbys Bank Limited (‘WBL’), Arkle Finance Limited
+CAFL’), Weatherbys General Services Limited (WGS’), Weatherbys Nominees Limited (‘WNL’) and Weatherbys
+Hamilton LLP (WHLLP’). WBL holds 100% interest in all entities with the exception of WHLLP, a 50% indirect joint
+venture holding. We tested the consolidation process at group level.
+
+Full scope audits were carried out on all companies within the Weatherbys Banking group, with the exception of
+WNL and WHLLP, These account for over 99% of the group’s revenue, net assets and profit before tax. We
+performed analytical procedures over WNL and WHLLP at the group level. The component materiality used for the
+full scope audits ranged from £19k to £276k (2018:£11k to £270k).
+
+20
+Weatherbys Bank Limited
+
+independent auditor’s report
+To the members of Weatherbys Bank Limited (continued)
+
+8. Other information
+
+The directors are responsible for the other information. The other information comprises the information included
+in the annual report, other than the financial statements and our auditor’s report thereon.
+
+Our opinion on the financial statements does not cover the other information and, except to the extent otherwise
+explicitly stated in our report, we do not express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our responsibility is to read the other information and, in
+doing so, consider whether the other information is materially inconsistent with the financial statements or our
+knowledge obtained in the audit or otherwise appears to be materially misstated.
+
+If we identify such material inconsistencies or apparent material misstatements, we are required to determine
+whether there is a material misstatement in the financial statements or a material misstatement of the other
+information. If, based on the work we have performed, we conclude that there is a material misstatement of this
+other information, we are required to report that fact.
+
+We have nothing to report in respect nf these matters.
+
+9.Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are responsible for the
+preparation of the financial statements and for being satisfied that they give a true and fair view, and for such
+internal control as the directors determine is necessary to enable the preparation of financial statements that are
+free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the group’s and the parent
+company’s ability to continue as a going concern, disclosing as applicable, matters related to going concern and
+using the going concern basis of accounting unless the directors either intend to liquidate the group or the parent
+company or to cease operations, or have no realistic alternative but to do so.
+
+10. Auditor’s responsibilities for the audit of the financial
+statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our
+opinion. Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise
+from fraud or error and are considered material if, individually or in the aggregate, they could reasonably be
+expected to influence the economic decisions of users taken on the basis of these financial statements.
+
+Details of the extent to which the audit was considered capable of detecting irregularities, including fraud and
+non-compliance with laws and regulations are set out below.
+
+A further description of our responsibilities for the audit of the financial statements is located on the FRC’s
+website at: www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor's report.
+
+21
+
+Weatherbys Bank Limited
+
+Independent auditor's report
+To the members of Weatherbys Bank Limited (continued)
+
+11. Extent to which the audit was considered capable of
+detecting irregularities, including fraud
+
+We identify and assess the risks of material misstatement of the financial statements, whether due to fraud or
+error, and then design and perform audit procedures responsive to those risks, including obtaining audit evidence
+that is sufficient and appropriate to provide a basis for our opinion.
+
+11.1. Identifying and assessing potential risks related to irregularities
+In identifying and assessing risks of material misstatement in respect of irregularities, including fraud and non-
+compliance with laws and regulations, we considered the following:
+
+e the nature of the industry and sector, control environment and business performance including the design
+of the group’s remuneration policies, key drivers for directors’ remuneration, bonus levels and
+performance targets;
+
+e results of our enquiries of management internal audit and the audit committee about their own
+identification and assessment of the risks of irregularities;
+
+* any matters we identified having obtained and reviewed the group’s documentation of their policies and
+procedures relating to:
+
+o identifying, evaluating and complying with laws and regulations and whether they were aware of any
+instances of non-compliance;
+
+© detecting and responding to the risks of fraud and whether they have knowledge of any actual,
+suspected or alleged fraud;
+
+eo the internal controls established to mitigate risks of fraud or non-compliance with laws and
+regulations;
+
+e the matters discussed among the audit engagement team and involving relevant internal specialists,
+including tax, valuations, IT, conduct risk and financial instruments specialists regarding how and where
+fraud might occur in the financial statements and any potential indicators of fraud.
+
+As a result of these procedures, we considered the opportunities and incentives that may exist within the
+organisation for fraud and identified the greatest potential for fraud in the following areas: revenue recogntion on
+other interest receivable and similar income; and loan loss provisioning. In common with all audits under ISAs
+(UK), we are also required to perform specific procedures to respond to the risk of management override.
+
+We also obtained an understanding of the legal and regulatory framework that the group operates in, focusing on
+provisions of those laws and regulations that had a direct effect on the determination of material amounts and
+disclosures in the financial statements. The key laws and regulations we considered in this context included the
+Companies Act 2006, pension and tax legislation.
+
+In addition, we considered provisions of other laws and regulations that do not have a direct effect on the
+financial statements but compliance with which may be fundamental to the group’s ability to operate or to avoid a
+material penalty imposed by the Prudential Risk Authority (PRA) and the Financial Conduct Authority (FCA).
+These included the group’s operating licence and regulatory solvency requirements.
+
+11.2. Audit response to risks identified
+As a result of performing the above, we identified revenue recognition on interest and other similar income; and
+loan loss provision as key audit matters related to the potential risk of fraud. The key audit matters section of our
+report explains the matters in more detail and also describes the specific procedures we performed in response to
+those key audit matters.
+
+In addition to the above, our procedures to respond to risks identified included the following:
+
+e reviewing the financial statement disclosures and testing to supporting documentation to assess
+compliance with provisions of relevant laws and regulations described as having a direct effect on the
+financial statements;
+
+* enquiring of management, the audit committee and in-house legal counsel concerning actual and
+potential litigation and claims;
+
+* performing analytical procedures to identify any unusual or unexpected relationships that may indicate
+risks of material misstatement due to fraud;
+
+22
+Weatherbys Bank Limited
+
+independent auditor's report
+To the members of Weatherbys Bank Limited (continued)
+
+¢ reading minutes of meetings of those charged with governance, reviewing internal audit reports and
+reviewing correspondence with HMRC, the FCA and PRA;
+
+e in addressing the risk of fraud through management override of controls, testing the appropriateness of
+journal entries and other adjustments; assessing whether the judgements made in making accounting
+estimates are indicative of a potential bias; and evaluating the business rationale of any significant
+transactions that are unusual or outside the normal course of business.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all engagement team
+members including internal specialists and remained alert to any indications of fraud or non-compliance with laws
+and regulations throughout the audit.
+
+Report on other legal and regulatory requirements
+
+12. Opinions on other matters prescribed by the Companies Act
+2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+¢ the information given in the strategic report and the directors’ report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable legal
+requirements.
+
+In the light of the knowledge and understanding of the group and the parent company and their environment
+
+obtained in the course of the audit, we have not identified any material misstatements in the strategic report or
+
+the directors’ report.
+
+13. Opinion on other matter prescribed by the Capital.
+Requirements (Country-by-Country Reporting) Regulations
+2013
+
+in our. opinion the information given in note 30 to the financial statements for the financial al year, ended 31
+
+December, 2019 | has been properly 1 prepared, i in all materiat respects, in "accordance with tt the Capital
+
+Requirements (Country-by Country Reporting) Regulations 2613.
+
+14. Matters on which we are required to report by exception
+
+14.1. Adequacy of explanations received and accounting records
+Under the Companies Act 2006 we are required to report to you if, in our opinion:
+
+e we have not received all the information and explanations we require for our audit; or
+
+e adequate accounting records have not been kept by the parent company, or returns adequate for our
+audit have not been received from branches not visited by us; or
+
+« the parent company financial statements are not in agreement with the accounting records and returns.
+
+We have nothing to report in respect of these matters.
+
+14.2. Directors’ remuneration
+Under the Companies Act 2006 we are also required to report if in our opinion certain disctosures of directors’
+remuneration have not been made.
+
+We have nothing to report in respect of this matter.
+
+23
+Weatherbys Bank Limited
+
+Independent auditor's report
+To the members of Weatherbys Bank Limited (continued)
+
+15. Other matters -
+
+15.1. Auditor tenure
+Following the recommendation of the audit committee, we were appointed by Board of Directors on 3 February
+2004 to audit the financial statements for the year ending 31 December 2004 and subsequent financial periods.
+The period of total uninterrupted engagement including previous renewals and reappointments of the firm is 16
+years, covering the years ending 31 December 2004 to 31 December 2019.
+
+15.2. Consistency of the audit report with the additional report to the audit committee
+
+Our audit opinion is consistent with the additional report to the audit committee we are required to provide in
+accordance with ISAs (UK).
+
+16. Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of Part 16 of
+the Companies Act 2006. Our audit work has been undertaken so that we might state to the company’s
+members those matters we are required to state to them in an auditor’s report and for no other purpose. To
+the fullest extent permitted by law, we do not accept or assume responsibility to anyone other than the
+company and the company’s members as a body, for our audit work, for this report, or for the opinions we
+have formed.
+
+LS.
+
+Kieren Cooper, FCA (Senior statutory auditor)
+For and on behalf of Deloitte LLP
+
+Statutory Auditor
+
+Birmingham, United Kingdom
+
+30 April 2020
+
+24
+Weatherbys Bank Limited
+
+Consolidated income statement
+for the year ended 31 December 2019
+
+Note 2019 2019
+£ £
+Interest receivable
+- interest receivable arising from
+debt securities 1,146,822
+- other interest receivable and
+similar income 7 30,938,115
+Interest payable 8 (3,564,006)
+Net interest income 28,520,931
+Fees and commissions receivable 6,825,526
+Less: Share of joint venture (1,698,353)
+5,127,173
+Fees and commissions payable (685,028)
+Rent receivable 309,996
+Other operating income 2,697,296
+7,449,437
+Operating income 35,970,368
+(Loss)/Gain on value of derivatives (822,470)
+Administrative expenses 5 {25,425,997}
+Depreciation and amortisation 4 (1,204,282)
+Provisions for bad and doubtful
+debts 16 (794,588)
+Other provisions for liabilities 25 7,868
+(28,239,469)
+Operating profit 7,730,899
+Share of operating profit in joint
+venture 19 270,000
+Operating profit, being profit on
+ordinary activities before
+taxation 8,000,899
+Taxation on profit on ordinary
+activities 9 (1,854,819)
+Profit for the financial year 6,146,080
+
+All amounts relate to continuing activities.
+
+The notes on pages 30 to 66 form part of these financial statements.
+
+25
+
+2018 2018
+£ £
+803,893
+25,935,178
+(2,788,359)
+23,950,712
+6,079,488
+(1,452,522)
+4,626,966
+(539,284)
+309,996
+2,440,194
+6,837,872
+30,788,584
+135,868
+(21,660,751)
+(1,060,300)
+(809,437)
+(90)
+(23,394,710)
+7,393,874
+240,000
+7,633,874
+(1,549,883)
+6,083,991
+
+Weatherbys Bank Limited
+
+Consolidated statement of comprehensive income
+
+for the year ended 31 December 2019
+
+Profit for the financial year
+
+Revaluation of tangible assets
+
+Total comprehensive income for the year
+
+Items above will not be reclassified subsequently to the Income Statement.
+
+The notes on pages 30 to 66 form part of these financial statements
+
+26
+
+Group Group
+Banking Banking
+2019 2018
+
+£ £
+6,146,080 6,083,991
+(336,269) 26,620
+5,809,811 6,110,611
+
+Weatherbys Bank Limited
+
+Consolidated balance sheet
+as at 3t December 2019
+
+Company number 02493300
+ASSETS
+
+Derivative financial assets
+
+Loans and advances to banks
+
+Loans and advances to
+
+customers
+
+Debt securities
+
+Investment in joint venture:
+Share of gross assets
+Share of gross liabilities
+
+Investments
+
+intangible fixed assets
+Tangible fixed assets
+Other assets
+Prepayments and accrued
+income
+
+Fotal assets
+LIABILITIES
+
+Derivative financial liabilities
+Customer accounts
+
+Other liabilities
+
+Accruals and deferred income
+Subordinated loan
+
+Provisions for liabilities
+
+Total liabilities
+SHAREHOLDER'S FUNDS
+Called up share capital
+
+Revaluation reserve
+Profit and loss account
+
+Total liabilities and equity
+
+Note
+
+28
+
+15
+7
+19
+
+20
+13
+14
+21
+
+28
+24
+
+23
+25
+
+26
+
+2019 2019
+
+265,300
+261,049,665
+
+588,923,516
+98,092,674
+
+602,956
+(282,956)
+
+320,000
+716,826
+1,826,829
+11,340,797
+1,671,774
+
+2,893,541
+
+967,100,922
+
+1,257,707
+899,357,711
+5,646,160
+3,517,541
+10,000,000
+
+919,779,119
+
+7,000,000
+1,133,471
+39,188,332
+
+47,321,803
+
+967,100,922
+
+2018 2018
+
+377,063
+297,773,395
+
+474,728,483
+89,544,898
+
+528,909
+(238,909)
+
+290,000
+330,768
+2,134,416
+9,034,811
+1,710,970
+
+2,443,305
+
+878,368,109
+
+547,000
+816,380,394
+4,984,093
+2,886,712
+10,000,000
+7,868
+
+834,806,067
+
+7,000,000
+1,469,740
+35,092,302
+
+43,562,042
+
+878,368,109
+
+ee
+
+The financial statements were approved by the Board of Directors and authorised for issue on 30 April 2020.
+
+Rawle
+
+RN Weatherby
+Director
+
+The notes on pages 30 to 66 form part of these financial statements.
+
+27
+Weatherbys Bank Limited
+
+Company balance sheet
+as at 31 December 2019
+
+Company number 02493300
+ASSETS
+
+Derivative financial assets
+Loans and advances to banks
+Loans and advances to
+customers
+
+Debt securities
+Investment in subsidiaries
+Investments
+
+Intangibte fixed assets
+Tangible fixed assets
+Other assets
+Prepayments and accrued
+income
+
+Total assets
+LIABILITIES
+
+Derivative financial liabilities
+Customer accounts
+
+Other tiabilities
+
+Accruals and deferred income
+Subordinated loan
+
+Provisions for liabilities
+
+Total liabilities
+SHAREHOLDER’S FUNDS
+Called up share capital
+
+Revaluation reserve
+Profit and loss account
+
+Total liabilities and equity
+
+The Bank has elected to take exemption under section 408 of the Companies Act 2006 not to present the Company
+
+Note
+
+28
+
+15
+17
+18
+20
+13
+14
+21
+
+26
+
+2019
+
+7,000,000
+1,050,050
+28,455,087
+
+2019
+
+265,300
+261,050,697
+
+580,844,094
+98,092,674
+10,002
+385,630
+1,727,746
+10,647,980
+934,666
+
+2,149,994
+
+956, 108,783
+
+ooo
+
+1,257,707
+900,203,361
+5,405,166
+2,737,412
+10,000,000
+
+919,603,646
+
+36,505,137
+
+956,108,783
+
+2018
+
+7,000,000
+1,399,682
+25,607,212
+
+2018
+
+377,063
+297,773,205
+
+467,473,412
+89,544,898
+10,002
+280,778
+2,047 548
+8,245,333
+629,241
+
+1,713,893
+
+868,095,373
+
+547,000
+816,897,646
+4,396,946
+2,239,019
+10,000,000
+7,868
+
+834,088,479
+
+34,006,894
+
+868,095,373
+
+profit and loss account. The profit for the Company for the year was £4,897,925 (2018: £4,395,873).
+
+The financial statements were approved by the Board of Directors and authorised for issue on 30 April 2020.
+
+(ONT
+
+R N Weatherby
+Director
+
+The notes on pages 30 to 66 form part of these financial statements.
+
+28
+Weatherbys Bank Limited
+
+Consolidated statement of changes in equity
+
+for the year ended 31 December 2019
+
+1 January 2019
+
+Profit for the year
+
+Other Comprehensive expense
+Revaluation of tangible fixed assets
+
+Other comprehensive exdpense for
+the year
+
+Total comprehensive income for the
+
+year
+
+Contributions by and distributions to
+owners
+Dividends
+
+Total contributions by and distributions
+to owners
+
+31 December 2019
+
+Profit
+
+Share Revaluation and loss Total
+capital reserve account equity
+£ £ £ £
+7,000,000 1,469,740 35,092,302 43,562,042
+- - 6,146,080 6,146,080
+
+- (336,269) - (336,269)
+
+- (336,269) - (336,269)
+- (336,269) 6,146,080 5,809,811
+
+- - (2,050,050) (2,050,050)
+
+- - (2,050,050) (2,050,050)
+7,000,000 1,133,471 39,188,332 47,321,803
+
+The notes on pages 30 to 66 form part of these financial statements.
+
+29
+Weatherbys Bank Limited
+
+Consolidated statement of changes in equity
+for the year ended 31 December 2019
+
+1 January 2018
+
+Profit for the year
+
+Other comprehensive income
+Revaluation of tangible fixed assets
+
+Other comprehensive income for
+the year
+
+Total comprehensive income for the
+year
+
+Contributions by and distributions to
+owners
+Dividends
+
+Total contributions by and distributions
+to owners
+
+31 December 2018
+
+Profit
+
+Share Revaluation and loss Total
+capital reserve account equity
+£ £ £ £
+7,000,000 1,443,121 30,758,311 39,201,431
+- - 6,083,991 6,083,991
+- 26,620 - 26,620
+- 26,620 - 26,620
+- 26,620 6,083,991 6,110,611
+
+- - (1,750,000) (1,750,000)
+
+- - (1,750,000) (1,750,000)
+7,000,000 1,469,740 35,092,302 43,562,042
+
+The notes on pages 30 to 66 form part of these financial staternents.
+
+30
+Weatherbys Bank Limited
+
+Company statement of changes in equity
+for the year ended 31 December 2019
+
+1 January 2019
+
+Profit for the year
+
+Other comprehensive expense
+Revaluation of tangible fixed assets
+
+Other comprehensive expense for
+the year
+
+Total comprehensive income for the
+
+year
+
+Contributions by and distributions to
+owners
+Dividends
+
+Total contributions by and distributions
+to owners
+
+31 December 2019
+
+Profit
+
+Share Revaluation and loss Total
+capital reserve account equity
+£ £ £ £
+7,000,000 1,399,682 25,607,212 34,006,894
+- - 4,897,925 4,897,925
+
+- (349,632) - (349,632)
+
+- (349,632) - (349,632)
+- (349,632) 4,897,925 4,548,293
+
+- - (2,050,050) (2,050,050)
+
+- - (2,050,050) (2,050,050)
+7,000,000 1,050,050 28,455,087 36,505,137
+
+The notes on pages 30 to 66 form part of these financial statements.
+
+31
+
+Weatherbys Bank Limited
+
+Company statement of changes in equity
+for the year ended 31 December 2019
+
+1 January 2018
+
+Profit for the year
+
+Other comprehensive income
+Revaluation of tangible fixed assets
+
+Other comprehensive income for
+the year
+
+Total comprehensive income for the
+
+year
+
+Contributions by and distributions to
+owners
+Dividends
+
+Total contributions by and distributions
+to owners
+
+31 December 2018
+
+Profit
+
+Share Revaluation and loss Total
+capital reserve account equity
+£ £ £ £
+7,000,000 1,377,928 22,961,339 31,339,267
+- - 4,395,873 4,395,873
+- 21,754 - 21,754
+- 21,754 - 21,754
+- 21,754 4,395,873 4,417,627
+
+- - (1,750,000) (1,750,000)
+
+- - (1,750,000) (1,750,000)
+7,000,000 1,399,682 25,607,212 34,006,894
+
+The notes on pages 30 to 66 form part of these financial statements.
+
+32
+
+Weatherbys Bank Limited
+
+Consolidated statement of cash flows
+for the year ended 31 December 2019
+
+Cash flows from operating activities Note
+Profit for the financial year before exceptional items
+
+Adjustments for:
+
+Depreciation, impairment and amortisation of fixed assets 4
+Depreciation, impairment and amortisation of debt securities 17
+Taxation expense ‘ 9
+
+Increase in prepayments and accrued income
+Decrease in trade and other debtors
+
+Change in fair value of financial instruments 28
+Increase on investments 20
+Increase/(decrease) in trade and other creditors 24
+Increase in provisions
+
+Increase in provision for bad and doubtful debts 16
+Net increase in deposits from customers 22
+Net increase in loans and advances to customers 15
+Cash from operations
+
+Net taxation paid
+Net cash (used)/gencrated from operating activities
+
+Cash flows from investing activities
+
+Investment in joint venture 19
+Purchase of investment securities 17
+Sale of investment securities 17
+Purchase of intangible/tangible fixed assets 13/14
+Net cash used from investing activities
+
+Cash flows from financing activities
+
+Subordinated loan
+Equity dividends paid
+
+Net cash generated/(used) from financing activities
+
+Net (decrease)/increase in cash and cash equivalents
+Cash and cash equivalents at beginning of year
+
+Cash and cash equivalents at end of year 12
+
+The notes on pages 30 to 66 form part of these financial statements.
+
+33
+
+2019 2018
+£ £
+6,146,080 6,083,991
+1,204,282 1,060,300
+21,450 51,048
+4,854,819 1,549,883
+(450,236) (380,700)
+39,197 3,283,389
+822,470 (135,868)
+(386,058) (50,638)
+428,145 (3,664,908)
+622,961 613,356
+(79,959) 153,683
+82,977,317 107,416,837
+(114,115,074) (87,378,029)
+(20,914,607) 28,602,344
+(1,620,896) (906,391)
+(22,535,503) 27,695,953
+(30,000) (60,000)
+(54,872,954) (36,761,344)
+46,303,728 28,430,000
+(3,538,951) (1,773,443)
+(12,138,177) (10,164,787)
+- 10,000,000
+(2,050,050) (1,750,000)
+(2,050,050) 8,250,000
+(36,723,730) 25,781,166
+297,773,395 271,992,229
+261,049,665
+
+297,773,395
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019
+
+1
+
+Accounting policies
+
+Weatherbys Bank Limited is a private company, limited by shares, registered in England and Wales. The
+company's registered office address is Sanders Road, Wellingborough, Northamptonshire, NN8 4BX.
+
+The financial statements have been prepared under the historical cost convention, modified to include certain
+items at fair value, and in accordance with Financial Reporting Standard 102 (FRS 102) applicable in the United
+Kingdom and the Republic of Ireland and issued by the Financial Reporting Council.
+
+The Bank is applying the provisions of FRS102 section 11 and 12 and has not elected to apply IAS39.
+
+The preparation of financial statements in compliance with FRS 102 requires the use of certain critical accounting
+estimates. It also requires Group management to exercise judgement in applying the Group's accounting policies.
+
+These financial statements are presented in Pounds Sterling (‘£') because that is the currency of the primary
+economic environment in which the Group operates.
+
+Parent company disclosure exemptions
+
+In preparing the separate financial statements of the parent company, advantage has been taken of the following
+disclosure exemptions available in FRS 102:
+
+e Only one reconciliation of the number of shares outstanding at the beginning and end of the period has been
+presented as the reconciliations for the Group and the parent company would be identical;
+
+« Nocash flow statement has been presented for the parent company;
+
+« Nodisclosure has been given for the aggregate remuneration of the key management personnel of the parent
+company as their remuneration is included in the totals for the Group as a whole.
+
+The following principal accounting policies have been applied:
+
+In accordance with their responsibilities the directors have considered carefully the going concern assumption
+and, for the reasons outlined in the Strategic Report, continue to believe that the Bank's relationship based
+traditional banking model, together with its conservative approach to credit risk, including counterparty risk, and
+its overall risk management procedures mean that it is well placed to prosper. After making enquiries, including
+review of forecast profit and loss, balance sheet, cash flow, regulatory capital and liquidity requirements for a
+period of no less than 12 months from the date of signing the accounts, the Board is satisfied that the business
+has adequate financial resources to continue as a going concern for the foreseeable future and accordingly the
+directors have continued to adopt the going concern assumption in preparing the financial statements.
+
+Basis of consolidation
+
+The financial statements of Weatherbys Bank Limited and its subsidiary undertakings are made up to
+31 December each year. intra-group profits are eliminated on consolidation. Profits and losses of companies
+entering or leaving the Group are included from the date of acquisition or up to the date of disposal.
+
+Details of the subsidiary undertakings are given in note 18.
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2018 (continued)
+
+Accounting policies (continued)
+Income recognition
+
+Interest income and interest expense for all interest bearing financial instruments is recognised in “Interest
+’ receivable and similar income’ and “Interest payable and similar charges” respectively, using the effective interest
+rates of the financial assets or financial liabilities to which it relates. The effective interest rate is the rate that
+discounts the expected future cash flows, over the expected life of the financial instruments, to the net carrying
+amount.
+
+Fees and commissions receivable or payable that are in the nature of interest and an integral element of the
+effective rate of the financial instrument are recognised as an adjustment to the effective interest rate and recorded
+within “Interest receivable and similar income” and “Interest payable and similar charges”. Any other fees and
+commissions receivable are recognised on an accruals basis, when all the contractual obligations have been
+fulfilled and the underlying services provided.
+
+Provisions and contingent liabilities
+
+Provisions are liabilities that are uncertain in timing or amount. Provisions are recognised when the Group has a
+present legal or constructive obligation as a result of past events; it is more likely than not that an outflow of
+resources will be required to settle the obligation; and the amount can be reliably estimated.
+
+A contingent liability is a possible obligation that arises from past events and whose existence will be confirmed
+only by the occurrence or non-occurrence of one or more uncertain future events not wholly within the control of
+the Group or the Group has a present obligation as a result of past events but it is not recognised because it is
+not likely that an outflow of resources will be required to settie the obligation; or the amount cannot be reliably
+estimated. Contingent liabilities normally comprise of legal claims under arbitration or court process in respect of
+which a liability is not likely to eventuate.
+
+Leasing and instalment credit agreements
+
+Hire purchase agreements which are of a financing nature, and assets leased to customers under agreements
+which transfer substantially all the risks and rewards associated with ownership, other than legal title, are classified
+as finance leases. All other assets leased to customers are classified as operating lease assets.
+
+Leasing and instalment credit agreements receivable balances are secured by the asset subject to the funding
+arrangement terms. The company is not permitted to sell the collateral in the absence of default by the customer.
+
+The net investment in finance leases represents the total minimum lease payments less gross earnings allocated
+to future periods. Income from finance leases is credited to the profit and loss account using the effective interest
+rate method to give a constant periodic rate of return on the net investment in the finance lease.
+
+Operating lease assets are reported at cost less depreciation. In the profit and loss account, income in respect of
+operating lease assets is reported within fees and commissions receivable, and depreciation on operating lease
+assets is reported within depreciation and amortisation. Provision is made for any impairment in value, any such
+amount being included in administrative expenses.
+
+Rentals payable and receivable under operating leases are accounted for on the straight-line basis over the
+periods of the leases. Unguaranteed residual values in respect of operating lease assets are reviewed regularly
+and any impairment identified and charged to the profit and loss account.
+
+Income from instalment credit transactions is calculated using the effective interest rate method.
+
+35
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+1
+
+Accounting policies (continued)
+Foreign currencies
+
+Transactions in foreign currencies are recorded at the rate of exchange at the date of the transaction. Assets and
+liabilities denominated in foreign currencies are translated into sterling at the exchange rates ruling at the balance
+sheet date. .
+
+Translation differences are recognised in the profit and loss account for the period.
+Tangible fixed assets
+
+Freehold tand and buildings are owned by the Bank and comprise of offices and buildings leased to its subsidiaries
+and other associated companies (“Investment Property”} and offices and buildings occupied by the Bank
+(‘Property’). They are carried at valuation, being the fair market value at the date of valuation. A full external
+professional valuation is carried out annually.
+
+Freehold land is not depreciated. Other fixed assets are depreciated by annual instalments commencing with the
+month of acquisition at rates estimated to write off their cost less any residual value over their expected useful
+lives which are as follows:
+
+Freehold buildings - 50 years
+Property improvements -  §-50 years
+Plant and equipment - 3-20 years
+Motor vehicles - 2-3 years
+
+intangible assets
+
+Intangible assets are measured at cost less accumulated amortisation and any accumulated impairment losses.
+Amortisation is charged so as to allocate the cost of intangibles over their estimated useful lives, using the straight-
+line method. It is recognised within depreciation and amortisation in the consolidated statement of comprehensive
+income. The intangible assets are amortised over the following useful economic lives:
+
+Software ; - 3-10 years
+Taxation
+
+Current tax is provided at amounts expected to be paid (or recovered) using the tax rates and laws that have been
+enacted or substantively enacted by the balance sheet date.
+
+Deferred tax is recognised in respect of all timing differences that have originated but not reversed at the balance
+sheet date where transactions or events that result in an obligation to pay more tax in the future or a right to pay
+less tax in the future have occurred at the balance sheet date. Timing differences are differences between the
+Banking Group's taxable profits and its results as stated in the financial statements.
+
+A net deferred tax asset is regarded as recoverable, and therefore recognised, only when, on the basis of all
+available evidence, it can be regarded as more likely than not there will be suitable taxable profits from which the
+future reversal of the underlying timing differences can be deducted.
+
+Deferred tax is not recognised when fixed assets are revalued unless by the balance sheet date there is a binding
+agreement to sell the revalued assets and the gain or loss expected to arise on sale has been recognised in the
+financial statements. Neither is deferred tax recognised when fixed assets are sold and it is more likely than not
+that the taxable gain will be rolled over, being charged to tax only if and when the replacement assets are sold.
+
+36
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+1
+
+Accounting policies (continued)
+Taxation (continued)
+
+Deferred tax is measured at the average tax rates that are expected to apply in the periods in which timing
+differences are expected to reverse, based on tax rates and laws that have been enacted or substantively enacted
+by the balance sheet date. Deferred tax is measured on a non-discounted basis.
+
+Debt securities
+
+Securities intended for use on a continuing basis in the Bank's activities are classified as debt securities and
+initially recorded at cost.
+
+Debt instruments which meet the following conditions are subsequently measured at amortised cost using the
+effective interest method. The amortisation of premiums or discounts is included in interest income:
+
+a) The contractual return to the holder is (i) a fixed amount; (ii) a positive fixed rate or a positive variable
+rate; or (iii) a combination of a positive or a negative fixed rate and a positive variable rate.
+
+b) The contract may provide for repayments of the principal or the return to the holder (but not both) to be
+linked to a single relevant observable index of general price inflation of the currency in which the debt
+instrument is denominated, provided such links are not leveraged.
+
+¢) The contract may provide for a determinable variation of the return to the holder during the life of the
+instrument, provided that (i) the new rate satisfies condition (a) and the variation is not contingent on
+future events other than (1) a change of a contractual variable rate; (2) to protect the holder against credit
+deterioration of the issuer, (3) changes in levies applied by a central bank or arising from changes in
+relevant taxation or law; or (ii) the new rate is a market rate of interest and satisfies condition (a).
+
+d) There is no contractual provision that could, by its terms, result in the holder losing the principal amount
+or any interest attributable to the current period or prior periods.
+
+e) Contractual provisions that permit the issuer to prepay a debt instrument or permit the holder to put it
+back to the issuer before maturity are not contingent on future events, other than to protect the holder
+against the credit deterioration of the issuer or a change in control of the issuer, or to protect the holder
+or issuer against changes in levies applied by a central bank or arising from changes in relevant taxation
+or law.
+
+f) Contractual provisions may permit the extension of the term of the debt instrument, provided that the
+return to the holder and any other contractual provisions applicable during the extended term satisfy the
+conditions of paragraphs (a) to (c).
+
+Debt instruments that are classified as payable or receivable within one year on initial recognition and which meet
+the above conditions are measured at the undiscounted amount of the cash or other consideration expected to
+be paid or received, net of impairment.
+
+Cash and cash equivalents
+
+For the purposes of the Statement of Cash Flows, cash and cash equivalents comprises cash on hand and
+demand deposits, and cash equivalents are deemed highly liquid investments that are convertible into cash with
+an insignificant risk of changes in value with a maturity of three months or less at the date of acquisition.
+Segmental information ,
+
+The Bank’s segment reporting is based on the two operating segments that of providing banking and financial
+services and that of providing asset finance. This business arose wholly within the UK.
+
+37
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+1
+
+Accounting policies (continued)
+Joint ventures
+
+The Group's share of the results of its joint venture is included in the Group Income Statement using the equity
+method of accounting. Investments in joint ventures are carried in the Group Balance Sheet at cost plus post-
+acquisition changes in the Group’s share of the net assets of the entity, less any impairment in value. If the Group’s
+share of losses in a joint venture or associate equals or exceeds its investment in the joint venture, the Group
+does not recognise further losses, unless it has incurred obligations to do so or made payments on behalf of the
+joint venture.
+
+Investments in unlisted equily
+
+Investments in unlisted equity are recognised at cost less impairment. At the balance sheet date the Company
+assesses whether, as a result of one or more events occurring after initial recognition, there is objective evidence
+that an investment has become impaired. This evidence varies and may include indications of financial difficulty
+or changes in debt structure.
+
+Pension costs
+
+For the defined contribution scheme the amount charged to the profit and loss account in respect of pension costs
+and other post-retirement benefits is the contributions payable in the year. Differences between contributions
+payable in the year and contributions actually paid are shown as either accruals or prepayments in the balance
+sheet.
+
+The Group has also nominated a defined contribution stakeholder scheme to which the Group does not contribute.
+
+Pension costs in part relate to contributions in the Weatherbys Pension and Assurance Scheme, a pension
+scheme providing benefits based on final penstonable pay. Contributions are recharged on the basis of current
+service period only. The Group is unable to identify its share of the underlying assets and liabilities of this pension
+scheme and has therefore accounted for its contributions to the pension scheme as if it was a defined contribution
+scheme. Details of the pension scheme appear in the financial statements of Weatherbys Limited which can be
+obtained from the Company’s registered office at Sanders Road, Wellingborough, Northamptonshire, NN8 4BX.
+
+investment properties
+
+Investment property is carried at fair value determined annually by external valuers and derived from the current
+market rents and investment property yields for comparable real estate, adjusted if necessary for any difference
+in the nature, location or condition of the specific asset. No depreciation is provided. Changes in fair value are
+recognised in profit or loss.
+
+Financial assets and liabilities
+
+All financial assets and liabilities are initially measured at transaction price (including transaction costs), except
+for those financial assets classified as at fair value through profit or loss, which are initially measured at fair value
+(which is normally the transaction price excluding transaction costs), unless the arrangement constitutes a
+financing transaction. If an arrangement constitutes a financing transaction, the financial asset or financial liability
+is measured at the present value of the future payments discounted at a market rate of interest for a similar debt
+instrument.
+
+Financial assets and hiabilities are only offset in the statement of financial position when, and only when there
+
+exists a legally enforceable right to set off the recognised amounts and the Group intends either to settle on a net
+basis, or to reatise the asset and settle the liability simultaneously.
+
+38
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+1
+
+Accounting policies (continued)
+Financial assets and liabilities (continued)
+
+Financial assets are derecognised when and only when a) the contractual rights to the cash flows from the
+financial asset expire or are settled, b) the Group transfers to another party substantially all of the risks and
+rewards of ownership of the financial asset, or c) the Group, despite having retained some, but not all, significant
+risks and rewards of ownership, has transferred control of the asset to another party.
+
+Financia! liabilities are derecognised only when the obligation specified in the contract is discharged, cancelled or
+expires.
+
+Financial assets
+
+The Group classifies its financial assets into one of the categories discussed below, depending on the purpose
+for which the asset was acquired. The Group’s accounting policy for each category is as follows:
+
+(a) Fair value through profit or loss
+
+This category comprises only listed equity investments and in-the-money derivatives (see “Financial liabilities”
+section for out-of-money derivatives). They are carried in the statement of financial position at fair value with
+changes in fair value recognised in the consolidated income statement. Other than listed equity investments and
+derivative financial instruments which are not designated as hedging instruments, the Group does not have any
+assets held for trading nor does it voluntarity classify any financial assets as being at fair value through profit or
+loss. ,
+
+(b) Loans and receivables
+
+These assets are non-derivative financial assets with fixed or determinable payments that are not quoted in an
+active market. They arise principally through the loans and advances to customers, but also incorporate other
+types of contractual monetary assets. They are initially recognised at fair value plus transaction costs that are
+directly attributable to their acquisition or issue, and are subsequently carried at amortised cost using the effective
+interest rate: method, less provision for impairment.
+
+Fair value measurement
+
+The best evidence of fair value is a quoted price for an identical asset in an active market. When quoted prices
+are unavailable, the price of a recent transaction for an identical asset provides evidence of fair value as long as
+there has not been a significant change in economic circumstances or a significant lapse of time since the
+transaction took place. If the market is not active and recent transactions of an identical asset on their own are
+not a good estimate of fair value, the fair value is estimated by using a valuation technique.
+
+Impairment of financial assets
+
+Impairment provisions are recognised when there is objective evidence (such as significant financial difficulties
+on the part of the counterparty or default or significant delay in payment) that the Group will be unable to collect
+ail of the amounts due under the terms receivable, the amount of such a provision being the difference between
+the net carrying amount and the present value of the future expected cash flows associated with the impaired
+receivable. For loans and advances to customers, which are reported net, such provisions are recorded in a
+separate allowance account with the loss being recognised within provisions for bad and doubtful debts in the
+consolidated statement of comprehensive income. On confirmation that the receivable will not be collectable, the
+gross carrying value of the asset is written off against the associated provision.
+
+39
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+1
+
+Accounting policies (continued)
+impairment of financial assets (continued)
+From time to time, the Group elects to renegotiate the terms of loans and advances to customers with which it
+has previously had a good trading history. Such renegotiations will lead to changes in the timing of payments
+rather than changes to the amounts owed and, in consequence, the new expected cash flows are discounted at
+the original effective interest rate and any resulting difference to the carrying value is recognised in the
+consolidated statement of comprehensive income (operating profit).
+
+The Group first assesses whether objective evidence of impairment exists individually for financial assets or
+collectively for a group of financial assets.
+
+(a) Individual assessment
+
+For individually assessed assets, the Group measures the amount of the impairment loss as the difference
+between the carrying amount of the asset and the present value of the estimated future cash flows from the asset
+discounted at the asset's original effective interest rate.
+
+(b) Collective assessment
+
+The Group's loans and loans and advances to customers and other receivables and cash and cash equivalents
+in the consolidated balance sheet are assessed as to whether there is evidence to suggest that any portfolio is
+likely to be impaired.
+
+Impairment is calculated based on probability of default, exposure to toss at the time of default and the loss
+given default. All factors are based on recent data on the portfolio of financial assets with similar credit risks.
+
+Financial liabilities
+
+The Group classifies its financial liabilities into one of two categories, depending on the purpose for which the
+liability was acquired.
+
+(a) Fair value through profit or loss
+
+This category comprises only out-of-the-money derivatives (see “Financial assets” for in the money derivatives).
+They are carried in the consolidated balance sheet at fair value with changes in fair value recognised in the
+consolidated income statement.
+
+(b) Other financial liabilities
+
+Other financial liabilities include the following items:
+
+e Payables and other short-term monetary liabilities, which are initially recognised at fair value and
+subsequently carried at amortised cost using the effective interest method.
+
+Reserves
+The Group's reserves are as follows:
+e Called up share capital reserve represents the nominal values of shares issued.
+e¢ Profit and loss account represents cumulative profit and losses net of dividends paid and other
+
+adjustments.
+e Other reserves represent revaluation adjustments of the. property.
+
+40
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+2
+
+Judgements in applying accounting policies and key sources of estimation uncertainty
+
+In the application of the Group's accounting policies, the directors are required to make judgements, estimates
+and assumptions about the carrying amounts of assets and liabilities that are not readily apparent from other
+sources. The estimates and associated assumptions are based on historical experience and other factors that
+are considered to be relevant. Actual results may differ from these estimates. The estimates and underlying
+assumptions are reviewed on an ongoing basis. Revisions to accounting estimates are recognised in the period
+in which the estimate is revised if the revision affects only that period, or in the period of the revision and future
+periods if the revision affects both current and future periods.
+
+Critical judgements in applying the Group’s accounting policies
+
+In the course of preparing the financial statements, no judgments have been made in the process of applying the
+Group's accounting policies, other than those involving estimations outlined betow, that have had a significant
+effect on the amounts recognised in the financial statements.
+
+Sources of estimation uncertainty
+e Amortised cost accounting — expected life
+
+Amortised cost accounting requires judgements regarding the expected life of the underlying assets. The
+expected life of assets is derived using a combination of historical data and management judgement and is
+reviewed periodically and reassessed against actual performance. Any changes to the expected life would alter
+the timing of the recognition of interest receivable and amend the carrying value of loans and advances to
+customers as stated in the statement of financial position.
+
+e Impairment losses on loans and advances to customers
+
+The Bank reviews its loans and advances continually to assess whether an individual impairment loss should
+be recorded in the income statement. In particular, management's judgement is required in the estimation of
+the amount and timing of future cash flows when determining the impairment foss. These estimates are based
+on assumptions about a number of factors and actual results may differ, resulting in future changes to the
+allowance.
+
+Loans and advances that have been assessed and found not to be impaired are assessed within groups of
+assets with similar risk characteristics. This is to determine whether provision should be made due to incurred
+loss events for which there is objective evidence, but the effects of which are not yet evident. The collective
+assessment takes account of data from the foan portfolio and is calculated using credit risk characteristics,
+expected cash flows and historical experience. Estimates are made on default rates and time taken to recover
+debts.
+
+41
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+4
+
+Segmental analysis
+
+Analysis by operating segment of operating income and profit before tax is stated below.
+
+Banking and financial services
+Asset finance
+
+Operating Income
+
+Profit before tax
+
+Analysis by operating segment of assets and liabilities is stated below.
+
+Banking and financial services
+Asset finance
+
+No geographical analysis is presented as all operations are situated in the United Kingdom.
+
+Operating profit
+
+This is arrived at after (crediting)
+icharging:
+
+Income
+
+Rentals receivable under operating
+leases (plant and equipment)
+Rentals receivable under operating
+leases (property)
+
+Charges
+
+Depreciation on tangible fixed assets:
+- owned assets (note 14)
+Amoartisation of intangible assets
+(note 13)
+
+Hire of computers and equipment
+
+2019 2018 2019 2018
+
+£ £ £ £
+
+27,860,088 23,113,599 5,764,460 5,129,836
+
+8,110,280 7,674,985 2,236,439 2,504,038
+
+35,970,368 30,788,584 8,000,899 7,633,874
+
+Assets Liabilities
+
+2019 2018 2019 2018
+
+£ £ £ £
+
+828,542,160 764,065,705 791,237,528 729,476,238
+
+139,170,188 114,302,404 129,153,017 105,329,829
+
+967,712,348 878,368,109 920,390,545 834,806,067
+
+Banking Banking
+
+Group Bank Group Bank
+
+2019 2019 2018 2018
+
+£ £ £ £
+
+(174,692) - (140,917} -
+(309,996) (309,996) (309,996) (309,996)
+
+865,883 661,666 723,679 572,117
+
+338,399 319,802 336,622 319,694
+
+- - 74,408 62,649
+
+42
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+Operating profit (continued)
+
+2019 2018
+£ £
+Auditors’ remuneration:
+- fees payable to the company’s auditor in respect of the company's
+annual accounts 96,833 79,199
+- fees payable in respect of the audit of subsidiary companies, pursuant ;
+to legislation . 41,650 41,290
+Total audit fees 138,483 120,489
+- Other services - -
+Total fees 138,483 120,489
+Administrative expenses
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+Staff costs (including directors) £ £ £ £
+consist of:
+Wages and salaries 41,558,334 9,605,289 9,315,059 7,650,479
+Social security costs 1,124,251 921,394 915,082 751,578
+Pension costs 1,184,748 1,004,153 1,018,174 875,011
+IT operations and development 898,568 794,872 966,088 835,300
+Other administrative expenses 40,660,096 7,991,497 9,446,348 7,197,455
+25,425,997 20,317,205 21,660,751 17,309,823
+
+The average number of persons employed in the Group during the year was 230 (2018 - 195) and in the Bank
+176 (2018 - 149). All employees related to office and management.
+
+Pension costs
+
+An amount of £1,184,748 was recognised as an expense for the defined contribution plans in 2019 (2018:
+£1,018,174). Pension costs in part relate to contributions to the Weatherbys Penston and Assurance Scheme.
+Contributions are recharged on the basis of the current service period only.
+
+The Company is unable to identify its share of the underlying assets and liabilities of the defined benefit section
+
+of the Weatherbys Pension and Assurance Scheme and hence under FRS 102 section 28 accounts for its
+contributions to the defined benefits section of the pension scheme as if it was a defined contribution scheme.
+
+43
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+6 Directors’ remuneration
+
+2019 2018
+
+£ £
+
+Emotuments 1,515,206 4,368,398
+Pension contributions 112,357 104,866
+1,627,563 1,473,264
+
+The emoluments of the highest paid director were £413,411 (2018: £378,739) and pension contributions of
+£55,707 (2018: £47,912) were paid on their behalf.
+
+Four of the directors of the Group have retirement benefits accruing under a money purchase pension scheme
+(2018: four).
+
+7 Other interest receivable and similar income
+
+Banking Banking
+
+Group Bank Group Bank
+2015 2019 2018 2018
+£ £ £ £
+
+In respect of:
+Loans and advances to customers 29,326,954 22,881,319 24,141,966 17,919,434
+Loans and advances to banks 1,611,161 1,611,161 1,793,212 1,793,212
+30,938,115 24,492,480 25,935,178 19,712,646
+
+Loans and advances to customers for ‘Bank’ includes interest of £4,971,878 (2018: £4,301,752) relating to the
+overdraft provided to its subsidiary Arkle Finance Limited.
+
+Loans and advances to customers for ‘Group’ includes interest of Enil (2018: Enil} on the subordinated loan and
+other loans provided to its joint venture, Weatherbys Hamilton LLP.
+
+8 Interest payable
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+Client deposits 3,317,324 3,317,324 2,568,895 2,568,895
+Other loans and overdrafts 246,682 246,195 219,464 218,691
+3,564,006 3,563,519 2,788,359 2,787,586
+
+44
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+Taxation on profit on ordinary activities
+
+Current tax
+
+UK corporation tax on profits of the
+period
+
+Adjustments in respect of previous
+period
+
+Total current tax
+
+Deferred tax
+
+Origination and reversal of timing
+differences
+
+Adjustment in respect of prior years
+
+Total deferred tax
+
+Taxation on profit on ordinary
+activities
+
+Factors affecting tax charge for the year:
+
+Profit on ordinary activities before tax
+
+Profit on ordinary activities multiplied by
+the standard rate of corporation tax of
+19% (2018 -— 19%)
+
+Effects of:
+
+Fixed asset differences
+
+Expenses not deductible for tax
+purposes
+
+Income not taxable for tax purposes
+Adjustments to tax charge in respect of
+previous periods
+
+Chargeable gains/(losses)
+
+Tax rate changes
+
+Total tax charge for the year
+
+Banking Banking
+
+Group Bank Group Bank
+2019 2019 2018 2018
+
+£ £ £ £
+1,656,055 1,027,233 1,484,208 940,310
+(2,953) (1,215) 605 -
+4,653,102 1,026,018 1,484,813 940,310
+89,960 84,367 65,070 59,293
+111,757 - - -
+201,717 84,367 65,070 59,293
+1,854,819 1,110,385 1,549,883 999,603
+
+Banking Banking
+
+Group Bank Group Bank
+2019 2019 2018 2018
+
+E £ £ £
+8,000,900 6,008,310 7,633,874 5,396,475
+1,520,171 1,141,579 1,451,386 1,025,140
+72,911 72,914 62,897 62,897
+305,472 20,209 61,162 30,880
+(24,006) (117,007) (16,471) (110,202)
+(8,582) 2,513 21 -
+(1,000) - - -
+(10,147) (9,820) (9,112) (9,112)
+1,854,819 1,110,385 1,549,883 999,603
+
+45
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+Taxation on profit on ordinary activities (continued)
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+Deferred tax
+Analysis of deferred tax balances
+Accelerated depreciation allowances (1,294) (440,031) 246,985 (309,291)
+Movement in short term timing
+differences 323,550 282,256 276,988 235,883
+322,256 (157,775) 523,973 (73,408)
+Deferred tax asset/(liability) at 1 523,973 (73,408) 589,043 (14,115)
+January
+Charged to the profit and loss
+account (201,717) (84,367) (65,070) (59,293)
+Deferred tax asset/(liability) at 31
+December 322,256 (157,775) 523,973 (73,408)
+
+The reduction in the UK corporation tax rate from 20% to 19% from 1 April 2017 was substantively enacted on 26
+October 2015. On 6 September 2016, a further reduction to 17% with effect from 1 April 2020 was substantively
+enacted. The Company’s deferred tax balances as at 31 December 2017 have been calculated based on the
+
+reduced rate of 17%, as these balances are expected to materially reverse after 1 April 2020.
+There is no expiry date on timing differences, unused tax losses or tax credits.
+
+10 Profit attributable to the company
+
+11
+
+Profit on ordinary activities after taxation attributable to the shareholder
+
+of Weatherbys Bank Limited
+
+2019
+
+4,897,925
+
+2018
+
+4,395,873
+
+The Bank has taken advantage of Section 408 of the Companies Act 2006 and consequently a profit and loss
+
+account for the Company is not presented.
+
+Dividends
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+Equity:
+
+Interim paid 2,050,050 2,050,050 1,750,000 1,750,000
+Final proposed - - - -
+2,050,050 2,050,050 1,750,000 1,750,000
+
+46
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+12. Loans and advances to banks
+
+13
+
+Repayable on demand
+
+Remaining maturity:
+
+3 months or less excluding on
+demand
+
+More than 3 months but less than 1
+year
+
+Over 1 year but less than 5 years
+Over 5 years
+
+Intangible assets
+
+Cost or valuation
+At 1 January 2019
+Additions
+
+At 31 December 2019
+
+Amortisation
+At 1 January 2019
+Charge for the year
+
+At 31 December 2019
+
+Net book vaiue
+At 31 December 2019
+
+At 31 December 2018
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+259,621,399 259,622,431 297,646,613 297,646,423
+1,428,266 1,428,266 126,782 126,782
+261,049,665 261,050,697 297,773,395 297,773,205
+
+Banking Banking
+
+Group Group Bank Bank
+Software Total Software Total
+£ £ £ £
+2,844,882 2,844,882 2,727,976 _—-2,727,976
+30,812 30,812 - -
+2,875,694 2,875,694 2,727,976 2,727,976
+710,466 710,466 680,428 680,428
+338,399 338,399 319,802 319,802
+1,048,865 1,048,865 1,000,230 1,000,230
+1,826,829 1,826,829 1,727,746 1,727,746
+2,134,416 2,134,416 2,047,548 2,047,548
+
+Intangible assets relate in the main to the cost of core systems.
+
+47
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+14 Tangible assets
+
+Banking Group
+
+Cost or valuation
+At 1 January 2019
+Additions
+Disposals
+Revaluation
+
+At 31 December 2019
+
+Depreciation
+
+At 1 January 2019
+Charge for the year
+Disposals
+Revaluation
+
+At 31 December 2019
+
+Net book value
+At 31 December 2019
+
+At 31 December 2018
+
+Leasehold
+Investment Property Plant and
+
+Properties Properties improvements equipment Total
+£ £ £ £ £
+3,216,000 1,074,000 230,109 6,385,056 10,905,165
+- 488,387 16,149 3,006 226 3,510,762
+
+- - - (11,532) (11,532)
+
+86,000 (464,387) - - (378,387)
+3,302,000 1,098,000 246,258 9,379,750 14,026,008
+- - 192,160 1,678,194 1,870,354
+
+- 42,118 35,525 788,240 865,883
+
+- - - (8,908) (8,908)
+
+- (42,118) - - (42,118)
+- - 227,685 2,457,526 2,685,211
+3,302,000 1,098,000 18,573 6,922,224 11,340,797
+3,216,000 1,074,000 37,949 4,706,862 9,034,811
+
+The cost of assets acquired during the year for the purpose of letting under finance leases and hire purchase
+
+agreements was £62,674,620 (2018: £56,029, 167).
+
+customers.
+
+48
+
+The amounts are included in loans and advances to
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+14 Tangible assets (continued)
+
+Leasehold
+
+investment Property Plant and
+
+Properties Properties improvements equipment Total
+Bank £ £ £ £ £
+Cost or valuation
+At 1 January 2019 3,380,000 $10,000 230,109 5,333,359 9,853,468
+Additions - 488,387 16,149 2,911,088 3,415,624
+Disposals - - - (3,649) (3,649)
+Revaluation 90,000 (468,387} - - (378,387)
+At 31 December 2019 3,470,000 930,000 246,258 8,240,798 12,887,056
+Depreciation
+At 1 January 2019 - - 192,160 1,415,975 1,608,135
+Charge for the year - 28,755 35,525 597 386 661,666
+Disposals - - - (1,970) (1,970)
+Revaluation - (28,755) - - (28,755)
+At 31 December 2019 - - 227,685 2,011,391 2,239,076
+Net book value
+At 31 December 2019 3,470,000 930,000 18,573 6,229,407 10,647,980
+At 31 December 2018 3,380,000 910,000 37,949 3,917,384 8,245,333
+
+Assets held under finance leases
+The Group has leased offices and buildings on leases which are considered to meet the definition of finance
+leases and are accounted for accordingly.
+
+Freehold and leasehoid land and buildings
+
+Freehold and leasehold land and buildings were professionally valued by Berrys Chartered Surveyors, an
+
+independent valuer, to fair value at 31 December with subsequent additions at cost.
+
+Investment properties
+
+Investment properties, which are all freehold, were revalued to fair value at 31 December 2019, based on a
+valuation undertaken by Berrys Chartered Surveyors, an independent valuer with recent experience in the location
+and class of the investment property being valued. The valuations were undertaken in accordance with the Royal
+Institution of Chartered Surveyors’ Appraisal and Valuation Manual.
+
+49
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+14 Tangible assets (continued)
+lnvestment properties (continued)
+
+As set out in note 4, property rental income earned during the year was £309,996 (2018: £309,996). No contingent
+rents have been recognised as income in the current or prior year.
+
+At the balance sheet date, the Group had contracted with tenants for the following future minimum lease
+payments:
+
+2019 2018
+
+£  £
+Within one year 309,996 309,996
+In the second to fifth years inclusive 1,239,984 1,239,984
+After five years - 309,996
+
+If investment property had been accounted for under the historic cost accounting rules, the property would have
+been measured as follows:
+
+Historical cost information 2019 2018
+£ £
+Historical cost of revatued land and buildings 3,379,954 2,891,567
+Depreciation based on historical cast (1,575,768) (1,431,342)
+Historical cost net book value 1,804,186 1,460,225
+
+Leased assets - Banking Group
+
+Land and Buildings with a total cost of £3,302,000 (2018: £3,216,000) and related accumulated depreciation of
+ENil (2018: ENil) were held for use in operating leases
+
+Plant and equipment with a cost of £950,904. (2018: £878,490} and related accumulated depreciation of £331,205
+(2018: £183,765) were held for use in operating leases.
+
+The future minimum lease payments under non-cancellable operating teases and the residual value exposures in
+respect of leased assets held within plant and equipment all of which are expected to be disposed of at the end
+of the lease term are as foltows:
+
+Future minimum lease Residual values expected
+payments to be recovered
+
+2019 2018 2019 2018
+£ £ £ £
+Within one year 175,884 175,267 5,105 10,496
+In the second to fifth years inclusive 395,138 451,893 138,473 128,516
+Later than five years 16,690 48,027 - -
+587,712 675,187 143,578 139,012
+
+50
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+15 Loans and advances to customers
+
+Repayable on demand
+Remaining maturity:
+
+3 months or Jess excluding on
+demand
+
+1 year or less but over 3 months
+5 years or tess but over 1 year
+Over 5 years
+
+Loan loss provision
+
+Amounts inctuded within the above:
+
+Due from subsidiary undertakings
+- unsubordinated debt
+
+Amounts receivable under finance
+leases
+
+Amounts receivable under hire
+purchase agreements
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+E £ £ £
+34,967,264 162,562,195 24,778,567 128,447,722
+50,129,422 32,106,226 43,238,529 29,494,935
+93,842,562 56,958,070 81,685,438 53,377,138
+352,163,177 272,654,480 286,875,788 218,433,453
+59,782,071 57,606,988 40,191,100 38,471,034
+(1,960,980) (983,865) (2,040,939) (750,870)
+588,923,516 580,844,094 474,728,483 467 473,412
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+- 127,534,932 - 103,669, 155
+65,725,033 - 59,246,222 -
+41,407,491 - 33,180,902 -
+
+Carrying amount and future minimum lease payments of finance leases and hire purchase
+
+agreements at the 31 December
+
+Less than one year
+
+Later than one year but less than five
+
+years
+Later than five years
+
+Less
+
+Unearned finance income
+Provision for uncollectible minimum
+lease payments
+
+Net investment in leases
+
+Present value of minimum
+
+51
+
+Gross investment in the lease lease payments
+2019 2018 2019 2018
+£ £ £ £
+54,026,559 46,809,503 42,427,801 35,760,092
+74,563,784 65,684,506 64,161,482 56,305,389
+574,929 386,456 543,241 361,643
+107,132,524 92,427,124
+(21,210,711) (19,284,511)
+(822,037) (1,168,830)
+107,132,524 92,427,124
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+15 Loans and advances to customers (continued)
+Analysis of individually impaired and non-performing loans and advances
+
+Non-performing loans are those on which interest is being accrued but placed in suspense or on which interest is
+not bring accrued.
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ . £
+Gross amount of loans individually
+determined to be impaired
+- loans and advances before
+provisions 4,077,796 44,407 3,690,914 3,388
+- loans and advances after provisions 3,299,181 - 2,639,249 -
+Non-performing loans and advances
+to customers
+- loans and advances before
+provisions 3,593,454 - 2,434,525 -
+- loans and advances after provisions 3,020,266 - 1,619,395 -
+16 Provisions for bad and doubtful debts
+Banking Group Bank
+Specific Collective Total Specific Collective Total
+£ £ £ £ £ £
+At 1 January 2019 1,052,664 989,273 2,041,937 4,386 747,481 751,867
+New provisions less
+releases 517,718 276,869 794,588 48 884 221,349 270,233
+Write-offs less
+recoveries (791,766) (83,778) (875,545) (8,863) (29,372) (38,235)
+Cumulative provisions
+As at 31 December
+2019 778,616 1,182,364 1,960,980 44,407 939,458 983,865
+New and additional
+provisions 900,731 276,869 1,177,600 49,784 221,349 271,133
+Releases and
+recoveries (383,013) - (383,013) (900) - (300)
+Net charge to profit
+and foss account 517,718 276,869 794,587 48 884 221,349 270,233
+
+Included within the “Banking Group” and “Bank” provisions for bad and doubtful debts is Enil (2018: £998) that
+relates to trade debtors. The remaining provisions relate to loans and advances to customers.
+
+52
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+16 Provisions for bad and doubtful debts (continued)
+
+17
+
+At 1 January 2018
+New provisions less
+releases
+
+Write-offs less
+recoveries
+
+Cumulative provisions
+As at 31 December
+2018
+
+New and additional
+provisions
+Releases and
+recoveries
+
+Net charge to profit
+and loss account
+
+Debt securities
+
+Investment securities
+
+At 1 January
+Acquisitions
+
+Disposals
+
+Ameortisation of discounts
+and premiums
+
+As at 31 December
+Market value
+Unamortised premiums on
+
+investment securities
+
+Unamortised discounts on
+investment securities
+
+Banking Group Bank
+Specific Collective Total Specific Collective Total
+£ £ £ £ £ £
+1,071,730 821,997 1,893,727 10,480 584,087 §94,567
+697,098 112,339 809,437 127 178,435 179,162
+(716,164) 54,937 (661,227) (6,821) (15,041) (21,862)
+1,052,664 989,273 2,041,937 4,386 747,481 751,867
+914,858 178,435 1,093,293 6,029 178,435 184,464
+(217,760) (66,096) (283,856) (5,302) - (5,302)
+697 098 112,339 809,437 727 178,435 179,162
+2019 2018
+Premiums Premiums
+and Book and Book
+Cost discounts value Cost discounts value
+£ £ £ £ £ £
+89,518,728 26,170 89,544,898 81,189,000 75,602 81,264 602
+54,775,638 97,316 54,872,954 36,759,728 1,616 36,761,344
+(46,303,728) (11,250) (46,314,978) (28,430,000) (7,321) (28,437,321)
+- (10,200) (10,200) - (43,727) (43,727)
+97,990,638 102,036 98 092,674 89,518,728 26.170 89,544,898
+98,134,552 89,464,412
+119,031 55,726
+16,995 29,556
+
+53
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+18
+
+19
+
+Investment in subsidiaries
+Bank 2019 2018
+
+Subsidiary undertakings (non-banking)
+
+Shares
+
+- Arkle Finance Limited 10,000 10,000
+- Weatherbys Bank (Nominees) Limited (Unaudited) 1
+
+- Weatherbys General Services Limited 1 1
+
+Total unlisted 40,002 10,002
+
+Bank
+
+Details of shares in group undertakings, all of which are included in the consolidation are as follows:
+
+Proportion
+of shares and
+Country Class of voting Nature
+
+Name ofincorporation share rights held of business
+Arkle Finance Limited England and Ordinary 100% Provision of leasing and
+Company No. 03398034 Wales instalment credit finance
+Weatherbys Bank England and Ordinary 100% Trust company (Dormant)
+(Nominees) Limited Wales ‘
+Company No. 04375682
+Weatherbys General England and Ordinary 100% Investment in and Partner of
+Services Limited Wales Weatherbys Hamilton LLP
+Company No. 08172800 (Joint venture)
+
+The registered office of all subsidiaries is Sanders Road, Wellingborough, Northamptonshire, NN8 4BX.
+
+Investment in joint venture
+Banking Group 2019 2018
+£ £
+
+Investment in equity 50,000 50,000
+Country of Proportion
+
+Name incorporation of share Nature of business
+
+Weatherbys Hamilton LLP England and 50% Provision of insurance mediation services
+Wales
+
+The registered office of the joint venture is Sanders Road, Wellingborough, Northamptonshire, NN8 4BX
+
+The joint venture financial statements show an operating profit before partner drawings of £1,446, 166 (2018:
+£1,335,662). This includes nil (2018: £nil) of members remuneration charged as interest, the Group's share of
+which is disclosed in note 7. The remaining balance was shared amongst the members in accordance with the
+agreed profit-sharing arrangements of which the Group's share in 2019 was £270,000 (2018: £240,000).
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+20
+
+21
+
+22
+
+Investments
+
+Convertible preferred stock
+Investment in unlisted equity
+
+In 2016, Visa Inc purchased Visa Europe. In part payment for the Bank’s membership in Visa Europe it received
+series B convertible preferred stock from Visa Inc. The earliest this stock will convert to Visa Inc class A common
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+385,630 385,630 280,778 280,778
+331,196 - 49,990 -
+716,826 385,630 330,768 280,778
+
+stock is during 2020 and the latest during 2028.
+
+The Group holds a 1% investment in Bondmason Group Ltd and a 10% investment in Practical Finance DAC Ltd.
+
+Impairment provisions are included in the administrative expense line item on the income statement.
+
+Other assets
+
+Amounts falling due within one
+year:
+
+Trade debtors
+
+Due from subsidiary undertakings
+Due from companies under common
+contro!
+
+Deferred tax asset
+
+Other debtors
+
+Customer accounts
+
+Repayable on demand
+
+With agreed maturity dates or periods
+of notice, by remaining maturity:
+
+3 months or less but not repayable
+on demand
+
+3 months to one year
+
+1 year to five years
+
+Amounts include:
+
+Due to other companies under
+common control
+
+Due to immediate parent company
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+966,073 58,926 879,163 60,434
+- 490,395 - 433,958
+9,660 9,660 16,341 16,341
+322,256 - 523,973 -
+373,785 375,685 291,493 118,508
+1,671,774 934,666 4,710,970 629,241
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+643,889,482 644,735,132 580,549,828 581,067,079
+108,252,380 108,252,380 96,849 548 96,849,548
+117,155,245 117,165,245 86,481,215 86,481,215
+30,060,604 30,060,604 52,499,803 52,499,804
+"899,357,711 900,203,361 816,380,394 816,897,646
+2,950,728 3,796,379 2,598,511 3,115,763
+2,009,017 2,009,017 184 184
+
+55
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+23 Subordinated loan
+
+Banking Banking
+Group Bank Group Bank
+2019 2019 2018 2018
+£ £ £ £
+Loan issuance 10,000,000 10,000,000 46,000,000 10,000,000
+
+10,000,000 10,000,000 10,000,000 10,000,000
+
+During 2018 £10,000,000 of subordinated loans were issued to support the Company's future growth. The loans
+are repayable on 1 October 2028 and the annual interest payable is 7.5%.
+
+24 = Other liabilities
+
+Banking Banking
+
+Group Bank Group Bank
+
+2019. 2019 2018 2018
+
+£ £ £ £
+
+Trade creditors ne 4,291,697 4,304,555 3,807,346 3,463,183
+Corporation tax 896,152 546,197 863,946 601,179
+Deferred tax liability - 487,775 - 73,408
+
+Amounts due to other companies
+under common control 83,373 78,118 30,507 23,901
+Other taxation and social security 374,938 318,521 282,294 235,274
+5,646,160 5,405, 166 4,984,093 4,396,945
+25 Provisions for liabilities
+
+FSCS FScs
+
+levy levy
+
+Banking Group and Bank 2019 2018
+£ £
+
+At 1 January 7,868 15,646
+Charged to the income statement (7,868) 30
+Paid in the year - (7,868)
+At 31 December - 7,868
+
+26 Authorised share capital
+Allotted, called up and fully paid
+
+2019 2018 2019 2018
+
+Number Number £ £
+
+Ordinary shares of £1 each 7,000,000 7,000,000 7,000,000 7,000,000
+
+56
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+27
+
+28
+
+Commitments
+
+The Group had total commitments of £72,085,598 (2018: £75,613,200). Commitments comprise amounts yet to
+be drawn under lending facilities issued to customers.
+
+Risk management policies and objectives
+
+The Board is responsible for determining the long-term strategy of the business and the level of risk acceptable
+to the Group in each area of its business.
+
+The Risk Committee is responsible to the Banking Group Board for the assessment and control of the high level
+risks assumed by the Banking Group and for ensuring that the requisite culture, practices and systems are in
+place to meet both internal and external obligations.
+
+The Assets and Liabilities Committee reviews the allocation and deployment of capital at risk and liquidity risk,
+taking into account the Group's risk appetite. .
+
+The main financial risks arising from the Group's activities are summarised below.
+
+Credit risk
+
+Credit risk arises from extending credit in all forms in the Group’s banking activities where there is a possibility
+that a counterparty may default. The maximum credit risk approximates to the carrying value of loans and
+advances to banks (note 12}, loans and advances to customers (note 15) and debt securities (note 17).
+
+The table below shows the Group's credit quality of its treasury assets.
+
+2019 2018 |
+
+£ £
+Loans and advances to banks 261,049,665 297,773,395
+Debt securities 98,092,674 89,544 898
+Treasury assets at 31 December 359,142,339 387,318,293
+By credit grading
+AAA 312,881,996 343,585,432
+AA 2,016,254 4,027,517
+A 44,244,089 39,705,344
+Treasury assets at 31 December 359,142,339 387,318,293
+
+57
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+28
+
+Risk management policies and objectives (continued)
+
+All loans and overdraft applications are assessed with reference to the Group’s lending policy. The approval of
+all loans and overdraft applications is controlled by a Credit Committee within set limits of authority.
+Transactions above such limits and any changes to policy and procedures require Board approval. The Board
+is responsible for endorsing treasury counterparties.
+
+The table below shows information on the Group’s loans and advances to customers by payment due status.
+
+2019 2018
+
+£ £
+
+Neither past due nor impaired 583,750,310 470,507,480
+Up to three months overdue but not impaired 969,529 1,401,678
+Over three months overdue but not impaired 2,086,861 1,169,349
+
+586,806, 700 473,078,507
+
+Individually assessed as impaired 4,077,796 3,690,915
+Loan loss provision (1,960,980) (2,040,939)
+
+Loans and advances to customers at 31 December
+588,923,516 474,728,483
+
+Interest rate sensitivity
+
+The Group is exposed to movements in interest rates, and manages this exposure on a continuous basis within
+value at risk limits set by the Board.
+
+Interest rate sensitivity refers to the relationship between interest rates and net interest income resulting from the
+periodic repricing of assets and liabilities. The largest single administered rate items in the Bank's balance sheet
+are retail loans and deposits, the vast majority of which bear interest at variable rates. The Bank has the ability
+to reprice its variable rate assets and liabilities subject to the constraints imposed by the competitive situation in
+the market place. Deposits agreed at fixed rates may be, subject to prevaiting market rates, matched on the
+money market in order to mitigate the impact of interest rate movements.
+
+Interest rate risk is measured throughout the maturity bandings of the book on a parallet shift scenario for a 50
+basis points movement. The current profile of the balance sheet is such that it results in an adverse impact on the
+economic value of equity of £198,000 (2018: £70,000) for a positive 0.5% shift, and a favourable impact of
+£203,000 (2018: £70,000) for a negative 0.5% movement.
+
+Operational risk
+
+Operational risk is the exposure to financial or other damage arising through unforeseen events or failure in the
+Group's operational systems. Examples include inadequate or failed internal controls and procedures, human
+error, deliberate or malicious acts including fraud, and business interruptions.
+
+The primary responsibility for identifying and managing operational risk rests with the Group Board. Internal
+contro! techniques to reduce their likelihood or impact include segregation of duties, exception and exposure
+reporting, business continuity planning, reconciliation and delegation of authority and are based on the submission
+of timely and reliable management reporting. Where appropriate, risk is mitigated by way of insurance with third
+parties.
+
+58
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+28
+
+Risk management policies and objectives (continued)
+
+Cyber risk
+
+An increasing risk that the Group is subject to within its operational processes is cyber risk. This is the risk that
+the Group businesses are subject to some form of disruption arising from an interruption to its IT and data
+infrastructure. The Group regularly tests the infrastructure to ensure that it remains robust to a range of threats,
+and has continuity of business plans in place.
+
+Liquidity risk
+
+The Group's liquidity risk is monitored by the Assets and Liabilities Committee with the aim of maintaining sufficient
+liquid resources to cover cash flow imbalances and fluctuations in funding to maintain full public confidence in the
+solvency of the Group and to meet its financial obligations. The sources and maturities of assets and liabilities
+are closely monitored and diversified to avoid any undue concentration. A substantial proportion of deposits are
+made up of current and savings accounts which, although repayable on demand, have traditionally formed a
+
+stable deposit base.
+
+The Group’s maturity analysis of its assets and liabilities as at the year end are summarised below.
+
+More than
+three More than
+months one year
+Not more but not but not
+than three morethan more than More than
+At 31 December 2019 months one year five years five years Total
+£'000 £°000 £°000 £°000 £'000
+Assets:
+Derivatives - - - 265 265
+Loans and advance to banks 259,622 - - 1,428 261,050
+Loans and advances to customers 83,136 93,843 352,163 59,782 588,924
+Debt securities 3,772 6,807 87,513 - 98,092
+Other assets 4,244 320 322 13,884 18,770
+Total assets 350,774 100,970 439,998 75,359 967,101
+Liabilities:
+Derivatives - - - 1,258 1,258
+Customer accounts 752,142 117,155 30,061 - 899,358
+Other liabilities 8,277 886 - 10,000 19,163
+Shareholders’ funds - - - 47,322 47,322
+Total liabilities 760,419 118,041 30,061 58,580 967,101
+Gap (409,645) (17,071) 409,937 (16,779) -
+Cumulative gap (409,645) (426,716) (16,779) - -
+
+59
+
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+28 Risk management policies and objectives (continued)
+
+More than
+three More than
+months one year
+
+Not more but not but not
+thanthree morethan morethan More than
+
+months one year fiveyears five years Total
+At 31 December 2018 £°000 £°000 £'000 £°000 £'000
+Assets:
+Derivatives - - - 377 377
+Loans and advance to banks 297,773 - - - 297,773
+Loans and advances to customers 65,976 81,685 286 876 40,191 474,728
+Debt securities 18,298 14,001 57,246 - 89,545
+Other assets 3,631 290 524 11,500 15,945
+Total assets 385,678 95,976 344,646 52,068 878,368
+Liabilities:
+Derivatives - - - 547 547
+Customer accounts 677,399 86,481 §2,500 - 816,380
+Other liabilities 7,015 864 - 10,000 17,879
+Shareholders’ funds ~ - - - 43,562 43,562
+Total liabilities 684,414 87,345 52,500 54,109 878,368
+Gap (298,736) 8,632 292,146 (2,041) -
+Cumulative gap (298,736) (290,105) 2,041 . - -
+
+Regulatory and conduct risk
+
+As a provider of financial services the Company also faces potential risks arising from failures to meet customer
+expectations, to deal with complaints effectively and to ensure the products it provides are appropriate to their
+customer's needs. The Company's internal systems, controls and protocols are designed specifically to protect
+against such risks. The Company complied with all relevant external capital requirements during the year.
+Foreign exchange risk
+
+The Group does not have any material foreign exchange exposure.
+
+60
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+28
+
+29
+
+Risk management policies and objectives (continued)
+
+Fair value analysis
+
+The Group's and Company's financial instruments measured at fair value may be analysed as follows:
+
+Group and Group and
+
+Company Company
+2019 2018
+£ £
+Financial assets
+
+Forward currency contracts ~ 218,190 261,101
+Interest rate swaps 47,110 115,962
+Convertible preferred stock 385,630 280,778
+
+Financial tiabilities
+Forward currency contracts 218,626 262,005
+Interest rate swaps 1,039,081 284,995
+
+Forward foreign currency contracts are valued using quoted forward exchange rates and yield curves derived
+from quoted interest rates matching maturities of the contracts.
+
+Interest rate swaps are valued at the present vaiue of future cash flows estimated and discounted based on the
+applicable yield curves derived from quoted interest rates.
+
+Convertible preference stock is valued at the present value of future cash flows estimated and discounted based
+on quoted values of the underlying shares, illiquidity and exchange rates.
+
+Related party transactions
+
+Parties are considered to be related if one party has the ability to control the other party or exercise significant
+influence over the other party in making financial or operation decisions, or one other party controls both. The
+definition includes subsidiaries, associates, joint ventures and the Bank’s pension schemes, as well as other
+persons.
+
+The Bank provides banking services to its associates and joint ventures, the Trustees of the Bank's pension fund
+and to entities under common directorships, providing loans, overdrafts, interest and non-interest bearing deposits
+and current accounts to these entities as well as other services. All are conducted on the same terms as third-
+party transactions.
+
+2019 2018
+£000 £°000
+Income , 448 456
+Expenditure 2,062 2,087
+Companies under common control:
+- Amounts owed by related parties 10 14
+- Amounts owed to related parties 2,849 2,363
+Pension funds and charitable foundation:
+- Amounts owed by related parties - -
+- Amounts owed to related parties 408 384
+
+61
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+29 Related party transactions (continued)
+
+Weatherbys Limited (“WL"), Weatherbys Ireland GSB Limited (“WIGSBL"), Weatherbys GSB Limited (“WGSBL")
+and Weatherbys Hamilton LLP ("WHL”) are companies under common control with the Bank. During the year the
+following transactions were made under normal trading terms and the balances at year-end were as follows:
+
+The Bank charged WL £309,996 (2018: £309,996) for rent of property and WHL £138,091 (2018: £145,653) for
+services rendered.
+
+Services of £2,062,171 (2018: £2,083,490) were provided by WL and fnil (2018: £3,000) were provided by
+WGSBL to the Bank.
+
+The Bank also paid WL £nil (2018: Enil) and WGSBL £84 (2018: £363) in interest on deposits held by them.
+
+At 31 December 2019, the Bank held deposited funds of £131,532 (2018: £377,153) on behalf of WL, £5,856
+(2018: £160,507) on behalf of WIGSBL, £2,325,042 (2018: £1,683,206) on behalf of WHL and £387,027 (2018:
+£114,987) on behalf of WGSBL.
+
+At 31 December 2019 the Bank owed WGSBL £nil (2018: Enil), and WL £78,118 (2018: £27,424) relating to
+services rendered. At 31 December 2019 WHL owed the Bank £9,660 (2018: £13,941) for services rendered.
+
+The Bank also provides banking services to its subsidiaries and parent, providing loans, overdrafts, interest and
+non-interest bearing deposits and current accounts to these entities as well as other services. All are conducted
+on the same terms as third-party transactions.
+
+2019 2018
+£'000 £°000
+Income ; 5,247 4,653
+Expenditure 6 5
+Amounts owed by related parties 128,025 104,103
+Amounts owed to related parties 2,855 519
+
+Arkle Finance Limited (“AFL”), Weatherbys General Services Limited (“WGS”") and Weatherbys Bank (Nominees)
+Limited (“WNL”) are subsidiary companies of the Bank and Weatherbys Bank Holdings Limited (“W8HL") its
+parent. During the year the following transactions were made under normal trading terms and the balances at
+year-end were as follows:
+
+The Bank charged AFL £275,232 (2018: £351,358) for services rendered and services of £5,601 (2018: £4,907)
+were provided by AFL to the Bank.
+
+The Bank also paid WBHL £nil (2018: £372) in interest on deposits held by them and received from AFL
+£4,971,878 (2018: £4,301,752) in interest on lending facilities held.
+
+At 31 December 2019, the Bank held deposited funds of £2,009,017 (2018: £184) on behalf of WBHL, £537,022
+(2018: £380,424) on behalf of WGS and £3,684 (2018: £3,684) on behalf of WNL. At 31 December 2019 the Bank
+was owed £127,229,988 (2018: £103,534, 184) for lending facilities provided on behalf of AFL and £490,395
+(2018: £433,958) for services rendered and accrued interest.
+
+62
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+29 Related party transactions (continued)
+
+30
+
+31
+
+The key management personnel, and persons connected with them, are also considered to be related parties for
+disclosure purposes. Key management personnel are defined as those persons having authority and responsibility
+for planning, directing and controlling the activities of the Bank (directly or indirectly). The Bank provides banking
+services to directors and other key management personnel and persons connected to them. All are conducted on
+the same terms as third-party transactions. The aggregate amounts outstanding at 31 December are shown
+below.
+
+2019 20198 , 2018 2018
+
+Number £ Number £
+
+Loans 3 §,222,549 4 2,156,007
+Deposits 9 213,007 9 491,832
+
+The total compensation paid to key management personnel for services provided to the group was £3,677,014
+(2018: £3,417,625).
+
+Country by country reporting
+
+The Capital Requirement (Country by Country reporting) regulations 2013 require the disclosure on a group basis
+of corporation tax payments made and public subsidies received. The Group is entirely UK based and pays all
+taxes to the UK Authorities. The group companies included in the consolidated disclosure and the corporation tax
+paid are shown below.
+
+Jurisdiction Nature of business
+Weatherbys Bank Limited UK Retail banking
+Arkle Finance Limited UK Provision of leasing and instalment credit
+finance
+Weatherbys Bank (Nominees) Limited UK Trust company (Dormant)
+Weatherbys General Services Limited UK investment and partner in Joint Venture
+Cash tax Public
+paid on subsidies
+Average Profit profit or received
+number of or loss loss during during
+Jurisdiction employees Turnover before tax the year the year
+2019 2019 2019 2019 2019
+£ £ £ £ £
+United Kingdom 230 35,970,368 8,000,900 1,620,904 -
+
+Ultimate parent company
+
+The Bank’s immediate and ultimate parent company is Weatherbys Bank Holdings Limited, a company
+incorporated in Great Britain and registered in England and Wales. The consolidated financial statements of
+Weatherbys Bank Holdings Limited are the only financial statements into which Weatherbys Bank Limited are
+consolidated. Copies of these accounts can be obtained from Sanders Road, Wellingborough, Northamptonshire,
+NN8 4BX, being the registered address of the ultimate parent company.
+
+The ultimate controlling parties of Weatherbys Bank Limited are three Weatherby family trusts.
+
+63
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+32 ~Financial instruments
+
+A financial instrument is a contract which gives rise to a financial asset of one entity and a financial liability of
+another entity. The company provides financial instruments in the form of leases and loans.
+
+The table below provides a summary of the terms and conditions of the Group's financial instruments and
+description of respective accounting policies.
+
+Financial Instrument
+
+Derivative instruments
+
+Loans and advances to
+customers
+Finance Leases
+
+Hire purchase agreements
+
+Loans and advances
+
+Deposits at Banks
+
+Debt securities
+
+Loans to joint venture
+
+Loans to group undertakings
+
+investments in unlisted equity
+
+Amounts owed to customers
+
+Terms and conditions
+
+Fixed interest received/paid
+converted to variable interest
+paid/received
+
+Based on notional value of the
+derivative
+
+Fixed interest rates
+
+Fixed term
+
+Fixed interest rates
+
+Fixed term
+
+Fixed and variable interest rates
+Fixed and variable term
+
+Non-interest bearing and variable
+interest rates
+Instant access
+
+Fixed and variable interest rates
+Fixed term
+
+Variable rate
+Fixed term
+
+Variable rate
+Variable term
+
+Non-interest bearing
+Medium to long term
+
+Fixed or variable interest rate
+
+Fixed or variable term
+Short to medium term
+
+64
+
+Accounting policy
+
+Fair value through profit and loss
+
+At amortised cost
+At amortised cost
+
+At amortised cost
+
+At amortised cost
+
+At amortised cost
+
+At amortised cost
+
+At amortised cost
+
+At cost less impairment
+
+At amortised cost
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+32. Financial instruments (continued)
+
+The carrying values of the Group’s and Company's financial assets and liabilities are summarised by category
+
+below.
+Banking Group Bank
+2019 2018 2019 2018
+£ £ £ £
+Financial assets
+Measured at fair value through profit or loss
+Derivative Financial assets (note 28) 265,300 377 ,063 265,300 377,063
+Convertible preferred stock (note 28 and
+20) 385,630 280,778 385,630 280,778
+Instruments measured at amortised cost
+Loans and advances to banks (note 12) 261,049,665 297 773,395 261,050,697 297,773,205
+Loans and advances to customers (note
+15) §88,923,516 474,728,483 580,844,094 467 473,412
+Debt Securities (note 17) 98,092,674 89,544,898 98,092,674 89,544,898
+Measured at cost tess impairment
+Investment in subsidiaries (note 18) - - 10,002 10,002
+Investments in unlisted equity (note 20) 331,196 49,990 - -
+Measured at amortised cost
+Trade and other debtors (note 21) 1,671,774 1,710,970 934,666 629,241
+950,719,755 864,465,577 941,583,063 856,088,599
+Financial liabilities
+Measured at fair value through profit or loss
+Derivative Financial liabilities (note 28) 1,257,707 547,000 1,257,707 547,000
+tnstruments measured at amortised cost
+Customer accounts (note 22) 899,357,711 816,380,394 900,203,361 816,897,646
+Measured at amortised cost
+Other liabilities (note 24) 5,646,160 4,984,093 5,405,166 4,396,946
+Measured at amortised cost
+Subordinated Loan (note 23) 10,000,000 10,000,000 10,000,000 10,000,000
+916,261,578 831,911,487 916,866,234 831,841,592
+
+65
+Weatherbys Bank Limited
+
+Notes forming part of the financial statements
+for the year ended 31 December 2019 (continued)
+
+32. Financia! instruments (continued)
+Fair value hierarchy classification
+
+The Bank uses the following hierarchy for determining and disclosing the fair vatue of financial instruments by
+valuation technique: .
+
+Level 1: quoted (unadjusted) prices in active markets for identical assets or liabilities
+
+Level 2: other techniques for which all inputs which have a significant effect on the recorded fair value are
+observable, either directly or indirectly
+
+Level 3: valuation techniques which use inputs that have a significant effect on the recorded fair value that are
+not based on observable market data
+
+The table below summarises the fair values of the Group’s and Company’s financial assets and liabilities that are
+accounted for at fair value, analysed by the valuation methodology used by the Group to derive the financial
+insttument's fair value:
+
+Fair value hierarchy Banking Group Bank
+2019 2018 2019 2018
+; £ £ £ £
+Level 3 Level 3 Level 3 Level 3
+
+Financial assets
+
+Measured at fair value through profit or loss
+Derivative Financial assets (note 28) 265,300 377,063 265,300 377,063
+Convertible preferred stock (note 28 and 20) 385,630 280,778 385,630 280,778
+
+Financial liabilities
+
+Measured at fair value through profit or loss
+Derivative Financial liabilities (note 28) 1,257,707 547,000 1,257,707 547,000
+
+Measured at amortised cost
+Subordinated Loan (note 23) 10,000,000 10,000,000 10,000,000 10,000,000
+
+33 Non adjusting post Balance Sheet events
+
+The UK and world economies have been significantly impacted by the spread of the coronavirus. The Government
+along with the Bank of England have implemented a number of measures to boost the economy and support
+individuals that experience hardship as a consequence of the disruption. We expect the impact of loan loss
+provisions to be material for Arkle Finance Limited, the group’s subsidiary that specialises in tending to smaller
+businesses in the UK. However, until the economic impact of the coronavirus pandemic is clear, it is not possible
+to quantify the extent of additional provisions that might be required.
+
+66

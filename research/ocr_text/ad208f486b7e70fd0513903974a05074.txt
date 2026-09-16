@@ -1,0 +1,2907 @@
+olpo |
+—'Me
+
+iBank
+
+Melli Bank ple
+Annual Report and Accounts
+Yeat Ended 31 December 2023
+
+Registration number: 04152338
+
+Registered Office:
+98a Kensington High Street
+London
+W8 4SG
+
+Certified True Copy
+
+For and on behalf of
+MELLI BANK NK plc,
+
+fel
+allyjna
+
+|—="!MelliBank
+
+Contents
+
+Board & Management
+Strategic Report
+
+Directors’ Report
+
+Directors’ Responsibilities Statement
+
+Independent Auditor’s Report to the Member of Melli Bank ple
+Profit and Loss Account
+
+Statement of Comprehensive Income
+
+Balance Sheet
+
+Statement of Changes in Equity
+
+Statement of Cash Flows
+
+Notes
+
+Page 2 of 50
+
+Annual Report and Accounts 2023
+
+10
+
+12
+
+13
+
+20
+
+21
+
+23
+
+24
+
+25
+
+a
+nt
+
+olla
+
+I-"MelliBank
+
+Annual Report and Accounts 2023
+
+Boatd & Management
+Board of Directors
+
+Mr A. Najarzadeh
+Non-executive Chairman
+
+Mr D. Rezaei
+Deputy Chairman & Chief Executive Officer
+
+Mr A. Gachpazzadeh
+Non-executive Director
+
+Mr J. Thompson
+Non-executive Director
+
+Offices
+London
+
+98a Kensington High Street
+London W8 4SG.
+
+United Kingdom
+
+E-mail: info@mellibank.com
+
+Hong Kong Branch
+
+Room 2202
+
+22/F Harbour Centre, 25 Harbour Road
+Wanchai, Hong Kong
+
+Tel: +852 37 61 4444
+
+E-mail: info@bk.mellibank.com
+
+Tehran Representative Office
+
+Ath Floor, 20 West Nahid Street,
+Africa Boulevard,
+
+Tehran, 1967757451, Iran
+
+Tel: +98 21 26 20 13 85
+
+Independent Auditor
+MHA
+
+2 London Wall Place
+London
+
+EC2Y 5AU
+
+Executive Management
+
+Mr Abdi Zand
+Corporate Affairs and Company Secretary
+E-mail: a.zand@mellibank.com
+
+Mr Bahman Ataii
+Finance
+E-mail: b.ataii@mellibank.com
+
+Mr Mohammad Vahidi
+Banking Operations
+E-mail: mvahidi@mellibank.com
+
+Mr Alasdair Johnston
+
+Marketing
+E-mail: a.johnston@mellibank.com
+
+Mr Mohamad Fathizadeh
+Treasury
+E-mail: m.fathizadeh(@mellibank.c
+
+Mr James McCall
+Risk
+E-mail: jmccall@mcllibank.com
+
+Ms Helen Cai
+Compliance
+E-mail: h.cai@mellibank.com
+
+Mr Hamid Jahanbakhsh Mashhadi
+IT
+
+E-mail: h.mashhadi@mellibank.com
+
+Mr Ram Rao
+Financial Control
+E-mail: r.ra0@mellibank.com
+
+Mr Testy Chiu
+Chief Executive — Hong Kong Branch
+E-mail: terry.chiu@mellibank.com
+
+Page 3 of 50
+
+1
+|=* MelliBank Annual Report and Accounts 2023,
+
+Strategic Report
+
+Chief Executive Officer’s Statement
+
+In my statement accompanying the 2022 financial statements, I reported that Melli Bank had managed to end
+6 years of losses to return to profitability. I am very pleased to report that in 2023 we have made good progress
+in sustaining the improvement in performance and establishing a profit-making trend. This was achieved
+despite experiencing a drop of around 10% in the total revenue from €9,221,000 in 2022 to €8,289,000 as a
+result of the scarcity of high-margin trade finance transactions. This scarcity meant that projected levels of
+business could not be realised in the intended periods, however out efforts have laid the gtoundwork to
+strengthen our ability to improve performance on a consistent basis. The pressure on overheads due to the
+consumer price inflation started easing in 2023. The average Consumer Price Inflation experienced in the UK.
+2023 was around 7.4% against 9.1% in 2022. The staff costs and other administrative expenses benefited from
+this trend, with the staff costs decreasing by 3% to €5,443,000 from €5,600,000 in 2022. The non-staff costs
+decreased by 21% to €2,052,000 from €2,602,000 in 2022. These cost savings compensated the drop in the
+total revenue, with the Bank ending the financial year with a net profit of €630,000, a modest improvement
+over the net profit in 2022 of €559,000.
+
+Hand in hand with the business focus, I continued in 2023 to pay particular attention to strengthening the
+Bank’s governance and operational resilience through changes at senior executive management level,
+including changes in their reporting lines, and putting in place new committees with appropriately focused
+terms of reference. The Executive Committee’s membership was expanded to enhance performance and
+accountability on all important matters. These actions will continue in 2024 with a thorough update of the
+Bank’s succession atrangements. There have been changes in the composition of the Board of Directors,
+partly occasioned by the new policy of our parent, Bank Melli Iran, to increase the proportion of non-
+executive directors. The Bank will be looking to add new independent non-executive directors to the Board.
+
+I like to put on record my gratitude to the CEO and Deputy CEO for International Affairs of Bank Melli
+Iran for the much-valued cooperation and support.
+
+Lam of course indebted to the support of my Board of Directors, and the efforts of my colleagues at Melli
+Bank who have continued to rise to the challenge of the more focused and active business strategy we have
+developed, and embracing the governance and operational changes we ate implementing together. With the
+achievements in 2022 and 2023 behind us and the momentum built, we look forward with confidence to an
+improved profitability in 2024.
+
+Davood Mohammad Rezaei
+Chief Executive Officer
+
+Page 4 of 50
+
+rere
+
+ollye
+| —="'MelliBank Annual Report and Accounts 2023
+
+Principal Activities
+
+Melli Bank Ple (“the Bank” or “the Company”) is a commercial bank incorporated and registered in England and
+Wales under the Companies Act 2006 and domiciled in the United Kingdom. The Bank is authorised by the
+Prudential Regulation Authority and regulated by the Financial Conduct Authority and Prudential Regulation
+‘Authotity under the Financial Services and Markets Act 2000. The principal activity of the Bank is the provision
+of retail and commetcial banking services. The Bank’s registered address is 98a Kensington High Street, London,
+We 48G.
+
+Business Review
+
+Iran is the Bank’s niche market and its business model is based on the provision of banking services to the parties
+involved in the chain of trade between Iran and other countries. Prior to the imposition of EU sanctions in 2008,
+the Bank held a prominent position in the provision of banking services to the parties involved in trade with Iran,
+The Bank has continued to organise its resources on the basis of this business model, but has put in place a
+governance structure that is more agile and focused on the opportunities which are likely to arise in the restricted
+circumstances the Bank is currently operating under. A drop of around 10% in the total revenue from €9,221,000
+in 2022 to €8,289,000 was mainly due to the relative scarcity of high-margin trade finance transactions. The Bank
+believes it is likely that the momentum built in 2023 for improving profitability would carry on to 2024.
+
+The pressure on administrative expenses due to the consumer price inflation started easing in 2023. The staff
+costs and other administrative expenses benefited from this trend. The average Consumer Price Inflation (CPI)
+expetienced in the UK 2023 was around 7.4% against 9.1% experienced in 2022. ‘The staff costs decreased by 2.8%
+to €5,443,000 (2022: €5,600,000) and other administrative expenses decreased by 21.1% to €2,052,000 (2022:
+€2,602,000).
+
+UK, January 2023 to December 2023 _
+CPI 12- CPI1-
+
+CPI Index | month rate month rate
+
+(UK, 2015=100) | (A) (*%) |
+|2023 | Jan | 126.4 10.1 -0.6 |
+a [Feb 127.9 10.4 44
+[Mar | 128.9 | 10.1 08
+
+Apr 1) 9 ee
+
+“May 1313 a7| OT
+[Jun 131.5] 79| ot
+ul 130.9 | 6.8 -0.4 |
+Aug _ 1313 | 67 | 03
+
+—_ “Sep . 132.0 | 67| 05,
+| Oct | 132.0 46| 0. |
+Nov 131.7 3.9 -0.2
+
+Dec _ 132.2) 40| 4
+
+Source:_| Consumer ptice inflation from the Office for National Statistics
+
+‘There was no charge for impairment in the valuation of loans and receivables in 2023 (2022: €26,000). After
+adjusting for depreciation and amortisation charge of €392,000 (2022: €475,000), interest income from pensions
+of €228,000 (2022: €41,000) and nil taxation (2022: nil), the Bank reported a net profit for the year of €630,000
+(2022: net profit of €559,000).
+
+Page 5 of 50
+
+ollqa
+I—\MelliBank Aamwal Report and Accounts 2023
+
+Going Concern
+
+‘The Bank has considered the impact of the political environment, the US sanctions, and assessed whether these
+factors give tise to events or conditions pertinent to the Bank that may, individually or collectively, cast significant
+doubt on its ability to continue as a going concern. The US extra territorial sanctions constrain the ability of the
+Bank to establish correspondent banking relationships which would be required by a bank operating without
+sanction restrictions. The Bank has considered this tisk to its business and has adopted a strategy which is
+commensurate with the financial, operating, regulatory and other requirements and resoutces available to it, taking
+full account of the impact of the sanctions. Action has been taken to refine the business model and strategy, and
+the operational processes have been made more efficient in order to arrest the loss-making trend. These actions
+were successful in achieving a profitable performance in 2022 and 2023 and the Bank is projecting profitable
+performances in the period under review for the going concern risk. This period is defined as 12 months from the
+finalisation and signing of the annual financial statements. The capital funding requirements have been provided
+by the Tiet 1 Capital, which is well in excess of the required capital to support the planned business and a larger
+balance sheet. Resilient processes have been put in place to manage liquidity and ensure discharge of liabilities on
+due dates.
+
+‘The Bank has experienced and managed a worst-case scenario from 2008 to 2016 when it was subject to the EU
+sanctions (comptising the UK sanctions) by adopting a suitable strategy and implementing policies and processes
+which have been working well. The Boatd of Directors and the committees, in particular the Board Risk
+Committee, provide oversight within the Bank’s risk management framework. The Bank is satisfied that its risk
+mitigation actions have and would mitigate any significant risk to the ability of the Bank to continue as a going
+concern.
+
+Section 172 (1) statement for the year to 31 December 2023
+
+‘The directors of the Bank, in the performance of their duty to promote the success of the Bank, have regard to
+the mattets set out in section 172(1) of Companies Act 2006, as applicable to the restricted operations of the Bank.
+
+The Bank is a wholly owned subsidiary of Bank Melli Iran. The directors have acted in good faith and in a manner
+considered to be most likely to promote the success of the Bank for the benefit of its shareholder, and in doing
+so, had regard to the interests of the stakeholders and considered the consequences of their decisions, the interests
+of the Bank’s employees, the relationship with the customers, banking correspondents and the suppliers of services
+and goods to the Bank. In discharging their responsibilities, the directors have paid particular attention to
+maintaining high standards of business conduct.
+
+‘The Board and its committees, in their discussions and decision-making, consider regular reports from the
+managernent on issues concerning various stakeholders (which includes staff, suppliers, customers, regulators and
+the shareholder), and where applicable to the Bank’s operations, the environment and its communities. In addition,
+the Board undertakes training to enhance its understanding of key issues impacting the Bank’s stakeholders.
+Furthermore, members of the Board have had interactions with various stakeholders, including the Bank’s
+regulators, the PRA, the FCA and the Hong Kong Monetary Authority (“HKMA”), with which the designated
+directors are in continuous communication. Directors also had interactions with important customers, and the
+non-resident directors have had regular contact with other customers sesident in other jurisdictions, providing
+feedback to the management.
+
+‘The Board members have direct access and regular engagement with the Bank’s employees inchading during Board
+visits or at any time they choose and during social events, which have resumed following the lifting of the
+government-imposed lockdown.
+
+AAs part of the Bank’s outsourcing and operational resilience procedures, senior management meet regularly with
+
+its key strategic partner (the Bank’s parent) and suppliers to conduct due diligence and ensure a good standard of
+service delivery is maintained. Regular reports on these visits are provided to the relevant committees.
+
+Page 6 of 50
+
+=|
+
+oliqg
+I-"Mlel
+
+Bank Anaval Report and Accounts 2023
+
+The Board wishes to thank the shareholder for its continued support in retaining a high capital base to support
+business growth as per its approved business plan. The Board, in determining the timing of dividend payments,
+will continue to consider relevant factors; including the long-term value of retaining capital to grow the business,
+the level of profits after tax available to distribute and maintain appropriate levels of capital in line with the Bank's
+tisk appetite and regulatory requirements.
+
+Risk Management
+
+Risk is an inherent component of the Bank’s activities. The ability to effectively identify, assess, measure, respond,
+monitor and report on risk throughout the Bank’s activities is critical to the achievement of the Bank’s objectives.
+
+The Bank’s Risk Management Framework Policy formalises the Bank’s tisk management framework and
+establishes the process for the management of risks faced by the Bank.
+
+‘The Bank conducts its risk management and oversight through various committees which ultimately report to the
+Boatd of Directors.
+
+Board of Directors
+Executive Audit Risk Remuneration
+Committee Committee Committee Committee
+Business Banking Credit Asset &
+Development Operations Committee Liability
+Committee Committee Committee
+
+Board Audit Committee
+
+The Board Audit Committee provides independent oversight of the activities of the management and plays a
+significant role in ensuring that the controls as implemented by the management are effective. It assists the Board
+in the appointment of the external auditors and the review of theit findings. It also provides oversight of the
+operations of the Risk, Remuneration and the Management Committees.
+
+Board Risk Committee
+
+The Board Risk Committee, in liaison with the executive tisk management team, provides oversight of the
+atrangements for the management of tisk. It assesses the Bank’s capability to identify and manage new tisk types
+and oversees, and advises the Boatd, on the current risk exposures and future risk strategy including the strategy
+for capital and liquidity management. Its advice to the Board includes advice on the Bank’s overall risk appetite
+and the related risk limits and risk tolerances.
+
+Board Remuneration Committee
+
+The Board Remuneration Committee is responsible for ensuring that the members of the executive management
+of the Bank ate provided with appropriate remuneration and incentives to encourage enhanced performance in a
+fair and responsible manner (in line with the Bank’s risk appetite and risk culture).
+
+Page 7 of 50
+
+a
+allya
+
+{!MletliBank Anoval Report and Accounts 2023
+
+Executive Committee
+The Executive Committee is responsible for supporting the Boatd in setting objectives, business and operational
+
+strategies, and policies.
+
+Credit Committee
+
+‘The Credit Committee is an executive committee which assesses proposed credit exposure transactions and either
+approves them within the Board mandated limits or rejects them. If the proposed exposures are outside the
+Committee’s authority, it recommends them to the Board for approval in accordance with the provisions of the
+
+Ctedit Policy Statement.
+
+Asset and Liability Committee
+
+The Assets and Liabilities Committee is an executive committee. It monitors the Bank’s financial performance and
+tisk profile. It provides oversight of liquidity and market risks in accordance with the provisions of the Liquidity
+Risk Management Policy and the Market Risk Management Policy.
+
+Business Development Committee
+
+The Business Development Committee is an executive committee. It reviews the business opportunities available;
+considers the selection and order of taking these forward; considers new business proposals and cootdinates the
+activities required to implement them.
+
+Banking Operations Committee
+The Banking Operations Committee is an executive committee. It ensures commercial lending and discounting
+deals are processed in an efficient and timely manner and enjoy the support of all operational departments.
+
+‘There is also a Hong Kong Branch Management Committee which is responsible for the following branch matters:
+
+review and recommend changes to policies, procedures, strategies, budgets, resources and the review of the
+performance of the Branch. It is also responsible for the risk management of the Branch.
+
+Principal risks and uncertainties
+
+The principal risks and uncertainties facing the business ate credit, concentration, liquidity and operational risks
+and the speed at which the Bank would be able to implement its strategy.
+
+Information on these principal risks is provided in note 22 along with further details of the Bank’s risk management
+objectives and details of the Bank’s indicative exposure to risk.
+
+Page 8 of 50
+
+am
+ouqe
+|—=<MelliBank Annual Report and Accounts 2023
+
+Key Performance Indicators (KPI)
+
+The Bank currently considers its capital ratios, given below, as its primary KPI. Adequate capital ig key to the
+Bank’s progress as it not only provides stability but is also its main source of funding. Since the lifting of the
+sanctions in 2016, the Bank has been building its resources and upgrading its systems and controls in order to be
+prepared for the relaunch of normal banking operations. This has resulted in net losses from 2016 to 2021, as the
+intended business uptake has been slow to materialise, while expenses continued within budget as planned.
+However, there are signs of a turnaround as evidenced by the net profits in 2022 and 2023. Total revenue for 2023
+also provides an overview of the Bank’s income generation capability.
+
+In 2023 the Bank’s total capital ratio showed a modest decline. This was on account of the increase in the total
+risk exposure amount while the eligible capital remained largely unchanged. Nevertheless, the Bank has a very
+strong capital base which is evidenced by its capital ratios given below, and that all of the Bank’s capital is Common
+Equity Tiet 1 (CET2). It is the Bank’s intention to use its capital efficiently and to maintain a capital position
+
+significantly above regulatory requirements at all times.
+
+Liquidity is well managed, with the Bank’s Liquidity Coverage Ratio (LCR) significantly above the minimum
+xegulatory requirement of 100%.
+
+2023 2022 2021
+Shareholders’ Equity (Em) 257 256 255
+Eligible Capital (ém) @ 256 256 255
+Total Assets (Em) (b) 356 320 314
+Total Risk Exposure Amount (Em) © 498 423 399
+Total Capital Ratio (@/o) 51% 60% 64%
+Equity to Assets Ratio (a/b) 72% 80% 81%
+Liquidity Coverage Ratio (LCR) 529% 617% 350%
+Total Revenue (€°000) 8,289 9,221 3777
+
+This information has been extracted fron regulatory returns and the andited financial statements.
+
+Approved by the Board of Directors and signed on behalf of the Board by:
+
+Davood Rezaei
+Deputy Chairman and Chief Executive Officer
+24 April 2024
+
+Page 9 of 50
+
+al
+avar
+
+icMelliBank Annual Repost and Accounts 2023
+
+Directors’ Report
+
+The directors of Melli Bank ple, company registration number: 04152338, present their annual report and the
+audited financial statements for the year ended 31 December 2023.
+
+The business review and future developments are presented in the Strategic Report.
+
+Proposed dividend
+The directors do not propose payment of a dividend in respect of the year ended 31 December 2023 (2022: nil).
+
+Directors and directors’ interest
+
+Directors who held office during the year were as follows:
+
+Chairman Mx M, Reza Farzin (Resigned 17-Jan-2023)
+Chairman Mr A Najarzadeh (Appointed 20-Jan-2023)
+
+Deputy Chairman and Chief Executive Officer. Mr D. Rezaei
+
+Non-Executive Director Mr M. Aminzare (Resigned 27-Nov-2023)
+Non-Executive Director Mr A. Gachpazzadch (Appointed 9-Jan-2023)
+Non-Executive Director Mr J. Thompson
+
+Non-Executive Director Me R. England (Resigned 31-Oct-2023)
+Non-Executive Director Mr I Gomes (Appointed 16-Oct-2023)
+
+Executive Director Mc B, Ataii Resigned 21-Apr-2023)
+
+Executive Director Mr M. Botshekan Resigned 31-Oct-2023)
+Executive Director Mr A. Zand (Company Secretary) (Resigned 21-Apr-2023)
+
+Directors’ indemnities
+
+‘The Company did not take up a directors’ indemnity insurance policy in 2023.
+
+Financial risk management
+
+Disclosures in relation to financial risk management, objectives and policies and exposure to concentration tisk,
+ctedit risk and liquidity tisk have been included in note 22 to the financial statements.
+
+Basel III - Pillat 3 Disclosure
+
+The Pillar 3 disclosure is available on the Bank’s website (www.mellibank.com).
+
+Going concern
+
+‘The financial statements are prepared on a going concern basis, as the Directors are satisfied that the Company
+has adequate financial and other resources to continue its business for the foreseeable future as a going concern.
+In making this assessment, the Directors have consideted the impact of the sanctions and the political
+environment on the performance and the ability of the Bank to continue the planned operations in compliance
+with the regulatory requirements.
+
+Page 10 of 50
+
+7 oI!
+
+dling
+1-"MelliBank Annual Report and Accounts 2023
+
+Future developments
+The review of future development is included in the Business Review on page 5.
+There are no other significant events affecting Melli Bank ple that have arisen between 31 December 2023 and
+
+the date of signing of this report that require additional disclosure to those provided in the notes to the accounts.
+
+Overseas branches
+
+Melli Bank ple has a branch in Hong Kong. The branch was authorised by the Hong Kong Monetary Authority
+in 2005 and started operations from 3 April 2006.
+
+The Bank is currently under US sanctions. However, these sanctions have not been adopted by the UK and
+Hong Kong.
+
+Statement of disclosure of information to auditors
+
+The directors confirm that:
+
+* so far as each director is awate, there is no relevant audit information of which the Company’s auditor is
+unaware; and
+
+= the directors have taken all the steps that they ought to have taken as directors in order to make themselves
+aware of any relevant audit information and to establish that the auditors are aware of that information.
+
+Appointment of Auditors
+
+MHA (formerly MHA MacIntyre Hudson) has expressed its willingness to continue as the statutory auditor of
+the Bank, and will be deemed reappointed for the next financial year in accordance with section 487(2) of the
+Companies Act 2006 unless the Bank receives notice under section 488(1) of the Companies Act 2006.
+
+The Directors’ Report was approved by the Board of Directors and signed on theit behalf by:
+
+Davoo' aei
+Deputy Chairman and Chief Executive Officer
+24 April 2024
+
+Page 11 of 50
+
+i
+lla
+~;MeliBank Annual Report and Accounts 2023,
+
+sayz
+
+Directors’ Responsibilities Statement
+
+The directors ate responsible for preparing the Strategic Report, the Directors’ Report and the financial
+statements in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial yeat. Under that law the
+directors have elected to prepare the financial statements in accordance with United Kingdom Generally
+Accepted Accounting Practice (United Kingdom Accounting Standards and applicable laws, including FRS 102
+‘The Financial Reporting Standard applicable in the UK and Republic of Ireland’).
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they
+give a true and fair view of the state of affairs and profit or loss of the Company for that period. In preparing
+these financial statements, the directors are required to:
+
+™ select suitable accounting policies and then apply them consistently;
+
+= make judgements and accounting estimates that are reasonable and prudent;
+
+™ state whether applicable Ul Accounting Standards have been followed, subject to any material departures
+disclosed and explained in the financial statements;
+
+= prepare the financial statements on a going concern basis unless it is inappropriate to presume that the
+Company will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+Company’s transactions and disclose with reasonable accuracy at any time the financial position of the Company
+and enable them to ensure that the financial statements comply with the Companies Act 2006. They are also
+responsible for safeguarding the assets of the Company and hence for taking reasonable steps for the prevention
+and detection of fraud and other irregularities.
+
+The directors ate responsible for the maintenance and integrity of the corporate and financial information
+included on the Company’s website. Legislation in the United Kingdom governing the preparation and
+dissemination of financial statements may differ from legislation in other jurisdictions.
+
+‘The Directors’ Responsibilities Statement was approved by Board of Directors and signed on their
+behalf by:
+
+Davofd Bezaei
+airman and Chief Executive Officer
+24 April 2024
+
+Page 12 of 50
+
+allqe
+i->MelliBank Annual Report and Accounts 2023
+
+Independent auditor’s report to the members of Melli Bank Pic
+
+For the purpose of this report, the terms “we” and “our” denote MHA in relation to UK legal, professional and
+regulatory responsibilities and reporting obligations to the members of Melli Bank Plc. For the purposes of the
+table on pages 14 and 75 that sets out the key audit matters and how our audit addressed the key audit
+matters, the terms “we” and “our” refer to MHA. The “Bank’ is defined as Melli Bank Plc. The relevant legislation
+governing the Bank is the United Kingdom Companies Act 2006 (“Companies Act 2006’). '
+
+Opinion
+We have audited the financial statements of Melli Bank Plc for the year ended 31 December 2023. The financial
+statements that we have audited comprise:
+
+* — the Profit and Loss Account
+
+e the Statement of Comprehensive Income
+
+* the Balance Sheet
+
+«the Statement of Changes in Equity
+
+¢ the Statement of Cash Flows, and
+
+¢ Notes 1 to 27 of the financial statements, including significant accounting policies.
+
+The financial reporting framework that has been applied in the preparation of the Bank's financial statements
+is applicable law and United Kingdom Accounting Standards, including Financial Reporting Standard 102 The
+Financial Reporting Standard applicable in the UK and Republic of Ireland (United Kingdom Generally Accepted
+Accounting Practice).
+
+In our opinion the financial statements:
+* —givea true and fair view of the state of the Bank's affairs as at 31 December 2023 and of the Bank's
+profit for the year then ended;
+¢ have been properly prepared in accordance with UK Generally Accepted Accounting Practice; and
+* have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Our opinion is consistent with our reporting to the Audit Committee
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and
+applicable law. Our responsibilities under those standards are further described in the Auditor Responsibilities
+for the Audit of the Financial Statements section of our report. We are independent of the Bank in accordance
+with the ethical requirements that are relevant to our audit of the financial statements in the UK, including the
+FRC’s Ethical Standard as applied to public interest entities, and we have fulfilled our ethical responsibilities in
+accordance with those requirements. We believe that the audit evidence we have obtained is sufficient and
+appropriate to provide a basis for our opinion.
+
+Conclusions relating to going concern
+In auditing the financial statements, we have concluded that the Directors’ use of the going basis of accounting
+in the preparation of the financial statements is appropriate.
+
+Our evaluation of the Directors’ assessment of the entity's ability to continue to adopt the going concern basis
+of accounting included:
+* Consideration of macroeconomic risks to the Bank's operations, including sanctions;
+* Liquidity considerations throughout the year and post year end, including review of submitted
+regulatory liquidity reports;
+* Review of the future forecasts and comparisons of the past forecasts to actuals, sensitivity analysis
+of the key assumptions and review of cash position; and
+« Review of post year end board minutes.
+
+Page 13 of 50
+
+in
+allye
+| MelliBank Annual Report and Accounts 2023
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or
+conditions that, individually or collectively, may cast significant doubt on the Bank’s ability to continue as a
+going concern for a period of at least twelve months from when the financial statements are authorised for
+issue.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described in the
+relevant sections of this report.
+
+Overview of our audit approach
+Scope Our audit was scoped by obtaining an understanding of the Bank and its
+environment, including the Bank’s system of internal control, and assessing the
+tisks of material misstatement in the financial statements. We also addressed
+the risk of management override of internal controls, including assessing
+whether there was evidence of bias by the directors that may have represented a
+tisk of material misstatement.
+
+Materiality 2023 2022
+
+Bank €1.28m €1.28m —_0.5% (2022: 0.5%) of net assets
+
+Key audit matters
+
+Recurring © Interest receivable recognition -
+
+* Valuation of loans and advances to customers
+
+Key Audit Matters
+
+Key Audit Matters are those matters that, in our professional judgement, were of most significance in our audit
+of the financial statements of the current period and include the most significant assessed risks of material
+misstatement (whether or not due to fraud) that we identified. These matters included those matters which
+had the greatest effect on: the overall audit strategy; the allocation of resources in the audit; and directing the
+efforts of the engagement team. These matters were addressed in the context of our audit of the financial
+statements as a whole, and in forming our opinion thereon, and we do not provide a separate opinion on these
+matters,
+
+Interest receivable recognition
+
+Key audit Under ISA (UK) 240 there is a rebuttable presumed risk that revenue may
+
+matter description be misstated due to improper recognition of revenue. We have not
+rebutted this presumption and identified revenue recognition to be a
+significant risk area.
+Loans made by the Bank may be subject to changing cash flows or terms
+and loans may mature in the year. There is a risk that interest rates are not
+updated correctly or changing cash flows are not taken into account when
+calculating interest receivable.
+
+How the scope of our audit Our work included, but was not restricted to:
+tesponded to the key audit ¢  Recalculating interest on all loans and other interest-bearing
+matter assets, agreeing to the breakdown and agreeing to third party
+confirmations or agreements;
+© Considering the compatibility of the model used with the
+requirements of the accounting standard;
+* — Subjecting interest income lines to analytical review procedures,
+where the year-on-year movements were reviewed for
+reasonableness; and
+
+Page 14 of 50
+
+I a
+milns
+
+™MelliBank Annual Report and Accounts 2023
+
+© Performing and documenting walkthroughs on the design and
+implementation of the related controls in place within the
+revenue area.
+The Bank's accounting policy on interest recognition is shown in note (a)
+to the financial statements.
+Key observations Based on the audit procedures above, nothing has come to our attention
+communicated to the that causes us to believe that any material misstatement is present in
+Bank's Audit Committee respect of the recognition of revenue in the financial statements in
+accordance with the financial reporting framework (FRS 102).
+Valuation of loans and advances to customers
+Key audit The estimation of allowance for impairment on loans involves a significant
+matter description degree of judgement and estimation. The impairment allowance is based
+on management's best estimate of the loan losses incurred at the balance
+sheet date, depending on factors such as likelihood and timing of future
+cash flows.
+
+How the scope of our audit Our work included, but was not restricted to:
+tesponded to the key audit * Checking management's assessment of the loan impairment
+matter and challenging the assumptions made by verifying assumptions
+to third party sources; and
+«Evaluating any guarantors for their feasibility to pay.
+The Bank’s accounting policy on impairment of financial assets carried at
+amortised cost is shown in note 1(b) to the financial statements and
+related disclosures are included in notes 9 and 11.
+Key observations Based on the audit procedures above, nothing has come to our attention
+communicated to the Bank's that causes us to believe that any material misstatement is present in
+Audit Committee respect of the valuation of loans and advances to customers in
+accordance with the financial reporting framework (FRS 102).
+
+Our application of materiality
+
+Our definition of materiality considers the value of error or omission on the financial statements that,
+individually or in aggregate, would change or influence the economic decision of a reasonably knowledgeable
+user of those financial statements, Misstatements below these levels will not necessarily be evaluated as
+immaterial as we also take account of the nature of identified misstatements, and the particular circumstances
+of their occurrence, when evaluating their effect on the financial statements as a whole. Materiality is used in
+planning the scope of our work, executing that work and evaluating the results.
+
+Materiality in respect of the Bank was set at €1.28m (2022: €1.28m) which was determined on the basis of
+0.5% (2022: 0.5%) of the Bank's net assets. This was deemed to be the appropriate benchmark for the
+calculation of materiality as this is a key area of the financial statements with which the users of the financial
+statements are principally concerned.
+
+Performance materiality is the application of materiality at the individual account or balance level, set at an
+amount to reduce, to an appropriately low level, the probability that the aggregate of uncorrected and
+undetected misstatements exceeds materiality for the financial statements as a whole.
+
+Performance materiality for the Bank was set at €770k (2022: €768k) which represents 60% (2022: 60%) of
+the above materiality levels.
+
+The determination of performance materiality reflects our assessment of the risk of undetected errors existing,
+the nature of the systems and controls and the level of misstatements arising in previous audits,
+
+We agreed to report any corrected or uncorrected adjustments exceeding €64k to the Audit Committee as well
+as differences below this threshold that in our view warranted reporting on qualitative grounds.
+
+Page 15 of 50
+
+TAS
+
+MelliBank Annwal Report and Accounts 2023
+
+The control environment
+We evaluated the design and implementation of those internal controls of the Bank which are relevant to our
+audit, such as those relating to the financial reporting cycle.
+
+We deployed our internal IT audit specialists to obtain an understanding of the general IT environment.
+
+Reporting on other information
+
+The other information comprises the information included in the annual report other than the financial
+statements and our auditor's report thereon. The directors are responsible for the other information contained
+within the annual report. Our opinion on the financial statements does not cover the other information and,
+except to the extent otherwise explicitly stated in our report, we do not express any form of assurance
+conclusion thereon. Our responsibility is to read the other information and, in doing so, consider whether the
+other information is materially inconsistent with the financial statements or our knowledge obtained in the
+course of the audit, or otherwise appears to be materially misstated. If we identify such material
+inconsistencies or apparent material misstatements, we are required to determine whether this gives rise to a
+material misstatement in the financial statements themselves. If, based on the work we have performed, we
+conclude that there is a material misstatement of this other information, we are required to report that fact.
+
+We have nothing to report in this regard.
+
+Strategic report and directors report
+In our opinion, based on the work undertaken in the course of the audit:
+* — the information given in the strategic report and the directors’ report for the financial year for which
+the financial statements are prepared is consistent with the financial statements; and
+¢ _ the strategic report and the directors’ report have been prepared in accordance with applicable legal
+requirements.
+
+In the light of the knowledge and understanding of the Bank and its environment obtained in the course of the
+audit, we have not identified material misstatements in the strategic report or the directors’ report.
+
+Matters on which we are required to report by exception
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+* adequate accounting records have not been kept, or returns adequate for our audit have not been
+received by branches not visited by us; or
+
+¢ — the financial statements are not in agreement with the accounting records and returns; or
+
+* certain disclosures of directors’ remuneration specified by law are not made; or
+
+* we have not received all the information and explanations we require for our audit.
+
+Responsibilities of directors
+As explained more fully in the directors’ responsibilities statement, the directors are responsible for the
+preparation of the financial statements and for being satisfied that they give a true and fair view, and for such
+internal control as the directors determine is necessary to enable the preparation of financial statements that
+are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank's ability to continue
+as a going concern, disclosing, as applicable, matters related to going concern and using the going concern
+basis of accounting unless the directors either intend to liquidate the Bank or to cease operations, or have no
+realistic alternative but to do so.
+
+Page 16 of 50
+
+mo
+oupo
+i—"'MelliBank Annual Report and Accounts 2023,
+
+Auditor responsibilities for the audit of the financial statements
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our
+opinion. Reasonable assurance is a high level of assurance but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists.
+
+Misstatements can arise from fraud or error and are considered material if, individually or in aggregate, they
+could reasonably be expected to influence the economic decisions of users taken on the basis of these
+financial statements.
+
+A further description of our responsibilities for the financial statements is located on the FRC’s website at:
+www.fro.org.uk/auditorsresponsibilities . This description forms part of our auditor's report.
+
+Extent to which the audit was considered capable of detecting irregularities, including fraud
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design
+procedures in line with our responsibilities, outlined above, to detect material misstatements in respect of
+irregularities, including fraud.
+
+These audit procedures were designed to provide reasonable assurance that the financial statements were
+free from fraud or error. The risk of not detecting a material misstatement due to fraud is higher than the risk
+of not detecting one resulting from error and detecting irregularities that result from fraud is inherently more
+difficult than detecting those that result from error, as fraud may involve collusion, deliberate concealment,
+forgery or intentional misrepresentations. Also, the further removed non-compliance with laws and regulations
+is from events and transactions reflected in the financial statements, the less likely we would become aware
+of it.
+
+Identifying and assessing potential risks arising from irregularities, including fraud
+The extent of the procedures undertaken to identify and assess the risks of material misstatement in respect
+of irregularities, including fraud, included the following:
+
+* Weconsidered the nature of the industry and sector, including sanctions imposed and the effects of
+these, the control environment, business performance including whether remuneration policies are
+affected by the achievement of targets and the Bank's own risk assessment that irregularities might
+occur as a result of fraud or error. From our sector experience and through discussion with
+management and the heads of the Compliance and Risk departments, we obtained an
+understanding of the legal and regulatory frameworks applicable to the Bank focusing on laws and
+regulations such as accounting standards and the regulatory and supervisory requirements of the
+Prudential Regulation Authority (PRA) and the Financial Conduct Authority (FCA).
+
+* We enquired of management and the heads of Compliance and Risk concerning the Bank's policies
+and procedures relating to:
+
+- _ identifying, evaluating and complying with the laws and regulations and whether they were
+aware of any instances of non-compliance;
+
+- identifying and mitigating business risk from potential credit limit breaches of customers;
+
+- detecting and responding to the risks of fraud and whether they had any knowledge of
+actual or suspected fraud; and
+
+- _ the internal controls established to mitigate risks related to fraud or non-compliance with
+laws and regulations.
+
+« Weassessed the susceptibility of the Bank's financial statements to material misstatement,
+including how fraud might occur by evaluating management's incentives and opportunities for
+manipulation of the financial statements. This included utilising the spectrum of inherent risk and an
+evaluation of the risk of management override of controls. We determined that the principal risks
+were related to the posting of fictitious journals to improve the profit or balance sheet position and
+management bias in accounting estimates.
+
+Page 17 of 50
+
+in
+-**\MelliBank Annual Report and Accounts 2023
+
+Audit response to risks identified
+In respect of the above procedures:
+
+¢ we corroborated the results of our enquiries through our review of the minutes of the Bank's board
+meetings, inspection of the compliance breaches register, inspection of legal and regulatory
+correspondence and correspondences from the regulators PRA and the FCA;
+
+« audit procedures performed by the engagement team in connection with the risks identified
+included:
+
+- reviewing financial statement disclosures and testing to supporting documentation to
+assess compliance with applicable laws and regulations expected to have a direct impact on
+the financial statements.
+
+- — testing journal entries, including those posted on unusual dates, containing key words
+deemed to indicate fraud risk, material entries to revenue, cash in hand transactions and
+material entries around year end;
+
+- — evaluating the business rationale of significant transactions outside the normal course of
+business, and reviewing accounting estimates for bias;
+
+- enquiry of management and legal advisors around actual and potential litigation and claims.
+
+- challenging the assumptions and judgements made by management in its significant
+accounting estimates; and
+
+- — obtaining confirmations from third parties to confirm existence of a sample of transactions
+and balances.
+
+* the Bank operates in a highly regulated banking industry. As such, the Senior Statutory Auditor
+considered the experience and expertise of the engagement team to ensure that the team had the
+appropriate competence and capabilities; and
+
+* we communicated relevant laws and regulations and potential fraud risks to all engagement team
+members and remained alert to any indications of fraud or non-compliance with laws and
+regulations throughout the audit.
+
+Climate-related risks
+
+In planning our audit and gaining an understanding of the Bank, we considered the potential impact of climate-
+related risks on the business and its financial statements. We obtained management's climate-related risk
+assessment, along with relevant documentation relating to management's assessment to understand their
+process for identifying and assessing those risks. Our climate risk audit specialists have agreed with
+managements’ assessment that climate-related risks are not material to the financial staternents for the year
+ended 31 December 2023.
+
+Other requirements
+We were appointed by the Directors on15 September 2019. The period of total uninterrupted engagement
+including previous renewals and reappointments of the firm is 4 years.
+
+We did not provide any non-audit services which are prohibited by the FRC’s Ethical Standard to the Bank, and
+we remain independent of the Bank in conducting our audit.
+
+Page 18 of 50
+
+re
+
+G
+™"'MelliBank Annual Report and Accounts 2023
+
+Use of our report
+
+This report is made solely to the Bank's members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Bank's members
+those matters we are required to state to them in an auditor's report and for no other purpose. To the fullest
+extent permitted by law, we do not accept or assume responsibility to anyone other than the Bank and the
+Bank’s members as a body, for our audit work, for this report, or for the opinions we have formed.
+
+Reramnot
+
+Rakesh Shaunak FCA
+
+(Senior Statutory Auditor)
+
+for and on behalf of MHA, Statutory Auditor
+London, United Kingdom
+
+24 April 2024
+
+MHA is the trading name of Macintyre Hudson LLP, a limited liability partnership in England and Wales
+(registered number 0C312313)
+
+Page 19 of 50
+
+“‘MelliBank
+
+PROFIT AND LOSS ACCOUNT FOR THE YEAR ENDED
+
+Interest receivable and similar income
+Interest expense
+
+Net interest income
+
+Fees and commissions receivable
+Fees and commissions payable
+Foreign exchange losses
+
+Total revenue
+
+Administrative expenses
+Depreciation and amortization
+
+Operating profit
+
+Other income
+
+Profit before provision and taxation
+
+Impairment - other
+Profit before taxation
+Tax
+
+Profit for the financial year
+
+31 DECEMBER 2023
+
+Annual Report and Accounts 2023
+
+Note
+
+12,13
+
+24
+
+11
+
+2023
+€ ‘000
+
+10,089
+(1,558)
+8,531
+
+55
+(253)
+
+(44)
+8,289
+
+(7,495)
+392)
+
+402,
+
+228
+630
+
+630
+
+630
+
+2022
+€'000
+
+10,725
+(200)
+10,525
+
+73
+(1,171)
+(206)
+9,221
+
+(8,202)
+(475)
+544
+
+4
+585
+(26)
+
+559
+
+559
+
+The result for the year is detived entirely from continuing activities. The notes on pages 25 to 50 form part
+
+of these financial statements.
+
+Page 20 of 50
+
+allqa
+=\MelliBank
+
+STATEMENT OF COMPREHENSIVE INCOME
+FOR THE YEAR ENDED 31 DECEMBER 2023
+
+Profit for the financial year
+
+Other comprehensive income
+
+Remeasutements of net defined benefit pension obligations ai
+
+Other comprehensive loss for the year
+
+Total comprehensive profit for the yeat
+
+The notes on pages 25 to 50 form part of these financial statements.
+
+Page 21 of 50
+
+2023
+€'000
+
+630
+
+(228)
+(228)
+
+402
+
+Annual Report and Accounts 2023
+
+2022
+€'000
+
+559
+
+(41)
+4)
+
+518
+
+G
+
+2'MelliBank Annual Repost and Accounts 2023,
+BALANCE SHEET
+AT 31 DECEMBER 2023
+2023 2022
+
+Note €000 €000
+Assets
+Cash and cash equivalents 8b 39,289 66,955
+Loans and advances to banks 8a 294,073 234,811
+Loans and advances to customers 9 8,275 8,260
+Investments 10 - -
+Tangible assets 12 3,513 3,509
+Intangible assets 13 81 219
+Other assets 15 4176 4,970
+Prepayments and accrued income 5,910 1,329
+Detivative assets 17 2m 136
+Total Assets 355,588 320,189
+Liabilities
+Deposits by banks 16 91,412 54,081
+Customer accounts 16 3,820 3,980
+Other liabilities 16 505 1,079
+Accruals and deferred income 16 3,319 4,919
+Total Liabilities 99,056 64,059
+
+Shareholder's funds
+
+Called up share capital 18 264,412 264,412
+Accumulated Losses (7,880) (8,282)
+Total Equity 256,532 256,130
+Total Equity and Liabilities 355,588 320,189
+
+The Financial Statements wete approved by Board of Directors and authorised for issue on 24 April
+2024 and signed on their behalf by:
+
+Davoo8-Kezaei
+Deputy Chairman and Chief Executive Officer
+
+Page 22 of 50
+
+Io]
+allan
+
+—2|MelliBank
+
+Annual Report and Accounts 2023
+
+STATEMENT OF CHANGE IN EQUITY
+FOR THE YEAR ENDED 31 DECEMBER 2023
+
+Called-up share
+
+Retained
+
+A . Total
+capital earnings
+
+€'000 €000 €'000
+
+At 1 January 2022 264,412 (8,800) 255,612
+Profit for the financial year - 559 559
+Other Comprehensive Loss for the year - (41) (41)
+Total comprehensive profit for the year - 518 518
+At 31 December 2022 264,412 (8,282) 256,130
+Profit for the financial year - 630 630
+Other Comprehensive Loss for the year - (228) (228)
+Total comprehensive profit for the year - 402 402
+At 31 December 2023 264,412 (7,880) 256,532
+
+Page 23 of 50
+
+ID
+ollnn
+
+—'MelliBank Annual Repost and Accounts 2023
+
+STATEMENT OF CASH FLOWS
+
+FOR THE YEAR ENDED 31 DECEMBER 2023
+
+Cash flows from operating activities
+
+Profit before tax
+
+Depreciation /amortization
+
+Remeasurements of net defined benefit pension obligations
+
+Net charge for impairment
+
+Cash flows from operating profits before changes in operating assets
+and liabilities
+
+Changes in operating assets and liabilities:
+
+net (increase) in loans and advances to banks
+
+net (increase)/decrease in loans and advances to customers
+net (increase) in other assets, prepayments and accrued income
+net increase in deposits from banks
+
+net (decrease) in other deposits
+
+net increase/ (decrease) in accruals and deferred income
+
+net (decrease) in other liabilities
+
+Net cash from operating activities
+
+Cash flows ftom investing activities
+
+Purchase of propetty, plant and equipment
+
+Purchase of intangible assets
+
+Net cash from investing activities
+Net (decrease) in cash and cash equivalents
+
+Cash and cash equivalents at the beginning of the period
+Cash and cash equivalents at the end of the petiod
+
+Page 24 of 50
+
+Note
+
+12,13
+21
+ret
+
+16
+16
+16
+16
+
+12
+13
+
+8b
+8b
+
+2023 2022
+€000 £000
+
+630 559
+392 475
+(228) (41)
+
+: 26
+794 1,019
+
+(59,262) (57,628)
+(15) 639
+(3,922) (4,997)
+37,330 3,356
+
+(161) (23)
+(1,600) 2,844
+(672) (266)
+
+(27,408) (52,056)
+
+(184) (47)
+(74) .
+(258) (47)
+
+(27,666) (52,103)
+
+__66,955__119,058_
+
+39,289 66,955
+
+|—='MelliBank Annual Report and Accounts 2023
+
+Notes
+(Forming part of the financial statements)
+
+Principal activities
+
+Melli Bank Ple (“the Bank” or “the Company”) is a commercial bank incorporated and registered in England
+and Wales under the Companies Act 2006 and domiciled in the United Kingdom. The Bank is authorised by the
+Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation
+Authority under the Financial Services and Markets Act 2000. The principal activity of the Company is the
+provision of retail and commercial banking services. The Bank’s registered address is 982 Kensington High Stréet,
+London, W8 4SG.
+
+1. Summary of significant accounting policies
+
+‘The following accounting policies have been applied consistently in dealing with items which are considered
+material in relation to the financial statements, except if where noted.
+
+Basis of preparation
+
+‘These financial statements have been prepared in accordance with applicable United Kingdom accounting
+standards, including Financial Reporting Standard 102 — ‘The Financial Reporting Standard applicable in the
+United Kingdom and Republic of Ireland’ (FRS 102), and with the Companies Act 2006. The financial statements
+have been prepared on the historical cost basis. The functional and reporting cutrency of the Bank is the Euro.
+The figures have been reported in thousands of Euros, unless stated otherwise.
+
+In respect of financial instruments, the Bank has applied the provisions of FRS 102 chapters 11 and 12 in fall.
+
+‘The Company has one class of business and all other services provided are ancillary to this. Business is conducted
+from the United Kingdom and from a branch in Hong Kong.
+
+@ Going Concern
+‘The financial statements have been prepared on a going concern basis.
+
+‘The Directors have considered the risk factors impacting the Bank, including the political environment and the
+US sanctions, and assessed the results of the actions taken to mitigate the risk to the ability of the Bank to operate
+within its set strategy and business forecasts, realise its assets and meet its obligations as they fall due.
+
+Based on these assessments and having regard to the resources available to the Bank, the Directors have
+concluded that the tisk factors do not give rise to events or conditions that, after risk mitigation action, may
+individually ot collectively, cast significant doubt on the Bank's ability to continue as a going concern, The
+Directors consider it appropriate to continue to adopt the going concern basis in preparation of the annual report
+and the financial statements. Further information is provided in the Strategic Report under the heading of Going
+Concern.
+
+(i) Cash flow exemptions
+
+‘The Bank, in 2022, as a qualifying entity for certain exemptions under FRS 102 on account of it being
+consolidated with Bank Melli Iran, a group that prepares publicly available financial statements which give a true
+and fair view, took advantage of the exemption in FRS 102 from the requirement to produce a statement of cash
+flows. However, in 2023 the Bank decided not to take advantage of this exemption and has included a cash flow
+statement with its financial statements.
+
+(iii) Related party transactions
+
+As the Bank is a wholly owned subsidiary of Bank Melli Iran, the Bank has taken advantage of the exemption
+contained in section 33.1A and 33.7 of FRS 102 and ()) not disclosed transactions or balances with wholly owned
+subsidiaries which form part of Bank Melli Iran and (ii) not disclosed transactions with key management
+personnel of the entity or its parent (see note 25).
+
+Page 25 of 50
+
+MelliBank Annual Report and Accounts 2023
+
+(iv) Functional and presentation currency
+
+The financial statements are prepared and presented in Euro, which is the functional currency of the Bank as it
+represents the currency of the primary economic environment in which the Bank operates. A significant
+proportion of the Bank’s assets and revenues are transacted in Euro. All amounts in the financial statements have
+been rounded to the nearest €1,000 except when otherwise indicated.
+
+Accounting Policies
+
+The following accounting policies have been applied consistently in dealing with items which are considered
+material in relation to the financial statements.
+
+a) Interest receivable and payable
+
+Interest receivable and payable for all interest-bearing financial instruments measured at amortised cost are
+recognised in the income statementusing the effective interest rate method. The effective interest rate is a method
+of calculating the amoxtised cost of a financial asset or financial liability and of allocating the interest receivable
+or payable over the relevant period using estimated future cash flows.
+
+The effective interest rate is the rate that exactly discounts estimated future cash receipts and payments through
+the expected life of a financial instrument ot, where appropriate, a shorter period, to the net carrying amount of
+the financial asset or financial liability. When calculating the effective interest rate, the calculation includes all
+amounts paid or received by the Bank that are an integral part of the effective interest rate of a financial
+instrument, including transaction costs and all other premiums or discounts.
+
+When loans, securities or deposits are impaired, the Bank reduces the carrying amount to its recoverable amount,
+being the estimated future cash flow discounted at the original effective interest rate of the instrument.
+
+b) Financial Assets
+Loans and advances
+
+Loans and advances are basic financial instruments satisfying the conditions set out in FRS 102 sections 11 &
+12. Loans and advances ate initially recognised at fair value. They are subsequently stated at amortised cost after
+deduction of amounts which are calculated as impairment provisions. Where loans have been acquired at a
+premium ot discount, these premiums and discounts are amortised through profit or loss from the date of
+acquisition to the date of matutity using the effective interest method.
+
+Debtors
+
+Short term debtors are measuted at transaction price, less any impairment.
+Impairment of financial assets
+
+Impairment provisions ate made where there is objective evidence of impairment as a result of one or more
+events that occurred after the initial recognition of the asset and that loss event (or events) has an impact on the
+estimated future cash flows from the asset that can be reliably estimated. Losses expected as a result of potential
+future events will not be recognised. Evidence of impairment is considered on both individual and portfolio
+bases.
+
+Objective evidence that financial assets are impaired can include significant financial difficulty of the borrower
+ot issuer, default or delinquency by a borrower, restructuring of a loan or advance, restructuting of a loan or
+advance by the Company on terms that the Bank would not otherwise consider, indications that a borrower or
+issuer will enter bankruptcy, the disappearance of an active market for a security, or other observable data relating
+to a group of assets such as adverse changes in the payment status of borrowers or issuers, or economic
+conditions that correlate with defaults in the group. In addition, for an investment in an equity secutity, a
+significant or prolonged decline in its fair value below its cost is objective evidence of impaitment. If there is
+objective evidence that an impairment loss on loans and advances has been incurred, the amount of loss is
+measured as the difference between the assets’ cattying amount and the present value of the future cash flows
+
+Page 26 of 50
+
+br
+allne
+{—:MelliBank Annual Report and Accounts 2023
+
+(excluding future credit losses that have not been incurred). The carrying amount of the assets shall be reduced
+either directly or through the use of an allowance account. The amount of the loss shall be recognised in profit
+ot loss.
+
+Derivatives
+A derivative is a financial instrument or other contract with all three of the following characteristics:
+
+- Its value changes in response to the change in foreign exchange rate, specific interest sate, financial
+instrument price, commodity price, index of prices or rates, credit rating or credit index, or other variable,
+provided that, in the case of a non-financial variable, it is not specific to a patty to the contract (Le. the
+‘underlying assets’).
+
+- It requires no initial net investment or an initial net investment that is smaller than would be required
+for other types of contracts expected to have a similar response to changes in market factors.
+
+-  Itis settled ata future date.
+Derivatives, including forward foreign exchange contracts, are recorded at fair value and carried as assets when
+their fair value is positive and as liabilities when their fair value is negative. The fair value of such derivatives is
+disclosed separately in the financial statements. Changes in fair value of derivatives are reflected in profit or loss.
+
+r) Fixed assets
+
+Fixed assets are stated at cost less accumulated depreciation and impairment. Cost includes expenditure that are
+directly attributable to the acquisition of the asset.
+
+Depreciation is provided to write off the cost less the estimated residual value of tangible fixed assets by equal
+instalments over their estimated useful economic lives as follows. Single items which cost GBP 1,000 or less are
+expensed in the year and not depreciated. The useful economic life of the fixed assets is expected as follows:
+
+Leasehold building - over the remaining period of the lease
+Leasehold improvements - over the remaining useful life
+
+Freehold building - over the remaining useful life of the building
+Fixtures, fittings and equipment - 20% per annum
+
+Motor vehicles - 20% per annum
+
+Freehold land is not depreciated.
+
+d) Intangible assets
+
+Intangible assets are measured at cost less accumulated amortisation and impairment. Software development
+costs are recognised as an intangible asset when all of the following criteria are demonstrated:
+
+- The technical feasibility of completing the software so that it will be available for use or sale.
+
+- The intention to complete the software and use or sell it.
+
+- The ability to use the software or to sell it.
+
+- How the software will generate probable future economic benefits.
+
+- The availability of adequate technical, financial and other resources to complete the development and to use or
+sell the software.
+
+- The ability to measure reliably the expenditure attributable to the software during its development.
+
+Page 27 of 50
+
+=I
+allan
+io MelliBank Annual Repost and Accounts 2023
+
+Amottisation is charged so as to allocate the cost of intangibles less their residual values over their estimated
+useful lives, using the straight-line method. The intangible assets are amortised over the following useful
+economic lives:
+
+Software - Up to 5 years
+
+If there is an indication that there has been a significant change in amortisation rate or residual value of an asset,
+the amortisation of that asset is revised prospectively to reflect the new expectations.
+
+°) Impairment of non-financial assets
+
+At each reporting date, fixed assets are reviewed to determine whether there is any indication that those assets
+have suffered an impairment loss. If there is an indication of possible impairment, the recoverable amount of
+any affected asset is estimated and compared with it’s carrying amount. If estimated recoverable amount is lower,
+the carrying amount is reduced to its estimated recoverable amount, and an impaitment loss is recognised
+immediately in profit or loss. ‘The estimated recoverable amount is the higher of fair value less cost to sell and
+value in use,
+
+f) Financial liabilities
+
+Basic financial liabilities, including trade and other payables, ate initially recognised at transaction price, unless
+the arrangement constitutes a financing transaction, where the debt instrument is measured at present value of
+the future receipt discounted at market rate of interest. They are subsequently measured at amortised cost using
+the effective interest rate method as set in FRS 102 - 11.14.
+
+In accordance with FRS 102, financial instruments issued by the Company which include a contractual obligation
+to either deliver cash or another financial asset to another entity, or to exchange financial assets or financial
+liabilities with another entity under conditions that ate potentially unfavourable to the Company, ate classified as
+financial liabilities. Otherwise, they are classified as equity.
+
+2) Foreign currencies
+
+Monetary assets and liabilities denominated in foreign currencies are translated using the rate of exchange ruling
+at the close of business each day and the gains or losses on translations are included in the Profit and Loss
+Account. Non-monetary items that are measured at historical cost in a foreign currency are translated at the
+exchange rate at the date of the transaction. The functional and reporting currency of the Bank is the Euro. The
+Bank uses average exchange rates to translate income and expenses accrued during the year reported in the Profit
+and Loss Account. The Bank uses year end exchange rates to translate items reported in the Balance Sheet. The
+Euro exchange rates at the year end against US Dollar and Sterling were €1= US$1.1069 (2022: €1=US$1.0682)
+and €1=£0.8689 (2022: €1=£0.8865). The average of month end Euro exchange rates ruling at the Balance Sheet
+date against US Dollar and Sterling were €1=US$1.0834 (2022: €1=US$1.0511) and €1=£0.8686 (2022:
+€1=£0.8550).
+
+h) Taxation
+
+Current tax is the amount of income tax payable in respect of the taxable profit for the year or prior years. Tax
+is calculated on the basis of tax rates and laws that have been enacted or substantively enacted by the period end.
+Current tax liabilities are recognised without discounting.
+
+The charge for taxation is based on the profit for the yeat and takes into account taxation deferred because of
+timing differences between the treatment of certain items for taxation and accounting purposes. Deferred tax is
+recognised, without discounting, in respect of all timing differences between the treatment of certain items for
+taxation and accounting purposes which have arisen but not reversed at the Balance Sheet date. Deferred tax is
+chatged or credited to profit or loss, except when it relates to items charged o credited directly to equity, in
+
+Page 28 of 50
+
+mo
+align
+i> *"!|MelliBank Annual Report and Accounts 2023
+
+which case the deferred tax is also dealt with in equity. The notional deferred tax on the actuarial loss under FRS
+102 is recognised in Other Comprehensive Income.
+
+Deferred tax is calculated using tax rates and laws that have been enacted or substantively enacted that are
+expected to apply when the timing difference reverses. The cattying amount of deferred tax assets is reviewed at
+each Balance Sheet date and reduced to the extent that it is no longer probable that sufficient taxable profits will
+be available to allow all or patt of the asset to be recovered. The Bank does not currently recognise deferred tax
+(see note 14 for additional information).
+
+Management petiodically evaluates the position taken in the tax return with respect to situations in which
+applicable tax regulation is subject to interpretation. It establishes provisions, where appropriate, on the basis of
+amounts expected to be paid to the tax authorities.
+
+i) Pensions and other post-retirement benefits
+@ Defined contribution pension plan
+
+The Company operates a defined contribution pension scheme. The assets of the scheme are held separately
+from those of the Company in an independently administered fund. The amounts charged to profit or loss
+represent the contributions payable to the scheme in respect of the accounting period.
+
+(i) Defined benefit pension plan
+
+‘The Company also operates a defined benefit pension scheme based on final pensionable pay. This scheme was
+closed to future accrual from 31 July 2004 and replaced by the defined contribution scheme. The assets are held
+in a specific trust separately from those of the Company, and managed by an independent trustee. A formal
+valuation is conducted periodically by a qualified actuary. The defined benefit pension scheme liabilities are
+measured using the projected unit credit method and discounted at the cusrent rate of return on a high quality
+corporate bond of equivalent term and currency to the liability. The pension scheme assets are measured at fait
+value. The pension scheme surplus, to the extent it is considered recoverable, or deficit, when payable, is
+recognised in full and presented on the face of the Balance Sheet. Remeasurement of the pension is included in
+other comprehensive income. See note 21 for further information.
+
+i) Provisions and contingent liabilities
+
+A ptovision is recognised in the Balance Sheet when the Company has a present legal or constructive obligation
+as a result of a past event, and it is probable that an outflow of economic benefits will be required to settle the
+obligation. Provisions are measured at the directors’ best estimate of the expenditure required to settle the
+obligation at the Balance Sheet date and are discounted to present value at an appropriate rate if the effect of the
+time value of money is deemed material.
+
+Contingent liabilities are not recognised, except those acquired in a business combination. Contingent liabilities
+arise as a result of past events when (i) it is not probable that there will be an outflow of resources or that the
+amount cannot be reliably measured at the reporting date or (ii) when the existence will be confirmed by the
+occurrence or non-occurrence of uncertain future events not wholly within the Bank’s control. Contingent
+liabilities are disclosed in the financial statements unless the probability of an outflow of resource is remote.
+
+k) Operating lease rentals
+
+Leases that do not transfer all the risks and rewards of the ownership are classified as operating leases. Payments
+under operating leases are charged to profit of loss on a straight-line basis over the period of the lease and include
+the rent-free period.
+
+HN} Cash and cash equivalents
+
+Cash and cash equivalents include notes and coins on hand, unrestricted balances held with centtal banks and
+highly liquid financial assets with original maturities of less than three months from the date of inception, which
+are subject to insignificant risk of changes in their fair value, and are used by the Bank in the management of its
+short-term commitments.
+
+Page 29 of 50
+
+mt
+alla
+ic MelliBank Annual Repost and Accounts 2023
+
+m) Share Capital
+
+Shares are classified as equity when there is no contractual obligation to transfer cash or other financial assets.
+Incremental costs directly attributable to the issue of equity instraments are shown in equity as a deduction from
+proceeds net of tax.
+
+n) Significant judgments and estimates
+judgements
+
+In the cousse of preparing the financial statements, no critical judgements have been made in the application of
+the Bank’s accounting policies that have had a significant effect on the amounts recognised in the financial
+statements.
+
+Estimates
+
+a. Impairment of loans and debt securities
+‘The development of provisions against non-performing loans and assessing impairment of debt securities
+imply making reliable judgements and estimates of the ability of customers and other counterparties to repay
+is often difficult even in periods of economic stability and becomes more difficult in periods of economic
+volatility. The Bank measures impairment on an incurred loss basis under FRS 102. The Bank reviews the
+impairment of financial assets annually.
+
+b. Defined benefit pension scheme
+‘The Bank’s defined benefit pension scheme was in surplus at 31 December 2023. No significant funding is
+estimated for 2023. The principal assumptions used for the pension scheme valuation are outlined in note 21.
+
+c. Deferred tax
+
+The carrying amount of the deferred tax asset is based on management’s best estimate of the probability of
+sufficient taxable profits being available to allow all or part of the asset to be recovered. On account of the
+uncertainty relating to future profits, deferred tax has not been recognised on the balance sheet. For more
+details refer to note 14.
+
+2, Interest income and similar income
+
+2023 2022,
+
+€000 €000
+
+Loans and advances to customers 935 330
+Loans and advances to banks 9,154 10,395,
+__ 10,089 10,725
+
+Interest income is recognised in profit or loss using the effective interest rate method. The effective interest rate
+is the rate that exactly discounts the estimated future cash receipts through expected life of the financial
+instrument to the carrying amount of the financial asset. The Bank has a presence in the UK and Hong Kong.
+However, its main source of income is derived from the Iranian market.
+
+Page 30 of 50
+
+a i
+aidqa
+—MelliBank Anaual Report and Accounts 2023
+
+3. Fees and commissions teceivable
+
+2023 2022
+€000 €000
+Commissions 27 33
+Account maintenance fees 28 40
+55 73
+4. Foreign exchange (losses)/gains
+2023 2022
+"001 €000
+Foreign exchange revaluation losses (179) (653)
+Unrealised gains on derivative instruments 135 447
+(44) (206)
+5. Administrative expenses
+2023 2022
+€000 €000
+Staff costs - Salaries and wages 4,492 4,727
+Social security costs 521 469
+Other pension costs 430 404
+5,443 5,600
+Auditor’s remuneration
+Fees payable to the Company’s auditor for the audit 122 115
+of the Company’s annual accounts UK
+Fees payable to the Company’s auditor for the audit
+of the Company’s annual accounts HK “ "
+Lease rentals in respect of leasehold premises 152 520
+Legal and professional fees 648 851
+Business Rates 189 199
+Building and liability insurance 21 23
+Building repairs and maintenance 3 34
+Other administrative expenses 903 846
+
+E inf
+2023 2022
+Banking operations 10 10
+Banking other 34 34
+Administration 2 2
+46 46
+
+‘The average number of employees in the Bank, excluding non-executive directors, during the year was 46 (2022:
+48).
+Page 31 of 50
+
+~~ >\MelliBank Annual Report and Accounts 2023
+
+6. Taxation
+
+a) Analysis of charge for the year
+
+2023 2022
+€000 =€000
+
+Current taxation:
+UK corporation tax at 23.52% (2022: 19.00%) on taxable income for the year - -
+UK corporation tax adjustment in relation to prior year - -
+
+Total current tax (note 6b) - -
+
+Deferred taxation (note 14):
+Adjustment in respect of prior years - -
+Origination and reversal of timing differences - -
+
+‘Tax recoverable on loss :
+
+b) Factors affecting the tax charge
+
+The tax assessed for the yeat is higher than the standard sate of corporate tax in UK of 23.52% (2022: 19%). The
+difference is explained below:
+
+2023 2022
+€000
+Total comprehensive profit (loss) for the yea 402-518
+Profit on ordinaty activities multiplied by UK standard rate of corporation tax of 95 98
+23.52% (2022: 19.00%)
+Effects of:
+Expenses not deductible for tax purposes 20 1
+Tncrease in tax rates 7 -
+Tax impact in respect of unrecognised deferred tax asset (122) (99)
+Tax losses : -
+
+"Tax on loss (note 6a) a
+
+¢) Factors that may affect the future tax charges
+
+The corporation tax main rate remained at 19% until 31 Match 2023. The corporation tax main rate from 01
+April 2023 increased to 25% applying to profits over £250,000. Companies with profits between £50,000 and
+£250,000 will pay tax at the main rate reduced by marginal relief providing gradual increase in the effective
+corporation tax rate.
+
+Page 32 of 50
+
+i)
+olino
+=24MelliBank
+
+7. Remuneration and interests of directors
+
+Aggregate remuneration including benefits
+Pension contributions
+
+Directors’ emoluments
+
+Highest paid director's emoluments:
+
+Salaty and bonus
+
+Benefits:
+
+Arising from rented accommodation
+
+Arising from use of company car
+
+Arising from membership of medical scheme
+
+UK income tax and national insurance
+
+Pension contributions
+
+Annual Report and Accounts 2023
+
+2023
+€2000
+1,134
+
+70
+1,204
+
+227
+
+46
+26
+5
+222
+526
+38
+564
+
+2022
+€000
+920
+75
+995
+
+177
+
+30
+26
+8
+130
+371
+35
+406
+
+One director at 31 December 2023 (2022: one) was a member of the Bank’s pension scheme which provided
+benefits based on final pensionable pay. This director was not the highest paid director in the Bank. The
+scheme closed and benefits were frozen on 31 July 2004. One director was a member of the defined
+
+contribution pension scheme at 31 December 2023.
+
+8a. Loans and advances — banks
+
+Maturity:
+3 months or less
+
+1 year or less but over 3 months
+
+5 year or less but over 1 year
+
+Loans and advances — banks comprises
+
+Loans and advances to money market counterparties
+
+Loans and advances to other banks
+
+2023
+€000
+40,206
+
+211,661
+
+42,206
+
+294,073
+
+49,000
+245,073
+294,073
+
+2022
+€000
+143,686
+
+23,567
+
+67,558
+
+234,811
+
+57,000
+177,811
+234,811
+
+Of the above amount 77.00% (2022: 67.00%) represents exposure to Iranian banks other than Group
+
+undertakings.
+
+Page 33 of 50
+
+rem
+allqe|)
+
+~=*MelliBank
+
+Due from Group undertakings
+
+19,810
+
+Anoual Report and Accounts 2023
+
+19,867
+
+The Bank does not consider the loans and advances to banks to be impaired. Please refer to note 22 for the
+
+Bank’s assessment of credit risk.
+
+8b. Cash at bank and in hand
+
+Cash
+Group
+Other banks
+
+9. Loans and advances — customers
+
+Repayable on demand or at short notice
+
+Remaining maturity:
+3 months or less
+1 year or less but over 3 months
+5 years or less but over 1 year
+5 years and above
+Past due
+
+Impairment provisions (note 11)
+
+2023 2022
+€000 €000
+3,607 3,566
+14,898 19,090
+20,784 44,299
+39,289 66,955
+2023 2022
+€000 £000
+465 -
+828 1,039
+2,030 2,855
+24,395 23,373
+27,718 27,267
+(19,443) (19,007)
+8,275 8,260
+
+Of the above amount 60% (2022: 51%) are exposures to Iranian corporate and government owned entities.
+
+Page 34 of 50
+
+mo
+alljn
+
+™*'MelliBank Annual Report and Accounts 2023
+Past
+due
+Past due
+Past due more Pastdue wore than Past due
+not more than3 more than6 “one year more
+Past due analysis Current* months months but Total
+than 3 but not than §
+but not not more than
+months mote than years
+more lyear 5 years
+than 6 y
+months
+31-Dec-23 €000 €000 €000 €000 €000 €01 €000
+Loan 1 3,316 - - - - - 3,316
+Loan 2 - - - - - 4,737 4,737
+Loan 3 - - - - - 215 215
+Loan 4 - - - - - -
+Loan 5 7 - - - - 7
+Loan 6 - - - - - 2
+Loan 7 - - - - - 2
+Total 3,324 : - - - 4,952 8,275
+
+Past due
+
+Past due more than Past due
+Past due more than "(OT "tl more than Past due
+Past due analysis Curren POLMOFE SmOMHS Hut noe REFER me Total
+more than "
+months mote than Leyeat more than years
+6 months months 5 years
+31-Dec-22 €000 €000 €000 €000 €000 €000 €000
+Loan 1 3,679 - - - - = 3,679
+Loan 2 - - - - - 4366 4,366
+Loan 3 - - - 215 - - 215
+Loan 4 - - - - - - -
+Loan 5 - - - - - - -
+Loan 6 - - - - - - -
+Loan 7 - - - - - - -
+Total 3, 679 - o 215 - 4,366 8,260
+
+*The current information is included for completeness.
+
+Loan 2 is partially impaired and is included in the impaizment provision (note 11). At31 December 2023, the net
+indebtedness was €4.74m (2022: €4.37m). This cepresents 57% of the loans and advances to customers portfolio
+at year end 2023 (2022: 53%). The net indebtedness is recoverable from a group company under a legally
+enforceable guarantee. The Bank’s management have assessed the guarantor group company’s financial position
+and are confident the repayment of the net indebtedness would be achieved undet a Board approved recovery
+plan.
+
+Page 35 of 50
+
+auga|
+I"'MelliBank Annual Report and Accounts 2023
+
+Loan 3 is over 5 years past due but not impaited. This is on account of the security the Bank holds, which are
+either (a) irrevocable guarantees from guarantors who the Bank deems to be of high quality or (b) reputable
+ownership, strong financial condition and commitment to repay. Loan 5 ate staff loans. Loans 4, 6 and 7 ate over
+5 years past due and considered fully impaired. A 100% impairment provision has been set against these loans
+and are included in the impairment provisions figure (note 11).
+
+Allloans and advances to customers have been classified as basic financial instruments and reported at amottised
+cost under the provisions of FRS 102. At 31 December 2023, the effective interest rate earned on loans and
+advances to customers was 11.31% (2022: 3.85%). All financial instruments are measured at amortised cost
+under the provisions of FRS 102.
+
+10. Debt Securities
+2023 2023 2022 2022
+At amortised cost
+Fulh a Full soe
+Impaired Original Impaired Onginal
+Cost* Cost*
+Investment securities — listed €000 €000 €000 €000
+Financial corporations
+Securities due one year or over - 683 - 680
+- 683 - 680
+
+*For impairment provisions see note 11.
+
+Reconciliation of (unimpaired) book cost of debt securities
+
+2023 2022
+Cost €000 €000
+At start of year 680 5,546
+Security matured - (4,907)
+Exchange rate impact 3 41
+Book cost at end of year before impaitment 683 680
+
+At 31 December 2023 the effective interest rate earned on debt securities was 0% (2022: 0%).
+
+11. Impairment provision
+
+2023 2022
+€000 €000
+Impaitment - Other - 26
+Exchange rate movement 439 626
+Impairment loss provision at start of year 19,687 19,061
+Impairment loss provision at year end 20,126 19,713
+
+Page 36 of 50
+
+mol
+
+align
+™*'MelliBank Annual Report and Accounts 2023
+
+‘The provision at year end 2023 of €20,126,000 is made up of €19,443,000 in respect of impaired loans and
+advances to customers (note 9) and €683,000 against debt securities (note 10). In 2022 a provision of €26,000
+swas made on account of a bank not honouring its counterindemnity obligation against a letter of guarantee.
+‘The exchange rate movements mainly relate to impaired and fully provided loans denominated in Kuwaiti
+Dinars and US Dollars.
+
+12. Tangible fixed assets
+
+Fixtures,
+Freehold Leasehold Leasehold _—“Fittings.-~- Motor
+Building Freehold Land “siting Improvements and Vehicle 1°!
+Equipment
+€000 000 €000 000 €000 © 000 £000
+Cost
+At 814 336 955 1,245 818 37 6,205
+31/12/2022 2, , 4
+Additions - - - 84 100 - 184
+At 814 336 2,955 1,329 918 37 6,389
+31/12/2023 , 3
+Depteciation
+At
+31/0/2022 244 - 54d 1,116 755 37 2,696
+Charge 7 - B 55 35 _ 180,
+At 264 617 4,171 790 37 2,876
+31/12/2023 : 2
+Net book
+value at
+31-12-23 553 336 2,338 158 128 - 3,513
+31-12-22 570 336 2,411 29 63 = 3,509
+
+Page 37 of 50
+
+tet]
+aline
+
+<=" MelliBank
+
+13. Intangible fixed assets
+
+Cost
+At 31/12/2022
+Additions
+
+At 31/12/2023
+Depreciation
+At 31/12/2022
+Charge
+
+At 31/12/2023
+
+Net book value at
+
+31-12-23
+31-12-22
+
+14, Deferred tax
+
+Bonus and holiday pay accruals
+
+Tax losses
+
+Accelerated capital allowances
+
+Recoverable costs
+Pension accrued
+
+Deferted tax assct not recognised
+
+Deferred tax movement
+
+The deferred tax asset comprises the following amounts based on a tate of 25% (2022 - 25%)
+
+Decelerated capital allowance
+Bonus and holiday pay accruals
+
+Tax losses
+
+Recognition of fair value of investments
+
+Recoverable costs
+Pension accrued
+
+Deferred tax asset not recognised
+
+Annual Report and Accounts 2023
+
+Page 38 of 50
+
+IT- Intangibles Total
+€000 €000
+1,628 1,628
+
+74 4
+1,702 1,702
+1,409 1,409
+
+212 212
+1,621 1,621
+81 81
+219 219
+2023 2022
+
+€000 €000
+
+43 15
+
+(160) (174)
+
+4 53
+
+0) 7
+
+122 99
+
+2023 2022
+
+€000 001
+
+82 168
+
+147 166
+
+5,745, 5,844
+
+1 1
+
+13 9
+
+9
+
+(5,988) (6,197)
+
+alas
+i—*MelliBank
+
+Annual Report and Accounts 2023
+
+At 31 December 2023, the gross value of tax losses was €22,982 (2022: €23,623) and other timing differences
+
+€972 (2022: €1,162)
+
+15. Other debtors
+
+2023 2022
+€000 €000
+Accrued tax (Hong Kong Branch) 662 ot
+Other debtors 3,514 4,299
+4,176 4,970
+16. Liabilities - maturity analysis
+More
+than three More
+than six
+Not more months months More Undated
+than three but not than five Total
+but not Items
+months more than yeats
+six more than
+months °* Yeat
+31-Dec-23
+€001 €000 €000 €000 €000 €000
+Liabilities:
+Deposits by banks 29,712 45,000 16,700 - - 91,412
+Customer accounts 3,820 - - - - 3,820
+Other liabilities 505 - - - - 505
+Accruals and deferred income 3,319 - - - - 3,319
+Total financial liabilities 37,356 45,000 16,700 - - 99,056
+Mote
+than More
+Not more three than six More
+than months months i an five Undated Total
+three but not but not eats Items
+months mote more than y
+than six one yeat
+months
+31-Dec-22
+€2000 €000 €000 €000 €000 €000
+Liabilities:
+Deposits by banks 34,081 20,000 - - - 54,081
+Customer accounts 3,980 - - - - 3,980
+Other liabilities 1,079 - - - - 1,079
+Acctuals and deferred income 4,919 - - - - 4,919
+Total financial liabilities 44,059 20,000 - . : 64,059
+
+Page 39 of 50
+
+—
+ava
+
+Sin
+{=
+
+5
+
+MelliBank Annual Report and Accounts 2023
+
+At 31 December 2023 the effective interest rate paid on deposits by banks was 2.08% (2022: 0.0242%).
+
+17. Derivative assets
+
+2023 2022
+
+€000 €000
+
+Fair value asset - Forward FX contract 271 136
+271 136
+
+The derivative financial instrument consists of forward foreign exchange (FFX) contract with a notional amount
+of €4,000,000 against AED 15,000,000. FFX contracts are held at fair value. The movement in fair value is as.
+result of the exchange rate fluctuation in relation to the functional currency (Euro) within the year.
+
+18. Authorised and called up shate capital
+
+2023 2022
+Authorised €0 €000
+50,000 Ordinary shares of £1 each 68 68
+225,000,000 Ordinary shares of $1 each 153,061 153,061
+300,000,000 Ordinary shares of €1 each 300,000 300,000
+453,129 453,129
+
+Allotted. called up and fully paid
+50,000 Ordinary shares of £1 each 68 68
+264,343,895 Ordinary shares of €1 each 264,344. 264,344
+264,412 264,412
+
+The Bank is a public company limited by shares. There was no movement in the number of shares during
+the year. For restrictions on shares with regard to (j) the return of assets or (ii) dividends, please refer to the
+Bank’s Articles of Association (pages 5 and 22 respectively). The shares are wholly owned by Bank Melli
+Iran (the Bank’s parent) which is entitled to fall voting rights,
+
+19. Operating lease commitments
+
+As at 31 December 2023 the Bank had the following non-cancellable operating lease commitments:
+
+2023 2022
+€000 €000
+Within one year 161 167
+Between one and five yeats 140 313
+301 480
+
+Page 40 of 50
+
+‘MelliBank Annual Repost and Accounts 2023
+
+‘The operating leases are in respect of office premises of the Hong Kong Branch. In November 2022 the Hong
+Kong Branch signed a new lease agreement, which replaced the existing one, to move to new office premises
+with lower rent.
+
+20. Contingent liabilities and undrawn commitments
+Contingent liabilities in existence at 31 December 2023 was €Nil (2022: €Nil) in respect of letters of guarantee
+
+issued by the Bank. Undrawn commitments relating to letters of credit discounting and syndicated and bilateral.
+loan facilities at 31 December 2023 was €Nil (2022: €Nil) and letters of credit refinancing was €Nil (2022: €Nil).
+
+21. Pension scheme
+The Company sponsors ‘The Pension and Life Assurance Scheme of Melli Bank Plc, a funded defined benefit
+pension scheme in the UK. The scheme is set up on a tax relieved basis asa separate trust independent of the
+
+Company and is supervised by an independent trustee. The Trustee is responsible for ensuring that the correct
+benefits are paid, that the Scheme is appropriately funded and that Scheme assets are appropriately invested.
+
+Information about the characteristics of the Scheme
+
+‘The Scheme provides pensions in retirement and death benefits to members. Pension benefits are linked to a
+member’s final salary and their length of service.
+
+‘The Scheme is not contracted out of the State Eatnings-Related Pension Scheme. With effect from 31 July
+2004 benefit accrual ceased and membets then in active service became deferred pensioners.
+
+‘The Scheme is a registered scheme under UK legislation and is subject to the scheme funding requirements.
+
+‘The Scheme was established from 1 August 1969 under trust and is governed by the Scheme’s trust deed and
+rules dated 31 July 2001 and subsequent amendments.
+
+"The Trustee is responsible for the operation and the governance of the Scheme, including making decisions
+xegatding the Scheme’s funding and investment strategy.
+
+Information about the risks of the Scheme to the Company
+
+‘The Scheme exposes the Company to actuarial risks such as; matket (investment) tisk, interest rate xisk,
+inflation tisk, currency risk and longevity tisk.
+
+‘The Scheme does not expose the Company to any unusual Scheme-specific or Company-specific tisks.
+
+Information about the valuation of the defined benefit obligation at the accounting date
+
+The Company pays the balance of the cost as determined by regular actuarial valuations. The Trustee is required
+to use prudent assumptions to value the liabilities and costs of the Scheme whereas the accounting assumptions
+must be best estimates. Best estimate means a broadly 50/50 chance of reality being better/worse than
+expectations. The most recent formal actuarial valuation of the Scheme was as at 31 July 2021.
+
+‘The liabilities at the reporting date have been calculated by updating the results of the actuarial valuation of the
+Scheme as at 31 July 2021 for the assumptions as detailed in these disclosures. Allowance has been made for
+
+Page 41 of 50
+
+i
+—*'MelliBank Annual Repost and Accounts 2023
+
+the passage of time, benefits paid out of the Scheme, inflationary experience, expected deaths and changes in
+actuarial assumptions over the petiod from 31 July 2021 to 31 December 2023.
+
+Such an approach is normal for the purposes of accounting disclosures. It is not expected that these projections
+will be materially different from a summation of individual calculations at the accounting date, although there
+may be some discrepancy between the actual liabilities for the Scheme at the accounting date and those included
+in the disclosures.
+
+Information about the most recent actuarial valuation and expected future cashflows to and from the
+Scheme
+
+The valuation as at 31 July 2021 revealed a funding surplus of £620,000. Therefore, no further contributions
+are curtently due from the Company.
+
+In addition, the Company will meet the cost of administrative expenses for the Scheme.
+
+The liabilities of the Scheme are based on thc current value of expected benefit payment cashflows to members
+approximately over the next 60 years. ‘The average duration of the liabilities is approximately 9 years.
+
+The Scheme’s investment strategy
+
+The Scheme’s investment strategy is to invest entirely in insurance contracts. This is done through a with-
+profits policy. The underlying asset split of the policy at the last seported date (30 September 2023) was
+apptoximately 44% equities; 24% fixed-interest bonds; 14% property and 18% cash and alternatives. The policy
+enables the Trustee to benefit from smoothed returns and avoid full exposure to the volatility of markets, which
+is important given the Scheme’s small size. This distribution is intended to reflect the liability profile of the
+Scheme. The Scheme also holds a number of annuity policies which match a portion of the pensions in payment
+as well as a small cash fund.
+
+The Scheme does not hold any ordinary shares issued of property occupied by the Company.
+
+31-12-23 31-12-22
+
+Other Comprehensive Income reconciliation to plan: €000 €000
+Charge/ (credit) recorded in other comprehensive income (208) 2,223
+Foreign exchange
+
+Surplus derecognition/ plan movements (20) (2,264)
+
+Pension remeasurement
+
+The amounts recognised in comprehensive income are:
+
+31-12-23 31-12-22
+€000 €000
+
+Service cost:
+Net interest expense/ (credit) (228) (41)
+Charge/ (credit) recognised in comprehensive income (228) (41)
+
+Page 42 of 50
+
+allyn
+'MelliBank Annual Report and Accounts 2023,
+
+Remeasurements of the net liability:
+
+Return on scheme assets (excluding amount included in net interest expense) (62) 1,448
+Actuarial (gains)/losses 270 (3,671)
+Charge/ (credit) recorded in other comprehensive income ; 208 (2,223)
+Total defined benefit cost/(credit) (20) (2,264)
+‘The principal actuarial assumptions used were: 31-12-23 31-12-22
+Liability discount rate 4.55% 4.90%
+Inflation assumption - RPI 3.15% 3.20%
+Inflation assumption - CPI 2.15% 2.20%
+Rate of increase in salaries 0.00% 0.00%
+Revaluation of deferred pensions 2.15% 2.20%
+Increases for pensions in payment:
+Benefits acctued pre 97 3% pension increase 3.00% 3.00%
+Benefits accrued post 97 RPI(3,5) pension increase 3.60% 3.65%
+Proportion of employees opting for early retirement 0.00% 0.00%
+Proportion of employees commuting pension for cash 50.00% 50.00%
+Expected age at death of current pensioner at age 65:
+Male aged 65 at year end: 86.2 86.1
+Female aged 65 at year end: 88.5 88.4
+Expected age at death of future pensioner at age 65:
+Male aged 45 at year end: 87.1 87.1
+Female aged 45 at year end: 89.6 89.6
+Reconciliation of scheme assets and liabilities Assets Liabilities Total
+€000 £000 €2000
+At the start of period 15,942 (11,292) 4,050
+Benefits paid (711) 711 -
+Interest income /(expense) 764 (536) 228
+Return on assets (excluding amount included in net interest expense) 63 - 63
+Actuarial gains/ (losses) = (271) (271)
+At end of period 16,058 (11,388) 4,670
+
+The differences between the above opening balances and the previous year’s closing balances ae due to the
+exchange rate differential on conversion from GBP to EUR for reposting purposes.
+
+Page 43 of 50
+
+™* (WelliBank Annual Report and Accounts 2023
+
+The return on plan assets was: 31-12-23 31-12-22
+
+€000 €000
+Interest income 164 308
+Return on plan assets (excluding amount included in net interest expense) 62 (1,448)
+‘Total return on plan assets 826 (1,140)
+‘The major categories of scheme assets ate as follows: 31-12-23 34-12-22
+€000 €000
+UK Equities 1,434 1,626
+Ovetseas Equities 2,999 2,600
+Corporates (fixed interest) 2,492 1,997
+Property 1,393 1,637
+Other-Private Eq + Alternatives 1,647 1,587
+Annuities 5,857 5,855
+Cash 236 324
+Total return on plan assets 16,058 15,626
+
+22, Management of financial risks and uncertainties
+
+Melli Bank Plc is a UK incorporated bank, authorised by the Prudential Regulation Authority and regulated by
+the Financial Conduct Authority and Prudential Regulation Authosity and conforms to all applicable UK.
+accounting standards and disclosure requirements. It is a wholly owned subsidiary of Bank Melli Iran. The Bank
+has one branch in Hong Kong which is regulated by the Hong Kong Monetary Authority.
+
+The Bank has identified the risks to which it is exposed in its activities and has in place a management
+framework and control procedures to meet such risks. The Bank considers the principal risks and uncertainties
+to be credit, concentration, liquidity and operational risks and the speed at which the Bank would be able to
+implement its strategy.
+
+The Bank’s market risk is not considered to be significant. It does not run a trading book and the only market
+tisks it might be exposed to are foreign exchange position risk and interest rate tisk in the banking book. It is
+the Bank’s policy to square most of its open foreign exchange positions on a daily basis. With regard to interest
+ate risk, the Bank does not have long term fixed rate exposure and the bulk of funding is provided by its CET
+1 capital.
+
+Risk control environment
+The size and structure of the Bank enables the direct involvement of the most senior managers in the day-to-
+day activities of the Bank and provides short and effective channels of communication that readily identify and
+
+address both threats and opportunities.
+
+The Risk Management Framework Policy formalises the risk management framework of the Bank and
+establishes the process for the management of the risks faced by the Bank.
+
+In parallel to routine operational controls, the Bank operates a committee structure to formally review activities.
+
+Page 44 of 50
+
+a
+ollna
+
+—=\MelliBank Annual Report and Accounts 2023
+
+Risk control procedures
+
+Credit Risk
+
+‘The Bank is exposed to credit risk which arises from its commetcial lending, trade finance activities and also
+from its inter-bank placements and deposits. There is a requirement to clearly identify credit risk and to manage
+credit risk not only individually, but also at a sector/industry level and at an overall portfolio level. By closely
+monitoring its portfolio, the Bank is able to gauge the quality of credit risk taken on its books and is able to
+gauge the movement of the portfolio over time.
+
+‘The Bank emphasises a policy of adequate asset quality, as reflected in its Credit Policy Statement. Asset quality
+is determined on the basis of the size, trend, and mix of the Bank’s portfolio of financial assets, as well as the
+associated credit risk. Credit is driven by principles outlined in the Credit Policy Statement.
+
+Tran has been the Bank’s niche market where it has historically had a large concentration mainly as a result of
+its expert knowledge in understanding, analysing and managing the unique risks associated with investment
+opportunities in the Iranian market. However, strict standards in maintaining a high-quality asset base have led
+to the adoption of a conservative approach even with the Iranian business and thus the Bank’s products
+(including bank placements) have generally been offered to a select class of high-quality and reputable
+customers known to the Bank. To assess risk, the Bank has carefully combined a judgmental approach, taking
+account of management quality, industry, and operating environment, with a critical analysis approach
+addressing liquidity, leverage, profitability, debt-setvice coverage, and volatility among other factors.
+
+‘The Bank monitors the credit portfolio identifying individual portfolio segments and movements in the
+portfolio over time. Customer, issuer and industry sisk are reviewed on inception of each particular transaction,
+and regularly thereafter. In instances of concern, a mote frequent review schedule is applied.
+
+The Bank would usually look to take security in support of corporate loan facilities with the type and level of
+security being determined on a case-by-case basis but normally taking the form of one or more of the following:
+
+- apledge of shares in listed companies
+- amortgage of property, or;
+~ abank, corporate or personal guarantee
+
+In order to sustain the credit quality of exposures to banks, inter-bank limits are reviewed annually with the
+assistance of a matrix approved by the Boatd of the Bank. The matrix is driven by the level of the extetnal
+credit rating agency short and long-term rating for each bank, and the net worth of each bank. Occasionally,
+the Bank will take a view that it would be appropriate to mark a limit above the matrix driven limit or mark a
+limit for a bank which is not rated by external credit rating agency, in which case an individual credit risk analysis
+paper is produced.
+
+Country tisk is analysed using a matrix based upon the level of external credit rating agency short and long-
+term rating for each country. The matrix is approved by the Board annually. As is the case of banks, any adverse
+change in the rating of a country during the year could require the limit to be reduced.
+
+Exposure against overall limits (both regulatory and internal) is checked on a daily basis, and any excesses are
+repotted to senior management, the Credit Committee and the Board Risk Committee.
+
+‘The Bank makes impairment provisions where there is objective evidence of impairment as a result of one or
+more events that occurred after the initial recognition of the asset and that loss event (or events) has an impact
+on the estimated future cash flows from the asset that can be reliably estimated. Details of provisions are set
+out in note 11.
+
+‘The carrying amounts of the financial instruments shown on the Balance Sheet best represent the maximum
+exposure to credit risk as identified by the Company.
+
+Page 45 of 50
+
+fe
+allqe|
+
+r"MelliBank
+
+Annual Report and Accounts 2023
+
+Loans and advances to customers detailed below are recorded net of provisions. Provisions have been raised
+on 4 accounts totalling €20,126,000. Provisions have been raised on accounts which are in default, but would
+also be made where other factors provide evidence of impairment such as changes in market and economic
+
+conditions.
+
+Maturity analysis
+
+31-Dec-23
+
+Assets:
+
+Loans and advances banks
+Cash at bank
+
+‘Loans and advances customets
+Other assets
+
+Acctued income
+
+Derivative assets
+
+Total financial assets
+
+Liabilities:
+
+Deposits by banks
+
+Customer accounts
+
+Other liabilities
+
+Acctuals and deferred income
+Total financial liabilities
+
+Mor More More
+
+ore than than
+
+than ix one
+
+Not more three year More
+than months than Undated
+three butnot Putmot butnot Gems Total
+months more more more eats
+er than than ™
+than six
+
+months one five
+
+year years
+€000 €000 —-€000 €000 €000 €000 = €:000
+40,206 183,051 28,610 = 42,206 - - 294,073
+39,289 - - - - - 39,289
+465 414 414 2,030 - 4,952 8,275
+4,176 - - - - - 4,176
+5,910 - - - - - 5,910
+271 - - - - - 271
+90,318 183,465 29,025 44,235 - 4,951 351,994
+29,712 45,000 16,700 - - - 91,412
+3,820 - = ~ - - 3,820
+505 - - - - - 505
+3,319 - - - - 3,319
+37,356 45,000 16,700 - - - 99,056
+
+Page 46 of 50
+
+allqa
+™>"\MelliBank Annual Report and Accounts 2023
+More More
+More than than
+than “six one
+Notmore gagnthe months year "han Undated
+Matutity analysis than three but not but not Total
+but not five Items
+months more more more ears
+j than than
+than six
+one five
+months
+year years
+31-Dec-22
+€000 €000 €000 €000 €000 €000 €000
+Assets:
+Loans and advances banks 143,687 - 23,567 67,557 - - 234,811
+Cash at bank 66,955 - - - - - 66,955
+Loans and advances customers - 412 627 2,855, - 4,366 8,260
+Other assets 4,970 - - - - - 4,970
+Accrued income 1,329 - - = 1,329
+Derivative assets : - 136 =. - : 136
+Total financial assets 216,941 412 24,330 = 70,412 4,366 316,461
+Liabilities:
+Deposits by banks 34,081 20,000 - - - - 54,081
+Customer accounts 3,980 - - - - - 3,980
+Other liabilities 1,079 - - - - - 1,079
+Accruals and deferred income 4,919 - - - - : 4,919
+Total financial liabilities 44,059 20,000 - - - - 64,059
+
+‘Tangible and intangible fixed assets are not included in the maturity analysis tables.
+
+Concentration Risk
+
+Concentration risk arises when a number of the Bank’s counterparties are engaged in similar activities or similar
+geographic locations so that they have economic characteristics that would cause their ability to meet their
+obligations to be similarly affected by changes in economic or other circumstances, Concentration risk can also
+arise from a large exposure to a single counterpasty. Given the Bank’s niche market, a major area of sector
+concentration is found in the Iranian banking sector whilst geographic concentration tisk also arises from the
+Bank’s exposure to the economy of Iran.
+
+The Bank’s experience of lending to Iranian state-owned banks and businesses is very good, with no losses
+recorded from such business duting more than 15 years of Melli Bank’s operation. Furthermore, the Bank has not
+recorded any losses from such business whilst operating as a branch of Bank Melli Iran, in total more than 40 years
+of expetience without loss. The Iranian state banks have an established track record of meeting all obligations.
+
+The Bank also lends to privately owned Iranian banks. Again, the Bank’s experience has been good with no
+recorded losses but the history is shorter and the customers ate inherently less secure. However, given the
+regulatory environment and the structure of the Iranian banking sector, the Bank considers that capital losses will
+not arise.
+
+The Bank also has certain single name bank concentration due to the restrictions on establishing correspondent
+banking relationships.
+
+Page 47 of 50
+
+peo
+allqe
+™*"MelliBank Annual Report and Accounts 2023
+
+The geographic concentration tisk atises from the Bank’s exposure to the economy of Iran and receives particular
+attention in the identification of the amount of capital to be set aside to meet the risks inherent in the Bank’s
+business model. The Bank also has significant exposure concentration to Turkey. However, in the case of Turkey,
+the bulk of the funds are in the United Kingdom. The Turkish exposure concentration is entitely due to tisk
+transfer from the UK where the funds were placed. Nevertheless, it is the Bank’s intention to manage this exposure
+down.
+
+The Bank relies on its own funds for its funding. However, as the operations progress, it is likely more reliance
+will be placed on deposits to provide a larger pool of funding to support credit exposure operations. At this time
+the Bank will manage its funding concentration risk.
+
+Melli Bank Plc, as a UK incorporated bank, has the United Kingdom as its home country. At 31 December 2023
+the countries of risk of its assets comprised:
+
+2023 2022
+€000 £0
+Tran 261,999 202,306
+Turkey 55,805 61,751
+United Kingdom 26,138 22,855
+Germany 92 20,995
+Other 11,554 12,282
+355,588 320,189
+
+Jquidity Risk
+Liquidity risk is that the Bank, although solvent, does not have available sufficient financial resources to enable
+it to meet its obligations as they fall due. The Bank has developed and implemented a liquidity risk management
+strategy in accordance with the Bank’s risk tolerance. The Bank considers the:
+
+- composition and maturity of assets and liabilities
+
+- diversity and stability of funding sources
+
+- approach to managing liquidity in different currencies, across borders, and across business lines and legal
+entities
+
+- approach to intraday liquidity management
+
+- assumptions on the liquidity and marketability of assets
+
+The strategy takes into account the liquidity needs under normal conditions as well as liquidity implications
+under periods of liquidity stress, the nature of which may be institution-specific or market-wide or a
+combination of the two.
+
+The Bank sets internal limits, above regulatory requirement, for the Liquidity Coverage Ratio and the Liquidity
+Maintenance Ratio. Additionally, the Bank has set an internal requirement to run 2 positive cumulative liquidity
+mismatch in the 1 day to 12-month time band.
+
+‘The Bank considers that it has adequate flexibility to address any periods of liquidity stress and the impact of
+new business on liquidity is monitored closely.
+
+‘The Assets and Liabilities Committee ensures that liquidity tisk remains within the Bank’s tisk appetite. ‘The
+Board Risk Committee oversees and advises the Board on the current liquidity risk exposure.
+
+Page 48 of 50
+
+allqe
+"—"'MelliBank Annual Report and Accounts 2023
+
+Operational Risk
+Operational risk is the risk of loss resulting from inadequate or failed internal processes, people and systems or
+from external events.
+
+The Bank's focus with regards to operational risk is on Operations, Compliance, Cyberctime and Governance
+and it has put in place measures to identify, assess, monitor and manage operational risk.
+
+‘The Bank has full disaster recovery procedures in place which include a fully functional back up site with
+necessary IT systems and communication capabilities. Data is encrypted and replicated to a secure back up
+repository site regularly. The procedures are tested annually, involving all staff and a full system recovery.
+
+‘The Bank has policies and procedures addressing specific operational risks including anti-fraud, anti-money
+Iaundeting and terrorist financing, anti-corruption and bribery, GDPR and cybersecurity. Regular training for
+staff is also provided, at least annually. The Bank continually monitors and addresses any emerging tisks that
+might have a significant effect on the Bank.
+
+The Bank has incurred no material losses since implementation of this framework and any process weaknesses
+identified have been addressed.
+[ncertaintic
+
+In addition to the above tisks, there is some uncertainty, due to geopolitical risk, over the speed in which the
+Bank would be able to implement its traditional business strategy built upon the provision of trade finance
+services to the Iranian banks and other parties involved in the chain of trade transactions. The US withdrawal
+from the Joint Comprehensive Plan of Action (JCPoA) in 2018 and the re-imposition of all US sanctions
+previously waived under the JCPoA has had a detrimental impact on trade transactions. A new business model
+for whilst the Bank is under these restrictions has been developed which focuses on lending, discounting
+transactions and interbank placements.
+
+Capital management
+
+‘The Bank assesses projected risks and identifies how much capital is required by the Bank. It concludes that
+the Bank has more than adequate capital to satisfy not just current regulatory capital requirements but also to
+meet the additional capital requirements resulting from its business needs.
+
+At 31 December 2023, the Bank’s regulatory own funds amounted to €256,049,000 (2022: €255,912,000) of
+which 100% was Common Equity Tier 1 (CET1) capital (2022: 100%). This reflects the strength of the Bank’s
+capital resources given that the Bank’s CET1 capital ratio is 51% (2022: 60%). The Bank’s Total Capital
+Requirement (ICR) at 31 December 2023 was 16.38%,
+
+23. Foreign currency risk
+
+2023 2022
+
+‘Total assets (net of provisions) of the Company by currency are as follows: €m &m
+Denominated in:
+
+US Dollars - -
+
+Euro 337 289
+
+Sterling 6 7
+
+Other 13 24
+
+Page 49 of 50
+
+sigs
+
+——'MelliBank Annual Report and Accounts 2023
+2023 2022
+‘Total liabilities of the Company by currency are as follows: em em
+
+Denominated in:
+
+US Dollars 2 3
+Euro 85 38
+Sterling 6
+Other 7 17
+99 64
+
+A 10% appreciation in value of Sterling against the Euro would decrease profitability by €0.56m (2022: €0.53m).
+
+The effect on equity capital would be a reduction of 0.22% (2022: 0.21%).
+
+24, Other income
+
+Other income consists of interest income of €228,000 (2022: €41,000) relating to the Bank’s pension plan.
+
+25, Related party disclosure
+
+As at 31 December 2023 there were no loans to officers of the Company (2022: €Nil).
+
+A loan with a net value of €4,737,000 at 31 December 2023 is guaranteed by a subsidiary of Bank Melli Iran
+
+(the Bank’s parent).
+
+Thete were no other related party transactions requiring disclosure under FRS 102.
+
+26. Ultimate parent undertaking
+
+The Bank is a wholly owned subsidiary of Bank Melli Iran (the parent). The parent is incorporated in Itan,
+having its registered address at Ferdowsi Avenue, Tehran, Iran. The ultimate 100% owner of Bank Melli Iran
+
+is the government of the Islamic Republic of Iran.
+
+‘The Company’s results ate consolidated in the accounts of Bank Melli Iran. The consolidated accounts of this
+company are available to the public and may be obtained from the company’s head office at Bank Melli Iran,
+
+Head Office, Ferdowsi Avenue, Tehran, Iran.
+
+27. Post balance sheet events
+
+The Bank received a payment of €2,334,000 in February 2024 relating to loan 2 (Note 9). The Bank is in
+
+discussions to recover the remaining balance of the loan.
+
+Page 50 of 50
+

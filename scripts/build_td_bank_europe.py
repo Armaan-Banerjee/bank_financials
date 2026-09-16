@@ -324,6 +324,172 @@ TRANSITION_NOTE = (
     "do not interpret the full series as basis-homogeneous."
 )
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics - TDBEL's own "Table 21: Key Metrics" in Appendix 11.1 of
+# each year's Pillar 3 Disclosure, reproduced whole in TDBEL's own row order,
+# labels and printed precision.
+#
+# THE TABLE IS THE TEMPLATE EVEN THOUGH IT IS NUMBERED NOWHERE AND NEVER SAYS
+# "KM1". It carries the template's full row set - available own funds, RWEA,
+# capital ratios, the SREP row, the seven buffer rows, leverage, the additional
+# leverage-ratio disclosures, the five LCR rows and the three NSFR rows - with
+# the template's own section headings. Row numbers are simply not printed, so
+# none are invented here; the rows appear in TDBEL's order.
+#
+# Each column comes from the edition in which that year is the REPORTING year.
+# FY2021 is deliberately blank - see KM1_SOURCES.
+# ---------------------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) (CAD MM)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital", {"FY2025": 1269, "FY2024": 1206, "FY2023": 1159, "FY2022": 1103}),
+    ("DATA", "Tier 1 capital", {"FY2025": 1269, "FY2024": 1206, "FY2023": 1159, "FY2022": 1103}),
+    ("DATA", "Total capital", {"FY2025": 1269, "FY2024": 1206, "FY2023": 1159, "FY2022": 1103}),
+    ("SECTION", "Risk-weighted exposure amounts (CAD MM)", {}),
+    ("DATA", "Total risk-weighted exposure amount", {"FY2025": 801, "FY2024": 805, "FY2023": 1635, "FY2022": 1261}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)", {"FY2025": "158%", "FY2024": "150%", "FY2023": "71%", "FY2022": "87%"}),
+    ("DATA", "Tier 1 ratio (%)", {"FY2025": "158%", "FY2024": "150%", "FY2023": "71%", "FY2022": "87%"}),
+    ("DATA", "Total capital ratio (%)", {"FY2025": "158%", "FY2024": "150%", "FY2023": "71%", "FY2022": "87%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Total SREP own funds requirements (%)", {"FY2025": "16.5%", "FY2024": "16.5%", "FY2023": "13.0%", "FY2022": "13.0%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)", {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    # Printed as "-" in every edition - a dash is NOT a zero, so blank.
+    ("DATA", "Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%) [printed \"-\" in every edition - see note]", {}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.21%", "FY2024": "1.15%", "FY2023": "1.58%", "FY2022": "0.04%"}),
+    ("DATA", "Systemic risk buffer (%) [printed \"-\" in every edition - see note]", {}),
+    ("DATA", "Global Systemically Important Institution buffer (%) [printed \"-\" in every edition - see note]", {}),
+    ("DATA", "Other Systemically Important Institution buffer [printed \"-\" in every edition - see note]", {}),
+    ("DATA", "Combined buffer requirement (%)", {"FY2025": "3.7%", "FY2024": "3.7%", "FY2023": "4.1%", "FY2022": "2.5%"}),
+    ("DATA", "Overall capital requirements (%)", {"FY2025": "20.2%", "FY2024": "20.1%", "FY2023": "17.1%", "FY2022": "23.5%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (CAD MM)",
+     {"FY2025": 25214, "FY2024": 23692, "FY2023": 23004, "FY2022": 23408}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.0%", "FY2024": "5.1%", "FY2023": "5.0%", "FY2022": "4.7%"}),
+    # Whole block first printed in the FY2023 edition. The FY2022 edition does
+    # not contain these rows at all, so FY2022 is BLANK, not zero - and the
+    # FY2023 edition's own 2022 comparative prints "-" for all four, which is
+    # also a blank rather than a zero.
+    ("SECTION", "Additional leverage ratio disclosure requirements (block first printed in the FY2023 edition)", {}),
+    ("DATA", "Leverage ratio including claims on central banks (%)", {"FY2025": "5.0%", "FY2024": "5.1%", "FY2023": "5.0%"}),
+    ("DATA", "Average leverage ratio excluding claims on central banks (%)", {"FY2025": "5.1%", "FY2024": "5.1%", "FY2023": "5.0%"}),
+    ("DATA", "Average leverage ratio including claims on central banks (%)", {"FY2025": "5.1%", "FY2024": "5.1%", "FY2023": "5.0%"}),
+    ("DATA", "Countercyclical leverage ratio buffer (%)", {"FY2025": "0.42%", "FY2024": "0.40%", "FY2023": "0.55%"}),
+    # First printed in the FY2025 edition, and printed as a ZERO, not a dash -
+    # so the zero is kept while the four buffer rows above stay blank.
+    ("DATA", "Additional leverage ratio buffer (%) [row first printed in the FY2025 edition]", {"FY2025": "0.0%"}),
+    ("SECTION", "Liquidity Coverage Ratio (CAD MM, except the ratio)", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 23547, "FY2024": 21755, "FY2023": 20141, "FY2022": 18093}),
+    ("DATA", "Cash outflows - Total weighted value", {"FY2025": 1102, "FY2024": 2004, "FY2023": 1135, "FY2022": 241}),
+    ("DATA", "Cash inflows - Total weighted value", {"FY2025": 519, "FY2024": 1317, "FY2023": 352, "FY2022": 181}),
+    ("DATA", "Total net cash outflows (adjusted value)", {"FY2025": 583, "FY2024": 686, "FY2023": 782, "FY2022": 60}),
+    ("DATA", "Liquidity coverage ratio (%)", {"FY2025": "4039%", "FY2024": "3,170%", "FY2023": "2575%", "FY2022": "29989%"}),
+    ("SECTION", "Net Stable Funding Ratio (CAD MM, except the ratio)", {}),
+    ("DATA", "Total available stable funding", {"FY2025": 22470, "FY2024": 22006, "FY2023": 21441, "FY2022": 21073}),
+    ("DATA", "Total required stable funding", {"FY2025": 411, "FY2024": 420, "FY2023": 315, "FY2022": 254}),
+    ("DATA", "NSFR ratio (%)", {"FY2025": "5467%", "FY2024": "5,240%", "FY2023": "6804%", "FY2022": "8307%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - TD Bank Europe Limited's own 'Table 21: Key Metrics', Appendix 11.1 'Key Metrics' of each year's "
+    "Pillar 3 Disclosure. Amounts in CAD millions, ratios as printed. TDBEL SOLO basis (the reports state TDBEL "
+    "is the only PRA-regulated subsidiary in the UK and that the report is prepared at solo level). Each column "
+    "comes from the edition in which that year is the REPORTING year, never a later edition's comparative:\n"
+    "FY2025: TDBEL Pillar 3 Disclosure, year ended 31 October 2025, Table 21, printed pp.34-35 - " + P3_URL["FY2025"] + "\n"
+    "FY2024: TDBEL Pillar 3 Disclosure, year ended 31 October 2024, Table 21, printed p.34 - " + P3_URL["FY2024"] + "\n"
+    "FY2023: TDBEL Pillar 3 Disclosure, year ended 31 October 2023, Table 21, printed pp.35-36 - " + P3_URL["FY2023"] + "\n"
+    "FY2022: TDBEL Pillar 3 Disclosure, year ended 31 October 2022, Table 21, printed p.35 - " + P3_URL["FY2022"] + "\n\n"
+    "THE TABLE BREAKS ACROSS TWO PAGES IN TWO OF THE FOUR EDITIONS, which a one-page citation would hide. The "
+    "FY2023 edition prints everything down to 'Total available stable funding' on p.35 and the last two rows "
+    "('Total required stable funding', 'NSFR ratio') alone at the top of p.36; the FY2025 edition breaks in the "
+    "same place, with the three NSFR rows on p.35. The FY2024 and FY2022 editions print the table whole. Both "
+    "page ranges are cited above.\n\n"
+    "THIS IS THE KM1 TEMPLATE EVEN THOUGH TDBEL NEVER WRITES 'KM1' AND PRINTS NO ROW NUMBERS. The test applied "
+    "is the row set, not the title or the numbering: the table carries the template's own section headings "
+    "('Available own funds (amounts)', 'Risk-weighted exposure amounts', 'Capital ratios (as a percentage of "
+    "risk-weighted exposure amount)', 'Additional own funds requirements based on SREP...', 'Combined buffer "
+    "requirement...', 'Leverage ratio', 'Additional leverage ratio disclosure requirements', 'Liquidity Coverage "
+    "Ratio', 'Net Stable Funding Ratio') and the rows that belong under each. NO ROW NUMBERS ARE INVENTED HERE - "
+    "the rows are reproduced unnumbered, exactly as TDBEL prints them.\n"
+    "      DO NOT CONFUSE IT WITH TABLE 1. Each edition also prints a 'Table 1: Key regulatory metrics' in "
+    "section 1.2.1 with just FOUR rows (CET1 Ratio, Leverage Ratio, LCR, NSFR). That is a summary, not the "
+    "template, and the two disagree: the FY2025 Table 1 states an NSFR of 5820% where Table 21 states 5467%. "
+    "Table 21 is used here and on the NSFR sheet, and the disagreement is recorded rather than reconciled.\n\n"
+    "A DASH IS NOT A ZERO. Four buffer rows - 'Conservation buffer due to macro-prudential or systemic risk...', "
+    "'Systemic risk buffer', 'Global Systemically Important Institution buffer' and 'Other Systemically Important "
+    "Institution buffer' - are printed as '-' in EVERY edition and in every column. They are left BLANK here "
+    "rather than written as 0%, because a dash records that no such requirement applies to this firm, which is "
+    "not the same statement as a requirement measured at zero. The rows are kept rather than dropped so that a "
+    "reader can see TDBEL printed them. By contrast 'Additional leverage ratio buffer (%)' is printed as '0.0%' "
+    "in the FY2025 edition, and that printed zero IS kept.\n\n"
+    "ROW SET DRIFT, AND WHY FY2022 IS BLANK ON FIVE ROWS. The whole 'Additional leverage ratio disclosure "
+    "requirements' block appears first in the FY2023 edition; the FY2022 edition does not contain those rows at "
+    "all. A row the bank did not print is blank, not zero - and the FY2023 edition's own 2022 comparative prints "
+    "'-' for all four of them, so neither route yields a figure. 'Additional leverage ratio buffer (%)' appears "
+    "first in the FY2025 edition and is blank in the three earlier columns for the same reason. Nothing is "
+    "back-filled.\n\n"
+    "A RESTATEMENT FOUND AND NOT USED - THIS IS WHY EACH COLUMN COMES FROM ITS OWN EDITION. 'Overall capital "
+    "requirements (%)' for FY2022 is 23.5% in the FY2022 edition (its own reporting year) and 15.5% in the "
+    "FY2023 edition's 2022 comparative column. The FY2022 edition's own 23.5% is shown above. Both figures are "
+    "TDBEL's; they are not reconciled, and the later one remains visible in the FY2023 document.\n\n"
+    "PRECISION AND NUMBER FORMATTING ARE THE BANK'S OWN AND CHANGE BETWEEN EDITIONS. The FY2024 edition prints "
+    "the LCR and NSFR with a thousands separator ('3,170%', '5,240%') while the FY2025, FY2023 and FY2022 "
+    "editions print them without ('4039%', '2575%', '29989%', '6804%', '8307%'). Buffer rows are printed to two "
+    "decimals and ratio rows to one or none. Nothing is re-rounded or reformatted to a common style.\n\n"
+    "FY2021 IS BLANK, AND THAT IS AN ACCESS FAILURE ON OUR SIDE - NOT A STATEMENT THAT NOTHING WAS PUBLISHED. "
+    "Checked 2026-09-16 on TD's own regulatory page (" + REGULATORY_PAGE + "): it LISTS a 'Pillar 3 Disclosure - "
+    "2021' under the 'TD Bank Europe Limited Pillar 3 Disclosure' heading, alongside the 2022-2025 editions, so "
+    "an FY2021 TDBEL edition demonstrably exists. Its link is dead: "
+    "https://www.tdsecurities.com/tds/document/Pillar-3-Disclosure-2021 returns HTTP 200 with Content-Type "
+    "text/html and redirects to https://www.tdsecurities.com/error/404-en.html - a SOFT-404, caught only because "
+    "status alone was not trusted. The 2022, 2023, 2024 and 2025 links from the same page all return real "
+    "application/pdf bodies with %PDF magic bytes on the same date, so this is link rot on one document, not a "
+    "block and not an outage. Wayback was itself offline during this check and could not be used as the "
+    "fallback. A full FY2021 KM1 column DOES exist as the FY2022 edition's 2021 comparative and is deliberately "
+    "not used here, because every column on this sheet comes from the edition in which that year is the "
+    "reporting year. For the record, that comparative prints: CET1 / Tier 1 / Total capital all 1,050; total "
+    "RWEA 1,096; all three capital ratios 96%; total SREP own funds requirements 13.0%; capital conservation "
+    "buffer 2.5%; institution specific countercyclical capital buffer 0.01%; combined buffer requirement 2.5%; "
+    "overall capital requirements 23.5%; total exposure measure excluding claims on central banks 20,484; "
+    "leverage ratio excluding claims on central banks 5.1%; HQLA 17,258; cash outflows 381; cash inflows 285; "
+    "total net cash outflows 95; LCR 18136%; total available stable funding 18,892; total required stable "
+    "funding 2,361; NSFR 800%. Those figures do appear on this workbook's single-metric sheets, captioned there "
+    "as a comparative. A FUTURE PASS SHOULD RETRY THE 2021 LINK AND WAYBACK before treating FY2021 as settled.\n\n"
+    "PARENT CHECK DONE, AND IT DOES NOT HELP HERE. A subsidiary's figures usually live in the parent's Pillar 3, "
+    "so the parent was checked first rather than last. TD's own regulatory page states: 'In prior years, TD Bank "
+    "Europe Limited disclosures were included within the Toronto-Dominion Investments B.V. Pillar 3 disclosure "
+    "report and completed at the UK consolidation level. The Toronto-Dominion Investments B.V. Pillar 3 report "
+    "is FILED WITH THE RESPECTIVE FINANCIAL STATEMENTS. TD Bank Europe Limited is now the sole regulated entity "
+    "of TD Securities in the UK, thus the Pillar 3 report is now prepared at the solo level.' So (a) the "
+    "parent-document route applies to years BEFORE this workbook's range, not to FY2021-FY2025, which are all "
+    "TDBEL-solo editions; and (b) the TDI B.V. report is not published on the web at all - it is filed with that "
+    "Dutch entity's financial statements - so there is no parent Pillar 3 to read for a TDBEL column. The "
+    "ultimate parent, The Toronto-Dominion Bank, reports on the Canadian OSFI basis, which is a different "
+    "framework and not a source for a UK KM1.\n\n"
+    "NO SECOND ENTITY BLOCK IN THESE DOCUMENTS. Each edition prints Table 21 once, with two date columns (the "
+    "reporting year and its prior-year comparative) and no second entity basis beside it - confirmed by reading "
+    "Appendix 11.1 to its end in all four editions. The columns were checked by date as well as by entity: no "
+    "edition carries a column dated after its own reporting period.\n\n"
+    "CURRENCY: this sheet is in CANADIAN DOLLARS (CAD millions), as TDBEL publishes it, and is not converted. "
+    "The single-metric sheets in this workbook are on the same CAD MM basis.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="TD Bank Europe Limited — KM1 Key Metrics",
+    subtitle="TDBEL's own 'Table 21: Key Metrics' (Appendix 11.1 of each year's Pillar 3 Disclosure) - the UK "
+             "KM1 template, which TDBEL prints unnumbered and never labels 'KM1'. Solo basis, amounts in CAD "
+             "millions, ratios as printed. FY2021 is blank because that edition's link on TD's own page is a "
+             "dead soft-404 - see the source note; it is an access gap, not a non-disclosure.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=80,
+    source_height=320,
+)
+
 metric("CET1 Capital", "CAD MM", [("Common Equity Tier 1 (CET1) capital", CET1)], TRANSITION_NOTE)
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 ratio", CET1_RATIO)], TRANSITION_NOTE)
 metric("Tier 1 Capital", "CAD MM", [("Tier 1 capital", CET1)], "TDBEL reports no AT1 capital; Tier 1 equals CET1 in each disclosed year.\n" + TRANSITION_NOTE)

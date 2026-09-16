@@ -1,0 +1,5800 @@
+Monzo Bank Limited
+
+Annual Report and Group
+Financial Statements
+
+28 February 2019
+
+|
+
+2019
+
+mu
+
+/01
+
+What's in this report?
+
+Strategic report
+
+Who we are and why we're here
+
+Our history and highlights
+
+Our team
+
+Chair’s review
+
+Chief Executive's review
+
+Business model and strategy
+
+A review of our performance
+
+Our approach to people
+
+Our community
+
+Governance at Monzo
+
+Strong risk management is at the heart of everything we do
+Group Directors’ report
+Statement of Directors’ responsibilities
+Independent auditors’ report
+Statement of comprehensive income
+Statement of financial position
+Statement of changes in equity
+Statement of cash flows
+
+Notes to the financial statements
+
+on FF Bb &
+
+10
+
+13
+17
+22
+23
+26
+31
+35
+37
+47
+49
+51
+53
+55
+Strategic
+Report
+
+Who we are and
+why we’re here
+
+We're Monzo, a bank that lives on your phone. For
+too long, banking has been harder than it needs to
+be. By solving your problems, treating you fairly and
+being totally transparent, we believe we can make
+banking better.
+
+Traditional banking isn’t built for the way we use
+money as part of our everyday lives with friends and
+family. So we've made it our mission to make money
+work for everyone. Managing your money should be
+effortless, not complicated or stressful.
+
+We want to make sure you get the most out of
+
+your money, whether that’s switching to a better
+energy deal, earning cashback or rewards, or finding
+affordable ways to borrow. And with the help of our
+amazing community who suggest features, give
+feedback and help us test the app, we can build the
+kind of bank you want to use, together.
+
+Already, more than two million people have our hot
+coral cards to manage their money and spend around
+the world. Our goal is to bring Monzo to one billion
+people and beyond. But it’s not just about how many
+people have Monzo, it's also about who's using it.
+Almost a quarter of the world’s population don’t have
+access to vital banking services. We want to help the
+financially excluded access bank accounts, as well as
+supporting vulnerable customers and developing an
+empathetic approach to debt management. Through
+clear communications and educational content we'll
+do our part to improve financial literacy and help
+everyone better understand their money.
+
+Monzo makes money
+
+work for everyone
+
+Only those quantitative measures highlighted in the Strategic Report that are directly referable to the audited
+primary financial statements or the notes to those financial statements (see pages 47 to 92) or explicitly annotated as
+
+“audited” have been audited. All other measures noted are unaudited.
+History
+
+2015
+
+Our CEO Tom sets out our mission in a blog post on
+01 June 2015:
+
+“Mondo is a new challenger bank in the UK,
+focused on making your financial life easier, rather
+than trying to catch you out with penalty fees and
+charges. We’re building a current account that
+lives on your smartphone and gives you control of
+your money”
+
+We started out with a prepaid account and around
+5,000 Alpha cards.
+
+2017
+
+The big one: we got our full UK banking license.
+
+Another crowdfund, aiming for £2.5 million... In the
+end, 41,267 people pledged more than £12 million.
+
+We started rolling out our very first full current
+accounts to early testers.
+
+2019
+
+We launched a small test of business accounts to
+100 sole traders and limited companies.
+
+Two million people have Monzo to spend and
+manage their money!
+
+We launched our first TV ads.
+
+We announced our latest investment round of
+£113 million.
+
+We announced our plans to launch a prepaid
+card product in the US, in collaboration with a
+partner bank.
+
+2016
+
+We released the Mondo public beta app.
+
+We ran the fastest crowdfund in history: people
+pledged £1 million in just 96 seconds.
+
+We changed our name! Around 10,000 Mondo
+customers suggested new names, with the only
+criteria being it needed to start with M... and we
+became Monzo.
+
+2018
+
+We finished upgrading everyone from prepaid
+to full UK current accounts, and 94% of active
+accounts moved.
+
+We announced a new round of investment of
+£85 million.
+
+Crowdfunding time again ~ we raised £20 million
+in record time.
+1.01m new customers
+in the year
+
+ma @
+
+Feb 2018 Feb 2019
+590k 7 1.6m
+
+413 new employees
+in the year across
+
+3 offices
+Oo” it
+Feb 2018 Feb 2019
+300 people 713 people
+
+Customer deposits
+increased by
+£390.5m in the year
+
+Feb 2018 Feb 2019
+£71.3m £461.8m
+
+859,394 conversations
+resolved, from
+466,078 unique users
+
+We saw our NPS
+score increase
+
+Feb 2018 Feb 2019
+
+NPS +70 A NPS +80
+Our team
+
+Board of Directors
+
+Gary Hoffman Tim Brooke
+Chair Senior Independent Director
+
+Amy Kirk Keith Woollard
+
+Independent Non-Executive Independent Non-Executive
+Director Director
+
+Susan Adams
+Company Secretary
+
+Miles Grimshaw
+Investor Non-Executive Director
+
+Tom Blomfield
+Chief Executive Officer —
+Executive Director
+
+Eileen Burbidge
+Investor Non-Executive Director
+
+Alwyn Jones
+Chief Financial Officer —
+Executive Director
+Our team
+
+Executive Management Team
+
+Tom Blomfield Alwyn Jones Paul Rippon
+Chief Executive Officer - Chief Financial Officer — Deputy Chief Executive Officer
+Executive Director Executive Director
+
+Meri Williams Tim Traiior
+Chief Technology Officer Chief Credit Officer
+
+Libby Townsend Dean Nash Tom Foster-Carter Jonas Templestein
+Chief People Officer Chief Legal Officer Chief Operating Officer Co-founder
+
+We are currently recruiting for the permanent Chief Risk Officer position
+
+Chair's review
+
+Gary Hoffman
+Chair
+
+I’m really pleased to have joined Monzo as Chair. I've spent more than 35
+years in banking and payments, and led lots of innovation — but it feels like
+the world has been waiting for Monzo. We’re here to make money work
+for everyone, and that fierce focus on our mission means a reinvention of
+what banking has been in the past.
+
+Our social conscience and community work is absolutely essential to what
+we do, and a big part of what made working here such an unmissable
+opportunity. Our compassionate approach to people experiencing financial
+difficulties, the “No Barriers to Banking” campaign and our work with The
+Big Issue are just a few examples of that.
+
+We're early in our development but have huge support from our customers
+and investors. And our ambition is for our governance to reflect what we
+want to be rather than what we are ~ this is a work in progress but we're
+getting there without losing sight of what makes Monzo, Monzo.
+
+I'd like to thank my predecessors Denise Kingsmill, the original Monzo
+Chair who stepped down during 2018, and our Senior Independent
+Director, Tim Brooke, who agreed to be Chair in the interim, Amy Kirk also
+deserves thanks for standing as Senior Independent Director. Monzo
+wouldn't be where it is now without them.
+
+Special thanks are also due to Gary Dolman, Co-founder and former
+CFO, who retired at the end of the financial year, We wish Gary well in
+his retirement.
+
+| also welcome Alwyn Jones, our new CFO, to the Board. In the coming
+year, |’ll be looking at the mix of skills and experience needed for the
+Monzo Board of the future, bearing in mind the need for diversity and our
+commitment to the Women in Finance Charter.
+
+We have a great management team in Tom, Alwyn and their Executive
+Committee (ExCo) colleagues and | look forward to working with them.
+We're building a business that will be global, safe and secure. A business
+that will make money work for everygne,
+
+or
+
+Gary Hoffman
+Chair, Board of Directors
+26 June 2019
+
+Chief Executive's review
+
+Tom Blomfield
+Chief Executive Officer -
+Executive Director
+
+Remarking on how much has changed seems to have become something
+of a habit in Monzo annual reports. In that sense, the last 12 months have
+been no different — the pace of change remains staggering.
+
+We've just passed 2 million total users, and we're adding more than
+200,000 new accounts every month, helped by a successful TV ad
+campaign. A year ago, we added 60,000 a month. Net Promoter Score
+remains steadily at about +80, and we've won multiple awards for our
+customer service.
+
+We've grown revenue considerably: we've just crossed £40m of annual
+tun-rate revenue (based on May 2019 revenue), but there’s still plenty
+of work to do to get to profitability, Around 30% of active users deposit
+at least £1,000 per month (our definition of ‘salaried’), up from 13% a
+year ago.
+
+Per-user contribution margin (revenue minus variable costs including
+expected credit losses) is a key metric that we’ve worked to improve over
+the last couple of years. It tells you whether each active customer using
+Monzo generates more incremental revenue than they create in cost.
+Annual per-customer contribution margin is now +£4 as at May 2019, up
+from -£15 @ year ago, and -£65 in 2017. The longer customers are with us,
+the more profitable they become, and salaried users contribute +£30 —
+mainly driven by the money we make when people use their Monzo cards.
+
+Hitting short-term financial metrics is important, but value is created over
+the long-term. We're gaining customers faster than any other [IK hank,
+
+at a cost that’s an order of magnitude cheaper. Our total cost to run an
+account is also an order of magnitude cheaper than high-street banks.
+Engagement, retention and customer service remain industry-leading. We
+still need to make more revenue to become profitable as a business, but
+we're showing good progress on that front.
+
+I'm glad to say that we have a Board of Directors and a set of shareholders
+who are aligned with that long-term approach, We've added more than
+£200m of additional capital in the last 12 months from world-class
+investors, along with 36,000 customer crowd investors. That money will go
+towards sustaining our growth, building new revenue-generating features
+and helping us expand outside of the UK ~ our next stop is the United
+States, where we're launching with a partner bank similar to haw we
+started in the UK,
+
+AS we grow, we need to make sure we have strong governance, risk
+management and compliance in place. As a regulated bank, it’s crucial
+that we're in control of the risks we face, otherwise we risk losing the trust
+of our customers. This is an objective we don’t take lightly. In the last 12
+months, we’ve added 4 new C-level executives and a new Chair of our
+Board. Our control functions (Risk, Compliance, Financial Crime, Finance
+and Legal) will grow to more than 200 people by the end of the year.
+Our vision for Monzo is the same as the first day we started: we’re trying
+to build a hub for all of your money. The one place that lets you see and
+control everything financial in your life. We can already see this starting to
+develop with our savings marketplace, offering interest rates well above
+those available at the high street banks. We expect to see those rates
+continue to improve for customers as more partners come on board, and
+we're aiming to add simple investing products and pension management
+over time, giving customers a view of their assets too.
+
+On the borrowing side, we're offering Monzo customers overdrafts and
+loans, and we're trialling mortgage switching through a broker. In future,
+we'd like to do more to demystify credit scores, and let people keep track
+of all of their borrowing in Monzo.
+
+Finally, we’re working to simplify insurance and utility bills, helping
+customers get a great deal without the hassle of switching every 12
+months. These products won't all be on our balance sheet, but they will
+be accessible through the Monzo app. In future, Monzo should be the first
+place a customer goes with any questions about their money.
+
+At Monzo, our mission is to make money work for everyone. Key to that
+mission is long-term sustainability. That means generating sustainable
+profits, but also playing our part in society. It means contributing where we
+can, It means building the kind of bank we'd be proud to call our own, This
+year we launched our first big community campaign, focused on removing
+barriers to banking, and we also partnered with The Big Issue to let sellers
+make more out of each sale,
+
+| can’t wait to see what we achieve in the rest of 2019 and beyond.
+
+LAL
+
+Tom Blomfield
+Chief Executive Officer
+25 June 2019
+Business model
+and strategy
+
+Here’s where we're focused heading into FY2020.
+
+Good governance has to be the backbone of Monzo
+
+Our mission is to make money work for everyone, and
+we recognise that to achieve this we must invest in
+strong governance that will let us sustainably grow
+into the future. We've evolved our senior management
+team to bring in experienced leaders who can lead
+Monzo to growth, whilst also focusing on developing
+and embedding our risk assessment and controls.
+
+Cross-functional teams build better things
+
+We believe that getting the right people with the right
+mix of skills together on a project helps us create
+better features for our customers. A typical Monzo
+product team will feature engineers, designers,
+
+data analysts, product marketers, writers and user
+researchers working together to solve problems.
+
+Organic and paid growth work together
+
+We've enjoyed sustained organic user growth to date
+which has shown the strength of our brand, making up
+the majority of new customers in FY2019. We expect
+this to continue, but we’re also increasing focus
+
+on paid marketing to open us up to new potential
+customers as only around 43% of the UK market are
+aware of Monzo.
+
+Also, a growing number of people in the UK have
+
+more than one bank account, meaning people are
+increasingly open to banking with Manzo alangside
+other banks. We've planned carefully internally to make
+sure we’re effective at welcoming, onboarding and
+managing the inflow of new customers.
+
+We launch fast, get feedback, and improve
+
+We believe the most effective way to create something
+successful is to launch it, get feedback and iterate fast.
+This is how we started with our prepaid card, getting
+lots of knowledge and feedback, which we've applied
+to our current account. This lets us quickly react where
+we need to make improvements and not over-invest in
+something that doesn’t work from either a customer,
+governance or regulatory perspective.
+
+We’re focusing on growing revenue
+
+Fair, flexible lending — We believe our approach to
+
+lending is fair and transparent. We let customers
+
+Stay in control and offer support to those in financial
+
+difficulty, Our plan is to offer mainstream lending
+
+products like overdrafts and loans with a mid-market
+
+pricing strategy, and without penalty charges where ;
+they're not necessary. We want to compete on
+
+customer experience and ease of use, rather than by
+
+being the cheapest provider.
+
+The best deals in one place - We also want to be the
+centre of our customers’ financial lives. This will be
+
+a key differentiator for Monzo and a primary example
+of how we can help money work for everyone. We
+
+want to bring people offers, products and services
+through Monzo that mean managing their money and
+making the most of it is a breeze. That’s kicked off with
+energy switching and savings, and there's plenty more
+to came.
+A review of our performance
+
+Key Performance Indicators
+
+Some of the key metrics our Board and senior
+management use to measure our performance
+against our strategy are shown below, 1,600,000
+
+Feb 2018 590,000
+
+Mi Feb 2019
+
+Number of customers
++1,010,000 change
+
+£461.8m £19.2m 196%
+126%
+£71.3m
+£0.2m
+Customer deposits Lending CET 1 Ratio ™
++£390.5m change +£19.0m change -70 change
+£2 +80
+“#30 a +70
+Contribution margin Net Promoter Score (NPS)
++£32 change +10 change
+
+“ The ratio of our core equity capital (share capital and share premium less our losses to date) to our risk-weighted
+assets (weighted according to their Credit, Market and Operational risk).
+Our business review:
+our non-financial performance
+
+More and more customers are enjoying Monzo
+
+In September 2018 we welcomed our 1 millionth
+customer. By the end of our financial year we’d reached
+1.6 million customers, and now more than 2 million
+people have Monzo to spend and manage their money.
+
+We've launched lots of new features and products
+
+In 2017 we launched current accounts and became
+
+a fully fledged bank, with 94% of our customers
+transferring from the prepaid card when the program
+ended in April 2018, Soon after, we released ‘The Big
+List,’ which showed all of the basic but essential
+features people told us they needed to make Monzo
+their everyday account, We've worked our way through
+this list and added plenty more features alongside,
+
+it's now easier for people to manage their money
+with joint accounts, quick bill splitting, seeing their
+committed spending (upcoming Direct Debits and
+standing orders), and paying or requesting money ina
+few taps with ‘Nearby Friends.’
+
+We've also teamed up with other companies to help
+our customers manage their money in the best way for
+them, Our customers can now:
+
++ Deposit cash at any PayPoint location across the UK
+
+* Ear interest on their savings pots with Investec
+(and we've recently launched ISAs and savings pots
+with Oaknorth and Shawbrook)
+
++ Transfer money overseas with TransferWise
++ Spend using Google Pay and Apple Pay
+* See digital receipts and get rewards with Flux
+
++ Automate their finances with IFTTT (to automate
+things like saving money and filing expenses)
+Switch energy providers to get a better and greener
+deal (we’ve teamed up with Octopus Energy and
+OVO, but we want to add more options in the future)
+
++ Add extra features like travel insurance with Monzo
+Plus
+
+We’re helping customers borrow fairly
+
+We're bringing transparency and clarity to loans and
+overdrafts, addressing the problems people typically
+face when they borrow (hidden fees, inflexible
+payments and complicated paperwork, to name a few).
+We've started small with lower value loans, and we’re
+gradually rolling out more options to more customers
+with plenty of feedback along the way.
+
+We're testing business banking
+
+We know that the needs of small or medium sized
+businesses are very different, but traditionally banks
+have put them all in one category. We've started
+testing business banking with a small number of
+businesses and we want to offer features that actually
+help them to achieve their goals.
+
+We've hired more than 400 people to keep
+building Monzo
+
+Our team of Monzonauts are based in offices in
+London, Cardiff and Las Vegas, And we have a growing
+number of people working remotely around the world.
+
+Our customer service is award winning
+
+Our growing team gives fast, friendly suppart which
+has won a number of awards for customer service, and :
+maintains a Net Promoter Score of around +80. '
+
+Community is still at the heart of everything we do
+
+We continue to engage with our customers regularly
+through our blog, community forum and monthly open
+office events. And we were blown away by the support
+we received during our latest crowdfunding round.
+Our work is being recognised
+
+We've won a bunch of awards which reflect the work
+we've been doing over the past year.
+
+we
+
+~
+
+“e
+
+ae
+
+ae
+
+Money Saving Expert 2019
+
+number 1 in the customer services poll
+
+British Banking Awards 2019
+winner of Best Banking App
+
+LinkedIn Top Startups 2018
+
+number 1 most sought-after startup in the UK
+
+KPMG Fintech100 2018
+in the ‘Top 50’ most innovative Fintech
+companies globally
+
+Tech Nation Future Fifty 2019
+one of the UK’s most successful! digital
+businesses
+
+Our financial review
+
+Profit and loss - our income and expenses for the year
+
+The loss for the year after tax was £47.2m
+
+The loss for the year after taxation was £47.2m
+(compared to a loss of £30.5m in 2018). This reflects
+the significant investment we've put into building more
+products and features that:
+
+1. Scale to meet the needs of our customers
+2. Generate revenue for Monzo
+
+Our contribution margin is positive
+
+From September 2017 to February 2018 we cut the cost
+to run each account from £65 to £30. In November last
+year, we reached a positive contribution margin and by
+year end we hit plus £2.
+
+This means that on average every active customer who
+uses Monzo makes us more revenue than the variable
+costs for us to run their account. We'll continue
+growing this as we release more new products, and
+increase the benefits of scale on our costs, in order to
+achieve overall profitability.
+
+We've grown our interest income from
+
+deposits and lending
+
+We’ve grown our net interest income to £4.9m, up from
+£0.2m in 2018. This is because we've increased the
+amount of money we hold that’s earning interest at
+central banks, and increased the number of customers
+using overdrafts. We've also earned interest ona
+
+small number of loans to customers, which we began
+offering in late 2018; this is set to grow as we expand
+our loan offering to a larger set of customers.
+Customers are spending more with Monzo
+
+Our net fee and commission income grew to £6.6m
+(from £1.4m in 2018) due to more ATM fees earnt
+abroad and interchange income on point-of-sale
+transactions. This reflects the huge increase in
+spending through Monzo, with £4bn spent by
+customers in the last year.
+
+Our partnership income also grew from customers
+sending money abroad and using savings pots. We're
+busy testing more partnerships to help customers
+take control of their finances and earn more revenue
+for Monzo.
+
+We’ve invested in hiring great people
+
+Our people costs rose to £25.7m (from £9.2m in 2018)
+because we’ve invested heavily in hiring people to
+build the bank of the future. At the end of the year we
+had 713 people working at Monzo, up from 300 in 2018.
+And an average of 437 people for the year, up from 183
+people in 2018.
+
+We're using our own technology to be more efficient
+with operating expenses
+
+We've increased our operating costs slightly from
+£25.4m to £33.4m, which reflects the cost savings
+from running the current account on our own
+technology, compared with the prepaid scheme.
+
+The costs of accommodating our staff have increased,
+but the cost per person decreases as we fill our current
+office space and people increasingly take advantage of
+distributed working. We’ve increased marketing spend
+in the year from offering existing customers incentives
+to refer their friends. The rate of growth in our number
+of customers will increase as a result.
+
+Balance sheet ~ our assets and
+liabilities at the end of the year
+
+More people are using Monzo as their main account so
+our customer deposits have increased from £71.3m in
+2018 to £461.8m in 2019.
+
+Our total assets have grown from £139.8m to £614.4m.
+This is primarily made up of loans and advances to
+customers and cash.
+
+We're lending more to customers
+
+We grew our lending book from £0.2m in 2018 to
+£19.2m in 2019. This was mostly due to overdrafts, but
+we also offered loans to a small number of customers,
+
+We set our credit risk appetite at Board level and
+monitor our exposure on an ongoing basis. This
+involves calculating and recording the expected credit
+loss against our customer overdrafts and deposits. Our
+total Expected Credit Loss on lending for 2019 was
+£3.1m, reflecting the growth in our lending book.
+
+We’ve taken a prudent approach to liquidity
+
+Our portfolio of High Quality Liquid Assets (those that
+can be quickly and easily converted to cash) is held on
+overnight deposit at central banks and has grown to
+£510.3m, from £82.5m in 2018. We'll keep using this
+as we expand the availability of loans and advances to
+customers in the year ahead.
+
+Capital - our shareholders’ interest in the business
+
+We raised equity in the year
+
+During the year, we raised £105m of equity capital,
+including £20m in the largest crowdfunding round
+ever for a tech company. After year end we also raised
+another £113m of equity capital. All this money will go
+towards building the bank and launching new features
+for our customers.
+
+Capital ratios
+
+Our Common Equity Tier 1 (CET1) ratio, the ratio of our
+core equity capital (share capital and share premium
+less our losses to date) to our risk-weighted assets
+(weighted according to their Credit, Market and
+Operational risk), was 126%. This is in excess of our
+current minimum capital requirements.
+
+Our approach to people
+
+At Monzo we create an environment where everyone
+feels supported to do the best work of their lives
+and carry out our mission of making money work
+
+for everyone.
+
+713
+
+Headcount
+Feb 2019
+
+Growth of +413 people in
+the year from March 2018
+
+|
+
+450/713
+
+Monzonauts are
+office based
+
+Split across 3 sites —
+London, Cardiff
+and Vegas
+
+0.97%
+
+Voluntary
+leaver’s rate
+
+263/713
+
+Monzonauts are
+distributed
+
+We are in places around
+the world including:
+Spain, France, Canada
+
+73 ENPS
+
+Engagement score
+
+We saw a 78% aggregated
+participant rate - Feb 2019
+Diversity and inclusion
+
+Gender identity
+
+Dec 2016 Dec 2017 Dec 2018
+
+@ Women 29.80% @ Women 33.20% @ Women 40%
+@ Non-binary+ 4.30% ® Non-binary+ 7.60% @ Non-binary+ 2.86%
+Men 66% Men 65.20% Men 57.14%
+Ethnicity
+Dec 2016 Dec 2017 Dec 2018
+
+@ Asian 6.30% @ Asian7.70% @ Asian 5.10%
+@ Black 2.10% @ Black 2.70% @ Black 3.58%
+@ Mixed 2.10% *® Mixed 3.80% % Mixed 7.76%
+@ white 39.50% Other 1.10% @ Not stated 0.20%
+@ White 34.70% Other 2.45%
+@ White 80.61%
+Sexual orientation
+Dec 2017 Dec 2018
+@ LGBGA 27%, @ LGBOA 20.60%
+
+@ Straight 73% @ Straight 79.40%
+
+Our values
+
+We're growing at a rapid pace. In the last year alone we
+grew by 413 people ~ 58% of the company. As we grow,
+we want to make sure our values stay at the forefront
+of our collective mind and guide every decision
+
+we make,
+
+These are our values as they stand now. As with
+everything we do, we'll iterate on these over time to
+make sure they're always fit for purpose, and represent
+what we stand for as a business and as a community.
+
+Default to transparency
+
+Defaulting to transparency means being as open
+
+as possible. We make things public unless there's
+
+a strong argument not to. This motivates our team
+
+to move quickly and be honest, even when it's
+uncomfortable. We've created a culture which
+welcomes regular, open feedback and encourages
+collaboration across teams and projects. Our feedback
+platform means Monzonauts can give feedback to
+anyone in the company. And we encourage people to
+make this public as often as they can. As a community,
+this requires trust and integrity.
+
+Our weekly all-hands meeting is streamed live and
+recorded to make sure the whole company can get
+involved. it’s a chance for teams to share what they’re
+working on and is followed by a Q&A from our CEO
+Tom, or other senior staff members. Monzonauts ask
+questions and start discussions directly, no matter how
+challenging they may be.
+
+Think big, start small, own it
+
+Monzo is a fast-paced environment. We nurture
+ambitious ideas to help solve our customers’ problems
+and empower people closest to the problems to find
+the best solutions. But we understand that ambition
+must be matched with a robust governance framework.
+This means that we support big ideas and we iterate in
+small steps to minimise risk for customers. Regardless
+of the scale of the project, we tell Monzonauts to
+
+own it.
+
+This approach means we can move quickly but requires
+our team to adapt and develop. We're committed to
+supporting development ~ every Monzonaut gets an
+annual training budget to contribute towards courses,
+conferences and books that help them learn and grow
+in their role,
+Be hard on problems, not people
+
+We know that we have an ambitious mission. To make
+money work for everyone, we need to thrive in a
+competitive business environment while maintaining
+our growth.
+
+We want to keep our intense approach to problem-
+solving as we continue to expand, and it’s crucial
+
+that we view all problems as tractable problems that
+can be solved. It’s also crucial that we maintain a
+collaborative environment where people work on tricky
+problems together.
+
+We try to look for the systemic reasons when things
+have gone wrong, rather than blaming any individuals
+involved. When people make mistakes, we focus on
+fixing processes that may lead to human error. And
+wherever possible, we automate repetitive processes
+to keep the risk of human error to a minimum.
+
+Make a difference
+
+We want to have a meaningful impact on the lives
+
+of our customers and our colleagues. We do this by
+encouraging our team to think outside of the box when
+creating product features and when working with
+each other.
+
+This has led to some amazing team efforts which have
+produced things like bill splitting, and a way to combat
+problem gambling through our gambling block feature.
+It’s great to see other financial services companies
+following our lead and introducing similar features to
+help more people.
+
+The way in which teams across different Collectives
+(what we call our different business areas) work
+collaboratively together makes sure that we're all truly
+focused on making a difference in the best way that
+we can.
+
+Welcome:
+
+!
+Groeso" Bonjour:
+
+Help everyone belong
+
+Everyone is welcome at Monzo. And we want to
+make sure that everyone feels this way throughout
+their time here. One way we do this is by striving
+
+for a fair and unbiased hiring process. Our aim is to
+get the best person for a role. We advertise through
+diverse job boards to make sure our jobs are seen by
+diverse candidates and have also started to engage
+with partners that help people with disabilities enter
+the workforce.
+
+We also make sure that our interview processes are
+balanced by holding briefings beforehand, and debriefs
+at the end of the interview process, to make sure we're
+treating our candidates fairly and without bias. Plus, we
+make sure our panels are as diverse as possible, and
+made up of people who are relevant to the role.
+
+We’ve given training on combating internal biases and
+racism which we will continue. And we're committed
+to flexible working and encourage working from
+
+home, where possible, to accommodate important
+commitments outside of work. Our recent blogs on
+diversity and inclusion and the gender pay gap, as well
+as our 2018 Women in Finance Charter submission,
+give more insight into the steps we're taking to make
+sure that Monzo is an inclusive place to work. We know
+we have lots more to do in this space, and we welcome
+Monzonaut and community feedback.
+
+We take responsibility to support each other, and a
+
+big part of this involves creating a positive mental
+health culture, We’ve introduced a number of internal
+and external tools that Monzonauts have access to, to
+help them better cope with any form of stress. We've
+worked collaboratively with the apps Headspace and
+Spill. We also offer yoga and meditation sessions, as
+well as training some of our team to become mental
+health first aiders who can signpost others to the
+
+right places for further support. We feel that our focus
+on wellbeing leads us in the right direction towards
+Monzo being the most inclusive and supportive
+working environment. If you want to read about how we
+da this in more detail, please have a look at our blog on
+“How we manage mental health”.
+
+Social development is also important to us. Forming
+real connections is invaluable in the workplace. We
+foster these connections by encouraging a culture of
+team and campany wide socials, 1:1s (which can be
+about work or just getting to know each other), and
+Monzo-funded sports and activities.
+
+We're committed to building a community that is
+dedicated to the mission of making money work for
+everyone, and who in return get to benefit from an
+amazing place to work.
+Our community
+
+The last year has been a really exciting one for the
+Monzo community. We hosted and supported more
+than 40 events in our London office and around the
+country. And we were thrilled to see the community
+response to crowdfunding, raising £20 million from
+36,000 people in just over two days.
+
+This year we’ve been engaging with our community
+
+in more ways than ever. The Making Monzo Twitter
+account we launched last May ~ to give a behind the
+scenes look at things we're working on — has over
+16,600 followers. We’ve also explored new community
+opportunities online, with close to 7,000 people liking
+our Monzo Money Tips Facebook page, and a growing
+community of just under 3,400 savers in our Monzo
+Saving Squad Facebook group.
+
+We’ve seen the power of our community in action
+
+too. Early this year we launched our #YearlnMonzo
+campaign — to let Monzo customers see and share a
+visual breakdown of their spending from the last 12
+months. The hashtag #YearlnMonzo trended on Twitter
+and around 278,000 people took a look at where and
+how much they'd spent. And it wasn’t just customers
+who got excited about the campaign. The Times,
+HuffPost and This is Money covered the campaign, and
+even non-Monzo customers said they’d be signing up
+to join in the fun next year.
+
+16,600
+followers
+
+Making Monzo
+Twitter
+
+7,000
+people
+
+liking Monzo
+Money Tips Facebook
+
+Our most important piece of work to date might be
+launching our #NoBarriersToBanking campaign. It’s a
+long-term financial inclusion campaign that aims to
+help make financial services accessible to everyone.
+How will we do it? We’ve built an online tool to help the
+financially excluded access genuinely helpful support
+and advice. We've already started running a series
+
+of events around the country too. The events bring
+together organisations working in financial inclusion
+and help them find and share solutions. We'll also
+publish resources on our blog about things like how to
+write accessible terms and conditions and much more.
+
+Our forum is still a key part of our community, with
+customers giving us great feedback on new features
+through Monzo Labs. This year, we’ve launched Joint
+Accounts, bill splitting and Shared Tabs all with the
+help and feedback we've had from the forum.
+
+3,400
+followers
+
+in Monzo Saving
+Squad Facebook
+
+Governance at Monzo
+
+Our Board is in charge of our long term sustainable
+success
+
+Our board is here to lead Monzo effectively and
+
+with an entrepreneurial spirit. The Board has overall
+responsibility for good risk management and internal
+control systems.
+
+Our Board sets our standards and strategy and keeps
+an eye on our culture, values, brand and reputation.
+It makes sure that we understand and meet our
+obligations to customers, Monzonauts, shareholders
+and all of our other stakeholders.
+
+The Board delegates day-to-day management of the
+business to Tom Blomfield, who has an Executive
+Committee, Executive Risk Committee and Asset and
+Liability Committee to help him.
+
+Our Board is composed of 8 directors
+
+Four of our directors (Gary Hoffman, Tim Brooke, Amy
+Kirk and Keith Wooliard) qualify as independent non-
+executives under the Corporate Governance Code 2018
+(“the Code”), We also have two investor non-executive
+directors, Eileen Burbidge and Miles Grimshaw, plus
+Tom Blomfield, our CEO and Alwyn Jones, our CFO,
+
+We’re adding experience to our Board
+
+In the course of this year we appointed a new Chair,
+Gary Hoffman, who brings 4 wealth of board-level
+experience in banking and financial services, We also
+appointed Alwyn Jones as our new CFO, who again
+offers the Board deep experience in banking, and
+Susan Adams as our first company secretary. In July
+2019, we'll be joined by Phillip Riese as independent
+non-executive director. Phillip is a seasoned non-
+executive who brings a wealth of board experience in
+banking and fintech.
+
+As we mentioned earlier, we're committed to having at
+least 40% female representation in both our Executive
+Committee and our Board by 2020, as part of our
+pledge to the Women in Finance Charter and will be
+looking to improve diversity at Board level in 2019.
+
+What we’ve done in the last year
+
+Our Board meets every six weeks or so to review
+performance, strategy, risk and governance and
+
+to oversee the work of the board committees. For
+example, this year our Board appointed a new Chair,
+took important decisions such as launching the 2018
+crowdfunding to allow our customers the opportunity
+to become investors and the 2018 Series E funding
+round. From a product perspective, the Board approved
+the scaling of overdrafts to our customers and the
+launch of Savings Pots. The Board also considered
+potential international expansion, including to the US
+and decided to open a customer service base in the
+US to give our customers great service around the
+clock. The Board also looks at important risks, such as
+reviewing the impact of Brexit on our business,
+
+This year, the Board also did an internal evaluation of
+the Board and committees, which they'll build on to
+improve effectiveness in areas such as Board diversity
+and the interaction between board and committees.
+
+Outside of board and committee meetings, the Board
+keeps in touch with our workforce by attending and
+speaking at all-hands meetings as well as ad hoc
+meetings across teams. In the course of this year
+
+we aim to develop a formal warkforce engagement
+mechanism in compliance with the Code, to make sure
+that people have a formal route for getting their voices
+heard at Board level.
+
+We're continuing to develop our vision for governance
+
+We measure ourselves against the the Code. It’s
+designed for listed companies and this means that not
+all of the provisions always work for private companies
+at our stage and pace of growth. Our aim is very much
+to comply where we can - and where we can't, to be
+able to explain why.
+Monzo Bank Ltd
+Board of Directors
+
+Board Risk Audit Nomination Remuneration
+Committee Committee and Governance Committee
+Committee
+Executive
+Committee*
+. . Asset and
+Executive Risk Liability
+Committee Committee
+(ERC) (ALCO)*
+
+* Day to day running of the business is delegated to the CEO supported by an Executive
+Committee (ExCo). Reporting into the ExCo we have an Assets and Liability Committee
+(ALCO) for balance sheet matters and a Executive Risk Committee (ERC) for risk issues.
+
+Our board delegates authority to
+four committees
+
+1.
+
+Our Nomination & Governance committee is run by
+our Chair, Gary Hoffman
+
+This committee supports the Board by:
+
+leading the process for board appointments
+
+dealing with succession planning and making
+sure we have a diverse pipeline for board and
+senior management positions
+
+* monitoring Monzo's governance arrangements
+and making best practice recommendations to
+the board
+
+* approving appointments to the Board of Directors
+of subsidiaries and other companies within the
+Monzo group
+
+* making sure we comply with the Senior
+Managers’ Regime
+
+Last year this committee focused on finding a new
+
+chair. We'll continue focusing on board composition
+
+and skills making sure we have a diverse Board and
+
+senior management pipeline.
+
+Our Audit Committee is chaired by Tim Brooke
+
+This committee makes sure our internal and external
+audit functions, financial reporting and controls all
+stay effective and independent from the business.
+
+During the last year this committee reviewed the
+results of various internal audits, reviewed the 2018
+financial statements and agreed the internal audit
+agenda for the calendar year 2019.
+
+Our Board Risk Committee is chaired by
+
+Keith Woollard
+
+The committee does the “heavy lifting” for the
+board on risk issues and is responsible for:
+
++ giving oversight and advice to maintain a
+supportive risk culture
+
++ reviewing management's recommendations on
+managing and mitigating current and future risks
+overseeing management’s implementation of our
+risk strategy
+
+In the last year the committee oversaw a range
+
+of key risk matters, such as the review and
+enhancement of our risk management framework.
+As part of this, the committee reviewed and
+recommended for Board approval a revised risk
+appetite and policies supporting Monzo’s risk
+Management, taking into account the rapid growth
+and complexity of its business. An important part
+of its remit was the review of the Internal Capital
+Adequacy Assessment Process (ICAAP) and
+Internal Liquidity Adequacy Assessment Process
+(ILAAP) and the Recovery and Resolution Plan. The
+committee also looks at “deep dives” into specific
+operational risk issues,
+
+Our Remuneration Committee is chaired by
+Amy Kirk
+
+This committee decides the overall compensation
+for the Chair of the Board, executive directors and
+senior management. It also sets the remuneration
+scheme and policies for everyone who works
+
+at Monzo.
+
+The committee make sures that rewards,
+incentives and working environment for everyone
+who works at Monzo are taken into account
+
+when deciding executive directors’ and senior
+management pay. They also make sure that Monzo:
+
+* complies with applicable laws, regulations and
+guidance
+
++ eliminates incentives for excessive risk-taking
+and encourages effective risk management
+
+* aligns employee incentives with Monzo’s long~
+term interests
+
+takes into account the risk management
+framework, including types of risks, liquidity
+and capital levels
+
+support the Board’s monitoring of how
+company policies and practices support culture
+and strategy
+
+This year the committee, for example, has
+reviewed the gender pay gap and set and
+benchmarked Chair and officer remuneration.
+It’s incredibly important for Monzo to make sure
+that all aspects of its business — including its
+remuneration framework — support Monzo’s
+culture and values.
+Strong risk management is at
+the heart of everything we do
+
+Our mission is to make money work for everyone, and
+as a regulated bank we recognise the importance of
+risk management as a key part of our governance. To
+sustainably grow into the future, we're investing in
+
+a strong risk management team to help us develop
+and embed our risk framework and controls across
+the business.
+
+We're exposed to a number of risks through our
+business mode! and strategy. Identifying, assessing,
+managing and reporting on those risks is central to
+the way we run our bank and makes sure we put our
+customers first. Good risk management supports:
+
++ The strategic direction of the company ~ we've
+developed a business model and strategy which
+gives a clear understanding of the risks we're
+exposed to
+
+* Good customer outcomes — we’re clear, fair
+and transparent in all aspects of our product
+development, we lend responsibly and keep
+customers’ money safe, and carry out due diligence
+on our suppliers and partners
+
++ The management of capital and liquidity positions
+we maintain enough quality and quantity of capital
+to meet regulatory and operational requirements.
+And we hold enough liquid assets to cover
+customers moving or withdrawing their money
+under normal and stressed conditions
+
++ High quality operations ~ we build and maintain a
+resilient operational environment to deliver good
+customer outcomes, great service levels and
+mitigate against unexpected losses
+
++ Lending responsibly ~ we carefully decide who we
+lend to, to make sure customers can afford it, whilst
+making money to make our business sustainable
+
++ Astrong culture ~ we're creating a culture where
+
+people are encouraged to be open and transparent
+about risk management
+
+Our risk management framework
+
+Our risk management framework is made up of six risk
+appetite statements, our policies and tools, a three
+lines of defence model and reporting and management
+information. We use this framework to carry out our risk
+management cycle.
+
+The Board sets six risk appetites against our principal
+risks to show how much risk we're willing to seek,
+accept or tolerate. These are:
+
++ Business model ~ the risk that our business fails or
+our model isn’t sustainable, This could happen if:
+
+~ we don't carry out our strategic plan
+- senior management makes the wrong decisions
+
+- we don't adapt to changing conditions (for
+example, when expanding into the US market)
+
++ Customer outcomes ~ the risk that our culture,
+behaviours or actions result in harm to our
+customers, for example developing a product that
+doesn’t meet their needs
+
++ Gredit - the risk that customers borrowing money
+won't repay or don't pay on time, causing financial
+losses
+
+* Operational ~ the risk that failures in people,
+processes or systems could lead to a service
+disruption or financial losses
+
++ Financial ~ any risks that can impact our financial
+profile. For example, the risk that we can’t meet our
+financial commitments or maintain an adequate
+capital position
+
++ Compliance — the risk of not meeting relevant
+legislation, rules and regulations which could cause
+customer harm, financial losses or reputational
+damage. There’s also a risk that regulatory changes
+could negatively affect our business model
+
+Our policies make sure we operate safely
+by staying within our risk appetite
+
+Our policies tell us which guardrails we can safely
+operate within by translating our risk appetites ina
+transparent way that everyone can understand. They
+set expectations for all Monzonauts and signpost
+where they can get more information if they need it.
+
+Each policy is owned by a member of the Executive
+team, who makes sure they’re implemented properly
+and remain effective. All our policies get approved by
+
+the Board.
+
+We’re organised into three lines of defence
+
+1st line of defence
+
+The business
+
+2nd line of defence
+Risk, Compliance and
+Regulatory Affairs
+
+3rd line of defence
+Internal Audit
+
+They own and
+manage risk
+
+Deliver strategy within
+tisk appetite
+
+Promote a strong risk culture
+and sustainable risk/return
+decision making
+
+Regularly test that we're
+following policies and
+procedures
+
+Perform regular risk
+self-assessments
+
+Report and escalate breaches
+of risk appetite using the
+relevant governance
+
+They oversee and challenge
+the business
+
+Make sure everyone at Monzo
+understands and follows the risk
+management framework
+
+Maintain risk appetite statements
+with input from senior
+management and Board approval
+
+Monitor risk appetites and
+communicate breaches to Exco
+and the Board
+
+Monitor compliance with
+regulation and communicate
+breaches to Exco and the Board
+
+Give oversight across all risk
+types and teams
+
+They validate and
+give assurance
+
+Test that the risk
+Management framework is
+being used properly
+
+Reassure management and the
+Board on the effectiveness of
+the risk management framework
+We use a variety of tools to manage our
+risk effectively
+
+We do risk assessments to identify and manage
+tisks for all new initiatives, as well as quarterly
+reviews of existing risks
+
+Our risk and controls register monitors the risks for
+each team and whether the controls to mitigate
+these risks are sufficient
+
+* The regulatory developments tracker shows the
+key areas of regulations and legislation which will
+impact Monzo over the next 12-24 months
+
+* We stress test the resilience of our balance sheet
+as part of the ILAAP and ICAAP processes, including
+a wind-down plan
+
+* tis our policy that all Monzonauts get risk and
+compliance training when they join Monzo and at
+least annually
+
+» We have corporate insurance to protect different
+parts of the business, like our offices
+
+Monitoring
+
+Regular review of our
+
+We use real-time data to monitor risks
+and make decisions
+We believe we make better decisions when we use
+
+metrics. So we have metrics against each of our risks
+which everyone can use to make informed decisions.
+
+We use three types of metrics to grow fast ina
+controlled way:
+
+1. The Board reviews our Key Risk Indicators regularly
+to make sure we stay within risk appetite
+
+2. ExCo reviews our Risk Indicators regularly to
+mitigate risks ag early as possible
+
+3. Every team has Key Performance Indicators to
+make sure they’re on track with targets
+
+The Treasury team also monitors early warning
+indicators daily to protect our balance sheet.
+
+Operational Risk Management Cycle
+
+Reporting
+
+Understanding the
+company's risk profile so
+management and the
+board can make decisions
+
+~~
+
+Identifying
+Doing risk assessments
+to identify and track
+new risks
+
+tisk metrics and the risk
+profile of the company to
+make sure we stay within
+
+tisk appetite
+
+YK
+
+Assessing
+Evaluating new
+and existing risks to
+decide on controls and
+management actions
+
+What we're doi The risk
+
+Operating in a highly regulated
+
+industry meeting relevant legislation,
+
+rules and regulations which could
+cause customer harm, financial
+losses or reputational damage.
+There’s also a risk that regulatory
+changes could negatively affect
+
+our business model
+
+Movements of cash because of
+lending, deposits and working
+with third parties, including
+payment schemes
+
+Liquidity Risk: the risk that
+Monzo doesn’t hold enough
+
+obligations
+
+Because we're a bank,
+we store a lot of personal data
+
+Data Privacy Risk: the risk
+that our customers’ data is
+misappropriated and / or
+fraudulently used
+
+On behalf of the Board
+
+AMAL
+
+Tom Blomfield
+Director
+25 June 2019
+
+Compliance Risk: the risk of not
+
+tiquid assets to meet our financial
+
+How we mitigate the risk
+
+All our policies make sure we're compliant with rules and
+tegulations and we have specific policies for financial crime,
+conflicts of interest, anti-bribery and corruption, market abuse
+and whistleblowing
+
+A compliance programme covering assurance testing, thematic
+and policy reviews which is regularly reviewed by the Board
+
+We carry out our ILAAP to review how we think about our
+liquidity requirements
+
+We actively monitor our intraday, daily and overnight liquidity
+pasitions
+
+We have liquidity policies and procedures, with much of the risk
+managed by the Treasury as Ist line
+
+We discuss liquidity issues regularly at aur ALGO
+
+We use secure development practices for our systems and
+follow a ‘defence in depth’ approach, with multiple layers of
+security controls
+
+We run regular penetration tests and simulated phishing
+attempts to check how effective our controls are and identify
+any weaknesses
+
+We've built detection capabilities to monitor and alert us about
+system attacks. We use incident management procedures and
+playbooks to respond to attacks
+
+We train all our staff on data protection
+Our current risks
+
+What we're doing
+
+The risk
+
+How we mitigate the risk
+
+Growing a bank in a competitive
+landscape
+
+Growing our fending book
+(overdrafts and unsecured loans)
+
+Offering current accounts,
+business banking accounts
+and developing a financial
+marketplace
+
+Running a resilient digital bank
+and financial marketplace
+
+Business Model Risk: the .
+business fails or our modelisn’t
+sustainable ,
+
+Credit Risk: customers borrowing
+Money won’t repay or don’t pay
+on time, causing financiallosses -
+
+Financial Crime Risk: the risk
+that Monzo is used to launder
+the proceeds of crime. finance
+terrorist activities, commit fraud
+or evade financial sanctions
+
+Gustomer Outcomes Risk: the
+risk that our culture, behaviours
+or actions result in harm to
+
+our customers, for example
+developing a product that doesn’t
+meet their needs
+
+Operational Risk: the risk that
+failures in peopte, processes or
+systems could lead to a service .
+disruption or financial losses
+
+Capital Adequacy Risk: the risk
+
+that Monzo doesn’t have enough -
+capital for the level and types of
+risk that we take, or to absorb :
+potential losses .
+
+Quarterly strategic planning and prudent capital management j
+A culture of fast learning and iterating
+Hiring experienced people to ExCo and the Board
+
+Credit decisioning rules to calculate the probability of default
+and affordability risk
+
+Provisions for credit losses in line with IFRSQ (International
+Financial Reporting Standard)
+
+A Credit Risk committee for members of ExCo to discuss
+lending risks
+
+The Board approves our credit risk appetite which we monitor '
+actively
+
+Credit related paticies and procedures, including collections,
+
+financial difficulties and vulnerable customers
+
+Financial crime policies and procedures and regular quality
+assurance
+
+An in-house transaction monitoring system which we
+continually improve
+
+Conduct-retated policies and procedures, covering:
+
+- customer outcomes
+
+product approval
+
+financial difficulties and vulnerable customers
+
+- change management
+
+- complaints management
+
+A product approval process with sign-off from the 2nd line
+A technology-led, interdisciplinary Customer Operations team
+Training to ail staff on Treating Customers Fairly
+
+Internal and external transparency, with customer-facing
+documents written in plain English
+
+Policies and procedures covering our people, systems, data,
+security and how we work with third parties
+
+Business continuity and disaster recovery plans and regular
+exercises to test these
+
+A robust incident escalation framework
+
+Penetration testing and simulated phishing campaigns
+
+A buffer of capital above the minimum regulatory requirements
+The Board and the ALCO regularly review the capital risk
+appetite limit
+
+We carry out our ICAAP to assess capital requirements
+Increased Monzo’s capital runway by closing a funding round in
+October 2018 and a further funding round in June 2019
+Group Directors’
+report
+
+Group Directors’ report
+
+The Directors present their report and audited financial
+statements for the year ended 28 February 2019 for
+Monzo Bank Limited (“The Bank”) and the Monzo
+Group (“The Group”).
+
+Monzo Bank Ltd is a private limited company,
+incorporated and domiciled in England and Wales,
+having its registered office in England and is
+authorised by the Prudential Regulation Authority
+(PRA) and regulated by the PRA and Financial Conduct
+Authority (FCA). The registration number of Monzo
+
+is 09446231.
+
+These financial statements have been prepared under
+International Financial Reporting Standards as adopted
+by the European Union.
+
+Directors
+
+The Directors who served the Company during the year
+and up to the date these financial statements were
+approved were:
+
+T Blomfield
+
+A Jones (Appointed 5 April 2019 )
+
+G Hoffman (Chairman appointed 1 February 2019)
+T Brooke (acting Chairman until 31 January 2019)
+A Kirk
+
+K Woollard
+
+E Burbidge
+
+M Grimshaw
+
+G Dolman (resigned 28 February 2019)
+
+Baroness D Kingsmill (resigned 23 March 2018)
+
+Results and dividends
+
+The loss for the year after taxation amounted to
+£47.2m (2018: loss of £30.5m). The directors do not
+recommend a final dividend (2018 - Enil).
+
+Directors’ liabilities
+
+The Group has indemnified all Directors of the Group
+against liability in respect of proceedings brought
+
+by third parties, subject to the conditions set out in
+section 234 of the Companies Act 2006. This qualifying
+third party indemnity provision was in force during
+
+the year,
+
+The following information, required by the 2008
+Regulations, is included in the Strategic Report:
+A fair and balanced review of the business
+
+A description of the principal risks and
+uncertainties facing the business
+A description of the company’s principal objectives,
+strategy and business model
+
+* An analysis of developments and performance for
+the financial year and the position at the end of
+the year
+Trends and factors likely to affect the future
+development, performance and position of
+the business
+
++ Information on our employees and community
+
+Information about gender diversity
+Donations
+
+The Group hasn’t made any donations or incurred any
+expense to any registered UK political party or other EU
+political organisation.
+
+Branches
+
+The Group does not have any branches within or
+outside of the UK.
+
+Events since the balance sheet date
+
+The key events that have occurred since the
+balance sheet date are listed below (see Note 37 for
+further details):
+
+* The Bank raised additional capital of £113m in
+June 2019.
+
+* The Group announced plans to launch a prepaid
+card product in the US in collaboration with a
+partner bank.
+
+* The Bank’s submitted R&D reclaim for the 2018 year
+end was paid in full subsequent to the financial
+year end.
+
+There have been no other material post balance
+sheet events.
+
+Financial Instruments
+
+The Bank finances its activities through the issue of
+ordinary shares as disclosed in Note 24 and through
+cash deposits held as disclosed in Note 16. The Bank
+also holds customer deposits classified as a financial
+liability, and issues overdrafts and loans to customers
+which are classified as financial assets. Other financial
+assets and liabilities like trade creditors arise from the
+Bank’s operating activities. Foreign currency liabilities
+are settled using the foreign exchange rate at the date
+of the transaction.
+
+Refer to Notes 31 to 36 for information on the
+management of the risks related to financial assets
+and liabilities.
+
+The Group doesn’t use any other financial instruments.
+
+Research and development activities
+
+We invest in the development of our own platforms
+and products, so we've applied to claim Research &
+Development (R&D) relief from HMRC, see Note 18.
+
+Policy on employing people living with disabilities
+
+We’re committed to employing and supporting
+employees in line with the Equality Act 2010 and
+our People Policy. We also want to make sure
+disabled people can fulfil their potential and realise
+their aspirations.
+
+We make reasonable adjustments to support all
+disabled job applicants and employees.
+
+Some examples of supportive adjustments we've made
+in the past include:
+
+» Making changes to shift patterns (such as phased
+return to work, flexible working hours or part-
+time working)
+
+* Giving extra training or mentoring
+
++ Making access alterations to the office premises
+
++ Making sure we give information in accessible
+formats
+
++ Modifying equipment, or providing specialist
+equipment
+
+* Any other ad hoc reasonable request; like someone
+with sacial anxiety disorder being given their own
+desk instead instead of hot-desking
+
+The list above is certainly not limited. The essence of
+
+our policy is to accommodate all reasonable requests
+
+to make sure our people are fully supported during
+their time at Monzo.
+Our approach to transparency and employee
+involvement
+
+We default to transparency, so employees have access
+to any information that's relevant to them. We hold
+company-wide meetings weekly where people can
+share their opinion and ask questions of management.
+
+All employees are involved in Monzo's performance
+through our share option schemes. They're kept
+
+up to date with business performance through
+
+a weekly KPIs email sent to everyone at Monzo,
+
+as well as dashboards highlighting monthly
+financial performance.
+
+These statements are prepared on a going concern
+basis
+
+The going concern basis is dependant on maintaining
+enough capital and funding the balance sheet.
+
+The Directors have considered a number of factors
+including the projections for the Group, its capital and
+funding position, and the most recent fundraising
+round in June 2019. Having considered this and other
+appropriate enquiries management consider that
+
+the Group has raised enough equity to make sure
+
+it can operate for at least 12 months from the date
+these financial statements are approved. Details
+
+of equity raised are in Note 37. Consequently the
+financial statements have been prepared on a going
+concern basis.
+
+Disclosing information to the auditors
+
+So far as each person who was a director at the date
+of approving this report is aware, there's no relevant
+audit information, being information needed by the
+auditor in connection with preparing its report, which
+the auditor is unaware of. Having made enquiries of
+fellow directors and the Group’s auditor, each director
+has taken ail the steps that they’re obliged to take as
+a director to make themselves aware of any relevant
+audit information, and to establish that the auditor is
+aware of that information.
+
+Auditors
+
+Ernst & Young LLP have been re-appointed pursuant to
+section 487(2) of the Companies Act 2006 unless the
+members or directors resolve otherwise.
+
+On behalf of the Board
+
+Abd
+
+Tom Blomfield
+Director
+25 June 2019
+Statement
+of Directors’
+responsibilities
+
+Statement of Directors’
+responsibilities
+
+The Directors are responsible for preparing the
+Strategic report, Group Directors’ Report and the
+financial statements in accordance with applicable
+United Kingdom law and regulations.
+
+Company law requires the Directors to prepare
+financial statements for each financial year. Under
+that law, the Directors have to prepare the Bank
+and Group financial statements under International
+Financial Reporting Standards (IFRS) as adopted by
+the European Union.
+
+Under Company Law the Directors mustn’t approve the
+financial statements unless they're satisfied that they
+present a true and fair view of the financial position,
+financial performance and cash flows of the Bank
+
+and Group for that period. In preparing those financial
+statements the directors need to:
+
+* Select suitable accounting policies and then apply
+them consistently
+
+* Present information, including accounting policies,
+in a manner that gives relevant, reliable, comparable
+and understandable information
+
+* Give additional disclosures when complying with
+the specific requirements in IFRS isn’t enough
+to let users understand the impact of particular
+transactions, other events and conditions on the
+Company’s financial position and performance
+
++ Prepare the financial statements on a going
+concern basis unless it’s inappropriate to presume
+the Bank and Group will continue in business
+
+* $tate that the Company has complied with IFRS,
+subject to any material departures disclosed and
+explained in the financial statements
+
+The Directors are also responsible for keeping
+adequate accounting records that are sufficient to
+show and explain the Group’s transactions. They have
+to disclose with reasonable accuracy at any time the
+financial position of the Group and make sure that
+the financial statements comply with the Companies
+Act 2006.
+
+They're also responsible for safeguarding the assets
+of the Group and for taking reasonable steps to detect
+and prevent fraud and other irregularities.
+
+Approved by the Board and signed on behalf of
+the Board.
+
+“7
+Tom Blomfield
+
+Director
+25 June 2019
+Independent
+auditors’ report
+
+Independent Auditor's Report To The
+Members Of Monzo Bank Limited
+
+Opinion
+In our opinion:
+
++ Monzo Bank Limited’s group financial statements
+and parent company financial statements (the
+“financial statements”) give a true and fair view
+of the state of the group's and of the parent
+company’s affairs as at 28 February 2019 and of the
+group's loss for the year then ended;
+
++ the group financial statements have been properly
+
+prepared in accordance with IFRSs as adopted by
+the European Union (EU);
+
++ the parent company financial statements have
+been properly prepared in accordance with IFRSs
+as adopted by the European Union as applied in
+accordance with the provisions of the Companies
+
+Act 2006; and
+
+* the financial statements have been prepared
+in accordance with the requirements of the
+
+Companies Act 2006.
+
+We have audited the financial statements of Monzo
+Bank Limited which comprise:
+
+Group
+
+Consolidated statement of
+financial position as at 28
+February 2019
+
+Consolidated statement of
+comprehensive income for the
+year then ended
+
+Consolidated statement of
+changes in equity for the year
+then ended
+
+Consolidated statement of cash
+flows for the year then ended
+
+Related notes 1 to 37 to the
+financial statements, including
+a summary of significant
+accounting policies
+
+Parent company
+
+Statement of financial
+position as at 28 February
+2019
+
+Statement of comprehensive
+income for the year then
+ended
+
+Statement of changes in
+equity for the year then ended
+
+Statement of cash flows for
+the year then ended
+
+Related notes 1 to 37 to the
+financial statements including
+a summary of significant
+accounting poticies
+
+The financial reporting framework that has been
+applied in their preparation is applicable law and
+
+International Financial Reporting Standards (IFRSs)
+as adopted by the European Union and, as regards
+the parent company financial statements, as applied
+in accordance with the provisions of the Companies
+Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with
+international Standards on Auditing (UK) (ISAs (UK))
+and applicable law. Our responsibilities under those
+standards are further described in the Auditor's
+responsibilities for the audit of the financial statements
+section of our report below. We are independent of
+the group and parent company in accordance with the
+ethical requirements that are relevant to our audit of
+the financial statements in the UK, including the FRC’s
+Ethical Standard as applied to public interest entities,
+and we have fulfilled our other ethical responsibilities
+in accordance with these requirements.
+
+We believe that the audit evidence we have obtained
+is sufficient and appropriate to provide a basis for
+our opinion.
+
+Conclusions relating to going concern
+
+We have determined going concern to be a Key
+
+Audit Matter in our audit and, having concluded our
+procedures, we have nothing to report in respect of
+the tollowing matters in relation to which the ISAs (UK)
+require us to report to you where:
+
+the directors’ use of the going concern basis of
+accounting in the preparation of the financial
+statements is not appropriate; or
+
++ the directors have not disclosed in the financial
+statements any identified materia! uncertainties
+that may cast significant doubt about the group’s or
+the parent company’s ability to continue to adopt
+the going concern basis of accounting for a period
+of at least twelve months from the date when the
+financial statements are authorised for issue.
+Independent Auditor's Report To The
+Members Of Monzo Bank Limited
+
+Overview of our audit approach
+
+Key audit matters Going concern
+
+IFRS 9 Financial Instruments — expected
+credit loss (‘ECL’) provision
+
+Improper revenue recognition
+
+Risk of management override
+Developing contro! environment
+
+Key audit matters
+
+Key audit matters are those matters that, in our
+professional judgment, were of most significance in
+our audit of the financial statements of the current
+period and include the most significant assessed
+
+risks of material misstatement (whether or not due to
+fraud) that we identified. These matters included those
+which had the greatest effect on: the overall audit
+
+Audit'scope fnaheial information of one component strategy, the allocation of resources in the audit; and
+and audit procedures on specific balances ‘directing the efforts of the engagement team. These
+for a further one component. matters were addressed in the context of our audit of
+
+* The components where we performed full the financial statements as a whole, and in our opinion
+or specific audit procedures accounted for thereon, and we do not provide a separate opinion on
+100% of Loss before tax, 100% of Revenue
+and 100% of Total assets, these matters.
+
+Materiality + Overall group materiality of £1.16m which
+represents 1% of equity,
+
+Risk Our response to the risk Key observations communicated to
+
+Going Concern
+
+Refer to the Directors’ Report (page 31) ‘
+and Accounting policies (page 47).
+
+returns;
+The annual report & accounts have
+
+been prepared on a going concern basis
+which the Board and management have
+considered appropriate, having reference
+to the Bank's capital and liquidity
+requirements for a year from the date of
+this opinion,
+
+We have assessed the Bank's ability to
+continue as a going Concern over the year
+horizon from the date of this opinion.
+
+We performed the following procedures:
+
+Compared the reported capital ratio
+to the Bank’s submitted regulatory
+
+« Compared the revenue and "
+expenditure assumptions underpinning
+the Bank’s financial plan and its .
+associated capital utilisation rates
+against the capital requirements far 12
+months from the date of this opinion;
+
+* Assessed the reasonableness of the
+Bank’s capital utilisation projections
+by reviewing its historical accuracy of .
+achieving its financial plans, making
+adjustments, where necessary,
+to reasonably estimate revenue,
+
+the Audit Committee
+
+We were satisfied that the Bank has
+sufficient capital and liquidity to meet
+its obligations over the coming year. In
+particular, we confirmed:
+
+The Bank's reported capital reconciled
+to the submitted regulatory returns;
+The Bank’s approved Core Equity
+Tier 1 capital position, combined
+
+with the post year end capital raise
+was sufficient to support reasonably
+anticipated capital attrition rates over
+the forthcoming 12 months;
+
+The Bank’s liquidity pasition was
+sufficiently robust to support its
+requirements in the Bank’s financial
+plan in the forthcoming 12 months.
+
+expenditure and impairment;
+
++ Discussed the Bank's overall capital
+requirements with the Prudential
+Regulation Authority;
+
+Confirmed that a further capital raising
+was secured post balance sheet
+
+that supplements existing reported
+capital and that this qualified as Core
+Equity Tier 1 capital for prudential
+
+teporting purposes,
+
+Reviewed the Bank’s cashflow
+forecasts and the cash resources
+required over the forthcoming 12
+months from the date of this opinion.
+Risk
+
+IFRS 9 Financial Instruments —
+expected credit loss (‘ECL’) provision
+
+Provision of £3,119k, (2018: £12k)
+
+Refer to the Accounting policies (page
+58); and Note 31 of the Consolidated
+Financial Statements (page 84)
+
+IFRS 9 Financial Instruments became
+effective for annual periods beginning on
+or after 1 January 2018 and the year ended
+28 February 2019 is the first year of full
+implementation for the Bank. We identified
+the following heightened areas of focus:
+
+Completeness and accuracy of
+capture of data to feed the IFRS 9
+model assessment;
+
+Design of impairment assessment
+models under IFRS 9 for overdrafts:
+Application of post model adjustments
+and multiple economic scenarios to
+determine the staging provisions; and
+Disclosure of IFRS 9 staging
+
+and provisioning in the
+
+financial statements.
+
+Risk
+
+Improper revenue recognition - Payment
+Network Provider Bonus Income
+
+Payment Network Provider Bonus
+recognition £0.9m, (2018: £0.3m)
+
+Refer to the Accounting policies (page
+57); and Note 9 of the Consolidated
+Financial Statements (page 63)
+
+We reviewed the revenue streams
+
+earned by the Group, and assessed the
+subjectivity of each of these streams and
+which streams could give rise ta a material
+error in the financial statements.
+
+We determined that the Payment Network
+Provider Bonus contractual arrangements
+were subjective in nature and we
+assessed that this could be subject to
+material error by not complying with the
+requirements of |FRS15.
+
+We determined that all other streams
+(including Overdraft Income and ATM
+interchange fee income) were highly
+automated in nature and not subjective
+in their application and so we excluded
+these from the significant risk.
+
+Our response to the risk
+
+We undertook a substantive audit
+approach. We performed the
+following procedures:
+
+Reconciled the general ledger to the
+banking ledger for assurance over the
+completeness of accounts in overdraft.
+
++ Verified for completeness and
+accuracy of the data that inputs to
+the provision calculation model,
+including overdraft information, credit
+tisk scoring by customer, origination
+date, forward looking adjustments and
+arrears Classification.
+
+Traced a sample of overdrafts to post
+year end settlement or movement in
+the account.
+
++  Reperformed the ECL methodology
+of the IFRS 9 model to validate its
+appropriate application of IFRS 9 and
+recomputed its provision calculation,
+including staging, to confirm the based
+medel output.
+
++ Used specialists to assess the
+appropriateness of the multiple
+economic scenarios to validate
+the underlying ECL assumptions
+were appropriate.
+
+Assessed the reasonable movement
+and completeness of management's
+post model adjustment.
+
+Reviewed the adequacy of disclosure
+of IFRS 9 in the financial statements
+and reconciled these disclosures to
+underlying ECL mode! data.
+
+Qur response to the risk
+
+We undertook a substantive audit
+approach. To address the identified risk
+of Payment Network Provider Bonus
+recognition, we performed the following
+audit procedures:
+
+Reviewed the contracts and engaged
+with our technicat accounting
+specialists to confirm the accounting
+treatment for the significant
+transactions is in accordance with
+IFRS 15.
+Vouched the volumes represented
+as achieved to date by the
+company back to Payment Network
+Provider's confirmation.
+
++ We recalculated the bonus earned/
+deferred during the current year.
+
++ We traced the bonus paid by
+Payment Network Provider to the
+bank statements.
+
+Key observations communicated to
+
+the Audit Committee
+
+We noted no unadjusted audit differences
+with this aspect of our audit. In particular:
+
+We noted no issues in our testing of
+the completeness of the overdrafts.
+We noted no unadjusted differences
+in the completeness or accuracy
+
+of key data inputs into the
+provisioning model.
+
+We successfully traced a sample
+
+of overdrafts to post year end
+settlements in those accounts.
+
++ We noted no unadjusted differences
+arising from our reperformance af the
+ECL methodology in the provisioning
+madel, including no unadjusted
+differences arising from our testing of
+the staging criteria.
+
++ We considered the ECL calculation’s
+incorporation of multiple economic
+scenarios to be appropriate in
+terms of the scenarios and relative
+weightings applied as well as being
+accurately calculated.
+
++ We cansidered the post madel
+adjustments to be complete and
+reasonably computed in assessing the
+reasonableness of the ECL provision.
+
++ We judged the ECL disclosures to be
+complete and appropriately reconciled
+to the underlying ECL model data.
+
+Key observations communicated to
+the Audit Committee
+
+We are satisfied that the Group has
+recorded revenue in line with its
+accounting policies.
+
+We concluded that the revenue
+recognised related to the Payment
+Network Provider Banus is fairly stated
+and in accordance with the requirements
+of IFRS 15.
+Risk
+
+Risk of management override of controls
+
+Refer to the Accounting policies (page
+57); and Note 12 of the Consolidated
+Financial Statements (page 65)
+
+international Standards on Auditing
+
+(UK) mandate the consideration of
+management override of internal controls
+as a fraud risk on all audits.
+
+The susceptibility of an accounting
+estimate to management bias increases
+with the subjectivity involved in making
+it. As part of our response to the risks
+of material misstatement involving
+management, we review significant
+accounting estimates for evidence of
+management bias. We identified the
+following significant transactions and
+estimates:
+
+» Judgements applied by management
+in the valuation of share based
+payments;
+
+» Judgments applied by management in
+assessing accounting treatments for
+significant transactions; and
+
+» Judgements applied by management
+in the entry and authorisation of
+journal entries.
+
+Our response to the risk
+
+In respect of each of the areas noted
+below, we undertook a substantive audit
+approach.
+
+In respect of share based payments, we
+performed the following procedures:
+
++ We used valuation specialists to
+assess the reasonableness of the
+following aspects:
+
+— key input parameters, namely;
+volatility, risk free rate and term
+into call option pricing model
+
+- completeness of the parameters
+in the call option pricing model
+
+- methodology design of existing
+valuation model
+
+~ recalculation of the fair value for
+all new options granted during the
+year under audit
+
++ We agreed the completeness of share
+based payments by comparing the
+quantum of share options granted
+with the quantum of share options
+included in the expense calculation,
+
++ We compared the reward of share
+based payments to employees and
+vouched a sample to underlying
+agreements and communications,
+
+In respect of significant transactions, we
+performed the following procedures:
+
++ We obtained copies of alt new key
+agreements entered into by the Bank
+during the year and assessed the
+implications of them on the financial
+statements.
+
++ We verified the completeness of the
+agreements based on discussions
+with managements, review of minutes,
+review of media publications of new
+product launches and review of
+material significant accounts.
+
+« We assessed the accounting impact
+of the agreements on the financial
+statements of the Bank and engaged
+with our technical IFRS specialist
+as required,
+
+In respect of journal entries, we
+performed the following procedures:
+
++ We completed journal entry testing
+throughout the year, focusing on
+significant or unusual journals,
+significant risk areas, journals posted
+around key estimates and any topside
+adjustments using data analytics.
+
+We performed full scope audit
+procedures over this risk area in one
+location, which covered 100% of the
+tisk amount.
+
+Key observations communicated to
+the Audit Committee
+
+Share based payments
+
+Based on our work performed, we
+concluded that the Bank has appropriately
+valued the share based payments as
+
+at the year end date, using reasonable
+input assumptions to derive the
+
+share valuations.
+
+We were satisfied that the valuation model
+inputs, including employee awards and the
+other inputs were accurately included.
+
+We were comfortable that the valuation
+outputs were accurately posted to the
+general ledger.
+
+Significant transactions
+
+Based on our work performed, we believe
+management's interpretation of significant
+contracts for accounting purposes to
+
+be reasonable.
+
+Journal entries
+Based on our work performed, we did not
+identify any unusual journals,
+Risk
+
+Developing Control Environment
+
+The Bank is still at a relatively early stage
+of development and the governance
+
+and control environment has not yet
+matured fully.
+
+In such circumstances, where we have
+not relied on financial or IT controls, we
+are required to undertake additional
+substantive audit procedures in
+
+order to gain reasonable assurance
+over the balances reported in the
+financial statements.
+
+Our response to the risk
+
+Our audit approach included an
+assessment of the quality and
+effectiveness of the key entity level
+controls that management relies on for
+financial reporting.
+
+We used IT specialists within our audit
+team to conduct our IT procedures which
+included, amongst others, testing IT
+general controis relating to system access
+and change management, and testing
+controls over specific IT applications
+which are required to operate effectively
+to mitigate the risk of misstatement within
+the financial statements.
+
+Where we were unable to place such
+reliance we addressed the increased risk
+by designing and then undertaking audit
+procedures to obtain a greater proportion
+of evidence from substantive testing and
+
+Key observations communicated to
+the Audit Committee
+
+We highlighted to the Audit Committee
+that while progress has been made in
+developing the control environment, we
+were not in a position to rely on controls
+and so we undertook a substantive
+audit approach.
+
+We note that we completed our
+procedures and noted no unadjusted audit
+differences in the financial statements.
+
+the use of increased sample sizes.
+
+An overview of the scope of our audit
+
+Tailoring the scope
+
+Our assessment of audit risk, our evaluation of
+materiality and our allocation of performance
+materiality determine our audit scope for each entity
+within the Group. Taken together, this enables us
+
+to form an apinion on the consolidated financial
+statements. We take into account size, risk profile, the
+organisation of the Group and effectiveness of group-
+wide controls, changes in the business environment
+and other factors such as recent Internal audit results
+when assessing the level of work to be performed at
+each entity.
+
+In assessing the risk of material misstatement to
+the Group financial statements, and to ensure we
+had adequate quantitative coverage of significant
+accounts in the financial statements of the two
+reporting components of the Group, we selected
+two components covering entities within the
+United Kingdom and the United States of America,
+which represent the principal business units within
+the Group.
+
+Of the two components selected, we performed an
+audit of the complete financial information of one
+component (“full scope components”) which was
+selected based on their size or risk characteristics.
+For the remaining component (“specific scope
+components”), we performed audit procedures on
+specific accounts within that component that we
+considered had the potential for the greatest impact
+on the significant accounts in the financial statements
+either because of the size of these accounts or their
+risk profile.
+
+The reporting components where we performed
+
+audit procedures accounted for 100% (2018: 100%)
+
+of the Group’s Loss before tax, 100% (2018: 100%)
+
+of the Group’s Revenue and 100% (2018: 100%) of
+
+the Group’s Total assets. For the current year, the full
+scope components contributed 100% (2018: 100%)
+
+of the Group’s Loss before tax, 100% (2018: 100%) of
+the Group’s Revenue and 100% (2018: 100%) of the
+Group’s Total assets. The specific scope component
+contributed 0% (2018: 0%) of the Group’s Loss before
+tax, 0% (2018: 0%) of the Group’s Revenue and 0%
+(2018: 0%) of the Group's Total assets. The audit scope
+of these components may not have included testing of
+all significant accounts of the component but will have
+contributed to the coverage of significant accounts
+tested for the Group.
+Changes from the prior year
+
+The United States of America was added into scope
+for the current year due to the inception of the Group's
+wholly-owned subsidiaries, Monzo Support US Inc. and
+Monzo Ina.
+
+Involvement with component teams
+
+All audit work performed for the purposes of the audit
+was undertaken by the Group audit team.
+
+Our application of materiality
+
+We apply the concept of materiality in planning and
+performing the audit, in evaluating the effect of
+identified misstatements on the audit and in forming
+our audit opinion.
+
+Materiality
+
+The magnitude of an omission or misstatement that,
+individually or in the aggregate, could reasonably be
+expected to influence the economic decisions of the
+users of the financial statements. Materiality provides
+a basis for determining the nature and extent of our
+audit procedures.
+
+We determined materiality for the Group to be £1.16
+million (2018: £0.60 million), which is 1% (2018: 1%)
+of equity. We believe that equity provides us with
+
+the appropriate basis on which an omission or
+misstatement that, individually or in the aggregate,
+
+in light of the surrounding circumstances, would
+reasonably be expected to influence the economic
+decisions of the users of the financial statements, The
+in¢rease in materiality is consistent with the increase
+in equity during the year.
+
+We determined materiality for the Parent Company
+to be £1.16 million (2018: £0.60 million), which is 1%
+(2018 1%) of equity.
+
+During the course of our audit, we reassessed initial
+materiality and made adjustments based on the final
+equity after incorporating the result of the financial
+position of the group.
+
+Performance materiality
+
+The application of materiality at the individual
+account or balance level. It is set at an amount to
+teduce to an appropriately low level the probability
+that the aggregate of uncorrected and undetected
+misstatements exceeds materiality,
+
+On the basis of our risk assessments, together with our
+assessment of the Group's overall control environment,
+our judgement was that performance materiality was
+50% (2018: 50%) of our planning materiality, namely
+£579k (2018: £300k). We set performance materiality
+at this percentage (which is the lowest in the range}
+due to misstatements which were identified in the
+prior year audit. Our approach is designed to have a
+reasonable probability of ensuring that the total of
+uncorrected and undetected misstatements does not
+exceed our overall materiality of £1.16 million (2018:
+£0.6 million) for the Group financial statements as
+
+a whole.
+
+Audit work at component location for the purpose of
+obtaining audit coverage over significant financial
+statement accounts is undertaken based ona
+percentage of total performance materiality. The
+performance materiality set for each component is
+based on the relative scale and risk of the component
+to the Group as a whole and our assessment of the
+
+risk of misstatement at that component. In the current
+year, the range of performance materiality allocated to
+components was £58k to £579k (2018: Not applicable).
+
+Reporting threshold
+
+An amount below which identified misstatements are
+considered as being clearly trivial.
+
+We agreed with the Audit Committee that we would
+report to them all uncorrected audit differences in
+excess of £58k (2018: £30k), which Is set at 5% of
+planning materiality, as well as differences below that
+threshold that, in our view, warranted reporting on
+qualitative grounds.
+
+We evaluate any uncorrected misstaternents against
+both the quantitative measures of materiality
+discussed above and in light of other relevant
+qualitative considerations in forming our opinion.
+Other information
+
+The other information comprises the information
+included in the annual report set out on pages 1 to 36,
+other than the financial statements and our auditor’s
+report thereon. The directors are responsible for the
+other information.
+
+Our opinion on the financial statements does not
+cover the other information and, except to the extent
+otherwise explicitly stated in this report, we do not
+express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial
+statements, our responsibility is to read the other
+information and, in doing so, consider whether the
+other information is materially inconsistent with
+
+the financial statements or our knowledge obtained
+
+in the audit or otherwise appears to be materially
+misstated. If we identify such material inconsistencies
+or apparent material misstatements, we are required
+to determine whether there is a material misstatement
+in the financial statements or a material misstatement
+of the other information. If, based on the work we
+have performed, we conclude that there is a material
+misstatement of the other information, we are required
+to report that fact.
+
+We have nothing to report in this regard.
+
+Opinions on other matters prescribed by
+the Companies Act 2006
+
+In our opinion, based on the work undertaken in the
+course of the audit:
+
+* the information given in the strategic report and the
+directors’ report for the financial year for which the
+financial statements are prepared is consistent with
+the financial statements; and
+
+the strategic report and the directors’ report have
+
+been prepared in accordance with applicable
+legal requirements.
+
+Matters on which we are required to
+report by exception
+
+In the light of the knowledge and understanding of the
+group and the parent company and its environment
+obtained in the course of the audit, we have not
+identified material misstatements in the strategic
+report or the directors’ report.
+
+We have nothing to report in respect of the following
+matters in relation to which the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+adequate accounting records have not been kept
+by the parent company, or returns adequate for our
+audit have not been received from branches not
+visited by us; or
+
+the parent company financial statements are not
+
+in agreement with the accounting records and
+returns; or
+
++ certain disclosures of directors’ remuneration
+specified by law are not made; or
+
+we have not received all the information and
+explanations we require for our audit
+
+Responsibilities of directors
+
+As explained more fully in the directors’
+responsibilities statement set out on page 35, the
+directors are responsible for the preparation of the
+financial statements and for being satisfied that they
+give a true and fair view, and for such internal control
+as the directors determine is necessary to enable the
+preparation of financial statements that are free from
+material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors
+
+are responsible for assessing the group and parent
+company's ability to continue as a going concern,
+disclosing, as applicable, matters related to going
+concern and using the going concern basis of
+accounting unless the directors either intend to
+liquidate the group or the parent company or to cease
+operations, or have no realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of
+the financial statements
+
+Our objectives are to obtain reasonable assurance
+about whether the financial statements as a whole
+are free from material misstatement, whether due to
+fraud or error, and to issue an auditor's report that
+includes our opinion. Reasonable assurance is a high
+level of assurance, but is not a guarantee that an
+audit conducted in accordance with ISAs (UK) will
+always detect a material misstatement when it exists.
+Misstatements can arise from fraud or error and are
+considered material if, individually or in the aggregate,
+they could reasonably be expected to influence the
+economic decisions of users taken on the basis of
+these financial statements.
+
+Explanation as to what extent the audit
+was considered capable of detecting
+irregularities, including fraud
+
+The objectives of our audit, in respect to fraud, are; to
+identify and assess the risks of material misstatement
+of the financial statements due to fraud; to obtain
+sufficient appropriate audit evidence regarding the
+assessed risks of material misstatement due to fraud,
+through designing and implementing appropriate
+responses; and to respond appropriately to fraud or
+suspected fraud identified during the audit. However,
+the primary responsibility for the prevention and
+detection of fraud rests with both those charged with
+governance of the entity and management.
+
+Our approach was as follows:
+
++ We obtained an understanding of the legal and
+tegulatory frameworks that are applicable to the
+group and have a direct impact on the preparation
+of the financial statements. We determined that
+the most important direct laws and regulations
+related to the Bank related to company law, tax
+legislation, and the financial reporting framework.
+Our considerations of other laws and regulations
+that may have a material effect on the financial
+statements included permissions and supervisory
+requirements of the Prudential Regulation Authority
+(‘PRA’) and the Financial Conduct Authority (‘FCA’).
+
+We understood how the Group is complying
+
+with those frameworks by making enquiries of
+senior management. We also reviewed significant
+correspondence between the Group and UK
+regulatory bodies, reviewed minutes of the Board
+and Risk Committee; and gained an understanding
+of the Group’s approach to governance,
+demonstrated by the Board's approval of the
+Group's governance framework and the Board’s
+review of the Group’s risk management framework
+and internal control processes.
+
+« We assessed the susceptibility of the group’s
+financial statements to material misstatement,
+including how fraud might occur by considering the
+controls that the Group has established to address
+risks identified by the Group, or that otherwise
+seek to prevent, deter or detect fraud. We also
+considered performance and incentive plan targets
+and their potential to influence management to
+manage earnings or influence the perceptions
+of investors.
+
+* Based on this understanding we designed our audit
+procedures to identify non-compliance with such
+laws and regulations. Our procedures involved
+inquiries of senior management, legal counsel,
+Compliance management and Internal Audit, review
+of significant correspondence with regulatory
+bodies and minutes of meetings of the Board and
+certain Board committees, and focused testing, as
+referred to in the Key Audit Matters section above.
+
+* Based on our procedures performed on component,
+no instances of non compliance with laws and
+regulations were identified.
+
++ The Company operates in the banking industry
+which is a highly regulated environment. As such
+the Senior Statutory Auditor considered the
+experience and expertise of the engagement
+team to ensure that the team had the appropriate
+competence and capabilities, which included the
+use of specialists where appropriate.
+
+The Group is a regulated entity and offers a range
+of services to its customers including receiving
+deposits and offering overdrafts.
+
+A further description of our responsibilities for the
+audit of the financial statements is located on the
+Financial Reporting Council’s website at https://www.
+frc.org.uk/auditorsresponsibilities. This description
+forms part of our auditor’s report.
+Other matters we are required to address
+
++ We were appointed by the Company on 28 February
+2017 to audit the financial statements for the year
+ending 28 February 2017 and subsequent financial
+periods.
+
+The period of total uninterrupted engagement
+including previous renewals and reappointments is
+3 years, covering the years ending 28 February 2017
+to 28 February 2019.
+
+The non-audit services prohibited by the FRC’s
+Ethical Standard were not provided to the group or
+the parent company and we remain independent of
+the group and the parent company in conducting
+the audit.
+
++ The audit opinion is consistent with the additional
+report to the audit committee
+
+Use of our report
+
+This report is made solely to the company’s members,
+as a body, in accordance with Chapter 3 of Part 16 of
+the Companies Act 2006. Our audit work has been
+undertaken so that we might state to the company’s
+members those matters we are required to state to
+them in an auditor’s report and for no other purpose. To
+the fullest extent permitted by law, we do not accept
+or assume responsibility to anyone other than the
+company and the company's members as a body, for
+our audit work, for this report, or for the opinions we
+have formed.
+
+E inst ; loony wad
+
+Javier Faiz (Senior statutory auditor)
+for and on behalf of Ernst & Young LLP,
+Statutory Auditor
+
+London
+
+26 June 2019
+
+Notes
+
+1.
+
+The maintenance and integrity of the Monzo
+Bank Limited web site is the responsibility
+
+of the directors; the work carried out by the
+auditors does not involve consideration of these
+matters and, accordingly, the auditors accept
+
+no responsibility for any changes that may have
+occurred to the financial statements since they
+were initially presented on the web site.
+
+Legislation in the United Kingdom governing
+the preparation and dissemination of financial
+statements may differ from legislation in
+other jurisdictions.
+Statement of
+comprehensive
+income
+
+Statement of comprehensive income for
+the year ended 28 February 2019
+
+Group Group Company Company
+
+Year ended Year ended Year ended Year ended
+
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+
+Notes £'000 £°000 £7000 £°000
+
+Interest income 4,918 150 4,918 150
+Net interest income 4,918 150 4,918 150
+Fee and commission income 13,231 2,201 13,231 2.201
+Fee and commission expense (6,664) (834) (6,664) (834)
+Net fee and commission income 7 6,567 1,367 6,567 1,367
+Credit loss expense on financial assets 8 (3,880) (12) (3,880) (12)
+Other operating income 9 1,553 309 1,553 309
+Net operating income 9,188 1,814 9,158 1,814
+Personnel expenses 10 (25,654) (9,214) (25,610) (9,214)
+Depreciation expense 19 (799) (250) (799) (250)
+Other operating expense 13 (33,421) (25,426) (33,465) (25,428)
+Total operating expense (59,874) (34,890) (89,874) (34,890)
+Loss before tax (80,716) (33,076) (50,716) (33,076)
+Taxation 1b 3,552 2,530 3,552 2,630
+
+Logs for the year (47,164) (30,546) (47,164) (30,546)
+
+Total comprehensive loss
+
+for the year, net of tax (47,164) (30,546) (47,164) (30,546)
+
+The results for the current and prior year are derived
+entirely from continuing operations.
+
+The Notes 1 to 37 form an integral part of these
+financial statements.
+Statement of
+financial position
+
+Statement of financial position for
+the year ended 28 February 2019
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+Notes £'000 £°000 £'000 £'000
+
+Assets
+Cash and balances at bank 16 549,847 96,943 549,831 96,943
+Loans and advances to customers 7? 16,054 160 16,054 160
+Other assets 18 29,434 28,348 29,429 28,348
+Property, plant and equipment 19 2,278 823 2,257 823
+Intangible assets - 14 ~ 44
+investment in subsidiary - . 78 ~
+Collateral held with third parties 20 16,777 13,532 16,777 13,831
+Total assets 614,390 139,820 614,426 139,820
+
+Liabilities
+
+Customer deposits 22 461,821 74,276 461,821 71,276
+Other liabilities 23 36,899 12,365 36,935 12,365
+Total liabilities 498,720 83,641 498,756 83,641
+
+Equity
+Called up share capital aq 9 9 is) 8)
+Share premium account 198,146 93,989 198,146 93,989
+Other reserves 3,164 874 3,164 871
+Accumulated losses (85,640) (38,681) (85,640) (38,681)
+Total equity 115,670 86,179 115,670 56,179
+Total Jiabilities and equity 614,390 139,820 614,426 139,820
+
+The Notes 1 to 37 form an integral part of these financial
+statements. The financial statements on pages 47 to 92
+were approved and authorised for issuance by the Board
+on 25 June 2019 and signed on its behalf by:
+
+CHL
+
+Tom Blomfield
+Director
+
+25 June 2019
+Statement of
+changes in equity
+
+Statement of changes in equity for
+the year ended 28 February 2019
+
+Statement of Changes in Equity - Group
+
+Share capital Share premium Other reserves Retained losses Total equity
+
+£7000 £'000 £7000 £'000 £'000
+
+Balance as at 28 February 2017 0 26,298 236 (8,135) 18,398
+Shares issued ie} 67,849 - - 67,849
+Cost of issuance - (437) - - (437)
+Share based payments reserve ~ - 915 ~ 915
+Exercise of options 0 279 (279) ~ ~
+Losses for the year - ~ ~ (30,546) (30,546)
+Balance as at 28 February 2018 o 93,989 871 (38,681) $6,179
+Shares issyed o 106,294 - ~ 105,204
+Cost of issuance “~ (1,207) ~ ~ (1,207)
+Share based payments reserve ~ - 2511 ~ 2,511
+Exercise of options fe) 70 (218) 205 57
+Losses for the year ~ - ~ (47,164) (47,164)
+Balance as at 28 February 2019 0 198,146 3,164 (85,640) 115,670
+
+Staternent of Changes in Equity ~ Company
+
+Share capital Share premium Other reserves Retained losses Total equity
+
+£000 £7000 £000 £'000 £000
+
+Balance as at 28 Fabruary 2017 a 26,298 235 (8,195) 18,398
+Shares issued 9 67,849 ~ ~ 67,849
+Cost of issuance - (437) ~ ~ (437)
+Share based payments reserve ~ - 916 ~ 916
+Exercise of options Q 279 (279) - ~
+Losses for the year ~ - ~ (30,546) (30,546)
+Balance as at 28 February 2018 o 93,989 871 (38,681) 56,179
+Shares issued ie) 105,204 ~ ~ 106,294
+Cost of issuance - (1,207) ~ ~ (1,207)
+Share based payments reserve ~ ~ 2,511 ~ 2,511
+Exercise of options Qo 70 (218) 205 57
+Losses for the year - - - (47,164) {47,164}
+Balance as at 28 February 2019 Q 198,146 3,164 (85,640) 115,670
+
+The share capital as at 28 February 2019 was £12 (2018: £11) which is shown as £nil (rounded to
+£'000) in the above table. See Note 24 for further detail. In the current year, we released £205k
+of reserves related to options exercised from other reserves into retained losses (2018: Enil).
+Statement of
+cash flows
+
+Statement of cash flows for the
+year ended 28 February 2019
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+Notes £'000 £°000 £7000 £'000
+Cash flows from operating activities
+Loss for the year (47,164) (30,546) (47,164) (30,546)
+Adjustments for non-cash items
+Depreciation of property plant and equipment 19 729 241 799 241
+Amortisation of intangible assets - 10 - 10
+Share based payments 12 2,511 916 2,511 916
+Loss on disposal of assets 161 - 161 -
+Changes in operating assets
+and liabilities:
+Net increase in loans and advances to customers ‘7 (15,893) (148) (15,893) (148)
+Net increase in customer deposits 22 390,545 71,276 390,545 71,276
+Increase in other assets (excluding R&D tax credit) 18 (2,329) (26,406) (2,324) (26,406)
+Cash received in relation to R&D tax credit 18 1,242 - 1,242 -
+Increase in collateral held with third parties 20 (3,245) (11,071) (3,245) (11,071)
+Increase in other liabilities 23 24,534 11,285 24,570 11,285
+Net cash from operating activities 351,161 15,857 351,202 15,557
+Cash flows from investing activities
+Acquisition of property, plant and equipment 19 (2,415) (886) (2,394) (886)
+Proceeds on disposal of property, plant and 8 _ 8 _
+equipment
+Investment in subsidiaries - - (78) ~
+Net cash from investing activities {2,407} (886) {2,464) (886)
+Cash flows from financing activities
+Net proceeds from issuance of ordinary shares 104,150 67,398 104,150 67,398
+Net cash from financing activities 104,150 67,398 104,150 67,398
+Net increase in cash and cash equivalents 452,904 82,069 452,888 82,069
+Cash and cash equivalents at beginning of the period 96,943 14,874 96,943 14,874
+Cash and cash equivalents at end of year 16 549,847 96,943 549,831 96,943
+Notes to the
+financial statements
+
+Notes to the financial statements for
+
+the year ended 28 February 2019
+
+Reporting entities
+
+These financial statements are prepared for Monzo
+Bank Limited and its subsidiaries (“the Group”,
+“Monzo”, “We”, “Us”). Monzo Bank Limited
+(“the Company”, “the Bank”) is a private limited
+Company incorporated and registered in England
+and Wales. The subsidiaries include Monzo Inc
+and Manzo Support US inc which were both
+incorporated in Delaware; United States. We've
+presented individual and consolidated financial
+statements for the Company and the Group.
+
+Basis of preparation
+
+We've prepared the individual and consolidated
+financial statements on an historical cost basis,
+except for financial assets which are held at
+fair value or amortised cost, in accordance with
+International Financial Reporting Standards
+CIFRS') as adopted by the European Union and
+Companies Act 2006.
+
+We present the financial statements in Sterling,
+which is also the Company’s functional currency.
+Figures in tables are shown in £'000 and
+references in text are shown in £k or £m and this
+is stated in each case.
+
+The amounts expected to be recovered or settled
+for assets and liabilities in the financial statements
+are due no more than 12 months after the
+reporting period unless specifically stated.
+
+New and updated accounting standards adopted
+in the year
+
+IAS 1 Presentation of Financial Statements
+
+With effect from 1 January 2018 and applied from 1
+March 2018, paragraph 82(a) of IAS 1 Presentation
+of Financial Statements requires interest revenue
+caiculated using the effective interest rate (EIR)
+method to be presented separately on the face of
+the income statement. This did not have a material
+impact as all interest income is recognised under
+the effective interest rate method.
+
+IFRS 9 Financial Instruments
+
+We have adopted IFRS 9 as issued by the IASB in
+July 2014 with a date of transition of 1 March 2018,
+which resulted in changes in accounting policies
+and adjustments to the amounts previously
+recognised in the financial statements. We did not
+early adopt any of IFRS 9 in previous periods.
+
+As permitted by the transitional provisions of IFRS
+9, we elected not to restate comparative figures,
+which are based on {AS 39, No adjustments
+
+to the carrying amounts of financial assets
+
+and liabilities at the date of transition were
+recognised in the opening retained earnings and
+other reserves of the current period as they are
+considered immaterial,
+
+The adoption of (FRS 9 has resulted in changes
+in our accounting policies for the impairment of
+financial assets. Other than the ECL change in
+accounting policy, (FRS 9 has not impacted the
+recognition and measurement of financial assets
+and liabilities, all of which are held at amortised
+cost.
+
+IFRS 15 Revenue from Contracts with Customers
+With effect from 1 January 2018 and applied from 1
+March 2018, the Group adopted IFRS 15 using the
+full retraspective approach to each prior reporting
+period presented. We have reviewed contracts
+with customers and determined that there would
+be no impact to the recognition of revenue in the
+reporting periods shown.
+New accounting standards in issue but not yet
+adopted
+
+As at the date of these financial statements,
+certain standards were in issue and effective for
+periods beginning on or after 1 January 2019 which
+we haven't adopted for the year ended 28 February
+2019. These standards have been adopted from 1
+March 2019.
+
+IFRS 16 Leases (effective date for periods
+beginning on or after 1 January 2019)
+
+This standard will result in lessees recognising
+both a right of use asset and a lease liability on
+the balance sheet under a single lease model,
+
+removing the distinction between finance and
+
+operating leases.
+
+We've performed a detailed analysis of the impact
+which concluded that when we adopt the standard
+there will be an increase in both assets and
+liabilities. There will also be an increase in interest
+expense and depreciation and a decrease in other
+operating expenses. The net impact is a decrease
+in our operating profit for the year, due to the
+change in the accounting for expenses that were
+classified as operating leases under IAS 17. Further
+details are provided in Note 21.
+
+Critical accounting estimates, judgments and
+assumptions
+
+Preparing the financial statements means
+
+using accounting estimates and assumptions.
+Estimates and judgements are continually
+evaluated based on historical experience and
+other factors, including expectations of future
+events that are believed to be reasonable under
+the circumstances. In the future, actual experience
+may differ fram these estimates and assumptions.
+
+Management considers that the accounting
+estimates relating to these issues are the most
+material to the financial statements:
+
++ Going concern (see Directors report}
+
+The recognition of income from contracts
+(Note 9)
+
++ Fair valuing stock based compensation
+(Note 12)
+
++ The recognition of expected credit losses
+(Note 31)
+
+Summary of significant accounting policies
+
+This note lists significant accounting policies we
+used when preparing these financial statements
+which we haven't disclosed in other notes above.
+
+(a) Basis of consolidation
+
+In the period two wholly-owned subsidiaries,
+Monzo Inc and Monzo Support US Inc, were
+incorporated in Delaware; US. There were no
+transactions within Monzo Inc during the year.
+Monzo Bank Limited has prepared consolidated
+accounts under IFRS 10 in the year for the
+
+first time.
+
+The consolidated financial statements include the
+results of the Company and its subsidiaries. The
+subsidiaries are the entities over which Monzo
+Bank Limited exercises control. Contro! exists
+when the Company has the power to govern the
+financial and operating policies of an entity to
+vary the benefits it receives from the activities of
+the entity. In assessing control, the Group takes
+into consideration potential voting rights that are
+currently exercisable
+
+The financial results of subsidiaries are included
+in the consolidated financial statements from the
+date control starts until the date that control ends.
+
+In preparing the consolidated financial statements,
+intra-group balances and transactions, and
+
+any unrealised income and expenses arising
+
+from intra-group transactions, are eliminated.
+Unrealised losses are eliminated in the same way
+as unrealised gains, but only to the extent that
+there is no evidence of impairment.
+
+In the Company accounts the investment
+
+in subsidiary is held as historical cost less
+impairment. We assess impairment annually or as
+we become aware of any indicators of impairment.
+(b) Interest income calculated under the effective
+interest rate method
+
+According to IFRS 9, we recognise interest
+income in line with the effective interest rate.
+This represents the internal rate of return an the
+overdraft facilities, loans, and deposits with central
+banks, incorporating where relevant, all interest,
+direct fees, commissions and charges that are
+integral to the yield. This reflects a change from
+prior year treatment (where the overdraft income
+was recognised as fee income) as the product
+and fee structure has evolved to introduce more
+tiers and variation in margin. The internal rate of
+return is calculated by reference to the weighted
+average behavioural life of the financial assets
+with the identified interest, fees and charges
+being deferred and amortised over that product
+life. Comparative information is presented under
+IAS 39.
+
+(c) Fee and cammission income/expense and
+other operating income
+
+We’ve recognised fee and commission income
+and other operating income for the year according
+to the principles of IFRS 15 using the five-
+
+step model:
+
+1. !dentify the contracts with customers
+
+2. Identify the performance obligations in the
+contract
+
+3. Determine the transaction price
+
+4. Allocate the transaction to the performance
+obligations in the contract
+
+5. Recognise the revenue when (or as) the entity
+satisfies the performance obligation
+
+Fees and commission income is recognised in
+the income statement as performance obligations
+are satisfied.
+
+The key components of fees and commission
+income are Interchange income and ATM fees.
+Interchange income is recognised at the point
+that transaction is cleared. The amount is based
+on the presentment values which confirm that
+the performance obligations have been met. ATM
+fees are recognised at the point at which the ATM
+transaction takes place.
+
+({d) Financial assets and liabilities
+
+The Bank applies IFRS 9 to recognising, classifying,
+measuring and de-recognising financial assets
+
+and liabilities. We also apply IFRS 7 to disclosing
+information about the significance of financial
+instruments and the nature and extent of risks arising
+from financial instruments to the entity in both
+qualitative and quantitative terms.
+
+Our business model is to hold all financial assets and
+liabilities to collect contractual cash flows rather than
+to sell the instrument before maturity. The contractual
+terms of all financial assets held by the Bank give rise
+to cash flows that are solely payments of principal and
+interest. Therefore, all financial assets and liabilities
+are held at amortised cost using the effective interest
+rate method.
+
+The measurement basis, contractual maturity and fair
+value of financial assets and liabilities are shown in
+Note 30.
+
+(i) Cash and balances at bank
+Cash and balances at bank are recognised initially
+at fair value and then at amortised cost.
+
+(ii) Loans and advances to customers
+
+Loans and advances to customers consist of
+unsecured loans, overdrafts and overdrawn
+balances (unarranged overdrafts). We measure
+them under IFRS 9, first at fair value and then at
+amortised cost less Expected Credit Losses (ECL).
+
+The daily fee we charge on overdrafts and the
+interest we charge on loans are recognised within
+interest income, and are calculated under the
+effective interest rate method.
+
+Measuring the Expected Credit Loss allowance for
+financial assets at amortised cost is an area that
+requires us to use complex models and significant
+assumptions about future economic conditions and
+cfedit behaviour (like the likelihood of customers
+defaulting and the resulting losses). We've detailed
+the inputs, assumptions and estimation techniques
+used in measuring ECL in Note 31.
+We make a number of significant judgements
+in applying the accounting requirements for
+measuring ECL, like:
+
+— determining criteria for significant increase
+in credit risk;
+
+— choosing appropriate models and
+assumptions for measuring ECL; and
+
+— establishing the number and relative
+weightings of forward-looking scenarios
+for each type of product/market and the
+associated ECL.
+
+Detailed information about the judgements
+and estimates made by the Group in the above
+areas is set out in Note 31.
+
+(iii) Other assets
+
+We recognise receivables first at fair value and
+then at amortised cost. We recognise expected
+credit losses under IFRS 9 against certain
+receivables. The Group's expected credit losses
+for the year are shown in Note 31.
+
+(iv) Customer deposits
+We recognise customer deposit liabilities first
+at fair value and then at amortised cost.
+
+(v) Customer deposits in transit
+
+These amounts represent cash balances which
+customers have requested to deposit into third
+party savings accounts. The deposits are paid
+out to the third party providers the following
+business day after the customer request is
+initiated, after which they are derecognised
+from the balance sheet (upon settlement). We
+recognise these amounts at amortised cost.
+
+(vi) Other liabilities
+
+These amounts represent liabilities for goods
+and services provided to Monzo before the end
+of the financial period which are unpaid, The
+amounts are unsecured and usually paid within
+30 days of recognition. We recognise them first
+at fair value and then at amortised cost.
+
+{e) Provisions
+
+We recognise provisions under IAS 37 where
+
+we have present obligations arising from past
+events and the payment of the obligation can
+be reliably estimated and is probable. The Group
+did not record any provisions under IAS 37 in the
+financial year.
+
+(f) Cash and cash equivalents
+
+Cash and balances are held on demand, except
+for arnounts held as collateral at central banks as
+shown in Note 16. We show them in accordance
+with the regulatory license held by the institution.
+
+The Group didn’t hold any cash equivalents in
+the year.
+
+(g) Property, plant and equipment
+
+Items of property, plant and equipment are stated
+at cost less accumulated depreciation and
+impairment. Historical cost includes expenditure
+that is directly attributable to the cost of
+
+the assets.
+
+We provide depreciation on all property, plant
+and equipment, and calculate it using the
+straight-line method to allocate their cost, net of
+residual values, over their estimated useful lives,
+as follows:
+
+Office and IT Equipment — 3 years
+Fixtures and fittings — 3-5 years
+
+Fixtures and fittings, which include office fit-out
+costs, are recognised on a straight-line basis over
+the life of the lease.
+
+(h) Impairment of non-financial assets
+
+We assess, at each reporting date, whether there
+arte any indicators of impairment. If any indicators
+exist, we estimate the asset's recoverable
+amount. The recoverable arnount of an asset is
+the higher of its fair value less costs to sell and
+its value in use. If the carrying amount of the
+asset exceeds its recoverable amount, the asset
+is considered impaired, and is written down to its
+recoverable amount.
+(i) Current Taxation
+
+We measure current income tax assets and
+liabilities for the current period at the amount
+
+we expect to recover or pay to the taxation
+authorities. They involve a degree of estimation
+and judgement. To compute the amounts, we use
+the tax rates and tax laws which are enacted or
+substantively enacted at the reporting date when
+the Company generates taxable income.
+
+Management periodically evaluates the positions
+we take in terms of tax returns where the
+regulations are subject to interpretation, and
+establishes provisions where we need to, We
+base tax assets and liabilities relating to open and
+judgemental matters, including those related to
+the R&D reclaim, on our assessment of the most
+likely outcome based on information available
+and probability of potential challenge. We engage
+constructively and transparently with the tax
+authorities with a view to resolving any uncertain
+tax matters.
+
+(j) Deferred tax
+No deferred tax assets have been recognised ay at
+28 February 2019.
+
+We recognise deferred tax on temporary
+differences arising between the tax bases of
+assets and liabilities and their carrying amounts in
+the financial statements. We determine deferred
+income tax based on tax rates and laws which
+have been enacted, or substantively enacted by
+the reporting date and are expected to apply when
+the asset is realised or the deferred income tax
+liability is settled.
+
+We recognise deferred income tax assets only to
+the extent that it’s probable that future taxable
+profits will be available against which we can use
+the temporary differences.
+
+(k) Leases
+
+The Company applies IAS 17 Leases to its
+operating lease of office premises. We expense
+rentals payable under operating leases to the
+income statement on a straight line basis over the
+period of the lease including any rent free periods.
+
+(I) Share-based payments
+
+Employees (including senior executives) may
+be entitled to share options, as a reward for
+performing well and to incentivise them to make
+Monzo a success.
+
+The share options issued are equity settled
+
+with no cash settlement options. Options vest
+evenly over four years with a one year cliff, where
+if an employee leaves within the first year of
+employment, they forfeit all vested options at that
+date. There are no non-market vesting conditions.
+
+Our expense for the share options granted to
+
+our employees is recagnised over the period
+between the grant date and the vesting date of
+those options. We calculate the overall cost of
+the option award using the number of shares and
+number of options expected to vest and the fair
+value of the options at the grant date, The overall
+cost is recognised as an employee expense, with
+a corresponding increase in other reserves within
+equity, over the period that employees provide
+services. This is generally the period between the
+award being granted or notified and the vesting
+date of the options.
+
+We determine the grant date fair value using
+valuation models which take into account the
+terms and conditions attached to the awards.
+Inputs into the valuation model include the
+risk free rate and the expected volatility of the
+Company’s share price. The Company’s market
+share price is reassessed through 4 quarterly
+valuation exercise conducted by management,
+which considers revenue and contribution exit
+multiples (see Note 12).
+(m) Pensions
+
+We participate in a single defined contribution
+pension scheme in each of the UK and the US. The
+contribution payable to a defined contribution plan
+is a fixed percentage of the person's salary each
+month which is the same for all employees of each
+entity, unless they have opted out. This is recorded
+as an expense under personnel expenses. Unpaid
+contributions are recorded as a liability.
+
+We don’t operate any defined benefit
+pension plans.
+
+(n) Foreign exchange
+
+The financial statements for the Group and the
+Company are presented in GBP, which is the
+functional currency of the Company, as well as the
+currency of the primary economic environment we
+operate in.
+
+We initially record transactions in foreign
+currencies at the functional currency rate on the
+day of the transaction, We retranslate monetary
+assets and liabilities denominated in foreign
+currencies at the functional currency rate on the
+reporting date. All differences are taken to the
+Statement of Comprehensive income,
+
+We translate non-monetary items measured
+
+at historical cost in a foreign currency using
+
+the exchange rates on the day of the initial
+transactions. We translate non-monetary items
+measured at fair value in a foreign currency using
+the exchange rates on the day when the fair value
+is determined.
+
+(0) Capitalisation of software development costs
+
+It is our policy to capitalise software development
+costs in line with IAS 38. We have not capitalised
+any software development costs because we had
+not met the criteria of !AS 38 Intangible Assets by
+the end of the year.
+7. Net fees and commission
+
+The reported fees and commissions are those
+which don’t contain an interest element and don’t
+
+form part of any effective interest rate calculations.
+
+Fees and commission income
+Fee income on banking services
+Interchange fee income
+
+Partnership commission
+
+Partnership commission from trust and
+ather fiduciary activities
+
+Fees and commission expense
+
+Interchange fee expense
+
+Net fees and commission
+
+8. Credit impairment charges
+
+For more information on the impairment charge in
+respect of loans, overdrafts, overdrawn balances
+and receivables see Notes 31, 32 and 33.
+
+Credit impairment charge on overdrafts
+and overdrawn balances
+
+Credit impairment charge on loans
+Credit impairment charges on receivables
+
+Credit impairment charges
+
+Group
+
+Year ended
+28 Feb 2019
+£000
+
+2,639
+10,555
+85
+
+$2
+
+(6,664)
+
+6,567
+
+Group
+
+Year ended
+28 Feb 2019
+£000
+3,084
+
+23
+
+773
+
+3,880
+
+Group
+Year ended
+
+28 Feb 2018
+£'000
+
+160
+2,04)
+
+(834)
+
+1,367
+
+Group
+Year ended
+28 Feb 2018
+£°000
+
+12
+
+12
+
+Company
+
+Year ended
+28 Feb 2019
+£'000
+
+2,539
+10,555
+85
+
+$2
+
+(6,664)
+
+8,567
+
+Company
+
+Year ended
+28 Feb 2019
+£000
+3,084
+
+a3
+
+773
+
+3,880
+
+Company
+Year ended
+
+28 Feb 2018
+£7000
+
+160
+2,041
+
+(834)
+
+1,367
+
+Company
+Year ended
+28 Feb 2018
+£000
+
+12
+
+12
+9. Other operating income
+
+Other operating income includes income from
+contracts with a payment network provider of
+£1.4m (2018: £0.3m), which includes a sign-
+
+on bonus of £0.9m recognised as a result of
+achieving certain performance targets related to
+new customer business agreements signed within
+the financial year.
+
+10. Personnel Expenses
+
+Employee benefit expenses (including Directors)
+comprise of the costs summarised in the
+table below.
+
+The average number of employees of the Group
+during the period was 437 (2018: 183), 217 of
+these were employed in Management, Operations
+and Administration and 220 were employed in
+Customer Operations (COps).
+
+The increase in staff costs to £25.7m (2018:
+£9.2m) refiects the additional employees hired
+during the year to support the operational running
+of the Company.
+
+Salaries
+
+Social security contributions
+
+Contributions to defined contribution plans
+Share-based payments
+
+Other personnel expenses
+
+Total personnal expenses
+
+Group
+
+Year ended
+28 Feb 2019
+£°000
+
+19,376
+2,680
+761
+2,511
+326
+25,654
+
+Group
+
+Year ended
+28 Feb 2018
+£°000
+
+7,187
+
+860
+
+194
+
+916
+
+7
+
+9.214
+
+Company
+
+Year ended
+28 Feb 2019
+£°000
+
+19,346
+2,676
+760
+2,511
+317
+25,610
+
+Company
+
+Year ended
+28 Feb 2018
+£°000
+
+7,167
+
+860
+
+194
+
+916
+
+7
+
+9.214
+11. Directors’ remunerations
+
+As at 28 February 2019 there were no loans
+outstanding to directors (2018: £nil) and there
+were no loans made to directors during the period
+(2018: £nil).
+
+There were no share options exercised
+by Directors in the year and there were
+no shares given to Directors under any
+compensation schemes.
+
+Total Directors’ emoluments
+Salaries
+Share based payments
+
+Contributions to defined contribution plans
+
+Highest paid Director
+Salaries
+Share based payments
+
+Contributions to defined contribution plans
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+£7000 £°000 £°000 £°000
+
+464 473 464 473
+
+- 279 - 279
+
+4a 2 4 2
+
+aés 754 468 754
+
+VW 139 117 139
+
+- 166 - 166
+
+W7 305 117 305
+12. Share-based payments
+
+The Company operates two share options
+schemes. The first is an HMRC approved Company
+Share Option scheme (‘CSOP"), where awards can
+be made to employees subject to conditions. The
+strike price for these options is set accarding to
+the fair market share price at the time of issue as
+agreed with HMRC. The fair market share price
+was based on the pricing achieved in the funding
+round immediately preceding the issuances, since
+the shares aren't actively traded, The second
+scheme is a Non-CSOP scheme, these awards
+
+are made with the strike price set equal to the
+£0.0001.
+
+For accounting purposes, the fair market share
+price was evaluated on a quarterly basis through
+valuation exercise conducted by management,
+which considered relevant metrics such as
+revenue and contribution exit multiples. Where
+there was an external valuation (eg through
+fundraising) close to the date of the internal
+valuation, management have used the external
+valuation for purposes of calculating share
+based payments.
+
+The Company measures the cost of equity-settled
+options based on the fair value of the awards
+granted. The fair value is determined based on the
+Black-Scholes valuation modei since the share
+options aren’t actively traded. Using an option
+valuation model to determine the fair value means
+including highly subjective assumptions including
+the expected price volatility, expected life of
+
+the award and dividend yield. Changes in the
+subjective assumptions can materially affect the
+fair value estimates.
+
+The main assumptions we've used in deriving the
+value of the options at grant are:
+
+Risk free rate — 0.82%
+Volatility ~ 40%
+Dividend yield — nil
+Expected life — 4 years
+
+We recognise the fair value of options at
+
+grant date as an employee expense with a
+corresponding increase in other reserves over the
+period that the employees become unconditionally
+entitled to the awards. The total expense in the
+year ended 28 February 2019 was £2.5m
+
+(2018: £0.9m).
+
+Non ~ CSOP
+
+CSOP Number Number
+
+At 28 February 2017 2,828,696 3,214,419
+Granted during the period 2.601,094 1,752,032
+Lapsed (216,599) (240,096)
+Exercised (47,415) -
+At 28 February 2018 5,165,776 4,726,355
+Granted during the period 2,863,554 2,121,839
+Lapsed (577,455) (317,962)
+Exercised (126,951) (1,457,532)
+At 28 February 2019 7,324,924 5,072,700
+
+The range of exercise prices for the CSOP share
+options remaining is £0.1997 — £7.7145. The
+range of exercise prices for CSOP share options
+exercised in the financial year was £0.1997 -
+£1.0058. The exercise price for the non-CSOP
+share options is always £0.0001. The weighted
+average remaining life of the CSOP and non-CSOP
+share options is 8.51 years, whilst the weighted
+average fair value of the options at grant date was
+£3.7100.
+
+There have been no modifications to share-based
+payment transactions which resulted in a change
+in their classification from cash-settled to
+equity-settled,
+
+There are no share-based payments issued for
+employees of the subsidiaries involving equity
+instruments of Monzo Bank Limited.
+13. Operating expenses
+
+Auditors’ remuneration for the audit of the
+financial statements was £0.4m (2018: £0.1m) and
+remuneration in respect of non-audit services was
+£0.03m (2018: nil}.
+
+Technology costs includes charges for servers,
+data warehousing, cloud services and software.
+
+Current account operating costs includes the
+cost of payment schemes, card production and
+customer on~boarding.
+
+Prepaid card scheme
+Technotogy costs
+
+Premise and office costs
+Marketing
+
+Legal and professional fees
+Accountancy and audit fees
+Current account operating costs
+Product development
+Administrative expenses
+
+Intercompany expenses
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+£'000 £'000 £7000 £°000
+
+415 14,308 415 14,308
+
+4,389 1,815 4,389 1,815,
+4,695 952 4,680 952
+2,730 390 2,730 390
+3,345 857 3,330 857
+
+423 450 423 450
+
+14,190 5,953 14,190 5,953
+260 - 260 -
+
+2,974 701 2,972 703
+
+- - 76 =
+
+33,421 25,426 33,465 25,426
+14. Operating lease payments
+
+The total operating lease payments recognised as
+an expense in the year were £1.1m. The minimum
+
+lease payments outstanding at the balance sheet
+
+date are included in Note 26. Contingent liabilities
+and commitments.
+
+15. Taxation
+
+We have not recognised a deferred tax asset in
+respect of tax losses carried forward totalling
+£68.8m (2017: £29.6m) as there isn't enough
+evidence as to their recoverability.
+
+Current tax
+UK corporation tax credit on loss for the period
+
+Adjustment in respect of prior years
+
+Total for the year
+
+Loss on ordinary activities before tax
+Standard rate of corporation tax
+
+Expected tax credit
+
+Effects of:
+
+Expenses not deductible for tax
+
+Share options exercised
+
+Additional deduction for R&D expenditure
+
+Impact of surrendering losses at lower rate
+Adjustment to tax charge in respect of prior period
+
+Deferred tax asset not recognised
+
+Total UK corporate tax credit for the period
+
+Deferred tax
+The deferred tax included in the balance sheet is as follows:
+
+Included in debtors
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+£000 £°000 £000 £000
+1,858 2,530 1,858 2,530
+1,694 0 1,694 0
+3,552 2,530 3,562 2,530
+80,716 33,076 50,716 33,076
+18% 19% 19% 19%
+
+9,636 6,312 9,636 6,312
+(209) (12) (209) (12)
+
+697 19 697 19
+
+1,376 1,882 1,376 1,882
+
+(576) (800) (576) (800)
+1,694 0 1,694 0
+(9,066) (4,871) (9,066) (4,871)
+3,552 2,530 3,552 2,530
+
+Accelerated capital allowances
+
+Losses
+
+A deferred tax asset has not been recognised in
+respect of the following:
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+£7000 £000 £000 £000
+Unused tax losses 11,704 5,026 11,704 5,026
+Fixed asset timing differences 116 ie) 116 Qo
+Share based payments 6,686 1,127 6,686 1,127
+Other deductible temporary differences 27 7 27 7
+18,533 6,160 18,533 6,160
+Factors affecting future tax charge
+The UK Government has announced reductions
+in UK corporation tax to 17% by 1 April 2020, The
+closing deferred tax assets and liabilities have
+been calculated taking into account that existing
+temporary differences may unwind in periads
+subject to the reduced rates.
+16, Cash and balances at bank
+Our cash and balances at bank are held on
+demand unless otherwise stated. We show them
+in accordance with the regulatory license held by
+the institution.
+The reserves with central banks are encumbered
+as they are held at central banks as cash collateral
+and not available for use in day-to-day operations.
+This is required for the Bank to be a direct settling
+participant of the Faster Payments Service.
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Fab 2019 28 Feb 2018
+£000 £000 £000 £000
+Held with central banks $10,314 82,543 510,314 82,543
+Held with other banks 28,936 13,400 28,920 13,400
+Held with e-money institutions 597 - 597 -
+Reserves with central banks 10,000 1,000 10,000 1,000
+549,847 96,943 549,831 96,943
+17. Loans and advances to customers
+
+Loans and advances to customers consist of
+approved overdrafts provided to customers of
+£18.5m (2018: £0.1m), overdrawn balances on
+current accounts of £0.1m (2018: £0.1m), and
+loans of £0.6m (2018: nil). See Note 31 for more
+information on the impairment charge in respect of
+overdraft, overdrawn balances, and loans.
+
+Gross amounts receivable from customers
+
+Overdrafts and overdrawn balances
+
+Loans
+
+Gross amounts receivable from customers
+
+Amounts receivable from customers
+Gross receivables
+
+Credit loss provision
+
+Amounts receivable from customers
+
+Amounts receivable from
+customers net of provisions
+Overdrafts and overdrawn balances
+
+Loans
+
+Fair value of amounts receivable from customers
+
+Analysis of receivables from customers
+Due within one year
+
+Due in more than one year
+
+Amounts receivable from customers
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+£'000 £'000 £'000 £°000
+48,570 170 18,570 170
+603 2 603 2
+
+19,173 72 19,173 We
+19,173 Va 19,173 72
+(3,119} (12) (3,119} (12)
+16,054 160 16,054 160
+18,474 188 1§,474 158
+
+580 2 $80 2
+16,064 160 16,084 160
+19,173 172 19,173 172
+19,173 172 19,173 172
+18. Other assets
+
+Included within other assets are £19.8m (2018:
+£22.4m) of financial assets and £9,6m (2018:
+£5.9m) of non financial assets. The credit quality
+of the financial assets is considered low risk. The
+other receivables balance is short term in nature
+and included £3.5m of receivables in respect of
+payment network scheme refunds due, these were
+received in March.
+
+Receivables in respect of the prepaid card
+program are shown net of Expected Credit Losses
+as disclosed in Note 31.
+
+The recognised R&D asset is considered a
+non-financial asset and is based on analysis of
+eligible costs. During the year we concluded our
+discussions with HMRC in relation to our R&D
+reclaim for the 2017 year end of £1.2m (including
+interest). The reclaim was agreed and repayment
+made during the financial year. Our submitted R&D
+reclaim of £4.2m for the 2018 year end has also
+been repaid in full subsequent to the financial year
+end. Our estimated R&D reclaim of £1.9m for the
+2019 year end has been recognised in full.
+
+Group Group Company Company
+
+Year ended Year ended Year ended Year ended
+
+28 Feb 2019 28 Feb 2018 25 Fab 2019 28 Feb 2018
+
+£°000 £'000 £000 £7000
+
+Prepayments 3,207 2,016 3,202 2.016
+R&D tax reclaim 6,078 3,768 6,078 3,768
+VAT receivable 143 - 143 ~
+Accrued income 839 1,568 839 1,568
+Deposits on premises 182 143 182 143
+Receivables in respect of the prepaid card program 3,313 11,288 3,313 11,288
+Receivables in respect of the Faster Payments Service 11,020 2,062 11,020 2,062
+Other receivables 4,652 7,804 4,652 7,504
+29,434 28,348 29,429 26,348
+19. Property, plant and equipment
+
+Group
+
+Cost:
+
+As at 1 March 2017
+Additions
+
+Disposals
+
+As at 28 February 2018
+
+Depreciation:
+
+As atl March 2017
+
+Charge for the period
+
+Depreciation on assets disposed
+
+As at 28 February 2018
+
+Net book value as at 28 February 2018
+
+Cost:
+
+As at 1 March 2018
+Additions
+
+Disposals
+
+Write-ofts
+
+As at 28 February 2019
+
+Depreciation:
+
+As at 1 March 2018
+
+Charge for the period
+Depreciation on assets disposed
+Depreciation on assets written off
+As at 28 February 2019
+
+Net book value as at 28 February 2019
+
+Fixtures &
+
+fittings
+
+£’000
+
+174
+
+178
+
+47
+
+a7
+128
+
+WS
+937
+
+(176)
+936
+
+a7
+281
+
+(67)
+261
+675
+
+Office & IT
+equipment
+£'000
+
+219
+712
+
+931
+
+42
+194
+
+236
+695
+
+931
+1,478
+(44)
+(124)
+2,241
+
+236
+518
+(35)
+(81)
+
+1603
+
+Total
+£7000
+
+220
+886
+
+1,106
+
+42
+241
+
+283
+823
+
+4,106
+2,415
+
+(44)
+(300)
+3,177
+
+283
+798
+(35)
+(148)
+899
+2,278
+Company Fixtures & Office & IT
+
+fittings equipment Total
+£000 £7000 £'000
+Gost:
+As at 1 March 2017 1 219 220
+Additions 4 72 886
+Disposals ~ ~ =
+As at 28 February 2018 178 931 1,106
+Depreciation:
+As at 1 March 2017 - 42 42
+Charge for the period a7 194 24)
+Depreciation on assets disposed ~ ~ ~
+As at 28 February 2018 47 236 283
+Net book value as at 28 February 2018 128 695 823
+Cost:
+As at] March 2018 176 331 1,106,
+Additions a16 1,478 2,394
+Disposals ~ (44) (4a)
+Write-offs (178) (124) (300)
+As at 28 February 2019 915 2,244 3,156
+Depreciation:
+AS at 1 March 2018 4a? 236 283
+Charge for the period 281 $18 739
+Depreciation on assets disposed - (38) (38)
+Depreciation on assets written off (67) (81) (148)
+As at 28 Fabruary 2019 261 638 899
+
+Net book value as at 28 February 2019 654 1,603 2,287
+20.
+
+21.
+
+Collateral held with third parties
+
+Collateral held with third parties includes £14.8m
+(2018: £9.8m) of encumbered assets which
+
+are required to be held for access to payment
+networks, and £1.9m (2018: £nil) cash held in
+escrow to cover future rent payments on our
+London office.
+
+Impact assessment of transition from IAS 17 to
+IFRS 16
+
+New Standard
+
+IFRS 16 was issued in January 2016 and it replaces
+IAS 17 Leases, IFRIC 4 Determining whether an
+Arrangement contains a Lease, SIC-15 Operating
+Leases-Incentives and SIC-27 Evaluating the
+Substance of Transactions Involving the Legal
+Form of a Lease. IFRS 16 sets out the principles for
+recognising, measuring, presenting and disclosing
+leases and requires lessees to account for all
+leases under a single on-balance sheet model
+similar to the accounting for finance leases under
+IAS 17. The standard includes two recognition
+exemptions for lessees — leases of ‘low-value’
+assets and short-term leases, leases with a lease
+term of 12 months or less. At the start date of a
+lease, a lessee will recognise a lease liability and
+
+a right-of-use asset. Lessees have to separately
+recognise the interest expense on the jease
+liability and the depreciation expense on the right-
+of-use asset.
+
+Transition to IFRS 16
+
+The Group plans to adopt IFRS 16 retrospectively
+to each prior reparting period presented, The
+Group has not applied any practical expedients
+on transition.
+
+The Group will elect to use the exemptions
+proposed by the standard on lease contracts for
+which the lease terms end within 12 months of
+the start date, and lease contracts for which the
+underlying asset is of low value.
+
+The Group has performed a detailed impact
+assessment of IFRS 16. In summary the impact of
+IFRS 16 adoption is expected to be, as follows:
+Group Company
+
+Impact on the statement of financial position
+
+(increase/(decrease)) as at 28 February 2019: £000 £'000
+Assets
+
+Right-af-use assets 2,239 2,239
+Total assets 2,239 2,239
+Liabilities
+
+Lease liabilities 2,294 2,294
+Total liabilities 2,294 2,294
+Equity
+
+Accumulated losses (55) (85)
+Total equity (55) (55)
+Total liabilities and equity 2,239 2,239
+
+Impact on the statement of profit or loss
+(increase/(decrease)) for 2019:
+
+Increase in depreciation and amortisation expense 1,019 1,019
+Increase in finance costs 441 141
+Decrease in other operating expense (1,106) (1,106)
+Increase in total operating expense 54 54
+Increase in loss before tax 54 54
+Taxation - -
+increase in loss for the year 34 54
+Increase in total comprehensive loss for the year, net of tax 54 54
+
+Impact on statement of changes in equity
+
+Balance as at 28 February 2018 (1) (1)
+Shares issued - ~
+Coat of issuance - ~
+Share based payments reserve ~ -
+Exercise of options ~ ~
+
+Losses for the year (84) (54)
+
+Balance as at 28 February 2019 (85) (85)
+22, Customer deposits
+
+The Bank holds customer deposits at the end of
+the year of £461.8m (2018: £71.3m) which are held
+on demand.
+
+23, Other liabilities
+
+Included within other liabilities are £30.0m
+(2018: £6.0m) of financial liabilities and £6.9rm
+(2018: £6.3m) of non financial liabilities,
+
+Accruals
+
+Accounts payable and other creditors
+Intercompany accounts payable
+Customer funds in transit
+
+Other taxes and social security costs
+
+Deferred income
+
+Group Group Company Company
+Year ended Year ended Year ended Year ended
+28 Feb 2019 28 Feb 2018 28 Feb 2019 28 Feb 2018
+£’000 £°000 £7000 £°000
+4,075 3,910 4,063 3,910
+2,041 1,363 2,031 1,363
+
+- - 58 -
+
+27,958 6,044 27,958 6.044
+1,080 431 1,080 431
+1,745 617 1,745 617
+36,899 12,365 36,935 12,365
+24. Called up share capital
+
+The ordinary shares have several share classes all
+of which have the same full voting rights attached
+and rank pari passu in all respects except of
+
+the distribution of the proceeds on a share sale
+event involving a change in contro! and anti-
+dilution rights.
+
+Ordinary shares af LO00000.1/£0.0001 each
+
+Some of the shares in issue are owned by the
+board, management and staff. At the balance
+sheet date 9,659,785 (2018: 3,142,018) shares
+were unvested.
+
+Other reserves are made up of the share-based
+payments that haven’t yet been exercised at
+
+As at 28 February 2017
+Shares issued
+
+Options exercised
+
+As at 28 February 2018
+Shares issued
+
+Options exercised
+
+As at 28 February 2019
+
+year end.
+Year ended Year ended
+28 Feb 2019 28 Feb 2018
+£ £
+12 11
+12 ah
+Number of Number of Share
+Nominal ordinary shares deferred shares Capital £
+71,696,550 - 7
+0.0000001 33,655,679 - 4
+9.0000001 47,415 - fe)
+105,399,644 - 11
+0.0000001 13,766,369 - 1
+0.0000001 1,684,483 - 0
+120,750,496 - 12
+25. Related party transactions and controlling parties
+
+Controlling parties
+In the opinion of the Directors there is no overall
+controlling party.
+
+Transactions with key management personnel
+
+Key management personnel are defined as those
+people with authority and responsibility for
+planning, directing and controlling the activities of
+the Company. This includes the Board of Directors
+and Executive Committee.
+
+The compensation paid or payable to key
+management personnel is shown in the
+tables below:
+
+Yearended Year ended
+28 Feb 2019 28 Feb 2018
+
+£'000 £'000
+Salaries & remuneration 1,415 433
+Social security contributions 68 47
+Share based payments 637 27
+Contributions to defined 27 12
+contribution plans
+
+2,147 709
+
+In addition, a total of 129,706 shares were
+purchased by Directors’ at a fair value of £222,253
+in the year ended 28 February 2019.
+
+The deposits, overdrafts and loans of key
+management personnel and their close family
+members on the balance sheet at year end are
+shown in the table below:
+
+Year ended Year ended
+28 Feb 2019 28 Feb 2018
+
+£'000 £000
+Deposits 147 96
+Overdrafts 0 0
+
+Loans - -
+
+In addition, overdrafts totalling £0.01m were
+available to key management personnel at
+year end.
+
+Transactions with related parties
+There were no transactions with related parties
+during the year other than those disclosed above.
+26. Contingent liabilities and commitments 27. Contingent asset
+
+Contingent liabilities In the year ended 28 February 2019, the Group
+There are no significant contingent liabilities as at renegotiated its contract with a key payment
+28 February 2019 (2018: none). network provider. The new contract includes
+
+certain discounts on cross-border fees, based
+on achieving transaction volume targets by 30
+September 2019. Management deemed the
+discount to be a contingent asset arising from
+past events under IAS 37. As at 28 February 2019,
+this target had not been achieved, and therefore
+
+From time to time and in the normal course of
+business, the Company can be subject to a variety
+of claims, actions or proceedings. We do not
+expect the resolution of any such matters to have
+a significant impact on our financial position.
+
+Undrawn commitments it was not virtually certain that this benefit will be
+Total committed but undrawn facilities as at realised and therefore no asset was recognised,
+28 February 2019 are £81.0m (2018: £0.7m) in Management has estimated the value of the
+respect of customer overdraft agreements. These contingent asset to be at £350k at year end.
+
+commitments represent agreements to lend in the
+future subject to the terms and conditions of the
+agreement, so the amount and timing of future
+cash flows are uncertain.
+
+Operating lease commitments
+
+Commitments for minimum lease payments in
+relation to non-cancellable operating leases are
+payable as follows:
+
+Yearended Year ended
+28 Feb 2019 28 Feb 2019
+
+£'000 £’000
+Within one year 1,307 651
+Later than one year but not 1,275 879
+
+later than five years
+Later than five years ~ ~
+
+Total 2,582 1,530
+
+28. Provisions
+
+In the previous financial year, management
+recognised an uncertain tax provision of £2.5m in
+telation to ongoing enquiries from HMRC into the
+R&D reclaim for the 2017 year end. This provision
+was wholly reversed in this financial year as the
+reclaim was fully agreed and settled. No other IAS
+37 provisions were recognised in the year.
+
+R&D reclaim Total
+
+£'000 £°000
+
+Additions - -
+Used - -
+Unused amounts reversed (2,470) {2,470)
+
+Unwinding of discount
+
+Closing provision —
+28 February 2019
+
+29.
+
+Average number of employees
+
+Country reporting disclosure
+
+In 2014, the UK Government enacted legislation
+(contained in the Financial Services and Markets
+Act 2000 Statutory Instrument 3118) with respect
+to country reporting disclosure.
+
+Monzo Bank Limited is incorporated in the UK and
+undertakes banking activities as described in the
+Strategic Report.
+
+Monzo Support US Inc is incorporated in the
+USA and provides support services to Monzo
+Bank Limited.
+
+Monzo Inc is incorporated in the USA, there was
+no activity in the entity for the year ended 28
+February 2019.
+
+UK USA Total
+£°000 £7000 £7000
+
+(FTE) 436 1 437
+Turnover (Total income} 19,702 - 19,702
+Loss before tax $0,716 - 50,716
+Corporation tax credit 3,552 - 3,552
+Public subsidies received ie} - ie}
+30. Financial assets and liabilities The Group classifies its financial assets at
+
+The balances in the tables below relate to amortised cost only if both of the following criteria
+financial assets and liabilities only. The figures are met:
+
+in the balance sheet also include non-financial (i) The asset is held within a business model
+assets and so certain figures in the table below whose objective is to collect the contractual
+don’t agree directly with the figures in the cash flows.
+
+balance sheet.
+
+a . ; (ii) The contractual terms give rise to cash
+The Group initially recognises all of the financial flows that are solely payments of principal
+assets and tiabilities it holds at fair value and then and interest.
+
+at amortised cost,
+The loans and advances to customers are held
+
+at amortised cost, net of provisions for expected
+credit losses, as shown in Note 17,
+
+Financial assets and liabilities by measurement basis
+
+Amortised cost Fair value Total
+As at 28 February 2019 £000 £000 £000
+Financial assets
+Cash and balances at bank $49,847 - 549,847
+Loans and advances to customers 16,054 ~ 16,054
+Other assets 19,824 ~ 19,824
+Collateral held with third parties 18,277 ~ NG,777
+Total financial assets 602,502 ~ 602,502
+Financial liabilities
+Customer deposits 461,822 ~ 461,822
+Other liabilities 29,999 ~ 29,999
+Total liabilities assets 491,821 ~ 491,821
+As at 28 February 2018
+Financial assets
+Cash and balances at bank 96,943 - 96,943
+Loans and advances to customers 160 - 160
+Other assets 26,198 ~ 26,198
+Collateral held with third parties 9,755 ~ 9,755
+Total financial assets 133,056 - 133,056
+Financial liabilities
+Customer deposits 71,276 - 71,276
+Other liabilities 6,044 - 6,044
+
+Total liabilities assets 77,320 - 77,320
+Fair value of financial assets and liabilities
+recognised at amortised cost
+
+Fair value hierarchy
+
+The fair value of financial assets and liabilities
+is the price that would be received or paid
+
+to transfer an asset or liability in an orderly
+transaction between market participants at the
+measurement date.
+
+IFRS 13 has sought to make measurements at
+fair value more consistent and comparable by
+categorising fair value according to the hierarchy
+of the inputs used to measure them. These are
+categorised from Level 1 as the highest priority to
+Level 3 as the lowest.
+
+Level 1 - Quoted prices in active markets for
+identical assets or liabilities which the Group can
+access at the date of measurement.
+
+Level 2 — Inputs other than quoted market prices
+included in Level 1 that are observable either
+directly or indirectly.
+
+Level 3 - Inputs that are not based on observable
+market data,
+
+Basis of valuation
+
+Cash and balances at bank
+
+Fair value approximates carrying value because
+cash and balances at bank have minimal credit risk
+and are short term in nature other than amounts
+held as coilateral with central banks.
+
+Loans and advances to customers
+
+The Group provides overdrafts and loans. The
+
+fair value of the overdrafts has been determined
+through discounting (using EIR) the gross carrying
+value of the overdrafts to present value less ECL.
+Due to the short term nature of loans and as
+market rates have not changed since the loans
+have been in issue the Group has assessed that
+their fair value has not varied significantly from
+their carrying value.
+
+Customer deposits
+Fair value of deposit liabilities held on demand are
+deemed to approximate the carrying value.
+
+Other assets and liabilities
+Fair value of other assets and liabilities are
+deemed approximate to the carrying value.
+The following table summarises the fair values
+
+of financial assets and liabilities by the level of
+inputs that are not reported on the balance sheet
+at their fair value but are instead reported using
+amortised cost.
+
+Level 1 Level 2 Level 3 Total fair value carrying valve
+As at 28 February 2019 £000 £000 £000 £000 £000
+Financial assets
+Gash and balances at bank - 549,847 - 549,847 549,847
+Loans and advances to customers - - 15,766 15,766 16,054
+Other assets - 16,511 3,313 19,824 19,824
+Collateral held with third parties - 16,777 - 16,777 16,777
+Total financial assets - 583,135 19,079 602,214 602,502
+Financial liabilities
+Customer deposits - 461,822 - 461,822 461,822
+Other liabilities - 29,999 - 29,999 29,999
+Total financial liabilities - 491,821 - 491,821 491,821
+Net asset position - 91,314 19,079 110,393 110,681
+As at 28 February 2018
+Financial assets
+Cash and balances at bank - 96,943 > 96,943 96,943
+Loans and advances to customers. - 160 - 160 160
+Other assets - 26,198 ~ 26,198 26,198
+Collateral held with third parties - 9,785 ~ 9,765 9,755
+Total financial assets - 133,056 ~ 133,056 133,056
+Financial liabilities
+Customer deposits ~ 71,276 ~ 71,276 71,276
+Other liabilities ~ 6,043 ~ 6,043 6,043
+Total financial liabilities ~ 77,319 ~ 77,319 77,319
+Net asset positi ~ $5,737 ~ $5,737 55,737
+
+Contractual maturity of financial assets and liabilities
+
+Lessthan Between three Less than Over
+
+On demand three months = and six months one year one year Total
+As at 28 February 2019 £7000 £'000 £7000 £'000 £'000 £'000
+Financial assets
+Cash and balances at bank 539,847 - ~ - 10,000 549,847
+Loans and advances to customers 15,474 580 - - - 16,054
+Other assets 18,446 1,065 3,313 - - 19,824
+Collateral held with third parties - 124 - - 16,653 16,777
+Total financial assets §70,767 1,769 3,313 ~ 26,653 602,502
+Financial liabilities
+Customer deposits 461,822 - - - - 461,822
+Other liabilities 28,425 1,574 - ~ - 29,999
+Total financial liabilities 490,247 1,574 ~ - ~ 491,821
+Net asset position 80,520 198 3,313 ~ 26,653 110,681
+As at 28 February 2018
+Financial assets
+Cash and balances at bank 96,943 ~ ~ ~ ~ 96,943
+Loans and advances to customers 160 ~ ~ ~ ~ 160
+Other assets 1,668 23,922 709 ~ - 26,199
+Collateral held with third parties ~ - ~ - 9,755 9,755
+Total financial assets 98,671 23,922 709 - 9,785 133,057
+Financial liabilities
+Customer deposits 71,276 ~ - ~ ~ 71,276
+Other liabilities - 6,044 ~ - - 6,044
+Total financial liabilities 71,276 6,044 - - - 77,320
+
+Net asset position 27,395 17,878 709 - 9,755, 55,737
+31.
+
+Credit risk
+
+Credit risk is the risk of financial loss when
+customers or other counterparties fail to settle
+their contractual obligations to the Bank or fail to
+perform their obligations in a timely manner.
+
+The Bank currently provides overdraft facilities
+and short term unsecured loans to individuals in
+order to generate a return through overdraft fees
+and interest income. Lending creates credit risk
+as borrowers might fail to pay the fees/interest
+or the capital due. This is usually caused by
+adverse changes in macro-economic factors or a
+change in an individual customer's behaviour and
+circumstances.
+
+The maximum exposure to credit risk includes the
+total committed overdrafts (Note 26) and loans on
+the balance sheet (Note 17), As a material risk to
+the Bank, there is significant management focus
+on setting credit risk appetite and embedding
+appropriate risk mitigation.
+
+The below disclosures do not contain IFRS 9 or
+IFRS 7 comparatives for the prior year as they are
+not material.
+
+Credit risk management
+
+Exposure to credit risk is monitored and managed
+by the Lending department and overseen by
+
+the CRO function in the 2nd line of defense. The
+principal committee at which the bank’s retail
+credit risk is scrutinised and managed is the
+Credit Risk Committee which is overseen by the
+Executive Risk Committee. In addition, the overal!
+Risk appetite and lending criteria and policy is
+approved by the Board.
+
+The Credit Risk Committee monitors a responsible
+lending policy and ensures appropriate controls
+are in place to maintain the quality of lending,
+including reviewing management information
+that include credit portfolio and financial
+accounting metrics.
+
+Early warning indicators, credit performance
+trends and key risk indicators are monitored within
+the Lending department with recommendations
+discussed at the Credit Risk Committee for
+approval and subsequent implementation.
+Overarching appetite indicators are tracked at
+
+the Executive Risk Committee and at the Board
+Risk Committee.
+
+Credit risk mitigation
+
+The Bank uses lending criteria when assessing
+applications for overdrafts and loans which are
+aligned to Affordability principles (as outlined in
+the FCA’s Consumer Credit sourcebook) and the
+Bank’s risk appetite. The general approval process
+uses application data provided by the customer
+when they take an an overdraft or loan and their
+credit history using information held by credit
+reference agencies. Customer exposure is actively
+managed to make sure that lending exposure is
+within the risk appetite at all times. As a result,
+overdraft limits can be revised when applications
+are reassessed.
+
+Alt lending policies are determined with reference
+to current and likely future expectations of the
+UK's macro-economic environment and with an
+expectation that material losses will not occur.
+
+The main goal of the collections policy is to treat
+customers fairly. The Bank contacts each customer
+in financial difficulty individually to discuss their
+circumstances. Where a customer is identified
+
+as vulnerable or in financial difficulty, the Bank
+offers a range of support, tools and assistance (or
+points them towards external organisations that
+can give them extra support). This means the Bank
+can agree individual actions or plans with each
+customer, which helps to bring customers facilities
+back into a sustainable position.
+Impairment under IFRS 9:
+
+IFRS 9 requires recognition of expected credit
+losses based on forward-looking information and
+for the Bank is appticable to loans and overdrafts
+measured at amortised cost. Under IFRS 9
+quidance, assets are required to be classified into
+the following three stages:
+
+Stage 1: Assets that have not had a significant
+increase in credit risk since initial recognition
+or that have low credit risk at the reporting
+date. For these assets, 12-month expected
+credit losses (ECL) are recognised and interest
+revenue is calculated on the gross carrying
+amount of the asset. 12-month ECL are the
+expected credit losses that result from default
+events that are expected within 12 months after
+the reporting date.
+
+Stage 2: For assets that have experienced
+
+a significant increase in credit risk since
+initial recognition but that do not have
+objective evidence of impairment, lifetime
+ECL are recognised and interest income is
+still calculated on the gross carrying amount
+of the asset. Lifetime ECL are the expected
+credit losses that result from all possible
+default events over the expected life of the
+financial instrument.
+
+Stage 3: For assets that have objective
+evidence of impairment at the reporting date,
+lifetime ECL are recognised and interest income
+is calculated on the net carrying amount.
+
+The Bank does not use the low credit risk
+exemption for overdrafts and does not measure
+expected credit losses on a collective basis.
+
+The above model requires a number of key
+supporting policies and methodologies:
+
+ECL model: Credit losses are the expected cash
+shortfalls from what is contractually due over
+the expected life of the financial asset. The
+impairment model calculates ECL at a customer
+level by multiplying probability of default
+
+(PD), exposure at default (EAD) and the loss
+given default (LGD) and discounting using the
+original EIR.
+
+~~ PD represents the likelinood of a customer
+defaulting on their overdraft or loan.
+Given the lack of historical data, it is not
+possible for the Bank to utilise an internal
+scorecard to build our PD models. The
+Bank currently relies on data provided by
+an external Credit Bureau which is suitably
+calibrated to PDs representative of the
+Bank’s portfolio. Monzo aims to eventually
+develop an internal credit scorecard in the
+medium term.
+
+— EAD is based on the amount expected
+to be owed at default over the next 12
+months or over the remaining lifetime.
+For overdrafts, the EAD is calculated by
+taking current drawn balance and adding a
+credit conversion factor that allows for the
+expected drawdown of the remaining limit
+by the time of default.
+
+— LGD is the expectation of loss ona
+defaulted exposure and represents Monzo’s
+expectation of the extent of loss ona
+defaulted exposure and is expressed as a
+percentage loss per unit of EAD.
+Determining a significant increase in credit risk
+since initial recognition. The impairment model
+utilises both relative and absolute criteria to
+identify increases in credit risk:
+
+— Quantitative criteria: the quantitative trigger
+has been based around the comparison of
+the remaining lifetime PD at observation
+(i.e. reporting date) against the lifetime PD
+at origination, when the exposure was first
+recognised. If the ratio of these two PDs
+breaches a predefined threshold of 1.8 at
+any point, the account is moved into Stage
+2 and its ECL is calculated on a Lifetime
+PD basis.
+
+— Qualitative criteria: short-term forbearance
+has been reflected in the model as a trigger
+for a significant increase in credit risk. For
+example, when a customer has agreed to a
+Promise to Pay (i.e. when a customer agrees
+to bring their balance back within their
+arranged overdraft limit by a certain date).
+
+— Backstop: A rebuttable presumption
+within IFRS 9 is that, where the customer
+is more than 30 days past due, credit risk
+has significantly increased. However, if
+reasonable and supportable information
+can suggest that an alternative number of
+days past due is more appropriate, then the
+backstop trigger may be amended. Based
+on analysis conducted by management on
+cure rates, a backstop of 15 days has been
+assessed to be more appropriate.
+
+Forecast economic data. IFRS 9 requires
+ECL to reflect a range of possible outcomes
+and consider possible future economic
+conditions. To achieve this, the model uses
+three economic forecasts: base, upside and
+downside scenarios. Ail of the scenarios have
+been sourced from an independent credit
+tisk consultancy. The upside and downside
+scenarios are calculated from a range of
+economic variables that are stressed around
+the base case.
+
+Statistical analysis has been performed
+to identify the economic variables that
+are significant to ECL. The forward looking
+economic variables which are considered
+as inputs in the model are (ij) Changes in
+Unemployment and (ii) Mortgage Interest
+Gearing.
+
+These variables are then applied to PD, LGD and
+EAD, with the weighted average of the three
+scenarios used to calculate the ECL. Based
+
+on the economic scenario analysis conducted
+by the Bank, the weightings for each scenario
+were 60% Baseline, 26% Downside, and 15%
+Upside.
+Definition of default and credit-impaired assets.
+The Bank considers a financial instrument
+defaulted and therefore Stage 3 (credit-
+impaired) for ECL calculations when the borrower
+becomes 90 consecutive days past due. In the
+case of overdrafts, a customer is deemed to be
+past due when (i) the customer is above the
+authorised limit, or (ii) the customer is within
+their limit but has not had any credit applied to
+their account for 90 consecutive days. For loans
+an account is deemed 90 days past due when
+they become three instalments behind their
+agreed monthly repayment schedule.
+
+As a part of a qualitative assessment of
+whether a customer is in default, the Bank
+
+also considers a variety of instances that may
+indicate unlikeliness to pay. When such events
+occur, the Bank carefully considers whether the
+event should result in treating the customer
+
+as defaulted and therefore assessed as Stage
+
+3 for ECL calculations or whether Stage 2 is
+appropriate, Such events include:
+
+1) The customer filing for bankruptay or Individual
+Voluntary Agreement; or
+
+2) The customer is deceased:
+
+3) The overdraft or loan has been renegotiated
+because the customer's condition has
+deteriorated. This includes cases where a
+specific repayment plan has been agreed.
+
+4) The customer has requested ‘breathing space’
+ie when the Bank agrees to give the customer
+some time in which they won't be contacted
+about their arrears at all and fees or interest
+
+is frozen,
+
+It is the Bank’s policy to consider an overdraft
+account as ‘cured’ and therefore re-classified
+out of Stage 3 when the outstanding balance is
+reduced to below the authorised limit set and
+
+a three month probation period has passed. An
+overdraft account which is in Stage 3 due to no
+credit activity in 90 days, is considered cured at
+the point when a credit transaction takes place
+and a three month probation period has passed.
+Loans are considered ‘cured’ and therefore
+re-classified out of stage 3 when all past due
+repayments are repaid along with any additional
+interest that may have accrued due to their
+
+late payment.
+
+In the case of longer term forbearance which
+result in modifications of contractual cash flows
+(ie a freeze of fees or a repayment plan), this
+does not impact the gross carrying amount of
+the financial asset however the ECL booked
+changes as these financial assets would now
+be classified as Stage 3 and under lifetime
+ECL. As at February 2019, the gross carrying
+amount of accounts in forbearance was
+£0.2m. The lifetime ECL booked against these
+accounts as at 28 February 2019 was £0.1m;
+the initial ECL booked for these accounts at
+the point of origination was £0.01m. From
+
+a risk management point of view, once an
+asset is forborne or modified, we continue to
+monitor the exposure until it is completely and
+ultimately derecognised.
+
+* Write-off policy. A loan or overdraft is written-
+off, either partially or in full, against the related
+provision when sufficient time has passed
+and the Bank has exhausted all practical
+tecovery efforts and has concluded there is no
+reasonable expectation of recovery, Indicators
+that there is no reasonable expectation of
+recovery include:
+
+a) Customer indicates inability (cannot
+afford) to pay the outstanding balance over
+a reasonable period through a renegotiated
+repayment plan; and
+
+b) it is deemed that the customer does not
+show enough “willingness to pay”:
+
+(i) Not keeping a promise to pay over a
+period of time;
+
+(ii) Defaulting in renegotiated repayment
+plan; and
+
+{iii} Not contactable.
+
+Other than the £383k of unauthorized overdrafts
+which were directly written off to the profit and
+loss during the year, no overdraft or loan assets
+were written off during the year.
+Critical accounting estimate:
+
+The calculation of the credit impairment provision
+position involves judgement, in particular the
+weighting of economic scenarios used to calculate
+forecast losses. Sensitivity analysis shows that
+calculating the provision based solely on the
+
+downside scenario increases the charge by £0.4m.
+
+As at 28 February 2019, the Bank's portfolio
+consisted entirely of retail lending within the
+
+UK. There is no concentration of credit risk by
+
+any particular feature within the portfolio, The
+following table summarises lending as at the year
+end by IFRS 9 impairment stage and the related
+provision. Note that comparative measures are not
+presented as they are not material.
+
+As at 28 Feb 2019
+
+Overdrafts and overdrawn balances
+
+Loans
+
+Gross carrying amount
+Overdrafts and overdrawn balances
+
+Loans
+
+Impairment provision
+Overdrafts and overdrawn balances
+Loans
+
+Net amounts receivable
+
+During the year, the Bank also recognised an
+expected credit loss against a receivable balance
+related to the closed prepaid card programme due
+to the ongoing efforts associated with its recovery,
+The Bank applied the simplified approach, as
+permitted under IFRS 9 for trade receivables,
+meaning that the lifetime ECL. was recognised on
+this balance,
+
+Stage 1 Stage 2 Stage 3 Total
+£°000 £°000 £'000 £'000
+14,226 3,273 1,071 18,870
+
+578 20 5 603
+
+14,804 3,293 1,076 19,173
+
+(1,187) (954) (955) (3,096)
+(4) (7) (5) (23)
+
+(1,198) (961) (960) (3,119)
+
+13,039 2,319 116 15,474
+567 13 io} 580
+13,606 2,332 116
+
+Opening expect credit loss ~
+1 March 2018
+
+Additions
+Used
+Unused amounts reversed
+
+Unwinding of discount
+
+Closing expected credit loss ~
+28 February 2019
+
+Receivables Total
+£000 £'000
+
+773 773
+
+773 773
+32. Impairment allowance movement table
+
+An analysis of changes in the gross loan and
+overdraft amounts receivable from customers and
+the related IFRS 9 provision is as follows:
+
+The provision increase was primarily driven by the
+origination of £18.8m of new overdraft accounts
+and £0.6m of new loans.
+
+Stage 1 Stage 2 Stage 3 Total
+Gross balances £000 £'000 £000 £000
+Gross amounts due from customers
+As at 1 March 2018 172 ~ - 172
+New facilities originated 19,379 ~ - 19,379
+Transfer to Stage 2 (3,322) 3,322 ~ ~
+Transfer to Stage 3 (1,367) (79) 1,446 ~
+Increase / (decrease) in credit risk (58) 50 8 -
+De-recognition ~ ~ (378) (378)
+AS at 28 February 2019 14,804 3,293 1,076 19,173
+Impairment
+As at 1 March 2018 12 ~ “ 12
+New facilities originated 1,339 “ ~ 1,339
+Transfer to Stage 2 (79) 79 ~ ~
+Transfer to Stage 3 (53) ~ 53 -
+stove Suna theyear of exposures transferred between (98) 662 we 1,676
+Changes to models used for ECL calculation (32) 208 173 349
+Changes in data inputs to ECL calculation 109 12 ~ 121
+De-recognition ~ ~ (378) (378)
+As at 28 February 2019 4,198 961 960 3,119
+33. Credit quality
+
+The table below provides information on the credit
+quality of the Bank’s overdraft and loan book. This
+is segmented by risk grades which are determined
+via reference to credit scores provided by an
+external Credit Bureau agency with each having an
+associated PD range. This is consistent with the
+Bank's internal credit risk policy.
+
+Gross Net receivables
+receivables due impairment due from
+from customers allowance customers
+
+Risk grade £7000 £7000 £7000
+Very low risk 4,473 (532) 3,941
+Low risk 3,493 (206) 3,287
+Medium risk 3,573 (321) 3,252
+High risk 2,878 (389) 2,489
+Very high risk 4,756 (1,671) 3,085
+As at 28 February 2019 19,173 (3,119) 16,054
+34.
+
+35,
+
+Liquidity risk management
+
+Liquidity risk is the risk that the Company fails
+
+to meet its obligations as they fall due or can
+
+only do so at exceptional cost. This includes
+having the right type and quantity of funds, in the
+right place, at the right time and in the correct
+currency. Monzo’s liquidity risk appetite is to
+meet all liabilities as they fall due. The contractual
+maturities of financial assets and liabilities are
+included in Note 30.
+
+Liquidity risk is managed by the Treasury
+department. Reporting and management of the
+liquidity risk is monitored by ALCO, which meets on
+a monthly basis.
+
+The company currently holds its surplus assets
+in overnight deposits with central banks which
+are accessible on demand to provide liquidity for
+the Bank.
+
+The key metric used to monitor liquidity risk is
+the Liquidity Coverage Ratio (LCR). At year end
+and at all times throughout the year, Monzo was
+significantly in excess of all liquidity targets.
+
+Capital management
+
+Capital risk is the risk that the Company has sub-
+optimal quantity or quality of capital resources
+to meet its capital requirements and to absorb
+unexpected losses if they were to occur. Causes
+of inadequate capital could include a high
+
+level of default on overdrafts already made
+
+by the Company, or having large unexpected
+operational losses.
+
+Capital is one of the Bank's key measures and the
+Board approved capital risk appetite makes sure
+we're holding sufficient capital within regulatory
+requirements, The principal committee at which
+the bank’s capital is scrutinised and managed
+
+is ALCO. The Executive Committee and Risk
+Committee review high level capital metrics,
+together with more specific details if there are any
+concerns. The Board and Risk Committees also
+receive high level metrics and commentary on
+capital risk and projections of capital usage and
+surplus going forward.
+
+Monzo continues to maintain capital ratios
+
+that exceed its minimum requirements under
+
+the capital requirement directive IV regulatory
+framework. Monzo refreshes its Internal Capital
+Adequacy Assessment Process (ICAAP) on an
+annual basis, which includes a 3 year forecast of
+the Bank’s capital position. The ICAAP is used to
+inform the future capital strategy and is submitted
+to the PRA following Board scrutiny and approval.
+
+The ICAAP assesses the Company’s Pillar 1
+requirements using the Standardised/ Basic
+Indicator approaches (for respectively credit
+risk and operational risk capital) and determines
+additional Pillar 2A capital to be held for those
+risks not captured or not fully captured by Pillar 1
+capital. The Company also holds Pillar 2B capital
+based upon wind-down costs and the regulatory
+determined capital conservation buffer and
+counter-cyclical buffer.
+
+A series of stress and scenario testing during a
+
+3 year forecast is also undertaken to assess the
+resilience of the capital position. In all cases,
+Monzo has shown that it is able to withstand the
+Board approved stress scenarios, in some cases
+because management actions have been taken to
+mitigate the effect of these stresses.
+
+Key capital risk metrics
+
+Monzo’s key capital metric is the current and
+projected surplus of capital resources over
+regulatory capital requirements. The CET1 ratio
+
+is also monitored. Currently Monzo’s capital
+resources consists solely of paid up share capital.
+As at 28 February 2019 Monzo’s CET1 ratio is 126%
+(unaudited) based on our current capital minimum
+capital requirements.
+
+During the year ended 28 February 2019, the Bank
+complied in full with all its externally imposed
+capital requirements.
+36. Market risk management
+
+Interest rate risk
+
+Interest rate risk for the Group relates to the
+interest earned on deposits with central banks.
+The Group monitors the risk at the ALCO meetings
+ona monthly basis. The Group assesses this
+
+risk by:
+
+considering any impacts of new products
+(including associated terms and returns)
+
+* conducting portfolio stresses by calculating
+the impact of a 200 basis point movement in
+interest rates from the rate of 0.75% prevailing
+at year end
+
+Based on the Group’s deposits with central banks
+at year end this would result in a +/~ £10.4m
+impact on profit or loss.
+
+Foreign exchange risk
+
+Foreign currency risk arises from having assets
+and liabilities in currencies other than Sterling. The
+ALCO monitors the impact of a 10% movement in
+foreign exchange rates.
+
+At year end the Group holds balances in US Dollars
+and Euros. The impact that this would have given
+the year end foreign currency balances is +/- £30k
+to profit or loss,
+
+Monzo Support US also holds cash at bank for its
+operational use and this is deemed immaterial to
+the group.
+
+37.
+
+Events after the reporting date
+
+The Company raised an additional £113m of equity
+share capital, from new and existing investors,
+
+in June 2019. As a result, 8,677,650 new shares
+were issued.
+
+The Group announced plans to launch a prepaid
+card product in the US in collaboration with a
+partner bank.
+
+Our submitted R&D reclaim of £4.2m for the
+2018 year end was paid in full subsequent to the
+financial year end.
+

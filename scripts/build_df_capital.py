@@ -528,6 +528,219 @@ NSFR_NOTE = (
     "not a search miss. This says nothing about FY2020-FY2023, which are disclosed in full above."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Group's own published UK KM1, reproduced as printed
+# (KM1-012). Consolidated Group basis, matching every other sheet here.
+#
+# WHICH COLUMN OF WHICH EDITION. Every edition prints THREE columns - its own
+# year-end, the intervening HALF-YEAR, and the prior year-end (Dec-25/Jun-25/
+# Dec-24, Dec-24/Jun-24/Dec-23, Dec-23/Jun-23/Dec-22, Dec-22/Jun-22/Dec-21).
+# Only year-end columns belong in a workbook of financial years, so the Jun-
+# columns are read and discarded, and each year is taken from the edition in
+# which it is the REPORTING year (never from a later edition's comparative)
+# except FY2021, which has no KM1 of its own - see below.
+#
+# ROW SET AND NUMBERING DRIFT, three separate changes:
+#   (a) The FY2024 and FY2025 editions PRINT the template row numbers ("1",
+#       "UK 7a", "UK 11a", "16"). The FY2022 and FY2023 editions print the same
+#       table with NO row numbers at all and with abbreviated labels ("CET1
+#       Capital", "Total RWA", "Institution specific CCyb (%)", "Total HQLA",
+#       "Total ASF"). The numbers below are the ones this Group itself prints
+#       in its later editions; rows 18-20 carry no number because no edition of
+#       this Group ever numbered them.
+#   (b) UK 7a/7b/7c (the CET1/AT1/T2 SREP split) appear only from the FY2024
+#       edition. The FY2022/FY2023 editions print only the "Total SREP own
+#       funds requirements" line, at the CRR Article 92 floor of 8.0%, with a
+#       footnote saying the Group had no additional SREP requirement at all.
+#   (c) Rows 18-20 (NSFR) appear only in the FY2022 and FY2023 editions. They
+#       are absent from FY2024 and FY2025 because the Group opted into the
+#       SDDT regime (PRA approval 07/03/2025) and discloses under Article 433b's
+#       reduced requirements - a regulatory absence, not a missing figure.
+#
+# FY2020 is blank: the FY2020 and FY2021 editions carry only a narrow pre-KM1
+# "Key Regulatory Metrics" table (eight rows, Group AND Bank columns, no SREP,
+# buffer, exposure-measure or HQLA rows), which is not this template.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £'000)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 112443, "FY2024": 98780, "FY2023": 79269, "FY2022": 84579, "FY2021": 82690}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 112443, "FY2024": 98780, "FY2023": 79269, "FY2022": 84579, "FY2021": 82690}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 127745, "FY2024": 109010, "FY2023": 89538, "FY2022": 84579, "FY2021": 82690}),
+    ("SECTION", "Risk-weighted exposure amounts (£'000)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 623607, "FY2024": 457565, "FY2023": 347034, "FY2022": 381972, "FY2021": 216353}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "18.0%", "FY2024": "21.6%", "FY2023": "22.8%", "FY2022": "22.1%", "FY2021": "38.2%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "18.0%", "FY2024": "21.6%", "FY2023": "22.8%", "FY2022": "22.1%", "FY2021": "38.2%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "20.5%", "FY2024": "23.8%", "FY2023": "25.8%", "FY2022": "22.1%", "FY2021": "38.2%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    # UK 7a-7c are printed only from the FY2024 edition; earlier editions print
+    # no SREP add-on at all (their own footnote: "The Group did not have
+    # additional Own funds requirements as a result of SREP therefore the total
+    # minimum Own funds requirements were 8% per article 92 of CRR").
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.4%", "FY2024": "2.4%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.8%", "FY2024": "0.8%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "1.1%", "FY2024": "1.1%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "12.3%", "FY2024": "12.3%", "FY2023": "8.0%", "FY2022": "8.0%", "FY2021": "8.0%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%", "FY2021": "0.0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "16.8%", "FY2024": "16.8%", "FY2023": "17.6%", "FY2022": "11.5%", "FY2021": "10.5%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.1%", "FY2024": "22.4%", "FY2023": "22.8%", "FY2022": "48.1%", "FY2021": "72.5%"}),
+    ("SECTION", "Leverage ratio (£'000 / %)", {}),
+    # FY2021's two leverage cells are the Group's own word "n/a", with its own
+    # footnote: the central-bank-claims exclusion arrived with CRR2 in 2022, so
+    # there is no comparative on this basis. Not blanked, not back-filled.
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 878704, "FY2024": 681053, "FY2023": 608644, "FY2022": 480834, "FY2021": "n/a"}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "12.8%", "FY2024": "14.5%", "FY2023": "13.0%", "FY2022": "17.6%", "FY2021": "n/a"}),
+    ("SECTION", "Liquidity Coverage Ratio (£'000 / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value - average)",
+     {"FY2025": 106821, "FY2024": 87857, "FY2023": 97757, "FY2022": 94091, "FY2021": 89169}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 47835, "FY2024": 34088, "FY2023": 32754, "FY2022": 29060, "FY2021": 17992}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 32440, "FY2024": 25895, "FY2023": 15535, "FY2022": 22166, "FY2021": 37318}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 15424, "FY2024": 10567, "FY2023": 17219, "FY2022": 10485, "FY2021": 4498}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "704.0%", "FY2024": "836.6%", "FY2023": "618%", "FY2022": "1029%", "FY2021": "2554%"}),
+    ("SECTION", "Net Stable Funding Ratio (£'000 / %) — printed only in the FY2022 and FY2023 editions; "
+                "dropped from FY2024 onward under the SDDT/Article 433b reduced disclosure regime", {}),
+    ("DATA", "Total ASF (Total available stable funding)",
+     {"FY2023": 566687, "FY2022": 410203, "FY2021": "n/a"}),
+    ("DATA", "Total RSF (Total required stable funding)",
+     {"FY2023": 382085, "FY2022": 251336, "FY2021": "n/a"}),
+    ("DATA", "NSFR ratio (%)",
+     {"FY2023": "148.2%", "FY2022": "163%", "FY2021": "n/a"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Distribution Finance Capital Holdings plc's own published UK KM1 key-metrics table, "
+    "Consolidated Group basis, £000's, reproduced as printed. Each year is taken from the edition in which "
+    "it is the REPORTING year (the only exception is FY2021, below):\n"
+    f"FY2025: DF Capital Pillar 3 Disclosures at December 2025, section 2 'Key Metrics (UK KM1)', p.4. "
+    f"Columns 'Dec-25 / Jun-25 / Dec-24' - {P3_2025_URL}\n"
+    f"FY2024: DF Capital Pillar 3 Disclosures at December 2024, section 2 'Key Metrics (UK KM1)', p.4. "
+    f"Columns 'Dec-24 / Jun-24 / Dec-23' - {P3_2024_URL}\n"
+    f"FY2023: DF Capital Pillar 3 Disclosures at December 2023, 'Key Regulatory Metrics' table, PDF page 16 "
+    f"of 20. Columns 'Dec-23 / Jun-23 / Dec-22' - {P3_2023_URL}\n"
+    f"FY2022 (own column) and FY2021 (comparative column): DF Capital Pillar 3 Disclosures at December 2022, "
+    f"section 8.1 'Key Metrics', p.28. Columns 'Dec-22 / Jun-22 / Dec-21' - {P3_2022_URL}\n\n"
+    "PRESENTATION NOTES - all of these are things the Group did, not choices made here:\n"
+    "* THREE COLUMNS, NOT TWO. Every edition prints its own year-end, the intervening HALF-YEAR and the "
+    "prior year-end. The Jun- columns were read and discarded: a half-year column is not a financial year. "
+    "For the record, they are Jun-25 CET1 93,171 / RWA 516,748 / CET1 ratio 18.0%; Jun-24 81,142 / 386,669 "
+    "/ 21.0%; Jun-23 77,083 / 353,045 / 21.8%; Jun-22 82,769 / 270,607 / 30.6%.\n"
+    "* ROW NUMBERS EXIST ONLY IN THE LATER EDITIONS. The FY2024 and FY2025 editions print the template's "
+    "row numbers; the FY2022 and FY2023 editions print the same table unnumbered and with shorter labels "
+    "('CET1 Capital' for row 1, 'Total RWA' for row 4, 'Institution specific CCyb (%)' for row 9, 'Total "
+    "HQLA' for row 15, 'Cash outflows'/'Cash inflows' for UK 16a/16b, 'Total ASF'/'Total RSF' for rows "
+    "18/19). The numbers shown above are this Group's own, from its own later editions; rows 18-20 are left "
+    "unnumbered because no edition of this Group ever numbered them. The fuller labels are the later "
+    "editions' own wording.\n"
+    "* UK 7a/7b/7c ARE BLANK BEFORE FY2024 BECAUSE THE GROUP HAD NO SREP ADD-ON, and says so in its own "
+    "footnote to the FY2022 and FY2023 tables: 'The Group did not have additional Own funds requirements as "
+    "a result of SREP therefore the total minimum Own funds requirements were 8% per article 92 of CRR.' "
+    "Those editions print no such rows at all, which is why they are blank rather than zero.\n"
+    "* ROWS 18-20 (NSFR) STOP AFTER FY2023, and that is a regulatory change rather than a gap. Both the "
+    "FY2024 and FY2025 editions state at p.3: 'The Group has opted into the Small Domestic Deposit Takers "
+    "(SDDT) regime at both Consolidated and Bank levels. Having received PRA approval, disclosures are "
+    "prepared in accordance with the regime's reduced disclosure requirements as prescribed by Article "
+    "433b.' The PRA's own waivers register carries the underlying instrument (Rule 3.1 SDDT modification by "
+    "consent, ref A00009982P.pdf, effective 07/03/2025). The same editions state they have excluded nothing "
+    "under Article 432 on proprietary or confidentiality grounds, so this is the reduced template, not an "
+    "omission.\n"
+    "* 'n/a' IS THE GROUP'S OWN WORD, NOT A BLANK AND NOT A ZERO. FY2021's rows 13, 14 and 18-20 print "
+    "'n/a' in the FY2022 edition, with that edition's own footnotes explaining why: 'The new methodology of "
+    "LR which excludes claims on Central Banks was introduced in 2022 as part of CRR2, therefore no "
+    "contextual comparative information for the prior period included', and the same for NSFR. The marker "
+    "is recorded as printed; nothing is back-filled from the older leverage or NSFR basis. (The FY2021 "
+    "Pillar 3's own narrow table does state an FY2021 leverage ratio of 21.2% and NSFR of 214% on those "
+    "older bases - they are on the Leverage Ratio and NSFR sheets, not here.)\n"
+    "* A PRINTED ZERO IS KEPT. FY2021's countercyclical buffer is printed '0.0%', a measured zero, and is "
+    "shown as such.\n"
+    "* FY2021 IS THE FY2022 EDITION'S COMPARATIVE COLUMN, the one departure from 'each year from its own "
+    "edition', because the FY2021 Pillar 3 has no KM1 to take it from. Its 'Key Regulatory Metrics' table "
+    "(Table 1, p.18) is a pre-KM1 disclosure: eight rows, separate Group AND Bank columns, and no SREP, "
+    "buffer, exposure-measure, HQLA or cash-flow rows at all. It is not this template and is not reproduced "
+    "as one. Where the two overlap they agree on capital and RWAs (CET1 82,690; RWA 216,353; CET1 ratio "
+    "38.2%) and disagree on liquidity and leverage, which is a basis difference, not an error: the FY2021 "
+    "edition's LCR of 5597% and leverage of 21.2% are point-in-time on the pre-CRR2 basis, while the KM1 "
+    "column's 2554% is, per the FY2022 edition's own footnote, 'a weighted average of the preceding 4 "
+    "quarters'. The LCR sheet carries 5597% for FY2021, so that sheet and this one deliberately differ, "
+    "and both say so.\n"
+    "  ROW 17 FY2021 - THE ONE PLACE THIS SHEET AND A METRIC SHEET DISAGREE, scrutinised and confirmed "
+    "2026-09-16 from both source documents. Row 17 here reads 2554%; the LCR sheet reads 5597%. Neither "
+    "was changed to make them agree, because each is a correctly transcribed figure on a stated and "
+    "different basis, and BOTH sources show their own arithmetic:\n"
+    "    - 5597% is a spot 31-Dec-2021 ratio. The FY2021 Pillar 3's Table 13 ('LCR as at 31 December', "
+    "p.32) prints liquidity buffer 108,981, net cash outflows 1,947 and 30-Day LCR 5597% - and "
+    "108,981 / 1,947 = 5597.4%, so the figure is internally exact on a point-in-time basis. The same "
+    "document's narrative states it twice more ('The LCR as at 31 December 2021 was 5597%', and Table 1's "
+    "Group column).\n"
+    "    - 2554% is a four-quarter weighted average, printed in the FY2022 edition's Dec-21 column under "
+    "that edition's own footnote 2: 'Pursuant to requirements of UK KM1, the LCR is presented for the "
+    "reportable period, based on a weighted average of the preceding 4 quarters.' A spot year-end ratio "
+    "and an average of the four quarters that led to it are not the same measurement and are not "
+    "expected to match; the year-end was the high point of the year.\n"
+    "    - The ratio is roughly 2.2x, not a factor of 10 or a transposition, which is consistent with an "
+    "averaging basis and inconsistent with a digit slip. It was checked for one anyway: every digit of "
+    "both figures was re-read against the source text above.\n"
+    "  A SOURCE-INTERNAL QUIRK IN THAT SAME COLUMN, recorded and not corrected (this sheet reproduces, it "
+    "does not recompute). The FY2022 edition's Dec-21 column prints average HQLA 89,169 and average total "
+    "net cash outflows 4,498, whose quotient is 1982%, not the 2554% printed on the row below. The Group "
+    "is averaging the quarterly RATIOS rather than dividing its averaged numerator by its averaged "
+    "denominator, and those differ. The same spread, smaller, appears in every other year of this table "
+    "(Dec-25 693% vs 704.0% printed; Dec-24 831% vs 836.6%; Dec-23 568% vs 618%; Dec-22 897% vs 1029%), "
+    "which is what shows it to be the Group's consistent method rather than a one-off error.\n"
+    "* THE FY2023 EDITION RESTATED TWO FY2022 CELLS, and FY2022 keeps its own edition's figures per the "
+    "rule above. The FY2023 edition's Dec-22 comparative shows overall capital requirements of 16.6% and "
+    "CET1 available of 24.9% where the FY2022 edition's own Dec-22 column shows 11.5% and 48.1%. The "
+    "FY2023 edition explains the change in its own footnote 2: 'Overall capital requirement disclosed now "
+    "includes Pillar 2a requirements, excluding PRA buffer as this is not disclosable.' Every other Dec-22 "
+    "cell agrees exactly between the two editions.\n"
+    "* FY2020 IS BLANK, not missing. The FY2020 Pillar 3 (Table 1, p.17) carries the same narrow pre-KM1 "
+    "table described above, with Group and Bank columns and no template rows. The Group's FY2020 capital, "
+    "RWA and ratio figures are on the individual metric sheets, sourced from that table and labelled as "
+    "such - they are deliberately not reassembled into a KM1 shape here.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="DF Capital Bank Limited — KM1 Key Metrics",
+    subtitle="Distribution Finance Capital Holdings plc's own published UK KM1 key-metrics template, "
+             "Consolidated Group basis, reproduced in the Group's row order with its own labels and printed "
+             "precision. Amounts in £000's, ratios as printed. Only year-end columns are shown - every "
+             "edition also prints an intervening half-year column, which is not a financial year. FY2020 "
+             "predates the template and is intentionally blank; rows 18-20 stop after FY2023 under the "
+             "SDDT/Article 433b reduced disclosure regime. ROW 17 FY2021 (2554%) DELIBERATELY DIFFERS FROM "
+             "THE LCR SHEET (5597%): this row is the four-quarter weighted average the FY2022 edition "
+             "prints, the LCR sheet is the FY2021 edition's own point-in-time year-end ratio. Both are as "
+             "published and neither has been adjusted. See the source note for the full detail.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=320,
+)
+
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)], "4")
 metric("CET1 Ratio", "%", [("CET1 ratio", CET1_RATIO)], "4")
 metric("Tier 1 Capital", "£'000", [("Tier 1 capital", CET1_CAPITAL)], "4", note=NO_AT1_NOTE)
@@ -584,7 +797,18 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)], "4")
-metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "4")
+LCR_BASIS_NOTE = (
+    "BASIS, and why FY2021 here (5597%) differs from the KM1 Key Metrics sheet's row 17 (2554%). This "
+    "sheet carries each year's POINT-IN-TIME year-end ratio as that year's own edition states it. The "
+    "FY2021 Pillar 3's Table 13 ('LCR as at 31 December', p.32) prints liquidity buffer 108,981 and net "
+    "cash outflows 1,947, giving the 5597% it states three times in that document. The KM1 sheet "
+    "reproduces the FY2022 edition's Dec-21 column, which that edition's own footnote 2 defines as 'a "
+    "weighted average of the preceding 4 quarters' - a different measurement of the same year, not a "
+    "competing estimate of the same thing. Both are printed figures from named editions; neither has been "
+    "adjusted to agree with the other, and the disagreement is expected rather than a defect. Confirmed "
+    "against both PDFs 2026-09-16."
+)
+metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "4", note=LCR_BASIS_NOTE)
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "4", note=NSFR_NOTE)
 
 bw.add_not_disclosed_metric_sheets(

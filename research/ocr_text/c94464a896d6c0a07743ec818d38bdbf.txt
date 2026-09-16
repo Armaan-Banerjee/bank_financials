@@ -1,0 +1,4240 @@
+Registration No. 05969821
+
+GUARANTY TRUST BANK (UK) LIMITED
+
+Annual Report and Financial Statements
+For the year ended 31 December 2024
+
+*AE1POXIY*
+
+A11 02/05/2025 #132
+COMPANIES HOUSE
+
+>»
+<x
+a
+a
+uw
+
+Guaranty Trust Bank (UK) Limited
+
+Annual report and financial statements for the year
+ended 31 December 2024
+
+Contents
+Officers and professional advisers . 3
+
+| Strategic report 4-11
+Directors’ report 12-15
+Statement of Directors’ responsibilities 16
+
+‘Independent Auditor’s report to the members
+
+of Guaranty Trust Bank (UK) Limited 17-22
+Statement of comprehensive income 23
+Statement of financial position 24
+Statement of changes in equity 25
+Statement of cash flows | . 26-27
+
+Notes to the financial statements 28-72
+Guaranty Trust Bank (UK) Limited
+
+Officers and professional advisers
+
+Directors
+
+Olusegun Agbaje
+Babajide Okuntola
+Gbenga Alade
+Paul Croucher
+Paul Gospage
+Goziem Eso
+Christopher Taylor
+Robert Wild
+Joanne Hindle
+
+Registered Office
+
+10 Great Castle Street
+London
+W1W 8LP
+
+Bankers
+
+Citibank
+London
+
+Citibank
+New York
+
+NatWest Ple
+London
+
+Standard Chartered Bank
+London
+
+Auditor
+
+Forvis Mazars LLP
+Chartered Accountants
+30 Old Bailey
+
+London
+
+EC4M 7AU
+
+(Chairman)
+
+(Non-Executive Director)
+
+(Managing Director) Resigned 30 April 2024
+
+(Managing Director) Appointed 15 October 2024
+
+(Executive Director) Resigned 16 August 2024
+
+(Executive Director) Appointed 1 May 2024
+
+(Independent Non-Executive Director)
+
+(Independent Non-Executive Director)
+
+(Independent Non-Executive Director) Appointed 23 May 2024
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report
+
+The Directors of Guaranty Trust Bank (UK) Limited have the pleasure of presenting their strategic report for the year
+ended 31 December 2024.
+
+Business Model
+
+The Bank is authorised by the Financial Conduct Authority (“FCA”) and regulated by the FCA and Prudential
+Regulation Authority (“PRA”). Guaranty Trust Bank (UK) Limited was established to provide trade finance,
+correspondent banking, corporate banking, and personal banking services. The principal focus of the business is the
+provision of mortgage products and trade finance to African counterparties and aims to be the premier African bank for
+non-resident Africans who have business activities in the UK. The Bank also provides banking services to high- net-
+worth-individuals (HNIs) through the provision of personal banking.
+
+The Bank is 100% owned by Guaranty Trust Bank Limited (““GTBank Nigeria” “GTBank Nigeria Limited” or “the
+Parent’’). The Parent is 100% owned by Guaranty Trust Holding Company Plc (““GTCO”). GTCO together with its
+subsidiaries are the “Group”. _
+
+Network Banking provides correspondent banking relationships between parent and Group subsidiaries, leveraging its
+geographical position.
+
+Non-Resident Banking offers banking products to non-resident customers and offers banking services through referrals
+from GTBank Nigeria.
+
+International Premium Banking focuses on High-Net-Worth individuals and offers premium services to cater for their
+needs, including residential mortgage products.
+
+The Bank’s risk appetite is set out in its Risk Appetite Statement, which articulates the risks it is prepared to accept, and
+assesses those risks and the mitigation measures it has set in place in furtherance of achieving its strategic objectives
+and business plans.
+
+The Bank has outlined within the strategic report the Bank’s principal risks and exposure to them.
+
+Business Performance
+
+2024 saw the Bank’s profit before tax (PBT) reduced by 18% to £11.5m from £14.0m. The drop in PBT was due to
+pressure on margin, low fee-based volume and higher costs to promote high customer services, enhance operational
+resilience and strengthen risk management framework.
+
+Net interest Income (NII) declined from £19.5m to £18.0m (8%) driven by two base rate cuts of 50 basis points to
+4.75% from 5.25% at the end of 2023. These impacted earnings on mortgages and UK money market instruments. 100
+percentage points Fed rate decreases in 2024 affected NII as a significant portion of the liquid assets are US Dollar
+denominated. The interest margin shrank due to combined effects of management action to reduce mortgage fate at the
+beginning of 2024 and marked increase cost of funds to £8.1m (2023: £5.1m) due to repricing of bank and customers’.
+interest rates.
+
+Year on year growth in loans to banks by £107m yielded 6% interest income uplift from counterparties where funds
+were placed. Loans and advances to customers rose from £57.7m in 2023 to £62.5m in 2024 due to disbursements (net
+of early repayments and full liquidations). Besides lending activities Treasury activities remained a focal point of
+attention. The Bank cautiously managed its financial assets by strategically placing funds in short term bank placements
+and high-quality liquid assts (HQLAs); maximising yields.
+
+Fees and commissions reduced by 9% from £3.5m to £3.2m. Other operating income is income earned on foreign
+exchange transactions from existing and new customers which rose by 3% to £4.5m (2023: £4.4m). The reforms
+introduced on the foreign exchange (“fx”) regime that led to naira devaluation and impacted our customers’ purchasing
+power whose income come from Nigeria (our source market) at the time. Therefore, the volume of fund transfers and
+fx income were particularly hit.
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report (continued)
+
+The Bank’s key KPIs:
+
+Key financial Use of Metric Basis of Calculation 2024 2023
+Metrics .
+Profit before tax Key measure of the Bank’s Refer to page 23 £11.5m £14.0m
+
+underlying performance,
+
+with profit targets set by the
+
+Board as part of the budget
+
+process
+Profit after tax Key measure of the Bank’s | Refer to page 23 £8.6m £10.4m
+
+underlying performance
+Cost to Income The cost to income ratio isa | Total operating expenses for the year 55% 49%
+Ratio key financial performance (excluding expected credit losses)
+
+metric against which the divided by total income
+
+performance of the Bank is
+
+measured, with a target of
+
+reducing the ratio as part of
+
+the Bank’s strategy
+Return on Equity | Shareholder performance The ratio of profit for the year (before 19.75% 30.73%
+Ratio metric against which the tax) to average equity, expressed as a
+
+performance of investment percentage
+
+is measured
+Common equity Key metric for the Bank’s Common equity tier 1 (CET1) capital 26.89% 32.30%
+tier 1 ratio sustainability both for the ratio is the CET] capital of the
+
+regulatory and ability of the | institution as a percentage of its total
+
+Bank to deliver on strategic | risk-weighted assets
+
+targets
+Liquidity Regulatory requirements for | Liquidity Coverage Ratio (LCR) is 309% 250%
+coverage ratio LCR, as well as a high quality liquid assets that can be
+
+performance metric for converted to cash with little or no loss
+
+management of the Bank’s in value expressed as a percentage of
+
+assets and liabilities and the | expected net cash outflows over the
+
+effectiveness of the use of following 30 days according to CRD
+
+funds IV requirements.
+
+Additionally, the Board also reviews non-financial indicators. The Bank has been able to achieve most of the non-
+financial KPIs and is working to consistently deliver good outcomes to retail customers.
+
+Going Concern
+Refer to page 12, Directors’ Report.
+
+Regulatory Capital & Liquidity
+The Bank manages its capital to ensure it complies with regulatory capital requirements, and it will continue as a going
+concern. The Bank complied with its regulatory capital requirements throughout the year and as at 31 December 2024
+shareholders’ funds stood at £48.1m (2023: £39.4m).
+The Intemmal Capital Adequacy Assessment Process (ICAAP) is the process by which the Bank manages and assesses its
+compliance with: :
+
+e framework of the Bank’s internal governance and operation of the risks;
+
+e the capital management structure of the Bank;
+
+e the results of the internal stress testing of risks; and
+
+e the adequacy of capital resources to cover all levels of risks the Bank is faced with.
+
+These risks are monitored and assessed regularly within the Bank’s operating model and are discussed in Note 23.
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report (continued)
+Liquidity
+The Internal Liquidity Adequacy Assessment Process (ILAAP) is the process by which the management of the Bank
+assesses and oversees on a regular basis:
+e the Bank’s liquidity management model;
+the likely effects of stress testing on liquidity and other risks;
+the mitigants in place to address these risks; and
+the adequacy of buffers held at each point in time.
+From a liquidity perspective, the Bank has a sufficient liquidity buffer to satisfy business as usual and stress conditions.
+These have been demonstrated in the Banks ILAAP process.
+
+Strategic Objective
+
+The Bank will seek to leverage the network of Group subsidiaries and the parent, to deliver world-class services in trade
+finance, correspondent banking, corporate banking, and personal banking. To that end, it will seek to grow its mortgage
+book and provide personal banking products to high-net-worth individuals (HNIs). The Bank will engage actively with
+Africans and African businesses to achieve these objectives.
+
+Guaranty Trust Bank (UK) Limited recognises its dependence on African economies, particularly Nigeria, and has
+factored this into its risk management framework. The Bank has continued to monitor the situation in its source markets
+and is proactive in applying mitigating measures to combat the ever-changing economic environment.
+
+Principal Risks and uncertainties
+
+The principal risks and uncertainties faced by the Bank such as conduct, credit, liquidity, market, operational,
+regulatory, interest rate and capital management risk, and the basis of mitigation, are stated in Note 23. The Bank also
+identifies that its operations, strategy and plan involve risk and uncertainty because they relate to events and depend
+upon circumstances that will or may occur in the future. The factors that could cause deviation from actual business
+strategy, plans and/or results include, but are not limited to, general economic and business conditions in Africa and
+internationally; market related trends and developments; fluctuations in interest rates, inflation; the ability to access
+sufficient sources of capital, liquidity and funding when required; concentration of financial exposure; management and
+monitoring of conduct risk; technological changes and risks to the security of information technology and operational
+infrastructure, systems, data and information resulting from increased threat of cyber and other attacks; natural,
+pandemic and other disasters, adverse weather and similar contingencies outside the Bank's control; inadequate or failed
+internal or external processes or systems; acts of war, other acts of hostility, terrorist acts and responses to those acts,
+geopolitical, pandemic or other such events; risks relating to climate change; changes in laws, regulations, practices and
+accounting standards or taxation, changes to regulatory capital or liquidity requirements and similar contingencies
+outside the Bank's control; the policies, decisions and actions of governmental or regulatory authorities or courts in the
+UK, the EU, the US or elsewhere including the implementation and interpretation of key legislation and regulation
+together with any resulting impact on the future structure of the Bank; and exposure to regulatory or competition
+scrutiny, legal, regulatory or competition proceedings, investigations or complaints.
+
+The on-going conflict in Ukraine and the Middle East remains under close review, but to date has not had an impact on
+the Bank. For the current imposition of United States Tariff, the direct impact on the Bank is minimal. We are aware of
+the trade levy tensions and would continue to monitor its effects on markets and potential shifts in supply chain as they
+unfold. This would include undertaking further stress testing and scenario analysis exercises.
+
+Credit Risk Credit risk is the risk of loss as a result of the failure of a party with whom the Bank
+has contracted to meet its obligations. The main credit risks that the Bank will face
+relate to its exposure to banks and corporates from its trade finance business, inter-
+bank lending, and advances to corporate and retail borrowers.
+
+The Board of Directors has delegated the management of credit risk to the Board
+Credit Committee. The Committee monitors all credit related risks at the Bank and
+approves and reviews the Credit Risk Management Framework. The Committee
+reviews all advances granted by the Bank and approves specific transactions and credit
+limits above the Management Credit Committee’s authority and ensures the
+maintenance of strong internal credit risk controls.
+
+Conduct Risk Conduct risk is the risk that the Bank’s customers suffer loss or detriment due to
+failures in product design, sales and marketing processes, poor customer service, or
+operational delivery.
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report (continued)
+
+Liquidity Risk
+
+Interest Rate Risk
+
+Market Risk
+
+Operational Risk
+
+Regulatory Risk
+
+The Bank is committed to working with its customers and service providers to ensure
+that its products are simple, fair, and transparent. Executive management is committed
+to the principles of treating customers fairly and achieving good customer outcomes. The
+Bank seeks to keep customers at the heart of decision making: the Bank implemented
+the Consumer Duty regulation on 31 July 2023 and the Bank’s Board attested to ongoing
+compliance with the Duty on the anniversary of implementation in 2024. The Bank’s
+guiding principles of conduct are to support progression, success, relationship, and life.
+They guide our approach to banking and everything we do. For further mformation
+please visit the Bank’s website www.gtbankuk.com.
+
+Liquidity risk is the risk that a firm, although solvent, either does not have available
+sufficient financial resources to enable it to meet its obligations as they fall due or can
+secure such resources only at excessive cost.
+
+The Bank’s Liquidity Policy sets out further details on the liquidity operating model
+and provides information on how liquidity management is embedded in the business
+and overseen at the highest level within the bank. The governance arrangement for
+liquidity risk, managed by the Asset and Liability Management Committee (ALMAC),
+is detailed in note 23.4.
+
+Interest rate risk represents the sensitivity of the Bank to changes in interest rates. The
+risk to which assets and liabilities are exposed is the risk of loss from fluctuations in
+the future cash flows or fair values of financial instruments because of changes in
+market interest rates. Interest rate risk is managed through monitoring interest rate
+gaps. The Asset and Liability Committee also monitors this risk in conjunction with
+the Treasury department, who are tasked with the intraday monitoring of interest rates.
+
+Market risk is the risk that arises from fluctuations in the value of, or income from,
+assets. The Bank has no exposure to the equity or derivative markets, so it is not
+impacted by the market risk inherent in these products. It does not permit propriety
+trading in foreign exchange and keeps open positions under close control. The market
+risks that the Bank faces relate to movements in foreign exchange exposures arising
+from fulfillmg customer FX orders.
+
+Operational risk is the risk of loss resulting from inadequate or failed internal processes,
+people, and systems, or from external events. An overview of operational risk is
+undertaken by the Board Risk and Compliance Committee and ultimately the Board of
+Directors, who retain responsibility for operational risk. The operational nsk
+management framework is developed by the Risk Management Department, and the
+implementation of controls to address operational risk is part of the line managements’
+day-to-day responsibilities.
+
+Qualitative and quantitative reports and metrics are collated by the Risk Management
+Department and reported regularly to the Management Risk Committee and a summary
+report is submitted to the Board Risk and Compliance Committee and full Board ona
+quarterly basis. Capital is allocated by the Bank in order to mitigate Operational Risk, in
+accordance with the Bank’s ICAAP.
+
+Regulatory risk is the risk that the Bank does not comply with the regulatory
+environment. The Bank’s Risk and Compliance and Financial Crime Compliance teams
+monitor regulatory changes and report to the Executive and Board through the risk
+management reports presented at Management Risk Committee and Anti-Money
+Laundering Oversight Committee. These two executive committees report to the Board
+Risk and Compliance Committee and full Board respectively. The Bank’s Enterprise
+Risk Management Framework includes an annual review of its Risk Appetite Statement
+(RAS). The RAS sets out qualitatively and quantitatively the risk tolerance for all areas
+of risk faced by the Bank, including Commercial, Climate, Credit, Capital, Market and
+Liquidity risks, in addition to Operational, Conduct and Regulatory risks — of which last
+Financial Crime risk forms part. Given the majority of the Bank’s customers are resident
+or incorporated in high-risk countries the bank confers responsibility for Financial Crime
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report (continued)
+
+oversight on an individual holding SMF17 of the Senior Managers and Certification
+Regime (SMCR). Regulatory risk in the form of Prudential and Regulatory Compliance
+risk is overseen by a separate individual holding prescribed responsibilities under SMF4
+and SMF16. All areas of regulatory risk are therefore monitored by dedicated oversight
+functions operating in the Bank’s second line of defence, subject to review by Executive
+and Board as noted above. The Bank continues to improve the internal controls
+framework and compliance monitoring through the recruitment of skilled senior staff
+and the continued engagement of skilled consultants. The growth of the business is
+prudently managed within the risk appetite set by the Board.
+
+Capital Management Capital management risk is the risk that the Bank may not have adequate capital
+Risk resources to support its current and future business strategy due to unexpected capital
+loss. The Bank’s capital requirements are set and monitored by its Regulators.
+
+The Bank monitors the capital resources and the associated risks through the Internal
+Capital Adequacy Assessment Process (ICAAP).
+
+Nigerian Economy
+
+The Bank’s performance is largely dependent on the West African economy in general, in particular Nigeria, where the
+critical mass of its clients is based and from where a sizeable portion of its business flows are derived. For this reason, the
+economic conditions in Nigeria have an impact on the overall performance of the Bank. In the year under review, the
+Nigerian market has experienced slow growth in GDP, difficulties in obtaining foreign currencies and inflationary pressure
+which as part of a global trend, has made business in Nigeria difficult, with heightened market and liquidity risks. The
+Bank continues to monitor the business environment in Nigeria and takes proactive measures to mitigate any risks that
+may emanate from its exposures to the Nigerian market. Oil minerals and gas, Nigeria’s major source of foreign exchange
+earnings, purchases are exempt from being sanctioned with tariffs. However, we are monitoring the price impact as the
+tariff imposition served to drive oil prices lower.
+
+Outlook
+
+In 2025, the Bank will continue to deliver its retail and wholesale banking products and services to private, corporate and
+institutional clients. The Bank’s organisation and governance (including disclosures made under the requirements of Pillar
+3 and CRD IV) is set out in the Directors’ report and its risk management policies are set out in Note 23 to the financial
+statements.
+
+Directors’ Section 172 statement
+
+This section of the strategic Report describes how the Directors have performed their duty to promote the success of the
+Bank, including how they have considered and engaged with other stakeholders and, how they have taken account of the
+matters set out in section 172(1) (a) to (f) of the companies 2006.
+
+Decisions by the Board, both individually and collectively, are taken for the benefit of the Bank’s shareholder and all its
+stakeholders in mind. These decisions are supported by expert opinion and recommendations by subject matter experts.
+These ensure that the Board consider the following factors relevant to compliance with 8172.
+
+e Annual review of the strategic plan keeping in view the emerging changes in business and operating
+circumstances and approval of annual budget considering the impact of such changes.
+
+Employee recognition as central to the success of the bank and taking care of their wellbeing.
+
+Recognition of the interest of and impact on stakeholders while taking business decisions.
+
+Consideration of the Bank’s business and operations on the community and environment.
+
+Maintenance of a reputation for high standards of business conduct.
+
+Ensure that the matters are referred to the parent in line with relevant statutory requirements.
+
+Guaranty Trust Bank (UK) Limited is a wholly owned subsidiary of the Parent bank, (Guaranty Trust Bank Limited) and
+engages in regular dialogue with them on matters of strategy, performance and business matters. Guaranty Trust Holding
+Company Plc (GTCO) and Guaranty Trust Bank Limited each has a director on the Board of the Bank. The Group Chief
+Executive Director of GTCO serves as the Chairman of the Board of Directors.
+
+oe @ @ @
+
+Guaranty Trust Bank (UK) Limited is committed to growing a sustainable business and is therefore mindful of the impact
+of its actions on the society and environment. The Directors ensure that Bank’s long term interests are the centre of the
+Board’s decision making process.
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report (continued)
+
+Corporate Governance
+
+Good corporate governance is important to the overall success of the Bank. The Board is responsible for the oversight
+governance of the Bank and sets the tone from the top, and it is responsible for providing direction on the regulatory and
+prudential conduct of the Bank in the United Kingdom.
+
+The Board and its committees meet four times a year. The meeting times are agreed upon at the Board level for each year
+in advance and board agenda and papers are circulated two weeks before each meeting. The Board has delegated the day
+to day management of the Bank to the executive management and its executive committees.
+
+The Executives have the following committees providing oversight on the day-to-day administration of the Bank:
+
+Executive Committee ‘Exco’ is responsible for the day to day running of the Bank including the management of all
+resources and activities across its operations. This committee meets weekly with a fuller monthly meeting reviewing each
+area of the business in more detail and progress towards agreed management priorities.
+
+Asset and Liability Management Committee ‘ALMAC’- The ALMAC is responsible for managing the Bank’s market,
+liquidity and balance sheet (assets and liabilities) risks. This committee meets every month and reviews the market
+satiation on an ad-hoc basis.
+
+Anti-Money Laundering Oversight Committee "AMLOC’- The AMLOC is responsible for reviewing and monitoring the
+high risk accounts and suspicious activities reports and transaction monitoring activities. AMLOC meets monthly.
+
+Management Risk Committee ‘MRC’- The MRC reviews and monitors the risks the Bank is facing across the business
+and products lines and monitors the Bank’s adherence to risk appetite as set by the Board, this committee -meets quarterly.
+
+Management Credit Committee ’MCC’- The MCC reviews all credits applications and credit related policies and manages
+the credit risks of the Bank. This committee meets monthly.
+
+The Information Technology & Information Security Steering Committee (ITSSC) — The ITSSC provides oversight over
+information technology (IT) and Information / Cyber Security (IS) investments by monitoring, evaluating, prioritizing,
+and approving actions related to projects, services, and risks in IT & IS respectively. This committee meets every quarter
+to review IT & IS commitments, operations and projects.
+
+Directors’ Duties
+
+The Directors of the Bank are required to act in accordance with the requirements of section 172 of the UK Companies
+Act 2006. Directors of companies must act in the way they consider, in good faith, would most likely promote the success
+of the company for the benefit of the shareholders as a whole and in doing so have regard to:
+
+The likely consequence of any decision in the long term.
+
+The interest of the company’s employees.
+
+The need to foster the Bank’s business relationships with suppliers, customers and others.
+The impact of the Bank’s operations on the community and environment.
+
+The need to act fairly between the shareholders of the Bank.
+
+The desirability of the Bank maintaining a reputation for high standards of business conduct.
+
+Employees
+
+The Bank is an equal opportunities employer and is committed to equality and diversity. The Bank is committed to the
+long term welfare and well-being of its staff, and it has invested in staff training and other staff related initiatives to help
+the development and retention of talent. It holds staff Town Hall meetings and staff surveys to drive its staff engagement
+process.
+
+Customers
+
+The Bank follows a set of core values aptly dubbed ‘The Orange Rules’ in line with the Bank’s vibrant orange corporate
+colour. These guide its approach to banking, and these are principles for progression, success, relationships, and life. These
+rules are the foundational principles of the Group. In addition to these, we have implemented the new Consumer Duty in
+our customer relationship management process, and this complies with the FCA’s requirements and guidance. The
+Directors proactively pursue the strategy of a ‘customer-first’ approach with a view to improving consumer protection.
+
+The Board of Directors understands their duties and responsibilities under the Companies Act 2006 (2006 Act). This
+section of the Strategic Report describes how the Directors have had regard to the matters set out in section 172(1) (a) to
+(f) of the 2006 Act.
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report (continued)
+ESG Framework ;
+
+The Bank has a formal commitment related to addressing Environmental, Social, and Governance (“ESG”) risks and
+opportunities and integration of ESG considerations to reduce risk and enhance value creation, so that the Bank can operate
+responsibly, deliver sustainable outcomes and provide meaningful benefits to its stakeholders. The Bank has established
+an ESG Framework, to deliver this.
+
+The Bank considers relevant ESG factors in its products and services and recommends widely accepted principles and
+standards to manage ESG risks and opportunities, including G-20 Financial Stability Board’s Task Force on Climate-
+Related Financial Disclosures (“TCFD”) as well as leading best practice on governance and employee relations.
+
+Managing the Financial and Non-Financial Risk from Climate Change:
+
+The Bank is committed to managing climate risks and implementing the recommendations of the Financial Stability
+Board’s Task Force on Climate-related Financial Disclosures (“TCFD”). The Bank assesses the resilience of its lending
+portfolios to transition and physical risks related to climate change. The Bank's approach to analysing and reducing climate
+risk includes the following areas of activity:
+
+Policy Development: Integrating and embedding climate risk into the Bank’s risk policies and governance
+frameworks; progressively and iteratively updating the Bank's ESG Framework to reflect sector standards and incorporate
+evolving best practice.
+
+Directors’ Duties
+
+Portfolio Analysis and Measurement: Utilising climate scenario analysis and stress testing of the Bank’s portfolios to
+understand the differentiated impacts (or resilience) that customers exhibit to transition or physical climate risks; assessing
+and testing emerging methodologies to quantify the climate risks related to the customer activities, to consider emissions
+associated with the Bank’s portfolios, and to consider portfolio decarbonisation pathways.
+
+Engagement: Engaging with third parties on their own climate risk management and low-carbon transition
+strategies; engage with regulators on emerging climate risk supervisory guidelines; and actively participate in multi-
+stakeholder initiatives to share learnings and build industry best practices for climate risk analysis and management.
+
+Sustainable Operations: By integrating and embedding ESG into the Bank’s business processes, investment
+activities, and operations, the Bank aims to create value for its business and expand its value proposition.
+
+ESG Development:
+
+The Bank is committed to achieving long-term sustainable outcomes to maximise the positive impact of ESG
+considerations and focus areas by following general principles as under:
+
+Understanding: Enhancing value and minimising risk for investors through understanding of the risks associated with
+ESG.
+
+Integration: Embedding ESG considerations into the business, operations and investment decisions.
+Customer-Focused Solutions: Pursue ESG initiatives that add value for customers.
+Innovation: Implementing sustainable practices, where feasible, through innovation and the sharing of best practices.
+
+Responsible Investment: Acting responsibly as a steward for the natural environment by addressing environmental impacts
+whilst also enhancing operational efficiency and values.
+
+Social Impact: Recognising social impact and having consideration for the communities in which the Bank operates.
+
+Culture & Talent: Fostering a culture, which embraces sustainability as a genuine core value. Engaging employees in
+delivering on ESG objectives.
+
+Training: Developing sustainability knowledge among all employees so they can be advocates of sustainability.
+
+The Board believes that effective leadership engagement is central to balanced outcomes while also helping to both shape
+the Bank’s strategy and align business activities with stakeholders’ expectations. When taking decisions, the Board
+balances the impact of those decisions on the Bank’s various stakeholders whilst acting in a way that the Board considers
+will ensure that the Bank maintains a reputation for high standards of business conduct and promote the long-term success
+of the Bank.
+
+As a regulated UK bank, the Bank is authorised by the Financial Conduct Authority (“FCA”) and regulated by the FCA
+and the Prudential Regulation Authority (“PRA”). The Board understands the importance of further developing
+relationships with both, liaising regularly on a wide range of topics.
+
+10
+Guaranty Trust Bank (UK) Limited
+
+Strategic Report (continued)
+
+The Board meets quarterly as part of the governance structure and various board committees are in place to address key
+
+areas of the Bank’s business.
+
+This report was approved and authorised by the Board of Directors on 24 April 2025 and signed on its behalf by the
+
+Managing Director.
+
+Paul Croucher
+Managing Director
+
+24 April 2025
+
+Registered Office
+
+10 Great Castle Street
+London
+
+W1W 8LP
+
+Il
+Guaranty Trust Bank (UK) Limited
+
+Directors’ Report
+
+The Directors have pleasure in presenting the audited financial statements for the year ended 3] December 2024 of
+Guaranty Trust Bank (UK) Limited (the “Bank”).
+
+Overview and principal activities
+
+The Bank is an authorised banking institution incorporated in the United Kingdom. The Bank is authorised by the Financial
+Conduct Authority (“FCA”) and regulated by the FCA and Prudential Regulation Authority (“PRA”). Any reference made
+herein to the “Regulator” shall be taken to mean either the FCA or the PRA, as applicable.
+
+The Bank is 100% owned by Guaranty Trust Bank Limited (‘““GTBank Nigeria”, “GTBank Limited” or “the Parent’’). The
+Parent is 100% owned by Guaranty Trust Holding Company Ple (“GTCO”), GTCO together with its subsidiaries are the
+“Group”.
+
+The principal activities include the provision of mortgage lending, trade finance, correspondent banking, personal banking
+services and deposit taking activities. The Bank continues to be one of the main correspondent banks in the UK, for the
+Parent bank, and subsidiary banks of the Parent in Africa. In addition, the Bank aims to become the premier African bank
+for non-resident Africans with business connections in the UK.
+
+The Bank works closely with and enjoys the benefits of the relationship with GTBank Nigeria and subsidiaries of the
+Parent, in providing structured trade finance products, and cross selling within the existing customer base of GTBank
+Limited. The Directors believe that the Bank is well placed as it continues to improve its product and service offerings,
+with the expectation that this will support its vision and strategy as a member of the Group.
+
+Directors Indemnity
+
+Directors’ and Officers’ Liability Insurance is maintained by the Bank.
+
+The liability insurance covers defence costs in certain circumstances with respect to any third-party liabilities that may
+arise as a result of their duties as Directors of the Bank. All Directors’ indemnities were in place during the year and will
+remain in force.
+
+Financial results
+The Bank delivered an after-tax profit of £8.6m in 2024 (2023: £10.4m). The financial statements for the year ended 31
+December 2024 are shown on pages 23 to 71.
+
+Controls framework
+
+The Bank continues to improve the internal controls framework and compliance monitoring through the recruitment of
+skilled senior staff, and the continued engagement of skilled consultants. The growth of the business is prudently managed
+within the risk appetite set by the Board. A summary of the Bank’s principal risks, and risk management policies are
+included within the Strategic Report.
+
+Going concern
+
+Stress-testing of the Bank’s capital and liquidity positions forms a key element of its risk management framework and of
+the Board’s assessment of the Bank as a going concern. As such, the firm’s Internal Capital Adequacy Assessment Process
+CICAAP’) and Internal Liquidity Adequacy Assessment Process (‘ILAAP’) apply significant stresses to capital and
+liquidity respectively. These follow the regulator’s expectations of idiosyncratic and market-wide stresses and are
+reviewed periodically by the Prudential Regulatory Authority (“PRA’) via Capital and Liquidity Supervisory Review and
+Evaluation Process (‘CSREP’ and LSREP’ respectively’). The stresses documented are applied over a five-year planning
+period as directed by the Board. The Bank has sufficient capital, liquidity and a business plan to operate as a going concern
+for a period of 12 months from the date of approval of the financial statements. In making this assessment, the Directors
+have considered a wide range of information including the current cost of living conditions, future projections of
+profitability, cash flows and capital resources.
+
+Macro Economy & Future Developments
+
+UK house prices finished 2024 on a strong footing, up 4.7% compared with 2023, with the average house price £297,166.
+The house prices continue to rise due to the rush to complete deals ahead of stamp duty hikes in 2025 spring, falling
+mortgage rates and constrained supply with relatively stable demand. After aggressive rate increases, 2024 marked a
+turning point for central banks like BoE, Fed and ECB as they cautiously reduced interest rates by year end. Bank of
+England reduced rates twice while Fed and ECB delivered three rates cut. 2024 ended with 4.75% policy benchmark rate.
+UK. inflation cooled in December 2024, with consumer prices rising 2.5% from a year earlier. There were signs that
+underlying pressures are abating as price growth in the services sector eased to 4.4%, the lowest since March 2022, from
+5%. Vacancies dropped by 24,000 in the three months to December — compared with the previous quarter — to 812,000,
+the 30th consecutive drop. Wage growth picked up in the three months through November, with pay excluding bonuses
+rising 5.6% from a year earlier, but economists expect this growth to be short-lived due to weakening labour market
+activity.
+
+12
+Guaranty Trust Bank (UK) Limited
+
+Directors’ Report (continued)
+
+In 2024, Nigerian government revenues and fiscal positions such as better revenue to debt service ratio was at 68% and
+an increase in foreign reserve balances to over $40bn All these suggest that the reforms pursued by the Government, on
+Nigerian economy (where our business predominantly originates from), are starting to yield the desired results. Stability
+was also witnessed in the foreign exchange market which came below $2,000 to £1 in December 2024. The year ended
+with inflation rate of 34.80% and GDP YoY growth rate at 3.84%; they were projected at 25% and 3.2% in 2025
+respectively. Crude oil production in Nigeria remained stable at 1.49m barrels per day in December 2024 and very close
+to its OPEC production quota of 1.5m bpd. Looking ahead, OPEC projected further growth in Nigeria’s oil production,
+driven by the Dangote Refinery approaching full capacity. The organization highlighted that the refinery’s full operations
+could stabilize petroleum product supply and potentially lower petrol prices, reinforcing the oil sector’s vital role in
+Nigeria’s economy. There were historic elections and global unrest in 2024. UK elected a new leader in July 2024 and a
+former US president was elected to a second term. Due to the expansionary budget of the new labour government, there
+was a fear that this would exacerbate the inflation pressures above 2% policy target of the Bank of England and slow down
+mortgage rate reductions. The UK government promised to update the National Planning Policy Framework to bring back
+mandatory housing targets and aim to build 1.5 million new homes over the next five years. The direct impact of the
+current US tariffs on the Bank is minimal and we would continue to monitor their effects as they unfold. Against the
+macro-economic backdrop and the on-going conflicts in Russia — Ukraine and Israel ~ Palestine, Directors are satisfied
+that the Bank has the resources and Capital required to continue to conduct business during an economic slowdown based
+on severe stress testing outcome. The Bank assessed the impact on its business and determined that the macro environment
+has had no material impact or other material risks in determining the long-term viability of the Bank and its ability to
+continue as a going concern for a period of 12 months from the date of approval of the financial statements.
+
+The Bank is aware of and closely monitors the uncertainties in the global economy and the market turmoil. The Board has
+concluded that the Bank will be able to-continue as a going concern and function within the Guaranty Trust Holding
+Company Ple Group framework, including Guaranty Trust Bank (UK) Limited and its fellow subsidiaries. The Bank will
+look to continue its strategy of providing retail banking products to its customers, in particular residential mortgages,
+together with correspondent banking facilities to members of Guaranty Trust Holding Company Plc.
+
+Financial Risk Management
+
+The Board is responsible for approving the Bank’s Risk Appetite Statement. Executive Management is tasked with
+ensuring the Bank operates within the defined Risk Model. Directors have considered the risks faced by the Bank as
+contained in the Strategic report and Note 23 and believe the Bank is poised to withstand negative outcomes it may face.
+
+Dividends
+The Directors do not recommend the payment of a dividend (2023: £nil).
+
+Charitable Donations and Political Contributions
+During the year the Bank made no charitable donation (2023: £1,050 to one charity).
+
+Organisation and Governance ; .
+The Bank’s organisation and governance is set out below and its risk management policies are set out in Note 23 to the
+financial statements.
+
+The Board of Directors has a supervisory role in overseeing the business, strategic direction, compliance and risk
+management activities of the Bank.
+
+The Directors who served on the Board of Directors and various Board Committees during the year are set out below.
+
+Olusegun Agbaje (Chairman)
+
+Babajide Okuntola 134 = (Non-Executive Director)
+
+Gbenga Alade *3 (Managing Director) Resigned 30 April 2024
+Paul Croucher 7? (Managing Director) Appointed 15 October 2024
+Paul Gospage 23 (Executive Director) Resigned 16 August 2024
+Goziem Eso? (Executive Director) Appointed 1 May 2024
+Christopher Taylor '?** (Independent Non-Executive Director)
+
+Robert Wild '?°4 (Independent Non-Executive Director)
+
+1234
+
+Joanne Hindle (Independent Non-Executive Director) Appointed 23 May 2024
+
+13
+Guaranty Trust Bank (UK) Limited
+Directors’ Report (continued)
+
+Key to membership of Board Committees:
+
+(1) Board Audit Committee
+
+(2) Board Risk and Compliance Committee
+(3) Board Credit Committee
+
+(4) Board Remuneration Committee
+
+Board meetings are held at least four times a year. The Board has also formed the following committees to develop strategy
+and set policy, review progress, and deal with specific and critical issues relevant to the committee’s objectives. The
+committees and their responsibilities are set out below.
+
+Further information concerning the Bank’s approach to risk management and its capital adequacy are contained in the
+unaudited disclosures made under the requirements of Pillar 3. These disclosures for 2023 are published on the Bank’s
+website at www.gtbankuk.com/about-gtbank-uk/our-company and the ones for 2024 will be available after the financial
+statements are signed off.
+
+Board Audit Committee
+
+As at December 2024, the Audit Committee comprises three Independent Non-Executive Directors and one Non-Executive
+Director and is responsible for monitoring the integrity of the financial statements and advising the Board accordingly. It
+also reviews the effectiveness of the Bank’s internal controls, financial controls, and risk management systems. Its more
+detailed responsibilities involve the review of the Internal Audit scope and annual programme, the review of the external
+audit scope, the analysis of audit reports, and the review of the arrangements for raising concerns.
+
+Board Risk and Compliance Committee
+
+The Risk and Compliance Committee is responsible for recommending policies to the Board on the Bank’s risk profile
+and limits, and for assessing the adequacy of its risk management and compliance framework. The Committee’s
+responsibilities include all risks with the exception of credit risk and financial crime risk, and its membership, as at
+December 2024, comprises the Managing Director, Executive Director, three Independent Non-Executive Directors and
+one Non-Executive Director.
+
+Board Credit Committee
+
+The Credit Committee is responsible for all credit related risks including approval and review of the Bank’s Credit Policy.
+The Committee reviews all advances granted by the Bank; approves specific loans above the Management Credit
+Committee’s approval limit and ensures the maintenance of strong internal credit risk controls. The Committee, as at
+December 2024, comprises the Managing Director, Executive Director, two Independent Non-Executive Directors and
+one Non-Executive Director.
+
+Board Remuneration Committee
+
+The Remuneration Committee, as at December 2024, comprises three Independent Non-Executive Directors and one Non-
+Executive Director, and it is responsible for monitoring remuneration policy and recommending the remuneration of the
+Executives, the Heads of the Compliance and Risk Management departments, and Internal Audit to the Board.
+
+Board Nominations Committee
+
+The Nominations Committee was formed by the Board at its February 2025 meeting. It is responsible for making
+recommendations for appointments to the Board, including Board committee membership. There is a plan to absorb
+Remuneration committee into a dual committee with the Nominations committee in near future. The Committee, as at 31
+December 2024, comprises three Independent Non-Executive Directors (INEDs) and two non-executive directors of the
+Bank. The committee is chaired by one of the INEDs.
+
+Disclosure of Information te the Auditor
+
+The Directors who held office at the date of approval of this Directors’ Report confirm that so far as they are each aware
+there is no relevant audit information of which the Bank’s auditor is unaware of. Each Director has taken all the necessary
+steps to make themselves aware of any relevant audit information and to establish that the Bank’s auditor is aware of that
+information.
+
+This confirmation is given and should be interpreted in accordance with the provisions of Section 418 of the Companies
+Act 2006.
+
+Auditor
+Forvis Mazars LLP has been appointed as auditor for the 2024 audit in accordance with section 487 of the Companies Act
+2006. Management and the Board have expressed their desire to re-appoint Forvis Mazars LLP as Auditor of the Bank.
+
+Capital Structure
+There was no increase in the Bank’s authorised share capital during the year.
+
+14
+Guaranty Trust Bank (UK) Limited
+
+Directors’ Report (continued)
+
+Post Balance Sheet Events
+There were no significant reportable post balance sheet events. The Financial Statements, the notes thereto and the strategic
+report have been reviewed and authorised by the Board of Directors. ‘
+
+en
+
+Paul Croucher
+Managing Director
+24 April 2025
+Registered Office
+
+10 Great Castle Street
+London, W1W 8&LP
+
+15
+Guaranty Trust Bank (UK) Limited
+
+Statement of Directors’ Responsibilities in Respect of the Strategic Report,
+Directors’ Report and the Financial Statements
+
+The directors present their annual report together with the audited financial statements of Guaranty Trust Bank (UK)
+‘Limited for the year ended 31 December 2024.
+
+The Directors are responsible for preparing the Strategic Report, Directors’ Report and the financial Statements in
+accordance with applicable law and regulations,
+
+The financial statements have been prepared in accordance with applicable law and UK-adopted international accounting
+standards.
+
+Under company law the Directors must not approve the financial statements unless they are satisfied that they give a true
+and fair view of the state of affairs of the Bank and of its profit for that period. In preparing the financial statements, the
+Directors are required to:
+
+¢ Select suitable accounting policies and then apply them consistently;
+
+* Make judgements and estimates that are reasonable, relevant and reliable;
+ensure that the financial statements have been prepared in accordance with applicable law and UK-adopted
+international accounting standards;
+
+e Assess the Bank’s ability to continue as a going concer, disclosing, as applicable, matters related to going
+concern; and
+
+e Use the going concern basis of accounting unless they either intend to liquidate the Bank or to cease operations
+or have no realistic alternative but to do so.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to show and explain the Bank’s
+transactions and disclose with reasonable accuracy at any time the financial position of the Bank and enable them to ensure
+that its financial statements comply with the Companies Act 2006.
+
+They are responsible for such internal control as they determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error, and have general responsibility for
+taking such steps as are reasonably open to them to safeguard the assets of the Bank and to prevent and detect fraud and
+other irregularities.
+
+The Directors are responsible for the maintenance and integrity of the corporate and financial information included on the
+Bank’s website. Legislation in the UK governing the preparation and dissemination of financial statements may differ
+from legislation in other jurisdictions.
+
+Paul Croucher
+Managing Director
+24 April 2025
+Registered Office
+
+10 Great Castle Street
+London, W1W 8LP
+
+16
+Guaranty Trust Bank (UK) Limited
+
+Independent auditor’s report to the members of Guaranty Trust Bank (UK)
+Limited |
+
+Opinion ; ;
+
+We have audited the financial statements of Guaranty Trust Bank (UK) Limited (the ‘Bank’) for the year ended 31
+December 2024 which comprise the Statement of Comprehensive Income, the Statement of Financial Position, the
+Statement of Changes in Equity, the Statement of Cash Flows and notes to the financial statements, including material
+accounting policy information.
+
+The financial reporting framework that has been applied in their preparation is applicable law and UK-adopted
+international accounting standards.
+
+In our opinion, the financial statements:
+
+* ‘give a true and fair view of the state of the Bank’s affairs as at 31 December 2024 and of its profit for the year
+then ended;
+
+* have been properly prepared in accordance with UK-adopted international accounting standards; and
+
+* have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable law.
+Our responsibilities under those standards are further described in the “Auditor’s responsibilities for the audit of the
+financial statements” section of our report. We are independent of the Bank in accordance with the ethical requirements
+that are relevant to our audit of the financial statements in the UK, including the Financial Reporting Council’s ((FRC’s’)
+Ethical Standard as applied to public interest and we have fulfilled our other ethical responsibilities in accordance with
+these requirements. We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis
+for our opinion.
+
+Conclusions relating to going concern
+In auditing the financial statements, we have concluded that the directors’ use of the going concern basis of accounting in
+the preparation of the financial statements is appropriate.
+
+Our audit procedures to evaluate the directors’ assessment of the Bank’s ability to continue to adopt the going concern
+basis of accounting included but were not limited to:
+
+¢ Undertaking an initial assessment at the planning stage of the audit to identify events or conditions that may cast
+signiticant doubt on the Bank’s ability to continue as a going concern;
+
+¢ Obtaining an understanding of the relevant controls relating to the directors’ going concern assessment;
+
+e Reviewing the directors’ going concern assessment to determine that it appropriately considers an assessment of
+key business risks including assessing the sufficiency of the Bank’s capital and liquidity taking into consideration
+the most recent Board-approved Interna! Capital Adequacy Assessment Process (“ICAAP’) and Internal Liquidity
+Adequacy Assessment Process (“I[LAAP’) and documents;
+
+* Making enquiries of the directors to understand the period of assessment considered by them, the assumptions
+they considered and the implication of those when assessing the Bank’s future financial performance;
+
+« Challenging the appropriateness of the directors’ key assumptions used in their forecasts, by reviewing supporting
+and contradictory evidence in relation to these key assumptions and assessing the directors’ consideration of
+stress testing on the Bank’s capital and liquidity and their consideration of severe but plausible scenarios. This
+included assessing the viability of mitigating actions within the directors’ control and assessment of the directors’
+considerations of the implications of the macroeconomic environment and geopolitical risk;
+
+« Assessing the reasonableness of the forecasts prepared by the directors, including testing the historical accuracy
+of the forecasts;
+
+« Inspecting correspondence with the Prudential Regulation Authority (‘PRA’) and the Financial Conduct
+Authority (FCA’) and holding bilateral discussions with the PRA and with the FCA;
+
+* Inspecting minutes of meetings of the board risk and compliance committee, the board audit committee, the board
+credit committee and the board of directors to identify events or conditions that may impact the Bank’s ability to
+continue as a going concern;
+
+* Considering whether there were events subsequent to the balance sheet date which could have a bearing on the
+going concern conclusion;
+
+¢ Considering the consistency of the director’s forecasts with other areas of the financial statements and our audit;
+and
+
+¢ Evaluating the appropriateness of the directors’ disclosures in the financial statements on going concern.
+
+17
+Guaranty Trust Bank (UK) Limited
+
+Based on the work we have performed, we have not identified any materia! uncertainties relating to events or conditions
+that, individually or collectively, may cast significant doubt on the Bank’s ability to continue as a going concern for a
+period of twelve months from when the financial statements are authorised for issue.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described in the relevant
+sections of this report.
+
+Key audit matters .
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of the
+financial statements of the current period and include the most significant assessed risks of material misstatement (whether
+or not due to fraud) we identified, including those which had the greatest effect on: the overall audit strategy; the allocation
+of resources in the audit; and directing the efforts of the engagement team. These matters were addressed in the context of
+our audit of the financial statements as a whole, and in forming our opinion thereon, and we do not provide a separate
+opinion on these matters.
+
+We summarise below the key audit matter in forming our opinion above, together with an overview of the principal audit
+procedures performed to address each matter and our key observations arising from those procedures.
+
+This matter, together with our findings, was communicated to those charged with governance through our Audit
+Completion Report.
+
+Key Audit Matter How our scope addressed this matter
+Expected credit loss (ECL’) in relation to loans In relation to the overall ECL process, our audit
+and advances to customers procedures included but were not limited to:
+£25,605 (2023: £23,200) ¢ Obtaining an understanding of the ECL
+
+process and assessing the design and
+implementation of key controls including
+in relation to the valuation of collateral;
+
+* Performing a stand-back assessment of the
+total ECL to assess its appropriateness and
+
+Refer to material accounting policy information
+(Note 3(j)) and Notes 2(e), 13 and 27 of the
+jinancial statements.
+
+The Bank holds £63m (2023: £58m) of loans and reasonableness, taking into consideration
+
+advances to customers against which an ECL of is the overall credit risk profile of the
+
+held at the year end. portfolio including collateralisation; and
+« Reviewing the financial statement
+
+The calculation of ECL requires the directors to make disclosures to ensure compliance with
+
+judgements over the ability of counterparties to make IFRS 9.
+
+We performed the following procedures to address
+the completeness and accuracy of the key input and
+
+future loan repayments. The Bank uses a model to
+determine the expected credit losses which requires
+
+judgement to the input parameters and assumptions. | @Ppropriateness of the assumptions to the ECL
+calculation:
+
+¢ Tested the completeness and accuracy of
+the LGD data input such as collateral
+valuations into the model;
+
+e With the assistance of our in-house
+property valuation experts, tested the
+reasonableness of the underlying collateral
+valuations assigned to loan facilities, on a
+sample basis, which included:
+
+The Bank’s loans and advances to customers
+portfolio is highly collateralised with an average loan
+to value of 35% and has limited history of actual
+losses and therefore the assumptions are not based on
+the Bank’s actual loss experience but based on
+external proxy data.
+
+Loss given default (‘LGD’) is an estimate of the loss o Assessing the appropriateness of third-
+arising in the case where a default occurs at a given party valuation reports at the
+
+time. It is based on the difference between the origination of the loan;
+
+contractual cashflows due and those the Bank would o Assessing the independence,
+
+expect to receive, including the realisation of any objectivity and competence of the
+collateral. third-party valuers used by the Bank at
+
+loan origination;
+
+18
+Guaranty Trust Bank (UK) Limited
+
+Given the significant level of collateral held by the
+Bank against the loan portfolio in the form of
+residential property, the ECL calculation output is
+dependent on the underlying collateral valuation and
+therefore the LGD inputs.
+
+Management is required to determine the collateral
+valuation within the portfolio and to determine when
+collateral should be considered for re-valuation and
+adjustment. Under reasonably possible house price
+reduction stress scenarios, the loan to value remains
+low, demonstrating that the underlying collateral
+provides sufficient headroom and potential credit
+loss is mitigated.
+
+Given that the ECL calculation is primarily sensitive
+to the LGD, where the collateral valuation is based
+on external valuations and indexing, we have
+identified an enhanced risk over the appropriateness
+of the LGD input and assumptions.
+
+The level of risk has remained consistent with the
+prior year.
+
+o Assessing the appropriateness of the
+year end valuation for properties held -
+as collateral to determine that the
+valuations are reasonable; and
+
+o Benchmarking valuations to external
+data sources to assess whether property
+valuations are appropriately adjusted to
+reflect changes in house prices
+subsequent to the valuation report.
+
+In respect of the model used to determine expected
+credit losses, we performed the following
+procedures with the assistance of our in-house credit
+modelling specialists:
+
+e Assessed the Bank’s methodology against
+the requirements of IFRS 9 including the
+reasonableness of model methodologies;
+
+« Assessed the integrity of the ECL
+calculation including determining that the
+LGD criteria has been appropriately
+applied to the model calculation;
+
+¢ Performed a sensitivity assessment of the
+impact of key assumptions and data inputs
+to the ECL output; and
+
+¢ Performed an independent re-performance
+of the ECL model calculation using the
+rules defined in the Bank’s methodology.
+
+Our observations
+
+Based on the procedures performed, we found that
+the ECL in relation to loans and advances to
+customers is not materially misstated as at 31
+December 2024 and is materially consistent with the
+requirements of IFRS 9.
+
+Our application of materiality and an overview of the scope of our audit
+The scope of our audit was influenced by our application of materiality. We set certain quantitative thresholds for
+materiality. These, together with qualitative considerations, helped us to determine the scope of our audit and the nature,
+timing and extent of our audit procedures on the individual financial statement line items and disclosures and in evaluating
+the effect of misstatements, both individually and on the financial statements as a whole. Based on our professional
+judgement, we determined materiality for the financial statements as a whole as follows:
+
+Overall materiality
+
+£574,000 (2023: £697,000)
+
+How we determined it
+
+5% of profit before taxation (‘PBT’) (2023: 5% of PBT)
+
+Rationale for benchmark applied
+
+We believe that the PBT provides us with the most appropriate
+measure for the users of the financial statements, given the bank is a
+profit-making entity and it is consistent with the wider industry. It is
+the metric in the primary statements which adequately reflects the
+focus of the users of the financial statements.
+
+19
+Guaranty Trust Bank (UK) Limited
+
+Performance materiality Performance materiality is set to reduce to an appropriately low level
+the probability that the aggregate of uncorrected and undetected
+misstatements in the financial statements exceeds materiality for the
+financial statements as a whole.
+
+We set performance materiality at £287,000 (2023: £348,500), which
+represents 50% (2023: 50%) of overall materiality.
+
+In determining the performance materiality, we considered a number of
+factors, including the expected level and nature of uncorrected and
+corrected misstatements in the prior year and the effectiveness of the
+internal control environment, and concluded that an amount towards
+the lower end of our normal range was appropriate.
+
+Reporting threshold We agreed with the directors that we would report to them
+misstatements identified during our audit above £17,200 (2023:
+£20,900) as well as misstatements below that amount that, in our view,
+warranted reporting for qualitative reasons.
+
+As part of designing our audit, we assessed the risk of material misstatement in the financial statements, whether due to
+fraud or error, and then designed and performed audit procedures responsive to those risks. In particular, we looked at
+where the directors made subjective judgements, such as assumptions on significant accounting estimates,
+
+We tailored the scope of our audit to ensure that we performed sufficient work to be able to give an opinion on the financial
+statements as a whole. We used the outputs of our risk assessment, our understanding of the Bank, its environment,
+controls, and critical business processes, to consider qualitative factors to ensure that we obtained sufficient coverage
+across all financial statement line items.
+
+Other information
+
+The other information comprises the information included in Annual Report and Financial Statements, other than the
+financial statements and our auditor’s report thereon. The directors are responsible for the other information. Our opinion
+on the financial statements does not cover the other information and, except to the extent otherwise explicitly stated in our
+report, we do not express any form of assurance conclusion thereon. ,
+
+Our responsibility is to read the other information and, in doing so, consider whether the other information is materially
+inconsistent with the financial statements or our knowledge obtained in the course of audit or otherwise appears to be
+materially misstated. If we identify such material inconsistencies or apparent material misstatements, we are required to
+determine whether this gives rise to a materia] misstatement in the financial statements themselves. If, based on the work
+we have performed, we conclude that there is a material misstatement of this other information, we are required to report
+that fact.
+
+We have nothing to report in this regard.
+
+Opinions on other matters prescribed by the Companies Act 2006
+In our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the strategic report and the directors’ report for the financial year for which the financial
+statements are prepared is consistent with the financial statements; and
+e the strategic report and the directors’ report have been prepared in accordance with applicable legal requirements.
+
+Matters on which we are required to report by exception
+In light of the knowledge and understanding of the Banks and its environment obtained in the course of the audit, we have
+not identified material misstatements in the strategic report or the directors’ report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006 requires us to
+report to you if, in our opinion:
+
+20
+Guaranty Trust Bank (UK) Limited
+
+¢ adequate accounting records have not been kept by the Bank, or returns adequate for our audit have not been
+_ received from branches not visited by us; or
+e the Bank financial statements are not in agreement with the accounting records and returns; or
+certain disclosures of directors’ remuneration specified by law are not made; or
+e we have not received al] the information and explanations we require for our audit.
+
+Responsibilities of Directors
+
+As explained more fully in the directors’ responsibilities statement set out on page 16, the directors are responsible for the
+preparation of the financial statements and for being satisfied that they give a true and fair view, and for such internal
+control as the directors determine is necessary to enable the preparation of financial statements that are free from material
+misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank’s ability to continue as a going
+concern, disclosing, as applicable, matters related to going concern and using the going concern basis of accounting unless
+the directors either intend to liquidate the Bank or to cease operations, or have no realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from material
+misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our opinion. Reasonable
+assurance is a high level of assurance but is not a guarantee that an audit conducted in accordance with ISAs (UK) will
+always detect a material misstatement when it exists. Misstatements can arise from fraud or error and are considered
+material if, individually or in the aggregate, they could reasonably be expected to influence the economic decisions of
+users taken on the basis of these financial statements.
+
+The extent to which our procedures are capable of detecting irregularities, including fraud is detailed below.
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures in line
+with our responsibilities, outlined above, to detect material misstatements in respect of irregularities, including fraud.
+
+Based on our understanding of the Bank and its industry, we considered that non-compliance with the following laws and
+regulations might have a material effect on the financial statements: regulatory and supervisory requirements of the PRA
+and of the FCA and financial crime regulations.
+
+To help us identify instances of non-compliance with these laws and regulations, and in identifying and assessing the risks
+of material misstatement in respect to non-compliance, our procedures included, but were not limited to:
+
+¢ Gaining an understanding of the legal and regulatory framework applicable to the Bank and the industry in which
+it operates, and considering the risk of acts by the Bank which were contrary to the applicable laws and
+regulations, including fraud;
+
+e Inquiring of the directors, management and, where appropriate, those charged with govemance, as to whether the
+Bank is in compliance with laws and regulations, and discussing their policies and procedures regarding
+compliance with laws and regulations;
+
+* Inspecting correspondence with relevant regulatory authorities including the PRA and FCA and holding bilateral
+discussions with the PRA and with the FCA;
+
+e Inspecting minutes of meetings of directors held during the year and up until the date of approval of the financial
+statements;
+
+e Attending board audit committee meetings heid during the year and up until the date of approval of the fimancial
+statements and inspecting minutes of those meetings; and
+
+e Discussing amongst the engagement team the laws and regulation listed above, and remaining alert to any
+indications of non-compliance throughout our audit.
+
+We also considered those laws and regulations that have a direct effect on the preparation of the financial statements, such
+as UK tax legislation and the Companies Act 2006.
+
+In addition, we evaluated the directors’ and management’s incentives and opportunities for fraudulent manipulation of the
+financial statements, including the risk of management override of controls, and determined that the principal risks related
+to posting manual journal entries to manipulate financial performance.
+
+Our procedures in relation to fraud included but were not limited to:
+
+e Making enquiries of the directors and management on whether they had knowledge of any actual, suspected or
+alleged fraud;
+
+e Gaining an understanding of the internal controls established to mitigate risks related to fraud;
+
+e Discussing amongst the engagement team the risks of fraud;
+
+21
+Guaranty Trust Bank (UK) Limited
+
+e Being sceptical to the potential of management bias in key judgements and assumptions in significant accounting
+estimates; and
+e Addressing the risks of fraud through management override of controls by performing journal entry testing.
+
+The primary responsibility for the prevention and detection of irregularities, including fraud, rests with both those charged
+with governance and management. As with any audit, there remained a risk of non-detection of irregularities, as these may
+involve collusion, forgery, intentional omissions, misrépresentations or the overridé of internal controls.
+
+The risks of material misstatement that had the greatest effect on our audit are discussed i in the “Key audit matters” section
+of this report.
+
+A further description of our responsibilities is available on the FRC’s website www. frc.org.uk/auditorsresponsibilities.
+This description forms part of our auditor’s report.
+
+Other matters which we are required to address
+
+Following the recommendation of the board audit committee, we were appointed by the Bank’s board of directors on 22
+January 2021 to audit the financial statements for the year ended 31 December 2020 and subsequent financial periods. The
+period of total uninterrupted engagement is five years, covering the years ended 31 December 2020 to 31 December 2024.
+
+The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the Bank and we remain independent
+of the Bank in conducting our audit.
+
+Our audit opinion is consistent with our additional report to the Board Audit Committee.
+
+Use of the audit report
+
+This report is made solely to the Bank’s members as a body in accordance with Chapter 3 of Part 16 of the Companies
+Act 2006. Our audit work has been undertaken so that we might state to the Bank’s members those matters we are required
+to state to them in an auditor’s report and for no other purpose. To the fullest extent permitted by law, we do not accept or
+assume responsibility to anyone other than the Bank and the Bank’s members as a body for our audit work, for this report,
+or for the opinions we have formed.
+
+Maximiliano Bark (Senior Statutory Auditor)
+for and on behalf of Forvis Mazars LLP
+Chartered Accountants and Statutory Auditor
+30 Old Bailey
+
+London
+
+EC4M 7AU
+
+24 April 2025
+
+22
+Guaranty Trust Bank (UK) Limited
+
+Statement of Comprehensive Income
+for the year ended 31 December 2024
+
+Notes
+Interest income 4
+Interest expense 4
+Net interest income
+Fees and commissions income a)
+Other operating income 6
+Operating income
+Personnel expenses 7
+Depreciation 15
+Other operating expenses 8
+Operating expenses
+Allowance for credit impairment losses (charge)/reversal
+Rental income
+Profit before taxation
+Taxation charge 10
+
+Profit after taxation
+
+Other comprehensive income, net of corporation tax
+
+Items that may be reclassified subsequently to profit or loss
+Fair value gain on FVOCI Investment securities, net of tax
+Fair value (gain)/loss reclassified to profit or loss
+
+Total comprehensive Income for the year
+
+All of the profit for the current year and for the prior year were derived from continuing activities.
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+Year to Year to
+
+31 December 31 December
+2024 2023
+
+£ £
+26,095,367 24,585,386
+(8,140,535) (5,078,320)
+17,954,832 19,507,066
+3,222,120 3,544,250
+4,532,851 4,410,543
+25,709,803 27,461,859
+(8,202,750) (8,017,084)
+(1,370,575) (1,560,012)
+(4,581,738) (3,959,278)
+
+(14,155,063)
+
+(13,536,374)
+
+(74,019) 12,663
+
+- 20,786
+11,480,721 13,958,934
+(2,842,082) (3,552,033)
+8,638,639 10,406,901
+56,053 10,306
+(10,306) 629,408
+11,046,615
+
+8,684,386
+
+Guaranty Trust Bank (UK) Limited
+
+Statement of financial position
+as at 31 December 2024
+
+Assets
+
+Cash and money market funds
+Loans and advances to banks
+Loans and advances to customers
+Investment securities ,
+Property and equipment
+Right-of-use leasehold property
+Other assets
+
+Deferred tax asset
+
+Total assets
+
+Liabilities
+
+Deposits by banks
+Deposits by customers
+Leasehold liability
+Other liabilities
+Deferred tax liability
+
+Total liabilities
+Called up share capital
+
+Retained earnings
+Fair value reserves
+
+Shareholders’ funds
+
+Total liabilities and shareholders’ funds
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+Notes
+
+il
+12
+13
+14
+l5a
+15b
+17
+16
+
+18
+19
+15c
+20
+16
+
+21
+
+31 December
+
+31 December
+
+2024 2023
+
+£ £
+100,662,477 94,365,231
+259,678,468 152,612,406
+62,534,590 57,675,796
+146,470,054 151,922,722
+3,746,354 3,197,915
+9,777,616 10,556,149
+567,044 440,852
+9,284 12,379
+583,445,887 470,783,450
+329,988,520 217,403,953
+191,532,438 196,877,072
+10,765,913 11,061,158
+2,832,498 5,875,018
+251,139 175,256
+535,370,508 431,392,457
+37,000,000 37,000,000
+11,019,326 2,380,687
+56,053 10,306
+48,075,379 39,390,993
+583,445,887 470,783,450
+
+These financial statements were approved by the Board of Directors on 24 April 2025.
+
+Signed on behalf of the Board of Directors
+
+Paul Croucher
+Managing Director
+Bank Registration No. 05969821
+
+24
+Guaranty Trust Bank (UK) Limited
+
+Statement of changes in Equity
+
+as at 31 December 2024
+
+As at 31 December 2024.
+
+Balance attributable to equity shareholders
+as at 1 January 2024
+Profit for the year
+
+Fair value gain on FVOCI Investment
+securities, net of tax
+Fair value gain reclassified to profit or loss
+
+Balance attributable to equity
+shareholders as at 31 December 2024
+
+As at 31 December 2023
+
+Balance attributable to equity
+shareholders as at 1 January 2023
+Profit for the year
+
+Fair value gain on FVOCI Investment
+securities, net of tax
+Fair value loss reclassified to profit or loss
+
+Balance attributable to equity
+shareholders as at 31 December 2023
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+Retained Fair value
+Share capital earnings . reserve Total equity
+£ £ £ £
+37,000,000 2,380,687 10,306 39,390,993
+- 8,638,639 - 8,638,639
+- - 56,053 56,053
+- - (10,306) (10,306)
+37,000,000 11,019,326 56,053 48,075,379
+Retained Fair value
+Share capital earnings reserve Total equity
+£ £ £ £
+37,000,000 (8,026,214) (629,408) 28,344,378
+- 10,406,901 - 10,406,901
+- - 10,306 10,306
+- - 629,408 629,408
+37,000,000 2,380,687 10,306 39,390,993
+
+25
+Guaranty Trust Bank (UK) Limited
+
+Statement of Cash Flows
+for the year ended 31 December 2024
+
+Notes 31 December 31 December
+2024 2023
+£ £
+
+Cash flows from operating activities
+Profit before taxation 11,480,721 13,958,934
+Interest income from investment securities 4 (7,475,529) (7,178,103)
+Depreciation 15a $92,042 517,052
+Allowances for credit impairment losses charge/(reversal) 74,019 (12,663)
+Effective interest rate adjustment 4 (166,166) (271,506)
+Lease finance charge 4 410,509 415,986
+Provision for lease dilapidation 11,240 10,833
+Depreciation of leasehold right of use asset 15b 778,533 1,042,960
+Operating cash flews before movement in working capital 5,705,369 8,483,493
+(Increase)/decrease in loans and advances to banks (44,371,958) 54,491,422
+(Increase)/decrease in loans and advances to customers (4,695,033) 4,426,364
+Increase in other assets (126,192) (149,057)
+Increase/(decrease) in deposits by banks 112,584,567 (127,254,322)
+Decrease in deposits by customers (5,344,634) (35,392,588)
+Decrease in other liabilities (1,147,659) (6,957,695)
+Changes in working capital 62,604,460 (102,352,383)
+Corporation tax (paid)/ received (4,669,205) 25,181
+Net cash flows from/ (used in) operating activities 57,935,255 (102,327,202)
+
+Cash flows from investing activities:
+Acquisition of investment securities . (309,552,620) (322,726,031)
+Proceeds from sale and maturity of investment securities 315,933,183 280,019,392
+Interest received from investment Securities 6,597,200 5,617,158
+Acquisition of property and equipment 15a (1,140,481) (1,422,698)
+Net cash flows from/ (used in) investing activities 11,837,282 (38,512,179)
+
+Cash flows from financing activities:
+Repayment of lease 15c (705,754) (570,000)
+Net cash used in financing activities (705,754) (570,000)
+Net increase/ (decrease) in cash and cash equivalents 69,066,783 (141,409,381)
+Cash and cash equivalents at beginning of year 238,999,407 380,408,788
+Cash and cash equivalents at end of year 308,066,190 238,999,407
+
+26
+Guaranty Trust Bank (UK) Limited
+
+Statement of Cash Flows
+for the year ended 31 December 2024 (continued)
+
+Reconciliation of cash balances:
+
+31 December Movement 31 December
+
+2023 2024
+
+Cash and balances with banks on demand 11,791,284 5,762,743 17,554,027
+
+Designated money market funds 82,573,947 $34,503 83,108,450
+
+Loans and advances to banks with maturity under 3 144,634,176 62,769,537 207,403,713
+months at origination
+
+Total Cash and cash equivalents at end of year 238,999,407 69,066,783 308,066,190
+
+The notes on pages 28 to 72 form an integral part of these financial statements.
+
+27
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+Reporting Entity
+Guaranty Trust Bank (UK) Limited (the “Bank”) is a wholly owned UK based subsidiary of the Parent, (Guaranty
+Trust Bank Limited) which is domiciled in Nigeria.
+
+The registered address of the Bank is 10 Great Castle Street, London, W1W 8LP.
+
+Basis of preparation
+
+Going concern
+
+Stress-testing of the firm’s capital and liquidity positions forms a key element of its risk management framework
+and of the Board’s assessment of the firm as a going concern. As such, the firm’s ICAAP and ILAAP apply
+significant stresses to capital and liquidity respectively. These follow the regulator’s expectations of idiosyncratic
+and market-wide stresses and are reviewed periodically by the PRA via CSREP and LSREP. The stresses
+documented are applied over a five year planning period as directed by the Board. The Board is satisfied that the
+stresses applied to capital and liquidity, as part of these risk management processes are significant but plausible.
+The Bank has sufficient capital, liquidity and a business plan to operate as a going concern for a period of 12 months
+from date of approval of the financial statements. In making this assessment, the Directors have considered a wide
+range of information including the current cost of living conditions, future projections of profitability, cash flows
+and capital resources.
+
+Statement of compliance
+The financial statements comply with applicable law and UK-adopted international accounting standards.
+
+Basis of measurement
+
+The financial statements have been prepared on the historical cost basis except for investment securities and money
+market funds which are recognised at fair value through Other Comprehensive Income.
+
+Functional currency
+
+The financial statements are presented i in Sterling, which is the Bank’s functional currency as this i is the currency
+in the economic environment in which in which the Bank operates. The figures are presented to the nearest absolute
+figure.
+
+Significant Estimates and Judgements
+
+The preparation of the financial statements in conformity with applicable law and UK adopted international
+accounting standards requires the Directors to make judgements, estimates and assumptions that effect the
+application of policies and reported amounts of assets and liabilities, income and expenses. The estimates and
+associated assumptions are based on historical experience and other factors that are believed to be reasonable under
+the circumstances, the results of which form the basis of making the judgements about carrying values of assets
+and liabilities that are not readily apparent from other sources. Actual results may differ from these estimates.
+
+In this regard, management have used judgments and/or estimates in the following areas:
+
+Leases
+
+Judgment is required to assess the relevant assumptions and estimates used in order to apply the definition in terms
+of leases, application of discount rate and consideration of future dilapidations costs arising from the lease
+agreements. As at 31 December 2024 the Right-of-Use leasehold property amounted to £9,777,616 (2023:
+£10,556,149).
+
+Expected Credit Loss Impairment Model
+
+The Bank uses the International Financial Reporting Standard 9 (IFRS 9) to recognise and measure financial
+instruments on an Expected Credit Loss (ECL) basis.
+
+The Bank records allowance for Expected Credit Losses (ECL) for all financial assets that are not held at Fair Value
+through Profit or Loss (FVTPL). ECLs are an unbiased probability-weighted estimate of credit losses determined
+by evaluating a range of possible outcomes they are measured in a manner that reflects the time value of money
+and uses reasonable and supportable information that is available without undue cost or effort at the reporting date
+about past events, current conditions and forecast of future economic conditions.
+
+28
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+The Bank reviews its wholesale portfolios, comprising predominantly undated and short-dated exposures, on an
+ongoing basis. A minority of credit exposures in number but a majority in value comprise rated Placements, Nostro,
+Investment securities and other Liquid Asset holdings. The Bank’s ECL modelling approach and methodology rely
+in part on credit rating agencies or, as regulators refer to them, External Credit Assessment Institutions (ECAIs).
+Each counterparty is graded according to the Bank’s internal rating system (in addition to the monitoring of any
+external rating) and fully reviewed at least annually, or more frequently should the Bank become aware of any
+factor indicating potential for a change of counterparty status or situation.
+
+The mortgage books are reviewed monthly, including revaluation using the Halifax House Price Index (HPI),
+compared to the outstanding balances in order to detect any significant adverse change in Loan-To-Value (LTV).
+Valuation stress-tests of 10%, 20%, 30% and 40% are additionally applied in order to test the sensitivity of
+individual exposures to potential severely adverse price falls.
+
+The Bank adopts a “three stage approach” for impairment and measuring ECL based on changes in credit quality
+since initial recognition.
+
+Staging is a significant judgement, and the Bank considers staging on an individual account basis. Key criteria
+around whether a Significant Increase in Credit Risk (SICR) has occurred which would change the stage of a
+customer’s account is a customer is in arrears of greater than 30 days for Stage 2, or 90 days for Stage 3, or there
+is a significant decrease in rating relative to the rating at time of origination, or significant movement in the rating.
+
+e Stage 1 — when a financial asset is first recognised, it is assigned to Stage 1. If there is no SICR from initial
+recognition the financial asset remains in Stage 1. Stage 1 also includes financial assets where the credit risk has
+improved (by definition an improvement is deemed as full repayment of any overdue amounts and there is good
+evidence that underlying reasons or drivers for the SICR no longer pertain), and the financial asset has been
+reclassified back from Stage 2. For financial assets in Stage 1, a 12 month ECL is recognised and interest revenue
+is calculated on the gross carrying amount of the asset (that is, without deduction for credit allowance). The ECL
+is calculated by a probability of default occurring over the next 12 months. For those instruments with a remaining
+maturity less than 12 months, a probability of default corresponding to the remaining term to maturity is used.
+
+e Stage 2 - when a financial instrument experiences a SICR subsequent to origination but is not considered to be
+in default, it is included in Stage 2. This requires the computation of ECL based on the probability of default over
+the remaining estimated life of the financial instrument and the interest revenue is still calculated on the gross
+carrying amount of the asset.
+
+e Stage 3 -— when there is objective evidence of impairment and the financial asset is considered to be in default,
+or credit impaired, it is moved to Stage 3. For financial assets in Stage 3, an individual ECL is recognised against
+each defaulted exposure.
+
+For loan commitments, where the loan relates to the undrawn component of a facility, it is assigned to the same
+stage as the drawn component of the facility. For loans underwritten and approved but not yet originated or
+disbursed, the loan commitment is assigned to Stage 1.
+
+When determining whether the credit risk on a financial instrument has increased significantly, the Bank considers
+whether reasonable and supportable information is available, in order to compare the risk of a default occurring at
+the reporting date with the risk of a default occurring at initial recognition of the financial instrument.
+
+29
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Change in credit quality since initial recognition:
+
+Improvement Deterioration
+
+Classification of Assets — Staging
+
+Stage 1 Stage 2 Stage 3
+(Performing) (Under Performing) (Non-Performing)
+Initial Recognition SICR since Initial Credit Impaired Assets
+Recognition
+Recognition of ECL
+12-Month ECL Lifetime ECL Individual ECL
+
+Interest Revenue
+
+Effective Interest Effective Interest Effective Interest
+on on on
+Gross carrying amount Gross carrying amount Net carrying amount
+
+A summary of ECL measurement is as follows:
+
+* Financial assets that are not credit impaired at the reporting date: is the present value of all cash shortfalls.
+Cash shortfalls are the difference between the contractual cash flows due to the Bank and the cash flows that the
+Bank expects to receive.
+
+e Financial assets that are credit impaired at the reporting date: is the difference between the gross carrying
+amount and the present value of estimated future cash flows.
+
+* Loan Commitments: is the present value of the difference between the contractual cash flows that are due to the
+Bank if the commitment is drawn down and the cash flows the Bank expects to receive. A credit conversion factor
+(CCF) to a balance sheet item is included in the calculation.
+
+Credit impaired is defined by the Bank as a financial asset in Stage 3 as detailed above.
+
+The Bank periodically reviews their financial assets carried at amortised costs to identify any indications of financial
+deterioration. For loans where there is default or an objective evidence of default, judgement is required by management
+in the estimation of the amount and timing of expected cash flows, reliability and valuation of collateral in order to
+determine the level of impairment provisions to be recorded.
+
+The Bank keeps a significantly collateralised portfolio and the estimate from the process above is low and the risk is
+therefore mitigated by the level of collateralisation. Judgement is involved in determining the level of collateral valuation
+within the portfolio and in determining when collateral should be considered for re-valuation and adjustment.
+
+Expected credit losses in relation to cash balances, and loans to banks is minimal due to the low level of exposure and the
+credit quality of the counterparties. (See page 37 for instances of increase in credit risk and default.)
+
+Judgements
+
+Given the limited loss experience, the Bank applies judgment in estimating the PD’s and LGD’s for the estimation of ECL.
+Where external data (e.g Fitch, Moody’s, and Standard & Poor’s (S&P)) is available for PDs and LGDs, management
+sources and applies this data accordingly. The Bank does not apply any forward-looking adjustments in the estimation of
+ECL’s as the mortgage book is highly collateralised with low loan to value (“LTV”). Management is of the view that there
+is no need to make additional provisions.
+
+Estimates
+
+Underlying assumptions used in estimating ECL’s are mainly around the indexation adjustment of the collateral. The Bank
+sources the house price index on a monthly basis from Halifax House price Index data from the Halifax website and applies
+
+30
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+it on the valuation of the underlying collateral held. The overall total balance of the ECL as at 31 December 2024 is £133k .
+(2023: £52k), out of which the ECL balance related to Loans and advances to customers as at 31 December 2024 is £26k
+(2023: £23k). As at December 2024, the average portfolio LTV is 35% with the highest being 69.7%.
+Curing . . . .
+A borrower will move back into Stage 1 from Stage 2 or 3 conditional upon both 90 days good account conduct and the
+improvement of the Client’s situation to the extent that the credit risk has receded sufficiently and a full repayment of the
+loan, without recourse to the collateral, is likely Staging criteria is well defined in Bank’s IFRS 9 and ECL Modelling
+documents; and according to the exposure category.
+3. Significant accounting policies
+The accounting policies set out below have been applied consistently throughout the reporting period presented in
+the financial statements.
+
+(a) Income recognition
+
+Interest Income and Expense
+
+Interest income on financial assets and interest expense on financial liabilities are recognised in Interest Income
+and Interest Expense in the statement of comprehensive income using the ‘effective interest rate’ method.
+
+The effective interest rate is the rate that discounts estimated future cash payments through the expected life of
+the financial asset or financial liability or where applicable a shorter period, to the net carrying amount of the
+financial asset or financial liability.
+
+When applying the effective interest rate method, the Bank estimates the future cash flows taking into
+consideration all contractual terms of the financial instruments but not future credit losses.
+
+The calculation of the effective interest rate includes all fees paid or received between parties to the contract that
+are an integral part of the EIR, transaction costs such as mortgage arrangement fees and other premiums or
+discounts where applicable.
+
+Transaction costs are incremental costs that are directly attributable to the acquisition, issue and disposal of a
+financial asset or liability.
+Interest income and expense presented in the income statement include;
+
+o Interest on financial assets and liabilities measured at amortised costs calculated on an effective interest
+
+rate basis.
+o Interest on financial assets measured at fair value through OCI calculated on an effective interest rate
+
+basis.
+
+Whilst interest revenue is always required to be presented as a separate line item, it is calculated differently
+according to the status of the assets with regard to credit impairment.
+
+For a financial asset that that has not become credit impaired since initial recognition, interest revenue is calculated
+using a ‘gross method’ of applying the effective interest rate method to the carrying value of the asset (i.e. its
+carrying amount excluding the loss allowance).
+
+For a financial asset that subsequently has become credit impaired, from the beginning of the next reporting period,
+interest revenue is calculated using a ‘net method’ of applying the effective interest rate to the net amortised cost
+balance (i.e. including the loss allowance).
+
+Interest income on Stage 3 loans is recognised on a net basis as described above.
+
+Interest on impaired financial assets is recognised at the original effective interest rate of the financial asset applied
+to the carrying amount as reduced by any allowance for impairment.
+
+Fees and Commission Income
+The Bank earns fee income from a number of services it renders to its customers. Fees are earned as follows:
+o Fees earned on the execution of a transaction recognised as ‘fee income’ when the transaction is
+completed.
+o Fees earned in respect of services provided are recognised as ‘fee income’ when the services are
+provided spread over the period of service provided;
+o Fees which form an integra! part of the ‘effective interest rate’ of a financial instrument are recognised
+as an adjustment to the effective rate and recorded in ‘interest income’.
+3]
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Other operating income
+
+Other operating income relates to income received from closing customer driven foreign exchange transactions in
+the wholesale markets. Income is recognised based on margin earned on customer orders.
+
+. (b) Foreign currency
+
+Transactions in foreign currencies are recorded using the rate of exchange ruling at the date of the transaction.
+Monetary assets and liabilities denominated in foreign currencies are translated into sterling using the rate of
+exchange as at the year-end date and resulting gains or losses on translation are included in the statement of
+Comprehensive income. Assets and liabilities denominated in foreign currencies that are stated at fair value are
+translated at foreign exchange rates ruling at the dates the fair values are determined.
+
+(c) Cash and money market funds
+
+Cash and money market funds comprise cash and demand deposits with banks and designated money market funds
+with original maturities of three months or less from the date of acquisition that are subject to an insignificant risk
+of changes in their fair value.
+
+(d) Property and equipment
+
+Property and equipment are shown at cost less accumulated depreciation and any accumulated impairment losses.
+Depreciation is provided on a straight-line basis to write-off the cost of assets over their expected useful lives as
+
+follows:
+Leasehold improvement - Shorter of lease term or its useful life
+IT equipment - 20%-334%
+Motor vehicles - 25%
+
+(e) Pension cost
+
+The Bank operates a defined contribution pension scheme for all staff. The cost of the scheme is equal to the
+contributions payable to the scheme for the year and is recognised within personnel expenses in the statement of
+comprehensive income. The Bank has no other obligation once the contributions have been paid.
+
+(f) Lease rental income
+
+Rental income from operating leases is recognised on a straight-line basis over the expected life of the lease. Rental
+income is included in other income on the statement of comprehensive income.
+
+Costs incurred in the establishment of an operating lease under which rental income is recognised are deferred and
+amortised in proportion to the recognition of the rental income.
+
+(g) Taxation
+
+Tax on the profit and loss for the period comprises current and deferred tax using the tax rates and laws that have
+been enacted or substantively enacted at the year-end date. Corporation tax expense is recognised in the statement
+of comprehensive income except to the extent that it relates to items recognised directly in equity, in which case it
+is recognised in equity.
+
+Deferred tax is measured at the rate that are expected to be applied to the temporary differences when they reverse,
+based on that they have been enacted or substantially enacted by the reporting date.
+
+Deferred tax assets and liabilities are offset if there is a legally enforceable right to offset current tax liabilities
+against current tax assets, and they relate to income taxes levied by the same tax authority on the same taxable
+entity, or on different tax entities, but they intend to settle current tax liabilities and assets on a net basis or their
+tax assets and liabilities will be realised simultaneously.
+
+(h) Share capital
+
+Ordinary shares are classified as equity. Incremental costs directly attributable to the issue of ordinary shares and
+share options are recognised as a deduction from equity, net of any tax effects.
+
+32
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+(i) Contingent liabilities and commitments
+
+Acceptances ; ; ; ;
+Acceptances are undertakings by the Bank to pay bills of exchange drawn on customers. The Bank expects most
+acceptances to be settled simultaneously with the reimbursement from customers. They are booked as a form of
+guarantee.
+
+Guarantees
+The Bank provides financial guarantees and bonds to third parties on the request of customers and other banks.
+These agreements have fixed limits and generally do not extend beyond the period stated in each contract. All
+bonds and guarantees are disclosed in the financial statements in Note 22. Commissions and fees charged to
+customers for services rendered in respect of bonds and guarantees are recognized at the time the services or
+transactions are executed.
+
+Commitments
+
+The Bank enters into commitments to extend credit or deliver on sales or purchases of foreign exchange in the
+future. Commissions and fees charged to customers for services rendered in respect of commitments are held off
+balance sheet at the time the service or transaction is executed.
+
+Where the financial instrument includes both a drawn and undrawn commitment and the contractual ability to
+demand repayment and cancel the undrawn commitment does not serve to limit the Bank’s exposure to credit risk
+to the contractual notice period, the contractual period does not determine the maximum period considered, Instead,
+ECL is measured over the period the Bank remains exposed to credit risk that is not mitigated by credit risk
+management actions. The Bank commits a portion of its liquid assets to the maintenance of its liquidity buffer. As
+at 31 December 2024 the effect of ECL charge on commitments was considered immaterial.
+
+Letters of credit
+
+The Bank issues and confirms letters of credit to guarantee the performance of customers to third parties. These are
+disclosed in the financial statements in Note 22. Commissions and fees charged to customers for the service are
+recognised in the statement of comprehensive income at the time the service or transaction is completed.
+
+(j) Financia) Assets & Liabilities
+Recognition
+
+The Bank on the date of origination or purchase recognises loans, securities or deposits at the fair value of
+consideration paid. Origination date is the date the facility is disbursed. All other financial assets and liabilities are
+initially recognised on the trade date at which the Bank becomes a party to the contractual provisions of the
+instrument.
+
+Classification and Measurement
+
+Initial measurement of a financial asset or liability is a fair value plus transaction costs that are directly attributable
+to its purchase. Initial measurement of a financial asset or liability is at fair value through profit or loss, transaction
+costs are recognised immediately in profit or loss. Financial assets include both debt and equity instruments
+
+Financial assets are classified into one of the following measurement categories:
+
+e Amortised cost
+e Fair Value through Other Comprehensive Income (FVOCI)
+e = Fair Value through Profit or Loss (FVTPL)
+
+The Bank classifies all of its financial assets based on the business model for managing the assets and the asset’s
+contractual cash flow characteristics.
+
+33
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Financial Liabilities
+
+Deposits are accounted for at amortised cost. Interest is recognised using the effective interest rate method and
+recorded within interest expense. ; ; ,
+
+Reclassification of Liabilities
+No reclassification of financial liabilities have been made during the current financial year.
+Business Model Assessment
+
+Business model assessment involves determining whether financial assets are managed in order to generate cash
+flows from collection of contractual cash flows, selling financial assets or both. The Bank assesses business model
+at a portfolio level reflective of how group of assets are managed together to achieve a particular business objective.
+For the assessment of business model, the Bank takes into consideration the following factors:
+
+* The stated policies and objectives for the portfolio and the operation of those policies in practice. In
+particular, whether management’s strategy focuses on earning contractual interest revenue, maintaining a
+particular interest rate profile, matching the duration of the financial assets to the duration of the liabilities
+that are funding those assets or realizing cash flows through the sale of the assets;
+
+« How the performance of assets in a portfolio is evaluated and reported to Bank heads and other key
+decision makers within the Bank’s business lines; the risks that affect the performance of assets held within
+a business model and how those risks are managed;
+
+¢ How compensation is determined for the Bank’s business lines’ management that manages the assets; and
+
+e The frequency and volume of sales in prior periods and expectations about future sales activity.
+
+Management determines the classification of the financial instruments at initial recognition. The business mode]
+assessment falls under three categories:
+
+Business Model 1(BM1): Financial assets held with the sole objective to collect contractual cash flows;
+Business Model 2 (BM2): Financial assets held with the objective of both collecting contractual cash flows
+and selling; and
+
+* Business Model 3 (BM3): Financial assets held with neither of the objectives mentioned in BM] or BM2
+above. These are basically financial assets held with the sole objective to trade and to realize fair value
+changes.
+
+The Bank may decide to sell financial instruments held under the BM | category with the objective to collect
+contractual cash flows without necessarily changing its business model if one or more of the following conditions
+are met:
+
+¢ When the Bank sells financial assets to reduce credit risk or losses because of an increase in the assets’
+credit risk. The Bank consider sale of financial assets that may occur in BMI to be infrequent if the sale
+is one-off during the Financial Year and /or at most once during the quarter.
+
+¢ Where these sales are infrequent even if significant in value.
+
+© Where these sales are insignificant in value both individually and in aggregate even if frequent. A sale is
+considered insignificant if the portion of the financial assets sold is equal to or less than 5% of the carrying
+amount (book value) of the total assets within the business model.
+
+Cash flow characteristics assessment
+
+The contractual cash flow characteristics assessment involves assessing the contractual features of an instrument
+to determine if they give rise to cash flows that are consistent with a basic lending arrangement. Contractual cash
+flows are consistent with a basic lending arrangement if they represent cash flows that are solely payments of
+principal and interest on the principal amount outstanding (SPPI).
+
+Principal is defined as the fair value of the instrument at initial recognition. Principal may change over the life of
+the instruments due to repayments. Interest is defined as consideration for the time value of money and the credit
+
+34
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+I.
+
+I.
+
+risk associated with the principal amount outstanding and for other basic lending risks and costs (liquidity risk and
+administrative costs), as well as a profit margin.
+
+In assessing whether the contractual cash flows are solely payments of principal and interest, the Bank considers
+the contractual terms of the instrument. This includes assessing whether the financial asset contains a contractual
+term that could change the timing or amount of contractual cash flows such that it would not meet this condition.
+In making the assessment, the Bank considers:
+
+contingent events that would change the amount and timing of cash flows;
+
+leverage features;
+
+prepayment and extension terms;
+
+terms that limit the Bank’s claim to cash flows from specified assets (e.g. non-recourse asset
+arrangements); and
+
+e Features that modify consideration of the time value of money ~ e.g. periodical reset of interest rates.
+
+Financial assets measured at amortised cost
+
+Financial assets are measured at amortised cost if they are held within a business model whose objective is to
+hold for collection of contractual cash flows where those cash flows represent solely payments of principal and
+interest. After initial measurement, debt instruments in this category are carried at amortized cost using the
+effective interest rate method. Amortized cost is calculated taking into account any discount or premium on
+acquisition, transaction costs and fees that are an integral part of the effective interest rate. Amortisation is
+included in Interest income in the Statement of Comprehensive Income. Impairment on financial assets measured
+at amortized cost is calculated using the expected credit loss approach.
+
+Financia] assets measured at FVOCI
+
+Financial assets such as Investment securities (Bonds) are measured at FVOCI if they are held within a business
+model whose objective is to hold for collection of contractual cash flows and for selling financial assets, where
+the assets’ cash flows represent payments that are solely payments of principal and interest. Subsequent to initial
+recognition, unrealized gains and lossés on debt instruments measured at FVOCI are recorded in Other
+Comprehensive Income (OCI), unless the instrument is designated in a fair value hedge relationship. Upon De
+recognition, realized gains and losses are reclassified from OCI and recorded in Other Income in the Statement
+of Comprehensive Income. Foreign exchange gains and losses that relate to the amortized cost of the debt
+instrument are recognized in the Statement of Comprehensive Income. Premiums, discounts and related
+transaction costs are amortized over the expected life of the instrument to Interest Income in the Statement of
+Comprehensive Income using the effective interest rate method. Impairment on financial assets measured at
+FVOCI is calculated using the expected credit loss approach. The expected credit loss charge is recognised in
+the statement of comprehensive income. In addition, the Moncy Market funds (Cash & cash equivalents) are
+measured FVOCI.
+
+Financia] assets measured at FVTPL
+The Bank does not have financial assets measured at FVTPL.
+
+Reclassifications
+
+Financial assets are not reclassified subsequent to their initial recognition, except in the period after the Bank changes
+its business model for managing assets. A change in the Bank’s business model will occur only when it either begins or
+ceases to perform an activity that is significant to its operations such as:
+
+e Significant internal restructuring or business combinations;
+
+¢ Disposal of a business segment line i.e. disposal of a business segment;
+
+e Any other reason that might warrant a change in the Bank’s business model as determined by Board based
+on facts and circumstances.
+
+The following are not considered changes in the business model:
+
+e A cchange in intention related to particular financial assets (even in circumstances of significant changes
+in market conditions).
+
+e A temporary disappearance of a particular market for financial assets.
+
+e A transfer of financial assets between subsidiaries within the Group.
+
+35
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+When reclassification occurs, the Bank reclassifies all affected assets in accordance with the new business model.
+Reclassification is applied prospectively from the ‘reclassification date’. Reclassification date is the first day of the first
+reporting period following the change in business model. Gains, losses or interest previously recognised are not restated
+when reclassification occurs.
+
+De-recognition of financial instruments
+
+A financial liability is derecognised when the obligation under the liability is discharged, cancelled or expires. The Bank
+derecognises a financial liability when its terms are modified and the cash flows of the modified liability are substantially
+different. A new financial liability based on modified terms is recognised at fair value. The difference between the carrying
+amount of the financial liability extinguished and the new financial liability with modified terms is recognised in profit or
+loss.
+
+The Bank derecognises a financial asset only when the contractual rights to the cash flows from the asset expire or it
+transfers the financial asset and substantially all the risks and rewards of the ownership of the asset to another entity. If
+the Bank neither transfers nor retains substantially all the risks and rewards of the ownership and continues to control the
+transferred asset, the Bank continues to recognise the financial asset and also recognises a collateral borrowing for the
+proceeds received.
+
+Financial assets that are transferred to a third party but do not qualify for recognition are presented in the balance sheet as
+‘Assets pledged as collateral’, if the transferee has the right to sell or re pledge them.
+
+On de-recognition of a financial asset, the difference between the carrying amount of the asset (or the carrying amount
+allocated to the portion of the asset transferred), and the sum of (i) the consideration received (including any new asset
+obtained less any new liability assumed) and (ii) any cumulative gain or loss that been recognised in other comprehensive
+income is recognised in profit or loss.
+
+Financial assets are derecognised when the terms of the financial asset are substantially modified and the cash flow of the
+modified asset are substantially different. In determining when a modification to terms of a financial asset is substantial
+or not to the existing terms, the Bank will consider the following non-exhaustive criteria:
+
+Quantitative criteria
+A modification would lead to De recognition of an existing financial asset and recognition of a new financial asset, 1.
+substantial modification, if:
+¢ The discounted present value of the cash flows under the new terms, including any fees received net of any fees
+paid and discounted using the original effective interest rate, is at least 10 per cent different from the discounted
+present value of the remaining cash flows of the original financial asset.
+
+In addition to the above, the bank shall also consider qualitative factors as detailed below.
+
+Qualitative criteria
+Scenarios where modifications will lead to De recognition of existing loan and recognition of a new loan, i.e. substantial
+modification, are:
+e The exchange of a loan for another financial asset with substantially different contractual terms and conditions
+such as the restructuring of a loan to a bond; conversion of a loan to an equity instrument of the borrower
+
+Impairment of Financial Assets
+In line with IFRS 9, the Bank assesses the unlisted financial instruments for impairment using Expected Credit Loss (ECL)
+approach:
+
+Amortised cost financial assets;
+
+Debt securities classified as at FVOCI;
+Off balance sheet loan commitments; and
+Financial guarantee contracts.
+
+36
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+
+for the year ended 31 December 2024
+Expected Credit Loss Model
+
+ECL is determined for exposures arising from loans and advances to banks, loans and advances to customers, investment
+securities, other financial assets and off-balance sheet exposures comprise contingent liabilities and irrevocable
+commitments such as unused credit facilities. Such off-balance sheet exposures are converted into cash exposures using
+regulatory Credit Conversion Factors (CCF).
+
+The Bank’s allowance for credit loss calculations are outputs of models with a number of underlying assumptions
+regarding the choice of variable inputs and their interdependencies. The expected credit loss impairment model reflects
+the present value of all cash shortfalls related to default, events either over the following 12 months or over the expected
+life of a financial instrument depending on credit deterioration from inception. The allowance for credit losses reflects an
+unbiased, probability weighted outcome which considers scenarios based on reasonable and supportable forecasts.
+
+The Bank adopts a “three stage approach” for impairment and measuring ECL based on changes in credit quality since
+initial recognition.
+
+Staging is a significant judgement, and the Bank considers staging on an individual account basis. Key criteria around
+whether a Significant Increase in Credit Risk (SICR) has occurred which would change the stage of a customer’s account
+is a customer is in arrears of greater than 30 days for Stage 2, or 90 days for Stage 3, or there is a significant decrease in
+rating relative to the rating at time of origination, or significant movement in the rating. Staging criteria is well defined in
+Bank’s IFRS 9 and ECL Modelling documents; and according to the exposure category.
+
+e Stage 1 — when a financial asset is first recognised, it is assigned to Stage 1. If there is no SICR from initial
+recognition the financial asset remains in Stage 1. Stage 1 also includes financial assets where the credit risk has
+improved (by definition an improvement is deemed as full repayment of any overdue amounts and there is good
+evidence that underlying reasons or drivers for the SICR no longer pertain), and the financial asset has been
+reclassified back from Stage 2. For financial assets in Stage 1, a 12 month ECL is recognised and interest revenue
+is calculated on the gross carrying amount of the asset (that is, without deduction for credit allowance). The ECL
+is calculated by a probability of default occurring over the next 12 months. For those instruments with a remaining
+maturity less than 12 months, a probability of default corresponding to the remaining term to maturity is used.
+
+e Stage 2 — when a financial instrument experiences a SICR subsequent to origination but is not considered to be
+in default, it is included in Stage 2. This requires the computation of ECL based on the probability of default over
+the remaining estimated life of the financial instrument and the interest revenue is still calculated on the gross
+carrying amount of the asset.
+
+e Stage 3 — when there is objective evidence of impairment and the financial asset is considered to be in default,
+or credit impaired, it is moved to Stage 3. For financial assets in Stage 3, an individual ECL is recognised against
+each defaulted exposure.
+
+Measurement of Expected Credit Losses
+
+The calculation method takes into consideration the Probability of Default (PD) of the counterparty based on internal and
+external default history, the Loss Given Default (LGD) based on expert judgement, the value of collateral provided and
+the estimated Exposure at Default (EaD). The ECL model is based on the same concept according to IFRS 9 guidance. PD
+and LGD are average values measured through the cycle without Point-in-Time (PiT) adjustments.
+
+Besides specific value adjustments for non-performing / defaulted credit exposures are determined individually on a case
+to case basis.
+
+ECLs are calculated at the individual exposure level using three main components, which are described below:
+
+37
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+ECL Components ) Description
+Probability of Default The probability of default is an estimate of the likelihood of default over a given
+(PD) time horizon. A default may only happen at a certain time over the remaining
+estimated life if the facility has not been previously derecognised and is still in the
+portfolio.
+
+* 12 months PDs — This is the estimated probability of default occurring within
+the next 12 months (or over the remaining life of the financial instrument if
+that is less than 12 months) This is used to calculate 12 month ECLs.
+
+* Lifetime PDs — This is the estimated probability of default occurring over the
+remaining life of the financial instrument. This is used to calculate lifetime
+ECLs for Stage ‘2’. Stage3 ECL’s are individually assessed.
+
+Loss Given Default The loss given default is an estimate of the loss arising in the case where a default
+
+(LGD) occurs at a given time. Jt is based on the difference between the contractual cash
+flows due and those that the lender would expect to receive, including the
+realisation of any collateral. It is usually expressed as a percentage of the EAD.
+
+Exposure at Default The exposure at default is an estimate of the exposure at a future default date,
+
+(EAD) taking into account expected changes in the exposure after the reporting date,
+including repayments of principal and interest, whether scheduled by contract or
+otherwise, expected drawdowns on committed facilities, and accrued interest from
+missed payments.
+
+To estimate ECL for off balance sheet exposures, a CCF is usually computed. Where, the Bank converts the off-balance
+sheet exposure into an on-balance sheet equivalent for the purposes of calculating ECL. CCF is a modelled assumption
+which represents the proportion of any undrawn exposure that is expected to be drawn prior to a default event occurring.
+It is a factor that converts an off balance sheet exposure to its credit exposure equivalent. The Bank uses the regulatory
+CCF used for Pillar 1 capital purposes being, in the Bank’s case, 50%.
+
+In modelling CCF, the Bank considers its account monitoring and payment processing policies including its ability to
+prevent further drawings during periods of increased credit risk. CCF is applied on the off balance sheet exposures to
+determine the EAD and the ECL impairment model for financial assets is applied on the EAD to determine the ECL on
+the off balance sheet exposures.
+
+The Bank reviews its wholesale portfolios, comprising predominantly undated and short-dated exposures, on an ongoing
+basis. A minority of credit exposures in number but a majority in value comprise rated Placements, Nostro and Liquid
+Asset holdings. The Bank’s ECL modelling approach and methodology rely in part on credit rating agencies or, as
+regulators refer to them, External Credit Assessment Institutions (ECAIs). Each counterparty is graded according to the
+Bank’s internal rating system (in addition to the monitoring of any external rating) and fully reviewed at least annually, or
+more frequently should the Bank become aware of any factor indicating potential for a change of counterparty status or
+situation.
+
+The mortgage books are reviewed monthly, including revaluation using the Halifax House Price Index (HPI), compared
+to the outstanding balances in order to detect any significant adverse change in Loan-To-Value (LTV). Valuation stress-
+tests of 10%, 20%, 30% and 40% are additionally applied in order to test the sensitivity of individual exposures to potential
+severely adverse price falls
+
+Forward-looking information
+
+The measurement of ECL is required to be calculated on a forward-looking basis under IFRS 9. The ECL should be
+adjusted by probability weighted numbers based on a number of forward-looking scenarios which should consider a range
+of factors. As set out in Note 27 the Bank has considered the impact of changing house price movements during the five-
+year period, which is consistent with the behavioural life of the mortgage book. As a result of the low LTV’s across the
+portfolio the resulting impact on the ECL is not material and therefore the Bank do not include forward looking information
+in the calculation of the ECL. The quantitative assessment is disclosed in Note 27.
+
+38
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Assessment of significant increase in credit risk (SICR)
+
+At each reporting date, the Bank assesses whether there has been a significant increase in credit risk for exposures since
+initial recognition by comparing the risk of default occurring over the remaining expected life from the reporting date and
+the date of initial recognition. The assessment considers borrower-specific quantitative and qualitative information without
+consideration of collateral which includes expectations of forbearance and payment holidays, monitoring of arrears for
+staging calculations, monitoring of internal and external counterparty ratings and monitoring of adverse changes in
+economic conditions, and the impact of forward-looking macroeconomic factors.
+
+The Bank adopts a multi factor approach in assessing changes in credit risk. This approach considers:
+
+¢ Quantitative (primary),
+© Qualitative (secondary) and
+* Back stop indicators which are critical in allocating financial assets into stages.
+
+The quantitative models consider deterioration in the credit rating of obligor/counterparty based on the Bank’s internal
+rating system or External Credit Assessment Institutions (ECA) while qualitative factors consider information such as
+expected forbearance, restructuring, exposure etc.
+
+A backstop is typically used to ensure that in the event that the primary (quantitative) indicators do not change and there
+is no trigger from the secondary (qualitative) indicators, an account that has breached the 30 days past due criteria for
+SICR and 90 days past due criteria for default is transferred to stage 2 or stage 3 as the case may be.
+
+Significant Increase in Credit Risk is assessed once there is an objective indication of deterioration in credit risk. In
+addition, the Bank as part of its credit processes performs an assessment on a regular basis to identify instances of
+Significant Increase in Credit Risk (SICR).
+
+Definition of Default and Credit Impaired Financial Assets
+
+At each reporting date, the Bank assesses whether financial assets carried at amortised cost and debt financial assets carried
+at FVOCI are credit-impaired. A financial asset is ‘credit-impaired’ when one or more events that have a detrimental
+impact on the estimated future cash flows of the financial asset have occurred.
+
+Critical to the determination of ECL is the definition of default. The definition of default is used in measuring the amount
+of ECL and in the determination of whether the loss allowance is based 12 month or lifetime ECL, as default is a component
+of the probability of default (PD) which affects both the measurement of ECLs and the identification of a significant
+increase in credit risk.
+
+The Bank considers the following as constituting an event of default when the borrower is unlikely to pay its credit
+obligation to the Bank in full and/or customers who are late in payment for more than 90 days.
+
+Evidence that a financial asset is credit-impaired or in default includes the following observable data:
+
+« Significant financial difficulty of the borrower or issuer;
+
+e A breach of contract such as a default or past due event. Assets are deemed to be in default when they are 90 days
+past their contractual due date;
+
+e The lender(s) of the borrower, for economic or contractual reasons relating to the borrower’s financial difficulty,
+having granted to the borrower a concession(s) that the lender(s) would not otherwise consider;
+
+® Itis becoming probable that the borrower will enter bankruptcy or other financial reorganisation; or
+
+e Others include death, insolvency, breach of covenants, etc.
+
+Presentation of allowance for ECL in the statement of financial position
+Loan allowances for ECL are presented in the statement of financial position as follows:
+« Financial assets measured at fair value through other comprehensive income (i.e. Investment securities and
+Money Market Funds)
+« Financial assets measured at amortised costs (i.e. Cash, Loans and Advances to Customers and Loans and
+Advances to Banks)
+¢ Where a financial instrument includes both a drawn and an undrawn component, the Bank cannot identify the
+ECL on the loan commitment component separately from those on the drawn component, the Bank presents a
+combined loss allowance for both components.
+
+39
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+e Off balance sheet exposures such as Letters of Credit and Guarantees are converted on balance sheet by using a
+credit conversion factor (CCF). As at 31 December 2024 the figures was immaterial and not factored into the
+ECL charge.
+
+Write-off
+The Bank will write off an impaired asset (and the related impairment allowance) either partially or in full, where there is
+no reasonable expectation of recovery. After a full evaluation of a non-performing exposure, in the event that either one
+or all of the following conditions apply, such exposure shall be recommended for write off (either partially or in full):
+
+e Continued contact with the customer is impossible;
+e Recovery cost is expected to be higher than the outstanding debt; the Bank’s recovery method is foreclosing on
+collateral and the value of the collateral is such that there is a shortfall that cannot be recovered.
+All credit facility write-offs shall require approval of the Board.
+
+A write off constitutes a derecognition event. However, financial assets that are written off could be subject to enforcement
+activities in order to comply with the Bank’s procedures for recovery of amount due. When amounts recovered previously
+written-off credit exposures, such amount recovered is recognised at income on a cash basis only.
+
+(k) Leases
+
+The Bank as the lessee
+Leases (right-of-use asset} are accounted for m accordance with IFRS 16 and are accounted for in line with the
+following, based on whether the Bank is the Lessor or the Lessee:
+
+IFRS 16 ‘Leases’ requires the Bank to recognise a ‘right of use’ asset and a corresponding liability on the balance
+sheet in respect of all leases, primarily property leases, where it is the lessee.
+
+In accordance with IFRS 16 paragraph 18, the non-cancellable period for which the Bank has a the right of use
+to Great Castle Street building is determined to be 15 years from August 2022 to August 2037.
+
+The rate used to discount the lease is 3.75% which is the last rate at which the Bank borrowed from the parent
+bank and also the incremental borrowing rate of the Bank.
+
+The Right of Use asset is depreciated on a straight line basis over the life of the lease.
+
+The Bank recognises that at the end of the lease, there is an obligation to restore the lease asset to the condition
+required by the terms and conditions of the lease; therefore, the dilapidation costs shall be included in the
+calculation of right of use asset and depreciated over the life of the lease.
+
+At the commencement date, the Bank recognises a right of use asset at cost and a lease liability, where applicable,
+at the present value of the lease payments that are not paid at that date. The cost of the right of use asset comprises
+the amount of the initial measurement of the lease liability, estimated dilapidations costs and any lease payments
+made at or before the commencement date less any lease incentives received, any initial direct costs incurred by
+the lease and an estimate of costs to be incurred by the lessee in dismantling and removing the underlying asset,
+restoring the asset to the condition required by the terms and conditions of the lease.
+
+Subsequent to initial recognition, the Bank measures the right of use at cost less any accumulated depreciation and
+any impairment losses. The Bank measures the lease liability by increasing the carrying amount to reflect interest
+on the lease liability, reducing the carrying amount to reflect lease payments made and re measuring the carrying
+amount to reflect any reassessment or modifications.
+
+The corresponding lease liabilities are included in leasehold liabilities (see note 15). The interest element of the
+lease liabilities is charged to income statement over the lease period so as to produce a constant periodic rate of
+interest on the remaining balance of the liability for each period.
+
+The Bank as the lessor
+
+When assets are leased to a third party under operating lease terms, the present value of the lease income is
+recognised as a receivable. The difference between the gross receivable and the present value of the receivable is
+recognised as unearned finance income. Lease income is recognised over the term of the lease using the net
+investment method (before tax), which reflects a constant periodic rate of return.
+
+40
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+(l) Offsetting financial assets and financial liabilities
+
+Financial assets and financial liabilities are offset and the net amount reported in the statement of financial position
+when there is a legally enforceable right to offset the recognised amounts and there is an intention to settle on a net
+basis, or realise the asset and settle the liability simultaneously. The Bank does not have the intention to offset the
+balance and realise on a net basis, therefore the financial assets and liabilities are presented on a gross basis.
+
+(m) New and amended standards and interpretations
+
+A number of new standards and amendments to standards are effective for annual periods beginning after 1 January
+2024 and earlier application is permitted. However, the Bank has not early adopted the new and amended standards
+in preparing these financial statements as at 31 December 2024 nor are they expected to have a significant impact
+
+on the Banks financial statements.
+
+* Amendments to the Classification and Measurement of Financial Instruments ~ Amendment to IFRS9 and
+
+IFRS 7
+e IFRS 18 Presentation and Disclosure in Financial Statements
+IFRS19 Subsidiaries without Public Accountability Disclosures
+
+Net interest income
+
+Year to Year to
+31 December 31 December
+2024 2023
+£ £
+
+Interest Income
+Cash and money market funds . 2,133,012 1,984,617
+Loans and advances to banks 12,760,844 10,041,478
+Loans and advances to customers 3,725,982 $5,381,188
+Investment securities 7,475,529 7,178,103
+Total interest Income 26,095 367 24,585,386
+
+The Bank recognised interest income using the effective interest rate method. Interest income includes fee
+
+income amortisation of £166k (2023: £271k).
+
+Interest expense
+
+Deposits by banks 5,097,791 3,463,108
+Deposits by customers 2,632,235 1,199,226
+Lease Liability Finance cost 410,509 415,986
+Total interest expense 8,140,535 5,078,320
+
+41
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+5.
+
+Fees and commissions income
+
+Letters of credit/guarantees
+Funds transfer
+
+Account management charges
+Loan Fees
+
+Other operating income
+
+Foreign exchange income
+
+Foreign exchange income is income derived from the spread the Bank earns from FX conversions for
+customers.
+
+7.
+
+Personnel expenses
+
+Average number of employees
+
+Wages and salaries
+
+Compulsory social security obligations
+Contribution to defined contribution pension plan
+Other personnel costs
+
+Total personnel costs
+
+Year to Year to
+31 December 31 December
+2024 2023
+£ £
+$24,207 $15,827
+2,490,395 2,809,055
+67,016 61,658
+140,502 157,710
+3,222,120 3,544,250
+Year to Year to
+31 December 31 December
+2024 2023
+£ £
+4,532,851 4,410,543
+4,532,851 4,410,543
+Year to Year to
+31 December 31 December
+2024 2023
+No. No.
+117 103
+£ £
+6,450,107 5,800,801
+764,211 667,358
+652,704 $25,734
+335,728 1,023,191
+8,202,750 8,017,084
+
+42
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+8.
+
+Other operating expenses
+
+Year to Year to
+31 December 31 December
+2024 2023
+£ £
+Professional fees 1,495,859 896,582
+IT related fees 1,211,047 947,627
+Premises costs 577,795 609,541
+Transaction fees 373,272 401,327
+Directors’ fees 229,639 140,000
+Recruitment fees 199,203 65,759
+Other administration cost* 494,923 898,442
+4,581,738 3,959,278
+*Other administrative cost includes recovered VAT of £615,804 (2023: £415,410)
+Audit of the financial statements
+Auditor’s remuneration — Statutory audit 385,000 466,500*
+385,000 466,500
+
+*Includes £99k overruns recorded in 2023, pertaining to expenses from 2021, which were settled in April 2023
+
+Directors’ emoluments
+
+All directors Year to Year to
+31 December 31 December
+
+2024 2023
+
+£ £
+
+Directors’ wages and salaries 442,301 470,500
+Directors’ fees 229,639 140,000
+Pension contributions 44,330 41,874
+716,270 652,374
+
+The total remuneration paid to the two executive directors includes a pension contribution of £44,330 (2023:
+£41,874) into the defined contribution scheme.
+
+Highest paid director
+
+Year to Year to
+
+31 December 31 December
+
+2024 2023
+
+£ £
+
+Director’s wages and salaries 172,135 225,000
+Pension contributions 14,163 20,625
+186,298 245,625
+
+43
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Year to Year to
+
+31 December 31 December
+2024 , 2023
+10. Tax expense £ £
+Current tax expense: (2,683,664) (2,458,482)
+Prior year adjustment on current year tax (79,440) -
+Current year deferred tax charge (186,715) (1,107,529)
+Prior year adjustment on deferred tax lability 107,737 13,978
+Tax charge for the year (2,842,082) (3,552,033)
+All movements on deferred tax have been taken through the income statement.
+Year to Year to
+31 December 31 December
+2024 2023
+£ £
+Reconciliation of effective tax rate
+Profit for the year before taxation 11,480,721 13,958,934
+2,870,180 3,318,944
+
+Corporation tax at 25% (2023: 23.52%)
+
+Expenses not deductible for tax purposes:
+Administrative expenses 199 1,534
+Fixed asset depreciation
+
+Provision for financial penalty - 470
+Adjustments for prior year (28,297) (13,978)
+Effect of differences in tax rates - §5,052
+Timing differences on FVOCI - 190,011
+Total Tax Charge for the year 2,842,082 3,552,033
+
+Tax losses of £nil (2023: £nil) have been carried forward. The Directors’ have decided that a deferred tax asset of
+£9,284 should be recognised (See Note 16).
+
+11. Cash and money market funds
+
+As at 31 As at 31
+December December
+
+2024 2023
+
+£ £
+
+Cash and balances with banks on demand 17,554,027 11,791,284
+Designated money market funds* 83,108,450 82,573,947
+
+100,662,477 94,365,231
+
+*Designated money market funds are held at FVOCI.
+44
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+12. Loans and advances to banks
+
+As at 31 - Asat 31
+
+December December
+
+2024 2023
+
+£ £
+
+Three months or less 207,403,713 144,634,176
+One year or less but over three months 52,375,036 8,003,078
+Expected credit losses (100,281) (24,848)
+
+259,678,468 152,612,406
+
+All loans and advances to banks at 31 December 2024 and 31 December 2023 were performing.
+
+13. Loans and advances to customers
+
+As at 31 As at 31
+December December
+
+2024 2023
+
+£ £
+
+Three months or less 1,784,014 1,022,971
+One year or less but over three months 5,175,504 = 4,571,746
+Five years or less but over one year 17,362,794. 15,880,590
+Over five years 38,770,629. 36,660,770
+Less: Deferred Mortgage Arrangement Fees (EIR hability) (532,746) (437,081)
+Expected credit losses (25,605) (23,200)
+
+62,534,590 57,675,796
+
+As at 3] December 2024 £75,996 (2023: £65,108) was advanced as staff loans and are performing. There are no loans to
+
+Directors.
+
+Forbearance strategies
+
+The Bank continues to invest in developing and enhancing its arrears management strategies to minimise credit nsk
+whilst ensuring that customers are treated fairly. Such forbearance strategies include the use of arrangements or
+
+renegotiation of covenants to assist borrowers in arrears that are not able to meet agreed repayment strategies, including
+
+or excluding arrears balances. Forbearance strategies aim to avoid repossession.
+
+Offsetting financial assets and financial liabilities
+
+The Bank has the right to offset the gross loan with the three month pledged deposit. The Bank has not considered it
+necessary to carry out any offset in the period.
+
+45
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+As at 31 December 2024
+Financial assets
+Loan and advances to customers
+
+Balance as at 31 December 2024
+
+As at 31 December 2023
+Financial assets
+Loan and advances to customers
+
+Balance as at 31 December 2023
+
+14. Investment securities
+
+Net amount
+presented on
+statement of
+
+Fair Value through Other Comprehensive Income
+
+Expected credit losses
+
+Amount financial Deposit
+Gross Amount Offset position Pledged Net Amount
+£ £ £ £ £
+62,534,590 - 62,534,590 (2,243,121) 60,291,469
+62,534,590 - 62,534,590 = (2,243,121) 60,291,469
+Net amount
+presented on
+statement of
+Amount financial Deposit
+Gross Amount Offset position Pledged Net Amount
+£ £ £ £ £
+57,675,796 - 57,675,796 (1,976,621) 55,699,176
+57,675,796 - $7,675,796 (1,976,621) 55,699,176
+As at 31
+December As at 31
+2024 December 2023
+£ £
+146,470,054 151,926,541
+-* (3,819)
+146,470,054 151,922,722
+
+46
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+*The Bank has assessed the expected credit losses (ECL) on investment securities and has determined that the ECL is
+insignificant. The Bank’s investment securities are primarily comprised of Liquid Asset Buffer (treasury bills & bonds
+investment, and designated money market funds with original maturity of more than three months). The credit risk
+associated with these securities is considered very low, and the Bank’s has not identified any significant credit losses. As
+a result, no provision for ECL has been recognized in the Dec-2024 financial statements. The Bank will continue to monitor
+the credit risk associated with investment securities and recognize any significant ECL in the financial statements as
+necessary.
+
+Fair Value, based on quoted prices, through Other Comprehensive Income securities are securities issued by government
+institutions in the United States of America, United Kingdom and Belgium, as at 31 December 2024 and 31 December
+2023. The Fair Value through Other Comprehensive Income Investment in Securities are considered to be at Level 1 as
+per IFRS 13 classification.
+
+15a. Property and equipment
+
+Leasehold IT Motor Furniture Capital Work in
+improvements equipment vehicles and Progress* Total
+fittings
+£ £ £ £ £
+Cost
+Balance as at 31 December 2023 4,566,347 3,645,194 $5,785 1,524,244 - 9,791,570
+Additions 82,833 46,787 - 6,657 1,004,204 1,140,481
+Balance as at 31 December 2024 4,649,180 3,691,981 $5,785 1,530,901 1,004,204 10,932,051
+Depreciation
+Balance as at 31 December 2023 2,552,946 3,255,985 55,785 728,939 - 6,593,655
+Charge for the year 224,792 178,968 - 188,282 - 592,042
+Balance as at 31 December 2024 2,777,738 3,434,953 $5,785 917,221 - 7,185,697
+Net book value
+Balance as at 31 December 2024 1,871,442 257,028 ~ 613,680 1,004,204 3,746,354
+Balance as at 31 December 2023 2,013,401 389,209 - 795,305 - 3,197,915
+
+*Capital Work in Progress additions for 2024 include IT hardware for the new core banking application, Finacle. This
+also encompasses software valued at £497,401, which is integral to the operation of the hardware and, therefore, has
+been capitalised.
+
+47
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+There have been no indicators of impairment identified during the current or prior financial years.
+
+Leasehold IT Motor Furniture Capital Work
+improvements ‘equipment vehicles and fittings in Progress Total
+£ £ £ £ £
+Cost
+Balance as at 31 December 2022 2,375,810 3,519,803 55,785 $94,070 1,823,404 8,368,872
+Additions 654,102 125,391 - 643,205 - 1,422,698
+Transfers 1,536,435 - - 286,969 (1,823,404) -
+Balance as at 31 December 2023 4,566,347 3,645,194 55,785 1,524,244 9,791,570
+Depreciation
+Balance as at 31 December 2022 2,375,810 3,053,780 55,785 591,228 6,076,603
+Charge for the year 177,136 202,205 - 137,711 $17,052
+Balance as at 31 December 2023 2,552,946 3,255,985 55,785 728,939 6,593,655
+Net book value
+Balance as at 31 December 2023 2,013,401 389,209 ~ 795,305 3,197,915
+Balance as at 31 December 2022 - 466,023 - 2,842 1,823,404 2,292,269
+15b. Right of Use — Leasehold property
+60-62 10 Great Castle Total
+Margaret Street
+street £
+
+Cost
+
+Balance as at 31 December 2023 - 11,677,999 11,677,999
+
+Additions - - -
+
+Balance as at 31 December 2024 - 11,677,999 11,677,999
+
+Depreciation
+
+Balance as at 31 December 2023 - 1,121,850 1,121,850
+
+Charge for the year - 778,533 778,533
+
+Balance as at 31 December 2024 - 1,900,383 1,900,383
+
+Net book value
+
+Balance as at 31 December 2024 - 9,777,616 9,777,616
+
+Balance as at 31 December 2023 - 10,556,149 10,556,149
+
+48
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+15¢.
+
+Cost
+Balance as at 31 December 2022
+Additions
+
+Balance as at 31 December 2023
+Depreciation
+
+Balance as at 31 December 2022
+Charge for the year
+
+Balance as at 31 December 2023
+
+Net book value
+Balance as at 31 December 2023
+
+Balance as at 3] December 2022
+
+Lease Liability
+
+Cost
+Balance as at 31 December 2023
+Additions
+
+Interest
+Repayment
+
+Balance as at 31 December 2024
+
+60-62 Margaret 10 Great Castle Total
+‘ street Street -
+£
+16,093,868 11,677,999 27,771,867
+16,093,868 11,677,999 27,771,867
+15,848,369 324,389 16,172,758
+245,499 797,461 1,042,960
+16,093,868 1,121,850 17,215,718
+- 10,556,149 10,556,149
+245,499 11,353,610 11,599,109
+10 Great Castle Total
+Street
+£
+11,061,158 11,061,158
+410,509 410,509
+(705,754) (705,754)
+10,765,913 10,765,913
+
+49
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Residual contractual maturities of Lease liability as at
+
+31-Dec-24 Less More than One year or More than one More than five Total
+than 1 one month less but over year but not years
+month butnotmore three months more than five
+than three years
+months
+£ £ £ £ £ £
+Liabilities
+Lease 63,333 126,667 570,001 4,370,000 8,645,000 13,775,001
+Liability
+Total 63,333 126,667 570,001 4,370,000 8,645,000 13,775,001
+10 Great Castle Street Total
+£
+Cost
+Balance as at 31 December 22 11,215,172 11,215,172
+Additions
+Interest 415,986 415,986
+Repayment (570,000) (570,000)
+Balance as at 31 December 23 11,061,158 11,061,158
+Residual contractual maturities of Lease liability as at
+31-Dec-23 Less More than One yearor More than one More than five Total
+than 1 one month less but over year but not years
+month butnotmore  threemonths more than five
+than three years
+months
+£ £ £ £ £ £
+Liabilities
+Lease 47,500 95,000 522,500 3,895,001 9,880,000 14,440,001
+Liability
+Total 47,500 95,000 $22,500 3,895,001 9,880,000 14,440,001
+
+50
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+16. Deferred tax assets and liabilities
+Recognised deferred tax assets and liabilities.
+
+Deferred tax assets
+Temporary differences on adoption of IFRS 9
+
+Deferred tax liabilities
+Property Plant and Equipment
+
+The current year deferred tax is calculated at 25% (2023: 25%)
+
+As at 3]
+December 2024 As at 31
+£ December
+2023
+£
+9,284 12,379
+9,284 12,379
+251,139 175,256
+251,139 175,256
+
+The Directors have decided that a deferred tax asset of £9,284 (2023: £12,379) and a deferred tax liability of £251,139
+
+(2023: £175,256) should be recognised.
+
+The deferred tax asset recognised as at 3] December 2024 has been recognised on the basis that the Directors believe it is
+probable that sufficient future taxable profits will be generated against which it can be utilised.
+
+Reconciliation of deferred tax
+
+Deferred ‘lax Asset ‘Temporary Total
+differences on
+adoption of
+
+IFRS9
+£ £
+
+At | January 2024 12,379 12,379
+Charge to income (3,095) (3,095)
+At 31 December 2024 9,284 9,284
+Deferred Tax Liability Total
+
+£
+At 1 January 2024 175,256
+Charged to income 75,883
+
+At 31 December 2024 251,139
+
+jl
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Deferred Tax Asset
+
+At | January 2023
+Credit/(charge) to Income
+Credit to OCI
+
+At 31 December 2023
+
+Deferred Tax Liability
+
+At 1 January 2023
+
+Charge to income
+
+At 31 December 2023
+
+17. Other assets
+
+Prepayment
+Others
+
+18. Deposits by banks
+
+Repayable on demand
+
+Three months or less but not repayable on demand
+One year or less but over three months
+
+Tax Losses Temporary Timing differences Total
+differences on on FVOCI
+adoption of .
+IFRS9
+£ £ £ £
+744,101 15,474 190,011 949,586
+(744,101) (3,095) - (747,196)
+(190,011) (190,011)
+- 12,379 - 12,379
+
+Total
+£
+18,912
+156,344
+175,256
+
+As at 31 As at 31
+
+December December
+
+2024 2023
+
+£ £
+
+486,700 380,625
+
+80,344 60,227
+
+$67,044 440,852
+
+As at 31 As at 31
+
+December December
+
+2024 2023
+
+£ £
+
+209,706,240 132,094,206
+
+94,007,477 77,151,280
+
+26,274,803 8,158,467
+
+329,988,520 217,403,953
+
+32
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+19,
+
+20.
+
+Of which intragroup entities
+
+Repayable on demand
+Three months or less but not repayable on demand
+One year or less but over three months
+
+Deposits by customers
+
+Repayable on demand
+
+Three months or less but not repayable on demand
+One year or less but over three months
+
+Five years or less but over one year
+
+Other liabilities
+
+Taxation and social security
+Accruals
+
+Provision for dilapidations
+Accounts payable and others
+
+As at 31 As at 31
+December December
+2024 2023
+£ £
+89,653,576 73,693,279
+94,007,477 60,516,723
+8,381,898 8,158,467
+192,042,951 142,368,469
+As at 31
+December 2024 As at 3]
+December 2023
+£
+£
+112,516,997 154,900,840
+28,122,910 23,218,499
+38,485,731 14,211,104
+12,406,800 4,546,629
+191,532,438 196,877,072
+As at 3] As at 31
+Decemher Necemher
+2024 2023
+£ £
+679,476 2,646,134 .
+1,053,370 1,631,159
+310,962 299,722
+788,690 1,298,003
+2,832,498 5,875,018
+
+53
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+
+for the year ended 31 December 2024
+
+21. Called up share capital
+
+Issued, allotted and fully paid
+Ordinary shares of £1 each
+
+Ordinary shares
+
+31 December
+
+31 December
+
+31 December
+
+31 December
+
+2024 2024 2023 2023
+
+No. of shares Amount No. of shares Amount
+£ £
+
+37,000,000 37,000,000 37,000,000 37,000,000
+37,000,000 37,000,000 37,000,000 37,000,000
+
+The Parent (Guaranty Trust Bank Limited) holds 100% (31 December 2023: 100%) of the ordinary shares of the Bank.
+
+22. Contingent liabilities, guarantees and letters of credit
+
+Letters of credit
+Guarantees
+Undrawn irrevocable loan commitments
+
+The figures above are expressed in nominal values.
+
+23. +‘-Financia] risk management
+
+The Bank is exposed to the following risks through financial instruments:
+
+Conduct risk
+
+Liquidity risk
+
+Capital management
+
+As at 3] As at 31
+December December
+2024 2023
+
+£ £
+
+404,543 349,832
+154,866 152,187
+15,834,133 3,978,470
+16,393,542 4,480,489
+
+The Bank is also exposed to the following risks through its operations and the environment:
+
+Operational risk
+Regulatory risk
+
+54
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+23.1
+
+23.2.
+
+Risk management framework
+
+The Bank adopts the risk management model known as the ‘three lines of defence’ governance model. This is the
+model of risk management that sits below the Board and Board Committees to implement and control the decisions
+on strategy, risk and capital that are taken by the Board.
+
+The framework for the oversight and management of risk is as follows:
+
+First line: Management — responsibility for implementing strategy and the establishment and maintenance of
+internal control and risk management in the business. This includes senior management and business line heads.
+
+Second line: Risk management — operating a risk management framework within which risk policies are set,
+overseen and challenged. This includes the Management Risk Committee, the Management Credit Committee, the
+Assets and Liabilities Management Committee, Anti Money Laundering Oversight Committee, the Risk
+Management Department and the Compliance Department.
+
+Third line: Assurance — providing independent and objective assurance of the effectiveness of internal controls
+established by the first and second lines of defence. This is provided by the Internal Audit function, reporting to
+the Board Audit Committee. .
+
+This model is put into practice by the Bank ensuring the implementation of a tried and tested model in an efficient
+manner.
+
+Conduct risk
+
+Conduct risk is the risk that the Bank’s customers suffer loss or detriment due to failures in product design, sales
+and marketing processes, poor customer service or operational delivery.
+
+The Bank is committed to working with its customers and services providers to ensure that its products are simple,
+fair and transparent. Executive management is committed to the principles of treating customers fairly.
+
+Credit risk
+
+Credit risk is the risk of loss as a result of the failure of a party with whom the Bank has contracted to meet its
+obligations, as at 31 December 2024 this was nil (2023: nil). The main credit risks that the Bank will face relate to
+its exposure to banks and corporates from its trade finance business, inter-bank lending, and advances to corporate
+and retail borrowers.
+
+The Board of Directors has delegated the management of credit risk to the Board Credit Committee. The committee
+monitors all credit related risks at the Bank and approves and reviews the Credit Policy Guidelines. ‘I'he committee
+reviews all advances granted by the Bank and approves specific transactions and credit limits above the
+Management Credit Committee’s authorities and ensures the maintenance of strong internal credit risk controls.
+Risk tolerance limits that are acceptable to the Bank are specified in the Risk Appetite Statement Framework as
+referenced under Regulatory Risk and Business Model in the Strategic Report.
+
+The Bank’s credit risk exposure is predominantly to highly rated international banks and to sovereigns. In assessing
+this risk, the Bank considers both the individual credit ratings of its counterparties and the potential for correlated
+macroeconomic risks that may affect the creditworthiness of these otherwise highly rated placements.
+
+The Bank focuses on lending against property located in the Southeast of England, and on occasion other
+metropolitan areas. It is pertinent to highlight that no increase in NPL has been observed. The Bank has four
+
+(4) NPLs and this number remained stable throughout 2024.
+
+The amounts disclosed below best represents the maximum exposure to credit risk at the end of the reporting
+period without taking account of any collateral held or other credit enhancements.
+
+35
+Guaranty Trust Bank (UK) Limited
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Carrying value Carrying value
+
+31 December 2024 31 December 2023
+
+£ £
+
+Cash and money market funds * 100,662,477 94,365,231
+
+Loans and advances to banks 259,678,468 152,612,406
+
+Loans and advances to customers 62,534,590 $7,675,796
+
+Investment securities 146,470,054 151,922,722
+
+Undrawn irrevocable loan commitments 15,834,133 3,978,470
+Total 585,179,722 460,554,625
+
+Fair value Fair value
+
+31 December 2024 31 December 2023
+
+£ £
+
+Cash and money market funds 100,662,477 94,365,231
+Loans and advances to banks 259,778,749 152,637,255
+Loans and advances to customers 63,092,941 $8,136,077
+Investment securities 146,470,054 151,926,541
+Total on-balance sheet financial asset $70,004,221 457,065,104
+
+The tables below show the Bank’s exposure to credit risk as at 31 December, these exposures were as follows;
+The following table shows the exposure values associated with credit ratings.
+
+Credit Quality
+Rating (Fitch) Exposure 31 December 2024 Exposure 31 December 2023
+£000's % £000's %
+31 December 2024 31 December 2023
+AAA to AA- 265,204 45% 234,500 51%
+At to A- 216,877 37% 1$6,284 34%
+BBB+ to BBB- 25,226 4% 7,217 2%
+Not rated 78,531 13% 62,554 14%
+Total 585,838 100% 460,555 100%
+Concentration by sector
+As at 31 As at 31
+December December
+2024 2023
+£ £
+Government 146,470,054 151,930,455
+Banks 360,441,226 246,241,166
+Retail 78,927,074 62,383,004
+
+585,838,354
+
+460,554,625
+
+56
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+
+for the year ended 31 December 2024
+
+Concentration by location of borrower
+
+Asia
+
+Europe (excluding United Kingdom)
+
+Middle East and Africa
+North America
+United Kingdom
+
+As at 31 As at 31
+
+. December December
+2024 2023
+
+£ £
+137,212,832 69,505,078
+79,467,506 22,668,301
+88,150,236 23,694,769
+209,147,863 234,504,402
+71,859,917 110,182,075
+$85,838,354 460,554,625
+
+Credit quality, concentration by sector and by location includes undrawn irrevocable loan commitments of £15.8m (2023
+
+£4m).
+
+Collateral against loans and advances to customers
+
+The Bank holds collateral against each loan and advance in the form of property. The use of such collateral is in line with
+terms that are usual and customary to standard lending activities. The valuation of the collateral excludes any adjustments
+for obtaining and selling the collateral. Management perform a periodic valuation of the collateral which is based on the
+value at origination updated based on changes in the Halifax house price indices.
+
+23.3 Fair values of financial instruments - Financial instruments not measured at fair value
+
+The following table sets out the fair value of financial instruments not measured at fair value and analyses them
+by the level in the fair value hierarchy into which each fair value measurement is categorised
+
+2024
+Assets
+
+Cash and money market funds
+Loans and advances to banks
+Loans and advances to customers
+Investment securities
+
+Liabilities
+Deposits by banks
+Deposits by customers
+
+Level 1
+
+100,662,477
+
+146,470,054
+
+Level 2
+
+259,778,749
+
+329,988,520
+191,532,438
+
+Level 3
+
+63,092,941
+
+Total Fair
+value
+
+£
+
+100,662,477
+259,778,887
+
+63,092,941
+146,470,054
+
+329,988,520
+191,532,438
+
+Total
+Carrying
+amount
+
+£
+
+100,662,477
+259,678,468
+
+62,534,590
+146,470,054
+
+329,988,520
+191,532,438
+
+37
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Level 1 Level 2 Level 3 Total Fair Total
+Value Carrying
+: : : : amount
+2023 £ £ £ £ £
+Assets
+Cash and money market funds 94,365,231 - - 94,365,231 94,365,231
+Loans and advances to banks - 152,637,255 - 152,637,255 152,612,406
+Loans and advances to customers - - $8,136,077 $8,136,077 $7,675,796
+Investment securities 151,926,541 - - 151,926,541 151,922,722
+Liabilities
+Deposits by banks - 217,403,953 - 217,403,953 217,403,953
+Deposits by customers - 196,877,072 - 196,877,072 196,877,072
+
+Fair value measurement recognised in the note above
+
+* Level 1- fair value measurements are those derived from quoted prices in active markets for identical assets or
+liabilities
+
+* Level 2- fair value measurements are those derived from inputs other than quoted prices within level 1 that are
+observable for the asset or liability, either directly (i.e. as prices) or indirectly (i.e. derived from prices)
+
+« Level 3- fair value measurements are those derived from valuation techniques that include inputs for assets or liability
+that are not based on observable market data (unobservable inputs)
+
+When a fair value is based on all significant market observable inputs, the valuation is classified as Level 2. Financial
+
+instruments traded in a less active market have been valued using indicative market prices, the present value of cash flows or
+other valuation techniques. Fair value estimates do not normally consider forced or liquidation sales.
+
+38
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+23.4. Liquidity risk
+Liquidity risk is the risk that a firm, although solvent, either does not have available sufficient financial resources to enable it to meet its obligations as they fall due, or can secure
+such resources only at excessive cost. The Bank’s approach to g liquidity is to ensure that it will always have sufficient available financial resources to meet its liabilities
+when due, under normal and stressed conditions, without any unacceptable loases or risk to the Bank's reputation. All liquidity policies and procedures are subject to review by the
+Bank’s Assets and Liability Management Committee “ALMAC” and approval by the Board. Daily reports cover liquidity positions and a summary report, including any exceptions
+and remedial action taken, is submitted regularly to ALMAC and quarterly to the Board Risk and Compliance Committee.
+
+The key measure used by the Bank for ging liquidity risk is an t of the mi ch between the Bank's inflows (assets) and.outflows (liabilities) within different time
+bands on a maturity ladder. A net mismatch is obtained by btracti tflow's from inflows in each time band. Mi hes are then d on a net lative basis. The Bank
+also makes assumptions a9 to how assets, liabilities and contingent ite items will behave during times of stress, and maintains a buffer of highly liquid assets to ensure that acceptable
+levels of liquidity are available at all times.
+
+[El The table below analyses financial assets and liabilities into relevant maturity groupings based on the remaining period at the year-end date to the contractual maturity date.
+
+More than one More than one
+
+month but not One year or year but not
+Residual contractual maturities of Less than 1 more. than three leas but over more than five More than = No Contractual
+financial Assets & liabilities as at Total month months. three months year five years maturity
+31 December 2024 £ £ g £ £ £ £
+Assets
+Cash and money market funds 100,662,477 100,662,477 . - “ . .
+Loans and advances to banks 259,678,468 = 199,476,101 7,927,613 52,375,035 - . (100,281)
+Loans and advances to Customers 62,534,590 919,996 864,018 5,175,504 17,362,794 38,770,629 (558,351)
+Investment securities 146,470,054 28,920,366 46,556,359 70,993,329 - “ :
+Total financial assets 569,345,589 —-3.29,978,940 55,347,990 128,543,868 17,362,794 38,770,629 (658,632)
+Liabilities | . : :
+Deposits by banks 329,988,520 209,706,240 94,007,477 26,274,803 ” - -
+Deponits by customers 191,532,438 112,516,997 28,122,010 38,485,731 12,406,800 - -
+Undrawn irrevocable loan i t 15,834,133 15,834,133 ~ - - - =
+Total financial lisbilities and undrawn 537,355,091 338,057,370 «122,130,387 64, 760,534 12,406,800 - -
+irrevocable loan commitments
+Net 31,990,498 (8,078,430) (66,782,397) 63,783,334 4,955,994 38,770,629 (658,632)
+
+59
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+More than one More. than one
+
+month but not One year or year but ot No
+Residual contractual maturities of . Less than 1 more than three tess but over more than five More than five Contractual
+financial Assets & liabilities as at Total month ~ months three months © years years maturity
+31 December 2023 £ £ £ £ £ £ £
+Assets :
+Cash and money market funds 94,365,231 94,365,231 : - - - -
+Loans and advances to banks 152,612,406 144,634,176 8,003,078 (24,848)
+Loans and advances to Customers 57,675,796 537,657 485,314 4,571,746 15,880,590 36,660,770 (460,281)
+Investment securities 151,922,722 44,300,901 61,505,212 46,116,609 - : 5
+Total financial assets 456,576,155 283,837,965 69,993 604 50,688,355 15,880,590 56,660, 770 (485,129)
+Linbilities*
+Depoaits by banks 217,403,953 132,094,206 77,151,280 8,158,467 - . -
+Deposits by customers 196,877,072 154,900,839 23,218,499 44,211,105 4,546,629 . -
+Undrawn irrevocable loan nent: 3,978,470 3,978,470 : - - - :
+Total lisbilities and undrawn irrevocable 418,259,495 290,973,515 100,369,779 22,369,572 4,546,629 ° :
+loan commitments : :
+Net 38,316,660 (7,135,550) (30,376,175) 28,318,783 I 1,333,961 36,660,770 (485,129)
+
+In addition to the above, the Bank has established an Individual Liquidity Adequacy Assessment Process (LAAP), which has been approved by the Board of Directors. The
+TLAAP describes how the Bank plans to manage its liquidity within predeterinined limits and how it maintains a buffer of highly liquid assets to ensure that it will be able to meet
+its linbilities during times of stress. All internal and regulatory liquidity requirements bave been met during 2024.
+
+The following tables segments the gross contractual cashflows of the Bank's financial tiabilities into relevant maturity bands. The undiscounted cash flows gomprises of principle
+payments and the future interest payments, The table below is presented as at the reporting date. :
+
+60
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+More than one : More than one
+. . month but not _ One year or year but not .
+Residual contractual maturities of Less than 1 more than three less but over more than five More than five
+financial Liabilities as at Total month months three months years “years
+31 December 2024 “£ £ £ £ £ £
+Liabilities
+Deposits by banks 330,125,721 298,157,513 $,217,022 26,751,186 -
+Deposits by customers 191,575,117 133,042,922 6,186,995 39,938,400 12,406,800
+Total liabilities 521,700,838 431,200,435 11,404,017 66,689,586 12,406,800
+More than one More than one
+month but not One year or year but not ;
+Residual contractual maturities of Less than 1 more than less but over more than five More than five
+financial liabilities as at Total month three months three months years years
+31 December 2023 £ £ £ £ £ £
+Liabilities .
+Deposits by banks 217,771,546 131,886;706 77,431,019 8,453,821 - .
+Deposits by customers 197,112,461 154,582,177 23,337,303 14,449,999 4,742,982 -
+Total liabilities 414,884,007 286,468,883 100,768,322 22,903,820 4,742,982 -
+
+6]
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+23.5. Market risk
+
+Market risk is the risk that changes in market prices, such as interest rates and foreign exchange rates, will affect
+the Bank’s income or the value of its holding of financial instruments.
+
+Management of market risk
+
+The Bank has developed detailed market risk management policies, which are subject to review by ALMAC and
+approval by the Board Risk and Compliance Committee. The Board sets the market risk tolerance levels which are
+managed on a day-to-day basis by the Bank’s Treasury Department and the implementation reviewed by the Risk
+Management Department. The Bank does not operate a trading portfolio and market operations are primarily to
+support the Bank’s commercial activities.
+
+The Bank’s Treasury Department implements and develops the firm’s business objectives as they relate to treasury
+activities. It creates and manages liquidity, market, interest rate, credit and foreign exchange risks utilising both
+market opportunities and customer demand within limits defined by the Board. Capital is allocated to mitigate
+market risk in accordance with regulatory requirements.
+
+Interest rate risk
+
+Interest rate risk arises from financial instruments where net interest income and the market value of the Bank’s
+assets are exposed to movements in interest rates. This risk only arises in the banking book as the Bank does not
+run a trading book, and therefore does not have the type of higher risk exposure run by many banking institutions.
+
+The Bank uses the maturity or repricing schedules of statement of financial position items to determine the
+differences between maturing or repricing items within given tenor buckets.
+
+The Bank then measures the potential pre-tax earnings impact over a specified reporting period for the accrual
+positions, from a defined change in the yield curve. This is a forward looking measure and the Bank places agreed
+limits based upon a pre-determined parallel shift in interest rates for all material currencies.
+
+The highly liquid assets that the Bank has purchased to ensure that adequate levels of liquidity are maintained
+subject the bank to interest rate risk. The Bank has allocated an amount of capital to mitigate this risk.
+
+These measurements are undertaken monthly and reported to ALMAC and to Board Risk and Compliance
+Committee quarterly.
+
+62
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+A summary of the Bank’s interest rate gap position is as follows:
+
+Carrying Less than 3 3-12 More than 1 No specific Non-interest
+amoust months months year repricing bearing
+£ £ £ £ £ £
+As at 31 December 2024
+Financial assets
+Cash and money market funds 100,662,477 100,448,683 - - - 213,794
+Loans and advances to banks 259,678,468 207,403,714 52,375,035 - (100,281) -
+Loans and advances to customers 62,534,590 1,784,014 5,175,504 56,133,423 ($58,351) -
+Investinent securities 146,470,054 75,476,725 70,993,329 - - -
+Total 569,345,589 “385,123,136 128,543,868 56,133,423 (658,632) 213,794
+Financial liabilities :
+Deposits by banks 329,988,520 209,706,240 120,282,280 - - -
+Deposits by customers 191,532,438 140,639,907 38,485,731 12,406,800 - -
+. Total 521,520,958. 350,346,147 158.768,011 12,406,800 - -
+Net interest gap 47,824,631 34,766,989 (30,224,143) 43,726,623 (658,632) 213,794
+
+63
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+Carrying Less than 3 3-12 More than ! ‘No specific Non-interest
+amount months months ‘year repricing bearing
+£ £ £ nr 3 £ £
+As at 31 December 2023
+Financial assets ;
+Cash and money market funds 94,365,231 94,199,298 - - - 165,933
+Loans and advances tobanks 152,612,406 144,634,176 8,003,078 - {24,848) -
+Loans and advances to customers 57,675,796 "1,022,971 4,571,746, $2,541,360 (460,281) -
+Investment securities 151,922,722 105,798,380 46,124,342 , -
+Total 456,576,135 345,654,825 38,699,166 52,541,360 (485,129) 165,933
+Financial liabilities
+Deposits by banks 217,403,953 209,245,486 8,158,467 - - -
+Deposits by customers 196,377,072 178,119,339 14,211,104 4,546,629 - -
+Total 414,281,025 387,364,825 22,369,571 4,546,629 - -
+Net interest gap 42,295,130 (41,710,000) 36,329,595 47,994,731 (485,129) 165,933
+
+64
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+The management of interest rate risk against interest rate gap limits is supplemented by monitoring the sensitivity
+
+of the Bank’s financial assets and liabilities to various interest rate scenarios. The table below shows the impact
+on annual income of a 200 basis point (bp) rise or fall in the base rate of the main currencies traded by the Bank:
+
+As at As at
+31 December 31 December
+
+2024 2023
+200 basis point 200 basis points 200 basis points 260 basis points
+increase decrease increase decrease
+
+£ £ £ £
+
+GBP 243,000 (259,000) 58,000 (62,000)
+USD 220,000 (227,000) 215,000 (222,000)
+EUR $7,000 (59,000) - -
+
+Foreign exchange risk
+
+Foreign exchange risk is the risk that changes in foreign currency exchange rates will affect the Bank’s income or
+the value of its holdings of financial instruments. The objective of foreign currency risk management is to manage
+and control foreign currency risk exposure within acceptable parameters while optimising the return on risk.
+
+The Bank manages its exposure to changes in the market rates for foreign exchange by monitoring its overnight
+open foreign exchange positions and maintaining these positions within the parameters set by the Board. Foreign
+exchange exposure arises from normal banking activities, primarily from the receipt of deposits and the placement
+of funds. It is the policy of the Bank that it will, at all times, adhere to the limits laid down by the Regulator in
+respect of the “overall net open position”. It is not the Bank’s intention to take open positions on its own account
+(proprietary trading) but rather to maintain square or near square positions in all currencies.
+
+The Bank does not currently deal, and has no plans to deal, in Foreign Exchange Futures, Foreign Exchange Options
+or Options on Foreign Exchange Futures. The Bank has no structural currency exposures.
+
+The tables shown below give details of the Bank’s assets and liabilities as at 31 December 2024 and 31 December
+2023, in sterling, based on the currencies in which they are denominated to identify the extent to which the
+foreign currency exposures of the Bank are matched.
+
+Foreign currency sensitivity has been performed on the foreign currency exposures inherent in the Bank’s financial
+assets and financial liabilities at the reporting dates presented. The sensitivity analysis provides an indication of the
+impact on the Bank’s profit or loss of possible changes in the currency exposure against the functional currency
+environment in which the Bank operates. The Bank believes that a 10% depreciation or appreciation in the value
+of the GBP against other major foreign currencies at 31 December 2024 will lead to a profit of £17,240 and a loss
+of £17,240 (31 December 2023 a profit of £16,515 and a loss of £16,515).
+
+65
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+As at 31 December 2024
+
+‘Assets
+
+Cash and money market funds
+Loans and advances to banks
+Loans and advances to customers
+Investment securities
+
+Property and equipment
+Deferred tax asset
+
+Other assets
+
+Leasehold —right of use
+
+Total Assets
+
+Liabilities & Equity
+Deposits by banks
+Deposits by customers
+Other liabilities
+Leasehold liability
+Deferred tax liability
+Shareholders’ funds
+
+Total Liabilities & Equity
+Net assets / (liabilities)
+
+As at 31 December 2023
+
+Assets
+
+Cash and money market funds
+Loans and advances to banks
+Loans and advances to customers
+Investment securities
+
+Property and equipment
+Deferred tax asset
+
+Other assets
+
+Leasehold —right of use
+
+Total Assets
+
+Liabilities & Equity
+Deposits by banks
+Deposits by customers
+Other liabilities
+Leasehold liability
+Deferred tax lability
+Shareholders’ funds
+
+Total liabilities & Equity
+
+Net assets / (liabilities)
+
+Sterling US Dollar Euro Other Total
+£ £ £ £ £
+5,204,413 91,334,659 3,818,577 304,828 100,662,477
+34,155,226 215,506,295 10,016,947 - 259,678,468
+62,335,021 199,569 - - 62,534,590
+27,895,378 110,366,720 8,207,956 - 146,470,054
+3,746,354 - - - 3,746,354
+9,284 - - - 9,284
+200,317 - 366,727 - 567,044
+9,777,616 - - - 9,777,616
+143,323,609 417,407,243 22,410,207 304,828 583,445,887
+10,117,021 301,337,338 18,423,045 111,116 329,988,520
+72,708,139 114,961,465 3,862,834 - 191,532,438
+2,465,859 1,763 364,876 - 2,832,498
+10,765,913 - - - 10,765,913
+251,139 - - - 251,139
+48,075,379 - - - 48,075,379
+144,383,450 416,300,566 22,650,755 111,116 583,445,887
+(1,059,841) 1,106,677 (240,548) 193,712 -
+20,027,948 71,821,695 = 1,717,952 797,636 94,365,231
+22,658,092 106,948,846 23,005,468 - 152,612,406
+$5,970,735 1,705,061 - - 57,675,796
+27,812,454 124,110,268 - - 151,922,722
+3,197,915 - - - 3,197,915
+12,379 - - - 12,379
+430,047 8,867 1,938 - 440,852 ~~
+10,556,149 - - - 10,556,149
+140,665,719 304,594,737 24,725,358 797,636 470,783,450
+10,322,179 187,680,143 18,721,704 679,927 217,403,953
+75,935,788 114,913,828 6,027,456 - 196,877,072
+5,413,326 337,100 75,239 49,353 5,875,018
+11,061,158 - - - 11,061,158
+175,256 - - - 175,256
+39,390,993 - - - 39,390,993
+142,298,700 302,931,071 24,824,399 729,280 470,783,450
+(1,632,981) 1,663,666 (99,041) 66,356 -
+
+66
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+
+for the year ended 31 December 2024
+23.6. Operational risk
+
+Operational risk is the risk of loss resulting from inadequate or failed internal processes, people and systems, or
+from external events.
+
+Overview of operational risk is undertaken by the Board Risk and Compliance Committee, and ultimately the Board
+of Directors, who retain responsibility for operational risk. The operational risk management framework is
+developed by the Risk Management Department and the implementation of controls to address operational risk is
+part of the line managements’ day-to-day responsibilities.
+
+The First Line of Defence is primarily responsible for managing operational risks directly; while the Second Line
+is responsible for proactive oversight and continuous monitoring of operational risk management across the Bank.
+The Second Line also has the responsibility for reporting and escalating key concerns to executives and governance
+committees.
+
+Qualitative and quantitative reports and metrics are collated by the Risk Management Department and reported
+regularly to the Management Risk Committee and a summary report is submitted to the Board Risk and Compliance
+Committee and full Board on a quarterly basis. Capital is allocated by the Bank in order to mitigate Operational
+Risk, in accordance with the Bank’s ICAAP.
+
+The bank makes use of following operational risk management (“ORM”) processes:
+
+ORM Processes Description
+Risk and Contro] Self-Assessment | The RCSA allows reviewing and challenging existing activities,
+(RCSA) processes and controls within the aim of continuous improvement.
+Event and Incident Management An incident resulting in an adverse impact due to inadequate or failed
+System (EIMS) internal processes, people and systems, or from external events. This is
+
+different than an event which can be defined as anything that has gone
+wrong but may not meet the criteria of an operational risk incident. For
+example: “Near misses” refers to an event that could have adverse
+consequences but did not.
+
+Change Risk Assessment (CRA) The CRA is meant to review the impact of envisaged changes on the
+business line’s risk profile and to support the definition of practical risk
+mitigation measures when risks are deemed not to be acceptable.
+
+Key Risk Indicators (KRI) KRIs are measurable metrics or indicators that track exposure, loss or
+trouble. A risk indicator is defined as “key” based on its materiality and
+sensitivity.
+
+Issue Management and Action | The various operational risk processes (RCSA, EIMS, CRA, KRI) reveal
+
+Tracking (IMAT) operational risk issues, which require follow-up, IMAT allows to monitor
+
+mitigating actions agreed and reporting on the progress / status of actions
+on a periodic basis.
+
+Risk Scenarios RCSAs are performed to focus on controls in the day to day processes and
+reveal mostly low impact / high frequency incidents. Operational risks that
+surpass the relatively detailed level of the RCSA are analysed as scenarios.
+
+Risk Event Management (REM) REM supports the business in reducing operational losses via tracking,
+analysing and mitigating operational risk events as well as improving
+controls and the overall quality of business processes.
+
+23.7. Regulatory risk
+
+Regulatory risk is the risk that the Bank does not comply with changes in the regulatory environment. The Bank’s
+Risk and Compliance and Financial Crime Compliance teams monitor regulatory changes and report to the
+Executive and Board Risk and Compliance Committee through the risk management reports presented at
+Management Risk Committee and Anti-Money Laundering Oversight Committee. These two executive
+committees report to the Board Risk and Compliance Committee and full Board respectively. The Bank’s
+Enterprise Risk Management Framework includes an annual review of its Risk Appetite Statement (RAS). The
+RAS sets out qualitatively and quantitatively the risk tolerance for all areas of risk faced by the Bank, including
+Commercial, Climate, Credit, Capital, Market and Liquidity risks, in addition to Operational, Conduct and
+Regulatory risks — of which last Financial Crime nsk forms part.
+
+67
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+23.8.
+
+Given the majority of the Bank’s customers are resident or incorporated in high-risk countries the bank confers
+responsibility for Financial Crime oversight on an individual holding SMF17 of the Senior Managers and
+Certification Regime (SMCR). Regulatory risk in the form of Prudential and Regulatory Compliance risk is overseen
+by a separate individual holding prescribed responsibilities under SMF4 and SMF16. All areas of regulatory risk
+are therefore monitored by dedicated oversight functions operating in the Bank’s second line of defence, subject
+to review by Executive and Board as noted above.
+
+Capital management
+The Bank’s capital requirements are set and monitored by its Regulators.
+
+The Bank’s management undertakes an Internal Capital Adequacy Assessment Process (ICAAP), which is an
+internal assessment of its capital needs. This internal assessment makes use of the regulatory capital calculator and
+an internal evaluation of all other material risks for the Bank, which does not require the provision of regulatory
+capital. The ICAAP is performed annually or more frequently should the need arise.
+
+The ICAAP is presented to the Management Risk Committee and then to the Board (with whom ultimate
+responsibility lies) for challenge and approval. The Regulator has assessed the Bank’s ICAAP and set Individual
+Capital Guidance (ICG) for the Bank, which has been maintained during the year.
+
+Regulatory and internal capital adequacy is monitored on a daily basis and reported to the Board Risk and
+Compliance Committee and the Board on a quarterly basis. An assessment of the impact on internal and regulatory
+capital adequacy is made before launching any new products or undertaking new activities.
+
+23.8. (a) Regulatory capital (unaudited)
+
+The Bank’s capital, as detailed below is comprised of ordinary share capital; retained earnings (both of which
+qualify as Common Equity Tier | Capital) The Bank has no Additional Tier 1 capital and adjusts its Common
+Equity Tier 1 capital by adding the fair value reserve relating to fair value through other comprehensive income
+(FVOCI) items.
+
+CRD IV is structured around 3 Pillars. Pillar 1 defines the minimum capital requirements of an institution. Pillar 2
+refers to the supervisory review and Pillar 3 to the disclosures that the Bank is required to make.
+
+With the Regulator’s approval, the Bank uses the following methods to establish its minimum capital requirements:
+The Standardised Approach for credit risk
+
+The Position Risk Requirement for market risk
+
+The Basic Indicator Approach for operational risk
+
+As at As at
+31 December 31 December
+2024 2023
+£ £
+
+Tier 1} capital
+Ordinary share capital 37,000,000 37,000,000
+Retained earnings 11,019,326 2,380,687
+Fair value reserve 56,053 10,306
+Total regulatory capital (Unaudited) 48,075,379 39,390,993
+
+68
+Guaranty Trust Bank (UK) Limited
+Notes to the Financial Statements
+
+for the year ended 31 December 2024
+23.9. Country by country reporting
+
+24.
+
+The CRD IV requirements stipulate reporting on a consolidated basis, by country where the reporting institution
+has an establishment, the name, and nature of activities, geographical location, and number of employees, turnover,
+pre-tax profit/loss, corporation taxes paid and any public subsidies received.
+
+The Bank does not have any branches in the EU. The basis of preparation and details of the business activities are
+provided below:
+
+Basis of preparation
+
+Employees
+This represents the year end number of full time equivalent employees during the year.
+
+Turnover
+The total turnover is represented by the balances of net interest income, net fee and commission income, realised
+gains on available for sale assets, and net foreign exchange gains.
+
+Corporation Tax Paid
+Represents total corporation tax cash payments made during the year ended 31 December 2024.
+
+Number of employees 117
+
+£
+Turnover 33,850,338
+Profit before taxation 11,480,721
+Corporation tax paid 4,669,205
+
+There were no public subsidies received during the year.
+
+Related Party Transactions
+
+A number of banking transactions were entered into with related parties in the normal course of business. These
+include loans and deposits and compensation to key management (see note 9). Outstanding balances at the end of
+the period and related interest income and expense for the period ended are as follows. Amounts due from fellow
+subsidiaries are unsecured and no provisions were required as at 31 December 2024 (2023: nil).
+
+Included in As at As at
+Note 31 December 31 December
+2024 2023
+£ £
+Assets
+Amounts due from fellow subsidiaries 12 2 1,506
+2 1,506
+Liabilities
+Amounts due to parent bank
+Deposits 18 79,005,826 63,295,133
+Amounts due to fellow subsidiaries
+Deposits 18 113,037,125 79,074,842
+
+192,042,951 142,369,975
+
+69
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+As at As at
+31 December 31 December
+2024 2023
+£ £
+
+Income
+Fellow subsidiaries transactions - -
+Expenses
+Parent bank transactions (120,272) (93,848)
+Fellow subsidiaries transactions (4,029,395) (1,807,382)
+
+(4,149,667) (1,901,230)
+
+Transactions with key management personnel
+
+The Bank’s key management personnel, and persons connected with them, are also considered to be related parties. The
+definition of key management includes the close family of members of key personnel and any entity over which they
+exercise control. The key personnel include, Executive and Non-Executive Directors, Management and Senior Managers
+of the Bank. Close family members are those family members who may be expected to influence, or be influenced by that
+individual in their dealings with Guaranty Trust Bank UK Limited.
+
+31 December 31 December
+2024 2023
+£ £
+Loans and advances:
+Personal Loans - -
+Liabilities:
+Deposits 6,246,396 4,690,477
+
+Related party transactions
+
+The Bank ensures that all of its business activities are carried out at arm’s length. Controls are in place to ensure that
+related parties are identified, such as the review of vendors at on boarding, and declarations made by Directors of the
+Bank to prevent potential conflicts of interests.
+
+25. Parent bank
+
+Guaranty Trust Bank (UK) Limited is wholly owned by Guaranty Trust Bank Limited, which itself is 100% owned by
+Guaranty Trust Holding Company PLC, the ultimate parent.
+
+Copies of the Group accounts of the Parent can be obtained from the website, www.gtbank.com
+
+Corporate Affairs Department
+
+Guaranty Trust Holding Company PLC, Plot 635 Akin Adesola Street, Victoria Island, Lagos, Nigeria.
+
+26. Subsequent Events
+
+There were no significant reportable post balance sheet events.
+
+70
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024
+
+27. Allowance for Credit Impairment Losses ~ IFRS 9
+The following tables detail changes in the loss allowance and gross carrying value of loans and advances to customers during
+the year. The gross loans are defined as gross balance of loans and advances to customers, excluding interest receivable
+
+£154k (2023: £250k), deferred mortgage arrangement fee £533k (2023: £437k) adjustment and ECL adjustment £26k (2023:
+
+£23k):
+
+Loans and advances to customers
+
+Stage 1 Stage 2 Stage 3 Total
+Allowance Allowance Allowance Allowance
+Gross for credit Gross for credit Gross for credit Gross for credit
+Loans impairment Loans impairment Loans impairment Loans impairment
+losses , losses losses losses
+£ £ £ £ £ £ £ £
+At 1 January 2024 $4,990,652 (4,172) 1,155,304 (61) 1,740,201 (18,967) 57,886,157 (23,200)
+Changes reflected in
+impairment loss
+allowance:
+Increases due to
+originations 17,180,173 (1,718) - - - - 17,180,173 (1,718)
+Decreases due to
+repayments (11,609,809) 1,161 (303,673) 30 (209,260) 21 (12,122,742) 1,212
+Changes in credit
+risk (2,957,159) 295 2,927,231 (2,113) 29,928 (299) - (2,117)
+Other Movements (181,440) (1,069) 1,710 (552) 179,730 1,839 - 218
+Amounts written off - - - - - - - -
+At 31 December
+2024 57,422,417 (5,503) 3,780,572 (2,696) 1,740,599 (17,406) 62,943,588 (25,605)
+Stage 1 Stage 2 Stage 3 Total
+Allowance Allowance Allowance Allowance
+Gross for credit Gross for credit Gross for credit Gross for credit
+Loans impairment Loans impairment Loans impairment Loans impairment
+losses losses losses losses
+£ £ £ £ £ £ £ £
+At 1 January 2023 $9,328,737 (5,322) 963,802 (70) 1,691,137 (106,135) 61,983,676 (111,527)
+Changes reflected in
+impairment loss
+allowance:
+Increases due to
+originations 15,487,543 (1,550) - - - 15,487,543 (1,550)
+Decreases due to .
+repayments (17,958,199) 1,850 (712,693) 71 (914,076) (91) (19,584,968) 1,830
+Changes in credit
+risk (1,926,036) (193) 904,195 90 1,021,841 10,218 - 10,115
+Other Movements 58,607 1,043 - (152) (58,701) (52,781) (94) (51,890)
+Amounts written off - - - ~ - 129,822 - 129,822
+At 31 December
+2023 54,990,652 (4,172) 1,155,304 (61) 1,740,201 (18,967) 57,886,157 (23,200)
+
+71
+Guaranty Trust Bank (UK) Limited
+
+Notes to the Financial Statements
+for the year ended 31 December 2024 |
+
+Loans and advances to banks and investment securities
+
+All loans and advances to banks and Investment securities are in Stage ]. There are no transfers from between the stages
+during the year. The ECL provision is included in Notes 12 and 14 respectively.
+
+Sensitivity Analysis of Expected Credit Losses
+
+The Bank has considered the impact of changing house price movements during the five-year period, depicted below,
+which is consistent with the behavioural life of the mortgage book. The ECL output is not sensitive to the HPI. In the
+stress scenario with a 13.4% reduction in house prices the average portfolio LTV would move from 35% to 40%, (2023:
+53% based on stress scenario with a 20.7% reduction applicable in 2023).
+
+The scenario below is considered for the purposes of assessing the impact of future house price movements on the collateral
+valuation,
+
+Under the downside scenario the house prices are expected to fall by 13.4% over the next 2 years. Given the low LTVs
+across the mortgage portfolio, the resulting impact applying a forward-looking HPI in the estimation of ECL is immaterial.
+
+House Price Index (assessed as at reporting date)
+
+Parameters Weighting 2025 2026 2027 2028 2029
+Downside Scenario 100% -11.6% -1.8% 71.2% 8.7% 8.7%
+
+As at 31 December 2023
+
+Parameters Weighting 2024 2025 2026 ' 2027 2028
+Downside Scenario 100% -12.4% -8.3% 8.7% 8.8% 3.4%
+
+72

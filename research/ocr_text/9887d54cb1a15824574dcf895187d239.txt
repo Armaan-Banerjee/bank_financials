@@ -1,0 +1,4691 @@
+Company Registration No. 4146820
+
+United National Bank Limited
+
+Annual Report and Financial Statements
+
+31 December 2018
+
+WEDNESDAY
+
+17/04/2019 #291
+COMPANIES HOUSE
+
+HM
+United National Bank Limited
+
+Annual report and financial statements 2018
+
+Contents
+
+Officers and professional advisers
+Strategic report
+
+Directors’ report
+
+Independent auditor's report
+
+Profit and loss account
+
+Statement of comprehensive income
+Balance sheet
+
+Statement of changes in equity
+Statement of cash flows
+
+Notes to the accounts
+
+Page
+
+12
+
+16
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+United National Bank Limited
+
+Officers and professional advisers
+
+Directors
+
+Mr B Hasan (Chairman and Independent Non-Executive Director)
+
+Mr R Wilton (Chairman of the Audit Committee and Senior Independent Non—Executive Director)
+Mr M Aminuddin* (resigned 24 January 2018) ,
+Mr B Firth* (appointed 4 September 2018)
+
+Ms S Kamil
+
+Mr M M Khan (resigned 17 September 2018)
+
+Mr R Mohyeddin (resigned 22 June 2018)
+
+Mr M Naeem (appointed 30 July 2018)
+
+Mr S Z Ijaz (appointed 26 October 2018)
+
+Mr MF Haider (appointed 21 November 2018)
+
+* Executive Director
+
+Secretary
+Mr T Varkey
+
+Registered office
+
+2 Brook Street
+London
+WIS 1BQ
+
+Auditor
+
+Mazars LLP
+
+Chartered Accountants and Registered Auditor
+Tower Bridge House
+
+St Katharine’s Way
+
+London
+
+EIW.1DD
+United National Bank Limited
+
+Strategic report
+
+The Directors have pleasure in presenting the strategic report and the audited financial statements for the year to 31
+December 2018 for United National Bank Limited (the ‘Company’).
+
+Overview
+
+The Company is a banking institution incorporated and domiciled in the UK, and authorised by the Prudential
+Regulation Authority (‘PRA’) and regulated by the Financial Conduct Authority (“FCA’) and PRA. The registered
+Company number is 4146820 and the registered office is at 2 Brook Street, London, W1S 1BQ.
+
+The Company was formed in 2001 from the merger of the UK branches of two Pakistani banks, United Bank
+Limited and National Bank of Pakistan, who had been operating in the UK since the mid-1960s.
+
+The principal activities of the Company are to provide Retail Banking, Wholesale Banking, Treasury and Money
+Transmission services to UK-based individuals and corporate customers. Although there have been some changes
+to the strategic direction of the Company during the year, the principal activities have remained the same. The
+Directors are not aware, at the date of this report, of any likely major changes to the Company’s activities in the
+next year, and expect the Company to continue as a going concern for the foreseeable future (see note 1b).
+
+Business results
+
+During 2017 the Board of Directors indicated their desire to reduce the overall risk appetite and the return on
+capital expectation commensurate with the reduced risk. In order to implement the Board’s wishes, the internal
+business plan, devised towards the end of 2017 set out the Company’s intention to reduce the value of risk-
+weighted assets. The Company proposed to do this by actively decreasing exposures to emerging market debt
+securities, and to shift its focus towards growing the UK-property secured lending portfolio.
+
+During the second quarter of 2018 there was a significant deterioration in the market value of the debt securities
+caused by a number of external factors, which included US-China trade wars, political uncertainty in Turkey and
+Pakistan and heightened concerns about the potential economic impact of a no-deal Brexit. As a result of these
+external factors, the Company experienced a considerable increase in the unrealised losses on our portfolio, which
+grew from £2m at the end of 2017 to nearly £14m by mid-August 2018.
+
+This significant deterioration put the regulatory capital surplus under increasing pressure and therefore the
+management took the decision to accelerate the de-risking strategy and begin exiting some of the investment
+portfolio earlier than originally intended. Although the Company realised losses on the sale of these bonds, there
+was an overall positive effect on the capital adequacy position which ensured the Company did not breach its
+regulatory requirements or need to dip into capital buffers.
+
+As a result of this accelerated de-risking, towards the end of 2018 a large proportion of the balance sheet was
+invested in High Quality Liquid Assets (HQLAs) such as UK and US Treasury Bills and short-dated UK Gilts.
+This ensured that the liquidity position was very comfortable but at the cost of a reduced yield.
+
+The 2018 performance was also adversely impacted by £3.3m impairment on an exposure to a UK high street
+retailer, which experienced financial difficulties during the year and ultimately ended up going into administration
+in August 2018.
+
+The table below shows a summary of profit on ordinary activities before taxation for the past six years, along with
+details of the items which have been adjusted to determine the underlying profitability of the Company.
+
+All figures in GBP 000s 2018 | 2017 2016 2015 2014 2013 |
+Profit/(loss) on ordinary activities before tax (3,779) 71k 7,401 9,605 4,960 6,221
+Adjusting items:
+
+Interest payable on preference shares 234 778 479 2,254 118 13
+Revaluation gain on Brook Street premises (787) - - | (2,750) - -
+Gain on disposal of repossessed property - - - | (2,185) - -
+Realised losses on de-risking actions 2,487 - - - - -
+Impairment provisions 2,652 | 4,799 - - - -
+Adjusted profit on ordinary activities before tax 807 | 6,288 7,880 6,924 5,078 6,234
+
+United National Bank Limited
+
+Strategic report
+
+The following financial measures referenced ‘adjusted’ are non-GAAP and should be considered supplemental to,
+and not a substitute for, financial information prepared in accordance with generally accepted accounting
+principles. The definitions of these non-GAAP financial measures may differ from similarly titled measures used
+by others. The Company uses non-GAAP financial measures to facilitate management’s internal comparisons to the
+Company’s historical operating results, to competitors’ operating results, and to provide greater transparency to
+shareholders of supplemental information used by management in its financial and operational decision-making.
+The Company also uses non-GAAP financial measures which exclude certain charges and credits because it
+believes that such items are not indicative of its core operating results and trends, and do not provide meaningful
+comparisons with other reporting periods.
+
+The graph below shows the adjusted profit on ordinary activities before taxation since 2013:
+
+Adjusted profit on ordinary
+
+e1om activities before taxation
+
+£8m |
+—_—
+£6m ——
+£4m \
+£2m \.
+
+£0m t T T T i 1
+2013 2014 2015 2016 2017 2018
+
+mae Adjusted profit on ordinary activities before taxation «
+
+Adjusted profit before tax has reduced by £5.5 million during 2018.
+
+The graph below illustrates the movement in adjusted operating income since 2013, and shows the split between
+net interest income and non-interest income:
+
+Adjusted operating income
+
+£25m
+
+£20m
+
+£15m +
+£10m
+£5m
+£0m 4 1 T T 7 T
+
+2013 2014 2015 2016 2017 2018
+
+4
+
+4
+
+@ Adjusted non-interest income . m Adjusted net interest income
+
+United National Bank Limited
+
+Strategic report
+
+Adjusted non-interest income (adjusted to exclude the de-risking losses, and the property revaluation gain) has
+decreased by £4.8 million during 2018 due primarily to the absence of capital gains from the sale of investments,
+but also resulting from lower transaction volumes for remittances and trade finance business.
+
+Adjusted net interest income (adjusted to exclude the interest payable on preference dividends) increased by £0.3
+million (3%) due to increased yields on our investment book. However, the majority of this increase was in the
+early part of the year before most of the de-risking actions: had been completed. The increased yields were also
+partly the result of movements in the GBP:USD FX rate which enhanced our USD interest when expressed in GBP
+terms.
+
+Total adjusted operating income has reduced by £4.5 million during 2018 to £14.0m (2017: 18.5m).
+
+The graph below illustrates the growth in the balance sheet since 2013 and the movement in the net interest margin
+(net interest income divided by total assets) compared with the Bank of England base rate over the same period:
+
+Balance Sheet
+£600m 2.50%
+it,
+£500m > ————| 5 009
+£400m =
+- 1.50%
+£300m
+~ 1.00%
+£200m ae
+£100m ee L 0.50%
+£0m T LI qT , qT 0.00%
+2013 2014 2015 2016 2017 2018
+m_7_ otal Assets _ \verage BoE Base Rate = == Net Interest Margin
+
+The total balance sheet reduced by about 5% during 2018 to end the year at £498 million.
+
+Net interest margin has increased by 8 basis points primarily as a result of decreased swap costs from reducing our
+currency mismatch, and also due to the impact of the movement in the GBP:USD FX rate.
+
+Key performance indicators
+
+The Company uses 3 ratios in order to measure and to quantify the financial performance and progress against the
+strategic objective to become the leading UK-based financial solutions provider in the South Asian community:
+
+I. Return on equity
+This is defined as the operating profit before taxation and preference dividend divided by shareholders’ funds. This
+measures the shareholders’ return on their investment. The following graph illustrates the return on equity since |
+2013:
+United National Bank Limited
+
+Strategic report
+
+Return on Equity
+
+20.00%
+15.00% pom
+
+0.00% T T T T ™N T qd
+2013 2014 2015 2016 2017 os
+
+-5.00%
+
+5.00%
+
+-10.00%
+
+om Return on Equity eee Target Return on Equity
+
+This year, the return on equity ratio decreased to -5.0% (2017: 1.8%), compared to the shareholders’ expectations
+in 2018 of 6%. If we exclude the impact of the impairment charges the ratio for 2018 would be -1.9% (2017:
+7.2%).
+
+2. Return on assets
+Return on assets is defined as profit on ordinary activities after taxation divided by total assets. The disclosure of
+this ratio is also a requirement of the fourth Capital Requirements Directive (“CRD IV’) which came into effect in
+2014. The following graph shows the return on assets since 2013:
+
+Return on Assets
+
+3.00%
+2.50% I~
+2.00% S
+
+1.50% Sy X
+
+1.00% — a —
+
+0.50%
+0.00% N
+-0.50% 2013 2014 2015 2016 20T 2018
+-1.00%
+
+-1.50%
+
+—— Return on Assets ——=Target Return on Assets
+
+There was a negative return on assets for 2018 of -1.0% (2017: -0.2%).
+United National Bank Limited
+
+Strategic report
+
+3. Cost to income ratio
+This is defined as operating income before preference dividend divided by operating expenses excluding
+impairment charges and debt recoveries. This ratio measures the operating efficiency of the Company; the lower
+the ratio the less spent on operating expenses for every £1 earned in revenue. The graph below shows the cost to
+income ratio since 2013:
+
+Cost to Income Ratio
+
+120.00%
+
+100.00% ZA
+
+80.00% I
+60.00% yy
+
+40.00%
+20.00%
+0.00% T T T T T 71
+2013 2014 2015 2016 2017 2018
+ome Cost to Income ratio ome Target Cost to Income
+
+The cost to income ratio for 2018 is 109% (2017: 68%), which shows deterioration from 2017 and remains above
+the current target level of 79%. The main cause of the deterioration over the last year has been the £6.4 million
+(35%) decrease in operating income. Expenses have also increased by £0.7 million (5%) due mainly to £0.3
+million of additional costs for professional and consultancy services, and £0.3 million relating to operational losses.
+
+Business Review
+
+The Company divides itself into 3 distinct business lines: Retail Banking, Wholesale Banking and Treasury. By
+diversifying the revenue stream the Company hopes to avoid the issue experienced in the past when the closure of a
+business line led to the Company making a loss.
+
+Retail bank
+
+At 31 December 2018 the Company operated 5 branches in the UK, however, it is currently in the process of
+closing the branches located in Bradford and Ilford, and this process is expected to be completed during the first
+half of 20.19. This will leave 3 branches operating in London (Mayfair), Birmingham and Manchester. In addition,
+the Company currently operates 6 booths which are situated within the various Pakistan High Commission
+consulates located around the UK. Additionally, the Company has developed an online presence for deposit-taking,
+which overcomes the limitations of the small branch network.
+
+The main activity for the Retail Bank is deposit mobilisation and retention. During the last year, Current Account
+and Savings Account (CASA) deposits decreased by £13 million (13%) whilst term deposits increased by £14
+million (5%), resulting in total retail deposits being up by £1 million (0.5%) year-on-year. As a result of these
+changes, the average duration of deposits increased causing the average deposit cost to also increase by 6 basis
+points to 1.83% (2017: 1.77%). The growth in term deposits, which was focused in the months of May and June
+was the result of a successful ISA campaign which took place before the change in strategy. The focus for 2019
+will be on increasing the proportion of CASA deposits in order to reduce the overall cost of deposits.
+United National Bank Limited
+
+Strategic report
+
+The Company has taken a cautious approach to lending in the UK over the last few years due to the historically low
+interest rates and the volatility in property values outside of London. However, towards the end of 2018 the
+outlook for the UK economy was looking more optimistic and in November we saw the first increase in the Bank
+of England base rate for more than 10 years. As a result of these factors the Company has begun to fo cus on
+growing the Retail lending business in 2019 and beyond.
+
+During the year the Company launched its broker network, which has increased the geographical coverage for its
+mortgage products, and there are plans to further expand this network to more brokers throughout 2019 to generate
+more business leads.
+
+Money Transmission Services to Pakistan have always provided a regular revenue stream, but the Company’s share
+of this $2billion a year market remains very small. The Company’s online remittance product, UBL NetRemit,
+continues to expand through the addition of new customers, and now provides more than 60% of the Company’s
+home remittances by volume.
+
+Treasury
+
+The poor credit conditions in Europe and a desire to diversify from the UK led the Board to take the decision at the
+end of 2011 to deploy most of the Company’s new funds outside of Europe to minimise contagion risk. The
+investment has been in 2 asset classes; a fixed income investment portfolio and a floating rate syndicated loan
+portfolio.
+
+Although the size of the portfolio reduced as a result of de-risking the average return on investments (excluding
+HQLA’s) improved in 2018 to 5.29% (2017: 4.92%). Both the size and tenor of the portfolio have been reduced
+during the year, and the surplus funds have been placed in lower yielding HQLAs, adversely affecting the
+Company’s interest income. In the first half of the year the Treasury Department were able to realise capital gains
+of £0.9m, however, as a result of the de-risking actions in the second half of the year we ended up realising a loss
+for the full year of £0.7 million (2017: £5.4million gain). ;
+
+Treasury also manages a floating rate syndicated loan portfolio, which consists mainly of collateralised primary
+issue loans from rated counterparties in the emerging markets. The syndicated loan portfolio was reduced down to
+£34 million at the end of 2018 (2017: £77million), but continues to provide some resilience against increasing
+interest rates in the future. —
+
+Future developments
+
+The Company’s strategy is set by the Board of Directors. A three-year plan is drawn up to project growth and
+resource requirements, and a detailed annual budget is prepared to set short-term targets and allow progress to be
+monitored.
+
+The Company’s Management Team is charged with the responsibility of executing the plans to achieve the
+strategic goals. Monthly budget variances are calculated and explained, and submitted to the Board for review.
+This timely reporting allows corrective action to be taken as early as possible to enable the plans to be achieved.
+
+Towards the end of 2018, the management and Board devoted significant time to review the Company’s future
+strategy. This culminated in a revised Business Plan that focuses initially on reducing the overall levels of risk in
+the business and building a firm foundation for business in future years. As a result the Company expects to
+maintain the balance sheet at the present level during the coming year and is targeting a 1% to 2% return on capital
+for 2019. For subsequent years the Company will look to increase the balance sheet by 6% per annum. Going
+forward, the Company is also targeting a lower return on capital commensurate with the lower risk.
+
+The emphasis during 2019 will be on improving the credit quality of the asset book and narrowing the Company’s
+geographical exposure to focus on investing in countries in which the Company has knowledge and expertise, or
+locations in which the parent banks have a presence. As a result of this de-risking exercise we anticipate a
+reduction in net yields on the investment book, which is reflected in the reduced profit expectations for the year.
+The Company believes these actions will help to limit any potential downside volatility in \ the market value of our
+debt securities which could otherwise erode the Company’s capital resources.
+
+In respect of balance sheet growth the Company will continue to focus on lowering the cost of funding by raising
+more low cost deposits, in both GBP and USD. The Company intends to continue the recent growth trend in the
+United National Bank Limited
+
+Strategic report
+
+Retail loan book by adding more brokers to its network, and will also actively seek opportunities to increase
+lending secured on residential real estate in select locations and sectors.
+
+The Directors expect that the Company’s strategy will lead to a sustained growth in profitability in the me dium
+term providing economic conditions do not deteriorate significantly.
+
+Going concern
+
+During the year the Board has conducted a robust assessment of the principal risks to the viability of the Company
+as part of its internal capital and liquidity adequacy assessment process. The process involves the Board and
+management assessing the Company’s:
+
+« Processes, strategies and systems;
+e The major sources of risk to the Company’s ability to meet its liabilities as they fall due;
+« The results of internal stress testing of these risks; and
+
+e The amounts and types of financial and capital resources, and whether or not these are adequate to cover
+the nature and level of the risks to which the Company is exposed over the next three years.
+
+The Board chose to conduct the review over a 3 year period as it coincided with its business plan projections,
+which covered the period from 2018 to 2020.
+
+The Company devised and ran a series of stress scenarios against its 31 December 2017. financials and core
+business plan, and identified the key vulnerabilities of the Company and the mitigants that can be employed by
+management. The Company also conducted a reverse stress testing exercise (a stress scenario that makes the
+business model become unviable). The stress tests, which include various extreme scenarios over a prolonged
+period, received substantial input from the senior management team.
+
+Based on the tests conducted and the results obtained the Board has concluded that they have a reasonable
+expectation that the Company will be able to continue to operate, and meet its liabilities as they fall due, over the
+period of assessment and therefore the financial statements have been prepared on a going concern basis.
+
+Principal risks and uncertainties
+
+Financial and operational risks
+
+The Company is exposed to a variety of financial risks that arise in the course of its business. These risks include
+credit risk, market risk and operational risks such as conduct and financial crime. The Company has in place a risk
+management framework that is designed to limit the adverse effects of these risks on the financial performance of
+the Company but as a bank it is not possible to eliminate all the risks. The risk management policies of the
+Company including the use of financial instruments are set out in note 22.
+
+Brexit
+
+It is clear that the UK’s intended exit from the European Union has resulted in ongoing volatility in the financial
+markets throughout 2018. Following extensive negotiations between UK and EU representatives an agreement has
+been drafted, however, at present the terms of this agreement do not appear to have majority support in the UK
+Parliament. This has increased the probability of a no-deal Brexit which is widely expected to have a significant
+detrimental impact on the UK economy. The Company has given consideration to the potential impacts and it has
+been a factor in a number of recent credit risk decisions.
+
+The Company’s customer base and activities are primarily focused in the UK and Pakistan with negligible
+exposure to the EU, and therefore management believe the potential direct impact on the Company should be
+minimal. However, it is likely that there would be an indirect impact of general changes in the UK financial
+environment. Adverse movements in house prices, unemployment levels, interest rates and foreign exchange
+United National Bank Limited
+
+Strategic report
+
+markets could affect the Company and its clients, but we believe our prudent credit risk decisions and low average
+Loan to Value (LTV) ratios will limit the potential downside.
+
+Materiality
+
+As part of the process of producing the annual financial statements the Company is required to make an assessment
+of the level of materiality to ensure that the information reported within, both financial and non-financial, meets the
+needs of the shareholders.
+
+Information is considered material if its omission or misrepresentation could influence the economic decisions
+shareholders take. Conversely, the inclusion of immaterial information can obscure key messages and impair the
+clarity of information provided in the strategic report.
+
+Income recognition
+
+The method of accounting for income recognition requires management to make a number of assumptions and
+judgements, particularly with regard to the timing and classification of fees and commissions. In order to minimise
+‘the risk of a material misstatement in this area the Company has in place a robust financial control framework to
+give comfort that the revenue is reported on an appropriate basis, and in accordance with the applicable accounting
+standards. Currently, the Company recognises income on a straight line basis as opposed to effective interest rate
+(‘EIR’). However, an assessment was conducted to ascertain the impact of using EIR, which came up to be £242k.
+This was considered not material to warrant any adjustment.
+
+Investment properties
+
+A key estimate included within this year’s financial results is the valuation of the, Company’s Head Office on
+Brook Street in London. A recent desktop valuation undertaken by a firm of surveyors has indicated that the market
+value has increased since the last formal valuation was conducted. As a result of this we have reflected the
+increased carrying value of the building in these accounts. Further analysis is provided in note 11.
+
+Deferred tax asset
+
+The Company operates in the United Kingdom and is therefore subject to United Kingdom corporation tax.
+Estimates are required in determining the provision for taxes at the balance sheet date. The Company recognises
+tax liabilities for transactions whose tax treatment is uncertain. Where the final tax is different from the amounts
+initially recognised in the income statement, such differences will impact the income tax expense, the tax liabilities
+and deferred tax assets of the period in which the final tax is agreed with the relevant tax authorities. In relation to
+current year tax there are no assumptions or estimates that significantly affect the tax provision.
+
+As a result of the post-tax losses experienced by the Company in 2017 and 2018, and a reduction in future profit
+expectations due to the lower-risk business model, the Company has taken the decision to derecognise the deferred
+tax asset at 31 December 2018. Despite the derecognition of the asset on the Balance Sheet, carry forward losses
+will still be available to set off against future profits, subject to the loss restriction rules currently imposed on UK
+banks.
+
+Further details of principal risks and uncertainties are set out in note I(t).
+
+Capital resources
+
+United National Bank Limited is 55% owned by United Bank Limited and 45% owned by National Bank of
+Pakistan. Both parent banks are established and profitable banks in Pakistan, and committed to the future growth
+of the Company. A breakdown of the capital resources of the Company at the balance sheet date is set out in the
+Statement of Changes in Equity. The Company has not reported any breaches of its capital requirements during the
+year and did not need to make use of any capital buffer.
+
+Further details of the Company’s capital requirements and capital risk management policy can be found in the
+unaudited Pillar [II disclosures on the Company’s website, www.ubluk.com.
+
+The graph overleaf shows the movement in capital resources since 2013:
+United National Bank Limited
+
+Strategic report
+
+Capital
+
+£100m
+
+£80m
+
+£60m
+
+£40m +
+
+£20m f
+
+£0m 4 7 T T T 7
+
+2013 2014 2015 2016 2017 2018
+
+ry
+
+@Tier 1 capital B Tier 2 capital
+
+Tier | capital has decreased by £11.4 million (14.0%) over the year as a result of the operating loss and the
+deterioration in the market value of the remaining available-for-sale debt securities. The Tier 2 capital has
+decreased by £1.1 million (56.6%) due to a reduction in the amount of collective provision and the maturity of the
+subordinated loan arrangement.
+
+Defined benefit pension scheme
+
+The Company’s defined benefit pension scheme had its last triennial valuation carried out in 2017. The valuation
+showed a £0.3million deficit as at 1 January 2017. Following an agreement with the scheme trustees, the Bank
+began making regular monthly contributions of £9,030 in order to reduce the deficit. These payments beg an in
+February 2018 and are scheduled to continue until December 2020.
+
+The FRS 102 valuation of the pension scheme’s assets and liabilities for the 2018 year-end has shown a surplus of
+£0.15 million (2017: -£0.16 million). However, the pension scheme surplus has been restricted to £Nil in the
+Company’s financial results. The surplus has arisen from an increase in actuarial gains which have reduced the
+value of the defined benefit obligations as well as the monthly contributions highlighted in the preceding
+paragraph.
+
+Preference shares
+
+The Company uses preference shares to return net income back to the parent bank resulting from the util isation of
+tax losses and the recovery of written-off loans relating to tax losses and bad debts that were transferred upon
+merger (see note 17 for further details).
+
+The preference share liability arises in the accounting year following the year when the tax losses are actually
+utilised. Therefore the preference share interest of £0.3 million recognised in the financial statements relates to the
+tax losses utilised in the 2017 tax computation and submitted to HMRC during 2018 as well as debt recoveries.
+
+Liquidity resources
+
+The Company maintains a minimum amount of unencumbered HQLAs in a Liquid Assets Buffer (LAB) in
+accordance with the Individual Liquidity Guidance requirement (ILG) it has received from the PRA. This stock of
+HQLAs is available to meet liquidity shortfalls arising during periods of market stress, idiosyncratic stress or a
+combination of the two. The Company has held long-term UK Government bonds (gilts), short-term UK Treasury
+Bills and also US Treasuries as part of the LAB. The Company has not reported any breaches of its liquidity
+requirements during the year.
+
+The Company holds an investment portfolio of quoted, internationally rated, and predominantly fixed income
+bonds that are designated as available for sale to meet its own day to day liquidity requirements. The Company
+also has in place a number of repo facilities with top-tier counterparties that can be utilised to raise strategic or
+tactical funding when required. ,
+
+10
+United National Bank Limited
+
+Strategic report
+
+Human resources
+
+The Company encourages staff involvement by a process of communication and consultation. This takes the form
+of information through normal management channels, a staff newsletter and inter-department groups formed for a
+particular project; e.g. embedding the principles of treating customers fairly.
+
+At the end of 2017, the Company launched the Employee Engagement Committee. Membership of the committee
+is on a voluntary basis and is open to staff (other than Executive Committee members) from all branches and
+departments. The committee provides a confidential forum for employees to raise a broad range of day-to-day
+issues, which are then discussed with the Executive Committee on a regular basis. Its mission statement is to
+prioritise employee engagement, boost staff morale, act as a channel between senior management and staff and
+assist in transforming the culture within the Company.
+
+Training is an important focus for the Company. E-learning is used to both train and assess competence for
+compliance related subjects. Annually all staff gather together for a weekend of training on Company specific
+policies and procedures as well as team-building exercises. Specific skills like IT training or leadership are
+enhanced by attending third-party training courses. Staff who fulfil pivotal roles are encouraged to study for
+relevant examinations, and to keep up to date with latest developments.
+
+The Company seeks to provide a competitive rewards and benefits package for its entire staff. This involves
+reviewing the benefit package on a regular basis, benchmarking it against the industry standards, and identifying
+cost effective solutions. As a result of changes made over the last few years the Company now offers a competitive
+package of salary and benefits, which is in line with other financial institutions operating in the UK.
+
+The Company operates a non-contractual discretionary bonus scheme. The size of the bonus pool is determined by
+the profit before preference dividend achieved in excess of the annual budget. The pool is divided between staff
+based on a number of factors including the performance of the individual as assessed through the annual appraisal
+process.
+
+The Company recognises the importance of having an identity that distinguishes it from its competitors. This
+identity is translated into values that govern the behaviour of all staff. During the year the Company has used the
+annual staff training weekend to communicate to staff the chosen values and the expected behaviours.
+
+The Company’s workforce is one asset that is not recognised on its balance sheet but contributes significantly to
+the value of the Company. The Board would like to thank the members of staff for their efforts and the
+contribution they have made to the Company during the year.
+
+Approved by the Board of Directors
+and signed by order of the Board
+
+SCBA
+
+T Varkey
+Company Secretary
+15 April 2019
+
+11
+United National Bank Limited
+
+Directors’ report
+
+The Directors have pleasure in presenting the Annual Report and Financial Statements for the year to 31 December
+2018 for United National Bank Limited (‘the Company’). A number of disclosures previously incorporated in the
+Directors’ Report are now included in the Strategic Report. These include:
+
+a) A review of the Company’s results;
+
+b) Definition of the Company’s key performance indicators and objectives;
+
+c) A description of the Company’s future developments;
+
+d) Principal risks and uncertainties facing the Company including exposure to credit risk, price risk, and
+liquidity risk and financial risk management objectives and policies; and
+
+e) Details of the Company’s capital, liquidity and human resources and requirements.
+
+Statement of Directors’ responsibilities
+
+The Directors are responsible for preparing the Strategic Report, Directors’ Report and the financial statements in
+accordance with applicable law and regulations.
+
+Company law requires the Directors to prepare financial statements for each financial year. Under that law the
+Directors elected to prepare the financial statements in accordance with applicable United Kingdom Accounting
+Standards, including Financial Reporting Standard 102, ‘The Financial Reporting Standard applicable in the United
+Kingdom and the Republic of Ireland’ (‘FRS 102’) and Companies Act 2006. Under Company law the Directors
+must not approve the financial statements unless they are satisfied that they give a true and fair view of the state of
+affairs of the Company and of the profit or loss of the Company for that period.
+
+In preparing these financial statements, the Directors are required to:
+
+= Select suitable accounting policies and then apply them consistently;
+
+= Make judgments and accounting estimates that are reasonable and prudent;
+
+= Provide additional disclosures when compliance with specific requirements in FRS 102 is insufficient to
+enable users to understand the impact of particular transactions, other events and conditions on the entity’s
+financial position and financial performance; and
+
+* Prepare the financial statements on the going concern basis unless it is inappropriate to presume that the
+Company will continue in business.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+Company’s transactions and disclose with reasonable accuracy at any time the financial position of the Company
+and enable them to ensure that the financial statements comply with the Companies Act 2006. They are also
+responsible for safeguarding the assets of the Company and hence for taking reasonable steps for the prevention
+and detection of fraud and other irregularities.
+
+Organisation and governance
+
+The Board of Directors (Board) has a supervisory role in overseeing the business, strategic direction, organisational
+structure and risk management activities of the Company. In pursuing corporate objectives, the Board and
+management have committed to the highest level of governance and strive to foster a culture that values and
+rewards exemplary ethical standards, personal and corporate integrity and respect for others.
+
+The Directors who served on the Board during the year are set out below together with those noted as appointed or
+terminated during the year.
+
+Mr B Hasan (Chairman)
+
+Mr B Firth (Chief Executive Office — appointed 4 September 2018)
+
+Mr M Aminuddin (Chief Executive Officer - resigned 24 January 2018)
+Mr R Wilton
+
+Ms S Kamil
+
+Mr M M Khan (resigned 17 September 2018)
+
+Mr R Mohyeddin (resigned 22 June 2018)
+
+Mr M Naeem (appointed 30 July 2018)
+
+Mr S Z Ijaz (appointed 26 October 2018)
+
+Mr M F Haider (appointed 21 November 2018)
+United National Bank Limited
+
+Directors’ report
+
+The Board membership represents an appropriate mix of experience and knowledge relevant to the Company’s
+
+business lines.
+
+The Board carried out an internal effectiveness review during the year and has decided to make changes to its
+composition in order to meet current best practice. The changes will take place during 2019, and once embedded
+the Board will undertake an externally facilitated Board effectiveness review.
+
+Board meetings are held at least four times a year, and additional meetings can be held at any time to discuss urgent
+
+issues.
+
+The Board has also constituted the following committees to set policy, review progress, and deal with specific and
+critical issues relevant to the committee’s objectives. The committees, their board members, and their
+responsibilities are:
+
+¢ Board Audit Committee
+Mr R Wilton (Chairman), Mr B Hasan, Mr M Naeem, Mr S Z Ijaz and Mr M F Haider
+
+°
+
+Lo)
+ie)
+©
+©
+
+Oversight of financial reporting
+
+Oversight of external audit
+
+Oversight of internal control
+
+Oversight of internal audit
+
+Oversight of corporate governance and regulatory compliance
+
+* Board Risk and Compliance Committee
+_ MrR Wilton (interim chairman), Mr B Hasan, Ms S Kamil, Mr 8 Z Ijaz and Mr M F Haider
+
+°
+°
+
+oO
+
+Oo 000 0 0
+
+Determine the policies and principles that govern the identification and evaluation of risks
+Ensure that systems, policies and procedures for the management and monitoring of risks are
+carried-out
+
+To ensure that the risk profile of the Company is in line with the risk appetite set by the Board
+To ensure that capital and liquidity resources are maintained to meet current and future business
+requirements under normal and stressed conditions
+
+Approval of credits and credit provisioning
+
+Approval of credit policy and all amendments
+
+Review and recommendation to the Board of all lending policies
+
+The delegation of credit approval and provisioning limits to the Credit Committee
+
+Oversight of financial crime including anti-money laundering
+
+Oversight of compliance.
+
+e HR Remuneration and Appointments Committee
+Mr B Hasan (Chairman), Mr R Wilton, Mr M Naeem, Mr S Z Ijaz and Mr M F Haider
+
+le)
+°
+[e)
+
+Ensure that the Company is in.compliance with all relevant employment law
+Decide on total remuneration and benefits for senior staff and Executive Directors.
+Oversee compliance with the Remuneration Code
+
+e Board Nomination Committee
+Mr B Hasan (Chairman) and Mr R Wilton
+
+[e)
+°
+[e)
+
+To make recommendations to the Board on the Board composition and succession planning
+To identify and nominate candidates for Board vacancies
+To evaluate candidates for Board and Board Committee positions
+
+Each committee meets a minimum of three times a year, and is chaired by a Board member, who reports back to
+the Board at the next meeting.
+
+13
+United National Bank Limited
+
+Directors’ report
+
+The day-to-day activities of the Company, including business development and financial performance are
+controlled by the Executive Committee. The employees who served on the Executive Committee during the year
+are set out below along with their specific area of responsibility within the Company.
+
+Mr M Aminuddin — Chief Executive Officer (resigned January 2018)
+
+Mr B Firth - Chief Executive Officer (appointed August 2018)
+
+Mr T Afzal - Head of Retail and Commercial Products (resigned February 2018)
+Mrs D Grant - Chief Risk Officer (appointed July 2018)
+
+Mr T Varkey ~ Chief Compliance Officer and Company Secretary (appointed March 2018)
+Ms B Dyson - Head of Human Resources
+
+Mr R Mathews — Head of Finance (appointed April 2018)
+
+Mr Z Haider — Head of Wholesale Banking
+
+Ms S Mandeville - Head of Retail Strategy and Marketing
+
+Mr P Murphy - Head of IT
+
+Mr R Rahim — Head of Retail Banking (appointed September 2018)
+
+Mr A UI-Hasan — Group Head of Operations
+
+Mr P Gregory — Head of Internal Audit (appointed August 2018)
+
+The Executive Committee has formed the following committees to manage specific risks on a day-to-day basis:
+
+e — Assets and Liabilities Committee - responsible for identifying, managing and controlling the balance sheet
+risks in accordance with the Board approved business strategy and risk appetite.
+
+e Operational Risk and Conduct Committee — responsible for the monitoring and management of
+operational risk and conduct risk including the fair treatment of customers.
+
+e Credit Committee — responsible for the oversight of credit risk, the implementation of credit policies and
+for the approval of routine credit facilities within its credit approval and provisioning limits as delegated
+by the Board Risk Committee.
+
+e Enhanced Due Diligence Committee — responsible for reviewing and approving the Company’s high risk
+clients including correspondent relationships and the monitoring of all transactions with respect to
+financial crime risk.
+
+e Wholesale Banking Committee — responsible for managing and monitoring the wholesale banking
+business, including investment, syndicated loan and commercial lending portfolios.
+
+e Risk Committee — responsible for the oversight of risk management.
+
+e Steering Committee — responsible for the oversight of the implementation of strategic change within the
+Company.
+
+Each committee has at least one Executive Committee member who is responsible for feedback including the
+escalation of issues to the Executive Committee.
+
+Directors’ indemnification
+The Company has arranged qualifying third party indemnity insurance for all Directors.
+
+Share capital and dividends
+
+The Shareholders’ Agreement signed by the shareholder banks in 2001 stipulated that ordinary dividends will not
+be paid for the first five years after the merger to enable the Company to build its capital resources. Since
+incorporation, the Company’s shareholders’ funds have grown from £30million to more than £70million at the end
+of 2018. In 2015 the Directors agreed to implement a dividend policy to return 35% of the net annual distributable
+profits to the shareholders. As a result of the realised loss for the year, the Board of Directors has taken the
+decision not to declare a dividend for the financial year ended 31 December 2018 (2017: nil).
+
+14
+United National Bank Limited
+Directors’ report
+
+Diversity policy
+
+The Company recognises and embraces the benefits of having a diverse workforce, and sees increasing diversity as
+an essential element in maintaining a competitive advantage. A truly diverse. workforce will include and make good
+use of differences in the skills, regional and industry experience, background, race, gender and other distinctions
+between employees. |
+
+The Company is committed to the principle of equal opportunity in employment. Accordingly, the Board and
+management will ensure that recruitment, selection, training, development and promotion results in no job
+applicant receiving less favourable treatment because of a protected characteristic.
+
+The Board operates a formal boardroom diversity policy which aims to promote diversity in the composition of the
+Board. Under this policy, all Board appointments will be made on the basis of individual c ompetence, skills and
+expertise measured against identified objective criteria.
+
+In reviewing Board composition, the Board Nomination Committee will consider the benefits of all aspects of
+diversity in order to enable it to discharge its duties and responsibilities effectively.
+
+In identifying suitable candidates for appointment to the Board, the Board Nomination Committee will consider
+candidates on merit against objective criteria and with due regard for the benefits of diversity on the Board.
+
+Auditor
+
+Mazars LLP has expressed its willingness to continue in office. Under the Companies Act 2006 section 487(2)
+they will be automatically re-appointed as Auditor 28 days after these accounts are sent to the shareholders, unless
+the shareholders exercise their rights under the Companies Act 2006 to prevent their re-appointment.
+
+Each Director at the date of approval of this report confirms that:
+
+(1) so far as the Director is aware, there is no relevant audit information of which the Company’s auditor is
+unaware; and
+
+(2). the Director has taken all the steps that he/she ought to have taken as a. Director in order to make
+himself/herself aware of any relevant audit information and to establish that the Company’s auditor is aware
+of that information.
+
+This confirmation is given and should be interpreted with the provisions of section 418 of Companies Act 2006.
+
+Approved by the Board of Directors
+and signed by order of the Board
+
+T Varkey
+Company Secretary
+
+15 April 2019
+
+15
+Independent auditor’s report to the members of United
+National Bank Limited
+
+Opinion
+
+We have audited the financial statements of United National Bank Limited (the ‘company’) for the year ended 31
+December 2018 which comprise Profit and Loss account, the Statement of comprehensive income, the Balance sheet,
+the Statement of changes in equity, the Statement of cash flows and notes to the accounts, including a summary of
+significant accounting policies. The financial reporting framework that has been applied in their preparation is
+applicable law and United Kingdom Accounting Standards, including FRS 102 “The Financial Reporting Standard
+applicable in the UK and Republic of Ireland” (United Kingdom Generally Accepted Accounting Practice). ,
+
+In our opinion, the financial statements:
+* give a true and fair view of the state of the company’s affairs as at 31 December 2018and of its loss for the
+year then ended
+have been properly prepared in accordance with United Kingdom Generally Accepted Accounting Practice;
+and
+e have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable
+law. Our responsibilities under those standards are further described in the Auditor’s responsibilities for the audit of
+the financial statements section of our report. We are independent of the company in accordance with the ethical
+requirements that are relevant to our audit of the financial statements in the UK, including the FRC’s Ethical
+Standard, as applied to public interest entities and we have fulfilled our other ethical responsibilities in accordance
+with these requirements. We believe that the audit evidence we have obtained is sufficient and appropriate to provide
+a basis for our opinion.
+
+The impact of uncertainties due to Britain exiting the European Union
+on our audit
+
+The directors’ view on the impact of Brexit is disclosed on page 8.
+
+The terms on which the United Kingdom may withdraw from the European Union, are not clear, and it is therefore
+not currently possible to evaluate all the potential implications to the company’s trade, customers, suppliers and the
+wider economy.
+
+We considered the impact of Brexit on the company as part of our audit procedures, applying a standard firm wide
+approach in response to the uncertainty associated with the company’s future prospects and performance.
+
+However, no audit should be expected to predict the unknowable factors or all possible implications for the company
+and this is particularly the case in relation to Brexit.
+
+Conclusions relating to going concern
+
+We have nothing to report in respect of the following matters in relation to which the ISAs (UK) require us to report
+to you where:
+e the directors’ use of the going concern basis of accounting in the preparation of the financial statements is .
+not appropriate; or
+« the directors have not disclosed in the financial statements any identified material uncertainties that may
+cast significant doubt about the company’s ability to continue to adopt the going concern basis of
+accounting for a period of at least twelve months from the date when the financial statements are authorised
+for issue.
+
+16
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of the
+financial statements of the current period and include the most significant assessed risks of material misstatement
+(whether or not due to fraud) we identified, including those which had the greatest effect on: the overall audit
+strategy, the allocation of resources in the audit; and directing the efforts of the engagement team. These matters
+were addressed in the context of our audit of the financial statements as a whole, and in forming our opinion thereon,
+and we do not provide a separate opinion on these matters.
+
+We summarise below the key audit matters in forming our audit opinion above, together with an overview of the
+principal audit procedures performed to address each matter and, where relevant, key observations arising from those
+
+procedures. .
+
+These matters, together with our findings, were communicated to those charged with governance through our Audit
+
+Completion Report.
+
+Area of Focus
+
+How our audit addressed the area of focus
+
+Credit Risk in relation to loan loss
+
+provisions
+
+Credit risk is an inherently judgmental area
+due to the use of subjective assumptions and
+a high degree of estimation in arriving at
+both specific and collective provisions.
+
+There is also an inherent risk over credit
+events that have occurred but have not been
+identified at the year end. UNB calculates
+it’s collective provision using a collective
+impairment model. This model uses
+
+market data with a management adjustment,
+increasing management judgement and
+therefore the risk of misstatement.
+
+We have assessed the design, and tested the operating
+effectiveness, of the key controls operating at United National
+Bank in relation to credit processes (e.g. underwriting,
+monitoring, collections and provisioning).
+
+We assessed senior management’s ability to identify
+impairment triggers on a timely basis and, in consideration of
+the value of collateral where relevant, determined whether the
+exposure will be repaid as originally intended.
+
+In relation to specific provisions, provisions have been assessed
+to ensure they are appropriate by reviewing all nonperforming
+loans plus a sample of loans across the performing portfolio.
+We have independently assessed the level of provision, with
+consideration to valuation of collateral or other sources of
+repayment.
+
+In relation to the collective provision, we have assessed the
+methodology and assumptions applied in the model and
+considered whether they are consistent with our understanding
+of the Bank’s portfolio. We have also re-performed the
+calculation of the provision and verified inputs to source
+information.
+
+We found the approach taken in respect of the loan loss
+provisions to be consistent with the requirements of FRS 102.
+Judgements made were reasonable.
+
+17
+Revenue recognition
+
+The company’s accounting policy for
+revenue recognition is set out in the
+accounting policy notes on “Critical
+accounting estimates and judgement” on
+page 34.
+
+The financial reporting fraud risk over
+revenue recognition specifically relates to
+income recognised on an effect interest
+method (EIR)
+
+The EIR takes in to account fees that are an
+integral part of the instrument’s yield,
+premiums, discounts and acquisition costs.
+
+UNB recognise these fees on a straight line
+basis as opposed to using the EIR.
+Management monitor the difference between
+
+We have assessed the design and operating of the controls in
+place at the Bank relating to revenue recognition.
+
+With respect to EIR calculation, over a sample of
+instruments we have:
+
+- re-performed the analysis calculations on EIR;
+
+- Verified details to underlying agreements; and
+
+- Assessed the period over which yield adjustments were
+applied;
+
+Judgements applied in determining the basis for revenue
+recognition were appropriate and management’s assessment of
+EIR, in accordance with FRS 102, were reasonable.
+
+their straight line approach and EIR
+manually and adjust where necessary.
+
+Our application of materiality
+
+The scope of our audit was influenced by our application of materiality. We set certain quantitative thresholds for
+materiality. These, together with qualitative considerations, helped us to determine the scope of our audit and the
+nature, timing and extent of our audit procedures on the individual financial statement line items and disclosures and
+in evaluating the effect of misstatements, both individually and on the financial statements as a whole. Based on our
+professional judgement, we determined materiality for the financial statements as a whole as follows:
+
+Overall materiality
+
+£565k
+
+How we determined it
+
+0.75% of net assets
+
+Rationale for benchmark applied
+
+Due to the volatility of profits, net assets are considered to better
+reflect more appropriately the size of the bank’s operations.
+Furthermore, net assets remains the focus of the regulator and
+shareholder banks in terms of capital adequacy.
+
+Performance materiality
+
+Performance materiality is set to reduce to an appropriately low
+level the probability that the aggregate of uncorrected and
+undetected misstatements in the financial statements exceed as a
+whole. Performance materiality of £423k was applied to the audit.
+
+Reporting threshold
+
+We agreed with the Audit Committee that we would report to them
+misstatements identified during our audit above £17k as well as
+misstatements below that amount that, in our view, warranted
+reporting for qualitative reasons.
+
+18
+An overview of the scope of our audit
+
+As part of designing our audit, we determined materiality and assessed the risk of material misstatement in the
+financial statements. In particular, we looked at where the directors made subjective judgements such as making
+assumptions on significant accounting estimates.
+
+We gained an understanding of the legal and regulatory framework applicable to the company and the industry in
+which it operates. We considered the risk of acts by the company which were contrary to the applicable laws and
+regulations including fraud. We designed our audit procedures to respond to those identified risks, including non-
+compliance with laws and regulations (irregularities) that are material to the financial statements.
+
+We focused on laws and regulations that could give rise to a material misstatement in the financial statements,
+including, but not limited to, the Companies Act 2006.
+
+We tailored the scope of our audit to ensure that we performed sufficient work to be able to give an opinion on the
+financial statements as a whole. We used the outputs of a risk assessment, our understanding of the company’s
+accounting processes and controls and its environment and considered qualitative factors in order to ensure that we
+obtained sufficient coverage across all financial statement line items.
+
+Our tests included, but were not limited to, obtaining evidence about the amounts and disclosures in the financial
+statements sufficient to give reasonable assurance that the financial statements are free from material misstatement,
+whether caused by irregularities including fraud or error, review of minutes of directors’ meetings in the year and
+enquiries of management. As a result of our procedures, we did not identify any Key Audit Matters relating to
+irregularities, including fraud.
+
+The risks of material misstatement that had the greatest effect on our audit, including the allocation of our resources
+and effort, are discussed under “Key audit matters” within this report.
+
+The primary responsibility for the prevention and detection of irregularities including fraud rests with both those
+charged with governance and management. As with any audit, there remained a risk of non-detection of
+irregularities, as these may involve collusion, forgery, intentional omissions, misrepresentations or the override of
+internal controls.
+
+Other information
+
+The directors are responsible for the other information. The other information comprises of the information included
+in the annual report, other than the financial statements and our auditor’s report thereon. Our opinion on the financial
+statements does not cover the other information and, except to the extent otherwise explicitly stated in our report, we
+do not express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our responsibility is to read the other information and, in
+doing so, consider whether the other information is materially inconsistent with the financial statements or our
+knowledge obtained in the audit or otherwise appears to be materially misstated. If we identify such material
+inconsistencies or apparent material misstatements, we are required to determine whether there is a material
+misstatement in the financial statements or a material misstatement of the other information. If, based on the work we
+. have performed, we conclude that there is a material misstatement of this other information, we are required to report
+that fact.
+
+We have nothing to report in this regard.
+Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+e the information given in the Strategic Report and the Directors’ Report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+e the Strategic Report and the Directors’ Report have been prepared in accordance with applicable legal
+requirements.
+
+19
+Matters on which we are required to report by exception
+
+In light of the knowledge and understanding of the company and its environment obtained in the course of the audit,
+we have not identified material misstatements in the Strategic Report or the Directors’ Report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006 requires
+us to report to you if, in our opinion:
+
+* adequate accounting records have not been kept, or returns adequate for our audit have not been received
+from branches not visited by. us; or
+the financial statements are not in agreement with the accounting records and returns; or
+certain disclosures of directors’ remuneration specified by law are not made; or
+
+* we have not received all the information and explanations we require for our audit.
+
+Responsibilities of Directors
+
+As explained more fully in the directors’ responsibilities statement set out on page 12, the directors are responsible
+for the preparation of the financial statements and for being satisfied that they give a true and fair view, and for such
+internal control as the directors determine is necessary to enable the preparation of financial statements that are free
+from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the company’s ability to continue as
+a going concern, disclosing, as applicable, matters related to going concern and using the going concern basis of
+accounting unless the directors either intend to liquidate the company or to cease operations, or have no realistic
+alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from
+material misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our opinion.
+Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in accordance with
+ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise from fraud or error and
+are considered material if, individually or in the aggregate, they could reasonably be expected to influence the
+economic decisions of users taken on the basis of these financial statements.
+
+A further description of our responsibilities for the audit of the financial statements is located on the Financial
+Reporting Council’s website at www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor’s
+report.
+
+Other matters which we are required to address
+
+Following the recommendation of the audit committee, we were appointed by the Board on 7 October 2014 to audit
+the financial statements for the year ending 31 December 2014 and subsequent financial periods. The period of total
+uninterrupted engagement is 5 years, covering the years ending 3! December 2014 to 31 December 2018.
+
+The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the company and we remain
+independent of the company in conducting our audit.
+
+Our audit opinion is consistent with the additional report to the audit committee.
+
+20
+Use of the audit report
+
+This report is made solely to the company’s members as a body in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the company’s members those
+matters we are required to state to them in an auditor’s report and for no other purpose. To the fullest extent
+permitted by law, we do not accept or assume responsibility to anyone other than the company and the company’s
+members as a body for our audit work, for this report, or for the opinions we have formed.
+
+ty
+Greg Simpson (Senior Statutory Auditor) for and on behalf of Mazars LLP
+Chartered Accountants and Statutory Auditor
+Tower Bridge House,
+St Katharine’s Way
+London
+E1W IDD
+Date: 15 April 2019
+
+21
+United National Bank Limited
+Year ended 31 December 2018
+
+Profit and loss account
+
+Notes 2018 2017
+
+£ £
+
+Interest receivable from debt securities 7,974,396 8,620,957
+Interest receivable from group undertakings 236,006 237,693
+Other interest receivable and similar income 11,886,359 9,972,557
+
+20,096,761 18,831,207
+
+Interest payable to group undertakings (312,180) (830,698)
+Interest payable (10,822,647) (9,850,892)
+Net interest income 8,961,934 8,149,617
+Fees and commissions receivable 1,536,106 2,334,474
+Profit from foreign exchange _ 970,269 1,641,832
+Fair value gain on investment properties 787,241 -
+(Loss)/profit on realised debt securities 3 (704,103) 5,358,117
+Other operating income 317,882 291,796
+Operating income 11,869,329 17,775,836
+Administrative expenses 2 (12,302,513) (11,642,444)
+Depreciation and amortisation 10 & 12 (912,170) (890,889)
+Impairment losses _ 7&8 (2,651,807) (4,798,824)
+Other debt recoveries 218,430 267,203
+Total operating expenses (15,648,060) (17,064,954)
+(Loss)/profit on ordinary activities before 3 (3,778,731) 710,882
+taxation
+Tax on profit on ordinary activities 5 (1,283,194) (1,539,350)
+Loss for the financial year (5,061,925) (828,468)
+
+The loss for the current year and the preceding year are derived from continuing operations. The notes on page 27 to
+70 form part of these financial statements.
+
+22
+United National Bank Limited
+Year ended 31 December 2018
+
+Statement of Comprehensive Income
+
+Loss for the year
+
+Actuarial gain on defined benefit pension schemes
+Movement on deferred tax relating to pension liability
+Revaluation of available for sale debt securities
+
+*Tax related to revaluation of available for sale debt securities
+Revaluation gain on freehold property
+
+Movement on deferred tax relating to freehold property
+**Deferred tax adjustment due to change in calculation basis
+
+Total other comprehensive (loss)/ income
+
+Total comprehensive (loss)/ income for the year
+
+Notes
+
+23
+
+23
+
+2018 2017
+
+£ £
+(5,061,925) (828,468)
+221,000 836,000
+(27,370) (137,870)
+(10,279,086) 5,636,046
+(338,842) 984,224
+1,915,014 | -
+(325,552) -
+341,122 -
+(8,493,714) 7,318,400
+(13,555,639) 6,489,932
+
+*This relates to an adjustment arising from the change in tax legislation which was effective from 1 January 2016.
+The fair value movement of available for sale debt securities, which were deductible for tax purposes, are no longer
+deductible. As such, the total tax benefit accrued up to | January 2016 associated with these fair value movements
+will be payable to HMRC. However, HMRC has made concessionary arrangements to allow this tax to be paid over a
+
+5 year period. During 2018, this deferred tax was de-recognised.
+
+**This adjustment arose from the change in the calculation of deferred tax liability on fair value movement of
+freehold properties from a historical cost basis to an indexation cost basis.
+
+The notes on page 27 to 70 form part of these financial statements.
+
+23
+United National Bank Limited
+Year ended 31 December 2018
+
+Balance Sheet
+
+Assets
+
+Cash and balances at central banks
+Loans and advances to banks
+Loans and advances to customers
+Debt securities
+
+Derivatives at fair value
+Intangible assets
+
+Investment properties
+
+Tangible fixed assets
+
+Other assets
+
+Prepayments and accrued income
+
+Total assets
+
+Liabilities
+
+Deposits by banks
+Repurchase agreements
+Customer accounts
+Derivatives at fair value
+Other liabilities
+
+Accruals and deferred income
+Provisions for liabilities
+Subordinated debt
+
+Called up share capital
+Investment revaluation reserve
+Property revaluation reserve
+Profit and loss account
+
+Shareholders’ funds
+
+Total liabilities and capital
+Memorandum items
+
+Contingent liabilities (contract amount):
+
+Letters of credit
+Guarantees
+
+Commitments
+
+Notes
+
+10
+11
+12
+13
+
+14
+15
+16
+17
+
+18
+26
+
+19
+22
+
+20
+
+21
+
+The notes on page 27 to 70 form part of these financial statements.
+
+2018 2017
+£ £
+41,303,910 53,211,996
+- 3,500,173
+194,150,630 224,061,810
+229,966,518 207,095,990
+350,369 2,868,194
+485,176 587,124
+8,757,309 7,970,068
+19,160,217 17,616,883
+3,377,080 4,856,662
+434,839 293,327
+497,986,048 522,062,227
+5,349,870 9,638,462
+10,303,788 18,343,054
+402,810,377 399,838,771
+1,458,058 8,672
+2,957,737 4,487,164
+1,317,518 821,209
+3,181,730 2,747,429
+- 2,014,857
+427,379,078 437,899,618
+45,000,000 45,000,000
+(12,272,279) (1,654,351)
+12,744,491 10,822,966
+25,134,758 29,993,994
+70,606,970 84,162,609
+"497,986,048 522,062,227
+593,186 1,248,181
+366,925 302,216
+960,111 1,550,397
+569,924 554,625
+
+These financial statements were approved and authorised for issue by the Board of Directors on 15 April 2019.
+
+Signed on behalf of the Board of Directors
+
+|
+
+B Firt
+Director
+Company Registration No 4146820
+
+24
+United National Bank Limited
+Year ended 31 December 2018
+
+Statement of changes in equity
+
+As at 1 January 2017
+
+Loss for the year
+
+Actuarial loss recognised relating to the pension
+scheme
+
+Movement on deferred tax relating to pension
+liability
+
+Fair value movement on available for sale
+investments
+
+Current tax related to available for sale debt
+securities
+
+Total comprehensive income for the
+year
+
+Transfer of depreciation on revaluation surplus
+Dividend paid
+
+Balance at 31 December 2017
+
+Loss for the year
+
+Actuarial gain recognised relating to the
+pension scheme
+
+Movement on deferred tax relating to pension
+liability
+
+Fair value movement on available for sale
+investment
+
+Current tax related to available for sale debt
+securities
+
+Revaluation gain on freehold property
+Movement on deferred tax relating to freehold
+property
+
+Deferred tax adjustment
+
+Total comprehensive income for the year
+Transfer of depreciation on revaluation surplus
+
+Balance at 31 December 2018
+
+Notes
+
+23
+
+23
+
+Called up Profitand Investment Property Total
+share Loss revaluation Revaluation
+capital Account reserve reserve
+
+£ £ £ £ £
+
+45,000,000 32,314,613 (8,274,621) 10,832,685 79,872,678
+
+- (828,468) : - (828,468)
+
+: 836,000 - - 836,000
+
+- (137,870) - - (137,870)
+
+- - 5,636,046 - 5,636,046
+
+- - 984,224 - 984,224
+
+- (130,338) 6,620,270 - 6,489,932
+
+- 9,719 ” (9,719) -
+
+- (2,200,000) oo - (2,200,000)
+
+45,000,000 29,993,994 (1,654,351) 10,822,966 $4,162,609
+
+- (5,061,925) - - (5,061,925)
+
+- 221,000 - - 221,000
+
+- (27,370) - - (27,370)
+
+- - (10,279,086) - (10,279,086)
+
+- - (338,842) - (338,842)
+
+- - - 1,915,014 1,915,014
+
+- - - (325,552) (325,552)
+
+- - - 341,122 341,122
+
+- (4,868,295) (10,617,928) 1,930,584 (13,555,639)
+
+- 9,059 - (9,059) -
+
+45,000,000 25,134,758 (12,272,279) 12,744,491 70,606,970
+
+The notes on pages 27 to 70 form part of these financial statements.
+
+Description of reserves
+
+Called up share capital — represents the nominal value of shares that have been issued.
+Profit and loss account — includes accumulated comprehensive income for the year and prior periods plus any
+
+transfers from revaluation relating to depreciation realised on revaluations less dividend paid.
+
+Investment revaluation reserve — represents the cumulative after tax unrealised change in fair value of financial assets
+classified as available for sale since their initial recognition.
+Revaluation reserve ~ represents accumulated surplus on annual revaluations of the Company’s freehold properties.
+
+25
+United National Bank Limited
+Year ended 31 December 2018
+
+Statement of cash flows
+
+OPERATING ACTIVITIES
+
+(Loss)/profit before tax ,
+
+Adjustments:
+
+Depreciation and amortisation
+
+Net charge in respect of defined benefit pension scheme
+Impairment losses on loans and advances and other items
+
+Fair value movement on investment properties
+
+Interest payable on preference shares
+
+Effects of exchange rate changes on cash and cash equivalents
+
+Decrease/(increase) in operating assets
+Change in loans to banks
+
+Change in loans and advances
+
+Change in other operating assets
+
+(Decrease)/increase in operating liabilities
+Change in deposits from banks and customers
+Change in other operating liabilities
+
+Net cash inflow (outflow) from operating activities
+
+INVESTING ACTIVITIES
+
+Purchase of fixed assets
+
+Purchase of debt securities
+
+Accretion of discounts and amortisation of premiums
+Proceeds on sale of debt securities
+
+Net cash inflow (outflow) from investing activities
+
+FINANCING ACTIVITIES
+
+Repayment of obligations under finance lease
+Payment to preference shareholders
+
+Net (decrease)/increase in subordinated debt
+Repurchase agreements
+
+Dividends paid
+
+Net cash inflow (outflow) from financing activities
+Change in cash and cash equivalents
+
+Cash and cash equivalents at the beginning of the year
+Effects of exchange rate changes on cash and cash equivalents
+
+Cash and cash equivalent at the end of year
+
+2018 2017
+
+Notes £ £
+5 (3,778,731) 710,882
+3 912,170 890,889
+23 60,000 25,000
+2,433,377 4,531,621
+
+3 (787,241) -
+17 233,674 777,910
+(1,244,042) (198,765)
+
+(2,170,793) 6,737,537
+
+3,500,173 (3,500, 173)
+
+27,477,802 (47,871,405)
+
+3,855,839 (2,519,548)
+
+34,833,814 (53,891,126)
+
+(1,316,986) (7,649,567)
+
+(187,962) (5,740,969)
+
+(1,504,948) (13,390,536)
+
+31,158,073 (60,544,125)
+
+10&12 (438,486) (556,633)
+(2,050,650,514) (3,130,458,713)
+388,733,635 172,967,224
+
+1,628,428,423  2,991,168,974
+
+(33,926,942) 33,120,852
+
+(22,954) (12,108)
+
+17 (306,182) (777,910)
+(2,014,857) 1,848
+
+15 (8,039,266) 8,044,340
+24 - (2,200,000)
+(10,383,259) 5,056,170
+
+(13,152,128)
+
+(22,367,103)
+
+53,211,996 75,380,334
+1,244,042 198,765
+41,303,910 53,211,996
+
+Cash and cash equivalents includes cash in hand, deposits held at call with banks, other short-term highly liquid
+investments with original maturities of three months or less and bank overdrafts.
+
+The notes on pages 27 to 70 form part of these financial statements.
+
+26.
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+1. Significant accounting policies
+Reporting entity
+
+United National Bank Limited (‘the Company’) is a company incorporated in the UK. The address of the
+registered office is given on page 1. The Company was formed in 2001 from the merger of the UK branches of
+two Pakistani banks, United Bank Limited and National Bank of Pakistan, who had been operating in the UK
+since the mid-1960s.
+
+Statement of compliance
+
+The financial statements have been prepared in accordance with applicable United Kingdom Accounting
+Standards, including Financial Reporting Standard 102, ‘The Financial Reporting Standard applicable in the
+United Kingdom and the Republic of Ireland’ ((FRS 102’) and the Companies Act 2006. The financial
+statements are expressed in Pounds Sterling (‘£’) which is the functional currency of the Company being the
+currency of the primary economic environment in which it operates.
+
+Accounting policies
+
+The principal accounting policies applied in the preparation of these financial statements are set out below.
+These policies have been consistently applied to all years presented, unless otherwise stated.
+
+(a) Basis of preparation
+
+The financial statements have been prepared under the historical cost convention basis modified to include the
+revaluation of freehold properties, investment properties and certain financial assets and liabilities as specified
+in the accounting policies below.
+
+The preparation of financial statements in conformity with specified FRS 102 requires the use of certain
+critical accounting estimates. It also requires management to exercise its judgement in the process of applying
+the Company’s accounting policies. The areas involving a higher degree of judgement and complexity, or
+areas where assumptions and estimates are significant in the financial statements are disclosed in note I(t).
+
+(b) Going concern basis
+
+The Company’s business activities, together with the factors likely to affect its future development,
+performance and position are set out in the Strategic and Directors Reports on pages 2 to 15. During 2018, the
+Company shareholders’ funds declined by £14 million mainly due to the post-tax loss of £5 million as well as
+the significant adverse fair value movement on the available for sale asset portfolio. After making enquiries,
+the directors have a reasonable expectation that the Company has adequate resources to continue in operational
+existence for the foreseeable future. Accordingly, they continue to adopt the going concern basis in preparing
+the annual report and accounts.
+
+Exemptions under FRS 102
+
+FRS 102 allows certain disclosure exemptions. The Company has taken advantage of the exemption from
+disclosing the key management compensation, as required by FRS 102 paragraph 33.7.
+
+(c) Revenue recognition
+
+Interest income on financial assets that are classified as loans and receivables and interest expense on financial
+liabilities is determined using the effective interest rate (‘EIR’) method. The EIR method is a way of
+calculating the amortised cost of a financial asset or financial liability (or group of financial assets or
+liabilities) and of allocating the interest income or expense over the expected life of the asset or liability. The
+EIR is the rate that exactly discounts estimated future cash flows to the instrument’s initial carrying amount.
+
+27
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+Accounting policies (continued)
+
+Calculation of the EIR takes into account fees receivable that are an integral part of the instrument’s yield,
+premiums or discounts on acquisition or issue, early redemption fees and transaction costs. All contractual
+terms of a financial instrument are considered when estimating future cash flows.
+
+Commitment and utilisation fees are determined as a percentage of the outstanding facility and such fees are
+included in the EIR on the advance. If the loan agreement is not entered into, those fees are immediately
+recognised in the profit and loss account.
+
+Fees receivable that represent a return for services provided are generally charged on a transaction basis and
+recognised when the related service is performed.
+
+Income from foreign exchange relates to foreign exchange income derived from customer facilitation and the
+unrealised gains and losses on revaluation of foreign currency assets and liabilities as well as foreign currency
+trading. ,
+
+Other operating income relates to operating lease income generated by the Company’s investment properties.
+(See accounting policy note I (ii)).
+
+All income derives from banking business carried out in the United Kingdom.
+
+(d) Foreign currency
+
+Transactions in foreign currencies are recorded using the rate of exchange ruling at the date of the transaction.
+Monetary assets and liabilities denominated in foreign currencies are translated into sterling using the rate of
+exchange as at the balance sheet date and resulting gains or losses on translation are included in the profit and
+loss account.
+
+(e) Pensions
+
+The Company operates a defined benefit scheme for certain staff. This scheme is closed for new members and
+the future accrual of benefits ceased from | January 2010. A defined benefit plan defines the pension benefit
+that the employee will receive on retirement usually dependent upon several factors including age, length of
+service and remuneration. A defined benefit plan is a pension plan that is not a defined contribution plan.
+
+The liability recognised in the balance sheet in respect of the defined benefit plan is the present value of the
+defined benefit obligation at the reporting date less the fair value of the plan assets at the reporting date.
+
+The defined benefit obligation is calculated using the projected unit credit method. Annually the Company
+engages independent actuaries to calculate the obligation. The present value is determined by discounting the
+estimated future payments using market yields on high quality corporate bonds that are denominated in
+sterling and that have terms approximating the estimated period of the future payments (‘discount rate’).
+
+The fair value of plan-assets is measured in accordance with the FRS 102 fair value hierarchy and in
+accordance with the Company’s policy for similarly held assets. This includes the use of appropriate valuation
+techniques.
+
+Actuarial gains or losses arising from experience adjustments and changes in actuarial assumptions are
+charged or credited to other comprehensive income. These amounts together with the return on plan assets,
+less amounts included in net interest, are disclosed as ‘Remeasurement of net defined benefit liability’. -
+
+The net interest cost on the net defined benefit pension liability is calculated by applying the liability discount
+rate. The cost is recognised in profit or loss as ‘Finance expense’.
+
+For defined contribution schemes the amount charged to the profit and loss account in respect of pension costs
+and other post-retirement benefits is the contributions payable in the year. Differences between contributions
+payable in the year and contributions actually paid are shown as either accruals or prepayments in the balance
+sheet.
+
+28
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+1. Accounting policies (continued)
+(f) Intangible assets
+Intangible assets are measured at cost less accumulated amortisation and any accumulated impairment losses.
+
+Software development costs are recognised as an intangible asset when all of the criteria below are
+
+demonstrated:
+e = The technical feasibility of completing the software so that it will be available for use;
+« The intention to complete the software and use it;
+e How the software will generate probable future economic benefits;
+© The availability of adequate technical, financial and other resources to complete the deve lopment and
+
+to use the software; and
+« The ability to measure reliably the expenditure attributable to the software during its development.
+
+Amortisation is charged so as to allocate the cost of intangibles less residual values over the estimated useful
+lives, using the straight-line method. The intangible assets are amortised over a 2 to 5 year period.
+
+If there is an indication that there has been a significant change in amortisation rate or residual value of an
+asset, the amortisation of that asset is revised prospectively to reflect the new expectations.
+
+(g) Investment property
+
+Investment properties for which fair value can be measured reliably without undue cost or effort on an ongoing
+basis are measured at fair value annually with any change recognised in the profit and loss account. Deferred
+tax is recognised on any fair value movement at the rate expected to apply when the property is sold, however
+this rate would also need to be one substantively enacted at the balance sheet date. The surplus or deficit on
+revaluation is recognised in the profit and loss account.
+
+(h) Tangible assets and depreciation
+
+Tangible assets for which fair value can be measured. reliably are stated at a revalued amount, being its fair
+value at the date of revaluation less any subsequent accumulated depreciation and subsequent accumulated
+impairment losses. Tangible assets whose fair value cannot be measured reliably are stated at cost, which
+includes direct and acquisition costs less accumulated depreciation and provision for impairment, if required.
+However, if either of the revaluation or cost measurement methodology is chosen then all tangible assets of
+that class should be measured by the elected measurement methodology. ,
+
+Depreciation is provided on a straight-line basis at the following rates to write off the cost of tangible fixed
+assets over their estimated useful lives:
+
+Computer equipment 20-33% per annum
+Office equipment 15-25% per annum
+Leasehold property 10% per annum
+Freehold and leasehold improvements 10%
+
+Freehold buildings over 50 years
+
+Freehold land no depreciation charged
+
+The value of each freehold property is assessed annually by an independent member of the Royal Institution of
+Chartered Surveyors. The surplus or deficit on book value is transferred to the revaluation reserve, except that
+a deficit which is in excess of any previously recognised surplus over depreciated cost relating to the same
+property, or the reversal of such a deficit, is charged (or credited) to the profit and loss account. A deficit
+which represents a clear consumption of economic benefits is charged to the profit and loss account regardless
+of any such previous surplus.
+
+29
+United National Bank Limited
+
+Notes to the accounts
+_Year ended 31 December 2018
+
+1. Accounting policies (continued)
+
+Where depreciation charges are increased following a revaluation, an amount equal to the increase is
+transferred annually from the revaluation reserve to the profit and loss account as a movement on reserves. On
+the disposal or recognition of a provision for impairment of a revalued fixed asset, any related balance
+remaining in the revaluation reserve is also transferred to the profit and loss account as a movement on
+reserves.
+
+(i) Leases
+
+At inception the Company assesses agreements that transfer the right to use assets. The ass essment considers
+whether the arrangement is, or contains, a lease based on the substance of the arrangement.
+
+(i) Finance leased assets
+Leases of assets that transfer substantially all the risks and rewards incidental to ownership are classified as
+finance leases.
+
+Finance leases are capitalised at commencement of the lease as assets at the fair value of the leased asset or, if
+lower, the present value of the minimum lease payments calculated using the interest rate implicit in the lease.
+Where the implicit rate cannot be determined the Company’s incremental borrowing rate is used. Incremental
+direct costs incurred in negotiating and arranging the lease, are included in the cost of the asset.
+
+Assets are depreciated over the shorter of the lease term and the estimated useful life of the asset. Assets are
+assessed for impairment at each reporting date.
+
+The capital element of lease obligations is recorded in the balance sheet as a liability on inception of the
+arrangement. Lease payments are apportioned between capital repayments and finance charges, using the EIR
+method, to produce a constant rate of charge on the balance of the capital repayments outstanding.
+
+Finance charges are deducted in measuring profit or loss. Assets held under finance leases are included in t he
+tangible assets and depreciated and assessed for impairment in the same way as other tangible assets.
+
+(ii) Operating leased assets
+
+Leases that do not transfer all the risks and rewards of ownership are classified as operating leases. The
+Company is both a lessee and a lessor of operating leases. Payments/receipts under operating leases are
+charged/credited to the profit and loss account on a straight line basis over the lease term.
+
+(iii) Lease incentives
+Incentives received to enter into a finance lease reduce the fair value of the asset and are included in the
+calculation of present value of minimum lease payments.
+
+Incentives received to enter into an operating lease are credited to the profit and loss account, to reduce lease
+expense, on a straight line basis over the lease term. Incentives offered by the Company are charged to the
+profit and loss account, to reduce income, on a straight line basis over the lease term.
+
+(j) Impairment of non-financial assets
+
+At each balance sheet date non-financial assets not carried at fair value are assessed to determine whether there
+is an indication that the asset may be impaired. If there is such an indication, the recoverable amount of the
+asset is compared to the carrying amount of the asset.
+
+The recoverable amount of the asset is the higher of the fair value less costs to sell and value in use. Value in
+use is defined as the present value of future cash flows expected to be derived from an asset or a cash
+generating unit. The cash flows are discounted using a discount rate that represents the current market risk-free
+rate and the risks inherent in the asset. If the recoverable amount of the asset is estimated to be lower than the
+carrying amount, the carrying amount is reduced to its recoverable amount. An impairment loss is recognised
+in the profit and loss account, unless the asset has been revalued when the amount is recognised in other
+comprehensive income to the extent of any previously recognised revaluation. Thereafter any excess is
+recognised in the profit or loss.
+
+30
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018 -
+
+1. Accounting policies (continued)
+
+If an impairment loss subsequently reverses, the carrying amount of the asset is increased to the revised
+estimate of its recoverable amount, but only to the extent that the revised carrying amount does not exceed the
+carrying amount that could have been determined (net of depreciation) had no impairment loss been
+recognised in prior periods. A reversal of impairment loss is recognised in the profit and loss account.
+
+(& Taxation
+
+Taxation expense for the period comprises current and deferred tax recognised in the reporting period. Tax is
+recognised in the profit and loss account, except to the extent that it relates to items recognised in other
+comprehensive income or directly to equity. In this case tax is also recognised in other comprehensive income
+or directly in equity respectively.
+
+Current or deferred taxation assets and liabilities are not discounted.
+
+(i) Current tax . :
+
+Current tax is the amount of income tax payable in respect of the taxable profit for the year or prior years. Tax
+is calculated on the basis of tax rates and laws that have been enacted or substantively enacted by the period
+end.
+
+Management periodically evaluates positions taken in tax returns with respect to situations in which applicable
+tax regulation is subject to interpretation. It establishes provisions where appropriate on the basis of amounts
+expected to be paid to the tax authorities.
+
+(ii) Deferred tax
+
+Deferred tax arises from timing differences that occur between taxable profits and total comprehensive income
+as stated in the financial statements. These timing differences arise from inclusion of income and expenses in
+tax assessments in periods different from those in which they are recognised in financial statements.
+
+Deferred tax is recognised on all timing differences at the reporting date except for certain exceptions in line
+with the requirements of FRS 102. Unrelieved tax losses and other deferred tax assets are only recognised
+when it is probable that they will be recovered against the reversal of deferred liabilities or other future taxable
+profits.
+
+Deferred tax is measured using tax rates and laws that have been enacted or substantively enacted by the
+period end and that are expected to apply to the reversal of the timing difference.
+
+(Il) Cash and cash equivalents
+
+Cash and cash equivalents includes cash in hand, deposits held at call with banks, other short-term highly
+liquid investments with original maturities of three months or less and bank overdrafts.
+
+(m) Provisions and contingencies
+
+(i) Provisions
+
+Provisions are recognised when the Company has a present legal or constructive obligation as a result of past
+events; it is probable that an outflow of resources will be required to settle an obligation; and the amount of the
+obligation can be estimated reliably.
+
+Where there are a number of similar obligations, the likelihood that an outflow will be required in settlement is
+determined by considering the class of obligations as a whole. A provision is recognised even if the likelihood
+of an outflow with respect to any one item included in the same class of obligations may be small.
+
+Provisions are measured at the present value of the expenditures expected to be required to settle the obligation
+using a pre-tax rate that reflects current assessments of the time value of money and the risks associated with
+an obligation. The increase in the provision due to passage of time is recognised as a finance cost.
+
+N
+
+31
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+1. Accounting policies (continued)
+(ii) Contingencies
+
+Contingent liabilities, arising as a result of past events, are only recognised when (i) it is probable that there
+will be an outflow of resources and the amount can be reliably measured at the reporting date (ii) the existence
+of a liability does not rely on the occurrence or non-occurrence of uncertain future events which are not wholly
+within the Company’s control. Contingent liabilities are disclosed in the financial statements unless the
+probability of an outflow of resources is remote.
+
+Contingent assets are not recognised. Contingent assets are disclosed in the financial statements when an
+inflow of economic benefits is probable.
+
+(n) Financial assets
+
+Under the options available to it under FRS 102, the Company chose to apply the measurement and
+recognition provisions of [AS 39 Financial instruments: Recognition and Measurement. As a result of this, the
+Company was not required to undertake a transition to IFRS 9 when it was implemented from 1 January 2018,
+for those companies which report under the International Financial Reporting Standards framework.
+
+Financial assets are classified as loans and receivables, held to maturity, fair value through profit or loss, or
+available-for-sale.
+
+Loans and receivables - non-derivative financial assets with fixed or determinable repayments that are not
+quoted in an active market are classified as loans and receivables. Loans and receivables are measured at
+amortised cost using the EIR method less any impairment losses. The Company includes its loans and
+advances to customers and to banks within this category.
+
+Held to maturity - financial instruments with fixed or determinable payments and fixed maturity that an entity
+has the positive intention and ability to hold to maturity. Held to maturity investments are measured at
+amortised cost using the EIR method.
+
+Fair value through profit or loss - any financial asset that is designated on initial recognition as one to be
+measured at fair value with fair value changes accounted for in profit or loss. The Company has foreign
+exchange forwards that are included within this category.
+
+Available-for-sale - those non-derivative financial assets that are not classified as loans and receivables, held
+to maturity, or not held for trading and are not designated as at fair value through profit or loss on initial
+recognition. Available-for-sale financial assets are initially recognised at cost including transaction costs and
+thereafter measured at fair value with fair value gains or losses recognised directly in equity through the
+statement of other comprehensive income.
+
+Exchange differences on available for sale financial assets are recognised in the profit and loss account. The
+Company has listed investments that are included within this category.
+
+Regular way purchases of financial assets classified as loans and receivables are recognised on settlement date;
+all other regular way purchases are recognised on trade date.
+
+(o) Impairment of financial assets
+
+The Company assesses at each balance sheet date whether there is any objective evidence that a financial asset
+or group of financial assets classified as loans and receivables, held-to-maturity, or available-for-sale is
+impaired.
+
+A financial asset or portfolio of financial assets is impaired and an impairment loss incurred if there is
+objective evidence that an event or events since initial recognition of the asset have adversely affected the
+amount or timing of future cash flows from the asset.
+
+32
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+1. Accounting policies (continued)
+
+Financial assets carried at amortised cost - if there is objective evidence that an impairment loss on a financial
+asset or group of financial assets classified as loans and receivables or held-to-maturity investments has been
+incurred, the Company measures the amount of the loss as the difference between the carrying amount of the
+asset or group of assets and the present value of estimated future cash flows from the asset or group of assets
+discounted at the EIR of the instrument at initial recognition. Impairment losses are assessed individually for
+financial assets that are individually significant. Impairment losses are recognised in profit or loss and the
+carrying amount of the financial asset or group of financial assets is reduced by establishing an allowance for
+impairment losses. [f in a subsequent period the amount of the impairment loss reduces and the reduction can
+be ascribed to an event after the impairment was recognised, the previously recognised loss is reversed by
+adjusting the allowance. Once an impairment loss has been recognised on a financial asset or group of
+financial assets, interest income is recognised on the carrying amount using the rate of interest at which
+estimated future cash flows were discounted in measuring impairment.
+
+Financial assets classified as available for sale - if there is objective evidence that an available for sale
+financial asset is impaired and the previous decline in the fair value of the asset has been recognised in equity,
+the cumulative loss that has been recognised in equity is transferred to impairment of investment securities in
+the profit and loss account. The cumulative loss transferred is the difference between the cost of acquisition
+and the current fair value of the asset. A subsequent reduction in the impairment provision is reversed through
+the impairment of investment securities in the profit and loss account.
+
+(p) Financial liabilities
+
+A financial liability is any liability that is a contractual obligation to deliver cash or another financial asset to
+another entity. .
+
+Financial liabilities are initially measured at their fair value and subsequently at amortised cost using the EIR
+method.
+
+The Company classifies capital instruments as financial liabilities or equity instruments. in accordance with the
+substance of the contractual terms of the instruments. Preference shares are a contractual obligation which are
+treated as a debt instrument and classified as a liability. The dividends on these preference shares are
+recognised in the profit and loss account as an interest expense.
+
+(q) Repurchase agreements and resale agreements
+
+Repurchase and resale agreements, which are treated as collateralised financing transactions (securities which
+have been sold with an agreement to repurchase), continue to be shown on the balance sheet and the sale
+proceeds are recorded as collateralised financing transactions with creditors (‘Repos’). Assets and liabilities
+recognised under collateralised financing transactions are classified as ‘held for trading’ and are recorded at
+fair value with changes in fair value recorded in the profit and loss account.
+
+(r) Derivative financial instruments
+
+The Company uses derivative financial instruments to economically hedge exposure to foreign exchange risk.
+The Company does not hold or issue derivative financial instruments for speculative purposes.
+
+Derivative financial instruments are measured at fair value with gains and losses arising from changes in their
+fair value being recognised in the profit and loss account. Derivative fair values are determined from quoted
+prices in an active market where available. Where there is no active market for an instrument, fair value is
+derived from prices for the derivative’s components using appropriate pricing or valuation models.
+
+A derivative embedded in a contract is accounted for as stand-alone derivative if its economic characteristics
+are not closely related to the economic characteristics of the host contract; unless the entire contract is car ried
+at fair value through profit and loss. There were no contracts with embedded derivatives as at the year end.
+
+(s) Geographical Analysis
+The Company’s primary focus is retail banking in the United Kingdom.
+
+33
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+1. Accounting policies (continued)
+(t) Critical accounting estimates and judgements
+
+The preparation of the Company financial statements in accordance with FRS 102 requires management to
+make judgements, estimates and assumptions in applying accounting policies that affect the reported amounts
+of assets, liabilities, income and expenses. Due to the inherent uncertainty in making estimates, actual results
+reported in future periods may be based upon amounts which differ from those estimates. Estimates,
+judgements and assumptions are continually evaluated and based on historical experience and factors,
+including expectations of future events that are believed to be reasonable under the circumstances.
+
+The significant judgements made by management in applying the Company’s accounting policies and the key
+sources of estimation uncertainty in these financial statements, which together are deemed critical to the
+Company’s results and financial position, are as follows:
+
+(i) Allowance for impairment losses on loan and advances (Note: 7 & 8)
+At 31 December 2018 gross loans and advances totalled £196,585,948 (2017: £234,018,366) against which
+impairment allowances of £2,435,318 (2017: £9,956,556) had been made.
+
+The allowance for impairment losses on loans and advances is management’s best estimate of losses incurred
+in the portfolio at the balance sheet date. Impairment allowances are made up of two components, those
+determined individually and those determined collectively.
+
+(ii) Revenue recognition
+
+Fees, commission, income, premiums and discounts are recognised in the EIR where they are an integral part
+of the instrument yield. Judgement is required to determine whether fees are recognised as EIR or recognised
+when a service is performed. Although, the systems do not automatically calculate the EIR, it is monitored
+manually and adjusted when considered necessary.
+
+(iii) Fair value of financial instruments (Note: 22)
+
+Where the fair value of financial instruments is not observable from a quoted price, the valuation is done using
+a discounted cash flow model using other observable inputs and information from the market. For available for
+sale financial instruments where significant estimation techniques have been used, the underlying assumptions
+used in calculating the appropriate carrying amount includes: credit risk of the counterparty, the coupon rate
+and maturity date for the new instrument to be issued, the time to completion of any restructure, the sovereign
+risk of the issuing country, the liquidity risk premium, the business model, and finally an adjustment to reflect
+execution risk.
+
+(iv) Defined benefit pension scheme (Note: 23)
+
+The Company operates a defined benefit scheme. The cost of this scheme and the present value of the
+obligation depend on a number of factors, including life expectancy, salary increases, asset valuations and the
+liability discount rate. Management estimate these factors in determining the net obligation in the balance
+sheet. The assumptions reflect historical experience and current trends.
+
+(v) Useful economic lives of intangible and tangible assets (Note: 10 & 12).
+
+The annual depreciation charge for tangible assets is sensitive to changes in the economic useful lives and
+residual values of the assets. The useful economic lives and residual values are re -assessed annually. They are
+amended when necessary to reflect current estimates based on technological ad vancement, future investments,
+economic utilisation and the physical condition of the assets. See notes 10 & 12 for the carrying amount of the
+intangible and tangible assets and note 1(f) and 1(h) for the useful economic lives for each class of assets.
+
+(vi) Revaluation of properties (Note 12)
+
+A key estimate included within this year’s financial results is the valuation of the Company’s Head Off ice on
+Brook Street in London. The valuation was based on a desktop valuation assessment conducted in December
+2018 by Tim Smee, FRICS from Quantum Valuations LLP. The desktop valuation took into account current
+rental yields for similar properties in the same locality as well as recent comparable sale transactions. In
+addition, the valuation also considered the evidence collated from the comprehensive valuation which included
+a site inspection conducted in 2015 by the same valuation firm.
+
+34
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+2. Administrative expenses
+
+Average number of employees
+
+Front Office
+Back Office
+
+Wages and salaries
+Social security costs
+Other pension costs
+
+Total staff costs
+Other administrative expenses
+
+3. Profit on ordinary activities before tax
+
+Profit on ordinary activities before tax is stated after charging/(crediting)
+Auditor’s remuneration
+-fees payable for the audit of the Company’s annual accounts
+Depreciation and amortisation
+Interest payable on preference shares
+Pension costs
+Foreign exchange profits
+Profit/(Loss) on realised debt securities
+Fair value gain on investment properties
+Rental of premises held under operating leases
+
+2018 2017
+No. No.
+108 119
+
+38 49
+70 70
+£ £
+
+5,880,184 6,290,368
+726,923 810,380
+737,264 524,014
+
+7,344,371 7,624,762
+4,958,142 4,017,682
+
+12,302,513 11,642,444
+
+2018 2017
+
+65,000 58,000
+912,170 890,889
+233,674 777,909
+737,264 524,014
+
+(970,269) (1,641,832)
+704,103 (5,358,117)
+(787,241) -
+99,786 73,500
+
+During the year £50,500 (2017:£40,000) was paid to the Auditor bv the parent company in respect of the 30
+June 2018 Group accounts. The total audit remuneration for the year therefore amounted to £115,500
+
+(2017:£98,000).
+
+35
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+4,
+
+Directors’ emoluments
+
+Directors’ fees and emoluments
+Fees payable to Independent Non-Executive Directors
+Pension contributions
+
+2018 2017
+
+£ £
+501,475 419,936
+80,000 77,409
+32,607 25,100
+614,082 522,445
+
+The highest paid director received emoluments excluding pension contributions, totalling £344,839 (2017:
+£419,936) and the amount of pension contributions paid to the Company’s defined contribution scheme was
+
+£22,667 (2017: £25,100).
+
+Taxation
+
+(i) Analysis of tax charge on ordinary activities
+UK corporation tax on profits of the period
+Adjustments in respect of prior periods
+
+Foreign tax suffered
+
+Current tax
+
+Origination and reversal of timing differences
+Adjustments in respect of previous periods
+Impact of rate changes
+
+Deferred tax
+
+Tax charge for the year
+
+(ii) Factors affecting tax charge for the current year
+Profit/(Loss) for the period before tax
+
+Tax at 19.00% (2017: 19.25%) thereon
+
+Effects of:
+
+Preference share dividend
+
+Non-deductible expenses
+
+Deferred tax not provided
+
+Tax rate differences
+
+Current year impact of AFS transitional adjustment
+Prior year adjustments
+
+Total tax charge for the year
+
+2018 2017
+£ £
+(310,134) 671,958
+(667,080) 867,392
+(977,214) 1,539,350
+29,967 -
+(947,247) 1,539,350
+1,666,157 -
+775,459 -
+(211,175) -
+2,230,441 -
+1,283,194 1,539,350
+(3,778,731) 710,882
+(717,959) 136,845
+44,398 149,747
+24,936 54,593
+2,014,313 (214,814)
+(190,873) 38,556
+- 507,031
+
+108,379 867,392
+1,283,194 1,539,350
+
+36
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+5. Taxation (continued)
+
+Deferred taxation
+
+As at 31 December 2018 there were accumulated tax losses of £31.Smillion (2017: £31.7million) carried
+forward and a deferred tax asset of £Nil (2017: £1,661,158). The full deferred tax breakdown is set out below.
+
+The aggregate current and deferred tax relating to items that are recognised as items of other compre hensive
+
+income is (£350,642) (2017: £846,354),
+
+Legislation was passed on 18 November 2015 to reduce the UK corporation tax rate to 19% from 1 April
+2017-and 18% from 1 April 2020. New legislation was passed on 15 September 2016 to further reduce this
+rate to 17% from 1 April 2020. The effect of this reduction is reflected in the deferred tax balance.
+
+As from 1 April 2016, taxable profits that can be set-off against brought-forward tax losses are restricted to
+
+25%.
+Deferred tax assets and liabilities on the balance sheet were as follows:
+2018 2017
+£ £
+Tax losses , - 1,661,158
+AFS revaluations - 338,842
+Unrealised gain on properties (Note 18) (3,140,141) (2,586,429)
+Pension scheme deficit - 27,370
+Total (3,140,141) (559,059)
+
+A deferred tax asset of £7,706,082 (2016: £3,806,146) has not been recognised in relation to accelerated
+depreciation, trading losses carried forward and the revaluation movement on assets held for sale since 1
+January 2016 when the new tax legislation came into force. The breakdown of the unrecognised deferred tax
+
+assets are set out below:
+
+1 January Movement 31 December
+
+2017 2018
+
+£ £ £
+
+Tax losses 3,719,486 1,640,967 5,360,453
+*Timing differences - trading - 2,067,384 * 2,067,384
+Accelerated depreciation 86,660 191,585 278,245
+Total 3,806,146 3,899,936 7,706,082
+
+*This relates to fair value movement of available for sale assets and the pension fund.
+
+37
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+6. Loans and advances to banks
+
+Loans and advances to banks
+
+7. Loans and advances to customers
+
+2018
+
+Remaining maturity:
+Over five years
+Five years or less but over one year
+One year or less but over three months
+Three months or less
+Overdue
+
+Impairment losses on loans and advances (note: 8)
+Collective provision (note: 8)
+
+Amount repayable on demand
+(included within three months or less above)
+
+2017
+
+Remaining maturity:
+Over five years
+Five years or less but over one year
+One year or less but over three months
+Three months or less
+Overdue
+
+Impairment losses on loans and advances (note: 8)
+Collective provision (note: 8)
+
+Amount repayable on demand
+(included within three months or less above)
+
+Description of loans
+
+Performing loans - \oans which are neither past due nor impaired
+
+2018 2017
+£ £
+- 3,500,173
+- 3,500,173
+Non-
+performing Performing
+loans loans Total
+£ £ £
+- 22,422,408 22,422,408
+- 117,969,435 117,969,435
+- 26,928,781 26,928,781
+- 26,564,088 26,564,088
+2,701,236 “ 2,701,236
+2,701,236 193,884,712 196,585,948
+(1,581,240) - (1,581,240)
+- (854,078) (854,078)
+1,119,996 193,030,634 194,150,630
+- 1,433,793 1,433,793
+- 12,125,817 12,125,817
+- 128,542,511 128,542,511
+- 36,358,717 36,358,717
+- 47,472,283 47,472,283
+9,519,038 - 9,519,038
+9,519,038 224,499,328 234,018,366
+(8,321,651) -~ (8,321,651)
+- (1,634,905) (1,634,905)
+1,197,387 222,864,423 224,061,810
+- 1,390,946 1,390,946
+
+Non—Performing loans - loans which are more than 90 days contractually past due or which have individual
+provisions raised against them. Objective evidence of impairment may include: indications that the borrower or
+group of borrowers is experiencing significant financial difficulty, default or delinquency in interest or principal
+repayments, debt being restructured to reduce the burden on the borrower, covenant breaches, loss of signi ficant
+income flows, and adverse impact of economic factors on the value of any underlying collateral.
+
+38
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+8. Impairment losses
+
+Loans and advances
+
+2018 2017
+Specific Collective Total Total
+£ £ £ £
+At 1 January 8,321,651 1,634,905 9,956,556 6,124,482
+Charge to profit and loss account 129,279 (780,827) (651,548) 4,103,645
+Release to profit and loss (218,430) - (218,430) = (267,203)
+Amounts written off (6,651,260) - (6,651,260) (4,368)
+At 31 December 1,581,240 854,078 2,435,318 9,956,556
+During 2018, the total impairment losses were in respect of the following:
+2018 2017
+£ £
+Loans and advances to customers (651,548) 4,103,645
+Loans and advances to customers impairment written off directly to profit & loss (16,645) 695,179
+Debt securities 3,320,000 -
+Tota! impairment loss 2,651,807 4,798,824
+Recoveries released to profit and loss (218,430) (267,203)
+Net impairment loss 2,433,377 4,531,621
+9, Derivatives at fair value
+Fair Value
+2018 Notional Assets _ Liabilities
+amounts
+£ £ £
+Exchange rate-related contracts ;
+Forward foreign exchange 185,928,240 350,369 1,458,058
+2017
+Exchange rate-related contracts
+Forward foreign exchange 227,717,569 2,868,194 8,672
+
+The fair value of derivatives held for non-trading purposes is determined by using observable market data.
+
+39
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+10. _—_— Intangible assets
+
+Cost
+
+At | January 2018
+Additions
+
+At 31 December 2018
+Amortisation
+
+At | January 2018
+Charge for the year
+At 31 December 2018
+
+Carrying amount
+At 31 December 2018
+
+At 31 December 2017
+
+Computer
+software
+£
+3,783,911
+310,376
+
+4,094,287
+
+3,196,787
+412,324
+
+3,609,111
+
+485,176
+
+587,124
+
+Amortisation of intangible assets is included in administrative costs. The intangible assets principally comprise
+computer software that is used by the Company for transaction processing, accounting as well as other
+
+business purposes.
+
+11. Investment property
+
+Carrying amount
+
+At 31 December 2017
+
+At 31 December 2018
+
+*Property at
+Brook Street
+London
+
+7,400,068
+8,187,309
+
+Property at
+Thomas St
+Manchester
+£
+
+570,000
+570,000
+
+Total
+
+£
+
+7,970,068
+8,757,309
+
+*The property at 2 Brook Street, London has elements of both tangible fixed asset and investment property.
+The investment property relates to the 3" and 4" floors of the building which are leased out to third parties.
+
+The carrying value of the investment properties are based on a market based desktop valuations conducted by
+Tim Smee, FRICS from Quantum Valuation LLP in December 2018 as set out in the table below:
+
+Property
+
+2 Brook Street, London
+79 Thomas Street, Manchester
+
+Total
+
+Fair value Cost Accumulated Historical Net
+Depreciation Book value
+
+£ £ £ £
+8,187,309 2,645,867 458,416 2,187,451
+570,000 225,000 93,155 131,845
+8,757,309 2,870,867 551,571 2,319,296
+
+40
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+11.
+
+12,
+
+Investment property (continued)
+
+Operating lease agreements where the Company is a lessor
+
+The Company holds surplus office buildings as investment properties as disclosed above that are let to third-
+parties. These are non-cancellable leases with remaining terms of between 0.25 and 4.25 years.
+
+At 31 December 2018, the future minimum lease rentals receivable under non-cancellable leases for the
+investment properties were as follows:
+
+Not later one year
+
+Later than one year and not later than five years
+
+Later than five years
+
+Tangible fixed assets
+
+Cost or valuation
+
+At 1 January 2018
+Revaluation
+
+Additions
+Adjustments/write-offs
+
+At 31 December 2018
+
+Depreciation
+
+At | January 2018
+Charge for the year
+Adjustments/write-offs
+
+At 31 December 2018
+
+Carrying amount
+At 31 December 2018
+
+At 31 December 2017
+
+2018 2017
+
+£ £
+
+97,391 324,407
+
+62,728 155,600
+
+- 4,519
+
+160,119 484,526
+
+Computer Office Leasehold *Freehold Total
+
+equipment equipment property land and
+buildings
+
+£ £ £ £ £
+
+1,552,675 907,611 $15,545 18,711,727 21,687,558
+
+- - - 1,915,014 1,915,014
+
+48,588 76,044 - 3,533 128,110
+
+(55) - - ne (55)
+
+1,601,208 983,655 515,545 20,630,274 23,730,682
+1,294,935 783,319 431,261 1,561,160 4,070,675.
+
+168,008 79,919 50,947 200,972 499,846
+
+- (56) - - (56)
+
+1,462,943 863,182 482,208 1,762,132 4,570,465
+
+138,265 120,473 33,337 18,868,142 19,160,217
+
+124,292 84,284 17,150,567 17,616,883
+
+257,740
+
+*Freehold land and buildings only includes the tangible fixed asset element of the Brook Street property.
+Details of the investment property element of this asset are provided in Note 11.
+
+41
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+Tangible assets (continued)
+
+12.
+Carrying value Historical cost net book value
+31 Dec 2018 31 Dec 2018
+Total *Tangible Investment Tangible Investment
+Fixed property fixed property
+assets assets
+Property £ £ £ £ £
+2 Brook Street, London 26,000,000 17,812,691 8,187,309 4,759,121 2,187,451
+3-5 Oak Lane, 222,267 222,267 - 31,621 .
+Bradford
+391-393 Stratford 439,416 439,415 - 34,582 -
+Road, Birmingham .
+79 Thomas Street, 570,000 - 570,000 - 131,845
+Manchester
+*The tangible fixed assets exclude property improvement assets amounting to £393,767.
+The valuation amount relating to 2 Brook Street London property was based on a 2018 desktop valuation
+assessment conducted by Tim Smee, FRICS from Quantum Valuation LLP.
+Included within freehold property is land valued at £15,359,532 (2017: £13,444,518), which is not depreciated.
+Assets under finance leases have a net book value of £35,675 (2017: £11,477) with minimum lease payments
+of £66,161 (2017: £30,593).
+13. Other assets
+
+Deferred tax
+
+Remittance funds receivable
+Capital work-in-progress
+Security deposit
+Advance payments
+
+Rent deposits
+
+Sundry debtors
+Repossessed properties
+Tax recoverable
+
+Others
+
+*Deferred costs
+
+2018 2017
+£ £
+
+- 2,027,370
+
+424,356 354,405
+72,279 284,740
+365,654 346,282
+23,907 29,904
+209,587 285,835
+436,650 250,328
+1,288,000 1,040,000
+425,134 -
+16,063 -
+115,450 237,798
+3,377,080 4,856,662
+
+*These are unamortised costs relating to fees paid by the Company for outsourcing the mobilisation of fixed
+
+deposits.
+
+42
+United National Bank Limited
+
+Notes to the accounts
+
+Year ended 31 December 2018
+
+14.
+
+15.
+
+16.
+
+17.
+
+Deposits by banks
+
+Repayable on demand
+
+With agreed maturity dates or periods of notice by remaining maturity:
+Three months or less but not repayable on demand
+
+Repurchase agreements
+
+Repurchase agreements
+
+2018 2017
+£ £
+
+4,919,651 9,223,324
+
+430,219 415,138
+
+5,349,870 9,638,462
+
+2018 2017
+£ £
+10,303,788 18,343,054
+
+10,303,788 18,343,054
+
+These include 4.5 year repurchase agreement GBP borrowings of £10,303,788 (2017:£10,294,376) secured
+against UK gilts. The repurchase date is 22 July 2020 and the borrowings carry a coupon rate of 3 month GBP
+
+Libor plus 53bps payable quarterly.
+
+Customer accounts
+
+Repayable on demand
+
+With agreed maturity dates or periods of notice by remaining maturity:
+
+Over three years
+
+Three years or less but over one year
+One year or less but over three months
+
+Three months or less
+
+Other liabilities
+
+Taxation and social security
+*Unapplied credits
+Finance lease
+
+Amounts due to preference shareholders (see overleaf)
+
+Accrued expenses
+Other liabilities
+
+2018 2017
+£ £
+
+82,991,523 95,626,916
+
+72,018,047 76,582,639
+144,487,973 144,162,675
+60,770,867 52,007,684
+42,541,967 31,458,857
+
+402,810,377 399,838,771
+
+2018 2017
+£ £
+
+- 987,610
+1,283,203 1,272,651
+56,533 29,347
+
+4 72,512
+
+1,100,356 1,710,964
+517,641 414,080
+
+2,957,737 4,487,164
+
+*The amount of £1,283,203 relate to items over 90 days old where the customer has not been identified.
+
+43
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+17.
+
+Other liabilities (continued)
+
+Amounts due to preference shareholders
+
+The four £1 preference shares that have been issued and allotted have each been designated as one of ‘A’, ‘B’,
+‘C’ and ‘D’ classes of preference shares. The ‘A’ and ‘C’ shares are held by United Bank Limited (‘UBL’)
+and the ‘B’ and ‘D’ shares by National Bank of Pakistan (‘NBP’). The preference shares carry no voting
+
+rights or any rights in a wind-up situation.
+
+Dividends payable on the ‘A’ and ‘B’ preference shares are related to the ability of the Company to utilise tax
+losses that have been surrendered to it on the transfer of the business from United Bank Limited or National
+
+Bank of Pakistan as appropriate.
+
+Dividends payable on the ‘C’ and ‘D’ preference shares are related to loans transferred to the Company from
+United Bank Limited or National Bank of Pakistan, as appropriate, that have been written off or provided for
+at the point of transfer, and the ability of the Company to realise in excess of such loan value.
+
+A breakdown of the amounts owed to the preference shareholders are shown in the table below:
+
+UBL Total NBP Total Total
+£ £ £
+Amounts due on | January 2017 2 2 4
+Tax losses utilised during the year 777,909 ~ 777,909
+Realised debt recoveries 72,508 - 72,508
+Payable to preference shareholders 850,419 2 850,421
+Dividends paid (777,909) - (777,909)
+Amounts due on 31 December 2017 72,510 2 72,512
+Tax losses utilised during the year 233,674 - 233,674
+Realised debt recoveries - - -
+Payable to preference shareholders 306,184 2 306,186
+Dividend Paid (306,182) - (306,182)
+Amounts due on 31 December 2018 2 2 4
+Amounts due to preference shareholders comprise:
+- share capital 2
+
+- Realised debt recoveries -
+
+An estimated amount of £Nil relating to utilisation of tax losses will be payable in the form of preference share
+dividend in 2019, when the tax losses are actually utilised. Any recovery from written-off loans that were
+
+transferred upon merger will be paid as preference share dividend.
+
+44
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+18.
+
+19.
+
+20.
+
+21.
+
+Provision for other liabilities
+
+2018 2017
+
+£ £
+
+Provision for deferred tax 3,140,141 2,586,429
+Pension liability (Note 23) - 161,000
+Provision for compensated absences 41,589 -
+
+3,181,730 2,747,429
+
+The deferred tax provided is the amount expected to be payable in future periods in accordance with the
+current tax legislation and it is in respect of revaluation and fair value movement of tangible fixed assets and
+investment properties, respectively. The reversal of any of this amount will only occur when some of the assets
+are sold.
+
+Provision for compensated balances represents holiday balances accrued as a result of services rendered in the
+current period and which employees are entitled to carry forward. The provision is measured at salary cost
+payable for period of absence.
+
+Called up share capital
+
+2018 2018 2017 2017
+No. of Amount No. of Amount
+shares £ shares £
+Issued, allotted and fully paid
+Ordinary shares of £1 each 45,000,000 45,000,000 45,000,000 45,000,000
+
+There is a single class of ordinary shares. There are no restrictions on the distribution of dividends and the
+repayment of capital. ,
+
+Contingent liabilities
+
+The Company has contingent liabilities arising from letters of credit opened and confirmed and guarantees
+issued, which are disclosed at the foot of the balance sheet. The total value £960,111 was all cash
+collateralised (2017: £884,048). The Company in the normal course of business issues guarantees on behalf of
+its customers for non-performance or non-delivery of goods and services. Cash collateral is held against these
+guarantee arrangements.
+
+Commitments
+. 2018 2017
+7 £ £
+*Unutilised overdraft commitments ; 569,924 548,904
+Other commitments (less than one year) - 5,721
+
+569,924 554,625
+
+*This represents overdraft facilities that have been provided to the Company’s customers but are not yet
+drawn.
+
+45
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+21.
+
+Commitments (continued)
+
+The Company had the following future minimum lease payments under non-cancellable operating leases for
+each of the following time bands below. These are in regard to the Company standard lease agreements for the
+
+lease of the branches in Ilford and Manchester with remaining terms between 0.9 year and 10 years.
+
+Within one year
+Between one year and five years
+Later than five years
+
+The Company had the following future minimum finance lease payments:
+
+Within one year
+Between one year and five years
+
+Total gross payments
+Less finance charges
+
+*Carrying amount of liability
+
+2018 2017
+
+£ £
+70,249 94,500
+180,000 205,249
+210,000 255,000
+460,249 554,749
+2018 2017
+
+£ £
+28,013 15,296
+38,148 15,296
+66,161 30,593
+(9,647) (1,671)
+56,514 28,922
+
+*The carrying amount of the finance lease reflected in the balance sheet (see note 17) includes accrued interest
+
+charges of £19 (2017: £425) totalling £56,533 (2017: £29,347).
+
+Certain items of office equipment (franking machines and photocopiers) are held under finance lease
+arrangements. The finance lease liabilities are secured by the assets held under finance lease (see note 12). The
+lease arrangements include fixed lease payments and a purchase option at the end of the lease term. The lease
+
+term remaining is 4 years.
+
+46
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management
+
+The Company finances its operations by a mixture of shareholders’ funds, customer deposits and inter -bank
+deposits. The deposits raised may be in a range of currencies at floating or fixed rates of interest. The
+Company’s lending is usually in sterling, euros or US dollars and may be either floating or fixed rate. The
+Company uses forward foreign exchange contracts to hedge foreign exchange exposures resulting from
+customer facilitation. All forward foreign exchange contracts for customers are matched with corresponding
+contracts with banks.
+
+The main risks arising from the Company’s financial instruments are:
+l. credit risk
+2. liquidity risk
+3. interest rate risk
+4. foreign currency risk
+5. regulatory risk
+
+The Board of Directors has overall responsibility for the establishment and oversight of the Company’s risk
+management framework.
+
+The Company’s risk management policies are established to identify and analyse the risks faced by the
+Company, to set appropriate risk limits and controls, and to monitor risks and adherence to limits. Risk
+management policies and systems are reviewed regularly to reflect changes in market conditions, products and
+services offered. The Company, through its training and management standards and procedures, aims to
+develop a disciplined and constructive control environment, in which employees understand their roles and
+obligations.
+
+The Board has established an Audit Committee to monitor compliance with the Company’s risk management
+policies and procedures, and for reviewing the adequacy of the risk management framework in relation to the
+risks faced by the Company. The Audit Committee is assisted in these functions by Internal Audit. Internal
+Audit undertakes both regular and ad hoc reviews of risk management controls and procedures, the results of
+which are reported to the Board Audit Committee.
+
+The Company has also a Chief Risk Officer who reports with a dotted line to the Board. The Chief Risk
+Officer is responsible for overseeing all aspects of risk management policy within the Company including its
+implementation and effectiveness.
+
+The Company holds and issues financial instruments for three main purposes:
+
+e to earn an interest margin or a fee;
+e to finance its operations; and
+e to manage the interest rate and currency risks arising from its operations and from its sources of finance.
+
+Fair value
+
+The fair value of a financial instrument is the amount for which an asset can be exchanged, or a liability
+settled, in an arm’s length transaction between knowledgeable willing parties. Wherever possible, fair value is
+determined by reference to a quoted market price for that instrument. In the absence of readily ascertainable
+market values, fair values are determined based on the best information available e.g. by reference to similar
+assets, similar maturities or other analytical techniques.
+
+The carrying amounts of the bank’s assets and liabilities are considered to equate to the fair values of those
+assets and liabilities.
+
+47
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management
+Financial assets and liabilities not carried at fair value
+
+Loans and advances to banks and customers are considered to be short term in nature and where these
+relationships are longer term there are considered to be no material factors in terms of impairment, credit or
+market risk which would indicate that the carrying value differs from the fair value.
+
+Deposits from banks and customers are considered to be short term in nature and where these relationships are
+longer term there are no material factors which indicate that the carrying value differs from the fair value.
+
+The Company also holds preference shares and the fair value of these instruments can be approximated to the
+realisation of future tax losses, which is £Nil (2017: £1.7million).
+
+Financial assets and liabilities that are carried at fair value
+
+The Company holds available for sale securities (‘AFS’) which are carried at fair-value. The fair value
+measurement of these assets is categorised as Level 1 in the fair value hierarchy because these investments can
+be traded in an active market and prices are readily available on an arm’s length basis.
+
+Set out below and overleaf are the Company’s financial instruments by category.
+
+2018 AFS HTM FVTPL Loans & Total
+receivables
+
+£000 £7000 £°000 £’000
+£000
+
+Financial assets
+
+Cash and balances with central banks - - - 41,304 41,304
+Loans and advances to banks - - - - -
+-- - 194,151 194,151
+
+Loans and advances to customers -
+Debt securities 229,967 - - - 229,967
+Derivatives at fair value - - 350 - 350
+Other assets - - - 1,901 1,901
+229,967 - 350 237,356 467,673
+Financial liabilities
+Deposits by banks - - - 5,350 5,350
+Borrowings from financial institutions - - - 10,304 10,304
+Customer accounts - - - 402,810 402,810
+Derivatives at fair value - - 1,458 - 1,458
+Other liabilities - - - 4,204 4,204
+- - 1,458 422,668 424,126
+
+48
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+2017 AFS HTM FVTPL Loans & Total
+receivable
+£7000 £7000 £°000 £°000 £7000
+Financial assets
+Cash and balances with central banks - - - $3,212 53,212
+Loans and advances to banks - - - 3,500 3,500
+Loans and advances to customers - - - 224,062 224,062
+Debt securities 149,912 57,184 - - 207,096
+Derivatives at fair value “ - 2,868 - 2,868
+Other assets - “ “ 1,267 1,267
+149,912 57,184 2,868 282,041 492,005
+Financial liabilities
+Deposits by banks - - - 9,638 9,638
+Borrowings from financial institutions - - - 18,343 18,343
+Customer accounts - - - 399,839 399,839
+Preference shares - - - 73 73
+Subordinated debt - - - 2,015 2,015
+Derivatives at fair value - - 9 - 9
+Other liabilities - - - 1,580 1,580
+- - 9 431,488 431,497
+2018 2017
+£7000 — £°000
+Interest Income
+Available for sale 6,204 5,738
+Held to maturity 1,770 2,883
+Loans and receivables 12,122 10,210
+20,096 18,83 1
+Interest Expense
+Derivative financial instruments 3,118 2,097
+Loans and receivables (includes preference share dividend) 8,017 8,585
+11,135 10,682
+
+A total of £Nil relating to interest income on impaired debt securities and £Nil relating to interest income on
+
+impaired loans and receivables have been recognised in the year (2017: £Nil and £Nil, respectively).
+
+The fair value of derivatives held for non-trading purposes is determined by market prices, or, where market
+prices are not available, by applying current market information to pricing or valuation models.
+
+As well as using derivatives to hedge foreign exchange exposure, the Company takes exchange rate contract
+orders from customers and will cover these by entering into similar positions with third parties.
+
+49
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22. ‘Financial instruments and risk management (continued)
+Fair value measurement
+
+The Company categorises financial instruments carried on the balance sheet at fair value using a three level
+hierarchy as follows.
+
+e Level 1: The unadjusted quoted price in an active market for identical assets or liabilities that the entity
+can access at the measurement date.
+
+e Level 2: Inputs other than quoted prices included within Level 1 that are observable (i.e. developed using
+market data) for the asset or liability, either directly or indirectly.
+
+e Level 3: Inputs are unobservable (i.e. for which market data is unavailable) for the asset or liability.
+
+The table below shows a hierarchy that reflects the significance of observable market inputs for financial
+instruments measured at fair value.
+
+Level 1 Level 2 Level 3 Total
+2018 £°000 £000 . £7000 £7000
+Financial assets
+Available for sale investments 229,967 - - 229,967
+Derivatives at fair value - 350 , - 350
+229,967 350 - 230,317
+Financial liabilities
+Derivatives at fair value - 1,458 - 1,458
+- 1,458 - 1,458
+2017
+Financial assets
+Available for sale investments 149,912 - - 149,912
+Derivatives at fair value - 2,868 - 2,868
+149,912 2,868 ~ 152,780
+Financial liabilities
+Derivatives at fair value - 9 - 9
+- 9 - 9
+
+50
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+Fair value measurement (continued)
+
+The objective of valuation techniques is to arrive at a fair value measurement that reflects the price that would
+be received to sell the asset or paid to transfer the liability in an orderly transaction between market
+participants at the measurement date.
+
+(a) All investment securities held by the Company at 31 December 2018 are rated. Prices used for fair value
+calculations are obtained from Bloomberg.
+
+(b) The Company has forward derivative contracts which are OTC derivatives and are not traded, therefore,
+cannot be measured using category Level 1 input. Observable currency prices obtained from Reuters have
+been used to determine the fair value of derivatives. Availability of observable market prices reduces the need
+for management judgement and estimation and also reduces the uncertainty associated with determining fair
+values.
+
+(c) The Company uses the discounted cash flow model for determining the fair value of financial instruments
+where the fair value cannot be reasonably determined. During the year, there was £Nil (2017: £Nil) exposure
+of this nature. The underlying assumptions normally used in calculating the appropriate carrying amount
+includes: credit risk of the counterparty, the coupon rate and maturity date for the new instrument to be issued,
+the time to completion of any restructure, the sovereign risk of the issuing country, the liquidity risk premium ,
+the business model, and finally an adjustment to reflect execution risk.
+
+Credit risk
+
+Credit risk is the risk of financial loss to the Company if a customer or counterparty to a financial instrument
+fails to meet its contractual obligations. For the Company, this arises principally from the Company’s loans
+and advances to customers, other banks and the investment portfolio. However, the perceived credit risk on the
+investment portfolio is reflected in the fair value of the debt securities held. For risk management reporting
+purposes, the Company considers and consolidates all elements of credit risk exposure (such as individual
+obligor default risk, sector and country concentration risk).
+
+The Board of Directors has delegated responsibility for the manage ment of credit risk to its Board Risk and
+Compliance Committee. Their main duties include the approval of credits and credit provisions, the approval
+of credit policy and subsequent amendments, and the delegation of credit approval and provisioning limits to
+the Credit Committee.
+
+The Credit Committee is responsible for implementation of credit policies and for the approval of routine
+credit facilities within its credit approval and provisioning limits, as delegated by the Board Risk and
+Compliance Committee.
+
+The Investment Committee is responsible for performing the first level screening of any proposed new
+investments, ongoing monitoring of the performance of the investment portfolio, and assessing the risks faced
+by the Company, through its holdings in the investment portfolio which should be within the overall credit risk
+limits as delegated by the Board Risk and Compliance Committee.
+
+51
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Credit risk (continued)
+
+The Company’s maximum exposure to credit risk, by class of financial instrument is shown in the table below:
+
+2018 2017
+Carrying Maximum Carrying Maximum
+Value Exposure Value Exposure
+£7000 £7000 £°000 £’000
+Cash and balances with central banks 41,304 41,304 $3,212 $3,212
+Loans and advances to banks ~ - 3,500 3,500
+Loans and advances to customers
+Loans and receivables 194,151 194,151 224,062 224,062
+Debt securities
+Available for sale 229,967 229,967 149,912 149,912
+Held to maturity - - 57,184 57,184
+Derivative financial assets
+Currency forwards _ 350 350 2,868 2,868
+Unutilised overdraft commitments , - 570 - 549
+465,772 466,342 490,738 491,287
+
+The table overleaf shows the breakdown of the Company’s on-balance sheet credit exposure categorised by the
+
+degree of risk of financial loss:
+
+52
+United National Bank Limited
+
+Notes to the accounts
+
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Credit risk (continued)
+
+Carrying amount
+
+Individually impaired
+
+Grade 5b: Substandard
+
+Grade 6: Doubtful
+
+Grade 7: Loss
+
+Impairment allowance (specific)
+
+Carrying amount
+
+Past due but not impaired
+Grade 4b: Watchlist
+
+Up to 30 days
+
+30 — 90 days
+Grade Sa: Substandard
+
+Up to 30 days
+
+30 — 90 days
+
+90 — 180 days
+
+180 days +
+
+Allowance for impairment
+
+Carrying amount
+
+Neither past due nor impaired
+Grade 1-3: Low — fair risk
+Grade 4a: Watchlist
+
+Carrying amount
+
+Impairment allowance
+Collective provision
+
+Carrying amount
+
+Debt securities
+
+Loans and advances
+to customers
+
+2018 2017 2018 2017
+£7000 £7000 £000 £7000
+229,967 207,096 194,151 224,062
+. - 2,449 2,751
+
+- - 252 6,768
+
+- - (1,581) (8,322)
+
+- - 1,120 1,197
+
+- 10,139 - -
+
+- - 8,338 10,988
+
+. - 2,203 -
+
+- 10,139 10,541 10,988
+227,021 196,957 183,344 213,512
+2,946 - - -
+229,967 196,957 183,344 213,512
+- - (854) (1,635)
+
+- - (854) (1,635)
+
+All other assets of the Company are neither past due or impaired (2017: Same).
+
+53
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22. ~~‘ Financial instruments and risk management (continued)
+
+Credit risk (continued)
+
+The ratings for Debt Securities that are not impaired are set out in the table below:
+
+2018 2017
+Fitch ratings £7000 £7000
+AAA 27,180 9,185
+AAt+ 5,896 5,919
+AA 118,180 64,615
+AA- - 2,159
+BBB+ - 4,220
+BBB- - 6,008
+BB+ 6,713 8,793
+BB - 18,279
+BB- 11,964 11,752
+B+ 25,300 11,818
+B 14,960 36,508
+B- 16,383 19,827
+CC - 4,023
+CCCt+ 3,391 3,990
+Total 229,967 207,096
+
+The loans and advances portfolio is predominantly unrated.
+
+Impaired loans .
+Impaired loans are loans for which the Company determines that it is probable that it will be unable to collect
+all principal and interest due according to the contractual terms of the loan agreement.
+
+Past due but not impaired
+
+Loans where contractual interest or principal payments are past due but the Company believes that impairment
+is not appropriate on the basis of the level of security/collateral available and/or the stage of collection of
+amounts owed to the Company.
+
+Allowances of impairment
+
+The Company establishes an allowance for impairment losses that represents its estimate of incurred losses in
+its loan portfolio, The main component is a specific loss provision that relates to individually significant
+exposures and represents the amount remaining after deducting the expected discounted cash flows from the
+outstanding loan principal and accrued interest at the balance sheet date.
+
+Forbearance Policy
+
+The Company periodically assesses whether there is objective evidence that a financial asset or portfolio of
+financial assets is impaired. In conducting this assessment, management takes account of any forbearance
+arrangements it has with its customers. The Company has a detailed forbearance policy and as part of the
+arrears management process, the Company will consider providing a forbearance facility to the borrower after
+considering each case and analysing it based on its own merits and the specific circumstances of the borrower.
+The primary aim of providing a forbearance facility to a borrower is to enable the complete recovery of the
+debt through the full repayment of arrears. Where the circumstances of the borrower means that this primary
+aim is not achievable, the secondary aim is to recover the customer into a ‘sustainable terms’ position on their
+debt.
+
+54
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+Credit risk (continued)
+
+In all cases the provision of forbearance aims to minimise the risk of the borrower ultimately defaulting on
+their debt and losing their security. As at 31 December 2018 all grade 5b, 6 and 7 loans and advances had been
+considered for forbearance (2017: Same).
+
+Write off policy
+
+The Company writes off a loan balance (and any related allowances for impairment losses) when the Board
+Risk and Compliance Committee determines that the loans are uncollectible. This determination is reached
+after considering information such as the occurrence of significant changes in the borrower / issuer’s financial
+position such that the borrower / issuer can no longer pay the obligation, or that proceeds from collateral will
+not be sufficient to pay back the entire exposure.
+
+Collateral
+
+The Company holds collateral against loans and advances to customers in the form of mortgage interests over
+property and liens over cash deposits. Collateral is not held over loans and advances to banks. The table
+below shows a breakdown of the credit exposure by collateral type.
+
+Loans and advances to
+
+customers
+2018 2017
+£°000 £000
+Carrying amount 194,151 224,062
+Individually impaired
+Property 1,120 1,197
+Unsecured - -
+Carrying amount 1,120 1,197
+Past due but not impaired
+Property 10,541 10,987
+Unsecured - 1
+Carrying amount 10,541 10,988
+Neither past due nor impaired
+Property 97,378 44,409
+Unsecured 85,966 145,318
+Other - 23,785
+Carrying amount 183,344 213,512
+Impairment allowance —(collective provision)
+Other (854) (1,635)
+Carrying amount (854) (1,635)
+
+The average loan to value ratio for customer loans secured by property is 52% (2017: 56%); calculated by
+dividing the balance owed to the Company by the latest valuation held for the property. Independent
+professional property valuations are undertaken every three years for commercial and buy to let mortgages or
+earlier if market conditions warrant, at the discretion of the Company. Other valuations are undertaken as
+stated by UK Regulations. The Company will seek to dispose of property and other assets obtained by taking
+possession of collateral and converting into cash as rapidly as the market for the individual asset permits.
+
+55
+United National Bank Limited .
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22. Financial instruments and risk management (continued)
+Credit risk (continued)
+
+Credit risk concentration
+
+The Company manages credit risk concentration by setting exposure limits to groups or individual
+
+counterparties, sectors, and countries.
+
+The Company monitors credit risk concentration against limits daily. Any excesses, actual or potential, are
+notified to the Credit Committee for ratification, approval and /or recommendation to the Board Risk and
+Compliance Committee or the main Board for direction as to remedial action. The table below summarises the
+
+sector and location concentration risk for the Company at the year-end.
+
+Loans and Loans and
+advances to advances to
+customers customers
+2018 2017
+£7000 £°000
+Central and local government 22,569 26,852
+Food, beverage, tobacco 1,553 425
+Textiles, leather, clothes - 1,152
+Other manufacturing 10,053 1,115
+Retail 467 21
+Wholesale including import and export - 2
+Transport, storage, communication 10,817 11,439
+Construction 6,326 11,139
+Real estate - buy, sell, develop and letting 64,975 43,137
+Financial 24,146 48,083
+Others 18,517 4,614
+Individuals 34,728 76,083
+Total 194,151 224,062
+Concentration by location
+Great Britain 98,363 84,775
+Europe 20,217 15,930
+South Asia 42,603 $2,304
+Africa 14,848 31,963
+Rest of world 18,120 39,090
+Total 194,151 224,062
+
+Investment Securities
+
+Investment securities held by the Company at 31 December 2018 were all rated (2017: all were rated).
+
+In 2018, £2,755,585 (2017: £2,826,242) was reclassified from investment revaluation reserves to profit and
+loss on de-recognition of available-for-sale securities. Total losses taken as impairment to the profit and loss
+
+were £3,320,000.
+
+56
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Investment Securities (continued)
+
+Below is a reconciliation of the opening and closing balance of securities held as well as the sector
+
+concentration analysis:
+
+2018 2017
+£7000 £7000
+As at 1 January 207,096 234,153
+Purchases 2,050,651 3,130,459
+Sales (1,628,428) (2,991,169)
+Interest/amortisation (388,734) (171,983)
+Unrealised (losses) gains (10,618) 5,636
+Balance at 31 December 229,967 207,096
+The movement in unrealised losses during the year were as follows
+2018 2017
+£7000 £7000
+As at 1 January (1,654) (8,274)
+Unrealised (losses) gains accounted for in the Statement of Comprehensive (10,618) 6,620
+Income during the year, net of tax
+Balance at 31 December (12,272) (1,654)
+
+The unrealised losses represent the cumulative unrealised change in fair value of financial assets classified as
+
+available for sale.
+
+Analysis of sector concentration
+
+2018 2017
+£7000 £°000
+Central government 165,958 126,189
+Financial institutions 45,309 43,185
+Corporates 18,700 37,722
+Balance at 31 December 229,967 207,096
+
+Liquidity risk
+
+Liquidity risk is the risk that a Company will encounter difficulty in meeting obligations from its financial
+liabilities. The Company’s approach to managing liquidity is to ensure, as far as possible, that it will always
+have sufficient liquidity to meet its liabilities when due, under both normal and stressed conditions, without
+incurring unacceptable losses or risking damage to the Company’s reputation.
+
+The Company policy is to monitor the liquidity position daily, with regular liquidity stress testing conducted
+under a variety of scenarios covering both normal and more severe market conditions. The Company’s
+Treasury Department is responsible for maintaining sufficient liquidity to meet the Company’s obligations and
+to meet the specific liquidity requirements of the UK supervisory authorities. The key measure used by the
+Company for managing liquidity risk is the ratio of behaviourally adjusted net liquid assets (maturing in less
+
+than one month) to total deposits.
+
+57
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Liquidity risk (continued)
+
+In the unlikely event of a liquidity crisis the policy is to immediately sell the Company’s liquid assets, or if
+more expedient, seek additional funds from the shareholders or borrow in the market to alleviate the shortfall.
+
+The table below shows the undiscounted cash flows on the Company’s financial assets and liabilities and
+unrecognised loan commitments on the basis of their earliest possible contractual maturity. The Company’s
+expected cash flows on these instruments vary significantly from this analysis. For example, demand deposits
+from customers are expected to maintain a stable or increasing balance, and unrecognised loan commitments
+are not all expected to be drawn down immediately.
+
+Residual contractual maturities of
+financial instruments as at
+31 December 2018
+
+Non-derivative assets
+
+Cash and balances with central banks
+Loans and advances to customers
+Debt securities
+
+Non-derivative liabilities
+Deposits by banks
+
+Repurchase agreements
+
+Customer accounts
+
+Liabilities against assets subject to
+finance lease
+
+Derivative contracts
+
+Forward foreign exchange contracts
+inflow
+
+Forward foreign exchange contracts
+outflow
+
+Unutilised overdraft commitments
+
+More More
+than one than
+month three More
+but less months than one
+than but less year but More
+
+Less than three than one less than than five Carrying
+1 month months year five years years Total amount
+£7000 £°000 £°000 £°000 £7000 £7000 £7000
+35,046 2,371 3,931 - - 41,348 41,304
+11,135 17,487 33,003 137,502 31,058 230,185 194,151
+58,577 54,785 5,078 72,724 60,843 252,007 229,967
+104,758 74,643 42,012 210,226 91,901 523,540 465,422
+5,255 95 - - - 5,350 5,350
+17 33 149 10,403 - 10,602 10,304
+93,881 33,070 64,087 222,732 154 413,925 402,810
+57 - - - - 57 57
+99,210 33,198 64,236 233,135 154 429,934 418,521
+(14) (336) - - - (350) (350)
+1,281 177 - - - 1,458 1,458
+1,267 (159) - - - 1,108 1,108
+$70 - - - - - -
+101,047 33,039 64,236 233,135 154 431,042 419,629
+
+58
+United National Bank Limited
+
+Notes to the accounts .
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Liquidity risk (continued)
+
+Residual contractual maturities of
+financial instruments as at
+31 December 2017
+
+Non-derivative assets
+
+Cash and balances with central banks
+Loans and advances to banks
+
+Loans and advances to customers
+
+_ Debt securities
+
+Non-derivative liabilities
+Deposits by banks
+
+Repurchase agreements
+
+Customer accounts
+
+Liabilities against assets subject to
+finance lease
+
+Subordinated debt
+
+Derivative contracts
+
+Forward foreign exchange contracts
+inflow
+
+Forward foreign exchange contracts
+outflow
+
+Unutilised overdraft commitments
+
+More More
+than one than
+month three More
+but less months than one
+than but less year but More
+
+Less than three than one less than than five Carrying
+1 month months year _ five years years Total amount
+£000 £000 £000 £000 £000 £7000 £000
+$3,212 - - - - 53,212 53,212
+3,500 - - - - 3,500 3,500
+4,823 44,356 41,586 143,097 14,174 248,036 224,062
+18,304 25,251 30,009 92,767 64,539 230,870 207,096
+79,839 69,607 T1595 235,864 78,713 535,618 487,870
+9,560 80 - - - 9,640 9,638
+261 10,332 103 8,256 - 18,952 18,343
+99,621 28,371 55,682 224,290 3,317 411,281 399,857
+29 - - - - 29 29
+
+4 9 2,041 - - 2,054 2,015
+109,475 38,792 57,826 232,546 3,317 441,956 429,882
+(2,120) (748) - - - (2,868) (2,868)
+9 - - - - 9 9
+(2,111) (748) - - - (2,859) (2,859)
+549 - - - - 549 -
+107,913 38,044 57,826 232,546 3,317 439,646 427,023
+
+59
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Interest rate risk
+
+Interest rate risk is the risk that changes in interest rates will affect the Company’s income or the value of its
+holdings of financial instruments. The objective of interest rate risk management is to manage and control
+
+interest rate risk exposure within acceptable parameters while optimising the return on risk.
+
+Interest rate risk originating from banking activities arises partly from the employment of non -interest bearing
+liabilities such as shareholders’ funds and customer current accounts, but also from the gaps that arise from the
+
+normal course of business.
+
+The policy of the Company is to price all placements / exposures at floating rates or at fixed rates for fixed
+periods on appropriate rollover dates that allow for matching in the market.
+
+The tables below and overleaf summarise the re-pricing mismatches on the Company’s assets and liabilities as
+at 31 December 2018 and 31 December 2017. Items are allocated to time bands by reference to the earlier of
+
+the next contracted interest rate re-pricing date and the maturity date.
+
+As at 31 December 2018
+
+Assets
+
+Cash and balances with central banks
+Loans and advances to customers
+Debt securities
+
+Intangible assets
+
+Investment property
+
+Tangible fixed assets
+
+Derivatives at fair value
+
+Other assets
+
+Prepayments and accrued income
+
+Total assets
+
+Liabilities
+
+Deposits by banks
+Repurchase agreements
+Customer accounts
+Derivatives at fair value
+Other liabilities
+
+Accruals and deferred income
+Provisions for liabilities
+Shareholders’ funds
+
+Total liabilities
+
+Interest rate sensitivity gap
+
+Cumulative sensitivity gap
+
+More
+More than than six
+
+three months More than
+
+months but not one year
+
+Not more but not more but not
+
+than three more than than one more than More than Non-interest
+
+months — six months year five years five years bearing Total
+£000 £°000 £7000 £000 £'000 £°000 £’000
+36,711 4,054 - - - $39 41,303
+97,272 32,809 1,747 54,541 7,600 182 194,151
+111,950 > 2,040 60,029 $5,948 - 229,967
+- - - - “ 485 485
+- - - - - 8,757 8,757
+- - - - - 19,160 19,160
+350 - - - - - 350
+- - - - - 3,377 3,377
+- - - - - 435 435
+246,283 36,863 3,787 114,570 63,548 32,935 497,986
+1,260 - - - - 4,090 $,350
+- - - 10,303 - - 10,303
+60,780 24,140 36,615 216,359 147 64,769 402,810
+1,458 - - - - - 1,458
+- - - - - 2,959 2,959
+- - - - - 1,318 1,318
+- - - - - 3,181 3,181
+- - - - - 70,607 70,607
+63,498 24,140 36,615 226,662 147 146,924 497,986
+182,785 12,723 (32,828) (112,092) 63,401 (113,989) -
+182,785 195,508 162,680 50,583 113,989 - -
+
+60
+United National Bank Limited
+
+Notes to the accounts
+
+Year ended 31 December 2018
+
+22. ~~‘ Financial instruments and risk management (continued)
+
+Interest rate risk (continued)
+
+As at 31 December 2017
+Assets
+
+Cash and balances with central banks
+
+Loans and advances to banks
+
+Loans and advances to customers
+
+Debt securities
+Intangible assets
+Investment property
+Tangible fixed assets
+Derivatives at fair value
+Other assets
+
+Prepayments and accrued income
+
+Total assets
+
+Liabilities
+
+Deposits by banks
+Repurchase agreements
+Customer accounts
+Derivatives at fair value
+Subordinated debt
+
+Other liabilities
+
+Accruals and deferred income
+Provisions for liabilities
+Shareholders’ funds
+
+Total liabilities
+
+Interest rate sensitivity gap
+
+Cumulative sensitivity gap
+
+More
+More than than six
+
+three months More than
+
+months but not one year
+
+Not more but not more but not
+
+than three more than than one more than More than Non-interest
+
+months — six months ‘year five years five years bearing Total
+£°000 £000 £000 £000 £7000 £°000 £000
+5,060 - - - - 48,152 $3,212
+3,500 - - - - - 3,500
+126,312 31,473 | 7,126 50,073 1,115 7,963 224,062
+19,303 8.024 38,952 80,733 60,084 - 207,096
+- - - - - 587 587
+- - : - - 7,970 7,970
+- - : - - 17,617 17,617
+2,868 - - - - - 2,868
+- - : : - 4,857 4,857
+- - - - : 293 293
+157,043 39,497 46,078 130,806 61,199 87,439 522,062
+434 - - - - 9,204 9,638
+8,049 - - 10,294 - - 18,343
+49,366 19,765 32,243 217,569 3,176 77,720 399,839
+9 - - - - - 9
+- 2,015 : : - - 2,015
+- - - - - 4,487 4,487
+- - - - - 821 821
+- - - - - 2,747 2,747
+- - - - - 84,163 84,163
+57,858 21,780 32,243 227,863 3,176 179,142 §22,062
+99,185 17,717 13,835 (97,057) 58,023 (91,703) -
+99,185 116,902 130,737 33,680 91,703 - -
+
+61
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+Interest rate risk (continued)
+
+The table below shows the weighted average interest rates received and paid for each class of financial asset
+and financial liability exposed to interest rate risk.
+
+2018 2017
+Financial assets
+Balances with other banks 0.47% 0.30%
+Loans and advances to customers 5.47% 4.81%
+Debt securities 3.50% 3.18%
+Financial liabilities
+Deposits by banks 0.07% 0.03%
+Repurchase agreements 1.93% 1.71%
+Customer accounts 1.83% 1.77%
+Subordinated debt 2.71% 2.61%
+
+The management of interest rate risk against interest rate gap limits is supplemented by monitoring the
+sensitivity of the Company’s financial assets and liabilities to various interest rate scenarios. The table below
+shows the impact on annual income of a 100 basis point rise or fall in the base rate of the main currencies
+traded by the Company, and assumes a constant balance sheet position:
+
+2018 2017
+
+100 basis 100 basis 100 basis 100 basis
+
+points points points points
+
+increase decrease increase decrease
+
+£’000 £’000 £°000 £000
+
+GBP 3,178 (3,281) 3,964 (4,106)
+USD 3,140 (3,399) (6,106) 6,551
+EUR (8) 8 (220) 228
+
+Foreign exchange risk
+
+Foreign exchange risk is the risk that changes in foreign currency rates will affect the Company’s income or
+the value of its holdings of financial instruments. The objective of foreign currency risk management is to
+manage and control foreign currency risk exposure within acceptable parameters while optimising the return
+on risk.
+
+Foreign exchange exposure arises from normal banking activities, primarily from the receipt of deposits and
+the placement of funds. Future open positions in any currency are managed by means of forward foreign
+exchange contracts. The Company may from time to time take open positions on its own account (proprietary
+trading) but these are closely monitored to ensure they remain within the overall foreign exchange policy set
+by the Board.
+
+The Company does not currently deal, and has no plans to deal, in Foreign Exchange Futures, Foreign
+Exchange Options or Options on Foreign Exchange Futures.
+
+62
+United National Bank Limited
+
+Notes to the accounts
+
+Year ended 31 December 2018
+
+22,
+
+Financial instruments and risk management (continued)
+
+Foreign exchange risk (continued)
+
+Any foreign exchange forward swap transaction is either immediately covered or incorporated into the
+respective loan and deposit book (the banking book). The table set out in note 9 gives details of the notional
+
+principal amounts and fair values as at 31 December 2018 and 31 December 2017.
+
+The Company has no significant structural currency exposures that are not covered by forward foreign
+
+’ exchange contracts. The tables shown below and overleaf give details of the Company’s assets and liabilities
+
+as at 31 December 2018 and 31 December 2017, in sterling, based on the currencies in which they are
+denominated to identify the extent to which the foreign currency exposures of the Company are matched.
+
+As at 31 December 2018
+Assets
+
+Cash and balances with central banks
+Loans and advances to customers
+
+Debt securities —
+Derivatives at fair value
+Intangible assets
+Investment property
+Tangible assets
+
+Other assets
+
+Prepayments and accrued income
+
+Total assets
+
+Liabilities
+
+Deposits by banks
+Repurchase agreements
+Customer accounts
+Derivatives at fair value
+Pension fund liability
+
+Other liabilities
+
+Accruals and deferred income
+Provision for liabilities
+Shareholders’ funds
+
+Total liabilities and capital
+
+Net (liabilities)/assets
+
+Net currency forwards
+
+Net position
+
+Other
+Sterling US dollars Euro currencies Total
+£7000 £7000 £7000 £000 £000
+19,209 14,676 6,663 756 41,304
+114,878 79,269 4 - 194,151
+141,703 88,264 - - 229,967
+350 - - - 350
+485 - - - 485
+8,757 - - - 8,757
+19,160 - - - 19,160
+2,504 858 10 5 3,377
+435 - - - 435
+307,481 183,067 6,677 761 497,986
+4,257 941 152 - 5,350
+10,303 - - - 10,303
+369,399 27,102 6,303 6 402,810
+1,458 - - - 1,458
+2,549 160 192 58 2,959
+1,318 - - - 1,318
+3,181 “ “ ” 3,181
+80,976 (10,369) _ - - 70,607
+473,441 17,834 6,647 64 497,986
+(165,960) 165,233 30 697 -
+165,579 (166,650) - - (1,071)
+(381) (1,417) 30 697 (1,071)
+
+63
+United National Bank Limited
+
+Notes to the accounts
+
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Foreign exchange risk (continued)
+
+As at 31 December 2017
+Assets
+
+Cash and balances with central banks
+
+Loan and advances to banks
+Loans and advances to customers
+
+Debt securities
+
+Derivatives at fair value
+Intangible assets
+
+Investment property
+
+Tangible assets
+
+Other assets
+
+Prepayments and accrued income
+
+Total assets
+
+Liabilities
+
+Deposits by banks
+Repurchase agreements
+Customer accounts
+Derivatives at fair value
+Other liabilities
+
+Accruals and deferred income
+Provision for liabilities
+Subordinated debt
+Shareholders’ funds
+
+Total liabilities and capital
+
+Net (liabilities)/assets
+
+Net currency forwards
+
+Net position
+
+Other
+Sterling US dollars Euro currencies Total
+£000 £000 £7000 £°000 £7000
+26,123 24,783 1,593 713 33,212
+3,500 - - - 3,500
+85,430 122,361 16,271 ~ 224,062
+106,663 100,433 - - 207,096
+2,868 - ” - 2,868
+587 - - - 387
+7,970 - - - 7,970
+17,617 - - - 17,617
+4,294 563 - - 4,857
+293 - - - 293
+255,345 248,140 17,864 713 522,062
+4,536 244 4,855 3 9,638
+10,294 8,049 - - 18,343
+368,019 29,809 2,004 7 399,839
+9 - - - 9
+3,328 807 310 42 4,487
+2 819 - - 821
+2,747 - - - 2,747
+2,015 - - - 2,015
+85,685 (1,566) 44 - 84,163
+476,635 38,162 7,213 32 522,062
+(221,290) 209,978 10,651 661 -
+225,559 (211,979) (10,637) - 2,943
+4,269 (2,001) 14 661 2,943
+
+64
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+Financial instruments and risk management (continued)
+
+Foreign exchange risk (continued).
+
+The carrying amounts of derivative assets and liabilities represent fair values and have been included in the
+
+heading of the various currencies in which they occur. Foreign exchange risk on these instruments has been
+reflected through currency swaps. The notional principal (note 9) are amounts in respect of forward foreign
+exchange derivatives which are utilised for managing the foreign exchange risk position of the Company.
+
+The sensitivity analysis table below shows the impact on the Company’s profit and loss of possible changes in
+significant currency exposures based on historical volatility and relevant assumptions regarding near term
+future volatility.
+
+2018. 2017
+10% 10% 10% 10%
+increase decrease increase decrease
+£7000 £°000 £000 £°000
+USD (141) 141 (200) 200
+EUR 3 (3) 1 (1)
+
+Regulatory risk
+
+Regulatory risk is the risk to earnings, capital and reputation associated with a failure to comply with an
+increasing array of regulatory requirements and expectations from banking regulators. Regulatory risk
+governance begins at the Board level and cascades throughout the organisation. The Company, through its
+compliance and audit functions, ensures there is adherence to the applicable regulatory requirements, and the
+
+_ resources required for effective compliance are adequate and competent. This ensures regulatory risk is
+
+minimised without jeopardising shareholders expectations. Details of the Company’s risk management policy
+can be found in the unaudited Pillar III disclosures on the Company’s website www.ubluk.com.
+
+65
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+22.
+
+23.
+
+Financial instruments and risk management (continued)
+Capital management policy —
+
+The Company manages its capital through the Basel 3 framework which was enacted in the United Kin gdom
+from | January 2014 via the fourth Capital Requirements Directive (‘CRD 4’) and the Capital Requirements
+Regulation (‘CRR’). Further details of the Company’s capital management policy can also be found in the
+unaudited Pillar HI disclosures, referred to in the paragraph above. The table below, based on the audited
+financial statements, shows the breakdown of the Company’s capital resources:
+
+2018 2017
+Tier t capital £ £
+Share capital 45,000,000 45,000,000
+Retained earnings 25,134,758 29,993,994
+Revaluation reserve 472,212 9,168,615
+Deferred tax asset arising from tax losses - (1,661,158)
+Intangible assets (485,176) (587,124)
+Total — Tier 1 capital 70,121,794 $1,914,327
+Tier 2 capital
+Subordinated debt - 332,869
+Collective provision 854,078 1,634,903
+Total — Tier 2 capital 854,078 1,967,772
+Total capital 70,975,872 83,882,099
+
+The Company has not reported any breaches of its capital requirements during the year (2017: no reported
+breaches).
+
+Post -employment benefits
+United National Bank Limited Pension and Life Assurance Scheme
+
+As part of the Shareholders’ Agreement (‘the Agreement’) signed on 9 November 2001 between the Company
+and the shareholders, United Bank Limited and National Bank of Pakistan, it was agreed that the Company
+may participate as an associated employer in the United Bank Limited Pension and Life Assurance Scheme
+(‘the Scheme’) with effect from completion of the transfer of the businesses (19 November 2001) (‘the
+Completion Date’). The Scheme is classified as a defined benefit scheme providing benefits based on final
+pensionable salary.
+
+Under the terms of the Agreement, the Company is responsible for the funding requirements of the active
+members whose employment transferred to the Company on the Completion Date and for any new members
+admitted to the Scheme after this date. United Bank Limited remains responsible for the funding of the
+deferred members as at the Completion Date.
+
+The pension scheme assets are held in a separate trustee-administered fund to meet long-term pension
+liabilities to past and present employees. The trustees of the fund are required to act in the best interest of the
+fund’s beneficiaries. The appointment of trustees to the fund is determined by the Scheme’s trust
+documentation. At present the sole trustee of the Scheme is Pitmans Trustees Limited.
+
+66
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+23. Post-employment benefits (continued)
+United National Bank Limited Pension and Life Assurance Scheme (continued)
+
+This Scheme is subject to risks in relation to changes in inflation, future salary increases and to changes in the
+value of investments and the returns derived from such investments. An investment strategy is in place which
+has been developed by the pension trustees in order to manage and mitigate such risks.
+
+A comprehensive actuarial valuation of the scheme, using the projected unit credit method, was carried out as
+at 31 December 2018 by Premier Pensions Management, independent consulting actuaries.
+
+The amounts recognised are as follows:
+
+2018 2017
+£7000 £°000
+Present value of funded obligations (5,799) (6,130)
+Fair value of plan assets 5,949 5,969
+Gross pension asset /(liability)* 150 (161)
+Deferred tax asset - 27
+Net pension asset/ (liability) . 150 (134)
+*The gross pension asset has been restricted to Nil.
+The amounts recognised in profit or loss is as follows:
+2018 2017
+£000 £°000
+Interest income 85 138
+Interest expense (145) (163)
+Net interest expense (60) (25)
+The amounts recognised in other comprehensive income are as follows:
+2018 2017
+£7000 £000
+*Gains and losses during the year 221 836
+Movement in related deferred tax asset (27) (138)
+Gains recognised in Statement of Comprehensive Income 194 698
+
+*The gains and losses comprise an actuarial gain of £181k (2017:£836k) and £40k (2017:£Nil) contribution by
+the Company. The £40k (2017: £Nil) has been expensed by the Company as part of the administrative costs.
+
+67
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+23.
+
+. Post-employment benefits (continued)
+
+United National Bank Limited Pension and Life Assurance Scheme (continued)
+
+Changes in the present value of the defined benefit obligation are as follows:
+
+2018 2017
+
+£°000 £’000
+
+As at | January 6,130 6,350
+
+Interest expense 202 163
+
+Actuarial gain (385) (188)
+
+Benefits paid (148) (195)
+
+Balance at 31 December 5,799 6,130
+
+Changes in the fair value of plan assets are as follows:
+
+2018 2017
+
+£000 £°000
+
+As at 1 January 5,969 5,378
+
+Interest income 142 138
+
+Actuarial (losses)/gain (54) 648
+
+Employer contribution 40 -
+Benefits paid _ (148) (195) ©
+
+Balance at 31 December $,949 5,969
+
+The major categories of plan assets as a percentage of total plan assets are as follows:
+
+2018 2017
+Insurance policies 66.47% 64.68%
+Guaranteed Annuities Rates 7.00% 7.90%
+Annuities 26.53% 27.42%
+Total 100.00% 100.00%
+The fair values of plan assets were as follows:
+2018 2017
+£000 £7000
+Insurance policies 3,954 3,821
+Guaranteed Annuity Rates 417 472
+Annuities 1,578 1,676
+Total 5,949 5,969 |
+
+The liabilities and assets of the Scheme noted in the tables above relate to those employees for whom the
+Company has a funding liability.
+
+The asset value supplied by the insurance company for 2018 is on an ongoing basis. If the policy had been
+surrendered at 31 December 2018 the surrender value would have been £3,954,000 (2017: £3,821,000). It is
+not the Company’s intention to surrender the policy.
+
+68
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+23.
+
+24,
+
+25.
+
+Post-employment benefits (continued)
+United National Bank Limited Pension and Life Assurance Scheme (continued)
+Principal assumptions are set out below:
+
+The pension plan has not invested in any of the Company’s own financial instruments or other assets of the
+Company. Principal actuarial assumptions at the reporting date (expressed as weighted averages) are set out
+below:
+
+2018 2017
+.Rate of increase of pensions in payment 3.00% 3.00%
+Rate of revaluation of pensions in deferment me 2.50% 2.50%
+Discount rate 2.75% 2.40%
+Price inflation (RPD 3.40% 3.40%
+Price inflation (CPT) 2.60% 2.60%
+Expected return on assets 2.75% 2.40%
+Post retirement mortality
+Current pensioners at 65 - male 86.8 86.9
+Current pensioners at 65 - female 88.7 88.8
+Future pensioners at 65 - male 87.9 88.1
+Future pensioners at 65 - female 90.0 90.0
+
+Total charge for the year (see note 3)
+
+The total amount charged (excluding amounts debited to net interest income) during the year in respect of the
+defined benefit contribution scheme and other money purchase schemes amounted to £737,264 (2017:
+£524,014). The charge (current service cost) for the defined benefit scheme was £40,000 (2017: £Nil).
+
+Of the contributions paid in the year, £32,607 (2017: £25,100) was made on behalf of directors. It is estimated
+that contributions of £625,409 would be made to the defined contribution scheme in 2019 and £43,769 to the
+defined benefit scheme.
+
+Ordinary dividend paid
+
+No Ordinary dividends were paid in 2018 (2017: £2.2million). The directors, at their Board meeting held on 25
+February 2018, did not declare an ordinary dividend for the financial year ended 31 December 2018.
+
+Ultimate parent company and controlling party
+In 2011, Bestway (Holdings) Limited, a company incorporated in the UK acquired a majority interest. in
+
+United Bank Limited, a company incorporated in Pakistan making it the ultimate parent company and
+
+controlling party. The Bestway Group underwent an internal reorganisation on 21 March 2018. A new holding
+company called Bestway Group Limited was introduced into the Bestway group holding structure above
+Bestway (Holdings) Limited. Bestway Group Limited is now the ultimate parent of United National Bank
+Limited. Bestway Group Limited is the largest group of accounts in which United National Bank Limited is
+consolidated. Copies of such accounts can be obtained from the Company Secretary, Bestway Group Limited,
+2 Abbey Road, Park Royal, London NW10 7BW. ;
+
+The immediate parent company and controlling party of United National Bank Limited is United Bank
+Limited, a company incorporated in Pakistan and the parent undertaking of the smallest group of which the
+Company is a member and for which group accounts are prepared. Copies of such accounts may be obtained
+from the Company Secretary, United Bank Limited, I.1.Chundrigar Road, Karachi, Pakistan. The shareholding
+structure of the Company is set out in note 19.
+
+69
+United National Bank Limited
+
+Notes to the accounts
+Year ended 31 December 2018
+
+26.
+
+27.
+
+Related party transactions
+
+During the year, two related companies undertook commercial arm’s length transactions with the Company,
+mainly in the form of deposits placed with the Company. Below are details of amounts due to / from each
+
+_ party as at 31 December 2018 and 31 December 2017.
+
+United Bank Ltd
+
+2018
+
+£7000
+
+- Loans to 5,851
+Deposits from 14,094
+Subordinated loan issued to -
+Contingent letter of credit liabilities -
+Forward FX purchases -
+Forward FX sales -
+Interest receivable from 585
+Interest payable to 2
+Preference share dividend paid to 306
+
+2017
+£7000
+7,370
+3,923
+2,015
+
+164
+51
+728
+
+2018
+£7000
+216
+145
+
+National Bank of
+Pakistan
+
+2017 ~
+£7000
+590
+4,542
+
+10
+
+During 2013, United Bank Limited converted their preference share dividend in respect of 2012 into a
+subordinated loan of £2,006,000. The loan was for a term of 5 years and was fully repaid in October 2018.
+
+In 2016, the Company issued a personal loan to Mr M Aminuddin, a director. As at 31 December 2018, the
+outstanding balance on the loan was £Nil (2017: £23,982). An amount of £Nil (2017: £1,036) was charged as
+interest during the year. As at 31 December 2018, Mr M Aminuddin had deposits of £Nil (2017: £65). An
+
+amount of £Nil (2017: £Nil) was paid as interest in respect of these deposits.
+
+Events after the balance sheet date
+
+There have been no significant events between the year end and the date of approval of the accounts which
+
+would require a change or additional disclosure in the accounts.
+
+70

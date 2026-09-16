@@ -4,13 +4,16 @@ from bank_workbook import BankWorkbook
 
 # Brown Shipley & Co. Limited (Companies House 00398426, FRN 124548), a UK
 # subsidiary of Quintet Private Bank (Luxembourg), calendar fiscal year-end.
-# FY2025 accounts were filed with Companies House on 26 Aug 2026 but are still
-# "being processed" (no document available yet) as of this build - workbook
-# therefore covers FY2021-FY2024 (4 years), not the usual 5.
-YEARS = ["FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
+# FY2025 ADDED 2026-09-16 (KM1-008 latest-edition check): the FY2025 full
+# accounts, made up to 31 December 2025 and filed 26 Aug 2026, had been
+# "being processed" with no document available at the previous build; they are
+# now served and are transcribed here into every sheet they support. Workbook
+# therefore covers FY2021-FY2025 (5 years).
+YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
 YEAR_LABEL = {y: y for y in YEARS}
 
 CH_BASE = "https://find-and-update.company-information.service.gov.uk/company/00398426/filing-history"
+AR2025_URL = f"{CH_BASE}/MzU0MDUzNTc4OWFkaXF6a2N4/document?format=pdf&download=0"
 AR2024_URL = f"{CH_BASE}/MzQ3ODk2Mjk5OWFkaXF6a2N4/document?format=pdf&download=0"
 AR2023_URL = f"{CH_BASE}/MzQzMTg2OTM1MGFkaXF6a2N4/document?format=pdf&download=0"
 AR2022_URL = f"{CH_BASE}/MzM5MTEwMDM3NGFkaXF6a2N4/document?format=pdf&download=0"
@@ -61,6 +64,7 @@ ENTITY_NOTE = (
 CASH_FLOW_SOURCES = (
     "Sources - all figures are Brown Shipley & Co. Limited's own Cash Flow Statement, transcribed from each "
     "year's own Companies House filing (not a later year's comparative column, per this project's convention):\n"
+    f"FY2025: Annual Report 2025 (filed 26 Aug 2026), p.44 (Cash Flow Statement) - {AR2025_URL}\n"
     f"FY2024: Annual Report 2024 (filed 28 Aug 2025), p.42 (Cash Flow Statement) - {AR2024_URL}\n"
     f"FY2023: Annual Report 2023 (filed 19 Aug 2024), p.39 (Cash Flow Statement) - {AR2023_URL}\n"
     f"FY2022: Annual Report 2022 (filed 01 Sep 2023), p.38 (Cash Flow Statement) - {AR2022_URL}\n"
@@ -79,6 +83,9 @@ def p3_sources():
     return (
         "Sources - Brown Shipley & Co. Limited's own Strategic Report 'Regulatory measures' KPI disclosure "
         "(narrative percentages only), transcribed from each year's own Companies House filing:\n"
+        f"FY2025: Annual Report 2025, p.5 (Strategic Report, 'Regulatory measures': \"Common Equity Tier 1 ratio "
+        f"('CET1') decreased to 18.6% from 21.6% and Liquidity Coverage Ratio ('LCR') decreased to 228% compared "
+        f"to 236% in prior year.\") - {AR2025_URL}\n"
         f"FY2024: Annual Report 2024, p.6 (Strategic Report, 'Regulatory measures') - {AR2024_URL}\n"
         f"FY2023: Annual Report 2023, p.6 (Strategic Report, 'Regulatory measures') - {AR2023_URL}\n"
         f"FY2022: Annual Report 2022, p.6 (Strategic Report, 'Regulatory measures' (c)) - {AR2022_URL}\n"
@@ -104,6 +111,8 @@ def capital_note_sources():
         "Sources - Brown Shipley & Co. Limited's own 'Capital' note (Note 35 in the FY2022-FY2024 accounts, Note "
         "36 in the FY2021 accounts - that year's notes are numbered one higher throughout), 'Unaudited Regulatory "
         "Capital at 31 December' table, transcribed from each year's own Companies House filing:\n"
+        f"FY2025: Annual Report 2025, p.79 (Note 38, 'Capital', 'Regulatory Capital at 31 December "
+        f"(unaudited)') - {AR2025_URL}\n"
         f"FY2024: Annual Report 2024, p.73 (Note 35, 'Capital') - {AR2024_URL}\n"
         f"FY2023: Annual Report 2023, pp.69-70 (Note 35, 'Capital') - {AR2023_URL}\n"
         f"FY2022: Annual Report 2022, pp.69-70 (Note 35, 'Capital') - {AR2022_URL}\n"
@@ -120,6 +129,7 @@ def capital_note_sources():
         "(Template UK KM1 rows 2-3) states Total capital = Tier 1 capital, confirming Tier 2 = nil, which is "
         "what now allows the Total Capital and Total Capital Ratio sheets to be populated - see those sheets for "
         "the full derivation.\n\n"
+        + FY2025_RESTATEMENT_NOTE + "\n\n"
         + ENTITY_NOTE
     )
 
@@ -134,8 +144,30 @@ PILLAR3_DOC_NOTE = (
     "index (7,140 archived URLs checked on 2026-09-15; 'pillar-3-disclosure-2024-final-draft_cleanv2.pdf' is the "
     "only Pillar 3 document of any year), nor on quintet.com (11,645 archived URLs checked - that domain holds "
     "only Quintet GROUP Pillar 3 reports, which are consolidated Luxembourg-group disclosures and are therefore "
-    "not usable here; Quintet's own 2021 group Pillar 3 mentions Brown Shipley exactly once, and only in respect "
-    "of large-exposure limits, with no Brown Shipley own-funds table). INTERNAL INCONSISTENCY IN THE SOURCE: the "
+    "not usable here).\n"
+    "THE PARENT'S PILLAR 3 WAS READ, NOT JUST SEARCHED FOR - ALL FIVE YEAR-END EDITIONS (checked 2026-09-16, "
+    "extending an earlier check that had covered only the 2021 edition). This matters because a UK subsidiary's "
+    "figures are NORMALLY published inside its parent's Pillar 3 - as a column of the parent's own table, or as "
+    "a separate table in an appendix - so 'the subsidiary publishes nothing for that year' cannot be asserted "
+    "until the parent's shelf has been looked at. Quintet Private Bank (Europe) S.A. maintains a complete Pillar "
+    "3 archive on its own investor-relations page (quintet.com/en-gb/about-quintet/investor-relations), "
+    "including half-year editions. The five year-end reports - YE2021, YE2022, YE2023, YE2024 and YE2025 - were "
+    "downloaded and read in full (all HTTP 200, application/pdf, %PDF magic bytes; 65, 72, 77, 61 and 31 pages). "
+    "FINDING, ON POSITIVE EVIDENCE RATHER THAN A FAILED SEARCH: there is no Brown Shipley block of any shape in "
+    "any of them. 'Brown Shipley' or 'BSCo' appears 1-6 times per edition and ONLY in narrative - the "
+    "abbreviations glossary, the scope-of-consolidation paragraph, large-exposure limits and liquidity-"
+    "governance prose. There is no BSCo column, no BSCo table and no BSCo appendix. Quintet's own key-metrics "
+    "table is the EU KM1 template (EBA/ITS/2020/04), and its columns are QUARTERS of the consolidated group "
+    "(2025-12-31, 2025-09-30, 2025-06-30, 2025-03-31, 2024-12-31), in EUR million - not entities. The decisive "
+    "sentence is the parent's own scope paragraph, which every edition prints: 'All figures published in this "
+    "report refer to Group consolidated figures, unless otherwise stated. When \"Quintet Europe\" is mentioned "
+    "in this report, it refers to the Luxembourg Headquarters and its EU-based branches, but excluding the "
+    "subsidiary Brown Shipley (BSCo) in the United Kingdom.' So Brown Shipley is CONSOLIDATED INTO the parent's "
+    "figures and is never broken out beside them; the prudential scope of consolidation is stated to be "
+    "identical to the accounting scope. A Quintet group ratio is therefore not a Brown Shipley ratio and must "
+    "never be carried onto these sheets. THE PARENT SHELF IS CHECKED AND EMPTY - this is a fact about Quintet's "
+    "disclosure design, not about our reach, and it should not need re-checking.\n"
+    "INTERNAL INCONSISTENCY IN THE SOURCE: the "
     "2024 report states its LCR and NSFR twice with different values - template UK KM1 (and the report's own "
     "front 'Key Prudential Risk Ratios' summary, s.1.1) give LCR 236% and NSFR 162%, while the narrative "
     "ss.11.3-11.4 and templates UK LIQ1/LIQ2 give LCR 216% and NSFR 157% off different underlying totals (KM1 "
@@ -186,11 +218,52 @@ STATEMENTS_SOURCES = (
     "Sources - Brown Shipley & Co. Limited's own Income Statement / Statement of Financial Position / Statement "
     "of Changes in Equity, transcribed from each year's own Companies House filing (not a later year's "
     "comparative column):\n"
+    f"FY2025: Annual Report 2025, pp.40-43 (Income Statement p.40, Statement of Comprehensive Income p.41, "
+    f"Statement of Financial Position p.42, Statement of Changes in Equity p.43) - {AR2025_URL}\n"
     f"FY2024: Annual Report 2024, pp.38,40-41 - {AR2024_URL}\n"
     f"FY2023: Annual Report 2023, pp.35,37-38 - {AR2023_URL}\n"
     f"FY2022: Annual Report 2022, pp.34,36-37 - {AR2022_URL}\n"
     f"FY2021: Annual Report 2021, pp.32,34-35 - {AR2021_URL}\n\n"
     + ENTITY_NOTE
+)
+
+FY2025_RESTATEMENT_NOTE = (
+    "FY2024 RESTATED BY THE FY2025 ACCOUNTS - RECORDED, NOT ADOPTED (added 2026-09-16). The FY2025 Annual "
+    "Report heads its 2024 comparative column \"(Restated)\" on the Income Statement, the Statement of "
+    "Financial Position and the Cash Flow Statement. Per this project's convention each year's column shows "
+    "that year's own originally-published figures, so the FY2024 column here is unchanged; the restated "
+    "values are recorded below so neither version is lost.\n"
+    "• INCOME STATEMENT - \"a reclassification between operating expenses and impairments\" with, in the "
+    "Bank's own words, \"no overall impact to the 2024 income or profit figures\". Restated FY2024: net "
+    "gain from financial instruments at fair value 21 (as published 4,620); other operating income 15,917 "
+    "(11,318); the provisions line recaptioned \"Legal and Other claims\" at (353) (as published \"Net "
+    "(increase)/decrease in provisions\" (361)); total operating expenses (84,365) - unchanged; and the "
+    "single \"Impairment of assets\" (3,253) split into \"Impairment of Financial assets\" (958) and "
+    "\"Impairment of Non Financial assets\" (2,303), totalling (3,261) rather than (3,253). Net operating "
+    "income 95,421, profit before tax 7,803 and profit for the year 4,084 are unchanged.\n"
+    "• STATEMENT OF FINANCIAL POSITION - \"restated under assets and liabilities with no overall impact to "
+    "the 2024 total equity\". Restated FY2024 total assets 1,219,640 (as published 1,218,044) and total "
+    "liabilities 1,086,687 (1,085,091); total equity 132,953 unchanged. The movement is the introduction of "
+    "a separate \"Cash and cash equivalents\" asset line of 8,276 (broker settlement balances), loans and "
+    "advances to banks 283,502 (as published 290,450), other receivables 8,330 "
+    "(8,062), other liabilities 31,043 (29,447), a new \"Impairment on Credit facilities\" liability of 11, "
+    "and provisions 360 (371). Per note 13's own footnote the reclassification moves £0.6m of Client Money "
+    "to Other Receivables and a £1.6m faster-payments Settlement Account to Other Liabilities.\n"
+    "• CASH FLOW STATEMENT - restated FY2024 opening cash 567,335 and closing cash 293,838, against 586,631 "
+    "and 374,909 as published, because loans and advances to banks repayable within three months are no "
+    "longer treated as cash equivalents. The FY2025 column therefore OPENS at 293,838 while the FY2024 "
+    "column CLOSES at 374,909: that discontinuity is the restatement, not a transcription error. Restated "
+    "FY2024 operating cash flow is (272,334) against (210,559) as published, investing 2,332 unchanged, "
+    "financing (3,495) unchanged.\n"
+    "• A SOURCE DEFECT, recorded not corrected: note 13's own footnote to that table reads \"The Cash and "
+    "cash equivalents at 2024 has increased by £1.3m to £376.2m\", which matches neither the 293,838 "
+    "restated nor the 374,909 originally-published figure printed in the same document.\n"
+    "• REGULATORY CAPITAL - the FY2025 \"Capital\" note heads its 2024 column \"(Restated)\" too, and says: "
+    "\"Prior year Total Common Equity Tier One Capital ('CET1') has been restated to deduct the AT1 Coupon "
+    "of £1,114m and restate prior year retained earnings. This increases the prior year Common Equity Tier "
+    "1 Capital from £94,885k to £94,905k.\" Total Tier One Capital restates from 104,885 to 104,905 with "
+    "it. The FY2024 columns on the CET1 Capital, Tier 1 Capital and Total Capital sheets keep the "
+    "as-published 94,885 / 104,885."
 )
 
 PRESENTATION_NOTE = (
@@ -216,45 +289,49 @@ PRESENTATION_NOTE = (
 # ---------------------------------------------------------------
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances at central banks", {"FY2024": 292700, "FY2023": 528997, "FY2022": 456835, "FY2021": 236409}),
-    ("DATA", "Loans and advances to banks", {"FY2024": 290450, "FY2023": 276949, "FY2022": 222163, "FY2021": 86610}),
-    ("DATA", "Loans and advances to customers", {"FY2024": 483277, "FY2023": 554649, "FY2022": 646794, "FY2021": 565574}),
-    ("DATA", "Derivative financial instruments - held for trading", {"FY2024": 3785, "FY2023": 4148, "FY2022": 5795, "FY2021": 1952}),
-    ("DATA", "Investments - non-trading at fair value through profit or loss", {"FY2024": 764, "FY2023": 405, "FY2022": 359, "FY2021": 698}),
-    ("DATA", "Debt securities at amortised cost", {"FY2024": 105293, "FY2023": 111833, "FY2022": 117333, "FY2021": 188307}),
-    ("DATA", "Other receivables", {"FY2024": 8062, "FY2023": 11639, "FY2022": 8569, "FY2021": 12597}),
-    ("DATA", "Property and equipment", {"FY2024": 9248, "FY2023": 11612, "FY2022": 14021, "FY2021": 14917}),
-    ("DATA", "Goodwill and other intangible assets", {"FY2024": 22250, "FY2023": 28205, "FY2022": 34538, "FY2021": 42818}),
-    ("DATA", "Investment in subsidiaries", {"FY2024": 293, "FY2023": 293, "FY2022": 293, "FY2021": 293}),
-    ("DATA", "Current tax asset", {"FY2021": 385}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 177807, "FY2024": 292700, "FY2023": 528997, "FY2022": 456835, "FY2021": 236409}),
+    ("DATA", "Cash and cash equivalents (broker settlement balances; line first presented FY2025)", {"FY2025": 9144}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 95652, "FY2024": 290450, "FY2023": 276949, "FY2022": 222163, "FY2021": 86610}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 351919, "FY2024": 483277, "FY2023": 554649, "FY2022": 646794, "FY2021": 565574}),
+    ("DATA", "Derivative financial instruments - held for trading", {"FY2025": 1922, "FY2024": 3785, "FY2023": 4148, "FY2022": 5795, "FY2021": 1952}),
+    ("DATA", "Investments - non-trading at fair value through profit or loss", {"FY2025": 831, "FY2024": 764, "FY2023": 405, "FY2022": 359, "FY2021": 698}),
+    ("DATA", "Debt securities at amortised cost", {"FY2025": 280069, "FY2024": 105293, "FY2023": 111833, "FY2022": 117333, "FY2021": 188307}),
+    ("DATA", "Other receivables", {"FY2025": 13161, "FY2024": 8062, "FY2023": 11639, "FY2022": 8569, "FY2021": 12597}),
+    ("DATA", "Assets held for sale", {"FY2025": 25450}),
+    ("DATA", "Property and equipment", {"FY2025": 5991, "FY2024": 9248, "FY2023": 11612, "FY2022": 14021, "FY2021": 14917}),
+    ("DATA", "Goodwill and other intangible assets", {"FY2025": 19596, "FY2024": 22250, "FY2023": 28205, "FY2022": 34538, "FY2021": 42818}),
+    ("DATA", "Investment in subsidiaries", {"FY2025": 293, "FY2024": 293, "FY2023": 293, "FY2022": 293, "FY2021": 293}),
+    ("DATA", "Current tax asset", {"FY2025": 232, "FY2021": 385}),
     ("DATA", "Deferred tax asset", {"FY2022": 213, "FY2021": 1717}),
-    ("DATA", "Defined Benefit Pension Scheme (asset)", {"FY2024": 1922, "FY2023": 441, "FY2022": 187}),
-    ("TOTAL", "Total assets", {"FY2024": 1218044, "FY2023": 1529171, "FY2022": 1507100, "FY2021": 1152277}),
+    ("DATA", "Defined Benefit Pension Scheme (asset)", {"FY2025": 2593, "FY2024": 1922, "FY2023": 441, "FY2022": 187}),
+    ("TOTAL", "Total assets", {"FY2025": 984660, "FY2024": 1218044, "FY2023": 1529171, "FY2022": 1507100, "FY2021": 1152277}),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Deposits from banks", {"FY2024": 7138, "FY2023": 9131, "FY2022": 13740, "FY2021": 4713}),
-    ("DATA", "Deposits from customers", {"FY2024": 1046365, "FY2023": 1353609, "FY2022": 1321391, "FY2021": 971736}),
-    ("DATA", "Derivative financial instruments - held for trading", {"FY2024": 11, "FY2023": 1417, "FY2022": 1846, "FY2021": 207}),
-    ("DATA", "Other liabilities", {"FY2024": 29447, "FY2023": 34773, "FY2022": 36539, "FY2021": 37230}),
+    ("DATA", "Deposits from banks", {"FY2025": 5537, "FY2024": 7138, "FY2023": 9131, "FY2022": 13740, "FY2021": 4713}),
+    ("DATA", "Deposits from customers", {"FY2025": 852341, "FY2024": 1046365, "FY2023": 1353609, "FY2022": 1321391, "FY2021": 971736}),
+    ("DATA", "Derivative financial instruments - held for trading", {"FY2025": 443, "FY2024": 11, "FY2023": 1417, "FY2022": 1846, "FY2021": 207}),
+    ("DATA", "Other liabilities", {"FY2025": 24968, "FY2024": 29447, "FY2023": 34773, "FY2022": 36539, "FY2021": 37230}),
+    ("DATA", "Impairment on Credit facilities (line first presented FY2025)", {"FY2025": 5}),
     ("DATA", "Defined Benefit Pension Scheme (liability)", {"FY2021": 4423}),
-    ("DATA", "Provisions", {"FY2024": 371, "FY2023": 143, "FY2022": 2719, "FY2021": 6893}),
+    ("DATA", "Provisions", {"FY2025": 473, "FY2024": 371, "FY2023": 143, "FY2022": 2719, "FY2021": 6893}),
     ("DATA", "Current tax liability", {"FY2024": 1757, "FY2023": 929, "FY2022": 184}),
-    ("DATA", "Deferred tax liability", {"FY2024": 2, "FY2023": 30}),
-    ("TOTAL", "Total liabilities", {"FY2024": 1085091, "FY2023": 1400032, "FY2022": 1376419, "FY2021": 1025202}),
+    ("DATA", "Deferred tax liability", {"FY2025": 278, "FY2024": 2, "FY2023": 30}),
+    ("TOTAL", "Total liabilities", {"FY2025": 884045, "FY2024": 1085091, "FY2023": 1400032, "FY2022": 1376419, "FY2021": 1025202}),
     ("SECTION", "Equity", {}),
-    ("DATA", "Called up share capital", {"FY2024": 81824, "FY2023": 81824, "FY2022": 81824, "FY2021": 81824}),
-    ("DATA", "Additional Tier 1 Equity Capital", {"FY2024": 10000, "FY2023": 10000, "FY2022": 10000, "FY2021": 10000}),
-    ("DATA", "Retained earnings", {"FY2024": 41129, "FY2023": 37315, "FY2022": 38857, "FY2021": 35251}),
-    ("TOTAL", "Total equity", {"FY2024": 132953, "FY2023": 129139, "FY2022": 130681, "FY2021": 127075}),
-    ("TOTAL", "Total liabilities and equity", {"FY2024": 1218044, "FY2023": 1529171, "FY2022": 1507100, "FY2021": 1152277}),
+    ("DATA", "Called up share capital", {"FY2025": 81824, "FY2024": 81824, "FY2023": 81824, "FY2022": 81824, "FY2021": 81824}),
+    ("DATA", "Additional Tier 1 Equity Capital", {"FY2025": 10000, "FY2024": 10000, "FY2023": 10000, "FY2022": 10000, "FY2021": 10000}),
+    ("DATA", "Retained earnings", {"FY2025": 8791, "FY2024": 41129, "FY2023": 37315, "FY2022": 38857, "FY2021": 35251}),
+    ("TOTAL", "Total equity", {"FY2025": 100615, "FY2024": 132953, "FY2023": 129139, "FY2022": 130681, "FY2021": 127075}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 984660, "FY2024": 1218044, "FY2023": 1529171, "FY2022": 1507100, "FY2021": 1152277}),
 ]
 
 bw.add_balance_sheet_sheet(
     title="Brown Shipley & Co. Limited — Statement of Financial Position",
-    subtitle="Company (entity-level) basis, £'000. FY2025 not yet available - see source note.",
+    subtitle="Company (entity-level) basis, £'000. Each year as that year's own report originally published it; "
+             "the FY2025 report restates FY2024 - see source note.",
     rows=balance_sheet_rows,
-    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + FY2025_RESTATEMENT_NOTE + "\n\n" + PRESENTATION_NOTE,
     first_col_width=68,
-    source_height=380,
+    source_height=520,
     unit_suffix=" (£'000)",
 )
 
@@ -263,41 +340,44 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 income_statement_rows = [
     ("SECTION", "Income", {}),
-    ("DATA", "Interest and similar income", {"FY2024": 83170, "FY2023": 90709, "FY2022": 33998, "FY2021": 13124}),
-    ("DATA", "Interest and similar expense", {"FY2024": -58552, "FY2023": -63253, "FY2022": -16047, "FY2021": -3827}),
-    ("TOTAL", "Net interest income", {"FY2024": 24618, "FY2023": 27456, "FY2022": 17951, "FY2021": 9297}),
-    ("DATA", "Fee and commission income", {"FY2024": 58352, "FY2023": 60023, "FY2022": 59780, "FY2021": 64976}),
-    ("DATA", "Fee and commission expense", {"FY2024": -3494, "FY2023": -3136, "FY2022": -2120, "FY2021": -1824}),
-    ("TOTAL", "Net fee and commission income", {"FY2024": 54858, "FY2023": 56887, "FY2022": 57660, "FY2021": 63152}),
-    ("DATA", "Dividend income", {"FY2024": 7, "FY2023": 7, "FY2022": 8, "FY2021": 8}),
-    ("DATA", "Net gains from financial instruments at fair value through profit or loss", {"FY2024": 4620, "FY2023": 3356, "FY2022": 7718, "FY2021": 3559}),
+    ("DATA", "Interest and similar income", {"FY2025": 54378, "FY2024": 83170, "FY2023": 90709, "FY2022": 33998, "FY2021": 13124}),
+    ("DATA", "Interest and similar expense", {"FY2025": -32576, "FY2024": -58552, "FY2023": -63253, "FY2022": -16047, "FY2021": -3827}),
+    ("TOTAL", "Net interest income", {"FY2025": 21802, "FY2024": 24618, "FY2023": 27456, "FY2022": 17951, "FY2021": 9297}),
+    ("DATA", "Fee and commission income", {"FY2025": 53367, "FY2024": 58352, "FY2023": 60023, "FY2022": 59780, "FY2021": 64976}),
+    ("DATA", "Fee and commission expense", {"FY2025": -2759, "FY2024": -3494, "FY2023": -3136, "FY2022": -2120, "FY2021": -1824}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 50608, "FY2024": 54858, "FY2023": 56887, "FY2022": 57660, "FY2021": 63152}),
+    ("DATA", "Dividend income", {"FY2025": 6, "FY2024": 7, "FY2023": 7, "FY2022": 8, "FY2021": 8}),
+    ("DATA", "Net gains/(losses) from financial instruments at fair value through profit or loss", {"FY2025": -682, "FY2024": 4620, "FY2023": 3356, "FY2022": 7718, "FY2021": 3559}),
     ("DATA", "Net losses from financial instruments not measured at fair value through profit or loss", {"FY2021": 0}),
-    ("DATA", "Other operating income", {"FY2024": 11318, "FY2023": 8017, "FY2022": 9688, "FY2021": 14866}),
-    ("TOTAL", "Net operating income", {"FY2024": 95421, "FY2023": 95723, "FY2022": 93025, "FY2021": 90882}),
+    ("DATA", "Other operating income", {"FY2025": 18385, "FY2024": 11318, "FY2023": 8017, "FY2022": 9688, "FY2021": 14866}),
+    ("TOTAL", "Net operating income", {"FY2025": 90119, "FY2024": 95421, "FY2023": 95723, "FY2022": 93025, "FY2021": 90882}),
     ("SECTION", "Expenses", {}),
-    ("DATA", "Staff expenses", {"FY2024": -44065, "FY2023": -53830, "FY2022": -53667, "FY2021": -52755}),
-    ("DATA", "General administrative expenses", {"FY2024": -33199, "FY2023": -31153, "FY2022": -27501, "FY2021": -23574}),
-    ("DATA", "Depreciation of property and equipment", {"FY2024": -3563, "FY2023": -3392, "FY2022": -3123, "FY2021": -2695}),
-    ("DATA", "Amortisation of intangible assets", {"FY2024": -3177, "FY2023": -3501, "FY2022": -3805, "FY2021": -3939}),
-    ("DATA", "Net (increase)/decrease in provisions", {"FY2024": -361, "FY2023": 850, "FY2022": 0, "FY2021": -2516}),
-    ("TOTAL", "Total operating expenses", {"FY2024": -84365, "FY2023": -91026, "FY2022": -88096, "FY2021": -85479}),
-    ("DATA", "Impairment of assets", {"FY2024": -3253, "FY2023": -3474, "FY2022": -2594, "FY2021": -96}),
-    ("TOTAL", "Profit before tax", {"FY2024": 7803, "FY2023": 1223, "FY2022": 2335, "FY2021": 5307}),
-    ("DATA", "Income tax (charge)/credit", {"FY2024": -3719, "FY2023": -1835, "FY2022": -1224, "FY2021": -2399}),
-    ("TOTAL", "Profit/(loss) for the year", {"FY2024": 4084, "FY2023": -612, "FY2022": 1111, "FY2021": 2908}),
+    ("DATA", "Staff expenses", {"FY2025": -44589, "FY2024": -44065, "FY2023": -53830, "FY2022": -53667, "FY2021": -52755}),
+    ("DATA", "General administrative expenses", {"FY2025": -30470, "FY2024": -33199, "FY2023": -31153, "FY2022": -27501, "FY2021": -23574}),
+    ("DATA", "Depreciation of property and equipment", {"FY2025": -3390, "FY2024": -3563, "FY2023": -3392, "FY2022": -3123, "FY2021": -2695}),
+    ("DATA", "Amortisation of intangible assets", {"FY2025": -1481, "FY2024": -3177, "FY2023": -3501, "FY2022": -3805, "FY2021": -3939}),
+    ("DATA", "Net (increase)/decrease in provisions (FY2025 caption: 'Legal and Other claims')", {"FY2025": -610, "FY2024": -361, "FY2023": 850, "FY2022": 0, "FY2021": -2516}),
+    ("TOTAL", "Total operating expenses", {"FY2025": -80540, "FY2024": -84365, "FY2023": -91026, "FY2022": -88096, "FY2021": -85479}),
+    ("DATA", "Impairment of assets (single line, FY2021-FY2024 presentation)", {"FY2024": -3253, "FY2023": -3474, "FY2022": -2594, "FY2021": -96}),
+    ("DATA", "Impairment of Financial assets (line first presented FY2025)", {"FY2025": -67}),
+    ("DATA", "Impairment of Non Financial assets (line first presented FY2025)", {"FY2025": -1155}),
+    ("TOTAL", "Profit before tax", {"FY2025": 8357, "FY2024": 7803, "FY2023": 1223, "FY2022": 2335, "FY2021": 5307}),
+    ("DATA", "Income tax (charge)/credit", {"FY2025": -2507, "FY2024": -3719, "FY2023": -1835, "FY2022": -1224, "FY2021": -2399}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2025": 5850, "FY2024": 4084, "FY2023": -612, "FY2022": 1111, "FY2021": 2908}),
     ("SECTION", "Other comprehensive income", {}),
-    ("DATA", "Actuarial gain/(loss) on Defined Benefit Pension Scheme", {"FY2024": 1154, "FY2023": -63, "FY2022": 4391, "FY2021": 2131}),
-    ("DATA", "Deferred tax (debit)/credit on pension scheme", {"FY2024": -288, "FY2023": 16, "FY2022": -1245, "FY2021": -75}),
-    ("TOTAL", "Total comprehensive income/(loss) for the year", {"FY2024": 4950, "FY2023": -659, "FY2022": 4257, "FY2021": 4964}),
+    ("DATA", "Actuarial gain/(loss) on Defined Benefit Pension Scheme", {"FY2025": 568, "FY2024": 1154, "FY2023": -63, "FY2022": 4391, "FY2021": 2131}),
+    ("DATA", "Deferred tax (debit)/credit on pension scheme", {"FY2025": -142, "FY2024": -288, "FY2023": 16, "FY2022": -1245, "FY2021": -75}),
+    ("TOTAL", "Total comprehensive income/(loss) for the year", {"FY2025": 6276, "FY2024": 4950, "FY2023": -659, "FY2022": 4257, "FY2021": 4964}),
 ]
 
 bw.add_income_statement_sheet(
     title="Brown Shipley & Co. Limited — Income Statement",
-    subtitle="Company (entity-level) basis, £'000. FY2025 not yet available - see source note.",
+    subtitle="Company (entity-level) basis, £'000. Each year as that year's own report originally published it; "
+             "the FY2025 report restates FY2024 - see source note.",
     rows=income_statement_rows,
-    sources_text=STATEMENTS_SOURCES + "\n\n" + PRESENTATION_NOTE,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + FY2025_RESTATEMENT_NOTE + "\n\n" + PRESENTATION_NOTE,
     first_col_width=78,
-    source_height=380,
+    source_height=520,
     unit_suffix=" (£'000)",
 )
 
@@ -318,6 +398,10 @@ equity_changes_rows = [
     ("DATA", "Additional Tier 1 Equity Capital coupon paid to parent (FY2024)", (None, None, -1136, -1136)),
     ("DATA", "Total comprehensive income for the year (FY2024)", (None, None, 4950, 4950)),
     ("TOTAL", "At 31 December 2024", (81824, 10000, 41129, 132953)),
+    ("DATA", "Additional Tier 1 Equity Capital coupon paid to parent (FY2025)", (None, None, -1114, -1114)),
+    ("DATA", "Dividend paid to shareholder (FY2025)", (None, None, -37500, -37500)),
+    ("DATA", "Total comprehensive income for the year (FY2025)", (None, None, 6276, 6276)),
+    ("TOTAL", "At 31 December 2025", (81824, 10000, 8791, 100615)),
 ]
 
 bw.add_equity_changes_sheet(
@@ -335,55 +419,61 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 rows = [
     ("SECTION", "Operating activities", {}),
-    ("DATA", "Net profit before tax on continuing activities", {"FY2024": 7803, "FY2023": 1223, "FY2022": 2335, "FY2021": 5307}),
-    ("DATA", "Changes in operating assets", {"FY2024": 99240, "FY2023": -12578, "FY2022": -67317, "FY2021": -149872}),
-    ("DATA", "Changes in operating liabilities", {"FY2024": -317156, "FY2023": 30240, "FY2022": 349131, "FY2021": 164590}),
-    ("DATA", "Dividend receivable", {"FY2024": -7, "FY2023": -7, "FY2022": -8, "FY2021": -8}),
+    ("DATA", "Net profit before tax on continuing activities", {"FY2025": 8357, "FY2024": 7803, "FY2023": 1223, "FY2022": 2335, "FY2021": 5307}),
+    ("DATA", "Changes in operating assets", {"FY2025": 123967, "FY2024": 99240, "FY2023": -12578, "FY2022": -67317, "FY2021": -149872}),
+    ("DATA", "Changes in operating liabilities", {"FY2025": -202670, "FY2024": -317156, "FY2023": 30240, "FY2022": 349131, "FY2021": 164590}),
+    ("DATA", "Dividend receivable", {"FY2025": -6, "FY2024": -7, "FY2023": -7, "FY2022": -8, "FY2021": -8}),
+    ("DATA", "Profit on Equity investments", {"FY2025": -12}),
     ("DATA", "Loss/(gain) on sale of prior year acquisitions", {"FY2022": 97, "FY2021": 5}),
     ("DATA", "Profit on sale of the pensions activities", {"FY2022": -400, "FY2021": -3600}),
     ("DATA", "Loss/(gain) on deferred consideration - NWB", {"FY2024": 0, "FY2023": 1442, "FY2022": -965, "FY2021": -3003}),
-    ("DATA", "Net gains from financial instruments at fair value", {"FY2024": -4620, "FY2023": -3356, "FY2022": -6993, "FY2021": -3559}),
-    ("DATA", "Impairment", {"FY2024": 3253, "FY2023": 3474, "FY2022": 2594, "FY2021": 96}),
-    ("DATA", "Income taxes paid", {"FY2024": -3206, "FY2023": -829, "FY2022": -393, "FY2021": -1631}),
-    ("DATA", "Depreciation of property and equipment", {"FY2024": 3563, "FY2023": 3392, "FY2022": 3123, "FY2021": 2695}),
-    ("DATA", "Amortisation of intangible assets", {"FY2024": 3177, "FY2023": 3501, "FY2022": 3805, "FY2021": 3939}),
-    ("DATA", "Loss on disposal of property and equipment", {"FY2024": 8, "FY2023": 4, "FY2022": 8, "FY2021": 70}),
+    ("DATA", "Net (gains)/losses from financial instruments at fair value", {"FY2025": 694, "FY2024": -4620, "FY2023": -3356, "FY2022": -6993, "FY2021": -3559}),
+    ("DATA", "Impairment", {"FY2025": 1222, "FY2024": 3253, "FY2023": 3474, "FY2022": 2594, "FY2021": 96}),
+    ("DATA", "Income taxes paid", {"FY2025": -4361, "FY2024": -3206, "FY2023": -829, "FY2022": -393, "FY2021": -1631}),
+    ("DATA", "Depreciation of property and equipment", {"FY2025": 3390, "FY2024": 3563, "FY2023": 3392, "FY2022": 3123, "FY2021": 2695}),
+    ("DATA", "Amortisation of intangible assets", {"FY2025": 1481, "FY2024": 3177, "FY2023": 3501, "FY2022": 3805, "FY2021": 3939}),
+    ("DATA", "Loss on disposal of property and equipment", {"FY2025": 8, "FY2024": 8, "FY2023": 4, "FY2022": 8, "FY2021": 70}),
     ("DATA", "(Profit)/loss on deferred consideration - TRP", {"FY2021": -3}),
-    ("DATA", "Gain on sale of non-core Affluent client book", {"FY2024": -3318}),
+    ("DATA", "Gain on sale of non-core Affluent client book", {"FY2025": -1740, "FY2024": -3318}),
+    ("DATA", "Profit on sale of International client book", {"FY2025": -7179}),
     ("DATA", "Proceeds on sale of Court of Protection business / pensions administration activities", {"FY2024": 802, "FY2023": 567, "FY2022": 800, "FY2021": 3200}),
     ("DATA", "Proceeds on sale of a portfolio of assets", {"FY2023": 632, "FY2022": 600}),
-    ("DATA", "Changes in provisions", {"FY2024": 229, "FY2023": -2576, "FY2022": -4174, "FY2021": 1582}),
-    ("DATA", "Changes in Defined Benefit Pension Scheme surplus/(deficit)", {"FY2024": -327, "FY2023": -317, "FY2022": -219, "FY2021": -1431}),
-    ("TOTAL", "Net cash (used in)/from operating activities", {"FY2024": -210559, "FY2023": 24812, "FY2022": 282024, "FY2021": 18377}),
+    ("DATA", "Changes in provisions", {"FY2025": 114, "FY2024": 229, "FY2023": -2576, "FY2022": -4174, "FY2021": 1582}),
+    ("DATA", "Changes in Defined Benefit Pension Scheme surplus/(deficit)", {"FY2025": -103, "FY2024": -327, "FY2023": -317, "FY2022": -219, "FY2021": -1431}),
+    ("TOTAL", "Net cash (used in)/from operating activities", {"FY2025": -76838, "FY2024": -210559, "FY2023": 24812, "FY2022": 282024, "FY2021": 18377}),
     ("SECTION", "Investing activities", {}),
-    ("DATA", "Dividend received", {"FY2024": 7, "FY2023": 7, "FY2022": 8, "FY2021": 8}),
-    ("DATA", "Proceeds on sale of equity investments", {"FY2022": 725}),
+    ("DATA", "Dividend received", {"FY2025": 6, "FY2024": 7, "FY2023": 7, "FY2022": 8, "FY2021": 8}),
+    ("DATA", "Proceeds on sale of equity investments", {"FY2025": 12, "FY2022": 725}),
     ("DATA", "Deferred consideration paid on prior year acquisitions", {"FY2023": -3200, "FY2022": -106, "FY2021": -3265}),
-    ("DATA", "Proceeds on sale of non-core Affluent client book", {"FY2024": 2416}),
-    ("DATA", "Purchase of property and equipment (excludes leased assets)", {"FY2024": -89, "FY2023": -916, "FY2022": -1402, "FY2021": -1405}),
+    ("DATA", "Proceeds on sale of non-core Affluent client book", {"FY2025": 2014, "FY2024": 2416}),
+    ("DATA", "Proceeds on sale of International client book", {"FY2025": 3487}),
+    ("DATA", "Purchase of property and equipment (excludes leased assets)", {"FY2025": -142, "FY2024": -89, "FY2023": -916, "FY2022": -1402, "FY2021": -1405}),
     ("DATA", "Purchase of intangible assets", {"FY2024": -2, "FY2023": -16, "FY2022": 0, "FY2021": -4}),
-    ("TOTAL", "Net cash from/(used in) investing activities", {"FY2024": 2332, "FY2023": -4125, "FY2022": -775, "FY2021": -4666}),
+    ("TOTAL", "Net cash from/(used in) investing activities", {"FY2025": 5377, "FY2024": 2332, "FY2023": -4125, "FY2022": -775, "FY2021": -4666}),
     ("SECTION", "Financing activities", {}),
-    ("DATA", "Coupon paid to shareholder of Additional Tier 1 equity capital", {"FY2024": -1136, "FY2023": -883, "FY2022": -651, "FY2021": -635}),
-    ("DATA", "Repayment of principal portion of lease liabilities", {"FY2024": -2359, "FY2023": -2194, "FY2022": -2040, "FY2021": -1857}),
-    ("TOTAL", "Net cash used in financing activities", {"FY2024": -3495, "FY2023": -3077, "FY2022": -2691, "FY2021": -2492}),
-    ("TOTAL", "Net (decrease)/increase in cash and cash equivalents", {"FY2024": -211722, "FY2023": 17610, "FY2022": 278558, "FY2021": 11219}),
-    ("DATA", "Cash and cash equivalents at the beginning of the year", {"FY2024": 586631, "FY2023": 569021, "FY2022": 290463, "FY2021": 279244}),
-    ("TOTAL", "Cash and cash equivalents at the end of the year", {"FY2024": 374909, "FY2023": 586631, "FY2022": 569021, "FY2021": 290463}),
+    ("DATA", "Coupon paid to shareholder of Additional Tier 1 equity capital", {"FY2025": -1114, "FY2024": -1136, "FY2023": -883, "FY2022": -651, "FY2021": -635}),
+    ("DATA", "Dividend paid to shareholder", {"FY2025": -37500}),
+    ("DATA", "Repayment of principal portion of lease liabilities", {"FY2025": -2349, "FY2024": -2359, "FY2023": -2194, "FY2022": -2040, "FY2021": -1857}),
+    ("TOTAL", "Net cash used in financing activities", {"FY2025": -40963, "FY2024": -3495, "FY2023": -3077, "FY2022": -2691, "FY2021": -2492}),
+    ("TOTAL", "Net (decrease)/increase in cash and cash equivalents", {"FY2025": -112424, "FY2024": -211722, "FY2023": 17610, "FY2022": 278558, "FY2021": 11219}),
+    ("DATA", "Cash and cash equivalents at the beginning of the year", {"FY2025": 293838, "FY2024": 586631, "FY2023": 569021, "FY2022": 290463, "FY2021": 279244}),
+    ("TOTAL", "Cash and cash equivalents at the end of the year", {"FY2025": 181414, "FY2024": 374909, "FY2023": 586631, "FY2022": 569021, "FY2021": 290463}),
     ("SECTION", "Components of cash and cash equivalents", {}),
-    ("DATA", "Cash and balances at central banks", {"FY2024": 292700, "FY2023": 528997, "FY2022": 456835, "FY2021": 236409}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 177807, "FY2024": 292700, "FY2023": 528997, "FY2022": 456835, "FY2021": 236409}),
+    ("DATA", "Cash and cash equivalents (broker settlement balances; line first presented FY2025)", {"FY2025": 9144}),
     ("DATA", "Loans and advances to banks repayable on demand and less than 3 months", {"FY2024": 89347, "FY2023": 66766, "FY2022": 125926, "FY2021": 58767}),
-    ("DATA", "Deposits from banks repayable on demand and less than 3 months", {"FY2024": -7138, "FY2023": -9132, "FY2022": -13740, "FY2021": -4713}),
-    ("TOTAL", "Total components of cash and cash equivalents", {"FY2024": 374909, "FY2023": 586631, "FY2022": 569021, "FY2021": 290463}),
+    ("DATA", "Deposits from banks repayable on demand and less than 3 months (FY2025 caption: 'Overdrafts from banks ...')", {"FY2025": -5537, "FY2024": -7138, "FY2023": -9132, "FY2022": -13740, "FY2021": -4713}),
+    ("TOTAL", "Total components of cash and cash equivalents", {"FY2025": 181414, "FY2024": 374909, "FY2023": 586631, "FY2022": 569021, "FY2021": 290463}),
 ]
 
 bw.add_cash_flow_sheet(
     title="Brown Shipley & Co. Limited — Cash Flow Statement",
-    subtitle="£'000. Company (entity-level) basis. FY2025 not yet available - see source note.",
+    subtitle="£'000. Company (entity-level) basis. Each year as that year's own report originally published it; "
+             "the FY2025 report restates FY2024's opening and closing cash - see source note.",
     rows=rows,
-    sources_text=CASH_FLOW_SOURCES,
+    sources_text=CASH_FLOW_SOURCES + "\n\n" + FY2025_RESTATEMENT_NOTE,
     first_col_width=78,
-    source_height=190,
+    source_height=460,
     unit_suffix=" (£'000)",
 )
 
@@ -398,19 +488,19 @@ bw.add_cash_flow_sheet(
 # only an overall ECL coverage ratio (total allowance / total gross
 # loans) is shown.
 # ---------------------------------------------------------------
-AQ_ON_DEMAND = {"FY2024": 171242, "FY2023": 192821, "FY2022": 179111, "FY2021": 132746}
-AQ_PERSONAL = {"FY2024": 2252, "FY2023": 845, "FY2022": 1126, "FY2021": 427}
-AQ_PROPERTY = {"FY2024": 279254, "FY2023": 320684, "FY2022": 378183, "FY2021": 311293}
-AQ_LOMBARD = {"FY2024": 800, "FY2023": 13043, "FY2022": 26716, "FY2021": 24868}
-AQ_OTHER_TERM = {"FY2024": 31295, "FY2023": 27801, "FY2022": 61728, "FY2021": 96302}
+AQ_ON_DEMAND = {"FY2025": 154117, "FY2024": 171242, "FY2023": 192821, "FY2022": 179111, "FY2021": 132746}
+AQ_PERSONAL = {"FY2025": 2250, "FY2024": 2252, "FY2023": 845, "FY2022": 1126, "FY2021": 427}
+AQ_PROPERTY = {"FY2025": 180305, "FY2024": 279254, "FY2023": 320684, "FY2022": 378183, "FY2021": 311293}
+AQ_LOMBARD = {"FY2025": 650, "FY2024": 800, "FY2023": 13043, "FY2022": 26716, "FY2021": 24868}
+AQ_OTHER_TERM = {"FY2025": 16314, "FY2024": 31295, "FY2023": 27801, "FY2022": 61728, "FY2021": 96302}
 AQ_GROSS_TOTAL = {y: AQ_ON_DEMAND[y] + AQ_PERSONAL[y] + AQ_PROPERTY[y] + AQ_LOMBARD[y] + AQ_OTHER_TERM[y] for y in YEARS}
 
-AQ_ECL_S1 = {"FY2024": 49, "FY2023": 117, "FY2022": 55, "FY2021": 51}
-AQ_ECL_S2 = {"FY2024": 102, "FY2023": 7, "FY2022": 4, "FY2021": 0}
-AQ_ECL_S3 = {"FY2024": 1415, "FY2023": 421, "FY2022": 13, "FY2021": 11}
+AQ_ECL_S1 = {"FY2025": 76, "FY2024": 49, "FY2023": 117, "FY2022": 55, "FY2021": 51}
+AQ_ECL_S2 = {"FY2025": 13, "FY2024": 102, "FY2023": 7, "FY2022": 4, "FY2021": 0}
+AQ_ECL_S3 = {"FY2025": 1628, "FY2024": 1415, "FY2023": 421, "FY2022": 13, "FY2021": 11}
 AQ_ECL_TOTAL = {y: AQ_ECL_S1[y] + AQ_ECL_S2[y] + AQ_ECL_S3[y] for y in YEARS}
 
-AQ_NET_TOTAL = {"FY2024": 483277, "FY2023": 554649, "FY2022": 646794, "FY2021": 565574}
+AQ_NET_TOTAL = {"FY2025": 351919, "FY2024": 483277, "FY2023": 554649, "FY2022": 646794, "FY2021": 565574}
 AQ_COVERAGE = {y: f"{AQ_ECL_TOTAL[y] / AQ_GROSS_TOTAL[y] * 100:.3f}%" for y in YEARS}
 AQ_STAGE3_SHARE_OF_ECL = {y: f"{AQ_ECL_S3[y] / AQ_ECL_TOTAL[y] * 100:.1f}%" for y in YEARS}
 
@@ -440,6 +530,8 @@ bw.add_asset_quality_sheet(
     sources_text=(
         "Sources - Brown Shipley & Co. Limited's own Note 14 'Loans and advances to customers' (gross by "
         "purpose, ECL allowance by IFRS 9 stage), transcribed from each year's own Companies House filing:\n"
+        f"FY2025: Annual Report 2025, pp.60-61 (Note 15 'Loans and advances to customers'; the ECL-by-stage "
+        f"roll-forward is on p.61) - {AR2025_URL}\n"
         f"FY2024: Annual Report 2024, p.57 - {AR2024_URL}\n"
         f"FY2023: Annual Report 2023 (comparative column cross-checked against FY2024's own note) - {AR2023_URL}\n"
         f"FY2022: Annual Report 2022, p.53 - {AR2022_URL}\n"
@@ -468,16 +560,16 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=44, source_height=150)
 
 
-CET1_RATIO = {"FY2024": "21.6%", "FY2023": "22.3%", "FY2022": "20.3%", "FY2021": "19.6%"}
-LCR_RATIO = {"FY2024": "236%", "FY2023": "274%", "FY2022": "218%", "FY2021": "253%"}
+CET1_RATIO = {"FY2025": "18.6%", "FY2024": "21.6%", "FY2023": "22.3%", "FY2022": "20.3%", "FY2021": "19.6%"}
+LCR_RATIO = {"FY2025": "228%", "FY2024": "236%", "FY2023": "274%", "FY2022": "218%", "FY2021": "253%"}
 
 # Disclosed via each year's own "Capital" note (Note 35, Note 36 for FY2021) - see
 # capital_note_sources(). Found by the 2026-09-06 correctness audit (HD-065); a
 # prior version of this script wrongly marked these "Not publicly disclosed".
-CET1_CAPITAL = {"FY2024": 94885, "FY2023": 90201, "FY2022": 84594, "FY2021": 67645}
-TIER1_CAPITAL = {"FY2024": 104885, "FY2023": 100201, "FY2022": 94594, "FY2021": 77645}
-TIER1_RATIO = {"FY2024": "23.9%", "FY2023": "24.7%", "FY2022": "22.7%", "FY2021": "22.6%"}
-TOTAL_RWAS = {"FY2024": 439621, "FY2023": 405524, "FY2022": 417077, "FY2021": 344361}
+CET1_CAPITAL = {"FY2025": 61898, "FY2024": 94885, "FY2023": 90201, "FY2022": 84594, "FY2021": 67645}
+TIER1_CAPITAL = {"FY2025": 71898, "FY2024": 104885, "FY2023": 100201, "FY2022": 94594, "FY2021": 77645}
+TIER1_RATIO = {"FY2025": "21.6%", "FY2024": "23.9%", "FY2023": "24.7%", "FY2022": "22.7%", "FY2021": "22.6%"}
+TOTAL_RWAS = {"FY2025": 332726, "FY2024": 439621, "FY2023": 405524, "FY2022": 417077, "FY2021": 344361}
 
 # Total Capital / Total Capital Ratio - opened 2026-09-15 by the maximum-effort
 # disclosure sweep, which located Brown Shipley's own Pillar 3 Disclosures 2024
@@ -496,8 +588,8 @@ TOTAL_RWAS = {"FY2024": 439621, "FY2023": 405524, "FY2022": 417077, "FY2021": 34
 # on the same capital structure (£81,824k permanent share capital + reserves +
 # an unchanged £10,000k AT1) in all four years, Total Capital = Total Tier 1
 # Capital and Total Capital Ratio = Tier 1 Capital ratio throughout.
-TOTAL_CAPITAL = {"FY2024": 104885, "FY2023": 100201, "FY2022": 94594, "FY2021": 77645}
-TOTAL_CAPITAL_RATIO = {"FY2024": "23.86%", "FY2023": "24.7%", "FY2022": "22.7%", "FY2021": "22.6%"}
+TOTAL_CAPITAL = {"FY2025": 71898, "FY2024": 104885, "FY2023": 100201, "FY2022": 94594, "FY2021": 77645}
+TOTAL_CAPITAL_RATIO = {"FY2025": "21.6%", "FY2024": "23.86%", "FY2023": "24.7%", "FY2022": "22.7%", "FY2021": "22.6%"}
 
 # Leverage Ratio and NSFR - FY2024 and FY2023 only, from the Pillar 3 2024
 # report (the Bank's statutory accounts disclose neither in any year, which is
@@ -507,14 +599,164 @@ NSFR_RATIO = {"FY2024": "162%", "FY2023": "181%"}
 
 # Pillar 1 CAPITAL REQUIREMENT by risk type, as literally disclosed (not RWA itself -
 # see the RWA Breakdown sheet's own note for how RWA-by-category is derived from these).
-RWA_CREDIT_RISK_CAPREQ = {"FY2024": 24024, "FY2023": 21885, "FY2022": 23868, "FY2021": 18347}
-RWA_OPERATIONAL_RISK_CAPREQ = {"FY2024": 11145, "FY2023": 10557, "FY2022": 9498, "FY2021": 9202}
+RWA_CREDIT_RISK_CAPREQ = {"FY2025": 15593, "FY2024": 24024, "FY2023": 21885, "FY2022": 23868, "FY2021": 18347}
+RWA_OPERATIONAL_RISK_CAPREQ = {"FY2025": 11025, "FY2024": 11145, "FY2023": 10557, "FY2022": 9498, "FY2021": 9202}
 RWA_CREDIT_RISK = {y: round(RWA_CREDIT_RISK_CAPREQ[y] * 12.5) for y in YEARS}
 RWA_OPERATIONAL_RISK = {y: round(RWA_OPERATIONAL_RISK_CAPREQ[y] * 12.5) for y in YEARS}
 
 NOT_DISCLOSED_NOTE = (
     "Brown Shipley's own statutory accounts do not disclose this metric in any year 2021-2024 (see Entity note "
     "on the Cash Flow Statement sheet)."
+)
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Brown Shipley's own "Template UK KM1 - Key metrics
+# template", reproduced exactly as printed, defects and all.
+#
+# ONE COLUMN ONLY. The 2024 Pillar 3 report is the only edition of this
+# document that exists (see PILLAR3_DOC_NOTE), and its KM1 carries a single
+# 31/12/2024 column with no comparative. FY2025, FY2023, FY2022 and FY2021 are
+# therefore blank on this sheet. The FY2023 figures this workbook does carry on
+# the Leverage Ratio and NSFR sheets come from the report's s.1.1 summary table
+# and template UK LR2's own comparative, NOT from KM1, so they are not shown
+# here.
+#
+# FOUR SOURCE DEFECTS, REPRODUCED AS PRINTED AND FLAGGED, NEVER CORRECTED:
+#   (a) ROWS 1-3 ARE IN £m UNDER A £000 HEADER. The table's header says "£000"
+#       and row 4 obeys it (439,621 ties exactly to the FY2024 accounts' Risk
+#       Exposure Amount of £439,621k), but rows 1-3 print "95" and "105" - the
+#       £m figures. The Bank's own CET1 of £94,885k over £439,621k is the
+#       21.59% row 5 prints, so the intended £000 values are ~94,9xx/104,9xx.
+#   (b) ROW 13 IS IN £1 UNITS UNDER THE SAME £000 HEADER: 934,723,555, i.e.
+#       £934.7m, against the £000 the template declares. £104,894k over
+#       £934,724k is the 11.23% the report's own LR2 row 25 and s.6.1 narrative
+#       both give.
+#   (c) ROW 14 PRINTS "0.00%" - flatly wrong on its face, since the same
+#       report's s.1.1 summary, s.6.1 narrative and template UK LR2 row 25 all
+#       give 11.2%/11.23%. It is left as 0.00% here because that is what the
+#       Bank published; the Leverage Ratio sheet carries the 11.23%.
+#   (d) ROW 12 IS EMPTY, with no dash and no zero - simply an unfilled cell.
+# The same document prints "#VALUE!" in its LIQ2 row 7, so these are Excel
+# template-population failures in the Bank's own file, not misreadings here.
+#
+# Rows UK 8a, UK 9a, 10 and UK 10a print "0.00%" - printed zeros, kept as
+# zeros, not blanked. No row of the template is omitted.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — printed under a £000 header but in millions; see source note", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (printed in £m under a £000 header)", {"FY2024": 95}),
+    ("DATA", "2    Tier 1 capital (printed in £m under a £000 header)", {"FY2024": 105}),
+    ("DATA", "3    Total capital (printed in £m under a £000 header)", {"FY2024": 105}),
+    ("SECTION", "Risk-weighted exposure amounts (£'000)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount (£'000)", {"FY2024": 439621}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)", {"FY2024": "21.59%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2024": "23.86%"}),
+    ("DATA", "7    Total capital ratio (%)", {"FY2024": "23.86%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)", {"FY2024": "2.12%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)", {"FY2024": "0.64%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)", {"FY2024": "0.85%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)", {"FY2024": "10.12%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)", {"FY2024": "2.50%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a "
+             "Member State (%)", {"FY2024": "0.00%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)", {"FY2024": "1.82%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {"FY2024": "0.00%"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {"FY2024": "0.00%"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {"FY2024": "0.00%"}),
+    ("DATA", "11    Combined buffer requirement (%)", {"FY2024": "4.32%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)", {"FY2024": "14.44%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)", {}),
+    ("SECTION", "Leverage ratio — row 13 printed under a £000 header but in single pounds; see source note", {}),
+    ("DATA", "13    Leverage ratio total exposure measure (printed in £1 units under a £000 header)", {"FY2024": 934723555}),
+    ("DATA", "14    Leverage ratio", {"FY2024": "0.00%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£000 / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average) (£'000)", {"FY2024": 389249}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value (£'000)", {"FY2024": 217089}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value (£'000)", {"FY2024": 51871}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£'000)", {"FY2024": 165218}),
+    ("DATA", "17    Liquidity coverage ratio (%)", {"FY2024": "236%"}),
+    ("SECTION", "Net Stable Funding Ratio (£000 / %)", {}),
+    ("DATA", "18    Total available stable funding (£'000)", {"FY2024": 832003}),
+    ("DATA", "19    Total required stable funding (£'000)", {"FY2024": 514666}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2024": "162%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Brown Shipley & Co. Limited, \"Template UK KM1 - Key metrics template\", Appendix 15.1 of its own "
+    "Pillar 3 Disclosures 2024, p.31, reproduced exactly as printed:\n"
+    f"FY2024: Pillar 3 Disclosures 2024, Appendix 15.1, p.31 (single 31/12/2024 column) - {P3_2024_URL}\n"
+    "FY2025, FY2023, FY2022, FY2021: blank. Only ONE edition of this document exists - see the Pillar 3 document "
+    "note below - and its KM1 prints a single reporting-year column with no comparative of any kind.\n\n"
+    "KM1 presentation notes:\n"
+    "• BASIS: prepared on a consolidated basis for the Brown Shipley group, which the report itself states is the "
+    "same reporting perimeter as the Company, because all five subsidiaries were dormant throughout the year.\n"
+    "• FOUR DEFECTS IN THE BANK'S OWN TEMPLATE, REPRODUCED AS PUBLISHED AND NOT CORRECTED. A disclosure template "
+    "is reproduced here, not recomputed, so an obviously wrong printed cell stays wrong and is flagged instead:\n"
+    "   (1) Rows 1-3 are printed in £m under a £000 header - \"95\" and \"105\" where the header says £000. Row 4 "
+    "(439,621) does obey the £000 header and ties exactly to the FY2024 accounts' own Risk Exposure Amount of "
+    "£439,621k, and 94,885/439,621 = 21.59%, which is what row 5 prints. So rows 1-3 are the £m figures in a "
+    "£000 column. The CET1 Capital, Tier 1 Capital and Total Capital sheets carry the proper £000 amounts from "
+    "the Bank's own audited 'Capital' note.\n"
+    "   (2) Row 13 is printed in £1 units under that same £000 header: 934,723,555, i.e. £934.7m. £104,885k over "
+    "£934,724k gives the 11.23% that the same report's template UK LR2 row 25 and its s.6.1 narrative both "
+    "state.\n"
+    "   (3) Row 14 prints \"0.00%\" - wrong on the face of the same document, whose s.1.1 summary table says "
+    "11.2%, whose s.6.1 narrative says \"Brown Shipley's leverage ratio stands at 11.23% as at 31 December "
+    "2024\", and whose template UK LR2 row 25 says 11.23%. The 0.00% is reproduced here; the Leverage Ratio "
+    "sheet carries the 11.23%, with its own note.\n"
+    "   (4) Row 12 is an empty cell - not a dash, not a zero, simply unfilled.\n"
+    "   These read as Excel template-population failures rather than disclosure choices: the same report prints "
+    "\"#VALUE!\" in its template UK LIQ2 row 7.\n"
+    "   CONSEQUENCE, STATED SO IT IS NOT MISTAKEN FOR AN ERROR HERE: this workbook's automated KM1-vs-metric-"
+    "sheet cross-check reports four deliberate disagreements for FY2024 - rows 1, 2 and 3 (£95m/£105m/£105m as "
+    "printed, against £94,885k/£104,885k/£104,885k on the metric sheets, a difference of £115k that is simply "
+    "the £m rounding) and row 14 (0.00% as printed, against 11.23%). All four are the Bank's own printing "
+    "reproduced faithfully, not transcription slips.\n"
+    "• A DASH IS NOT A ZERO, AND THERE ARE NO DASHES HERE. Rows UK 8a, UK 9a, 10 and UK 10a all print \"0.00%\" - "
+    "measured zeros, kept as zeros. The only empty cell in the whole table is row 12.\n"
+    "• ROW SET: complete. Brown Shipley prints every row of the template through row 20, including the four "
+    "buffer rows other banks in this series omit. It does NOT print the UK 14a-14f excessive-leverage block.\n"
+    "• INTERNAL INCONSISTENCY, recorded not reconciled: rows 17 and 20 (LCR 236%, NSFR 162%) agree with the "
+    "report's own s.1.1 summary table and, for LCR, with the Strategic Report KPI line in the audited accounts; "
+    "the same report's narrative ss.11.3-11.4 and its templates UK LIQ1/LIQ2 instead give LCR 216% and NSFR 157%, "
+    "off a different total required stable funding (547,524 against KM1 row 19's 514,666). The KM1 values are "
+    "what this sheet reproduces, being what this template printed.\n\n"
+    "LATEST-EDITION CHECK 2026-09-16 - AND AN HONEST LIMIT ON IT. Brown Shipley publishes no regulatory-"
+    "disclosures index of any kind. Its Pillar 3 report is an UNLINKED asset in the site's Umbraco media store, "
+    "reachable only by its opaque media key (/media/o4tl2pod/...), and it is not referenced from any page in the "
+    "site's own sitemap.xml (all 544 URLs were crawled and grepped for a Pillar-3-shaped media link; the only "
+    "PDFs the 'Important information > Annual report' page offers are the TCFD report, the Quintet/PlusPlus "
+    "group annual report and policy documents). The site's own search does not index media and robots.txt "
+    "disallows the search endpoint. On the date of this check the Internet Archive was returning \"Temporarily "
+    "Offline\" to every CDX query, and the general web-search engines tried returned 202/403 blocks. So: THE "
+    "2024 EDITION IS CONFIRMED STILL LIVE (HTTP 200, application/pdf, %PDF magic bytes, 1,131,406 bytes), AND "
+    "THE EXISTENCE OR NON-EXISTENCE OF A 2025 EDITION COULD NOT BE ESTABLISHED EITHER WAY. That is a limit of "
+    "the instruments available on the day, not a finding that no 2025 report exists, and it should be re-checked "
+    "when the Archive is reachable.\n"
+    "WHAT THE CHECK DID FIND: Brown Shipley's FY2025 full accounts, made up to 31 December 2025 and filed at "
+    "Companies House on 26 Aug 2026, are now served (they were still 'being processed' at the previous build). "
+    "FY2025 has accordingly been transcribed into every sheet of this workbook that the accounts support - "
+    "Balance Sheet, Income Statement, Statement of Changes in Equity, Cash Flow Statement, Asset Quality, CET1 "
+    "Capital/Ratio, Tier 1 Capital/Ratio, Total Capital/Ratio, Total RWAs, RWA Breakdown and LCR. Leverage Ratio "
+    "and NSFR stay blank for FY2025 because the statutory accounts disclose neither and no FY2025 Pillar 3 "
+    "report could be located.\n\n"
+    + PILLAR3_DOC_NOTE + "\n\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Brown Shipley & Co. Limited — KM1 Key Metrics",
+    subtitle="The bank's own published UK KM1 key-metrics template, reproduced exactly as printed - including "
+             "four defects in the Bank's own file (rows 1-3 in millions and row 13 in single pounds under a "
+             "thousands header, row 14 printed as 0.00%, row 12 left empty), flagged in the source note and deliberately "
+             "not corrected. FY2024 only: the 2024 report is the only edition that exists and its KM1 carries a "
+             "single column with no comparative.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=520,
 )
 
 metric(
@@ -647,30 +889,30 @@ bw.add_not_disclosed_metric_sheets(
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2024": 1218044, "FY2023": 1529171, "FY2022": 1507100, "FY2021": 1152277}),
-        ("Loans and advances to customers", {"FY2024": 483277, "FY2023": 554649, "FY2022": 646794, "FY2021": 565574}),
-        ("Deposits from customers", {"FY2024": 1046365, "FY2023": 1353609, "FY2022": 1321391, "FY2021": 971736}),
-        ("Total equity", {"FY2024": 132953, "FY2023": 129139, "FY2022": 130681, "FY2021": 127075}),
+        ("Total assets", {"FY2025": 984660, "FY2024": 1218044, "FY2023": 1529171, "FY2022": 1507100, "FY2021": 1152277}),
+        ("Loans and advances to customers", {"FY2025": 351919, "FY2024": 483277, "FY2023": 554649, "FY2022": 646794, "FY2021": 565574}),
+        ("Deposits from customers", {"FY2025": 852341, "FY2024": 1046365, "FY2023": 1353609, "FY2022": 1321391, "FY2021": 971736}),
+        ("Total equity", {"FY2025": 100615, "FY2024": 132953, "FY2023": 129139, "FY2022": 130681, "FY2021": 127075}),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
-        ("Net operating income", {"FY2024": 95421, "FY2023": 95723, "FY2022": 93025, "FY2021": 90882}),
-        ("Total operating expenses", {"FY2024": -84365, "FY2023": -91026, "FY2022": -88096, "FY2021": -85479}),
-        ("Profit/(loss) for the year", {"FY2024": 4084, "FY2023": -612, "FY2022": 1111, "FY2021": 2908}),
+        ("Net operating income", {"FY2025": 90119, "FY2024": 95421, "FY2023": 95723, "FY2022": 93025, "FY2021": 90882}),
+        ("Total operating expenses", {"FY2025": -80540, "FY2024": -84365, "FY2023": -91026, "FY2022": -88096, "FY2021": -85479}),
+        ("Profit/(loss) for the year", {"FY2025": 5850, "FY2024": 4084, "FY2023": -612, "FY2022": 1111, "FY2021": 2908}),
     ],
     income_statement_unit="£'000",
     equity_changes_totals=[
-        ("Opening equity", {"FY2024": 129139, "FY2023": 130681, "FY2022": 127075, "FY2021": 122746}),
-        ("Total comprehensive income/(loss) for the year", {"FY2024": 4950, "FY2023": -659, "FY2022": 4257, "FY2021": 4964}),
-        ("AT1 coupon paid, net", {"FY2024": -1136, "FY2023": -883, "FY2022": -651, "FY2021": -635}),
-        ("Closing equity", {"FY2024": 132953, "FY2023": 129139, "FY2022": 130681, "FY2021": 127075}),
+        ("Opening equity", {"FY2025": 132953, "FY2024": 129139, "FY2023": 130681, "FY2022": 127075, "FY2021": 122746}),
+        ("Total comprehensive income/(loss) for the year", {"FY2025": 6276, "FY2024": 4950, "FY2023": -659, "FY2022": 4257, "FY2021": 4964}),
+        ("AT1 coupon paid, net", {"FY2025": -1114, "FY2024": -1136, "FY2023": -883, "FY2022": -651, "FY2021": -635}),
+        ("Closing equity", {"FY2025": 100615, "FY2024": 132953, "FY2023": 129139, "FY2022": 130681, "FY2021": 127075}),
     ],
     equity_changes_unit="£'000",
     cash_flow_totals=[
-        ("Net cash (used in)/from operating activities", {"FY2024": -210559, "FY2023": 24812, "FY2022": 282024, "FY2021": 18377}),
-        ("Net cash from/(used in) investing activities", {"FY2024": 2332, "FY2023": -4125, "FY2022": -775, "FY2021": -4666}),
-        ("Net cash used in financing activities", {"FY2024": -3495, "FY2023": -3077, "FY2022": -2691, "FY2021": -2492}),
-        ("Cash and cash equivalents at end of year", {"FY2024": 374909, "FY2023": 586631, "FY2022": 569021, "FY2021": 290463}),
+        ("Net cash (used in)/from operating activities", {"FY2025": -76838, "FY2024": -210559, "FY2023": 24812, "FY2022": 282024, "FY2021": 18377}),
+        ("Net cash from/(used in) investing activities", {"FY2025": 5377, "FY2024": 2332, "FY2023": -4125, "FY2022": -775, "FY2021": -4666}),
+        ("Net cash used in financing activities", {"FY2025": -40963, "FY2024": -3495, "FY2023": -3077, "FY2022": -2691, "FY2021": -2492}),
+        ("Cash and cash equivalents at end of year", {"FY2025": 181414, "FY2024": 374909, "FY2023": 586631, "FY2022": 569021, "FY2021": 290463}),
     ],
     cash_flow_unit="£'000",
     ratios=[
@@ -682,9 +924,16 @@ bw.add_overview_sheet(
         ("NSFR", NSFR_RATIO),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
-         "source citation for the underlying document/page. This workbook covers FY2021-FY2024 (4 years, not the "
-         "usual 5) since Brown Shipley's FY2025 accounts were still 'being processed' at Companies House as of "
-         "this build. CET1 Ratio, Tier 1 Ratio, CET1 Capital, Tier 1 Capital, Total RWAs and LCR are all "
+         "source citation for the underlying document/page. FY2025 ADDED 2026-09-16: the FY2025 full accounts "
+         "(made up to 31 December 2025, filed at Companies House 26 Aug 2026) were still 'being processed' at "
+         "the previous build and are now served, so this workbook covers FY2021-FY2025 (5 years). Note that the "
+         "FY2025 report restates FY2024 on the Income Statement, the Statement of Financial Position, the Cash "
+         "Flow Statement and the regulatory Capital note; each year here stays as that year's own report "
+         "originally published it, and the restated values are recorded in full on those sheets - which is why "
+         "FY2025 cash OPENS at £293,838k while FY2024 CLOSES at £374,909k. Leverage Ratio and NSFR are blank for "
+         "FY2025: the statutory accounts disclose neither and no FY2025 Pillar 3 report could be located (see "
+         "the KM1 Key Metrics sheet for how far that search went, and its honest limit). CET1 Ratio, Tier 1 "
+         "Ratio, CET1 Capital, Tier 1 Capital, Total RWAs and LCR are all "
          "disclosed by Brown Shipley's own statutory accounts (the CET1/Tier 1 figures via each year's own "
          "'Capital' note, re-confirmed by the 2026-09-06 correctness audit, HD-065). UPDATE (2026-09-15 "
          "maximum-effort disclosure sweep): Brown Shipley's own standalone 'Pillar 3 Disclosures 2024' report "
@@ -693,8 +942,17 @@ bw.add_overview_sheet(
          "FY2024 directly (and establishes Tier 2 = nil, from which FY2021-FY2023 follow), plus Leverage Ratio "
          "and NSFR for FY2024 and FY2023. Leverage Ratio and NSFR remain blank for FY2022 and FY2021 - no Pillar "
          "3 report of those years exists on either brownshipley.com or quintet.com, and the statutory accounts "
-         "disclose neither metric. MREL Ratio is not disclosed by this entity in any year. See each metric "
-         "sheet for detail.",
+         "disclose neither metric. MREL Ratio is not disclosed by this entity in any year. THE PARENT'S SHELF "
+         "HAS BEEN CHECKED FOR ALL OF THESE (2026-09-16), because a UK subsidiary's figures are normally "
+         "published inside its parent's Pillar 3 - as a column of the parent's own table or as a separate "
+         "appendix table - so none of the blanks above could stand until that was done. All five of Quintet "
+         "Private Bank (Europe) S.A.'s year-end Pillar 3 reports (YE2021-YE2025) were downloaded and read in "
+         "full: they contain NO Brown Shipley column, table or appendix of any kind. Quintet's key-metrics "
+         "table is the EU KM1 template and its columns are quarters of the consolidated group in EUR million, "
+         "not entities, and every edition states that its figures 'refer to Group consolidated figures' with "
+         "Brown Shipley consolidated in rather than shown beside. A Quintet group ratio is not a Brown Shipley "
+         "ratio and is not carried here. See the KM1 Key Metrics sheet's source note for the full finding, and "
+         "each metric sheet for detail.",
 )
 
 # ---------------------------------------------------------------

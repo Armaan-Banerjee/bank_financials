@@ -398,6 +398,171 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-016)
+#
+# FY2022 only, and that is a real finding rather than a gap in our searching.
+#
+# The FY2022 Pillar 3 Report heads its table simply "Key metrics" and prints NO
+# row numbers at all. Under the map's row-set test that does not matter: what
+# decides it is that the table carries the template's ROW SET, in the template's
+# own order, under the template's own section headings - available capital, RWAs,
+# capital ratios, the four SREP rows, the buffer block, leverage, the five LCR
+# rows and the three NSFR rows. It IS the UK KM1 template, rendered unnumbered,
+# exactly as Europe Arab Bank renders it. No row numbers are added here, because
+# HINV did not print any and assigning them would be our interpolation, not the
+# bank's disclosure.
+#
+# ENTITY AND BASIS: the document's cover reads "HSBC Innovation Bank Limited
+# (formerly Silicon Valley Bank UK Limited) - Pillar 3 Report 2022" and its Scope
+# section states "We do not have any subsidiaries and are subject to solo
+# prudential regulatory supervision by the PRA... There are no differences
+# between the basis of consolidated supervision for accounting and regulatory
+# purposes." So the single column is HINV SOLO at 31 December 2022. This is NOT
+# HSBC UK Bank plc's Pillar 3 and NOT HSBC Bank plc's - three separate entities,
+# three separate documents.
+#
+# WHY FY2023-FY2025 ARE BLANK - no standalone Pillar 3 is published for this
+# entity in those years, and the evidence is positive on three fronts:
+#   1. HINV's own UK regulatory-disclosures list at
+#      hsbcinnovationbanking.com/gb/en/legal-information lists exactly one Pillar
+#      3 item, "Pillar 3 report - 2022". That page is demonstrably CURRENT, not a
+#      stale archive: it also links an Open Banking performance report for Q2
+#      2026 and a board diversity policy statement dated April 2026.
+#   2. Constructed URLs for later editions on the same media path
+#      (.../regulations/pillar-3-report-2023.pdf and the 2024/2025 equivalents,
+#      plus hinv- and pillar-3-disclosures- filename variants) return HTTP 200
+#      but Content-Type text/html with an identical 45,951-byte HTML body and no
+#      %PDF magic bytes. Those are SOFT-404s, not documents - map rule 9's exact
+#      trap, and the reason a naive status check would have reported them as
+#      published.
+#   3. The reason is in HSBC UK Bank plc's own Pillar 3: HSBC UK Bank plc
+#      acquired SVB UK on 13 March 2023, and from the FY2023 edition onward HSBC
+#      UK states that "The HSBC UK Bank Domestic Liquidity Sub-group comprises:
+#      HSBC UK Bank plc, Marks and Spencer Financial Services plc, HSBC Trust
+#      Company (UK) Limited, HSBC Private Bank (UK) Limited and HSBC Innovation
+#      Bank Limited (HSBC Innovation Bank Limited is included from 31 March 2023
+#      reporting)". HINV's prudential disclosure is met at the HSBC UK group
+#      level from that point.
+# FY2023-FY2025 figures elsewhere in this workbook come from those years' Annual
+# Reports' capital tables - a different source, not a KM1 - so they are NOT
+# back-filled onto this sheet.
+#
+# FY2021 and FY2020 are blank for a different reason again: the entity was a
+# dormant / pre-authorisation shell with no banking operations and so no Pillar 3
+# obligation of any kind (see ENTITY HISTORY above).
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available capital (£'000)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital", {"FY2022": 1041683}),
+    ("DATA", "Tier 1 capital", {"FY2022": 1363683}),
+    ("DATA", "Total capital", {"FY2022": 1396683}),
+    ("SECTION", "Risk-weighted Assets ('RWA') (£'000)", {}),
+    ("DATA", "Total RWA", {"FY2022": 7496138}),
+    ("SECTION", "Capital ratios (as a percentage of RWA) (%)", {}),
+    ("DATA", "Common Equity Tier 1 ratio", {"FY2022": "13.9"}),
+    ("DATA", "Tier 1 ratio", {"FY2022": "18.2"}),
+    ("DATA", "Total capital ratio", {"FY2022": "18.6"}),
+    ("SECTION", "Additional own funds requirements based on SREP (% of RWA)", {}),
+    ("DATA", "Additional CET1 SREP requirements", {"FY2022": "1.8"}),
+    ("DATA", "Additional AT1 SREP requirements", {"FY2022": "0.6"}),
+    ("DATA", "Additional T2 SREP requirements", {"FY2022": "0.8"}),
+    ("DATA", "Total SREP own funds requirements", {"FY2022": "11.2"}),
+    ("SECTION", "Combined buffer requirement (% of RWA)", {}),
+    ("DATA", "Capital conservation buffer", {"FY2022": "2.5"}),
+    ("DATA", "Institution specific countercyclical capital buffer", {"FY2022": "0.6"}),
+    ("DATA", "Combined buffer requirement", {"FY2022": "3.1"}),
+    ("DATA", "Overall capital requirements", {"FY2022": "14.3"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements", {"FY2022": "7.6"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£'000)", {"FY2022": 11687362}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)", {"FY2022": "11.7"}),
+    ("SECTION", "Liquidity Coverage Ratio ('LCR')", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value average) (£'000)", {"FY2022": 5355884}),
+    ("DATA", "Cash outflows - Total weighted value (£'000)", {"FY2022": 4812602}),
+    ("DATA", "Cash inflows - Total weighted value (£'000)", {"FY2022": 1244365}),
+    ("DATA", "Total net cash outflows (adjusted value) (£'000)", {"FY2022": 3568237}),
+    ("DATA", "Liquidity coverage ratio (%) (adjusted value)", {"FY2022": "150"}),
+    ("SECTION", "Net Stable Funding Ratio ('NSFR')", {}),
+    ("DATA", "Total available stable funding - Total weighted value (£'000)", {"FY2022": 6004055}),
+    ("DATA", "Total required stable funding - Total weighted value (£'000)", {"FY2022": 2952432}),
+    ("DATA", "NSFR ratio (%) (adjusted value)", {"FY2022": "203"}),
+]
+
+KM1_SOURCES = (
+    "Sources - HSBC Innovation Bank Limited (formerly Silicon Valley Bank UK Limited), Pillar 3 "
+    f"Report 2022, 'Key Metrics' table, p.4 - {P3_2022_URL}. Verified for this ticket by HTTP "
+    "200, Content-Type application/pdf and %PDF magic bytes.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: checked the bank's OWN UK regulatory-disclosures list at "
+    "hsbcinnovationbanking.com/gb/en/legal-information - not Wayback and not this project's cited "
+    "URLs. It lists exactly one Pillar 3 item: 'Pillar 3 report - 2022'. That page is current, "
+    "not a stale archive: alongside it are an Open Banking performance and availability report "
+    "for Q2 2026 and a UK board diversity policy statement dated April 2026. So FY2022 remains "
+    "the newest - and only - Pillar 3 edition this entity has published. The workbook's newest "
+    "year (FY2025) already comes from the FY2025 Annual Report and Accounts. Checked, none "
+    "newer.\n\n"
+    "IT IS THE TEMPLATE, EVEN THOUGH IT IS UNNUMBERED. HINV heads the table just 'Key metrics' "
+    "and prints no template row numbers. It is nonetheless the UK KM1 template: it carries the "
+    "template's full row set in the template's own order, under the template's own section "
+    "headings (available capital; risk-weighted assets; capital ratios; the four additional-SREP "
+    "rows; the combined-buffer block through 'CET1 available after meeting the total SREP own "
+    "funds requirements'; leverage; the five LCR rows; the three NSFR rows). Row numbers have "
+    "deliberately NOT been added - HINV did not print any, and supplying them would be this "
+    "project's interpolation rather than the bank's disclosure.\n\n"
+    "ENTITY AND BASIS - one column, HINV SOLO at 31 December 2022. The document's cover reads "
+    "'HSBC Innovation Bank Limited (formerly Silicon Valley Bank UK Limited) - Pillar 3 Report "
+    "2022'. Its Scope section states: 'We do not have any subsidiaries and are subject to solo "
+    "prudential regulatory supervision by the PRA... There are no differences between the basis "
+    "of consolidated supervision for accounting and regulatory purposes.' Its disclosure policy "
+    "section adds: 'We meet the definition of a non-listed \"Other Institution\" and comply with "
+    "the requirements in accordance with Article 433c of the Disclosure (CRR) Part of the PRA "
+    "Rulebook.' This is NOT HSBC UK Bank plc's Pillar 3 and NOT HSBC Bank plc's - three separate "
+    "PRA-authorised entities publishing three separate documents.\n\n"
+    "ROW SET: the rows the PRA template numbers UK 8a, UK 9a, 10 and UK 10a (the Member-State "
+    "conservation buffer, systemic risk buffer, G-SII buffer and O-SII buffer) are not printed "
+    "in HINV's table at all, and are therefore absent here rather than shown blank or zero.\n\n"
+    "AVERAGING BASIS, as printed in HINV's own footnotes and NOT normalised: the LCR weighted "
+    "values are 'the simple average of the preceding 5 month-end observations... as opposed to "
+    "the prescribed 12 months due to the commencement of our banking operations occurring on 1 "
+    "August', and the NSFR values are a 2-quarter rather than the prescribed 4-quarter average, "
+    "for the same reason. FY2022's 150% LCR and 203% NSFR are therefore NOT on a like-for-like "
+    "basis with a full-year average.\n\n"
+    "WHY FY2023-FY2025 ARE BLANK - no standalone Pillar 3 exists for this entity in those years. "
+    "Three independent strands of positive evidence:\n"
+    "  1. The bank's own current disclosures list (above) shows only the 2022 report.\n"
+    "  2. Constructed later-edition URLs on the same media path - "
+    "/-/media/hinv/pdf/regulations/pillar-3-report-2023.pdf and the 2024 and 2025 equivalents, "
+    "plus 'hinv-pillar-3-report-' and 'pillar-3-disclosures-' filename variants - all return "
+    "HTTP 200 with Content-Type text/html, an identical 45,951-byte HTML body and no %PDF magic "
+    "bytes. They are SOFT-404s, not documents. A status-code-only check would have wrongly "
+    "reported these as published.\n"
+    "  3. The reason for the change is stated in HSBC UK Bank plc's own Pillar 3: HSBC UK Bank "
+    "plc acquired SVB UK on 13 March 2023, and from its FY2023 edition onward HSBC UK states "
+    "that 'The HSBC UK Bank Domestic Liquidity Sub-group comprises: HSBC UK Bank plc, Marks and "
+    "Spencer Financial Services plc, HSBC Trust Company (UK) Limited, HSBC Private Bank (UK) "
+    "Limited and HSBC Innovation Bank Limited (HSBC Innovation Bank Limited is included from 31 "
+    "March 2023 reporting)' - the same statement recurs in the FY2024 and FY2025 editions. "
+    "HINV's prudential disclosure is met at the HSBC UK group level from that point on.\n"
+    "The FY2023-FY2025 capital figures shown on the single-metric sheets in this workbook come "
+    "from those years' Annual Reports' own capital tables. They are a different source on a "
+    "different basis and have deliberately NOT been back-filled onto this sheet.\n\n"
+    "WHY FY2021 AND FY2020 ARE BLANK - a different reason again: the entity was a dormant / "
+    "pre-authorisation shell with no banking operations in either year and so had no Pillar 3 "
+    "disclosure obligation at all. See the entity-history note on the other sheets."
+)
+
+bw.add_km1_sheet(
+    title="HSBC Innovation Bank Limited — KM1 Key Metrics",
+    subtitle="The bank's own published UK key-metrics (KM1) table, reproduced in its row order, labels and "
+             "printed precision. Amounts £'000, ratios as printed. HINV SOLO basis (no subsidiaries), 31 "
+             "December 2022. FY2022 is the only year this entity has ever published a standalone Pillar 3 "
+             "report: FY2020-FY2021 predate authorisation, and from the 13 March 2023 HSBC acquisition the "
+             "disclosure is made at HSBC UK group level instead. See the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    source_height=380,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):

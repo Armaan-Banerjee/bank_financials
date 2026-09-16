@@ -1,0 +1,2987 @@
+*ABCNPZLF*
+
+COMPANIES HOUSE
+
+rAA
+a
+
+“vs
+m
+7
+>
+A
+2)
+ffl
+
+ANNUAL REPORT AND ACCOUNTS
+
+FOR THE YEAR ENDED
+
+31 MARCH 2022
+
+COMPANY NUMBER: 00068835
+RELIANCE BANK LIMITED
+
+Annual Report and Accounts
+For the Year Ended 31 March 2022
+
+CONTENTS | , Page
+Statement from the Chair of the Board 4
+
+Strategic Report | 5
+
+Directors’ Report 17
+Corporate Governance Report 20
+Independent Auditor's Report to the shareholder 23
+Income Statement 32
+Balance Sheet 33
+Statement of Changes in Equity 34
+Statement of Cash Flows 34
+Notes to the Accounts 35
+
+Reliance Bank Limited (“Reliance Bank”, “the Bank”) is a company limited by shares,
+incorporated in England and Wales. Authorised by the Prudential Regulation Authority
+and regulated by the Financial Conduct Authority (FCA) and the Prudential Regulation
+Authority (PRA). Reliance Bank is wholly owned by The Salvation Army International
+Trustee Company.
+DIRECTORS, MANAGEMENT AND PROFESSIONAL ADVISORS
+
+As at 27 July 2022
+
+DIRECTORS
+
+Justin Van Wijngaarden — Chair
+
+Martyn Croft
+
+Paul Croucher* — Chief Executive Officer
+Nikki Fenton* — Chief Financial Officer
+Robin Foale
+
+Malcolm Hayes
+
+Guy Herrington
+
+Commissioner E. Jane Paone
+
+Jim Prouty
+
+Jan Smith
+
+* Executive Directors
+
+COMPANY SECRETARY
+
+Nikki Fenton
+
+EXECUTIVE MANAGEMENT
+
+Paul Croucher, Chief Executive Officer
+Andy Detheridge, Chief Operating Officer
+Nikki Fenton, Chief Financial Officer
+Jervis Rhodes, Chief Risk Officer
+
+REGISTERED OFFICE
+
+Faith House
+
+23-24 Lovat Lane
+
+London EC3R 8EB
+
+Tel: 020 7398 5400
+
+E- Mail: info@reliancebankltd.com
+Website: www.reliancebanklitd.com
+
+COMPANY NUMBER
+
+00068835
+
+INDEPENDENT AUDITOR
+
+BDO LLP
+55 Baker Street
+London WiU 7EU
+STATEMENT FROM THE CHAIR OF THE BOARD
+
+Reliance Bank was founded in 1890 by William Booth, the founder of the Salvation Army and is
+owned by the Salvation Army International Trust. The Board is grateful to our shareholder for the
+support received during the year, a period of disruption and challenge across the world, which has
+caused, and will continue to cause great hardship to many. Our shared principles are the driving
+force behind the Bank’s Vision to be recognised and respected as an important ethical bank that
+exists to enable positive social impact.
+
+Performance
+
+The Bank continues to follow its investment plans and remains loss-making for the financial year, as
+expected. The significant growth in our lending book has driven higher interest income despite market
+interest rates remaining at historical lows for much of the year. This, together with careful management of
+costs, has meant the annual loss before tax reduced by £1m, compared to last year. The Bank’s total assets
+exceeded £250m for the first time, with a record £236m held in customer deposits.
+
+Customers
+
+The Bank continues to enhance its extensive day-to-day services for The Salvation Army as a globally
+renowned Charity. Digital banking interfaces continue to be developed and modernised to provide a
+competitive banking proposition which will allow us to better serve our not-for-profit and SME customers.
+
+In 2022 the Bank came first overall in the Charity Finance Survey Awards for customer satisfaction, building
+on the first place for best service category in 2021. These are fantastic achievements given the challenges
+of lockdown and are a testament to our dedicated Customer Experience team.
+
+Capital
+
+The Bank must meet regulatory requirements for liquidity and capital and ended the year with a CET1 ratio
+(the regulator's measure of financial strength) of 18.23%. During the financial year, the Bank raised
+£3 million additional capital from our existing shareholder, to help strengthen us for future growth.
+
+The Bank has historically relied on treasury investment income and its lending book is currently sub-scale.
+The capital received will help support lending growth to social impact organisations, which aligns with our
+low credit risk appetite and objective of increasing returns.
+
+Staff
+
+In addition to our shareholders, the Board would also like to extend its thanks to the employees of the Bank
+who have worked tirelessly to improve our ways of working throughout this pandemic and have adapted to
+the hybrid working conditions seamlessly. | am delighted that our highest category score in the Financial
+Standards Culture Board survey is for ‘Shared Purpose’. We continue to invest in our people so we can
+deliver on our goals and the Vision of the Bank.
+
+The Board :
+
+During the year Julie Nicholson stepped down as Chair after six years and we are very grateful for her
+contribution and a job well done. | am proud to have taken on the role of Chair of this important institution
+and | look forward to seeing the Bank evolve and progress even further.
+
+J loc®
+
+Justin Van Wijngaarden
+Chair
+27 July 2022
+STRATEGIC REPORT
+PERFORMANCE REVIEW FROM THE CHIEF EXECUTIVE OFFICER
+
+The Bank’s 5-year strategic plan aims to scale and diversify its customer base. The Bank is seeking new
+business and charity customers to increase its deposits and reduce its concentration of funding from The
+Salvation Army. This is wholly in line with The Salvation Army’s investment strategy and desire to build a
+broader based bank.
+
+The economic climate has continued to be very challenging. Like all financial institutions, the Bank’s income
+was impacted by the emergency reduction to 0.1% of the Bank of England’s base rate in March 2020, which
+significantly reduced our income, and the Bank chose to maintain a small positive rate on all customer
+deposit accounts. During the second half of the year, we saw sporadic improvement in fee income from
+customers in relation to business current account transactions. The impact of the Omicron variant, which
+had its epicentre in London in December 2021 and the related work from home guidance, underlined the
+pandemic’s ability to continue to impact our customers and their customers throughout the financial year.
+The Bank has a strong liquidity position and as at 31 March 2022, £91 million was deposited with the Bank
+of England (2021: £74 million). Customer deposits have also grown during the year to £236.2 million (2021:
+£231.5 million).
+
+The mortgage book grew by 22% to £47 million in the year, providing the Bank with an important revenue
+stream which partly offset the reduction in investment income. Loans to businesses also showed good
+growth in the year, increasing by 27% to £49 million. The commercial lending market, which fell away at the
+start of the pandemic started to pick up towards the end of last year and the sectors in which we operate
+have seen a good recovery. There were no loan losses in the year. The Bank continues to hold good levels
+of security against its loan exposures, on average the commercial book is 39% LTV (2021: 41%) and the
+mortgage book is 48% LTV (2021: 47%).
+
+Our business lending is focussed on supporting our communities, churches, healthcare services and the
+education sector. During the year we also began to add more social housing providers to the portfolio; the
+Salvation Army Housing Association is a long-standing customer. In 2020 we introduced a Key Worker
+mortgage looking to support those who supported us during the pandemic, and this — together with our
+Shared Ownership offering — form the basis of the social impact of our mortgage book. We also have a
+small portfolio of mortgages secured on properties which have been specifically altered to accommodate
+disability.
+
+As anticipated in the 5-year strategic plan the Bank continues to be loss making, recording an operating
+loss before tax of £0.8m (2021: £1.8m). The prior year included £0.5m of non-recurring costs related to
+restructuring. No gift aid donations were made in the current year (2021: £Nil), reflecting the approach of
+the 5-year strategic plan. The Bank continues to invest, and the recent losses partly reflect the investment
+in upskilling our employees and investment in software solutions to enhance risk management and drive
+digitalisation.
+
+The Bank’s key ratios remained strong during the year with a CET1 capital ratio of 18.2% (2021: 15.7%)
+and a Liquidity Coverage Ratio of 605% (2021: 986%). The Bank’s strategy to grow lending and drive
+income has meant that the Bank’s annual Net Interest Margin (NIM) grew to 1.29% (2021: 1.03%). The loan
+to deposit ratio grew to 40.9% (2021: 33.5%) and this is expected to improve further as lending replaces
+excess liquidity. Deposits from personal and non-Salvation Army business customers grew by 21% (2021:
+24%) to £61m (2021: £51m).
+
+The Bank’s low risk appetite and careful stewardship has resulted in no write-offs due to lending losses this
+year (2021: £nil). Total lending losses for the past seven years have amounted to £128k.
+STRATEGY
+The implementation of our 5-year plan is supported by three key pillars:
+
+Grow customers and ease their journey
+
+We are investing and modernising our approach to ensure that we remain relevant to our customers with
+an attractive proposition. We will preserve the Bank’s commitment to excellent customer service whilst
+recognising our customers’ needs and behaviours around digital channels and internet banking. Our first
+phase of digital transformation was to upgrade the internet banking platform and this is now in the customer
+pilot stage. We are also working on modernising our telephony and network infrastructure which aim to
+deliver an improved customer experience as well as create operational efficiencies. A further programme
+of work is planned that covers digital customer on-boarding, customer case management and mortgage
+customer journeys.
+
+Build operational resilience and de-risk the Bank
+
+Our investment in the new internet banking platform and technology infrastructure also supports this key
+strategic pillar. We are leveraging cloud technology, virtualisation and upgraded physical infrastructure, to
+achieve an agile, resilient operating foundation. In the later years of the plan we may also upgrade our core
+banking system.
+
+Risk management is built into every role in the Bank and we follow a risk management model where first-
+line risk is owned by the business area, the Risk & Compliance function provides the second line of defence
+and the third line of defence is Internal Audit. During the year, we expanded the risk function, appointing the
+Bank’s first Chief Risk Officer (SMF4) and adding an operational risk role. The Bank met the 31 March 2022
+deadline to comply with PS21/3, mapping its critical business activities and identifying impact tolerances.
+The Bank will now implement systems, within three years, to ensure that these impact tolerances can be
+met.
+
+Our strategic plan demands that we review and strengthen our risk management in line with our mission to
+maintain a solid and safe bank for our shareholder and customers. We are investing extensively in capability
+and capacity, to ensure that we maintain an up to date and forward-looking approach that is supporting our
+business as we scale.
+
+Attract and retain good people
+
+We have restructured our business model and the expanded resources plan adds capacity and capability
+across the Bank, with a specific focus on risk management. We have introduced a wider range of well-being
+benefits and now that the pandemic has waned, hope to re-introduce our volunteering opportunities: all
+employees get two volunteering days a year.
+
+We joined the Financial Services Culture Board (FSCB) in 2019. The FSCB provides a unique
+benchmarking process based on employee feedback from many banking and financial services members.
+The Bank holds up strongly in several areas, although there are also lessons to take forwards as we adjust
+to the hybrid working model and continue to professionalise the Bank’s business model.
+
+OUR FOUNDATIONS
+
+Reliance Bank was founded in 1890 by William Booth, to serve the Salvation Army’s day-to-day banking
+needs and to attract investments to finance mortgages on property vital to the work of the movement.
+Whilst the Bank has developed in the last century, its original purpose has not been lost and through a gift
+aided share of allowable profits over £2m has been returned to its owners in the past decade. Today, the
+Bank is used by many private customers as well as charities and businesses that value the Bank’s ethical
+principles.
+VISION, MISSION AND VALUES
+
+Our Vision
+
+To be recognised and respected as an important ethical bank that exists to enable positive social impact.
+Our Mission
+
+To be a distinctive, solid and safe bank with strong Christian and ethical values that delivers as part of the
+“One Mission” of The Salvation Army by serving our customers with a bespoke approach that measures
+
+our impact in society.
+
+Our Values
+
+Integrity
+o Weare reliable, trustworthy, transparent and honest in our personal and business
+relationships.
+o We design all our products, services, pricing and communications in ) accordance with the
+principles of treating customers fairly.
+
+e Accountability
+o We only provide products and services that meet a genuine customer need.
+o We provide a secure home for people’s hard-earned savings.
+o We only lend to customers responsibly and, if a problem does arise, we work with customers to
+support them through difficult times.
+o We lend in line with our credit policy that protects the Bank’s depositors and investors.
+
+« Consideration
+o We aim to provide access to banking services to people who are often overlooked by the
+mainstream and we will always try to find a solution for customers.
+o We value communities and seek to add value where we can.
+
+e Alignment
+o We utilise our resources so that we can generously support the global work of The Salvation
+Army. We are advocates for its One Mission and will promote the social good that the Bank
+and our customers are trying to achieve.
+
+« Respect
+o We value all people and welcome their views.
+o We adopt recruitment and remuneration policies that are fair and value equality and diversity.
+o We consider the impact that our operations have on the environment.
+5-YEAR STRATEGIC PLAN
+
+This year has seen Reliance Bank make further progress against its 5-year strategy, which focuses on
+driving positive social impact whilst developing a more robust, diversified business model. The strategy was
+adopted in October 2018, at which time the International Trust of The Salvation Army established full
+ownership of the Bank. The Bank has successfully grown its loan book over the year and the shareholder
+invested a further £3 million of capital to support the Bank during the pandemic and allow it to better support
+the loan growth required to return to profitability. Safe loan growth is needed to drive interest income and
+offset the lack of treasury interest income, given the very low interest rate environment of the last ten years.
+
+The Bank’s focus has historically been to provide bespoke, reliable banking services to The Salvation Army,
+whilst also providing a limited range of business and personal lending products to its other customers. The
+emphasis of the 5-year plan is to transform the Bank’s processes and systems to support a modern
+customer interface and a broad customer attraction, so the Bank is recognised as an important ethical bank.
+Reliance continues to serve the wider Salvation Army mission which in itself attracts people and customers
+to our door. We will continue to deliver social impact through mortgages which support individuals under-
+served by the mainstream banks, to own their own home, and through commercial lending in sectors such
+as healthcare, housing and education which have important social impact roles in our communities.
+
+The Bank is currently sub-scale and must grow lending to drive income and cover its (mainly) fixed costs.
+The burden of running a regulated financial institution is significant and the Bank intends to return to profit,
+assuming interest rates rise in line with economic forecasts, by driving income rather than cutting costs.
+Underlying costs have remained well-controlled however, the Bank will consider adding selected leadership
+and supporting roles to increase capacity and strengthen capability over the next 12 -18 months. As well as
+driving growth, a key priority has been developing the new internet banking platform, to remove manual
+processing and enhance the customer journey. This programme has suffered delivery slippages, although
+we are now in the process of migrating customers to the new platform. The overall digital transformation
+programme has been refocussed to prioritise strong business foundations including IT infrastructure and a
+modern telephony solution.
+
+STRATEGIC PRIORITIES
+
+Return to profit and safely grow loans
+
+To drive income and grow the lending book through a mix of residential mortgage lending and commercial
+lending, with a primary focus on enabling social impact. The growth in lending will be subject to the existing
+rigorous lending criteria that have supported the Bank’s excellent track record with minimal bad debts.
+
+Deliver business transformation
+
+To invest in our people for the medium term by retaining and attracting the skills and expertise needed to
+build and grow the Bank and enhance succession planning and risk mitigation. The transformation plan
+includes digitalisation, but is wider than this, as it is intended to improve systems, delivery mechanisms
+and drive operational efficiencies.
+
+The digital foundations required to support the transformation plan are a significant investment by the
+Bank; to build a fit for purpose, sustainable, modern bank and to support the scale required to be resilient
+to financial shocks in the future.
+Evolve the Bank’s risk management framework
+
+Risk management and resiliency is at the heart of everything the Bank does. A key pillar of the 5-year
+strategic plan, the Bank will continue to refine and enhance the Bank’s processes and controls in respect
+of the identification, reporting and monitoring of the key risks associated with the Bank’s business model. °
+
+Launch the Bank’s social credentials
+
+To launch the product proposition spanning across business banking, lending and deposits aiming to
+measure our contribution to social purposes thus extending The Salvation Army’s mission and adopting
+a truly socially responsible operating model. During the year the Bank updated its ethical policy, available
+on our website and increased the number of case studies published. As the Bank matures, the ethical
+focus will be applied in every aspect of the operating model, including how we operate day to day in our
+premises, how we communicate with customers and the products we launch.
+
+Grow the number of banking customers
+
+Continue to support our existing customer base but with an aim to develop a specialist sector focus on
+businesses that deliver a social impact including charities, churches, education, healthcare, social
+housing and social enterprises.
+
+Create and deliver a marketing re-fresh plan
+
+The Bank undertook a full review of its website and branding in the early years of the plan and continues
+to attract customers, industry advocates and staff, promote the Bank through multiple channels and
+reinforce our brand and values. The Bank invests in low level direct promotion, attends industry events
+and leverages digital media channels. The Bank partnered with a specialist digital performance agency
+in 2021, with focus on online awareness and attracting more customers who share our values. 2022
+developments will enhance the customer journey from search engine to application form.
+
+FINANCIAL REVIEW
+
+5-YEAR PERFORMANCE HIGHLIGHTS
+
+£000’s 2021/22 2020/21 2019/20 2018/19 2017/18
+Operating Income 3,502 2,688 2,680 2,509 2,210
+i f
+
+novo tums sts betore (4,252) (3,966) (3,352) (2,211) (2,034)
+
+Operating (Loss)/Profit
+
+before ng (o se (750) (1,278) (672) 298 176
+
+Shareholder’s Funds 14,443 12,192 11,652 12,143 11,291
+
+Loans to Customers 96,522 77,506 53,205 47,220 45,880
+
+Salvation Army
+
+Deposits 174,811 180,611 145,430 135,241 163,899
+h t
+
+Deposits. omer 61,401 50,892 40,981 36,394 33,644
+
+Loan Losses - - (1) (2) (4)
+
+KEY PERFORMANCE INDICATORS
+
+2022 2021 Commentary
+
+Core Tier 1 Capital as a % of total risk weighted
+assets. As all of the Bank's Capital is Core Tier 1
+Capital, this equates to the Bank’s Total Capital Ratio.
+18.2% 15.7% Increased as the additional capital received from the
+shareholder more than supports the increase in the
+risk weighted assets from loan book growth.
+
+Core Tier 1
+Capital Ratio
+
+Net interest earned as a % of interest earning assets.
+Increased as a result of the asset mix, lending to
+
+Net Interest 1.29% 1.03% customers has a higher margin than treasury assets.
+Margin ‘ , Interest rate rises started to have some positive
+impact in the last three months of the year.
+
+Total customer lending as a % of total customer
+
+Lending / deposits. increased as a result of utilising surplus
+Deposits 40.9% 33.5% liquidity (customer deposits) to lend to social impact
+Ratio organisations and mortgage customers.
+
+High quality liquid assets as a % of expected net cash
+outflows (expected cash outflows less capped
+
+Liquidity expected cash inflows) over a 30-day stressed period.
+Coverage 605% 986% The Bank’s high quality liquid assets currently
+Ratio (LCR) | comprise balances held at the Bank of England and
+
+Regulated Covered Bonds.
+
+During the year the Bank adjusted its treatment of Salvation Army deposits in the LCR calculations which
+resulted in a reduction in the ratio. The position is still significantly in excess of the regulatory minimum (100%).
+
+CAPITAL
+
+The Bank’s objective in respect of its capital is to ensure it has sufficient levels to Support its growth plans
+and continue to meet its regulatory capital requirements, plus headroom within the Board’s risk appetite. Its
+capital currently consists of ordinary share capital, the revaluation reserve and the profit and loss reserve,
+all of which meet the Common Equity Tier 1 capital definition. Formal capital reforecasting is performed
+quarterly and reported to the Board.
+
+The Bank has continued to hold positive levels of regulatory capital throughout the year, having raised
+£3 million of additional capital from its shareholder. In the prior year it revalued its Head Office freehold
+property which increased reserves by £2.3m. The Directors have confirmed that this valuation remains valid.
+Applying the current capital requirements, as at the balance sheet date, the Bank has a CET1 Ratio (CET1
+capital as a percentage of risk-weighted assets) of 18.2% (2021: 15.7%).
+
+Comfortable headroom against regulatory capital requirements has been maintained, with the Bank’s Total
+Capital Requirement (TCR) calculated at £8.1m as at 31 March 2022 (2021: £8.0m) as the Bank’s loan
+growth was offset by a reduction in treasury risk weighted assets. The capital requirement to support
+treasury assets reduced due to a strategic shift away from interbank investments into lower risk regulated
+covered bonds.
+
+As at 31 March 2022, the Bank’s Leverage Ratio (capital as a percentage of total exposures) increased to
+7.6% (2021: 4.5%) partly driven by the increase in mortgage lending.
+
+10
+LIQUIDITY
+
+Throughout the year, the Bank has continued to maintain very strong liquidity and funding levels. Total
+advances to customers are restricted to 65% of total customer deposits ie 35% of customer deposits
+should be held in treasury investments to repay customers as and when they wish to withdraw their funds.
+This is the Board’s risk appetite which increases over the plan period in line with the loan growth plans but
+remains conservative overall. The Bank intends to remain 100% customer funded and consequently does
+not borrow in the wholesale markets.
+
+The Bank’s Liquidity Coverage Ratio (high-quality liquid assets as a percentage of 30-day net cash
+outflow) has also shown high levels over and above regulatory requirements, with the 31 March 2022 ratio
+at 605% (2021: 986%).
+
+BUSINESS PERFORMANCE
+
+The Bank continues to provide The Salvation Army and other customers with excellent customer service
+underpinned by the Bank’s Customer Experience and Relationships Management teams. In 2022 the Bank
+won the Charity Finance Award for customer service for the third year running — an award voted for by the
+customers of banks across the UK.
+
+Net interest income
+
+The Bank’s net interest income grew to £3.1m (2021: £2.2m) for the year, despite the ultra low interest rate
+environment for most of the year. Income levels have been partially protected by decisions on product
+pricing, but the main driver of this income is from new lending. The lending book increased by 25% (£19.0m)
+compared to the previous year growth of 46% (£24.3m) and market interest rate rises were passed onto
+borrowers in the last quarter of the financial year. The mix of deposits held with the Bank is advantageous
+for interest payable as well, with a significant current account holding which does not attract interest. The
+Bank did start to increase certain savings rates towards the end of the financial year.
+
+Operating costs
+
+The majority of the Bank’s cost base relates to people and systems. Increases in amortisation relate to the
+ongoing investment in systems. Despite pressure on staff costs and from inflation, Operating Costs
+- excluding transitional items only increased £0.3m (2021: £0.6m). In the prior year the Bank also incurred
+transitional costs.
+
+Operating profit
+
+The pre-tax operating loss for the year amounted to £0.8m (2021: £1.8m). Performance over the past three
+years reflects the Bank’s investment in a new organisational structure, systems and controls to support its
+future growth plans. No gift aid donations were made in the current year (2021: £Nil).
+
+OUTLOOK
+
+The Bank continues to make progress against its five-year financial plan, moving away from a treasury
+income focus to a loan income focus and expanding its positive social impact with lending to businesses
+and organisations who meet our criteria. As the Bank grows and restructures, further investment in systems
+and specialist staff skills is required and this will continue to impact profitability until the loan book is large
+enough to sustain a certain level of fixed cost.
+
+The wider economic outlook is uncertain, with forecasts for inflation and interest rates rising considerably
+over the last six months. A return to a more normal interest rate environment is positive for the Bank, but
+
+11
+the impact on customers and businesses may increase loan loss provisions over time. All customers are
+stress tested for affordability criteria, even after significant rate rises. Brexit and the conflict in Ukraine have
+not had any direct impacts on the Bank but the knock-on effects from rising energy prices, shortage of
+skilled staff and inflation generated from supply chain issues inevitably impact the Bank’s costs. Pressure
+on staff costs is also likely to grow.
+
+Whilst the year ahead is likely to be less disruptive from an operational perspective, post COVID, it is hard
+to predict whether the economic conditions going forwards will help drive profitability or further cost
+challenges.
+
+PRINCIPAL RISKS AND UNCERTAINTIES
+
+Due to the Bank’s position of being wholly owned by a Christian charitable organisation, and being itself
+founded on ethical principles, it has a very low risk appetite across the whole business. The Board sets the
+risk appetite, and reviews it at least annually, which is then embedded in risk policies; the management and
+monitoring of the business in line with those policies drives the low-risk nature of the business. This risk
+appetite, and its embedding in our business decisions, have helped protect the Bank during periods of
+uncertainty and when financial markets were challenging.
+
+In common with all banks, our business faces a number of risks including credit risk, liquidity risk, interest
+rate risk, market risk, operational risk, conduct risk, regulatory risk, financial risk from climate change and
+reputational risk. The Bank participates in a multi-employer defined benefit pension scheme, so the Bank
+also has pension risk. Policies and procedures are in place to ensure that the Bank’s exposures to these
+risks are monitored and controlled.
+
+The Bank maintains a detailed risk register, allocating responsibility for all significant risks to a specified
+member of senior management. Risks are monitored on a regular basis, along with their associated
+mitigation and controls, and any emerging changes. This forms part of the Bank’s risk event reporting.
+
+The Bank performs financial stress testing as an integral part of setting risk appetites and monitoring its
+exposures. The Bank completes an Internal Capital Adequacy Assessment Process (ICAAP) which details
+how the Bank identifies and assesses its key risks, how it mitigates those and calculates a capital allocation
+as necessary, to support the Bank’s operations in light of those risks. Stress testing also helps to identify
+key sensitivities and to ensure that the Bank can put plans in place to cope with future stresses. Pillar 3
+disclosures provide more information on some of these risks and can be found on the Bank’s website at
+www.reliancebankltd.com.
+
+The Bank also maintains a formal Recovery Plan, a Business Continuity Plan and an Incident Management
+Plan. These Plans are updated regularly and are shared with regulators as required. All risks and related
+key risk indicators are monitored regularly at the Board Conduct, Risk & Compliance Committee.
+
+Credit Risk
+
+Credit risk is controlled by strict lending risk appetites, authorisation limits and a segregation of duties review
+before funds are advanced and through discussions with Credit Committee and Assets and Liabilities
+Committee (“ALCO”). Affordability in stressed circumstances is a key consideration when reviewing lending
+applications. Monitoring of credit risk in the case of mortgages is through a suite of key risk indicators and
+commercial lending also uses the ongoing dialogue and annual review process with the relationship
+manager. The Bank continues to adopt a conservative customer lending policy, which has resulted in a low
+bad debt record.
+
+Maximum exposure levels to counterparties are defined and for treasury investments the Board also sets
+risk appetites for the minimum credit rating of counterparties. Daily monitoring of positions ensures that any
+
+changes in treasury counterparty credit ratings are identified quickly so that action can be taken if necessary.
+12
+Liquidity Risk
+
+The Bank’s policy sets out the wide range of processes and controls that the Bank uses to monitor and
+control liquidity risk. Daily liquidity monitoring includes the maturity of assets and liabilities between time
+periods to ensure that mismatches do not exceed policy or trigger early warning indicators. The Bank also
+reports a dashboard of financial risk information to the Executive Committee. The Bank ensures that it holds
+sufficient levels of High Quality Liquid Assets (in the form of balances on its Bank of England Reserves
+Account and Regulated Covered Bonds) to exceed the regulatory Liquidity Coverage Ratio requirements.
+The Bank performs regular stress testing to ensure that it holds adequate liquid assets to protect customers
+in the case of a severe but plausible stress scenario. An annual Internal Liquidity Adequacy Assessment
+Process (ILAAP) is completed, which also details the liquidity systems and controls in place to ensure the
+Bank maintains adequate liquidity resources.
+
+The Bank adopts a conservative approach to the management of its liquid assets and treasury investments.
+Counterparty credit risk is discussed above. The Bank can only invest in simple products, approved by the
+Board and is generally focused on instant access liquidity funds, short term fixed rate certificates of deposit
+(USD) and floating rate covered bonds (GBP). The Bank conducts cashflow forecasts for operational
+purposes and has minimum credit balance agreements in place with some large depositors. A significant
+proportion of total balances are committed to remain with the Bank subject to three months’ formal notice.
+
+Interest Rate Risk
+
+Interest rate risk is controlled carefully to ensure that risk is managed within Board risk appetite. The Bank
+monitors market interest rates, moving the Bank’s rates on variable products in response to the market and
+maintaining an appropriate spread between rates receivable and rates payable. Currency fixed rate term
+deposits from customers are matched broadly with fixed rate term investments. Maturity profiles of fixed
+rate mortgages are controlled by tranche and nominally hedged against non-interest-bearing customer
+liabilities with long-term behavioural lives. Interest rate sensitivity gap analysis is undertaken monthly and
+basis risk positions are reviewed regularly. ALCO recommends the approach to managing interest rate risk
+to the Board Conduct, Risk & Compliance Committee.
+
+Market Risk
+
+The Bank does not have a trading book and has no material exposure to equities or derivatives. The Bank
+only accepts foreign currency term deposits from sophisticated customers who understand currency risk.
+US dollar and Euro current accounts are provided to The Salvation Army as well as short term fixed rate
+deposits. To minimise foreign currency risk, where possible customer funds received are placed in deposits
+which match the same terms and currency; any margins are converted to sterling on a regular basis.
+
+Operational and Conduct Risk
+
+Operational and conduct risks, including the risk of fraud, business continuity, financial crime, third party
+dependency, key staff and IT security, are controlled by a wide variety of internal controls, the effectiveness
+of which are reviewed by the Board Conduct, Risk & Compliance Committee considering the output of
+second line risk reviews, the internal audit function and results of management monitoring of the risk register
+with a regular consideration of emergent risks and changes to risk profiles.
+
+Regulatory Risk
+
+Changing regulation is not new to the banking industry. Occasionally, this will involve extensive reviews of
+major control frameworks, such as those relating to conduct, capital adequacy and liquidity. It is important
+to ensure that the Bank remains compliant with all existing regulation and that new regulations are
+accurately interpreted and planned for. Failure to horizon scan could impact our ability to comply with
+upcoming changes and this could cause reputational damage and / or result in financial loss through
+
+13
+regulatory sanction. The importance of compliance and meeting regulatory expectations is embedded in the
+front-line business functions, with internal systems and controls designed to facilitate this, reviewed by the
+‘second line of defence’ to ensure they remain effective. The Bank’s internal audit function as the “third line
+of defence” also plays a key role in ensuring that the Bank continues to meet its regulatory requirements.
+
+Reputational Risk - Social Impact Banking
+
+Owing to the Bank’s ethical focus, reputational risk is of particular relevance. The current Conduct Risk
+regime to eliminate poor outcomes for customers is shortly to be enhanced with the introduction of
+Consumer Duty by the Financial Conduct Authority. Undertaking business with integrity is crucial to the
+Bank in building trust with customers and has seen the Bank benefit from many new business introductions
+from existing customers. Providing products that meet customers’ needs, together with delivering excellent
+customer service in a fair and transparent manner has been engrained in the Bank’s culture for many years
+and continues to be the focus of our attention.
+
+Pension Obligation Risk
+
+Whilst the multi-employer defined benefit pension scheme is closed to new members, there is a risk that
+fund assets wili not meet liabilities as they fall due for remaining members. A number of assumptions are
+made in valuing the scheme including assumptions on discount rates, inflation, mortality rates and salary
+increases. The scheme is subject to triennial valuations and the Bank makes commitments to pay up its
+share of any shortfalls arising. Whilst the Scheme was in surplus at 31 March 2021, in recent years, both
+employer and employee contribution rates have been increased to help alleviate future funding risks.
+
+Pandemic and Global Geopolitical Risks
+
+The Bank has demonstrated its operational resilience in implementing business-wide remote working
+arrangements which has allowed it to continue to provide its full range of services during lockdown periods
+without disruption. Wherever possible the Bank staff were encouraged to attend the office three days a
+week however, during the Omicron outbreak in December 2021, working from home was temporarily
+reintroduced and systems and processes were unaffected.
+
+The conflict resulting in Russia’s invasion of Ukraine has not had any direct impact on the Bank or its
+suppliers. The vast majority of the Bank’s customers are based in the UK and are also unaffected. The Bank
+provides limited banking services to the overseas territories of the Salvation Army International Trust. Due
+to the imposition of inexact, ‘blanket’ bans on transactions by global banking institutions, it has been
+increasingly challenging to transfer funds for the Salvation Army’s charitable work in Russia. The Bank
+continues to work with its partners, and The Salvation Army, to try and resolve these global processing
+issues.
+
+The Bank has not seen any credit losses in the year however, it is presumed that credit risk will increase
+across the financial system as inflation and interest rates start to rise significantly to due global pressures.
+
+Financial Risks from Climate Change
+
+The Bank has no direct funding links to carbon-emitting industries, so has no exposure to high-risk sectors
+for the direct impacts of climate change (coal-fired power stations etc). The indirect financial risks of climate
+change, however, are wider and the Board has categorised these risks as high, medium and low. The high
+risks mainly focus around the impact of flooding on property security held by the Bank, and also the
+increased costs of insurance for the Bank in relation to its own property and its supply chain.
+
+The Bank is committed to support more community climate schemes and organisations which actively drive
+low carbon initiatives. During the year the Bank met its obligations under SS3/19 and has embedded
+assessing the risks of climate change into its annual lending reviews. Modelling has been performed in 2022
+
+14
+which reviewed the climate change risks in the residential portfolio and this will help update our approach
+to stress testing, specifically a specific climate risk related scenario. The Bank also intends to review its own
+impact on climate change, its carbon footprint and possible actions to reduce this.
+
+Controlling and Monitoring Risks
+
+An important aspect of controlling risks is monitoring key risk indicators and key performance indicators,
+which also allows the Bank to assess risk and performance. Key risk indicators are used to set out the
+Bank’s risk appetite.
+
+The Board receives management information packs which include monthly management accounts which
+compare key drivers of performance against budget and prior year. Explanations are provided to the Board
+of significant trends and comment focuses on the key performance indicators of operating profit, net interest
+income, administrative expenses, customer deposits, customer lending and fee income. This helps the
+Bank’s management assess the effectiveness of its margin management and cost control in light of the
+market conditions it faces, as well as establishing how successful the Bank has been in attracting new
+customers,
+
+The Board also receives reporting on the current liquidity position, regulatory capital position and
+performance against various other key risk indicators. Both the performance pack and the risk pack are
+being refreshed on the back of improvements during the year to systems and reporting capabilities.
+
+Other standard components of our management information packs include updates on lending and arrears
+positions, financial crime statistics, regulatory compliance updates, treating customers fairly reviews, details
+of customer feedback and business development information. The Bank plans to develop better reporting
+on its socia! impact in the coming year.
+
+The Bank’s liquidity position and large exposures are monitored daily against targets and limits set by the
+Board in line with the Prudential Regulation Authority’s parameters. Capital adequacy is regularly monitored
+on an actual and forecast basis against an early warning indicator set above a minimum regulatory target,
+the calculation rules for which are set by the Prudential Regulation Authority.
+
+Statement in compliance with Section 172(1) of CA 2006 (“s172”)
+
+The directors have a duty to promote the success of the Bank and our related stakeholders. A director must
+act in the way they consider, in good faith, to promote the success of the Company for the benefit of its
+members as a whole, and in doing so have regard (amongst other matters) to:
+
+e the likely consequences of any decision in the long term;
+the interests of our employees;
+the need to foster business relationships with our customers, suppliers and others;
+the impact of operations on our communities and environment;
+the desirability to maintain a reputation for high standards of business conduct, and;
+the need to act fairly across all members.
+The directors are committed to developing and maintaining a governance framework that is appropriate to
+the business and supports effective decision making coupled with robust oversight of risks and internal
+controls.
+
+15
+In considering their duty under s172, the directors have identified the following stakeholders, in addition to
+the shareholder:
+
+Customers: delivering successful outcomes through a reliable, secure service to those charities,
+businesses and individuals that rely on the Bank’s services for their own operations and funding
+plans.
+
+Employees: having a diverse workforce that feel valued in an inclusive work environment; providing
+opportunities for development and an open culture for sharing feedback.
+
+Suppliers: developing trusted business partnerships that provide value for money in delivering
+services that are reliable, secure and robust. The wider stakeholder management of individual
+suppliers is recognised as a means by which the Bank can control its own impact through its supplier
+choices.
+
+Communities: closely linked to the charity customer relationship and supporting those customers to
+achieve their aims, contributing to a positive social impact within the wider community.
+Environment: recognising the direct impact that businesses can have on the environment and
+making responsible choices that align with the Bank’s values.
+
+Regulators: ensuring the Bank adheres to all relevant regulation and maintains an open, transparent
+relationship with the Financial Conduct Authority and the Prudential Regulation Authority.
+
+HMRC: ensuring the Bank is paying all due taxes.
+
+External Auditors: ensuring the Bank's auditors are kept aware of all key developments through an
+open, transparent relationship.
+
+Pension Schemes: a subset of the wider Employee stakeholder group - schemes are in place to
+provide benefits to the Bank’s staff.
+
+The key decisions made by the Board during the year that have impacted these stakeholders include the
+following:
+
+The recommendation of an additional share capital investment by the shareholder.
+
+Approving the design of a new organisational structure to increase stability and strengthen risk
+management as the Bank grows.
+
+Reaffirming the broad objectives of the Bank’s strategy, given the impact of global economic
+pressures.
+
+BY ORDER OF THE BOARD
+
+Paul Croucher
+Chief Executive Officer
+27 July 2022
+
+16
+DIRECTORS’ REPORT
+
+The Directors have pleasure in presenting their report, together with the accounts of the Bank, for the year
+ended 31 March 2022.
+
+BUSINESS REVIEW AND OBJECTIVES
+
+A review of the Bank’s business, its objectives, activities and future strategy is covered in the accompanying
+Statement from the Chair of the Board and the Strategic Report. The Strategic Report also contains the
+Bank’s key performance indicators for the year and other important information relating to its business.
+
+PRINCIPAL RISKS AND UNCERTAINTIES
+
+The Strategic Report identifies the Bank’s principal risks and uncertainties and the key actions taken to
+mitigate them. In addition to the description in the Strategic Report, note 29 contains information relevant
+to the Bank’s financial! risk management policies and objectives.
+
+ETHICAL POLICY
+
+The Bank's ethical stance is driven by its shared principles with our shareholder and at 31 March 2022 over
+55% (2021: 55%) of the loan book is classified as social impact. The Bank uses a positive approach to
+lending decisions, guided by what it wants to do and the impact it wants to have.
+
+The customer exclusions below follow on from this positive approach, outlining clearly sectors and activities
+which do not fit with our values: alcohol, gambling, pornography, tobacco, weapons, conflict minerals,
+human rights failures and lack of labour rights, as these have a negative impact on people; animal testing,
+factory farming / fisheries, fur and specialty leather, deforestation, fossil fuel energy, genetic engineering,
+hazardous substances and mining as these have a negative impact on the environment; and also those
+who demonstrate poor ethics including corruption, poor accounting practices, tax evasion or violation of
+laws, codes and conventions. This list is not exhaustive, as each application is considered on its merits to
+ensure that it is compatible with the ethics of the Bank’s ownership.
+
+Day-to-day banking operations, liquidity management and credit risk management require the Bank to hold
+deposits with a range of banking counterparties with a strong credit rating. It is recognised that the Bank’s
+ethical position is unlikely to be mirrored by all financial institutions.
+
+DIVIDEND POLICY
+
+The Bank does not pay dividends to its shareholder. All profits made by the Bank go to support the on-going
+work of The Salvation Army. This will either be in the form of direct donations made to the Bank’s
+shareholder or by increasing the value of the shareholders investment in the Bank through retained
+earnings.
+
+CUSTOMER COMMITMENT
+
+The Bank’s focus is to provide banking customers a socially responsible choice that is competitive — offering
+banking products and services with the assurance that they will not be taken advantage of, that their assets
+will be looked after responsibly and with the knowledge that the return made on those assets by the Bank
+will ultimately go to support the work of The Salvation Army. ,
+
+The Bank deals fairly with customers at all times and takes complaints very seriously. Feedback is also
+invited from new customers. In this respect, the Bank holds regular staff workshops and has a system to
+record all cases where the customer is not satisfied with its service for whatever reason.
+
+17
+_ The Bank will maintain its focus at all levels in delivering a personal, excellent and efficient service to ensure
+
+that it treats all its customers on a fair and consistent basis.
+DIRECTORS AND THEIR INTERESTS
+
+No directors hold any beneficial interests in the share capital of the Bank: The Directors serving during
+the year and up to the date of this report were as follows:
+
+Alka Ahuja (resigned 1 September 2021)
+
+Martyn Croft
+
+Paul Croucher* — Chief Executive Officer
+
+Nikki Fenton* — Chief Financial Officer
+
+Robin Foale
+
+Malcolm Hayes (appointed 4 May 2021)
+
+Guy Herrington (appointed 4 May 2021)
+
+Major Russell Malcolm (resigned 31 January 2022)
+
+Julie Nicholson (resigned 31 December 2021)
+Commissioner E Jane Paone (appointed 1 September 2021)
+Jim Prouty (appointed 4 May 2021)
+
+Jan Smith (appointed 1 April 2021)
+
+Commissioner John Wainwright (resigned 1 September 2021)
+Justin van Wijngaarden - Chair
+
+“Executive Directors
+Non-Executive Directors receive no remuneration for their services to the Bank (note 5). Aggregate
+
+remuneration information for executive management during the year, whose actions could potentially have
+a material impact on the risk profile of the Bank (see note 28) was:
+
+Aggregate Fixed
+Remuneration of Remuneration
+Code Staff (#) (incl Pension)
+Managers (6) £616,267
+
+SUBSTANTIAL SHAREHOLDER
+
+The Salvation Army International Trustee Company holds 100% of the issued share capital of Reliance
+Bank Limited as corporate Trustee for The Salvation Army International Trust. The Bank conducts business
+with its shareholder on commercial terms.
+
+AUDITOR
+
+BDO LLP has expressed its willingness to continue in office and, in accordance with Section 485 of the
+Companies Act 2006, a resolution for its re-appointment will be proposed at the Annual General Meeting.
+
+STATEMENT OF DIRECTORS’ RESPONSIBILITIES
+
+The Directors are responsible for preparing the Directors’ Report and the financial statements in accordance
+with applicable law and regulations.
+
+Company law requires the Directors to prepare financial statements for each financial year. Under that law
+the Directors have elected to prepare the financial statements in accordance with United Kingdom Generally
+Accepted Accounting Practice (United Kingdom Accounting Standards and applicable law). Under
+
+18
+company law the Directors must not approve the financial statements unless they are satisfied that they
+give a true and fair view of the state of affairs of the Bank and of the profit or loss of the Bank for that period...
+
+In preparing these financial statements, the Directors are required to:
+
+° Select suitable accounting policies and apply them consistently;
+
+° Make judgements and estimates that are reasonable and prudent;
+
+° Prepare the financial statements on a going concern basis unless it is inappropriate to presume that
+the Bank will continue in business; and
+
+. State whether applicable UK Accounting Standards have been followed, subject to any material
+departures disclosed and explained in the financial statements.
+
+The Directors are responsible for keeping proper accounting records that are sufficient to show and explain
+the Bank’s transactions and disclose, with reasonable accuracy at any time, the financial position of the
+Bank and to enable them to ensure that the financial statements comply with the Companies Act 2006.
+They are also responsible for safeguarding the assets of the Bank and hence for taking reasonable steps
+for the prevention and detection of fraud and other irregularities.
+
+The Directors confirm that, in the case of each of the persons who are Directors at the date of this report,
+the following applies:
+
+° So far as each Director is aware there is no relevant audit information (information needed by the
+Bank’s auditor in connection with preparing their report) of which the Bank’s auditor is unaware; and
+
+° Each Director has taken all the steps necessary to make them aware of any relevant audit information
+and to establish that the Bank’s auditor is aware of that information.
+
+POST BALANCE SHEET EVENTS
+There are no post balance sheet events.
+GOING CONCERN
+
+In accordance with their responsibilities, the Board has considered carefully the going concern assumption
+and believes that the Bank’s business model, together with its conservative, robust risk management
+policies, place the Bank in a position where it can generate positive returns and grow its business despite
+the challenging market conditions that the industry currently faces.
+
+Stressed scenario analysis is undertaken by the Bank to model potential downside scenarios, applying
+different degrees of severity. The results of this modelling have been taken into account in an assessment
+of the adequacy of financial resources to meet regulatory requirements. The Bank’s shareholder invested
+£3 million of ordinary share capital during the year, which will support the Bank’s continued loan growth,
+aligned with our low credit risk appetite and objective of increasing returns.
+
+The Board is satisfied that the business has adequate financial resources to continue as a going concern
+
+for the foreseeable future on the basis that it has sufficient capital and liquidity to meet regulatory
+requirements for a period of 12 months from the date of signing the accounts.
+
+BY ORDER OF THE BOARD
+
+Nikki Fenton
+Company Secretary
+27 July 2022
+
+19
+CORPORATE GOVERNANCE REPORT
+
+The Bank’s corporate governance was reviewed as part of the 5-year strategic planning process and was
+strengthened in several areas, including establishing a formal set of Board sub-committees. At the end of
+the financial year the Audit, Risk and Compliance Committee was split into two separate committees the
+Board Conduct, Risk and Compliance Committee and the Board Audit Committee.
+
+Although the UK Corporate Governance Code (the Code) issued by the Financial Reporting Council, does
+not directly apply to the Bank, the Board has regard to its principles on a proportionate basis. The Code
+has been written with publicly quoted companies in mind, and some of its provisions are not necessarily
+consistent with the structure of a small bank.
+
+The Board believes that the disclosures set out in the Statement from the Chair of the Board and the
+Strategic Report provide the information necessary for our shareholder to assess the Bank’s position and
+performance, business model and strategy. In addition, the shareholder appoints representatives to the
+Bank’s Board.
+
+Board and management
+
+The principal way the Directors reference regard to the Code is through the work of the Board and its
+committees. Reliance Bank has oversight provided by a Board comprising Executive and Non-Executive
+Directors. There are currently two Director appointments made directly by the shareholder to represent their
+interests on the Board. The Board is chaired by a Non-Executive: Director who was independent on
+appointment.
+
+The Board meets at least six times a year, holds an annual strategic planning day and receives regular
+management information. All members of the Bank’s Executive Committee attend the Board meetings and
+report an update to the Board on progress against the strategic and operational goals. The Board’s principal
+responsibilities consist of determining the business strategy of the Bank, setting risk appetite, reviewing the
+financial results and providing oversight of management as they deliver the strategic plan.
+
+The Board began the year with ten Non-Executive Directors. During the year three of these Directors
+resigned including the Chair, Julie Nicholson. One new appointee joined. The Board has determined that
+the following should be designated as independent Non-Executive Directors: Martyn Croft, Malcolm Hayes,
+Guy Herrington, Jim Prouty and Jan Smith. The Board considers that Justin van Wijngaarden met the
+independence criteria at the time of his appointment as Chair of the Bank.
+
+Both Executive Directors, the Chair of the Board and Chairs of Board Committees were ‘Approved Persons’
+under the rules of the Prudential Regulation Authority and the Financial Conduct Authority (the Bank’s
+regulators). Each Approved Person has a Statement of Responsibilities clearly defining the areas and
+activities of the Bank’s affairs for which they take individual responsibility and for which they are
+accountable.
+
+New Board members undergo induction training and all directors are expected to participate in relevant
+training courses and otherwise maintain an appropriate level of knowledge, particularly with regard to
+regulatory matters as they affect the Bank. The Board reviews its performance by means of a formal annual
+self-appraisal questionnaire. Actions are agreed to take forward any identified improvements and their
+implementation is subsequently monitored by the Board.
+
+20
+The Board delegates some of its powers to the following committees, the membership of which is shown
+
+below:
+Audit, Risk
+Directors serving during the and
+year were members of: Compliance Remuneration Nominations
+Board Committee Committee Committee
+Alka Ahuja y v
+Martyn Croft v v v
+Paul Croucher v v
+Nikki Fenton V
+Robin Foale v v
+Malcolm Hayes v v
+Guy Herrington v v
+Russell Malcolm Vv
+Julie Nicholson V v v
+Commissioner E. Jane Paone v
+Jim Prouty v
+Jan Smith v v v
+John Wainwright v
+Justin van Wijngaarden v v v v
+
+Audit, Risk & Compliance Committee
+
+-The Committee, which met on six occasions during the year, was chaired by Justin van Wijngaarden until
+he assumed the role of the Board Chair on 1 January 2022. Malcolm Hayes was then appointed Chair of
+the committee. Its role was to consider the effectiveness of the Bank’s control environment and oversee the
+implementation of recommendations to improve the controls. It was supported by regular reports from the
+(outsourced) Internal Auditors, Independent External Auditors and the Head of Risk and Compliance / Chief
+Risk Officer. The Committee reviewed and agreed the annual plans for the Internal Auditors and the
+Compliance function. The Committee also considered management's regular reviews of individual risk
+assessments that make up the Bank’s Risk Register. The Committee ensured that the recommendations of
+the Prudential Regulation Authority, the Financial Conduct Authority and the External Auditors were
+considered in full and implemented, where appropriate. The Committee had oversight of whistleblowing and
+financial crime controls. During the year the risk and compliance reporting to this Committee was
+significantly enhanced.
+
+The Committee reviewed the overall work plan of the External Auditors, BDO LLP, and approved their
+remuneration and terms of engagement and considered in detail the results of the external audit, BDO LLP’s
+performance and independence, and the effectiveness of the overall external audit process. The Committee
+also reviewed the Annual Report and Accounts prior to Board approval. It reviewed and challenged relevant
+accounting policies and significant financial judgements including the level of lending loss provisions and
+the basis of the ‘effective interest rate’ (EIR) calculation for revenue recognition.
+
+The Committee reviewed the effectiveness of the Bank’s financial controls and the internal control and risk
+management systems, compliance with financial services legislation, and has monitored progress to ensure
+that any required remedial action has been or is being taken on any identified weaknesses.
+
+As of 1 April 2022 this committee was dissolved and two new committees were established by the Board:
+the Board Conduct Risk and Compliance Committee and the Board Audit Committee.
+
+Nominations Committee
+
+This Committee, which meets at least annually, is chaired by the Chair of the Board. The Committee is in
+place to consider new appointments to the Board and conduct interviews before making recommendations
+
+21
+to the Board to ensure that there continues to be a good mix of relevant skills and experience. The Board
+has a policy of encouraging diversity in its composition.
+
+Remuneration Committee
+
+This Committee is chaired by Jan Smith. The Committee’s role is to make recommendations to the Board
+in terms of the Bank’s remuneration policy and specific proposals in respect of remuneration of the
+Executive Committee and members of the Board, as appropriate.
+
+Executive Management
+
+Day to day management of the Bank is delegated by the Board to the Chief Executive Officer who is
+supported by the executive management team through the operation of an Executive Committee that meets
+at least fortnightly.
+
+The Executive Committee is also supported by a sub-committee structure comprising:
+
+Risk and Compliance Committee - chaired by the Chief Risk Officer, meets monthly to undertake a detailed
+review of the Bank’s identified and emerging conduct, risk and compliance issues.
+
+Credit Committee - chaired by the Chief Risk Officer, meets monthly, and ad hoc as required, to consider
+and approve lending applications within approved authority, review credit policy, review monthly credit Ml
+and provide oversight for watch list accounts and any forbearance considerations.
+
+Assets and Liabilities Committee - chaired by the Chief Financial Officer, meets at least six times a year to
+provide financial risk management oversight including on capital, interest rate, funding and liquidity risks
+and provide approval of all product structures and pricing within a Board approved product development
+policy framework.
+
+RE-ELECTION OF THE BOARD
+
+All Directors submit themselves for re-election at least once every three years. The Board's policy is that
+Directors serve a maximum term of nine years.
+
+BY ORDER OF THE BOARD
+
+Nikki Fenton
+Company Secretary
+27 July 2022
+
+22
+Independent auditor’s report to the members of Reliance Bank Limited
+
+Opinion on the financial statements
+
+In our opinion:
+¢ the financial statements give a true and fair view of the state of the Company’s affairs as at 31 March 2022
+and of the Company’s loss for the year then ended;
+¢ the financial statements have been properly prepared in accordance with United Kingdom Generally Accepted
+Accounting Practice; and
+¢ the financial statements have been prepared in accordance with the requirements of the Companies Act 2006.
+
+We have audited the financial statements of Reliance Bank Limited (the “Company”) for the year ended 31 March
+2022 which comprise the income statement, the balance sheet, the statement of changes in equity, the statement of
+cash flows and notes to the financial statements, including a summary of significant accounting policies. The financial
+reporting framework that has been applied in their preparation is applicable law and United Kingdom Accounting
+Standards, including Financia! Reporting Standard 102 The Financial Reporting Standard applicable in the UK and
+Republic of Ireland (United Kingdom Generally Accepted Accounting Practice).
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable law.
+Our responsibilities under those standards are further described in the Auditor's responsibilities for the audit of the
+financial statements section of our report. We believe that the audit evidence we have obtained is sufficient and
+appropriate to provide a basis for our opinion.
+
+Independence
+
+Following the recommendation of the Audit, Risk and Compliance Committee, we were appointed by the Board of
+Directors on 25 October 2018 to audit the financial statements for the year ending 31 March 2019 and subsequent
+financial periods. The period of total uninterrupted engagement including retenders and reappointments is 4 years,
+covering the years ending 31 March 2019 to 31 March 2022.
+
+We remain independent of the Company in accordance with the ethical requirements that are relevant to our audit of
+the financial statements in the UK, including the FRC’s Ethical Standard as applied to public interest entities, and we
+have fulfilled our other ethical responsibilities in accordance with these requirements.
+
+The non-audit services prohibited by that standard were not provided to the Company.
+
+Conclusions relating to going concern
+
+in auditing the financial statements, we have concluded that the Directors’ use of the going concern basis of accounting
+in the preparation of the financial statements is appropriate.
+
+Our evaluation of the Directors’ assessment of the Company’s ability to continue to adopt the going concern basis of
+accounting is set out in the key audit matters section of our report.
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or conditions
+that, individually or collectively, may cast significant doubt on the Company’s ability to continue as a going concern for
+a period of at least twelve months from when the financial statements are authorised for issue.
+
+Our responsibilities and the responsibilities of the Directors with respect to going concern are described in the relevant
+sections of this report.
+
+23
+Overview
+
+Key audit matters
+
+2022 2021
+Going Concern v v
+Revenue Recognition v ¥
+(Effective Interest
+Rate)
+Loan Book Provision v v
+
+Materiality
+
+Financial statements as a whole
+
+£108,000 based on 0.75% of Net Assets (2021: £89,000
+based on 0.75% of Tier 1 Capital).
+
+An overview of the scope of our audit
+
+Our audit was scoped by obtaining an understanding of the Company and its environment, including the Company’s
+system of internal control, and assessing the risks of material misstatement in the financial statements. We also
+addressed the risk of management override of internal controls, including assessing whether there was evidence of
+bias by the Directors that may have represented a risk of material misstatement.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of the
+financial statements of the current period and include the most significant assessed risks of material misstatement
+(whether or not due to fraud) we identified, including those which had the greatest effect on: the overall audit
+
+strategy, the allocation of resources in the audit; and directing the efforts of the engagement team. These matters
+were addressed in the context of our audit of the financial statements as a whole, and in forming our opinion thereon,
+and we do not provide a separate opinion on these matters.
+
+We considered the following to be key audit matters:
+
+Key audit matter
+
+How we addressed the key audit matter in the audit
+
+Going Concern
+
+Please see Note 1:
+Accounting
+Policies — Basis of
+Preparation.
+
+Given the significant
+judgement exercised by the
+Directors in making the
+assessment as to whether it
+i$ appropriate to prepare the
+financial statements on a
+going concern basis as it .
+relates to the Company's
+financial position and
+factoring in of future capital
+injections, as well as the
+level of regulator focus the
+Company is subject to, we
+consider this to be a key
+audit matter.
+
+Our evaluation of the Directors’ assessment of the
+Company’s ability to continue to adopt the going concern
+basis of accounting and in response to the key audit matter
+included:
+
+*
+
+Obtaining the Directors’ assessment of the Company’s
+Going Concern and challenging the assumptions and
+judgements made with regards to their forecast and
+stress tested scenarios. This included for sensitivity
+analysis around key assumptions and judgements such
+as loan book growth rates, costs, loan loss provisioning
+and interest rates in benchmarking to observable
+market data;
+
+Holding discussions with the Directors on whether
+events or conditions exist that, individually or
+collectively, may cast significant doubt on the
+Company's ability to continue as a going concern;
+Corroborating those discussions by agreeing
+information acquired to supporting documents such as
+budgets, cash flow forecasts and minutes of meetings.
+
+24
+Key audit matter
+
+How we addressed the key audit matter in the audit
+
+Going Concern
+(cont)
+
+e Assessing the assumptions such as revenue growth
+rates, interest rates, impairment rates, future overheads
+and regulatory capital requirements that were used in
+the going concern assessment prepared by Directors
+by benchmarking to observable data available in the
+market, evaluating growth trends in the last 5 years to
+evaluate the reasonability of projections; and
+considered whether the budgeting and cash flow
+forecast models utilised were appropriate for the
+Company; We reviewed the outcome of the Company’s
+prior year budgets against the actual outcomes to
+assess the reasonability of assumptions applied and
+evaluated that the growth assumptions applied to
+current year period are reasonable.
+
+*« Reviewing the Directors’ forecasted position against
+capital requirements to evaluate the reasonability of the
+Director's assessment of minimum capital injections
+required and the point at which they would be required;
+
+* We assessed how the directors have factored in
+inflationary pressures and the potential impact of the
+COVID-19, Brexit and Ukraine/Russia conflict on the
+business, checking these had been appropriately
+considered as part of the Directors’ going concern
+assessment. These scenarios are reflected in a
+scenario analysis performed by management which has
+been evaluated by the audit team and further stressed
+for a worst case scenario to evaluate the likelihood of
+the worst case scenario actualising.
+
+« Reviewing the going concern disclosures included in
+the Financial Statements in order to assess that the
+disclosures were consistent with the Directors’ going
+concern assessment; and
+
+« Reviewed the correspondences with regulators and the
+impact of the Directors’ plans and sensitivities on the
+Company’s liquidity requirements and its overall current
+capital requirements for the twelve months following the
+date the financial statements are authorised for issue.
+
+Key observations:
+
+See Conclusions relating to going concern section above.
+
+Revenue
+Recognition
+(Effective Interest
+Rate)
+
+Please see Note 1:
+Accounting Policies
+~ Judgements and
+key sources. of
+estimation, and Note
+2: Interest Income.
+
+The accounting standard
+requires interest receivable on
+loans and advances to
+customers to be recognised
+using the effective interest rate
+(‘EIR’) method. This results in all
+directly attributable interest, fees
+and costs being recognised on
+an even yield basis over the
+expected life of the loans.
+
+The recognition of interest
+receivable on loans and
+advances to customers under
+the effective interest rate method
+
+Our testing included but was not limited to:
+
+* We understood management's process for
+recognising revenue using the effective interest rate
+method to identify the key controls and data flows.
+This included an assessment of the types of fees and
+costs being spread within the effective interest rate
+models versus the requirements of the applicable
+financial reporting standard.
+
+* We verified the arithmetic accuracy of the EIR model
+by performing a detailed review of the logic and
+consistency of the formulae throughout the EIR
+model.
+
+¢ Ona sample basis, we tested the completeness and
+accuracy of key model inputs being loan terms,
+
+25
+
+requires the directors to make
+significant judgements and
+estimates, with the most critical
+estimate being the loans’
+expected behavioural life as
+further discussed in Note 1 to the
+financial statements. The
+directors have determined this
+estimate with reference to
+historical customer behaviour
+considering any impact of Covid-
+19 on these behaviours. In
+addition, the directors apply
+judgement in determining which
+fees and costs should be
+included in the methodology.
+
+Errors within the EIR models
+themselves or bias in key
+assumptions applied could result
+in the material misstatement of
+revenue together with the
+relevant disclosures required.
+
+The existence of errors or bias in
+the application of these
+assumptions could result in a
+material misstatement of
+revenue. Revenue recognition is
+therefore a fraud risk area.
+
+The loans and advances held at
+amortised cost presented in
+Note 9 to the financial
+statements contain prepaid
+arrangement and procurement
+fees as well as accrued interest
+income which is spread over the
+behavioural life of the loans
+using the effective interest rate
+method.
+
+repayment terms and upfront fees, by agreeing them
+back to underlying source data such as loan contracts
+and policy.
+
+Assessed the reasonableness of the loan
+behavioural life assumptions used by management
+by considering recent historical experience of loan
+behavioural lives based on customer behaviour,
+product type, market factors, performance and
+external data where applicable.
+
+Key observations:
+
+We consider that the assumptions included in the EIR
+models are reasonable in consideration of the
+Company’s portfolio, historical behaviours and
+current economic and market conditions.
+
+Loan Book
+Provision
+
+Please see Note 1:
+Accounting Policies
+~ Judgements and
+key sources of
+estimation and Note
+9(a): Loans and
+Advances to
+Customers & (b):
+Provisions for Bad
+and Doubtful Debts
+
+The company accounts for the
+
+impairment of loans and
+advances to banks and
+customers using an_ incurred
+
+loss methodology.
+
+Directors have calculated two
+
+_types of provisions:
+
+* A specific provision is
+calculated for loans where
+there is an observable loss
+event.
+
+« An Incurred But Not
+Reported (“IBNR”) provision
+is recognised for loans
+which are impaired as at the
+
+Our testing included but was not limited to:
+
+We analysed the components of the loan book and
+considered management's processes for the
+identification and treatment of non-performing loans.
+We made an assessment of the adequacy and
+accuracy of the credit provision by reference to internal
+and external information including the Company’s credit
+policy and the accounting framework applied to
+establish if provisioning was in accordance with
+requirements of FRS 102.
+
+On a sample basis, we checked loan balances to loan
+files and loan statements. We have made our own
+assessment of the valuation through inspection of
+indexed valuations and recoverability of loan assets by
+analysing the arrears report. We also tested the
+
+26
+
+Balance Sheet date and
+whilst not specifically
+identified as such are known
+from experience to be
+present in any portfolio of
+loans.
+
+This involves a high degree of
+
+judgement.
+
+sampled population of loans to gain comfort that all
+loans that meet the criteria for a specific provision have
+been included for specific provisioning.
+
+For the IBNR provision we tested the appropriateness
+of the key assumptions within this model such as
+impairment triggers, property valuations and probability
+of defaults through a combination of benchmarking
+against comparable lenders, independent
+recalculations and agreeing inputs to external data
+sources where applicable. We tested the completeness
+and accuracy of a sample of key model inputs by
+agreeing them back to underlying source data.
+
+We evaluated the reasonableness of assumptions such
+as probability of defaults and fall in HPI and predicted
+outcomes applied as a result of the potential impact a
+prolonged recession could have on recoverability of
+loans, comparing the total provision range against
+comparable lenders.
+
+We reconciled the loan balances in the impairment
+models to the loan book to test whether the relevant
+loan populations were being considered for impairment.
+
+Key observations:
+
+We have not identified any indicators that the provision for
+loans and advances to customers is unreasonably
+estimated in consideration of the key assumptions and
+judgements made.
+
+Our application of materiality
+
+We apply the concept of materiality both in planning and performing our audit, and in evaluating the effect of
+misstatements. We consider materiality to be the magnitude by which misstatements, including omissions, could
+influence the economic decisions of reasonable users that are taken on the basis of the financial statements.
+
+In order to reduce to an appropriately low level the probability that any misstatements exceed materiality, we use a
+lower materiality level, performance materiality, to determine the extent of testing needed. Importantly, misstatements
+below these levels will not necessarily be evaluated as immaterial as we also take account of the nature of identified
+misstatements, and the particular circumstances of their occurrence, when evaluating their effect on the financial
+
+statements as a whole.
+
+27
+
+Based on our professional judgement, we determined materiality for the financial statements as a whole and
+performance materiality as follows:
+
+2022 2021
+.Materiality, £108,000 £89,000
+Basis for 0.75% of Net Assets 0.75% of Tier 1 Capital
+determining
+materiality
+Rationale for the | We determined that Net Assets was the most We determined that Tier 1
+benchmark appropriate benchmark considering the different capital was the most appropriate
+applied stakeholders. The benchmark was changed to Net | benchmark considering the
+‘ Assets in the current year as this is considered to | different stakeholders.
+| be the United Kingdom Generally Accepted Regulatory stability is
+Accounting Practice measure which most closely | considered to be a main driver
+corresponds to regulatory capital, being the main | for the Company and its purpose
+driver for the Company, as the purpose of the is to optimise rather than
+Company is to optimise rather than maximise maximise profits.
+profits.
+Performance £70,000 £66,000
+materiality
+Basis for On the basis of our risk assessments, together with | On the basis of our risk
+determining our assessment of the Company's overall control | assessments, together with our
+performance environment and history of misstatements, our | assessment of the Company's
+materiality’ judgement was to reduce performance materiality | overall contro! environment and
+to 65% of materiality in the current year. no history of misstatements, our
+judgement was that performance
+materiality should be 75% of
+materiality.
+
+Reporting threshold
+
+We agreed with the audit committee that we would report to the committee all individual audit differences identified .
+during the course of our audit in excess of £2,100 (2021: £1,700). We also agreed to report differences below these
+thresholds that, in our view warranted reporting on qualitative grounds.
+
+We evaluate any uncorrected misstatements against both the quantitative measures of materiality discussed above
+and in the light of other relevant qualitative considerations.
+
+Other information
+
+The directors are responsible for the other information. The other information comprises the information included in
+the Annual Report and Accounts, other than the financial statements and our auditor's report thereon. Our opinion on
+the financial statements does not cover the other information and, except to the extent otherwise explicitly stated in
+our report, we do not express any form of assurance conclusion thereon. Our responsibility is to read the other
+information and, in doing so, consider whether the other information is materially inconsistent with the financial
+statements or our knowledge obtained in the course of the audit, or otherwise appears to be materially misstated. If
+we identify such material inconsistencies or apparent material misstatements, we are required to determine whether
+this gives rise to a material misstatement in the financial statements themselves. If, based on the work we have
+performed, we conclude that there is a material misstatement of this other information, we are required to report that
+fact.
+
+We have nothing to report in this regard.
+
+28
+Other Companies Act 2006 reporting
+
+Based on the responsibilities described below and our work performed during the course of the audit, we are required
+by the Companies Act 2006 and ISAs (UK) to report on certain opinions and matters as described below.
+
+Strategic In our opinion, based on the work undertaken in the course of the audit:
+
+report and e the information given in the Strategic report and the Directors’ report for the financial year
+Directors’ for which the financial statements are prepared is consistent with the financial
+report statements; and
+
+e the Strategic report and the Directors’ report have been prepared in accordance with
+applicable legal requirements.
+
+In the light of the knowledge and understanding of the Company and its environment obtained
+in the course of the audit, we have not identified material misstatements in the strategic report
+or the Directors’ report.
+
+Matters on We have nothing to report in respect of the following matters in relation to which the
+which we are | Companies Act 2006 requires us to report to you if, in our opinion:
+required to
+report by * adequate accounting records have not been kept by the Company, or returns
+exception adequate for our audit have not been received from branches not visited by us; or
+e the financial statements are not in agreement with the accounting records and
+returns; or
+
+certain disclosures of Directors’ remuneration specified by law are not made; or
+we have not received all the information and explanations we require for our audit.
+
+Opinion on other matter prescribed by the Capital Requirements (Country-by-Country Reporting)
+Regulations 2013
+
+In our opinion the information given in note 30 for the financial year ended 31 March 2022 has been properly
+prepared, in all material respects, in accordance with the Capital Requirements (Country-by-Country Reporting)
+Regulations 2013.
+
+_ Responsibilities of Directors
+
+As explained more fully in the Directors’ responsibilities statement, the Directors are responsible for the preparation of
+the financial statements and for being satisfied that they give a true and fair view, and for such internal control as the
+Directors determine is necessary to enable the preparation of financial statements that are free from material
+misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the Directors are responsible for assessing the Company’s ability to continue as
+a going concern, disclosing, as applicable, matters related to going concern and using the going concern basis of
+accounting unless the Directors either intend to liquidate the Company or to cease operations, or have no realistic
+alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from
+material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our opinion.
+Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in accordance with
+ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise from fraud or error and
+are considered material if, individually or in the aggregate, they could reasonably be expected to influence the
+economic decisions of users taken on the basis of these financial statements.
+
+29
+Extent to which the audit was capable of detecting irregularities, including fraud
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures in
+line with our responsibilities, outlined above, to detect material misstatements in respect of irregularities, including
+fraud. The extent to which our procedures are capable of detecting irregularities, including fraud is detailed below.
+
+Identifying and responding to risks of material misstatement due to non-compliance with laws and requlations
+
+We focused on laws and regulations that could give rise to a material misstatement in the company financial
+statements. We gained an understanding of the legal and regulatory framework applicable to the Company and the
+industry in which it operates and considered the risk of acts by the Company which would be contrary to applicable
+laws and regulations, including fraud. These included but were not limited to compliance with the Companies Act 2006,
+Prudential Regulation Authority (“PRA”) and Financial Conduct Authority (“FCA”) regulations, pension legislation and
+tax legislation.
+
+Our tests included:
+
+*« reviewing the financial statement disclosures and testing to supporting documentation to assess compliance
+with relevant laws and regulations discussed above;
+
+* enquiring of management, internal audit and the audit committee about compliance with relevant laws and
+regulations;
+
+e reading minutes of meetings of those charged with governance, reviewing internal audit reports and
+correspondence with the Financial Conduct Authority and the Prudential Regulation Authority for indication of
+any non-compliance; and
+
+« obtaining an understanding of the control environment in monitoring compliance with laws and regulations.
+
+Identifying and responding to risks of material misstatement due to fraud
+
+We assessed the susceptibility of the financial statements to material misstatement, including fraud and considered
+the fraud risk areas to be in relation to accounting estimates such as the EIR and joan loss provisioning (see Key Audit
+Matters section above) and management override of controls.
+
+Our tests included:
+
+¢ §=performing analytical procedures to identify any unusual or unexpected relationships that may indicate risks
+of material misstatement due to fraud;
+
+« in addressing the risk of fraud through management override of controls, testing the appropriateness of
+journal entries and other adjustments;
+
+e assessing whether the judgements made in making accounting estimates were indicative of a potential bias
+such as EIR and loan provisioning as set out in the Key Audit Matters section; and
+
+* evaluating ihe business rationale of any significant transactions that are unusual or outside the normal
+course of business.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all engagement team
+members including internal specialists and remained alert to any indications of fraud or non-compliance with laws
+and regulations throughout the audit. The engagement partner has assessed that the engagement team collectively
+had the appropriate competence and capabilities to identify or recognise non-compliance with respective laws and
+regulations.
+
+Our audit procedures were designed to respond to risks of material misstatement in the financial statements,
+recognising that the risk of not detecting a material misstatement due to fraud is higher than the risk of not detecting
+one resulting from error, as fraud may involve deliberate concealment by, for example, forgery, misrepresentations or
+through collusion. There are inherent limitations in the audit procedures performed and the further removed non-
+compliance with laws and regulations is from the events and transactions reflected in the financial statements, the less
+likely we are to become aware of it.
+
+A further description of our responsibilities is available on the Financial Reporting Councils website at:
+www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor's report.
+
+30
+Use of our report
+
+This report is made solely to the Company’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Company’s members those
+matters we are required to state to them in an auditor’s report and for no other purpose. To the fullest extent permitted
+by law, we do not accept or assume responsibility to anyone other than the Company’s members as a body, for our
+audit work, for this report, or for the opinions we have formed.
+
+Orla Reilly (Senior Statutory Auditor)
+For and on behalf of BDO LLP, Statutory Auditor
+London, UK
+
+27 July 2022
+
+BDO LLP is a limited liability partnership registered in England and Wales (with registered number 0C305127)
+
+31
+RELIANCE BANK LIMITED
+
+INCOME STATEMENT
+FOR THE YEAR ENDED 31 MARCH 2022
+
+Notes 2022 2021 .
+£ £
+Interest Income
+
+- On Debt Securities 87,111 351,962
+- Other 3,254,993 2,231,261
+2 3,342,104 2,583,223
+Interest Expense 3 (226,523) (339,335)
+Net Interest Income 3,115,581 2,243,888
+Fees and Commissions Receivable 741,012 . 538,562
+- Other Operating Income 111,614 109,094
+852,627 647,656
+Fees and Commissions Payable (466,299) (203,075)
+; . 386,325 444,581
+Operating Income 3,501,910 2,688,469
+Administrative Expenses . 4 (3,907,710) (3,667,941)
+Amortisation il (203,839) (178,797)
+Depreciation 12 (156,387) (158,545)
+Impairment Credit on Loans and Advances 4,9 ‘16,382 38,829
+Restructuring Costs 4 - (542,273)
+Operating Expenses (4,251,554) (4,508,727)
+Operating Loss 5 (749,644) (1,820,258)
+Tax on Loss on Activities 6 140,817 459,451
+Loss on Activities after Tax (608,827) (1,360,807)
+
+STATEMENT OF COMPREHENSIVE INCOME
+Loss on activities after tax (608,827) (1,360,807)
+Other comprehensive income: Revaluation of property” - 1,284,096
+Deferred tax rate change related to OCI items 19 (95,118) -
+Total comprehensive loss for the year (703,945) (76,711)
+
+All activities reported above, both in the current year and preceding year, relate to continuing operations.
+
+* net of deferred tax
+32
+RELIANCE BANK LIMITED
+
+BALANCE SHEET AT 31 MARCH 2022
+
+Notes 2022 2021
+£ £
+
+ASSETS
+Cash and Balances at Central Bank 91,287,306 73,927,250
+Loans and Advances to Banks 23,726,132 46,802,990
+Loans and Advances to Customers 96,522,411 77,505,973
+Debt Securities 10 34,201,068 40,540,011
+Intangible Fixed Assets 11 443,170 392,501
+Tangible Fixed Assets 12 3,153,335 3,282,956
+Investment Property 13 1,573,962 1,573,962
+Other assets 17,750 13,081
+Prepayments and Accrued Income 14 321,998 287,516 -
+Total Assets 251,247,132 244,326,240
+LIABILITIES
+Customer Accounts 15 236,212,051 231,503,315
+Other Liabilities 16 139,116 112,920
+Accruals and Deferred Income 17 453,172 517,568
+Deferred Tax Liability 19 - -
+Total Liabilities 236,804,339 232,133,803
+Called Up Share Capital 20 13,000,000 10,000,000
+Revaluation Reserve 1,132,160 1,258,277
+Profit and Loss Reserve 310,633 934,160
+Equity Shareholder’s Funds 14,442,793 12,192,437
+Total Liabilities and Equity 251,247,132 244,326,240
+MEMORANDUM ITEMS
+Contingent Liabilities
+
+Guarantees and assets pledged as collateral security 22 7,693,614 7,693,614
+
+Commitments 22 16,554,622 12,687,888
+
+These accounts were approved by the Board of Directors and authorised for issue on 27 July 2022
+
+Qn
+
+Nikki Fenton
+Chief Financial Officer
+
+Paul Croucher
+Chief Executive Officer
+
+Company Registration Number: 00068835
+33
+At 31 March 2020
+
+At 1 April 2020
+
+Revaluation*
+
+Loss for the year
+
+Trf to P&L Reserve
+
+At 31 March 2021
+Loss for the year
+Deferred tax rate change
+
+New shares issued
+Trf to P&L Reserve
+
+At 31 March 2022
+
+RELIANCE BANK LIMITED
+
+STATEMENT OF CHANGES IN EQUITY
+
+FOR THE YEAR ENDED 31 MARCH 2022
+
+Called up Revaluation Profit and Total
+Share Reserve Loss Shareholder
+Capital Reserve Funds
+£ £ £ £
+10,000,000 - 1,652,208 11,652,208
+Change in accounting policy* - - 616,940 616,940
+10,000,000 - 2,269,148 12,269,148
+- 1,284,096 - 1,284,096
+- ~ (1,360,807) (1,360,807)
+- (25,819) 25,819 -
+10,000,000 1,258,277 934,160 12,192,437
+- - (608,827) (608,827)
+- (95,118) (45,699) (140,817)
+3,000,000 - - 3,000,000
+- (30,999) 30,999 -
+13,000,000 1,132,160 310,633 14,442,793
+
+* shown net of deferred tax. See Note 1 Accounting Policies for details of application of change in accounting policy and Notes 12 and 13
+
+for details of the property revaluation and the reclassification from Tangible Fixed Assets to Investment Property.
+
+STATEMENT OF CASH FLOWS
+
+FOR THE YEAR ENDED 31 MARCH 2022
+
+Notes 2022 2021
+£ £
+
+Net cash (outflow) / inflow from operating activities 23 (14,594,539) 19,788,171
+Investing activities 24 20,376,709 15,545,473
+Financing activities 25 3,000,000 -
+Increase in cash and cash equivalents 8,782,169. 35,333,644
+Cash and cash equivalents at the beginning of the
+
+reporting period 105,229,436 69,895,792
+Cash and cash equivalents at the end of the
+
+reporting period 114,011,606 105,229,436
+
+RELIANCE BANK LIMITED
+NOTES TO THE ACCOUNTS
+FOR THE YEAR ENDED 31 MARCH 2022
+
+ACCOUNTING POLICIES
+
+Statement of compliance
+
+Reliance Bank Limited is a limited liability company incorporated in England. The Registered Office is Faith House, 23-24
+Lovat Lane, London EC3R 8EB. The Bank’s financial statements have been prepared in compliance with FRS 102 as it applies
+to the financial statements for the year ended 31 March 2022. The Bank is applying the provisions of FRS 102 sections 11
+and 12 and has not elected to apply the recognition and measurement provisions of IAS 39.
+
+Basis of preparation
+
+The financial statements of Reliance Bank Limited were approved for issue by the Board of Directors on 26 July 2022. The
+financial statements have been prepared in accordance with applicable accounting standards using a going concern basis.
+Accounting standards require the Directors to assess the Bank’s ability to continue to adopt the going concern basis of
+accounting. In performing this assessment, the Directors consider all available information about the future, the possible
+outcomes of events and changes in conditions and the realistically possible responses to such events and conditions that
+would be available to them.
+
+The Directors considered the Bank's financial position, the capita! requirements laid out in its forecasts, its access to funding,
+the assumptions underlying the forecasts and the potential risks affecting them, including those arising from geopolitical
+instability. Scenario planning considers impacts to inflation, interest income and loan impairment, due to UK and macro-
+economic factors. A range of different plausible scenarios have been modelled and mitigating management actions
+considered.
+
+After performing this assessment, the Directors have a reasonable expectation that the Bank has adequate resources to
+remain in operation for at least 12 months from the signing date of the Financial Statements and therefore consider it
+appropriate to continue to adopt the going concern basis.
+
+Judgements and key sources of estimation
+
+The preparation of the financial statements requires management to make judgements, estimates and assumptions that
+affect the amounts reported for assets and liabilities as at the balance sheet date and the amounts reported for revenues
+and expenses during the year. However, the nature of estimation means that actual outcomes could differ from those
+estimates. Apart from those involving estimates, no judgements are deemed to have had a significant effect on amounts
+recognised in the financial statements. There are no new accounting estimates in the year.
+
+The main source of estimation relates to impairment of financial assets, where reviews are undertaken, both on an individual
+and a collective basis, They are assessed for indicators of impairment at the end of each reporting period. Financial assets
+are considered to be impaired when there is objective evidence that, as a result of one or more past events that occurred
+after the initial recognition of the financial asset, the estimated future cashflows have been affected. Loans and advances
+to customers are considered on a case by case basis and are provided against in the financial year in which it is anticipated
+that they may not be recoverable in full (which in practice means when they become non-performing, unless the Bank
+considers that it has adequate security to cover all balances outstanding plus a margin). See note 9(b) for more details.
+
+The calculation of an effective interest rate requires an estimate of the expected life of the underlying loan assets which is
+derived using a combination of historical data and management judgement. Any changes to the expected life would result
+in an adjustment to the carrying value of the loans and related income recognised in the Income Statement. Whilst this is
+not currently a critical estimate for the Bank, the loan book is likely to grow in the future and the expected life may become
+a critical estimate. A one month decrease in the expected life of loans would result in a reduction of £2,000 in loans and
+an increase of £2,000 in income.
+
+Revenue recognition
+
+Income items, including interest receivable, rental income and fees and commissions receivable, are recognised on an
+accruals basis with interest recognised on an effective interest rate basis. When calculating the effective interest rate of
+financial assets, all related direct fees and costs are taken into account. .
+
+Intangible fixed assets
+Intangible fixed assets are stated at cost, less amortisation and any provisions for impairment. These assets principally
+consist of computer software and are amortised on a straight-line basis over their estimated useful life of two to six years,
+consistent with the pattern to which they contribute to future cashflows. The Banking system is reviewed annually for
+indications of impairment.
+
+35
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+Tangible fixed assets and depreciation
+
+Change in accounting policy — prior year
+
+During the prior year the Bank opted to follow the revaluation approach to its freehold property, under FRS102 section 17.
+This provided an up-to-date value of the Bank’s tangible property assets. This was an accounting policy change required to
+be accounted for prospectively where related to the owner-occupied portion of the property. The Bank was required to
+reclassify the portion of the property let to group entities as Investment Property due to the FRS102 s16.4A exemption not
+being applicable on the revaluation model (applied prior to the change).
+
+The Bank was required to account for the change in policy for Investment Property retrospectively. Management considered
+that applying this requirement was impracticable due to the lack of contemporaneous fair value estimates. The Bank has
+therefore recognised the related revaluation gain in the prior year opening P&L reserves. The revaluation gain on PPE was
+recognised as a gain in OCI during the prior year.
+
+The revaluation resulted in a total uplift amounting to £2.35m, £1.59m of which was recorded in the revaluation reserve
+(gross of deferred tax). Depreciation on Tangible Fixed Assets is recognised in the income statement, a transfer is then made
+between the profit and loss reserve and the revaluation reserve, for the portion of depreciation relating to the revaluation,
+to recognise that these profits are now distributable.
+
+Property, fixtures and fittings and equipment are stated at cost or revaluation less accumulated depreciation and accumulated
+impairment losses, except where they are classed as Investment Property. Cost includes costs directly attributable to making
+the asset capable of operating as intended. No depreciation is provided on freehold land or Investment Property.
+
+Depreciation has been provided on a straight-line basis, so as to write off the cost of tangible fixed assets over their estimated
+useful lives. The principal rates adopted per annum are 2% for freehold buildings, 20% for subsequent refurbishment costs,
+33% for computer hardware and varying rates of between 10% and 20% for fixtures, fittings, and other equipment.
+
+Investment Property
+
+The proportion of the head office building, which is not occupied by the Bank, but rented out, is classified under FRS102 as
+Investment Property and held at fair value. Any change in fair value during the year resulting from an annual valuation is
+recognised through the income statement. The value of the Investment Property is based on a triennial market valuation
+(last conducted in 2020) which is carried out by an independent valuer who holds a recognised and relevant professional
+qualification and has recent experience in the location and class of the property being valued. The basis of the market
+valuation was an estimation for which the property would be exchanged between a willing buyer and a willing seller in an
+arm’s length transaction, after proper marketing and where the parties had each acted knowledgeably, prudently and without
+compulsion. The significant assumptions in the valuation include that the property is free from structural or other defects
+that would materially affect the market value and that it is appropriate to base the valuation on capitalisation yields for the
+area. An external valuation was not obtained during the current year, the Directors assessed the value continued to be
+relevant as at 31 March 2022.
+
+During the prior year the Bank changed its accounting policy with respect to recognising Investment Property, see “change
+in accounting policy” above, which led to the recognition of Investment Property as an adjustment to prior year opening
+reserves.
+
+Provisions for liabilities
+
+A provision is recognised when the Bank has a legal or constructive obligation as a result of a past event and it is probable
+that an outflow of economic benefits will be required to settle the obligation. Where the effect of the time value of money
+is not material, the provisions are not discounted.
+
+Deferred tax
+
+Deferred tax is recognised in respect of all timing differences that have originated and not reversed at the balance sheet
+date, where transactions or events that result in an obligation to pay more or less tax in the future have occurred at the
+balance sheet date. Deferred tax is calculated at the tax rates that are expected to apply in the year when the liability is
+settled or the asset is realised. Deferred tax provisions are not discounted.
+
+A net tax asset is regarded as recoverable and therefore recognised only when, on the basis of all available evidence, it can
+
+be regarded as more probable than not, that there will be suitable taxable profits against which to recover carried forward
+tax losses and from which the future reversal of underlying timing differences can be deducted.
+
+36
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+Financial instruments
+The Bank’s financial instruments are all basic financial instruments and comprise loans and advances, debt securities and
+customer accounts. The Bank does not hold derivative financial instruments.
+
+Financial assets and liabilities are recognised initially at their fair value, which is normally the transaction price. Thereafter,
+debt instruments are measured at amortised cost less impairment using the effective interest method. No financial
+instruments are designated as at fair value through profit or loss. Debt instruments that are payable or recoverable within
+one year are measured at the undiscounted amount of the cash or other consideration expected to be paid or received.
+Leasing commitments
+
+No assets are held under finance leases. Rentals payable and software licensing arrangements under operating leases are
+charged in the income statement on a straight-line basis over the lease term.
+
+Pension benefits
+
+The Bank is an employer within The Salvation Army Employees’ Pension Fund — a defined benefit funded scheme ~ which
+was closed to new members on 31 December 2011. The scheme is a multi-employer scheme and the actuary has confirmed
+that it is not practical to allocate the assets and liabilities of the scheme between participating employers. Pension costs
+are therefore reflected in the accounts when payments to the pension scheme fall due. The Bank also recognises any liability
+to fund a past service deficit as agreed with the Pension Scheme Trustees. Any resulting expense is reflected through the
+Income Statement. Employees wishing to join the Bank’s pension scheme are now only eligible to join a defined contribution
+scheme. Pension costs for this scheme are also accounted for when payments fall due.
+
+Set-off .
+The Bank does have a legal right of set-off established in respect of some customer accounts (as confirmed by legal opinion),
+However, set-off positions would only be disclosed in the accounts where there is an intention to ordinarily settle on a net
+basis or to realise the asset and settle the liability simultaneously.
+
+Contingent liabilities
+Contingent liabilities are recognised as memorandum items on the face of the Balance Sheet and further analysed in note
+22 at their contract amounts unless the possibility of any transfer on settlement is remote.
+
+Foreign currency translation.
+
+Monetary assets and liabilities denominated in foreign currencies are translated into sterling at the exchange rates ruling at
+the balance sheet date. Transactions on foreign currency accounts are recorded in the ledgers in the currencies concerned
+and are also translated at the year end rates for the purpose of drafting the financial statements. Any gains or losses arising
+on translation are reflected in the Income Statement.
+
+Cash and cash equivalents
+For the purposes of the Statement of Cash Flows, cash and cash equivalents comprise cash at banks and in hand and
+short-term deposits with an original maturity (from date of acquisition) of less than three months.
+
+INTEREST INCOME
+2022 2021
+£ £
+Interest receivable on Debt Securities 87,111 351,962
+Interest receivable on Loans and Advances to Customers 3,007,940 2,056,937
+Interest receivable on Bank and Discount Market Deposits 247,053 174,324
+3,342,104 2,583,223
+
+All interest income arises within the UK from the conduct of retail banking business.
+No loans or advances were made to the Bank’s parent company.
+
+37
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+INTEREST EXPENSE
+
+2022 2021
+Payable to:
+£ £
+Parent Undertaking 37,012 39,196
+Third Parties 189,511 300,139
+226,523 339,335
+ADMINISTRATIVE EXPENSES
+2022 2021
+Employee Costs (including Executive Directors) (i) £ os £
+Wages and Salaries 1,913,341 1,798,519
+Social Security Costs 217,572 210,280
+Pension Costs (ii) 128,404 143,739
+Health Benefits 24,077 21,882
+2,283,394 2,174,420
+Other Administrative Expenses (iii) 1,607,934 1,996,965
+3,891,328 4,171,385
+Less: Restructuring costs (employee costs) - (185, 864)
+Restructuring costs (other) - (356,408)
+3,891,328 3,629,113
+
+The average number of employees in the current year was 41 (2021: 39).
+
+(i) There were no restructuring costs for financial year ending 31 March 2022 (2021: £185,684).
+
+(ii) £17,587 (2021: £42,528) relates to employer contributions to the defined benefit scheme. Employer
+contributions to the defined contribution scheme totalled £106,339 (2021: £96,664). Fees of £4,478 were
+incurred in relation to the defined contribution scheme in the current year (2021: £4,547).
+
+(iii) Other administrative expenses include a credit of £16,882 (2021: £38,829) relating to impairment of loans
+
+and advances to customers and a charge of Eni! (2021: £356,408) that relates to restructuring costs and
+improvements to control systems.
+
+38
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+5. OPERATING LOSS
+
+2022 2021
+£ £
+This is stated after charging / (crediting):
+Directors’ remuneration 283,418 266,416
+Bankers’ comprehensive crime insurance 25,614 24,135
+Amounts payable under operating leases : 273,086 272,615
+Auditor’s remuneration - statutory audit 144,150 102,000
+Rental income receivable (111,614) (109,094)
+
+Two Executive Directors received emoluments from Reliance Bank during the year, their remuneration in
+aggregate is disclosed above and this includes pension contributions of £13,905 (2021: £20,522). The
+highest paid Director received emoluments of £152,296 including benefits, of which pension contributions
+were ENil. Non-Executive Directors received no remuneration from the Bank and are not members of the
+pension scheme. Executive Directors are eligible to apply for loans on terms that are available to all
+employees of the Bank. The details of any such loans are disclosed within note 27.
+
+6. TAXATION
+2022 2021
+£ £
+
+Current tax
+
+UK Corporation Tax
+
+Current year — Corporation Tax - -
+Deferred tax note (Note 19)
+
+Current year (140,817) _ (459,451)
+Tax credit (140,817) (459,451)
+
+The tax assessed for the year matches the standard rate of Corporation Tax in the UK (19%). A
+reconciliation from the expense implied by the standard rate to the actual tax expense is as follows:
+
+Loss on ordinary activities before tax (749,644) (1,820,258)
+Tax credit based on the standard rate of Corporation Tax in the UK
+
+of 19% (2021: 19%) (142,432) (345,849)
+Effects of:
+
+Fixed asset differences 22,998 27,627
+
+Expenses not deductible for tax purposes 1,615 9,355
+Adjust opening deferred tax to average rate of 19% - -
+(113,602)
+
+Deferred tax on prior year losses re-recognised -
+
+Deferred tax movement recognised on losses 117,819 (38,982)
+Deferred tax asset impact of change in enacted rate (to 25%) (140,817) -
+Tax credit (140,817) (461,451)
+
+39
+7.
+
+8.
+
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+CASH AND BALANCES AT CENTRAL BANK
+
+2022 2021
+£ £
+Cash in Hand 130 286°
+Balances at Central Bank 91,287,176 73,926,964
+91,287,306 73,927,250
+
+The Bank does not offer a cash counter service at its premises; customers have access to cash facilities
+through existing agency bank arrangements.
+
+The Bank of England Reserve account forms part of the Bank’s pool of High Quality Liquid Assets that
+could be accessed in times of liquidity stress within Reliance Bank’s investment strategy. Whilst the
+Bank maintains an extremely risk averse liquidity policy in light of agreements in place with some of
+the Bank’s larger depositors, maintenance of sufficient High Quality Liquid Assets to cover net cash
+outflows over a 30-day period is a regulatory requirement, monitored | through the calculation of a
+Liquidity Coverage Ratio.
+
+LOANS AND ADVANCES TO BANKS
+
+2022 2021
+£ £
+Bank Balances
+Recoverable on Demand 21,583,683 © 27,670,448
+Bank Deposits
+Recoverable in three months or less 1,140,616 18,129,487
+Recoverable between three and six months 1,001,833 1,003,055
+23,726,132 46,802,990
+
+Balances held with the Bank of England are included in note 7.
+
+All the loans and advances to banks represent deposits with banks, building societies and Money Market Funds
+with strong credit ratings. No provision against these balances is deemed necessary. None of these loans and
+advances were extended to related parties and none are secured.
+
+Interbank deposits with high credit quality counterparties play an important role in Reliance Bank's investment
+strategy and the day-to-day liquidity management of the Bank. Together with debt securities, instant access -
+bank deposits are held at a sufficient level to meet expected funding requirements with a comfortable margin.
+Term deposits and debt securities have evenly spread maturities which provide regular maturing funds. Some
+interbank term deposits and debt securities are used to broadly match significant customer term deposits in
+terms of both interest rate risk and liquidity.
+
+40
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+9.(a) LOANS AND ADVANCES TO CUSTOMERS
+
+The role of loans and advances to customers in the Bank's investment and operating strategy is to grow the Bank’s
+profit margins whilst maintaining a conservative lending policy and ensuring the Bank’s liquidity and overall maturity
+profile are not compromised.
+
+No loans have been made to our parent undertaking.
+
+2022 2021
+L£ £
+Recoverable on Demand:
+Overdrafts 458,905 286,910
+Other Loans and Advances:
+Mortgages 47,009,328 38,614,735
+Loans 49,054,178 38,604,328
+96,063,506 77,219,063
+96,522,411 _ 77,505,973
+
+Loans and advances to customers analysed by periods outstanding to maturity:
+
+Recoverable:
+On demand 2,449,281 7,832,172
+In 3 months or less 1,387,169 1,288,207
+In 1 year or less but more than 3 months 5,609,894 4,119,493
+In 2 years or less but more than one year 6,723,767 221,562
+In 5 years or less but more than 2 years 12,938,717 3,368,193
+Over 5 years 67,551,564 60,830,709
+
+Impairment provisions (137,981) (154,363)
+
+96,522,411 _ 77,505,973
+Non-Performing Loans and Advances to Customers
+
+Before specific provision 277,279 306,897
+
+Specific provision applied (2,289) (13,610)
+
+After specific provision _ 274,990 293,287
+
+Provisions are made to the extent that the property value, if the property were sold (net of forced sale discount and
+sale costs) would be insufficient to meet the outstanding debt and related costs of sale.
+
+41
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+9. (b) PROVISIONS FOR BAD AND DOUBTFUL DEBTS
+
+2022 2021
+Total Total
+£ £
+
+As at 1 April 154,363 193,192
+Credit to Income Statement - (16,382) (38,829)
+Amounts written off - -
+Recovery on amounts written off - -
+As at 31 March 137,981 154,363
+
+As indicated in accounting policies (note 1), loans and advances are provided against in the financial year it is
+anticipated that they may not be recoverable in full, which in practice means in the same financial year as they
+become non performing, except where the Bank is confident that it has adequate security with a margin to
+cover its exposure.
+
+A quantitative collective impairment provision assessment is carried out across the loan portfolios based on
+probability of default, which is informed by past experience, and the level of exposures which exceed the
+discounted market value of the property security held. An additional provision for credit losses has been
+recognised in the current and prior years to reflect management's estimate of the impact of the economic
+environment cognisant of the recent pandemic and ongoing geopolitical uncertainty. The quantitative collective
+impairment provision and the additional economic provision together represent the Bank’s ‘incurred but not
+reported’ losses under FRS102. The Bank has a history of very low levels of loan losses.
+
+Key judgements ;
+The measurement of the Bank’s provision for bad and doubtful debts involves management judgment including
+
+the estimate of the probability of default and the estimate of the expected discount to market value applied to
+property security. For business loans, an additional 5% on the probability of default would increase the provision
+by £18,000. A 5% additional discount applied to the market value of property security would increase the
+provision by £20,000. For mortgages, an additional 0.5% on the probability of default would increase the
+provision by £5,000. A 5% additional discount applied to the market value of property security would increase
+the provision by £12,000.
+
+42
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+10. DEBT SECURITIES
+
+31 March 2022 31 March 2021
+Carrying Market Carrying Market
+value value value value
+E £ £ £
+Issued by:
+Banks/Building Societies 34,201,068 34,045,557 40,540,011 40,517,795
+
+The movements during the year on debt securities are as follows:
+
+£
+At 1 April 2021 40,540,011
+Acquisitions 26,577,654
+Maturities and disposals (33,000,000)
+Amortisation (180,443)
+Impact of exchange rates 263 847
+At 31 March 2022 34,201,068
+
+Debt Securities are generally held to maturity and are valued at amortised cost (being no greater than net
+realisable value). £9,884,178 of Debt Securities held at 31 March 2022 mature within three months of the
+Balance Sheet date (2021: £10,101,195), with nil maturing between three and six months (2021: nil),
+£1,003,921 maturing between six months and one year (2021: £23,006,307), £10,358,000 maturing between
+one and two years (2021: nil) and £12,954,966 maturing between two and five years (2021: £7,432,509).
+
+The role of debt securities in Reliance Bank’s investment strategy is to provide a sufficient balance of realisable
+assets with high credit quality counterparties. Fixed rate debt securities are used to broadly match significant
+customer term deposits in terms of both currency and interest rate risk. A spread of maturities also helps to
+manage the Bank’s overall maturity profile. A geographic analysis of these exposures is included in the Bank’s
+Pillar 3 disclosures.
+
+11. INTANGIBLE FIXED ASSETS
+
+Computer Total
+Software
+Cost: £ £
+Brought Forward 723,739 723,739
+Additions 254,508 254,508
+Disposals “ -
+978,247 978,247
+Amortisation: ;
+Brought Forward 331,238 331,238
+Charge for the year 203,839 203,839
+Disposals “ -
+535,077 535,077
+Net Book Value at 31 March 2022 443,170 443,170
+Net Book Value at 31 March 2021 392,501 392,501
+
+43
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+12. TANGIBLE FIXED ASSETS
+
+Office Land & Total
+Furniture, Buildings
+Fixtures &
+Fittings
+Cost: 7 £ £ £
+Brought Forward 508,454 4,116,374 4,624,828
+Additions 12,202 14,563 26,765
+Disposals - - -
+520,656 4,130,937. 4,651,593
+Depreciation:
+Brought Forward 442,791 899,081 1,341,872
+Charge for the year 35,342 121,045 156,387
+Disposals - - -
+478,133 1,020,126 1,498,259
+Net Book Value at 31 March 2022 42,523 3,110,812 3,153,335
+Net Book Value at 31 March 2021 65,663 3,217,293 3,282,956
+
+In the prior year the Bank opted to apply the revaluation method of accounting for freehold property which
+resulted in the recognition of a revaluation reserve of £1,585,304. This was based on a market valuation
+carried out by an independent valuer holding a recognised and relevant professional qualification with recent
+experience in the location and class of the property being valued.
+
+The portion of the premises let to our Parent undertaking has been reclassified to Investment Property (see
+note 13). As described in the accounting policies note “change in accounting policy” this reclassification has
+been recognised through current year opening reserves.
+
+The method and significant assumptions of the valuation include an estimation for which the property would
+be exchanged between a willing buyer and a willing seller in an arm’s length transaction, after proper _
+marketing and where the parties had each acted knowledgeably, prudently and without compulsion. The
+method of valuation used is based on current rents and capitalisation yields in the area where the property is
+located. It assumes that the property is free from structural or other defects that would materially affect the
+market value.
+
+The carrying value of land and buildings under the historical cost method would have been £2,199,957 (2021:
+£2,274,941).
+
+44
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+13. INVESTMENT PROPERTY
+
+Fair value at beginning of year
+Net gain from fair value movements
+Fair value at end of year
+
+2022 2021
+E £
+1,573,962 1,573,962
+1,573,962 1,573,962
+
+Investment property represents the proportion of the head office building, which is let to the Bank’s Parent
+undertaking, on commercial terms. This proportion of the building is held at fair value.
+
+Prior to 2021, an exemption was taken for Investment Property let to group entities, to account for them as Tangible
+Fixed Assets, held on the cost model. This exemption no longer applied due to the change in accounting policy, see
+
+note 12 for more details.
+
+14. PREPAYMENTS AND ACCRUED INCOME
+
+Prepayments
+Overpayment of Gift Aid Recoverable
+Accrued Income Receivable
+
+15. CUSTOMER ACCOUNTS
+
+Current Accounts
+Deposit Accounts
+
+With agreed maturity dates or periods of notice by
+remaining maturity:
+
+Repayable on demand
+
+3 months or less but not repayable on demand
+
+1 year or less but over 3 months
+
+Analysis of Connected Deposits:
+Due to Parent Undertaking
+
+2022 2021
+£ £
+159,680 191,045
+41,793 41,793
+120,525 54,678
+321,998 287,516
+2022 2021
+£ £
+108,085,472 110,221,013
+128,126,579 121,282,302
+236,212,051 231,503,315
+158,078,120 154,483,416
+66,519,723 72,865,163
+11,614,208 4,154,736
+236,212,051 231,503,315
+27,543,279 31,998,421
+
+The Bank has agreed minimum credit balances with its parent and another key customer. These levels reduce
+each year and now commit total credit balances with the Bank of £59,000,000 subject to 3 months’ written
+
+notice (2021: £69,000,000).
+
+45
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+16. OTHER LIABILITIES
+
+Sundry Creditors
+
+Sundry creditors include operational and payment timing differences.
+
+17. ACCRUALS AND DEFERRED INCOME
+
+Pension Fund — deficit payments (note 21)
+Other payables and accruals
+
+2022 2021
+
+£ £
+139,116 112,920
+139,116 112,920
+2022 2021
+
+£ £
+
+39,208 115,179
+
+413,964 402,389
+453,172 517,568
+
+18. OBLIGATIONS UNDER LEASES AND HIRE PURCHASE CONTRACTS
+
+Future minimum rentals/licences payable under non-cancellable operating leases are as follows:
+
+Amounts payable:
+Within one year
+
+In two to five years
+Over five years
+
+Future minimum rentals receivable under non-cancellable operating leases are as follows:
+
+Amounts receivable:
+Within one year
+
+2022 2021
+£ £
+346,470 185,595
+531,840 923,360
+- 2,160
+878,309 711,115
+2022 2021
+E £
+55,808 55,808
+55,808 55,808
+
+Rent receivable relates to leases in place for two floors of the Bank’s head office premises.
+
+46
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+
+FOR THE YEAR ENDED 31 MARCH 2022
+
+19. DEFERRED TAX (ASSET) / LIABILITY
+
+2022 2021
+£ £
+Liability at start of year 13,529
+Deferred tax credited to Income Statement (note 6) (140,817) (459,451)
+Deferred tax charged to Revaluation Reserve (OCI) 95,118 301,208
+Deferred tax charged to P&L Reserve 45,699 144,714
+
+Liability at end of year
+
+No deferred tax asset has been recognised in respect of tax recoverable on losses except to the extent that it
+offsets timing differences which will crystalise a tax charge in future periods. The Bank has unused trading
+losses of £4,562,395 (2021: £3,994,078) which are available for carry forward indefinitely.
+
+Deferred tax in 2021 was calculated at 19%. It was announced in the Budget on 3 March 2021 that the main
+rate of corporation tax of 19% would be increased to 25% with effect from April 2023. The offsetting deferred
+tax assets and liabilities recognised in 2021 relating to losses and to the revaluation gain have been remeasured
+
+at the new rate of 25% in 2022 and continue to be offset.
+
+20. CALLED UP SHARE CAPITAL
+
+2022 2021
+£ £
+Allotted, Called Up and Fully Paid:
+£1 Ordinary Shares 13,000,000 10,000,000
+
+The share capital of Reliance Bank Limited is held by The Salvation Army International Trustee Company for the
+benefit of the International Trust of The Salvation Army. During the year, the Bank issued to the Salvation Army
+International Trustee Company at par, a further 1,000,000 and 2,000,000 £1 Ordinary Shares in July 2021 and
+
+March 2022, respectively.
+
+47
+RELIANCE BANK LIMITED >
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+21. PENSION COSTS
+
+Reliance Bank participates in two separate pension schemes. It contributes to The Salvation Army Employees’
+Pension Fund, a funded defined benefits scheme, in respect of those members of staff who were eligible and
+had joined the scheme prior to its closure to new members on 31 December 2011. It is subject to triennial
+actuarial valuations, with the most recent valuation performed as at 31 March 2021. This reported a surplus of
+£2.6 million relative to the technical provisions which corresponded to an on-going funding ratio of 101.2%. An
+increase in the employers' contribution rate was agreed by the Employers. This increase was agreed to be funded
+from the surplus until 31 March 2022 and as at 1 April 2022 an increase in contribution payments took effect.
+The Bank’s share of the previous deficit being £188,000, was payable in instalments over five years, the last of
+which was paid in April 2022.
+
+A defined contribution scheme was introduced for new members in 2012 and, at the reporting date, there were
+35 Reliance Bank employees within this scheme.
+
+Both pension schemes are multi-employer schemes and, in respect of the defined benefits scheme, the actuary
+has confirmed that it is not practical to allocate the assets and liabilities of the scheme between participating
+employers. In accordance with FRS 102, Reliance Bank accounts for pension costs on the date payments to the
+scheme fall due. The Bank also recognises any liability to fund a past service deficit as agreed with the relevant
+pension scheme trustees. The Bank’s share of any deficit is charged to the Income Statement. Costs charged in
+the current year are disclosed in note 4.
+
+On the basis of certain assumptions, the defined benefit pension scheme’s triennial actuarial valuation as at 31
+March 2021 estimated the market value of the Fund’s assets at that date to be £213.7m whilst the actuarial
+value of the fund’s liabilities amounted to £211.1m giving rise to a surplus of £2.6m. At the balance sheet date,
+the Bank had two active members remaining in the scheme out of 342.
+
+22. GUARANTEES AND COMMITMENTS
+
+2022 2021
+Contract Contract
+Amount Amount
+£ £
+Commitments:
+
+Undrawn formal standby facilities of one year or less 16,554,622 12,687,888
+. 16,554,622 12,687,888
+
+Contingent Liabilities:
+Guarantees 7,693,614 7,693,614
+24,248,236 20,381,502
+
+As a matter of course, the Bank takes counter indemnities to cover guarantees extended on behalf of customers.
+The Bank controls designated deposits sufficient to offset the guarantees extended.
+
+Commitments reflect approved mortgage and loan commitments awaiting drawdown.
+
+48
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+23. RECONCILIATION OF PROFIT TO NET CASH INFLOW FROM OPERATING ACTIVITIES
+
+Operating loss for the reporting period
+
+(Increase) / Decrease in prepayments and accrued income
+(Increase) / Decrease in accruals and deferred income
+Movement in provision for bad debts
+
+Movement in value of investments
+
+Amortisation of intangible fixed assets
+
+Depreciation of tangible fixed assets
+
+Decrease in other liabilities
+
+Increase in other assets
+
+Increase in loans and advances to customers
+Increase in customer accounts
+
+Net cash (outflow) / inflow from operating activities
+
+2022 2021
+£ £
+(749,645) (1,820,258)
+(34,482) 121,206
+(64,396) 155,623
+16,412 38,829
+179,932 102,651
+203,839 178,796
+156,387 158,545
+26,197 101,056
+(4,671) (605)
+(270,426) (964,157)
+(19,032,850) (24,339,924)
+4,708,736 45,092,252
+(14,594,539) 19,788,171
+
+The operating loss includes cashflows related to interest received of £3,073,598 (2021: £2,575,182) and
+
+interest paid of £200,813 (2021: £442,894).
+
+24. INVESTING ACTIVITIES
+
+Purchase of Debt Securities
+
+Sale and maturity of Debt Securities
+
+Purchase of intangible fixed assets
+
+Purchase of tangible fixed assets
+
+Net movement in loans and advances to banks not
+recoverable on demand
+
+25. FINANCING ACTIVITIES
+
+Issue of £1 Ordinary Shares
+
+2022 2021
+£ £
+(26,840,989) (55,432,509)
+33,000,000 75,000,000
+(254,508) (177,010)
+(26,765) (68,581)
+14,498,971 (3,776,427)
+20,376,709 15,545,473
+2022 2021
+£ £
+3,000,000 -
+3,000,000 :
+
+49
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+26. ANALYSIS OF GIFT AID |
+
+2022 2021
+£ £
+Debtors brought forward and carried forward 41,793 41,793
+
+27. KEY MANAGEMENT PERSONNEL AND CONNECTED PERSONS’ ACCOUNTS
+
+2022 2021
+£ £
+Aggregate amounts due, as at 31 March, to :
+- Directors and connected persons 101,113 10,892
+101,113 10,892
+
+FRS 102 defines key management personnel as those persons having responsibility for planning, directing
+and controlling the activities of the Bank directly or indirectly. Tne Bank’s key management personnel are
+considered to be its Directors (Executive and Non-Executive) and other members of its Executive Committee.
+
+Key management personnel and any person who may be expected to influence or be influenced by them
+are considered related parties. Any loans to key management personnel are extended in the normal course
+of business and at terms, for Executive Directors and management, that are no more favourable than the
+terms available to other employees of the Bank. Any loans to Non-Executive Directors, employees and
+employees of the parent undertaking are extended in the normal course of business on non-preferential
+terms available to other customers. During the year there were none.
+
+No preferential credit interest rates are applied to the accounts of key management personnel or to accounts
+of Connected Persons. Connected Persons are defined by s.252 of the Companies Act 2006.
+
+50
+28.
+
+29.
+
+" RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+RELATED PARTY TRANSACTIONS —
+
+As indicated in note 20, The Salvation Army International Trustee Company holds 100% of the issued share
+capital of Reliance Bank Limited as Trustee of The International Trust of The Salvation Army.
+
+The Bank conducts business with its shareholder. In addition to ordinary banking service transactions, two floors
+of the Bank’s premises were let to The Salvation Army throughout the year. Rental income and service charges
+are disclosed within other operating income. All transactions with group undertakings have been carried out on
+a commercial basis.
+
+No other related party transactions were made during the year (2021: ENil).
+
+The aggregate compensation paid to the Bank’s key management personnel was £616,267 (2021: £585,343).
+
+RISK MANAGEMENT POLICIES AND OBJECTIVES
+
+The Board of Directors is responsible for determining the long-term strategy of the business and the level of risk
+acceptable in each area of the Bank’s business.
+
+The Audit, Risk and Compliance Committee recommends policies designed to mitigate risks to the Board and
+reviews risk assessments within the Bank's risk register.
+
+The Bank’s management of its principal risks is summarised within the Strategic Report. Further detail on the
+main financial risks arising from the Bank’s activities follows below.
+
+Credit Risk
+
+The table below highlights the credit quality of the Bank’s treasury assets. The credit quality of financial assets
+that are neither past due nor impaired can be assessed by reference to external credit ratings (if applicable) or
+to historical information about counterparty default rates. The credit quality of financial assets that are neither
+past due nor impaired is as set out below.
+
+2022 2021
+£ £
+
+Balances at Central Bank 91,287,176 73,927,250
+Loans and advances to banks 23,726,132 46,802,990
+Debt securities 34,201,068 40,540,011
+Treasury Assets at 31 March 149,214,376 161,270,251
+Treasury Assets by credit rating
+
+~ AAA 24,316,889 25,420,863
+
+- AA 98,717,843 88,976,114
+
+-A 26,179,644 46,873,274
+Treasury Assets at 31 March 149,214,376 161,270,251
+
+Sl
+29.
+
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+RISK MANAGEMENT POLICIES AND OBJECTIVES (CONTINUED)
+
+Credit Risk (continued)
+
+All loan and overdraft applications are assessed with reference to the Bank’s lending policy. The policy
+establishes set limits of authority. Transactions above such limits require Credit Committee approval and any
+changes to policy require Board approval, with recommendations sought from the Credit Committee. The Credit
+Committee also recommends for Board approval treasury counterparty limits.
+
+The table below shows information on the Bank’s loans and advances to customers by payment due status.
+
+2022 2021
+£ £
+Neither past due nor impaired 96,383,112 77,353,439
+Up to three months overdue but not impaired - -
+More than three months overdue (non-performing) 277,279 306,897
+96,660,391 77,660,336
+Specific loss provision (2,289) (13,610)
+Collective impairment provision (135,692) (140,753)
+Loans and advances to customers at 31 March 96,522,410 77,505,973
+
+For loans and advances to customers totalling £96.6m (2021: £77.2m), the Bank has security in the form of
+property to an estimated value of £222m (2021:175m) which can be called upon if the customer is in default
+
+’ under the terms of the agreement.
+
+Specific impairment provisions are made in full when a loan becomes non-performing and is over 90 days past
+due. Provisions are made after assessing the adequacy of any security that is in place, factoring in potential
+costs of realising that security.
+
+Analysis of loans, neither past due or impaired, by LTV:
+
+2022 2021
+
+£m Em
+< 50% 34.3 31.3
+50% < 60% 11.3 8.5
+60% < 70% 27.0 13.6
+70% < 80% 16.0 6.4
+80% < 90% 4.6 15.2
+>90% 3.1 2.2
+Not secured on property 0.0 0.2
+96.3 77.4
+
+52
+29,
+
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+RISK MANAGEMENT POLICIES AND OBJECTIVES (CONTINUED)
+
+Liquidity and Funding Risk
+
+Reliance Bank maintains a high level of liquidity, holding £115.6m of High Quality Liquid Assets at the year end
+which equates to 46.0% of total assets (2021: 33.6%). The Bank’s Liquidity Coverage Ratio at 31 March 2022
+was 605% (2021: 986%), this has reduced due to an adjustment in the minimum credit balance agreements
+that are in place with significant deposit holders in regulatory reporting.
+
+Interest Rate sensitivity
+
+Part of the Bank’s return on financial instruments is obtained from controlling the dates on which interest
+receivable on assets and interest payable on liabilities are contractually reset to market rates or, if earlier, the
+date on which the instruments mature. The following table summarises these re-pricing matches on the Bank's
+non-trading book as at 31 March 2022 (the Bank does not maintain a trading book). Items are allocated to
+time spans by reference to the earlier of the next contractual interest rate re-pricing date and the maturity
+
+date.
+3-6 6 mths - iyr-S5 Non-
+< 3 mths mths lyr yrs > Syrs Interest Total
+Bearing
+£'000s £000s £'000s £'000s £'000s £'000s £'000s
+31 March 2022
+Assets:
+Cash and Balances 91,287 - - - - - 91,287
+at Central Bank
+Loans and Advances to
+Banks 22,724 1,002 - - - - 23,726
+Loans and Advances to
+Customers 61,242 4,555 6,714 24,011 - - 96,522
+Debt Securities 34,201 - - - - - 34,201
+Other Assets - - - - - 5,511 5,511
+Total Assets 209,454 5,557 °6,714 24,011 - 5,511 251,247
+Liabilities:
+Customer Accounts 224,052 3,880 8,280 - - - 236,212
+Other Liabilities - - - - - 592 592
+Shareholder’s Funds - - - - - 14,443 14,443
+224,052 3,880 8,280 - - 15,035 251,247
+Interest Rate Sensitivity
+Net Gap (14,598) 1,677 (1,566) 24,011 - (9,524) -
+Cumulative Gap (14,598) (12,921) (14,487) 9,524 , 9,524 - -
+Year Ended 31 March 2021
+Interest Rate (41,725) (284) 23,758 25,499 25 (7,273) -
+Sensitivity Gap
+Cumulative Gap (41,725) (42,009) (18,251) 7,248 7,273 - -
+
+Whilst there are more liabilities than assets that can re-price within 3 months, £108m of these are currently
+in products which pay no interest. The Bank manages interest rate risks by the methods outlined in the Risk
+Management summary within the Strategic Report.
+
+53
+29.
+
+30.
+
+31.
+
+RELIANCE BANK LIMITED
+
+NOTES TO THE ACCOUNTS (CONTINUED)
+FOR THE YEAR ENDED 31 MARCH 2022
+
+RISK MANAGEMENT POLICIES AND OBJECTIVES (CONTINUED)
+Foreign Exchange risk
+
+The Bank has limited net exposure to exchange rate risk as it holds assets and liabilities denominated in foreign
+currency and converts any excess reserves on a regular basis.
+
+The Bank’s foreign exchange exposures at the year end were as follows:
+
+2022 2021
+USD EUR USD EUR
+Monetary Assets 28,448,474 1,055,179 30,194,335 20,201
+Monetary Liabilities (28,449,497) (1,056,012) (30,189,426) (20,234)
+Net Monetary Assets (1,023) (833) 4,909 (33)
+Translated At 1.3157 1.1836 1.3771 1.1669
+Sterling Equivalent £777 (£704) £3,565 (£28)
+
+The only other foreign currency transactions undertaken are translations of sums on behalf of customers and
+in each instance the customer bears any currency risk involved.
+
+POST BALANCE SHEET EVENTS
+
+There are no post balance sheet events to disclose.
+
+COUNTRY BY COUNTRY REPORTING
+
+Reliance Bank is located in the United Kingdom and has no other offices or establishments in other countries.
+
+Name Reliance Bank Limited
+
+Activities The Bank provides a suite of basic retail banking
+products and services to both business and personal
+
+customers within the UK. It also holds some deposits
+
+for overseas customers, chiefly with a connection to
+
+The Salvation Army.
+
+Geographical location United Kingdom
+Turnover _- £4,194,731
+Staff numbers 41
+
+Loss before Tax £749,644
+
+Tax Paid ENil
+
+Public subsidies received ENil
+
+54

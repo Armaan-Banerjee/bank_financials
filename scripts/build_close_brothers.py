@@ -12,6 +12,51 @@ AR2023_URL = ("https://find-and-update.company-information.service.gov.uk/compan
 AR2021_URL = ("https://find-and-update.company-information.service.gov.uk/company/00195626/"
               "filing-history/MzMyMjY5NTAxOGFkaXF6a2N4/document?format=pdf&download=0")
 
+# ---------------------------------------------------------------------------
+# CORRECTION FOUND 2026-09-16 (KM1-010): Close Brothers Limited's regulatory
+# metrics ARE published in a Pillar 3 document, not only inside the statutory
+# filings. Close Brothers Group plc's annual Pillar 3 prints UK KM1 with SIX
+# columns - three for "Group" (CBG plc) and three for "Individual", the latter
+# being CBL on the CRR article 9 individual-consolidation basis. Every prior
+# session searched only the Companies House filings and the group narrative,
+# so the CBL half of that table was never seen. Its capital, RWA, ratio, LCR
+# and NSFR figures agree cell-for-cell with the Strategic Report table this
+# workbook already used, which is what confirms the two are the same basis.
+# It also discloses a CBL LEVERAGE RATIO, which this workbook previously
+# asserted was "genuinely not disclosed at this entity level" - see the
+# Leverage Ratio sheet for the retraction.
+#
+# The documents are reached from closebrothers.com's own "Results, reports and
+# presentations" page; the visible links are Pardot redirectors on
+# files.closebrothers.com which serve an HTML <embed> wrapper, and the PDF
+# itself lives on storage.pardot.com. Both are recorded so a later session can
+# verify either. All five verified 2026-09-16 by HTTP 200 + Content-Type
+# application/pdf + %PDF magic bytes.
+CBG_REPORTS_INDEX = ("https://www.closebrothers.com/s/investor-relations/investor-information/"
+                     "results-reports-and-presentations")
+CBG_P3_2025_URL = "https://storage.pardot.com/186742/1779102089T5UqOZ2F/Pillar3Disclosures2025.pdf"
+CBG_P3_2024_URL = "https://storage.pardot.com/186742/177910260307OnlFA4/Pillar_3_Disclosures_2024.pdf"
+CBG_P3_2023_URL = "https://storage.pardot.com/186742/17791028104aOkhZu0/Pillar_3_Disclosures_2023.pdf"
+CBG_P3_2022_URL = "https://storage.pardot.com/186742/17791029759gmHVOKT/Pillar_3_2022___Doc__14__0.pdf"
+CBG_P3_2021_URL = "https://storage.pardot.com/186742/1781775148kmJ2jvY6/CBG_Pillar_3_disclosures_2021.pdf"
+CBG_P3_HY2026_URL = ("https://storage.pardot.com/186742/1778671946zDhym2UD/"
+                     "CBG_Half_Year_Pillar_3_disclosures_January_2026.pdf")
+
+LATEST_EDITION_NOTE = (
+    "LATEST-EDITION CHECK, 2026-09-16: read off closebrothers.com's own 'Results, reports and "
+    f"presentations' page ({CBG_REPORTS_INDEX}), not from the URLs previously cited in this script. "
+    "The newest ANNUAL documents published are the Annual Report 2025 and Pillar 3 Disclosures 2025, "
+    "both dated 3 October 2025 and both for the year ended 31 July 2025 - the year this workbook already "
+    "ends on. The newest Pillar 3 of any kind is the half-year edition for the six months ended 31 "
+    f"January 2026, published 17 March 2026 ({CBG_P3_HY2026_URL}); it is an interim period, not a "
+    "financial year, so no column is taken from it, but its 31 Jul 2025 comparative column reproduces "
+    "every FY2025 individual-basis figure used here identically, which is a useful independent check. "
+    "Close Brothers Group plc's own financial calendar puts the '2026 Preliminary Results' (year ended "
+    "31 July 2026) on 29 September 2026, i.e. AFTER the date of this check, and Close Brothers Limited's "
+    "own statutory filing for that year would not reach Companies House until around December 2026. "
+    "Checked, none newer. YEARS unchanged."
+)
+
 ENTITY_NOTE = (
     "Close Brothers Limited (company 00195626, FRN 124750) is the PRA-regulated bank subsidiary of the "
     "LSE-listed Close Brothers Group plc. Cash flow figures are the entity's own Consolidated (Close "
@@ -542,7 +587,17 @@ P3_SOURCES = (
     "(PDF p.93) - " + AR2021_URL + "\n\n"
     "The FY2025 and FY2023 tables are labelled unaudited except where stated (FY2025's 'Total "
     "regulatory capital' line is marked audited); FY2021's is inside an audited note but its RWA and "
-    "ratio rows are themselves marked unaudited. Ratios are as each report states them, not recomputed."
+    "ratio rows are themselves marked unaudited. Ratios are as each report states them, not recomputed.\n\n"
+    "SECOND, INDEPENDENT SOURCE FOUND 2026-09-16 (KM1-010), and it corroborates every figure above. "
+    "Close Brothers Group plc's annual Pillar 3 prints template UK KM1 with an 'Individual' block "
+    "beside its 'Group' block, the Individual block being CBL on the CRR article 9 individual-"
+    "consolidation basis. For FY2022-FY2025 its CET1 capital, Tier 1 capital, total capital, total "
+    "risk-weighted exposure amount and all three capital ratios match the Companies House Strategic "
+    "Report figures on this sheet cell-for-cell, which is what establishes that the two are the same "
+    "basis rather than merely similar. That document is cited in full on the KM1 Key Metrics sheet, and "
+    "it is also where this workbook's leverage-ratio retraction comes from - see the Leverage Ratio "
+    f"sheet. Index page: {CBG_REPORTS_INDEX}\n\n"
+    + LATEST_EDITION_NOTE
 )
 
 TIER1_DERIVATION_NOTE = (
@@ -560,6 +615,149 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit or "", rows_data, sources_text,
                         note=note, first_col_width=54, source_height=250)
 
+
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics
+# ---------------------------------------------------------------
+# Every figure below is the "Individual" half of Close Brothers Group plc's
+# UK KM1 - i.e. Close Brothers Limited on the CRR article 9 individual-
+# consolidation basis - never the "Group" half. Rule 11 in the KM1 map (one
+# document printing the template twice, once per entity basis) applies here in
+# its sharper form: ONE table, six columns, two entities side by side, and the
+# wrong three columns look entirely plausible (FY2025 CET1 is 1,348.1 on the
+# group side against 1,229.2 on CBL's, a 10% error).
+KM1_SOURCES = (
+    "Sources - Close Brothers Limited ('CBL') on the CRR article 9 individual-consolidation basis, read "
+    "from the 'Individual' columns of Close Brothers Group plc's own annual Pillar 3 UK KM1. Each year "
+    "comes from the edition in which it is the REPORTING year, except FY2022 - see below. Amounts £m.\n"
+    f"FY2025: Pillar 3 Disclosures 2025 (year ended 31 July 2025), 'Annex I: Key metrics and overview of "
+    f"risk-weighted exposure amounts / UK KM1 - Key metrics', printed pp.3-4, column a under 'Individual' "
+    f"(31 Jul 2025) - {CBG_P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 2024, same template, printed pp.3-4, 'Individual' column a "
+    f"(31 Jul 2024) - {CBG_P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, same template, printed pp.3-4, 'Individual' column a "
+    f"(31 Jul 2023) - {CBG_P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2023, 'Individual' column e (31 Jul 2022) - {CBG_P3_2023_URL}. This is "
+    "the one column taken from a later edition's comparative, and it is not a choice: FY2022's OWN edition "
+    f"({CBG_P3_2022_URL}) prints UK KM1 for the GROUP ONLY - three columns, no 'Individual' block at all - "
+    "so no CBL KM1 exists in the document for which FY2022 is the reporting year. Cross-checked against "
+    "this workbook's own metric sheets, which take FY2022 independently from the FY2023 Annual Report's "
+    "Strategic Report table: CET1 1,194.4, total capital 1,394.4, RWAs 8,847.6 and the three ratios all "
+    "agree, so the comparative is not a restatement of anything.\n"
+    "FY2021: BLANK, on two independent grounds. (a) FY2021's own edition (Pillar 3 disclosures for the "
+    f"year ended 31 July 2021 - {CBG_P3_2021_URL}) contains no UK KM1: the template arrived with the "
+    "Disclosure (CRR) Part of the PRA Rulebook and post-dates a 31 July 2021 year end. What it prints "
+    "instead, at section 3 'Key Regulatory Metrics' (printed p.15), is a ten-row unnumbered summary - "
+    "capital, RWAs, three ratios, leverage, LCR - with no SREP rows, no buffer rows, no HQLA/outflow "
+    "build-up and no NSFR. Under the row-set test that is a different and shorter table, not an "
+    "unnumbered KM1, and mapping it onto template row numbers would invent a correspondence Close "
+    "Brothers never published. (b) That table is GROUP-basis in any case; the FY2021 edition carries no "
+    "quantitative CBL individual-consolidation disclosure at all, only the qualitative 'Individual "
+    "Consolidation' paragraph on printed p.2. This workbook's FY2021 capital figures come instead from "
+    f"CBL's own Annual Report 2021, Note 21 'Capital' - {AR2021_URL}.\n\n"
+    "WHICH THREE COLUMNS. Each edition's KM1 is one table with six columns: columns a/c/e under a 'Group' "
+    "heading (Close Brothers Group plc) and columns a/c/e under an 'Individual' heading (CBL). Only the "
+    "'Individual' block is used here, because this is a Close Brothers Limited workbook. The editions "
+    "footnote the basis themselves: 'For capital and leverage, the PRA supervises CBL on an individual "
+    "consolidation basis as permitted under CRR article 9. For liquidity and funding, the PRA supervises "
+    "CBL on an individual basis, excluding all subsidiary undertakings.' Columns c (the 31 January "
+    "half-year) are not carried - only the column whose date is the financial year end.\n\n"
+    "ROWS THE TEMPLATE OMITS, AND WHY. Rows 14a-14e are absent from every edition, and that is a stated "
+    "exclusion rather than a gap: each edition footnotes 'Rows 14a-14e have been removed as only LREQ "
+    "firms are required to disclose this information.' Columns b and d are removed on the same footing "
+    "('only required to disclose information on a semi-annual basis'). Rows 10 and UK 10a (G-SII / O-SII "
+    "buffers) and UK 8a / UK 9a (systemic risk buffers) are not printed in any edition. Row 11 appears "
+    "without a row 10 above it, exactly as published.\n\n"
+    "FY2022 NSFR ROWS ARE BLANK BECAUSE THE TEMPLATE LEAVES THEM BLANK, and the reason is footnoted. The "
+    "FY2023 edition's footnote 3 reads: 'NSFR was implemented under CRR on 1 January 2022 and as such no "
+    "comparative has been provided for the four-quarter average to 31 July 2022. The point in time NSFR "
+    "at 31 July 2022 was 118.3% for the CBG group and 133.6% for CBL.' The 133.6% that this workbook's "
+    "NSFR sheet carries for FY2022 is therefore a POINT-IN-TIME figure sitting in a column of "
+    "four-quarter averages - a real basis difference, recorded on both sheets rather than reconciled. "
+    "Rows 18 and 19 have no FY2022 figure on any basis.\n\n"
+    "LEVERAGE. Rows 13/14 are captioned 'excluding claims on central banks' in every edition that prints "
+    "them, all of which report periods ending after the 1 January 2022 basis change, so there is no "
+    "basis break inside this sheet and a single caption block is correct. These rows are the source of "
+    "the correction recorded on the Leverage Ratio sheet.\n\n"
+    "PRECISION IS AS PRINTED: one decimal place throughout, including '0.0' for the FY2022 "
+    "countercyclical buffer, which is a printed zero and is kept as a zero rather than blanked.\n\n"
+    + LATEST_EDITION_NOTE
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — £m", {}),
+    ("DATA", "1    Common equity tier 1 (\"CET1\") capital",
+     {"FY2025": 1229.2, "FY2024": 1326.4, "FY2023": 1139.6, "FY2022": 1194.4}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 1429.2, "FY2024": 1526.4, "FY2023": 1139.6, "FY2022": 1194.4}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 1629.2, "FY2024": 1726.4, "FY2023": 1339.6, "FY2022": 1394.4}),
+    ("SECTION", "Risk-weighted exposure amounts — £m", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 9534.2, "FY2024": 10033.9, "FY2023": 9159.2, "FY2022": 8847.6}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common equity tier 1 ratio (%)",
+     {"FY2025": "12.9%", "FY2024": "13.2%", "FY2023": "12.4%", "FY2022": "13.5%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "15.0%", "FY2024": "15.2%", "FY2023": "12.4%", "FY2022": "13.5%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "17.1%", "FY2024": "17.2%", "FY2023": "14.6%", "FY2022": "15.8%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.0%", "FY2024": "1.0%", "FY2023": "0.8%", "FY2022": "0.8%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.3%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "0.3%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "0.4%", "FY2024": "0.4%", "FY2023": "0.3%", "FY2022": "0.3%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "9.8%", "FY2024": "9.8%", "FY2023": "9.4%", "FY2022": "9.4%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.9%", "FY2024": "1.9%", "FY2023": "1.9%", "FY2022": "0.0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.4%", "FY2024": "4.4%", "FY2023": "4.4%", "FY2022": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "14.2%", "FY2024": "14.2%", "FY2023": "13.8%", "FY2022": "11.9%"}),
+    ("DATA", "12    CET1 available after meeting total SREP own funds requirements (%)",
+     {"FY2025": "7.3%", "FY2024": "7.4%", "FY2023": "5.3%", "FY2022": "6.4%"}),
+    ("SECTION", "Leverage ratio — amounts £m (rows 14a-14e removed by the bank: LREQ firms only)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%"}),
+    ("SECTION", "Liquidity coverage ratio — amounts £m, 12-month average to the period end", {}),
+    ("DATA", "15    Total high-quality liquid assets (\"HQLA\") (Weighted value - average)",
+     {"FY2025": 2477.8, "FY2024": 2197.8, "FY2023": 1931.8, "FY2022": 1259.9}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 1050.8, "FY2024": 945.2, "FY2023": 698.4, "FY2022": 569.7}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 2145.8, "FY2024": 2206.1, "FY2023": 2036.1, "FY2022": 1778.9}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 262.7, "FY2024": 236.3, "FY2023": 174.6, "FY2022": 142.4}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "943.2%", "FY2024": "930.1%", "FY2023": "1,106.4%", "FY2022": "884.7%"}),
+    ("SECTION", "Net stable funding ratio — amounts £m, four-quarter average to the period end", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 10563.6, "FY2024": 10139.2, "FY2023": 9139.8}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 6479.7, "FY2024": 6839.1, "FY2023": 6505.1}),
+    ("DATA", "20    Net stable funding ratio (%)",
+     {"FY2025": "163.0%", "FY2024": "148.3%", "FY2023": "140.5%"}),
+]
+
+bw.add_km1_sheet(
+    title="Close Brothers Limited — KM1 Key Metrics",
+    subtitle="UK KM1 as published, Close Brothers Limited on the CRR article 9 individual-consolidation "
+             "basis (the 'Individual' columns of Close Brothers Group plc's Pillar 3 UK KM1, never the "
+             "'Group' columns). Amounts £m, ratios as printed. FY2021 is blank: that year's edition "
+             "pre-dates the template and carries no CBL figures - see source note at bottom.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=560,
+)
 
 metric(
     "CET1 Capital", "£m",
@@ -658,15 +856,32 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {y: "Not publicly disclosed" for y in YEARS})],
-    P3_SOURCES + (
-        "\n\nLEVERAGE RATIO: genuinely not disclosed at this entity level in any of the five years. "
-        "Re-verified 2026-09-12 by OCR'ing all three filings in full (FY2025 187pp, FY2023 153pp, "
-        "FY2021 147pp) and searching for any leverage-ratio figure: the term appears only in narrative "
-        "risk-appetite wording ('...and leverage ratio requirements...'), never with a value. A leverage "
-        "ratio is published by the listed parent Close Brothers Group plc in its own Pillar 3, but that "
-        "is a different entity level and is deliberately not substituted here."
-    ),
+    [("Leverage ratio excluding claims on central banks",
+      {"FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%",
+       "FY2021": "Not publicly disclosed"}),
+     ("Leverage ratio total exposure measure excluding claims on central banks (£m)",
+      {"FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9})],
+    KM1_SOURCES,
+    note="RETRACTION, 2026-09-16. Until today this sheet read 'Not publicly disclosed' for all five "
+         "years, on the stated basis that the leverage ratio is 'genuinely not disclosed at this entity "
+         "level in any of the five years'. THAT WAS WRONG, and the error was one of scope rather than of "
+         "extraction: the earlier sweep OCR'd Close Brothers Limited's Companies House filings in full "
+         "and correctly found no leverage figure there, then wrote that finding down as a fact about the "
+         "BANK. Close Brothers Group plc's annual Pillar 3 prints UK KM1 with an 'Individual' block "
+         "alongside the 'Group' block, and that Individual block IS Close Brothers Limited on the CRR "
+         "article 9 individual-consolidation basis - the same basis as this workbook's other capital "
+         "sheets, which is confirmed by its CET1, RWA and ratio rows agreeing cell-for-cell with the "
+         "Strategic Report table those sheets already used. Rows 13 and 14 of that block give CBL's own "
+         "leverage exposure measure and ratio for FY2022-FY2025. The old note's one true statement - "
+         "that CBG plc also publishes a leverage ratio and that it is a different entity level - still "
+         "holds, and the group figures (12.9% FY2025, 12.7% FY2024, 11.4% FY2023, 12.0% FY2022) are "
+         "still NOT substituted here.\n"
+         "FY2021 remains 'Not publicly disclosed' for CBL specifically: that year's Pillar 3 pre-dates "
+         "the UK KM1 template, its section 3 'Key Regulatory Metrics' table is group-basis only (11.8% "
+         "at 31 July 2021), and the FY2021 Annual Report's Note 21 'Capital' has no leverage row.\n"
+         "BASIS: 'excluding claims on central banks' in every year printed. All four dates fall after "
+         "the 1 January 2022 change that introduced that basis, so no basis break sits inside this "
+         "series and no series has been merged across one.",
 )
 
 metric(
@@ -683,15 +898,26 @@ metric(
         "pages and finding no occurrence of 'LCR' or 'liquidity coverage'.\n"
         "The FY2023 report states that for liquidity and funding ratios CBL is regulated by the PRA on "
         "an individual basis EXCLUDING subsidiary undertakings - a solo basis, narrower than the "
-        "CBL-consolidated basis used for the capital figures above."
+        "CBL-consolidated basis used for the capital figures above.\n\n"
+        "PRECISION DIFFERS BETWEEN THE TWO DOCUMENTS THAT CARRY THESE SAME FIGURES, noted 2026-09-16 "
+        "(KM1-010). The Annual Report rounds FY2023 to '1,106%' and FY2022 to '885%'; the corresponding "
+        "Pillar 3 UK KM1 'Individual' column prints them to one decimal, 1,106.4% and 884.7%. The KM1 "
+        "Key Metrics sheet carries the Pillar 3 printing and this sheet carries the Annual Report's, "
+        "each as its own document has it; neither has been re-rounded to match the other. FY2025 and "
+        "FY2024 are printed identically in both (943.2%, 930.1%).\n"
+        "FY2021 stays 'Not publicly disclosed' for CBL specifically. Close Brothers Group plc's FY2021 "
+        f"Pillar 3 does print a 12-month average LCR of 1,003% at section 3 ({CBG_P3_2021_URL}), but "
+        "that is the CBG group figure; that edition carries no CBL-level liquidity disclosure, and the "
+        "group figure is not substituted here."
     ),
     note="12-month average, not a year-end point-in-time figure. Solo (CBL individual) basis, which "
-         "differs from the CBL-consolidated basis of the capital/RWA sheets.",
+         "differs from the CBL-consolidated basis of the capital/RWA sheets. FY2023/FY2022 are the "
+         "Annual Report's rounded printing; the Pillar 3 prints 1,106.4% and 884.7% - see source note.",
 )
 
 metric(
     "NSFR", "%",
-    [("Net stable funding ratio (four-quarter average)",
+    [("Net stable funding ratio (four-quarter average, except FY2022 - see note)",
       {"FY2025": "163.0%", "FY2024": "148.3%", "FY2023": "140.5%", "FY2022": "133.6%",
        "FY2021": "Not applicable"})],
     P3_SOURCES + (
@@ -701,9 +927,21 @@ metric(
         "FY2021: shown as 'Not applicable' rather than 'Not publicly disclosed' - the NSFR was only "
         "implemented by the PRA on 1 January 2022 (stated in both the FY2023 and FY2025 reports), which "
         "is after this bank's 31 July 2021 year end, so no NSFR existed to disclose for FY2021.\n"
-        "Same solo (CBL individual, excluding subsidiaries) basis as the LCR - see that sheet."
+        "Same solo (CBL individual, excluding subsidiaries) basis as the LCR - see that sheet.\n\n"
+        "FY2022 IS A POINT-IN-TIME FIGURE IN A COLUMN OF AVERAGES, found 2026-09-16 (KM1-010) and "
+        "recorded rather than reconciled. FY2023-FY2025 are four-quarter averages to the period end. "
+        "FY2022 cannot be: Close Brothers Group plc's Pillar 3 Disclosures 2023 leaves KM1 rows 18, 19 "
+        "and 20 EMPTY in its 31 July 2022 column and footnotes why - 'NSFR was implemented under CRR on "
+        "1 January 2022 and as such no comparative has been provided for the four-quarter average to 31 "
+        "July 2022. The point in time NSFR at 31 July 2022 was 118.3% for the CBG group and 133.6% for "
+        f"CBL.' - {CBG_P3_2023_URL}. The 133.6% shown here is that footnoted CBL point-in-time figure, "
+        "which is also what the FY2023 Annual Report prints as its FY2022 comparative. The KM1 Key "
+        "Metrics sheet leaves FY2022 blank on rows 18-20, because that is what the template itself "
+        "prints; the two sheets differ deliberately and neither has been changed to match the other."
     ),
-    note="Four-quarter average, solo (CBL individual) basis. FY2021 predates the PRA's 1 January 2022 "
+    note="Four-quarter average for FY2023-FY2025, solo (CBL individual) basis. FY2022 is a POINT-IN-TIME "
+         "NSFR, not a four-quarter average - no average was published for that date because the regime "
+         "began part-way through the year; see the source note. FY2021 predates the PRA's 1 January 2022 "
          "implementation of the NSFR.",
 )
 
@@ -714,7 +952,18 @@ metric(
         "\n\nMREL: no MREL figure or requirement is mentioned anywhere in any of the three filings - "
         "re-verified 2026-09-12 by full-document OCR search for 'MREL' and 'minimum requirement for own "
         "funds', zero hits across all 487 pages. MREL is set at the resolution-entity level, which for "
-        "this group is the listed parent Close Brothers Group plc, not Close Brothers Limited."
+        "this group is the listed parent Close Brothers Group plc, not Close Brothers Limited.\n\n"
+        "STRENGTHENED 2026-09-16 (KM1-010) from an absence to a positive statement by the bank itself. "
+        "Close Brothers Group plc's Pillar 3 reaches template UK KM2 - 'Key metrics - MREL' - and "
+        "declines to fill it in, in terms: 'The group does not have any additional MREL requirements "
+        "Section 3A(4B) of the Banking Act 2009 so this template has not been presented' (Pillar 3 "
+        "Disclosures 2025, printed p.6; the FY2022 edition words it 'Close Brothers does not have any "
+        "additional MREL requirements as laid down in CRR articles 92a or 92b'). So the reason no MREL "
+        "ratio appears for Close Brothers Limited is not that it is withheld or that we failed to find "
+        "it: no additional MREL requirement is set above the group's own funds requirements, and the "
+        "template is therefore omitted with the omission explained. Unlike the leverage ratio, UK KM2 "
+        "has no 'Individual' block to read, because it has no columns at all in any edition. - "
+        f"{CBG_P3_2025_URL}"
     ),
 )
 
@@ -767,10 +1016,15 @@ bw.add_overview_sheet(
     ratios=[],
     note="Capital and liquidity ratios are disclosed at this entity level (Close Brothers Limited and its "
          "subsidiaries) in its own Annual Report's Strategic Report / Capital note - see the CET1 Ratio, "
-         "Total Capital Ratio, LCR and NSFR sheets. Leverage Ratio and MREL genuinely are not disclosed at "
-         "this level (they appear only in the listed parent Close Brothers Group plc's own Pillar 3, a "
-         "different entity, and are not substituted here). Cash flow figures are duplicated from the detail "
-         "sheet for at-a-glance trend viewing.",
+         "Total Capital Ratio, LCR and NSFR sheets. The LEVERAGE RATIO is disclosed at this level too, for "
+         "FY2022-FY2025 - correcting a statement that stood on this sheet until 2026-09-16 that it was not; "
+         "it is published in the 'Individual' (CBL, CRR article 9) columns of Close Brothers Group plc's "
+         "Pillar 3 UK KM1, which the earlier sweeps never read because they searched only the Companies "
+         "House filings. See the Leverage Ratio and KM1 Key Metrics sheets. MREL is the one metric with no "
+         "figure at this level, and for a stated reason: the group's Pillar 3 declines to present template "
+         "UK KM2 because it has no additional MREL requirements under section 3A(4B) of the Banking Act "
+         "2009 - see the MREL Ratio sheet. Cash flow figures are duplicated from the detail sheet for "
+         "at-a-glance trend viewing.",
 )
 
 # ---------------------------------------------------------------

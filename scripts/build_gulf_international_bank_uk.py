@@ -821,6 +821,219 @@ FY2020_BASIS_NOTE = (
     "total, carried at both precisions rather than one silently replacing the other."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - GIB UK's own published UK KM1 template, reproduced as
+# printed. Called BEFORE the first add_metric_sheet() so the sheet lands
+# immediately after Asset Quality and immediately before CET1 Capital.
+#
+# CURRENCY. Left in US$'000 exactly as GIB UK publishes it, even though every
+# other sheet in this workbook is converted to £m. That is KM1-004 rule (d):
+# a KM1 sheet stays in the currency the bank published it in, because this
+# sheet reproduces a disclosure rather than deriving a view. Do NOT run these
+# through stock()/flow() - the conversion helpers are for the metric sheets.
+#
+# WHICH EDITION EACH COLUMN COMES FROM. GIB UK adopted the template in its
+# FY2022 edition. Each edition prints TWO value columns, the reporting year
+# and one prior year, so:
+#   FY2024 <- FY2024 edition, "T - Current year" column (31-Dec-24)
+#   FY2023 <- FY2023 edition, "T - Current year" column (31-Dec-23)
+#   FY2022 <- FY2022 edition, "T - Current year" column (31-Dec-22)
+#   FY2021 <- FY2022 edition's PRIOR-YEAR column (31-Dec-21). FY2021 has no
+#             own-edition KM1 - see the row-set test in KM1_SOURCES.
+#   FY2020 <- blank. The FY2020 edition is a Basel II-era document that
+#             predates the template entirely.
+#   FY2025 <- blank. No FY2025 Pillar 3 has been published.
+#
+# ROW SET drifts between editions and this sheet shows the UNION in the
+# template's canonical order: rows 14a and 14b are printed ONLY by the FY2023
+# edition (which fills them for its own year alone), the FY2022 edition prints
+# them as empty cells, and the FY2024 edition omits both rows outright.
+#
+# ZERO GLYPHS. GIB UK uses NO dashes in this table - every unused cell is a
+# shaded EMPTY cell, confirmed by rendering the page and looking at it, not by
+# trusting the text layer. Those are left blank here. The single "0.00%" in the
+# FY2021 column of row 9 is a printed measured zero and is kept as a zero.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — US$'000", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2024": 435465, "FY2023": 411658, "FY2022": 368416, "FY2021": 371866}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2024": 435465, "FY2023": 411658, "FY2022": 368416, "FY2021": 371866}),
+    ("DATA", "3    Total capital",
+     {"FY2024": 435465, "FY2023": 411658, "FY2022": 368416, "FY2021": 371866}),
+    ("SECTION", "Risk-weighted exposure amounts — US$'000", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2024": 1963743, "FY2023": 1809984, "FY2022": 1557567, "FY2021": 1932234}),
+    ("SECTION", "Capital ratios  (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2024": "22.18%", "FY2023": "22.74%", "FY2022": "23.65%", "FY2021": "19.22%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2024": "22.18%", "FY2023": "22.74%", "FY2022": "23.65%", "FY2021": "19.22%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2024": "22.18%", "FY2023": "22.74%", "FY2022": "23.65%", "FY2021": "19.22%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted "
+                "exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2024": "4.05%", "FY2023": "5.21%", "FY2022": "5.21%", "FY2021": "7.13%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)", {}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)", {}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2024": "12.05%", "FY2023": "13.21%", "FY2022": "13.21%", "FY2021": "15.13%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the "
+             "level of a Member State (%)", {}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2024": "0.12%", "FY2023": "0.13%", "FY2022": "0.08%", "FY2021": "0.00%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2024": "2.62%", "FY2023": "2.63%", "FY2022": "2.58%", "FY2021": "2.50%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2024": "14.67%", "FY2023": "15.84%", "FY2022": "15.79%", "FY2021": "17.63%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2024": "10.13%", "FY2023": "9.53%", "FY2022": "10.44%", "FY2021": "4.09%"}),
+    ("SECTION", "Leverage ratio — US$'000 / %", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2024": 8682283, "FY2023": 7795728, "FY2022": 5136739, "FY2021": 5268295}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2024": "5.02%", "FY2023": "5.28%", "FY2022": "7.17%", "FY2021": "7.06%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central "
+             "banks (%)  [row printed only in the FY2023 edition]", {"FY2023": "5.28%"}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)  [row printed only in the "
+             "FY2023 edition]", {"FY2023": "1.92%"}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity Coverage Ratio — US$'000 / %", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2024": 8650825, "FY2023": 15980246, "FY2022": 9198733, "FY2021": 6737809}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2024": 3507666, "FY2023": 6524697, "FY2022": 3302507, "FY2021": 2006717}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2024": 486306, "FY2023": 944921, "FY2022": 705128, "FY2021": 603374}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2024": 3021360, "FY2023": 5579776, "FY2022": 2597379, "FY2021": 1403343}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2024": "286.32%", "FY2023": "286.40%", "FY2022": "354.15%", "FY2021": "480.13%"}),
+    ("SECTION", "Net Stable Funding Ratio — US$'000 / %", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2024": 5139351, "FY2023": 4607371, "FY2022": 4297495}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2024": 2225713, "FY2023": 1822687, "FY2022": 1031978}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2024": "230.91%", "FY2023": "252.78%", "FY2022": "416.49%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Gulf International Bank (UK) Limited's own \"Key metrics (UK KM1)\" template, US$'000 and "
+    "percentages exactly as printed, entity basis (GIB UK is a standalone non-consolidated reporting entity; "
+    "see the ENTITY NOTE on the other Pillar 3 sheets):\n"
+    f"FY2024: 2024 Pillar 3 disclosures, printed p.6, \"Key metrics (UK KM1)\", \"T - Current year\" column "
+    f"(31-Dec-24) - {P3_2024_URL}\n"
+    f"FY2023: 2023 Pillar 3 disclosures, printed p.6, same table, \"T - Current year\" column (31-Dec-23) - "
+    f"{P3_2023_URL}\n"
+    f"FY2022: 2022 Pillar 3 disclosures, printed p.6, same table, \"T - Current year\" column (31-Dec-22) - "
+    f"{P3_2022_URL}\n"
+    f"FY2021: the PRIOR-YEAR column (31-Dec-21) of that same FY2022 edition - see the edition note below - "
+    f"{P3_2022_URL}\n"
+    "\n"
+    "CURRENCY. This sheet is in US$'000, the currency GIB UK publishes the template in, while every other "
+    "sheet in this workbook is converted to £m at the Bank of England rates listed on those sheets. That is "
+    "deliberate: the KM1 sheet reproduces a published disclosure rather than deriving a view, so it is not "
+    "converted. Do not compare its amount rows against the £m sheets without converting first; the ratio rows "
+    "are currency-free and do compare directly.\n"
+    "\n"
+    "SOURCE DEFECT IN THE COLUMN HEADER, REPRODUCED NOT CORRECTED. Every edition heads its second value "
+    "column \"T-4 - Prior year\" while dating it one year before the reporting date (the FY2024 edition's "
+    "reads \"T-4 - Prior year / 31-Dec-23\"). T-4 would be 31-Dec-20. The DATE is right and the T-label is "
+    "wrong - the column is the immediately preceding year throughout, which is confirmed by the figures "
+    "themselves: the FY2024 edition's prior-year column reproduces the FY2023 edition's current-year column "
+    "exactly ($411,658k CET1, 1,809,984 RWEA, 22.74%). Columns here are assigned by the printed DATE, not by "
+    "the T-label.\n"
+    "\n"
+    "EDITION CHOICE, AND WHY FY2021 COMES FROM THE FY2022 EDITION. GIB UK adopted the template in its FY2022 "
+    "edition, so FY2024, FY2023 and FY2022 each come from the edition in which that year is the reporting "
+    "year. The FY2021 edition publishes NO KM1 - its contents page has no key-metrics entry, and a full-text "
+    "search of the recovered document returns zero hits on \"KM1\", \"key metric\" and \"UK KM\" while "
+    "returning 65 hits on \"capital\", 102 on \"ratio\", 19 on \"buffer\" and 15 on \"leverage\", so the zero "
+    "is a fact about the document and not a failure of the search. What that edition prints instead, under "
+    "the heading \"Key ratios / 1. Capital\", is a 13-row summary that FAILS THE TEMPLATE'S ROW-SET TEST: it "
+    "has no Total SREP own funds requirement, no overall capital requirement, no \"CET1 available after "
+    "meeting the total SREP\" row, and no template liquidity rows at all - its LCR and NSFR are disclosed in "
+    "a wholly different shape, as a separate quarterly table with Q1/Q2/Q3/Q4 columns rather than the "
+    "template's single average column. It also adds a row the template does not have (\"Pension add-on "
+    "44,500\", an amount printed inside a percentage section), and its leverage row is on the OTHER SIDE OF "
+    "THE 1 JANUARY 2022 BASIS BREAK - \"Total leverage exposure measure 10,573,209 / Leverage ratio 3.52%\", "
+    "which includes claims on central banks, against the template's excluding-central-bank-claims basis. That "
+    "is a different and shorter table, not an unnumbered template, so it is NOT reproduced here and its rows "
+    "are NOT mapped onto template row numbers. FY2021 is instead taken from the FY2022 edition's prior-year "
+    "column, which is the earliest place the year appears inside the template itself. The FY2021 edition's "
+    "own figures are not lost: they sit on their own labelled rows of the Leverage Ratio, LCR and NSFR "
+    "sheets, on their own bases, and are not reconciled to these.\n"
+    "\n"
+    "FY2020 IS BLANK, AND THAT IS A DATED FACT ABOUT THE TEMPLATE, NOT A SOURCING GAP. The FY2020 edition is "
+    "titled \"Basel II Pillar 3 Disclosures\" on its own cover and predates the UK KM1 template's "
+    "introduction, so no edition of any year prints a FY2020 KM1 column: the FY2022 edition, the earliest "
+    "that uses the template, reaches back only to 31-Dec-21. A full-text search of the recovered FY2020 "
+    "document returns zero hits on \"KM1\", \"key metric\" and \"key ratios\" against 94 hits on \"capital\", "
+    "80 on \"ratio\" and 20 on \"leverage\", so that zero is likewise a fact about the document. The image "
+    "trap was checked too rather than assumed away: the three embedded bitmaps in that edition were rendered "
+    "and LOOKED AT, and all three are diagrams - two governance org-charts on printed p.7 and the Bank's "
+    "functional organisation chart on p.10 - with no key-metrics table among them. Nothing has been "
+    "back-filled from the statutory accounts, which are a different basis.\n"
+    "\n"
+    "FY2025 IS BLANK. No FY2025 Pillar 3 has been published. Re-checked 16 September 2026 against the Bank's "
+    "OWN live document library (https://gibam.com/document-library), not against this script's citation list: "
+    "the page enumerates 27 PDFs, of which exactly one is a Pillar 3 document - the FY2024 edition. The page "
+    "is demonstrably current (it carries 2025-dated documents including a 31-Dec-2025 pension implementation "
+    "statement), so the absence is the Bank's and not our reach. Direct URL probes following this entity's "
+    "own naming convention (2025-GIBUK-Pillar-3-disclosures-Board-approved.pdf, "
+    "2025-GIBUK-Pillar-3-disclosures.pdf and 2025-GIBUK-Pillar-3_Final.pdf under the /production/documents/ "
+    "path the FY2024 and FY2023 editions live at) each return a hard HTTP 404 with an XML error body, not a "
+    "soft-404 HTML page. Checked, none newer.\n"
+    "\n"
+    "ROW SET, AND WHICH BLANKS MEAN WHAT. Rows UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a, 14c, 14d and 14e are "
+    "printed by GIB UK in every edition as EMPTY shaded cells - the Bank prints the row and leaves it "
+    "unfilled - and are shown blank here. Rows 14a and 14b are different: only the FY2023 edition prints "
+    "those two rows at all, filling them for its own reporting year only (5.28% and 1.92%); the FY2022 "
+    "edition prints both rows empty in both its columns, and the FY2024 edition OMITS the two rows entirely "
+    "from its table. Their blanks in the FY2024, FY2022 and FY2021 columns are therefore \"the Bank did not "
+    "print a value\", not \"a value was not found\". Rows 18-20 are blank in the FY2021 column because the "
+    "FY2022 edition leaves that whole NSFR block empty in its prior-year column. No row is blank here because "
+    "it could not be located.\n"
+    "\n"
+    "ZERO GLYPHS. GIB UK uses NO dash or em-dash anywhere in this table; every unused cell is a shaded empty "
+    "cell. This was confirmed by rendering the FY2024 page at 200 dpi and looking at it, because a dash and "
+    "an empty cell are indistinguishable in a text-layer dump and the difference is load-bearing (a dash "
+    "would still be a printed glyph). The one \"0.00%\" in row 9's FY2021 column is a printed measured zero "
+    "and is kept as a zero, not blanked.\n"
+    "\n"
+    "TEXT-NATIVE, NO IMAGE TRAP IN THE TEMPLATE EDITIONS. The FY2024, FY2023 and FY2022 tables all extract as "
+    "live text and were additionally verified against a 200 dpi render of the FY2024 page. The only embedded "
+    "bitmaps in the FY2024 edition's KM1 page region are the GIB wordmark.\n"
+    "\n"
+    + P3_CAPTURE_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Gulf International Bank (UK) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published UK key-metrics (KM1) template, reproduced in GIB UK's row order with "
+             "its own template row numbers, labels and printed precision. Amounts in US$'000 AS PUBLISHED - "
+             "this sheet is deliberately NOT converted to sterling, unlike every other sheet in this "
+             "workbook. Entity basis. FY2025 and FY2020 are blank because no edition publishes a KM1 for "
+             "those years; FY2021 comes from the FY2022 edition because the FY2021 edition prints a shorter "
+             "bespoke table that is not the template.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=409,
+)
+
 metric("CET1 Capital", "£m (conv. from USD)",
        [
            ("Common Equity Tier 1 (CET1) capital", stock(CAPITAL_USD)),
@@ -1151,7 +1364,7 @@ bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), source_height=4
                              "Consequently, the Bank does not need to hold any MREL compliant instruments in "
                              "addition to those needed to satisfy its CRD V requirement' - i.e. MREL is fully "
                              "satisfied by ordinary capital, with no incremental MREL-specific ratio or "
-                             "instrument stock to disclose."})
+                             "instrument stock to disclose.\nTHE PARENT-DISCLOSURE ROUTE WAS CONSIDERED AND DOES NOT APPLY HERE (checked 2026-09-16). A subsidiary's figures are often published only in its PARENT's Pillar 3, as columns of a shared table or in an appendix, so that is the first place to look before writing any non-disclosure. It does not rescue this row, for a reason that is about the obligation rather than about the documents: GIB (UK)'s OWN Pillar 3 states affirmatively that its MREL requirement EQUALS its CRD V Pillar 1 + Pillar 2A requirement and that it need hold no MREL-compliant instruments beyond those, so there is no separate MREL ratio in existence for any document to carry. This is affirmative evidence from the entity itself, not an absence inferred from a failed search. Note also that the parent is Gulf International Bank B.S.C. (Bahrain), a non-UK entity outside the Bank of England's MREL regime, and that under this project's entity-scope rule no parent-, KSA- or Abu Dhabi-branch figure may be substituted here in any case. FETCH STATUS, RECORDED HONESTLY: on 2026-09-16 www.gib.com returned HTTP 403 to every path tried INCLUDING the site root, so the parent's site was BLOCKED to us on that date. That is a fact about our reach and NOT evidence about what the parent publishes - and it supersedes this script's earlier note that gib.com is reachable. Nothing on this sheet rests on that blocked fetch."})
 
 # ---------------------------------------------------------------
 # Overview sheet

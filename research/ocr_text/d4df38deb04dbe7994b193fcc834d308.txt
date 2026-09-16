@@ -1,0 +1,1336 @@
+~Oxbury/
+
+Oxbury Bank Plc
+
+(Formerly Oxbury FS Plc)
+
+~ Annual Report 2019
+
+Year ended 31st December 201 9
+
+Registrat ion number: 11383418
+
+Contents
+
+Corporate Information
+Strategic Report
+
+Directors’ Report
+
+Directors’ Responsibilities 10
+Independent Auditor's Report to the Members of Oxbury FS Plc 11
+2019 Financial Statements 14
+Statement of Profit or Loss and Other Comprehensive Income 15
+Statement of Financial Position 16
+Statement of Cash Flows 17
+Statement of changes in equity 18
+Notes forming part of the financial statements 19
+
+Oxbury FS Plc; Reg No. 11383418 2
+Corporate Information
+
+Company Directors
+James C D Farrar
+Nicholas R Evans
+K Mark Aitchison
+Timothy Fitzpatrick
+David A Hutchinson
+Robert Huw Morgan
+~ Simon Featherstone (appointed 9 July 2019)
+John Brian Wells (resigned 14 February 2019)
+Richard L Banks (resigned 14 February 2019)
+
+Company Secretary
+
+David Hanson
+
+Registered Office
+The Steam Mill
+Steam Mill Street
+Chester
+
+CH3 5AN
+
+Auditors
+
+BDO
+
+55 Baker Street
+London
+
+W1U 7EU
+
+Oxbury FS Plc; Reg No. 11383418 3
+Strategic Report
+
+The Directors present their strategic report for Oxbury FS Plc (Oxbury) for the year ended 31*
+December 2019.
+
+Principal activities and review of the year
+
+Oxbury is a new specialist bank focused on Agriculture. We will provide farmers with the specialist
+lending they need to run their farms through Oxbury Farm Credit and term lending whilst also
+providing savings accounts to individuals, farmers and businesses that want to support British farmers
+and the rural community.
+
+Oxbury will be The Agricultural Bank.
+
+The business will serve the customers through a cloud-based technological solution, eliminating those
+issues which can be caused by legacy-based systems. At this point, the business has not commenced
+lending or deposit raising activity. .
+
+Through 2019, Oxbury continued to develop the company with the aim of establishing an authorised
+credit institution in the UK. The banking application was submitted in February 2019, with the
+company subsequently being authorised by the UK Regulators in January 2020 as a Bank, Oxbury then
+entered the mobilisation phase of its build on route to go-live.
+
+in the year, the company increased the annual loss to £2.3m (2018: £0.7m), representing both the
+increased cost base and the full year impact of continued expenditure in support of the companies
+aims. In support of the business plan, the carrying value of the development of the technological
+solution, the intangible asset, increased to £1.3m (2018: £0.2m). At the end of the period, the business
+had total cash assets of £0.8m, subsequently completing a capital raise in January 2020 to support
+both the company’s authorisation and the continued development of the business.
+
+Board, Executive and Company Values
+
+Oxbury has established a Board of Directors which is highly experienced in both the financial services
+industry, in which Oxbury operates, and the agricultural sector which will be the focus of the lending
+products. The structure of the Board and the supporting Executives provides Oxbury with a strong
+governance structure and an in-depth understanding of the markets it will serve.
+
+The key values on which the business operates are:
+
+e Integrity - We aim to be transparent in everything we do and have open, honest and respectful
+engagement with all our stakeholders.
+
+e Customer Focused — We will design products and services that are focused on meeting customer
+needs.
+
+e Risk — We will continue to create a culture where everyone in the business takes personal
+responsibility for managing risk.
+
+e Competitive ~ we aim to be competitive in the markets in which we will operate providing
+genuine choice for customers.
+
+Oxbury FS Plc; Reg No. 11383418 . 4
+Management of Risk
+
+Oxbury manages the risk which the business faces through the identification of those which have the
+potential to impact and then addresses those concerns to mitigate. These risks are managed through
+the governance structure, with relevant committees, procedures and control processes. The risk
+appetite of the business is agreed by the Board on a regular basis to maintain relevance and informs
+the company in relation to risk management in Oxbury.
+
+Oxbury uses the three lines of defence model to manage the key risks, ensuring the governance
+structure supports the business requirement, provides oversight as appropriate and that individuals
+have specific responsibilities in the management of those risks.
+
+Oxbury categorise the risks that the business can potentially face into categories, which are
+summarised in the table below:
+
+Risk Definition
+Category
+
+The risk of loss caused by human error, ineffective or inadequately designed internal processes,
+system failure, improper conduct, fraud and external events. The risk of system failure during day-
+to-day operations or at a time of system development leading to an inability to continue the day to
+day operations of the Bank to a satisfactory standard.
+
+Operational
+
+Credit | The risk of a reduction in earnings and/or value as a result of the failure of the party with whom the
+Bank have contracted to meet obligations (both on and off-balance sheet), as they fall due taking
+into account the sector and geography.
+
+Conduct, Conduct Risk is defined as the risk of customer detriment or harm due to inappropriate culture,
+
+L 1& improper business conduct and/or poor customer treatment. Legal and Compliance Risk is the risk
+
+ega to the financial and reputation soundness of the Bank arising from non-compliance with any
+Compliance legislation or regulation or regulatory expectation.
+
+The risk that the Bank does not have sufficient financial resources to meet its commitments when
+- they fall due, or can secure them only at excessive cost, or that the Bank does not have sufficiently
+Financial | stable and diverse sources of funding, or that the funding structure is insufficient caused by the
+adverse movements in external markets and or ineffective internal controls. The risk to the Bank's
+revenue as set within the budget and the medium-term plan arising through sub-optimal
+implementation of the strategy as approved by the Board. In assessing strategy risk, consideration is
+given to both internal and external factors.
+
+Oxbury FS Plc; Reg No. 11383418 . 5
+The principal risks and uncertainties faced by Oxbury are as follows:
+
+a ces Risk
+Description Mitigation
+P g Category
+Operational Build — There is a risk that the Robust project management processes including Operational
+bank is not detivered and / or is not significant technical and business testing to ensure cinareial
+functionally fit for purpose or sufficiently the business will be ready to serve customers in Conduct
+stable. line with the bank’s plans. ondu
+Capital — There is a risk that Oxbury is unable Delivery of an operating infrastructure which
+; eae . : .. | Clearly meets market demand, an experienced . .
+to raise the additional capital required to,exit : Financial
+we gs management team, and a growing market
+mobilisation
+engagement.
+The products being designed will meet customer
+Brexit — the risk that the United Kingdom’s requirements into the future and the assessment
+future relationship with the EU results in of risk takes into account future scenarios Credit
+negative outcomes for Oxbury’s target impacting affordability. Oxbury continues to Financial
+customer base. monitor the situation to understand the detailed
+impacts on the business model.
+Oxbury has successfully implemented its business
+continuity plan to continue its operations through
+. t kdown, Our pr i nd ri .
+COVID-19 ~ the risk that the pandemic he lockdown. Our product design and risk Credit
+ar assessment processes enable our ability to .
+creates uncertainty in our chosen market, : . Operational
+; : ; continue to support customers in our planned ‘ .
+supplier chain and staff. : : Financial
+markets. Oxbury continues to monitor the
+situation to understand the detailed impacts on
+the business model.
+
+Economic Outlook
+
+The UK exited the EU at the end of January 2020, with continuation of current terms retained through
+to the end of 2020. The eventual structure of any subsequent agreement will impact the terms of the
+relationship with both EU and non-EU countries. The resultant specific terms are unknown at this
+time and therefore Oxbury will continue to monitor to review for the potential impact on the business
+model.
+
+During the first quarter of 2020 a pandemic outbreak of coronavirus, referred to as Covid-19, created
+a continuing global health issue with impacts on economies including the UK including the introduction
+of social distancing restrictions. Oxbury continues to monitor and assess the impact of the restrictions
+on current and future plans for the business.
+
+Section 172 Statement
+
+The Directors of Oxbury are mindful of their responsibilities under section 172 of the Companies Act
+2006, to act in good faith to promote the success of the business for all stakeholders, with reference
+to the delivery of the strategy of the company.
+
+Within this assessment, the Board recognises that there are a range of stakeholders, including
+investors, employees, suppliers, customers, Regulators, the environment, and the need to act fairly
+across all members.
+
+Oxbury FS Plc; Reg No. 11383418 6
+The Board addressed these responsibilities throughout the year as follows:
+
+Investors
+
+The Board approves the business plan each year, together with any significant changes to that plan,
+
+with reference to the longer-term strategy of the company to provide a return to shareholders. The
+
+Board reviews updates on business performance with reference to variations to the business plan, to
+_ assess the development of the business, and its alignment with expectations.
+
+Specific consideration was taken of the capital and liquidity positions of the business in support of the
+authorisation event at the end of January 2020. The Board and its committees review the policies and
+procedures against which it will operate when trading, together with the businesses risk appetite.
+
+Employees
+
+Employees perform a key role in the development of the company. The Board reviewed the structure,
+composition and recruitment of employees during the year. In line with the company’s values, the
+business encourages a diverse workforce, and fosters an open environment to ensure that a range of
+views are taken into consideration.
+
+Suppliers
+
+In terms of the development of the company, the Board recognises that suppliers are intrinsic to that
+aim. The selection, performance and remuneration of key suppliers in relation to the overall banking
+solution have been reviewed by the Board. The company also reviews key suppliers against
+requirements relating to business continuity and delivery, including the extent to which their solutions
+align to the strategy of Oxbury.
+
+Customers
+
+The provision of lending facilities to the customer, supported by a deposit proposition, is fundamental
+to the future success of the business. The Board continued to review the development of the
+proposition, together with the outcome of potential customer engagement and the plans of the
+business, for continued customer feedback. The engagement with potential customers is balanced
+by ensuring that company policies relating to suitability are adhered to, for example specifically with
+reference to money laundering and financial crime.
+
+Regulators
+
+The Board have ensured that there is a transparent and effective relationship with the Regulator
+throughout, implemented through the Executive team, with direct contact as required.
+
+Environment
+
+The Directors are aware of the impact that the business has on the general environment for the long-
+term sustainable development of an effective business model. In this regard, the business has offset
+the calculated carbon impact of the business and its employees since its incorporation. Oxbury is a
+fully carbon offset Bank.
+
+Oxbury FS Plc; Reg No. 11383418 7
+Directors’ Report
+
+The Directors present their annual report on the affairs of the company, together with the financial
+statements and auditor’s report, for the year ended 31 December 2019.
+
+The principal activities of the business are to develop an authorised credit institution with a focus on
+the provision of a technology led solution to the agricultural community and savers across the UK. The
+developments to date are in line with expectations and the financial results and position of the
+business as disclosed in these financial statements are considered satisfactory.
+
+The Directors confirm that they are satisfied that Oxbury has adequate resources to continue trading
+for the foreseeable future, without a requirement to liquidate or cease trading and there is no material
+uncertainty over going concern and have therefore adopted the going concern basis for accounting.
+in reaching this assessment, consideration has been taken of the quantum of available resources, and
+the impact of the scenarios which would impact the business operations.
+
+The scenario of a go-live for trading as per the business plan was considered, with appreciation of
+sensitivities to movements within the timeframe and variability on the forecast of performance. The
+business also considered a scenario where it does not commence trading as per the business plan and
+continues to develop to that achievement based on a similar cost base, and sensitivity to that cost
+base. This second scenario includes no additional raising of capital, required as part of the trading go-
+live of the business.
+
+Given the ongoing Covid-19 pandemic, the potential impact to the business of the environment was
+also considered within the Going Concern assessment. The major impact assessed was a delay in
+commencement of lending activity, and therefore aligned to the second scenario considered as part
+of the gong concern assessment.
+
+The Directors do not recommend a dividend.
+No political contributions were made during the year.
+
+The primary financial risk assessed by the business is in relation to the cash holdings with credit
+institutions, which is mitigated through engagement with firms with sufficient credit ratings to
+mitigate this risk.
+
+Oxbury does not operate to a specific code or standard in relation to the payment of its creditors. The
+company agrees payment terms on commencement of an engagement, ensuring that those suppliers
+are aware of the agreed terms, and subsequently abides to those terms. The value of outstanding
+creditors at the end of the period represent 8 days of the total expenditure for the duration of the
+period.
+
+Significant post balance sheet events are disclosed in note 23 of the notes to the financial statements.
+Each of the persons who are named as Directors when this report is approved has confirmed that:
+
+e As far as the Director is aware, there is no relevant audit information of which the company’s
+auditor is unaware.
+
+e The Director has taken all the steps that ought to have been taken as a Director in order to be
+aware of any information needed by the company’s auditor in connection with preparing its report
+and to establish that the company’s auditor is aware of that information.
+
+Approval to reappoint BDO will be proposed at the next Board meeting.
+
+Oxbury FS Plc; Reg No. 11383418 8
+This rep pproved by the Board and signed on its behalf:
+
+Chief Executive Officer and Company Director
+
+22 May 2020
+
+Oxbury FS Pic; Reg No. 11383418 9
+Directors' Responsibilities
+
+The Directors are responsible for preparing the Annual Report and the financial statements in
+accordance with applicable laws and regulations. Company Jaw requires the Directors to prepare
+financial statements for each financial year, in accordance with International Financial Reporting
+Standards (IFRSs as adopted by the EU) and applicable laws.
+
+Under company law, the Directors must not approve the financial statements unless they are satisfied
+that they give a true and fair view of the state of the affairs of the Company and of their profit or loss
+for the period referenced. In preparing the financial statements the Directors are required to:
+
+Select suitable accounting policies and then apply them consistently;
+
+Make judgements and estimates that are reasonable, relevant and reliable;
+
+State whether they have been prepared in accordance with IFRSs as adopted by the EU;
+Assess the Company’s ability to continue as a going concern, with disclosure of matters related
+to going concern; and ;
+e Use the going concern basis of accounting unless they either intend to liquidate the Company
+or to cease operations or have no realistic alternative but to do so.
+
+It is the responsibility of the Directors to keep adequate accounting records that are sufficient to show
+and provide explanation of the Company’s transactions and disclose with reasonable accuracy at any
+time the financial position of the Company, enabling them to ensure that the financial statements
+comply with the Companies Act 2006. They are also responsible for such internal control as they
+determine necessary to enable the preparation of financial statements that are free from material
+misstatements, whether due to fraud or error, and have a general responsibility for taking such steps
+as are reasonably available to safeguard the assets of the Group and to prevent and detect fraud and
+other irregularities.
+
+Signed on behalf of the Board by:
+
+James Farrar, Chief Executive Officer & Company Director
+
+22 May 2020
+
+Oxbury FS Pic; Reg No. 11383418 10
+Independent Auditor's Report to the Members of Oxbury FS Plc
+
+Opinion
+
+We have audited the financial statements of Oxbury Bank Plc (“the Company”) for the year ended 31
+December 2019 which comprise the Statement of Profit or Loss and Other Comprehensive Income,
+the Statement of Financial Position, the Statement of Cash Flows, the Statement of Changes in Equity
+and the notes to the financial statements including a summary of significant accounting policies. The
+financial reporting framework that has been applied in their preparation is applicable law and
+International Financial Reporting Standards (IFRSs) as adopted by the European Union.
+
+In our opinion the financial statements:
+
+e give a true and fair view of the state of the Company's affairs as at 31 December 2019 and of
+its loss for the year then ended;
+
+e have been properly prepared in accordance with IFRSs as adopted by the European Union;
+and
+
+* have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and
+applicable law. Our responsibilities under those standards are further described in the Auditor's
+responsibilities for the audit of the financial statements section of our report. We are independent of
+the Company in accordance with the ethical requirements that are relevant to our audit of the
+financial statements in the UK, including the FRC’s Ethical Standard, and we have fulfilled our other
+ethical responsibilities in accordance with these requirements. We believe that the audit evidence we
+have obtained is sufficient and appropriate to provide a basis for our opinion.
+
+Conclusions relating to going concern
+
+We have nothing to report in respect of the following matters in relation to which the ISAs (UK) require
+us to report to you where:
+
+« The Directors’ use of the going concern basis of accounting in the preparation of the financial
+statements is not appropriate; or
+
+¢ The Directors have not disclosed in the financial statements any identified material
+uncertainties that may cast significant doubt about the Company’s ability to continue to adopt
+the going concern basis of accounting for a period of at least twelve months from the date
+when the financial statements are authorised for issue.
+
+Other information
+
+The Directors are responsible for the other information. The other information comprises the
+information included in the Directors report and financial statements, other than the financial
+statements and our auditor's report thereon. Our opinion on the financial statements does not cover
+the other information and, except to the extent otherwise explicitly stated in our report, we do not
+express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our responsibility is to read the other
+information and, in doing so, consider whether the other information is materially inconsistent with
+the financial statements or our knowledge obtained in the audit or otherwise appears to be materially
+
+Oxbury FS Plc; Reg No. 11383418 11
+misstated. If we identify such material inconsistencies or apparent material misstatements, we are
+required to determine whether there is a material misstatement in the financial statements or a
+material misstatement of the other information. If, based on the work we have performed, we
+conclude that there is a material misstatement of this other information, we are required to report
+that fact.
+
+We have nothing to report in this regard.
+Opinions on other matters prescribed by the Companies Act 2006
+in our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the Strategic report and Directors’ report for the financial year for which
+the financial statements are prepared is consistent with the financial statements; and
+
+* the Strategic report and Directors’ report have been prepared in accordance with applicable legal
+requirements.
+
+Matters on which we are required to report by exception
+
+in the light of the knowledge and understanding of the Company and its environment obtained in the
+course of the audit, we have not identified material misstatements in the Strategic report and
+Directors’ report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act
+2006 requires us to report to you if, in our opinion;
+
+* Adequate accounting records have not been kept, or returns adequate for our audit have not been
+received from branches not visited by us; or
+
+«the financial statements are not in agreement with the accounting records and returns; or
+
+* certain disclosures of Directors’ remuneration specified by law are not made; or
+
+* we have not received all the information and explanations we require for our audit.
+
+Oxbury FS Pic; Reg No. 11383418 12
+Responsibilities of Directors
+
+As explained more fully in the Statement of Directors Responsibilities, the Directors are responsible
+for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such internal control as the Directors determine is necessary to enable the preparation
+of financial statements that are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the Directors are responsible for assessing the Company's ability
+to continue as a going concern, disclosing, as applicable, matters related to going concern and using
+the going concern basis of accounting unless the Directors either intend to liquidate the Company or
+to cease operations, or have no realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole
+are free from material misstatement, whether due to fraud or error, and to issue an auditor’s report
+that includes our opinion. Reasonable assurance is a high level of assurance, but is not a guarantee
+that an audit conducted in accordance with ISAs (UK} will always detect a material misstatement when
+it exists. Misstatements can arise from fraud or error and are considered material if, individually or in
+the aggregate, they could reasonably be expected to influence the economic decisions of users taken
+on the basis of these financial statements.
+
+A further description of our responsibilities for the audit of the financial statements is located on the
+Financial Reporting Council’s website at:
+
+https://www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor's report.
+Use of our report
+
+This report is made solely to the Company’s members, as.a body, in accordance with Chapter 3 of Part
+16 of the Companies Act 2006. Our audit work has been undertaken so that we might state to the
+Company’s members those matters we are required to state to them in an auditor's report and for no
+other purpose. To the fullest extent permitted by law, we do not accept or assume responsibility to
+anyone other than the Company and the Company’s members as a body, for our audit work, for this
+report, or for the opinions we have formed.
+
+goo Ler
+
+Ariel Grosberg (Senior Statutory Auditor)
+For and on behalf of BDO LLP, Statutory Auditor
+London, UK
+
+Date 22 May 2020
+
+BDO LLP is a limited liability partnership registered in England and Wales (with registered number 0C305127).
+
+Oxbury FS Plc; Reg No. 11383418 13
+2019 Financial
+Statements
+
+Statement of Profit or Loss and Other Comprehensive Income
+For the 12-month period to 31 December 2019
+
+12-month period to 25" May to
+
+GBP (000s) Note 31* Dec 2019 31* Dec 2018
+Interest receivable and similar income - -
+Interest expense and similar expenditure - -
+Net interest and similar income - -
+Staff costs 6 (1,317) (500)
+Other operating expense 9 (935) (241)
+Depreciation & Amortisation 14,15 (44) © (1)
+Loss from operations (2,296) (742)
+Finance expense 10 , (2) -
+Finance income 10 1 1
+Loss before taxation (2,297) (741)
+Taxation 11 - -
+Loss after taxation (2,297) (741)
+Total comprehensive (loss)
+
+attributable to the equity (2,297) (741)
+
+shareholders
+
+The total comprehensive income of the Company does not differ from the loss after taxation as presented.
+
+The notes which form part of these financial statements can be located from page 19 onwards.
+
+Oxbury FS Plc; Reg No. 11383418 15
+Statement of Financial Position
+As at 31 December 2019
+
+GBP (000s)
+
+Cash and cash equivalents
+Accrued income and prepayments
+Property, plant and equipment
+Intangible assets
+
+Total Assets
+
+Other liabilities
+
+Total Liabilities
+
+Share capital
+
+Share premium
+Share-based payments
+Retained earnings
+
+Total Equity
+
+Total Liabilities & Equity
+
+Note
+
+12
+17
+14
+
+15
+
+18
+
+19
+20
+22
+21
+
+31% Dec 2019 31% Dec 2018
+796 3,804
+27 23
+45 13
+1,277 197
+2,145 4,037
+677 285
+677 285
+274 264
+4,229 4,229
+3 ~
+(3,038) (741)
+1,468 3,752
+2,145 4,037
+
+The notes which form part of these financial statements can be located from page 19 onwards.
+
+The financial statements have been approved and authorised for issue by the Board and are signed on its
+
+behalf by;
+
+James Farrgr, Chief Executive Officer & Company Director
+
+22 May 2020
+
+Oxbury FS Plc; Reg No. 11383418
+
+16
+Statement of Cash Flows
+For the year ended 31 December 2019
+
+12-month period to 25% May to
+
+GBP (000s)
+
+Cash flows from operating activities
+
+31* Dec 2019
+
+31% Dec 2018
+
+Loss for the period after taxation (2,297) (741)
+Adjustments:
+
+Depreciation & Amortisation 44 1
+Net changes in operating assets and liabilities
+
+Net (increase) in other assets (138) ‘ (23)
+Net increase in other liabilities 487 285
+Net cash flows used in operating activities (1,904) (478)
+Investing activities
+
+Purchase of tangible assets (37) (14)
+Capitalisation of intangible asset (1,080) (197)
+Net cash flows used in investing activities (1,117) (211)
+Financing activities
+
+Issue of share capital 13 4,493
+Net cash flows from financing activities 13 4,493
+Net cash flow for the period (3,008) 3,804
+Cash and cash equivalents at start of the period 3,804 -
+Cash and cash equivalents at end of the 196 - 3,804
+
+period
+
+As at 31% December 2019 (and 31 December 2018) the cash and cash equivalents balance comprise bank
+
+balances only.
+
+Oxbury FS Plc; Reg No. 11383418
+
+17
+Statement of changes in equity
+For the year ended 31 December 2019
+
+Share~-
+
+Share Share Retained Total
+GBP (000s) Note . , based . .
+Capital Premium payment Earnings Equity
+
+Share Capital Issuance May 2018 19, 20 100 - - - 100
+Share Issuance through 2018 19, 20 164 4,229 - - 4,393
+Loss for the period 21 - - - (741) (741)
+Balance at 31** December 2018 264 4,229 - (741) 3,752
+Share Issuance through 2019 19, 20 10 - - 10
+Share-based payments 22 - - 3 - 3
+Loss for the period 21 - - - (2,297) (2,297)
+Balance at 31* December 2019 274 4,229 3 (3,038) 1,468
+
+Oxbury FS Pic; Reg No. 11383418 18
+Notes forming part of the financial statements
+For the year ended 31%t December 2019
+
+1. Corporate Information
+
+Oxbury FS Pic is a company incorporated as a public limited company in England (registered company
+
+number 11383418) under The Companies Act 2006 and domiciled in the United Kingdom. The
+
+registered office address is located at The Steam Mill, Steam Mill Street, Chester, CH3 SAN. The nature
+- of the company’s operations and its principal activities are set out in the Directors’ Report.
+
+2. Accounting Policies and basis of preparation
+
+The principal accounting policies are summarised below. They have all been applied consistently
+throughout the year and to the preceding reporting period.
+
+The financial statements have been prepared in accordance with International Financial Reporting
+Standards (IFRS), as adopted by the European Union (EU), interpretations issued by the International
+Accounting Standards Board (IASB) and the Companies Act 2006.
+
+The financial statements have been prepared based on a historical cost basis, and are presented in
+Pounds Sterling (£), with values rounded to the nearest thousand, unless otherwise indicated.
+
+New standards which are effective during the period of the financial statements have been adopted,
+with no material impact on the results in the year, and no change in the accounting policies.
+
+There are several standards, amendments and interpretations which have been issued and are effective
+for the subsequent accounting period. The most significant are:
+
+* 1AS 1~ Presentation of Financial Standards — amendment to definition of materiality.
+IAS 8 ~ Accounting Policies, Changes in Accounting Estimates and Errors - amendment to definition
+of materiality.
+
+No material impact is expected to Oxbury subject to the adoption of these standards.
+
+3. Critical accounting estimates and judgements
+
+The preparation of financial statements in compliance with IFRSs requires the company to use certain
+estimates and assumptions, which are consistently reviewed for appropriateness based on historical
+experience and forecast expectations. As a result, future experience may differ from the estimates and
+assumptions used.
+
+It also requires the company’s management to exercise judgement in applying accounting policies.
+Management regard the following as being the items which have the largest material impact on the
+financial statements as presented:
+
+e Going Concern (note 4.1)
+e Share Based Payments (notes 4.8 and 22)
+e Tax (note 11}
+
+Oxbury FS Plc; Reg No. 11383418 19
+4. Summary of significant accounting policies
+
+4.1 Going Concern
+
+The financial statements presented are based on a going concern basis as the Directors are satisfied that
+there are adequate resources to continue operating for the foreseeable future and there is no material
+uncertainty over going concern. In making this assessment, consideration was taken of the current and
+required level of resources in various scenarios which could impact the business.
+
+The scenario of a go-live for trading as per the business plan was considered, with appreciation of
+sensitivities to movements within the timeframe and variability on the forecast of performance. The
+business also considered a scenario where it does not commence trading as per the business plan and
+continues to develop to that achievement based on a similar cost base, and sensitivity to that cost base.
+This second scenario includes no additional raising of capital, required as part of the trading go-live of
+the business.
+
+Taking into consideration the ongoing Covid-19 pandemic, the potential impact to the business of the
+environment was also considered within the Going Concern assessment. The major impact assessed was
+a delay in commencement of lending activity, and therefore aligned to the second scenario considered
+as part of the gong concern assessment.
+
+4.2 Intangible Assets
+
+The company is in the process of building a cloud based technological system for the management of
+future activities as the business matures through the defined steps in its business plan. This will become
+the business’ core banking platform. It is a key element to the successful achievement of the business
+plan, generating a profitable revenue base. Consultancy, salaries and other costs incurred in acquiring
+and developing this software are capitalised.
+
+Intangible assets are stated at cost less depreciation and impairment losses. No depreciation or
+amortisation has been recognised at the date of these financial statements as the software is still under
+development. Amortisation will only commence when the system is deemed to be complete and
+available for operational usage. The useful life of the asset will be evaluated at that point based on its
+constituents and the future expectations of the business.
+
+4.3 Tangible Assets
+4.3.1 Property, plant and equipment
+
+Fixtures, Fittings and Office Equipment and Computer and IT Equipment are stated at cost less
+accumulated depreciation and any recognised impairment loss. The cost is based on evidenced cost of
+purchasing the asset. Depreciation is recognised to write off the cost or valuation of assets less their
+residual values over their expected useful lives, using the straight-line method, on the following bases:
+
+Fixtures, Fittings and Office Equipment 2 years
+Computer and IT Equipment 2 years
+4.3.2 Right of use assets
+
+The discounted value of the minimum level of future payments under lease agreements is recognised
+at commencement as a Right of Use asset on the balance sheet, and subsequently amortised based on
+the period of those payments.
+
+4.4 Foreign currency translation
+Functional and presentation currency.
+
+The financial statements are presented in Pounds Sterling (£}. Transactions in foreign currencies are
+initially recorded in the functional currency at the spot rate of exchange at the date of the transaction.
+Non-monetary items that are measured at historical cost in a foreign currency are translated using the
+spot exchange rates as at the date of recognition.
+
+Oxbury FS Plc; Reg No. 11383418 20
+4.5 Pensions
+
+The company offers a defined contribution pension scheme for its employees. Any contributions made
+by the company are charged to operating expenses as incurred.
+
+4.6 Charitable Donations
+
+Charitable donations are accounted for as an expense when paid and included as part of the operating
+expenses in the Statement of Profit or Loss. In 2019 there was no donations to charity (2018: £0).
+
+4.7 Share Capital
+
+Shares are classified as equity when there is no contractual obligation to transfer cash or other financial
+assets. Incremental costs, if any, directly attributable to the issue of equity instruments are shown in
+equity as a deduction from proceeds, net of tax.
+
+4.8 Share-Based Awards
+
+The company operates an equity-settled share remuneration plan for certain employees, of which none
+are cash settled, and also grants share-based payments for services and goods received from suppliers.
+The company accounts for these schemes based on the requirements of IFRS2.
+
+4.9 Segmental Reporting
+
+All of the company’s operations are within the United Kingdom, and as such, no geographical analysis is
+presented.
+
+4.10 Taxation
+
+Income tax is based on the taxable profits of Oxbury, including reliefs which are available. Taxable profits
+differ from the financial statements due to items which are excluded for tax purposes or because of the
+deductibility occurring in differing periods. Where applicable, the company’s liability to tax takes into
+consideration the tax rates enacted or substantively enacted for the period.
+
+. A deferred tax asset has not been recognised for the current financial year as the recoverability is
+dependent on future taxable profits to offset against. The likelihood of those future taxable profits is
+not considered to be sufficiently certain to recognise the asset.
+
+4.11 Financial Institution - Risk Management
+
+The only financial risk which the Directors believe the company is exposed to at the reporting date is
+credit risk of the cash held at banks, and the counterparty failing to meet its obligations. Oxbury
+mitigates this risk through the use of a banking supplier with sufficient credit rating to give comfort that
+the cash deposited is not at risk.
+
+As at the reporting date, Oxbury’s financial liabilities do not extend in excess of one year.
+
+Oxbury manages capital to maintain an appropriate capital structure for its operations, taking into
+consideration both cost and availability. In the period the management of capital included the total share
+capital of the company and cash resources. During 2019, the financial objectives were unchanged from
+2018, supporting the development of the long-term strategy of the company.
+
+The management of capital is through the review of the financial performance to expectations and cash
+resources held by the business.
+
+4.12 Financial Instruments - Measurement
+
+Based on the nature of the stock of financial assets at the reporting date, Oxbury initially recognises its
+financial assets at fair value less, if applicable, transaction costs. Subsequent measurement is based on
+amortised cost, as dictated by the business model test of holding assets to maturity.
+
+Oxbury FS Plc; Reg No. 11383418 ; 21
+5. Revenue
+
+Oxbury did not generate any trading revenue in the accounting period covered by these financial
+statements.
+
+6. Staff Costs
+The average number of employees (including executive and non-executive directors) was 20 (2018: 5),
+
+all being employed in management, operational or administrative roles. The total number of employees
+at December 2019 was 30. (2018: 8)
+
+Total as Total as at
+
+Management 9 9 5 4
+Operational | 4 1 0 0
+Administrative 17 10 3 1
+Total 30 20 8 5
+
+Their aggregate remuneration comprised (including directors):
+
+1 2-month th
+GBP (000s) periodto sa pe hcg
+31* Dec 2019
+Salaries, wages and bonuses 1,111 421
+Sacial security contributions 112 53
+Pension contributions 94 26
+Total Remuneration . 1,317 500
+
+The values include the impact of capitalising expenditures directly related to the development of the
+intangible asset.
+
+Oxbury FS Plc; Reg No. 11383418 22
+7. Key Management Remuneration
+
+GBP (000s)
+
+Fees, wages and bonuses
+Social security contributions
+Pension contributions
+
+Total Remuneration
+
+12-month th
+periodto 34 bec 2018
+31* Dec 2019
+1,173 484
+114 55
+71 26
+1,358 565
+
+Key management personnel have been defined as those individuals who are included in the definition
+of the Executive Committee including Company directors. The value reported do not take into
+consideration any capitalisation directly related to system development.
+
+8. Total Directors Remuneration
+
+GBP (000s)
+
+Fees, wages and bonuses
+Social security contributions
+Pension contributions
+
+Total Remuneration
+
+12-month
+period to
+
+31* Dec 2019
+
+25" May to
+31% Dec 2018
+
+551 276
+62 34
+36 21
+
+649 331
+
+There were no loans outstanding to the directors in the year to 31 December 2019 (2018: zero) and no
+loans were made to directors in either period. No payments for loss of office were made to Directors
+
+who retired during the period.
+
+Highest Paid Director Remuneration
+
+GBP (000s)
+
+Fees, wages and bonuses
+Social security contributions
+Pension contributions
+
+Total Remuneration
+
+Oxbury FS Plc; Reg No. 11383418
+
+12-month —
+
+period to
+
+315 Dec 2019
+
+25% May to
+31* Dec 2018
+
+212 105
+28 13
+18 11
+
+258 129
+
+23
+9. Other Operating expense
+
+Loss on ordinary activities before tax is stated after charging:
+
+GBP (000s) 2019 2018
+
+Other operating costs 664 80
+Foreign exchange loss/protit 0 -
+Legal and Professional fees 234 134
+External audit fees 37 27
+Total 935 241
+
+10. Finance expense and income
+
+GBP (000s) 2019 “ 2018
+
+Finance Expense:
+
+Finance element of lease agreements (2) -
+
+Finance Income:
+
+Interest received on bank deposits 1 1
+
+Oxbury FS Plc; Reg No. 11383418 24
+11. Taxation
+
+We have not recognised a deferred tax asset in respect of tax losses carried forward due to insufficient
+evidence of their recoverability.
+
+GBP (000s) 2019 2018
+Loss on ordinary activities after taxation (2,297) (741)
+Standard rate of Corporation tax | 19% 19%
+Expected Tax Credit (436) (141)
+Effects of:
+
+Depreciation 4 0
+Disallowable expenses 2 4
+Lease payments (4) -
+Other timing differences (7) (3)
+Deferred Tax not recognised 441 140
+
+Deferred Tax asset recognised - -
+
+Cumulative to date:
+
+Deferred tax not recognised brought forward . 140 -
+Additional deferred tax not recognised 441 140
+Total deferred tax not recognised 581 140
+
+Tax losses are expected in the initial years of the company’s development as the build phase progresses.
+These tax losses are available for carry forward against future taxable profits.
+
+The directors have concluded that it is not appropriate to recognise a deferred tax asset at the reporting
+date due to the uncertainty of future taxable profits. if an asset has been recognised it would have an
+estimated value of £520k (2018: £125k) which is calculated based on the £3,038k (2018: £741k) of
+trading losses at the expected corporation tax rate of 17%. This rate is equivalent to the expected rate
+in 2021, the longest dated corporation tax rate substantively enacted at the balance sheet date.
+
+12. Cash and cash equivalents
+
+GBP (000s) 2019 2018
+Cash at Bank and in hand 796 3,804
+Total 796 3,804
+
+Oxbury FS Pic; Reg No. 11383418 25
+13. Recognition of interest income
+Interest and similar income/expense
+Net interest income comprises interest income and interest expense calculated using the effective
+
+interest method. These are disclosed separately on the face of the income statement for both interest
+income and interest expense to provide symmetrical and comparable information.
+
+14. Tangible Fixed Assets
+
+Fittings & Computer Right of '
+GBP (000s) Office & IT use Total
+Equipment Equipment assets
+Cost:
+Brought forward - - - -
+Additions 2018 3 11 - 14
+Cost at 31% December 2018 3 11 ” 14
+Additions 2019 14 23 39 76
+Cost at 31% December 2019 17 34 39 90
+Accumulated Depreciation:
+Brought forward - “ - “
+Depreciation charge for the year 2018 - “ (1) - (1)
+Depreciation at 31* December 2018 - (1) . (1)
+Depreciation charge for the year 2019 (7) (13) | (24) (44)
+Depreciation at 31% December 2019 (7) (14) (24) (45)
+: Net Book Value at 31% December 2019 . 10 20 “15 45
+Net Book Value at 31* December 2018 3 10 - 13
+
+The right of use assets relates to the office’s facilities contracted by Oxbury, commencing 11” January
+2019. Included in the 2019 result is the depreciation charge for the period of £24k and interest expense
+of £2k. The total of cash outflows in the period in relation to the right of use asset equalled £37k.
+
+Oxbury FS Plc; Reg No. 11383418 . 26
+15. Intangible Assets
+
+The intangible asset relates specifically to the cost of the development of the operating system which
+will provide the customer interaction which drives revenues.
+
+Operating System
+
+Software Total
+
+GBP (000s)
+
+Cost:
+
+Brought forward - -
+Additions 2018 197 197.
+Cost at 31* December 2018 197 197
+
+Additions 2019 1,080 1,080
+Cost at 31% December 2019 1,277 1,277
+
+Accumulated Depreciation:
+
+Brought forward - -
+Amortisation charge for the year 2018 - -
+Depreciation at 315* December 2018 - -
+
+Amortisation charge for the year 2019 - -
+
+Depreciation at 31*%* December 2019 - -
+
+Net Book Value at 31*%* December 2019 1,277 1,277
+
+Net Book Value at 31* December 2018 197 197
+
+Oxbury FS Plc; Reg No. 11383418 27
+Controlling parties
+
+16. Related party transactions
+
+In the opinion of the Directors, there is no overall controlling party.
+
+Key Management emoluments
+
+Key management emoluments are separately disclosed within Note 7.
+
+Transactions with related parties
+
+Total transactions during the year with related parties.
+
+Related Party
+
+Hill Harbour Associates
+Limited
+
+FTFF Limited
+
+Simon Featherstone
+Consulting Ltd
+
+Ellidge Consulting
+
+Relationship
+
+A member of the Key
+Management Personnel
+is a director
+
+A director of Oxbury is a
+director and majority
+shareholder
+
+A director of Oxbury is a
+director and majority
+shareholder
+
+A member of the Key
+Management Personnel
+is the owner
+
+Of which was outstanding at the end of the year:
+
+Related Party
+
+Simon Featherstone
+Consulting Ltd
+
+Ellidge Consulting
+
+Oxbury FS Pic; Reg No. 11383418
+
+Included in
+
+Other Operating
+Expenses — Key
+Management Personnel
+
+Intangible Assets — Key
+Management Personnel
+
+Total value of
+transactions
+year ended 31*
+Dec 2019
+GBP (000s)
+
+20
+
+46
+
+24
+
+Outstanding at
+315t Dec2019
+GBP (000s)
+
+Total value of
+transactions
+year ended 31°
+Dec 2018
+GBP (000s)
+
+10
+
+50
+
+Outstanding at
+31% Dec2018
+GBP (000s)
+
+12
+
+28
+17. Accrued Income and Prepayments
+
+' GBP (000s) 2019 2018
+t | Accrued Income 0 - 0
+prepayments 27 ‘ 23
+; Total . 27 23
+
+18. Other liabilities
+
+GBP (000s) 2019 2018
+
+Trade Creditors 34 | 33
+Taxes and Social Security . 72 30
+Lease Liabilities 7 -
+Accruals 564 222
+Total 677 285
+
+19. Share Capital
+
+At the reporting date, the shares issued compromised:
+
+Number of Nominal Number of Nominal
+
+Shares at 31* Value at Shares at 31% Value at
+
+Share Class - Dec 2019 31* Dec Dec 2018 31* Dec
+
+2019 2018
+GBP (000s) GBP (000s) .-
+
+A Ordinary Shares of £0.01 each 14,583,334 146 14,583,334 146
+B Ordinary Shares of £0.01 each 10,000,000 100 10,000,000 100
+C Ordinary Shares of £0.01 each 2,783,786 28 1,833,332 18
+Total 27,367,120 274 26,416,666 264
+
+A Ordinary and B ordinary shares have full voting and economic rights, C shares do not have voting rights
+but do have economic rights, where vested. Unvested C shares do not have voting or economic rights.
+All shares are fully paid. During the year ended 31 December 2019, 1,283,786 shares were issued for
+£12,838 (2018: 26,416,666 ordinary shares were issued for £4,493,333.52).
+
+Oxbury FS Plc; Reg No. 11383418 29
+20. Share Premium
+
+_ Share Premium balance brought forward
+Additions during the year
+
+As at 31 December
+
+21. Retained Earnings
+
+Retained Earnings brought forward
+Loss for the year ended 31 December
+
+As at 31 December
+
+Oxbury FS Plc; Reg No. 11383418
+
+31° Dec 2018
+
+31 Dec 2019
+
+GBP (000s) GBP (000s)
+
+4,229 -
+
+- 4,229
+
+4,229 4,229
+
+31* Dec 2019 31* Dec 2018
+
+GBP (000s) GBP (000s)
+
+(741) -
+
+(2,297) (741)
+
+(3,038) (741)
+
+30
+22. Share Based Payments
+
+31* Dec 2019 31% Dec 2018
+
+GBP (000s) GBP (000s)
+Share Based Payment Reserve brought forward - -
+Additions during the year 3 -
+As at 31 December 3 ”
+
+The company operates a share option scheme for certain employees, all of which are determined to be
+exclusively equity-settled. Share options are also utilised in the remuneration of specific suppliers. The
+cost of the awards granted to employees is determined using the Black-Scholes valuation model, since
+there is no active market. The cost of awards granted to suppliers is also evaluated using the Black-
+Scholes model, as there isn’t a readily ascertainable value of the goods and services received.
+
+The calculations within the model require the use of subjective assumptions, including the expected
+volatility of the share price, expected life of the award and any dividend yield. All these factors can
+impact the fair value estimate.
+
+The main assumptions which have been used in deriving option value are as follows:
+e = Risk Free Rate: 1.00%
+e §©Volatility: 100%
+Dividend Yield: Nil
+Expected Life (Employee): 0.1 years
+e Expected Life (Supplier): 2.5 years
+
+Using the assumptions in the model identified that the value of the employee options was zero, and
+therefore no entry has been made in their regard. In relation to the options granted to the supplier, the
+model identified the value as £0.01 per share. On the basis that the services had been received during
+2019 and constituted part of the intangible asset, an increase was recorded in terms of the value of the
+carrying value of the asset, with a corresponding increase in other reserves.
+
+The exercise price for all employee share options is £0.01 and have been settled prior to the end of the
+period. The shares are subject to vesting conditions prior to being eligible for economic rights. The
+exercise price for the supplier related share options is £0.01 and are subject to vesting conditions prior
+to exercise. The goods and services had been received prior to the year end.
+
+Oxbury FS Pic; Reg No. 11383418 31
+23. Post Balance Sheet Events
+Issue of additional Share Capital (January 2020)
+
+In January 2020 the company secured investment of £10,245,597 through the issue of 9,314,179 A
+shares of £0.01 nominal value. This equated to £93,142 share capital plus £10,152,455 share premium.
+
+Authorisation as a credit institution (January 2020)
+
+The company was authorised as a credit institution by the Bank of England on 31 January 2020 and is in
+the mobilisation phase as part of the route to trading as a specialist bank servicing the UK agricultural
+industry and savers across the UK, at the time of signing these financial statements.
+
+Change of company name
+
+The board of directors passed a resolution to change the company name from Oxbury FS Ple to Oxbury
+Bank Plc on 27 February 2020. The resolution was approved by the shareholders in their entirety and
+filed at Companies House in April 2020, however this has not been approved by Companies House at the
+date of approval.
+
+Substantively enacted tax rate
+
+Subsequent to the end of the accounting period, the reduction in the substantively enacted corporation
+tax rate of 17% was cancelled as of March 2020.
+
+Covid-19 Pandemic
+
+Since the end of the period represented by these financial statements, the spread of the virus referred
+to as Covid-19 has been classified as a pandemic. Through the going concern assessment (note 4.1),
+Oxbury has reviewed the potential impact on the business.
+
+Oxbury FS Pic; Reg No. 11383418 . 32
+(This page has been intentionally left blank to indicate the end of the document)
+
+Oxbury FS Pic; Reg No. 11383418 33

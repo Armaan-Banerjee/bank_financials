@@ -544,6 +544,178 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=130)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - BNYMIL's own "Table 1: UK KM1 - Key metrics template",
+# reproduced as printed. Three things about this bank's KM1 that must not be
+# smoothed over:
+#
+#   (a) THE UK TEMPLATE STARTS WITH THE FY2022 EDITION. The FY2016-FY2021
+#       reports DO carry a table captioned "Table 1: KM1 - Key metrics", but it
+#       is NOT the UK KM1 template - it prints no template row numbers, uses the
+#       bank's own captions ("Total risk-weighted assets ('RWA')", "Total
+#       leverage ratio exposure measure"), runs FOUR columns (Consolidated and
+#       Solo, two dates each), and its leverage row is on the pre-2022 basis
+#       that INCLUDES claims on central banks. A caption is not a template, so
+#       those years are not transcribed into template rows here. Their figures
+#       are on the individual Pillar 3 metric sheets below, where the two
+#       leverage and liquidity bases already sit on separate captioned rows.
+#   (b) FY2021 IS THE FY2022 EDITION'S COMPARATIVE COLUMN - the only time
+#       BNYMIL ever printed a 31-Dec-21 column ON the UK template. That column
+#       is partly empty by the bank's own footnote 1 ("Certain metrics related
+#       to additional own funds requirements, buffers, and leverage, are new
+#       disclosure requirements. Comparatives are not reported") and footnote 4
+#       (no LCR/NSFR comparatives after the change to an average basis). Its
+#       capital figures agree cell for cell with the FY2021 edition's own Solo
+#       column, so nothing is restated across that join.
+#   (c) THE FY2025 EDITION RESTATES FY2024 and says so on the face of the table
+#       ("31-Dec-24 Restated"). The FY2024 column below is the FY2024 edition's
+#       own as-published figures, per rule 1; the restated values are given in
+#       full in the source note, and the metric sheets take the same view.
+#
+# Row set: BNYMIL prints only the rows it regards as applicable - its own note
+# says "Selected non-applicable rows have not been presented" - so UK 7b, UK 7c,
+# UK 8a, UK 9a, 10, UK 10a and the 14a-14e leverage block appear in NO edition
+# and are therefore absent here. That is the bank's stated omission, not a row
+# this project failed to find.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £m)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 1091, "FY2024": 955, "FY2023": 833, "FY2022": 733, "FY2021": 761}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 1091, "FY2024": 955, "FY2023": 833, "FY2022": 733, "FY2021": 761}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 1091, "FY2024": 955, "FY2023": 833, "FY2022": 733, "FY2021": 761}),
+    ("SECTION", "Risk-weighted exposure amounts (£m)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 1047, "FY2024": 1118, "FY2023": 1051, "FY2022": 999, "FY2021": 838}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "104.22 %", "FY2024": "85.41 %", "FY2023": "79.26 %", "FY2022": "73.35 %", "FY2021": "90.81 %"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "104.22 %", "FY2024": "85.41 %", "FY2023": "79.26 %", "FY2022": "73.35 %", "FY2021": "90.81 %"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "104.22 %", "FY2024": "85.41 %", "FY2023": "79.26 %", "FY2022": "73.35 %", "FY2021": "90.81 %"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "5.86 %", "FY2024": "5.00 %", "FY2023": "5.00 %", "FY2022": "5.00 %"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "18.42 %", "FY2024": "16.88 %", "FY2023": "16.88 %", "FY2022": "16.88 %"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50 %", "FY2024": "2.50 %", "FY2023": "2.50 %", "FY2022": "2.50 %", "FY2021": "2.50 %"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.90 %", "FY2024": "1.96 %", "FY2023": "1.95 %", "FY2022": "0.92 %"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.40 %", "FY2024": "4.46 %", "FY2023": "4.45 %", "FY2022": "3.42 %"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "22.82 %", "FY2024": "21.34 %", "FY2023": "21.33 %", "FY2022": "20.30 %"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "85.80 %", "FY2024": "68.53 %", "FY2023": "62.38 %", "FY2022": "56.47 %", "FY2021": "75.77 %"}),
+    ("SECTION", "Leverage ratio (£m / %)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 6449, "FY2024": 6276, "FY2023": 5888, "FY2022": 7602}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "16.92 %", "FY2024": "15.22 %", "FY2023": "14.15 %", "FY2022": "9.64 %"}),
+    ("SECTION", "Liquidity Coverage Ratio (£m / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 5184, "FY2024": 6021, "FY2023": 6887, "FY2022": 8876}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 3604, "FY2024": 4462, "FY2023": 5426, "FY2022": 7712}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 1935, "FY2024": 1931, "FY2023": 2121, "FY2022": 2911}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 1669, "FY2024": 2532, "FY2023": 3305, "FY2022": 4801}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "317.37 %", "FY2024": "240.33 %", "FY2023": "211.60 %", "FY2022": "185.66 %"}),
+    ("SECTION", "Net Stable Funding Ratio (£m / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 2561, "FY2024": 2474, "FY2023": 2386, "FY2022": 3210}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 672, "FY2024": 675, "FY2023": 650, "FY2022": 680}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "381.21 %", "FY2024": "366.64 %", "FY2023": "368.06 %", "FY2022": "472.37 %"}),
+]
+
+KM1_SOURCES = (
+    "Sources - The Bank of New York Mellon (International) Limited, \"Table 1: UK KM1 - Key metrics template\", "
+    "£m, reproduced as printed (BNYMIL prints one unified column per date from the FY2022 report onward - see "
+    "ENTITY NOTE below):\n"
+    f"FY2025: Pillar 3 Disclosure, December 31, 2025, Table 1, p.5 (section 1.3 \"Article 447 CRR II - Disclosure "
+    f"of key metrics\") - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosure, December 31, 2024, Table 1, p.6 - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosure, December 31, 2023, Table 1, p.6 - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosure, December 31, 2022, Table 1, p.8 - {P3_2022_URL}\n"
+    f"FY2021: the 31-Dec-21 COMPARATIVE column of the FY2022 report's Table 1 (same page) - {P3_2022_URL}\n\n"
+    "KM1 presentation notes:\n"
+    "• COLUMN SET: every edition from FY2022 onward prints exactly two columns - the reporting year-end and the "
+    "prior year-end - and no half-year column. Each year above is taken from the edition in which that date is "
+    "the REPORTING year, not from a later edition's comparative, with the single deliberate exception of FY2021 "
+    "explained below.\n"
+    "• WHY FY2021 IS A COMPARATIVE COLUMN: the FY2021 and earlier Pillar 3 reports do carry a table captioned "
+    "\"Table 1: KM1 - Key metrics\", but it is NOT the UK KM1 template. It prints no template row numbers, uses "
+    "BNYMIL's own captions (\"Total risk-weighted assets ('RWA')\", \"Total leverage ratio exposure measure\"), "
+    "runs four columns (Consolidated 31-Dec-21 / 31-Dec-20 beside Solo 31-Dec-21 / 31-Dec-20, identical to each "
+    "other in both years), and states its leverage ratio on the pre-1-January-2022 basis that INCLUDES claims on "
+    "central banks (£12,381m exposure, 6.1% - against £7,602m and 9.64% excluding, on the FY2022 template). The "
+    "FY2022 report's own comparative column is therefore the only 31-Dec-21 column BNYMIL has published on the UK "
+    "template, and it is what appears above. Its capital figures agree cell for cell with the FY2021 report's own "
+    "Solo column (CET1 761, RWA 838, ratios 90.8% printed to one decimal there and 90.81% to two here), so no "
+    "restatement is being carried across that join.\n"
+    "• FY2021 BLANKS ARE THE BANK'S OWN: rows UK 7a, UK 7d, 11, UK 11a, 13, 14, 15, UK 16a, UK 16b, 16, 17, 18, "
+    "19 and 20 are empty in that column because the FY2022 report says so - footnote 1, \"Certain metrics related "
+    "to additional own funds requirements, buffers, and leverage, are new disclosure requirements. Comparatives "
+    "are not reported\", and footnote 4, \"Comparatives are not provided for LCR and NSFR following a change in "
+    "the instructions from those reportable at 31 December 2021\". The FY2021 point-in-time LCR, NSFR and leverage "
+    "figures BNYMIL did publish are on the LCR, NSFR and Leverage Ratio sheets, on their own captioned rows.\n"
+    "• A DASH IS NOT A ZERO: row 9 (countercyclical buffer) is printed \"—%\" in the FY2022 report's 31-Dec-21 "
+    "column and is left BLANK above. The FY2021 report prints the same em-dash for the same row. Every other "
+    "cell shown is a figure the bank printed as a figure.\n"
+    "• FY2024 IS SHOWN AS ORIGINALLY PUBLISHED, NOT RESTATED. The FY2025 report heads its comparative column "
+    "\"31-Dec-24 Restated\" and notes \"The prior period is restated\". Its restated FY2024 values differ from "
+    "the FY2024 report's own as-published ones in nine rows: row 4 RWA 1,091 (was 1,118); rows 5/6/7 87.54 % "
+    "(was 85.41 %); row 12 70.66 % (was 68.53 %); row 18 available stable funding 2,481 (was 2,474); row 19 "
+    "required stable funding 664 (was 675); row 20 NSFR 373.99 % (was 366.64 %). Rows 1/2/3, 8, 9, 11, UK 11a, "
+    "13, 14, 15, UK 16a/16b, 16 and 17 are unchanged. The as-published figures are used above, matching the "
+    "individual metric sheets; the restated ones are recorded here so neither is lost.\n"
+    "• ROW SET: BNYMIL prints only the rows it treats as applicable. Its own note reads \"Selected non-applicable "
+    "rows have not been presented\", and rows UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a and the additional-leverage "
+    "block 14a-14e appear in NO edition. They are therefore absent above - a stated omission by the bank, not a "
+    "row this workbook failed to locate.\n"
+    "• PRECISION: ratios are printed to two decimal places with a space before the percent sign (\"104.22 %\") in "
+    "every UK-template edition, and that spacing is preserved. The FY2021 and earlier reports print one decimal "
+    "place without the space (\"90.8 %\") - another reason those editions are a different table.\n"
+    "• BASIS: rows 15-17 are a 12-month average and rows 18-20 a four-quarter average in every edition, per the "
+    "reports' own footnotes (\"Ratios are presented on an average basis in accordance with Article 447(f)(g) CRR "
+    "II\"). The FY2024 report adds that its Q4'24 NSFR is estimated. Capital and leverage ratios are stated after "
+    "the inclusion of audited profits for the year. Row 13/14's caption already carries the post-1-January-2022 "
+    "\"excluding claims on central banks\" basis in every edition shown, so no basis break runs through this "
+    "sheet.\n"
+    "• The Company is not subject to a binding leverage ratio requirement in any year shown (it does not meet the "
+    "LREQ-firm thresholds in the Leverage Ratio - Capital Requirements and Buffers Part of the PRA Rulebook), per "
+    "the reports' own leverage footnote.\n\n"
+    "LATEST-EDITION CHECK 2026-09-16: BNY's own regulatory-filings index "
+    "(https://www.bny.com/corporate/global/en/investor-relations/regulatory-filings.html, to which "
+    "bnymellon.com/us/en/investor-relations/regulatory-filings.html now 301-redirects) lists the December 31, "
+    "2025 Pillar 3 Disclosure as the newest for this entity, which this workbook already carries. A 2026-dated "
+    "filename under the same /content/dam/ path returns an honest HTTP 404, and the entity's year-end is 31 "
+    "December, so no FY2026 disclosure can yet exist. Checked, none newer.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="The Bank of New York Mellon (International) Limited — KM1 Key Metrics",
+    subtitle="The bank's own published UK KM1 key-metrics template, reproduced in BNYMIL's row order with its own "
+             "template row numbers and printed precision. Amounts in £m, ratios as printed. FY2025-FY2022 from "
+             "each year's own Pillar 3 report; FY2021 is the FY2022 report's comparative column, the only 31-Dec-21 "
+             "column BNYMIL published on this template. FY2020 and earlier are intentionally blank - those reports "
+             "carry a differently-shaped pre-template key-metrics table, not UK KM1. See the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=420,
+)
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 1091, "FY2024": 955, "FY2023": 833, "FY2022": 733, "FY2021": 761, "FY2020": 745, "FY2019": 659, "FY2018": 618, "FY2017": 448, "FY2016": 412})],

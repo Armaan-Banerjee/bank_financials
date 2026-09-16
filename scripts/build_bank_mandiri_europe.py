@@ -874,6 +874,73 @@ CET1_EQUIV_NOTE = (
     "publishes from FY2022 onward, and stays blank for FY2021/FY2020."
 )
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-005) - documented NOT APPLICABLE
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "UK KM1 - KEY METRICS TEMPLATE: NOT PUBLISHED BY THIS ENTITY IN ANY YEAR.\n"
+    "BMEL has published exactly one Pillar 3 disclosure in its history, for 31 December 2016, and that "
+    "document pre-dates the template. Recorded on positive evidence, checked 2026-09-16, with the one part "
+    "that could not be checked stated as such.\n"
+    "\n"
+    "THE ONLY PILLAR 3 THAT EXISTS. 'BMEL - Pillar 3 Disclosures 31st December 2016' (1,041,727 bytes, "
+    "text-native, 96,712 characters extracted) mentions 'Pillar 3' 38 times and contains ZERO occurrences of "
+    "'KM1', 'key metric', 'CET1', 'Common Equity', 'own funds', 'leverage ratio' and 'liquidity coverage'. It "
+    "is a narrative, pre-CRR-template disclosure. The UK KM1 template arrived with the Disclosure (CRR) Part "
+    "of the PRA Rulebook, six years after it, so its absence there is expected rather than a gap (map rule "
+    "16).\n"
+    "\n"
+    "THE LIVE SITE WAS ENUMERATED IN FULL, NOT SAMPLED. bkmandiri.co.uk is a five-page site: the home page, "
+    "/about-us/, /products-services/, /contact-us/ and /legal-important-information/, plus /sitemap/ which "
+    "lists exactly those five. Every page returned HTTP 200 and was read. The home and about pages carry no "
+    "PDF links whatsoever. Every PDF the site publishes is linked from the legal page, and there are fourteen "
+    "of them: the US Patriot Act certificate, website terms, privacy policy, complaints policy, W-8BEN-E, "
+    "FSCS declaration, anti-money-laundering declaration, statement of ethics, UK tax strategy, anti-slavery "
+    "statement, a Wolfsberg questionnaire, and the BMEL Annual Reports for 2023, 2024 and 2025. No Pillar 3 "
+    "document of any year is among them.\n"
+    "\n"
+    "THE ARCHIVE AGREES. A Wayback CDX sweep of the whole bkmandiri.co.uk domain returned 276 captures "
+    "covering 27 distinct PDFs across the site's history, going back to a 2012 capture. Exactly one is a "
+    "Pillar 3 disclosure: the 2016 document above. The Annual Reports for 2021 and 2022 appear there too and "
+    "are no longer linked live, so the sweep was demonstrably capable of surfacing withdrawn documents - it "
+    "found withdrawn annual reports and still found no second Pillar 3.\n"
+    "\n"
+    "AND THE ANNUAL REPORTS CARRY NO KM1 EITHER, which is worth stating because some small banks put their "
+    "Pillar 3 inside the annual report. The FY2025 and FY2024 Annual Reports were fetched live and extract to "
+    "162,945 and 161,914 characters. Both contain ZERO occurrences of 'KM1', 'key metric', 'Pillar 3', "
+    "'CET1', 'Common Equity' and 'leverage ratio'. Those zeros are trustworthy rather than an extractor "
+    "failure because the same documents return real hits on neighbouring terms - 'liquidity coverage' four "
+    "times in FY2025 and three in FY2024, 'own funds' once in each (map rule 15).\n"
+    "\n"
+    "WHAT WAS NOT CHECKED, STATED PLAINLY (map rule 9). The site's REST API is blocked: "
+    "https://www.bkmandiri.co.uk/bkm-api/wp/v2/media returns "
+    "'itsec_rest_api_access_restricted - Access to REST API requests is restricted by Kadence Security "
+    "settings' for every query. So the WordPress media library could not be enumerated directly, and an "
+    "unlinked file sitting in it would not appear in the page-link enumeration above. Wayback partly covers "
+    "that gap and found nothing, but the two routes are not equivalent. If a Pillar 3 document for this "
+    "entity is ever found, that blocked media library is where it will be.\n"
+    "\n"
+    "The entity's capital and liquidity disclosures, such as they are, are the narrative paragraph and KPI "
+    "table in each Annual Report's Strategic Report - a single combined Total Capital Ratio, LCR and NSFR "
+    "with no CET1/Tier 1 breakdown. Those are carried on the single-metric sheets under their own citations "
+    "and are unaffected by this sheet being blank.\n"
+    "\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Bank Mandiri (Europe) Limited - KM1 Key Metrics",
+    subtitle="Not applicable: this entity has published exactly one Pillar 3 disclosure in its history, for "
+             "31 December 2016, which pre-dates the template. No later Pillar 3 exists on the live site or in "
+             "the Wayback archive, and the annual reports contain no KM1. See the sources note, which also "
+             "records the one route that is blocked rather than empty.",
+    rows=[("DATA", "UK KM1 - Key metrics template: not published by this entity in any year",
+           {y: "Not applicable" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=300,
+    years=YEARS,
+)
+
 metric(
     "CET1 Capital", "£'000 (conv. from USD)",
     [("Common Equity Tier 1 capital (= Tier 1; no AT1 component disclosed)", stock(TIER1_CAPITAL_USD))],

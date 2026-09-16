@@ -90,14 +90,20 @@ P3_2018_URL = "https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-
 
 ENTITY_NOTE = (
     "ENTITY NOTE: ABC International Bank plc (company 02564490, FRN 149025, incorporated 3 December 1990) is a "
-    "wholly-owned subsidiary within the Bank ABC (Arab Banking Corporation B.S.C., Bahrain) group. FY2023 and FY2024 "
-    "figures are on a CONSOLIDATED basis (ABCIB's own subsidiaries, e.g. Alphabet Nominees Limited - a nominee "
-    "company, not a trading entity), taken from ABCIB's own UK KM1 Pillar 3 template. FY2021 and FY2022 figures are "
-    "on a SOLO (entity-only) basis, taken from the Annual Report's 'Financial Highlights' table - no consolidated "
-    "Pillar 3 KM1-format disclosure could be located for those two years (only the modern KM1 template, introduced "
-    "for the FY2023 report onward, publishes a full metrics breakdown; earlier years' Pillar 3 documents could not "
-    "be located on the bank's website or via Wayback Machine). This is a genuine basis break within the series, not "
-    "a data-entry choice - flagged on every affected sheet."
+    "wholly-owned subsidiary within the Bank ABC (Arab Banking Corporation B.S.C., Bahrain) group. FY2023, FY2024 "
+    "and FY2025 figures are on a CONSOLIDATED basis (ABCIB's own subsidiaries, e.g. Alphabet Nominees Limited - a "
+    "nominee company, not a trading entity). FY2014-FY2022 are on a SOLO (entity-only) basis. This is a genuine "
+    "basis break within the series, not a data-entry choice - flagged on every affected sheet.\n\n"
+    "TWO CLAIMS CORRECTED HERE (2026-09-16), both of which had been recorded more confidently than their evidence "
+    "supported. (1) This note previously said the UK KM1 template was 'introduced for the FY2023 report onward'. It "
+    "was not: the FY2023 edition prints a 10-row 'Table 3 Key Regulatory Metrics' summary and contains no "
+    "occurrence of 'KM1' or 'SREP' anywhere. ABCIB first published the template in its Pillar 3 Report 2024, and "
+    "FY2023's consolidated figures come from that 2023 Table 3, not from a KM1. (2) This note previously said "
+    "FY2021/FY2022 were taken from the Annual Report's Financial Highlights because 'earlier years' Pillar 3 "
+    "documents could not be located on the bank's website or via Wayback Machine'. Both documents do exist on the "
+    "disclosures index and were located on 2026-09-15 (see P3_2021_URL / P3_2022_URL); those two years are now "
+    "sourced from their own Pillar 3 reports. A document that a fetch failed to reach is not a document that does "
+    "not exist, and the original wording did not preserve that distinction."
 )
 
 EXEMPTION_NOTE = (
@@ -595,6 +601,164 @@ bw.add_asset_quality_sheet(
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=150)
 
+
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-003)
+# ---------------------------------------------------------------
+# WHY ONLY TWO YEARS CARRY A COLUMN.
+# ABCIB printed the UK KM1 template for the FIRST time in its Pillar 3 Report
+# 2024. The 2023, 2022 and 2021 editions each print "Table 3 Key Regulatory
+# Metrics" instead: a 10-row Solo|Consolidated summary at a SINGLE date
+# (Dec-23 / Dec-22 / Dec-21), with no SREP rows, no buffer rows, no LCR and no
+# NSFR, captioning leverage as "Total Leverage ratio exposure measure" rather
+# than "...excluding claims on central banks". The 2023 document contains ZERO
+# occurrences of "KM1" and zero of "SREP" - re-read in full on 2026-09-16.
+#
+# That is NOT the same thing as a bank printing the template without numbering
+# it (map rule KM1-004(a) - Aldermore, Allica, Europe Arab Bank), which is why
+# those banks get full columns and these years do not. The test is the ROW SET,
+# not the "KM1" token: an unnumbered table carrying the template's own row set
+# is the template; a 10-row summary is a different table, and mapping it onto
+# template row numbers would invent a correspondence the bank never published.
+#
+# FY2023 is therefore BLANK here and is NOT filled from the FY2024 edition's
+# comparative column (map rule 1). Those figures are not lost - they are on the
+# single-metric sheets, captioned and sourced as that year's own edition printed
+# them. The two sources genuinely disagree, which is why the rule exists: the
+# FY2023 edition prints consolidated RWAs of 3,104,763 while the FY2024
+# edition's FY2023 comparative prints 3,101,197.
+#
+# ENTITY: both columns are ABCIB CONSOLIDATED. Each edition prints the template
+# TWICE - once "ABCIB SOLO", once "ABCIB CONSOLIDATED" - so the entity call is
+# made INSIDE one document, and taking the first table encountered would put
+# solo figures into a consolidated series. Consolidated is used because this
+# workbook runs FY2023-FY2025 on that basis (BASIS_NOTE); the solo table gives
+# materially different figures (FY2025 CET1 469,209 against 579,993). ABCIB
+# CONSOLIDATED is the UK entity's OWN consolidation (its own subsidiaries, e.g.
+# Alphabet Nominees Limited), never the Bahraini parent's group consolidation.
+#
+# CROSS-EDITION CHECK (map rule 6): every one of the 26 rows in the FY2024
+# column was read from the FY2024 edition's own consolidated table and
+# independently reproduces the FY2025 edition's FY2024 comparative column
+# exactly. Amounts are in £'000 as published - this sheet is NOT converted to
+# the £m used by the single-metric sheets.
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)", {"FY2025": 579993, "FY2024": 564579}),
+    ("DATA", "2  Tier 1 capital (£'000)", {"FY2025": 579993, "FY2024": 564579}),
+    ("DATA", "3  Total capital (£'000)", {"FY2025": 628255, "FY2024": 616448}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£'000)", {"FY2025": 3880104, "FY2024": 3486256}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2025": "14.9%", "FY2024": "16.2%"}),
+    ("DATA", "6  Tier 1 ratio (%)", {"FY2025": "14.9%", "FY2024": "16.2%"}),
+    ("DATA", "7  Total capital ratio (%)", {"FY2025": "16.2%", "FY2024": "17.7%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {"FY2025": "2.1%", "FY2024": "2.1%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {"FY2025": "0.0%", "FY2024": "0.0%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {"FY2025": "0.0%", "FY2024": "0.0%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)", {"FY2025": "10.1%", "FY2024": "10.1%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {"FY2025": "2.5%", "FY2024": "2.5%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)", {"FY2025": "0.6%", "FY2024": "0.7%"}),
+    ("DATA", "11  Combined buffer requirement (%)", {"FY2025": "3.1%", "FY2024": "3.2%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2025": "13.2%", "FY2024": "13.3%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "4.8%", "FY2024": "6.0%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£'000)",
+     {"FY2025": 5990509, "FY2024": 5540164}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)", {"FY2025": "9.7%", "FY2024": "10.2%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)",
+     {"FY2025": 748628, "FY2024": 854893}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)", {"FY2025": 878001, "FY2024": 839225}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)", {"FY2025": 578631, "FY2024": 587092}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£'000)", {"FY2025": 299370, "FY2024": 252133}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {"FY2025": "250.1%", "FY2024": "339.1%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£'000)", {"FY2025": 2391315, "FY2024": 2339367}),
+    ("DATA", "19  Total required stable funding (£'000)", {"FY2025": 1902311, "FY2024": 1802627}),
+    ("DATA", "20  NSFR ratio (%)", {"FY2025": "125.7%", "FY2024": "129.8%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - the 'ABCIB CONSOLIDATED' UK KM1 table in each year's OWN Pillar 3 edition. Every edition prints "
+    "this template twice, once for ABCIB SOLO and once for ABCIB CONSOLIDATED; the consolidated table is used "
+    "here, matching this workbook's FY2023-FY2025 basis (see the Cash Flow Statement sheet's entity note). "
+    "ABCIB CONSOLIDATED is ABC International Bank plc's own consolidation of its own subsidiaries - it is NOT "
+    "the Bahraini parent group's consolidation. Amounts are in £'000 exactly as published, not converted to the "
+    "£m used by the single-metric sheets.\n"
+    f"FY2025: ABC International Bank plc Pillar 3 Report 2025, p.16, Table 3 'Key Regulatory Metrics', "
+    f"'ABCIB CONSOLIDATED' UK KM1 - Key metrics template, 2025 column - {P3_2025_URL}\n"
+    f"FY2024: ABC International Bank plc Pillar 3 Report 2024, p.14, Table 3 'Key Regulatory Metrics', "
+    f"'ABCIB CONSOLIDATED' UK KM1 - Key metrics template, 2024 column - {P3_2024_URL}\n"
+    "\n"
+    "WHY FY2023, FY2022 AND FY2021 ARE BLANK - NOT DISCLOSED, NOT 'NOT FOUND'.\n"
+    "ABCIB first published the UK KM1 template in its Pillar 3 Report 2024. The 2023, 2022 and 2021 editions "
+    "each print 'Table 3 Key Regulatory Metrics' instead: a 10-row Solo|Consolidated summary at a single date, "
+    "carrying capital, RWAs, two ratios and leverage only - no SREP rows, no buffer rows, no LCR and no NSFR - "
+    "and captioning leverage as 'Total Leverage ratio exposure measure' rather than '...excluding claims on "
+    "central banks'. The 2023 document was re-read in full on 2026-09-16 and contains no occurrence of 'KM1' "
+    "or 'SREP' anywhere. A 10-row summary is a different table from the 26-row template, so its figures are "
+    "not mapped onto template row numbers here; they appear on the single-metric sheets instead, captioned as "
+    "their own edition printed them.\n"
+    "A full FY2023 KM1 column DOES exist - as the FY2024 edition's comparative - and is deliberately not used, "
+    "because each column on this sheet comes from the edition in which that year is the reporting year. The "
+    "two sources disagree, which is precisely why: the FY2023 edition prints consolidated RWAs of 3,104,763 "
+    "while the FY2024 edition's FY2023 comparative prints 3,101,197.\n"
+    "\n"
+    "SOURCE DEFECT, REPRODUCED AND FLAGGED RATHER THAN CORRECTED.\n"
+    "Row 3 of the FY2025 consolidated table prints total capital as '628.255' - a DECIMAL POINT where the "
+    "thousands separator belongs, while every other figure in the same column uses a comma. It is carried here "
+    "as 628,255 £'000: the printed digits are unchanged and only the separator is wrong. This is corroborated "
+    "inside the same document rather than derived - 'Table 2 Regulatory Capital' on the preceding page prints "
+    "total regulatory capital of 628,255 for the consolidated basis. A literal 628.255 (£628k) would sit below "
+    "that table's own CET1 of £580m.\n"
+    "\n"
+    "LABEL DRIFT: the FY2024 edition captions row 12 'CET1 available after meeting the total SREP own funds "
+    "requirements (%)'; the FY2025 edition drops the '(%)'. The FY2024 wording is used for the row label and "
+    "both years' figures are percentages as printed.\n"
+    "\n"
+    "CROSS-EDITION VALIDATION (map rule 6): all 26 rows of the FY2024 column were taken from the FY2024 "
+    "edition's own consolidated table and independently reproduce the FY2025 edition's FY2024 comparative "
+    "column exactly, which is what confirms both columns are on the consolidated basis and not the solo one.\n"
+    "\n"
+    "UNIT IS £'000 AS PUBLISHED, WHILE THE SINGLE-METRIC SHEETS ARE £m.\n"
+    "ABCIB publishes this template in £'000, so it is reproduced in £'000, matching the RWA Breakdown sheet in "
+    "this same workbook. The eleven single-metric Pillar 3 sheets are in £m. The two are therefore the same "
+    "figures at a different scale - 579,993 here against 579.993 there, 564,579 against 564.579, 628,255 "
+    "against 628.255, 3,880,104 against 3,880.104 - identical digits, factor of 1,000, no digit slip anywhere. "
+    "Each row label on this sheet carries its own unit token ((£'000) on amount rows, (%) on ratio rows), which "
+    "is how the cross-check resolves the scale: a KM1 sheet cannot declare one sheet-level unit, because the "
+    "map requires it to mix £'000 amounts and % ratios down a single column.\n"
+    "HISTORY, so the earlier note is not mistaken for a live defect: until 2026-09-16 "
+    "scripts/verify_workbook.py inferred scale from the COLUMN HEADER only, and neither this sheet's headers "
+    "('FY2025') nor a metric sheet's carries a unit token, so both sides were read as scale 1 and compared raw "
+    "- which made rows 1-4 report as disagreeing in both years. That was a gap in the checker, not in these "
+    "figures. It was fixed the same day (_unit_scale() now returns None rather than 1.0 when a label carries no "
+    "unit, with _km1_row_scale() preferring the ROW LABEL, then the header, then the sheet), and this workbook "
+    "now cross-checks 20 of 20 KM1 cells clean. Do not rescale these cells to £m: they are right as printed, "
+    "and this sheet is deliberately not normalised away from the unit the bank published.\n"
+    "\n"
+    "LATEST-EDITION CHECK: ABCIB's own disclosures index "
+    "(https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel Pillars/) checked 2026-09-16 "
+    "- newest Pillar 3 is the Pillar 3 Report 2025 (year ended 31 December 2025), already carried here and "
+    "already cited by this script. None newer."
+)
+
+bw.add_km1_sheet(
+    title="ABC International Bank plc - KM1 Key Metrics",
+    subtitle="The 'ABCIB CONSOLIDATED' UK KM1 - Key metrics template, reproduced in the bank's own row order, "
+             "row numbers, labels and precision. Amounts in £'000 as published; ratios as printed. FY2023 and "
+             "earlier are blank because ABCIB did not publish this template before its FY2024 report - see the "
+             "sources note, which also records a printed-separator defect in FY2025 row 3.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=300,
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
+)
 
 metric(
     "CET1 Capital", "£m",

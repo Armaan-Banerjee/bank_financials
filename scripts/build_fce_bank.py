@@ -25,16 +25,38 @@ AR2022_AMENDED_URL = "https://find-and-update.company-information.service.gov.uk
 AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company/00772784/filing-history/MzMzMzk0NjU4NWFkaXF6a2N4/document?format=pdf&download=0"
 
 # HD-046: FY2014-FY2020 sourced from FCE Bank's own investor-relations Annual Reports,
-# hosted at fcebank.com until the site went dark (fcebank.com/pdf/investor_center/... now
-# returns 404 as of 2026-09; the domain root itself still resolves but the investor-centre
-# PDF paths are gone). Retrieved via the Wayback Machine (CDX API bounded 2014-2021,
+# hosted at fcebank.com. Retrieved via the Wayback Machine (CDX API bounded 2014-2021,
 # per this ticket's instructions) - each URL below is the *fullest* capture found for that
 # document (the first crawl of several of these PDFs was truncated by Internet Archive's
 # own 1MB-per-capture limit on that crawl date; a later, complete 2022-06-15 re-crawl of
 # the same URL was used instead wherever the two differ in byte size). All are genuine,
 # text-native (not scanned) PDFs - confirmed via pdftotext extraction, unlike the 5
 # Companies House filings (FY2021-2025) which are scanned/image-only.
-AR2020_URL = "https://web.archive.org/web/20220615085358id_/https://www.fcebank.com/pdf/investor_center/2020_Annual_Report.pdf"
+#
+# CORRECTED 2026-09-16 (KM1-012). This comment used to say the site "went dark" and that
+# "fcebank.com/pdf/investor_center/... now returns 404 as of 2026-09 ... the investor-centre
+# PDF paths are gone". THAT WAS FALSE, and it is the same error as the one corrected in
+# RWA_BREAKDOWN_NOTE below: a fact about our REACH written down as a fact about the bank.
+# fcebank.com is a JavaScript single-page app that renders no <a> tags to a plain fetcher,
+# so the directory looks empty to a crawler - but every one of these files is live and
+# served directly. Re-fetched all 17 on 2026-09-16 with a browser UA; all returned HTTP 200,
+# Content-Type application/pdf: 2021 (3,683,467 B), 2020 (2,603,938), 2019 (3,536,466),
+# 2018 (3,925,679), 2017 (3,113,014), 2016 (2,785,858), 2015 (3,778,297), 2014 accounts
+# (1,925,001), 2013 (3,365,008), 2012 (3,888,123), 2011 (2,826,873), 2010 (1,266,731),
+# 2009 (1,237,529), 2008 (1,352,362), 2007 (4,418,334), 2006 (2,502,084) and the 2014
+# standalone Pillar 3 (479,795) - each at https://www.fcebank.com/pdf/investor_center/<name>
+# using exactly the filename at the tail of the Wayback URLs below.
+#
+# The Wayback URLs are DELIBERATELY KEPT as the cited source, because they are the files the
+# figures in this script were actually transcribed from and a citation must name what was
+# read, not what could have been read. The live originals above are the better primary
+# source and any future re-transcription of FY2006-FY2021 should use them; that re-sourcing
+# is out of scope for KM1-012 and was not done, so no figure here changed.
+#
+# Note the site's own JS document manifest lists annual reports only back to 2015 - the
+# FY2006-FY2014 paths are unlinked but still served. "Not linked" and "not published" are
+# different findings, and so are "not linked" and "gone".
+AR2020_URL ="https://web.archive.org/web/20220615085358id_/https://www.fcebank.com/pdf/investor_center/2020_Annual_Report.pdf"
 AR2019_URL = "https://web.archive.org/web/20220615085141id_/https://www.fcebank.com/pdf/investor_center/2019_Annual_Report.pdf"
 AR2018_URL = "https://web.archive.org/web/20220615085110id_/https://www.fcebank.com/pdf/investor_center/2018_Annual_Report.pdf"
 AR2017_URL = "https://web.archive.org/web/20220615085008id_/https://www.fcebank.com/pdf/investor_center/2017_Annual_Report.pdf"
@@ -62,7 +84,8 @@ P3_2025_URL = "https://www.fcebank.com/pdf/investor_center/2025/FCE%20Bank%20PLC
 
 # HD-076: FY2006-FY2013 (Balance Sheet/P&L/Statement of Changes in Equity/Cash Flow Statement
 # ONLY - Pillar 3/Asset Quality/RWA Breakdown untouched, out of scope). Sourced the same way as
-# HD-046's FY2014-FY2020 (Wayback Machine, fcebank.com/pdf/investor_center/... now dead). Every
+# HD-046's FY2014-FY2020 (Wayback Machine; the "... now dead" that stood here was false - see the
+# 2026-09-16 correction above, all eight of these are live on fcebank.com today). Every
 # one of these 8 captures ALSO hit the same 1 MiB-per-capture truncation the ticket warned about
 # on its first crawl date; a later, complete 2022-06-15/2022-06-20 re-crawl of the same URL was
 # used instead in every case (confirmed via CDX API length comparison before downloading - see
@@ -178,7 +201,13 @@ def p3_sources(extra=""):
         f"FY2025: 2025 Pillar 3 Report, KM1 p.4, OV1 p.15 - {P3_2025_URL}\n"
         f"FY2024: 2024 Pillar 3 Report, KM1 p.4, OV1 p.15 - {P3_2024_URL}\n"
         f"FY2023: 2023 Pillar 3 Report, KM1 p.4, OV1 p.14 - {P3_2023_URL}\n"
-        f"FY2022: 2022 Pillar 3 Report, KM1 p.4, OV1 p.19 - {P3_2022_URL}\n"
+        f"FY2022: 2022 Pillar 3 Report, KM1 p.5, OV1 p.19 - {P3_2022_URL}\n"
+        "(Page numbers throughout are the PRINTED folio - the number in each page's own "
+        "'FCE Bank plc ... N' footer, which also matches each report's own contents page and its "
+        "own body cross-references ('as disclosed in KM1 on page 5' / 'on page 4'). They are NOT "
+        "pdftotext sheet indices, which run one higher in all four of these documents because of "
+        "the cover sheet. Corrected 2026-09-16 - the 2022 edition's KM1 was previously cited as "
+        "p.4 here and the other three as p.3 in the KM1 sheet's own note.)\n"
         "Each report's KM1/OV1 also carries the prior year-end as a comparative column, and every "
         "overlapping figure agrees exactly - FY2023's report additionally gives all four quarters of "
         "2023 plus Dec 2022. NOTE FY2022's KM1 column b is 30 June 2022, NOT a prior year-end.\n"
@@ -235,6 +264,27 @@ STATEMENTS_ENTITY_NOTE = (
     "into one line; FY2024-FY2025 split this into separate 'Other liabilities' and 'Provisions' lines. "
     "Blank cells indicate that year's own report did not disclose that specific line separately at that "
     "granularity - the underlying totals reconcile exactly across all 5 years regardless of presentation.\n\n"
+    "WHY verify_workbook.py REPORTS BLOCK MISMATCHES ON THE P&L AND CASH FLOW SHEETS (checked "
+    "2026-09-16, all benign). That checker sums only the DATA rows since the last TOTAL row, which is "
+    "the right rule for a flat statement and the wrong one for FCE's, because FCE's P&L nests subtotals "
+    "(Net interest income and Net fees and commissions income both feed Total income; Total income and "
+    "Operating expenses both feed Profit before tax). Every flagged line reconciles once the skipped "
+    "subtotal is included - e.g. FY2025 Total income 390+32+0=422, Profit before tax "
+    "422-31-265-15-31+87=167, Profit after tax 167-71=96, and FY2024 Profit for the period 55+157=212 "
+    "and Total comprehensive income 212-42-27-134=9. On the Cash Flow sheet the same thing happens at "
+    "the closing-cash tail, where the checker omits the 'Net (decrease)/increase' TOTAL row: FY2025 "
+    "-162+1253+20=1111 and FY2024 -381+2557-50-873=1253, both exactly the printed closing balance. "
+    "Note also that 'Operating expenses' is a single line item that happens to be bolded, not a subtotal "
+    "of the ECL row above it. No figure on either sheet is in question.\n\n"
+    "MARKETABLE SECURITIES ROW ADDED 2026-09-16 (KM1-012): FCE prints 'Marketable securities' (Note 12) as "
+    "its own Group balance-sheet line immediately below Cash, but only in the FY2010-FY2013 reports - "
+    "£223m at 31 Dec 2010 and £1m at 31 Dec 2012, and '-' (nil) at 31 Dec 2011 and 31 Dec 2013. The line "
+    "had never been transcribed, which is why the FY2010 asset rows summed to 13,789 against a printed "
+    "Total assets of 14,012 (a gap of exactly 223) and FY2012's summed one short. Both totals were always "
+    "correct as printed; only the component row was missing, so no existing figure changed when it was "
+    "added. The word 'marketable' does not appear anywhere in the FY2006-FY2009 Annual Reports and the "
+    "line is absent from the balance sheet in FY2014 onward, so those years are blank because FCE printed "
+    "no such line - not because one was looked for and not found.\n\n"
     "PRESENTATION NOTE (P&L): FY2021-FY2023's own P&L show 'Income from leasing & other operating income' "
     "as one combined line, plus separate '(Loss)/Gain on disposal of Operating Leases', 'Depreciation of "
     "property and equipment' and 'Depreciation of right-of-use assets' lines. FY2024 renames the combined "
@@ -381,18 +431,57 @@ RWA_BREAKDOWN_NOTE = (
     "FY2022 RESTORED 2026-09-12 (fresh independent re-verification): the prior claim of 'no Pillar 3 chapter "
     "exists in these years' Annual Reports' was correct as far as it went (confirmed again - no 'Pillar 3 "
     "Disclosures' chapter appears in the FY2022-FY2025 Annual Reports' own contents pages) but missed that "
-    "FCE separately published a standalone '2022 Pillar 3 Report' PDF on its own website (not linked from the "
-    "Annual Report, not currently live on fcebank.com, but archived by the Wayback Machine) - this is a real, "
-    "genuine UK OV1 category-level disclosure, not a fabrication: FCE Bank plc, 2022 Pillar 3 Report, 'UK OV1 "
-    "- Overview of risk weighted exposure amounts', p.19 (https://web.archive.org/web/20240723091812/"
-    "https://www.fcebank.com/pdf/investor_center/2022/FCE%20Bank%20PLC%20-%20Annual%20Pillar%203%20%20"
-    "Report.pdf).\n\n"
-    "FY2023-FY2025: STILL not publicly disclosed after this fresh check - a Wayback CDX search of the "
-    "bank's full investor_center archive found only one further document after the FY2022 annual report (a "
-    "'Q1 2023 Quarterly Pillar 3 Report', as at 31 March 2023, KM1 Key Metrics only, no OV1 category table, "
-    "and not a FY-end date in any case) and nothing at all for FY2024/FY2025 - confirming this is a genuine, "
-    "continuing gap in the bank's own disclosure (it appears to have stopped publishing Pillar 3 reports "
-    "after Q1 2023), not a search miss."
+    "FCE separately publishes a standalone '2022 Pillar 3 Report' PDF on its own website - a real, genuine "
+    "UK OV1 category-level disclosure, not a fabrication: FCE Bank plc, 2022 Pillar 3 Report, 'UK OV1 - "
+    f"Overview of risk weighted exposure amounts', printed p.19 - {P3_2022_URL}\n"
+    "SECOND CORRECTION 2026-09-16 (KM1-012). THIS PARAGRAPH PREVIOUSLY DESCRIBED THAT DOCUMENT AS 'not "
+    "currently live on fcebank.com, but archived by the Wayback Machine' AND CITED A WAYBACK CAPTURE FOR "
+    "IT. THAT WAS FALSE. The 2022 Annual Pillar 3 Report is live on the bank's own site, at the "
+    "P3_2022_URL above, and was re-fetched on 2026-09-16 to confirm it: HTTP 200, Content-Type "
+    "application/pdf, valid %PDF magic bytes, 1,657,641 bytes, 56 text-native pages. The contradiction "
+    "needed no fetch to spot - THIS VERY CONSTANT states thirty lines below that all four editions were "
+    "re-fetched live from fcebank.com and verified, so the note asserted the document was gone from the "
+    "site in one paragraph and confirmed it was live in the next. The stale sentence was a leftover from "
+    "the 2026-09-12 pass, when the site's JS-app document manifest had not yet been found and Wayback was "
+    "genuinely the only route to the file; recovering the live URL on 2026-09-15 made it false, and "
+    "updating the P3_20xx_URL constants without re-reading this note left it standing. The Wayback capture "
+    "(https://web.archive.org/web/20240723091812/https://www.fcebank.com/pdf/investor_center/2022/"
+    "FCE%20Bank%20PLC%20-%20Annual%20Pillar%203%20%20Report.pdf) remains valid and is kept here purely as a "
+    "fallback against future link rot - it is not the source of any figure on this sheet.\n\n"
+    "FY2023-FY2025 CORRECTED 2026-09-15, RE-CONFIRMED 2026-09-16. THE CLAIM THAT PREVIOUSLY STOOD HERE "
+    "WAS FALSE and is recorded so it is not reintroduced. It read: 'FY2023-FY2025: STILL not publicly "
+    "disclosed after this fresh check - a Wayback CDX search of the bank's full investor_center archive "
+    "found only one further document after the FY2022 annual report (a Q1 2023 Quarterly Pillar 3 Report...) "
+    "and nothing at all for FY2024/FY2025 - confirming this is a genuine, continuing gap in the bank's own "
+    "disclosure (it appears to have stopped publishing Pillar 3 reports after Q1 2023), not a search miss.'\n"
+    "WHY IT WAS WRONG: it was a conclusion about WAYBACK'S COVERAGE written down as a fact about FCE. FCE "
+    "publishes an Annual Pillar 3 Report every year, FY2022 through FY2025, each containing a full UK OV1 "
+    "table - and the FY2023/FY2024/FY2025 category figures printed on THIS VERY SHEET were transcribed from "
+    "exactly those reports, so the note contradicted the rows beneath it. The reports were missed because "
+    "fcebank.com is a JavaScript single-page app that renders no links to a plain fetcher and the filenames "
+    "are irregular; they were recovered on 2026-09-15 from the document manifest embedded in the site's own "
+    "JS bundle. This sheet's FY2022-FY2025 rows come from the four reports cited in P3_2022_URL / "
+    "P3_2023_URL / P3_2024_URL / P3_2025_URL above.\n"
+    "RE-CONFIRMED 2026-09-16 for KM1-012, on the bank's own live site rather than from our citation list. "
+    "The site's entry bundle has since changed hash (/assets/index-D0Iw5D8e.js), but it lazily loads the "
+    "same /assets/index-sDDPyUiF.js that carries the manifest; that file is still live (HTTP 200, 21,034 "
+    "bytes) and enumerates 79 investor-centre PDF paths, among them 'FCE Bank PLC - ANNUAL PILLAR 3 REPORT "
+    "2023.pdf', 'FCE Bank PLC - Annual Pillar 3 Disclosures - Doc.pdf' (2024) and 'FCE Bank PLC - 2025 "
+    "Annual P3 - Doc Final Published.pdf'. All four editions were re-fetched and verified: HTTP 200, "
+    "Content-Type application/pdf, valid %PDF magic bytes, text-native, 56/27/28/28 pages respectively.\n"
+    "WHY verify_workbook.py REPORTS TWO BLOCK MISMATCHES ON THIS SHEET (checked 2026-09-16, both "
+    "benign). Its block-sum heuristic sums the DATA rows since the last TOTAL. On the FY2014-FY2021 "
+    "block it omits the 'Total credit risk' subtotal, and including it reconciles exactly "
+    "(FY2021 10,294+33+170+930 = 11,427). On the FY2022-FY2025 UK OV1 block it double-counts the "
+    "'of which: credit valuation adjustment (CVA)' row, which is a sub-row of Counterparty credit risk "
+    "and not an additional category, and it also adds the 'Amounts below thresholds for deduction' row, "
+    "which FCE presents as a memo item expressly outside the total. Excluding both reproduces FCE's own "
+    "printed figure exactly: FY2025 9,066+315+0+635 = 10,016, FY2024 9,465+344+0+515 = 10,325, FY2023 "
+    "12,719+326+160+787 = 13,993, FY2022 11,542+447+79+840 = 12,908. Both row labels already say what "
+    "they are. No figure on this sheet is in question.\n\n"
+    "The one thing the old note got right is kept: FCE also published QUARTERLY Pillar 3 reports during "
+    "2023 (Q1 and Q3), which carry KM1 key metrics only and no OV1 category table, and are not financial "
+    "year-ends in any case. They are not used on this sheet."
 )
 
 # ---------------------------------------------------------------
@@ -405,6 +494,21 @@ balance_sheet_rows = [
       "FY2020": 2048, "FY2019": 1453, "FY2018": 1879, "FY2017": 1544, "FY2016": 1654,
       "FY2015": 1669, "FY2014": 1628, "FY2013": 2300, "FY2012": 2545, "FY2011": 2767,
       "FY2010": 2094, "FY2009": 2586, "FY2008": 2695, "FY2007": 1601, "FY2006": 1133}),
+    # ADDED 2026-09-16 (KM1-012). This line was missing entirely, and its absence was the
+    # whole of the Balance Sheet's Total-assets reconciliation failure: FY2010's asset rows
+    # summed to 13,789 against a printed Total assets of 14,012, a gap of exactly 223, while
+    # FY2009 and FY2011 tied exactly (so it was never a rounding artifact). FCE prints
+    # "Marketable securities" as its own Group balance-sheet line, Note 12, immediately below
+    # Cash - £223m at 31 Dec 2010 (Annual Report and Accounts 2010, Group Balance Sheet,
+    # printed p.38) and £1m at 31 Dec 2012 (Annual Report and Accounts 2012, printed p.42),
+    # which also accounts for the FY2012 gap of 1 that its size made look like rounding.
+    # Every other year checked: FY2011 and FY2013 print the line as "-" (nil), and the word
+    # "marketable" does not appear anywhere in the FY2006-FY2009 reports, nor as a balance
+    # sheet line in FY2014 onward. Blank therefore means "FCE printed no such line", not
+    # "not found". No existing figure was changed - the totals were always right; a
+    # component row was simply absent.
+    ("DATA", "Marketable securities (FCE prints this line FY2010-FY2013 only; nil in FY2011/FY2013)",
+     {"FY2012": 1, "FY2010": 223}),
     ("DATA", "Derivative financial instruments",
      {"FY2025": 44, "FY2024": 96, "FY2023": 112, "FY2022": 301, "FY2021": 63,
       "FY2020": 93, "FY2019": 147, "FY2018": 244, "FY2017": 334, "FY2016": 349,
@@ -1100,6 +1204,199 @@ CALC_NOTE = (
     "chapter was dropped. It did not - it moved Pillar 3 into a separate annual document (see the "
     "P3_20xx_URL comment at the top of this script for why those were hard to find). All four years "
     "now come from each year's own UK KM1 'Key metrics' table, rows 1-7."
+)
+
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-012)
+#
+# FCE prints a full, row-numbered "UK KM1 - Key metrics" table in each of its
+# four standalone Annual Pillar 3 Reports (FY2022-FY2025). Located from each
+# document's own contents line rather than by hunting a digit-dense page
+# (map rule 16). Unit is "£ mil" as FCE prints it, stated on each section band.
+#
+# Each year comes from the edition in which it is the REPORTING year (rule 1),
+# which matters here: the 2025 edition restates FY2024's row UK 16a.
+#
+# The column set is a property of the TABLE, not the bank (rule b): the 2023
+# edition prints the full five-column quarterly template (Dec/Sep/Jun/Mar-23 and
+# Dec-22) while 2024 and 2025 print only columns a and e, and 2022 prints a and
+# b (Dec-22 and Jun-22). Only year-end columns are used; the intervening
+# quarters are read, discarded, and recorded in the citation.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - FCE Bank plc's own published UK KM1 key-metrics template, reproduced in FCE's own row "
+    "order, row numbering and printed precision. £ mil, FCE Bank plc consolidated basis (the same "
+    "basis as every other sheet in this workbook), confirmed from each report's Executive Summary "
+    "('This report presents the Pillar 3 disclosures of FCE Bank plc (FCE) for the year ended "
+    "31 December 20XX'). Each column is taken from the edition in which that year is the reporting "
+    "year:\n"
+    f"FY2025: 2025 Annual Pillar 3 Report, 'UK KM1 - Key metrics', printed p.4, column (a) - {P3_2025_URL}\n"
+    f"FY2024: 2024 Annual Pillar 3 Report, 'UK KM1 - Key metrics', printed p.4, column (a) - {P3_2024_URL}\n"
+    f"FY2023: 2023 Annual Pillar 3 Report, 'UK KM1 - Key metrics', printed p.4, column (a) - {P3_2023_URL}\n"
+    f"FY2022: 2022 Annual Pillar 3 Report, 'UK KM1 - KEY METRICS', printed p.5, column (a) - {P3_2022_URL}\n"
+    "All four re-fetched and verified on 2026-09-16: HTTP 200, Content-Type application/pdf, valid "
+    "%PDF magic bytes, text-native, 56 / 27 / 28 / 28 pages.\n"
+    "PAGE NUMBERS CORRECTED 2026-09-16. These are the PRINTED FOLIOS, and each document states its "
+    "own three times over: the page's own footer reads 'FCE Bank plc ... 5' (2022 edition) or "
+    "'... 4' (2023, 2024 and 2025 editions); each report's contents page lists 'UK KM1 - Key "
+    "metrics ... 5' or '... 4' to match; and each report's own risk narrative cross-refers to "
+    "'KM1 on page 5' / 'KM1 on page 4'. A pdftotext sheet index runs ONE HIGHER than the folio in "
+    "all four of these documents (the cover sheet is unnumbered), and an earlier version of this "
+    "note cited p.3 / p.4 - one too LOW, having assumed the contents page was the thing that was "
+    "off. It was not. A citation is a promise about where a reader should look, and nothing inside "
+    "this workbook could have revealed the error.\n\n"
+    "PRESENTATION NOTES - all of these are things FCE did, not choices made here:\n"
+    "* THE COLUMN SET CHANGES BETWEEN EDITIONS. The 2023 edition prints the full five-column "
+    "quarterly template (a-e: 31 Dec 2023, 30 Sep 2023, 30 Jun 2023, 31 Mar 2023, 31 Dec 2022); the "
+    "2024 and 2025 editions print only columns a and e (two year-ends); the 2022 edition prints a and "
+    "b (31 Dec 2022 and 30 Jun 2022). Only year-end columns are reproduced above - a quarter-end is "
+    "not a financial year. The discarded columns were read, and are recorded here so the reading is "
+    "checkable: 2023 edition Sep-23 / Jun-23 / Mar-23 CET1 2,345 / 2,362 / 2,406 and RWA 13,774 / "
+    "13,906 / 13,873; 2022 edition Jun-22 CET1 2,687, RWA 11,707, CET1 ratio 22.95%.\n"
+    "* UK 7b IS A DASH, NOT A ZERO. FCE prints '-%' for Additional AT1 SREP requirements in every "
+    "column of every edition, so those cells are BLANK here rather than 0%. FCE holds no AT1 "
+    "instruments, which is also why rows 1 and 2 are identical in every year. No printed zero appears "
+    "anywhere in the year-end columns of this table; the one '0.00%' FCE prints (row 9) is in the "
+    "2022 edition's discarded 30 Jun 2022 column.\n"
+    "* ROWS UK 8a, UK 9a, 10 AND UK 10a ARE A FORMAL EXCLUSION, not rows this project failed to find, "
+    "and FCE states it under the table in every edition - so they are not shown as blank rows. The "
+    "wording changed between editions and both are recorded: 2022 edition, 'FCE does not have "
+    "Conservation, Systemic, G-SII or O-SII buffers, therefore rows UK 8a, UK 9a, 10 and UK 10a have "
+    "been excluded from the above disclosure'; 2023, 2024 and 2025 editions, 'FCE is not required to "
+    "hold buffers additional to those disclosed above, therefore rows UK 8a, UK 9a, 10 and UK 10a "
+    "have been removed from the above disclosure'.\n"
+    "* ROWS UK 14a-14e ARE BLANK FOR FY2022 FOR A STATED REASON, also an exclusion rather than a gap: "
+    "'UK 14a-e are applicable to LREQ firms, which FCE is not as at 31 Dec 2022, so has been excluded "
+    "from the above disclosure' (2022 edition). They appear from the 2023 edition onward. The 2023 "
+    "edition independently corroborates this - it prints those five rows for its four 2023 columns "
+    "and leaves its own 31 Dec 2022 comparative column blank on all five.\n"
+    "* ROWS 15-20 ARE AVERAGES, BY FCE'S OWN STATEMENT under the table in all four editions: the "
+    "Liquidity Coverage Ratio rows 15-17 'are calculated as the simple average of 12 data points "
+    "covering the noted and preceding 11 months', and the Net Stable Funding Ratio rows 18-20 'as the "
+    "simple average of four data points covering the noted and preceding three quarters'. They are "
+    "therefore not year-end spot figures, and the LCR and NSFR sheets in this workbook carry the same "
+    "averaged figures, so the two agree.\n"
+    "* THE 2025 EDITION RESTATES FY2024 ROW UK 16a AND THIS SHEET DOES NOT ADOPT IT. The 2025 edition "
+    "prints FY2024 cash outflows as 1,154 with an asterisk and its own footnote '*Restated prior year "
+    "from GBP1,114m'. The 2024 edition's own FY2024 column printed 1,114, which is the figure above, "
+    "because each year is taken from its own edition. Every other cell of the FY2024 column agrees "
+    "exactly between the two editions - this is a single-cell restatement, not a general one.\n"
+    "* A STALE PAGE FOOTER IN THE 2023 EDITION, recorded so a later reader does not mistake the "
+    "edition for the wrong year. That report's Executive Summary says 'for the year ended 31 December "
+    "2023' and its KM1 page is footed '2023 Pillar 3 Report', but several later pages in the same "
+    "file are footed '2022 Pillar 3 Report'. The KM1's own column headers (31 Dec 2023 ... 31 Dec "
+    "2022) settle the question.\n\n"
+    "WHY FY2021 AND EARLIER ARE BLANK - an absence established from the documents, not a failed "
+    "search. FCE published no UK KM1 before the FY2022 standalone report. Through FY2021 its Pillar 3 "
+    "disclosures were a chapter inside each year's own Annual Report and used the older risk-type "
+    "split ('Capital Requirement Split by Risk Type'), which is a different and shorter table, not an "
+    "unnumbered KM1. Those years' capital, RWA and ratio figures are on the individual metric sheets "
+    "and the RWA Breakdown sheet, sourced from that table and labelled as such; they are deliberately "
+    "not reassembled into a KM1 shape here.\n\n"
+    "LATEST-EDITION CHECK (2026-09-16, FCE's own site, not our citation list and not Wayback). "
+    "fcebank.com is a JavaScript single-page app whose shell now loads a new entry bundle "
+    "(/assets/index-D0Iw5D8e.js) that itself lazily loads /assets/index-sDDPyUiF.js, which is still "
+    "live (HTTP 200, 21,034 bytes) and is the document manifest. Enumerating it returns 79 "
+    "investor-centre PDF paths. The newest Annual Pillar 3 Report is the 2025 edition and the newest "
+    "Annual Report is 'FCE Bank plc Annual Report 2025', both already cited. The only 2026 item in "
+    "the entire manifest is a Half Year Management Statement, which is neither a financial year nor a "
+    "Pillar 3. Checked, none newer.\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="FCE Bank Plc — KM1 Key Metrics",
+    subtitle="FCE's own published UK KM1 key-metrics template, £m (FCE prints the unit as “£ mil”), reproduced in FCE's row order, "
+             "row numbering and printed precision, FCE Bank plc consolidated basis. FY2025-FY2022, "
+             "each from the edition in which that year is the reporting year; only year-end columns "
+             "are shown, since several editions also print quarter-ends. FY2021 and earlier are blank "
+             "because FCE published no UK KM1 before the FY2022 standalone Annual Pillar 3 Report. "
+             "Rows 15-20 are averages, not year-end spot figures, by FCE's own stated method. See the "
+             "source note for the FY2024 restatement and for the rows FCE formally excludes.",
+    rows=[
+        ("SECTION", "Available own funds (amounts) — £m; FCE prints this unit as “£ mil”", {}),
+        ("DATA", "1    Common Equity Tier 1 (CET1) capital (£m)",
+         {"FY2025": 1620, "FY2024": 1773, "FY2023": 2393, "FY2022": 2137}),
+        ("DATA", "2    Tier 1 capital (£m)",
+         {"FY2025": 1620, "FY2024": 1773, "FY2023": 2393, "FY2022": 2137}),
+        ("DATA", "3    Total capital (£m)",
+         {"FY2025": 1869, "FY2024": 2021, "FY2023": 2700, "FY2022": 2457}),
+        ("SECTION", "Risk-weighted exposure amounts — £m (“£ mil” as FCE prints it)", {}),
+        ("DATA", "4    Total risk-weighted exposure amount (£m)",
+         {"FY2025": 10016, "FY2024": 10325, "FY2023": 13993, "FY2022": 12908}),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5    Common Equity Tier 1 ratio (%)",
+         {"FY2025": "16.17%", "FY2024": "17.17%", "FY2023": "17.10%", "FY2022": "16.55%"}),
+        ("DATA", "6    Tier 1 ratio (%)",
+         {"FY2025": "16.17%", "FY2024": "17.17%", "FY2023": "17.10%", "FY2022": "16.55%"}),
+        ("DATA", "7    Total capital ratio (%)",
+         {"FY2025": "18.66%", "FY2024": "19.57%", "FY2023": "19.30%", "FY2022": "19.03%"}),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of "
+                    "risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+         {"FY2025": "1.73%", "FY2024": "1.74%", "FY2023": "1.73%", "FY2022": "1.74%"}),
+        # UK 7b is printed "-%" in every column of every edition: a dash, so blank here, not zero.
+        ("DATA", "UK 7b    Additional AT1 SREP requirements (%) — FCE prints a dash in every year", {}),
+        ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+         {"FY2025": "0.55%", "FY2024": "0.53%", "FY2023": "0.47%", "FY2022": "0.48%"}),
+        ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+         {"FY2025": "10.28%", "FY2024": "10.27%", "FY2023": "10.20%", "FY2022": "10.22%"}),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure "
+                    "amount)", {}),
+        ("DATA", "8    Capital conservation buffer (%)",
+         {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+        ("DATA", "9    Institution specific countercyclical capital buffer",
+         {"FY2025": "1.05%", "FY2024": "1.08%", "FY2023": "0.89%", "FY2022": "0.32%"}),
+        ("DATA", "11    Combined buffer requirement (%)",
+         {"FY2025": "3.55%", "FY2024": "3.58%", "FY2023": "3.39%", "FY2022": "2.82%"}),
+        ("DATA", "UK 11a    Overall capital requirements (%)",
+         {"FY2025": "13.83%", "FY2024": "13.85%", "FY2023": "13.59%", "FY2022": "13.04%"}),
+        ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+         {"FY2025": "8.38%", "FY2024": "9.30%", "FY2023": "9.09%", "FY2022": "8.82%"}),
+        ("SECTION", "Leverage ratio — amounts in £m (“£ mil” as FCE prints it); ratios in %", {}),
+        ("DATA", "13    Total exposure measure excluding claims on central banks (£m)",
+         {"FY2025": 12528, "FY2024": 13139, "FY2023": 17069, "FY2022": 16154}),
+        ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+         {"FY2025": "12.93%", "FY2024": "13.49%", "FY2023": "14.02%", "FY2022": "13.23%"}),
+        ("SECTION", "Additional leverage ratio disclosure requirements — excluded in FY2022, when "
+                    "FCE was not an LREQ firm", {}),
+        ("DATA", "UK 14a    Fully loaded ECL accounting model leverage ratio excluding claims on "
+                 "central banks (%)",
+         {"FY2025": "12.93%", "FY2024": "13.49%", "FY2023": "14.02%"}),
+        ("DATA", "UK 14b    Leverage ratio including claims on central banks (%)",
+         {"FY2025": "12.15%", "FY2024": "12.61%", "FY2023": "12.40%"}),
+        ("DATA", "UK 14c    Average leverage ratio excluding claims on central banks (%)",
+         {"FY2025": "13.76%", "FY2024": "14.12%", "FY2023": "13.91%"}),
+        ("DATA", "UK 14d    Average leverage ratio including claims on central banks (%)",
+         {"FY2025": "12.99%", "FY2024": "13.01%", "FY2023": "12.36%"}),
+        ("DATA", "UK 14e    Countercyclical leverage ratio buffer (%)",
+         {"FY2025": "0.40%", "FY2024": "0.40%", "FY2023": "0.30%"}),
+        ("SECTION", "Liquidity Coverage Ratio — amounts in £m (“£ mil” as FCE prints it); ratios in % — simple average of 12 monthly data "
+                    "points, per FCE's own stated method", {}),
+        ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value-average) (£m)",
+         {"FY2025": 688, "FY2024": 1574, "FY2023": 1751, "FY2022": 1441}),
+        ("DATA", "UK 16a    Cash outflows - Total weighted value (£m) — FY2024 restated to 1,154 "
+                 "by the 2025 edition; its own edition's 1,114 is kept (see note)",
+         {"FY2025": 849, "FY2024": 1114, "FY2023": 1387, "FY2022": 1186}),
+        ("DATA", "UK 16b    Cash inflows - Total weighted value (£m)",
+         {"FY2025": 646, "FY2024": 689, "FY2023": 685, "FY2022": 564}),
+        ("DATA", "16    Total net cash outflows (adjusted value) (£m)",
+         {"FY2025": 240, "FY2024": 483, "FY2023": 703, "FY2022": 622}),
+        ("DATA", "17    Liquidity coverage ratio (%)",
+         {"FY2025": "303%", "FY2024": "359%", "FY2023": "260%", "FY2022": "238%"}),
+        ("SECTION", "Net Stable Funding Ratio — amounts in £m (“£ mil” as FCE prints it); ratios in % — simple average of four quarterly data "
+                    "points, per FCE's own stated method", {}),
+        ("DATA", "18    Total available stable funding - (Weighted value - average) (£m)",
+         {"FY2025": 11153, "FY2024": 12984, "FY2023": 15242, "FY2022": 13238}),
+        ("DATA", "19    Total required stable funding - (Weighted value - average) (£m)",
+         {"FY2025": 8292, "FY2024": 9689, "FY2023": 10994, "FY2022": 9943}),
+        ("DATA", "20    NSFR ratio (%)",
+         {"FY2025": "135%", "FY2024": "135%", "FY2023": "139%", "FY2022": "133%"}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=420,
+    years=PILLAR3_YEARS,
 )
 
 metric(

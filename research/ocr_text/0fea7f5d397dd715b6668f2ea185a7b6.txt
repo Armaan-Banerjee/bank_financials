@@ -1,0 +1,2916 @@
+Company Registration No. 3793679
+
+Bank Mandiri (Europe) Limited
+
+Annual Report and Financial Statements
+
+31 December 2018
+
+{un
+
+COMPANIES HOUSE
+Bank Mandiri (Europe) Limited
+
+Annual Report and Financial statements 2018
+
+Contents
+
+Officers and professional advisers
+Chairman’s statement
+
+Strategic Report
+
+Directors’ report
+
+Directors’ responsibilities statement
+Independent auditor’s report
+
+Profit and loss account
+
+Statement of comprehensive income
+Balance sheet
+
+Statement of change in equity
+
+Notes to the financial statements
+
+Page
+
+15
+16
+17
+18
+
+19
+Bank Mandiri (Europe) Limited
+
+Annual Report and Financial statements 2018
+Officers and professional advisers
+
+Directors
+
+Mr Mahendra Siregar (Chairman)
+
+Mr I Nyoman Gede Suarja (Chief Executive)
+
+Mr J K Williams (Non Executive Director)
+
+Ms Ita Tetralaswati (Non Executive Director)
+
+Mr. Sulaeman Suparman Natamanggala (Non Executive Director)
+
+Management
+
+Mr I Nyoman Gede Suarja (Chief Executive)
+
+Mr A J Joshi (Head of*Finance & Operations)
+
+Mr R H Garai (Manager - Internal Control Compliance, & MLRO)
+
+Company Secretary
+Mr AJ Joshi
+
+Registered Office
+
+4 Thomas More Square
+London
+EIW 1YWw
+
+Bankers
+
+HSBC Bank Plc
+60 Fenchurch Street
+London EC3M 4BA
+
+Independent Auditor
+
+Deloitte LLP
+
+Hill House
+
+1 Little New Street
+London EC4A 3TR
+
+(appointed 15 March 2018)
+(resigned 15 March 2018)
+Bank Mandiri (Europe) Limited
+
+Chairman’s Statement
+
+_ On behalf of the Board of Directors it is my pleasure to present the annual report and audited financial statements of
+- Bank Mandiri (Europe) Limited (“BMEL”); a wholly-owned subsidiary of PT Bank Mandiri (Persero) Tbk, Indonesia.
+
+2018 was characterised by continued weakness of the US Dollar against the major currencies, a gradual drift upwards
+in interest rates and a demand driven decline in credit margins. Against this backdrop, I am pleased to report that Bank
+Mandiri (Europe) Ltd was successful in reporting net profits of US$285K, after estimated credit loss provision of
+US$147k as required under IFRS 9 effective as of 1st January 2018. (2017: US$ nil)
+
+The Bank made positive strides in 2018 to improving its financial health and growing the business. Our focus on our
+five year strategy of selective and sustainable growth mainly remains unchanged and we will continue to pursue the
+same strategy in 2019. The past year has been a productive and busy year for the Bank and we were successful in
+increasing our assets by 11% and also securing interbank funding lines.
+
+Whilst the terms of the UK leaving the EU remain uncertain, the impact of Brexit has had little effect on the Bank’s
+performance in 2018.
+
+The Bank continued operations, supported by its Parent Bank, focus on discounting Usance Payable At Sight (“UPAS”)
+bills, while developing a fixed-income bond portfolio, syndicated loans and offering supporting treasury services to
+facilitate trade related transactions.
+
+It is pleasing to report an operating profit in 2018 before tax and provision of US$560k (2017: US$810k) with the
+resulting profit after tax and provisions of US$285k (2017: US$602k). Whilst, the Bank does not have a trading book,
+the value of our bond portfolio held for interest income and liquidity has been adversely affected by the rise in US$
+interest rates.
+
+As of 31 December 2018 our total assets were US$174m, being an increase of 11% over US$156m at the end of 2017.
+The Bank continued to manage its assets and liabilities to ensure that the business is supported by the appropriate level
+of capital, funding and liquidity resources; more details as to the Bank’s liquidity management are contained in note 26
+to the financial statements. The Bank continues to demonstrate sufficient capital resources to sustain the Bank’s planned
+business activities.
+
+In 2019, the Bank, will continue to focus on exploring and-acquiring further business opportunities to improve its
+performance by greater co-operation with high-profile Indonesian —- UK/European trade related corporate customers,
+servicing their requirements in areas such as treasury products, commercial borrowing, trade finance services and
+remittance services related to trade. We do this successfully but conscious of the fact that we may have to confront
+some indirect consequences in 2019 arising from the fragility of the UK economy and the unknown issues associated
+with departing from European Union. The Bank will continue to diversify its funding from inter-group and look to
+secure long term funding to mitigate liquidity and interest risk gap.
+
+To conclude, I would like to express my gratitude to our clients and business counterparts for their support and custom
+over the past year and to my fellow directors, the executive management and, not least, to the staff who have remained
+
+extremely professional, focused and committed, for their hard work and dedication.
+
+Mahendra Siregar
+Chairman
+12 April 2019
+Bank Mandiri (Europe) Limited
+Strategic Report
+
+Principal activities and review of business
+
+The Bank is an authorised UK Bank under the Banking Act 1987 and carries on international Corporate and Institutional
+Banking business, which includes the following activities:
+
+(1) Trade Finance.
+
+(2) Inter-bank Deposits.
+
+(3) |. Current and Deposit Accounts.
+
+(4) Purchase of Investment Securities, Marketable Securities and Secondary Market Debt.
+
+Details of the Review of Business have been covered in the Chairman’s Statement.
+
+Principal risks and uncertainties
+
+The Board, in conjunction with Senior Management of the Bank, has established comprehensive policies and
+procedures in order to manage and mitigate the risks and uncertainties facing the Bank and the ongoing implementation
+of such policies is monitored by management and through an independent internal audit function provided by the parent
+company. More detail as to the principal risks and uncertainties faced by the Bank and the mitigation thereof are
+contained in Note 24 to the Financial Statements.
+
+The Bank’s management has considered the nature and extent of risks and uncertainties arising from the United
+Kingdom to leave the European Union in April 2019 (“Brexit”) and the impact on the future performance and financial
+position of the Bank. The Bank’s Board and senior management do not anticipate Brexit would have a material impact
+on the future performance or the financial position of the Bank as the Bank is focused on expanding its lending book
+with the Indonesian counterparties and has minimal exposure to EU-based clients. The Bank’s management will
+continue to monitor any potentional impacts.
+
+Future developments
+
+The Bank will continue to explore trade finance business and build up its fixed income portfolio and loan portfolio. It
+will also look to provide services to high-profile Indonesian ~ UK/European trade related corporate customers, servicing
+their requirements in areas such as commercial borrowing, trade finance, forfeiting or bills discounting and remittance
+services. In so doing, BMEL will also seek to enhance relations with the interbank market by diversifying its source of
+funds, thus seeking to strengthen its funding structure.
+
+Going Concern
+
+The financial statements are prepared on a going concern basis, as the Directors are satisfied that the Bank has sufficient
+resources to continue in business for the foreseeable future. In making this assessment, the Directors have considered
+future projections of profitability, liquidity, capital resources and the Bank’s risk profile.
+
+Management have stress tested the Bank's capital requirements. This stress testing takes into account reasonably likely
+developments in all of the above risks, the Board's balance sheet management strategy and the deteriorating market
+conditions. This stress testing has demonstrated that the Bank has adequate capital buffer above the approved Individual
+Capital Guidance (ICG) to support the existing business and future plans.The Bank also stress tested the Liquidity
+position which also showed that there was adequate liquidity to meet all of its funding and regulatory obligation.
+
+Key performance indicators (‘KPI’)
+
+The Board of Directors monitors the Bank’s progress against its strategic objectives on a regular basis. Progress is
+assessed by comparison with the Bank’s strategy, budget plan and historical performance using financial measures.
+Bank Mandiri (Europe) Limited
+
+Strategic Report
+
+Financial KPIs
+
+As at 31 December 2018, the Bank had total assets of $174 million, which was an increase of $17 million compared to
+31 December 2017. The Bank made a profit of $285k after tax, compared to a profit of $602k in the previous year.
+
+Financial KPIs (continued)
+
+Our operating model continues to be in line with the strategy for a selective and sustained growth. The economic
+environment in our market segment continued to be difficult in 2018 following the turmoil that started in 2008 in the
+
+UK and many other major economies.
+
+2018 2017
+Return on average total shareholder equity 0.56% 1.20%
+Return on assets 0.16% 0.37%
+Cost efficiency , 46.25% 55.67%
+3.29% 3.35%
+
+Yield on assets
+
+Return on average total shareholder equity measures the return on the equity held in the business enabling the
+management to benchmark against competitors. ;
+
+Return on assets measures the return on average interest earning assets.
+
+Cost efficiency is a relative measure that indicates the consumption of resources in generating revenue. This is measured
+by dividing the total operating cost incurred to generate gross revenue.
+
+Yield on assets measured the average interest rate on all interest earning assets.This is measured by dividing the gross
+interest income by the total of interest earning assets.
+
+The Bank maintained good liquidity, stable funding and sufficient capital during the year.
+
+No relevant non-financial KPI’s are monitored
+
+Authorjsed for issue by the Board
+
+A J Joshi
+Company Secretary
+
+12 April 2019
+Bank Mandiri (Europe) Limited
+
+Directors’ report
+
+The directors present their report and the audited financial statements for the year ended 31 December 2018.
+
+Results and dividends
+The profit on ordinary activities after tax for the year amounted to US$285,000 (2017: profit of US$617,000).
+
+The directors do not recommend the payment of a dividend (2017: nil).
+
+Principal activities of the business
+
+The strategic report on pages 3 to 4 contains details of the principal activity of the Bank and developments during the
+year, details of exposure to risks and uncertainties and indications of likely future developments and any significant
+post balance sheet events. ‘
+
+Directors
+
+The details of the directors who served during the year and up to the date of signing can be seen on page I of this report.
+During 2018 and to date of this report there was Directors and Officers (D & O) indemnity insurance covering all the
+Board members from liabilities arising from the normal course of business. The purposes of this insurance is to provide
+financial protection for the Directors & Officers against the consequences of actual or alleged “wrongful acts” when
+acting in the scope of their duties.
+
+Share Capital ©
+
+The capital structure of the Bank consists of fully paid ordinary share capital and retained earnings. (as detailed in the
+Statement of Changes in Equity on page 16 of the financial statements).
+
+Auditor
+
+At the date of Board approval of this Report and Financial Statements for the year ended 31 December 2018, each of
+the Directors has confirmed that:
+
+« as far as they are aware, there was no relevant audit information of which the Company’s auditor was unaware; and
+
+e they have taken ail the steps necessary as a Director in order to make themselves aware of any relevant audit
+information and to establish that the auditor has been made aware of that information.
+
+This confirmation is given and should be interpreted in accordance with the provisions of Section 418 of the Companies
+Act 2006.
+
+Deloitte LLP has expressed its willingness to continue in office as auditor.
+
+Post balance sheet events
+
+The Directors are unaware of any material events that have occurred since the end of the financial year to the date of
+signing this report that could impact the financial health of the Bank.
+
+Authorised for issue by the Board
+
+Joshi
+Company Secretary
+
+12 April 2019
+Bank Mandiri (Europe) Limited
+
+Directors’ responsibilities statement
+
+The directors are responsible for preparing the Annual Report and the financial statements in accordance with applicable
+law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law the directors
+have elected to prepare the financial statements in accordance with United Kingdom Generally Accepted Accounting
+Practice (United Kingdom Accounting Standards and applicable law), including FRS 101 “Reduced Disclosure
+Framework”. Under company law the directors must not approve the financial statements unless they are satisfied that
+they give a true and fair view of the state of affairs of the company and of the profit or loss of the company for that
+period. In preparing these financial statements, the directors are required to:
+
+e select suitable accounting policies and then apply them consistently;
+® make judgements and accounting estimates that are reasonable and prudent;
+
+* state whether applicable UK Accounting Standards have been followed, subject to any material departures disclosed
+and explained in the financial statements; and
+
+* prepare the financial statements on the going concern basis unless it is inappropriate to presume that the company
+will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company’s transactions and disclose with reasonable accuracy at any time the financial position of the company and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They are also responsibie for
+safeguarding the assets of the company and hence for taking reasonable steps for the prevention and detection of fraud
+and other irregularities.
+INDEPENDENT AUDITOR'S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+Report on the audit of the financial statements
+
+Opinion
+
+In our opinion the financial statements:
+
+° give a true and fair view of the state of the company’s affairs as at 31 December
+2018 and of its profit for the year then ended;
+« have been properly prepared in accordance with United Kingdom Generally
+
+Accepted Accounting Practice, including Financial Reporting Standard 101
+“Reduced Disclosure Framework; and
+
+° have been prepared in accordance with the requirements of the Companies Act
+2006.
+
+We have audited the financial statements of Bank Mandiri (Europe) Limited (the ‘company’) which
+comprise:
+
+the Profit and loss account;
+
+the Statement of Comprehensive Income;
+the Balance sheet;
+
+the Statement of changes in equity; and
+the related notes 1 to 27.
+
+The financial reporting framework that has been applied in their preparation is applicable law and
+United Kingdom Accounting Standards, including Financial Reporting Standard 101 “Reduced
+Disclosure Framework” (United Kingdom Generally Accepted Accounting Practice).
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK))
+and applicable law. Our responsibilities under those standards are further described in the auditor's
+responsibilities for the audit of the financial statements section of our report.
+
+We are independent of the company in accordance with the ethical requirements that are relevant
+to our audit of the financial statements in the UK, including the FRC’s Ethical Standard as applied
+to public interest entities, and we have fulfilled our other ethical responsibilities in accordance with
+these requirements. We confirm that the non-audit services prohibited by the FRC’s Ethical
+Standard were not provided to the company.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a
+basis for our opinion.
+
+Summary of our audit approach
+
+Key audit matters The key audit matters that we identified in the current year was:
+
+e Impairment of lending receivables.
+
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+Materiality The materiality that we used in the current year was $1,465k which was
+determined on the basis of shareholder’s funds.
+
+Scoping Audit work to respond to the risks of material misstatement was
+performed directly by the audit engagement team.
+
+Conclusions relating to going concern
+
+We are required by ISAs (UK) to report in respect of the following We have nothing to
+matters where: report in respect of these
+
+* the directors’ use of the going concern basis of accounting matters.
+
+in preparation of the financial statements is not
+appropriate; or
+
+° the directors have not disclosed in the financial statements
+any identified material uncertainties that may cast
+significant doubt about the company’s ability to continue to
+adopt the going concern basis of accounting for a period of
+at least twelve months from the date when the financial
+statements are authorised for issue.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance
+in our audit of the financial statements of the current period and include the most significant
+assessed risks of material misstatement (whether or not due to fraud) that we identified. These
+matters included those which had the greatest effect on: the overall audit strategy, the allocation
+of resources in the audit; and directing the efforts of the engagement team.
+
+These matters were addressed in the context of our audit of the financial statements asa whole,
+and in forming our opinion thereon, and we do not provide a separate opinion on these matters.
+
+= Impairment of lending receivables
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+Key audit matter At 31 December 2018, a provision of $136k against expected credit losses
+
+description has been recognised. Loan impairment is an inherent risk when granting
+credit. There is a risk that loans issued by BMEL will not be repaid in full
+and indicators of impairment exist which management have not
+appropriately considered. As a result, the loan loss provision recognised
+may not be accurate and consequently, the value of receivables is
+overstated. The total value of loan receivables recognised at 31 December
+2018 is $158,689k
+
+The Company as at 31 December 2018 provides a working capital facility,
+a trade finance facility and now holds 3 syndicated loans on its balance
+sheet. There is a risk that such loans have not been appropriately
+assessed by management for indicators of impairment and therefore have
+been classified within the incorrect phase of IFRS 9 expected credit loss
+calculations. If indicators of impairment exist, consideration should be
+made as to whether a loan should be classified within stage two or stage
+three of the expected credit loss calculations.
+
+Due to the high level of judgements involved, we have determined that
+there was a potential for fraud through possible manipulation of this
+balance. .
+
+Please refer to note 1 for the description of a critical judgement over
+impairment of receivables.
+
+How the scope of To address the risk over impairment of lending receivables, we have
+our audit assessed the design and implementation of relevant controls over the
+
+responded tothe = impairment process.
+key audit matter We have understood the management's impairment assessment over
+
+lending receivables and also performed the following substantive
+procedures:
+
+- Tested all loans to agree the principal amount, interest rate, value
+date and maturity date to the loan confirmations/documentation,;
+
+- Considered and assessed whether any indicators of impairment
+triggers exist for all existing loans, to determine if a lending
+receivable should be classified within stage one, two or three;
+
+- We assessed and challenged management's methodology to
+calculate the IFRS 9 provision to assess whether it is in
+accordance with the accounting standard.
+
+- Fora sample of exposures, we challenged management's source
+of key input data into the ECL calculation, such as probabilities of
+default, toss given defaults by considering their relevance and
+appropriateness in the context of the circumstances of the
+company.
+
+- We assessed management’s classification of assets in the ECL
+calculation and reconciled the exposures to the general ledger.
+
+Key observations Overall, we concluded that the provisioning level was appropriate and free
+
+from material misstatement.
+
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+Our application of materiality
+
+We define materiality as the magnitude of misstatement in the financial statements that makes it
+probable that the economic decisions of a reasonably knowledgeable person would be changed or
+influenced. We use materiality both in planning the scope of our audit work and in evaluating the
+results of our work.
+
+Based on our professional judgement, we determined materiality for the financial statements as a
+whole as follows:
+
+Materiality $1,465k (2017: $1,512k)
+
+Basis 3% of shareholders’ funds (2017: 3% of shareholders’ funds)
+determining
+materiality
+
+Clini - Meme dit-me Considering the Bank’s limited activity, key stakeholders including the
+el alee-le eis regulator and the parent company, are focussed on solvency rather than
+profitability, therefore we conclude that shareholder's equity
+appropriately reflects the nature of the business.
+
+Equity $48,837k Materiality $1,465k
+Audit Committee
+m Equity # Materiality ee ——— reporting threshold
+$73k
+
+We agreed with the Audit & Risk Management Committee that we would report to the Committee all
+audit differences in excess of $73,250 (2017: $75,600), as well as differences below that threshold
+that, in our view, warranted reporting on qualitative grounds. We also report to the Audit & Risk
+Management Committee on disclosure matters that we identified when assessing the overall
+presentation of the financial statements.
+
+An overview of the scope of our audit
+
+Our audit was scoped by obtaining an understanding of the entity and its environment, including
+internal control, and assessing the risks of material misstatement. The Company has no branches.
+
+10
+INDEPENDENT AUDITOR'S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+Audit work to respond to the risks of material misstatement was performed directly by the audit
+engagement team.
+
+Other information
+
+The directors are responsible for the other information. The other We have nothing to
+information comprises: the information included in the annual report in respect of these
+report including Chairman’s Statement, Strategic Report and matters.
+
+Directors’ Report, other than the financial statements and our
+
+auditor’s report thereon.
+
+Our opinion on the financial statements does not cover the other
+information and, except to the extent otherwise explicitly stated in
+our report, we do not express any form of assurance conclusion
+thereon.
+
+In connection with our audit of the financial statements, our
+responsibility is to read the other information and, in doing so,
+consider whether the other information is materially inconsistent
+with the financial statements or our knowledge obtained in the
+audit or otherwise appears to be materially misstated.
+
+If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether there is a
+material misstatement in the financial statements or a material
+misstatement of the other information. If, based on the work we
+have performed, we conclude that there is a material misstatement
+of this other information, we are required to report that fact.
+
+Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are responsible
+for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such internal control as the directors determine is necessary to enable the
+preparation of financial statements that are free from material misstatement, whether due to fraud
+or error.
+
+In preparing the financial statements, the directors are responsible for assessing the company’s
+ability to continue as a going concern, disclosing as applicable, matters related to going concern
+and using the going concern basis of accounting unless the directors either intend to liquidate the
+company or to cease operations, or have no realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole
+are free from material misstatement, whether due to fraud or error, and to issue an auditor's report
+that includes our opinion. Reasonable assurance is a high level of assurance, but is not a guarantee
+that an audit conducted in accordance with ISAs (UK) will always detect a material misstatement
+
+11
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+when it exists. Misstatements can arise from fraud or error and are considered material if, individually
+or in the aggregate, they could reasonably be expected to influence the economic decisions of users
+taken on the basis of these financial statements.
+
+Details of the extent to which the audit was considered capable of detecting irregularities, including
+fraud are set out below.
+
+A further description of our responsibilities for the audit of the financial statements is located on the
+Financial Reporting Council’s website at: www.fre.org.uk/auditorsresponsibilities. This description
+forms part of our auditor’s report.
+
+Extent to which the audit was considered capable of detecting irregularities, including
+fraud
+
+We identify and assess the risks of material misstatement of the financial statements, whether due
+to fraud or error, and then design and perform audit procedures responsive to those risks, including
+obtaining audit evidence that is sufficient and appropriate to provide a basis for our opinion.
+
+Identifying and assessing potential risks related to irregularities
+
+In identifying and assessing risks of material misstatement in respect of irregularities, including
+fraud and non-compliance with laws and regulations, our procedures included the following:
+
+e enquiring of management and the audit and risk management committee, including
+obtaining and reviewing supporting documentation, concerning the company’s policies and
+procedures relating to:
+
+o identifying, evaluating and complying with laws and regulations and whether they
+were aware of any instances of non-compliance;
+
+o detecting and responding to the risks of fraud and whether they have knowledge
+of any actual, suspected or alleged fraud;
+
+o the internal controls established to mitigate risks related to fraud or non-
+compliance with laws and regulations;
+
+e discussing among the engagement team and involving relevant internal specialists,
+including industry specialists regarding how and where fraud might occur in the financial
+statements and any potential indicators of fraud. As part of this discussion, we identified
+potential.for fraud in the impairment of lending receivables; and
+
+« obtaining an understanding of the legal and regulatory framework that the company
+operates in, focusing on those laws and regulations that had a direct effect on the financial
+statements or that had a fundamental effect on the operations of the company. The key
+laws and regulations we considered in this context included the UK Companies Act, UK tax
+legislation. In addition, compliance with regulatory solvency requirements and Prudential
+Regulation Authority and Financial Conduct Authority rules and regulations were
+fundamental to the company’s ability to continue as a going concern.
+
+Audit response to risks identified
+
+As a result of performing the above, we identified Impairment of lending receivables as a key audit
+matter. The key audit matters section of our report explains the matter in more detail and also
+describes the specific procedures we performed in response to that key audit matter.
+
+In addition to the above, our procedures to respond to risks identified included the following:
+
+12
+INDEPENDENT AUDITOR'S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+reviewing the financial statement disclosures and testing to supporting documentation to
+assess compliance with relevant laws and regulations discussed above;
+
+enquiring of management, the audit committee and external legal counsel concerning
+actual and potential litigation and claims;
+
+performing analytical procedures to identify any unusual or unexpected relationships that
+may indicate risks of material misstatement due to fraud;
+
+reading minutes of meetings of those charged with governance, reviewing internal audit
+reports and reviewing correspondence with the PRA;
+
+in addressing the risk of fraud through management override of controls, testing the
+appropriateness of journal entries and other adjustments; assessing whether the
+judgements made in making accounting estimates are indicative of a potential bias; and
+evaluating the business rationale of any significant transactions that are unusual or outside
+the normal course of business.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all
+engagement team members including internal specialists, and remained alert to any indications of
+fraud or non-compliance with laws and regulations throughout the audit.
+
+Report on other legal and regulatory requirements
+
+Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the strategic report and the directors’ report for the financial year for
+which the financial statements are prepared is consistent with the financial statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable
+legal requirements.
+
+In the light of the knowledge and understanding of the company and its environment obtained in
+the course of the audit, we have not identified any material misstatements in the strategic report
+or the directors’ report.
+
+Matters on which we are required to report by exception
+
+Adequacy of explanations received and accounting records
+
+Under the Companies Act 2006 we are required to report to you We have nothing to .
+if, in our opinion: report in respect of these
+
+. . : : matters.
+we have not received all the information and explanations
+
+we require for our audit; or
+
+adequate accounting records have not been kept, or
+returns adequate for our audit have not been received
+from branches not visited by us; or
+
+the financial statements are not in agreement with the
+accounting records and returns. ~
+
+Directors’ remuneration
+
+Under the Companies Act 2006 we are also required to report ifin We have nothing to
+our opinion certain disclosures of directors’ remuneration have report in respect of this
+not been made. matter.
+
+13
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF BANK MANDIRI (EUROPE) LIMITED
+
+Other matters
+
+Auditor tenure
+
+Following the recommendation of the audit committee, we were appointed by the Board of
+Directors on 8 November 2012 to audit the financial statements for the year ending 31 December
+2012 and subsequent financial periods. The period of total uninterrupted engagement including
+previous renewals and reappointments of the firm is 7 years, covering the years ending 31
+December 2012 to 2018. ,
+
+Consistency of the audit report with ‘the additional report to the Audit & Risk Management
+Committee ; ;
+
+Our audit opinion is consistent with the additional report to the Audit & Risk Management
+Committee we are required to provide in accordance with ISAs (UK).
+
+Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of
+Part 16 of the Companies Act 2006. Our audit work has been undertaken so that we might state
+to the company’s members those matters we are required to state to them in an auditor’s report
+and for no other purpose. To the fullest extent permitted by law, we do not accept or assume
+responsibility to anyone other than the company and the company’s members as a body, for our
+audit work, for this report, or for the opinions we have formed.
+
+J Cori: boyle Saf
+
+Christopher Brough ACA (Senior statutory auditor)
+For and on behaif of Deloitte LLP
+
+Statutory Auditor
+
+London, United Kingdom
+
+17 April 2019
+
+14
+Bank Mandiri (Europe) Limited
+
+Profit and loss account
+Year ended 31 December 2018
+
+Interest receivable
+
+Interest payable
+
+Net interest income
+
+Fees and commissions receivable
+Other operating income
+
+Total operating income
+Administrative expenses
+Depreciation and amortisation
+Loan impairment losses
+
+Profit on ordinary activities before tax
+Tax charge
+
+Profit on ordinary activities after tax
+
+The profit above arises from continuing operations.
+
+2018 2017
+
+Notes USS’000 —-US$000
+3 5,839 4,804
+
+4 (2,714) (1,435)
+3,125 3,369
+
+104 59
+
+6 148 202
+3,377 3,630
+
+7 (2,740) (2,576)
+
+13 & 14 (77) (244)
+(147) -
+
+413 810
+
+9 (128) (208)
+285 602
+
+The accompanying notes are an integral part of these financial statements.
+
+15
+Bank Mandiri (Europe) Limited
+
+Statement of Comprehensive Income
+Year ended 31 December 2018
+
+Profit for the financial year
+
+Change in fair value of investments measured at FVTOCI
+Deferred tax credit on FVTOCI transitional adjustment
+Deferred tax credit / (charge) on FVTOCI financial instruments
+Effects of changes in tax rate
+
+Total comprehensive income for the period
+
+20
+
+2018 2017
+US$°000 —_- US$000
+285 602
+(1,574) 642
+62 105
+
+29 (124)
+(10) 19
+(1,208) 2,149
+
+16
+Bank Mandiri (Europe) Limited
+
+Balance sheet
+31 December 2018
+
+Assets
+Cash and money at call and deposits with central banks
+
+Loans and advances to banks
+
+Loans and advances to customers
+
+Debt securities
+
+Tangible fixed assets
+
+Intangible fixed assets
+
+Other assets, prepayments and accrued income
+
+Total assets
+
+Liabilities
+
+Deposits from banks
+
+Customer accounts
+
+Other liabilities, accruals and deferred income
+
+Current tax liability
+Defererd tax liability
+
+Total liabilities excluding shareholders' funds
+
+Shareholders’ funds
+
+Called up share capital
+Capital reserve
+Revaluation reserve
+
+Profit and loss account
+Total shareholders’ funds - equity interests
+Total liabilities and shareholders' funds
+
+Memorandum items
+
+Operating lease commitments
+
+Notes
+
+10
+11
+12
+13
+14
+15
+
+16
+
+17
+18
+19
+19
+19
+
+20
+
+20
+
+21
+
+2018 2017
+USS’000 ——:US$"000
+14,729 12,225
+38,996 17,005
+76,535 88,506
+43,158 38,504
+93 129
+53 43
+444 325
+174,008 156,737
+119,484 103,486
+4,708 1,893
+457 617
+101 211
+59 123
+124,809 106,330
+49,000 49,000
+11,496 11,496
+(1,386) 107
+(9,911) (10,196)
+49,199 50,407
+174,008 156,737
+561 777
+
+The financial statements of Bank Mandiri (Europe) Limited, registered number 3793679 were approved by the Board
+
+of Directors on 12 April 2019 and are signed on its behalf by:
+
+¢
+
+Mr I Nyoman Gede Suarja
+Chief Executive
+
+’ The accompanying notes are an integral part of these financial statements
+
+17
+Bank Mandiri (Europe) Limited
+
+Statement of change in equity
+Year ended 31 December 2018
+
+Total
+shareholders’ Share Capital Revaluation Profit
+funds capital reserve reserve and (loss)
+US$’000 US$’000 US3$’000 USS’000 = US3$’000
+As at 1 January 2017 49,163 49,000 11,496 (535) (10,798)
+Realised to profit and loss 117 - - 1t7 -
+Increase in fair value of debt securities 525 - - $25 -
+Profit for the year 616 - - - 616
+At 31 December 2017 50,407 49,000 11,496 107 (10,196)
+Realised to profit and loss 44 - - 44 -
+Decrease in fair value of debt securities (1,618) - - (1,618) -
+UK corporation tax credit on fair value
+of financial instruments at FVTOCI 81 - 81 -
+Total comprehensive income/(expense) for the 48,914 49,000 11,496 (1,386) 10,196
+year
+Profit for the year 285 - - - 285
+At 31 December 2018 49,199 49,000 11,496 (1,386) (9,911)
+
+Description of Reserves
+
+Share Capital - represents the nominal value of shares that have been issued
+
+Capital reserve - represents sale proceeds less carrying value of assets sold to fellow Group undertaking.
+
+Revaluation reserve - represents accumulated gains/ (losses) on market revaluation of debt securities
+
+Profit & (Loss) - includes accumulated comprehensive income for the year and prior years
+
+18
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1. Accounting policies
+
+The accounting policies, all of which, unless specifically stated, have been consistently applied throughout the
+year, are detailed below:
+
+General Information
+
+The Company is incorporated in the United Kingdom. The Company is a private Company limited by shares
+and is registered in England and Wales. The address of the Company's registered office is shown on page 1.
+
+The nature of the Company’s operations and its principal activities are set out in the strategic report on pages 3
+to 4.
+
+Basis of preparation
+
+These financial statements were prepared in accordance with Financial Reporting Standard 101 “Reduced
+Disclosure Framework” (FRS 101) and in accordance with applicable accounting standards. The accounting
+policies which follow set out those policies which apply in preparing the financial statements for the year ended
+31 December 2018.
+
+The financial statements have been prepared on a going concern basis under the historical cost convention as
+modified by the revaluation of debt securities and other financial assets and in accordance with the Companies
+Act 2006 and applicable Accounting Standards in the United Kingdom.
+
+The financial statements have been prepared in US Dollars, as this is the functional currency in which the Bank
+operates. The conversion rate as at 31 December 2018 between US$/GBP was 1.2795 (2016: 1.3495).
+
+Going concern
+
+The directors have, at the time of approving the financial statements, a reasonable expectation that the Company
+has adequate resources to continue in operational existence for the foreseeable future. Thus they continue to
+adopt the going concern basis of accounting in preparing the financial statements. Further detail is contained in
+the Strategic Report on pages 3 to 4.
+
+Disclosure exemptions
+
+‘As permitted by FRS 101, the Company has taken advantage of the disclosure exemptions available under that
+standard in relation to presentation of comparative information in respect of certain assets, presentation of a
+cash-flow statement, standards not yet effective, impairment of assets and related party transactions. Where
+required, equivalent disclosures are given in the Bank accounts of PT Bank Mandiri (Persero) Tbk. The Bank
+accounts of PT Bank Mandiri (Persero) Tbk are available to the public and can be obtained as set out in Note
+26.
+
+Impact of application of IFRS 16
+
+Leases IFRS 16, which was endorsed by the EU on 9 November 2017, provides a comprehensive model for the
+identification of lease arrangements and their treatment in the financial statements for both lessors and lessees.
+IFRS 16 will supersede the current lease guidance including IAS 17 Leases and the related Interpretations when
+it becomes effective for accounting periods beginning on or after 1 January 2019. The date of initial application
+of IFRS 16 for the Bank will be | January 2019.
+
+A detailed analysis of the impact on the Bank has not yet been performed though it is likely that on adoption
+there will be an increase in both assets and liabilities.
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1.
+
+Accounting policies (continued)
+Impact of application of IFRS 9 Financial Instruments
+
+In the current year, the Bank has applied IFRS 9 Financial Instruments. IFRS 9 introduces new requirements for
+1) the classification and measurement of financial assets and financial liabilities, 2) impairment for financial
+assets and 3) general hedge accounting. Details of these new requirements as well as their impact on the Bank’s
+consolidated financial statements are described below.
+
+The Bank has applied IFRS 9 in accordance with the transition provisions set out in IFRS 9.
+
+(a) Classification and measurement of financial assets
+
+The date of initial application (i.e. the date on which the Bank has assessed its existing financial assets and
+financial liabilities in terms of the requirements of IFRS 9) is | January 2018. Accordingly, the Bank has applied
+the requirements of IFRS 9 to instruments that have not been derecognised as at | January 2018 and has not
+applied the requirements to instruments that have already been derecognised as at 1 January 2018. Comparative
+amounts in relation to instruments that have not been derecognised as at | January 2018 have been not restated.
+
+All recognised financial assets that are within the scope of IFRS 9 are required to be subsequently measured at
+amortised cost or fair value on the basis of the entity’s business model for managing the financial assets and the
+contractual cash flow characteristics of the financial assets.
+
+Specifically:
+
+e debt investments that are held within a business model whose objective is to collect the contractual cash
+flows, and that have contractual cash flows that are solely payments of principal and interest on the
+principal amount outstanding, are subsequently measured at amortised cost;
+
+e debt investments that are held within a business model whose objective is both to collect the contractual
+cash flows and to sell the debt instruments, and that have contractual cash flows that are solely payments
+of principal and interest on the principal amount outstanding, are subsequently measured at fair value
+through Other Comprehensive Income (FVTOCD;
+
+e all other debt investments and equity investments are subsequently measured at fair value through profit
+or loss (FVTPL).
+
+Despite the aforegoing, the Bank may make the following irrevocable election / designation at initial recognition
+of a financial asset: ;
+
+e the Bank may irrevocably designate a debt investment that meets the amortised cost or FVTOCI criteria
+as measured at FVTPL if doing so eliminates or significantly reduces an accounting mismatch.
+
+In the current year, the Bank has not designated any debt investments that meet the amortised cost or FVTOCI
+criteria as measured at FVTPL.
+
+When a debt investment measured at FVTOCI is derecognised, the cumulative gain or loss previously recognised
+in revaluation reserve is reclassified from equity to profit or loss as a reclassification adjustment. .
+
+Debt instruments that are subsequently measured at amortised cost or at FVTOCI are subject to impairment. See
+(b) below.
+
+The directors of the Company reviewed and assessed the Banks’s existing financial assets as at 1 January 2018
+based on the facts and circumstances that existed at that date and concluded that the initial application of IFRS
+9 has had the following impact on the Bank’s financial assets as regards their classification and measurement:
+
+20
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1.
+
+Accounting policies (continued)
+
+e the Banks redeemable notes that were classified as available-for-sale financial assets under IAS 39 have
+been classified as financial assets at FVTOCI as they are held within a business model whose objective
+is both to collect the contractual cash flows and to sell the debt instruments, and they have contractual
+cash flows that are solely payments of principal and interest on the principal amount outstanding. The
+change in fair value on these redeemable notes continues to be accumulated in the Revaluation
+Reserveuntil they are derecognised or reclassified;
+
+e financial assets classified as held-to-maturity and loans and receivables under IAS 39 that were
+measured at amortised cost continue to be measured at amortised cost under IFRS 9 as they are held
+within a business model to collect contractual cash flows and these cash flows consist solely of
+payments of principal and interest on the principal amount outstanding;
+
+Note (c) below tabulates the change in classification of the Bank’s financial assets upon application of IFRS 9.
+
+(b) Impairment of financial assets
+
+In relation to the impairment of financial assets, IFRS 9 requires an expected credit loss model as opposed to an
+incurred credit loss model under IAS 39. The expected credit loss model requires the Bank to account for
+expected credit losses and changes in those expected credit losses at each reporting date to reflect changes in
+credit risk since initial recognition of the financial assets. In other words, it is no longer necessary for a credit
+event to have occurred before credit losses are recognised.
+
+Specifically, IFRS 9 requires the Bank to recognise a loss allowance for expected credit losses on i) debt
+investments subsequently measured at amortised cost or at FVTOCLI, ii) lease receivables, iii) contract assets and
+iv) loan commitments and financial guarantee contracts to which the impairment requirements of IFRS 9 apply.
+In particular, IFRS 9 requires the Bank to measure the loss allowance for a financial instrument at an amount
+equal to the lifetime ECL if the credit risk on that financial instrument has increased significantly since initial
+recognition, or if the financial instrument is a purchased or originated credit-impaired financial asset. On the
+other hand, if the credit risk on a financial instrument has not increased significantly since initial recognition
+(except for a purchased or originated credit-impaired financial asset), the Bank is required to measure the loss
+allowance for that financial instrument at an amount equal to 12m ECL. IFRS 9 also provides a simplified
+approach for measuring the loss allowance at an amount equal to lifetime ECL for trade receivables, contract
+assets and lease receivables in certain circumstances.
+
+21
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1, Accounting policies (continued)
+
+(c }) Disclosures in relation to the initial application of IFRS 9
+
+The table below illustrates the classification and measurement of financial assets and financial liabilities under
+IFRS 9 and IAS 39 at the date of initial application, 1 January 2018. Since the transitional adjustment were
+not material all loan impairment provision under IFRS 9 has been taken to the current year income statement.
+
+Original New Original Additional New
+measurement measuremen carrying loss carrying
+category t category amount allowance amount
+under IAS 39 under IFRS under recognised under IFRS
+9 IAS 39 under. IFRS 9
+USS’000 USS’000 USS°000
+Short term Available-for-sale Financial 130,307 47 - 130,260
+financial asets and investments assets at
+loans amotised cost
+2. | Investments in Available-for-sale Financial 25,273 26 * 25,247
+, debt securities investments assets at
+(note 12) FVTOCI
+. Held-to-maturity Financial 17,985 74 17,911
+3. soeurities ( in get investments assets at
+al ies (note amortised
+cost
+
+Foreign currencies
+
+Transactions or accruals in foreign currencies are recorded in the profit and loss account at the rate of exchange
+applicable on that date, such that all profits are ultimately booked in US Dollars. Monetary assets and liabilities
+denominated in foreign currencies are translated into US Dollars at the rates of exchange prevailing as at the
+Balance Sheet date. Both realised and unrealised foreign exchange gains and losses are recognised in the “other
+operating income” line item in the profit and loss account.
+
+Forward foreign exchange contracts are valued at the market rates applicable to their respective maturities at the
+balance sheet date, and the resulting profit or losses included in the profit and loss for the year.
+
+Fixed assets
+
+Fixed assets are included at cost less accumulated depreciation. Cost includes the original purchase price of the
+asset and the costs attributable to bringing the asset to its working condition for its intended use. Depreciation
+is provided at rates calculated to write off the cost less estimated residual value of each asset on a straight-line
+basis from the date of use over its estimated useful life as follows:
+
+Leasehold Improvements 5 years
+Computer Hardware 3 years
+Computer Software 3 years
+
+Fumiture and Fixtures 5 years
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1. Accounting policies (continued)
+
+The carrying values of the tangible fixed assets are reviewed for impairment when events or changes in
+circumstances indicate the carrying value may not be recoverable.
+
+Pensions
+
+The Bank offers to its staff a money purchase arrangement under which it undertakes to pay a fixed percentage
+contribution based on the employee’s gross salary. Payments to defined contribution retirement benefit schemes
+are charged to the Profit and Loss account as incurred.
+
+Financial instruments
+
+Financial assets and financial liabilities are recognised when a Bank entity becomes a party to the contractual
+provisions of the instrument.
+
+Financial assets and financial liabilities are initially measured at fair value. Transaction costs that are directly
+attributable to the acquisition or issue of financial assets and financial liabilities (other than financial assets and
+financial liabilities at fair value through profit or loss) are added to or deducted from the fair value of the
+financial assets or financial liabilities, as appropriate, on initial recognition. Transaction costs directly
+attributable to the acquisition of financial assets or financial liabilities at fair value through profit or loss are
+recognised immediately in profit or loss.
+
+Financial assets
+
+All regular way purchases or sales of financial assets are recognised and derecognised on a trade date basis.
+Regular way purchases or sales are purchases or sales of financial assets that require delivery of assets within
+the time-frame established by regulation or convention in the marketplace.
+
+All recognised financial assets are subsequently measured in their entirety at either amortised cost or fair value,
+depending on the classification of the financial assets.
+
+(a) Classification of financial assets
+Debt instruments that meet the following conditions are subsequently measured at amortised cost:
+
+« the financial asset is heid within a business model whose objective is to hold financial assets in order
+to collect contractual cash flows; and
+
+« the contractual terms of the financial asset give rise on specified dates to cash flows that are solely
+payments of principal and interest on the principal amount outstanding.
+
+Debt instruments that meet the following conditions are subsequently measured at FVTOCI:
+
+e the financial asset is held within a business model whose objective is achieved by both collecting
+contractual cash flows and selling the financial assets; and
+
+e the contractual terms of the financial asset give rise on specified dates to cash flows that are solely
+payments of principal and interest on the principal amount outstanding.
+
+By default, all other financial assets are subsequently measured at FVTPL.
+
+Despite the aforegoing, the Bank may make the following irrevocable election / designation at initial recognition
+of a financial asset:
+
+e the Bank may irrevocably designate a debt investment that meets the amortised cost or FVTOCI criteria
+as measured at FVTPL if doing so eliminates or significantly reduces an accounting mismatch (see (iii)
+below).
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1.
+
+Accounting policies (continued)
+
+(i) Amortised cost and effective interest method
+
+The effective interest method is a method of calculating the amortised cost of a debt instrument and of allocating
+interest income over the relevant period.
+
+For financial instruments other than purchased or originated credit-impaired financial assets, the effective
+interest rate is the rate that exactly discounts estimated future cash receipts (including all fees and points paid or
+received that form an integral part of the effective interest rate, transaction costs and other premiums or
+discounts) excluding expected credit losses, through the expected life of the debt instrument, or, where
+appropriate, a shorter period, to the gross carrying amount of the debt instrument on initial recognition. For
+purchased or originated credit-impaired financial assets, a credit-adjusted effective interest rate is calculated by
+discounting the estimated future cash flows, including expected credit losses, to the amortised cost of the debt
+instrument on initial recognition.
+
+The amortised cost of a financial asset is the amount at which the financial asset is measured at initial recognition
+minus the principal repayments, plus the cumulative amortisation using the effective interest method of any
+difference between that initial amount and the maturity amount, adjusted for any loss allowance. On the other
+hand, the gross carrying amount of a financial asset is the amortised cost of a financial asset before adjusting for
+any loss allowance.
+
+Interest income is recognised using the effective interest method for debt instruments measured subsequently at
+amortised cost and at FVTOCI. For financial instruments other than purchased or originated credit-impaired
+financial assets, interest income is calculated by applying the effective interest rate to the gross carrying amount
+of a financial asset, except for financial assets that have subsequently become credit-impaired (see (c) below).
+
+For financial assets that have subsequently become credit-impaired, interest income is recognised by applying
+the effective interest rate to the amortised cost of the financial asset. If, in subsequent reporting periods, the
+
+‘ credit risk on the credit-impaired financial instrument improves so that the financial asset is no longer credit-
+
+impaired, interest income is recognised by applying the effective interest rate to the gross carrying amount of
+the financial asset.
+
+For purchased or originated credit-impaired financial assets, the Bank recognises interest income by applying
+the credit-adjusted effective interest rate to the amortised cost of the financial asset from initial recognition. The
+calculation does not revert to the gross basis even if the credit risk of the financial asset subsequently improves
+so that the financial asset is no longer credit-impaired.
+
+Interest income is recognised in profit or loss.
+
+(ii) Debt instruments classified as at FVTOCI
+
+Listed redeemable notes held by the Bank are classified as at FVTOCL. Fair value is determined in the manner
+described in note 23. The listed redeemable notes are initially measured at fair value plus transaction costs.
+Subsequently, changes in the carrying amount of these listed redeemable notes as a result of foreign exchange
+gains and losses (see (b) below), impairment gains or losses (see (c) below), and interest income calculated using
+the effective interest method (see (i) above) are recognised in profit or loss. The amounts that are recognised in
+profit or loss are the same as the amounts that would have been recognised in profit or loss if these listed
+redeemable notes had been measured at amortised cost. All other changes in the carrying amount of these listed
+redeemable notes are recognised in other comprehensive income and accumulated under the heading of
+investments revaluation reserve. When these listed redeemable notes are derecognised, the cumulative gains or
+losses previously recognised in other comprehensive income are reclassified to profit or loss.
+
+24
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1. Accounting policies (continued)
+
+(iii) Financial assets at FVTPL
+
+Financial assets that do not meet the criteria for being measured at amortised cost or FVTOCTI (see (i) to (iii)
+above) are measured at FVTPL. Specifically:
+
+e¢ Debt instruments that do not meet the amortised cost criteria or the FVTOCI criteria (see (i) and (ii)
+above) are classified as at FVTPL. In addition, debt instruments that meet either the amortised cost
+criteria or the FVTOCI criteria may be designated as at FVTPL upon initial recognition if such
+designation eliminates or significantly reduces a measurement or recognition inconsistency that would
+arise from measuring assets or liabilities or recognising the gains and losses on them on different bases.
+The Bank has not designated any debt instruments as at FVTPL.
+
+Financial assets at FVTPL are measured at fair value at the end of each reporting period, with any fair value
+gains or losses recognised in profit or loss. The net gain or loss recognised in profit or loss includes any dividend
+or interest earned on the financial asset and is included in the ‘other gains and losses’ line item (note 6).
+
+(b) Foreign exchange gains and losses
+
+The carrying amount of financial assets that are denominated in a foreign currency is determined in that foreign
+currency and translated at the spot rate at the end of each reporting period. Specifically; ,
+
+e for financial assets measured at amortised cost that are not part of a designated hedging relationship,
+exchange differences are recognised in profit or loss in the ‘other operating income line item;
+
+e for debt instruments measured at FVTOCI that are not part of a designated hedging relationship, exchange
+differences on the amortised cost of the debt instrument are recognised in profit or loss in the ‘other
+operating income’ line item. Other exchange differences are recognised in other comprehensive income
+in the revaluation reserve;
+
+e for financial assets measured at FVTPL that are not part of a designated hedging relationship, exchange
+differences are recognised in profit or loss in the ‘other operating income’ line item.; and
+
+e for equity instruments measured at FVTOCI, exchange differences are recognised in other comprehensive
+income in the revaluation reserve.
+
+(c) Impairment of financial assets
+
+The Bank recognises a loss allowance for expected credit losses on investments in debt instruments that are
+measured at amortised cost or at FVTOCI, amounts due from customers and whole financial makets. No
+impairment loss is recognised for investments in equity instruments. The amount of expected credit losses is
+updated at each reporting date to reflect changes in credit risk since initial recognition of the respective financial
+instrument.
+
+The expected credit losses on these financial assets are estimated using a provision matrix based on the Bank’s
+historical credit loss experience, adjusted for factors that are specific to the debtors, general economic conditions
+and an assessment of both the current as well as the forecast direction of conditions at the reporting date, including
+time value of money where appropriate.
+
+For all other financial instruments, the Bank recognises lifetime ECL when there has been a significant increase in
+credit risk since initial recognition. If, on the other hand, the credit risk on the financial instrument has not increased
+
+25
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1.
+
+Accounting policies (continued)
+
+significantly since initial recognition, the Bank measures the loss allowance for that financial instrument at an
+amount equal to 12m ECL. The assessment of whether lifetime ECL should be recognised is based on significant
+increases in the likelihood or nsk of a default occurring since initial recognition instead of on evidence of a financial
+asset being credit-impaired at the reporting date or an actual default occurring.
+
+Lifetime ECL represents the expected credit losses that will result from all possible default events over the expected
+life of a financial instrument. In contrast, 12m ECL represents the portion of lifetime ECL that is expected to result
+from default events on a financial instrument that are possible within 12 months after the reporting date.
+
+(i) Significant increase in credit risk
+
+In assessing whether the credit risk on a financial instrument has increased significantly since initial recognition,
+the Bank compares the risk of a default occurring on the financial instrument as at the reporting date with the risk
+of a default occurring on the financial instrument as at the date of initial recognition, In making this assessment,
+the Bank considers both quantitative and qualitative information that is reasonable and supportable, including
+historical experience and forward-looking information that is available without undue cost or effort. Forward-
+looking information considered includes the future prospects of the industries in which the Bank’s debtors operate,
+obtained from economic expert reports, financial analysts, governmental bodies, relevant think-tanks and other
+similar organisations, as well as consideration of various external sources of actual and forecast economic
+information that relate to the Bank’s core operations, namely the metal mining, food industry, telecommications
+and wholesale financial markets.
+
+In particular, the following information is taken into account when assessing whether credit risk has increased
+significantly sirice initial recognition:
+
+* an actual or expected significant deterioration in the financial instrument’s external (if available) or
+internal credit rating;
+
+* significant deterioration in external market indicators of credit risk for a particular financial instrument,
+e.g. a significant increase in the credit spread, the credit default swap prices for the debtor, or the length
+of time or the extent to which the fair value of a financial asset has been less than its amortised cost;
+
+* existing or forecast adverse changes in business, financial or economic conditions that are expected to
+cause a significant decrease in the debtor‘s ability to meet its debt obligations;
+
+* an actual or expected significant deterioration in the operating results of the debtor;
+¢ significant increases in credit risk on other financial instruments of the same debtor;
+
+* an actual or expected significant adverse change in the regulatory, economic, or technological
+environment of the debtor that results in a significant decrease in the debtor’s ability to meet its debt
+
+obligations.
+
+Irrespective of the outcome of the above assessment, the Bank presumes that the credit risk on a financial asset has
+increased significantly since initial recognition when contractual payments are more than 30 days past due, unless
+the Bank has reasonable and supportable information that demonstrates otherwise.
+
+Despite the aforegoing, the Bank assumes that the credit risk on a financial instrument has not increased
+significantly since initial recognition if the financial instrument is determined to have low credit risk at the reporting
+date. A financial instrument is determined to have low credit risk if i) the financial instrument has a low risk of
+default, 11) the borrower has a strong capacity to meet its contractual cash flow obligations in the near term and iii)
+adverse changes in economic and business conditions in the longer term may, but will not necessarily, reduce the
+ability of the borrower to fulfil its contractual cash flow obligations. The Bank considers a financial asset to have
+
+low credit risk when it has an internal or external credit rating of ‘investment grade’ as per globally understood
+definition.
+
+26
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1.
+
+Accounting policies (continued)
+
+For loan commitments and financial guarantee contracts, the date that the Bank becomes a party to the irrevocable
+commitment is considered to be the date of initial recognition for the purposes of assessing the financial instrument
+for impairment. In assessing whether there has been a significant increase in the credit risk since initial recognition
+
+of a loan commitment, the Bank considers changes in the risk of a default occurring on the loan to which a loan ~
+
+commitment relates; for financial guarantee contracts, the Bank considers the changes in the risk that the specified
+debtor will default on the contract.
+
+The Bank regularly monitors the effectiveness of the criteria used to identify whether there has been a significant
+increase in credit risk and revises them as appropriate to ensure that the criteria are capable of identifying significant
+increase in credit risk before the amount becomes past due.
+
+(ii) Definition of default
+
+The Bank considers the following as constituting an event of default for internal credit risk management purposes
+as historical experience indicates that receivables that meet either of the following criteria are generally not
+recoverable.
+
+« when there is a breach of financial covenants by the counterparty; or
+
+« Information developed internally or obtained from external sources indicates that the debtor is unlikely to
+pay its creditors, including the Bank, in full (without taking into account any collaterals held by the Bank).
+
+Irrespective of the above analysis, the Bank considers that default has occurred when a financial asset is more than
+90 days past due unless the Bank has reasonable and supportable information to demonstrate that a more lagging
+default criterion is more appropriate.
+
+(tii) Credit-impaired financial assets
+
+A financial asset is credit-impaired when one or more events that have a detrimental impact on the estimated future
+cash flows of that financial asset have occurred. Evidence that a financial asset is credit-impaired includes
+observable data about the following events:
+
+(a) significant financial difficulty of the issuer or the borrower;
+(b) a breach of contract, such as a default or past due event (see (ii) above);
+
+(c) the lender(s) of the borrower, for economic or contractual reasons relating to the borrower’s financial
+difficulty, having granted to the borrower a concession(s) that the lender(s) would not otherwise consider;
+
+(d) it is becoming probable that the borrower will enter bankruptcy or other financial reorganisation; or
+
+(e) the disappearance of an active market for that financial asset because of financial difficulties.
+
+(iv) Write-off policy
+
+The Bank writes off a financial asset when there is information indicating that the counterparty is in severe
+financial difficulty and there is no realistic prospect of recovery, e.g. when the counterparty has been placed
+under liquidation or has entered into bankruptcy proceedings, or in the case of trade receivables, when the
+amounts are over two years past due, whichever occurs sooner. Financial assets written off may still be subject
+to: enforcement activities under the Bank’s recovery procedures, taking into account legal advice where
+appropriate. Any recoveries made are recognised in profit or loss.
+
+(v) Measurement and recognition of expected credit losses
+
+The measurement of expected credit losses is a function of the probability of default, loss given default (i.e. the
+magnitude of the loss if there is a default) and the exposure at default. The assessment of the probability of
+default and loss given default is based on historical data adjusted by forward-looking information as described
+
+27
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1.
+
+Accounting policies (continued)
+
+above. As for the exposure at default, for financial assets, this is represented by the assets’ gross carrying amount
+
+at the reporting date; for loan commitments and financial guarantee contracts, the exposure includes the amount
+drawn down as at the reporting date, together with any additional amounts expected to be drawn down in the
+future by default date determined based on historical trend, the Bank’s understanding of the specific future
+financing needs of the debtors, and other relevant forward-looking information.
+
+For financial assets, the expected credit loss is estimated as the difference between all contractual cash flows
+that are due to the Bank in accordance with the contract and all the cash flows that the Bank expects to receive,
+
+' discounted at the original effective interest rate.
+
+For a financial guarantee contract, as the Bank is required to make payments only in the event of a default by
+the debtor in accordance with the terms of the instrument that is guaranteed, the expected loss allowance is the
+expected payments to reimburse the holder for a credit loss that it incurs less any amounts that the Bank expects
+to receive from the holder, the debtor or any other party.
+
+For undrawn loan commitments, the expected credit loss is the present value of the difference between the
+contractual cash flows that are due to the Bank if the holder of the loan commitment draws down the loan, and
+the cash flows that the Bank expects to receive if the loan is drawn down.
+
+Where lifetime ECL is measured on a collective basis to cater for cases where evidence of significant increases
+in credit risk at the individual instrument level may not yet be available, the financial instruments are Banked
+
+on the following basis:
+
+e Nature of financial instruments (i.e. the Bank’s trade receivables, and amounts due from customers are each
+assessed as a separate Bank. Loans to related parties are assessed for expected credit losses on an individual
+basis);
+
+e = Past-due status;
+e Nature, size and industry of debtors;
+e External credit ratings where available.
+
+If the Bank has measured the loss allowance for a financial instrument at an amount equal to lifetime ECL in
+the previous reporting period, but determines at the current reporting date that the conditions for lifetime ECL
+are no longer met, the Bank measures the loss allowance at an amount equal to 12m ECL at the current
+reporting date.
+
+The Bank recognises an impairment gain or loss in profit or loss for all financial instruments with a
+corresponding adjustment to their carrying amount through a loss allowance account, except for investments in
+debt instruments that are measured at FVTOCI, for which the loss allowance is recognised in other
+comprehensive income and accumulated in the investment revaluation reserve, and does not reduce the carrying
+amount of the financial asset in the statement of financial position
+
+Date of recognition
+
+The purchase or sale of financial assets and liabilities that require the delivery of assets within the time frame
+generally established in the market place are recognised on the trade date i.e. the date that the Bank commits to
+purchase or sell the assets.
+
+Initial recognition of financial instruments
+
+The classification of financial instruments at initial recognition depends on the purpose for which the financial
+
+instruments were acquired and their characteristics. All financial instruments are measured initially at their fair.
+
+value less/plus any directly related costs.
+
+28
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1, Accounting policies (continued)
+Derecognition of financial assets and financial liabilities
+A financial asset is derecognised where:
+e the rights to receive cash flows from the asset have expired; or
+
+e the Bank has transferred its right to receive cash flows from the asset or has assumed an obligation to pay
+the received cash flows in full without material delay to a third party; and
+
+e either (a) the Bank has transferred substantially all the risks and rewards of the asset, or (b) the Bank has
+neither transferred nor retained substantially all the risks and rewards of the asset, but has transferred control
+of the asset. ,
+
+A financial liability is derecognised when the obligation under the liability is discharged or cancelled or expires.
+
+‘Determination of fair value
+
+The determination of fair values of financial instruments is based upon quoted market prices or dealer price
+quotation for financial instruments traded in active markets.
+
+Cash and cash equivalents
+
+Cash and money at call and deposits with central banks comprise cash in hand, and cash with banks and central
+banks. Other short-term investments are classified as loans and advances to banks.
+
+Derivative financial instruments
+Initial recognition and subsequent measurement
+
+The Bank makes use of derivative financial instruments, i.e. forward foreign exchange contracts, to manage
+exposures to foreign currency risks, including exposures arising from forecast transactions. The derivative
+financial instruments are initially recognised at fair value on the date on which a derivative contract is entered
+into and are subsequently remeasured at fair value at market prices. Derivatives are carried as financial assets
+when the fair value is positive and as financial liabilities when the fair value is negative.
+
+Any gains and losses arising from changes in fair value on the derivatives during the year , are taken directly to
+the profit and loss account.
+
+Income recognition
+
+Interest income is recognised in the profit and loss account as it accrues using the effective interest rate specific
+to each loan. Once a loan has been written down as a result of an impairment loss, interest income is thereafter
+recognised using the rate of interest used to discount the estimated future cash flows for the purpose of measuring
+the impairment loss.
+
+Loan commitment fees for loans that are likely to be drawn down and other credit related fees are deferred and
+recognised as an adjustment to the effective interest rate on the loan.
+
+Taxation
+
+Corporation tax payable, where applicable, is provided on taxable profits at the current UK tax rate.
+
+Deferred Taxation
+
+Deferred taxation is recognised in respect of all timing differences that have originated but not reversed at the
+balance sheet date where transactions or events that result in an obligation to pay more, or a right to pay less, tax
+in the future have occurred at the balance sheet date. Deferred tax is measured on an undiscounted basis at the
+tax rates that are expected to apply in the periods in which timing differences reverse, based on tax rates and
+laws enacted or substantively enacted at the balance sheet date. Deferred tax assets are recognised only to the
+extent that the Directors consider it more likely than not that there will be suitable taxable profits from which
+the future reversal of the underlying timing difference can be deducted.
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+1. Accounting policies (continued)
+
+Related parties
+
+The Bank has taken advantage of the exemption available in FRS 101, from disclosing transactions with related
+parties that are part of the Bank Mandiri Group, as consolidated financial statements are publicly available.
+
+However certain transactions with related parties are material to the financial statements and therefore the details
+of these transactions have been disclosed in note 27.
+
+Leasing
+
+Rentals payable under operating leases are charged in the profit and loss account on a straight-line basis over
+the lease term,
+
+Critical accounting judgements
+
+The Directors have identified no critical accounting judgements significant enough to warrant disclosure under
+IAS 1 — Presentation of Financial Statements.
+
+Key sources of estimation uncertainty
+
+In the application of the Company’s accounting policies, which are described in note 1, the directors are required
+to make estimates and assumptions about the carrying amounts of assets and liabilities that are not readily
+apparent from other sources. The estimates and associated assumptions are based on historical experience and
+other factors that are considered to be relevant. Actual results may differ from these estimates.
+
+The estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to accounting estimates
+are recognised in the period in which the estimate is revised if the revision affects only that period, or in the
+period of the revision and future periods if the revision affects both current and future periods.
+
+The following are the accounting estimates that the directors have made in the process of applying the
+Company’s accounting policies and that have the most significant effect on the amounts recognised in financial
+
+statements
+
+Impairment allowances on loans and advances
+Key estimates used by Management are as follows:
+Loss given default (LGD)
+
+The impairment is dependent on the loss on the receivables in the event of default. This is assessed with reference
+to the realisable value of collateral and the outstanding account balance.
+
+Probability of default (PD)
+
+Describes the likelihood of a default occurring due to the customer’s inability to meet their payment obligations.
+The Bank applies judgement to estimate the probability of default which also depends on the judgements around
+classification of exposure within stages one, two and three.
+
+Each impaired asset is assessed on its merits, and the estimates of cash flows considered recoverable are
+approved by the Credit function. ,
+
+In order to estimate the required allowance, assumptions are made to define the way inherent losses are modelled
+and to determine the required input parameters, based on historical experience and current economic conditions.
+
+Management performed sensitivity analysis on the provision model. An increase / (decrease) in the PD by 10%,
+resulted in a (decrease) / increase of $131k in profit or loss.
+
+30
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+2. Segmental analysis
+Segmental information — by Class of Business
+
+The Directors consider that the Bank does not have more than one class of business, namely Corporate & Institutional Banking, and therefore a disclosure by class of business has
+been deemed unnecessary.
+
+Segmental information - by Geographic Segment
+
+Region: UK and Europe Asia Others Total
+2018 2017 2018 2017 2018 2017 2018 2017
+US3’000 USS’000 USS’000 US3’000 USS’000 USS$’000 US3’000 US3$’000
+
+Interest receivable , . 791 248 4,973 4,546 75 10 5,839 4,804
+Interest payable ; (128) (9) (2,586) (1,435) - - (2,714) (1,435)
+Net interest income 663 248 2,387 3,111 75 10 3,125 3,369
+Fees and commissions receivable 208 118 44 143 - , - 252 261
+Net revenue 871 366 2,431 3,254 75 10 3,377 - 3,630
+Operating expenses (462) (204) (2,319) (2,610) (35) (6) (2,817) (2,820)
+Provision due to recognition of financial assests at amortise
+
+costs (19) - (128) - - (147) -
+Operating profit/(loss) before provision 409 . 162 112 644 40 4 413 810
+Profit/(loss) before taxation 409 162 112 644 40 4 560 810
+Total assets employed 62,006 44,419 97,670 94,519 14,332 17,799 174,008 156,737
+Total net assets/(liabilities) 31,596 41,637 (3,186) (8,967) 14,332 17,799 49,114 50,469
+Notes:
+(i) Geographic segments are based on the market in which the customers are located.
+
+(ii) Operating expenses have been allocated to each geographic segment based on the percentage of income attributed to that segment.
+(iii) | The Bank's capital is not directly attributed to business lines but its benefit is evenly distributed on the basis of assets employed within each respective segment.
+
+31
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+3. Interest receivable
+
+Due from banks
+Debt securities
+Loans and advances to customers
+
+The interest income from financial assets at amortised cost is US$4,872,000 (2017: US$4,229,000)
+
+4, Interest payable
+
+Due to banks - including amounts due to inter Bank companies of US$1,098,000 (2017: US$632,000).
+
+Bank deposits
+
+5. Profit on ordinary activities before tax
+
+The profit before tax is stated after charging the following:
+
+Operating lease rentals - buildings
+Operating lease rentals - office equipment
+Auditor’s remuneration - auditing of the financial statements
+Other professional fees
+Loss allowance on trade
+
+receivables
+Loss allowance on other
+
+financial assets -
+
+measured at amortised
+
+cost
+Loss allowance on debt
+
+investments measured
+
+at FVTOCI
+
+2018 2017
+US$’000 —_—-USS$"000
+569 189
+2,379 1,596
+2,819 3,019
+5,839 4,804
+2018 2017
+US$’000 ~—«-US$"000
+2,714 1,435
+2,714 1,435
+2018 2017
+US$’000 — US$000
+302 254
+
+110 96
+
+74 14
+
+- 137
+
+36 -
+
+M1 -
+
+100 -
+
+32
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+6.
+
+Other operating income
+
+2018 2017
+
+US$’000 USS$’000
+
+Foreign exchange profit 104 85
+Gains from sale of financial instruments 44 117
+148 202
+
+Administrative expenses
+
+2018 2017.
+US3’000 US$’000
+Staff Costs:
+Wages and salaries 1,315 1,224
+Social security costs 185 143
+Pension costs (Note 24) 89 76
+Other staff costs 238 51
+Other administrative expenses 913 1,082
+
+2,740 2,576
+
+The average monthly number of employees during the year ended 31 December 2018 was 12 (2017:12). All
+were employed in management, operations and administrative roles and were UK. based on permanent
+employment contracts.
+
+Emoluments of directors
+
+2018 2017
+US$’000 US$°000
+
+Directors' remuneration and other emoluments were:
+
+Directors’ emoluments $23 445
+
+There is no director accruing benefits under a money purchase pension scheme (2017: none).The emoluments
+of the highest paid director were US$ 485,000 (2017: US$ 409,000). No director received benefits in the form
+
+of pension contributions during 2018 or 2017. No shares were granted to directors as part of their emoluments.
+
+33
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+9. Tax on profit on ordinary activities
+
+(a) Analysis of credit for the year
+
+Current tax
+UK corporation tax on profit on ordinary activities
+Adjustment prior year
+
+Total current tax charge
+
+(b) Deferred Tax
+
+Current Year
+UK corporation tax
+Effects of changes in tax rate
+
+Total deferred tax (charge)/credit
+
+(c) Tax included in statement of comprehensive
+income
+
+UK corporation tax
+
+Total current tax charge
+
+(d) Other Comprehensive income items
+
+Deferred tax current year credit
+
+Total current tax credit
+
+" 2018 2017
+USS’000 —« US$’000
+(101) (203)
+(9) (8)
+(110) (211)
+2018 2017
+USS’000 ~—«US$"000
+(20) 7
+
+2 (4)
+
+(18) 3
+
+2018 2017
+USS’000 ~—« US$"000
+(128) (208)
+(128) (208)
+
+81 -
+
+81 -
+
+34
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+(e) Factors affecting total tax charge for the years
+
+2018 2017
+US$’600 US$’000
+Profit on ordinary activities before tax 413 810
+Corporation tax at 19.00% (2017: 19.25 %) (78) (156)
+Effects of:
+Expenses not deductible for tax purposes (64) (112)
+Adjustment prior year (9) (8)
+Tax rate changes 2 (4)
+Movement in unrecognised deferred tax 21 72
+Total tax (charge) for the year (128) (208)
+
+(f) Deferred tax
+
+Deferred Tax recognized:
+
+2018 2017
+US$’000 US3$’000
+Deferred tax (assets) / liabilities:
+Tax losses (19) (41)
+AFS Transitional adjustment 74 130
+Accelerated capital allowances 4 8
+AFS reserve - 26
+59 123
+Deferred tax movements are:
+At 1 January 123 125
+Origination and reversal of temporary differences (72) (6)
+Effect of change in tax rate 8 4
+
+At 31 December $9 123
+
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+Unrecognized deferred tax assets (gross)
+
+Deferred tax assets:
+Tax losses
+AFS reserve
+
+2018
+US3$’000
+
+(28,934)
+
+(1,464)
+
+(30,398)
+
+2017
+US$’000
+
+(28,986)
+
+(28,986)
+
+Bank Mandiri (Europe) Limited has tax losses as at 31 December 2018 of $29,048,666 (2017: $29,240,889). These tax
+losses are available indefinitely against future taxable profits. A deferred tax asset has not been recognised in respect
+of a partial amount of these losses of £28,933,662 gross and the AFS loss reserve of £1,463,795 gross as there is
+uncertainty as to whether there will be profits in the near future to fully offset the losses.
+
+(g) Factors that may affect future tax charges
+
+In October 2015, the main rate of UK Corporation tax was reduced from 20% to 19%. The corporation tax rate will
+further fall to 17% from 1 April 2020 and this was enacted through Finance Bill 2016 on 15 September 2016. Deferred
+tax balances have been calculated at the rate at which the balances are expected to be settled, based on tax rates that
+
+have been substantively enacted at the balance sheet date.
+
+10. Loans and advances to banks
+
+Three months or less
+
+11. Loans and advances to customers
+
+Remaining maturity:
+
+Repayable on demand or short notice
+
+Three months or less (excluding demand or at short notice)
+Between three months and one year
+
+Over 5 years
+
+Less provision under IFRS 9
+
+2018 2017
+US$’000 US3’000
+38,996 17,005
+38,996 17,005
+2018 2017
+USS’000 US$°000
+2,122 3,003
+41,527 40,579
+18,848 24,924
+14,074 20,000
+(36) -
+76,535 88,506
+
+36
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+The Bank derives and manages its loan portfolio in a risk averse manner. The Directors have agreed that the
+customer portfolio will comprise principally of short-term self-liquidating trade finance exposures and medium
+term syndicated loans. The loans and advances to customers before provisions of US$76,535k (2017:
+US$88,506k) comprises of US$60,375k of trade finance exposures (2017: US$65,495k).
+
+12. Debt securities
+
+FVOTCI
+2018 2017
+US$’000 USS$’000
+Investment securities
+
+Issued by public bodies - government securities ; 16,745 17,391
+Other debt securities — banks/corporates 8,501 1,069
+25,247 18,460
+
+Investment securities
+
+Listed 25,247 18,460
+
+Remaining maturity:
+Between one year and five years 10,026 10,026
+Over five years 15,221 8,434
+25,247 18,460
+2018 2017
+US$’000 USS$’000
+
+Valuation
+
+Floating rate notes and Fixed rate notes 25,247 18,460
+
+Securities (floating and fixed rate notes) are purchased with the dual purpose of complying with the necessary
+regulatory liquidity requirements, and to provide an even flow of floating and fixed rate interest receipts.
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+
+Year ended 31 December 2018
+
+The loss allowance for investment securities held at FVTOCI is US$25k
+
+Investment securities
+
+Listed
+
+Remaining maturity:
+
+Between one year and five years
+
+Over five years
+
+The loss allowance for investment securities held at amortised cost is US$74k.
+
+Held- at amortised cost
+
+2018 2017
+US$’000 ~=—— US$000
+17,911 20,044
+13,036 15,228
+4,875 4,816
+17,911 20,044
+
+Securities (floating and fixed rate notes) are purchased with the purpose to provide an even flow of floating and fixed
+
+rate interest receipts.
+
+13. Tangible fixed assets
+
+Cost
+Balance as at 1 January 2018
+Additions
+
+At 31 December 2018
+
+Accumulated depreciation
+At 1 January 2018
+Charge for the year
+
+At 31 December 2018
+
+Net book value
+At 31 December 2018
+
+At 31 December 2017
+
+Computer Furniture
+Leasehold hardware other fixtures and
+improvements equipment fittings Total
+US3’000 US$’000 US$’000 US3’000
+676 249 287 1,212
+- 3 - 3
+676 252 288 1,215
+563 236 284 1,083
+29 9 1 39
+592 245 285 1,122
+84 7 2 93
+113 13 3 129
+
+38
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+14. Intangible fixed assets
+
+Cost
+
+Balance as at 1 January 2018
+Additions
+
+At 31 December 2018
+Accumulated depreciation
+At 1 January 2018
+
+Charge for the year
+
+At 31 December 2018
+
+Net book value
+At 31 December 2018
+
+At 31 December 2017
+
+15. Other assets, prepayments and accrued income
+
+Prepaid expenses
+Other receivables
+
+Computer
+software
+
+US$"000
+
+767
+48
+
+815
+
+724
+38
+
+762
+
+33
+
+43
+
+2018 2017
+US$’000 US$’000
+143 126
+
+301 199
+
+444 325
+
+39
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+16.
+
+17,
+
+18.
+
+Assets and liabilities
+
+Assets and liabilities denominated in foreign currencies
+
+Denominated in US dollars
+Denominated in Euro
+Denominated in GBP
+Denominated in other currencies
+
+Total assets
+Denominated in US dollars
+Denominated in Euro
+
+Denominated in GBP
+
+Total liabilities excluding capital and other reserves
+
+Deposits from banks
+
+With agreed maturity dates or periods of notice, by remaining maturity of:
+
+-Repayable on demand
+-three months or less
+-between three months and one year
+
+Amounts include funding received from fellow Bank undertakings:
+Due to Bank undertakings
+Customer accounts
+
+With agreed maturity dates or periods of notice, by remaining maturity of:
+
+Repayable on demand
+
+2018 2017
+US$’000 US$’000
+162,029 142,802
+9,165 9,760
+2,784 4,165
+
+30 10
+174,008 156,737
+112,613 92,496
+9,210 9,733
+2,986 4,101
+124,809 106,330
+2018 2017
+US3’000 US$’000
+11,025 15,215
+23,043 5,029
+85,416 83,242
+119,484 103,486
+61,224 73,357
+2018 2017
+US$’000 US$’000
+4,708 1,893
+
+40
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+19. Other liabilities accruals and deferred income
+
+2018 2017
+
+USS$’000 US$’000
+
+Accrued expenses payable 457 617
+Current tax liability 101 211
+Deferred tax liability 59 123
+617 951
+
+20. Called up share capital
+2018 2017
+US3’000 USS’000
+
+Authorised, issued, allotted and fully paid
+49,000,000 ordinary shares of US$1 each and 2 subscription shares of £1 each* 49,000 49,000
+
+*The 2 subscription shares of £1 each were translated at the exchange rate on the date of issuance.
+
+Revaluation reserve
+
+The revaluation reserve represents the cumulative gains and losses arising on the revaluation of debt
+insutruments classified as at FVTOCI,net of cumulative loss allowance on these investments and cumulative
+gain/loss reclassified to profit and loss upon disposal or reclassification of these investments.
+
+2018 2017
+US$’000 US$’000
+
+Balance as at 1 January 107 (535)
+Fair value (loss)/gain arising during the period (1,618) 525
+Gain reclassified to profit or loss upon disposal 44 117
+Income tax relating to fair value gain arising during the period 81 -
+Balance as at 31 December 1,386 107
+
+4]
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+21. Operating lease commitments
+2018 2017
+Buildings Other Buildings Other
+USS$’000 =. USS’000 USS’000 US$’000
+At the year end, cumulative commitments under
+non-cancellable operating leases were:
+
+Within one year 203 3 206 6
+Between one and five years 355 - 565 -
+558 3 m™m 6
+
+The other operating lease represent rental payable by the Company for lease on premises and photocopier
+machine.
+
+22. Pensions
+
+The Bank provides each of its employees with an individual money purchase pension arrangement which is
+administered by the Standard Life Assurance Company. The sums allocated into each individual's pension fund
+are paid on a monthly basis.The cost of the contributions to the money purchased pension scheme amount to
+US$89, 000 for 2018 (2017: US$76,000) and represents contributions payable to these schemes by the Company
+at rates specified in the rules of the plans.
+
+23. Financial Instruments
+
+Fair value of financial assets and
+
+liabilities
+Carrying Amount Fair Value
+2018 2017 2018 2017
+US$'000 USS'000 USS$'000 US$'000
+Financial assets at amortised cost
+Debt securities 17,911 20,044 17,450 20,113
+Financial assets at FVTOCI
+Financial instruments at FVTOCI 25,247 18,460 25,247 18,460
+
+The carrying value of other financial instruments held recorded in the financial statements approximates to their fair
+value.
+Fair value hierarchy
+
+The company uses the following hierarchy for determining and disclosing the fair value of financial instruments by
+valuation technique:
+
+Level 1: quoted (unadjusted) prices in active markets for identical assets and liabilities;
+
+Level 2 other techniques for which all inputs which have a significant effect on the recorded fair value are
+oberservable, either directly or indirectly; and
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+Level 3: techniques which use inputs which have a significant effect on the recorded fair value that are not based on
+observable market data.
+
+During the reporting period ended 31 December 2018, there were no transfers between level 1 and level 2 fair value
+measurements, and no transfers into and out of the level 3 fair value measurements.
+
+As at 31 December 2018, the company held the following financial instruments measured at fair value:
+
+2018 Level 1 Level 2 Level 3
+USS'000 US$'000 US$'000 USS$'000 .
+
+Assets measured at fair value
+Financial assets at FVTOCI
+
+Financial instruments at FVTOCI 25,247 25,247 -
+
+As at 31 December 2017, the company held the
+
+following financial instruments measured at fair
+value: 2017 Level 1 Level 2 Level 3
+
+US$'000 US3$'000 US3$'000 US3$'000
+
+Assets measured at fair value
+
+Financial assets at fair value through profit or loss
+
+Financial instruments at FVTOCI 18,460 18,460 - -
+
+The fair value of debt securities carried at amortised cost disclosed on page 42 consists of US$12,348 (2017: US$10,113
+) level 1 securities and US$5,012 (2017: US$10,000) level 2 securities.
+
+24.
+
+Risk management
+
+The identification, measurement and containment of risk are integral to the management of our business. Our
+risk policies and procedures are regularly updated to meet changing business requirements. Our parent company,
+PT Bank Mandiri (Persero) Tbk, via its internal audit function, conducts an in-depth review at least once a year
+of our asset portfolio and also conducts a review of our internal controls/procedures. Our Audit & Risk
+Management Committee is apprised of these and other developments throughout the year to ensure adequate
+controls are in place to meet our changing business requirements.
+
+(A) Risk management and control
+
+The Bank is committed to the management of risk, recognising that sound internal risk management is essential
+to its prudent operation, particularly with the growing complexity, diversity and volatility of markets, facilitated
+by rapid advances in technology and communications. Risk management is given priority throughout the Bank.
+
+Responsibility for risk management policies, limits, and the level of risk assumed, lies with the Board of
+Directors. The Board charges Senior Management with developing, presenting and implementing these policies
+and limits. The structure is designed to provide a reasonable degree of assurance that no single event, or
+contribution of events, will materially affect the wellbeing of the Bank.
+
+43
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24. Risk management (continued)
+
+An Audit & Risk Management Committee comprised of Non-Executive Directors and Executive Management
+plays a key role in the identification, evaluation and management of all risks. Credit and other new product
+decisions require direct Executive Management and Audit & Risk Management Committee approval.
+
+The Bank has controls and procedures in place for the monitoring of the financial instruments employed in its
+business. Before any new financial instrument is employed by the Bank approval must be sought from the Bank's
+Management Committee and as part of this approval process the Management Committee ensures that the Bank
+has the relevant expertise, adequate controls and operating procedures in place before the new financial
+instrument is initiated. Where it is deemed necessary product or sector limits are established and monitored such
+that concentration risk is minimised.
+
+The Bank's Board of Directors, Asset and Liability Committee and Audit & Risk Management Committee, assist
+in appraising market trends, economic and political developments and providing strategic direction for all
+aspects of risk management.
+
+The Bank has in place a number of limit controls and management information systems to facilitate effective
+management oversight. Limits are approved by the Board of Directors and are reviewed at least annually. Limit
+breaches, if any, are reported to the Chief Executive and Senior Management on a daily basis.
+
+The following basic elements of risk management are applied to all financial risk instruments, including
+derivatives.
+
+These include where appropriate:
+
+e review by the Board of Directors and Senior Management;
+
+e risk management processes with integral product risk limits;
+® measurement procedures and information systems;
+
+e risk monitoring and frequent management reporting; and
+
+® segregation of duties, internal controls and audit procedures.
+(B) Market risk
+
+Market risk refers to the uncertainty of future earnings, resulting from changes in interest rates, foreign exchange
+rates, market prices and volatility thereof. The Bank has little appetite for market risk and takes a very
+conservative and low risk approach to market risk. This is reflected in our strategy not to run a trading book of
+any sort and therefore the Bank does not run the risk of significant trading losses.
+
+(C) Interest rate risk
+
+Interest rate risk arises when there is a mis-match between assets and liabilities which are subject to interest rate
+risk within a specific period. In the Bank's funding/lending activities, fluctuations in interest rates are reflected
+in interest margins and earnings. Our interest rate risk profile is short term and liquid and the Directors therefore
+feel that risks have been minimised. Hedging techniques can be applied on a limited basis should the need arise.
+
+An interest rate gap is a common measure of interest rate sensitivity (note 25). A liability gap occurs when more
+liabilities than assets are subject to rate changes during a prescribed future time period. Interest rate gaps are
+monitored by Senior Management & Asset & Liability Committee regularly.
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24. Risk management (continued)
+(D) Currency risk
+
+Currency risk arises due to exposure of the Bank to currencies other than its primary currency in the normal
+course of business.
+
+The Bank does not actively trade in the foreign exchange markets on its own account, and foreign exchange
+swaps and forward foreign exchange contracts are entered into to manage the Bank's expenses and the Bank's
+assets and liabilities. ;
+
+Where possible the Bank matches its currency transactions. The majority of the asset and liability positions are
+denominated in US Dollars and therefore, in the opinion of the Directors, the level of currency risk is considered
+to be minimal.
+
+The currency exposure at the year end is presented in note 16. The currency exposure presented in this note was
+economically hedged using forward exchange contracts.
+
+(E) Liquidity risk
+
+Liquidity risk arises from mismatches in inflows and outflows in cash. The liquidity risk management process
+ensures that the Bank is able to honour all of its financial commitments as they fall due. Liquidity is monitored
+daily through reports provided to Senior Management against appropriate limits set by the Board of Directors
+and with reference to regulatory requirements. In addition the Asset and Liability Committee and the Audit and
+Risk Management Committee review the liquidity position periodically. The Bank has access to a variety of
+funding sources including bank deposits, loan facilities, customer deposits and corporate trade finance deposits.
+Regular. reviews are conducted, via meetings of the Asset and Liability Committee, of these sources and
+requirements for perusal by Senior Management. In practice, the Bank operates well within its prescribed
+liquidity levels.
+
+Analysis of financial liabilities by remaining contractual maturities:
+
+The table below summarises the maturity profile of the Bank's financial liabilities as at 31 December 2018 based
+on contractual undiscounted repayment obligations. Repayments which are subject to notice are treated as if
+notice were to be given immediately. However, the Bank expects that many customers will not request
+repayment on the earliest date particularly as the majority of the total financial liabilities of US$124,894 below
+are payable to fellow Bank undertakings. Therefore the table below does not reflect the expected cash flows
+indicated by the Bank's deposit retention history.
+
+Carrying Gross On Less than 3 to 1 to Over
+amount cashflow demand 3 months - 42 5 years 5 years
+months
+
+US$’000 USS’000 USS$’000 USS’000 USS$’000 USS$’000 USS’000
+As at 31 December 2018
+
+Due to banks 119,484 120,051 11,025 23,638 85,388 -
+Customer accounts 4,708 4,708 4,708 - - -
+- Other financial liabilities 617 617 617 - - -
+
+Total financial liabilities 124,809 125,376 16,350 23,638 85,388 -
+
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24,
+
+Risk management (continued)
+
+Carrying Gross On 3 to
+amount cashflow demand Less than 12 1 to Over
+3 months months 5 years 5 years
+US$’000 =©US$’7000)=60US3"7000 )§=6US9°000)3=—sUS$’000 )§©=6US$"000 )3=—s US$’000
+
+As at 31 December 2017
+
+Due to banks 103,486 103,486 15,215 5,029 83,242 -
+Customer accounts 1,893 1,893 1,893 - - ~
+Other financial liabilities 951 951 951 - ~ -
+
+Total financial liabilities 106,330 106,330 18,059 5,029. 83,241 -
+
+(F) Operational risk
+
+Operational Risk is the risk that deficiencies in information systems or internal controls result in unexpected
+business, financial and operating losses. Operational Risk is ultimately managed by the Board of Directors and
+is given the highest priority. Senior Management are charged with applying stringent procedures to mitigate risk
+of error, fraud, money laundering, and other irregularities. In addition, strong disaster recovery procedures have
+been formulated and are tested on at least a yearly basis. Internal Audit reviews the risk mitigation processes to
+ensure that these meet the organisation's current needs and are being properly implemented and controlled.
+
+(G) Capital adequacy risk
+
+The Bank is managing and monitoring its capital requirement as per the Individual Capital Guidance “ICG” as
+set out by the PRA (Prudential Regulatory Authority) and have met the capital requirement as at the reporting
+date. The Bank’s capital resources consist of share capital, capital reserve and accumulated losses. There are no
+terms and conditions attached to the Bank’s Tier 1 capital resources.
+
+The Bank’s own assessment of the capital required to hold againt its risks is known as ICAAP (Internal Capital
+Adeqaucy Assessment Process) and the SREP (Supervisory Review and Evaluation Process) is the qualitative
+and quantative assessment of the ICAAP.
+
+Controls are in place to constantly monitor the level of capital to ensure the Bank is able to meet its regulatory
+obligation on a daily basis. In doing so the Board of directors believe that the interest of all stakeholders including
+customers and shareholders are fully protected. Account is taken of all potential events that could have an impact
+on capital.
+
+46
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24. Risk management (continued
+The following table summarises the regulatory Tier 1 resources of the Bank as at 31 December:
+
+2018 2017
+USS°000 USS’000
+
+Called up share capital : 49,000 49,000
+Capital reserve 11,496 11,496
+Revaluation reserve (1,368) 107
+Retained earnings (9,911) (10,196)
+Total teir 1 capital 49,199 ~ 50,407
+
+(A) Credit Risk
+
+The Bank uses a formal credit process to quantify and evaluate the risk of proposed credits, and to ensure
+appropriate returns for assuming risks. Treasury and Financial Institution Division in conjunction with Credit
+Committee will aim to undertake a financial review of each client at least annually, so that the Bank remains
+aware of counterparties’ risk profiles. This analysis includes a review of previous historical financial data, future
+projections, industry reviews, broker reports and credit analysis techniques.
+
+Securities, Letters of Credit, Guarantees and Off-Balance Sheet instruments are managed by the same process.
+Settlement and any other credit risks are restricted through product limits and counterparty netting agreements.
+
+From time to time the Bank takes collateral to mitigate credit or transactional risks. The taking of collateral as
+security is governed by detailed policies and procedures and where necessary the security is registered and
+perfected in the relevant jurisdictions using legal counsel. Other credit mitigates that the Bank is considering
+when assessing a credit facility are personal and corporate guarantees, fixed and floating charges over the assets
+of the borrower and mortgages on real estate properties. These credit mitigates were not assigned a value as at
+the year end as this value cannot be measured reliably.
+
+The table below shows the maximum exposure to credit risk for the components of the balance sheet, including
+derivatives. The maximum exposure is shown gross, before the effect of mitigation through use of master netting
+agreements and collateral agreements.
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24. Risk management (continued)
+
+Gross maximum Net maximum
+exposure exposure
+2018 2017 2018 2017
+
+Notes US$’000 US3’000 USS’000 US$’000
+
+Cash and money at call and deposits with
+
+central banks 14,729 12,225 14,729 12,225
+Loans and advances to banks [10] 38,996 17,005 38,996 17,005
+Loans and advances to customers * [it] 76,535 88,506 26,535 33,506
+Debt securities {12] 43,158 38,504 43,158 38,504
+Other assets prepayments and accrued
+
+income [15] 444 325 444 325
+Total 173,862 156,565 123,862 101,565
+
+*Loans and advances to customers includes US$50,237,368 (2017: US$56,290,106) of UPAS transactions with
+customers of fellow Bank companies (see note 27). These transactions are funded by inter Bank cash deposits
+and a set-off agreement against the cash deposit is in place which can be utilised in the event of default. The net
+maximum exposure for loans and advances to customers in the table above is presented after the netting of inter
+
+Bank deposits against these transactions.
+The Bank’s current credit risk grading framework comprises the following categories:
+
+Category Description Basis for recognising
+expected credit losses
+
+(ECL) ‘
+
+Performing The counterparty has a low risk of default and does not have | 12m ECL
+any past-due amounts
+
+Doubtful Amount is >30 days past due or there has been a significant | Lifetime ECL — not credit-
+increase in credit risk since initial recognition impaired
+
+In default Amount is >90 days past due or there is evidence indicating | Lifetime ECL — credit-
+the asset is credit-impaired impaired
+
+Write-off There is evidence indicating that the debtor is in severe Amount is written off
+financial difficulty and the Bank has no realistic prospect of
+recovery
+
+All exposure as at 31 December 2018 are included within the perfoming group.
+
+48
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24. Risk management (continued)
+Risk concentrations of the maximum exposure to credit risk
+
+Concentration of risk is managed by client/counterparty by geographical region and industry sector. The
+maximum credit exposure to any non-bank client during the year has been within the prescribed Large Exposure
+limit set by the PRA before taking into account of collateral.
+
+The Bank's financial assets, before taking into account any collateral held, other credit enhancements or
+impairment allowances can be analysed by the following geographical regions based on the location of the
+
+customer:
+2018 2017
+USS’000 US$’000
+United Kingdom 41,104 28,766
+Europe 20,786 15,481
+Asia 97,640 94,519
+North America 14,332 17,799
+Total 173,862 156,565
+
+An industry sector analysis of the Bank's financial assets, before taking into account collateral held, other credit
+enhancements or impairment allowances is as follows:
+
+2018 2017
+
+US3$’000 US3$’000
+
+Bank 53,725 84,225
+Sovereign 16,834 17,289
+Telecommunications 4,039 -
+Energy - 10,008
+Shipping 4,997 10,000
+Metal & Mining 34,736 10,267
+Transpotation & Port Authorities 4,874 4,815
+Food Industry 12,172 3,003
+Mining - 15,000
+Other 6,869 1,958
+Manufacturer of textile 8,508 -
+Manufacturer of paper and paper products 9,746 -
+Oil Industry 17,362 -
+
+Total 173,862 156,565
+
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24, Risk management (continued)
+
+Credit quality per class of financial assets:
+
+31 December 2018
+
+Due from banks
+Investment grade (rated Baa3- or above by Moody’s)
+
+Debt securities
+Investment grade (rated Baa3- or above by Moody’s)
+Sub-investment grade (rated BBB- or above by Moody’s)
+
+Loans and advances to customers
+Unrated
+
+Other assets
+Unrated
+
+Total
+
+Neither
+past due
+nor 12- month
+
+impaired ECL Total
+US3$’000 US3’000 US$’000
+$3,736 dl) 53,725
+22,725 - 22,725
+20,533 (100) 20,433
+76,571 (36) 76,535
+444 - 444
+174,009 (147) 173,862
+
+Loss allowances measured on all financial aseets at an amount equal to 12 month expected credit losses
+
+50
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+24, Risk management (continued)
+
+Neither
+past due
+nor
+impaired
+; Current Impaired Total
+31 December 2017 US$’000 US3$’000 US$’000
+Due from banks
+Investment grade (rated BBB- or above by Standard & Poor's) 29,230 - 29,230
+Debt securities
+Investment grade (rated BBB- or above by Standard & Poor's) 23,504 23,504
+Sub-investment grade ( rated BBB- or above by Standard & Poor’s) -
+Loans and advances to customers
+Unrated 88,506 - 88,506
+Other assets
+Unrated 325 - 325
+Total 156,565 - 156,565
+
+25. Non trading book interest rate risk
+
+The Bank does not have a trading book. However, interest rate exposure exists within its non-trading book.
+Instruments have been allocated to time bands by reference to the earlier of their next contractual interest rate
+repricing date and their maturity date.
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+
+Year ended 31 December 2018
+
+25.
+
+Non trading book interest rate risk (continued)
+
+As at 31 December 2018, interest rate risk comprised:
+
+Less than 3 months More
+3 months to6 6months 1 year to thanS Non-int.
+months to 1 year 5 years years _ bearing Total
+Category of US$’000 ~=6US$’000 =60US$’000 )3=—s USS$’000 ~=6©US3$’000 ~=US$"000 §~=—© US$’000
+asset/liability
+Cash and money at call
+and deposits with
+central banks - - - - - 14,729 14,729
+Loans and advances to
+banks 38,996 - - - - - 38,996
+Loans and advances to
+Customers 57,687 18,848 - - - - 76,535
+Debt securities - - 9,803 30,382 2,973 - 43,158
+Other assets - - - - - 444 444
+Total assets 96,683 18,848 9,803 30,382 2,973 15,173 173,862
+Deposits by banks 23,317 85,142 - - - 11,025 119,484
+Customer accounts - - - - - 4,708 4,708
+Shareholders’ funds - - - - - 49,199 49,199
+Other liabilities - - - - - 617 617
+Total liabilities &
+shareholders’ funds 23,317 85,142 - - - 65,549 174,008
+Gap 73,366 (66,294) 9,803 30,382 2,973
+Cumulative gap 73,366 . 7,072 16,875 47,257 $0,230
+Effects on profit &
+equity
+
+Interest rate risk -1% (734) (71) (169) (473) (502) (1,948)
+Interest rate risk +2% 1467 141 338 945 1,005 35896
+
+52
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+25.
+
+Non trading book interest rate risk (continued)
+
+The above figures do not provide the exposure of the Bank to particular interest rates as they have been
+consolidated across all currencies. The majority of the Bank's balance sheet is denominated in US Dollars, with
+only a minor element of currencies regarded as volatile. The Directors therefore consider that a further currency
+analysis of interest rate risk is not required. Given the current outlook for interest rates, management considers
+that the interest rate gap shown above is manageable in view of the fact that the assets and liabilities are of short
+term nature and the interest rates are principally based upon floating rates.
+
+As at 3] December 2017, interest rate risk comprises:
+
+Less than 3 months More
+3 months to6 6months 1 year to thanS Non-int.
+months tol year 5 years years _ bearing Total
+Category of US3’000 ~=US$’000 =©US$’000 }=©US3’000 ~=6US$’000 ~=US$’000 ~=—US $000
+asset/liability
+Cash and money at call
+and deposits with
+central banks - - ~ - - 12,225 12,225
+Loans and advances to
+banks 17,005 - - - - - 17,005
+Loans and advances to ,
+Customers 43,928 15,368 9,202 - 20,008 - 88,506
+Debt securities - 337 16,917 9,062 12,188 - 38,504
+Other assets ~ - - - - 325 325
+Total assets 60,933 15,705 26,119 9,062 32,196 12,550 156,565
+Deposits by banks 5,029 78,217 5,025 - - 15,215 103,486
+Customer accounts ~ - - - - 1,893 1,893
+Shareholders’ funds - - - - - 50,407 50,407
+Other liabilities - - - - - 951 951
+Total liabilities &
+shareholders’ funds 5,029 78,217 5,025 . - - 68,466 156,737
+Gap 55,904 (62,512) 21,094 9,062 32,196
+Cumulative gap 55,904 (6,608) 14,486 23,548 55,744
+Effects on profit &
+equity
+
+Interest rate risk -1% -559 66 -145 -235 -557 -1,430
+Interest rate risk +2% 1,118 -132 290 471 1,115 2,862
+
+53
+Bank Mandiri (Europe) Limited
+
+Notes to the financial statements
+Year ended 31 December 2018
+
+26.
+
+27.
+
+Ultimate parent company
+
+PT Bank Mandiri (Persero) Tbk, a part government owned bank incorporated in the Republic of Indonesia, is
+the immediate and ultimate parent, and the ultimate controlling party of the Bank.
+
+The registered address is:
+
+Plaza Mandiri
+
+JL. Gatot Subroto Kav 36-38
+Jakarta 12190
+
+Indonesia
+
+The smallest and largest Bank in which the results of the Bank are consolidated is that headed by PT Bank
+Mandiri (Persero) Tbk. The consolidated financial statements of the Bank are available to the public at the Bank's
+
+registered office.
+
+Related parties
+
+The banking transactions with related parties are executed on the same terms, including interest rates
+(deposit/advances) as those prevailing at the time for comparable transactions with unrelated parties. The details
+
+of the transactions are as listed below.
+Usance payable at sight ("UPAS") transactions with the parent company
+
+Usance Payable at Sight "UPAS" transactions are advances given to customers against letters of credit issued by
+other banking institutions. During the year UPAS transactions were entered into with customers of our parent
+company. At the year-end the outstanding balance of these transactions was US$50.3 million (2017: US$56.3
+million) all of which had full recourse against our parent company and for which a set-off agreement is in place.
+Borrowings/deposits from immediate parent and connected counterparties:
+
+2018 2017
+US$’000 USS’000
+
+PT Bank Mandiri (Persero) Tbk. 61,233 73,357
+
+Financial assets with immediate parent and connected counterparties:
+
+2018 2017
+US$’000 US$’000
+
+PT Bank Mandiri (Persero) Tbk. 30 10

@@ -115,6 +115,13 @@ P3_2026_URL = "https://www.aldermore.co.uk/media/0wylhhas/pillar-3-fy-2026-alder
 ARA_2026_URL = "https://www.aldermore.co.uk/media/tsybnoau/ara-fy-2026-aldermore-group.pdf"
 P3_2025_URL = "https://www.aldermore.co.uk/media/sgufisw5/aldermore-group-plc-2025-pillar-3-disclosures.pdf"
 P3_2024_URL = "https://www.aldermore.co.uk/media/jkkdbgnu/aldermore-group-plc-2024-pillar-3-disclosures.pdf"
+# FY2023's OWN edition, added 2026-09-16 (KM1-003). It was never cited by this project: found by
+# diffing the Bank's own investor index against our citation list, which also turned up uncited
+# FY2020 and FY2021 editions (neither prints a key-metrics table of any kind, so neither is wired).
+# It matters because the Pillar 3 metric sheets above source FY2023 from the FY2024 edition's
+# COMPARATIVE column, and the KM1 map's rule 1 is to use each year's own edition. The two agree
+# here (Bank CET1 1,203.8 both ways), so this changes provenance, not figures.
+P3_2023_URL = "https://www.aldermore.co.uk/media/ynohqczi/pillar-3-2023.pdf"
 P3_2022_URL = "https://www.aldermore.co.uk/media/hnhpw03l/pillar-3-2022_0.pdf"
 P3_2019_URL = "https://www.aldermore.co.uk/media/2prbumkj/aldermore-group-plc-pillar-3-disclosure-document-at-30-june-2019.pdf"
 P3_2015_URL = "https://www.aldermore.co.uk/media/ot5axgnp/pillar-3-disclosure-dec-2015.pdf"
@@ -747,6 +754,160 @@ bw.add_asset_quality_sheet(
     first_col_width=68,
     source_height=170,
     years=PILLAR3_YEARS,
+)
+
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-003)
+# ---------------------------------------------------------------
+# ENTITY: every column here is ALDERMORE BANK PLC ('Bank'), matching the rest of this workbook.
+# Each edition prints the SAME rows twice - once for Aldermore Group PLC ('Group') and once for
+# the Bank - so the entity-basis rule applies INSIDE a single table. FY2026 is six columns
+# (Group a/b/c then Bank a/b/c over 30-Jun-26, 31-Dec-25, 30-Jun-25); FY2022-FY2025 are four
+# (Group current, Group prior, Bank current, Bank prior). Taking the leftmost column because it
+# comes first would silently put Group figures into a Bank series.
+#
+# TEMPLATE DRIFT WITHIN ONE BANK: only the FY2026 edition prints the template's row NUMBERS
+# ("1", "UK 7a", "UK 16b"). The FY2022-FY2025 editions print the identical row set and labels
+# with NO numbering at all. The numbers below are Aldermore's own, from FY2026, carried across
+# the row because it is the same template row - not invented for the earlier years.
+#
+# EACH YEAR COMES FROM ITS OWN EDITION (map rule 1), never a later edition's comparative. That
+# matters twice here:
+#   * FY2023 uses the FY2023 edition, which this project had never cited (see P3_2023_URL).
+#   * FY2025 leverage exposure is 15,674.3 in the FY2025 edition and RESTATED to 15,526.0 in the
+#     FY2026 edition's comparative. The FY2025 figure stands here and the restatement is flagged
+#     rather than reconciled. Every other FY2026 comparative agrees with the FY2025 edition.
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2026": 1450.9, "FY2025": 1337.8, "FY2024": 1321.5, "FY2023": 1203.8, "FY2022": 1065.9}),
+    ("DATA", "2  Tier 1 capital (£m)",
+     {"FY2026": 1500.9, "FY2025": 1387.8, "FY2024": 1382.5, "FY2023": 1264.8, "FY2022": 1126.6}),
+    ("DATA", "3  Total capital (£m)",
+     {"FY2026": 1800.9, "FY2025": 1487.8, "FY2024": 1482.5, "FY2023": 1364.8, "FY2022": 1226.6}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£m)",
+     {"FY2026": 8203.7, "FY2025": 7271.6, "FY2024": 6875.6, "FY2023": 6504.9, "FY2022": 6260.1}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2026": "17.7%", "FY2025": "18.4%", "FY2024": "19.2%", "FY2023": "18.5%", "FY2022": "17.0%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2026": "18.3%", "FY2025": "19.1%", "FY2024": "20.1%", "FY2023": "19.4%", "FY2022": "18.0%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2026": "22.0%", "FY2025": "20.5%", "FY2024": "21.6%", "FY2023": "21.0%", "FY2022": "19.6%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2026": "0.7%", "FY2025": "1.2%", "FY2024": "1.2%", "FY2023": "1.2%", "FY2022": "1.2%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)",
+     {"FY2026": "0.2%", "FY2025": "0.4%", "FY2024": "0.4%", "FY2023": "0.4%", "FY2022": "0.4%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)",
+     {"FY2026": "0.4%", "FY2025": "0.5%", "FY2024": "0.5%", "FY2023": "0.5%", "FY2022": "0.5%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2026": "9.3%", "FY2025": "10.1%", "FY2024": "10.1%", "FY2023": "10.1%", "FY2022": "2.1%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2026": "2.0%", "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "1.0%", "FY2022": "0.0%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2026": "4.5%", "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "3.5%", "FY2022": "2.5%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2026": "13.8%", "FY2025": "14.6%", "FY2024": "14.6%", "FY2023": "13.6%", "FY2022": "12.6%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2026": "12.5%", "FY2025": "12.8%", "FY2024": "12.8%", "FY2023": "12.8%", "FY2022": "7.0%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£m)",
+     {"FY2026": 16715.1, "FY2025": 15674.3, "FY2024": 14337.2, "FY2023": 13609.6, "FY2022": 13850.3}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2026": "9.0%", "FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (weighted value - average) (£m)",
+     {"FY2026": 3725.9, "FY2025": 3723.1, "FY2024": 4208.6, "FY2023": 3280.6, "FY2022": 2838.5}),
+    ("DATA", "UK 16a  Cash outflows - total weighted value (£m)",
+     {"FY2026": 2554.3, "FY2025": 2194.3, "FY2024": 2206.4, "FY2023": 1951.0, "FY2022": 1012.1}),
+    ("DATA", "UK 16b  Cash inflows - total weighted value (£m)",
+     {"FY2026": 291.2, "FY2025": 226.0, "FY2024": 247.0, "FY2023": 264.6, "FY2022": 239.5}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£m)",
+     {"FY2026": 2263.1, "FY2025": 1968.3, "FY2024": 1959.4, "FY2023": 1686.4, "FY2022": 772.6}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2026": "164.6%", "FY2025": "189.2%", "FY2024": "214.8%", "FY2023": "194.5%", "FY2022": "367.4%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£m)",
+     {"FY2026": 16701.9, "FY2025": 15972.4, "FY2024": 16133.4, "FY2023": 15490.2, "FY2022": 15667.6}),
+    ("DATA", "19  Total required stable funding (£m)",
+     {"FY2026": 13318.4, "FY2025": 12166.9, "FY2024": 11778.0, "FY2023": 12161.3, "FY2022": 12169.6}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2026": "125.4%", "FY2025": "131.3%", "FY2024": "137.0%", "FY2023": "127.4%", "FY2022": "128.7%"}),
+]
+
+KM1_SOURCES = (
+    "Sources — Aldermore Bank PLC ('Bank') columns of the key-metrics table in each year's OWN Pillar 3 "
+    "edition. Every edition prints the same rows for both Aldermore Group PLC and the Bank; the Bank "
+    "columns are taken here, matching the entity basis of every other sheet in this workbook.\n"
+    f"FY2026: Pillar 3 Report for the year ended 30 June 2026, p.6 (UK KM1 — Key metrics template, Bank "
+    f"column a, 30-Jun-26) — {P3_2026_URL}\n"
+    f"FY2025: Pillar 3 Disclosures for the year ended 30 June 2025, pp.4-5 (Key metrics, Bank 30 June 2025 "
+    f"column). This edition's table BREAKS ACROSS A PAGE: capital, SREP, buffers, leverage and LCR on p.4, "
+    f"the three NSFR rows on p.5 under their own heading. The other editions print it whole on one page "
+    f"— {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures for the year ended 30 June 2024, p.4 (Key metrics, Bank 30 June 2024) "
+    f"— {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures for the year ended 30 June 2023, p.4 (Key metrics, Bank 30 June 2023) "
+    f"— {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures for the year ended 30 June 2022, p.4 (Key metrics, Bank 30 June 2022) "
+    f"— {P3_2022_URL}\n"
+    "FY2021 and earlier carry no column: the FY2021 and FY2020 editions (83 and 86 pages, both located on "
+    "Aldermore's own investor index on 2026-09-16) print no key-metrics table of any kind, and the template "
+    "post-dates them — the Disclosure (CRR) Part of the PRA Rulebook applied from 1 January 2022. Those "
+    "years are blank because the FY2021 EDITION published no such table, not because it was not found. A "
+    "FY2021 comparative does exist: the FY2022 edition prints a 30 June 2021 Bank column for the capital, "
+    "ratio and SREP rows (CET1 £947.0m, CET1 ratio 15.9%, total SREP 1.1%) and 'n/a' for every leverage, "
+    "LCR and NSFR row. It is deliberately not used — each column here comes from its own year's edition.\n"
+    "LATEST-EDITION CHECK: Aldermore's own investor index "
+    "(https://www.aldermore.co.uk/investors/results-and-presentations/) checked 2026-09-16 — newest Pillar 3 "
+    "is FY2026 (year ended 30 June 2026), already carried here. None newer.\n"
+    "\n"
+    "FOUR SOURCE INCONSISTENCIES, REPRODUCED AS PUBLISHED AND NOT RECONCILED. All 25 rows of all five "
+    "columns were read off that year's OWN edition and re-checked against the printed page on 2026-09-16. "
+    "The items below are differences BETWEEN editions, found by comparing each edition against the next "
+    "edition's comparative column for the same entity and date (FY2022 vs FY2023, FY2024 vs FY2025, FY2025 "
+    "vs FY2026). Nothing below was adjusted, spliced or averaged.\n"
+    "1. 'Total SREP own funds requirements' (UK 7d) is a BASIS BREAK, not a fall: the FY2022 edition prints "
+    "2.1% for the Bank — the ADDITIONAL requirement only, and the three component rows immediately above it "
+    "sum to exactly that (1.2 + 0.4 + 0.5) — while the FY2023 edition onward print 10.1% for the same "
+    "measure, the TOTAL including the 8% Pillar 1 minimum. The Group column breaks identically in the same "
+    "editions (1.6% to 9.6%), which is what confirms this is the bank's change of basis and not a row "
+    "misread on our side. The series is deliberately not spliced.\n"
+    "2. That basis change is applied RETROSPECTIVELY to the comparative: the FY2022 edition prints 7.0% for "
+    "'CET1 available after meeting the total SREP own funds requirements' at 30 June 2022, while the FY2023 "
+    "edition's comparative prints 11.3% for that identical row and identical date.\n"
+    "3. The FY2023 edition also RESTATES the FY2022 NSFR rows: available stable funding £15,667.6m becomes "
+    "£14,273.5m, required stable funding £12,169.6m becomes £10,867.2m, and the ratio 128.7% becomes 131.3%. "
+    "Every LCR row for that same date agrees exactly between the two editions, so the restatement is "
+    "confined to NSFR rather than being a general re-basing of the liquidity section.\n"
+    "4. FY2025's leverage exposure measure is RESTATED: the FY2025 edition prints £15,674.3m for the Bank at "
+    "30 June 2025, the FY2026 edition's comparative £15,526.0m for that same date. £15,674.3m stands here. "
+    "24 of the 25 FY2026 comparative rows agree exactly with the FY2025 edition — that row-by-row check is "
+    "how this was found. Separately, the FY2025 edition's own 30 June 2024 comparatives print CET1 "
+    "£1,321.4m, Tier 1 £1,382.4m and total capital £1,482.4m where the FY2024 edition printed £1,321.5m, "
+    "£1,382.5m and £1,482.5m: 0.1m of precision drift on three capital rows, carrying into no ratio.\n"
+    "The FY2022 edition prints 'n/a' rather than a figure for the FY2021 comparatives of every leverage, LCR "
+    "and NSFR row, footnoted 'these disclosures have been implemented from 1 January 2022 ... no comparatives "
+    "are being provided' — the 1 January 2022 basis break in the bank's own words. Those comparatives are not "
+    "used here in any case, since each column is taken from its own year's edition."
+)
+
+bw.add_km1_sheet(
+    title="Aldermore Bank PLC — KM1 Key Metrics",
+    subtitle="Aldermore Bank PLC (Bank solo) columns of the bank's own published key-metrics template, in its "
+             "own row order, labels and precision. Amounts in £m, ratios as printed. Row numbers are "
+             "Aldermore's own from the FY2026 edition; the FY2022–FY2025 editions print the identical rows "
+             "with no numbering. FY2021 and earlier predate the template and are intentionally blank.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=62,
+    source_height=210,
+    years=P3_DISCLOSURE_YEARS,
 )
 
 # ---------------------------------------------------------------

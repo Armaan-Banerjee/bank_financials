@@ -1,0 +1,3112 @@
+Registered number: 6193060
+
+Bank of China (UK) Limited
+
+Annual Report and Financial Statements
+
+For the year ended 31 December 2010
+Contents
+
+Business Review
+
+Chairman's Statement
+
+Chief Executive Officer's Statement
+Report of the Directors
+
+Governance
+
+Corporate Governance Statement
+Statement of Directors’ Responsibilities
+Independent Auditors’ Report
+Financial Statements
+
+Income Statement
+
+Statement of Comprehensive Income
+Statement of Financial Position
+Statement of Changes in Equity
+Statement of Cash Flows
+
+Notes to the Financial Statements
+
+Page
+
+13
+14
+
+16
+17
+18
+19
+20
+21
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Chairman’s Statement
+
+The third full financial year of operations for Bank of China (UK) Limited ("BOC UK’ or the “bank”) has been
+completed very successfully. Regardless of the adverse market conditions in the United Kingdom (“the UK”) this
+year, the financial performance of the bank was outstanding, resulting in profit after tax of 219,211,000,
+substantially in excess of the target established by the Board of Directors, an achievement for which management
+is to be congratulated. Following a review by management it was decided to establish an impairment charge in
+respect of the bank's investment in Bank of China (Suisse) S.A. reducing profit after tax for the year to
+£10,779,000.
+
+The performance of the bank in 2010 was excellent both in terms of its financial performance and the qualitative
+changes made by management to the bank's operations. Additional resources have been put in place in the Risk
+Management Department, in Internal Audit and in Legal and Compliance to further strengthen the bank’s internal
+controls and governance procedures. Additional risk mitigation systems were deployed to ensure the bank's
+compliance with UK and international sanctions legislation, ensuring that the bank's policies and procedures are in
+line with market best practice.
+
+| should also like to take this opportunity to express the bank's appreciation for the contribution made by my
+predecessor as Chairman, Mme YanLing Zhang, to the successful development of the bank from its launch in
+2007, until her departure from the Board on 7 September 2010.
+
+Looking forward to 2011, slow economic recovery in the UK together with continued uncertainty in the Eurozone
+indicate that difficult market conditions are likely to prevail throughout the year. In spite of this challenging outlook,
+lam confident that the bank's management team will continue its previously successful business development
+efforts to achieve the financial targets set by the Board.
+
+Finally, | should like to compliment management on the successful relocation of the bank's operations to the new
+building at No 1 Lothbury. Management is to be congratulated on completing this project in accordance with the
+expectations of the Board of Directors. This is an impressive building, adjacent to that of the Bank of England in
+the City, which will accommodate substantial growth in the activities of BOC UK and represents a clear statement
+of the level of commitment and support provided by BOC Group for its operations in the UK.
+
+Yi Yue
+
+Chairman of the Board of Directors
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Chief Executive Officer's Statement
+
+The financial performance of Bank of China (UK) Limited (“BOC UK" or “the bank”) during 2010 showed a
+significant increase over the previous year and was substantially ahead of the financial targets set by its Board of
+Directors. Full year earnings, after corporation tax, were £10,779,000, after making an impairment charge of
+£8,432,000 resulting from an impairment assessment of the bank's investment in Bank of China (Suisse) S.A. The
+underlying operating result, excluding the impairment charge, represents an increase of more than 53% over the
+level achieved in 2009.
+
+Business conditions throughout the year, although more favourable than in 2009, remained difficult. Although the
+consensus view in the UK financial markets was that the international credit crisis had ended in 2009, economic
+activity in the UK remained depressed in spite of the low interest rate policy that was pursued by the Monetary
+Policy Committee (“MPC”) of the Bank of England throughout the year. Continued uncertainties in the market had
+a generally destabilising effect and disrupted the normal flow of wholesale transactions to the bank with the
+exception of those for “outgoing” Chinese companies, which continued to be a target sector for the bank’s
+business development activities. The robust nature of the bank’s capital structure, the soundness of the bank's
+“brand” and its strong liquidity profile supported the continued development of the bank's principal business lines;
+syndicated lending, direct corporate lending, retail banking and trade finance, all of which contributed to the overall
+performance of the bank.
+
+The bank’s risk management processes were strengthened during the course of the year by a re-organisation of
+the Risk Management Department, which included the hiring of a number of specialist staff, to provide focused
+support for the bank's corporate banking activities. In addition, the Risk Management Department in London
+participated as a pilot member of the Group-wide team responsible for the development of enhanced system for
+the management of Operational Risk. This system is expected to be implemented across the Group in 2011.
+
+Considerable resources were committed during the year to further strengthening the bank’s compliance, internal
+control and governance policies and procedures. An enhanced internal control policy based on “Three Lines of
+Defence” methodology was developed by the Legal and Compliance Department and rolled out across the bank
+during the year. In addition, new software was implemented to ensure the bank's continued compliance with all the
+major Sanction Lists, through the real-time screening of funds transfers into and out of the bank. The bank's
+management is cognisant of the higher regulatory standards being set by the Financial Services Authority and is
+committed to meeting those requirements.
+
+In retail banking, considerable progress was made towards increasing the bank’s profile in this key market both by
+the launch of new products and services and by reinforcing the bank's established product range. BOC UK's
+involvement in the UK Mortgage market, although modest, is developing satisfactorily and is in line with
+management's objective of establishing a much higher profile in this aspect of the market for retail services. An
+important aspect of the bank's services in the UK has been the development of Renminbi denominated products
+(“RMB”), which include Current Accounts and Remittances, Term Deposits and Pre-Paid Credit Cards. The
+introduction and development of RMB retail services in the UK is being matched by developments in the wholesale
+markets, where international financial institutions are increasingly interested in executing transactions, including
+the finance of international trade and in holding deposits in RMB. This is an important aspect of BOC UK's
+business development priorities, in accordance with the strategic objectives of the entire BOC Group.
+
+The bank’s private banking subsidiary Bank of China (Suisse) S.A. ("BOCS”) continued to develop satisfactorily
+during the year, in spite of the changes to key members of senior management that the bank considered to be
+necessary at the end of the first quarter. During the second half of the year, following a strategic review, it was
+decided that the maintenance of an independent funds management operation in Geneva was no longer viable.
+With the agreement of the local regulatory authority, BOC (Suisse) Fund Management S.A. was integrated into
+BOCS, through the establishment of a separate asset management and advisory division within BOCS. This was
+completed on the 15 December 2010.
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+The strategic decision to close the fund management operation resulted in the write off of the cost of this
+investment. The write off further augmented the forecasted negative retained earnings sustained by BOCS during
+its first two years of operation. As the original business model has fundamentally changed management revised
+their business forecasts. During the year reserves were further impacted by provisions being made for credit
+losses and client litigation proceedings. The combination of these factors lead to an impairment assessment
+having to be made on the bank's investment in BOCS, with the revised forecasts being used as a key input in to
+this process. The impairment assessment resulted in an impairment charge of £8,432,000 being made this year
+against the bank's investment in BOCS.
+
+During this period, the bank's efforts to expand the revenue levels generated from its non-banking services
+continued through the expansion of the activities of China Visa Services Limited (“CVSL").The UK operations of
+CVSL are developing satisfactorily and are being used within BOC Group as a model for the establishment of visa
+service companies elsewhere. During the year, CVSL offices were opened in Italy and Indonesia and there are a
+number of additional locations in the pipeline.
+
+The bank's UK retail business continued to expand throughout the year in accordance with the targets agreed with
+the Board of Directors. This increase in our activities required a further 15% increase in overall head count, which
+is in line with the trend established by the bank in previous years and is in marked contrast to the market generally,
+in which many financial institutions are scaling back their operations in the UK. The continued development of the
+bank's operations in the UK is supported by the local availability of highly trained staff, the extensive local
+infrastructure of specialist support services, the strength and clarity of the local legal and regulatory environment
+and the flexibility of UK employment regulations and market practices. The relocation of the bank's London
+operations into a new, much larger head quarters building adjacent to the Bank of England in the City is a clear
+statement of intent by Bank of China regarding the future expansion of its activities in the UK.
+
+Finally, | wish to acknowledge the significant contribution made by my predecessor as CEO, Dr Kenneth Ge, to the
+successful development of the bank from its establishment in 2007 until 1 December 2010 when he assumed the
+non-executive position of Vice Chairman of the Board.
+
+WenJian Fang
+
+Chief Executive Officer
+Board Director
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Report of the Directors
+Principal Activities
+
+Bank of China (UK) Ltd (“BOC UK" or the “bank”) is a full service bank offering retail, corporate, and trade finance
+services in the United Kingdom (the “UK”). The bank is a wholly owned subsidiary of Bank of China Limited, Beijing
+(‘BOC’). The bank is authorised and regulated by the Financial Services Authority (the “FSA”).
+
+BOC UK was incorporated in England and Wales as a private company with limited liability on 29 March 2007.
+
+Our corporate and trade finance business encompasses funding and advisory services for Chinese corporates
+
+seeking to expand in the UK and Europe. Syndication plays an important role for the bank in gaining access to
+European corporate clients. Our retail activities focus on branch banking. The bank offers standard high street
+
+retail banking services including current accounts, savings accounts, debit and credit cards, mortgage products
+and personal and business loans.
+
+Business Review
+As at 31 December 2010 the bank had total assets of £735,494,000 (2009: £982,073,000).
+
+The bank's assets are primarily financed by inter-bank and intra-group deposits. The bank continues to focus its
+attention on developing the customer deposits base and this reflects our determination to develop our corporate
+banking services as well as to help in meeting the bank’s funding requirements.
+
+For the year ended 31 December 2010, the bank generated a post-tax profit of £10,779,000 (2009: £12,560,000),
+after an impairment charge of £8,432,000 resulting from an impairment assessment of the bank's investment in
+Bank of China (Suisse) S.A.("BOCS”). Notwithstanding the impairment, the underlying operating result was
+substantially in excess of the budget set by the Board of Directors (the “Board”). See note 34 (b) for further
+information on the impairment assessment of BOCS.
+
+The bank benefited from a higher than expected income from the provision of service charges to other BOC Group
+entities as disclosed in Note 34.
+
+During the year the bank invested a further CHF 100,000,000 (£61,911,000) in BOCS being a total investment of
+CHF 150,000,000 (£89,229,000). See Note 34 (b) for further information on this transaction.
+
+Retail Banking
+
+The bank continued to build its brand image and increase its customer base in the UK retail market. The bank's
+buy-to-let mortgage product was selected a Best Buy by Moneyfacts, an independent organisation that monitors
+financial products. This contributed towards a steady increase in the mortgage loan book. As at 31 December
+2010 there were no non-performing loans and the bank continues to lend prudently in a challenging market.
+
+The bank also achieved a healthy growth in commission business and total commission income for retail banking
+increased by 32% compared with last year.
+
+In addition to traditional retail products, the bank focused its attention on Renminbi (“RMB”) denominated
+business, launching a number of RMB products which include RMB currency exchange, RMB current account,
+RMB fixed time deposit, RMB China Union Pay prepay card (which allows holders to make purchases whilst in
+China) and RMB remittances. As a result of this we are the only UK-registered bank to offer a range of various
+RMB denominated financial products and services. The introduction of the Gold Premier service with a dedicated
+service hot-line was launched and enhanced the bank's offering for High Net Worth customers.
+
+Corporate Banking
+
+Whilst continuing to expand its presence in the syndicated loans market, the bank is also seeking to further
+develop its bilateral lending by offering a range of banking facilities to corporate customers including loans, trade
+services, cash management and foreign exchange. As well as addressing the UK market the bank is also focused
+on targeting new relationships in Europe, the Middle East and Africa.
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Corporate Banking (continued)
+
+A key objective for the wholesale lending business is to be the preferred bank for Chinese corporates conducting
+business in the UK and other European Union (“EU”) countries.
+
+Financial Markets
+The Financial Markets and Financial Institutions department comprises three divisions; foreign exchange, money
+
+market and fixed income investments. During the year, these activities have continued to focus upon efficient
+liquidity management and the funding requirements of the bank’s activities. There was no proprietary trading
+activity during the year under review.
+
+Dividends
+The directors do not recommend the payment of a dividend.
+Directors’ Interest
+
+The directors who held office during the period were as follows:
+
+Mrs. YanLing Zhang Chairman - (resigned 7 September 2010)
+
+Mr. Yi Yue Chairman - (appointed 7 September 2010)
+
+Dr. Kenneth Q. Ge Vice Chairman - wef 1 December 2010 (formerly Chief Executive Officer)
+
+Mr. WenJian Fang Chief Executive Officer - wef 1 March 2011 (Acting Chief Executive Officer - wef 1
+December 2010 (formerly Chief Risk Officer)
+
+Mr. Stephen Hinds Chief Operating Officer
+
+Mr. YangXin Huang Non-Executive - (resigned 29 May 2011)
+
+Mr. Christopher Fitzgibbon Non-Executive
+
+Mr. Donald Workman Non-Executive
+
+Ms. Li Ren Non-Executive - (appointed 29 May 2011*)
+
+. subject to FSA approval
+
+None of the directors who held office at the end of the financial period had any disclosable interest in the shares of
+the bank at that date.
+
+Directors’ Emoluments
+
+Information on emoluments of the directors of BOC UK, in accordance with the Companies Act 2006, is disclosed
+in Note 15 to the financial statements.
+
+Directors’ Indemnities
+
+The BOC UK Board believes that it is in the best interests of the bank to attract and retain the services of the most
+able and experienced directors by offering competitive terms of engagement, including the granting of indemnities
+on terms consistent with the applicable statutory provisions. Qualifying third party indemnity provisions (as defined
+by Section 234 of the Companies Act 2006) were accordingly in force during the course of the financial period
+ended 31 December 2010 for the benefit of the directors and, at the date of this report, are in force for the benefit of
+the directors in relation to certain losses and liabilities which they may incur (or have incurred) in connection with
+their duties, powers or office.
+
+Employees
+The average number of employees for the year ended 31 December 2010 was 211 (31 December 2009: 192)
+Charitable and Political Contributions
+
+For the year ended 31 December 2010, the bank did not fund any charities nor did it make any donations to political
+organisations.
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Financial Instruments
+
+The bank's principal financial risk management objectives and policies including its exposure to credit risk, market
+tisk, and liquidity risk are set out in pages 32 to 42 in Note 6 to the financial statements.
+
+Further information regarding the bank's approach to risk management and its capital adequacy are contained in
+the unaudited disclosures made under the requirements of Basel II Pillar 3 (the Pillar 3 disclosures). These
+disclosures will be published on the bank’s website shortly after the approval of these financial statements at
+www.bocukltd.co.uk.
+
+Principal Risks and Uncertainties
+
+The bank is subject to a number of risk factors that could cause its future results to differ materially from current
+expectations. These risk factors are of uncertainties, concerning the current and future business climate, and risks
+which are naturally inherent in a banking environment.
+
+The current business climate is subject to significant uncertainties in 2011 and beyond, most notably:
+
+The rate and sustainability of the recovery of the UK economy
+
+The potential impact of increasing inflation on economic growth and corporate profitability
+The rate and extent of the rise of interest rates in the UK and the Eurozone
+
+The potential fall of residential property prices
+
+The effect of one or a combination of the above factors could make the business environment a challenging one
+with regard to possible credit impairments being incurred and difficulty in identifying new assets/business
+opportunities that meet the bank’s risk appetite.
+
+Principal Risks; The bank is exposed to a number of financial and non-financial risks namely credit risk, market risk
+liquidity risk and operational risk. Of these risks, credit risk and liquidity risk are deemed to be the principal risks
+which the bank is exposed to.
+
+Credit risk is the risk of financial loss to the bank if a customer or counterparty to a financial instrument fails to meet
+its contractual obligations and is considered a principal risk due to the composition of the Bank's balance sheet and
+lending being its primary business
+
+The bank has established a set of credit risk management policies and procedures, and appropriate credit risk
+limits to manage and control credit risk that arises through the bank’s normal business activities. These policies,
+procedures and limits are regularly reviewed in light of changes in markets and business strategies.
+
+Further information on the management of credit risk is disclosed in Note 6 (a) of the notes to the financial
+statements.
+
+Liquidity risk is the risk that the bank is unable to meet its obligations as they fall due resulting in an inability to
+support normal business activity and/or failing to meet liquidity regulatory requirements.
+
+The bank is exposed to the risk that it will be unable to meet its obligations as they fall due, arising from the differing
+maturity profiles of its assets and liabilities. To mitigate its exposure the bank places limits on the mismatch of
+maturity dates, and by holding stock of liquid assets which could be sold at short notice if the need arose. The
+Board, as part of the going concern assessment, took additional comfort from the Letter of Support from the bank’s
+parent company which, by direct implication, has a significant impact on the bank’s assessment of its exposure to
+liquidity risk. A further mitigating factor is a committed short-term loan facility granted by the bank's parent
+company which is in support of the Intra Group Liquidity Modification granted to the bank by the FSA.
+
+Further information on the management of liquidity risk is disclosed in Note 6 (b) of the notes to the financial
+statements.
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Disclosure of Information to the Auditors
+The directors who held office at the date of approval of this Director's Report confirm that:
+
+e So far as they are each aware, there is no relevant audit information of which the bank's auditors are unaware.
+e Each director has taken all steps that he/she ought to take as a director to make himself/herself aware of any
+relevant audit information and to establish that the bank's auditors are aware of that information.
+
+This confirmation is given and should be interpreted in accordance with the provisions of Section 418 (2) of the
+Companies Act 2006.
+
+Pursuant to Section 487 of the Companies Act 2006, the auditors will be deemed to be reappointed and
+PricewaterhouseCoopers LLP will therefore continue in office.
+
+4 Lothbury By order of the Board,
+London
+EC2R 7DB
+yw
+WenJian Fang
+Chief Executive Officer
+22 July 2011 Board Director
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Corporate Governance Statement
+
+Bank of China (UK) Limited ("BOC UK" or the “bank”) is committed to the principles of corporate governance
+contained in the UK Corporate Governance Code (the “Governance Code”) issued by the Financial Reporting
+Council on 28 May 2010.
+
+Corporate Governance Framework
+
+The bank’s corporate governance framework centres on the Board of Directors (the “Board”), which provides.
+guidance and effective oversight of the senior management of the bank and of its subsidiaries. In order to run the
+business effectively, the Board delegates responsibility for the day-to-day management of the bank to the Chief
+Executive Officer, who is supported by the Executive Management Committee, which he chairs. Oversight of the
+bank’s principal subsidiaries, China Visa Services Limited and Bank of China (Suisse) S.A. is achieved by
+representation on the Board of Directors by a member of the Executive Management Committee and by common
+representation on the Executive Management Committees respectively.
+
+Board meetings are scheduled throughout the year as evenly as possible. Scheduled Board and Committee
+meetings are arranged in advance to ensure, as far as possible, that directors can manage their time
+commitments. All directors are provided with supporting papers and relevant information for each meeting and are
+expected to attend, unless there are exceptional circumstances that prevent them from doing so.
+
+In the event that a director is unable to attend a meeting, he/she will still receive the papers for the meeting and will
+normally discuss any matters they wish to raise with the chairman of the meeting, to ensure their views are taken
+into account. In addition, all directors are able to discuss any issues with the Chairman of the Board and/or the
+Chief Executive Officer at any time. During the year ended 31 December 2010, it is considered that all directors
+contributed the time necessary to discharge their responsibilities to the Board.
+
+The Chairman of the Board works closely with the Company Secretary to ensure that accurate, timely and clear
+information flows to the Board. Supporting papers for scheduled meetings are distributed in advance of each
+meeting. All directors have access to the services of the Company Secretary.
+
+Following the provisions in the Articles of Association the appointment or removal of a member of the Board
+requires the approval of the shareholders. Independent non-executive directors are appointed for three-year
+renewable terms which may, in accordance with the Articles of Association, be terminated without notice or
+payment of compensation.
+
+Board Effectiveness
+
+Under United Kingdom (the "UK”) Company Law, directors must act in a way they consider, in good faith, would be
+most likely to promote the success of the bank for the benefit of the shareholders as a whole. In doing so, the
+directors must have regard (amongst other matters) to the following:
+
+The likely consequences of any decision in the long-term
+
+The interests of the bank’s employees
+
+The need to foster the bank’s business relationships with suppliers, customers and others
+The impact of the bank’s operations on the community and the environment
+
+The Board is responsible to shareholders for creating and delivering sustainable shareholder value through the
+management of the bank’s businesses. It therefore determines the goals and policies of the bank to deliver such
+long-term value and provides overall strategic direction within a framework of rewards, incentives and controls.
+The Board aims to ensure that management strikes an appropriate balance between promoting long-term growth
+and delivering short-term objectives.
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Board Effectiveness (continued)
+
+The Board is also responsible for ensuring that management maintains a system of internal controls that provide
+assurance of effective and efficient operations, internal financial controls and compliance with the laws and
+regulations. In carrying out this responsibility, the Board has regard to what is appropriate for the bank's business
+and reputation, the materiality of the financial and other risks inherent in the business, and the relative costs and
+benefits of implementing specific controls.
+
+The Board is also the decision-making body for all other matters of such importance as to be of significance to the
+bank as a whole because of their strategic, financial or reputational implications or consequences.
+
+A typical Board meeting receives reports from the Chief Executive Officer and will also be presented with an
+update on the execution of strategy in the main businesses and functions. It will also receive reports from each of
+the principal Board Committees and may also receive a report from the Company Secretary on any relevant
+corporate governance matters.
+
+Chairman and Chief Executive Officer
+
+The roles of the Chairman and the Chief Executive Officer are separate. The Chairman's main responsibility is to
+lead and manage the work of the Board to ensure that it operates effectively and fully discharges its legal and
+regulatory responsibilities. The Board has delegated the responsibility for the day-to-day management of the bank
+to the Chief Executive Officer, who is responsible for recommending strategy to the Board, leading the executive
+directors and for making and implementing operational decisions.
+
+Board Balance and Independence
+
+The Board has collective responsibility for the success of the bank, however, executive directors have direct
+responsibility for business operations, whereas non-executive directors are responsible for bringing independent
+judgement and scrutiny to decisions taken by the Board, providing objective challenge to management. The Board
+can draw on the wide range of skills, knowledge and experience they have built up as directors of other companies
+and as business leaders.
+
+The Governance Code sets out circumstances that the Board may find relevant when determining the
+independence of a non-executive director. The Board considers that the following behaviours are essential in order
+for the Board to conclude that an individual is independent:
+
+e Provides objective challenge to management
+
+e Is prepared to challenge others’ assumptions, beliefs or viewpoints as necessary for the good of the bank
+
+e Questions intelligently, debates constructively, challenges rigorously and makes decisions dispassionately
+
+e Is willing to stand up and defend their own beliefs and viewpoints in order to support the ultimate good of the
+bank
+
+e Understands the bank’s business and affairs, to enable them properly to evaluate the information and
+responses provided by management.
+
+All directors must report any changes in their circumstances to the Board and the shareholders reserve the right to
+terminate the appointment of a director if there are any material changes in their circumstances that may conflict
+with their commitments as a director of the bank, or that may impact on their independence.
+
+Information and Professional Development
+A three-part training programme is in place for Directors. This comprises:
+
+e Induction training, when they join the Board;
+e Training and awareness of the business of the bank; and
+e Training and awareness of external technical matters.
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+A presentation is given to all new Directors, which outlines their responsibilities as a Director of a UK limited
+company and provides an overview of the bank and its businesses. Each new Director then has a tailored
+induction programme to further familiarise themselves with the bank and its businesses. This takes the form of
+sessions with each of the executive directors and the heads of the main bank functions and includes opportunities
+to visit operational sites to meet with senior management and employees. Once they have completed the first part
+of their induction, and have a good overview of the bank, they then have further sessions with the executive
+directors and senior managers from each of the principal business units to gain a detailed and in-depth
+understanding of their business, which includes the challenges, opportunities and risks that are faced by each.
+
+In November 2010, the full Board attended Corporate Governance and Regulatory Responsibilities training
+sessions which continued from the previous training they attended in 2009 on these subjects but comprised up to
+date information within each subject area that had changed since the previous training sessions.
+
+Performance Review
+
+As with the previous year, annual performance contracts were established for the executive directors for 2010 to
+assess their performance across five key performance areas aligned to the bank's ‘balanced scorecard’ approach
+to performance management, being:
+
+Financial
+
+Business Processes and Technical Skills
+Customer Focus
+
+Leadership
+
+Team
+
+The performance contracts provide an overall summary of their achievements throughout the year in their roles as
+directors of the bank.
+
+Internal Control
+
+The Board is responsible for the bank’s system of internal control. It is designed to facilitate effective and efficient
+operations and to ensure the quality of internal and external reporting and compliance with applicable laws and
+regulations. In devising internal controls, BOC UK considers the nature and extent of the risk, the likelihood of it
+crystallising and the cost of controls.
+
+The Board receives regular reports and updates from the Executive Management and the Audit Committee on the
+effectiveness of the bank’s internal control system. The system of internal controls is also subject to regulatory
+oversight and periodic FSA ARROW 2 assessment, the most recent of which was in November 2008 and the next
+one is scheduled for the end of 2011.
+
+Remuneration Committee Report
+
+The functions of the Remuneration Committee (the “Committee”) are fulfilled. The Committee met on three
+occasions in 2010 and considered and approved the following:
+
+« Corporate Governance
+
+The Committee members considered how other global banks with overseas subsidiaries operate their
+Remuneration Committees specifically in relation to corporate governance structures i.e. global Head Office
+versus local requirement and agreed that alignment to global policies and procedures was a priority where
+practical but local regulations and legislation would always prevail.
+
+« Management Information
+
+The Committee members reviewed the headcount information/staff turnover throughout 2010 and confirmed that
+nothing adverse was noticed. The Committee will continue to monitor staff turnover regularly and if anything
+adverse found, appropriate actions will be taken accordingly.
+
+10
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+« Training and Development
+
+In conjunction with staff development strategies, the Committee approved the Training and Development plan for
+2010 to primarily focus on:
+
+Management Development Programmes for staff across different levels of management grades,
+
+Technical training including professional qualifications sponsorship,
+
+IT skills training,
+
+Language/cultural awareness training,
+
+The preparation for rollout of staff rotation programme, and
+
+Implementation of a professional banking qualification provided by CIOBS (Chartered Institute of Bankers in
+Scotland) in 2011.
+
++ Performance Management
+
+In alignment with Performance Management strategies, the Committee approved the continual review of the
+Performance Management process to streamline and clarify measurement application, weighting application and
+moderation of performance ratings and ensure it achieves the bank's and the employees’ objectives. The
+Committee approved the year-end performance management process which was also aligned to annual salary
+and discretionary bonus scheme allocation.
+
++ Succession Planning Framework
+
+In alignment with Bank of China Limited Head Office's key people strategy, BOC UK considered the
+implementation of a Succession Planning Framework (including Talent Management) to identify future potential
+leaders to fill key positions. The Committee discussed and agreed the implementation of a Succession Planning
+Framework in 2010 and appropriate steps will be taken to action succession planning activities from 2011.
+
+« Flexible Benefits Scheme
+
+The Committee further considered the implementation of a Flexible Benefits Scheme (including salary exchange
+components if appropriate) to enhance the current benefits package to ensure the
+appropriateness/competitiveness for individuals considering that the diverse range of staff may have different
+needs/lifestyles. An employee survey was undertaken in 2010 to collect employees’ opinions and to enhance
+employee engagement and BOC UK will implement the Flexible Benefits Scheme in 2011.
+
+« FSA Code of Practice on Remuneration
+
+The Remuneration Committee ensures that appropriate remuneration and governance arrangements are in place
+throughout the bank.
+
+In preparation for the introduction of the revised FSA Code of Practice on Remuneration, extensive work has been
+undertaken in 2010 and will continue in 2011 to ensure compliance with the revised FSA Code of Practice on
+Remuneration implemented on 1 January 2011, including identifying employees who have a material impact on
+the bank’s performance and reviewing the bank's remuneration policies and practices to promote the highest
+possible standards of risk management.
+
+The terms of reference of the Remuneration Committee will be revised during 2011 to extend the remit of the
+Committee to include oversight of BOC UK remuneration policy to ensure that the remuneration arrangements are
+consistent with and promote effective risk management. In 2011, the Committee will continue to consider, agree
+and recommend to the Board an overall remuneration policy and strategy for the bank that is aligned to its
+long-term business strategy, its business objectives, its risk appetite and values, and recognises the interests of
+relevant stakeholders.
+
+The Chairman of the Committee reported on the aforementioned matters to the Board after each meeting and
+advised the Board on decision-making when required.
+
+11
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Audit Committee Report
+
+The Audit Committee (the “Committee”) comprises: three non-executive directors who are voting members; Mr
+Chris Fitzgibbon (Chairman), Mr Huang YangXin and Mr Donald Workman, and two non-voting members; Mr
+Stephen Hinds, Chief Operating Officer and Mr Yue Long, Head of Internal Audit. Post year end Dr Kenneth Q. Ge
+joined the Committee in Mr Huang YangXin’s stead. The Committee meets at least quarterly and four meetings
+were held in 2010; the external auditors were in attendance at each meeting. During the course of the year, the
+Committee considered the effectiveness of the bank’s systems for internal control, risk management and
+compliance with financial services legislation and regulations. In addition the following key activities were
+undertaken:
+
+« The Committee approved the scope of the external auditors’ work and separately assessed their
+effectiveness.
+
+« The Committee reviewed the financial statements presented to the Board and the quality and acceptability of
+the related accounting policies, practices and financial reporting disclosures.
+
+e The Internal Audit Department Plan was considered and approved. The effectiveness of the department and
+the adequacy of its resources were also considered and its ongoing performance monitored.
+
+e Regular reports and updates from the Internal Audit Department were received and considered.
+
+e Reports were received from the Risk Management and Legal and Compliance Departments and these were
+reviewed and discussed.
+
+Board Credit Committee Report
+
+The Board Credit Committee (the “BCC”) comprises three directors who are voting members; Mr Donald Workman
+(non-executive director and BCC Chairman), Dr Kenneth Q. Ge (Vice Chairman, formerly Chief Executive Officer)
+and Mr WenJian Fang (Chief Executive Officer, formerly Chief Risk Officer). The Committee is responsible for the
+oversight and implementation of risk strategy and risk appetite within the bank and the regular reviewing of the
+credit portfolio.
+
+The BCC meets at least quarterly. Six meetings were held in 2010.
+The following key activities were undertaken:
+
+e The BCC approved all credit proposals as Final Approver for facilities that are above the delegated powers of
+the Chief Executive Officer.
+
+«e The BCC also considered a proposal for specific provision for credit impairment above the delegated powers
+of the Chief Executive Officer.
+
+Management Information Reports were received at each BCC meeting from the Head of Risk Management
+(The ‘Risk Hot Spots’ Report) that review the risk asset portfolio for risk concentration by industry and country,
+asset quality, Large Exposures, property sector and consolidated portfolio edf. The reports also provide details
+of specific portfolios, sectors or industries e.g. Residential mortgage portfolio, Credit cards portfolio, Bonds
+and ABS investments as well as exposure to the so called PIIGS economies.
+
+e BCC also considers the structure and resourcing within Risk Management Department.
+
+12
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+ies in Respect of the Directors’ Report and the
+
+Statement of Directors’ Responsibiliti
+Financial Statements
+
+The directors are responsible for preparing the Directors’ Report and the financial statements in accordance with
+applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial period. Under that law the
+Board of Directors (the “Board”) of Bank of China (UK) Limited (“BOC UK’ or the “bank”) has elected to prepare the
+financial statements in accordance with International Financial Reporting Standards (the “IFRSs”) as adopted by
+the European Union (the “EU”). The financial statements are required by law to give a true and fair view of the state
+of affairs of the bank and of the profit of the bank for the period reported.
+
+International Accounting Standard 1 requires that financial statements present fairly the financial position,
+performance, and cash flow of the bank. The Companies Act 2006 provides references in relevant parts of that Act
+to financial statements giving a true and fair view, and references to financial statements achieving a fair
+presentation. In preparing these financial statements the directors are required to:
+
+° Properly select suitable accounting policies and apply them consistently
+
+. Make judgements and estimates that are reasonable and prudent
+
+. State that the financial statements comply with IFRSs
+
+. Present information, including accounting policies, in a manner that provides relevant, reliable,
+
+comparable and understandable information
+
+. Provide additional disclosures when compliance with the specific requirements in IFRSs is insufficient to
+enable users to understand the impact of particular transactions and other events and conditions on the
+entity's financial position and financial performance
+
+. Prepare the financial statements on a going concern basis unless it is inappropriate to presume that the
+bank will continue in business.
+
+The directors are responsible for keeping proper accounting records that disclose with reasonable accuracy at any
+time the financial position of the bank and which enable them to ensure that the financial statements and the
+Directors’ Report comply with the Companies Act 2006. They have general responsibility for taking such steps as
+are reasonably open to them to safeguard the assets of the bank and to prevent and detect fraud and other
+irregularities.
+
+Directors’ Responsibility Statement
+
+On behalf of the directors of BOC UK, | confirm that to the best of my knowledge the following statements are true:
+
+1. The financial statements, prepared in accordance with International Financial Reporting Standards, as
+adopted by the European Union, give a true and fair view of the assets, liabilities, financial position and
+profit of the bank.
+
+2. The Directors’ Report includes a fair review of the development and performance of the business and the
+position of the bank.
+
+WendJian Fang
+Chief Executive Officer
+
+Board Director
+22 July 2011
+
+13
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Independent Auditors’ Report to the Members of Bank of China (UK) Limited
+
+We have audited the financial statements of Bank of China (UK) Limited (“the company’) for the year ended 31
+December 2010 which comprise the Income Statement, Statement of Comprehensive Income, Statement of
+Financial Position, Statement of Changes in Equity, Statement of Cash Flows, the Accounting Policies and the
+related notes. The financial reporting framework that has been applied in their preparation is applicable law and
+International Financial Reporting Standards (“IFRSs”) as adopted by the European Union and as applied in
+accordance with the Companies Act 2006.
+
+Respective responsibilities of directors and auditors
+
+As explained more fully in the Directors’ Responsibilities Statement set out on page 13, the directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a true and fair view.
+Our responsibility is to audit and express an opinion on the financial statements in accordance with applicable law
+and International Standards on Auditing (UK and Ireland). Those standards require us to comply with the Auditing
+Practices Board's Ethical Standards for Auditors.
+
+This report, including the opinions, has been prepared for and only for the company’s members as a body in
+accordance with Chapter 3 of Part 16 of the Companies Act 2006 and for no other purpose. We do not, in giving
+these opinions, accept or assume responsibility for any other purpose or to any other person to whom this report is
+shown or into whose hands it may come save where expressly agreed by our prior consent in writing.
+
+Scope of the audit of the financial statements
+
+An audit involves obtaining evidence about the amounts and disclosures in the financial statements sufficient to
+give reasonable assurance that the financial statements are free from material misstatement, whether caused by
+fraud or error. This includes an assessment of: whether the accounting policies are appropriate to the company’s
+circumstances and have been consistently applied and adequately disclosed; the reasonableness of significant
+accounting estimates made by the directors; and the overall presentation of the financial statements.
+
+Opinion on financial statements
+In our opinion the financial statements:
+
+e give a true and fair view of the state of the company’s affairs as at 31 December 2010 and of its profit and cash
+flows for the year then ended;
+
+e have been properly prepared in accordance with IFRSs as adopted by the European Union and as applied in
+accordance with the Companies Act 2006; and
+
+e have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Opinion on other matter prescribed by the Companies Act 2006
+
+In our opinion the information given in the Directors’ Report for the financial year for which the financial statements
+are prepared is consistent with the financial statements.
+
+14
+Bank of China (UK) Limited
+Annual Report for the year ended 31 December 2010
+
+Matters on which we are required to report by exception
+
+We have nothing to report in respect of the following matters where the Companies Act 2006 requires us to report
+to you if, in our opinion:
+
+* adequate accounting records have not been kept by the company, or returns adequate for our audit have not
+been received from branches not visited by us; or
+
+e the financial statements are not in agreement with the accounting records and returns; or
+e certain disclosures of directors’ remuneration specified by law are not made; or
+
+e we have not received all the information and explanations we require for our audit.
+
+bill.
+
+Nicholas Morrison (Senior Statutory Auditor)
+for and on behalf of PricewaterhouseCoopers LLP
+Chartered Accountants and Statutory Auditors
+
+London
+
+22 July 2011
+
+15
+Bank of China (UK) Limited
+Financial Statements for the year ended 31 December 2010
+
+Income Statement
+
+12 months to 31 12 months to 31
+£000 Note December 2010 December 2009
+Continuing operations
+Interest income from financial
+investments 6,117 9,761
+Other interest income 10,065 10,861
+Interest expense (3,858) (7,677)
+Net interest income 9 12,324 12,945
+Fee and commission income 6,317 3,689
+Fee and commission expense (170) (135)
+Net fee and commission income 10 6,147 3,554
+Net loss on derivative financial 11
+instruments (2,312) (2,181)
+Foreign exchange gain 262 303
+Other operating income 12 30,331 19,368
+(Loss)/profit on sale of debt securities (190) 534
+Non-interest income 28,091 18,024
+Total income 46,562 34,523
+Staff costs 13 (13,759) (11,761)
+Administration and general expenses 14 (4,044) (3,702)
+Depreciation of plant and equipment 23 (516) (496)
+Amortisation of intangible assets 24 (161) (106)
+Impairment charges 21 (c) (35) (1,827)
+Impairment of investment in subsidiary 34 (8,432) -
+Profit before income tax 19,615 16,631
+Income tax expense 16 (8,836) (4,071)
+
+Profit for the year 10,779 12,560
+
+Bank of China (UK) Limited
+Financial Statements for the year ended 31 December 2010
+
+Statement of Comprehensive Income
+
+12 months to
+
+12 months to
+
+31 December 31 December
+£000 Note 2010 2009
+Profit for the year 10,779 12,560
+Other comprehensive income
+Net change in fair value of available for sale financial
+assets 21 4,329 22,656
+Net change in fair value of available for sale financial
+assets transferred to profit or loss 21 150 (3,206)
+Net gain on available for sale financial assets 4,479 19,450
+Income tax expense relating to components of other
+comprehensive income 16 (1,254) (5,466)
+Other comprehensive income for the year, net of income tax 3,225 13,984
+Total comprehensive income for the year 14,004 26,544
+
+17
+Bank of China (UK) Limited
+Financial Statements for the year ended 31 December 2010
+
+Statement of Financial Position
+
+31 December 31 December
+£000 a 2010 2009
+Assets
+Cash and cash equivalents 17 215,155 127,812
+Loans and advances to banks 19 12,817 36,933
+Loans and advances to customers 20 214,623 504,743
+Derivative financial instruments 18 505 1,375
+Prepayments, accrued income and other assets 26 46,427 29,780
+Available for sale investments 22 149,677 249,004
+Deferred tax assets 25 4 16
+Tangible fixed assets 23 1,612 2,025
+Intangible assets 24 317 440
+Investment in subsidiary companies 34 94,357 29,945
+Total assets 735,494 982,073
+Liabilities
+Deposits from banks 27 176,070 366,763
+Deposits from customers 28 296,289 378,219
+Derivative financial instruments 18 5,956 5,766
+Other liabilities 30 14,205 13,404
+Accruals and deferred income 31 3,137 2,166
+Current tax liabilities 14,184 4,106
+Subordinated liabilities 29 60,000 60,000
+Total liabilities 569,841 830,424
+Equity 32
+Authorised and called up share capital 140,000 140,000
+Retained earnings 26,598 15,819
+Available for sale reserve (945) (4,170)
+Total shareholders’ equity 165,653 151,649
+Total shareholders’ equity and liabilities 735,494 982,073
+
+The financial statements were approved by the Board of Directors of Bank of China (UK) Limited and authorised for
+issue on 22 July 2011.They were signed on its behalf by:
+
+x yore
+WenJian Fang
+
+Chief Executive Officer
+Board Director
+Bank of China (UK) Limited
+
+Financial Statements for the year ended 31 December 2010
+
+Statement of Changes in Equity
+
+Issued share Retained Available for
+
+£000 capital earnings _sale reserve Total
+As of 1 January 2010 140,000 15,819 (4,170) 151,649
+Unrealised profit on available for sale
+
+investments net of income tax . . 3,225 3,225
+Profit for the financial year : 10,779 - 10,779
+As at 31 December 2010 140,000 26,598 (945) 165,653
+As of 1 January 2009 140,000 3,259 (18,154) 125,105
+Unrealised profit on available for sale
+
+investments net of income tax 7 . 13,984 13,984
+Profit for the financial year - 12,560 - 12,560
+As at 31 December 2009 140,000 15,819 (4,170) 151,649
+
+19
+Bank of China (UK) Limited
+Financial Statements for the year ended 31 December 2010
+
+Statement of Cash Flows
+
+12 months to 12 months to
+31 December 31 December
+£000 Note 2010 2009
+Cash flows from operating activities
+Profit on ordinary activities before taxation 19,615 16,631
+Adjustments for non cash items
+Depreciation and amortisation of plant and equipment
+and intangible assets 677 602
+Net impairment loss/(profit) on investment securities 150 (3,206)
+Net impairment (profit)/loss on loans and advances (115) 5,033
+Impairment of investment in subsidiary 8,432 -
+Interest receivable from financial investments (6,117) (9,761)
+Other interest receivable (10,065) (10,861)
+Interest payable 3,858 7,677
+Net loss/(profit) on sale of available for sale investments 150 (569)
+Amortisation of net premiums on available for sale
+investments 40 35
+Exchange-rate movements on available for sale
+investments 797 23,990
+Changes in operating assets and liabilities
+Change in derivative assets held for risk management 870 4,179
+Change in loans and advances to banks 24,116 30,339
+Change in loans and advances to customers 290,235 41,372
+Change in other assets (9,397) (10,407)
+Change in derivative liabilities held for risk management 190 376
+Change in deposits from banks (201,627) (191,170)
+Change in deposits from customers (81,930) 87,930
+Change in other liabilities and provisions 1,724 3,438
+Adjustment for cash items
+Interest and coupon received 15,426 25,504
+Interest paid (3,810) (10,244)
+Income tax paid (5,059) -
+Net cash generated from operating activities 48,160 10,888
+Cash flows from investing activities
+Proceeds from sale of investment securities 101,235 77,230
+Acquisition of property and equipment (102) (150)
+Acquisition of intangible assets (39) (225)
+Investment in subsidiaries (61,911) -
+Net cash from investing activities 39,183 76,855,
+Net increase in cash and cash equivalents 87,343 87,743
+Cash and cash equivalents at beginning of period 127,812 40,069
+Cash and cash equivalents at period end 17 215,155 127,812
+
+The statement of cash flows has been prepared under the indirect method.
+
+20
+Bank of China (UK) Limited
+
+Financial Statements for the year ended 31 December 2010
+
+Notes to the Financial Statements
+Note
+1. Reporting entity
+2. Basis of preparation
+3. Significant accounting policies
+4. Critical estimates and judgements
+5. New pronouncements
+6. Financial risk management
+(a) Credit risk
+(b) Liquidity risk
+(c) Market risk
+(d) Capital management
+7. Pillar Ill disclosures
+8. Financial assets and financial liabilities
+9. Net interest income
+10. Net fee and commission income
+11. Net loss from derivative financial instruments
+12. Other operating income
+13. Staff costs
+14. Administration and general expenses
+15. Directors’ emoluments
+16. Income tax expense
+17. Cash and cash equivalents
+18. Derivative financial instruments
+19. Loans and advances to banks
+20. Loans and advances to customers
+
+21. Allowances for impairment
+
+Note
+
+22.
+
+23.
+
+24.
+
+25.
+
+26.
+
+27.
+
+28.
+
+29.
+
+30.
+
+31.
+
+32.
+
+33.
+
+35.
+
+36.
+
+37.
+
+Available for sale investments
+
+Tangible fixed assets (Property, plant and
+equipment)
+
+Intangible assets
+Deferred tax assets and liabilities
+
+Prepayments, accrued income and other
+assets
+
+Deposits from banks
+
+Deposits from customers
+Subordinated liabilities
+
+Other liabilities
+
+Accruals and deferred income
+
+Equity
+
+Provisions
+
+Related parties
+
+Contingent liabilities and commitments
+Subsequent event
+
+Going concern assessment
+
+21
+Notes to the Financial Statements
+
+ai Reporting entity
+
+Bank of China (UK) Limited (“BOC UK’ or the “bank") is a company domiciled in the United Kingdom (the “UK”) with
+its registered office at 1 Lothbury, London EC2R 7DB. The separate financial statements of the bank as at and for
+the year ended 31 December 2010 are presented below. The bank is primarily involved in retail and corporate
+banking.
+
+2. Basis of preparation
+(a) Statement of compliance
+
+These financial statements have been prepared in accordance with International Financial Reporting Standards
+(the “IFRSs”) as adopted by the European Union (the “EU”) and therefore the financial statements comply with
+Article 4 of the EU IAS Regulation.
+
+The bank has availed itself of the exemption election in |AS 27 Consolidated and Separate Financial Statements
+that permits an entity to prepare separate financial statements. The bank is a wholly-owned subsidiary of Bank of
+China Limited (“BOC”), which produces consolidated financial statements available for public use that comply with
+IFRSs. BOC is domiciled in the People’s Republic of China (the “PRC”), with its head office located at 1 Fuxingmen
+Nei Dajie, Beijing 100818 PRC. The consolidated financial statements of the BOC Group are publicly available
+from this address.
+
+The financial statements were authorised for issue by the Board of Directors (the “Board”) on 22 July 2011.
+(b) Basis of measurement
+
+The financial statements have been prepared under the historical cost basis modified to include the fair valuation
+of certain financial instruments and contracts to buy or sell non-financial items to the extent required or permitted
+under accounting standards and as set out in the relevant accounting policies.
+
+The following items are measured at fair value:
+- Derivative financial instruments
+- Available for sale financial assets
+
+(c) Functional and presentational currency
+
+These financial statements are presented in Sterling (£), which is the bank's functional currency. Except as
+indicated, financial information presented in Sterling has been rounded to the nearest thousand.
+
+(d) Use of estimates and judgements
+
+The preparation of financial statements requires management to make judgements, estimates and assumptions
+that affect the application of accounting policies and the reported amounts of assets, liabilities, income and
+expense. Actual results may differ from these estimates.
+
+Estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to accounting estimates are
+recognised in the period in which the estimate is revised and in any future periods affected.
+
+22
+Notes to the Financial Statements continued
+
+(d) Use of estimates and judgements (continued)
+
+Information about significant areas of estimation uncertainty and critical judgements in applying accounting
+policies that have the most significant effect on the amounts recognised in the financial statements are described
+in Note 4.
+
+3. Significant accounting policies
+
+The accounting policies set out below have been applied consistently to all periods presented in these financial
+statements, and have been applied consistently by the bank.
+
+(a) Revenue recognition
+
+Interest income and expense are recognised in the income statement for all interest-bearing financial instruments,
+except for those classified at fair value through profit or loss, using the effective interest method. The effective
+interest method is a method of calculating the amortised cost of a financial asset or liability and of allocating the
+interest income or interest expense. The effective interest rate is the rate that exactly discounts the estimated
+future cash payments or receipts over the expected life of the instrument or, when appropriate, a shorter period, to
+the net carrying amount of the financial asset or financial liability. The effective interest rate is calculated on initial
+recognition of the financial asset or liability, estimating the future cash flows after considering all the contractual
+terms of the instrument but not future credit losses. The calculation includes all amounts paid or received by the
+bank including expected early redemptions and related penalties and premiums and discounts that are an integral
+part of the overall return as well as direct incremental transaction costs related to the acquisition, issue or disposal
+of a financial instrument. Once a financial asset or a group of similar financial assets has been written down as a
+result of an impairment loss, interest income is recognised using the rate of interest used to discount the future
+cash flows for the purpose of measuring the impairment loss (see Note 3 (f)).
+
+Fees and commissions which are not an integral part of the effective interest rate are generally recognised when
+the service has been provided. Loan commitment fees for loans that are likely to be drawn down are deferred
+(together with related direct costs) and recognised as an adjustment to the effective interest rate on the loan.
+
+Dividend income is recognised when the right to receive payment is established.
+(b) Available for sale financial assets
+
+Debt securities are classified as available for sale and recognised in the statement of financial position at their fair
+value. Available for sale investments are those intended to be held for an indeterminate period of time and may be
+sold in response to need for liquidity or changes in interest rates, exchange rates or equity prices. Gains and losses
+arising from changes in the fair value of investments classified as available for sale are recognised directly in
+equity, until the financial asset is either sold, becomes impaired or matures, at which time the cumulative gain or
+loss previously recognised in equity is recognised in the income statement. Interest calculated using the effective
+interest method is recognised in the income statement.
+
+The fair values of assets and liabilities traded in active markets are based on current bid and offer prices
+respectively. If the market is not active the bank establishes a fair value by using valuation techniques. These
+include the use of recent arm’s length transactions, reference to other instruments that are substantially the same,
+discounted cash flow analysis and other valuation techniques commonly used by market participants.
+
+Purchases and sales of securities and other financial assets and liabilities are recognised on trade date, being the
+date that the bank is committed to purchase or sell an asset. Available for sale financial assets are initially
+recognised at fair value inclusive of transaction costs.
+
+These financial assets are derecognised when the rights to receive cash flows from the financial assets have
+expired or where the bank has transferred substantially all risks and rewards of ownership.
+
+23
+Notes to the Financial Statements continued
+(c) Derivative financial instruments
+
+All derivative instruments are held for risk management purposes and do not qualify for hedge accounting
+according to IAS 39. All derivatives are recognised at their fair value. Fair values are obtained from quoted market
+prices in active markets, including recent market transactions, and using valuation techniques, including
+discounted cash flow, as appropriate. Derivatives are carried in the statement of financial position as assets when
+their fair value is positive and as liabilities when their fair value is negative. All changes in the fair value of the
+derivative are recognised immediately in the income statement as a component of net loss on derivative financial
+instruments.
+
+(d) Foreign currencies
+
+Foreign currency transactions are translated into the functional currency using the exchange rates prevailing at the
+dates of the transactions. Foreign exchange gains and losses resulting from the settlement of such transactions
+are recognised in the income statement. Non-monetary assets that are measured at fair value are translated using
+the exchange rate at the date that the fair value was determined. Translation differences on monetary items,
+including available for sale investments, measured at fair value are recognised in the income statement.
+
+(e) Loans and advances to banks and customers
+
+Loans and advances to banks and customers are initially recognised at fair value and subsequently accounted for
+at amortised cost using the effective interest method less accumulated impairment losses. Loans and advances
+are initially recognised when cash is advanced to the borrowers at fair value inclusive of transaction costs. Loans
+and advances are derecognised when the rights to receive cash flows from them have expired or where the bank
+has transferred substantially all risks and rewards of ownership.
+
+Loans and advances to banks and customers include residential and commercial mortgages, originated and
+syndicated loans. The bank does not originate loans to syndicate, rather it purchases syndicated loans from third
+
+party banks.
+(f) Loan commitments, guarantees and other financial facilities
+
+Provision is made for undrawn loan commitments, guarantees and other financial facilities if it is probable that the
+facility will be drawn and result in the recognition of an asset as an amount less than the amount advanced.
+
+(g) Impairment of financial assets
+
+At each reporting date the bank assesses whether, as a result of one or more events occurring after initial
+recognition, there is objective evidence that a financial asset or group of financial assets has become impaired.
+
+The criteria that the bank uses to determine that there is objective evidence of an impairment loss may include:
+- Delinquency in contractual payments of principal and/or interest.
+- Indications that the borrower or group of borrowers is experiencing significant financial difficulty.
+- Significant legal or regulatory disputes.
+- Breach of loan covenants or conditions.
+- Initiation of bankruptcy proceedings.
+- Other objective evidence indicating impairment of the financial asset.
+
+The estimated period between a loss occurring and its identification is determined by local management for each
+identified financial asset. In general, the periods used vary between one month and three months.
+
+24
+Notes to the Financial Statements continued
+(i) Assets accounted for at amortised cost
+
+If there is objective evidence that an impairment loss has been incurred, an allowance is established which is
+calculated as the difference between the carrying amount of the asset and the present value of estimated future
+cash flows discounted at that asset's original effective interest rate. Allowances are established on a case-by-case
+basis for all of the bank's lending activities which include residential mortgage, personal lending, credit cards and
+corporate lending. If an asset has a variable interest rate, the discount rate used for measuring the impairment loss
+is the current effective interest rate. The calculation of the present value of the estimated future cash flows of a
+collateralised asset reflects the cash flows that may result from foreclosure less the costs of obtaining and selling
+the collateral, whether or not foreclosure is probable.
+
+For credit card lending where there is no objective evidence of individual impairment the portfolio is collectively
+assessed for impairment based on historical loss experience and adjusted for current observable data to reflect the
+effects of current conditions that did not affect the period on which the historical loss experience is based and to
+remove the effects of conditions in the historical period that do not exist currently.
+
+If, in a subsequent period, the amount of the impairment loss decreases and the decrease can be related
+objectively to an event occurring after the impairment was recognised, such as an improvement in the borrower's
+credit rating, the allowance is adjusted and the amount of the reversal is recognised in the income statement.
+
+A loan or advance is normally written off, either partially or in full, against the related allowance when the proceeds
+from realising any available security have been received or there is no realistic prospect of recovery (as a result of
+the customer's insolvency, ceasing to trade or other reason) and the amount of the loss has been determined.
+Subsequent recoveries of amounts previously written off decrease the amount of impairment losses recorded in
+the income statement.
+
+(ii) Available for sale financial assets
+
+If there is objective evidence that an impairment loss has been incurred, the cumulative loss measured as the
+difference between the acquisition cost (net of any principal repayment and amortisation) and the current fair
+value, less any impairment loss on that asset previously recognised, is removed from equity and recognised in the
+income statement.
+
+If, in a subsequent period, the fair value of a debt instrument classified as available for sale increases and the
+increase can be objectively related to an event occurring after the impairment loss was recognised, the impairment
+loss is reversed through the income statement.
+
+(iii) Renegotiated loans
+
+Loans that are either subject to collective impairment assessment or individually significant and whose terms have
+been renegotiated are no longer considered to be past due but are treated as new loans. In subsequent years, the
+asset is considered to be past due and disclosed only if further renegotiated.
+
+25
+Notes to the Financial Statements continued
+(h) Hedge accounting
+
+Hedge accounting is applied to derivative and other instruments designated as hedges in hedging relationships
+provided certain criteria are met.
+
+The bank documents, at the inception of the hedging relationship, the relationship between hedged items and
+hedging instruments, as well as the risk management objective and strategy for undertaking the hedge transaction.
+The bank also documents its assessment, both at inception and on an ongoing basis, of whether the instruments
+that are used in the hedging transaction are highly effective in offsetting changes in the fair values or cash flows of
+the hedged items.
+
+(i) Fair value hedge
+
+When considered appropriate the bank hedges the foreign exchange risk arising from its investment in foreign
+subsidiaries using either derivative or other financial instruments. For such hedges, the foreign exchange
+difference arising on both the hedging instrument and the hedged item is recognised directly in the income
+statement. The hedged risk is adjusted for against the carrying amount of the investment in subsidiaries.
+
+(ii) Derivatives that do not qualify for hedge accounting
+
+All gains or losses from the changes in fair value of derivatives that do not qualify for hedge accounting are
+recognised immediately in the income statement.
+
+(i) Derecognition of financial liabilities
+The bank derecognises a financial liability when its contractual obligations are discharged or cancelled or expire.
+(i) Subsidiaries
+
+Subsidiaries are entities controlled by the bank. Control exists when the bank has the power to govern the financial
+and operating policies of an entity so as to obtain benefits from its activities. In assessing control, potential voting
+rights that presently are exercisable are taken into account.
+
+The investment in subsidiaries is accounted for at cost less impairment adjusted for any foreign exchange risk that
+has been hedged.
+
+(j) Tangible fixed assets
+
+Tangible fixed assets are included at cost less accumulated depreciation and accumulated impairment losses. The
+value of land (included in premises) is not depreciated. Depreciation on other assets is calculated using the
+straight-line method to allocate the difference between the cost and the residual value over their estimated useful
+lives, as follows:
+
+Premises (excluding land):
+- Freehold/long and short leasehold premises: shorter of 50 years or the remaining period of the lease
+- Leasehold improvements: shorter of 10 years or the remaining period of the lease
+Equipment:
+- Furniture and equipment: 4 - 5 years
+- Computer equipment: 4 years
+- Motor vehicles: 4 years
+The assets’ residual values and useful lives are reviewed, and adjusted if appropriate, at each reporting date.
+
+Assets are reviewed for impairment whenever events or changes in circumstances indicate that the carrying
+amount may not be recoverable. In the event that an asset's carrying amount is determined to be greater than its
+recoverable amount it is written down immediately. The recoverable amount is the higher of the asset's fair value
+less costs to sell and its value in use.
+
+26
+Notes to the Financial Statements continued
+(j) Tangible fixed assets (continued)
+
+The cost of replacing a part of an item of property or equipment is recognised in the carrying amount of the item if
+it is probable that the future economic benefits embodied within the part will flow to the bank and its cost can be
+measured reliably. The carrying amount of the replaced part is derecognised. The costs of the day-to-day servicing
+of property and equipment are recognised in the income statement as incurred.
+
+(I) Intangible assets
+
+Software acquired by the bank is stated at cost less accumulated amortisation and accumulated impairment
+losses.
+
+Amortisation is recognised in the income statement on a straight-line basis over the estimated useful life of the
+software, from the date that it is available for use. The estimated useful life of software is three to five years.
+
+Intangible assets are reviewed for impairment whenever events or changes in circumstances indicate that the
+carrying amount may not be recoverable. In the event that an asset's carrying amount is determined to be greater
+than its recoverable amount it is written down immediately. The recoverable amount is the higher of the asset's fair
+value less costs to sell and its value in use.
+
+(m) Leases
+
+The bank enters into leases as the lessee. All of the leases are operating leases. Operating lease rentals are
+charged to the income statement on a straight-line basis over the period of the lease.
+
+When an operating lease is terminated before the end of the lease period, any payment made to the lessor by way
+of penalty is recognised as an expense in the period of termination.
+
+(n) Offset
+
+Financial assets and liabilities are offset and the net amount reported in the statement of financial position when
+there is a legally enforceable right of set-off and there is an intention to settle on a net basis, or realise the asset
+and settle the liability simultaneously.
+
+(0) Cash and cash equivalent
+
+For the purposes of the cash flow statement, cash and cash equivalents comprise cash and non-mandatory
+balances with central banks and amounts due from banks with an original maturity of less than three months.
+
+(p) Borrowings
+
+Borrowings (which include deposits from banks, customer accounts and subordinated liabilities) are recognised
+initially at fair value, being their issue proceeds net of transaction costs incurred. Borrowings are subsequently
+stated at amortised cost using the effective interest method.
+
+(q) Employee benefits
+(i) Defined contribution plans
+
+Obligations for contributions to defined contribution pension plans are recognised as an expense in income
+statement when they are due.
+
+(ii) Defined benefit plans
+
+The bank is a participant of the Bank of China Pension and Life Assurance scheme offered by Bank of China
+Limited, London Branch (the “London Branch’). The London Branch is the sponsoring employer. There are no
+contractual arrangements for charging the net defined benefit cost for this plan. Contributions to the fund are
+recognised as an expense in the income statement in the accounting period to which they relate. Any unpaid
+contributions are recognised in the statement of financial position as a liability.
+
+ea
+Notes to the Financial Statements continued
+(r) Short-term benefits
+
+Short-term employee benefit obligations are measured on an undiscounted basis and are expensed as the related
+service is provided.
+
+A provision is recognised for the amount expected to be paid under short-term cash bonus or profit-sharing plans if
+the bank has a present legal or constructive obligation to pay this amount as a result of past service provided by the
+employee and the obligation can be estimated reliably.
+
+(s) Taxation
+
+Income tax on the profit for the year comprises current tax and deferred tax. Income tax is recognised in the income
+statement except to the extent that it relates to items recognised directly in other comprehensive income or directly
+in equity, in which case it is recognised in other comprehensive income or equity.
+
+Current tax is the tax expected to be payable on the taxable profit for the year, calculated using tax rates enacted
+or substantially enacted at the reporting date.
+
+Deferred income tax is provided in full, using the liability method, on temporary differences arising between the tax
+bases of assets and liabilities and their carrying amounts in the financial statements. Deferred income tax is
+determined using tax rates (and laws) that have been enacted or substantially enacted by the reporting date and
+are expected to apply when the related deferred income tax asset is realised or the deferred income tax liability is
+settled.
+
+The tax effects of losses available for carry forward are recognised as a deferred tax asset when it is probable that
+future taxable profits will be available against which these losses can be utilised.
+
+The carrying amount of deferred tax assets is reviewed at each reporting date and reduced to the extent that it is no
+longer probable that sufficient taxable profits will be available to allow all or part of the asset to be recovered.
+
+(t) Provisions
+
+Provisions are recognised in respect of present obligations arising from past events where it is probable that
+outflows of resources will be required to settle the obligations and they can be reliably estimated.
+
+Contingent liabilities are possible obligations whose existence depends on the outcome of uncertain future events
+or those present obligations where the outflows of resources are uncertain or cannot be measured reliably.
+Contingent liabilities are not recognised in the financial statements but are disclosed unless they are remote.
+
+(u) Share capital and reserves
+
+Incremental costs directly attributable to the issue of an equity instrument are deducted from the initial
+measurement of the equity instrument.
+
+28
+Notes to the Financial Statements continued
+4, Critical estimates and judgements
+
+The bank makes estimates and assumptions concerning the future. The estimates and assumptions that could
+have significant risk of causing material adjustment to the carrying amounts of assets within the next financial year
+are highlighted below.
+
+(i) Impairment of loans and advances
+
+The bank reviews its loans and advances on an individual basis to assess impairment on a periodic basis unless a
+known circumstance occurs at or before the scheduled review date. In determining whether an impairment loss
+should be recorded in the income statement, the bank makes a judgement as to whether there is any observable
+data indicating that there is a measurable decrease in the estimated future cash flow of a loan or advance. This
+evidence may include observable data indicating that there has been an adverse change in the payment status of
+the borrower e.g. payment delinquency, or default. Additional observable data that would be considered is set out
+in Note 3(f).
+
+(ii) Impairment of available for sale investments
+
+The bank follows the guidance of IAS 39 to determine when available for sale investment securities are impaired.
+This determination requires significant judgement. In making this judgement, the bank evaluates, among other
+factors, the duration and extent to which the fair value of an investment is less than its cost, the extent to which
+changes in fair value relate to credit events; and the financial health of and near-term business outlook for the
+investee/underlying portfolio, including factors such as industry and sector performance, credit ratings, and
+counterparty risk.
+
+The methodology and assumptions used for impairment assessments are reviewed regularly. In evaluating
+impairment of asset backed securities (“ABS”) and mortgage backed securities ("MBS") during the year, the bank
+continued to use a significant decline in market price to be a key indicator of impairment. The bank also considered
+other objective evidence of impairment, taking into account that during the year market prices continued to be
+impacted by liquidity and indicative prices were obtained for certain ABS and MBS held by the bank.
+
+Details about the use of estimates and judgements are presented in Note 3.
+
+5. New pronouncements
+New and amended standards and interpretations:
+
+(i) Mandatory for the first time for the financial year beginning 1 January 2010 but not
+currently relevant to the bank although they may affect the accounting of future
+transactions and events.
+
+The following standards and amendments to existing standards have been published and are mandatory for the
+bank’s accounting periods beginning on or after 1 January 2010 or later periods, but the bank has not early
+adopted them:
+
+* IFRS 3 (revised), “Business combinations”, and consequential; amendments to IAS 27, “Consolidated and
+separate financial statements”, IAS 28, “Investments in associates” and IAS 31, “Interests in joint ven-
+tures”, are effective prospectively to business combinations for which the acquisition date is on or after the
+beginning of the first annual reporting period beginning after 1 July 2009.
+
+e IFRIC 17, “Distribution of non-cash assets to owners” (effective on or after 1 July 2009). The interpretation
+was published in November 2008 and provides guidance on accounting for arrangements whereby an
+entity distributes non-cash assets to shareholders either as a distribution of reserves or as dividends. IFRS
+5 has also been amended to require that assets are classified as held for distribution only when they are
+available for distribution in their present condition and the distribution is probable.
+
+29
+Notes to the Financial Statements continued
+
+« IFRIC 9, “Reassessment of embedded derivative and IAS 39, Financial instruments: Recognition and
+measurement’, effective 1 July 2009. This amendment to IFRIC 9 requires an entity to assess whether an
+embedded derivative should be separated from a host contract when the entity reclassifies a hybrid fi-
+nancial asset out of the “fair value through profit and loss” category. This assessment is to be made based
+on circumstances that exist on the later of the date the entity first became a party to the contract and the
+date of any contract amendments that significantly changed the cash flows of the contract. If the entity is
+unable to make this assessment, the hybrid instrument must remain classified as at fair value through
+profit and loss in its entirety.
+
+e IFRIC 16, “Hedges of a net investment in a foreign operation” effective 1 July 2009. This amendment
+states that, in a hedge of a net investment in a foreign operation, qualifying hedging instruments may be
+held by any entity or entities within a group, including the foreign operation itself, as long as the designa-
+tion, documentation and effectiveness requirements of IAS 39 that relate to a net investment hedge are
+satisfied. In particular, the group should clearly document its hedging strategy because of the possibility of
+different designations at different levels of the group.
+
+* IAS 38 (amendment), “Intangible assets”, effective 1 January 2010. The amendment clarifies guidance in
+measuring the fair value of an intangible asset acquired in a business combination and permits the
+grouping of intangible assets as a single asset if each asset has similar economic lives.
+
+e IAS 1 (amendment), “Presentation of financial statements”. This amendment clarifies that the potential
+settlement of a liability by the issue of equity is not relevant to its classification as current or non-current. By
+amending the definition of current liability, the amendment permits a liability to be classified as non
+~current (provided that the entity has an unconditional right to defer settlement by transfer of cash or other
+assets for at least 12 months after the accounting period) notwithstanding the fact that the entity could be
+required by the counterparty to settle in shares at any time.
+
+« IAS 36 (amendment), “Impairment of assets”, effective 1 January 2010. The amendment clarifies that the
+largest cash-generating unit or group of units to which goodwill should be allocated for the purposes of
+impairment testing is an operating segment, as defined by paragraph 5 of IFRS 8, “Operating segments”,
+that is, before the aggregation of segments with similar economic characteristics.
+
+e IFRS 2 (amendments), “Group cash-settled share-based payment transactions”, effective from 1 January
+2010. In addition to incorporating IFRIC 8, “Scope of IFRS 2”, and IFRIC 11, “IFRS 2— Group and treasury
+share transactions”, the amendments expand on the guidance on IFRIC 11 to address the classification of
+group arrangements that were not covered by that interpretation.
+
+« IAS 39 (amendments) “Financial instruments: recognition and measurement — Eligible Hedged Items”,
+effective 1 January 2010. Clarifies the application of existing principles that determine whether specific
+risks or portions of cash flows are eligible for designation in a hedging relationship.
+
+e IFRS 5 (amendment). “Non-current assets held for sale and discontinued operations”. The amendment
+clarifies that IFRS 5 specifies that disclosures required in respect of non-current assets (or disposal
+groups) classified as held for sale or discontinued operations. It also clarifies that the general requirement
+of IAS 1 still apply, in particular paragraph 15 (to achieve a fair presentation) and paragraph 125 (sources
+of estimation uncertainty) of IAS 1.
+
+30
+Notes to the Financial Statements continued
+
+(ii) Issued but not effective for the financial year beginning 1 January 2010 and not early
+adopted.
+
+The bank’s assessment of the impact of these new standards and interpretations is set out below:
+
+IFRS9, “Financial instruments”, issued in November 2008. This standard is the first step in the process to
+replace IAS 39, “Financial instruments: recognition and measurement”. IFRS 9 introduces new require-
+ments for the classifying and measuring of financial assets and is likely to affect the bank's accounting for
+financial assets. The standard is not applicable until 1 January 2013 but is available for early adoption.
+However, the standard has not yet been endorsed by the EU.
+
+The bank is yet to assess IFRS 9's full impact. However, initial indications are that it may affect the bank’s
+accounting for its debt available for sale financial assets, as IFRS 9 only permits the recognition of fair
+value gains and losses in other comprehensive income if they relate to equity investments that are not held
+for trading. Fair value gains and losses on available for sale debt investments will therefore have to be
+recognised directly in profit and loss. In the current reporting period the bank recognised £4,479,000 of
+such gains in other comprehensive income.
+
+Revised IAS 24 (revised), “Related party disclosures”, issued in November 2009. It supercedes IAS 24,
+“Related party disclosures”, issued in 2003. IAS 24 (revised) is mandatory for periods beginning on or after
+4 January 2011. Early application, in whole or in part is permitted. However, the standard has not yet been
+endorsed by the EU.
+
+“Classification of rights issues” (amendment to IAS 32), issued in October 2009. The amendment applies
+to annual periods beginning on or after 1 February 2010, early application is permitted. As the bank does
+not have any instruments in issue, that have rights attached to them, the amendment to IAS 32 will have no
+impact on the financial statements.
+
+IFRIC 19, “Extinguishing financial liabilities with equity instruments”, effective 1 July 2010. The interpre-
+tation clarifies the accounting by an entity when the terms of a financial liability are renegotiated and result
+in the entity issuing equity instruments to a creditor of the entity to extinguish all or part of the financial
+liability (debt for equity swap). Application of the interpretation, subject to endorsement by the EU, by the
+bank is not expected to have any impact on the bank’s financial statements.
+
+“Prepayments of a minimum funding requirement” (amendment to IFRIC 14). The amendment corrects an
+unintended consequence of IFRIC 14, “IAS 19 — The limit on a defined benefit asset, minimum funding
+requirement and their interaction”. Without the amendment, entities are not permitted to recognise as an
+asset some voluntary prepayment for minimum funding contributions. This was not intended when IFRIC
+14 was issued, and the amendment corrects this. The amendments are effective for annual periods be-
+ginning 1 January 2011. The bank does not expect that adoption of this amendment will have any impact
+on the financial statements.
+
+31
+Notes to the Financial Statements continued
+6. Financial risk management
+Introduction and overview
+The bank has exposure to the following risks from financial instruments:
+
+e Credit risk
+
+e —_ Liquidity risk
+
+e Market risk
+This Note presents information about the bank’s exposure to each of the above risks, the bank's objectives,
+policies and procedures for measuring and managing risk, and the bank’s management of capital.
+
+Risk management framework
+
+The Board has overall responsibility for the establishment and oversight of the bank’s risk management
+framework. The Board has established the bank’s Asset and Liability ("ALCO”), Credit and Operational Risk
+Committees, which are responsible for developing and monitoring the bank's risk management policies in their
+specified areas. The bank’s risk management policies are established to identify and analyse the risks faced by the
+bank, to set appropriate risk limits and controls, and to monitor risks and adherence to limits. Risk management
+policies and systems are reviewed regularly to reflect changes in market conditions, products and services offered.
+Internal Audit department undertakes both regular and ad-hoc reviews of the risk management controls and
+procedures, the results of which are reported to the Audit Committee.
+
+The bank, through its training and management standards and procedures, aims to develop a disciplined and
+constructive control environment, in which all employees understand their roles and responsibilities.
+
+(a) Credit risk
+Financial risk management
+
+Credit risk is the risk of financial loss to the bank if a customer or counterparty to a financial instrument fails to meet
+its contractual obligations, and arises principally from the bank’s loans and advances to customers and available
+for sale financial investments.
+
+Credit risk management framework
+
+The bank has established a set of credit risk management policies and procedures, and appropriate credit risk
+limits to manage and control credit risk that arises through the bank’s normal business activities. These policies,
+procedures and limits are regularly reviewed in light of changes in markets and business strategies.
+
+The bank's organisation structure establishes a clear set of authority and responsibilities for monitoring
+compliance with polices, procedures and limits, based on the principal of ‘Three Lines of Defence’.
+
+The business units are responsible for the day-to-day management of credit risk with the Risk Management
+department being responsible for risk oversight and ensuring procedural compliance as well as the drafting,
+reviewing and updating of credit risk management policies and procedures. The internal audit function represents
+the third line of defence.
+
+32
+Notes to the Financial Statements continued
+Credit risk management framework (continued)
+
+The Board has the highest credit approval authority for BOC UK. The Board has delegated its authority to the
+Board Credit Committee, and the Chief Executive Officer (the “CEO”) of the bank. The CEO of the bank has
+delegated credit approval authority to Branch Managers, subject to Board approval.
+
+Credit risk measurement and control
+Loans and advances
+
+The approval of an individual credit risk proposition requires assessment of the customer, any existing credit
+exposure to the customer and the credit risks associated with the transaction, at the same time taking into account
+the reward being offered for the risk and the extent of risk mitigation available to offset the potential loss in the
+event of default. The Credit Risk department is responsible for making an independent assessment of all credit
+facilities.
+
+There are three main areas of concentration risk that are monitored, reported and managed by the bank; single
+customer (group), industrial sector and country risk. The bank monitors changes to counterparties’ credit risk,
+quality of the credit portfolio and risk concentrations, and reports regularly to the bank’s Executive Management
+Committee and the Board Credit Committee. Consideration must be taken and compliance must be adhered to
+these three concentration risk management areas either during initiating a transaction or maintaining and
+managing the portfolio quality.
+
+The bank’s internal loan grading system divides loans into five categories as follows:
+
+- Category 1: “Performing” represents loans where the borrower is currently meeting their repayment
+obligations and full repayment of interest and principal is not in doubt.
+
+- Category 2: “Special Mention” represents loans where the borrower is experiencing difficulties which
+may threaten the bank’s position. Ultimate loss is not expected at this stage but could occur if adverse
+conditions persist.
+
+- Category 3: “Sub-standard” represents loans where the borrower displays a definable weakness that
+is likely to jeopardise repayment.
+
+- Category 4: “Doubtful” represents loans where collection in full is improbable and the bank expects to
+sustain a loss of principal and/or interest, taking into account the net realisable value of any collateral
+held.
+
+- Category 5: “Loss” represents loans which are considered un-collectible after all collection options
+(such as the realisation of collateral or the initiation of legal proceedings) have been exhausted.
+
+Debt securities and derivatives
+
+For investment in debt securities and securitisation-backed assets, the external credit rating and assessment on
+the credit quality of the underlying asset are used for managing the credit risk involved. Credit limits are established
+on a counterparty and security issuer basis. For derivatives, the bank sets customer limits to manage the credit risk
+involved and follows the same approval process as loans and advances. Ongoing monitoring of stop-loss limits is
+established.
+
+Collateral held as security
+
+The bank has established a mechanism to update the value of its main type of collateral, residential properties,
+with the use of a publicly available index on a portfolio basis.
+
+For loans guaranteed by a third party guarantor, the bank assesses the guarantor’s financial condition, credit
+history and ability to meet their obligations if called to do so.
+
+33
+Notes to the Financial Statements continued
+
+Exposure to credit risk
+
+The carrying amount of financial assets represents the maximum credit exposure without taking account of any
+collateral held or other credit enhancements. The maximum exposure to credit risk at the reporting date was:
+
+£000 31 December 31 December
+2010 2009
+On balance sheet
+Cash and cash equivalents 214,065 126,976
+Loans and advances to banks 12,817 36,933
+Loans and advances to customers 214,623 504,743
+Derivative financial instruments 505 1,375
+Available for sale financial investments 149,677 249,004
+Total on balance sheet 591,687 919,031
+Off balance sheet
+Loan commitments 253,856 270,596
+Guarantees 21,450 27,435
+Total off balance sheet 275,306 298,031
+Total exposure 866,993 1,217,062
+
+The fair value of collateral held at 31 December 2010 against amounts due from customers was £164,459,000
+
+(31 December 2009; £93,688,000).
+
+Cash and cash equivalents include exposures to the parent company of £140,788,000 (31 December 2009;
+£74,937,000) which are supported by a legal netting agreement. No other significant concentration of credit risk
+
+exposure exists.
+
+Cash and cash equivalents exclude cash in hand for the purposes of the assessment of credit risk.
+
+34
+Notes to the Financial Statements continued
+
+Credit risk exposure
+
+The tables below present further detail on the bank's exposure to credit risk.
+
+(a) Based on external credit rating system
+
+£000 31 December 2010 31 December 2009
+Cashandcash Available forsale Cashandcash Available for sale
+equivalents investments equivalents investments
+Gross exposure 214,065 155,426 126,976 254,588
+Individually impaired - 17,139 - 12,433
+Allowance for impairment : (5,749) - (5,584)
+Carrying amount - 11,390 - 6,849
+Past due but not impaired - - - -
+Ageing profile:
+0-3 months - - - «
+4-6 months - = « .
+7-9 months - - - -
+10-12 months - - - “
+Neither past due nor im-
+paired 214,065 138,287 126,976 242,155
+Credit rating:
+AAA * 44,824 - 64,310
+Aal - Aa3 73,176 31,599 51,992 62,794
+A1-A3 140,889 59,125 74,984 90,590
+Baa‘ - Baa3 - 2,739 = 24,461
+Bai - Ba3 - a
+Unrated - “ x
+Total carrying amount 214,065 149,677 126,976 249,004
+
+(b) Based on internal loan grading system mapped against external credit ratings
+
+Loans and advances to banks
+
+31 December 31 December
+£000 2010 2009
+Gross exposure 12,817 36,933
+Neither past due nor impaired 12,817 36,933
+Performing
+A1-A3 * 12,156
+Baa1 - Baa3 12,817 24,777
+Unrated - -
+Total carrying amount 12,817 36,933
+
+35
+Notes to the Financial Statements continued
+
+Loans and advances to customers
+
+31 December 31 December
+£000 2010 2009
+Gross exposure 215,031 505,274
+Individually impaired 417 531
+Allowance for impairment (408) (531)
+Carrying amount 9 «
+‘Past due but not impaired 2,427 7,369
+Ageing profile:
+0-3 months 2,404 1,259
+4-6 months 3 =
+7-9 months 41 110
+10-12 months 19 =
+Neither past due nor impaired 212,187 503,374
+Performing 192,293 469,584
+Aat - Aa3 4,524 5,003
+A1-A3 27,765 33,758
+Baa‘ - Baa3 - 38,770
+Ba1 - Ba3 - 10,530
+Unrated 160,004 381,523
+Special mention 19,894 33,275
+Baa‘ - Baa3 - 17,456
+Bat - Ba3 14,149 Ss
+B1-B3 - 15,010
+Unrated 5,745 809
+Substandard 3 474
+Unrated i 474
+Doubtful - 36
+Unrated - 36
+Loss - 5
+Unrated - 5
+Total carrying amount 214,623 504,743
+
+(b) Liquidity risk
+Liquidity risk is the risk that the bank will not be able to meet its financial obligations as they fall due.
+
+The bank is exposed to the risk that it will be unable to meet its obligations as they fall due, arising from the differing
+maturity profiles of its assets and liabilities. To mitigate its exposure the bank places limits on the mismatch of
+maturity dates, and by holding stock of liquid assets which could be sold at short notice if the need arose.
+
+The Board is the ultimate decision-making body and is responsible for compliance with the regulatory
+requirements. Formulation of the risk management procedures, implementation mechanism and monitoring of the
+compliance is the main responsibility of the ALCO. Daily management of {iquidity is carried out by the Treasury
+function assisted by the Finance department who monitor the liquidity risk and provide regular reports to
+management and the Financial Services Authority (the “FSA’).
+
+The following are the contractual (undiscounted) maturities of financial liabilities, including estimated interest
+payments and excluding the effect of any netting agreements if they were in place:
+
+36
+Notes to the Financial Statements continued
+(b) Liquidity risk (continued)
+
+More
+
+Carrying Contractual Less than 1-3. 3 months than
+£000 amount cashflows 1month months to 1 year 1 year
+31 December 2010
+Non-derivative financial liabilities
+Deposits from banks 176,070 (176,956) (25,151) (82,857) — (68,948) -
+Customer accounts 296,289 (296,346) (268,317) (17,063) — (10,953) (13)
+Subordinated liabilities 60,000 (60,156) - (156) - (60,000)
+Derivative financial instruments 5,956 - - - - :
+Cash outflows (127,884) (120,449) (231) (1,576) (5,628)
+Cash inflows 119,226 119,226 -
+
+538,315 (542,116) (294,691) (100,307) (81,477) (65,641)
+
+Loan commitments 253,856 (253,856) _ (253,856) : = :
+792,171 (795,972) (548,547) (100,307) (81,477) _ (65,641)
+
+31 December 2009
+Non-derivative financial liabilities
+
+Deposits from banks 366,763 (367,528) (60,626) (251,250) (47,998) (17,654)
+Customer accounts 378,219 (378,324) (319,634) (49,636) (9,054) -
+Subordinated liabilities 60,000 (60,134) - (134) - (60,000)
+Derivative financial instruments 5,766 - : : - 3
+Cash outflows (269,291) (258,470) (255) (2,053) ~— (8,513)
+Cash inflows 258,588 258,588
+
+810,748 (816,689) (370,142) (301,275) (59,105) (86,167)
+
+Loan commitments 270,596 (270,596) (270,596) s : =
+1,081,344 (1,087,285) (640,738) (301,275) (59,105) —_ (86,167)
+
+The previous table shows the undiscounted cash flows on the bank's financial liabilities and unrecognised loan
+commitments on the basis of their earliest possible contractual maturity. The bank expected cash flows on these
+instruments vary significantly from this analysis and hence this table shows a worst case scenario. For example,
+current accounts and demand deposits from customers are expected to maintain a stable or increasing balance
+and unrecognised loan commitments are not all expected to be drawn down immediately but to be drawn over a
+period of time.
+
+The contractual cash flow disclosed in the previous table represents the contractual undiscounted cash flows
+relating to the principal and interest on the financial liability or commitment. The disclosure for derivatives shows a
+net amount for derivatives that are settled on a net basis, (e.g. interest rate swaps) but on a gross outflow and
+inflow basis for derivatives that have simultaneous gross settlement (e.g. forward foreign exchange contracts and
+currency swaps).
+
+({c) Market risk
+
+Foreign exchange risk
+
+Foreign exchange risk is the risk that movements in the various currencies could materially impact the financial
+statements. The bank makes loans and takes deposits in a number of currencies. To manage its exposure to
+foreign exchange risk the bank holds derivative instruments.
+
+At 31 December 2010 the bank held a net positive position as the Sterling equivalent value of all currencies where
+the currency obligations were higher than currency receivables was £816,000 (31 December 2009: currency
+obligations were lower than currency receivables £522,000)
+
+The following table shows the foreign exchange positions as at 31 December 2010 and 2009.
+
+37
+Notes to the Financial Statements continued
+
+(c) Market risk (continued)
+£000
+31 December 2010 Sterling US Dollar EURO Other
+Cash and cash equivalents 138,817 47,520 22,675 6,143
+Loans and advances to banks - 12,817 - -
+Loans and advances to customers 136,261 39,371 35,066 3,925
+Derivative financial instruments
+(asset) 28 - 477 -
+Available for sale financial investments 412 6,323 123,329 19,613
+Other assets 46,787 1,211 217 94,502
+Deposits from banks - (21,684) (35,673) (118,713)
+Customer accounts (180,020) (78,778) (29,259) (8,232)
+Derivative financial instruments (liability) (581) (1,282) (4,093) -
+Other liabilities (28,416) (1,815) (933) (362)
+Subordinated liabilities (60,000) : * -
+Total shareholder equity (166,926) (313) 1,030 556
+Net on balance sheet exposure (113,638) 3,370 112,836 (2,568)
+Net off balance sheet exposure 119,226 - (111,748) (8,294)
+Loan commitments 119,971 56,665 77,220 -
+£000
+31 December 2009 Sterling US Dollar EURO Other
+Cash and cash equivalents 74,052 303 48,960 4,497
+Loans and advances to banks - 36,933 - -
+Loans and advances to customers 84,991 292,179 99,542 28,031
+Derivative financial instruments (asset) 628 - 747 -
+Available for sale financial investments 396 14,295 207,453 26,860
+Other assets 31,061 835 205 30,105
+Deposits from banks - (138,324) (145,956) (82,483)
+Customer accounts (191,216) (162,673) (19,597) (4,733)
+Derivative financial instruments (liability) (104) (1,187) (4,475) -
+Other liabilities (15,822) (1,247) (1,996) (611)
+Subordinated liabilities (60,000) s: > =
+Total shareholder equity (157,479) (609) 3,528 2,911
+Net on balance sheet exposure (233,493) 40,505 188,411 4,577
+Net off balance sheet exposure 229,569 (37,166) (186,563) (5,318)
+Loan commitments 138,236 57,878 74,482 -
+
+Sensitivity analysis
+
+A 1% percent weakening of the following currencies against Sterling at 31 December 2010 would have increased
+(decreased) equity and the income statement by the amounts shown below. This calculation assumes that the
+
+change occurred at the reporting date and had been applied to risk exposures existing at that date.
+
+This analysis assumes that all other variables, in particular other exchange rates and interest rates, remain
+
+constant.
+
+38
+Notes to the Financial Statements continued
+
+(c) Market risk (continued)
+
+Equity Income statement
+31 December 31 December 31 December 31 December
+£000 2010 2009 2010 2009
+Sterling (59) (92) - -
+US Dollars 3 6 (18) (6)
+EURO (10) (36) (18) (67)
+Other (6) (21) (24) (19)
+
+A 1% percent strengthening of the above currencies against Sterling at 31 December 2010 would have had the
+equal but opposite effect on the above currencies to the amounts shown above, on the basis that all other variables
+
+remain constant.
+
+Exposure to interest rate risk
+
+The bank does not operate a trading book.
+
+The principal exposure to which the banking book portfolios are exposed is the risk of loss from fluctuations in the
+future cash flows or fair values of financial instruments because of a change in market interest rates. Interest rate
+risk is managed principally through monitoring the cumulative interest rate gap position and by having
+pre-approved limits for the time bands. The ALCO is the monitoring body for compliance with these limits and is
+assisted by the Treasury department in its day-to-day monitoring activities. A summary of the bank's interest rate
+
+gap position in the banking books is as follows:
+
+31 December 2010
+
+Less Non
+
+Carrying than1 1-3 3 months 1-5 Over5 interest
+£000 amount month months to 1 year years years bearing
+31 December 2010
+Assets
+Cash 215,155 178,364 - : = - 36,791
+Loans and advances to banks 12,817 - 12,817 : - - :
+Loans and advances to customers 214,623 154,160 50,620 9,766 : - 77
+Derivative financial instruments. 505 - = - 2 ™ 505
+Available for sale financial
+investments 149,677 25,865 37,229 3,966 71,230 10,594 793
+Other assets 142,717 - - - - - 142,717
+Total assets 735,494 358,389 100,666 13,732 71,230 10,594 180,883
+Liability and equity
+Liabilities 569,841 165,992 159,554 79,450 13 2 164,832
+Deposits from banks 176,070 24,890 82,502 68,526 - 2 152)
+Customer accounts 296,289 141,102 17,052 10,924 13 2 127,198}
+Derivative financial instruments 5,956 - - = - : 5,956)
+Other liabilities 31,526 = # - = . 31,526
+Subordinated liabilities 60,000 « 60,000 = = ra :
+Equity
+Shareholders’ equity 165,653 = r 7 = 2 165,653
+Total equity and liabilities 735,494 165,992 159,554 79,450 13 > 330,485
+Effect of derivatives held for risk
+management = 36,784 23,374 = (48,124) (12,034) -
+Interest rate sensitivty gap = 229,181 (35,514) (65,718) 23,093 (1,440) (149,602)
+Cumulative gap = 229,181 193,667 127,949 151,042 149,602 =
+
+39
+Notes to the Financial Statements continued
+
+Exposure to interest rate risk (continued)
+
+Less Non
+Carrying than1 1-3 3months 1-5 Over5 interest
+
+£000 amount month months toiyear years years bearing
+31 December 2009
+Assets
+Cash 127,812 113,326 - 7 > > 14,486
+Loans and advances to banks 36,933 36,933 7 be
+Loans and advances to customers 504,743 205,419 126,799 171,518 - - 1,007
+Derivative financial instruments 1,375 - : - : - 1,375
+Available for sale financial
+investments 249,004 38,633 48,583 16,319 121,219 23,739 511
+Other assets 62,206 - * - . - 62,206
+Total assets 982,073 357,378 212,315 187,837 121,219 23,739 79,585
+Liability and equity
+Liabilities 830,424 254,555 377,774 35,303 = - 162,792
+Deposits from banks 366,763 65,209 268,198 26,264 = = 7,092)
+Customer accounts 378,219 189,346 49,576 9,039 . - 130,258)
+Derivative financial instruments. 5,766 - - - - - 5,766)
+Other liabilities 19,676 - - - : - 19,676
+Subordinated liabilities 60,000 : 60,000 : : =
+Equity
+Shareholders' equity 151,649 = = - = = 151,649
+Total equity and liabilities 982,073 254,555 377,774 35,303 - - 314,441
+Effect of derivatives held for risk
+Management - 60,690 - (48,282) (12,408) :
+Interest rate sensitivity gap 102,823 (104,769) 152,534 72,937 11,331 (234,856)
+Cumulative gap 102,823 (1,946) 150,588 223,525 234,856 -
+
+The table below indicates the sensitivity to a reasonable possible change in interest rates, with all other variables
+
+held constant, of the bank’s income statement.
+
+At the reporting date the exposure to interest rate risk was projected to be:
+
+100bps parallel
+
+100bps parallel
+
+£000 increase decrease
+Sensitivity of projected net interest income at
+
+31 December 2010 1,750 (1,750)
+31 December 2009 727 (727)
+Sensitivity of reported equity to interest rate movements at
+
+31 December 2010 1,891 (1,891)
+31 December 2009 5,479 (5,479)
+
+Interest rate movements affect reported equity in the following ways: (i) retained earnings; arising from increases
+or decreases in net interest income and the fair value changes reported in profit or loss and (ii) fair value reserves;
+arising from increases or decreases in fair values of available for sale financial instruments reported directly in
+
+equity.
+
+40
+Notes to the Financial Statements continued
+
+(d) Capital management
+Regulatory capital
+
+The bank's lead regulator the FSA sets and monitors capital requirements for the bank. The parent company and
+individual banking operations are directly supervised by their local regulators.
+
+With effect from 1 January 2008 the bank is required to comply with the provisions of the Basel II framework in
+respect of regulatory capital. The bank has adopted the standardised approach for credit and operational risk in the
+calculation of the bank's capital requirement as prescribed under the Basel II framework. As the bank does not
+have a trading book the capital requirement for the foreign exchange risk inherent in the banking book is the bank's
+only market risk, which is also calculated on the standardised approach.
+
+The bank’s regulatory capital comprises of tier 1 and tier 2 capital:
+
+- tier 1 capital, which includes ordinary share capital, retained earnings, translation reserve and other
+regulatory adjustments relating to items that are included in equity but are treated differently for capital
+adequacy purposes
+
+- tier 2 capital, which includes qualifying subordinated liabilities, collective impairment allowances (limited
+to those credit portfolios where the standardised approach is used under Basel II) and the element of the
+fair value reserve relating to unrealised gains / losses on equity instruments classified as available for sale.
+
+Various limits are applied to elements of the capital base. The amount of innovative tier 1 securities cannot exceed
+15 percent of total tier 1 capital; qualifying tier 2 capital cannot exceed tier 1 capital; and qualifying term
+subordinated loan capital may not exceed 50 percent of tier 1 capital. There also are restrictions on the amount of
+collective impairment allowances that may be included as part of tier 2 capital. Other deductions from capital
+include the carrying amounts of investments in subsidiaries as these are not included in the regulatory
+consolidation, investments in the capital of banks and certain other regulatory items.
+
+Banking operations are categorised as banking book, and risk-weighted assets are determined according to
+specified requirements that seek to reflect the varying levels of risk attached to assets and off-balance sheet
+exposures. As noted above, Basel II introduced a risk-weighted asset requirement in respect of operational risk.
+
+The bank's policy is to maintain a strong capital base so as to maintain investor, creditor and market confidence
+and to sustain future development of the business. The impact of the level of capital on shareholders’ return is also
+recognised and the bank recognises the need to maintain a balance between the higher returns that might be
+possible with greater gearing and the advantages and security afforded by a sound capital position.
+
+The bank has complied with all externally imposed capital requirements throughout the period.
+
+4l
+Notes to the Financial Statements continued
+Regulatory capital (continued)
+
+The bank's regulatory capital position at 31 December 2010 was as follows:
+
+2010 Basel Il 2009 Basel II
+£000 Actual Actual
+Tier 1 capital
+Ordinary share capital 140,000 140,000
+Retained earnings 26,598 15,819
+Tier 2 capital
+Qualifying subordinated liabilities 60,000 60,000
+Other regulatory adjustments (94,357) (29,945)
+Total regulatory capital 132,241 185,874
+
+Management uses regulatory capital ratios in order to monitor its capital base, and these capital ratios remain the
+international standards for measuring capital adequacy. The FSA's approach to such measurement based upon
+Basel I is now primarily based on monitoring the relationship of the Capital Resources Requirement (measured as
+8 percent of risk-weighted assets) to available capital resources. The FSA also sets individual capital guidance
+(“ICG”) for any bank that sets capital requirements in excess of the minimum Capital Resources Requirement. A
+key input to the ICG setting process is the bank’s Internal Capital Adequacy Assessment Process (“ICAAP”). The
+bank submitted its ICAAP document to the FSA in October 2008 and the ICG was agreed with the FSA in March
+2009. The agreed ICG remains confidential between each bank and the FSA in accordance with accepted
+practice.
+
+7. Pillar Ill Disclosures
+
+The European Union Capital Requirements Directive (the “Directive”) came into effect on 1 January 2007. It
+introduced consistent capital adequacy standards and an associated supervisory framework in the EU based on
+the Basel Il rules agreed by the G-10.
+
+Implementation of the Directive in the UK was by way of rules introduced by the FSA. Among them are disclosure
+requirements applicable to banks and building societies, which are known as Pillar Ill. These are designed to
+promote market discipline by providing market participants with key information on a firm’s risk exposures and risk
+management processes. Pillar II| also aims to complement the minimum capital requirements described under
+Pillar 1 of Basel II, as well as the supervisory review processes of Pillar 2 and aims to encourage market discipline
+by allowing market participants to assess key pieces of information on risk exposures and the risk assessment
+processes of the firm.
+
+The bank adopted the Pillar 1 Standardised Approach to credit risk, market risk and operational risk from 1 January
+2008, it also became subject to Pillar tI & Ill from that date.
+
+42
+Notes to the Financial Statements continued
+8. Financial assets and financial liabilities
+
+Fair values of financial instruments
+
+The bank's valuation methodology is detailed in Note 3.
+
+Fair values
+
+The fair values for each class of financial assets and financial liabilities together with their carrying amounts shown
+
+in the reporting date are as follows:
+
+Financial
+instruments
+at fair value
+through Loans Other Total
+profit and and Available amortised carrying
+
+£000 loss receivables _for sale cost amount Fair value
+31 December 2010
+Assets
+Cash and cash equivalents - 215,155 : - 215,155 215,155
+Cash and balances with banks - 214,065 ° - 214,065 214,065
+Cash in hand * 1,090 = 2 1,090 1,090
+Loans and advances to banks - 12,817 - - 12,817 12,817
+Loans and advances to customers - 214,623 - - 214,623 214,623
+Corporate loans and advances - 129,384 - - 129,384 129,384)
+Retail loans and advances : 85,239 - - 85,239 _ 85,239
+Derivative financial instruments 505 : : : 505 505
+Interest rate swaps 477 - - - 477 477|
+Cross currency swaps 28 - - - 28 28
+Foreign exchange forwards : : : : : -|
+Available for sale investments - - 149,677 - 149,677 149,677
+Debt securities - - 107,553 - 107,553 107,553
+Asset backed securities : - 42,124 - 42,124 42,124
+Total financial assets 505 442,595 149,677 - 592,777 592,777
+Deposits from banks : - - 176,070 176,070 176,070
+From subsidiaries = = < 9,885 9,885 9,885)
+Other deposits from banks - - - 166,185 166,185 166,185
+Deposits from customers : : - 296,289 296,289 296,289
+Retail customers . - - 290,768 290,768 290,768
+Corporate customers . - = 5,521 5,521 5,521
+Derivative financial instruments 5,956 - - - 5,956 5,956
+Interest rate swaps 5,375 - - - 5,375 5,375)
+Cross currency swaps 581 - = - 581 581
+Subordinated liabilities - : - 60,000 60,000 60,000
+Total financial liabilities 5,956 - - 532,359 538,315 538,315
+
+43
+Notes to the Financial Statements continued
+
+Fair values of financial instruments (continued)
+
+Financial
+instruments
+at fair value
+through Loans Other Total
+profit and and Available amortised carrying
+
+£000 loss receivables for sale cost _amount Fair value
+31 December 2009
+Assets
+Cash and cash equivalents - 127,812 : - 127,812 127,812
+Cash and balances with banks - 126,976 - - 126,976 126,976
+Cash in hand a 836 = + 836 836
+Loans and advances to banks - 36,933 - - 36,933 36,928
+Loans and advances to customers - 504,743 - - 504,743 504,544
+Corporate loans and advances - 456,028 = - 456,028 455,829
+Retail loans and advances - 48,715 : - 48,715 48,715
+Derivative financial instruments 1,375 : : : 1,375 1,375
+Interest rate swaps 746 - - - 746 746
+Cross currency swaps. 627 - - - 627 627
+Foreign exchange forwards 2 = : = 2 2|
+Available for sale investments : - 249,004 - 249,004 249,004
+Debt securities = - 192,656 - 192,656 192,656
+Asset backed securities : -__ 56,348 - 56,348 56,348
+Total financial assets 1,375 669,488 249,004 - 919,867 919,663
+Liabilities
+Deposits from banks - : - 366,763 366,763 366,763
+From subsidiaries . “ - 43,529 43,529 43,529
+Other deposits from banks : - - 323,234 323,234 323,234
+Deposits from customers - - - 378,219 378,219 378,219
+Retail customers - - - 356,145 356,145 356,145
+Corporate customers - - - 22,074 22,074 22,074
+Derivative financial instruments 5,766 - - - 5,766 5,766
+Interest rate swaps 5,662 - - - 5,662 5,662)
+Cross currency swaps 104 - = = 104 104,
+Subordinated liabilities - ° - 60,000 60,000 60,000
+Total financial liabilities 5,766 i - 804,982 810,748 810,748
+
+44
+Notes to the Financial Statements continued
+
+Fair values of financial instruments (continued)
+
+The table below analyses financial assets and liabilities measured at fair value, by valuation method:
+
+e Level 1: quoted prices (unadjusted) in active markets for identical assets or liabilities.
+
+e Level 2: inputs other than quoted prices included within Level 1 that are observable for the asset or liability,
+either directly (i.e., as prices) or indirectly (i.e., derived from prices).
+
+e Level 3: inputs for the asset or liability that are not based on observable market data (unobservable
+inputs).
+
+Fair value hierarchy
+
+During the financial year ended 31 December 2010 no financial assets or liabilities were transferred between Level
+1, Level 2 or Level 3.
+
+£000
+31 December 2010 Level 1 Level 2 Level 3 Total
+
+Financial assets
+
+Derivative financial instruments:
+
+Interest rate swap e 477 7 477
+Cross currency swap i 28 - 28
+Foreign exchange forward - - - -
+
+- 505 = 505
+
+Financial investments available for sale:
+Debt securities 107,553 : 107,553
+Asset backed securities 42,124 : = 42,124
+
+149,677 od - 149,677
+Total assets 149,677 505 . 150,182
+Financial liabilities
+Derivative financial instruments:
+Interest rate swap = 5,375, “ 5,375
+Cross currency swap a 581 = 581
+Foreign exchange forward - - = -
+Total liabilities - 5,956 - 5,956
+
+45
+Notes to the Financial Statements continued
+
+£000
+31 December 2009 Level 1 Level 2 Level 3 Total
+Financial assets
+Derivative financial instruments:
+Interest rate swap = 746 = 746
+Cross currency swap = 627 : 627
+Foreign exchange forward - 2 - 2
+- 1,375 1,375
+Financial investments available
+for sale:
+Debt securities 188,174 4,482 . 192,656
+Asset backed securities 52,394 3,954 - 56,348
+240,568 8,436 - 249,004
+Total assets 240,568 9,811 - 250,379
+Financial liabilities
+Derivative financial instruments:
+Interest rate swap - 5,662 - 5,662
+Cross currency swap - 104 - 104
+Foreign exchange forward - - - -
+Total liabilities . 5,766 - 5,766
+9. Net interest income
+31 December 31 December
+£000 2010 2009
+Interest income from financial investments 6,117 9,761
+Other interest income:
+Cash and cash equivalents 745 444
+Loans and advances to banks 162 462
+Loans and advances to customers 9,158 9,955,
+Total other interest income 10,065 10,861
+Total interest income 16,182 20,622
+Interest expense
+Deposits from banks 2,922 5,732
+Customers accounts 348 847
+Subordinated liabilities 588 1,098
+Total interest expense (3,858) (7,677)
+Net interest income 12,324 12,945
+
+Included within various line items under interest income for the year ended 31 December 2010 is a total of £85,000
+(31 December 2009: £85,000) accrued for impaired financial assets.
+
+46
+Notes to the Financial Statements continued
+
+10. Net fee and commission income
+
+31 December 31 December
+£000 2010 2009
+Fee and commission income
+Retail Banking customer fees 3,218 1,600
+Corporate Banking credit-related fees 2,894 2,025
+Other 205 64
+Total fee and commission income 6,317 3,689
+Inter-bank transaction fees 22 20
+Other 148 115
+Total fee and commission expense (170) (135)
+Net fee and commission income 6,147 3,554
+
+11. Net loss from derivative financial instruments
+
+31 December 31 December
+£000 2010 2009
+Net loss from derivative financial instruments held for
+tisk management purposes:
+Interest rate swaps (2,311) (2,191)
+Foreign currency forwards (1) 10
+
+(2,312) (2,181)
+
+There are no financial derivative instruments that qualify for hedge accounting in accordance with |AS39.
+At 31 December 2010 net losses of £1,076,000 (31 December 2009: net losses £4,276,000), on currency swap
+
+derivative instruments, have been recorded against foreign exchange gains and losses in the income statement,
+reflecting the effects of these derivatives instruments in mitigating the foreign exchange gains and losses on the
+
+net non Sterling assets of the bank held at these dates.
+
+12. Other operating income
+
+31 December 31 December
+
+£000 2010 2009
+Related party service charges 30,326 19,356
+Other 5 12
+30,331 19,368
+
+13. Staff costs
+31 December 31 December
+£000 2010 2009
+Wages and salaries 11,027 9,120
+Contributions to defined contribution plans 986 957
+Other 1,746 1,684
+13,759 11,761
+
+47
+Notes to the Financial Statements continued
+
+14, Administration and general expenses
+31 December 31 December
+£000 2010 2009
+Administrative 3,464 3,117
+Software licensing and other IT costs 110 221
+Other 470 364
+4,044 3,702
+
+Auditor's remuneration:
+
+31 December
+
+31 December
+
+£000 2010 2009
+Fees payable to the Company's auditors for the audit
+of the company's financial statements 98 86
+Fees payable to the company's auditor and its
+associates for other services
+The audits of the company's subsidiaries,
+pursuant to legislation 101 119
+Other services pursuant to legislation 220 278
+Other services 27 5
+15. Directors’ emoluments
+31 December 31 December
+£000 2010 2009
+Emoluments of directors in respect of services ren-
+dered
+Emoluments 894 724
+Pension contributions 63 59
+Highest paid director
+Emoluments 498 377
+Pension contributions 47 45
+
+48
+Notes to the Financial Statements continued
+
+16. Income tax expense
+
+31 December 31 December
+£000 2010 2009
+Current tax expense
+Current period 8,144 3,912
+Adjustments for prior years 1,497 (628)
+Total current tax 9,641 3,284
+Deferred tax expense
+Origination and reversal of temporary differences (129) 826
+Adjustments for prior years (676) (39)
+Total deferred tax (805) 787
+Total income tax expense 8,836 4,071
+Reconciliation of effective tax rate
+
+31 December 31 December
+£000 2010 2009
+Profit before income tax 19,615 16,631
+Income tax using the standard rate of corporation tax 5,492 4,656
+in the UK 28% (2009: 28%)
+Non-deductible expenses 162 227
+Non-taxable income s (146)
+Impairment of investment in subsidiary 2,361 s
+Under/(Over)-provided in prior years 821 (666)
+Total income tax expense in income statement 8,836 4,071
+Income tax recognised in other comprehensive income
+
+31 December 31 December
+£000 2010 2009
+Current tax
+UK current tax expense 1,135 -
+Adjustments for prior years (699) 627
+Total current tax 436 627
+Deferred tax
+Current year deferred tax expense 119 5,446
+Adjustments for prior years 699 (607)
+Total deferred tax 318 4,839
+Total income tax expense 1,254 5,466
+
+47. Cash and cash equivalents
+
+31 December 31 December
+£000 2010 2009
+Cash and balances with banks 214,065 126,976
+Cash in hand 1,090 836
+
+215,155 127,812
+
+49
+Notes to the Financial Statements continued
+
+18, Derivative financial instruments
+
+The bank holds derivatives instruments for risk management and cross currency funding purposes.
+
+31 December 31 December
+£000 2010 2009
+Assets Liabilities Assets Liabilities
+
+Instrument type:
+Interest rate swap 477 5,375 746 5,662
+Cross currency swap 28 581 627 104
+Foreign exchange forward : - 2 ~
+505 5,956 1,375 5,766
+
+The bank did not designate any derivative financial instruments for hedging purposes during either period
+presented.
+
+19. Loans and advances to banks
+
+31 December 31 December
+£000 2010 2009
+Loans and advances to banks 12,817 36,933
+
+At 31 December 2010 £12,817,000 (31 December 2009: £12,389,000) of loans and advances to banks are
+expected to be recovered more than twelve months after the reporting date.
+
+20. Loans and advances to customers
+31 December 31 December
+£000 2010 2009
+Corporate loans and advances 129,385 456,343
+Retail loans and advances 85,646 48,931
+Gross loans and advances 215,031 505,274
+Less: allowance for impairments
+Specific (408) (531)
+Collective o -
+Total allowance for impairment (408) (531)
+Loans and advances to customer net 214,623 504,743
+
+At 31 December 2010 £196,642,000 (31 December 2009: £239,023,000) of loans and advances to customers are
+expected to be recovered more than twelve months after the reporting date.
+
+Loans and advances to customers at amortised cost
+
+£000 31 December 2010 31 December 2009
+Gross Impairment Carrying Gross Impairment Carrying
+amount allowance _ amount amount allowance _amount.
+Corporate loans and advances 129,385 - 129,385 456,373 (345) 456,028
+Retail loans and advances 85,646 (408) 85,238 48,901 (186) 48,715
+215,031 (408) 214,623 505,274 (531) 504,743
+
+50
+Notes to the Financial Statements continued
+
+21. Allowances for impairment
+
+(a) Loans and advances to banks and customers
+
+Specific Collective
+Loans and Loans and Loans and Loans and
+advances
+to advances to advances to advances to
+£000 banks customers banks customers
+Balance at 1 January 2010 - 531 - -
+Increase in impairment - 37 - -
+Reversal of impairment - (152) - -
+Charge / (credit) in income statement - (115) - -
+Amounts written off - (8) : -
+Balance at 31 December 2010 : 408 * -
+Balance at 1 January 2009 - 378 - 24
+Increase in impairment - 5,488 - -
+Reversal of impairment - (431) - (24)
+Charge / (credit) in income statement - 5,057 - (24)
+Amounts written off - (4,904) z -
+Balance at 31 December 2009 < 531 s =
+(b) Available for sale financial investments Movement
+in fair value
+recognised
+£000 Note in equity Impairment
+Balance at 1 January 2010 5,819 5,584
+Changes in fair values 22 (4,329) =
+Increase in impairment 22 (150) 150
+Exchange-rate movements : 15
+Balance at 31 December 2010 1,340 5,749
+Balance at 1 January 2009 25,269 9,330
+Fair value movement 22 (22,656) -
+Reversal of impairment 22 3,206 (3,206)
+Exchange-rate movements = (540)
+Balance at 31 December 2009 5,819 5,584
+(c) Impairment charges
+31 December 31 December
+£000 2010 2009
+Loans and advances to customers
+Specific (115) 5,057
+Collective = (24)
+Available for sale financial investments 150 (3,206)
+Total impairment charges in income statement 35 1,827
+
+SI
+Notes to the Financial Statements continued
+
+22. Available for sale investments
+
+At 31 December 2010 there were £149,677,000 available for sale investments (31 December 2009: £224,043,000)
+which are expected to be recovered more than twelve months after the reporting date. The available for sale
+investments balance is comprised of fixed and floating interest rate bonds.
+
+Note 31 December 31 December
+£000 2010 2009
+Debt securities 107,610 192,656
+Asset backed securities 42,067 56,348
+
+149,677 249,004
+Balance at 1 January 249,004 330,093
+Accrued interest (1,434) (3,059)
+Disposals through sale and redemptions (101,385) (76,661)
+Gains from changes in fair value recognised in 21 (b) 4,479 19,450
+equity
+(Increase)/reversal of impairment 21 (b) (150) 3,206
+Amortisation of premium (40) (35)
+Exchange-rate movement (797) (23,990)
+Balance at 31 December 149,677 249,004
+23. Tangible fixed assets (Property, plant and equipment)
+Furniture
+Property, plant and Computer Motor
+
+£000 and fixtures equipment _equipment__ vehicles Total
+Cost
+Balance at 1 January 2010 4,900 593 372 67 5,932
+Additions 9 23 71 - 103
+Disposals - - : - -
+Balance at 31 December 2010 4,909 616 443 67 6,035
+Balance at 1 January 2009 4,863 528 325 67 5,783
+Additions 37 65 48 - 150
+Disposals - - (4) = (1)
+Balance at 31 December 2009 4,900 593 372 67 5,932
+Depreciation
+Balance at 1 January 2010 3,172 507 207 21 3,907
+Depreciation for the year 413 26 60 17 516
+Disposals - : : - «
+Balance at 31 December 2010 3,585 533 267 38 4,423
+Balance at 1 January 2009 2,761 490 157 4 3,412
+Depreciation for the year 411 17 51 17 496
+Disposals - : (1) ee (1)
+Balance at 31 December 2009 3,172 507 207 21 3,907
+Net carrying values at
+31 December 2010 1,324 83 176 29 1,612
+31 December 2009 1,728 86 165 46 2,025
+
+52
+Notes to the Financial Statements continued
+
+23. Tangible fixed assets (Property, plant and equipment) (continued)
+
+As at 31 December 2010 and 31 December 2009 the bank identified no events or circumstances that would
+indicate that the bank's tangible fixed assets might be impaired.
+
+24, Intangible assets
+
+£000 IT Software Total
+Cost
+
+Balance at 1 January 2010 633 633
+Additions 38 38
+Balance at 31 December 2010 671 671
+Balance at 1 January 2009 408 408
+Additions 225 225
+Balance at 31 December 2009 633 633
+
+Depreciation and Impairment loss
+
+Balance at 1 January 2010 193 193
+Depreciation for the year 161 161
+Balance at 31 December 2010 354 354
+Balance at 1 January 2009 87 87
+Depreciation for the year 106 106
+Balance at 31 December 2009 193 193
+
+Net carrying value at
+
+31 December 2010 317 317
+
+31 December 2009 440 440
+
+As at 31 December 2010 and 31 December 2009 the bank identified no events or circumstances that would
+indicate that the bank's intangible assets might be impaired.
+
+25. Deferred tax assets and liabilities
+Recognised deferred tax assets and liabilities
+
+Deferred tax assets and liabilities are attributable to the following:
+
+£000 31 December 2010 31 December 2009
+Assets Liabilities Net Assets Liabilities Net
+
+Property and equipment, and
+software 4 : 4 16 - 16
+
+Net tax assets 4 « 4 16 - 16
+
+53
+Notes to the Financial Statements continued
+
+25. Deferred tax assets and liabilities (continued)
+Unrecognised deferred tax assets
+
+There were no unrecognised deferred tax assets as at 31 December 2010 and 31 December 2009.
+
+Movements in temporary differences during the year
+
+Opening Closing
+balance Recognised balance
+1 January inprofitor Recognised 31 December
+£000 2010 loss in equity 2010
+
+Property and equipment, and
+software 16 (12) - 4
+Available for sale investments - 817 (817) -
+16 805 (817) 4
+Opening bal- Closing bal-
+ance Recognised ance
+1 January in profitor | Recognised 31 December
+£000 2009 loss in equity 2009
+
+Property and equipment, and
+software (14) 30 - 16
+Available for sale investments 5,656 (817) (4,839) -
+5,642 (787) (4,839) 16
+26. Prepayments, accrued income and other assets
+31 December 31 December
+£000 2010 2009
+Accrued income 961 1,258
+Prepaid expenses 330 275
+Prepaid tax 6,874 1,815
+Receivable from related party 36,983 26,134
+Other 1,279 298
+46,427 29,780
+27. Deposits from banks
+
+31 December 31 December
+£000 2010 2009
+From subsidiaries 9,885 43,529
+Other deposits from banks 166,185 323,234
+176,070 366,763
+
+At 31 December 2010 £nil (31 December 2009: Enil) of deposits from banks are expected to be settled more than
+
+twelve months after the reporting date.
+
+54
+Notes to the Financial Statements continued
+28. Deposits from customers
+
+31 December 31 December
+£000 2010 2009
+Retail customers:
+
+Term deposits 83,916 149,940
+Notice deposits 64,329 76,043
+Current deposits 142,270 129,589
+Other 253 573
+290,768 356,145
+
+Corporate customers:
+Notice deposits - -
+Current deposits 3,723 519
+Other 1,798 21,555
+5,521 22,074
+296,289 378,219
+
+At 31 December 2010 £13,000 (31 December 2009: £nil) of deposits from customers are expected to be settled
+
+more than twelve months after the reporting date.
+
+29. Subordinated liabilities
+31 December 31 December
+£000 2010 2009
+Subordinated note issued 60,000 60,000
+60,000 60,000
+
+The subordinated note issued is expected to settle more than twelve months after the reporting date (31 December
+
+2009: £60,000,000).
+
+On 20 September 2007 the bank issued a £60,000,000 subordinated loan. Interest is payable on 31 March, 30
+June, 30 September and 31 December at the three-month London Interbank Bank Offered Rate plus 30 basis
+
+points. The rate applicable to the loan as at the reporting date was 1.06% (31 December 2009: 0.91%). The loan is
+
+repayable upon giving 5 years and one day's notice.
+
+The above liabilities will, in the event of the winding-up of the bank, be subordinated to the claims of depositors and
+
+all other creditors of the bank.
+
+The bank has not had any defaults of principal, interest or other breaches with respect to its subordinated liabilities
+during the periods ended 31 December 2010 and 31 December 2009.
+
+30. Other liabilities
+
+(a) Other liabilities
+
+31 December 31 December
+
+£000 2010 2009
+Creditors and accruals 12,656 10,878
+Other 1,549 2,526
+14,205 13,404
+
+55
+Notes to the Financial Statements continued
+30. Other liabilities (continued)
+
+(b) Defined benefit obligations
+
+The bank makes contributions to a group defined benefit scheme, the Bank of China Pension & Life Assurance
+Scheme (the “Scheme”, that provides pension benefits for employees upon retirement. The Scheme entitles a
+
+retired employee to receive an annual payment equal to 1/60th of final salary for each year of service the employee
+provided. The Scheme is sponsored by Bank of China Limited, London Branch and was closed to new employees
+
+on 31 December 2004.
+
+The following tables set out details of the Scheme as at 31 December 2010 and 2009. This disclosure is for the
+scheme as a whole and does not represent the bank’s allocation of the Scheme’s assets and liabilities due to its
+participation in the Scheme. The Scheme prepares its financial statements as at 31 December annually.
+
+Changes in the present value of the Scheme’s liabilities
+
+31 December 31 December
+£000 2010 2009
+Benefit obligations at beginning of year 33,644 26,517
+Interest costs 1,902 1,605
+Current service costs 900 721
+Members' contributions 124 122
+Actuarial gains 272 5,048
+Effects of curtailments or settlements (68) (79)
+Benefits paid (306) (290)
+Benefit obligations at the end of the year 36,468 33,644
+
+The benefit obligation arising from Scheme that are wholly un-funded and wholly or partly funded as
+
+follows:
+31 December 31 December
+£000 2010 2009
+Un-funded obligations = =
+Wholly or partly funded obligations (3,937) (3,486)
+Total (3,937) (3,486)
+
+Changes in Scheme assets
+
+31 December
+
+31 December
+
+£000 2010 2009
+Market value of assets at beginning of year 30,158 27,373
+Expected return on Scheme assets 1,548 1,668
+Actuarial gain/(loss) 262 (654)
+Members’ contributions 124 122
+Employer's contributions 813 2,018
+Effects of settlements (68) (79)
+Benefits paid (306) (290)
+Market value of assets at end of year 32,531 30,158
+
+56
+Notes to the Financial Statements continued
+(b) Defined benefit obligations (continued)
+
+Scheme assets as a percentage of total assets
+
+31 December 31 December
+
+2010 2009
+
+Equities 26.70% 22.50%
+Bonds 24.00% 20.40%
+Property 4.00% 4.90%
+Cash 45.30% 52.20%
+
+Principal actuarial assumptions
+
+The overall expected return on assets has been derived by considering the long-term expected rate of return for
+each asset class and taking the average rates weighted by the proportion invested in each asset class at the year
+
+end.
+
+31 December 31 December
+
+2010 2009
+
+Discount rate 5.50% 5.60%
+Price inflation 3.40% 3.50%
+Rate of increase in salaries 4.90% 5.00%
+Rate of increase for pensions in payment (LPI) 3.20% 3.30%
+Post retirement mortality table PM/FA 92 YOB PM/FA 92 YOB
+(Long Cohort) (Long Cohort)
+
+Expected return on assets 5.60% 5.09%
+
+The bank expects to pay £631,000 (2010: £642,000) in contributions to defined benefit plans in 2011.
+
+34. Accruals and deferred income
+31 December 31 December
+£000 2010 2009
+Deferred income 2,669 1,746
+Accrued interest 468 420
+3,137 2,166
+
+57
+Notes to the Financial Statements continued
+
+32, Equity
+
+(a) Capital
+
+At 31 December 2010 the authorised share capital comprised 140,000,000 ordinary shares (31 December
+2009:140,000,000). These instruments have a par value of £1 and are all issued shares and fully paid.
+
+The holders of ordinary shares are entitled to receive dividends as declared from time to time and are entitled to
+one vote per share at meetings of the bank. All shares rank equally subordinated to the bank's assets.
+
+(b) Available for sale reserve
+
+The available for sale reserve includes the cumulative net change in the fair value of available for sale investments,
+excluding impairment losses, until the investment is derecognised or impaired.
+
+(c) Dividends
+There were no dividends declared for the periods ended 31 December 2010 or 31 December 2009.
+
+33. Provisions
+There were no provisions or contingencies at the periods ended 31 December 2010 or 31 December 2009.
+
+34, Related parties
+
+(a) Parent and ultimate controlling party
+
+The immediate parent company of the bank is Bank of China Limited (a company incorporated in the People's
+Republic of China). The ultimate holding company is China Investment Corporation Limited.
+
+The largest and smallest group which includes the bank and which prepares publicly available consolidated
+financial statements is the Bank of China Limited. Copies of its consolidated financial statements are publicly
+available from the Head Office of the Bank of China Limited, 1 Fuxingmen Nei Dajie, Beijing 100818 People's
+Republic of China.
+
+During the period ended 31 December 2010 there were no transactions which resulted in there being a change in
+the ultimate controlling party of the bank.
+The bank regards the following as being related parties that exercise significant influence:
+
+- Bank of China Limited
+- China Investment Corporation Limited
+
+Related party transactions occurred between the bank and the London Branch. At 31 December 2010 the bank
+received £163,085,000 (31 December 2009: £323,234,000) which is 35% (31 December 2009: 44%) of its funding
+from Bank of China Limited, London Branch in the form of short-term funding. The funding is interest-bearing at
+market rate for the term and currency borrowed, and is repayable in accordance with the contractual maturity date
+of the deposit.
+
+58
+Notes to the Financial Statements continued
+
+34, Related parties (continued)
+Nature of related party
+
+Significant Subsidiary
+£000 influence company
+Balance at 31 December 2010
+Cash and cash equivalents 140,788 -
+Loans and advances to customers : 3
+Derivative financial instruments 505 -
+Prepayments, accrued income and other assets 36,983 -
+Deposits from banks 163,085 9,885
+Deposits from customers - 1,763
+Derivative financial instruments 5,956 -
+Other liabilities 6,756 -
+Subordinated liabilities 60,000 -
+Included in the income statement for the period
+Interest receivable 724 -
+Interest payable (3,455) -
+Other operating income 30,152 173
+Pension contributions (655) -
+Net loss on derivative financial instruments (2,249) -
+Balance at 31 December 2009
+Cash and cash equivalents 74,937 -
+Loans and advances to customers - 2
+Derivative financial instruments 1,375 -
+Prepayments, accrued income and other assets 26,134 -
+Deposits from banks 323,234 43,529
+Deposits from customers - 1,376
+Derivative financial instruments 5,766 -
+Other liabilities 7,150 -
+Subordinated liabilities 60,000 -
+Included in the income statement for the period
+Interest receivable 357 -
+Interest payable (6,529) (280)
+Other operating income 19,029 327
+Pension contributions (642) -
+
+(b) Investment in non-consolidated subsidiaries
+
+Ownership interest
+
+Country of 31 December 31 December
+
+incorporation 2010 2009
+Bank of China (Suisse) SA Switzerland 100% 100%
+BOC (Suisse) Funds Management SA’ Switzerland - 70%
+China Visa Senices Limited United Kingdom 100% 100%
+China Visa Senices Italy SRL? Italy 100% 100%
+PT. China Visa Senices Indonesia” Indonesia 100% 100%
+
+‘Indirect holding via Bank of China (Suisse) SA
+*Indirect holding via China Visa Services Limited
+
+At 31 December 2010, the bank holds an investment of £89,229,000 (CHF 150,000,000) (31 December 2009:
+£28,113,000 (CHF 50,000,000)) in Bank of China (Suisse) SA and £1 in China Visa Services Limited (31
+December 2009: £1). These entities are wholly-owned, with head quarters at rue du General-Dufour 3, 1204
+Geneva, Switzerland and Morley House, London, United Kingdom respectively.
+
+59
+Notes to the Financial Statements continued
+
+34, Related parties (continued)
+
+During the year the bank was required to invest a further CHF 100,000,000 (£61,911,000) in Bank of China
+(Suisse) S.A. ("BOCS"). This was to ensure that BOCS did not breach its local regulatory capital ratios caused by
+accumulated losses. BOCS has been established for two years and as a start up operation has incurred trading
+losses resulting in negative reserves being carried on the balance sheet in equity. The negative reserves have
+been further impacted by provisions being made for credit losses and client litigation proceedings. The strategic
+decision to close the fund management operations of BOC (Suisse) Fund Management S.A., BOCS's immediate
+subsidiary, resulted in the write off of the cost of this investment further augmenting the negative reserves.
+
+As required by IAS 36 — Impairment of assets, the bank shall assess at the end of each reporting period whether
+there is any indication that an asset may be impaired. If any such indication exists, the bank shall estimate the
+recoverable amount of the assets. Due to the negative reserves, as noted above, the net asset value of BOCS, the
+recoverable amount is less than the book value of the investment in the bank's balance sheet hence an impairment
+assessment was required.
+
+The investment in BOCS has been assessed for impairment based on a value in use calculation. The calculation
+uses cash flow projections based on financial forecasts approved by management covering a five-year period, with
+a terminal growth rate of 2.02% applied thereafter. The forecast cash flows have been discounted at a pre-tax
+discount rate of 13.2%. The recoverable amount calculated based on value in use results in an impairment of
+£8,432,000, which has been taken to the income statement.
+
+A 10% shortfall of forecasted Assets Under Management, a key driver of the cash flow projections, would reduce
+the recoverable amount by an additional £2,669,000. A 100 basis point increase in the discount rate would reduce
+the recoverable amount by £5,273,000. A reduction in the long term growth rate of 20 basis points per annum
+would reduce the recoverable amount by £682,000.
+
+The bank has availed itself of the consolidation exemption (refer to Note 2) and therefore does not consolidate
+these subsidiaries.
+(c) Key management compensation
+
+Key management is comprised of directors and the members of the Executive Management Committee of the
+bank.
+
+Key management personnel compensation for the period ended 31 December 2010 comprised of salaries and
+other short term benefits in the amount of £1,488,000 (31 December 2009 £1,119,000).
+
+The bank does not provide non-cash benefits to any of the key management personnel.
+
+(d) Transactions with key management
+
+31 December 31 December
+£000 2010 2009
+Loans and advances 218 24
+
+60
+Notes to the Financial Statements continued
+35. Contingent liabilities and commitments
+
+(a) Loan commitments, guarantees and other financial facilities
+
+At 31 December 2010, the bank had off-balance sheet financial instruments that commit it to extend credit to
+
+customers, guarantees and other facilities as follows:
+
+31 December 31 December
+£000 2010 2009
+Loan commitments 253,856 270,596
+Guarantees 21,450 27,435
+Total 275,306 298,031
+
+(b) Operating lease commitments
+
+Where the bank is the lessee, the future minimum lease payments under non-cancellable operating leases are as
+
+follows:
+31 December 31 December
+£000 2010 2009
+Less than one year 427 434
+Between one and five years 270 639
+More than five years - 56
+Total 697 1,129
+36. Subsequent event
+
+There were no subsequent events after the balance sheet date.
+
+37. Going concern assessment
+
+The Board has given its consideration to the going concern status of the bank as at the reporting date. After due
+consideration the Board is of the opinion that the bank will continue as a going concern for the foreseeable future,
+generating cash flows from its continuing operations, but taking additional comfort from the Letter of Support from
+
+the parent company.
+
+61

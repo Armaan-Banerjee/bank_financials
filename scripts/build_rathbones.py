@@ -21,6 +21,22 @@ PILLAR_URL = "https://www.rathbones.com/sites/main/files/results_and_presentatio
 # re-verified live and serving %PDF on 15 September 2026), so no other URL in
 # this file is exposed to the same rename.
 PILLAR_URL_DEAD = "https://www.rathbones.com/sites/rathbones.com/files/results_and_presentations/files/31_december_2024_pillar_3_disclosures.pdf"
+# LATEST-EDITION CHECK, 16 September 2026 (KM1-024). Checked rathbones.com's own
+# investor page (https://www.rathbones.com/investor-relations/results-and-
+# presentations, which now redirects to /en-gb/wealth-management/investor-
+# relations/results-reports-and-presentations) rather than any URL already cited
+# here. NEWEST Pillar 3 on that page is "PILLAR 3 DISCLOSURES / 31 DECEMBER 2025
+# / RATHBONES GROUP PLC" (49pp, %PDF verified, application/pdf, 2,610,804 bytes)
+# at PILLAR2025_URL below - one edition newer than PILLAR_URL. A semi-annual
+# edition at 30 June 2025 is also published (PILLAR2025H1_URL). NOTE the site
+# spells the annual file "discosures" (sic).
+# NO new figures for this workbook follow from either document: both are
+# Rathbones Group Plc CONSOLIDATED, and the FY2025 edition repeats the
+# consolidated-only position verbatim on printed p.6. The Company's own FY2025
+# statutory accounts (AR2025_URL) were already the newest RIM filing and are
+# already transcribed here, so YEARS is unchanged.
+PILLAR2025_URL = "https://www.rathbones.com/sites/main/files/results_and_presentations/files/31_december_2025_pillar_3_discosures.pdf"
+PILLAR2025H1_URL = "https://www.rathbones.com/sites/main/files/results_and_presentations/files/interim_pillar_3_disclosures_30_june_2025_1.pdf"
 
 ENTITY_NOTE = (
     "Entity: Rathbones Investment Management Limited (FRN 116316, company 01448919), formerly "
@@ -46,6 +62,14 @@ ENTITY_NOTE = (
     "group consolidated basis, reporting the positions quarterly', but it prints only the group consolidated "
     "figures - templates UK KM1, UK LIQ1 and UK LIQ2 are all group-level - so there is no solo-consolidation "
     "or significant-subsidiary annex to draw entity data from, and no Group figure has been substituted.\n"
+    "LATEST-EDITION CHECK (16 September 2026): rathbones.com's own investor page was checked directly and now "
+    "carries a NEWER annual edition, Rathbones Group Plc Pillar 3 Disclosures 31 December 2025 - "
+    + PILLAR2025_URL + " - plus a semi-annual edition at 30 June 2025 - " + PILLAR2025H1_URL + ". The FY2025 "
+    "edition repeats the consolidated-only position verbatim at section 1 'Executive summary', printed p.6: "
+    "'Disclosures are made on a consolidated group level, as the grouphave [sic] no large subsidiaries meeting "
+    "the requirements for individual disclosure under the definition within CRR Article 4(146).' Its only KM1 is "
+    "again a Rathbones Group Plc consolidated table, so nothing in this entity-level workbook changes; no figure "
+    "has been taken from it either.\n"
     "LINK PROVENANCE (15 September 2026): the URL above is a REPLACEMENT. rathbones.com renamed its site "
     "directory from /sites/rathbones.com/ to /sites/main/, so the URL originally cited for this document now "
     "returns HTTP 404. Dead original, kept so the provenance chain stays readable: " + PILLAR_URL_DEAD + "\n\n"
@@ -298,6 +322,87 @@ RCR_SOURCES = CASH_SOURCES + (
     "The note gives NO tier split and NO risk-weighted assets, so CET1 Capital, Tier 1 Capital, all three capital "
     "ratios and Total RWAs remain blank rather than derived - in particular this figure has NOT been copied into "
     "CET1 or Tier 1, because the Company nowhere states that its capital is wholly CET1."
+)
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE at this entity's level.
+#
+# The finding here is the middle one of the three the KM1 map distinguishes:
+# it is NOT "no Pillar 3 is published" and NOT "the template is not used".
+# Rathbones Group Plc publishes a Pillar 3 every year and DOES print the UK KM1
+# template in it - but only on a consolidated Rathbones Group Plc basis, and the
+# document states in terms that no subsidiary is large enough to require
+# individual disclosure. This workbook is Rathbones Investment Management
+# Limited, entity-only, so the Group's KM1 is a different reporting entity and
+# a different basis; transcribing it here would put Group capital against RIM
+# statutory accounts. Every one of the 11 single-metric sheets in this workbook
+# is blank for exactly the same reason, so a populated KM1 would also contradict
+# them. The evidence is positive and quoted below - not a failed fetch: both the
+# FY2024 and the newer FY2025 editions were downloaded (%PDF verified) and read.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - the UK KM1 key-metrics template is NOT published for Rathbones Investment Management Limited "
+    "in any year, and no figure on this sheet is withheld for want of looking. Positive evidence, from the "
+    "publisher's own documents:\n"
+    "• Rathbones Group Plc, Pillar 3 Disclosures 31 December 2025 (the NEWEST edition on rathbones.com as at "
+    "16 September 2026, found on the bank's own results/reports/presentations page rather than from a cited "
+    "URL), section 1 'Executive summary', printed p.6: 'Disclosures are made on a consolidated group level, as "
+    "the grouphave [sic] no large subsidiaries meeting the requirements for individual disclosure under the "
+    "definition within CRR Article 4(146).' - " + PILLAR2025_URL + "\n"
+    "• The same document DOES print a 'UK KM1 - Key metrics template' (contents p.3; table at printed p.3, "
+    "in GBP million), but its header block reads 'A summary of the Rathbones group's key ratios' and the table "
+    "is Rathbones Group Plc CONSOLIDATED. That is a different reporting entity and a different basis from this "
+    "workbook, whose every figure is Rathbones Investment Management Limited entity-only, so it is deliberately "
+    "not reproduced here.\n"
+    "• Rathbones Group Plc, Pillar 3 Disclosures 31 December 2024, same statement at section 1, printed p.6 - "
+    + PILLAR_URL + "\n"
+    "• Rathbones Group Plc, Pillar 3 Semi-annual Disclosures 30 June 2025, section 1.2: 'We have no large "
+    "subsidiaries meeting the...' [requirements for individual disclosure] - " + PILLAR2025H1_URL + "\n"
+    "• The FY2025 annual edition also records (p.25 area, NSFR section) that Rathbones 'is required to "
+    "calculate and monitor the ratio on a RIM-solo and group consolidated basis, reporting the positions "
+    "quarterly'. A RIM-solo regulatory position therefore EXISTS but goes to the regulator only; it is not "
+    "published in any Pillar 3 template, and nothing has been derived from the Group figures to stand in for it.\n"
+    "• THE PARENT'S PILLAR 3 WAS SEARCHED FOR A SUBSIDIARY BLOCK, which is the first place a UK subsidiary's "
+    "regulatory figures normally live - not the last. It has none. The FY2025 edition was read end to end for "
+    "an 'Individual'/'Solo'/'RIM' COLUMN inside a group table and for a separate subsidiary TABLE in an "
+    "appendix (both of which exist at other UK groups), case-insensitively and with a richness control to "
+    "prove the extraction was working ('capital' 96 hits, 'ratio' 135, 'cet1' 17, 'leverage' 20, 'RIM' 24). "
+    "Findings, all negative for an entity-level figure: every KM1/OV1/CC1/CC2/LR/LIQ template in the document "
+    "and in all ten appendices is captioned for the consolidated group; no template carries an entity column; "
+    "and template UK CCA's row 6, 'Eligible at solo/(sub-)consolidated/solo&(sub-)consolidated', reads "
+    "'Consolidated' for every one of the group's own-funds instruments. The 24 'RIM' mentions are all "
+    "narrative - governance, committees, client lending, the liquidity buffer - and carry no RIM-solo "
+    "regulatory figure. Appendix 1's excluded-templates listing likewise excludes templates on relevance and "
+    "materiality grounds, not an entity-level annex.\n"
+    "• The 30 June 2025 SEMI-ANNUAL edition was used as an independent second opinion at no transcription "
+    "cost, and agrees: section 1.2 'We have no large subsidiaries meeting the...' requirements for individual "
+    "disclosure, and its key-metrics table is likewise consolidated group only.\n"
+    "• NOT BACK-FILLED FROM THE STATUTORY ACCOUNTS. The Company's own accounts do disclose a single "
+    "entity-level own-funds total (see the Total Capital sheet), but that is a capital-management note, not a "
+    "KM1 row, and it carries no tier split and no RWA. It is not mapped onto template row numbers here, because "
+    "doing so would invent a correspondence the Company never published.\n"
+    "• SOURCE DEFECT RECORDED, NOT CORRECTED (and not relied on, since nothing here is transcribed from it): "
+    "the FY2025 annual edition's prose says its KM1 shows key ratios 'as at 31 December 2025', but the table's "
+    "own column headers are printed 'c 30 June 2025' and 'e 31 December 2024'. Noted for a future reader who "
+    "goes looking for 31 December 2025 columns in that document.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Rathbones Investment Management Limited — KM1 Key Metrics",
+    subtitle="Not applicable at this entity's level. Pillar 3 IS published and the UK KM1 template IS used - but "
+             "only by the parent, Rathbones Group Plc, on a consolidated basis, which its own Pillar 3 states is "
+             "the only basis of disclosure because no subsidiary is large enough to require individual disclosure "
+             "(CRR Article 4(146)). Group KM1 figures are a different entity and a different basis from this "
+             "entity-only workbook and are deliberately NOT reproduced. See the source note for the quoted "
+             "evidence and the editions checked.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template — Rathbones Investment Management Limited (entity)",
+         {y: "Not applicable — published only at Rathbones Group Plc consolidated level" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=60,
+    source_height=470,
 )
 
 _pillar3_pre = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio"]

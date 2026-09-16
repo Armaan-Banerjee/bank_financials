@@ -1,0 +1,3372 @@
+Schroders
+
+O
+
+Annual Report and
+Accounts 2025
+
+Schroder & Co. Limited
+
+Year ended 31 December 2025
+
+*AFOPFBOB*
+
+COMPANIES HOUSE
+Schroder & Co. Limited
+Annual Report and Accounts 2025
+
+Contents
+
+Officers, registered office and independent auditor
+
+Strategic report
+
+Directors’ report
+
+Independent auditor's report to the member of Schroder & Co. Limited
+Income statement
+
+Statement of comprehensive income
+
+Statement of financial position
+
+Statement of changes in equity
+
+Cash flow statement
+
+Notes to the financial statements
+
+Schroders!
+
+own =
+
+15
+16
+17
+18
+19
+20
+Schroder & Co. Limited
+Annual Report and Accounts 2025
+
+Officers, registered office and independent
+auditor
+
+Directors
+
+Mary-Anne Daly (resigned 30 June 2025)
+Paul Drechsler CBE
+
+Nigel Drury (resigned 30 June 2025)
+
+Helen Fitzgerald (resigned 6 August 2025)
+Oliver Gregson (appointed 6 August 2025)
+Peter Hall (resigned 16 January 2026)
+Susan Harris
+
+Tim McCann (appointed 6 August 2025)
+Charles Porter
+
+Caspar Rock
+
+Matthew Westerman CBE (appointed 16 January 2026)
+
+Company Secretary
+
+Schroder Corporate Services Limited
+
+Registered Office
+
+1 London Wall Place
+London
+EC2Y 5AU
+
+Independent Auditors
+Ernst & Young LLP
+25 Churchill Place
+
+London
+E14 SEY
+
+Schroders;
+Schroder & Co. Limited
+Annual Report and Accounts 2025 2
+
+Strategic report
+
+The Directors present their Strategic report on Schroder & Co. Limited (the Company) for the year ended 31
+December 2025.
+
+Results and review of the business
+
+The profit for the year, before tax, was £111.9 million (2024: £107.8 million). Net income increased by £34.4 million
+to £325.7 million (2024: £291.3 million), principally due to higher management fee revenue. Administrative
+expenses increased by £30.3 million to £213.8 million (2024: £183.5 million), primarily driven by an increase in
+compensation costs and a one-off impairment charge.
+
+Growth in Assets under Management (“AUM”) was supported by net new business of £2.4 billion and the transfer
+in of Whitley Asset Management Limited (£1.4 billion), together with positive markets. This resulted in total AUM
+increasing to £71.5 billion (including £68.6 billion of Advised AUM) at 31 December 2025 (2024: £63.1 billion total
+AUM, including £60.2 billion of Advised AUM).
+
+The principal activities of the Company are investment management, wealth planning and specialist banking
+services to private clients and charities. The Company's investment and operating principles are expected to
+remain unchanged in 2026, although we will continue to enhance the quality of our services to meet our clients’
+needs, maintaining our focus on exceptional client service and strong investment outcomes.
+
+The Directors consider the results and the Company's financial position at 31 December 2025 to be satisfactory.
+
+Subsequent to the year end, the Board of Schroders plc, the ultimate parent undertaking of the Company, reached
+a preliminary agreement with Pantheon LLC, a wholly-owned subsidiary of Nuveen, LLC, on the financial terms of
+a possible offer to acquire the entire issued and to be issued ordinary share capital of Schroders plc, to be
+implemented by way of a scheme of arrangement. Any such acquisition is subject to shareholder approval.
+
+Directors’ duties - compliance with section 172 of the Companies Act 2006
+
+Section 172 of the Companies Act 2006 requires a director of a company to act in the way he or she considers, in
+good faith, would most likely promote the success of the Company for the benefit of its members as a whole. In
+doing this section 172 requires a director to have regard, amongst other matters, to the:
+
+« likely consequences of any decisions in the long-term;
+
+« interests of the Company's employees;
+
+« need to foster the Company's business relationships with suppliers, customers and others;
+
+. impact of the Company's operations on the community and environment;
+
+e desirability of the Company maintaining a reputation for high standards of business conduct; and
+* need to act fairly as between members of the Company.
+
+To discharge their section 172 duties, the directors had regard to the factors set out above in making the principal
+decisions taken by the Company.
+
+Due to the structure of the Schroders Group, stakeholder engagement also took place using Group resources, in
+line with agreed delegations. The stakeholders identified by the Group are also applicable to the Company, and
+are set out below.
+
+Further details of the engagement that takes place with the Company's stakeholders at Group level are set out in
+the Schroders plc Annual Report and Accounts for the year ended 31 December 2025 (the “Schroders Report’).
+
+The Board made several key decisions on behalf of the Company during the year, including those summarised
+below. The impact on the Company's stakeholders continues to be considered throughout the Board’s decision-
+making process.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 3
+
+Strategic report (continued)
+
+Strategy
+
+The Board's principal decision during 2025 was to approve the Company's refreshed strategy as part of the strategic review
+of the Schroder Group's Wealth Management business. The wealth management industry is experiencing significant
+change, shaped by evolving client expectations, increasing costs and rapid advances in technology. These developments
+present both challenges and opportunities.
+
+The refreshed strategy sets out five priorities: driving sustainable growth; delivering exceptional client experience; building
+a high-performing, inclusive culture; creating a unified, data-driven and scalable operating model; and embedding robust
+risk and conduct controls.
+
+The assessment of the business involved both quantitative analysis and feedback gathered from clients and employees.
+Insights came from client meetings and from employees, who contributed to the new vision and strategy through working
+groups.
+
+This engagement with stakeholders reinforced the need for change and helped shape the new direction. As a result, the
+client proposition will evolve and the business will be upgrading its operating platform. We have also sought internal and
+external input on enhancing our risk and compliance function. We are reviewing the operating model across our first and
+second lines of defence and are adapting our risk management framework and platform requirements.
+
+The Schroders Group, as the Company's ultimate controlling party, was also closely involved and the refreshed Wealth
+Management strategy has the support of the Schroders plc Board.
+
+The Board will monitor progress against the refreshed strategy throughout 2026 and future years.
+Dividend
+
+The Board approved the payment of a dividend of £73.9 million for 2024, which was paid in March 2025. In making this
+decision, the Board considered the long-term impact on the Company’s liquidity requirements, including the needs of the
+loan book and the use of portfolio loan credit risk mitigation.
+
+Operational resilience self-assessment
+
+A key decision during 2025 was the approval of the Company's operational resilience self-assessment to meet the
+requirements of the FCA's and PRA's operational resilience self-assessment regulations. Operational resilience continues
+to be a key area of focus and the Board considered the interests of clients in reviewing important business services and
+their impact tolerances. The Board through the senior management team continues to engage with the regulators so that
+the Company's self-assessment meets regulatory expectations. There was also engagement with the wider Schroders
+Group so that the approach taken is consistent with the Group's other UK regulated entities.
+
+Sale of Whitley Asset Management Limited ("WAM")
+
+Following the acquisition of WAM in October 2024, all clients were transferred to the Company. This left WAM as a
+regulated entity with no ongoing activities. On 4 November 2025, the Board approved the sale of Whitley Asset
+Management Limited (subsequently renamed as Schroders Investment Portfolio Services Limited on 16 January 2026) to
+Benchmark Capital Limited, another Schroders Group subsidiary. The Board considered the interests of key stakeholders
+when it reviewed the sale.
+
+Regulatory approval of the sale was granted by the FCA in January 2026 and the transfer is expected to complete during
+the first half of 2026.
+
+Internal! capital and liquidity assessments
+
+In accordance with the rules of the Prudential Regulatory Authority, the Company is subject to requirements in relation to
+capital and liquidity and is required to prepare an Internal Capital Adequacy Assessment and an Internal Liquidity
+Adequacy Assessment. These documents are updated annually with the most recent editions approved by the Board in
+July 2025. The capital adequacy assessment takes into account anticipated changes in the capital adequacy framework
+arising from Basel 3.1 implementation.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 4
+
+Strategic report (continued)
+
+Other decisions
+
+Clients are at the centre of the business and continually doing the right thing for clients is key to the future success of the
+Company. The Company continues to take close regard to the requirements of the FCA’s Consumer Duty. The interests of
+the clients were key considerations for all major decisions taken by the Board.
+
+The Company has a policy of providing employees with information on matters of interest to them in relation to the
+business of the Company and the Group.
+
+The Board seeks to maintain the Company's reputation for high standards of business conduct when making key decisions
+and upholds high standards of conduct.
+
+Due to the structure of the Schroders Group, stakeholder engagement also took place using Group resources, in line with
+agreed delegations. For details of the engagement that takes place with the Company's stakeholders at Group level, refer
+to the Schroders plc annual report and accounts for the year ended 31 December 2025 (the ‘Schroders Report’), copies of
+which can be obtained from www.schroders.com/ir.
+
+Principal risks and uncertainties
+
+With the exception of certain risks specific to the Company relating to financial instruments, principal risks and
+uncertainties are integrated with the principal risks of Schroders plc's other subsidiary undertakings which, with
+Schroders plc, form the Group and are not managed separately. Accordingly, the principal risks and uncertainties
+of the Group, which include those of the Company, and detail such principal risks that are most likely to have an
+impact on Group strategy, business model, external reputation and future performance are discussed in “Risk
+management’ in the Strategic report and in “Risk and internal controls” within the Audit and Risk Committee report
+of the Governance section of the Schroders Report. The Schroders Report does not form part of this report.
+
+The Board has established the Wealth Management Audit and Risk Committee (WMARC), comprised of the non-
+executive Directors of the Company, to oversee the financial reporting, risk management and internal controls of
+the Company. The Board has set a risk appetite statement, recommended by the WMARC, which is assessed on an
+annual basis and is supported by a number of metrics and tolerances to enable us to provide an assessment of
+the risk position against risk appetite.
+
+The Chief Executive of the Company has established a Management Committee, an Asset Liability Management
+and Credit Committee and a Risk Committee which, together are referred to as the Schroder & Co. Risk
+Committees, oversee the Company's risk management. Risk management is embedded within all areas of the
+Company, with each function identifying potential risks and implementing and maintaining appropriate controls
+to manage these risks.
+
+The Company's specific risks relate to capital, market, liquidity and credit, and are explained in note 13 to the
+financial statements.
+
+Key performance indicators
+
+The Group's operations are managed on a divisional basis. Whilst the Company monitors a range of key
+performance indicators to assess its progress against its own strategic objectives, these KPIs are aligned with
+those tracked at Group level to ensure consistency in measuring performance and progress. The development,
+performance and position of the Group, which includes the Company, is discussed in the Strategic report in the
+Schroders Report. The Schroders Report does not form part of this report.
+
+Approved by the Board of Directors and signed on its behalf by:
+
+NB wr
+
+Matthew Buckland, Authorised signatory for
+Schroder Corporate Services Limited
+Company Secretary
+
+10 March 2026
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 5
+
+Directors’ report
+
+The Directors present their report and the audited financial statements of the Company for the year ended 31
+December 2025. The information contained in the Strategic report and the Statement of Directors’ responsibilities
+forms part of this Directors’ report.
+
+General information
+
+The Company is a private company, limited by shares, incorporated and domiciled in England and Wales. The
+Company's ultimate parent undertaking and controlling entity is Schroders plc, which together with the Company
+and Schroders plc's other subsidiary undertakings, form the Group.
+
+The Company is an authorised institution under the Financial Services and Markets Act 2000. The Company is
+authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the
+Prudential Regulation Authority.
+
+Future developments
+The future developments of the Company are disclosed within the Strategic report.
+Dividends
+
+During the year, the Directors declared an interim dividend of £73.9 million, in respect of the year ended 31
+December 2024 (2023: £47.1 million) which was paid to the member of the Company on 11 March 2025.
+
+Risk management and use of financial instruments
+
+We are exposed to a variety of risks as a result of our business activities and are committed to operating within a
+strong system of internal control. Our Risk Management framework enables management to identify, manage and
+escalate risks so that we can pursue our business strategy without exposing the Company to significant regulatory
+breaches, losses or reputational damage.
+
+The risk management processes of the Company are aligned with those of the Group as a whole. Details of the
+Group's risk management processes are outlined in “Risk Management” in the Strategic report and “Risk and
+internal controls” within the Audit and Risk Committee report of the Governance section of the Schroders Report.
+The Company's specific risk exposures to financial instruments are explained in note 13 to the financial statements.
+The Schroders Report does not form part of this report.
+
+Going concern
+
+Taking all the above factors into consideration, including the nature of the Company and its business, the Directors
+are satisfied that, at the time of approving the financial statements, there is a reasonable expectation that the
+Company has adequate resources to continue in operational existence for at least 12 months from the date the
+Annual Report and Accounts are approved.
+
+Directors
+
+The Directors of the Company who have served throughout the year are set out on page 1. This sets out the
+changes which have taken place between 1 January 2025 and 10 March 2026.
+
+During the year Oliver Gregson replaced Mary-Anne Daly as Chief Executive Officer. In January, Matthew
+Westerman CBE replaced Peter Hall as Chair.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 6
+
+Directors’ report (continued)
+
+Directors’ and Officers’ liability insurance
+
+Directors’ and Officers’ liability insurance is taken out by Schroders plc, the Company's ultimate parent company,
+for the benefit of the Directors of the Company.
+
+Employee engagement
+
+The Company has a policy of regularly providing employees with information on matters of interest to them in
+relation to the business of the Company and the Group.
+
+Employees are consulted via email, an intranet site and an employee forum (the “Forum’”). The independent
+Director of Schroders plc responsible for employee engagement attends the Forum to gather feedback and hear
+the issues that concern employees. The Forum consists of employees elected by their peers, and members of the
+Forum meet regularly with management as part of a Joint Consultative Group which discusses employee-related
+matters and provides feedback and recommendations to the senior management team of the Group.
+
+Financial and economic factors affecting the performance of the Group are set out in the Schroders Report which
+is made available to all employees. Through the Share Incentive Plan, employees are encouraged to participate in
+the success of the Group.
+
+Employment policy
+
+The Company is committed to equal opportunities for both existing employees and applicants seeking
+employment. It is the Company's policy to consider applications for employment from disabled persons, having
+regard to their particular aptitudes and abilities. For the purpose of training, career development and promotion,
+disabled employees, including any who become disabled in the course of their employment, are treated on equal
+terms with other employees.
+
+Independent Auditors and disclosure of information to independent Auditors
+
+In accordance with section 487(2) of the Companies Act 2006 and in the absence of a notice proposing that the
+appointment be terminated at a general meeting, the current auditors, Ernst & Young LLP (“EY"), are deemed to
+be reappointed for the next financial year.
+
+To the best of the Directors’ knowledge, there is no relevant audit information of which EY is unaware. Each of the
+Directors has taken all reasonable steps that ought to have been taken by him or her as a Director in order to make
+himself or herself aware of any relevant audit information and to establish that the Company's auditor is aware of
+such information.
+
+Streamlined Energy and Carbon Reporting (SECR)
+
+The Schroders Report includes the energy and carbon information for the Group, including the Company as a
+subsidiary undertaking under the SECR framework.
+
+The Companies (Strategic Report) (Climate-related Financial Disclosure) Regulations 2022
+
+The Schroders Report includes the climate-related disclosures for the Group, including the Company as a
+subsidiary undertaking. The Company also publishes a stand-alone TCFD report which is available on Schroders’
+Investor Relations website, copies of which can be obtained from www.schroders.com/ir. Climate risks have been
+considered in the preparation of the financial statements, where relevant. This assessment concluded that
+changes in the climate related assumptions would not give rise to a material impact on the financial statements.
+For more information see page 20.
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 7
+
+Directors’ report (continued)
+
+Statement of corporate governance arrangements
+
+As a subsidiary undertaking, the Company applies the UK Corporate Governance Code where applicable to support
+Schroders plc's overall compliance with that code.
+
+Statement of Directors’ responsibilities
+
+The Directors are responsible for preparing the Strategic report, the Directors’ report and the financial statements
+in accordance with applicable law and regulations.
+
+Company law requires the Directors to prepare financial statements for each financial year. Under that law the
+Directors have elected to prepare the financial statements in accordance with UK-adopted international
+accounting standards and in conformity with the requirements of the Companies Act 2006. Under company law
+the Directors must not approve the financial statements unless they are satisfied that they give a true and fair view
+of the state of affairs of the Company and of the profit or loss of the Company for that period. In preparing these
+financial statements, the Directors are required to:
+
+~ select suitable accounting policies in accordance with IAS8 Accounting Policies, Changes in Accounting
+Estimates and Errors and then apply them consistently;
+
+~ make judgements and accounting estimates that are reasonable and prudent;
+
+- present information, including accounting policies, in a manner that provides relevant, reliable,
+comparable and understandable information;
+
+~ provide additional disclosures when compliance with the specific requirements in Uk-adopted
+international accounting standards is insufficient to enable users to understand the impact of a particular
+transaction, other events or conditions on the Company's financial position or financial performance;
+
+~ state whether UK-adopted international accounting standards have been followed, subject to any material
+departures disclosed and explained in the financial statements; and
+
+— prepare the financial statements on a going concern basis unless it is inappropriate to presume that the
+Company will continue in business.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+Company's transactions and disclose with reasonable accuracy at any time the financial position of the Company
+and enable them to ensure that the financial statements comply with the Companies Act 2006. They are also
+responsible for safeguarding the assets of the Company and hence for taking reasonable steps for the prevention
+and detection of fraud and other irregularities.
+
+Approved by the Board of Directors and signed on its behalf by:
+
+NV Bw
+
+Matthew Buckland, Authorised signatory for Registered Office:
+Schroder Corporate Services Limited 1 London Wall Place
+Company Secretary London, EC2Y SAU
+
+10 March 2026
+Registered in England and Wales No 02280926
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 8
+
+Independent auditor's report to the member of Schroder &
+Co. Limited (continued)
+
+Opinion
+
+We have audited the financial statements of Schroder & Co. Limited (the ‘Company’) for the year ended 31
+December 2025 which comprise the income statement, the statement of comprehensive income, the statement of
+financial position, the statement of changes in equity, the cash flow statement, and the related notes 1 to 29,
+including material accounting policy information. The financial reporting framework that has been applied in their
+preparation is applicable law and UK adopted international accounting standards.
+
+In our opinion, the financial statements:
+
+¢ give a true and fair view of the Company's affairs as at 31 December 2025 and of its profit for the year then
+ended;
+
+e have been properly prepared in accordance with UK adopted international accounting standards; and
+
+e have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable
+law. Our responsibilities under those standards are further described in the Auditor's responsibilities for the audit
+of the financial statements section of our report. We are independent of the Company in accordance with the
+ethical requirements that are relevant to our audit of the financial statements in the UK, including the FRC’s Ethical
+Standard as applied to public interest entities, and we have fulfilled our other ethical responsibilities in accordance
+with these requirements.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our opinion.
+
+Conclusions relating to going concern
+
+In auditing the financial statements, we have concluded that the Directors’ use of the going concern basis of
+accounting in the preparation of the financial statements is appropriate. To evaluate the Directors’ assessment of
+the Company's ability to continue to adopt the going concern basis of accounting, we have:
+
+e assessed the assumptions used in management's five-year forecast by comparing to internal management
+information, external market sources and current market conditions. We also determined that the model
+is appropriate to enable management to make an assessment of the going concern status of the Company
+for a period of twelve months from the date the financial statements are approved. We also performed
+back-testing on prior year forecasts by comparing them to the Company's results over the same periods;
+
+e evaluated the capital and liquidity position of the Company by reviewing the Internal Capital Adequacy
+Assessment Process, the Internal Liquidity Adequacy Assessment Process and the Recovery Plan;
+
+e assessed the appropriateness of the stress and reverse stress test scenarios by considering the key risks
+identified by management, our understanding of the business and the external market environment. We
+evaluated the assumptions used in the scenarios by comparing them to internal management information
+and external market sources, tested the clerical accuracy and assessed the conclusions reached in the
+stress and reverse stress test scenarios;
+
+e assessed the plausibility of the available options identified by management to mitigate the impact of the
+key risks by comparing them to our understanding of the Company;
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 9
+
+Independent auditor's report to the member of Schroder &
+Co. Limited (continued)
+
+e performed enquiries of management and those charged with governance to identify risks or events that
+may impact the Company's ability to continue as a going concern. We also reviewed the management
+paper approved by the Board and minutes of meetings of the Board and its committees; and
+
+e assessed the appropriateness of the going concern disclosures by comparing them to management's
+assessment for consistency and for compliance with the relevant reporting requirements.
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or
+conditions that, individually or collectively, may cast significant doubt on the Company's ability to continue as a
+going concern for a period of twelve months from the date the Annual Report and Accounts is approved.
+
+Our responsibilities and the responsibilities of the Directors with respect to going concern are described in the
+relevant sections of this report. However, because not all future events or conditions can be predicted, this
+statement is not a guarantee as to the Company's ability to continue as a going concern:
+
+Overview of our audit approach
+
+Key audit matters e Improper recognition of revenue
+
+Materiality e Overall materiality of £5.6 million which represents 5% of profit before tax.
+
+An overview of the scope of our audit
+Tailoring the scope
+
+Our assessment of audit risk, our evaluation of materiality and our allocation of performance materiality determine
+our audit scope for the Company. This enables us to form an opinion on the financial statements. We take into
+account size, risk profile, the organisation of the Company and effectiveness of controls, the potential impact of
+climate change and changes in the business environment when assessing the level of work to be performed.
+
+Climate change
+
+The Company has determined that the majority of its climate-related risk lies in the assets it manages on behalf of
+its clients. This is primarily explained on page 4 in the principal risks and uncertainties, which form part of the
+‘Other information’. Our procedures on these unaudited disclosures therefore consisted solely of considering
+whether they are materially inconsistent with the financial statements or our knowledge obtained in the course of
+the audit or otherwise appear to be materially misstated, in line with our responsibilities on ‘Other informatior’.
+
+In planning and performing our audit we assessed the potential impacts of climate change on the Company's
+business and any consequential material impact on its financial statements.
+
+The Company has explained in the Basis of preparation on page 20 how it has reflected the impact of climate
+change in their financial statements where management consider it appropriate. The principal areas of
+consideration by management include the measurement of financial assets and impairment assessments.
+
+Our audit effort in considering the impact of climate change on the financial statements was focused on assessing
+whether the effects of potential climate risks have been appropriately reflected by management in reaching their
+judgments in relation to the measurement of financial assets and their impairment assessments. As part of this
+evaluation, we performed our own risk assessment, to determine the risks of material misstatement in the financial
+statements from climate change, which needed to be considered in our audit.
+
+We also challenged the Directors’ considerations of climate change risks in their assessment of going concern and
+associated disclosures.
+
+Schroders.
+Schroder & Co. Limited
+Annual Report and Accounts 2025
+
+10
+
+Independent auditor's report to the member of Schroder &
+
+Co. Limited (continued)
+
+Based on our work we have not identified the impact of climate change on the financial statements to be a key
+audit matter or as a factor that impacts a key audit matter.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgment, were of most significance in our audit of
+the financial statements of the current period and include the most significant assessed risks of material
+misstatement (whether or not due to fraud) that we identified. These matters included those which had the
+greatest effect on the overall audit strategy, the allocation of resources in the audit and directing the efforts of the
+engagement team. These matters were addressed in the context of our audit of the financial statements as a
+whole, and in our opinion thereon, and we do not provide a separate opinion on these matters.
+
+Risk
+
+Our response to the risk
+
+Improper recognition of revenue (fee
+and commission income: £280.9 million,
+2024: £258.1 million; and Interest
+income £185.7 million, 2024: £185.8
+million)
+
+Refer to accounting policies in note 2 of the
+financial statements (page 21).
+
+There is a risk of inappropriate recognition
+of revenue, specifically focussed on
+manual fee calculations that may be
+susceptible to management override or
+error.
+
+The revenue generated by the Company is
+largely automated for interest and fee and
+commission income. As such, the risk of
+material misstatement due to fraud or error
+is lower. However, for manual calculations
+of fees and commission income, that have
+increased complexity, there is a heightened
+risk of management override because the
+calculations are manual and there are
+adjusting journal entries recorded in the
+ledger.
+
+We have:
+
+confirmed and updated our understanding of the
+procedures and controls in place throughout the revenue
+process, including updating our understanding of the fee
+arrangements with clients, the input of those
+arrangements in the relevant systems, and billing and fee
+deduction from client accounts;
+
+tested the controls over IT systems underpinning the
+revenue process, including testing controls over access
+and reconciliations over the flow of data between systems.
+Where issues were identified with access rights, additional
+substantive procedures were performed;
+
+tested the controls over the onboarding process of new
+clients, including reviews of changes made to client files;
+
+tested the controls in place over the calculation of
+revenue, including interest income;
+
+performed analytical procedures over the fee and
+commission income, based on movements in assets under
+management (AUM);
+
+for a sample of manual and automated fee and
+commission income items, we agreed the fee rates
+through to customer agreements, traced the fees charged
+to portfolio statements and recalculated the fee income;
+
+tested the accrued revenue by agreeing a sample of
+transactions to portfolio statements and assessed the
+recoverability of year end debtors through inspection of
+the aged debtors report;
+
+performed analytical procedures to assess whether
+interest income recorded reflects the interest rates seen in
+the year;
+
+selected a sample of interest income transactions and
+traced them to third party statements;
+
+performed a review of the complaints register;
+
+Schroders
+
+Schroder & Co. Limited
+Annual Report and Accounts 2025 11
+
+Independent auditor's report to the member of Schroders &
+Co. Limited (continued)
+
+Risk Our response to the risk
+
+e performed enquiries of management, read minutes of
+board and committee meetings held throughout the year
+and performed journal entry testing; and
+
+e tested compliance with IFRS 15 - Revenue from contracts
+with customers (‘IFRS 15‘) by assessing whether revenue
+samples selected met the criteria specified under IFRS 15.
+
+Key observations communicated to the Wealth Management Audit and Risk Committee
+
+All transactions tested have been recognised in accordance with the underlying agreements or other
+supporting documentation.
+
+Based on the procedures performed, we have no matters to report in respect of revenue recognition.
+
+Prior year comparison
+
+There has been no change to our key audit matter in comparison with the prior year.
+
+Our application of materiality
+
+We apply the concept of materiality in planning and performing the audit, in evaluating the effect of identified
+misstatements on the audit and in forming our audit opinion.
+
+Materiality
+
+The magnitude of an omission or misstatement that, individually or in the aggregate, could reasonably be expected to
+influence the economic decisions of the users of the financial statements. Materiality provides a basis for determining the
+nature and extent of our audit procedures.
+
+We determined materiality for the Company to be £5.6 million (2024: £5.4 million), which is 5% (2024: 5%) of profit
+before tax. We believe that profit before tax is the most relevant performance measure to the stakeholders of the
+entity.
+
+During the course of our audit, we reassessed initial materiality based on 31 December 2025 profit before tax and
+adjusted our audit procedures accordingly.
+
+Performance materiality
+
+The application of materiality at the individual account or balance level. It is set at an amount to reduce to an
+appropriately low level the probability that the aggregate of uncorrected and undetected misstatements exceeds
+materiality.
+
+On the basis of our risk assessments, together with our assessment of the Company’s overall control environment,
+our judgment was that performance materiality was 75% (2024: 75%) of our planning materiality, namely £4.2
+million (2024: £4.0 million). We have used a threshold consistent with 2024 due to our prior experience as to the
+low occurrence of material misstatements and our conclusions as to the effectiveness of the control environment
+and accounting processes.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 | 12
+
+Independent auditor's report to the member of Schroder &
+Co. Limited (continued)
+
+Reporting threshold
+
+An amount below which identified misstatements are considered as being clearly trivial.
+
+We agreed with the Wealth Management Audit and Risk Committee that we would report to them all uncorrected
+audit differences in excess of £0.28m (2024: £0.27m), which is set at 5% (2024 :5%) of planning materiality, as well
+as differences below that threshold that, in our view, warranted reporting on qualitative grounds.
+
+We evaluate any uncorrected misstatements against both the quantitative measures of materiality discussed
+above and in light of other relevant qualitative considerations in forming our opinion.
+
+Other information
+
+The other information comprises the information included in the annual report, other than the financial
+statements and our auditor's report thereon. The Directors are responsible for the other information contained
+within the annual report.
+
+Our opinion on the financial statements does not cover the other information and, except to the extent otherwise
+explicitly stated in this report, we do not express any form of assurance conclusion thereon.
+
+Our responsibility is to read the other information and, in doing so, consider whether the other information is
+materially inconsistent with the financial statements or our knowledge obtained in the course of the audit or
+otherwise appears to be materially misstated. If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether this gives rise to a material misstatement in the financial
+statements themselves or a material misstatement of the other information. If, based on the work we have
+performed, we conclude that there is a material misstatement of the other information, we are required to report
+that fact.
+
+We have nothing to report in this regard.
+
+Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the Strategic report and the Directors’ report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+
+« the Strategic report and Directors’ report have been prepared in accordance with applicable legal
+requirements.
+
+Matters on which we are required to report by exception
+
+In light of the knowledge and understanding of the Company and its environment obtained in the course of the
+audit, we have not identified material misstatements in the Strategic report or Directors’ report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006 requires us to
+
+report to you if, in our opinion:
+
+e® adequate accounting records have not been kept, or returns adequate for our audit have not been received
+from branches not visited by us; or ;
+
+e the financial statements are not in agreement with the accounting records and returns; or
+
+e certain disclosures of Directors’ remuneration specified by law are not made; or
+
+e we have not received all the information and explanations we require for our audit
+
+Schroders.
+Schroder & Co. Limited
+Annual Report and Accounts 2025 13
+
+Independent auditor's report to the member of Schroder &
+Co. Limited (continued)
+
+Responsibilities of Directors
+
+As explained more fully in the Statement of Directors’ responsibilities set out on page 7 the Directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such internal control as the Directors determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the Directors are responsible for assessing the Company's ability to continue
+as a going concern, disclosing, as applicable, matters related to going concern and using the going concern basis
+of accounting unless the Directors either intend to liquidate the Company or to cease operations, or have no
+realistic alternative but to do so.
+
+Auditor's responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our
+opinion. Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise from
+fraud or error and are considered material if, individually or in the aggregate, they could reasonably be expected
+to influence the economic decisions of users taken on the basis of these financial statements.
+
+Explanation as to what extent the audit was considered capable of detecting irregularities, including fraud
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures in line
+with our responsibilities, outlined above, to detect irregularities, including fraud. The risk of not detecting a material
+misstatement due to fraud is higher than the risk of not detecting one resulting from error, as fraud may involve deliberate
+concealment by, for example, forgery or intentional misrepresentations, or through collusion. The extent to which our
+procedures are capable of detecting irregularities, including fraud is detailed below.
+
+However, the primary responsibility for the prevention and detection of fraud rests with both those charged with
+governance of the Company and management.
+
+e We obtained an understanding of the legal and regulatory frameworks that are applicable to the Company
+and determined that the most significant are those that relate to the reporting framework (UK adopted
+international accounting standards and the Companies Act 2006) and relevant tax compliance regulations.
+In addition, we concluded that there are certain significant laws and regulations which may have an effect
+on the determination of the amounts and disclosures in the financial statements being the relevant
+Prudential Regulation Authority (PRA) and Financial Conduct Authority (‘FCA) rules and regulations.
+
+* We understood how the Company is complying with those frameworks by making enquiries of senior
+management, including the Chief Financial Officer, Company Secretary, Head of Compliance, Head of Risk,
+Head of Internal Audit and the Chair of the Wealth Management Audit and Risk Committee. We
+corroborated our understanding through our review of board and committee meeting minutes, papers
+provided to the Wealth Management Audit and Risk Committee, and correspondence received from
+regulatory bodies.
+
+e We assessed the susceptibility of the Company's financial statements to material misstatement, including
+how fraud might occur, by meeting with management to understand where they considered there was
+susceptibility to fraud. We also considered performance targets and their potential influence on efforts
+made by management to manage or influence the results. We considered the controls that the Company
+has established to address risks identified, or that otherwise prevent, deter and detect fraud and how
+senior management monitors these controls. Where the risk was considered to be higher, we performed
+audit procedures to address the identified fraud risk.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 14
+
+Independent auditor's report to the member of Schroder &
+Co. Limited (continued)
+
+e Based on this understanding we designed our audit procedures to identify non-compliance with such laws
+and regulations. Our procedures involved: journal entry testing, with a focus on manual journals and
+journals indicating large or unusual transactions based on our understanding of the business; enquiries
+of senior management, and focused testing, as referred to in the key audit matter section above.
+
+A further description of our responsibilities for the audit of the financial statements is located on the Financial Reporting
+Council's website at https://www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor's report.
+
+Other matters we are required to address
+
+* Following the recommendation from the Wealth Management Audit and Risk Committee we were
+appointed by the Company on 9 March 2018 to audit the financial statements for the year ending 31
+December 2018 and subsequent financial periods.
+
+e The period of total uninterrupted engagement including previous renewals and reappointments is eight
+years, covering the years ending 2018 to 2025.
+
+e The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the Company and we
+remain independent of the Company in conducting the audit.
+
+e The audit opinion is consistent with the Audit Results Report to the Wealth Management Audit and Risk
+Committee.
+
+Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of Part 16 of the Companies
+Act 2006. Our audit work has been undertaken so that we might state to the company’s members those matters we are
+required to state to them in an auditor's report and for no other purpose. To the fullest extent permitted by law, we do not
+accept or assume responsibility to anyone other than the Company and the company’s members as a body, for our audit
+work, for this report, or for the opinions we have formed.
+
+Eyratt 4 Vang Lee
+
+Simon Michaelson (Senior statutory auditor)
+
+for and on behalf of Ernst & Young LLP, Statutory Auditor
+London
+
+10 March 2026
+
+Schroders:
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 15
+Income statement
+for the year ended 31 December 2025
+2025 2024
+Note £'000 £'000
+Interest income and similar income arising from:
+Debt securities and other fixed income securities 44,209 43,060
+Other interest income and similar income 141,544 142,771
+185,753 185,831
+Interest expense (146,033) (149,016)
+Net interest income 39,720 36,815
+Fee and commission income 280,921 258,142
+Fee and commission expense (12,746) (15,673)
+Net fee income 268,175 242,469
+Net gains on financial instruments and other income 5 17,805 12,017
+Total net income 325,700 291,301
+Administrative expenses 4 (213,834) (183,484)
+Profit before tax 111,866 107,817
+Tax 6 (a) (27,286) (28,015)
+Profit after tax 84,580 79,802
+
+Schroders'
+
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 16
+Statement of comprehensive income
+for the year ended 31 December 2025
+2025 2024
+
+; Notes . £'000 £'000
+Profit for the year — 84,580 79,802
+Items that may be reclassified to the income statement:
+Net gains on financial assets at fair value through
+other comprehensive income 55 393
+Items reclassified to the income statement
+Net realised loss on disposal of debt securities classified as
+fair value through other comprehensive income (6) (9)
+Other comprehensive income for the year 5 49 384
+Total comprehensive income for the year 84,629 80,186
+
+All the Company's revenues derive from continuing operations.
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 17
+
+Statement of financial position
+
+At year ended 31 December 2025
+
+2025 2024
+Note £'000 £'000
+Assets
+Loans and advances to banks 8 2,935,361 2,723,942
+Other financial assets 11 1,046,693 977,035
+Loans and advances to customers 9 212,217 201,141
+Trade and other receivables 1,520 1,503
+Prepayments and accrued income 86,310 70,329
+Property, plant and equipment 10 94 79
+Investments in subsidiaries 12 2,248 37,232
+Deferred tax -7 4,148 4,020
+Goodwill and intangible assets 14 129,282 99,799
+Total assets 4,417,873 4,115,080
+Liabilities
+Deposits by banks 15 37,342 34,520
+Customer accounts 16 3,865,026 3,604,438
+Financial liabilities and derivative contracts 13 1,289 3,708
+Trade and other payables 17 18,463 7,991
+Corporation tax 30,036 28,460
+Accruals and deferred income 87,681 68,948
+Total liabilities 4,039,837 3,748,065
+Net assets 378,036 367,015
+Total equity 378,036 367,015
+
+The notes on pages 20 to 67 form an integral part of the financial statements.
+
+The financial statements on pages 15 to 67 were approved by the Board of Directors on 10 March 2026 and were
+signed on its behalf by:
+
+Tim McCann
+
+Director
+
+Schroder & Co. Limited
+Registered in England and Wales
+Registered number 02280926
+
+Schroders;
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 18
+Statement of changes in equity
+for the year ended 31 December 2025
+Share Profit and Total
+capital loss reserve equity
+£'000 £'000 £'000
+At 1 January 2024 169,500 133,437 302,937
+Profit for the financial year - 79,802 79,802
+Net gains on financial assets at fair value through . 384 384
+other comprehensive income
+Total comprehensive income for 2024 - 80,186 80,186
+Tax in respect of share schemes - 28 28
+Increase in share capital 31,000 - 31,000
+Dividends paid - (47,136) (47,136)
+At 31 December 2024 200,500 166,515 367,015
+Profit for the financial year - 84,580 84,580
+Net gains on financial assets at fair value through
+So - 49 49
+other comprehensive income
+Total comprehensive income for 2025 - 84,629 84,629
+Tax in respect of share schemes - 292 292
+Dividends paid - (73,900) (73,900)
+At 31 December 2025 200,500 177,536 378,036
+
+The 2024 comparatives have been re-presented by combining retained earnings and the fair value reserve to
+
+present the aggregate as profit and loss reserve.
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 19
+
+Cash flow statement
+
+for the year ended 31 December 2025
+
+2025 2024
+Note £'000 £'000
+Net cash generated from operating activities 23 322,668 793,135
+Investing activities
+Purchase of software 14 (2,123) (1,669)
+Purchase of property, plant and equipment 10 (32) oo
+Net purchase of debt and other fixed income securities (62,518) (274,941)
+Acquisition of subsidiary - (33,251)
+Dividends received 5, 18 6,000 -
+Net cash used in investing activities (58,673) (309,861)
+Financing activities
+Increase in share capital 19 - 31,000
+Dividends paid 18 (73,900) (47,136)
+Net cash used in financing activities (73,900) (16,136)
+Net increase in cash and cash equivalents 190,095 467,138
+Cash and cash equivalents at beginning of year 2,577,524 2,110,386
+Effect of exchange rate changes on cash and cash equivalents (13,679) -
+Cash and cash equivalents at end of year 8 2,753,940 2,577,524
+
+Net cash generated from operating activities includes interest income received of £134,557,000 (2024:
+£131,811,000) and interest paid of £145,866,000 (2024: £185,968,000).
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 20
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+1. General information
+
+The Company provides investment management, wealth planning and specialist banking services primarily for
+private clients and charities. The Company is an authorised institution under the Financial Services and Markets
+Act 2000. The Company is authorised by the Prudential Regulation Authority and regulated by the Financial
+Conduct Authority and the Prudential Regulation Authority.
+
+The Company’s immediate parent undertaking is Schroder Wealth Holdings Limited, which is registered and
+incorporated in England. The Company's ultimate parent company and ultimate controlling party is Schroders plc,
+which is a public limited liability company and is incorporated and domiciled in the UK. The address of its registered
+office is as follows:
+
+1 London Wall Place
+London
+EC2Y SAU
+
+2. Summary of accounting policies
+
+The Company has taken advantage of the exception in IAS 1 ‘Presentation of Accounts’ to present its statement of
+financial position on a liquidity basis as it believes this format to be more relevant than separating current and
+non-current assets and liabilities.
+
+(a) Basis of preparation
+
+The accounts are prepared in accordance with UK-adopted international accounting standards. The Company has
+taken advantage of the exemption not to prepare consolidated accounts, provided by Section 400 of the
+Companies Act 2006, as the Company is included in the consolidated accounts of a larger UK group.
+
+The financial information presented within these financial statements has been prepared on the going concern
+basis. In making an assessment on going concern, the Directors have considered a wide range of information
+relating to present and future conditions, including future capital requirements, prediction of profitability and
+cashflows. These assessments showed the Company has sufficient capital and liquidity to support future business
+requirements and adequate resources to continue as a going concern for at least 12 months following the approval
+of the financial staternents.
+
+The Company's principal accounting policies have been consistently applied. Management is required to exercise
+its judgement in the process of applying the Company's accounting policies. Any areas involving a higher degree
+of judgement or complexity, or areas where assumptions and estimates are significant to the accounts, are
+disclosed within note 3. Where there is a principal accounting policy relevant to a note, it is disclosed in that note,
+otherwise they are disclosed below.
+
+Climate risks have been considered in the preparation of these financial statements where relevant. The principal
+areas of consideration include the measurement of financial assets and impairment assessments.
+
+Financial assets measured at fair value are principally valued using traded prices or market observable inputs that
+incorporate potential climate risks where appropriate. The valuation of some financial instruments involves a
+greater level of judgement or estimation. In these scenarios climate risks are incorporated where relevant in the
+relevant assumptions, such as cash flow forecasts. Where financial assets are carried at amortised cost, climate
+risks are considered as part of the credit risk assessments.
+
+Impairment assessments relating to goodwill and other intangible assets depend on value in use and discounted
+cash flow models. These valuations include climate risks in the relevant assumptions where appropriate. Changes
+in these climate related assumptions would not give rise to a material impact to the financial statements.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 21
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+2. Summary of accounting policies (continued)
+
+(b) Future accounting developments
+
+The Group did not implement the requirements of any standards or interpretations that were in issue but were
+not required to be adopted by the Group at the year-end date. No standards or interpretations have been issued
+that are expected to have a material impact on the consolidated financial statements.
+
+(c) Net interest income
+
+Interest receivable on the Company's activities comprises interest receivable on debt securities and other fixed
+income securities, loans, advances and deposits placed, and is recognised using the effective interest rate. Interest
+expense on banking activities comprises interest paid on deposits taken and is recognised using the effective
+interest rate. For assets and liabilities measured at fair value, interest income and expense are calculated using a
+time apportioned basis.
+
+(d) Dividends receivable
+Dividends are recognised when the shareholders’ right to receive the payment is established.
+
+(e) Fees and commissions
+
+Asset management fees, investment advisory fees, ad hoc advisory fees, custody fees, commitment fees,
+arrangement fees and guarantor fees are recognised over time as the service is provided and it is highly probable
+that the fee will be collected. Asset management fees, investment advisory fees and custody fees are generated
+through investment management agreements and are generally based on an agreed percentage of the valuation
+of AUM.
+
+Wealth management transaction and loan-related fees, together with fees from wealth planning are recognised
+at a point in time when the right to the fee is established, the service has been provided and it is highly probable
+that the fee will be collected. Fees and commissions payable are recognised over time as the service is received
+and a fee becomes payable.
+
+(f) Foreign currency translation
+The functional and presentational currency of the Company is pounds sterling because that is the currency of the
+primary economic environment in which the Company operates. -
+
+Monetary foreign currency assets and liabilities are translated at the rates of exchange ruling at the year-end date.
+Any exchange differences arising are taken to the income statement. Non-monetary items that are measured in
+terms of historical cost in a foreign currency are not retranslated.
+
+(g) Dividends payable
+Final dividends payable are recognised when the dividend is approved by the shareholder. Interim dividends
+payable are recognised when the dividend is paid.
+
+(h) Trade and other receivables
+
+Trade and other receivables are recorded initially at fair value and subsequently at amortised cost, after the
+deduction of provisions for any impairment. As a result of their short-term nature, the fair value of trade and other
+receivables held at amortised cost approximates their carrying value.
+
+(i) Prepayments and accrued income
+
+Accrued income represents unbilled revenue and it is not dependant on future performance. Prepayments arise
+where the Company pays cash in advance for services. As the service is provided, the prepayment is reduced and
+the administrative expense recognised in the income statement.
+
+Prepayments and accrued income include accrued interest of £13,831,000 (2024: £17,481 ,000).
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 22
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+3. Estimates, judgements and assumptions
+Judgements
+
+Judgements used in preparing the accounts are periodically evaluated and are based on historical experience and
+other factors, including expectations of future events that are believed to be reasonable. Changes in these
+judgements would not give rise to a material impact to the financial statements.
+
+Estimates and assumptions
+
+The estimates and assumptions that have a significant effect on the carrying amounts of assets and liabilities are
+discussed below. The changes in these estimates would not give rise to a material impact to the financial
+statements.
+
+Impairment of goodwill and acquired intangibles
+
+The Company determines the fair value of acquired intangible assets based on estimated profits, taking account
+of synergies, derived from contractual relationships that existed at the acquisition date. This assessment involves
+judgements and assumptions relating to potential future revenues, appropriate discount rates and the expected
+duration of client relationships. The difference between the fair value of the consideration and the value of the
+identifiable assets and liabilities acquired, including intangible assets, is accounted for as goodwill.
+
+At each reporting date, an assessment is made as to whether there is any indication that goodwill or an acquired
+intangible asset may be impaired. If any indication exists and the carrying value exceeds the estimated recoverable
+amount at that time, the assets are written down to their recoverable amount.
+
+The recoverable amount of goodwill is determined using a discounted cash flow model, details of which are
+provided in note 14. Goodwill acquired in a business combination is allocated to the cash generating unit (CGU)
+that is expected to benefit from that business combination. For all acquisitions where the acquired business is fully
+integrated into the Company, it is considered that there is only one CGU, being the Company.
+
+Impairment of financial assets
+
+The Company applied an expected credit loss model in accordance with IFRS 9 for the calculation of impairment.
+The estimates and judgements used in this model are explained in note 13 (a).
+
+The Company monitors its loans on a daily basis and exercises judgement periodically in determining whether a
+loan has defaulted. Factors considered in determining whether a default has occurred are described in more detail
+within the Risk Management section of note 13 of this report. This monitoring includes, amongst other steps,
+assessing the financial condition of the borrower and the value of the loan compared to the collateral pledged by
+the borrower.
+
+Fair value measurements
+
+The Company holds financial instruments that are measured at fair value. The fair value of financial instruments
+may require some estimation or may be derived from readily available sources. For investments that are actively
+traded in financial markets, fair value is determined by reference to official quoted market prices. For investments
+that are not actively traded, fair value is determined by using quoted prices from third parties such as brokers,
+market makers and pricing agencies.
+
+Financial assets that have no quoted price principally consist of investments in derivatives and loans and advances
+to customers. The determination of fair value for these instruments requires significant estimation, particularly in
+determining whether changes in fair value have occurred since the last formal valuation.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 23
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+3. Estimates, judgements and assumptions (continued)
+
+Derivative contracts are valued on prices provided by market counterparties and are verified by a mathematical
+calculation based on appropriate valuation techniques undertaken by the Company. The fair value of loans and
+advances to customers is determined by using appropriate valuation techniques such as net present value
+techniques using projected cash flows and suitable discount rates. Further detail is provided in note 13.
+
+4. Administrative expenses
+
+2025 2024
+
+£'000 £'000
+Employee costs
+Salaries, wages and share-based payments 92,816 78,691
+Social security costs 13,084 9,626
+Pension costs 6,436 5,967
+Total employee costs 112,336 94,284
+Depreciation of property, plant and equipment 17 15
+Amortisation of intangibles and software 6,408 4,279
+Impairment loss on Whitley Asset Management investment 4,628 -
+Fees payable for the audit of the Company 203 194
+Fees payable to the auditor for other assurance services 203 194
+Other administrative expenses 90,039 ‘84,518
+Administrative expenses 213,834 183,484
+
+Administrative expenses are accounted for on an accruals basis.
+The monthly average number of employees employed by the Company in the year was 501 (2024: 488).
+
+The Company makes deferred cash awards to key employees under the Deferred Award Plan in the form of a
+notional investment in funds operated by the Group. Such awards do not constitute share-based payments, but
+are accounted for in accordance with IAS 19 (Amended). These awards are charged to ‘Administrative expenses’
+within the income statement over the performance period and the vesting period of the awards. Awards that lapse
+are credited to the income statement, again within ‘Administrative expenses’, in the year in which they lapse.
+
+Other administrative expenses also include £78, 133,000 (2024: £72,883,000) in relation to related parties (see note
+24).
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 24
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+5. Net gains on financial instruments and other income
+
+Financial assets classified as fair value through other comprehensive income are assessed for impairment under
+an expected loss model (see note 13 (a)). Changes in the estimate of expected losses are recognised in the income
+statement rather than in other comprehensive income. This classification is typically selected when the investment
+is expected to be held for the long-term but not necessarily to maturity. Unrealised gains and losses on these
+investments are recorded in other comprehensive income except for impairment and foreign exchange gains or
+losses which are recognised in the income statement. Cumulative gains and losses recorded in other
+comprehensive income are transferred to the income statement when the investment is derecognised. The profit
+and loss reserve in the statement of changes in equity includes the fair value reserve, which represents the
+difference between the cost and the fair value of financial assets that are classified as fair value through other
+comprehensive income. This classification applies to certain debt securities.
+
+A portion of the Company's financial instruments that are measured at fair value are classified as financial
+instruments at fair value through profit and loss. Net gains and losses on financial instruments at fair value
+through profit or loss principally comprise market returns on investments in equities, and gains and losses on
+derivatives (which mainly arise from hedging activities).
+
+Other income includes gains and losses on foreign exchange.
+
+A dividend of £6,000,000 was received during the year fram Whitley Asset Management Ltd (2024: Enil).
+
+2025
+Other
+Income —_ comprehensive
+statement income Total
+£'000 £'000 £'000
+Net gains on financial assets at fair value through
+other comprehensive income
+- Net gains arising from fair value movements - 55 55
+- Net realised loss on disposal 6 (6) -
+Net increase in impairment of financial assets 1 - 1
+Net gains on foreign exchange 11,798 - 11,798
+Dividend income 6,000 - 6,000
+Net gains on financial instruments and other income 17,805 49 17,854
+
+Schroders.
+Schroder & Co. Limited
+Annual Report and Accounts 2025 25
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+5. Net gains on financial instruments and other income (continued)
+
+2024
+Other
+Income comprehensive
+statement income Total
+£'000 £'000 £'000
+Net gains on financial assets at fair value through
+other comprehensive income
+- Net gains arising from fair value movements - 393 393
+~- Net realised loss on disposal 9 (9) -
+Net increase in impairment of financial assets (112) - (112)
+Net gains on foreign exchange 12,120 - 12,120
+Net gains on financial instruments and other income 12,017 384 12,401
+
+6. Tax
+
+The Company is based in the UK and pays taxes according to the rates applicable in the jurisdictions in which it
+operates. Most taxes are recorded in the income statement and relate to taxes payable for the reporting period
+(current tax). The charge also includes benefits and charges relating to when income or expenses are recognised
+in a different period for tax and accounting purposes or when there are specific treatments applicable relating to
+items such as business combinations (deferred tax ~ see note 7). Some current and deferred taxes are recorded
+directly to equity where the tax arises from changes in the intrinsic value of employee share awards or through
+other comprehensive income.
+
+In December 2021, the Organisation for Economic Co-operation and Development (OECD) issued model rules for
+a new global minimum tax frarnework (Pillar Two). This aims to address base erosion and profit shifting by
+introducing a global minimum tax rate (15%) and to ensure fair taxation for entities which are part of a
+multinational group. This company is part of a group that is in scope and the parent has performed an impact
+assessment on the Group as a whole.
+
+For the current reporting period, UK companies of the Group are expected to meet the criteria for the Pillar 2
+transitional “safe harbour’ as set out in the OECD guidance and as enacted in UK legislation.
+
+As aresult of relying on the safe harbour, no top-up tax is expected to arise on the Company in the relevant period.
+The Group continues to monitor developments in the implementation of Pillar 2 rules and will update its approach
+in line with future legislative changes and the expiry of the safe harbour transitional period.
+
+Schroders
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 26
+Notes to the financial statements
+for the year ended 31 December 2025
+6. Tax (continued)
+(a) Analysis of charge in year
+Major components of the income tax charge for the years ended 31 December 2025 and 31 December 2024:
+2025 2024
+£'000 £'000
+Current tax
+Current tax charge 30,233 28,451
+Adjustment in respect of prior years - UK tax (103) 198
+Total current tax 30,130 28,649
+Deferred tax
+Origination and reversal of temporary differences (2,847) (329)
+Adjustments in respect of prior years 3 (305)
+Total deferred tax (2,844) (634)
+Total tax charge for the year 27,286 28,015
+(b) Analysis of credit to equity
+2025 2024
+£'000 £'000
+Current income tax (34) (40)
+Deferred income tax (258) 12
+Total credit reported in equity (292) (28)
+
+Schroders;
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 27
+Notes to the financial statements
+for the year ended 31 December 2025
+6. Tax (continued)
+(c) Analysis of charge reported in other comprehensive
+income
+2025 2024
+£'000 £'000
+Current tax credit on items through other comprehensive income (8) -
+Deferred tax charge on items through other comprehensive income 8 -
+
+Total credit reported in equity
+
+(d) Factors affecting the tax charge for the year
+
+The UK standard rate of corporation tax is 25% (2024: 25%). The tax charge for the year is lower (2024: higher) than
+
+a charge based on the UK rate.
+
+The differences are explained below:
+
+2025 2024
+£'000 £'000
+Profit before tax 111,866 107,817
+Profit before tax multiplied by the UK effective corporation tax
+rate of 25% (2024: 25%) 27,966 26,954
+Effects of:
+Non-taxable income net of non-deductible expenses (581) 1,168
+Adjustments in respect of prior years (99) (107)
+Total income tax charge 27,286 28,015
+
+Schroders!
+Schroder & Co. Limited
+Annual Report and Accounts 2025 28
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+7. Deferred tax
+
+Deferred tax assets and liabilities represent amounts of tax that will become recoverable and payable in future
+accounting periods. They arise as a result of temporary differences, where the time at which profits and losses
+are recognised for tax purposes differs from the time at which the relevant transaction is recorded in the accounts.
+A deferred tax asset represents a tax reduction that is expected to arise in a future period based on past
+transactions. A deferred tax liability represents taxes that will become payable in a future period as a result of
+current or prior year transactions.
+
+Deferred tax assets and liabilities are measured at the tax rates that are expected to apply to the period when the
+asset is realised or the liability is settled, based on tax rates (and tax laws) that have been enacted or substantively
+
+enacted at the year end date.
+
+The movement on the deferred tax asset account is as shown below:
+
+2025 2024
+£000 £'000
+At 1 January 4,020 3,398
+Income staternent credit ; 2,844 634
+Business combinations (2,966) -
+Charge to equity 258 (12)
+Charged to other comprehensive income (8) -
+At 31 December 4,148 4,020
+Accelerated Deferred Acquired Other
+tax employee intangible Trading temporary
+depreciation awards assets losses differences Total
+£'000 £'000 £'000 £'000 £'000 £'000
+At 1 January 2025 249 6,357 (2,609) - 23 4,020
+(Charge)/ credit to income (44) 2,020 1,143 (275) . 2.844
+statement
+Charge to equity - 258 - . . 258
+Charged to other comprehensive
+income - - ” - (8) (8)
+Business combinations . - 163 (3,575) 446 - (2,966) .
+At 31 December 2025 205 8,798 (5,041) 171 15 4,148
+At 1 January 2024 346 6,304 (3,282) - 30 3,398
+(Chargey creck to income (97) 58 673 ; ; 634
+Charge to equity - (5) - - (7) (12)
+At 31 December 2024 249 6,357 (2,609) - 23 4,020
+
+Schroders;
+Schroder & Co. Limited
+Annual Report and Accounts 2025 29
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+8. Loans and advances to banks
+
+2025 2024
+
+£'000 £'000
+Bank of England reserve account 2,110,439 1,392,623
+Reverse repurchase agreements 561,003 1,071,559
+Interbank deposits with maturity of three months or less 82,448 110,202
+Margin accounts 50 3,140
+Cash and cash equivalents 2,753,940 2,977,524
+Interbank deposits with maturity of more than three months 181,421 146,418
+Total loans and advances to banks 2,935,361 2,723,942
+
+A maturity analysis of loans and advances to banks is disclosed in note 13.
+
+The Bank of England reserve account is interest bearing and linked to the Bank of England base rate. It is envisaged
+that the Company will continue to make material placements to this account for the foreseeable future.
+
+Margin account balances arise as all of the Company's derivative counterparty relationships operate under an ISDA
+agreement that includes a Credit Support Annex (CSA) capturing margining requirements.
+
+The expected credit losses for loans and advances to banks are disclosed in note 13 (a).
+
+The Directors consider that the carrying amount of loans and advances to banks, which are all held at amortised
+cost, is approximately equal to their fair value.
+
+Included within loans and advances to banks are components of cash and cash equivalents as follows. Cash
+comprises cash at hand and on-demand deposits. Cash equivalents are short term, highly liquid investments that
+are readily convertible to known amounts of cash, are subject to insignificant risks of changes in value, and are
+held for the purpose of meeting short-term cash commitments rather than for investment or other purposes.
+
+The 2024 comparatives have been re-presented to reclassify an amount between interbank deposits with maturity
+of three months or less and reverse repurchase agreements.
+
+Reverse repurchase agreements include £nil (2024: Enil), interbank deposits include £3,306,000 (2024: £1,455,000)
+and margin accounts include £50,000 (2024: £50,000) placed with other banks in the Group.
+
+Schroders:
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 30
+Notes to the financial statements
+for the year ended 31 December 2025
+9. Loans and advances to customers
+2025 2024
+£'000 £'000
+Overdrafts 696 1,577
+~ Term loans 141,372 138,909
+Mortgages 70,149 60,655
+212,217 201,141
+
+Loans and advances to customers are secured. A maturity analysis is disclosed in note 13.
+
+Loans and advances to customers are initially recognised at fair value and are subsequently measured at
+amortised cost, being the measurement on initial recognition less principal repayments, plus or minus the
+cumulative amortisation. The carrying amount of loans and advances to customers held at amortised cost is
+
+approximately equal to their fair value.
+
+The expected credit losses for loans and advances to customers, under IFRS 9, are disclosed in note 13 (a).
+
+Schroders’
+Schroder & Co. Limited
+Annual Report and Accounts 2025 31
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+10. Property, plant and equipment
+
+2025 2024
+Office Office
+equipment equipment
+Fixtures and and Fixtures and and
+Fittings computers Total Fittings computers Total
+£'000 £'000 = £'000 £'000 £'000_ _—«£'000
+Cost
+At 1 January 128 20 148 128 20 148
+Additions 20 12 32 - - -
+At 31 December 148 32 180 128 20 148
+Accumulated depreciation
+At 1 January (49) (20) (69) (36) (16) (52)
+Charge in year (14) (3) (17) (13) (4) (17)
+At 31 December (63) (23) (86) (49) (20) (69)
+Net book value
+as at 31 December 85 9 94 79 - 79
+
+Property, plant and equipment which comprises fixtures and fittings and office equipment and computers, is
+stated at historic purchase cost less accumulated depreciation. Cost includes the original purchase price of the
+asset and the costs attributable to bringing the asset to its working condition for its intended use. Depreciation is
+provided on the depreciable amount on a straight fine basis over their useful lives of three to five years. The
+depreciable amount is the gross carrying amount, less the estimated residual value at the end of its economic life.
+
+Depreciation rates and methods as well as the residual values underlying the calculation of depreciation of iterns
+of property, plant and equipment are kept under review to take account of any change in circumstances.
+Depreciation of property, plant and equipment is recorded in the income statement as an administrative expense.
+
+Schroders’
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 32
+Notes to the financial statements
+for the year ended 31 December 2025
+11, Other financial assets
+2025
+Fair value
+through other Fair
+comprehensive Amortised value through
+income cost profit or loss Total
+£'000 £'000 £'000 £000
+Bank and building society
+certificates of deposit - 249,845 - 249,845
+Floating rate notes 482,805 - - 482,805
+Government bonds 312,713 - - 312,713
+Derivative contracts : - 1,330 1,330
+795,518 249,845 1,330 1,046,693
+2024
+Fair value
+through other Fair
+‘ comprehensive Amortised value through
+income cost profit or loss Total
+£'000 £'000 £'000 £'000
+Bank and building society
+certificates of deposit - 189,881 - 189,881
+Floating rate notes 344,208 - - 344,208
+Government bonds 438,991 - - 438,991
+Derivative contracts - - 3,955 3,955
+783,199 189,881 3,955 977,035
+
+Bank and building society certificates of deposit and derivative contracts are unlisted. Floating rate notes and
+government bonds are listed. The carrying value amounts of financial assets, where recorded at amortised cost
+are a reasonable approximation of fair value.
+
+Schroders;
+Schroder & Co. Limited
+Annual Report and Accounts 2025 33
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+11. Other financial assets (continued)
+
+Classification and measurement
+
+The Company initially records all financial assets at fair value, which is the cost of acquiring the asset or, in the
+case of loans, the amount loaned to customers (see note 9). The Company holds each financial asset either at fair
+value (‘fair value through profit or loss’ or ‘fair value through other comprehensive income’) or at amortised cost.
+Fair value is the amount for which an asset could be exchanged, or a liability transferred, between knowledgeable,
+willing parties in an arm’s length transaction. Amortised cost is the amount determined based on moving the initial
+amount recognised for the financial instrument to the maturity value on a systematic basis using the effective
+interest rate, taking account of repayment dates and initial premiums or discounts.
+
+(a) Financial assets at amortised cost
+
+The Company's financial assets are measured at amortised cost when their contractual cash flows represent solely
+payments of principal and interest and they are held within a business model designed to collect contractual cash
+flows. This measurement classification typically applies to the Company's loans and advances, trade and other
+receivables, accrued income and certain debt securities. The carrying value of financial assets measured at
+amortised cost is adjusted for impairments under the expected credit loss model (see note 13), where impairment
+losses are recorded if there is an expectation of credit losses, even in the absence of a default event.
+
+(b) Financial assets at fair value through other comprehensive income
+
+Financial assets are held at fair value through other comprehensive income when their contractual cash flows
+represent solely payments of principal and interest and they are held within a business model whose objective is
+achieved by both collecting contractual cash flows and selling financial assets. This classification applies to certain
+debt securities. Impairment is also recognised for these debt securities (see note 13). The carrying value of these
+financial assets is not adjusted, but any expected credit losses are recognised in the income statement rather than
+in other comprehensive income.
+
+(c} Financial assets at fair value through profit ar loss
+
+All other financial assets are held at fair value through profit or loss and principally comprise investments in
+derivatives (which mainly arise from hedging activities). These derivatives are held as economic hedges to manage
+risk exposures.
+
+Schroders.
+Schroder & Co. Limited
+Annual Report and Accounts 2025 34
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+12. Related undertakings
+
+The Group operates globally which results in the Company having a corporate structure consisting of a number of
+related undertakings, comprising of subsidiaries. A full list of these undertakings, the country of incorporation
+(which in all cases is the principal place of business) and the ownership of each share class, as at 31 December
+2025, is disclosed below.
+
+Shares in subsidiary undertakings
+
+The Company's subsidiary undertakings, all held directly, are as follows:
+
+Proportion
+. Registered Country of Type of of nominal
+Name (activity) office address incorporation shares capital
+Cazenove New Europe (CFM1) 1 London Wall Place, London, . 5
+Limited (non-trading) EC2Y SAU, England England = Ordinary 100%
+Limited New surope we 1 London Wall Place, London, England Ordina 100%
+. EC2Y SAU, England g ry
+(non-trading)
+Cazenove New Europe Staff 1 London Wall Place, London, . 5
+Interest Limited (non-trading) EC2Y SAU, England England Ordinary 100%
+. 1 London Wall Place, London
+. . . . ‘ ' H 9
+Sand Aire Limited (non-trading) EC2Y SAU, England England Ordinary 100%
+Schroder & Co Nominees Limited 1 London Wall Place, London .
+t ' 0,
+(nominee company) EC2Y 5AU, England England == Ordinary 100%
+Whitley Asset Management 1 London Wall Place, London, .
+1009
+Limited (trading) EC2Y SAU, England England = Ordinary 00%
+2025 2024
+Investments in subsidiaries £'000 £'000
+Balance at 1 January 37,232 13
+Acquisition of Whitley Asset Management - 37,219
+Goodwill (19,472)
+Intangible (14,295)
+Deferred tax liability 3,411
+Impairment loss on Whitley Asset Management (4,628) -
+Balance at 31 December 2,248 37,232
+
+Schroders;
+Schroder & Co. Limited
+Annual Report and Accounts 2025 35
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+12. Related undertakings (continued)
+
+Shares in Group undertakings are valued at cost less any diminution for impairment in value. Shares in Group
+undertakings are tested annually to determine whether they have suffered any impairment. Such investments are
+judged to be impaired when there is objective evidence that the carrying amount of the asset exceeds its
+recoverable amount.
+
+During the year, Whitley Asset Management was transferred to the Company, and accordingly, in accordance with
+hive-up accounting, the Company recorded the corresponding decrease of the investment in subsidiary for the
+underlying assets and liabilities of Whitley Asset Management, and therefore the associated goodwill, intangible
+and deferred tax balances previously held by the Group. The hive-up took place at book value and there was no
+gain or loss recognised which is the Group’s approach to account for intragroup transactions.
+
+In December 2025, the Company received a dividend of £6 million from Whitley Asset Management Limited.
+Subsequently, the Company revalued its investment in Whitley Asset Management Limited to the net asset value,
+recognising an impairment of £4.6 million. ~
+
+13. Risk review
+
+(a) Risk management
+
+The Company is part of the Group's Wealth Management business. The CEO of Wealth Management has
+established a Wealth Management Executive Committee. In addition, the Chief Executive of the Company has
+established a Management Committee, an Asset Liability Management and Credit Committee and a Risk
+Committee. These committees, together referred to as the Schroder & Co. Risk Committees, monitor the
+Campany’s risk management.
+
+The Board has established the Wealth Management Audit and Risk Committee (the “Committee”) comprised of the
+non-executive Directors of the Company. This Committee is responsible for overseeing, on behalf of the Board,
+the financial reporting, risk management and internal controls of the Company and receiving relevant reports on
+its operating subsidiaries and the other banking entities within the Wealth Management segment of the Schroders
+Group.
+
+The Company is involved in providing investment management, wealth planning and specialist banking services,
+primarily to private clients and charities. In carrying out this business it transacts as agent and principal in financial
+assets and liabilities (including derivatives) in order to meet customer facilitation requirements. The Company's
+policy is to hedge, as appropriate and to the extent possible, exchange rate and interest rate risk on its principal
+and customer facilitation positions using foreign exchange and interest rate contracts. This hedging of equal and
+opposite risks seeks to mitigate market risk, but does not eliminate the possibility of credit risk.
+
+Operational, market, liquidity and credit risk exposures exist within the business. The effectiveness of the
+Company's risk management process is, therefore, critical to its soundness and profitability and considerable
+resources are dedicated to this area. Risk management is the direct responsibility of the Company's senior
+management. The Group Risk and Compliance functions are responsible for monitoring the overall risk
+environment. The Company has established a control environment that ensures risks are reviewed regularly and
+that all risk controls operating throughout the Company are in accordance with regulatory requirements. In
+addition, an independent assessment of the risk management process and the fundamental risk assumptions is
+provided by Group Internal Audit.
+
+The majority of our climate-related risk lies in the assets we manage on behalf of our clients. Climate risks are
+thematic across our principal risks and are considered in the preparation of these financial statements where
+relevant. The principal areas of consideration include the measurement of financial assets and impairment
+assessments. Changes in respect to climate related risk assumptions are not expected to result in a material
+change to the financial statements.
+
+Schroders.
+Schroder & Co. Limited
+Annual Report and Accounts 2025 36
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+(a) Risk management (continued)
+
+Capital risk
+
+The Company's capital corresponds to its shareholder's equity. The Company is regulated by the PRA and the FCA
+and is subject to the UK Capital Requirement Regulation and the PRA Rulebook for Capital Requirement Regulation
+firms. One of the requirements is that capital resources must be in excess of its capital requirement at all times.
+Management monitors the Company's capital and capital requirements on an ongoing basis, taking into account
+the effects of changes in market conditions, fluctuations in asset, liability and off-balance sheet values, among
+other factors. Maintaining a strong capital base is important to the Company's business and is a core part of the
+Company's strategy. The Company maintains a prudent level of capital, including a significant buffer over the
+minimum regulatory capital requirement, which enables it to conduct its business. The Company was in
+compliance with the capital requirements throughout the year ended 31 December 2025 without exception.
+
+The Company's Board supports the Chief Financial Officer in exercising responsibility for the management of the
+Company's capital. The Company performs a thorough assessment of the adequacy of its capital through the
+Internal Capital Adequacy Assessment Process (ICAAP).
+
+The Company has complied with regulation 2 of the Capital Requirements (Country-by-Country Reporting)
+Regulations 2013 by publishing the information in relation to the year ended 31 December 2024 on the Schroders
+Group website by 31 December 2025. This is available at https://www.schroders.com/en/about-us/corporate-
+responsibility/our-economic-contribution/. The Company will publish the information in relation to the year ended
+31 December 2025 on the Schroders Group website on or before 31 December 2026. This will be available at
+
+https://www.schroders.com/en/about-us/corporate-responsibility/our-economic-contribution/.
+
+Market risk
+The Company, in association with Group Risk, has a risk framework in place to identify, analyse, monitor and
+control market risk arising from the Company's treasury activities on a consistent and timely basis.
+
+Market risk-taking activities are limited to those necessary to support the treasury activities of the Company. These
+activities are primarily to facilitate client requirements.
+
+The principal market risks arising are interest rate risk and foreign exchange rate risk. The Company uses
+sensitivity-based and stress-based models for monitoring interest rate risk. This involves assessing the impact on
+the Company's net worth against a prescribed basis point rise in interest rates with severe scenarios for the stress
+tests. Market falls may be exacerbated by geo-political risks for exarnple in response to deteriorating international
+relations due to the Ukraine and Russia war or instability in the Middle East.
+
+For foreign exchange risk the Company has adopted an approach which monitors the greater of the overall net
+long or short risk factored exposure.
+
+Interest rate and foreign exchange risk exposure is calculated daily for each currency and in aggregate and
+distributed to senior management through the production of a daily risk dashboard.
+
+Group Risk performs independent oversight of the Company's market risk management. Limits are proposed by
+the risk function, approved by the Asset Liability Management and Credit Committee and monitored against
+policies.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 37
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+
+(a) Risk management (continued)
+
+Liquidity risk
+
+The Liquidity Risk Management framework includes several departments, boards and committees of the Company.
+Responsibility for managing the Company's liquidity day-to-day, within the liquidity risk tolerance and regulatory
+requirements, rests with the Chief Executive of the Company. This responsibility is delegated to the Head of
+Treasury, with oversight from the Global Head of Banking, Lending and Trading. The Chief Financial Officer is
+responsible for maintaining the Company's liquidity risk framework and, under the PRA and FCA's Senior Managers
+& Certification Regime, performs the prescribed responsibility for the management, allocation and maintenance
+of capital, funding and liquidity. The Company performs a thorough assessment of the adequacy of its liquidity
+through the Internal Liquidity Adequacy Assessment Process (ILAAP).
+
+Group Risk performs independent oversight of the Company's liquidity risk management. Limits are proposed by
+the risk function, approved by the Asset Liability Management and Credit Committee and monitored against
+policies on a daily basis including the production of a daily liquidity dashboard.
+
+For maturity analysis see the tables in note 13 (b) Interest rate repricing and maturity analysis.
+
+Credit risk
+
+The Company has exposure to credit risk from its norrnal activities where the risk is that a counterparty will be
+unable to pay, in full, amounts when due. The Company carefully manages its exposure to credit risk by: approving
+lending policies that specify the type of collateral and minimum lending margins; setting limits for exposure to
+individual counterparties and sectors; and by taking security. The Company takes a conservative approach to its
+treasury investments placing them with, or purchasing debt securities issued by, UK and overseas banks and
+corporates, supranational banks and sovereigns. All treasury investments held by the Company have investment
+grade credit rating.
+
+Principal credit risks arising from the banking and treasury business are monitored under the supervision of the
+Asset Liability Management and Credit Committee. The Company's Board approves the underlying methodology
+and credit limits that are set by the Schroder & Co. Risk Committee. Credit exposures and limits are monitored to
+identify, investigate and report any breaches to Schroder & Co. Risk Committees. All new credit exposures require
+approval of the Schroder & Co. Risk Committee which also review all outstanding limits at least annually.
+
+The Company's maximum exposure to credit risk is represented by the carrying value of its loans and advances to
+banks, loans and advances to customers, trade and other receivables, and other financial assets.
+
+A breakdown of the Company's relevant financial assets by credit rating, as provided by rating agencies, are shown
+below. The relevant financial assets include the Company's loans and advances to banks and amounts disclosed
+in financial assets except for derivatives.
+
+2025 2024 2025 2024
+
+Credit rating £'000 £'000 % %
+AAA 153,617 96,916 4% 3%
+AA+ 44,545 47,826 1% 1%
+AA 9,882 12,973 0% 0%
+AA- 3,141,906 2,471,957 79% 67%
+A+ 408,002 890,514 10% 24%
+A 99,085 64,490 2% 2%
+A- 120,558 111,008 3% 3%
+Not rated 3,370 1,505 0% 0%
+3,980,965 3,697,189 100% 100%
+
+Schroders,
+Schroder & Co, Limited
+Annual Report and Accounts 2025 38
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+(a) Risk management (continued)
+
+The Company holds collateral on some short-term advances to counterparties through reverse repurchase
+agreements as part of its liquidity management. The collateral accepted included investment-grade securities that
+can be sold or repledged without default to the provider. At 31 December 2025 the fair value of collateral which
+related solely to these arrangements and could be sold or repledged was £582,110,088 (31 December 2024:
+£1,133,145,133). The reverse repurchase agreements are within the loans and advances to banks and Other
+Financial Assets balances.
+
+The loans and advances to customers split by collateral type are as follows:
+
+2025 2024
+
+Collateral type £'000 £'000
+Client portfolios 142,068 140,486
+Residential property 70,149 60,655
+212,217 201,141
+
+All financial assets are classified as performing (stage 1) in the three-stage model under IFRS 9. All customer credit
+requests are presented to the Schroder & Co. Credit Committee and counterparty exposures are monitored daily
+against limits. Loans, overdrafts and advances to customers are secured on a range of assets including residential
+real estate, cash and client portfolios. The Company does not usually provide loans, overdrafts and advances to
+customers on an unsecured basis. Where disposal of non-cash collateral is required, in the event of default, the
+terms and conditions relevant to the specific contract and country will apply.
+
+Portfolios capturing client investments are held as collateral and marked to market daily with positions compared
+to customers’ exposures. Credit limits are set following an assessment of the market value and lending value of
+each type of collateral, depending on the perceived risk associated with the collateral. Customers are contacted if
+these limits are breached, or if collateral is not sufficient to cover the outstanding exposure.
+
+Under IFRS 9, expected credit losses are calculated on all the Company's financial assets that are measured at
+amortised cost and all debt instruments that are measured at fair value through other comprehensive income.
+Factors considered in determining whether a default has taken place include how many days past the due date a
+payment is, deterioration in the credit quality of a counterparty, and knowledge of specific events that could
+influence a counterparty's ability to pay.
+
+For loans and advances to banks and debt securities, a default usually arises when contractual payments are 1 day
+overdue. For loans and advances to customers, a default usually arises when information is known about the
+customer that is highly likely to result in cash shortfalls. A default also occurs when any contractual payments
+(principal or interest) are 90 days or more overdue.
+
+A three-stage model is used for calculating expected credit losses which requires financial assets to be assessed
+as:
+
+~ Performing (stage 1) - Financial assets where there has been no significant increase in credit risk since original
+recognition; or
+
+- Under-performing (stage 2) - Financial assets where there has been a significant increase in credit risk since
+initial recognition, but no default; or
+
+- Non-performing (stage 3) - Financial assets that have defaulted.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 39
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+(a) Risk management (continued)
+
+For financial assets in stage 1, expected credit losses are calculated based on the credit losses that are expected
+to be incurred over the following twelve-month period. For financial assets in stage 2 and 3, expected credit losses
+are calculated based on the expected credit losses over the life of the instrument. The Company applies the
+simplified approach to calculate expected credit losses for trade and other receivables and accrued income. Under
+this approach, instruments are not categorised into three stages as expected credit losses are calculated based on
+the life of the instrument.
+
+The Company has internal processes designed to assess the credit risk profile of its financial instruments, and to
+determine the relevant stage for calculating the expected credit losses. These processes include consideration of
+internal, external, historic and forward-looking information about specific loans and securities as well as market
+data and are described in more detail within the Company's IFRS 9 policy.
+
+For financial assets held with rated counterparties (such as cash and cash equivalents, loans and advances to banks
+and debt securities), the Company calculates expected credit losses based on default information published by
+rating agencies and considers any known factors not yet reflected in this information.
+
+For loans and advances to customers, the Company calculates expected credit losses based on historical credit
+loss experience and by taking into account the approved lending rates against the various types of collateral. A
+record is kept of all information that has or could have an impact on a customer's servicing and repayment as well
+as of all loan exposures where collateral has decreased in value and/or quality. This record is used to identify stage
+2 or 3 Joans.
+
+For trade and other receivables and accrued income, the Company has established a provision matrix that
+
+incorporates the Company's historical credit loss experience, counterparty groupings and whether a receivable is
+overdue or not.
+
+Schroders)
+Sy
+
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025
+
+Notes to the financial statements
+
+40
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+
+(a) Risk management (continued)
+
+Expected credit losses for financial assets are summarised below.
+
+31 December 2025
+
+Expected credit
+losses asa
+percentage of
+
+Gross carrying Expected credit Netcarrying gross carrying
+value losses value value
+£'000 £'000 £'000 %
+
+Financial assets at
+
+amortised cost
+
+Loans and advances to banks 2,935,433 (72) 2,935,361 -
+
+Other financial assets 250,000 (155) 249,845 (0.1)
+
+Loans and advances to customers 212,228 (11) 212,217 -
+
+Trade and other receivables 1,534 (14) 1,520 (0.9)
+
+Accrued income 84,907 (13) 84,894 -
+
+Financial assets at fair value
+
+through other comprehensive
+
+income
+
+Other Financial assets 795,518 (202) 795,316 -
+4,279,620 (467) 4,279,153 -
+
+31 December 2024
+
+Expected credit
+losses asa
+percentage of
+
+Gross carrying Expected credit Net carrying gross carrying
+value losses value value
+£'000 £'000 £'000 %
+
+Financial assets at
+
+amortised cost
+
+Loans and advances to banks 2,723,990 (49) 2,723,942 -
+
+Other financial assets 190,000 (119) 189,881 (0.1)
+
+Loans and advances to customers 201,150 (10) 201,141 -
+
+Trade and other receivables 1,506 (3) 1,503 (0.2)
+
+Accrued income 68,885 (12) 68,873 -
+
+Financial assets at fair value through
+
+other comprehensive income
+
+Other Financia! assets 783,199 (396)* 782,803 (0.1)
+3,968,731 (589) 3,968,143 -
+
+* The 2024 comparatives in the table have been re-presented to include expected credit losses with respect to —
+financial assets at fair value through other comprehensive income.
+
+Schroders)
+Schroder & Co. Limited
+Annual Report and Accounts 2025 41
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+(b) Interest rate repricing and maturity analysis
+
+The tables below summarise the repricing mismatches on the Company's non-trading book. Items are allocated
+to time bands by references to the earlier of the next contractual interest rate repricing date and the maturity
+date. As noted in 13 (d) the Company does not measure its interest rate risk on this basis.
+
+Non
+31 December 2025 interest
+£'000 tyr 1-2yrs 2-Syrs >5yrs bearing Total
+Assets
+Loans and advances to banks 2,935,361 - - - - 2,935,361
+Other Financial assets 1,046,693 - - - - 1,046,693
+Loans and advances to
+customers 212,217 - - - - 212,217
+Trade and other receivables - - - - 1,520 1,520
+Prepayments and accrued
+income - - - - 86,310 86,310
+Property, plant and equipment - - - - 94 94
+Investments in subsidiaries - - - - 2,248 2,248
+Deferred tax - - - - 4,148 4,148
+Goodwill and intangible assets - - - - 129,282 129,282
+Total assets 4,194,271 - - - 223,602 4,417,873
+Non
+31 December 2025 interest
+£'000 Tyr 1-2yrs 2-5yrs >5yrs bearing Total
+Liabilities
+Deposits by banks 37,342 - - - - 37,342
+Customer accounts 3,865,026 - - - - 3,865,026
+Financial liabilities - - - - 1,289 1,289
+Trade and other payables - - - - 18,463 18,463
+Corporation tax - - - - 30,036 30,036
+Deferred tax . - * - - -
+Accruals and deferred
+income - - - - 87,681 87,681
+Equity - - - - 378,036 378,036
+Total liabilities and
+equity 3,902,368 - - - 515,505 4,417,873
+Interest rate sensitivity
+gap 291,903 - - - ” 291,903
+Cumulative gap 291,903 291,903 291,903 291,903 - 291,903
+
+Schroders'
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 42
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+(b) Interest rate repricing and maturity analysis (continued)
+
+Non
+
+31 December 2024 interest
+
+£'000 1yr 1-2yrs 2-Syrs >Syrs bearing Total
+
+Assets
+
+Loans and advances to banks 2,723,942 - - - - 2,723,942
+Other Financial assets 977,035 - - - - 977,035
+Loans and advances to - - - - - -
+customers 201,141 - - - - 201,141
+Trade and other receivables - - - - 1,503 1,503
+Prepayments and accrued
+
+income - - - - 70,329 70,329
+Property, plant and equipment - - - - 79 79
+Investments in subsidiaries - - - - 37,232 37,232
+Deferred tax - - - - 4,020 4,020
+Goodwill and intangible assets : - : - 99,799 99,799
+Total assets 3,902,117 - - - 212,962 4,115,080
+
+Non
+
+31 December 2024 interest
+
+£'000 1 yr 1-2yrs 2-5yrs >5yrs bearing Total
+Liabilities
+
+Deposits by banks 34,520 - - - - 34,520
+Customer accounts 3,604,438 - - - - 3,604,438
+Financial liabilities - - - - 3,708 3,708
+Trade and other payables - - - - 7,991 7,991
+Corporation tax - - - - 28,460 28,460
+Deferred tax - - - - - -
+Accruals and deferred
+
+income - - - - 68,948 68,948
+Equity - - - - 367,015 367,015
+Total liabilities and
+equity 3,638,958 : ; - 476,122 4,115,080
+Interest rate sensitivity
+
+gap 263,160 - - : - 263,160
+Cumulative gap 263,160 263,160 263,160 263,160 - - 263,160
+
+Schroders|
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025
+
+Notes to the financial statements
+
+43
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+
+(c) Contractual cash flow maturity analysis
+
+The tables below summarise the contractual discounted cash flow maturity of financial assets and liabilities as
+presented in the Statement of Financial Position.
+
+Non
+31 December 2025 contractual
+£‘000 1yr 1-2yrs 2-Syrs >Syrs maturity Total
+Assets
+Loans and advances to banks 2,935,361 - - - - 2,935,361
+Other Financial assets 686,480 88,117 272,096 - - 1,046,693
+Loans and advances to
+customers 45,875 57,140 106,952 2,250 - 212,217
+Trade and other receivables - - - - 1,520 1,520
+Accrued income - - - - 84,894 84,894
+Total assets 3,667,716 145,257 379,048 2,250 86,414 4,280,685
+Non
+31 December 2025 contractual
+£'000 1yr 1-2yrs 2-Syrs >5yrs maturity Total
+Liabilities
+Deposits by banks 37,342 - - - 37,342
+Customer accounts 3,865,026 - - - 3,865,026
+Financial liabilities 1,289 - - - 1,289
+Trade and other payables : - : 18,463 18,463
+Total liabilities 3,903,657 - - - 18,463 3,922,120
+
+Schroders!
+Schroder & Co. Limited
+Annual Report and Accounts 2025 44
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+
+(c) Contractual cash flow maturity analysis (continued)
+
+Non
+
+31 December 2024 contractual
+£'000 1yr 1-2yrs 2-5yrs >Syrs maturity Total
+Assets
+Loans and advances to banks 2,723,942 - - - - 2,723,942
+Other Financial assets 743,082 86,089 147,864 - - 977,035
+Loans and advances to
+customers 44,889 51,553 104,699 - - 201,141
+Trade and other receivables - - - - 1,503 1,503
+Accrued income - - - : 68,873 68,873
+Total assets ~ 3,511,913 137,642 252,563 - 70,376 3,972,494
+
+Non
+31 December 2024 contractual
+£'000 1 yr 1-2yrs 2-Syrs >Syrs maturity Total
+Liabilities
+Deposits by banks 34,520 - - - - 34,520
+Customer accounts 3,604,438 - - - - 3,604,438
+Financial liabilities 3,708 - - - - 3,708
+Trade and other payables - - - - 7,991 7,991
+Total liabilities 3,642,666 - - - 7,991 3,650,657
+
+The difference between the discounted and undiscounted cash flows for assets and liabilities accounted for at fair
+value is immaterial.
+
+Schroders,
+Schroder & Co. Limited
+Annual Report and Accounts 2025 45
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+(d) Interest rate risk
+
+Interest rate risk is the risk that the fair value or future cash flows of financial instruments will fluctuate because
+of changes in market interest rates. As referenced in note 13 (a), it is the Company's policy to hedge, as appropriate,
+interest rate risk on its client facilitation positions. The Company monitors duration risk using the following
+reporting methodologies.
+
+Outlier tests
+
+The Company performs monitoring of six interest rate outlier shock scenarios specified within the CRD V regulation
+that was transposed into UK law and includes a requirement to notify the PRA if the firm's economic value of equity
+(EVE) exceeds a 15% CET1 notification threshold. To calculate these metrics and determine the worst scenario, the
+Company discounts each net gap position using the current yield curve and then stress tests that position using
+prescribed yield curve movements for the scenarios in the table below.
+
+The Company's positions at 31 December are shown below:
+
+2025 2024
+
+£000 £'000
+Parallel shock up (5,048) (4,933)
+Parallel shock down (55) (48)
+Steepener shock (short term rates down and long term rates up) (43) (35)
+Flattener shock (short term rates up and long term rates down) (4,127) (4,195)
+Short rates shock up (upward shock of short term rates) (5,404) (5,428)
+Short rates shock down (downward shock of short term rates) (70) (57)
+Worst scenario (5,404) (5,428)
+Limit (7,500) (7,500)
+Limit % 72.05% 72.37%
+
+PV01/PV200
+
+Complementing outlier test monitoring, the Company reviews duration risk using PV methodology where each net
+gap position is discounted using the current yield curve and then re-discounted using yield curves subject to either
+a 1 (PV01) or 200 (PV200) basis point linear parallel movement. The Company's PV01/PV200 calculations are
+calibrated using the largest deviation in the present value of its cash flows from either an increase or decrease in
+interest rates. Under its current profile of exposure to interest rates where the main client portfolio investment
+account liability re-pricing duration is 1 day, higher interest rates adversely impact the present value of cash flows.
+
+The Company's position at 31 December is shown below:
+
+2025 2024
+£'000 £'000
+PVO1 (20) (19)
+PV200 (3,884) (3,761)
+
+Interest rate risk at the Company is limited due to the short-term nature of the Company's financial assets. In the
+case of changes in market interest rates, the Company can re-price 91% (2024: 93%) of interest bearing assets
+within 3 months.
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 46
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+13. Risk review (continued)
+(e) Fair values of assets and liabilities
+
+The Company's required disclosures in respect of financial instruments that are held at fair value in the statement
+of financial position are included in note 9 (financial assets). Where significant estimates and judgements are
+required in determining fair values, these are disclosed in note 3. All fair values are derived from published market
+prices or indices, where applicable.
+
+The Company may use the following derivative instruments:
+- FX spot and forward transactions;
+
+- Foreign currency, equity and interest rate options; and
+
+- Currency and interest rate swaps.
+
+With swap contracts, the Company's credit risk represents the potential cost to replace the swap contracts if
+counterparties fail to perform their obligation. This risk is monitored on an ongoing basis with reference to the
+current fair value, a proportion of the notional amount of the contracts and the liquidity of the market. To control
+the level of credit risk taken, the Company assesses counterparties using the same techniques as for its lending
+activities. Further, the Company's derivatives with counterparties operate under ISDA Master Agreements and are
+collateralised with Credit Support Annexes.
+
+Derivative contracts are included at fair value at the year-end date within ‘Financial assets’ or ‘Financial liabilities’.
+Fair value represents the amount at which a derivative could be exchanged in a transaction at the year-end date
+between willing parties. These derivatives are held as economic hedges to manage risk exposures.
+
+The following table shows the fair value of all assets and liabilities accounted for at fair value.
+
+31 December 2025
+
+£'000 Assets Liabilities
+One year One year
+or less Total or less Total
+
+Foreign exchange derivatives
+Forward foreign exchange contracts 1,330 1,330 1,289 1,289
+Interest rate derivatives
+
+Interest rate swaps held for
+non-trading purposes - - - -
+
+Derivative contracts 1,330 1,330 1,289 1,289
+
+Financial assets at fair value through
+
+other comprehensive income 795,518 795,518 - -
+796,848 796,848 1,289 1,289
+
+Schroders.
+Schroder & Co. Limited
+Annual Report and Accounts 2025 47
+
+Notes to the financial statements
+
+for the year ended 31 December 2025:
+
+13. Risk review (continued)
+
+(e) Fair values of assets and liabilities (continued)
+
+31 December 2024
+
+£'000 Assets Liabilities
+One year One year
+or less Total or less Total
+
+Foreign exchange derivatives
+Forward foreign exchange contracts , 3,955 3,955 3,708 3,708
+Interest rate derivatives
+
+Interest rate swaps held for
+non-trading purposes - - - -
+
+Derivative contracts 3,955 3,955 3,708 3,708
+
+Financial assets at fair value through
+
+other comprehensive income 783,199 783,199 - -
+787,154 787,154 3,708 3,708
+
+The Company's financial instruments have been categorised within one of three levels using a fair value hierarchy
+that reflects the significance of the inputs used in making the measurements. These levels are based on the degree
+to which the fair value is observable and are defined as follows:
+
+- Level 1 fair value measurements are those derived from quoted prices (unadjusted) in active markets for identical
+assets or liabilities;
+
+- Level 2 fair value measurements are those derived from inputs other than quoted prices included within Level 1
+that are observable for the asset or liability, either directly (i.e. as prices) or indirectly (i.e. derived from prices using
+simple models and extrapolation methods); and
+
+- Level 3 fair value measurements are those derived from valuation techniques that include inputs for the asset or
+liability that are not based on observable market data (unobservable inputs).
+
+There were no transfers between levels in the year. Any transfers are assumed to have occurred at the beginning
+of the year.
+
+The carrying value amounts of financial assets or liabilities, where recorded at amortised costs are a reasonable
+approximation of fair value.
+
+Schroders
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 48
+Notes to the financial statements
+for the year ended 31 December 2025
+13. Risk review (continued)
+(e) Fair values of assets and liabilities (continued)
+2025
+Level 1 Level 2 Level 3 Total
+£'000 £'000 £'000 £'000
+Financial assets at fair value through profit and loss
+Derivative contracts - 1,330 - 1,330 -
+Financial assets at fair value through other
+comprehensive income
+Floating rate notes 482,805 - - 482,805
+Government bonds 312,713 - - 312,713
+Total Assets 795,518 1,330 “ 796,848
+Financial liabilities at fair value through profit and loss
+Derivative contracts - 1,289 - 1,289
+Total Liabilities ” 1,289 - 1,289
+2024
+Level 1 Level 2 Level 3 Total
+£'000 £'000 £'000 £'000
+Financial assets at fair value through profit and loss
+Derivative contracts - 3,955 - 3,955
+Financial assets at fair value through other
+comprehensive income
+Floating rate notes 344,208 - - 344,208
+Government bonds 438,991 - - 438,991
+Total Assets 783,199 3,955 - 787,154
+Financial liabilities at fair value through profit and loss
+Derivative contracts - 3,708 - 3,708
+Total Liabilities - 3,708 - 3,708
+
+Schroders|
+Schroder & Co. Limited
+Annual Report and Accounts 2025 49
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+14. Goodwill and intangible assets
+
+2025
+Acquired
+intangible
+Goodwill assets Software Total
+£'000 £'000 £'000 £'000
+Cost
+At 1 January 83,658 45,851 25,237 154,746
+Additions* 19,472 14,295 2,123 35,890
+At 31 December , 103,130 60,146 27,360 190,636
+Accumulated amortisation
+At 1 January - (35,411) (19,536) (54,947)
+Charge in year . - (4,573) (1,834) (6,407)
+At 31 December - (39,984) (21,370) (61,354)
+Carrying amount at 31 December 103,130 20,162 5,990 129,282
+2024
+Acquired
+intangible
+Goodwill assets Software Total
+£'000 £'000 £'000 £'000
+Cost
+At 1 January 83,658 45,851 23,568 153,077
+Additions - - 1,669 1,669
+At 31 December 83,658 45,851 25,237 154,746
+Accumulated amortisation
+At 1 January - (32,720) (17,949) (50,669)
+Charge in year - (2,691) (1,587) (4,278)
+At 31 December - (35,411) (19,536) (54,947)
+Carrying amount at 31 December 83,658 10,440 5,701 99,799
+
+* During the year, the trade and assets of Whitley Asset Management Limited were transferred to the Company,
+and accordingly, in accordance with hive-up accounting, the Company recorded additions of goodwill and acquired
+intangible assets (see note 12).
+
+Schroders!
+Schroder & Co. Limited
+Annual Report and Accounts 2025 50
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+14. Goodwill and intangible asset (continued)
+
+Intangible assets (other than software) arise when the Company acquires a business and the fair value paid
+exceeds the fair value of the net tangible assets acquired. This premium reflects additional value that the Company
+determines to be attached to the business. Intangible assets include the contractual agreements to manage client
+funds. Where such assets can be identified, they are recorded as intangible assets arising from business
+combinations and charged to the income statement over time.
+
+The contractual agreements to manage client funds in relation to the acquired Wealth Management business of
+Whitley Asset Management Limited, Sand Aire Limited, C. Hoare & Co. and Lloyds Banking Group's (“LBG") UK
+discretionary, advisory, financial planning, execution, and associated investment services business are amortised
+over their useful life of ten years for Sand Aire Limited, seven years for Whitley Asset Management Limited and
+LBG, on a straight-line basis.
+
+The recoverable amount of acquired intangible assets is the greater of fair value less costs to sell and the updated
+discounted valuation of the remaining net residual income stream. The recoverable amount has been recorded at
+fair value. Any impairment is recognised immediately in the income statement but may be reversed if relevant
+conditions improve.
+
+Consideration paid to acquire the business in excess of the acquisition date fair value of net tangible and intangible
+assets is known as goodwill. Goodwill acquired in a business combination is allocated to the CGUs that are
+expected to benefit from that business combination. Goodwill is not charged to the income statement unless its
+value has diminished.
+
+After acquisition, the business acquired is integrated fully into the existing Company. Assessment of whether
+goodwill has become impaired is therefore based on the expected future returns of the Company as a whole. In
+relation to the acquired Wealth Management business of Whitley Asset Management Limited, Sand Aire Limited,
+C. Hoare & Co. and LBG’s UK discretionary, advisory, financial planning, execution, and associated investment
+services business the Company has therefore determined that there is one CGU, that of the Company. The
+recoverable amount of the CGU is determined from value-in-use calculations applying a discounted cash flow
+model. The key assumptions on which the Company's 5-year cash flow projections are based include a discount
+rate of 10.8 per cent., expected fund flows, expected changes to margins and a terminal growth rate of 2 per cent.
+has been applied, which may be considered the best estimate of the terminal growth rate relative to historical
+growth and future expectations. Any impairment is recognised immediately in the income statement and cannot
+be reversed. The results of the calculation indicate that goodwill for the CGU is not impaired.
+
+The sensitivity of the carrying amounts of goodwill to the methods and assumptions used in estimating the
+recoverable amounts of the CGU is small. This is due to the amount of goodwill allocated to the CGU relative to the
+size of the Company's future profitability estimate. Movements in the growth rate and/or the discount rate of 5%
+per cent. would not lead to any impairment.
+
+Software purchased and internally developed for use in the business is also referred to as an intangible asset. The
+costs of purchasing, developing and implementing software, together with associated relevant expenditure, are
+capitalised where it is probable that future economic benefits that are attributable to the assets will flow to the
+Company and the cost of the assets can be measured reliably. Software is recorded initially at cost and then
+amortised over its useful life of three or five years on a straight-line basis.
+
+At each reporting date, an assessment is made as to whether there is any indication that an asset in use may be
+impaired. If any such indication exists and the carrying values exceed the estimated recoverable amount, the
+assets are written down to their recoverable amount. The recoverable amount is the greater of fair value less costs
+to sell and value in use. Where intangible software assets are not yet available for use, an assessment of whether
+the carrying values exceed the estimated recoverable amount is made irrespective of whether there is any
+indication of impairment.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 51
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+15. Deposits by banks
+
+2025 2024
+
+£'000 £'000
+Interbank deposits 36,522 34,220
+Margin accounts 820 300
+37,342 34,520
+
+Deposits by banks are initially recognised at the fair value of the consideration received net of any directly
+attributable transaction costs incurred. After initial recognition, the liabilities are accounted for at amortised cost
+using the effective interest method taking into account any attributable transaction costs. The carrying value
+amounts of deposits by banks, where recorded at amortised costs are a reasonable approximation of fair value.
+
+Interbank deposits include £35,147,000 (2024: £27,838,000) and margin accounts include £nil (2024: Enil) placed
+by other banks in the Group,
+
+16, Customer accounts
+
+2025 2024
+
+£'000 £'000
+Current accounts 3,775,094 3,582,421
+Term deposits 89,932 22,017
+3,865,026 3,604,438
+
+A maturity analysis of customers’ accounts is disclosed in note 13.
+
+Customer accounts are initially recognised at fair value. After initial recognition they are accounted for at
+amortised cost using the effective interest method. ‘
+
+Customer accounts include £5,655,000 (2024: £2,973,000) placed by related parties.
+
+The Directors consider that the carrying amount of customer accounts held at amortised cost is approximately
+equal to their fair value.
+
+17. Trade and other payables
+
+2025 2024
+£'000 £'000
+VAT payable 16,103 6,712
+Other payables 2,360 1,279
+18,463 7,991
+
+Trade payables, other than long-term employee benefits (see note 25), are recorded initially at fair value,
+subsequently at amortised cost and are current liabilities. The Directors consider that as a result of their short-
+term nature, the fair value of trade and other payables held at amortised cost approximates their carrying value.
+
+Schroders.
+Schroder & Co. Limited
+.Annual Report and Accounts 2025 52
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+17. Trade and other payables (continued)
+
+The Company's policy and practice is to agree the terms of payment with suppliers at the time of contract and to
+make payment in accordance with those terms subject to satisfactory performance. The Company does not follow
+any code or standard on payment practice, but adopted the UK Prompt Payment Code in 2013. Most suppliers’
+‘terms of settlement are in the range of 30 to 60 days. At 31 December 2025 the amount owed to the Group's trade
+creditors in the UK represented approximately 21 days average purchases from suppliers (2024: 22 days).
+
+18. Dividends
+
+(a) Dividends paid
+A dividend of £73,900,000 was paid during the year (2024: £47,136,000).
+
+(b) Dividends received
+
+A dividend of £6,000,000 was received during the year from Whitley Asset Management Ltd (2024: Enil).
+
+19. Total Equity
+
+(a) Share capital
+
+Share capital represents 200,500,000 (2024: 200,500,000) issued and fully paid ordinary shares at par value of £1
+each.
+
+(b) Fair value reserve
+
+The fair value reserve represents the difference between the cost (or, if the asset has been reclassified or impaired,
+the fair value at the date of reclassification or impairment) and the fair value of financial assets that are classified
+as fair value through other comprehensive income.
+
+(c) Retained earnings
+
+Retained earnings represent profits brought forward, the profits for the year together with certain other amounts
+recognised directly in other comprehensive income and transactions with shareholders.
+
+20. Guarantees
+
+The Company may issue guarantees to third parties at the request of its clients. At the year-end there were no
+guarantees (2024: Enil).
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025
+
+53
+Notes to the financial statements
+for the year ended 31 December 2025
+21. Commitments
+Formal standby facilities, credit lines and other commitments to lend:
+2025 2024
+£'000 £'000
+1 year or less 2,275 -
+More than 1 year 79,540 80,197
+81,815 80,197
+
+Commitments include £65,000,000 (2024: £65,000,000) to related parties. .
+
+22. Assets pledged as collateral security
+
+At 31 December 2025 there were no assets pledged as collateral security (2024: Enil).
+
+Schroders'
+Schroder & Co. Limited
+Annual Report and Accounts 2025 54
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+23. Cash flow statement reconciliation
+
+2025 2024
+£'000 £'000
+
+Operating activities
+
+Profit before tax 111,866 107,817
+Adjustments for income statement non-cash movements:
+
+- Depreciation of property, plant and equipment and
+
+amortisation of intangible assets 6,424 4,295
+- Interest income (15,288) -
+- Impairment of investment in subsidiary ' 4,628 -
+- Other non-cash movements* (4,804) -
+Adjustments for which the cash effects are investing or financing activities:
+
+- Dividend income (6,000) -
+96,825 112,112
+Changes in operating assets and liabilities:
+- Net (increase)/decrease in loans and advances to customers (11,077) 15,076
+- Net (increase) in trade and other receivables (16) (491)
+- Net (increase)/decrease in prepayments and accrued income (15,981) 25,955
+- Net decrease/(increase) in deposits from banks 2,822 (33,467)
+- Net increase in amounts in customer accounts 283,348 538,072
+- Net (increase)/decrease in interbank deposits maturity of more than (35,343) 199,051
+three months
+- Net decrease/(increase) in replacement values of derivatives 798 (569)
+- Net increase/(decrease) in trade and other payables 10,471 (6,253)
+- Net increase/(decrease) in accruals and deferred income 19,332 (40,059)
+Cash from operations 351,179 809,427
+Income taxes paid (28,511) (16,292)
+Net cash from operating activities 322,668 793,135
+
+* Other non-cash movements primarily consist of discount unwind within the net interest margin and exchange
+translation adjustments, before hedging activities.
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 55
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+24. Related party transactions
+
+Transactions between the Company, its own subsidiaries and its fellow subsidiaries of the ultimate parent
+company, which are related parties of the Company, together with details of transactions between the Company
+and other related parties are disclosed below.
+
+2025
+Loans and
+Amounts Loans and Amounts advances
+owed by advances owed to from
+Net Administrative related torelated related related
+income expenses _ parties parties parties parties
+£000 £'000 £'000 £'000 £'000 £'000
+Ultimate parent - 42 1,099 : 1,282 :
+Parent - 11 - - 11 -
+Subsidiaries - - - - - -
+Other Schroders Group companies 56,944 78,080 15,220 3,356 67,460 .
+Key management personnel 288 102 * - - 2,308
+57,232 78,235 16,319 3,356 68,753 2,308
+
+The Company's immediate parent company is Schroder Wealth Holdings Limited and ultimate controlling party is
+Schroders plc.
+
+In relation to key management personnel, included in the accounts of the subsidiaries of the Group are expenses
+of £19,000.
+
+2024
+Loans and
+Amounts Loansand Amounts advances
+owed by advances owed to from
+Net Administrative related to related related related
+Income expenses parties parties parties parties
+£'000 £'000 £'000 £'000 £'000 £'000
+Ultimate parent - (322) 42 - 4 -
+Parent ” 11 - - 1 -
+Subsidiaries - - - : - -
+Other Schroders Group companies 46,981 73,194 8,691 1,505 50,513 -
+Key management personnel 238 119 - - - 2,288
+47,219 73,002 8,733 1,505 50,518 2,288
+
+In relation to key management personnel, included in the accounts of the subsidiaries of the Group are loans
+and advances from related parties of £1,536,000, expenses of £82,000 and income of £4,000.
+
+Loans to and guarantees on behalf of Directors and Directors’ transactions
+
+Under the Companies Act 2006, the Company is permitted as a banking company to make loans and to issue
+guarantees on behalf of Directors of the Company. There were no Loans to Directors outstanding at 31 December
+2025 (2024: Enil).
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 56
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+24. Related party transactions (continued)
+Key management personnel remuneration
+
+The Company has determined that the Board of Directors of the Company and members of its management
+committee are the key management personnel of the Company.
+
+The remuneration of key management personnel during the year was as follows:
+
+2025 2024
+
+£'000 £'000
+
+Short-term employee benefits 9,194 7,720
+Share-based payments 3,039 695
+Other long-term benefits 4,027 2,667
+Termination Benefits 101 127
+Post-employment benefits 195 151
+16,556 11,360
+
+Financial guarantees, letters of credit and other undrawn commitments
+On 30 October 2024, the Schroder & Co Ltd board approved a £65 million committed loan facility for 5 years to
+Schroder & Co Bank AG.
+
+‘ The Company has no other commitments with related parties.
+
+25. Retirement benefit obligations
+
+The Company makes contributions through another Group company on behalf of its employees to the Schroders
+Retirement Benefits Scheme (‘the Scheme) which is administered by a Trustee company, Schroder Pension Trustee
+Limited, It is a funded scheme comprising a defined benefit (‘OB’) and a defined contribution (‘DC’) section; all
+current employees are members of the DC section.
+
+Pension contributions are charged as ‘Administrative expenses’ to the income statement in the accounting period
+in which they arise.
+
+The income statement charge for retirement benefit costs for the Group and not specific to this Company is as
+follows:
+
+2025 2024
+
+£m £m
+
+Pension costs - defined contribution plans 70.9 77.8
+
+Pension costs - defined benefit plans (2.8) (2.9)
+Other post-employment benefits 0.2 0.2
+68.3 75.1
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 57
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+25. Retirement benefit obligations (continued)
+
+The following disclosures relate mainly to the DB section of the Scheme as a whole and are not specific to this
+Company's contribution to the Scheme.
+
+(a) Profile of the Scheme
+
+The Scheme is administered by a trustee company, Schroder Pension Trustee Limited (the Trustee). The board of
+the Trustee comprises an independent chairman, three directors appointed by the employer and two directors
+elected by the Scheme members. The Trustee is required by law to act in the interest of all relevant beneficiaries
+and is responsible for setting the investment strategy and for the day-to-day administration of the benefits. The
+Trustee's investment committee comprises five of the Trustee directors and two representatives of the Group. This
+committee, which reports to the Trustee board, is responsible for making investment strategy recommendations
+to the board of the Trustee and for monitoring the performance of the investment manager.
+
+Under the Scheme, employees are entitled to annual pensions on retirement based on a specified percentage of
+their final pensionable salary or, in the case of active members at 30 April 2011 (the date the DB section of the
+Scheme closed for future accrual), actual pensionable salaries at that date, for each year of service. These benefits
+are adjusted for the effects of inflation, subject to a cap of 2.5% for pensions accrued after 12 August 2007 and
+5.0% for pensions accrued before that date.
+
+At 31 December 2025, there were no active members in the DB section (2024: nil) and 2,292 active members in the
+DC section (2024: 2,528). The weighted average duration of the Scheme’s DB obligation is 11 years (2024: 11 years).
+The Group expects that the plan liabilities will settle gradually over time unti! all members have left the plan. On
+termination of the Scheme, any assets that remain after the Trustee has settled the Scheme'’s liabilities will be
+returned to the Group.
+
+Membership details of the DB section of the Scheme at 31 December are as follows:
+
++
+
+2025 2024
+Number of deferred members 810 884
+Total deferred pensions (at date of leaving Scheme) £6.9m per annum £5.9m per annum
+Average age (deferred) 58 57
+Number of pensioners 1,186 1,137
+Average age (pensioners) 71 71
+Total pensions in payment £27.2m per annum £26.0m per annum
+
+(b) Funding requirements
+
+The last completed triennial valuation of the Scheme was carried out as at 31 December 2023. The funding level
+at that date was 115% on the technical provisions basis and no contribution to the Scheme was required. The next
+triennial valuation is due at 31 December 2026 and will be performed in 2027.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 58
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+25. Retirement benefit obligations (continued)
+(c) Risks of the Scheme
+
+The Company and the Trustee have agreed a long-term strategy for reducing investment risk as and when
+appropriate. This includes an asset-liability matching policy that aims to reduce the volatility of the funding level
+of the Scheme by investing in assets that perform in line with the liabilities of the Scheme.
+
+The most significant risks that the Scheme exposes the Group to are:
+
+Asset volatility
+
+The liabilities are calculated using a discount rate set with reference to bond yields. If assets underperform this
+yield, this will reduce the surplus or may create a deficit. The Group manages this risk through a diversified
+investment strategy, with 64% (2024: 64%) of Scheme assets held in a liability matching portfolio and the remainder
+split across semi-liquid credit, liquid growth and credit, and illiquid growth portfolios. This asset mix is designed
+to provide returns that match or exceed the unwinding of the discount rate in the long term, but that can create
+volatility and risk in the short term. The allocation to growth assets is monitored to ensure it remains appropriate
+given the Scheme's long-term objectives.
+
+Credit risk
+
+The assets of the Scheme include liability driven investments (‘LOI’) and other fixed income instruments that expose
+the Group to credit risk. A significant amount of this exposure is to the UK Government as a result of holding gilts
+and bonds guaranteed by the UK Government. Other instruments held include derivatives, which are collateralised
+daily to cover unrealised gains or losses. The minimum rating for any derivatives counterparty is BBB.
+
+Interest rate risk
+
+A decrease in corporate bond yields will increase the value placed on the Scheme’s liabilities for accounting
+purposes, although this should be partially offset by an increase in the value of the Scheme’s liability matching
+portfolio, which comprises gilts, corporate bonds and other LDI instruments. The liability matching investments
+have been designed to mitigate interest rate exposures measured on a funding rather than an a¢counting basis.
+One of the principal differences between these bases is that the liability under the funding basis is calculated using
+a discount rate set with reference to gilt yields; the latter uses corporate band yields. As a result, the liability
+matching portfolio hedges against interest rate risk by purchasing instruments that seek to replicate movements
+in gilt yields rather than corporate bond yields. Movements in the different types of instrument are not exactly
+correlated, and it is therefore likely that a tracking error can arise when assessing whether the liability matching
+portfolio has provided an effective hedge against interest rate risk on an accounting basis. At 31 December 2025,
+the liability matching portfolio was designed to mitigate 95% (2024: 95%) of the Scheme’ s exposure to changes in
+gilt yields.
+
+Inflation risk
+
+A significant proportion of the Scheme’s benefit obligations are linked to inflation and higher inflation will lead to
+higher liabilities. However, in most cases, caps on the level of inflationary increases are in place. The majority of
+the growth assets are either unaffected by or not closely correlated with inflation, which means that an increase
+in inflation will also decrease any Scheme surplus. The liability matching portfolio includes instruments such as
+index-linked gilts to provide protection against inflation risk. At 31 December 2025, the liability matching portfolio
+was designed to mitigate 95% (2024: 95%) of the Scheme's exposure to inflation risk.
+
+Life expectancy
+The majority of the Scheme's obligations are to provide benefits for the life of the member, so increases in life
+expectancy will result in an increase in the liability.
+
+Schroders;
+Schroder & Co. Limited .
+Annual Report and Accounts 2025 59
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+25. Retirement benefit obligations (continued)
+
+(d) Reporting at 31 December 2025
+
+The principal financial assumptions used for the Scheme were as listed below:
+
+2025 2024
+% %
+Discount rate 5.5 5.4
+RPI Inflation rate - 28 3.1
+CPI inflation rate 2.2 2.5
+Future pension increases (for benefits earned before 13 August 2007) 27 2.9
+Future pension increases (for benefits earned after 13 August 2007) 1.9 2.0
+Average number of years a current pensioner is expected to live beyond age 60: Years Years
+Men 28 27
+Women 29 29
+Average number of years future pensioners currently aged 45 are expected to live
+beyond age 60: Years Years
+Men , 29 28
+30 30
+
+Women
+
+Net interest income is determined by applying the discount rate to the opening net surplus in the Scheme. The
+Group determines the appropriate discount rate at the end of each year. This is the interest rate that is used to
+determine the present value of estimated future cash outflows expected to be required to settle the pension
+obligations. In determining the appropriate discount rate, the Group considers the interest rates of high quality,
+long dated corporate bonds that are denominated in the currency in which the benefits will be paid.
+
+Estimates and judgements
+
+The Company estimates the carrying value of the Scheme by applying judgement to determine the assumptions
+as set out on the table above, used to calculate the valuation of the pension obligation using member data and
+applying the Scheme rules. The Scheme assets are mainly quoted in an active market. The sensitivity to those
+assumptions is set out below. The most significant judgemental assumption relates to mortality rates, which are
+inherently uncertain. The Group's mortality assumptions are based on standard mortality tables with Continuous
+Mortality Investigation core projection factors and a long-term rate of mortality improvement of 1.0% (2024: 1.0%)
+per annum. An additional adjustment, an “A parameter” set to 0.25% (2024: 0.25%) per annum, allows for the
+typically higher rate of mortality improvement among members of the Scheme compared to general population
+statistics. The latest base mortality tables have been adopted with no scaling (2024: nil) following a Scheme specific
+review of the membership data.
+
+The Company reviews its assumptions annually in conjunction with its independent actuaries and considers this
+adjustment appropriate given the geographic and demographic profile of Scheme members. Other assumptions
+for pension obligations are based in part on current market conditions.
+
+The financial impact of the Scheme on the Group has been determined by independent qualified actuaries, Aon
+Solutions UK Limited, and is based on an assessment of the Scheme as at 31 December 2025.
+
+Schroders,
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 60
+Notes to the financial statements
+for the year ended 31 December 2025
+25. Retirement benefit obligations (continued)
+(d) Reporting at 31 December 2025 (continued)
+The sensitivity of the Scheme pension liabilities to changes in assumptions is as follows:
+2025
+Estimated Estimated
+(increase)/ (increase)/
+reduction in reduction in
+pension pension
+liabilities liabilities
+Assumption Assumption change £m %
+Discount rate Increase by. 0.5% per annum 25.2 5.0
+Discount rate Decrease by 0.5% per annum (27.7) (5.5)
+Expected rate of pension increases Increase by 0.5% per annum (19.7) (3.9)
+Expected rate of pension increases Reduce by 0.5% per annum 19.2 3.8
+Life expectancy Increase by one year (16.0) (3.2)
+Life expectancy Reduce by one year 16.1 3.2
+2024
+Estimated Estimated
+(increase)/ (increase)/
+reduction in reduction in
+pension pension
+liabilities liabilities
+Assumption Assumption change £m %
+Discount rate Increase by 0.5% per annum 26.9 5.2
+Discount rate Decrease by 0.5% per annum (30.7) (6.0)
+Expected rate of pension increases Increase by 0.5% per annum (20.2) (3.9)
+Expected rate of pension increases Reduce by 0.5% per annum 19.9 3.9
+Life expectancy Increase by one year (17.0) (3.3)
+Life expectancy Reduce by one year 17.4 3.4
+
+Schroders'
+Schroder & Co. Limited
+Annual Report and Accounts 2025 61
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+25. Retirement benefit obligations (continued)
+
+(d) Reporting at 31 December 2025 (continued)
+
+Movements in respect of the assets and liabilities of the Scheme are:
+
+2025 2024
+
+£m £m
+
+At 1 January 644.7 713.4
+Interest income 33.7 31.4
+Remeasurement of assets (6.5) (64.1)
+Benefits paid (29.8) (30.2)
+Contribution by employer! (8.0) (3.8)
+Administrative expenses (2.7) (2.0)
+Fair value of plan assets 631.4 644.7
+At 1 January (513.7) (575.1)
+Interest cost (26.9} (25.2)
+Actuarial (losses)/gains due to change in demographic assumptions (3.7) 6.9
+Actuarial gains/(losses) due to change in financial assumptions 11.9 58.6
+Actuarial losses due to experience (2.7) (9.1)
+Benefits paid 29.8 30.2
+Present value of funded obligations (505.3) (513.7)
+Net asset 126.1 131.0
+
+‘In July 2024, the trustees of the Scheme agreed that certain employer contributions due to the Defined
+Contribution section could be met by assets allocated to the Defined Benefit section. The arrangement is subject
+to a monthly cap, is conditional on certain funding levels being maintained and will be monitored by the trustees.
+
+In June 2023, the High Court issued a ruling in respect of Virgin Media v NTL Pension Trustees II Limited (and
+others), which had the potential to affect the Scheme's liabilities. In September 2025, the Government published
+the draft Pension Schemes Bill, establishing a framework for legislative remediation, with approval expected in
+2026. This will give affected pension schemes the ability to retrospectively obtain written actuarial confirmation
+that historic benefit changes met the necessary standards. The ruling is unlikely to impact the Schemes liabilities
+and the valuation remains appropriate.
+
+The Group did not materially change the basis of any of the principal financial assumptions underlying the
+calculation of the Scheme’s net financial position during 2025, although such assumptions have been amended
+where applicable to reflect current market conditions and expectations.
+
+Schroders:
+Schroder & Co. Limited
+
+Annual Report and Accounts 2025 62
+Notes to the financial statements
+for the year ended 31 December 2025
+25. Retirement benefit obligations (continued)
+(d) Reporting at 31 December 2025 (continued)
+The fair value of the Scheme assets at the year-end date is analysed as follows:
+2025 2024
+Of which Of which
+not not
+quoted in quoted in
+an active an active
+Value = market Value market
+£m £m £m £m
+Liability matching portfolio:
+Bonds (excluding those held as part of the liability driven portfolio)
+Debt securities 692.1 391.7 674.8 374.3
+Cash and cash equivalents 21.5 15.8 9.8 1.8
+Derivative contracts 12.6 3.4 10.3 . -
+Repurchase agreements (326.0) - (306.9) -
+400.2 410.9 388.0 376.1
+Portfolio funds 228.0 142.6 253.9 55.0
+Cash 3.2 - 2.8 -
+Total 631.4 553.5 644.7 431.1
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 63
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+26. Director emoluments
+
+The amounts set out below are in respect of 9 (2024: 8) Directors whose emoluments were charged either in part
+or in full to the Company during the year. These Directors received the following remuneration in connection with
+the management of the affairs of the Company.
+
+2025 2024
+£'000 £'000
+Aggregate emoluments 3,505 2,453
+Company pension contribution to the defined 7 9
+contribution pension scheme
+3,532 2,462
+
+The emoluments of 1 (2024: none) Director employed by and paid for by another Group company are included in
+the financial statements of that entity. Their emaluments are deemed to be wholly attributable to their services to
+that entity. This Director therefore received no incremental emoluments for their services to the Company.
+
+In addition to the emoluments detailed, deferred amounts conditionally receivable by current Directors were
+£620,000 (2024: £376,000).
+
+Retirement benefits have accrued to no (2024: no) Directors under a defined benefit scheme and to 3 (2024: 2)
+Directors under a defined contribution pension scheme.
+
+During the year, 6 (2024: 5) Directors became entitled to shares under the Group's Deferred Award Plan and no
+Directors (2024: no) became entitled to shares under the Group's Equity Incentive Plan.
+
+In respect of the highest paid Director, the aggregate emoluments and the amounts (excluding shares) received
+under the deferred incentive plans were £1,603,000 (2024: £1,261,000). The Director did become entitled to shares
+under the Group's Deferred Award Plan (2024: did). The accrued annual pension under the Schroders Retirement
+Benefits Scheme, a defined benefits scheme, at the end of the year was £nil (2024: Enil). The contribution to a
+defined contribution scheme was £19,000 (2024: Enil).
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 64
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+27. Share-based payments
+
+The Company makes share-based payments to key employees through awards over ordinary shares of Schroders
+plc.
+
+Awards over ordinary shares made under the Group’s Deferred Award Plan are charged at fair value as ‘Operating
+expenses’ in the income statement. The fair value of an award is calculated using the market value of the shares
+on the date of grant. The fair value charges, adjusted to reflect actual levels of vesting, are spread over the
+performance period and the vesting periods of the awards. Awards are structured as nil-cost options.
+
+Awards over ordinary shares made under the Group’s Equity Compensation Plan are charged at fair value as
+‘Operating expenses’ in the income statement. There are no performance conditions attached to the awards. The
+fair value of an award is calculated using the market value of the shares on the date of grant. The fair value charges,
+adjusted to reflect actual levels of vesting, are spread over the performance period and the vesting period of the
+awards. Awards are structured as nil-cost options.
+
+Awards over ordinary shares made under the Group’s Equity Incentive Plan are charged at fair value to the income
+statement over a five year vesting period. Fair value is determined. at the date of grant and is equal to the market
+value at that time. Awards are structured as nil-cost options.
+
+Awards that lapse or are forfeited result in a credit to the income statement (reversing the previous charge) in the
+year in which they lapse or are forfeited.
+
+The Company has the following share-based payment arrangements:
+
+- Deferred Award Plan: Under this scheme, certain employees receive deferred bonus awards over ordinary
+shares in Schroders plc, normally structured as rights to acquire shares at nil cost. These awards are subject
+to forfeiture and will vest provided the participant continues to be employed within the Group. The vesting
+periods vary but typically participants have a right to one third of an award after each year of a three year
+vesting period and some awards fully vest on the fifth anniversary of the grant.
+
+- Equity Compensation Plan: Under this scheme, key employees receive deferred bonus awards over
+ordinary shares in Schroders plc, normally structured as rights to acquire shares at nil cost. These awards
+are subject to forfeiture and will vest on the third anniversary provided the participant continues to be
+employed within the Group. There are no further issuances in relation to this scheme and all historic
+issuances have vested.
+
+- 2008 Equity Incentive Plan: Under this scheme, eligible employees receive awards of ordinary shares in
+Schroders plc, normally structured as rights to acquire shares at nil cost. These awards are subject to
+forfeiture and will vest on the fifth anniversary of the grant, provided the employee continues to be
+employed within the Group.
+
+- Share Incentive Plan: Under this scheme approved by HM Revenue & Customs, eligible individuals can
+purchase ordinary shares in Schroders plc. each month up to £1,800 per taxation year from their gross
+salary. The Group matches employee share purchases up to £100 per month. These matching shares are
+effectively free shares awarded to the individual subject to their remaining in employment for one year.
+
+All of the above share-based payment arrangements involve a maximum term of ten years for each option granted
+and are settled through the transfer of equity instruments of its ultimate parent, Schroders plc to its employees.
+
+Schroders
+Schroder & Co. Limited
+Annual Report and Accounts 2025 65
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+27. Share-based payments (continued)
+
+The Company recognised total expenses of £4,004,000 (2024: £2,193,000) arising from share-based payment
+transactions during the year.
+
+(a) Equity Compensation Plan
+
+2025 2024
+
+Ordinary shares Ordinary shares
+
+Number Number
+
+Rights outstanding at 1 January 771,337 959,562
+Shares in lieu of dividends 41,809 51,374
+Exercised (155,287) (239,599)
+Rights outstanding at 31 December 657,859 771,337
+Vested 657,859 771,337
+
+There is no weighted average fair value for shares granted in lieu of dividends. The weighted average exercise
+price per share is nil.
+
+There were no charges recognised during the financial year (2024: Enil).
+
+Schroders|
+Schroder & Co. Limited
+Annual Report and Accounts 2025 66
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+27. Share-based payments (continued)
+
+(b) Deferred Award Plan
+
+2025 2024
+
+Ordinary shares Ordinary shares
+
+Number Number
+
+Rights outstanding at 1 January 2,644,299 2,451,364
+Granted / Shares in lieu of dividends 1,476,435 578,623
+Forfeited (14,741) (2,606)
+Exercised ; (468,765) (383,082)
+Rights outstanding at 31 December 3,637,228 2,644,299
+Vested 1,263,029 893,436
+Unvested . 2,374,199 1,750,863
+
+There is no weighted average fair value for shares granted in lieu of dividends. The weighted average exercise
+price per share is nil.
+
+A charge of £3,488,000 (2024: £1,533,000) was recognised during the financial year.
+
+(c) 2008 Equity Incentive Plan
+
+2025 2024
+
+Ordinary shares Ordinary shares
+
+Number Number
+
+Rights outstanding at 1 January 398,462 457,433
+Shares in lieu of dividends 22,594 27,967
+Forfeited (6,662) -
+Exercised (137,888) (86,938)
+Rights outstanding at 31 December 276,506 398,462
+Vested 276,506 185,880
+Unvested - 212,582
+
+There is no weighted average fair value for shares granted in lieu of dividends. The weighted average exercise
+price per share is nil.
+
+A charge of £94,000 (2024: £243,000) was recognised during the financial year.
+
+Schroders:
+Schroder & Co. Limited
+Annual Report and Accounts 2025 67
+
+Notes to the financial statements
+
+for the year ended 31 December 2025
+
+27. Share-based payments (continued)
+
+(d) Share Incentive Plan
+The employee monthly share purchase plan is open to UK permanent employees and provides free shares from
+the Group to match the employee purchase of shares up to a maximum of £100 per month. Pursuant to these
+plans 123,559 ordinary shares were granted (2024: 122,017). A charge of £422,000 (2024: £417,000) was recognised
+during the financial year.
+
+28. Ultimate and immediate parent company
+
+The Company's immediate parent company is Schroder Wealth Holdings Limited (incorporated in England and
+Wales), whose ultimate parent company and ultimate controlling party is Schroders plc (incorporated in England
+and Wales).
+
+The results of the Company are consolidated in the Annual Report and Accounts of Schroders plc Group, copies of
+which can be obtained from www.schroders.com.
+
+The Company has taken advantage of the exemption not to prepare consolidated accounts, provided by Section
+400 of the Companies Act 2006, as the Company is included in the consolidated accounts of a larger UK group.
+
+29. Events after the year end
+
+Subsequent to the year end, the Board of Schroders plc, the ultimate parent undertaking of the Company, reached
+a preliminary agreement with Pantheon LLC, a wholly-owned subsidiary of Nuveen, LLC, on the financial terms of
+an offer to acquire the entire issued and to be issued ordinary share capital of Schroders plc, to be implemented
+by way of a scheme of arrangement.
+
+On 4 November 2025, the Board approved the sale of Whitley Asset Management Limited (subsequently renamed
+as Schroders Investment Portfolio Services Limited on 16 January 2026) to Benchmark Capital Limited, another
+Schroders Group subsidiary. The Board considered the interests of key stakeholders when it reviewed the sale.
+
+WAM's clients were transferred to the Company follawing WAM's acquisition in October 2024. As WAM has
+remained a regulated entity, its transfer required the approval of the FCA. Regulatory approval was granted by the
+FCA in January 2026 and the transfer is expected to complete during the first half of 2026.
+
+Schroders

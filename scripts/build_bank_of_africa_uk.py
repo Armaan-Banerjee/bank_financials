@@ -576,6 +576,81 @@ EARLY_YEARS_NOTE = (
     "(genuine archive gap) - left blank on this sheet."
 )
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-005) - documented NOT APPLICABLE
+# ---------------------------------------------------------------
+# BOA UK publishes a Pillar 3 every year and does NOT use the UK KM1 template.
+# That is a different finding from "no Pillar 3 is published" (map rule 8), and
+# it is recorded here on positive evidence rather than on a failed search.
+KM1_SOURCES = (
+    "UK KM1 - KEY METRICS TEMPLATE: NOT USED BY THIS BANK IN ANY YEAR.\n"
+    "This is not the same finding as 'no Pillar 3 is published'. BOA UK publishes a Pillar 3 disclosure every "
+    "year and the recent editions are carried and cited throughout this workbook; what they do not contain is "
+    "the prescribed KM1 template. Recorded on positive evidence, checked 2026-09-16.\n"
+    "\n"
+    "WHAT WAS CHECKED. The FY2024, FY2023 and FY2022 editions were fetched live (HTTP 200, "
+    "Content-Type application/pdf, %PDF magic bytes; 929,719 / 972,691 / 991,180 bytes; 36, 38 and 35 pages) "
+    "and read in full. All three are text-native, extracting 121,946 / 112,368 / 109,444 characters - roughly "
+    "3,000 characters a page - so the absences below are facts about the documents, not about the extractor "
+    "(map rule 15). Each contains ZERO occurrences of 'KM1' case-insensitively, and zero occurrences of any "
+    "other template code: no UK OV1, CC1, CC2, LR2, LIQ1 or LIQ2 caption appears anywhere in any of them. The "
+    "section structure is narrative throughout - 1. INTRODUCTION, 2. RISK MANAGEMENT OBJECTIVES AND POLICIES, "
+    "3. OVERVIEW OF THE RISK MANAGEMENT FRAMEWORK, 4. OWN FUNDS, 5. CREDIT RISK, 7. UNENCUMBERED ASSETS, "
+    "8. USE OF ECAIS, 9. MARKET AND LIQUIDITY RISK, 10. OPERATIONAL RISK, 11. LEVERAGE RATIO, "
+    "12. SECURITISATION, 13. FINANCIAL RISK FROM CLIMATE CHANGE, 14. GLOSSARY.\n"
+    "\n"
+    "THE 'KEY METRICS' SECTION IS A PICTURE OF FOUR BAR CHARTS, NOT A TABLE.\n"
+    "Section 1.1.4 KEY METRICS, on p.6 of each edition, carries a heading and then an embedded image where a "
+    "table would sit (954x606 px in FY2022, 729x393 in FY2023, 879x526 in FY2024), with only 18 digits of "
+    "extractable text on the whole page. That is exactly the signature of map rule 13 - a table hidden inside a "
+    "bitmap in an otherwise text-native PDF - so the page was rendered at 300dpi and READ, which is what the "
+    "rule requires before any conclusion. It is not a hidden table: it is four bar charts titled OWN FUNDS, "
+    "CREDIT RWA, LEVERAGE RATIO and LCR RATIO, each plotting three years. A chart is not the template and its "
+    "bars are not template rows, so nothing from it is transcribed onto a KM1 sheet.\n"
+    "\n"
+    "AND THE CHARTS DO NOT RECONCILE TO THE SAME DOCUMENT'S OWN TABLES, which is the second reason not to use "
+    "them. In the FY2022 edition the OWN FUNDS chart plots 63.2 for 2022, while that edition's own capital "
+    "table on p.17 prints Own funds of 71,130 (£'000) for the same date; its CREDIT RWA chart plots 459,714 "
+    "for 2022 against Risk Weighted Assets of 453,124 in that table. The single-metric sheets in this workbook "
+    "take their figures from those TABLES, which is why they are unaffected.\n"
+    "\n"
+    "THE CHARTS ALSO RESTATE BETWEEN EDITIONS (map rule 1), consistent with the restatement already documented "
+    "on the capital sheets: 2022 OWN FUNDS is plotted as 63.2 in the FY2022 edition but 70.4 in both the "
+    "FY2023 and FY2024 editions, and 2022 CREDIT RWA as 459,714 then 453,125. Leverage (13.98% for 2022) and "
+    "LCR (207% for 2022) plot identically in all three.\n"
+    "\n"
+    "NO ARTICLE 432 EXCLUSION IS CLAIMED (map rule 10): none of the three editions contains an 'excluded "
+    "templates' appendix, or any occurrence of 'Article 432', 'excluded template' or 'omitted'. The bank "
+    "states the opposite - 'The Bank does not seek any exemption from disclosure based on materiality or based "
+    "on proprietary or confidential information' (s.1.1.5, all three editions). So the template is absent "
+    "because this bank does not use it, not because its rows were formally excluded.\n"
+    "\n"
+    "A NOTE ON HOW THIS WAS NEARLY MISSED, for whoever re-checks: a case-sensitive search for 'KM1|Key "
+    "metric' returns NOTHING in any of the three editions, because the heading is printed 'KEY METRICS' in "
+    "capitals. The zero was the search's, not the bank's (map rule 15).\n"
+    "\n"
+    "LATEST-EDITION CHECK, 2026-09-16: the bank's own disclosures index "
+    f"({BOA_FINANCES_URL}, HTTP 200, not blocked) lists exactly five Pillar 3 reports - 2024, 2023, 2022, 2017 "
+    "and 2015. The newest is the Pillar 3 Disclosure Report 2024, already carried and cited by this script. "
+    "NONE NEWER. FY2025 has no Pillar 3 edition yet; that year's capital figures come from the FY2025 Annual "
+    "Report, as the single-metric sheets' own citations state.\n"
+    "\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Bank of Africa United Kingdom Plc - KM1 Key Metrics",
+    subtitle="Not applicable: this bank publishes a Pillar 3 every year but does not use the UK KM1 template "
+             "in any of them. Its own 'Key Metrics' section is a four-panel bar chart embedded as a picture, "
+             "whose values do not reconcile to the same document's capital tables. See the sources note for "
+             "the positive evidence and for what was checked.",
+    rows=[("DATA", "UK KM1 - Key metrics template: not used by this bank in any year",
+           {y: "Not applicable" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=300,
+    years=YEARS,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital (= Tier 1 capital; wholly CET1, no AT1 instruments)",

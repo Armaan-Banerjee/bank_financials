@@ -330,8 +330,280 @@ CAPITAL_NOTE = (
     "RWA). The two Pillar 3 documents' own RWA, Leverage Ratio, LCR, and NSFR agree with each other and are used "
     "on those sheets; only the CET1/Total Capital amount and ratio are disputed between the Bank's own statutory "
     "accounts and its own Pillar 3 disclosures for these two years, and the statutory accounts' figures are used "
-    "here as the audited-adjacent, internally self-consistent source."
+    "here as the audited-adjacent, internally self-consistent source.\n\n"
+    "RE-ESTABLISHED FIRST-HAND 2026-09-16 (KM1-022), from the documents rather than from this note: AR2022 "
+    "Note 31 (printed p.65) and AR2021 Note 32 (printed p.73) were re-read and confirm 453,162/21.26% and "
+    "432,220/21.24% against RWA of 2,131,640 and 2,034,858, with \"Tier 2 capital  -\" in every year; the "
+    "\"December 2023\"-dated Pillar 3's p.16 was rendered at 300 dpi and confirms 474,412/22.26% and "
+    "443,710/21.81%, corroborated by that same edition's Table 5 own-funds composition on p.18. Both sides "
+    "are internally consistent; they differ only in the regulatory adjustments applied to the same audited "
+    "equity. The KM1 Key Metrics sheet in this workbook carries the PILLAR 3 side, this sheet carries the "
+    "AUDITED side, and the workbook verifier reports the resulting four-cell disagreement on every run - "
+    "which is the intended outcome, not an open defect. See the KM1 sheet's source note for the full "
+    "four-way test that ruled out a row-alignment slip."
 )
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NBKI's own "Table 3: Key metrics" (section 4.2 of its
+# Pillar 3 Disclosure). Reproduced whole, in the Bank's own row order, with
+# the Bank's own labels, section headings, glyphs and printed precision.
+#
+#   * NO ROW NUMBERS ARE PRINTED, so none are shown here. NBKI's table carries
+#     the KM1 row set and the template's own section headings in the template's
+#     own order (available own funds -> RWA -> capital ratios -> leverage ->
+#     LCR -> NSFR, down to the "Total exposure measure excluding claims on
+#     central banks" and the HQLA / net-cash-outflow LCR build-up), so it IS
+#     the template, unnumbered. Attaching template row numbers to it would
+#     invent a correspondence the Bank never published, so the rows are left
+#     as the Bank labelled them.
+#
+#   * THE BANK PRINTS A SUBSET OF THE TEMPLATE'S ROWS. There is no Tier 1
+#     ratio row (rows 1-3 and the Total Capital Ratio are printed, row 6 is
+#     not), no SREP block (UK 7a-7d), no buffer block (8, 9, 11, UK 11a, 12),
+#     and no NSFR build-up (available/required stable funding). Those cells are
+#     absent from the source, not missing from this transcription.
+#
+#   * A SOURCE DEFECT, REPRODUCED NOT CORRECTED. The FY2022 edition prints the
+#     "Common Equity Tier 1 (CET1) capital" row with BOTH cells empty, while
+#     giving Tier 1 Capital and Total Capital. Those two cells are therefore
+#     blank here. (Every other year the three amounts are identical, because
+#     NBKI holds no AT1 and no Tier 2.) The same editions' standing lead-in
+#     sentence also claims the table covers "buffer requirements and ratios",
+#     which it does not print.
+#
+#   * THE UNIT CHANGES BETWEEN EDITIONS (map rule 17). FY2021 and FY2022 were
+#     published in US$'000 ("In USD $"), FY2024 and FY2025 in £'000 ("In GBP
+#     000's"), following the Bank's presentation-currency change. No single row
+#     can express that, so - RESTRUCTURED 2026-09-16 under map rule 17 - every
+#     AMOUNT row is split into two caption blocks, one per unit, the same shape
+#     rule 5 uses for the leverage basis break. RATIO rows stay single, because
+#     a percentage is unit-free. Nothing is converted and nothing is restated
+#     into the other edition's unit; within each unit block the Bank's own row
+#     order is preserved exactly.
+#
+#   * FY2023 IS BLANK BECAUSE NO FY2023 EDITION EXISTS TO TRANSCRIBE. NBKI
+#     republishes at one stable URL rather than minting a per-year file, and
+#     no FY2023 vintage was ever archived; the live FY2025 edition carries
+#     only a single FY2024 comparative. See the RWA Breakdown sheet's
+#     fourth-verification note - this gap is closed by enumeration.
+#
+#   * FY2021 COMES FROM THE FY2022 EDITION'S COMPARATIVE COLUMN, the one
+#     departure from "each year from its own edition", because the FY2021
+#     edition does not print this table at all: its "Table 1: Key metrics USD
+#     000's as at 31.12.2021" is a different object, an eight-tile dashboard
+#     (CET1 capital / Total Regulatory capital / CET1 ratio / Total Capital
+#     ratio / Total RWAs / Leverage Ratio / LCR / NSFR) with no section
+#     structure, no Tier 1 row and no LCR build-up. Same situation as Bank of
+#     Scotland's FY2021. The divergence between the two is recorded in the
+#     source note below rather than reconciled.
+# ---------------------------------------------------------------
+# Map rule 17: amount rows carry TWO caption blocks, one per unit. GBP first
+# (FY2024-FY2025, the newer editions, and the leftmost columns), USD second
+# (FY2021-FY2022). Ratio rows stay single.
+GBP = "  [£'000, FY2024-FY2025 editions]"
+USD = "  [US$'000, FY2021-FY2022 editions]"
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital *" + GBP,
+     {"FY2025": 536637, "FY2024": 501570}),
+    # Blank on purpose: the FY2022 edition prints this caption with BOTH cells
+    # empty. Its own Table 5 (Capital movement, p.18) DOES give the figure -
+    # 474,412 and 443,710 - but this sheet reproduces Table 3, so the blank
+    # stands and the cross-reference is recorded in the source note.
+    ("DATA", "Common Equity Tier 1 (CET1) capital" + USD, {}),
+    ("DATA", "Tier 1 Capital" + GBP,
+     {"FY2025": 536637, "FY2024": 501570}),
+    ("DATA", "Tier 1 Capital" + USD,
+     {"FY2022": 474412, "FY2021": 443710}),
+    ("DATA", "Total Capital" + GBP,
+     {"FY2025": 536637, "FY2024": 501570}),
+    ("DATA", "Total Capital" + USD,
+     {"FY2022": 474412, "FY2021": 443710}),
+    ("SECTION", "Risk Weighted Assets", {}),
+    ("DATA", "Total RWA" + GBP,
+     {"FY2025": 2624404, "FY2024": 2503806}),
+    ("DATA", "Total RWA" + USD,
+     {"FY2022": 2131640, "FY2021": 2034858}),
+    ("SECTION", "Capital Ratios (as percentage of RWA)", {}),
+    ("DATA", "Common Equity Tier 1 Ratio",
+     {"FY2025": "20.45%", "FY2024": "20.03%", "FY2022": "22.26%", "FY2021": "21.81%"}),
+    ("DATA", "Total Capital Ratio",
+     {"FY2025": "20.45%", "FY2024": "20.03%", "FY2022": "22.26%", "FY2021": "21.81%"}),
+    ("SECTION", "Leverage Ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks" + GBP,
+     {"FY2025": 4062395, "FY2024": 4133905}),
+    ("DATA", "Total exposure measure excluding claims on central banks" + USD,
+     {"FY2022": 3625281, "FY2021": 3482137}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "13.21%", "FY2024": "12.13%", "FY2022": "13.09%", "FY2021": "12.74%"}),
+    ("SECTION", "Liquidity Coverage Ratio ('LCR')", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value average)" + GBP,
+     {"FY2025": 731707, "FY2024": 925985}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value average)" + USD,
+     {"FY2022": 659703, "FY2021": 702588}),
+    ("DATA", "Total net cash outflows (adjusted value)" + GBP,
+     {"FY2025": 147299, "FY2024": 215454}),
+    ("DATA", "Total net cash outflows (adjusted value)" + USD,
+     {"FY2022": 220185, "FY2021": 209655}),
+    ("DATA", "Liquidity coverage ratio (%) (adjusted value)",
+     {"FY2025": "497%", "FY2024": "430%", "FY2022": "300%", "FY2021": "227%"}),
+    ("SECTION", "Net Stable Funding Ratio ('NSFR')", {}),
+    ("DATA", "NSFR ratio (%)   [FY2022 edition: \"NSFR ratio (%) (adjusted value)\"]",
+     {"FY2025": "120%", "FY2024": "127%", "FY2022": "127%", "FY2021": "114%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - National Bank of Kuwait (International) Plc's own Pillar 3 Disclosure, section 4.2 \"Key "
+    "Metrics\", Table 3 \"Key metrics\". Amounts and percentages exactly as printed; nothing converted, "
+    "rounded or computed:\n"
+    f"FY2025 and FY2024: Pillar 3 Disclosure 31 December 2025, Table 3, p.16, columns '31 Dec 2025' and "
+    f"'31 Dec 2024', \"In GBP 000's\" - {PILLAR_URL}\n"
+    "FY2022 and FY2021: the archived edition whose cover reads \"Pillar 3 Disclosure / December 2023\" but "
+    "whose Table 3 columns read '31/12/22' and '31/12/21', \"In USD $\", p.16 - Wayback Machine capture of the "
+    "same stable URL, 2024-02-17: https://web.archive.org/web/20240217111133/https://www.nbk.com/dam/"
+    "jcr:19757e7d-4d03-40f8-bf39-63c995186e39/Pillar_III_Disclosures.pdf\n"
+    "FY2023: no edition exists to transcribe (see below).\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16. The Bank's own live Pillar 3 URL was re-fetched directly (HTTP 200, "
+    "Content-Type application/pdf, %PDF magic bytes verified) and serves the 31 December 2025 edition - the "
+    "newest NBKI Pillar 3 published. NBK's group investor-relations page (https://www.nbk.com/nbk-group/"
+    "investor-relations.html) was also read in full: the only NBKI-named Pillar 3 it links is a 2014 file. "
+    "FY2025 is therefore the newest edition and this workbook already holds it; no year was added.\n\n"
+    "TRANSCRIPTION NOTES:\n"
+    "• NO ROW NUMBERS. NBKI prints this table unnumbered. It carries the KM1 row set and the template's own "
+    "section headings in the template's own order, so it is the template - but the Bank's rows are reproduced "
+    "under the Bank's own labels, with no template row numbers attached, because attaching them would assert "
+    "a correspondence the Bank never published.\n"
+    "• ROWS THE BANK DOES NOT PRINT ARE ABSENT FROM THE SOURCE, not missing from this sheet: no Tier 1 ratio "
+    "row, no SREP block (UK 7a-7d), no buffer block (8, 9, 11, UK 11a, 12), and no NSFR stable-funding "
+    "build-up. The lead-in sentence's claim that the table covers \"buffer requirements and ratios\" is the "
+    "Bank's own; no buffer row is in fact printed. Recorded, not corrected.\n"
+    "• A BLANK CET1 ROW IN THE FY2022 EDITION IS THE SOURCE'S OWN. That edition prints the \"Common Equity "
+    "Tier 1 (CET1) capital\" caption with both value cells EMPTY, while printing Tier 1 Capital and Total "
+    "Capital as 474,412 / 443,710. RE-VERIFIED 2026-09-16 by rendering p.16 at 300 dpi and looking: the table "
+    "is fully ruled, every row sits in its own bordered cell, and the CET1 row's two cells are visibly empty. "
+    "The two cells are therefore left blank here. In every year NBKI does print all three, they are "
+    "identical, because the Bank holds no AT1 and no Tier 2. The SAME EDITION does supply the missing figure "
+    "two pages later - its section 4.4 \"Composition of Regulatory Own Funds\", Table 5 \"Capital movement\" "
+    "(p.18), prints \"Common Equity Tier 1 (CET1) capital after Regulatory adjustments\" as 474,412 and "
+    "443,710 - but this sheet reproduces Table 3, and filling Table 3's blank from Table 4/5 would be "
+    "normalising, so the blank stands and the cross-reference is recorded here instead.\n"
+    "• THE UNIT CHANGES BETWEEN EDITIONS, so every AMOUNT row is split into two caption blocks (restructured "
+    "2026-09-16 under map rule 17). FY2021-FY2022 are US$'000 - the FY2022 edition's stub column reads \"In "
+    "USD $\" - while FY2024-FY2025 are £'000, the FY2025 edition's stub reading \"In GBP 000's\" with both "
+    "column heads repeating \"GBP 000's\", after the Bank's presentation-currency change from USD to GBP. No "
+    "single row can carry two units honestly, so each amount row appears twice, once per unit, the same shape "
+    "map rule 5 uses for the leverage basis break. RATIO rows stay single, because a percentage is unit-free. "
+    "Nothing is converted and neither edition's amounts are restated into the other's unit; within each unit "
+    "block the Bank's own row order is preserved exactly.\n"
+    "• The asterisk on the CET1 row is the Bank's own: the FY2025 edition footnotes it \"* Includes audited "
+    "current year profits\". The FY2022 edition carries no such footnote.\n"
+    "• LABEL DRIFT on the last row: the FY2025 edition prints \"NSFR ratio (%)\"; the FY2022 edition prints "
+    "\"NSFR ratio (%) (adjusted value)\". Both are shown in the row label rather than one being chosen.\n"
+    "• FY2021 IS THE FY2022 EDITION'S COMPARATIVE COLUMN, deliberately, because the FY2021 edition prints no "
+    "such table. Its \"Table 1: Key metrics USD 000's as at 31.12.2021\" (p.3) is an eight-tile dashboard "
+    "with no section structure, no Tier 1 row and no LCR build-up - a different object, not an unnumbered "
+    "template - so it cannot supply these rows: https://web.archive.org/web/20231209144740/"
+    "https://www.nbk.com/dam/jcr:19757e7d-4d03-40f8-bf39-63c995186e39/Pillar_III_Disclosures.pdf\n"
+    "• AND THE TWO EDITIONS DISAGREE FOR FY2021, which is why the choice matters. The FY2021 edition's own "
+    "dashboard gives CET1 capital and Total Regulatory capital as US$432,220k with a CET1/Total Capital "
+    "ratio of 21.81%, against Total RWAs of US$2,034,858k - an internally impossible pair (432,220/2,034,858 "
+    "= 21.24%). The FY2022 edition's comparative column gives US$443,710k with the same 21.81%, which does "
+    "tie (443,710/2,034,858 = 21.81%). Its RWA, leverage ratio (12.74%), LCR (227%) and NSFR (114%) are "
+    "identical in both editions. Both figures are recorded, neither is reconciled.\n\n"
+    "WHY THIS SHEET AND THE CET1 RATIO / TOTAL CAPITAL RATIO SHEETS DISAGREE FOR FY2021 AND FY2022 - FOUR "
+    "CELLS, EACH RE-ESTABLISHED FROM THE SOURCES ON 2026-09-16 AND EACH A GENUINE DIVERGENCE BETWEEN TWO OF "
+    "THE BANK'S OWN DOCUMENTS, NOT A TRANSCRIPTION ERROR. The four are: CET1 Ratio FY2022 (this sheet 22.26% "
+    "vs the CET1 Ratio sheet's 21.26%), CET1 Ratio FY2021 (21.81% vs 21.24%), and Total Capital Ratio for "
+    "the same two years, which carry the identical pair of figures.\n"
+    "  THE SUSPICION THAT HAD TO BE RULED OUT was a row-alignment slip: this table prints the SAME percentage "
+    "for its CET1 Ratio row and its Total Capital Ratio row in both years, which is the classic signature of "
+    "rows sliding by one during extraction. It was ruled out four ways, all first-hand:\n"
+    "  (1) The FY2022 edition's p.16 was RENDERED AT 300 DPI AND LOOKED AT, not read from the text layer. The "
+    "table is fully ruled; \"Common Equity Tier 1 Ratio 22.26% | 21.81%\" and \"Total Capital Ratio 22.26% | "
+    "21.81%\" each sit in their own bordered row, one below the other. Nothing has slid.\n"
+    "  (2) The ratios tie to the amounts printed in the same table, to the basis point: 474,412 / 2,131,640 = "
+    "22.26% and 443,710 / 2,034,858 = 21.81%.\n"
+    "  (3) The two ratios being equal is not an artefact but an arithmetic necessity for this bank. NBKI holds "
+    "no AT1 and no Tier 2 - the audited accounts' own capital note prints \"Tier 2 capital  -\" for every year "
+    "- so CET1 = Tier 1 = Total Capital, and all three ratios must coincide. The audited accounts print all "
+    "three ratios as equal too (21.26% / 21.26% / 21.26% for FY2022), just at a different level.\n"
+    "  (4) THE SAME EDITION CORROBORATES ITSELF ON A SECOND TABLE. Its section 4.4 Table 5 \"Capital "
+    "movement\" (p.18), an own-funds composition table, builds CET1 up from components and then prints three "
+    "separate ratio rows - \"Common Equity Tier 1 (as a percentage of total risk exposure amount)\", \"Tier 1 "
+    "(...)\" and \"Total capital (...)\" - all three 22.26% for FY2022 and all three 21.81% for FY2021, "
+    "against CET1 after regulatory adjustments of 474,412 / 443,710 and the same RWA. Two independent tables, "
+    "same figures.\n"
+    "  THE COLUMN HEADERS AND THE TABLE CAPTION WERE CHECKED TOO (map rules 18 and 19), because a "
+    "misidentified entity block is the other way two adjacent figures come to look like two different ratios. "
+    "They rule it out here. This table's two value columns are headed with DATES - \"31/12/22\" and "
+    "\"31/12/21\" - not with entity names, so there is no Group-beside-Individual pair to confuse, and the CET1 "
+    "Ratio and Total Capital Ratio figures sit on two separately captioned ROWS, not in two columns of one row. "
+    "The document is NBKI's own, not a parent's with a subsidiary block in it: its section 1.1 says \"This "
+    "document comprises the Pillar 3 disclosures on capital and risk management for NBKI Limited ('NBKI' or "
+    "'the Bank') as of 31 December 2022\", section 1.2 identifies \"National Bank of Kuwait International "
+    "('NBKI') PLC ... company number 02773743 ... Firm number on the FCA Register is 171532\" - the Banks List "
+    "entity exactly - and section 1.1 states the document exists \"to meet the regulatory disclosure "
+    "requirements under Part 8 of the UK Capital Requirements Regulation (CRR) ... including the Disclosure "
+    "(CRR) part of the PRA Rulebook\". So NBKI discharges its own UK disclosure duty in its own document; the "
+    "Kuwaiti parent National Bank of Kuwait S.A.K.P. reports under Central Bank of Kuwait Basel III rules and "
+    "publishes no UK KM1 for this subsidiary. The edition's own list of tables runs Tables 1-6 with exactly one "
+    "\"Key metrics\" entry, so there is no second, appendix-away printing of the template either (map rule 11).\n"
+    "  THE OTHER SIDE WAS RE-READ TOO, from the Bank's own audited accounts rather than from this project's "
+    "notes: AR2022 Note 31 \"Capital management (unaudited)\" (printed p.65) gives RWA 2,131,640 / 2,034,858 "
+    "with CET1 = Tier 1 = Total capital of 453,162 / 432,220 and ratios 21.26% / 21.24%; AR2021 Note 32 (same "
+    "title, printed p.73) gives 432,220 and 21.24% for FY2021 against the same RWA. Those also tie to the "
+    "basis point. So BOTH SIDES ARE INTERNALLY CONSISTENT and they differ only in the capital numerator: "
+    "US$21,250k for FY2022 and US$11,490k for FY2021.\n"
+    "  WHAT THE GAP IS. The Pillar 3's Table 5 shows CET1 before regulatory adjustments of 473,823 (FY2022) "
+    "and 447,733 (FY2021) - exactly the total equity on the Bank's own audited balance sheet for those two "
+    "dates - and then takes it to 474,412 and 443,710 \"after Regulatory adjustments\". The audited capital "
+    "note reaches 453,162 and 432,220 from the same starting equity. The two documents therefore apply "
+    "DIFFERENT REGULATORY ADJUSTMENTS to the same audited equity, and the Bank does not reconcile them "
+    "anywhere. This project does not reconcile them either, and no figure has been edited so that the two "
+    "sides agree.\n"
+    "  WHICH SHEET CARRIES WHICH, DELIBERATELY: this KM1 sheet reproduces the PILLAR 3 table, because that is "
+    "what a KM1 sheet is for; the single-metric capital and ratio sheets carry the AUDITED ANNUAL REPORT "
+    "figures, chosen there (HD-066, 2026-09-06) as audited-adjacent. The verifier reports the four "
+    "disagreements every run, and that is the intended outcome - the workbook shows both of the Bank's own "
+    "answers side by side rather than quietly picking one. RWA, leverage, LCR and NSFR agree across all "
+    "sources for both years, which is itself evidence that only the own-funds definition is in dispute.\n"
+    "  A SEPARATE SOURCE DEFECT IN THAT SAME TABLE 5, recorded and not corrected (map rule 7): its FY2022 "
+    "column does not foot. 289,403 + 211,714 - 26,277 = 474,840, against a printed \"CET1 capital before "
+    "regulatory adjustments\" of 473,823 (the AOCI figure would need to be -27,294 to foot, and -27,294 is "
+    "what the audited balance sheet implies). The FY2021 column foots exactly (235,883 + 225,681 - 13,831 = "
+    "447,733). Note also that FY2022's \"after regulatory adjustments\" figure is HIGHER than its \"before\" "
+    "figure, while FY2021's is lower. None of this is on this sheet - Table 5 is not the KM1 - but it is "
+    "recorded because it bears on how much weight the Pillar 3's own-funds numbers can carry.\n\n"
+    "FY2023: no FY2023 Pillar 3 edition exists to transcribe. NBKI republishes at a single stable URL rather "
+    "than minting a per-year file, the Wayback Machine holds only four captures of it (2023-12-09 = the "
+    "FY2021 edition, 2024-02-17 = the FY2022 edition, and two 2025 captures that are text/html error pages), "
+    "and the live FY2025 edition carries a single FY2024 comparative only. A domain-wide Wayback CDX "
+    "enumeration of nbk.com surfaced two files called \"Pillar III Disclosures 2023.pdf\" and \"Pillar III "
+    "Disclosres 2024.pdf\" [sic] - BOTH ARE NBK FRANCE SA, a different legal entity reporting in euros on the "
+    "EU KM1 template, and neither may be used here. (Re-checked 2026-09-16: both of those French URLs now "
+    "return HTTP 200 with Content-Type text/html - a soft-404 - so they are dead as well as wrong.) See the "
+    "RWA Breakdown sheet for the full four-stage verification of this gap.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="National Bank of Kuwait (International) Plc — KM1 Key Metrics",
+    subtitle="The Bank's own \"Table 3: Key metrics\" from section 4.2 of its Pillar 3 Disclosure, reproduced in "
+             "its own row order, labels and precision. The Bank prints this table UNNUMBERED, so no template "
+             "row numbers are shown. THE UNIT CHANGES BETWEEN EDITIONS - US$'000 for FY2021-FY2022, £'000 for "
+             "FY2024-FY2025 - so every amount row appears TWICE, once per unit, and nothing is converted; ratio "
+             "rows stay single. FY2023 is blank because no FY2023 edition exists. The FY2022 edition's own CET1 "
+             "capital cells are empty in the source and are left empty here. The CET1 and Total Capital ratios "
+             "on this sheet differ from the single-metric ratio sheets for FY2021 and FY2022: that is a real "
+             "conflict between the Bank's Pillar 3 and its audited accounts, established from both documents "
+             "and explained in full in the source note - neither side has been edited to agree with the other.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=460,
+)
+
 
 metric("CET1 Capital", CAPITAL_UNIT, [("Common Equity Tier 1 (CET1) capital", CAPITAL)], CAPITAL_NOTE)
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 capital adequacy ratio", CAPITAL_RATIOS)])

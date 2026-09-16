@@ -53,14 +53,21 @@ CASH_SOURCES = "Sources - Secure Trust Bank PLC consolidated Group cash flows, �
     for y in YEARS
 ) + "\n\n" + ENTITY_NOTE
 
+# PAGE NUMBERS ARE THE PRINTED FOLIO, not the PDF sheet index, and the two differ by
+# one in every Secure Trust Bank Pillar 3 edition (the cover carries no printed number).
+# Corrected 2026-09-16 after re-reading each page's own footer: the FY2025-FY2022 KM1
+# citations read "p. 5" (the PDF sheet) where every one of those pages is footed 4, and
+# the FY2020 CC1 citation read "Section 4.4 ... p. 13" where the table is section 4.1 on
+# a page footed 12. A folio is a promise about where a reader should look and an
+# off-by-one one cannot be detected from inside the spreadsheet.
 P3_PAGE_TABLE = {
-    "FY2025": "Key metrics table (UK KM1), p. 5",
-    "FY2024": "Key metrics table (UK KM1), p. 5",
-    "FY2023": "Key metrics table (UK KM1), p. 5",
-    "FY2022": "Key metrics table (UK KM1), p. 5",
-    "FY2021": "Key metrics table, p. 4",
+    "FY2025": "Key metrics table (UK KM1), p. 4",
+    "FY2024": "Key metrics table (UK KM1), p. 4",
+    "FY2023": "Key metrics table (UK KM1), rows 1-17 on p. 4 and rows 18-20 continued on p. 5",
+    "FY2022": "Key metrics table (UK KM1), p. 4",
+    "FY2021": "Key metrics table, p. 4; Total RWA from Section 4.1 table CC1 row 60, p. 12",
     "FY2020": "Section 2 'Key Prudential Metrics and Risk Weighted Assets', p. 4 ('Including IFRS 9 Transitional Arrangement' column); "
-              "Total RWA from Section 4.4 table CC1 row 60, p. 13; leverage ratio from Appendix B table LRCom row 22, p. 32",
+              "Total RWA from Section 4.1 table CC1 row 60, p. 12; leverage ratio from Appendix B table LRCom row 22, p. 32",
     "FY2019": "Section 2 'Key Prudential Metrics and Risk Weighted Assets', p. 5 (31 Dec 2019 column); "
               "Total RWA from Section 4.1 table CC1 row 60, p. 7; leverage ratio from Appendix B table LRCom row 22, p. 22",
     "FY2018": "Section 2.2 'Key Metrics (at consolidated group level)', p. 4, column a (31-Dec-18)",
@@ -168,7 +175,24 @@ IS_SOURCES = (
     f"FY2024: Annual Report & Accounts 2024, Consolidated statement of comprehensive income, p.130 - {AR2024_URL}\n"
     f"FY2023: Annual Report & Accounts 2023, Consolidated statement of comprehensive income, p.114 - {AR2023_URL}\n"
     f"FY2022: Annual Report & Accounts 2022, Consolidated statement of comprehensive income, p.120 - {AR2022_URL}\n"
-    f"FY2021: Annual Report & Accounts 2021, Consolidated statement of comprehensive income, p.108 - {AR2021_URL}\n\n"
+    f"FY2021: Annual Report & Accounts 2021, Consolidated statement of comprehensive income, p.108 - {AR2021_URL}\n"
+    f"FY2020: Annual Report & Accounts 2020, Consolidated statement of comprehensive income, p.113 - {AR_URLS['FY2020']}\n"
+    f"FY2019: Annual Report & Accounts 2019, Consolidated statement of comprehensive income, p.120 - {AR_URLS['FY2019']}\n"
+    f"FY2018: Annual Report & Accounts 2018, Consolidated statement of comprehensive income, p.128 - {AR_URLS['FY2018']}\n"
+    f"FY2017: Annual Report & Accounts 2017, Consolidated statement of comprehensive income, p.110, 'Total' column - {AR_URLS['FY2017']}\n\n"
+    "THREE CORRECTIONS MADE 2026-09-16, each traced back to the year's own annual report after the operating-income-to-"
+    "profit-before-tax chain was found not to foot in three years. (a) FY2020 was missing a line: AR2020 p.113 prints "
+    "'Losses on modification of financial assets (3.1)' between the impairment charge and operating expenses, and the row here "
+    "carried FY2023/FY2022/FY2021 gains only. The row is now captioned 'Gains/(losses) on modification of financial assets', "
+    "which is AR2021's own caption for the line across both signs. (b) FY2021 carried the same 0.1 loss twice. AR2021 p.108 "
+    "prints one such line, 'Losses from derivatives and hedge accounting (0.1)'; the FY2022 report's restated 2021 comparative "
+    "renames it 'Fair value losses on financial instruments (0.1)'. Both captions existed here with a value against FY2021, so "
+    "the 0.1 was counted twice. The own-edition caption is kept and the restated one is now blank for FY2021. (c) FY2017 was "
+    "missing 'Profit on sale of equity instruments available-for-sale 0.3', which AR2017 p.110 prints immediately before profit "
+    "before income tax. It is shown here among the other non-interest items rather than in that printed position, because this "
+    "sheet merges nine editions into one row set; AR2018 p.128 prints the same row with a dash for 2018, so FY2018 is left "
+    "blank rather than zero. After all three, operating income less every intervening line equals the published profit before "
+    "income tax in all nine years.\n\n"
     + ENTITY_NOTE
     + " Each year uses that year's own originally-published continuing/discontinued split, not a later restated comparative. FY2022's Consumer Finance "
     "(Debt Managers) business and FY2023's Vehicle Finance disposal each produced small discontinued-operations results in their own year; FY2025's own report "
@@ -188,11 +212,12 @@ IS_ROWS = [
     ("TOTAL", "Net fee and commission income", {"FY2025": 14.1, "FY2024": 19.0, "FY2023": 17.2, "FY2022": 17.0, "FY2021": 13.7, "FY2020": 15.2, "FY2019": 20.1, "FY2018": 17.9, "FY2017": 14.9}),
     ("TOTAL", "Operating income", {"FY2025": 165.2, "FY2024": 203.9, "FY2023": 184.7, "FY2022": 169.6, "FY2021": 164.5, "FY2020": 166.1, "FY2019": 165.5, "FY2018": 151.6, "FY2017": 137.5}),
     ("DATA", "Net impairment charge on loans and advances to customers", {"FY2025": -31.4, "FY2024": -61.9, "FY2023": -43.2, "FY2022": -38.2, "FY2021": -4.5, "FY2020": -51.3, "FY2019": -32.6, "FY2018": -32.4, "FY2017": -36.9}),
-    ("DATA", "Gains on modification of financial assets", {"FY2023": 0.3, "FY2022": 1.1, "FY2021": 1.5}),
+    ("DATA", "Gains/(losses) on modification of financial assets", {"FY2023": 0.3, "FY2022": 1.1, "FY2021": 1.5, "FY2020": -3.1}),
     ("DATA", "Other gains/(losses)", {"FY2025": 0.1, "FY2024": -0.3}),
-    ("DATA", "Fair value gains/(losses) on financial instruments", {"FY2025": 0.1, "FY2024": 1.2, "FY2023": 0.5, "FY2022": -0.3, "FY2021": -0.1}),
+    ("DATA", "Fair value gains/(losses) on financial instruments", {"FY2025": 0.1, "FY2024": 1.2, "FY2023": 0.5, "FY2022": -0.3}),
     ("DATA", "Loss on disposal of loan books", {"FY2021": -1.4}),
     ("DATA", "Losses from derivatives and hedge accounting", {"FY2021": -0.1}),
+    ("DATA", "Profit on sale of equity instruments available-for-sale", {"FY2017": 0.3}),
     ("TOTAL", "Operating expenses", {"FY2025": -74.7, "FY2024": -103.8, "FY2023": -99.7, "FY2022": -93.2, "FY2021": -104.0, "FY2020": -91.6, "FY2019": -94.2, "FY2018": -84.5, "FY2017": -71.6}),
     ("TOTAL", "Profit before income tax from continuing operations before exceptional items", {"FY2025": 59.3, "FY2024": 39.1, "FY2023": 42.6, "FY2022": 39.0, "FY2021": 56.0, "FY2020": 20.1, "FY2019": 38.7, "FY2018": 34.7, "FY2017": 29.3}),
     ("DATA", "Exceptional items", {"FY2025": 0.0, "FY2024": -9.9, "FY2023": -6.5}),
@@ -214,7 +239,7 @@ IS_ROWS = [
 bw.add_income_statement_sheet(
     "Secure Trust Bank PLC - Group Profit & Loss",
     "Consolidated Group basis, £million; each year uses that year's own originally-published continuing/discontinued split.",
-    IS_ROWS, IS_SOURCES, first_col_width=68, source_height=280, unit_suffix=" (£m)",
+    IS_ROWS, IS_SOURCES, first_col_width=68, source_height=430, unit_suffix=" (£m)",
 )
 
 EQ_SOURCES = (
@@ -389,6 +414,263 @@ bw.add_asset_quality_sheet(
     AQ_ROWS, AQ_SOURCES, first_col_width=60, source_height=260, unit_suffix=" (£m)",
 )
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics
+#
+# FOUR REGIMES, NEVER MERGED. Secure Trust Bank's nine Pillar 3 editions do not
+# all print the same table, and three of them print no key-metrics template at
+# all. The sheet below therefore carries TWO separate template blocks and leaves
+# a deliberate three-year hole between them:
+#
+#   FY2025-FY2022  UK KM1 (rows 1-20, UK-prefixed rows UK 7a-7d, UK 11a, UK 16a,
+#                  UK 16b). The Bank omits the rows it has nothing to report in
+#                  - UK 8a, UK 9a, 10, UK 10a and 14a-14e never appear - and its
+#                  own p.3 says so: "where specific rows and columns in the
+#                  tables prescribed by the PRA are not applicable, these are
+#                  omitted". Those rows are therefore absent here too rather
+#                  than printed empty, because reproducing the table means
+#                  reproducing which rows it has.
+#   FY2021-FY2019  NO KM1 AT ALL. Those three editions replace the template with
+#                  a short unnumbered "Key Prudential Metrics" summary: capital
+#                  amounts, a capital-ratio block, and (FY2019 only) a two-line
+#                  Basel III leverage block. No SREP block, no buffer block, no
+#                  row 12, no LCR rows, no NSFR rows; FY2020 and FY2021 do not
+#                  even carry an RWA amount in that table. It fails the row-set
+#                  test, so those columns are left blank rather than filled from
+#                  a table that is not the template. This is a POSITIVE finding,
+#                  not a retrieval failure: the FY2021 extraction returns 120
+#                  occurrences of "capital" and 118 of "ratio" against 0 of
+#                  "km1", and pdfimages reports one image in the file (the
+#                  logo), so there is no scanned table hiding from the text
+#                  layer either.
+#   FY2018-FY2017  The EARLIER EU/Basel KM1, "Key Metrics (at consolidated group
+#                  level)", rows 1-20 with the "fully loaded ECL accounting
+#                  model" twins 1a/2a/3a/5a/6a/7a/14a and FIVE QUARTERLY columns
+#                  (a = year end, b-e = the preceding quarters and the prior
+#                  year end). Only column a is taken, because only column a is
+#                  that edition's reporting date. This is a genuinely different
+#                  template from the UK KM1 above - its row 13/14 leverage is
+#                  Basel III (exposure measure INCLUDING claims on central
+#                  banks), its rows 15-17 are a period observation rather than a
+#                  twelve-month average, and its row 4 is footnoted as Total
+#                  Risk Exposure rather than RWA - so it is kept in its own
+#                  block and no figure is carried across the break.
+#
+# IFRS 9-FL twins appear only in the FY2024 and FY2023 editions. The FY2025
+# edition states its figures are "reported without the application of Article
+# 473a IFRS 9 transitional arrangements", so there is no twin to print; the
+# FY2022 edition prints only the transitional figures. Rows 18-20 exist only in
+# the FY2023 and FY2022 editions (the SDDT reduced template drops NSFR from
+# FY2024 onward, and the FY2017 edition predates the requirement).
+#
+# Each year comes from the edition in which that year is the REPORTING year, so
+# the FY2022 column is the FY2022 edition's own 31 December 2022 figures, NOT
+# the "Restated" 31 December 2022 comparative column the FY2023 edition prints.
+KM1_ROWS = [
+    ("SECTION", "UK KM1 (FY2025-FY2022 editions) - Available own funds (amounts) (£m)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET 1) capital",
+     {"FY2025": 364.8, "FY2024": 351.4, "FY2023": 337.9, "FY2022": 327.4}),
+    ("DATA", "     CET 1 capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": 351.3, "FY2023": 335.8}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 364.8, "FY2024": 351.4, "FY2023": 337.9, "FY2022": 327.4}),
+    ("DATA", "     Tier 1 capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": 351.3, "FY2023": 335.8}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 428.4, "FY2024": 415.7, "FY2023": 397.6, "FY2022": 377.3}),
+    ("DATA", "     Total capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": 415.6, "FY2023": 395.5}),
+    ("SECTION", "Risk weighted exposure amounts (£m)", {}),
+    ("DATA", "4    Total RWEAs",
+     {"FY2025": 2827.5, "FY2024": 2855.7, "FY2023": 2653.4, "FY2022": 2335.0}),
+    ("DATA", "     Total RWEAs as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": 2853.6, "FY2023": 2651.7}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    CET 1 ratio (%)",
+     {"FY2025": "12.9%", "FY2024": "12.3%", "FY2023": "12.7%", "FY2022": "14.0%"}),
+    ("DATA", "     CET 1 as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": "12.3%", "FY2023": "12.7%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "12.9%", "FY2024": "12.3%", "FY2023": "12.7%", "FY2022": "14.0%"}),
+    ("DATA", "     Tier 1 as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": "12.3%", "FY2023": "12.7%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "15.2%", "FY2024": "14.6%", "FY2023": "15.0%", "FY2022": "16.2%"}),
+    ("DATA", "     Total Capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": "14.6%", "FY2023": "14.9%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "0.6%", "FY2024": "0.6%", "FY2023": "0.6%", "FY2022": "0.6%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.2%", "FY2024": "0.2%", "FY2023": "0.2%", "FY2022": "0.2%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "0.3%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "0.3%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "9.0%", "FY2024": "9.0%", "FY2023": "9.0%", "FY2022": "9.0%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "13.5%", "FY2024": "13.5%", "FY2023": "13.5%", "FY2022": "12.5%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.8%", "FY2024": "7.2%", "FY2023": "7.7%", "FY2022": "8.95%"}),
+    ("SECTION", "Leverage ratio (£m / %)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 3861.6, "FY2024": 3717.7, "FY2023": 3472.8, "FY2022": 3049.9}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "9.4%", "FY2024": "9.5%", "FY2023": "9.7%", "FY2022": "10.7%"}),
+    ("DATA", "     Leverage ratio excluding claims on central banks (%) as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2024": "9.5%", "FY2023": "9.7%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£m / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 443.2, "FY2024": 427.2, "FY2023": 358.0, "FY2022": 283.6}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 416.4, "FY2024": 383.3, "FY2023": 355.1, "FY2022": 298.3}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 182.7, "FY2024": 184.4, "FY2023": 181.1, "FY2022": 187.3}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 233.7, "FY2024": 198.9, "FY2023": 174.0, "FY2022": 112.6}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "190.4%", "FY2024": "219.6%", "FY2023": "208.0%", "FY2022": "270.1%"}),
+    ("SECTION", "Net Stable Funding Ratio (£m / %)", {}),
+    ("DATA", "18    Total available stable funding", {"FY2023": 3255.4, "FY2022": 2820.5}),
+    ("DATA", "19    Total required stable funding", {"FY2023": 2266.1, "FY2022": 1846.3}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2023": "143.6%", "FY2022": "152.8%"}),
+    ("SECTION",
+     "FY2021, FY2020 AND FY2019: NO KM1 TEMPLATE PUBLISHED - those editions print a short unnumbered "
+     "'Key Prudential Metrics' summary that fails the row-set test (see the source note below). Left blank, "
+     "never back-filled from that summary or from the statutory accounts.", {}),
+    ("SECTION", "EARLIER EU/BASEL KM1 (FY2018 and FY2017 editions, column a = year end) - Available capital (amounts) (£m)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1)", {"FY2018": 251.8, "FY2017": 238.9}),
+    ("DATA", "1a    Fully loaded ECL accounting model CET1", {"FY2018": 227.3}),
+    ("DATA", "2    Tier 1 capital", {"FY2018": 251.8, "FY2017": 238.9}),
+    ("DATA", "2a    Fully loaded ECL accounting model Tier 1", {"FY2018": 227.3}),
+    ("DATA", "3    Total capital", {"FY2018": 297.5, "FY2017": 243.3}),
+    ("DATA", "3a    Fully loaded ECL accounting model total capital", {"FY2018": 273.0}),
+    ("SECTION", "Risk weighted assets (amount) (£m)", {}),
+    ("DATA", "4    Total risk weighted assets (RWA)", {"FY2018": 1824.6, "FY2017": 1446.1}),
+    ("SECTION", "Risk based capital ratios as a percentage of RWA", {}),
+    ("DATA", "5    Common Equity Tier 1 (CET1) ratio (%)", {"FY2018": "13.8%", "FY2017": "16.5%"}),
+    ("DATA", "5a    Fully loaded ECL accounting model CET1 (%)", {"FY2018": "12.5%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2018": "13.8%", "FY2017": "16.5%"}),
+    ("DATA", "6a    Fully loaded ECL accounting model Tier 1 ratio (%)", {"FY2018": "12.5%"}),
+    ("DATA", "7    Total capital ratio (%)", {"FY2018": "16.3%", "FY2017": "16.8%"}),
+    ("DATA", "7a    Fully loaded ECL accounting model total capital ratio (%)", {"FY2018": "15.0%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "8    Capital conservation buffer requirement (2.5% from 2019) (%)", {"FY2018": "1.9%", "FY2017": "1.3%"}),
+    ("DATA", "9    Countercyclical buffer requirement (%)", {"FY2018": "1.0%", "FY2017": "0.0%"}),
+    ("DATA", "10    Bank G-SIB and/or D-SIB additional requirements (%)", {"FY2018": "0.0%", "FY2017": "0.0%"}),
+    ("DATA", "11    Total of bank CET1 specific buffer requirements (rows 8-10) (%)", {"FY2018": "2.9%", "FY2017": "1.3%"}),
+    ("DATA", "12    CET1 available after meeting the bank's specific buffer requirements (%)", {"FY2018": "10.9%", "FY2017": "15.3%"}),
+    ("SECTION", "Basel III leverage ratio (£m / %)", {}),
+    ("DATA", "13    Total Basel III leverage ratio exposure measure", {"FY2018": 2432.8, "FY2017": 1942.7}),
+    ("DATA", "14    Basel III leverage ratio (%) (row 2/row 13)", {"FY2018": "10.4%", "FY2017": "12.3%"}),
+    ("DATA", "14a    Fully loaded ECL accounting model Basel III leverage ratio (%) (row 2a/row 13)", {"FY2018": "9.3%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£m / %)", {}),
+    ("DATA", "15    Total HQLA", {"FY2018": 211.2, "FY2017": 218.7}),
+    ("DATA", "16    Total net cash outflow", {"FY2018": 33.9, "FY2017": 29.7}),
+    ("DATA", "17    LCR ratio (%)", {"FY2018": "623.2%", "FY2017": "736.4%"}),
+    ("SECTION", "Net Stable Funding Ratio (£m / %)", {}),
+    ("DATA", "18    Total available stable funding", {"FY2018": 2245.8}),
+    ("DATA", "19    Total required stable funding", {"FY2018": 1523.1}),
+    ("DATA", "20    NSFR ratio", {"FY2018": "147.4%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Secure Trust Bank PLC Group key metrics templates, taken from each year's OWN Pillar 3 edition:\n"
+    f"FY2025: Pillar 3 Disclosures for the year ended 31 December 2025, section 2 'Key metrics', table headed 'The table below "
+    f"UK KM1/International Financial Reporting Standard ('IFRS') 9-FL presents key metrics...', printed p.4 (PDF p.5), column "
+    f"'31 Dec 2025 / £million' - {P3_URLS['FY2025']}\n"
+    f"FY2024: Pillar 3 Disclosures for the year ended 31 December 2024, section 2 'Key metrics', printed p.4 (PDF p.5), column "
+    f"'31 Dec 2024 / £million' - {P3_URLS['FY2024']}\n"
+    f"FY2023: Pillar 3 Disclosures for the year ended 31 December 2023, section 2 'Key metrics', rows 1-17 on printed p.4 (PDF "
+    f"p.5) and rows 18-20 continued onto printed p.5 (PDF p.6) under a repeated column header, column '31 Dec 2023 / £million' "
+    f"- {P3_URLS['FY2023']}\n"
+    f"FY2022: Pillar 3 Disclosures for the year ended 31 December 2022, section 2 'Key metrics', table introduced 'The table "
+    f"below UK KM1 presents key metrics...', printed p.4 (PDF p.5), column '31 Dec 2022 / £million' - {P3_URLS['FY2022']}\n"
+    f"FY2018: Pillar 3 disclosures for the year ended 31 December 2018, section 2.2 'Key Metrics (at consolidated group level)', "
+    f"printed p.4 (PDF p.5), column a '31-Dec-18 / £'m' - {P3_URLS['FY2018']}\n"
+    f"FY2017: Pillar 3 disclosures for the year ended 31 December 2017, section 2.2 'Key Metrics (at consolidated group level)', "
+    f"printed p.5 (PDF p.6), column a '31-Dec-17 / £'m' - {P3_URLS['FY2017']}\n\n"
+    "FY2021, FY2020 AND FY2019 PUBLISH NO KM1 - A SOURCED NEGATIVE, NOT A GAP IN THE SEARCH. All three editions were downloaded "
+    "in full (HTTP 200, Content-Type application/pdf, %PDF magic bytes confirmed) and read, not merely searched. Each prints a "
+    "section headed 'Key Prudential Metrics' (FY2019/FY2020: 'Key Prudential Metrics and Risk Weighted Assets'; FY2021: 'Key "
+    "metrics') whose table is SHORT AND UNNUMBERED: an 'Available capital (amounts)' block of three lines, a 'Risk based capital "
+    "ratios' block of three lines, and - in FY2019 only - a two-line 'Basel III leverage ratio' block. There is no SREP block, "
+    "no combined-buffer block, no row 12, no LCR rows and no NSFR rows in any of the three; FY2020 and FY2021 carry no "
+    "risk-weighted-assets amount in that table at all. On the row-set test that table is a summary, not the template, so those "
+    "three columns are left blank above. The extraction is demonstrably working rather than silently empty: the FY2021 text "
+    "layer returns 120 occurrences of 'capital' and 118 of 'ratio' against 0 of 'km1', and pdfimages reports a single image in "
+    "the file (the corporate logo), so no key-metrics table is hiding in a bitmap. Nothing has been back-filled into those years "
+    "from the summary table, from the CC1/OV1 tables elsewhere in those documents, or from the statutory accounts - the "
+    "individual Pillar 3 metric sheets in this workbook do source those years from CC1/OV1/LRCom, but that is a different "
+    "disclosure and is not represented here as a KM1 row.\n\n"
+    "TWO TEMPLATES, ONE SHEET, NO MERGING. The FY2018 and FY2017 block is the earlier EU/Basel 'Key Metrics' template, not the "
+    "UK KM1. Its row numbering is the same for rows 1-20 but its content is not comparable at three points: (a) rows 13/14 are "
+    "the Basel III leverage ratio, whose exposure measure INCLUDES claims on central banks, against the UK basis above which "
+    "excludes them from 1 January 2022; (b) rows 15-17 are a period observation of HQLA over net cash outflow, against the "
+    "twelve-month average of month-end observations the UK KM1 requires; (c) both editions footnote row 4 - 'Total Risk Exposure "
+    "(TRE) has been reported in row 4 rather than Risk Weighted Assets (RWA). TRE represents RWA plus the Operational Risk "
+    "component.' The figure is reproduced exactly as printed under the label the document uses. That older table also prints "
+    "FIVE QUARTERLY COLUMNS (a = the year end, b-d = the preceding quarter ends, e = the prior year end); only column a is "
+    "transcribed, because only column a is that edition's reporting date. The FY2018 edition's column e therefore repeats "
+    "31-Dec-17 and the FY2017 edition's column e carries 31-Dec-16, and neither is used.\n\n"
+    "DASHES AND ABSENT ROWS. In the FY2017 edition the fully-loaded twins 1a/2a/3a/5a/6a/7a/14a are printed as '-' (the Group "
+    "had not yet made the IFRS 9 transitional election); a dash is reproduced as an empty cell, never as a zero. Rows 18-20 are "
+    "not printed at all in the FY2017 edition - the FY2018 edition explains why: 'The Net Stable Funding Ratio (NSFR) is "
+    "required to be disclosed from 30 June 2018 onwards.' The FY2024 and FY2025 editions likewise print no rows 18-20, because "
+    "the Group joined the SDDT regime in H2 2024 and moved to the reduced SDDT template (FRN 204550 holds PRA Disclosure (CRR) "
+    "Rule 3.1 and 3.2 permissions, both dated 09/07/2024); it nonetheless continued to publish full annual and half-year Pillar "
+    "3 editions. The FY2025 edition also prints no IFRS 9-FL twin rows, stating its figures are 'reported without the "
+    "application of Article 473a IFRS 9 transitional arrangements'. Secure Trust Bank omits UK 8a, UK 9a, 10, UK 10a and "
+    "14a-14e from the UK KM1 entirely, as its own p.3 says it will: 'where specific rows and columns in the tables prescribed "
+    "by the PRA are not applicable, these are omitted'. Those rows are absent above rather than shown empty, so the sheet "
+    "reproduces which rows the Bank printed.\n\n"
+    "OWN-EDITION FIGURES, NOT LATER COMPARATIVES - AND THE FY2022 DIVERGENCE IS REAL. The FY2022 column above is the FY2022 "
+    "edition's own 31 December 2022 figures. The FY2023 edition reprints that date as a column headed 'Restated1' with "
+    "different numbers, following a change in accounting policy for Group land and buildings (now at historical cost; see its "
+    "footnote 1 and note 1.3 of the 2023 Annual Report). Both are correct on their own basis; the divergences are CET1 and Tier "
+    "1 capital 327.4 own-edition against 326.9 restated, Total capital 377.3 against 376.8, Total RWEAs 2,335.0 against "
+    "2,334.6, Total capital ratio 16.2% against 16.1%, row 13 total exposure measure 3,049.9 against 3,049.4, and row 12 8.95% "
+    "against 8.9%. Every other row of that date agrees digit-for-digit between the two editions. The own-edition figure is kept "
+    "above and the restated one is recorded here rather than written over it.\n\n"
+    "THE FY2021 COLUMN IS BLANK EVEN THOUGH A LATER EDITION PRINTS ONE - AND HERE IS WHAT IT PRINTS. The FY2022 edition's UK "
+    "KM1 carries a third column headed '31 Dec 2021', populated for rows 1-12 only: CET 1 capital 303.6, Tier 1 capital 303.6, "
+    "Total capital 350.6, Total RWEAs 2,087.4, CET 1 ratio 14.5%, Tier 1 ratio 14.5%, Total capital ratio 16.8%, UK 7a 0.6%, UK "
+    "7b 0.2%, UK 7c 0.3%, UK 7d 9.0%, row 8 2.5%, row 9 0.0%, row 11 2.5%, UK 11a 12.0%, row 12 9.48%; rows 13-20 are empty "
+    "there, because that edition's footnote 1 says 'Ratios and figures requiring disclosure for the first time under new PS22/21 "
+    "guidance from 1 January 2022 do not include comparatives', and its footnote 2 says the 2021 figures 'are based on rules "
+    "applicable prior to 1 January 2022 (CRR regulation no 575/2013)'. Those values are recorded here and NOT written into the "
+    "FY2021 column above, because a KM1 column on this sheet asserts what the Bank published as its own key-metrics template for "
+    "that year, and for 2021 it published none. The comparative is quoted so the choice is visible and reversible rather than "
+    "silent.\n\n"
+    "SOURCE ARITHMETIC IN THE FY2022 LCR BLOCK. That edition's UK 16a (298.3) less UK 16b (187.3) is 111.0, against the 112.6 "
+    "it prints on row 16. The published figures are reproduced unchanged; the LCR cap on inflows (75% of outflows) does not "
+    "explain the difference at these values, so this is recorded as a defect in the source, not reconciled.\n\n"
+    "HALF-YEAR EDITIONS AS A SECOND OPINION, CHECKED 2026-09-16. Secure Trust Bank publishes an interim Pillar 3 each year "
+    "carrying the same template with a 30 June column, and every annual edition above reprints that same 30 June date as its "
+    "middle column. The two document families were compared cell by cell: all 37 populated values on this workbook's 'Interim "
+    "Pillar 3' sheet (H1 2025 through H1 2022, ten metrics) agree digit-for-digit with the 30 June columns of the FY2025, "
+    "FY2024, FY2023 and FY2022 annual editions - CET 1 and Tier 1 367.1 / 348.2 / 326.8 / 313.8, Total capital 432.7 / 409.7 / "
+    "383.5 / 363.6, Total RWEAs 2,916.8 / 2,735.3 / 2,518.5 / 2,237.1, and the leverage and LCR rows likewise. That is an "
+    "independent confirmation of a whole column of each annual edition at no extra transcription cost.\n\n"
+    + ENTITY_NOTE
+    + " KM1 is a Group-level template throughout; no Company-only column exists in any edition."
+)
+
+bw.add_km1_sheet(
+    "Secure Trust Bank PLC - UK KM1 Key Metrics",
+    "Consolidated Group basis. Two different templates, kept in separate blocks: UK KM1 (FY2025-FY2022) and the earlier "
+    "EU/Basel 'Key Metrics' table (FY2018-FY2017). FY2021-FY2019 publish no template. Amounts £million; ratios per cent, "
+    "as printed.",
+    KM1_ROWS, KM1_SOURCES, first_col_width=86, source_height=520,
+)
+
+
 def metric(name, unit, data, note=None):
     bw.add_metric_sheet(name, unit, data, P3_SOURCES, note=note, first_col_width=52, source_height=230)
 
@@ -417,8 +699,8 @@ RWA_SOURCES = (
     f"FY2021: Pillar 3 disclosures for the year ended 31 December 2021, Section 4.5 Pillar 1 Capital Requirements table, p.14 - {P3_URLS['FY2021']}\n"
     f"FY2020: Pillar 3 disclosures for the year ended 31 December 2020, Section 4.5 Pillar 1 Capital Requirements table, p.14 - {P3_URLS['FY2020']}\n"
     f"FY2019: Pillar 3 disclosures for the year ended 31 December 2019, Section 4.4 Pillar 1 Capital Requirements table, p.10 - {P3_URLS['FY2019']}\n"
-    f"FY2018: Pillar 3 disclosures for the year ended 31 December 2018, Section 2.3 table OV1 'Overview of Risk Weighted Assets', p.5, column a (31/12/18) - {P3_URLS['FY2018']}\n"
-    f"FY2017: Pillar 3 disclosures for the year ended 31 December 2017, Section 2.7 table OV1 'Overview of Risk Weighted Assets', p.7, column a (31/12/17) - {P3_URLS['FY2017']}\n\n"
+    f"FY2018: Pillar 3 disclosures for the year ended 31 December 2018, Section 2.5 table OV1 'Overview of Risk Weighted Assets', p.7, column a (31/12/18) - {P3_URLS['FY2018']}\n"
+    f"FY2017: Pillar 3 disclosures for the year ended 31 December 2017, Section 2.7 table OV1 'Overview of Risk Weighted Assets', p.10, column a (31/12/17) - {P3_URLS['FY2017']}\n\n"
     + ENTITY_NOTE
     + " FY2017 and FY2018 use the pre-UK (EU) OV1 template, whose line 1 is 'Credit Risk (excluding counterparty credit risk) CCR' and line 19 'Operational "
     "risk'; both years report counterparty credit risk, market risk, securitisation and the 250%-risk-weight threshold line as nil ('-'), so the nil CCR cells "

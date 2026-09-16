@@ -4,10 +4,10 @@
       "broad": {
         "banks": 138,
         "exclusions": {
-          "missing": 177,
+          "missing": 178,
           "non_numeric_disclosure": 76
         },
-        "observations": 979,
+        "observations": 980,
         "years": [
           2014,
           2015,
@@ -27,8 +27,8 @@
       "strict": {
         "banks": 61,
         "exclusions": {
-          "basis_mismatch": 247,
-          "missing": 177,
+          "basis_mismatch": 248,
+          "missing": 178,
           "non_numeric_disclosure": 76,
           "unknown_basis": 300
         },
@@ -54,10 +54,10 @@
       "broad": {
         "banks": 132,
         "exclusions": {
-          "missing": 826,
+          "missing": 830,
           "non_numeric_disclosure": 153
         },
-        "observations": 1398,
+        "observations": 1400,
         "years": [
           2013,
           2014,
@@ -76,14 +76,14 @@
         ]
       },
       "strict": {
-        "banks": 59,
+        "banks": 63,
         "exclusions": {
           "basis_mismatch": 376,
-          "missing": 826,
+          "missing": 830,
           "non_numeric_disclosure": 153,
           "unknown_basis": 431
         },
-        "observations": 591,
+        "observations": 593,
         "years": [
           2013,
           2014,
@@ -106,10 +106,10 @@
       "broad": {
         "banks": 135,
         "exclusions": {
-          "missing": 167,
+          "missing": 168,
           "non_numeric_disclosure": 93
         },
-        "observations": 938,
+        "observations": 939,
         "years": [
           2014,
           2015,
@@ -129,8 +129,8 @@
       "strict": {
         "banks": 60,
         "exclusions": {
-          "basis_mismatch": 241,
-          "missing": 167,
+          "basis_mismatch": 242,
+          "missing": 168,
           "non_numeric_disclosure": 93,
           "unknown_basis": 286
         },
@@ -159,7 +159,7 @@
           "missing": 164,
           "non_numeric_disclosure": 59
         },
-        "observations": 969,
+        "observations": 970,
         "years": [
           2009,
           2010,
@@ -181,14 +181,14 @@
         ]
       },
       "strict": {
-        "banks": 61,
+        "banks": 66,
         "exclusions": {
           "basis_mismatch": 243,
           "missing": 164,
           "non_numeric_disclosure": 59,
           "unknown_basis": 312
         },
-        "observations": 414,
+        "observations": 415,
         "years": [
           2009,
           2010,
@@ -570,19 +570,6 @@
         "reporting_basis": null,
         "source_note": "Sources - United Bank for Africa (UK) Limited Pillar 3 Disclosures, converted from USD to \u00a3 where a $ amount (see FX conversion note on the Cash Flow Statement sheet; % ratios are unconverted):\nFY2024 & FY2023: Pillar 3 Disclosures - 31 Dec 2024, p.10 (Section 4, Key Metrics) - https://www.ubauk.com/wp-content/uploads/sites/29/2026/05/UBA-UK-Pillar-3-Disclosures-31-Dec-2024.pdf\nFY2022 & FY2021: Pillar 3 Disclosures - 31 Dec 2022, p.9 (Section 4, Key Metrics) - https://www.ubauk.com/wp-content/uploads/sites/29/2023/08/UBA-UK-Pillar-3-Disclosures-31-Dec-2022_final-clean-trotter-comments.1-1.pdf\nFY2020 & FY2019: Pillar 3 Disclosures - 31 Dec 2020, p.9 (Capital Resources), p.10 (Leverage Ratio), p.12 (Pillar 1 Minimum Capital Requirement / RWA), p.17 (Liquidity ratios) - https://www.ubauk.com/wp-content/uploads/sites/29/2018/10/uba-uk-pillar-3-disclosures-31-dec-2020.pdf\nFY2018: Pillar 3 Disclosures - 31 Dec 2018, p.7 (Capital Resources), p.8 (Leverage Ratio), p.9 (Pillar 1 Minimum Capital Requirement / RWA), p.15 (Liquidity ratios) - https://www.ubauk.com/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf\n\nPRE-2021 FORMAT NOTE: FY2018/FY2019/FY2020's Pillar 3 reports pre-date the current 'Key Metrics' (UK KM1) template introduced from FY2021 onward - they instead disclose capital resources, the leverage ratio, and liquidity ratios as separate narrative tables under Basel III / CRR headings. The leverage ratio methodology also genuinely differs: FY2018-FY2020 disclose a single 'Exposure value of assets' figure that INCLUDES central government and central bank claims, where FY2021 onward's UK KM1 template explicitly excludes them (per CRR2) - both are shown exactly as each year's own report defines and labels its leverage ratio denominator, not force-aligned to one methodology. Total RWAs for FY2018-FY2020 are not printed as a single figure in either source document - each is derived as that year's own disclosed 'Minimum Capital Resource Requirement' (aggregating credit, market, and operational risk capital) divided by 8%, per the Standardised Approach relationship the same document states explicitly ('Minimum Capital Resource Requirement... at 8% of total risk weighted assets'); CET1/Tier 1/Total Capital ratios for these 3 years are likewise derived as Total own funds / this derived RWA figure, since none of the three years' own reports print a capital ratio percentage directly. HQLA, net cash outflow, available stable funding, and required stable funding \u00a3 amounts are not disclosed in any of the 3 years' Pillar 3 reports - only the LCR/NSFR ratios themselves - so the LCR and NSFR sheets show only the ratio row for FY2018-FY2020, with the underlying $ amount rows blank.\n\nLINK PROVENANCE (checked 15 September 2026). UBA UK's documents moved from the parent group's site path www.ubagroup.com/uk/ to the Bank's own domain www.ubauk.com; the /wp-content/uploads/sites/29/... path is unchanged, and the two hosts serve BYTE-IDENTICAL files (verified by MD5 below). Both FY2018 URLs in this script have been moved to www.ubauk.com. Every replacement was fetched and confirmed to be a real PDF (%PDF magic bytes, not merely HTTP 200) with its cover and entity read.\n1) FY2018 ANNUAL REPORT - the URL previously cited here was DEAD, but NOT for the reason previously recorded in this script. It 404s because of a FILENAME error, not the domain move: it says '...Report-and-Accts-...' where the file UBA actually published is '...Report-and-Accounts-...' (spelled out). Confirmed HTTP 404 on BOTH hosts on 15 September 2026, with a genuine 404 body (409 and 329 bytes of HTML respectively), not a soft-404 and not a 403/block. Dead original: https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accts-31-Dec-2018.pdf -> live replacement: https://www.ubauk.com/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accounts-31-Dec-2018.pdf (HTTP 200, %PDF, 956,558 bytes, 52 pages, cover 'UNITED BANK for AFRICA (UK) LIMITED / ANNUAL REPORT AND ACCOUNTS / 31 DECEMBER 2018'). The correctly-named file is ALSO still live on the legacy ubagroup.com path and is byte-identical to the ubauk.com copy (both MD5 7e97b0f5364393ce657b0b796bb170b8), so there is no question of a different edition having been substituted.\n   CONSEQUENCE - a data gap this re-pointing CLOSED, not merely a citation fix: because the FY2018 Annual Report was believed unobtainable, this workbook previously left FY2018's investment-securities measurement-basis sub-rows blank, with a note saying no copy could be located. The recovered document's Note 5.7.11 'Investment securities' (p.39) does disclose that split, and it is now transcribed onto those rows - see the Balance Sheet source note.\n2) FY2018 PILLAR 3 - this URL was NOT dead. https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf still returns HTTP 200 and a real PDF as at 15 September 2026, and is byte-identical to the ubauk.com copy now cited (both MD5 975b3403146028c16184ca72958332e8, 363,778 bytes, 19 pages). It has been migrated to www.ubauk.com pre-emptively, for consistency with the other six source URLs in this script and because ubagroup.com/uk/ is the legacy path the Bank has moved off. The legacy URL is recorded here rather than discarded.\nREPRODUCTION CHECK: every FY2018 figure in this workbook was re-read from the two ubauk.com documents and all reproduce exactly, with no restatement. Statement of Financial Position p.26 (Total assets $166,173k; total shareholders' equity $44,723k; loans from banks $110,774k); Statement of Comprehensive Income p.25 (interest income $9,863k; loss after tax $(1,881)k); Pillar 3 section 3 p.7 (TOTAL OWN FUNDS $42,697k), section 3.1 p.8 (exposure value of assets $174,209k; leverage ratio 24%), section 4.4 p.9 (credit risk $4,021k, market risk $231k, operational risk $805k, Minimum Capital Resource Requirement $5,057k) and the liquidity-ratios table (LCR 466%, NSFR 113%). Digits were checked visually, not taken from OCR - both documents carry a real text layer, so no OCR step was involved.",
         "value": 49.04
-      },
-      {
-        "bank": "MONZO",
-        "comparability_status": "broad-comparable",
-        "fiscal_year": 2025,
-        "frn": "730427",
-        "metric": "CET1 Ratio",
-        "reasons": [
-          "robust level score at least 3.5"
-        ],
-        "reporting_basis": "consolidated_group",
-        "source_note": "Sources (see entity note on Cash Flow Statement sheet: FY2025/24 = Monzo Bank Holding Group Limited consolidated (Group); FY2023-21 = Monzo Bank Limited, solo/Group basis as disclosed):\nFY2025: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2025, p.20 (Appendix 1: Key metrics - KM1 (Group)) - https://monzo.com/annual-report/2025/monzo-pillar-3-2025.pdf\nFY2024: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2024, p.29 (Appendix 1: Key metrics - KM1 (Group)) - https://monzo.com/docs/monzo-pillar-3-2024.pdf\nFY2023: Monzo Bank Limited Pillar 3 Disclosures 2023, p.30 (Appendix 1: Key metrics - KM1) - https://monzo.com/docs/monzo-pillar-3-2023.pdf\nFY2022: Monzo Bank Limited Pillar 3 Disclosures 2022, p.32-33 (Appendix 1: Key metrics - KM1) - https://monzo.com/static/docs/monzo-pillar-3-2022.pdf\nFY2021: Monzo Bank Limited Pillar 3 Disclosures 2021, p.12-13,20,32-33 (Table E/F/K and Appendix 4 IFRS9 transitional impact) - https://monzo.com/static/docs/monzo-pillar-3-2021.pdf\nFY2020: Monzo Bank Limited Group Pillar 3 Disclosures 2020, pp.9-15, 21-28 (capital, leverage, RWA and LCR tables) - https://monzo.com/documents/pillar_3_2020.pdf",
-        "value": 55.92
       },
       {
         "bank": "CLEARBANK",
@@ -998,19 +985,6 @@
         "reporting_basis": null,
         "source_note": "Sources - United Bank for Africa (UK) Limited Pillar 3 Disclosures, converted from USD to \u00a3 where a $ amount (see FX conversion note on the Cash Flow Statement sheet; % ratios are unconverted):\nFY2024 & FY2023: Pillar 3 Disclosures - 31 Dec 2024, p.10 (Section 4, Key Metrics) - https://www.ubauk.com/wp-content/uploads/sites/29/2026/05/UBA-UK-Pillar-3-Disclosures-31-Dec-2024.pdf\nFY2022 & FY2021: Pillar 3 Disclosures - 31 Dec 2022, p.9 (Section 4, Key Metrics) - https://www.ubauk.com/wp-content/uploads/sites/29/2023/08/UBA-UK-Pillar-3-Disclosures-31-Dec-2022_final-clean-trotter-comments.1-1.pdf\nFY2020 & FY2019: Pillar 3 Disclosures - 31 Dec 2020, p.9 (Capital Resources), p.10 (Leverage Ratio), p.12 (Pillar 1 Minimum Capital Requirement / RWA), p.17 (Liquidity ratios) - https://www.ubauk.com/wp-content/uploads/sites/29/2018/10/uba-uk-pillar-3-disclosures-31-dec-2020.pdf\nFY2018: Pillar 3 Disclosures - 31 Dec 2018, p.7 (Capital Resources), p.8 (Leverage Ratio), p.9 (Pillar 1 Minimum Capital Requirement / RWA), p.15 (Liquidity ratios) - https://www.ubauk.com/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf\n\nPRE-2021 FORMAT NOTE: FY2018/FY2019/FY2020's Pillar 3 reports pre-date the current 'Key Metrics' (UK KM1) template introduced from FY2021 onward - they instead disclose capital resources, the leverage ratio, and liquidity ratios as separate narrative tables under Basel III / CRR headings. The leverage ratio methodology also genuinely differs: FY2018-FY2020 disclose a single 'Exposure value of assets' figure that INCLUDES central government and central bank claims, where FY2021 onward's UK KM1 template explicitly excludes them (per CRR2) - both are shown exactly as each year's own report defines and labels its leverage ratio denominator, not force-aligned to one methodology. Total RWAs for FY2018-FY2020 are not printed as a single figure in either source document - each is derived as that year's own disclosed 'Minimum Capital Resource Requirement' (aggregating credit, market, and operational risk capital) divided by 8%, per the Standardised Approach relationship the same document states explicitly ('Minimum Capital Resource Requirement... at 8% of total risk weighted assets'); CET1/Tier 1/Total Capital ratios for these 3 years are likewise derived as Total own funds / this derived RWA figure, since none of the three years' own reports print a capital ratio percentage directly. HQLA, net cash outflow, available stable funding, and required stable funding \u00a3 amounts are not disclosed in any of the 3 years' Pillar 3 reports - only the LCR/NSFR ratios themselves - so the LCR and NSFR sheets show only the ratio row for FY2018-FY2020, with the underlying $ amount rows blank.\n\nLINK PROVENANCE (checked 15 September 2026). UBA UK's documents moved from the parent group's site path www.ubagroup.com/uk/ to the Bank's own domain www.ubauk.com; the /wp-content/uploads/sites/29/... path is unchanged, and the two hosts serve BYTE-IDENTICAL files (verified by MD5 below). Both FY2018 URLs in this script have been moved to www.ubauk.com. Every replacement was fetched and confirmed to be a real PDF (%PDF magic bytes, not merely HTTP 200) with its cover and entity read.\n1) FY2018 ANNUAL REPORT - the URL previously cited here was DEAD, but NOT for the reason previously recorded in this script. It 404s because of a FILENAME error, not the domain move: it says '...Report-and-Accts-...' where the file UBA actually published is '...Report-and-Accounts-...' (spelled out). Confirmed HTTP 404 on BOTH hosts on 15 September 2026, with a genuine 404 body (409 and 329 bytes of HTML respectively), not a soft-404 and not a 403/block. Dead original: https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accts-31-Dec-2018.pdf -> live replacement: https://www.ubauk.com/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accounts-31-Dec-2018.pdf (HTTP 200, %PDF, 956,558 bytes, 52 pages, cover 'UNITED BANK for AFRICA (UK) LIMITED / ANNUAL REPORT AND ACCOUNTS / 31 DECEMBER 2018'). The correctly-named file is ALSO still live on the legacy ubagroup.com path and is byte-identical to the ubauk.com copy (both MD5 7e97b0f5364393ce657b0b796bb170b8), so there is no question of a different edition having been substituted.\n   CONSEQUENCE - a data gap this re-pointing CLOSED, not merely a citation fix: because the FY2018 Annual Report was believed unobtainable, this workbook previously left FY2018's investment-securities measurement-basis sub-rows blank, with a note saying no copy could be located. The recovered document's Note 5.7.11 'Investment securities' (p.39) does disclose that split, and it is now transcribed onto those rows - see the Balance Sheet source note.\n2) FY2018 PILLAR 3 - this URL was NOT dead. https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf still returns HTTP 200 and a real PDF as at 15 September 2026, and is byte-identical to the ubauk.com copy now cited (both MD5 975b3403146028c16184ca72958332e8, 363,778 bytes, 19 pages). It has been migrated to www.ubauk.com pre-emptively, for consistency with the other six source URLs in this script and because ubagroup.com/uk/ is the legacy path the Bank has moved off. The legacy URL is recorded here rather than discarded.\nREPRODUCTION CHECK: every FY2018 figure in this workbook was re-read from the two ubauk.com documents and all reproduce exactly, with no restatement. Statement of Financial Position p.26 (Total assets $166,173k; total shareholders' equity $44,723k; loans from banks $110,774k); Statement of Comprehensive Income p.25 (interest income $9,863k; loss after tax $(1,881)k); Pillar 3 section 3 p.7 (TOTAL OWN FUNDS $42,697k), section 3.1 p.8 (exposure value of assets $174,209k; leverage ratio 24%), section 4.4 p.9 (credit risk $4,021k, market risk $231k, operational risk $805k, Minimum Capital Resource Requirement $5,057k) and the liquidity-ratios table (LCR 466%, NSFR 113%). Digits were checked visually, not taken from OCR - both documents carry a real text layer, so no OCR step was involved.",
         "value": 49.04
-      },
-      {
-        "bank": "MONZO",
-        "comparability_status": "broad-comparable",
-        "fiscal_year": 2025,
-        "frn": "730427",
-        "metric": "Tier 1 Ratio",
-        "reasons": [
-          "robust level score at least 3.5"
-        ],
-        "reporting_basis": "consolidated_group",
-        "source_note": "Sources (see entity note on Cash Flow Statement sheet: FY2025/24 = Monzo Bank Holding Group Limited consolidated (Group); FY2023-21 = Monzo Bank Limited, solo/Group basis as disclosed):\nFY2025: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2025, p.20 (Appendix 1: Key metrics - KM1 (Group)) - https://monzo.com/annual-report/2025/monzo-pillar-3-2025.pdf\nFY2024: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2024, p.29 (Appendix 1: Key metrics - KM1 (Group)) - https://monzo.com/docs/monzo-pillar-3-2024.pdf\nFY2023: Monzo Bank Limited Pillar 3 Disclosures 2023, p.30 (Appendix 1: Key metrics - KM1) - https://monzo.com/docs/monzo-pillar-3-2023.pdf\nFY2022: Monzo Bank Limited Pillar 3 Disclosures 2022, p.32-33 (Appendix 1: Key metrics - KM1) - https://monzo.com/static/docs/monzo-pillar-3-2022.pdf\nFY2021: Monzo Bank Limited Pillar 3 Disclosures 2021, p.12-13,20,32-33 (Table E/F/K and Appendix 4 IFRS9 transitional impact) - https://monzo.com/static/docs/monzo-pillar-3-2021.pdf\nFY2020: Monzo Bank Limited Group Pillar 3 Disclosures 2020, pp.9-15, 21-28 (capital, leverage, RWA and LCR tables) - https://monzo.com/documents/pillar_3_2020.pdf",
-        "value": 55.92
       },
       {
         "bank": "CLEARBANK",
@@ -1441,19 +1415,6 @@
         "value": 49.04
       },
       {
-        "bank": "MONZO",
-        "comparability_status": "broad-comparable",
-        "fiscal_year": 2025,
-        "frn": "730427",
-        "metric": "Total Capital Ratio",
-        "reasons": [
-          "robust level score at least 3.5"
-        ],
-        "reporting_basis": "consolidated_group",
-        "source_note": "Sources (see entity note on Cash Flow Statement sheet: FY2025/24 = Monzo Bank Holding Group Limited consolidated (Group); FY2023-21 = Monzo Bank Limited, solo/Group basis as disclosed):\nFY2025: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2025, p.20 (Appendix 1: Key metrics - KM1 (Group)) - https://monzo.com/annual-report/2025/monzo-pillar-3-2025.pdf\nFY2024: Monzo Bank Holding Group Limited Pillar 3 Disclosures 2024, p.29 (Appendix 1: Key metrics - KM1 (Group)) - https://monzo.com/docs/monzo-pillar-3-2024.pdf\nFY2023: Monzo Bank Limited Pillar 3 Disclosures 2023, p.30 (Appendix 1: Key metrics - KM1) - https://monzo.com/docs/monzo-pillar-3-2023.pdf\nFY2022: Monzo Bank Limited Pillar 3 Disclosures 2022, p.32-33 (Appendix 1: Key metrics - KM1) - https://monzo.com/static/docs/monzo-pillar-3-2022.pdf\nFY2021: Monzo Bank Limited Pillar 3 Disclosures 2021, p.12-13,20,32-33 (Table E/F/K and Appendix 4 IFRS9 transitional impact) - https://monzo.com/static/docs/monzo-pillar-3-2021.pdf\nFY2020: Monzo Bank Limited Group Pillar 3 Disclosures 2020, pp.9-15, 21-28 (capital, leverage, RWA and LCR tables) - https://monzo.com/documents/pillar_3_2020.pdf",
-        "value": 56.67
-      },
-      {
         "bank": "CHETWOOD",
         "comparability_status": "broad-comparable",
         "fiscal_year": 2025,
@@ -1654,6 +1615,19 @@
         "reporting_basis": null,
         "source_note": "Sources - Bank of Scotland plc's own unconsolidated ('The Bank') capital position, as stated in the 'Capital position' section of the Strategic Report of each year's own Companies House full accounts filing (no standalone Pillar 3 document is published for this entity - see the Entity Note):\nFY2025: Annual Report and Accounts 2025, p.2 - https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzUxMDk3MTM2NGFkaXF6a2N4/document?format=pdf&download=0\nFY2024: Annual Report and Accounts 2024, p.2 - https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQ2MDQ2MzkxNmFkaXF6a2N4/document?format=pdf&download=0\nFY2023: Annual Report and Accounts 2023, p.2 - https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNzI4ODY0NmFkaXF6a2N4/document?format=pdf&download=0\nFY2022: Annual Report and Accounts 2022, p.2 - https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzM3NTQ1ODI2M2FkaXF6a2N4/document?format=pdf&download=0\nFY2021: Annual Report and Accounts 2021, p.2 - https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzMzNTAwMTQxNWFkaXF6a2N4/document?format=pdf&download=0\n\nENTITY NOTE: Bank of Scotland plc (Companies House SC327000, FRN 169628) is a major UK high-street bank, wholly owned by Lloyds Banking Group plc - not to be confused with the separate PRA-authorised entity 'Lloyds Bank plc' (FRN 119278), also part of the same group but not yet attempted in this project. All 5 Companies House filings for this entity are fully scanned/image-only (no text layer at all) despite being a major bank - every figure below was located by rendering pages and reading them visually, not OCR'd or text-searched. The bank's own website (lloydsbankinggroup.com) returned a Cloudflare block (error 1007) on every automated fetch attempt, so no alternative text-native source was available. Every Annual Report presents both 'The Group' (consolidated, including subsidiaries) and 'The Bank' (Bank of Scotland plc unconsolidated) columns for both the cash flow statement and, separately, an explicit unconsolidated capital position for 'the Bank' in the Strategic Report - THE BANK (unconsolidated) basis is used throughout this workbook for consistency between the cash flow and capital/Pillar 3 sheets.",
         "value": 4.3
+      },
+      {
+        "bank": "MORGAN STANLEY BANK INTERNATIONAL",
+        "comparability_status": "broad-comparable",
+        "fiscal_year": 2025,
+        "frn": "195430",
+        "metric": "Leverage Ratio",
+        "reasons": [
+          "robust level score at least 3.5"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "ENTITY NOTE: Morgan Stanley Bank International Limited (company 03722571, FRN 195430) is the legal entity listed in Banks List 2608.xlsx. Companies House confirms the active UK private limited company, incorporated 23 February 1999, with registered office at 25 Cabot Square, London E14 4QA. The figures below are standalone Company figures from the entity's own annual reports, not Morgan Stanley International group figures.\n\nSources \u2014 Morgan Stanley Bank International Limited Annual Reports and Financial Statements, Strategic Report capital/liquidity tables and financial statements:\nFY2025: Annual Report and Financial Statements for year ended 31 December 2025, pp.5, 8-10, 47 \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzUxNTMzMjAyMmFkaXF6a2N4/document?format=pdf&download=0\nFY2024: Annual Report and Financial Statements for year ended 31 December 2024, pp.5, 8-10 \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzQ2MjkyNzg4N2FkaXF6a2N4/document?format=pdf&download=0\nFY2023: Annual Report and Financial Statements for year ended 31 December 2023, pp.5, 8-10 \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzQyMDQ2MzQxOGFkaXF6a2N4/document?format=pdf&download=0\nFY2022: Annual Report and Financial Statements for year ended 31 December 2022, pp.5, 8-10 \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzM3ODM5NTg1NmFkaXF6a2N4/document?format=pdf&download=0\nFY2021: Annual Report and Financial Statements for year ended 31 December 2021, pp.6, 9-10 \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzMzODIzODA1MmFkaXF6a2N4/document?format=pdf&download=0\nFY2020: Annual Report and Financial Statements for year ended 31 December 2020, pp.5, 12-13 (Key performance indicators / Own Funds / Leverage ratio) \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzMwMTE4OTc0MWFkaXF6a2N4/document?format=pdf&download=0\nFY2019: Annual Report and Financial Statements for year ended 31 December 2020's own FY2019 comparative columns, pp.5, 12-13 \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzMwMTE4OTc0MWFkaXF6a2N4/document?format=pdf&download=0\nFY2018: Annual Report and Financial Statements for year ended 31 December 2018, p.3 (Key performance indicators - Tier 1 capital, Tier 1 ratio, leverage ratio only; no CET1/Total Capital/RWA/LCR/NSFR disclosed) \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzIzMzQ0NTc3NWFkaXF6a2N4/document?format=pdf&download=0\nFY2017: Annual Report and Financial Statements for year ended 31 December 2017, p.3 (same limited KPI disclosure as FY2018) \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzIwNDA4MDg1M2FkaXF6a2N4/document?format=pdf&download=0\nFY2016: Annual Report and Financial Statements for year ended 31 December 2016, p.3 (same limited KPI disclosure) \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzE3NTI3MTY1OWFkaXF6a2N4/document?format=pdf&download=0\nFY2015: Annual Report and Financial Statements for year ended 31 December 2016's own FY2015 comparative column, p.3 (Tier 1 capital/ratio and leverage ratio; the Company's own FY2015 Annual Report carried no capital KPI section at all) \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzE3NTI3MTY1OWFkaXF6a2N4/document?format=pdf&download=0\nFY2014: Annual Report and Financial Statements for year ended 31 December 2014, p.3 \u2014 https://find-and-update.company-information.service.gov.uk/company/03722571/filing-history/MzEyMjM5NTcyOWFkaXF6a2N4/document?format=pdf&download=0. No Tier 1 capital, CET1, Total Capital, RWA, leverage or LCR/NSFR figures are disclosed anywhere in the FY2014 report itself or in any later year's comparative (the KPI section first appears in the FY2016 report, reaching back only to FY2015) \u2014 genuinely undisclosed, not merely unsourced by us.\nThe annual reports state that the Company takes the FRS 101 reduced-disclosure exemption from presenting a cash-flow statement. Blank or non-disclosed entries are not estimates or zeros. FY2014-FY2018 annual reports disclose materially less capital/liquidity detail than FY2019 onward: only Tier 1 capital, Tier 1 ratio and leverage ratio are given (no separately-stated CET1, Total Capital, Total RWAs, LCR or NSFR). Because the Company's Own Funds tables in the FY2019/FY2020 reports confirm CET1 = Tier 1 capital exactly in every year reviewed (no Additional Tier 1 instruments), CET1 Capital/CET1 Ratio for FY2015-FY2018 are populated with the same disclosed Tier 1 figures on that structural basis, clearly noted; Total Capital, Total Capital Ratio, Total RWAs, Leverage Exposure, LCR, NSFR and the RWA Breakdown are left blank for FY2014-FY2018 (FY2014-FY2020 for RWA Breakdown, and FY2014-FY2018 for LCR/NSFR) as genuinely not disclosed, rather than estimated.",
+        "value": 30.3
       },
       {
         "bank": "BIRMINGHAM BANK",
@@ -2337,11 +2311,25 @@
         "frn": "222030",
         "metric": "Total Capital Ratio",
         "reasons": [
+          "level above 95th percentile",
           "robust level score at least 3.5"
         ],
         "reporting_basis": "entity",
         "source_note": "Sources \u2014 ICBC (London) plc (solo basis), Annex 2 \u2014 UK KM1 - Key metric template:\nFY2025: ICBC (London) plc Pillar 3 Disclosures 2025, p.13-14 (31/12/2025 column) \u2014 https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2025/2025_pillar_3_disclosure.pdf\nFY2024: ICBC (London) plc Pillar 3 Disclosures 2024, p.12-13 (31/12/2024 column) \u2014 https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2024/2024_pillar_3_disclosure.pdf\nFY2023: ICBC (London) plc Pillar 3 Disclosures 2023, p.12-13 (31/12/2023 column, the year's own authoritative document) \u2014 https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2024/2023_pillar_3_disclosure.pdf\nFY2022: ICBC (London) plc Pillar 3 Disclosures 2022, p.12-13 (31/12/2022 column) \u2014 https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2023/2022Pillar3Disclosure.pdf\nFY2021: ICBC (London) plc Pillar 3 Disclosures 2021, p.13-14 (31/12/2021 column) \u2014 https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2022/2021Pillar3Disclosure.pdf\nFY2021/FY2022 LOCATED 2026-09-12 (independent disclosure audit) \u2014 these two years were previously recorded as 'not publicly disclosed'. Both documents are live on the Bank's own CDN but each is MISFILED ONE YEAR FORWARD (the 2021 disclosure sits in the .../download/2022/ folder, the 2022 disclosure in .../download/2023/), and both use a different filename convention ('2021Pillar3Disclosure.pdf') from the later underscore style ('2024_pillar_3_disclosure.pdf'), which is why earlier folder-matched searches missed them. Found via a Wayback Machine CDX listing of the CDN path, then confirmed live. Cross-verified: the FY2022 document's own T-4 (31/12/2021) comparative column reproduces every FY2021 figure used here exactly (CET1 451,197.05; RWA 739,776.26; leverage 30.75%; LCR 492.91%; NSFR 150.16%).\nFY2022 ratio basis: 50.54% is the FY2022 document's OWN 31/12/2022 figure. The FY2023 document's 31/12/2022 comparative column instead shows 50.67% (a small later restatement); this workbook follows the project convention of using each year's own primary presentation rather than a later restated comparative.\nFY2023 NSFR CORRECTED 2026-09-12: this sheet previously carried FY2023 NSFR as 135.79% (ASF 694,607 / RSF 511,527), taken from the FY2024 document's 31/12/2023 comparative column. That comparative is demonstrably wrong in the source itself - it reproduces the FY2022 NSFR row to the cent (the FY2022 document's own 31/12/2022 column reads ASF 694,606.62 / RSF 511,526.78 / 135.79%), i.e. the FY2024 document carried the prior year's row forward. The FY2023 document's own 31/12/2023 column gives ASF 798,010.24 / RSF 477,595.45 / 167.09%, which is what is now shown. Only the NSFR row is affected: FY2023 capital, RWA, ratio, leverage and LCR figures all agree exactly between the FY2023 and FY2024 documents.\nNote: ICBC (London) plc's formal Pillar 3/KM1-style RWA and ratio disclosures are publicly available from FY2021 onward (standalone Pillar 3 documents exist for FY2021-FY2025; see the misfiling note above for why FY2021/FY2022 were previously thought absent). No Pillar 3 disclosure document, and no risk-weighted-assets figure of any kind, exists anywhere in the Bank's own FY2014-FY2020 Annual Reports - each year's own accounts instead point readers to a web address for the (not separately filed) Pillar 3 disclosure. CET1/Tier 1/Total Capital $ amounts, however, ARE disclosed every year back to FY2014 via each year's own 'Regulatory capital' note (see the CET1/Tier 1/Total Capital sheets' own FY2014-FY2020 source note); it is only the RWA denominator - and therefore the CET1/Tier1/Total Capital Ratio, Total RWAs, RWA Breakdown, Leverage Ratio and NSFR sheets - that remains genuinely undisclosed for FY2014-FY2020. Basis note: the Annual Report 'Regulatory capital' figure and the Pillar 3 KM1 figure are not identical where they overlap (FY2020: AR 456,128 vs the FY2021 KM1 document's own 31/12/2020 comparative of 445,536.92); the FY2014-FY2020 cells keep the Annual Report basis they were sourced on, and FY2021 onward use the Pillar 3 KM1 basis, as each sheet's citations state.",
         "value": 81.09
+      },
+      {
+        "bank": "ALRAYAN BANK",
+        "comparability_status": "strict-comparable",
+        "fiscal_year": 2025,
+        "frn": "229148",
+        "metric": "Total Capital Ratio",
+        "reasons": [
+          "level below 5th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - Alrayan Bank Limited's own Pillar 3 Disclosures, \u00a3m capital amounts / % ratios, all years:\nFY2025: Pillar 3 Disclosures - 31 December 2025, Annex I KM1 table, p.39 - https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2026-09/pb8084_alrayan_pillar_3_disclosures_2025.pdf\nFY2024: Pillar 3 Disclosures - 31 December 2024, Annex I KM1 table, p.38 - https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2025-09/alrayan_pillar_3_disclosures_2024_web_-_010925.pdf\nFY2023: Pillar 3 Disclosures - 31 December 2023, Annex I KM1 table, p.33 - https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2024-08/pb7703_al_rayan_pillar_3_disclosures_2023_v2.pdf\nFY2022: sourced from the FY2023 Pillar 3 Disclosures' own FY2022 comparative column, Annex I KM1 table, p.33 - https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2024-08/pb7703_al_rayan_pillar_3_disclosures_2023_v2.pdf\nFY2021: Pillar 3 Disclosures - 31 December 2021, Table 1/2/3 (this edition pre-dates the bank's adoption of the standardised KM1 Annex template, so FY2021 figures come from the Executive Summary tables instead), p.5 - https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2022-10/inv-rep-2021-pillar-3.pdf\nFY2020: Pillar 3 Disclosures - 31 December 2020, Table 1/2 'Available capital'/'Capital ratios as a percentage of RWA' (same pre-KM1 Executive Summary format as FY2021's edition - this document has a genuine text layer, unlike the scanned Annual Reports, so figures are machine-read not visually transcribed), p.3 - https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2021-07/2020_pillar_3_disclosures_-_final.pdf. Cross-checked against the FY2021 Annual Report's own FY2020 credit-risk comparative note and ties exactly.\nFY2025 FILLED 2026-09-15: the FY2025 Pillar 3 Disclosures PDF is now live on the Bank's investor-relations regulatory-information page (published 2026-09), and every FY2025 Pillar 3 cell in this workbook is transcribed from its Annex I KM1/OV1 templates - nothing is carried over from the Annual Report. One consequence: the CET1 ratio cell for FY2025 was previously 15.41% (the FY2025 Annual Report's own KPI table, the only capital figure available before the Pillar 3 document appeared) and is now 15.45%, the KM1 Annex figure. The two are different bases, not a correction of an error - the same AR-KPI-vs-KM1 spread this project keeps blank elsewhere - and the KM1 figure is used here for consistency with FY2020-FY2024 and with every other bank in this project. Likewise the LCR cell uses KM1 line 17's twelve-month average (481%), not the Executive Summary's point-in-time 598%.\nThis bank's own Pillar 3 documents show small internal discrepancies between their Executive Summary narrative tables and their formal KM1 Annex tables in a couple of instances (e.g. FY2023 NSFR: 160% exec summary vs 157% KM1 annex; FY2022 Leverage Ratio: 6.8% exec summary vs 6.7% KM1 annex) - this workbook uses the KM1 Annex figures throughout for consistency with the standard regulatory template and with every other bank in this project.\n\nENTITY NOTE: Alrayan Bank Limited (FRN 229148, Companies House 04483430, matches Banks List 2608.xlsx exactly) is a UK Sharia-compliant bank, wholly owned by AlRayan Bank (Q.P.S.C.) of Qatar. Its own Annual Report/Pillar 3 documents style it 'Al Rayan Bank PLC' but Companies House confirms its current registered name is 'ALRAYAN BANK LIMITED' - same company number throughout, not an entity change, just inconsistent branding between the statutory filing and the bank's own PDFs.",
+        "value": 15.82
       },
       {
         "bank": "CASTLE TRUST CAPITAL",
@@ -2381,6 +2369,32 @@
         "reporting_basis": "entity",
         "source_note": "Sources - GB Bank Limited official annual Pillar 3 disclosures, solo basis:\nFY2025: Pillar 3 Disclosures 2025, UK KM1 p.13 - https://www.gbbank.co.uk/download/5065/?tmstv=1766062359\nFY2024: Pillar 3 Disclosures 2024, UK KM1 p.12 - https://www.gbbank.co.uk/download/4423/?tmstv=1760374514\nFY2023: Pillar 3 Disclosures 2023, UK KM1 p.11 - https://www.gbbank.co.uk/download/4420/?tmstv=1760374863\nFY2022 and FY2021: Pillar 3 Disclosures 2022, UK KM1 p.11 - https://www.gbbank.co.uk/download/4416/?tmstv=1760374739\nCompanies House entity record and filing history: https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history\n\nENTITY AND REPORTING BASIS: GB Bank Limited (Companies House 10702260; PRA FRN 850286) is the matched UK legal entity. The 2022-2025 Pillar 3 reports state that the reported figures are prepared on a solo basis. The 2025 report additionally records PRA permission, backdated to 1 October 2025, for an individual-consolidation method including SilverRock Financial Services Ltd going forward; the main 30 September 2025 table remains solo and is used here. GB Bank states that it publishes Pillar 3 annually under CRR Article 433b as a small and non-complex bank. FY2024 is a shortened nine-month period ended 30 September 2024 after the accounting period end changed; FY2021-FY2023 end on 31 December and FY2025 ends 30 September.",
         "value": 19.14
+      },
+      {
+        "bank": "STANDARD CHARTERED BANK",
+        "comparability_status": "strict-comparable",
+        "fiscal_year": 2025,
+        "frn": "114276",
+        "metric": "Leverage Ratio",
+        "reasons": [
+          "level below 5th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "SOLO-CONSOLIDATION REGULATORY SOURCES (added 2026-09-15). Each year is taken from that year's OWN Pillar 3 edition, and every year was additionally cross-checked against the following edition's comparative column:\nFY2025: Standard Chartered PLC Full Year 2025 Pillar 3 Disclosure, Table 109 'Composition of regulatory own funds (UK CC1) - Solo consolidation', rows 29/45/59/60/61/62/63 - https://www.sc.com/en/uploads/sites/66/content/docs/standard-chartered-plc-full-year-2025-pillar3-disclosure.pdf\nFY2024: Standard Chartered PLC Full Year 2024 Pillar 3 Disclosure, Table 113 (same UK CC1 solo template) - https://www.sc.com/en/uploads/sites/66/content/docs/standard-chartered-plc-full-year-2024-pillar3-disclosure.pdf\nFY2023: Standard Chartered PLC Full Year 2023 Pillar 3 Disclosure, Table 110 (same UK CC1 solo template) - https://www.sc.com/en/uploads/sites/66/content/docs/standard_chartered_plc_pillar3_full_year_2023_report.pdf\nFY2022: Standard Chartered PLC Full Year 2022 Pillar 3 Disclosure, Table 106 (same UK CC1 solo template) - https://www.sc.com/en/uploads/sites/66/content/docs/standard_chartered_plc_pillar3_full_year_2022_report.pdf\nFY2021: the FY2022 edition's 2021 comparative column (Table 106). The FY2021 Pillar 3 edition contains NO solo-consolidation section at all - the section was introduced in the FY2022 edition - so the comparative is the only source for that year.\n\nSOURCE DEFECT FOUND AND AVOIDED: the FY2025 edition's 2024 comparative column misprints the three capital RATIO rows, showing 12.0%/15.2%/22.6% - which are FY2023's ratios - against FY2024 amounts. Those ratios do not reconcile with the amounts printed beside them (14,730/126,383 = 11.7%, not 12.0%). FY2024's ratios here are taken from the FY2024 edition's own column (11.7%/15.0%/21.5%), which reconcile exactly and whose FY2023 comparative reproduces the FY2023 edition line for line. Do not 'correct' these to the FY2025 edition's comparative.\n\nENTITY CHECK: Standard Chartered PLC group total RWA at FY2023 is 244,151 $m (group UK KM1) against 122,408 $m on this solo-consolidated basis, confirming these are the Bank entity's figures and not the listed parent's.\n\nLEVERAGE: Table 'LRCom: Leverage ratio common disclosure (UK LR2) - Solo consolidation', row 25, in each edition (FY2025 Table 114; FY2024 Table 118; FY2023 Table 115; FY2022 Table 111; FY2021 from the FY2022 edition's comparative). Every year appears in two consecutive editions and agrees in both.",
+        "value": 4.2
+      },
+      {
+        "bank": "NATIONAL WESTMINSTER BANK PLC",
+        "comparability_status": "strict-comparable",
+        "fiscal_year": 2025,
+        "frn": "121878",
+        "metric": "Leverage Ratio",
+        "reasons": [
+          "level below 5th percentile"
+        ],
+        "reporting_basis": "entity",
+        "source_note": "Sources - NWB Plc UK KM1 key metrics, PRA transitional basis:\nFY2025: NWB Plc Pillar 3 Report 2025, p.7 - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/nwb-pillar-3-report.pdf\nFY2024: NWB Plc Pillar 3 Report 2024, p.7 - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/nwb-pillar-3-report.pdf\nFY2023: NWB Plc Pillar 3 Report 2023, p.7 - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/16022024/nwb-plc-pillar-3-report.pdf\nFY2022 and FY2021: NWB Plc Pillar 3 Report 2022, p.7 (FY2021 comparative column) - https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/17022023/nwb-plc-pillar-3-report.pdf\n\nENTITY NOTE: This workbook covers National Westminster Bank Public Limited Company (NWB Plc), company number 00929027, FRN 121878 and LEI 213800IBT39XQ9C4CP71. It is the PRA-authorised legal entity named in the project bank list, not NatWest Group plc, NatWest Holdings Limited, RBS plc or NatWest Markets Plc. NWB Plc is a member of the UK Domestic Liquidity Sub-Group (UK DoLSub) with RBS plc and Coutts & Company; LCR and NSFR are therefore shown on the UK DoLSub basis where the entity reports that basis, rather than as NWB Plc solo figures. Companies House confirms company 00929027 and the filed 2021 accounts used below.",
+        "value": 4.2
       },
       {
         "bank": "CO-OPERATIVE BANK",
@@ -2471,6 +2485,7 @@
         "frn": "208020",
         "metric": "Leverage Ratio",
         "reasons": [
+          "level above 95th percentile",
           "robust level score at least 3.5",
           "year-over-year movement above 95th percentile"
         ],
@@ -2621,10 +2636,10 @@
         "up": 36
       },
       {
-        "down": 9,
+        "down": 10,
         "end_year": 2026,
         "metric": "CET1 Ratio",
-        "n": 13,
+        "n": 14,
         "same": 0,
         "start_year": 2025,
         "up": 4
@@ -2739,10 +2754,10 @@
         "up": 32
       },
       {
-        "down": 9,
+        "down": 10,
         "end_year": 2026,
         "metric": "Tier 1 Ratio",
-        "n": 12,
+        "n": 13,
         "same": 0,
         "start_year": 2025,
         "up": 3
@@ -2893,10 +2908,10 @@
         "up": 35
       },
       {
-        "down": 9,
+        "down": 10,
         "end_year": 2026,
         "metric": "Total Capital Ratio",
-        "n": 12,
+        "n": 13,
         "same": 0,
         "start_year": 2025,
         "up": 3
@@ -3011,23 +3026,23 @@
         "up": 34
       },
       {
-        "down": 8,
+        "down": 9,
         "end_year": 2026,
         "metric": "Leverage Ratio",
-        "n": 12,
+        "n": 13,
         "same": 0,
         "start_year": 2025,
         "up": 4
       },
       {
-        "down": 58,
+        "down": 59,
         "end_year": 2026,
         "horizon": "long_run",
         "metric": "Leverage Ratio",
         "n": 127,
         "same": 0,
         "start_year": 2014,
-        "up": 69
+        "up": 68
       }
     ],
     "strict": [
@@ -3403,17 +3418,8 @@
         "up": 18
       },
       {
-        "down": 3,
-        "end_year": 2026,
-        "metric": "Total Capital Ratio",
-        "n": 4,
-        "same": 0,
-        "start_year": 2025,
-        "up": 1
-      },
-      {
         "down": 37,
-        "end_year": 2026,
+        "end_year": 2025,
         "horizon": "long_run",
         "metric": "Total Capital Ratio",
         "n": 60,
@@ -3521,17 +3527,8 @@
         "up": 17
       },
       {
-        "down": 3,
-        "end_year": 2026,
-        "metric": "Leverage Ratio",
-        "n": 5,
-        "same": 0,
-        "start_year": 2025,
-        "up": 2
-      },
-      {
         "down": 26,
-        "end_year": 2026,
+        "end_year": 2025,
         "horizon": "long_run",
         "metric": "Leverage Ratio",
         "n": 58,

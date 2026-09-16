@@ -450,6 +450,123 @@ CAPITAL_EQUIVALENCE_NOTE = (
     "workbook's own Balance Sheet."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE on this workbook's entity basis (KM1-012).
+#
+# DB UK Bank Limited publishes NO KM1 of its own. Its PRA Disclosure (CRR)
+# obligation is discharged one level up, and the Company says so itself: "The
+# Company is required, by PRA Rulebook Disclosure (CRR), to publish certain
+# disclosures covering, inter alia, regulatory ratios and remuneration
+# information AT THE LEVEL OF ITS UK REGULATORY CONSOLIDATED GROUP, including
+# its ultimate UK holding company DBIGB" (Annual Report 2025, Directors'
+# Report, p.17).
+#
+# So a UK KM1 template DOES exist and was read in full for this ticket - but it
+# is DB Investments (GB) Limited UK Regulated Group's, on a consolidated basis
+# that is not the solo basis every other sheet in this workbook uses. The map's
+# entity rule is explicit: match the workbook's existing basis, and record the
+# other basis's figures in the citation so nothing is lost. That is exactly what
+# this sheet does, and it deliberately does NOT decide the open basis question
+# already escalated to the user in NOT_DISCLOSED_NOTE (whether DBIGB Group
+# figures may be written into this entity's sheets at all). Writing the DBIGB
+# KM1 onto this sheet would have silently answered that question.
+#
+# Every DBIGB Group figure the four editions print is reproduced verbatim in the
+# citation below, so the sheet loses nothing if the user later decides the other
+# way.
+# ---------------------------------------------------------------
+P3_2022_MISLABELLED_URL = ("https://wealth.db.com/dam/deutschewealth/location-assets/emea/uk/docs/"
+                           "db-investments-gb-limited-pillar-3-report-2022.pdf")
+
+KM1_SOURCES = (
+    "Sources - NONE at DB UK Bank Limited entity level. This entity publishes no Pillar 3 disclosure and "
+    "therefore no UK KM1 key-metrics template, in any year of this workbook's FY2021-FY2025 window. That is "
+    "a conclusion from positive evidence, not from a search that came up empty, and it is the Company's own "
+    "stated position:\n"
+    f"* DB UK Bank Limited Annual Report 2025, Directors' Report, p.17: \"The Company is required, by PRA "
+    f"Rulebook Disclosure (CRR), to publish certain disclosures covering, inter alia, regulatory ratios and "
+    f"remuneration information at the level of its UK regulatory consolidated group, including its ultimate "
+    f"UK holding company DBIGB\" - {FY2025_AR_URL}\n"
+    "* Deutsche Bank Wealth Management's UK regulatory-information page, which is the address the reports "
+    "themselves name (https://www.deutschewealth.com/en/uk/regulatory-information.html), was re-read live on "
+    "2026-09-16: HTTP 200, 112,486 bytes of real HTML, not a block and not a soft-404. Its Pillar 3 section "
+    "is headed \"DB Investments (GB) Limited Pillar 3 Reports\" and lists four editions (2022, 2023, 2024, "
+    "2025). There is no DB UK Bank Limited Pillar 3 report on it, in any year.\n\n"
+    "WHAT DOES EXIST, RECORDED HERE IN FULL SO NOTHING IS LOST. DB Investments (GB) Limited UK Regulated "
+    "Group (\"DBIGB Group\") publishes a real, row-numbered UK KM1. It is split across TWO tables, each "
+    "headed \"Template UK KM1\": \"Key Prudential Metrics - Capital\" (rows 1-14, under Article 447(e)-(f)) "
+    "and \"Key Prudential Metrics - Liquidity\" (rows 15-20, under Article 447(f)-(g)), several pages apart. "
+    "Amounts are in £000, ratios in %, and each edition prints two columns - its own year-end and the prior "
+    "year-end. Transcribed from the PDFs on 2026-09-16:\n"
+    f"  2025 edition (p.14 capital, p.16 liquidity), columns 31/12/25 and 31/12/24 - {P3_2025_URL}\n"
+    f"  2024 edition (p.14 capital, p.16 liquidity), columns 31/12/24 and 31/12/23 - {P3_2024_URL}\n"
+    f"  2023 edition (p.16 capital, p.18 liquidity), columns 31/12/23 and 31/12/22 - {P3_2023_URL}\n"
+    "DBIGB GROUP CAPITAL KM1, each year from the edition in which it is the reporting year:\n"
+    "  row 1 CET1 / row 2 T1 / row 3 Total Regulatory Capital-Own Funds (all three identical, DBIGB Group's "
+    "own funds being all CET1): FY2025 604,018; FY2024 571,967; FY2023 555,107; FY2022 537,779 (the 2023 "
+    "edition's comparative column - see the 2022-edition note below)\n"
+    "  row 4 Total RWA: FY2025 710,583; FY2024 595,777; FY2023 510,264; FY2022 681,128\n"
+    "  rows 5/6/7 CET1, T1 and Total Capital Ratio (all three identical): FY2025 85%; FY2024 96%; "
+    "FY2023 109%; FY2022 79%\n"
+    "  row 8 Capital Conservation Buffer: 2.50% in every year\n"
+    "  row 9 Institution specific Countercyclical Buffer: FY2025 1.56%; FY2024 1.40%; FY2023 1.45%; "
+    "FY2022 0.78%\n"
+    "  row 11 Combined Buffer Requirement: FY2025 4.06%; FY2024 3.90%; FY2023 3.95%; FY2022 3.28%\n"
+    "  row 12 \"Regulatory Capital Ratio\": FY2025 539%; FY2024 388%; FY2023 438%; FY2022 125%\n"
+    "  row 13 Total Exposure Measure: FY2025 2,459,994; FY2024 3,208,640; FY2023 2,121,118; FY2022 2,381,071\n"
+    "  row 14 Leverage Ratio: FY2025 25%; FY2024 18%; FY2023 25%; FY2022 23%\n"
+    "DBIGB GROUP LIQUIDITY KM1: rows 15, UK 16a, UK 16b, 16 and 17 are printed FOUR TIMES per column, once "
+    "per quarterly average (\"Average Quarter 4\" down to \"Average Quarter 1\"), not once as the template "
+    "implies. FY2025 Q4/Q3/Q2/Q1 LCR = 352% / 400% / 439% / 407%; FY2024 = 330% / 325% / 336% / 351%. Rows "
+    "18/19/20 (NSFR, stated as the average of end-of-quarter figures): FY2025 ASF 1,392,446, RSF 663,597, "
+    "NSFR 200%; FY2024 ASF 1,392,947, RSF 812,548, NSFR 177%; FY2023 NSFR 203%.\n\n"
+    "THREE THINGS WORTH KNOWING ABOUT THOSE DBIGB FIGURES:\n"
+    "* THEY ARE A DIFFERENT BASIS FROM EVERY OTHER SHEET IN THIS WORKBOOK, and materially so - DBIGB Group's "
+    "FY2025 CET1 of 604,018 is close to this entity's own 603,375 by coincidence of scale, but the group's "
+    "ratios (85% CET1 ratio) are computed on a group RWA denominator this entity does not have. They are "
+    "not interchangeable.\n"
+    "* ROW 12 IS REPURPOSED. The UK template's row 12 is \"CET1 available after meeting the total SREP own "
+    "funds requirements (%)\". DBIGB prints row 12 as \"Regulatory Capital Ratio\", which its own commentary "
+    "defines as \"total Regulatory Capital Resources/Own Funds relative to total PRA Capital Resources "
+    "Requirement plus PRA Buffers\" - a different measure entirely, which is why it reads in the hundreds of "
+    "percent. Recorded as the source prints it, not corrected.\n"
+    f"* THE 2022 EDITION LINK DOES NOT SERVE THE 2022 REPORT. The regulatory-information page's own link "
+    f"text reads \"DB Investments (GB) Limited Pillar 3 Report 2022\" and points at {P3_2022_MISLABELLED_URL} "
+    f", which returns HTTP 200, Content-Type application/pdf, 436,589 bytes and valid %PDF magic bytes - and "
+    f"is NOT that report. It is Deutsche Bank Wealth Management's general asset-class risk-disclaimers "
+    f"document (\"1.1 General Disclaimers\", © 2025 Deutsche Bank AG), containing no capital, RWA or "
+    f"liquidity figure of any kind. The publisher has uploaded the wrong file. FY2022's DBIGB figures above "
+    f"are therefore the 2023 edition's own 31/12/22 comparative column, which is the only place they survive.\n\n"
+    "NOTHING IS BACK-FILLED FROM THE STATUTORY ACCOUNTS. The Company's own accounts do carry a Strategic "
+    "Report KPI/KRI table and a \"Composition of regulatory own funds\" note, and those feed the individual "
+    "metric sheets that follow - but they are a narrower and differently-defined disclosure than the KM1 "
+    "template, and a table assembled from them would look like a KM1 without being one. Row 4 in particular "
+    "would have no honest value: no entity-level risk-weighted exposure amount is disclosed anywhere, in any "
+    "year, which is the same reason the CET1/Tier 1/Total Capital Ratio and Total RWAs sheets are blank.\n\n"
+    + NOT_DISCLOSED_NOTE
+)
+
+bw.add_km1_sheet(
+    title="DB UK Bank Limited — KM1 Key Metrics",
+    subtitle="Not applicable on this workbook's basis. DB UK Bank Limited publishes no Pillar 3 disclosure "
+             "of its own: by its own Directors' Report its PRA Disclosure (CRR) obligation is discharged at "
+             "the level of its UK regulatory consolidated group, DB Investments (GB) Limited. A real, "
+             "row-numbered UK KM1 therefore exists for DBIGB GROUP, on a consolidated basis that is not the "
+             "entity basis used by every other sheet here - every figure it prints for FY2022-FY2025 is "
+             "reproduced in the source note below rather than on this sheet, and whether those group figures "
+             "may be used on this entity's sheets is an open question already put to the user.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template (DB UK Bank Limited entity basis)",
+         {y: "Not published at entity level" for y in YEARS}),
+        ("DATA", "UK KM1 key-metrics template (DB Investments (GB) Limited UK Regulated Group basis)",
+         {"FY2025": "Published — see note", "FY2024": "Published — see note",
+          "FY2023": "Published — see note", "FY2022": "Published — see note"}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=420,
+)
+
 metric(
     "CET1 Capital", "£'000 (unaudited)",
     [("CET1 after regulatory adjustments", CET1_CAPITAL)],

@@ -254,7 +254,107 @@ bw.add_asset_quality_sheet(
     unit_suffix=" (GBP'000)",
 )
 
-ND = "Not publicly disclosed for Schroder & Co. Limited as a standalone entity. The annual accounts refer to regulatory capital/liquidity processes but do not provide the requested numeric Pillar 3 metric. Schroders group figures are not substituted."
+# ---------------------------------------------------------------
+# KM1 Key Metrics (KM1-026, 2026-09-16)
+#
+# FINDING: "no Pillar 3 document is published for this entity", confirmed both
+# at the entity and - the check this project has twice been caught skipping -
+# in the PARENT's Pillar 3, which is the normal home for a UK subsidiary's
+# regulatory numbers. Schroders plc publishes a full Pillar 3 every year and it
+# does contain a UK KM1, but that KM1 is the GROUP's, on a consolidated basis,
+# with no Schroder & Co. Limited column, block or appendix anywhere in it.
+# ---------------------------------------------------------------
+SCHRODERS_P3_PAGE = "https://www.schroders.com/en/global/individual/corporate-transparency/disclosures/pillar-3/"
+SCHRODERS_P3_2025 = "https://mybrand.schroders.com/m/30a6bff321952fa/original/Schroders-2025-Pillar-3-Disclosures.pdf"
+SCHRODERS_P3_2024 = "https://mybrand.schroders.com/m/39675668331e2451/original/Pillar-3-2024.pdf"
+SCHRODERS_P3_2023 = "https://mybrand.schroders.com/m/2c8bbb5e275a714/original/Schroders-Pillar-3-2023.pdf"
+SCHRODERS_P3_2022 = "https://mybrand.schroders.com/m/571286e516848bd0/original/Schroders_Pillar-3_2022.pdf"
+SCHRODERS_P3_2021 = "https://mybrand.schroders.com/m/383f375a0e75b3b4/original/pillar-3-disclosures-as-at-31-december-2021.pdf"
+
+KM1_SOURCES = (
+    f"Sources - checked 2026-09-16 for KM1-026. {COMPANY}'s own accounts, and its parent's Pillar 3 "
+    "disclosures:\n"
+    f"{COMPANY} statutory accounts FY2021-FY2025 (Companies House {COMPANY_NO}) - " + AR_URL["FY2025"] + "\n"
+    f"Schroders plc Pillar 3 disclosures page (the parent's own site) - {SCHRODERS_P3_PAGE}\n"
+    f"Schroders plc Pillar 3 disclosures 31 December 2025, Table 1 'Template UK KM1 - Key regulatory metrics', "
+    f"p.6 - {SCHRODERS_P3_2025}\n"
+    f"31 December 2024 - {SCHRODERS_P3_2024}\n"
+    f"31 December 2023 - {SCHRODERS_P3_2023}\n"
+    f"31 December 2022 - {SCHRODERS_P3_2022}\n"
+    f"31 December 2021 - {SCHRODERS_P3_2021}\n\n"
+    "NO KM1 EXISTS FOR THIS ENTITY. Three separate checks, each with its instrument shown to be working "
+    "before any zero was accepted as a fact:\n"
+    f"(1) {COMPANY} PUBLISHES NO PILLAR 3 DOCUMENT OF ITS OWN. Neither schroders.com nor "
+    "cazenovecapital.com (the brand under which this entity trades) hosts one; the Schroders Pillar 3 page "
+    "lists group-level reports only, one per year back to 2008 plus half-year editions, all captioned "
+    "'Schroders'.\n"
+    "(2) THE ENTITY'S OWN ACCOUNTS DO NOT CARRY IT, AND THAT WAS CHECKED AGAINST THE IMAGE, NOT ONLY THE "
+    "TEXT. The Companies House filings are image-only scans - the FY2025 PDF yields 69 characters of text "
+    "from 69 pages - so a text search of the raw file would prove nothing. The FY2025 accounts were "
+    "re-OCR'd in full for this ticket (ocrmypdf --force-ocr, 212,202 characters recovered) and searched "
+    "case-insensitively: 'KM1', 'key metric', 'capital management', 'risk weighted', 'risk-weighted', "
+    "'common equity', 'own funds', 'leverage ratio' and 'liquidity coverage' all return ZERO. The OCR is "
+    "demonstrably rich on neighbouring terms - 31 hits for 'capital', 48 for 'ratio', 10 for 'regulatory' - "
+    "so those zeroes are facts about the document. The single 'CET1' hit is not a disclosure: it is the "
+    "IRRBB note's reference to the CRD V requirement to notify the PRA if economic value of equity exceeds a "
+    "15% CET1 notification threshold. No CET1 amount, RWA, leverage ratio or LCR figure appears anywhere.\n"
+    "(3) THE PARENT'S PILLAR 3 CARRIES A KM1, BUT NOT THIS ENTITY'S. Schroders plc's Pillar 3 disclosures "
+    "for 31 December 2024 and 31 December 2025 each print 'Table 1: Template UK KM1 - Key regulatory "
+    "metrics'. Its five columns are Dec-25, Jun-25, Dec-24, Jun-24 and Dec-23 - five reporting DATES for one "
+    "entity, the Schroders plc consolidated group - not one column per group company. The document states "
+    "in terms that 'The Group's Pillar 3 disclosures are produced on a consolidated basis'. Its five "
+    "appendices are LI3 (principal entities with a different regulatory and accounting scope of "
+    "consolidation - insurance entities and joint ventures), CC1 own funds, risk exposures, countercyclical "
+    "buffer and leverage, all Group. The full contents-of-tables list (Tables 1-20) was read rather than "
+    "relying on a search, precisely because a subsidiary's template can sit in an appendix dozens of pages "
+    f"from the body. There is no second KM1 and no {COMPANY} column. The entity name appears once in the "
+    "whole FY2025 document, in the remuneration section ('all other CRD MRTs of Schroders plc and Schroder & "
+    "Co in the year'), with no capital figure attached. The FY2021, FY2022 and FY2023 editions contain no "
+    "KM1 at all (the template first appears in the FY2024 edition), and their extractions are rich - 23-29 "
+    "hits for 'cet1' and 13-18 for 'leverage ratio' apiece.\n"
+    "NOT AN SDDT EXEMPTION. The Bank of England's consolidated waivers list records four entries for "
+    "SCHRODER & CO. LIMITED (FRN 144206): CRR Article 26(3) own-funds classification, a Capital Buffers "
+    "5.1-5.3 modification by consent, a CRR Article 132(3) credit-risk modification, and a Financial "
+    "Conglomerates 2.1/2.7 modification. None is a Disclosure (CRR) waiver and none is the SDDT Regime Rule "
+    "3.1 opt-in. The absence here is a consolidated-group disclosure arrangement, not a regulatory "
+    "exemption.\n"
+    "NOTHING IS BORROWED FROM THE GROUP. Schroders plc's Group KM1 figures (FY2025 CET1 capital £2,319.4m, "
+    "total RWAs £10,590.0m, CET1 ratio 21.9%, leverage ratio 30.0%) are recorded here only to show what was "
+    "read and rejected. They are the consolidated asset-management group's, not this bank's, and "
+    "substituting them would be exactly the entity error the KM1 map's rules 11 and 19 exist to prevent.\n"
+    "LATEST-EDITION CHECK 2026-09-16: newest accounts filed at Companies House for company "
+    f"{COMPANY_NO} are for the year ended 31 December 2025, already this workbook's newest year. Newest "
+    "parent Pillar 3 on schroders.com is 31 December 2025, with a Half-Year Pillar 3 2026 published since - "
+    "an interim edition, not a new full year. Nothing newer to transcribe on either front.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title=f"{COMPANY} - KM1 Key Metrics",
+    subtitle="Not applicable. Schroder & Co. Limited publishes no Pillar 3 disclosure of its own, its "
+             "statutory accounts contain no regulatory-capital figures, and its parent Schroders plc's "
+             "Pillar 3 carries a UK KM1 only for the consolidated Group - no column, block or appendix for "
+             "this entity. See the source note for all three checks.",
+    rows=[
+        ("DATA", "Not applicable - no Pillar 3 document is published for this entity", {y: "Not applicable" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=320,
+)
+
+ND = (
+    "Not publicly disclosed for Schroder & Co. Limited as a standalone entity. The annual accounts refer to "
+    "regulatory capital/liquidity processes but do not provide the requested numeric Pillar 3 metric. "
+    "Schroders group figures are not substituted. RE-TESTED 2026-09-16 against the PARENT's Pillar 3, not "
+    "only this entity's own filings: Schroders plc publishes a full Pillar 3 every year, and its FY2024 and "
+    "FY2025 editions do carry a UK KM1 template - but that table's five columns are five reporting DATES for "
+    "the consolidated Schroders plc group, with no Schroder & Co. Limited column, and its twenty tables and "
+    "five appendices were read end to end without finding a second, entity-level template. The FY2025 "
+    "statutory accounts were also re-OCR'd in full and contain no CET1 amount, RWA, leverage ratio or LCR. "
+    "So this is a genuine non-disclosure on both shelves, not a search that stopped at the wrong one - see "
+    "the KM1 Key Metrics sheet for the evidence."
+)
 _pillar3_before_rwa = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio", "Total Capital", "Total Capital Ratio", "Total RWAs"]
 _pillar3_after_rwa = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
 for metric_name in _pillar3_before_rwa:

@@ -1341,3 +1341,79 @@ two independent grounds, both now established rather than assumed:
 Note the script's Pillar 3 sheets separately and openly declare "OSB Group plc consolidated Pillar 3 basis",
 the known **declared group basis** class — so group sourcing there is a labelled scoping decision, not
 contamination. Leave the constant flagged and unreferenced; removing it is an editorial call for the user.
+
+---
+
+## KM1 SOURCE SURVEY — DELIVERED 2026-09-16
+
+`research/km1_inventory.jsonl` (785 rows, one per distinct URL, 114 banks) plus
+`research/km1_inventory_README.md`. Candidates and row inventories only — no figure transcribed.
+
+**335 KM1_PRESENT of 732 readable documents (46%).** Columns captured for 311 of 335 (93%).
+86 of 114 banks have at least one KM1 edition.
+
+### The detector was wrong six times before it was right, and every fix was the same error class
+
+Anchoring on the wrong table, reported under a confident verdict. A wrong anchor is **invisible in
+its own output** — a foreign table still yields perfectly plausible dates.
+
+1. **v5 header_block returned mid-table body rows** — anchored on the first `UK 7a` token, which sits
+   mid-table, not on the column-header line.
+2. **Dedup destroyed the multi-entity case** — Monzo's `2024 2024 2023` collapsed to two columns.
+   Repeated years are often different ENTITIES. Also collapsed every quarterly filer's genuine
+   five-column T..T-4 set to two.
+3. **160-char truncation** ate the payload: `l.rstrip()[:160]` keeps LEADING padding and discards
+   content, so a wide KM1's date row past column 160 rendered as blank lines.
+4. **The anchor never applied the KM1_UK_ROWS restriction the VERDICT had applied since v2.** ICBC
+   London anchored on a bare `UK 4a`; OSB Group on `UK 9b Redemption price` (capital-instruments
+   template — KM1 has 9a, never 9b).
+5. **A generic numbered-row tier found CC1 and contents pages** — Provident and Metro reported CC1's
+   columns; three documents anchored on `1 Introduction 1`. A label test cannot separate these,
+   because a contents page LISTS every label there is. **Figures** separate them.
+6. **A title anchor's header is BELOW it, not above.** Scanning upward from ICBC's
+   `UK KM1 - Key metric template` found the running page header and emitted the "column"
+   `3 Disclosures 2024` — page furniture reported as a reporting date.
+
+Two of my own guards were also matcher zeros: `(Common Equity|Available own)` without `re.I` missed
+NatWest's `Common equity`, and `\d{1,2}\s+\w+\s+20\d\d` matched "Pillar **3 Disclosures 2024**".
+
+**A presence claim the detector cannot point at is now a candidate, not a finding**
+(`KM1_CANDIDATE_UNLOCATED`, 42 rows).
+
+### Independent validation
+
+The KM1-004 session hand-transcribed Allica and Alrayan. Allica is an Article 433b disclosure headed
+"Key metrics" in which the string "KM1" never appears — this detector catches it on `UK 7a/7b/7c/7d`,
+FY2022–FY2025 `KM1_PRESENT`, FY2020 `NO_KM1_FOUND`, matching their transcription. My `uk_rows` field
+also independently reproduced their row-set drift finding (`8a/9a/10a` present FY2022–23, gone
+FY2024–25).
+
+### The "no Pillar 3" question, answered carefully
+
+28 banks have no `KM1_PRESENT` in any cited edition — but only **12** are pure `NO_KM1_FOUND` with no
+candidates and no fetch problems. `national_bank_of_egypt_uk` is 7 blocked + 2 scanned + 1 readable:
+effectively **unsurveyed**, and would be fabricated as "Not applicable" by anyone reading the list
+naively.
+
+**SDDT does not rescue this.** 10 of 28 hold a PRA Rule 3.1 waiver, but every start date is 2024–2026,
+so date-fitted it explains at most the latest edition year. And it is not a predictor: Secure Trust,
+C. Hoare, Cambridge & Counties and Monument all hold Rule 3.1 waivers **and** print full KM1 tables.
+
+### KM1-003 reconnaissance (not started; ticket untouched)
+
+- **ALDERMORE** — live index carries THREE uncited editions: FY2020 `/media/axcpvnoo/`, FY2021
+  `/media/ahbpvlih/`, FY2023 `/media/ynohqczi/`. Newest is FY2026, already cited. Checked 2026-09-16.
+  Its KM1 is **six columns, Group a/b/c + Bank a/b/c** — the entity-basis rule applies inside one table.
+- **AIB GROUP UK** — zero cited Pillar 3 PDFs. `aibgb.co.uk`/`aibni.co.uk` return 403 "Access Denied"
+  to two independent clients: **BLOCKED, not dead**. The Irish parent publishes
+  `AIB-Group-plc-Q1-2026-Pillar-3-Disclosures.pdf` on a page that names the UK subsidiary zero times —
+  a **decoy** under the entity-basis rule.
+- **ACCESS BANK UK** — its 403 is `cf-mitigated: challenge`, `server: cloudflare`. A JS interstitial,
+  **not** an access denial.
+- **ICBC LONDON** — KM1 denominated in **USD**, not sterling.
+
+### Session limit
+
+WebSearch budget exhausted (200/200). Step-1 latest-edition checks now run via curl against index
+pages — which worked for Aldermore but fails silently on blocked hosts. A bank whose index cannot be
+reached is reported BLOCKED, never guessed.

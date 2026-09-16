@@ -545,6 +545,58 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Entity-level basis, {unit}" if unit else "Entity-level basis",
                          rows_data, sources_text, note=note, first_col_width=46, source_height=430)
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE for this bank, documented rather than
+# omitted so the absence is a finding in the deliverable and not a gap.
+#
+# Alpha Bank London publishes no Pillar 3 document of any kind, in any year,
+# and therefore no KM1 template. That is a conclusion from positive evidence,
+# not from a failed search - see KM1_SOURCES below and the Total RWAs sheet.
+# Re-confirmed 2026-09-16 against the bank's own site.
+#
+# The KM1 template is a reproduction of a published disclosure. Nothing here
+# may be reconstructed from the statutory accounts: the accounts are a
+# different basis, and a row 4 assembled from an audited balance sheet is not
+# the bank's Total risk-weighted exposure amount as the PRA template defines
+# it. So this sheet carries a single documented row and no figures.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources — none. Alpha Bank London Limited publishes NO standalone Pillar 3 disclosure, and therefore no "
+    "UK KM1 key-metrics template, for any year in this workbook's FY2019–FY2025 window.\n\n"
+    "This is a conclusion from positive evidence, not the result of a search that came up empty:\n"
+    "• The bank's own site (alphabanklondon.co.uk) has no regulatory-disclosures or investor-relations "
+    "section. Its published sitemap.xml resolves to a single entry pointing at a staging host, and the "
+    "/about-us, /about-us/financial-information and /regulatory-disclosures paths all return honest 404s.\n"
+    "• The document tree that does serve the bank's PDFs, /sites/default/files/, is live and reachable — "
+    "ABL-Financial-Statements-2020.pdf returns HTTP 200 with Content-Type application/pdf — so a 404 on a "
+    "Pillar 3 filename under the same tree is a real absence, not a blocked or moved host.\n"
+    "• A Wayback CDX scan of the whole /sites/default/files/ tree returns 39 distinct PDFs ever captured for "
+    "this domain. Not one of them is a Pillar 3 document; they are financial statements, terms and "
+    "conditions, and rate sheets. See the Total RWAs sheet for that enumeration in full.\n"
+    "• Re-checked against the bank's own site 2026-09-16: still nothing newer and still no Pillar 3.\n\n"
+    "Every Pillar 3 figure elsewhere in this workbook is therefore taken from the capital-management note of "
+    "the bank's own audited Annual Report and Financial Statements, which is a different and narrower "
+    "disclosure than the KM1 template. Those Annual Report figures are deliberately NOT reassembled into a "
+    "KM1 shape here. The KM1 sheet reproduces a published template; a table built from statutory accounts "
+    "would look like one without being one, and its row 4 in particular would not be the risk-weighted "
+    "exposure amount the PRA template defines. Where the Annual Report does disclose a metric, it is on the "
+    "individual Pillar 3 metric sheets that follow, with its basis stated there."
+)
+
+bw.add_km1_sheet(
+    title="Alpha Bank London Limited — KM1 Key Metrics",
+    subtitle="Not applicable — this bank publishes no Pillar 3 disclosure, and so no UK KM1 key-metrics "
+             "template, in any year covered by this workbook. The absence is documented rather than left "
+             "blank; see the source note below for the evidence, and the individual Pillar 3 metric sheets "
+             "for what the bank's Annual Report does disclose.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template", {y: "Not published by this bank" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=46,
+    source_height=300,
+)
+
 metric(
     "CET1 Capital", "£000's",
     [("Common Equity Tier 1 (CET1) capital = Total Tier 1 capital (no AT1 instruments)",

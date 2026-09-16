@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T05:44:06.773971+00:00",
+  "generated_at": "2026-09-16T10:19:27.167704+00:00",
   "policy": "screening only: observed headroom and multi-year movement are ranked; no breach date or future value is projected",
   "records": [
     {
@@ -934,6 +934,29 @@
       "trend_change": -4.129999999999999,
       "trend_direction": "declining",
       "trend_magnitude": 4.129999999999999
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 3.25,
+      "bank": "MONZO BANK LIMITED",
+      "comparable_pair_count": 7,
+      "comparable_year_count": 8,
+      "context_ids": [
+        "leverage_uk_325_2024"
+      ],
+      "current_headroom": 7.08,
+      "current_value": 10.33,
+      "frn": "730427",
+      "latest_year": 2026,
+      "metric": "Leverage Ratio",
+      "regulatory_floor": 3.25,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
+      ],
+      "status": "screened",
+      "trend_change": -5.17,
+      "trend_direction": "declining",
+      "trend_magnitude": 5.17
     },
     {
       "applicable_buffer": 0,
@@ -4052,6 +4075,54 @@
     },
     {
       "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "MONZO BANK LIMITED",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 25.86,
+      "current_value": 33.86,
+      "frn": "730427",
+      "latest_year": 2026,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -70.14,
+      "trend_direction": "declining",
+      "trend_magnitude": 70.14
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
+      "bank": "MONZO BANK LIMITED",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 26.450000000000003,
+      "current_value": 33.45,
+      "frn": "730427",
+      "latest_year": 2026,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -70.55,
+      "trend_direction": "declining",
+      "trend_magnitude": 70.55
+    },
+    {
+      "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "BANK OF CHINA (UK) LIMITED",
       "comparable_pair_count": 11,
@@ -4072,6 +4143,29 @@
       "trend_change": -0.7999999999999972,
       "trend_direction": "declining",
       "trend_magnitude": 0.7999999999999972
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 6.0,
+      "bank": "MONZO BANK LIMITED",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "tier1_pillar1_uk_2021"
+      ],
+      "current_headroom": 27.450000000000003,
+      "current_value": 33.45,
+      "frn": "730427",
+      "latest_year": 2026,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": 6.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -70.55,
+      "trend_direction": "declining",
+      "trend_magnitude": 70.55
     },
     {
       "applicable_buffer": 0,
@@ -4333,54 +4427,6 @@
       "trend_magnitude": 8.0
     },
     {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "MONZO BANK LIMITED",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 48.67,
-      "current_value": 56.67,
-      "frn": "730427",
-      "latest_year": 2025,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": -47.33,
-      "trend_direction": "declining",
-      "trend_magnitude": 47.33
-    },
-    {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "MONZO BANK LIMITED",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
-      ],
-      "current_headroom": 48.92,
-      "current_value": 55.92,
-      "frn": "730427",
-      "latest_year": 2025,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": -48.08,
-      "trend_direction": "declining",
-      "trend_magnitude": 48.08
-    },
-    {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "Melli Bank plc",
@@ -4404,29 +4450,6 @@
       "trend_change": -8.0,
       "trend_direction": "declining",
       "trend_magnitude": 8.0
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 6.0,
-      "bank": "MONZO BANK LIMITED",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [
-        "tier1_pillar1_uk_2021"
-      ],
-      "current_headroom": 49.92,
-      "current_value": 55.92,
-      "frn": "730427",
-      "latest_year": 2025,
-      "metric": "Tier 1 Ratio",
-      "regulatory_floor": 6.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": -48.08,
-      "trend_direction": "declining",
-      "trend_magnitude": 48.08
     },
     {
       "applicable_buffer": 0,
@@ -6589,29 +6612,6 @@
       "trend_change": 1.7800000000000011,
       "trend_direction": "increasing",
       "trend_magnitude": 1.7800000000000011
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 3.25,
-      "bank": "MONZO BANK LIMITED",
-      "comparable_pair_count": 6,
-      "comparable_year_count": 7,
-      "context_ids": [
-        "leverage_uk_325_2024"
-      ],
-      "current_headroom": 12.28,
-      "current_value": 15.53,
-      "frn": "730427",
-      "latest_year": 2025,
-      "metric": "Leverage Ratio",
-      "regulatory_floor": 3.25,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2025/march/leverage-ratio-changes-to-the-retail-deposits-threshold-for-application-of-the-requirement"
-      ],
-      "status": "screened",
-      "trend_change": 0.02999999999999936,
-      "trend_direction": "increasing",
-      "trend_magnitude": 0.02999999999999936
     },
     {
       "applicable_buffer": 2.5,

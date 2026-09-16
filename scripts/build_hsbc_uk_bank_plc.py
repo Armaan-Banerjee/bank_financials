@@ -448,6 +448,309 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-016)
+#
+# HSBC UK Bank plc prints the UK KM1 template as "Table 1: Key metrics
+# (KM1/IFRS9-FL)" in its FY2022-FY2025 Pillar 3 Disclosures. FY2021, FY2020 and
+# FY2019 are BLANK, and the reason is the sharpest trap in this bank:
+#
+#   THE FY2020 AND FY2021 EDITIONS PRINT A TABLE TITLED "Table 1: Key metrics
+#   (KM1/IFRS9-FL)" TOO - AND IT IS NOT THIS TEMPLATE. The map's row-set test
+#   cuts both ways: Allica prints the template without ever writing "KM1", and
+#   HSBC UK writes "KM1" in a title over a table that is not it. What those two
+#   editions actually print is the EBA-era IFRS9-FL layout, numbered 1-17 in a
+#   single run (1 CET1 capital, 2 CET1 as-if, 3 Tier 1 capital, 4 Tier 1 as-if,
+#   5 Total regulatory capital, 6 Total capital as-if, 7 Total RWAs, 8 Total RWAs
+#   as-if, 9-14 the six capital ratios, 15 leverage exposure, 16 leverage ratio,
+#   17 leverage ratio as-if), with an UNNUMBERED four-row buffer block and a
+#   two-row capital-requirement block spliced in between rows 14 and 15. Its own
+#   asterisk footnote says the references "identify the lines prescribed in the
+#   European Banking Authority ('EBA') templates" - not the PRA's, which is what
+#   the FY2022 edition onward says. It has NO LCR rows and NO NSFR rows at all,
+#   no UK-7a/7b/7c SREP split, and its row numbers mean different things from
+#   KM1's (its row 2 is "CET1 capital as if...", where KM1's row 2 is "Tier 1
+#   capital"). Putting those figures into this sheet's rows would assert a
+#   correspondence HSBC UK never published, so FY2019-FY2021 are left blank and
+#   the difference is spelled out in the sheet note. The capital, RWA, ratio and
+#   leverage figures from those editions are not lost - they are on the
+#   single-metric sheets in this workbook, sourced from those tables directly.
+#   FY2019's edition is one step further back again: its Table 1 is titled
+#   "Comparison of own funds, capital and leverage ratios, with and without the
+#   application of transitional arrangements for IFRS 9" and has no buffer block
+#   either.
+#
+# THE BASIS SPLITS WITHIN EACH COLUMN, and differently from HSBC Bank plc's.
+# Rows 1-14e are HSBC UK Bank plc's regulatory consolidation ("the group"). Rows
+# 15-20 are the HSBC UK Bank DOMESTIC LIQUIDITY SUB-GROUP ("DoLSub") - a
+# different perimeter again, comprising HSBC UK Bank plc, Marks and Spencer
+# Financial Services plc, HSBC Private Bank (UK) Limited, HSBC Innovation Bank
+# Limited (from 31 March 2023 reporting) and, up to FY2024, HSBC Trust Company
+# (UK) Limited. Verified directly rather than assumed: KM1's FY2025 rows 15/16/17
+# (93,670 / 53,471 / 175) are identical to rows UK-21/22/23 of the same
+# edition's Table 12 "Quantitative information of LCR (UK LIQ1)", which that
+# edition states is presented "on a HSBC UK Bank Domestic Liquidity Sub-group
+# basis". So this is NOT the same solo-vs-consolidated split that HSBC Bank plc's
+# KM1 carries; it is consolidated-group above the LCR heading and DoLSub below it.
+#
+# COLUMN SELECTION: each annual edition prints five dated columns - 31 Dec,
+# 30 Sep, 30 Jun and 31 Mar of its own year, then the prior 31 Dec. Only the
+# leftmost is used; the three intra-year columns are quarter-ends, and the last
+# is a comparative.
+#
+# ROW SET DRIFT and glyphs:
+#   * HSBC UK prints only rows that carry a value, so UK-8a, UK-9a and 10 appear
+#     in no edition (UK-10a does, because the ring-fenced bank has an O-SII
+#     buffer). Those three are kept as blank rows.
+#   * The unnumbered IFRS9-FL "...as if" rows run FY2022-FY2025 (unlike HSBC Bank
+#     plc, whose FY2025 edition drops them, HSBC UK still prints them in FY2025 -
+#     with the transitional and end-point figures equal).
+#   * The unnumbered "Average exposure measure excluding claims on central banks"
+#     row is printed in the FY2022 and FY2023 editions only.
+#   * THE 1 JANUARY 2022 LEVERAGE BASIS BREAK: the FY2022 edition prints "N/A" in
+#     the 31 Dec 2021 comparative for rows 13/14 and gives the old CRR measure on
+#     two separate unnumbered rows under "Leverage ratio (under the Capital
+#     Requirements Regulation)". Those two rows' 31 December 2022 cells are
+#     genuinely BLANK - not "N/A", which is what the three quarter-end cells
+#     carry. Confirmed by rendering the page at 170dpi and reading it, because
+#     the text layer alone cannot distinguish a blank leading cell from a missing
+#     one. Both captions are kept and the series are never merged.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available capital (£m)", {}),
+    ("DATA", "1    Common equity tier 1 ('CET1') capital",
+     {"FY2025": 15509, "FY2024": 15059, "FY2023": 14224, "FY2022": 12519}),
+    ("DATA", "     CET1 capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2025": 15509, "FY2024": 15048, "FY2023": 14194, "FY2022": 12484}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 18218, "FY2024": 17307, "FY2023": 16479, "FY2022": 14771}),
+    ("DATA", "     Tier 1 capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2025": 18218, "FY2024": 17296, "FY2023": 16449, "FY2022": 14736}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 21888, "FY2024": 20500, "FY2023": 19772, "FY2022": 17847}),
+    ("DATA", "     Total capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2025": 21888, "FY2024": 20489, "FY2023": 19742, "FY2022": 17812}),
+    ("SECTION", "Risk-weighted assets (£m)", {}),
+    ("DATA", "4    Total RWAs",
+     {"FY2025": 117463, "FY2024": 110423, "FY2023": 101478, "FY2022": 92413}),
+    ("DATA", "     Total RWAs as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2025": 117463, "FY2024": 110414, "FY2023": 101450, "FY2022": 92384}),
+    ("SECTION", "Capital ratios (%)", {}),
+    ("DATA", "5    CET1",
+     {"FY2025": "13.2", "FY2024": "13.6", "FY2023": "14.0", "FY2022": "13.5"}),
+    ("DATA", "     CET1 as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2025": "13.2", "FY2024": "13.6", "FY2023": "14.0", "FY2022": "13.5"}),
+    ("DATA", "6    Tier 1",
+     {"FY2025": "15.5", "FY2024": "15.7", "FY2023": "16.2", "FY2022": "16.0"}),
+    ("DATA", "     Tier 1 as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2025": "15.5", "FY2024": "15.7", "FY2023": "16.2", "FY2022": "16.0"}),
+    ("DATA", "7    Total capital",
+     {"FY2025": "18.6", "FY2024": "18.6", "FY2023": "19.5", "FY2022": "19.3"}),
+    ("DATA", "     Total capital as if IFRS 9 transitional arrangements had not been applied",
+     {"FY2025": "18.6", "FY2024": "18.6", "FY2023": "19.5", "FY2022": "19.3"}),
+    ("SECTION", "Additional own funds requirements based on Supervisory Review and Evaluation Process ('SREP') as a percentage of RWAs (%)", {}),
+    ("DATA", "UK-7a    Additional CET1 SREP requirements",
+     {"FY2025": "2.1", "FY2024": "2.1", "FY2023": "2.2", "FY2022": "2.2"}),
+    ("DATA", "UK-7b    Additional additional tier 1 ('AT1') SREP requirements",
+     {"FY2025": "0.7", "FY2024": "0.7", "FY2023": "0.7", "FY2022": "0.8"}),
+    ("DATA", "UK-7c    Additional tier 2 ('T2') SREP requirements",
+     {"FY2025": "1.0", "FY2024": "1.0", "FY2023": "1.0", "FY2022": "1.0"}),
+    ("DATA", "UK-7d    Total SREP own funds requirements",
+     {"FY2025": "11.8", "FY2024": "11.8", "FY2023": "11.9", "FY2022": "12.0"}),
+    ("SECTION", "Combined buffer requirement as a percentage of RWAs (%)", {}),
+    ("DATA", "8    Capital conservation buffer requirement",
+     {"FY2025": "2.5", "FY2024": "2.5", "FY2023": "2.5", "FY2022": "2.5"}),
+    ("DATA", "UK-8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State", {}),
+    ("DATA", "9    Institution-specific countercyclical capital buffer",
+     {"FY2025": "1.9", "FY2024": "1.9", "FY2023": "1.9", "FY2022": "1.0"}),
+    ("DATA", "UK-9a    Systemic risk buffer", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer", {}),
+    ("DATA", "UK-10a    Other systemically important institution buffer",
+     {"FY2025": "1.0", "FY2024": "1.0", "FY2023": "1.0", "FY2022": "1.0"}),
+    ("DATA", "11    Combined buffer requirement",
+     {"FY2025": "5.4", "FY2024": "5.4", "FY2023": "5.4", "FY2022": "4.5"}),
+    ("DATA", "UK-11a    Overall capital requirements",
+     {"FY2025": "17.2", "FY2024": "17.2", "FY2023": "17.3", "FY2022": "16.5"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements",
+     {"FY2025": "6.6", "FY2024": "7.0", "FY2023": "7.3", "FY2022": "6.8"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 325950, "FY2024": 297157, "FY2023": 270907, "FY2022": 251500}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.6", "FY2024": "5.8", "FY2023": "6.1", "FY2022": "5.9"}),
+    ("DATA", "     Average exposure measure excluding claims on central banks (£m)",
+     {"FY2023": 267547, "FY2022": 252024}),
+    ("SECTION", "Additional leverage ratio disclosure requirements — captioned \"Additional own funds requirements to address risks of excessive leverage (as a percentage of leverage ratio total exposure amount)\" in the FY2022 and FY2023 editions", {}),
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.6", "FY2024": "5.8", "FY2023": "6.1", "FY2022": "5.9"}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.8", "FY2024": "4.9", "FY2023": "4.8", "FY2022": "4.2"}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.8", "FY2024": "6.0", "FY2023": "6.4", "FY2022": "5.9"}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)",
+     {"FY2025": "5.0", "FY2024": "5.0", "FY2023": "5.1", "FY2022": "4.2"}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)",
+     {"FY2025": "0.7", "FY2024": "0.7", "FY2023": "0.6", "FY2022": "0.3"}),
+    ("DATA", "EU-14d    Leverage ratio buffer requirement (%)",
+     {"FY2025": "1.1", "FY2024": "1.1", "FY2023": "1.0", "FY2022": "0.7"}),
+    ("DATA", "EU-14e    Overall leverage ratio requirements (%)",
+     {"FY2025": "4.4", "FY2024": "4.4", "FY2023": "4.3", "FY2022": "3.9"}),
+    ("SECTION", "Leverage ratio (under the Capital Requirements Regulation) — pre-1 January 2022 basis, FY2022 edition only; its 31 December 2022 cells are printed BLANK", {}),
+    ("DATA", "     Total leverage ratio exposure measure (£m)", {}),
+    ("DATA", "     Leverage ratio (%)", {}),
+    ("SECTION", "Liquidity coverage ratio ('LCR') — HSBC UK Bank Domestic Liquidity Sub-group basis, NOT the capital consolidation above", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value - average) (£m)",
+     {"FY2025": 93670, "FY2024": 91348, "FY2023": 94765, "FY2022": 110722}),
+    ("DATA", "UK-16a    Cash outflows – total weighted value (£m)",
+     {"FY2025": 59238, "FY2024": 53657, "FY2023": 53058, "FY2022": 53740}),
+    ("DATA", "UK-16b    Cash inflows – total weighted value (£m)",
+     {"FY2025": 5767, "FY2024": 5600, "FY2023": 5823, "FY2022": 4793}),
+    ("DATA", "16    Total net cash outflow (£m)",
+     {"FY2025": 53471, "FY2024": 48057, "FY2023": 47234, "FY2022": 48946}),
+    ("DATA", "17    LCR (%)",
+     {"FY2025": "175", "FY2024": "190", "FY2023": "201", "FY2022": "226"}),
+    ("SECTION", "Net stable funding ratio ('NSFR') — HSBC UK Bank Domestic Liquidity Sub-group basis", {}),
+    ("DATA", "18    Total available stable funding (£m)",
+     {"FY2025": 270620, "FY2024": 264704, "FY2023": 264729, "FY2022": 273802}),
+    ("DATA", "19    Total required stable funding (£m)",
+     {"FY2025": 184732, "FY2024": 171500, "FY2023": 167523, "FY2022": 166551}),
+    ("DATA", "20    NSFR (%)",
+     {"FY2025": "146", "FY2024": "154", "FY2023": "158", "FY2022": "164"}),
+]
+
+KM1_SOURCES = (
+    "Sources - HSBC UK Bank plc's OWN entity-level Pillar 3 Disclosures, Table 1 'Key metrics "
+    "(KM1/IFRS9-FL)'. Each year comes from the 31 December column of the edition in which that "
+    "year is the reporting year, never from a later edition's comparative. Every PDF was "
+    "re-downloaded for this ticket and verified by HTTP 200, Content-Type application/pdf and "
+    "%PDF magic bytes:\n"
+    f"FY2025: Pillar 3 Disclosures at 31 December 2025, Table 1, p.4 - {P32025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures at 31 December 2024, Table 1, p.5 - {P32024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures at 31 December 2023, Table 1, p.5 - {P32023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures at 31 December 2022, Table 1, p.5 - {P32022_URL}\n"
+    f"FY2021: no UK KM1 - see below - {P32021_URL}\n"
+    f"FY2020: no UK KM1 - see below - {P32020_URL}\n"
+    f"FY2019: no UK KM1 - see below - {P32019_URL}\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: checked HSBC's own investor-relations subsidiaries "
+    "reporting page (hsbc.com/investors/results-and-announcements/all-reporting/subsidiaries), "
+    "not this project's cited URLs and not Wayback. The newest HSBC UK Bank plc documents listed "
+    "there are the Pillar 3 Disclosures at 31 March 2026 (Q1) and at 30 June 2026 (interim), "
+    "plus the ring-fenced bank's Interim Report 2026. The newest ANNUAL edition remains the "
+    "Pillar 3 Disclosures at 31 December 2025 and the Annual Report and Accounts 2025, both "
+    "published 25 February 2026 - which this workbook already holds. FY2026 is not a complete "
+    "financial year, so no new year column is added. Checked, none newer.\n\n"
+    "ENTITY: HSBC publishes SEPARATE Pillar 3 Disclosures for HSBC Holdings plc (the listed "
+    "group, out of scope), HSBC Bank plc (FRN 114216, the non-ring-fenced entity), HSBC UK Bank "
+    "plc (this entity, FRN 765112, the ring-fenced bank) and HSBC Innovation Bank Limited (FRN "
+    "543146). All four sit on the same hsbc.com downloads page. Every figure on this sheet comes "
+    "from a document whose own running footer reads 'HSBC UK Bank plc Pillar 3 <year>'.\n\n"
+    "WHY FY2021, FY2020 AND FY2019 ARE BLANK - the sharpest trap in this bank, and the reason a "
+    "title search alone is not a presence test. The FY2020 and FY2021 editions DO print a table "
+    "titled 'Table 1: Key metrics (KM1/IFRS9-FL)' - and it is NOT this template. What they "
+    "actually print is the EBA-era IFRS9-FL layout, numbered 1-17 in one continuous run: 1 CET1 "
+    "capital, 2 CET1 capital as-if, 3 Tier 1 capital, 4 Tier 1 capital as-if, 5 Total regulatory "
+    "capital, 6 Total capital as-if, 7 Total RWAs, 8 Total RWAs as-if, 9-14 the six capital "
+    "ratios (transitional and as-if), 15 total leverage ratio exposure measure, 16 leverage "
+    "ratio, 17 leverage ratio as-if - with an UNNUMBERED four-row buffer block ('Capital "
+    "conservation buffer requirement', 'Countercyclical buffer requirement', 'Other Systemically "
+    "Important Institutions (O-SII) buffer requirement', 'Total of bank CET1 specific buffer "
+    "requirements') and a two-row capital-requirement block ('Total capital requirement (Pillar "
+    "1 + Pillar 2A)', 'CET1 available after meeting the bank's minimum capital requirements') "
+    "spliced in between rows 14 and 15. It differs from the UK KM1 in every way that matters:\n"
+    "  * its own asterisk footnote says the references 'identify the lines prescribed in the "
+    "European Banking Authority (EBA) templates', where the FY2022 edition onward says 'the "
+    "relevant PRA template';\n"
+    "  * it has NO LCR rows and NO NSFR rows whatsoever - the entire second half of KM1;\n"
+    "  * it has no UK-7a/UK-7b/UK-7c SREP split;\n"
+    "  * and its row numbers denote different things. Its row 2 is 'CET1 capital as if IFRS 9 "
+    "transitional arrangements had not been applied'; KM1's row 2 is 'Tier 1 capital'. Its row 7 "
+    "is 'Total RWAs'; KM1's row 7 is the total capital ratio.\n"
+    "Transcribing those figures into this sheet's rows would assert a row-for-row correspondence "
+    "HSBC UK never published, so FY2019-FY2021 are left blank instead. This cuts the opposite way "
+    "from the usual trap: a bank can print the token 'KM1' in a table title without printing the "
+    "template, just as another bank (Allica) can print the template without ever writing 'KM1'. "
+    "Nothing is lost - those editions' capital, RWA, ratio and leverage figures are carried on "
+    "the single-metric sheets in this workbook, sourced from those tables directly. FY2019's "
+    "edition is a step further back again: its Table 1 is titled 'Comparison of own funds, "
+    "capital and leverage ratios, with and without the application of transitional arrangements "
+    "for IFRS 9' and has no buffer block at all. The positive reason for the change is in the "
+    "FY2022 edition's own footnote 2: the SREP, buffer, leverage and liquidity disclosures 'have "
+    "been implemented from 1 January 2022, and are based on the PRA's disclosure templates and "
+    "instructions which came into force at that time'.\n"
+    "This was checked for an image-only table as well (see map rule 13): the FY2019, FY2020 and "
+    "FY2021 PDFs were searched for a KM1-ish heading with no figures under it, and "
+    "`pdfimages -list` reports no embedded bitmap anywhere near the Key metrics pages in any of "
+    "them. Extraction on those documents is rich, not silent - the FY2019 text yields 205 hits "
+    "for 'capital', 121 for 'ratio' and 18 for 'CET1' - so the absence is a fact about the "
+    "documents, not about the tool.\n\n"
+    "BASIS SPLITS WITHIN EACH COLUMN - read this before comparing rows. Rows 1-14e are on HSBC UK "
+    "Bank plc's regulatory consolidation, which the table preamble calls 'the group'. Rows 15-20 "
+    "are on the HSBC UK Bank DOMESTIC LIQUIDITY SUB-GROUP ('DoLSub') perimeter - HSBC UK Bank "
+    "plc, Marks and Spencer Financial Services plc, HSBC Private Bank (UK) Limited, HSBC "
+    "Innovation Bank Limited (included from 31 March 2023 reporting) and, up to the FY2024 "
+    "edition, HSBC Trust Company (UK) Limited. This was verified rather than assumed: KM1's "
+    "FY2025 rows 15, 16 and 17 (93,670 / 53,471 / 175) are identical to rows UK-21, 22 and 23 of "
+    "the same edition's Table 12 'Quantitative information of LCR (UK LIQ1)', which that edition "
+    "states is presented 'on a HSBC UK Bank Domestic Liquidity Sub-group basis reflecting the way "
+    "we manage liquidity within HSBC UK as a single operating entity'. Note this is a DIFFERENT "
+    "second basis from the one in HSBC Bank plc's KM1, whose rows 15-20 are that entity SOLO.\n\n"
+    "COLUMN SELECTION: each annual edition's Table 1 prints five dated columns - 31 Dec, 30 Sep, "
+    "30 Jun and 31 Mar of its own year, then the prior 31 Dec. Only the leftmost 31 December "
+    "column is taken; the three intra-year columns are quarter-ends rather than year-ends, and "
+    "the last is a comparative.\n\n"
+    "ROW SET DRIFT (map rule 4 - a row the bank did not print is blank, which is not zero and not "
+    "a row we failed to find):\n"
+    "  * HSBC UK prints only rows that carry a value, so UK-8a, UK-9a and 10 appear in no "
+    "edition. They are kept as blank rows here so the sheet matches the template a reader would "
+    "cross-refer to. UK-10a IS printed in every edition, because the ring-fenced bank carries an "
+    "O-SII buffer.\n"
+    "  * The unnumbered IFRS9-FL '...as if' rows are printed in all four editions FY2022-FY2025. "
+    "This differs from HSBC Bank plc, whose FY2025 edition drops them; HSBC UK keeps them in "
+    "FY2025 with the transitional and end-point figures equal, the IFRS 9 transitional "
+    "arrangements having ended on 1 January 2025.\n"
+    "  * The unnumbered 'Average exposure measure excluding claims on central banks' row is "
+    "printed in the FY2022 and FY2023 editions only.\n\n"
+    "THE 1 JANUARY 2022 LEVERAGE BASIS BREAK, kept as two separate series. In the FY2022 edition "
+    "rows 13 and 14 print 'N/A' for the 31 Dec 2021 comparative, and the pre-2022 measure appears "
+    "instead on two unnumbered rows under their own heading 'Leverage ratio (under the Capital "
+    "Requirements Regulation)'. Those two rows' 31 DECEMBER 2022 CELLS ARE GENUINELY BLANK - not "
+    "'N/A', which is what their three quarter-end cells carry. That distinction is invisible in "
+    "the PDF's text layer (a leading empty cell and a missing cell extract identically), so the "
+    "page was rendered at 170dpi and read by eye to confirm it. Their only figures (GBP358,237m "
+    "and 4.2%) sit in the 31 Dec 2021 comparative column, which rule 1 forbids using, and "
+    "FY2021's own edition has no UK KM1 to take them from - so both rows are blank throughout "
+    "this sheet.\n\n"
+    "LABEL DRIFT, recorded not normalised: the FY2022 edition writes row 9 as "
+    "'Institution-specific countercyclical capital buffer (%)' where FY2023-FY2025 drop the "
+    "'(%)'; and the FY2022/FY2023 editions caption the 14a-EU-14e block 'Additional own funds "
+    "requirements to address risks of excessive leverage (as a percentage of leverage ratio "
+    "total exposure amount)' where FY2024/FY2025 caption it 'Additional leverage ratio "
+    "disclosure requirements'. Both variants are named on this sheet. Ratio rows are stored as "
+    "the digits HSBC UK printed, without a percent sign, because the unit is carried in the "
+    "section heading rather than on the row.\n\n"
+    "RESTATEMENTS THE BANK FLAGS ITSELF, recorded not applied (rule 1 - each year keeps its own "
+    "edition's figure): the FY2025 edition footnotes that 'From 30 June 2025, the regulatory "
+    "valuation of Tier 2 capital includes the accrued interest. Comparatives have not been "
+    "restated', and that an enhancement to the counterparty credit calculation effective 2Q25 "
+    "'has impacted the current period disclosures. Comparatives have not been restated'. The "
+    "FY2022 edition footnotes that from 30 September 2022 the LCR and NSFR became averages and "
+    "'Prior period numbers have been restated for consistency'.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="HSBC UK Bank plc — KM1 Key Metrics",
+    subtitle="HSBC UK Bank plc's own published UK KM1 template ('Table 1: Key metrics (KM1/IFRS9-FL)'), "
+             "reproduced in the bank's row order with its own row references, labels and printed precision. "
+             "Amounts £m, ratios as printed (%). Rows 1-14e are the regulatory consolidation ('the group'); "
+             "rows 15-20 are the HSBC UK Bank Domestic Liquidity Sub-group. FY2021 and earlier are blank: "
+             "those editions print a table ALSO titled 'Key metrics (KM1/IFRS9-FL)' which is a different, "
+             "EBA-numbered template with no LCR or NSFR rows — see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    source_height=460,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):

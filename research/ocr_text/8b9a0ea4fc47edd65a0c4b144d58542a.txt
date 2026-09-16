@@ -1,0 +1,3781 @@
+SG HAMBROS BANK LIMITED
+
+Report of the Directors and Financial Statements
+31 December 2014
+
+Registered number: 964058
+
+A
+
+nua
+
+07/07/2015 #225
+COMPANIES HOUSE
+
+TUESDAY
+SG Hambros Bank Limited
+
+Board of Directors
+
+Chairman
+W J Newbury*
+
+Chief Executive .
+E E Barnett
+
+Directors
+
+S Barnett*
+
+S Collins
+
+O D Meredith
+J-F Mazaud*
+D Beretti*
+
+G Branson
+
+D Seiglie*
+
+H Thomas*
+J-P Flais**
+
+*Non-executive Director
+**Alternate Director
+
+Members of the Audit and Risk committee _
+S Barnett (Chair)
+
+W J Newbury
+
+H Thomas
+
+Members of the Group Regulatory committee
+S.Barnett (Chair)
+
+H Thomas
+
+W J Newbury
+
+O D Meredith
+
+G Branson
+
+S.Collins
+
+Members of the Group Remuneration committee
+S Barnett (chair) .
+W J Newbury
+
+- H Thomas
+
+Company Secretary
+T Foa
+
+Registered Office
+
+Norfolk House
+31 St James’s Square
+London SW1Y 4JR
+
+Auditor
+
+Deloitte LLP
+Chartered Accountants London
+
+Registered No. 964058
+
+SG Hambros Bank Limited -
+
+CONTENTS
+
+Strategic Report
+
+Report of the Directors
+
+Directors’ Responsibilities Statement
+
+. Independent Auditor's Report
+
+Profit and Loss Account
+
+Balance Sheet
+
+Statement of Total Recognised Gains and Losses
+
+Notes to the Financial Statements
+
+Page
+
+10
+
+11
+
+13
+
+14
+
+16
+
+_ 17
+
+SG Hambros Bank Limited
+STRATEGIC REPORT .
+
+PRINCIPAL ACTIVITIES AND BUSINESS REVIEW
+
+SG Hambros Bank Limited (the “Bank”) and its subsidiaries form the private banking arm of the
+Société Générale Group (“SG Group”) in the UK, the Channet Islands and Gibraltar. The Bank
+offers its clientele an integrated wealth management service, including the provision of banking
+products and trust structures as well as investment management advice. The Bank is not
+required to prepare consolidated financial statements and hence, the report that follows relates
+only to UK operations.
+
+The profit on ordinary activities after tax for the financial year ended 31 December 2014 is
+£5,703,204 (2013:£44,808,000 restated, previously £45,016,000). This is adjusted to reflect the
+adoption of the accounting standard FRS 20 share- based payment as specified in Note 7.
+
+In 2014, client deposits have increased by 30% to £1.34 billion (2013: £1.03 billion), as a result
+of an increase of new business from new and existing clients. This also impacted the assets
+under management of the Bank which increased by 12%, before market movements, to a
+balance of £3.5 billion (2013: £3.1 billion). Average staff headcount increased to 215 (2013:
+198), staff headcount at year ending was 215 (2013: 208). The average number of client
+relationship managers and assistants has increased to 80 (2013: 73).
+
+Client lending has grown steadily and, in accordance with the agreed business plan, property
+backed lending is the major growth element of the loan portfolio with the Bank maintaining a
+relatively low risk profile. The loan-deposit ratio has decreased to 53% for the end of 2014
+(2013: 60%).
+
+The Bank continued to implement its commercial strategy launched in 2013, and strengthened
+and expanded its business in 2014, in particular through a dynamic recruitment plan.
+Demonstrating the Bank’s strong continued commitment to the wealth management markets in
+the UK, the new strategy will involve the recruitment of new private bankers including
+international teams focusing on Russian and French nationals, a wider range of services and
+products for the benefit of existing and prospective clients and greater synergies with the SG
+Group. This year’s recruitment includes new bankers across the UK regional offices, reinforcing
+the Bank's commitment to providing support and services to clients across the UK.
+
+The Bank has also been focused on the upgrade of client experience through a major
+programme of improvements in legacy IT systems. This is a multi year programme across the
+Société Générale Private banking network and will be led in 2015 by an enhanced e-banking
+client offer.
+
+PRINCIPAL RISKS AND UNCERTAINTIES
+
+The Bank’s activities expose it to a variety of financial and other risks which are described in
+Note 31. The principal residual risks of the Bank remain as credit, liquidity, regulatory,
+operational and market risks.
+
+"= CREDIT RISK
+
+There is a clearly defined policy and process documented within the Bank’s Credit Policy for
+credit application and approval, credit administration, daily monitoring and reporting.
+
+The daily monitoring of risk exposures for Private Clients is conducted through a PRIV (SG
+Private Banking business line) risk monitoring tool, ‘PRISM’, which provides the Credit team with
+the ability to monitor exposures against collateral daily. The tool recalculates lending values of
+market sensitive collateral daily, taking account of liquidity, diversification, concentration, quality
+and cross currency elements.
+
+The LTV guidelines for lending against financial assets which are calculated by SG Group and
+adopted as part of the Bank’s Credit Policy, have been calculated using stress testing
+techniques based on tolerance thresholds set by SG Group with a confidence level of 99.92%.
+Should the quality of the counterparty or the Bank’s collateral deteriorate to such an extent as to
+cause concern, the SG Hambros Group Head of Credit must conduct an interim review and
+apply appropriate rectification measures.
+
+SG Hambros Bank Limited
+STRATEGIC REPORT
+
+«CREDIT RISK (CONTINUED)
+
+There are two main periodic reviews of the quality of the entire loan book (as set out in the SGH
+Provisioning and SG PAIV Credit policies):
+
+* Quarterly Irregular Commitments review.
+
+* Quarterly Group Executive Risk Committee which includes the Provisioning Review.
+
+The Credit Risk pertaining to the large exposures for the top 10 clients is assessed at the
+monthly ALCO meeting.
+
+e COUNTERPARTY CREDIT RISK
+
+The Bank recognises that residual risk can arise due to failure of counterparties connected to
+client originated, and the Bank’s own securities and derivatives transactions. This risk can arise
+as default risk of a Bank’s counterparty including failure to pay, inability to replace securities post
+default event, or the failure of the other parties in the settlement process. The Bank generally
+manages this risk by straight through processing and delivery for payment where possible and
+has upgraded: controls around settlement only business in 2014 to reflect counterparty risk in
+
+this service offered by the Bank.
+» LIQUIDITY RISK
+
+The liquidity risk appetite for the Bank has been defined by the Board as follows:
+
+The Bank will maintain liquidity resources to target survival for a minimum period of three
+months under the idiosyncratic, market-wide and combined liquidity stresses defined in
+compliance with the Financial Conduct Authority (“FCA”) and the Prudential Regulation
+Authority (“PRA”) Regulations (BIPRU 12.4 and 12.5).
+
+The Bank monitors on a daily basis, the expected stressed cash flows over a three month
+horizon. The stressed cash flows are based on the assumptions of two stress testing models.
+The first model considers the impact of defined stress events (in accordance with BIPRU 12.4),
+while the second considers those defined by the PRA (as per BIPRU 12.5). In both cases, the
+liquidity position must remain at such a level as to ensure a positive cash flow for the first three
+months of the stressed forecasts. Note 31 covers liquidity risk in more detail.
+
+* MARKET RISK
+
+The Bank’s activities expose it primarily to the financial risks of changes in foreign currency
+exchange rates and interest rates. The Bank uses foreign exchange forward contracts and
+interests rate swap contracts to hedge-these exposures.
+
+" REGULATORY RISK
+
+The Bank is subject to financial services laws, regulation and regulatory oversight and failure to
+comply with any of these constitutes significant risks. The PRA is responsible for the
+* authorisation and prudential supervision of the Bank while the FCA is responsible for conduct of
+business supervision. The increased intensity of regulatory oversight in the banking system
+could potentially have an adverse effect on how the Bank conducts its business and ultimately
+on its results. Compliance with such regulations could increase the Bank's regulatory capital
+requirements and the cost.
+
+The Bank is required by the PRA to maintain adequate capital and is therefore subject to the risk
+of having insufficient capital resources to meet its minimum regulatory capital requirements.
+These minimum regulatory requirements may increase in the future and/or the PRA may change
+the manner in which it applies existing regulatory requirements to the Bank. The table below
+details the capital resources, capital requirements and solvency ratio as at 31 December 2014,
+with 2013 for comparison.
+
+SG Hambros Bank Limited
+STRATEGIC REPORT
+
+« REGULATORY RISK (CONTINUED)
+
+2014 2013
+
+£000 £’000
+Capital Resources .
+Core Tier One Capital ; 134,438 250,939
+Total Capital after deductions 134,438 124,769
+Pillar 1 Variable Capital Requirements
+Credit Risk 18,814 18,742
+Market Risk 73 64
+Operational Risk 2,624 4,894
+Capital Requirements 21,511: 23,700
+Solvency Ratio . 624.97% 526.45%
+
+The definition of Common Equity Tier 1 Capital (CET 1) is part of the CRD IV rules that came into
+force on 1st January 2014 (as part of the Basel I! implementation). Under the new rules, a
+number of deductions previously deducted from total tier 1 and tier 2 capital, are now wholly
+deducted from CET1 capital.
+
+There remains a high level of scrutiny regarding financial institutions’ treatment of customers
+and overall business conduct from regulatory bodies and the media. The FCA in particular
+continues its focus on the conduct risks arising from the business models of banking institutions.
+
+* OPERATIONAL RISK
+
+Operational Risk is the risk of loss resulting from inadequate or failed internal processes, people:
+and systems or from external events. This definition includes Legal risk but excludes Strategic
+or Reputatiorial Risk.
+
+Within the Bank, a number of processes are used to measure, monitor and mitigate instances of
+operational errors. A summary of the approaches used is as follows:
+
+« Risk & Control Self Assessment (RCSA) — A periodic RCSA assessment is undertaken to
+assess and quantify the inherent risk exposure, quality of controls in place and resultant
+residual risk exposures across our core areas of business and for each Basle Il event
+category.
+
+* Permanent Supervision — An ongoing assessment of the effective operation of key controls
+employed across the Group using a tool called OpeRA. Areas of the business are required to
+report against pre agreed risk indicator metrics and self assess the effective operation of
+controls within their areas.
+
+* Loss Recording and Analysis — All operational errors and commercial gestures in excess of
+EUR 10k for losses and EUR 50k for gains, are required to be captured and reported on a
+monthly basis to SG Group. Additionally, all losses, gains and commercial gestures falling
+beneath these SG Group reporting thresholds are captured using the Bank’s Incident
+Reporting Tool (IRT).
+
+SG Hambros Bank Limited
+
+STRATEGIC REPORT
+
+Approved by the Board and signed on its behalf by:
+
+O D.Meredith
+
+Director
+Date: 24 [0o3/2o1S
+
+SG Hambros Bank Ltd
+Norfolk House
+
+31 St James’s Square
+London SW1Y 4JR
+
+SG Hambros Bank Limited
+REPORT OF THE DIRECTORS
+
+The directors have pleasure in presenting their report, together with the audited financial
+statements of SG Hambros Bank Limited (the “Bank”), for the year ended 31 December 2014.
+
+RESULTS FOR THE YEAR
+
+The profit on ordinary activities after tax for the financial year ended 31 December 2014 is
+£5,703,204 (2013:£44,808,000 restated, previously £45,016,000). This is adjusted to reflect the
+adoption of the new accounting standard FRS 20 share- based payment as specified in Note 7.
+
+DIVIDENDS
+
+Interim dividends of £5,000,000 were paid on 19 December 2014 (2013: £40,500,000). The
+directors do not recommend payment of a final dividend for the year 2014 (2013: £nil).
+
+GOING CONCERN INCLUDING LIQUIDITY MANAGEMENT
+
+Note 31 to the financial statements includes the Bank’s objectives, policies and processes for
+managing its capital; its financial risk management objectives; details of its financial instruments
+and hedging activities; and its exposures to credit risk and liquidity risk.
+
+The Bank has maintained at all times over the year sufficient liquid asset buffer investments to
+operate within the business risk appetite as defined in its Internal Liquidity Adequacy
+Assessment Process document (the “ILAA”) and for survival under prescribed stress scenarios
+including combined stress scenarios. Liquidity monitoring under stress is monitored frequently
+by the Group ALCO and reported regularly to the Directors of the Board.
+
+The directors believe that the Bank is well placed to manage its business risks successfully.
+_ After consideration, the directors have a reasonable expectation that the Bank has adequate
+resources to continue in operational existence for the foreseeable future. Accordingly, the going
+concern basis will continue to be adopted in preparing the annual report and _ financial
+statements.
+
+POLITICAL CONTRIBUTIONS
+No political donations were made during the year (2013: none).
+
+DIRECTORS
+The directors, who served throughout the year except as noted, were as follows:
+Chairman: W J Newbury
+Chief Executive: E E Barnett
+Other Directors: C C G Clarke (retired 10.09.2014)
+J-P Flais
+G Branson
+S Collins
+O D Meredith
+J-F Mazaud
+D Beretti
+
+D Seiglie (appointed 22.07.2014)
+S Barnett (appointed 19.08.2014)
+H Thomas (appointed 19.08.2014)
+
+SG Hambros Bank Limited
+REPORT OF THE DIRECTORS
+
+DIRECTORS’ INDEMNITIES
+
+The Company has made qualifying third party indemnity provisions for the benefit of its directors
+which were made during the year and remain in force at the date of this report.
+
+DIRECTORS’ INTERESTS
+No director had a beneficial interest in the shares of the Bank or its subsidiaries during the year.
+DISABLED EMPLOYEES
+
+The Bank supporis the employment of disabled persons, where possible, in recruitment, by
+retention of -those who become disabled during their employment, and generally through
+training, career development and promotion.
+
+EMPLOYEE CONSULTATION
+
+The Bank pays particular regard to the involvement of employees generally in the Bank’s
+activities and achievements. Employees are kept aware of particular developments by means of
+a regular circulation of copies of press notices, memoranda and a separate employee report by
+means of an intranet site.
+
+AUDITOR
+
+, Each of the persons who is a director at the date of approval of this report confirms that
+- as far as the director is aware, there is no relevant audit information of which the Bank’s
+auditor is unaware; and - ;
+
+- the director has taken all the steps that he/she ought to have taken as a director in order
+to make himself/herself aware of any relevant audit information and to establish that the
+Bank’s auditor is aware of that information. ,
+
+This confirmation is given and should be interpreted in accordance with the provisions of s418 of
+the Companies Act 2006.
+
+‘Approved by the Board and signed on its behalf by:
+
+O D Meredith
+Director
+
+Date: 1% [03/2018
+
+SG Hambros Bank Ltd
+Norfolk House
+
+31 St James’s Square
+London SW1Y 4JR
+
+SG Hambros Bank Limited
+
+DIRECTORS’ RESPONSIBILITIES STATEMENT
+
+The directors are responsible for preparing the Annual Report and the financial statements in
+accordance with applicable laws and regulations. Company law requires the directors to
+prepare financial statements for each financial year. Under that law the directors have elected to
+prepare financial statements in accordance with United Kingdom Generally Accepted
+Accounting Practice (United Kingdom Accounting Standards and applicable law). Under
+Company law the directors must not approve the financial statements unless they are satisfied
+that they give a true and fair view of the state of affairs of the Company and of the profit and loss
+of the Company for that period.
+
+In preparing these financial statements, the directors are required to:
+e select suitable accounting policies and then apply them consistently;
+
+¢ make judgements and accounting estimates which are reasonable and prudent;
+
+e state whether applicable UK Accounting Standards have been followed, subject to any
+material departures disclosed and explained in the financial statements; and
+
+® prepare the financial statements on the going concern basis, unless it is inappropriate to
+presume that the Company will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to
+show and explain the Company’s transactions and disclose with reasonable accuracy at any
+time the financial position of the Company and enable .them to ensure that the financial
+statements comply with the Companies Act 2006. They are also responsible for safeguarding
+the assets of the Company and hence for taking reasonable steps for the prevention and
+detection of fraud and other irregularities.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial
+information included on the Company’s website. Legislation in the United Kingdom governing
+the preparation and dissemination of financial statements may differ from legislation in other
+jurisdictions.
+
+10
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF SG HAMBROS BANK
+LIMITED
+
+We have audited the financial statements of SG Hambros Bank Limited for the year ended 31
+December 2014 which comprise the Profit and Loss Account, the Balance Sheet, the Statement
+of Total Recognised Gains and Losses and the related notes 1 to 33. The financial reporting
+framework that has been applied in their preparation is applicable law and United Kingdom
+Accounting Standards (United Kingdom Generally Accepted Accounting Practice).
+
+This report is made solely to the Company's members, as a body, in accordance with Chapter 3
+of Part 16 of the Companies Act 2006. Our audit work has been undertaken so that we might
+state to the Company’s members those matters we are required to state to them in an auditor's
+report and for no other purpose. To the fullest extent permitted by law, we do not accept or
+assume responsibility to anyone other than the Company and the Company’s members as a
+body, for our audit work, for this report, or for the opinions we have formed.
+
+Respective responsibilities of directors and auditor
+
+As explained more fully in the Directors’ Responsibilities Statement, the directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a
+true and fair view. Our responsibility is to audit and express an opinion on the financial
+statements in accordance with applicable law and International Standards on Auditing (UK and
+Ireland), Those standards require us to comply with the Auditing Practices Board's Ethical
+Standards for Auditors.
+
+Scope of the audit of the financial statements
+
+An audit involves obtaining evidence about the amounts and disclosures in the financial
+statements sufficient to give reasonable assurance that the financial statements are free from
+material misstatement, whether caused by fraud or error. This includes an assessment of:
+whether the accounting policies are appropriate to the Company's circumstances and have been
+consistently applied and adequately disclosed; the reasonableness of significant accounting
+estimates made by the directors; and the overall presentation of the financial statements. In
+addition, we read all the financial and non-financial information in the annual report to identify
+material inconsistencies with the audited financial statements and to identify any information that
+is apparently materially incorrect based on, or materially inconsistent with, the knowledge
+acquired by us in the course of performing the audit. If we become aware of any apparent
+material misstatements or inconsistencies we consider the implications for our report.
+
+Opinion on financial statements
+In our opinion the financial statements:
+
+° give a true and fair view of the state of the Company’s affairs as at 31 December 2014
+and of its profit for the year then ended;
+
+° have been properly prepared in accordance with United Kingdom Generally Accepted
+Accounting Practice; and
+
+° have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Opinion on other matter prescribed by the Companies Act 2006
+
+In our opinion the information given in the Strategic Report and the Directors’ Report for the
+financial year for which the financial statements are prepared is consistent with the financial
+statements.
+
+.
+
+11
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF SG HAMBROS BANK
+LIMITED (CONTINUED)
+
+Matters on which we are required to report by exception
+We have nothing to report in respect of the following matters where the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+° adequate accounting records have not been kept, or returns adequate for our audit have
+not been received from branches not visited by us; or
+
+° the financial statements are not in agreement with the accounting records and returns; or
+
+° certain disclosures of directors’ remuneration specified by law are not made; or - ©
+
+. we have not received all the information and explanations we require for our audit.
+
+Oliver Grundy FCA ( enior statutory auditor)
+for and_on behalf of Deloitte LLP
+Chartered Accountants and Statutory Auditor
+
+London
+United Kingdom
+
+Date: I NASON ZO (S
+
+12
+SG Hambros Bank Limited
+
+PROFIT AND LOSS ACCOUNT
+For the year ended 31 December 2014
+
+Interest receivable
+Interest payable
+
+NET INTEREST INCOME
+
+Fees and commissions income
+Fees and commissions expenses
+
+Net fee and commission income
+Net trading income
+Other operating income
+
+OPERATING INCOME
+
+Administrative expenses
+
+Amortisation
+
+Depreciation
+
+Impairment of financial assets
+
+Impairment of shares in group undertakings
+
+Impairment of shares in participating interests
+
+Loss on sale of group undertakings
+
+PROFIT ON ORDINARY ACTIVITIES BEFORE
+
+TAX
+
+Tax on profit on ordinary activities
+
+PROFIT ON ORDINARY ACTIVITIES AFTER TAX
+
+Notes
+
+an
+
+19
+20
+25
+17
+18
+17
+
+11
+
+2014 2013
+£000 £°000
+(restated)
+
+28,597 25,615
+(8,252) (5,597)
+20,345 20,018
+24,282 23,710
+(1,682) (1,997)
+22,600 21,713
+1,134 1,075
+5,036 40,306
+49,115 83,112
+(41,370) (34,485)
+(1,091) (1,091)
+(246) (378)
+(382) (261)
+
+- (25)
+
+- (1)
+
+6,026 46,871
+(323) (2,063)
+5,703 44,808
+
+The results for the years ended 31 December 2014 and 31 December 2013 are derived from
+
+continuing operations.
+
+The statement of accounting policies and notes on pages 17 to 59 form part of these financial
+
+statements.
+
+13
+SG Hambros Bank Limited
+
+BALANCE SHEET
+As at 31 December 2014
+
+ASSETS
+Cash
+Loans and advances to banks
+Loans and advances to customers
+Derivative financial instruments
+Financial investments
+Participating interest
+Shares in group undertakings
+Goodwill
+Tangible fixed assets
+Deferred tax assets
+Other assets
+Prepayments and accrued income
+
+Total assets
+LIABILITIES
+
+Deposits by banks
+
+Customer accounts
+
+Derivative financial instruments
+Provisions for tax
+
+Other liabilities
+
+Accruals and deferred income
+
+Total Liabilities
+
+SHAREHOLDERS’ FUNDS
+
+Called up share capital
+
+Share premium account
+
+Profit and loss account
+Available-for-sale reserve
+Share-based Capital Contribution
+Undistributable reserves
+
+Shareholders’ funds
+
+Total liabilities and shareholders’ funds
+
+2014 2013
+
+Notes £000 £°000
+(restated)
+
+20 30
+
+12 57,504 49,764
+15 713,024 657,026
+14 1,700 1,361
+16&25 738,955 481,117
+18 1,533 1,407
+17 104,860 108,898
+19 10,157 11,247
+20 456 695
+21 667 552
+22 2,108 1,645
+22 7,392 4,739
+1,638,376 1,318,481
+
+23 1,162 9,599
+24 1,345,833 1,031,036
+14 7,818 2,733
+1,067 -
+
+26 1,159 6,317
+26 23,992 14,871
+1,381,031 1,064,556
+
+27 143,800 143,800
+28 45,500 45,500
+28 20,333 19,630
+28 3,480 1,001
+28 1,732 1,494
+28 42,500 42,500
+257,345 253,925
+1,638,376 1,318,481
+
+14
+SG Hambros Bank Limited
+
+BALANCE SHEET (CONTINUED)
+As at 31 December 2014
+
+Approved by the Board of Directors on 25 March 2015 and authorised for issue and
+signed on its behalf by:
+
+© D Meredith
+Director
+
+The statement of accounting policies and notes on pages 17 to 59 form part of these financial
+statements.
+
+Registered No. 964058
+
+15
+SG Hambros Bank Limited
+
+STATEMENT OF TOTAL RECOGNISED GAINS AND LOSSES
+For the year ended 31 December 2014
+
+2014 2013
+
+(restated)
+
+Notes £7000 £7000
+
+Profit for the financial year 28 5,703 44,808
+
+Gains/ (Losses) on revaluation of available-for-sale 28 3,124 (4,982)
+investments taken to equity
+
+Deferred Tax on available-for-sale investments 28 (679) 1,204
+
+taken to equity
+Transfer to profit or loss on sale of available-for-sale 28 34 (195)
+investments
+Total recognised gains and losses relating to the year 8,182 40,835
+
+16
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014 ,
+
+STATEMENT OF ACCOUNTING POLICIES
+The principal accounting policies are summarised below; they have all been applied
+consistently throughout the year and the preceding year.
+
+BASIS OF ACCOUNTING
+
+The financial statements are prepared on the historical cost basis of accounting, except for the
+revaluation of certain financial instruments that are measured at fair value at the end of each
+reporting period, as explained in the accounting policies below. They have been drawn up in
+accordance with applicable accounting standards in the United Kingdom. ©
+
+CHANGE IN ACCOUNTING POLICIES
+
+Three new Financial Reporting Standards: 100,101 and 102 have been developed by the
+Financial Accounting Council, in order to provide more comprehensive financial reporting
+standards. These standards are effective from 1 January 2015 with early adoption permitted.
+The Bank will start applying FRS 101, which introduces an International Financial.Reporting
+Standard reduced disclosed framework from 1 January 2015. The main differences between
+UK GAAP and the new framework are related to the goodwill, hedge accounting and pensions.
+
+The accounting policies adopted are consistent with those used in the previous financial year
+except that the Bank has adopted the FRS 20 Share-based payments. The adoption of FRS 20
+has given rise to additional disclosure and restatement of comparative figures in the primary
+statements and notes. The directors consider that the new accounting policies provide a fairer
+presentation of the result and of the financial position of the Bank given the increased
+materiality of shared based payments.
+
+This change in accounting policy has affected profit after tax by -£238k in 2014 (2013: -£207k).
+There has been a corresponding effect to Equity Shareholders Funds of £-238k (2013: £207k)
+to the profit and loss reserve and an increase in share-based capital contributions of £238k
+(2013: £207k).
+
+A restatement of results and reserves within Equity Shareholders Funds as at 1 January 2013
+of -£1,287k to the profit and loss reserve and a corresponding £1,287k to share-based capital
+contributions has also been made to account for effect of the change in accounting policy prior
+to 2013.
+
+GOING CONCERN
+
+The Bank’s business activities, together with the factors likely to affect its future development,
+performance and position are set out in the directors’ report on pages 7-8. The Bank's business
+plans project profitability through the foreseeable future. It also holds considerable capital
+resources in excess of regulatory requirements. Liquidity positions within the Bank are actively
+managed on a daily basis to ensure sufficient liquidity is maintained at all times to support
+businesses while at the same time remaining well within regulatory and internal limits. Taking
+these factors into consideration, the directors believe that the Bank is well placed to manage its
+business risks successfully.
+
+After undertaking a detailed analysis of its financial resource requirements under both normal
+and stressed operating conditions, the. directors have a reasonable expectation that the Bank
+has adequate resources to meet its minimum capital and liquidity regulatory requirements and
+appropriate contingency plans to ensure that the Bank continues to operate with a prudent
+capital and liquidity buffer over its internal requirements for the foreseeable future. Therefore,
+the Bank continues to adopt the going concern basis in preparing the annual report and
+financial statements.
+
+7
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+GROUP FINANCIAL STATEMENTS
+
+SG Hambros Bank Limited (the “Bank”) is exempt by virtue of Section 400 of the Companies
+Act 2006, from the requirement to prepare group financial statements and deliver them to the
+Registrar of Companies. These financial statements present information about the Bank as an
+individual undertaking and not about its group. The Bank is included in the consolidated
+financial statements of Société Générale SA ("SG"), which is incorporated in France.
+
+CASH FLOW STATEMENT
+
+Under Financial Reporting Standard 1 (Revised) the Bank is exempt from the requirement to
+prepare a cash flow statement. This is on the grounds that for the year ended 31 December
+2014 more than 90% of the voting rights were controlled by Société Générale SA and a
+consolidated cash flow statement, including the cash flows of the Bank for this year, is included
+in Société Générale SA’s financial statements for the year ended 31 December 2014, which are
+publicly available.
+
+FAIR VALUE OF FINANCIAL INSTRUMENTS
+
+The financial assets and liabilities are classified into available for sale, loans and receivables,
+financial assets and liabilities designated to fair value through profit and loss, held-to-maturity
+and held for trading in accordance with FRS 26. The Bank has not designated any financial
+investments or debt securities as fair value through profit and loss, on adoption of FRS 26.
+
+FINANCIAL ASSETS AND LIABILITIES
+
+Purchase and sale of non-derivative financial assets and liabilities at fair value through profit or
+loss, financial assets held-to-maturity and available-for-sale financial assets are recognised in
+the balance sheet on the settlement date while derivatives are recognised on the trade date.
+Changes in fair value between the trade and settlement dates are booked in the income
+statement or to shareholders’ equity depending on the relevant accounting category. Loans and
+advances are recognised when cash is advanced to the borrowers.
+
+When initially recognised, financial assets and liabilities are measured at fair value plus
+transaction costs. Fair value is determined in the manner described in note 30.
+
+(i) Loans and advances
+
+Loans and advances to banks and customers include non-derivative financial assets with fixed
+or determinable payments that are not quoted in an active market and neither held for trading
+purposes nor intended for sale from the time they are originated or contributed. Loans and
+advances are measured at amortised cost using the effective interest rate method, less
+allowance for impairment. Amortised cost is calculated by taking into account any premium or
+discount on acquisition and fees and costs that are an integral part of the effective interest rate
+method.
+
+(ii) Held for trading assets and liabilities
+
+These are financial assets and liabilities held for trading purposes. They are recognised initially
+at fair value and transaction costs are taken directly to the profit and loss account. Changes in
+fair value are recorded in the profit and loss account as net gains or losses on financial
+instruments at fair value through the profit and loss account within net trading income.
+Derivatives are also classified in this category unless they have been designated as hedges.
+
+(iii) Held-to-maturity financial assets (“HTM”)
+
+These are non-derivative financial assets with fixed or determined payments and a fixed
+maturity, that are quoted in an active market and which the Bank has the positive intention and
+ability to hold to maturity. They are valued after acquisition at their amortised costs using the
+effective interest method and may be subject to impairment as appropriate. The amortised cost
+includes premiums and discounts as well as transaction costs and they are recognised in the
+balance sheet under investments.
+
+\
+
+18
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+FINANCIAL ASSETS AND LIABILITIES (CONTINUED)
+
+(iv) Available-for-sale financial assets (“AF S”)
+
+These are debt securities held for an indefinite period which the Bank may sell at any time.
+After initial measurement, available-for-sale financial investments are subsequently measured
+at fair value. Unrealised gains or losses are recognised directly in equity in the ‘Available-for-
+sale reserve’. When the investment is disposed of or if it becomes part of fair value hedging
+relationship, the cumulative gain or loss previously recognised in the reserve is included in the
+profit and loss for the period.
+
+PROVISIONS FOR BAD AND DOUBTFUL DEBTS
+
+Specific provisions are made against loans and advances when, as a result of a detailed
+appraisal of the loans and advances portfolio, it is considered that recovery is doubtful.
+_ Specific provisions are deducted from loans and advances. Provisions made during the year
+(less amounts released and recoveries of amounts written off in previous years) are charged
+against profits. When the collection of interest is in significant doubt it is credited to a suspense
+. account. Where there is no longer any realistic prospect of recovery the outstanding debt is
+written off.
+
+IMPAIRMENT OF FINANCIAL ASSETS
+Financial assets, other than those held at fair value through profit and loss, are assessed for
+indicators of impairment at each balance sheet date. Financial assets are impaired where there
+is objective evidence that, as a result of one or more events that occurred after the initial
+recognition of the financial asset, the estimated future flows of the investment have been
+‘impacted.
+Objective evidence of impairment could include:
+
+- significant financial difficulty of the issuer or counterparty; or
+
+- default or delinquency in interest or principal payments; or
+
+- it becoming probable that the borrower will enter bankruptcy or financial re-organisation.
+
+DERECOGNITION OF FINANCIAL ASSETS
+
+The Bank derecognises a financial asset only when the contractual rights to the cash flows
+from the asset expire; or it transfers the financial asset and substantially all the risks and
+rewards of ownership of the asset to another entity. If the Bank neither transfers nor retains
+substantially all the risks and rewards of ownership and continues to control the transferred
+asset, the Bank recognises its retained interest in the asset and an associated liability for
+amounts it may have to pay. If the Bank retains substantially all the risks and rewards of
+ownership of a transferred financial asset, the Bank continues to recognise the financial asset
+and also recognises a collateralised borrowing for the proceeds received.
+
+OFFSETTING FINANCIAL INSTRUMENTS
+
+Financial assets and liabilities are offset and the net amount reported in the balance sheet
+when there is a legally enforceable right to offset the recognised amounts and there is an
+intention to settle on a net basis, or realise the asset and settle the liability simultaneously.
+
+DERIVATIVE FINANCIAL INSTRUMENTS
+
+The Bank enters into a variety of derivative financial instruments to manage its exposure to
+interest rate and foreign exchange rate risk, including foreign exchange forward contracts,
+interest rate swaps and options. Further details of derivative financial instruments are disclosed
+in the ‘Financial instruments’ note to the financial statements.
+
+19
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+DERIVATIVE FINANCIAL INSTRUMENTS (CONTINUED)
+
+Derivatives are initially recognised at fair value at the date a derivative contract is entered into
+and are subsequently remeasured to their fair value at each balance sheet date. A derivative
+with a positive fair value is recognised as a financial asset whereas a derivative with a negative
+fair value is recognised as a financial liability. The resulting gain or loss is recognised in the
+profit and loss account immediately unless the derivative is designated an effective hedging
+instrument, in which event the timing of the recognition in the profit and loss account depends
+on the nature of the hedge relationship. The Bank designates certain derivatives as either
+hedges of the fair value of recognised assets or liabilities or firm commitments (fair value
+hedges), hedges of highly probable forecast transactions or hedges of foreign currency risk of
+firm commitments (cash flow hedges), or hedges of net investments in foreign operations.
+
+A derivative is presented as a non-current asset or a non-current liability if the remaining
+maturity of the instrument is more than 12 months and it is not expected to be realised or
+settled within 12 months. Other derivatives are presented as current assets or current liabilities.
+
+HEDGE ACCOUNTING , :
+
+The Bank makes use of derivative instruments to manage exposures to interest rate, foreign
+currency and credit risks, including exposures arising from forecast transactions and firm
+commitments. In order to manage particular risks, the Bank applies hedge accounting for
+transactions which meet the specified criteria.
+
+At inception of the hedge relationship, the Bank formally, documents the relationship between
+the hedged item and the hedging instruments, including the nature of the risk, the objective and
+strategy for undertaking the hedge and the method that will be used to assess the effectiveness
+of the hedging relationship.
+
+Also at inception of the hedge relationship, a formal assessment is undertaken to ensure that
+the hedging instrument is expected to be highly effective in offsetting the designated risk in the
+hedged item. Hedges are formally assessed each quarter. A hedge is expected to be highly
+effective if the changes in fair value or cash flows attributable to the hedged risk during the
+period for which the hedge is designated are expected to offset in a range of 80% to 125%. For
+situations where the hedged item is a forecast transaction, the Bank assesses whether the
+transaction is highly probable and presents an exposure to variations in cash flows that could
+ultimately affect the income statement.
+
+Fair value hedges
+
+For designated and qualifying fair value hedges, the change in fair value of a hedging derivative
+
+is recognised in the income statement in ‘Net trading income’. Meanwhile the change in the fair
+‘value of the hedged item attributable to the risk hedged is recorded as part of the carrying value.
+
+of the hedged item and is also recognised in the income statement in ‘Net trading income’.
+
+If the hedging instrument expires or is sold, terminated or exercised, or where the hedge no
+
+longer meets the criteria for hedge accounting, the hedge relationship is terminated and the
+
+face value is amortised over the remaining term of the original hedge using the effective
+
+interest rate method. If the hedge is derecognised, the unamortised fair value adjustment is
+
+recognised immediately in the income statement.
+
+EFFECTIVE INTEREST METHOD
+
+The effective interest method is a method of calculating the amortised cost of a financial asset
+and of allocating interest income over the relevant period. The effective interest rate is the rate
+that exactly discounts estimated future cash receipts (including all fees paid or received that
+form an integral part of the effective interest rate, transaction costs and other premiums or
+discounts) through the expected life of the financial asset, or, where appropriate, a shorter
+period. :
+
+Income is recognised on an effective interest basis for debt instruments other than those
+financial assets and liabilities held for trading.
+
+20
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+NET INTEREST INCOME
+
+Net interest income comprises income from banking activities, namely interest receivable on
+loans, advances, deposits placed and investment in debt securities less interest payable on
+deposits taken. Interest arising from the internal funding of dealing activities is included within
+interest receivable. Revenue is recognised as interest accrues using the effective interest
+method.
+
+NET TRADING INCOME
+This comprises profits and losses from foreign exchange activities and from dealing in financial
+instruments, including interest and dividends receivable, less associated funding costs.
+
+DIVIDENDS
+Revenue is recognised when the Bank’s right to receive payment is established.
+
+FEES AND COMMISSIONS INCOME
+
+Fees and commissions not included as part of the Effective Interest Rate are recognised on an
+accruals basis. Arrangement fees are booked as deferred income on the balance sheet and
+recognised in the profit and loss account over the period of the arrangement.
+
+FOREIGN CURRENCIES
+
+Monetary assets and liabilities denominated in foreign currencies have been translated into
+sterling at the rates of exchange ruling at the balance sheet date. Net income in foreign
+currencies is translated into sterling and recorded at the rates of exchange ruling at the end of
+each day.
+
+Foreign currency equity investments hedged by foreign currency borrowings or foreign
+exchange contracts are translated into sterling at the rates of exchange ruling at the balance
+sheet date and: the exchange differences arising taken to the profit and loss. The exchange
+difference arising on related foreign currency borrowings is also taken to the profit and loss
+account.
+
+PENSION COSTS
+
+The Bank operates a defined contribution pension scheme and contributes to a Société
+Générale UK defined benefit pension scheme and the Société Générale Group scheme.
+Contributions are charged to the profit and loss account as they become payable in accordance
+with the rules of the scheme.
+
+LEASES
+
+Rentals under operating leases are charged on a straight-line basis over the lease term, even if
+the payments are not made on such a basis. Benefits received and receivable as an incentive
+to sign an operating lease are similarly spread on a straight-line basis over the lease term,
+except where the period to the review date on which the rent is first expected to be adjusted to
+the prevailing market rate is shorter than the full lease term, in which case the shorter period is
+used.
+
+PROVISIONS FOR LIABILITIES
+
+A provision is recognised when the Bank has a legal or constructive obligation as a result of a
+past event and it is probable that an outflow of economic benefits will be required to settle the
+obligation. .
+
+‘CURRENT TAX
+Current tax is provided at amounts expected to be paid (or recovered) using the tax rates and
+laws that have been enacted or substantively enacted by the balance sheet date.
+
+21
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+DEFERRED TAX
+
+Deferred tax is recognised in respect of all timing differences that have originated but not
+reversed at the balance sheet date where transactions or events have occurred at that date
+that will result in an obligation to pay more, or right to pay less tax, with the exception of
+deferred tax assets which are recognised only to the extent that the directors consider that it is
+more likely than not that there will be suitable taxable profits from which the future reversal of
+the underlying timing differences can be deducted.
+
+Deferred tax is measured on an undiscounted basis at the tax rates that are expected to apply
+in the periods in which timing differences reverse, based on tax rates and laws enacted or
+substantively enacted at the balance sheet date.
+
+INVESTMENTS IN GROUP UNDERTAKINGS
+The carrying value of the Bank’s investments in subsidiary undertakings is stated at historical
+cost adjusted for any movement in foreign exchange rate less any provision for impairment.
+
+PARTICIPATING INTERESTS
+
+Participating interests are investments in companies, not being group undertakings, whose
+directors include representatives of the Bank. The Bank intends to hold these investments long
+term with the purpose of securing a contribution to the Bank’s profits. Such interests are stated
+at cost less any provision for impairment.
+
+TANGIBLE FIXED ASSETS
+Tangible fixed assets are stated at cost, net of depreciation and any provision for impairment.
+They are written off on the straight-line basis over their estimated useful lives as follows:
+
+Leasehold properties 3 years
+Computer equipment 3-5 years
+Furniture, fixtures and fittings 10 years
+
+The carrying values of tangible fixed assets are reviewed for impairment when events or
+changes in circumstances indicate the carrying value may not be recoverable.
+
+RELATED PARTY TRANSACTIONS
+
+Under Financial Reporting Standard 8, the Bank is exempt from the requirement to disclose
+related party transactions within the Société Générale Group on the grounds that for the year
+ended 31 December 2014 100% of the voting rights were controlled by Société Générale SA
+whose financial statements are publicly available.
+
+INTANGIBLE ASSETS - GOODWILL
+
+Goodwill arising on the acquisition of subsidiary undertakings and businesses, representing any
+excess of the fair value of the consideration given over the fair value of the identifiable assets
+and liabilities acquired, is capitalised and written off on a straight-line basis over its useful
+economic life. The useful economic life for the goodwill resulting from the acquisitions of ABN
+Amro’s private banking business and Baring Asset Management's private banking business is
+15 years, reflecting the nature of the long-term relationships and low attrition rates. A review for
+impairment indicators is carried out periodically, and provision is made for any impairment.
+Impairment indicators would include a significant loss of client assets under management or a
+significant reduction of future income generating capacity.
+
+22
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+SEGMENTAL ANALYSIS
+
+The Statement of Recommended Practice on Segmental Reporting by Banks recommends,
+inter alia, operating profit and net assets to be disclosed by class of business and geographical
+segment. No such analyses have been presented, since the Bank operates in a single
+segment, private banking, based primarily in the United Kingdom.
+
+SHARE-BASED PAYMENT
+
+The Bank’s employees receive share-based payments from our parent company, Société
+Générale. Details of these can be found in note 7.
+
+Equity-settled share-based payments to employees and others providing similar services are
+measured at the fair value of the equity instruments at the grant date. The fair value excludes
+the effect of non-market- based vesting conditions. Details regarding the determination of the
+fair value of equity-settled share-based transactions are set out in note 7.
+
+The fair value determined at the grant date of the equity-settled share-based payments is
+expensed based on the Bank’s estimate of equity instruments that will eventually vest. At each
+balance sheet date, the Bank revises its estimate of the number of equity instruments expected
+to vest. The impact of the revision of the original estimate (if any) is recognised in profit or loss
+such that the cumulative expense reflects the revised estimate (with a corresponding
+adjustment to the share- based contribution reserves).
+
+For cash-settled share-based payments, a liability is recognised for the services acquired
+measured initially at the fair value of the liability. At each balance sheet date until the liability is
+settled, and at the date of settlement, the fair value of the liability is remeasured with any
+changes in fair value recognised in profit or loss for the year.
+
+INTEREST RECEIVABLE
+
+2014 2013
+£’000 £°000
+Due from banks , 186 146
+Loans and advances to customers 19,391 17,409
+Financial investments - available-for-sale 4,940 3,701
+Financial investments - held-to-maturity 1,063 1,692
+Interest rate instruments . 3,017 2,501
+Other - 166
+28,597 25,615
+
+INTEREST PAYABLE
+2014 | 2013
+£°000 £°000
+Due to banks . 998 67
+Due to customers . 5,208 3,411
+Interest rate instruments 2,046 2,115
+Other - 4
+8,252 5,597
+
+23
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+NET FEE AND COMMISSION INCOME
+Included in the net fee and commission income is £660,099 (2013: £686,411) of fee income
+
+relating to trust and other fiduciary activities.
+
+NET TRADING INCOME
+
+2014 . 2013
+
+. £7000 £’000
+
+Other interest rate instruments (623) (338)
+
+Foreign exchange 1,980 1,425
+Hedge ineffectiveness from fair value hedging
+
+- Gains/ (losses) on hedged items attributable to the hedged risk 3,820 (234)
+
+- (Losses)/ gains on hedging instruments (4,043) 222
+
+. 1,134 1,075
+
+The results of trading money market instruments, interest rate swaps, options and other
+derivatives are recorded under ‘Other interest rate instruments’ above.
+
+‘Foreign exchange’ income includes gains and losses fram spot and forward contracts and
+other currency derivatives.
+
+OTHER OPERATING INCOME
+
+2014 2013
+£’000 £000
+Dividend income from:
+- other equity investments 2 1
+- subsidiaries - 5,000 40,500
+Losses from sales of available-for-sale financial
+investments , (54) (195)
+Gains from sales of available-for-sale financial investments 88 -
+5,036 40,306
+
+. In 2014, SG Hambros Bank (Channel Islands) Ltd paid total dividends of £5,000,000 (2013:
+£40,500,000).
+
+ADMINISTRATIVE EXPENSES
+
+2014 2013
+£’000 £’000
+(restated)
+
+Staff costs
+- Wages and salaries 23,038 19,616
+- Social security costs 2,788 2,310
+- Pension costs (Note 10) ‘ 1,481 2,129
+- Other staff costs 2,485 1,856
+Other administrative expenses , 11,578 8,574
+41,370 34,485
+
+24
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+ADMINISTRATIVE EXPENSES (CONTINUED)
+
+The average number of employees during the year was 215 (2013: 198). In addition one (2013:
+one) contracted employee was seconded to work in a subsidiary company. All employees were
+employed in private banking based principally in the United Kingdom.
+
+The Bank’s staff also benefited from participation in the following share schemes offered by
+Société Générale SA in 2014 and 2013. GESOP- offering discounted Société Générale shares
+to staff, the Ambition Initiative share scheme and the UK Share save plan. In addition to these
+schemes certain of the Bank’s staff also benefit from involvement in Long Term Incentive share
+scheme, the stock options schemes and fidelity plan (details below).
+
+Global employee share ownership ("“GESOP”)
+
+The employees of the Bank are able to participate in a GESOP scheme where the Bank will
+match the employee’s contributions. The matching contribution for the Bank is £39k (2013:
+£31k). The discount of 20% is not billed by SG to the Bank and is recognised as additional
+capita! contribution to the Bank (2014: £30k; 2013: £32k)
+
+Ambition and Long Term Incentive share schemes
+
+The employees are offered free shares issued by Société Générale subject to the achievement
+of certain targets as set out by SG. These free shares were awarded between 2006 and 2014
+and have a vesting period of five years. As at 31 December 2014, conditions of the award have
+been met. The number of rights outstanding as at 31 December 2014 was 38,163 (2013:
+38,163) amounting £1,024,306 based on the reference price of the scheme in which the share
+was awarded. The Bank does not pay Société Générale for any of these shares issued. The
+value of these shares issued to the Bank employees are recognised as additional capital
+contribution in accordance with FRS20. Prior year figures are restated in recognition of
+adoption of the standards.
+
+_ UK Share plan
+
+The Share Incentive plan provides the opportunity to purchase shares out of gross pay. For
+every four partnership shares bought, SG will match one additional share. Employees
+contribute £10-£125 each month from gross pay, but no more than 10% of gross pay.
+Matching shares are paid by SGH on a monthly basis.
+
+Fidelity plan
+
+The Bank issues to selected employees share-based linked bonuses. The vesting periods of
+these bonuses are three years from the date of declaration of bonus. The employees will only
+be entitled to these bonuses on the condition that they are still employed by the Bank at the
+scheduled payment dates during the vesting period. These bonuses are cash settled and the
+Bank hedges the effect of the movement of Société Générale share price to reduce market risk.
+The valuations of the fidelity plan as accrued in the financial statements are based on the
+prevailing market price as at 31 December 2014; the element of this valuation relating to
+variation in the price of Société Générale shares since declaration was £131k (2013: £3k). The
+total profit and floss recognised in the year related to this scheme was an expense of £189.3k
+(2013: £18.5k).
+
+Share option scheme
+
+SG offer a share option scheme to selected employees of the Bank in 2008. Options are
+exercisable at €63.6. The vesting period is three years. The options are exercisable between
+31 March 2011 and 21 March 2015. If the options remain unexercised by 21 March 2015, these
+options will expire. Options are forfeited if the employees leave the Group before the options
+vest. .
+
+25
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+ADMINISTRATIVE EXPENSES (CONTINUED)
+
+Details of the share options outstanding during the year are as follows:
+
+2014 2013
+Outstanding at beginning of 7,965 7,965
+period .
+Forfeited during the period - -
+Outstanding at the end of the 7,965 7,965
+
+period
+
+There were no new share options granted, exercised or expired in both years.
+
+The value of the options outstanding as at 31 December 2014 is €506,574. As the option
+exercise price is much higher than the open market price during the exercise period, it is
+unlikely that the options will be exercised and hence no profit or loss in relation to these options
+is recognised in the financial statements. ,
+
+PROFIT ON ORDINARY ACTIVITIES BEFORE TAXATION
+
+Profit on ordinary activities before taxation is stated after charging
+
+2014 2013
+. £000 £’000
+Depreciation of tangible fixed assets 246 378
+Amortisation of goodwill 1,091 1,091
+Buildings operating leases 1,807 | 2,082
+The analysis of the auditor's remuneration is as follows:
+2014 2013
+£000 £000
+Fees payable to the company’s auditor and its associates
+for the audit of the company’s annual accounts, and that
+of its UK based subsidiaries 239 232
+Total audit fees 239 232
+Other assurance services 14 14
+Other services 80 -
+Total non-audit fees 94 14
+Total fees 333 © 246
+
+26
+10.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS ‘
+For the year ended 31 December 2014
+
+DIRECTORS’ REMUNERATION
+
+2014 2013
+£7000 £7000
+Salary and benefits 884 791
+Performance related benefits 299 372
+Company contributions to money purchase schemes 48 43
+1,231 1,206
+
+Benefits comprise provision of motor cars, accommodation, subsidised loans and private health
+care insurance.
+
+The emoluments of the highest paid director were as follows:
+
+2014 2013
+£000 £000
+Salary and benefits and performance related bonuses 433 475
+
+The accrued pension of the highest paid director as at 31 December 2014 was £ nil (2013:
+Enil).
+
+2014 2013
+
+No. No.
+. The number of directors accruing benefits under the following
+schemes during the year was:
+$G Hambros Defined Contribution Scheme 3 3
+
+Three of the current non-executive directors are employed by Société Générale SA.
+Emoluments for these directors are included in the statutory financial statements of Société
+Générale SA and are excluded from the figures above.
+
+PENSION COSTS
+
+All employees are covered by SG Group pension schemes, subject to their satisfying minimum
+entry requirements. The schemes are of both the defined benefit and defined contribution type.
+The total pension cost for the Bank was £1,738,205 (2013: £2,129,187).
+
+Defined Benefit Scheme
+
+The Bank participates in a multi-employer scheme, the SG UK Defined Benefit Scheme (‘the
+Scheme”). This Scheme is not open to new members. The Scheme was created with effect
+from 1 January 2004 following the merger of the Société Générale Group Retirement and
+Death Benefit Scheme for United Kingdom Staff (the London Branch Scheme) and the Société
+Générale Strauss Turnbull Securities Limited Pension Scheme (the SGST Scheme) with the
+SG Hambros Scheme. To effect this merger, the assets and liabilities of the SGST and London
+Branch schemes were transferred into the SG Hambros Scheme. In addition, members of the
+SG Hambros Scheme received benefit improvements and the financial effects of these benefit
+improvements are reflected in the disclosure below.
+
+27
+10.
+
+11.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+PENSION COSTS (CONTINUED)
+
+The Scheme is a "multi-employer scheme”, in accordance with paragraphs 8-12 of the FRS 17.
+The directors, based on the advice of the Scheme Actuary consider that, in accordance with
+paragraph 9(b) of the Standard, the Bank is unable to identify on a consistent and reasonable
+basis its share of the underlying assets and liabilities of the Scheme. Therefore, for the
+purposes of FRS 17, the Bank accounts for its pension cost arising under the Scheme as if it
+were a defined contribution scheme.
+
+The total defined benefit pension cost and contribution for the Bank was £257,613 in 2014
+(2013: £866,060).
+
+FRS 17 Disclosures .
+
+For the purpose of FRS 17 only, the results of the valuation of the assets and liabilities of the
+scheme were updated as at 31 December 2014 to take account of the requirements of FRS 17
+in order to assess the liabilities of the Scheme at 31 December 2014. The disclosures as below
+are based on that valuation.
+
+Fair value Review > 2014 2013
+£000 £000
+
+Fair Value of Scheme assets 638,000 537,560
+Actuarial value of Scheme liabilities (639,380) (528,660)
+(Deficit)/ Surplus in the Scheme before deferred tax (1,380) 8,900
+Deferred tax at 20% (2013: 20%) 280 (1,780)
+
+Net Scheme liability after deferred tax (1,100) 7,120
+
+Defined Contribution Scheme
+
+The Bank also provides employees with access to a defined contribution scheme “SG Money
+Purchase Scheme”. Contributions to this scheme. were £1,350,048 during the year (2013:
+£1,151,587). No contributions were outstanding at the year end. The contributions to this fund
+currently range from 2.5% to 15% of pensionable salary. In addition £nil was paid into
+employees’ personal money purchase schemes (2013: £8,705) and £130,544 was paid into the
+SG Group Scheme in relation to expatriate employees (2013: £102,835).
+
+TAX ON PROFIT ON ORDINARY ACTIVITIES
+
+2014 2013
+£000 £000
+UK corporation tax
+Current year charge at 21.5% (2013: 23.25%) 354 . 1,635
+Prior year (44) 262
+310 1,897
+Deferred tax
+Current year release 63 84
+Reduction in corporation tax rate to 20% (2013: 21.5%) (15) 82
+Prior year ‘ (35) -
+Total taxation charge 323 ° 2,063
+
+28
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+TAX ON PROFIT ON ORDINARY ACTIVITIES (CONTINUED)
+
+The tax assessed on the profit on ordinary activities for the year at 7.8 % (2013: 4.4%) is lower
+than the standard rate of corporation tax in the UK of 21.5 % (2013: 23.25%). The differences
+are reconciled below:
+2014 2013
+
+£’000 £’000
+. (restated)
+Profit on ordinary activities before tax 6,026 46,871
+Notional charge at 21.5% (2013: 23.25%) 1,295 11,015
+Permanent differences 198 184
+Short term timing differences (63) . (154)
+Impairment provision - 6
+Dividend income , (1,075) (9,416)
+Loss on disposal of shares - -
+Prior year (44) 262
+310 1,897
+LOANS AND ADVANCES TO BANKS
+2014 2013
+- £7000 £’000
+Repayable on demand 20,678 7,540
+Remaining maturity
+- 3 months or fess 36,643 42,224
+- 1 year or less but over 3 months 183 :
+- Over 1 year - ° -
+57,504 49,764
+Amounts include:
+Unsubordinated due from group undertakings . 14,328 7,799
+
+The Bank considers that the fair value of loans and advances to banks closely approximates to
+the reported amortised cost.
+
+29
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+For the year ended 31 December 2014
+
+13. FINANCIAL INSTRUMENTS CLASSIFICATION
+
+The following tables analyse the Group’s financial assets and financial liabilities in accordance
+with the .categories of financial instruments in FRS 26. Assets and liabilities outside the scope
+of FRS 26 are shown separately.
+
+31 December
+2014
+Assets
+Cash
+Loans and
+advances to
+banks
+
+Loans and
+advances to
+customers
+
+Derivative
+financial
+instruments
+
+Financial
+investment
+Participating
+interest
+
+Shares in group
+undertakings
+
+Intangible fixed
+assets
+
+Tangible fixed
+assets
+
+Deferred tax
+assets
+
+Other assets
+Prepayments
+
+and accrued
+income
+
+Held-to
+Maturity
+£°000
+
+13,857
+
+Held for
+Trading
+£°000
+
+1,700
+
+Hedging
+Derivatives AFS
+£°000 £000
+- 725,098
+- 725,098
+
+Loans and Non
+receivables Financial Total
+£°000 £’000 £7000
+20 - 20
+57,504 - 57,504
+713,024 - 713,024
+- - 1,700
+- - 738,955
+- 1,533 1,533
+- 104,860 104,860
+- 10,157 10,157
+- 456 456
+- 667 667
+- 2,108 2,108
+- 7,392 © 7,392
+770,548 ° 127,173 1,638,376
+
+30
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+For the year ended 31 December 2014
+
+13. FINANCIAL INSTRUMENTS CLASSFICIATION (CONTINUED)
+
+31 December
+2014
+Liabilities
+Deposits by
+banks
+
+Customers
+accounts
+
+Derivative
+financial
+instruments
+
+Provisions for
+tax
+
+Other liabilities
+
+Accruals and
+deferred income
+
+Equity
+
+31 December
+2013
+Assets
+Cash
+Loans and
+advances to
+banks
+
+Loans and
+advances to
+customers
+
+Derivative
+financial
+instruments
+
+Financial
+investment
+
+Participating
+interest
+
+Held-to
+Maturity
+£’000
+
+Held-to
+Maturity
+£7000
+
+28,618
+
+Held for
+Trading
+£000
+
+3,771
+
+Held for
+
+’ Trading
+
+£000
+
+1,361
+
+Hedging
+Derivatives AFS
+£'000 £7000
+4,047 -
+4,047 -
+Hedging
+Derivatives AFS
+£’000 £7000
+- 452,499
+
+Loans and Non
+receivables Financial Total
+£000 £°000 £’000
+1,162 - 1,162
+1,345,833 - 1,345,833
+- - 7,818
+- 1,067 1,067
+1,159 - 1,159
+- 23,992 23,992
+- 257,345 257,346
+1,348,154 282,404 1,638,376
+Loans and Non
+receivables Financial Total
+£000 £’000 £°000
+30 - 30
+49,764 - 49,764
+657,026 - 657,026
+- - 1,361
+- - 481,117
+- 1,407 ' 1,407
+
+31
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+For the year ended 31 December 2014
+
+13. FINANCIAL INSTRUMENTS CLASSFICIATION (CONTINUED)
+
+31 December
+2013
+
+Shares in group |
+
+undertakings
+
+Intangible fixed
+assets
+
+Tangible fixed
+assets
+
+Deferred tax
+assets
+
+. Other assets
+
+Prepayments
+and accrued
+income
+
+31 December
+2013
+Liabilities
+Deposits by
+banks
+
+Customers
+accounts
+
+Derivative
+financial
+instruments
+
+Provisions for
+tax
+
+Other liabilities
+
+Accruals and
+deferred income
+
+Equity
+
+Held-to
+Maturity
+£°000
+
+Held-to
+Maturity
+£000
+
+Held for
+Trading
+£°000
+
+Held for
+Trading
+£7000
+
+2,500
+
+Hedging
+Derivatives AFS
+£000 £7000
+- 452,499
+
+Hedging
+Derivatives AFS
+£°000 £’000
+233 -
+233 -
+
+Loans and Non
+receivables Financial Total
+£'000 £’000 £’000
+- 108,898 108,898
+- 11,247 11,247
+- 695 695
+- 552 552
+- 1,645 1,645
+- 4,739 4,739
+706,820 129,183 1,318,481
+Loans and Non
+receivables Financial Total
+, £’000 £000 £’000
+9,599 - 9,599
+1,031,036 - 1,031,036
+- - 2,733
+6,316 - 6,316
+- 14,871 14,871
+- 253,926 253,926
+1,046,951 268,797 1,318,481
+
+32
+14.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+DERIVATIVE FINANCIAL INSTRUMENTS
+
+The table below shows the fair values of derivative financial instruments, recorded as assets or
+liabilities, together with their notional amounts. The notional amount, recorded gross, is the
+amount of a derivative’s underlying asset, reference rate or index and is the basis upon which
+changes in the value of derivatives are measured. The notional amounts indicate the volume of
+transactions outstanding at the year end and are indicative of neither market risk nor the credit
+risk.
+
+Notional Notional
+Assets Liabilities Amount Assets Liabilities Amount
+2014 2014 2014 2013 2013 2013
+£’000 £000 £000 £°000 £°000 £°000
+Derivatives held for
+trading
+Interest rate swaps 1,064 (2,318) 270,577 822 (2,297) 98,052
+Forward foreign
+exchange contracts 484 (1,340) 80,728 264 (205) 22,608
+Spot FX - (68) 4,874 - - -
+Cap 38 - 5,000 158 - 5,000
+FX Options 45 (45) 3,073 - - -
+Equity options 69 - 683 117 - 201
+1,700 (3,771) 364,935 1,361. (2,502) 125,861
+Derivatives used as
+fair value hedge
+Interest rate swaps - (4,047) 59,166 - (231) 31,724
+1,700 (7,818) 424,101 1,361 (2,733) 157,585
+
+Derivatives invoive, at their inception, only a mutual exchange of promises with little or no
+transfer of consideration. However, these instruments frequently involve a high degree of
+leverage and are very volatile. A relatively small movement in the value of the asset, rate or
+index underlying a derivative contract may have a significant impact on the profit and loss of the
+Bank. :
+
+Over-the-counter derivatives may expose the Bank to the risks associated with the absence of
+an exchange market on which to close out an open position.
+
+The Bank’s exposure under derivative contracts is closely monitored as part of the overall
+management of the Bank’s market risk (see Note 31).
+
+Derivative financial instruments held for trading purposes
+
+Most of the Bank’s derivative trading activities relate to deals with customers, the market risk on
+which is normally offset by transactions with other counterparties, usually another SG Group
+company. .
+
+33
+14.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+For the year ended 31 December 2014
+
+DERIVATIVE FINANCIAL INSTRUMENTS (CONTINUED)
+Derivative financial instruments held for hedging purposes
+
+As part of its asset and liability management, the Bank entered into fair value hedges to reduce
+its exposure to changes in fair value of financial assets and liabilities due to movement in
+interest rates. The hedged items for these fair value hedge relationships of interest rate risk are
+
+long-term customer deposits and available for sale debt securities.
+
+As at 31 December 2014 the Bank had £4.2m of fixed rate financial liabilities (2013: £31.7m)
+and £54.9m of fixed rate financial assets (2013: nil) hedged by interest rate swaps in fair value
+
+hedge relationship.
+
+The accounting treatment, explained in Notes to the Financial statements ‘Hedge accounting’,
+depends on the nature of the item hedged and compliance with FRS 26 hedge accounting
+
+criteria. The hedge ineffectiveness, recognised in net trading income, is shown in Note 5.
+
+Maturity of derivative financial instruments is as follows:
+
+2014
+
+Assets
+
+Derivatives held for
+trading
+
+Interest rate swaps ~
+Forward foreign
+
+exchange contracts.
+
+Purchase of Cap
+FX Options
+Equity options
+
+Derivatives used as .
+
+fair value hedge
+Interest rate swaps
+
+Total Assets
+
+2014
+
+Liabilities
+Derivatives held for
+trading
+
+Interest rate swaps
+Forward foreign
+exchange contracts
+Spot FX
+
+FX Options
+
+Derivatives used as
+fair value hedge
+
+Interest rate swaps
+
+Total Liabilities
+
+Fair
+Value
+£7000
+
+1,064
+484
+
+38
+45
+69
+
+1,700
+
+(4,047)
+
+(7,818)
+
+Less than 3 3to6
+months months
+£000 £000
+
+451 1
+
+369 43
+
+* 45 -
+
+69 -
+
+934 44
+
+935 44
+
+Less than 3 3to6
+months months
+£000 £000
+
+(751) (1)
+
+(411) (43)
+
+(68) -
+
+(45) -
+
+(1,275) (44)
+(1,275) (44)
+
+6 to12
+months
+£°000
+
+162
+72
+
+months
+£°000
+
+(69)
+(886)
+
+1to5
+Years
+£000
+
+450
+
+Over 5
+years
+£’000
+
+34
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+DERIVATIVE FINANCIAL INSTRUMENTS (CONTINUED)
+
+2013
+
+Assets
+‘Derivatives held
+for trading
+
+Interest rate swaps
+Forward foreign
+exchange contracts
+Purchase of Cap
+Equity options
+
+Derivatives used
+as fair value
+hedge
+
+Interest rate swaps
+
+Total Assets
+
+2013
+
+Liabilities
+Derivatives held
+for trading
+
+Interest rate swaps
+Forward foreign
+exchange contracts
+Equity options
+
+Derivatives used
+as fair value
+hedge
+
+Interest rate swaps
+
+Total Liabilities
+
+Fair
+Value
+£°000
+
+822
+264
+
+158
+117
+
+1,361
+
+Less than 3
+
+3to6 6 to12 1to5
+
+months months months Years
+£’000 £7000 £°000 £000
+719 - 14 89
+228 - 36 -
+
+- - - 158
+
+117 - - -
+1,064 - 50 247
+1,064 - 50 247
+Less than 3 3 to6 6 tol12 1to5
+months months months years
+£’000 £7000 ~—,—s £000 £000
+(415) (26) - (465)
+(168) - (37) -
+(583) (26) (37) (465)
+
+- (5) (61) (165)
+
+(583) (31) (98) (630)
+
+Over 5
+years
+£’000
+
+ss ta
+=e soe oo
+
+35
+15.
+
+16.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+LOANS AND ADVANCES TO CUSTOMERS
+
+2014 2013
+£°000 £’000°
+Remaining contractual maturity: ;
+- 3 months or less 325,972 367,021
+- 1 year or less but over 3 months 31,185 62,479
+- Over 1 year 358,631 229,913
+715,788 659,413
+Impairment of financial assets (Note 25) (2,764) (2,387)
+713,024 657,026
+Of which repayable on demand 318,234 . 262,340
+No amounts were due from group undertakings.
+The Bank considers that the fair value of loans and advances to Customers closely
+approximate to the reported amortised cost.
+FINANCIAL INVESTMENTS
+Investments comprise the following:
+(a) Held-to-maturity investments at amortised cost
+, 2014 2013
+£000 £’000
+Quoted investments
+Government debt securities 13,857 28,618
+
+The fair value of the HTM investments as at 31 December 2014 is £14,232k (2013: £29,898k)
+
+the reduction from 2013 is due to the maturity of the HTM investments.
+
+(b) Available-for-sale investments at fair value
+
+2013
+
+: 2014
+£000 £’000
+Quoted investments
+Fixed rate bonds 89,115 16,313
+Other debt securities
+- Government debt securities 216,708 119,796
+- Floating Rate Notes 305,317 253,915
+- Certificate of deposit 113,550 32,930
+Equities . 668 30,043
+Impairment of financial assets (Note 25) (260) (498)
+725,098 452,499
+Total financial investments 738,955 481,117
+
+The decrease of £29,375k in Equities is related to the redemption of a fund.
+
+36
+17.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+For the year ended 31 December 2014
+
+SHARES IN GROUP UNDERTAKINGS
+
+Cost
+
+At 1 January
+
+Disposal SG Hambros Holdings (Canada) Inc
+Exchange movements
+
+At 31 December
+
+Provision for Impairment
+SG Hambros Holdings (Canada) Inc
+
+Carrying value at 31 December
+
+>
+
+2014
+£000
+
+121,639
+(16,777)
+(2)
+
+104,860
+
+104,860
+
+2013
+£000
+
+121,639
+(371)
+
+121,268
+
+(12,370)
+
+108,898
+
+In 2012, an additional impairment provision of £9.2m was made against the Bank’s investment
+in SG Hambros Holdings (Canada) Inc, following its disposal of Canadian Wealth Management
+Lid. This brought the total impairment provision to £12.4m.In 2013, an additional £1,000
+exchange rate loss was incurred relating to this disposal. The disposal of SGH Holdings
+Canada was finalised during 2014 generating a decrease of £16,779k and the reversal of the
+provision for impairment of £12,370k. No further loss was made on the dissolution. No further
+impairments in group undertakings have been made during 2014.
+
+Subsidiary Undertakings:
+Credit institutions
+Other
+
+2014
+£7000
+
+104,610
+250
+
+104,860
+
+2013
+£000
+
+108,648
+250
+
+108,898
+
+All of the shares in subsidiary undertakings are unlisted. The principal subsidiary undertakings
+
+are as follows:
+
+Country of Company
+
+incorporation
+
+Gibraltar SG Hambros Bank
+(Gibraltar) Ltd.
+
+Jersey SG Hambros Bank (Channel
+islands) Ltd.
+
+Jersey SG Hambros Trust Company
+(Channel Islands) Ltd.
+
+UK SG Hambros Trust Company
+Ltd.
+
+UK . SG Hambros (London)
+Nominees Ltd.
+
+Canada SG Hambros Trust Co
+(Canada) Inc
+
+New Zealand SG Hambros Trust Company
+(NZ) Ltd.
+
+Activity
+
+Private Banking
+
+Private Banking
+
+Executor & trustee services
+Executor & trustee services
+Nominee company
+Executor & trustee services
+
+Trustee services
+
+Interest %
+
+100
+
+100
+
+100
+
+100
+
+100
+
+100
+
+100
+
+37
+17.
+
+18.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+SHARES IN GROUP UNDERTAKINGS (CONTINUED)
+
+All holdings are in ordinary shares and are owned directly by the Bank with the exception of SG
+Hambros Trust Company (Channel Islands) Ltd, which is a wholly owned subsidiary of SG
+Hampbros Bank (Channel Islands) Ltd.
+
+The SG Hambros Trust Company Ltd and SG Hambros (London) Nominees Ltd were
+incorporated in the United Kingdom and are registered in England and Wales.
+
+The country of incorporation is also the principal area of operation for each of the above
+undertakings.
+
+PARTICIPATING INTEREST
+
+2014 2013
+£7000 £000
+Cost
+DAH Holdings Limited . 1,508 1,436
+SG Trust (Asia) Ltd 277 224
+At 31 December 1,785 1,660
+Provision for Impairment
+DAH Holdings Limited : (252) (253)
+At 31 December , 1,533 1,407
+
+Equity shares represent unlisted investments in participating interests:
+
+A 24.5% holding of the ordinary shares of DAH Holdings Limited, a company incorporated in
+Bermuda whose principal activity is private banking, was purchased for £1,436,263 (HKD
+18,065,316) on 21 February 1997. The company's functional currency is US dollars.
+
+The directors have written down the value of the investment so the holding is not greater than
+the value of the net assets. .
+
+A shareholding in SG Trust (Asia) Ltd (incorporated in Singapore), was purchased for £223,793
+(SGD 570,000) on 25 January 2001, representing 19% of the ordinary share capital of the
+company. The movement in cost for the shareholding represents an FX gain since the
+acquisition. This company’s principal activity is executor and trustee services. .
+
+These investments are classified as participating interests as, in the directors’ opinion, the Bank
+has no significant influence over their activities.
+
+38
+19.
+
+20.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+For the year ended 31 December 2014
+
+GOODWILL
+
+Cost
+At 31 December 2013
+Additions arising in year
+
+At 31 December 2014
+Amortisation
+
+At 31 December 2013
+Charge for the year
+At 31 December 2014
+
+Net Book Value
+At 31 December 2013
+
+At 31 December 2014
+
+TANGIBLE FIXED ASSETS
+
+Cost
+
+At 31 December 2013
+Reclassifications -
+Additions
+
+Disposals
+
+At 31 December 2014
+
+Accumulated
+Depreciation
+
+At 31 December 2013
+Charge for the year
+At 31 December 2014
+Net book value at:
+
+31 December 2013
+31 December 2014
+
+Leasehold
+Property
+£000
+
+1,144
+
+Goodwill
+£7000
+16,358
+16,358
+(5,110)
+(1,091)
+(6,201)
+11,247
+10,157
+Furniture °
+fixtures
+Computer &
+equipment __ fittings Total
+£’000 £000 £000
+1,285 2,660 5,089
+(20) 20 .
+8 1 9
+(4) - (4)
+1,269 2,681 5,094
+(1,119) (2,129) (4,392)
+(83) (163) (246)
+(1,202) (2,292) (4,638)
+166 531 697
+67 389 456
+
+The Bank does not hold any property with leases over 50 years.
+
+39
+21.
+
+22.
+
+23.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+DEFERRED TAX ASSET
+
+At 1 January
+
+Charge for the year
+
+Revaluation in Corporation tax rate to 20% (2013: 21.5%)
+Adjustment to deferred tax in respect of share based payments
+
+At 31 December
+
+2014 2013
+£7000 £000
+552 718
+(28) (84)
+15 (82)
+128 .
+667 552
+
+The UK deferred tax relates to capital allowances and other timing differences and has been
+calculated at 20% (2013: 20%) being the rate of corporation tax at which the assets or liabilities
+are expected to reverse. As the Bank remains profitable and continues as a going concern,
+
+deferred tax is expected to be fully recovered in future periods.
+
+OTHER ASSETS
+2014
+£000
+Other debtors 2,108
+Prepayments and accrued income 7,392
+
+Other debtors include £644,505 due from group companies (2013: £519,273).
+
+DEPOSITS BY BANKS
+2014
+£000
+
+Repayable on demand . 904
+
+With agreed maturity dates or periods of notice, by remaining maturity:
+- 3 months or less but not repayable on demand 258
+- 1 year or less but over 3 months -
+
+Amounts include: ;
+Due to group undertakings 1,162
+
+2013 -
+£000
+
+5,889
+
+40
+SG Hambros Bank Limited.
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014 ;
+
+CUSTOMER ACCOUNTS
+
+2014 2013
+£000 £000
+Repayable on demand 714,094 434,777
+With agreed maturity dates or periods of notice: ,
+- 3months or less but not repayable on demand 340,856 376,167
+- 1 year or less but over 3 months 188,207 — 185,283
+- 3 years or less but over 1 year 64,100 6,178
+- § years or less but over 3 years 30,657 2,000
+~ Over 5 years’ 7,919 26,631
+
+1,345,833 1,031,036
+
+Amounts include:
+Due to group undertakings 258 283
+
+PROVISION FOR IMPAIRMENT OF FINANCIAL ASSETS
+
+2014 2013
+£’000 £’000
+Loans and advances to customers
+At 1 January 2,387 1,736
+Charged against profits 542 622
+Exchange rate movement (165) 29
+At 31 December 2,764 2,387
+
+No amount has been recovered from previously written off client loans in 2014 (2013:
+£179,000).
+
+Included within the year-end specific provision is an amount of £69,539 (2013: £13,575)
+relating to interest.
+
+2014 2013
+£°000 £000
+Available- for-sale equity investment
+At 1 January . 498 708
+Charged against profits (160) (182)
+Exchange rate movement (78) (28)
+At 31 December 260 498
+
+The above provision relates to an AFS equity investment in the SG European Distressed
+Opportunities Fund £260,000 (2013: £498,000). Part of the SG European Distressed
+Opportunities Fund has been repaid in 2014 leading to a reversal of £150,761 of the
+impairment.
+
+41
+26.
+
+27.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+OTHER LIABILITIES
+
+2014 2013
+£000 £000
+Other creditors 1,159 6,317
+Accruals and deferred income 23,992 14,871
+Other creditors include £134,009 owed to group companies (2013: £2,173,878).
+SHARE CAPITAL
+2014 2014 2013 2013
+Number of Value of Number of Value of
+shares shares shares shares
+‘000 £000 ‘000 £000
+Authorised:
+Ordinary shares of £1 each 150,000 150,000 150,000 150,000
+Allotted, called up and fully paid:
+Ordinary shares of £1 each 143,800 143,800 143,800 143,800
+
+42
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+28. EQUITY SHAREHOLDERS’ FUNDS
+
+At 1 January 2013
+
+Restatement of results and
+reserves (Note 7)
+At 1 January 2013, restated
+
+Profit for the year, restated
+
+Equity settled payments
+
+Released on disposal of
+available-for-sale
+investments to profit and loss
+
+Decrease in fair value on
+revaluation of available-for-
+sale investments
+
+Dividends
+
+Tax on fair value movement
+of available-for-sale
+investment
+
+At 1 January 2014
+Profit for the year
+Increase in fair value on
+
+revaluation of available-for-
+sale investments
+
+Released on disposal of
+available-for-sale
+investments to profit and loss
+
+Equity settled payments
+Tax on fair value movement
+of available-for-sale
+investment
+
+Dividends paid
+
+At 31 December 2014
+
+Called
+
+up
+Share
+
+Capital
+
+£000
+143,800
+
+143,800
+
+143,800
+
+143,800
+
+Share-
+Profit Based Undist-
+Share & Loss Capital ributable AFS
+Premium Account Contribut reserves -reserves Total
+ion
+£000 £000 £000 £7000 £7000 £000
+
+45,500 25,609 - 42,500 4,973 262,382
+- (1,287) 1,287 - - -
+45,500 24,322 1,287 42,500 4,973 262,382
+- 44,808 - - ” 44,808
+- - 207 - - 207
+- - . : (195) (195)
+- - - - (4,982) (4,982)
+- (48,500) - - - (49,500)
+- - - - 1,205 1,205
+45,500 19,630 1,494 42,500 1,001 253,925
+- 5,703 - - - 5,703
+- - - - 3,124 3,124
+- - - - 34 34
+- - 238 - - 238
+(679) (679)
+(5,000) (5,000)
+45,500 20,333 1,732 42,500 3,480 257,345
+
+. Undistributable reserves relate to the unrealised gain on the transfer of a subsidiary in 2005.
+
+43
+29.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS ©
+
+For the year ended 31 December 2014
+
+MEMORANDUM ITEMS
+
+At the year end the contract amounts and risk weighted amounts of contingent liabilities and
+
+commitments were:
+
+CONTINGENT LIABILITIES
+
+2014
+Contract
+amount
+£’000 .
+Guarantees and assets
+pledged as collateral security:
+- guarantees and
+irrevocable letters of credit 150,282
+
+2013 —
+Risk Risk
+weighted Contract weighted
+amount amount amount
+£000 £’000 £’000
+19,858 125,405 24,148
+
+Included in the above are guarantees given on behalf of subsidiary undertakings of £842,000
+
+(2013: £947,000). -
+
+COMMITMENTS
+2014
+Contract
+amount
+£’000
+Other commitments
+undrawn facilities:
+- less than 1 year 52,771
+
+2013
+Risk Risk
+weighted Contract weighted
+amount amount amount
+£’000 £7000 £7000
+11,323 98,329 9,330
+
+The credit equivalent and risk weighted amounts have been calculated in accordance with the
+European Banking Authority guidelines implemented as part of the Capital Requirements
+
+Directive IV.
+
+Annual commitments under non-cancellable buildings operating leases are as follows:
+
+Expiry date
+- within one year
+- between two and five years
+
+2014 2013
+£000 £’000
+1,153 1,133
+
+65 1,131
+1,218 2,264
+
+44
+30.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+FAIR VALUE OF FINANCIAL INSTRUMENTS
+Determination of fair value and fair value hierarchy
+FRS 29 specifies a hierarchy of valuation techniques based on whether the inputs to those valuation
+
+techniques are observable or unobservable. Observable inputs reflect market data obtained from
+independent sources; unobservable inputs reflect the Company's market assumptions. These two
+
+_inputs have created the following fair value hierarchy:
+
+Level 1: quoted (unadjusted) prices in active markets for identical assets or liabilities;
+
+Level 2: other techniques for which all inputs which have.a significant effect on the recorded fair
+value are observable, either directly or indirectly; and
+
+Level 3: techniques which use inputs which have a significant effect on the recorded fair value that
+are not based on observable market data.
+
+The following table shows an analysis of financial instruments recorded at net fair value by level of
+the fair value hierarchy. sO
+
+2014 Level 1 Level 2 Total
+. £°000 £000 £°000
+
+Financial assets
+
+Derivative financial instruments
+
+Interest rate swaps - 1,064 1,064
+Forward foreign exchange - 484 484
+
+contracts
+Purchase of Interest cap - 38 38
+FX Options - 45 45
+Equities Option - . 69 69
+- 1,700: 1,700
+
+AFS Financial investments
+
+Government debt securities 216,708 - 216,708
+Fixed rate bonds 89,115 - 89.115
+Other debt securities 418,868 - 418,868
+Equities - 408 408
+724,691 2,108 726,799
+
+Peecherefeerfeemtend ‘sss. “sv a,
+<< eo se oe —s i ee soe oe
+
+Financial liabilities
+Derivative financial instruments
+
+Interest rate swaps - (6,365) (6,365)
+Forward foreign exchange - (1,340) (1,340)
+
+contracts
+Structured deposits “ (38,576) (38,576)
+Spot FX - (68) (68)
+FX Options - (45) (45)
+- (46,394) (46,394)
+
+‘we ee se so se ‘om ass st ss, ‘se se st, ss,
+Se es See mee eee Sem noe no ee Se Se ae
+
+45
+30.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+FAIR VALUE OF FINANCIAL INSTRUMENTS (CONTINUED)
+
+2013 Level 1 Level 2 Total
+£’000 £000 £°000
+
+Financial assets
+
+Derivative financial instruments
+
+interest rate swaps - 823 823
+
+Forward foreign exchange .
+contracts -, 264 264
+Purchase of Interest cap - 157 157
+Equities Option ; - 117 117
+: - 1,361 1,361
+
+AFS Financial investments ;
+
+Government debt securities 119,796 - 119,796
+Fixed rate bonds 16,313 - 16,313
+Other debt securities 286,845 - 286,845
+Equities - 29,545 29,545
+422,954 30,906 453,860
+
+-_——~--—— —————47 ——
+
+Financial liabilities
+Derivative financial instruments .
+Interest rate swaps - 2,528 2,528
+
+Forward foreign exchange
+contracts : = 205 205
+Equities Option - - -
+- 2,733 2,733
+
+=-——--—— _————’ —————4
+
+There were no transfers between each level of the fair value hierarchy for financial assets and
+liabilities which were recorded at fair value during the financial year.
+
+Level 3 valuations
+The Bank has no Level 3 valuations at either 31 December 2014 or 31 December 2013.
+
+Financial instruments recorded at fair value
+
+The following is a description of the determination of fair value for financial instruments which are
+recorded at fair value using valuation techniques. These incorporate the Bank’s estimate of
+assumptions that a market participant would make when valuing the instruments.
+
+Derivatives
+
+Derivative products are valued using a valuation technique with market observable inputs, mainly
+interest rate swaps and forward foreign exchange contracts. The most frequently applied valuation
+techniques include forward pricing and swap models, using present value calculations. The models
+incorporate various inputs including the credit quality of counterparties, foreign exchange spot and
+forward rates and interest rate curves.
+
+Financial investments - available-for-sale
+Availabie-for-sale financial assets are valued using quoted market prices or pricing models. These
+assets are valued using models incorporating data observable in the market.
+
+46
+31.
+
+SG Hambros Bank Limited °
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT
+
+The Bank’s financial instruments comprise Deposits, Loans, FX Spot and Forwards, FX Swaps, Non
+
+‘ Deliverable Forwards (“NDFs”), Interest rate swaps (“IRS”), Certificates of Deposit (“CD’s’),
+
+Commercial Papers (“CP’s”) and Bonds (Senior Unsecured and Covered issued by Sovereign,
+Supranational, Agency, Financial and Corporate counterparts). The Bank’s Treasury can utilise
+Repos/Reverse Repos for Liquidity Management purposes, as per the Contingency Funding Plan.
+
+Investment in Non-Financial corporate entities will be maintained within a limit of 25% of the
+investment book. The maximum maturity of. investments in Corporate. will be limited to 5 years.
+Additionally any individual companies which are considered for inclusion in this maturity envelope
+should be rated BBB- or above and listed on one of the major equity indices in the UK or other G10
+countries.
+
+Individual names will also be subject to the same rigorous approval regime as Financial Institutions
+through SG Group Risk.
+
+In addition, the Bank enters into derivative transactions (principally interest rate swaps, OTC Options
+and cross- currency interest rate swaps) for hedging purposes only.
+
+The Bank does not hold any material proprietary positions in Equities or Commodities. -
+
+As a consequence of these points, we can limit the Market Risk impact to Interest Rate and Foreign
+Exchange Risks. .
+
+Interest rate risk
+
+The Bank’s primary source of funding is retail, from client deposits. Customer deposits can be in the
+form of Call Accounts, Notice accounts or Fixed Deposits. The interest risk generated by these
+deposits depends on their nature and term structure (i.e. fixed, floating or variable).
+
+The Bank also offers Fiduciary deposits, however these do not present any Interest Rate Risk for the
+Bank since they are held directly by the client, with the Bank only acting as an agent between the
+client and the recipient Bank.
+
+The Bank does not utilise wholesale funding to any significant scale. Any such funding is on a very
+short term basis and for covering short term Treasury requirements only.
+
+The Bank engages in retail and commercial lending activities, predominantly collateralised against
+property and with conservative Loan-to-Value levels. The majority of this lending bears a floating
+rate of interest (typically 1 month or 3 months). Fixed rate lending beyond tyr is available, the risk is
+managed within our pre-defined limits.
+
+Shareholder funding (Capital) is modelled as a linear amortising 10 year duration resource at a fixed
+rate.
+
+A Buffer of High Quality Liquid Assets is maintained and comprises mainly Bonds.
+
+Excess liquidity not used for client lending is invested in a pre-defined list of instruments, such as
+Bonds or money market instruments, including interbank lending, CD or CP.
+
+Money market placements are kept relatively short term for liquidity reasons. Bond investments can,
+however, be made out to 10 years, either through fixed rate or floating rate investments with floating
+rate typically bearing a quarterly refix to LIBOR or equivalent.
+
+The Bank runs a mismatch between the funding sources (client and shareholder funding) and the
+asset profile (client loans and Treasury investment activity), in terms of the maturity profile and the
+interest rate duration. It is this mismatch that generates interest rate risk and is described below.
+
+47
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+Levels of interest rate risk are maintained within defined sensitivity limits (approved by SG Risk
+Department and subject to annual review) and are monitored daily.
+
+The Bank’s policy to invest free capital is to purchase debt securities and lend these funds to clients
+with maturities up to 10 years. As at 31 December 2014 GBP 136.5mio (2013: GBP102.2m) was
+invested with a weighted average duration of 5.08 years (2013: 4.20 years). Interest rate swaps may
+be used to hedge the interest rate exposure. Maturity of interest rate swaps is as follows:
+
+2014 Fair <3 3to6 6 to 12 1to5 Over 5
+
+Value months months months years years
+Assets £7000 £’000 £’000 £’000 £000 £7000
+Interest rate swaps 1,065 452 1 162 450 -
+held for trading
+
+Interest rate swaps - - - - -— -
+Fair value hedge
+
+1,065 452 1 162 450 -
+Liabilities £°000 £’000 £’000 £’000 £000 £’000
+interest rate swaps (2,318) (750) (1) (69) (1,197) (301)
+held for trading
+Interest rate swaps
+Fair value hedge (4,047) ’ - - - - (4,047)
+(6,365) (750) (1) (69) (1,197) (4,348)
+2013 Fair <3 3to6 6 to 12 1to5 Over 5
+Value months . months months years years
+Assets £’000 £7000 £’000 £’000 — £000 £’000
+Interest rate swaps 823 720 - 14 89 +
+held for trading
+Interest rate swaps - - - - ” ”
+Fair value hedge
+823 720 ” 14 89 -
+Liabilities £000 £000 £’000 £’000 £000 £’°000
+Interest rate swaps (2,297) (415) (26) - (465) (1,391)
+held for trading
+Interest rate swaps
+Fair value hedge (231) - (5) (61) (165) -
+(2,528) (415) (31) (61) (630) (1,391)
+
+48
+31.
+
+.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+The sensitivity analysis below has been determined based on the Bank’s assets and liabilities
+present in the balance sheet as at 31 December 2014 and by reference to a movement in market
+interest rates reasonably possible in the Bank’s next financial reporting period.
+
+If interest rates for the current year had been 50 basis points lower and this movement applied to the
+assets and liabilities as at the balance sheet date, the pre-tax profit for the year ended 31 December
+2014 would have been £0.8m lower (2013: £0.7m) which ultimately would result in lower retained
+earnings of £0.6m (2013: £0.5m). This would have mainly resulted from lower interest income on
+variable rate assets and lower financing costs in respect of its loans.
+
+The inverse is equally true for the current year if interest rates had been 50 basis points higher.
+Foreign currency risk
+
+The Bank’s Foreign Exchange and Commodity Risk arises from:
+
+" Providing Foreign Exchange and Commodity services to customers.
+
+.*® Its net currency revenue flows from overseas subsidiaries and associated undertakings.
+
+« Intraday market opportunities.
+» From its other structural positions (including hedging).
+
+The Bank’s exposure to the currency and commodity market is limited to the flows generated by
+intraday market opportunities, by our customers and by any structural positions. Our dealers are
+authorized to optimise the hedging of such flows intraday, and are governed by intraday and end of
+day exposure limits.
+
+The limits are granted by the SG Risk Department and reviewed annually, following review at ALCO
+level within the Bank.
+
+The analysis below calculates the effect of a reasonably possible movement of the currency rate
+against Sterling, with all other variables held constant, on the income statement and equity. A
+negative amount in the table reflects a potential net reduction in income statement or equity, while a
+positive amount reflects a net potential increase.
+
+2014 2013
+Effect on Changein Effect on
+Change in profit Effect on Currency profit Effect on
+Currency Currency rate before tax equity rate before tax equity
+% £7000 £°000 % £000 £000
+usD +1 116 4.12 +1 5 -
+EUR +1 161 4.00 +1 3 0.2
+
+The reasonably possible movement of the currency rate of other currency exposures is not
+considered material.
+
+49
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+Credit risk
+
+There is a clearly defined policy and process documented within the SGH Credit Policy for credit
+application and approval, credit administration, daily monitoring and reporting.
+
+The daily monitoring of risk exposures for Private Clients is conducted through a PRIV risk
+monitoring tool, ‘PRISM’, which provides the Credit team with the ability to monitor exposures
+against collateral daily. The tool recalculates lending values of market sensitive collateral daily
+taking account of liquidity, diversification, concentration, quality and cross currency elements.
+
+The LTV guidelines for lending against financial assets are calculated by PRIV and adopted as part
+of the SGH Credit Policy. They have been calculated using stress testing techniques based on
+tolerance thresholds set by PRIV/DIR with a confidence level of 99.92%.
+
+Should the quality of the counterparty or the Bank’s collateral deteriorate to such an extent as to
+cause concern, the Group Head of Credit must conduct an interim review arid apply appropriate
+rectification measures.
+
+There are two main periodic reviews of the quality of the entire loan book (as set out in the SGH
+Provisioning and SG PRIV Credit policies):
+
+* Quarterly irregular Commitments review.
+* Quarterly Group Executive Risk Committee which includes the Provisioning Review.
+
+The Credit Risk pertaining to the large exposures for the top 10 clients is assessed at the monthly
+ALCO meeting.
+
+‘Maximum exposure to credit risk before collateral held or other credit enhancements
+
+The table below outlines the maximum credit risk exposure of the Bank’s financial assets, net of
+depreciation and before any bilateral netting agreement and collateral, including revaluation
+differences on items hedged or listed at fair value on the balance sheet.
+
+2014 2013
+
+£000 £000
+Loans and advances to banks 57,504 49,764
+Loan and advances to customers 713,024 657,026
+Derivative financial instruments . 1,700 1,361
+Financial investment 738,955 481,117
+Other assets 2,108 1,645
+Exposure to balance sheet commitments . 1,513,291 1,190,913
+Loan commitments granted 52,771 98,329
+Guarantee commitments granted 150,282 125,405
+Exposure to off-balance sheet commitments 203,053 223,734
+Tota! net exposure 1,716,344 1,414,647
+
+All loans and advances are categorised as ‘Neither past due nor individually impaired’; ‘Past due but
+not individually impaired’; or ‘Individually impaired’.
+
+50
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+Neither past Past due
+due nor but not Total
+individually individually —_— Individually Impairment carrying
+impaired impaired ° impaired Total — allowance value
+£’000 £’000 £7000 £'000 £°000 £000
+2014
+Loans and 57,504 - - 57,504 - 57,504
+advances to
+banks
+Loans and
+advances to 708,465 1,404 5,919 715,788 (2,764) 713,024
+customers
+2013
+Loans and 49,764 - - 49,764 - 49,764
+advances to
+banks
+Loans and . ;
+advances to 653,297 1,974 4,142 659,413 (2,387) 657,026
+customers
+
+Credit quality of loans and advances neither past due nor individually impaired
+
+The Bank’s Private Client loan book is generally perceived to be of high quality with 23.3% (2013:
+27.9%) secured against liquid collateral in the form of either cash, bank guarantees or well
+diversified investment portfolios, with a further 73.2% (2013: 72.6%) being secured against real
+estate. The balance of the loan book is secured against non-diversified assets (2014:1.0%, 2013:
+1.6%), unsecured facilities (2014:1.5%,2013:1.2%) and facilities in default account (2014:0.8%,2013:
+1.0%). Unsecured facilities are generally attributable to short-term overdrafts where substantial
+securities or cash are held by the Bank.
+
+Given the nature of the Bank’s clients as high net worth individuals, and the relatively low loan to
+value percentages, management do not consider loan forbearance to be a risk for the Bank, and
+loan forbearance has not been granted to any clients.
+
+The Bank regularly reviews the loan-to-value percentages detailed in the Bank’s Credit Policy
+applied to assets taken as collateral.
+
+Loan-to-value percentages against Real Estate are generally based upon the property value which is
+determined by reference to professional valuations and, for residential properties only, the
+subsequent application of relevant geographical residential property indices where policy permits.
+The Bank has no material exposure to commercial real estate. The Loan-to-values table shows all
+loans where there is any element of real estate exposure. Some loans may be supported by other
+forms of collateral, hence the total does not equal the real estate exposure as per the Bank’s Basle II
+pooling classification, where real estate exposure is shown as 73.2% (2013: 72.6%) of the loan
+book.
+
+‘The Bank has £5.13m exposure in Euro to the Spanish residential property market which, in light of
+
+the problems facing that market, is under constant, review. Provisions equating to £2.66m (2013:
+£2.231m) have been raised against these loans.
+
+51
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+2014
+
+Loan-to-Value Exposure £’000 Number of loans
+Up to 50% ; 269,933 246
+
+50% - 60% 206,057 106
+
+60% - 70% 169,150 136
+
+70% - 80% 12,106 ; 6
+
+80% -90% 1,756 1
+
+Over 90% 4,205 3
+
+2013
+
+Loan-to-Value Exposure £000 * Number of loans
+Up to 50% 310,089 312
+
+50% - 60% 177,633 109
+
+60% - 70% 95,769 93
+
+70% - 80% 4,817 4
+
+80% - 90% 0 0
+
+Over 90% 4,003 2
+
+Loans and advances that are past due but not individually impaired
+
+As at 31 December 2014, unimpaired past due loans accounted for 0.01% (2013: 0.3%) of the
+portfolio of performing loans.
+
+Loans past due for technical reasons are loans that are classified as past due with a delay between
+the accounting in the customer account and payment value date.
+
+Total unimpaired past due loans declared are all inclusive of outstanding balance, interest and past
+due amounts. These outstanding loans are monitored as soon as the first payment is missed.
+
+Once an instalment has been past due for 90 days, or 180 days for mortgage backed loans, the
+counterparty is deemed to be in default.
+
+Regular meetings are held with management to discuss loans where there is a possibility of
+impairment. This will include loans where there have been severe detrimental changes to the
+borrower's financial circumstances leading to concerns as to the ability to service and repay debt
+obligations, failure to meet margin calls, degradation in collateral value or liquidity, under
+collateralised facilities etc. Decisions will be taken based upon recommendations made by the Credit
+Department to make specific capital provisions and the action for work-out.
+
+2014 2013
+
+£000 % of Gross £7000 % of Gross
+
+Gross outstanding loans outstanding outstanding
+loan loan
+
+Past due amounts less - - 10,004 1.52%
+than 90 days
+Past due amounts greater 176 0.02% - -
+than 90 days but less than
+1 year
+Past due amounts greater 5,339 0.69% 6,116 0.93%
+than 1 year
+
+5,515 0.72% 16,120 2.45%
+
+52
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+Loans and advances that are past due and individually impaired
+An analysis of financial assets individually assessed as impaired is as follows:
+
+Loans and advances
+to customers
+
+Debt securities
+
+Original
+carrying
+amount
+£000
+5,918
+
+2014
+Impairment
+allowance
+
+£000
+2,764
+
+Revised
+carrying
+amount
+£’000
+3,154
+
+2013
+Original Impairment
+carrying allowance
+amount
+£000 £000
+6,116 2,387
+
+Revised
+carrying
+amount
+£000
+3,729
+
+The available-for-sate assets are measured on a fair value basis. The fair value will reflect, among
+other things, the credit risk of the issuer. All the debt securities are rated by external rating agencies.
+
+Investment Portfolio Structure and Diversification
+Investment Classification of Treasury instruments is as follows:
+
+Treasury Investments
+
+Sovereign Debt
+
+Government Guaranteed Debt
+Agency / Supranational Debt
+Senior Bank Debt
+
+Certificates of Deposit
+
+Interbank Lending
+Corporate Bonds
+Equity Investment
+
+TOTAL
+
+Country of Risk of exposures is as follows:
+
+Country
+Australia
+Italy
+Denmark
+France
+Germany
+Guernsey
+Luxembourg
+Netherlands
+Sweden
+Switzerland
+United Kingdom
+USA
+TOTAL
+
+2014
+%Portfolio
+19%
+0%"
+34%
+19%
+9%
+5%
+3%
+11%
+100%
+
+2014
+%Portfolio
+3%
+0%
+3%
+10%
+8%
+2%
+17%
+1%
+2%
+0%
+45%
+9%
+100%
+
+2013
+%Portfolio
+28%
+12%
+9%
+31%
+6%
+8%
+0%
+6%
+100%
+
+2013
+%Portfolio
+16%
+4%
+2%
+4%
+1%
+7%
+6%
+13%
+2%
+0%
+29%
+16%
+100%
+
+53
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+- RISK MANAGEMENT (CONTINUED)
+
+Whilst the Bank has exposure to the Eurozone, there is no exposure to Greece, Italy, Ireland,
+Portugal or Spain (GIIPS). The Bank has no significant concerns regarding the recoverability of its
+Eurozone exposure, which is supported by the following credit ratings of the debt securities portfolio:
+
+Credit Rating of the Treasury portfolio is as follows:
+
+2014 2013
+Rating (S&P) %Portfolio %Portfalio
+AAA 46% 55%
+AA+ 13% 5%
+AA 1% 6%
+AA- 7% 7%
+A+ 2% 14%
+A 26% 5%
+A- 5% 2%
+Equity Investment 0% 6%
+TOTAL 100% 100%
+
+Sovereign, Supranational and Agency Investments debt is as follows:
+
+2014 2013
+Government Issued Debt %Porttolio %Portfolio
+France 21% 9%
+USA 2% 12%
+United Kingdom 71% 79%
+Germany 6% 0%
+Government Guaranteed Debt %Portfolio %Portfolio
+Australia 0% 100%
+Denmark 0% 0%
+Agency/Supranational Debt %Portfolio %Portfolio
+USA , 14% 100%
+Luxembourg 31% 0%
+Sweden 7% 0%
+Germany 6% 0%
+United Kingdom 32% 0%
+Denmark 10% 0%
+
+Concentration Risk
+
+Concentration risk in both the investment book and the Private Client lending book is managed and
+mitigated by the Group Large Exposure policy.
+
+e
+
+54
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+Derivatives
+Derivatives are measured on a fair value basis. The majority of the Bank’s derivatives are transacted
+with SG Group, which has an A rating.
+
+Derivative transacted with clients are frequently secured against cash deposits.
+
+Institutional Counterparty Credit Risk
+
+SGH Group Counterparty risk is captured via Kondor Global Risk (“KGR” a Thomson Reuters tool) .
+All transactions are input into Kondor+, which updates KGR via an automatic.interface. Risk
+monitors all exposures against limits in KGR and is automatically notified by the system if any
+breaches are experienced. There is a full audit trail within KGR for all captured trades. All limits are
+maintained within KGR by Risk and Market Solutions Middle Office.
+
+SG Group Risk Department regularly communicates to SGH Group Risk Department a list of
+counterparties and countries prohibited and "under surveillance". In addition to this, the SGH Group
+Risk Department maintains close contact with the SG Central Risk Team in order to maintain a close
+knowledge of the credit strength of our counterparts and remain abreast of any areas of concern
+from the dedicated credit analysts. Regular meetings are arranged with the credit analysts in order
+to consolidate the opinion of our counterparties and risk profile.
+
+The Bank employs a ‘Watch List’ approach -to the investment book, under which ¢ our security
+positions are classified as follows:
+
+Black Possible default scenario
+
+Red Highly sensitive with particular concerns
+
+Amber Sensitive counterpart, although no immediate issue
+Green No concern (and therefore not reported on the Watch List)
+
+Regulatory Risk
+
+The Bank is subject to financial services laws, regulation and regulatory oversight and failure to
+comply with any of these constitutes a significant risk. The financial services industry is currently
+subject to significantly increased requlatory supervision as a result of the financial crisis. In April
+2013, the Prudential Regulation Authority (“PRA”) became responsible for the authorisation and
+prudential supervision of the Bank while the Financial Conduct Authority (“FCA”) assumed
+responsibility for conduct of business supervision. ‘
+
+There remains a high level of scrutiny regarding financial institutions’ treatment of customers and
+overall business conduct from regulatory bodies and the media. The FCA in particular continues its
+focus on the conduct risks arising from the business models of banking institutions.
+
+Liquidity risk
+
+The Bank must at all times maintain liquidity resources that are adequate, in terms of both the
+amount and quality, to ensure that there is no significant risk that its liabilities cannot be met as they
+fall due. At the same time, the Bank must be self sufficient for liquidity purposes, and remain above
+the Board defined Liquidity Risk appetite. This is maintained by the defined liquidity monitoring
+processes, the ongoing review of the suitability of the Liquid Asset Buffer and the Contingency
+Funding Plan.
+
+The Liquidity Risk appetite for the Bank has been defined by the Board as follows:
+SGH London will maintain liquidity resources to target survival for a minimum period of
+
+three months under the idiosyncratic, market-wide and combined liquidity stresses
+defined in compliance with BIPRU 12.4 and 12.5.
+
+55
+31.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+Stress Testing
+
+The Bank monitors on a daily basis, the expected stressed cash flows over a three month horizon.
+The stressed cash flows are based on the assumptions of two stress testing models. The first model
+considers the impact of defined stress events (in accordance with BIPRU 12.4), while the second
+considers those defined by the PRA (as per BIPRU 12.5). In both cases, the liquidity position must
+remain at such a level as to ensure a positive cash flow for the first three months of the stressed
+forecasts. Each model includes three stress scenarios; an idiosyncratic stress scenario, a market-
+wide stress scenario and a combined stress scenario (market wide and idiosyncratic stress
+combined).
+
+Liquidity monitoring for the Bank also includes the analysis of the reverse stress tests framework.
+
+Individual Liquidity Guidance
+
+The Bank calculates the Individual Liquidity Guidance ratio on a daily basis to ensure that at all times
+it is holding sufficient buffer in line with prescribed buffer requirement. The methodology is overseen
+by the Stress Testing Committee and the analysis of the ten key risk drivers is included in the
+Individual Liquidity Adequacy Assessment (“ILAA’).
+
+Liquidity Coverage Ratio (“LCR”)
+
+The Bank is in the ongoing process of integrating the LCR into the business on a Group and solo
+basis. This involves ensuring the correct identification and treatment of our funding sources, as well
+as ensuring an adequate holding of High Quality Liquid Assets.
+
+Early Warning Indicators
+
+The Bank has developed a Contingency Funding Plan (“CFP”), which identifies the activities,
+resources and procedures required in a stress event, and the responsibilities of key personal. The
+Bank has created a key set of Liquidity Early Warning Indicators with individual owners. The
+indicators are communicated via an internal intranet site and updated on a weekly basis with an alert
+sent to the CFP/RRP ALCO members. ,
+
+The liquidity situation of the Bank is discussed monthly during ALCO meetings and reported
+quarterly to the Board. In times of stress, and as defined within the CFP specific daily liquidity,
+ALCOs can be convened.
+
+56
+~
+
+31,
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+The table below analysed the Bank’s non-derivative financial liabilities by their remaining contractual
+
+maturities.
+Less
+
+2014 Carrying than 3 3to6 6 to 12 1to5 Over 5
+
+amount months months months years years
+
+£’000 £°000 £°000 £’000 £7000 £000
+
+Liabilities
+Deposits by 1,162 1,162 - - - -
+banks
+Customer 1,345,833 1,054,949 50,444 137,763 94,757 7,920
+accounts
+Other liabilities 1,158 1,158 - - - -
+Total 1,348,153 1,057,269 50,444 137,763 94,757 7,920
+2013
+Liabilities
+Deposits by 9,599 9,599 - - - -
+banks :
+Customer 1,031,036 910,913 45,842 39,472 8,178 26,631
+accounts
+Other liabilities 6,316 6,316 - - - -
+Total 1,046,951 926,828 45,842 39,472 8,178 26,631
+Operational risk
+
+Operational Risk is the risk of loss resulting from inadequate or failed internal processes, people and
+systems or from external events. This definition includes legal risk but excludes strategic or
+reputational risk.
+
+Within the Bank, a number of processes are used to measure, monitor and mitigate instances of
+operational errors. A summary of the approaches used is as follows:
+
+Risk & Control Seif Assessment (RCSA) -A periodic RCSA assessment is undertaken to assess
+and quantify the inherent risk exposure, quality of controls in place and resultant residual risk
+exposures across our Core areas of business and for each Basle II event category.
+
+Permanent Supervision — An ongoing assessment of the effective operation of key controls
+employed across the Group using a tool called OpeRA. Areas of the business are required to
+report against pre agreed risk indicator metrics and self assess the effective operation of controls
+within their areas.
+
+Loss Recording and Analysis — All operational errors and commercial gestures in excess of EUR
+10k for losses and EUR 50k for gains, are required to be captured and reported on a monthly
+basis to SG Group. Additionally, all losses, gains and commercial gestures falling beneath these
+SG Group reporting thresholds are captured using the Bank’s Incident Reporting Tool (IRT).
+
+Root cause analysis is undertaken on incidents reported through CAROLINE to investigate why the
+error has arisen and what action needs taking to mitigate reoccurrence. Likewise, a process has
+been implemented to assist with the identification of error themes captured through IRT, and identify
+remedial actions.
+
+57
+31,
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+Due to the nature of providing Private Banking services to High Net Worth (“HNW’”) clients, which
+are at times bespoke/ tailored to the specific needs of clients, the Bank runs an inherently high
+exposure to Operational Risks by failing to adhere to procedures, processes, practices and policies.
+Past analysis has shown that operational failures often arise as a result of human error.
+
+The knowledge, experience and financial acumen of the HNW client sector, exacerbated by the
+current economic environment, can also lead to an increased exposure to litigation-risks in the event
+operational errors are experienced. Furthermore, given the nature of private banking business,
+there is a high susceptibility to fraudulent activities, and we have seen a notable increase in
+attempted fraud during recent years.
+
+Capital management
+
+The primary objective of the Bank’s capital management policy is to ensure that the Bank complies
+with regulatory capital requirements and the Bank holds investments with strong credit ratings and
+robust capital ratios in order to support its business and to maximise shareholder value.
+
+The Bank actively manages its capital structure and makes adjustments to it in light of changes in
+economic conditions and the risk characteristics of its activities.
+
+The Bank’s capital is monitored at SG Hambros Group level using the supervisory requirements set
+by the PRA. The PRA issues Individual Capital Guidance (“ICG”) based on the review of the Bank’s
+capital planning model as evidenced under the ICAAP. Under the ICG currently in place the Bank’s
+regulatory capital exceeds its capital resource requirements. The ICAAP is reviewed annually by the
+Bank and by exception when necessary.
+
+The Bank’s regulatory capital resources at 31 December in accordance with European Banking
+Authority definitions were as follows:
+
+2014 2013
+£°000 £7000
+Capital Resources :
+Common Equity Tier 1 Capital 134,438 250,939
+Total Capital after deductions . 134,438 124,769
+Pillar 1 Variable Capital Requirements
+Credit Risk . . 18,814 18,742
+Market Risk 73 64
+Operational Risk 2,624 4,894
+Capital Requirements 21,511 23,700
+Solvency Ratio 624.97% 526.45%
+
+Tier 1 capital is the core measure of a bank’s financial strength from a regulator's point of view. It is
+composed of core capital which consists primarily of common stock and disclosed reserves (or
+retained earnings).
+
+The definition of Common Equity Tier 1 Capital (previously Core Tier One Capital) has changed from
+2013 to 2014 under CRDiv framework. in 2014, capital deductions are included in Common Equity
+Tier 1 Capital, while in 2013 GENPRU framework was applied and no deductions were made directly
+from Core Tier One Capital.
+
+58
+31.
+
+32.
+
+33.
+
+SG Hambros Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2014
+
+RISK MANAGEMENT (CONTINUED)
+
+The consolidated Pillar 3 disclosures of the Société Générale Group can be found on the website of
+Société Générale SA, at the following link:
+
+http://www. societegenerale.com/en/searct/site/pillar%203
+
+TRANSACTIONS WITH DIRECTORS AND RELATED PARTIES
+The aggregate amounts outstanding under transactions, arrangements and agreements entered into
+by the Bank with directors and officers were:
+
+Number of 2014 Number of 2013
+
+Persons Amount Persons Amount
+
+£'000 £'000
+
+Directors’ loans . 2 999 2 996
+
+No other loans, arrangements or agreements require disclosure under the Companies Act 2006 or
+under the requirements of Financial Reporting Standard No. 8 regarding transactions with related
+parties.
+
+As the Bank is a 100% subsidiary undertaking and consolidated financial statements for its ultimate
+parent, Société Générale SA, are publicly available, group transactions have not been disclosed
+pursuant to the exemptions permitted in the Financial Reporting Standard number 8.
+
+ULTIMATE PARENT COMPANY
+SG Hambros Limited is the direct holding company of the Bank. The ultimate parent undertaking and
+controlling party is Société Générale SA which is incorporated in France.
+
+The largest and smallest group in which the results of the Bank are consolidated is Société Générale
+SA. The consolidated financial statements of the group are available from the Company Secretary,
+Société Générale, 29 Boulevard Haussmann, 75009 Paris, France.
+
+59

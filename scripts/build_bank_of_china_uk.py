@@ -804,6 +804,136 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=46, source_height=170)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Bank's own table, headed "UK KM1 - Key Metrics",
+# reproduced exactly as printed. Four things about this bank's version:
+#
+#   1. IT IS THE BASEL/BCBS KM1 ROW SET UNDER A UK KM1 HEADING. Despite the
+#      "UK KM1" title, rows 8-11 are the BCBS buffer block ("Capital
+#      conservation buffer requirement", "Countercyclical buffer
+#      requirement", "Bank G-SIB and/or D-SIB additional requirements",
+#      "Total of bank CET1 specific buffer requirements") and rows 13-14 are
+#      captioned "Basel III leverage ratio exposure measure"/"Basel III
+#      leverage ratio". The PRA template's UK 7a-7d, UK 8a, UK 9a, UK 10a,
+#      UK 11a and UK 16a/16b rows appear in NO edition. The bank's row set is
+#      reproduced; the PRA rows are not added back as blanks, because this
+#      bank's table does not contain them.
+#
+#   2. ROW 16 IS PRINTED AS "6" IN EVERY EDITION. "6 Total net cash outflow"
+#      sits between rows 15 and 17 in the FY2022, FY2023, FY2024 and FY2025
+#      documents alike - a persistent typo in the Bank's own template, not an
+#      extraction artefact (it was checked in all four). Reproduced as
+#      printed and flagged in the citation, per the map's rule 7 (record a
+#      source defect, do not correct it).
+#
+#   3. ROW 12'S CAPTION AND BASIS CHANGED IN THE FY2025 EDITION, from "CET1
+#      available after meeting the bank's minimum Cap Req (%)" to "CET1
+#      available after meeting the total SREP own funds requirements (%)",
+#      and the FY2024 figure was restated with it: 20.3% as its own edition
+#      printed it, 19.5% as the FY2025 edition's comparative restates it.
+#      Per the map's rule 1 the cell carries each year's OWN edition, so
+#      FY2024 shows 20.3%; the restatement is recorded in the citation. This
+#      is the only row in the whole table where the editions disagree.
+#
+#   4. ROW 10 PRINTS "0%", NOT A DASH, in every year. That is a measured
+#      zero (the Bank is neither a G-SIB nor a D-SIB and the requirement is
+#      nil), so the zero is kept rather than blanked.
+#
+# FY2020 and earlier are blank: the FY2021 document and every edition before
+# it predate the KM1 template and are narrative/ratio-only. The pre-KM1
+# figures those documents do carry are on the individual metric sheets below.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available capital (£'000)", {}),
+    ("DATA", "1    Common equity tier 1 capital (CET1)",
+     {"FY2025": 274521, "FY2024": 274294, "FY2023": 275056, "FY2022": 275000, "FY2021": 275164}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 334521, "FY2024": 334294, "FY2023": 335056, "FY2022": 335000, "FY2021": 275164}),
+    ("DATA", "3    Total regulatory capital",
+     {"FY2025": 334521, "FY2024": 334294, "FY2023": 335056, "FY2022": 335000, "FY2021": 335164}),
+    ("SECTION", "Risk-weighted assets ('RWAs') (£'000)", {}),
+    ("DATA", "4    Total risk-weighted assets (RWA)",
+     {"FY2025": 1008110, "FY2024": 1106898, "FY2023": 1024452, "FY2022": 1176625, "FY2021": 1119380}),
+    ("SECTION", "Risk-based capital ratios as a percentage of RWA (%)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "27.2%", "FY2024": "24.8%", "FY2023": "26.8%", "FY2022": "23.4%", "FY2021": "24.6%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "33.2%", "FY2024": "30.2%", "FY2023": "32.7%", "FY2022": "28.5%", "FY2021": "24.6%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "33.2%", "FY2024": "30.2%", "FY2023": "32.7%", "FY2022": "28.5%", "FY2021": "29.9%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA (%)", {}),
+    ("DATA", "8    Capital conservation buffer requirement (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "9    Countercyclical buffer requirement (%)",
+     {"FY2025": "0.3%", "FY2024": "0.4%", "FY2023": "0.5%", "FY2022": "0.3%", "FY2021": "0.1%"}),
+    ("DATA", "10    Bank G-SIB and/or D-SIB additional requirements (%)",
+     {"FY2025": "0%", "FY2024": "0%", "FY2023": "0%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "11    Total of bank CET1 specific buffer requirements (%)",
+     {"FY2025": "2.8%", "FY2024": "2.9%", "FY2023": "3.0%", "FY2022": "2.8%", "FY2021": "2.6%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "21.9%", "FY2024": "20.3%", "FY2023": "22.3%", "FY2022": "18.9%", "FY2021": "20.1%"}),
+    ("SECTION", "Basel III leverage Ratio", {}),
+    ("DATA", "13    Total Basel III leverage ratio exposure measure (£'000)",
+     {"FY2025": 1373968, "FY2024": 1462346, "FY2023": 1473437, "FY2022": 1814024, "FY2021": 2431869}),
+    ("DATA", "14    Basel III leverage ratio (%)",
+     {"FY2025": "24.4%", "FY2024": "22.9%", "FY2023": "22.7%", "FY2022": "18.5%", "FY2021": "11.3%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£'000 / %)", {}),
+    ("DATA", "15    Total HQLA",
+     {"FY2025": 1007375, "FY2024": 1014087, "FY2023": 677646, "FY2022": 545654, "FY2021": 527697}),
+    ("DATA", "6    Total net cash outflow   [printed \"6\" by the Bank; this is template row 16]",
+     {"FY2025": 310866, "FY2024": 272240, "FY2023": 174967, "FY2022": 299877, "FY2021": 294774}),
+    ("DATA", "17    LCR ratio (%)",
+     {"FY2025": "324.1%", "FY2024": "372.5%", "FY2023": "387.3%", "FY2022": "182.0%", "FY2021": "179.0%"}),
+    ("SECTION", "Net Stable Funding Ratio (£'000 / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 1389486, "FY2024": 1630136, "FY2023": 1289845, "FY2022": 1463448, "FY2021": 1438026}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 714820, "FY2024": 752941, "FY2023": 959234, "FY2022": 1209361, "FY2021": 950742}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "194.4%", "FY2024": "216.5%", "FY2023": "134.5%", "FY2022": "121.0%", "FY2021": "151.3%"}),
+]
+
+KM1_SOURCES = p3_sources() + (
+    "\nKM1 presentation notes:\n"
+    "• LATEST-EDITION CHECK 2026-09-16: the Bank's own disclosure index at "
+    "https://www.bankofchina.com/uk/aboutus/ab5/ lists 'Pillar 3 Disclosure 31 December 2025' as its newest "
+    "document, which is the one cited above. Checked, none newer.\n"
+    "• A BASEL ROW SET UNDER A UK KM1 HEADING. The table is headed 'UK KM1 - Key Metrics' (FY2022's edition: "
+    "'UK KM1 - Key metrics template'), but rows 8-11 are the BCBS buffer block and rows 13-14 are captioned "
+    "'Basel III leverage ratio exposure measure' / 'Basel III leverage ratio'. The PRA template's UK 7a-7d, "
+    "UK 8a, UK 9a, UK 10a, UK 11a and UK 16a/16b rows appear in no edition. This sheet reproduces the Bank's "
+    "row set and does not add the PRA rows back as blanks, because the Bank's table does not contain them.\n"
+    "• ROW 16 IS PRINTED AS '6'. '6 Total net cash outflow' sits between rows 15 and 17 in the FY2022, "
+    "FY2023, FY2024 and FY2025 documents alike. It is a persistent typo in the Bank's own template, checked "
+    "in all four editions, and is reproduced rather than corrected.\n"
+    "• ROW 12 CHANGED BASIS AND CAPTION IN FY2025, from 'CET1 available after meeting the bank's minimum "
+    "Cap Req (%)' to 'CET1 available after meeting the total SREP own funds requirements (%)'. The FY2025 "
+    "edition restates FY2024 as 19.5% on the new basis; the FY2024 edition printed 20.3% on the old one. The "
+    "cell here carries 20.3%, that year's own edition, per this project's rule that each year comes from its "
+    "own edition rather than a later comparative. Both figures are the Bank's; they are not reconciled. Every "
+    "other row agrees exactly across overlapping editions.\n"
+    "• ROW 10 PRINTS '0%', NOT A DASH, in every year - a measured zero (the Bank is neither a G-SIB nor a "
+    "D-SIB), so the zero is kept rather than blanked.\n"
+    "• The FY2023 edition prints its own year-column header as '20232', where the trailing 2 is a footnote "
+    "marker rather than part of the year.\n"
+    "• FY2020 and earlier are blank. The FY2021 Pillar 3 document and every edition before it predate the "
+    "KM1 template and are narrative/ratio-only; FY2021 above is the comparative column of the FY2022 "
+    "edition, which is the first to print the template. Nothing has been back-filled from the pre-KM1 CRD IV "
+    "tables - those figures are on the individual metric sheets, with their basis stated there."
+)
+
+bw.add_km1_sheet(
+    title="Bank of China (UK) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published table, headed 'UK KM1 - Key Metrics', reproduced in its row order with "
+             "its own row numbers, captions and precision — including the Basel III buffer/leverage row set it "
+             "uses in place of the PRA template's, and its own mis-numbering of row 16 as '6'. Amounts in "
+             "£'000, ratios as printed. FY2020 and earlier predate the template and are intentionally blank.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    source_height=300,
+)
+
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 274521, "FY2024": 274294, "FY2023": 275056, "FY2022": 275000, "FY2021": 275164, "FY2020": 307058, "FY2019": 274958, "FY2018": 274958, "FY2017": 274958, "FY2016": 274958, "FY2015": 274958, "FY2014": 274958})],

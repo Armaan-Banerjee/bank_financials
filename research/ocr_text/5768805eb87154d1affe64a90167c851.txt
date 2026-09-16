@@ -1,0 +1,3629 @@
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK Bank Limited
+Company registration number: 315841
+
+ANNUAL REPORT AND FINANCIAL STATEMENTS
+
+For the year ended 31 December 2021
+
+i i ti} ail
+
+COMPANIES HOUSE
+. oo ae A
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 2
+For the year ended 31 December 2021
+
+Contents Page
+
+1. Strategic Report 4
+2. Directors’ Report 14
+3. Independent Auditor's Report to the Members of DB UK Bank Limited 16
+4. Statement of Profit and Loss 22
+5. Statement of Total Comprehensive Income 23
+6. Balance Sheet 24
+7. Statement of Changes in Equity 25
+8. Notes to the Financial Statements 26
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED
+
+For the year ended 31 December 2021
+
+Incorporated in England and Wales as a private limited company, limited by shares. Registered No: 315841
+
+Registered Office: 23 Great Winchester Street, London, EC2P 2AX
+DIRECTORS as at 31 December 2021
+
+JEG Arculus **
+
+JD Baines **
+
+M A Bussey *
+
+E N Gottfried
+
+M J Morley
+
+P’H Nunnerley * wi]
+B J Pallas
+
+* Non-Executive Director
+** Notified Non-Executive Director
+SECRETARY:
+
+JL Bagshaw
+AUDITOR:
+
+Ernst & Young LLP
+25 Churchill Place
+London
+
+E14 5EY
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87 “
+
+DB UK BANK LIMITED 4
+
+STRATEGIC REPORT
+For the year ended 31 December 2021
+
+These Financial Statements have been prepared in accordance with applicable United Kingdom ("UK") law and UK
+Generally Accepted Accounting Practice, including Financial Reporting Standard ("FRS") 101 ‘Reduced Disclosure
+Framework’.
+
+Objectives
+
+The Company has a banking license to operate in the UK and is, therefore, authorised by the Prudential Regulation Authority
+(‘PRA’) and regulated by the Financial Conduct Authority ("FCA”) and the PRA (Financial Services Register number:
+140848). The Company’s registered office is at 23 Great Winchester Street London EC2P 2AX.
+
+The Company is a wholly owned subsidiary undertaking of Deutsche Holdings Limited ("DHL"), itself a wholly owned
+
+* subsidiary undertaking of DB Investments (GB) Limited ("DBIGB’), whose parent is Deutsche Bank Aktiengesellschaft
+(‘Deutsche Bank A.G.”). Deutsche Bank A.G. and its other subsidiaries are collectively referred to as "DB Group" in these
+Financial Statements.
+
+The primary objective of the Company is to be the leading trusted advisor to wealthy UK families with an international
+dimension to their lives, and to wealthy international families on the UK dimension of their global financial interests.
+
+The principal operations of the Company are the provision of Wealth Management ("IPB UK’) services to High and Ultra
+High Net Worth individuals in the UK market. The regulated activities performed through the Company include Financial and
+Wealth Planning, Discretionary Investment Management, Investment Advice, Provision of Custody, Trading and Settlement,
+and Regulated Mortgage, Structured and Lombard Lending.
+
+As part of DB Group, the Company has continued to work on the implementation of further focus areas of its sustainability
+strategy. In 2021, DB Group continued to develop and implement a comprehensive Climate Risk Framework, in line with
+the recommendations of the Task Force for Climate-Related Financial Disclosures. DB Group became a founding member
+of the Net-Zero Banking Alliance, committing to align operational and attributable emissions from DB Group’s loan portfolio
+with pathways to net zero by 2050. This supplements DB Group's signing of the Collective Commitment to Climate Action
+of the German financial sector and its commitment to publish the carbon footprint of its loan portfolio by the end of 2022.
+Next to DB Group's engagement in the Net-Zero Banking Alliance, DB Group started dialogues to support clients in
+accelerating their sustainability transition and in developing credible transition plans. In line with DB Group's ambition to put
+sustainability at the centre of operations, DB Group, including the Company, remained carbon neutral for its own operations
+and business travel, as has been the case since 2012 and further implemented DB Group’s commitment to source 100%
+renewable electricity by 2025, with an interim target of 85% for 2022.
+
+Section 172 Companies Act 2006 Statement
+
+The Company has one business line, IPB UK. International Private Bank (“IPB”) is an integral part of the DB Group Private
+Bank. The Global IPB strategy is to be a leading trusted global expert advisor to wealthy clients with sophisticated
+international needs. The strategy is set at a group level and has three core objectives:
+
+* Protect: strengthen business resilience and reduce risk to clients, DB UK Bank Limited and the DB Group;
+
+* Transform: transform the IPB division's platforms, client experience and revenue model by implementing a global
+client segmentation framework and digital customer acquisition; and to rebalance the revenue model to one which
+is less capital intensive, has higher margin products and addresses the client segments to which IPB is best suited
+to serve; and
+
++ Grow: make substantial investments in people with global growth initiatives aligned to clients’ needs and regional
+opportunities.
+
+IPB UK has built its strategy on these core objectives. The Board of the Company attended an annual strategy day in
+October 2021 where presentations on its broader strategic positioning were received and discussed, as well as updates
+from business coverage and product areas. To support this, the Board requires its senior executives from each business
+area to present an update at Board meetings periodically, in order to monitor progress and developments against the plan.
+The business has made significant investment to establish its brand and to grow its client base.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 5
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+The Company does not have its own dedicated staff, with UK staff employed by the DB Group employing entity, DB Group
+Services (UK) Limited, working on behalf of the Company. The Company therefore relies on the DB Group for the provision
+of all such Human Resource (“HR”) services. For this, and for much of the strategic and policy direction, the Company is
+dependent on the DB Group both centrally and from Deutsche Bank A.G. London Branch. Within this constraint, the Board
+exercises its authority, principally in the broad overall strategy and in the control environment, all within the Matters Reserved
+for the Board.
+
+In making decisions, the Board provides leadership for the Company within a framework of prudent and effective controls
+which enables risk to be assessed and managed. The Board also sets the Company's culture, values and standards with
+respect to relationships with its suppliers, customers and others with interests in the Company, including employees and its
+sole member, DHL. The Board oversees the way culture is embedded across the Company’s executive management and
+the behaviours the Company should follow in pursuit of its business goals. ,
+
+The Directors are committed to implementing and maintaining strong discipline in their decision making, a commitment
+consistent with DB Group wide policy to maintain high standards of contro! and compliance at all levels across the DB Group.
+As amember of the DB Group, the Company is guided by the values and culture of the broader organisation, with the added
+context of the fiduciary responsibility the Company owes its clients. The Company’s values which direct that culture and
+behaviours centre on:
+
+« Integrity in all dealings whether it be with clients, partners, regulators or staff;
+
+* Sustainable performance for clients and the Company, ensuring short term decision making is not the primary
+driver;
+
+« Embracing the Company’s fiduciary responsibilities and ensuring that the Company places the interests ofits clients
+before all others;
+
++ Innovation allowing the Company to operate more efficiently, but more importantly, to identify new investment
+solutions that address the needs of the Company’s clients;
+
+* Discipline in the application of standards and processes and not accepting compromise in relation to compliance
+with policy and regulatory requirements; and
+
+* Operating in partnership with clients to maintain and build trust and with colleagues to improve the outcome for the
+Company’s clients.
+
+Insofar as the Board has made decisions during 2021, it has regard to Section 172 (‘s172”) factors where relevant,
+particularly the likely consequences of such decisions in the long term and the desirability of the Company to maintain a
+reputation for high standards of business conduct. Decision making by the Board during the year included matters relating
+to the Company's capital adequacy and liquidity, by way of approval in December 2021 of its Internal Capital Adequacy
+Assessment Process (“ICAAP”), Internal Liquidity Adequacy Assessment Process ("ILAAP”), Risk Appetite Statement
+("RAS") and Recovery and Resolution Plan (“RRP”). The RRP has been completed during 2021, to meet PRA requirements
+following Brexit, building on the Resolution pack already in place and in conjunction with DB Group. The thresholds defined
+by the RAS, alongside inter alia, the anti-corruption and anti-bribery metrics prescribed by the Anti Financial Crime ("AFC")
+RAS, form the basis of the Board Risk and Audit Committee dashboard. These are further considered at each Board Risk
+and Audit Committee (“BRAC”) meeting and subsequently reported to the Board. The Board also considered the Integrated
+Risk and Control Assessment (“iRCA’) designed to determine whether non-financial risks are being managed and controlled
+within risk appetite. The IRCA for 2021 was drafted and approved by the BRAC in Q1 2022.
+
+The Board continues to foster relationships with employees as a key driver of delivering the business strategy and
+recognises that it relies on employees to support and join with the Board in seeking to establish and maintain a reputation
+for high standards of business conduct and integrity. In relying on the DB Group for the provision of staff, the Company's
+values and the required behaviours have been, and continue to be, reinforced throughout the organisation through a variety
+of delivery mechanisms, which have been particularly relevant in the ‘Work From Home’ environment as a consequence of
+the impact of COVID-19. These mechanisms include mandatory training for all staff, transparent dialogue on the principles
+underpinning these values at town hall meetings; articles on the intranet; application of an employee ‘red flag’ system which
+has tangible actions applied for any breaches; and robust processes to investigate any potential breaches or incidents and
+follow up with appropriate and timely actions.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87 €,
+
+DB UK BANK LIMITED 6
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+The senior management function for HR has overall responsibility for the management and oversight of the HR division’s
+role and activities in respect of the DB Group staff providing services to the Company. The HR function is responsible for
+managing and overseeing the Company's framework, policies and procedures in relation to the management and
+development of its people, including amongst others, reward, recruitment, acquisition, development and mobility of talent,
+workforce planning, diversity and inclusion, reward, employee relations (including consultation through the UK Employee
+Forum), performance, engagement and culture, advisory for managers and delivery of HR information and services. The
+senior management function for HR is an attendee at quarterly Board Meetings and presents management information and
+escalates matters of broader culture and morale to the Board which may be appropriate as part of any strategic decision
+making. In considering such matters, the Board recognises that it needs to address diversity and to make improvements to
+gender disparity across the business given the benefits gained from richness of talent. To that end, the Board has requested
+that management and the senior management function for HR consider initiatives as to how the organisation could better
+embrace diversity in its broadest sense and leverage opportunities to improve the trend.
+
+In the broader management of business conduct and integrity, customer complaints handling, including the Company's
+compliance with regulatory dispute resolution requirements, is managed within the IPB UK Chief Operating Officer division,
+with reporting of material matters and management information visible to the BRAC by way of the BRAC dashboard and
+escalations to the Board as appropriate. Matters requiring a decision of the Board in respect of any issues which may run
+against the risk appetite set by the business or DB Group strategy and negatively impact the franchise in the region will also
+be escalated to the Board. In considering the obligations owed by the Company to its sole shareholder, clients, employees,
+the regulator and other key stakeholders and in respect of any decisions required of the Board, it considers and challenges
+the regulatory, compliance and reputational risks that the business is facing and the procedures established to minimise or
+mitigate those risks through review and consideration of regular status reports from the dedicated Compliance
+representative. The Board also receives material updates from the Risk and Compliance teams on regulatory
+correspondence of which they have been made aware and developments which may impact the business related to the
+entity.
+
+The Company relies on other DB Group entities not only for staff, but for services and infrastructure to support all its activities,
+as well as the services of external providers. The Company migrated its booking processes to an externally outsourced IT
+banking platform, Avaloq, (“ASSL”) in 2015 with ASSL personnel supporting certain back-office functions. ASSL’s activities
+are central to the Company's business model. In 2020 the Board also approved the migration of UK middle office activities
+from DB Suisse S.A. to Deutsche CIB Centre Private Limited, based in India, and the migration was completed in Q1 2021.
+The Board recognises that it cannot outsource its responsibilities and that it remains accountable to the regulator for the
+actions of its vendors and for the appropriate oversight of the services provided to it. As such, outsourcing arrangements
+are reviewed and assessed on an ongoing basis through the DB Group Vendor Control Requirements Framework (“VCRF”)
+with reporting to the BRAC and escalation to the Board where appropriate. As part of the VCRF process, ASSL is required
+to comply with the DB Group code of conduct as well as the DB Group’s 2020 Slavery and Human Trafficking Statement
+concerning its approach to respecting human rights. In order to ensure best practice, such an approach is likewise applied
+to the supply chain. Control processes are in place at ASSL with respect to any chain sourcing to ensure that such vendors
+comply with both ASSL and DB Group policies, including their management of human rights due diligence for their vendors
+or subcontractors. Senior management from ASSL presented to the Board during the year on the service delivery model.
+
+Risks and Uncertainties
+
+Risks, including risks covering financial instruments, are monitored at the Company’s Operating Council, BRAC and the
+Board. This section covers the material risks applying to the Company and the relevant policies and procedures.
+
+Climate Risk
+
+Climate risks are distinct from the majority of risks DB Group and the Company face in the sense that (i) certain risks may
+only materialise over the long-term, (ii) there is limited historical data — particularly in relation to transition risk — to base a
+forward-looking risk appetite upon and (iii) traditional/existing metrics will not be appropriate/sufficient to manage climate
+risk. DB Group is building a set of tools and processes to identify, measure, monitor and control these risks in alignment
+with the Task Force on Climate-related Financial Disclosures (“TCFD”) recommendations, peer best practice and relevant
+regulatory guidance.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 7
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+DB Group is working, both in-house and through participation in industry initiatives, to develop and implement a
+comprehensive Climate Risk Framework, in line with the TCFD recommendations; of which the Company as a subsidiary of
+DB Group is a beneficiary.
+
+The Company's Chief Risk Officer ("CRO") has been appointed by the Board as responsible for managing macro financial
+risk arising from climate and environment-related factors and for updating the Board on climate matters. Currently the
+Company’s client portfolio is relatively small and focused on mortgages, primarily prime central London with short term
+maturities. Therefore, any immediate financial impact of climate change is considered limited. However, as the portfolio
+develops in size and becomes more diverse, the Company would look to tailor a bespoke risk appetite and control framework
+with a focus on Real Estate as the primary exposure, leveraging the risk appetite processes implemented at a DB Group
+level and incorporated into existing RAS and BRAC metrics. The metrics would serve to monitor both potential reputational
+tisk from transactions as well as physical climate related risks to infrastructure, staff and key processes.
+
+Governance
+
+At the DB Group level, governance responsibilities have been apportioned across the first and second lines of defence. The
+DB Group Sustainability Group has developed the Environmental, Social and Governance Strategy ("ESG") which is codified
+in policies and procedures. The implementation of the sustainability strategy is one of the DB Group's "Key Deliverable”
+programmes.
+
+For the Company, the governance responsibilities for Climate Change sit with the CRO (Senior Manager Function 4) who
+also sits on the Private Bank Working Group on climate risk appetite and strategy. The Company has considered climate
+change scenarios in its ICAAP. Whilst these scenarios assess the capital required for these eventualities, they do not provide
+for any modification to the amounts recorded in the Financial Statements. The Company continues to assess the impact of
+climate change on the balance sheet and whether future modifications may be required.
+
+Strategy
+
+As a global bank DB Group acknowledge the role they play in facilitating the transition toward sustainable growth and a low-
+carbon economy. As a financial intermediary, DB Group supports clients with financial expertise and product offering on
+their path to a more sustainable and climate-neutral way of doing business. Thus, DB Group supports the European
+Commission’s Action Plan on Sustainable Finance as a crucial contribution toward the EU’s achievement of its Paris
+Agreement climate targets and its wider sustainability agenda. This is in line with Deutsche Bank signing the Paris Pledge
+for Action in 2015.
+
+To contribute to these climate and sustainability targets, DB Group published quantitative targets for sustainable finance
+business activities in May 2020. DB Group aimed to generate a total of more than EUR200 billion in sustainable financing
+and ESG investments under management by the end of 2025. This target included loans granted and bonds placed by DB
+Group and ESG assets managed by the Private Bank (“PB”) by 2025 including assets managed within the Company.
+
+This DB Group target of EUR200 billion in sustainable financing and ESG investments under management was also brought
+forward to 2023 during the Bank Sustainability Deep Dive of 20 May 2021 (during which it was also disclosed that by Q1
+2021 EUR71 billion of financing and investment were already achieved). 20 May 2021 featured DB's first ‘Sustainability
+Deep Dive’ — a three-hour virtual event that reported on progress made across the four pillars of the sustainability strategy
+(Sustainable Finance; Policies and Commitments; Own Operations and People; and Thought Leadership and Stakeholder
+Engagement). This accompanied a media statement, announcing that OB Group aims to facilitate over EUR200 billion euros
+in sustainable finance and investments by the end of 2023, two years earlier than originally planned ~ each business division
+has been set a target to achieve this. For PB, including the Company, a target of EUR86 billion has been set and ESG will
+become the default standard in IPB’s portfolio management from 2022.
+
+In addition to the work being done to respond to climate risk at the DB Group level, the Company will assess the potential
+for climate risk to its portfolio. To do this, the Company will assess climate risk by product type. The Company aims to
+classify product portfolios in relation to their contribution to climate change (Green / Brown / Neutral) during 2022.
+
+Climate risk should not be considered a stand-alone risk type, but rather a driver of existing risk types, therefore it should
+be analysed jointly with other risk types.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87 we
+
+DB UK BANK LIMITED 8
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+Risk Management
+
+The Company's portfolio is predominantly UK residential and commercial high street property mortgages. The key climate
+risks to the Company are:
+
+e Transition risk: Transition risks are defined as risks which could result from the process of adjustment towards a
+lower-carbon economy (policy, technology and behavioural changes). The cost of increasing or changing regulatory
+and compliance costs (e.g. efficiency standards) leading to (i) more costs for the borrower (negative for credit); and
+(ii) greater difficulty in selling the collateral (buyer may account for compliance costs upon purchase);
+
+e Physical risk: Physical risks are defined as the financial and non-financial risks which could result from the negative
+impacts of rising global temperatures. Physical risk is categorised as “acute” when it arises from extreme events,
+such as droughts, floods and storms, and “chronic” when it arises from progressive shifts, such as increasing
+temperatures; and
+
+e §=© Credit risks from defaults of clients who are directly / indirectly impacted by these events and/or depreciation of
+collateral values.
+
+In the UK, energy use in residential real estate accounts for 20% of total carbon emissions. This inefficiency will likely impact
+the payment capacity of homeowners. For example, lower energy efficient buildings may have high fuel bills or higher taxes
+(transition risks), and home insurance in regions with increased risk of flooding could be raised (physical risks). The value
+of the properties may be further impacted by changes in regulations and other sustainability requirements such as a
+tightening in the required level of energy performance requirements for properties.
+
+The Company has taken a proportional approach to climate risk based on the risk profile of its portfolio. Climate risk variables
+are included in stress testing and the Company’s RAS includes mitigations to control against climate risk. For loans secured
+on property, which make up the majority of the Company’s loan portfolio, the valuation and underwriting processes take into
+account the climate risk of the underlying loan and are embedded in the credit risk valuation process. Underwriting processes
+and annual reviews include assessment of the sustainability of both the collateral and the client's ability to service the loan
+based on the sustainability of the assets/income the client holds. In the case where (for example) the client’s wealth is
+dominated by “brown” industries or those likely to be impacted by climate or any other volatility factor, these factors are used
+to assess and rate the counterparty. In fact, this “risks to wealth” consideration is a general factor in the Company’s
+assessment of the counterparty risk factor. The Company's assessment of collateral follows the same approach with real
+estate collateral appraised for all potential risks at the valuation/validation stage. This includes review of the EPC rating of
+the property and valuers feedback on any notable flood risks (or other equivalent).
+
+Lombard loans are the predominant non-real estate loans booked by the Company. As the collateral provided in Lombard
+loans are highly liquid and can be easily exchanged for other collateral as needed, the Company has excluded Lombard
+loans from its Climate Risk Framework.
+
+Metrics and Targets
+
+In addition to developing climate risk quantitative thresholds at this time, the Company is focused on positive mitigations to
+climate risk for its portfolio. The following mitigations are in place:
+
+e The Divisional Reputational Risk Committee has the mandate to address reputational issues that arise from climate
+risk;
+
+e The Company's risk appetite limits mortgage tenor to less than 5 years which allows for frequent reassessments
+as regulations/climate change;
+
+« The Company's appraisal policy has been updated to require an assessment of how environmental related risk
+types could materially impact the saleability or market value of the property;
+
+*« The Companies’ Lending and Risk teams perform annual valuations on each of the properties. in these valuations,
+physical, valuation and transition risks are taken into account including deterioration of values as a result of climate
+change; and
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 9
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+e Mortgage facility letters contain an insurance clause stating that the insurance policy is for the full reinstatement
+value against fire, theft, explosion, terrorism, floods, storm and other risks specified by the Lender. The insurance
+policy is a condition to draw down the loan. ;
+
+Other mitigations are also being developed including enhancing underwriting standards. As the OB Group and Private Bank
+ESG risk appetite matures and develops quantitative metrics, the Company will align as appropriate.
+
+Credit and Market Risk
+
+The Company manages Credit Risk according to policies and guidelines set by the DB Group's Credit Risk Management
+function ("CRM"). CRM is responsible for setting DB Group's Credit Risk appetite globally and ensuring that DB Group's
+Credit Risk exposure is in line with this appetite and suitable for the businesses of the DB Group.
+
+The Company has credit exposure in the form of collateralised loans to IPB UK clients, a small amount of uncollateralised
+loans to IPB UK clients and collateralised and uncollateralised loans to the DB Group. Loans to IPB UK clients (measured
+on a connected group risk basis) remained below PRA large exposure limits and Board risk appetite throughout 2021.
+Exposures to the DB Group are within the limits allowed under the Core UK Group and Non-Core Large Exposures Group
+permissions granted by the PRA and renewed on 21 December 2021.
+
+There is minimal Market Risk in the Company as external assets are mainly funded on a term matched basis and there is
+minimal foreign exchange exposure.
+
+Non-Financial Risk
+
+Non-Financial Risk is the risk of loss resulting from inadequate or failed internal processes, people behaviour, systems or
+external events. Non-Financial Risk includes the risk of reputational damage but excludes business and strategy risk. Non-
+Financial Risk is managed by DB Group's Non-Financial Risk Management function ("NFRM”).
+
+The Company manages and tracks non-financial risks including operational risks using a central Risk Profile. The Profile is
+monitored on a monthly basis and updated with information provided in the Company's Operating Council and other
+business fora.
+
+Liquidily Risk
+
+The Company manages its liquidity risk through a comprehensive and proportionate liquidity risk framework across short,
+medium and long-term periods through the Liquidity Coverage Ratio, Net Stable Funding Ratio, daily internal stress testing
+and the Funding matrix.
+
+The Company sources financing from DB Group entities. Deposits from IPB UK clients and all surplus cash is placed with
+DB Group. Liquidity is managed by the DB Group's Treasury function and a liquid asset buffer, to cover liquidity risk, is
+maintained in the form of reverse repurchase agreements with DB Group.
+
+Compliance and Conduct Risks
+
+Robust controls are in place to ensure compliance with PRA and FCA regulatory requirements.
+
+The Head of IPB UK Compliance is a permanent attendee at the Board and BRAC and provides briefings to both forums,
+and to the Company’s Operating Council, on regulatory developments and issues.
+
+Financial Regulatory Reporting is the responsibility of the Director holding the Senior Manager Function (“SMF”) 2 who
+manages a dedicated team responsible for reporting and who reports to the Board and BRAC on developments and issues.
+A project has recently been initiated to implement a new third party vendor system to cover financial regulatory reporting
+with implementation on a phased approach to complete in 2023.
+DocuSign Envelope ID: EDCOF372-C 141-48D7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 10
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+Client Money and Assets
+
+The IPB UK business must comply with the FCA’s Client Money and Assets (“CASS”) rules. The Company has allocated
+overall responsibility for compliance with the CASS rules to the Chief Operating Officer ("“COO”")/Senior Manager Function
+(“SMF”) 24 who is responsible for the operational effectiveness of the Company’s CASS Systems and Controls that are
+designed to achieve compliance with CASS. Day to day responsibility is delegated to the Client Assets Oversight Officer
+("CAOO"), who is subject to the certification regime and performs the Significant Harm Function (“SHF”) 1. The CAOO is
+supervised by the COO/SMF 24. The Company's Client Assets Oversight Council (‘CASSOC’) meets on a monthly basis
+and is the primary forum that supports the COO/SMF 24 in the discharge of his/her responsibility by providing advice and
+challenge on compliance with the CASS rules. CASSOC responsibilities include: review and challenge of CASS
+management information submitted by businesses holding client money and/or custody assets; briefings on regulatory
+change and the assessed impact on the Company; updates on the Companies CASS training plan; review and challenge
+of CASS continuous monitoring; review and challenge of reported CASS breaches and operational incidents including
+remediation and corrective actions; review of Compliance, Internal Audit and CASS External Audit Findings and challenge
+of corrective action/mediation. The monthly Client Money and Assets Reporting ("CMAR”) submission is discussed if
+required. The CAOO reports annually to the Company’s BRAC on the maintenance of the CASS Resolution Pack for the
+previous year as well as providing ad hoc (as required) updates on the external CASS Audit.
+
+Cyber Risk
+
+The Board considers cyber security risk as a key risk for the Company and the BRAC and the Operating Council receive
+cyber security risk updates at each meeting. As the majority of infrastructure applications used by the Company are
+leveraged from DB Group the Company relies on DB Group initiatives to monitor and remediate cyber security risk.
+
+dbMortgages Redress programme
+
+The Company historically operated a business branded as dbMortgages which ceased new lending in January 2008 and’
+exited the market in 2017. In December 2010, a redress programme was launched by the Company, inviting customers to
+claim redress where lending decisions had been approved without adequate evidence of affordability. In December 2014,
+eligibility to claim such redress under the programme expired and the Company does not expect to recognise any additional
+claims in future. The Company has reviewed its provisions for existing claims at 31 December 2021 and has provided
+£0.5m against its obligation (2020: £0.5m).
+
+Key Performance and Risk Indicators (“KPls” and “KRIs”)
+
+The Company’s KPIs and KRis enable oversight of the material risks of the Company while supporting and enabling the
+overall business strategy as approved by the Board. The Board sets KPI and KRI limits reflecting the Board’s risk appetite
+to deliver its business objectives. A key objective of KPI and KRI selection is to ensure that the Company has sufficient
+financial resources to support the business at any given point in time, absorb market events and to meet regulatory
+requirements.
+
+KPIs and KRis are monitored regularly and at the Company’s BRAC and in Board meetings and any breaches escalated.
+The key regulatory indicators are presented in the table below:
+
+Board Risk
+KPI/KRI Measure Limit methodology Appetite 31/12/2021 | 31/12/2020
+Regulatory Capital Ratio | In line with Board risk appetite and
+PRA prescribed requirement and >120% 473% 565%
+guidance
+Leverage Ratio In line with Board risk appetite >6% 37% 45%
+iquidity Coverage Ratio | In line with Board risk appetite and PRA 7165 Yo 459% 499%
+requirements (warning)
+
+Regulatory Capital Ratio is a measure of total Regulatory Capital Resources relative to total PRA Capital Resources
+Requirement plus PRA buffers.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED . 11
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+Leverage Ratio is a measure of Tier 1 Capital relative to on balance sheet assets and certain off balance sheet exposures.
+
+Liquidity Coverage Ratio is a short-term liquidity measure designed to ensure the Company has sufficient liquid assets to
+cover net stressed outflows in the next 30 days.
+
+Current Period Performance
+
+Year ended Year ended Year on Year
+
+31 December 2021 31 December 2020 Change
+
+£000/% £000/% £000/%
+
+Loss before tax (10,435) (13,627) 3,192
+Loss after tax (7,448) (10,978) 3,530
+Total Assets 1,678,171 1,445,233 232,938
+Return on Assets (0.62%) (0.94%) 0.32%
+
+Return on Assets is a measure of Profit and Loss before tax compared to Total Assets.
+
+The Company reports a pre-tax loss of £10.4m for the year-ended 31 December 2021, an improvement of £3.2m compared
+to 2020. Losses for both 2021 and 2020 reflect the costs incurred in growing the IPB UK business from investment in
+systems and people with a time lag before this investment results in revenue growth. Costs remain higher than revenue in
+2021 but have decreased by £2.0m compared to 2020 mainly as a result of lower amortisation of intangible software assets
+as some amounts capitalised in previous years were fully amortised by end 2020. Revenue remains flat overall with
+increased revenue from the IPB UK business, mainly from fees receivable and from interest on new lending, offsetting the
+impact of lower interest rates on income from capital.
+
+Balance Sheet Assets have increased by £233m year on year, mainly from the growth of IPB UK regulated mortgage lending
+and increased IPB UK client deposits placed with DB Group.
+
+No interim dividend was declared or paid during the year (2020: £nil). The Directors do not recommend the payment of a
+final dividend for the year (2020: £nil).
+
+Future Outlook
+
+The Company's business activities along with the key risks are set out in this Strategic Report and in the Risk Report (Note
+30). The Company is expected to generate profit on its own account from 2024 in line with the new business model of the
+Company that has been implemented since 2017.
+
+As part of its transformation and growth strategy, in 2017, the IPB UK business completed work to consolidate its UK
+activities into the Company from other DB Group undertakings and, in addition, increase the scope of the UK product
+offering. IPB UK has continued to grow the business based on a dedicated product strategy for key client segments and
+deliver a competitive product and services offering that responds to specific client needs.
+
+The Company is reliant on the DB Group for the provision of all infrastructure services. The Company is also reliant on the
+DB Group for the provision of funding. To minimise refinancing risks, external assets are funded on a matched term basis.
+All surplus funds of the Company are placed with the DB Group on either a secured or unsecured basis. If interest rates
+increase, there would be a positive impact on the Company’s ability to generate interest income from placement of deposits
+with the DB Group.
+
+The Company’s indirect parent DBIGB is the recipient of a declaration of backing from Deutsche Bank A.G. and DBIGB in
+turn provides comfort letters to subsidiaries including the Company. This enables the Company to maintain its good standing
+and remain in a position to meet its obligations as they fall due.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 12
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+Developments in Ukraine
+
+The situation in Ukraine brings a number of economic uncertainties, including the direct obligation on the Company to
+enforce sanctions on individuals and organisations as applied by law and regulation. The Company remains vigilant of its
+obligations under the sanction regimes and the application of those sanctions have not and are not expected to have a
+material financial impact on the Company.
+
+The Company has a small number of clients that are subject to the EU and UK general sanctions on Russian nationals and
+has taken appropriate steps to comply with the sanctions. Current business includes a small number of loans to Russian
+nationals, in GBP and secured on UK residential properties. The Company does not have any clients who are subject to
+any current named sanction either in the UK, the USA or the EU. The Company has not identified any credit events in
+relation to any of its Russian clients, either resulting from the conflict or from other unrelated events.
+
+The Company's financial plan, as set out in the ICAAP approved by the Board in Q4 2021, included growth of the IPB UK
+business transacted with Russian clients. The Company expects that this business is likely to be replaced by business with
+clients from other locations, however, in the event that replacement is not possible, the Company has calculated that its total
+forecast revenue will reduce by approximately 5% by end 2025.
+
+Brexit
+
+Following the end of the Brexit transitional period the Company is no longer able to benefit from the right of establishment
+and freedom to provide financial services in the EU and is not able to provide regulated services to clients domiciled in the
+EU, The number of clients impacted by this was small as the firm's target market is UK domiciled or international clients with
+a UK nexus domiciled outside the EU. The Company did not market its services actively to EU domiciled individuals or
+companies. As a result, the potential financial impact has not been material.
+
+The Board expects the UK market to continue to be attractive for High and Ultra High Net Worth clients.
+
+The Company is reliant for funding on the DB Group, which has a wide range of funding sources, including debt issued in
+the EU. Client loans offered are mainly funded on a matched basis to reduce refinancing risk and client deposits are placed
+with DB Group on a matched basis. The vast majority of the Company's balance sheet is in UK sterling. There has been no
+impact on funding requirements post Brexit or any direct impact on business levels. .
+
+Management has confirmed that they have no concern over the impact of Brexit, on existing staff or in terms of future
+recruitment.
+
+COVID-19
+
+COVID-19 had a material impact on business around the globe during 2020 and 2021. The impact on the Company has
+been to slow the growth of the PB UK business although it is not expected to have a long-term effect.
+
+The Company exercised forbearance to a small number of clients during 2020, with respect to interest payment holidays,
+however by the end of 2020, with the exception of one loan already defaulted, all forbearance cases had returned to full
+performance. The majority of the Company's external loan portfolio is fully collateralised with low loan to value ratios and
+personal guarantees and due to the nature of the portfolio expected credit losses and provisions have remained low as a
+percentage of the book. This is not expected to change during 2022.
+
+The Company completed analysis on the possible impacts of a severe stress scenario on its financial position (see Going
+Concern section below) and based on the results does not believe that the on-going pandemic will have a material impact
+on its ability to comply with PRA capital requirements or on its ability to continue as a going concern.
+
+DB Group and the Company implemented business continuity measures in respect of COVID-19. The majority of staff
+Worked from Home during the pandemic in line with UK Government advice with most staff returning to the Office as
+lockdowns and work from home advice was lifted. Staff have been able to operate effectively remotely throughout 2020 and
+2021 with no interruption to business.
+DocuSign Envelope ID: EDC0F372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 13
+
+STRATEGIC REPORT (continued)
+For the year ended 31 December 2021
+
+Going Concern
+
+The Financial Statements have been prepared on a going concern basis. The Directors consider that the Company has
+adequate resources to continue in operational existence for the foreseeable future, and for a minimum of 12 months from
+the date of the signing of these Financial Statements in April 2022. The use of going concern is based on the strength of
+the Company's existing capital and liquidity reserves compared to requirements and the continued growth of the IPB UK
+business which is expected to generate profits for the Company by 2024. That judgement is also based on an evaluation of
+the inherent risks to the Company's business model and how those risks might affect the Company’s financial resources or
+ability to continue operations.
+
+The Company's regulatory capital ratio of 473% at 31 December 2021 is well above the regulatory minimum of 100% and
+is forecast to continue to exceed the regulatory minimum throughout the Company’s plan period of four years. The Company
+also has a liquid asset buffer of highly liquid securities of £253m, and a Liquidity Coverage Ratio of 459% well above the
+regulatory minimum of 100%.
+
+As part of its ICAAP process, in 2021 the Company completed analysis of the impact on the Company’s capital position of
+a severe stress scenario. The stress scenario used was based on the PRA stress scenario published in March 2021.
+Scenarios included a fall in UK real GDP to a low point of -9%, used to measure the impact on potential counterparty
+defaults, a fallin UK interest rates to negative 0.1% and a decrease in house prices and prime commercial property prices
+of 33%. Additional haircuts on property prices were also used to capture the risk of concentration of Prime Central London
+property collateral and for ‘trophy’ properties with values over £7m. The impact of climate change on property values was
+considered by factoring in additional costs related to surface water flooding and from expected stricter future energy
+performance certificate requirements. Under these scenarios, although the Company incurred some losses, its capital
+position was not materially impacted.
+
+The Company has also completed reverse stress testing, to identify the key factors that could cause the Company's business
+model to fail. This analysis identified that the only scenario which could cause the failure of the Company is the failure of
+Deutsche Bank A.G.. In this event, although reliant on the continued supply of infrastructure services by DB Group, the
+Company would have sufficient capital to ensure an orderly wind down until the business could be sold or clients transferred.
+
+The risks most likely to adversely affect the Company's ability to continue as a going concern include a change of intention
+or ability of Deutsche Bank A.G., the Company’s ultimate parent, to continue to support its operations. A declaration of
+backing has been given to DBIGB, the Company’s ultimate UK holding company, by Deutsche Bank A.G. and DBIGB in
+turn issues a letter of comfort to the Company.
+
+The Directors have assessed the Company’s ability to continue as a going concern and have concluded that there is no
+reason to believe that a material uncertainty exists that may cast significant doubt over the ability of the Company to continue
+as a going concern.
+
+By order of the Board of Directors this 27th day of April 2022.
+
+DocuSigned by:
+E Jamirapralbas 2022 | 2:58:38 BST
+
+Benjamin Palas”
+
+Director
+
+Registered office: 23 Great Winchester Street London, EC2P 2AX
+Company number: 315841
+DocuSign Envelope 1D: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 14
+
+DIRECTORS’ REPORT
+For the year ended 31 December 2021
+
+Directors
+
+The Directors of the Company who held office, during the year, were as follows:
+
+JEG Arculus ** (appointed 27 January 2021)
+JD Baines ** (appointed 1 June 2021)
+
+M A Bussey *
+
+E N Gottfried
+
+M J Morley
+
+P H Nunnerley *
+
+B J Pallas
+
+*Non-Executive Director
+**Notified Non-Executive Director
+
+Company Secretary
+
+J. Bagshaw
+
+Political contributions
+
+The Company made no political donations and did not incur any political expenditure during the year.
+Qualifying third party indemnity provisions
+
+Directors benefited from qualifying third party indemnity provisions in place during the financial year and at the date of this
+report.
+
+Foreign branches
+The Company has no foreign branches.
+Disclosure of information to Auditor
+
+The Directors who held office at the date of approval of this Directors’ Report confirm that, so far as they are each aware,
+there is no relevant audit information of which the Company's Auditor is unaware, and each Director has taken all steps that
+they ought to have taken as a director to make themselves aware of any relevant audit information and to establish that the
+Company's Auditor is aware of that information.
+
+Auditor
+
+During the year 2020 KPMG LLP retired as Auditor of the Company in accordance with the European and national regulation
+requiring the auditors’ rotation. Ernst & Young LLP were appointed as external Auditors for the financial years 2020 and
+2021 and to continue in office for future periods until further notice.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 15
+
+DIRECTORS’ REPORT (continued)
+For the year ended 31 December 2021
+
+Statement of Directors' Responsibilities in respect of the Strategic Report, the Directors' Report and the Financial
+Statements
+
+The Directors are responsible for preparing the Strategic Report, the Directors’ Report and the Financial Statements in
+accordance with applicable laws and regulations.
+
+Company law requires the Directors to prepare Financial Statements for each financial year. Under that law, they have
+elected to prepare the Financial Statements in accordance with applicable UK law and UK Generally Accepted Accounting
+Practice, including Financial Reporting Standard ("FRS’) 101 ‘Reduced Disclosure Framework’.
+
+Under company.law, the Directors must not approve the Financial Statements unless they are satisfied that they give a true
+and fair view of the state of affairs of the Company and of the Profit or Loss for that period. In preparing these Financial
+Statements, the Directors are required to:
+
+* select suitable accounting policies in accordance with International Accounting Standard (“IAS”) 8 ‘Accounting .
+Policies, Changes in Accounting Estimates and Errors’ and then apply them consistently;
+
+* make judgements and accounting estimates that are reasonable and prudent:
+
+* present information, including accounting policies, in a manner that provides relevant, reliable, comparable and
+understandable information;
+
+* provide additional disclosures when compliance with the specific requirements in UK Generally Accepted
+Accounting Practice, including FRS 101 is insufficient to enable users to understand the impact of particular
+transactions, other events and conditions on the group and company financial position and financial performance;
+
+¢ in respect of the Company’s Financial Statements, state whether UK Generally Accepted Accounting Practice,
+including FRS 101, have been followed, subject to any material departures disclosed and explained in the Financial
+Statements; and
+
+¢ prepare the Financial Statements on the going concern basis unless it is inappropriate to presume that the company
+will continue in business.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+Company's transactions and disclose with reasonable accuracy at any time the financial position of the Company and enable
+them to ensure that the Financial Statements comply with the Companies Act 2006.
+
+They are responsible for such internal control as they determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error, and have general responsibility for taking
+such steps as are reasonably open to them to safeguard the assets of the Company and to prevent and detect fraud and
+other irregularities.
+
+The Directors have chosen, in accordance with section 414C(11) of the Companies Act 2006, to set out in its Strategic
+Report information that is otherwise required to be contained in the Directors’ Report:
+
+* post balance sheet events;
+
+* — going concern;
+
+* an indication of exposure to Risk including financial instruments risk management, policies and procedures;
+* — an indication of likely future developments in the business of the Company; and
+
+* engagement with employees, suppliers, customers, and others.
+
+By order of the Board of Directors this 27th day of April 2022.
+DocuSigned by:
+Joovure Bragileausors | 3:00:20 BST
+Bagshaw n~
+
+Secretary
+
+Registered office: 23 Great Winchester Street, London, EC2P 2AX
+Company number: 315841
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A1 9E-A890646DBF 87 , my
+
+16
+
+INDEPENDENT AUDITORS’ REPORT to the members of DB UK Bank Limited
+For the year ended 31 December 2021
+
+Opinion
+
+We have audited the financial statements of DB UK Bank Limited ("the Bank”) for the year ended 31 December 2021 which
+comprise such as the Statement of Profit and Loss, the Balance Sheet, the Statement of Total Comprehensive Income, the
+Statement of Changes in Equity and the related notes 1 to 31 including a summary of significant accounting policies. The
+financial reporting framework that has been applied in their preparation is applicable law and United Kingdom Accounting
+Standards including FRS 101 “Reduced Disclosure Framework’ (United Kingdom Generally Accepted Accounting
+Practice).
+
+In our opinion, the financial statements:
+* give a true and fair view of the Bank’s affairs as at 31 December 2021 and of its loss for the year then ended;
+* have been properly prepared in accordance with United Kingdom Generally Accepted Accounting Practice; and
+¢ have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable law. Our
+responsibilities under those standards are further described in the Auditor's responsibilities for the audit of the financial
+statements section of our report. We are independent of the Bank in accordance with the ethical requirements that are
+relevant to our audit of the financial statements in the UK, including the Financial Reporting Council's Ethical Standard as
+applied to public interest entities, and we have fulfilled our other ethical responsibilities in accordance with these
+requirements.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our opinion.
+
+Conclusions relating to going concern
+
+In auditing the financial statements, we have concluded that the directors’ use of the going concern basis of accounting in
+the preparation of the financial statements is appropriate. Our evaluation of the directors’ assessment of the Bank’s ability
+to continue to adopt the going concern basis of accounting included the following procedures:
+
+e Weconfirmed our understanding of the Bank's going concern assessment process and also engaged with
+management early to ensure all key factors were considered in their assessment;
+
+e We obtained the Directors’ going concern assessment, which covered a period of at least 12 months from when the
+financial statements are authorised for issue. Our challenge of this assessment considered the evaluation of long-
+term business plans, capital adequacy, liquidity, funding positions and-other entity related factors. In addition, we
+evaluate the Director's assessment, considering stress testing performed by the Bank (including reverse stress
+testing). We also evaluated the mathernatical accuracy of the Bank's calculated forecasts and assessed the
+reasonableness of the Bank’s forecasts;
+
+« We evaluated the Directors’ assessment by considering the going concern basis for accounting in different scenarios
+considering the economic impact of COVID-19 and the geopolitical risks. We used external data to independently
+check reasonableness of the scenarios and assumptions used;
+
+« We also considered the Bank's operational resilience and its response to the impact that COVID-19 had on its
+business operations, including the operations of its third-party providers and the dependence of the Bank on
+Deutsche Bank A.G. Group; and
+
+¢ We reviewed the Bank's going concern disclosures included in the annual report in order to assess that the
+disclosures were appropriate and in conformity with the reporting standards.
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or conditions
+that, individually or collectively, may cast significant doubt on the Bank’s ability to continue as a going concern for a period
+of 12 months from when the financial statements are authorised for issue.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described in the relevant
+sections of this report. However, because not all future events or conditions can be predicted, this statement is not a
+guarantee as to the Bank’s ability to continue as a going concern.
+DocuSign Envelope !D: EDCOF372-C141-4BD7-A19E-A8906460BF 87
+
+17
+
+INDEPENDENT AUDITORS’ REPORT to the members of DB UK Bank Limited (continued)
+For the year ended 31 December 2021
+
+Overview of our audit approach
+
+Key audit Adequacy of the allowance for expected credit losses ("ECL") on loans and advances to
+matters customers
+Materiality Overall materiality of £3.0m which represents 0.5% of equity.
+
+An overview of the scope of our audit
+
+Tailoring the scope
+
+Our assessment of audit risk, our evaluation of materiality and our allocation of performance materiality determine our audit
+scope for the Bank. This enables us to form an opinion on the financial statements. We take into account size, risk profile,
+the organisation of the Bank and effectiveness of controls, including controls and changes in the business environment when
+assessing the level of work to be performed.
+
+Climate change
+
+There has been increasing interest from stakeholders as to how climate change will impact DB UK Bank Limited. The Bank
+has determined that the most significant future impacts from climate change on its operations will be from its’ loan portfolio
+which is predominantly focused on UK residential and commercial high street property mortgages. These are explained on
+pages 6 to 9 in the principal risks and uncertainties, which form part of the “Other information" rather than the audited
+financial statements. Our procedures on these disclosures therefore consisted solely of considering whether they are
+materially inconsistent with the financial statements or our knowledge obtained in the course of the audit or otherwise
+appear to be materially misstated.
+
+As explained in the Accounting policy note with regards to accounting judgements and estimates (Note 1), the Bank has
+concluded that the impacts arising from climate change will be longer term in nature, with inherent level of uncertainty, and
+have limited effect on accounting judgements and estimates for the current period.
+
+We also challenged the Directors’ considerations of climate change in their assessment of going concern and associated
+disclosures.
+
+Whilst the Bank has stated its commitment to the aspirations of the Paris Agreement to achieve net zero emissions by
+2050, the Bank is currently unable to determine the full future economic impact on its business model, operational plans
+and customers to achieve this and therefore as set out above the potential impacts are not fully incorporated in these
+financial statements.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgment, were of most significance in our audit of the
+financial statements of the current period and include the most significant assessed risks of material misstatement (whether
+or not due to fraud) that we identified. These matters included those which had the greatest effect on, the overall audit
+strategy, the allocation of resources in the audit; and directing the efforts of the engagement team. These matters were
+addressed in the context of our audit of the financial statements as a whole, and in our opinion thereon, and we do not
+provide a separate opinion on these matters.
+
+Risk Our response to the risk
+Adequacy of the allowance for We obtained an understanding of the process and controls relevant to
+expected credit losses (“ECL”) on the ECL process.
+
+loans and advances to customers
+
+Appropriateness of models and assumptions used for determining
+
+Refer to the Audit Committee Report; ECL:
+
+Accounting policies (pages 33-38); and
+
+Notes 15 and 30 of the Financial We assessed and challenged the appropriateness of the models
+
+Statements (page 48-50, 57-58) - selected by management and evaluated the justification for their use.
+This included assessing the reasonableness of selected assumptions
+
+The adequacy of the allowance for used in the related models (including macroeconomic inputs used) given
+
+expected credit losses is highly the characteristics of the Bank's portfolio considering COVID-19 and
+
+subjective and judgmental. Given the climate change with the input of our economic and modelling specialists.
+
+subjective nature of the determination of
+ECL there is a heightened risk that the
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+INDEPENDENT AUDITORS’ REPORT to the members of DB UK Bank Limited (continued)
+For the year ended 31 December 2021
+
+Risk
+
+Our response to the risk
+
+timing and extent of allowances
+could be misstated.
+
+Management's judgements and
+estimates which are particularly
+subjective due to the uncertainty
+associated with the assumptions
+used in the estimation in respect of
+the timing and measurement of
+ECL include:
+
+1) appropriateness of the use of
+Deutsche Bank A.G. Group
+ECL models and assumptions
+used for determining ECL for
+the Bank’s portfolio;
+
+allocation of assets to stage
+1,2 or 3 using criteria in
+accordance with the
+accounting standards; and
+
+measurement of individual
+provisions including the
+assessment of multiple
+scenarios and collateral
+valuations,
+
+The impact of COVID-19 and
+climate change across the Bank
+created additional uncertainties on
+collateral valuations, ability and
+timing to recover collateral, and
+macroeconomic forecasts amongst
+others.
+
+We performed a risk assessment on all models involved in the ECL
+calculation and selected a sample of models to test. We involved
+
+modelling specialists to assist us to test this sample of models by testing
+assumptions, input and formulae used. This included a combination of
+assessing the appropriateness of model design and formulae used,
+alternative modelling techniques, recalculation of Probability of Default, Loss
+Given Default and Exposure at Default, and model implementation.
+
+We involved our economic specialists to assist us in evaluating the
+appropriateness of the macroeconomic inputs used by the Bank in the
+determination of the ECL and compared those inputs to external sources to
+assess their reasonableness. This assessment included the latest
+developments related to COVID-19 as at 31 December 2021. With the
+support of our modelling specialists, we evaluated the translation of the
+macroeconomic inputs to the ECL.
+
+We have tested in-model and post-model adjustments including those which
+were applied as a result of COVID-19. With our modelling specialists, we
+assessed the completeness of these adjustments and their appropriateness
+by considering the judgements, sensitivities and governance of these
+adjustments.
+
+Allocation of assets to stage 1, 2 and 3:
+
+We evaluated the criteria (including updates to the policy to take into account
+payment holidays) used to allocate a financial asset to Stage 1,2 or 3 in
+accordance with IFRS 9. This included peer benchmarking to assess staging
+levels.
+
+We recalculated the assets in stage 1, 2 and 3 to assess if they were
+allocated to the appropriate stage and in line with the Bank’s set criteria. We
+performed sensitivity analysis to assess the impact of different criteria on the
+ECL.
+
+To further challenge management's assessment of staging classification, we
+examined a sample of performing loans with specific risk criteria (e.g.
+watchlist, industry). As part of our assessment, we assessed the
+reasonableness of collateral valuations, and considered additional
+information available subsequent to the date of management's assessment.
+
+Measurement of individual provisions:
+
+We independently reviewed management's assessment on the three non-
+
+performing loans as at 31 December 2021 and:
+
+(1) considered the impact of COVID-19 and climate change had on the
+collateral valuations and time to collect as well as whether planned exit
+strategies remained viable;
+
+(2) considered the timing of when management performed the assessment
+and considered additional information available subsequent to this
+assessment; and
+
+(3) involved valuation specialists to revalue the collateral related to this loan.
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+19
+
+INDEPENDENT AUDITORS’ REPORT to the members of DB UK Bank Limited (continued)
+For the year ended 31 December 2021
+
+Key observations communicated to the Audit Committee
+
+We were satisfied that the provision for the impairment of loans and advances to customers was reasonable and
+recognised in compliance with IFRS 9. We highlighted the following matters to the Audit Committee:
+
+« We communicated to the Audit Committee that our independent testing of models and underlying model
+assumptions (including on the macroeconomic inputs) noted some minor differences against the final ECL, which
+were considered to be immaterial individually and in aggregate;
+
+« We recalculated the staging of all the exposures and noted no material difference. We also performed sensitivity
+analysis on the staging criteria and are satisfied that the impacts were not material;
+
+« Based on the procedures performed, we were satisfied that the ECL provisions were reasonably stated.
+
+Our application of materiality
+
+We apply the concept of materiality in planning and performing the audit, in evaluating the effect of identified misstatements
+on the audit and in forming our audit opinion.
+
+Materiality
+
+The magnitude of an omission or misstatement that, individually or in the aggregate, could reasonably be expected to
+influence the economic decisions of the users of the financial statements. Materiality provides a basis for determining the
+nature and extent of our audit procedures. .
+
+We determined materiality for the Bank to be £3.0 million (2020: £3.1 million), which is 0.5% (2020: 0.5%) of equity. We
+believe that equity represents the most relevant measure used by investors, regulators and other stakehoiders when
+assessing the Bank. Our materiality was based on equity of the Bank given it has been historically loss making.
+
+During the course of our audit, we reassessed initial materiality and have updated the year end materiality to reflect the 31
+December 2021 year end actual results.
+
+Performance materiality
+
+The application of materiality at the individual account or balance level. It is set at an amount to reduce to an appropriately
+low level the probability that the aggregate of uncorrected and undetected misstatements exceeds materiality.
+
+On the basis of our risk assessments, together with our assessment of the Bank's overall contro! environment, our
+judgement was that performance materiality was 50% (2020: 50%) of our planning materiality, namely £1.5m (2020:
+£1.5m). We have set performance materiality at this percentage due to considering the past history of misstatements.
+Reporting threshold
+
+An amount below which identified misstatements are considered as being clearly trivial,
+
+We agreed with the Audit Committee that we would report to them and have reported to the directors all uncorrected audit
+
+differences in excess of £150,000 (2020: £154,000), which is set at 5% of planning materiality, as well as differences below
+that threshold that, in our view, warranted reporting on qualitative grounds.
+
+We evaluate any uncorrected misstatements against both the quantitative measures of materiality discussed above and in
+light of other relevant qualitative considerations in forming our opinion.
+
+Other information
+
+The other information comprises the information included in the annual report, other than the financial statements and our
+
+auditor’s report thereon. The directors are responsible for the other information contained within the annual report,
+
+Our opinion on the financial statements does not cover the other information and, except to the extent otherwise explicitly
+stated in this report, we do not express any form of assurance conclusion thereon.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+20
+
+INDEPENDENT AUDITORS’ REPORT to the members of DB UK Bank Limited (continued)
+For the year ended 31 December 2021
+
+Our responsibility is to read the other information and, in doing so, consider whether the other information is materially
+inconsistent with the financial statements or our knowledge obtained in the course of the audit or otherwise appears to be
+materially misstated. If we identify such material inconsistencies or apparent material misstatements, we are required to
+determine whether this gives rise to a material misstatement in the financial statements themselves. If, based on the work
+we have performed, we conclude that there is a material misstatement of the other information, we are required to report
+that fact.
+
+We have nothing to report in this regard.
+Opinions on other matters prescribed by the Companies Act 2006
+In our opinion, based on the work undertaken in the course of the audit:
+
+¢ the information given in the strategic report and the directors’ report for the financial year for which the financial
+statements are prepared is consistent with the financial statements; and
+e the strategic report and directors’ report have been prepared in accordance with applicable legal requirements;
+
+Matters on which we are required to report by exception
+
+In the light of the knowledge and understanding of the Bank and its environment obtained in the course of the audit, we
+have not identified material misstatements in the strategic report or directors’ report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006 requires us to
+report to you if, in our opinion:
+
+¢ adequate accounting records have not been kept, or returns adequate for our audit have not been received from
+branches not visited by us; or
+
+e the financial statements to be audited are not in agreement with the accounting records and returns; or
+
+e certain disclosures of directors’ remuneration specified by law are not made; or
+
+« we have not received all the information and explanations we require for our audit.
+
+Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement set out on page 15, the directors are responsible for the
+preparation of the financial statements and for being satisfied that they give a true and fair view and for such internal control
+as the directors determine is necessary to enable the preparation of financial statements that are free from material
+misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank’s ability to continue as a going
+concern, disclosing, as applicable, matters related to going concern and using the going concern basis of accounting
+unless the directors either intend to liquidate the Bank or to cease operations, or have no realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from
+material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our opinion. Reasonable
+assurance is a high level of assurance, but is not a guarantee that an audit conducted in accordance with ISAs (UK) will
+always detect a material misstatement when it exists. Misstatements can arise from fraud or error and are considered
+material if, individually or in the aggregate, they could reasonably be expected to influence the economic decisions of users
+taken on the basis of these financial statements.
+
+Explanation as to what extent the audit was considered capable of detecting irregularities, including fraud
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures in line with
+our responsibilities, outlined above, to detect irregularities, including fraud. The risk of not detecting a material misstatement
+due to fraud is higher than the risk of not detecting one resulting from error, as fraud may involve deliberate concealment
+by, for example, forgery or intentional misrepresentations, or through collusion. The extent to which our procedures are
+capable of detecting irregularities, including fraud is detailed below.
+
+However, the primary responsibility for the prevention and detection of fraud rests with both those charged with governance
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF 87
+
+21
+
+INDEPENDENT AUDITORS’ REPORT to the members of DB UK Bank Limited (continued)
+For the year ended 31 December 2021 ‘
+
+of the Bank and management.
+
+e We obtained an understanding of the legal and regulatory frameworks that are applicable to the Bank and
+determined that the most significant are Prudential Regulation Authority (“PRA”) and the Financial Conduct Authority
+("FCA"), tax legislations as governed by HM Revenue and Customs, and Companies Act 2006;
+
+« We understood how the Bank is complying with those frameworks by making inquiries of management, internal audit
+and those responsible for legal and compliance matters. We also reviewed correspondence between the Bank and
+regulatory bodies; review minutes of the Board and the Board Risk and Audit Committee, and gained an
+understanding of the Bank’s governance framework;
+
+e We assessed the susceptibility of the Bank's financial statements to material misstatement, including how fraud
+might occur by considering the controls established to address risk identified to prevent or detect fraud. We also
+identified the risk of fraud in our key audit matter as described above and identified areas that we considered when
+performing our fraud procedures such as the impact of remote working, and the appropriateness of sources used
+when performing confirmation on testing of accounts such as cash, loans advances and reverse repos. Other
+procedures performed included auditing the risk of management override of controls through testing of manual
+journal entries that meet specific risk characteristics and using automated techniques to highlight potentially
+anomalous transactions in significant revenue streams which are determined to have an elevated fraud risk;
+
+* Based on this understanding we designed our audit procedures to identify non-compliance with such laws and
+regulations. Our procedures involved inquiries of legal counsel, executive management, and internal audit. We also
+modified our approach to respond to fraud risks as identified in our key audit matter; and
+
+e¢ The Bank operates in the banking industry for which is a highly regulated environment. As such, the Senior Statutory
+Auditor considered the experience and expertise of the engagement team to ensure that the team had the
+appropriate competence and capabilities involving specialist where appropriate.
+
+A further description of our responsibilities for the audit of the financial statements is located on the
+Financial Reporting Council's website at https://www.frc.org.uk/auditorsresponsibilities. This description forms part of our
+auditor's report.
+
+Other matters we are required to address
+
+° Following the recommendation from the audit committee we were appointed by the Bank on 28 September 2020 to
+audit the financial statements for the year ending 31 December 2020 and subsequent financial periods.
+
+The period of total uninterrupted engagement including previous renewals and reappointments is 2 years, covering
+the years ending 31 December 2020 to 31 December 2021.
+
+e The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the Bank and we remain
+independent of the Bank in conducting the audit.
+
+e The audit opinion is consistent with the additional report to the audit committee.
+
+Use of our report
+
+This report is made solely to the Bank's members, as a body, in accordance with Chapter 3 of Part 16 of the Companies
+Act 2006. Our audit work has been undertaken so that we might state to the Bank’s members those matters we are
+required to state to them in an auditor's report and for no other purpose. To the fullest extent permitted by law, we do not
+accept or assume responsibility to anyone other than the Bank and the Bank’s members as a body, for our audit work, for
+this report, or for the opinions we have formed.
+
+DocuSigned by:
+[ teu April 27, 2022 | 3:15:32 BST
+
+A3D18330AD7746A... | .
+Rhys R Taylor (Senior statutory auditor)
+
+for and on behalf of Ernst & Young LLP, Statutory Auditor
+London
+27th April 2022
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF 87 eh
+
+DB UK BANK LIMITED 22
+
+STATEMENT OF PROFIT AND LOSS
+For the year ended 31 December 2021
+
+Note 2021 2020
+
+£000 £000
+
+Interest receivable 2 14,898 16,302
+Interest payable 2 __ (4,270) (6,131)
+NET INTEREST INCOME 10,628 10,171
+Fees and commissions receivable 3 7,205 5,273
+Fees and commissions payable 3 (948) (937)
+
+Foreign exchange loss (72) (14)
+
+Derivatives (loss)/gain 4 (1) 2
+Other operating income 5 6,424 7,533
+OPERATING INCOME 23,236 22,031
+Administrative expenses 6 (32,396) (32,710)
+Depreciation and amortisation 7 (1,329) (2,995)
+Other operating charges 8 (37) (31)
+Impairment on financial instruments 9 91 78
+LOSS ON ORDINARY ACTIVITIES BEFORE TAXATION (10,435) (13,627)
+Taxation on loss on ordinary activities 11 2,987 2,649
+LOSS FOR THE FINANCIAL YEAR (7,448) (10,978)
+
+The notes on pages 26 to 65 form part of these Financial Statements.
+DocuSign Envelope ID: EDCOF372-C141-48D7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 23
+STATEMENT OF TOTAL COMPREHENSIVE INCOME
+For the year ended 31 December 2021
+2021 2020
+£000 £000
+Loss for the financial year (7,448) (10,978)
+Other comprehensive income:
+Gain on property revaluation, net of tax (Note 19) - 514
+Impact on revaluation reserve of change in tax rate (Note 19) (434) -
+TOTAL COMPREHENSIVE LOSS FOR THE FINANCIAL YEAR (7,882)
+
+(10,464)
+
+There were no other recognised gains and losses during the year.
+
+The notes on pages 26 to 65 form part of these Financial Statements.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87 yO
+
+DB UK BANK LIMITED 24
+
+BALANCE SHEET
+As at 31 December 2021
+
+Note 2021 2020
+£000 £000
+
+ASSETS
+Cash and balances at banks 12 17,554 35,341
+Loans and advances to banks 13 987 264 795,342
+Loans and advances to customers 14 637,226 583,074
+Derivatives 16 - 5
+Other assets 17 16,966 14,151
+Group relief 18 2,882 1,971
+Tangible fixed assets 19 10,342 10,340
+Intangible fixed assets 20 5,937 5,009
+Total assets 1,678,171 1,445,233
+LIABILITIES
+Deposits by banks 21 751,088 636,077
+Customer accounts 22 289,877 161,867
+Derivatives 16 - 4
+Other liabilities 23 21,257 22,439
+Accruals and deferred income 24 6,297 6,077
+Provisions for liabilities 25 1,471 2,532
+Deferred tax liabilities 26 2,106 1,778
+Total liabilities 1,072,096 830,774
+SHAREHOLDER’S FUNDS
+Called up share capital 27 385,000 385,000
+Revaluation reserve 6,557 6,991
+Profit and loss account 214,518 222,468
+Shareholder’s funds 606,075 614,459
+Total liabilities and shareholder’s funds 1,678,171 1,445,233
+
+The notes on pages 26 to 65 form part of these Financial Statements.
+
+These Financial Statements were approved by the Board of Directors on the 27th day of April 2022.
+
+OocuSigned by:
+E amiviAPailaes 2022 | 2:58:38 BST
+
+Signed By. Senjainin Pallas for and on behalf of the Board of Directors.
+
+Company number: 315841
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 25
+STATEMENT OF CHANGES IN EQUITY
+For the year ended 31 December 2021
+For the year ended 31 December 2021
+Called-up
+share Revaluation Profit and loss
+capital reserve account! Total
+£000 £000 £000 £000
+At 1 January 2021 385,000 6,991 222,468 614,459
+Loss for the financial year - - (7,448) (7,448)
+Equity-settled share-based - - (502) (502)
+compensation, net of tax
+Other comprehensive income:
+Impact on revaluation reserve of change - (434) - (434)
+in tax rate (Note 19}
+At 31 December 2021 385,000 6,557 214,518 606,075
+For the year ended 31 December 2020
+Called-up
+share Revaluation Profit and loss
+capital reserve account? Total
+£000 £000 £000 £000
+At 1 January 2020 385,000 6,477 233,831 625,308
+Loss for the financial year “ - (10,978) (10,978)
+Equity-settled share-based - - (385) (385)
+compensation, net of tax
+Other comprehensive income:
+Gain on property revaluation, net of tax - 514 - 514
+(Note 19)
+At 31 December 2020 385,000 6,991 222,468 614,459
+
+The notes on pages 26 to 65 form part of these Financial Statements.
+
+‘Includes share-based payment component
+? Includes share-based payment component
+
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 26
+
+NOTES TO THE FINANCIAL STATEMENTS
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES
+
+The following accounting policies have been applied consistently in dealing with items which are considered material in
+relation to the Financial Statements.
+
+Basis of preparation
+
+These Financial Statements have been prepared in accordance with UK Generally Accepted Accounting Practice including
+FRS 101 ‘Reduced Disclosure Framework’ ("FRS 101°). The Company has complied with the requirements of the
+Companies Act 2006, section 396, including applying the requirements set out in Schedule 2 of the Large and Medium-
+sized Companies and Groups (Accounts and Reports) Regulations 2008 related to banking companies.
+
+In these Financial Statements, the Company has applied the exemptions available under FRS 101 in respect of the
+following disclosures:
+
+* A Cashflow Statement and related notes;
+
+« Comparative period reconciliations for Share Capital, Property and Equipment and Intangible Fixed Assets;
+* Business combinations;
+
+* Key management personnel compensation;
+
++ Share-based payment arrangements;
+
+* Transactions with related parties;
+
++ Astatement of financial position for the beginning of the earliest comparative period; and
+
+* The effects of new but not yet effective IFRSs.
+
+The Directors have adopted the going concern basis of preparation for the Financial Statements and consider that the
+Company has adequate resources to continue in operational existence for the foreseeable future, and for a minimum of
+12 months from the date of the signing of these Financial Statements (i.e. to 27th April 2023). That judgement is based on
+an evaluation of the inherent risks to the Company's business model and how those risks might affect the Company's
+financial resources or ability to continue operations. The Company’s regulatory capital ratio of 473% at 31 December 2021
+is well above the regulatory minimum of 100% and is forecast to continue to exceed the regulatory minimum for the plan
+period of four years. In addition, the Company has a liquid asset buffer of highly liquid securities of £253m and a Liquidity
+Coverage Ratio of 459%.
+
+As explained in the Strategic Report the directors do not believe the ongoing impact of the current geopolitical environment
+including the conflict in Ukraine, Climate Change or COVID-19 to be material to the Company. In relation to support from
+the Parent, Deutsche Bank A.G. has given a declaration of backing to DBIGB (the Company's ultimate UK parent
+company), which in turn issues a letter of comfort to the Company. As a result of the letter of comfort the Company is able
+to maintain its good standing and remain in a position to meet its obligations as they fall due. Accordingly, the Company
+continues to adopt the going concern basis in preparing these Financial Statements.
+
+Executive directors and employees of the Company are members of the DB Group defined benefit and defined contribution
+pension schemes operated by DB Group Services (UK) Limited ("DBGS’) details of which are disclosed in the Financial
+Statements of that entity. The Company has no obligation to pay employee retirement benefits and has no commitment or
+guarantee to indemnify DBGS for retirement benefit liabilities.
+
+The Company is incorporated, registered and domiciled in England and Wales (UK) as private limited company, limited by
+shares. DHL, a company registered in England and Wales, is the Company’s immediate controlling entity. The Financial
+Statements have been prepared in GBP, the functional currency of the Company, and all figures have been rounded to
+the nearest £000.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 27
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+
+Deutsche Bank Aktiengesellschaft (“Deutsche Bank A.G.”), a company incorporated in Germany, is the parent company,
+the ultimate controlling entity and the parent undertaking of the largest and smallest group of undertakings for which group
+financial statements are prepared, in accordance with IFRS. Its registered address is Taunusanlage 12, Frankfurt Am
+Main, 60325, Germany. Copies of the DB Group Financial Statements are available to the public and may be obtained
+from, Winchester House, 1 Great Winchester Street, London, EC2N 2DB.
+
+(a) Changes in accounting policy and disclosures
+Accounting policies — LIBOR Reform
+
+On 27 August 2020 the International Accounting Standards Board ("IASB") issued its Phase 2 amendments to IFRS in
+response to Interest Rate Benchmark Reform. Interest Rate Benchmark Reform refers to the global effort to replace or
+reform the London Interbank Offered Rate (“LIBOR’) in its many forms such as GBP LIBOR, USD LIBOR, EURIBOR and
+other Offered Rate benchmarks. The amendments were effective from 1 January 2021 with early adoption permitted. The
+changes amend several IFRS standards including IFRS 9 ‘Financial Instruments’ and IFRS 7 ‘Financial Instruments:
+Disclosures’ with respect to contracts where interest rates are set using LIBOR rates or similar.
+
+The changes being implemented to IFRS 9 permit the Company relief from the requirement in IFRS 9 to perform a
+quantitative test and qualitative assessment, where contracts are amended, to determine if the modification to the contract
+is substantial. The change permits exemption from the quantitative test where the only change to a contract is the
+amendment to the benchmark rate and the modification is necessary as a direct consequence of benchmark reform. The
+Company is taking advantage of this relief.
+
+Where the Company has open lending contracts with clients at 31 December 2021 using GBP LIBOR interest rates (50
+open contracts with principal totaling £394m), clients have been contacted and repapering is in progress with the aim of
+transferring all remaining contracts to the Sterling Overnight Index Average Rate (“SONIA”) or Bank of England base rate
+linked interest rates in Q1 2022 wherever practicable. Transition of contracts using other benchmarks will be concluded in
+line with guidance from the applicable regulators. Loans to clients are match funded, including interest rates used, by DB
+Group and funding contracts will be migrated in line with the client contracts.
+(b) Basls of measurement
+The Financial Statements have been prepared on the historical cost basis, except for the following:
+
+* Freehold property is initially measured at cost, and then revalued through equity; and
+- Derivative financial instruments are measured at fair value through Profit and Loss.
+
+The following are measured at amortised cost - Loans and advances, Deposits, and Sale and repurchase agreements.
+The Company has not reclassified any financial assets during the current or previous year.
+
+(c) Financial assets and liabilities
+Financial instruments are recognised using either settlement date or trade date accounting, depending on the underlying
+financial instrument (IFRS 9). All financial instruments held during the current and previous year, with the exception of
+derivatives, are measured on an amortised cost basis and recognised using settlement date accounting.
+
+The settlement date is the date that an asset is delivered to or by an entity. Settlement date accounting refers to:
+
+* the recognition of an asset on the day it is received by an entity; and
+* de-recognition of an asset and recognition of any gain or loss on disposal on the day that it is delivered by the entity.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 28
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+(c) Financial assets and liabilities (continued)
+The trade date is the date that the Company commits itself to purchase or sell an asset. Trade date accounting refers to:
+
+* the recognition of an asset to be received and the liability to pay for it on the trade date; and
++ derecognition of an asset that is sold, recognition of any gain or loss on disposal and the recognition of a receivable
+from the buyer for payment on trade date. ;
+
+IFRS 9 requires the classification of financial assets to be determined based on both the business model used for managing
+the financial assets, and the contractual cash flow characteristics of the financial asset.
+
+There are three business models available under IFRS 9:
+
+e Hold to collect — Financial Assets held with the objective to collect contractual cashflows;
+
+« Hold to collect and sell — Financial Assets held with the objective of both collecting contractual cashflows and selling
+financial assets; and .
+
+e Other — Financial Assets held with trading intent or that do not meet the criteria of either ‘Hold to collect’ or ‘Hold to
+collect and sell’.
+
+If a financial asset is held in either a Hold to collect or a Hold to collect and sell business model, then an assessment to
+determine whether contractual cash flows are solely payments of principal and interest on the principal amount outstanding
+at initial recognition is required to determine the classification.
+
+Contractual cash flows, that are solely payments of principal and interest on the principal amount outstanding, are
+consistent with a basic lending arrangement. Interest is consideration for the time value of money and the credit risk
+associated with the principal amount outstanding during a particular period of time.
+
+The Company classifies its financial assets and liabilities into the following categories:
+i. Cash and balances at banks
+
+This consists of cash on demand held with other DB Group undertakings and with any external counterparties and is
+carried at amortised cost.
+
+iii Loans and advances
+
+Loans and advances consist of financial assets with fixed or determinable payments that are not quoted in an active
+market.
+
+Loans and advances are initially recognised at fair value, including any directly attributable transaction costs less
+fees received and subsequently measured at amortised cost using the contractual interest rate as the approximation
+of the effective interest method, less any impairment charges. Fees received on loan origination are amortised using
+the straight-line method.
+
+iil. Sale and repurchase agreements
+
+The Company enters into arrangements which involve the sale of securities with agreements to repurchase and the
+purchase of securities with agreements to resell. These agreements are initially recognised at fair value being the
+amount of cash disbursed and received, respectively.
+
+Repurchase agreements are recorded as liabilities at amortised cost and the related securities are included in debt
+securities and equity shares at market price or as investments at cost as appropriate. Resale agreements are
+recorded as receivables and the securities are excluded from the Company's inventory.
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 29
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1.
+
+ACCOUNTING POLICIES (continued)
+
+(c) Financial assets and liabilities (continued)
+
+Vi.
+
+Interest earned on repurchase and resale agreements and interest incurred on repurchase and resale agreements
+are reported as interest income and interest expense, respectively.
+
+Deposits
+
+Deposits are initially measured at fair value, which is the consideration received, net of transaction costs incurred.
+They are subsequently measured at amortised cost using the contractual interest rate as the approximation of the
+effective interest method.
+
+Derivatives
+
+Derivatives are measured at fair value with any gains or losses being recognised in the Profit and Loss Account.
+Other financial assets/labilities
+
+This category covers all assets and Jiabilities which do not fall into the other categories. They are initially recognised
+
+at fair value after adjusting for any transaction costs. They are subsequently measured at amortised cost using the
+contractual interest rate as the approximation of the effective interest rate method.
+
+(d) De-recognition of financial assets and liabilities
+
+A financial asset is considered for de-recognition when the contractual rights to the cash flows from the financial asset
+expire, or the Company has either transferred the contractual right to receive the cash flows from the asset, or has assumed
+an obligation to pay those cash flows to one or more recipients, and has transferred substantially all risks and rewards of
+the asset; or the Company has not retained control of the asset.
+
+A financial liability is de-recognised when the obligation under the liability is discharged or cancelled or expires. If an
+existing financial liability is replaced by another from the same lender on substantially different terms, or the terms of the
+existing liability are substantially modified, such an exchange is treated as a de-recognition of the original liability and the
+recognition of a new liability, and the difference in the respective carrying amounts is recognised in the Profit and Loss
+Account.
+
+(e) Offsetting of financial assets and liabilities
+
+There is no offsetting of financial assets and financial liabilities in these Financial Statements.
+Deferred tax is shown on a net basis.
+
+(f) Tangible fixed assets
+
+i,
+
+Freehold Property
+
+Freehold property is initially recognised at cost. Following the transition to FRS 101, and in line with International
+Accounting Standards 16.31 ‘Revaluation model’, the Company has opted to use the revaluation model for
+subsequent measurement of freehold property. Revaluations are carried out regularly, so that the carrying amount
+of the property does not differ materially from its fair value at the balance sheet date. Any increase in value, as a
+result of revaluation, is credited to other comprehensive income and accumulated in equity under the heading
+‘Revaluation Reserve’.
+
+The depreciable amount of an asset is defined as the cost of an asset less its residual value. The Directors consider
+that the estimated residual value of the freehold property is not materially different from the carrying value of the
+asset, which was subject to a formal valuation in November 2020, and therefore no depreciation is charged.
+DocuSign Envelope ID: EDC0F372-C141-4BD7-A19E-A890646DBF87 ers,
+
+DB UK BANK LIMITED 30
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+(f) Tangible fixed assets (continued)
+ii. Other tangible fixed assets
+All other classes of fixed assets are initially recognised on the Balance Sheet at cost. Subsequent measurement is
+at cost less depreciation and any accumulated impairment losses. Depreciation occurs on a straight-line basis so as
+to write off the cost over the shorter of the assets estimated useful lives or, where appropriate, remaining lease
+
+periods.
+
+The estimated useful lives of other tangible fixed assets are given below:
+
+* Freehold building improvements 10 years
+
+* Leasehold buildings over the life of the lease
+
++ Leasehold improvements 10 years or over the life of the lease if shorter
++ Computer equipment 3 years
+
+The carrying amounts of the assets are reviewed for impairment when events or changes in circumstances indicate
+that the carrying amount of the fixed asset may not be recoverable. If any such indication exists, the Company must
+estimate the asset's recoverable amount. Impairment losses are recognised in the Profit and Loss Account to the
+extent that they exceed any amount previously credited to the Revaluation Reserve (for example in relation to freehold
+
+property).
+
+As 31 December 2021 the Company had fully depreciated all tangible fixed assets with the exception of freehold property
+and of computer equipment purchased during 2021.
+
+In December 2021 the Company entered into an agreement to sell its freehold property to an external counterparty on a
+forward basis to complete in the second half of 2023. The Company retains the right to use the building until completion.
+The consideration for the sale is at market value and the costs of the sale do not exceed the economic benefits therefore
+the sales contract does not constitute an onerous contract. As the sale will not complete within the next 12 months the
+asset has not been reclassified as Held for Sale.
+
+(g) Intangible fixed assets
+
+Intangible fixed assets are initially measured at cost. Those with a finite useful life are subsequently carried at cost less
+any accumulated depreciation and impairment.
+
+Software which is not integral to a related item of hardware is included within intangible fixed assets. Costs related to
+software developed or obtained for internal use, including work in progress as costs are incurred, are capitalised if it is
+probable that future economic benefits will flow to the Company and these costs can be measured reliably. Eligible costs
+include external direct costs for materials and services, as well as payroll and payroll-related costs for employees directly
+associated with and who devote substantial time to an internal-use software project.
+
+Capitalised costs are amortised using the straight-line method over the asset's useful life which is deemed to be either 3
+years, 5 years or 10 years. The criteria used to determine the appropriate category is summarised below:
+
+* The default category for the useful lives of capitalised software projects is 3 years;
+
++ The 5-year amortisation bracket applies primarily to project costs spent on trading systems and on basic systems
+required to run the business;
+
+* Capitalised project costs incurred to completely or significantly replace an existing core IT system may be amortised
+over 10 years.
+
+The Company commences amortisation of intangible assets in the quarter in which implementation is completed.
+
+The expected useful lives of intangible fixed assets are reviewed annually.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 31
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+(g) Intangible fixed assets (continued)
+
+The carrying amounts of the intangible fixed assets are reviewed for impairment when events or changes in circumstances
+indicate that the carrying amount of the asset may not be recoverable. If any such indication exists, the Company must
+‘ estimate the asset's recoverable amount. Impairment losses are recognised in the Profit and Loss Account.
+
+(h) Net interest income
+
+This includes interest on the lending and deposit taking business. Net interest income is recognised in the Profit and Loss
+Account as it accrues at contractual interest rate as the approximation of the effective interest rate method. Any
+arrangement fees paid at loan origination are deferred and amortised to the Profit and Loss Account over the life of the
+loan. Arrangement fees are included in Net interest income in the Profit and Loss Account.
+
+The effective interest rate is a method of calculating the amortised cost of a financial asset or a financial liability and of
+allocating the interest income or expense over the relevant period using the estimated future cash flows. The estimated
+future cash flows used in this calculation include those determined by the contractual terms of the asset or liability, all fees
+that are considered to be integral to the effective interest rate, direct and incremental transaction costs, and all other
+premiums or discounts.
+
+(i) Foreign exchange
+
+Foreign currency transactions are translated into Sterling at the exchange rate prevailing at the date of the transaction.
+Any monetary assets and liabilities are subsequently re-translated at the year-end closing rate with any translation
+differences being taken through the Profit and Loss Account.
+
+(j) Taxation
+Current taxation
+
+Taxation is based on profit or loss for the year and takes into account taxation deferred because of temporary differences
+between the treatment of certain items for taxation and accounting purposes.
+
+Current tax assets and liabilities for the current and prior years are measured at the amount expected to be recovered
+from, or paid to, the taxation authorities. The tax rates and tax laws used to compute the amounts are those that are
+enacted, or substantively enacted, by the reporting date in the Countries where the Company operates and generates
+taxable income and losses.
+
+Current income tax relating to items recognised directly in equity or other comprehensive income is recognised in equity
+or other comprehensive income respectively and not in the Profit and Loss Account. Management periodically evaluates
+positions taken in the tax returns with respect to situations in which applicable tax regulations are subject to interpretation
+and establishes provisions where appropriate.
+
+In determining taxable profit (tax loss), tax bases, unused tax losses, unused tax credits and tax rates, the Company
+considered that it is probable that the relevant authority will accept the particular tax treatment the Company plans to use
+in its income tax filing. Hence, the Company has determined taxable profit (tax loss), tax bases, unused tax losses, unused
+tax credits or tax rates consistently with the tax treatment that will be included in its income tax filings.
+
+Deferred taxation
+
+Deferred tax is recognised, without discounting, in respect of all taxable temporary differences between the treatment of
+certain items for taxation and accounting purposes which have arisen but not reversed at the balance sheet date. Deferred
+tax assets are recognised only to the extent that it is probable that sufficient taxable profit will be available against which
+those unused tax losses, unused tax credits and deductible temporary differences can be utilised.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 32
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+(j) Taxation (continued)
+
+Deferred tax assets and liabilities are measured based on the tax rates that are expected to apply in the period that the
+asset is realised or the liability is settled, based on tax rates (and tax laws) that have been enacted or substantively enacted
+at the balance sheet date.
+
+(k) Client money balances
+Client Money
+
+The Company applies the banking exemption available under the CASS Rules and accepts deposits from clients as banker.
+These amounts are not treated under the FCA Client Money Rules and are shown on the Balance Sheet as customer
+deposits. The Company does hold client money under the FCA Client Money Rules in order to address shortfalls in custody
+assets and where this is the case, these client monies are not recognised on the Company’s Balance Sheet.
+
+Custody Assets
+
+The Company, through its IPB UK business, provides advisory and discretionary management services to ‘Onshore’ and
+‘Offshore’ clients. An Onshore client is a client who receives services from the Company under the Terms of Business and
+whose assets are held in custody under the CASS Rules. An Offshore client is a client who receives services from the
+Company under the Terms of Business whose assets are held in custody by other DB Group Companies outside the UK
+under separate agreements and therefore are not held by the Company under the CASS Rules.
+
+In both cases, the custody assets are not recognised on the Company’s Balance Sheet. The Company does receive a fee
+for acting as custodian and this fee is recognised in the Fees and Commissions receivable line in the Profit and Loss
+Account.
+
+(lI) Critical accounting estimates and judgment
+
+The preparation of these Financial Statements requires the Directors to make estimates and assumptions for certain
+categories of assets and liabilities. These estimates and assumptions affect the reported amounts of assets and liabilities
+and disclosure of contingent assets and liabilities at the balance sheet date, and the reported amounts of revenue and
+expenses during the reporting period. Actual results could differ from management's estimates.
+
+Climate change
+
+Many of the effects arising from climate change will be longer term in nature, with an inherent level of uncertainty, and
+have limited effect on accounting judgements and estimates for the period. The Company has assessed its level of
+exposure to climate risk as regards these Financial Statements and considers this to have limited impact at 31 December
+2021.
+
+Critical accounting estimates
+The Company has identified the following significant accounting policy that involves critical accounting estimates:
+
+The impairment of financial assets and commitments (Note 1(m)). This comprises loans and receivables with DB Group
+companies and the IPB UK lending portfolio. The IPB UK lending portfolio is considered well mitigated with collateral, with
+the exception of a small amount of unsecured loans and overdrafts amounting to £4.6m at 31 December 2021. Loan to
+value ratios are typically less than 70% (average of 61% at December 2021), and loans are also covered by the provision
+of personal guarantees. For the purposes of the IFRS 9 impairment calculation the majority of IPB UK loans are therefore
+fully collateralised mainly with real estate collateral. Stress testing was completed during 2021, as part of the Company's
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 33
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1.
+
+ACCOUNTING POLICIES (continued)
+
+(l) Critical accounting estimates and judgment (continued)
+
+ICAAP, to measure the impact on the Company's loan portfolio of falls in residential and commercial property prices of
+33% (based on the stress test scenario published by the PRA in March 2021) with additional haircuts to cover prime central
+London property concentration and ‘trophy’ properties. Under this severe stress scenario losses amounted to less than
+14% of the portfolio of loans assumed to default in the stress. The Company concludes that the portfolio remains sufficiently —
+resilient to continued shocks in the underlying collateral with the majority of loans remaining well collateralised in the event
+of significant price falls.
+
+Analysis has been completed on the impact of price falls on the provision for Expected Credit Loss (“ECL”) (Note 1(m)). A
+drop in property and security prices to the point where 10% of IPB UK exposures are uncollateralised at 31 December
+2021 would increase ECL. by £788k (2020: £470k). Further stressing this to the point where 25% of IPB UK exposures are
+uncollateralised increases ECL by a further £2.0m (2020: £1.2m). Additional calculations have been completed to assess
+the impact of increasing the Loss Given Default ("LGD"), used in the ECL calculation, by 10% and this would result in an
+increase in impairment provisions of £13k (2020: £23k). No sensitivity analysis is considered to be required for .
+loans/receivables to DB Group companies. These are generally made up of short term balances the majority of which are
+with Deutsche Bank AG London Branch and covered under an on-balance sheet netting agreement. The remaining DB
+Group company balances are either within the Company's UK consolidation group or largely related to inter group
+receivables in respect of cost recharges repayable in less than one year. Details of model sensitivity is shown in Note 1(m).
+
+(m) Impairment
+
+The Company applies IFRS 9 ‘Financial Instruments’. The impairment requirements of IFRS 9 apply to all credit exposures
+that are measured at amortised cost or fair value through other comprehensive income and to off balance sheet
+commitments.
+
+The IFRS 9 impairment approach is an integral part of the Company's Credit Risk Management. The estimation of ECL
+which is the basis for the Company’s credit loss allowance is either performed via the automated ECL calculation using
+DB Group’s ECL engine or determined by Credit Officers. In both cases, the calculation takes place for each financial asset
+individually. Similarly, the determination of the need to transfer between stages is made on an individual asset basis.
+
+The Company determines credit loss allowances in accordance with IFRS 9 as follows:
+
+e« Stage 1 reflects financial instruments where it is assumed that credit risk has not increased significantly after .
+initial recognition. For Stage 1 assets the Company recognises a credit loss allowance equal to 12 months ECL.
+
+« Stage 2 contains all financial assets that have not defaulted but have experienced a significant increase in credit
+risk since initial recognition. For Stage 2 assets the credit loss allowance is calculated as ECL over the remaining
+lifetime of the asset.
+
+e Stage 3 consists of financial assets of clients which are defaulted in accordance with the Capital Requirements
+Regulation (CRR) Article 178. The Company defines these financial assets as impaired, non-performing and
+defaulted. Loss allowance is calculated as lifetime expected credit losses assuming a 100% probability of default.
+A Financial Asset can be classified as in default but without an allowance for credit losses (i.e. impairment loss is
+not expected) for example where the value of the collateral is in excess of the current and future amounts owed.
+
+¢ — Significant increase in Credit Risk is determined using quantitative and qualitative information based on the
+Company's historical experience, credit-risk assessment and forward-looking information.
+
+The Company uses three main components to measure ECL. These are Probability of Default (“PD”), LGD and Exposure
+at Default ("EAD"). Incorporating forecasts of future economic conditions into the measurement of expected credit losses
+influences the allowance for credit losses in Stage 1 and 2. In order to calculate lifetime expected credit losses, the
+calculation derives the corresponding lifetime PDs from migration matrices that reflect economic forecasts.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 34
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. AGCOUNTING POLICIES (continued)
+(m) Impairment (continued)
+Use of DB Group engine
+The Company applies DB Group’s risk management framework and governance structures.
+
+The Company uses the DB Group ECL engine to calculate the impairment provisions required. The Company has two
+main exposures types in scope for the ECL calculation which use different scenarios from the engine as follows:
+
+« The IPB UK loan portfolio which comprises the only material non-DB Group assets for the Company. From 30th
+June 2021, with the introduction of a DB Group model specifically covering Wealth Management, ECL for this
+portfolio is calculated using Wealth Management specific scenarios with the main macroeconomic drivers being
+unemployment and equity prices. Prior to 30th June 2021 retail-based scenarios were used with GDP and
+unemployment being the main drivers. The impact of the change in model at 30th June 2021 was to increase
+ECL by £27k.
+
+e Balances due from DB Group companies. ECL for this portfolio is calculated using scenarios applying to balances
+with financial institutions.
+
+Use of the above scenarios are considered the best available proxy for the Company given the lack of adequate historic
+data for the IPB UK loan portfolio.
+
+The Company reviews the model results and actively considers whether adjustments are required to reflect conditions
+specific to the business or the UK with the final assessment and decision being the responsibility of the Company’s Board.
+
+Stage Determination
+
+At initial recognition, financial assets are reflected in Stage 1, unless the financial assets are purchased or originated credit
+impaired (“POCI"). If there is a significant increase in credit risk, the financial asset is transferred to Stage 2. A significant
+increase in credit risk is determined by using rating-related and process-related indicators. The assignment of financial
+assets to Stage 3 is based on the status of the borrower being in default. If a borrower is in default, then all financial assets
+of the borrower are transferred to Stage 3.
+
+Rating-related Stage 2 indicators: The Company compares a borrower's lifetime PD at the reporting date with the lifetime
+PD expectations at the date of initial recognition to determine if there is a significant change in the borrower's PDs and all
+of its transactions in the scope of IFRS 9 Impairment. Based on historically observed migration behaviour and a sampling
+of different economic scenarios, a lifetime PD distribution is obtained. A quantile of this distribution, which is defined for
+each counterparty class, is chosen as the lifetime PD threshold. If the remaining lifetine PD of a transaction according to
+current expectations exceeds this threshold, the financial asset has incurred a significant increase in credit risk and is
+transferred to Stage 2. The quantiles used to define Stage 2 thresholds are determined using expert judgement, are
+validated annually and have not changed as a result of COVID-19. The thresholds applied vary depending on the original
+credit quality of the borrower, elapsed lifetime, remaining lifetime and counterparty class. Management believes that the
+defined approach and quantiles represent a meaningful indicator that a financial asset has incurred a significant increase
+in credit risk.
+
+Process-related Stage 2 Indicators: Process-related indicators are derived via the use of existing risk management
+indicators, which in Management's view represent situations where the credit risk of financial assets has significantly
+increased. These include borrowers being added to a credit watchlist, being transferred to workout status, payments being
+30 days or more past due or in forbearance.
+
+As long as the conditions for one or more of the process-related or rating-related indicators is fulfilled and the borrower of
+the financial asset has not met the definition of default, the asset will remain in Stage 2. If the Stage 2 indicators are no
+longer fulfilled and the financial asset is not defaulted, the financial asset transfers back to Stage 1.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 35
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1.
+
+ACCOUNTING POLICIES (continued)
+
+(m) Impairment (continued)
+
+In the second quarter of 2021, DB Group refined one of the process-related Stage 2 triggers. Financial assets added to
+the watchlist for discretionary reasons are now transferred to Stage 2, whereas prior to this change only assets added to
+the watchlist for mandatory reasons were transferred to Stage 2.
+
+If the borrower defaults, all transactions of the borrower are allocated to Stage 3. If at a later date the borrower is no longer
+in default, the curing criteria according to regulatory guidance is applied (including probation periods), which are at least 3
+months or 1 year in case of distressed restructurings. Once the regulatory cure period or criteria has been met, the borrower
+will cease to be classified as defaulted and its assets will be transferred back to Stage 2 or Stage 1.
+
+The ECL calculation for Stage 3 distinguishes between transactions in homogeneous and non-homogenous portfolios, and
+POCI financial assets. For transactions that are in Stage 3 and in a homogeneous portfolio, the Company uses a parameter
+based automated approach to determine the credit loss allowance per transaction. For these transactions, the LGD ~
+parameters are partially modelled to be time dependent, i.e. consider the declining recovery expectation as time elapses
+after default. The allowance for credit losses for financial assets in non-homogeneous portfolios in Stage 3, as well as for
+POCI assets, are determined by Credit Officers. This allows Credit Officers to consider currently available information and
+recovery expectations specific to the borrowers and the financial assets at the reporting date.
+
+Estimation techniques for input factors
+
+The first key input factor in the ECL calculation is the one-year PD for borrowers which is derived from DB Group internal
+rating systems. The DB Group assigns a PD to each borrower credit exposure based on a 21-grade master rating scale.
+
+The borrower ratings assigned are derived based on internally developed rating models which specify consistent and
+distinct customer-relevant criteria and assign a rating grade based on a specific set of criteria as given for a certain
+customer. The set of criteria is generated from information sets relevant for the respective customer segments including
+general customer behaviour, financial and external data. The methods in use range from statistical scoring models to
+expert-based models taking into account the relevant available quantitative and qualitative information.
+
+One-year PDs are extended to multi-year PD curves using through-the-cycle ("TTC") matrices and macroeconomic
+forecasts. Based on economic scenarios centered around the macroeconomic baseline forecast, TTC matrices are first
+transformed into point-in-time (“PIT”) rating migration matrices, typically for a two-year period. The calculation of the PIT
+matrices leverages a link between macroeconomic variables and the default and rating behaviour of borrowers, which is
+derived from historical macroeconomic variables ("MEV”) and rating time series through regression techniques. In a final
+step, multi-year PD curves are derived from PIT rating migration matrices for periods where reasonable and supportable
+forecasts are available and extrapolated based on TTC rating migration matrices beyond those periods.
+
+The second key input into the ECL calculation is the LGD parameter, which is defined as the likely loss intensity in case of
+a borrower's default. It provides an estimation of the exposure that cannot be recovered in a default event and therefore
+captures the severity of a loss. Conceptually, LGD estimates are independent of a borrower’s probability of default. The
+LGD models applied in Stages 1 and 2, which are based on regulatory LGD models but adjusted for IFRS 9 requirements
+(removal of downturn-add-on and removal of indirect costs of workout), ensure that the main drivers for losses (i.e. different
+levels and quality of collateralization and customer or product types or seniority of facility) are reflected as risk drivers in
+LGD estimates. In LGD models DB Group assign collateral type specific LGD parameters to the collateralized exposure
+(collateral value after application of haircuts). The LGD setting for defaulted homogeneous portfolios are partially
+dependent on time after default and are either calibrated based on the DB Group’s multi-decade loss and recovery
+experience using statistical methods or for less significant portfolios certain LGD model input parameters (e.g. cure rates)
+are determined by expert judgement.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87 oe
+
+DB UK BANK LIMITED 36
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+(m) Impairment (continued)
+
+The third key input is the EAD over the lifetime of a financial asset which is modelled taking into account expected
+repayment profiles (e.g. linear amortisation, annuities, bullet loan structures). Prepayment options are not modelled for all
+portfolios as they are not deemed material. DB Group apply specific Credit Conversion Factors ("CCF") in order to calculate
+an EAD value. Conceptually, the EAD is defined as the expected amount of the credit exposure to a borrower at the time
+of its default. In instances where a transaction involves an unused limit, a percentage share of this unused limit is added
+to the outstanding amount in order to appropriately reflect the expected outstanding amount in case of a borrower's default.
+This reflects the assumption that for commitments, the utilisation at the time of default might be higher than the current
+outstanding balance. In case a transaction involves an additional contingent component (i.e., guarantees) a further
+percentage share is applied as part of the CCF model in order to estimate the amount of guarantees drawn in case of
+default. The calibrations of such parameters are based on internal historical data and are either based on empirical analysis
+or supported by expert judgement and consider borrower and product type specifics.
+
+Expected lifetime
+
+IFRS 9 requires the determination of lifetime expected credit losses for which the expected lifetime of a financial asset is
+a key input factor. Lifetime expected credit losses represent default events over the expected life of a financial asset. The
+Company measures expected credit losses considering the risk of default over the maximum contractual period (including
+any borrower's extension options) over which the Company is exposed to credit risk.
+
+Interest rate used in the IFRS 9 model
+
+In the context of the ECL calculation, the Company applies in line with IFRS 9 an approximation of the effective interest
+rate ("EIR"), which is usually the contractual interest rate (“CIR”). The CIR is deemed to be an appropriate approximation,
+as the interest rate is consistently used in the ECL model, interest recognition and for discounting of the ECL and does not
+materially differ from the EIR.
+
+Consideration of Collateralisation in IFRS 9 ECL calculation
+
+The ECL. model projects the level of collateralisation for each point in time in the life of a financial asset. At the reporting
+date, the model uses the existing collateral distribution process applied in DB Group’s Economic Capital model. In this
+model, the liquidation value of each eligible collateral is allocated to relevant financial assets to distinguish between
+collateralised and uncollateralised parts of each financial asset. In the ECL calculation, the Company subsequently applies
+the LGDs for secured and unsecured exposures to derive the ECL for the secured and unsecured part of the exposure
+separately. ,
+
+Forward Looking Information
+
+Under IFRS 9, the allowance for credit losses is based on reasonable and supportable forward-looking information
+available without undue cost or effort, which takes into consideration past events, current conditions and forecasts of future
+economic conditions.
+
+To incorporate forward looking information into DB Group's allowance for credit losses, DB Group uses two key elements:
+
+« As its base scenario, the DB Group model uses external survey-based macroeconomic forecasts (e.g.
+consensus views on GDP and unemployment rates). In addition, DB Group’s scenario expansion model, which
+has been initially developed for stress testing, is used for forecasting macroeconomic variables that are not
+covered by external consensus data. All forecasts are assumed to reflect the most likely development of the
+respective variables and are updated at least once per quarter.
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 37
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1.
+
+ACCOUNTING POLICIES (continued)
+
+(m) Impairment (continued)
+
+¢ — Statistical techniques are then applied to transform the base scenario into a scenario analysis covering an infinite
+number of scenarios, defined by probability distributions of the macroeconomic variables. These scenarios
+specify deviations from the baseline forecasts. The scenario distribution is then used for deriving multi-year PD
+curves for different rating and counterparty classes, which are applied in the ECL calculation and in the
+identification of significant deterioration in credit quality of financial assets as described above in the rating-
+related Stage 2 indicators.
+
+The general use of forward-looking information, including macroeconomic factors, as well as adjustments taking into
+account extraordinary factors (e.g. COVID-19), are monitored by DB Group's Risk and Finance Credit Loss Provision
+Forum. At a minimum, DB Group updates its forecasts for macroeconomic factors on a quarterly basis and reviews aspects
+of potential model imprecision (e.g. MEV parameters outside the historic range used for model calibration, if not already
+included in the model) as part of an MEV monitoring framework to assess the necessity of corrective measures in the form
+of overlays.
+
+DB Group's overlay methodology introduced in 2021 focusses on individual extreme MEV movements in the context of
+specific methodological assumptions and limitations. A quantitative test procedure involves the calculation of ratios
+between (a) scenario projections from the consensus forecast and (b) historical maximum MEV movements to identify
+single MEVs outside of historical ranges. DB Group’s approach to reflect macroeconomic variables in the calculation of
+the ECL estimate is to incorporate forecasts for the next two years, using eight discrete quarterly observations. After the
+period of eight quarters, DB Group constructs forecasts based on macroeconomic variables and their historic trends.
+
+As reported in Notes 9 and 15 the Company has total ECL provisions at 31 December 2021 of £408k (2020: £499k),
+representing a release to Profit and Loss of £91k in 2021 (2020: £78k). This provision for credit losses in 2021 and the
+reduction versus the year ended 2020 has been driven by a benign credit environment, strong recovery of main economies
+after easing of COVID-19 related restrictions and a positive outlook based on improved macroeconomic parameters.
+
+DB Group has applied various management overlays to the ECL model, used to calculate the Company’s ECL provisions,
+both in 2021 and 2020 to address the downside risks related to COVID-19, but also to address potential model imprecisions
+driven by a high volatility in MEV'’s. The Company has considered whether additional overlays are required to its ECL
+figures on a standalone basis and concluded that given the nature of the IPB UK lending portfolio with low loan to value
+ratios and personal guarantees the level of provisions calculated by the DB Group ECL engine is appropriate and no
+overlays are required.
+
+Model! sensitivity
+
+There are two main sources of ECL volatility for Stage 1 and 2 assets. Firstly, changes to the portfolio composition, the
+exposure profile or counterparty ratings, which are particularly important due to potential implications on stage
+determination, influence the level of ECL, and thus the level of the Company's Credit Loss Allowance.
+
+Secondly, in addition to portfolio changes, ECL is also impacted by macroeconomic forecasts. For the Company's IPB UK
+portfolio the main macroeconomic variables used in the DB Group model to calculate ECL are unemployment and equity
+prices using US indicators. The impact on the ECL for the Company of a downward and upward shift in these variables.
+for the IPB UK portfolio, is shown below using upward shifts of a 0.5% fall in unemployment and an increase in equity
+prices of 10% and downward shifts of a 0.5% increase in unemployment and a 10% fall in equity prices. The impact on
+ECL, calculated on balances with DB Group, is also shown below based on the percentage downward and upward shift in
+ECL, calculated for DB Group for Financial Institutions Europe, using macroeconomic variables, including GDP,
+unemployment and equity prices, determined at a DB Group level.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 38
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+(m) Impairment (continued)
+
+IFRS 9 — Sensitivities of Forward Looking Information applied to Stage 1 and Stage 2 compared to ECL
+
+At 31 December 2021:
+
+£000
+
+Downward shift ECL Upward shift
+IPB UK 188 156 150
+DB Group /non IPB UK external? 318 252 139
+Total 506 408 289
+
+At 31 December 2020:
+
+£000
+
+Downward shift ECL Upward shift
+IPB UK 305 210 151
+DB Group 300 289 281
+Total 605 499 432
+
+Definition of default
+
+Exposures are considered to be in default if the Company considers that the obligor is unlikely to pay its credit obligations
+to the Company. Determination may include forbearance actions, where a concession has been granted to the borrower
+or economic or legal reasons that are qualitative indicators of credit impairment, or where contractual payments of either
+principal or interest by the obligor are past due by more than 90 days.
+
+Write offs
+
+The Company reduces the gross carrying amount of a Financial Asset when there is no reasonable expectation of recovery.
+Write-offs can relate to a Financial Assets in its entirety, or a portion of it, and constitute a derecognition event. The
+Company considers all relevant information in making this determination, including but not limited to:
+
+* Foreclosure actions taken by the Company which have not been successful or have a high probability of not being
+successful;
+
+« Collateral liquidation which has not or will not lead to further considerable recoveries; and
+
+« Situations where no further recoveries are reasonably expected.
+
+Write offs can take place before legal actions against the borrower to recover the debt have been concluded, and a write-
+off does not involve the Company forfeiting its legal right to recover the debt.
+
+Simplified Approach
+
+The Company does not measure any assets using the simplified approach permitted in accordance with IFRS 9 and does
+not make use of any of the exemptions permitted by IFRS 9.
+
+> ECL on non IPB UK external balances is £6k of the £252k shown.
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 39
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1.
+
+ACCOUNTING POLICIES (continued)
+
+(n) Revenue recognition
+
+The Company applies IFRS 15 ‘Revenue from Contracts with Customers' revenue recognition five-step business model to
+the recognition of commissions and fees, under which income must be recognised when control of goods and services is
+transferred, hence when the contractual performance obligations to the customer has been satisfied.
+
+After a contract with a customer has been identified in the first step, the performance obligation — or a series of distinct
+performance obligations — to the customer is identified in the second step. The Company must examine whether the service
+is capable of being distinct and is actually distinct within the context of the contract. A promised service is distinct if the
+customer can benefit from the service either on its own or together with other resources that are readily available to the
+customer, and the promise to transfer the service to the customer is separately identifiable from other promises in the
+contract.
+
+The amount of income is measured on the basis of the contractually agreed transaction price for the performance obligation
+defined in the contract. If a contract includes variable consideration, the Company estimates the amount of consideration
+to which the Company will be entitled in exchange for transferring the promised goods or services to a customer. Income
+is not recognized in the Profit and Loss Account until the identified performance obligation has been satisfied.
+
+The Company earns fees on various IPB UK activities provided for clients as follows:
+
+e Advisory fees for provision of investment advice;
+
+e Brokerage and transaction fees for transactions in investments on behalf of clients;
+
+e Custody fees for provision of custody services charged as a percentage of assets held as custodian;
+
+e Investment management fees for management of client assets in dedicated portfolios. The fees charged depend
+on the type of mandate given and whether this is discretionary or advisory and are charged as a percentage of
+assets under management;
+
+° Fees received on loans including loan arrangement fees and early termination fees; and
+
+e Fees earned as a revenue share from the Deutsche Bank A.G. Investment Bank or Corporate Bank where
+revenues are the result of a referral by the Company.
+
+The Company accrues and invoices fees in arrears. The Company does not receive performance fees.
+
+Advisory fees, custody fees, transaction fees and investment management fees are accrued monthly and invoiced to
+clients usually on a quarterly basis. Brokerage fees are charged after the service has been provided.
+
+Loan arrangement fees are paid by the client when the loan/facility is granted and amortised over the lifetime of the
+loan/facility. Fees received on loans are considered part of the interest revenue on the loans and accordingly are shown
+within net interest income.
+
+The terms and conditions of IPB UK fees are governed in the client agreement. Advisory, custody and investment
+management services that give rise to fees of variable consideration such that at each reporting date, the Company
+estimates the fee amount to which the entity will be entitled in exchange for transferring the promised services to the
+customer.
+
+Fees are recognised when it is highly probable that a significant reversal in the cumulative amount of revenue recognised
+would not occur if the estimate of the fee is included in the transaction price. The Company updates its estimate of the
+transaction price for the fee at each reporting date. The benefits arising from advisory, custody and investment
+management services are simultaneously received and consumed by the customer over time. The Company recognises .
+revenue over time by measuring the progress towards complete satisfaction. For advisory, custody and investment
+management components, this is the removal of any uncertainty whether it is highly probable that a significant reversal in
+the cumulative amount of revenue recognised would occur or not.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A1 9E-A890646DBF87
+
+DB UK BANK LIMITED 40
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+1. ACCOUNTING POLICIES (continued)
+(n) Revenue recognition (continued)
+
+Fee revenue from commissions is reported on a gross basis. For example, management fees consist of gross management
+fees and other-related fees, including administrative service fees. The total level of management fees depends on the
+client and product mix. Subsequently, all expenses that are incurred on a transaction basis and are directly incurred and
+incremental to the generation of fee income, are presented separately under Fees and commissions payable in the
+Company’s Financial Statements.
+
+(o) Transactions with DB Group companies
+
+The Company enters into various transactions with DB Group companies including placement of capital on deposit, funding
+for IPB UK client lending, placement of IPB UK client deposits received, lending and borrowing with other companies within
+the Company's UK sub-group and payment of and refund of costs incurred. All transactions are entered into on an arms-
+length basis.
+
+(p) Onerous contracts
+
+The definition of an onerous contract for accounting purposes, under IAS 37 ‘Provisions, Contingent Liabilities and
+Contingent Assets’, is a contract under which the costs of meeting the contract will exceed any benefits which flow to the
+entity from the contract. As soon as an entity is aware that a contract is onerous, the full loss should be provided for.
+
+The Company has classified its’ contract with Capita Mortgage Services Limited, whereby the Company pays Capita
+Mortgage Services Limited under its agreement to act as a standby mortgage servicer for loans originated by dbMortgages
+where the legal title has been transferred to Elderbridge Limited, as an onerous contract and as such has provided for the
+full cost of fulfilling this contract until the contract expected end date of 2042 (see Note 25). The present value of the future
+payments under the contract is calculated annually and used to determine the provision required. Up to 2021 the GBP
+LIBOR interest rate was used to calculate the present value of the Company's liability under the contract. Following the
+replacement of LIBOR during 2021 the interest rate used to calculate the present value at 31 December 2021 has been
+changed to SONIA as the replacement for LIBOR.
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 41
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+2, NET INTEREST INCOME
+
+The following are the sources of interest income and interest expense:
+
+2021 2020
+£000 £000
+Interest receivable
+Interest-earning deposits with banks 2,371 3,719
+Loans to customers 12,481 11,833
+Securities purchased under resale agreements 46 750
+14,898 46,302
+Includes:
+Amounts from ultimate parent and fellow group undertakings 2,761 §,097
+Interest payable
+Interest-bearing deposits from banks (4,037) (5,740)
+Interest-bearing deposits from customers (233) (391)
+(4,270) (6,131)
+Includes:
+Amounts from ultimate parent and fellow group undertakings (4,116) (5,678)
+
+Of the interest receivable and payable shown, only loan arrangement fees of £743k, received in respect of loans to
+customers, relate to amounts already received at the previous year end (2020: £629k). Loan arrangement fees are
+received when loans are originated and amortised over the life of each loan. Amounts received and not yet taken to
+Profit and Loss at year end are shown in loans and advances to customers (Note 14).
+
+The amounts shown all relate to financial assets and financial liabilities measured on an amortised cost basis.
+
+DocuSign Envelope !D: EDCOF372-C141-4BD7-A19E-A890646DBF 87 oe
+
+DB UK BANK LIMITED 42
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+3. FEES AND COMMISSIONS RECEIVABLE AND PAYABLE
+
+2021 2020
+£000 £000
+Fees and commissions receivable:
+Advisory fees 474 481
+Brokerage and transaction fees 628 710
+Custody fees 964 853
+Management fees 2,492 2,532
+One Bank revenue share* 2,647 697
+7,205 §,273
+Timing of revenue recognition
+Services transferred at a point in time 371 386
+Services transferred over time 6,834 4,887
+7,205 5,273
+Fees and commissions payable:
+Brokerage and transaction fees (276) (261)
+Custody fees (222) (232)
+Fiduciary activities (18) (15)
+Management fees (432) (429)
+(948) (937)
+Net fees and commissions receivable and payable 6,257 4,336
+
+None of the income shown relates to amounts received in prior years (2020: Enil) and no income shown relates to
+performance obligations satisfied in previous years or to future performance obligations. No expenses shown relate
+to amounts accrued as at the previous year end (2020: Enil).
+
+* Represents revenue share from Deutsche Bank A.G. Investment Bank or Corporate Bank where revenues are the result of a referral by the
+Company.
+DocuSign Envelope 1D: EDCOF372-C 141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 43
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+4. DERIVATIVES (LOSS)/GAIN
+
+2021 2020
+£000 £000
+Unrealised gain on FX derivatives with clients - 4
+Unrealised (loss) on FX derivatives with group companies - (2)
+Realised gain/(loss) on FX derivatives with clients (5) 1
+Realised gain/(loss) on FX derivatives with group companies 4 (1)
+(1) 2
+
+5. OTHER OPERATING INCOME
+2021 2020
+£000 £000
+Recharges to ultimate parent and fellow group undertakings 6,422 7,439
+Other 2 94
+6,424 7,833
+
+6. ADMINISTRATIVE EXPENSES
+2021 2020
+£000 £000
+Staff costs (Note 10) (18,004) (18,094)
+Professional service fees (902) (195)
+Charges from ultimate parent and fellow group undertakings (8,821) (11,832)
+Other direct costs (4,669) (2,589)
+_ (32,396) (32,710)
+
+All employees are employed by a fellow group undertaking.
+
+The charges from ultimate parent and fellow group undertakings relate to costs incurred by other DB Group
+companies on behalf of the Company which are recharged to the Company. The cost amounts recharged by the
+Company to other DB Group companies are shown in Other Operating Income (Note 5).
+
+Auditor's remuneration for the audit of the Company’s Annual Financial Statements has been borne and paid by
+another DB Group undertaking and has not been recharged to the Company.
+
+2021 2020
+Auditor's remuneration: £000 | £000
+Fees payable to the Company’s Auditor for the audit of the (165) (140)
+Company's Annual Financial Statements (before VAT)
+Fees payable to the Company's Auditor for other services - Audit
+related assurance services (before VAT) (175) (175)
+(340) (315)
+
+In addition to the accrued audit fee of £140k for 2020, a further £65k was agreed post year end for scope changes.
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 44
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+7. DEPRECIATION AND AMORTISATION
+
+2021 2020
+
+£000 £000
+
+Amortisation of intangible fixed assets (Note 20) (669) (2,995)
+Impairment of intangible fixed assets (Note 20) (660) -
+(1,329) (2,995)
+
+8. OTHER OPERATING CHARGES
+
+2021 2020
+
+£000 £000
+
+Operational losses (37) (31)
+
+Operational losses include amounts payable to clients as goodwill payments and compensation.
+
+9. IMPAIRMENT ON FINANCIAL INSTRUMENTS
+
+2021 2020
+
+£000 £000
+
+Release of provisions for impairment on balance sheet (Note 15) 110 78
+(Increase) in provisions for impairment off balance sheet (Note 15) (19) -
+91 78
+
+Three assets amounting £15,793k (2020: one asset £7,298k) are classified as in defauit (IFRS 9 Stage 3). No
+provisions are considered necessary for these assets due to the value of collateral held and expected future cash
+flows (2020: £nil). Four (2020: three) assets amounting to £19,508k (2020: £20,081k) are deemed to have been
+subject to significant credit deterioration since origination but not in default (IFRS 9 Stage 2).
+
+DocuSign Envelope !D: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED , 45
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+10. STAFF COSTS AND DIRECTORS’ EMOLUMENTS, TRANSACTIONS AND INTERESTS
+
+(a) Staff costs
+
+2021 2020
+
+£000 £000
+
+Salaries and other remuneration (14,824) (14,429)
+Social security costs (2,482) (2,334)
+Other pension costs (698) (1,331)
+(18,004) _ (18,094)
+
+Other pension costs relate to defined contribution and defined benefit schemes.
+
+The average monthly number of employees during the year was made up as follows:
+
+2021 2020
+Number Number —
+Client advisors ; 45 46
+Management , 23 9
+Operations 11 16
+79 71
+(b) Directors’ emoluments
+All directors are paid by a fellow group undertaking.
+
+2021 2020
+
+£000 £000
+
+Directors’ emoluments (834) (791)
+Amounts receivable under long term schemes (82) (67)
+(916) (858)
+
+Company contributions to money purchase pension schemes 10 a)
+
+During the year, two (2020: three) Directors received DB Group shares or payments under long term incentive
+schemes totalling £82,597 (2020: £67,298).
+
+The aggregate of the highest paid Director's emoluments and amounts receivable under long term incentive schemes
+was £607,171 (2020: £574,309) and the pension contributions were Enil (2020; £nil).
+
+2021 2020
+Number Number
+Retirement benefits are accruing to the following number of Directors
+under:
+Defined benefit schemes 1 0
+
+Money purchase schemes
+
+No Directors exercised any share options under long term incentive schemes.
+(c) Transactions
+
+There were no amounts outstanding to the Directors of the Company at 31 December 2021 (2020: £nil) or at any
+point during the year ended 31 December 2021. In this instance, the term Directors also covers individuals connected
+to directors as defined by Section 252 of the Companies Act, 2006.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A1 SE-A890646DBF 87
+
+DB UK BANK LIMITED 46
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+10. STAFF COSTS AND DIRECTORS’ EMOLUMENTS, TRANSACTIONS AND INTERESTS (continued)
+(d) Interests
+
+Other than as disclosed above, none of the Directors had any other disclosabie interest in the shares or debentures
+of any DB Group undertaking at the end of the year or were granted or exercised any right to subscribe for shares in,
+or debentures of, any DB Group undertaking during the year.
+
+11. TAXATION ON LOSS ON ORDINARY ACTIVITIES
+
+2021 2020
+£000 £000
+Taxation is based on the Loss for the year and comprises:
+Current taxation:
+Group relief credit for the year 2,890 2,480
+Adjustment in respect of prior years (9) (509)
+Total current tax 2,881 1,971
+Deferred taxation (Note 26)
+Origination and reversal of temporary differences 20 220
+Effect of tax rate change 118 2
+Adjustment in respect of prior years (32) 456
+106 678
+Tax credit on loss on ordinary activities 2,987 2,649
+
+The standard rate of tax for the year is 27% (2020 - 27%) based on the UK standard rate of corporation tax of 19%
+and the bank corporation tax surcharge rate of 8%.
+
+The actual tax credit for the year differs from the standard rate for the reasons set out in the following reconciliation.
+
+2021 2020
+£000 £000
+
+Taxation is based on the Loss for the year and comprises:
+Loss on ordinary activities before taxation (10,435) (13,627)
+Tax credit on loss on ordinary activities at 27% 2,817 3,679
+Tax-exempt income 4 43
+Non-deductible expense (51) (3)
+Effect of tax rate change 118 2
+Adjustment in respect of share-based compensation 140 25
+Losses not paid for at corporation tax bank surcharge of 8% - (1,044)
+Adjustments relating to prior years (41) (53)
+Total tax credit 2,987 2,649
+
+Tax credit on loss on ordinary activities 2,987 2,649
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 47
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+11. TAXATION ON PROFIT AND LOSS ON ORDINARY ACTIVITIES (continued)
+
+In the Budget on 3 March 2021, the Government announced an increase in the main corporation tax rate to 25% from
+1 April 2023. Substantive enactment took place on 24 May 2021. This will increase the company's future current tax
+charge and deferred tax liability accordingly.
+
+In the Budget on 3 March 2021, the Government announced that the bank corporation tax surcharge would be placed
+under review. Substantive enactment of a reduction in the bank corporation tax surcharge rate from 8% to 3%,
+effective from 1 Apri) 2023, took place on 2 February 2022. This will reduce the Company's future current tax charge
+and deferred tax liability accordingly.
+
+The deferred tax liability at 31 December 2021 has been calculated based on the rates in the periods in which the
+assets are expected to be realised or liabilities expected to be settled, and which are substantively enacted rates at
+the balance sheet date.
+
+12, CASH AND BALANCES AT BANKS
+
+2021 2020
+
+£000 £000
+
+Cash and balances at bank held with group undertakings 11,451 24,745
+Cash and balances at bank held with external undertakings 6,112 10,621
+Provisions for impairment (Note 15) (9) (25)
+17,554 35,341
+
+£3k of balance sheet assets related to cash and balances at banks have been written off during 2021 (2020: Enil),
+
+13. LOANS AND ADVANCES TO BANKS
+
+2021 2020
+
+£000 £000
+
+Repayable on demand 189,311 126,426
+
+Up to1 month | 220,780 243,560
+Between 1 and 3 months 559,084 404,504 -
+
+Between 3 and 6 months 15,107 15,057
+
+Between 6 and 9 months 2,191 1,098
+
+Between 9 months and 1 year 4,001 4,891
+
+Provisions for impairment (Note 15) (210) (194)
+
+987,264 795,342
+
+Amounts include:
+Due from ultimate parent and fellow group undertakings 987,264 795,342
+
+Included within the total balance are reverse repurchase agreements amounting to £251m (2020: £245m). The fair
+value of collateral accepted against these financial assets at 31 December 2021 amounted to £253m (2020: £267m).
+The securities held as collateral - UK Gilts, International Organisations, German Government and Public sector
+securities - were not reported on the Company's Balance Sheet.
+
+[No amounts related to loans and advances to banks have been written off during 2021 (2020: £nil).
+
+DocuSign Envelope ID: EODCOF372-C141-4BD7-A19E-A890646DBF 87 ; ‘oor
+
+DB UK BANK LIMITED 48
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+14. LOANS AND ADVANCES TO CUSTOMERS
+
+2021 2020
+£000 £000
+Repayable on demand 626 364
+Up to 1 month 74,882 79,204
+Between 1 and 3 months 78,992 61,162
+Between 3 and 6 months 107,105 77
+Between 6 and 9 months 97 15,300
+Between 9 months and 1 year 4,097 51,902
+Between 1 year and 5 years 372,425 376,287
+Loan arrangement fees deferred (839) (984)
+Provisions for impairment (Note 15) (159) (238)
+, 637,226 583,074
+Amounts include:
+Due from ultimate parent and fellow group undertakings 77,517 79,965
+The following sector concentrations net of provisions are considered
+significant:
+
+IPB UK clients 559,709 503,109
+
+At 31 December 2021 loans to IPB UK clients were collateralised with a total collateral value of £1.1bn (2020: £1.0bn),
+86% (2020: 91%) of which were collateralised with property collateral. The average loan to value ratio was 61%
+(2020: 57%) (Note 30).
+
+Loan arrangement fees deferred are received from IPB UK clients when loans are originated and amortised over the
+life of each loan.
+
+No amounts related to loans and advances to customers have been written off during 2021 (2020: Enil).
+
+15. PROVISIONS FOR IMPAIRMENT ON FINANCIAL INSTRUMENTS
+
+Overview of financial assets subject to impairment by IFRS 9 Stage:
+
+Stage 1 Stage 2 Stage 3 Total
+£000 £000 £000 £000
+
+Amortised cost® For the year ended 31 December 2021
+Carried forward 1,403,988 20,081 7,298 1,431,367
+Transfer from Stage 1 to Stage 2 (14,612) 14,612 - -
+Transfer from Stage 1 to Stage 3 (1,698) - 1,698 -
+Transfer from Stage 2 to Stage 3 - (6,993) 6,993 -
+Increase in Stage 3 loan® - - 363 363
+Repayment of Stage 2/3 loans - (8,194) (427) (8,621)
+Net Increase in loans to banks 191,940 - - 191,940
+Net Increase in loans to customers 64,809 - - 64,809
+Other balance changes (17,447) 2 (132) (17,577)
+Total assets in scope 1,626,980 19,508 15,793 1,662,281
+Provisions for impairment 396 12 : 408
+
+’ § With the exception of other balance changes, amounts shown relate to principal amounts
+5 As a result of capitalisation of unpaid interest
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANKLIMITED 49
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+15. PROVISIONS FOR IMPAIRMENT ON FINANCIAL INSTRUMENTS (continued)
+
+Stage 1 Stage 2 Stage 3 Total
+£000 £000 £000 £000
+
+Amortised cost For the year ended 31 December 2020
+Carried forward 1,278,840 7,174 16,582 1,302,596
+Transfer from Stage 1 to Stage 2 (13,088) 13,088 - -
+Transfer from Stage 2 to Stage 14 181 (181) - -
+Transfer from Stage 3 to Stage 1 3,958 - (3,558) -
+Increase in Stage 3 loan - - 138 138
+Stage 3 loan repaid - - (5,864) (5,864)
+Other balance changes 134,497 - - 134,497
+Total assets in scope 1,403,988 20,081 7,298 1,431,367
+Provisions for impairment 445 54 0 499
+
+Provisions for impairment are shown under the following categories:
+
+2021 2020
+£000 ~ £000
+
+On balance sheet financial assets
+Cash and balances at banks (Note 12) 9 25
+Loans and advances to banks (Note 13) 210 194
+Loans and advances to customers ~ fellow group undertakings (Note 14) 22 28
+Loans and advances to customers ~ external (Note 14) 137 210
+Other assets (Note 17) 11 42
+
+Off balance sheet commitments
+
+Other liabilities (Note 23) 19 -
+408 499
+
+During the year provisions have remained largely stable reducing slightly as economic conditions have improved.
+The collateralised nature of the external assets with conservative loan to value ratios results in a low level of
+provisions required.
+
+The movement in provisions for impairment during the year were as follows:
+
+12-month Lifetime Lifetime
+
+ECL ECL ECL
+Stage 1 Stage 2 Stage 3 Total
+£000 £000 £000 £000
+
+For the year ended 31 December 2021
+
+At 1 January 2021 445 54 - 499
+Net (reduction) in on balance sheet provisions (Note 9) (68) (42) - (110)
+Net increase in off balance sheet provisions (Note 9) 19 - - 19
+At 31 December 2021 396 12 - 408
+
+For the year ended 31 December 2020
+
+At 1 January 2020 560 4 13 577
+Net increase/(reduction) in on balance sheet provisions (115) 50 (13) (78)
+(Note 9)
+
+At 31 December 2020 445 54 oe 499
+
+Amounts shown above are from a Balance Sheet perspective and can be cross-referenced to the Profit and Loss
+Account in Note 9.
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87 pe
+
+DB UK BANK LIMITED - 50
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+15, PROVISIONS FOR IMPAIRMENT ON FINANCIAL INSTRUMENTS (continued)
+
+At 31 December 2021 the Company did not hold any assets that were credit impaired at the time of origination or
+purchase (2020: Enil). Three assets amounting to £15,793k (2020: one asset £7,298k) shown in loans and advances
+to customers, met the criteria to be included in Stage 3 as in default. No provision is considered necessary for these
+assets due to the value of collateral held (2020: £nil). Four assets (2020: three) amounting to £19,508k (2020:
+£20,081k) met the criteria to be included in Stage 2. All other assets in scope for IFRS 9 met the criteria to be included
+in Stage 1 for the purposes of the impairment calculation.
+
+16. DERIVATIVES
+
+Foreign exchange derivatives are transacted with clients with the Company entering into matching back-to-back
+contracts with DB Group companies (Note 30).
+
+2021 2020
+Notional Notional
+amounts Assets Liabilities amounts Assets Liabilities
+£000 £000 £000 £000 £000 £000
+Currency swaps : : - 3,902 5 4
+17. OTHER ASSETS
+2021 2020
+£000 £000
+Amounts owed by fellow group undertakings 14,982 11,685
+Other 1,995 2,508
+Provisions for impairment (Note 15) (11) (42)
+16,966 14,151
+
+The Company has not recognised any assets from the costs to obtain or fulfil contracts with customers.
+
+Amounts owed by fellow group undertakings relate to cost recharges and other liabilities. Cost recharges are where
+costs are incurred by the Company on behalf of other DB Group companies and are recharged by the Company.
+These amounts are payable on request and are normally settled within one year. No interest is charged on the
+amounts outstanding.
+
+No amounts related to other assets have been written off during 2021 (2020: £nii).
+
+18. GROUP RELIEF
+2021 2020
+
+£000 £000
+Payment for group relief due from other group companies 2,882 1,971
+
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 51
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+19. TANGIBLE FIXED ASSETS
+Freehold Leasehold Computer
+land and improve- equip-
+buildings ments ment Total
+Cost or valuation £000 £000 £000 £000
+Historical cost 764 23,371 - 24,135
+Revaluation 9,576 - - 9,576
+At 1 January 2021 10,340 23,371 33,711
+Additions - - 2
+At 31 December 2021 10,340 23,374 2 33,713
+Accumulated depreciation and impairment
+At 1 January 2021 - 23,371 - 23,371
+At 31 December 2021 - 23,371 - 23,371
+Net book value at 31 December 2021 10,340 - 2 10,342
+Net book value at 31 December 2020 10,340 - - 10,340
+Historical cost at 31 December 2021 764
+Historical cost at 31 December 2020 764
+
+In December 2021 the Company completed a forward sale of its freehold land and buildings for a consideration of
+market value being £10,350k plus VAT. The forward sale will complete between September and December 2023.
+
+An independent external valuation of the freehold land and buildings carried out by a Valuer, qualified for the purpose
+_ of the valuation, at 17 November 2020, gave a valuation of £10,340k. The total revaluation gain, since acquisition, on
+the freehold land and buildings amounts to £9,576k, with deferred tax of £3,019k, adjusted in 2021 for the impact of
+
+changes to the tax rate, (2020: £2,585k), giving a total Revaluation Reserve of £6,557k (2020: £6,99 1k).
+
+The totai of Freehold land and buildings is assumed to be Level 2 instruments.
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87 eal
+
+DB UK BANK LIMITED / 52
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+20. INTANGIBLE FIXED ASSETS
+
+2021 2020
+£000 £000
+Software:
+Cost at 1 January 20,188 18,206
+Additions 1,564 1,476
+Software under construction 693 506
+Impairment (Note 7) . (660) -
+21,785 20,188
+Accumulated amortisation:
+At 1 January 15,179 12,184
+Charge for the year (Note 7) 669 2,995
+15,848 15,179
+Net book value at 31 December §,937 5,009
+
+Software additions/under construction in 2021 and 2020 relate to the capitalisation of IPB UK technology platform
+upgrade costs in support of the business expansion strategy.
+
+Capitalised software is reviewed and assessed for impairment on a quarterly basis. Reviews performed in 2021
+provided evidence of impairment for some assets and these have been written down during the year. The average
+remaining useful life of the unamortised amount at 31 December 2021 is 8.2 years (2020: 6.7 years).
+
+21. DEPOSITS BY BANKS
+
+2021 2020
+
+£000 £000
+
+Repayable on demand 94,049 70,044
+Up to one month 75,588 77,257
+Between 1 and 3 months 97,727 50,587
+Between 3 and 6 months 107,105 -
+Between 6 and 9 months 97 40,729
+Between 9 months and 1 year 4,097 26,566
+Between 1 year and 5 years 372,425 370,894
+751,088 636,077
+
+Amounts include: .
+Due to ultimate parent and fellow group undertakings 761,088 636,077
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 53
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+22. CUSTOMER ACCOUNTS
+
+2021 2020
+£000 £000
+Repayable on demand 128,644 100,373
+Up to one month 15,219 39,529
+Between 1 and 3 months 127,719 919
+Between 3 and 6 months 15,106 15,055
+Between 6 and 9 months , 2,188 1,099
+Between 9 months and 1 year 1,001 , 4,892
+289,877 161,867
+
+Amounts include:
+Due to fellow group undertakings 19,136 20,484
+External 270,741 141,383
+289,877 161,867
+
+23. OTHER LIABILITIES
+
+2021 2020
+£000 £000
+Amounts owed to fellow group undertakings 19,675 21,928
+ECL. on off balance sheet commitments 19 -
+Other 1,563 511
+21,267 23,439
+
+Amounts owed to fellow group undertakings relate to cost recharges and other liabilities. Cost recharges are where
+costs are incurred by DB Group companies on behalf of the Company and are recharged to the Company. These
+amounts are payable on request and are usually settled within one year. No interest is charged on the amounts
+outstanding.
+
+24. ACCRUALS AND DEFERRED INCOME
+
+2021 2020
+£000 £000
+Compensation-related provisions 5,087 5,576
+Other deferred income , 1,025 - 243
+Accruals for business operations 185 258
+
+6,297 6,077
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87 ”
+
+DB UK BANK LIMITED 54
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+25. PROVISIONS FOR LIABILITIES
+
+Litigation Onerous Other
+
+and claims contract provisions Total
+
+£000 £000 £000 £000
+
+At 1 January 2021 546 1,139 847 2,532
+Payments and releases (73) (55) (847) (975)
+Other - (86) - (86)
+At 31 December 2021 473 998 - 1,471
+At 1 January 2020 640 1,077 801 2,518
+Payments and releases (94) (38) - (132)
+Foreign exchange translation ~ - 46 46
+Other - 100 - 100
+At 31 December 2020 546 1,139 847 2,532
+
+Litigation and claims represent provisions for claims in relation to the dbMortgages business. In December 2010, a
+redress programme was launched by the Company, in relation to this business, inviting customers to claim redress
+where lending decisions had been approved without adequate evidence of affordability. In December 2014, eligibility
+to claim such redress under the programme expired and the Company does not expect to recognise any additional
+claims in future. The amount provided is reviewed annually.
+
+In 2016, the dbMortgages business sold the majority of its remaining loans to Elderbridge Limited, a wholly owned
+subsidiary of Target Group Limited. As part of the sale process a backup servicer arrangement was put in place with
+Capita Mortgage Services Limited to provide a backup, in the event that Target Group Limited are unable to service
+the joans at any time in the future, until the loans are repaid or reach maturity. The Onerous contract provision
+represents the remaining amount due to Capita Mortgage Services Limited for providing this arrangement. The annual
+payment to Capita Mortgage Services Limited is £54.5k up to the maturity of the last loan in 2042. Payments and
+releases represent the net of the annual payment and interest and Other represents the change in the discounted
+present value of the future liability. Uncertainty exists as to the length of time for which the backup servicer
+arrangement will be required. If the arrangement is not needed until 2042 this would impact the level of the release
+required to the Profit and Loss Account.
+
+Other provisions relate to provisions for the possible non-collection of Swiss withholding tax following a court decision
+in 2015. A decision was taken during 2021 to abandon this claim on the grounds that it has become clear from recent
+Swiss Court decisions that it is very unlikely that the Swiss Tax Authorities will agree to pay this amount in the future.
+The asset representing this claim together with the 100% provision against the claim have therefore been written off.
+
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 55
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+26. DEFERRED TAX LIABILITIES
+
+2021 2020
+£000 £000
+
+Deferred Taxation (asset/liability)
+
+Balance at 1 January ; 1,778 2,139
+Prior year adjustment 32 (456)
+Profit and loss account (20) (220)
+Reserve movements 434 317
+Effect of tax rate change (118) (2)
+
+Balance at 31 December 2,106 1,778
+
+The above balance comprises:
+
+Tangible fixed assets (163) (170)
+Deferred IFRS 9 opening reserve adjustment 6 6
+Deferred compensation (756) (643)
+Property revaluation reserve 3,019 2,585
+2,106 1,778
+27, CALLED UP SHARE CAPITAL
+2021 2020
+No ‘000 No '000
+Authorised:
+Ordinary shares of £1 each 400,000 400,000
+Allotted, called up and fully paid:
+
+Ordinary shares of £1 each 385,000 385,000
+2021 2020
+£000 £000
+
+Authorised: ;
+
+Ordinary shares of £1 each 400,000 400,000
+Allotted, called up and fully paid:
+
+Ordinary shares of £1 each 385,000 385,000
+
+The holders of ordinary shares are entitled to receive dividends as declared from time to time and entitled to one
+vote per share.
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+56
+
+28. SUPPLEMENTARY INFORMATION
+
+(a) Assets and liabilities denominated in foreign currencies
+
+Assets
+
+Denominated in sterling
+
+Denominated in currencies other than sterling
+Total assets
+
+Liabilities
+
+Denominated in sterling
+
+Denominated in currencies other than sterling
+Total liabilities
+
+(b) Measurement of financial assets and liabilities
+
+2021 2020
+£000 £000
+1,497,095 1,323,088
+181,076 122,145
+1,678,171 1,445,233
+893,338 705,957
+178,758 124,817
+1,072,096 830,774
+
+The financial assets and liabilities, excluding assets and liabilities from derivative contracts, held at31 December 2021
+
+and at 31 December 2020, were measured at amortised cost.
+
+Note 30(f) contains a split of financial assets and liabilities by maturity. At 31 December 2021 there were no open
+derivative contracts. Assets and liabilities from derivative contracts were measured at fair value at 31 December 2020.
+The Company does not have any other assets or liabilities which are measured at fair value (2020: Enil).
+
+29. CONTINGENT LIABILITIES AND COMMITMENTS
+
+At 31 December 2021, the Company had financial commitments in the form of undrawn loan commitments in respect
+of lending to IPB UK customers amounting to £88,716k (2020: Enil). The Company had no outstanding contingent
+
+liabilities or guarantees and no other financial commitments (2020: £nil).
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED | . 57
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+30. RISK REPORT
+
+a)
+
+The DB Group risk management framework focuses on financial risks (Credit, Market and Liquidity), non-financial
+risks (including Operational) and Climate risk. The Company relies on DB Group policies and systems for all risk
+management. Credit risk represents the principal risk for the Company.
+
+Credit Risk and connected Concentration Risk
+
+Credit risk is the risk of financial loss if a counterparty fails to meet its contractual obligations, and arises principally
+from loans and advances to IPB UK clients and to the DB Group. The analysis in this section is focused on credit risk
+to IPB UK clients. Exposure to DB Group is monitored on a daily basis against Board risk appetite and PRA limits. It
+mainly comprises exposure to Deutsche Bank A.G. and to the Company's ultimate UK parent and is not considered
+as a material source of credit risk for the Company.
+
+As well as counterparty credit risk, this section also includes residual risk; the risks that may remain after mitigation
+is applied.
+
+While the risk of principal losses due to exposure to lending secured on Prime Central London property is a risk for
+the Company, it is considered well mitigated with collateral, with loan to value ratios typically less than 70% and
+residual credit risk limited by provision of personal guarantees. The focus on Prime Central London poses a
+concentration risk which is monitored (see (i) below).
+
+The IPB UK loan book is largely floating-rate and hence exposed to likely future interest rate rises in the UK. This is
+of limited concern for IPB UK due to the additional capital resources of the borrowers.
+
+Mitigation
+
+Management takes into account the overall financial standing of a client in the IPB UK business against strict lending
+limits through a thorough client review process and combines collateral and personal guarantees backed by other
+largely uncorrelated but visible sources of wealth. Metrics such as overdue credit reviews and loan to value levels
+are monitored.
+
+(i) Credit Risk Exposure
+
+The table below presents the credit exposure to clients of the {PB UK business, calculated as the total of loans and
+accrued interest split by type of collateral (before offset of collateral and impairment provisions):
+
+2021 2020
+
+£000 £000
+
+Structured lending secured on real estate 278,342 - 275,936
+Regulated mortgage lending 240,656 185,478 -
+
+Lombard lending 37,037 42,783
+
+Overdrafts/unsecured 4,650 106
+
+560,685 504,303
+
+At 31 December 2021 99.2% (2020: 99.9%) of exposures were collateralised with a total collateral value of £1.1bn
+(2020: £1.0bn), 86% (2020: 91%) of which were collateralised with property collateral. Of the property collateral
+£574m (2020: £673m) is made up of Prime Central London property. The average loan to value ratio was 61% (2020:
+57%) (Note 30(i)).
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 58
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+30. RISK REPORT (continued)
+a) Credit Risk and connected Concentration Risk (continued)
+(ii) Derivatives
+
+During the year the Company entered into foreign exchange derivative contracts with clients. Contracts with clients
+are fully collateralised with cash and securities. There were no open contracts and no collateral market at 31 December
+2021 (2020: £4.9m). Derivative contracts open at 31 December, are as follows:
+
+2021 2020
+£000 £000
+
+Foreign exchange derivatives:
+Notional - 3,902
+Mark to market value asset - 5
+Mark to market value liability - (4).
+
+(iii) Credit Quality
+
+The credit quality of assets is reported to, and monitored by, the Company's BRAC. The balance sheet amounts for
+IPB UK loans to customers including accrued interest, categorised by credit quality at 31 December are presented
+below. The amounts are stated before the offset of collateral.
+
+The credit ratings in the table below reflect the probability of default. The internal ratings are aligned and comparable
+to the rating scales used by external ratings agencies such as Standard & Poors and Fitch.
+
+At 31 December 2021 three (2020: one) IPB UK customers with amounts outstanding totalling £15,793k (2020.
+7,298k) are considered to be in default. Four (2020: three) IPB UK customers with amounts outstanding amounting
+to £19,508k (2020: £20,081k) are deemed to have been subject to significant credit deterioration since origination
+but not in default. No other IPB UK assets classified as loans to customers are deemed to be subject to significant
+credit deterioration since origination.
+
+2021 2020
+£000 £000
+Credit quality IFRS 9 Stage
+iA to iAAA+ 1 16,263 58,999
+iB- to iBBB+ 1 509,121 417,925 —
+iB- to iBBB+ 2 19,508 20,081
+iC- to iCCC+ 3 15,793 7,298
+560,685 §04,303
+Provisions for impairment (Note 15) (137) (210)
+
+Balance sheet amount 560,548 504,093
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 59
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+30. RISK REPORT (continued)
+
+b)
+
+¢)
+
+Non-Financial Risk
+
+Non-Financial Risk is the risk of direct or indirect loss arising from the Company's processes, personnel, technology
+and infrastructure, and from external factors other than Credit, Market and Liquidity risks. Non-Financial Risk arises
+from all aspects of the Company's operations. Operational Risk is included within Non-Financial Risk.
+
+In addition to DB Group’s Non-Financial Risk Management Framework, the Company implements entity specific
+routines and processes to achieve identification, monitoring, assessment, mitigation, and reporting of non-financial
+risks. Specific activities are undertaken for all UK based legal entities to ensure compliance with local regulations,
+including business continuity and risk appetite. Risks are monitored at the Company’s Operating Council, BRAC and
+the Board with the Operating Council used as an escalation forum to discuss and assess non-financial risks and —
+incidents, recommending and tracking delivery of mitigating actions.
+
+Liquidity risk
+
+The Company manages its liquidity risk across short, medium, and long-term periods through the Liquidity Coverage
+Ratio (“LCR”), Net Stable Funding Ratio ("NSFR"), Company specific Internal stress test and the Funding Matrix.
+Internal risk appetite measures are set by the Board to cover each metric. Regulatory limits apply to LCR, and also
+from 1 January 2022 to NSFR, with Board risk appetite warning and action thresholds set well above the regulatory
+limits.
+
+LCR is a regulatory measure covering the ability of the Company to meet its liabilities over the next 30 days. NSFR
+is a longer-term measure comparing the amount of available stable funding to required stable funding. The Internal
+Stress Test assesses the adequacy of the Company's liquidity resources for an eight-week period. The Funding
+Matrix assesses the structural funding profile in the longer-term time buckets (one year and above). The Company
+monitors these ratios regularly and has maintained a surplus above Board risk appetite for each measure and for
+LCR the regulatory minimum throughout 2021 and 2020.
+
+The primary liquidity risk for the Company is the reliance on OB Group for funding. This is mitigated by the fact that
+majority of external assets are match funded, with client deposits being placed with OB Group and client loans being
+funded by DB Group both on a matched basis, leaving limited refinancing risk for the Company. As the Company
+sources the majority of funding from DB Group, it is not reliant on the external market for funding (the only source of
+external liabilities is a small volume of IPB UK deposits not used for funding purposes).
+
+The liquidity risk metrics at 31 December were as follows:
+
+Warning
+(Board risk
+
+KPI Measure Limit methodology appetite) 2021 2020
+Liquidity Coverage Ratio In line with Board risk appetite
+
+Regulatory minimum = 100% > 165% 459% 499%
+Net Stable Funding Ratio In ine with Board risk appetite
+
+Regulatory minimum from 1 January >114% 244% 229%
+
+2022 = 100%
+Funding Matrix Smallest funding surplus in any time
+
+bucket >£100m £599m £605m
+Company specific stress test | Combined stress scenario
+
+(Severe Deutsche Bank A.G.
+
+Downgrade, and Systemic Market >£70m £291m £317m
+
+stress)
+
+Minimum position in eight-week period.
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87 ae
+
+DB UK BANK LIMITED “60
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+30. RISK REPORT (continued)
+
+d)
+
+e)
+
+Climate change
+
+The Company is reviewing its climate change risk as part of wider DB Group initiatives. The Board have assigned
+responsibility for climate change related financial risks to the Chief Risk Officer of the Company and have assessed
+the risks arising from climate change including potential flooding of property held as collateral and the impact of
+severe weather events. The Board have considered the mitigants available such as property insurance and the
+assessment of flooding risk included in lending decisions. More detail on climate change risk is shown tn the Strategic
+Report.
+
+Market Risk
+
+The Company faces minimal market risk in its day-to-day client activities.
+
+The Company is recharged costs and recharges some of its costs to DB Group companies mainly in Euro. As such it
+is exposed to foreign exchange risk if the EUR to GBP exchange rate fluctuates. It is DB Group policy not to hedge
+against FX currency exposure, but to accept the associated increased costs of dealing in non-sterling currency.
+
+All loans to external clients and deposits from external clients are funded by or placed with DB Group on a matched
+term, currency and interest rate basis and therefore the Company is not exposed to interest rate risk on client activity
+and currency risk is limited to profit and loss on non-GBP contracts. The Company places its capital and reserves
+with DB Group typically on a three-month floating rate basis and therefore is exposed to the impact of interest rate
+movements on the interest earned on its capital. This risk is measured by calculating the impact on profit and loss of
+a change in interest rate either up or down discounted to present value. The net impact of a +/- 1% change in interest
+rates on the Company's Total Comprehensive Income at 31 December 2021 would have been +/- £751k (2020: +/-
+£775k).
+
+Foreign exchange derivative activity is limited to contracts with clients matched with back-to-back contracts with DB
+Group ensuring market risk is minimised.
+
+Maturities of Financial Assets/Liabilities
+
+The table below analyses the gross undiscounted cash flows of the Company's financial assets/liabilities into relevant
+maturity groupings based on the remaining period at balance sheet date to the contractual maturity date. The
+Company’s loans to and deposits from IPB UK clients are placed with DB Group on a matched basis. Mismatches in
+time periods as shown below are mainly related to the placement of the Company's capital on deposit with DB Group.
+
+The gross undiscounted cash flows are calculated as principal plus corresponding interest across expected
+contractual loan maturities.
+
+Over
+
+Financial assets
+
+At 31 December 2021 On Upto 1to3 3 to 6 6to9 9 months 1to5
+Total demand month months months months to 1 year Years years
+£000 £000 £000 £000 £000 £000 £000 £000 £000
+
+Cash and
+
+balances at banks 17,563 17,563 - - - - - -
+
+Loans and
+
+advances to banks 987,921 189,311 220,824 559,437 15,139 2,198 1,012 -
+
+Loans and
+
+advances to
+
+customers 659,025 626 75,626 80,018 109,661 1,984 5,996 385,114
+
+Other assets 16,977 146 - 1,698 - - 14,983 - 150
+
+Group relief 2,882 - - - - - 2,882 -
+
+Total financial
+assets
+
+1,684,368 207,646 296,450 641,153 124,800 4,182 24,873 385,114 150
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANK LIMITED 61
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+30. RISK REPORT (continued)
+f) Maturities of Financial Assets/Liabilities (continued)
+Over
+At 31 December 2020 On Upto1 1to3 3 to6 6to9 9months 1to5 §
+Total demand month months months months  to1 year Years years
+£000 £000 £000 £000 £000 £000 £000 £000 £000
+Cash and
+balances at banks 35,366 35,366 - - - - - - -
+Loans and
+advances to banks 795,721 126,432 243,571 404,628 15,072 1,105 4,913 - -
+Loans and
+advances to
+customers 604,989 298 79,305 61,177 77 15,533 53,010 395,589 -
+Derivatives 5 - - 5 - - - - -
+Other assets 14,193 146 - 2,189 - - 11,685 - 163
+Group relief 1,974 - - - - - 1,971 - -
+Total financial 1,452,245 162,242 322,876 468,009 15,149 16,638 71,579 395,589 163
+Financial liabilities
+At 31 December 2021 On Uptot 1to3 3 to6 6to9 9months 1toS
+Total demand month months months Months to 1 year years
+£000 £000 £000 £000 £000 £000 £000 £000
+Deposits by banks 760,309 94,049 75,891 98,086 108,223 872 4,943 378,245
+Customer accounts 289,987 128,644 15,220 127,801 15,1 19 2,195 1,008 -
+Other liabilities 21,238 - 896 - 20,342 - - -
+Accruals and
+deferred income 6,297 - - 5,087 185 - - 1,025
+Total financial
+rota financia 1,077,831 222,693 92,007 230,974 143,869 3,067 5,951 379,270
+liabilities
+At 31 December 2020 On Upto1 1to3 3 to 6 6to9 9 months 1to5
+Total demand month months months Months to 1 year years
+£000 £000 £000 £000 £000 £000 £000 £000
+Deposits by banks 636,195 70,044 77,258 50,587 - 40,740 26,572 370,994
+Customer accounts 162,207 100,235 39,681 922 15,345 1,105 4,919 -
+Derivatives 4 - - 4 - - - -
+Other liabilities 22,440 - 453 - 21,987 - - -
+Accruals and
+deferred income 6,077 - - 5,576 258 - - 243
+T fi ial
+otal financia 826,923 170,279 117,392 —«57,089 41,845 31,491 371,237
+
+liabilities
+
+37,590
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87 +
+
+DB UK BANK LIMITED 62
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+30. RISK REPORT (continued)
+
+9)
+
+h)
+
+Fair value of Financial Instruments - Methods to determine fair value
+
+These have been categorised under the three levels of the IFRS fair value hierarchy as follows:
+
+Level 1: instruments valued using quoted prices in active markets are instruments where the fair value can be
+determined directly from prices which are quoted in active, liquid markets. These include: government bonds,
+exchange-traded derivatives and equity securities traded on active, liquid exchanges.
+
+Level 2: Where quoted prices are not available, instruments are valued with valuation techniques using directly
+observable market data or with a valuation technique where all the inputs are observable.
+
+Level 3: Where there are no observable market parameters, assumptions are made with regards to the input to the
+valuation technique. Instruments classified in this category have an element which is unobservable and which has a
+significant impact on the fair value. Here, management judgment is required in the selection and application of
+appropriate parameters, assumptions and modelling techniques.
+
+The Company has established internal control procedures over the valuation process to provide assurance over the
+appropriateness of the fair values applied. Where fair value is determined by valuation models, the assumptions and
+techniques used within the models are independently validated by a specialist group. Price and parameter inputs,
+assumptions and valuation adjustments are verified against independent sources and subjected to review. Where
+prices and parameter inputs or assumptions are not observable, the estimate of fair value is subject to procedures to
+assess its reasonableness. Such procedures include assessing the valuations against appropriate proxy instruments,
+other benchmarks, and performing extrapolation techniques. Assessment is made as to whether the valuation
+techniques yield fair value estimates that are reflective of market levels by calibrating the results of the valuation
+models against observable market instruments. These procedures require the application of management judgement.
+
+As at 31 December 2021, the Company has no contracts or assets from derivative contracts (2020: £5k) and no
+liabilities from derivative contracts (2020: £4k) which are measured at fair value. The Company does not have any
+other assets or liabilities which are measured at fair value (2020: Enil).
+
+Fair value versus carrying value of Financial Instruments
+
+The fair values of the Company’s financial assets and liabilities are similar to their carrying values owing to their short-
+term nature. Although the tenor of IPB UK loans can be long-term, interest is received on a quarterly basis and credit
+risk on loans is well mitigated with collateral and residual risk limited by personal guarantees. As such the fair values
+of IPB UK loans are similar to their carrying value. For other assets, group relief and other Jiabilities as these mainly
+mature in less than 1 year the fair value hierarchy is not applicable and hence carrying value approximates to fair
+value.
+
+The fair values disclosed in this note are for disclosure purposes only and do not impact the Financial Statements.
+
+The table below sets out the carrying values, fair values and fair value levelling of the Company's financial assets
+and financial liabilities.
+DocuSign Envelope ID: EDCOF372-C 141-4BD7-A19E-A890646DBF 87
+
+DB UK BANK LIMITED 63
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+30. RISK REPORT (continued)
+
+h) Fair value versus carrying value of Financial Instruments (continued)
+
+Valuation
+technique
+observable
+parameters
+At 31 December 2021 Note Carrying value Fair value (Level 2)
+£000 £000 £000
+Financial assets
+Cash and balances at banks 12 17,554 17,563 17,563
+Loans and advances to banks 13 987 264 987,474 987,474
+Loans and advances to customers 14 637,226 637 385 637,385
+Other assets 17 16,966 16,977 16,977
+Group relief 18 2,882 2,882 2,882
+1,661,892 1,662,281 1,662,281
+Financial liabilities
+Deposits by banks 21 751,088 751,088 751,088
+Customer accounts 22 289,877 289,877 ‘289,877
+Other liabilities 23 21,257 21,238 21,238
+Accruals and deferred income 24 6,297 6,297 6,297
+1,068,519 1,068,500 1,068,500
+Valuation
+technique
+observable
+parameters
+At 31 December 2020 Note Carrying value Fair value (Level 2)
+£000 £000 £000
+Financial assets
+Cash and balances at banks 12 35,341 35,366 35,366
+Loans and advances to banks 13 . 795,342 795,536 795,536
+Loans and advances to customers 14 583,074 583,312 583,312
+Derivatives 16 5 5 5
+Other assets 17 14,151 14,193 14,193
+Group relief 18 1,971 1,971 1,971
+1,429,884 1,430,383 1,430,383
+Financial liabilities
+Deposits by banks 21 636,077 636,077 636,077
+Customer accounts 22 161,867 161,867 161,867
+Derivatives 16 4 4 4
+Other liabilities 23 22,439 22,439 22,439
+Accruals and deferred income 24 6,077 6,077 6,077
+
+826,464 826,464 826,464
+
+DocuSign Envelope ID: EDCOF372-C141-4BD7-A19E-A890646DBF87
+
+DB UK BANKLIMITED
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+64
+
+30. RISK REPORT (continued)
+
+i)
+
+j)
+
+Assets pledged and received as collateral
+
+Reverse repurchase agreements
+
+The Company receives assets as collateral for reverse repurchase agreements which are generally conducted
+under terms that are usual and customary for standard securitised borrowing contracts. The Company, as the
+secured party, has the right to sell or re-pledge such collateral, subject to the Company returning equivalent
+securities upon completion of the transaction.
+
+The value of the collateral received is as follows:
+
+2021 2020
+
+£000 £000
+
+UK Gilts 154,209 207,197
+International Organisation bonds 92,483 38,915
+German Government bonds 6,061 6,439
+German Public Sector bonds - 14,802
+252,753 267,353
+
+Other collateral
+
+The Company receives assets as collateral for loans and derivative contracts to IPB UK counterparties. The assets
+are held on behalf of the customer and cannot be sold or liquidated by the Company except in the event of the
+default of the customer. ;
+
+The value of the collateral received is as follows:
+
+2021 2020
+
+£000 £000
+
+Residential real estate 611,909 571,074
+Commercial real estate 293,630 241,203
+Securities/Cash (loan collateral) 150,180 187,556
+Securities/Cash (derivatives collateral) - 4,903
+1,055,719 1,004,736
+
+The Company has not pledged any financial assets as collateral for any liabilities or contingent liabilities.
+Capital Management (unaudited)
+
+The DB Group’s Treasury function manages the capital of the DB Group on a global, regional and local basis. The
+DB Group's Treasury function manages these resources to maximise stockholder and bondholder value taking into
+account regulatory requirements and other external influences. The framework is designed so that the Company is
+adequately capitalised at all times in relation to regulatory capital and liquidity minimum requirements and Board
+risk appetite.
+
+The Company is authorised by the PRA and regulated by the FCA and the PRA and as such is subject to the PRA's
+rules on monitoring capital adequacy and liquidity as specified in the PRA Rulebook and the applicable parts of the
+Capital Requirements Regulation. As required by PRA rules the DB Investments (GB) Limited regulated group
+(“‘DBIGB Group”), of which the Company is a member, has in place an Internal Capital Adequacy Assessment
+Process. This assesses the adequacy of capital resources against Management's assessment of the capital
+required to cover the risks to which the DBIGB Group is exposed. Using this measure the DBIGB Group, and the
+Company on a standalone basis, have a significant surplus of capital resources over capital resources requirements
+on both a current and forecast basis.
+4
+DocuSign Envelope ID: EDCOF372-C141-4BD?-A19E-A890646DBF 87
+
+DB UK BANK LIMITED
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+For the year ended 31 December 2021
+
+65
+
+30. RISK REPORT (continued)
+
+j)} Capital Management (unaudited) (continued)
+
+The Company complied with all PRA and associated EU capital and liquidity requirements throughout 2021 and
+
+2020.
+
+Capital Resources/Requirements are calculated as required by the Capital Requirements Regulation and PRA rules.
+
+2021 2020 .
+
+£000 £000
+Common Equity Tier 1 Capital
+
+Share capital 385,000 385,000
+Retained earnings 214,518 222,468
+Intangible fixed assets (5,937) (5,009)
+Revaluation reserve 6,557 6,991
+600,138 609,450
+
+The Capital Resources above are based on PRA returns filed at 31 December 2021 and 31 December 2020,
+
+adjusted for the impact of statutory account adjustments.
+
+The IFRS 9 transitional arrangements for regulatory capital have not been applied.
+
+31. POST BALANCE SHEET EVENTS
+
+There are no material post Balance Sheet events.
+
+The impact of the current conflict in Ukraine is covered in the Strategic Report and has not resulted in adjustments
+
+to the Financial Statements.
+

@@ -5,8 +5,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 1004,
-        "unknown_unit_observations": 1004,
+        "observations": 1005,
+        "unknown_unit_observations": 1005,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -690,7 +690,7 @@
           "695048": 62459.9,
           "716167": 79319.0,
           "730166": 1123255.0,
-          "730427": 1158302.0,
+          "730427": 1276002.0,
           "738741": 168319.0,
           "740551": 187605.0,
           "754568": 132.0,
@@ -832,7 +832,7 @@
           "695048": 2024,
           "716167": 2025,
           "730166": 2026,
-          "730427": 2025,
+          "730427": 2026,
           "738741": 2025,
           "740551": 2025,
           "754568": 2025,
@@ -863,8 +863,8 @@
       "scale_adjusted_coverage": {
         "banks": 0,
         "exclusions": {
-          "missing_rwa": 94,
-          "unknown_unit": 910
+          "missing_rwa": 103,
+          "unknown_unit": 902
         },
         "observations": 0,
         "years": []
@@ -878,8 +878,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 1005,
-        "unknown_unit_observations": 1005,
+        "observations": 1006,
+        "unknown_unit_observations": 1006,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -1563,7 +1563,7 @@
           "695048": 62459.9,
           "716167": 93994.0,
           "730166": 1123255.0,
-          "730427": 1158302.0,
+          "730427": 1276002.0,
           "738741": 168319.0,
           "740551": 187605.0,
           "754568": 132.0,
@@ -1705,7 +1705,7 @@
           "695048": 2024,
           "716167": 2025,
           "730166": 2026,
-          "730427": 2025,
+          "730427": 2026,
           "738741": 2025,
           "740551": 2025,
           "754568": 2025,
@@ -1736,8 +1736,8 @@
       "scale_adjusted_coverage": {
         "banks": 0,
         "exclusions": {
-          "missing_rwa": 103,
-          "unknown_unit": 902
+          "missing_rwa": 112,
+          "unknown_unit": 894
         },
         "observations": 0,
         "years": []
@@ -1751,8 +1751,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 1026,
-        "unknown_unit_observations": 1026,
+        "observations": 1027,
+        "unknown_unit_observations": 1027,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -2441,7 +2441,7 @@
           "695048": 62459.9,
           "716167": 93994.0,
           "730166": 1123255.0,
-          "730427": 1173723.0,
+          "730427": 1291772.0,
           "738741": 202429.0,
           "740551": 187605.0,
           "754568": 132.0,
@@ -2584,7 +2584,7 @@
           "695048": 2024,
           "716167": 2025,
           "730166": 2026,
-          "730427": 2025,
+          "730427": 2026,
           "738741": 2025,
           "740551": 2025,
           "754568": 2025,
@@ -2615,8 +2615,8 @@
       "scale_adjusted_coverage": {
         "banks": 0,
         "exclusions": {
-          "missing_rwa": 112,
-          "unknown_unit": 914
+          "missing_rwa": 121,
+          "unknown_unit": 906
         },
         "observations": 0,
         "years": []
@@ -2630,8 +2630,8 @@
         "banks": 0,
         "known_unit_banks": 0,
         "known_unit_observations": 0,
-        "observations": 916,
-        "unknown_unit_observations": 916,
+        "observations": 908,
+        "unknown_unit_observations": 908,
         "unstable_unit_or_basis_bank_ids": [],
         "unstable_unit_or_basis_banks": 0,
         "years": []
@@ -2738,10 +2738,6 @@
             "amount_unit": null,
             "reporting_basis": "consolidated_group"
           },
-          "131818": {
-            "amount_unit": null,
-            "reporting_basis": "entity"
-          },
           "143336": {
             "amount_unit": null,
             "reporting_basis": "consolidated_group"
@@ -2781,10 +2777,6 @@
           "172330": {
             "amount_unit": null,
             "reporting_basis": "consolidated_group"
-          },
-          "178737": {
-            "amount_unit": null,
-            "reporting_basis": "entity"
           },
           "183100": {
             "amount_unit": null,
@@ -3197,7 +3189,6 @@
           "124750": 9534.2,
           "124772": 1569.1,
           "124823": 14902.7,
-          "131818": 1618.4,
           "143336": 1822551.0,
           "144036": 1763.3,
           "146702": 1525.9,
@@ -3208,7 +3199,6 @@
           "169628": 82357.0,
           "171532": 2624404.0,
           "172330": 20177.0,
-          "178737": 277971.0,
           "183100": 1047.0,
           "183722": 473.0,
           "188585": 383024.0,
@@ -3281,7 +3271,7 @@
           "695048": 127359.4,
           "716167": 392607.0,
           "730166": 3930308.0,
-          "730427": 2071182.0,
+          "730427": 3814585.0,
           "738741": 1105780.0,
           "740551": 1233321.0,
           "754568": 266.0,
@@ -3332,7 +3322,6 @@
           "124750": 2025,
           "124772": 2024,
           "124823": 2025,
-          "131818": 2025,
           "143336": 2025,
           "144036": 2024,
           "146702": 2025,
@@ -3343,7 +3332,6 @@
           "169628": 2025,
           "171532": 2025,
           "172330": 2026,
-          "178737": 2025,
           "183100": 2025,
           "183722": 2024,
           "188585": 2025,
@@ -3416,7 +3404,7 @@
           "695048": 2024,
           "716167": 2025,
           "730166": 2026,
-          "730427": 2025,
+          "730427": 2026,
           "738741": 2025,
           "740551": 2025,
           "754568": 2025,

@@ -765,7 +765,8 @@
         "2022": "Operating expenses - Profit/(Loss) for the year",
         "2023": "Operating expenses - Profit/(Loss) for the year",
         "2024": "Operating expenses - Profit/(Loss) for the year",
-        "2025": "Operating expenses - Profit/(Loss) for the year"
+        "2025": "Operating expenses - Profit/(Loss) for the year",
+        "2026": "Operating expenses - Profit/(Loss) for the year"
       },
       "738741": {
         "2018": "Income - Profit for the year",
@@ -1648,7 +1649,8 @@
         "2022": -119020.0,
         "2023": -116341.0,
         "2024": 8709.0,
-        "2025": 94568.0
+        "2025": 94568.0,
+        "2026": 86330.0
       },
       "738741": {
         "2018": -9019.0,
@@ -1837,7 +1839,7 @@
       "661960": 110.63,
       "695048": 599.33,
       "716167": 189.32,
-      "730427": 357.09,
+      "730427": 337.06,
       "738741": 142.98,
       "740551": 61.59,
       "754568": 111.3,
@@ -2540,7 +2542,8 @@
         "2022": 9.2,
         "2023": 2.25,
         "2024": 107.49,
-        "2025": 985.87
+        "2025": 985.87,
+        "2026": -8.71
       },
       "738741": {
         "2019": -245.54,
@@ -3610,7 +3613,8 @@
         "2022": 10.77,
         "2023": 7.11,
         "2024": 6.65,
-        "2025": 6.64
+        "2025": 6.64,
+        "2026": 4.65
       },
       "740551": {
         "2019": 63.63,
@@ -4765,7 +4769,8 @@
         "2022": 25.7,
         "2023": 14.15,
         "2024": 16.0,
-        "2025": 15.53
+        "2025": 15.53,
+        "2026": 10.33
       },
       "738741": {
         "2024": 6.9,
@@ -13269,6 +13274,12 @@
       "730427": [
         {
           "label": "Asset quality ratios - ECL coverage ratio (Total impairment allowance / Total gross loans)",
+          "value": 12.47,
+          "value_raw": "12.47%",
+          "year": 2026
+        },
+        {
+          "label": "Asset quality ratios - ECL coverage ratio (Total impairment allowance / Total gross loans)",
           "value": 13.55,
           "value_raw": "13.55%",
           "year": 2025
@@ -13308,6 +13319,12 @@
           "value": 16.27,
           "value_raw": "16.27%",
           "year": 2019
+        },
+        {
+          "label": "Asset quality ratios - Stage 3 coverage ratio (Stage 3 impairment allowance / Stage 3 gross loans)",
+          "value": 58.13,
+          "value_raw": "58.13%",
+          "year": 2026
         },
         {
           "label": "Asset quality ratios - Stage 3 coverage ratio (Stage 3 impairment allowance / Stage 3 gross loans)",
@@ -21742,6 +21759,18 @@
             "stage_2": 130326.0,
             "stage_3": 66117.0
           }
+        },
+        "2026": {
+          "Gross loans and advances to customers, by IFRS 9 stage - ()": {
+            "stage_1": 1983688.0,
+            "stage_2": 503666.0,
+            "stage_3": 154006.0
+          },
+          "Impairment loss allowance, by IFRS 9 stage - ()": {
+            "stage_1": 85526.0,
+            "stage_2": 154382.0,
+            "stage_3": 89527.0
+          }
         }
       },
       "738741": {
@@ -23139,9 +23168,9 @@
   },
   "rwa_density": {
     "coverage": {
-      "bank_years_with_category_breakdown": 860,
-      "bank_years_with_rwa_to_assets": 892,
-      "bank_years_with_total_rwa": 916,
+      "bank_years_with_category_breakdown": 856,
+      "bank_years_with_rwa_to_assets": 884,
+      "bank_years_with_total_rwa": 908,
       "implausible_rwa_category_sum_skipped": 6,
       "implausible_rwa_to_assets_skipped": 7
     },
@@ -27859,116 +27888,6 @@
           "label": "Risk-weighted exposure amounts by category - Amounts below thresholds for deduction (subject to 250% risk weight, for information)",
           "pct_of_total_rwa": 0.03,
           "value": 4.9
-        }
-      ],
-      "131818:2021": [
-        {
-          "label": "Credit and counterparty risk RWA (Standardised Approach)",
-          "pct_of_total_rwa": 84.89,
-          "value": 1206525.0
-        },
-        {
-          "label": "Market risk RWA (Position Risk Requirement)",
-          "pct_of_total_rwa": 5.28,
-          "value": 74988.0
-        },
-        {
-          "label": "Credit value adjustment (CVA) RWA",
-          "pct_of_total_rwa": 0.26,
-          "value": 3750.0
-        },
-        {
-          "label": "Operational risk RWA (Basic Indicator Approach)",
-          "pct_of_total_rwa": 9.72,
-          "value": 138150.0
-        }
-      ],
-      "131818:2022": [
-        {
-          "label": "Credit and counterparty risk RWA (Standardised Approach)",
-          "pct_of_total_rwa": 85.24,
-          "value": 1304388.0
-        },
-        {
-          "label": "Market risk RWA (Position Risk Requirement)",
-          "pct_of_total_rwa": 4.09,
-          "value": 62513.0
-        },
-        {
-          "label": "Credit value adjustment (CVA) RWA",
-          "pct_of_total_rwa": 2.59,
-          "value": 39650.0
-        },
-        {
-          "label": "Operational risk RWA (Basic Indicator Approach)",
-          "pct_of_total_rwa": 7.9,
-          "value": 120875.0
-        }
-      ],
-      "131818:2023": [
-        {
-          "label": "Credit and counterparty risk RWA (Standardised Approach)",
-          "pct_of_total_rwa": 89.49,
-          "value": 1490975.0
-        },
-        {
-          "label": "Market risk RWA (Position Risk Requirement)",
-          "pct_of_total_rwa": 1.41,
-          "value": 23488.0
-        },
-        {
-          "label": "Credit value adjustment (CVA) RWA",
-          "pct_of_total_rwa": 1.88,
-          "value": 31313.0
-        },
-        {
-          "label": "Operational risk RWA (Basic Indicator Approach)",
-          "pct_of_total_rwa": 7.12,
-          "value": 118550.0
-        }
-      ],
-      "131818:2024": [
-        {
-          "label": "Credit and counterparty risk RWA (Standardised Approach)",
-          "pct_of_total_rwa": 84.55,
-          "value": 1394450.0
-        },
-        {
-          "label": "Market risk RWA (Position Risk Requirement)",
-          "pct_of_total_rwa": 3.88,
-          "value": 63925.0
-        },
-        {
-          "label": "Credit value adjustment (CVA) RWA",
-          "pct_of_total_rwa": 1.63,
-          "value": 26900.0
-        },
-        {
-          "label": "Operational risk RWA (Basic Indicator Approach)",
-          "pct_of_total_rwa": 9.88,
-          "value": 162913.0
-        }
-      ],
-      "131818:2025": [
-        {
-          "label": "Credit and counterparty risk RWA (Standardised Approach)",
-          "pct_of_total_rwa": 86.97,
-          "value": 1407550.0
-        },
-        {
-          "label": "Market risk RWA (Position Risk Requirement)",
-          "pct_of_total_rwa": 2.39,
-          "value": 38638.0
-        },
-        {
-          "label": "Credit value adjustment (CVA) RWA",
-          "pct_of_total_rwa": 0.34,
-          "value": 5500.0
-        },
-        {
-          "label": "Operational risk RWA (Basic Indicator Approach)",
-          "pct_of_total_rwa": 10.26,
-          "value": 165975.0
         }
       ],
       "143336:2021": [
@@ -41439,6 +41358,33 @@
           "value": 0.0
         }
       ],
+      "730427:2026": [
+        {
+          "label": "Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 50.19,
+          "value": 1914363.0
+        },
+        {
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.02,
+          "value": 623.0
+        },
+        {
+          "label": "Securitisation exposures (non-trading book, after the cap)",
+          "pct_of_total_rwa": 3.0,
+          "value": 114458.0
+        },
+        {
+          "label": "Market risk (position, FX and commodities risks)",
+          "pct_of_total_rwa": 1.43,
+          "value": 54485.0
+        },
+        {
+          "label": "Operational risk",
+          "pct_of_total_rwa": 45.37,
+          "value": 1730655.0
+        }
+      ],
       "738741:2024": [
         {
           "label": "Credit risk (excluding CCR)",
@@ -44415,13 +44361,6 @@
         "2024": 43.23,
         "2025": 39.42
       },
-      "131818": {
-        "2021": 47.43,
-        "2022": 53.96,
-        "2023": 56.98,
-        "2024": 60.25,
-        "2025": 62.8
-      },
       "143336": {
         "2021": 42.32,
         "2022": 41.78,
@@ -44506,12 +44445,6 @@
         "2024": 60.51,
         "2025": 63.59,
         "2026": 63.39
-      },
-      "178737": {
-        "2022": 1.9,
-        "2023": 3.31,
-        "2024": 4.47,
-        "2025": 5.17
       },
       "183100": {
         "2016": 11.07,
@@ -45183,7 +45116,8 @@
         "2022": 7.11,
         "2023": 14.64,
         "2024": 12.47,
-        "2025": 11.34
+        "2025": 11.34,
+        "2026": 13.82
       },
       "738741": {
         "2024": 47.45,

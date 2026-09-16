@@ -869,6 +869,208 @@ RWA_RESTATEMENT_NOTE = (
     "(16.1% CET1/Tier1, 21.9% Total Capital) - the originally-published figure is used here, per project convention."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - BACB's own "UK KM1 - Key metrics template", reproduced as
+# printed. Four things about this bank that must not be smoothed over:
+#
+#   (a) THE FY2024 AND FY2025 TABLES CARRY NO TEXT LAYER. pdftotext finds the
+#       "1.5 KEY METRICS" heading and the footnotes in those two editions but
+#       NO table text at all: FY2024's table is a single 695x602 embedded
+#       bitmap, and FY2025's is vector artwork with the text as outlines, so
+#       it does not even show up in `pdfimages -list`. Any text-based search
+#       therefore reports "no KM1" for the two most recent years of a bank
+#       that plainly publishes one. Every figure in those two columns was
+#       transcribed TWICE from two independent renderings (see KM1_SOURCES)
+#       and the readings agree digit for digit; they also agree with the
+#       metric sheets below, transcribed independently at an earlier pass.
+#   (b) THE UK TEMPLATE STARTS WITH THE FY2022 EDITION. The FY2021 report's
+#       "Key Metrics 2021" is an INFOGRAPHIC - seven circles (CET1 GBP199.9m,
+#       total regulatory capital GBP270m, CET1 ratio 18.4%, total capital ratio
+#       24.9%, total RWAs GBP1,085m, leverage 6.7%, average LCR 276%) with
+#       prior-year figures underneath - not a template and not a table. FY2021
+#       below is therefore the FY2022 edition's own comparative column, the
+#       only 31/12/2021 column BACB has printed on the UK template.
+#   (c) THE FY2023 EDITION RESTATES FY2022 and marks each restated row with an
+#       asterisk, footnoted "To ensure consistency of presentation 2022
+#       comparative numbers for Key Metrics denoted with an asterisk have been
+#       amended". FY2022 below is the FY2022 edition's own as-published column,
+#       matching the metric sheets; the restated values are in the source note.
+#   (d) ROW SET DRIFT. Only the FY2023 edition prints UK 8a, UK 9a, 10, UK 10a
+#       (all empty) and the UK 14a-14f excessive-leverage block (all "NA", the
+#       bank's own word, footnoted "Leverage ratio requirements are not
+#       applicable to BACB"). The FY2022, FY2024 and FY2025 editions omit those
+#       ten rows entirely. The union is shown in canonical order.
+#
+# Rows 13/14 are captioned "Leverage ratio total exposure measure" and
+# "Leverage ratio" in EVERY edition - BACB never adopts the post-1-January-2022
+# "excluding claims on central banks" wording, so the caption above is the
+# bank's, unqualified, and no basis break is asserted that the bank did not.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £000s)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 266352, "FY2024": 245034, "FY2023": 223772, "FY2022": 197516, "FY2021": 199873}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 266352, "FY2024": 245034, "FY2023": 223772, "FY2022": 197516, "FY2021": 199873}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 334756, "FY2024": 318553, "FY2023": 276133, "FY2022": 267579, "FY2021": 270130}),
+    ("SECTION", "Risk-weighted exposure amounts (£000s)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 1924184, "FY2024": 1571106, "FY2023": 1240666, "FY2022": 1231445, "FY2021": 1085219}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "13.8%", "FY2024": "15.6%", "FY2023": "18.0%", "FY2022": "16.0%", "FY2021": "18.4%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "13.8%", "FY2024": "15.6%", "FY2023": "18.0%", "FY2022": "16.0%", "FY2021": "18.4%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "17.4%", "FY2024": "20.3%", "FY2023": "22.3%", "FY2022": "21.7%", "FY2021": "24.9%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.7%", "FY2024": "2.6%", "FY2023": "2.6%", "FY2022": "1.9%", "FY2021": "1.9%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.6%", "FY2024": "0.9%", "FY2023": "0.9%", "FY2022": "0.6%", "FY2021": "0.6%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "0.8%", "FY2024": "1.1%", "FY2023": "1.1%", "FY2022": "0.8%", "FY2021": "0.8%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "11.0%", "FY2024": "12.6%", "FY2023": "12.6%", "FY2022": "11.4%", "FY2021": "11.4%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a "
+             "Member State (%)", {}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "0.4%", "FY2024": "0.5%", "FY2023": "0.6%", "FY2022": "0.3%", "FY2021": "0.0%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "2.9%", "FY2024": "3.0%", "FY2023": "3.1%", "FY2022": "2.8%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "14.0%", "FY2024": "15.6%", "FY2023": "15.6%", "FY2022": "14.2%", "FY2021": "13.9%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.6%", "FY2024": "8.5%", "FY2023": "11.0%", "FY2022": "9.6%", "FY2021": "12.0%"}),
+    ("SECTION", "Leverage ratio (£000s / %)", {}),
+    ("DATA", "13    Leverage ratio total exposure measure",
+     {"FY2025": 3721160, "FY2024": 3704792, "FY2023": 3296264, "FY2022": 3450485, "FY2021": 2981975}),
+    ("DATA", "14    Leverage ratio",
+     {"FY2025": "7.2%", "FY2024": "6.6%", "FY2023": "6.8%", "FY2022": "5.7%", "FY2021": "6.7%"}),
+    ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a percentage of "
+                "leverage ratio total exposure amount)", {}),
+    ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)", {"FY2023": "NA"}),
+    ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)", {"FY2023": "NA"}),
+    ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)", {"FY2023": "NA"}),
+    ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)", {"FY2023": "NA"}),
+    ("DATA", "UK 14e    Applicable leverage buffer", {"FY2023": "NA"}),
+    ("DATA", "UK 14f    Overall leverage ratio requirements (%)", {"FY2023": "NA"}),
+    ("SECTION", "Liquidity Coverage Ratio (£000s / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 1317356, "FY2024": 1444002, "FY2023": 1423835, "FY2022": 1301435, "FY2021": 1012861}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 1218359, "FY2024": 1011061, "FY2023": 999496, "FY2022": 918619, "FY2021": 904235}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 642449, "FY2024": 532017, "FY2023": 463575, "FY2022": 379546, "FY2021": 478805}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 575910, "FY2024": 479044, "FY2023": 535921, "FY2022": 539073, "FY2021": 425620}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "234%", "FY2024": "327%", "FY2023": "271%", "FY2022": "254%", "FY2021": "276%"}),
+    ("SECTION", "Net Stable Funding Ratio (£000s / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 1128295, "FY2024": 1037035, "FY2023": 967179, "FY2022": 933833, "FY2021": "N/A"}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 680515, "FY2024": 649132, "FY2023": 640365, "FY2022": 723950, "FY2021": "N/A"}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "166%", "FY2024": "160%", "FY2023": "151%", "FY2022": "130%", "FY2021": "N/A"}),
+]
+
+KM1_SOURCES = (
+    "Sources - British Arab Commercial Bank PLC, \"UK KM1 - Key metrics template\", £000s, reproduced as printed. "
+    "BACB is a single entity with no subsidiaries or associates and performs no prudential consolidation, so there "
+    "is one basis and one column per date:\n"
+    f"FY2025: 2025 Pillar 3 Disclosures, section 1.5 KEY METRICS, p.6 (own year) - {P3_URL['FY2025']}\n"
+    f"FY2024: 2024 Pillar 3 Disclosures, section 1.5 KEY METRICS, p.6 (own year) - {P3_URL['FY2024']}\n"
+    f"FY2023: 2023 Pillar 3 Disclosures, section 1.5 KEY METRICS, p.6 (own year) - {P3_URL['FY2023']}\n"
+    f"FY2022: 2022 Pillar 3 Disclosures, section 1.6 KEY METRICS, p.7 (own year) - {P3_URL['FY2022']}\n"
+    f"FY2021: the 31/12/2021 COMPARATIVE column of the 2022 Pillar 3 Disclosures' same table, p.7 - "
+    f"{P3_URL['FY2022']}\n"
+    "FY2020 and earlier: blank. The UK KM1 template first appears in BACB's FY2022 disclosure.\n\n"
+    "KM1 presentation notes:\n"
+    "• THE FY2024 AND FY2025 TABLES CARRY NO TEXT LAYER, and that is a defect in the source worth recording. "
+    "Text extraction from those two PDFs returns the \"1.5 KEY METRICS\" heading and the footnotes below the "
+    "table but not a single table cell, in both raw and layout modes - so an automated text search reports \"no "
+    "KM1\" for the two most recent years of a bank that plainly publishes one. (BACB's own Pillar 3 inventory "
+    "entry in this project did exactly that before this pass.) The two editions fail in different ways: the "
+    "FY2024 table is a single 695x602 embedded bitmap at 106 ppi (`pdfimages -list` shows it), while the FY2025 "
+    "page carries NO embedded image at all - its table is drawn as vector graphics with the text as outlines, "
+    "invisible to extraction and invisible to any image-presence test too.\n"
+    "• HOW THESE TWO COLUMNS WERE READ. Each figure was transcribed TWICE, from two independent renderings, and "
+    "the two readings agree digit for digit: FY2024 from a 220 dpi full-page render (`pdftoppm -r 220 -f 6 -l 6`) "
+    "and, separately, from the embedded bitmap extracted at its native resolution (`pdfimages -png`) and "
+    "upscaled; FY2025 from a 220 dpi full-page render and, separately, from a 330 dpi render cropped in two "
+    "halves. Both years were then cross-checked against this workbook's Pillar 3 metric sheets, transcribed "
+    "independently at an earlier pass from the same documents, which agree.\n"
+    "• WHY FY2021 IS A COMPARATIVE COLUMN: the 2021 Pillar 3 and Remuneration Code Disclosures contain no KM1 "
+    "template. Their \"Key Metrics 2021\" (p.4) is an infographic of seven circles - CET1 capital £199.9m (2020: "
+    "£192m), total regulatory capital £270m (2020: £264m), CET1 ratio 18.4% (2020: 17.4%), total capital ratio "
+    "24.9% (2020: 24.0%), total RWAs £1,085m (2020: £1,101m), leverage ratio 6.7% (2020: 7.1%), average LCR 276% "
+    "(2020: 215%) - not a table and not the template. The 2022 edition's own comparative column is the only "
+    "31/12/2021 column BACB has printed on the UK template, and it agrees with the infographic to the rounding "
+    "the infographic uses.\n"
+    "• \"N/A\" IN ROWS 18-20 FOR FY2021 IS THE BANK'S OWN WORD, not a blank and not a zero. The 2022 edition's "
+    "footnote 3 reads: \"These disclosures are based on the PRA's disclosure templates and instructions which came "
+    "into force on 1 January 2022. 'N/A' in prior periods indicate that the disclosure is new or changed and no "
+    "comparatives are available.\" It is reproduced verbatim rather than back-filled from an older basis.\n"
+    "• FY2022 IS SHOWN AS ORIGINALLY PUBLISHED, NOT RESTATED. The 2023 edition asterisks its 31/12/2022 "
+    "comparative rows and footnotes \"To ensure consistency of presentation 2022 comparative numbers for Key "
+    "Metrics denoted with an asterisk have been amended\". Its restated FY2022 values differ in eight rows: row 4 "
+    "RWA 1,224,488 (as published 1,231,445); rows 5/6 16.1% (16.0%); row 7 21.9% (21.7%); row 12 9.7% (9.6%); row "
+    "13 3,450,902 (3,450,485); row 18 available stable funding 944,798 (933,833); row 19 required stable funding "
+    "734,667 (723,950); row 20 NSFR 129% (130%). The as-published figures are used above, matching the CET1 Ratio, "
+    "Total Capital Ratio and Total RWAs sheets, which carry the same note.\n"
+    "• ONE FURTHER CROSS-EDITION INCONSISTENCY, recorded and not reconciled: the 2023 edition prints FY2023 total "
+    "capital as 276,133 (and its own UK CC1 template agrees, row 59); the 2024 edition's 31/12/2023 comparative "
+    "prints 276,130. The figure above is the one from the edition in which FY2023 is the reporting year.\n"
+    "• ROW SET DRIFT: only the 2023 edition prints rows UK 8a, UK 9a, 10 and UK 10a (all with empty value cells) "
+    "and the UK 14a-14f excessive-leverage block (every cell \"NA\", with footnote 2 \"Leverage ratio requirements "
+    "are not applicable to BACB\"). The 2022, 2024 and 2025 editions omit all ten rows. The union is shown above "
+    "in the template's canonical order, so the sheet matches the table a reader of the 2023 report would "
+    "recognise; no disclosed figure is lost either way.\n"
+    "• LABEL DRIFT WITHIN ONE BANK, reproduced as the bank prints it in the edition each year comes from: the 2025 "
+    "edition shortens row 5 to \"CET1 ratio (%)\" (2022-2024: \"Common Equity Tier 1 ratio (%)\"), row 20 to "
+    "\"NSFR (%)\" (2022-2024: \"NSFR ratio (%)\") and row 15 to \"(weighted value-average)\" (2022-2024: "
+    "\"(Weighted value -average)\"). The canonical longer forms are used for the row captions above, since a "
+    "caption has to serve all five columns; the variants are recorded here.\n"
+    "• ROWS 13/14 CARRY NO CENTRAL-BANK-CLAIMS QUALIFIER IN ANY EDITION. BACB captions them simply \"Leverage "
+    "ratio total exposure measure\" and \"Leverage ratio\" from FY2022 through FY2025, never adopting the "
+    "\"excluding claims on central banks\" wording other banks switched to on 1 January 2022. The captions above "
+    "are the bank's own, and no basis break is asserted here that the bank did not print.\n"
+    "• BASIS: all capital figures and ratios are under the Article 473a UK CRR IFRS 9 transitional arrangements "
+    "(footnote 1 in every edition). Rows 15-17 are a 12-month average and rows 18-20 a four-quarter average "
+    "(footnote 2/3 in every edition). The 2025 edition adds footnote 3 to row 4: from 31 December 2025 BACB moved "
+    "counterparty credit risk from the Original Exposure Method to SA-CCR as part of implementing Moody's Banking "
+    "Cloud, which reduced RWAs by about £3m.\n\n"
+    "LATEST-EDITION CHECK 2026-09-16: read BACB's own index at "
+    "https://www.bacb.co.uk/financial/pillar-iii-disclosures (and /financial/annual-report). The newest documents "
+    "listed are BACB_Pillar3_YE2025web-03.pdf and BACB_AnnualReportYE2025_WEB-Final.pdf, both of which this "
+    "workbook already cites. BACB's year-end is 31 December, so no FY2026 disclosure can yet exist. The index also "
+    "confirms, independently of the Wayback evidence already recorded on the metric sheets, that no 2020-labelled "
+    "Pillar 3 document is published. Checked, none newer. (Note the index page returns HTTP 403 to a default "
+    "user-agent and 200 to a browser one - a block, never an absence.)\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="British Arab Commercial Bank PLC — KM1 Key Metrics",
+    subtitle="The bank's own published UK KM1 key-metrics template, reproduced in BACB's row order with its own "
+             "template row numbers and printed precision. Amounts in £000s, ratios as printed, single-entity basis "
+             "(no prudential consolidation). FY2025-FY2022 from each year's own Pillar 3 Disclosures; FY2021 is the "
+             "2022 edition's comparative column. FY2020 and earlier are intentionally blank - the UK KM1 template "
+             "first appears in BACB's FY2022 disclosure. See the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=440,
+)
+
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CET1)], p3_sources())
 metric("CET1 Ratio", "%", [("CET1 ratio", CET1_RATIO)], p3_sources(), note=RWA_RESTATEMENT_NOTE)
 metric("Tier 1 Capital", "£'000 (= CET1 capital; no AT1 instruments)", [("Tier 1 capital", CET1)], p3_sources())

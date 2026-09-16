@@ -597,6 +597,111 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          note=note, first_col_width=52, source_height=860, note_height=320)
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-003)
+# ---------------------------------------------------------------
+# AIB Group (UK) p.l.c. PUBLISHES NO KM1. This sheet exists to say so with its
+# evidence attached, because "we could not reach it" and "it is not published"
+# are different findings and only one of them is safe to record (map rule 9).
+#
+# WHAT WAS POSITIVELY CHECKED, 2026-09-16:
+#  * The FY2025 and FY2024 Annual Financial Reports were fetched from aib.ie
+#    (HTTP 200, application/pdf, %PDF verified), are text-native, and extract
+#    to 646,006 and 658,542 characters respectively. Full-text searched
+#    case-insensitively, both contain ZERO occurrences of "KM1" and ZERO of
+#    "Pillar 3". Every occurrence of "pillar" is one of three other things:
+#    the Pillar 1 / Pillar 2a capital requirement (11.21% for 2025, 9.77% for
+#    2024), the bank's "strategic pillars" narrative, or the OECD Pillar Two
+#    global minimum top-up tax. The FY2024 report's own glossary defines
+#    "Pillar 1" and "Pillar 2a" and does not define Pillar 3 at all.
+#  * aib.ie's investor-relations tree was READ, not guessed: /investorrelations
+#    (90 links), /investorrelations/financial-information (86) and
+#    .../results-centre (92) all returned HTTP 200, and not one link on any of
+#    them matches pillar, regulat or disclos. The only PDFs offered are a
+#    whistleblowing policy, a financial calendar, a dividend-payments note,
+#    terms of business and a code of conduct.
+#
+# WHAT IS *NOT* EXCLUDED, AND MUST NOT BE WRITTEN DOWN AS IF IT WERE:
+#    aibgb.co.uk, www.aibgb.co.uk and aibni.co.uk each returned HTTP 403 with a
+#    ~365-byte body on 2026-09-16 (an edge deny, not even a challenge page).
+#    web.archive.org returned "Temporarily Offline" throughout, so the archive
+#    route could not be tried at all. If a standalone AIB UK Pillar 3 document
+#    exists anywhere, that blocked host is where it would live. This is the
+#    same shape of evidence that produced a false "publishes no Pillar 3"
+#    claim for Bank of Scotland, so the claim below is deliberately bounded.
+#
+# THE IRISH PARENT'S KM1 IS A DIFFERENT ENTITY AND IS NOT WIRED IN. AIB Group
+# plc publishes Ireland-wide consolidated Pillar 3 disclosures containing a
+# full KM1, and those documents dominate any search for "AIB Pillar 3" - an
+# earlier pass of this script surfaced them first and correctly discarded them.
+# A parent's consolidated KM1 can never stand in for a UK subsidiary's own.
+km1_rows = [
+    ("DATA", "UK KM1 - Key metrics template: not published by this entity",
+     {y: "Not applicable" for y in YEARS}),
+]
+
+KM1_SOURCES = (
+    "AIB Group (UK) p.l.c. does not publish a UK KM1 key-metrics template, and does not publish a standalone "
+    "Pillar 3 disclosure document at all. Its capital and liquidity metrics are disclosed inside the Annual "
+    "Financial Report, in the 'Capital management and liquidity' section, and those figures are carried on the "
+    "eleven single-metric Pillar 3 sheets in this workbook under their own citations. Nothing on this sheet is "
+    "back-filled from the statutory accounts: the accounts are a different basis and do not contain the "
+    "template's rows.\n"
+    "\n"
+    "POSITIVE EVIDENCE FOR THAT STATEMENT, checked 2026-09-16 (not inferred from a failed fetch):\n"
+    f"1. FY2025 Annual Financial Report ({AR2025_URL}) and FY2024 Annual Financial Report ({AR2024_URL}) were "
+    "both retrieved (HTTP 200, application/pdf, %PDF magic bytes verified), are text-native, and extract to "
+    "646,006 and 658,542 characters. Searched case-insensitively, each contains ZERO occurrences of 'KM1' and "
+    "ZERO of 'Pillar 3'. Every 'pillar' in either document is the Pillar 1 / Pillar 2a capital requirement, the "
+    "bank's 'strategic pillars' narrative, or the OECD Pillar Two top-up tax. The FY2024 report's glossary "
+    "defines Pillar 1 and Pillar 2a and contains no Pillar 3 entry.\n"
+    "2. aib.ie's investor-relations tree was read by following its own links rather than by guessing paths: "
+    "/investorrelations, /investorrelations/financial-information and "
+    "/investorrelations/financial-information/results-centre all returned HTTP 200 (90, 86 and 92 links "
+    "respectively), and none of those links matches 'pillar', 'regulat' or 'disclos'. The only PDFs published "
+    "there are a whistleblowing policy, a financial calendar, a dividend-payments note, terms of business and a "
+    "code of conduct.\n"
+    "\n"
+    "WHAT THIS CHECK DOES NOT COVER - stated plainly so it is not mistaken for a complete search. On "
+    "2026-09-16 aibgb.co.uk, www.aibgb.co.uk and aibni.co.uk each returned HTTP 403 with a ~365-byte body, and "
+    "web.archive.org was 'Temporarily Offline' for the whole session, so neither the bank's own UK-facing site "
+    "nor the archive could be examined. A blocked host is not an empty one. If a standalone AIB UK Pillar 3 "
+    "document exists, that host is the likeliest place for it, and this sheet should be re-tested when either "
+    "route becomes reachable. (The same class of evidence - a Cloudflare block recorded as a fact about the "
+    "bank - produced a false 'publishes no Pillar 3' statement for Bank of Scotland elsewhere in this corpus.)\n"
+    "\n"
+    "THE IRISH PARENT'S PILLAR 3 IS DELIBERATELY NOT USED. AIB Group plc (Dublin, company 594283) publishes "
+    "Ireland-wide consolidated Pillar 3 disclosures that do contain a full KM1, and they dominate search "
+    "results for 'AIB Pillar 3'. AIB Group (UK) p.l.c. (FRN 122088, Companies House NI018800) is a different "
+    "legal entity, roughly an order of magnitude smaller. Substituting the parent's consolidated template for "
+    "the subsidiary's own would put the wrong bank's figures in this workbook, so it is excluded on entity "
+    "grounds and not merely on convenience.\n"
+    "\n"
+    "ENTITY-BASIS NOTE carried over from the rest of this workbook: FY2021-FY2023 figures are the 'AIB UK "
+    "Group' (consolidated) column of each year's own Annual Financial Report, while FY2024-FY2025 are AIB Group "
+    "(UK) p.l.c.'s single (solo/Company) column, because a separate consolidated basis ceased being reported "
+    "once the FRS 101 exemptions took effect. Had a KM1 existed, its columns would have had to straddle that "
+    "same break.\n"
+    "\n"
+    "LATEST-EDITION CHECK: aib.ie's document tree was read 2026-09-16 as described above. The newest AIB Group "
+    "(UK) p.l.c. Annual Financial Report is FY2025 (year ended 31 December 2025), already cited by this script. "
+    "None newer. The bank's own aibgb.co.uk site could not be checked (403)."
+)
+
+bw.add_km1_sheet(
+    title="AIB Group (UK) p.l.c. - KM1 Key Metrics",
+    subtitle="Not applicable: AIB Group (UK) p.l.c. publishes no UK KM1 key-metrics template and no standalone "
+             "Pillar 3 document. Its capital and liquidity metrics appear inside the Annual Financial Report "
+             "and are carried on the eleven single-metric sheets. See the note below for what was positively "
+             "checked, what remains unchecked because the bank's own UK site is blocked, and why the Irish "
+             "parent's Pillar 3 KM1 is not used here.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=300,
+    years=YEARS,
+)
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital, transitional", {"FY2025": 1614, "FY2024": 1533, "FY2023": 1407, "FY2022": 1531, "FY2021": 1508})],

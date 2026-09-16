@@ -1,0 +1,3191 @@
+4 FidBank
+
+FIDBANK UK LIMITED
+
+FIDBANK UK LIMITED
+
+(formerly Fidelity Bank UK Limited)
+
+ANNUAL REPORT
+
+FINANCIAL STATEMENTS
+
+DECEMBER 2023
+
+- famine
+
+AS /
+E
+
+190*
+2 2
+COMP, S HOUSE
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+CONTENTS
+Financial Highlights 3
+Chairman’s Statement 4-5
+Directors, Advisers and Principal Officers 6
+Strategic Report 7-9
+Directors’ Report 10-13
+Directors’ Responsibilities and Corporate Governance 14-15
+Independent Auditor’s Report 16-22
+Statement of Comprehensive Income 23
+Statement of Financial Position 24
+Statements of Changes in Equity 25
+Statement of Cash Flows 26
+Notes to the Financial Statements 27-61
+Other Disclosures 62
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+FINANCIAL HIGHLIGHTS
+Thousands of US Dollars (Unless otherwise stated)
+
+2023 2022 2021 2020 2019
+Reporting period ended 31 December 31 December 31 December 31 December 31 December
+Total Income 8,300 3,971 3,949 6,268 14,628
+Loss before tax (3,023) (5,382) (5,966) (16,507) (11,963)
+Loss after tax (3,023) (5,382) (5,965) (16,505) (11,660)
+Dividends declared - - - - 1,000
+Shareholders’ Funds 57,497 35,519 40,898 46,866 63,396
+Total Assets 189,609 96,633 170,895 287,623 454,799
+Capital / Risk Weighted
+Assets 98% 54% 40% 36% 30%
+Return on Equity (5.3%) (15.2%) (14.6%) (35.2%) (18.4%)
+Cost Income Ratio 136% 232% 263% 163% 70%
+NPL Ratio ~ - - 5.89% 14.9%
+Dollar / Sterling exchange
+rate
+Year End $1.27 $1.20 $1.35 $1.37 $1.32
+Average $1.25 $1.23 $1.38 $1.29 $1.28
+
+Capital / Risk Weighted assets is calculated as Shareholders’ Funds / Risk Weighted Assets.
+
+Return on equity is calculated as loss after tax / Shareholders’ Funds.
+
+Cost Income Ratio has been calculated using total costs (excluding impairment) / total income.
+
+NPL Ratio is calculated as gross non-performing loans / loans to banks and customers (excluding bank placements).
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+CHAIRMAN’S STATEMENT
+
+Opening Remarks
+
+It has been my great pleasure to accept the role of Chairman of FidBank UK Ltd (the “Bank” or “FBUK’’) during the
+year and I look forward to helping the Board and the executive team as we look to grow the Bank and serve our
+customers.
+
+Before I present the 2023 financial report for the Bank, I would like to give you an insight into major events that
+transpired during the year.
+
+Purchase of the Bank by Fidelity Bank Plc
+
+In July 2023, following regulatory approval in both the UK and Nigeria, Fidelity Bank plc completed the purchase of
+what was, at that date, Union Bank UK plc. The Bank was subsequently renamed Fidelity Bank UK plc on 3 August
+2023, Fidelity Bank UK Ltd on 7 November 2023 and then FidBank UK Ltd on 14 March 2024.
+
+I am delighted that the Bank is now part of the Fidelity Bank Group, and I am confident that this will unlock
+significant benefits for the customers of both FBUK and Fidelity Bank plc.
+
+The Board is now focused on the seamless integration of the Bank into the Fidelity Bank Group and continuing to
+serve our customers.
+
+2023 Financial Performance
+
+Our performance in 2023 reflects a continuing period of transition. In particular, until the sale process completed,
+the Bank maintained a cautious approach in its use of liquidity and the level of deposits held, which in turn had a
+corresponding impact on the level of assets maintained.
+
+Following completion of the purchase, Fidelity Bank ple injected $25m of ordinary share capital into the Bank.
+This gives the Bank the capital to allow for expansion of the loan book and, consequently, put it on the path of
+achieving sustainable profitability and long-term financial viability.
+
+The improved financial performance in 2023 compared to 2022 financial year was driven by three factors:
+
+e The rise in interest rate throughout the first two thirds of the year and then remained stable. The US Federal
+Funds rate was 4.50% on 1 January 2023, rising to 5.50% at the end of July and then staying stable until the
+year end. Similarly, the UK Bank of England base rate was 3.5% on 1 January 2023, rising to 5.25% in
+August and then staying stable until the end of December.
+
+e The $25m capital injection received from Fidelity Bank plc, as it lowers the Bank’s average cost of funds.
+
+e The Bank saw trade volumes increase, with cash deposits to support letters of credit increasing to $67m at
+31 December 2023 (2022: $17m). The Bank places these balances into the money market overnight
+markets to gain a margin.
+
+Inflation increased significantly in all major markets, including the UK and Nigeria. In Nigeria annual inflation rose
+from 21.3% in December 2022 to over 28% in December 2023. To date, the only effect on the Bank has been
+through the increase of interest rates by central banks in order to lower inflation.
+
+The increase in interest rates and asset balances meant that interest income more than doubled their 2022 level of
+$3.3m to $8.6m.
+
+Our staffing increased throughout the year, as the Bank increased activity to prepare for a new phase of growth.
+Average staffing levels increased from 36 in 2022 to 52 in 2023, with 61 staff in post at 31 December 2023,
+resulting in staff costs increasing by $1.0m to $6.4m. Professional fees paid for consultancy also increased from
+$611k in 2022 to $1,030k in 2023 as the Bank invested in support and advice to strengthen the infrastructure and
+control framework of the Bank.
+
+During the year, the Bank was subject to an audit by its core banking system supplier. This audit found that certain
+components had been included in the installation in 2013 which had not been licenced. This was independently
+verified and the Bank agreed to pay $675k for additional perpetual licences. This has been expensed rather than
+capitalized, as, had the balance been capitalized at the original installation date, after amortisation it would now
+have a zero net book value.
+
+Overall, therefore, administrative expenses rose from $8.5m in 2022 to $11.2m in 2023, including this one-off cost
+of $675k that was incurred.
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+CHAIRMAN’S STATEMENT
+
+CONTINUED
+
+Although the Bank has a full-year loss in 2023 of $3.0m, $2.9m of that loss was incurred before the purchase of the
+Bank was completed on 26 July. Indeed, I am pleased to note that the Bank was profitable in November, and I am
+confident that the Bank will post a full-year profit in 2024.
+
+The Bank has continued to demonstrate its resilience and adaptability throughout 2023, with the Bank having
+maintained hybrid working between working from home and working from the office. I am pleased that the Bank
+has been able to maintain both customer service levels and a robust control environment as this arrangement has
+become the “new normal” for Banks in London.
+
+2024 Outlook
+
+The macroeconomic outlook in 2024 is likely to see both USD and GBP interest rates begin to drop, with inflation
+easing from recent high levels in the US and UK. Inflation in the Bank’s target market, however, will continue to be
+higher than in the UK and US, and the regulatory authorities in Nigeria appear set to continue to work on easing the
+foreign currency flows to improve economic activities.
+
+Appreciation
+
+I would like to express my appreciation to all our external stakeholders, including our customers, investors and
+partners, for their sustained confidence in and loyalty towards the Bank during the last few years whilst the future of
+the Bank has been resolved. My appreciation also extends to all our employees, for their critical role in adapting to
+the challenges over those years and realising the Bank’s corporate aspirations.
+
+I look forward to the Bank’s continued service to its current and prospective customers and target market and
+benefitting from being part of the Fidelity Bank plc group during 2024.
+
+Thank you.
+
+U Ougeali-Vhepe
+
+Dr.Nneka Onyeali-Ikpe
+Chairman
+
+18 April 2024
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+DIRECTORS AND ADVISERS
+Directors: Gavin C Laws Independent non-executive and Chairman of the Board resigned 17
+November 2023
+Nneka Onyeali-Ikpe Non-executive Director appointed 26 July 2023 and Chair of the
+Board following FCA approval on 15 November 2023
+David Forster Managing Director/Chief Executive
+Nigel J Richards Independent non-executive and Chairman of the Risk Committee
+Emeka Okonkwo Non-executive Director
+Caroline C Bault Independent non-executive appointed 26 July 2023 and Chair of the
+Remuneration and People Committee following FCA approval on 24
+November 2023
+Ndidi R Dimanochie Non-executive Director appointed 26 July 2023 who received SMF
+approval from the FCA on 3 January 2024
+Mark V Jarvis Independent non-executive and Chairman of the Audit and
+Compliance Committee appointed 26 July 2023
+Subuola Abraham Non-executive Director appointed 26 July 2023, resigned 22 January
+2024
+Olubunmi B Adeoye Non-executive Director resigned 26 July 2023
+Mark Patterson Non-executive Director resigned 26 July 2023
+Derek A Chime Non-executive Director resigned 26 July 2023
+Kenroy A Dowers Non-executive Director resigned 26 July 2023
+Secretary: P.R Hartley F.C.A = London, EC2R 7AF
+Registered Office: 1 King’s Arms London, EC2R 7AF
+Yard,
+Solicitors: Hogan Lovells LLP Atlantic House, London, EC1A 2FG
+Auditors: BDO LLP 55 Baker Street, London, W1U 7EU
+PRINCIPAL OFFICERS
+Management Committee:
+David Forster Managing Director/Chief Executive
+Kajal Agnihotri Associate Director, Risk
+Steven Bennett Associate Director, Chief Operating Officer (joined 25 April 2023)
+Farhood Hieydary Associate Director, Treasury
+Tola Awosika Associate Director, Compliance
+Janet A Ntuk Associate Director, Corporate Resources
+Simon Toller Associate Director, Finance
+Martin Uzus _ Associate Director, Business Development
+
+Note that Gino Brenzini held the post of Chief Operating Officer until 28 February 2023 and was part of the Management
+
+Committee until his departure.
+
+6
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+STRATEGIC REPORT
+
+Overview
+
+FBUK’’s strategic aim, following the purchase by Fidelity Bank Plc of Nigeria, is primarily to serve as an extension of
+Fidelity Bank Ple in the UK. Our focus continues to be building our core business segments of Retail,
+Treasury/Corporate and Commercial both vertically, by offering a competitive range of products, and horizontally so
+that our customers recognise FBUK for all their banking needs.
+
+Performance
+
+The Bank’s performance in 2023 reflected higher business volumes before change in control was completed,
+combined with rising interest rates in the first two thirds of the year. This resulted in a lower pre-tax loss of
+US$3.02m against the previous year loss of US$5.38m.
+
+Trade volumes increased during the year, with cash deposits to support letters of credit increasing to $67m at 31
+December 2023 (2022: $17m). Interest income at US$8.6m is up on the 2022 figure of US$3.3m due to the increased
+interest rates prevailing in the market, on a larger asset book. Dealing and exchange gains at US$0.3m were slightly
+above their 2022 level of US$0.1m. Fee and commission income of US$1.3m was an increase on the previous year of
+US$1.0m.
+
+Our staffing increased throughout the year, as the Bank increased activity to prepare for a new phase of growth.
+Average staffing levels increased from 36 in 2022 to 52 in 2023, with 61 staff in post at 3] December 2023 resulting
+in staff costs increasing by $1.0m to $6.4m. Professional fees paid for consultancy also increase from $611k in
+2022 to $1,030k in 2023 as the Bank invested in support and advice to strengthen the infrastructure and control
+framework of the Bank.
+
+During the year, the Bank was subject to an audit by its core banking system supplier. This audit found that certain
+components had been included in the installation in 2013 which had not been licenced. This was independently
+verified and the Bank agreed to pay $675k for additional perpetual licences. This has been expensed rather than
+capitalized, as, had the balance been capitalized at the original installation date, after amortization it would now
+have a zero net book value.
+
+Overall, therefore, administrative expenses rose from $8.5m in 2022 to $11.2m in 2023, including this one-off cost
+of $675k was incurred.
+
+A shorter average remaining life of loans at the end of 2023 compared to 2022 resulted in reduction in impairment
+charges amounting to US$0.13m during 2023, compared to the previous year’s charge of US$0.14m.
+
+Position
+
+Total assets of the Bank increased from $97m at 31 December 2022 to $190m at 31 December 2023. The majority of
+the Bank’s assets were loans and advances to banks, being $128m at 31 December 2022 ($65m at 31 December
+2022),
+
+Loans and advances to customers increased to $9m at 31 December 2023 from $4m at 31 December 2022. Cash and
+cash equivalents increased from $5m at 31 December 2022 to $7m at 31 December 2023.
+
+The overall increase in assets was driven by the increase in the Bank’s liabilities. Of the $71m increase in liabilities,
+the biggest increase was in the amount of cash cover that Issuing Banks placed with the Bank to support Letters of
+Credit and other trade instruments, which increased by $50.3m from $17.2m in December 2022 to $67.5m at
+December 2023. The other major contributor to the increase in liabilities is an increase of $13m in corporate deposits
+across a variety of customers.
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+STRATEGIC REPORT (continued)
+
+Key Performance Indicators
+The key indicators of the Bank’s performance monitored by the Board are those relating to profitability as measured
+by the pre-tax retum on equity (ROE) and Capital over risk weighted assets.
+
+In the 12 months to 31 December 2023, following the injection of capital from Fidelity Bank Pic, FBUK’s capital
+over risk weighted assets was 98% (2022: 54%) and loss on equity was 5.3% (2021: loss of 15.2%). The change in
+these metrics are skewed by the injection in capital, though the Bank also incurred a smaller loss in 2023 than 2022.
+The key indicator of efficiency monitored by the Board is the cost/income ratio which moved to 136% from 232% in
+2022 reflecting the reduction in costs noted above.
+
+The Bank recognises that the movement in Sterling/US$ rates can impact on its costs and it would take appropriate
+steps if there is a significant negative movement. The Bank’s results are shown in the statement of comprehensive
+income on page 23, with the impact on shareholders’ funds shown in the statement of changes in equity on page 25.
+
+We recognise our Corporate Responsibility and are committed to ensuring our business practices have a positive
+effect on our staff, clients and society as a whole. We achieve this through adhering to key corporate objectives and
+values of a high standard which are set and pursued in the context of the current social and regulatory environment.
+We know that sustainable business success depends on the engagement of our people and with our community.
+
+The Bank continues to develop its Climate Risk Strategy that meets the PRA’s Supervisory Statement on ‘Managing
+the Financial Risks from Climate Change’ during the year, led by the Chief Risk Officer (“SMF 4”). This includes:
+
+* A Climate Risk Policy, which follows the 5 Pillars approach of our Enterprise Wide Risk Framework, and
+includes a mission statement setting out the Bank’s overarching commitment and approach to climate risk.
+
+© A Climate Risk Framework which sets out the Bank’s approach and practical application of the Climate
+Policy and provide a means for assessing the risks on particular business activities as relevant to the scope of
+our business and client base.
+
+« A Climate Change Risk Assessment assessing the short, medium and long-term risks of climate change.
+
+© Working with a leading specialist the Bank is using science-based carbon accounting to develop a Climate
+Risk Assessment to benchmark our own operations and CO2 emissions.
+
+Future Prospects
+
+The Bank, as a part of the Fidelity Bank Ple group, remains committed to serving its current customers and target
+market and will continue to be a leading provider of specialised financial services to target clients with interests in the
+UK, Europe and Africa.
+
+Risk Management
+
+The Board of Directors is ultimately responsible for risk management policies, limits and risk appetite. It is supported
+by two of its standing Committees, the Board Risk Committee and Board Audit & Compliance Committee that assist
+in formulating policy and provide strategic direction for all aspects of risk management. These Committees, in turn,
+charge management to develop, update and implement these policies, controls and limits with risk management
+ensuring that there is no event or combination of events that will materially affect the stability of the Bank.
+
+Management operates through a number of committees, namely The Asset and Liability Committee (‘ALCO’),
+Management Risk Committee, Credit Committee and Management Committee, each having its own terms of
+reference.
+
+All credit decisions and new products require the approval of one or more committees depending on the amount
+required and are initially reviewed and recommended by the Risk Department before submission to the relevant
+committee for approval. Risk will monitor the credit until drawdown to ensure all conditions precedent are met. All
+portfolios and limits are continuously monitored by senior management via the monthly Management Risk
+Committee.
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+STRATEGIC REPORT (continued)
+
+Principal Risks and Uncertainties
+
+The principal risks associated with the business of the Bank are credit risk, liquidity risk, market interest rate risk and
+operational risk. The Bank has established a comprehensive enterprise risk management framework to manage these
+risks, guided by the Basel Committee’s principles for sound risk management and compliance with Basel II and FCA
+and PRA prudential regulations, including those in respect of liquidity risk.
+
+Section 172(1) statement
+
+The most important decision taken by the old owners of the Bank in its recent history has been the sale of the Bank to
+Fidelity Bank plc, as completed in July 2023. This decision was taken to secure the stable future of the Bank, and
+best serve its customers over the long term.
+
+The employees are the Bank’s most valuable asset, as recognised by the Directors in the “Employee Matters” section
+of the Directors’ Report. Staff engagement continues to be undertaken, though one to one meetings, team meetings
+and regular “lunches with the CEO” to understand employees’ wishes as the hybrid working approach, balancing
+working from home and the office, becomes the “new normal”.
+
+Maintaining the Bank’s reputation with Regulators and other stakeholders continues to be of paramount importance to
+the Bank. The Bank will continue to undertake its business adhering to the highest standards of conduct and culture,
+as detailed in the “Corporate Culture and Values” section of the Directors’ report. We will keep all stakeholders fully
+informed and we hold regular meetings with the Regulator. .
+
+As already highlighted in this Directors’ Report the Bank has a clearly defined process for risk identification,
+assessment and mitigation and has identified those reputational risks associated with the sale and ensured mitigants
+are in place.
+
+Management will continue to closely follow the global economic situation with an emphasis on Nigeria via the ALCO
+and evaluate the possible short and long term impact on our portfolios. In addition, the Bank makes an assessment
+with regard to current and prospective regulatory developments and their likely impact on the Bank’s capital and
+liquidity requirements, and the Bank’s approach to the management of its other key risks, as well as current budgets
+and financial forecasts for profitability, capital and liquidity requirements including under possible future business
+models. The Bank is satisfied that as a result of these assessments and its prudent approach to risk management, there
+would be no unexpected negative impact from these factors.
+
+Approved by the Board of directors and signed on behalf of the Board.
+
+D 9 Forster
+
+David Forster
+Managing Director / Chief Executive 18 April 2024
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+DIRECTORS’ REPORT
+
+The directors have pleasure in presenting their report together with the audited financial statements for the year ended
+31 December 2023.
+
+Principal Activities
+
+FBUK was incorporated in England and Wales on 10% February 2003 as a wholly owned subsidiary of the Union
+Bank of Nigeria Plc (‘UBN’), though is now owned by Fidelity Bank Plc as detailed in the Chairman’s Report.
+
+The Bank is authorised under thé Financial Services and Markets Act 2000 (FSMA 2000), to carry on regulated
+financial services activities, including deposit-taking and dealing in investments as principal. The business of the
+Bank includes the provision of retail and commercial banking, treasury and trade finance services.
+
+The Bank has established and maintains the management structure, policies, systems and procedures necessary to
+enable full compliance with the rules and regulations of the Financial Conduct Authority (‘FCA’) and the Prudential
+Regulation Authority (‘PRA’).
+
+Directors
+The directors of the Bank at the date of this report and those who served during the year ended 31 December 2023,
+
+are as follows:
+
+Gavin C Laws
+
+Independent non-executive and Chairman of the Board resigned 17
+November 2023
+
+Nneka Onyeali-Ikpe Non-executive Director appointed 26 July 2023 and Chair of the
+Board following FCA approval on 15 November 2023
+
+David Forster Managing Director/Chief Executive
+
+Nigel J Richards Independent non-executive and Chairman of the Risk Committee
+
+Emeka Okonkwo Non-executive Director
+
+Caroline C Bault Independent non-executive appointed 26 July 2023 and Chair of the
+Remuneration and People Committee following FCA approval on 24
+November 2023
+
+Ndidi R Dimanochie Non-executive Director appointed 26 July 2023 who received SMF
+approval from the FCA on 3 January 2024
+
+Mark V Jarvis Independent non-executive and Chairman of the Audit and
+Compliance Committee appointed 26 July 2023
+
+Subuola Abraham Non-executive Director appointed 26 July 2023, resigned 22 January
+2024
+
+Olubunmi B Adeoye Non-executive Director resigned 26 July 2023
+
+Mark Patterson Non-executive Director resigned 26 July 2023
+
+Derek A Chime Non-executive Director resigned 26 July 2023
+
+Kenroy A Dowers Non-executive Director resigned 26 July 2023
+
+Going Concern Basis of Preparation
+
+The financial statements are prepared on a going concern basis.
+
+In keeping with the guidance issued by the Financial Reporting Council, the Board has considered formally whether it
+is appropriate to prepare the financial statements on a going concern basis and has concluded that the Bank has
+sufficient liquidity and capital to continue to trade for at least two years from the date of signing these accounts.
+
+10
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+DIRECTORS’ REPORT
+CONTINUED
+
+The Board are pleased that, since reporting on the 2022 accounts, the purchase of the Bank by Fidelity Bank Plc has
+concluded and Fidelity Bank Pic have injected $25m of capital to ensure that the Bank remains a going concern.
+
+Parent Company
+
+As noted in the Chairman’s statement, Fidelity Bank Plc are now the owners of the Bank. It is noted that Fidelity
+Bank Plc in April 2024 entered into a facility agreement, under which they have pledged the Bank’s shares as
+security. This is not expected to impact the Bank in any way or affect its ability to execute its business plan and serve
+our customers,
+
+Financial Results
+
+The Bank’s financial statements are prepared in accordance with UK adopted international accounting standards. The
+functional currency of the Bank for financial reporting purposes is the US Dollar (USS), being the currency in which
+the majority of its assets, liabilities, capital and revenues are denominated.
+
+The financial statements for the year ended 31 December 2023 are shown on pages 23 to 61. The loss for the year
+after taxation amounted to US$ 3.023m (2022: US$ 5.382m loss).
+
+The directors do not propose a dividend for the year ended 31 December 2023 (2022: US$nil).
+
+Financial Risk Management
+The principal risks associated with the business of the Bank are highlighted in the Strategic Report but are credit risk,
+liquidity risk, market interest rate risk and operational risk.
+
+The Bank has established a comprehensive enterprise risk management framework to manage these risks, guided by
+the Basel Committee’s principles for sound risk management and compliance with Basel [I and FCA and PRA
+prudential regulations, including those in respect of liquidity risk. The Board establishes the risk governance
+structure and sets the overall risk appetite for both risks to the capital and the liquidity position of the Bank, together
+with key risk management policies, including limits relating to credit, market and liquidity risks. The framework
+provides for independent oversight of business units, risk identification, assessment and measurement, as well as
+stress testing of key risks and various other risk mitigations and monitoring techniques.
+
+Financial and other risks are assessed and documented as part of the Bank's Internal Capital Adequacy Assessment
+Process (‘ICAAP’) whereby ‘treated risk' after mitigation is considered and internal capital allocated accordingly.
+The assessment of risks and allocation of capital recognises the Bank's commitment to the Nigerian and African
+markets. These include political, infrastructure and concentration risks, including dependence on industry sectors such
+as oil and gas. These risks are significantly mitigated by virtue of the specialised knowledge and experience of the
+Bank and Fidelity Bank Plc, which permits the taking of informed decisions as to risk assumption and mitigation.
+
+The Bank has a clearly defined risk appetite including policies for the identification of key risks and also has in place
+Credit Grading and Key Risk Indicator tools.
+
+The Bank also prepares an Internal Liquidity Adequacy Assessment (‘ILAA’). The framework is designed to assess
+whether the Bank is able to survive liquidity stresses of varying magnitude and duration, including the provision to
+build up a liquidity asset buffer (‘LAB’) of UK Government or similar quality securities to be used in a liquidity
+stress event. In addition to this, the Bank maintains, at all times, positive liquidity ratios which are measured and
+monitored on a daily basis. Further information concerning the Bank’s policies for managing risks associated with
+financial assets and liabilities is set out in note 30 to the financial statements.
+
+Operational risk (operational risk being the risk of loss resulting from inadequate or failed internal processes, people
+and systems or from external events) is monitored via Risk Incident Reporting from which Key Risk Indicators are
+generated which are aligned with the Bank’s appetite statement and further supplemented by a Key Control Self-
+Assessment process.
+
+The Bank has also completed a Recovery plan. The process includes identifying events and triggers thereto which
+would force the Bank to need to recover from an actual or imminent failure of all or part of its business and agreeing,
+in consultation with the twin regulatory authorities, the critical economic functions undertaken by the Bank for which
+a Resolution Pack will be put in place to be used by those authorities or their appointed agents.
+
+11
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+DIRECTORS’ REPORT
+CONTINUED
+
+Developments in Financial Regulation
+
+The Bank continues to monitor developments in relation to Basel III. In addition to traditional capital requirements,
+banks are required to build up Capital Requirements Directive TV ((CRDIV’) buffers, Capital Conservation and
+Counter Cyclical Buffer (“CCyB’).
+
+The Bank of England’s Financial Policy Committee (“FPC’) raised the CCyB rate for UK exposures to 2.0% from 1%
+on 5 July 2023.
+
+On 30 November 2022, the PRA published a Consultation Paper (CP 16/22) proposing the implementation of the
+Proposed Rules reflecting the Basel 3.1 Standards. The primary objective of the Proposed Rules is to improve the
+reliability of capital ratios by making standardised approaches more risk-sensitive and addressing the limitations of
+Internal Models. The Proposed Rules are expected to improve both the measurement of risk and comparability across
+firms. The original implementation date was 1 January 2025, but it has been delayed to 1 July 2025.
+
+The Bank has conducted a thorough review of its portfolio to understand the impact of Basel 3.1 and estimates that its
+Total Risk Exposure Amount (TREA) will increase by approximately 6%. The Bank notes it has sufficient capital to
+cover its capital requirements when this increase in TREA arises.
+
+Future Developments
+
+The Bank remains committed to serving its current customers and target market whilst part of the wider Fidelity Bank
+Ple group.
+
+Corporate Culture & Values
+
+FBUK has adopted the corporate values of Fidelity Bank Plc Nigeria following their purchase of the Bank. These
+corporate values are Customer First, Respect, Excellence, Shared Ambition, Tenacity (“CREST”). The directors see
+a lot of commonality with the Bank’s previous values (Initiative, Customer Focus, Accountability, Respect and
+Efficiency) and so agreed on the alignment to these new values which are to become the foundation of our dealings
+with our customers and other members of staff.
+
+These values will be regularly reviewed by the Board and staff to ensure that we have a working culture that
+sustains our position as a highly respected provider of quality banking services. The Bank promotes compliance
+with the “spirit” as well as the “rule” of regulation, and that all risks should be fully identified, assessed and
+understood before they are incurred. The Bank operates a “Three Lines of Defence” business model, to promote
+effective and controlled risk taking.
+
+Information Management
+
+The Bank seeks to ensure that expenditure on IT and Communications remains appropriate to meet all regulatory
+and business needs.
+
+The Bank recognises the importance of safeguarding client data and has developed policies and physical and
+logical access controls which, coupled with staff awareness training, are designed to protect against data loss.
+
+Employee Matters
+
+The Bank recognises that its performance is dependent on the quality of its work force and the investment it makes in
+training and development. It is the Bank's policy that its staff should have the opportunity to develop to their full
+potential, promote its business in a manner consistent with the highest standards and recognise its environmental and
+other responsibilities as a corporate citizen. Staff competencies, training and development are planned consistently
+with corporate objectives, including the management of risk, and staff are appraised and rewarded accordingly.
+
+12
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+DIRECTORS’ REPORT
+CONTINUED
+
+Business relationships
+
+The biggest impact on the Bank’s business relationships during 2023, including suppliers, customers and others, was
+operating whilst being in the process of being purchased, as noted in the Chair’s statement. Following the purchase of
+the Bank, FBUK will continue to build on its strengths in intemational markets and maintain and leverage
+relationships with the Bank’s, and Fidelity Bank Ple’s, existing partners to improve product and service delivery.
+
+Property and Equipment, Intangible Assets
+Changes in property and equipment and intangible assets are set out in notes 21 and 22 to the financial statements.
+
+Climate and energy considerations
+
+Over the financial year to 31st December 2023 the Bank used 105 MWh of energy (2022: 112 MWh). This represents
+the aggregate of (a) the annual quantity of energy consumed from activities for which the Bank is responsible; and (b)
+the annual quantity of energy consumed resulting from the purchase of electricity by the company for its own use.
+With the help of the Bank’s landlord all the energy purchased and consumed by the Bank during the year was
+provided by the Dark Green energy provider- Ecotricity. Ecotricity are Britain’s greenest energy company. All of
+their electricity is certified green, 100% renewable and also certified vegan. Their gas is a mix of carbon-neutralised
+natural gas and sustainable green gas. The company have no shareholders, so, instead of paying dividends they invest
+all bill revenues in building new forms of green energy.
+
+FBUK have contracted to use Normative for our emissions impact calculation. Normative deliver actionable
+sustainability intelligence to reduce companies’ emissions and calculate 100% of our climate footprint — scope 1, 2
+and 3 emissions, following the Greenhouse Gas Protocol (GHGP). For the year ended 2023 the Bank’s emissions are:
+
+Scope t 0 tCOr (2022: 0)
+Scope 2 24,84 tCO2 (2022: 26.6)
+Scope 3 321.62 tCOz (2022: 237.3)
+
+We note that the 2022 figures have been restated (reduction of 49 tCO2. for scope 2). This is due to the figures
+including in 2022’s report including emissions for the entire building that the Bank occupies, rather than just the
+proportion of the building that is used by the Bank. This has now been corrected.
+
+Directors’ Representation
+
+The directors who held office at the date of approval of this Directors’ Report confirm that, so far as they are each
+aware, there is no relevant audit information of which the Bank’s auditor is unaware; and each of the directors has
+taken all the steps that they ought to have taken as a director to make themselves aware of any relevant audit
+information and to establish that the Bank’s auditor is aware of that information.
+
+Auditors
+
+As a UK public interest entity, the Bank is required to tender our external audit every 10 years and rotate every 20
+years. Following a rigorous tender process in 2023, The Board approved BDO's reappointment.
+
+By order of the Board on 18" April 2024.
+
+D 9 Powter
+
+David Forster
+
+Managing Director / Chief Executive
+1 King’s Arms Yard
+
+London, EC2R 7AF
+
+13
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+DIRECTORS’ RESPONSIBILITIES AND CORPORATE GOVERNANCE
+Statement of Directors' Responsibilities in respect of the Strategic Report and
+Directors' Report and the Financial Statements
+
+The directors are responsible for preparing the Strategic Report and the Directors’ Report and the financial statements
+in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. The Banks’s financial
+statements are prepared in accordance with UK adopted international accounting standards.
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they give a
+true and fair view of the state of affairs of the company and of the profit or loss of the company for that period. In
+preparing these financial statements, the directors are required to:
+
+¢ select suitable accounting policies and then apply them consistently;
+¢ make judgements and estimates that are reasonable and prudent;
+¢ state whether they have been prepared in accordance with UK adopted international accounting standards; and
+
+* prepare the financial statements on the going concern basis unless it is inappropriate to presume that the company
+will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company’s transactions and disclose with reasonable accuracy at any time the financial position of the company and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They have general
+responsibility for taking such steps as are reasonably open to » them to safeguard the assets of the company and to
+prevent and detect fraud and other irregularities.
+
+Website Publication
+
+The Directors are responsible for ensuring the Directors’ Report and financial statements are made available on a
+website. Financial statements are published on the Company’s website in accordance with legislation in the United
+Kingdom governing the preparation and dissemination of financial statements, which may vary from legislation in
+other jurisdictions. The maintenance and integrity of the Company’s website is the responsibility of the Directors.
+The Directors’ responsibility also extends to the ongoing integrity of the financial statements contained therein.
+
+Corporate Governance
+The Board of Directors of the Bank comprises one executive director, five non-executive directors appointed by the
+shareholders, and two independent non-executive directors, one of whom is the chairman of the Board.
+
+The Board meets at least quarterly and has defined responsibilities for the overall direction, supervision and control
+of the Bank, including assessment of the Bank’s competitive position, approval of strategic and financial plans and
+review of performance and financial status. It reviews and approves significant changes in the Bank’s structure and
+organisation and establishes the risk framework, overall risk appetite and key policies in relation to credit, large
+exposures, impairment, liquidity and operational risk. The Board also approves and monitors the Bank’s policies,
+procedures and processes in connection with the fight against financial crime.
+
+The Board has three standing committees: the Board Risk Committee (‘BRC’), the Board Remuneration & People
+Committee (‘BRPC’) and the Board Audit & Compliance Committee (‘BACC’). These standing committees are
+chaired by independent directors and have written terms of reference and, with the exception of the BACC, defined
+limits of authority. The BRC meets as often as required but at least quarterly, the BACC and the BRPC meets
+quarterly.
+
+The primary function of the BRC is to consider credit proposals in excess of the limits of authority of the executive
+Assets & Liabilities and Credit Committees of the Bank, and to monitor compliance with the Bank’s credit, large
+exposure, impairment, liquidity and market risk policies.
+
+14
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+DIRECTORS’ RESPONSIBILITIES AND CORPORATE GOVERNANCE
+CONTINUED
+
+Corporate Governance (continued)
+
+The BACC comprises of all independent non- executive directors and one non-executive director and is chaired
+by a financially experienced individual. The MD/CEO, the Chief Financial Officer, the CRO, the Compliance
+Manager, a representative of the outsourced Internal Auditors and a representative of the external auditors shall
+attend meetings only at the invitation of the Committee. The primary functions of the BACC are to assist the
+Board in fulfilling its oversight responsibilities by monitoring and assessing the integrity of financial statements,
+the qualifications, independence and performance of external auditors, compliance with legal and regulatory
+requirements and the adequacy of systems of internal accounting and financial controls. Its assessment of the
+internal control environment is made by reviewing and approving the plans of Internal Audit and considering
+and questioning management on operational audit reports.
+
+The BACC also approves the appointment of, and fees paid to, the external auditors for all audit and non-audit
+work. It is also responsible for the appointment of the outsourced Internal Auditor.
+
+The BRPC has responsibility for considering matters related to human resource policy, including compensation
+arrangements. In particular, it reviews and recommends to the Board both overall compensation pools and the
+remuneration of executive directors and certain other members of senior management. It has responsibility also
+for certain matters relating to the working environment of staff and insurance arrangements.
+
+By order of the Board on 18" April 2024.
+
+D 9 Porter
+
+David Forster
+
+Managing Director / Chief Executive
+1 King’s Arms Yard
+
+London, EC2R 7AF
+
+15
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF FIDBANK UK LTD
+Opinion on the financial statements
+
+In our opinion the financial statements:
+* the financial statements give a true and fair view of the state of the company’s affairs as at 31 December 2023 and
+of the company’s loss for the year then ended;
+* the financial statements have been properly prepared in accordance with UK adopted international accounting
+standards; and
+* the company financial statements have been properly prepared as applied in accordance with the provisions of the
+Companies Act 2006
+
+We have audited the financial statements of FidBank UK Limited (the ‘Company’) for the year ended 31 December 2023
+which comprise Statement of Comprehensive Income, Statement of Financial Position, Statement of Changes in Equity,
+Statement of Cashflow and notes to the financial statements, including a summary of significant accounting policies. The
+financial reporting framework that has been applied in their preparation is applicable law and UK adopted international
+accounting standards.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs
+
+(UK)) and applicable law. Our responsibilities under those standards are further described in the
+
+Auditor’s responsibilities for the audit of the financial statements section of our report. We believe that the audit evidence
+we have obtained is sufficient and appropriate to provide a basis for our opinion. Our audit opinion is consistent with the
+additional report to the audit committee.
+
+Independence
+
+Following the recommendation of the audit committee, we were appointed by the Board of Directors in August 2014 to
+audit the financial statements for the year ended 31 December 2014 and subsequent financial periods. The period of total
+uninterrupted engagement including retenders and reappointments is 10 years, covering the years ended 31 December 2014
+to 31 December 2023. We remain independent of the Company in accordance with the ethical requirements that are
+relevant to our audit of the financial statements in the UK, including the FRC’s Ethical Standard as applied to public
+interest entities, and we have fulfilled our other ethical responsibilities in accordance with these requirements. The non-
+audit services prohibited by that standard were not provided to the Company.
+
+Conclusions relating to going concern
+
+In auditing the financial statements, we have concluded that the Directors’ use of the going concern basis of accounting in
+the preparation of the financial statements is appropriate. Our evaluation of the Directors’ assessment of the Company’s
+ability to continue to adopt the going concern basis of accounting included:
+
+° The Company has successfully been purchased from their previous parent and have received a capital injection of
+$25million in 2023. The Change in Control has been successfully enacted in the year.
+
+© We have obtained the forecasts prepared by the Directors and tested the arithmetic accuracy of these. We obtained
+an understanding of the underlying assumptions used to calculate the forecasted profit. We challenged the
+Directors as to the validity of these assumptions and we checked that they are consistent with the current financial
+and strategic position of the Company;
+
+e We reviewed the current capital requirements and thresholds of the liquidity buffers that the Company is subjected
+to. We then compared this to the existing capital and liquidity buffers in place at the Company to ensure adherence
+to the regulatory requirement. The Company has met sufficient capital requirements and maintains a liquidity
+buffer to continue operations for the full period of assessment;
+
+o We performed a retrospective review of prior year forecasts by comparing to current year actuals, to assess the
+historical accuracy of the forecasts;
+
+e We reviewed correspondence with the Regulators and minutes of Board meetings, in order to ascertain whether
+there were other matters that may impact the Company’s ability to continue as a going concern;
+
+e We reviewed post year end information including management accounts and minutes of Board meetings up until
+the date of signing the financial statements in order to ascertain whether there were other matters that may impact
+the Company’s ability to continue as a going concern; and
+
+16
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+INDEPENDENT AUDITOR’S REPORT
+CONTINUED
+
+© We reviewed the adequacy and appropriateness of disclosures in the financial statements, regarding the going
+concern assessment.
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or conditions
+that, individually or collectively, may cast significant doubt on Company’s ability to continue as a going concern for a
+period of at least twelve months from when the financial statements are authorised for issue.
+
+Our responsibilities and the responsibilities of the Directors with respect to going concern are described in the relevant
+sections of this report.
+
+Overview
+2023 2022
+Loan Loss & is
+Provisioning
+Key audit matters Going Concem D &
+Going concern is not considered a key audit matter in the current
+| year due to the Company being purchased during the year and
+receiving a capital injection.
+; Financial statements as a whole
+Materiality
+$430,000 (2022: $266,000) based on 0.75% (2022: 0.75%) of Net
+Assets
+
+An overview of the scope of our audit
+
+Our audit was scoped by obtaining an understanding of the Company and its environment, including the Company’s system
+of internal control, and assessing the risks of material misstatement in the financial statements. We also addressed the risk
+of management override of internal controls, including assessing whether there was evidence of bias by the Directors that
+may have represented a risk of material misstatement.
+
+Climate change
+
+Our work on the assessment of potential impacts of climate-related risks on the Company’s operations and financial
+statements included:
+
+e Enquiries and challenge of management to understand the actions they have taken to identify climate-related risks
+and their potential impacts on the financial statements and adequately disclose climate-related risks within the
+annual report.
+
+Based on our risk assessment procedures, we did not identify there to be any Key Audit Matters materially impacted by
+climate-related risks.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of the -
+financial statements of the current period and include the most significant assessed risks of material misstatement (whether
+or not due to fraud) that we identified, including those which had the greatest effect on: the overall audit strategy, the
+allocation of resources in the audit, and directing the efforts of the engagement team. These matters were addressed in the
+context of our audit of the financial statements as a whole, and in forming our opinion thereon, and we do not provide a
+separate opinion on these matters.
+
+17
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+INDEPENDENT AUDITOR’S REPORT
+CONTINUED >
+
+Key audit matter How the scope of our audit addressed the key
+audit matter
+
+Loan loss | The principal activity of the | We evaluated the appropriateness of the
+
+provisioning | Company is the provision of trade | Company’s ECL provisioning methodology.
+
+and credit services to banks, | This included obtaining managements
+
+The year-end | corporates and individual | methodology paper covering initial recognition,
+
+provision as
+disclosed in
+Notes 2(e),
+3(h), 18 and
+19 in the
+financial
+
+statements is
+$140k (2022:
+$273k)
+
+customers, Commensurate with
+the activities of the Company, the
+total loan loss provision is subject
+to management judgement and
+estimation.
+
+The Bank is required to assess the
+recoverability of the loan portfolio
+for all items and not just those
+specifically identified.
+
+Therefore, the Bank needs to
+assess the Expected credit loss
+(ECL) provision for all
+performing loan books taking into
+account macro-economic factors
+(including PD’s, LGD’s and
+EAD’s) along with the staging to
+ensure that credit impaired loans
+are accounted for as per IFRS 9.
+
+We considered Expected Credit
+Loss (ECL) to be a significant risk
+due to the following:
+
+Forward-looking information -
+IFRS 9 requires the bank to
+measure the expected credit loss
+(ECL) on a forward-looking basis,
+incorporating future miacro-
+economic variables reflecting a
+range of future conditions. The
+incorporation of such forward-
+looking macroeconomic inputs
+and weighting of the scenarios
+
+is considered a significant risk
+given the current economic
+environment.
+
+For these reasons we considered
+the loan loss provisioning to be a
+key audit matter.
+
+classification and subsequent measurement
+which we assessed against the requirements of
+IFRS 9.
+
+We evaluated the selection and source of the
+information used by management in
+determining PDs, Loss given default (LGDs)
+and Exposure at default (EADs), by comparing
+a sample of the information to underlying
+banking system and external data sources.
+
+With the assistance of our internal IT specialist,
+we tested the code applied to calculate the ECL
+provision to check its compliance with the
+stated accounting policies, and to assess the
+accuracy of the model.
+
+We analysed the components of the loan book
+and assessed the Company’s processes for
+identification and treatment of underperforming
+loans, by comparison to the accounting
+standards.
+
+With the support of our internal economics
+expert, we assessed the appropriateness of the
+regression models used and the macroeconomic
+variables, such as GDP and Corporate
+insolvency rates.
+
+We assessed the reasonability of multiple
+economic scenarios used, including the number,
+weighting and probability changes, by
+performing sensitivity analysis.
+
+We assessed the adequacy and appropriateness
+of disclosures for compliance with the
+accounting standards.
+
+Key observations:
+
+Based on our audit work performed, we
+consider the estimates made by management in
+the calculation of the ECL provision to be
+reasonable, and in line with the requirements of
+IFRS 9.
+
+18
+
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+INDEPENDENT AUDITOR’S REPORT
+CONTINUED
+
+Our application of materiality
+
+We apply the concept of materiality both in planning and performing our audit, and in evaluating the effect of
+misstatements. We consider materiality to be the magnitude by which misstatements, including omissions, could influence
+the economic decisions of reasonable users that are taken on the basis of the financial statements.
+
+In order to reduce to an appropriately low level the probability that any misstatements exceed materiality, we use a lower
+materiality level, performance materiality, to determine the extent of testing needed. Importantly, misstatements below
+these levels will not necessarily be evaluated as immaterial as we also take account of the nature of identified
+misstatements, and the particular circumstances of their occurrence, when evaluating their effect on the financial statements
+as a whole.
+
+Based on our professional judgement, we determined materiality for the financial statements as a whole and performance
+materiality as follows:
+
+Company financial statements
+
+2023 2022
+$m $m
+
+Materiality 430,000 266,000
+
+Basis for determining materiality 0.75% Net Assets
+
+Rationale for the benchmark applied | Net assets were considered to be the most appropriate
+7 * | benchmark as the focus of stakeholders is primarily on the
+statement of financial position.
+
+Performance materiality 323,000 200,000
+
+Rationale for the percentage applied | 75% of materiality, determined on the basis of our risk
+
+for performance materiality - assessment together with our assessment of the overall control
+environment.
+
+Reporting threshold
+
+We agreed with the Audit Committee that we would report to them all individual audit differences in excess of $21,500
+(2022: $5,300). We also agreed to report differences below this threshold that, in our view, warranted reporting on
+qualitative grounds.
+
+19
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+INDEPENDENT AUDITOR’S REPORT
+CONTINUED
+
+Other information
+
+The directors are responsible for the other information. The other information comprises the information included in the
+annual report other than the financial statements and our auditor's report thereon. Our opinion on the financial statements
+does not cover the other information and, except to the extent otherwise explicitly stated in our report, we do not express
+any form of assurance conclusion thereon. Our responsibility is to read the other information and, in doing so, consider
+whether the other information is materially inconsistent with the financial statements, or our knowledge obtained in the
+course of the audit, or otherwise appears to be materially misstated. If we identify such material inconsistencies or apparent
+material misstatements, we are required to determine whether this gives rise to a material misstatement in the financial
+statements themselves. If, based on the work we have performed, we conclude that there is a material misstatement of this
+other information, we are required to report that fact.
+
+We have nothing to report in this regard.
+
+Other Companies Act 2006 reporting
+
+Based on the responsibilities described below and our work performed during the course of the audit, we are required by
+the Companies Act 2006 and ISAs (UK) to report on certain opinions and matters as described below.
+
+Strategic report | In our opinion, based on the work undertaken in the course of the audit:
+
+and Directors’ |e the information given in the Strategic report and the Directors’ report for the
+
+report financial year for which the financial statements are prepared is consistent with
+the financial statements; and
+
+e the Strategic report and the Directors’ report have been prepared in accordance
+with applicable legal requirements.
+
+In the light of the knowledge and understanding of the Group and Parent Company
+and its environment obtained in the course of the audit, we have not identified
+material misstatements in the strategic report or the Directors’ report.
+
+Matters on | We have nothing to report in respect of the following matters in relation to which the
+which we are | Companies Act 2006 requires us to report to you if, in our opinion:
+required to
+report by e adequate accounting records have not been kept, or returns adequate for our
+exception audit have not been received from branches not visited by us; or
+e the financial statements are not in agreement with the accounting records
+and returns; or
+e certain disclosures of Directors’ remuneration specified by law are not
+made; or
+« we have not received all the information and explanations we require for
+our audit,
+
+20
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+INDEPENDENT AUDITOR’S REPORT
+CONTINUED
+
+Responsibilities of Directors
+
+As explained more fully in the Statement of Directors’ Responsibilities, the Directors are responsible for the preparation of
+the financial statements and for being satisfied that they give a true and fair view, and for such internal control as the
+Directors determine is necessary to enable the preparation of financial statements that are free from material misstatement,
+whether due to fraud or error.
+
+In preparing the financial statements, the Directors are responsible for assessing the Company’s ability to continue as a
+going concem, disclosing, as applicable, matters related to going concern and using the going concern basis of accounting
+unless the Directors either intend to liquidate the Company or to cease operations, or have no realistic alternative but to do
+so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from material
+misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our opinion. Reasonable
+assurance is a high level of assurance but is not a guarantee that an audit conducted in accordance with ISAs (UK) will
+always detect a material misstatement when it exists. Misstatements can arise from fraud or error and are considered
+material if, individually or in the aggregate, they could reasonably be expected to influence the economic decisions of users
+taken on the basis of these financial statements.
+
+Extent to which the audit was capable of detecting irregularities, including fraud
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures in line
+with our responsibilities, outlined above, to detect material misstatements in respect of irregularities, including fraud. The
+extent to which our procedures are capable of detecting irregularities, including fraud is detailed below:
+
+We gained an understanding of the legal and regulatory framework applicable to the company and the industry in which it
+operates, and considered the risk of acts by the company which were contrary to applicable laws and regulations, including
+fraud. These included, but were not limited to, compliance with Companies Act 2006 and UK adopted international
+accounting standards. We also considered the company’s compliance with the licence conditions and supervisory
+requirements of the Prudential Regulation Authority (PRA) and the Financial Conduct Authority (FCA), and relevant tax
+legislation. We have engaged our tax experts in this regard.
+
+We focused on laws and regulations non-compliance with which could give rise to a material misstatement in the company
+financial statements. Our procedures included:
+
+- reviewing the financial statement disclosures and testing to supporting documentation to assess
+compliance with relevant laws and regulations discussed above;
+
+- enquiring of management regarding their controls and processes in place to ensure compliance with
+respective laws and regulations;
+
+- enquiring of management and those charged with governance regarding any known or suspected non-
+compliance with laws and regulations and instances of fraud;
+
+- reading minutes of meetings of those charged with governance and correspondence with the FCA and
+PRA for instances of non-compliance with laws and regulations and fraud;
+
+We assess the susceptibility of the financial statements to material misstatement, including fraud and considered the fraud
+risk areas to be management override of controls and the potential for fraud to arise within accounting estimates such as the
+loan loss provision. Our procedures in response to these risks included:
+
+- in addressing the risk of fraud through management override of controls, testing a sample of journal
+entries for appropriateness by agreeing them to supporting documentation; and
+
+- assessing whether the judgements made in accounting estimates are indicative of management bias. Refer
+to the Key Audit Matter — Loan Loss Provisioning.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all engagement team members
+and remained alert to any indications of fraud or non-compliance with laws and regulations throughout the audit.
+
+21
+F idBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+INDEPENDENT AUDITOR’S REPORT
+CONTINUED
+
+Our audit procedures were designed to respond to risks of material misstatement in the financial statements, recognising
+that the risk of not detecting a material misstatement due to fraud is higher than the risk of not detecting one resulting from
+error, as fraud may involve deliberate concealment by, for example, forgery, misrepresentations or through collusion. There
+are inherent limitations in the audit procedures performed and the further removed non-compliance with laws and
+regulations is from the events and transactions reflected in the financial statements, the less likely we are to become aware
+of it.
+
+A further description of our responsibilities is available on the Financial Reporting Council’s website at:
+www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor’s report.
+
+Use of our report
+
+This report is made solely to the Parent Company’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Parent Company’s members those
+matters we are required to state to them in an auditor’s report and for no other purpose. To the fullest extent permitted by
+law, we do not accept or assume responsibility to anyone other than the Parent Company and the Parent Company’s
+members as a body, for our audit work, for this report, or for the opinions we have formed,
+
+DocuSigned by:
+
+Ariel Grosberg
+
+6314B8688DC384B1.,,
+
+Ariel Grosberg (Senior Statutory Auditor)
+For and on behalf of BDO LLP, Statutory Auditor
+
+18 April 2024
+
+BDO LLP is a limited liability partnership registered in England and Wales (with registered number OC305127).
+
+22
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+STATEMENT OF COMPREHENSIVE INCOME
+For the year ended 31 December 2023
+Year ended Year ended
+31 December 2023 31 December 2022
+US$'000 USS'000
+Note
+Interest income 5 8,637 3,275
+Interest expense 6 (1,413) (432)
+Net interest income 7,224 2,843
+Fees and commission income 7 1,315 1,003
+Dealing and exchange gains 8 261 125
+Total income 8,800 3,971
+Administrative expenses 10 (11,165) (8,495)
+Depreciation and amortisation 21/22/33 (872) (563)
+Bad debt recovered/written off - -
+Impairment charge and reversal 20 133 (144)
+Other operating expense 9 (219) (151)
+Loss before tax (3,623) (5,382)
+Tax charge 14 - -
+Loss for the year after tax (3,023) (5,382)
+Other comprehensive income:
+Items that may be reclassified to profit or loss:
+Unrealised, net change in fair value of financial assets 1 3
+measured at FVOCI
+Other comprehensive income for the year 1 3
+Total comprehensive less for the year (3,022) (5,379)
+
+The result is derived entirely from continuing activities.
+
+The notes on pages 27 to 61 form part of these financial statements
+
+23
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+STATEMENT OF FINANCIAL POSITION
+As at 31 December 2023
+2023 2022
+US$'000 US$'000
+Note
+
+Assets
+Cash and cash equivalents 16 7,127 5,431
+Loans and advances to banks 18 128,017 65,437
+Loans and advances to customers 19 8,590 3,564
+Financial assets measured at FVOCI 17 42,025 18,123
+Intangible assets 22 463 507
+Property and equipment 21 56 44
+Right-of-use-assets - 33 1,673 2,052
+Other assets 23 939 850
+Prepayments 719 625
+Total Assets 189,609 96,633
+Liabilities
+Deposits by banks 24 78,638 19,943
+Customer accounts 25 50,613 38,278
+Lease liabilities 33 2,001 2,065
+Other liabilities 26 717 653
+Accruals and deferred income 27 143 175
+Total Liabilities 132,112 61,114
+Equity
+Called up share capital 28 85,090 60,090
+FVOCI reserve Q) (4)
+Retained losses (27,590) (24,567)
+Equity 57,497 35,519
+Total Liabilities and Equity 189,609 96,633
+
+The financial statements were approved by the Board of Directors and authorised for issue on 18 April 2024.
+Signed on behalf of the Board of directors:
+
+D 9 Forster
+
+David Forster
+Managing Director / Chief Executive
+
+The notes on pages 27 to 61 form part of these financial statements
+
+24
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+STATEMENT OF CHANGES IN EQUITY
+For the year ended 31 December 2023
+Share FVOCI Retained Total
+Capital Reserves Losses Equity
+USS'000 USS'000 US$'000 USS'000
+Balance as at 1 January 2022
+60,090 (7) (19,185) 40,898
+Total comprehensive loss for the year
+Change in fair value of assets measured at
+FVOCI - 3 - 3
+Loss for the year - : (5,382) (5,382)
+Balance attributable (o equity shareholders
+as at 31 December 2022 60,090 (4) (24,567) 35,519
+Total comprehensive loss for the year
+Share Capital issued 25,000 25,000
+Loss for the year (3023) (3023)
+Change in fair assets measured at FVOCI - 1 1
+Balance attributable to equity shareholders 85,090 @) (27,590) 57,497
+
+as at 31 December 2023
+
+The notes on pages 27 to 61 form part of these financial statements
+
+25
+FidBank UK Limited
+
+Annual Report & Financial Statements
+
+31 December 2023
+STATEMENT OF CASH FLOWS
+
+2023 2022
+Note US$'000 US$'000
+Loss before tax (3,023) (5,382)
+
+Adjustments for:
+Depreciation and amortisation 193 185
+Amortisation of rights of use assets 33 379 378
+Amortisation of discounts received/premiums paid (1,648) (245)
+Loss on disposal of tangible/intangible assets 1 1
+Bad debt recovered - 23
+Exchange differences -finance lease liability 120 (292)
+Interest on finance lease liability 90 102
+Impairment of loans and advances (133) 144
+(4,021) (5,086)
+Change in loans and advances to banks (62,422) 45,036
+Change in loans and advances to customers (5,052) 12,591
+Change in other assets (89) (12)
+Change in prepayments (92) (27)
+Change in deposits by banks 58,695 (49,159)
+Change in customer accounts 12,335 (19,026)
+Change in other liabilities 64 12
+Change in accruals and deferred income (32) (47)
+Cash used in operations (614) (15,718)
+Acquisition of financial assets (78,132) (40,469)
+Disposal of financial assets 55,879 52,877
+Income tax received - 253
+Net cash used in operating activities (22,867) (3,057)
+Acquisition of tangible and intangible assets (163) (38)
+Net cash flow used in investing activities (163) (38)
+Increase in share capital 25,000 -
+Leasehold property repayments (274) | (473)
+Net cash generated from/(used in) financing activities 24,726 (473)
+Net increase/ (decrease) in cash and equivalents 1,696 (3,568)
+Cash and cash equivalents at 1 January 2023 5,431 8,999
+Cash and cash equivalents at 31 December 2023 16 7127 5,431
+
+26
+
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS
+
+1. Reporting entity
+FidBank UK Limited is a company incorporated in the United Kingdom under the Companies Act 2006. The address
+of the Company’s registered office is given on page 6.
+
+Information concerning the principal activities and operations of the Bank and its regulatory status is set out in the
+Directors’ Report and in the notes to the financial statements.
+
+2. Basis of presentation
+
+(a) Statement of compliance
+The financial statements of the Bank have been prepared in accordance with UK adopted international accounting
+standards.
+
+(b) Going concern basis of preparation
+
+The financial statements are prepared on a going concern basis.
+The Board notes that Fidelity Bank Plc injected $25m of capital in 2023 following its purchase of the Bank.
+
+In keeping with the guidance issued by the Financial Reporting Council, the Board has considered formally whether it
+is appropriate to prepare the financial statements on a going concern basis and has concluded that the Bank has
+sufficient liquidity and capital to continue to trade for at least two years from the date of signing these accounts.
+
+(c) Basis of measurement
+
+The financial statements have been prepared on the historical cost basis, except for the revaluation of certain financial
+instruments as required under IFRSs.
+
+(d) Functional and presentation currency
+The directors are of the opinion that the functional currency of the Bank is the US Dollar (US$), being the currency in
+
+which the majority of the assets, liabilities and revenues are denominated. Therefore, these financial statements are
+expressed in US$ and all financial information is presented in US$, rounded to the nearest thousand.
+
+(e) Use of estimates and judgements
+
+The Bank makes certain estimates and assumptions regarding the future. Estimates and judgements are continually
+evaluated based on historical experience and other factors, including expectations of future events that are believed to
+be reasonable under the circumstances. In the future, actual experience may differ from these estimates and
+assumptions. The estimates and assumptions that have a significant risk of causing a material adjustment to the
+carrying amounts of assets and liabilities within the next financial year are discussed below.
+
+27
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+Expected Credit Loss provisioning
+
+The Bank uses IFRS 9 Financial Instruments (‘IFRS 9”) guidance on the ‘classification and measurement’ of financial
+instruments, including the expected loss model for calculating ‘impairment’ on financial assets.
+
+The key components of IFRS 9 which are applicable to the Bank and its financial instruments are: ‘classification and
+measurement’ and ‘impairment’.
+
+The Bank’s interpretation of these requirements is detailed below in addition to how they have been implemented and
+continue to be monitored.
+
+Classification and measurement
+
+Classification of financial assets depends on how they are managed and their contractual cash flow characteristics.
+IFRS 9 requires that financial assets are categorised in to two broad business models: ‘hold to collect’ and ‘hold to
+collect and sell’. The objective of the ‘hold to collect’ (“HTC”) business model is to hold financial assets and collect
+their contractual cash flows, rather than with a view to selling the assets to generate cash flows. However, there is no
+requirement that financial assets are always held until their maturity. Financial assets that meet a ‘Solely Payments of
+Principal and Interest’ (‘SPPI’) test and are held in a HTC business model will be classified at amortised cost. Under
+the ‘hold to collect and sell’ business model, the objective is to both collect the contractual cash flows and sell the
+financial asset. In contrast to the ‘hold to collect’ business model, sales are integral rather than incidental, and
+consequently this business model typically involves a greater frequency and volume of sales.
+
+Only financial assets that meet the SPPI test and are held in a ‘hold to collect and sell’ business model can be
+classified at fair value through other comprehensive income (‘FVOCTI’).
+
+Financial assets designated in the ‘hold to collect and sell’ model are initially recorded at cost and subsequently
+remeasured at fair value with changes recognised in other comprehensive income (‘OCI’) until the assets are sold.
+Upon disposal the cumulative gains or losses in OCI will be recognised in the income statement. At the year end, the
+Bank only had debt securities in this classification as detailed in note 17.
+
+Financial assets designated in the ‘hold to collect’ are subsequently measured at amortised cost.
+
+Impairment
+Under IFRS 9 loan loss provisions are calculated on an expected credit loss (‘ECL’) basis. The ECL model
+
+incorporates a forward-looking view so when a financial asset is initially recognised, an impairment loss allowance is
+calculated for the expected losses from defaults over the following 12 months. If the Bank then determines that there
+has been a significant increase in the credit risk of an asset, this impairment loss is increased to cover the expected
+losses over the whole life of the asset. In addition to impairment losses being required against financial assets, ECLs
+are also required against the value of certain off-balance sheet commitments where contracts have been entered in to
+on behalf of customers, but an asset has yet to be recognised on the Statement of Financial Position.
+
+The Bank considers that one or more of the following factors contributes to a significant increase in credit risk:
+¢ Financial difficulty
+« A breach of contract, such as a default or past due event
+« Concessions granted
+* Bankruptcy or another financial reorganisation
+* Disappearance of active market
+* Based in a market with significant increase in macroeconomic issues
+
+. A fall in credit rating, whether externally or internally assessed
+
+28
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+e) Use of estimates and judgement (continued)
+
+Impairment (continued)
+
+The computation of credit losses under IFRS 9 involves estimation of probabilities of default (‘PD’), loss given
+default (‘LGD’), a range of unbiased future economic scenarios, estimation of exposure at default and assessing
+where there have been instances of increases in credit risk.
+
+Default
+The Bank considers a default to have occurred when either or both of the following two events have taken place:
+i) The Bank considers that the obligor is unlikely to pay its credit obligations in full, without recourse by the
+Bank to actions such as realising security (if held)
+ii) The counterparty is past due more than 90 days on any material credit obligation to the Bank
+
+The Bank currently estimates the 12-month and lifetime PD, LGD and exposure at default (‘EAD’) for each loan to
+estimate the ECL for its portfolio. This modelling approach forecasts PDs for the remaining contractual maturity by
+taking into consideration how borrower-specific and macroeconomic conditions influence their estimation. Estimates
+are also generated for LGDs and EADs based on the nature of the collateral held and the credit exposures as well as
+incorporating credit risk mitigation activities that the Bank undertakes in its management of credit risk. The Bank has
+performed an assessment of the key drivers of risk in its credit exposures and is modelling multiple-economic
+scenarios for these.
+The Bank sources external data projections to use as inputs into these computations. Most significantly, these include
+global and emerging markets GDP forecasts and UK Consumer Price Index forecasts (only used in calculating the
+ECL for mortgages, the Bank’s portfolio of which is wholly UK based).
+The Bank uses IMF projections for GDP as the Bank expects that the IMF’s global remit and expertise meant that
+their emerging market, and in particular, African, projections should hold more weight than agencies that might focus
+more on the developed world.
+To ensure an unbiased calculation, the Bank considers a range of forward-looking economic scenarios when
+calculating the ECL: ;
+
+Base — as per the calculation, based on externally sourced data inputs as described above
+
+Better — all PDs within the base case divided by a factor of 1.5
+
+Worse ~ all PDs within the base case multiplied by a factor of 1.5
+A percentage is applied to each case in order to generate an unbiased ECL. During 2023, the Bank kept constant the
+weightings applied to each case:
+
+2023 2022
+Better 20% 20%
+Base 50% 50%
+Worse 30% 30%
+
+The Bank has used the general approach that categorises each loan into a ‘3 Stage’ impairment model.
+
+e For credit exposures where there have not been significant increases in credit risk since initial recognition, a
+12-month ECL is provided for (Stage 1).
+
+° For credit exposures where there have been significant increases in credit risk, lifetime ECLs are provided for
+(Stages 2). The Bank assesses significant increases in credit risk using relative quantitative, qualitative and
+DPD measures that are commensurate with the nature of the credit exposures at their inception and on an on-
+going basis.
+
+e Any exposure that meets the above definition of Default are placed into Stage 3. This objective evidence of
+impairment will result in a provision of EAD multiplied by LGD as the lifetime ECL.
+
+29
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+e) Use of estimates and judgement (continued)
+
+Impairment (continued,
+
+As an appropriate backstop measure, under-performing that are 30 days past due will be moved to Stage 2 (‘under-
+performing’). Once exposures become 90 days past due, this backstop will be used in conjunction with other
+qualitative criteria to determine that they are non-performing and placed into Stage 3 (‘non-performing’). This
+objective evidence of impairment will result in a provision of EAD multiplied by LGD as the lifetime ECL.
+
+In some circumstances, as part of the Bank’s recovery process for non-performing assets, the Bank will agree to
+exercise “forbearance”, agreeing to accept later payment of principal and interest (“‘re-scheduling”), or to fully
+restructure a loan obligation. In these circumstances, particularly where repayments are heavily postponed or “back
+ended”, loans that were under-performing (IFRS 9 Stage 2) or non-performing (IFRS 9 Stage3) might be considered,
+following re-structure, to be performing again.
+
+It is the policy of FBUK, in accordance with the principles of IFRS 9 that where forbearance is exercised, there
+should be at least a 12 month “cure period” before any impairment allowance, generated by the previous default or
+arrears, is removed. During this period the customer needs to demonstrate that all new repayments are being met in
+full.
+
+Loans and Advances are written off after they are classified as ‘lost’, that is, the asset is irrecoverable, or it is no
+longer considered economically viable to try and recover it or it is deemed immaterial, or full and final settlement is
+reached, including loan collateral that has been realised, and a shortfall remains. In the event of write off, the loan
+balance is removed from the statement of financial position and the impairment allowance held against this loan is
+released.
+
+Performing Under- Non- Total
+performing Performing
+USS'000 US$'000 USS'000 USS'000
+(Stage 1) (Stage 2) (Stage 3)
+
+Opening loss allowance at 1 January 263 10 “ 273
+2023 (under IFRS 9)
+Financial assets transferred:
+From Stage 1 to Stage 2 - - - -
+From Stage 2 to Stage 3 - - - -
+From Stage 1 to Stage 3 - - - -
+From Stage 3 to Stage 2 - - - -
+Loans repaid/written off (237) (9) - (246)
+Decrease in ECL losses (13) 1 - (12)
+New financial assets originated 106 19 ° 125
+Closing loss allowance at 31
+December 2023 119 21 - 140
+Comprised of:
+Loans and cash deposits with banks 38 8 - 46
+Loans and advances to customers 28 1 29
+Financial assets measured at FVOCI 1 - -— 1
+Trade related contingencies 52 12 - 64 -
+Total by stage and asset class 119 21 - 140
+
+It is noted that the short-term nature of the Bank’s loan book (with the exception of buy-to-let mortgages which are
+highly collateralised and therefore have minimal ECL) means that the loss allowance at the start of the year is almost
+wholly reduced during the year by loans that have been repaid. Similarly, $125k of the year end balance of $140k is
+attributable to new assets originated during the year.
+
+30
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+(e) Use of estimates and judgement (continued)
+
+At 31 December 2023, impairment allowance totalled US$0.140m (2022: US$0.273m). The net impairment
+movement (i.e. after recoveries) for loans and advances to customers recognised in 2023 was US$0.113m (2022:
+US$(0.144)m.
+
+The gross carrying amount of financial instruments, and thus the maximum exposure to loss is as follows:
+
+Financial Financial
+Assets Assets
+2023 2022
+US$’000 US$’000
+Performing (stage 1) 175,969 86,141
+Under-performing (stage 2) 9,929 * 6,687
+Non-performing (stage 3) - -
+Total gross financial assets 185,898 92,828
+Less: Loan loss allowance (76) (160)
+Less: Off balance sheet
+allowance (64) 113
+Financial assets net of
+ECL ee 85,758 e555
+Sensitivity
+
+As described above, the Bank considers a range of forward-looking economic scenarios when calculating the ECL:
+
+Base — as per the calculation, based on externally sourced data inputs as described above
+Better — all PDs within the base case divided by a factor of 1.5
+Worse — all PDs within the base case multiplied by a factor of 1.5
+
+In order to assets the sensitivity of the ECL to these scenarios, the Bank calculated ECL for three extra scenarios:
+“100% Base”, “100% Better” and “100% Worse”. It can be seen that the effect on the ECL is not particularly large,
+due to the short tenors of the Bank’s loan book and collateral held against gross positions.
+
+2023 scenario Base Better Worse
+Better 20% - 100% -
+Base 50% 100% - -
+Worse 30% - - 100%
+ECL ($000) 140 129 86 194
+
+31
+FidBank UK Limited
+Annual Report & Financial Statements
+3] December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+3. Summary of significant accounting policies
+
+(a) Interest income and expense
+
+Interest income on financial assets that are classified at amortised cost or fair value through other comprehensive
+income and interest expense on financial liabilities are recognised in profit or loss using the effective interest rate
+method. The effective interest rate is the rate that exactly discounts the estimated future cash receipts and payments
+through the expected life of the financial asset or liability (or, where appropriate, a shorter period) to the gross balance
+on stage 1 and stage 2 assets.
+
+The calculation of the effective interest rate includes all fees, transaction costs, and discounts or premiums that are an
+integral part of the effective interest rate. Transaction costs are incremental costs that are directly attributable to the
+acquisition, issue or disposal of a financial asset or liability.
+
+Interest on impaired financial assets is calculated by applying the original effective interest rate of the financial asset
+to the carrying amount as reduced by any allowance for impairment.
+
+Interest income and expense presented in the profit and loss include interest on financial assets and liabilities held at
+
+amortised cost on an effective interest rate basis.
+
+(b) Fees and commission
+
+Fees and commission are accounted for depending on the services to which the income relates as follows:
+
+e Letters of credit fees consist of commissions in relation to letters of credit transactions and associated commitment
+and cross border fess. These fees are accounted for at the time of the transaction.
+
+e Fund transfer fees are in relation to payment charges to customers. These fees are accounted for at the time of the
+transaction.
+
+© Customer account charges consists of debit card fees and customer services charges which are accounted for when
+the fees are taken from the customer. Also, mortgage and structured finance fees which are spread and accounted
+for over the period of the loan.
+
+e Other fees is in relation to an externally held rent deposit which is accounted for on the receipt of an external
+statement from the deposit holder.
+
+(c) Foreign currency
+A foreign currency transaction is recorded in the functional currency by applying to the foreign currency amount the
+spot exchange rate between the functional currency and the foreign currency at the date of the transaction.
+
+At the end of each reporting period, foreign currency monetary items are translated using the closing rate and
+resulting gains and losses on translation are included in the profit or loss.
+
+Exchange gains on foreign exchange transactions with customers are recorded as income during the period.
+(d) Financial instruments
+
+Recognition
+
+The Bank recognises financial assets and financial liabilities in its statement of financial position when it becomes a
+party to the contractual provisions of the instrument. The classification policy below relates to financial assets
+recorded in 2022 and 2023 are compliant with IFRS 9 and outlined in accordance with the policies in note 2.
+
+Management classifies financial assets and liabilities into the following categories at the time of initial recognition:
+e ‘amortised cost’
+
+e ‘fair value through profit or loss’
+
+e ‘fair value through other comprehensive income’
+
+32
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+3. Summary of significant accounting policies (continued)
+
+Initial measurement
+
+When a financial asset or financial liability is recognised initially, the Bank measures it at its fair value plus (in the
+case of a financial asset or financial liability not at fair value through the profit or loss) transaction costs that are
+directly attributable to the acquisition or issue of the financial asset or financial liability.
+
+Subsequent measurement
+
+Financial assets initially classified at amortised cost are subsequently measured at amortised cost. Financial assets
+classified as ‘hold to collect and sell’ are subsequently measured at fair value through other comprehensive income.
+Financial liabilities are subsequently measured at amortised cost.
+
+Measurement bases
+
+() Amortised cost measurement
+
+The amortised cost of a financial asset or liability is the amount at which the financial asset or liability is measured at
+initial recognition, less principal repayments to date, plus or minus the cumulative amortisation using the effective
+interest rate method, of any difference between the initial amount recognised and the maturity amount, less any
+reduction for impairment.
+
+(ii) Fair value measurement
+
+The determination of fair values of financial assets and financial liabilities quoted in an active market is based on
+observed bid and offer prices for assets and liabilities respectively. For all other financial instruments, fair value is
+determined by using valuation techniques. Valuation techniques include comparison to similar instruments for which
+market observable prices exist, discounting future cash flows, option pricing and other valuation models and methods
+widely used by market participants. As the Bank does not presently use more complex financial instruments, all the
+inputs to these valuation models and techniques are market-observable.
+
+(e) Financial assets at fair value through other comprehensive income
+
+Financial assets at fair value through other comprehensive income comprise of financial assets (debt) which are
+classified on initial recognition as being held to collect for contractual inflows and for sale. Gains and losses arising
+from changes in fair value are recognised as they occur in other comprehensive income.
+
+(f) Equity and other financial liabilities
+
+The Bank classifies financial instruments that it issues as an equity instrument or financial liability in accordance with
+the substance of the contractual terms of the instrument. An instrument is classified as equity if it evidences a residual
+interest in the assets of the Bank after deduction of liabilities. An instrument is classified as a liability if it represents a
+contractual obligation to deliver cash, or another financial asset or to exchange financial assets or financial liabilities
+on potentially unfavourable terms.
+
+Other financial liabilities, not classified as fair value through profit and loss, are initially recognised at fair value,
+including directly attributable transaction costs and are subsequently measured at amortised cost, using the effective
+interest rate method.
+
+Deposits and customer accounts are classified as liabilities. Customer accounts with no activity for two years are
+moved to dormant account status and are then held within other liabilities.
+
+Letters of credit are given as security to support the performance of a customer to third parties. As the Bank will only
+be required to recognise the exposure of these obligations in the event of the Customer’s default, the cash
+requirements of these instruments are expected to be considerably below their nominal amounts. However, the bank
+assesses letter of credit according to IFRS9 principles and makes provisions accordingly.
+
+33
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+3. Summary of significant accounting policies (continued)
+
+(g) Impairment of financial assets
+
+The Bank assesses impairment of financial assets on a forward-looking basis; the expected credit losses (‘ECL’)
+associated with its financial assets carried at amortised cost, FVOCI and other off-balance sheet commitments are
+recognised in profit or loss as they occur.
+
+The ECL model incorporates a forward-looking view so when a financial asset is initially recognised, an impairment
+loss allowance is calculated for the expected losses from defaults over the following 12 months. If the Bank then
+determines that there has been a significant increase in the credit risk of an asset, this impairment loss is increased to
+cover the expected losses over the whole life of the asset. In addition to impairment losses being required against
+financial assets, ECLs are also required against the value of certain off-balance sheet commitments where contracts
+have been entered in to on behalf of customers, but an asset has yet to be recognised on the Statement of Financial
+Position.
+
+When a subsequent event causes the amount of impairment loss to decrease, the impairment loss is reversed through
+profit or loss.
+
+(h) Property and equipment
+
+Recognition and measurement
+
+Items of property and equipment are measured at cost less accumulated depreciation and impairment losses if any.
+Cost includes expenditures that are directly attributable to the acquisition of the asset.
+
+When parts of an item of property or equipment have different useful lives, they are accounted for as separate items
+(major components) of property and equipment.
+
+Subsequent costs
+
+The cost of replacing part of an item of property or equipment is recognised in the carrying amount of the item if it is
+probable that the future economic benefits embodied within the part will flow to the Bank and its cost can be
+measured reliably. The costs of the day-to-day servicing of property and equipment are recognised in profit or loss as
+incurred.
+
+Depreciation
+
+Depreciation is recognised in profit or loss on a straight-line basis over the estimated useful lives of each part of an
+item of property and equipment. Leased assets are depreciated over the shorter of the lease term and their useful
+lives.
+
+The estimated useful lives for the current and comparative periods are as follows:
+
+Leasehold improvements - Remaining life of lease
+Office equipment and furniture - 5 years
+Computer hardware - 3 years
+
+Depreciation methods, useful lives and residual values are reassessed at the reporting date.
+
+(i) Intangible assets - software
+
+Software acquired by the Bank is stated at cost less accumulated amortisation and accumulated impairment losses.
+All costs have been capitalised in accordance with IAS 38.
+
+Amortisation is recognised in profit or loss (within ‘Depreciation and amortisation’) on a straight-line basis over the
+estimated useful life of the software, which is assessed annually, from the date that it is available for use. The
+estimated useful life of software is three to five years.
+
+34
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+3. Summary of significant accounting policies (continued)
+
+(j) Impairment of non-financial assets
+
+The carrying amounts of the Bank’s non-financial assets, excluding any deferred tax assets, are reviewed at each
+reporting date to determine whether there is any indication of impairment. If any such indication exists, then the
+asset’s recoverable amount is estimated.
+
+An impairment loss is recognised if the carrying amount of an asset exceeds its recoverable amount. Impairment
+losses are recognised in profit or loss.
+
+The recoverable amount of an asset is the greater of its value in use and its fair value less costs to sell. In assessing
+value in use, the estimated future cash flows are discounted to their present value using a pre-tax discount rate that
+reflects current market assessments of the time value of money and the risks specific to the asset.
+
+Impairment losses recognised in prior periods are assessed at each reporting date for any indications that the loss has
+decreased or no longer exists. An impairment loss is reversed if there has been a change in the estimates used to
+determine the recoverable amount. An impairment loss is reversed only to the extent that the asset’s carrying amount
+does not exceed the carrying amount that would have been determined, net of depreciation or amortisation, if no
+impairment loss had been recognised.
+
+(k) Leases
+
+The Bank recognises interest on its lease liabilities and amortisation on its right-of-use assets.
+
+The Bank has elected not to recognise right-of-use assets and lease liabilities for some leases of low value assets
+based on the value of the underlying asset when new or for short-term leases with a lease term of 12 months or less.
+Payments made under operating leases out of scope from IFRS 16 are recognised in profit or loss on a straight-line
+basis over the term of the lease. Lease incentives received are recognised as an integral part of the total lease expense,
+over the term of the lease. ;
+
+The lease liability has been measured at the present value of the remaining lease payments discounted at 4.46% which
+represents an estimate of the Bank’s rate of borrowing, independently and under comparable conditions. The right-of-
+use asset is equal to the lease liability less any prepaid lease payments.
+
+35
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+3. Summary of significant accounting policies (continued)
+
+(1) Income tax
+
+Income tax comprises current tax and deferred tax. Income tax is recognised in profit or loss except to the extent
+where underlying items are recognised directly through other comprehensive income or equity.
+
+Current tax is the tax expected to be payable on the taxable profit for the year, calculated using tax rates enacted or
+substantively enacted by the reporting date, and any adjustment to tax payable in respect of previous years. Current
+tax assets and liabilities are offset when the Bank intends to settle on a net basis and the legal right to offset exists.
+Deferred tax is recognised on temporary differences between the carrying amounts of assets and liabilities in the
+statement of financial position and the amounts attributed to such assets and liabilities for tax purposes. Deferred tax
+liabilities are generally recognised for all taxable temporary differences and deferred tax assets are recognised to the
+extent that it is probable that future taxable profits will be available against which deductible temporary differences
+can be utilised.
+
+Deferred tax is calculated using the tax rates expected to apply in the periods in which the assets will be realised or
+the liabilities settled, based on tax rates and laws enacted, or substantively enacted, by the reporting date.
+
+(m) Cash and cash equivalents
+For the purpose of the statement of cash flows, cash and cash equivalents are deemed to comprise cash in hand, cash
+at other banks repayable on demand and treasury bills maturing within three months of the transaction date.
+
+Cash and cash equivalents are carried at amortised cost in the statement of financial position.
+
+(n) Pension costs
+
+The Bank operates a defined contribution pension scheme and the amount charged to profit or loss in respect of
+pension costs and other post-retirement benefits is the contribution payable in the year. Differences between
+contributions payable in the year and contributions actually paid are shown as accruals or prepayments in the
+statement of financial position.
+
+4. Segmental reporting
+
+Segmental analysis of income has not been prepared as, in the opinion of the directors, all of the Bank’s income
+derives from one main activity, commercial and retail banking, which is carried out in the United Kingdom.
+
+5. Interest income
+
+2023 2022
+US$’000 USS°000
+Interest income on securities measured at FVOCI 1,648 244
+Interest income on loans and advances 6,989 3,031
+8,637 3,275
+
+6. Interest expense
+2023 2022
+USS’000 US$’000
+Interest expense on deposits from banks (961) (133)
+Interest expense on customer accounts (362) (197)
+Interest expense on lease liability (90) (102)
+(1,413) (432)
+
+36
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+7. Fees and commission income
+2023 2022
+US$’000 US$’000
+Letters of credit 1,058 728
+Funds transfer 166 147
+Customer account charges 76 127
+Others 15 1
+1,315 1,003
+Timing of Revenue recognition-2023
+Letters of Funds Customer Others Total
+credit transfer Account
+Recognised at point in time 1,047 166 68 15 1296
+Recognised over time 11 - 8 - 19
+Total 1,058 166 716 15 1,315
+Timing of Revenue recognition-2022
+Letters of Funds Customer Others Total
+credit transfer Account
+Recognised at point in time 695 147 87 1 930
+Recognised over time 33 - 40 - 73
+Total 728 147 127 1 1,003
+
+8. Dealing and exchange gain
+
+Dealing and exchange gains relates to foreign exchange income derived from customer facilitation and the
+revaluation of assets and liabilities denominated in currencies other than the US Dollar and the gain / (loss) from the
+sale of securities.
+
+2023 2022
+US3’000 USS’000
+Foreign exchange gain 261 125
+261 125
+
+9. Other operating expense
+2023 2022
+US$’000 US$’000
+Other operating charges and brokerage (219) (151)
+(219) (151)
+
+37
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+10. Administrative expenses
+
+2023 2022
+US$’000 USS'000
+Wages and salaries, including directors (4,815) (3,876)
+Social security costs (573) (484)
+Pension costs (433) (397)
+Other staff costs (614) (664)
+Total staff costs (6,435) (5,421)
+Computer and equipment costs (1,760) (1.028)
+Professional fees (1,033) (611)
+Other administrative expenses (1,937) (1,435)
+(11,165) (8,495)
+
+Our staffing increased throughout the year, as the Bank increased activity to prepare for a new phase of growth.
+Average staffing levels increased from 36 in 2022 to 52 in 2023, with 61 staff in post at 31 December 2023 resulting
+in staff costs increasing by $1.0m to $6.4m. Professional fees paid for consultancy also increase from $611k in
+2022 to $1,030k in 2023 as the Bank invested in support and advice to strengthen the infrastructure and control
+framework of the Bank.
+
+During the year, the Bank was subject to an audit by its core banking system supplier. This audit found that certain
+components had been included in the installation in 2013 which had not been licenced. This was independently
+verified and the Bank agreed to pay $675k for additional perpetual licences. This has been expensed rather than
+capitalized, as, had the balance been capitalized at the original installation date, after amortization it would now have
+a zero net book value.
+
+Within computer and equipment costs, therefore, a one-off cost of $675k was incurred. All other administrative
+expenses are incurred in the ordinary course of the Bank’s business.
+
+2023 2022
+
+Average number of employees, including executive directors: No. No,
+Banking 19 14
+Operations 22 19
+Administration 3 3
+44 36
+
+11. Pension costs
+
+The Bank makes defined contributions to the personal pension funds of employees under Group Personal Pension
+arrangements. During the year to 31 December 2023, the Bank made contributions totalling US$ 432,582 (2022: US$
+
+396,521).
+
+Contributions accrued at the reporting date amounted to US$nil (2022: US$nil). There were no outstanding pre-paid
+
+contributions at the reporting date.
+
+12. Directors’ emoluments
+
+2023 2022
+
+US$’000 US$’000
+
+Executive director emoluments (449) (303)
+Non-executive directors’ fees (221)_ (119)
+(670) (422)
+
+The emoluments of the highest paid director, excluding pension contributions, were US$449,439 (2022: US$303,218).
+Pension contributions were made to one director during the year amounting to US$26,880 (2022: US$24,149). USS$nil
+
+of benefits in kind were paid during the year (2022: US$nil).
+38
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+13. Loss before tax
+2023 2022
+USS’000 USS’000
+Loss is stated after crediting:
+Amounts payable to the Auditor and its associates pursuant to
+legislation in respect of:
+- Statutory Audit of the financial statements (375) (265)
+- Audit-related assurance services (30) -
+Other services relating to taxation which are not provided by (10) (11)
+auditors
+Other low value operating lease and similar rentals (6) (7)
+14, Taxation
+Tax on loss on activities in the statement of comprehensive income:
+(a) Analysis of tax charge on activities
+2023 2022
+USS"000 US$’000
+
+Current tax:
+
+United Kingdom corporation tax based on the loss for the year - -
+Adjustment in respect of prior year - -
+Prior year restatement - -
+Exchange differences re opening and closing rates - -
+
+Total current tax - -
+Deferred tax:
+
+Timing differences, origination and reversal ; - -
+Prior year deferred tax adjustment - -
+Change in tax rate - -
+Total deferred tax - -
+Tax charge on loss - -
+
+39
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+14. Taxation (continued)
+(6) Reconciliation of the total tax charge
+2023 2022
+
+US$’000 US$’000
+Loss on activities before tax (3,023) (5,382)
+Tax at 23.52% (2022 19%) 711 1,023
+Effects of:
+Expenses not deductible for tax purposes (16) (8)
+Current tax-Exchange differences re opening and closing rates - (1)
+Fixed asset differences (85) -
+Remeasurement of deferred tax for change in tax rates 38 -
+Income not taxable for tax purpose - -
+Adjustments on IFRS balance sheet - -
+Adjustments to brought forward values - -
+Deferred tax recognised directly to equity - -
+Deferred tax not recognised (648) (1,014)
+Temporary differences not recognised in the computation - -
+Tax charge - -
+(c) Analysis of deferred tax assets
+The following is an analysis of the deferred tax assets recognised by the Bank:
+
+2023 2022
+US3$’000 USS’000
+
+Brought forward - -
+Movements in respect of prior year - -
+Deferred tax recognised directly to equity -
+
+Short term timing differences - :
+
+A deferred tax asset of US$10,192,976 (2022: US$9,544,838) against losses and temporary differences of
+US$40,771,9031 (2022: US$38, 179,351) has not been recognised.
+
+(d) Factors that may affect future tax charges
+
+The UK corporation tax rate was 19% for the period to 31 March 2023. The UK. corporation tax rate increased to
+25% for profits of over £250,000 from 1 April 2023. A blended tax rate of 23.52% has been used in these accounts.
+
+The tax rate of 25% for profits of over £250,000 remains unchanged for the year beginning 1 April 2024.
+
+40
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+15. Financial assets and liabilities
+
+The table below sets out the Bank’s classification of each class of financial asset and liability as at 31° December 2023
+and 31 December 2022:
+
+2023
+USS’000 Note Measured Financial assets Financial liabilities Total
+atFVOCI at amortised cost at amortised cost
+
+Cash and cash equivalents 16 - 7,127 - 7,127
+ao assets measured at 17 42,025 . - 42,025
+Loans and advances to banks 18 - 128,017 - 128,017
+Loans and advances to customers 19 - 8,590 - 8,590
+Other assets 23 - 939 939
+Deposits by banks 24 - - 78,638 78,638
+Customer accounts 25 - ; - 50,613 50,613
+Other liabilities 26/33 - - 2,718 2,718
+2022
+
+US3$’000 Note Measured Financial assets Financial liabilities Total
+
+at FVOCI at amortised cost at amortised cost
+
+Cash and cash equivalents 16 - 5,431 - 5,431
+pact assets measured at 17 18,123 . - 18,123
+Loans and advances to banks 18 - 65,437 - 65,437
+Loans and advances to customers 19 - 3,564 - 3,564
+Other assets 23 - 850 850
+Deposits by banks 24 - - 19,943 19,943
+Customer accounts 25 - - 38,278 38,278
+Other liabilities 26/33 - - 2,718 2,718
+
+41
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+16. Cash at bank and in hand
+2023 2022
+US$’000 USS$"000
+Cash at Bank 7,129 5,432
+Gross amount 7,129 5,432
+Impairment under IFRS 9 (2) ()
+Net amount 7,127 §,431
+Cash is classified as a level 1 instrument.
+17. Financial assets measured at FVOCI
+2023 2022
+US$’000 US$’000
+Treasury bills 42,026 18,125
+Gross amount 42,026 18,125
+Impairment under IFRS 9 (t) (2)
+Net amount 42,025 18,123
+Maturity
+- 3 months or less 32,025 -
+- 1 year or less but over 3 months 10,000 18,123
+- Syears or less but over | year - -
+- Over 5 years - -
+. 42,025 18,123
+
+The Bank measures fair values using the fair value hierarchy that reflects the significance of inputs used in making
+the measurements. The financial assets of the Bank fall within the category of Level 1 where valuation is based upon
+quoted prices in an active market for the same or identical instrument. Unrealised Profit of US$396 (2022: Unrealised
+profits of US$2,966) have been recognised in other comprehensive income. Financial assets measured at fair value
+through OCI purchased and sold amounted to US$78,133,437 (2022: US$ 40,469,036) and US$55,879,065 (2022:
+US$52,877,491) respectively.
+
+- 42
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+18. Loans and advances to banks
+The following table shows total bank loans
+2023 2022
+US$’000 USS’000
+Gross Impairment Net Gross Impairment Net
+
+amount Allowance amount amount Allowance amount
+Bank loans 128,125 (108) 128,017 65,704 (267) 65,437
+
+128,125 (108) 128,017 65,704 (267) 65,437
+
+The fair value of the cash collateral held in respect of the loans and advances to banks at 31 December 2023 is
+US$14,627,390 (2022: US$6,1 10,447). This collateral can be used in the event of default by the borrower.
+
+The following table shows the remaining maturity of the loans and advances to banks:
+
+2023 2022
+USS’000 US3$"000
+Gross
+Amount Impairment Net Gross Impairment Net
+Performing Allowance Amount Amount Allowance ammount
+Repayable on demand or at short notice 1 - 1 1 - 1
+Remaining maturity:
+~3 months or less excluding above 123,962 (97) 123,865 47,966 (140) 47,826
+~ 1 year or less but over 3 months 4,162 Q1) 4,151 17,737 (127) 17,610
+- 5 years or less but over I year _ - - - - -
+128,125 (108) 128,017 65,704 (267) _ 65,437
+
+Amounts repayable on demand or at short notice include monies pledged to banks in respect of trade finance
+transactions of US$970 (2022: US$ 970).
+
+43
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+19. Loans and advances to customers
+2023 2022
+US$’000 US$°000
+Gross Impairment Net Gross Impairment Net amount
+amount allowance amount amount allowance
+Commercial loans & advances 8,488 (30) 8,458 2,934 (2) 2,932
+Personal loans & advances 132 - 132 52 - 52
+Syndicated loans - - - $82 (2) 580
+8,620 (30) 8,590 3,568 (4) 3,564
+
+The fair value of the collateral held in respect of the loans and advances to customers is US$12,479,995 as at 31
+December 2023 (2022: US$11,258,355). This collateral can be used in the event of default by the borrower. Out of
+the total collateral, US$nil is for impaired loans and advances to customers (2022: US$nil) and US$2,316,496 (2022:
+US$1,737,516) is for loans and advances to customers that are past due, but not impaired.
+
+The following table shows the remaining maturity of the loans and advances to customers:
+
+2023 2022
+USS’000 US$’000
+Gross Impairment Net Gross Impairment Net
+Amount allowance amount Amount allowance amount
+Repayable on demand or at short
+notice 44 - 44 8 - 8
+Remaining maturity:
+- 3 months or less excluding above 2,382 (14) 2,368 2 - 2
+- 1 year or less but over 3 months 1,963 (14) 1,949 19 - 19
+~ 5 years or less but over 1 year 348 - 348 929 (1) 928
+~ Over 5 years 3,883 (2) 3,881 2,610 G3) 2,607
+8,620 G0) 8,590 3,568 (4) 3,564
+
+Of the US$29,357 impairment provision (2022: US$4,058), US$29,357 represents the Stage 1 and stage 2 provisions under
+IFRS 9. (2022: US$4,058).
+
+20. Net impairment loss for loans and advances to customers & banks
+
+2023 2022
+
+USS’000 US3S°000
+
+At beginning of the year (273) (129)
+Reversal/(Charge) to statement of comprehensive income 133 (144)
+Amounts written off against historic provisions : >
+At the end of the year (140) (273)
+Loans and advances to banks and cash in hand (46) (155)
+Loans and advances to customers (29) (4)
+Investment securities q) -
+Trade finance contingencies (to banks) (64) (114)
+(140) (273)
+
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+20. Net impairment loss for loans and advances to customers & banks (continued)
+
+During the year, the Bank has written off loans and advances to customers amounting to US$nil. (2022: US$nil).
+
+The carrying amount of the loans and advances to customers in default at the end of the reporting period is USS$nil
+(2022: US$nil).
+
+21. Property and equipment
+
+2023
+
+Leasehold Office Equipment and Total
+US3S’000 Improvements Furniture &
+
+Computer Hardware
+
+Cost:
+At beginning of the year 278 §11 789
+Additions 25 26 51
+Disposals (13) (13)
+At end of the year 303 524 827
+Depreciation:
+At beginning of the year (262) (483) (745)
+Charge for the year (18) (19) (37)
+Disposals - 11 11
+At end of the year (280) (491) (771)
+Net book value at 31 December 23 33 56
+2022
+
+Leaschold Office Equipment and Total
+USS’000 Improvements Furniture &
+
+Computer Hardware
+
+Cost:
+At beginning of the year 278 628 906
+Additions - 12 12
+Disposals (129) (129)
+Atend of the year 278 $11 789
+Depreciation:
+At beginning of the year (220) (596) (816)
+Charge for the year (42) (16) (58)
+Disposals - 129 129
+At end of the year (262) (483) (748)
+Net book value at 31 December 16 28 44
+
+45
+FidBank UK Limited
+
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+22. Intangible assets
+2023 2022
+Software Software
+US$'000 US$’000
+Cost:
+At beginning of the year 3,786 3,830
+Additions 112 26
+Disposals - (70)
+At end of the year 3,898 3,786
+Amortisation:
+At beginning of the year (3,279) (3,222)
+Disposals - 70
+Reclassified - -
+Charge for the year (156) (127)
+At end of the year (3,435) (3,279)
+Net book value at 31 December 463 507
+23. Other Assets
+2023 2022
+US$’000 US$’000
+Receivable within twelve months:
+Fees and Commissions 16 37
+Other receivables 361 325
+Receivable greater than twelve months:
+Rent and other security deposits 502 468
+, 939 850
+Other receivables for 2023 includes a Mastercard security of 108K and input VAT of 253K.
+24. Deposits by banks
+2023 2022
+USS$’000 USS’000
+Repayable on demand 62,867 14,361
+Remaining maturity:
+- 3 months or less excluding above 15,771 5,582
+~ 1 year or less but over 3 months - -
+78,638 19,943
+
+Deposits by banks include amounts totalling US$67,472,000 (2022: US$17,283,000) charged to the Bank to secure
+
+actual and contingent liabilities in respect of letters of credit.
+
+46
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+25. Customer accounts
+2023 2022
+US$’000 US$°000
+Repayable on demand 33,619 23,547
+Remaining maturity: :
+- 3 months or less excluding above 3,969 4,368
+- 1 year or less but over 3 months 11,616 10,014
+- 5 years or less but over | year 1,409 349
+50,613 38,278
+26. Other liabilities
+2023 2022
+US$’000 USS’000
+Payable within twelve months:
+Taxation and social security 188 124
+Accounts payable . 529 §29
+717 653
+27. Accruals and deferred income
+2023 2022
+USS’000 US3$’000
+Accruals 116 141
+Deferred income 27 34
+143 175
+28. Called up share capital
+2023 2022
+Authorised, Allotted, called up and fully paid US$’000 US3$’000
+50,000 deferred shares of £1 each 90 90
+60,000,000 ordinary shares of US$1 each 60,000 60,000
+25,000,000 ordinary shares of US$1 each 25,000 -
+85,090 60,090
+
+The ordinary shares comprise a single class and each have the same voting rights as well as rights to dividends and
+distributions. The deferred shares carry no entitlement to vote or receive distributions.
+
+Fidelity Bank ple injected $25m of ordinary share capital following their purchase of the Bank in 2023.
+
+47
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+29. Related party transactions
+
+Fidelity Bank Plc purchased the bank on the 27 July 2023. During the period to 31** December 2023, the Bank
+undertook transactions with Fidelity Bank Ple and its subsidiaries (the Fidelity Group) in the normal course of
+business. These include loans and deposits and foreign currency transactions and the associated interest income and
+expenses. Loans and advances to banks are cash secured to a maximum of US$25.2m (2022: US$5.4m). Balances
+and related income and expense included in these financial statements in respect of the transactions with Fidelity
+Group are as follows:
+
+2023 2022
+Holding company US3$’000 US$"000
+Assets
+Loans and advances to banks 4,108 -
+Liabilities
+Deposits by banks 36,830 15,765
+Income ~ interest
+From holding company 124 216
+Expense - interest
+
+To holding company 296 6
+
+At 31 December 2023 no loans were made (2022: none) to executive directors of the Bank, on terms generally
+available to staff. More information regarding key management compensation is included within note 12.
+
+No transactions have been undertaken with telated parties of the board.
+
+30. Financial risk management
+
+(a) Risk management
+The Bank holds and issues financial instruments for the purposes of:
+
+¢ earning interest margins, fees and commission;
+
+e = financing its operations; and
+
+¢ managing the interest rate and currency risks inherent in its operations.
+The Bank does not actively trade in financial instruments and, therefore, does not have a trading book. Its operations
+are financed from a mixture of equity and deposits. Deposits are raised primarily in US Dollars and to a lesser extent
+Sterling and euros at both fixed and variable rates and lending is similarly distributed. Longer term lending is partly
+financed by capital but is otherwise generally matched to deposits both in terms of maturity and re-pricing.
+
+The Bank’s functional currency is the US Dollar. It does not actively speculate in foreign currencies and the majority
+of its foreign exchange transactions are carried out in the spot market for customer facilitation purposes. The main
+risks arising from the Bank’s financial instruments are credit risk, liquidity risk, interest rate risk and foreign currency
+risk. Management has developed policies for managing each of these risks, which are reviewed and approved by the
+Board on an annual basis. Significant features of these policies are summarised below.
+
+48
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+(b) Credit risk
+
+Credit risk is the risk that a customer or counterparty is unable or unwilling to meet a commitment that it has
+entered into with the Bank and arises mainly from lending and trade finance activities. To mitigate this risk, the
+Bank has adopted policies that minimise significant unsecured credit exposures other than to financial institutions
+and to avoid concentrations of unsecured credit risk to counterparty groups, industry sectors and countries, which
+do not carry investment grade credit ratings. All credit exposures are subject to continuous assessment by the
+Assets & Liabilities Committee and the Risk & Board Risk Committee. It is the policy of the Bank to make
+adequate impairment allowances where real or probable problems in asset recovery are identified. Details of
+impairment allowances are summarised in notes 16 to 20.
+
+() Credit exposure by sector
+
+2023 2022
+USS’000 US3’000
+Banks 135,143 70,868
+Government 42,025 18,123
+Corporate 4351 581
+Individuals 4,240 2,983
+185,759 92,555
+
+(ii) Credit exposure by location
+2023 2022
+USS"000 US$’000
+Europe 105,935 48,788
+Africa 19,314 28,031
+United States 39,501 15,736
+India 21,009 -
+185,759 92,555
+
+The above sector and geographical analyses only include cash at bank and in hand, loans and advances to banks and
+to customers at amortised cost, financial assets valued at fair value through other comprehensive income and financial
+assets - derivatives. The Bank has established procedures to manage country risk. During the year there continued to
+be periods of significant volatility in the emerging bond markets which are closely monitored and valued daily. The
+Bank also carries out country credit reviews of emerging markets and thereby assesses any potential creditworthiness
+issues.
+
+49
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+b (continued)
+
+(iii) Credit exposure by Credit Quality Step
+
+The Bank extends credit facilities to quality rated and unrated counterparties. An analysis of the credit quality of the
+maximum credit exposure based on ratings provided by Fitch rating agency and where applicable grouped by Credit
+Quality Steps (CQS) as follows:
+
+2023 2022
+CcQs Assets USS$’000s US3*000s
+Cash and Cash Equivalent
+1 Rated AAA to AA- - -
+2 Rated to A+ to A- 5,169 4,073
+3 Rated BBB+ to BBB - 115
+4 Rated BB+ to BB- 1,911 1,104
+5 Rated B+ to B- 47 94
+6 Unrated - 45
+7,127 5,431
+Loans and Advances to Banks
+1 Rated AAA to AA- - -
+2 Rated A+ to A- 36,516 38,104
+3 Rated BBB+ to BBB- 21,009 -
+4 Rated BB+ to BB- 23,509 -
+5 Rated B+ to B- 17,486 26,649
+6 Unrated 29,497 684
+128,017 65,437
+Loans and Advances to Customers
+Unrated neither past due nor impaired 8,590 3,564
+Unrated past due but not impaired - -
+8,590 3,564
+Financial Assets
+1 Related AAA to AA- 42,025 18,123
+5 Related B+ to B- - -
+42,025 18,123
+
+50
+FidBank UK Limited
+Annual Report & Financial Statements
+3/1 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+b (continued)
+
+As at 31 December 2023, the Bank’s maximum exposure to credit is US$198m (2022: US$105m), of which US$ nil
+(2022: US$nil) is deemed to be impaired or doubtful. These amounts include all financial assets and undrawn
+irrevocable loan and trade commitments. The Bank held collateral totalling US$38m (2022: US$25m) against credit
+exposures of US$186m (2022: US$93m) of which US$26.0m (2022: US$11.0m) was in the form of cash. The
+remaining collateral was primarily in the form of government guarantees, immovable property and charges over
+companies’ assets. Total trade related exposure included above was US$31.2m (2022: US$39.8m) against which the
+Bank held cash collateral of US$26.0m (2022: US$11.02m) included above.
+
+Loans are considered forbome when terms and conditions of a loan are modified due a borrower being unable to meet
+current terms and conditions due to factors indicating financial difficulty. Examples may include reducing interest
+rates, delaying payment of principal and amending or not enforcing covenants.
+
+Lending subject to forbearance, net of credit risk mitigation, as at 31 December 2023 is USS$nil (2022: US$nil).
+
+(c) Liquidity risk
+
+Liquidity risk is the risk that the Bank is not able to meet its commitments to customers and counterparties as they fall
+due as a result of mismatch in cash flows arising from liabilities and assets. To mitigate this risk, the liquidity
+structure of assets, liabilities and commitments is managed so that resultant cash flows are appropriately balanced,
+within approved limits and mismatch parameters set by the PRA, to ensure that all obligations can be met when due.
+Generally, it is the policy of the Bank to match the currency and maturity of all liabilities and assets as far as
+practicable and to maintain a store of liquidity in the form of readily realisable debt securities, including government
+treasury bills.
+
+The following table sets out the contractual maturities (representing undiscounted contractual cash-flows) of financial
+liabilities. All amounts within deposits by banks and customer accounts include both principal and future interest
+payments:
+
+2023
+
+US$’000 Time band Total
+
+Less than 3 3-6 6-12 1-5 Over 5
+
+Months months months years years
+
+Liabilities
+Deposits by banks 78,880 - - - - 78,880
+Customer accounts 37,607 5,479 6,444 1,503 - $1,033
+Other liabilities 717 - 443 1,558 - 2,718
+Total liabilities 117,204 5,479 6,887 3,061 - 132,631
+Offf balance sheet 11,352 489 - : - 11,841
+2022
+
+US$’000 Time band Total
+
+Less than 3 3-6 6-12 1-5 Over §
+
+Months months months years years
+
+Liabilities
+
+Deposits by banks 20,007 - - - “ 20,007
+Customer accounts 27,922 7,786 2,309 365 - 38,382
+Other liabilities 653 - 154 1,788 123 2,718
+Total liabilities 48,582 7,786 2,463 2,153 123 61,107
+Off balance sheet 12,209 - - - ~ 12,209
+
+The above includes non-financial liabilities.
+In prior years, we did not include off balance sheet items in the liquidity risk which was not in accordance with IFRS
+and we now correct this with this inclusion. Off balance sheet consists of confirmed letters of credit.
+
+51
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+(d) Interest rate risk
+
+Interest rate risk is the risk of loss arising from differences in the re-pricing dates of liabilities and assets. The Bank’s
+policy is to limit re-pricing risk by setting re-pricing gap limits and by regularly reviewing its re-pricing risk by
+reference to assumed adverse movements in interest rates to ensure that the risk of loss remains within acceptable
+limits. Therefore, the Bank’s treasury and lending functions seek to price assets at floating rates or at fixed rates for
+fixed periods at appropriate roll-over dates that allow for matching with customer and market liabilities.
+
+The table below summarises the Bank’s assets and liabilities by re-pricing time band and demonstrates the extent to
+which these are matched.
+
+(i) Interest rate gap analysis
+
+Assets and liabilities are analysed in time bands according to the earlier of the period to the next interest rate re-
+pricing and maturity date as follows:
+
+2023
+US$’000 Time band Total
+Less than 3 3-6 6-12 1-5 Over $ Non-
+Months months months years years interest
+bearing
+Total Financial assets 165,430 16,093 7 348 3,881 - 185,759
+Total Financial liabilities 117,060 $,391 6,668 2,966 - - 132,085
+Interest rate sensitivity gap 48,370 10,702 (6,661) (2,618) 3,881 - 53,674
+Cumulative gap 48,370 59,072 52,411 49,793 53,674 53,674
+2022
+USS’000 Time band Total
+Less than 3 3~6 6—12 1~§ Over 5 Non-
+Months months months years years interest
+bearing
+Total Financial assets 53,268 31,266 4,486 927 2,608 - 92,555
+Total Financial liabilities 48,652 7,726 2,442 2,137 123 - 61,080
+Interest rate sensitivity gap 4,616 23,540 2,044 (1,210) 2,485 - 31,475
+Cumulative gap 4,616 28,156 30,200 28,990 31,475 31,475
+
+52
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+d (continued)
+
+(ti) Interest rate sensitivity analysis
+
+Interest rate sensitivity analysis has been performed on the net cash flow interest rate risk exposures as at the
+reporting dates. A range of possible upward/downward movements in rates of 100bps has been assumed for the
+different currencies which the directors consider reasonable given the current market conditions and the nature of
+matched funding within the exposures. If all other variables are held constant, the tables below present the likely
+impact on the Bank’s statement of comprehensive income:
+
+2023
+
+US3"000 Currencies Total
+
+US Dollar £ Sterling Euro Other
+Total Financial assets 160,303 24,502 867 87 185,759
+Less: fixed rate assets (141,894) (15,390) - - (157,284)
+Total Variable rate assets 18,409 9,112 867 87 28,475
+Total Financial liabilities 107,057 24,119 891 18 132,085
+Less: fixed rate liabilities (44,170) (8,802) - - (52,972)
+Total Variable rate liabilities 62,887 15,317 891 18 79,113
+Net cash flow interest Rate Risk exposure (44,478) (6,205) (24) 69 (50,638)
+Possible movement in interest rates (bps) 100 100 100 100
+Possible impact of increase in interest rates on
+loss before tax and equity (445) (62) - 1 (506)
+Tax charge-25% 111 16 - - 127
+Possible impact of increase interest rates on loss
+after tax and equity (334) (46) - 1 (379)
+Possible impact of decrease in interest rates on
+loss before tax and equity 445 62 - qd) 506
+Tax charge-25% qdiy (16) - - (127)
+Possible impact of decrease in interest rates on
+loss after tax and equity 334 46 - qd) 379
+
+53
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+30. Financial risk management (continued)
+2022
+
+USS*000 Currencies Total
+
+US Dollar £ Sterling Euro Other
+Toial Financial assets 65,201 26,527 603 224 92,555
+Less: fixed rate assets (42,177) (19,538)) - - (61,715)
+Total Variable rate assets 23,024 6,989 603 224 30,840
+Total Financial liabilities 32,469 27,892 592 127 61,080
+Less: fixed rate liabilities (2,781) (12,591) - - (15,372)
+Total Variable rate liabilities 29,688 15,301 $92 127 45,708
+Net cash flow interest Rate Risk exposure (6,664) (8,312) 11 97 (14,868)
+Possible movement in Libor/Euribor (bps) 100 100 100 100
+
+Possible impact of increase in Libor/Euribor on
+loss before tax and equity (67) (83) - 1 (149)
+Tax charge-19% 13 16 29
+
+Possible impact of increase in Libor/Euribor on
+
+loss after tax and equity (54) (67) - 1 (120)
+Possible impact of decrease in Libor/Euribor on
+
+loss before tax and equity 67 83 - (1) 149
+Tax charge-19% (13) (16) - - (29)
+Possible impact of decrease in Libor/Euribor on
+
+loss after tax and equity 54 67 - (1) 120
+(e) Currency risk
+
+Limited foreign exchange exposure arises from the facilitation of customer orders and from profits and losses in
+currencies other than the functional currency. The Bank does not actively speculate in foreign currencies and does not
+deal in forward foreign exchange, foreign exchange options, futures or options thereon except to the limited extent
+necessary to hedge cash flows arising from its own and its customers’ activities. Foreign exchange exposures are
+subject to limits as to positions in individual currencies and as to the ‘overall net open position’.
+
+Details of the Bank’s assets and liabilities by currency of denomination are summarised in US Dollars in table (i)
+below so as to demonstrate the extent to which foreign currency exposures are matched.
+
+(i) Net currency position analysis
+Assets and liabilities, expressed in US$ but analysed according to the currency in which they were denominated, after
+taking into account the accounting policy for foreign currencies as set out in note 3(c), were as follows:
+
+2023
+US$°000 Currencies Total
+US Dollar £ Sterling Euro Other
+Total Financial assets 160,303 24,502 867 87 185,759
+Total Financial liabilities (107,057) (24,119) (891) (18) (132,085)
+Currency position 53,246 383 (24) 69 53,674
+2022
+USS’000 Currencies Total
+US Dollar £ Sterling Euro Other
+Total Financial assets 65,201 26,527 603 224 92,555
+Total Financial liabilities (32,469) (27,892) (592) (127) (61,080)
+Currency position 32,732 (1,365) 11 97 31,475
+
+54
+
+wot ee eee ome seme ee
+
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+(ti) Foreign currency sensitivity analysis
+
+Foreign currency sensitivity analysis has been performed on the foreign currency exposures inherent in the Bank’s
+financial assets and financial liabilities at the reporting dates. The sensitivity analysis provides an indication of the
+impact on the Bank’s statement of comprehensive income of reasonably possible changes in the currency exposures
+embedded within the functional currency environment in which the Bank operates. Reasonably possible changes are
+based on an analysis of historical currency volatility, together with any relevant assumptions regarding near-term
+future volatility.
+
+The Bank believes that for each foreign currency net exposure it is reasonable to assume a 5%
+appreciation/depreciation against the Bank’s functional currency, given the control exercised over the Bank’s
+currency positions. If all other variables are held constant, the tables below present the impacts on the Bank’s
+statement of comprehensive income if these currency movements had occurred.
+
+The financial statements have used a closing rate of £1 to $1.27 and during the year the average rate for £1 was $1.25.
+
+2023
+US$’000 Currencies (FC)
+£ Sterling Euro Other
+Net foreign currency exposures 383 24 69
+Impact on loss and equity of 5% increase in FC:USD rate (14) 1 2,121
+Impact on loss and equity of $% decrease in FC:USD rate 16 (1) (2,121)
+
+Nigerian Naira, at a year-end rate of 910.73/USD represents 67% of the ‘Other’ column resulting in the large impact shown in
+currency.
+
+2022
+083000 Currencies (FC)
+£ Sterling Euro Other
+Net foreign currency exposures (1,365) 11 96
+Impact on loss and equity of 5% increase in FC:USD rate 54 - 2,163
+Impact on loss and equity of 5% decrease in FC:USD rate (54) 1 (2,163)
+
+55
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+(f Capital adequacy
+
+The Bank is subject to minimum capital requirements imposed by the PRA, following guidelines developed by the
+Basel Committee on Banking Supervision and implemented in the UK via European Union Directives. The revised
+framework, known as CRDIV, includes a more risk-sensitive methodology for the calculation of capital requirements
+for Credit Risk as well as a capital requirement for Operational Risk.
+
+Minimum capital requirements under the PRA’s mules are calculated by summing the capital requirements for Credit
+Risk, Operational Risk, Market Risk and Counterparty Credit Risk. For the purposes of computing these
+requirements the Bank has elected to adopt the Standardised Approach to Credit Risk and the Basic Indicator
+Approach to Operational Risk. Market Risk is determined using the standard Position Risk Requirement (‘PRR’)
+rules and Counterparty Credit Risk (‘CCR’) is calculated using the CCR mark to market method. The Market Risk
+and Counterparty Credit Risk components of the capital requirement are small because the Bank has no trading book.
+
+The minimum capital requirement for Credit Risk under Pillar 1 of CRDIV is calculated by multiplying risk
+weighted assets by 8%, the internationally agreed minimum ratio. Risk weighted assets are determined by applying
+risk weights, which vary according to the credit rating of the obligor, to the Bank’s assets, including off statement of
+financial position engagements that are subject also to given credit risk conversion factors. Under Pillar 2 the Bank
+undertakes an assessment (the ICAAP process) of the amount of capital that is required to support its activities using
+the Pillar 1 plus approach. This assessment has identified a number of risks that either do not attract capital under
+Pillar 1 or where the Pillar 1 requirement does not fully capture the risks faced by the Bank. Additional capital is set
+aside under Pillar 2 for these risks, which include exposure concentrations and interest rate risk in the non-trading
+book. The Bank’s total capital requirement is then the sum of the amounts calculated under Pillar 1 and Pillar 2.
+Furthermore, the Bank is subject to Individual Capital Guidance (‘ICG’) provided by the PRA whereby the Pillar 2
+requirement is computed by applying a formula to the Pillar 1 requirement. This results in a Pillar 2 requirement that
+is somewhat higher than that determined through the ICAAP process.
+
+The Bank calculates its capital adequacy on a daily basis by comparing the total capital requirement in accordance
+with the [CG to capital available to meet this requirement (Regulatory Capital). A capital buffer is also incorporated,
+which is based on a level of tolerance to unexpected losses that is considered and agreed by the Board as part of the
+ICAAP process. At 31 December 2023 and throughout the year, the Bank maintained Regulatory Capital in excess of
+the total capital requirement calculated in accordance with the ICG.
+
+The following table is an analysis of those items which comprise the Regulatory Capital base for the purposes of
+reporting to the PRA.
+
+2023 2022
+USS’000 USS8°000
+
+Statement of financial position:
+Share Capital 85,090 60,090
+Profit & Loss Reserve (27,589) (24,567)
+Securities (FVOCI reserve) (4) (4)
+Less Intangibles (463) (132)
+IFRS 9 transitional adjustments - 33
+Total Tier 1 Capital 57,034 35,420
+Total Regulatory Capital $7,034 35,420
+
+56
+FidBank UK Limited
+Annual Report & Financial Statements
+3] December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+30. Financial risk management (continued)
+
+(—) Capital adequacy (continued)
+
+The Regulatory Capital shown agrees to the Regulatory Capital reported to the PRA because accumulated losses are
+reportable as they occur.
+
+The directors regard share capital and reserves as its capital for the capital management purposes where the objective
+to ensure it is sufficient to participate in lines of business and to meet Prudential Regulatory Authority’s capital
+requirements. In order to maintain or adjust the capital structure, the Bank may issue new shares or sell assets.
+
+(gy) Lending commitments 2023 2022
+USS’000 US$000
+Undrawn formal standby facilities, credit lines and other commitments to lend: 795 1,635
+
+Contract amount - -
+Credit equivalent amount - -
+Risk weighted amount - -
+
+31. Fair values of financial instruments
+
+Fair value measurements
+
+The information set out below provides information about how the Bank determines fair values of various financial
+assets and financial liabilities. The Bank measures fair values using the following fair value hierarchy, which reflects
+the significance of the inputs used in making the measurements.
+
+Level I — fair value measurements derived from quoted prices (unadjusted) in active markets for identical assets or
+liabilities.
+
+Level 2 — fair value measurements derived from inputs other than quoted prices included within Level 1 that are
+observable for the asset or liability, either directly or indirectly.
+
+Level 3 — fair value measurements derived from unobservable inputs to the extent that relevant observable inputs are
+not available, thereby allowing for situations in which there is little, if any, market activity for the asset or liability.
+The following table provides an analysis of financial instruments that are measured subsequent to initial recognition
+at fair value, grouped into Levels 1 to 3 based on the degree to which the fair value is observable:
+
+USS’000 2023
+
+Level 1 Level 2 Level 3 Total
+Financial assets measured at FVOCI 42,025 - - 42,025
+Total 42,025 - - 42,025
+US$’000 2022
+
+Level 1 Level 2 Level 3 Total
+Financial assets measured at FVOCL 18,123 - “ 18,123
+Total 18,123 - - 18,123
+
+37
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+31. Fair values of financial instruments (continued)
+
+The following table sets out the fair values of financial instruments not measured at fair value and compares them to
+carrying value.
+
+2023 2022
+Carrying Fair Value Carrying = Fair Value
+Value Value
+USS$’000 US$’000 USS’000 US3’000
+
+Assets
+Cash at bank 7,127 7127 5,431 5,431
+Loans and advances to banks 128,017 128,017 65,437 65,508
+Loans and advances to customers 8,590 8,510 3,564 3,579
+Other assets 939 939 850 850
+Liabilities
+Deposits by banks 78,638 78,638 19,943 19,943
+Customer accounts $0,613 50,674 38,278 38,283
+Other liabilities 2,718 2,718 2,718 2,718
+
+The fair value of financial instruments is the estimated price at which an orderly transaction to sell the asset or to
+transfer the liability would take place between market participants at the measurement date under current market
+conditions. If a quoted market price is available for an instrument, the fair value is calculated based on the market
+price. Where quoted market prices are not available, fair value is determined using pricing models which use a
+mathematical methodology based on accepted financial theories, depending on the product type and its components.
+
+Cash at bank consists of demand deposits with third party banks. Accordingly, the carrying amount of these balances
+is deemed an appropriate approximation of the fair value.
+
+Both loans and advances to banks and customers noted above are level 3 financial assets. Loans and advances to
+banks comprise secured loans, short-term placements with banks and unsettled financial transactions. The secured
+loans have been valued as above and using the valuation technique described below. The carrying amount of the
+other items is deemed a reasonable approximation of their fair value, as the transactions are very short-term in
+duration. This includes intercompany balances.
+
+The fair valuation of loans and advances to customers is an area of considerable estimation and uncertainty as there is
+no observable market and values are significantly affected by customer behaviour. These comprise secured loans,
+unsecured loans and corporate loans.
+
+The fair values of mortgage portfolios have been estimated by comparing existing contractual interest rates over the
+weighted average lives with an estimation of new business interest rates based on competitor market information.
+Adjustments have also been made to reduce:
+
+* the weighted average lives to reflect the uncertainty inherent in the value that could be achieved, given that
+the borrower could re-finance at any time;
+
+e discount the value of performing loans with a higher loan-to-value ratio to reflect the higher risk of this part
+of the portfolio and the fact that this is outside the Company’s normal underwriting standards; and
+
+* discount the collateral value of non-performing loans with a higher loan-to-value ratio to reflect the
+significantly higher possibility of re-possession and the lower value that is achieved on repossession and to
+take cognisance of rates available in the market for loans in arrears but with a lower loan-to-value ratio.
+
+Unsecured loans are overdrafts and personal loans. The weighted average lives of these portfolios are short, and the
+business was written relatively recently. As a result, contractual interest rates approximate new business interest rates,
+and therefore no mark-to-market surplus or deficit has been recorded with respect to the performing book and
+discounts applied to the non-performing book.
+
+58
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+31. Fair values of financial instruments (continued)
+
+The fair values of corporate loans have been estimated by comparing existing margins with an estimation of new
+business rates for similar loans in terms of the borrower’s segment, maturity and structure. Provisions are considered
+appropriate for the book that is not impaired. A discount has been applied to impaired loans as although exits have
+generally been achieved at carrying value, this does not reflect the discount a purchaser would require.
+
+All financial liabilities are level 3 liabilities. The majority of deposit by banks, customer accounts and other liabilities
+ate payable on demand and therefore can be deemed short-term in nature with the fair value equal to the carrying
+value. Certain of the customer accounts are at a fixed rate until maturity. The deficit/surplus of fair value over
+carrying value of these liabilities has been estimated by reference to the market rates available at the reporting date
+for similar customer accounts of similar maturities. The fair value of such customer accounts has been estimated
+using the valuation technique described below.
+
+In the valuation of loans and advances and deposits, the ‘present value’ method is used. Expected future cash flows
+ate discounted using the interest rate curves of the applicable currencies. The interest rates curves are generally
+observable market data and reference yield curves derived from quoted interest rates in appropriate time bandings,
+which match the timings of the cash flows and maturities of the instruments.
+
+32. Contingent liabilities and commitments
+
+Contingent liabilities
+2023 2022
+USS’000 USS$’000
+Letters of credit 11,841 12,209
+11,841 12,209
+33. Leases
+
+Low value leases
+
+The Company had total minimum lease payments in respect of low value leases for land and buildings and equipment used
+in the business as follows.
+
+2023 2022
+
+Leases which expire: US$’000 US$’000
+Within one year 6 7
+6 7
+
+59
+FidBank UK Limited
+Annual Report & Financial Statements
+
+31 December 2023
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+33. Leases (continued)
+Right-of-use-assets
+Land and Land and
+Buildings Buildings
+US$’000 US3S’000
+2023 2022
+At | January 2,052 2,430
+Depreciation charge for the year (379) (378)
+Foreign exchange movements - -
+At 31 December 1,673 2,052
+Lease liabilities
+Land and Vangand
+Buildings ubangs
+US$’000 USS’000
+2023 2022
+At 1 January 2,065 2,728
+Interest expense 90 102
+Lease payments (274) (473)
+Foreign exchange movements 120 (292)
+At 31 December 2,001 2,065
+2023 2022
+Lease liabilities which expire: USS’000 USS’000
+Within one year 573 242
+Within two to five years 1,861 1,851
+Over five years - 247
+2,434 2,340
+
+These lease liabilities relate to the rental lease for the Bank’s office premises at 1 King’s Arms Yard, London, EC2R
+7AF. In 2018 the Bank entered into a 10-year lease agreement for its office premises with a fixed rental term agreed
+for the first 5 years. This lease expires on the 31 May 2028. The Bank agreed to an increase in rent in July 2023 for
+the remaining five years of the lease which does not result in a material change to these lease calculations.
+
+60
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+NOTES TO THE FINANCIAL STATEMENTS (continued)
+
+34. Dividends
+
+A dividend payment of US$nil was made during the year ended 31 December 2023 in respect of the year ended 31
+December 2022 (made during the year ended 31 December 2022 in respect of the year ended 31 December 2021:
+US$nil).
+
+35. Ultimate parent company and controlling party
+The Bank is a directly wholly owned subsidiary of its parent and ultimate holding undertaking, Fidelity Bank Plc, a
+
+company incorporated in Nigeria and listed on the Nigerian Stock Exchange. The smallest and largest group in
+which the Bank is consolidated is Fidelity Bank Plc.
+
+36. Subsequent events
+
+On 14 March 2024, the Bank changed its name to FidBank UK Ltd
+The directors do not propose a dividend in respect of the year ended 31 December 2023 (2022: US$nil)
+
+61
+FidBank UK Limited
+Annual Report & Financial Statements
+31 December 2023
+
+OTHER DISCLOSURES
+
+The Capital Requirements (Country-by-Country Reporting) Regulations 2013 (SI 2013 No. 3118) implements part of the
+European Union’s Capital Requirements Directive (““CRDIV”). Credit institutions and investment firms must disclose
+certain information on a consolidated basis for each country in which the firm has a subsidiary or branch.
+
+FidBank UK Limited is a bank, and this disclosure meets its Country-by-Country Reporting (“CBCR”) obligations under
+the Regulations. The information contained in this document reflects the position as at 31 December 2023.
+
+FidBank UK Limited is required to disclose the following information:
+
+Country (by turnover size) Turnover Employees* (Loss) before Corporation Public subsidies
+($m) tax tax paid received
+($m) ($m) ($m)
+United Kingdom 8.80 $2 (3.02) 0.00 Nil
+
+Consolidation adjustments - - -
+| Group Total 8.80 $2 (3.02) 0.00 __Nil |
+
+*the average number of employees on a full-time equivalent basis
+
+Country Description of Activities Name of entities
+
+United Kingdom _ Corporate, Retail & Commercial Banking FidBank UK Limited
+. Treasury & Trade Finance services
+
+62

@@ -1,0 +1,3164 @@
+COMPANY NUMBER 1837656
+
+CAF BANK LIMITED
+ANNUAL REPORT AND FINANCIAL STATEMENTS
+FOR THE YEAR ENDED
+30 APRIL 2021
+
+VLE
+
+19/08/2021 #9
+COMPANIES HOUSE
+
+Tots ed
+
+CAF Bank Limited
+
+ANNUAL REPORT AND FINANCIAL STATEMENTS FOR THE YEAR ENDED 30 APRIL 2021
+
+CONTENTS Page
+Chair's Statement , 1
+Strategic Report 2 7
+Governance Report - 8 |
+‘Risk Management Report | . 12
+Report of the Directors 22 .
+Independent Auditor's Report 25
+Profit and Loss Account | 33
+Balance Sheet 34
+Statement of Changes in Equity. 35
+Cash Flow Statement 36
+
+Notes to the Financial Statements 37
+CAF Bank Limited
+CHAIR’S STATEMENT
+
+This report is meant to reflect on the past year, both high points and challenges, in our journey as the
+UK's dedicated bank for charities and social purpose enterprises. It has, inevitably, been a time of
+uncertainty across the charitable sector as the initial shock of the pandemic gave way to the
+repercussions that COVID-19 has had on the tremendous organisations that CAF Bank exists to
+support.
+
+For CAF Bank, it has also been a story of resilience as we took inspiration from the work that was
+happening as thousands of community organisations defied the odds to find new and creative ways to
+serve their beneficiaries. At every turn, we also searched for innovative ways in which we could support
+them.
+
+We provided uninterrupted banking services for our 14,000 existing customers and were able to open
+new accounts for charities and social purpose enterprises, many of which had been turned away by
+other banks. In lending, we continued to provide secured loans to help charities and worked with them
+to modify terms, including proactively offering six-month capital repayment holidays and further
+extensions if requested. This was initially taken up by around 30% of our borrowers. We also provided
+access to the Coronavirus Business Interruption Loan Scheme (‘CBILS’). We took great care to
+proactively speak to our clients about the risks of fraud in turbulent times and used all of our
+communication channels to keep them informed. Along the way, Charity Finance magazine’s Charity
+Banking Survey 2021 recognised us as top for ‘Sector knowledge’ and ‘Commitment to CSR’.
+
+Looking to the future, we have taken the next major step in our transformation programme to deliver a
+new banking platform and a more fluid banking experience for our clients, be it on mobile, online or
+through telephone banking. The signing of an agreement with our primary supplier has set the wheels
+of this multi-year programme fully in motion and while it will take time to be fully implemented, our
+customers can be confident that an enhanced banking experience lies ahead.
+
+While both the loan and deposit balances on our balance sheet have continued to grow, like many
+organisations, our profitability has been impacted by falling interest rates and the impact of COVID-19
+on our customers. While the profits we can reinvest directly in the charity sector through direct
+contributions to CAF have fallen, we are taking steps to mitigate this where possible and within our risk
+appetite, including realigning our treasury activity to secure additional income and focussing on growing
+our lending portfolio to charities and social purpose enterprises.
+
+The reduction in profitability noted this year is driven predominantly by the fall in gilt yields and base
+rates to an all-time low in March 2020, together with continued exceptional levels of investment in our
+IT infrastructure and regulatory compliance.
+
+Notwithstanding the short-term nature of the challenge we face to profitability, our balance sheet and
+lending growth plans are supported by a strong risk-weighted capital surplus position compared to the
+minimum requirement set by our regulators. CAF Bank continues to be prudently managed with a high
+degree of liquidity and Bank of England reserves.
+
+The work detailed on these pages stems from the dedication of a team of people who share a common
+purpose and the 2020 Banking Standards Board Employee Survey found that 97% of CAF Bank
+employees were proud of how we helped customers throughout this crisis. Those of us who work
+alongside the team at CAF Bank were not surprised by these extraordinary results. Along the way, we
+wished Finance Director John Grout the happiest of well-earned retirements and welcomed Phil Alvey
+to the board as our new Chief Finance Officer. Phil brings with him a wealth of experience in the financial
+services industry. We also welcomed Neil Heslop, the new Chief Executive of the Charities Aid
+Foundation (‘CAF’) — CAF Bank’s parent charity — to our board. Neil’s energy, experience and
+leadership is already making a difference as the wider CAF Group seeks to fulfil its mission to ensure
+the safe and effective delivery of donor funds to charities and, in so doing, to accelerate social progress
+across the world. ;
+
+It remains only for me to thank my fellow board members for their support and, above all else, extend
+my gratitude to our clients who place their trust in us, safe in the knowledge that we share their values;
+helping them realise their mission is where our purpose lies.
+
+Janet Pope
+Chair
+CAF Bank Limited
+
+STRATEGIC REPORT
+
+Principal activities
+
+CAF Bank provides banking services to charities and social purpose organisations. The Bank offers
+transactional current and deposit accounts via telephone and internet banking, and provides lending to
+customers. These activities complement a range of services to charities provided by the Charities Aid
+Foundation (‘CAF’), the Bank’s parent.
+
+CAF Bank is a wholly owned subsidiary of CAF.
+Strategy and Objectives
+
+Following a review of CAF Bank’s strategy in 2019, the Bank’s core principles were agreed by the
+Board as follows:
+e Providing services for small and medium sized charities and organisations with social purpose;
+e Offering services that our customers want at a fair and transparent cost;
+e Progressively realigning our lending activity around the single aim of supporting social purpose
+organisations and projects; ,
+Improving customer service and customer satisfaction; and
+Continuing to drive efficiency and improvement through process simplification and investment
+in technology.
+
+The Bank’s objective is to deliver continual improvements to customer service and efficiency, thereby
+maintaining a financially robust and sustainable business model. A key aspect of meeting this objective
+is through delivery of the Bank’s transformation project which was initiated in 2020. This project will
+combine investment in a new banking platform with remodelled processes and a new mobile customer
+channel.
+
+In addition, CAF Bank aims to make a direct contribution to the charitable sector through donating any
+residual profit each year, after meeting interest payable on capital instruments, to CAF.
+
+In 2021, CAF completed a broader strategic review, in conjunction with the Bank, defining the CAF
+Group’s purpose, vision, propositions and values. The key objectives for the Bank coming out of this
+review, in addition to the core principles outlined above, are to deliver a seamless and cohesive service
+to our charity customers, across the Bank and the broader CAF Group.
+
+Review of the year
+
+COVID-19 has had a significant impact on the Bank since March 2020. To protect our staff, and in line
+with Government policy, 90% of employees relocated to working from home from mid-March 2020.
+Although staff have had to adapt to different ways of working we have successfully continued operations
+and have maintained strong support for our customers.
+
+We have moved ahead with a strategic partner for our new IT platform and transformation. We are
+currently moving out of design and in to the implementation phase of the project. Our current plan is
+that the new platform and much of the enhanced functionality for customers will be delivered in the first
+half of 2022.
+
+Our lending book continued to grow during the year and we were pleased to close the year with total
+committed loans and advances to customers of £164m compared to £139m the previous year. Just as
+importantly, our pipeline of sanctioned loans was £24m by year end, providing a strong base for further
+growth in lending.
+
+The impact on our loan customers from COVID-19 has been marked, with several temporarily closing
+their operations, particularly in the faith and education sectors. Housing and social developments have
+experienced delays due to lockdown restrictions and materials supply constraints. Our response
+included offering our borrowing clients 6-month capital repayment holidays. We held 2 such loans
+totalling £1.8m at 30 April 2021, compared to 26 customers with loans totalling £15.0m as at 30 April
+2020.
+CAF Bank Limited
+
+STRATEGIC REPORT
+
+In addition to the lending and operational support provided by the Bank, 145 of our customers benefited
+from £4.4m of grants distributed from the CAF Resilience Fund. A further £1.0m was distributed to over
+600 of the Bank’s customers as part of the CAF Emergency Fund.
+
+The ultimate impact of COVID-19 on the social purpose sectors remains uncertain. We have increased
+provisions on our loan book to £2.2m to reflect the estimated impact on our customers’ ability to repay
+loans in the present economic situation. This resulted in a 2020/21 profit and loss charge of £0.5m for
+loan loss provisions, £0.7m lower than in 2019/20.
+
+We are grateful to our charity customers for continuing to provide us with a strong and stable base of
+deposits and our robust liquidity position underpins CAF Bank. During the year, deposits have
+increased by 21% to £1.4bn in spite of a challenging interest rate environment, which has seen the
+Bank of England Base Rate remain at a historic low and which, in common with many other banks,
+required us to reduce interest rates paid to our customers.
+
+The Bank made an overall profit of £0.9m in 2020/21, before payment of interest on capital instruments.
+This represents a reduction from the £1.3m profit in 2019/20.
+
+The Bank’s income has been impacted by the Bank of England’s decision to reduce Base Rate to 0.1%
+in March 2020 and reductions in yields across investments. Overall, the Bank’s net interest income of
+£9.8m is £1.7m lower or 15% than 2019/20. Net fee income increased £0.3m to £1.4m as a result of
+lower fees payable during UK lockdowns when transactional activity was muted.
+
+Administrative expenses reduced by 3% from £10.1m to £9.8m in 2020/21.
+
+Administrative expenses for 2020/21 include £2.1m (2019/20: £2.6m) in intra-Group recharges paid to
+our parent, Charities Aid Foundation, for the cost of shared services. Our shared services model
+provides the Bank with IT, HR, premises, marketing and communications. The largest element of the
+charge is in respect of IT and the overall cost reduction for the year reflects our prioritisation of our
+Transformation project over other IT projects that would be delivered through the shared service model.
+
+Also included within administrative expenses are project and IT costs associated with our
+Transformation programme and other significant one-off regulatory projects. These costs totalled £0.6m
+in 2020/21 compared with £0.9m in 2019/20.
+
+Excluding the shared services recharge and Transformation and project costs, direct administrative
+expenses increased by £0.5m from £6.6m to £7.1m in 2019/20. This reflected investments in our
+current IT infrastructure and increases in audit and other professional services, all largely related to
+supporting a robust control environment and meeting regulatory and compliance standards.
+
+In light of the overall net loss, after meeting interest payable on capital instruments, a donation was not
+made to our parent. CAF Bank contributed £3.1m to its parent charity in 2020/21, comprising £1.0m
+coupons paid on ‘additional tier 1 capital’ and £2.1m contribution to shared service costs.
+
+Lending
+
+Despite an extremely challenging economic environment, committed loans and advances to customers
+grew steadily in 2020/21, increasing from £139m at 30 April 2020 to £164m at 30 April 2021. Within
+this total, loans to charities and social housing organisations have increased by £19m during 2020/21,
+following continuing demand from housing associations in particular. Social housing associations now
+represents 53% of our drawn lending book by value.
+
+We are encouraged by the lending pipeline. At 30 April 2021, the Bank has £24m of loans sanctioned
+pending final agreement and commitment (at 30 April 2020: £31m).
+
+Following the impact of COVID-19, we have continued to closely monitor and analyse the collective
+and specific loan provisions. A number of our customers temporarily closed their operations and have
+only recently started to reopen. Despite this, the quality of the loan book remains strong resulting in a
+modest loan loss charge.
+CAF Bank Limited
+
+STRATEGIC REPORT
+
+We have sought to ensure property valuations are up to date, in determining loss given default, either
+by obtaining new valuations or through indexing older valuations by reference to commercial and
+residential property indices. For assessing the collective provision, we have considered the impact of
+previous economic downturns on probability of default and loss given default values. On this basis, the
+collective provision is determined as £0.8m (at 30 April 2020: £0.7m).
+
+To assess specific provision requirements, we have reviewed ‘watchlist’ loans and compared the
+estimated recoverable amount to the carrying value of the loans where there is evidence that the loan
+is impaired. This has resulted in specific provisions of £1.4m at 30 April 2021 (at 30 April 2020: £0.9m).
+
+The Bank successfully supported and offered the Government backed CBILS and at year end had
+£0.2m drawn CBILS lending with a further £0.6m committed.
+
+Capital and liquidity
+
+CAF Bank's capital position remains strong relative to the risk weighting of its assets. At 30 April 2021,
+the Bank's total capital ratio was 31.4% compared to 27.9% at 30 April 2020, reflecting a decrease in
+risk weighted assets on credit institutions. The Bank's minimum regulatory capital requirement
+decreased to 15.6% at 30 April 2021 (30 April 2020: 16.0%) which translates to a capital requirement
+of £19.9m at 30 April 2021 compared to £23.7m last year. Further detail about the Bank's capital
+position is outlined in the Pillar 3 document which can be found at https://(www.cafonline.org/about-
+us/about-caf-bank.
+
+CAF Bank is reporting under the UK Leverage Ratio framework which results in a leverage ratio of
+3.81% (at 30 April 2020: 4.6%) compared to a minimum of 3.25%.
+
+Capital includes £11m of ‘Additional Tier 1° equity which is perpetual, non-cumulative capital that
+converts to ordinary share capital in the event that Common Equity Tier 1 ratio falls, or is likely to fall,
+below 7%. The Bank has no Tier 2 capital.
+
+In liquidity terms, approximately 90% of CAF Bank’s assets are highly liquid, with liquidity buffer eligible
+assets of £1,174m at 30 April 2021 (£976m at 30 April 2020). Liquidity buffer assets comprise
+investments in the Bank of England Reserve Account, Multilateral Development Banks and UK Gilts
+and Treasury Bills.
+
+Environment and society
+
+As a bank wholly owned by a charity with social purpose enterprises and charities as our customers,
+CAF Bank is attuned to the work that many of them are doing as leading voices in the battle against
+climate change. Through our range of not-for-profit banking services, we are aiding them in their work
+and continuously searching for new ways in which we can offer our support.
+
+Internally, we have reflected upon the past year since the onset of COVID-19 and are determined to
+retain the environmental benefits that resulted from our sudden shift in ways of working. As part of our
+shared services with our parent charity, CAF, we embarked on an organisation-wide effort, asking our
+employees to help us identify instances of wasteful practices, old habits or ways of working that had
+become outdated and set about eliminating those that had clearly become redundant. Many of the more
+than 300 suggestions from staff resulted in a change to internal policies, a reduction in the use of paper
+and other energy-consuming practices that had outlived their usefulness. It was a reminder of the need
+to routinely review how we go about our day to day business and to remain vigilant in identifying and
+reducing waste. The number of staff who were able to work from home throughout the pandemic has
+also led to a shift away from the reliance on paper-based documentation whenever possible and the
+reduction in commuting has reduced what was already a relatively modest travel footprint.
+
+The Bank continues to manage and monitor the impact of climate change on its lending and treasury
+activities and is aware the resulting policies require constant review as they evolve over time. The
+relevant policies state the Bank’s risk appetite for exposures to climate change, and continue to be
+monitored by Credit Risk Committee and ALCo.
+CAF Bank Limited
+
+STRATEGIC REPORT
+
+The Bank continues to maintain the highest possible standards of governance. As charities across the
+UK faced an unprecedented fundraising crisis, the value of a prudent, trusted banking partner who
+shares their sense of purpose has never been more important.
+
+Our non-executive directors and executives are accomplished leaders in financial services, the third
+sector and several other fields. Their expert scrutiny and strategic direction informs everything we do
+and ensures our compliance and reporting protocols are fully fit for purpose and that our staff feel
+empowered to raise any concerns about internal practice. They set an impressive level of robust,
+transparent governance that is upheld throughout the organisation.
+
+Through our support for our clients during times of such uncertainty, be it through offering bank
+accounts to newly-formed non-profit organisations that had been turned away by other banking
+providers, considered lending, including payment holidays and access to the Government's Business
+interruptions Loan Scheme and sign-posting to grant opportunities, we have been able to play our part
+in ensuring the sustainability of these vital contributors to our wider society.
+
+Equality and diversity
+
+CAF Bank, as with our parent charity, asks our staff to simply ‘be who you are, we like you that way’.
+We are an equal opportunities employer with staff from a wide variety of backgrounds and we believe
+in the importance of every employee having the same access to opportunities for advancement. This
+not only creates a better working environment but also means we are more likely to reflect the different
+values, experiences and cultures of our clients and the people they are helping. Bank staff also
+participate in the Employee Council, which is formed of volunteers who liaise with management to
+ensure the voices of staff at all levels of our organisation are heard and any concerns are brought to
+the attention of the executive. A regular staff engagement programme has proven popular and
+recognition of those who have gone above and beyond for our customers has become a feature of our
+work.
+
+CAF Bank does not tolerate any form of intimidation, bullying or harassment and staff are urged to raise
+any concerns. A whistleblowing policy is promoted to ensure staff feel empowered to speak out should
+they encounter discrimination or any other form of inappropriate behaviour. All grievances are managed
+promptly and fairly.
+
+We continue to place strategic importance on the need for diversity across our organisation, including
+at Board level. When filling Board positions, diversity is actively considered as part of the selection
+process with measures in place to ensure an appropriate diversification is maintained. In the second
+year after adopting our Board Diversity policy, 45% of the Board and 80% of the Executive Committee
+are women.
+
+Stakeholder engagement to promote the success of the Bank
+
+Under Section 172(1) of the Companies Act 2006, the directors are required to describe how they
+consider a broad range of stakeholders when performing their duty to promote the success of the Bank.
+We have developed into a successful and profitable business, driven by focus on core values, a clear
+strategy and efforts to consider our stakeholders’ interests throughout our decision making process.
+
+In this statement we have detailed our key stakeholders, their importance to our business and how we
+have engaged with them throughout the year. We then provide examples of key decisions we have
+made in the year, describing how we considered stakeholders in these decisions and how the decisions
+will add long-term value.
+
+Stakeholder engagement
+
+We recognise and promote the importance of strong relationships with our stakeholders across all of
+our activities, and we are committed to engaging with them to ensure we maintain long-term
+relationships and add lasting value to the charity community in which we operate. Below we give
+examples of stakeholder engagement:
+CAF Bank Limited
+
+STRATEGIC REPORT
+
+Employees
+
+Our employees are usually the first point of contact customers have with the Bank and therefore are
+critical to our success. Many employees have a deep knowledge of our charity customers and their
+requirements, and perform key roles requiring specific knowledge and expertise. We aim to ensure
+that all of our employees feel valued and appreciated while working for us.
+
+The Directors and the Executive engage with our employees through regular meetings and feedback
+sessions; through a structured appraisal process; and through annual employee surveys, to help
+understand any issues or changes they would like to see implemented within the organisation. This
+year, CAF Bank was delighted to join the Financial Services Conduct Board (“FSCB”, previously the
+Banking Standards Board) and to offer all employees the opportunity to participate in the annual FSCB
+staff survey. Participation was high and the results were excellent, and helpfully provided some areas
+of feedback for greater improvement that are now being worked through across the organisation.
+
+A particular area we have focussed on this year has been the impact of COVID-19. Senior managers
+have communicated extensively with staff to implement working from home arrangements, listening to
+and acting on feedback at all stages of the process while supporting changes in working arrangements.
+More recently, we have formally asked all staff to submit their views on the successes and challenges
+of working arrangements over the past year, as well as their wishes for the future. The responses will
+help inform our long-term, future state working environment.
+
+Customers
+
+Our charity and social purpose customers remain at the heart of our business. This year we have a
+renewed customer-focused strategy and mission. We have increased our customer engagement
+through continuous interaction with customers via regular meetings with borrowers and deposit
+customer surveys which take place throughout the year. These programmes allow us to have a deep
+' understanding of our customer's needs and values and provide the opportunity for us to act upon the
+feedback they have given.
+
+Following feedback from customers, this year we have improved our customer take-on process and
+improved our KYC processes to streamline information required from customers. Feedback from
+customers is also informing our transformation project and will underpin the requirements for our new
+systems and customer channels.
+
+Suppliers
+We recognise that our suppliers are crucial to the success of CAF Bank and we understand the
+importance of maintaining strong lines of communication. Many perform critical out-sourced functions
+and are subject to regular formal review. Directors and senior managers engage with suppliers
+regularly throughout the year and feedback is continuously communicated and monitored through
+governance committees.
+
+This year we have particularly focused on strengthening our relationships with our clearing bank and
+credit card provider which has resulted in a better understanding and resolution of any issues that might
+arise.
+
+Regulators
+
+It is within the Bank’s culture of fairness and transparency to promote high standards of conduct within
+the Bank and with all external parties. In particular, as directors of a regulated bank, holding customer
+deposits, safety, soundness and adherence to all relevant aspects of regulation is key to the Bank’s
+business model.
+
+Directors and the executive maintain close awareness of this through engagement with regulators,
+primarily the Prudential Regulation Authority (PRA) and also the Financial Conduct Authority (FCA).
+This involves regular, direct contact with regulators, and is supported by interactions with industry
+bodies, specialist advisors, regulatory seminars, online forums and round table events. This has
+allowed us to remain informed on increasing regulatory requirements and ensure we operate to the
+standard required.
+CAF Bank Limited
+
+STRATEGIC REPORT
+
+Key decisions
+
+Our strategy is to be the preferred bank for small and medium sized charities. We aim to deliver a cycle
+of improving customer service quality and efficiency, leading to improved profitability which in turn funds
+investment in the Bank.
+
+The Bank is privately owned and can therefore take a longer term view than a publicly quoted company.
+We make careful decisions to maintain strategic focus, control costs, invest and ensure sufficient capital
+and liquidity is held. All of the decisions we make consider the regulatory context and the full range of
+stakeholders mentioned previously.
+
+Technology investment
+
+The decision last year to invest significantly in technology was driven by our need to maintain
+compliance with regulatory changes, to upgrade our IT platforms to-maintain operational resilience, and
+to ensure our customers enjoy-an efficient and modern customer experience,
+
+We are well advanced in the work on our Transformation Project and are currently moving out of the
+design phase and in to the implementation phase of the project for our replacement suite of banking
+systems. These will provide the foundation for modernising our customer proposition to ensure we are
+able to offer efficient, up-to-date banking services in a mobile, 24/7 digital world.
+
+Senior management appointments
+
+The Finance Director retired on 13 April 2021 and a new Chief Finance Officer (‘CFO’) was appointed
+on 29 April 2021. The new CFO has a strong record in Finance roles within financial services, including
+at an executive level.
+
+Future developments
+
+The Bank’s strategy is to be the preferred bank for small and medium size charities, providing services
+our customers want at fair and transparent cost. The aim of the strategy is to deliver a cycle of
+improving efficiency and service quality leading to improved profitability and funds for investment.
+
+The Bank’s Transformation project underpins our plans to deliver service excellence and improve the
+efficiency of our operations. The Bank’s existing IT platform provides limited scope to update our
+services for today’s digital environment.
+
+The Board continues to closely monitor the economic uncertainty resulting from COVID-19, working
+with the Executive on a range of scenario plans to ensure the Bank is well prepared to deal with any
+eventuality that might arise
+
+The strategy is underpinned by maintaining a strong capital position to support growth and provide
+resilience against a range of possible stresses. The Bank plans to maintain a strong liquidity position
+
+with a significant portion of funds continuing to be invested with the Bank of England and other highly
+liquid investments.
+
+This report has been approved by the board of directors and signed by order of the board
+
+Cin
+
+Janet Pope
+Chair
+
+12 August 2021
+CAF Bank Limited
+GOVERNANCE REPORT
+
+As an unlisted company, the UK Corporate Governance Code (2018) does not apply to CAF Bank;
+however, the Board has sought to comply with a number of the provisions of the Code where it
+considers them to be appropriate and proportionate to a company of the Bank’s size and nature.
+
+The Board
+
+The CAF Bank Board is responsible for establishing and monitoring the Bank’s strategy and risk appetite and
+approving related policy statements which set out the control environment within which the Bank operates.
+Implementation of strategy and development and delivery of the Bank's operating plan is the responsibility of
+
+the Bank’s CEO and Executive Committee.
+Cc
+
+Committee
+
+Board of Directors
+Board Risk and
+NomCo and is
+Compliance
+
+pOADT pavog
+
+a
+
+Denotes CRO Independent access to Baprd n
+
+Executive Committee é
+
+(Performance - CEO)
+Executive Risk
+L. . a
+COMMittee (Risk- CRO}
+. Compliance Operations Hign sisk
+Sanctions amg O ee | ALCO Commitiee Commitee MMM Commitee
+
+[pao]
+ssausng
+7g 9x3
+
+Risk Management and Ownership Risk Oversight and Control independent Assurance
+CRO
+
+Ceniral and Outsourced junctions I —_-——
+(Finance, HR, IT, Treasury, Admin) .
+Internal Audit
+
+. . (outsourced)
+Operations Credit Compliance
+Operational Financial
+Risk Crime
+
+(Snr Executive)
+
+Fy
+a
+2
+Q
+Ed
+
+Banking (Commercial Lending,
+Lending services)
+
+(Fraud, Recons and Cards)
+
+a
+
+In addition to the above, for a fixed time period until the Bank’s Transformation Project has been
+concluded, there is an additional executive committee reporting into the Executive Committee which
+will be the Transformation Steerco with delegated responsibilities for governance and oversight of the
+Transformation Project.
+
+The Board comprises the non-executive chair, eight non-executive directors and two executive
+directors and exercises its accountabilities through its own activities and through delegation of
+responsibilities to the CEO and the Executive Committee. The Board receives reports from the CEO
+and reviews the work of the Executive Committee.
+CAF Bank Limited
+
+GOVERNANCE REPORT
+The following directors served throughout the year, except as noted:
+Meetings
+attended Maximum
+Janet Pope (Chair) 1 F) 8
+Malcolm Himsworth (Deputy Chain ' 8 8
+Martyn Beauchamp ! 7 8
+Kees Diepstraten ' 8 8
+Astrid Grey (appointed 01 June 2020) ! 7 7
+Neil Heslop (CAF Chief Executive) (appointed 15 October 2020) 4 4
+Mairi Johnstone ! 8 8
+Sir John Low CBE ° (CAF Chief Executive) (retired 1 October 2020) 4 4
+Carole Machell (retired 8 September 2020) 12 3 4
+Samantha Seaton (appointed 29 June 2020) ' 6 6
+Graham Toy ' 8 8
+| Alison Taylor (CEO) 8 8
+Philip Alvey (Chief Finance Officer} (appointed 29 April 2021) 1 1
+John Grout (Finance Director) (retired 13 April 2021) 8 8
+
+i ; Independent non-executive director (INED)
+? CAF Trustee
+? Non-executive director having served for 9 years or more
+
+None of the Directors have interests in the shares of the Bank or any associated undertaking or trust.
+
+The Board is supported by Kate Mayor, Company Secretary.
+
+How the Board discharged its responsibilities:
+
+During the year the Board:
+
+ee .°
+
+Approved the Bank’s strategy, operating plans, budgets and forecasts;
+
+Approved the Bank's Transformation Plan for its banking system to enhance our customer
+proposition;
+
+Approved the Risk Appetite Framework and policies to maintain an effective and appropriate
+governance and control structure for managing the business;
+
+Reviewed and challenged the operating activities of the Bank compared to plans and changes
+in the wider economic environment;
+
+Monitored the conduct of business to ensure adherence to approved risk appetite and
+compliance with applicable regulations;
+
+Monitored the impact of COVID-19 and operational resilience;
+
+Monitored reputational risk and brand issues;
+
+Reviewed, challenged and approved the capital and liquidity adequacy assessments and
+policies (ICAAP and ILAAP) including the gifting of annual profits to its parent, the Charities Aid
+Foundation;
+
+Reviewed and approved a new capital policy, and agreed this with the Bank’s parent, CAF.
+Reviewed, challenged and approved the Recovery Plan and Resolution Framework;
+Approved the composition, membership and terms of reference of Board sub-committees;
+Reviewed reports and recommendations from Board sub-committees, taking action as
+appropriate;
+
+Reviewed and approved the Annual Report and Financial Statements;
+
+Set an appropriate ‘tone from the top’ and ensured alignment of values and behaviours in the
+Bank relating to the conduct of its business; and
+
+Kept the PRA and FCA informed of the Bank’s strategy, operations and risks during the year.
+CAF Bank Limited
+
+GOVERNANCE REPORT
+
+Board Committees
+
+The Board has established three sub-committees to assist it in monitoring the business, reviewing
+policies, systems and controls and setting risk appetite:
+
+|. Board Risk and Compliance Committee;
+Il. Audit Committee; and
+WI. Nominations and Remuneration Committee.
+
+Each sub-committee is subject to its own terms of reference and has authority to review relevant
+policies (in line with the Policy Approval Protocol), systems, controls and reporting, making
+recommendations to the Board for approval.
+
+The Board Risk and Compliance Committee (BRCC)
+
+The Board Risk and Compliance Committee is responsible for advising the Board on the Bank’s risk
+management framework and compliance matters. The Committee is chaired by an Independent Non-
+Executive Director (INED) and comprises of three other INEDs. Key management attend Committee
+meetings by invitation. ;
+
+How the BRCC discharged its responsibilities:
+During the year the BRCC:
+
+Reviewed the Risk Appetite Statement and recommended these for approval by the Board;
+Monitored risk reporting and ensured the Bank's strategy, principles, policies and resources
+are aligned to the Bank’s risk appetite, as well as to regulatory and industry best practices;
+
+* Reviewed and challenged capital and liquidity adequacy assessments, the Recovery Plan and
+Resolution Framework and recommended these for approval by the Board;
+Monitored compliance with legislation, regulation and internal policy;
+Focused on Business (including the impact of COVID), Credit and IT risks including oversight
+of the Transformation Project, and
+
+« Reviewed policies and recommended these to the Board,
+
+The Board Audit Committee
+
+The Board Audit Committee is responsible for reviewing the effectiveness of financial reporting and
+internal audit, and overseeing whistleblowing policies and procedures. The Committee also safeguards
+the independence of external audit and the outsourced internal audit function and oversees their
+effectiveness.
+
+The Committee is chaired by an Independent Non-Executive Director (INED) and comprises two other
+INEDs. Key management attend Committee meetings by invitation. During the year the Committee
+Chair held regular meetings with the external and internal auditors and management to discuss the
+business of the Committee and specific issues as they arose.
+
+10
+CAF Bank Limited
+GOVERNANCE REPORT
+
+How the Committee discharged its responsibilities:
+Financial Reporting
+The Committee reviewed and challenged:
+
+The Annual Report and Financial Statements;
+
+The annual external audit plan, including remuneration of the auditors; -
+
+The significant areas of judgement in relation to critical accounting policies;
+
+Evaluated the effectiveness of external auditors, and assessed their independence and
+objectivity; and
+
+e The Pillar 3 report.
+
+Internal Audit
+During the year the Committee:
+
+e Reviewed and challenged the annual internal audit plan in the context of the Bank's risk
+management framework; _
+
+« Reviewed and challenged the findings of internal audit reports and management's responses
+to recommendations; and
+
+e Monitored the effectiveness of internal audit.
+
+Whistleblowing
+
+The Chairman of the Audit Committee has oversight as the Bank’s “whistleblowers’ champion”, with
+responsibility for ensuring and overseeing the integrity, independence, and effectiveness of the
+whistleblowing policies and procedures. The Committee reviews at least annually the Bank’s
+Whistleblowing Policy and associated arrangements.
+
+The Nominations and Remuneration Committee
+
+The Nominations and Remuneration Committee is responsible for advising the Board on the
+appointment of members to the Board and Board sub-committees. The committee also makes
+recommendations regarding the remuneration of members of the Executive Committee and reviews
+and agrees the basis for pay rises and bonuses awarded to staff.
+
+The Committee comprises the Chair, an INED, the CEO and CAF Chief Executive.
+How the Committee discharged its responsibilities:
+During the yéar the Committee:
+
+« Reviewed the composition of the Board and made recommendations for appointments to Board
+and Board sub-committees;
+
+Monitored Board effectiveness and succession plans;
+
+Reviewed and approved policies, including diversity and equality policies;
+
+Monitored conflicts of interest; and
+
+Reviewed remuneration and other policy and practice in relation to employees and directors.
+
+11
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+Risk Management Framework
+
+The Risk Management Framework (RMF) outlines how CAF Bank Ltd (the “Bank”) manages risks that
+are relevant to our chosen sectors, business mode! and operations.
+
+Risk-taking is an inherent part of banking, and the Bank aims to make a profit from taking risks in a
+controlled way. Excessive and poorly managed risks can have a negative impact, increasing the risk to
+the Bank's customers and shareholder, that shareholder being CAF (Charities Aid Foundation).
+
+Risk is the combination of the probability of an event and its consequences. Consequences can range
+from positive to negative. In the context of this document, the focus is risks that could have an impact
+on the Bank’s customers, capital, liquidity, profitability; reputation and ultimately its viability.
+
+Risk management refers to the process of identification, assessment, measurement, control and
+monitoring of risks.
+
+The Board, directors and senior management ensure the risks taken are manageable. We consider
+risks manageable when they are defined, understood, measurable and controllable. We control risks
+by ensuring the Bank's resources are capable of withstanding both expected and unexpected impacts.
+
+The senior executives and managers of the Bank ensure embedding of Risk Management in day-to-
+day management and control activities, with a clear separation between First Line of Defence and
+Second Line of Defence activities ({LOD and 2LOD).
+
+CAF Bank establishes and maintains risk culture by the adoption of a set of values, risk principles and
+setting the correct “tone at the top” of the Bank.
+
+Detailed frameworks, policies and procedures support this document. These combine to ensure the
+
+way the Bank manages risk is consistent with the size and nature of the Bank’s operations. They align
+to regulatory requirements and refiect industry best practice, as reflected below:
+
+How do we provide oversight and
+
+What risks and regulatory How do we manage risks and compliance given
+: ; wat assurance on risk management
+? ?
+requirements do we face? the business objectives? and compliance?
+Principal Risks 1, Risk Appetite & Risk Strategy
+. + Risk Appetite Framework
+* Strategic * Risk Appetite Statement/s ;
++ Credit Business Plan and Strategy
+. + Risk Culture
++ Prudential
+* Operational 2. Risk Architecture
++ Conduct
+. tr + Governance and Committee structure
+Financial Crime => + Threelines of defence (3LOD)
+« Group + Risk resourcing, risk systems
+* Reporting and escalation
+
+* Information Security
+
+Legal & Regulatory 3. Risk Protocols
+
+Sod
+<
+20
+"n
+hw
+7]
+>
+re)
+x
+2
+dew
+i
+Y
+£
+ad
+3
+c
+3
+uu
+o
+~”n
+t
+
+5. Third line - independent assurance
+
+* Policies
+* Prudential Regulation 4 ~ * Procedures
+i 7 germry ° Mandates/segregation
+. Foe conduct + Controls/checks
+Authority + Risk & Control Self
+. Assessment
++ Consumer Credit Act — * Business quality
++ General Data Protection 5... Cy + Projects/change
+Regulation
+* The Foreign Account
+Tax Compliance Act /
+Common Reporting . ; . nes
+Standard Data, Reporting, Key Risk Indicators, Limits
+: i agers : . : .
+Regime. anes Risk Datla Aggregation/Porifotio Analysis
+
+Suess Keating: Internal Capeat Adequacy Agsessment Process Interna?
+AB equaty Asse STEN Recovery and Resokson PUN
+
+CAF Bank Limited
+RISK MANAGEMENT REPORT
+
+The RMF includes the three lines of defence model which ensures a clear delineation of responsibilities
+between control over day-to-day operations, risk oversight and control and independent assurance of
+the Bank’s activities.
+
+This 3LOD model is important as it provides clarity for individuals and functions about their role, where
+responsibilities and accountabilities lay and is a core component of the RMF.
+
+The emphasis on the responsibilities of each line of defences is as follows:
+
+First line of defence — Business lines and centralised functions
+
+The First Line’ of Defence (through managing risks and staying in control of their activities), is
+responsible for managing risk in the context of the legal and regulatory environment. The first line of
+defence also take due regard of the reputational position that the Bank occupies in support of charities.
+
+¢ To run the business in a safe but profitable fashion to enable sustainability — linked to the Risk
+Appetite Framework and Statements;
+To manage the risks in the business, to within tolerances or limits;
+To act in an “early warning’ role in terms of ongoing client relationship management;
+Identify, measure, control and monitor risks within each area of the business, reporting and
+escalation of incidents and to evidence control;
+
+¢ As part of the controls, the 1LOD needs to implement and adhere to the mandates, policies
+and processes that are part of the control environment; and
+
+* Identify and assess new or emerging risks as internal activities or the external environment
+changes.
+
+Second line of defence — Oversight functions (Risk, Compliance and Anti-Money Laundering)
+
+* To provide independent oversight and guidance on risks relevant to the Bank’s strategy and
+activities;
+
+¢ Maintain an aggregate view of risk and monitoring performance in relation to the Bank’s risk
+appetite;
+Monitoring changes and compliance to external regulation, and promoting best practices; and
+To support a structured approach to risk management by implementing and maintaining a
+risk management framework (RMF) and bank-wide risk policies, and to monitor their proper
+execution in the 1LOD.
+
+Third line of defence - Internal Audit (the Internal Audit function is outsourced to Mazars LLP)
+
+* To provide independent assurance to the Board via the Audit Committee that the {LOD and
+2LOD are both effective and operative in discharging their responsibilities.
+
+Central to the Risk Governance and to the Three Lines of Defence model is the CRO. The CRO will be
+
+responsible for monitoring exposures to the Board approved Risk Appetites and reporting to the
+management risk committee (ERC) as well as the Board’s risk committee (BRCC).
+
+13
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+_Risk Appetite Statement
+
+The Bank has taken the expectations of its stakeholders into consideration in articulating its risk
+appetite; the need for regulatory compliance at all times; the preservation of its authorisation and
+reputation and its desire for controlted and sustainable profits in line with its values.
+
+An overarching Risk Appetite Statement (RAS) governs the Bank’s approach to risks it is willing to
+accept in support of its Business Plan. The overarching Risk Appetite Statement aligns to the Business
+Plan and Strategy:
+
+' CAF Bank, a bank owned by a charity, is developing a more robust
+
+<latemisuuc-me § business model that seeks to maintain an appropriate balance ‘
+oericsscem™ § between mission to support charities and providing a return to '
+- CAF in a low interest rate environment.
+
+: The Bank will take appropriate but controlled risk to support
+Overarching Risk income and lending book growth, to remain.sustainable, whilst «|
+
+Cae | remaining safe, trusted and ethical bank of choice, that is “helping
+
+: charities to make a better society’
+
+The Bank’s principal risks are strategic, credit, prudential, operational, financial crime, information
+security, conduct, and group. Identifying and monitoring current and emerging risks is integral to our
+approach to risk management.
+
+The following information on pages 14-19 is covered by the external auditors’ opinion on page 25. -
+Strategic Risk
+
+Strategic risk is the risk that can affect the Bank's ability to achieve its strategic and business objectives.
+Strategic risk might arise from making poor business decisions, from the substandard execution of
+decisions, from inadequate resource allocation, or from a failure to respond well to changes in the
+business environment.’
+
+From a strategic perspective, CAF Bank was established as a mixed motive investment to further the
+charitable mission of its parent, the Charities Aid Foundation, through the provision of banking services
+to the charity sector, as well as provide a financial return on CAF’s investment in the Bank.
+
+Credit Risk
+
+Credit or default risk is the potential of financial loss from a borrower or counterparty failing to meet
+their financial obligations to the Bank to repay in accordance with agreed terms
+
+Treasury assets
+
+Treasury counterparties are reviewed and approved by the ALCo in accordance with policies and
+criteria approved by the Board. The Bank sets criteria which include credit rating, counterparty lending
+limits, group exposures, and country exposure limits. New investments with financial and non-financial
+institutions do not exceed £10m and £5m respectively. The Bank uses the Standardised Approach to
+assess capital required for credit risk, with risk weightings based on the lower of the two highest of
+Fitch, S&P and Moody’s ratings in accordance with the credit quality assessment scale.
+
+14
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+Credit Risk (continued)
+
+Treasury assets by class:
+
+Listed:
+
+UK government
+
+Multilateral financial institutions
+Fixed coupon corporate bonds
+Floating rate corporate bonds
+
+Unlisted:
+Certificates of deposit
+
+Debt securities (Note 11)
+
+Balances at Bank of England
+Loans and advances to banks (Note 9)
+
+Treasury assets by credit rating:
+
+Category
+(Fitch equivalent lowest credit rating)
+
+UK Government
+
+AAA
+AAt
+AA
+AA
+
+A+
+
+A
+
+A-
+BBB+
+BBB
+
+2021, 2020
+Book Market Book Market
+Value Value Value Value
+£000 £000 £000 £000
+- - 63,036 . 63,102 .
+758,564 760,657 | 536,545 540, 386
+24,093 24,399 43,521 43,657
+83,398 84,458 107,981 107,876
+866,055 869,514 751,083 755,024
+19,821 19,983 20,000 20,029
+885,876 889,497 771,083 775,050
+417,756 417,756 327,571 327,571
+7,897 7,897 6,273 6,273
+1,311,529 1,315,150 1,104,927 1,108, 894
+2021 2020
+Book % of Book % of
+Value Book Vale Book
+£000 % £000 %
+417 ,756 31.87% 390,607 35.35%
+752 985 57.41% 526,187 47.62%
+83 071 6.33% | 82,893 7.50%
+- 0.00% © . $238 0.38%
+25, AB5 1.94% 48,937 4.43%
+22 351 1.70% 62,066 4.72%
+9 881 0.75% - 0.00%
+- 0.00% - 0.00%
+- 0.00% - 0.00%
+- 0.00% - 0.00%
+1 311,529 100.00% 1,104,927 100.00%
+
+15
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+Credit Risk (continued)
+
+Treasury assets by exposure value
+
+30/04/2021
+
+30/04/2020
+
+Lending
+
+Lending is monitored by the Credit Risk Committee. Loan applications are reviewed and presented for
+approval to the Sanctions Committee, a sub-committee of the Credit Risk Committee, in accordance
+with policies and criteria approved by the Board. Lending is secured on property and subject to
+maximum limits on loan to value ratios. CAF Bank has in place a system of limits and controls to
+manage credit risk on its loan‘portfolio including Board level approval for large loans.
+
+The policies include maximum exposure values and limits to manage concentration risk by sector.
+Exposure to geographical area is monitored. At 30 April 2021, the largest loan was £4.8m (2019/20:
+£4.9m). The maximum aggregate exposures to any one sector (Social Housing) and geographical area
+were 53% and 29% respectively (2019/20: 55% and 26% respectively).
+
+Loans, overdrafts and BACS facilities are subject to regular monitoring of loan performance and
+individual annual review. Administration of the loan book is outsourced to BCM Global Mortgage
+Management Ltd which provides regular management information on a loan-by-loan and aggregated
+basis. A provision of £802k has been made at 30 April 2021 reflecting losses that have been incurred
+but not yet identified (2019/20: £707k) and £1,376k has been provided for specific loan provisions
+(2019/20: £938k). No overdrafts were written off during the year (2079/20: nil. One loan was in arrears
+at 30 April 2021 (2019/20: none).
+
+16
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+Credit Risk (continued)
+
+2021 2020
+£000 £000
+Gross loans and advances to customers (Note 10) 127,937 106,400
+_Undrawn overdraft and loan commitments (Note 19) 36,779 33,439
+164,716 139,839
+“Amounts included within the above:
+Secured on property 164,716 139,805
+Unsecured:
+_Loans - -
+_Overdrafts - 34
+164,716 139,839
+As at 30 April 2021 the average foan to value ratio across the lending portfolio was 53% (2019/20:
+54%).
+Range Amount
+<=10% £572,926
+
+<=20% £3,617,491
+<=30% £6,168,395
+<=40% £21 424,237
+<=50% £24,571,373
+<=60% £28 892,154
+<=70% £18,521,525 |.
+<=80% £14,174,382
+<=90% £9,744,315
+<=100% £0
+
+Unsecured £0
+
+Totals £127,686,798
+
+Prudential Risk
+
+Prudential risk is the risk that the Bank has insufficient capital, liquidity and funding to maintain its
+operations in business as usual and stressed conditions: Prudential risk includes Capital, Liquidity and
+Market risks. ,
+
+Capital Risk
+
+Capital risk is the risk that the Bank has insufficient capital to cover stressed conditions, regulatory
+requirements and business plans.
+
+Capital risk is measured, monitored and reported daily against limits approved by the Board within the
+
+’ Bank’s Capital policy and monitored by ALCo and Executive Risk Committee. The Bank undertakes
+regular stress testing of its capital adequacy.
+
+17
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+Liquidity Risk (including Funding Risk)
+
+Liquidity risk is the risk that the Bank does not have sufficient financial resources to meet its obligations
+as they fall due, or can secure them only at excessive cost. Liquidity risk arises from mismatches in the
+timing of cash flows. Funding risk arises when the liquidity needed to fund illiquid asset positions cannot
+be obtained at the expected terms when required.
+
+Liquidity risk is measured, monitored and reported daily against intra-day triggers and limits approved
+by the Board within the Bank's Liquidity Policy. The liquidity position is monitored by ALCo and the
+Executive Risk Committee. The Bank undertakes regular stress testing of its liquidity position and
+behavioural analysis of its liabilities and assets. ;
+
+- CAF Bank holds liquidity buffer eligible assets of £1,174m (2019/20: £916m), excluding assets pledged
+as security under repurchase agreements. Liquidity buffer assets-comprise investments in the Bank of
+England Reserve Account, UK Gilts, Treasury Bills and multilateral development banks.
+
+2021 2020
+
+Book — Book
+
+Value Value
+
+£000 £000
+
+Balances at Bank of England 415,462 326, 104
+UK government - 63,036
+Multilateral financial institutions 758,564 526,507
+
+1,174,026 915,641
+
+Market Risk (including Interest Rate Risk)
+
+—
+
+Market risk is the risk from adverse movements in external markets, e.g. interest rate movements,
+changes in investment values or currency movements that will impact our income or the value of our
+assets and liabilities. This includes interest rate risk in our banking book (IRRBB) which is the risk
+arising from a mismatch between the duration of assets and liabilities.
+
+CAF Bank does not undertake proprietary trading activities. Investments are held to maturity and valued
+at cost with any premium or discount amortised over the remaining term. All the Bank’s assets and
+liabilities are denominated in sterling.
+
+Market risk is measured by monitoring mismatches between assets and liabilities assessed on a
+behavioural basis which may result from movements in market interest rates over a specified time
+period within Board approved limits. IRRBB is measured weekly and monitoring is carried out by ALCo
+and the Board Risk and Compliance Committee.
+
+Non-maturity (on-demand) deposits are behaviouralised in to time bandings:
+
+Current accounts
+
+£0 - £249,999 2-3 years
+£250,000 - £999,999 1-2 years
+Over £1m 6 - 12 months
+
+18
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+Market Risk (continued)
+
+Assets and liabilities analysed by interest rate pricing time periods:
+
+As at 30 April 2024
+
+Assots
+Balances at Bank of England
+Loans and advances
+
+to banks (Note 8)
+Loans and advances
+
+to customers (Note 10)
+Debt securities (Note 11)
+Prepayments and
+
+accrued income
+Intangible Assets
+
+Liabilities
+Customer accounts (Note 13)
+Repurchase agreements (Note 14)
+Other liabilities (Note 15)
+Accruals and deferred
+
+income
+Sharehokders' funds (Note 17),
+
+interest rato senstivity
+gap
+
+tmpact of 2% change
+in interest rates
+
+As at 30 April 2020
+
+Assets
+Balances et Bank of England
+Laans and advances
+
+to banks (Note 9)
+Loans end advances
+
+to customers (Note 10)
+Debt securities (Note 11)
+Prepayments and
+
+8cerved income
+
+Liabilities
+Customer accounts (Note 13)
+Repurchase agreements (Note 14)
+Other liabilities (Note 15)
+Accruals and deferred
+
+income
+Shereholders’ funds (Note 17}
+
+interest rate sensitivity
+gap
+
+impact of 2% change
+in interest rates
+
+Next Up to 3 3 months 6 months 1d year Over5 Other .
+day months to 6 months to 1 year to 5 years years ftems Total
+£000 £000 €000 €000 £000 €000 £000 £000
+415,461 2,285 : : : : - 417,756
+7,897 - : - : : . 7,897 |
+118,004 - . . : 8,502 : - 124,506 |
+- 337,168 32,012 207,175 202,453 106,641 429 885,876 |
+: - : : - : 4,087. 4,087 |
+, . « . . . . 1,194 1,194
+538,362 330.461 32,012 207,175 211,055 105,641 5690 1,441,296
+788,350 a . 84,088 525,704 - 4 1,398,148 |
+. . - - - . 1,848 1,848 |
+. - . . : . 13 13°
+« * « 5 5 a 41,289 41,289
+788,350 : : 84,088 525,704 : 43,154 1,441,286
+(249,988) 338,481 32,012 123,087 (313,749) 106,641 (37,484) :
+: (234) (238) (1,809) 13,479 (14,310) - (140),
+Assets and liabilities analysed by interest rate pricing time periods:
+Next Up to3 3 months § months 1 year Over § Other .
+day months to 6 months to fl year to § years years items Total
+£000 £000 £000 , £000 £000 £000 £000 £000
+326,104 1,467 - - - - - 327,571
+6,273 - - - - - - 6,273
+95,473 - - - 8,152 - - 103,625
+- 236,724 49,952 69,858 413,576 - 973 771,083
+- 240 - - - - 4,138 4,378
+427,850 238,431 49,952 69,858 421,728 ~ 5111 1,212,930
+662,804 - - 52,429 430,289 - 14,473 1,156,995
+- 10,142 - - - - - 10,142
+- - - - . - 4,197 4,197
+- - - - - - 246 246 |
+- - - - - - 41,350 41,350
+662,804 10,142 ~ 52,429 430,289 - 57,266 1,212,930
+(234,954) 228,289 49,952 17,429 (8,561) - (52,155) -
+- 6 (370) (257) 635 - - 14
+
+19
+CAF Bank Limited
+
+RISK MANAGEMENT REPORT
+
+The following information is not covered by the external auditors’ opinion. ,
+Operational Risk
+
+The risk of financial loss and or reputational damage resulting from inadequate or failed internal
+processes, people and systems or from external suppliers and events.
+
+Having adequate operational resilience improves our ability to absorb and not contribute to, or
+exacerbate shocks while continuing to provide critical functions.
+
+During the year ended 30 April 2021 operational losses totalled £17k (2019/20: £4k).
+
+The Bank continues to develop and enhance its Operational Resilience to protect the Bank against
+internal and external events that can disrupt service to our customers. Having adequate operational
+resilience improves our ability to absorb and not contribute to, or exacerbate shocks while continuing
+to provide critical functions. ,
+
+CAF Bank uses the Basic Indicator Approach to assess operational risk capital requirements.
+Financial Crime
+
+Financial Crime includes any offence involving fraud or dishonesty, or handling the proceeds of crime.
+We seek to protect our customers and the Bank from the risks of financial crime by identifying inherent
+risks and operating with appropriate systems and controls to detect and prevent harm. We will not
+conduct business with individuals or entities we believe are engaged in illicit behaviour. We seek to
+minimise the Bank's and our customers’ exposure to loss from fraud.
+
+CAF Bank complies with all relevant laws and regulation taking into account supervisory and approved
+industry guidance. Work to prevent fraud, money laundering, terrorist financing, breach of sanctions,
+tax evasion and bribery/corruption is led by the Bank's CEO and COO with the support of dedicated
+Know Your Customer and Fraud Prevention teams. Oversight is provided by the Money Laundering
+Reporting Officer and Chief Risk Officer.
+
+Cyber threats are escalating from an increasingly sophisticated financial crime community. We continue
+to invest in strengthening our cyber defences and ensuring the robustness of our controls.
+
+CAF Bank continues to carry out ‘know your customer’ reviews in line with industry practice.
+
+Bank losses to fraud in the year ended 30 April 2021 were £43k (2019/20 £33k).
+
+Conduct Risk
+
+The risk of poor customer outcomes at any stage of the customer journey, through inappropriate
+execution of the Bank’s activities and processes. This could include, poor staff behaviours, a breach of
+the conduct rules and a poor culture, which could cause detriment to customers, the Bank or staff
+members.
+
+20
+CAF Bank Limited
+RISK MANAGEMENT REPORT
+
+COVID-19
+
+Since mid-March 2020 the UK Government has been responding to the COVID-19 pandemic with a
+range of measures which are impacting the Bank, our customers and the wider UK economy. The
+impact has been, and continues to be, rapidly evolving and difficult to predict with certainty. —
+
+CAF Bank has responded with a number of measures aimed at ensuring the continuation of full-banking
+services to all our customers, improving processes so our customers can operate remotely more easily
+
+‘and by proactively offering six-month capital repayment holidays to borrowers where there is a need
+for flexibility. Following the reduction in Base Rate by the Bank of England to 0.1%, CAF Bank has
+reduced the interest rate paid on deposit accounts.
+
+The Bank is closely monitoring the emerging risks from the impact of COVID-19, including the impact
+on our loan customers and the impact on the Bank from lower interest rates. The Board monitors the
+impact of a range of projected interest rate scenarios in order to plan how the Bank would respond.
+
+The UK now has a well advanced vaccination programme yet risks remain around further mutations
+that vaccines may not respond to. Government support has made it difficult to determine how many
+businesses are struggling and therefore the full impact of COVID-19 on the economy cannot yet be
+determined.
+
+21
+CAF Bank Limited
+REPORT OF THE DIRECTORS
+The Directors present their report and the audited financial statements for the year ended 30 April 2021.
+
+Results for the Year
+
+CAF Bank made a profit on ordinary activities before taxation for the year of £915k (2019/20: £1,290k).
+CAF Bank donates its surplus profits to its parent charity, Charities Aid Foundation, after ensuring it
+has retained what is required to support capital adequacy and agreed investment programmes, and
+after maintaining sufficient reserves to meet interest payable on capital instruments and taxation.
+Interest of £990k (2019/20: £993k) was payable to AT1 holders. No dividends were paid on ordinary
+share capital during the year (2019/20: none).
+
+Charitable and Political Donations
+
+CAF Bank did not make a donation to CAF in the year (2019/20: £297k). The Bank did not make political
+donations or incur any political expenditure during the year (2019/20: none).
+
+Employees
+
+CAF Bank recognises that the development and training of staff is critical to its continuing success and
+provides development opportunities and support to ensure all staff have the knowledge and skills to
+perform at the highest standard. Each member of staff receives an induction and job related training
+and resources are made available to enable individuals to develop and improve their performance and
+keep up-to-date with internal and external developments. As part of the CAF Group, we are pleased to
+report CAF Bank’s commitment to staff is evidenced by the Bank’s contribution to the Group achieving
+the Investors in People Silver Standard.
+
+The Bank is committed to offering equal opportunities to all staff and opposes all forms of discrimination.
+The Bank seeks to provide equal opportunities in training, development and career opportunities to all
+staff. 45% of members of the Board and 80% of the Bank's Executive Management are women. CAF
+Bank, as part of CAF, has been awarded the Two Ticks symbol, which is a national recognition scheme
+confirming the Bank’s commitment to equality of opportunity throughout our recruitment process and
+employment for disabled people.
+
+CAF Bank regularly provides staff with information including the Bank’s progress against objectives,
+financial position, futuré aims and strategy. An annual employee engagement survey is undertaken and
+the results used to improve performance in areas that are important to staff.
+
+All staff are employed by CAF and recharged to CAF Bank where activities have been undertaken on
+the Bank’s behalf. .
+
+Going concern
+
+To assess going concern the Directors have reviewed the adequacy of the Bank’s capital and liquidity
+positions, and the Bank’s operational resilience, including the ability of CAF to continue to provide
+shared services.
+
+COVID-19 presents an uncertain environment, and the Directors have considered the impact of a
+severe economic outcome on the Bank and the effectiveness of management actions that might be
+taken to mitigate the impact of this stress. The Directors have also reviewed the level of stresses which
+would result in the Bank going into resolution and assessed the likelihood of these stresses occurring.
+
+The Directors have concluded the Bank’s capital position can withstand a severe economic outcome
+from COVID-19, and further concluded that the likelinood of CAF Bank going into resolution due to a
+capital shortfall is remote.
+
+Liquidity stress tests for varying levels of deposit outflows show the Bank is able to survive an outflow
+of deposits exceeding 35% of balances.
+
+The directors have concluded the Bank’s parent will continue as a going concern providing shared
+services to the Bank. Other suppliers are closely monitored and there are no indications of issues
+which would threaten the Bank’s going concern.
+
+22
+CAF Bank Limited
+
+The Directors have therefore adopted the going concern basis in preparing the financial statements.
+Auditors
+
+A resolution to appoint the auditors and to agree their remuneration will be submitted to the Board.
+
+23
+CAF Bank Limited
+
+Statement of Directors’ Responsibilities
+
+The Directors are responsible for preparing the Annual Report and the financial statements in
+accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that
+law the directors have elected to prepare the financial statements in accordance with United Kingdom
+Generally Accepted Accounting Practice (United Kingdom Accounting Standards and applicable law),
+including FRS 102 “The Financial Reporting Standard applicable in the UK and Republic of Ireland”.
+Under company law the directors must not approve the financial statements unless they are satisfied
+that they give a true and fair view of the state of affairs of the company and of the profit or loss of the
+company for that period. In preparing these financial statements, the directors are required to:
+
+e Select suitable accounting policies and then apply them consistently;
+
+e Make judgements and accounting estimates that are reasonable and prudent:
+
+¢ State whether applicable UK Accounting Standards have been followed, subject to any material
+departures disclosed and explained in the financial statements; and
+
+e Prepare the financial statements on the going concern basis unless it is inappropriate to
+presume that the company will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and
+explain the company's transactions and disclose with reasonable accuracy at any time the financial
+position of the company and enable them to ensure that the financial statements comply with the
+Companies Act 2006. They have general responsibility for taking such steps as are reasonably open
+to them to safeguard the assets of the company and to prevent and detect fraud and other irregularities.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial
+information included on the company’s website. Legislation in the United Kingdom governing the
+preparation and dissemination of financial statements may differ from legislation in other jurisdictions.
+
+Directors’ interests
+
+The directors who served during the financial year are reported in the Governance Report on page 8.
+No director had an interest in the share capital of the Bank or any other UK group company.
+
+Disclosure of information to auditors
+Each of the persons who are a director at the date of approval of this report confirms that:
+
+1) So far as the director is aware, there is no relevant audit information of which the company's
+auditors are unaware; and
+
+2) Each director has taken all the steps that he/she ought to have taken as a director in order to
+make him/her aware of any relevant audit information and to establish that the company's
+auditor's are aware of that information.
+
+This confirmation is given and should be interpreted in accordance with the provisions of s418 of the
+Companies Act 2006.
+
+By order of the Board and signed on its behalf on 12 August 2021
+
+Cin
+
+Janet Pope
+Chair
+
+CAF Bank Limited
+Company Number 1837656
+
+24
+CAF Bank Limited
+
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF CAF BANK
+LIMITED
+
+Report on the audit of the financial statements
+
+1. Opinion
+
+In our opinion the financial statements of CAF Bank Ltd (the ‘Company’):
+* give a true and fair view of the state of the company’s affairs as at 30 April 2021 and of its profit
+for the year then ended;
+
+e have been properly prepared in accordance with United Kingdom Generally Accepted Accounting
+Practice, including Financial Reporting Standard 102 “The Financial Reporting Standard applicable
+in the UK and Republic of Ireland”; and
+
+« have been prepared in accordance with the requirements of the Companies Act 2006.
+
+We have audited the financial statements which comprise:
+, e the profit and loss account;
+the balance sheet; _
+the statement of changes in equity;
+the cash flow statement;
+the sections of the risk management report identified as audited and
+the related notes 1 to 22.
+
+The financial reporting framework that has been applied in their preparation is applicable law and
+United Kingdom Accounting Standards, including Financial Reporting Standard 102 “The Financial
+Reporting Standard applicable in the UK and Republic of Ireland” (United Kingdom Generally
+Accepted Accounting Practice).
+
+2. Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)} and
+applicable law. Our responsibilities under those standards are further described in the auditor’s
+responsibilities for the audit of the financial statements section of our report.
+
+We are independent of the company in accordance with the ethical requirements that are relevant to
+our audit of the financial statements in the UK, including the Financial Reporting Council’s (the
+‘FRC’s’) Ethical Standard as applied to public interest entities, and we have fulfilled our other ethical
+responsibilities in accordance with these requirements. We confirm that the non-audit services
+prohibited by the FRC’s Ethical Standard were not provided to the company.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis
+for our opinion.
+
+25
+
+CAF Bank Limited
+
+3. Summary of our audit approach
+
+Key audit matter The key audit matter that we identified in the current year was valuation of loan
+impairment provisions.
+
+Materiality The materiality that we used in the current year was £400,000 which was
+determined on the basis of 1% of equity. We determined materiality at the planning
+stage and did not elect to adjust materiality based on final equity as this would have
+resulted in a higher materiality.
+
+Scoping Audit work to respond to the risks of material misstatement was performed directly
+by the audit engagement team.
+
+Significant changes in There were no significant changes in our approach compared to the prior year.
+our approach ;
+
+4. Conclusions relating to going concern
+
+In auditing the financial statements, we have concluded that the directors’ use of the going concern
+basis of accounting in the preparation of the financial statements is appropriate.
+
+Our evaluation of the directors’ assessment of the company’s ability to continue to adopt the going
+concern basis of accounting included:
+
+*® We obtained an understanding of the process and relevant controls over the preparation of
+the assessment of going concern;
+
+e We involved our regulatory specialists to provide challenge over the liquidity and capital
+stress testing assumptions used by management, including consideration of management
+actions and whether the probability of the reverse stress scenario is remote;
+
+© We agreed the key information used in the assessment to supporting evidence; and
+
+¢ We evaluated the appropriateness of the going concern disclosures in the financial
+statements. ,
+
+Based on the work we have performed, we have not identified any material uncertainties relating to
+events or conditions that, individually or collectively, may cast significant doubt on the company’s
+ability to continue as a going concern for a period of at least twelve months from when the financial
+statements are authorised for issue.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are
+described in the relevant sections of this report.
+
+5. Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in
+
+our audit of the financial statements of the current period and include the most significant assessed
+
+risks of material misstatement (whether or not due to fraud) that we identified. These matters
+
+included those which had the greatest effect on: the overall audit strategy, the allocation of resources
+
+in the audit; and directing the efforts of the engagement team.
+
+These matters were addressed in the context of our audit of the financial statements as a whole, and
+_in forming our opinion thereon, and we do not provide a separate opinion on these matters.
+
+26
+CAF Bank Limited
+
+5.1. Valuation of loan impairment provisions
+Refer to note 1.8 on page 39 and note 10 on page 43
+
+Key audit matter
+description
+
+The value of CAF Bank’s loan book grew in the current year to £124m as at 30 April
+2021 (2020: £104m) driven by an increase in both charitable and social purpose
+lending. Loan balances comprise lending to charities and to finance property
+developments for social purpose organisations. Loans are assessed during the year
+and at each reporting date to determine whether there is evidence of impairment.
+Where impairment triggers are identified, loans must be assessed for impairment
+and appropriate loan impairment provisions are recorded based on discounted
+expected future cash flows..
+
+The process for establishing impairment provisions for loan balances involves
+management judgement to both identify potential impairment triggers and to
+estimate the amount of impairment losses. The economic fallout of Covid-19 has
+increased the risk of counterparty default, and this was evident in both 2020 and
+2021 where individual! provisions were recorded for a small number of loans. This
+represented an area of judgement and estimation for management.
+
+The Company is also required to provide for loan losses that may have been
+incurred but not reported (IBNR). The IBNR provision is modelled based on loan
+data and assumptions for probability of default (PD) and loss given default (LGD).
+These assumptions are subjective, and the IBNR provision is particularly sensitive to
+the LGD assumption which is based on both the value of underlying collateral and
+management's estimate of the realisable value of that collateral after costs.
+
+The impairment provision as at 30 April 2021 was £2,178k (2020: £1,645k), of
+which £802k (2020: £707k) relates to the IBNR provision and £1,376k (2020: £938k)
+relates to provisions for individually assessed loans.
+
+How the scope of our
+audit responded to the
+key audit matter
+
+Our audit procedures included:
+e obtaining an understanding of the relevant controls relating to both IBNR and
+individual loan impairment provisioning;
+
+¢ testing a sample of performing loans to assess whether there is objective
+evidence that impairment has arisen and not been identified;
+
+e reperforming the IBNR model calculation and challenging a sample of model
+inputs through comparison to available market data;
+
+e challenging the key assumptions applied to estimate the IBNR impairment
+provision by comparing the assumptions to historical data and industry
+information; and
+
+e = challenging the calculation of the individual provision balances by testing the
+appropriateness of key inputs and mathematical accuracy of the calculation.
+
+Key observations
+
+Based on the procedures performed and evidence obtained, we found the
+company’s assumptions, judgements and approach to estimating loan impairment
+provision to be reasonable and therefore we consider the level of provision to be
+appropriate.
+
+27
+CAF Bank Limited
+
+6. Our application of materiality
+
+6.1. Materiality
+
+We define materiality as the magnitude of misstatement in the financial statements that makes it
+probable that the economic decisions of a reasonably knowledgeable person would be changed or
+influenced. We use materiality both in planning the scope of our audit work and in evaluating the
+results of our work.
+
+Based on our professional judgement, we determined materiality for the financial statements as a
+whole as follows:
+
+|Materiality "£400,000 (2020: £410,000)
+
+i
+i
+i
+
+| Basis for ‘We have used 1% (2020: 1%) of equity as a basis for determining materiality as
+| determining we considered this to be the most appropriate. Our approach to determining
+materiality _materiality is consistent with the prior year. We determined materiality at the -
+
+| ‘planning stage and did not elect adjust materiality based on final equity as this
+‘would have resulted in a higher materiality.
+
+| Rationale for — we consider equity to be the most relevant benchmark for users of the financial
+the benchmark . statements given that the company is a regulated bank and a wholly owned
+applied subsidiary.
+
+Equity £41,289k -_ Materiality £400k
+m Equity = Materiality
+
+\a Audit Committee
+6.2. Performance materiality
+
+reporting threshold
+£20k
+
+We set performance materiality at a level lower than materiality to reduce the probability that, in
+aggregate, uncorrected and undetected misstatements exceed the materiality for the financial
+statements as a whole. Performance materiality was set at 65% of materiality for the 2021 audit
+(2020: 70%). In determining performance materiality, we considered the following factors: our risk
+assessment, including the company’s control environment and our past experience of the audit which
+has indicated a low number of corrected and uncorrected misstatements identified in previous years.
+We determined a lower performance materiality % compared to the 2020 audit in order to take
+account of the potential increase in operational risk resulting from remote working.
+
+6.3. Error reporting threshold
+We agreed with the Audit Committee that we would report to the Committee all audit differences in
+excess of £20,000 (2020: £20,000), as well as differences below that threshold that, in our view,
+warranted reporting on qualitative grounds. We also report to the Audit Committee on disclosure
+matters that we identified when assessing the overall presentation of the financial statements.
+
+28
+CAF Bank Limited
+
+7. An overview of the scope of our audit
+
+Our audit was scoped by obtaining an understanding of the entity and its environment, including
+internal control, and assessing the risks of material misstatement. Audit work to respond to the risks
+of material misstatement was performed directly by the audit engagement team.
+
+8. Our consideration of the control environment
+
+We obtained an understanding of the relevant controls in key business process, including lending,
+customer deposits, and loan provisioning. We also obtained an understanding of the relevant IT
+systems, including SAGE and BM+. We did not rely on internal controls to reduce the extent of our
+testing in any of the key business processes.
+
+9. Other information
+
+The other information comprises the information included in the annual report, other than the
+financial statements and our auditor's report thereon. The directors are responsible for the other
+information contained in the annual report.
+
+Our opinion on the financial statements does not cover the other information and, except to the
+extent otherwise explicitly stated in our report, we do not express any form of assurance conclusion
+thereon.
+
+Our responsibility is to read the other information and, in doing so, consider whether the other
+information is materially inconsistent with the financial statements or our knowledge obtained during
+the audit, or otherwise appears to be materially misstated.
+
+If we identify such material inconsistencies or apparent material misstatements, we are required to
+determine whether this gives rise to a material misstatement in the financial statements themselves.
+If, based on the work we have performed, we conclude that there is a material misstatement of this
+other information, we are required to report that fact.
+
+We have nothing to report in this regard. :
+
+10.Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are responsible for
+the preparation of the financial statements and for being satisfied that they give a true and fair view,
+and for such internal control as the directors determine is necessary to enable the preparation of
+financial statements that are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the company’s
+ability to continue as a going concern, disclosing as applicable, matters related to going concern and
+using the going concern basis of accounting unless the directors either intend to liquidate the
+company or to cease operations, or have no realistic alternative but to do so.
+
+11.Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole
+are free from material misstatement, whether due to fraud or error, and to issue an auditor's report
+that includes our opinion. Reasonable assurance is a high level of assurance, but is not a guarantee
+that an audit conducted in accordance with ISAs (UK) will always detect a material misstatement
+when it exists. Misstatements can arise from fraud or error and are considered material if, individually
+or in the aggregate, they could reasonably be expected to influence the economic decisions of users
+taken on the basis of these financial statements.
+
+29
+
+CAF Bank Limited
+
+A further description of our responsibilities for the audit of the financial statements is located on the
+FRC’s website at: www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor’s
+report.
+
+12.Extent to which the audit was considered capable of detecting irregularities,
+including fraud
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design
+procedures in line with our responsibilities, outlined above, to detect material misstatements in
+respect of irregularities, including fraud. The extent to which our procedures are capable of detecting
+irregularities, including fraud is detailed below.
+
+12.1. Identifying and assessing potential risks related to irregularities
+
+In identifying and assessing risks of material misstatement in respect of irregularities, including fraud
+and non-compliance with laws and regulations, we considered the following:
+* the nature of the industry and sector, control environment and business performance
+including the design of the company’s remuneration policies;
+* results of our enquiries of management and the Audit Committee about their own
+identification and assessment of the risks of irregularities;
+* any matters we identified having obtained and reviewed the company’s documentation of
+their policies and procedures relating to:
+o identifying, evaluating and complying with laws and regulations and whether they were
+aware of any instances of non-compliance;
+o detecting and responding to the risks of fraud and whether they have knowledge of any
+actual, suspected or alleged fraud;
+othe internal controls established to mitigate risks of fraud or non-compliance with laws
+and regulations;
+e the matters discussed among the audit engagement team and involving relevant internal
+specialists, including tax and IT specialists regarding how and where fraud might occur in the
+financial statements and any potential indicators of fraud.
+
+As a result of these procedures, we considered the opportunities and incentives that may exist within
+the organisation for fraud and identified the greatest potential for fraud in valuation of loan
+impairment provisions. In common with all audits under ISAs (UK), we are also required to perform
+specific procedures to respond to the risk of management override.
+
+We also obtained an understanding of the legal and regulatory framework that the Company
+operates in, focusing on provisions of those laws and regulations that had a direct effect on the
+determination of material amounts and disclosures in the financial statements. The key laws and
+regulations we considered in this context included the UK Companies Act and tax legislation.
+
+In addition, we considered provisions of other laws and regulations that do not have a direct effect on
+the financial statements but compliance with which may be fundamental to the Company’s ability to
+operate or to avoid a material penalty. These included the company’s compliance with the
+requirements of the Prudential Regulation Authority and the Financial Conduct Authority.
+
+12.2. Audit response to risks identified
+
+As a result of performing the above, we identified valuation of loan impairment provisions as a key
+audit matter related to the potential risk of fraud. The key audit matters section of our report
+explains the matter in more detail and describes the specific procedures we performed in response to
+that key audit matter.
+
+In addition to the above, our procedures to respond to risks identified included the following:
+
+30
+CAF Bank Limited
+
+° reviewing the financial statement disclosures and testing to supporting documentation to
+assess compliance with provisions of relevant laws and regulations described as having a
+direct effect on the financial statements;
+
+° enquiring of management, the Audit Committee and external legal counsel concerning
+actual and potential litigation and claims;
+
+e performing analytical procedures to identify any unusual or unexpected relationships
+that may indicate risks of material misstatement due to fraud;
+
+° reading minutes of meetings of those charged with governance, reviewing internal audit
+reports and reviewing correspondence with the PRA and HMRC; and
+
+° in addressing the risk of fraud through management override of controls, testing the
+
+appropriateness of journal entries and other adjustments; assessing whether the
+judgements made in making accounting estimates are indicative of a potential bias; and
+evaluating the business rationale of any significant transactions that are unusual or
+outside the normal course of business.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all
+
+engagement team members including internal specialists and remained alert to any indications of
+fraud or non-compliance with laws and regulations throughout the audit.
+
+Report on other legal and regulatory requirements
+
+13.Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+e — the information given in the strategic report and the directors’ report for the financial year for
+which the financial statements are prepared is consistent with the financial statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable
+legal requirements. ,
+
+In the light of the knowledge and understanding of the company and its environment obtained in the
+course of the audit, we have not identified any material misstatements in the strategic report or the
+directors’ report.
+
+14.Opinion on other matter prescribed by the Capital Requirements (Country-
+by-Country Reporting) Regulations 2013
+
+In our opinion the information given in note 22 to the financial statements for the financial year
+ended 30 April 2021 has been properly prepared, in all material respects, in accordance with the
+Capital Requirements (Country-by Country Reporting) Regulations 2013.
+
+15.Matters on which we are required to report by exception
+
+15.1. Adequacy of explanations received and accounting records
+Under the Companies Act 2006 we are required to report to you if, in our opinion:
+*® we have not received all the information and explanations we require for our audit; or
+e adequate accounting records have not been kept, or returns adequate for our audit have not
+been received from branches not visited by us; or
+e the financial! statements are not in agreement with the accounting records and returns.
+
+31
+
+CAF Bank Limited
+
+We have nothing to report in respect of these matters. . os .
+
+15.2. Directors’ remuneration
+
+Under the Companies Act 2006 we are also required to report if in our opinion certain disclosures of
+directors’ remuneration have not been made.
+
+We have nothing to report in respect of this matter:
+
+16.Other matters which we are required to address
+
+16.1. Auditor tenure
+
+Following the recommendation of the Audit Committee, we were appointed by the directors on 22
+February 2017 to audit the financial statements for the year ending 30 April 2017 and subsequent
+financial periods. The period of total uninterrupted engagement including previous renewals and
+reappointments of the firm is S years, covering the years ending 30 April 2017 to 30 April 2021.
+
+16.2. Consistency of the audit report with the additional report to the Audit Committee
+
+Our audit opinion is consistent.with the additional report to the Audit Committee we are required to
+provide in accordance with ISAs (UK).
+
+_ 17.Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of
+Part 16 of the Companies Act 2006. Our audit work has been undertaken so that we might state to
+the company’s members those matters we are required to state to them in an auditor’s report
+and for no other purpose. To the fullest extent permitted by law, we do not accept or assume
+responsibility to anyone other than the company and the company’s members as a body, for our
+audit work, for this report, or for the opinions we have formed.
+
+lay
+
+Giles Lang FCA (Senior statutory auditor)
+For and on behalf of Deloitte LLP
+Statutory Auditor
+
+London, United Kingdom
+
+12 August 2021
+
+CAF Bank Limited
+
+PROFIT AND LOSS ACCOUNT
+for the year ended 30 April
+
+Notes
+Interest receivable 3
+
+Interest payable 4
+Net interest income
+
+Fees and commissions receivable
+Fees and commissions payable
+Net fee income
+
+Net operating income
+Administrative expenses 5
+
+Loan loss provision 10
+Profit on ordinary activities before taxation
+
+Tax on profit on ordinary activities 7
+Profit on ordinary activities after taxation
+
+2024
+£000 £000
+
+10,059
+
+(263)
+
+9,796
+
+2,230
+
+(815)
+
+1,415
+
+11,211
+
+(9,763)
+
+(533)
+
+915
+
+14
+929
+
+2020
+£000 £000
+
+12,534
+__ (1,035)
+11,499
+
+2,109
+
+(1,008)
+
+1,101
+12,600
+
+(10, 109)
+(1,200)
+1,291
+
+(1)
+__1,290
+
+—
+
+There are no recognised gains or losses for either year other than those shown in the profit and loss
+account above. All income and expenses for the current and prior year are derived from continuing
+
+operations.
+
+The notes on pages 37 to 48 form an integral part of the financial statements.
+
+33
+CAF Bank Limited
+
+BALANCE SHEET
+as at 30 April
+
+ASSETS
+
+Balances at Bank of England
+Loans and advances to banks
+
+Loans and advances to customers
+
+Debt securities
+
+Prepayments and accrued income
+
+Intangible asset
+
+Total assets
+
+LIABILITIES
+
+Customer accounts
+Repurchase agreements
+Other liabilities
+
+Accruals and deferred income
+
+Total liabilities
+Called up share capital
+Additional Tier 1 capital
+
+Distributable reserves
+
+Shareholders’ funds
+
+Total liabilities and shareholders’ funds
+
+Notes
+
+10
+11
+
+12
+
+43
+14
+15
+
+16
+16
+7
+
+7
+
+2021
+
+£000
+
+29,350
+11,000
+
+939
+
+£000
+
+417,756
+7,897
+
+124,506
+885,876
+4,067
+1,194
+
+1,441,296
+
+1,398, 146
+
+1,848
+13
+
+1,400,007
+
+41,289
+
+1,441,296
+
+2020
+£000 £000
+
+327,571
+6,273
+103,625
+771,083
+4,378
+
+1,212,930
+
+1,156,995
+10,142
+4,197
+246
+
+1,171,580
+
+29,350
+17,000
+
+1,000
+
+41,350
+
+1,212,930
+
+The notes on pages 37 to 48 form an integral part of the financial statements.
+
+The financial statements were approved by the Board of Directors and authorised for issue on
+12 August 2021 and signed on its behalf by
+
+(Pre
+
+Janet Pope
+Chair
+
+CAF Bank Limited
+Company Number 1837656
+
+34
+
+Philip Alvey
+
+Chief Finance Officer
+CAF Bank Limited
+
+STATEMENT OF CHANGES IN EQUITY
+for the year ended 30 April
+
+Notes
+
+At 30 April 2019
+
+Total comprehensive profit for the financial year
+
+Charitable donation to parent 6
+AT1 dividends payable 8
+Issue of share capital 7
+Issues of additional tier 1 capital Ww
+
+At 30 April 2020
+
+Total comprehensive profit for the financial year
+
+Charitable donation to parent 6
+AT1 dividends payable 8
+Issue of share capital 7
+Issues of additional tier 1 capital 7
+
+At 30 April 2021
+
+Calied-up Additional
+share Tier 1 Distributable Profit and
+‘capital Securities Reserves loss account Tota!
+£000 £000 £000 £000 £000
+29, 350 11,000 1,000 - 41,350
+- - - 1,290 1,290
+- - - (297) (297)
+- - - (993) (993)
+29,350 11,000 1,000 - 41,350
+- - - 928 929
+- - - (990) (990)
+29,350 11,000 1,000 (61) 41,289
+
+The notes on pages 37 to 48 form an integral part of the financial statements.
+
+35
+CAF Bank Limited
+
+CASH FLOW STATEMENT
+for the year ended 30 April
+
+- Cash flows from operating activities
+
+Profit on ordinary activities
+
+Adjustments for.
+- Amortisation of investments
+
+Decrease in prepayments and accrued income
+
+- (Decreaseyincrease in accruals and deferred income
+Increase in Cash Ratio Deposit with the Bank of England
+Decrease in loans and advances to banks
+
+Increase in loans and advances to customers
+Increase in loan loss. provision
+
+Increase in customer accounts
+(Decrease)increase in other liabilities
+
+Net cash generated from operating activities
+
+Cash fiows from investing activities
+
+Acquisitions of debt securities
+Redemptions of debt securities
+Disposals of debt securities
+
+Redemption of repurchase agreements
+Acquisition of intangible assets
+
+Net cash from investing activities
+Cash flows from financing activities
+
+Charitable donations paid
+AT1 dividend paid
+
+Net cash from financing activities
+Change in cash and cash equivalents in the year
+
+Cash and cash equivalents at beginning of year
+Cash and cash equivalents at end of year
+
+Represented by:
+
+Balances at Bank of England repayable on demand (Note 9)
+Loans and advances to banks repayable on demand (Note 9)
+
+2021
+£000 £000
+929
+21,919
+314
+(98)
+(828)
+(21,414)
+533
+241,151
+(2,052)
+240,451
+(293,668)
+156,956
+(10,142)
+(1,194)
+(148,048)
+(297)
+(1,126)
+(1,423)
+90,980
+332,378
+423,358
+415,461
+7,897
+423,358
+
+The notes on pages 37 to 48 form an integral part of the financial statements.
+
+36
+
+2020 ;
+£000 £000 ©
+4,291 :
+2,451 :
+
+206
+4 ~-
+(242) ;
+(14,363) :
+1,200
+
+122,767
+
+2,335 ;
+115,649 —
+
+(514,420)
+
+408,809
+2,163
+
+(103,448)
+
+(4,908)
+
+(858) ;
+(5,766)
+
+6,435
+
+325,943
+
+332,378
+
+326,105
+
+6,273 _
+
+332,376
+CAF Bank Limited
+
+NOTES TO THE FINANCIAL STATEMENTS FOR THE YEAR ENDED 30 APRIL 2021
+
+1.
+
+Accounting policies
+
+1.1 Basis of preparation
+
+The financial statements have been prepared under the historical cost convention and in
+accordance with applicable United Kingdom law and UK Generally Accepted Accounting Practice
+(UK GAAP), including FRS 102 (as issued by the Financial Reporting Council, the Financial
+Reporting Standard applicable in the UK and Republic of Ireland).
+
+Where information in the risk management report on pages 12 to 19 is identified as audited, it is
+incorporated into these financial statements by this cross reference and is covered by the
+independent auditors report on pages 25 to 32.
+
+The going concern basis was adopted in preparing the annual report and accounts as described
+on page 22.
+
+1.2 Interest and fee income and expenditure recognition
+
+Income is recognised once the Bank has entitlement to the income, it is probable that the income
+will be received and the amount can be measured reliably.
+
+(a) Interest income
+
+Interest receivable on financial assets is recognised using the effective interest method over the
+expected life of the financial asset. Loan arrangement fees are recognised using the effective
+interest method over the expected life of the loan.
+
+(b) Fee Income
+
+- Non-utilisation fees on undrawn loans are recognised as income in the period they are earned.
+
+(c) Expenditure recognition”
+
+Expenditure is recognised as soon as there is a legal or constructive obligation to make a payment
+to a third party, it is probable that settlement will be required and the amount of the obligation can
+be measured reliably.
+
+Irrecoverable VAT is charged as a cost.
+
+1.3 Pension costs
+
+All staff are employed by CAF. The Bank is recharged by CAF for the cost of defined contribution
+personal pension arrangements.
+
+The amount charged to the profit and loss account in respect of pension costs is the contribution
+payable in the year. Differences between contributions payable and the year end contributions
+actually paid are shown as either accruals or prepayments in the balance sheet.
+
+1.4 Financial Services Compensation Scheme (‘FSCS’) Levy
+
+The amount of the FSCS levy is determined by the value of the Bank’s protected deposits at 31
+December each year. The levy is accounted for on an accruals basis using information provided
+by the FSCS, forecast future interest rates and the Bank’s historical share of industry protected
+deposits.
+
+37
+CAF Bank Limited
+
+1. Accounting policies (continued)
+1.5 Taxation
+
+Current tax, including UK corporation tax, is provided at amounts expected to be paid (or recovered)
+using the tax rates and laws that have been enacted or substantively enacted by the balance sheet
+date.
+
+1.6 Basic financial instruments
+
+Loans and advances to banks comprise the Bank’s cleared and uncleared balances held at HSBC
+and deposits with an original maturity of three years or less. These are stated at amortised cost.
+
+Interest-bearing loans are recognised initially at the present value of future payments discounted
+at a market rate of interest. Subsequent to initial recognition, interest-bearing loans are stated at
+amortised cost using the effective interest method, less any impairment losses.
+
+Debt securities held for investment purposes are held to redemption at par and recognised initially
+at transaction price less attributable transaction costs. Subsequent to initial recognition they are
+measured at amortised cost using the effective interest method, less any impairment losses. The
+amortisation of premiums or discounts is included in interest income in the profit and loss account.
+
+Interest receivable on interest-bearing loans and debt securities is recognised on an accruals basis
+using the effective interest rate method.
+
+When securities are sold subject to a commitment to repurchase them at a predetermined price
+(‘repos’), they remain on the balance sheet and a liability is recorded in respect of the consideration
+received. Repos are measured at amortised cost. The difference between the sale and repurchase
+price is treated as interest and recognised in net interest income over the life of the agreement.
+
+Debtors are recognised at the settlement amount due after any discount offered. Prepayments are
+valued at the amount prepaid.
+
+Customer account balances represent the value of deposits by account holders and are recorded
+as liabilities.
+
+Creditors are recognised where there is a present obligation resulting from a past event that will
+probably result in a transfer of funds to a third party and the amount due to settle the obligation can
+be measured or estimated reliably. Creditors are normally recognised at their settlement amount
+after allowing for any discounts due.
+
+Debt and equity instruments are classified as either financial liabilities or as equity in accordance
+with the substance of the contractual terms of the instruments. Further details of the terms and
+conditions of the additional Tier 1 securities, which are classified as equity, can be found in note
+16.
+
+1.7 Impairment of financial assets
+
+Financial assets including loans are assessed at each reporting date to determine whether there is
+objective evidence of impairment. Objective evidence can include default or delinquency by a
+borrower, restructuring of a loan or advance on terms the Bank would otherwise not consider,
+indications that a borrower or issuer may become insolvent, or a reduction in marketability of
+security.
+
+38
+CAF Bank Limited
+
+a1.
+
+Accounting policies (continued)
+
+1.7 Impairment of financial assets (continued)
+
+The Bank considers evidence for impairment’ for loans and advances (including on-demand
+
+commitments) at both specific and collective level. If there is evidence of impairment leading to an
+
+impairment loss for an individual counterparty relationship, then the amount of the loss is
+
+determined as the difference between the carrying amount of the loan, including accrued interest,
+
+and the estimated recoverable amount. The estimated recoverable amount is measured as the
+
+present value of expected future cash flows discounted at the loan’s original effective interest rate,
+including cash flows that may result from foreclosure less costs for obtaining and selling collateral.
+
+The carrying amount of the loan is reduced by the use of an allowance account and the amount of
+
+the loss is recognised in the profit and loss account.
+
+if the Bank determines that no objective evidence of impairment exists for an individually assessed
+financial asset, it includes the asset in a group of financial assets with similar credit risk
+characteristics and collectively assesses them for impairment. For the purposes of a collective
+evaluation of impairment, financial assets are grouped on the basis of similar risk characteristics,
+taking into account collateral type and other relevant factors. These characteristics are relevant to
+the estimation of future cash flows for groups of such assets by being indicative of the
+counterparty's ability to pay all amounts due according to the contractual terms of the assets being
+evaluated.
+
+Future cash flows in a group of financial assets that are collectively evaluated for impairment are
+estimated on the basis of the contractual cash flows of the assets in the Bank and loss experience
+for assets with credit risk characteristics similar to those in the Bank. In addition, the Bank uses its
+judgement to estimate the amount of an impairment loss, supported by historical loss experience
+data for similar assets. The use of such judgements and reasonable estimates is considered by
+management to be an essential part of the process.
+
+1.8 Intangible asset
+
+intangible assets are stated at cost less accumulated amortisation and impairment losses.
+Amortisation is calculated on a straight line basis and charged to the profit and loss over the asset's
+estimated economic life, 12 years, in the case of our new core banking system. Intangible assets
+are assessed for impairment at each balance sheet date.
+
+External spend to suppliers relates to software and system development. This is capitalised as the
+recognition criteria is always satisfied for assets that are separately acquired. Internal spend relates
+to staff costs that can be directly attributed to the project. These costs are also being capitalised as
+the recognition criteria for these are also met.
+
+Research costs are recognised in the profit and loss when incurred.
+
+1.9 Significant estimates and judgements
+
+The preparation of the Bank’s financial statements require management to make judgements,
+estimates and assumptions that affect the reported amounts of assets, liabilities, income and
+expense.
+
+Estimates
+Specific provisions for impaired assets involve estimating the valuation of properties held as
+security, the time taken to sell property, and costs of holding and selling property. Given the
+
+subjective nature of such judgments and uncertainty around COVID-19 there may be changes to
+these estimates that could result in a material adjustment in the next financial year.
+
+39
+CAF Bank Limited
+
+1.9 Significant estimates and judgements (continued)
+
+3.
+
+Estimation uncertainty also relates to the collective loan loss provision. To determine the collective
+provision, assumptions are made about variables including the probability of default, the loss given
+default and the loss emergence period. These variables are based on historical loss experience
+data for similar assets. Estimations are made with regards to the expected future cash flows
+relating to the sale of the security, with judgement required (consistent with for specific provisions)
+of the valuation of properties held as security and the costs of holding and selling property.
+
+Total loan loss provisions were £2,178k at 30 April 2021 (2020: £1,645k), with the analysis
+between specific anc collective provisions disclosed in note 10.
+
+The key variables in the measurement of provisions are:
+
+Gross property valuation: our provision estimates are based on the most recent valuation,
+indexed where relevant to current values. If estimates of property valuations were to reduce by
+10%, an additional £641k loan loss provision would be required; if valuations increased by 10%,
+the provision would be reduced by £550k.
+
+Discount to gross property valuation: for commercial and specialist properties held as security,
+our estimates assume a one-third discount to the most recent open market valuation to reflect
+the sale of a foreclosed property in an acceptable timeframe. If this 33% discount was reduced
+to 25% on commercial and specialist properties, total loan loss provisions would reduce by
+£399k; if the discount increased to 40%, provisions would increase by £420k.
+
+Costs to sell: we estimate legal, administrative and marketing costs of 10% of the gross
+property valuation are incurred in disposing of the property, based on historic precedent. If
+these costs were 5% higher, loan loss provisions would increase by £365k; if selling costs were
+5% lower, provisions would be £324k lower.
+
+Probability of default: the collective loan loss provision is based on assessing our lending
+portfolio against the criteria used by external rating agencies, and using the corresponding
+historical probabilities of default (‘PDs’). If estimated PDs were 50% higher, additional loan loss
+provisions of £401k would be required; if PDs were 50% lower, provisions would reduce by
+£401k.
+
+Other judgements
+The Bank’s credit risk team exercises judgement when determining triggers to monitor the
+
+underlying performance of a loan. This judgement could result in a loan being added to the “watch
+list” and an impairment provision being required when a loss event is deemed to have occurred.
+
+Segmental information
+
+The Bank carries on one principal class of business, being that of banking, and operates in one
+geographical segment, the United Kingdom.
+
+interest receivable
+
+2021 2020
+
+£000 £000
+
+Interest receivable and similar income arising from debt securities 6,290 7,273
+Other interest receivable and similar income 3,769 5,261
+10,059 12,534
+
+40
+CAF Bank Limited
+
+4. Interest payable
+
+2021 2020
+£000 £000
+Customer accounts 212 897
+Repurchase agreements 51 138
+263 4,035
+5. Administrative expenses
+
+2021 2020
+£000 £000
+
+Staff costs ; .
+Wages and salaries 4,168 3,792
+Social security costs 392 318
+Other pension costs 324 259
+4,864 4,369
+Other administrative expenses - 4879 5, 740
+9,763 10,709
+
+All staff are employed by CAF. Total employment costs are recharged where activities have been
+undertaken for CAF Bank. Staff costs (above) represent 112 (2020: 115) employees of CAF who
+were assigned wholly to duties relating to the activities of the Bank.
+
+Creditors include £36,000 (2020: £21,000) in respect of pension contributions payable.
+
+The average number of total employees wholly assigned to CAF Bank analysed by function was:
+
+2021 2020
+
+; Number Number
+
+Management 17 15
+Administration 95 100
+412 115
+
+Other administrative expenses include the following amounts paid to CAF in respect of directors’
+emoluments, other costs of staff partially allocated to duties relating to CAF Bank, and management
+charges relating principally to the occupancy of premises and the use of systems equipment.
+Information systems staff costs are included in indirect staff costs (below).
+
+2021 2020
+
+£000 £000
+
+Indirect staff casts 1,568 2,473
+Management charges §24 S27
+2,092 3,000
+
+Directors’ emoluments
+
+None of the directors who.served during the year were remunerated directly by the Bank (2019/20:
+none). During the year, the Bank reimbursed CAF with £358,317 (2019/20: £213,345) including
+pension contributions in respect of services rendered by two executive directors (2019/20: two). No
+amounts were paid to third parties for directors’ services (2019/20: £240,828). The total
+remuneration of the highest paid director during the year was £224,951 (2019/20: £240,828). Non-
+executive directors were not remunerated.
+
+41.
+CAF Bank Limited
+
+5. Administrative expenses (continued)
+
+8.
+
+Auditor’s remuneration
+
+Auditor’s remuneration included in administrative expenses consists of the following:
+
+2021 2020
+£000 £000
+
+Audit fees payable to the company’s auditor for the audit of the
+company’s financial statements 153 1714
+153 114
+
+. Charitable donation to parent
+
+The Bank has not accrued a donation to CAF at 30 April 2021 (30 April 2020: £297,000).
+
+Tax on profit on ordinary activities
+
+The tax assessed for the period is lower than that resulting from applying the standard rate of
+corporation tax in the UK: 19% (2019/20: 19%). The differences are explained below.
+
+2021 2020
+£000 £000
+
+Tax expense:
+UK corporation tax {14) 1
+Reconciliation to tax expense:
+Tax at 19%:
+Profit on ordinary activities before tax 174 245
+Charitable donation to CAF - (56)
+AT1 dividends payable (188) (189)
+Tax (credit)/charge (14) 1
+
+A deferred tax asset has been recognised for unused tax losses at it is probable that taxable profits
+will be available in the future to utilise these.
+
+AT1 Dividends Payable
+
+2021 2020
+
+£000 £000
+
+AT1 dividends payable 390 993
+990 993
+
+42
+CAF Bank Limited
+
+“9. Loans and advances to banks
+
+2021 2020
+£000 £000
+Repayable on demand 7,897 6,273
+Loans and advances to banks 7,897 6,273
+Balances at Bank of England - Reserve account 415,461 326,105
+Balances at Bank of England - Cash ratio deposit 2,295 1,466
+425,653 333,844
+10. Loans and advances to customers
+2024 2020
+Charity SPP Overdrafts Total Charity SPP — Overdrafts Total
+ g000 £000 £000 £000 £000 £000 £000 £000
+Remaining maturity of loans and advances
+Repayable within 3 months 4,162 758 248 2,167 4,105 ° 310 36 1,451
+Repayable within 5 years 25,859 4,358 - 30,217 20,868 2,660 , 23,528
+Repayable over 5 years 95,553 . - 95,553 81,421 ” 81,421
+422,574 5,114 349 127,937 703,304 3,970 36 106,400
+Loan toss provision (2,031) (147) - (2,178) (1,447) (198) - {1,645)
+Deferred income (1,195) (88) - (1,253) (1,074) (56). ~ (1,130)
+Unamortised premiums 119,348 4,809 249 124 $06 100,873 2,716 36 103,625
+Individual impairments provision
+2021 2020
+£000 £000
+Loan loss provision at 1 May (9398) -
+Released during the year §39 -
+Provided during the year (977) (938)
+Loan lass provision at 30 April (1,376) (938)
+Collective impairments provision
+2021 2020
+£000 £000
+Loan loss provision at 1 May (707) (445)
+Provided during the year (95) (262)
+Loan loss provision at 30 April (802) (707)
+
+43
+
+CAF Bank Limited
+
+11. Debt securities
+
+11.1 Investments
+
+Listed:
+
+UK government
+Multilateral financial institution
+Fixed coupon corporate bonds
+Floating rate corporate bonds
+
+Unlisted:
+Certificates of deposit
+
+- 2021 2020
+Book Market Book Market
+Value Value Value Value
+£000 £000 £000 £000
+- - 63,036 63,102
+758,564 760,657 536,545 540,386
+24,093 24,399 43,521 43,657
+83,398 84,458 107,981 107,876
+866,055 869,514 751,083 755,021
+19,821 19,983 20,000 20,029
+885,876 889 497 771,083 775,050
+
+No debt securities (2019/20: £10,044,000) have been sold under repurchase agreements (note 14).
+These assets were not derecognised as the Bank had retained substantially all the risks and rewards
+of ownership. The Bank was unable to use, sell or pledge the transferred assets for the duration of the
+transaction and remained exposed to any associated interest rate risk or credit risk of the assets.
+
+11.2 Maturity
+
+less than 6 months
+6 months to 1 year
+
+1 year to 5 years
+
+5 years and over
+
+Unamortised premiums
+
+2021
+Book
+Value
+£000
+
+98,024
+238,470
+336,494
+
+442,742
+
+106,640
+
+179,236
+
+885,876
+(4,203)
+
+2020
+
+Book
+
+Value
+£000
+
+97,274
+79, 858
+
+——
+
+1
+5
+
+77,132
+
+93,951
+771,083
+
+771,083
+(3,328)
+
+Premiums or discounts on investments held to maturity are amortised over their remaining lives.
+
+44
+CAF Bank Limited
+
+11. Debt securities (continued)
+
+11.3 Movements
+
+At 1 May 2020
+Acquisitions
+Redemptions
+Amortisation
+
+At 30 April 2021
+
+12. Intangible asset
+
+Af 7 May 2020
+Additions
+
+Amortisation
+At 30 April 2021
+
+Amort- Book
+
+Cost isation Value
+
+£000 £000 . £000
+
+774,047 (2,964) 771,083
+
+293,668 (505) 293,163
+
+(178,308) 21,352 (156,956)
+
+- (21,414) (21,414)
+
+- 889,407 (3,531) 885,876
+
+Develop-
+
+ment cost
+£000
+1,194
+1,194
+
+Development costs are associated with the development costs of a banking system expected to be
+available for use in the first half of 2022. They have been capitalised in accordance with FRS 102
+Section 18, Intangible Assets other than Goodwill. They are therefore not treated, for dividend
+purposes, as a realised loss. Costs relate to those paid to suppliers for the new system and its project
+management as well as staff costs that can be directly attributed to the project.
+
+13. Customer accounts
+a
+
+Repayable on demand
+Repayable within 30 days
+
+Amounts include:
+Amounts owed to CAF
+
+2021
+£000
+
+1,380,980
+17,166
+
+| 4,398,146
+
+1,289
+
+2020
+£000
+
+1,137,840
+19,155
+
+1,156,995
+
+Amounts owed to CAF include current account balances payable on demand.
+
+14. Repurchase agreements
+
+The repurchase agreement matured in December 2020 (2019/20: £10, 142,000).
+
+45
+
+522
+CAF Bank Limited
+
+15. Other liabilities
+
+Other liabilities
+
+2021 2020
+Amounts due within one year: £000 £000
+Amounts owed to CAF 794 3,092
+Sundry creditors 1,051 7,702
+Taxation 3 3
+1,848 4797
+
+Amounts owed to CAF include invoices for both direct and indirect costs payable on demand.
+
+16. Called up share capital and additional tier 1 securities
+
+2021 2020
+Number £000 Number £000
+Allotted, issued and fully paid:
+Ordinary shares of £1 each 29,350,000 29,350 29,350,000 29,350
+Additional Tier 1 securities of £1 each 11,000,000 11,000 11,000,000 17,000
+
+40,350 40,350
+
+There was no additional capital issued during the year. The principal terms of the AT1 capital are
+as follows:
+
+Perpetual, repayable at CAF Bank's election after 5 years with the prior consent of the PRA;
+Non-cumulative 9% per annum coupon, cancellable at the discretion of the CAF Bank Board;
+Irrevocable conversion to voting ordinary shares either at a trigger level of 7% Common Equity
+Tier 1 capital, or at such time as the CAF Bank Board considers it reasonably foreseeable that
+a trigger event will occur;
+
+In the event of conversion, £1 par value of AT1 capital will convert to £1 nominal value of
+ordinary share capital, such ordinary shares being identical to existing ordinary shares in all
+respects.
+
+It was identified in 2020 that, as a result of a Deed of Charitable Covenant between CAF Bank
+and CAF, which required transfer of CAF Bank’s annual profit to CAF, the Bank was not in full
+compliance with European capita! regulations. Following legal advice on the steps necessary
+to achieve compliance, we terminated the Deed of Charitable Covenant in late 2020. Following
+a full appraisal of this incident, including discussions with its regulators, the Bank does not
+anticipate any material adverse consequences arising therefrom. ,
+
+46
+CAF Bank Limited
+
+17. Reconciliation of shareholders’ funds
+
+Called-up Additional Distributable Profit
+
+share capital Tier 1 reserves and less
+securities account
+
+£000 £000 £000 £000
+
+At 7 May 2020 29,350 47,000 7,000 -
+Issued during the year - - - (61)
+At 30 April 2021 29,350 11,000. 1,000 (61)
+
+18. Financial instruments
+
+18.1 Market and interest rate risk
+
+Market and interest rate risk is described on page 18.
+
+18.2 Currency profile -
+
+The Bank has an exposure of US $508k (2019/20: $508k) held as a collateral deposit for the Bank's
+Mastercard operations. Other than this exposure all assets and liabilities are denominated in
+sterling.
+
+18.3 Instruments held for trading
+
+None of the Bank’s financial instruments are held for trading purposes and no trading book is held.
+
+18.4 Investments held to maturity
+
+The Bank's policy is to hold investment securities to redemption at par (note 1.6). The impact of
+any movements in interest rates on fixed rate instruments is therefore not anticipated to affect the
+Bank’s profits.
+
+18.5 Hedging
+
+CAF Bank does not hold financial instruments for hedging purposes.
+
+18.6 Fair values
+
+Set out below is a comparison of all the Bank's financial instruments by category. Market values
+_ have been used to determine fair values of debt securities listed on a recognised UK exchange
+(note 11).
+
+2021 2020
+Book Fair Book Fair
+: Value Value Vatue | Value
+_ Assets <000 £000 : £000 £000
+Balances at central banks 417 756 417 756 327,574 327,577
+Loans and advances to banks 7 897 7 897 6,273 6,273
+Debt securities 885 876 889 497 771,083 775,050
+Loans and advances to customers 124 506 124 506 103,625 103,625
+1,436,035 1,439 656 1,208,552 14,272,519
+
+2021 2020
+Book Fair Book Fair
+Value Value Value Value
+Liabilities £000 £000 £000 £000
+Customer accounts 1,398,146 1,398,146 . 4,156,995 1,756,995
+, 1,398,146 1,398,146 4,156,995 1,756,995
+
+47
+CAF Bank Limited
+
+19. Off-balance sheet commitments
+
+Commitments comprise amounts yet to be drawn under loan or overdraft agreements.
+
+2021 2020
+
+£000 £000
+Undrawn overdraft commitments 676 4,113
+Undrawn charity loan commitments ; 32,263 29,194
+Undrawn personal loan commitments 3,840 3,132
+
+36,779 33,439
+
+20. Parent trust
+
+21
+
+Charities Aid Foundation (CAF), registered charity number 268369, is the immediate and ultimate
+
+parent and controlling party of CAF Bank (registered office: 25 Kings Hill Avenue, Kings Hill, West
+Malling, ME19 4TA).
+
+The largest and only entity into which CAF Bank is consolidated is CAF. A copy of CAF’s
+consolidated financial statements can be obtained from the Bank’s registered office and at
+www.cafonline.org.
+
+. Related party transactions
+
+CAF Bank has taken advantage of exemptions available under section 33 of FRS 102 not to
+disclose transactions with other group entities.
+
+22. Country by country reporting
+
+The Capital Requirements (Country by Country Reporting) Regulations came into effect on 1
+January 2014 and place certain reporting obligations on financial institutions within CRD IV.
+
+The activities of the Bank are described in the Strategic Report. All of the Bank’s activities are
+carried out in the United Kingdom.
+
+2021 2020
+
+UK UK
+
+Number of employees (average FTE) 112 196
+£000 £000
+
+Turnover (total income) 11,211 42,600
+Profit before tax 915 . 1,297
+
+Corporation tax paid - -
+Public subsidies received - -
+
+48
+may
+
+CAF Bank Limited ©
+
+DIRECTORS, BOARD COMMITTEES AND ADVISERS
+
+Registered Office
+25 Kings Hill Avenue
+Kings Hilt
+
+West Malling
+
+Kent, United Kingdom
+ME19 4JQ
+
+Telephone: 03000 123 456
+
+Fax: 03000 123 600
+
+Email: cafbank@cafonline.org
+Website: www.cafonline.org/caf-bank
+
+Company Number
+1837656
+
+Directors (at 30 April 2021)
+Non-Executive Directors
+
+Janet Pope (Chair)
+
+Malcolm Himsworth (Deputy Chair)
+Martyn Beauchamp
+
+Kees Diepstraten
+
+Astrid Grey
+Neil Heslop (CAF Chief Executive)
+
+Mairi Johnstone
+Samantha Seaton
+Graham Toy
+
+Executive Directors
+Alison Taylor (CEO)
+Philip Alvey (Chief Finance Officer)
+
+Company Secretary
+Kate Mayor
+
+Audit Committee
+Malcolm Himsworth (Chair)
+Kees Diepstraten
+Mairi Johnstone -
+
+Board Risk & Compliance Committee
+Astrid Grey (Chair)
+
+Malcolm Himsworth
+Samantha Seaton
+
+' Graham Toy
+
+Nominations and Remuneration Committee
+Janet Pope (Chair) ,
+
+Mairi Johnstone
+
+Neil Heslop
+
+Alison Taylor
+
+Executive Committee
+
+‘Alison Taylor (CEQ)
+
+Philip Alvey (Chief Finance Officer)
+
+Gill Baldry (Chief Information Officer)
+Alison Carpenter (Chief Risk Officer)
+Dina Henry (Chief Operating Officer)
+
+Bankers ;
+HSBC Bank plc
+
+City of London Branch
+60 Queen Victoria Street
+London EC4N 4TR
+
+Nominee and Custodian
+HSBC Securities Services
+Level 29
+
+8 Canada Square
+
+London E14 5HQ
+
+Auditors
+
+Deloitte LLP
+
+2 New Street Square
+London EC4A 3BZ
+
+CAF Bank Limited is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority
+and the Prudential Regulation Authority. It is a subsidiary of Charities Aid Foundation (CAF), registered charity number
+268369. Copies of the accounts of CAF may be obtained from the Bank's registered office and at www.cafonline.org.
+
+49
+

@@ -1,0 +1,3188 @@
+‘ij
+
+Vy
+
+BANK OF CEYLON (UK) LTD
+
+Bank of Ceylon (UK) Limited
+Financial Statements
+
+For the year ended 31 December 2019
+
+Company registration no. 06736473
+
+FRIDAY
+
+A10
+
+*A94511TL*
+
+01/05/2020 #368
+COMPANIES HOUSE
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+a a
+
+Contents Page
+Table of Contents
+
+BOARD OF DIRECTORS ..........cccccccccescescsecceencnssscessesnececesseaseesccssssaceceessacssaeececeunssceeeessaacesevseeaauees 3
+CHAIRMAN’S REPORT ............c:::cesccessssecencesecesensessesseceesserscncsesaceesaceecassecasessecensaeesteessaeseceeesseeseeeees 4
+REPORT OF THE BOARD OF DIRECTORS. ............2c.ccccceccccecessssssceeecesenenceceeecssensucececscesesesenenantes 5
+STRATEGIC REPORT. ......0.....c:cccccccccssessesseeceeessuanseccsesececeusceseeeecesereccessaseseacreeseesessceceeecessreeeeesesetes 8
+AUDIT AND RISK COMMITTEE REPORT FOR THE YEAR ENDED 31 DECEMBER 2019 ........ 15
+STATEMENT OF DIRECTORS’ RESPONSIBILITIES IN RESPECT OF THE STRATEGIC
+REPORT, THE DIRECTORS’ REPORT AND THE FINANCIAL STATEMENTS. ..............:cccceeee 18
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF BANK OF CEYLON (UK) LTD..19
+BANK OF CEYLON (UK) LTD STATEMENT OF COMPREHENSIVE INCOME ......................0 28
+STATEMENT OF FINANCIAL POSITION. ................:cccccccecscsecescreeeesennecenceetecnseeeeesscenenseeseaseseneeeess 29
+STATEMENT OF CHANGES IN EQUITY ...........cccsesccseccssssssececssscccsnesescecseaesneaescscsestensacancasseeeeseacecavens 30
+STATEMENT OF CASH FLOWS. ..............:cccccccccecseesesesceneceresseesceeesesseceeseesescaeeeesesceneneeesentaneseeees 31
+NOTES TO THE FINANCIAL STATEMENTS ...............eeeccceeceseecsecceceerersrecececeensseecerteeeeeeenseraeees 32
+UNAUDITED FINANCIAL INFORMATION................... Leecenteseeenasncascensanscececseeeetersecnesunaneceneeseseeeeess 52
+
+2|Page
+Bank of Ceylon (UK) Limited
+
+Annual Financial Report 2019
+
+BOARD OF DIRECTORS
+
+Mr E.R.C Perera, PC
+
+Re-appointed on the 28" of June 2019
+Resigned on 12" December 2019
+
+Mr W.D.R. Swanney
+
+Mr CN Meneripitiyage Don
+
+Mr S. Sabesan
+. Resigned on 1* March 2020
+
+Mr R. England
+Mr K BS Bandara
+
+Mr D P K Gunasekera
+Appointed on 21* April 2020
+
+Mr C JM Finlayson
+
+Registered office
+
+Solicitor
+
+Auditor
+
+Chairman
+
+Independent Non-Executive Director and Acting Chairman
+Executive Director and Chief Executive Officer
+
+Executive Director and Chief Operating Officer
+
+Independent Non-Executive Director
+Non- Executive Director
+
+Non- Executive Director
+
+Company Secretary
+
+1 Devonshire Square, London,
+EC2M 4WD
+
+Field Fisher
+Riverbank House,
+
+2 Swan Lane, London
+EC4R 3TT
+
+MHA MacIntyre Hudson
+6" Floor
+
+2 London Wall Place,
+London
+
+EC2Y 5AU
+
+3|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+a a
+
+CHAIRMAN’S REPORT
+
+The results for 2019 continued to build on recent profitability, notwithstanding the backdrop of ongoing
+economic and political uncertainty in Sri Lanka and the UK. In a continuing competitive environment, the
+Bank maintained its focus on its strategic priorities of improving the financial position of the business, ensuring
+continued customer satisfaction, and making best use of its resources to maintain a balanced credit portfolio.
+
+I am delighted to report the Bank’s success in delivering a pre-tax profit for 2019 of £108,000, building on the
+positive result of the last two years, and continuing to make good some of the accumulated losses of the past,
+becoming a business that is delivering positive results for the Bank of Ceylon Group.
+
+We have continued to build a balanced credit portfolio across our retail and corporate franchises. Net loans to
+customers grew 38% from 2018, accounting for a growth in net interest income of 4.5%. The Bank maintained
+its good credit quality standards, with overall risk remaining low through continued discipline in underwriting
+standards and risk appetite. The Bank continues to offer facilities to new and developing businesses in the
+SME sector. In the area of residential Buy-to-Let mortgages, the Bank continues to attract new customers
+requiring a tailored approach to meet their individual requirements that are not catered for by the high street
+banks.
+
+As a specialist bank we continue to meet the needs of our banking clients with speed and efficiency. Towards
+the end of the year, and into early 2020, we upgraded our IT systems, to improve our operating capability,
+internally and with customers. This has introduced more user-friendly systems, which are greatly appreciated
+by staff. ,
+
+The continued improvements during the year have generated higher volumes enabling the Bank to further
+leverage its existing operating capabilities without compromising on any of the risks and regulatory
+requirements.
+
+The outlook for 2020 will, however, be challenging, in the midst of continued economic and political
+uncertainty, the risk of sterling pressure, ongoing regulatory changes and the Covid-19 pandemic. As we look
+ahead, we see significant challenges in both our key markets, Sri Lanka and the UK. Changes in the external
+environment, customer behaviours and expectations will create opportunities and challenges for a bank of our
+size. As previously however, the Bank enters 2020 with a clear strategy, a strong foundation and a motivated
+team, which will serve us well in handling the uncertainties that lie ahead.
+
+Ronald Perera stepped down from his board position of Chairman towards the end of 2019. I would like to
+place on record the Board’s appreciation for his invaluable input and guidance since his first appointment in
+2015. I would also like to express my thanks to my other fellow Board members, the leadership team and all
+colleagues across the Bank for their contribution to everything we have achieved together.
+
+David Swanney
+Acting Chairman
+24* April 2020
+
+4|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+
+REPORT OF THE BOARD OF DIRECTORS
+
+The Board of Directors submit their Report, together with the audited financial statements for the year ended
+31 December 2019.
+
+- Operating environment
+
+2019 has been another successful year for cross border trade with Sri Lanka, benefiting both trade finance and
+treasury services. The growth from both these areas has more than offset the reduction in income from bills
+discounting, which was impacted by a change in Sri Lankan regulation early in the year. Treasury services
+benefited from high average money market volumes from Sri Lankan banks throughout the year. Net lending
+was strong despite the uncertain market conditions with loans secured against buy to let and mixed-use
+commercial properties reaching £4.8 million.
+
+The UK’s economic uncertainty has reduced demand for borrowing in the commercial sector with a gradual
+slowing down in the other sectors. Competition in the buy to let market intensified during the year resulting in
+a competitive pricing environment being created. In response to this challenge, the Bank introduced new
+lending products which are gradually starting to attract new customers. There is still significant uncertainty as
+to the outcome of the UK’s negotiation with the EU. Whilst the Bank does not engage in trade finance or
+lending services with EU markets, the impact of a “‘no -deal” could pose a number of unknown consequences
+and the situation is being closely monitored. Stress testing of financial assets under IFRS 9 assumes a no deal
+scenario, where house prices could decline by up-to 40%. Even under such extreme conditions, the impact is
+considered to be manageable.
+
+The capital position remains strong with the CET] ratio at a healthy level. The loan to value secured against
+UK residential properties continues to be below 60% on average. Both these factors provide adequate head
+room for further growth and expansion during 2020.
+
+The 2019 results delivered a profit in excess of budget through furthering our strategic objectives. As a
+consequence, the reported profit for the year is a GBP108,000 before taxation (2018: profit of GBP85,000).
+
+Going Concern Basis of Accounting
+
+These financial statements have been prepared on a going concern basis, as the Directors are satisfied that the
+Bank has the resources to continue in business for the next three years.
+
+In making the going concern assessment the Board has considered the following:
+Time horizon:
+
+e The Directors have a reasonable expectation that the Bank will be able to continue in operation and meet
+is liabilities as they fall due over the next three years. The three-year time frame is chosen as it is the period
+covered by the Bank’s Business Plan, its internal stress testing and is representative of the continued level
+of regulatory change in the financial services industry.
+
+Considerations:
+
+e The Board has carried out an assessment of the Bank’s risk profile and reviewed how those risks are
+managed and controlled. ,
+
+It has reviewed the Bank’s liquidity and funding profile.
+
+It has considered the stability of its major markets.
+
+It has considered viability under internal stress tests.
+
+It has considered the unprecedented measures taken to limit the impact of the Covid-19 pandemic which
+have resulted in significant economic and social disruption.
+
+5|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+a oS
+
+o The Bank has forecast that this wil! translate into a significant short-term financial impact on the
+Bank.
+
+© While the anticipated reduction in economic activity associated with Covid-19 could be sharp and
+large it could rebound sharply when measures are lifted.
+
+o The UK and other governments and central banks have put in place substantial measures to support
+businesses and households.
+
+© The approach to the assessment of the Bank’s regulatory capital and liquidity takes into account
+the extraordinary circumstances and the potential for an early recovery.
+
+© It is considered that the Bank has sufficient capital and funding resources to withstand the short-
+
+term impact of the Covid-19 disruption and to continue with its medium-term business strategy.
+
+« It has considered its operational resilience and its ability to respond to circumstances which could result
+in operational disruption.
+
+o -The UK Government has introduced measures to control the spread of Covid-19 by reducing
+individuals’ day-to-day contact with other people. One of the requirements is for people to stay
+at home except in very limited circumstances. This includes a restriction on travelling to work
+where it is not possible to work from home.
+
+o The Bank’s main considerations are for the safety and wellbeing of its employees and the delivery
+of critical services to its customers.
+
+o The Bank has in place comprehensive plans for dealing with disruptions such as those caused by
+
+_ the Government’s Covid-19 measures.
+
+o Inorder to meet the Government’s measures the Bank’s offices have been closed to the public and
+all members of Bank staff are working remotely using secure communications channels that were
+in place for such an eventuality.
+
+© Individuals who work in financial services and are needed for the provision of essential financial
+services are classified by the Government as “key workers”, The Chief Executive Officer of the
+Bank has identified those key workers within the organisation and these staff are permitted to
+travel to the office from time-to-time to ensure the delivery essential services.
+
+o It is considered that the arrangements in place for remote working allow the Bank to continue its
+business and to deliver services to its customers with minimum disruption during the Covid-19
+travel restrictions.
+
+e The Bank has no business dealing with the EU markets and as such a no deal exit is not expected to have
+a significant direct impact on the Bank’s current business strategy. However, no deal with the EU could
+potentially influence UK growth levels, causing demand for lending in the property segment to soften
+further.
+
+On the basis of their assessment of the Bank’s financial position the Directors are of the opinion that the Bank
+has a reasonable expectation to continue in operational existence for the next three years. The Directors are
+satisfied that this period is sufficient to enable a reasonable assessment of viability to be made.
+
+Disclosure of information to the auditor
+
+The Directors who held office at the date of approval of this Report confirm that, as far as they are each aware,
+there is no relevant audit information of which the Bank’s auditor is unaware and each director has taken all
+the steps that they ought to have taken as a director to make themselves aware of any relevant audit information
+and to establish that the Bank’s auditor is aware of that information.
+
+Charitable donations
+
+The company did not make any political or charitable contributions during the year. (2018: Nil)
+
+6|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+
+Auditor
+
+Pursuant to section 494ZA of the Companies Act 2006, the Bank re-tendered the 2019 audit, KPMG LLP
+having completed ten years as auditors. Following the tender process, MHA MacIntyre Hudson were selected
+and appointed as auditors for the year 2019.
+
+By order of the Board:
+
+C.N. Meneripitiyage,
+
+Chief Executive Officer
+24" April 2020
+
+7|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+
+STRATEGIC REPORT
+
+The Directors present the Strategic Report of the company for the year ended 31 December 2019 in accordance
+with Companies Act 2006, Chapter 4A.
+
+This report includes information to relevant stakeholders of the company as to how the Directors have
+performed their fiduciary duty under section 172 of Companies Act 2006.
+
+Business Model and Business Review —
+
+Bank of Ceylon (UK) Ltd (the Bank) is a wholly owned subsidiary of Bank of Ceylon (BOC).
+
+The Bank is authorised by the Prudential Regulation Authority (PRA) and regulated by the Financial Conduct
+Authority (FCA) and the PRA to carry on certain regulated financial service activities including deposit-taking
+and dealing in investments as principal. The Bank offers retail services, corporate and correspondent banking
+
+facilities in addition to trade finance services.
+
+The Directors are required by the Companies Act to set out in this report a fair review of the business of the
+Bank.
+
+Performance 2019
+
+The results for 2019 are encouraging, despite the numerous challenges the bank faced from the external
+environment. In terms of strategic progress and delivering the financial results, 2019 was an excellent year
+with growth being achieved in all of the three focus areas: lending, treasury services and trade finance. This
+outcome is starting to deliver our strategic imperative of “building a balanced portfolio” of products and
+services that will create a stable platform capable to delivering sustained profits.
+
+Our commitment to improving customer services on an ongoing basis by establishing stronger relationships
+with our business partners, is starting to deliver encouraging results. During the year we commenced
+recruitment of better skilled staff who were provided with in-house training and encouraged to take on greater
+responsibility. This, together with the internal promotion of staff to take on greater responsibility has improved
+the overall working environment and maintained a motivated and diligent work force.
+
+During the year the Bank initiated a project to replace its existing core banking solution with a more efficient
+solution that is expected to streamline the business process management at the Bank. The timing of this
+decision was critical in view of the impending SWIFT changes and software version upgrade that are due to
+take effect from early 2020. We are pleased to report that the implementation of Phase I of the project is now
+in its final stages, with a relatively smooth changeover. It is heartening to note that business users have
+embraced the new system with greater vigour and ownership, enabling a smooth, full implementation of the
+system during 2020. We shall continue to use this platform to transform the ways in which we work, by using
+its in-built standard features to deliver improved efficiency and effectiveness across the organisation.
+
+Another strategic concern, during 2019 and beyond, is a continued focus on maintaining a reputation for high
+standards of business conduct, which will include ongoing training of staff in enhancing awareness and
+delivery of the FCA’s code of conduct and customer treatment. This is a high priority area for the front-line
+staff managing our retail, commercial and correspondent banking relationships clients. In delivering this
+objective the Bank will continue to organise internal and external training sessions and track staff compliance
+on an ongoing basis.
+
+8]Page
+Bank of Ceylon (UK) Limited
+
+Annual Financial Report 2019
+
+Key performance Indicators
+
+|
+
+Interest Income
+
+2,348,218
+
+7 ~
+2019 . wa 2,345,218
+2018 | 1,834,938
+2017 | 1,588,990
+16 TR O85
+
+Net Interest Income
+
+1,429,867
+
+2019 i
+[rs
+
+2018 —_——", 49
+
+2017 —_——__ 1415
+
+2016 4S
+6 | 1,176,515
+
+Fee Income
+
+816,225
+
+2019 816,225
+
+2018 SO 813,538
+567,357
+
+cnmlen opin Mobo
+
+2017
+
+a
+
+2016 NE 574,223
+
+tee,
+
+Total Net tricome
+
+2,326,488
+
+j
+2019
+2019 { 2,326,488
+
+|
+2018 | 2,300,440
+i 2,074,254
+
+i
+
+iy 1435 718
+
+Customer Complaints
+
+8
+
+{
+2019 A 3
+
+{
+2018 = 12
+
+2017 i 4
+
+2016 | -
+
+Return on Assets
+
+0.063%
+
+"1
+2019 SM 0.062%
+
+4
+2018 SR 0.054%
+2017 MEM 0.019%
+
+2016 0.000%
+
+9|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+
+Corporate Governance
+
+The Board of Directors of the Bank comprises two executive directors and two non-independent non-executive
+directors appointed by BOC. Additionally, there are two independent non-executive directors on the Board.
+
+The Board meets quarterly and has defined responsibilities for the overall direction, supervision and control
+of the Bank. This includes assessment of the Bank’s competitive position, approval of strategic and financial
+plans taking into consideration the likely consequences of any decisions in the long run and review of the
+performance and financial status. It reviews and approves significant changes in the Bank’s structure and
+organisation, establishes the risk framework and the overall risk appetite. Other responsibilities include review
+and approval of key policies in relation to credit, large exposures, impairment, liquidity and operational risk.
+The Board also approves and monitors the Bank’s policies, procedures and processes in connection with the
+fight against financial crime.
+
+Financial risk management
+
+Introduction and overview
+
+The Bank has exposure to the following risks:
+credit risk;
+
+liquidity risk;
+
+market risk; and
+
+operational risk.
+
+eee @
+
+Risk management framework
+
+The Board of Directors has overall responsibility for the establishment and oversight of the Bank’s risk
+management framework. The Bank has appointed a Head of Risk who is responsible for developing and
+monitoring the Bank’s risk management policies.
+
+The Bank’s risk management policies are established to identify and analyse the risks faced by the Bank, to
+set appropriate risk limits and controls and to monitor risks and adherence to limits. The risk management
+policies and systems are reviewed regularly to reflect changes in the market conditions and the Bank’s
+activities.
+
+The Bank’s Audit and Risk Committee oversees how management monitors compliance with the Bank’s risk
+management policies and procedures, and reviews the adequacy of the risk management framework in relation
+to the risks faced by the Bank. The Audit and Risk Committee is assisted in its oversight role by Internal
+Audit. Internal Audit undertakes both regular and ad hoc reviews of risk management controls and procedures,
+the results of which are reported to the Bank’s Audit and Risk Committee.
+
+Credit risk
+
+“Credit risk” is the risk of financial loss to the Bank if a customer or counterparty to a financial instrument
+fails to meet its contractual obligations, and arises principally from the Bank’s loans and advances to customers
+and other banks, and investment debt securities. For risk management reporting purposes, the Bank considers
+and consolidates all elements of credit risk exposure (such as individual obligor default risk, country and sector
+risk).
+
+As a financial institution, the Bank’s maximum exposure to Credit Risk comprises all assets other than cash
+on hand, property and equipment and certain sundry debtors.
+
+10|Page
+Bank of Ceylon (UK) Limited Annual! Financial Report 2019
+
+As at As at
+
+31 December 31 December
+
+. 2019 GBP 000 2018 GBP 000
+Loans and advances to banks 143,924 136,517
+Loans and advances to customers 17,577 12,708
+Investments 4,798 4,642
+Other assets 217 538
+Maximum credit risk exposure 166,516 154,405
+Investment grade assets 141,664 134,211
+Other assets 24,852 20,194
+166,516 154,405
+
+Management of Credit Risk
+
+The Board of Directors has delegated responsibility for the day to day oversight of credit risk to the Bank’s
+Credit Committee. The Credit Committee is responsible for the effective management of credit risk including
+the following:
+
+e Formulating credit policies covering collateral requirements, credit assessment, risk grading and reporting,
+documentary and legal procedures, and compliance with regulatory and statutory requirements.
+
+e Establishing the authorisation structure for the approval and renewal of credit facilities. Facilities require
+the approval of the Credit Manager, the Chief Executive Officer, the Credit Committee or the Board of
+directors, as appropriate.
+
+e Reviewing and assessing credit risk: the Credit Committee assesses all exposures in excess of designated
+limits, before facilities are committed to customers. Renewals and reviews of facilities are subject to the
+same review process.
+
+Limiting concentrations of exposures to customers, counterparties, geographies and by product.
+Developing and maintaining the Bank’s risk grading to categorise exposures according to the degree of
+risk of default. The responsibility for setting risk grades lies with the final approving executive or
+committee, as appropriate. Risk grades are subject to regular reviews by the Credit Committee.
+e Developing and maintaining the Bank’s processes for measuring ECL; this includes processes for:
+© initial approval, regular validation and back-testing of the models used;
+o determining and monitoring significant increases in credit risk; and
+© incorporation of forward-looking information.
+
+e Reviewing compliance with agreed exposure limits, including those for country risk and product types.
+Regular reports on the credit quality of the portfolios are provided to the Credit Committee, which may
+require appropriate corrective action to be taken. These include reports containing estimates of expected
+credit loss (“ECL”) allowances. ;
+
+Operating departments are required to implement the Bank’s credit policies and procedures, and are
+responsible for the quality and performance of their credit portfolios and for monitoring and controlling all
+credit risks in the portfolios.
+
+The credit process is reviewed on a regular basis by Internal Audit.
+Liquidity risk
+
+“Liquidity. risk” is the risk that the Bank will encounter difficulty in meeting obligations associated with its
+financial liabilities that are settled by delivering cash or another financial asset. Liquidity risk arises from
+mismatches in the timing and amounts of cash flows, which is inherent in the Bank’s operations and
+investments. The maturity of all assets and liabilities are shown in note 25. The Bank did not have any
+unmatched derivative exposures at the year end and hence no further liquidity exposure.
+
+11|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+aS CERES
+
+Management of liquidity risk
+
+The Bank’s Board of Directors sets the Bank’s strategy for managing liquidity risk and oversight of. the
+implementation is administered by ALCO. ALCO recommends to the Board the Bank’s liquidity policies and
+procedures which are maintained and updated by the Bank’s Finance Department in conjunction with its Risk
+Department. Treasury Department manages the Bank’s liquidity position on a day-to-day basis and reviews
+daily reports covering the liquidity position of the Bank. A summary report including the exceptions and
+remedial action taken is submitted regularly to ALCO.
+
+The Bank’s approach to managing liquidity is to ensure, as far as possible, that it will always have sufficient
+
+liquidity to meet its liabilities when they are due, under normal and stressed conditions, without incurring
+unacceptable losses or risking damage to the Bank’s reputation. The key elements of the Bank’s liquidity
+strategy are as follows:
+
+Maintaining an adequate funding base of customer deposits and wholesale market deposits.
+Carrying a portfolio of highly liquid assets
+Monitoring maturity mismatches and behavioural characteristics of the Bank's financial assets and
+financial liabilities.
+« Stress testing the Bank’s liquidity position against various exposures.
+
+Treasury Department receives information regarding the liquidity profile of the Bank’s financial assets and
+financial liabilities and details of other projected cash-flows from anticipated future business. Treasury then
+maintains a portfolio of short-term liquid assets, largely made up of short-term placements with central banks
+and loans and advance to other banks, to ensure that sufficient liquidity is maintained within the Bank.
+
+Regular liquidity stress testing is conducted under a variety of scenarios covering both normal and severe
+market conditions. The scenarios are developed taking into account both Bank specific events and market
+related events. The results of the tests are reviewed by ALCO and presented to the Board.
+
+Market risk
+
+“Market risk” is the risk that changes in market prices will affect the Bank’s income or the value of its holdings
+of financial instruments. The Bank’s exposure to market risk is primarily due to interest rate and foreign
+exchange exposures.
+
+Interest Rate Risk is assessed in note 24 and Foreign Exchange Risk is assessed in note 26. The Bank’s holdings
+of debt securities comprise Government of Sri Lanka bonds and Government of Maldives bonds. These assets
+were valued at GBP 4,840,000 as at 31 December 2019 (investments at 31 December 2018 were GBP
+4,613,000).
+
+Management of market risk
+
+The Bank does not maintain a trading portfolio and market risks arise from its day-to-day banking operations.
+Overall authority for market risk is vested in ALCO which sets up limits for each type of risk in line with the
+Bank’s Board approved risk appetite.
+
+The Bank manages foreign exchange risk by.means of currency exposure limits placed on intraday and
+overnight positions. ALCO is the monitoring body for compliance with these limits.
+
+Interest rate risk is the risk of loss from future cash-flows or fair values of financial instruments because of a
+change in market interest rates. Interest rate risk is managed by the Treasury function principally through
+monitoring interest rate gaps. ALCO is the monitoring. body for compliance with the Bank’s appetite for
+interest rate risk.
+
+12|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+EE ——  )
+
+Operational risk
+
+“Operational risk” is the risk of direct or indirect loss arising from a wide variety of causes associated with the
+Bank’s processes, personnel, technology, and infrastructure and from external factors other than credit, market
+and liquidity risks — e.g. those arising from legal and regulatory requirements and generally accepted standards
+of corporate behaviour.
+
+Management of operational risk
+
+The Bank’s objective is to manage operational risk so as to balance the avoidance of financial losses and
+damage to the Bank’s reputation with overall cost effectiveness and innovation. In all cases the Bank’s policy
+requires compliance with all legal and regulatory requirements.
+
+The Board of Directors has delegated to the Executive Committee responsibility for the development and
+implementation of controls to address operational risk. This is supported by the development of overall
+standards for the management of operational risk in the following areas:
+
+requirements for appropriate segregation of duties, including the independent authorisation of transactions;
+requirements for the reconciliation and monitoring for transactions;
+
+compliance with regulatory and other legal requirements;
+
+documentation of controls and procedures;
+
+requirements for the periodic assessment of operational risks faced, and the adequacy of controls and
+procedures to address the risks identified;
+
+requirements for the reporting of operational losses and the proposed remedial actions;
+
+development of contingency plans;
+
+training and professional development;
+
+information technology and cyber risks; and
+
+risk mitigation, including insurance where this is cost effective.
+
+Internal Audit undertakes periodic reviews of operational risk exposures. The results of the Internal Audit
+reviews are discussed by the Executive Committee and submitted to the Audit and Risk Committee.
+
+Capital adequacy
+
+The Bank is required to comply with the provisions of the EU Capital Requirements Directive (CRD) in respect
+of regulatory capital. The Bank’s regulatory capital comprises ordinary share capital, revaluation reserves and
+retained earnings.
+
+The regulator provides the Bank with its view of the amount and quality of capital that it considers the Bank
+must hold in addition to its Pillar 1 capital (“Pillar 2A”) to meet the overall financial adequacy requirements
+for credit risk, market risk, counterparty credit risk, interest rate risk, pension obligation risk and group risk.
+It also provides its view of the amount of capital buffer the Bank should hold in addition to its total capital
+requirement to cover losses that may arise under a severe stress scenario but avoiding duplication with CRD
+IV buffers (Pillar 2B). The Bank has utilised the transitional relief arrangements granted under IFRS 9 and has
+set- off 85% of the 2019 ECL provision, in arriving at the regulatory capital as set out in note 28.
+
+Management of capital adequacy
+
+The Bank’s management uses the regulatory capital ratios and buffer requirements in monitoring the Bank’s
+capital adequacy. ALCO is the monitoring body for compliance with the Bank’s appetite for the risk of
+insufficient capital.
+
+Capital adequacy is re-assessed at least annually based on forward looking projections. Regular capital
+adequacy stress testing is conducted under a variety of scenarios covering both normal and severe market
+conditions. The results of the tests are reviewed by the ALCO and presented to the Board.
+
+13|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+
+Regulatory risk
+
+In the post-financial crisis environment, the regulatory landscape has changed. and has become more complex
+with increased supervision and enforcement. Regulators are increasingly evaluating the robustness of
+regulated firms’ business models, operational resilience and their product portfolios. Consequently, more
+reporting has been required by the regulatory authorities to monitor financial risk, allowing them to take prompt
+action where they see negative trends or anticipate problems within an organisation.
+
+Management of regulatory risk
+
+The Bank monitors developments and proactively engages with the regulators wherever possible to ensure that
+new regulatory requirements are considered fully and can be implemented in an effective manner.
+
+There is an increasing focus by the regulators on conduct of business. The Bank continues to develop and
+enhance its management of conduct including employee training and performance.
+
+Financial risks arising from climate change.
+
+Climate risk is one of the defining issues of our time. It presents far-reaching financial risks from both physical
+factors, such as extreme weather events, and transition risks that can arise from the process of adjustment to a
+carbon neutral economy.
+
+Management of financial risks arising from climate change
+
+The bank has assigned responsibility for the risks arising from climate change to a member of senior
+management. Consideration of financial risks from climate change will be embedded into the Bank’s
+governance frame works and incorporated into existing financial risk management practices. Furthermore, in
+response to this climate emergency we are developing a strategy and implementing process to assess the
+materiality of climate risk across our business; evaluate the business impacts and identify potential responses
+to manage the risk and opportunities.
+
+By order of the Board:
+
+ce
+
+rr
+C.N. Meneripitiyage
+
+Chief Executive Officer
+24" April 2020
+
+14([Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+
+AUDIT AND RISK COMMITTEE REPORT FOR THE YEAR ENDED 31
+DECEMBER 2019 |
+
+The Audit and Risk Committee (the “Committee”) is an essential part of the Bank’s governance framework to
+‘which the Board has delegated oversight of the following areas:
+
+* financial reporting;
+
+internal controls and risk management systems;
+
+whistleblowing, fraud and bribery;
+
+internal audit;
+
+compliance;
+
+* external audit; and
+
+¢ risk management.
+
+This report provides an overview of the Committee’s work and details of how it has discharged its
+responsibilities during the year.
+
+The responsibilities of the Committee are in line with the provisions of the Financial Reporting Council (FRC)
+Guidance on Audit Committees. The main function of the Committee is to assist the Board in fulfilling its
+oversight responsibilities, specifically the ongoing review, monitoring and assessment of:
+
+* the integrity of the financial statements, any formal announcements relating to financial performance
+and significant financial reporting judgements contained therein;
+the effectiveness of the system of internal control processes;
+the internal audit and external audit processes;
+the performance and independence of both internal and external auditor; and
+the engagement of external auditor for non-audit work.
+
+e e e e
+
+Following each Committee meeting, the minutes of the meeting are distributed to the Board, and the
+Committee Chairman provides an update to the Board on key matters discussed by the Committee.
+
+The composition of the Committee is as follows:
+W DR Swanney (Chair)
+R England
+
+The Chief Executive Officer, Chief Operating Officer, Head of Finance and Treasury, Head of Risk and Head
+of Compliance attend the meeting by invitation. Both the internal and external auditors are also invited to each
+meeting. There is opportunity for discussion without the Executive Directors being present.
+
+Key areas reviewed during 2019
+The Committee met five times during the year, and focused on the following matters:
+
+Financial reporting
+The primary role of the Committee in relation to financial reporting is to review and assess with the Senior
+Management Team (comprising the Chief Executive Officer, the Chief Operating Officer, the Head of Finance
+and Treasury, the Head of Risk, the Head of Compliance and the Head of Trade Finance and Banking
+Relationships) and the external auditor the integrity and appropriateness of the annual financial statements
+concentrating on amongst other matters:
+.* thé quality and acceptability of accounting policies and practices;
+¢ the clarity of the disclosures and compliance with financial reporting standards and relevant financial
+and governance reporting requirements including advising the Board on whether the Report and
+Financial Statements (the “Annual Report”), when taken as a whole are fair, balanced and
+understandable and provide information sufficient for Members to assess the Bank’s performance,
+business model and strategy; and.
+* the material areas in which significant judgements have been applied.
+* Provisions in line with IFRS9
+
+15|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+ne USGS
+
+The primary areas of judgement considered by the Committee in relation to the 2019 accounts were:
+
+« Evaluate the effectiveness of the external auditor’s response to the assessed risks of material
+misstatement presented by the Bank’s ECL.
+
+* Revenue recognition: Review of the design, implementation and effectiveness of controls around the
+IFRS 9, calculation of interest income and charges, including the timing of fees and commission
+recognition under effective interest rate methodologies; and
+
+« Operating property: Review of the remaining useful economic life of the head office property.
+
+The Committee considered whether the 2019 Annual Report was fair, balanced and understandable. The
+Committee did this by satisfying itself that there was a robust process of review and challenge to ensure balance
+and consistency. The Committee fully discharged its responsibilities in relation to financial reporting of the
+2019 Annual Report. ,
+
+-* Internal controls and risk management systems
+
+“The Board recognises the importance of sound systems of internal control and risk management systems in the
+achievement of its objectives and the safeguarding of the Bank’s assets. Internal controls and risk management
+systems also facilitate the effectiveness and efficiency of operations, helps to ensure the reliability of internal
+and external reporting and assists in compliance with applicable laws and regulations.
+
+The Bank operates in a dynamic business environment and, as a result, the risks it faces are continually
+changing. The internal controls and risk management systems have been designed to ensure thorough and
+regular evaluation of the nature and extent of risk and the Bank’s ability to mitigate or react accordingly. It is
+the role of the Senior Management Team to implement the Board’s policies on risk and control. It is also
+recognised that all employees have responsibility for internal control as part of their accountability for
+achieving objectives. Staff training and induction is designed to ensure that they are clear on their
+accountabilities in this area and are competent to operate and monitor the internal control framework.
+
+The outsourced internal auditor provided independent assurance to the Board on the effectiveness of the
+internal controls and risk management systems through the Committee.
+
+The Committee reviews the internal controls and risk management systems through regular reporting from the
+Senior Management Team, internal and external auditors. The main internal control matters which were
+reviewed by the Committee in 2019 were:
+
+* prudential and conduct related;
+
+* internal audit plans;
+
+* reports from the interna! auditor; and
+
+* the status of any issues raised in internal audit reports to ensure a timely resolution.
+
+The information received and considered by the Committee provided ‘adequate and effective’ assurance that
+during 2019 thre were no material breaches of control or regulatory standards and that; overall, the Bank
+maintained an adequate internal control framework.
+
+Whistleblowing, fraud and bribery
+
+The Committee has reviewed the adequacy and security of the Bank’s arrangements for its employees and
+contractors to raise concerns, in confidence, about possible fraud or other wrongdoings in financial reporting
+or other matters. The Committee has reviewed the annual report from the Money Laundering Reporting Officer
+(“MLRO”) and the adequacy and effectiveness of the Bank’s anti-money laundering systems and controls.
+
+Internal audit, risk and compliance
+
+The Committee is responsible for monitoring internal audit and compliance activities and effectiveness and
+ensuring that sufficient resources are in place. In order to provide the scalability and flexibility of specialist
+resources required within internal audit, the Bank continues to outsource this role to Grant Thornton LLP
+(“GT”). The risk function is managed the Head of Risk and the compliance function is assigned to a senior
+manager.
+
+16[{Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+ee TD
+
+The Chair of the Committee meets privately with the internal auditor at least once per year without the Senior
+Management Team being present. This provides the opportunity for two-way comment and feedback on how
+the internal audit plan is progressing and how the relationship is performing.
+
+Key reviews were completed by GT through their agreed work programme during the year including areas of
+internal control significance, specifically, risk management, credit and lending, treasury, anti-money
+laundering and “know your customer”, compliance and trade finance.
+
+Internal audit findings and thematic issues identified were considered by the Committee, as well as the Senior
+Management Team’s response and the tracking and completion of outstanding actions.
+
+The Committee also approved the fee for the programme of internal audit work for the year having reviewed
+the scope of the work programme in detail.
+
+The Head of Risk and Head of Compliance also submitted a number of reports during the year in areas not
+covered by internal audit.
+
+External audit
+
+The effectiveness of the external audit process is dependent on appropriate audit risk identification and at the
+start of the audit cycle the Committee receives from the external auditor a detailed audit plan, identifying its
+assessment of the key risks.
+
+The Chair of the Committee holds regular meetings with the external auditor. This provides the opportunity
+for open dialogue and feedback from the Committee and the Auditor without the Executive Directors being
+present. Matters typically discussed include the Auditor’s assessment of financial reporting risks and key
+financial reporting judgements, the transparency and openness of interactions with the Senior Management
+Team, confirmation that there has been no restriction in scope placed on them and the independence of their
+audit.
+
+The Committee approved the fees for audit services for 2019 after a review of the level and nature of the work
+to be performed and being satisfied that the fees were appropriate for the scope of the work required. The
+Committee considers the reappointment of the external auditor, including rotation of the Senior Statutory
+Auditor, each year and also assesses their independence on an ongoing basis.
+
+There are no non-audit services provided by the current statutory auditors, MHA MacIntyre Hudson.
+
+Risk management
+
+The Committee reviewed the Bank’s Risk Management Framework and Risk Appetite Statement incorporating
+a review of the outputs and assumptions used in preparing the ICAAP, ILAAP and Recovery Plan documents.
+The Committee also analysed the Bank’s performance against the Risk Appetite Statement as reported by the
+Senior Management Team.
+
+Audit and Risk Committee effectiveness |
+The Committee’s Terms of Reference were reviewed during the year and found to be fit for purpose.
+
+Approved by the Board on 24" April 2020 and signed on its behalf by
+
+W DR Swanney
+Chair of the Audit, Risk and Compliance Committee
+24% April 2020
+
+17|Page
+Bank of Ceylon (UK) Limited Annual Financial Report 2019
+aS
+
+STATEMENT OF DIRECTORS’ RESPONSIBILITIES IN RESPECT OF THE
+STRATEGIC REPORT, THE DIRECTORS’ REPORT AND THE FINANCIAL
+STATEMENTS
+
+The directors are responsible for preparing the Strategic Report, Directors’ Report and the financial statements
+in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law
+they have elected to prepare the financial statements in accordance with International Financial Reporting
+Standards as adopted by the European Union (IFRSs as adopted by the EU) and applicable law.
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they
+give a true and fair view of the state of affairs of the Bank and of its profit or loss for that period. In preparing
+the financial statements, the directors are required to:
+
+e select suitable accounting policies and then apply them consistently;
+
+e make judgements and estimates that are reasonable, relevant and reliable;
+
+* state whether they have been prepared in accordance with IFRSs as adopted by the EU;
+
+« assess the Bank’s ability to continue as a going concern, disclosing, as applicable, matters related to
+going concern; and
+
+e use the going concern basis of accounting unless they either intend to liquidate the Bank or to cease
+operations, or have no realistic alternative but to do so.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain
+the Bank’s transactions and disclose with reasonable accuracy at any time the financial position of the Bank
+and enable them to ensure that its financial statements comply with the Companies Act 2006. They are
+responsible for such internal control as they determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error, and have general
+responsibility for taking such steps as are reasonably open to them to safeguard the assets of the Bank and to
+prevent and detect fraud and other irregularities.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial information
+included on the Bank’s website. Legislation in the UK governing the preparation and dissemination of
+financial statements may differ from legislation in other jurisdictions.
+
+By order of the Board:
+
+C.N. Meneripitiyage,
+
+Chief Executive Officer
+24% April 2020
+
+18]Page
+Bank of Ceylon (UK) Limited Annual! Financial Report
+2019
+
+INDEPENDENT AUDITOR'S REPORT TO THE MEMBERS OF BANK OF
+CEYLON (UK) LTD
+
+1. Our Opinion
+We have audited the financial statements of Bank of Ceylon (UK) Limited.
+
+The financial statements that we have audited comprise:
+
+Statement of Comprehensive Income
+
+Statement of Financial Position
+
+Statement of Changes in Equity
+
+Statement of Cash Flows
+
+Notes 2 to 28 of the financial statements, including the accounting policies.
+
+The financial reporting framework that has been applied in their preparation is applicable law
+and International Financial Reporting Standards (IFRSs) as adopted by the European Union.
+
+In our opinion:
+
+e The financial statements give a true and fair view of the state of the Bank’s affairs as at
+31 December 2019 and the Bank's profit for the year then ended;
+
+e The financial statements have been properly prepared in accordance with International
+Financial Reporting Standards (IFRS) as adopted by the European Union; and
+
+e The financial statements have been prepared in accordance with the requirements of
+the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs
+(UK)) and applicable law. Our responsibilities under those standards are further described in
+the Auditor's Responsibilities for the Audit of the Financial Statements section of our report.
+We are independent of the Bank in accordance with the ethical requirements that are relevant
+to our audit of the financial statements in the UK, including the FRC’s Ethical Standard as
+applied to listed entities, and we have fulfilled our ethical responsibilities in accordance with
+those requirements. We believe that the audit evidence we have obtained is sufficient and
+appropriate to provide a basis for our opinion.
+
+Our audit opinion is consistent with our report to the Audit and Risk Committee.
+
+19|Page
+Bank of Ceylon (UK) Limited Annual Financial Report
+2019
+
+Overview
+
+£811K | 0.5% Gross Assets
+
+Where appropriate, we have applied a lower level of materiality to test
+specific areas such as interest, fees & commission income, administration
+expenses, manual journal entries and related party transactions.
+
+Me [key auditimatters
+
+Recurring °
+
+Valuation of derivative financial instruments
+
+Determination of ECL Provision on financial instruments held at amortised
+cost
+
+« Related Party transactions
+
+2. Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most
+significance in our audit of the financial statements of the current period and include the most
+significant assessed risks of material misstatement (whether or not due to fraud) that we
+identified. These matters included those matters which had the greatest effect on: the overall
+audit strategy, the allocation of resources in the audit; and directing the efforts of the
+engagement team and, as required for public interest entities, our results from those
+procedures. These matters were addressed in the context of our audit of the financial
+statements as a whole, and in forming our opinion thereon, and we do not provide a separate
+opinion on these matters.
+
+Valuation of derivative financial instruments
+
+The entity enters currency
+swaps in order to protect the
+Bank from _ significant
+currency fluctuations.
+
+There is a risk that the
+valuation of the derivatives
+at the yearend is not held at
+fair value.
+
+Our audit work included to perform procedures to assess the
+completeness and valuation of these positions at the year
+end. Work performed included obtaining confirmations
+from external third parties to agree the year end valuation.
+
+We also verified the existence of the positions to underlying
+agreements.
+
+in addition, we reviewed the disclosures of these
+instruments in the financial statements to be reasonable.
+
+Result of our procedures
+
+We concluded that the derivative financial instruments had been recorded appropriately.
+
+20|Page
+Bank of Ceylon (UK) Limited
+2019
+
+Annual Financial Report
+
+Determination of ECL Provision on financial instruments held at amortised cost
+
+‘Ourre IO
+
+IFRS 9 requires the bank to .
+| recognise and remeasure an
+allowance in respect of
+expected credit losses for all
+financial assets not carried
+_at fair value.
+
+There is a risk that the
+significant assumptions used
+in making these estimates
+‘may not be appropriate or
+may not adequately capture
+the probability of default
+and the expected loss in the
+event of default.
+
+“The methodology used by management to determine the
+
+ECL was considered and evaluated.
+
+We confirmed the appropriateness of the inputs used by
+management to make this assessment.
+
+We considered and challenged managements classification
+of balances into stage1, stage 2 and stage 3 as appropriate.
+
+For balances included in stages 2 and 3 collateral was
+assessed for quality, validity, liquidity and coverage over the
+amounts at risk.
+
+We also performed a review of the loan files including post
+year end receipts for indication of impairments.
+
+Result of our procedures
+
+Loans were identified to be classified as stage 2 assets; however, this did not result in any
+additional provision as these loans had sufficient collateral in place.
+
+Our work around the collateral did not identify any further risks and we found the resulting
+estimate of the impairment of loans and advances to be reasonable.
+
+Related party transactions
+
+The entity transacts a
+significant amount of
+business with entities that
+
+ownership. Related party
+transactions are often not
+conducted “on an = arm’s
+length basis and many
+regulations require these
+transactions to be clearly
+disclosed so that the
+financial effect of them can
+be clearly ascertained by
+.|users of the financial
+statements.
+
+There is a risk that these
+transactions may not be
+
+are related through common.
+
+We have made appropriate enquiries of management to
+identify known related parties
+
+We reviewed the documentation for significant transactions
+with a view to identify transactions not otherwise at arms-
+length and other transactions with related parties.
+
+We have conducted appropriate searches to identify related
+parties.
+
+21|Page
+
+Bank of Ceylon (UK) Limited Annual Financial Report
+2019
+
+correctly identified and
+disclosed.
+
+The main transactions with related parties are placing funds on behalf of the parent
+company based in Sri Lanka. The loans are at arm’s length and an annual interest is charged.
+
+We also identified sovereign bonds issued by ultimate controlling party, and requested this
+to be disclosed separately in the financial statements as a related party transaction
+
+No other issues were identified.
+
+3. Our application of materiality
+
+Our definition of materiality considers the value of error or omission on the financial
+statements that would change or influence the economic decision of a reasonably
+knowledgeable person. Materiality is used in planning the scope of our work, executing that
+work and evaluating the results.
+
+Materiality in respect of the bank was set at £811k which was determined on the basis of 0.5%
+of Gross Assets.
+
+In addition, we applied the following materiality to the audit of specific financial statement
+components:
+
+Interest income £255k
+Fees and commissions £255k
+Administrative and interest expenditure £255k
+
+We agreed to report any corrected or uncorrected adjustments exceeding £42k.
+
+We did not identify any material misstatement during our audit work.
+
+4. Capability of the audit in detecting irregularities, including fraud
+
+As part of our audit we identify and assess the risks of material misstatement of the financial
+statements, whether due to fraud or error, and then design and perform audit procedures responsive
+to those risks, including obtaining audit evidence that is sufficient and appropriate to provide a basis for
+our opinion.
+
+We evaluated management’s incentives and opportunities for fraudulent manipulation of the financial
+statements (including the risk of override of controls), and determined that the principal risks were
+related to posting inappropriate journal entries to both reduce costs and inflate operating profit, and
+management bias in accounting estimates.
+
+Audit procedures performed by the engagement team included, but were not limited to:
+
+22(Page
+Bank of Ceylon (UK) Limited Annual Financial Report
+2019
+
+e Obtaining an understanding of the legal and regulatory frameworks that the bank operates in,
+focusing on those laws and regulations that had a direct effect on the financial statements. The
+key laws and regulations we considered in this context included UK Companies Act, the
+Financial Services and Markets Act 2000 and applicable tax legislation. In addition, we
+considered compliance with the UK Bribery Act and employee legislation, as fundamental to the
+bank’s operations;
+
+¢ Discussing among the engagement team and involving relevant internal specialists, including
+tax, valuations, pensions, IT, forensic and industry specialists regarding how and where fraud
+might occur in the financial statements and any potential indicators of fraud;
+
+e Discussions with local management, internal audit and the Bank’s legal counsel, including
+consideration of known or suspected instances of non-compliance with laws and regulations
+and fraud;
+
+e Enquiring of the audit and risk committee concerning actual and potential litigation and claims;
+
+e valuation of the operating effectiveness of management's controls designed to prevent and
+detect irregularities;
+
+e Assessment of matters reported on the Bank's whistleblowing helpline and the results of
+management's investigation of such matters;
+
+® Reading key correspondence with regulatory authorities such as the Financial Conduct
+Authority, Prudential Regulatory Authority, and Financial Reporting Council
+
+© Challenging assumptions and judgements made by management in their significant accounting
+estimates, in particular with respect to provisions for claims incurred but not reported
+
+There are inherent limitations in the audit procedures described above and the further removed non-
+compliance with laws and regulations is from the events and transactions reflected in the financial
+statements, the less likely we would become aware of it. Also, the risk of not detecting a material
+misstatement due to fraud is higher than the risk of not detecting one resulting from error, as fraud
+may involve deliberate concealment by, for example, forgery or intentional misrepresentations, or
+through collusion.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all
+engagement team members including internal specialists and significant component audit teams and
+remained alert to any indications of fraud or non-compliance with laws and regulations throughout the
+audit.
+
+We did not identify any key audit matters relating to irregularities, including fraud.
+5. We have nothing to report on going concern
+
+As explained in note 2 section a, the directors have prepared the financial statements on the
+going concern basis. In doing so they have concluded that there are no material uncertainties
+that would cast significant doubt on over their ability to continue as a going concern for the
+
+23[ Page
+Bank of Ceylon (UK) Limited . Annual Financial Report
+2019
+
+foreseeable future. The foreseeable future is usually defined as a period of up to one year from
+the date of approval of these financial statements.
+
+It is our responsibility to obtain sufficient and appropriate evidence regarding and to
+conclude on:
+
+e whether a material uncertainty exists related to events or conditions that may cast
+. Significant doubt on the Bank’s ability to continue as a going concern and
+
+e the appropriateness of the directors’ use of the going concern basis of accounting in the
+preparation of the financial statements. -
+
+Our work on going concern involved: .
+
+i. the consideration of inherent risks to the Bank’s operations and specifically its —
+business model
+
+ii. the evaluation of how those risks might impact on the Bank’s available financial
+resources.
+
+ii. | where additional resources may be required the reasonableness and practicality of
+the assumptions made by the directors when assessing the probability and
+likelihood of those resources becoming available.
+
+Our work has concluded that those inherent risks were not so significant as to require us to
+perform any additional audit procedures,
+
+6. We have nothing to report on the other information in the Annual Report
+
+The directors are responsible for the other information. The other information comprises the
+information included in the Annual Report and Accounts, other than the financial statements
+and our auditor's report thereon. Our opinion of the financial statements does not cover the
+other information and, except to the extent otherwise explicitly stated in our report, we do not
+express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our responsibility is to read the other
+information and, in doing so, consider whether the other information is materially inconsistent
+with the financial statements or our knowledge obtained in the audit or otherwise appears to
+be materially misstated. If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether there is a material misstatement in the
+financial statements or a material misstatement of the other information. If, based on the work
+we have performed, we conclude that there is a material misstatement of this other
+information, we are required to report that fact.
+
+Strategic report and directors report
+In our opinion, based on the work undertaken in the course of the audit:
+
+24|Page
+Bank of Ceylon (UK) Limited Annual Financial Report
+2019
+
+e the information given in the strategic report and the directors’ report for the financial
+year for which the financial statements are prepared is consistent with the financial
+statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with
+applicable legal requirements.
+
++
+
+Directors remuneration report
+Those aspects of the director’s remuneration report which are required to be audited have
+been prepared in accordance with applicable legal requirements.
+
+7. Matters on which we are required to report by exception
+
+We have nothing to report in respect of the following matters in relation to which the
+Companies Act 2006 requires is to report to you if, in our opinion:
+
+® adequate accounting records have not been kept, or returns adequate for our audit
+have not been received by branches not visited by us; or
+
+e the financial statements are not in agreement with the accounting records and returns;
+or
+certain disclosures of directors’ remuneration specified by law are not made; or
+we have not received all the information and explanations we require for our audit.
+
+8. Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are
+responsible for the preparation of the financial statements and for being satisfied that they
+give a true and fair view, and for such internal control as the directors determine is necessary
+to enable the preparation of financial statements that are free from material misstatement,
+whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank's
+ability to continue as a going concern, disclosing, as applicable, matters related to going
+concern and using the going concern basis of accounting unless the directors either intend to
+liquidate the Bank or to cease operations, or have no realistic alternative but to do so.
+
+9. Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a
+whole are free from material misstatement, whether due to fraud or error, and to issue an
+auditor's report that includes our opinion. Reasonable assurance is a high level of assurance
+but is not a guarantee that an audit conducted in accordance with ISAs (UK) will always detect
+a material misstatement when it exists. Misstatements can arise from fraud or error and are
+considered material if, individually or in aggregate, they could reasonably be expected to
+influence the economic decisions of users taken on the basis of these financial statements.
+
+25|Page
+Bank of Ceylon (UK) Limited Annual Financial Report
+2019
+
+As part of an audit in accordance with ISAs (UK), we exercise professional judgement and
+maintain professional scepticism throughout the audit. We also:
+
+e Identify and assess the risks of material misstatement of the financial statements,
+whether due to fraud or error, design and perform audit procedures responsive to
+those risks, and obtain audit evidence that is sufficient and appropriate to provide a
+basis for our opinion. The risk of not detecting a material misstatement resulting from
+fraud is higher than for one resulting from error, as fraud may involve collusion,
+forgery, intentional omissions, misrepresentations, or the override of internal control.
+
+e Obtain an understanding of internal control relevant to the audit in order to design
+audit procedures that are appropriate in the circumstances, but not for the purpose of
+expressing an opinion on the effectiveness of the Bank’s internal control.
+
+e Evaluate the appropriateness of accounting policies used and reasonableness of
+accounting estimates and related disclosures made by the directors.
+
+* As noted in Section 5 it is our responsibility to conclude on whether a material
+uncertainty exists and on the appropriateness of the directors’ use of the going concern
+basis of accounting. and, based on the audit evidence obtained, whether a material
+uncertainty exists related to events or conditions that may cast significant doubt on the
+Bank's ability to continue as a going concern. If we conclude that a material uncertainty
+exists, we are required to draw attention in our auditor’s report to the related
+disclosures in the financial statements or, if such disclosures are inadequate, to modify
+our opinion. Our conclusions are based on the audit evidence obtained up to the date
+of our auditor's report. However, future events or conditions may cause the Bank to
+cease as a going concern.
+
+« Evaluate the overall presentation, structure and content of the financial statements,
+including the disclosures, and whether the financial statements represent the
+underlying transactions and events in a manner that achieves fair presentation.
+
+« Obtain sufficient appropriate audit evidence regarding the financial information of the
+entities or business activities within the Bank to express an opinion on the consolidated
+financial statements. We are responsible for the direction, supervision and
+performance of the Bank audit. We remain solely responsible for our audit opinion.
+
+We communicate with the audit committee regarding, among other matters, the planned
+scope and timing of the audit and significant audit findings, including any significant
+deficiencies in internal control that we identify during our audit.
+
+10. Use of our report
+
+This report is made solely to the Company’s members, as a body, in accordance with Chapter 3
+of Part 16 of the Companies Act 2006. Our audit work has been undertaken so that we might
+
+26|Page
+Bank of Ceylon (UK) Limited Annual Financial Report
+2019
+
+state to the Company’s members those matters we are required to state to them in an
+auditor’s report and for no other purpose. To the fullest extent permitted by law, we do not
+accept or assume responsibility to anyone other than the Company and the Company's
+members as a body, for our audit work, for this report, or for the opinions we have formed.
+
+Rakesh Shaunak CTA, FCA, FRSA
+
+(Senior Statutory Auditor)
+
+for and on behalf of MHA Macintyre Hudson
+Chartered Accountants and Statutory Auditor |
+6 Floor
+
+2 London Wall Place
+
+London
+
+EC2Y SAU
+
+24** April 2020
+
+27|Page
+Bank of Ceylon (UK) Limited
+
+2019
+
+Annual Financial Report
+
+BANK OF CEYLON (UK) LTD STATEMENT OF
+
+COMPREHENSIVE INCOME
+
+For the year ended 31 December 2019
+
+Interest income
+Interest expense
+Net interest income
+
+Fees and commissions
+Net gains from Forex transactions
+Operating income
+
+Administration expenses
+Depreciation
+Amortisation
+
+ECL provisioning
+
+Profit / (Loss) from ordinary activities
+before tax
+
+Tax credit /(charge) on loss from ordinary
+Activities
+
+Profit /(Loss) from ordinary activities after
+tax
+
+Other comprehensive income
+Net change in fair value
+
+Other comprehensive income/(loss) for the
+year
+
+Total comprehensive income/(loss) for the
+year
+
+Note
+
+10
+11
+12
+
+13
+
+Year ended Year ended
+31 December 31 December
+2019 2018
+
+GBP 000 GBP 000
+2,348 1,835
+
+(918) (467)
+
+1,430 1,368
+
+816 814
+
+81 119
+
+2,327 2,301
+(2,065) (2,103)
+
+(57) (56)
+
+(45) (44)
+
+(82) (13)
+
+108 85
+
+(3) :
+
+105 85
+
+105 85
+
+28|Page
+Bank of Ceylon (UK) Limited Annual Financial Report
+2019
+
+The notes on pages 32 to 51 are an integral part of these financial statements.
+
+STATEMENT OF FINANCIAL POSITION
+
+As at 31 December 2019
+31 December
+2019 31 December 2018
+
+Note GBP 000 GBP 000
+Assets
+Cash at bank and in hand 770 992
+Loans and advances to banks 14 143,924 136,517
+Loans and advances to customers 15 17,577 12,708
+Investments 16 4,798 4,642
+Property and equipment 10 2,981 2,885
+Intangible assets 11 18 33
+Other assets 22 217 538
+Total assets 170,285 158,315
+Liabilities
+Deposits by banks 17 149,400 138,890
+Customer accounts deposits 18 6,545 5,367
+Other liabilities 19 864 678
+Total liabilities 156,809 144,935
+Equity
+Share capital 20 15,000 15,000
+Revaluation reserve 408 417
+Retained earnings (1,932) (2,037)
+Equity shareholders' funds 13,476 13,380
+Total liabilities and equity 170,285 158,315
+
+These financial statements were approved by the Board of Directors on 24" April 2020 and were signed
+on its behalf by:
+
+C.N Meneripitiyage,
+
+Chief Executive Officer
+
+29|Page
+Bank of Ceylon (UK) Limited
+2019
+
+Annual Financial Report
+
+The notes on pages 32 to 51 are an integral part of these financial statements.
+
+STATEMENT OF CHANGES IN EQUITY
+
+For the Year ended 31 December 2019
+
+Equity shareholders’ funds 1 January 2019
+
+Total Comprehensive Income
+
+Revaluation reserve movement
+
+Equity shareholders’ funds 31 December
+2019
+
+For the Year ended 31 December 2018
+
+Equity shareholders’ funds 31 December
+2017
+
+Adjustment on adoption of IFRS 9
+Equity shareholders’ funds 1 January 2018
+Total Comprehensive Income
+
+Revaluation reserve movement
+
+Equity shareholders’ funds 31 December
+2018
+
+Share
+
+Retained Revaluation Total
+. Capital Earnings _ Reserve Equity
+GBP GBP GBP
+000 000 000 GBP 000
+15,000 (2,037) 417 13,380
+- 105 - 105
+- . 0) (9)
+15,000 _(1,932) 408 13,476
+Share Retained Revaluation Total
+Capital earnings Reserve equity
+GBP GBP GBP
+000 000 000 GBP 000
+15,000 (2,087) 426 13,339
+- (35) - (35)
+15,000 (2,122) 426 13,304
+- 85 - 85
+- - (9) (9)
+15,000 (2,037) 417 13,380
+
+The revaluation reserve movement is the annual depreciation charge following the revaluation of the
+building back in 2014. This reserve is being depreciated over 50 years by charging the revaluation
+
+reserve account and the freehold property account.
+
+30|Page
+Bank of Ceylon (UK) Limited
+2019
+
+Annual Financial Report
+
+The notes on pages 32 to 51 are an integral part of these financial statements
+
+STATEMENT OF CASH FLOWS
+
+For the year ended 31 December 2019
+
+Cash flow from operating activities:
+Profit before tax
+Adjusted for:
+Depreciation
+Amortisation
+Other non-cash items - net change in fair value
+of Investment and ECL provisions
+
+Changes in:
+
+Loans and advances to banks
+Loans and advances to customers
+Investments
+
+Other assets
+
+Deposits by banks
+
+Customer accounts
+
+Other liabilities
+
+Net cash flow used in operating activities
+
+Cash flow from investing activities
+Acquisition of fixed assets
+
+Net cash flow used in investing activities
+
+Cash flow from financing activities
+Proceeds from the issue of share capital
+
+Net cash flow from financing activities
+
+Net increase / (decrease) in cash and cash
+equivalent
+
+Cash and cash equivalents at 1 January
+
+Cash and cash equivalents at 31 December
+
+Note
+
+10
+11
+
+14
+15
+16
+22
+17
+18
+19
+
+10 &1)
+
+Year ended Year ended
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+108 85
+57 56
+15 44
+82 13
+262 198
+(7,409) (60,541)
+(4,869) 784
+(156) 755
+322 (275)
+10,510 58,056
+1,178 653
+102 24]
+(322) (327)
+(60) (129)
+(162) (21)
+(162) (21)
+(222) (150)
+992 1,142
+770 992
+
+31|Page
+Bank of Ceylon (UK) Limited
+2019
+
+Annual Financial Report
+
+The notes on pages 32 to 51 are an integral part of these financial statements.
+
+NOTES TO THE FINANCIAL
+STATEMENTS .
+
+1) Reporting entity
+
+Bank of Ceylon (UK) Ltd (the “Bank”) is a
+company incorporated in the United Kingdom
+under the Companies Act 2006.
+
+The Bank is authorised by the PRA and regulated
+by the FCA and the PRA to carry on certain
+regulated financial services activities including
+deposit-taking and dealing in investments as
+principal. The Bank offers retail services, corporate
+and correspondent banking facilities in addition to
+trade finance services.
+
+Information regarding the principal activities and
+operations of the Bank and its regulatory status is
+set out in the Report of the Directors and in the notes
+to the financial statements.
+
+2) Basis of accounting
+
+These financial statements of the Bank have been
+prepared in accordance with International Financial
+Reporting Standards as adopted by the European
+Union. They were authorised for issue by the
+Bank’s Board of Directors on the 24" of April 2020.
+
+a) Going concern basis of accounting
+
+The financial statements have been prepared on
+a going concern basis. The Directors have
+considered relevant information, including the
+annual budget, future cash flows, strong capital
+position and liquidity positions, and the impact
+of subsequent events in making their
+assessment. The Directors have also considered
+the impact the COVID-19 pandemic on its
+operations, particularly the ability of staff to
+perform key functions and the Bank’s ability to
+meet its financial obligations in a timely
+manner. This analysis also considers the
+effectiveness of available measures to assist in
+mitigating the impact. Further information is
+provided in the Report of the Board of Directors
+on page 5.
+
+b)
+
+c)
+
+d)
+
+3)
+
+Based on these assessments and having regard
+to the resources available to the entity, the
+Directors have concluded that there is no
+material uncertainty and that they can continue
+to adopt the going concern basis in preparing
+the annual report and accounts.
+
+Functional and presentational currency
+
+The functional currency of the Bank is pounds
+Sterling, the currency of the country in which
+the bank is incorporated. These financial
+statements are presented in Sterling (GBP) and
+amounts are rounded to the nearest thousand
+pounds, except when otherwise indicated.
+
+Basis of measurement
+
+These financial statements have been prepared
+on the historical cost basis.
+
+Critical accounting estimates
+
+The preparation of the financial statements in
+accordance with IFRS requires the use of
+certain critical accounting estimates. It also
+requires management to exercise judgement in
+the process of applying the accounting policies.
+There have been no significant changes in the
+basis upon which critical estimates and
+judgements have been determined compared to
+those applied as of 31** December 2018.
+
+Estimates and underlying assumptions are
+reviewed on an ongoing basis. Revisions to
+accounting estimates are recognised in the
+period in which the estimate is revised and in
+any future periods affected.
+
+Significant accounting policies
+
+The accounting policies set out below have been
+applied consistently to all periods presented in
+these financial statements.
+
+Interest income and expense
+
+Interest income and interest expense are
+
+recognised in the statement of comprehensive
+income for all interest-bearing financial
+
+32[Page
+Bank of Ceylon (UK) Limited
+
+b)
+
+c)
+
+d)
+
+instruments classified as held to maturity or
+other loans and receivables using the effective
+interest method.
+
+The effective interest method is a method of
+calculating the amortised cost of a financial
+asset or liability (or group of assets and
+liabilities) and of allocating the interest income
+or interest expense over the relevant period. The
+effective interest rate is the rate that exactly
+discounts the expected future cash payments or
+
+Teceipts through the expected life of the
+
+financial instrument, or when appropriate, a
+shorter period, to the net carrying amount of the
+instrument. The application of the method has
+
+_ the effect of recognising income (and expense)
+
+receivable (or payable) on the instrument
+evenly in proportion to the amount outstanding
+over the period to maturity or repayment.
+Foreign currency
+
+Transactions in foreign currencies are translated
+to the functional currency, Sterling, at the
+exchange rate at the date of the transaction.
+Monetary assets and liabilities denominated in
+foreign currency are translated into Sterling at
+the closing exchange rate and resultant gains
+and losses on translation are included in the
+statement of comprehensive income.
+
+Fees and commissions
+
+Fees and commission that are not an integral
+part of the effective interest rate are recognised
+as and when the services are performed in
+accordance with IFRS15. Fee and commission
+income include the provision of retail and
+corporate products and services, comprising of
+trade finance, E-cash remittances and treasury
+
+payments.
+Property and equipment
+
+The Company’s premises are shown at fair
+value based on periodic valuation by external
+independent valuer’s less subsequent
+depreciation and impairment losses. Valuations
+are performed with sufficient regularity to
+ensure that the carrying value does not differ
+significantly from fair value at the balance sheet
+date.
+
+The revaluation reserve is released against
+future depreciation and impairment charges.
+Subsequent depreciation and impairment will
+be taken through the income statement.
+
+e)
+
+Annual Financial Report 2019
+
+Items of equipment are measured at cost less
+accumulated depreciation and accumulated
+impairment losses.
+
+Cost includes expenditures that are directly
+attributable to the acquisition of the asset.
+Purchased software that is integral to the
+functionality of the related equipment is
+capitalised as part of that equipment.
+
+The estimated useful lives for the current year
+are as follows:
+
+Buildings 50 years
+Fixtures fittings and furniture 10 years.
+IT equipment and software 5 years
+
+Depreciation methods, useful lives and residual
+values are reassessed at each financial year end
+and adjusted if appropriate.
+
+Intangible assets
+
+Intangible assets comprise computer software
+which is not considered as an integral part of the
+related hardware. Intangible assets acquired by
+the Bank and which have finite useful lives are
+measured at cost less accumulated amortisation
+and impairment losses, if any. Other intangible
+assets acquired by the Bank and which have
+infinite useful lives are measured at cost less
+accumulated impairment losses, if any.
+
+Amortisation
+
+Amortisation is recognised in the consolidated
+income statement on a straight-line basis over
+the estimated useful lives of the intangible
+assets from the date they are available for use.
+The estimated useful lives for the current and
+comparative periods are as follows:
+
+Computer software 5 years
+Financial assets and financial _ liabilities
+(applicable policies from 1* January 2019).
+
+i) Classification
+
+On initial recognition, financial assets are
+classified as measured at amortised cost,
+fair value through other comprehensive
+income or fair value through profit or loss,
+depending on the Bank’s business model
+for managing the financial assets and
+
+33|Page
+Bank of Ceylon (UK) Limited
+
+whether the cash flows represent solely
+payments of principal and interest. The
+Bank assesses its business models at a
+portfolio level based on its objectives for
+the relevant portfolio, how the performance
+of the portfolio is managed and reported,
+and the frequency of asset sales. Financial
+assets with embedded derivatives are
+considered in their entirety when
+considering their cash flow characteristics.
+The Bank reclassifies financial assets when
+and only when its business model for
+managing those assets changes. <A
+reclassification will only take place when
+the change is significant to the Bank’s
+operations.
+
+Reclassifications are expected to be rare.
+Equity investments are measured at fair
+value through profit or loss unless the Bank
+elects at initial recognition to account for
+the instruments at fair value through other
+comprehensive income. For _ these
+instruments, principally strategic
+investments, dividends are recognised in
+profit or loss, but fair value gains and losses
+are not subsequently reclassified to profit or
+loss following de-recognition of the
+investment.
+
+ii) Recognition
+
+The Bank initially recognises loans,
+advances and deposits at fair value on the
+date at which they are originated.
+
+iii) De-recognition
+
+The Bank derecognises a financial asset
+when the contractual rights to the cash
+flows from the financial asset expire, or
+when it transfers the financial asset in a
+transaction in which substantially all the
+risks and rewards of ownership of the
+financial asset are transferred.
+
+The Bank derecognises a financial liability
+when its contractual obligations are
+discharged or cancelled or expire.
+
+iv) Offsetting
+
+Financial assets and liabilities are offset and
+the net amount presented in the statement of
+financial position when and only when the
+Bank has a legal right to set off the
+recognised amounts and it intends either to
+
+Annual Financial Report 2019
+
+settle on a net basis or to realise the asset
+and liability simultaneously.
+
+Income and expenses are presented on a net
+basis only when permitted by IFRS, or for
+gains and losses arises from similar
+transactions such as the Bank’s trading
+activity.
+
+v) Amortised cost measurement
+
+The amortised cost ofa financial asset or liability
+is the amount at which the financial asset or
+liability is measured at initial recognition, minus
+the principal repayments, plus or minus the
+cumulative amortisation using the effective
+interest method of any difference between the
+initial amount recognised and the maturity
+amount minus any reduction for impairment.
+
+vi) Fair value measurement
+
+Fair value is the amount for which an asset could
+be exchanged, or a liability settled, between
+knowledgeable, willing parties in an arm’s
+length transaction on the measurement date.
+
+When a market for financial instrument is not
+active, the Bank establishes fair value using
+valuation techniques. Valuation techniques
+include using recent arm’s length transactions
+between knowledgeable, willing parties if
+available), reference to the current fair value of
+other instruments that are substantially the same,
+net present value techniques and discounted cash
+flow methods. The chosen valuation technique
+makes maximum use of market inputs, relies as
+little as possible on estimates specific to the
+Bank, incorporates all factors that market
+participants would consider in setting a price,
+and is consistent with accepted economic
+methodologies for pricing financial instruments.
+Inputs to valuation techniques reasonably
+represent market expectations and measures of
+the risk-return factors inherent in the financial
+instrument.
+
+Assets are measured at a bid price.
+
+vii) Impairment
+
+Impairment provisioning ECL (expected credit
+loss) is determined by using a staging model
+
+34|Page
+Bank of Ceylon (UK) Limited
+
+and forward-looking information. Impairment
+provision on all financial assets are recognised
+either on 12-month losses or lifetime expected
+losses.
+
+- Probability of Default (PD) is used to assess
+the likelihood of a default event occurring
+within the next 12 months.
+
+- Loss Given Default (LGD) represents the
+extent of loss on a defaulted exposure.
+
+- Exposure at Default (EAD) is the amount
+expected to be owed, at the time of the
+default.
+
+- Expected credit loss (ECL) is calculated as
+the discounted multiple of the Probability of
+default, the exposure at default and the loss
+given a default.
+
+Stage 1 — are financial assets that have not
+decreased significantly in credit quality since
+initial recognition or that have low credit risk at
+the reporting date. In forming this judgement
+Credit department and Risk department jointly
+review and update all customer account
+information, in making an assessment for all
+lending. In assessing the credit risk of
+investments and treasury assets, the Bank uses
+external rating agency data to identify any
+changes since initial recognition. For stage |
+assets, the Bank recognises a 12-month
+expected loss allowance on initial recognition.
+Interest revenue is calculated on the gross
+carrying amount of the asset.
+
+Stage 2- exposures are where an account has
+exceeded 30 days past due or where a there has
+been a significant increase in credit risk since
+initial recognition. An exposure will be
+considered to have deteriorated, where there are
+delays in payments or where external
+information reflects a weakening in credit risk.
+In the case of investments, a rating decline
+could cause the staging to be downgraded. The
+Bank also takes into consideration the impact of
+macroeconomic factors on an_ institutional
+counterparty. Where there has been a
+subsequent improvement in credit risk such that
+a Stage 2 asset is considered to have same or
+better credit risk as it had at inception the asset
+shall be re-classified as Stagel. For Stage 2
+assets lifetime ECL is recognized, but interest
+revenue is still calculated on the gross carrying
+
+8)
+
+h)
+
+i)
+
+‘undrawn
+
+Annual Financial Report 2019
+
+amount of the asset.
+Stage 3 - are exposures where there is objective
+evidence that the credit risk is impaired. For
+Stage 3 assets, lifetime ECL is recognized and
+interest revenue is calculated on the net carrying
+
+amount (that is, net of credit allowance).
+Significant increase in credit risk (SICR)
+
+The Bank defines a SICR, in the following
+hierarchical order:
+
+* Change in credit risk based on qualitative
+indicators causing the asset to be included
+under watch list, forbearance and
+bankruptcies.
+
+* Exposure becomes 30 days past due.
+
+IFRS 9 impairment assessment is also applied
+to all off balance sheet exposures including
+commitments and financial
+guarantees.
+
+Cash and cash equivalents
+
+Cash and cash equivalents include cash in hand
+and funds held with banks on current account
+with no contractual maturity.
+
+Loans and advances
+
+Loans and advances are non-derivative
+financial assets with fixed or determinable
+payments that are not quoted in an active
+market and that the Bank does not intend to sell
+immediately or in the near term.
+
+Loans and advances are initially measured at
+fair value and subsequently measured at their
+amortised cost using the effective interest
+method, except when the Bank chooses to carry
+the loans and advances at fair value through
+profit or loss.
+
+Pension liabilities
+
+The Bank operates a defined contribution
+pension scheme and the amount charged to the
+Statement of Comprehensive Income in respect
+of pension costs is the contribution payable in
+the period.
+
+j) Taxation
+
+35| Page
+Bank of Ceylon (UK) Limited
+
+Annual Financial Report 2019
+
+k)
+
+I)
+
+m)
+
+Current tax is the expected tax payable on the
+taxable income for the year using tax rates
+enacted at the date of the statement of financial
+position.
+
+Deferred tax is provided on temporary
+differences between the carrying amounts of
+assets and liabilities for financial reporting
+purposes and the amounts used for taxation
+
+purposes.
+
+VAT
+
+Expenses are recognised gross of any amounts
+of value added tax. Where value added tax is
+recoverable in part from the taxation authorities
+it is reflected as income within the Statement of
+Comprehensive Income.
+
+Trading profit
+
+Trading profit relates to foreign exchange
+income derived from currency transactions and
+the revaluation of assets and liabilities
+denominated in currencies other than Sterling.
+
+Identity of related parties
+
+Related parties comprise the shareholder and its
+related entities, directors and key management
+of the Bank. The Bank, in the ordinary course
+of business, enters into transactions, at agreed
+terms and conditions, with other business
+enterprises or individuals that fall within the
+definition of related party contained in
+International Accounting Standard 24.
+
+Unless otherwise stated all financial figures
+have been rounded off to the nearest one
+thousand GBP.
+
+36|Page
+Bank of Ceylon (UK) Ltd
+
+4) Interest expense
+
+Annual Financial Report 2019
+
+Year ended Year ended
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+Interest paid to related entities 774 398
+Other interest paid on deposits 144 69
+918 467
+5) Fees and commissions
+Year ended Year ended
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+International commission 534 569
+Domestic commission 282 245
+816 814
+6) Administration Expenses
+Yearended Year ended
+31 December 31 December
+2019 2018
+Note GBP 000 GBP 000
+“Wages and salaries including directors - 1,015 1,062
+Social security costs 138 147
+Other pension costs 8 38 39
+Total staff costs 7 1,191 1,248
+Fees payable to Bank’s auditors for the audit of
+the Bank’s financial statements 88 62
+Other administration expenses 786 793
+Total administration expenses 2,065 2,103
+7) Staff Costs
+Year ended Year ended
+31 December 31 December
+2019 2018
+Note GBP 000 GBP 000
+Staff
+Salary and allowances 775 825
+Social security costs 99 119
+Pension costs 8 38 39
+912 983
+Directors
+Salary and allowances 10 240 237
+Social security costs 10 39 28
+
+37|Page
+Bank of Ceylon (UK) Ltd
+
+Annual Financial Report 2019
+
+Total staff costs
+
+The average number of persons employed by
+the Bank during the period was made up as
+
+follows:
+
+Executive directors
+
+Non-executive directors
+Executive management
+Clerical and other grades
+
+8) Pension costs
+
+279 265
+
+1,191 1,248
+
+Year ended Year ended
+31 December 31 December
+2019 2018
+
+2 2
+
+2 2
+
+3 3
+
+21 17
+
+28 24
+
+The Bank makes defined contributions to the personal pension funds of employees under Group
+Personal Pension arrangements. Contributions are recognised in the Statement of Comprehensive
+
+Income as they are payable.
+
+9) Directors’ Emoluments
+
+The total emoluments of the directors were GBP 239,868 (2018 — GBP 237,027). The highest paid
+director received emoluments of GBP 94,508 in 2019. The highest paid director in 2018 received GBP
+
+95,426.
+
+10) Property and Equipment
+
+Cost
+
+Cost at 1 January 2019
+Additions in the year
+Revaluation
+
+Transfers
+
+Cost at 31 December 2019
+
+Accumulated depreciation
+Depreciation at 1 January 2019
+Depreciation charged for the year
+Revaluation
+
+Depreciation at 31 December 2019
+
+Net book value at 31 December 2019
+
+Furniture
+Freehold Computer & Land Capital
+
+Property Equipment Equipment GBP WIP Total
+GBP 000 = GBP 000 GBP 000 000 GBP 000 GBP 000
+1,500 80 197 1,450 - 3,227
+. 1 - - 162 163
+- Q@) : (1)
+1,500 81 196 1,450 162 3,389
+(196) (60) (86) - - (342)
+(30) (7) (20) - - (57)
+9) : : : : (9)
+(235) (67) (106) - - (408)
+1,265 14 90 ~—s- 1,450 162 2,981
+
+38|Page
+Bank of Ceylon (UK) Ltd
+
+Annual Financial Report 2019
+
+Cost
+
+Cost at 1 January 2018
+Additions in the year
+Revaluation
+
+Transfers
+
+Cost at 31 December 2018
+
+Accumulated depreciation
+Depreciation at | January 2018
+
+Depreciation charged for the year
+Revaluation
+Depreciation at 31 December 2018
+
+Net book value at 31 December 2018
+
+11) Intangible assets
+
+Cost
+
+Cost at 1 January 2019
+Additions in the year
+Revaluation
+
+Cost at 31 December 2019
+
+Accumulated Amortisation
+Depreciation at 1 January 2019
+Depreciation charged for the year
+Depreciation at 31 December 2019
+
+Net book value at 31 December 2019
+
+Furniture
+Freehold Computer &
+Property Equipment Equipment Land Total
+GBP 000 GBP 000 GBP 000 GBP000 GBP 000
+1,500 76 180 1,450 3,206
+- 4 17 - 2]
+1,500 80 197 L450 3,227
+(157) (52) (68) - (277)
+(30) (8) (18) - (56)
+(9) - - (9)
+(196) (60) (86) - (342)
+1,304 20 111 1,450 2,885
+Total
+GBP 000
+707
+707
+(674)
+(15)
+(689)
+18
+
+39|Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+Computer
+software Total
+oo GBP 000 GBP 000 ©
+Cost
+Cost at 1 January 2018 707 707
+Additions in the year —_ -
+Revaluation - -
+Transfers - -
+Cost at 31 December 2018 707 707
+Accumulated Amortisation
+Depreciation at 1 January 2018 (630) (630)
+Depreciation charged for the year (44) (44)
+Depreciation at 31 December 2018 (674) (674)
+Net book value at 31 December 2018 33 33
+12) ECL provisioning
+Loans and advances to banks Stage 1 Stage 2 Stage 3 2019 Total
+GBP 000
+Balance at 1 January (2) - - (2)
+Net re-measurement of loss allowance (20) - - (20)
+Balance at 31 December (22) - - (22)
+Loans and advances to customers Stage 1 Stage 2 Stage 3 2019 Total
+GBP 000
+Balance at 1 January (9) - (23) (32)
+Net re-measurement of loss allowance (7) - - (7)
+Balance at 31 December (16) ” (23) (39)
+Investments . Stage 1 Stage 2 Stage 3 2019 Total
+; GBP 000
+Balance at 1 January : (37) - - (37)
+Net re-measurement of loss allowance - (56) - - (56)
+Balance at 31 December (93) - - (93)
+
+40|Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+Loans and advances to banks Stage 1 Stage 2 Stage 3 2018 Total
+GBP 000
+Balance at | January (10) - - . (10)
+Net re-measurement of loss allowance 8 - - 8
+Balance at 31 December (2) - - (2)
+Loans and advances to customers Stage 1 Stage 2 Stage 3 2018 Total
+GBP 000
+Balance at I January (3) - (23) (26)
+Net re-measurement of loss allowance (6) - - (6)
+Balance at 31 December (9) ~ (23) (32)
+Investments Stagel Stage 2 Stage 3 2018 Total
+GBP 000
+Balance at | January (22) - - (22)
+Net re-measurement of loss allowance (15) - - (15)
+Balance at 31 December (37) - - (37)
+
+Loans and advances to customers includes an opening provision of GBP23,000 which is categorised under
+stage 3 of IFRS 9.
+
+During the year one of the commercial loans assessed, was re-classified under stage 2 following an
+agreement to defer capital repayments by one year. This loan is secured against a high-quality property with
+a loan to value of 37%. The ECL provisioning is unchanged and has been computed on a life time basis.
+
+A further two loans in the buy-to-let category have been reclassified under stage 2 as payments have
+exceeded 30 days past due at the accounting date. Both these loans are secured against high-quality
+properties which have loan to values of 58% and 35%. In view of the adequate security coverage and asset
+quality, the ECL provisions remains unchanged and have been computed on a life time basis.
+
+With the exception of these loan all other assets have been assessed for credit risk with no evidence of a
+significant increase in the individual credit risks.
+
+41}Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+13) Analysis of the tax charge
+Year ended Year ended
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+(Loss)/profit from ordinary activities before tax 108 85
+Tax at 19% (2018 — 19 %) 21 16
+Tax in relation to prior year - -
+Effect of expenses not deductible for tax purposes - 7
+Effect of tax rate changes (2) -
+Temporary differences not recognised (16) (23)
+(Credit) / Charge for the year 3 -
+
+No deferred tax asset has been recognised. Management has decided not to recognise a deferred tax asset of
+GBP 217,101 arising out of GBP 1, 277,066 of timing differences, until the Bank establishes a consistent
+record of profitability.
+
+14) Loans and advances to banks
+As at As at
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+Repayable within one month 143,785 133,963
+Repayable within three months but greater than 1 month 87 56
+Repayable with agreed maturity within 1 year but greater
+74 2,500
+than 3 months
+143,946 136,519
+Less impairment loss allowance (22) (2)
+Net Loans 143,924 136,517
+
+The ECL provision assessed at the end of the year is GBP 22,000. Loans and advances to banks included
+GBP 0 in relation to bills discounted which were issued by BOC Group companies (2018 GBP 0).
+
+15) Loans and advances to customers
+
+As at 31 December 2019
+Gross Impairment Carrying
+amount  ailowances amount
+GBP 000 GBP 000 GBP 000
+Personal loans and advances 8,874 (16) 8,858
+Commercial loans and advances 8,742 (23) 8,719
+17,616 (39) 17,577
+
+42|Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+As at 31 December 2018
+
+Gross Impairment Carrying
+
+amount allowances amount
+
+GBP 000 GBP 000 GBP 000
+
+Personal loans and advances 5,492 (9) 5,483
+Commercial loans and advances 7,248 (23) 7,225
+12,740 (32) 12,708
+
+The IFRS 9 provision against all loans granted has been assessed at GBP 39,000 at the end of 2019.
+(2018 GBP 32,000 of which GBP23,000 is under [AS39). Loans and advances to staff were GBP
+93,435 (2018 GBP 44,664)
+
+16) Investments
+
+As at As at
+
+31 December 31 December
+
+2019 2018
+
+GBP 000 GBP 000
+
+Investment securities measured at amortised cost 4,891 4,679
+Less impairment loss allowance (93) (37)
+4,798 4,642
+
+The above assets have been classified as being held to collect and so have been recognised at amortised
+cost. Investment securities are investments in US dollar denominated Sri Lanka Government and
+Maldives Sovereign bonds. The IFRS 9 provision at the end of the year has been assessed at GBP93,000
+and reflects the increase in new acquisitions.
+
+17) Deposits by banks
+
+As at As at
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+Repayable on demand or at short notice 3,881 3,790
+Repayable with agreed maturity within three months 128,071 117,200
+Repayable with agreed maturity within 3 months & lyr - -
+Repayable with agreed maturity of over 1 year. 17,448 17,900
+149,400 138,890
+
+Amounts include the following Parent deposits:
+Repayable on demand or at short notice 1,769 1,489
+Repayable with agreed maturity within three months 118,300 117,200
+Repayable with agreed maturity over 3 months & lyr - -
+Repayable with agreed maturity of over 1 year. 17,448 17,900
+, 137,517 136,589
+
+43|Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+18) Customer account deposits
+As at As at
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+Repayable on demand or at short notice 6,143 4,968
+Repayable with agreed maturity within three months 39 38
+Repayable with agreed maturity over 3 months & lyr 363 361
+6,545 5,367
+19) Other Liabilities
+As at As at
+31 December 31 December
+2019 2018
+GBP 000 GBP 600
+Accrued expenses 195 126
+Trade payables 669 552
+864 678
+20) Share Capital
+As at As at
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+15,000,000 (2018: 15,000,000) Authorised, issued and fully
+paid shares of GBP 1 each 15,000 15,000
+
+21) Related Parties and Ultimate Controlling Parties
+
+The Bank of Ceylon (UK) Limited is a wholly owned subsidiary of Bank of Ceylon, a licensed commercial
+bank established in Sri Lanka under the Banking Act No. 30 of 1988 and owned by the Government of Sri
+Lanka. The registered office of the Parent is situated at No. 01, Bank of Ceylon Square, Bank of Ceylon
+Mawatha, Colombo 01, Sri Lanka. Copies of the Parent consolidated accounts are obtainable at
+http://web.boc.lk/index.php.
+
+The Bank has a related party relationship with its Parent, associates, directors and executive officers including
+business entities over which they can exercise control or significant influence or which can exercise significant
+influence over the Bank, The Bank’s management are of the opinion that the terms of such transactions are not
+significantly different from those that could have been obtained from third parties.
+
+The Bank enters into commercial transactions in the ordinary course of business with these parties on an arm’s
+length basis. In the normal course of business, the Bank has discounted bills of exchange, received
+commissions on exports bills and paid interest on deposits received from the parent during the year. An annual
+rolling ten-year deposit of GBP17.9 million matures during 2025.
+
+Interest payments to the Bank of Ceylon in respect of deposits held during 2019 amounted to GBP774,000
+(2018 GBP398,000). As at the 31 December 2019, Bank of Ceylon (UK) Limited held deposits of
+GBP 135,748,444 (2018 GBP135,100,113) excluding Vostro balances on behalf of the Bank of Ceylon.
+
+44|Page
+Bank of Ceylon (UK) Ltd Annual] Financial Report 2019
+
+22) Other assets
+
+As at As at
+31 December 31 December
+2019 2018
+. GBP 000 GBP 000
+Accrued Interest 116 188
+Variation margin - 280
+Prepayments 67 57
+Others 34 13
+; 217 538
+
+23) Contingent Liabilities
+As at As at
+31 December 31 December
+2019 2018
+GBP 000 GBP 000
+Guarantees issued - 160 160
+Documentary credits 222 391
+382 5§1
+
+Documentary credits relate to several confirmations of letters of credit received from correspondent banks on
+behalf of UK export customers.
+
+Guarantees issued relates to a single guarantee provided against a guarantee from the parent on behalf of the
+customer.
+
+45|Page
+Bank of Ceylon (UK) Ltd
+
+24) Interest rate risk
+
+31 December 2019
+
+Assets
+
+Cash at bank and in hand
+
+Loans and advances to banks
+Loans and advances to customers
+Debt securities
+
+Property and equipment
+Intangible assets
+
+Other assets
+
+Total assets
+
+Liabilities
+Deposits by Banks
+Customer accounts
+Other liabilities
+
+Share capital
+
+Revaluation Reserve
+Retained earnings
+
+Total liabilities and equity
+Net interest gap
+Cumulative interest gap
+
+31 December 2018
+
+Assets
+
+Cash at bank and in hand
+
+Loans and advances to banks
+Loans and advances to customers
+Debt securities
+
+Property and equipment
+Intangible assets
+
+Other assets
+
+Total assets
+
+Liabilities
+Deposits by Banks
+Customer accounts
+Other liabilities
+
+Share capital!
+
+Revaluation Reserve
+Retained earnings
+
+Total liabilities and equity
+
+_ Net interest gap
+Cumulative interest gap
+
+Annual Financial Report 2019
+
+Carrying Non-Interest
+Value 0-3 Months 3-12 Months Over 1 Year Bearing
+GBP 000 GBP 000 GBP 000 GBP 000 GBP 000
+770 a - - - 7710
+143,924 — 143,815 109 - -
+17,577 — 17,577 - - -
+4,798 - 1,648 3,204 (54)
+2,981 ° - - - 2,981
+18 - - - 18
+217 - - - 217
+170,285 . 161,392 1,757 3,204 3,932
+149,400 128,071 17,448 - 3,881
+6,545 1,713 363 - 4,469
+864 - - - 864
+156,809 129,784 17,811 - 9,214
+15,000 _ - - 15,000
+408 - - - 408
+(1,932) - - - (1,932)
+170,285 129,784 17,811 - 22,690
+31,608 (16,054) 3,204 (18,758)
+
+31,608 15,554 18,758
+Carrying Non-Interest
+Value 0-3 Months 3-12 Months Over J Year Bearing
+GBP 000 GBP 000 GBP 000 GBP 000 GBP 000
+992 - - - 992
+136,517 134,017 2,500 - -
+12,708 12,708 - - -
+4,642 1,551 2,361 775 (45)
+2,885 - - - 2,885
+33 - - - 33
+538 - - - 538
+158,315 148,276 4,861 778 4,403
+138,890 117,205 17,900 - 3,785
+5,367 1,764 361 - 3,242
+678 - - - 678
+144,935 118,969 18,261 - 7,705
+15,000 - - - 15,000
+417 - - - 417
+(2,037) - - - (2,037)
+158,315 118,969 18,261 - 21,085
+29,307 (13,400) 775 (16,682)
+
+29,307 15,907 16,682
+
+46;Page
+Bank of Ceylon (UK) Ltd
+
+Annual Financial Report 2019
+
+Interest rate risk arises from the possibility that changes in interest rates could adversely affect the value of a
+financial instrument which include loans, deposits and debt securities. An increase in interest rates by 1.00%
+would contribute additional interest income of GBP 187,580 (2018 - GBP 166,864) and vice-versa will produce
+
+a reverse effect.
+
+25) Maturity Analysis
+3-12 Over I
+
+31 December 2019 Total 0-3 Months Months Year Undated
+‘Assets GBP 000 GBP 000 GBP 000 GBP 000 GBP 000
+Cash at bank and in hand 770 - - - 7710
+Loans and advances to banks 143,924 143,815 109 - -
+Loans and advances to customers 17,577 5 $32 17,040 -
+Debt securities 4,798 - 1,649 3,149 -
+Property and equipment 2,981 - - - 2,981
+Intangible assets 18 - - - 18
+Other assets 217 217 - - -
+Total assets 170,285 144,037 2,290 20,189 3,769
+Liabilities
+Deposits by Banks 149,400 131,952 - 17,448 -
+Customer accounts 6,545 6,182 363 - -
+Other liabilities 864 - - - 864
+
+156,809 138,134 363 17,448 864
+Share capital 15,000 - - - 15,000
+Revaluation Reserve 408 - - - 408
+Retained earnings (1,932) - - - (1,932)
+Total liabilities and equity 170,285 138,134 363 17,448 14,340
+Net maturity gap 5,903 1,927 2,741 (10,571)
+Cumulative maturity gap 5,903 7,830 10,571
+
+3-12 Over I
+
+31 December 2018 Total 0-3 Months Months Year Undated
+Assets GBP 000 GBP 000 GBP 000 GBP 000 GBP 000
+Cash at bank and in hand 992 - - - 992
+Loans and advances to banks 136,517 134,017 2,500 - -
+‘Loans and advances to customers 12,708 130 374 12,204 -
+Debt securities 4,642 1,551 2,319 772
+Property and equipment 2,885 - - - 2,885
+Intangible assets 33 - - - 33
+Other assets 538 538 - : -
+Total assets 158,315 136,236 5,193 12,976 3,910
+Liabilities
+Deposits by Banks 138,890 120,990 - 17,900 -
+Customer accounts 5,367 5,006 361 - -
+Other liabilities 678 - - - 678
+
+144,935 125,996 361 17,900 678
+Share capital 15.000 - - - 15,000
+Revaluation Reserve 417 - - - 417
+Retained earnings (2,037) - - - (2,037)
+Total liabilities and equity 158,315 125,996 361 17,900 14,058
+Net maturity gap 10,240 4,832 (4,924) (10,148)
+
+47|Page
+Bank of Ceylon (UK) Ltd
+
+Annual Financial Report 2019
+
+Cumulative maturity gap
+
+26) Foreign exchange exposure
+
+10,240
+
+15,072
+
+10, 148
+
+The Bank’s exposure to foreign currency risk, based on notional amounts, was as follows:
+
+31 December 2019
+
+Assets
+
+Cash at bank and in hand
+Loans and advances to banks
+Loans and advances to customers
+Debt securities
+
+Property and equipment
+Intangible assets
+
+Other assets
+
+Total assets
+
+Liabilities
+
+Deposits by Banks
+Customer accounts
+
+Other liabilities
+
+Share capital
+
+Revaluation reserve
+Retained earnings
+
+Total liabilities and equity
+Gross exposure (liability)
+Foreign exchange contracts
+Net exposure (liability)
+
+31 December 2018
+
+Assets
+
+Cash at bank and in hand
+Loans and advances to banks
+Loans and advances to customers
+Debt securities
+
+Property and equipment
+Intangible assets
+
+Other assets
+
+Total assets
+
+Liabilities
+
+Deposits by Banks
+
+Customer accounts
+
+Other liabilities
+
+Share capital
+
+Revaluation reserve
+Retained earnings
+
+Total liabilities and equity
+Gross exposure (liability)
+Foreign exchange contracts
+Net exposure (liability)
+
+Total GBP Euro LKR USD
+GBP 000 GBP 000 GBP 000 GBP 000 GBP 000
+770 112 514 - 144
+143,924 131,782 - - 12,142
+17,577 17,205 372 - -
+4,798 - - - 4,798
+2,981 2,981 - - -
+18 18 - - -
+217 149 i - 67
+170,285 152,247 887 - 17,151
+149,400 131,689 940 - 16,771
+6,545 6,478 32 - 35
+864 857 14 - (7)
+156,809 139,024 986 - 16,799
+15,000 15,000 - - -
+408 408 - - ”
+(1,932) (1,932) - - -
+170,285 152,500 986 - 16,799
+(253) (99) - 352
+(253) (9) - 352
+Total GBP Euro LKR USD
+GBP 000 GBP 000 GBP 000 GBP 600 GBP 000
+992 256 705 3)
+136,517 131,141 - 5,376
+12,708 12,129 379 - -
+4,642 - - - 4,642
+2,885 2,885 - - -
+33 33 ~ - -
+538 126 281 : 131
+158,315 146,570 1,565 - 10,180
+138,890 130,572 1,520 0 6,798
+$,367 §,283 46 - 38
+678 $10 20 - 148
+144,935 136,365 1,586 0 6,984
+15,000 15,000 - - -
+417 417 - - -
+(2,037) (2,037) - - -
+158,315 149,745 1,586 0 6,984
+(3,175) (21) 3,196
+
+3,078 - - (3,096) |
+(97) (21) 0 100
+
+48[ Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+Foreign exchange risk is the sensitivity to potential movements in exchange rates of a position’s value that is
+denominated in a different currency from the base currency. Hence, a long or open position in a foreign
+currency may produce a loss if that currency depreciates against the base currency. As at 31 December 2019
+a 5% strengthening of Sterling against the US Dollar would have reduced profits by GBP 17,700 and vice-
+versa of a reverse effect.
+
+27) Fair Value
+
+The term “financial instrument” includes both financial assets and financial liabilities. The fair value of a
+financial instrument is the amount for which an asset could be exchanged, or a liability settled, between
+knowledgeable, willing parties in an arm’s length transaction.
+
+The Bank analyses financial instruments into the following three categories as outlined below.
+
+id
+
+Level 1 financial instruments are those that are valued using unadjusted quoted prices in active
+markets for identical financial instruments. These financial instruments consist primarily of
+liquid fisted equity shares and certain exchange-traded derivatives.
+
+Level 2 financial instruments are those valued using techniques based primarily on observable
+market data. Instruments in this category are valued using quoted prices for similar instruments
+or identical instruments in markets which are not considered to be active; or valuation
+techniques where all the inputs that have a significant effect on the valuation are directly or
+indirectly based on observable market data. Financial instruments included are other
+government agency securities, investment-grade corporate bonds, less liquid listed equities,
+state and municipal obligations, certain money market securities and most OTC derivatives.
+
+Level 3 financial instruments are those valued using techniques that incorporate information
+other than observable market data. Instruments in this category have been valued using a
+valuation technique where at least one input, which could have a significant effect on the
+instrument’s valuation, is not based on observable market data. Financial instruments included
+are primarily unlisted equity shares.
+
+Following the adoption of IFRS 9, the financial instruments as at 1‘ January 2019 and at the end of 31*
+December have been classified at amortised cost and there are no financial instruments measured at fair
+value through the profit and loss (FVTP).
+
+The following table set out financial instruments that are not measured at fair value and analyses them
+by the level in the fair value hierarchy into their which fair value measurement would be categorised,
+
+49|Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+31 December 2019 Carrying Fair Level 1 Level 2 Level 3
+Assets Value Value GBP 000 GBP 000 GBP 000
+Cash at bank and in hand 770 770 770 -
+Loans and advances to banks 143,924 - - 143,924 -
+Loans and advances to customers , 17,577 - - - 17,577
+Investment securities 4,798 4,840 - 4,840 -
+Total 167,069 5,610 - 149,534 17,577
+Liabilities
+
+Deposits by Banks 149,400 - - 149,400 -
+Customer accounts 6,545 - - 6,545 -
+Total 155,945 - - 155,945 -
+31 December 2018 Carrying Fair Level 1 Level 2 Level 3
+Assets Value Value GBP 000 GBP 000 GBP 000
+Cash at bank and in hand 992 992 - 992 -
+Loans and advances to banks 136,517 136,517 - 136,517 -
+Loans and advances to customers 12,708 12,708 - - 12,708
+{investment securities 4.642 4.613 - 4,613 -
+Total 154,859 154,830 - 142,122 12,708
+Liabilities
+
+Deposits by Banks 138,890 - - 138,890 -
+Customer accounts 5,367 -_ - 5,367 :
+Total 144,287 - - 144,257 -
+
+The cash carrying value approximates to the fair value and therefore no fair value measurement has been
+identified in the above table.
+
+Information on how fair values are calculated for financial assets and liabilities in the table are explained
+below.
+
+Loans and Advances to Banks
+The fair values approximate the carrying amounts, as their maturities are generally short dated
+
+Investment securities
+
+The fair value of the investment securities has been based on observed market prices for those securities
+that have an active trading market (fair value level 1 assets), or using observable inputs (in the case of
+fair value level 2 assets).
+
+28) Capital Management
+The Bank’s approach to capital management is set out in the Strategic Report. The regulatory capital of
+the Bank was GBP13,463,000 at 31 December 2019 after deducting the book value of intangible assets
+from shareholder’s funds and adjusting for transitional relief under IFRS9. (GBP13,394,000 at 31
+December 2018).
+
+29) Subsequent events
+
+On 30 January 2020 the World Health Organisation declared the Coronavirus (Covid-19) outbreak to be
+a public health emergency of international concern. Governments worldwide have taken unprecedented
+
+50|Page
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+steps to combat the spread of Covid-19. This has resulted in significant social and economic disruption
+to the areas of operation of the Bank. The directors have considered the potential impact on the Bank
+which is discussed in the Report of the Board of Directors at page 5 and the statement of going concern
+
+at Note 2a.
+
+51|Page
+¢
+
+Bank of Ceylon (UK) Ltd Annual Financial Report 2019
+
+UNAUDITED FINANCIAL INFORMATION
+
+4
+
+The principal activity of the Bank of Ceylon (UK) Ltd is providing retail and wholesale banking services in
+the UK. Please refer to the basis of preparation for further details on how the information was prepared.
+
+Country-by-Country disclosure (GBP 000)
+
+Country Turnover Profit/(Loss) Corporation Subsidies Headcount
+before tax tax received (including
+paid/received temp/contract
+staff)
+GBP 000 GBP 000 GBP 000 GBP 000
+UK 3,245 108 - - 28
+Globa! 3,245 108 - - 28
+
+Basis of preparation
+
+Country: The geographical location of the Company considers the country of incorporation or residence as
+well as the relevant tax jurisdiction. In this context, the countries applicable will be the United Kingdom
+
+Turnover: Bank of Ceylon (UK) Ltd defines revenue, as the sum of the following income statement items:
+e Income from retail and commercial lending
+Income from treasury operations
+e Income from investments
+
+Fee based income
+
+Profit/ (loss) before tax: As with tumover, the definition of profit and loss before tax is consistent with that
+in the Company’s financial statements. These numbers also include profit or loss on the sale of fixed assets.
+
+Corporation tax paid: This column discloses the cash amount of corporation tax paid in each country in 2019.
+
+Public subsidies received: In the context of CBCR, this is interpreted as direct support by the government.
+There were no subsidies received by Bank of Ceylon (UK) Ltd in 2019.
+
+Number of employees: Employee numbers reported reflect the number of employees on a full time, temporary
+and contract basis.
+
+Accounting framework: Amounts reported are based on International Financial Reporting Standards
+(“IFRSs”) as adopted by the EU and applicable law as applied in accordance with the provisions of the
+Companies Act 2006.
+
+52|Page

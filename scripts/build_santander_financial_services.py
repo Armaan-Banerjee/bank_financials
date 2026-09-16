@@ -301,6 +301,94 @@ CAPITAL_SOURCES = (
     "santander.co.uk returns SFS annual reports for FY2019-FY2024 only.\n\n" + ENTITY_NOTE
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (KM1-026, 2026-09-16)
+#
+# FINDING: "no Pillar 3 document is published for this entity at all", which
+# is the strongest of the three non-disclosure findings to have to make and so
+# the one that needs the most evidence behind it. What follows is that
+# evidence, including the check of the PARENT's Pillar 3 that this project has
+# twice been caught skipping.
+# ---------------------------------------------------------------
+ACRMD_2025_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/2025SantanderUKACRMD.pdf"
+ACRMD_2024_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/ACRMD%20FINAL_Dec%2024.pdf"
+
+KM1_SOURCES = (
+    "Sources - checked 2026-09-16 for KM1-026:\n"
+    f"SFS Annual Report 2025 (Risk review; 'Key metrics' headings at credit-risk and capital-risk) - {AR2025}\n"
+    f"SFS Annual Report 2024 - {AR2024_SANT}\n"
+    f"SFS Annual Report 2023 - {AR2023_SANT}\n"
+    f"SFS Annual Report 2022 - {AR2022_SANT}\n"
+    f"SFS Annual Report 2021 - {AR2021_SANT}\n"
+    f"PARENT'S Pillar 3: Santander UK Group Holdings plc / Santander UK plc Additional Capital and Risk "
+    f"Management Disclosures (ACRMD), 31 December 2025 - {ACRMD_2025_URL}\n"
+    f"and 31 December 2024 - {ACRMD_2024_URL} (the 2023, 2022, 2021 and 2020 editions were checked the same "
+    "way).\n\n"
+    "NO KM1 EXISTS FOR THIS ENTITY, ON THREE INDEPENDENT CHECKS.\n"
+    "(1) SFS PUBLISHES NO PILLAR 3 DOCUMENT OF ITS OWN. Its own investor page - santander.co.uk > About "
+    "Santander > Investor relations > Santander Financial Services plc - lists Annual Reports only, one per "
+    "year, 2021 through 2025, and nothing else. The FY2025 report is the newest document of any kind there.\n"
+    "(2) NO ANNUAL REPORT CONTAINS THE TEMPLATE. All five reports (FY2021-FY2025) were downloaded fresh and "
+    "searched case-insensitively across their full text layers. 'KM1', 'key metrics template', 'leverage "
+    "ratio' and 'risk-weighted assets' return ZERO hits in every one of the five. Those zeroes are facts about "
+    "the documents rather than a failed extraction: the same searches return 84-89 hits for 'capital' in each "
+    "report, and the regulatory-capital table itself extracts cleanly (it is the source of the CET1 Capital, "
+    "Tier 1 Capital and Total Capital sheets). The phrase 'Key metrics' does appear twice in each report, but "
+    "neither occurrence is a table of figures: one heads a prose glossary of credit-risk terms (ECL, Stages "
+    "1-3, Stage 3 ratio, Expected Loss) and the other is a single sentence in the capital-risk section - 'The "
+    "main metrics we use to measure capital risk are CET1 capital ratio, and total regulatory capital'. Each "
+    "report carries only 2-6 embedded images (logos and small charts), so no table is hiding in a bitmap.\n"
+    "(3) THE PARENT'S PILLAR 3 CARRIES NO SFS BLOCK EITHER - checked explicitly, because a UK subsidiary's "
+    "numbers normally live in its parent's Pillar 3 rather than in a document of its own. All six ACRMD "
+    "editions (FY2020-FY2025) were searched for 'Santander Financial Services', 'Abbey National Treasury' and "
+    "'SFS'. The full entity name returns ZERO hits in every edition; 'SFS' appears only inside one narrative "
+    "sentence about liquidity governance ('We monitor and manage liquidity risk for the Santander UK plc group "
+    "and SFS separately'), with no figures attached. Again the extraction is demonstrably rich - the FY2025 "
+    "edition returns 286 hits for 'capital', 59 for 'cet1' and 66 for 'leverage ratio' - so the zero is about "
+    "the document. Each ACRMD prints the KM1 template exactly twice, for two entities that are NOT this one: "
+    "Part 1 for the Santander UK Group Holdings plc group and Part 2 for the Santander UK plc (RFB) group.\n"
+    "WHY, STRUCTURALLY. SFS sits OUTSIDE the ring-fence, in the Non-RFB Sub-Group alongside Santander UK Group "
+    "Holdings plc and Santander Equity Investments Limited (FY2025 report, Risk review, capital-risk section: "
+    "the three were party to a Non-RFB Sub-Group Capital Support Deed dated 3 December 2024 and were permitted "
+    "by the PRA to form a core UK group). Its individual disclosures are made through the consolidated group "
+    "rather than separately: the FY2025 report states, under Risk measurement, 'We apply Banco Santander's "
+    "approach to capital measurement and risk management for CRD IV. For more on the CRD IV risk measurement "
+    "of our exposures, see Banco Santander's Pillar 3 report.' That is the bank's own explanation of why it "
+    "prints no template of its own.\n"
+    "NOT AN SDDT EXEMPTION. The PRA consolidated waivers list records five entries for Santander Financial "
+    "Services plc (FRN 146003) - Capital Buffers rules CA.BU.5.1-5.5, Core Large Exposures under CRR Articles "
+    "113(6) and 429a(1), an IRB model permission and a resolution-assessment modification. None is a "
+    "Disclosure (CRR) waiver and none is the SDDT Regime Rule 3.1 opt-in, so the absence here is a "
+    "consolidated-group disclosure arrangement, not a regulatory exemption from disclosing.\n"
+    "ONE CHECK COULD NOT BE COMPLETED AND IS RECORDED AS BLOCKED, NOT AS AN ABSENCE. Banco Santander SA's own "
+    "group Pillar 3 report - the document SFS's Risk review points to - could not be retrieved this session: "
+    "santander.com's Pillar 3 page renders its document list client-side and returned 'No results found' to "
+    "every server-side fetch, and three plausible direct PDF paths all returned HTTP 404 with Content-Type "
+    "text/html. That is a statement about our reach, not about the document. It does not weaken the finding "
+    "above, because Banco Santander's group Pillar 3 is a consolidated report for the Spanish group in euros: "
+    "a UK sub-subsidiary's own KM1 template would not be in it, and the immediate UK parent's Pillar 3, which "
+    "is where UK Disclosure (CRR) would put one, has been checked in full and does not carry it.\n"
+    "LATEST-EDITION CHECK 2026-09-16, on santander.co.uk's own investor-relations pages rather than this "
+    "project's cited URLs: newest SFS Annual Report = FY2025 (31 December 2025), which is already this "
+    "workbook's newest year; newest parent ACRMD = 31 December 2025, plus interim 2026 half-yearly and Q1-26 "
+    "editions that do not constitute a new full year. Nothing newer to transcribe.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Santander Financial Services plc - KM1 Key Metrics",
+    subtitle="Not applicable. SFS publishes no Pillar 3 disclosure document of its own, and neither its own "
+             "Annual Reports nor its parent's Pillar 3 (the Santander UK ACRMD) contains a KM1 key-metrics "
+             "template for this entity. See the source note for the three checks behind that statement.",
+    rows=[
+        ("DATA", "Not applicable - no Pillar 3 document is published for this entity", {y: "Not applicable" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=300,
+)
+
+
 def metric(name, unit, data, note=None):
     bw.add_metric_sheet(name, unit, data, CAPITAL_SOURCES, note=note, first_col_width=52, source_height=170)
 

@@ -1,0 +1,4450 @@
+The Bank of New York Mellon (International) Limited
+
+Strategic Report, Directors’ Report and Financial Statements
+Registered number 3236121
+31 December 2018
+
+\
+
+>
+4
+a
+a
+2
+ra
+.¢
+n
+
+te e2018
+
+COMPANIES HOUSE
+
+uit i wil |
+The Bank of New York Mellon (International) Limited
+
+Contents ‘
+
+Board of Directors and other information - Ot 1
+Strategic report . . 2-4
+Directors’ report ‘ . 5-12
+Statement of directors’ responsibilities ; 13
+Independent auditor's report , . o 14-18 -
+Statement of profit and loss . 19°
+Other comprehensive income’ ; , , , 20
+Balance sheet. ot 21.
+Statement of changes in equity . | ; 22
+
+Notes to the financial statements ; . 23 - 69
+The Bank of New York Mellon (International) Limited
+
+Board of Directors and other information
+
+Directors
+
+P Bergamaschi Broyd
+
+K J Damsell (appointed 20 March 2018)
+
+K J Gregory (Chair Risk Committee of the Board)
+JJack . ,
+
+J Johnston
+
+H Kablawi (Chair)
+
+S O'Connor (Chair Audit Committee) -
+
+J Wheatley
+
+Secretary .
+
+BNY Mellon Secretaries (UK) Limited
+160 Queen Victoria Street
+
+London ,
+
+EC4V 4LA
+
+” Auditor
+
+KPMG LLP -
+Chartered Accountants
+- 15 Canada Square
+London
+
+E14 5GL
+
+Registered Office
+One Canada Square }
+
+London
+E14 5AL
+
+Registered Number
+3236121
+The Bank of New York Mellon (International) Limited
+
+Strategic report
+
+In accordance with Section 414A(1) of the Companies Act 2006, we have prepared the Strategic report, which includes a
+review of The Bank of New York Mellon (International) Limited's (“the Company”) business and future developments, a
+description of the principal risks and uncertainties facing the Company, and key performance indicators.
+
+The ultimate parent company is The Bank of New York Mellon Corporation (“BNY Mellon”/“Group”).
+Business review
+
+During 2018, the Company had significant new business wins for the Trust & Depositary and Transfer Agency businesses,
+as well as benefiting from the completion and further development of operating model initiatives / business developments
+that commenced during 2017 and that have had a significant impact on financial performance, including:
+
+‘e Transfer of the business of one of the Company’s subsidiaries, BNY Mellon Trust and Depositary (UK) Limited CUK
+T&D”), and subsequent transfer of UK T&D related custody business into the Company from other BNY Mellon Group
+entities, resulting in significant balance sheet and revenue growth; and
+
+» Further investment in the securities portfolio of high quality liquid assets (US and UK Government securities and
+covered bonds) and a change in the mix of investment assets, resulting in increased yields on those investments.
+
+The Company reported a pre tax profit of £244.4 million (2017: £22.5 million) for the year ended 31 December 2018.
+Financial key performance indicators
+
+The Comipany’s key financial and other performance indicators during the year were as follows:
+
+2018 2017 Change Change
+
+£000 £000 £000 %
+
+Total operating income ; : 227,330 172,059 $5,271 - 32%
+Total operating expenses (176,615) (149,584) (27,031) 18%
+
+_ Total operating profit before taxation $0,715 22,475 28,240 126%
+Profit before taxation 244,401 (22,475 221,926 987%
+Net assets 747,479 $24,588 | 222,891 42%
+
+Total operating income and total operating profit before taxation are non-GAAP measures not shown in the Statement of
+profit and loss that excludes both the dividend received of £43.0 million from BNY Mellon Trust & Depositary (UK)
+
+Limited and the payment from the Investment and Cooperation Agreement (“ICA”) of £150.7 million (an Investment in an
+
+associate), and is shown to provide a better comparison of the year-on-year operating performance of the Company by -
+excluding one-off items.
+
+Total operating income increased by £55.3 million year on year.
+
+Net interest income increased by £38.5 million, driven by growth in customer deposits, rising interest rates and a change in
+the mix of investment assets with an increase in the securities portfolio.
+
+Investment services fee revenue grew by £35.2 million, mainly reflecting the transfer of trustee and depositary clients and
+the related’ custody business from other BNY Mellon Group entities, but also new business and organic growth i in transfer
+agency and fund accounting.
+
+Other operating income decreased by £18.7 million, primarily due to(1) a reduction of £11.8 million due to lower
+technology, business partner and management support recharges as a result of the direct cost base being replaced with the
+outsourcing arrangement and therefore the requirement to recharge for work performed by staff within the Company on
+behalf of London Branch was no longer needed; and (2) a reduction of £6.3 million due to the favourable impact of swap
+related activity impacting 2017, not recurring in 2018.
+
+2
+The Bank of New York Mellon (International) Limited
+Strategic report |
+
+Total operating expenses increased by £27.0 million, mainly due to higher intercompany service charges, which increased
+as a result of the transfer of the UK T&D business into the Company, with the consequent increase in outsourcing recharge
+-and custody support costs associated with the related custody business transferring in from other BNY Mellon Group
+entities. Other direct administrative expenses increased by £7.6 million, again partly as a result of the transfer of the UK.
+T&D business into the Company, together with higher non-recoverable VAT charges and licence fees.
+
+The tax charge has increased £13.8 million, reflecting the increased operating profit within the Company and also due to the
+2017.tax charge being lowered by Group loss relief.
+
+Total assets increased by £2.3 billion year on year, driven by increased customer deposits, which were placed with central
+and external banks and as intercompany placements with other affiliated companies, and through investment in a securities
+portfolio primarily invested in GBP-denominated high quality liquid assets. The majority of the asset growth occurred
+within central bank placements and as additional investment in securities. Net assets increased by £222.9 million year on
+year, reflecting the Company’ s 2018 profit, which includes the impact of. the £43.0 million dividend, and £150.7 million
+ICA receipt.
+
+Principal risks and uncertainties
+
+The principal risks and uncertainties affecting the Company's business have been considered and addressed in the Directors’
+report on pages 5 to 12.
+
+Business and future developments
+Brexit
+
+The UK’s withdrawal from the European Union (“Brexit”).is expected to have less of an impact on the Company than it
+may have on some financial services industry peers, due to the majority of the Company’s customers being domiciled in the
+UK and the nature of assets in which it invests. .
+
+The Company continues to monitor progress around Brexit, including through engagement with BNY Mellon’s Brexit
+Programme, and is proactively engaging with clients on their key concerns and considerations in relation to Brexit. The
+programme’s analysis and planning takes into account regulatory and supervisory guidance and a range of potential
+economic scenarios, and has considered the potential impact of such scenarios on the Company’s operating model. In order
+to ensure full preparedness for Brexit, the Company. assessed its operations and services against a range of potential Brexit
+scenarios, including passporting, equivalency, and ‘Hard Brexit’, which we define as third country status for the UK, no
+Single Market access and no Transition period. Our contingency plans, which are now being implemented, assume a ‘Hard
+Brexit, which is in line with regulatory guidance.
+
+A Hard Brexit, scenario will mean that the Company’s Luxembourg Branch would lose its depositary licence and be unable
+
+to continue servicing its Asset Servicing clients. As a result, these clients have been advised of the situation and a migration
+
+of these clients’ business together with. staff supporting that business to another BNY Mellon Group entity with a necessary .
+depositary licence. The migration took place in the first quarter of 2019. The impact on the Company of the migration is
+
+estimated to be a reduction in deposit balances of approximately £3.0 billion, a reduction in fee and commission income of
+approximately £60.0 million, and a reduction in net interest income of approximately £5.0 million. Following the
+
+completion of the client migration, the Company's intention is to close the Luxembourg Branch in due course.
+
+The Company no longer has access to the European Central Bank (“ECB”) via its Luxembourg Branch. In the absence of ©
+access to a European Central Bank, the Company will manage excess Euro liquidity by investing in Euro-denominated
+assets and swapping residual Euro balances into Sterling and placing it at the Bank of England.
+The Bank of New York Mellon (International) Limited
+
+Strategic report
+
+Due to the short term and high quality nature of the Company’s asset base, significant balance sheet valuation impacts are
+not expected; however significant adverse movements in financial market values could impact the Company’s future
+financial performance by reducing ad valorem fees.
+
+- Other risks due to the implications of Brexit may include further potential changes to the legal and regulatory framework in
+which the Company operates.
+
+As the Brexit negotiations progress, the Company continues to monitor new developments and any further implications that
+may impact the Company’s services.
+
+The above changes will reduce income and profitability for the Company in 2019, accompanied by a reduction in balance
+sheet size due to the loss of customer deposits; however, the Company is expected to remain profitable, with a robust
+balance sheet and significant headroom above regulatory capital requirements, and there are no reasons to regard it as other
+than a going concern.
+
+Interbank Offered Rates (“IBORs”) reform
+
+The Financial Stability Board (“FSB”) has conducted a review of major interest rate benchmarks in use across the world’s
+financial markets, including Interbank Offered Rates, and subsequently made recommendations to review and reform
+benchmarks, and to transition to alternate reference rates. .
+
+The BNY Mellon Global IBOR Transition Programme (“the Programme”) has been set up to manage the IBOR Transition,
+with the EMEA specific programme initiated to cover the scope of EMEA Legal: entities. As part of the Programme, the
+Company continues to assess the impact of the planned phasing out of IBOR and transition to a new benchmark’ by UK
+regulators expected by the end of 2021.
+
+Given the nature of the assets held by the Company, the primary exposures to such rates are deemed to be low compared to
+other companies operating within the banking sector. Certain operational risks however exist regarding the Company’s
+business model, including execution, maintenance and reporting risk relating to the processing of Assets Under Custody
+(“AUC”), legal risk arising from legal claims and contract frustration, in particular where acting in a Trust or service
+capacity, and technology risk relating to impacted systems not being sufficiently updated to deal with the transition. ©
+
+Working with the Programme, the Company is taking steps to manage its principal exposure to IBOR-based instruments via
+explicit investment decisions, and focussing on mitigating the risks identified. This has included. monitoring market
+developments through industry groups and consultations, regularly engaging with clients to monitor expected client impacts
+and ensure transition awareness, and to remediate or restructure operational areas where updates are deemed to be required
+in relation to expected changes
+
+Approval
+
+By order of the Board
+
+Cw ty + LAS
+
+J Jack
+; Director ~
+
+The Bank of New York Mellon (International) Limited
+One Canada Square .
+
+London . . . :
+El4 5AL 7
+
+Registered number: 3236121
+
+a
+_The Bank of New York Mellon (International) Limited
+
+Directors' report
+
+° The directors present their report and financial statements of The Bank of New York Mellon (International) Limited for the
+year ended 31 December 2018. :
+
+Principal activities
+
+The principal activities of the Company are the provision of custody and investment administration services. The custody -
+and investment administration services are provided through offices located in the United Kingdom and through a branch in
+
+- Luxembourg, while treasury dealing activities are conducted at the Company’s London offices. The Company will continue
+to provide these services for the foreseeable future. The Company also has an investment in an associate (the Investment
+and Cooperation Agreement) with The Bank of New York Mellon — London Branch, whose principal activities are similar
+to those of the Company.
+
+The Company is authorised by the Prudential Regulation Authority (PRA) and regulated by the Financial Conduct
+Authority (“FCA”) and the PRA. All the Company’s activities during the year \ were regulated and conducted within the ,
+scope of permissions granted to the Company by the FCA and PRA. .
+
+Results and dividends _
+The profit for the year after taxation amounted to £224.6 million (2017: £16.5 million).
+The directors do not recommend a dividend for the year ended 31 December 2018 (2017: £nil). ,
+
+Governance and policies
+
+A formal governance hierarchy is in place to ensure effective escalation of issues through the regional and global structure.
+The main governing body of the Company is the Board of Directors. The Board meets on a quarterly basis, and receives
+reports from its Audit and Risk Committees on Risk Management, Compliance and Internal Audit to assist the Board in
+evaluating the effectiveness of the existing control environment.
+
+The Board delegates certain responsibilities to a number of dedicated committees as follows:
+
+- The Bank of New York Mellon (International) Limited Risk Committee of the Board (“RCoB”);
+The Bank of New York Mellon (International) Limited Audit Committee (“AC”)
+‘The Bank.of New York Mellon (International) Limited Executive Committee (“ExCo”); -
+The Bank of New York Mellon (International) Limited Risk Management Committee's ORMC's");
+CASS Governance Body (“CGB”);
+CASS Operational Oversight Committee (“COOC”);
+The Bank of New York Mellon (International) Limited Capital and Stress Testing Committee (““CSTC”);
+The Bank of New York Mellon (international) Limited Nomination Committee (“NomCo”); and
+The Bank of New York Mellon (International) Limited Depositary Advisory Council (“DAC”).
+
+* ° e e 2 e e . e * .
+
+The RCoB was established to. assist the Board in fulfilling its oversight responsibilities concerning the Risk Appetite and
+Risk Management of the Company, as well as-compliance with legal and regulatory requirements and controls to prevent,
+deter and detect fraud. The RCoB meets four times a year and is chaired by an Independent Non-Executive Director
+(“INED”).
+
+The AC was established to assist: the Board in fulfilling its oversight responsibilities in respect of the Company's: financial
+“reporting process; compliance with legal and regulatory requirements;-the efficiency of the internal controls and risk
+management systems; the -performance of the internal audit function; and the statutory ‘auditor's qualifications,
+independence, provision of additional services and performance. The AC is chaired by an INED.
+The Bank of New York Mellon. (International) Limited | 7
+
+Directors’ report
+
+Governance and policies - continued
+
+The ExCo responsibilities include, but are not limited to:
+
+* The day-to-day execution of the Company's business strategy, performance and governance within the strategy as.
+approved by the Board, and for ensuring that the culture across the Company facilitates the’ performance of business
+activities with integrity, efficiency and effectiveness. : .
+
+« -Review of corporate initiatives including strategic initiatives, financial performance, new business initiatives, policy
+
+- changes, controls and organisational development. The ExCo has responsibility across all lines of business
+conducted by or impacting the Company. The ExCo i is chaired by the Chief Executive Officer (“CEO”).
+
+The RMC's have delegated authority from the RCoB to oversee the management of risk on a day-to-day basis. The RMC's
+meets at least ten times per year and are chaired by the UK Legal Entity Risk Officer (“UK LERO”).
+
+The CGB provides oversight of the organisational arrangements in place within the Company to comply with the FCA’s
+Client Assets (“CASS”) requirements.
+
+The COOC assists the senior manager performing the CASS Operational Oversight Function to ensure that the appropriate
+client assets and client money protections are actively being achieved in the Company during the course of i its business. ,,
+
+The CSTC has delegated authority from the RCOoB to ensure sufficient capital is held in the Company to offset material risk
+exposures. The CSTC was established in April 2014 to ensure adequate governance of the Company's Internal Capital
+Adequacy Assessment Process (“ICAAP”). The CSTC is responsible for reviewing the capital requirements, risk model
+methodologies and stress testing in accordance with the relevant capital and stress testing policies.
+
+The NomCo was established to review the structure, size and composition of the Board (including the skills, knowledge,
+experience and diversity) and to make recommendations to the Board with respect to any appointment. The NomCo meets
+at least twice a year and is chaired by an INED.
+
+The purpose of the DAC is to provide guidance and advice to the management of the Company’s Trust and Depositary
+business on a range of matters relevarit to the business. The DAC is an advisory only council and does not have any.
+decision making authority. The DAC meets four times a year and is chaired by an INED.
+
+Regional Risk Governance includes:
+
+« The EMEA Business ExCo, provides regional leadership and ensures the execution of regional priorities, to inform the
+EMEA Chairman about material issues impacting the region and ensuring connectivity with and feedback to and from
+‘the US ExCo.
+
+« EMEA Senior Risk & Contro] Committee, which exercises responsibility and provides independent oversight for
+, policies, processes and controls relating to all aspects of risk and compliance for the region.
+
+¢ The EMEA Asset and Liability Committee (“EMEA ALCO”) focuses on the balance sheets in its region from an asset
+
+and liability management perspective and is responsible for the efficient and effective functioning of the Local Country
+
+_ ALCO or Branch Liquidity Committees in its region. EMEA ALCO is responsible for ensuring that corporate policy and
+
+guidance set through the Company ALCO is understood and executed locally. This incliides strategy related to the
+investment portfolio, placements, interest rate risk, and liquidity risk. ;
+
+¢ The EMEA Controls Council is a non-voting committee established (primarily) to review, discuss and challenge control
+related issues in the EMEA region.
+The Bank of New York Mellon (International) Limited . Ae
+
+Directors' report
+
+Governance and policies - continued
+
+e The EMEA Portfolio Committee (“EPC”) is the primary executive level decision making body with the mandate to
+provide portfolio level oversight of all regulatory and significant strategic change programmes within the EMEA region,
+on behalf of respective legal entities, lines of business and Business Partners. In line with the operating principles set out
+for the EPC, it focuses on overseeing the health of the change portfolio, addressing enterprise wide scope changes and
+conflicts,, and making decisions on prioritisation. The EPC escalates issues to the Regulatory Executive Steering
+Committee (“RESC”), Major Initiatives Council (“MIC”), the EMEA Senior Risk and Control Committee and where
+applicable the relevant EMEA Legal Entity Executive or Management Committee.
+
+* The Conduct and Culture Council ensures continual focus and commitment in ensuring BNY Mellon adopts processes
+' and behaviours that sustain the values that contribute towards its sound and robust culture, and supports the vision and
+mission of BNY Mellon. This ensures that the important topic of culture and conduct receives regular attention, and can
+be monitored on a continuous basis, for the go0d of BNY Mellon and to satisfy the regulatory imperative. The Conduct -
+and Culture Council escalates issues to the EMEA Senior Risk and Control Committee and where applicable the
+relevant EMEA Legal Entity Executive or Management Committee.
+
+e The EMEA Asset Servicing and Corporate Trust Business Acceptance Committee is responsible, for on-boarding
+new/renewal business into lines of busines$ and subsequently legal entities, including the Company, approving all new
+clients prior to commencing a relationship with them, and approving all new clients and new business arrangements with.
+existing clients. Risk i is assessed and reviewed as part of the approval Process.
+
+e Third Party Governance (“TPG”) EMEA Regional Validation Group is responsible for reviewing and validating all
+engagements identified as medium risk or higher as well as reviewing due diligence results and assessing and identifying
+any gaps identified in the third party’s risk management processes in the respective regions.
+
+« EMEA Entity Governance Committee oversees the creation, maintenance and dissolution of direct and indirect
+subsidiartes of The Bank .of New York Mellon Corporation, branches of those subsidiaries and joint venture
+arrangements operating within the EMEA region. :
+
+EMEA Resilience & resolvability Steering Committee is responsible for governance and. an oversight framework for
+Resilience regulatory obligations, resilience initiatives, recovery plans and resolution packs required in the EMEA
+region.
+
+Risk management
+Risk management process
+
+The Board sets the strategy and policies for the management of risk and is responsible for risk identification, management
+and monitoring. . .
+
+Risk management framework
+
+The Company is committed to ensuring that, in executing on its strategic and operational plans, it at all times operates
+within its own Risk Appetite. The Company’s Risk Appetite Framework defines the roles and responsibilities for
+ownership, approval and monitoring of Risk Appetite, and the incorporation of Risk Appetite into the governance, business
+management, decision making and strategy development processes of the Company. The framework and related metrics are
+set and owned by the Board, followed by the First and overseen by the Second Line of Defence. Metrics are discussed and -
+monitored monthly by the RMC.
+
+The Company has developed its Risk Appetite with reference to the key risks identified within the Corporate Risk Appetite.
+The Company identifies six material risks (strategic, operational, restitution, credit, market and liquidity) which are
+discussed below.
+The Bank of New ‘York Mellon. (International) Limited
+
+Directors’ report
+
+Risk management - continued
+Strategic risk
+
+Strategic Risk is defined as the risk arising from adverse business decisions, poor implementation of business decisions, or
+lack of responsiveness to changes in the financial industry and operating environment. Strategic-and/or Business risks may
+also arise from the acceptance of new businesses, the introduction or modification of products, strategic finance and risk
+management decisions, business process changes, complex transactions, acquisitions / divestitures / joint ventures and
+major capital expenditures / investments.
+
+The Company seeks to minimise this risk by having a thorough understanding of the markets in which we participate, that
+we employ a continuous improvement approach, and that we have programs and make direct investments that encourage
+and create innovative outcomes.
+
+Operational risk
+
+. Operational risk is the risk of loss resulting from inadequate or failed internal processes, people, systems, or from external -
+events (including legal risk but excluding strategic and reputation risk).
+
+Operational risks may arise from errors in transaction processing, breaches of internal.control systems and compliance
+_ requirements, internal or external fraud, damage to physical assets, and/or business disruption due to systems failures or
+’ other events. Operational risk can also arise from potential legal or regulatory actions as a consequence of non-compliance *
+with regulatory requirements, prudent ethical standards or contractual obligations. . ,
+
+The Company's Operational Risk Management Framework (“ORMF”) provides the processes and tools necessary to fulfil a
+strategy of managing risk through a culture of risk awareness, a clear governance structure, well-defined policies,
+procedures and reporting and suitable tools for reporting and monitoring to effectively identify, manage, mitigate, monitor
+and report the risks in an organised way to the appropriate governance bodies.
+
+The ORMF defines roles and responsibilities based on BNY Mellon's global policy, using the Three Lines of Defence
+model as a foundation. Thus, responsibility for the management of operational risk sits first and foremost with the business
+and functions.
+
+The ORMF relies on a culture of risk awareness, a clear governance structure, and operational risk policies and procedures
+’ that define the roles and responsibilities of the first, second and third lines of defence.
+The Company uses the ORMF to capture, analyse and monitor its operational risks. The tools used to manage the
+operational risks of the business are mandated through individual operational risk polices and are prescribed through the
+enterprise operational risk program, assessment systems and related processes.
+
+The Company utilises comprehensive policies and procedures designed to provide'a sound operational environment. .The
+Corporate Operational Risk Policies are reviewed and enhanced on an ongoing basis, and adopted by all businesses/legal
+entities including the Company.
+
+\
+
+Restitution risk .
+Restitution risk relates to the obligation imposed by fund regulations (i.e. Alternative Investment Fund. Managers Directive
+(“AIFMD”) / Undertakings for the Collective Investments in Transferrable Securities (“UCITs”)) on the depositary. BNY
+Mellon may also opt to take on restitution liability electively for clients for whom restitution liability is not mandated.
+Restitution liability obliges the depositary -/ custodian to make good the client for the cost of loss of financial instruments,
+(the “assets”) held in custody by the depositary / custodian itself or its delegates. In this context, cash is deemed to be
+excluded from the obligation of restitution.
+The Bank of New York Mellon (International) Limited
+
+Directors' report
+
+Risk management - continued
+Restitution risk - continued
+
+Restitution risk is the risk that the Company is willing to take directly or indirectly via UK T&D as it is part of the
+depositary regulatory obligations when providing services to AIFMD and UCITS funds. The risks are managed by some
+limitations available such as exclusion of some sub custodians and markets, full discharge of liability to Prime Brokers
+appointed as delegate in the case of AIFMD funds, and limiting appetite to act as depositary with restitution liability only
+where BNY Mellon is also the custodian. .
+
+The Company has a range of governance forums which help to ensure that this risk is adequately mitigated, on an ongoing
+basis, and control structures are appropriate and functioning properly. —
+
+Credit risk
+
+Credit risk is the risk that an obligor/issuer is unable or unwilling to satisfy an obligation when it falls due. Credit Risk can
+‘originate from on-balance sheet obligations such as deposits, loans, and securities as well as off-balance sheet items such as
+commitments.
+
+Mitigation of credit risk is discussed in note 2 (“Financial risk management”).
+Market risk a
+
+Market risk is the risk to a company’s financial condition arising asa result of adverse movements in the markets, such as
+_ foreign currency exchange rates, interest rates and equity and commodity prices.
+
+Mitigation of market risk is discussed in note 2 (“Financial risk management”). -
+Liquidity risk
+
+’ Liquidity risk is the risk of inability to access funding, convert assets to cash quickly and efficiently; or to roll over or issue
+new debt, at a reasonable cost in order to meet its ‘short-term (up to one year) obligations; especially during periods of
+market stress.
+
+Mitigation of liquidity risk is discussed in note 2 (“Financial risk management”).
+Conduct risk
+
+Conduct risk is defined as the risk that detriment is caused to clients, the market, the Company or its employees because of
+inappropriate execution of its business activities or inappropriate behaviour by the Company or its employees.
+
+The Company is subject to the BNY Mellon Group Conduct Risk Policy-and Code of Conduct. It sets out clear
+expectations of the roles of senior management in setting the appropriate tone and includes examples of good and poor
+conduct. Employees received periodic training/briefing on conduct related matters and are required to complete and annual
+process to confirm adherence to the Code of Conduct. Conduct related management information is captured and provided
+to the EMEA Senior Risk and Controls Committee and reviews of conduct related matters can be included in n the scope of
+Compliance Monitoring and/or Iriternal Audit assurance reviews.
+
+Capital management
+
+‘
+
+The Company assesses and monitors its capital adequacy in accordance with. the Basel Framework on the basis of Pillar 1
+requirement and Pillar 2 capital requirements. Both concepts are subject to internally defined Risk Appetite metrics.
+/
+The Bank of New York Mellon (International) Limited
+
+Directors' report
+
+Risk management - continued
+Capital management - continued
+
+The Company's ICAAP outlines the Regulatory and Internally Assessed Capital Requirements ‘for the Company at the
+consolidated level. The Company has established governance arrangements over the ICAAP, including the development,
+adoption and submission of the ICAAP document itself, the quarterly capital assessment process and the underlying
+procedures and methods that are used for capital assessment.
+
+The Company manages its capital base in accordance with minimum requirements imposed by the regulator. The adequacy
+of the Company’s capital is monitored daily against regulatory capital requirements, as prescribed by the Capital
+Requirements Directive and .Capital Requirements Regulation. There is a capital planning process in place, which
+incorporates both economic capital modelling and a capital stress testing programme. The forecast capital position, based
+on the underlying financial forecast, is prepared within the Finance department and reviewed by the International Treasury
+function. It is then approved by the EMEA ALCO, CSTC, and the ExCo.
+
+Pillar 3 disclosures for the Company are incorporated into the Pillar 3 disclosures of The Bank of New York Mellon
+~ (International) Limited Consolidated and are published on BNY Mellon’s website at r
+https://www.bnymellon.com/us/en/investor-relations/other-regulatory.jsp. These disclosures provide additional information
+on the Company’s risk management framework and management of regulatory capital.
+
+: An analysis of the Company’s solo consolidated capital resources and Pillar 1 capital resources requirement is provided in
+note 32 (“Capital resources and requirement”).
+
+Employees
+
+’ The Company operates an outsourcing model, utilising third-party services for all functions, other than the supervision and
+oversight of outsourced functions and directly employed INEDs. Supervision and oversight is performed and managed by
+seconded staff, under a contractual framework, and supported by the Senior Management Functions (“SMF”) and Certified
+Functions (“CF”) identified through the Senior Managers Regime (“SMR”). In addition to the outsourcing model, the
+Company employs a small number of staff within its Luxembourg Branch.
+
+The Company is committed to a best practice approach to consult with employees on matters that are likely to affect their
+interests. Information of general interest to employees is provided through the intranet, newsletters and notices and general
+dialogue between line‘managers and employees, all of which seeks to achieve a common awareness of the financial and
+economic factors that impact the Company’s performance. In addition, the Company participates in the Group’s Employee
+Information & Consultation Forum at both a local and European level. The Forum builds on existing communication
+channels and provides more formal opportunities for dialogue between senior management and employees.
+
+The Company adopts a total rewards and pay for performance remuneration philosophy. Any variable remuneration
+incentives are discretionary, based on individual and business unit performance together with other factors as determined
+from time to time in the context of the Company’s operating plans and results and may be subject to deferral. Employees
+
+have the opportunity to purchase stock through the Group’s Stock Accumulation Plan.
+
+The Company is also committed to providing relevant training and development opportunities, to include achievement of
+professional qualifications, to enable each employee to successfully fulfil their job responsibilities, and in addition, meet
+_ regulatory requirements. The Company adheres to the principles of Equal Employment Opportunity, and is committed to
+facilitating employment opportunities for people with disabilities.
+
+EU Capital Requirements Directive IV disclosure
+
+Institutions are required to publish details of their income, employment, profits, taxation and any public subsidies on a
+country by country basis under the EU Capital Requirements Directive IV (“CRD IV”) from | January 2015.
+
+‘10
+The Bank of New York Mellon (International) Limited
+
+Directors' report
+?
+
+EU Capital Requirements Directive IV disclosure - continued
+
+Article 89 of CRD IV requires institutions to report the following information by member state and third countries in which
+they have an establishment:
+
+a) Nature of activities and geographical location (see ‘Principal activities’ on page 5 and disclosure note 13 on page 58);
+b) Turnover (see disclosure note 13 on page 58);
+
+c) Number of employees on a full time equivalent basis (see disclosure note 13 on page 58);
+d) Profit before taxation (see disclosure note 13 on page 58);
+
+e) Tax on income (see disclosure note 13 on page 58); and
+
+f) Public subsidies received (not applicable).
+
+_ Directors
+The directors who served during the year and up to the date of the report were as follows:
+
+' Appointed Resigned
+
+P Bergamaschi Broyd ; - -
+
+K J Damsell - 20 March 2018 | -
+
+K J Gregory - . -
+
+J Jack ; . - - -
+J Johnston - - .
+H Kablawi - -
+
+S O'Connor - oe
+
+J Wheatley - so
+
+Directors’ indemnity provision
+
+The articles of association of the Company provide that in certain circumstances the directors are entitled to be indemnified
+out of the assets of the Company against claims from third parties in respect of certain liabilities arising in connection with
+the performance of their. functions, in accordance with the provisions of the Companies Act 2006. Indemnity provisions of
+‘this nature have been in place during the year but have not been utilised by the directors (2017: none utilised).
+
+Post balance sheet events
+
+"The Company has migrated its Luxembourg Branch asset servicing clients and related supporting staff to another BNY
+
+Mellon Group entity, as a consequence of the expected loss of its Luxembourg Branch depositary licence following Brexit.
+
+The migration took place in the first quarter of 2019. The impact on the Company of the migration is expected to be a
+
+reduction in deposit balances of approximately £3.0 billion, a reduction in fee and commission income of approximately
+£60.0 million, and a reduction in net interest income of approximately £5.0 million.
+
+Disclosure of information to auditor
+
+The directors who held office at the date of approval of this Directors’ report confirm that, so far as they are each aware,
+there is no relevant audit information of which the Company’s auditor is unaware, and each director, has taken all the steps
+that he or she ought to have taken as a director to make himself or herself aware of any relevant audit information and to. ;
+establish that the Company’s-auditor i is. aware of that information. .
+
+. Auditor
+
+Pursuant to Section 487 of the Companies Act 2006, the auditor will be deemed to > be © reappointed and KPMG FELP will
+therefore continue in office.
+
+ll
+The Bank of New York Mellon (International) Limited
+Directors' report . .
+
+By order of the Board
+
+WG ode IE. 4.54
+
+Director
+
+The Bank of New York Mellon (International) Limited .
+One Canada Square :
+
+London .
+
+E14 5AL
+
+Registered number: 3236121
+
+12
+The Bank of New York Mellon (International) Limited °
+
+Statement of directors' responsibilities i in respect of the Strategic report, the Directors'
+report and the financial statements
+
+The directors are responsible for preparing the Strategic report, the Directors' report and the financial statements in
+accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law they have elected
+to prepare the financial statements in accordance with UK Accounting Standards and applicable Jaw (UK Generally
+Accepted Accounting Practice), including Financial Reporting Standard 101: Reduced Disclosure Framework (“FRS 101”).
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they give a true and
+fair view of the state of affairs of the Company and of the profit or loss of the Company for that period. In preparing these
+financial statements, the directors are required to to:.
+
+« select suitable accounting policies and then apply them consistently;
+
+* make judgements and estimates that are reasonable and prudent;
+
+* state whether applicable UK Accounting Standards have been followed, including FRS 101, subject to any material
+departures disclosed and explained i in the financial statements;
+
+e assess the Company’s ability to continue asa going concer, disclosing, as applicable, matters related to going
+concern; and
+
+e use the going concern basis of accounting unless they either intend to liquidate the Company or to cease operations,
+or have no realistic alternative but to do so.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the Company’ S
+transactions and disclose with reasonable accuracy at any time the financial-position of the Company and enable them to
+ensure that the financial statements comply with the Companies Act 2006. They are responsible for such internal control as
+they determine is necessary to enable the preparation of financial statements -that are free from material misstatement,
+whether due to fraud or error, and have general responsibility for taking such steps as are reasonably open to them to
+safeguard the assets of the Company and to prevent and detect fraud and other irregularities. .
+
+The directors are responsible for the maintenance and integrity of the corporate and financial information included onthe
+Company's website. Legislation in the’ UK governing the preparation and dissemination of financial statements may differ
+from legislation in other jurisdictions. ~
+
+13
+TT
+
+kPmG!
+
+JEHL
+
+to the members of The Bank of New York Mellon
+
+(International) Limited
+
+‘
+
+1. Our opinion is unmodified
+
+We have audited the financial statements of The.
+Bank of New York Mellon (International) Limited
+(“the Company”) for the year ended 31 December
+2018 which comprise the statement of profit and
+loss, other comprehensive income, balance sheet,
+statement of changes in equity and the related
+notes, including the accounting policies in note 1.
+
+In our opinion the financial statements:
+
+— give a true and fair view of the state of the
+Company's affairs as at 31 December 2018 and
+of its profit for the year then ended;
+
+— have been properly prepared in accordance with
+UK accounting standards, including FRS 101
+Reduced Disclosure Framework; and
+
+— have been prepared in accordance with the
+requirements of the Companies Act 2006.
+
+Basis for opinion , \
+
+We conducted our audit in accordance with
+
+' International Standards on Auditing (UK) (“ISAs
+(UK)") and applicable law..Our responsibilities are
+described below. We believe that the audit
+evidence we have obtained is a sufficient-and
+appropriate basis for our opinion. Our audit opinion
+is consistent with our report to the Audit
+Committee.
+
+We were first appointed as auditor by the directors
+on 14 March 2008 prior to the Company becoming
+a public interest entity. The period of total
+
+"uninterrupted engagement is for the two financial
+years ended 31 Decernber 2018 as a public interest
+entity and eleven years: in total.
+
+14
+
+We have fulfilled our ethical responsibilities under, and
+we remain independent of the Company in accordance
+with, UK ethical requirements including the FRC Ethical
+Standard as applied to public interest entities. No non-
+audit services prohibited by that standard were
+provided.
+
+|
+Materiality: £3.3 million (2017:£3.5 million} :
+1.5% of revenue (2017: 2%)
+
+* finaricial
+
+statements as a
+
+whole
+
+Key audit matters vs 2017
+Recurring risks Revenue recognition <>
+Event driven New: The impact of New
+
+uncertainties due to matter
+Britain exiting the
+
+European Union on our
+
+audit
+
+2. Key audit matters: our assessment of risks of material misstatement
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in the audit of the financial
+statements and include the most significant assessed risks of material misstatement (whether or not due to fraud) identified by
+us, including those which had the greatest effect on: the overall audit strategy; the allocation of resources in the audit; and
+directing the efforts of the engagement team. :
+
+We summarise below the key audit matters, in arriving at our audit opinion above, together with our key audit procedures to
+address those matters and, as required for public interest entities, our results from those procedures. These matters were
+addressed, and our results are based on procedures undertaken, in the context of, and solely for the purpose of, our audit of
+‘the financial statements as a whole, and in forming our opinion thereon, and consequently are incidental to that opinion, and
+we do not provide a separate opinion on these matters.
+
+The risk Our response
+
+The impact of uncertainties due Unprecedented levels of uncertainty += We developed a standardised firm-wide
+
+to Britain exiting the European . approach to the consideration of the
+
+Union on our audit (new , All audits. assess and challenge the uncertainties arising from Brexit in planning and
+
+significant risk) reasonableness of estimates, and performing our audits. Our procedures included:
+
+, related disclosures and the
+Refer to page 3 (principal risks) appropriateness of the going concern * Our Brexit knowledge — We considered
+basis of preparation of the financial "the directors’ assessment of Brexit-related
+
+statements. All of these depend on sources of risk for the Company’‘s business
+assessments of the future economic - and financial resources compared with our
+environment and the Company’s future " gwn understanding of the risks. We
+prospects and performance. considered the directors’ plans to take
+
+action to mitigate the risks.
+Brexit is one of the most significant . ;
+economic events for the UK ‘and at the * Sensitivity analysis - When addressing
+
+date of this report its effects are subject going concern and other areas that depend
+to unprecedented levels of uncertainty . on fotecasts, we compared. the diréctors’
+
+of outcomes, with the full range of analysis to our assessment of the full range _
+possible effects unknown. , of reasonably possible scenarios resulting
+
+from Brexit uncertainty and, where forecast
+cash flows. are required to be discounted,
+considered adjustments to discount rates for
+the level of remaining uncertainty.
+
+* Assessing transparency - As well as
+assessing individual disclosures as part of
+our procedures we considered all of the
+Brexit related disclosures together, including
+those in the strategic report, comparing the
+overall picture against our understanding of
+the risks.
+
+Our results
+
+We found the resulting estimates and
+disclosures in relation to going concern to be
+acceptable. However, no audit should be
+expected to predict the unknowable factors or
+all possible future implications for a company
+and this'is particularly the case in relation to"
+Brexit.
+
+15
+The risk Our response
+
+Revenue recognition - Fees and
+commissions receivable
+
+(€£166.2 million; 2017: £131.0
+million) :
+
+Revenue recognition - Interest
+receivable
+
+(£113.9 million; 2017: £38.0
+million)
+
+Refer to page 27 (Note 1.9 and
+Note 1.10 - Interest and Revenue
+accounting policy)
+
+Revenue recognition
+
+Professional standards require us to °
+consider all revenue to have an inherent
+risk of fraud. We have rebutted this risk
+
+for all revenue streams within the
+Company other than ‘non-standard
+contracts’ based on inherent straight
+
+Our procedures included:
+
+Controls testing: We assessed the design,
+implementation and operating effectiveness
+of key controls over fees and commissions
+and interest receivable including controls
+over interest rate set-up, booking/billing and
+timing of revenue recognition.
+
+forward nature of revenue recognition
+
+and the limited manual intervention .
+
+within management's revenue
+
+recognition process. A significant part of
+the fee billing process is automated, and
+
+we do not consider there to be a
+significant risk of error to these
+processes.
+
+There is a risk of income booking/billing
+
+issues on accelerated income
+recognition. This is heightened in
+
+respect of clients transferred to The
+-Bank of New York Mellon (International)
+Limited (“BNYMIL") from affiliated
+
+entities; BNY Mellon Trust and
+
+Depositary (UK) Limited ("BNY TD") or
+out of the Luxembourg Branch to The
+
+Bank of New York Mellon SA/NV
+(“SANV").
+
+ Certain:controls related to the set-up of
+
+interest rates in to the cash
+
+management system are not designed
+to prevent or detect errors on a timely
+
+basis. ;
+
+Management is in a unique position to
+
+perpetrate fraud because of their
+
+to manipulate accounting records and
+prepare fraudulent financial statements
+by overriding controls that otherwise -
+
+Test of details: ;
+
+- . We inspected a sample of contracts of
+newly on-boarded clients as well as a
+sample of amended contracts of existing
+clients and determined whether there were
+any non-standard terms. We tested the
+appropriateness of revenue recognition in
+respect of these selected contracts.
+
+- Fora sample of contracts transferred in or
+out of the Company, we ascertained that
+revenue cut-off was appropriately observed
+in line with the effective dates stated in the
+re-papered agreements.
+
+~. Fora sample of invoices, we agreed the
+rate/fee percentage set out in the client
+agreement, performed a recalculation of the
+invoice and assessed appropriateness of
+revenue recognition. For a sample of
+interest receivable recognised, we agreed
+the interest rate set out in the client
+agreement and performed a recalculation.
+
+- We inspected a breakdown of the accrued
+fees and receivables as at year end and for a
+sample of accruals, agreed the rate/fee
+percentage set out in the client agreement,
+cash payments received and performed a
+recalculation of the accrual.
+
+ability
+
+appear to be operating effectively.
+
+* Manual journals: We tested the design,
+implementation and operating effectiveness
+of controls over revenue journal entries. We
+
+_ inspected and performed audit procedures
+over high risk revenue journals.
+
+Our results:
+
+The results of our testing were satisfactory and
+we considered controls to be effective and the
+fees and commissions and interest receivable
+
+recognised to be acceptable (2017: acceptable).
+
+3. Our application of materiality and an overview of the
+
+scope of our audit
+
+. Materiality for the financial statements as a whole was set
+at £3.3 million (2017: £3.5 million), determined with
+reference to a benchmark of revenue, of which it
+
+represents 1.5% (2017: 2%).
+
+Revenue from operations excluding income from
+investments in affiliates was considered an appropriate
+benchmark for the following reasons:
+
++ The performance of BNYMIL is driven by the revenue
+generated from the volume and size of the funds held
+in custody and the investment administration services
+provided during a financial year and hence the total
+revenues are a key metric that influences economic
+
+decisions of users.
+
+kPa
+
+16
+
++ Profit before tax reported in BNYMIL's financial
+statements is significantly impacted by transfer pricing
+recharges of costs by affiliated entities and as such we
+observe there is volatility in profit before tax.
+
++ We note there are no significant unusual transactions
+during 2018 which would impact total revenue.
+
+We agreed to report to the Audit Committée any corrected
+or uncorrected identified misstatements exceeding
+£165,000 (2017: £173,000), in addition to other identified
+misstatements that warranted reporting on qualitative
+grounds. .,
+
+Our audit of the Company was undertaken to the
+materiality level specified above and was performed at the
+Company's head office in London.
+Revenue as at 31 December 2018:
+£227 million (2017; £172 million)
+
+go Revenue m Materiality
+
+Where certain processes and controls are undertaken at
+the Bank of New York Mellon Corporation’s (“the Group”)
+head office in New York, and in Pittsburgh we instructed
+our network firm to perform audit procedures, with the
+most significant areas being:
+
++ Certain controls over asset servicing (trust and custody)
+fee revenue;
+
++ Certain controls performed over financial reporting and
+journal entries processes; and
+
+* Certain IT general and application controls.
+
+We inspected the network firm’s working papers to
+assess the quality of the audit work performed and
+reviewed their reporting deliverables _to us. We
+communicated with our network firms throughout the
+audit by holding telephone conference meetings.
+
+Materiality for the financial
+statements as a whole
+£3.3 million (2017: £3.5 million)
+
+Performance Materiality
+£2.5-million (2017: £2.6 million)
+
+£165,000 .
+Misstatements reported to the
+Audit Cornmittee (2017: £173,000)
+
+4. We have nothing to report on going concern’
+
+The Directors have prepared the financial statements on the
+going concern basis as they do not intend to liquidate the
+Company or.to cease its operations, and as they have
+concluded that the Company's financial position means that
+this'is realistic. They have also concluded that there are no
+material uncertainties that could have cast significant doubt
+over its ability to continue as a going concern for at least a
+
+_ year from the date of approval of the financial statements
+
+("the going concern period”). .
+
+- Our responsibility is to conclude on the appropriateness of
+
+the Directors’ conclusions and, had there been a material
+uncertainty related to going concern, to make reference to
+that in this audit report. However, as we cannot predict all
+future events or conditions and as subsequent events may
+result in outcomes that are inconsistent with judgements
+that were reasonable at the time they were made, the
+absence of reference to a material uncertainty in this
+auditor's report is not a guarantee that the Company will
+continue in operation.
+
+In our evaluation of the Directors’ conclusions, we
+considered the inherent risks to the Company’s business
+model, including Brexit and analysed how those risks might
+affect the Company's financial resources or ability to
+continue operations over the going concern period. -
+
+Based on this work, we are required to report to you if we
+have concluded that the use of the going concern basis of
+accounting is inappropriate or there is an undisclosed
+material uncertainty that may cast significant doubt over the
+use of that basis for a period of at least a year from the date
+of approval of the financial statements.
+
+We have nothing to report in these respects, and we 2 did
+not identify going concern as a key audit matter.
+
+. We have nothing to report on the strategic report and
+
+the directors’ report
+
+The directors are responsible for the strategic report and
+the directors’ report. Our opinion on the financial
+statements does not cover those reports and we do not
+express an audit opinion thereon.
+
+Our responsibility is to read the strategic report and the
+directors’ report and, in doing so, consider whether, based
+on our financial statements audit work, the information
+therein is materially misstated or inconsistent with the
+financial statements or our audit knowledge. Based solely
+on that work:
+
+— we have not identified material misstatements in those
+reports;
+
+— in our Opinion the information given in the strategic
+report and the directors’ report for the financial year is
+consistent with the financial statements; and
+
+— in our opinion those reports have been prepared in
+accordance with the Companies Act 2006.
+
+. We have nothing to report on the other matters on
+
+which we are required to report by exception
+
+Under the Companies Act 2006, we are required to report
+
+_to you if, in our opinion:
+
+-—~ adequate accounting records have not been kept by the
+Company, or returns adequate for our audit have not
+been received from branches not visited by us; ‘or
+
+— the financial statements are not in agreement with the
+accounting records and returns; or
+
+— certain disclosures of directors’ rernuneration specified
+by law are not made; or
+
+— we have not received all the information and
+explanations we require for our audit.
+
+We have nothing to report in these respects.
+
+Respective responsibilities
+
+Directors’ responsibilities
+
+’ As explained more fully in their statement set out on page
+
+13, the Directors are responsible for: the preparation of the
+financial statements including being satisfied that they give
+a true and fair view; such internal control as they determine
+is necessary to enable the preparation of financial
+statements that are free from material misstaternent,
+whether due to fraud or error; assessing the Company's
+ability to continue as a going concern, disclosing, as
+applicable, matters related to going concern; and using the
+going concern basis of accounting unless they either intend
+to liquidate the Company or to cease operations, or have no
+realistic alternative but to do so.
+Auditor's responsibilities
+
+- Our objectives are to obtain reasonable assurance about
+whether the financial statements as a whole are free from
+material misstatement, whether due to fraud or other
+irregularities (see below), or error, and to issue our opinion
+in an auditor's report. Reasonable assurance is a high level
+of assurance, but does not guarantee that an audit
+conducted in accordance with ISAs (UK) will always detect
+a material misstatement when it exists. Misstatements can
+arise from fraud, other irregularities or error and are
+considered material if, individually or in aggregate, they
+could reasonably be expected to influence the economic
+decisions of users taken of the basis of the financial
+statements.
+
+A fuller description of our responsibilities is provided on the
+FRC’s website at www.frc.org.uk/auditorsresponsibilities.
+
+Irregularities — ability‘to detect
+
+We identified areas of laws and regulations that could
+reasonably be expected to have a material effect on the
+financial statements from our general commercial and
+sector experience through discussion with the directors and
+other management (as required by auditing standards), and
+from inspection of the Company's regulatory and legal
+correspondence and discussed with the directors and other
+management the policies and procedures regarding
+compliance with laws and regulations. We communicated
+identified laws and regulations throughout our team and
+remained alert to any indications of non-compliance
+throughout the audit: .
+
+The potential effect of these laws and regulations on the
+financial statements varies considerably.
+
+Firstly, the Company is subject to laws and regulations that
+directly affect the financial statements including financial
+reporting legislation (including related companies
+legislation), and taxation legislation, and we assessed the
+extent of compliance with these laws and regulations as
+part of our procedures on the related financial statement
+items. —_
+
+Secondly, the Company is subject to many other laws and
+regulations where the consequences of non-compliance
+could have a material effect on amounts or disclosures in
+the financial statements, for instance through the
+imposition of fines or litigation or the loss of the Company's
+licence to operate. We identified the following areas as
+those most likely to have such an effect: regulatory capital
+and liquidity, conduct, money laundering and certain
+aspects of company legislation recognising the financial and
+regulated nature of the Company’s activities and its legal
+form. Auditing standards limit the required audit
+procedures to identify non-compliance with these laws and
+regulations to enquiry of the directors and other
+management and inspection of regulatory and legal
+correspondence, if any. These limited procedures did not
+identify actual or suspected non-compliance.
+
+Owing to the inherent limitations of an audit, there is an
+unavoidable risk that we may not have detected some
+material misstatements in the financial statements, even
+though we have properly planned and performed our audit
+in accordance with auditing standards.
+
+kei)
+
+18
+
+(a
+
+For example, the further removed non-compliance with
+laws and regulations (irregularities) is from the events and
+transactions reflected in the financial statements, the less
+likely the inherently limited procedures required by auditing
+standards would identify it. In addition, as with any audit,
+there remained a higher risk of non-detection of
+irregularities, as these may involve collusion, forgery, |
+intentional omissions, misrepresentations, or the override
+of internal controls. We are not responsible for preventing
+non-compliance and cannot be expected to detect non- |
+compliance with all laws and regulations.
+
+The purpose of our audit work and to whom we owe
+our responsibilities ;
+
+- This report is made solely to the Company's members, as a
+
+body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken
+so that we might state to the Company’s members those
+matters we are required to state to them in-an auditor's
+report and for no other purpose. To the fullest extent
+permitted by law, we do not accept or assume
+responsibility to anyone other than the Company and the
+Company's members, as a body, for our audit work, for this
+report, or for the opinions we have formed.
+
+——
+
+Pamela Mcintyre
+(Senior Statutory Auditor)
+for and on behalf of KPMG LLP, Statutory Auditor
+
+4
+Chartered Accountants .
+
+15 Canada Square
+London
+
+E14 5GL
+
+17 April 2019
+N
+
+The Bank of New York Mellon (International) Limited .
+
+Statement. of profit and loss ;
+for the year ended 31 December 2018 ‘ i.
+
+2018 2017
+Note £000 | £000
+Interest.receivable and similar income . 7 4 : 113,871 37,955.
+Interest payable and similar charges 4 (64,622) (27,213) |
+Net interest income a: . 49,249 10,742
+Fees and commissions receivable 13 166,234 131,014
+Net foreign exchange translation gain/(loss) , 81 (159)
+Other operating income ; - 6 11,766 30,462
+Non-interest income , 178,081 161,317
+Income from investments in affiliates —- . 7 193,686 -
+Total income . . ; 421,016 - 172,059
+Administrative expenses oO 11° (176,615) . (149,999)
+Movements on provisions for liabilities and commitments 28 . oe 415
+Total operating expenses , , , ; (176,615) (149,584)
+Profit before taxation a. 244,401 22,475
+Taxation on profit ; 12 (19,816) (5,996) _
+Total profit for the financial year. . ; , ; 224,585 16,479
+
+Notes 1 to 32 are integral to these financial statements,
+
+All items dealt with in arriving at the Company's results for the financial year and prior year relate to continuing operations.
+
+19
+T he Bank of New York Mellon (International) Limited a
+
+Other comprehensive income
+* for the year ended 31 December 2018
+
+Profit for the financial year
+
+Items that are or may be reclassified subsequently to profit or loss:
+
+Change in fair value of financial assets measured at FVOCI
+
+ECL on financial assets measured at FVOCI
+
+Change in fair value of assets classified as available-for-sale
+
+Related tax
+
+Other comprehensive loss, net of income tax
+
+Total comprehensive income for the year
+
+Notes 1 to 32 are integral to these financial statements.
+
+20
+
+2018 2017
+Note - £000 £000
+224,585 16,479
+
+(2,310) -
+
+3) -
+- (4,776)
+
+577 1,194
+
+(1,736) (3,582)
+
+222,849 12,897
+The Bank of New York Mellon (International) Limited
+
+Balance sheet
+at 31 December 2018
+
+Assets
+Cash in hand and on demand balances at central banks
+
+Loans and advances to banks
+Loans and advances to customers
+Investment securities
+Investments in affiliates
+Intangible assets
+
+- Tangible fixed assets
+Prepayments and accrued income
+Other assets
+
+Total assets
+
+Liabilities
+
+Deposits by banks
+
+Customer accounts
+
+Other liabilities .
+Accruals and deferred income ;
+Subordinated loan due to fellow group undertaking
+Provisions for liabilities and commitments
+
+Total liabilities
+
+Capital and reserves
+Called up share capital
+
+Reserves
+Profit and loss account
+
+Shareholder's funds
+
+Total liabilities and shareholder's funds
+
+Notes | to 32 are integral to these financial] statements.
+
+Note
+
+15
+16
+17
+18
+19
+20
+21
+
+22
+
+24
+25
+
+26
+
+27
+28
+
+. 29
+
+The financial statements were approved by the Board of Directors and were signed on its behalf by:
+
+OW Code WA be 18
+
+Director’
+Company registered number: 3236121
+
+21.
+
+2018 2017
+£000 £000
+8,487,623 7,026,059
+2,049,210 2,085,358
+275,544 152,291
+1,298,470 593,296
+181,386 171,163
+52 12
+699 272
+
+37,961 17,298
+57,423 TLATI .
+
+- 12,388,368 10,117,220 -
+1,767,652 2,017,767
+9,685,207 7,459,508
+
+106,978 33,326
+6,052 . 6,961
+75,000 75,000
+11,640,889 - 9,592,632
+519,695 519,695
+1,951 3,645
+225,833 1,248
+747,479 524,588
+12,388,368 10,117,220
+The Bank of New York Mellon (International) Limited
+
+Statement of changes in equity
+For the Year Ended 31 December 2018
+
+Balance at 1 January 2017
+
+Total comprehensive income for the year
+
+Profit for the year :
+
+Other comprehensive income: .
+
+Change in fair value of available-for-sale financial
+assets ;
+
+Tax on other comprehensive income.
+
+Total other comprehensive income
+
+Total comprehensive income for the year
+Amortisation of share based payments
+
+Balance at 31 December 2017
+
+Balance at 1 January 2018
+
+Effect of adoption of IFRS 9 at 1 January 2018 (see
+note 1.2)
+
+Restated balance at 1 January 2018
+
+Total comprehensive income for the year
+
+Profit for the year
+
+Other comprehensive income: :
+
+Change in fair value of financial assets measured at
+FVOCI . ‘
+
+ECL on financial assets measured at FVOCI
+Tax on other comprehensive income
+
+Total other comprehensive income.
+
+Total comprehensive income for the year
+Amortisation of share based payments
+
+Balance at 31 December 2018
+
+~
+
+Called up Fair value Other Profit and
+share capital reserve reserves lossaccount Total equity
+£000 £000 £000 £000 £000
+519,695 (83) 7,289 * (15,231) - $11,670
+- oo» - 16,479 16,479
+- (4,776) - - (4,776)
+- 1,194 - - 15194
+- (3,582) - * (3,582) ©
+“ (3,582) - 16,479. 12,897
+- _* 21 - 21
+519,695 (3,665) 7,310 1,248 | 524,588
+Called up Fair value Other Profit and
+share capital reserve reserves lossaccount Total equity
+£000 , £000 £000 £000 £000
+519,695 (3,665) 7,310 1,248 524,588
+519,695 . (3,665) 7,310 1,248 524,588
+- - 224,585 224,585
+- (2,310) - - (2,310)
+- (3) - - G3)
+- 577 - - 577
+- (1,736) - - (1,736)
+- (1,736) - 224,585 222,849
+- - 42 - 42
+$19,695 (5,401) 7,352 225,833 | 747,479
+
+Notes 1 to 31 are integral to these financial statements.
+
+22
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+1 Accounting policies
+1.1 Basis of preparation and statement of compliance with FRS 101
+
+.The Company is a private company limited by shares incorporated and domiciled i in the UK and registered in England and
+Wales. The registered address is given on page 1.
+
+These financial statements were prepared in accordance with FRS 101.
+
+The Company’s ultimate parent undertaking, The Bank of New York Mellon Corporation includes the Company and all its
+subsidiary undertakings in its consolidated financial statements. The consolidated financial statements of The Bank of New
+‘York Mellon Corporation are prepared in accordance with U.S. Generally Accepted. Accounting Principles, which are
+equivalent to International Financial Reporting Standards as adopted by the EU (“Adopted IFRSs”). The Bank of New
+York Mellon’Corporation’s consolidated financial statements are available at
+https:/Awww.bnymellon.com/us/en/investor-relations/. Accordingly the Company is a qualifying entity for the purpose of
+FRS 101 disclosure exemptions.
+
+Therefore, in preparing these financial statements, the Company applies the recognition, measurefnent and disclosure ~
+requirements of Adopted IFRSs, but makes amendments where necessary in order to comply with Companies Act 2006 and
+has set out below where advantage of the FRS 101 disclosure exemptions lias been taken.
+
+_ In these financial statements, the Company has applied the exeniptions available under FRS 101 in respect of the following
+disclosures: . ;
+
+A Cash Flow Statement and related notes;
+Comparative period reconciliations for share capital, tangible fixed assets and intangible assets;
+Disclosures in respect of transactions with wholly owned subsidiaries; and
+
+Disclosures in respect of revenue contracts with customers and related significant judgements.
+
+* ¢ #* @
+
+As the consolidated financial statements of The Bank of New York Mellon Corporation include equivalent disclosures, the
+Company has also taken the exemptions under FRS 101 available in respect of the following disclosures: -
+
+« IFRS 2 Share Based Payments in respect of group settled share based'payments.
+
+Except as described in note 1.2, the accounting policies set out below have been applied consistently to all periods
+presented in these financial statements.
+
+Judgements made by the directors in the application of these accounting policies that have significant efféct on the financial
+statements and estimates with a significant risk of material adjustment in the next year are discussed in note 1.28.
+
+. 1.2 Changes in accounting policies -
+The Company has initially applied IFRS 9 and IFRS 15 from | January 2018. -
+. IFRS 9 Financial instruments
+
+The requirements. of IFRS 9 represent a significant change from IAS 39 Financial Instruments: Recognition and
+Measurement: Thé new standard brings fundamental changes ‘to the accounting for financial a assets and to certain aspects of
+the accounting for financial liabilities.
+
+23
+; The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+
+1.2 Changes in accounting policies - continued
+
+The key changes to the Company’s accounting policies resulting from its adoption of IFRS 9 are summarised below.
+Classification of financial assets and financial liabilities
+
+IFRS 9 contains three principal classification categories for financial assets: measured at amortised cost, fair value through
+other comprehensive income (“FVOCT’) and fair value through profit and loss (“FVTPL”). IFRS 9 classification is
+generally based on the business model in which-a financial asset is managed and its contractual cash flows. The standard
+eliminates the existing IAS 39 categories of held-to-maturity, loans and receivables and available-for-sale. IFRS 9 largely
+retains the existing requirements in IAS 39 for the classification of financial liabilities. For an explanation of how the
+Company classifies financial assets and financial liabilities under IFRS 9, see note 14.
+
+Impairment of financial assets
+
+IFRS 9 replaces the ‘incurred loss’ model in IAS 39 with an. ‘expected credit loss’ (“ECL”) model. The new impairment
+model also applies to certain loan commitments and financial guarantee contracts, but’ not to equity investments: The ECL
+model applies to debt instruments and financial guarantee contracts issued that are not measured at FVTPL. ECLs on
+instruments classified as FVOCI are recognised in OCI rather than reducing the value of the instrument. Under IFRS 9,
+credit lossés generally are recognised earlier than under IAS 39. a
+
+Transition
+
+Except as described below, changes in accounting policies resulting from the adoption of IFRS 9 have been applied ;
+retrospectively.
+
+_« Comparative periods have not been restated. Differences in the carrying amounts of financial assets and financial
+liabilities resulting from the adoption of IFRS 9 are recognised in retained earnings and reserves as at 1 January 2018.
+Accordingly, the information presented for 2017 does not reflect the requirements of IFRS 9 and therefore is not
+
+- comparable to the information presented for 2018 under IFRS 9.
+
+« The following assessments have been made on the basis of the facts and circumstances that existed at the date of initial
+application:
+
+‘« The determination of the business model within which a financial asset is held; and
++ Ifa debt security had low credit risk at the date of initial application of IFRS 9, then the Company has
+assumed that credit risk on the asset had not increased significantly since its initial recognition.
+
+Effect of applying IFRS 9
+
+The effects of adoption of IFRS 9 on classification and measurement of financial assets held at 31 December 2018 were:
+
+« Loans and advances to banks and customers that were classified as loans and receivables and measured at amortised cost
+under [AS 39 continue to be so measured under IFRS 9;
+
+« Debt securities that were classified as available-for-sale under IAS 39 continue to.be measured at FVOCI under IFRS 9;
+and :
+
+¢ Derivatives held for risk management purposes that are measured at FVTPL under IAS 39 continue to be so measuréd
+under IFRS 9.
+
+24
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+
+1.2 Changes in accounting policies - continued
+
+_ Introduction of these changes had no material impact on the accounting for financial assets nor on retained earnings for the
+Company. -
+
+IFRS 15 Revenue from contracts with customers
+
+IFRS 15 establishes a comprehensive framework for determining whether, how much and when revenue is recognised. It
+replaced IAS 18 Revenue, LAS 11 Construction Contracts and related interpretations. Under IFRS 15, revenue is recognised
+when a customer obtains control of the goods or services. Determining the timing of the transfer of control, at a point in
+time or over time, requires judgement.
+
+. The Company has adopted IFRS 15 using the cumulative effect method (without practical expedients), with the effect of
+initially applying this standard recognised at the date of initial application (1 January 2018). Accordingly, the information
+presented for 2017 has not been restated, i.e. it is presented, as previously reported, under IAS 18, IAS 11 and related
+interpretations. Additionally, the disclosure requirements in IFRS 15 have not generally been applied to comparative
+information.
+
+The Company's review of the impact of the adoption of IFRS 15 focussed on fee and commission income earned for the
+provision of investment services, which includes the following:
+
+« Custody, Trustee and Depositary;
+« Fund Accounting; and
+» Transfer Agency.
+
+The Company records investment services fees when the services are provided and earned based on contractual terms, when
+amounts are determined and collectability is reasonably assured.
+
+Introduction of these changes had no impact on the recognition or measurement for revenue nor on retained earnings of the
+Company. ;
+
+1.3 Accounting standards not yet effective
+IFRS 16 Leases
+
+IFRS 16 introduces a single, on-balance sheet accounting model for lessees. A lessee recognises a right-of-use (“ROU”)
+asset representing its right to use the underlying leased asset, and a lease liability representing its obligation to make lease
+payments. IFRS 16 replaces existing guidance including LAS 17 Leases. The standard is effective for accounting periods
+beginning on or after 1 January 2019. ;
+
+_ When adopting the standard, the Company will recognise an increase in assets and liabilities, as a result of recording
+
+operating leases on-balance sheet. Additionally, the Company expects the expense recognition pattern to be modified as a
+result of switching from a straight-line approach, as required by the standard. The introduction of these changes are not
+expected to have a material impact.
+
+25
+The Bank.of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+1.4 Exemption from preparation of group financial statements
+
+As noted iri section 1.1 above, the Company’s ultimate parent company includes the Company in its consolidated financial
+statements, which are prepared under a basis equivalent to Adopted IFRS. Accordingly, the Company is exempt by virtue of
+section 401 of the Companies Act 2006 from the requirement to prepare group financial statements as the Company and all
+its subsidiary undertakings are included in the consolidated financial statements for a larger group drawn up for the same
+date in a manner equivalent to that prescribed by the EU Seventh Directive (83/349/EEC). Therefore, these financial
+statements present information about the Company as an individual undertaking and not about its group.
+
+1.5 Measurement convention
+
+These financial statements are prepared on the historical cost basis except that the following assets and liabilities are stated
+at their fair value: derivative financial instruments, financial instruments measured at fair value and liabilities for cash-
+settled share-based payments. Non-current assets and disposal groups held for sale are stated at the lower of previous
+carrying amount and fair value less costs to sell.
+
+1.6 Going concern
+
+The Company's business activities, together with the factors likely to affect its future development, performance and
+position are set out in the Strategic report on pages 2 to 4. In addition, the Directors’ report on pages 5 to 12 includes the
+Company's objectives, policies and processes for managing | its s capital, its financial risk management objective and its
+. exposures to credit and liquidity risk. Z .
+The Company has adequate liquidity and capital. The directors perform an annual going concern review that considers,
+under a stress test scenario, the Company’s ability to meet its financial obligations as they fall due, for a period of at least
+twelve months. after the date that the financial statements are signed. As a consequence, the directors believe that the
+Company is, well placed to manage its business risks successfully.
+
+Based on the above assessment of the Company’s financial position, liquidity and capital, the directors have concluded that
+the Company has adequate resources to continue in operational existence for the foreseeable future (for a period of at least
+twelve months after the date that the financial statements are signed). Accordingly, they continue to adopt the going concern
+basis of accounting in preparing the annual financial statements. , ‘
+
+1.7 Related party transactions
+
+As the Company is a wholly owned indirect subsidiary of the ultimate parent company, The Bank of New York Mellon
+Corporation, it has taken advantage of the exemption contained in IAS 24 and has therefore not disclosed transactions or
+balances with entities that form part of the BNY Mellon Group.
+
+1.8 Foreign currency
+
+The Company's functional and presentational currency is GBP. Transactions in foreign currencies are recorded in the -
+functional currency at the rate of exchange prevailing. on the date of the transaction. Monetary assets and liabilities
+denominated in foreign currencies are translated into the functional currency at the rate of exchange ruling at the balance
+sheet date. Any resulting exchange differences are reported net’in the Statement of profit and loss and other comprehensive
+income.
+
+26
+. The Bank of New York Mellon (International) Limited _ ;
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+L8 Foreign currency - continued
+
+Non-monetary assets and liabilities that are measured in terms of historical cost in a foreign currency are translated using
+the exchange rate at the date of the transaction. Non-monetary assets and liabilities denominated in foreign currencies that
+are stated at fair value are retranslated to the functional currency at foreign exchange rates ruling at the dates that the fair
+value was determined. Any resulting exchange differences are reported net in the Statement of profit and loss or Statement
+of other comprehensive income within interest receivable or payable as appropriate.
+
+1.9 Interest _
+
+Interest receivable and payable are recognised in the Statement of profit and loss and other comprehensive income using the
+effective interest rate method. The Effective Interest Rate (“EIR”) is the rate that exactly discounts the estimated future cash
+payments and receipts through the expected life of the financial asset or liability (or, where appropriate, a shorter period) to
+‘the carrying amount of the financial asset or liability. When calculating the effective interest rate, the Company estimates
+future cash flows considering all contractual terms of the financial instrument, but not future credit losses.
+
+The calculation of the effective interest rate includes all transaction costs and fees and points paid or réceived that are an
+" integral part of the effective interest rate. Transaction costs include incremental costs that are > directly attributable to the
+acquisition or issue of a financial asset or liability.
+
+Interest receivable and payable presented in the Statement of profit and loss and other comprehensive income include:
+
+» Interest on financial assets and financial liabilities measured at amortised cost calculated on an effective interest basis;
+and
++ Interest on financial assets measured at FVOCI calculated on an effective interest rate basis;
+
+1.10 Revenue
+
+Fees and commissions are earned from the provision of Custody, Trustee and Depositary, Transfer Agency and Fund -
+
+Accounting services andi is recognised as revenue.
+
+(
+Revenue is based on terms specified in a contract with a customer, and excludes any amounts collected on behalf of third
+parties. Revenue is recognised when, or as, a performance obligation i is satisfied by transferring, control of a good or service
+toa customer.
+
+’ A performance obligation may be satisfied over time or at a point in time. Revenue from a performance obligation satisfied
+over time is recognised by measuring. the Company’s progress in satisfying the performance obligation in a manner that
+reflects the transfer of goods and services to the customer. Revenue from a performance obligation satisfied at a point in
+time is recognised at the point in time the customer obtains control of the promised good or service. :
+The amount of revenue recognised reflects the consideration the Company expects to be entitled to in exchange for the
+promised goods and services. Taxes assessed by a governmental authority that are both imposed on, and concurrent with, a
+specific revenue producing transaction, are collected from a customer and are excluded from revenue.
+
+The revenue recognition policy applicable before 1 January 2018 was not significantly different to current policy.
+1.11 Dividends 7
+
+Dividend income is recognised in the Statement of profit and loss on the date the Company’s right to receive payments is
+established. ;
+
+27
+The Bank of New York Mellon (International) Limited ;
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+1.12 Short term employee benefits
+
+- Short term employee benefit obligations are measured on an undiscounted basis and are expensed as the related service is
+provided. A liability is recognised for the amount expected to be paid under short term cash bonus or profit-sharing plans if
+the Company has a present legal or constructive obligation to pay this amount as a result of past service provided by the
+employee and the obligation can be estimated reliably.
+
+1.13 Share-based payment transactions
+
+“
+
+Certain employees are issued Restricted Stock Units (“RSUs”) and options in the shares of The Bank of New York Mellon
+Corporation (the Company's ultimate parent), All share-based payments issued under these plans are equity settled.
+
+The grant date fair value of share-based payment awards granted to employees is recognised as an employee expense, with a
+corresponding increase in equity, over the period in which the employees become unconditionally entitled to the awards.
+
+Most RSUs issued are measured based on grant date fair value of the shares of The Bank of New York Mellon Corporation.
+However, certain awards granted to Material Risk Takers (“MRTs”) under European Banking Authority are required to be
+marked-to-market due to discretionary clawback language contained in their grants. Options are measured using an option
+valuation model, taking into account the terms and conditions upon which the awards are granted.
+
+*
+
+Vesting conditions are not factored into the initial estimate of the fair value at the grant date. They are taken into. account by
+adjusting the number of equity instruments included in the measurement of the transaction, so that the amount recognised
+for services received as consideration for the equity instruments granted shall be based on the number of equity instruments
+that eventually vest. On a cumulative basis, no expense is recognised for equity instruments that do not vest because of a
+‘failure to satisfy non-market performance or service conditions.
+
+y
+
+The fair value of equity instruments that are made available immediately, with no-vesting period attached to the award, are
+
+expensed immediately. Certain share-based payment awards vest when the employee retires. For grants of share-based —
+
+payments with this feature, the award is fully expensed by the first date that the employee is eligible to retire. If an
+employee voluntarily leaves the Company before the awards are fully vested, then the shares in relation to the employee are
+forfeited, with a credit to the Statement of profit and loss and other comprehensive income and a debit to equity. Where an
+employee has transferred between different companies within the BNY Mellon Group, current and future years’
+
+amortisation of all types of share-based payments issued in prior years will be charged to the new company from the year of ©
+
+transfer.
+1.14 Taxation
+
+Tax on the profit or loss for the year comprises current and deferred tax. Tax is recognised in the Statement of profit and
+loss and other comprehensive income except to the extent that it relates to items recognised directly in equity or other
+comprehensive income, in which case it is recognised directly in equity or other comprehensive income.
+
+Current tax is the expected tax payable or receivable on the taxable profit or loss for the year, using tax rates enacted or
+substantively enacted at the balance sheet date, and any adjustment to tax payable in respect of previous years.
+
+Deferred tax is provided on temporary differences between the carrying amounts of assets and liabilities for financial
+reporting purposes and the amounts used for taxation purposes. The following temporary differences are not provided for:
+the initial recognition of goodwill; the initial recognition of assets or liabilities that affect neither accounting nor taxable
+profit other than in a business combination, and differences relating to investments in subsidiaries to the extent that they will
+probably not reverse in the foreseeable future. The amount of deferred tax provided is based on the expected manner of
+realisation or settlement of the carrying amount of assets and liabilities, using tax rates enacted or substantively enacted at
+the balance sheet date.
+
+28
+The Bank of New York Mellon (International) Limited |
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+1.14 Taxation - continued
+
+A deferred tax asset is recognised only to the extent that it it is probable that future taxable profits will be available against.
+which the temporary difference can be utilised.
+
+1.15 Non-derivative financial assets - classification and measurement
+
+Non-derivative financial instruments comprise investments in equity and debt securities, trade and other debtors, cash and
+cash equivalents, loans and borrowings and trade and other creditors.
+
+'
+
+Financial assets are measured at amortised cost if ‘meeting both of the following conditions and are not designated as
+FVTPL:
+
+« The asset is held within a business model whose objective is to hold assets to collect contractual cash flows; and
+¢ The contractual terms of the financial asset give rise on specific dates to cash flows that are solely payments of principal
+and interest on the principal amount outstanding.
+
+Financial assets are measured at FVOCI only if meeting both of the following conditions:
+
+e The asset is held within a business model whose objective is achieved by both collecting contractual cash flows and
+selling financial assets; and
+
+¢ The contractual terms of the financial asset give rise on specific dates to cash flows that a are solely payments.of principal
+and interest on the principal amount outstanding.
+
+A financial asset is classified into one of these categories on initial recognition. However, for financial assets held at initial
+application, the business model assessment is based on facts and circumstances at that date. Also, IFRS 9 permits new
+elective designations at FVTPL or FVOCI to be made on the date of initial application depending on the facts and
+circumstances at that date.
+
+A financial liability is initially recognised at fair value and in the case of loans and borrowings and payables, net of directly
+attributable transaction costs. After initial recognition, financial liabilities are measured at amortised cost or FVTPL. Loans
+and borrowings and payables are measured at amortised cost using the effective interest rate method.
+
+_ Business model assessment ‘
+
+Certain financial assets, for example, deposits with central banks and financial institutions, always will be held for
+collection of contractual cash flows as the nature of the asset means that it cannot be sold. For other financial assets, the .
+
+‘Company makes an assessment of the business model in which a financial asset is held at a portfolio level because this best
+reflects the way the business is managed’ and information | is provided to management. Information that is considered
+includes:
+
+The stated policies and objectives for the portfolio;
+
+- How the performance of the portfolio is evaluated and reported to management;
+
+How managers of the business are compensated; and
+
+The frequency and volume of historical and expected sales.
+
+a e'f @
+
+; glhe Company generally does not hold assets for trading.
+
+29
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued.
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+1.15 Non-derivative financial assets - classification and measurement - continued
+
+Assessment of whether cash flows are solely payments of principal and interest
+. /
+
+‘Principal’ for these purposes is defined as the fair value of the financial asset at initial recognition. ‘Interest’ is defined as
+consideration for the time value of money and for the credit risk associated with the principal amount outstanding during a
+particular: period of time and for other basic lending risks (e.g. liquidity risk and administrative costs), as well as profit
+margin. . \
+
+In assessing whether the contractual cash flows are solely payments of principal and interest, the Company considers the
+contractual terms of the instrument. This includes assessing whether the financial asset contains contractual terms that
+would change the timing or amount of contractual cash flows such that it would not meet this condition. In making this
+assessment, the Company considers: — ;
+
+° Contingent events that would change the amount or timing of cash flows;
+
+« Leverage features;
+
+¢ Prepayment and extension terms;
+
+« Terms that limit the Company’s claim to cash flows from specified asséts; and
+_¢ Features that modify consideration for the time value of money e.g. periodic reset of interest. rates.
+
+Policy applicable before 1 January 2018
+
+Cash and cash equivalents
+
+Cash and cash equivalents comprise cash balances and call deposits. Bank overdrafts are repayable on demand.
+
+Loans and advances
+
+Loans and advances are non-derivative financial assets with fixed or determinable payments that are not quoted in an active
+market or demand deposits with fellow group banking entities, other than those that the Company intends to sell
+immediately or. in the short-term, which are classified as held-for-trading, and those that the-Company upon initial
+recognition designates as at fair value through the Statement of profit and loss and other.comprehensive income, or those
+for which the holder may not recover substantially all of its initial investment, other than because of credit deterioration.
+
+NO, :
+Loans are initially recorded at fair value plus any directly attributable transaction costs and are subsequently measured at
+amortised cost using the effective interest method, less any impairment losses. .
+
+\
+- Trade and other debtors
+
+Trade and other debtors are recognised initially at fair value. Subsequent to initial recognition, they are measured at
+amortised cost using the effective interest method, less any impairment losses.
+
+’ Trade and other creditors
+
+r
+
+_ Trade and other creditors are recognised initially at fair value. Subsequent to initial recognition, they 4 are measured at
+amortised cost using the effective interest method.
+
+30°
+The Bank of New York Mellon (International) Limited —
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+»)
+
+1 Accounting policies - continued
+1.15 Non-derivative financial assets - classification and measurement - continued
+
+Investments in debt securities
+
+Other investments in debt securities held by the Company are classified as being available-for-sale and are stated at fair
+value. Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction
+between market participants at the measurement date. Any resultant gain or loss is recognised directly in equity (in the fair
+value reserve), except for impairment losses and, in the case of monetary items such as debt securities, as foreign exchange
+gains and losses. When these investments are derecognised, the cumulative gain or loss previously recognised directly in
+equity is recognised in the Statement of profit and loss and other comprehensive income. Where these investments are
+interest-bearing, interest calculated using the effective interest method is recognised in the Statement of profit and loss and
+other comprehensive income.
+
+Debt securities are recognised on trade date, i.e, the date on which the Company becomes a party to the contractual
+provisions of the instrument, and are measured initially at their fair value plus transaction costs. The classification of |
+financial instruments at initial recognition depends on the intent for which the financial instruments were acquired and the
+' characteristics of the instruments, as explained below: ;
+
+Available-for-sale financial instruments °
+
+Available-for-sale financial instruments solely comprise debt securities that are intended to be held for an indefinite period
+of time and that may be sold in response to needs for liquidity or in response to changes in market conditions. After initial
+recognition, available-for-sale financial instruments are subsequently measured at fair value. Unrealised gains and losses are
+recognised in other comprehensive income.
+
+When a debt security is disposed of, the cumulative gain or loss previously recognized in other comprehensive income is
+reclassified to the Statement of profit and loss and other comprehensive income. Interest earned whilst holding available-
+for-sale financial investments is reported as interest income using the EIR. Any losses arising from impairment of such
+investments are recognised in the Statement of profit and loss and other comprehensive income,
+
+Held-to-maturity financial instruments
+
+Securities classified as held-to-maturity include quoted non-derivative financial assets with fixed or determinable payments
+and fixed maturities that the Company has both the intention and ability to hold to maturity. An investment is not classified
+as held-to-maturity if the Company has the right to require that the issuer repay or redeem the investment before its
+maturity, because paying for such a feature is inconsistent with expressing an intention to hold the asset until maturity. The
+classification of investment securities held-to-maturity is determined at their initial recognition and its appropriateness is
+reassessed at the end of each reporting period.
+
+Investment securities held-to-maturity are measured at amortised cost, with interest (including any premium or discount on
+acquisition) being recognised in interest income using the effective interest method:
+
+Reclassification of financial assets
+
+The Company may, in certain circumstances, reclassify financial instruments out of the ‘available-for-sale’ category and
+into the ‘held-to-maturity’ category. Reclassifi cations are recorded at fair value at the date of reclassification, which
+becomes the new amortised cost.
+
+For a financial asset reclassified out of the ‘available-for-sale’ category, any previous gain or loss on that asset that has been
+recognised in equity is amortised to profit or loss over the remaining life of the investment using the EIR. Any difference
+between the new amortised cost and the expected cash flows is also amortised over the remaining life of the asset using the
+EIR. If the asset is subsequently determined to be impaiied then the amount recognised in equity is recycled to the
+Statement of profit and loss and other comprehensive income. ,
+
+31
+The Bank of New York Mellon (International) Limited
+
+Notes-to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued
+
+1.15 Non-derivative financial assets - classification and measurement - continued
+Reclassification is at the discretion of management, and is determined on an instrument-by-instrument basis. The Company
+does not reclassify any financial instruments into the fair value through profit and loss category after initial recognition.
+
+1.16 Derecognition of financial assets and financial liabilities ,
+Financial Assets
+
+' The Company derecognises a financial asset (or, where applicable a part of a financial asset or part of a group of similar ‘
+financial assets) when:
+¢ The rights to receive-cash flows from the asset have expired; or .
+‘« Thé Company has transferred its rights to receive cash flows from the asset or ‘has assumed an obligation to pay the
+received cash flows in full without material delay to a third party under a ‘pass-through’ arrangement where either:
+« The Company has transferred substantially all the risks and rewards of the asset; or .
+
+* The Company has neither transferred nor retained substantially all.the risks and rewards of the asset, but has transferred:
+control of the asset.
+
+Financial Liabilities .
+
+The Company derecognises a financial liability (or, where applicable a part of a financial liability or part of a group of
+
+similar financial liabilities) when the obligation under the liability is discharged, cancelled or expires. Where an existing
+financial liability is replaced by another from the same lender on-substantially different terms, or the terms of the existing
+
+liability are substantially modified, such an exchange or modification is treated as a derecognition of the original liability
+
+and the recognition of a new liability, and the difference in the respective carrying amounts is recognised in the Statement of
+
+profit and loss and other comprehensive income.
+
+1.17 Impairment of financial assets (including trade and other debtors)
+
+Under IFRS 9, the Company generally recognises loss allowances at an amount equal to 12-month ECL (Stage 1, the’
+portion of ECL that results from default events that are possible within 12 months after the reporting date) unless there has
+
+_ been significant increase in credit risk since origination of the instrument, in which case ECLs are recognised on a lifetime
+loss basis (Stage 2). Exposures that are in default are regarded as credit impaired (Stage 3) and are also measured on a
+
+lifetime expected credit loss basis.
+
+Measurement of ECL . : = ’
+ECLs are a probability-weighted estimate of credit losses and are measured as follows:
+
+« Financial assets that are not credit-impaired at the reporting date: the present value of all cash shortfalls (i.e. the
+difference between the cash flows due to the entity in accordance with the contract and the cash flows that the Company
+expects to receive);
+
+¢ Financial assets that are credit-impaired at the reporting date — the difference between the gross carrying amount and the
+present value of estimated future cash flows; and
+
+« Financial guarantee contracts — the expected payments to reimburse the holder less any amounts that the Company
+expects to recover. : vf
+
+The ‘application of IFRS 9's impairment requirements had no material impact on the allowance for impairment as at |
+January 2018.
+32
+
+- . 1
+The Bank of New York Mellon (International) Limited
+
+‘Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+‘1 Accounting policies - continued
+1.17 Impairment of financial assets (including trade and other debtors) - continued
+
+‘The Company maintains an allowance for doubtful accounts for the estimated non-collection of accounts receivable.
+Uncollectability is presumed 180 days after invoice issue date unless there are known customer - specific reasons for the
+delay in settlement.
+
+Policy applicable before 1 January 2018
+
+. A financial asset not carried at FVTPL is assessed at each reporting date to determine whether there is objective evidence
+that it is impaired. A financial asset is impaired if objective evidence indicates that a loss event has occurred after the initial
+recognition of the asset, and that the loss event had a negative effect on n the estimated future cash flows of that asset that can
+be estimated reliably.
+
+An impairment loss in respect of a financial asset measured at amortised cost (such as held to maturity debt securities) is
+calculated as the difference between its carrying amount and the present value of the estimated future cash flows discounted
+at the asset’s original effective interest rate. Interest'on the impaired asset continues to be recognised through the
+unwinding of the discount. When’a subsequent event causes the amount of impairment loss to decrease, the decrease in»
+impairment loss is reversed through profit or loss.
+
+The Company assesses the debt instruments classified as available-for-sale on an individual basis, whether there is objective
+evidence of impairment based on the same criteria as financial assets carried at amortized cost. However, the amount
+recorded for impairment is the cumulative loss measured as the difference between the amortised cost and the current fair
+value, less any impairment loss on that investment previously recognised in the consolidated Statement of profit and loss
+and other comprehensive income. Future interest income is based on the reduced carrying amount and is accrued using the -
+rate of interest used to discount the future cash flows for the purpose of measuring the impairment loss. If, in a subsequent
+period, the fair value of a debt instrument increases and the increase can be objectively related to a credit event occurring
+after the impairment loss was recognised in the Income Statement, the impairment loss is reversed through the Statement of
+profit and loss and other comprehensive income.
+
+1.18 Derivative financial instruments
+
+The Company uses derivative financial instruments, mainly forward currency contracts. Derivative financial instruments are
+recognised at fair value. The gain or loss on remeasurement to fair value is recognised immediately in the Statement of
+profit and loss and other comprehensive income.
+
+1.19 Offsetting
+
+Financial assets and liabilities are offset and the net amount’ presented i in the balance sheet when, and only when, the Group
+has a legal right to set-off the recognised amounts and it intends either to settle on a net basis or to realise the asset and
+settle the liability simultaneously.
+
+I
+Income and expenses are presented on a net basis only when permitted under FRS 101, or for gains and losses arising from’
+a group of similar transactions such as in the Group’s trading activity.
+
+- 1.20 Client.money
+
+* The Company holds money on behalf of some clients in accordance with the Client Money Rules of the FCA. Such monies
+are not assets of the Company as the Company does not enjoy the economic bénefits nor does it have control of those
+amounts. Accordingly, such amounts are not recognised in the balance sheet, nor is any liability recognised in respect of an
+obligation to return corresponding amounts to clients. _ ,
+
+33
+The Bank of New York Mellon (International) Limited
+
+’ Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+1 Accounting policies - continued '
+
+1.21 Investments in affiliates
+
+Investments in associates'and subsidiaries are carried at cost less impairment.
+
+1.22 Intangible assets
+
+Intangible assets that are acquired by the Company are stated at cost less accumulated amortisation and accumulated
+impairment losses.
+
+Amortisation is charged to the Statement of profit and loss and other comprehensive income on a straight-line basis over the
+estimated useful lives of intangible assets unless such lives are indefinite. Intangible assets with an indefinite useful life are
+systematically tested for impairment at each balance sheet date. Other intangible assets are amortised from the date ‘they are
+available for use. The estimated useful lives are as follows: .
+
+e Corhputer software, internally generated . ~ 5 to 10 years ,
+
+Intangible assets relate to purchased customer relationships and computer software which~are capitalised at cost and
+amortised over their useful economic life of between 5 and 10 years.
+
+1.23 Tangible fixed assets
+Tangible fixed assets are stated at cost less accumulated depreciation and accumulated impairment losses. *
+
+' - When parts of an item of tangible fixed assets have different useful lives, they are accounted for as separate items of
+tangible fixed assets. '
+
+' Depreciation is charged to the Statement of profit and loss and other comprehensive income on a straight-line basis over the
+estimated useful lives of each part of an item of tangible fixed assets. The estimated useful lives are as follows:
+
+¢ Fixtures and fittings 10 years
+¢ Computer equipment , 4 years.
+e Leasehold property and improvements 10 years or the period of the lease, whichever is
+: ; shorter
+‘e Internally developed software “ 10 years
+
+Depreciation methods, useful lives and residual values are reviewed at each balance sheet date.
+
+1.24 Impairment of non-financial assets
+
+The carrying amounts of the Company’s non-financial assets are reviewed at each reporting date to determine whether there
+is any ‘indication of impairment. If any such indication exists, then the asset’s recoverable. amount is estimated. For
+intangible assets that have indefinite useful lives, the recoverable amount is estimated each year at the same time.
+
+The recoverable amount of an asset is the greater of its value in use and its fair value less costs to sell. In assessing value in
+use, the estimated future cash flows are discounted to their present value using a pre-tax discount rate that reflects current
+market assessments of the time value of money-and the risks specific to the asset. For the purpose of impairment testing,
+assets that cannot be tested individually are grouped together, into the smallest group of assets that generates cash inflows
+from continuing use that are largely independent of the cash inflows of other assets or groups | of assets (the “cash-generating
+unit” or “CGU”).
+
+34
+The Bank of New York Mellon (International) Limited i
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018 ;
+
+1 = Accounting policies - continued
+1.24 Impairment of non-financial assets - continued
+
+_ An impairment loss is recognised if the carrying amount of an asset or its CGU exceeds its estimated recoverable amount.
+Impairment losses are recognised i in the Statement of profit and loss and other comprehensive income.
+
+Impairment losses recognised in prior periods are assessed at each reporting date for any indications that the loss has
+decreased or no longer exists. An impairment loss is reversed if there has been a change in the estimates used to determine
+the recoverable amount. An impairment loss is reversed only to the extent that the asset’s carrying amount does not exceed
+the carrying amount that would have been determined, net of depreciation or amortisation, if no impairment loss had been
+recognised. .
+
+1.25 Interest-bearing borrowings
+
+Interest-bearing borrowings are recognised initially at fair value less attributable transaction costs. Subsequent to initial
+recognition, interest-bearing. borrowings are stated at amortised cost using the effective interest method.
+
+_ 1.26 Provisions
+
+A provision is recognised in the balance sheet when the Company has a present legal or constructive obligation as a result
+of a past event that can be reliably measured and it is probable that an outflow of economic benefits will. be required to
+settle the obligation. Provisions are determined by discounting the expected future cash flows at a pre-tax rate that reflects
+risks specific to the Mability.
+
+\
+
+‘1.27 Classification of financial instruments issued by the Company
+Ordinary shares issued by the Company are treated as equity as they include no contractual obligations upon the Company
+to deliver cash or other financial assets or to exchange financial assets or financial liabilities with another party under
+conditions that are potentially unfavourable to the Company. .
+
+To the extent that this definition is not met, the proceeds of issue are classified as a financial liability. Where a financial
+instrument that contains both equity and financial liability components exists, these components are separated and
+accounted for individually under the above policy.
+
+_ 1.28 Accounting estimates and judgements
+
+In preparing these financial statements, management has made judgements, estimates and assumptions about future
+conditions that affect the application of the Company’s accounting policies and the reported amounts of assets, liabilities,
+income and expenses. Actual results may differ from these estimates. Estimates and underlying assumptions are reviewed on -
+an ongoing basis. Revisions to estimates are recognised prospectively. oo
+
+Management believes that the Company’s critical accounting policies.for which judgement is necessarily applied are those
+which relate to impairment of non-derivative financial assets, impairment of investment in associates and subsidiaries and
+provisions. Further information about key assumptions concerning the future, and other key sources of estimation
+uncertainty, are set out in the notes to the financial statements. ;
+
+35
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018 —
+
+2 ‘Financial risk management
+
+The Company’s objectives in respect of risk management are to ensure that, at all times, it satisfies the requirement of
+maintaining a balance sheet demonstrating the characteristics of high liquidity and high credit quality assets, and to maintain
+a robust and independent risk management function. The Board of Directors ensures adherence with all internally set risk
+limits and compliance with all regulatory ratios.
+
+Through its normal operations, the Company is exposed to a number of risks, the most significant of which are strategic,
+operational, restitution, credit, market and liquidity risk. Management of these risks is central to the Company’s activities
+and there are independent risk management functions having responsibility for the management of all forms of risk
+including, through separate units, both compliance and legal risks. In addition, the control infrastructure is enhanced by
+Internal Control units within each of the businesses. The result is a fully integrated risk management. function covering all
+risk aspects of the Company’s activities.
+
+21 Credit risk
+
+The Company’s exposure to credit risk comprises facilities made available to individuals and institutions with which it has
+an asset servicing relationship. Most credit provision to non-bank counterparties is in the form of uncommitted standby
+lines. :
+
+All counterparties with which the Company deals are subject to detailed credit analysis and all exposure is based on credit
+- quality derived from an objective credit risk rating system and reviewed at least annually. In addition to counterparty” limits,
+individual country. limits for the Company have been approved by The Bank of New York Mellon Corporation. :
+
+All credit facilities are subjected to independent analysis by an independent credit department and all excess approvals are
+at the discretion of the London-based Operational Credit Group within an appropriate delegated authority. All excesses to
+established limits are monitored closely for relevant approvals and reported as required to the relevant business and risk
+management units in the UK and US. '
+
+The vast majority of facilities are re-set daily as a low percentage of the value of assets under custody. Custody assets are
+revalued daily to reflect market valuations.
+
+Credit quality analysis Lo oo
+
+. 2018 2017
+Lifetime ECL Lifetime ECL |
+not credit- credit-
+; 12-month ECL impaired impaired Total Total
+; Agency rating £000 £000. £000 £000 -- £000
+Cashin hand and on demand balances at 2 ‘
+central banks . :
+Grade |: Exceptional AAA 4 ~ “ - “ a
+Grade 2-4: Excellent AA*+, AA & AA- 8,468,012 - - 8,468,012 7,009,887
+Grade 5-7: Very good At, A& A- 12,639 - ‘ - 12,639 14,073
+a BBB+, BBB, ,
+Grade 8-10: Good BBB- 7 883 - - 883 2,095
+- So BB+,BB,BB- si. :
+
+Grade 11-13: Fair . & Bt . 6,092 - - 6,092 4
+8,487,626 - oe 8,487,626 7,026,059
+ECL (3) : (3) _
+Carrying amount 7 , ; 8,487,623 ~~ . = - 8,487,623 7,026,059
+
+36 °
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued -
+for the year ended 31 December 2018
+
+2 ‘Financial risk management - continued
+
+2.1 Credit risk - continued .
+, 2018 ‘ 2017
+
+Lifetime ECL Lifetime ECL
+not credit- credit- .
+12-month ECL impaired impaired © Total Total
+. Agency rating £000 £000 £000 , £000 £000
+Loans and advances to banks at amortised , i.
+cost : ;
+Grade 2-4: Excellent AA+, AA & AA- 513,046 : - $13,046 856,273
+Grade 5-7: Very good At, A&A- 1,146,620 - - 1,146,620 "789,403
+Grade 8-10: Good BBB+, BBB, 389,640 - - "389,640 439,682
+’ BBB-
+2,049,306 - - . "2,049,306 —-2,085,358
+Loss allowance (96) - - (96) -
+Carrying amount 2,049,210 - - 2,049,210 2,085,358
+j
+Loans and advances to customers at
+amortised cost :
+Grade 1: Exceptional 133,299 - - 133,299 15,092
+Grade 2-4: Excellent : AA+t, AA & AA- 14,810 - - 14,810 3,917
+Grade 5-7: Very good At,A&A- _ 113,800 - - 113,800 129,768
+Grade 8-10: Good BBB+, BBB, - 10,968 - - 10,968 3,512
+, . BBB- ‘ ; .
+Grade 11-13: Fair : BB+, BB, BB- | 2,667 - - 2,667 2
+& Bt : . .
+Carrying amount . . . 275,544 - - 275,544 152,291
+Investment securities . . ; . :
+Grade 1: Exceptional . 852,508 : - 852,508 258,224
+Grade 2-4: Excellent AA+, AA & AA- 445,965 - - 445,965 335,072
+, 1,298,473 - - 1,298,473 593,296
+Loss allowance - - , ; (3) - - y ; -
+Carrying amount - fair value _ 1,298,470 - os 1,298,470 593,296
+
+Loans and advances to banks and customers
+None of the loans and advances were past due or had a material impairment provision at the current or prior year-end.
+Loans and advances to.customers
+
+The Company in its ordinary course of business provides overdraft facilities to its customers, in order to facilitate securities
+settlements where market cycles differ or where settlements fail for other securities related reasons. In a very few cases, -
+facilities are provided to investment vehicles for gearing purposes. Each case is independently credit assessed and advances
+are limited to a modest percentage of assets held in custody with the Company. All overdrafts are repayable on demand and
+are unsecured, although standard custody documentation includes a right of lien over the custody assets.
+
+Based on the credit exposures existing as at 31 December 2018 there had been no instances (2017: none), where:
+
+*« The Company waived material financial covenants or agreed to temporary relaxation of repayment terms which were
+subsequently cured; or
+
+‘© The Company agreed to provide temporary facilities beyond the terms upon which the facilities were intended to
+operate. . -
+
+37
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+2 Financial risk management - continued
+2.1 Credit risk - continued
+Commitments
+
+Commitments to extend credit represent unused portions of authorisations to extend credit in the form of loans, guarantees
+or letters of credit. With respect to credit risk on commitments to extend credit, the Company is potentially exposed to loss
+in an amount equal to the total unused commitments. However, the likely amount of loss is less than the total unused
+commitments, as most commitments to extend credit are contingent upon customers maintaining specific credit standards.
+The Company monitors the term to maturity of credit commitments because longer-term commitments generally have a
+greater degree of credit risk than shorter-term commitments.
+
+Concentration of risks of financial assets with credit risk exposure
+Concentration of risk by geographical location
+
+The following table represents loans and advances to banks by geographical location: : ;
+2018 ©» 2017
+
+£000 - £000
+Loans and advances to banks ; - ;
+. Belgium — . . 488,492 361,783.
+United States . —— ; 390,901 " - 20,773
+* Singapore ; ; , ; . - 285,145 | 103,462
+Middle East. . 273,427 73,901 °
+UK a, , _ 232,749 534,494
+Asia . 183,288 154,276
+Spain . oe . 7 117,183 ——:103,462
+Australia . I 78,121 oe
+Cayman Islands wo . - 585,361
+Denmark - 73,901
+Luxembourg . , - . + 73,558
+"Germany , - 387
+2,049,306 2,085,358
+Loss allowance | (96) -
+
+2,049,210 2,085,358
+
+38
+a
+
+r
+
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+2 Financial risk management - continued
+
+2.1 Credit risk - continued
+
+, 2018 ° 2017
+. £000 £000
+. Loans and advances to customers ; .
+United Kingdom. , 7 206,540 118,556
+United States 50,912 5,067
+_ Luxembourg ; "18,049 28,646
+Other - | . 43. 22°
+, - 275,544 152,291
+Concentration of risk by industry sector
+2018 2017
+£000 £000
+
+Loans and advances to banks an
+
+Bariks a , 2,049,210 2,085,358
+
+Amounts include: a ;
+
+- unsubordinated . . 983,911 1,215,339
+2018 2017
+£000 - £000
+
+Loans and advances to customers ——
+
+Financial intermediaries: , 264,671 - 138,695 -
+
+Pension funds 7 . 10,770 13,494
+
+Mining and quarrying , 99 . -
+
+Human health and social work , ; - 100
+
+Insurance companies ‘ 4 2
+
+. . 275,544 152,291
+2018 2017
+* £000 £000
+
+’ Investment securities ; ; ;
+Central governments’ . 248,095 17,313
+Credit institutions 1,050,375 $75,983
+
+1,298,470 593,296
+
+The exposures set out above are based on net carrying amounts as reported in the balance sheet and represent the gross. -
+credit risk exposure to.the Company at 31 December 2018 and 2017, without taking account of any collateral held or other
+credit enhancements attached. The amounts at the reporting date are indicative of the amounts at risk throughout the period.
+
+39
+’
+
+| The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued ; c
+for the year ended 31 December 2018 ;
+
+2 Financial risk management - continued
+
+‘21 Credit risk - continued
+
+: t
+Loss allowance
+
+The following tables show reconciliations from the opening to. the closing balance of the loss allowance by class of financial
+instrument. Comparative amounts for 2017 represent allowance accounts for credit losses under LAS 39.
+
+2018 oo. . 2) 2017
+Lifetime ECL Lifetime ECL ,
+not credit- credit- ,
+. 12-month ECL impaired — impaired : Total Total
+\ , £000 £000 © £000 ~ £000 "£000
+Cash in hand and on demand balances at
+central banks
+Balance at | January ; - Loe : - - ; - : -
+Increase in ECL ; . ; 3 - Lot 3 . -
+Balance at 31 December 3 - - 3 -
+Loans and advances to banks at amortised cost .
+Balance at | January ; - Soo, - - :
+Increase in ECL oO 96 eee 96. oe
+Balance at 31 December . . 96 - - 96° --
+Debt investment securities at FVOCI (2017:
+available-for-sale investment securities)
+Balance at ! January ; ‘ . - - ; - ‘oe ; -
+Increase in ECL . 30 - - , 3 -
+Balance at 31 December o . ; 3 - - ("3 . -
+
+ECL related to trade receivables are discussed in note 22.
+
+. Amounts arising from ECL
+The impact to the Company's loss allowance following the adoption of the ECL measurement basis per IFRS 9 is limited,
+due to the short-term and high credit quality nature of the vast majority of credit facilities made available to individuals and
+institutions.
+
+' Inputs into measurement of ECL. a
+
+The key inputs into the measurement of ECL are:
+
+« probability of default (“PD”);
+« loss given default (“LGD”); and
+* exposure at default (“EAD”). —
+
+The Company leverages BNY Mellon Group statistical models for derivation of these Point-in-Time (“PiT”) parameters, _
+which are derived using forward-looking macroeconomic variables as described below.
+
+The Company measures ECL considering the risk of default over the maximum contractual period for which it is exposed to
+risk or, where no contractual period is stated, the period over which the Company could liquidate or otherwise limit its
+exposure. -
+
+40
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+2 ‘Financial risk management - continued
+
+2.1 Credit risk - continued
+
+Significant increase in credit risk
+
+Internal credit rating-based approach used for wholesale exposures
+
+The Company allocates to exposures a credit risk grade that is based on experienced credit judgement and a variety of data
+that is predictive of the risk of default. BNY Mellon uses its 18 point internal credit rating scale to determine a significant
+increase in credit risk for wholesale exposures (cash and due from banks, interest bearing: deposits, loans including
+overdrafts and unfunded commitments and letters of credit): :
+
+e 1-10 Investment grade
+
+« 11-14 Non-investment grade, non-criticised assets
+
+e 15-16 Criticised asset rating
+
+e 17-18 Default rating
+
+Credit risk grades are defined and calibrated such that the risk of default increases exponentially as ‘the credit risk
+deteriorates.
+
+A significant increase in credit risk and transfer to stage two occurs for.such exposures when there has been a four notch
+downgrade since initial recognition of the exposure. As a backstop, an exposure that is 30 days past due (“DPD”) is
+considered to have experienced a significant increase in credit risk. Additionally, exposures with a criticised asset rating
+(15-16) are deemed to have suffered a significant increase in credit risk compared with the maximum initial credit risk at
+recognition.
+
+Recovery from a significant increase in credit risk occurs when an exposure’s credit rating improves by two notches from
+the rating when it initially was moved into stage two, subject to being less than four grades below initial recognition date
+rating and not having a criticised asset rating. .
+
+Low credit risk exception applied to investment securities portfolio
+
+IFRS 9 permits an entity to assume that credit risk has not increased significantly since initial recognition if the credit risk
+on the exposure is low at the reporting date. BNY Mellon applies this approach to investment securities that have an
+internal rating of 1-10.
+
+Definition of default
+Under IFRS 9, the Company considers a financial asset to be in default when:
+
+« The counterparty is unlikely to fulfil its obligations to the Company in full without recourse by the Company to actions
+_such’as realising security (if any is held); or
+« . The counterparty is past due more than 90 days on any material obligation to the Company. Overdrafts (operational
+_ credit) are considered as being past due only once payment has been réquested from the counterparty.
+
+Fe orward-looking information
+
+The Company incorporates forward-looking information into its determination ox whether the credit risk of an instrument
+has increased significantly since initial recognition and its measurement of ‘ECL. Internal credit ratings used in determining
+significant increase in credit risk for wholesale exposures take into account forward-looking information specific to the
+
+counterparty.
+41
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018 —
+
+c
+
+2‘ Financial risk management - continued
+2.1 Credit risk - continued
+
+ECLs are calculated based on the probability-weighted outcome of multiple economic scenarios. Scenarios are provided by
+an external provider and enhanced using an in-house model to derive all variables needed by the risk models. Three
+-scenarios are used: Baseline, Optimistic, and Pessimistic. Those models incorporate reversion to long-term means. The
+weight allocated to each scenario is determined by calibrating the three scenarios using.as a benchmark scenario the Blue-
+Chip consensus. The weighting is then reviewed by an Economic Scenario Governance Group.
+
+Derivatives
+
+The Company maintains strict control limits on net open derivative positions (i.e., the difference between purchase and sale
+contracts) by both amount and term. At any one time, the amount subject to credit risk is limited to the current fair value of
+instruments that are favourable to the .Company (i.e. assets where their fair value is positive), which in relation to
+derivatives is typically only a small fraction of the contract, or notional values used to express the volume of instruments
+outstanding. This credit risk exposure is managed as part of the overall _lending limits with customers, together with
+potential exposures from market movements.
+
+Collateral or other security is not usually obtained for credit risk exposures on these instruments, except where the Company
+requires margin deposits from counterparties.
+
+Settlement risk arises in any situation where a payment in cash, securities or equities is made in the expectation of a
+corresponding receipt in cash, securities or equities. Daily settlement limits are established for each counterparty to cover
+the aggregate of all settlement risk arising from the Company’s market transactions on any single day.
+
+_The Company further restricts its exposure to credit losses on derivative transactions by entering into master netting
+arrangements with counterparties with which it undertakes a significant volume of transactions. Master netting arrangements
+do not generally result in an offset of balance sheet assets and liabilities, as transactions are usually settled on a gross basis.
+However, the credit risk associated with favourable contracts is reduced by a master netting arrangement to the extent that if
+a default occurs, all amounts with the counterparty are terminated and settled on a net basis.
+
+The Company’s overall exposure to credit risk on derivative instruments subject to master netting arrangements can change
+substantially within a short period, as it is affected by each transaction subject to the arrangement.
+
+Offsetting financial assets and financial liabilities
+
+The disclosures set out in the following tables (pages 42 and 43) include financial assets and financial liabilities that:
+
+« Are offset in.the Company’s balance sheet; or
+
+« Are subject to an enforceable master netting arrangement or similar agreement that covers similar financial instruments,
+irrespective of whether they are offset in the balance sheet.
+
+The ‘similar agreements’ include derivative clearing agreements, global master repurchase agreements and global master
+securities lending agreements. Similar financial instruments include derivatives, sale-and-repurchase agreements, reverse
+
+sale-and-repurchase agreements, and securities borrowing and lending agreements. Financial instruments such as loans and
+deposits are not disclosed in the following tables unless they are offset in the balance sheet. . .
+
+42
+- The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018 ‘
+
+2 ‘Financial risk management - continued
+2.1 Credit risk - continued
+
+The International Swaps and Derivatives Association (“ISDA”) and similar master netting arrangements do not meet the
+criteria for offsetting in the statement of financial position. This is because they create for the parties to the agreement a
+right of set-off of recognised amounts that is enforceable only following an event of default, insolvency or bankruptcy of the
+Company or the counterparties or following other predetermined events. In addition, the Company and its counterparties do
+not intend to settle on a net basis or to realise the assets and settle the liabilities simultaneously.
+
+The Company receives and gives collateral in n the form of cash and marketable securities in respect of the following
+transactions: .
+
+° derivatives;
+
+e sale-and-repurchase, and reverse 2 sale-and- repurchase, agreements; and
+
+e securities lending and borrowing.
+
+This collateral is subject to standard industry terms including, when appropriate, an ISDA credit support annex. This means
+that securities received/given as collateral can be pledged or sold during the term of the transaction but have to be returned
+on maturity of the transaction. The terms also give each party the Fight to terminate the related transactions on the
+counterparty’s failure to post collateral. . '
+
+Financial assets and Liabilities subject to offsetting, enforceable master netting arrangements and similar agreements
+
+Amounts Net amounts
+_ Offset in the presented in
+statement of the statement
+
+Gross amounts financial of financial
+
+. recognised position. _ position Net amount
+31 December 2018 ° £000 = = £000 £000 . —_ £000
+Types of fitiancial assets :
+
+Due from Group undertakings : . 2,747 . - 2,747 2,747
+Derivatives held for risk management : 3,368 * (2,466) . 902 902
+Total - 61S > (2,466) 3,649 3,649
+Types of financial liabilities .
+
+Due to Group undertakings . ; 87,079 - 87,079 87,079
+Derivatives held for risk management ; 4,748 (2,466) 2,282 2,282
+Total ‘ 91,827 (2,466) 89,361 89,361
+
+43
+The Bank of New York Mellon (international) Limited , - a. . .
+
+Notes to the financial statements - continued
+for the year ‘ended 31 December 2018
+
+,
+
+2 ~_«*Financial risk management - continued . ; . '
+
+2.1 Credit risk - continued — .
+
+Amounts Net amounts
+offset in the presented in
+Statement of -the statement
+
+Gross amounts financial of financial :
+. recognised position position Net amount
+31 December 2017 ; £000 £000 -£000 * £000
+Types of financial assets ; . .
+Due from Group undertakings : : . "4,438 - 4,438 4,438
+- Total ; oe _ 4,438 - 4,438 4,438
+Types of financial liabilities .
+Due to Group undertakings , ; . . ~ + 20,322 '. 20,322 20,322
+Total - 20,322 ; - 20,322 20,322
+
+The gross amounts of financial assets and financial liabilities and their net amounts disclosed in 1 the. above tables have been
+measured in the statement of financial position on the following bases: ;
+
++ Derivative assets and liabilities — fair value;
+
+* Assets and liabilities resulting from sale-and-repurchase agreements, reverse sale- -and-repurchase agreements and
+securities lending and borrowing — amortised cost;
+
+e Loans and advances to customers — amortised cost; and
+
+¢ Customer deposits — amortised cost.
+
+2.2 Market risk
+
+Market risk is the risk.that the fair value or future cash flows of a financial instrument will fluctuate because of changes in
+market prices. Market risks arise from open positions in interest rate, currency and equity products, all of which are exposed
+to general and specific market movements and changes in the level of volatility of market rates or prices such as interest
+rates, credit spreads, foreign exchange rates and equity prices.
+
+The Company does not have significant exposure to market risk through trading or FX positions and therefore market risk is
+
+considered negligible. The Company does not engage in proprietary foreign exchange trading. Any risk arising from
+structural positions is deemed minimal.
+
+44
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+2 ‘Financial risk management ~ continued
+23 Foreign exchange risk
+
+The Company is exposed to the effects of fluctuations in the prevailing foreign currency exchange rates on its financial
+position and cash flows. The table-below. summarises the Company’s exposure to foreign currency exchange rate risk at 31
+December 2018 and 2017.
+
+2018 ~ 2017
+
+£000 £000
+Assets:
+Denominated in Sterling . 7,169,375 6,301,190
+Denominated in US Dollar ; , 1,890,835 2,255,056
+Denominated in Euro 2,515,067 1,012,175
+Denominated in other currericies 813,091 ~ 548,799
+Total assets ; 12,388,368 “10,117,220
+Liabilities, share capital and reserves:
+Denominated in Sterling . ; 7,154,833 6,286,669
+Denominated in US Dollar 1,903,471 2,266,122
+Denominated in Euro oO, ; - 2,516,412 ° 1,014,547
+Denominated in other currencies 813,652 549,882
+Total liabilities, share capital and reserves , ; . 7 12,388,368 10,1 17,220
+
+The Company monitors the foreign currency exposures on a monthly basis and acts accordingly to ensure foreign exchange
+risk is minimal. _
+
+: 24 Interest rate risk
+
+‘Cash flow interest rate risk is the risk that the future cash flows of a financial instrument will fluctuate because of changes in
+market interest rates. Fair value interest rate risk is the risk that the value of a financial instrument will fluctuate because of
+changes in market interest rates. The Company takes on exposure to the effects of fluctuations in the prevailing levels of |
+market interest rates on both its fair value and cash flow risks.
+
+Management have concluded that the impact of interest rate risk (on a contractual basis) on the Company is minimal due to
+the short-term duration of interest bearing instruments as evidenced in the tables below.
+
+Part of the Company’s return on financial. instruments is obtained from controlled mismatching of the dates on which the ,
+instruments mature or, if earlier, the dates on which interest receivable on assets and interest payable on liabilities are next
+reset to market rates. The tables on the following pages summarise these re-pricing mismatches at 31 December 2018 and
+2017. Items are allocated to time bands by reference to the earlier of the next date of where settlement of the asset or
+liability is allowed and the maturity date.
+
+“—
+
+45
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+
+for the year ended 31 December 2018
+
+2 ‘Financial risk management - continued
+
+2.4 Interest rate risk - continued
+
+2018 , "Note
+
+Assets :
+
+Cash in hand and on demand balances at central 15
+banks :
+
+Loans and advances to banks 16
+
+Loans and advances to customers "17,
+
+Investment securities ; 18
+
+Total assets
+
+Liabilities
+
+Deposits from banks 24
+
+Customer accounts . 25
+
+Subordinated debt due to fellow Group | ; 27
+undertakings
+
+Total liabilities
+
+Interest rate sensitivity gap
+
+Cumulative interest rate sensitivity gap
+
+2017 Note.
+
+Assets . :
+
+Cash in hand and on.demand balances at central 15
+banks
+
+Loans and advances to banks 8 16
+
+‘Loans and advances to customers 17
+
+Investment securities - available-for-sale 18
+
+Total assets
+
+Liabilities .
+
+Deposits from banks 24
+
+- Customer accounts ‘ : 25
+
+Subordinated debt due to fellow Group 27
+undertakings
+
+Total liabilities -
+
+Interest rate sensitivity gap
+
+Cumulative interest rate sensitivity-gap
+
+After 3 . After 1
+. . months but After 6 year but
+Carrying Within 3 within 6 months but within 5 After 5
+value months — months within 1 year years years
+£000 £000 £000 £000 £000 £000
+8,487,623 8,487,623 - { - - -
+2,049,210 ‘1,881,248 167,962 - - -
+275,544 275,544 - - ‘ - -
+1,298,470. 1,298,470 - - - -
+12,110,847 11,942,885 167,962 - - -
+1,767,652 1,767,652 - - - -
+9,685,207 9,685,207 - - - -
+75,000 - - - - * 75,000
+11,527,859 __11,452,859 - - - 75,000
+582,988 490,026 167,962 - ‘ - (75,000)
+582,988 490,026 - 657,988 657,988 657,988 582,988
+After 3 After 1
+months but After 6 year but .
+Carrying Within 3 within6 = months but within § After 5
+value months months within 1 year years years
+£000 £000 £000 £000 £000 £000
+7,026,059 7,026,059 - - - -
+2,085,358 2,048,408 36,950 - - -
+152,291 152,291 - - - -
+593,296 . 593,296 - - - -
+9,857,004 9,820,054 36,950 : : :
+2,017,767 2,017,767 - - - :
+"7,459,508 7,459,508 - - - -
+75,000 ; - - - - 75,000
+>
+9,552,275 9,477,275 : - : 75,000
+304,729 379,729 36,950 - - (75,000)
+304,729 379,729 416,679 416,679 416,679 341,679
+
+46
+The Bank of New York Mellon (International) Limited .
+
+' Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+2 ‘Financial risk management - continued
+
+i
+
+2.5 Liquidity risk -
+
+Liquidity risk is the risk that the Company is unable to meet its payment obligations associated with its financial liabilities
+when théy fall due and to replace funds when they are withdrawn. The consequence may be the failure to meet obligations
+to repay depositors and fulfil commitments to lend. .
+
+Liquidity risk is governed by a liquidity policy approved by the Board of Directors. The principal objective of the policy is
+_to ensure that, with a high degree of confidence, the Company is in a position to meet its day-to-day liquidity’ obligations
+and withstand a period of liquidity stress, the source of which could be idiosyncratic, market-wide or both. This objective is
+achieved by careful and effective management of the balance sheet within agreed limits as laid down by the Board of
+Directors. Items are allocated to time bands by reference to the earlier of the next date of where settlement of the asset or
+liability is allowed and the maturity date.
+
+Maturity analysis of assets and liabilities
+
+After 3
+Gross ° . months After 6 After 1
+nominal but months year but
+Carrying inflow / Within3 within6 but within within 5 After 5
+: ’ value (outflow) Ondemand — months months l year years years
+2018 ‘ Note £000 . £000 £000 £000 £000 £000 £000 £000
+Assets . . 7
+* Cash in hand and on demand AS 8,487,623 8,487,623 8,487,623 - - - oe -
+balances at central banks : ; - .
+Loans and advances to banks 16 2,049,210 2,049,210 ~ 983,815 897,433 167,962 - - -
+Loans and advances to customers V7 275,544 275,544 275,544 - - - - -
+Investment securities 18 1,298,470 1,298,470 1,298,470 -: - - a -
+Investments in affiliates - 19 181,386 181,386 124,210 - 7 _ - 57,176
+Total financial assets . 12,292,233 12,292,233 11,169,662 897,433 167,962 ~ - - 57,176
+Liabilities .
+Deposits by banks - . 24 1,767,652 1,767,652 1,367,652 400,000 - oe - -
+Customer accounts . 25 9,685,207 9,685,207 9,630,815 54,392 - - - =
+Subordinated debt due to fellow 27 75,000 91,366 - 681 696 1,385 11,060 77,544
+Group undertaking .
+Total financial liabilities . 11,527,859. -_11,544,225 .10.998.467, __ 455,073 __- 696 1385 11,060. __77,544
+Cumulative liquidity gap, “764,374 748,008 748,008. 576,813 134,453 __ (32,813) _ (31,428) __ (20,368)
+
+47
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+2 ‘Financial risk management - continued 7
+
+2.5 Liquidity risk - continued
+
+After 3
+Gross months After 6 After I
+: nominal - but months year but :
+_ Carrying inflow / , Within3 within6 butwithin withinS After5 -
+value (outflow) On demand months months 1 year years years
+
+2017 Note . £000 £000 £000 £000 £000 £000 £000 | £000
+Assets So , . .
+Cash in hand and on demand . 1S 7,026,059 7,026,059 7,026,059 - : - ‘. -
+
+balances at central banks . . .
+Loans and advances to banks 16 2,085,358 2,085,358 1,517,194 531,214 36,950 - - -
+Loans and advances to customers — 7 ~ 152,291 1$2,291 152,291 - - - - -
+Investment securities - available-for- 18 593,296 393,296 593,296 se - . “se
+
+sale : . ‘ .
+Investments in affiliates : 19 171,163 171,163 , 113,987 - - - ‘. 37,176
+Total financial assets 10,028,167 10,028,167 9,402,827 531,214, 36,950 - - 57,176.
+Liabilities . .
+Deposits by banks 24 2,017,767 2,017,767 = 1,617,767 400,000 - - - -
+Customer account 25 7,459,508 7,459,508 7,361,752 97,756 - - - -
+Subordinated loan due to fellow . 27 . 75,000 93,294 - 652- 666 1,325 7,934 |, 82,717
+
+Group undertaking .
+Total financial liabilities 9.552.275 9,570,569 _ 8.979.519 -__498.408 666 1,325 7,934. . 82,717
+Cumulative liquidity gap - 475,892 457,598 457,598 - 34,290 1,484 (34,800) __ (33,475) __ (25,541)
+
+The Company’s expected cash flows on some financial assets and financial liabilities vary from the contractual cash flows.
+The principal differences are as follows:
+
++ Demand deposits from customers are expected to remain stable or increase; and
+e Unrecognised loan commitments are not all expected to be drawn down immediately.
+
+As part of the management of liquidity risk arising from financial liabilities, the Company holds liquid assets comprising
+cash and cash equivalents, and debt securities issued by sovereigns, which can be readily sold to meet liquidity
+requirements. In addition, the Company maintains agreed lines of credit with other banks and holds unencumbered assets
+eligible for use as collateral with central banks (these amounts are referred to as the “Company’s liquidity reserves’). 4
+
+3. Fair value financial instruments
+Fair value of financial assets and liabilities
+
+The Company uses the following hierarchy for determining and disclosing the fair value of financial instruments by
+valuation technique:
+
+« Level 1 — quoted market price: financial instruments with quoted prices for identical instruments in active markets.
+
+* Level 2 — valuation technique using observable inputs: financial instruments with quoted prices for similar instruments
+in active markets or quoted prices for identical or similar instruments in inactive markets and financial instruments
+valued using models where all significant inputs are observable.
+
+"e Level 3 — valuation technique with significant unobservable inputs: financial instruments valued using valuation
+
+techniques where one or more significant inputs are unobservable. . 4
+
+48
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the‘yéar ended 31 December 2018
+
+3. ‘Fair value financial instruments - continued
+Fair value of. ‘financial assets and liabilities - continued
+
+_ The fair values of all financial assets and liabilities by class, together with their carrying amounts presented i in the balance
+sheet are as follows:
+
+Carrying
+amount Fair value ‘ Level 1 Level 2 Level 3
+2018 2018 2018 - 2018 2018 ©
+Note £000 £000 £000 | £000 £000
+' Financial instruments
+Investment securities ° .
+Debt investment securities — : 18 1,298,470 1,298,470 576,502 721,968 -
+Financial assets - ° , ; .
+Cash and cash equivalents . 15 8,487,623 8,487,623 | - - 8,487,623 7
+Loans and advances to banks ‘ 16 2,049,210- 2,049,210. - 2,049,210 -
+Loans and advances to customers , 17 275,544 275,544 , - 275,544 -
+_ Investment in associate 19 124,210 124,210 - 124,210 , -
+Other loans and debtors ; . . ; .. 22 32,767 32,767 - "32,767 . -
+Total financial assets : 12,267,824 — 12,267,824 - $76,502 11,691,322 “
+Financial liabilities measured at amortised cost: , SO : :
+Deposits by banks 24 1,767,652 1,767,652 ‘ - 1,767,652 . -
+Customer accounts ‘ 25 9,685,207 9,685,207 - 9,685,207 © -
+Subordinated debt due to fellow Group undertaking 27 75,000 83,129 - 83,129 -
+Other loans and creditors - 16,322 - - 16,322 -
+Total financial liabilities , ‘ 11,544,181 11,535,988 - 11,552,310 - -
+Carrying , :
+_ amount Fair value Level] Level 2 Level 3
+2017 . 2017 2017 2017 2017
+Note £000 © £000 £000. £000 £000
+Financial instruments, .
+Investment securities , ;
+Debt investment securities ; ; 18 $93,296 593,296 382,680 . 210,616 -
+Financial assets . ; ; ‘
+Cash and cash equivalents ot 15 7,026,059 7,026,059 - 7,026,059 -
+Loans and advances to banks . oO 16 2,085,358 2,085,358 - 2,085,358 -
+Loans and advances to customers 17 152,291 152,291 ~ 152,291 ”
+Investment in associate , 19 113,987 | 13,987 - 113,987 , -
+Other loans and debtors ~ 22 45,350 45,350 ; - 45,350 -
+Total financial assets : 10,016,341 . 10,016,341 ~~ 382,680. 9,633,661 -
+Financial liabilities measured at amortised cost .
+Deposits by banks 24 2,017,767 ~ 2,017,767 - 2,017,767 :
+Customer accounts : : 25 7,459,508 7, 459, 508 - 7,459,508 -
+Subordinated debt due to fellow Group undertaking 27 75,000 © 83, 914 - 83,914 . -
+Other loans and creditors ; , : - 8,728 . oo: - 8,728 -
+Total financial liabilities . * 9,561,003 9,561,189 - "9,569,917 ~ -
+
+49
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+3. Fair value financial instruments - continued
+
+ofp spege
+
+. The. following is a list of financial instruments whose carrying amount is a reasonable approximation of fair value because,
+for example, they are short term in nature:
+
+Financial instruments recorded at fair value
+
+A description of the determination of fair value per class of financial instruments is presented below. The fair value
+determinations incorporate the Company's estimate of assumptions that a market participant would make when valuing the.
+instruments.
+
+Financial instruments - Available-for-sale
+
+Available-for-sale financial assets.classified within Level 1 mainly consist of government securities that are actively traded
+in highly liquid over-the-counter markets. These securities are valued using recent quoted unadjusted prices.
+
+If quoted market prices are not available, the fair values are estimated using pricing models, quoted prices of securities with
+similar characteristics or discounted cash flows. For securities where quotes from recent transactions are not available for
+identical securities, the Company determines fair value primarily based on pricing sources with reasonable levels of price
+transparency. Specifically, the pricing sources obtain recent transactions for similar types of securities (e.g. vintage, position
+in the securitization structure) and ascertain variables such as speed of prepayment and discount rate for the types of
+transaction and apply them to similar types of bonds. The Company views these as observable transactions in the current
+marketplace and classifies such securities as Level 2.
+
+Fair value of financial assets and liabilities not carried at fair value
+
+The following is is a list of financial instruments whose carrying amount is is a reasonable approximation of fair value because
+‘ they are short term in nature:
+
+Financial Assets
+
+i
+
+e Cash in hand and on demand balances at central banks
+« Loans and advances to banks
+e« Loans and advances to customers
+
+Financial Liabilities . : fo
+
+« Deposits by banks
+
+« Customer accounts ;
+
+¢ Loans and advances to banks and customers comprise short-term lending, which are predominantly floating rate
+advances and lending and hence the carrying amount and fair value are similar.
+
+The estimated fair value of deposits with no stated maturity, which includes non-interest bearing deposits, is the amount
+repayable on demand.
+
+Sy
+
+- 50
+The Bank of New York Mellon (International) Limited |
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+3 Fair value financial instruments - continued
+Fair value of financial assets and liabilities - continued
+As at 31 December 2018, no derivatives were outstanding (2017: nil).
+
+The Company is not materially exposed to foreign currency exchange risk because spot positions are sold off at month end
+(note 2)..” ‘
+
+Forward foreign exchange contracts fall within Level 2.
+
+4 Interest receivable and payable -
+
+2018 2017*
+
+Oe ; £000 £000
+Group companies - financial asséts measured at amortised cost - 7,612 4,634
+External third parties c ,
+- financial assets measured at amortised cost . 93,537 28,371
+- financial assets measured at FVOCI 12,722 4,950
+Interest receivable , , 113,871 37,955
+Group companies - financial liabilities measured at amortised cost , ‘ (14,390) (10,557)
+External third parties
+- financial liabilities measured at amortised cost (50,232) (16,656)
+Interest payable . . . (64,622) (27,213)
+Net interest . 49,249 10,742
+
+* The Company has reclassified certain prior year numbers to be consistent with current year presentation.
+
+5 Revenue from contracts with customers
+Nature of services and revenue recognition
+
+Fee revenue relating to the provision of Custody; Trustee and Depositary, Transfer Agency and Fund Accounting services is
+primarily variable, based on levels of assets under custody or administration (““AUC/A”), assets under management
+(“AUM”) and the level of client-driven transactions, as specified in fee schedules. Certain fees based on the market value of
+assets are calculated in arrears on a monthly or quarterly basis. .
+
+Substantially all services are provided over time. Revenue for these services is recognised using the time elapsed method,
+equal to the expected invoice amount, which typically represents the value provided to the customer for our performance
+completed to date. ‘ ,
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+5 Revenue from contracts with customers - continued
+
+Contract balances
+
+The Company’s customers are billed based on fee schedules that are agreed upon in each customer contract. The
+receivables from customers were £43.8 million at 1 January 2018 and £31.9 million at 31 December 2018. An allowance is
+maintained for accounts receivable which is generally based on the number of days outstanding. Adjustments to the
+allowance are recorded in administrative expenses in the Statement of profit and loss and other comprehensive income.
+Receivables from customers are included in other assets and prepayments and accrued income on the balance sheet.
+
+Contract assets represent accrued revenues that have not yet been billed to the customers due to contingent factors, other
+than the passage of time. The Company had £nil contract assets as at 1 January 2018 and £nil as at 31 December 2018 ,
+Qor7: £nil). .
+
+Contract liabilities represent payments received in advance of providing services under certain contracts and were £nil as at
+1 January 2018 and £nil as at 31 December 2018 (2017: £nil). Revenue recognised | in 2018 relating to contract liabilities as
+of 1 January 2018 was £nil.
+
+Any changes in the balances of contract assets and contract liabilities would result from changes arising from business
+combinations, impairment of a contract asset’ and changes in the timeframe for a right to consideration becoming
+unconditional or a performance obligation to be-satisfied. No such instances were noted.
+
+Contract costs
+
+Contract costs represent either costs which are capitalised relating to incremental costs for obtaining contracts, or costs
+.incurred for fulfilling contract obligations when they relate directly to an existing contract or specific anticipated contract,
+generate or enhance resources that will be used to fulfil performance obligations and are recoverable. The Company
+had £nil contract costs as at 31 December 2018 (2017: £nil).
+
+Unsatisfied performance obligations
+
+The Company does not have any unsatisfied performance obligations other than those subject to a practical expedient
+election under IFRS 15. The practical expedient applies to (i) contracts with an original expected length of one year or less,
+and (ii) contracts for which the Company recognises revenue at-the amount to which the Company has the right to invoice
+for services performed.
+
+6' Other operating income
+
+2018 2017
+
+- £000 £000
+
+Treasury foreign exchange income . _ 9,256 9,828
+Recharge of service charges to fellow BNYM Group undertakings 1,582 13,426
+Gain on non-qualifying economic hedges . 928. 7,208
+11,766 30,462
+
+52
+The Bank of New York Mellon (International) Limited ©
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+“7 Income from investments in affiliates —
+
+2018 2017
+
+£000 ; £000
+
+Income from investments in associate oo. ‘ ' 150,686 -
+Income from investments in subsidiary ; ; , . 43,000 -
+; , 193,686 -
+
+During the year, the Company received a dividend of £43.0 million from BNY Trust Company Limited, a direct subsidiary,
+and a payment of £150.7 million from its 10% participating interest in an Investment and Cooperation Agreement with
+another group entity.
+
+8 Staff numbers and costs
+
+2018 2017
+
+-, _ £000 £000
+
+Salaries and wages , Sy ; 3,387 3,272
+Share-based payments (see note 9) Lo ; a . : 36 40
+‘Social security costs . , . . 396 398
+Pension costs 237 229
+Other staff costs . - ; 109 149
+, 4,165 4,088
+
+During 2016, the Company executed a series of Service Level Agreements with other group companies, which enabled it to
+
+move to a fully outsourced operating model. The impact on the financial statements is that expenses previously recorded as
+
+staff costs are now recorded as intercompany service charges generally on a cost plus 10% basis within Administrative
+_ expenses. . .
+
+The average number of persons dedicated to the Company’s business during the year was 37 (2017: 39), of which none
+were directors (2017: none). This relates primarily to staff who are employees of the Company’s Luxembourg Branch, as all .
+other staff supporting the Company are employees of The Bank of New York Mellon London Branch.
+
+9 Share-based payments .
+
+Certain employees dedicated to the Company’ s business participate in two Group long-term incentive plans, which i issue
+shares in BNY Mellon.
+
+Stock options
+
+These awards provide for the issuance of stock options at fair market value at the date of grant. Generally, options vest in
+tranches over a specified period, expire after 10 years from the grant date and are subject to forfeiture until certain
+restrictions have lapsed, predominantly continued employment by The Bank of New York Mellon Group for a specified
+period. All options are to be settled by physical delivery of shares. Details ofall options existing during the year are shown
+below. 1 . ;
+
+53
+The Bank of New York Mellon (International) Limited — oo ;
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018 .
+
+9 Share-based payments - continued
+Restricted stock and restricted stock units (RSU)
+
+These awards are granted at no cost to the recipient. Generally restricted stock and RSUs vest in tranches over a specified’
+period, expire on vesting and are subject to forfeiture until certain restrictions have lapsed, predominantly continued
+employment by The Bank of New York Mellon Group for a specified period. The recipient of a share of restricted stock is
+entitled to voting rights and generally is entitled to dividends on the common’stock. An RSU entitles the recipient to receive
+a share of common stock after the applicable restrictions lapse. The recipient generally is entitled to receive cash payments
+equivalent to any dividends paid on the underlying:common stock during the period the RSU is outstanding but does not
+receive voting rights. For most awards, the fair value of restricted stock and RSUs is equal to the fair market value of The
+Bank of New York Mellon common stock on thé date of grant. However, certain awards granted to MRTs under the
+European Banking Authority are required to be marked-to-market due to discretionary clawback language contained in their
+
+grants. ‘
+
+All restricted stock and RSUs are to be settled by physical delivery of shares. .
+
+Stock options outstanding at 31 December 2018. os
+: . Weighted
+
+average ’ Weighted
+Range of ~ remaining average
+exercise price Number contractual ¢xercise price
+$ outstanding life (years) $
+21-30, 411 3.2 22.03
+31-40 664 1.5 30.22
+4] ~ 50. - - -
+1,075 2.1 27.09
+Stock options outstanding at 31 December 2017
+Weighted .
+’ average Weighted
+Range of remaining average
+exercise price Number contractual = ¢Xercise price
+$ outstanding life (years) $
+21-30 ALL 4.1 22.03
+31-40 664 24 - 30.22
+41 - 50 2,665 0.1 45.40
+3,740 1.9 34.61
+
+750 share options were exercised during 2018 (2017: 1,679) at a weighted average price of $45.40 (2017: $41.89).
+
+10- Directors' emoluments
+
+The aggregate amount of remuneration paid to or receivable by ‘directors in respect of qualifying services is disclosed
+below. Qualifying services include services as a director of the Company, as a director of any of its subsidiary undertakings
+or otherwise in connection with the management of the affairs of the Company or any of its.subsidiary undertakings. The
+amounts are disclosed irrespective of which BNY Mellon Group company actually makes the payment to the directors.
+
+54
+The Bank.of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+10 Directors' emoluments - continued
+
+2018 2017*
+
+£000 £000
+Directors’ emoluments ; ; 712 . 393
+Amounts receivable under long term incentive schemes. 94 - 90
+Company contributions to money purchase pension schemes 7 14 4
+820 487
+
+The aggregate of emoluments and amounts receivable under long term incentive schemes of the highest paid director
+was £195,727 (2017: £77,500) and company pension contributions of £7,885 (2017: £nil). During the year, the highest paid
+director did not exercise share options or receive shares under a long term incentive scheme.
+
+Number of Directors
+2018 2017*
+Retirement benefits are accruing to the following number of directors under: uo
+Money purchase schemes - 3 3
+
+The number of directors who exercised share options was - 4
+The number of directors in respect of whose services shares were received or receivable
+under long term incentive schemes was ‘ 4 6°
+
+* The Company has restated certain prior year numbers relating to directors’ remuneration to disclose amounts paid in the
+‘year and amounts which became receivable under long-term incentive schemes. The charge to administrative expenses in
+the Statement of profit and loss and other comprehensive income has continued to be recognised on an accruals basis. The
+number of directors disclosed for each item in the above table has also been restated where applicable to reflect this change.
+
+11 Administrative expenses and auditor’s remuneration
+
+Profit before taxation is stated after charging: .
+7 2018 2017
+
+. £000 £000
+
+Depreciation of tangible fixed assets 228 207
+
+Amortisation of intangible assets = - 41
+Auditor's remuneration:: ;
+
+2018 2017*
+
+£000 “£000
+
+Amounts receivable by the Company's auditor and its associates in respect of: ae
+
+Audit of these financial statements pursuant to legislation So, 209 ~ 170
+
+Other services pursuant to legislation 368 357
+
+All other services , . a 134 128
+
+711 655
+
+»
+’
+
+* The Company has restated certain prior year numbers relating to auditor's remuneration to disclose additional amounts .
+paid in the year.
+
+wu
+
+. 55
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued ;
+
+for the year ended 31 December 2018
+
+12 Taxation
+
+Recognised in the statement of profit and loss and other comprehensive income
+
+UK corporation tax
+Current tax on income for the period ©
+Adjustments in respect of prior periods
+
+Double taxation relief 7
+
+Foreign tax .
+Current tax on income for the period
+- Adjustments in respect of prior periods
+
+Deferred tax (see note 23)
+
+Origination and reversal of temporary differences
+\ . :
+
+Increase in tax rate
+
+Adjustments in respect of prior periods
+
+Total deferred tax
+
+Total tax expense
+
+2018
+£000
+
+19,638"
+193
+
+19,831
+
+267
+
+(282)
+(15)
+
+2017
+£000 - £000
+
+4,015
+
+4,015,
+
+(4,015)
+
+(4,015)
+
+5,071
+
+5,071
+
+712
+213
+
+925
+
+(is)
+
+19,816
+
+£000
+
+5,071
+
+—endaenmee
+
+925
+
+5,996. °
+
+‘In December. 2017, the Bank of New York (International) Limited made an election under s18A CTA 2009 to exclude the
+Luxembourg branch’s future profits from the UK tax regime. Although this election has had no financial impact on the
+company’s tax position, it resulted in alterations to the disclosure of foreign taxes to reflect the removal of double tax relief.
+
+>
+
+56
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+12. Taxation - continued
+
+Reconciliation of effective tax rate
+
+Profit for the year
+Total tax expense
+
+Profit excluding taxation
+
+Tax using the UK corporation tax rate of 19.00% (2017: 19.25%)
+Effect of tax rates in foreign jurisdictions , ,
+
+’ Tax on share of ICA profits =
+Effect of tax rate change on temporary differences 4 .
+Non-deductible expenses
+
+Bank surcharge at 8%
+
+Non-taxable income
+
+Losses surrendered (by) other Group entities
+
+* (Over)/under provided in prior years
+
+Total tax expense
+
+Factors that may affect current and total tax charge
+
+2017
+
+2018
+£000 £000
+224,585 16,479
+19,816 5,996
+244,401 22,475
+46,436 4,326
+2,319 1,057
+4,145 3,936
+
+- 213
+
+135 171
+3,670 3,374
+(36,800) -
+- (7,081)
+
+(89) -
+19,816. 5,996
+
+A reduction in the UK corporation tax rate from 20% to 19% (effective 1 April 2017) was enacted on 26 October 2015 and
+a further reduction to 17%.(effective 1 April 2020) was enacted on 6 September 2016. These reductions will reduce the
+Company’s future tax charge accordingly. The deferred tax asset at 31 December 2018 has been calculated based on these
+
+rates. ; .
+
+57
+The Bank of New York Mellon (International) Limited —
+
+' Notes to the financial statements - continued
+_ for the year ended 31 December 2018
+
+"13. EU Capital Requirements Directive IV
+
+In accordance with EU CRD IV the income, nature of activities, profit / (loss) before tax, taxes paid and public subsidies
+received have been disclosed by geographical location. The total tumover (excluding Net foreign exchange translation gains -
+/ (losses) and-income from fixed asset investments) amounted to £227 million (2017: £172 million) and | comprises Fees and
+
+Commissions, Net Interest Income and Other Operating Income. ‘
+
+4
+
+Transfer ‘Fund 7 Trust &
+
+_ . . Agency. Accounting Custody Depositary Total
+2018 oe £000 £000 £000 ‘£000 £000
+Geographical analysis by location: . . . ;
+United Kingdom | ; 23,251 36,403 31,033 18,040 108,727
+Luxembourg 719 18,124 © 38,664 - 57,507
+Turnover (Fees & Commissions) , ‘ 23,970 54,527 69,697 18,040 —. 166,234
+Geographical analysis by location: ; .
+
+United Kingdom - - 43,873 - 43,873
+Luxembourg Te oe 5,376 a 5,376
+Net Interest Income - - - 49,249 os 49,249
+Geographical analysis by location: .
+
+United Kingdom’ . , - - 5,104 - 5,104
+Luxembourg _ “ - 4,152 ; a 4,152
+Treasury Foreign Exchange Income - - - 9,256 oe 9,256
+
+Other operating income. amounting to £12-million comprises Treasury Foreign Exchange Income noted above in addition to
+£3 million relating to recharges of management overhead and other miscellaneous income which cannot be meaningfully
+allocated to product lines.
+
+Public
+Profit subsidies
+Employees beforetax Taxes paid received
+£000 £000 £000
+Geographical analysis by location: .
+United Kingdom “=. 217,701 11,867 -
+' . Luxembourg : 37 26,700 (1,790) -
+37 244,401 10,077 -"
+
+The tax amounts stated above are reflective of actual taxes paid in the year and not the accounting tax charge which reflects
+current tax charge and deferred tax.
+
+58
+_ The Bank of New York Mellon (International) Limited .
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+13. EU Capital Requirements Directive IV - continued
+
+Transfer Fund Trust &
+
+; Agency Accounting — Custody Depositary Total
+2017 £000: £000 £000 -- = £000 £000
+Geographical analysis by location: .
+United Kingdom ~ 21,774 35,677 20,222 1,264 78,937
+Luxembourg ‘ 639 17,726 33,712 - $2,077
+Turnover (Fees & Commissions) - 22,413 53,403 53,934 1,264 131,014
+Geographical analysis by location:
+United Kingdom | oo _ - 7,611 - 7,611
+Luxembourg - - - 3,131 - 3,131
+Net Interest Income - - ~ 10,742 ; ~ 10,742
+Geographical analysis by location: . .
+United Kingdom - _ 6,485 ; - 6,485
+Luxembourg - as "3,343 - 3,343
+Treasury Foreign Exchange Income -. - 9,828 ~ 9,828
+
+Other operating income amounting to £30 million comprises Treasury Foreign Exchange Income noted above in addition to
+£21 million relating to recharges of management overhead and other miscellaneous income which cannot be meaningfully
+allocated to product lines. .
+
+Public
+Profit. - subsidies
+- oo Employees before tax © Taxes paid received
+£000 £000 £000
+
+Geographical analysis by location:
+United Kingdom . . - 2,775 (100) -:
+Luxembourg og 39 19,700 1647 -
+39. 22,475 1,847 -
+
+The tax amounts stated above are reflective of actual taxes paid in the year and not the accounting tax charge which reflects
+current tax charge and deferred tax. .
+
+59
+The Bank of New York Mellon (International) Limited - ‘
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+14 Classification of financial assets and financial liabilities
+
+The following table provides a reconciliation between line items in the balance sheet and categories of financial assets and .
+liabilities. ‘ ° ;
+FVOCI - Total
+
+debt Amortised carrying
+7 instruments cost value
+2018 Note £000 £000 £000
+Assets ; . . ,
+Cash and cash equivalents 1S - 8,487,623 | 8,487,623
+Loans and advances to banks ; ; . - 16 : _ 2,049,210 2,049,210
+Loans and advances to customers - measured at amortised cost 7 ; 275,544 275,544
+Investment securities - measured at fair value 18 1,298,470 - 1,298,470
+Investment in associate : - 124,210 124,210
+Other loans and debtors : 22 - 32,767 _ 32,767
+Total financial assets - . ° "1,298,470 10,969,354 12,267,824
+Liabilities oo : . .
+Deposits by banks ° . . 24 - 1,767,652 | 1,767,652
+Customer accounts . . . 25 - 9,685,207 9,685,207
+_ Subordinated loan due to follow Group undertaking . 27 - 75,000 75,000
+Other loans and creditors : . 26 - - 16,322 16,322
+Total financial liabilities , - - - 11,544,181 11,544,181
+FVOCI- Total
+debt Amortised carrying
+; , instruments cost amount
+2017 | . Note ~* £000 £000 £000
+Cash and cash equivalents - . —— ; 15 - 7,026,059 7,026,059
+Loans and advances to banks ~ : ‘ . 16 - 2,085,358 2,085,358
+Loans and advances to customers’- measured at amortised cost ; - | 152,291 152,291
+_ Investment securities ~ measured at fair value 18 593,296 - 593,296
+Investment in associate - - 113,987 _ 113,987
+Other loans and debtors : . 22 se » 45,350 45,350
+Total financial assets , ‘ 593,296 9,423,045 10,016,341
+Liabilities . - ‘ .
+Deposits by banks . 24 is 2,017,767 2,017,767
+Customer accounts tee 25 ; - ° 7,459,508 7,459,508
+Subordinated loan due to follow Group undertaking 27 - 75,000 75,000
+Other loans and creditors 26 - 8,728 "8,728
+Total financial liabilities . . ; . - 9,561,003 9,561,003
+
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+14 Classification of financial assets and financial liabilities - continued
+
+Classification of financial assets and financial liabilities on the date of initial application of IFRS 9
+
+Original New
+Original New carrying carrying
+classification classification amount amount
+under IAS —s under IFRS under IAS — under IFRS
+39 9 39 : 9
+. £000 £000
+Financial assets . ; ; :
+Cash and cash equivalents ; . Loans and ~- Amortised 7,026,059 7,026,059
+o . receivables ~ cost my
+Loans and advances to banks . , , Loans and Amortised 2,085,358 2,083,358
+. : receivables cost .
+_ Loans and advances to customers Loansand __. Amortised 152,291 152,291
+receivables . cost
+Investment securities : _ : Available for FVOCI ~ 593,296 593,296
+, sale :
+Investment in associaté ; . ‘Loans and Amortised - 113,987 113,987:
+. receivables “cost
+Other loans and debtors , : Loans and Amortised 45,350 ° 45,350
+; ‘ receivables _ cost ;
+” Total financial assets 10,016,341 10,014,341
+s . *
+Financial liabitities an. : .
+Deposits by banks : Amortised ‘ Amortised 2,017,767 2,017,767
+: cost - cost
+Customer accounts , Amortised Amortised 7,459,508 7,459,508
+. , cost cost ,
+‘Subordinated loan due to follow Group undertaking Amortised Amortised 75,000 75,000
+. : cost cost :
+Other loans and creditors : Amortised Amortised 8,728 "8,728
+; . , cost. cost .
+Total financial liabilities . . , : 9,561,003 2,561,003
+
+The Company’s accounting policies on the classification of financial instruments under IFRS 9 are set out in note 1.27. The.
+application of these policies resulted in the reclassifications set out in the table above and explained below.
+
+Certain debt securities are held by the Company Central Treasury in separate portfolios to meet everyday liquidity needs.
+The Company Central Treasury seeks to minimise the costs of managing those liquidity needs and therefore actively
+manages the return on the portfolio. That return consists of collecting contractual payments as well as gains and losses from
+
+‘the sale of financial assets. The investment strategy often results in sales activity that is significant in value. The Company
+
+considers that under IFRS 9 these securities are held within a business model whose objective is achieved by both collecting
+contractual cash flows and selling financial assets. .
+
+15 Cash in hand and on demand balances at central banks .
+, 2018 2017
+
+£000 £000 -
+Cash at bank andinhand , 8,487,623 7,026,059
+
+61,
+The Bank of New York Mellon (International) Limited | a
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018 . ,
+
+15 Cash in hand and on demand balances at central banks - continued
+
+The Company is exposed to foreign exchange risk between the date of recognition and settlement of foreign currency.
+income and expenses. To mitigate this, the Company maintains foreign currency cash balances to offset the net currency
+position. This activity can result in foreign currency overdrafts that mitigate the risk of currency receivables. All overdrafts
+are with the Bank of New York Mellon London Branch. ;
+
+16 Loans and advances to banks
+
+62
+
+2018 2017
+£000 £000
+Repayable
+- on demand 1,932,996 1,676,529
+- three months or less but greater than demand 116,214 408,829
+2,049,210 2,085,358
+Amounts include: .
+~ Due from fellow Group undertakings
+- unsubordinated 983,911 1,218,339
+17 Loans and advances to customers
+2018 2017
+£000 £000
+Repayable ,
+- on demand 275,544 - 152,291
+_18 Investment securities
+2018 2017
+“£000 £000
+Investment securities measured at FVOCI - debt instruments 1,298,470 -
+Available-for-sale investment securities - debt instruments - $93,296
+1,298,470 593,296
+Investment securities measured at FVOCI - debt instruments a
+2018 2017
+£000 £000
+Covered bonds 382,113 -
+Government guaranteed 292,892 -
+Sovereign debt 145,112 -
+Supranational 274,388 -
+- Treasuries 203,965 -
+1,298,470 -
+\
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+Available-for-sale investment securities - debt instruments
+
+2018 2017
+
+; ; _—- £000 £000
+Government bonds ; : - 279,778
+Corporate bonds . ‘ 7 ; - 313,518
+, ; ‘ - 593,296
+
+19 Investments in affiliates ;
+Total ~.
+
+Investment in
+Investment in Associate
+subsidiary —
+£000 £000 £000
+- Cost ; oo : .
+At | January 2018 so 57,176 113,987 171,163
+Additions me . - 3,585 3,585
+Revaluations = , - 6,638 (6,638
+At 31 December 2018 57,176 124,210 181,386
+Net book value ; . ; , ;
+
+At31 December 2018. —, 57,176 124,210 181,386
+At 31 December 2017 57,176 113,987 171,163
+
+Investment in associate
+
+The investment in associate of £124,210,000 (2017: £113,987,000) represents a 10% (2017: 10%) participating interest in
+an ‘Investment and Cooperation Agreement’ with another Group entity. The principal activity of the associate is banking.
+
+After an initial investment of US$44,542,006 on 1 ‘November 2005, subsequent investments of US$35, 000,000 on 31
+_ December 2007, US$74,700,000 on 1 August 2008, and US$4,753,000 on 9 July 2018 were made.
+
+During the year, the Company received a payment of £150.7 million (note 7).
+
+Management have conducted an impairment review of the carrying value of the investment based on the fair value of the
+associate. The key assumptions used in conducting the impairment review were as follows:
+
+¢ The investment is able to be drawn down by the Company with one month’s notice; and
+e The investment is held at-an AA rated bank.
+
+Management are satisfied that there were no indicators of impairment at 31 December 2018 (2017: none).
+
+63 .
+7
+
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+Subsidiaries
+
+“19 Investments in affiliates - continued
+
+The Company had 3 (2017: 3) d direct subsidiaries and 2 (2017: 2) indirect subsidiaries. Nominee companies are dormant
+
+entities.
+
+The Company has the following investments in subsidiaries:
+
+Direct
+BNY Trust Company
+Limited
+
+BNY Mellon
+
+Secretaries (UK)
+Limited
+
+BNY Custodial
+Nominees (Ireland)
+Limited
+
+Indirect
+
+BNY Mellon Trust & |
+
+Depositary (UK) .
+Limited
+
+The Bank of New York
+
+Capital Markets
+
+- Limited °
+
+Country of
+
+. Incorporation
+
+England &
+Wales
+
+England &
+
+~ Wales
+
+England &
+Wales
+
+England &
+Wales
+
+England &
+Wales
+
+Registered
+office
+
+160 Queen
+Victoria Street,
+
+London, EC4V
+
+4LA
+160 Queen
+
+. Victoria Street,
+
+London, EC4V
+4LA
+
+160 Queen
+Victoria Street,
+
+- London, EC4V
+
+4LA
+
+160 Queen
+Victoria Street,
+
+London, EC4V —
+4LA
+
+160 Queen
+
+Victoria Street,
+London, EC4V
+, _ ALA
+
+Principal
+activity
+
+Holding
+
+Company ,
+
+Nominee
+Company
+
+Nominee
+Company
+
+Trustee to
+Authorised and
+Unauthorised
+Unit Trusts and
+‘Depositary to
+Open Ended
+Investment
+Companies
+
+Company is not
+
+engaged in any .
+
+ongoing
+business
+
+activities |
+
+Class of
+
+“ shares held
+
+Ordinary £1
+Ordinary £1
+
+Ordinary
+€1.25
+
+Ordinary £1
+
+Ordinary £1
+
+* Ownership
+
+2018
+100%
+
+100%
+
+100%
+
+100%
+
+100%
+
+_During the year, the Company received a dividend of £43.0 million from BNY Trust Company Limited (note 7).
+
+Ownership
+2017
+", 100%
+
+100%
+
+100%
+
+100%
+
+100%
+
+Management have conducted an impairment review of the investments based on the net assets versus carrying value of the
+principal subsidiaries and have concluded that no impairment exists at the balance sheet date.
+
+‘
+
+During 2017, The Bank of New: York Capital Markets Limited appointed a  Fguidator and was dissolved on 13 February
+
+* 2019.
+
+64
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+20 Intangible assets
+
+t To Computer
+software, Computer Intangible Purchased
+internally software, assets under _ customer
+generated other development - Goodwill _ relationships Total
+£000 £000 £000 £000 £000 | £000
+Cost . . .
+At | January 2018 , 11,126 4,892 12 20,279 70 36,379.
+Additions : - 40 - - 40
+At 31 December 2018 . 11,126 4,892 ‘ 52 20,279 70 36,419
+Amortisation and impairment
+At | January 2018 11,126 4,892 - 20,279 70 36,367
+At 31 December 2018 11,126 4,892 - 20,279 10 36,367
+Net book value .
+At 31 December 2018 - - 52 - - 52
+- 12 - .
+
+7 At 31 December 2017 ‘ , .
+
+12
+
+During the year, management conducted an impairment review of intangible assets. The review indicated that there were no
+indicators of impairment. Management are therefore satisfied that the recoverable amount exceeds the carrying amount. The
+recoverable amount of the intangibles is based on their value i in use.
+
+21 Tangible fixed assets °
+
+Cost
+
+At | January 2018
+Additions °
+
+Disposals
+
+At 31 December 2018
+Depreciation and impairment
+At | January 2018
+Disposals
+
+Depreciation
+
+At 31 December 2018
+Net book value |
+
+At 31 December 2018
+
+At 31 December 2017 . -
+
+22 Other assets
+Deferred tax (see note 23)
+
+Amounts owed by Group companies
+Other debtors
+
+65
+
+Total
+
+Fixtures and Computer , Leasehold
+
+fittings equipment improvements .
+£000 £000 £000 £000
+3,139 8,261 384 “11,784
+60 614 - 674
+(977) - - (977)
+
+2,222 8,875 384 _ 41,481
+2,957 8,175 380 115512
+(958) “ - * (958)
+
+. 97 131 - 228
+2,096 8,306 380 _ 10,782
+
+126 569 699
+
+182° 86 272
+2018 2017.
+
+£000 £000
+
+21,794 20,007
+
+2,747 4,438
+
+32,882 47,026 -
+
+57,423 71,471
+
+The Bank of New York Mellon (International) Limited | | .
+
+Notes to the financial statements - continued
+
+for the year ended 31 December 2018
+
+22 Other assets - continued
+
+~
+
+Other assets are stated after £66,000 of provisions for doubtful debts for trade receivables (2017: £125,000).
+
+The table below reflects the movement in the doubtful debt provision during the period:
+
+se “
+
+At 1 January
+Provided during the year
+Released during the year
+
+At 31 December
+
+23 Deferred tax assets and liabilities
+
+Movement in deferred tax during the year
+
+At | January Co
+Profit and loss charge
+OCI charge
+
+Prior year adjustment
+Other
+
+At 3] December
+
+. ‘2018 2017
+£000 £000
+125 49
+- 66 “125
+. (125) (49)
+66 125
+2018 2017
+£000 £000
+20,007 20,932
+(267) —«-(925)
+577 -
+282 -
+1,195 -
+,
+21,794 20,007
+
+The deferred tax asset has been recognised i in full based on its expected recoverability due to the future anticipated profits
+of the Company. The major components of deferred tax are as follows: .
+
+Recognised deferred ta tax assets and liabilities
+
+Tangible fixed assets
+Subordinated loan (borrowing)
+Unrealised gains in OCI
+
+_ Other
+
+Net deferred tax assets
+
+66
+
+2018 2017-
+£000 £000
+1,272 ‘1,240
+18,750 18,750"
+1,772 -
+- 17
+21,794 20,007
+
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+24 Deposits by banks
+
+2018 2017
+£000 £000 |
+. Repayable ; ;
+- three months or less but greater than on demand ~ ; 1,767,652 2,017,767
+Amounts include: - .
+Due to fellow Group undertakings : ; ;
+- unsubordinated . 1,765,903 __2,017,767
+‘25 Customer accounts
+2018 2017
+£000 £000
+Repayable ;
+~ondemand . . 9,629,623 7,360,730”
+
+- within 3 months 55,584 98,778 ©
+, 9,685,207 7,459,508 .
+
+Amounts include: .
+Due to fellow Group undertakings .
+- on demand 1192  . 1,459
+
+- within 3 months : . . 54,392 97,319
+$5,584 98,778
+
+26 Other liabilities
+2018 2017
+
+£000 £000
+Amounts owed to Group undertakings 87,079 20,322
+’ Other liabilities . . 19,899 13,004
+oo 106,978 33,326
+27 Subordinated loan due to fellow group undertaking - ; -
+SO 2018 = 2017
+° ; £000 £000
+_ Subordinated loan 4 — 75,000 75,000
+
+On. 15 December 2014 the unsecured subordinated loan of £75 million (2017: £75 million) originally borrowed from
+Mellon International Holdings S.a.r.l., was contributed to BNY Mellon Investment Management (Jersey) No.2 Limited for
+no consideration, maintaining the original terms and conditions.
+
+The facility commenced on 30 November 2011 and was originally available for a period of 7 years. On 16 December 2014,
+
+the loan was amended to extend the repayment date to 29 November 2024. The facility bears interest at a rate of sterling 3
+month LIBOR plus 3.00%. Interest is paid to the lender quarterly in arrears.
+
+67
+The Bank of New York Mellon (International) Limited
+
+_ Notes to the financial statements - continued
+for the year ended 31 December 2018
+
+28 Provisions for liabilities and commitments
+
+2018 = =—Ss«é207
+
+| £000 = «£000
+
+Atl January . 70 3,753
+Amounts utilised in the year , . (70) (3,268)
+Amounts reversed during the year So - (415)
+
+At31 December - 7 . . -_ 0. 70
+
+The provision brought forward from the prior year in respect of operational losses amounting t to £0.1 million has
+subsequently been utilised through 2018. No further provisions exist at 31 December 2018.
+
+29 Capital and reserves
+
+2018 2017
+; £000 £000
+Allotted, called up and fully paid os |
+519,694,974 Ordinary shares of £1 each’ 7 oo , 519,695 19,695
+
+30 Transactions involving directors, officers and others -
+
+At 31 December 2018, there were no loans or other transactions made to directors, officers or other related parties of the
+Company (2017: £nil).
+
+31 ‘Ultimate parent company and parent company of larger group
+
+The immediate parent undertaking of the Company is BNY International Financing Corporation, a company registered in
+the United States of America. BNY International Financing Corporation's registered address is 240 Greenwich Street, New
+York, NY 10286. ;
+
+. The largest and smallest group in which the results of the Company are consolidated is that headed by The Bank of New
+_ York Mellon Corporation, incorporated in the United States of America.
+
+The ultimate parent company as at 31 December 2018 was The Bank of New York Mellon Corporation, incorporated in the
+United States of America. The consolidated accounts of the ultimate parent company may be obtained from:
+
+The Secretary
+
+The Bank of New York Mellon Corporation
+_ 240 Greenwich Street,
+
+New York, NY
+
+10286
+
+USA
+
+32 Capital resources and requirement
+
+The Company is authorised by the PRA and regulated by the PRA and the FCA to carry on various activities, including the
+acceptance of deposits. The Company with its subsidiaries is supervised on a solo consolidated basis by the PRA. The
+Company’s regulatory capital resources management objective is to ensure that it complies with the regulatory requirements
+set by the PRA. .
+
+68.
+‘
+
+The Bank of New York Mellon (International) Limited
+
+Notes to the financial statements - continued
+for the year ended 31 December 2018 ,
+
+32 Capital resources and requirement - continued
+
+The following table is an analysis of those items which comprise the Company’s Regulatory Capital on a solo consolidated
+basis. ,
+
+2018 2017
+. £000 £000
+_ Tier 1 capital ; . .
+Solo consolidated called up share capital . ; 519,695 319,695
+Solo consolidated profit and loss and other reserves : : 40,227 42,569
+Total tier 1 capital , ; ; 559,922 $62,264
+Deductions from tier | capital ; ‘ (125,515) (114,585)
+Intangible assets ; : - -
+Total tier 1 capital after deductions . ; 434,407 447,679 .
+Tier 2 capital ;
+Lower tier 2 capital instruments (see note 27) 75,000 75,000
+Total tier 1 and tier 2 capital — ‘ 509,407 . $22,679
+Total capital resources , 509,407 - 522;679
+Risk weighted assets were (unaudited):
+; 2018 _ 2017 ,
+; £000 £000
+Credit risk | _ ; 807,695 $04,278
+Market risk , . . 9,896 10,304
+Operating risk ' 366,449 366,871
+Sy -__ 1,184,040 881,453
+
+The Company’s capital management is discussed in the section ‘Capital management’ on page 9.
+
+* As at 31 December 2018, under CRD IV rules, the Company’s capital ratios on a solo consolidated basis were Common
+Equity Tier 1 36.69% (2017: 50.80%) and Total Capital 43.02% (2017: 59.30%). Total regulatory capital resources on a
+- solo consolidated basis as at 31 December 2018 were £509 million (2017: £523 million).
+
+Basel II is the Basel Committee’s reforms to strengthen global capital and liquidity rules. To implement the Basel I
+capital and liquidity proposals, a capital adequacy legislative package called the Capital Requirements Directive (“CRD”)
+was issued by the European Commission and adopted by EU member states. In June 2013, the European Commission
+published the final Regulation and Directive, known collectively as CRD IV, to give effect to the Basel II framework in the
+EU. This came into effect on 1 January 2014.
+
+In addition to the tightening of the definition of capital, Basel III introduced a ‘Liquidity Coverage Ratio’ which is designed
+to test short-term resilience to liquidity disruptions, a ‘Net Stable Funding Ratio’, which is designed to test whether long-
+term assets are funded with at least a minimum amount of stable liabilities and a ‘Leverage Ratio’ which is the ratio of Tier
+1 capital-to total exposures. The Basel III requirements will be phased in with full implementation by 1 January 2019.

@@ -1,0 +1,5232 @@
+Mizuho International plc
+
+Financial Statements
+2009
+
+Company No: 1203696
+
+*LOHRJONC*
+28i
+IMPAI
+
+win
+
+Financial Statements 2009
+
+Cantents Page
+General Information 2
+Directors’ Report 3
+Report of the Independent Auditors 10
+Consolidated Profit and Loss Account 12
+Consolidated Balance Sheet 13
+Statement of Total Recognised Gains and Losses 14
+Company Balance Sheet 15
+Notes to the Consolidated and Company Financial Statements 16
+
+1 Mizuho International pic - Financial Statements 2009
+
+General Information
+
+Directors
+
+Mr S. Matsushima Chairman and Non-Executive Director
+Mr S. Berwick Chief Executive
+
+Mr M. Mochizuki Managing Director
+
+Mr |. Abrams Non-Executive Director
+
+Mr M. Hirakata Non-Executive Director
+
+Mr G. Mitchell OBE Non-Executive Director
+
+Mr S. Wako Non-Executive Director
+
+Company Secretary
+
+Mr B. Lanaghan
+
+Auditors
+
+Ernst & Young LLP
+1 More London Place
+London SE1 2AF
+
+Registered Office
+
+Bracken House
+One Friday Street
+London EC4M 9JA
+Tel: 020 7236 1090
+
+Registered in England and Wales Number 1203696
+
+Mizuho International pic — Financia! Statements 2009
+
+Directors’ Report
+
+The Directors submit their Report and the financial statements for the year ended 31* March
+2009.
+
+Principal Activity
+
+Mizuho International plc (‘the Company’) and its subsidiary entities (‘the Group’) is the
+London based securities underwriting, broking and trading company within the Mizuho
+Financial Group, headed by Mizuho Financial Group, Inc.. The Company’s immediate
+parent company is Mizuho Securities Co., Ltd (‘Mizuho Securities’). The Group’s activities
+include both customer facilitation and trading businesses in debt and equity securities,
+alternative assets, repurchase activities, money market loans and deposits, and the
+provision of custody services. In order to meet customer demand and maintain access to
+market liquidity the Group arranges and manages issues of securities and carries portfolios
+of securities, together with derivative instruments for hedging and trading purposes. The
+Group’s proprietary activities involve taking positions as principal in interest rate, credit and
+equity products and in alternative assets. The techniques used by the Group to manage the
+risks inherent in its business are described in note 33 to these financial statements.
+
+The Company has deposit taking and other permissions relating to its investment and
+custody businesses pursuant to the provisions of the Financial Services and Markets Act
+2000 and the rules of the Financial Services Authority.
+
+The Company has a branch office in Zurich, Switzerland.
+
+Results for 2009
+
+The performance of the Group continues to be adversely affected by the ongoing disruption
+of capital markets, which was precipitated by the collapse of the US securitisation markets
+during 2007, and the Group has suffered a loss of £267.5 million for the year ended 31*
+March 2009. Whilst losses arising from our former US Structured Credit business are
+significantly reduced from those experienced during 2008, legacy risk positions and
+investments carried within our other business areas have been impacted by ongoing market
+turbulence and credit losses.
+
+The result for the year has further increased the Company’s unutilised tax losses, and no
+deferred tax asset has been recognised due to the uncertain timing and level of future
+profits.
+
+US Structured Credit business
+
+The Group decided to cease securitisation business within the US during 2008, and during
+the current financial year has focused upon the management and reduction of exposures
+acquired through this business. In particular, exposures to residential mortgage backed
+securities (‘RMBS’) were significantly reduced during the first half of the financial year.
+
+The Group has not been able to fully dispose of holdings relating to this former business due
+to a lack of market liquidity, and trading losses of £38.6 million were incurred during the
+current year (2008: £1,936.7 million), which resulted from additional revaluation losses
+suffered on legacy positions.
+
+Significant emphasis continues to be placed upon the valuation of these positions. As a
+result of this valuation work and trade related developments, further write downs have been
+taken against residual positions as noted above. The remaining exposures to US asset
+backed securities, after taking into account these write downs, are given in note 33 to these
+financial statements.
+
+3 Mizuho International plc — Financial Statements 2009
+
+To further aid the efficient exit from this asset class, the Company has transferred its US
+securitisation portfolio to a newly incorporated subsidiary company (Structured Credit
+America Ltd), with effect from 1 April 2009. Further details are provided in note 31 to these
+financial statements.
+
+Other business activities
+
+The Group’s advisory and client facing Sales and Trading businesses were strengthened
+during the current year through the recruitment of additional sales and broking staff. Despite
+the positive impact of these measures, these businesses were adversely affected by low
+levels of investor appetite and poor conditions within their respective markets.
+
+The Group suffered significant losses during the current year within its UK structured credit
+businesses, which arose principally from the deterioration in credit quality of certain
+derivative counterparties to legacy transactions within these businesses (as disclosed within
+note 6). Further details of these credit exposures are given in note 33 to these financial
+statements.
+
+The Group continued to maintain its investments in the Caliburn fund of funds product, and
+in the Apposite Healthcare private equity fund.
+
+Financial position
+
+The Group's management has made an assessment of the Group's ability to continue as a
+going concern and is satisfied that the Group has the resources to continue in business for
+the foreseeable future. The Group has continued to suffer losses during the current financial
+year, as previously described, whilst at the same time taking significant steps to reduce its
+risk exposures. As a result of these losses and increased regulatory capital requirements,
+which took effect from 1° January 2009, the Group has received additional capital
+contributions from its parent, Mizuho Securities. Additional equity share capital of £111.8
+million has been received by the Company during the year (further details are given in note
+28 to the financial statements).
+
+As a consequence of the ongoing support and commitment provided by Mizuho Securities,
+the Group’s financial position remains sound. The Group’s total equity after retained losses
+is £354.1 million as at 31% March 2009, which compares to total equity of £512.5 million as
+at 31° March 2008. In addition the Group received a further capital injection of £35.9 million
+on 30" April 2009 from Mizuho Securities. The Group regularly performs forward looking
+capital projections, and capital requirements, together with related risk exposures, are
+actively managed through this process.
+
+The Group sources short term funds from international money markets, through unsecured
+borrowing or repurchase arrangements, and sources longer term funding from MTN
+issuance and borrowing from the wider Mizuho group. The Group has consistently
+maintained strong liquidity and expects to do so for the foreseeable future.
+
+Other highlights of the year
+
+No new lines of business were commenced by the Group during the year. In line with the
+requirements of the Mizuho Financial Group, the Group has reviewed its operations with a
+view to further reducing its exposure to complex products and non client related business.
+To achieve this reordering of the Group's core operations, the following principal objectives
+have been set:
+
+e Structured credit, proprietary and complex derivative exposures are to be liquidated or
+wound down in an orderly manner;
+
+4 Mizuho International pic — Financial Statements 2009
+
+Directors’ Report (continued)
+
+e The Group will over time re-order its activities to focus upon the distribution of vanilla
+products to serve client needs, and to require reduced capital support;
+
+e The Company will transfer its portfolio of US securitisation positions to a separate
+subsidiary company; and
+
+e The Group will review its existing systems architecture and core processes with a view to
+streamlining operations and improving control.
+
+The Group has taken steps towards achieving each of these objectives during the current
+year, and in particular:
+
+e Market risk exposures within the Group’s Risk Trading division have been reduced, and
+the Group has had some success in closing out legacy derivative positions;
+
+e Additional recruitment has been effected within the Group’s Sales and Trading divisions;
+
+¢ The Group’s portfolio of US securitisation positions was transferred, as described above,
+with effect from 1* April 2009; and
+
+e Significant resource has been invested during the current year in infrastructure
+improvement, and this has resulted in the identification of a range of both short and
+longer term initiatives.
+
+Future Prospects
+
+We expect the adverse impact of the so-called “credit crunch” and subsequent recession to
+continue during 2010, and this may continue to affect the level of market activity in respect of
+the Group’s Sales and Trading and Advisory and Origination businesses. In addition,
+residual exposures arising from legacy structuring businesses may also suffer as a result of
+further counterparty credit deterioration. The Group will continue to reduce these exposures
+as opportunities arise, whilst management projections and stress tests indicate that the
+Group is sufficiently capitalised to bear further adverse developments in relation to these
+positions.
+
+Our focus for 2010 will be to develop our client facing businesses as noted above. Any
+activities will be closely coordinated with other Mizuho Financial Group companies and we
+expect to build ever closer links where this is appropriate and permitted by regulation. In
+particular, we expect that additional opportunities may arise as a result of planned regulatory
+changes to Japanese firewall regulations from June 2009.
+
+It is expected that further benefits will accrue as a consequence of the merger between
+Shinko Securities Co., Ltd and Mizuho Securities Co., Ltd, a fellow member of the Mizuho
+Financial Group, which took effect on 7" May 2009.
+
+We also expect to see some growth in demand for our capital markets products in certain
+new markets, particularly in Asia, and we will look to become more globally aligned with
+Mizuho Securities. We remain confident that our diversified product offering will enable us to
+continue to expand and prosper in these markets in a controlled manner.
+
+Use of Financial Instruments
+
+As a global financial services business, the Group is affected by the factors driving the
+markets in which it operates. The major risks to which the Group is exposed are market risk,
+
+5 Mizuho International ple — Financial Statements 2009
+
+Directors’ Report (continued)
+
+credit risk, longevity risk, liquidity risk, operational risk and legal risk. As these different risk
+factors can impact the Group’s business strategies, and can directly affect earnings, the
+Directors have established a comprehensive framework for managing these risks, with the
+Executive Committee and Risk Committee setting and regularly reviewing policies and limits.
+
+Details of the management of these risks are included in note 33 to the accounts. These risk
+factors, as well as other influences beyond the Directors’ control, mean that income and
+operating result may, and are likely to, continue to vary from period to period.
+
+Directors
+
+The following served as Directors of the Company during the year ended 31 March 2009:
+
+Executive Directors
+Mr S. Berwick
+Mr M. Mochizuki
+
+Non-Executive Directors
+Mr |. Abrams
+Mr G. Mitchell OBE
+Mr Y. Endo (Chairman) Resigned 31% March 2009
+Mr S. Matsushima
+Mr S. Wako
+
+On 1* April 2009 Mr S. Matsushima was appointed as Chairman and Mr M. Hirakata was
+appointed as a Non-Executive Director.
+
+There are no directors interests requiring disclosure under the Companies Act 1985.
+Statement of Directors’ Responsibilities
+
+Company law requires the Directors to prepare financial statements for each financial period
+which give a true and fair view of the Group’s and Company's state of affairs at the end of
+the period and of the profit or loss for the period then ended.
+
+In preparing these financial statements, the Directors are required to:
+e Select suitable accounting policies and then apply them on a consistent basis;
+« Make judgements and estimates that are reasonable and prudent;
+
+« State whether applicable accounting standards have been followed, subject to any
+material departures disclosed and explained in the financial statements; and
+
+e Prepare the financial statements on the going concern basis unless it is inappropriate to
+presume that the Group and Company will continue in business.
+
+The Directors are responsible for keeping proper accounting records which disclose with
+reasonable accuracy, at any time, the financial position of the Group and Company, and for
+ensuring that the financial statements comply with the Companies Act 1985. They have a
+general responsibility for taking such steps as are reasonably open to them to safeguard the
+assets of the Group and Company and to prevent and detect fraud and other irregularities.
+
+Each of the Directors has ensured that so far as they are aware, there is no relevant audit
+information of which the Group’s auditors are unaware, and consider that they have each
+taken all of the steps they ought to have taken as a Director to make themselves aware of
+
+6 Mizuho International pic — Financial Statements 2009
+
+Directors’ Report (continued)
+
+any relevant audit information and to establish that the Group’s auditors are aware of that
+information.
+
+Corporate Governance
+
+As the Company is not listed there is no requirement to comply with the Combined Code of
+Corporate Governance. However the Directors consider that Corporate Governance is an
+important matter and have adopted a number of procedures set out in the Combined Code.
+
+The principal procedures are detailed below:
+
+The Board meets four times each year and more frequently where business needs
+require,
+
+As at 31" March 2009 the Board consisted of two Executive Directors, and five Non-
+Executive Directors.
+
+In order to facilitate the effective conduct of business the Board operates three
+committees, namely the Executive Committee, the Audit and Compliance Committee and
+the Remuneration Committee. The Board itself, however, ultimately remains responsible
+for all delegated matters. The responsibilities and constitution of the committees are
+detailed below:
+
+The Executive Committee is responsible for running the Company on a day to day
+basis. The committee generally meets at least once a week and is chaired by the
+Chief Executive. Members of the comrittee are appointed by the Board on the
+recommendation of the Chief Executive. The committee's main responsibilities are to:
+
+- Ensure the Company conducts its business according to the strategy agreed by
+the Board and the Company's shareholders;
+
+- Review annual business plans and budgets and present them to the Board for
+approval;
+
+- Review the financial results of the Group on a monthly basis;
+
+- Report to the Board changes to the annual budget and material budget variances;
+
+- Authorise general policies of the Company;
+
+- Review the Company's liquidity position on a regular basis; and
+
+- Ensure the Risk Committee (initially the Fixed Income and Equity Risk
+
+' Committees separately and subsequently the combined Risk Committee); the
+
+New Product Committee; the IT Steering Committee; the Health and Safety
+Committee; and the Operational Risk Committee operate as prescribed.
+
+The Risk Committee is the principal sub committee of the Executive Committee and
+is responsible for advising the Executive Committee on risk policies and limits for
+both market and credit risk, across the business, and monitors compliance with these
+limits. The Risk Committee meets on a weekly basis. It is chaired by the Chief Risk
+Officer. The Head of Credit Risk, the Head of Market Risk, the Head of Methodology
+and Model Validation and representatives of the front and back office also attend the
+Risk Committee meetings.
+
+The Audit and Compliance Committee has the following responsibilities:
+- Monitoring the integrity of the financial statements and accounting policies of the
+Group and Company;
+
+- Monitoring and reviewing the performance of the internal audit function, the
+compliance function and the external auditors;
+
+Mizuho international pic - Financial Statements 2009
+
+Directors’ Report (continued)
+
+- Reporting to the Board on issues raised by both internal and external audit;
+- To appraise, improve and reinforce the control environment of the Group; and
+
+- Reviewing compliance with the rules and observations of the Financial Services
+Authority and other relevant regulatory agencies.
+
+The committee meets on a quarterly basis and more frequently if required. It is
+comprised solely of Non-Executive Directors and is chaired by Mr G. Mitchell OBE
+who reports directly to the Board. The Chairman is entitled to invite the external
+auditors, Chief Executive, Chief Financial Officer, the Head of Internal Audit and the
+Head of Compliance and any other staff members to attend the committee’s
+meetings. The committee is empowered to investigate any matters that cause it
+concern.
+
+- The Remuneration Committee’s purpose is to approve the Company's
+remuneration policy generally and specific remuneration at certain senior levels.
+
+The Group’s organisational structure is designed to ensure that responsibilities are defined,
+authority only delegated where appropriate, and that the Board receives regular
+management accounts containing a sufficient level of analysis of the financial performance
+of the Group and Company. In respect of internal financial controls the Directors are
+responsible for ensuring that the Board meets regularly to review such accounts and takes
+appropriate decisions on all material matters.
+
+Charitable and Political Donations
+
+During the year ended 31*' March 2009 the Group made donations to a variety of charities
+totalling £3,500 (2008: £11,000). The Group made no donations to political parties or their
+affiliated organisations.
+
+Employment Policies
+
+The Company is committed to equal opportunities for all, irrespective of race, colour, religion
+or belief, ethnic or national origins, gender, age, family status, sexual orientation, disability,
+or political opinion.
+
+The Company is committed to taking positive action to promote such equality of opportunity
+and our recruitment, training, benefits and promotion procedures are based on an
+individual’s qualifications, merit and ability against the requirements of the job.
+
+All staff are made aware of the provisions of this policy and must attend a seminar outlining
+the Company's policy. Staff have a positive responsibility to comply with this policy and
+ensure that the terms are put into effect. Full details of the Company’s Equal Opportunities
+Policy are available on the Company's intranet site.
+
+The Company places considerable value on the involvement of its employees and has a
+practice of keeping them informed on matters affecting them as employees and on the
+various factors affecting the performance of the Group. This is achieved through regular
+circulars distributed throughout the Company, through the Company's intranet site and
+through the Directors’ Report and financial statements which are made available to all
+employees.
+
+8 Mizuho International pic — Financial Statements 2009
+
+Directors’ Report (continued)
+Payment to Creditors
+
+It is the Group’s policy to settle all of its trading transactions on the agreed settlement date.
+Trade creditors are paid in accordance with the relevant agreed contractual terms.
+
+At 31% March 2009 the amount owed to trade creditors by the Group, expressed as a
+proportion of the amounts invoiced by suppliers during the twelve months then ended, was
+16 days (2008: 23 days).
+
+Disclosure of information to the Auditors
+
+So far as each person who was a Director at the date of approving this report is aware, there
+is no relevant audit information, being information needed by the Auditors in connection with
+preparing their report, of which the Auditors are unaware. Having made enquiries of fellow
+Directors and the Group’s and Company's Auditors, each Director has taken all the steps
+that they are obliged to take as a Director in order to make themselves aware of any relevant
+audit information and to establish that the Auditors are aware of that information.
+
+Auditors
+
+The Auditors of the Group and Company, Ernst & Young LLP, have expressed their
+willingness to continue in office and a resolution re-appointing them as Auditors and
+authorising the Directors to determine their remuneration will be proposed at the forthcoming
+Annual General Meeting.
+
+By Order of the Board
+B. Lanaghan
+Company Secretary
+28" May 2009
+
+9 Mizuho International ple — Financial Statements 2009
+
+Independent Auditor’s Report to the Members of
+Mizuho International pic
+
+We have audited the Group and Company financial statements (the ‘financial statements’) of
+Mizuho International ple for the year ended 31** March 2009 which comprise the Group Profit
+and Loss Account, the Group and Company Balance Sheets, the Group and Company
+Statement of Total Recognised Gains and Losses, and the related notes 1 to 35. These
+financial statements have been prepared under the accounting policies set out therein.
+
+This report is made solely to the Company's members, as a body, in accordance with
+Section 235 of the Companies Act 1985. Our audit work has been undertaken so that we
+might state to the Company's members those matters we are required to state to them in an
+auditors' report and for no other purpose.
+
+To the fullest extent permitted by law, we do not accept or assume responsibility to anyone
+other than the Company and the Company's members as a body for our audit work, for this
+report or for the opinions we have formed.
+
+Respective responsibilities of directors and auditors
+
+The Directors’ responsibilities for preparing the Annual Report and the financial statements
+in accordance with applicable United Kingdom law and Accounting Standards (United
+Kingdom Generally Accepted Accounting Practice) are set out in the Statement of Directors’
+Responsibilities.
+
+Our responsibility is to audit the financial statements in accordance with relevant legal and
+regulatory requirements and International Standards on Auditing (UK and Ireland).
+
+We report to you our opinion as to whether the financial statements give a true and fair view
+and are properly prepared in accordance with the Companies Act 1985. We also report to
+you whether in our opinion the information given in the Directors' Report is consistent with
+the financial statements.
+
+In addition we report to you if, in our opinion, the Company has not kept proper accounting
+records, if we have not received all the information and explanations we require for our audit,
+or if information specified by law regarding Directors’ remuneration and other transactions is
+not disclosed.
+
+We read the Directors’ Report and consider the implications for our report if we become
+aware of any apparent misstatements within it. Our responsibilities do not extend to any
+other information.
+
+Basis of audit opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK and
+Ireland) issued by the Auditing Practices Board. An audit includes examination, on a test
+basis, of evidence relevant to the amounts and disclosures in the financial staternents. It also
+includes an assessment of the significant estimates and judgments made by the Directors in
+the preparation of the financial statements, and of whether the accounting policies are
+appropriate to the Group’s and Company's circumstances, consistently applied and
+adequately disclosed.
+
+10 Mizuho International pic — Financial Statements 2009
+
+Independent Auditor’s Report to the Members of
+Mizuho International pic (continued)
+
+We planned and performed our audit so as to obtain all the information and explanations
+which we considered necessary in order to provide us with sufficient evidence to give
+reasonable assurance that the financial statements are free from material misstatement,
+whether caused by fraud or other irregularity or error. In forming our opinion we also
+evaluated the overall adequacy of the presentation of information in the financial statements.
+
+Opinion
+
+In our opinion:
+
+e The financial statements give a true and fair view, in accordance with United Kingdom
+Generally Accepted Accounting Practice, of the state of the Group’s and the parent
+Company's affairs as at 31°" March 2009 and of the Group’s loss for the year then ended;
+
+* The financial statements have been properly prepared in accordance with the
+Companies Act 1985; and
+
+* The information given in the Directors’ Report is consistent with the financial statements.
+
+Era Yong ut
+
+Ernst & Young LLP
+Registered Auditor
+London
+
+28" May 2009
+
+11 Mizuho International pic — Financial Statements 2009
+
+Consolidated Profit and Loss Account
+
+for the year ended 31°! March 2009
+
+Interest receivable
+
+Interest payable
+
+Net interest income
+
+Fees and commissions receivable
+Fees and commissions payable
+
+Net fees and commissions
+
+Net trading losses
+
+Other operating income
+
+Operating losses
+
+Administrative expenses
+Depreciation and amortisation
+Provisions for liabilities and charges
+
+Operating loss on ordinary activities before tax
+
+Tax on loss on ordinary activities
+
+Loss for the year
+
+Note 2009 2008
+£ millions £ millions
+
+4 18.9 31.6
+4 (0.3) (2.9)
+18.6 28.7
+
+5 32.9 32.7
+5 (33.8) (53.4)
+(0.9) (20.7)
+
+(149.3) (1,850.4)
+
+0.4 2.0
+
+(131.2) (1,840.4)
+
+8 (128.5) (183.8)
+18 (6.2) (6.6)
+25 (1.4) (8.7)
+(267.3) (2,039.5)
+
+9 (0.2) (1.2)
+(267.5) (2,040.7)
+
+12
+
+Mizuho International pic — Financial Statements 2009
+
+Consolidated Balance Sheet
+
+at 31% March 2009
+
+Assets
+
+Reverse repurchase agreements
+
+Trading financial assets
+
+Trading derivative assets
+
+Derivative assets held for risk management
+Loans and advances to banks
+
+Loans and advances to customers
+Financial investments
+
+Tangible fixed assets
+
+Other assets
+
+Prepayments and accrued income
+
+Total Assets
+
+Liabilities and Equity
+
+Deposits by banks
+
+Customer accounts
+
+Repurchase agreements
+
+Trading financial liabilities
+
+Trading derivative liabilities
+Derivative liabilities held for risk management
+Debt securities in issue
+Subordinated liabilities
+
+Other liabilities
+
+Accruals and deferred income
+Provisions for liabilities and charges
+Pension liabilities
+
+Total Liabilities
+
+Equity
+
+Paid up share capital
+Share premium account
+Profit and loss account
+
+Total Equity
+
+Total Liabilities and Equity
+
+Note
+
+10
+12
+13
+14
+15
+16
+17
+18
+19
+
+20
+21
+10
+12
+13
+14
+22
+23
+24
+
+25
+26
+
+27
+28
+28
+
+2009 2008
+£ millions £ millions
+15,811.8 19,168.6
+1,422.9 2,373.5
+1,030.1 800.4
+298.6 122.7
+252.0 347.5
+55.1 91
+73.2 78.1
+13.1 18.2
+2,360.3 1,535.8
+73.8 846
+21,390.9 24,538.5
+832.3 741.2
+29.4 48
+14,302.6 18,464.7
+148.3 706.3
+1,868.6 1,664.8
+266.7 410.4
+2,054.4 1,525.7
+- 18.6
+1,445.1 614.0
+82.5 162.1
+44 13.0
+2.5 0.4
+21,036.8 24,026.0
+2,426.4 2,314.6
+15.6 15.6
+(2,087.9) (1,817.7)
+354.1 512.5
+21,390.9 24,538.5
+
+Approved and authorised for issue by the Board of Directors on 28"" May 2009 and signed
+
+on its behalf by
+
+S. Berwick
+Chief Executive
+
+13
+
+Mizuho International ple — Financial Statements 2009
+
+Statement of Total Recognised Gains and Losses
+
+Consolidated and Company
+for the year ended 31° March 2009
+
+Actuarial loss on defined benefit scheme
+
+Deferred tax on defined benefit scheme
+
+Valuation adjustments on available for sale financial
+investments released from equity
+
+Net losses taken directly to equity
+
+Loss for the year
+
+Total recognised losses
+
+Note
+
+26
+
+28
+
+2009 2008
+
+£ millions £ millions
+(2.7) (0.3)
+
+- (0.3)
+
+(2.7) (0.6)
+
+- 0.2
+
+(2.7) (0.4)
+(267.5) (2,040.7)
+(270.2) (2,041.1)
+
+14
+
+Mizuho International pic - Financial Statements 2009
+
+Company Balance Sheet
+at 31% March 2009
+
+Assets
+
+Reverse repurchase agreements
+
+Trading financial assets
+
+Trading derivative assets
+
+Derivative assets held for risk management
+Loans and advances to banks
+
+Loans and advances to customers
+Financial investments
+
+Tangible fixed assets
+
+Other assets
+
+Prepayments and accrued income
+
+Total Assets
+
+Liabilities and Equity
+
+Deposits by banks
+
+Customer accounts
+
+Repurchase agreements
+
+Trading financial liabilities
+
+Trading derivative liabilities
+Derivative liabilities held for risk management
+Debt securities in issue
+Subordinated liabilities
+
+Other liabilities
+
+Accruals and deferred income
+Provisions for liabilities and charges
+Pension liabilities
+
+Total Liabilities
+
+Equity
+
+Paid up share capital
+Share premium account
+Profit and loss account
+
+Total Equity
+
+Total Liabilities and Equity
+
+Note
+
+10
+12
+13
+14
+15
+16
+17
+18
+19
+
+20
+ai
+10
+12
+13
+14
+22
+23
+24
+
+25
+26
+
+27
+28
+28
+
+2009 2008
+£ millions £ millions
+15,811.8 19,168.6
+1,421.5 2,361.2
+1,627.3 1,346.0
+298.6 122.7
+80.5 38.2
+55.1 9.1
+73.2 78.1
+13.1 18.2
+2,360.3 1,534.4
+73.8 84.6
+21,815.2 24,761.1
+832.3 741.2
+29.4 48
+14,302.6 18,464.7
+148.3 706.3
+2,296.3 1,910.6
+266.7 110.4
+2,051.2 1,514.5
+- 18.6
+1,444.9 602.0
+82.5 162.1
+44 13.0
+2.5 0.4
+21,461.1 24,248.6
+2,426.4 2,314.6
+15.6 15.6
+(2,087.9) (1,817.7)
+354.1 512.5
+21,815.2 24,761.1
+
+Approved and authorised for issue by the Board of Directors on 28" May 2009 and signed
+
+on its behalf by
+
+a ae
+
+S. Berwick
+Chief Executive
+
+15
+
+Mizuho International pic — Financial Statements 2009
+
+Notes to the Consolidated and Company Financial Statements
+1 BASIS OF PREPARATION
+
+The consolidated financial statements have been prepared under UK Generally Accepted
+Accounting Principles, and in accordance with the provisions of the Companies Act 1985
+relating to Banking Companies.
+
+The consolidated financial statements have been prepared in accordance with applicable
+Accounting Standards.
+
+Accounting policies
+
+The accounting policies that are significant in the context of the Company's consolidated
+financial statements are described in note 2. The accounting policies adopted by the Group
+in the preparation of the financial statements are consistent with those in the previous year.
+
+Basis of measurement
+
+The consolidated financial statements have been prepared under the historical cost
+convention, as modified for derivative financial instruments, financial assets and liabilities at
+fair value through profit and loss and available for sale assets, all of which are measured at
+fair value.
+
+Functional and presentation currency
+
+The consolidated financial statements are presented in Sterling which is the Group’s
+functional currency and the financial information is presented in £ millions and has been
+rounded to the nearest £100,000 unless otherwise indicated.
+
+Basis of consolidation
+
+The consolidated financial statements comprise the financial statements of the Company
+and its subsidiaries (see note 34) as at and for the year ended 31% March. The financial
+statements of the subsidiaries that the Company controls are prepared for the same
+reporting year as the Company using consistent accounting policies.
+
+Subsidiaries, including special purpose companies, are consolidated from the date that
+control is transferred to the Company until the date that control ceases.
+
+The Company controls a subsidiary, including special purpose companies, when it has the
+ability to direct the financial and operating policies of the subsidiary with a view to gaining
+economic benefits from its activities and the power to exercise dominant influence over the
+subsidiary.
+
+Subsidiaries, including special purpose companies, which fall under the control of the
+Company are consolidated under the acquisition method of accounting. Under acquisition
+accounting, the identifiable assets and liabilities of the entities acquired are included in the
+consolidated balance sheet at their fair value at the date of acquisition. The cost of
+acquisition is measured at the fair value of the consideration given at the date of acquisition.
+
+The excess of the fair value of the subsidiary’s net identifiable assets acquired over the fair
+value of the purchase consideration is recorded as goodwill. The excess of the fair value of
+the consideration given over the subsidiary’s net identifiable assets acquired over the fair
+value of the purchase consideration is recognised immediately in the profit and loss account.
+
+16 Mizuho International plc — Financial Statements 2009
+
+Intra group entity balances, transactions, income and expenses and profits and losses
+arising from intra group entity transactions are eliminated in full.
+
+The Company is taking advantage of the exemption under section 230 of the Companies Act
+1985 not to present its individual profit and loss account.
+
+The Company's loss after taxation for the year ended 31% March 2009 was £267.5 million
+(2008: £2,040.7 million).
+
+Corresponding amounts
+
+Certain corresponding amounts have been reclassified to conform to current year's
+presentation.
+
+Related Party Disclosures
+
+In accordance with the scope exclusions contained in FRS 8, the Company has not
+disclosed details of transactions or balances with entities which form part of Mizuho
+Financial Group, Inc. since more than 90% of the voting rights are controlled by the Mizuho
+Financial Group which includes the Company in its own financial statements, and which are
+publicly available.
+
+Cash flow statement
+
+In accordance with the scope exclusions contained in FRS 1, the Company is not required to
+prepare a cash flow statement since more than 80% of the voting rights are controlled by its
+parent undertaking which includes the Company in its own financial statements, and which
+are publicly available.
+
+Segmental analysis
+
+Consolidated segmental analysis of income has not been prepared as, in the opinion of the
+Directors, the Group has only one class of business, being investment banking, and
+operates in a global market which is not defined by geographical bounds.
+
+Changes in accounting policy and disclosures
+
+Accounting policy ~ trading financial instruments
+
+During October 2008, the Accounting Standards Board issued amendments to FRS 26
+financial instruments: recognition and measurements and FRS 29: financial instruments:
+disclosures -- reclassification of financial assets that are effective retrospectively from 1* July
+2008. The amendments to FRS 26 allow transfers out of trading financial assets in limited
+circumstances and accounting policy note 2B — reclassification from trading financial
+instruments has been included accordingly.
+
+The amendments to FRS 29 introduce additional disclosure requirements if an entity has
+reclassified financial assets in accordance with the amendments to FRS 26.
+
+Pursuant to this change in accounting policy, the Group has not transferred any non
+derivative financial assets out of the trading financial assets classification.
+
+17 Mizuho International plc — Financial Statements 2009
+
+Accounting disclosure — financial instruments
+
+During November 2008, the Accounting Standards Board issued amendments to FRS 29
+financial instruments: disclosures. The proposed amendments to FRS 29 include
+enhancements to disclosure on fair value of financial instruments to clarify the fair value
+hierarchy and include a proposed reconciliation of the beginning balances to the ending
+balances for fair value measurements using valuation techniques for which significant input
+is not based on observable market data (Level 3 items).
+
+The Group has provided certain of the proposed disclosures, specifically the reconciliation of
+the beginning balances and ending balances within note 32 where such disclosure enhances
+the understanding of the financial statements.
+
+Other new standards adopted
+
+Amendments to FRS 17 Retirement Benefits
+
+The amendments to FRS 17 Retirement Benefits published in December 2006 replace the
+disclosure requirements of FRS 17 with those of IAS 19 Employee Benefits and are effective
+for accounting periods beginning on or after 6" April 2007. The Group adopted these
+disclosure amendments on 1* April 2008 (see note 26).
+
+Netting
+
+During the current year, following a review of its trade receivable and payable balances, the
+Company concluded that certain of these balances did not meet the criteria for offset as
+described within note 2. The amount of trade receivable and payable balances that would
+have been impacted as at 31" March 2008 is £749.8 million, however this would have had
+no effect upon the Company’s Profit and Loss Account, total Equity or regulatory capital.
+
+New standards and interpretations not yet adopted
+
+Amendments to FRS 25 Financial Instruments: Presentation — puttable financial instruments
+and obligations arising on liquidation — issued in August 2008 and effective for accounting
+periods beginning on or after 1* January 2010 with early adoption only permitted for
+accounting periods beginning on or after 1** January 2009.
+
+UITF abstract 46 (IFRIC Interpretation 16) Hedges of a Net Investment in a Foreign
+Operation — issued in October 2008 and effective for accounting periods beginning on or
+after 1 October 2008.
+
+Amendments to FRS 26 Financial Instruments: Recognition and Measurement ~ eligible
+hedged items — issued in November 2008 and effective for accounting periods beginning on
+or after 1" July 2009 with early adoption permitted.
+
+Amendments to FRS 8 Related Party Transactions ~ issued in December 2008 and effective
+for accounting periods beginning on or after 6" April 2008.
+
+Improvements to Financial Reporting Standards, adoption of improvements by the
+Accounting Standards Board — issued in December 2008:
+
+e FRS 7 Fair Values in Acquisition Accounting — effective for accounting periods beginning
+on or after 1* January 2009;
+
+e FRS 17 Retirement Benefits - effective for accounting periods beginning on or after 1°
+January 2009;
+
+18 Mizuho International pic ~ Financial Statements 2009
+
+FRS 21 (IAS 10) Events After the Balance Sheet Date — effective for accounting periods
+beginning on or after 1°" January 2009;
+
+FRS 24 (IAS 29) Financial Reporting in Hyperinflationary Economies — effective for
+accounting periods beginning on or after 1° January 2009;
+
+FRS 25 (IAS 32) Financial Instruments: Presentation ~— effective for accounting periods
+beginning on or after 1*' January 2009;
+
+FRS 26 (IAS 39) Financial Instruments: Recognition and Measurement — effective for
+accounting periods beginning on or after 1" January 2009; and
+
+FRS 29 Financial Instruments: Disclosures — effective for accounting periods beginning
+on or after 1° January 2009.
+
+Amendments to Financial Reporting Standards arising from new, revised or amended
+International Financial Reporting Standards ~ issued in December 2008
+
+FRS 22 (IAS 33) Earnings per share — effective for accounting periods beginning on or
+after 1° January 2009;
+
+FRS 23 (IAS 21) The effects of changes in foreign exchange rates ~ effective for
+accounting periods beginning on or after 1° January 2009;
+
+FRS 25 (IAS 32) Financial Instruments: Presentation — effective for accounting periods
+beginning on or after 1" January 2009;
+
+FRS 26 (IAS 39) Financial instruments: Recognition and Measurement ~ effective for
+accounting periods beginning on or after 1* January 2009; and
+
+FRS 29 Financial Instruments: Disclosures ~ effective for accounting periods beginning
+on or after 1* January 2009.
+
+19
+
+Mizuho International ple — Financial Statements 2009
+
+2 ACCOUNTING POLICIES
+
+A - Financial instruments
+Regular way purchase or sale of financial assets
+
+Trade date accounting is applied for the purposes of recognising and de-recognising
+financial assets.
+
+Recognition
+
+Financial instruments are recognised when the Group becomes party to the contractual
+provisions of the relevant financial asset or financial liability.
+
+Financial instruments are initially recorded at fair value, being the amount at which an asset
+or liability would be exchanged or settled between knowledgeable, willing parties in an arms
+length transaction, and in the case of financial assets or liabilities not subsequently
+measured at fair value through profit and loss plus any incremental directly attributable costs
+of acquisition or issue, assuming that transactions do not take place under a forced sale or
+liquidation scenario, and that the Group is a going concern.
+
+De-recognition of financial assets
+A financial asset is de-recognised when:
+
+« The contractual rights to receive the cash flows from the asset expire; or
+
+e Either the Group has transferred substantially all the risks and rewards of the financial
+asset or the Group has neither transferred nor retained substantially all the risks and
+rewards of the financial asset but has transferred control of the financial asset.
+
+Where the Group has neither transferred nor retained substantially all of the risks and
+rewards of ownership, but contro! has not been transferred, the Group will account jor its
+continuing involvement in the asset. Under this approach, the Group will continue to
+recognise the transferred asset to the extent of the continuing involvement in that asset and
+recognise an associated liability such that the net carrying value of the transferred asset and
+associated liability is equal to the fair value of the retained rights and obligations.
+
+De-recognition of financial liabilities
+
+Financial liabilities are de-recognised when they have been extinguished as a result of the
+cancellation, discharge or expiry of the obligations specified in the contract.
+
+Offsetting
+
+Financial assets and liabilities are set off and the net amount presented on the balance
+sheet when and only when the Group has a legal right to set off the amounts and intends
+either to settle on a net basis or to realise the asset and settle the liability simultaneously.
+
+Income and expenses are presented on a net basis only when permitted by the accounting
+standards or for gains and losses arising from a group of similar transactions such as the
+Group’s trading activities.
+
+20 Mizuho International plc — Financial Statements 2009
+
+B — Trading financial instruments
+
+Non derivative financial instruments are classified as held for trading if they are acquired for
+the purpose of selling in the near term or are part of a portfolio of identified financial
+instruments that are managed together and for which there is evidence of a recent actual
+pattern of short term profit taking. Trading financial instruments include reverse repurchase
+and repurchase agreements, trading debt and equity securities and purchased life contracts.
+
+Purchased life contracts provide the Group with receivables due from insurance contracts,
+which become payable upon the death of the insured party under the life contract. These
+individuals have no connection with the Group, and accordingly the purchased life contracts
+fall to be treated as financial instruments. Purchased life contracts are recorded at trade
+date, and are measured at fair value.
+
+Subsequent to initial recognition, trading financial instruments are measured at fair value.
+Gains or losses realised on de-recognition of trading financial instruments and changes in
+fair value on trading financial instruments are recognised in the profit and loss account and
+reported under net trading income.
+
+Reclassification from trading non derivative financial instruments — (see note 1)
+
+The Group will reclassify non derivative financial assets, other than those designated as at
+fair value through profit and loss account upon initial recognition (see accounting policy E)
+out of the fair value through profit and loss account classification (trading financial assets) if
+they are no longer held for the purpose of being sold or repurchased in the near term, as
+follows:
+
+e If the financial asset would have met the definition of loans and receivables, (if the
+financial asset had not been required to be classified as held for trading at initial
+recognition, i.e. it was a loan and receivable held with the intention to sell in the near
+term), then it may be reclassified if the entity has the intention and ability to hold the
+financial asset for the foreseeable future or until maturity; or
+
+« = If the financial asset would not have met the definition of loans and receivable, then it
+may be reclassified out of the trading classification in rare circumstances.
+
+C — Derivative financial instruments
+Trading derivative instruments
+
+Subsequent to initial recognition, trading derivative instruments are measured at fair value
+and disclosed as financial assets when the fair value is positive and financial liabilities when
+the fair value is negative. Realised and unrealised gains or losses arising from trading
+derivative instruments are recognised in the profit and loss account and reported within net
+trading income.
+
+Derivative financial instrument held for risk management purposes
+
+Derivative financial instruments held for risk management purposes comprise swaps and
+other derivative financial instruments held to manage the Group's financial risks (see
+accounting policy D ~ Hedge accounting).
+
+These derivative financial instruments are subsequently measured at fair value and
+disclosed as financial assets when the fair value is positive and financial liabilities when the
+fair value is negative. Realised and unrealised gains or losses arising from derivative
+financial instruments held for risk management purposes are recognised in the profit and
+loss account and reported within net trading income.
+
+a1 Mizuho International pic — Financial Statements 2009
+
+Embedded derivatives
+
+Derivatives embedded within financial instruments that are not accounted for as fair value
+financial instruments are separated from their host contracts and accounted for as
+derivatives if the economic characteristics of the embedded derivative are not closely related
+to those of the host contract and if a separate instrument with the terms of the embedded
+derivative meets the definition of a derivative. Embedded derivatives are separated from
+their host contracts and are measured at fair value with changes in fair value recognised in
+the profit and loss account and reported within net trading income.
+
+D — Hedge accounting
+
+The Group uses derivative financial instruments to manage exposure to interest rate risk,
+credit risk, currency risk and price risk. The Group applies fair value hedge accounting when
+a transaction meets the criteria to obtain hedge accounting treatment.
+
+Hedge accounting is applied where a designated fair value hedging relationship exists
+between a derivative hedging instrument (see accounting policy C — derivative financial
+instruments held for risk management purposes) and a hedged financial liability. A fair value
+hedge of a financial liability represents a hedge against changes to the fair value of a liability
+that is attributable to a particular risk that could impact the profit and loss account. A hedging
+relationship qualifies for hedge accounting if the following conditions are met:
+
+« Atinception, formal documentation is prepared to include:
+~ Designation of the hedging relationship;
+- Identification of the hedging instrument and hedged item;
+- Nature of the risk being hedged; and
+~ Description of how hedge effectiveness will be assessed.
+
+« The hedge is expected to be highly effective (80 to 125%), and its effectiveness can be
+reliably measured; and
+
+« The hedge is assessed for effectiveness on an ongoing basis.
+
+The gain or loss from re-measuring the hedging instrument at fair value is recognised in the
+profit and loss account. The gain or loss on the hedged financial liability attributable to the
+hedged risk adjusts the carrying value of the hedged item and is recognised in the profit and
+loss account.
+
+The Group prospectively discontinues hedge accounting for a hedged relationship if:
+
+* The hedging instrument expires or is sold, terminated or exercised;
+« The hedge no longer meets the criteria for hedge accounting; or
+« The Company revokes the designation.
+
+If hedge accounting is discontinued, for hedged financial liabilities recorded at amortised
+cost the difference between the carrying value of the hedged financial liability on termination
+of the hedge and the face value is amortised over the remaining term of the original hedge. If
+the hedged financial liability is de-recognised, the unamortised fair value adjustment is
+recognised immediately in the profit and loss account.
+
+22 Mizuho International ple — Financial Statements 2009
+
+E - Financial instruments designated as at fair value through profit and loss
+account
+
+The Group has designated financial assets and financial liabilities at fair value through profit
+and loss when either:
+
+e The assets or liabilities are managed, evaluated and reported internally on a fair value
+basis in accordance with a documented risk management or investment strategy;
+
+e The designation eliminates or significantly reduces an accounting mismatch which would
+otherwise arise; or
+
+e The asset or liability contains an embedded derivative that significantly modifies the cash
+flows that would otherwise be required under the contract.
+
+Fair value gains or losses arising from financial instruments designated as at fair value
+through profit and loss account are recognised in the profit and loss account and reported
+within net trading income.
+
+Note 32 sets out the amount of each class of financial asset or liability that has been
+designated at fair value through profit and loss.
+
+F ~ Financial investments
+
+The Group’s investment portfolio consists of quoted and unquoted debt and equity
+securities.
+
+The Group designates financial investments in debt securities as available for sale financial
+instruments. Available for sale financial instruments are measured at fair value with changes
+in fair value recognised in reserves and reported in the Fair Value Reserve.
+
+When an available for sale financial instrument is de-recognised, the cumulative gain or loss
+previously recognised in reserves is transferred to the profit and loss account and reported
+within net trading income.
+
+The Group designates financial investments in equity securities as at fair value through profit
+and loss account. These financial investments are measured as described in accounting
+policy E.
+
+G — Loans and advances
+
+Subsequent to initial recognition, loans and advances are measured at amortised cost using
+the effective interest method, with any resulting interest income taken to profit and loss
+account.
+
+H ~ Repurchase and reverse repurchase agreements
+
+Securities sold under agreements to repurchase at a specified future date (repurchase
+agreements) are not de-recognised from the balance sheet. The corresponding cash
+received, including accrued interest is recognised on the balance sheet as Repurchase
+Agreements reflecting its economic substance as a loan to the Group.
+
+Securities purchased under agreements to resell at a specified future date (reverse
+repurchase agreements) are not recognised on the balance sheet. The corresponding cash
+paid including accrued interest is recognised on the balance sheet as Reverse Repurchase
+Agreements reflecting its economic substance as a loan receivable by the Group.
+
+Repurchase and reverse repurchase agreements are classified as held for trading.
+
+23 Mizuho International plc — Financial Statements 2009
+
+|- Deposits, debt securities in issue and subordinated liabilities
+
+Deposits, debt securities in issue and subordinated liabilities are measured at amortised cost
+using the effective interest rate method except where the Group has designated financial
+liabilities as at fair value through profit and loss.
+
+The Group has designated certain issued debt securities and deposits as at fair value.
+These financial liabilities are subsequently measured as described in accounting policy E.
+
+J — Fair value measurement
+Financial instruments measured at fair value comprise:
+
+e Trading financial instruments;
+e Trading derivatives and derivatives held for risk management purposes;
+e Embedded derivatives; and
+
+e Financial assets and financial liabilities designated as at fair value through profit and loss
+account.
+
+Fair values are derived from quoted market prices or valuation techniques as described
+below.
+
+Active market
+
+Financial instruments that trade within an active market are valued using quoted market
+prices or rates available within that market. An active market exists where regular prices are
+provided by exchanges, dealers, brokers, industry groups or pricing services, and these
+prices represent actual market transactions.
+
+Financial instruments may be priced from the most advantageous active market to which the
+Group has access, and this may result in the recognition of revenue on trade date (‘day one
+profit’), to the extent that a fair value instrument has been traded at a favourable price in
+comparison to prices available within an active market.
+
+Long positions are marked to the bid side, and short positions to the offered side of an active
+market. Where the Group holds positions which create offsetting risk positions, then those
+offsetting positions are valued at mid market rates, with any resulting net risk positions being
+marked to the bid or offered side as appropriate.
+
+No active market
+
+Financial instruments that do not trade within an active market are valued using a valuation
+technique, which may consist of:
+
+e Analysis of current or recent third party transactions in the same instrument; or
+
+e Reference to the value of other instruments, that are substantially the same as the
+instrument to be valued; or
+
+e Use of a valuation model.
+
+Valuation techniques, including valuation models, meet the following conditions:
+
+e Consistency with accepted methodologies for pricing financial instruments;
+e Inclusion of all relevant factors that market participants would consider in setting a price;
+« Use of market observable date where possible; and
+
+24 Mizuho International pic — Financia! Statements 2009
+
+e Periodic calibration to actual market transactions where possible.
+
+If, on trade date, a valuation technique results in a different estimate of fair value to the
+actual transaction price, then the valuation technique will be calibrated to the transaction
+price, so that no gain or loss is recognised except as described below.
+
+Gains or losses will only be recognised subsequently, to the extent that they arise from
+changes in a factor (including time) that market participants would consider in setting a price.
+
+Fair value estimates from valuation techniques may be used on trade date without
+calibration to the transaction price, resulting in the recognition of day one gains and losses,
+under the following conditions:
+
+e Fair value is supported by current market transactions in the same instrument; or
+
+« Fair value is based upon a valuation technique whose variables include only data from
+observable markets.
+
+Day one gains or losses that do not meet these criteria are deferred and amortised over the
+life of the financial instrument to which they relate.
+
+K ~ Foreign currencies
+
+Foreign currency carrying values at initial recognition are translated into the functional
+currency at the exchange rate at the date of the transaction.
+
+Monetary assets and liabilities denominated in foreign currencies are expressed in the
+functional currency of the Group at the mid-market rates of exchange ruling at the balance
+sheet date. Transactions in foreign currencies are recorded using an average rate of
+exchange for the year. Foreign currency translation differences are included in operating
+income.
+
+Non monetary items that are measured in terms of historical cost in a foreign currency are
+translated into functional currency at the original transaction rate. Non monetary items
+measured at fair value in a foreign currency are translated using the exchange rates at the
+date when fair value was determined.
+
+L. ~ Securitisation
+
+The Group securitises various financial assets by the sale of these assets to special purpose
+companies, which in turn issue securities to investors.
+
+Financial assets transferred in a securitisation transaction may be de-recognised in whole or
+in part in accordance with accounting policy A — De-recognition of financial assets.
+
+The Group may retain interests in securitised financial assets in the form of tranches of the
+securitisation vehicles. Such retained interests are classified as trading assets. Gains or
+losses on securitisation, to the extent recognised in accordance with accounting policy N,
+are disclosed as net trading losses / income.
+
+M - Identification and measurement of impairment
+
+At each balance sheet date, the Group assesses whether there is objective evidence that
+financial and other assets not carried at fair value through profit and loss are impaired.
+
+25 Mizuho International plc ~ Financial Statements 2009
+
+Financial assets are impaired when objective evidence demonstrates that a loss event has
+occurred after the initial recognition of the financial asset, and that the loss event has an
+impact on the future cash flows on the financial asset that can be estimated reliably.
+
+impairment losses on available for sale debt securities are recognised by transferring the
+difference between the amortised acquisition cost and the current fair value out of equity to
+profit and loss. When a subsequent event causes the amount of impairment loss on an
+available for sale debt security to decrease, the impairment loss is reversed through profit
+and loss.
+
+Impairment losses on financial assets carried at amortised cost are measured as the
+difference between the carrying amount of the financial assets and the present value of
+future cash flows discounted at the asset’s original effective interest rate. Losses are
+recognised in the profit and loss account and reflected in an allowance account against
+loans and advances. Interest on impaired assets continues to be recognised through the
+unwinding of the discount. When a subsequent event causes the amount of impairment loss
+to decrease, the impairment loss is reversed through profit and loss.
+
+Other assets are recorded at no more than their recoverable amount. Impairment losses are
+measured as the difference between the carrying value and the recoverable amount and
+recognised through profit and loss.
+
+N ~ Recognition of income and expenses
+
+Revenue is recognised to the extent that it is probable that the economic benefits will flow to
+the Group and that revenue can be reliably measured. The following specific recognition
+criteria must also be met before revenue is recognised.
+
+interest income and expense
+
+Interest income and expense are recognised in profit and loss using the effective interest
+rate method. The effective interest rate is the rate that exactly discounts the estimated
+future cash payments and receipts through the expected life of a financial asset or financial
+liability, or a shorter period where appropriate, to the carrying amount of the financial asset
+or financial liability. The effective interest rate is established on initial recognition of the
+financial asset or financial liability and is not subsequently revised. The calculation of the
+effective interest rate includes all the fees and points paid or received, transaction costs, and
+discounts or premiums that are an integral part of the effective interest rate. Transaction
+costs are incremental costs that are directly attributable to the acquisition, issue or disposal
+of a financial asset or financial liability.
+
+Fees and commissions
+
+Other fee and commission income is recognised as the related service is performed. Other
+fee and commission expense relates to transaction and service fees which are expensed as
+the service is received.
+
+Net trading losses / income
+
+Net trading losses / income comprises gains less losses related to trading financial assets,
+trading financial liabilities, derivative instruments held for risk management purposes and
+financial instruments designated as at fair value through profit and loss account.
+
+Net trading losses / income includes all realised and unrealised fair value changes, interest,
+dividends and foreign exchange differences.
+
+26 Mizuho International pie — Financial Statements 2009
+
+Dividend income
+Dividend income is recognised when the Group’s right to receive payment is established.
+
+O — Tangible fixed assets and depreciation
+
+Assets held for use in the business are stated at cost less accumulated depreciation and
+impairment allowances. Tangible fixed assets include the directly attributable costs of the
+development and bringing into use of significant computer software systems.
+
+Depreciation is calculated to write off the cost of fixed assets over their estimated useful
+economic lives on the following basis:
+
+e Short leasehold properties and improvements thereto are written off on a straight line
+basis over the remaining life of the lease or twenty five years, whichever is shorter; and
+
+« Fixtures, equipment, software and vehicles are depreciated on a straight line basis over
+periods between two and five years.
+
+P ~ Taxation
+
+Current tax assets and liabilities are measured at the amount expected to be recovered from
+or paid to the taxation authorities, based on tax rates and laws that are enacted or
+substantively enacted by the balance sheet date.
+
+Deferred tax is recognised in respect of all timing differences that have originated but not
+reversed at the balance sheet date where transactions or events that result in an obligation
+to pay more tax or a right to pay less tax in the future have occurred at the balance sheet
+date. This is subject to deferred tax assets only being recognised if it is considered more
+likely than not that there will be suitable profits from which the future reversal of the
+underlying timing differences can be deducted. Timing differences are the differences
+between the Group taxable profits and its results as stated in the financial statements, which
+are capable of reversal in one or more subsequent periods.
+
+Deferred tax is measured on a non discounted basis at the tax rates that are expected to
+apply in the periods in which the timing differences are expected to reverse based on the tax
+rates and laws that have been enacted or substantively enacted at the balance sheet date.
+Q ~ Operating leases
+
+Operating lease rentals are charged to the profit and loss account on a straight line basis
+over the term of the lease.
+
+R ~ Pension costs
+The Company operates defined contribution schemes and a defined benefit scheme.
+Defined contribution schemes
+
+Contributions to defined contribution schemes are recognised within profit and loss in the
+period in which they become payable.
+
+Defined benefit scheme
+
+The defined benefit pension scheme requires contributions to be made to a separately
+administered fund. The cost of providing benefits under the defined benefit scheme is
+
+27 Mizuho International ple - Financial Statements 2009
+
+determined using the projected unit credit method, which attributes entitlement to benefits to
+the current period (to determine current service cost) and to the current and prior periods (to
+determine the present value of defined benefit obligation) and is based upon actuarial
+advice.
+
+Past service costs are recognised in profit and loss on a straight line basis over the vesting
+period or immediately if the benefits have vested. The interest element of the defined benefit
+cost represents the change in present value of scheme obligations resulting from the
+passage of time, and is determined by applying the discount rate to the opening present
+value of the benefit obligation, taking into account material changes in the obligation during
+the year.
+
+The expected return on scheme assets is based on an assessment made at the beginning of
+the year of long term market returns on scheme assets, adjusted for the effect on the fair
+value of scheme assets of contributions received and benefits paid during the year. The
+difference between the expected return on scheme assets and the interest cost is
+recognised in the profit and loss account as other finance income or expense.
+
+Actuarial gains and losses are recognised in full in the statement of recognised gains and
+losses in the period in which they occur.
+
+The defined benefit pension liability in the balance sheet comprises the total of the present
+value of the defined benefit obligation (using a discount rate based on high quality corporate
+bonds), less any past service cost not yet recognised and less the fair value of scheme
+assets out of which the obligations are settled directly. Fair value of scheme assets is based
+on market price information.
+
+$ ~ Provisions
+
+Provision is made on a prudent basis where an obligation arises as a result of a past event
+and it is probable that the Group will make a transfer of economic benefits to satisfy such
+obligation. Such provision is made based on the Directors’ best estimate of the economic
+benefits to be transferred, discounted where relevant at an appropriate discount rate.
+
+28 Mizuho International plc — Financial Statements 2009
+
+3 ESTIMATES AND JUDGEMENTS
+Use of estimates and judgements
+
+The preparation of financial statements requires management to make judgements,
+estimates and assumptions that affect the application of accounting policies and reported
+amounts of assets, liabilities, income and expenses. The results of the Group are sensitive
+to accounting policies, assumptions and estimates that underlie the preparation of the
+financial statements.
+
+When preparing the financial statements, it is the Directors’ responsibility under applicable
+UK Law to select suitable accounting policies and make judgments and estimates that are
+reasonable and prudent. Estimates and underlying assumptions are reviewed on an ongoing
+basis. Revisions to accounting estimates are recognised in the period in which the estimate
+is revised and in any future periods affected.
+
+The accounting policies that are deemed critical to the Group financial performance and
+position, in terms of the materiality of the items to which the policy is applied, or which
+involve a high degree of judgment and estimation are summarised below:
+
+Valuation of financial instruments
+
+The Group accounting policy for valuation of financial instruments is set out in note 2J.
+The valuation techniques used in measuring fair value of financial instruments are
+discussed further in note 32.
+
+Where valuation techniques are used, the inputs to these models are taken from
+observable markets where possible. Where observable market data is not available, a
+degree of judgement is required in establishing fair value.
+
+Further disclosure on valuation techniques using non observable market data including
+sensitivity analysis is provided in note 32.
+
+Consolidation
+
+The accounting policy that determines when the Company consolidates a subsidiary,
+including a special purpose company is described in note 1 (basis of consolidation).
+Determination of control over a special purpose company may require a degree of
+judgement. Consolidation of special purpose companies is discussed further in note
+33E.
+
+Pension liability
+
+The principal assumptions and estimates in determining the pension liability for the
+financial year are set out in note 26.
+
+29 Mizuho International plc — Financia! Statements 2009
+
+4 NET INTEREST INCOME
+
+Interest receivable — financial instruments held for trading and at fair
+value through profit and loss account
+Interest receivable — financial instruments not at fair value through
+profit and loss account:
+
+- Available for sale debt securities
+
+Interest payable — financial instruments not at fair value through profit
+and loss account:
+- Deposits and Customer Accounts
+
+~ Other
+
+§ FEES AND COMMISSIONS
+
+Fees and commissions receivable:
+~ Trading activities
+
+- Fiduciary services
+
+Fees and commissions payable
+- Trading activities
+
+- Fiduciary services
+
+2009 2008
+
+£ millions £ millions
+18.9 29.3
+
+- 2.3
+
+18.9 31.6
+
+(0.3) (2.1)
+
+. (0.8)
+
+(0.3) (2.9)
+
+2009 2008
+
+£ millions £ millions
+15.4 20.9
+
+7.5 11.8
+
+32.9 32.7
+(25.9) (48.1)
+(7.9) (5.3)
+(33.8) (53.4)
+
+30 Mizuho International pic — Financial Statements 2009
+
+6 NET TRADING LOSSES
+
+Structured Credit Americas
+
+Structured Credit UK
+
+Other Debt Markets
+
+Fixed Income Proprietary
+
+Equity Markets
+
+Counterparty valuation adjustments and other items
+
+Net trading losses
+
+Net trading (losses) are further analysed as follows:
+
+Net losses from financial instruments held for trading
+Net (losses) / income from financial instruments designated at fair
+value
+
+7 OTHER OPERATING INCOME
+
+Rents received from sub-lessees
+Net return on defined benefit scheme (note 26)
+
+2009 2008
+
+£ millions £ millions
+(38.6) (1,936.7)
+(25.4) (65.4)
+43.7 (0.5)
+
+19.6 163.8
+
+(8.3) (16.4)
+(140.3) 48
+(149.3) (1,850.4)
+2009 2008
+
+£ millions £ millions
+(113.5) (1,854.2)
+(35.8) 3.8
+(149.3) (1,850.4)
+2009 2008
+
+£ millions £ millions
+0.4 1.7
+
+- 0.3
+
+0.4 2.0
+
+|
+|
+31 Mizuho International plc — Financial Statements 2009
+
+8 ADMINISTRATIVE EXPENSES
+
+Administrative expenses are analysed below:
+
+2009 2008
+£ millions £ millions
+Staff costs
+- Wages and salaries 74.6 107.6
+- Social security costs 8.1 11.2
+- Pension costs - defined contribution schemes 2.6 3.3
+Auditors’ remuneration
+- Auditors’ remuneration — audit 0.7 1.0
+- Auditors’ remuneration — other services 01 0.1
+Other administrative expenses 42.4 60.6
+128.5 183.8
+
+Average number of employees
+
+The average number of persons, excluding Directors, employed by the Company during the
+
+year is analysed below:
+
+2009 2008
+
+Number Number
+
+- Executives and senior managerial 31 31
+
+- Other managerial, supervisory and clerical 364 367
+
+Average number of employees 395 398
+Directors’ emoluments
+
+2009 2008
+
+£ millions £ millions
+
+Directors’ emoluments, in respect of qualifying services 3.2 5.1
+
+Retirement benefits are accruing to Directors by virtue of their directorship of the Company
+
+as analysed below:
+
+2009
+
+Number
+
+Defined contribution scheme 1
+Other Mizuho Financial Group, Inc., group retirement plans 1
+
+2008
+Number
+
+32 Mizuho International pic — Financial Statements 2009
+
+The aggregate of emoluments, including pension contributions, of the highest paid Director
+was £2,780,000 (2008: £3,480,000). Pension contributions of £18,000 (2008: £11,000) were
+
+made during the year.
+9 TAX ON LOSS ON ORDINARY ACTIVITIES
+
+Charge for taxation
+
+2009 2008
+£ millions £ millions
+Current taxation
+Group relief - 0.9
+Adjustments for previous years (0.2) 0.8
+Current tax (charge) / income (see tax reconciliation below) (0.2) 1.7
+Deferred taxation
+Deferred tax charge (see movement in deferred taxation below) - (2.9)
+Tax on loss on ordinary activities (0.2) (1.2)
+
+Current taxation reconciliation
+
+The current tax (charge) / income for the Company for the year is lower than the standard
+rate of corporation tax in the UK of 28% (2008: 30%). The differences between the standard
+
+rate charge and the actual (charge) / income are explained below:
+
+2009 2008
+£ millions £ millions
+
+Current tax reconciliation:
+Loss on ordinary activities before tax (267.3) (2,039.5)
+Current tax at 28% (2008: 30%) 74.8 611.8
+
+Effects of:
+
+Unrecognised tax losses (67.4) (605.0)
+Capital allowances for year above depreciation (0.2) 0.7
+Expenses not deductible for tax purposes (7.4) (7.5)
+Other short term timing differences 0.2 -
+Group relief - 0.9
+Adjustments for previous years (0.2) 0.8
+Current tax (charge) / income (see charge for taxation above) (0.2) 1.7
+
+33 Mizuho International pic — Financial Statements 2009
+
+Deferred taxation
+
+There are no deferred tax balances as at the balance sheet date in respect of both the
+
+current and prior year, and movements in deferred taxation are analysed below:
+
+2009
+£ millions
+
+At 1 April -
+Charge for the year -
+
+Pension reserve (note 28) -
+
+2008
+£ millions
+
+3.2
+(2.9)
+(0.3)
+
+At 31° March :
+
+Based on the likely timing and level of future profits, the Directors have concluded that no
+
+deferred tax asset should be recognised in respect of the current tax losses.
+
+The total
+
+deferred tax asset available not recognised amounted to £629.3 million (2008: £599.9
+
+million).
+10 REPURCHASE AND REVERSE REPURCHASE AGREEMENTS
+
+Group and Company
+
+Assets
+
+Reverse Cash collateral Reverse Cash collateral
+repurchase on securities repurchase on securities
+agreements borrowed agreements borrowed
+2009 2009 2008 2008
+£ millions £ mitlions £ millions £ millions
+Banks 12,646.1 46.3 14,210.8 45.6
+Other 3,165.7 45.9 4,957.8 16.8
+15,811.8 92.2 19,168.6 62.4
+
+Liabilities
+Repurchase Cash collateral Repurchase Cash collateral
+agreements on securities agreements on securities
+lent lent
+2009 2009 2008 2008
+£ millions £ millions £ millions £ millions
+Banks 8,980.8 77.2 10,102.9 17.9
+Other 5,321.8 32.8 8,361.8 22.6
+14,302.6 110.0 18,464.7 40.5
+
+Cash collateral on securities borrowed is disclosed in aggregate with reverse repurchase
+agreements on the balance sheet. Cash collateral on securities lent is disclosed in
+
+aggregate with repurchase agreements on the balance sheet.
+
+Further details of the classification and fair value measurement of repurchase and reverse
+
+repurchase agreements are disclosed in note 32.
+
+34 Mizuho international pic — Financial Statements 2009
+
+11 PLEDGED ASSETS
+Collateral given
+The fair value of financial assets that have been pledged as collateral for liabilities at 31°
+
+March 2009 is £16,291.9 million (2008: £18,782.4 million). These transactions are
+conducted under normal terms, and the collateral given is split below by asset category:
+
+Group and Company 2009 2008
+
+£ millions £ millions
+Government debt securities 13,129.4 17,695.8
+Corporate and bank debt securities 3,129.4 675.4
+Equities 33.1 411.2
+Total 16,291.9 18,782.4
+
+Collateral received
+
+The fair value of financial assets accepted as collateral that the Group and Company is
+permitted to sell or re-pledge in the absence of default is £17,884.0 million (2008: £20,462.7
+million), Of these, securities with a fair value of £148.3 million (2008; £706.3 million) have
+been transferred to satisfy commitments under short sale transactions.
+
+35 Mizuho International pic — Financial Statements 2009
+
+12 TRADING FINANCIAL ASSETS AND LIABILITIES
+
+Trading financial assets
+Group
+
+Debt securities
+Government securities
+
+Other public sector securities
+Other debt securities
+
+Equity securities
+Listed other than on a recognised UK exchange
+Unlisted
+
+Purchased life contracts
+
+Trading financial assets
+
+Company
+
+Debt securities
+Government securities
+
+Other public sector securities
+Other debt securities
+
+Equity securities
+Listed other than on a recognised UK exchange
+Unlisted
+
+Purchased life contracts
+
+Trading financial assets
+
+2009 2008
+
+£ millions £ millions
+36.7 592.6
+64.2 25
+986.6 1,558.5
+1,087.5 2,153.6
+0.2 7.6
+
+4.2 3.9
+
+4.4 11.5
+331.0 208.4
+1,422.9 2,373.5
+2009 2008
+
+£ millions £ millions
+36.7 592.6
+64.2 2.5
+985.2 1,546.2
+1,086.1 2,141.3
+0.2 76
+
+4.2 3.9
+
+4.4 11.5
+331.0 208.4
+1,421.5 2,361.2
+
+36 Mizuho International ple — Financial Statements 2009
+
+Unobservable day one profits
+
+Movements in unobservable day one profits on trading financial assets are analysed below:
+
+Group and Company
+
+At 1 April
+
+Increase due to new trades
+Time passage and redemptions
+Decrease due to disposals
+Transfer to other reserves
+
+At31™ March
+
+Trading financial liabilities
+
+Group and Company
+
+Short positions in debt securities:
+- Government debt securities
+- Other public sector debt securities
+- Other debt securities
+
+Short positions in equity securities
+
+2009 2008
+
+£ millions £ millions
+61.6 43.1
+
+“ 36.8
+
+- (7.8)
+
+“ (10.5)
+
+(61.6) -
+
+“ 61.6
+
+2009 2008
+
+£ millions £ millions
+57.7 621.5
+
+40.9 47
+
+48.7 61.0
+
+1.0 19.1
+
+148.3 706.3
+
+Further details of the classification and fair value measurement of trading financial assets
+
+and liabilities are disclosed in note 32.
+
+37
+
+Mizuho International ple — Financial Statements 2009
+
+13. TRADING DERIVATIVE ASSETS AND LIABILITIES
+
+Group
+
+Interest rate
+Equity
+
+Foreign currency
+Credit
+
+Trading derivative assets
+
+Interest rate
+Foreign currency
+Credit
+
+Trading derivative liabilities
+
+Company
+
+Interest rate
+Equity
+
+Foreign currency
+Gredit
+
+Trading derivative assets
+
+Interest rate
+Foreign currency
+Credit
+
+Trading derivative liabilities
+
+2009 2008
+
+£ millions £ millions
+310.4 230.3
+11 2.2
+114.6 80.8
+604.0 487.1
+1,030.1 800.4
+489.6 354.2
+145.5 56.4
+1,233.5 1,254.2
+1,868.6 1,664.8
+2009 2008
+
+£ millions £ millions
+310.4 230.3
+11 2.2
+114.6 80.8
+1,201.2 1,032.7
+1,627.3 1,346.0
+483.6 332.9
+146.5 56.4
+1,667.2 1,521.3
+2,296.3 1,910.6
+
+As at 31% March 2009, there were no unobservable day one profits for trading derivative
+
+assets (2008: fnil).
+
+Further details of the classification and fair value measurement of trading derivative assets
+
+and liabilities are disclosed in note 32.
+
+38
+
+Mizuho International ple — Financial Statements 2009
+
+14 DERIVATIVES HELD FOR RISK MANAGEMENT
+
+Group and Company
+
+Primary instruments
+
+Interest rate
+
+Equity
+
+Foreign currency
+
+Credit
+
+Designated as fair value hedges of interest rate risk
+
+Embedded derivatives
+Interest rate
+
+Equity
+
+Foreign currency
+
+Credit
+
+Derivatives held for risk management
+
+Group and Company
+
+Primary instruments
+
+Interest rate
+
+Equity
+
+Foreign currency
+
+Credit
+
+Designated as fair value hedges of interest rate risk
+
+Embedded derivatives
+Interest rate
+
+Equity
+
+Foreign currency
+
+Credit
+
+Derivatives held for risk management
+
+Assets Liabilities Net
+2009 2009 2009
+
+£ millions £ millions £ millions
+2.1 13.8 (11.7)
+
+0.4 103.1 (102.7)
+
+: 105.8 (105.8)
+
+41 42.8 (38.7)
+
+3.5 0.3 3.2
+10.1 265.8 (255.7)
+9.1 0.5 8.6
+111.6 0.2 111.4
+132.2 0.2 132.0
+35.6 - 35.6
+288.5 0.9 287.6
+298.6 266.7 31.9
+Assets Liabilities Net
+2008 2008 2008
+
+£ millions £ millions £ millions
+1.3 12.8 (11.5)
+
+0.3 26.8 (26.5)
+
+0.5 55.4 (54.9)
+
+3.2 12.8 (9.6)
+
+1.9 11 0.8
+
+7.2 108.9 (101.7)
+
+8.3 0.5 7.8
+29.4 0.4 29.3
+67.7 0.4 67.3
+10.1 0.5 9.6
+115.5 1.5 114.0
+122.7 110.4 12.3
+
+The Company uses primary derivative instruments to manage exposure to interest rate risk,
+equity price risk, foreign currency risk and credit risk arising from its structured note issuance
+programmes (see note 22). These derivative instruments include interest rate swaps,
+
+foreign currency swaps, credit default swaps, and equity options.
+
+Further details of the classification and fair value measurement of derivatives held for risk
+
+management are disclosed in note 32.
+
+39 Mizuho International pic — Financial Statements 2009
+
+Derivatives held for risk management designated as fair value hedges of interest rate
+
+risk
+
+The Company uses primary interest rate and other swap instruments to hedge its exposure
+to changes in fair value of fixed rate structured notes and structured note host contracts that
+are carried at amortised cost. The changes in fair values of the hedging derivative
+instruments and the hedged items attributable to the hedged risks are analysed below:
+
+Group and Company
+
+Gains on hedging derivative instruments
+
+Gains / (losses) on hedged items attributable to hedged risk:
+
+- Deposits by banks (see note 20)
+- Debt securities in issue (see note 22)
+
+Ineffective portions of fair value hedges
+
+15 LOANS AND ADVANCES TO BANKS
+
+Group
+
+Placements with banks
+
+Amounts include:
+Due from related parties.
+
+Company
+
+Placements with banks
+
+Amounts include:
+Due from related parties
+
+2009 2008
+
+£ millions £ millions
+47.2 12.2
+
+- 0.1
+
+(47.2) (12.3)
+2009 2008
+
+£ millions £ millions
+252.0 347.5
+47.6 23.1
+
+2009 2008
+
+£ millions £ millions
+80.5 38.2
+
+47.6 23.1
+
+Further details of the classification and fair value measurement of loans and advances to
+
+banks are disclosed in note 32.
+
+40 Mizuho International pic — Financial Statements 2009
+
+16 LOANS AND ADVANCES TO CUSTOMERS
+
+Group and Company 2009 2008
+£ millions £ millions
+Corporate lending
+55.1 9.1
+Amounts include:
+Due from related parties 0.1 :
+Further details of the classification and fair value measurement of loans and advances to
+customers are disclosed in note 32.
+17. FINANCIAL INVESTMENTS
+Group and Company 2009 2008
+£ millions £ millions
+Financial investments
+Equity securities designated at fair value through profit and loss 73.2 78.1
+Equity securities at fair value through profit and loss are analysed
+as follows;
+Listed on a recognised UK exchange 1.0 0.9
+Unlisted 72.2 77.2
+73.2 78.1
+
+Further details of the classification and fair value measurement of financial investments are
+
+disclosed in note 32.
+
+41 Mizuho International pic — Financial Statements 2009
+
+18 TANGIBLE FIXED ASSETS
+
+Group and Company
+
+Cost
+
+At 1* April 2008
+Additions
+Disposals
+
+At 31° March 2009
+
+Accumulated depreciation
+and amortisation
+
+At 1* April 2008
+Disposals
+Charge for the year
+
+At 31* March 2009
+
+Net book value
+At 31" March 2009
+
+At 31" March 2008
+
+Fixtures
+Short equipment
+leasehold software
+property & vehicles Total
+£ millions £ millions £ millions
+23.6 30.2 53.8
+0.1 1.3 1.4
+(0.5) (0.2) (0.7)
+23.2 31.3 54.5
+14.7 20.9 35.6
+(0.3) (0.1) (0.4)
+1.2 5.0 6.2
+15.6 25.8 41.4
+7.6 5.5 13.1
+8.9 9.3 18.2
+
+42
+
+Mizuho International plc — Financial Statements 2009
+
+19 OTHER ASSETS
+
+Group 2009 2008
+£ millions £ millions
+
+Trade receivables 2,352.5 1,527.8
+Other assets 7.8 8.0
+2,360.3 1,535.8
+
+Company 2009 2008
+£ millions £ millions
+
+Trade receivables 2,352.5 1,526.5
+Other assets 7.8 79
+2,360.3 4,534.4
+
+20 DEPOSITS BY BANKS
+
+Group and Company 2009 2008
+£ millions £ millions
+Placements by other banks 832.3 741.2
+
+Amounts include:
+
+Due to group companies 731.8 510.4
+
+Further details of the classification and fair value measurement of deposits by banks are
+disclosed in note 32.
+
+Deposits by banks adjusted for fair value hedge accounting
+
+The net gain recognised in the profit and loss account arising on deposits that have been
+adjusted for fair value hedge accounting amounted to £ nil (2008: £0.1 million).
+
+This amount represents fair value movements relating to interest rate risk effectively hedged
+by the risk management derivatives designated as fair value hedges of interest rate risk
+described in note 14.
+
+The contractual amount at maturity of these deposits amounted to £7.1 million (2008: £5.1
+million).
+
+43 Mizuho International pic — Financial Statements 2009
+
+Deposits by banks designated at fair value through profit and loss
+
+Certain deposits were designated at fair value through profit and loss since these are
+managed on a fair value basis. The contractual amount at maturity of these deposits was
+£7.1 million (2008: £5.1 million).
+
+The net gain recognised in the profit and loss account arising on deposits that have been
+designated as at fair value amounted to £3.1 million (2008: £0.2 million).
+
+21 CUSTOMER ACCOUNTS
+
+Group and Company 2009 2008
+£ millions £ millions
+Deposits by corporate customers 29.4 4.8
+
+Further details of the classification and fair value measurement of customer accounts are
+disclosed in note 32.
+
+22 DEBT SECURITIES IN ISSUE
+
+Group 2009 2008
+£ millions £ millions
+
+Debt securities —- amortised cost 742.7 492.8
+Debt securities adjusted for fair value hedge accounting 1,156.6 768.4
+Debt securities designated at fair value through profit and loss 155.1 264.5
+2,054.4 1,525.7
+
+Company 2009 2008
+£ millions £ millions
+
+Debt securities ~ amortised cost 742.7 492.8
+Debt securities adjusted for fair value hedge accounting 1,156.6 768.4
+Debt securities designated at fair value through profit and loss 151.9 253.3
+2,051.2 1,514.5
+
+Further details of the classification and fair value measurement of debt securities in issue are
+disclosed in note 32.
+
+44 Mizuho International pic - Financial Statements 2009
+
+Debt securities adjusted for fair value hedge accounting
+
+The net (loss) recognised in the profit and loss account arising on debt securities that have
+been adjusted for fair value hedge accounting amounted to £(47.2) million (2008: £(12.3)
+million).
+
+This amount represents fair value movements relating to interest rate risk effectively hedged
+by the risk management derivatives designated as fair value hedges of interest rate risk
+described in note 14.
+
+The contractual amount at maturity of these debt securities amounted to £1,109.4 million
+(2008: £756.0 million).
+
+Debt securities designated at fair value through profit and loss
+
+Certain debt securities in issue were designated at fair value through profit and loss since
+these are managed on a fair value basis.
+
+The net gain recognised in the profit and loss account arising on debt securities that have
+been designated as at fair value amounted to: Group £36.8 million and Company £28.8
+million (2008; Group £63.7million and Company £27.0 million).
+
+The contractual amount at maturity of these debt securities was: Group £612.7 million and
+Company £180.7 million (2008: Group £585.2 million and Company £280.3 million).
+
+The adjustment on these debt securities that is attributable to changes in the Company's
+
+credit risk for the current and the previous financial year that is not attributable to changes in
+market conditions of these financial liabilities was determined as not material.
+
+23. SUBORDINATED LIABILITIES
+
+Group and Company 2009 2008
+£ millions £ millions
+
+Currency Amount
+
+usD 37,000,000 . 18.6
+
+The USD subordinated deposit was repaid on 8" April 2008, had a variable interest rate
+based on USD LIBOR, and was held by Mizuho Corporate Bank, Ltd.
+
+Further details of the classification and fair value measurement of subordinated liabilities are
+disclosed in note 32.
+
+45 Mizuho International plc — Financial Statements 2009
+
+24 OTHER LIABILITIES
+
+Group 2009 2008
+£ millions £ millions
+
+Trade payables 1,438.6 608.6
+Other liabilities 4.8 45
+Tax and social security payable 1.7 0.9
+1,445.1 614.0
+
+Company 2009 2008
+£ millions £ millions
+
+Trade payables 1,438.4 596.5
+Other liabilities 4.8 46
+Tax and social security payable 1.7 0.9
+1,444.9 602.0
+
+25 PROVISIONS FOR LIABILITIES AND CHARGES
+
+Group and Company
+Provision for
+
+tax Provision tor
+
+Provision for immunisation shortfall of
+restructuring agreement rental income Total
+£ mitlions £ mitlions £ millions £ millions
+At 1 April 2008 48 5.5 27 13.0
+Net charge 0.1 0.3 1.0 1.4
+Provisions utilised (3.6) (5.8) (0.6) (10.0)
+At 31" March 2009 1.3 - 3.1 44
+
+Provision for restructuring
+
+During the previous financial year, the Company announced plans to rationalise business
+activities and to restructure operations to a size more befitting of the ongoing activities of the
+organisation. A provision of £4.8 million was held at the beginning of the year to cover
+payments relating to redundancy, associated termination costs and other exit costs, and this
+has been partially utilised during the current year.
+
+46 Mizuho International plc — Financial Statements 2009
+
+Provision for tax immunisation agreement
+
+At the beginning of the year the Company held a provision of £5.5 million pursuant to a tax
+immunisation agreement with a shareholder, whereby the Company may have been obliged
+to make a payment of up to £6.1 million during the current year by way of advance against
+withholding tax suffered for which the shareholder may be unable to obtain credit relief. Full
+provision was made against this potential payment, on a discounted basis net of interest rate
+hedging benefits, and was fully utilised during the current year as payment was made under
+the terms of this agreement.
+
+Provision for shortfall of rental income
+
+At the beginning of the year, the Company held a provision of £2.7 million in respect of the
+future shortfall between the rental income due from tenants of the Company's properties and
+the amount payable by the Company on the head lease. The provision was increased
+during the year due to changes to market interest rates and future rental assumptions, and
+was also partially utilised as a result of rental payments falling due.
+
+26 PENSION LIABILITIES
+
+Pension Liabilities - Defined benefits scheme
+
+The Company operates a defined benefits scheme, the Mizuho International plc Retirernent
+Benefits Scheme (‘Scheme’), which is a final salary scheme, established in 1978, and
+currently governed by the trust deed and rules dated 18"" September 1998. The Scheme is a
+“registered pension scheme” for tax purposes. All members were contracted-out of the State
+Second Pension during active membership of the Scheme.
+
+In accordance with the trust deed the Company, as Principal Employer, has the power to
+appoint and remove the Trustees of the Scheme. The three Trustees include a company
+representative, an independent corporate Trustee and a member nominated Trustee.
+
+There are no active members remaining in the Scheme, which is closed to new entrants and
+future benefit accrual. There were 244 deferred members and, 9 pensioner members who
+have pensions paid directly from the Scheme as at 31 March 2009.
+
+A full valuation was undertaken as at 31" March 2006 and updated to 31** March 2009 by a
+qualified independent Actuary. The principal actuarial assumptions at the balance sheet
+date (expressed as weighted averages) were as follows:
+
+2009 2008
+
+% pa. % pa.
+
+Discount rate 6.3 6.4
+Expected long-term rate of return on Scheme assets 59 6.5
+Increase in salaries na nla
+Inflation assumption 27 3.4
+LPI Pension increases 2.7 3.4
+
+The underlying mortality assumption is based upon the standard table known as PAOO ona
+year of birth usage with medium cohort future improvement factors subject to a minimum
+improvement of 1% per annum (2008: PA92 year of birth usage with medium cohort future
+improvement factors).
+
+The amounts recognised in the balance sheet are as follows:
+
+47 Mizuho International pic — Financial Statements 2009
+
+2009 2008
+£ millions £ millions
+Present value of Scheme liabilities (21.1) (21.9)
+Market value of Scheme assets 18.6 21.5
+Deficit in the Scheme (2.5) (0.4)
+Related deferred tax asset : :
+Net Pension liability (2.5) (0.4)
+The amounts to be recognised in profit and loss for the year are as follows:
+2009 2008
+£ millions £ millions
+Current service cost ” ”
+Expected return on Scheme assets 14 1.6
+Interest on Scheme liabilities (1.4) (1.3)
+Past service cost ” .
+Curtailment gain ” -
+Total ” 0.3
+Actual return on Scheme assets (3.0) (1.1)
+Changes in the present value of the Scheme liabilities are as follows:
+2009 2008
+£ millions £ millions
+Present value of Scheme liabilities at beginning of period 21.9 23.1
+Service cost . -
+Employee contributions . -
+Interest cost 1.4 1.3
+Past service cost : -
+Curtailment gain - -
+Actuarial losses / (gains) (1.7) (2.4)
+Benefits paid (0.5) (0.1)
+Present value of Scheme liabilities at end of period 21.1 21.9
+
+48 Mizuho International pic — Financial Statements 2009
+
+Changes in the fair value of the Scheme assets for the year are as follows:
+
+2009 2008
+
+£ millions £ millions
+
+Market value of Scheme assets at 1 April 21.5 22.2
+Expected return 1.4 1.6
+Actuarial losses (4.4) (2.7)
+Benefits paid (0.5) (0.1)
+Contributions paid by the Company 0.6 0.5
+Employee contributions : :
+Market value of Scheme assets at 31 March 18.6 21.5
+
+The agreed contributions to be paid by the Company for the forthcoming year ending 31*
+March 2010 are at least £500,000, subject to review at future actuarial valuations.
+
+The major categories of Scheme assets as a percentage of total Scheme assets for the year
+are as follows:
+
+2009 2008
+
+% %
+
+Equities 41 49
+Bonds 58 49
+Cash 1 2
+100 100
+
+The expected long-term rate of return on the Scheme assets has been calculated based
+upon the major asset categories shown in the above table and an expected rate of return on
+equities of 7.0% (2008: 7.5%), an expected rate of return on bonds of 5.3% (2008: 5.5%)
+and an expected rate of return on cash of 0.5% (2008: 5.25%).
+
+Analysis of amounts recognisable in the statement of total recognised gains and losses for
+the year are as follows:
+
+2009 2008
+£ millions £ millions
+Actua! return less expected return on Scheme assets (4.4) (2.7)
+Experience gains and losses arising on Scheme liabilities (0.4) (0.1)
+Changes in assumptions underlying the present value of Scheme
+Te ersgs 2.1 2.5
+liabilities
+Actuarial loss recognised in STRGL (2.7) (0,3)
+
+The cumulative amount of actuarial gains and losses recognised in the statement of total
+recognised gains and losses for the year are as follows:
+
+2009 2008
+
+£ millions £ millions
+
+Cumulative actuarial loss at 1" April (5.7) (5.4)
+
+Recognised during the period (2.7) (0.3)
+
+Cumulative actuarial loss at 31 March (8.4) (5.7)
+Movements in the deficit during the year are as follows:
+
+2009 2008
+
+£ millions £ millions
+
+Deficit in Scheme at 1* April (0.4) (0.9)
+
+Expenses recognised in profit and loss 0.0 0.3
+
+Contributions paid by the Company 0.6 0.5
+
+Actuarial gain/(loss) (2.7) (0.3)
+
+Deficit in Scheme at 31% March (2.5) (0.4)
+
+49 Mizuho International pic — Financial Statements 2009
+
+Amounts for the current and previous four accounting periods are as follows:
+
+2009 2008 2007 2006 2005
+£ millions £ millions £ millions £ millions £ millions
+Present value of Scheme (21.1) (21.9) (23.1) (24.3)
+liabilities
+Market value of Scheme assets 18.6 21.5 22.2 21.0
+Deficit in the Scheme (2.5) (0.4) {0.9) (3.3)
+Actual returm less expected return (4.4) (2.7) (0.4) 2.8
+on Scheme assets
+Experience gain/(toss) arising on (0.4) (0.1) {0.2) 0.0
+Scheme liabilities
+Change in assumptions 21 2.5 2.4 (4.1)
+
+underlying present value of
+Scheme liabilities
+
+Employment benefit plans
+
+The Company operates a Group Personal Pension (‘GPP’) arrangement. Subject to meeting
+certain qualifying conditions, all staff joining the Company are eligible to become members of
+the GPP.
+
+The GPP provides employees with a tax-efficient way of saving for retirement. It is a low-
+cost, flexible and portable arrangement which the Company also contributes towards.
+
+Contributions are currently subject to the maximum limits as laid down by H M Revenue &
+Customs for the tax year in question. Company contributions are made as a percentage of
+salary and/or bonus waiver through a salary sacrifice arrangement.
+
+The assets of the GPP are held separately from those of the Company in independently
+administered funds. During the year ended 31° March 2009 the Company made
+contributions of £6.0 million (2008: £6.6 million) to the GPP.
+
+Other pension arrangements
+The Company has operated a separate trust based defined contribution scheme which is
+
+closed to new employees and any existing members as at 31" March 2006. This scheme is
+currently being wound up.
+
+50 Mizuho International! pic — Financial Statements 2009
+
+27 ~=SHARE CAPITAL
+
+2009 2009 2008 2008
+Number CCY millions Number CCY millions
+Authorised
+
+Ordinary shares of GBP 10 each 116,500,000 1,165.0 116,500,000 1,165.0
+Ordinary shares of JPY 2,000 each 150,000,000 300,000 150,000,000 300,000
+2009 2009 2008 2008
+Number £ millions Number £ millions
+
+Allotted, called up and fully paid
+Ordinary shares of GBP 10 each 110,841 ,006 1,108.4 107,160,504 1,071.6
+Ordinary shares of JPY 2,000 each 135,000,000 1,318.0 130,000,000 1,243.0
+2,426.4 2,314.6
+
+CS
+
+Increases in allotted, called up and fully paid up share capital are analysed below:
+
+Currency 2009 2009 2009
+
+Number CCY millions £ millions
+
+22™ December 2008 GBP 3,680,502 36.8 36.8
+29" December 2008 JPY 5,000,000 10,000 75.0
+111.8
+
+Currency 2008 2008 2008
+
+Number CCY millions £ millions
+
+26" October 2007 GBP 15,996,860 160.0 160.0
+7" December 2007 GBP 43,000,000 430.0 430.0
+28" December 2007 GBP 15,300,000 153.0 153.0
+24" January 2008 GBP 7,100,000 71.0 71.0
+81,396,860 814.0 814.0
+
+31" January 2008 JPY 100,000,000 200,000 943.1
+28" March 2008 JPY 17,500,000 35,000 174.8
+31" March 2008 JPY 12,500,000 25,000 125.1
+130,000,000 260,000 1,243.0
+
+2,057.0
+
+51 Mizuho International ple — Financial Statements 2009
+
+28 EQUITY
+
+At 1* April 2008
+
+Increase in paid up
+share capital
+
+Loss for the year
+Actuarial loss on
+defined benefit plan
+
+At 31% March 2009
+
+At 1" April 2007
+
+Increase in paid up
+share capital
+
+Loss for the year
+Dividends paid
+Actuarial loss on
+defined benefit plan
+Fair value reserve
+released
+
+Deferred tax
+
+At 31" March 2008
+
+Dividends
+
+Profit and loss account
+
+2007 final dividend paid (77.63 pence per share)
+
+Called up Share Profit and
+share premium Fair value Pension loss
+capital account reserve reserve account Total
+£ millions £ millions £ millions £ millions £ millions £ millions
+2,314.6 15.6 : (1.8) (1,815.9) 512.5
+1141.8 - - - : 111.8
+- - : - (267.5) (267.5)
+- - - (2.7) - (2.7)
+2,426.4 15.6 - (4.5) (2,083.4) 354.1
+Profit and loss account
+Share
+Called up premium Fair value Pension Profit and
+share capital account reserve reserve loss account Total
+£ millions £ mitions £ millions £ millions £ millions £ millions
+257.6 16.6 (0.2) (1.2) 244.8 516.6
+2,057.0 - - - - 2,057.0
+- - - - (2,040.7) (2,040.7)
+- - - - (20.0) (20.0)
+- - - (0.3) : (0.3)
+- - 0.2 - : 0.2
+- : - (0.3) - (0.3)
+2,314.6 18.6 : (1.8) (1,815.9) §12.5
+2009 2008
+£ millions £ millions
+- 20.0
+
+52
+
+Mizuho International pic — Financial Statements 2009
+
+29 OPERATING LEASE COMMITMENTS
+
+At the year end, annual commitments under non-cancellable operating leases were:
+
+aa, 2009 2008
+Land and buildings: £ millions £ millions
+- expiring in five years or more 11.5 11.5
+
+30 CONTINGENT LIABILITIES
+
+In the normal course of business the Company is involved in various lawsuits and no
+material adverse impact on the financial position of the Company is expected to arise from
+any of these proceedings.
+
+31 EVENTS AFTER BALANCE SHEET DATE
+
+Transfer of US securitisation business
+
+The Company transferred its former US securitisation business to its subsidiary entity:
+Structured Credit America Ltd (see note 34), with effect from 1* April 2009. The total fair
+value of the separable financial assets and financial liabilities transferred from the
+Company's balance sheet represented a net liability of £(15.7) million. The Company paid
+consideration of £27.8 million to Structured Credit America Ltd, being the estimated fair
+market value, inclusive of administrative costs, of this business.
+
+Increase in share capital
+
+The Company issued 3,589,375 shares of £10 each on 30" April 2009, resulting in an
+increase to the Company’s fully paid up share capital of £35.9 million.
+
+53 Mizuho International pic — Financial Statements 2009
+
+32 FINANCIAL ASSETS AND FINANCIAL LIABILITIES
+Classification and fair value of financial assets and liabilities
+
+The classification and fair values of financial assets and financial liabilities are analysed in
+the tables below.
+
+Financial instruments for which fair value approximates carrying value
+
+For financial assets and financial fiabilities that are payable on demand or having a short
+term maturity, carrying amounts approximate fair values. This applies to loans and
+advances to banks and customers, customer accounts and also trade receivables /
+payables.
+
+Financial liabilities
+Debt securities in issue classified as financial liabilities amounting to £1,899.3 million (2008:
+
+£1,261.2 million) include debt securities adjusted for fair value hedge accounting amounting
+to £ 1,156.6 million (2008: £ 768.4 million) (see note 22).
+
+54 Mizuho International plc — Financial Statements 2009
+
+Group
+2009
+
+Financial assets:
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for
+risk management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+Deposits by banks
+Customer accounts
+Repurchase agreements
+Trading liabilities
+Trading derivatives
+liabilities
+
+Derivative liabilities held
+for risk management
+Debt securities in issue
+Subordinated liabilities
+
+Company
+2009
+
+Financial assets:
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for
+risk management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+Deposits by banks
+Customer accounts
+Repurchase agreements
+Trading liabilities
+Trading derivatives
+liabilities
+
+Derivative liabilities held
+for risk management
+Debt securities in issue
+Subordinated liabilities
+
+Classification
+
+Designated
+Held for asatfair Loans and Financial
+trading value receivables liabilities
+£ millions £ millions £ millions £ millions
+15,811.8 : - -
+1,358.3 64.6 - -
+1,030.1 - - -
+298.6 - - :
+- - 307.1 -
+1.0 72.2 - -
+7A 4.0 - 821.2
+- - - 29.4
+14,302.6 - - -
+148.3 - - -
+1,868.6 - - -
+266.7 - - -
+- 155.1 - 1,899.3
+Classification
+Designated
+
+Held for asatfair Loans and Financial
+trading value receivables liabilities
+£ millions £ millions £ millions £ millions
+15,811.8 - - -
+1,356.9 64.6 - -
+1,627.3 - - -
+298.6 ba - -
+- - 135.6 -
+1.0 72.2 - -
+7A 4.0 - 821.2
+- : - 29.4
+14,302.6 - - -
+148.3 - : -
+2,296.3 - : :
+266.7 - - :
+
+. 151.9 -
+
+Carrying
+amount
+£ millions
+
+15,811.8
+
+1,422.9
+1,030.1
+298.6
+
+307.1
+73.2
+
+832.3
+29.4
+14,302.6
+148.3
+1,868.6
+
+266.7
+
+2,054.4
+
+Carrying
+amount
+£ millions
+
+15,811.8
+
+1,421.5
+1,627.3
+298.6
+
+135.6
+73.2
+
+832.3
+29.4
+14,302.6
+148.3
+2,296.3
+
+266.7
+
+2,051.2
+
+Fair value
+£ millions
+
+15,811.8
+
+1,422.9
+1,030.1
+298.6
+
+307.1
+73.2
+
+834.3
+29.4
+14,302.6
+148.3
+1,868.6
+
+266.7
+
+2,054.4
+
+Fair value
+£ millions
+
+15,811.8
+
+1,421.5
+1,627.3
+298.6
+
+135.6
+73.2
+
+834.3
+29.4
+14,302.6
+148.3
+2,296.3
+
+266.7
+
+2,051.2
+
+55
+
+Mizuho International pic — Financial Statements 2009
+
+Group
+2008
+
+Financial assets:
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for
+risk management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+Deposits by banks
+Customer accounts
+Repurchase agreements
+Trading liabilities
+Trading derivatives
+liabilities
+
+Derivative liabilities held
+for risk management
+Debt securities in issue
+Subordinated liabilities
+
+Company
+2008
+
+Financial assets:
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for
+risk management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+Deposits by banks
+Customer accounts
+Repurchase agreements
+Trading liabilities
+Trading derivatives
+liabilities
+
+Derivative liabilities held
+for risk management
+Debt securities in issue
+Subordinated liabilities
+
+Classification
+
+Designated
+Hetd for as at fair Loans and Financiat
+trading value —_ receivables liabilities
+£ millions £ millions £ millions £ millions
+19,168.6 - - -
+2,318.2 55.3 - -
+800.4 - - -
+122.7 - - -
+- - 356.6 :
+- 78.1 - -
+5.0 4.9 731.3
+- - 4.8
+18,464.7 - -
+706.3 - -
+1,664.8 - -
+410.4 - -
+- 264.5 1,261.2
+- - 18.6
+
+Classification
+
+Designated
+Held for as at fair Loans and Financial
+trading value —_ receivables liabilities
+£ millions £ millions £ millions £ millions
+19,168.6 - - -
+2,305.9 §8.3 : -
+1,346.0 - - -
+122.7 - - -
+- - 47.3 -
+- 78.1 - -
+5.0 49 731.3
+- - 48
+18,464.7 - -
+706.3 - -
+1,910.6 - -
+110.4 - -
+- 253.3 1,261.2
+- - 18.6
+
+Carrying
+amount
+£ millions
+
+19,168.6
+
+2,373.5
+800.4
+122.7
+
+356.6
+78.1
+
+741.2
+4.8
+18,464.7
+706.3
+1,664.8
+
+110.4
+
+1,525.7
+18.6
+
+Carrying
+amount
+£ millions
+
+19,168.6
+
+2,361.2
+1,346.0
+122.7
+
+47.3
+78.1
+
+741.2
+4.8
+18,464.7
+706.3
+1,910.6
+
+110.4
+
+1,514.5
+18.6
+
+Fair value
+£ millions
+
+19,168.6
+
+2,373.5
+800.4
+122.7
+
+356.6
+78.1
+
+743.2
+4.8
+18,464.7
+706.3
+1,664.8
+
+110.4
+
+1,525.7
+18.6
+
+Fair value
+£ millions
+
+19,168.6
+
+2,361.2
+1,346.0
+122.7
+
+47.3
+78.4
+
+743.2
+4.8
+18,464.7
+706.3
+1,910.6
+
+110.4
+
+1,514.5
+18.6
+
+56
+
+Mizuho International ple — Financial Statements 2009
+
+Analysis of fair value measurement of financial instruments
+Fair value hierarchy
+
+The Group has analysed its financial instruments into a three-level fair value hierarchy based
+on the priority of the inputs to the valuation methodology. The fair value hierarchy gives the
+highest priority to quoted prices in active markets for identical assets or liabilities and the
+lowest priority to unobservable inputs. If the inputs used to measure the financial instruments
+fall within different levels of the hierarchy, the categorisation is based on the lowest level
+input that is significant to the fair value measurement of the instrument.
+
+When the inputs used to measure fair value fall within different levels of the hierarchy, the
+level within which the fair value measurement is categorised is based on the lowest level
+input that is significant to the fair value measurement in its entirety. For example, a Level 3
+fair value measurement may include inputs that are observable (Levels 1 and 2) and
+unobservable (Level 3).
+
+Financial assets and liabilities recorded on the Balance Sheet are categorised based on the
+inputs to the valuation techniques as follows:
+
+Level 1
+
+Financia! assets and liabilities whose values are based on unadjusted quoted prices for
+identical assets or liabilities in an active market that the Group has the ability to access
+
+Level 2
+
+Financial assets and liabilities whose values are based on quoted prices in markets that are
+not active or model inputs that are observable either directly or indirectly for substantially the
+full term of the asset or liability.
+
+Level 3
+
+Financial assets and liabilities whose values are based on prices or valuation techniques
+that require inputs that are both unobservable and significant to the overall fair value
+measurement. These inputs reflect management's own assumptions about the assumptions
+a market participant would use in pricing the asset or liability.
+
+57 : Mizuho International ple — Financial Statements 2009
+
+The following tables show an analysis of the fair values disclosed in the tables above
+categorised in the fair value hierarchy applied by the Group.
+
+Group
+2009
+
+Financial assets:
+
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for risk
+management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+
+Deposits by banks
+
+Customer accounts
+Repurchase agreements
+Trading liabilities
+
+Trading derivative liabilities
+Derivative liabilities held for risk
+management
+
+Debt securities in issue
+Subordinated liabilities
+
+Company
+2009
+
+Financial assets:
+
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for risk
+management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+
+Deposits by banks
+
+Customer accounts
+Repurchase agreements
+Trading tiabilities
+
+Trading derivative liabilities
+Derivative liabilities held for risk
+management
+
+Debt securities in issue
+Subordinated liabilities
+
+Valuation techniques
+
+Market Non market
+Quoted market observable observable Fair value
+price inputs inputs Total
+Level t Level 2 Level 3
+£ millions £ millions £ millions £ millions
+- 15,811.8 - 15,811.8
+32.1 547.3 843.5 1,422.9
+0.4 624.4 405.3 1,030.1
+- 17.6 281.0 298.6
+- 307.1 - 307.1
+- 38.6 34.6 73.2
+32.5 17,346.8 1,564.4 18,943.7
+- 834.3 - 834.3
+- 29.4 - 29.4
+- 14,302.6 - 14,302.6
+53.8 94.5 - 148.3
+0.1 750.8 1,117.7 1,868.6
+” 18.4 248.3 266.7
+- 1,947.1 107.3 2,054.4
+53.9 17,977.1 1,473.3 19,504.3
+Valuation techniques
+Market Non market
+Quoted market observable observable Fair value
+price inputs inputs Total
+Level 1 Level 2 Level 3
+£ millions £ millions £ millions £ millions
+- 15,811.8 - 15,811.8
+32.1 547.3 $42.1 1,421.5
+0.4 624.4 1,002.5 1,627.3
+- 17.6 281.0 298.6
+- 135.6 - 135.6
+- 38.6 34.6 73.2
+32,5 17,175.3 2,160.2 19,368.0
+- $34.3 - 834.3
+- 29.4 - 29.4
+- 14,302.6 - 14,302.6
+53.8 94.5 - 148.3
+0.1 744.7 1,551.5 2,296.3
+- 18.4 248.3 266.7
+- 1,947.1 104.1 2,051.2
+53.9 17,971.0 1,903.9 19,928.8
+
+58
+
+Mizuho International pic — Financial Statements 2009
+
+Group
+2008
+
+Financial assets:
+
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for risk
+management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+
+Deposits by banks
+
+Customer accounts
+Repurchase agreements
+Trading liabilities
+
+Trading derivative liabilities
+Derivative liabilities held for risk
+management
+
+Debt securities in issue
+Subordinated liabilities
+
+Company
+2008
+
+Financial assets:
+
+Reverse repurchase
+agreements
+
+Trading assets
+
+Trading derivative assets
+Derivative assets held for risk
+management
+
+Loans and advances
+Financial investments
+
+Financial liabilities:
+
+Deposits by banks
+
+Customer accounts
+Repurchase agreements
+Trading liabilities
+
+Trading derivative liabilities
+Derivative liabilities held for risk
+management
+
+Debt securities in issue
+Subordinated liabilities
+
+Valuation techniques
+
+Market Non market
+Quoted market Observable observable Fair value
+price inputs inputs Total
+Level 1 Level 2 Level 3
+£ millions £ millions £ millions £ millions
+- 19,168.6 - 19,168.6
+1,598.6 241.0 §33.9 2,373.5
+1.9 614.4 184.1 800.4
+. 122.7 . 122.7
+. 356.6 - 356.6
+0.9 43.9 33.3 78.1
+1,601.4 20,547.2 751.3 22,899.9
+- 743.2 - 743.2
+- 4.8 - 48
+- 18,464.7 - 18,464.7
+706.1 0.2 - 706.3
+0.9 683.0 980.9 1,664.8
+- 110.4 - 410.4
+- 1,525.7 : 1,525.7
+- 18.6 : 18.6
+707.0 21,550.6 980.9 23,238.5
+Valuation techniques
+Market Non market
+Quoted market observable observable Fair value
+price inputs inputs Total
+Level 1 Level 2 Level 3
+£ millions £ millions £ millions £ millions
+- 19,168.6 - 19,168.6
+1,747.0 92.6 521.6 2,361.2
+1.9 614.4 729.7 1,346.0
+- 122.7 - 122.7
+* 47,3 : 47,3
+0.9 43.9 33.3 78.1
+1,749.8 20,089.5 1,284.6 23,123.9
+- 743.2 - 743.2
+: 4.8 - 48
+- 18,464.7 : 18,464.7
+706.1 0.2 - 706.3
+0.9 683.0 1,226.7 1,910.6
+“ 110.4 - 410.4
+- 1,514.5 - 1,514.5
+: 18.6 - 18.6
+707.0 21,539.4 1,226.7 23,473.1
+
+59
+
+Mizuho International plc — Financial Statements 2009
+
+Movements in Level 3 financial instruments
+
+Level 3 balances at the start and end of the reporting period are analysed in the
+reconciliation table below. As described in note 1 — changes in accounting policy and
+disclosure, the Group has voluntarily disclosed a reconciliation of Level 3 financial
+instruments. Corresponding amounts in line with this disclosure have not been provided.
+Level 3 financial instruments as previously disclosed are shown in the opening balance.
+
+Group
+2009
+Unrealised
+gains and
+(losses) on
+Net realised financial
+and Net instruments
+unrealised Transfers in purchases included in
+Opening gains and and out of sales and Closing closing
+balance (losses) Level 3 settlements balance balance
+£ millions £ millions £ millions £ millions £ millions £ millions
+Financial assets:
+Trading assets 533.9 273.2 427.0 (390.6) 843.5 133.0
+Trading derivative assets 184.1 (217.8) 241.4 197.6 405.3 162.1
+Derivative assets held for risk - 161.4 118.3 1.3 281.0 167.6
+management
+Financiat investments 33.3 (4.7) 8.3 (2.3) 34.6 (8.0)
+751.3 212.1 795.0 (194.0) 1,564.4 454.7
+Financial liabilities:
+Trading derivative liabilities (980.9) (44.7) (219.7) 127.6 (1,117.7) (483.7)
+Derivative liabilities held for - (134.6) (104.1) (9.6) (248.3) (149.9)
+risk management
+Debt securities in issue - (47.6) (117.5) 57.8 (107.3) (34.5)
+(980.9) (226.9) (441.3) 175.8 (1,473.3) (668.1)
+Company
+2009
+Unrealised
+gains and
+(losses) on
+Net realised financial
+and Net instruments
+unrealised = Transfers in purchases included in
+Opening gains and and out of sales and Closing closing
+balance {losses) Level 3 settlements balance balance
+£ millions £ millions £ millions £ millions £ millions £ millions
+Financial assets:
+Trading assets 521.6 109.7 427.0 (216.2) 842.1 119.2
+Trading derivative assets 729.7 14.9 241.4 16.5 1,002.5 162.1
+Derivative assets held for risk . 161.4 118.3 1.3 281.0 167.6
+management
+Financial investments 33.3 (4.7) 8.3 (2.3) 34.6 (8.0)
+1,284.6 281.3 795.0 (200.7) 2,160.2 440.9
+Financial liabilities:
+Trading derivative liabilities (1,226.7) (209.4) (241.0) 125.6 (1,581.8) (805.0)
+Derivative liabilities held for ” (134.6) (104.1) (9.6) (248.3) (149.9)
+risk management
+Debt securities in issue : (55.6) (106.3) 57.8 (104.1) (42.5)
+(1,226.7) (399.6) (451.4) 173.8 (1,903.9) (697.4)
+
+60 Mizuho International pic — Financial Statements 2009
+
+Gains and losses for Level 3 assets and liabilities within the reconciliation table may include
+changes in fair value that are attributable to both observable inputs (Levels 1 and 2) and
+unobservable inputs (Level 3). Reclassifications impacting Level 3 of the fair value hierarchy
+are reported as transfers in and out of the Level 3 category as of the beginning of the
+reporting period in which the reclassifications occur.
+
+The changes in fair value recognised in profit and loss for Level 3 balances as previously
+
+reported are analysed below:
+
+Group
+2008
+
+Financial assets:
+
+Trading assets
+
+Trading derivative assets
+
+Derivative assets held for risk management
+Financial investments
+
+Financial liabilities:
+
+Trading derivative liabilities
+
+Derivative liabilities held for risk management
+Debt securities in issue
+
+Company
+2008
+
+Financial assets:
+
+Trading assets
+
+Trading derivative assets
+
+Derivative assets held for risk management
+Financial investments
+
+Financial liabilities:
+
+Trading derivative liabilities
+
+Derivative liabilities held for risk management
+Debt securities in issue
+
+Net realised and
+unrealised gains
+and (losses)
+
+£ millions
+
+(1,295.1)
+129.8
+0.3
+
+(922.2)
+
+Net realised and
+unrealised gains
+and (losses)
+
+£ millions
+
+(1,391.8)
+734.6
+
+0.3
+
+(1,187.0)
+
+61
+
+Mizuho International pic — Financial Statements 2009
+
+Level 3 financial instruments — valuation techniques
+
+Trading assets - Purchased life contracts
+
+Purchased life contracts are measured at fair value using industry standard approaches for
+pricing such transactions. These approaches utilise mortality rates based upon actuarial
+valuation basic tables (“VBT’}, together with specific adjustments to those rates based upon
+individual medical assessment, and market observed interest rates. Additional valuation
+adjustments are made to take account of other factors, including the premium for longevity
+risk implicit within these contracts.
+
+Trading assets and trading derivative assets and liabilities - US Structured Credit
+transactions
+
+Debt securities and derivative financial instruments that are held in relation to the Group’s
+US Structured Credit business are valued using a variety of different pricing inputs, valuation
+assumptions and models, as market liquidity and price transparency for these asset classes
+remains limited. Positions held in residential mortgage backed securities or in credit
+derivatives that reference such securities have been valued principally using an interest only
+valuation technique which is reliant on assumptions relating to the number of remaining
+coupon payments to be received and market required discount rates. Positions held in CDO
+securities or in credit derivatives that reference such securities have been priced using a
+valuation model, which utilises market data obtained in respect of the underlying reference
+pools of those transactions.
+
+Trading derivative assets and liabilities - Other Structured Credit transactions
+
+Credit derivatives that reference CDO tranches are priced using a valuation model, which
+utilises market data obtained in respect of the underlying reference pools of those
+transactions, together with correlation assumptions in respect of those reference pools. In
+addition, valuation adjustments are made with respect to the risk of default by counterparties
+to these transactions, as further described within note 33.
+
+Trading assets and trading derivative assets and liabilities ~ basis transactions
+
+Debt securities and credit derivatives referencing those debt securities that are traded as a
+package, are priced using a valuation technique which incorporates assumptions regarding
+the credit risk basis between the component debt security and its related credit derivative.
+
+Trading derivative assets and liabilities and derivatives held for risk management, and
+debt securities in issue
+
+The Group obtains funding through the issue of structured notes to investors, whereby the
+amount of coupon payment and/or principal repayment, together with the timing of
+redemption, is dependent upon market interest rates, foreign exchange rates or equity
+prices. The market risk implicit within these notes is hedged on a matching basis through
+offsetting derivative transactions, such that the Group only retains exposure to short term
+interest rates. The valuation of these structured notes and related hedging derivatives is
+sourced ultimately from valuation techniques, which incorporate relevant market rates,
+together with volatility and correlations assumptions.
+
+Financial investments
+
+A number of financial investments are held in entities in which the equity interest is not
+actively traded and cannot be valued by a technique that uses only market observable data.
+In valuing these holdings, the Group has utilised the most recent information available
+concerning these investments.
+
+62 Mizuho International pic — Financial Statements 2009
+
+Level 3 financial instruments — sensitivity analysis
+
+Trading assets — Purchased life contracts
+
+Two stress tests are calculated on a daily basis to evaluate sensitivity to mortality risk:
+Persistency Risk
+
+The valuation is reperformed at a policy level but with the probability of death in the first 30
+days set to zero. The impact of this stress as at 31° March 2009 was to reduce the fair value
+by £1.4 million (2008: £0.9 million).
+
+VBT Stress
+
+The valuation is reperformed at a policy level but assuming a 1% relative adverse shift in the
+VBT table. The fair value of the life contracts as at 31° March 2009 is reduced by £2.1
+million (2008: £1.5 million) under this scenario.
+
+Trading assets / derivatives ~ US Structured Credit transactions
+
+As disclosed within note 33 the total credit risk exposure of the Company to US Structured
+Credit transactions totals £13.1 million (2008: £367.3 million).
+
+The principal credit exposure comprises RMBS, in respect of which a 100bp increase or
+decrease in the discount margin applied would change the fair value of these positions by
+£(0.1) million / £0.1 million respectively (2008: £30 million).
+
+Trading derivative assets and liabilities - Other Structured Credit transactions
+
+Valuation adjustments with regards to certain derivative counterparties are made using
+market data which is implied from the relevant credit ratings of those counterparties, where
+market rates in respect of those counterparties cannot be observed directly. The aggregate
+impact of a one notch downgrade or upgrade on the fair value of these exposures is £(11.6)
+million / £ 11.1 million respectively.
+
+Trading assets and trading derivative assets and liabilities — basis transactions
+The impact of increasing or reducing the basis by 0.5% in respect of these transactions
+
+would be to change the fair value of the debt securities by £(6.0) million / £6.8 million
+respectively.
+
+63 Mizuho International plc — Financial Statements 2009
+
+33. RISK MANAGEMENT
+
+This note presents information on the Company’s exposure to financial and other risks and
+how it manages those risks.
+
+The Company has exposure to the following various risks from its use of financial
+instruments, including market risk, credit risk, liquidity risk and longevity risk (arising from
+trading in purchased life contracts). Market risk includes foreign exchange, interest rate and
+equity price risk.
+
+In addition, the Company also has exposure to risks arising from transactions with special
+purpose companies.
+
+This note also presents information on how the Company manages operational risk, legal
+risk and its regulatory capital requirements.
+
+A Risk management framework
+
+The Company has established a comprehensive framework for managing financial and other
+operational risks which is evolving with its business activities in response to developments in
+markets and products.
+
+The Company has a Risk Committee which advises the Executive Committee on risk
+methodologies and limits, both market and credit, and monitors compliance with these limits.
+
+The Risk Committee is chaired by the Chief Risk Officer. The Head of Product Control, the
+Head of Credit Risk, the Head of Market Risk, the Head of Methodology and Model
+Validation and representatives of the front and back office also attend the Risk Committee
+meetings.
+
+B Market Risk
+Control environment
+
+Market risk is the risk that changes in interest rates, foreign exchange rates, credit spreads,
+equity prices and other rates, prices, volatilities, correlations or other market conditions, such
+as liquidity, will have an adverse impact on the Company’s financial condition or results.
+Market risk arises from both the Cornpany’s trading and non trading activities.
+
+Principal market risks
+
+The Company’s trading activities include both customer and legacy proprietary business in
+debt and equity securities, repurchase agreements and money market loans and deposits. In
+order to meet customer demand, the Company carries portfolios of cash instruments,
+together with derivative instruments for hedging purposes, and maintains access to market
+liquidity. Its legacy proprietary activities involve positions taken as principal in the currency,
+interest rate, credit and securities markets to take advantage of anticipated market
+conditions.
+
+The principal market risks to which the Company is exposed are credit spread risk, interest
+rate risk and equity price risk.
+
+Trading in debt securities and related credit derivatives, including CDOs and Life Insurance
+contracts, is the primary source of credit spread and interest rate risk in the Company's
+trading portfolios.
+
+The Company’s equity price risk in its trading portfolios arises from trading in equities and
+equity derivative securities, predominantly Japanese.
+64 Mizuho International pic — Financial Statements 2009
+
+Risk Management is responsible for monitoring compliance with all market risk limits
+established by the Risk Committee and agreed with the Executive Committee. Management
+of all market risks is the responsibility of the individual business units.
+
+Longevity Risk
+
+The Company monitors the longevity risk in its trading portfolios through position and
+sensitivity limits, as well as a stress-testing value calculation based upon a stress to the
+underlying life expectancy tables used for valuation purposes. Longevity risk is not included
+in the Value at Risk (‘VaR’) as it is a risk type where stress testing is more appropriate.
+Therefore, the longevity risk is monitored and limited via stress tests, details of which are
+given in note 32.
+
+Sensitivity analysis — trading financial instruments
+
+The Gompany manages the market risk in its trading portfolios through position and
+sensitivity limits, as well as profit and loss and VaR limits, and stress testing triggers. These
+limits are approved by the Risk Committee and the Executive Committee for the stress
+testing triggers. In addition, the Company has total VaR limits set by Mizuho Securities Co.,
+Ltd.
+
+Siress Testing
+
+Stress testing is an essential component of the tools used for managing risk within the
+organisation. It is used together with existing VaR calculations. This assists senior
+management in understanding the potential impact of extreme events on its business
+strategy and its available capital resources.
+
+Some scenarios are also used to assess the impact of risk factors not included in the VaR
+model.
+
+Management triggers are set by the Executive Committee on the results from scenarios in
+order to express the Group’s risk appetite. The stress testing results are presented to the
+Risk Committee and Executive Committee on a weekly basis.
+
+Value at Fisk
+
+VaR is a statistical measure that produces an estimate of the potential decrease in the
+market value of a portfolio over a specified time horizon at a given confidence level under
+normal market conditions.
+
+The Company's VaR assumes a time horizon of one day and a confidence level of 99 per
+cent.
+
+The Company uses several VaR models across different segments of its business:
+
+e For most risk factors, a full non-linear VaR model which employs Monte-Carlo
+simulations derived from a Variance-Covariance (‘VcV’) matrix is used for interest rate,
+spread, non JPY equity index and volatility risks;
+
+¢ Mizuho International’s Global Equity VaR process produces the daily VaR for the yen-
+risk positions. The Global Equity VaR process makes use of Barra’s JPE3 model, Barra’s
+primary Japanese equity model; and
+
+e For its Foreign Exchange (‘FX’) VaR and Futures Basis VaR, the Company uses a linear
+variance/covariance model, and for equity specific risk it uses a single factor model for
+each specific stock.
+
+65 Mizuho International ple - Financial Statements 2009
+
+VaR Monte-Carlo simulation assumes that changes in the risk parameters have either a
+normal or log-normal distribution and the parameters of this distribution (i.e. standard
+deviations and correlations) are obtained from Mizuho Financial Group. The method is
+limited by the relevance of the historical data used.
+
+The Company’s VaR should be interpreted in light of the limitations of the VaR, these
+include:
+
+e Risk factors which are not fully addressed by the VaR methodology. These are
+addressed either by sensitivity or position limits or by stress testing scenarios;
+
+« Changes in risk factors may not follow the assumed distribution. In particular, the normal
+distribution assumption may underestimate the probability of large market moves;
+
+« Historical data may not be a good estimate of the potential changes to risk factors
+observed in the future and any modifications to that data may not be adequate; and
+
+e VaR based on 99 per cent confidence level does not reflect potential losses beyond that
+percentile.
+
+VaR should not be viewed as a guarantee of the maximum daily loss that can be
+experienced by the Company on its portfolio. Nor can the Company be certain that losses
+will not exceed the VaR more frequently than once in one hundred trading days.
+
+The Company’s VaR is measured on a daily basis. Mizuho Financial Group provides regular
+updates of the VcV matrix which contains the distribution parameters to be used in
+calculating VaR. The year end VaR was calculated using a VcV matrix provided by Mizuho
+Financial Group on 17" March 2009.
+
+Current back-testing is done between the Company’s total daily VaR and both adjusted and
+unadjusted daily profit and loss. It is reported to the Executive Committee and Risk
+Committee on a weekly basis.
+
+It should be noted that the 2009 VaR figures reflect an overall drive towards risk reduction
+for the Company, in particular equity and credit spread risks.
+
+A summary of the daily VaR and risk statistics for the trading portfolios, based on a 99 per
+cent confidence level and a one day time horizon, segregated by type of market risk, is
+presented below:
+
+66 Mizuho International pic — Financial Statements 2009
+
+Average Maximum Minimum
+
+VaR Risk Factor 2009 2009 2009 2009
+
+£ thousands £ thousands £ thousands £ thousands
+General interest rate 1,184 986 1,995 469
+Currency basis 114 104 1,067 15
+Interest rate volatility : 38 238 :
+Interest Rate 1,220 1,164 2,443 559
+Futures Basis 19 340 2,085 -
+Credit Spread 3,446 4,971 8,239 2,664
+Equity Index 125 710 1,349 125
+Equity Specific 8 165 428 8
+Equity Volatility 5 32 275 5
+Equity 132 770 1,416 132
+Commodity 1 - - - :
+FX Risk 192 233 600 51
+Longevity Risk 2 - - - :
+Total VaR 3,847 5,643 8,348 3,123
+
+1 No longer active in this business
+2 Longevity risk is no longer included in the VaR as it is a risk type which is more appropriately monitored and limited through
+stress tests.
+
+Average Maximum Minimum
+
+VaR Risk Factor 2008 2008 2008 2008
+£ thousands £ thousands £ thousands £ thousands
+
+General interest rate 1,114 1,291 2,993 298
+Currency basis 32 77 652 7
+Interest rate volatility 131 163 455 30
+Interest Rate 1,043 1,587 3,016 693
+Futures Basis 22 287 1,367 358
+Credit Spread 5,340 5,406 10,059 3,044
+Equity index 736 2,358 5,678 633
+Equity Specific 402 1241 2,713 201
+Equity Volatility 81 138 270 53
+Equity 938 2,281 6,470 793
+Commodity : 154 508 87
+FX Risk 302 347 3,215 49
+Longevity Risk 869 894 966 826
+Total VaR 7,107 7,228 12,410 5,389
+
+67 Mizuho International plc — Financial Statements 2009
+
+Sensitivity analysis — non trading financial instruments
+Interest rate sensitivity
+
+The Company’s non trading book comprises assets and liabilities which are not held or
+issued for trading activities. These include the raising and provision of funding to support the
+Company's trading activities, acceptance of customer deposits and investment activities.
+
+Funding and deposit taking activity is conducted in such a manner as to minimise, where
+possible, interest rate risk.
+
+The tables below summarise the interest rate sensitivity gaps within the Company's non
+trading book. Items are allocated to time bands by reference to the earlier of the next
+contractual interest rate re-pricing or the maturity date.
+
+68 Mizuho International pic - Financial Statements 2009
+
+Group
+2009
+
+Assets:
+
+Loans and advances to banks
+Loans and advances to
+customers
+
+Equity shares
+
+Other assets
+
+Prepayments and accrued
+income
+
+Funding
+
+Liabilities and equity:
+
+Loans and advances from
+banks
+
+Loans and advances from
+customers
+
+Debt securities in issue
+Subordinated liabilities
+
+Other liabilities
+
+Accruals and deferred income
+Shareholders’ funds
+
+Liabilities and equity
+
+Off balance sheet items
+Interest rate sensitivity gap
+Cumulative gap
+
+Company
+2009
+
+Assets:
+
+Loans and advances to banks
+Loans and advances to
+customers
+
+Equity shares
+
+Other assets
+
+Prepayments and accrued
+income
+
+Funding
+
+Liabilities and equity:
+
+Loans and advances from
+banks
+
+Loans and advances from
+customers
+
+Debt securities in issue
+Subordinated liabilities
+
+Other liabilities
+
+Accruals and deferred income
+Shareholders’ funds
+
+Liabilities and equity
+Off balance sheet items
+
+interest rate sensitivity gap
+Cumulative gap
+
+Non
+
+Less than 3-6 6-12 1-5 Over 5 interest
+3 months months months years years bearing Total
+Emillions Emillions Emillions millions Emillions Emiltions  £ millions
+252.0 : : : - - 252.0
+§5.1 - - - - - 55.1
+: : : - : 73.2 73.2
+- - - - - 2,360.3 2,360.3
+: : : - - 73.8 73.8
+1,780.0 - - : - - 1,780.0
+2,087.1 : : : : 2,507.3 4,594.4
+832.3 - - : - - 832.3
+29.4 . . : . - 29.4
+754.3 454.8 203.6 290.1 148.2 - 1,851.0
+. - - . - 1,445.1 1,445.1
+. : - . . 82.5 82.5
+. - : - : 354.1 354.1
+1,616.0 454.8 203.6 290,1 148.2 1,881.7 4,594.4
+(1,035.2) 435.8 161.1 290.1 148.2 . :
+(564.1) {19.0} (42.5) : : 625.6 :
+(864.1) (583.1) (625.6) (625.6) (625.6) : :
+Non
+Less than 3-6 6-12 1-5 Over § interest
+3 months months months years years bearing Total
+Emillions millions Emillions millions millions Emillions  £ millions
+80.5 . . . . . 80.5
+55.1 : . . : : 55.1
+: : - . . 73.2 73.2
+. . . . - 2,360.3 2,360,3
+. . . : . 73.8 73.8
+1,951.3 . . : - - 1,951.3
+2,086.9 : : : - 2,507.3 4,594.2
+832.3 - - - - - 832.3
+29,4 . . . - - 29.4
+754.3 454.8 203.6 290.1 148.2 - 1,851.0
+- - : - - 1,444.9 1,444.9
+- - - - : 82.5 82.5
+: - - - : 354.1 354.1
+1,616.0 464.8 203.6 290.1 148.2 1,881.5 4,594.2
+(1,035.2) 435.8 161.1 290.1 148.2 - -
+(564.3) (19.0) (42.5) : : 625.8 -
+(564.3) (583.3) (625.8) (625.8) {625.8) - -
+
+69
+
+Mizuho International pic - Financial Statements 2009
+
+Group
+2008
+
+Assets:
+
+Loans and advances to banks
+Loans and advances to
+customers
+
+Equity shares
+
+Other assets
+
+Prepayments and accrued
+income
+
+Funding
+
+Liabilities and equity:
+
+Loans and advances from
+banks
+
+Loans and advances from
+customers
+
+Debt securities in issue
+Subordinated liabilities
+
+Other liabilities
+
+Accruals and deferred income
+Shareholders’ funds
+
+Liabilities and equity
+
+Off balance sheet items
+Interest rate sensitivity gap
+
+Cumulative gap
+
+Company
+2008
+
+Assets:
+
+Loans and advances to banks
+Loans and advances to
+customers
+
+Equity shares
+
+Other assets
+
+Prepayments and accrued
+income
+
+Funding
+
+Liabilities and equity:
+
+Loans and advances from
+banks
+
+Loans and advances from
+customers
+
+Debt securities in issue
+Subordinated liabilities
+
+Other liabilities
+
+Accruals and deferred income
+Shareholders’ funds
+
+Liabilities and equity
+Off balance sheet items
+
+interest rate sensitivity gap
+Cumulative gap
+
+Non
+
+Less than 3-6 6-12 1-5 Over 5 interest
+3 months months months years years bearing Total
+£ millions £ millions £ millions £ millions £ millions £ millions £ millions
+347.5 - : : - 347.5
+9.1 : - : - 9.1
+: : - - - 78.1 78.1
+: : - : - 1,535.8 1,535.8
+- - - : 84.6 84.6
+1,348.8 - : : - : 1,348.8
+1,705.4 : : : : 1,698.5 3,403.9
+603.6 137.6 - - : - 741.2
+48 - - : - - 48
+464.8 265.9 184.0 289.3 146.7 - 1,350.7
+18.6 : : - : . 18.6
+: - : - - 614.0 614.0
+: - - - - 162.1 162.1
+- - . . : 512.5 512.5
+1,091.8 403.5 184.0 289.3 146.7 1,288.6 3,403.9
+(415.7) (186.4) 166.1 289.3 146.7 - -
+197.9 (589.9) (17.9) . . 409.9 .
+197.9 (392.0) (409.9) (409.9) (409.9) : .
+
+Non
+
+Less than 36 12 1-6 Over S interest
+3 months months months years years bearing Total
+£ millions £ millions £ millions £ millions £€ millions £ millions £ millions
+38.2 : - . . . 38.2
+9.1 . . . . * 9.1
+- - - . : 78.1 78.1
+. - - - - 1,534.4 1,534.4
+. . - - - 84.6 84.6
+1,647.5 . - . . . 1,647.5
+1,694.8 : : : : 1,697.1 3,391.9
+603.6 137.6 - - : . 741.2
+48 - : - - - 48
+464.8 265.9 184.0 289.3 146.7 - 1,350.7
+18.6 - - - - - 18.6
+- - - - : 602.0 602.0
+- - - : : 162.1 162.1
+- - - : : 512.5 512.5
+1,091.8 403.5 184.0 289.3 146.7 1,276.6 3,391.9
+(415.7) (186.4) 166.1 289.3 146.7 - -
+187.3 (589.9) (17.9) : : 420.5 5
+187.3 (402.6) (420.5) (420.5) (420.5) - -
+
+70
+
+Mizuho International ple — Financial Statements 2009
+
+Currency Risk
+
+Foreign currency loans and advances to banks and customers and investments are funded
+in matched currencies, and in addition funding raised from debt security issuance is also
+used to support trading activities on a matched currency basis. Consequently no significant
+currency exposure arises on non trading book activities.
+
+71 Mizuho International plc — Financial Statements 2009
+
+Cc Credit Risk
+Control environment
+
+Credit risk is the risk of financial loss to the Company if an issuer of a financial instrument or
+a customer fails to meet its contractual obligations.
+
+Risk Management has specific responsibility for the implementation of the Company's credit
+policies for all activities, for performing credit analysis and due diligence on individual
+counterparties and issuers, and for monitoring compliance with individual counterparty,
+issuer, geographic, product and market sector limits. Policy and limits are established by the
+Risk Committee. Day to day management of credit risks is the responsibility of the individual
+business units.
+
+Risk Management analyses counterparty credit exposures to assess both current and
+potential credit risk. Current credit exposure represents the replacement cost of those
+instruments which have a positive carrying value. Potential credit exposures are based on
+estimates of future replacement costs over the remaining life of the instrument.
+
+Within Risk Management, prescribed levels of authority have been established for approval
+of standard transactions. Authority levels are governed by the counterparty’s credit quality as
+well as the nature and potential risk of the transactions. Proposed transactions that exceed
+these prescribed levels must be approved by the appropriate Risk Committee.
+
+Maximum exposure to credit risk
+
+The maximum exposure to credit risk for financial assets, including derivatives, recognised
+on the balance sheet is typically the carrying amount and is represented on the table below
+which analyses maximum exposure to credit risk by asset class, representing credit risk
+arising from counterparty default. The maximum exposure is shown gross of the use of
+master netting and collateral agreements unless such credit enhancements meet the
+offsetting requirements as set out in note 2A.
+
+72 Mizuho International pic — Financial Statements 2009
+
+Group
+
+Reverse repurchase agreements
+Derivative assets held for risk management
+Loans and advances to banks
+
+Loans and advances to customers
+
+Loans and advances
+
+Trade receivables
+
+Purchased life contracts
+
+Trading debt securities
+
+Trading derivative assets
+
+Exposure to credit risk
+
+Company
+
+Reverse repurchase agreements
+Derivative assets held for risk management
+Loans and advances to banks
+
+Loans and advances to customers
+
+Loans and advances
+
+Trade receivables
+
+Purchased life contracts
+Trading debt securities
+Trading derivative assets
+
+Exposure to credit risk
+
+Note
+10
+14
+15
+16
+19
+12
+12
+
+13
+
+Note
+10
+14
+15
+16
+19
+12
+12
+
+13
+
+2009 2008
+
+£ millions £ millions
+15,811.8 19,168.6
+298.6 122.7
+252.0 347.5
+55.1 9.1
+307.1 356.6
+2,352.5 1,527.8
+331.0 208.4
+1,087.5 2,153.6
+1,030.1 800.4
+21,218.6 24,338..1
+2009 2008
+
+£ millions £ millions
+15,811.8 19,168.6
+298.6 122.7
+80.5 38.2
+
+55.1 9.1
+135.6 47,3
+2,352.5 1,526.5
+331.0 208.4
+1,086.1 2,141.3
+1,627.3 1,346.0
+21,642.9 24,560.8
+
+73
+
+Mizuho International pic — Financial Statements 2009
+
+Concentrations of exposure to credit risk
+
+Concentrations of exposure to credit risk exist when a number of counterparties are engaged
+in similar activities or operate in the same geographical areas or industry sectors and have
+similar economic characteristics so that their ability to meet contractual obligations is
+similarly impacted by changes in economic, political or other conditions. Significant
+concentrations of exposure to credit risk for securitisation and other business asset classes
+with credit risk are discussed below.
+
+Securitisation transactions
+The Group has concentrations of exposure to credit risk to US asset backed securities
+
+(comprising Prime, Mid-Prime and Sub-Prime RMBS and CDO transactions), arising from its
+US Structured Credit business, and these are presented by balance sheet caption below.
+
+Group Company
+2009 2009 2009 2009
+£ millions £ millions €£ millions £ millions
+Notional Exposure Notional Exposure
+Debt securities 842.8 10.9 916.6 9.1
+Derivatives 597.2 12.3 475.7 4.0
+Debt securities in issue 331.9 (3.2) - -
+Total exposure 1,771.9 20.0 1,392.3 13.1
+Group Company
+2008 2008 2008 2008
+£ millions £ millions £ millions £ millions
+Notional Exposure Notiona! Exposure
+Debt securities 1,534.8 309.7 1,575.3 306.2
+Derivatives 880.9 85.1 572.6 61.1
+Debt securities in issue 252.5 (11.2) - .
+Total exposure 2,668.2 383.6 2,147.9 367.3
+
+Exposures arising from non derivative financial instruments are presented at their balance
+sheet carrying value. Derivative exposures to US asset backed secutities arise in respect of
+credit derivatives that reference such securities, and are presented as the maximum
+potential exposure to the default of the reference entity (being the notional size of such
+derivative contracts less their balance sheet carrying value).
+
+Further details regarding the valuation of these exposures are given in note 32 to the
+financial statements.
+
+74 Mizuho International pic — Financial Statements 2009
+
+Other concentrations of exposure to credit risk
+Reverse repurchase agreements
+
+The Group’s repo trading activities give rise to counterparty risk exposures in respect of
+repurchase and reverse repurchase transactions. However, these risks are mitigated
+through the execution of netting agreements and the agreement of margin requirements;
+such that net counterparty exposures are maintained at a low level. No single counterparty
+exposure, excluding central counterparty exposures, exceeded £12 million as at 31 March
+2009 (2008: £10 million).
+
+Loans and advances
+
+Loans and advances to banks and customers include a deposit of £170.5 million (2008:
+£308.3 million) held with a AAA rated financial institution which is held in connection with one
+of the Group's US Structured Credit securitisation transactions, which arises upon
+consolidation of Delphinus CDO 2007-1 Limited. The terms of this deposit provide for the
+transfer of funds to another financial institution of satisfactory rating in the event that the
+rating of the current financial institution falls below a pre defined level.
+
+Purchased life contracts
+
+The Group’s life settlements business gives rise to credit risk exposures in respect of life
+insurance policies written by US life insurance companies (‘carriers’), which in aggregate
+totalled £331 million (2008: £208 million). These risks are mitigated through carrier
+diversification and rating requirements implemented by the Group, and as at 31% March
+2009 no single carrier exposure exceeded £44 million (2008: £30 million).
+
+Debt securities
+
+The Group’s debt trading activities give rise to issuer risk exposures in respect of debt
+securities held for trading, which excluding the US asset backed securitisation positions
+described above, total £1,077 million (2008: £1,844 million). The Group’s holdings of debt
+securities are diversified by issuer, geographic region and industry sector and in some
+instances benefit from offsetting purchased credit protection. Of these positions, debt
+securities issued by government and other public entities comprised 9% of the total held as
+at 31° March 2009 (2008: 32%).
+
+The largest concentration of debt securities issued by government and public entities
+comprised instruments issued by the Treasury of the United States of America, which
+represented 2% of the total held (2008: Government of Italy, 12%). Debt securities issued
+by corporate and other entities comprised 91% of total debt securities and were spread
+across issuer and industry sector (2008: 72%). The largest concentration of debt securities
+by geographic region comprised securities issued by US corporate entities 22% (2008:
+25%).
+
+Trading derivatives
+
+The Group’s derivative trading activities give rise to counterparty risk exposures, principally
+in respect of credit derivative transactions, which can be greater than those incurred through
+repo trading business due to the longer term nature and higher volatility associated with
+these transactions. Some counterparty exposure risks arising from derivative trading are
+mitigated through the execution of netting agreements, the agreement of margin
+requirements and other contractual credit mitigation features such as credit rating triggers.
+
+With respect to credit derivative transactions not covered by netting agreements as at 31%
+March 2009, the Group had aggregate counterparty exposures of £371 million in respect of
+structured credit derivative transactions, with notional values of £2,009 million (2008: £220
+
+75 Mizuho International plc — Financial Statements 2009
+
+million exposure, £1,779 million notional values). The counterparty exposure reserve
+methodology is aligned to market spread volatility and credit rating changes and has
+increased as a direct consequence of spread widening and credit rating changes.
+
+Counterparty exposure reserve (‘CER’) methodology
+
+The counterparty exposure reserve is a valuation adjustment made to derivative transactions
+to account for the probability of default by counterparties. The reserving methodology takes
+into account the current mark-to-market valuation of the underlying trades, a measure of the
+probability of default and the recovery rate of the counterparty. These last two inputs to the
+CER calculation are implied from observable market data.
+
+In addition, the reserve incorporates a ‘Potential Future Exposure add-on’, which is intended
+to allow for the potential cost caused by market movements during the time required to re-
+hedge the portfolio following a credit event in relation to the counterparty.
+
+Credit quality
+
+The following table represents an analysis by credit quality rating designation of debt and
+similar securities and loans and advances based on internal credit ratings or their equivalent.
+The internal credit ratings are derived from S&P, Moody's and Fitch. For Japanese
+securities, the ratings are derived from Japanese rating agencies. For securities where
+external ratings are not available, the rating is internally calculated by the Company.
+
+Group { 2009 } | 2008
+Debt Loans and Debt Loans and
+securities advances securities advances
+£ millions £ millions £ millions £ millions
+AAA 125.8 171.5 §52.2 309.3
+AA- to AA+ 175.3 30.7 535.0 13.0
+A- to A+ 321.1 49.9 494.8 32.9
+BBB+ to C 464.0 - 554.0 -
+D and unrated 1.3 55.0 17.6 1.4
+1,087.5 307.1 2,153.6 356.6
+
+Company I 2009 } | 2008
+Debt Loans and Debt Loans and
+securities advances securities advances
+£ millions £ millions £ millions £ millions
+AAA 125.8 - §52.2 -
+AA- to AA+ 175.3 30.7 §35.0 13.0
+A- to A+ 321.1 49.9 491.8 32.9
+BBB+ to C 462.6 - §53.5 -
+D and unrated 13 §5.0 8.8 1.4
+1,086.1 135.6 2,141.3 47.3
+
+76 Mizuho International pic — Financial Statements 2009
+
+Collateral and other credit enhancements obtained
+
+In respect of reverse repurchase and derivative transactions conducted under master netting
+agreements, the Company has legally enforceable rights to offset receivable and payable
+balances in the event of counterparty default. The impact of adjusting reported balance
+sheet captions for the effect of these offset arrangements is shown below.
+
+In addition, the Company has obtained cash funding as shown below, in respect of certain
+debt securities, under terms which provide credit mitigation in the event of default by issuers
+of those securities.
+
+Group
+2009 Carrying Net exposure
+amount Offset to credit risk
+£ millions £ millions £ millions
+Reverse repurchase agreements ' 15,811.8 (3,035.6) 12,776.2
+Purchased life contracts 331.0 - 331.0
+Debt securities 1,087.5 (64.6) 1,022.9
+Derivative assets 1,328.7 (650.5) 678.2
+Loans and advances to banks and customers 307.1 . 307.1
+Trade receivables 2,352.5 - 2,352.5
+21,218.6 (3,750.7) 17,4679
+Company
+2009 Carrying Net exposure
+amount Offset to credit risk
+£ millions £ millions £ millions
+Reverse repurchase agreements | 18,811.8 (3,035.6) 12,776.2
+Purchased life contracts 331.0 - 331.0
+Debt securities 1,086.1 (64.6) 1,021.5
+Derivative assets 1,925.9 (650.5) 1,275.4
+Loans and advances to banks and customers 135.6 - 138.6
+Trade receivables 2,352.5 - 2,352.5
+21,6429 (3,750.7) 17,892.2
+
+1 Collateral received in the form of securities in raspect of raverse repurchase transactions acts as credit isk mitigation against
+the cash lent under these transactions to raduce counterparty credit exposure. This collateral is not shown within the above
+table, as it is not eligible for recognition within the Group's balance sheet. Maximum exposures to counterparty risk arising from
+repurchase transactions is disclosed within tha section addressing other concentrations to cradit risk.
+
+77 Mizuho International pic — Financial Statements 2009
+
+Group
+2008
+
+Reverse repurchase agreements
+
+Purchased life contracts
+
+Debt securities
+
+Derivative assets
+
+Loans and advances to banks and customers
+Trade receivables
+
+Company
+2008
+
+Reverse repurchase agreements
+
+Purchased life contracts
+
+Debt securities
+
+Derivative assets
+
+Loans and advances to banks and customers
+Trade receivabies
+
+Carrying Net exposure
+amount Offset to credit risk
+£ millions £ millions £ millions
+19,168.6 (7,134.9) 12,033.7
+208.4 - 208.4
+2,153.6 (55.3) 2,098.3
+923.1 (368.0) 555.1
+356.6 - 356.6
+1,527.8 - 1,527.8
+24,338.1 (7,558.2) 16,779.9
+Carrying Net exposure
+amount Offset to credit risk
+£ millions £ millions £ millions
+19,168.6 (7,134.9) 12,033.7
+208.4 “ 208.4
+2,141.3 (55.3) 2,086.0
+1,468.7 (368.0) 1,100.7
+47.3 . 47.3
+1,526.5 - 1,526.5
+24,560.83 (7,558.2) 17,002.6
+
+78 Mizuho International pic — Financial Statements 2009
+
+D Liquidity Risk
+Liquidity risk is the risk that the Group will not meet its payment obligations as they fall due.
+Control environment
+
+The Company has an approved liquidity policy which covers all trading and non trading
+activities and requires the expected cash flows in all currencies to be managed within
+prescribed limits, set by the Financial Services Authority. The limits are based on known
+inflows, including marketable assets, less outflows and are measured on a cumulative basis.
+The current limits are 0% for the up to 8 day mismatch and -5% for the up to 1 month
+mismatch. Mismatches are monitored and reported on a daily basis, and are formally
+reviewed at the weekly meeting of the Risk Committee.
+
+Liquidity is actively managed through dealings in the major wholesale money markets and
+repo markets, thereby enabling ready access to funding.
+Residual contractual maturity of financial liabilities
+
+The table below summarises the maturity profile of the Group's financial liabilities.
+
+79 Mizuho International ple — Financial Statements 2009
+
+Group
+2009
+
+Non derivative
+liabilities:
+
+Deposits by banks
+Customer accounts
+Repurchase
+agreements
+
+Trading liabilities
+
+Debt securities in issue
+Subordinated liabilities
+Trade payables
+
+Derivative liabilities:
+
+Interest rate
+Equity
+
+Foreign currency
+Credit
+Commodities
+Trading
+
+Risk management
+
+Company
+2009
+
+Non derivative
+liabilities:
+
+Deposits by banks
+Customer accounts
+Repurchase
+agreements
+
+Trading liabilities
+
+Debt securities in issue
+Subordinated liabilities
+Trade payables
+
+Derivative liabilities:
+
+Interest rate
+Equity
+
+Foreign currency
+Credit
+Commodities
+Trading
+
+Risk management
+
+Less than
+Carrying Notional Repayable three 3-6 6-12 1-5 Over 5
+Amount Amount on demand months months months years years
+£ millions £ millions £ millions £ millions £ millions £ millions £ millions £ millions
+832.3 832.3 - 814.2 - - 18.1 -
+29.4 29.4 29.4 - - - - -
+14,302.6 14,301.2 305.8 13,995.4 : : - -
+148.3 161.0 : 0.5 : 9.2 76.7 74.6
+2,054.4 2,036.2 - 49.5 48.0 113.7 957.2 867.8
+1,438.6 1,438.6 : 1,438.6 - - : -
+489.6 9,232.7 - 16.2 18.3 4.2 114.4 336.5
+- 03 - - - - - -
+145.5 1,269.1 : 12.5 : 30,3 49.3 $3.4
+1,233.5 4,641.6 . 2.6 5.8 6.9 334.5 883.7
+1,868.6 15,143.7 . 31.3 24.1 41.4 498.2 1,273.6
+266.7 1,618.9 . 5.2 2.9 3.8 119.6 135.2
+Less than
+Carrying Notional = =Repayable three 3-6 6-12 1-8 Over §
+Amount Amount on demand months months months years years
+£ millions & millions £ millions £ millions £ millions £ millions £ millions £ railions
+832.3 832.3 : $14,2 . . 18.1 *
+29.4 29.4 29.4 . - - - -
+14,302.6 14,301.2 306.8 13,995,4 . : . .
+148.3 161.0 : 0.5 . 9.2 76.7 74.6
+2,051.2 2,033.0 : 49.5 48.0 113.7 957.2 864.6
+1,438.4 1,438.4 - 1,438.4 ” - - -
+483.6 8,674.6 . 16.2 18.3 42 114.4 330.5
+- 0.3 - - - - - -
+145.5 1,269.1 - 12.5 : 30.3 49.3 53.4
+1,667.2 §,092.8 : 2.6 5.8 69 334.5 1,317.4
+2,296.3 15,036.8 . 31.3 241 41.4 498.2 1,701.3
+266.7 1,618.9 - 5.2 2.9 3.8 119.6 136.2
+
+80
+
+Mizuho International pic - Financial Statements 2009
+
+Group
+2008
+
+Non derivative
+liabilities:
+
+Deposits by banks
+Customer accounts
+Repurchase
+agreements
+
+Trading liabilities
+
+Debt securities in issue
+Subordinated liabilities
+Trade payables
+
+Derivative liabilities:
+
+Interest rate
+Equity
+
+Foreign currency
+Credit
+
+Trading
+
+Risk management
+
+Company
+2008
+
+Non derivative
+liabilities:
+
+Deposits by banks
+Customer accounts
+Repurchase
+agreements
+
+Trading liabilities
+
+Debt securities in issue
+Subordinated liabilities
+Trade payables
+
+Derivative liabilities:
+
+Interest rate
+Equity
+
+Foreign currency
+Credit
+
+Trading
+
+Risk management
+
+Less than
+Carrying Notional Repayable three 3-6 6-12 1-5 Over 5
+Amount Amount on demand months months months years years
+£ millions £ millions £ millions £ millions £ millions £ millions £ millions £ millions
+741.2 741.2 - 588.6 137.6 - 15.0 -
+4.8 4.8 48 : - - - -
+18,464.7 18,464.7 320.6 17,368.4 176.3 599.4 - -
+706.3 898.5 19.6 2.2 2.6 25.2 536.2 120.5
+1,525.7 1,767.5 - 4.3 44.4 145.0 757.0 575.0
+18.6 18.6 : 18.6 : - : -
+608.6 608.6 - 608.6 - - - -
+354.2 9,022.4 - 8.4 2.7 61 84.2 262.8
+: 4.2 : - : - - -
+56.4 904.9 - 10.0 0.1 1.1 44.0 1.2
+1,254.2 4,478.5 : 3.0 0.7 0.6 125.8 1,124.1
+1,664.8 14,410.0 - 21.4 3.5 78 254.0 1,378.1
+110.4 1,186.4 - 37.6 - 1.9 : 70.9
+
+Less than
+Carrying Notional Repayable three 3-6 6-12 1-5 Over 5
+Amount Amount — on demand months months months years years
+£ millions £ millions £ millions £ millions £ millions £ millions £ millions £ millions
+741.2 741.2 588.6 137.6 : 15.0 -
+48 48 4.8 - - - - -
+18,464.7 18,464.7 320.6 17,368.4 176.3 599.4 : -
+706.3 898.5 19.6 2.2 2.6 25.2 536.2 120.5
+1,514.5 1,529.2 . 42 44.4 145.0 757.0 563.9
+18.6 18.6 - 18.6 - - - :
+596.5 596.5 - 596.5 : : - -
+332.9 8,619.8 - 8.4 2.7 6.1 84.2 231.5
+: 4.2 - : - - - -
+56.4 904.9 - 10.0 0.1 11 44.0 1.2
+1,521.3 4,800.5 : 3.0 0.7 0.6 125.8 1,391.2
+1,910.6 14,329.4 - 21.4 3.5 7.8 254.0 1,623.9
+110.4 110.4 - 37.6 : 1.9 : 70.9
+
+81
+
+Mizuho International pic — Financial Statements 2009
+
+E Special Purpose Companies
+
+The Company and the Group enter into transactions with customers in the ordinary course of
+business which involve the establishment of special purpose companies. Certain special
+purpose companies have been consolidated on the Group’s balance sheet (see note 34).
+
+Where the transactions involve the use of special purpose companies arranged by the
+Company, these special purpose companies are authorised upon establishment to ensure
+appropriate purpose and governance. The activities of the special purpose companies
+sponsored or administered by the Company are closely monitored by senior management.
+
+Types of Special Purpose Companies
+
+The Company's involvement with the most significant types of special purpose companies
+and related transactions is described below.
+
+Securitisation
+
+The Company has used special purpose companies to securitise primary and derivative
+financial instruments. On securitisation, the Company may enter into derivative transactions
+with these special purpose companies, and may retain notes or derivative instruments
+issued by these special purpose companies on securitisation. Certain of these special
+purpose companies have been consolidated after securitisation following developments in
+these vehicles resulting in the Company having the majority of the risk and rewards of
+ownership.
+
+Structured credit intermediation transactions
+
+The Company has used special purpose companies to intermediate structured credit
+transactions. The Company enters into credit derivative transactions with these special
+purpose companies. Such special purpose companies were arranged by the Company or by
+third parties.
+
+The Company also uses special purpose companies to provide structured credit transactions
+to third parties who wish to obtain exposure to reference debt securities. The third parties
+obtain the risks and rewards of the reference assets through the notes issued by these
+special purpose companies. The Company may enter into interest rate derivatives with
+these special purpose companies.
+
+Asset finance transactions
+
+The Company uses special purpose companies to transact illiquid asset financing
+transactions. The Company may enter into derivative transactions that transfer risks and
+rewards onto its balance sheet, or transfer risks and rewards to a third party arranged
+special purpose company. Certain of these special purpose companies have been
+consolidated.
+
+Consolidation
+
+The Company would consolidate a special! purpose company when the substance of the
+relationship indicates that the Company controls the entity. As described in note 1 the
+Company controls a special purpose company if it has the ability to direct the financial and
+operating policies of the entity with a view to gaining economic benefits from the its activities.
+
+The Company performs qualitative and quantitative analyses of its rights, obligations and
+economic exposures to special purpose companies. The Company assesses the
+consolidation accounting tests at inception of the involvement with a special purpose
+
+82 Mizuho Internationa! pic -— Financial Statements 2009
+
+company and reassesses the consolidation tests when there is a change in the substance of
+the Company's involvement or there is change in the governing rules, contractual
+arrangements or capital structure of the entity.
+
+Special purpose companies are accounted for off balance sheet where the Company does
+not have the majority of the risks and rewards of ownership of an the entity.
+
+The Company would consolidate a special purpose company if it obtains the majority of the
+risk and reward of ownership or an analysis of the qualitative features of the Company's
+involvement indicate that in substance the activities of the entity are conducted on behalf of
+the Company.
+
+F Operational Risk
+
+Operational risk is the risk of potential operational losses which arise as a result of the
+Company's business, and include losses attributable to human error, systems failure, fraud
+and legal exposure. The Company mitigates such risks through the maintenance of a
+comprehensive system of internal controls, which incorporates a strict segregation of duties
+between front and back office functions. The Executive Committee monitors the continued
+effectiveness of the control environment by comparison to agreed key risk indicators. Control
+procedures are reviewed on a regular basis by an independent internal audit function. In
+addition, the Company maintains and tests contingency facilities to support operations in the
+event of disasters and has purchased insurance where required by law / regulation and to
+address selected business risks.
+
+G Legal Risk
+
+Legal risk is the risk that the business activities of the Group have unintended or unexpected
+legal consequences and includes risk arising from inadequate documentation, legal or
+regulatory incapacity, insufficient authority of a counterparty and uncertainty as to the validity
+or enforceability of a contract. The Group identifies and manages legal risk through effective
+use of its legal services department, which is independent of the front office, and external
+legal advisors.
+
+H Regulatory capital management
+
+The primary objectives of the Company’s capital management process is to ensure that the
+Company complies with all of its externally imposed capital requirements and that it
+maintains a strong capital position in order to support its business.
+
+The Company maintains an effectively managed capital base to cover risks inherent in the
+business. The adequacy of the Company's capital is monitored using, amongst other
+measures, the rules and ratios established by the Base! Committee on Banking Supervision
+and adopted by the Financial Services Authority in supervising the Company. The Company
+also undertakes regular capital projections, including scenario analysis, which are reviewed
+by the senior management of the Company and are consistent with requirements under
+Pillar 2.
+
+Basel !| contains the relevant regulatory capital requirements which were implemented
+primarily through the Company monitoring compliance with the Financial Services Authority's
+General Prudential sourcebook (‘GENPRU’) and the Prudential sourcebook for Banks,
+Building Societies and Investment Firms (‘BIPRU’). The methodology used for calculating
+capital is based upon the standardised approach defined within these sourcebooks for
+market risk and counterparty risk and the Basic Indicator Approach for Operational Risk.
+
+83 Mizuho International pic — Financial Statements 2009
+
+The Company manages its capital structure and makes adjustments to it in light of changes
+in economic conditions and the risk characteristics of its activities. During the year the
+Company received two core Tier 1 capital injections from its parent totalling £111.8 million.
+These injections were primarily required to offset reductions in the Company's Tier 1 capital
+as a result of losses incurred during the year. tn addition, capital was also required to offset
+increases in the Company’s regulatory capital requirements in respect of market risk
+exposure to credit derivatives, following the full implementation of BIPRU 7.11.
+
+No changes were made in the objectives, policies or processes from the previous year
+except for those required for compliance with the relevant aspects of Basel II.
+
+The Company's regulatory capital is analysed below:
+
+2009 2008
+
+£ millions £ millions
+
+Tier 1 Capital 3541 511.4
+
+Tier 2 Capital . 3.7
+
+Deductions (2.1) (13.9)
+
+Total capital resources 362.0 501.2
+
+Total regulatory capital requirements (including interim 292.2 285.1
+Individual Capital Guidance)
+
+Capital surplus 59.8 216.1
+
+Regulatory capital consists of Tier 1 capital, which comprises share capital share premium,
+retained earnings and current year losses. Certain adjustments are made to UK GAAP
+based results and reserves as prescribed by the Financial Services Authority.
+
+84 Mizuho International pic - Financial Statements 2009
+
+34 SUBSIDIARY ENTITIES
+
+Entities that are controlled by the Company where the Company has dominant influence
+through voting control or other considerations are summarised below:
+
+Country of
+Nature incorporation Equity Equity
+2009 2008
+% %
+Voting control companies
+Mizuho International (Nominees) Limited Dormant UK 100% 100%
+Structured Credit America Ltd Trading UK 100% -
+Special purpose companies
+Hoplon Trust Asset Finance USA
+Capell Farm Finance Limited Asset Finance UK
+Tigris CDO 2007-1 Limited Securitisation Cayman
+Delphinus CDO 2007-1 Limited Securitisation Cayman
+Big Horn Structured Funding CDO 2007-1 Limited Securitisation Cayman
+De consolidated entities
+Quercia Funding Srl. Asset Finance Italy - 100%
+
+Library Place CLO Ltd Securitisation Cayman
+
+Consolidated entities
+Structured Credit America Lid
+
+Structured Credit America Ltd is a voting control entity arranged by the Company
+incorporated in the United Kingdom and registered in England and Wales on 5" February
+2009. The Company has contro! over this entity through holding all of its issued voting
+share capital fram its date of incorporation. At 31% March 2009, this entity had immaterial
+assets and liabilities. The Company transferred its former US securitisation business to this
+entity during April 2009 (see note 31).
+
+Hoplon Trust
+
+Hopion Trust is a special purpose company arranged by the Company during 2005 to
+intermediate asset finance transactions. The Company has dominant influence over Hoplon
+Trust. Under the terms of a total return swap between Hoplon Trust and the Company,
+Hoplon Trust has no assets and liabilities.
+
+Capell Farm Finance Limited
+
+Capell Farm Finance Limited, is a special purpose company incorporated in the United
+Kingdom and registered in England and Wales during 2006. The Company has dominant
+influence over Capell Farm Finance Limited. Under the terms of a total return swap between
+Capell Farm Finance Limited and the Company, Capell has immaterial assets and liabilities.
+
+85 Mizuho International plc — Financial Statements 2009
+
+Tigris CDO 2007-1 Limited
+
+Tigris CDO 2007-1 Limited is a special purpose company arranged by the Company during
+2007 to securitise primary financial instruments. The Company retained senior funded notes
+issued by this entity but was not assessed as having dominant influence over this special
+purpose company at inception. An event of default on 31" January 2008 triggered
+contractual arrangements that resulted in the Company being assessed to have dominant
+influence over this entity from this date.
+
+Delphinus CDO 2007-1 Limited
+
+Delphinus CDO 2007-1 Limited is a special purpose company arranged by the Company
+during 2007 to securitise primary and derivative financial instruments. The Company
+retained synthetic and funded notes issued by this entity. An event of default on 4" January
+2008 triggered contractual arrangements that resulted in the Company being assessed to
+have dominant influence over this entity from this date.
+
+Big Horn Structured Funding CDO 2007-1 Limited
+
+Big Horn Structured Funding CDO 2007-1 Limited is a special purpose company arranged
+by the Company during 2007 to securitise primary and derivative financial instruments. The
+Company retained synthetic and funded notes issued by this entity. An event of default on
+17" April 2008 triggered contractual arrangements that resulted in the Company being
+assessed to have dominant influence over this entity from this date.
+
+De consolidated entities
+Quercia Funding Sri.
+
+The Company acquired control over all the voting equity and the outstanding equity tranche
+notes issued by Quercia Funding Srl. on 13" March 2007. The Company transferred the
+voting equity and equity tranche notes on 30" March 2009. Quercia Funding Srl. did not
+have a significant effect on the profit and loss shown in the Group financial statements for
+the financial year.
+
+Library Place CLO Ltd
+
+Library Place CLO Ltd was a special purpose company arranged by the Company during
+2008 to securitise collateralised loan obligations. This special purpose company was
+dissolved during the financial year.
+
+86 Mizuho International pic - Financial Statements 2009
+
+Business Combinations
+
+The Company gained control over Big Horn Structured Funding CDO 2007-1 Limited on 17"
+April 2008. The fair values of the identifiable assets and liabilities acquired as at the date of
+gaining control are analysed below. There was no goodwill arising on acquisition.
+
+Fair value Carrying
+recognised on value
+acquisition
+£ millions £ millions
+Assets
+
+Trading financial assets 1.0 1.0
+Trading derivative assets 120.1 420.1
+Loans and advances to banks 1.0 1.0
+122.1 1221
+
+Liabilities
+Trading derivative liabilities (121.0) (121.0)
+Debt securities in issue (1.1) (1,1)
+(122.1) (122.1)
+
+Net assets acquired -
+
+35 PARENT UNDERTAKINGS
+
+Mizuho International pic is directly owned by Mizuho Securities Co., Ltd., a company which
+is incorporated in Japan.
+
+The ultimate parent undertaking is Mizuho Financial Group, Inc., which is incorporated in
+Japan. The smallest and largest groups into which the financial statements of the Company
+are consolidated are Mizuho Securities Co., Ltd. and Mizuho Financial Group, Inc.
+respectively.
+
+Copies of the group financial statements of Mizuho Securities Co., Ltd. can be obtained
+from:
+
+Corporate Communications Department
+
+Mizuho Securities Co., Ltd.
+
+Otemachi First Square 1-5-1,
+
+Otemachi, Chiyoda-ku, Tokyo
+
+100-0004, JAPAN
+
+http://www. mizuho-se.com/english/ir/financial_results/ar/index.html
+
+Copies of the group financial statements for Mizuho Financial Group, Inc. can be obtained
+from:
+
+Corporate Communications
+
+Public Relations Office
+
+Mizuho Financial Group, Inc.
+
+Marunouchi 2-chome Building, 2-5-1
+
+Marunouchi, Chiyoda-ku, Tokyo
+
+100-8333, JAPAN
+http://Awww.mizuho-fg.co.jp/english/investors/financial/annual/index.html
+
+87 Mizuho International pic — Financial Statements 2009
+

@@ -451,6 +451,133 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=48, source_height=180)
 
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics - StreamBank's own "Template UKB KM1 - Key metrics template",
+# reproduced whole in the Bank's own row order, row numbering, labels and
+# printed precision. Only two editions of the template have ever been
+# published (FY2024 and FY2025), so only those two columns carry figures;
+# FY2026, FY2023 and FY2021 are deliberately empty for the reasons set out in
+# the source note below.
+#
+# Each year is taken from the edition in which it is the REPORTING year:
+# FY2025 from the FY2025 Pillar 3 and FY2024 from the FY2024 Pillar 3. The
+# FY2025 edition's own 2024 comparative column reproduces the FY2024 edition
+# digit-for-digit on all 22 rows, which is an independent confirmation of the
+# FY2024 column at no transcription cost, not a substitute for it.
+#
+# Transcribed from the text layer of both PDFs and then re-read from a 200dpi
+# rendering of the FY2025 table (p.11 of the PDF, printed page 9) with
+# digit-for-digit agreement.
+# ---------------------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) (£'000)", {"FY2025": 35066.3, "FY2024": 32012.2}),
+    ("DATA", "2    Tier 1 (£'000)", {"FY2025": 35066.3, "FY2024": 32012.2}),
+    ("DATA", "3    Total capital (£'000)", {"FY2025": 35066.3, "FY2024": 32012.2}),
+    ("SECTION", "Risk-weighted exposure", {}),
+    ("DATA", "4    Risk-weighted exposure amounts (£'000)", {"FY2025": 141336.1, "FY2024": 143947.0}),
+    # Printed by the Bank as an unnumbered bold row immediately under row 4,
+    # carrying the identical figure. Kept because the Bank printed it.
+    ("TOTAL", "Total risk-weighted exposures (£'000) [printed unnumbered]", {"FY2025": 141336.1, "FY2024": 143947.0}),
+    ("SECTION", "Capital Ratios", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)", {"FY2025": "24.8%", "FY2024": "22.2%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2025": "24.8%", "FY2024": "22.2%"}),
+    # Printed without the "(%)" suffix that rows 5 and 6 carry - the Bank's own
+    # house style, reproduced rather than tidied.
+    ("DATA", "7    Total capital ratio", {"FY2025": "24.8%", "FY2024": "22.2%"}),
+    ("SECTION", "Combined buffer requirements", {}),
+    ("DATA", "8    Capital conservation buffer (%)", {"FY2025": "2.5%", "FY2024": "2.5%"}),
+    ("DATA", "9    Institution specific capital countercyclical buffer (%)", {"FY2025": "2.0%", "FY2024": "2.0%"}),
+    ("DATA", "11    Combined buffer requirements (%)", {"FY2025": "4.5%", "FY2024": "4.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)", {"FY2025": "17.7%", "FY2024": "18.6%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own fund requirements (%)",
+     {"FY2025": "12.9%", "FY2024": "8.1%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total leverage Ratio exposure (£'000)", {"FY2025": 211074.5, "FY2024": 185251.3}),
+    ("DATA", "14    Leverage ratio", {"FY2025": "20.4%", "FY2024": "21.0%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15    Total high quality liquid assets (HQLA) after haircuts (£'000)",
+     {"FY2025": 42368.4, "FY2024": 36457.1}),
+    ("DATA", "UK 16a    Cash outflows – Total weighted value (£'000)", {"FY2025": 1866.2, "FY2024": 268.9}),
+    ("DATA", "UK 16b    Cash inflows – Total weighted value (£'000)", {"FY2025": 1399.7, "FY2024": 201.6}),
+    ("DATA", "17    Liquidity Coverage Ratio (%)", {"FY2025": "9,081.1%", "FY2024": "54,235.0%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18    Total available stable funding (£'000)", {"FY2025": 197849.3, "FY2024": 174066.2}),
+    ("DATA", "19    Total required stable funding (£'000)", {"FY2025": 115289.6, "FY2024": 77785.2}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2025": "171.6%", "FY2024": "223.8%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - StreamBank PLC's own 'Template UKB KM1 - Key metrics template', section 3 'Key Regulatory "
+    "Metrics', taken from EACH YEAR'S OWN Pillar 3 edition rather than from a later edition's comparative "
+    "column:\n"
+    f"FY2025: StreamBank Pillar 3 Disclosures 2025, printed page 9 (PDF page 11) - {P3_2025_URL}\n"
+    f"FY2024: StreamBank Pillar 3 Disclosures 2024, printed page 8 (PDF page 10) - {P3_2024_URL}\n\n"
+    "FREE SECOND OPINION, TAKEN AND PASSED: the FY2025 edition prints a full 2024 comparative column beside "
+    "its 2025 column, and every one of the 22 rows reproduces the FY2024 edition digit-for-digit (CET1 "
+    "32,012.2; RWEA 143,947.0; CET1 ratio 22.2%; UK 11a 18.6%; row 12 8.1%; leverage exposure 185,251.3; "
+    "leverage ratio 21.0%; HQLA 36,457.1; LCR 54,235.0%; ASF 174,066.2; RSF 77,785.2; NSFR 223.8%). The "
+    "FY2024 column above is nevertheless transcribed from the FY2024 edition itself, per this workbook's "
+    "convention; the comparative is used only as confirmation.\n\n"
+    "ONLY TWO EDITIONS OF THIS TEMPLATE EXIST, AND THAT IS AN ENUMERATED FINDING, NOT A FAILED SEARCH. "
+    "Re-confirmed 2026-09-16 by the same route the p3_sources() SITE ENUMERATION NOTE sets out: "
+    "streambank.co.uk is a single-page app whose every URL returns the same 25,989-byte HTML shell, so the "
+    "compiled bundle at https://streambank.co.uk/js/app.js (930,330 bytes) was downloaded again and every "
+    "'.pdf' string extracted. It still lists exactly six StreamBank documents, of which exactly two are "
+    "Pillar 3 files - FY24-Pillar-3-StreamBank-PLC.pdf and March-2025-Pillar-3-Disclosures.pdf. Confirming "
+    "probes on 2026-09-16: March-2026-Pillar-3-Disclosures.pdf, FY26-Pillar-3-StreamBank-PLC.pdf and "
+    "Pillar-3-Disclosures-2026.pdf all redirect to the soft-404 shell, while March-2025-Pillar-3-"
+    "Disclosures.pdf still returns a real 779,478-byte application/pdf with %PDF magic bytes from the same "
+    "directory - so the absence is specific to FY2026, not a site-wide outage or a block.\n"
+    "      SO: FY2026, FY2023 AND FY2021 CARRY NO KM1 COLUMN, for three different and separately-established "
+    "reasons. FY2026: no Pillar 3 edition has been published yet (most likely publication lag - the FY2025 "
+    "edition was Board-approved 18 September 2025, about six months after its 31 March 2025 year-end), and "
+    "the FY2026 Annual Report contains no KM1 and no RWA, leverage, LCR or NSFR figure of any kind. FY2023 "
+    "(the 15-month transition period): StreamBank began publishing Pillar 3 disclosures with FY2024 and the "
+    "FY2024 edition's KM1 is single-column with no FY2023 comparative. FY2021: the entity (then Activtrades "
+    "Loans PLC) held no banking licence, so no disclosure obligation could attach. None of these three is "
+    "back-filled from the statutory accounts - that is a different basis, and the Annual Report capital note "
+    "this workbook uses for FY2023 and FY2026 on the single-metric sheets is not this template.\n\n"
+    "ROW 13 IS INTERNALLY INCONSISTENT WITH THE BANK'S OWN LEVERAGE TEMPLATE - RECORDED AS PUBLISHED, NOT "
+    "CORRECTED. KM1 row 13 'Total leverage Ratio exposure' is 211,074.5 (FY2025) and 185,251.3 (FY2024), but "
+    "the same documents' UK LR2 leverage template reports THREE different exposure figures for FY2025: on "
+    "balance sheet items 211,074.5 (row 1), total exposure INCLUDING claims on central banks 210,935.5 (row "
+    "24) and total exposure EXCLUDING claims on central banks 172,243.0 (row UK 24b). Row 14's 20.4% is the "
+    "EXCLUDING-claims ratio (35,066.3 / 172,243.0 = 20.4%), so it does not divide by the exposure printed "
+    "directly above it: 35,066.3 / 211,074.5 = 16.6%, which is the Bank's own INCLUDING-claims ratio (LR2 row "
+    "UK 25c). The same pattern holds in FY2024 (row 13 185,251.3; excluding-claims denominator 152,521.2; "
+    "21.0% vs 17.3%). Both figures are reproduced exactly as printed; the mismatch is the source document's "
+    "and is recorded rather than reconciled. The Leverage Ratio sheet in this workbook carries both bases on "
+    "separate labelled rows.\n\n"
+    "NO BASIS BREAK IS VISIBLE IN THIS TEMPLATE. StreamBank's first KM1 edition is FY2024, which is already "
+    "after the 1 January 2022 leverage change, so rows 13/14 carry one caption throughout and there are no "
+    "two-caption blocks. The captions are the Bank's own short forms ('Total leverage Ratio exposure', "
+    "'Leverage ratio'), NOT the template's fuller '...excluding claims on central banks' wording, even though "
+    "row 14's figure is on the excluding-claims basis - see the paragraph above.\n\n"
+    "ROWS THE BANK DOES NOT PRINT ARE ABSENT, NOT ZERO. StreamBank's template omits rows UK 7a-7d (additional "
+    "SREP own funds requirements), UK 8a, UK 9a, 10 and UK 10a (the systemic-risk and G-SII/O-SII buffers) and "
+    "rows 21-23 entirely, in BOTH editions. Those rows are simply not in the table - there is no dash, no zero "
+    "and no 'n/a' cell to reproduce - so they are not shown here at all rather than shown blank. The Bank does "
+    "print an unnumbered bold 'Total risk-weighted exposures' row immediately beneath row 4, repeating row 4's "
+    "figure; it is kept above because the Bank printed it.\n\n"
+    "PRECISION IS THE BANK'S OWN. Amounts are printed to one decimal place in £'000 and ratios to one decimal "
+    "place throughout, and the LCR is printed with a thousands separator ('9,081.1%', '54,235.0%'), which is "
+    "reproduced as printed. Row 7 is captioned 'Total capital ratio' without the '(%)' that rows 5 and 6 "
+    "carry; that too is the Bank's own styling.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="StreamBank Plc — KM1 Key Metrics",
+    subtitle="StreamBank's own published 'Template UKB KM1 - Key metrics template', reproduced in the "
+             "Bank's row order with its own row numbers. Amounts in £'000, ratios as printed. Only the "
+             "FY2025 and FY2024 Pillar 3 editions exist, so only those two columns carry figures.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    source_height=300,
+)
+
+
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", {"FY2026": 32644.1, "FY2025": 35066.3, "FY2024": 32012.2, "FY2023": 32171})], "FY2026 is from the Bank's own FY2026 Annual Report Note 22 'Capital' (p.78) and KPI page (p.15), NOT from a Pillar 3 document - none has been published for FY2026. It is therefore on a different basis from FY2025/FY2024; see the source note above for the size of the difference. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")
 metric("CET1 Ratio", "%", [("Common Equity Tier 1 (CET1) ratio", {"FY2026": "21.6%", "FY2025": "24.8%", "FY2024": "22.2%", "FY2023": "50.6%"})], "FY2026 is from the Bank's own FY2026 Annual Report Note 22 'Capital' (p.78) and KPI page (p.15), NOT from a Pillar 3 document - none has been published for FY2026. It is therefore on a different basis from FY2025/FY2024; see the source note above for the size of the difference. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")
 metric("Tier 1 Capital", "£'000", [("Tier 1 capital", {"FY2026": 32644.1, "FY2025": 35066.3, "FY2024": 32012.2, "FY2023": 32171})], "FY2026 is from the Bank's own FY2026 Annual Report Note 22 'Capital' (p.78) and KPI page (p.15), NOT from a Pillar 3 document - none has been published for FY2026. It is therefore on a different basis from FY2025/FY2024; see the source note above for the size of the difference. FY2023's own note discloses Total own funds of £32,171k equal to its CET1 capital, i.e. no Additional Tier 1 or Tier 2 instrument was in issue at 31 March 2023, so Tier 1 = CET1 that year. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")

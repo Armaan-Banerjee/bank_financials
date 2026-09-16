@@ -595,6 +595,198 @@ AR_CET1_RATIO_ROW = (
     {"FY2025": "16%", "FY2024": "21%", "FY2023": "27%"},
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Chetwood's own published template, reproduced as printed.
+#
+# Only three of Chetwood's five located Pillar 3 editions carry a KM1 table at
+# all: the FY2022 edition ("Annex B: Key Metrics - KM1"), the FY2023 edition
+# (Section 6 "Key Metrics") and the FY2025 edition (Section 5 "Key Metrics").
+# Each is SINGLE-COLUMN - the header block is literally "a  £'000s" over one
+# year - so no year here is a comparative and no column can be back-filled from
+# a neighbouring edition. FY2024 has no Pillar 3 document at all (see
+# FY2024_GAP_NOTE); the FY2021 and FY2020 editions pre-date the template (the
+# FY2021 document was re-read for this sheet: the strings "key metric", "KM1",
+# "combined buffer" and "risk weighted exposure" appear nowhere in it, and its
+# capital disclosure is a narrative "Total CET1 Capital" table); FY2019 has no
+# Pillar 3 document. Those four columns are therefore blank, and the figures
+# they do carry on the single-metric sheets are narrative-table figures, not
+# KM1 rows.
+#
+# ROW SET DRIFT (the union is shown, in the template's canonical order):
+#   - UK 8a, UK 9a, 10, UK 10a and UK 14a-14f are printed ONLY by the FY2022
+#     edition. The FY2023 and FY2025 editions omit them from the table.
+#   - The FY2022 edition prints rows 13/14 and then a further "Additional own
+#     funds requirements to address risks of excessive leverage" section; the
+#     FY2023 and FY2025 editions go straight from row 14 to the LCR section.
+#
+# TWO SOURCE DEFECTS in the FY2022 edition, reproduced rather than corrected:
+#   - row 11 "Combined buffer requirement (%)" prints "0%" even though row 8
+#     above it prints a 2.5% capital conservation buffer, so the combined
+#     buffer cannot be nil. The FY2023 and FY2025 editions print 3.50% and
+#     4.50% for the same row and are internally consistent.
+#   - row 12 is captioned "(%)" but prints 20,034 - a £'000 amount, not a
+#     percentage. Same defect Monzo's row 12 carries in two of its editions.
+#
+# DASH vs ZERO: the FY2022 edition prints BOTH glyphs and means different
+# things by them. Rows UK 7b, UK 7c and UK 14a-14e print "-" (blank here);
+# rows UK 8a, 9, UK 9a, 10, UK 10a, 11 and UK 14f print "0%" (kept as a
+# measured zero). The FY2023 and FY2025 editions print "-" for UK 7b/7c only.
+#
+# LEVERAGE CAPTION CHANGE: the FY2022 and FY2023 editions caption rows 13/14
+# "Leverage ratio total exposure measure" / "Leverage ratio"; the FY2025
+# edition captions the same two rows "Total exposure measure excluding claims
+# on central banks" / "Leverage ratio excluding claims on central banks (%)".
+# Shown as two separately-captioned blocks rather than one merged series. All
+# three reporting dates fall AFTER the 1 January 2022 UK leverage change, so
+# the underlying basis is very likely the same throughout and this is the
+# caption catching up - but Chetwood never says so in any edition, and a
+# reproduction sheet may not assert what the source does not.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £'000s)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554}),
+    ("SECTION", "Risk-weighted exposure amounts (£'000s)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 1233321, "FY2023": 343668, "FY2022": 196750}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "15.2%", "FY2023": "26.6%", "FY2022": "29.3%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.92%", "FY2023": "11.07%", "FY2022": "11.1%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)", {}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)", {}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "9.92%", "FY2023": "19.07%", "FY2022": "19.1%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2023": "2.50%", "FY2022": "2.5%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2022": "0%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.00%", "FY2023": "1%", "FY2022": "0%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {"FY2022": "0%"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {"FY2022": "0%"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {"FY2022": "0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.50%", "FY2023": "3.50%", "FY2022": "0%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "14.42%", "FY2023": "22.57%", "FY2022": "21.6%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "5.29%", "FY2023": "7.49%", "FY2022": 20034}),
+    ("SECTION", "Leverage ratio — as captioned in the FY2025 edition (excluding claims on central banks)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 3615720}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.19%"}),
+    ("SECTION", "Leverage ratio — as captioned in the FY2022 and FY2023 editions (basis not stated)", {}),
+    ("DATA", "13    Leverage ratio total exposure measure",
+     {"FY2023": 1519817, "FY2022": 394658}),
+    ("DATA", "14    Leverage ratio",
+     {"FY2023": "6.01%", "FY2022": "14.58%"}),
+    ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a percentage of leverage ratio total exposure amount)", {}),
+    ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)", {}),
+    ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)", {}),
+    ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)", {}),
+    ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)", {}),
+    ("DATA", "UK 14e    Applicable leverage buffer", {}),
+    ("DATA", "UK 14f    Overall leverage ratio requirements (%)", {"FY2022": "0%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£'000s / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 897493, "FY2023": 302266, "FY2022": 67841}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 489794, "FY2023": 52035, "FY2022": 5627}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 28009, "FY2023": 15169, "FY2022": 13656}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 461785, "FY2023": 36865, "FY2022": 1407}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "194%", "FY2023": "1,015%", "FY2022": "4,823%"}),
+    ("SECTION", "Net Stable Funding Ratio (£'000s / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 3677559, "FY2023": 1387511, "FY2022": 380549}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 2536343, "FY2023": 572002, "FY2022": 233566}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "145%", "FY2023": "243%", "FY2022": "162.9%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Chetwood's own UK KM1 key-metrics template, reproduced as printed. Each column is transcribed "
+    "from the edition in which that year is the reporting year; every one of these editions is SINGLE-COLUMN "
+    "(header block 'a  £'000s' over one year only), so no figure here is a later edition's comparative.\n"
+    f"FY2025: Chetwood Bank Pillar 3 Disclosures, September 2025 (as at 31 March 2025), Section 5 'Key Metrics', "
+    f"pp.9-10 of 15 - {P3_25_URL}\n"
+    f"FY2023: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31st March 2023, Section 6 'Key Metrics', p.17 "
+    f"(PDF p.18 of 34) - {P3_23_URL}\n"
+    f"FY2022: Chetwood Financial Ltd Pillar 3 Disclosure, as at 31st March 2022, 'Annex B: Key Metrics - KM1', "
+    f"pp.35-36 (PDF pp.36-37 of 41) - {P3_22_URL}\n"
+    "FY2024, FY2021, FY2020 and FY2019 are blank, for three different reasons, none of which is a failed "
+    "search:\n"
+    "• FY2024 - no Pillar 3 document 'as at 31 March 2024' exists (re-verified four ways 2026-09-15, see the "
+    "FY2024 note on any metric sheet), and the FY2025 edition's KM1 has no comparative column to borrow from.\n"
+    "• FY2021 and FY2020 - both editions pre-date the template. The FY2021 document was re-read in full for "
+    "this sheet: 'key metric', 'KM1', 'combined buffer' and 'risk weighted exposure' appear nowhere in it, and "
+    "its only capital table is a narrative 'Total CET1 Capital' build-up. The FY2020 edition is the same shape. "
+    "The FY2020/FY2021 figures on the single-metric sheets come from those narrative tables and are deliberately "
+    "NOT re-assembled into KM1 rows here.\n"
+    "• FY2019 - Chetwood published no Pillar 3 disclosure at all that year.\n\n"
+    "PRESENTATION NOTES:\n"
+    "• ROW SET DRIFT: rows UK 8a, UK 9a, 10, UK 10a and UK 14a-UK 14f are printed by the FY2022 edition only; "
+    "the FY2023 and FY2025 editions omit them from the table entirely. The union is shown, in the template's "
+    "canonical order, so the sheet matches the table a reader of the FY2022 report would recognise.\n"
+    "• DASH vs ZERO: the FY2022 edition uses both glyphs and means different things by them. It prints '-' at "
+    "rows UK 7b, UK 7c and UK 14a-UK 14e (left BLANK here - the requirement does not apply) and '0%' at rows "
+    "UK 8a, 9, UK 9a, 10, UK 10a, 11 and UK 14f (kept as a measured zero). The FY2023 and FY2025 editions print "
+    "'-' at UK 7b/UK 7c only.\n"
+    "• SOURCE DEFECT, row 11 (FY2022): the FY2022 edition prints Combined buffer requirement as '0%' even "
+    "though row 8 immediately above prints a 2.50% capital conservation buffer, so the combined buffer cannot "
+    "be nil. Reproduced as published and flagged here; the FY2023 (3.50%) and FY2025 (4.50%) editions are "
+    "internally consistent.\n"
+    "• SOURCE DEFECT, row 12 (FY2022): captioned 'CET1 available after meeting the total SREP own funds "
+    "requirements (%)' but printed as 20,034 - a £'000 amount, not a percentage. Reproduced as printed.\n"
+    "• LEVERAGE CAPTION CHANGE: the FY2022 and FY2023 editions caption rows 13/14 'Leverage ratio total "
+    "exposure measure' / 'Leverage ratio' with no basis stated; the FY2025 edition captions the same rows "
+    "'Total exposure measure excluding claims on central banks' / 'Leverage ratio excluding claims on central "
+    "banks (%)'. Shown as two separately-captioned blocks rather than merged. All three reporting dates fall "
+    "after the 1 January 2022 UK change that excluded claims on central banks from the exposure measure, so "
+    "the underlying basis is very likely unchanged and only the caption moved - but no Chetwood edition says "
+    "so, and this sheet reproduces rather than infers. The Leverage Ratio metric sheet carries the same four "
+    "figures as one series, with its own note.\n"
+    "• PRECISION: the FY2022 edition prints ratios to one decimal place ('29.3%', '11.1%', '2.5%'); the FY2023 "
+    "and FY2025 editions print two ('11.07%', '2.50%', '1.92%'), while still printing row 9 as '1%' in FY2023 "
+    "and rows 17/20 as whole percents in FY2025. Each cell keeps the precision of its own edition.\n"
+    "• Row 15 is a weighted 12-month average (the caption says so); rows 17 and 20 are as printed, including "
+    "the FY2023 thousands separator in '1,015%'.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: chetwoodbank.co.uk publishes its documents at undated, overwritten URLs "
+    "(/documents/chetwood-bank-pillar-three-disclosures.pdf and /documents/chetwood-bank-annual-report.pdf, "
+    "both linked from /about-us). Both were downloaded fresh on that date: the Pillar 3 file is still the "
+    "'September 2025' edition with a single 2025 column, and the Annual Report file is still 'year ended 31 "
+    "March 2025'. No FY2026 edition of either had been published. Checked, none newer."
+)
+
+bw.add_km1_sheet(
+    title="Chetwood Financial Limited — KM1 Key Metrics",
+    subtitle="Chetwood's own published UK key-metrics (KM1) template, reproduced in its row order with its own "
+             "template row numbers, labels and printed precision. Amounts in £'000s, ratios as printed. "
+             "Group/consolidated basis. Only the FY2022, FY2023 and FY2025 Pillar 3 editions carry a KM1 table, "
+             "and each is single-column; FY2024 (no document), FY2021/FY2020 (editions pre-date the template) "
+             "and FY2019 (no document) are intentionally blank. See source note below.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=460,
+)
+
 metric(
     "CET1 Capital", "£'000, Group/consolidated basis (FY2020-FY2021: standalone entity)",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 187605, "FY2023": 91268, "FY2022": 57554, "FY2021": 50637, "FY2020": 50697})],

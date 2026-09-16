@@ -98,8 +98,10 @@ def sources():
     return (
         "Sources - consolidated UTB Partners Plc basis except FY2020 (solo UTB Limited basis - see note"
         " below), £'000 unless stated:\n"
-        "FY2025: UTB Partners Pillar 3 Disclosure 2025, Table KM1, pp.6-7 - " + P3["FY2025"] + "\n"
-        "FY2024: UTB Partners Pillar 3 Disclosure 2024, Table KM1, pp.6-7 - " + P3["FY2024"]
+        "FY2025: UTB Partners Pillar 3 Disclosure 2025, section 2.1 Table KM1, printed p.7 (corrected"
+        " 2026-09-16 from 'pp.6-7'; printed p.6 is prose, the whole table is on p.7) - " + P3["FY2025"] + "\n"
+        "FY2024: UTB Partners Pillar 3 Disclosure 2024, section 2.1 Table KM1, printed p.7 (footer reads"
+        " 'Page 7 of 13'; corrected 2026-09-16 from 'pp.6-7') - " + P3["FY2024"]
         + " (the Bank's own published URL, " + ORIG_P3_2024 + ", is DEAD as at 2026-09-16 and returns HTTP"
         " 404; the Wayback 'id_' snapshot cited here is the working replacement - see the dead source URL"
         " register below)\n"
@@ -531,6 +533,221 @@ bw.add_asset_quality_sheet(
 )
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (KM1-030, 2026-09-16)
+#
+# Reproduced from each year's OWN edition. UTB Partners prints the UK KM1
+# template in its FY2022, FY2023, FY2024 and FY2025 disclosures and in none
+# before that; FY2021 is carried from the FY2022 edition's comparative column
+# (see KM1_NOTE) and FY2020 is blank, because no KM1 exists for 31-Dec-20 on
+# any basis.
+#
+# Rows the bank did not print are left BLANK, never zero, and never carried
+# across from an adjacent edition. The FY2024 and FY2025 editions say in terms
+# why their row sets are shorter - "Where rows of the template are not shown,
+# this is because they are blank and have been removed for clarity and to
+# improve readability" - so a missing row there is the bank's own editorial
+# suppression of an empty row, not a gap in this transcription. Rows are held
+# in the template's canonical order so the four editions line up as columns.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - UTB Partners consolidated Pillar 3 basis, Table KM1, each year transcribed from the edition in"
+    " which that year is the REPORTING year (not from a later edition's comparative column, except FY2021 -"
+    " see the FY2021 note below). Amounts are the bank's own, rounded to the nearest GBP'000 as it presents"
+    " them; ratios are reproduced at the bank's own precision, which varies by row and by edition.\n"
+    "FY2025: UTB Partners Pillar 3 Disclosure 2025, section 2.1 'Key metrics', table headed KM1, printed"
+    " page 7 - " + P3["FY2025"] + "\n"
+    "FY2024: UTB Partners Pillar 3 Disclosure 2024, section 2.1 'Key metrics', table headed KM1, printed"
+    " page 7 (the page's own footer reads 'Page 7 of 13') - " + P3["FY2024"]
+    + " (Wayback 'id_' snapshot; the publisher's own URL for this edition, " + ORIG_P3_2024 + ", is dead -"
+    " see the dead source URL register on the other Pillar 3 sheets)\n"
+    "FY2023: UTB Partners Pillar 3 Disclosure 2023, 'Appendix 1: Table KM1 - Key Metrics', printed pages"
+    " 44-45. THE TABLE BREAKS ACROSS TWO PAGES in this edition: rows 1 to 15 are on p.44 and rows UK 16a to"
+    " 20 continue on p.45 - " + P3["FY2023"] + "\n"
+    "FY2022: UTB Partners Pillar 3 Disclosure 2022, 'Appendix 1: Table KM1 - Key Metrics', printed page 43,"
+    " printed whole on one page - " + P3["FY2022"] + "\n"
+    "FY2021: no KM1 exists in that year's own edition; the column here is the 31-Dec-21 COMPARATIVE printed"
+    " beside 31-Dec-22 in the FY2022 edition, printed page 43 - " + P3["FY2022"] + "\n"
+    "FY2020: blank throughout - no KM1 exists for 31-Dec-20 on any basis. See the FY2020 note below.\n"
+    "Page numbers above are the folios PRINTED ON THE PAGE. Verified rather than counted: the printed folio"
+    " equals the PDF sheet index in all four of these documents (offset 0), and each cited page carries its"
+    " own number in its footer.\n\n"
+    "ENTITY (checked per column, not assumed from the cover). The FY2022 edition is headed 'UTB Partners"
+    " Limited'; the FY2023, FY2024 and FY2025 editions are headed 'UTB Partners Plc' - the same holding"
+    " company after a re-registration, not a different entity. Each edition prints ONE pair of columns"
+    " (reporting date and prior-year comparative) and no second entity block, so there is no solo/consolidated"
+    " pair to choose between here. Consistent with the rest of this workbook, every KM1 column is the"
+    " CONSOLIDATED UTB PARTNERS basis and must not be read as standalone United Trust Bank Limited figures."
+)
+
+KM1_NOTE = (
+    "WHAT IS AND IS NOT ON THIS SHEET.\n"
+    "FY2022-FY2025 are each the bank's own published KM1 for that year. FY2021 is a comparative column"
+    " (explained below). FY2020 is blank (explained below). Nothing on this sheet is computed: where the bank"
+    " left a cell empty, it is empty here.\n\n"
+    "FY2021 - A COMPARATIVE COLUMN, NOT THAT YEAR'S OWN DISCLOSURE. UTB Partners' FY2021 Pillar 3 edition"
+    " contains no key-metrics template of any kind: its own contents page lists four appendices (Own Funds"
+    " Disclosure Template, Leverage Ratio Template, Asset Encumbrance, and the countercyclical buffer"
+    " requirement) and nothing else, the string 'KM1' does not appear in it, and the document contains no"
+    " embedded image large enough to hide a table (checked, so the absence is a fact about the document rather"
+    " than about text extraction). The template first appears in the FY2022 edition, which prints a full"
+    " 31-Dec-21 comparative beside 31-Dec-22 - that comparative is what this column carries, and it is the"
+    " same source the CET1/Tier 1/Total Capital/Total RWAs/Leverage/LCR sheets in this workbook already use"
+    " for FY2021. It is flagged here because a comparative column is a weaker artefact than a reporting-year"
+    " column: it can be, and in this bank's case demonstrably is, restated later.\n\n"
+    "FY2020 - BLANK, AND FOR A STRONGER REASON. No KM1 exists for 31-Dec-20 on any basis. The only FY2020"
+    " Pillar 3 document is United Trust Bank Limited's own SOLO-basis edition, which likewise publishes only"
+    " the four appendix templates and no key-metrics table, and no later edition ever prints a 31-Dec-20"
+    " column. So this is not a choice not to carry data; there is no data of this shape to carry. The FY2020"
+    " figures shown on the individual metric sheets come from that solo edition's own funds and leverage"
+    " templates and are on a different consolidation basis - reassembling them into a KM1 shape here would"
+    " produce a row 4 and a row 14 the bank never published as key metrics.\n\n"
+    "EDITIONS RESTATE, AND THIS BANK RESTATES A LOT. Every year above is taken from its own edition, so where"
+    " a later edition disagrees, the later figure is deliberately NOT used. The differences are material and"
+    " are recorded here so a reader comparing this sheet with the bank's latest PDF is not surprised:\n"
+    "- 31-Dec-22: the FY2023 edition's comparative gives Tier 1 capital 223,209 (this sheet: 226,701), total"
+    " capital 250,576 (257,803), Tier 1 ratio 12.84% (13.04%), total capital ratio 14.41% (14.83%), row 12"
+    " 5.41% (5.83%), UK 16a 107,269 (76,739), row 16 27,694 (19,185), LCR 911.22% (1315.36%), row 18"
+    " 2,516,383 (2,555,002) and NSFR 152.66% (155.01%).\n"
+    "- 31-Dec-23: the FY2024 edition's comparative gives row 13 3,502,389 (this sheet: 3,502,424), row 18"
+    " 3,060,242 (3,057,724) and NSFR 148.75% (148.63%).\n"
+    "- 31-Dec-24: the FY2025 edition's comparative gives HQLA 292,329 (this sheet: 322,714), UK 16a 177,378"
+    " (160,132), UK 16b 130,301 (131,347), row 16 59,696 (40,033), LCR 554.44% (806.12%), row 18 3,190,920"
+    " (3,376,614) and NSFR 144.53% (142.63%).\n"
+    "The liquidity differences are a change of BASIS, not arithmetic drift. FY2022's own column caps inflows"
+    " at 75% of outflows in the CRR way (0.25 x 76,739 = 19,185), while the FY2023 edition's comparative for"
+    " the same date nets them uncapped (107,269 - 79,575 = 27,694). And the FY2025 edition footnotes its LCR"
+    " as a 12-point, 12-month average and its NSFR as a 4-point, 12-month average, where the FY2024 edition"
+    " states no averaging basis at all. Reproduced as each edition printed it; not reconciled.\n\n"
+    "ZERO, BLANK AND MISSING ARE THREE DIFFERENT THINGS HERE.\n"
+    "- FY2021 row 9 (institution-specific countercyclical buffer) is a printed 0.00% and is kept as a zero.\n"
+    "- FY2022's UK 7a and UK 7b, and the UK 8a / UK 9a / 10 / UK 10a rows in both the FY2022 and FY2023"
+    " editions, are printed as rows with genuinely EMPTY cells - no dash, no zero, checked at the character"
+    " level - and are left blank.\n"
+    "- The FY2024 and FY2025 editions do not print the UK 8a / UK 9a / 10 / UK 10a rows at all, and say why:"
+    " 'Where rows of the template are not shown, this is because they are blank and have been removed for"
+    " clarity and to improve readability.' Those cells are blank here on the bank's own authority that the"
+    " underlying values are nil-reportable, not because a row was missed.\n"
+    "- The 'Additional leverage ratio disclosure requirements' heading is printed in all four editions with no"
+    " rows beneath it. It is kept as a heading, because dropping it would silently change the template's"
+    " shape.\n\n"
+    "OTHER REPRODUCED-AS-PRINTED DETAILS. The bank's precision is its own and is not harmonised: UK 7a-7c are"
+    " given to four decimal places in the FY2024 edition (0.6975%) and two in FY2025 (1.10%); row 14 is one"
+    " decimal place while rows 5-7 are two. Row 13/14 carry the post-1-January-2022 caption 'excluding claims"
+    " on central banks' in every edition on this sheet, so there is no leverage basis break within the KM1"
+    " series - but there IS one against the FY2020 figure on the Leverage Ratio sheet, which predates the"
+    " exclusion; see that sheet's own note."
+)
+
+bw.add_km1_sheet(
+    title="United Trust Bank Limited — KM1 Key Metrics",
+    subtitle="UTB Partners Plc consolidated basis. The bank's own UK KM1 key-metrics template, reproduced "
+             "row for row from each year's own Pillar 3 edition, amounts in £'000 and ratios as printed. "
+             "FY2021 is the FY2022 edition's comparative column; FY2020 is blank because no KM1 exists for "
+             "that date on any basis. See the note and sources below.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)", {
+            "FY2025": 390450, "FY2024": 330662, "FY2023": 268495, "FY2022": 209850, "FY2021": 170785,
+        }),
+        ("DATA", "2  Tier 1 capital (£'000)", {
+            "FY2025": 453206, "FY2024": 344803, "FY2023": 283710, "FY2022": 226701, "FY2021": 187636,
+        }),
+        ("DATA", "3  Total capital (£'000)", {
+            "FY2025": 482806, "FY2024": 400094, "FY2023": 340213, "FY2022": 257803, "FY2021": 218186,
+        }),
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "4  Total risk-weighted exposure amount (£'000)", {
+            "FY2025": 2785964, "FY2024": 2535096, "FY2023": 2277864, "FY2022": 1738779, "FY2021": 1340432,
+        }),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5  Common Equity Tier 1 ratio (%)", {
+            "FY2025": "14.01%", "FY2024": "13.04%", "FY2023": "11.79%", "FY2022": "12.07%", "FY2021": "12.74%",
+        }),
+        ("DATA", "6  Tier 1 ratio (%)", {
+            "FY2025": "16.27%", "FY2024": "13.60%", "FY2023": "12.46%", "FY2022": "13.04%", "FY2021": "14.00%",
+        }),
+        ("DATA", "7  Total capital ratio (%)", {
+            "FY2025": "17.33%", "FY2024": "15.78%", "FY2023": "14.94%", "FY2022": "14.83%", "FY2021": "16.28%",
+        }),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted "
+                    "exposure amount)", {}),
+        ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {
+            "FY2025": "1.10%", "FY2024": "0.6975%", "FY2023": "0.5625%",
+        }),
+        ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {
+            "FY2025": "0.37%", "FY2024": "0.2325%", "FY2023": "0.1875%",
+        }),
+        ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {
+            "FY2025": "0.49%", "FY2024": "0.3100%", "FY2023": "0.25%", "FY2022": "1.00%", "FY2021": "1.34%",
+        }),
+        ("DATA", "UK 7d  Total SREP own funds requirements (%)", {
+            "FY2025": "9.96%", "FY2024": "9.24%", "FY2023": "9.00%", "FY2022": "9.00%", "FY2021": "9.34%",
+        }),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8  Capital conservation buffer (%)", {
+            "FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%",
+        }),
+        ("DATA", "UK 8a  Conservation buffer due to macro-prudential or systemic risk identified at the "
+                 "level of a Member State (%)", {}),
+        ("DATA", "9  Institution specific countercyclical capital buffer (%)", {
+            "FY2025": "2.00%", "FY2024": "2.00%", "FY2023": "2.00%", "FY2022": "1.00%", "FY2021": "0.00%",
+        }),
+        ("DATA", "UK 9a  Systemic risk buffer (%)", {}),
+        ("DATA", "10  Global Systemically Important Institution buffer (%)", {}),
+        ("DATA", "UK 10a  Other Systemically Important Institution buffer", {}),
+        ("DATA", "11  Combined buffer requirement (%)", {
+            "FY2025": "4.50%", "FY2024": "4.50%", "FY2023": "4.50%", "FY2022": "3.50%", "FY2021": "2.50%",
+        }),
+        ("DATA", "UK 11a  Overall capital requirements (%)", {
+            "FY2025": "14.46%", "FY2024": "13.74%", "FY2023": "13.50%", "FY2022": "12.50%", "FY2021": "11.84%",
+        }),
+        ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {
+            "FY2025": "7.52%", "FY2024": "6.68%", "FY2023": "5.71%", "FY2022": "5.83%", "FY2021": "6.94%",
+        }),
+        ("SECTION", "Leverage ratio", {}),
+        ("DATA", "13  Total exposure measure excluding claims on central banks (£'000)", {
+            "FY2025": 4500670, "FY2024": 3979115, "FY2023": 3502424, "FY2022": 2878801, "FY2021": 2318303,
+        }),
+        ("DATA", "14  Leverage ratio excluding claims on central banks (%)", {
+            "FY2025": "10.1%", "FY2024": "8.7%", "FY2023": "8.1%", "FY2022": "7.9%", "FY2021": "8.1%",
+        }),
+        ("SECTION", "Additional leverage ratio disclosure requirements (heading printed with no rows in "
+                    "every edition)", {}),
+        ("SECTION", "Liquidity Coverage Ratio", {}),
+        ("DATA", "15  Total high-quality liquid assets (HQLA) (weighted value - average) (£'000)", {
+            "FY2025": 384058, "FY2024": 322714, "FY2023": 257050, "FY2022": 252352, "FY2021": 194544,
+        }),
+        ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)", {
+            "FY2025": 236537, "FY2024": 160132, "FY2023": 129034, "FY2022": 76739, "FY2021": 76791,
+        }),
+        ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)", {
+            "FY2025": 126370, "FY2024": 131347, "FY2023": 113624, "FY2022": 79575, "FY2021": 67489,
+        }),
+        ("DATA", "16  Total net cash outflows (adjusted value) (£'000)", {
+            "FY2025": 113223, "FY2024": 40033, "FY2023": 32258, "FY2022": 19185, "FY2021": 19198,
+        }),
+        ("DATA", "17  Liquidity coverage ratio (%)", {
+            "FY2025": "398.42%", "FY2024": "806.12%", "FY2023": "796.86%", "FY2022": "1315.36%",
+            "FY2021": "1013.36%",
+        }),
+        ("SECTION", "Net Stable Funding Ratio", {}),
+        ("DATA", "18  Total available stable funding (£'000)", {
+            "FY2025": 3590720, "FY2024": 3376614, "FY2023": 3057724, "FY2022": 2555002,
+        }),
+        ("DATA", "19  Total required stable funding (£'000)", {
+            "FY2025": 2570256, "FY2024": 2367394, "FY2023": 2057282, "FY2022": 1648317,
+        }),
+        ("DATA", "20  NSFR ratio (%)", {
+            "FY2025": "139.71%", "FY2024": "142.63%", "FY2023": "148.63%", "FY2022": "155.01%",
+        }),
+    ],
+    sources_text=KM1_NOTE + "\n\n" + KM1_SOURCES,
+    first_col_width=72,
+    source_height=460,
+)
+
+
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(
         name, unit, rows_data, sources(), note=note, first_col_width=54, source_height=235
@@ -631,20 +848,31 @@ metric("Leverage Ratio", "£'000 / %", [
 metric("LCR", "£'000 / %", [
     ("Total high-quality liquid assets (HQLA), weighted value - average", {
         "FY2025": 384058, "FY2024": 322714, "FY2023": 257050,
-        "FY2022": 252352,
+        "FY2022": 252352, "FY2021": 194544,
     }),
     ("Total net cash outflows, adjusted value", {
         "FY2025": 113223, "FY2024": 40033, "FY2023": 32258,
-        "FY2022": 19185,
+        "FY2022": 19185, "FY2021": 19198,
     }),
     ("Liquidity coverage ratio", {
         "FY2025": "398.42%", "FY2024": "806.12%", "FY2023": "796.86%",
         "FY2022": "1315.36%", "FY2021": "1013.36%",
     }),
 ], note=(
-    "The FY2021 disclosure does not provide a KM1 LCR table; only the headline ratio is available in the FY2022 "
-    "comparative column. The FY2022 and FY2023 reports contain materially different comparative LCR figures; "
-    "this series preserves each year's own as-reported value. FY2020 GENUINE WHOLE-YEAR SELF-SKIP: United Trust "
+    "CORRECTION 2026-09-16 (KM1-030): this note previously said 'The FY2021 disclosure does not provide a KM1 "
+    "LCR table; only the headline ratio is available in the FY2022 comparative column', and the FY2021 HQLA "
+    "and net-outflow cells were left blank on that basis. The first half is right - the FY2021 edition has no "
+    "key-metrics table at all - but the second half was wrong. The FY2022 edition's 31-Dec-21 COMPARATIVE "
+    "column prints the full LCR block, not just the ratio: KM1 row 15 HQLA 194,544, UK 16a cash outflows "
+    "76,791, UK 16b cash inflows 67,489 and row 16 total net cash outflows 19,198. Those components are now "
+    "carried here, and they tie: 19,198 is 25% of 76,791, i.e. the CRR cap on inflows binding, which is also "
+    "consistent with 194,544 / 19,198 = 1013.4% against the printed 1013.36%. "
+    "THE FY2022 AND FY2023 EDITIONS DISAGREE MATERIALLY ABOUT 31-DEC-22, and the difference is a change of "
+    "basis rather than a correction: FY2022's own column caps inflows (outflows 76,739, net 19,185 = 25% of "
+    "outflows) while the FY2023 edition's comparative for the same date nets them uncapped (outflows 107,269 "
+    "less inflows 79,575 = 27,694), giving 911.22% against the originally-published 1315.36%. This series "
+    "preserves each year's own as-reported value; see the KM1 Key Metrics sheet for the full list of "
+    "restatements. FY2020 GENUINE WHOLE-YEAR SELF-SKIP: United Trust "
     "Bank Limited's own solo-basis FY2020 Pillar 3 disclosure (the only FY2020 Pillar 3 document that exists - "
     "see the CET1/Tier 1/Total Capital sheets' shared note) contains no LCR section of any kind - its own "
     "contents page lists Capital resources, Capital adequacy, Credit risk exposures, Securitisation, "
@@ -665,8 +893,12 @@ metric("NSFR", "£'000 / %", [
         "FY2022": "155.01%",
     }),
 ], note=(
-    "No 2021 NSFR headline or component values were located in the 2021 disclosure or the 2022 comparative "
-    "column. FY2020 GENUINE WHOLE-YEAR SELF-SKIP: as with LCR, no NSFR of any kind is disclosed in United Trust "
+    "FY2021 is blank, re-verified 2026-09-16 (KM1-030) rather than left on the earlier search: the FY2021 "
+    "edition contains no key-metrics table at all, and the FY2022 edition's KM1, which does print a full "
+    "31-Dec-21 comparative for every other block, prints rows 18/19/20 for 31-Dec-22 ONLY and leaves the "
+    "31-Dec-21 cells empty. So the absence is the bank's own, not a document we failed to read - unlike the "
+    "FY2021 LCR components, which that same comparative column does print and which have now been recovered "
+    "onto the LCR sheet. FY2020 GENUINE WHOLE-YEAR SELF-SKIP: as with LCR, no NSFR of any kind is disclosed in United Trust "
     "Bank Limited's own solo-basis FY2020 Pillar 3 disclosure - confirmed absent from its own contents page, "
     "not merely a document gap."
 ))

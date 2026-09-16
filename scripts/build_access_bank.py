@@ -616,6 +616,233 @@ LCR_RATIO = {"FY2023": "365.6%", "FY2022": "450.5%", "FY2021": "370.6%"}
 LCR_POINT_IN_TIME = {"FY2024": "176.65%", "FY2023": "275.47%"}
 NSFR_RATIO = {"FY2023": "168.6%", "FY2022": "147.9%", "FY2021": "196.8%"}
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-003)
+# ---------------------------------------------------------------
+# CURRENCY: this sheet stays in US DOLLARS ($'000), exactly as the Bank
+# publishes it, while every other Pillar 3 sheet in this workbook is converted
+# to £'000 at the Bank of England spot rate. That is map rule KM1-004(d) - a
+# KM1 is a reproduction of a published template, so it keeps the published
+# currency. verify_workbook.py's _currency() detects the mismatch and skips
+# cross-currency amount comparisons while still checking the ratio rows.
+#
+# ENTITY: one basis only, stated by the Bank in every edition - "These
+# disclosures relate only to The Access Bank UK Limited, which has no trading
+# subsidiaries, and therefore does not report on a consolidated basis." No
+# Nigerian-parent figure appears anywhere on this sheet.
+#
+# FY2021 WAS RECOVERED FROM AN IMAGE. research/km1_inventory.jsonl records the
+# FY2021 edition as NO_KM1_FOUND. That is WRONG and the row should be
+# corrected: page 7 prints the heading "KM1 - Key metrics template" and, below
+# the table, "It should be noted that the above ratios..." - but the table
+# itself is an 861x637 embedded IMAGE with no text layer, so both pdftotext
+# modes return the heading and the note with nothing between them. The same
+# edition's CC1 and LR2 tables extract as text, which is why this went unseen.
+# The page was rendered at 300dpi and read directly, and the figures below were
+# transcribed from two independent renderings (the full page and the embedded
+# bitmap at native resolution) that agree digit for digit. "Our text extractor
+# cannot see it" is not "the bank did not publish it" (map rule 9).
+#
+# WHY EACH YEAR COMES FROM ITS OWN EDITION - THIS BANK IS THE PROOF (rule 1).
+# The FY2022 edition's 2021 comparative column disagrees with the FY2021
+# edition's own Dec-21 column on SIX rows, while capital, RWAs, ratios and
+# leverage agree exactly:
+#     UK 7a   7.69% (own)  vs  6.1%   (comparative)
+#     UK 7d  15.69%        vs 14.1%
+#     UK 11a 18.21%        vs 16.6%
+#     12      6.19%        vs  7.8%
+#     17    343.85%        vs 370.6%
+#     20    213.70%        vs 196.8%
+# Each edition is internally consistent under the Bank's own printed definition
+# ("Row 12 represents the difference between the Total Capital Ratio and the
+# Total SREP own funds requirements"): 21.88 - 15.69 = 6.19 in the FY2021
+# edition, 21.9 - 14.1 = 7.8 in the FY2022 one. So the SREP requirement for
+# FY2021 was genuinely restated between editions. Worse, the FY2022 edition's
+# 2021 SREP figures coincide with the FY2021 edition's Dec-20 column
+# (6.11/14.11/16.63), which is exactly the kind of near-match that makes a
+# wrong column look correct. Every column below is its own edition's own year.
+#
+# ROW SETS DRIFT HARD ACROSS THESE FOUR EDITIONS (rule 4). Rows 15, UK 16a,
+# UK 16b, 16, 18 and 19 are printed only in the FY2022 and FY2023 editions;
+# the FY2021 and FY2020 editions print LCR and NSFR as a single ratio row each.
+# The FY2020 edition prints no UK 7a/UK 7d/UK 11a/row 12 at all. Those cells
+# are blank because the Bank did not print them, not because they were not
+# found.
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital ($'000)",
+     {"FY2023": 676944, "FY2022": 486842, "FY2021": 377827, "FY2020": 338920}),
+    ("DATA", "2  Tier 1 capital ($'000)",
+     {"FY2023": 676944, "FY2022": 486842, "FY2021": 377827, "FY2020": 338920}),
+    ("DATA", "3  Total capital ($'000)",
+     {"FY2023": 676944, "FY2022": 486842, "FY2021": 377827, "FY2020": 338920}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount ($'000)",
+     {"FY2023": 3024867, "FY2022": 2459345, "FY2021": 1726764, "FY2020": 1841957}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2023": "22.4%", "FY2022": "19.8%", "FY2021": "21.88%", "FY2020": "18.40%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2023": "22.4%", "FY2022": "19.8%", "FY2021": "21.88%", "FY2020": "18.40%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2023": "22.4%", "FY2022": "19.8%", "FY2021": "21.88%", "FY2020": "18.40%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2023": "5.2%", "FY2022": "5.2%", "FY2021": "7.69%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2023": "13.2%", "FY2022": "13.2%", "FY2021": "15.69%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.50%", "FY2020": "2.50%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2023": "0.1%", "FY2022": "0.0%", "FY2021": "0.02%", "FY2020": "0.02%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2023": "2.6%", "FY2022": "2.5%", "FY2021": "2.52%", "FY2020": "2.52%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2023": "15.8%", "FY2022": "15.7%", "FY2021": "18.21%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2023": "9.2%", "FY2022": "6.6%", "FY2021": "6.19%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks ($'000)",
+     {"FY2023": 4246733}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2023": "15.9%"}),
+    ("DATA", "13  Total Basel III Leverage Ratio exposure method ($'000)",
+     {"FY2022": 4061990, "FY2021": 3379955, "FY2020": 2595307}),
+    ("DATA", "14  Basel III Leverage ratio (%)",
+     {"FY2022": "12.0%", "FY2021": "11.18%", "FY2020": "13.07%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) ($'000)",
+     {"FY2023": 902038, "FY2022": 1053232}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value ($'000)",
+     {"FY2023": 987015, "FY2022": 935189}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value ($'000)",
+     {"FY2023": 896548, "FY2022": 732155}),
+    ("DATA", "16  Total net cash outflows (adjusted value) ($'000)",
+     {"FY2023": 246754, "FY2022": 233797}),
+    ("DATA", "17  Liquidity coverage ratio (%) (average of preceding twelve months)",
+     {"FY2023": "365.6%", "FY2022": "450.5%", "FY2021": "343.85%", "FY2020": "346.76%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding ($'000)",
+     {"FY2023": 1878935, "FY2022": 1467825}),
+    ("DATA", "19  Total required stable funding ($'000)",
+     {"FY2023": 1114383, "FY2022": 992570}),
+    ("DATA", "20  NSFR ratio (%) (average of preceding four quarters)",
+     {"FY2023": "168.6%", "FY2022": "147.9%", "FY2021": "213.70%", "FY2020": "173.76%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - The Access Bank UK Limited's own KM1 key-metrics template in EACH YEAR'S OWN Pillar 3 edition. "
+    "Figures are in US DOLLARS ($'000) exactly as published and are NOT converted to sterling, unlike every "
+    "other Pillar 3 sheet in this workbook - a KM1 reproduces a published template, so it keeps the published "
+    "currency. All ratios are as printed, including the Bank's own precision (two decimals in the FY2020/FY2021 "
+    "editions, one decimal from FY2022).\n"
+    "ENTITY: a single basis in every year. Each edition states: \"These disclosures relate only to The Access "
+    "Bank UK Limited, which has no trading subsidiaries, and therefore does not report on a consolidated "
+    "basis.\" No figure of the Nigerian parent (Access Bank Plc) or of Access Holdings Plc appears here.\n"
+    f"FY2023: Pillar 3 Disclosures 2023, p.6, Section 1.7 'UK KM1 - Key metrics template', column a "
+    f"(31-Dec-23) - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, pp.6-7, Section 1.7 'KM1 - Key metrics template', 2022 column "
+    f"- {P3_2022_URL}\n"
+    f"FY2021: Pillar 3 Disclosures 2021, p.7, Section 1.7 'KM1 - Key metrics template', Dec-21 column "
+    f"- {P3_2021_URL}\n"
+    f"FY2020: Pillar 3 Disclosures 2020, p.7, Section 1.7 'Key Metrics', Dec-20 column - {P3_2020_URL}\n"
+    "\n"
+    "FY2021 WAS READ FROM AN IMAGE, NOT FROM TEXT. The FY2021 edition embeds its KM1 as a picture (an 861x637 "
+    "bitmap) rather than as text, so every text extraction of that page returns the heading 'KM1 - Key metrics "
+    "template' and the trailing note about 'the above ratios' with nothing in between. The page was rendered at "
+    "300dpi and read directly, and each figure was transcribed twice from two independent renderings - the full "
+    "page and the embedded bitmap at its native resolution - which agree digit for digit. The same edition's "
+    "CC1 and LR2 tables are ordinary text, which is why this table's absence from our extracts looked like an "
+    "absence of disclosure. research/km1_inventory.jsonl currently records this document as NO_KM1_FOUND and is "
+    "wrong on that point.\n"
+    "\n"
+    "WHY NO COLUMN IS TAKEN FROM A LATER EDITION'S COMPARATIVE - THIS BANK IS THE DEMONSTRATION.\n"
+    "The FY2022 edition's 2021 comparative disagrees with the FY2021 edition's own Dec-21 column on six rows, "
+    "while capital, RWAs, capital ratios and leverage agree exactly: UK 7a 7.69% against 6.1%, UK 7d 15.69% "
+    "against 14.1%, UK 11a 18.21% against 16.6%, row 12 6.19% against 7.8%, row 17 343.85% against 370.6%, and "
+    "row 20 213.70% against 196.8%. Both editions are internally consistent under the Bank's own printed "
+    "definition that row 12 is the difference between the total capital ratio and the total SREP own funds "
+    "requirement (21.88 - 15.69 = 6.19; 21.9 - 14.1 = 7.8), so the FY2021 SREP requirement was genuinely "
+    "restated between editions rather than mistyped. Note also that the FY2022 edition's 2021 SREP figures "
+    "coincide with the FY2021 edition's Dec-20 column (6.11 / 14.11 / 16.63) - a near-match of the kind that "
+    "makes a wrongly-read column look entirely plausible. The figures above are each edition's own year.\n"
+    "\n"
+    "THE LEVERAGE ROWS CARRY TWO DIFFERENT CAPTIONS AND ARE NOT MERGED (the 1 January 2022 basis break).\n"
+    "The FY2020, FY2021 and FY2022 editions caption rows 13 and 14 'Total Basel III Leverage Ratio exposure "
+    "method' and 'Basel III Leverage ratio (%)'. The FY2023 edition captions the same row numbers 'Total "
+    "exposure measure excluding claims on central banks' and 'Leverage ratio excluding claims on central "
+    "banks'. Both captions are kept as separate rows above rather than run together as one series. The FY2022 "
+    "figure is identical under either caption (4,061,990), which is precisely why merging them would look safe.\n"
+    "\n"
+    "ROW SETS DIFFER BY EDITION - THESE BLANKS ARE NOT-PRINTED, NOT NOT-FOUND.\n"
+    "Rows 15, UK 16a, UK 16b, 16, 18 and 19 appear only in the FY2022 and FY2023 editions; the FY2021 and "
+    "FY2020 editions disclose liquidity as a single LCR ratio row and a single NSFR ratio row. The FY2020 "
+    "edition additionally prints no UK 7a, UK 7d, UK 11a or row 12. Neither edition prints UK 7b or UK 7c in "
+    "any year - this Bank discloses only the CET1 and total SREP requirements.\n"
+    "\n"
+    "SOURCE DEFECTS, REPRODUCED AND FLAGGED (rule 7).\n"
+    "1. The FY2020 edition captions its risk-weighted assets section '($m)' while the figures printed under it "
+    "are plainly $'000 (1,841,957 is $1.84bn, not $1.84 trillion); its leverage row is captioned '($m)' the "
+    "same way. The figures are carried as $'000, the unit the magnitudes and every adjacent edition confirm, "
+    "and the caption defect is recorded rather than silently corrected.\n"
+    "2. The FY2020 edition's row labels are its own and differ from the template's: 'Common Equity Tier "
+    "(CET 1)', 'TIer 1 Ratio (%)' (with that capitalisation), and row 11 as 'Total of bank CET1 specific buffer "
+    "requirement'. Its section headings likewise read 'Available capital' and 'Additional CET 1 buffer "
+    "requirement as a percentage of RWA'. The template's canonical labels are used for the sheet's rows because "
+    "the row NUMBERS and measures are the Bank's own; the label variants are recorded here.\n"
+    "3. The FY2023 edition prints the five-column template's column letters as 'a' and 'e' over 31-Dec-23 and "
+    "31-Dec-22 - two populated columns of a five-column template, not a two-column table.\n"
+    "\n"
+    "FY2024 AND FY2019 ARE BLANK, FOR DIFFERENT REASONS.\n"
+    "FY2024: no FY2024 Pillar 3 edition exists. That finding is this script's own, recorded 2026-09-15 on "
+    "positive evidence - nine filename permutations across six CDN upload folders, plus a Wayback CDX sweep of "
+    "the whole domain filtered on 'pillar' returning exactly five documents, the newest being the 2023 edition "
+    "- and it is retained here rather than re-derived. See p3_sources() for the detail and for what the Annual "
+    "Report does and does not substitute.\n"
+    "FY2019: the Bank's FY2019 Pillar 3 edition has not been located. The FY2020 edition prints a Dec-19 "
+    "comparative column, and it is deliberately NOT used here for the reason demonstrated above. FY2019 "
+    "therefore carries no column on this sheet, while the single-metric sheets continue to show that "
+    "comparative under their own citation.\n"
+    "\n"
+    "EXPECTED VERIFIER OUTPUT - TWO DISAGREEMENTS THAT ARE CORRECT AND MUST NOT BE 'FIXED'.\n"
+    "scripts/verify_workbook.py reports KM1 row 17 FY2021 (343.85%) and row 20 FY2021 (213.70%) as disagreeing "
+    "with the LCR and NSFR sheets (370.6% and 196.8%). Both sides are deliberate and both are right for what "
+    "they are: this sheet takes FY2021 from the FY2021 edition's own Dec-21 column, while those metric sheets "
+    "cite the FY2022 edition's 2021 comparative, as their own source notes say. The gap IS the restatement "
+    "documented above - the checker found it independently, from the other direction. Everything else "
+    "reconciles, and the amount rows are skipped by design because this sheet is in USD and the metric sheets "
+    "are in converted sterling.\n"
+    "\n"
+    "LATEST-EDITION CHECK, 2026-09-16 - BLOCKED, WHICH IS NOT THE SAME AS 'NONE NEWER' (map rule 9).\n"
+    "The Bank's own website could not be read at all today. The homepage, the investor-relations page, "
+    "sitemaps.xml (the filename robots.txt itself names) and every wp-json endpoint each returned HTTP 403 "
+    "carrying a Cloudflare 'Just a moment...' JavaScript interstitial, including with a full desktop browser "
+    "User-Agent - the technique that did defeat the Lloyds Banking Group block for Bank of Scotland does NOT "
+    "work on this host. Static files are served normally (robots.txt 200 text/plain, and every cited PDF 200 "
+    "application/pdf), so the block is on the HTML surface only. web.archive.org returned 'Temporarily "
+    "Offline' throughout, so the archive route was unavailable rather than empty. 96 plausible 2024/2025 "
+    "filenames under /wp-content/uploads/ returned nothing, which proves little given this Bank's filename "
+    "variance (PILLAR-3-DISCLOSURES-2020-Clean, -2021-Final, -2022-Final, then PIllar-3-2023.pdf with a "
+    "capital-I typo). CONCLUSION: the index could not be read, so no claim is made here about whether a newer "
+    "edition exists. The 2026-09-15 evidence above remains the best available and should be re-run once the "
+    "site or the archive is reachable."
+)
+
+bw.add_km1_sheet(
+    title="The Access Bank UK Limited - KM1 Key Metrics",
+    subtitle="The Bank's own published KM1 key-metrics template, in its own row order, row numbers, labels and "
+             "precision. Amounts in US DOLLARS ($'000) as published - this sheet is NOT converted to sterling, "
+             "unlike the other Pillar 3 sheets in this workbook. Each column is taken from that year's own "
+             "edition; FY2021 was recovered from an image. See the sources note for the six rows on which a "
+             "later edition's comparative disagrees with the year's own edition.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=66,
+    source_height=340,
+    years=YEARS,
+)
+
 metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", p3_stock(CET1_TIER1_TOTAL_USD))], p3_sources())
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO)], p3_sources())
 metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital", p3_stock(CET1_TIER1_TOTAL_USD))], p3_sources(),

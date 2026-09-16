@@ -845,6 +845,137 @@ PILLAR3_SOURCES = (
 )
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - EAB's own "Key metrics" table, reproduced as printed.
+#
+# Four things make this bank's table unlike any other in the project, and all
+# four are preserved rather than normalised:
+#
+#   1. NO ROW NUMBERS AND NO "KM1" HEADING. EAB's table is headed simply "Key
+#      metrics" and carries none of the template's row numbers (1, 2, UK 7a...).
+#      It is nonetheless the UK KM1 template - the row labels, their order and
+#      the section headings match it line for line. Any search keyed on the
+#      string "KM1" or on a row number will report this bank as having no KM1.
+#
+#   2. FOUR COLUMNS ACROSS TWO ENTITIES. The single printed table is
+#      "EAB Group" (31-Dec-22, 31-Dec-21) beside "EAB plc**" (31-Dec-22,
+#      31-Dec-21), where ** is the document's own footnote "EAB plc regulatory
+#      numbers are based on entity only basis". This workbook is entity-only
+#      throughout, so the EAB plc columns are the ones carried here. The EAB
+#      Group figures are recorded in full in the source citation so nothing is
+#      lost.
+#
+#   3. EUROS, NOT STERLING. EAB reports in EUR and the table is in €m. This is
+#      the ONE sheet in this workbook left in the source currency, because a
+#      KM1 sheet's job is to reproduce what the bank published; every other
+#      sheet converts to £ (see FX_NOTE). The £ equivalents actually used on
+#      the metric sheets are given in the citation.
+#
+#   4. "n/a" IS THE BANK'S OWN WORD for the FY2021 leverage and NSFR rows, not
+#      a gap in sourcing: the PRA's leverage and NSFR templates took effect on
+#      1 January 2022 and the document states "Prior periods, 'n/a' indicates
+#      that the disclosure is new or changed and no comparatives are being
+#      provided." Those cells carry "n/a", not a blank and not a back-filled
+#      figure from another basis.
+#
+# FY2023 and FY2024 are blank: EAB published no Pillar 3 document for either
+# year that could be recovered (see ENTITY_NOTE), so there is no KM1 to show.
+# ---------------------------------------------------------------
+_EAB_NA = "n/a"
+
+km1_rows = [
+    ("SECTION", "Available capital (€m)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital", {"FY2022": 253, "FY2021": 252}),
+    ("DATA", "Tier 1 capital", {"FY2022": 253, "FY2021": 252}),
+    ("DATA", "Total capital", {"FY2022": 370, "FY2021": 362}),
+    ("SECTION", "Risk-weighted Assets ('RWA') (€m)", {}),
+    ("DATA", "Total RWA", {"FY2022": 1631, "FY2021": 1616}),
+    ("SECTION", "Capital ratios (as a percentage of RWA) (%)", {}),
+    ("DATA", "Common Equity Tier 1 ratio", {"FY2022": "15.5%", "FY2021": "15.6%"}),
+    ("DATA", "Tier 1 ratio", {"FY2022": "15.5%", "FY2021": "15.6%"}),
+    ("DATA", "Total capital ratio", {"FY2022": "22.7%", "FY2021": "22.4%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (% of RWA)", {}),
+    ("DATA", "Additional CET1 SREP requirements", {"FY2022": "2.3%", "FY2021": "2.3%"}),
+    ("DATA", "Additional AT1 SREP requirements", {"FY2022": "0.8%", "FY2021": "0.8%"}),
+    ("DATA", "Additional T2 SREP requirements", {"FY2022": "1.0%", "FY2021": "1.0%"}),
+    ("DATA", "Total SREP own funds requirements", {"FY2022": "12.03%", "FY2021": "12.04%"}),
+    ("SECTION", "Combined buffer requirement (% of RWA)", {}),
+    ("DATA", "Capital conservation buffer", {"FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "Institution specific countercyclical capital buffer", {"FY2022": "0.1%", "FY2021": "0.0%"}),
+    ("DATA", "Combined buffer requirement", {"FY2022": "2.6%", "FY2021": "2.5%"}),
+    ("DATA", "Overall capital requirements", {"FY2022": "14.7%", "FY2021": "14.6%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements",
+     {"FY2022": "3.5%", "FY2021": "3.4%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (€m)",
+     {"FY2022": 2144, "FY2021": _EAB_NA}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2022": "11.7%", "FY2021": _EAB_NA}),
+    ("SECTION", "Liquidity Coverage Ratio ('LCR')", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value average) (€m)",
+     {"FY2022": 291, "FY2021": 355}),
+    ("DATA", "Cash outflows - Total weighted value (€m)", {"FY2022": 522, "FY2021": 538}),
+    ("DATA", "Cash inflows - Total weighted value (€m)", {"FY2022": 442, "FY2021": 435}),
+    ("DATA", "Total net cash outflows (adjusted value) (€m)", {"FY2022": 137, "FY2021": 137}),
+    ("DATA", "Liquidity coverage ratio (%)", {"FY2022": "218%", "FY2021": "267%"}),
+    ("SECTION", "Net Stable Funding Ratio ('NSFR')", {}),
+    ("DATA", "Total available stable funding (€m)", {"FY2022": 1396, "FY2021": _EAB_NA}),
+    ("DATA", "Total required stable funding (€m)", {"FY2022": 1163, "FY2021": _EAB_NA}),
+    ("DATA", "NSFR ratio (%)", {"FY2022": "120%", "FY2021": _EAB_NA}),
+]
+
+KM1_SOURCES = (
+    "Sources - Europe Arab Bank plc's standalone Pillar 3 Disclosures as at 31 December 2022, PDF page 8 of "
+    "35, the table headed 'Key metrics', 'EAB plc**' entity-only columns:\n"
+    f"FY2022 & FY2021: {PILLAR3_2022_URL}\n"
+    "This is the ONLY Pillar 3 document EAB has published that could be recovered; FY2023 and FY2024 are "
+    "blank because no equivalent document exists for those years (see ENTITY_NOTE on the Cash Flow "
+    "Statement sheet).\n\n"
+    "KM1 presentation notes:\n"
+    "• NOT LABELLED 'KM1' AND NOT ROW-NUMBERED. EAB heads the table 'Key metrics' and prints no template "
+    "row numbers at all, but the row labels, their order and the section headings are the UK KM1 template "
+    "line for line. Reproduced here exactly as printed, without adding the numbers EAB omitted.\n"
+    "• FOUR COLUMNS, TWO ENTITIES, ONE TABLE. EAB prints 'EAB Group' (31-Dec-22, 31-Dec-21) beside "
+    "'EAB plc**' (31-Dec-22, 31-Dec-21); the footnote reads '** EAB plc regulatory numbers are based on "
+    "entity only basis'. The EAB plc columns are used here, for consistency with every other sheet in this "
+    "workbook. The EAB Group figures for the same two dates, recorded so nothing is lost: CET1 €290m/€293m; "
+    "Tier 1 €290m/€293m; Total capital €407m/€403m; Total RWA €1,810m/€1,767m; CET1 & Tier 1 ratio "
+    "16.0%/16.6%; Total capital ratio 22.5%/22.8%; SREP add-ons CET1 2.2%/2.2%, AT1 0.7%/0.7%, T2 "
+    "1.0%/1.0%, total 11.93%/11.95%; conservation buffer 2.5%/2.5%; CCyB 0.1%/0.0%; combined buffer "
+    "2.6%/2.5%; overall capital requirement 14.5%/14.5%; CET1 available after SREP 4.1%/4.6%; leverage "
+    "exposure €2,557m/n.a. and ratio 11.4%/n.a.; HQLA €625m/€705m, outflows €590m/€528m, inflows "
+    "€325m/€255m, net outflows €264m/€272m, LCR 249%/272%; ASF €1,631m/n.a., RSF €1,277m/n.a., NSFR "
+    "128%/n.a.\n"
+    "• EUROS, NOT STERLING. EAB reports in EUR and this table is in €m. This is the only sheet in the "
+    "workbook left in the source currency, because the sheet exists to reproduce what the bank published. "
+    "Every other sheet converts to £ at the rates described in FX_NOTE; the £'000 equivalents carried on "
+    "the CET1 Capital / Tier 1 Capital / Total Capital / Total RWAs sheets are derived from exactly these "
+    "€m figures.\n"
+    "• 'n/a' IN FY2021 IS THE BANK'S OWN WORD, in five cells, and marks a disclosure that did not yet "
+    "exist rather than one that is missing. The document states: 'These disclosures have been implemented "
+    "from 1 January 2022 and are based on the PRA's disclosure templates and instructions which came into "
+    "force at that time. Prior periods, \"n/a\" indicates that the disclosure is new or changed and no "
+    "comparatives are being provided.'\n"
+    "• FOOTNOTED BASES, per EAB's own footnotes: capital and RWA are on the UK CRR Article 473a IFRS 9 "
+    "transitional arrangements (add-back 75% in 2022, 100% in 2021); the SREP figures are the outcome of "
+    "the then-current SREP, which the document notes was being re-run; and the LCR weighted values are the "
+    "simple average of the 12 preceding month-end observations.\n\n"
+    + BASIS_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Europe Arab Bank plc — KM1 Key Metrics",
+    subtitle="The bank's own published key-metrics table (the UK KM1 template, though EAB neither labels it "
+             "'KM1' nor prints its row numbers), reproduced in EAB's row order and printed precision. "
+             "Amounts in €m as published — this is the one sheet in this workbook left in the source "
+             "currency. 'EAB plc' entity-only columns, not the EAB Group columns printed beside them. "
+             "FY2023 and FY2024 are blank: no Pillar 3 document exists for those years.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    source_height=300,
+)
+
+
 def metric(name, unit, rows_data, note=None, extra_sources=None):
     sources = p3_sources(RATIO_PAGES) + (("\n\n" + extra_sources) if extra_sources else "")
     bw.add_metric_sheet(name, f"Entity-level basis, {unit}" if unit else "Entity-level basis",

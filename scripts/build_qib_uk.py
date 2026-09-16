@@ -55,9 +55,18 @@ AR = {"FY2025": CH+"/MzUyNzI4MTM5OGFkaXF6a2N4/document?format=pdf&download=0", "
 # Pillar 3 appendix in the AR from FY2019 onward and began publishing a standalone Pillar 3
 # document from FY2020. FY2019 has no standalone Pillar 3 document of its own on the Bank's site
 # or in Wayback Machine snapshots of qib-uk.com (checked 2014-2022) - its KM1-style figures are
-# sourced from FY2020's own standalone document's FY2019 comparative column, the same convention
-# already used for FY2021 in this file (comparative column of the following year's own document).
-P3 = {"FY2025": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document--2025-approved.pdf", "FY2024": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-31-december-2024.pdf", "FY2023": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-31-december-2023.pdf", "FY2022": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-2023.pdf", "FY2021": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-2023.pdf",
+# sourced from FY2020's own standalone document's FY2019 comparative column.
+#
+# KM1-024 (16 September 2026) CORRECTION TO FY2021'S CITATION. qib-uk.com's own financial-reports
+# library was listed directly and carries a standalone "pillar-3-disclosure-document-2021-board-
+# approved.pdf" - the Bank's OWN 31 December 2021 edition - which this script had not cited; FY2021
+# was pointed at the FY2022 edition's comparative column instead. FY2021 now cites its own edition.
+# The FY2021 edition's key-metrics table (printed p.3, an EMBEDDED IMAGE in an otherwise text-native
+# PDF, read at 300dpi) gives CET1 78,028, total capital 91,081, RWA 462,020, CET1/Tier 1 ratio
+# 16.89%, total capital ratio 19.71%, leverage exposure 892,228, leverage ratio 8.75% and LCR
+# 555.60% - every FY2021 figure on the metric sheets below except NSFR, which that table does not
+# carry at all and which therefore still comes from the FY2022 edition's comparative column.
+P3 = {"FY2025": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document--2025-approved.pdf", "FY2024": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-31-december-2024.pdf", "FY2023": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-31-december-2023.pdf", "FY2022": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-2023.pdf", "FY2021": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-2021-board-approved.pdf",
       "FY2020": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-2020-board-approved-final.pdf",
       "FY2019": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/pillar-3-disclosure-document-2020-board-approved-final.pdf",
       "FY2018": AR["FY2018"], "FY2017": AR["FY2017"], "FY2016": AR["FY2017"], "FY2015": AR["FY2015"], "FY2014": AR["FY2014"]}
@@ -68,7 +77,8 @@ CASH_SOURCES = ("Sources - QIB (UK) plc's own entity Statement of Cash Flows, co
 def p3_sources():
     return ("Sources - QIB (UK) plc's own Pillar 3 disclosures (amounts in £m unless noted; ratios as reported):\n" + "\n".join(f"{y}: {P3_LABEL.get(y, 'own-year disclosure')}, {P3_PAGES.get(y,'pp.6-7')} - {P3[y]}" for y in PILLAR3_YEARS) + "\nFY2014/FY2015: the Bank's own Pillar 3 Declaration for these years is narrative-only - it discloses total Tier 1 and Tier 2 capital in round £m terms but no Total RWA figure and no CET1/Total Capital ratio percentage; those cells are left blank rather than estimated. FY2016's own Pillar 3 Declaration is likewise narrative-only; its numeric capital/RWA/ratio figures here are read from FY2017's own Annual Report Note 4 comparative ('2016') column instead.\nLeverage Ratio, LCR and NSFR are not numerically disclosed anywhere in the reviewed QIB UK documents before FY2019 (LCR)/FY2019 (Leverage) - both first appear as a % figure in FY2020's own standalone Pillar 3 document's FY2019 comparative column. NSFR is not disclosed in any reviewed QIB UK document through FY2020 (the FY2020 document states the Bank was still 'monitoring' NSFR ahead of implementation).\nMREL is not disclosed in the reviewed QIB UK Pillar 3 documents.\n\n" + ENTITY)
 P3_LABEL = {
-    "FY2021": "FY2022 comparative column of FY2022 disclosure",
+    "FY2022": "own-year disclosure (scanned PDF, no text layer - read from a 300dpi rendering)",
+    "FY2021": "own-year disclosure, bespoke key-metrics table printed as an image (NSFR only: FY2021 comparative column of the FY2022 disclosure)",
     "FY2019": "FY2019 comparative column of FY2020 disclosure",
     "FY2016": "FY2016 comparative column of FY2017 Annual Report Note 4",
     "FY2017": "own-year disclosure, Annual Report Note 4",
@@ -76,7 +86,7 @@ P3_LABEL = {
     "FY2015": "own-year disclosure (narrative only, no RWA/ratio)",
     "FY2014": "own-year disclosure (narrative only, no RWA/ratio)",
 }
-P3_PAGES = {"FY2017": "pp.47-48", "FY2018": "pp.49-50", "FY2016": "pp.47-48 (FY2017 AR)", "FY2015": "pp.46", "FY2014": "p.55", "FY2020": "p.6 / Note 6.2", "FY2019": "p.6 (FY2020 doc)"}
+P3_PAGES = {"FY2017": "pp.47-48", "FY2018": "pp.49-50", "FY2016": "pp.47-48 (FY2017 AR)", "FY2015": "pp.46", "FY2014": "p.55", "FY2020": "p.3 key-metrics summary (page corrected from p.6 on 2026-09-16) / section 6.2 Pillar 1, p.30", "FY2019": "p.3 of the FY2020 doc, comparative column (page corrected from p.6 on 2026-09-16)", "FY2021": "p.3"}
 def m(d): return {y: round(v/1_000_000, 2) for y,v in d.items()}
 
 bw = BankWorkbook(bank_name="QIB (UK) plc", years=YEARS, year_label=YEAR_LABEL, header_color="0B4F6C")
@@ -447,6 +457,231 @@ ratios={
  "LCR":{"FY2025":"345.59%","FY2024":"322.05%","FY2023":"1153.62%","FY2022":"1236.14%","FY2021":"555.60%","FY2020":"242.03%","FY2019":"683.74%"},
  "NSFR":{"FY2025":"127.95%","FY2024":"128.20%","FY2023":"130.56%","FY2022":"129.18%","FY2021":"119.68%"},
 }
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - QIB (UK)'s own "Template UK KM1 - Key metrics template",
+# reproduced as printed. KM1-024, 16 September 2026.
+#
+# UNIT: £'000, NOT the £m used by every other sheet in this workbook. Each of
+# the FY2023/FY2024/FY2025 editions states it in terms on its own p.4 ("All
+# figures in tables are in thousands of pounds, unless stated otherwise"), and
+# the FY2022 edition's figures agree digit-for-digit with the FY2023 edition's
+# comparative column, which is explicitly £'000. The template is reproduced in
+# the Bank's own unit rather than restated into £m - the £m figures on the 11
+# metric sheets are this project's conversion, not QIB's printing.
+#
+# WHICH EDITIONS CARRY THE TEMPLATE. Only FY2022 onward:
+#   FY2025/FY2024/FY2023 - text-native PDFs, "Template UK KM1" at printed p.6.
+#   FY2022 - the SAME template, but the whole document is a Konica Minolta
+#     SCAN with no text layer at all, which is why an earlier text-only survey
+#     recorded it as absent. Located by reading the document's OWN contents
+#     page (printed p.6, KM1; p.8, OV1 - so the table spans pp.6-7), not by any
+#     page-density heuristic, then rendered and read by eye. Transcribed TWICE
+#     from two independent renderings - the full page at 300dpi (pdftoppm) and
+#     the embedded 2056x2960 CCITT stencil at native resolution (pdfimages) -
+#     with digit-for-digit agreement before use.
+#   FY2021/FY2020 - Pillar 3 IS published, and each carries a table headed
+#     "As at 31 December 20XX, the Bank's key metrics were:", but that is a
+#     BESPOKE 13-line summary of the Bank's own design (its own headings
+#     "Available Capital (£'000s)" / "Capital Ratios as a percentage of RWA" /
+#     "Leverage Ratio" / "Liquidity Coverage Ratio", no template row numbers,
+#     no SREP rows, no buffer rows, no cash in/outflow rows, no NSFR, and a
+#     "Profit/(Loss) after taxation" line that is not a KM1 row at all). It
+#     fails the row-set test, so it is NOT the template and is not mapped onto
+#     template row numbers here. NOTE the FY2021 edition prints that table as
+#     an EMBEDDED IMAGE inside an otherwise text-native PDF, so text extraction
+#     returns the heading and then nothing; it was rendered at 300dpi and read.
+#   FY2020 and earlier - see the metric sheets; no template.
+#
+# FY2021-FY2014 COLUMNS ARE DELIBERATELY BLANK. FY2021's own edition prints no
+# KM1, so under the "use each year's own edition" rule there is nothing to
+# reproduce for it. The FY2022 edition's comparative column (b, 31/12/2021)
+# DOES carry a full FY2021 KM1, and it is not a restatement - it agrees with
+# the FY2021 edition's bespoke table on every overlapping line. It is still a
+# FY2022-edition disclosure, so it is quoted in the sheet note rather than
+# written into the FY2021 column. Nothing is lost from the workbook: FY2021 is
+# populated on all 11 single-metric sheets.
+#
+# ROWS 14a-14e ARE A STATED EXCLUSION, not a gap: every edition prints, under
+# the table, "Rows 14a-14e have been removed as only LREQ firms are required to
+# disclose this information". They are therefore not printed and not shown.
+#
+# TWO CROSS-EDITION DIVERGENCES, recorded and NOT reconciled (each cell below
+# comes from the edition in which that year is the reporting year):
+#   row 4 FY2024 - FY2024 edition prints 601,928; FY2025 edition's comparative
+#     prints 601,927.
+#   row 14 FY2022 - FY2022 edition prints 8.50%; FY2023 edition's comparative
+#     prints 8.57%.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £'000)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 124259, "FY2024": 113099, "FY2023": 98878, "FY2022": 86739}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 124259, "FY2024": 113099, "FY2023": 98878, "FY2022": 86739}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 137959, "FY2024": 126799, "FY2023": 112578, "FY2022": 96585}),
+    ("SECTION", "Risk-weighted exposure amounts (£'000)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 693154, "FY2024": 601928, "FY2023": 543184, "FY2022": 499121}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "17.93%", "FY2024": "18.79%", "FY2023": "18.20%", "FY2022": "17.38%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "17.93%", "FY2024": "18.79%", "FY2023": "18.20%", "FY2022": "17.38%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "19.90%", "FY2024": "21.07%", "FY2023": "20.73%", "FY2022": "19.35%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.56%", "FY2024": "2.56%", "FY2023": "1.86%", "FY2022": "1.86%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "1.14%", "FY2024": "1.14%", "FY2023": "0.83%", "FY2022": "0.83%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "12.55%", "FY2024": "12.55%", "FY2023": "11.30%", "FY2022": "11.30%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.18%", "FY2024": "1.14%", "FY2023": "0.98%", "FY2022": "1.00%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)",
+     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)",
+     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer",
+     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "3.68%", "FY2024": "3.64%", "FY2023": "3.48%", "FY2022": "3.50%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "16.23%", "FY2024": "16.19%", "FY2023": "14.78%", "FY2022": "14.80%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "5.38%", "FY2024": "6.24%", "FY2023": "6.90%", "FY2022": "6.08%"}),
+    ("SECTION", "Leverage ratio (£'000 / %)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 1164862, "FY2024": 1074467, "FY2023": 1028395, "FY2022": 1012682}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "10.67%", "FY2024": "10.53%", "FY2023": "9.61%", "FY2022": "8.50%"}),
+    ("SECTION", "Liquidity Coverage Ratio (£'000 / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 208659, "FY2024": 169312, "FY2023": 158061, "FY2022": 143649}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 94465, "FY2024": 83702, "FY2023": 54805, "FY2022": 46483}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 34237, "FY2024": 31128, "FY2023": 43597, "FY2022": 58766}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 60378, "FY2024": 52574, "FY2023": 13701, "FY2022": 11621}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "345.59%", "FY2024": "322.05%", "FY2023": "1153.62%", "FY2022": "1236.14%"}),
+    ("SECTION", "Net Stable Funding Ratio (£'000 / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 881099, "FY2024": 794507, "FY2023": 770756, "FY2022": 728399}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 688511, "FY2024": 619756, "FY2023": 590277, "FY2022": 563857}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "127.95%", "FY2024": "128.20%", "FY2023": "130.56%", "FY2022": "129.18%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - QIB (UK) plc's own 'Template UK KM1 - Key metrics template', taken from EACH YEAR'S OWN "
+    "edition (column a of that edition), never from a later edition's comparative. Amounts in £'000 as the "
+    "Bank prints them; ratios exactly as printed, to the Bank's own 2 decimal places.\n"
+    "FY2025: Pillar 3 Disclosures 31 December 2025, section 3.1, printed p.6 - " + P3["FY2025"] + "\n"
+    "FY2024: Pillar 3 Disclosures 31 December 2024, section 3.1, printed pp.6-7 (rows 18-20 run over to p.7) - "
+    + P3["FY2024"] + "\n"
+    "FY2023: Pillar 3 Disclosures 31 December 2023, section 3.1, printed pp.6-7 (rows UK 16a-20 run over to "
+    "p.7) - " + P3["FY2023"] + "\n"
+    "FY2022: Pillar 3 Disclosures 31 December 2022, section 3.1, printed pp.6-7 (rows 18-20 on p.7) - "
+    + P3["FY2022"] + "\n\n"
+    "LATEST-EDITION CHECK, 16 September 2026. qib-uk.com's own financial-reports library "
+    "(https://www.qib-uk.com/en/qibs-financial-reports) was listed directly rather than relying on the URLs "
+    "already cited here. The NEWEST Pillar 3 on it is the 31 December 2025 edition already cited above, and "
+    "the newest Annual Report on it is 31 December 2024 (this workbook already carries FY2025 from the "
+    "Companies House filing). Nothing newer exists to transcribe, so YEARS is unchanged. Every document read "
+    "for this sheet was verified by HTTP status, Content-Type AND %PDF magic bytes.\n"
+    "That listing also surfaced a Pillar 3 edition this script had not cited - 'pillar-3-disclosure-document-"
+    "2021-board-approved.pdf', the Bank's own 31 December 2021 edition - which is now examined here (see "
+    "below) rather than FY2021 being read only from the FY2022 edition's comparative.\n\n"
+    "UNIT: £'000, NOT the £m used elsewhere in this workbook. The FY2023, FY2024 and FY2025 editions each "
+    "state on their own p.4 that 'All figures in tables are in thousands of pounds, unless stated otherwise'. "
+    "The template is reproduced in the Bank's own unit; it is not restated into £m, which would be "
+    "normalising. The £m on the 11 metric sheets is this project's conversion of these same figures.\n\n"
+    "WHICH EDITIONS CARRY THE TEMPLATE, and what the others carry instead:\n"
+    "• FY2022-FY2025: the UK KM1 template, identical row set in all four editions.\n"
+    "• FY2022's edition is a SCANNED document (Konica Minolta bizhub) with NO text layer anywhere, which is "
+    "why a text-only survey of this corpus recorded it as having no KM1. It does have one. The table was "
+    "located by reading the document's OWN contents page (3.1 Template UK KM1 at printed p.6; 3.2 UK OV1 at "
+    "p.8, so the table spans pp.6-7), then transcribed TWICE from two independent renderings - the full page "
+    "at 300dpi and the page's embedded 2056x2960 CCITT stencil at native resolution - and required to agree "
+    "digit-for-digit before use. It also agrees with the FY2023 edition's comparative column on every row.\n"
+    "• THIRD CORROBORATION FOR THAT BITMAP-READ COLUMN, from a second table in the SAME document: the "
+    "FY2022 edition's own Template UK CC1 (section 5.1, printed pp.16-17) builds CET1 up from components "
+    "and prints row 29 'Common Equity Tier 1 (CET1) capital' as 86,739 - exactly the KM1 row 1 figure read "
+    "off the page image. Its row 6 (CET1 before regulatory adjustments) is 88,411 and row 28 (total "
+    "regulatory adjustments) is -1,672. Two source defects fall out of adding that column up, recorded and "
+    "NOT corrected: the CC1 components 60,864 + 27,622 - 76 sum to 88,410 against the printed 88,411, and "
+    "the adjustments -72 - 2,212 + 613 sum to -1,671 against the printed -1,672. Both are £1k roundings "
+    "inside QIB (UK)'s own printing; the two errors cancel, so row 29 still lands on 86,739.\n"
+    "• FY2021 and FY2020: Pillar 3 IS published (31 December 2021 and 31 December 2020 editions), and each "
+    "opens with 'As at 31 December 20XX, the Bank's key metrics were:' - but what follows is a BESPOKE "
+    "13-line summary of the Bank's own design, not the template. Its headings are the Bank's own ('Available "
+    "Capital (£'000s)', 'Capital Ratios as a percentage of RWA', 'Leverage Ratio', 'Liquidity Coverage "
+    "Ratio'); it carries no template row numbers, no SREP rows, no buffer rows, no cash-inflow/outflow rows "
+    "and no NSFR, and it ends with a 'Profit/(Loss) after taxation' line that is not a KM1 row at all. That "
+    "is a different and shorter table, so it is NOT mapped onto template row numbers here. THIS IS A "
+    "'THE TEMPLATE IS NOT USED' FINDING, which is a different and weaker thing than 'no Pillar 3 is "
+    "published' - QIB (UK) publishes one every year.\n"
+    "• A TRAP WORTH RECORDING for anyone re-checking: in the FY2021 edition that bespoke table is an "
+    "EMBEDDED IMAGE inside an otherwise text-native PDF, so text extraction returns the heading 'the Bank's "
+    "key metrics were:' and then nothing at all before '2. Background'. The page was rendered at 300dpi and "
+    "read by eye; the figures are CET1 78,028 / Total capital 91,081 / RWA 462,020 / CET1 and Tier 1 ratio "
+    "16.89% / total capital ratio 19.71% / leverage exposure 892,228 / leverage ratio 8.75% / liquid buffer "
+    "81,115 / net liquidity outflow 14,600 / LCR 555.60%, all £'000.\n\n"
+    "WHY FY2021 AND EARLIER ARE BLANK ON THIS SHEET. FY2021's own edition prints no KM1, so there is nothing "
+    "to reproduce for it. The FY2022 edition's comparative column (b, 31/12/2021) does carry a complete "
+    "FY2021 KM1, and it is NOT a restatement - it agrees with the FY2021 edition's own bespoke table on every "
+    "overlapping line. It is nevertheless a FY2022-edition disclosure, so under the 'each year comes from its "
+    "own edition' rule it is quoted here rather than written into the FY2021 column. For the record, that "
+    "column reads: 1/2 78,028; 3 91,081; 4 462,020; 5/6 16.89%; 7 19.71%; UK 7a 1.86%; UK 7b N/A; UK 7c "
+    "0.83%; UK 7d 11.30%; 8 2.50%; UK 8a N/A; 9 0.00%; UK 9a N/A; 10 N/A; UK 10a N/A; 11 2.50%; UK 11a "
+    "13.80%; 12 5.59%; 13 892,228; 14 8.75%; 15 81,115; UK 16a 58,398; UK 16b 55,899; 16 14,600; 17 555.60%; "
+    "18 615,108; 19 513,950; 20 119.68%. Nothing is lost from this workbook - FY2021 is populated on all 11 "
+    "single-metric sheets.\n\n"
+    "ROWS 14a-14e ARE A STATED EXCLUSION, NOT A GAP. Every edition prints beneath the table: 'Rows 14a-14e "
+    "have been removed as only LREQ firms are required to disclose this information.' They are not printed by "
+    "the Bank, so they are not shown here; the reason is recorded instead.\n\n"
+    "'N/A' IS REPRODUCED AS THE BANK PRINTS IT. QIB (UK) writes the literal string 'N/A' in rows UK 7b, UK "
+    "8a, UK 9a, 10 and UK 10a - not a dash and not an empty cell - so 'N/A' is what this sheet carries. Row 9 "
+    "for FY2021 is a printed '0.00%', which is a disclosed zero and is recorded as such in the FY2021 "
+    "comparative quoted above.\n\n"
+    "TWO CROSS-EDITION DIVERGENCES, RECORDED AND NOT RECONCILED (each cell above is from the edition in which "
+    "that year is the reporting year):\n"
+    "• Row 4, FY2024: the FY2024 edition prints 601,928; the FY2025 edition's comparative column prints "
+    "601,927. This sheet carries 601,928.\n"
+    "• Row 14, FY2022: the FY2022 edition prints 8.50%; the FY2023 edition's comparative column prints 8.57%. "
+    "This sheet carries 8.50%, which is also what the Leverage Ratio metric sheet carries.\n\n"
+    "COLUMN LETTERS DO NOT TRANSFER. Each QIB edition prints two columns lettered a (its own reporting date) "
+    "and b (the prior year). This sheet is one column per YEAR, each drawn from that year's own edition's "
+    "column a, so the Bank's a/b lettering is not reproduced.\n\n"
+    + ENTITY
+)
+
+bw.add_km1_sheet(
+    title="QIB (UK) plc — KM1 Key Metrics",
+    subtitle="The Bank's own published 'Template UK KM1 - Key metrics template', reproduced in QIB (UK)'s row "
+             "order with its own template row numbers, labels, 'N/A' glyphs and printed precision. AMOUNTS ARE "
+             "IN £'000 as the Bank prints them - not the £m used on the other sheets in this workbook. Entity "
+             "basis (the Bank prepares no group accounts). FY2021 and earlier are blank: those editions publish "
+             "a bespoke key-metrics summary of the Bank's own design, not this template. See the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    years=PILLAR3_YEARS,
+    first_col_width=76,
+    source_height=520,
+)
+
 metric("CET1 Capital","£m",[("Common Equity Tier 1 (CET1) capital",cap)],"FY2014/FY2015 are the Bank's own narrative-disclosed round figures (£25.9m/£49.1m), not from a numeric capital table; FY2016 is FY2017's own comparative column.")
 metric("CET1 Ratio","% of RWA",[("Common Equity Tier 1 ratio",ratios["CET1 Ratio"])],"FY2014/FY2015: no CET1 ratio is disclosed in the reviewed QIB UK Pillar 3 documents (narrative capital amounts only, no RWA denominator given).")
 metric("Tier 1 Capital","£m",[("Tier 1 capital",cap)],"KM1/Note 4 report Tier 1 equal to CET1; no AT1 capital is reported in any reviewed year.")

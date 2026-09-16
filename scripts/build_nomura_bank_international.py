@@ -418,6 +418,138 @@ bw.add_asset_quality_sheet(
     unit_suffix=" ($'000)",
 )
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics (wayfinder KM1-022, 2026-09-16) - "Not applicable", on
+# positive evidence from thirteen documents, not on a failed search.
+#
+# Called BEFORE the first add_metric_sheet() so the sheet lands immediately
+# after Asset Quality and immediately before CET1 Capital.
+NEH_P3_URL = "https://www.nomuranow.com/portal/site/login/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310321.pdf"
+NEH_P3_22_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310322.pdf"
+NEH_P3_23_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310323.pdf"
+NEH_P3_24_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310324.pdf"
+NEH_SA_21_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-semi-annual-pillar-3-disclosures-300921.pdf"
+NEH_SA_22_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-semi-annual-pillar-3-disclosures-300922.pdf"
+NEH_SA_23_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-semi-annual-pillar-3-disclosures-300923.pdf"
+
+KM1_SOURCES = (
+    "KM1 Key Metrics - NOT APPLICABLE. Nomura Bank International plc has never published a UK KM1 template, "
+    "and no UK KM1 template for this entity exists in any document, its parent's included. That is a finding "
+    "from thirteen documents read for this purpose on 2026-09-16, not the residue of a failed search.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16. The Bank's own disclosure host is nomuranow.com, whose index pages are "
+    "BLOCKED to an automated fetch - `/portal/site/public/en-gb/` returns HTTP 403 and every "
+    "regulatory-disclosures path tried returns HTTP 404 - so the index could not be browsed, and NOTHING below "
+    "rests on that (map rule 9). Two live routes were used instead. (i) The Bank's own Annual Report for the "
+    "year ended 31 March 2026 was re-fetched from its stable address with a browser User-Agent and verified "
+    "HTTP 200 / Content-Type application/pdf / %PDF magic bytes. (ii) COMPANIES HOUSE (company 01981122) was "
+    "read live: the newest accounts filed are \"Full accounts made up to 31 March 2026\", filed 6 August 2026, "
+    "87 pages - which is the FY2026 edition this workbook already holds. NBI's year-end is 31 March, so FY2027 "
+    "is not yet a reporting year. NEWEST EDITION = FY2026, ALREADY HELD; no year was added.\n\n"
+    "WHY THIS IS NOT APPLICABLE RATHER THAN NOT FOUND - three independent findings.\n\n"
+    "1. NBI'S OWN ANNUAL REPORTS CONTAIN NO PILLAR 3 AND NO KM1. All six editions in this workbook "
+    "(FY2021-FY2026) were searched. Zero occurrences of \"KM1\"; zero of \"Pillar 3\" in the FY2025 and FY2026 "
+    "editions; the single occurrence of \"key metric\" in the FY2026 edition is in the market-risk narrative "
+    "(\"a key metric for measuring portfolio risk is Aggregated Tail Risk\") and has nothing to do with the "
+    "template. Those zeroes are facts about the documents rather than about the extraction, because the same "
+    "extraction is RICH on neighbouring terms in the same files - \"capital\" 40-53 hits per edition (map rule "
+    "15). What the accounts DO carry, in Note 15 \"UK Regulatory Capital\", is a TWO-ROW table: \"Tier 1 "
+    "capital\" and \"Total capital resources\", one figure each for the year and the comparative. No CET1 row, "
+    "no capital ratio, no RWA, no SREP block, no buffer block, no leverage row, no LCR and no NSFR. That is a "
+    "different and far shorter table, not an unnumbered KM1 - the ABC International Bank pattern under map "
+    "rule 8 - and it is NOT reshaped onto KM1 row numbers. Those two figures already populate the Tier 1 "
+    "Capital and Total Capital sheets of this workbook.\n\n"
+    "2. THE PARENT'S PILLAR 3 WAS CHECKED FIRST, NOT LAST (map rule 18), AND IT IS WHERE NBI'S NUMBERS DO "
+    "LIVE - but they are not a KM1. UK Disclosure (CRR) subsidiary reporting makes the consolidating parent's "
+    "Pillar 3 the normal home for a subsidiary's figures, so all seven located editions of Nomura Europe "
+    "Holdings plc's Pillar 3 were read - four annual (31 Mar 2021, 2022, 2023, 2024) and three semi-annual "
+    "(30 Sep 2021, 2022, 2023):\n"
+    "   - The 31 MARCH 2021 annual edition and the 30 SEPTEMBER 2021 semi-annual edition each carry a "
+    "dedicated NBI COLUMN - exactly the rule-19 shape, one template with the subsidiary as a column rather "
+    "than as a separate document - in template CC1 \"Composition of Regulatory Capital\", headed \"The Group, "
+    "NIP, NBI and NFPE Own Funds\". CC1 IS NOT KM1: its rows are the ITS 1423/2013 own-funds numbering (6, 28, "
+    "45, 46, 59, 62-66, 68), it has no RWA amount row, no leverage block, no LCR and no NSFR. The NBI column "
+    "is used on this workbook's CET1 Capital, CET1 Ratio, Tier 1 Ratio and Total Capital Ratio sheets, and on "
+    "the Interim Pillar 3 sheet, precisely because it is NBI's own entity-level figure - but it cannot supply "
+    "a KM1.\n"
+    "   - BOTH 2021 EDITIONS ALSO PRINT A SECTION ACTUALLY TITLED \"KEY METRICS\" (the semi-annual heads it "
+    "\"KM1: Key Metrics\"), AND IT IS NEITHER THE TEMPLATE NOR NBI'S. It is a single-column dashboard headed "
+    "\"The Group\" - Tier 1 Capital, Tier 2 Capital, Total RWA, Total Capital Requirement, a Tier 1 ratio, "
+    "Total Leverage Ratio Exposure, Leverage Ratio and (in the annual) an LCR trio - with no row numbers, no "
+    "CET1 row, no SREP block, no buffer rows and no NSFR. It fails the row-set test, and its one column is the "
+    "Group's. The word \"KM1\" appearing above it is exactly the token that map rule 8 forbids keying on.\n"
+    "   - FROM THE 31 MARCH 2022 EDITION ONWARD THE PARENT STATES IN TERMS THAT IT HAS STOPPED DISCLOSING NBI: "
+    "\"NBI and NFPE were previously considered 'significant subsidiaries' and previously disclosed. However, "
+    "along with the other regulated subsidiaries, they are not considered to be large subsidiaries as at 31st "
+    "March 2022 and are therefore not disclosed in this document\" (Scope of Application, printed p.5). "
+    "Consistent with that, every edition from then on prints exactly TWO UK KM1 templates - \"Template UK KM1 "
+    "- Key metrics template for the Group\" and \"Template UK KM1 - Key metrics template for NIP\" - and its "
+    "CC1 becomes \"Composition of regulatory own funds for the Group and NIP\". THE ENTITY DISTINCTION MATTERS "
+    "AND IS THE TRAP HERE: NIP is Nomura International plc, the group's London broker-dealer and a DIFFERENT "
+    "UK legal entity from Nomura Bank International plc. Its KM1 is not NBI's and is not used.\n"
+    "   - APPENDICES CHECKED TOO, because rule 19's other shape is a subsidiary template dozens of pages away "
+    "in an appendix. The FY2021 edition's Appendix 1 \"Other Disclosures\" lists CCA, MREL, LI3, CCyB1, CCR3, "
+    "CCR5-A/B, CCR6, CR1-A, CR5, CR4, CR3, CR2-A and forbearance Templates 1/3/4/5/6 - no KM1; the FY2022, "
+    "FY2023 and FY2024 editions' sole appendix is a \"CRR Compliance\" article-to-page mapping table. A full "
+    "grep for \"KM1\" across all four annual editions returns the two Group/NIP template headings, their two "
+    "contents-page entries and the CRR-compliance cross-references, and nothing else.\n\n"
+    "3. NO LATER PARENT EDITION EXISTS TO CHECK, AND THAT WAS ESTABLISHED WITH A WORKING INSTRUMENT. The "
+    "31 March 2025 and 31 March 2026 annual editions and the 30 September 2024 and 30 September 2025 "
+    "semi-annual editions all return HTTP 404 at the stable naming convention that serves every other edition "
+    "- tested 2026-09-16 with the same browser User-Agent, on the same path, in the same run in which "
+    "-310324.pdf, -300921.pdf, -300922.pdf and -300923.pdf each returned HTTP 200 / application/pdf / %PDF. "
+    "The probe demonstrably works, so the 404s are a fact about publication at those addresses, not about "
+    "reach (map rules 9 and 15). (The Internet Archive was unavailable on 2026-09-16 - it served its "
+    "\"Temporarily Offline\" page - so no Wayback fallback could be run; that is recorded as a tool outage and "
+    "nothing here depends on it.)\n\n"
+    "THE ULTIMATE JAPANESE PARENT IS NOT A SUBSTITUTE, and the reason is stated rather than assumed: Nomura "
+    "Holdings, Inc. reports under Japanese FSA Basel III rules and its Pillar 3 carries neither the UK "
+    "template set nor a UK KM1 for a UK subsidiary. NBI's UK disclosure obligation sits with the UK "
+    "consolidation group, Nomura Europe Holdings plc, whose seven editions are enumerated above. A parent's "
+    "disclosure is not the subsidiary's, and a Japanese parent's is not even the same template.\n\n"
+    "NOTHING IS BACK-FILLED FROM THE STATUTORY ACCOUNTS (map rule 22). Note 15's Tier 1 capital and Total "
+    "capital resources are an accounts-based capital note, a different basis from a Pillar 3 return - as this "
+    "workbook already demonstrates at the one date where both exist: at 31 March 2021 the parent's CC1 gives "
+    "NBI CET1 of $267m while Note 15 gives Tier 1 capital of $276,772k, a $9.8m gap from prudential filters "
+    "and deductions. Mapping the two-row note onto KM1 rows would assert a correspondence no Nomura document "
+    "has ever published.\n\n"
+    "Sources for the above:\n"
+    f"- NBI Annual Report, year ended 31 March 2026, Note 15 \"UK Regulatory Capital\" printed p.84 - {AR26_URL}\n"
+    f"- NBI Annual Report, year ended 31 March 2021, Note 15 printed p.80 - {AR21_URL}\n"
+    f"- Nomura Europe Holdings plc, Annual Pillar 3 Disclosures 31 March 2021 (76pp): \"Key Metrics\" Group "
+    f"dashboard printed p.2; CC1 with the NBI column printed p.7 / PDF p.11 - {NEH_P3_URL}\n"
+    f"- ... 31 March 2022 (91pp): Scope of Application printed p.5 / PDF p.6; UK KM1 for the Group printed "
+    f"p.10, UK KM1 for NIP printed p.11; CC1 \"for the Group and NIP\" printed p.12 - {NEH_P3_22_URL}\n"
+    f"- ... 31 March 2023 (104pp): UK KM1 for the Group printed p.11, for NIP printed p.12 - {NEH_P3_23_URL}\n"
+    f"- ... 31 March 2024 (120pp): UK KM1 for the Group printed p.12, for NIP printed p.13 - {NEH_P3_24_URL}\n"
+    f"- Nomura Europe Holdings plc, Semi-Annual Pillar 3 Disclosures 30 September 2021 (27pp): \"KM1: Key "
+    f"Metrics\" Group dashboard and CC1 with the NBI column, both printed p.1 - {NEH_SA_21_URL}\n"
+    f"- ... 30 September 2022 (37pp): UK KM1 for the Group printed p.4, for NIP printed p.5; CC1 \"for the "
+    f"Group\" printed p.6 - {NEH_SA_22_URL}\n"
+    f"- ... 30 September 2023 (43pp): UK KM1 for the Group printed p.4, for NIP printed p.5; CC1 \"for the "
+    f"Group\" printed p.7 - {NEH_SA_23_URL}\n"
+    "- Companies House filing history, company 01981122, read live 2026-09-16.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Nomura Bank International plc — KM1 Key Metrics",
+    subtitle="Not applicable. NBI publishes no Pillar 3 document of its own, and no UK KM1 template for this "
+             "entity exists in any document - its parent's included. Its own accounts' Note 15 \"UK Regulatory "
+             "Capital\" is a two-row table (Tier 1 capital, Total capital resources) and is not reshaped into "
+             "the template. Its UK parent, Nomura Europe Holdings plc, DOES print the UK KM1 - but only for "
+             "the Group and for NIP (Nomura International plc, a different UK legal entity), and from its "
+             "31 March 2022 edition it states that NBI \"is therefore not disclosed in this document\". The "
+             "NBI column that the 2021 editions do carry sits in template CC1, an own-funds composition table, "
+             "not in KM1. Seven parent editions and six of NBI's own annual reports were read; the source note "
+             "below names every one.",
+    rows=[("DATA", "Not applicable — no UK KM1 template has ever been published for this entity, by the Bank "
+                   "or by its parent, in any year covered by this workbook", {})],
+    sources_text=KM1_SOURCES,
+    first_col_width=92,
+    source_height=1500,
+)
+
+
 def metric(name, unit, rows_data, note=None, extra_source=""):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(extra_source), note=note,
                         first_col_width=52, source_height=180)
@@ -425,10 +557,7 @@ def metric(name, unit, rows_data, note=None, extra_source=""):
 # The statutory reports disclose Tier 1 capital and total capital resources, but
 # not a separate CET1 figure. No standalone ratios or liquidity metrics were
 # numerically disclosed in the five entity-level reports.
-NEH_P3_URL = "https://www.nomuranow.com/portal/site/login/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310321.pdf"
-NEH_P3_22_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310322.pdf"
-NEH_P3_23_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310323.pdf"
-NEH_P3_24_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310324.pdf"
+# (The NEH_P3_* URL constants are defined above the KM1 sheet, which cites them.)
 
 NEH_SOURCE = (
     "NBI entity-level own funds and ratios - Nomura Europe Holdings Plc, Annual Pillar 3 Disclosures "
@@ -440,7 +569,7 @@ NEH_SOURCE = (
     "themselves were unaffected and are unchanged."
 )
 NEH_NOTE = (
-    '\n\nRE-VERIFIED 2026-09-12 (independent disclosure audit) - PARTIAL RECOVERY AND A STRUCTURAL EXPLANATION. Nomura Bank International plc does not publish its own Pillar 3 document, but it IS named as a material subsidiary in its parent\'s: "Nomura Europe Holdings Plc - Annual Pillar 3 Disclosures, 31 March 2021" (https://www.nomuranow.com/portal/site/login/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310321.pdf) carries a dedicated NBI column in its CC1 "Composition of Regulatory Capital" table (p.16), giving NBI\'s OWN entity-level own funds and ratios - these are used on the relevant sheets and are NOT group figures.\nWHY MOST METRICS REMAIN BLANK - the same document states it explicitly (Scope of Application, p.1): "NBI is a United Kingdom (\'UK\') regulated bank but its Risk Weighted Assets (\'RWA\') are immaterial to the Group. Therefore NBI disclosures have been made for article 437 (Own Funds) with no other disclosures relevant to significant subsidiary requirements." So NBI\'s RWA amount, RWA category breakdown, leverage ratio, LCR, NSFR and MREL are genuinely not disclosed anywhere, by design, rather than being an access gap.\nFY2025-FY2022 - RESOLVED 2026-09-15, AND IT IS STRUCTURAL, NOT AN ACCESS GAP. A previous revision of this note recorded FY2022-FY2025 as an unresolved ACCESS LIMITATION, reasoning that the nomuranow.com portal returns HTTP 403 unauthenticated and that later editions \"very likely exist and would extend FY2022-FY2025\". Those later editions have since been obtained directly (browser session against the Nomura portal) and read in full. The reasoning was wrong: the editions do exist, but they deliberately STOP disclosing NBI. \"Nomura Europe Holdings plc - Annual Pillar 3 Disclosures, 31st March 2022\" states in its own Scope of Application (printed p.5, PDF p.6): \"NBI and NFPE were previously considered \'significant subsidiaries\' and previously disclosed. However, along with the other regulated subsidiaries, they are not considered to be large subsidiaries as at 31st March 2022 and are therefore not disclosed in this document.\" Consistent with that, the 31 March 2022 edition\'s own CC1 template is titled \"Composition of regulatory own funds for the Group and NIP\" (printed p.12, PDF p.13) and carries only Group and NIP columns - the NBI column present in the 31 March 2021 edition is gone. NBI therefore has no disclosed CET1 amount, CET1 ratio, Tier 1 ratio or Total Capital ratio for FY2022 onward from any source: the parent ceased disclosing it, and NBI\'s own Annual Report capital note (Note 15 \'UK Regulatory Capital\') discloses only Tier 1 capital and Total capital resources - no CET1 figure, no ratio and no RWA in any year. These blanks are a genuine end of disclosure, not a document that remains to be found.'
+    '\n\nRE-VERIFIED 2026-09-12 (independent disclosure audit) - PARTIAL RECOVERY AND A STRUCTURAL EXPLANATION. Nomura Bank International plc does not publish its own Pillar 3 document, but it IS named as a material subsidiary in its parent\'s: "Nomura Europe Holdings Plc - Annual Pillar 3 Disclosures, 31 March 2021" (https://www.nomuranow.com/portal/site/login/en-gb/resources/upload/nomura-europe-holdings-plc-annual-pillar-3-disclosures-310321.pdf) carries a dedicated NBI column in its CC1 "Composition of Regulatory Capital" table (printed p.7 / PDF p.11 - see the page-citation correction below; an earlier revision of this file said p.16 here too), giving NBI\'s OWN entity-level own funds and ratios - these are used on the relevant sheets and are NOT group figures.\nWHY MOST METRICS REMAIN BLANK - the same document states it explicitly (Scope of Application, p.1): "NBI is a United Kingdom (\'UK\') regulated bank but its Risk Weighted Assets (\'RWA\') are immaterial to the Group. Therefore NBI disclosures have been made for article 437 (Own Funds) with no other disclosures relevant to significant subsidiary requirements." So NBI\'s RWA amount, RWA category breakdown, leverage ratio, LCR, NSFR and MREL are genuinely not disclosed anywhere, by design, rather than being an access gap.\nFY2025-FY2022 - RESOLVED 2026-09-15, AND IT IS STRUCTURAL, NOT AN ACCESS GAP. A previous revision of this note recorded FY2022-FY2025 as an unresolved ACCESS LIMITATION, reasoning that the nomuranow.com portal returns HTTP 403 unauthenticated and that later editions \"very likely exist and would extend FY2022-FY2025\". Those later editions have since been obtained directly (browser session against the Nomura portal) and read in full. The reasoning was wrong: the editions do exist, but they deliberately STOP disclosing NBI. \"Nomura Europe Holdings plc - Annual Pillar 3 Disclosures, 31st March 2022\" states in its own Scope of Application (printed p.5, PDF p.6): \"NBI and NFPE were previously considered \'significant subsidiaries\' and previously disclosed. However, along with the other regulated subsidiaries, they are not considered to be large subsidiaries as at 31st March 2022 and are therefore not disclosed in this document.\" Consistent with that, the 31 March 2022 edition\'s own CC1 template is titled \"Composition of regulatory own funds for the Group and NIP\" (printed p.12, PDF p.13) and carries only Group and NIP columns - the NBI column present in the 31 March 2021 edition is gone. NBI therefore has no disclosed CET1 amount, CET1 ratio, Tier 1 ratio or Total Capital ratio for FY2022 onward from any source: the parent ceased disclosing it, and NBI\'s own Annual Report capital note (Note 15 \'UK Regulatory Capital\') discloses only Tier 1 capital and Total capital resources - no CET1 figure, no ratio and no RWA in any year. These blanks are a genuine end of disclosure, not a document that remains to be found.'
     "\nINDEPENDENTLY RE-VERIFIED 2026-09-15 (second reader, documents re-downloaded and re-read rather than taken on trust), "
     "and EXTENDED THROUGH FY2024, which the earlier pass had left open:\n"
     "- 31 March 2022 edition (91 pages, " + NEH_P3_22_URL + "), Scope of Application, PDF p.6: \"NBI and NFPE were previously "

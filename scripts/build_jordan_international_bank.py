@@ -129,7 +129,11 @@ def p3_sources():
         f"FY2022: Pillar 3 Report 2022, Section 1 'Introduction', Key Prudential Metrics table "
         f"(UK KM1 template, 31 December 2022) - {P3_2022_URL}\n"
         f"FY2021: Pillar 3 Report 2021, Section 1 'Introduction', Key Prudential Metrics table "
-        f"(UK KM1 template, 31 December 2021) - {P3_2021_URL}\n"
+        f"(31 December 2021). Corrected 2026-09-16 (KM1-018): this line previously described the "
+        f"FY2021 table as the 'UK KM1 template', which it is not - the FY2021 edition prints a "
+        f"shorter eleven-row bespoke summary, and only the FY2022 and later editions introduce "
+        f"their table as the 'UK KM1 - Key metrics template'. See the KM1 Key Metrics sheet - "
+        f"{P3_2021_URL}\n"
         f"FY2020: Pillar 3 Report 2020, Section 2 'Summary of key ratios' - {P3_2020_URL}\n"
         f"FY2019: Pillar 3 Report 2019, Section 3 'Summary of key ratios' table - {P3_2019_URL}\n"
         f"FY2018: Pillar 3 Report 2018, Section 3 'Summary of key ratios' table - {P3_2018_URL}\n"
@@ -652,6 +656,159 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
                          rows_data, sources_text, note=note, first_col_width=44, source_height=170)
 
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - JIB's own published key-metrics table, reproduced as
+# printed (KM1-018, 2026-09-16).
+#
+# JIB heads the table "KEY PRUDENTIAL METRICS" and introduces it with the
+# words "The table below summarises JIB's key prudential ratios (as per UK KM1
+# - Key metrics template)" in its FY2022, FY2023 and FY2024 Pillar 3 Reports,
+# each on printed page Five (PDF page 5). The table carries the template's row
+# set (own funds / RWEA / capital ratios / combined buffer / leverage / LCR
+# build-up / NSFR) so it IS the template under the map's row-set test, even
+# though JIB prints NO row numbers at all - the same situation as Europe Arab
+# Bank. No row numbers are invented here.
+#
+# Each edition prints ONE column only (its own year-end); there is no
+# comparative column anywhere in the series, so every cell below necessarily
+# comes from the edition in which that year is the reporting year.
+#
+# Two kinds of drift, reproduced rather than normalised:
+#   (a) ROW SET. Only the FY2022 edition prints "Total SREP own funds
+#       requirements (%)"; FY2023 and FY2024 drop it. No edition prints the
+#       UK 7a-7d SREP breakdown, UK 8a, UK 9a, 10 or UK 10a, and none prints
+#       the UK 14a-14e additional leverage rows.
+#   (b) PRECISION. FY2022 prints one decimal place throughout (83.8, 435.3);
+#       FY2023 mixes whole numbers and one decimal (89, 449, 451.4, 49.6);
+#       FY2024 prints amounts as whole numbers (94, 473, 488, 56). Label
+#       wording drifts too - "Institution specific countercyclical capital
+#       buffer" (FY2022/FY2023) becomes "Institution-specific..." (FY2024).
+#       The FY2024 label is used for the row, with the variants recorded in
+#       the source note.
+#
+# FY2021 and earlier are BLANK, and that is a row-set finding rather than a
+# gap: the FY2021 Pillar 3 Report does print a "KEY PRUDENTIAL METRICS" table,
+# but it is a shorter, different table - eleven rows including a "Tier 2" row
+# the template does not have, and with no buffer, SREP, LCR build-up or NSFR
+# rows - and its introductory sentence omits the "as per UK KM1" wording that
+# the FY2022+ editions add. Mapping it onto the template would invent a
+# correspondence JIB never published. The FY2021 and earlier figures that DO
+# exist are on the individual metric sheets, sourced from those narrower
+# tables.
+#
+# FY2025 is blank because no FY2025 Pillar 3 Report exists yet - see the
+# latest-edition check in the source note.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £m)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1)", {"FY2024": 94, "FY2023": 89, "FY2022": 83.8}),
+    ("DATA", "Tier 1", {"FY2024": 94, "FY2023": 89, "FY2022": 83.8}),
+    ("DATA", "Total capital", {"FY2024": 94, "FY2023": 89, "FY2022": 83.8}),
+    ("SECTION", "Risk-weighted exposure amounts (£m)", {}),
+    ("DATA", "Total risk-weighted exposure amount (RWA)", {"FY2024": 473, "FY2023": 449, "FY2022": 435.3}),
+    ("SECTION", "Risk-based capital ratios as a percentage of RWA", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)", {"FY2024": "19.9%", "FY2023": "19.8%", "FY2022": "19.3%"}),
+    ("DATA", "Tier 1 ratio (%)", {"FY2024": "19.9%", "FY2023": "19.8%", "FY2022": "19.3%"}),
+    ("DATA", "Total capital ratio (%)", {"FY2024": "19.9%", "FY2023": "19.8%", "FY2022": "19.3%"}),
+    ("DATA", "Total SREP own funds requirements (%)", {"FY2022": "12.1%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)", {"FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "Institution-specific countercyclical capital buffer (%)", {"FY2024": "2%", "FY2023": "2%", "FY2022": "1%"}),
+    ("DATA", "Combined buffer requirement (%)", {"FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%"}),
+    ("DATA", "Overall capital requirements (%)", {"FY2024": "17.1%", "FY2023": "17.06%", "FY2022": "15.6%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2024": "7.3%", "FY2023": "5%", "FY2022": "3.6%"}),
+    ("SECTION", "Basel III leverage ratio (£m / %)", {}),
+    ("DATA", "Total Basel III leverage ratio exposure measure", {"FY2024": 488, "FY2023": 451.4, "FY2022": 436.8}),
+    ("DATA", "Leverage ratio (%)", {"FY2024": "19.3%", "FY2023": "19.7%", "FY2022": "19.3%"}),
+    ("SECTION", "Liquidity Coverage Ratio (LCR) (£m / %)", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (weighted value -average)",
+     {"FY2024": 56, "FY2023": 49.6, "FY2022": 54.2}),
+    ("DATA", "Cash outflows - Total weighted value", {"FY2024": 46, "FY2023": 57.9, "FY2022": 65.6}),
+    ("DATA", "Cash inflows - Total weighted value", {"FY2024": 81, "FY2023": 68, "FY2022": 72.6}),
+    ("DATA", "Total net cash outflows (adjusted value)", {"FY2024": 12, "FY2023": 14.5, "FY2022": 16.4}),
+    ("DATA", "Liquidity coverage ratio - LCR (%)", {"FY2024": "490%", "FY2023": "343%", "FY2022": "330%"}),
+    ("SECTION", "Net Stable Funding Ratio (£m / %)", {}),
+    ("DATA", "Total available stable funding", {"FY2024": 305, "FY2023": 284.7, "FY2022": 210.5}),
+    ("DATA", "Total required stable funding", {"FY2024": 237, "FY2023": 227.7, "FY2022": 163.2}),
+    ("DATA", "NSFR ratio (%)", {"FY2024": "129%", "FY2023": "125.1%", "FY2022": "129%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Jordan International Bank Plc's own 'KEY PRUDENTIAL METRICS' table, published in "
+    "Section 1 'Introduction' of each year's Pillar 3 Report on the Bank's own website. The table "
+    "sits on printed page Five (PDF page 5) of each edition and is introduced with the sentence "
+    "'The table below summarises JIB's key prudential ratios (as per UK KM1 - Key metrics "
+    "template) and further details on its liquidity positions can be found in Section 7.':\n"
+    f"FY2024: Pillar 3 Report 2024, p.Five, column headed '31 DECEMBER 2024 - £m' - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Report 2023, p.Five, column headed '31 DECEMBER 2023 - £m' - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Report 2022, p.Five, column headed '31 DECEMBER 2022 - £m' - {P3_2022_URL}\n"
+    "KM1 presentation notes:\n"
+    "• ENTITY AND BASIS: solo, and only solo. Each edition's Section 1.4 states 'The "
+    "information disclosed solely relates to Jordan International Bank Plc. JIB has no "
+    "subsidiaries.' There is no consolidated basis to confuse it with, and the FY2024 edition "
+    "adds 'As at 31 December 2024, the Bank has not been exempted from any disclosure "
+    "requirements based on materiality or on proprietary or confidential information' - so the "
+    "rows JIB omits are omitted, not formally excluded under Article 432.\n"
+    "• NO ROW NUMBERS: JIB prints this template without the KM1 row numbers ('1', 'UK 7a', "
+    "'8', ...) that most filers print. None have been added here, because assigning them would be "
+    "this project's inference rather than the Bank's disclosure. The row ORDER is JIB's own.\n"
+    "• ONE COLUMN PER EDITION: no edition prints a comparative column, so each year's figures "
+    "are necessarily that year's own originally-published ones. Nothing here is a later edition's "
+    "restated comparative.\n"
+    "• ROW-SET DRIFT: 'Total SREP own funds requirements (%)' is printed ONLY in the FY2022 "
+    "edition (12.1%) and is dropped from FY2023 and FY2024; it is shown here in the position "
+    "FY2022 prints it, between the capital-ratio block and the combined-buffer heading. No "
+    "edition prints the UK 7a-7d SREP breakdown, UK 8a, UK 9a, row 10, UK 10a or the UK 14a-14e "
+    "additional leverage rows, so those rows are absent from this sheet rather than blank.\n"
+    "• LABEL DRIFT: FY2022 and FY2023 print 'Institution specific countercyclical capital "
+    "buffer (%)'; FY2024 prints 'Institution-specific countercyclical capital buffer (%)' "
+    "(hyphenated). The FY2024 wording labels the row. FY2022 and FY2023 both print 'Risk-based "
+    "capital ratios as a percentage of RWA' and 'Basel III leverage ratio' identically to FY2024.\n"
+    "• PRECISION IS THE BANK'S OWN and drifts year to year: FY2022 prints one decimal place "
+    "throughout; FY2023 mixes whole numbers (89, 449) with one decimal (451.4, 49.6, 284.7); "
+    "FY2024 prints every amount as a whole number (94, 473, 488, 56, 305, 237). Ratios likewise "
+    "range from '2%' to '17.06%'. None of this has been re-rounded.\n"
+    "• SOURCE ARITHMETIC RECORDED, NOT CORRECTED: in FY2024 the printed HQLA of 56 over the "
+    "printed net cash outflows of 12 gives 467%, against the 490% LCR the same row prints - a "
+    "consequence of JIB rounding that edition's amounts to whole £m, since FY2022 (54.2/16.4 = "
+    "330%) and FY2023 (49.6/14.5 = 342%) both tie to their printed ratios. Reproduced as "
+    "published. Note also that JIB's cash INFLOWS exceed its cash outflows in all three years "
+    "(FY2024 81 vs 46), with net outflows landing at the LCR regime's 25%-of-outflows floor.\n"
+    "• FY2021 AND EARLIER ARE BLANK BECAUSE THE TEMPLATE IS NOT USED, not because a figure is "
+    "missing. The FY2021 Pillar 3 Report (p.Five) does print a table headed 'KEY PRUDENTIAL "
+    "METRICS / 31 DECEMBER 2021 - £M', but it is a different and much shorter table: eleven rows "
+    "(CET1, Tier 1, Tier 2, Total capital, Total RWA, the three capital ratios, the two leverage "
+    "rows and a single 'LCR (%)' row), with a 'Tier 2' row the template does not contain, no "
+    "buffer rows, no SREP row, no LCR build-up and no NSFR rows - and its introductory sentence "
+    "reads simply 'The table below summarises JIB's key prudential ratios', without the 'as per "
+    "UK KM1 - Key metrics template' clause the FY2022 and later editions add. Under the map's "
+    "row-set test that is a bespoke summary, not an unnumbered KM1, so it is not transcribed "
+    f"here; its figures appear on the individual metric sheets instead - {P3_2021_URL}\n"
+    "• LATEST-EDITION CHECK, 2026-09-16: JIB's own Annual Report and Accounts page "
+    "(https://www.jordanbank.co.uk/annual-report-and-accounts/) was fetched directly and lists "
+    "Pillar 3 Reports for 2016-2024 only - the newest is the Pillar 3 Report 2024, already cited "
+    "here. The same page already carries the FY2025 company accounts "
+    "(https://www.jordanbank.co.uk/media/tlihy44n/company_accounts_2025.pdf), which this workbook "
+    "also already holds, so the Bank is a Pillar 3 edition behind its own accounts and no FY2025 "
+    "KM1 exists to transcribe. None newer than FY2024."
+)
+
+bw.add_km1_sheet(
+    title="Jordan International Bank Plc - KM1 Key Metrics",
+    subtitle="The Bank's own 'KEY PRUDENTIAL METRICS' table - which it introduces as the 'UK KM1 - Key "
+             "metrics template' - reproduced in JIB's own row order, labels and printed precision. Solo "
+             "basis (the Bank has no subsidiaries); amounts in £m, ratios as printed. JIB prints no KM1 "
+             "row numbers and none have been added. FY2021 and earlier are blank because those editions "
+             "print a shorter bespoke table rather than the template, and FY2025 is blank because no "
+             "FY2025 Pillar 3 Report has been published - see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=64,
+    source_height=380,
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
+)
 
 metric(
     "CET1 Capital", "£m",

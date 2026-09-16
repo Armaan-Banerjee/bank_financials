@@ -1,0 +1,4305 @@
+ICBC (London) ple
+4552753
+
+\ ‘
+
+ICBC (London) plc
+
+Report and Financial Statements
+31 December 2018
+
+Company Registration No : 4552753
+
+Wn
+
+erate 3
+COMPANIES HOUSE
+
+ICBC (London) pic
+Rennes ee eee ee ee eee eee eee eee eee a
+For the year ended 31 December 2018
+
+Contents Pages
+Chairman’s Statement 1
+Strategic Report 2
+Board of Directors and other information . 9
+Directors’ Report 10
+Statement of Directors’ Responsibilities in respect of Strategic Report,
+
+the Director’s Report and the financial statements 12
+Independent auditor’s report to the members of ICBC (London) plc 13
+Profit and Loss Account 19
+Statement of Other Comprehensive Income 20
+Balance Sheet 21
+Statement of Changes in Equity 22
+Statement of Cash Flows 23
+
+Notes to the financial statements 24
+ICBC (London) plc
+|
+For the year ended 31 December 2018
+
+Chairman’s Statement
+
+I am delighted to announce that ICBC (London) ple “the Bank” achieved an increase in profits in 2018 despite
+the fact that this proved to be a difficult year for both business and banking. During the last year we have
+witnessed growing geopolitical uncertainty with ongoing trade tensions between the United States and China and
+continuing difficulties in achiéving a satisfactory Brexit agreement. At the time of preparing this statement, these
+uncertainties look set to continue for much of 2019. The possible implications of these factors and, in particular
+uncertainties regarding Brexit, are discussed in detail in the Strategic Report and the Bank has undertaken
+detailed planning and scenario analysis to ensure that our finances and regulatory ratios will remain strong in the
+face of any possible market disruption resulting from a disorderly Brexit. Notwithstanding these uncertainties,
+political and economic relations between the UK and China, a core factor in relation to the Bank’s business
+strategy remain strong and this, together with our own prudent management, will erisure that the Bank continues
+its steady success during these uncertain times. -
+
+The Bank’s strategy is very much linked to that of the Industrial and Commercial Bank of China’s London
+Branch “the Branch” and following a strategic review last year it has been decided, for sound business reasons, to
+allow the Bank’s assets to fall below the $2.5bn to $3bn figure I mentioned last year: more details on the
+business rationale for this are included in the strategic review. The Bank’s total assets reduced slightly during the
+year to $2.37 billion on 31 December 2018 (2017: $2.43 billion). Both our assets and funding sources remain
+well-diversified and the reduction in total assets is due in part to moving some assets to the Branch to ensure that
+the Bank’s regulatory ratios did not come under pressure.
+
+In 2018 our profit before tax was $30.98 million compared with $26.89 million in 2017, an increase of 15.20%.
+The increase in profit was mainly due to higher operating income relating to trading desk services provided to the
+ICBC Head Office. The impairment losses reduced to $167k from $1.27 million in 2017. Our resultant profit for
+the year after tax and irnpairment was $25.37 million (2017: $21.70 million). We will continue to maintain a
+prudent approach to the management of our portfolio.
+
+Our operating expenses in 2018 (excluding impairment losses) decreased slightly by 1.82% to $11.22 million
+(2017: $11.43 million). At the end of 2018 our staff numbers had incréased to 180 (2017 - 164) ~ a rise of
+9.76%. I would like to welcome the new staff to ICBC. During the year many initiatives were pursued to
+enhance communication and inclusion of our growing workforce and 1 am particularly pleased that a number of
+our employees have participated in events as part of our corporate social responsibility campaign. I would like to
+thank the management team and all staff for their important contribution to the Bank during the year.
+
+One of our independent non-executive directors, Peter Goshawk, resigned during 2018 upon the expiry of his
+contract. I would like to thank Peter for his contribution over the past three and a half years and welcome Mr
+Alan Gemes as an independent non-executive director and Chair of our Board Risk Committee. Finally, I would
+also like to thank Mr Han for managing the Bank in a very positive manner during these challenging times and to
+thank my fellow directors for the support and guidance they have provided during the year.
+
+Hao Hu
+Chairman
+
+ICBC (London) pic
+eee eee ee eee ee eee e eee eee eee eee
+
+For the year ended 31 December 2018
+
+Strategic Report
+
+Introduction
+
+In last year's Strategic Report the Bank stated that its objectives from the previous year remained unchanged.
+These included to have stable, modest and organic growth of the balance sheet, continuous enhancement of our
+risk and control framework, maintaining a robust capital and liquidity position, providing a positive and engaging
+workplace for our employees to grow and develop and embracing the benefits of a culturally diverse workforce.
+
+These objectives were met in all instances, although Balance Sheet growth was below the expectations set out in
+the 2018 report. This is partly due to the transfer of assets to the Branch on the back of a change in the growth
+strategy of the Bank, which will be set out in more detail later in this report.
+
+Given the uncertainty in global markets, especially around ongoing trade tensions between China and the US and
+the UK's departure from the European Union (Brexit), the Bank's main objective for the coming year is to ensure
+that the Bank is in a very strong financial position (particularly from a liquidity, funding and capital perspective)
+to withstand any negative impacts from the external economic environment. In addition, the Bank no longer aims
+to maintain a Balance Sheet size of between $2.5bn and $3bn, but will allow for a reduction in the Balance Sheet
+through asset maturities.
+
+In the rest of this report we will set out the highlights of our performance against these 2018 objectives and the
+strategies we will employ to achieve these objectives going forward.
+
+Achieving our objectives in a challenging macro-economic environment
+
+The next year will be challenging from a macro-economic perspective and although the Bank does not assess the
+direct impact of any one particular known development to be material on its existing business, the Bank is
+exposed to the indirect consequences of the current uncertainties. These include increased currency volatility,
+possible tightening of liquidity, more expensive funding, lower levels of GDP growth and a general decline in
+foreign investment.
+
+Following the UK Parliament's initial rejection of the proposed Brexit Withdrawal Agreement in early January
+2019, the uncertainty regarding the status of the UK in relation to the European Union post the end of March has
+increased significantly. The Bank continues to assess its strategies for a range of possible Brexit outcomes, with
+liquidity management being paramount in the short-term. The overall medium to long-term approach is covered
+in more detail later in this report. The UK is still expected to see moderate economic growth in 2019 with a slight
+slowdown in 2020, whilst inflation is forecasted to remain near or at 2% with both productivity and wages set to
+increase. This forecast however assumes a smooth exit from the EU and if this does not transpire the range of
+possible outcomes is vast, and generally more negative in outlook. UK exports have fallen sharply from 2017
+levels and the Bank continues to monitor the impact of this on existing and potential future customers.
+
+China's economy grew by 6.6% in 2018, which was the lowest rate in 28 years. The slowdown is expected to
+continue in 2019 with both local industrial production and foreign trade flows expected to decline. Corporate debt
+in the country is still at very high levels although it seems to have stabilised over the last year. Although trade
+tensions between the US and China persist, there are signs of easing as a longer-term rebalancing between the
+two major economies is contemplated. The Bank remains of the view that despite the factors mentioned above the
+outlook for the Chinese economy remains stable and we are well positioned to take advantage of local and
+regional investment and trade finance opportunities, leveraging our close relationship with our Parent Bank, the
+Branch and other ICBC entities globally.
+
+Financial performance, objectives and strategy
+
+As mentioned above, following a strategic review the Management of the Bank has decided to move away from
+the previous strategy of increasing the Bank's balance sheet size. Several factors have contributed to the change in
+strategy, which includes the relationship between the Bank and the Branch, target markets, efficient use of capital
+and liquidity resources and the current positioning of the ICBC Group in the UK. As ICBC's operations in the UK
+continue to expand the target customer base mostly consists of large national and multi-national enterprises. The
+demand from these entities are generally for larger borrowing facilities which, due to capital and large exposure
+constraints, can only be accommodated in the Branch which has access to the very significant capital base of the
+Parent Bank. The Bank will therefore only focus on smaller, mostly UK-based opportunities. Management do not
+foresee that the number of such opportunities will be sufficient to completely offset the scheduled maturities of
+ICBC (London) ple .
+a
+For the year ended 31 December 2018
+
+Strategic Report
+
+assets within the next year and therefore expect to see the Balance Sheet contracting from an asset perspective.
+This will make it possible to repay the Subordinated Loan held by the Bank, resulting in reduced interest expense
+whilst still retaining a very strong capital adequacy ratio. The Bank will however remain the primary vehicle for
+ICBC's operational activities, decision making and corporate governance framework setting in the UK.
+
+In line with the strategy set out above, assets of c$100m were moved to the Branch in late 2018 with an
+additional c$100m of assets planned to be transferred in 2019. This is being done to ensure that the Bank will
+comfortably remain within its Large Exposure limits after any repayment of the Subordinated debt. The transfer
+of assets meant that the asset growth target set out in the 2018 Strategic Report was not met.
+
+The Bank's assets portfolio and funding sources remain well diversified and backed by a very strong capital and
+liquidity position. We continued to strengthen our operational capabilities, with an increase in head count of
+around 10%, mostly focussed on support areas covering both the Bank and the Branch.
+
+Specific changes to prior year
+
+Last year we mentioned the changes made to the service agreement we have with the Branch and specifically the
+allocation of overhead costs. The arrangement was successfully embedded during this year.
+
+This was the first year that the Bank moved from an incurred loss to an expected loss credit impairment
+methodology, following implementation of IFRS 9: Financial Instruments. The impact of this change resulted in a
+one-off negative net adjustment of $164k to opening reserves and there has been no significant change to this
+assessment during 2019.
+
+Key performance summary
+
+The Bank employs several key financial performance indicators to assess financial performance and considers
+these together in order to obtain a holistic view of our performance. We use these indicators not only to assist in
+providing useful financial insight, but also in telling a wider story on how the Bank is managed and the risks and
+challenges it faces. Amongst the most important indicators are Return on Equity (RoE), Return on Assets (RoA),
+the Net Interest Margin (NIM), Non-performing loans to Assets (NPA) and our Cost to Income ratio (CTI).
+
+Total assets have decreased by 2.33% compared to 2017, mainly due to the transfer of assets from the Bank to the
+Branch in late 2018. If this was not taken into account the Bank would have seen modest growth during the year
+compared to the 11% reduction experienced in 2017. As stated, we expect a modest decrease in balance sheet
+size for 2019 as existing positions mature in excess of new business opportunities.
+
+Net interest income increased by 2.88% compared to 2017 due to an increase in Net Interest Margin. The Bank
+expects margins in the coming year to remain at a similar level.
+
+Profit after tax has increased by 16.91% to $25.37m, mainly due to higher operating income relating to trading
+desk services provided to the ICBC Head Office and a reduction in impairment losses. Looking forward, we
+would expect income to be slightly lower due to the forecasted asset balance reduction.
+
+Return on Equity (ROE) - This ratio is calculated by dividing our net profit after tax by total average shareholder
+funds. The Bank uses this as an indication of how efficiently we use these funds. For 2018 this ratio increased to
+6.18% (2017: 5.59%).
+
+The Return on Assets (RoA) provides the Bank with a measure of the ability to generate income from our assets.
+It is calculated by dividing profit after tax by total average assets. The RoA for 2018 was 1.06% compared to
+0.87% the previous year. The main driver for this was the increase in profits not directly related to asset growth
+combined with a slight reduction in the average asset balance for the year.
+
+Net Interest Margin (NIM) shows the difference between the interest income generated by the Bank and the
+amount of interest paid out to our lenders, relative to the amount of our average interest-earning assets. NIM was
+up from 1.17% in 2017 to 1.22% this year. e
+
+The Bank had no additional non-performing assets (NPA) during the year with total gross remaining at $5m,
+which is fully provided. We expect to write this asset off during the year.
+
+The Cost to Income ratio (CTD) provides a measurement of the cost of running the Bank in relation to our
+operating income and is an important indicator of the productivity of the Bank. This ratio is calculated expressing
+
+ICBC (London) ple
+Da
+
+For the year ended 31 December 2018
+
+Strategic Report
+
+the Bank's operating cost as a percentage of its operating income and has reduced to 26.49% for 2018 from
+28.86% in the previous year as a result of an increase in profits and slightly lower operating costs.
+
+Principal risks and our approach to risk management
+
+The Bank is exposed to a number of different risks, either directly attributable to the business we undertake or
+due to general market-wide industry factors and macro economic conditions. The Board oversees, reviews and
+approves a clearly defined risk appetite in order to ensure that the Bank takes on levels and types of risk within its
+risk capacity and commensurate to that required to support our business strategy. Whilst we cannot completely
+eliminate all risk, any risks beyond those deemed acceptable within our risk appetite are actively mitigated where
+possible through a number of risk management techniques and actions. These are defined, monitored and
+reviewed in accordance with our Entérprise-Wide Risk Management Framework and managed through well
+established "three lines of defence” and "four eyes" models.
+
+Every person at the Bank has a responsibility for risk management. At a departmental level, policy and procedure
+manuals are written in accordance with the Bank’s approach to the management of our principal risks. Employees
+are required to operate within the guidelines set out in the Bank-wide policies and their own departmental
+procedures. Effective risk management forms an important part of our annual performance assessment for all
+bank employees.
+
+The Risk and ALM, Credit Management, and Compliance and Legal departments periodically carry out reviews
+to assess the compliance with and effectiveness of risk mitigation, while the Internal Audit department, as the
+third line of defence, undertakes independent, risk-based reviews of the risks in the various business areas and the
+related controls in place to mitigate them. The scope of Internal Audit work is agreed by the Audit Committee,
+which also oversees the results of the reviews undertaken. The Head of the Internal Audit department reports to
+the Chairman of the Audit Committee. From a Senior Management perspective, risk is further managed through
+the Executive Committee, the Asset and Liability Committee, the Financial Crime Risk Committee and the Credit
+Committee. During the year the Bank established an Information Technology Steering Committee to oversee and
+monitor technology and data risk, including cyber risk management. In 2019 a new committee, the Finance
+Committee, will.be launched to review and approve the operating expense budget for the Bank and monitor
+material expenses incurred throughout the year.
+
+In addition to the Audit Committee mentioned above, two other sub-committees of the Board, the Risk
+Committee and the Governance and Compliance Committee, monitor and review the management of risk and
+report their findings back to the Board.
+
+The Bank categorises its principal risks into a number of different risk types, which include credit risk, liquidity
+and funding risk, market risk, operational risk, conduct risk, regulatory risk and geopolitical risk.
+
+In particular, the risks faced by the Bank include the following:
+
+« Credit risk arises from exposures to a range of counterparties, industries and countries. These are managed
+through a number of different concentration and credit limits, strict lending criteria, pre-approval by the Credit
+Committee and the CEO and ongoing asset quality monitoring by the Credit Management Department to ensure
+that our existing governance and risk controls are effective, asset quality is satisfactory and capital adequacy is
+sufficient to absorb potential credit losses. During the year the Bank successfully completed the Credit Process
+Re-engineering Project which had the aim of better aligning the first and second lines of defence for credit risk
+management.
+
+There is concentration risk across several dimensions including the Chinese and UK economies — reflecting the
+Bank’s business mandate — and sector concentration in banks and non-bank financial institutions (42.9% of total
+credit exposures), a large component being intra-group exposures to other ICBC entities mitigated by the
+longstanding Netting Agreement between the Bank and acceding parties. Other than Financial Institutions, the
+Bank's largest sector exposure is to Commercial Real Estate which accounted for 11% of all exposures, most of
+which is secured. This has reduced from 16% at the end of 2017 mainly due to the asset transfer to the Branch
+mentioned earlier in the report. There were no additional non-performing loans.
+
+* Liquidity and funding risk remains a key focus of the Bank. We have a very limited retail deposit base
+compared to our local competitors. However, the Bank's funding sources are well diversified and we have
+established long-term funding measures and can collaborate with the Branch to strengthen our funding capacity.
+ICBC (London) pic
+. .
+For the year ended 31 December 2018
+
+Strategic Report
+
+Appropriate risk measurement, monitoring and reporting systems and internal limits are in place, liquidity stress
+testing is undertaken against a range of scenarios, and we have a well-developed Liquidity Contingency Plan. At
+the end of the year, the Bank had a Liquidity Coverage Ratio (LCR) of 250%, which is significantly above the
+minimum regulatory requirement. This is a reduction from the 418% at the end of 2017 as the Bank actively
+works on more efficient use of excess liquidity.
+
+* Market risk includes interest rate risk in the banking book (IRRBB), foreign exchange rate risk, and position
+risk. The Bank has strict limits in place for foreign exchange risk exposure and interest rate risk in the banking
+book, which mainly arises due to duration/re-pricing mismatches between assets and liabilities, as well as off-
+balance sheet items. Where appropriate, hedging contracts are taken out to ensure these risks are managed within
+our risk appetite. The Bank continues to carefully consider the risk-adjusted return on assets, while managing our
+generally low market risk profile (interest rate and FX risk).
+
+* Operational risk losses within the Bank are very low (2018: $5,294 ;2017: $1,942) and well within the internal
+risk appetite. During the year the Bank made good progress in encouraging active and early disclosure of all risk
+incidents, regardless of whether actual financial loss was involved. Whilst we assess the risk arising from the
+internal environment to be stable year-on-year, the risk from external factors remains on an increasing trend.
+However, there is a strong governance and risk control framework in place and the overall residual risk profile is
+low. The Bank has also improved the way in which legal risk is managed through the establishment of our legal
+panel and has improved the second line of defence framework for cyber and IT risk.
+
+* Regulatory risk, the risk of changes in regulations that might affect the business, the industry or the markets the
+Bank operates in, is increasing because of the growing complexity of the Bank’s operations as well as the
+regulatory environment in the UK, EU and China. The Bank’s Compliance and Legal Department effectively
+manages regulatory change projects as well as business-as-usual reviews and financial crime risk management
+including anti-money laundering and sanctions monitoring. During the year the Bank has invested in risk and
+compliance resourcing and continues to use specialist external advisors where appropriate.
+
+* It has been another year of high geopolitical risk and it is our expectation that this will be a continued trend in
+2019. More than anything else the uncertainty surrounding the Brexit Withdrawal Agreement and the trade
+tensions between the US and China dominated the geopolitical agenda from the Bank's perspective. Whilst
+tensions in the Korean peninsula have eased compared to a year ago, the relationship between Russia and the
+West has markedly deteriorated over the last twelve months. The Bank continues to monitor both domestic and
+international risks and their possible impact on our strategy and business plans. Geopolitical risk can have an
+impact on a variety of financial and non-financial factors and therefore the Bank's geographical limits, interest
+rate risk limits and foreign currency limits all play a part in mitigating this risk. The Bank also has in place a
+Business Continuity Plan and other measures to safeguard our staff, customers and business.
+
+Further information on these risks is included in Notes 30-34 and 36 to the financial statements.
+
+The United Kingdom leaving .the European Union (Brexit)
+
+As mentioned earlier in this report, significant uncertainty remains regarding the on-going trade relationship
+between the United Kingdom and the European Union. Even if a formal withdrawal deal can be agreed,
+negotiations on the permanent future trading arrangements have not yet commenced. In the last Strategic Report
+the Bank noted that negotiations had moved onto phase two, after significant progress on the EU Withdrawal Bill
+had been made in the House of Commons. We also noted at the time that it was expected that the next steps,
+which included Parliament agreeing the final deal, would be more challenging. This remains the case and as of
+the time of signing the financial statements no withdrawal deal had yet been reached. The default situation under
+current UK law is that the country would leave the EU without a deal unless Parliament approves a deal or
+amends existing legislation and therefore, given the uncertainty inherent in those options, the Bank is prudently
+preparing on a no-deal basis.
+
+The potential impact of Brexit is constantly monitored and integrated into the Bank’s strategic plans, notably the
+impact on market volatility, a weaker sterling and negative macro-economic forecasts. Formal Brexit contingency
+planning is ongoing and will remain a focus of the Executive Committee, the ALCO and the Risk Committee. We
+also continuously monitor our direct exposure to the European Union and the possible impact of a "no-deal
+Brexit" on our European assets, including the worst case scenario of exiting those positions. Senior Management
+
+ICBC (London) ple
+eee
+
+For the year ended 31 December 2018
+
+Strategic Report
+
+receives a full market update on a weekly basis, identifying emerging trends and updates on any material
+legislative changes, proposals and political events.
+
+As it stands the Bank is of the opinion that Brexit will not have a direct material negative impact on our business
+in the foreseeable future given our increased focus on the UK market and the fact that the ICBC group already
+has banking operations in a number of other EU countries, reducing the dependency on the Bank to increase its
+exposure to the European Union in times of uncertainty. However, the Bank could be negatively impacted by the
+second order market-wide impact on the UK economy, both from a currency and credit risk perspective as core
+customers may face financial challenges. In order to ensure stability due to shorter term economic and market
+risk impacts the Bank is ensuring that it remains highly capitalised with significant excess liquidity. Where
+feasible the Bank is working on early refinancing of existing medium term funding and if needed, funding and
+liquidity support from the Branch can be arranged within a relatively short period of time.
+
+In addition to monitoring and managing the risks brought about by the uncertainty, the Bank also continues to
+look for possible new opportunities that may emerge where the positioning of the Bank may present a
+competitive advantage over other financial institutions as they prepare for the impact of Brexit.
+
+Non-financial performance indicators
+
+The Bank does not evaluate success purely on the basis of financial and quantitative indicators. In addition to
+these, the Bank also closely monitors non-financial indicators and trends to measure our performance. These
+include staff retention rates, the diversity of our employees, work/life balance, development opportunities
+available and taken up (available both in the Bank and throughout the wider ICBC group) and our corporate
+social responsibility.
+
+Our remuneration policy is designed to ensure that we reward performance not purely based on financial results
+but also taking into account sound risk management and conduct practices and the employees’ contribution to the
+organisation's non-financial objectives. Amongst the non-financial key indicators included in our competency
+framework and therefore directly impacting remuneration of employees are (i) compliance with internal and
+regulatory policies and procedures, (ii) continuous professional development and (iii) the application of best
+practice in what we do. These indicators are used in the assessment of all employees, including the Senior
+Management of the Bank. We competitively benchmark to the market and strongly promote career development
+and progression,
+
+The results of the 2018 staff survey have shown material improvement in scores for almost every category and
+across the Bank, with several indicators above the market average. This improvement is testimony to the
+numerous initiatives launched on the back of the previous year's survey results and Senior Management will
+
+’ continue to expand on these initiatives during the course of 2019 to ensure that the Bank remains a safe and
+welcoming place to work and attract the best talent available.
+
+This year we also launched our new Employee Recognition Scheme and we will continue with the scheme in
+2019.
+
+Staff from across the Bank have participated in a number of events as part of our corporate social responsibility
+campaign including providing reading support to local primary school children. The Bank was also a main
+sponsor of the Royal Shakespeare Company's rendition of Romeo and Juliet in support of the local arts.
+
+At the end of the year we had 180 full time employees (2017: 164). We do not expect this number to increase
+substantially within the next year.
+
+Future developments
+
+The Senior Management of the Bank is currently considering a possible consolidation of the Subsidiary and
+Branch Balance Sheets under one banking licence. At the time of signing the accounts no decision on this has
+been taken and therefore the strategy as set out in this document remains the primary strategy of the Bank. We
+believe that even if such a consolidation was to go ahead the process would not impact the going concern
+assumptions that form the basis of the financial statements.
+
+The Bank will continue to work alongside the Branch to provide leading commercial and wholesale banking
+services. As mentioned already the Bank is not expected to grow its balance sheet in 2019 but will continue to
+ICBC (London) ple
+
+For the year ended 31 December 2018
+
+Strategic Report
+
+form the core for operational activities of ICBC in London. One of the major projects for the Bank will be to
+assist in creating an EMEA syndications hub for ICBC and expand London as one of the major funding centres
+for the Group. The Bank is continuously looking to expand its ancillary business offerings for both new and
+existing clients and where appropriate will leverage its relationship with the Branch to do so.
+
+In the past we have ensured that we have built up the appropriate competencies and controls before embarking on
+new ventures and will continue to do so going forward. Our main focus will remain on wholesale banking whilst
+retaining a modest and bespoke retail offering. The Bank enjoys strong channels into China through our Parent
+Bank which allows us to offer a high degree of customer service to large corporate customers banking in both
+China and the UK.
+
+We do not expect the same level of regulatory changes that we have seen in the last two years, but will be
+focussing on embedding the recent changes as well as ensuring that we have the correct infrastructure in place to
+comply with HMRC's "Making Tax Digital" requirements.
+
+Finally, data quality enhancement and managing the integrity of our internal data resources will be a key focus
+for the Bank in 2019.
+
+Governance
+
+The Governance structure of the Bank is set up in accordance with the principles of good corporate governance
+consistent with the status of our Parent Bank.
+
+The Bank is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority
+and the Prudential Regulation Authority.
+
+The Board oversees the Bank by collectively directing the Bank's affairs in the interests of its shareholder and
+relevant stakeholders. They are responsible for establishing the vision and values of the Bank, setting strategy and
+ensuring that the relevant structures and appropriate delegation to management is in place.
+
+The Board delegates certain responsibilities to its relevant sub-committees (Audit Committee, Risk Committee
+and Governance and Compliance Committee) as well as to the CEO who in turn delegates responsibilities to the
+Executive Committee and its individual members, the Credit Committee, the Asset and Liability Committee
+(ALCO), the Financial Crime Risk Committee and the IT Steering Committee.
+
+The Bank employs two independent UK based non-executive directors, one of whom is the Chair of the Bank’s
+Audit Committee and one of whom is the Chair of the Risk Committee; there is also one UK. based non-executive
+director who chairs the Governance and Compliance Committee; and two China based non-executive directors
+from our Parent Bank.
+
+At an executive level, the Bank’s management level committees mentioned above ensure effective
+implementation of all major policies and operating processes and decisions; establishing clear policies and
+decision-making procedures; and ensuring appropriate risk management through the three lines of defence and
+four eyes models. Independent, risk-based internal audit reviews are undertaken by the third line of defence on a
+regular basis and the Bank is externally audited by KPMG.
+
+We ensure that we fully comply with the conduct risk framework and fully subscribe to the principle of “treating
+customers fairly” in order that the trust put in us as bankers is well-founded. It is important for the Bank not to be
+seen to only comply with the letter of the law, but also embrace the spirit of the law and we embed this principle
+throughout the Bank.
+
+ICBC (London) pic
+For the year ended 31 December 2018
+
+Strategic Report
+
+Conclusion
+
+The Bank recognises that 2019 will be a year with exceptional geopolitical uncertainty. We are confident that we
+are well placed to withstand and manage this uncertainty and have put measures in place to enhance the
+robustness of the Bank from a capital, liquidity and funding perspective. We remain positive about the Bank's
+ability to build on the strong foundations and look forward to the year ahead.
+
+The Strategic Report was approved by the Board on 15 March 2019 and signed on its behalf by:
+
+Ruixiang Han
+Chief Executive Officer
+ICBC (London) ple
+ae ea
+For the year ended 31 December 2018
+
+Board of Directors and other information
+
+Directors
+
+Hao Hu (Chairman)
+
+Ruixiang Han (Director and Chief Executive Officer)
+
+Shuyi Yuan (Director and Deputy Chief Executive Officer)
+
+Qingsheng Lin (Non-Executive Director)
+
+David Newton (Independent Non-Executive Director)
+
+Peter Goshawk (Independent Non-Executive Director — Resigned 31 August 2018)
+Alan Gemes (Independent Non-Executive Director —- Appointed 6 September 2018)
+John Kerr (Non-Executive Director)
+
+Company Secretary
+John Kerr
+
+Auditor
+
+KPMG LLP
+
+15 Canada Square
+Canary Wharf
+London
+
+E14 5GL
+
+Registered Office
+81 King William Street
+London
+
+EC4N 7BG
+
+Management Team
+
+Ruixiang Han (Chief Executive Officer)
+
+Shuyi Yuan (Deputy Chief Executive Officer)
+
+Graeme Tosen (Chief Financial Officer)
+
+Xiao Lu (Deputy General Manager)
+
+Robert Clark (Deputy General Manager and Chief Risk Officer)
+Ying Shi (Deputy General Manager)
+
+ICBC (London) ple
+Re eee cence eee eee eee eee eee a ae
+
+Directors’ Report
+
+The directors present their report and the financial statements of the Bank for the year ended 31 December 2018.
+
+Financial statements
+
+The financial statements are prepared in US Dollars as this is the underlying currency in which the Bank conducts
+its principal activities.
+
+Matters included within the Strategic Report
+
+Details of business review, future developments indication of financial risk management objectives and policies
+and the Bank’s exposure to market risk, credit risk and liquidity risk have been included in the Strategic Report.
+Results and dividends
+
+The trading results for the year, and the Bank's financial position at the end of the year, are shown i in the attached
+financial statements.
+
+‘No dividend has been paid and the directors do not recommend the payment of a dividend for the year.
+
+The profit of the Bank for the year, after taxation, amounted to US$25.37 million (2017: US$21.70 million). The
+credit balance on the Profit and Loss Account is to be carried forward.
+
+Principal activities
+
+The principal activities of the Bank are international banking and related services within the scope of permissions
+granted to the Bank under the Financial Services and Markets Act 2000.
+
+Events since the balance sheet date
+There have been no significant events since the balance sheet date.
+
+Directors and their interests
+The directors who held office during the year were as follows:
+
+-Hao Hu (Chairman)
+
+Ruixiang Han (Director and Chief Executive Officer)
+
+Shuyi Yuan (Director and Deputy Chief Executive Officer)
+
+Qingsheng Lin (Non-Executive Director)
+
+David Newton (Independent Non-Executive Director)
+
+Peter Goshawk (Independent Non-Executive Director — resigned 31 August 2018)
+Alan Gemes (Independent Non-Executive Director — appointed 6 September 2018)
+John Kerr (Non-Executive Director)
+
+No contracts of significance in relation to the Bank’s business in which a director of the Bank had a material
+interest, whether directly or indirectly, subsisted at the end of the year or at any time during the year, within the
+meaning of Section 413 of the Companies Act 2006.
+
+Donations
+During the financial year the Bank made no political donations (2017: Nil).
+
+Going Concern
+The Bank’s directors have made an assessment of the Bank’s ability to continue as a going concern.
+
+In assessing going concern, the Directors take account of all information which they are aware of about the
+future, which is at least, but not limited to, 12 months from the date that the Balance Sheet is signed. The
+Directors consider Brexit as a significant event that will have impact on the Bank’s liquidity, capital and profit.
+The Directors assess the Bank’s forecasted results and projections, estimated capital, funding and liquidity
+requirements, contingent liabilities, and possible economic, market and product developments under a normal and
+stressed scenarios, including a range of possible Brexit outcomes. The Directors are satisfied that the Bank has
+the resources to continue in business for the foreseeable future. Further, the Directors are not aware of any
+material uncertainties that may cast significant doubt upon the Bank’s ability to continue as a going concern.
+
+10
+ICBC (London) ple
+eee eceeec cress cree e cece eee ccc eee ener eee eee eee ee es
+
+Directors’ Report
+
+As mentioned in the Strategic Report, the Directors are considering a possible consolidation of the Subsidiary and
+Branch Balance Sheets under one banking licence (the Branch licence). At the time of signing the financial
+statements no decision has been made. We do not believe that such a consolidation has an impact on the going
+concern assessment made in this report.
+
+Disclosure of information to auditor
+
+The directors who held office at the date of approval of this directors’ report confirm that, so far as they are each
+aware, there is no relevant audit information of which the company’s auditor is unaware; and each director has
+taken all the steps that he/ she ought to have taken as a director to make himself/ herself aware of any relevant
+audit information and to establish that the company’s auditor is aware of that information.’
+
+Auditor
+
+In accordance with section 489 of the Companies Act 2006, a resolution for the reappointment of KPMG as the
+external auditor is to be proposed at the forthcoming Annual General Meeting.
+
+By order of the Board
+Kerr
+
+Company Secretary
+1S March 2019
+
+"1
+
+ICBC (London) plc
+eee eee nescence eee ence eee cece ccc eee eee cece
+
+Statement of Directors’ Responsibilities in respect of the
+Strategic Report, the Director’s report and the financial
+statements
+
+The directors are responsible for preparing the Annual Report, Strategic Report, the Directors’ Report and the
+financial statements in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law they
+have elected to prepare the financial statements in accordance with UK accounting standards and applicable law
+(UK Generally Accepted Accounting Practice), including FRS 102 The Financial Reporting Standard applicable
+in the UK and Republic of Ireland.
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they
+give a true and fair view of the state of affairs of the Company and of its profit or loss for that period. In
+preparing the financial statements, the directors are required to:
+
+select suitable accounting policies and then apply them consistently;
+e make judgements and estimates that are reasonable and prudent;
+
+¢ state whether applicable UK accounting standards have been followed, subject to any material departures
+disclosed and explained in the financial statements;
+
+* assess the Company’s ability to continue as a going concern, disclosing, as applicable, matters related to
+going concem; and
+
+* use the going concern basis of accounting unless they either intend to liquidate the Company or to cease
+operations, or have no realistic alternative but to do so.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+Company’s transactions and disclose with reasonable accuracy at any time the financial position of the Company |
+and enable them to ensure that its financial statements comply with the Companies Act 2006. They are
+responsible for such internal control as they determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error, and have general responsibility
+for taking such steps as are reasonably open to them to safeguard the assets of the Company and to prevent and
+detect fraud and other irregularities.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial information
+included on the company’s website. Legislation in the UK governing the preparation and dissemination of
+financial statements may differ from legislation in other jurisdictions.
+
+12.
+
+kpmg
+KPMG LLP
+
+15 Canada Square
+London
+
+E14 5GL
+
+United Kingdom
+
+independent auditor’s report to the members of ICBC (London) pic
+
+-Our opinion is unmodified
+
+We have audited the financial statements of ICBC (London) plc (“the Company”) for the year ended 31
+December 2018 which comprise the Profit and Loss Account, Statement of Comprehensive Income, Balance
+Sheet, Statement of Changes in Equity, Statement of Cash Floss and the related notes, including the accounting
+policies in note 1.
+
+In our opinion the financial statements:
+
+e the financial statements give a true and fair view of the state of Company’s affairs as at 31 December 2018
+and of its profit for the year then ended;
+
+e have been properly prepared in accordance with UK accounting standards, including FRS 102 The Financial
+Reporting Standard applicable in the UK and Republic of Ireland; and
+
+e@ have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (“ISAs (UKY”) and
+applicable law. Our responsibilities are described below. We believe that the audit evidence we have obtained is
+a sufficient and appropriate basis for our opinion. Our audit opinion is consistent with our report to the audit
+committee.
+
+We were first appointed as auditor by the Directors on 23 June 2015. The period of total uninterrupted
+engagement is for the three financial years ended 31 December. We have fulfilled our ethical responsibilities
+under, and we remain independent of the Company in accordance with, UK ethical requirements including the
+FRC Ethical Standard as applied to public interest entities. No non-audit services prohibited by that standard
+were provided.
+
+2. Key audit matters: including our assessment of risks of material misstatement
+
+Key audit matters are those matters that, in our professional judgment, were of most significance in the audit of
+the financial statements and include the most significant assessed risks of material misstatement (whether or not
+due to fraud) identified by us, including those which had the greatest effect on: the overall audit strategy; the
+allocation of resources in the audit; and directing the efforts of the engagement team. We summarise below the
+key audit matters, in arriving at our audit opinion above, together with our key audit procedures to address those
+matters and, as required for public interest entities, our results from those. procedures. These matters were
+addressed, and our results are based on procedures undertaken, in the context of, and solely for the purpose of,
+our audit of the financial statements as a whole, and in forming our opinion thereon, and consequently are
+incidental to that opinion, and we do not provide a separate opinion on these matters.
+
+Key audit matter How our audit addressed the key audit matter
+
+The impact of uncertainties due to the UK We developed a standardised firm-wide approach to to the
+
+exiting the European Union on our Audit consideration of the uncertainties arising from Brexit in
+planning and performing our audits. Our procedures
+
+included:
+Refer to page 5 of the strategic for the Brexit
+disclosures, the potential impact and
+uncertainties. e Our Brexit knowledge: We considered the
+directors’ assessment of Brexit related sources of
+
+13
+kpmg
+KPMG LLP
+
+15 Canada Square
+London
+
+E14 5GL
+
+United Kingdom
+
+Independent auditor’s report to the members of ICBC (London) pic
+
+Unprecedented levels of uncertainty
+
+All audits assess and challenge the reasonableness
+of estimates, in particular as described in
+impairment of loans and advances to customers
+below and _ related disclosures and the
+appropriateness of the going concern basis of
+preparation of the financial statements (see
+below). All of these depend on assessments of the
+
+future economic environment and the Company’s _
+
+future prospects and performance.
+
+Brexit is one of the most significant economic
+events for the UK and at the date of this report its
+effects are subject to unprecedented levels of
+uncertainty of outcomes, with the full range of
+possible effects unknown.
+
+risk for the Company’s business and financial
+resources compared with our own understanding of
+the risks. We considered the directors’ plans to take
+action to mitigate the risks.
+
+Sensitivity analysis: When addressing impairment
+of loans and advances to customers and other areas
+that depend on forecasts, we compared the
+directors’ analysis to our assessment of the full
+range of reasonably possible scenarios resulting
+from Brexit uncertainty and, where forecast cash
+flows are required to be discounted at a rate other
+than the original effective interest rate, considered
+adjustments to discount rates for the level of
+remaining uncertainty.
+
+Assessing transparency: As well as assessing
+individual disclosures as part of our procedures on
+impairment of loans and advances to customers, we
+considered all of the Brexit related disclosures
+together, including those in the strategic report,
+comparing the overall picture against our
+understanding of the risks.
+
+Our results:
+
+As reported under impairment of loans and advances to
+customers, we found the resulting estimates and related
+disclosures of impairment of loans and advances to
+customers and disclosures in relation to uncertainty due
+to Brexit to be acceptable. However, no audit should be
+expected to predict the unknowable factors or all
+possible future implications for a company and this is
+particularly the case in relation to Brexit.
+
+Key audit matter
+
+How our audit addressed the key audit matter
+
+Impairment of loans and advances at amortised cost
+
+Control design, observation and operation:
+
+We tested the design and operation of manual and automated
+
+Refer to page 27 (accounting policy) and page 46
+(financial disclosures)
+
+Subjective estimate
+
+IFRS 9 was implemented by the Company on 1 January
+2018. This new standard requires the Company to
+recognise expected credit losses (ECL) on financial
+instruments which involves significant judgement and
+estimates. The carrying value of financial instruments
+within the scope of IFRS 9 ECL may be materially
+
+controls over ECL including:
+
+— the accuracy of data input into the system used for credit
+
+-grading and the approval of credit facilities
+
+— assessing the suitability of the model used and
+
+appropriateness of the model validation controls in
+operation; and
+
+— the ongoing monitoring and identification of loans
+
+displaying indicators of impairment and whether they are
+migrating, on a timely basis to the watchlist or the
+impaired assets report. —
+
+14
+
+Our financial risk modelling expertise: We involved our
+kpmg
+KPMG LLP
+
+15 Canada Square
+London
+E14 SGL
+United Kingdom
+
+Independent auditor’s report to the members of ICBC (London) plc
+
+misstated if judgements or estimates made by the own financial risk modelling specialists in evaluating the
+
+Company are inappropriate. appropriateness of the Company’s IFRS 9 impairment
+methodologies (including the SICR criteria used). We used
+our experience to independently assess the reasonableness of
+the probability of default, loss given default and exposure at
+default assumptions, after considering the characteristics of
+the loan book.
+
+Our economic scenario expertise: We involved our own
+economic specialists to assist us in assessing the
+appropriateness of the Company’s methodology for
+determining the economic scenarios used and the probability
+weightings applied to them.
+
+Tests of details: Key aspects of our testing involved:
+
+e Re-performing the model calculation to assess whether
+the calculation was working as per our expectations,
+and
+
+¢ sample testing over key inputs and assumptions
+impacting ECL calculations. .
+
+Our results: We considered the credit impairment charge
+and provision recognised and the related disclosures to be
+acceptable (2017: acceptable).
+
+3. Our application of materiality and an overview of the scope of our audit
+
+Materiality for the financial statements as a whole was set at $1.33m (2017: $1.36m), determined with reference
+to a benchmark of profit before tax, of which it represents 5% (2017: 5%).
+
+We agreed to report to the Audit Committee any corrected or uncorrected identified misstatements exceeding
+$66k (2017: $68k), in addition to other identified misstatements that warranted reporting on qualitative grounds.
+
+Our audit of the Company was undertaken to the materiality level specified above and was performed at the
+Bank’s registered office in London. However, we engaged KPMG China to perform testing on certain IT controls
+on our behalf where the applications were hosted at ICBC Limited in China.
+
+4. We have nothing to report on going concern
+
+The Directors have prepared the financial statements on the going concern basis as they do not intend to liquidate
+the Company or to cease its operations, and as they have concluded that the Company’s financial position means
+that this is realistic. They have also concluded that there are no material uncertainties that could have cast
+significant doubt over its ability to continue as a going concern for at least a year from the date of approval of the
+financial statements (“the going concern period”).
+
+Our responsibility is to conclude on the appropriateness of the Directors’ conclusions and, had there been a
+material uncertainty related to going concern, to make reference to that in this audit report. However, as we
+cannot predict all future events or conditions and as subsequent events may result in outcomes that are
+inconsistent with judgements that were reasonable at the time they were made, the absence of reference to a
+material uncertainty in this auditor's report is not a guarantee that the Company will continue in operation.
+
+15
+kpmg
+KPMG LLP
+
+15 Canada Square
+London
+
+E14 5GL
+United Kingdom
+
+Independent auditor’s report to the members of ICBC (London) plc
+
+In our evaluation of the Directors’ conclusions, we considered the inherent risks to the Company’s business
+model and analysed how those risks might affect the Company’s financial resources or ability to continue
+operations over the going concern period. The risks that we considered most likely to adversely affect the
+Company’s available financial resources over this period were:
+
+e ©Availability of funding and liquidity in the event of a market wide stress scenario including the impact of
+Brexit; and
+
+e Impact of any macroeconomic deterioration, particularly a China slowdown, on the recoverability of the
+loan book
+
+As these were risks that could potentially cast significant doubt on the Company's ability to continue as a going
+concern, we considered sensitivities over the level of available financial resources indicated by the Company’s
+financial forecasts taking account of reasonably possible (but not unrealistic) adverse effects that could arise from
+these risks individually and collectively and evaluated the achievability of the actions the Directors consider they
+would take to improve the position should the risks materialise.
+
+Based on this work, we are required to report to you if we have concluded that the use of the going concern basis
+of accounting is inappropriate or there is an undisclosed material uncertainty that may cast significant doubt over
+the use of that basis for a period of at least a year from the date of approval of the financial statements.
+
+We have nothing to report in these respects, and we did not identify going concern as a key audit matter.
+
+5. We have nothing to report on the strategic report and the directors’ report
+
+The directors are responsible for the strategic report and the directors’ report. Our opinion on the financial
+statements does not cover those reports and we do not express an audit opinion thereon.
+
+Our responsibility is to read the strategic report and the directors’ report and, in doing so, consider whether, based
+on our financial statements audit work, the information therein is materially misstated or inconsistent with the
+financial statements or our audit knowledge. Based solely on that work:
+
+* we have not identified material misstatements in those reports;
+
+e in our opinion the information given in the strategic report the directors’ report for the financial year is
+consistent with the financial statements; and
+
+¢ in our opinion those reports have been prepared in accordance with the Companies Act 2006.
+
+6. We have nothing to report on the other matters on which we are required to report by exception
+
+Under the Companies Act 2006, we are required to report to you if, in our opinion:
+
+*® adequate accounting records have not been kept by the Company, or returns adequate for our audit have not
+been received from branches not visited by us; or
+
+e the financial statements are not in agreement with the accounting records and returns; or
+e certain disclosures of directors’ remuneration specified by law are not made; or
+e we have not received all the information and explanations we require for our audit.
+
+We have nothing to report in these respects.
+
+16
+kpmg
+KPMG LLP
+
+15 Canada Square
+London
+E14 5GL
+United Kingdom
+
+Independent auditor’s report to the members of ICBC (London) pic
+
+7. Respective responsibilities
+
+Directors’ responsibilities
+
+As explained more fully in their statement set out on page 12 , the Directors are responsible for: the preparation
+of the financial statements including being satisfied that they give a true and fair view; such internal control as
+they determine is necessary to enable the preparation of financial statements that are free from material
+misstatement, whether due to fraud or error; assessing the Company’ s ability to continue as a going concern,
+disclosing, as applicable, matters related to going concern; and using the going concern basis of accounting
+unless they either intend to liquidate the Company or to cease operations, or have no realistic alternative but to do
+sO.
+
+Auditor’s responsibilities
+
+Our objectives are to obtain reasonable assurance about whether | the financial statements as a whole are free from
+material misstatement, whether due to fraud or other irregularities (see below), or error, and to issue our opinion
+in an auditor’s report. Reasonable assurance is a high level of assurance, but does not guarantee that an audit
+conducted in accordance with ISAs (UK) will always detect a material misstatement when it exists.
+Misstatements can arise from fraud, other irregularities or error and are considered ‘material if, individually or in
+aggregate, they could reasonably be expected to influence the economic decisions of users taken on the basis of
+the financial statements.
+
+A fuller description of our responsibilities is provided on the FRC’s website at
+
+www.frc.org.uk/auditorsresponsibilities.
+
+Irregularities — ability to detect
+
+We identified areas of laws and regulations that could reasonably be expected to have a material effect on the
+financial statements from our general commercial and sector experience through discussion with the directors and
+other management as required by auditing standards, and from inspection of the company’s regulatory and legal
+correspondence and discussed with the directors and other management the policies and procedures regarding
+compliance with laws and regulations. We communicated identified laws and regulations throughout our team
+and remained alert to any indications of non-compliance throughout the audit.
+
+The potential effect of these laws and regulations on the financial statements varies considerably.
+
+Firstly, the Company is subject to laws and regulations that directly affect the financial statements including
+financial reporting legislation (including related companies legislation), distributable profits legislation and
+taxation legislation and we assessed the extent of compliance with these laws and regulations as part of our
+procedures on the related financial statement items.
+
+Secondly, the Company is subject to many other laws and regulations where the consequences of non-compliance
+could have a material effect on amounts or disclosures in the financial statements, for instance through the
+imposition of fines or litigation or the loss of Company’s licence to operate. We identified the following areas as
+those most likely to have such an effect: health and safety, anti-bribery, employment law, regulatory capital and
+liquidity and certain aspects of company legislation recognising the financial and regulated nature of the
+Company’s activities and its legal form. Auditing standards limit the required audit procedures to identify non- .
+compliance with these laws and regulations to enquiry of the directors and inspection of regulatory and legal
+correspondence, if any. These limited procedures did not identify actual or suspected non-compliance.
+
+Owing to the inherent limitations of an audit, there is an unavoidable risk that we may not have detected some
+material misstatements in the financial statements, even though we have properly planned and performed our
+audit in accordance with auditing standards. For example, the further removed non-compliance with laws and
+regulations (irregularities) is from the events and transactions reflected in the financial statements, the less likely
+
+17
+
+kpmg
+KPMG LLP
+
+15 Canada Square
+London
+
+E14 5GL
+
+United Kingdom
+
+independent auditor’s report to the members of ICBC (London) pic
+
+the inherently limited procedures required by auditing standards would identify it. In addition, as with any audit,
+there remained a higher risk of non-detection of irregularities, as these may involve collusion, forgery, intentional
+omissions, misrepresentations, or the override of internal controls. We are not responsible for preventing non-
+compliance and cannot be expected to detect non-compliance with all laws and regulations.
+
+8. The purpose of our audit work and to whom we owe our responsibilities
+
+This report is made solely to the Company’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Company’s members
+those matters we are required to state to them in an auditor’s report and for no other purpose. To the fullest
+extent permitted by law, we do not accept or assume responsibility to anyone other than the Company and the
+Company’ s members, as a body, for our audit work, for this report, or for the opinions we have formed.
+
+Suvro Dutta (Senior Statutory Auditor)
+
+for and on behalf of KPMG LLP, Statutory Auditor
+Chartered Accountants
+
+15 Canada Square
+
+London |
+
+E14 5GL
+
+15 March 2019
+
+18
+ICBC (London) ple
+
+Profit and Loss Account
+for the year ended 31 December 2018
+
+2017
+Notes § ‘000
+Interest receivable from financial investments 2 6,678
+Other interest receivable 2 51,298
+Interest payable (29,349)
+Net interest income ' 28,627
+Fees and commissions receivable 2 7,074
+Fees and commissions payable 2 (2,339)
+Net fees and commission 4,735
+Revaluation (loss)/gain on financial derivatives 11 522
+Foreign exchange gain and realised gain on financial
+derivatives 529 |
+Other operating income 3 5,174
+Gain on sale of tangible assets -
+Gain on sale of financial instruments -
+Other income Baas 7A54 6,225
+Total operating income 39,587
+Personnel expenses 4 (25,684)
+Depreciation of tangible fixed assets 14 (1,668)
+Amortisation of intangible assets 15 (73)
+Impairment losses 10 (1,269)
+Other operating expenses 6 (10,623)
+Reimbursement of expenses attributable to the Branch 26,621
+Operating expenses (12,696)
+Profit on ordinary activities before tax 26,891
+Tax on profit on ordinary activities 7 { (5,193)
+Profit for the financial year ARE ser! 21,698
+
+AU activities of the Bank are considered to relate to continuing operations.
+
+Notes 1 to 38 form part of these financial statements.
+
+19
+ICBC (London) ple
+a
+
+Statement of Comprehensive Income
+for the year ended 31 December 2018
+
+2018 2017
+Note |". -$'000| . $000
+Profit for the financial year ~ °, 25,367). 21,698
+Other comprehensive income:
+Change in fair value of financial investments at fair value oP he
+through other comprehensive income (FVOCI) 22 _ 1,431) (2,033)
+Impairment allowance on financial investments at FVOCI 10 Jo oo 72
+Tax on components of other comprehensive income 22 J. oe 193° 688
+Other comprehensive loss for the year, net of income tax _ . (1,166). (1,345)
+Total comprehensive income for the year ae 24,201 : 20,353
+
+Notes 1 to 38 form part of these financial statements.
+
+20
+ICBC (London) pic
+
+Balance Sheet
+As at 31 December 2018
+
+Assets
+
+Cash and balances at central banks 162
+Loans and advances to banks 840,064
+Loans and advances to customers 953,232
+Derivative financial instruments 52,120
+Financial investments at fair value through other .
+comprehensive income(FVOC]) 448,210
+Financial investments at amortised cost 13 ae lS 69,522
+Tangible fixed assets 14 ss Ber 37,994
+Intangible assets 15 178
+Prepayments, accrued income and othef assets ___- 16 03 29,757
+Total Assets oe 2,431,239
+Liabilities
+
+Deposits by banks 18 1,475,894
+Customer accounts 19 375,734
+Derivative financial instruments 11 50,936
+Provisions 24 Ti 3,220
+Accruals and deferred income 20 bal 3,433
+Subordinated loan 23 100,000
+Current tax liabilities 4,091
+Deferred tax liabilities 17 618
+Other liabilities 18,913
+Total Liabilities _ 2,032,839
+Share Capital and Reserves
+
+Authorised and called up share capital 21 - 200,000
+Retained earnings . 22 199,057
+Other reserves 22 657
+Total Share Capital and Reserves _ 398,400
+Total Liabilities and Share Capital and Reserves 2,431,239
+Memorandum items
+Contingencies and commitments 25 566,787
+
+These financial statements were approved by the Directors on 15 March 2019 and are signed on their behalf by:
+
+if
+
+Ruixiang Han /
+Company Registration No: 4552753
+Notes | to 38 form part of these financial statements.
+
+Director
+
+, Graeme Tosen
+Chief Financial Officer
+
+ICBC (London) ple _~_
+
+Statement of Changes in Equity
+
+for the year ended 31 December 2018
+
+Ordinary
+Share Retained Other Total
+Capital Earning Reserves Equity
+; $000 _. $'000 $000 .$ 000
+Balance at 1 January 2017 . “200,000 = «177,359 =si«iSB8BSCs«3'78,,047
+Profit for the year - 21,698 - 21,698.
+Other comprehensive loss - “ (1,345) (1,345)
+Balance at 31 December 2017 200,000 -199,057——(657)_—=—« 398,400
+
+Balance at 1 January 2018
+
+Adjustment on initial application of IFRS 9
+
+Restated balance at 1 January 2018
+
+Profit for the year
+Other comprehensive loss
+
+Balaiice at 31 December 2018
+
+Notes 1 to 38 form part of these financial statements.
+
+sweet
+
+22
+ICBC (London) ple
+
+Statement of Cash flows
+for the year ended 31 December 2018
+
+2017
+Notes $ ‘000
+Cash flows from operating activities
+Profit before tax 26,891
+Adjustments for non-cash items
+Depreciation of tangible fixed assets 14 1,668
+Tangible fixed assets expensed off. 14 -
+Amortisation of intangible assets 15 73
+Impairment losses 10 _ 1,269
+Interest income 2 (57, 976)
+Interest expense 2 29,349
+Gain oii disposal of tangible fixed assets -
+Gain on sale of financial investments at FVOCI -
+Exchange gain and accretion of discounts and amortisation of
+premiums on financial investments 1,767
+Revaluation gain/(loss) on financial derivatives 1] (522)
+‘ - : , (24,372)
+(Increase)/ decrease in operating assets
+Loans to banks 8 276,532
+Loans and advances to customers 9 70,269
+Other assets 16 (16,268)
+, 330,533
+(Decrease)/increase in operating liabilities
+Deposits by banks 18 (278,644)
+Deposits from customers 19 (15,278)
+Other liabilities PeSeE 16,506
+$2 (28,294); (277,416)
+Adjustment for cash items Wy ee i
+Interest received ig 66,3 312: 56,073
+Interest paid (36.643). (29,773)
+Income tax paid Ee 208); (3,313)
+_ i 22/4615 22,987
+Net cash from /(used in) operating activities ‘ BEE76, 619! 78,623
+Cash flow from investing activities | ee foes
+Acquisition of financial investments at FVOCI 12 te :306), (226,102)
+Maturity /Disposal of financial investments at FVOCI 12 166,059
+Acquisition of financial investments at amortised cost 13 (69,678)
+Maturity of financial investments at amortised cost 13 -
+Acquisition of tangible fixed assets 14 (174)
+Disposal of tangible fixed assets 14 sche -
+Acquisition of intangible assets 15 Bek $65): (223)
+Net cash from /(used in) investing activities = fe (7973): (130,118)
+Net cash from financing activities vet oor So ae :
+Net (decrease)/ increase in cash and cash equivalents | oA 4 646: (51,495)
+Cash and cash’equivalents at 1 January — -° . 29 - zah7 1:939;) 126,704
+Effects of exchange rates on cash and cash equivalents ak ; (3,270)
+Cash and cash equivalents at 31 Deceinber 29 71,939
+
+The notes 1 to 38 form part of these financial statements.
+
+23
+ICBC (London) ple
+eee ee eee ree erence reece erect cee
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+1. Accounting policies
+
+1.1 Corporate information
+
+ICBC (London) ple (the Bank), a wholly-owned subsidiary of Industrial and Commercial Bank of China
+Limited, is incorporated and domiciled in England and Wales with its registered office at 81 King William
+Street, London EC4N 7BG. The Bank is licensed to carry on banking business in the United Kingdom under the
+regulatory supervision of the Prudential Regulatory Authority (PRA) and Financial Conduct Authority (FCA).
+
+1.2 Basis of preparation
+© Statement of Compliance
+
+The financial statements have been prepared in accordance with FRS 102, the Companies Act 2006 and the
+special provisions of Schedule 2 of Large and Medium-sized Companies and Group (Accounts and Reports)
+Regulation 2008.
+
+At the time of approval of these financial statements, the Board of Directors of the Bank was satisfied that the
+capital and liquidity position of the Bank remained satisfactory. Further, the Bank has sufficient capital and
+liquidity to enable it to meet its obligations for the foreseeable future under a range of possible Brexit scenarios
+and its prospective flow of new business.
+
+The financial statements are prepared on a going concern basis considering the factors mentioned above. More
+detail on going concern is provided in the Directors’ Report and Statement of Directors’ Responsibilities.
+
+The financial statements were authorised for issue by the Board of Directors of the Bank on 15 March 2019.
+
+1.3 Review of accounting policies
+
+The Bank prepares financial statements in accordance with FRS 102. The Bank has chosen to adopt the
+recognition and measurement provisions of IFRS 9 Financial Instruments issued by the IASB in July 2014, the
+disclosure requirements of Section 11 and 12 and the presentation requirements of paragraph 11.38A or 12.25B
+of FRS 102 in respect of Financial Instruments from 1 January 2018, departing from the recognition and
+measurement provisions of IAS 39.
+
+The adoption of IFRS 9 has resulted in changes in our accounting policies for recognition, classification and
+measurement of financial assets and financial liabilities and impairment of financial assets.
+
+The Bank elected not to restate comparative figures of the previous year as permitted by IFRS 9. Any
+adjustments to the carrying amounts of financial assets and liabilities at the date of transition were recognised in
+the opening retained earnings and other reserves of the current period.
+
+Disclosures relating to the impact of the adoption of IFRS 9 on the Bank are set out in Note 28.
+
+1.4 Functional and presentational currency
+
+The financial statements are prepared in US Dollars, which is the functional currency of the Bank. Unless
+otherwise indicated, all the figures are rounded to the nearest thousand.
+
+1.5 Foreign currencies transactions and balances
+
+Transactions in currencies other than US Dollars are translated into US Dollars using the spot exchange rate
+ruling at the date of the transaction. At the end of each reporting period, monetary assets and liabilities
+denominated in currencies other than US Dollars are translated using the closing rate. Non-monetary items
+measured at historical cost are translated using the exchange rate at the date of the transaction and non- monetary
+items measured at fair value are measured using the exchange rate when fair value was determined.
+
+24
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+When FRS 102 requires a gain or loss on non-monetary items to be recognised in other comprehensive income,
+the Bank recognises any component of that gain or loss in other comprehensive income.
+
+1.6 Critical accounting judgements and key sources of estimation uncertainty
+
+The preparation of financial statements in conformity with FRS 102 requires management to make judgements,
+estimates and assumptions that affect the application of accounting policies and the reported amount of revenues,
+expenses, assets and liabilities, and the accompanying disclosures. Actual results may differ from these estimates.
+
+The key assumptions concerning the future, management judgements and estimations that have a significant risk
+of causing a material adjustment to the carrying amount of assets or liabilities within the next financial year are
+set out below:
+
+1.6.1 Impairment losses on financial assets
+
+The Bank determines impairment losses on financial assets based on the expected credit loss (ECL). The
+measurement of the expected credit loss allowance for financial assets measured at amortised cost and fair value
+through other comprehensive income (FVOCI) is an area that requires the use of complex models and significant
+assumptions about future economic conditions and credit behaviour (e.g. the likelihood of customers defaulting
+and the resulting losses). ,
+
+A number of significant judgements are also required in applying the accounting requirements for measuring
+ECL, such as:
+
+- Determining criteria for significant increase in credit risk;
+
+- Choosing appropriate models and assumptions for the measurement of ECL;
+
+- Establishing the number and relative weightings of forward-looking scenarios for each type of
+product/market and the associated ECL; and
+
+- Establishing groups of similar financial assets for the purposes of measuring ECL.
+
+1.6.2 Classification of financial assets
+
+The classification of financial assets is based on (i) the business model within which financial assets are
+managed and (ii) contractual cash flow characteristics (whether the cash flows represent ‘solely payment of
+principal and interest’(SPPI)). Determining the appropriate business models and assessing the SPPI requirements
+for the financial assets may require significant accounting judgement.
+
+1.6.3 Fair value of financial instruments
+
+The fair values of financial assets and liabilities recorded on the Balance Sheet are primarily derived from active
+markets. In the absence of an active market, the fair value is determined using a variety of valuation techniques
+that include the use of mathematical models. To the extent possible, valuation techniques make maximum use of
+market inputs. However, when market inputs are not available, the Bank employs internal financial modelling
+based on professional judgement and best practice.
+
+25
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+1.7 Exemption under FRS 102
+The Bank has taken advantage of the following exemptions under FRS 102:
+
+1.7.1 Related Party Disclosure
+
+The Bank has taken advantage of the exemption, under FRS 102.1.12 (e), to disclose key management personnel
+compensation in total.
+
+1.8 Significant Accounting Policies
+
+1.8.1 Financial instruments
+
+The Bank has chosen to adopt the recognition and measurement provisions of IFRS 9 Financial Instruments (as
+adopted for use in the EU), the disclosure requirements of Section.11 and 12 and -the presentation requirements
+of paragraph 11.38A or 12.25B of FRS 102 in respect of Financial Instruments from 1 January 2018.
+
+1.8.1.1 Financial Assets
+The Bank classifies and subsequently measures the financial assets based on:
+
+e The business model within which financial assets are managed; and
+
+° Contractual cash flow characteristics
+
+Based on these factors, the Bank classifies its financial assets into one of the following three measurement
+categories:
+
+i. Amortised cost
+
+Assets that are held for collection of contractual cash flows where those cash flows represent solely
+payments of principal and interest (‘SPPI’), and that are not designated at fair value through profit or loss
+(FVPL), are measured at amortised cost. The carrying amount of these assets is adjusted by the
+impairment allowance.
+
+Loans to banks, loans to customers and some bond investment of the Bank are measured at amortised
+cost.
+
+ii. Fair value through other comprehensive income (FVOCD
+
+Financial assets that are held for collection of contractual cash flows and for selling the assets, where the
+assets’ cash flows represent solely payments of principal and interest, and that are not designated at FVPL
+are measured at fair value through other comprehensive income (FVOCI). Movements in the carrying
+amount are taken through other comprehensive income (OCD, except for the recognition of impairment
+gains or losses, interest revenue and foreign exchange gains and losses on the instrument’s amortised cost
+which are recognised in the Profit and Loss Account.
+
+The Bank only measures some bond investments held for liquidity purposes at FVOCI.
+
+26
+ICBC (London) plc
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+iii. Fair value through profit or loss (FVPL)
+
+Assets that do not meet the criteria for amortised cost or FVOCI are measured at fair value through profit
+or loss. A gain or loss on a debt investment that is subsequently measured at fair value through profit or
+loss and is not part of a hedging relationship is recognised in profit or loss.
+
+The Bank measures financial derivatives at FVPL.
+
+Business model
+
+The business model reflects how the Bank manages the assets in order to generate cash flows. That is, whether
+the Bank’s objective is solely to collect the contractual cash flows from the assets or is to collect both the
+contractual cash flows and cash flows arising from the sale of assets. If neither of these is applicable (e.g.
+financial assets are held for trading purposes), then the financial assets are classified as part of an ‘other’
+business model and measured at FVPL. Factors considered by the Bank in determining the business model for a
+group of assets include past experience on how the cash flows for these assets were collected, how the assets’
+performance is evaluated and reported to key management personnel, how risks are assessed and managed and
+how managers are compensated.
+
+Contractual cash flow characteristics
+
+Where the business model is to hold assets to collect contractual cash flows or to collect contractual cash flows
+and sell, the Bank assesses whether the financial instruments’ cash flows represent solely payments of principal
+and interest (the ‘SPPI test’). In making this assessment, the Bank considers whether the contractual cash flows
+are consistent with a basic lending arrangement i.e. interest includes only consideration for the time value of
+money, credit risk, other basic lending risks and a profit margin that is consistent with a basic lending
+arrangement. Where the contractual terms introduce exposure to risk or volatility that are inconsistent with a
+basic lending arrangement, the related financial asset is classified and measured at fair value through profit or
+loss.
+
+The Bank reclassifies financial assets when and only when its business model for managing those assets changes.
+The reclassification takes place from the start of the first reporting period following the change. Such changes
+are expected to be very infrequent and none occurred during the period.
+
+1.8.1.2. Impairment of financial assets
+
+The impairment of financial assets is recognised based on a forward-looking “expected credit loss” (ECL)
+model. Expected credit losses are the difference between contractual and expected cashflows over the life of the
+instrument discounted at the asset’s original effective interest rate. In estimating this, the Bank has to consider all
+relevant historical information as well as expectations of the future. The impairment model is applicable to
+financial assets recorded at amortised cost or at fair value through other comprehensive income, -loan
+commitments and financial guarantee contracts that are not measured at fair value through profit or loss.
+
+The measurement of expected loss will involve increased complexity and judgement including estimation of
+Probability of Default (PD), Loss Given Default (LGD), a range of unbiased future economic scenarios,
+estimation of expected lives, estimation of exposures at default and assessing increases in credit risk. The
+modelling techniques section below provides further information on this.
+
+Financial assets migrate through the following three stages based on the change in credit risk since the initial
+recognition:
+
+27
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Stage 1: 12-months Expected Credit Losses (ECL)
+
+The 12-months ECL is the discounted sum over the next 12 months of the monthly ECL. For exposures where
+there has not been a significant increase in credit risk since initial recognition and that are not credit-impaired
+upon origination, the portion of the lifetime ECL associated with default events occurring within the next 12
+months is recognised and interest revenue is calculated on the gross carrying amount of the asset.
+
+Stage 2: Lifetime ECL — not credit impaired
+
+Lifetime ECL is the discounted sum of monthly ECL over the full remaining life of the instrument. For
+exposures where there has been a significant increase in credit risk since initial recognition but there is no
+objective evidence of impairment, a lifetime ECL associated with the probability of default events occurring
+over the maximum contractual period during which the Bank is exposed to credit risk is recognised. Interest
+revenue is calculated on the gross carrying amount of the asset.
+
+’ Stage 3: Lifetime ECL — credit impaired
+Exposures are assessed as credit-impaired when there is objective evidence of impairment at the reporting date.
+
+For exposures that have become credit-impaired, a lifetime ECL is recognised and interest revenue is calculated
+by applying the effective interest rate to the amortised cost (net of credit allowance) of the asset.
+
+An exposure will migrate through the ECL stages as asset credit quality deteriorates. If, in a subsequent period,
+asset credit quality improves and also reverses any previously assessed significant increase in credit risk since
+origination, then the credit allowance reverts from lifetime ECL to 12-months ECL.
+
+Significant increase in credit risk (SICR)
+
+When determining whether the risk of default has increased significantly since the initial recognition, the Bank
+considers both quantitative and qualitative information and analysis based on the Bank’s historical experience
+and expert credit assessment, including forward-looking information. The quantitative test for determining the
+SICR includes a deterioration of the probability of default (PD) of counterparties at the reporting date compared
+to the life time PD at the date of origination (the PD needs to deteriorate at higher scale - both in terms of the
+percentage and the absolute value - for a highly rated counterparty than for a counterparty rated as a sub-
+investment grade in order to trigger the SICR); and a backstop of 30 days past due. The criteria used to identify
+significant increases in credit risk are monitored and reviewed periodically by the Bank.
+
+Default and credit-impaired assets
+
+The Bank defines a financial instrument as in default, which is fully aligned with the definition of credit-
+impaired, when it meets one or more of the following criteria:
+
+i. Quantitative default criteria
+
+The borrower is more than 90 days past due on its contractual payments.
+
+ii. Qualitative default criteria
+
+The borrower meets unlikeliness to pay criteria, which indicates the borrower is in significant financial
+difficulty. These are instances where:
+
+The issuer or obligor is in significant financial difficulty.
+
+There is a breach of contract, such as a default or delinquency in interest or principal payments.
+It is probable that the borrower will enter bankruptcy or other financial reorganisation.
+
+The borrower is insolvent or facing liquidity, business and financial risk exposures.
+
+28
+ICBC (London) ple
+ee Te ee ee ee reece eee ence
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+The above criteria are applied to all financial instruments held by the Bank and are consistent with the definition
+of default used for internal credit risk management purposes. The default definition has been applied consistently
+to model the Probability of Default (PD), Exposure at Default (EAD) and Loss Given Default (LGD) throughout
+the Bank’s ECL calculations.
+
+An instrument is considered to no longer be in default (i.e. to have been cured) when it no longer meets any of
+the default criteria for a consecutive period of typically 6 months. The period has been determined based on an
+analysis which considers the likelihood of a financial instrument returning to default status after curing using
+different possible cure definitions.
+
+Forward-looking information
+
+The assessment of significant increases in credit risk and the calculation of ECLs both incorporate forward-
+looking information. The Bank has performed historical analysis and identified the key economic variables
+impacting credit risk and expected credit losses for each portfolio.
+
+This analysis considered a range of relevant forward-looking macroeconomic assumptions for the determination
+of unbiased general industry adjustments and any related specific industry adjustments that support the
+calculation of ECLs. Macroeconomic factors taken into consideration include, but are not limited to,
+unemployment levels, interest rates, gross domestic product, inflation arid commercial property prices, and
+require evaluation of both the current and forecast direction of the macroeconomic cycle. Incorporating forward-
+looking information increases the degree of judgement required as to how changes in these macroeconomic
+factors will affect ECLs.
+
+In addition to the base case economic scenario, other possible scenarios along with scenario weightings are
+sourced externally. The number of other scenarios used is set based on the analysis of each major product type to
+ensure non-linearities are captured. The scenario weightings are determined by a combination of external sources
+and expert credit judgement, taking account of the range of possible outcomes represented by each chosen
+scenario.
+
+The assessment of significant increases in credit risk is performed using lifetime PD under each of the base case
+and other scenarios, multiplied by the associated scenario weighting, along with qualitative and backstop
+indicators. This determines whether the whole financial instrument is in Stage 1, Stage 2 or Stage 3 and hence
+whether 12-month or lifetime ECLs should be recorded. Following this assessment, the Bank measured expected
+credit losses as either a probability-weighted 12-month ECL (Stage 1), or a probability weighted lifetime ECL
+(Stages 2 and 3). These probability-weighted ECLs are determined by running each scenario through the relevant
+ECL model and multiplying by the appropriate scenario weighting (as opposed to weighting the inputs).
+
+Modelling techniques
+
+Expected credit losses are calculated using three main components, ic. PD, EAD and LGD. These parameters
+are generally derived from internally-developed statistical models combined with historical, current and forward-
+looking customer and macroeconomic data. For accounting purposes, the 12-month and lifetime PDs represent
+the expected point-in-time probability of a default over the next 12 months and the remaining lifetime of the
+financial instrument respectively, based on conditions existing at the balance sheet date and future economic
+conditions that affect credit risk.
+
+The LGD represents expected loss given default, taking into account the mitigating effect of collateral, its
+expected value when realised and the time value of money.
+
+The EAD represents the expected exposure at default, taking into account the repayment of principal and interest
+from the balance sheet date to the default event together with any expected drawdown of a facility.
+
+The 12-months ECL is equal to the discounted sum over the next 12 months of the monthly ECL, where the
+monthly ECL is the specific monthly PD multiplied by the respective monthly LGD and EAD. Lifetime ECL is
+calculated using the discounted sum of monthly ECL over the full remaining life of the instrument.
+
+29
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Modification of contractual cash flows
+
+Modifications of the contractual cash flows of a financial asset might result in de-recognition of the existing
+instrument if the existing agreement is cancelled and a new agreement made on substantially different terms or if
+the terms of an existing agreement are modified such that the renegotiated loan is a substantially different
+instrument. The date of the modification is the date of initial recognition for the new financial asset.
+
+Where a modification does not result in de-recognition, the gross carrying amount of the modified asset is
+adjusted to reflect the révised contractual cash flows. The new gross carrying amount is determined as the
+present value of the estimated future modified contractual cash flows discounted at the asset’s original effective
+interest rate. The resulting adjustment is charged to the income statement as a gain or loss on modification.
+
+Modified assets are assessed to determine whether a significant increase in credit risk has occurred. The Bank
+considers the credit risk at the reporting date under the modified contractual terms of the asset. This is compared
+to the credit risk at initial recognition under the original unmodified contractual terms of the financial asset. If
+this comparison does not show a significant increase in credit risk, the loss allowance is measured at a 12-month
+ECL.
+
+Write-offs
+
+The gross carrying amount of a financial asset will be reduced when the Bank has no reasonable expectations of
+recovering the asset. Write-offs can relate to a financial asset in its entirety or to a portion of it. Such assets are
+written off against the related credit allowance. Subsequent recoveries of amounts previously written off reduce
+the amount of the expense in the income statement.
+
+1.8.1.3 Financial Liabilities
+
+The Bank classifies its financial liabilities in the following categories:
+
+ioe ay
+
+i. Financial Liabilities designated at fair value through profit or loss
+Financial liabilities may be designated at fair value through profit or loss only if such a designation:
+
+- eliminates or significantly reduces a measurement or recognition inconsistency;
+- applies to a group of financial assets, financial liabilities, or both which is managed and its performance is
+evaluated on a fair value basis.
+
+Financial Liabilities at fair value through profit or loss are recognised initially at fair value, with transaction
+costs recognised in the Profit and Loss Account. Subsequent to initial recognition, any gain or loss arising from
+changes in fair value are recognised in the Profit and Loss Account.
+
+ii. Other Financial Liabilities
+
+All other financial liabilities are measured initially at fair value including transaction costs that are directly
+attributable to the acquisition or issue of the financial liabilities. Subsequently, they are carried at amortised cost.
+
+1.8.1.4 Derecognition of financial assets and liabilities
+
+Financial assets are derecognised when the right to receive cash flows from the assets has expired; or when the
+Bank has transferred its contractual right to receive the cash flows of the financial assets, and substantially all the
+risks and rewards of ownership; or where control is not retained.
+
+Financial liabilities are derecognised when the obligation under the liability is discharged, cancelled or expired.
+
+30
+ICBC (London) pic
+renee eee eee eeee eee eee eee eee eee eee eee eee ee
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+1.8.1.5 Offsetting of financial instruments
+
+Financial assets and financial liabilities are offset and the net amount is presented in the financial statements
+when the Bank has a current legally enforceable right to set-off the recognised amount and the Bank intends
+either to settle on a net basis, or to realise the financial asset and settle the financial liability simultaneously.
+
+1.8.1.6 Derivatives and credit valuation adjustment/ debit valuation adjustment
+
+Derivatives are recorded at fair value at trade date and are subsequently recognised at fair value. Derivatives are
+carried as assets when their fair value is positive and as liabilities when their fair value is negative. Changes in
+the fair value of derivatives are taken to the Profit and Loss Account.
+
+Credit valuation adjustment (CVA) and Debit valuation adjustment (DVA) are adjustments for financial
+derivatives in order to reflect the credit risk of the counterparty and the Bank’s own risk respectively. CVA and
+DVA are calculated using estimates of exposure at default, Probability of default and recovery rates, at a
+counterparty level.
+
+1.8.1.7. Repurchase and reverse repurchase agreements
+
+Securities sold subject to repurchase agreements (repos) continue to be recognised on the Balance Sheet where
+substantially all of the risks and rewards are retained. Funds received under these arrangements are included in
+deposits from banks, customer deposits, or trading liabilities. The difference between sale and repurchase price is
+treated as an interest expense and accrued over the life of the agreements using the effective interest rate method.
+Securities lent to counterparties are not derecognised in the financial statements.
+
+Conversely, securities purchased under agreements to resell (reverse repos) at a specified future date are not
+recognised in the Balance Sheet. The consideration paid, including accrued interest, is recorded in the Balance
+Sheet, reflecting the transaction’s economic substance as a loan by the Bank. The difference between the
+purchase and resale prices is recorded as net interest income and is accrued over the life of the agreement using
+‘the effective interest rate niethod. Securities borrowed are not recognised in the financial statements, unless these
+are sold to third parties, in which case the obligation to return them is recorded at fair value as a trading liability.
+
+Accounting policies for Financial Instruments applicable before 1 January 2018
+
+The Bank adopted the recognition and measurement provisions of IAS 39 Financial Instruments: Recognition
+and Measurement (as adopted for use in the EU), the disclosure requirements of Section 11 and 12 and the
+presentation requirements of paragraph 11.38A or 12.25B of FRS 102 in respect of Financial Instruments until
+31 December 2017.
+
+Financial Assets
+
+The Bank classified its financial assets in the following categories:
+
+e ~—- Financial assets at fair value through profit or loss
+e Loans and receivables
+®  Held-to-maturity financial investments.
+
+e Available-for-sale financial investments.
+
+The classification of financial instruments at initial recognition depended on the purpose for which the financial
+instruments were acquired and their characteristics. All financial instruments were measured initially at their fair
+value plus, in the case of financial assets and financial liabilities not at fair value through profit or loss, any
+directly attributable incremental costs of acquisition or issue.
+
+31
+ICBC (London) plc
+a
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+i. Financial assets at fair value through profit or loss
+Financial assets at fair value through profit or loss were categorised as:
+
+Financial assets held for trading
+A financial asset was classified as held for trading if:
+
+~ It was acquired principally for the purposes of selling or repurchasing it in the near term;
+
+- On initial recognition it was part of a portfolio of identified financial assets that were managed together and
+for which there was evidence of a recent actual pattern of short-term profit-taking;
+
+- It was a derivative that was not designated into a qualifying hedge relationship.
+
+Financial assets designated at fair value through profit or loss
+Financial assets might be designated at fair value through profit or loss only if such a designation
+
+- eliminated or significantly reduced a measurement or recognition inconsistency
+
+~ applied to a group of financial assets, financial liabilities, or both that the Bank managed and evaluated on a
+fair value basis; or
+
+- related to an instrument that contained an embedded derivative which was not evidently closely related to
+the host contract.
+
+Financial assets at fair value through the profit or loss were recognised initially at fair value, with transaction
+costs recognised in the Profit and Loss Account. Subsequent to initial recognition, any gain or loss arising
+from changes in fair value were recognised in the Profit and Loss Account.
+
+ii. Loans and receivables
+
+Loans and receivables were financial assets with fixed or determinable payments and fixed maturities that
+were not quoted in an active market and which were not classified upon initial recognition as available-for-
+sale or at fair value through profit or loss. After initial measurement, loans and advances to banks and
+customers were subsequently measured at amortised cost using the effective interest rate method, less
+allowance for impairment. Amortised cost was calculated by taking into account any discount or premium on
+acquisition and fees and costs that were an integral part of the effective interest rate. The amortisation was
+included in “interest receivable” in the Profit and Loss Account. The losses arising from the impairment were
+recognised in the Profit and Loss Account
+
+The Bank classified loans and advances to banks and customers, which include bilateral and syndicated
+loans, under this category.
+
+iii. Held-to-maturity financial investments
+
+Held-to-maturity investments were non-derivative financial assets with fixed or determinable payments that
+the Bank intended and was able to hold to maturity and that did not meet the definition of loans and
+receivables and were not designated on initial recognition as assets at fair value through profit or loss or as
+available-for-sale. After initial measurement, held-to-maturity financial investments were subsequently
+measured at amortised cost using the effective interest rate method, less allowance for impairment.
+Amortised cost was calculated by taking into account any discount or premium on acquisition and fees and
+costs that were an integral part of the effective interest rate. The amortisation was included in “interest
+receivable” in the Profit and Loss Account. The losses arising from the impairment were recognised in the
+Profit and Loss Account
+
+If the Bank sold a held-to-maturity investment other than in insignificant amounts or as a consequence of a
+non-recurring, isolated event beyond its control that could not be reasonably anticipated, the remaining held-
+to-maturity investments would be reclassified as available-for-sale financial investments for the current and
+next two accounting years.
+
+The investment in bonds, issued by corporates and multinational organisations, were classified under this
+category.
+
+32
+ICBC (London) plc
+
+Notes to the financial statements.
+for the year ended 31 December 2018
+
+iv. Available-for-sale financial investments
+
+Available-for-sale assets were non-derivative financial assets including debt securities that were designated
+as available for sale on initial recognition or were not classified into any of the other categories described
+above.
+
+At the initial recognition of financial instruments as available for sale, all financial instruments were to be
+carried at fair value. After initial measurement, available-for-sale financial investments were subsequently
+measured at fair value. Unrealised gains arid losses were récognised directly in equity in other comprehensive
+income — the available-for-sale reserve. When the security was disposed of, the cumulative gain or loss
+previously recognised in equity was recognised in the Profit and Loss Account.
+
+Interest income was recognised on available-for-sale debt: securities using the effective interest rate,
+calculated over the asset’s expected life. Premiums and/or discounts arising on the purchase of investment
+securities were included in the calculation of their effective interest rates.
+
+If the available-for-sale financial investment was impaired, the difference between the financial asset’s
+acquisition cost (net of any principal repayments and amortisation) and the current fair value, less any
+previous impairment loss recognised in the Profit and Loss Account, was removed from other comprehensive
+income and recognised in the Profit and Loss Account.
+
+The investment in bonds, issued by corporates and multinational organisations, was classified under this
+category.
+
+Financial Liabilities
+
+The Bank classified its financial liabilities in the following categories:
+
+i. Financial Liabilities designated at fair value through profit or loss
+
+Financial liabilities might be designated at fair value through profit or loss only if such a designation:
+
+- eliminated or significantly reduced a measurement or recognition inconsistency;
+- applied to a group of financial assets, financial liabilities, or both which was managed and its performance
+was evaluated on a fair value basis.
+
+Financia] Liabilities at fair value through profit or loss were recognised initially at fair value, with transaction
+costs recognised in the Profit and Loss Account. Subsequent to initial recognition, any gain or loss arising from
+changes in fair value were recognised in the Profit and Loss Account.
+
+it. Other Financial Liabilities
+
+All other financial liabilities were measured initially at fair value including transaction costs that were directly
+attributable to the acquisition or issue of the financial liabilities. Subsequently, they were carried at amortised
+cost.
+
+Impairment of financial assets
+
+e Loans and advances to banks and customers
+
+For loans and advances to banks and customers carried at amortised cost, the Bank assessed individually for
+financial assets that were individually significant, and collectively for financial assets that were not individually
+significant, whether there was objective evidence of impairment. For the purpose of collective evaluation of
+impairment, which was intended to reflect incurred losses that had not been specifically identified, financial
+
+33
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+assets might be grouped on the basis of similar credit risk characteristics (e.g. asset type, industry, geographical
+risk etc.) and should reflect global risk factors that were difficult to quantify.
+
+Objective evidence of impairment might include loss events and other changes such as:
+
+° Significant financial difficulty of the issuer or obligor;
+° Breach of contract such as clear evidence of event of default;
+° Payments of either principal or interest exceeding 90 days or more had not been received.
+
+° The issuer or obligor would enter bankruptcy proceedings;
+
+° The primary sources of repayment were insufficient to service the remaining contractual principal and
+interest amounts, and the Bank had to rely on secondary sources for repayment;
+
+° The asset was no longer traded publicly or there was no market to trade the assets;
+
+° Clear evidence of measurable data indicating that actual and future cash flow would be insufficient to
+
+service interest and principal.
+
+If there was objective evidence that an impairment loss had been incurred, the amount of the loss was measured
+as the difference between the asset’s carrying amount and the present value of estimated future cash flows
+(excluding future expected credit losses that had not yet been incurred). The carrying amount of the asset was
+reduced through the use of an allowance account and the amount of the loss was recognised in the Profit and
+Loss Account.
+
+Interest income continued to be accrued on the reduced carrying amount based on the original effective interest
+rate of the asset. Loans together with the associated allowance were written down when there was no realistic
+prospect of future recovery and all collateral had been realised or transferred to the Bank.
+
+All impaired loans were reviewed for changes to the recoverable amount. If, in a subsequent year, the amount of
+estimated impairment loss increased or decreased because of an event occurring after the impairment had been
+recognised, the previously recognised impairment loss was increased or reduced by adjusting the allowance
+account. If a write-off was later recovered, the recovery was credited to the Profit and Loss Account.
+
+The present value of the estimated cash flows was discounted at the financial asset’s original effective interest
+rate. If a loan had a variable interest rate, the discount rate for measuring any impairment loss was the current
+effective interest rate. The calculation of the present value of the estimated future cash flows of a collateralised
+financial asset reflects the cash flows that might result from foreclosure less costs for obtaining and selling the
+collateral, whether or not foreclosure was probable.
+
+¢ Financial instruments held-to-maturity
+
+The Bank assessed at each reporting date whether there was objective evidence that a held-to-maturity asset was
+impaired. A held-to-maturity asset was impaired and impairment losses were incurred only if there was objective
+evidence of impairment as a result of one or more events that occurred after the initial recognition of the asset (a
+“loss event”) and that loss event (or events) has an impact on the estimated future cash flows of the financial
+asset or group of financial assets that could be reliably estimated.
+
+e Financial instruments available-for-sale
+
+For financial instruments available-for-sale, the Bank assessed at each balance sheet date whether there was
+objective evidence that an instrument or a group of instruments was impaired.
+
+Impairment was assessed based on the same criteria as financial assets carried at amortised cost. Interest
+continued to be accrued at the original effective interest rate on the reduced carrying amount of the asset and was
+recorded as part of “interest receivable”.
+
+When a decline in the fair value of an available-for-sale financial asset had been recognised in other
+comprehensive income and there was objective evidence that the asset was impaired, the cumulative loss that
+
+34
+ICBC (London) ple
+a
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+had been recognised in other comprehensive income should be reclassified from Equity to the Profit and Loss
+Account as a reclassification adjustment even though the financial asset had not been derecognised.
+
+The amount of the cumulative loss that was reclassified from Equity to the Profit and Loss Account should be
+the difference between the acquisition cost (net of any principal repayment and amortisation) and current fair
+value, less any impairment loss on that financial asset previously recognised in the Profit and Loss Account.
+
+If, in a subsequent year, the fair value increased and the increase could be objectively related to an event
+occurring after the impairment loss was recognised in the Profit and Loss Account, the impairment loss was
+reversed through the Profit and Loss Account.
+
+1.8.2 Interest and similar income and expense
+
+For all financial instruments measured at amortised cost and interest-bearing financial instruments measured at
+fair value through other comprehensive income, interest income or expense is recorded at the effective interest
+rate (EIR), which is the rate that exactly discounts estimated future cash payments or receipts through the
+expected life of the financial instrument or, when appropriate, a shorter period, to the carrying amount of the
+financial asset or financial liability. The effective interest rate is determined on the basis of the carrying amount
+of the financial asset or liability at initial recognition. The calculation takes into account all contractual terms of
+the financial instrument and includes any fees or incremental costs that are directly attributable to the instrument
+and are an integral part of the effective interest rate and known credit losses that have been incurred, but not
+future credit losses not yet incurred, The carrying amount of the financial asset or financial liability is adjusted if
+the Bank revises its estimates of payments or receipts. The adjusted carrying amount is calculated based on the
+original effective interest rate and the change in carrying amount is recorded as interest income or expense.
+
+Once the recorded value of a financial asset or group of similar financial assets has been reduced by an
+impairment loss, interest income continues to be recognised using the original effective interest rate applied to
+the new carrying amount.
+
+1.8.3 Fee and commission income
+
+The Bank earns fee and commission income from loans and advances, trade finance facilities and other services
+such as fund transfer etc. it provides to its customers over a certain period of time. Fee income is accounted for
+as follows:
+
+income earned on the execution of a significant act is recognised as revenue when the act is completed;
+income earned from the provision of services is recognised as revenue as the services are provided; and
+income which forms an integral part of the effective interest rate of a financial instrument is recognised as
+an adjustment to the effective interest rate.
+
+1.8.4 Taxation
+
+Income Tax comprises current and deferred income tax. Tax is recognised in the Profit and Loss Account, except
+where it relates to items recognised in other comprehensive income or directly in Equity, in which case tax is
+recognised in other comprehensive income.
+
+i Current Tax
+Current tax is the amount of income tax payable in respect of the taxable profit for the year or prior years. Tax is
+calculated on the basis of tax rates and laws that have been enacted or substantively enacted by the period-end.
+
+Management periodically evaluates positions taken in tax returns with respect to situations in which applicable
+
+tax regulation is subject to interpretation. It establishes provisions where appropriate on the basis of amounts
+expected to be paid to the tax authorities.
+
+35
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+ut. Deferred Tax
+
+Deferred tax shall be recognised in respect of all timing differences at the reporting date. Timing differences are
+differences between taxable profits and total comprehensive income as stated in the financial statements that
+arise from the inclusion of income’ and expenses in tax assessments in periods different from those in which they
+are recognised in financial statements.
+
+Unrelieved tax losses and other deferred tax assets shall be recognised only to the extent that it is probable that
+they will be recovered against the reversal of deferred tax liabilities or other future taxable profits.
+
+Deferred tax is measured using the tax rates and legislation enacted, or substantively enacted, by the balance
+sheet date that are expected to apply when the deferred tax asset is realised or the deferred tax liability is settled.
+
+1.8.5 Tangible fixed assets and depreciation
+Fixed assets are recorded at cost less accumulated depreciation and any accumulated impairment.
+
+Depreciation is calculated on a straight-line basis over the period of their estimated useful economic lives as
+
+follows:
+
+Building - 50. years
+Refurbishment on building - 10 years
+Leasehold improvements, office furniture and equipment - 5 years
+Motor vehicles - 5 years
+Computer hardware and software “ 3 years
+
+’ Land is not depreciated
+
+The carrying values of tangible fixed assets are reviewed for impairment at each reporting date and when events
+or changes in circumstances indicate the carrying value may not be recoverable.
+
+1.8.6 intangible Assets
+
+Intangible assets with finite useful lives that are acquired separately are carried at cost less accumulated
+amortisation and accumulated impairment losses. Amortisation is recognised on a straight-line basis over their
+estimated useful lives of the assets. The estimated useful life and amortisation method are reviewed at the end of
+each reporting period.
+
+Software with an indefinite useful life is amortised on a straight-line basis over 3 years.
+
+1.8.7 Impairment of non-financial assets
+
+At each balance sheet date, the Bank reviews the carrying amounts of its non-financial assets (other than
+deferred tax assets) to determine whether there is any indication of impairment. If any such indication exists,
+then the asset’s recoverable amount is estimated.
+
+The ‘recoverable amount’ of an asset is the greater of its value in use and its fair value less costs to sell. ‘Value
+in use’ is based on the estimated future cash flows, discounted to their present value using a pre-tax discount rate
+that reflects current market assessments of the time value of money and the risks specific to the asset.
+
+An impairment loss is recognised if the carrying amount of an asset exceeds its recoverable amount.
+
+Impairment loss is recognised in the Profit and Loss Account. The impairment loss is reversed only to the extent
+that the asset’s carrying amount does not exceed the carrying amount that would have been determined, net of
+depreciation or amortisation, if no impairment loss had been recognised.
+
+36
+ICBC (London) plc
+eee reer reer rere enna e ener eee e eee ee eee eee eee ee
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+1.8.8 Employee Benefits
+
+Short-term employee benefits
+
+Short-term employee benefits such as salaries, paid holiday, sick leave and other similar benefits are measured
+on an undiscounted basis and recognised as expenses in the period of service rendered. Bonuses are recognised
+as provision to the extent that the Bank has a present obligation to its employees that can be measured reliably.
+All expenses related to employee benefits are recognised in the Profit and Loss Account in Personal Expenses.
+
+Defined Contribution Pension Plan
+
+The Bank has a defined contribution pension plan for its eligible employees through a personal pension scheme
+provider. Contributions are charged to the Profit and Loss Account as incurred. The amount recognised in the
+Profit and Loss Account is disclosed in Note 4.
+
+1.8.9 Leases
+
+The Bank pays rent under operating Jeases and these rents are charged to the Profit and Loss Account over the
+lease term on a straight-line basis.
+
+1.8.10 Provisions
+
+Provisions are recognised when it is probable that an outflow of economic benefits will be required to settle a
+current legal or constructive obligation as a result of past events, and a reliable estimate can be made of the
+amount of the obligation. ‘
+
+The Bank has made provision for onerous lease contracts as set out at Note 24.
+
+1.8.11 Contingent liabilities
+
+A contingent liability is a possible obligation that arises from past events and whose existence will only be
+confirmed by the occurrence or non-occurrence of one or more uncertain future events not wholly within the
+control of the Bank. It can also be a present obligation arising from past events that is not recognised because it
+is not probable that an outflow of economic resources will be required or the amount of obligation cannot be
+measured reliably. Contingent liabilities are disclosed in the notes to the financial statements. When a change in
+the probability of an outflow occurs so that outflow is probable and can be reliably estimated, it will then be
+recognised as a provision.
+
+1.8.12 Cash and cash equivalents
+
+Cash and cash equivalents comprise cash, balances at central bank and balances due from other banks with a
+maturity period of less than three months.
+
+37
+
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+2. Interest and similar income
+
+2018
+
+Te
+
+| Loans
+
+-Financial
+
+&
+
+:Financial
+
+and_ investments Investments
+
+ES ae re
+"Financial .
+
+Derivatives Deposits “
+cvat ° by bank |
+
+- a” > + v
+Customer -
+ve -- Total
+
+_ accounts °
+
+advances at FVOCI* cat ACT tie. ur AEee
+
+.. $000. . — $'000_ $000. ~—«, 8000". $:000 - $000 ~=—- $000
+Interest and similar ee Sone eon . SP Ts
+income . L ‘ oe ge . : 4 mL .
+arising from financial ee ” mn p46 a? 3 moet er)
+investments oS (7,876 : 3,732 Se . Delos 11,608,
+Other interest and 55,654, . ; . ** 449 wot a 55,803
+similar income . ‘ ca : . ee
+Total Interest and =)" 55'654 7876. 3,732 a -. "67,411
+similar income 0 _ a . tos a
+
+' . - - - - (33,986). (3,974) (37,960)
+Interest expense ae 3 pw Ee
+Net interest ee peg 4 “agaecy. amy an
+income 55,654 7876, 3,732 149 (33,986). - (3,974) ~ 29,451
+
+t r “ t & :
+
+Fees and commissions _ ; - 7 woo . 43 25
+income 4 7 a
+Fees and commissions , * fe . (1,127)
+expense : : . “ —— a
+Net fees income 7 : = 4 . os. 3,198
+
+*FVOCI ~Fair value through other comprehensive income
+
+**4C~ Amortised cost
+
+* ** EVPL ~ Fair Value through profit or loss
+
+Interest income on impaired loans was nil in 2018 (2017: $2.06 million).
+
+38
+
+ICBC (London) plc
+a eae
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+2017
+Derivative
+Loans Financial Financial instruments
+and investments Investments at Deposits Customer
+advances at FVOCI* at AC** FVPL*** bybank accounts Total
+$’000 $’000 $’000 $’000 $’000 $000 $000
+
+Interest and similar
+income .
+arising from financial
+investments - 6,414 264 - - 6,678
+Other interest and
+similar income 51,165 - 133 - 51,298
+Total Interest and
+similar income 51,165 6,414 264 133 - 57,976
+Interest expense - - - (27,162) (2,187) (29,349)
+Net interest
+income 51,165 6,414 264 133. (27,162) . (2,187) 28,627
+Fees and commissions
+income 7,074
+Fees and commissions
+expense (2,339)
+Net fees income 4,735
+
+Interest and other similar income on financial assets include interest income of $2.06 million on impaired loans
+
+(2016: $1.99 million).
+
+3. Other operating income
+
+2017
+$’000
+Fees earned for services provided under a service level agreement
+: . 5,174
+with related parties
+5,174
+The Bank earns fee income for the following services provided to related parties:
+i. Industrial and Commercial Bank of China Ltd — for providing Foreign Exchange, Precious Metal services,
+
+fixed income and derivative services, CNY financing services and CNY exchange trading services.
+
+ii. Industrial and Commercial Bank of China Financial Services LLC — for providing human resources and
+regulatory compliance services to support its Prime Dealer Services (PDS).
+
+39
+ICBC (London) pic ; . ;
+a a i
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+4. Personnel expenses
+
+Personnel expenses (including Directors) comprise the following:
+
+2017
+
+$000
+
+Wages and salaries 22,016
+Social security costs 2,197
+Pension costs 650
+Other costs Ri 78% 821
+430,0395| 25,684
+
+Of the total personnel expenses, the cost attributable to the Branch was $22.25 million (2017: $18.94
+million).This has been included in the “Reimbursement of expenses attributable to the Branch” line in the Profit
+and Loss Account. ;
+
+The average number of people employed during the year was made up as follows:
+
+2017
+No
+~ Senior Management 6
+- Corporate Banking 24
+- Institutional Banking 10
+- Treasury . 12
+- Global Loan Syndications 2
+~ Retail Banking and Account Services 8
+- PDS 12
+- Risk control 21
+- Support functions 45-
+- Compliance and Legal and Internal Audit 10
+- Company Secretary 1
+151
+
+40
+ICBC (London) pic
+a a
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+5. Directors’ emoluments
+
+The Directors’ aggregate emoluments in respect of qualifying services were:
+
+2018 2017
+“$7000. $000
+Salary - 1264) 1,185
+Bonus ~ AIT: 263
+1,681 | 1,448
+The emoluments of the highest-paid Director were as below:
+2018 2017
+_ $'000 $'000
+Salary, benefits and performance-related bonus . 807) 665
+6. Other operating expenses
+~~ 2018 2017
+$°000 $’000
+Administrative expenses a 8,373 7,730
+Operating leases: me
+- Operating lease charges 498 722
+- Revision of provision for onerous leases 7). 1,977
+Auditor’s remuneration:
+- Audit of the financial statements
+Current year 171 165
+Previous year 60 -
+- Audit-related assurance services
+Current year oe 29 29
+_ 9,094 10,623
+
+41
+ICBC (London) ple
+aaa nn nnn en nO
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Of the total other operating expenses, expenses attributable to the Branch were $6.20 million in 2018 (2017:
+USD 6.45 million). This has been included in the “Reimbursement of expenses attributable to the Branch” line in
+the Profit and Loss Account.
+
+7. Tax on profit on ordinary activities
+
+The tax charge is made up as follows:
+
++ + 2018" 2017
++ $000 $’000
+Current tax: oS
+UK corporation tax °(6,023):] (6,265)
+Adjustments in respect of prior years 432° 1,174
+Total current tax. 5,591). (5,091)
+Deferred tax: Lt .
+Origination and reversal of timing differences wo (26). (105)
+Adjustment for prior years 46, 3
+Total deferred tax (charge)/credit for the year “..(20). (102)
+Total charge for the year _ 6,611) (5,193)
+
+Factors affecting tax charge for the year:
+
+The tax assessed for the year is the standard rate of Corporation Tax in the UK of 19% (2017: 19.25%). The
+differences are explained below:
+
+2018" 2017
+
+$’000 $'000
+
+Profit on ordinary activities before tax : 30,978 26,891
+Current tax at 19% (2017: 19.25%) (5,885) (5,177)
+Bank Surcharge (8% on taxable profit above GBP 12.5 million) - (916)
+Difference in tax rate used for the current and deferred tax 42 (24)
+Non-deductible expenses . "(233) (232)
+Other adjustments ny (21)
+Adjustments in respect of prior years 438 1,177
+Total tax charge for the year (5,611) (5,193)
+
+42
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Reductions in the UK Corporation Tax rate from 20% to 19% (effective from 1 April 2018) and to 17%
+(effective from 1 April 2020) were substantively enacted in October 2015 and September 2017 respectively.
+Further, the Bank Corporation Tax Surcharge of 8 % came into effect from 1 January 2017. Since the Bank is a
+part of a banking group in the UK for Bank Surcharge purposes, the annual surcharge allowance of GBP 25
+million is divided equally between the Bank and the Branch.
+
+The deferred tax at 31 December 2018 has been calculated at 25% (17% Corporation Tax + 8% Bank
+Surcharge).
+
+Consortium relief
+
+In December 2018, the Bank claimed consortium relief for 2017 taxation. The consortium relief enabled the
+Bank to claim the tax losses suffered by ICBC Standard Bank Plc (ICBCS), a consortium company, against the
+taxable profit of the Bank in 2017. Consequently, the Bank will receive a repayment of tax previously paid to
+HMRC for 2017. The total tax repayment receivable from HMRC including interest on tax was $1.94 million,
+which is included in “Current tax liabilities” in the Balance Sheet.
+
+In accordance with the agreement between the Bank and ICBCS, the Bank has to pay the tax equivalent amount
+of the tax losses (tax losses multiplied by effective tax rate of the relevant year) to ICBCS as consideration for its
+tax losses surrendered to the Bank. The consideration for tax losses payable to ICBCS was $1.34 million, which
+is included in “Other liabilities” in the Balance Sheet.
+
+\
+
+8. Loans and advances to banks
+
+2017
+
+$'000
+
+Loans and advances to banks 840,309
+Less: Impairment losses (Note 10) (245)
+Net loans and advances to banks $40,064
+
+The maturity profile of loans and advances to banks analysed by the remaining period as at 31 December to the
+contractual maturity dates is as follows:
+
+| 2228 2018: 2017
+3 3000! $000
+
+- On demand 71,777
+- Three months or less 539,918
+- Above three months to one year 47,464
+- Above one year to five years 181,150
+
+%900,235:| 840,309
+
+43
+ICBC (London) ple _ ;
+AES TS
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Loans and advances to banks by geographical area:
+
+3018" 2017
+we: ee
+$:000!| $000
+
+i
+Area: ae ergs
+Australia . . 40,000
+China 479,127
+Germany os
+Hong Kong ay 079 2,089
+India ee 30,000
+Singapore . 0,00 ae
+South Africa 074334] 169,174 |
+United Arab Emirates e ; 824 -
+United Kingdom 63°50 67,842
+United States 3 a 01 21,489
+Others 3590000; 30,588
+
+Saas 840,309
+
+The above table shows the breakdown of loans and advances to banks based on the country of ultimate risk (for
+e.g. the exposure to a branch of the bank is classified as per the location of its head office instead of the location
+of the branch).
+
+2018 2017
+$'000 $000
+Amounts include:
+Due from ICBC group entities 88,430 38,948
+
+9. Loans and advances to customers
+
+ges 2018" 2017
+
+‘ §’000
+
+Loans and advances to customers 6 6192, 960,267
+Less: Impairment losses (Note 10) (7,035)
+Net loans and advances to customers : ‘af ie 953,232
+
+44
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+The maturity profile of loans and advances to non-bank customers analysed by the remaining period as at 31
+December to the contractual maturity dates is as follows:
+
+BEE 5018. 2017
+
+apa Sttsiabs,
+
+KEP S000" $’000
+QTE oA
+
+- Overdue 5,000
+- Three months or less 88,834
+- Above three months to one year #61 209,050 156,749
+Ait Boe
+- Above one year to five years $#602;529.| 551,409
+. Biron anit
+- Above five years . 139,620. 158,275
+
+Reece
+
+816,199:| 960,267
+
+Loans and advances to customers by geographical area:
+
+‘ 2017
+$000
+
+Area:
+Angola 45,498
+Australia 38,268
+China 25,074
+France 21,286
+Hong Kong 20,788
+Netherlands 64,589
+Nigeria -
+Russia 19,841
+Switzerland 57,301
+United Kingdom 447,416
+United States §,000
+Zambia 135,000
+Others 80,206
+960,267
+
+45
+
+oe ee ee
+ICBC (London) plc
+aaa ee eee
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+10. Impairment loss
+
+The impairment loss for 2018 was computed based on the expected credit loss as per IFRS 9. The total
+impairment loss charged in the Profit and Loss Account was $167k in 2018. (2017:$1.24 million - calculated as
+per IAS 39). The breakdown of impairment losses is set out below:
+
+i. Loans and advances at amortised cost
+
+IAS 39 |“. IFRS 9° IAS 39 IAS 39 | 87 TFRS 9°25 1FRS 9. TERS 9 2B se ee rs
+Loan & 1 &. Loan & Loan & is af
+advances to |» sadvances ; advances to advances to ae
+banks 310 > banks? customers customers ke
+ERY Ve t
+(Collective (Collective (Specific Paes oe ion
+nee ee ee oy - Stage’ ag
+impairment) impairment) impairment) Te tee m4
+$'000 $ '000 $ ‘000
+Balance at 1 January
+2017 30 1,990 15,000
+Charge/(Reversal) during 215 45 979
+the year
+Amounts written off - - (10,979)
+Balance at 31 December 245 |* 2,035 5,000
+2017 :
+oe at 1 January 245 e . 2,035 5,000
+Adjustment on initial : a
+application of IFRS 9 (245) are 236. (2,035) (5,000)
+Restated balance at 1 neers a ae
+January 2018 “fos 238: - a eae * P52 a sii 0M,
+(Reversal)/charge oe . we a ee Cs
+“fo G5) - sf 410 a HS
+during the year aha . Sg ott a be te
+FX translation loss es - -|,: 4); _ - ote he . 4).
+eri at 31 December | 82 . -[ 1,004" aii” “* "5,000 7,197
+
+46
+ICBC (London) pic
+
+Notes to the financial statements) —-— oe
+for the year ended 31 December 2018
+
+ii. Financial investments at amortised cost
+
+IAS 39 |
+
+$'000 |;
+
+Balance at 1 January 2018 - fi ie
+Adjustment on initial application of pean
+
+Restated balance at 1 January 2018 oo. - (8
+
+Charge for the year ae 7. bEEee
+Balance.at 31 December 2018 . ot ee a
+
+iii. Financial investments at fair value through other comprehensive income(FVOCT)
+
+Balance at 1 January 2018
+Adjustment on initial application of
+IFRS 9.
+
+Restated balance at 1 January 2018
+
+Charge for the year
+Balance at 31 December 2018
+
+sek co
+
+ae ae ee
+- ICBC (London) pic. | of, a So
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+iv. Undrawn loan commitments and guarantees
+
+Balance at 1 January 2018
+Adjustment on initial application of
+IFRS 9 |
+
+Restated balance at 1 January 2018
+
+(Reversal)/ Charge during the year
+FX translation loss | :
+
+Balance at 31 December 2018
+
+48
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+11. Derivative financial instruments
+
+In the following table, the fair value of a derivative financial instrument represents the positive or negative cash
+flows which would have occurred had the rights and obligations arising from that instrument been closed out by
+the Bank in an orderly market transaction at the balance sheet date. The replacement cost is considered to be the
+same as the positive or negative fair value.
+
+Derivatives are measured at their fair value, which is calculated as the present value of future expected net
+contracted cash flows at market related rates at the balance sheet date.
+
+2017
+n<| Positive Negative Revaluation
+fair
+value _ fair value gain/(loss)
+$000 $000 $000
+Forward Exchange
+Contracts 50,123 (49,070) 623
+Interest Rate Swaps 1,997 (1,866) (101)
+§2,120 (50,936) §22
+
+12. Financial investments at fair value through other comprehensive income (FVOCI)
+
+Financial investments measured at FVOCI include investments in quoted bonds. The Bank values bonds using
+the quoted market price at the balance sheet date.
+
+2017
+
+3000
+
+Balance at 1 January 388,541
+Additions 226,102
+Disposals/ Matured (166,059)
+Fair value adjustment (2,033)
+Premium/ Discount amortisation 467
+Foreign exchange difference 1,192
+Balance at 31 December 448,210
+
+49
+ICBC (London) ple
+ee
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+2018 2017
+$’000 $’000
+Analysed by maturity:
+- Due within one year 56,599 246,235
+- Due after one year 337,389 201,975
+Analysed by sector:
+- Government 314,909 360,239
+- Other sectors 79,079 87,971
+
+13. Financial investments at amortised cost
+
+Balance at | January
+Additions
+
+Matured during the year
+Premium/ Discount amortisation
+Impairment loss ( Note 10)
+
+Balance at 31 December
+
+50
+Notes to the financial statements. --. . - -  -->
+for the year ended 31 December 2018 ms
+
+14. Tangible fixed assets
+
+Original cost:
+
+At 1 January 2018
+Additions
+‘Disposal/Written off
+
+At 31 December 2018 _
+
+Accumulated
+depreciation:
+
+At | January 2018
+Depreciation for the year
+Reversal of depreciation of }#
+the disposed assets .
+
+At 31 December 2018
+
+et book value:
+
+At 31 December 2018 |
+
+| At31Decembér 2017 _ 2,785: 35,048 «36 —. 108 AT = 37,994
+
+Of the total depreciation expense for the year, the depreciation charge attributable to the Branch was $1.25
+million in 2018 (2017: $1.23 million). This has been included in the “Reimbursement of expenses attributable to
+the Branch” line in the Profit and Loss Account.
+
+51
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+2017
+Office
+furniture
+and Construction Leasehold
+Land Building equipment Computers in progress improvement Total
+$000 $'000 $000 $’000 $’000 $’000 $’000
+Original cost:
+At 1 January 2017 2,785 44,686 2,044 978 - 1,184 51,677
+Additions - 32 30 95 17 - 174
+At 31 December 2017 2,785 44,718 2,074 1,073 17 1,184 51,851
+Accumulated
+depreciation:
+At 1 January 2017 - 8,125 1,979 901 - 1,184 12,189
+Depreciation for the year - 1,545 59 64 - - 1,668
+At 31 December 2017 - 9,670 2,038 965 - 1,184 13,857
+Net book value:
+At 31 December 2017 2,785 35,048 36 108 17 - 37,994
+At 31 December 2016 2,785 36,561 65 77 - - 39,488
+
+Of the total depreciation expense for the year, the depreciation charge attributable to the Branch was $1.23
+million in 2017 (2016: USD 0.88 million). This has been included in the “Reimbursement of expenses
+
+attributable to the Branch” line in the Profit and Loss Account.
+
+15. Intangible assets
+
+2017
+- $000 $°000
+Original Cost: a :
+At 1 January “254 31
+Additions _ 65 223
+At 31 December 319 254
+Amortisation /
+At 1 January 76 | 3
+Amortisation for the year __ 99. 73
+At 31 December : = 175 76
+Net book value: 7 . .
+At 31 December 144 178
+
+52
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+16. Prepayments, accrued income and other assets
+
+2017
+
+§’000
+
+Accrued interest receivable 9,244
+Prepayments 804
+Other assets 464
+Receivable from HMRC* 13,707
+Amount owed by ICBC group undertakings 5,538
+29,757
+
+*In 2018, the tax receivable from HMRC of $2.13 million was netted against the tax liabilities and presented in
+the “Current tax liabilities” in the Balance Sheet.
+
+17. Deferred tax assets/ (liabilities)
+
+2017
+5'000
+Deferred tax liabilities included in the Balance Sheet comprise the following:
+Accelerated capital allowances ] (1,177)
+Other timing differences eebaT4 559
+Expr
+sane (449)1 (618)
+Movements in deferred tax liabilities during the year were as follows: i =
+Balance at 1 January (1,160)
+(Charged)/credited to the Profit and Loss Account (102)
+Credited to the opening Retained Earning for the IFRS 9 transitional
+adjustment -
+Credited to Other Comprehensive Income 644
+Balance at 31 December (618)
+18. Deposits by banks
+2017
+$’000
+Repayable:
+- On demand 172,161
+- Three months or less 307,423
+- Above three months to one year 499,563
+- Above one year to five years 496,747
+1,475,894
+
+53
+ICBC (London) ple
+enn eee eee ne ee ee enn
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+2018 2017
+$'000 $’000
+
+Amounts include:
+Deposits by ICBC group entities 479,375 321,024
+
+19. Customer accounts
+
+2017
+$°000
+
+Repayable:
+- On demand 182,785
+- Three months or less 89,902
+- Above three months to one year 102,887
+- Above one year a " Tse 160
+| 467,426 | 375,734
+
+20. Accruals and deferred Income
+
+2018 2017
+oe £000 | $’000
+7 ~ we
+Accrued interest payable 4,272 2,955
+Deferred income fo, 293" 478
+_ 4,564 3,433
+21. Share capital
+2018 2017
+$’000 3000
+Authorised share capital, ordinary shares of $1 each .
+Balance at 31 December 250,000.| 250,000
+Allotted, called-up and fully-paid, 200,000,000 ordinary shares of $1 each:
+Balance at 31 December 200,000 200,000
+
+54
+ICBC (London) ple
+
+' Notes to the financial statements
+for the year ended 31 December 2018
+
+22. Reconciliation of shareholder’s funds and movements on reserves
+
+Total
+Share Retained Other = shareholder’s
+capital earning reserves funds
+; $’000 $000 $000 $000
+At 1 January 2017 , . 200,000 177,359 688 378,047
+Profit for the year . - —- 21,698 - 21,698
+Change in fair value of Available-for-sale (AFS)
+financial investments - - (2,033) (2,033)
+Tax charge on change in fair value of AFS financial
+investments - - 44 44
+Deferred tax asset recognised through Equity __. os _ 7 644, ; 644
+At 31 December 2017 —. . . 200;000 199,057 (657) 398,400.
+
+At 1 January 2018
+
+IFRS.9 adjustments
+
+Restated balance atl January 2018
+
+Profit for the year
+
+Change in fair value of financial investments at
+FVOCI
+Impairment charged on financial investments at
+FVOCI : a _
+Tax charge on change in fair value of financial
+investments at FVOCI
+
+Deferred tax liability recognised through Equity
+At 31 December 2018 —
+
+23. Subordinated loan
+
+2017
+
+USD Floating rate note (Libor plus 1.3 %) -
+
+$'000
+
+" 100,000
+
+Ds 100,000
+
+On 28 October 2013, a 10-year Subordinated loan was raised from Industrial and Commercial Bank of China
+Limited, the ultimate parent. The interest charged is 3 months Libor plus 1.3%.
+
+55
+
+wenn ome ee me ane
+
+a
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+24. Provision for Liabilities
+
+i. Onerous lease
+
+2017
+$’000
+4
+77, 77
+36 King
+uIy Street Shaftesbury Total
+; Avenue
+Balance at 1 January ae 72's, 226 909 1,135
+(Reversal)/Addition during the year seer ee? 5 2: 22 2,063 2,085
+Balance at 31 December Gee Ree kD 907 eats 2,997; 248 2,972 3,220
+
+a. 36 King Street
+
+The lease contract on 36 King Street expired in April 2018 and the remaining provision for the onerous lease was
+reversed into the Profit and Loss Account.
+
+b. 77 Shaftesbury Avenue
+
+The Bank leased premises at 77 Shaftesbury Avenue in April 2017 in order to open a branch. However, in
+November 2017 the Bank decided not to open the branch leading to the premises becoming an onerous lease.
+The lease will expire in April 2033 with an option to terminate early in April 2026. The Bank is planning to
+terminate the lease in April 2026 and to sublet the vacant premises until then. However, there was no reasonable
+prospect of subletting the vacant premises as at the balance sheet date. Therefore, the onerous lease provision is
+computed on the total rent payable until April 2026, discounted by the 8-year UK Government bond yield.
+
+25. Memorandum items — contingencies and commitments
+
+2017
+
+- '3$,000;| $000
+Undrawn documentary credits and short-term trade related transactions 12,828) 63,863
+Undrawn loans and advances *$295'405;| 502,924
+Balance at 31 December $,233:| 566,787
+
+The table above shows the nominal principal amounts of commitments, guarantees and other contingent
+liabilities. They are mainly credit-related instruments which include both financial and non-financial guarantees
+and commitments to extend credit. Nominal principal amounts represent the amount at risk should the contract
+be fully drawn.
+
+56
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Operating lease commitments
+
+At 31 December, the Bank had annual commitments under non-cancellable operating leases as set out below:
+
+2017
+
+$°000
+
+Not later than 1 year ~ 413
+Above | year but less than 5 years F 1,489
+5 years and above a 56. 1,210
+
+26. Related Parties
+
+Ultimate Controlling Company
+
+The Bank is a wholly-owned subsidiary of Industrial and Commercial Bank of China Limited, into which the
+financial statements of the Bank are consolidated. Copies of the group financial statements are available from 55,
+Fuxingmennei Dajie, Beijing, 100140, China (http: /iwww. icbc-Itd. com/ICBCLtd/en).
+
+Outstanding balance of related party transactions
+
+As per section 33.1A of FRS 102, the outstanding balance of transactions with related parties not wholly-owned
+by ICBC group is disclosed below:
+
+2017
+$000
+Balance sheet
+Derivative financial Instruments (Assets) -
+Loans and advances to banks 56,154
+Prepayments, accrued income and other assets 189
+Derivative financial Instruments (Liabilities) (24,214)
+Deposits by banks 589
+Other liabilities 12,476
+Notional amount of FX derivatives outstanding 217,399
+Profit and loss account
+Interest receivable * 2,525
+Revaluation gain on financial derivatives 16,595
+Fees and commission receivable 4
+
+57
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+The above transactions were with the following group entities:
+
+i. ICBC Standard Bank Plc, 60%-owned subsidiary of Industrial and Commercial Bank of China Limited.
+
+ii. Industrial and Commercial Bank of China (Turkey) Limited, 92.84%-owned subsidiary of Industrial and
+Commercial Bank of China Limited.
+
+iii. | Industrial and Commercial Bank of China (Canada) Limited, 80%-owned subsidiary of Industrial and
+Commercial Bank of China Limited.
+
+iv. Standard Bank Group Limited SA, 20%-owned associate of Industrial and Commercial Bank of China
+Limited.
+
+27. Fair values of financial instruments
+
+For the determination of the fair values of financial instruments, the Bank uses the following valuation
+techniques.
+
+Derivatives
+
+Derivatives valued using a valuation technique with market observable inputs are mainly interest rate swaps and
+forward foreign exchange contracts. The most frequently applied valuation techniques include forward pricing
+and swap models, using present value calculations. The models incorporate various inputs including the credit
+quality of counterparties, foreign exchange spot and forward rates and interest rate curves.
+
+Financial instruments at fair value through other comprehensive income
+Fair values of instruments listed in active markets are based on bid prices at the balance sheet date.
+
+Fair value hierarchy
+The Bank uses the following hierarchy for determining and disclosing the fair value of financial instruments by
+valuation technique:
+
+Level 1 — quoted prices in active markets for identical assets or liabilities.
+
+Level 2 — other techniques for which all inputs which have a significant effect on the recorded fair value
+are observable either directly or indirectly. .
+
+Level 3 — techniques which use inputs which have significant effect on the recorded fair value that are not based
+on observable market data.
+
+58
+ICBC (London) ple
+
+Fj Ae
+
+Notes to the financial statements
+
+for the year ended 31 December 2018
+
+The following table shows an analysis of financial instruments recorded at fair value by level of the fair value
+
+hierarchy.
+
+2018
+
+Assets
+
+Derivative financial instruments:
+Foreign Exchange Forwards
+Interest Rate Swaps
+
+Financial investments at FVOCT:
+Government debt securities
+Other debt securities
+
+Liabilities
+
+Derivative financial instruments:
+Foreign Exchange Forwards
+Interest Rate Swaps
+
+2017 ‘Level Il Level2 Leével3 Total
+$000 | $'000__ $000. $000
+Assets ,
+Derivative financial instruments:
+Foreign Exchange Forwards - 505123 - 50,123
+Interest Rate Swaps _ - 1,997 - 1,997
+Available-for-sale financial investments:
+Government debt securities 360,239 - - 360,239
+Other debt securities.’ ~ 64,969 23,002. - 87971
+425,208 75,122 : 500,330
+Liabilities
+Derivative financial instruments:
+Foreign Exchange Forwards - 49,070 - 49,070
+Interest Rate Swaps - 1,866 - 1,866
+50,936 50,936
+
+ICBC (London) ple
+ee
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Analysis of financial assets and liabilities by measurement basis
+
+Financial assets and financial liabilities are measured on an on-going basis either at fair value or at amortised
+cost.
+
+The following table analyses the carrying amounts of the financial assets and liabilities by category as defined in
+the Bank’s accounting policies and by balance sheet heading.
+
+2018
+. ~ Ey a . rs ; rar —
+ee "Fairvalue’ Sgt,
+: Fair value _ ‘through, other - - Financial’ assets eg eas
+through - comprehensive." “and liabilities at" eo 1 Peet
+profit or loss” =; =. “income * .-amortised costs eH “Total'
+E3000. 82000 $000" 18 000
+Assets oe Sek, ep oe Pe ™e "7 _"
+Cash and balances at central re we ern a oe
+banks Se ee ke 10,369 * 10,369,
+Loans and advances tobanks |- ~ '' 7 - ", 2. 4, 900,153". - 900 1153"
+Loans and advances to Te we ea
+customers of - ot, 809,084 ~ 809,084
+Derivative financial re rr ae ‘
+instruments 12,667 ote LT . 12, 667
+Financial Investments at a an
+FVOCI | ee 393,988 ~ ~ | - ‘393,988
+Financial investments at , nen mt ‘.
+amortised cost et 2 191,156 “191,156
+i. te hee a ee te ya ~ 7 .
+Total assets + 42,607 ~ : - 393,988 __. 1,910,762". 2,317,417.
+Le rm " . ya * “ _ sl ~ HT
+Deposits by banks - 7 = 1,355,754. As 355, 784
+Customer accounts , Loe - 467,426 467,426"
+Derivative financial . a
+instruments ° 12,466 - ; - 42, 466:
+Subordinated loan : - _- + 100,000 "100, 000
+Total liabilities 12,466. - "1,923,180. 1,935,646
+
+60
+ICBC (London) plc
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+2017
+Fair value Fair value Financial assets
+ae uel through other and liabilities at Total
+profit and comprehensive amortised cost
+loss income
+$’000 $'000 $°000 $’000
+Assets ,
+Cash and balances at central
+banks - ~ 162 162
+Loans and advances to banks - ~ 840,064 840,064
+Loans and advances to . . 953.232 953,232
+customers
+Derivative financial 52,120 . . 52,120
+instruments
+Available-for-sale financial
+Investments - 448,210 - 448,210
+Held-to-maturity financial . . 69,522 69,522
+investments ,
+Total assets §2,120 448,210 1,862,980 2,363,310
+Liabilities
+Deposits by banks - - 1,475,894 1,475,894
+Customer accounts - - - 375,734 375,734
+Derivative financial
+ins ents 50,936 - - 50,936
+Subordinated loan _ - - 100,000 100,000
+50,936 - 1,951,628 2,002,564
+
+Total liabilities
+
+61
+ICBC (London) plc
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+28. Impact of the adoption of IFRS 9
+
+The adoption of IFRS 9 impacted on the Bank’s accounting for the financial instruments in the classification and
+measurement and impairment. The opening shareholder’s equity reduced by $164k at 1 January 2018 after the
+IFRS 9 transitional adjustments.
+
+A. Classification and measurement of financial instruments
+
+The measurement category and the carrying amount of financial assets and liabilities in accordance with IAS 39
+
+and IFRS 9 at 1 January 2018 are compared as follows:
+
+Carrying |i Mi :
+Measurement Amount 2
+Category ae
+Financial Assets $'000 lee
+Cash and balances at central § Amortised cost ( Loans and Amol
+banks receivables) 162 |fcost
+Amortised cost ( Loans and Amo ti
+Loans and advances to banks __ receivables) 840,065 |ico nes i oe
+Loans and advances to Amortised cost ( Loans and ‘ eam
+customers receivables) 953,231 E
+Derivative financial Fair value through profit or t
+instruments loss (FVPL) $2,120 |PEVPE
+Financial investments at Amortised cost ( Held to ?
+amortised cost maturity) 69,522 |2
+Fair value through other '
+Financial investments at comprehensive income S56
+FVOCI (FVOCD 448,210 |?
+
+There were no changes to the classification and measurement of financial liabilities.
+
+62
+ICBC (London) plc
+ne
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+B. Reconciliation of impairment allowance balance from IAS 39 to IFRS 9
+
+The following table reconciles the carrying amounts of financial assets, from their previous measurement
+category in accordance with IAS 39 to their new measurement categories upon transition to IFRS 9 on | January
+
+2018:
+
+Renae
+Impairment loss 35% sues Res
+
+under TAS 39 measurement
+
+. ERS aces EEE
+Financial Assets $'000 edit $/00
+
+ESE NESE
+
+irment:
+
+Loans and advances to banks 245 |e ven (9
+Loans and advances to customers 7,035 |e pace 5
+Financial investments at amortised cost - eee
+Financial investments at FVOCI » [RSE ae
+Loan commitments and guarantees +
+
+7,280
+
+29. Cash and cash equivalents
+
+2017
+
+$'000
+
+Cash balance 162
+Balance with central bank -
+Balance with other banks 71,777
+71,939
+
+63
+ICBC (London) plc
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+30. Risk management
+
+The Board has ultimate responsibility for setting the Bank’s strategy, risk appetite and control framework; and
+measures performance against targets. To assist it in discharging these responsibilities, the Board has
+established a number of sub-committees governed by clear terms of reference. The principal Board-level sub-
+committees are Audit Committee, Governance and Compliance Committee and Risk Committee. At the
+Executive-level there are four committees concerned with risk management issues: Executive Committee, Asset
+and Liability Committee, Credit Committee and Financial Crime Risk Committee. In 2018, the Bank established
+the Information Technology Steering Committee.
+
+The Bank has established and maintained an Enterprise-Wide Risk Management framework to ensure that the
+risks undertaken are managed within the Bank’s risk appetite. The principles of risk management include a fine
+balance of risks and returns, and internal checks and balances with regards to efficiency, risk diversification, and
+a combination of quantitative and qualitative analysis.
+
+Risk mitigation
+
+The major financial risks faced by the Bank include credit risk, liquidity and funding risk, market risk and
+operational risk.
+
+Policies and procedures are written consistent with the Bank’s approach to the management of these risks.
+Employees are instructed to operate within the guidelines set out in Bank-wide policies and their own
+departmental procedures. The Compliance and Legal, Credit Management, and Risk and ALM Departments
+periodically carry out reviews to assess compliance. The Internal Audit Department, as the third line of defence,
+undertakes independent, risk-based reviews on the implementation and effectiveness of risk controls.
+
+As part of its Enterprise-Wide Risk Management, the Bank sets limits to control risk exposures, In setting risk
+limits, the Bank takes all material risks into account, including those arising from off-balance sheet transactions,
+as well as being consistent with the Bank’s obligation to maintain the risks within the constraints, both explicit
+and implied by capital and liquidity regulations.
+
+31. Credit risk
+
+Credit risk exposes the Bank to losses due to financial or other problems experienced by its clients. Credit risk is
+defined as the risk arising from an obligor’s (typically a company, financial institution or issuer of financial
+instrument) failure to meet the terms of any agreement and obligations. Credit risk arises when funds are
+extended, committed, invested or otherwise exposed through contractual agreements, whether reflected on-or
+off-balance sheet. Credit and counterparty risk arises primarily from three types of transactions:
+
+e Lending transactions through loans and advances to banks and customers creates thé risk that an obligor
+will be unable or unwilling to repay capital and/or interest on loans and advances granted to them.
+
+e Issuer risk on financial instruments where payments due from the issuer of a financial instrument will not
+be received.
+
+e Trading transactions, giving rise to settlement risk; this refers mainly to short-term trade finance
+transactions.
+
+Credit risks can be impacted by country risk where cross-border transactions are undertaken. This can include
+geopolitical risks, transfer and convertibility risks, sanctions imposed on sovereigns and the impact on the
+borrower’s credit profile due to local economic and political conditions.
+
+Fundamental principles used by the Bank in the management and measurement of credit risk are:
+
+e Aclear view of the target market.
+
+64
+ICBC (London) ple
+eee eee eee eee eee eee eee eee eee eee er
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+e Use of quantitative and qualitative methods to assess counterparty credit worthiness.
+
+© Analysis and monitoring of risks, including concentration risk by asset class, industry, and geography.
+
+* Post-lending management involving monitoring and review of exposures once facilities have been
+disbursed.
+
+The Bank places great emphasis on credit risk management and recognises it as a key risk, therefore the
+objective is to avoid and minimise losses. Credit analysis is performed on all new and existing counterparties and
+related exposures in order to assess each counterparty’s risk profile and their ability to repay. Counterparty
+credit risk is assessed using quantitative and qualitative analysis, as articulated in the Bank’s Credit Policy,
+Credit Management Manual and other documents. Assessment of the clients includes consideration of their
+character and integrity, core competencies, track record and financial strength. A strong emphasis is placed on
+the historic and on-going stability of income and cash flow streams generated by the clients. The primary
+assessment method is therefore the ability of the client to meet their payment obligations.
+
+It is the Bank’s policy that credit limits for counterparties, with accompanying credit analysis, are reviewed at
+least annually. Exposures are monitored and controlled against limits set and approved for individual
+counterparties. The Bank’s credit risk policy includes establishing industry sector limits, country limits and
+regulatory limits in addition to counterparty limits.
+
+Credit risk grading methodology
+
+The Bank uses both the internal credit rating, developed by Industrial and Commercial Bank of China Limited
+“the Parent Bank” and the external credit rating of counterparties assessed by the nominated credit rating
+agencies, namely Standard & Poor’s, Moody’s and Fitch, in order to analyse credit risks, to classify and monitor
+assets denoting strengths and weaknesses in the loan portfolio of the Bank. The credit rating also assists in
+defining the asset quality of the loan portfolio of the Bank and detects any deterioration in the quality of assets
+and tracks migration of risks.
+
+The internal rating is based on similar concept of probability of default which underpins the external rating
+agencies’ principles. The rating model of the Parent Bank is based on quantitative and qualitative assessment of
+a corporate customer. The quantitative assessment takes into consideration earnings, profitability, profit margins,
+EBITDA, interest coverage measures, accounting quality, cash flow and liquidity, capital and debt structure,
+solvency etc. The qualitative assessment includes industry environment, the entity’s market position and
+competitive strengths and weaknesses, management and corporate governance.
+
+The Master Scale rating model of the Parent Bank is mapped to the external credit rating agencies scales starting
+with the highest rating of AAA/Aaa to the lowest rating of D (default) with PD (probability of default) range of
+lower and upper limits and average PD limit for each rating. If a corporate or financial institution has an external
+rating, the Bank can map the extemal rating to the Master Scale to classify the asset.
+
+The credit grading system covers both on-and off balance sheet exposures as shown in the tables below in
+relation to loans to banks, customers and undrawn commitments and guarantees.
+
+The Bank does not undertake lending to retail customers and SME’s.
+
+Credit quality analysis
+
+The following tables coritain an analysis of the credit quality of the financial instruments for which an expected
+credit loss is recognised. The gross carrying amount of financial assets below also represents the Bank’s
+maximum exposure to credit risk on these assets.
+
+65
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+i. Loans and advances to banks
+
+a ES peer aiae a
+
+ah BE 2018 2017
+«Sie Stage 177, ee Saas a Total
+"487000 See 000.2: $7000
+
+Credit grade
+Normal 840,309
+Special mention -
+Substandard -
+Loss -
+
+eet Sb0, Sar 840,309
+ak ces ina(2), (245)
+Take Se
+
+aS. “900, 153:| 840,064
+
+Gross carrying amount
+
+Impairment loss
+
+Carrying amount
+
+ii. Loans and advances to customers
+
+3 2018 ds ae 2017
+°: real age 2* > * Total
+rb 8000: ye 2 ee 7 $000
+Re RS oi My Te ‘
+
+Credit grade tee neg Mt
+
+Normal "749,453 749,453 | 886,485
+Special mention OW te 16h 745 «3 hae C9 61, i146; 68,782
+Substandard a ee Sea ae a coe. -
+Loss ea eat Long | 2 5,000. 2" 5,000, __5,000
+Gross carrying amount _ 749,483 ” 61, 746_ . * 5,000. |. 816,199 | 960,267
+Impairment loss > “€,004) .. iy _.v 4(5;000)=". + (7,115) | (7,035)
+Carrying amount ; “3748,449 Zl . ” 60,635 i : we * 809,084" 953,232
+
+66
+ICBC (London) ple
+
+Notes to the financial statements |
+
+for the year ended 31 December 2018
+
+iii. Financial investments at amortised cost
+
+Credit grade
+Normal
+
+Special mention
+Substandard
+Loss .
+
+' _Gross carrying amount
+
+Impairment loss
+
+Carrying amount -
+
+External credit rating of financial investments at amortised cost
+
+Investment-grade
+AAA to AA-
+
+A+ to A-
+
+BBB+ to BBB-
+
+Total
+
+67
+
+2017
+
+$000
+
+21,844
+47,678
+
+| 69,522
+ICBC (London) ple .-
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+iv. Financial investments( bond investments) at FVOCI
+
+201A NEE) 2017
+cP. sce Si ge 3 0 Se otal, Total
+SES 810005 eran a 3
+= 5'000 SUES ee 0 $’000
+Credit grade
+Normal 448,211
+Special mention -
+Substandard -
+Loss -
+Gross carrying amount ae oat pons sChiaal 448,211
+Impairment loss ae ; = en aoe aes Saas Ee SSEUR -
+External credit rating of financial investments (bond investments) at FVOCI
+
+2017
+$000
+
+Investment-grade
+AAA to AA- ci 344,894
+
+Br renecy
+At to A- “¥ 87; 228: 73,650
+BBB+ to BBB- #8004555] 29,667
+Deyhh Sees
+
+Total £393,988! 448,211
+
+Undrawn commitments and guarantees
+
+he. A201 tee Se 2017
+{$3000 sis". “8 1000.3, ke Sind”: $000
+
+Credit grade . . :
+Normal fee Seat att 289/561'} 530,227
+Special mention | 718,672 oy “ aot! “ . 85 73. 36,560
+Gross carrying amount eS 289,561... 218, 672 rss es 566,787
+Impairment loss oan on D aaa (300) OC ie vaeatee ye. een (362): -
+
+68
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+Purchased or originated credit-impaired financial assets
+The purchased or originated credit-impaired financial asset was nil in 2018 (2017: Nil).
+
+impairment of financial assets
+
+The impairment of financial assets is assessed on a periodic basis as per the Bank’s impairment policy. The
+measurement of expected loss will involve increased complexity and judgement including estimation of
+Probability of Default (PD), Loss Given Default (LGD), a range of unbiased future economic scenarios,
+estimation of expected lives, estimation of exposures at default and assessing increases in credit risk.
+
+The impairment loss is calculated using 12 month PD for the financial assets in Stage 1 and the life time PD is
+used to calculate for the calculation of impairment for the financial assets in Stage 2 and Stage 3.
+
+The accounting policies 1.8.1.2 (Page 26) outline the detail accounting policies for the impairment of financial
+assets.
+
+Significant increase in credit risk (SICR)
+
+The Bank considers reasonable and supportable information that is relevant and available without undue cost or
+effort when determining whether the risk of default has increased significantly since the initial recognition.
+
+This includes both quantitative and qualitative information and analysis, based on the Bank’s historical
+experience and expert credit assessment and including forward-looking information.
+
+The objective of the assessment is to identify whether a significant increase in credit risk has occurred for an
+exposure by comparing:
+
+e the remaining PD as at the reporting date; with
+
+* the remaining lifetime PD for this point in time that was estimated at the time of initial recognition of the
+exposure (adjusted where relevant for changes in prepayment expectations).
+
+The magnitude of a movement in PD in order to trigger the SICR varies depending on the PD at the time of
+initial recognition of the exposure. The PD needs to increase more - both in terms of the percentage and the
+absolute value - for a highly rated counterparty than for a counterparty rated as a sub-investment grade in order
+to trigger the SICR.
+
+The Bank defines the following three criteria in its “Watch list” policy in order to determine whether there has
+been a significant increase in the credit risk:
+
+* quantitative test based on movement in PD;
+¢ qualitative indicators; and
+
+® a backstop of 30 days past due
+
+impairment loss
+The loss allowance recognised in the period is impacted by a variety of factors, as described below:
+
+e Transfers between Stage 1 and Stages 2 or 3 due to financial instruments experiencing significant increases
+(or decreases) of credit risk or becoming credit-impaired in the period, and the consequent “step up” (or “step
+down”) between 12-month and Lifetime ECL;
+
+e Additional allowances for new financial instruments recognised during the period, as well as releases for
+financial instruments de-recognised in the period;
+
+e Financial assets derecognised during the period and write-offs of allowances related to assets that were
+written off during the period.
+
+69
+ICBC (London) pic
+ener errr rere erence ee eee eee a
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+e Impact on the measurement of ECL due to changes in other factors such as:
+
+- Changes in PDs, EADs and LGDs in the period, arising from regular refreshing of inputs to models;
+
+Changes made to models and assumptions;
+
+Discount unwind within ECL due to the passage of time, as ECL is measured on a present value basis
+
+Foreign exchange retranslations for assets denominated in foreign currencies and other movements.
+
+The following tables explain the changes in the loss allowance between the beginning and the end of the annual
+period due to these factors:
+
+i. Loans and advances to banks
+
+Ly Et BE San Sa DN SAE
+Basie Se 2865 Total,
+feLifetime Pe Pep
+Cresent crake :
+CLEA ECU LS
+‘a rts ea
+532000 BEARS
+
+gears ae
+syeiiee $000 hie
+
+“pee cie PIT Bites ah = AEA WE Sede se 35 RT
+ae pie Deas ee rea Brees
+Puasa oh ails Ake BOY PAS TE ae te
+pM etl ate Je 5 OG
+Z 2
+
+Reh
+
+Balance at 1 January 2018
+
+Transfers:
+
+Transfer from Stage 1 to Stage 2
+Transfer from Stage 1 to Stage 3
+Transfer from Stage 2 to Stage 1
+
+New financial assets originated or purchased
+
+Financial assets derecognised during the period Ries las
+
+Tah ose
+
+Movement in impairment loss on the existing
+
+assets ee (44)
+Tees Pe a
+Balance at 31 December 2018 eww MRBZ hd inka hey
+
+ii. Loans and advances to customers
+
+See Ye eS eae pac anes
+
+‘Stage 1 14, Stage 20!“
+
+pee Sages ‘sw sp ye
+-r412 month ’»- Lifetime’: '.
+
+Faas "
+~
+
+re
+3
+
+Balance at 1 January 2018
+
+70
+ICBC (London) pie
+
+Notes to the financial statements
+
+for the year ended 31 December 2018
+
+Transfers:
+
+Transfer from Stage 1 to Stage 2
+Transfer from Stage 1 to Stage 3
+Transfer from Stage 2 to Stage 1
+
+New financial assets originated or purchased
+
+Financial assets derecognised during the period
+
+Movement in impairment loss on the existing
+assets
+
+.
+‘ +
+ton
+ais . -
+id ne Se + le - -
+Py aan
+Lr ~ a “ -
+x \ ca * + 4
+7 - . : .
+laid
+ae. # . “Oe st ye : : >
+* . Bot, ‘ ens :
+oa , . . a a +
+tee ‘ cM oo. t
+“e a? Ye t F . + ,
+a. (107). > (60) oe
+a os et i ,
+ee
+ad ge Me
+~ AAP BDL ate
+i wae we ss we r
+, - ‘ 7 4, a :
+woe Tt Pa er
+
+Balance at 31 December 2018
+
+- 1,004
+
+cs we
+
+TT ree ate
+
+18,000:
+
+iii. Financial investments at amortised cost
+
+* "Stage r ‘Stage 2 | , ‘Stage 3.
+
+" ‘{2'month*- ‘Lifetime - Lifetime
+
+“La
+
+a “Total”
+
+"> 3000.” $000: . “:8°000 _,” $7000;
+Balance at 1 January 2018 a: = - 8°
+os, 4 ~ i
+Transfers: : :
+Transfer from Stage 1 to Stage 2 - - - -
+Transfer from Stage 1 to Stage 3 - - - =
+Transfer from Stage 2 to Stage 1 : - - -
+New financial assets originated or purchased .* 23. - . - "23
+Financial assets derecognised during the period - - e325 ~
+Movement in impairment Joss on the existing
+assets 4 - - _4
+af - te
+Balance at 31 December 2018 35 - - 35
+
+71
+
+ICBC (London) plc
+
+‘Notes to the financial statements
+for the year ended 31 December 2018
+
+iv. Financial investments at FVOCI
+
+iB eStage 18:7 Stage 27 iu Stage 3°
+
+5“? month?
+
+i ree segpers GRE Fa Vetc: Mat
+
+Ske ze ee = LEMONS 5 PONS
+
+eS 900 SE S800 wae
+z arg FTE
+
+Bertier )
+
+Bs Fic:
+
+Balance at 1 January 2018
+
+Transfers:
+
+Transfer from Stage | to Stage 2
+Transfer from Stage 1 to Stage 3
+Transfer from Stage 2 to Stage 1
+
+New financial assets originated or purchased
+
+Financial assets derecognised during the period
+
+wes
+ar
+
+Movement in impairment loss on the existing
+assets
+
+,
+
+rors
+ae
+
+oe Re
+
+Balance at 31 December 2018 - IR
+
+v. Undrawn commitments and guarantees
+
+EE OOO ‘Sy NY
+roan an ee
+
+ok yy Te Mel ig, Seta cag gE
+bo PCa eon i ws
+Oe amy eg Se
+Cot + oh,
+
+Balance at 1 January 2018
+
+Transfers:
+
+Transfer from Stage 1 to Stage 2
+Transfer from Stage 1 to Stage 3
+Transfer from Stage 2 to Stage 1
+
+New financial assets originated or purchased
+
+72
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+REV aehip en ere per mies
+Financial assets derecognised during the period eee 43) an ets ae ek
+De eats tae Ae Sr
+
+eae Lor
+Peat sores.
+93
+
+Movement in impairment loss on the existing
+assets
+
+(
+
+SN aOR Sa AE
+t : BS =
+
+EES SSS) 3.00 wR Te ORES 98 302 |
+
+pero
+
+Balance at 31 December 2018
+
+Collateral held and other credit enhancements
+
+With the exception of commercial real estate, the majority of the Bank’s credit exposures are unsecured,
+including syndicated lending facilities, trade finance and interbank lending. Consequcntly the Bank has put in
+place a stringent credit assessment process to consider counterparties’ creditworthiness.
+
+Collateral provides additional security and assists recovery of loans in the event of default and the Bank takes
+collateral whenever it is required. It is a requirement that the valuation of collateral is updated on a regular basis
+and more so when credit risk deteriorates significantly and the customer is monitored more closely.
+
+The Bank considers credit risk mitigation techniques as part of the credit assessment of a potential client or
+business proposal. Credit risk mitigants include any collateral item over.which the Bank has a pledge of security,
+first charge on property, netting agreements, cash, or terms and conditions imposed on a borrower with the aim
+of reducing the credit nsk inherent to that transaction.
+
+Commercial real estate lending activities in the UK are collateralised by first registered mortgages or charges
+over property being financed. The following characteristics of the property are considered: the type of property,
+its location, tenant mix, sponsor and the ease with which the property could be re-let and/or re-sold. Commercial
+real estate lending generally takes the form of good quality property underpinned by strong third party leases.
+Commercial property valuations will continue to form part of the Bank’s on-going focus on collateral assessment.
+It is the Bank’s policy to obtain a formal valuation before advancing funds.
+
+Exposure to the property market is well-diversified with a strong bias towards prime locations and a focus on
+quality of tenants for commercial assets. Quality of collateral is important but the primary consideration in all
+commercial real estate deals is debt serviceability, which is stress-tested across various dimensions. Loan-to-
+value (LTV) ratio, interest cover ratio (ICR) and debt service coverage ratio (DSCR) are the main parameters set
+to assess risks in commercial real estate lending. All commercial real estate transactions are located in the UK,
+particularly in London.
+
+The gross maximum exposure to the credit risk of the Bank was $2,610 million as at 31 December 2018 (2017:
+$2,885 million) without taking account of any collateral held or other credit enhancements.
+
+The value of the collateral included in the calculation of the ECL was $354 million in 2018.
+
+Other credit enhancement not included in ECL
+
+The Bank has used other credit enhancements in order to reduce the net credit risk exposure. These credit risk
+mitigation items are eligible instruments under the Capital Requirement Regulations (CRR).
+
+The Bank has an on-balance sheet netting agreement (Netting Agreement) with its Parent Bank, Industrial and
+Commercial Bank of China Limited. The on-balance sheet Netting Agreement is an eligible form of credit risk
+mitigation in accordance with the CRR. The Netting Agreement restricts the netting to the mutual claims
+between an institution and its counterparty for the same currency on balance sheet loans and deposits, meaning
+that the Bank is entitled to set-off loans and deposits denominated in the same currencies of the same
+
+73
+
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+counterparties. The gross credit exposure to the Parent Bank as at 31 December 2018 was $133.14 million,
+which was netted against the eligible deposits of $32.51 million leaving a net credit exposure of $100.63 million.
+
+In addition, the Bank has taken collateral in the form of guarantees issued by insurance companies. As at 31
+December 2018, the Bank held guarantees worth $10.4 million as an eligible credit risk mitigation as per CRR
+(2017: $70.2 million).
+
+The Bank does not use credit default swaps (CDS) as a credit risk mitigation technique.
+
+In the Commodity and Structured Finance portfolio, some of the loan transactions are supported by assignment
+of inventory and receivables and by cash paid into a collection account by the borrowers.
+
+Write-off
+The Bank writes off the gross carrying amount of a financial asset when there is no reasonable expectation of
+recovering the asset (either in its entirety or a portion of it).
+
+There was no write-off of financial assets in 2018 (2017: Nil).
+
+Regional Exposure
+
+The table below analyses the geographical spread of the gross amount of loans to banks, loans to customers,
+financial investments and contingent liabilities.
+
+Fe aH aia Shia poe : 2017
+
+Fee AES 000 ihe BY $’000 %
+Asia and Pacific (including China) ‘ 901,743 31.26
+Europe:
+UK 870,692 30.18
+Other EU ; 140,903 4.88
+Non-EU 227,992 7.9
+Middle East - a
+North America m 206,123 7.14
+
+. Paces 4
+
+Africa rar Stans 5: 364,185 12.62
+
+ee aE ee AC BN Vase
+International Organisations* PERE 86 OAISER Ie] 173,457 _ 6.02
+Total regional exposure £323 609,846. See5100° 2,885,095 100
+
+£
+
+* International Organisations comprises multilateral organisations such as Multilateral Development Banks.
+
+Brexit can have a potential negative impact on the Bank’s exposures in all regions and the impact is higher
+particularly for exposures to the UK and EU countries. The Bank views that the potential impact of Brexit on
+the Bank is minimal.
+
+74
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+32. Liquidity and Funding risk
+Liquidity risk means the risk that the Bank, although solvent, does not have available sufficient financial
+resources to enable it to meet its obligations as they fall due. Funding risk means the risk that the Bank does not
+
+have stable sources of funding in the medium and long-term to meet its financial obligations, such as payments
+or collateral calls, as they. fall due, either at all or only at excessive cost, |
+
+The Bank identifies, measures, manages and monitors liquidity and funding risks across different time horizons;
+conducts liquidity stress testing which are supported by documented policies and procedures; clearly allocates
+responsibilities; and maintains sound systems to ensure that both the. liquidity ; and. funding profile are at it all times
+consistent with the Risk Appetite Policy approved by the Board.
+
+The table below summarises the maturity profile of the Bank’s financial liabilities with respect to its
+undiscounted cash flows.
+
+2018
+
+$'000_
+Non derivatives
+liabilities
+
+Deposits by-banks
+
+Customer accounts *
+
+‘Subordinated loan
+Derivative financial
+liabilities
+
+Cash inflows ,
+
+Cash outflows
+
+Undrawn documentary
+
+credits
+Undrawn loan
+commitments
+2017
+| Over 3
+. Over 1 months Over 6 Above 1
+1month montbto to 6 months yearto QverS Contractual Carrying
+$ '000 and less 3Months months tol Year S.years... -years. cashflow . Amount_
+..1- + » Non derivatives wee : : ;
+liabilities . ; oo ; ;
+Deposits by banks 201,615 ~ 278,362 34,399 471,596 502,056 «. - 1,488,028 1,475,894
+Customer accounts 218,208 54,677 102,578 1,399 165 — -, 377,027 375,734
+Subordinated loan - - - - 100,673 100,673 100,000
+Derivative financial an
+liabilities . _ 7 30,936
+Cash inflows (218,702) (95,394) (96,578) (116,585) (85, 701) oc (612,960) oo,
+-. Cash outflows | 223,421 109,458. 110,975" 132,848 ° 93,000 == 669,702 -
+
+75
+
+. co gee pga eee St a
+Raa feces ti caer “moma eM TO we ats
+ICBC (London) pic
+ee
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+424,542 347,103 151,374 489,258 509,520 100,673 2,022,470 2,002,564
+Undrawn documentary
+
+credits 13,774 33,726 2,764 - 13,599 - 63,863 63,863
+Undrawn loan
+commitments - 687 104,248 ~ 397,989 - 502,924 502,924
+
+438,316 381,516 258,386 489,258 921,108 100,673 2,589,257 2,569,351
+
+At 31 December 2018, the Bank held highly liquid assets, comprising bond investments measured at FVOCI and
+amortised cost, of $585 million. These can be used in the event of any liquidity stress event. At the end of 2018,
+the Liquidity Coverage Ratio (LCR) was 250%.
+
+Encumbered assets
+
+The Bank may pledge its assets as collateral to secure liabilities under repurchase agreements or credit-enhance
+any on-balance-sheet or off-balance-sheet transactions. The Bank pledged $4.67 million as collateral for
+derivative clearing as at 31 December 2018 (2017: $ 617k).
+
+33. Market.risk
+
+Market risk is defined as the risk of losses arising from movements in market prices. The Bank is exposed to few
+market risks. The principal risk is Foreign Exchange (FX) risk arising from both the banking book and trading
+book. As the Bank does not undertake proprietary trading and market making, trading book exposure only arises
+from client servicing. In the banking book, there are positions arising from interest income, financial and tax
+expenses, and impairment provisions. Another potential market risk is position risk arising from trading
+products: FX forwards, FX swaps and Interest Rate Swaps (IRS). Due to the Bank’s back-to-back trading
+strategy, there is no material market risk arising from these trading products.
+
+Foreign exchange risk
+
+Throughout 2018, the foreign currency exposure was within limits at all times. As at 31 December 2018, FX
+overnight exposure was $595k (long) (2017: $477k (long).
+
+FX Sensitivity Analysis
+
+The table below shows the impact on the profit of the Bank due to shifts in the USD exchange rate equally
+against all other currencies by various basis points as below.
+
+2018 2017
+Movement in USD Exchange Rate a
+
+2): ($)
+USD appreciates 200 basis points (8,220) | (4,827)
+USD appreciates 400 basis points (16,318),| (9,529)
+USD appreciates 800 basis points (32;171).| (18,585)
+USD depreciates 200 basis points 8,351 | 4,960
+USD depreciates 400 basis points 16,840 10,060
+USD depreciates 800 basis points : 34,268. 20,719
+
+76
+34.
+
+ICBC (London) ple
+
+Notes to the financial statements-- =
+for the year ended 31 December 2018 ;
+
+Monitoring and management of risk .
+
+The Bank sets market risk limits to control market risk. These limits are monitored by the Risk and Asset and
+Liability Management (Risk and ALM) Department, which is independent from the Treasury Department. The
+Risk and ALM Department submits regular reports to the Bank’s Asset and Liability Committee and Risk
+Committee. These Committees review major market risk indicators and take any necessary decisions. The Risk
+and ALM Department also submits weekly and monthly reports on foreign currency exposures and trading
+products to the Parent Bank, which in turn provides the Bank with regular guidance on market risk management.
+
+Interest rate risk in the banking book
+
+Interest rate risk arises from the possibility that changes in interest rates will affect future cash flows or the fair
+value of financial instruments. The primary form of interest rate risk is re-pricing risk which arises from timing -
+differences in the maturity (for fixed-rate instruments) and re-pricing (for floating-rate instruments). of. the
+
+Bank’s assets, liabilities and off-balatice-shéet positions. :
+
+The interest rate re-pricing gap of the Bank at 31 December 2018 is set out below. Items are allocated to time
+bands by reference to the earlier of the next contractual interest rate re-pricing date and the maturity date.
+
+Interest rate sensitivity table
+
+2018
+
+.$'000 -
+
+Assets
+
+Cash balance
+
+Balance at central bank.
+
+Loans and advances to banks
+
+Loans and advances to customers
+Financial investments at FVOCI
+Financial investments at amortised cost
+
+Fixed and other assets
+
+Total assets ;
+Liabilities
+Deposits by banks
+
+Customer accounts
+Other liabilities
+Subordinated loan
+Shareholder's funds
+
+Total liabilities and Shareholder’s funds |:
+
+Interest rate sensitivity gap
+
+_ Cumulative gap
+
+we ener --~ wages Sane:
+
+cama ape cesar ge dee OE ES
+
+ae Srey
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+The following table shows the sensitivity to a reasonably possible change in interest rates, with all other
+variables held constant, of the Bank’s net interest income (NII). The effect on the NII (and hence on the Profit
+and Loss Account) is the effect of the assumed changes in interest rates arising from the financial assets and
+liabilities held at the year-end that are subject to re-pricing within the coming year.
+
+Movement in interest rate $°000
+Interest rate increases by 100 basis points : 536
+Interest rate increases by 200 basis points , 1,071
+Interest rate decreases by 100 basis points (536)
+Interest rate decreases by 200 basis points (1,071)
+
+The interest rate sensitivities set out in the table above are based on simplified scenarios. The projections
+assume that interest rates of all maturities move by the same amount and, therefore, do not reflect the potential
+impact on net interest income in the case where some rates change while others remain unchanged.
+
+2017
+Over 3
+Not more months Over 6 Above 1 Non-
+than 3 to6 months year to5 Interest
+
+$ '000 months months to 1 Year years bearing Total
+Assets
+Liquid assets - - - - 162 162
+Loans and advances to banks : 826,552 13,512 - “ - 840,064
+Loans and advances to customers 925,240 27,992 - - - 953,232
+AFS financial investments 203,863 92,431 24,896 127,020 - 448,210
+HTM financial investments 40,000 7,678 12,010 9,834 - 69,522
+Fixed and other assets - - - ~ 120,049 120,049
+Total assets 1,995,655 141,613 36,906 136,854 120,211 = 2,431,239
+Liabilities
+Deposits by banks 1,441,747 34,147 - - - 1,475,894
+Customer accounts 272,687 101,506 1,381 160 - 375,734
+Other liabilities - - - - 81,211 $1,211
+Subordinated loan 100,000 - - - - 100,000
+Shareholder's funds ~ - - - 398,400 398,400
+Total liabilities and Shareholder’s funds _| 1,814,434 —_135,653 1,381 160 479,611 —_ 2,431,239
+Interest rate sensitivity gap . 181,221 5,960 35,525 136,694 (359,400)
+Cumulative gap 181,221 187,181 222,706 359,400 - 5
+
+78
+ICBC (London) ple
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+The table below shows projected changes in the 2017 Profit and Loss Account of the Bank arising from a shift
+in yield curves:
+
+Movement in interest rate $°000
+Interest rate increases by 100 basis points 1,712
+Interest rate increases by 200 basis points 3,423
+Interest rate decreases by 100 basis points (1,712)
+Interest rate decreases by 200 basis points (3,423)
+
+For each shift in the basis points on its funding rate, the Bank can expect the change in the amount of its Profit
+and Loss Account as illustrated above. The impact on the re-pricing periods within one year shows a net profit
+and a net loss respectively to a positive and negative shift in the basis points.
+
+35. Country by. country reporting
+
+The following Country by country reporting disclosure is made according to the Capital Requirements
+
+Regulation 2013 (CRR):
+2018
+United Kingdom
+ICBC (London) plc :
+2017
+Average Profit Corporate Public
+Business Turnover ag before T pora’e subsidies
+United Kingdom employees tax ax paid eceived
+$ 000 $ 000 $ 000
+ICBC (London) ple Banking 39,587 151 26,891 (5,041) -
+
+The tax on profit for 2018 was 5,611k (2017: 5,193k).
+
+wine ae al ow
+ICBC (London) pic
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+36. Operational risk (Unaudited)
+
+The Bank defines operational risk as the risk of loss resulting from inadequate or failed internal processes,
+people and systems or from external events. It is a pervasive risk that involves all aspects of business as well as
+other entities with whom the Bank deals. The nature of the Bank’s operational risk exposures is more likely to
+be ‘high-frequency/low-impact’ events.
+
+The objectives of operational risk management are not to remove operational risk altogether but to manage and
+contro] operational risk in a cost-effective manner consistent with the Bank’s risk appetite. The Bank has contro]
+systems and procedures in place to ensure that operational losses are minimised. As part of the Bank’s risk
+appetite, an Operational Loss ratio is set, monitored and reported to the Executive Committee and the Board. In
+2018, the operational loss was $5k (2017: $2k).
+
+37. Capital (Unaudited)
+
+The Bank’s policy is to maintain an actively-managed capital base to cover risks inherent in the business. The
+adequacy of the Bank’s capital is monitored using, among other measures, the rules and ratios established by the
+Basel Committee on Banking Supervision (BIS rules/ratios) and adopted by the Prudential Regulation Authority
+in supervising and regulating the Bank. ‘
+
+There were no breaches in capital requirements reported in the year.
+
+The primary objective of the Bank’s capital management activities is to ensure compliance with internal and
+external capital requirements. The Bank maintains sufficient capital ratios in order to support its business and to
+maximise shareholder’s value. .
+
+The Bank manages and adjusts its capital structure in the light of changes in economic conditions and the risk
+characteristics of its activities.
+
+Regulatory capital
+
+2017
+
+§ ‘000
+
+Share capital 200,000
+Retained earnings 199,057
+Other reserves (657)
+Less: Regulatory adjustments (552)
+Tier 1 capital 397,848
+Subordinated Loan 100,000
+Amortisation of Subordinated Loan -
+Collective impairment provision 2,280
+Tier 2 capital 102,280
+Total capital §00,128
+
+On 28 October 2013, a 10-year Subordinated loan was granted by the Parent Bank to the Bank to replace the
+previous loan with the same notional value of $100 million. The Subordinated loan is classified as lower Tier 2
+capital and is subject to amortisation on a straight-line basis from October 2018. The interest charged is 3 months
+Libor plus 1.3%.
+
+80
+ICBC (London) plc
+
+Notes to the financial statements
+for the year ended 31 December 2018
+
+38. Events after the end of the balance sheet date
+There has been no adjusting or non-adjusting event after the end of the balance sheet date.
+
+81
+
+ICBC @) TRICK
+
+ICBC (London) pic
+81 King William Street
+London EC4N 7BG
+United Kingdom
+www.icbclondon.com
+

@@ -682,7 +682,7 @@
         "start_year": 2024
       },
       {
-        "end_n": 13,
+        "end_n": 14,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -766,7 +766,6 @@
           "629564",
           "661960",
           "716167",
-          "730427",
           "738741",
           "740551",
           "754568",
@@ -787,7 +786,7 @@
           "970920",
           "993767"
         ],
-        "retained_n": 13,
+        "retained_n": 14,
         "start_n": 113,
         "start_year": 2025
       }
@@ -1484,7 +1483,7 @@
         "start_year": 2024
       },
       {
-        "end_n": 12,
+        "end_n": 13,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -1559,7 +1558,6 @@
           "629564",
           "661960",
           "716167",
-          "730427",
           "738741",
           "740551",
           "754568",
@@ -1575,7 +1573,7 @@
           "956138",
           "993767"
         ],
-        "retained_n": 12,
+        "retained_n": 13,
         "start_n": 98,
         "start_year": 2025
       }
@@ -2271,7 +2269,7 @@
         "start_year": 2024
       },
       {
-        "end_n": 12,
+        "end_n": 13,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -2352,7 +2350,6 @@
           "629564",
           "661960",
           "716167",
-          "730427",
           "738741",
           "740551",
           "754568",
@@ -2369,7 +2366,7 @@
           "850286",
           "993767"
         ],
-        "retained_n": 12,
+        "retained_n": 13,
         "start_n": 105,
         "start_year": 2025
       }
@@ -3069,7 +3066,7 @@
         "start_year": 2024
       },
       {
-        "end_n": 12,
+        "end_n": 13,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -3158,7 +3155,6 @@
           "629564",
           "661960",
           "716167",
-          "730427",
           "738741",
           "740551",
           "754568",
@@ -3176,7 +3172,7 @@
           "850286",
           "993767"
         ],
-        "retained_n": 12,
+        "retained_n": 13,
         "start_n": 114,
         "start_year": 2025
       }
@@ -14490,38 +14486,45 @@
       },
       {
         "end_year": 2026,
-        "n": 4,
+        "n": 5,
         "records": [
           {
-            "bank": "Aldermore Bank Plc",
-            "end_rank": 2,
-            "frn": "204503",
-            "rank_change": -2,
+            "bank": "Clydesdale Bank Plc",
+            "end_rank": 4,
+            "frn": "121873",
+            "rank_change": 0,
             "start_rank": 4
           },
           {
-            "bank": "Punjab National Bank (International) Limited",
-            "end_rank": 1,
-            "frn": "459701",
+            "bank": "C. HOARE & CO.",
+            "end_rank": 3,
+            "frn": "122093",
             "rank_change": 0,
-            "start_rank": 1
+            "start_rank": 3
           },
           {
-            "bank": "RECOGNISE BANK LIMITED",
-            "end_rank": 4,
-            "frn": "849404",
-            "rank_change": 2,
+            "bank": "Investec Bank PLC",
+            "end_rank": 5,
+            "frn": "172330",
+            "rank_change": 0,
+            "start_rank": 5
+          },
+          {
+            "bank": "Starling Bank Limited",
+            "end_rank": 2,
+            "frn": "730166",
+            "rank_change": 0,
             "start_rank": 2
           },
           {
-            "bank": "StreamBank PLC",
-            "end_rank": 3,
-            "frn": "954876",
+            "bank": "MONZO BANK LIMITED",
+            "end_rank": 1,
+            "frn": "730427",
             "rank_change": 0,
-            "start_rank": 3
+            "start_rank": 1
           }
         ],
-        "reporting_basis": "entity",
+        "reporting_basis": "consolidated_group",
         "start_year": 2025,
         "status": "insufficient_panel"
       }
@@ -101463,8 +101466,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -22.47,
+            "direction": "down",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -101473,18 +101476,18 @@
         "metric": "CET1 Ratio",
         "score": {
           "bank": "MONZO BANK LIMITED",
-          "changes": 4,
-          "down_changes": 1,
+          "changes": 5,
+          "down_changes": 2,
           "first_year": 2021,
           "flat_changes": 0,
           "frn": "730427",
-          "label": "persistent_up",
-          "last_year": 2025,
+          "label": "mixed",
+          "last_year": 2026,
           "metric": "CET1 Ratio",
-          "persistence_score": 0.75,
-          "robust_total_change": -24.959999999999965,
+          "persistence_score": 0.6,
+          "robust_total_change": -33.34000000000002,
           "status": "eligible",
-          "total_change": -43.07999999999999,
+          "total_change": -65.54999999999998,
           "up_changes": 3
         },
         "years": [
@@ -101867,10 +101870,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "\u00a3'000 unless stated. FY2025/24 = Monzo Bank Holding Group Limited; FY2023-18 = Monzo Bank Limited. See source note at bottom.",
+            "status": "numeric",
+            "value": 33.45,
             "year": 2026
           }
         ]
@@ -207895,8 +207898,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -5.199999999999999,
+            "direction": "down",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -207905,18 +207908,18 @@
         "metric": "Leverage Ratio",
         "score": {
           "bank": "MONZO BANK LIMITED",
-          "changes": 6,
-          "down_changes": 4,
+          "changes": 7,
+          "down_changes": 5,
           "first_year": 2019,
           "flat_changes": 0,
           "frn": "730427",
           "label": "mixed",
-          "last_year": 2025,
+          "last_year": 2026,
           "metric": "Leverage Ratio",
-          "persistence_score": 0.6666666666666666,
-          "robust_total_change": -9.330000000000002,
+          "persistence_score": 0.7142857142857143,
+          "robust_total_change": -18.57,
           "status": "eligible",
-          "total_change": 0.030000000000001137,
+          "total_change": -5.169999999999998,
           "up_changes": 2
         },
         "years": [
@@ -208299,10 +208302,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "\u00a3'000 unless stated. FY2025/24 = Monzo Bank Holding Group Limited; FY2023-18 = Monzo Bank Limited. See source note at bottom.",
+            "status": "numeric",
+            "value": 10.33,
             "year": 2026
           }
         ]
@@ -314327,8 +314330,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -22.47,
+            "direction": "down",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -314337,18 +314340,18 @@
         "metric": "Tier 1 Ratio",
         "score": {
           "bank": "MONZO BANK LIMITED",
-          "changes": 4,
-          "down_changes": 1,
+          "changes": 5,
+          "down_changes": 2,
           "first_year": 2021,
           "flat_changes": 0,
           "frn": "730427",
-          "label": "persistent_up",
-          "last_year": 2025,
+          "label": "mixed",
+          "last_year": 2026,
           "metric": "Tier 1 Ratio",
-          "persistence_score": 0.75,
-          "robust_total_change": -24.959999999999965,
+          "persistence_score": 0.6,
+          "robust_total_change": -33.34000000000002,
           "status": "eligible",
-          "total_change": -43.07999999999999,
+          "total_change": -65.54999999999998,
           "up_changes": 3
         },
         "years": [
@@ -314731,10 +314734,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "\u00a3'000 unless stated. FY2025/24 = Monzo Bank Holding Group Limited; FY2023-18 = Monzo Bank Limited. See source note at bottom.",
+            "status": "numeric",
+            "value": 33.45,
             "year": 2026
           }
         ]
@@ -420759,8 +420762,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -22.810000000000002,
+            "direction": "down",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -420769,18 +420772,18 @@
         "metric": "Total Capital Ratio",
         "score": {
           "bank": "MONZO BANK LIMITED",
-          "changes": 4,
-          "down_changes": 2,
+          "changes": 5,
+          "down_changes": 3,
           "first_year": 2021,
           "flat_changes": 0,
           "frn": "730427",
           "label": "mixed",
-          "last_year": 2025,
+          "last_year": 2026,
           "metric": "Total Capital Ratio",
-          "persistence_score": 0.5,
-          "robust_total_change": -28.96999999999997,
+          "persistence_score": 0.6,
+          "robust_total_change": -30.299999999999983,
           "status": "eligible",
-          "total_change": -42.33,
+          "total_change": -65.14,
           "up_changes": 2
         },
         "years": [
@@ -421163,10 +421166,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "\u00a3'000 unless stated. FY2025/24 = Monzo Bank Holding Group Limited; FY2023-18 = Monzo Bank Limited. See source note at bottom.",
+            "status": "numeric",
+            "value": 33.86,
             "year": 2026
           }
         ]

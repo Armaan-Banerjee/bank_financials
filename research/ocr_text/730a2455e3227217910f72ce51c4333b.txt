@@ -1,0 +1,3339 @@
+COMPANY REGISTRATION NUMBER: 12844788
+
+fe) Bank of London
+
+_ THE BANK OF LONDON GROUP LIMITED
+
+Annual Report and Financial Statements |
+for the year ended 31 December 2025
+
+fi in
+
+COMPANIES HOUSE
+The Bank of London Group Limited
+
+Contents of the financial statements for the year ended 31 December 2025
+
+1b Bank of Londen
+
+Company Information
+
+Strategic Report
+
+Directors’ Report
+
+Independent Auditor’s Report
+
+Statement of Profit or Loss and Other Comprehensive Income
+Statement of Financial Position
+
+Statement of Changes in Equity
+
+Statement of Cash Flows
+
+Notes to the Financial Statements
+
+Page
+
+9-14
+15-24
+29
+26
+27
+28
+
+29 - 58
+The Bank of London Group Limited
+
+Company Information
+
+by Bark of London
+
+Directors currently in office
+
+Registered office
+
+Auditors
+
+Company registration number
+
+AG Bullman
+M J Carawan
+T P Howie
+
+AM Melis
+
+A W Moeckli
+SR Walker
+
+77 Cornhill
+Fourth Floor
+
+London
+England
+EC3V 3QQ
+
+Ernst & Young LLP
+25 Churchill Place
+
+Canary Wharf
+London
+E14 SEY
+
+12844788 (England)
+The Bank of London Group Limited
+
+Strategic Report for the year ended 31 December 2025 b Bank of London
+
+The Directors present their Strategic Report for The Bank of London Group Limited (the “Company” or the
+“Bank’") for the year ended 31 December 2025. The Company (registered number 12844788) is a private
+company limited by shares incorporated and domiciled in the United Kingdom under the Companies Act
+2006 and is registered in England and Wales. On 10 March 2025, the Company's registered office changed
+to 77 Cornhill, Fourth Floor, London, England EC3V 3QQ.
+
+The Bank's immediate parent is TBOL Holdings UK Limited (“Group”). The Bank's ultimate parent company is
+TBOL Holdings Jersey Limited.
+
+1. Mission Statement
+
+Our mission is to create a safe clearing bank for the UK, offering a purpose-built payments, settlement and
+clearing platform that is powering the businesses and entrepreneurs of the future. With our technologies,
+innovations, and differentiated bank capabilities, we prioritise the preservation of our depositors’ monies
+and market stability. All client deposits are heid in full at the Bank of England.
+
+2. Principal Activities
+
+As a UK clearing bank, the principal activities of the Bank are to provide payment and deposit services to
+our clients. These focus on:
+e Agency, clearing, payment and settlement solutions for regulated and non-regulated domestic and
+international companies;
+e Deposits-as-a-Service — directly or through deposit aggregators, and;
+e Business & Commercial Banking - providing custody, transaction, and treasury banking solutions to
+many types of business, domestic and international.
+
+3. Review of Business and Strategy
+
+Our modern, cloud-native technology infrastructure represents a significant departure from traditional
+banking platforms, enabling us to offer enhanced efficiency, real-time processing capabilities and improved
+resilience. This technological foundation has been crucial in delivering our core services:
+
+e 24/7 Faster Payments processing, with high availability and operational resilience;
+
+e Comprehensive BACS (Bankers’ Automated Clearing System) capability, supporting a broad range of
+payment use cases;
+
+e API-first connectivity, enabling efficient client onboarding and integration;
+e Reporting and reconciliation tooling, supporting timely operational oversight; and
+e Strengthened security controls, aligned to the Bank’s risk management and compliance objectives.
+
+Operations and Innovation
+
+Over the course of 2025, we have continued to develop and enhance our operational capabilities as
+follows:
+
+The Group has taken a lease at 77 Cornhill to house our London operations;
+
+We maintained financial crime screening functionality in 2025 and have rolled out an enhanced AML
+(anti-money laundering) and sanctions screening system in Q2 2026, to further strengthen our
+financial crime control environment.
+The Bank of London Group Limited
+
+Strategic Report for the year ended 31 December 2025 b Bank of London
+
+Market Reception and Client Engagement
+
+We have continued to build relationships with clients across a number of key sectors, including:
+e Traditional financial institutions seeking modern clearing capabilities;
+e FinTech companies requiring reliable payment infrastructure;
+e Corporate and SME clients looking for efficient payment solutions and secure deposit services;
+e Financial service providers seeking API-first banking services; and
+e Deposit aggregators and investment advisors seeking safe and high yielding deposit solutions.
+
+Financial Technology Innovation
+
+Our investment in technology continues, with key developments including:
+e Enhanced API capabilities for seamless client integration;
+e Improved straight-through processing to increase efficiency and reduce operational risk; and
+e Development of additional value-added services to broaden the Bank’s proposition.
+
+Looking Ahead
+
+As we move forward, our focus remains unwavering on:
+« Expanding our service offerings while maintaining operational excellence;
+Deepening relationships with existing clients and attracting new partnerships;
+Continuing targeted investment in our technology platform to support scale and reliability;
+Further strengthening our risk management and compliance frameworks; and
+Building a sustainable and profitable business model.
+
+4. Financial Results for the Year
+
+The Bank recorded a net loss for the year of £23,503k (2024: £23,970k). The net loss for the year
+represents costs incurred in setting up infrastructure (non-tech) and hiring the high-calibre workforce
+required to continue to develop our capabilities and banking platform. The losses incurred in 2025, and
+their impact upon the Bank’s net assets, remain in line with Directors’ expectations, given the development
+phase of the business.
+
+The Bank's net interest income increased 51% in the year to £4,141k (2024: £2,748k), with interest income
+of £24,290k (2024: £24,027k) primarily representing interest income earned on funds deposited in the
+Bank’s account at the Bank of England, and interest expense of £20,149k (2024: £21,279k) being interest
+expense payable on customer deposits.
+
+Despite cash and cash equivalents balances falling from £830m to £327m over the course of the year,
+primarily driven by deposit aggregators, average cash balances were 18% higher. This combined with more
+favourable pricing, contributed to the increase in net interest income.
+
+The Bank of England base rate was cut over the course of 2025 from 4.75% to 3.75%. The Bank’s interest-
+earning assets reprice essentially immediately with the base rate and movements in the rate flow through
+to interest income with minimal lag. The Bank’s margin is instead a function of the rate paid to depositors
+relative to the base rate over the same period.
+
+Administrative expenses for the year were £30,217k (2024: £27,659k), an increase of £2,558k or 9%. The
+primary drivers of administrative expenses continue to be employee costs and the management recharge
+from Group. The £14,400k (2024: £14,400k) management recharge from Group, for the provision of core
+banking technology and related support to the Company, remained fiat on prior year as stipulated by the
+The Bank of London Group Limited
+
+Strategic Report for the year ended 31 December 2025 b Bank of London
+
+master services agreement. Employee costs increased £840k to £11,818k. Professional fees increased
+£1,408k to £2,751k, with the main driver being fees to the auditor for audit and other services (see note 6).
+
+The Bank’s net assets as at 31 December 2025 increased to £23,217k (2024: £22,143k), with the net loss
+for the year being offset by an increase in shareholders’ capital during the year.
+
+The following measures are the Key Performance Indicators (KPls} of the Bank:
+
+2025 2024
+£'000 £°000
+Net interest income 4,141 2,748
+Loss for the year 23,503 23,979
+Net assets at year-end 23,217 22,143
+
+The Bank of England has held the base rate at 3.75% during 2026 up to the date of these accounts.
+
+Capital, liquidity and balance sheet
+
+The Bank manages its capital to meet regulatory capital requirements. CET1 stood at £23.2m (2024:
+£22.1m). The Bank is wholly reliant upon financial support for funding from its parent. Since the year end,
+further capital injections of £35.0m have been made into Group and £31.7m has been down streamed into
+the Bank up to the date of the signing of these financial statements.
+
+The Internal Capital Adequacy Assessment Process (ICAAP) is the process by which the Bank manages and
+assesses its compliance with:
+
+The framework of the Bank's internal governance and operation of the risks;
+
+The management of the capital structure of the Bank;
+
+The results of the internal stress testing of risks; and
+
+The adequacy of capital resources to cover all levels of risks the Bank is faced with.
+
+As at 31 December 2025, the CET1 Capital ratio was 82.94% (2024: 88.91%).
+Liquidity
+
+The Internal Liquidity Adequacy Assessment Process (ILAAP) is the process by which the Bank manages
+and assesses its compliance with:
+
+The Bank's liquidity management model;
+
+The likely effects of stress testing on liquidity and other risks;
+The mitigants in place to address these risks; and
+
+The adequacy of buffers held at each point in time.
+
+From a liquidity perspective, the Bank has sufficient liquidity to satisfy business as usual and stress
+conditions. High Quality Liquid Assets (HQLA) were £303m at the close of 2025 (2024: £790m), with all
+HQLA balances continuing to be held at the Bank of England.
+
+The Bank is subject to interest rate risk arising from its managed rate deposits. Further information can be
+found in note 16 Interest Rate Risk.
+The Bank of London Group Limited
+
+Strategic Report for the year ended 31 December 2025 b Bank of London
+
+5. Bank Board Composition
+
+The Bank Board at the close of the 2025 financial year consisted of six positions, including two executive
+directors (including the Chief Executive Officer), three independent non-executive directors (including the
+chairperson) and a non-executive director. Subsequent to the reporting period one additional executive
+director was appointed and one existing executive director resigned. During this period, the Board's
+composition reflected a diverse range of skills, backgrounds, experience and knowledge.
+
+6. Decision Making
+
+The Bank’s Board maintains responsibility for long term and strategic decision making for the organisation,
+implementing the highest level of conduct and governance. The Bank’s Board is also responsible for
+determining the overall Bank dividend policy.
+
+During the year ended 31 December 2025, key decisions included:
+
+e Sourcing from shareholders additional capital investment to facilitate growth and ongoing operating
+expenses; and
+
+e Not proposing a dividend for the year.
+
+7. Section 172 (1) statement
+
+The Bank Board fosters effective stakeholder relationships. The table below shows the key stakeholder groups
+identified by the Directors and how the Bank satisfies the requirements under Section 172 of the Companies
+Act 2006.
+
+Stakeholder Engagement
+
+Colleagues Colleagues drive the success of the Bank. The Bank seeks to maintain high
+levels of employee engagement, including regular all-colleague communication
+sessions.
+
+Clients During 2025, the Bank prioritised remediation and executing internal delivery
+
+priorities, and client onboarding activity was constrained; as a result, the client
+base did not expand during the year.
+
+Regulators The Bank maintains an open and transparent relationship with its regulators.
+
+Investors The Bank works closely with its investors to ensure that its business is well-
+understood. ;
+
+Suppliers The Bank has established strong relationships across its supplier base,
+
+recognising the importance of our supply chain in delivering important business
+services to our clients.
+
+Environment Climate change is a focus for the Board. More details can be found in Section 9
+below.
+
+8. Business Conduct
+
+The Bank seeks to maintain a reputation for high standards of business conduct. Colleagues participate at
+least annually in learning covering Financial Crime, the Bank's Code of Ethics and Information and Cyber
+Security.
+The Bank of London Group Limited
+
+Strategic Report for the year ended 31 December 2025 b Bank of London
+
+9. Community and Environmental, Social and Governance issues
+
+The Bank’s impact on the community, socially and environmentally, is considered part of its governance
+and risk framework.
+
+The Board is committed to Environmental, Social and Governance (ESG) issues, so that the Bank can
+operate responsibly, deliver sustainable outcomes and provide meaningful benefits to its stakeholders.
+
+The Bank is in its infancy and is in the process of establishing its broader ESG Framework, under the
+governance of the Board. Annual reporting, facilitated by a quarterly ESG Working Group, is provided to the
+Board and monitors developments in this area. The Working Group commenced reporting in December
+2025.
+
+While the Board continues to monitor the impact of climate change on the Bank’s financial statements, they
+have concluded that the impacts are not material at this time.
+
+The Bank's approach to managing financial and non-financial risks related to ESG will evolve progressively
+and focuses on the following areas:
+
+*« Policy Development: The Bank’s approach to ESG risks, including climate-related risks, are included in
+its Enterprise Risk Management Framework, with more detailed policies to be developed when
+warranted by the growth of the business.
+
+* Engagement: The Bank will consider whether to engage with third-party providers as part of the
+onboarding and ongoing review processes as the business grows.
+
+e Sustainable Operations: Over time, ESG considerations will increasingly be embedded into business
+processes, investment considerations, and operational planning to support the Bank's long-term value
+creation and responsible growth.
+
+10. Principal Risks and Uncertainties
+
+Going forward, as a fully-licenced deposit taking bank, the Bank will continue to evolve its governance
+framework to support effective management, control and oversight as the size and complexity of its
+activities increases.
+
+Details of the Bank’s risk management framework are set out in note 16 to the financial statements.
+
+This report was approved by the Board on 5 August 2026 and signed on its behalf by:
+
+Abullman
+
+Abullman (Aug 5, 2026 13:09:24 GM1T+1)
+AG Bullman
+
+Director
+The Bank of London Group Limited
+
+Directors’ Report 15 Bankot London
+
+The Directors present their report and the audited financial statements for the Company for the year ended
+31 December 2025.
+
+1. Statement of Directors’ Responsibilities
+
+The Directors are responsible for preparing the annual report and the financial statements in accordance
+with applicable United Kingdom law and regulations.
+
+Company law requires the Directors to prepare financial statements for each financial year. Under that law
+the Directors have elected to prepare the Company's financial statements in accordance with UK-adopted
+international accounting standards ("IFRSs”). Under company law the Directors must not approve the
+financial statements unless they are satisfied that they give a true and fair view of the state of affairs of
+the Company and of the profit or loss of the Company for that period. in preparing these financial
+statements, the Directors are required to:
+
+* select suitable accounting policies in accordance with IAS 8 Accounting Policies, Changes in
+Accounting Estimates and Errors and then apply them consistently;
+make judgements and accounting estimates that are reasonable and prudent;
+present information, including accounting policies, in a manner that provides relevant, reliable,
+comparable and understandable information;
+
+* provide additional disclosures when compliance with the specific requirements in IFRS is insufficient
+to enable users to understand the impact of particular transactions, other events and conditions on
+the Company's financial position and financial performance;
+
+e inrespect of the Company's financial statements, state whether UK-adopted international accounting
+standards have been followed, subject to any material departures disclosed and explained in the
+financial statements; and
+
+¢ prepare the financial statements on the going concern basis unless it is inappropriate to presume that
+the Company will continue in business.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to show and
+explain the Company's transactions and disclose with reasonable accuracy at any time the financial
+position of the Company and enable them to ensure that the Company's financial statements comply with
+the Companies Act 2006. They are also responsible for safeguarding the assets of the Company and
+hence for taking reasonable steps for the prevention and detection of fraud and other irregularities.
+
+Under applicable law and regulations, the Directors are also responsible for preparing a Strategic Report
+and Directors’ report that comply with that law and those regulations. The Directors are responsible for
+the maintenance and integrity of the corporate and financial information included on the website.
+
+2. Statement as to Disclosure of Information to Auditors
+
+In order to prevent further additional delays to the presentation of these financial statements to the
+Bank's stakeholders, and given that it was not clear that the Bank would be able to provide the level of
+detailed information regarding share-based payments needed by the auditor for an unmodified aucit
+opinion, the Audit Committee and the Board approved that it was in the best interests of the Bank to
+proceed with such audit work and provision of information to the auditor so far as was necessary for
+the auditor to issue a qualified opinion with a limitation of scope in relation to share-based payments,
+and therefore to provide only such information to it as the Bank considered necessary and appropriate
+as aresult. This was with the knowledge of the auditor.
+The Bank of London Group Limited
+
+Directors' Report b Bank of London
+
+Notwithstanding the above, with respect to each person who is a director on the day that this report is
+approved:
+
+e there is, so far as the person is aware, no relevant audit information (as defined by Section 418 of the
+Companies Act 2006) of which the Company's auditors are unaware; and
+
+e the person has taken all the steps that he/she ought to have taken as a director to be aware of any
+relevant audit information and to establish that the Company’s auditors are aware of that information.
+
+3. Directors
+
+The Directors who served in office during the period and in the period up until the date of approval of these
+financial statements are as follows (“the Directors”):
+
+S Bell (Executive Director) Appointed 3 September 2024,
+Resigned 30 January 2025
+C A Brown (Independent Non-Executive Director and Appointed 1 December 2024,
+Chair of the Board) Resigned 21 March 2025
+AG Bullman (Executive Director) Appointed 28 March 2025
+
+MJCarawan | (Independent Non-Executive Director and Appointed 27 October 2022
+Chair of the Audit Committee)
+
+C GB Horne (Executive Director) Appointed 30 January 2025,
+Resigned 8 June 2026
+T P Howie (Executive Director) Appointed 17 February 2026
+AM Melis (Independent Non-Executive Director & Appointed 1 November 2024
+Chair)
+AW Moeckii (Non-Executive Director) Appointed 30 September 2025
+S R Walker (Independent Non-Executive Director and Appointed 3 December 2024
+
+Chair of the Board Risk Committee)
+
+Board meetings are held at least six times a year. The Board has also formed committees to develop strategy
+and set policy, review progress, and deal with specific and critical issues relevant to the committee’s
+objectives. The committees and their responsibilities are set out below.
+
+Board Audit Committee
+
+The Audit Committee is responsible for monitoring the integrity of the financial statements and advising the
+Board accordingly. It also reviews the effectiveness of the Bank’s internal and financial controls, and risk
+management systems. Specific additional responsibilities include the review of the Internal Audit scope and
+annual programme, the review of the external audit scope, the analysis of audit reports, and the review of
+the arrangements for raising concerns.
+
+The Bank’s 2023 audit was subject to inspection by the Financial Reporting Council’s (FRC) Audit Quality
+Review (AQR) team. The inspection covered the key audit matters and other selected areas of audit focus.
+The Directors were pleased to note that the final AQR report contained no findings and received the top
+AQR rating.
+
+Board Risk Committee
+The Risk Committee is responsible for recommending policies to the Board on the Bank's risk profile and
+
+limits, and for assessing the adequacy of its risk management and compliance framework. The
+Committee’s responsibilities cover all risks.
+
+10
+The Bank of London Group Limited
+
+Directors’ Report b Bank of London
+
+Board Remuneration & Nomination Committee
+
+The Remuneration & Nomination Committee was responsible for monitoring remuneration policy and
+recommending the remuneration of the Executives. In 2025, this committee was split into two separate
+committees, the Board Remuneration Committee and the Board Nomination Committee.
+
+The current membership of the Board committees is as follows:
+
+Board Audit Board Risk Board Board
+Committee Committee Remuneration Nomination
+Committee Committee
+Chair M J Carawan S R Walker M J Carawan AM Melis
+Member S R Walker M J Carawan AM Melis M J Carawan
+Member AM Melis S R Walker S R Walker
+
+4, 2025 Key Events
+
+During 2025, the Company's parent company, TBOL Holdings UK Limited raised additional investor funding of
+£25.1m. £24.5m was down streamed into the Bank.
+
+In August 2025, the Bank voluntarily paused new customer onboarding to make enhancements to its financial
+crime prevention controls. This pause has since been formalised through a voluntary arrangement agreed with
+the Financial Conduct Authority in March 2026.
+
+5. Events after the Reporting Period
+
+Since the year end, further capital injections of £35.0m have been made into Group and £31.7m has been
+down streamed into the Bank up to the date of the signing of these financial statements.
+
+The Group was previously notified by the PRA that it was under investigation in relation to certain historical
+matters that occurred prior to the Group’s change in ownership. The PRA have concluded the investigation and
+the settlement of £2m was agreed. The Group has recognised a provision of £2m to cover the agreed
+settlement. The Group and Bank are jointly and severally liable for this matter, however, the Group have
+provided an indemnity to the Bank and will pay the required amount to discharge the obligation of the Bank in
+respect of all potential outflows and liabilities that may arise from the investigation, therefore, there is no
+provision to be recognised by the Bank for this matter.
+
+On 15 April 2025, the PRA approved a new controller of the Group. As part of the capital injections in March
+2026, the existing controller's shareholdings were transferred to other shareholders and there is no longer a
+controller of the Group.
+
+In October 2025, the Board decided to exit the Bank's Belfast office and notice of early termination was
+served on the lease with a termination date of July 2026. The physical exit was completed on 31 March 2026,
+with impacted roles either relocated to London or transitioned to an outsourcing partner. Separately, the Bank
+entered into a lease for the London office at 77 Cornhill, previously held by the parent company, on 25 March
+2026 for a further 5 years through to March 2031.
+
+A new long term incentive plan, issued by TBOL Holdings Jersey Limited, was approved in 2026 and eligible
+participants in the scheme were notified on 5 March 2026. Management has considered the financial effect of
+both the cancellation of the previous employee share scheme and the implementation of the new scheme.
+The new scheme was determined to have a grant date of 5 March 2026, and under IAS 10 this is a non-
+adjusting event after the reporting period.
+
+11
+The Bank of London Group Limited
+
+Directors' Report ib Bank of London
+
+6. Going Concern
+
+In making their assessment of the appropriateness of adopting the going concern basis of accounting, the
+
+Board have prepared profitability, liquidity and regulatory capital forecasts (‘forecasts’) and have undertaken
+
+an assessment, for a period of 12 months from the date of approval of these financial statements. As part of
+
+this assessment, various stressed scenarios have also been considered. The key assumptions in producing the
+
+forecasts were:
+
+e the timing and quantum of additional capital injections,
+
+e the timing of the removal of the voluntary arrangement related to new customer onboarding and
+regulatory capital requirement changes, and,
+
+¢ growth in revenue.
+
+In addition to the above, when performing the going concern assessment, the Directors have considered that
+the Bank is wholly reliant upon financial support from its parent with capital raised by the parent required to be
+down streamed to the Bank. Accordingly, for the remainder of this note reference is made to the Group's
+ability to raise capital. Since the year end, further capital injections of £35.0m were made into Group and
+£31.7m was down streamed to the Bank up to the date of the signing of these financial statements.
+
+While the Board acknowledge the key assumptions and matters noted above, they have considered the
+mitigating factors in place, in particular:
+
+1. the commitment and ability of the ultimate parent company shareholders to inject capital into the ultimate
+parent company, and the commitment of the ultimate parent company to then down-stream capital to the
+Group and then the Group to Bank,
+
+2. the potential growth of its commercial business model, which is still in its infancy, and,
+
+3. the Group’s demonstrable operational capability.
+
+Based on these mitigating factors, the Board have concluded that the Bank will have adequate capital
+resources to continue trading for a period of 12 months from the date of approval of these financial
+statements, and that the going concern basis of preparation remains appropriate.
+
+The Board recognise that, notwithstanding the commitment and ability of ultimate parent company
+shareholders to inject capital into the ultimate parent company, and the commitment of the ultimate parent
+company to then down-stream capital to the Group and then the Group to Bank, a material uncertainty over
+going concern exists as a result of additional funding requirements and there are significant doubts about
+going concern. In addition to the existing material uncertainty surrounding the current funding, the following
+factors may necessitate additional financing to meet its financial obligations:
+
+1. Deterioration in Market Conditions ~ A material decline in macroeconomic or sector-specific conditions
+could reduce projected revenues, adversely impacting cash flows.
+
+2. Operational and Capital factors ~ The timing of the removal of the voluntary arrangement related to new
+customer onboarding and regulatory capital requirement changes.
+
+Should any of these risks materialise, the Group may be required to secure additional funding to discharge its
+financial obligations.
+
+These risks result in a material uncertainty related to events or conditions that may cast significant doubt on
+the Bank's ability to continue as a going concern and, therefore, it may be unable to realise its assets and
+discharge its liabilities in the normal course of business.
+
+12
+The Bank of London Group Limited
+
+Directors' Report b Bank of Londen
+
+7. Limitation of Scope
+
+Owing to significant turnover of staff and inadequate record keeping creating challenges to the retrieval of
+historical data, the Directors have been unable to conclude on the completeness, accuracy and disclosure of
+the employee share option scheme records (note 17). The employee share option scheme share-based
+payment entries reflected in these financial statements for the year ended 31 December 2025 and prior years
+are based on the information available. Given the limitation noted, the Directors and management have been
+unable to provide sufficient and appropriate audit evidence to our auditors to support the share-based
+payment booking resulting in a limitation of scope, as reported in the Independent Auditor's Report on page
+15. The Employee Share Option Plan issued by the parent company, TBOL Holdings UK Limited, was approved
+by the Board for cancellation on 17 April 2025, with all vested shares cancelled on 20 November 2025
+following the issuance of formal confirmations to the members of the scheme. As a result, the remaining
+charges on the existing scheme were accelerated in full at the cancellation date, 20 November 2025. The
+balance in share-based payment reserves related to the employee share option scheme at the point of
+cancellation has been recycled within equity to retained earnings (£728k). The 2025 ending balance is £981k
+and this relates to other share-based plans for non-executive directors (see note 17).
+
+8. Matters Covered in the Strategic Report
+
+Details regarding a review of the business and principal risk and uncertainties are provided in the Strategic
+Report on pages 4-8.
+
+9. Future Developments
+
+The Bank continues to invest in a number of ongoing initiatives such as the programme to migrate toa
+new core banking platform, bringing new products and services to market, whilst establishing and
+stabilising a high performing team.
+
+10. Financial Instruments
+
+The Bank’s use of financial instruments, and the financial risk framework it has in place to govern their
+- use, is set out in note 16 to the financial statements.
+
+11. Qualifying Third-Party Indemnity Provisions
+The Directors have the benefit of the indemnity provision contained in the Bank’s articles of association,
+
+subject to the conditions set out on the Companies Act 2006. This is a “qualifying third-party indemnity”
+provision as defined by section 234 of the Companies Act 2006.
+
+12. Political Donations and Expenditure
+The Bank did not make any political or charitable donations during the period under review (2024: £nil).
+
+13. Dividends
+
+The Directors do not recommend the payment of a dividend for the year ended 31 December 2025 (2024:
+Enil).
+
+13
+The Bank of London Group Limited
+
+Directors' Report ly Bank of London
+
+14. Auditors
+
+Ernst & Young LLP have expressed their willingness to continue in office. On the recommendation of the
+Board Audit Committee, the Board will propose their re-appointment as auditors of the Bank, to be
+approved by the shareholder by way of ordinary resolution.
+
+This report was approved by the Board of Directors on 5 August 2026 and signed on its behalf by:
+
+Abullman
+
+Abullman (Aug 5, 2026 13:09:24 GMT+1)}
+
+AG Bullman
+Director
+
+14
+The Bank of London Group Limited
+
+Independent Auditor's Report b Bank of London
+
+INDEPENDENT AUDITOR'S REPORT TO THE MEMBERS OF THE BANK OF LONDON GROUP LIMITED
+Qualified opinion
+
+We have audited the financial statements of The Bank of London Group Limited (the ‘Company’) for the
+year ended 31 December 2025 which comprise the Statement of Profit or Loss and Other Comprehensive
+Income, the Statement of Financial Position, the Statement of Changes in Equity, the Statement of Cash
+Flows and the related notes 1 to 20 including material accounting policy information. The financial
+reporting framework that has been applied in their preparation is applicable law and UK adopted
+international accounting standards.
+
+in our opinion, except for the possible effects of the matter described in the basis for qualified opinion
+section of our report, the financial statements:
+
+* give a true and fair view of the Company’s affairs as at 31 December 2025 and of its loss for the year then
+ended;
+
+* have been properly prepared in accordance with UK adopted international accounting standards; and
+
+« have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for qualified opinion
+
+Our opinion is qualified in respect of one matter, as was the case in our modified audit opinion in respect
+of the financial statements for the year end 31 December 2024.
+
+In September 2022, TBOL Holdings UK Limited (previously Oplyse Holdings Limited — the ‘Parent
+company’), together with its subsidiaries, the ‘Group’, implemented a Share Option Plan (the ‘Previous
+Plan’) where equity-settled share option awards over shares in TBOL Holdings UK Limited are granted to
+employees of the Group, including employees of the Company.
+
+Options issued under the Previous Plan allowed the participants the right to acquire ordinary shares in the
+Parent company. As described in note 17, the Company accounts for the Previous Plan as an equity-
+settled plan. The fair value of the participants’ services received in exchange for the grant of the options
+is recognised as an expense in Administrative Expenses in the Statement of Profit or Loss and Other
+Comprehensive Income. A credit is recognised directly in equity in the Share-based payment reserve.
+
+As further explained in note 17, in April 2025, the Board approved the cancellation of the Previous Plan.
+The Previous Plan was cancelled in November 2025 after formal confirmations had been issued to
+members of the scheme.
+
+The Company also had an arrangement with some of its non-executive directors, where those non-
+executive directors could elect to receive a portion of their fee in the form of equity shares of the Parent
+(‘the Non-Executive Directors’ Share Plan’).
+
+In prior periods, the limitation of scope relating to share-based payment arrangements extended to both
+the Non-Executive Directors’ Share Plan and the Previous Plan. During the current year, sufficient
+appropriate audit evidence was obtained in respect of the Non-Executive Directors' Share Plan for current
+and prior period balances. Accordingly, the limitation of scope pertains solely to the Previous Plan.
+
+The Directors have estimated the valuation and based the accounting and disclosure of the Previous Plan
+on the information they had available, because inadequate historical records have been maintained, as set
+out in note 17. As a result of this, we were unable to obtain sufficient appropriate audit evidence to
+support the valuation, accounting and disclosure of the Previous Plan.
+
+In respect of the year ended 31 December 2025 this impacted:
+
+15
+The Bank of London Group Limited
+
+Independent Auditor's Report b Bank of London
+
+e £77k of the Share-based compensation expense included within Administrative expenses within the
+Statement of Profit and Loss, and
+e £728k of the Recycling share-based payment reserve within the Statement of Changes in Equity.
+
+In respect of the year ended 31 December 2024 this impacted:
+
+e £651k of the total £1,632k Share-based payment reserve in the Statement of Financial Position,
+
+e £145k of the total £404k Share-based compensation expense included within Administrative Expenses
+within the Statement of Profit and Loss,
+
+e £651k of the total £(50,529k) Retained Earnings within the Statement of Changes in Equity , and
+
+e £483 of the total opening balances of the Share-based payment reserve and Retained Earnings as of 1
+January 2024 within the Statement of Changes in Equity (£1,205k and £(26,559k), respectively).
+
+Remaining balances in the above-mentioned financial statement line items relate to Non-Executive Directors’
+Share Plan.
+
+Consequently, we were unable to determine whether any adjustment to these financial statement line items or
+disclosure notes were necessary. Our opinion on the current period's financial statements is also modified
+because of the possible effect of this matter on the comparability of the current period’s figures and the
+corresponding figures.
+
+In addition, were any adjustment to the share-based payments charges or Share-based payment reserve be
+required, the Strategic Report and Directors’ Report would also need to be amended.
+
+The valuation, accounting and disclosure of share-based payments has been determined to be a key audit
+matter for this year too due to subjective inputs into managements calculations.
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable
+law. Our responsibilities under those standards are further described in the Auditor's responsibilities for the
+audit of the financial statements section of our report. We are independent of the Company in accordance with
+the ethical requirements that are relevant to our audit of the financial statements in the UK, including the FRC’s
+Ethical Standard as applied to public interest entities, and we have fulfilled our other ethical responsibilities in
+accordance with these requirements.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our
+qualified opinion.
+
+Material uncertainty relating to going concern
+
+We draw attention to the Basis of Preparation in note 1 in the financial statements, which indicates that
+the ability of the Company to continue as a going concern is subject to material uncertainty. The
+Company is loss making and has been impacted by adverse events requiring attention as set out in
+‘Events after the reporting period’ note 20 and the Directors’ Report. These circumstances give rise to
+significant uncertainty regarding the adequacy of the Company's existing funding arrangements. This
+uncertainty may be further heightened by a number of factors, such as deterioration of market conditions
+and operational and capital factors, that could result in the need for additional funding.
+
+As stated in note 1, these events and conditions indicate that a material uncertainty exists that may cast
+significant doubt on the Company's ability to continue as a going concern. Our opinion is not modified in
+respect of this matter.
+
+In auditing the financial statements, we have concluded that the Directors’ use of the going concern basis
+of accounting in the preparation of the financial statements is appropriate. Our evaluation of the Directors’
+assessment of the Company's ability to continue to adopt the going concern basis of accounting included:
+
+16
+The Bank of London Group Limited
+
+Independent Auditor's Report b Bank of London
+
+We obtained an understanding of management's going concern assessment process, in order to
+be able to design an appropriate audit response.
+
+We tested the mathematical accuracy of key underlying calculations included in management's
+going concern assessment.
+
+We challenged the appropriateness of management's forecasts which included understanding the
+key assumptions and inputs into management's estimates, critically challenging the
+reasonableness of these and then substantively testing these.
+
+We challenged the appropriateness of management's downside sensitivity analysis and created
+our own independent challenger downside scenario and sensitivity analyses on individual
+assumptions, in order to stress the impact on liquidity and capital requirements.
+
+We evaluated management's plans for future actions in relation to its going concern assessment
+by inspecting board meeting minutes and considering events occurring subsequent to the
+balance sheet date and up to the date of the auditor's report for evidence of management's intent
+and ability to carry out such plans. In addition, we performed our own downside sensitivity
+analysis to determine the implications should management be unable to carry out such plans.
+
+We engaged our regulatory specialists to review the capital calculations produced by
+management.
+
+- We discussed the Company's overall capital requirements and the current voluntary arrangement
+
+with the Prudential Regulation Authority (‘PRA’) and Financial Conduct Authority (‘FCA).
+
+We considered whether there were other events subsequent to the balance sheet date which
+could have a bearing on the going concern conclusion.
+
+We obtained a letter of commitment from a member of the investor group in relation to future
+capital commitments.
+
+We assessed the disclosures in the annual report and financial statements relating to going
+concern, including the materia! uncertainty, to ensure they were in compliance with IAS 1 —-
+Presentation of Financial Statements.
+
+The audit engagement partner and other partners increased their time directing, supervising and
+reviewing the audit procedures on going concern and senior members of the audit team
+increased their time and involvement in performing the audit procedures on going concern.
+
+From our evaluation of the Directors’ going concern.assessment, we had the following observations:
+
+The Company requires further capital to meet its ongoing cash and regulatory requirements and
+its future business plan, for the going concern period. Further capital will also be required
+subsequent to the going concern period being assessed.
+
+The Company's business plan is dependent on revenue growth and the timing of the removal of
+current voluntary arrangements. Any shortfall in revenue or delay in the lifting of the measures
+from the current plan will result in further capital requirements for the entity.
+
+Based on the work we have performed, we concur with the Directors that there is a material uncertainty
+relating to events or conditions that, individually or collectively, may cast significant doubt on the
+Company's ability to continue as a going concern. The assessment period considers twelve months from
+the date of the approval of these financial statements. Going concern has been determined to be a key
+audit matter.
+
+Our responsibilities and the responsibilities of the Directors with respect to going concern are described in
+the relevant sections of this report. However, because not all future events or conditions can be predicted,
+this statement is not a guarantee as to the Company's ability to continue as a going concern.
+
+17
+The Bank of London Group Limited
+
+Independent Auditor's Report b Bank of London
+
+Overview of our audit approach
+
+Key audit matters e Going concern
+e Improper revenue recognition, including management override of controls
+e Financial control environment
+e Valuation, accounting and disclosure of share-based payments
+
+Materiality ° Company’s overall materiality is £697k which represents 3% of equity.
+
+An overview of the scope of our audit
+Tailoring the scope
+
+Our assessment of audit risk, our evaluation of materiality and our allocation of performance materiality
+determine our audit scope for the Company. This enables us to form an opinion on the financial
+statements. We take into account size, risk profile, the organisation of the-Company and effectiveness of
+entity level controls, the potential impact of climate change and changes in the business environment
+when assessing the level of work to be performed. All audit work was performed by the audit engagement
+team with support from internal specialists.
+
+Climate change
+
+Stakeholders are increasingly interested in how climate change will impact the Company. The Company
+has determined that the most significant future impacts from climate change on its operations will be from
+financial and non-financial risk. These are explained on page 8 Community and Environmental, Social, and
+Governance issues section in the Strategic Report. All of these disclosures form part of the “Other
+information,’ rather than the audited financial statements. Our procedures on these unaudited disclosures
+therefore consisted solely of considering whether they are materially inconsistent with the financial
+statements or our knowledge obtained in the course of the audit or otherwise appear to be materially
+misstated, in line with our responsibilities on “Other information”.
+
+In planning and performing our audit we assessed the potential impacts of climate change on the
+Company's business and any consequential material impact on its financial statements.
+
+The Company has explained in note 1 how climate change has been reflected in the financial statements.
+There are no significant judgements or estimates relating to climate change in the notes to the financial
+statements.
+
+Based on our work we have not identified the impact of climate change on the financial statements to be
+a key audit matter or to impact a key audit matter.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our
+audit of the financial statements of the current period and include the most significant assessed risks of
+material misstatement (whether or not due to fraud) that we identified. These matters included those
+which had the greatest effect on: the overall audit strategy, the allocation of resources in the audit; and
+directing the efforts of the engagement team. These matters were addressed in the context of our audit
+of the financial statements as a whole, and in our opinion thereon, and we do not provide a separate
+opinion on these matters.
+
+In addition to the matter described in the basis for qualified opinion section and the matter described in
+the material uncertainty related to going concern section, we have determined the matters described
+below to be the key audit matters to be communicated in our report.
+
+18
+The Bank of London Group Limited
+
+Independent Auditor's Report
+
+by Banko London
+
+Our response to the risk
+
+including management override of
+controls (2025: £3,088k, 2024:
+£1,510k)
+
+Refer to the Accounting policies
+note 1.10 (page 37]; and note 4 of
+financial statements (page 39)
+
+We identified all of the revenue
+streams recognised by the
+Company and assessed each
+stream for subjectivity related to
+management estimation of
+
+give rise to a fraud risk of
+management override of controls.
+
+We determined that the specific
+revenue relative to bespoke
+contracts and account fees was
+complex and subjective in nature.
+We concluded this could lead to a
+heightened fraud risk = of
+management override and result
+in non-compliance with the
+requirements of IFRS 15 Revenue
+from Contracts with Customers.
+
+revenue recognition as this could |
+
+following procedures:
+
+° We adopted a fully
+substantive approach to our
+testing.
+
+° We performed
+walkthroughs and
+understood the nature of
+the key revenue streams.
+
+. We assessed the
+Company's revenue
+recognition policy in relation
+to account fees and
+challenged its compliance
+with the requirements of
+accounting standards.
+
+° By inspecting
+bespoke revenue
+agreements, we challenged
+management’s assessment
+of the agreements to
+validate that the fees had
+been appropriately
+recognised.
+
+° For a sample of
+account fees recognised,
+we obtained the contractual
+agreement between the
+Company and the
+applicable counterparty to
+examine whether the
+criteria to recognise the
+revenue had been met.
+
+.° We validated that
+
+the sample of account fees
+had .been subsequently
+paid by the counterparty.
+
+° We tested a sample
+of account fees to ensure
+they had been recognised
+in the correct period.
+
+Risk Key observations communicated t
+the Audit Committee
+Improper revenue recognition, | We have performed the | We highlighted to the Audit
+
+Committee
+
+e Further enhancements
+are required to the revenue
+recognition policy.
+
+° Based on audit
+procedures performed, and
+following adjustments to correct
+audit differences, we concluded
+that the revenue is appropriately
+recognised and is materially
+correct.
+
+19
+The Bank of London Group Limited
+
+Independent Auditor's Report
+
+Oy Bank of London
+
+Financial control environment
+
+Refer to the Directors’ Report
+(pages 9 - 714)
+
+Following on from our opinion on
+the financial statements of the
+Bank for the year ended 31
+December 2024, the Company is
+stil in an early stage of
+development, and the
+governance and control
+environment still has not yet
+matured fully such that the
+auditor can place reliance on the
+control environment for audit
+purposes. There continues to be a
+risk relating to the design,
+implementation and operating
+effectiveness of the ‘financial, IT
+general and regulatory reporting
+controls, which could result in
+current and prior
+adjustments, whether arising from
+errors or fraud.
+
+year -
+
+Our audit approach
+included an assessment of
+the process level controls
+that management relies on
+for financial reporting and
+regulatory matters. We
+concluded we could not
+place reliance on_ the
+process level controls for
+the purpose of the audit. As
+such, we undertook a fully
+substantive audit.
+
+This involved designing and
+executing audit procedures
+
+to gather evidence
+regarding the
+completeness, accuracy,
+
+and validity of financial
+statement assertions. We
+performed a greater level of
+tests of details of the
+transactions and balances
+than would have been
+required had a_ controls-
+based audit approach been
+taken, by lowering testing
+thresholds and increasing
+sample sizes. In addition,
+
+we undertook detailed
+analytical reviews which
+involved evaluating the
+financial statement
+balances at a
+disaggregated level, by
+studying plausible
+
+relationships among both
+financial and non-financial
+data.
+
+We highlighted to the Audit
+Committee that as the business
+grows, this brings with it
+challenges in respect of the need
+to ensure there are appropriate
+governance and controls in place
+across the three lines of defence
+and an appropriate level of skills
+and experience within’ the
+Company.
+
+Whilst progress has been made in
+
+developing an appropriate
+governance and control
+environment, there remains
+further remediation to be
+
+performed. Our observations
+communicated to the Audit
+Committee included the need to
+ensure that controls, are designed
+and implemented effectively and
+embedded so that they are
+operating effectively during the
+
+period and are adequately
+documented.
+We highlighted to the Audit
+
+Committee that we were not in a
+position to rely on the financial or
+regulatory controls as part of our
+audit.
+
+In the prior year, our auditor's report included a key audit matter in relation to Existence of share capital
+issuances and related cash, including management override of controls. In the current year, this risk has
+
+been reassessed due to enhancement in management's processes resulting in the removal of the related
+
+key audit matter.
+
+20
+The Bank of London Group Limited
+
+Independent Auditor's Report . 1} Bank of London
+
+Our application of materiality
+
+We apply the concept of materiality in planning and performing the audit, in evaluating the effect of identified
+misstatements on the audit and in forming our audit opinion.
+
+Materiality
+
+The magnitude of an omission or misstatement that, individually or in the aggregate, could reasonably be
+expected to influence the economic decisions of the users of the financial statements. Materiality provides a
+basis for determining the nature and extent of our audit procedures.
+
+We determined materiality for the Company to be £697k (2024:£664k), which is 3% of equity. We believe that
+equity provides us with the appropriate basis of materiality as this aligns closely with the expectations of
+primary users of the financial statements being its majority shareholder and the UK regulator to whom capital
+adequacy and solvency of the Group is critical. As such we decided to use 3% of equity on the grounds that the
+Company is a start-up entity that is in the early stages of executing its business plan, is still loss making and
+operates within a highly regulated industry with increased focus on capital adequacy.
+
+During the course of our audit, we reassessed initial materiality as our audit procedures identified a number of
+audit differences impacting equity.
+
+Performance materiality
+
+The application of materiality at the individual account or balance level. It is set at an amount to reduce to an
+appropriately low level the probability that the aggregate of uncorrected and undetected misstatements
+exceeds materiality.
+
+On the basis of our risk assessments, together with our assessment of the Company’s overall control
+environment, our judgement was that performance materiality was 50% of our planning materiality, namely
+£348k (2024: £332k) as the Company is a start-up and operates within a regulated industry. We have set
+performance materiality at this percentage based on a number of considerations, including the number and
+amount of identified misstatements, the effectiveness of the control environment and other factors affecting
+the entity and its financial reporting.
+
+Reporting threshold
+An amount below which identified misstatements are considered as being clearly trivial,
+
+We agreed with the Audit Committee that we would report to them all uncorrected audit differences in excess
+of £35k (2024: £33k), which is set at 5% of planning materiality, as well as differences below that threshold
+that, in our view, warranted reporting on qualitative grounds. —
+
+We evaluate any uncorrected misstatements against both the quantitative measures of materiality discussed
+above and in light of other relevant qualitative considerations in forming our opinion.
+
+Other information
+
+The other information comprises the information included in the annual report, other than the financial
+statements and our auditor's report thereon. The Directors are responsible for the other information contained
+within the annual report.
+
+Our opinion on the financial statements does not cover the other information and, except to the extent
+otherwise explicitly stated in this report, we do not express any form of assurance conclusion thereon.
+
+Our responsibility is to read the other information and, in doing so, consider whether the other information is
+materially inconsistent with the financial statements or our knowledge obtained in the course of the audit or
+otherwise appears to be materially misstated. If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether this gives rise to a material misstatement in the financial
+21
+The Bank of London Group Limited
+
+Independent Auditor's Report 19 Bank of London
+
+statements themselves or a material misstatement of the other information. If, based on the work we have
+performed, we conclude that there is a material misstatement of the other information, we are required to report
+that fact.
+
+As described in the basis for qualified opinion section of our report, we were unable to satisfy ourselves on the
+Recycling Share-based payment reserve, a portion of the Share-based payment reserve as at 31 December
+2024 and 1 January 2024, the Snare-based compensation expense included within Administrative expenses for
+the year ended 31 December 2025 and a portion for the year ended 31 December 2024, and Retained Earnings
+as at 31 December 2024 and 1 January 2024.
+
+We have concluded that where the other information refers to these balances or related balances, it may be
+materially misstated for the same reason.
+
+Basis for qualified opinion on other matters prescribed by the Companies Act 2006
+
+Except for the possible effects of the matter described in the basis for qualified opinion section of our report, in
+our opinion, based on the work undertaken in the course of the audit:
+
+° the information given in the Strategic report and the Directors’ report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+* the Strategic report and Directors’ report have been prepared in accordance with applicable legal
+
+requirements.
+
+Matters on which we are required to report by exception
+
+Except for the matter described in the basis for qualified opinion section of our report, in the light of the
+knowledge and understanding of the Company and its environment obtained in the course of the audit, we have
+not identified material misstatements in the Strategic report or Directors’ report.
+
+Arising solely from the limitation on the scope of our work relating to share-based payments, referred to above:
+
+° we have not obtained all the information and explanations that we considered necessary for the
+purpose of our audit; and
+° we were unable to determine whether adequate accounting records have been kept.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+° returns adequate for our audit have not been received from branches not visited by us; or
+° the financial statements are not in agreement with the accounting records and returns; or
+° certain disclosures of Directors’ remuneration specified by law are not made.
+
+Responsibilities of Directors
+
+As explained more fully in the Directors’ responsibilities statement set out on page 9, the Directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such internal control as the Directors determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the Directors are responsible for assessing the Company's ability to
+continue as a going concern, disclosing, as applicable, matters related to going concern and using the going
+concern basis of accounting unless the Directors either intend to liquidate the Company or to cease operations,
+or have no realistic alternative but to do so.
+
+22
+The Bank of London Group Limited
+
+Independent Auditor's Report 19 Bank of London
+
+Auditor's responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our
+opinion. Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise
+from fraud or error and are considered material if, individually or in the aggregate, they could reasonably be
+expected to influence the economic decisions of users taken on the basis of these financial statements.
+
+Explanation as to what extent the audit was considered capable of detecting irregularities, including fraud
+
+irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures
+in line with our responsibilities, outlined above, to detect irregularities, including fraud. The risk of not detecting
+a material misstatement due to fraud is higher than the risk of not detecting one resulting from error, as fraud
+may involve deliberate concealment by, for example, forgery or intentional misrepresentations, or through
+collusion. The extent to which our procedures are capable of detecting irregularities, including fraud, performed
+subject to the limitation on our audit described in the basis for qualified opinion section above, is detailed
+below.
+
+However, the primary responsibility for the prevention and detection of fraud rests with both those charged with
+governance of the Company and management.
+
+- We obtained an understanding of the legal and regulatory frameworks that are applicable to the Company
+and determined that the most significant are:
+
+- The regulations, licence conditions and supervisory requirements of the Prudential Regulation Authority (PRA)
+and Financial Conduct Authority (‘FCA);
+
+- Companies Act 2006;
+
+- Financial Reporting Council (‘FRC’) reporting requirements; and
+
+- Tax legislation.
+
+° We understood how the Company is complying with those frameworks by making enquires of
+management, and those responsible for legal and compliance matters. We also read correspondence
+between the Company and regulatory bodies, read the minutes of the Board and Risk Committees and
+gained an understanding of the Company’s governance framework.
+
+e Read the correspondence with and reports from the regulators, including the PRA and FCA.
+
+° We assessed the susceptibility of the Company's financial statements to material misstatement,
+including how fraud might occur by holding discussions with senior management, internal audit and the
+Board Audit Committee and through an analysis of financial reporting information and areas of
+estimation which could be subject to manipulation. We considered the risk of fraud through
+management override of internal controls and in revenue recognition and designed specific audit
+procedures to address these risks, including those detailed in the Key Audit Matters section above.
+
+) Based on this understanding we designed our audit procedures to identify non-compliance with such
+laws and regulations. Our procedures, which included the use of internal specialists, involved inquiries
+of management, and those responsible for legal and compliance matters, for their awareness of any
+non-compliance with laws or regulations, inquiring about the policies that have been established to
+prevent non-compliance with laws and regulations by officers and employees, holding discussions with
+and reading and understanding the reports from third parties management had engaged for specific
+investigations and inspecting correspondence with the PRA and FCA.
+
+° Our procedures involved focused testing referred to in the Key Audit Matters section above. In addition,
+we tested journal entries using a risk-based approach analysing the general ledger data, with the focus
+on non-standard journals.
+
+° The Company operates in the banking industry which is a highly regulated environment. As such, the
+Senior Statutory Auditor considered the experience and expertise of the engagement team to ensure
+that the team had the appropriate competence and capabilities, involving specialists where appropriate.
+
+23
+The Bank of London Group Limited
+
+Independent Auditor's Report 9 Bank of London
+
+A further description of our responsibilities for the audit of the financial statements is located on the Financial
+Reporting Council’s website at https://www.frc.org.uk/auditorsresponsibilities. This description forms part of our
+
+auditor's report.
+
+Other matters we are required to address
+
+e Following the recommendation from the Board we were appointed by the Company on 13 February
+2024 to audit the financial statements for the year ending 31 December 2023 and subsequent financial
+periods.
+
+e The period of total uninterrupted engagement including previous renewals and reappointments is three
+years.
+
+° The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the Company and
+we remain independent of the Company in conducting the audit.
+
+° This audit opinion is consistent with the additional report to the Audit Committee.
+
+Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the company’s members
+those matters we are required to state to them in an auditor’s report and for no other purpose. To the fullest
+extent permitted by law, we do not accept or assume responsibility to anyone other than the company and the
+company’s members as a body, for our audit work, for this report, or for the opinions we have formed.
+
+OocuSlgned by:
+(Cli brouard
+O8FC62F38BR8445...
+Chris Brouard (Senior statutory auditor)
+for and on behalf of Ernst & Young LLP, Statutory Auditor
+London
+Date 5 August 2026
+
+24
+The Bank of London Group Limited
+
+Statement of Profit or Loss and other comprehensive income for the year ended 31 December 2025 15 Bankof Landon
+
+Notes
+Interest revenue
+Interest expense
+Net interest income 3
+Fee and commission income
+Fee and commission expense
+Net fee and commission income 4
+Credit loss expense on financial assets 9, 16
+Other operating expense 5
+Net operating income
+Administrative expenses 6
+Loss before taxation
+Taxation 7
+
+Loss for the year
+
+Total comprehensive loss for the year
+
+The results for the current and prior year are derived entirely from continuing operations.
+
+All income is attributable to the equity shareholder of the Company.
+
+2025 2024
+£'000 £'000
+24,290 24,027
+(20,149) (21,279)
+4,141 2,748
+3,088 1,510
+(466) (431)
+2,622 1,079
+(42) (136)
+(7) (2)
+
+6,714 3,689
+(30,217) (27,659)
+(23,503) (23,970)
+(23,503) (23,970)
+(23,503) (23,970)
+
+25
+The Bank of London Group Limited
+
+Statement of Financial Position as at 31 December 2025 ID Bankot London
+2025 2024
+Notes £°000 £000
+Assets
+Cash and cash equivalents 8 326,874 829,694
+Receivables and other assets 9 19,074 . 18,198.
+Property, plant and equipment 10 16 52
+Right-of-use-assets 19 40 -
+Total assets 346,004 847,944
+Liabilities
+Customer deposits Wi 301,129 807,019
+Other payables 12 21,182 18,488
+Provisions 18 382 294
+Lease Liability 19 , 94 -
+Total liabilities 322,787 825,801
+Equity ;
+Share capital 13 468 345
+Share premium 13 95,072 70,695
+Share-based payment reserve 17 981 1,632
+Retained Earnings (73,304) (50,529)
+Total equity 23,217 22,143
+Total Equity and Liabilities 346,004 847,944
+
+The annual report and financial statements and the notes on pages 30-58 were approved by the Board of
+Directors on 5 August 2026 and were signed on its behalf by:
+
+Abullman
+
+Abullman (Aug 5, 2026 13:09:24 GMT+1)
+AG Bullman
+
+Director
+
+The Bank of London Group Limited (Registered number 12844788)
+The Bank of London Group Limited
+
+Statement of Changes in Equity for the year ended 31 December 2025
+
+09 Bank of London
+
+Balance as at 1 January 2024
+
+Loss for the year
+Issue of shares
+Share-based payment reserve
+
+Balance as at 31 December 2024
+
+Loss for the year
+
+Issue of shares
+
+Share-based payment reserve
+Recycling share-based payment reserve
+
+Balance as at 31 December 2025
+
+Notes
+
+13
+13, 17
+
+13
+13, 17
+13
+
+Share-
+
+Total based
+Share Share share payment Retained Total
+capital premium capital reserve Earnings equity
+£'000 £'000 £'000 £'000 £'000 £'000
+250 51,790 $2,040 1,205 (26,559) 26,686
+- - - - (23,970) (23,970)
+95 18,905 19,000 - - 19,000
+- - - 427 - 427
+345 70,695 71,040 1,632 (50,529) 22,143
+- - - - (23,503) (23,503)
+123 24,377 24,500 - - 24,500
+- - - 77 - 77
+- - - (728) 728 -
+468 95,072 95,540 981 (73,304) 23,217
+
+27
+The Bank of London Group Limited
+
+Statement of Cash Flows for the year ended 31 December 2025
+
+1 Bark of London
+
+Note(s)
+Cash flows from operating activities
+Net cash (used in)/from operating activities 14
+Interest received from central bank
+Interest paid on customer deposits
+Cash payments to utilise provisions 18
+Net cash from operating activities
+Cash flow from investing activities
+Purchase of property, pliant and equipment 10
+Net cash used in investing activities
+Cash flow from financing activities
+Proceeds on share issue 13
+
+Net cash from financing activities
+
+Total cash and cash equivalents movement for the year
+Cash and cash equivalents at the beginning of the year
+Total cash and cash equivalents at end of the year
+
+8
+
+2025 2024
+£'000 £'000
+(532,314) 585,593
+25,200 23,209
+(20,149) (21,250)
+(56) -
+(527,319) 587,552
+(1) (17)
+
+(1) (17)
+
+24,500 19,000
+24,500 19,000
+(502,820) 606,535
+829,694 223,159
+326,874 829, 694
+
+28
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 U5 Bank of London
+
+General information
+
+The Bank of London Group Limited (registered number 12844788), ‘the Company’ or ‘the Bank’, is a private
+company limited by shares incorporated and domiciled in the United Kingdom under the Companies Act
+2006 and is registered in England and Wales. On 10 March 2025 the Company's registered office changed to
+77 Cornhill, Fourth Floor, London, England EC3V 3QQ.
+
+Principal activity
+
+The principal activity of the Bank is to provide best-in-class business banking services to our clients in our
+selected geographies. The Bank was fully authorised by the PRA to exit mobilisation as a fully licensed,
+regulated deposit taking bank, and to commence unrestricted banking activities on 3 February 2023.
+
+1. Material accounting policies
+The principal accounting policies applied in the preparation of financial statements are set out below.
+
+1.1. Basis of preparation
+
+The Bank’s financial statements for the year ended 31 December 2025 have been prepared in accordance
+with, and in compliance with, UK-adopted international accounting standards (“IFRSs”) effective at the
+time of preparing these annual report and financial statements and the Companies Act 2006.
+
+The financial statements have been prepared on the historic cost convention, unless otherwise stated in
+the accounting policies. They are presented in Pound Sterling, which is the Bank's functional and
+presentational currency and are rounded to the nearest thousand. These accounting policies are
+consistent with the previous period.
+
+Going concern
+
+The Bank financial statements have been prepared on the going concern basis. As discussed in section 6 of
+the Directors’ Report on page 12, and in note 1.2 below, the Board recognise that, notwithstanding the
+commitment and ability of ultimate parent company shareholders to inject capital into the ultimate parent
+company, and the commitment of the ultimate parent company to then downstream capital to the Group, and
+then the Group to the Bank, a material uncertainty over going concern exists as a result of additional funding
+requirements and there are significant doubts about going concern. In addition to the existing material
+uncertainty surrounding the current funding, the following factors may necessitate additional financing to
+meet its financial obligations:
+
+1. Deterioration in Market Conditions ~ A material decline in macroeconomic or sector-specific conditions
+could reduce projected revenues, adversely impacting cash flows.
+
+2. Operational and Capital factors ~ The timing of the removal of the voluntary arrangement related to new
+customer onboarding and regulatory capital requirement changes.
+
+Should any of these risks materialise, the Group may be required to secure additional funding to discharge its
+financial obligations. These risks result in a material uncertainty related to events or conditions that may cast
+significant doubt on the Bank's ability to continue as a going concern and, therefore, it may be unable to
+realise its assets and discharge its liabilities in the normal course of business.
+
+While the Board acknowledge this material uncertainty, they have considered the mitigating factors in place, in
+particular:
+
+1. The commitment and ability of the ultimate parent company shareholders to inject capital into the
+ultimate parent company, and the commitment of the ultimate parent company to then down-stream
+capital to the Group and then the Group to Bank;
+
+29
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 IS Bank of London
+
+2. The potential growth of its commercial business model, which is still in its infancy; and
+3. The Group’s demonstrable operational capability.
+
+The Board have concluded that the Bank will have the financial resources to continue business for the
+foreseeable future and meet cash and regulatory capital requirements, and to continue discharging their
+liabilities and realising their assets for the next 12 months from the date of approval of these financial
+statements.
+
+Climate risk
+
+In the preparation of the financial statements, the Bank assessed climate-related matters, including both
+physical and transitional risks, and their impact on the accounting judgments and estimates. The Directors
+concluded that the impact was not material at this time.
+
+1.2 Significant accounting judgements, estimates and assumptions
+
+The preparation of the annual report and financial statements in conformity with IFRS requires
+management, from time to time, to make significant accounting judgements, estimates and assumptions
+that affect the application of policies and reported amounts of assets, liabilities, income and expenses.
+These judgements, estimates and assumptions are based on experience and various other factors that are
+believed to be reasonable under the circumstances, and which are reviewed on an ongoing basis.
+Uncertainty about these judgements, estimates and assumptions could result in outcomes that require a
+material adjustment to the carrying amount of assets or liabilities affected in future periods. Other
+disclosures (including sensitivity analysis) relating to the Bank’s exposure to risks and uncertainties in
+respect of financial instruments are set out in note 16.
+
+The key areas reviewed by management included the following:
+e Presentation of Financial Statements - Going Concern (IAS 1)
+
+Management’s judgement is applied in the preparation of the financial statements, including the
+assessment of the Bank's ability to continue as a going concern. Management has assessed the Bank’s
+financial position, cash flow forecasts, and other relevant information to determine that it is appropriate to
+prepare the financial statements on a going concern basis.
+
+The Board recognise that there are significant doubts about going concern, if there is material
+deterioration of market conditions or revenues of the Bank, which may mean that the Bank would need to
+obtain a greater level of funding to meet its financial obligations. These risks create a material uncertainty
+regarding the ability of the Bank to continue as a going concern.
+
+While the Directors acknowledge the material uncertainty, which is discussed in the section of going
+concern in note 1.1 above, they have taken appropriate steps to mitigate their impact and have concluded
+that the going concern basis remains the appropriate basis for the preparation of these financial
+statements. Further detail is given in the going concern assessment in the Directors’ Report on page 12.
+
+e Share-based Payment - (IFRS 2)
+
+The Group has operated a number of share-based payment plans for employees and certain Directors of
+the Bank. Management exercised judgement regarding classification of equity-settled vs. cash settled
+transactions, cancellation vs. modification, selection of an appropriate valuation model, determination of
+grant date and associated vesting period and conditions of the underlying options.
+
+When determining the grant date of options which were issued prior to the formal adoption and
+implementation of the Group’s share-based payment plan, management assess at what point the
+
+30
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 Bank of London
+
+employee had a valid expectation of an award, and of its related terms and conditions, based on an earlier
+commitment by the entity.
+
+Further key inputs required in the calculation of the share-based payment expense for each individual
+entity in the Group, for both the current year and prior and future periods included management estimates
+in determining the fair value of the share options under option pricing models, assumptions regarding
+future share price movements, and other inputs into the valuation models, like expected volatility and the
+risk-free interest rate, as well as the estimated number of awards expected to vest. Subsequently, these
+estimates are trued up for differences between the number of instruments expected to vest and the
+actual number of instruments vested.
+
+e Revenue recognition from contracts with customers (IFRS 15)
+
+Revenue recognition is judgemental, particularly for fees received upfront and recognised as fee income
+over time. The Bank ensures the requirements of IFRS 15 are satisfied prior to recognising revenue,
+particularly on account fees and service fees. Contractual terms are reviewed to confirm any fee revenue
+recognised, The Bank also ensures to review and challenge any probability of risk of reversal of fee
+revenue recognised, under accordance with the requirements of IFRS 15.
+
+« Deferred tax (IAS 12)
+
+Deferred tax assets are recognised for unused tax losses to the extent that it is probable that taxable
+profit will be available against which the losses can be utilised. Significant management judgement is
+required to determine at each reporting date the amount of deferred tax assets that can be recognised. In
+performing this review, the Bank assesses the likelihood of their being recovered within a reasonably
+foreseeable timeframe, taking into account the future expected profit profile and any potential legislative
+restrictions on use within the Bank and the tax jurisdictions in which it operates, using the Bank's forecast
+cashflows. At year end, the Bank has £71,126k of unrecognised tax losses carried forward (2024:
+£47,900k). Due to the uncertainty of availability of future taxable profits, no deferred tax asset has been
+recognised in relation to these losses.
+
+1.3. Taxation
+
+Income tax expense comprises current and deferred taxes. Current income taxes are calculated on the
+basis of the applicable tax laws of the respective countries and are recognised as expense in the financial
+year in which the related taxable income arises.
+
+Liabilities related to current taxes are recognised in the balance sheet as current tax liabilities. Deferred tax
+assets and deferred tax liabilities are taken into account using the balance sheet liability method for the
+expected future tax consequences of all temporary differences between the carrying amounts of assets
+and liabilities for financial reporting purposes and the corresponding tax values.
+
+Deferred tax assets are reviewed at each reporting date. In considering their recoverability, the Bank
+assesses the likelihood of their being recovered within a reasonably foreseeable timeframe, taking into
+account the future expected profit profile and any potential legislative restrictions on use within the
+respective Group companies and the tax jurisdictions in which they operate, based on the Bank’s forecast
+cashflows. Deferred tax assets arising from temporary differences and from tax loss carry-forwards eligible
+for offset are recognised if it is considered probable (more likely than not) that sufficient taxable profits will
+be available against which those differences or tax loss carry-forwards can be offset.
+
+Deferred tax assets and deferred tax liabilities are calculated at tax rates expected to apply in the period in
+which the tax assets are expected to be realised, or the tax liabilities settled.
+
+31
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 15 Bark of London
+
+1.4 Property, plant and equipment
+
+Property, plant and equipment are tangible assets which the Bank holds for its own use or for rental to
+others and which are expected to be used for more than one year. An item of property, plant and
+equipment is recognised as an asset when it is probable that future economic benefits associated with the
+item will flow to the Bank, and the cost of the item can be measured reliably.
+
+Property, plant and equipment is initially measured at cost, which includes all of the expenditure which is
+directly attributable to the acquisition or construction of the asset. Expenditure incurred subsequently for
+major services, additions to or replacements of parts of property, plant and equipment are capitalised if it is
+probable that future economic benefits associated with the expenditure will flow to the Bank and the cost
+can be measured reliably. Day to day servicing costs are included in profit or loss in the year in which they
+are incurred.
+
+Depreciation of an asset commences when the asset is available for use as intended by management.
+Depreciation is charged to the profit or loss account, so as to write off the asset's carrying amount over its
+estimated useful life to its estimated residual value, using a method that best reflects the pattern in which
+the asset's economic benefits are consumed by the Bank.
+
+The useful lives of items of property, plant and equipment have been assessed as follows:
+
+Item Depreciation method Average useful life
+IT equipment Straight line 3-5 years
+
+Impairment tests are performed on property, plant and equipment when there is an indicator that they
+may be impaired. When the carrying amount of an item of property, plant and equipment is assessed
+to be higher than the estimated recoverable amount, an impairment loss is recognised immediately in
+profit or loss to bring the carrying amount in line with the recoverable amount.
+
+1.5 Financial instruments
+
+Financial instruments are classified in accordance with the provisions of IFRS 9 Financial instruments,
+as follows:
+
+Financial assets which are debt instruments.
+
+e Amortised cost. This category applies only when the contractual terms of the instrument give
+rise, on specified dates, to cash flows that are solely payments of principal and interest on
+principal, and where the instrument is held under a business model whose objective is met by
+holding the instrument to collect contractual cash flows; or
+
+Financial liabilities:
+e Amortised cost
+
+Note 16, Financial instruments and risk management, presents the financial instruments held by the
+Bank based on their specific classifications.
+
+All regular way purchases or sales of financial assets are recognised and derecognised on a trade date
+. basis. Regular way purchases or sales are purchases or sales of financial assets that require delivery
+of assets within the time frame established by regulation or convention in the marketplace.
+
+The specific accounting policies for the classification, recognition and measurement of each type of
+financial instrument held by the Bank are presented below:
+
+32
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 Bank of London
+
+Cash and cash equivalents
+
+Cash and cash equivalents comprise cash on hand and demand deposits that are readily convertible
+to a known amount of cash. All cash and cash equivalents are classified as at amortised cost and are
+subject to an insignificant risk of changes in value. The Central bank balance is held with the Bank of
+England.
+
+Receivables and other assets
+
+Classification
+Receivables and other assets, excluding, when applicable, VAT and prepayments, are classified as
+financial assets subsequently measured at amortised cost (note 9).
+
+They have been classified in this manner because their contractual terms give rise, on specified dates
+to cash flows that are solely payments of principal and interest on the principal outstanding, and the
+Bank's business model is to collect the contractual cash flows on receivables and other assets.
+
+Recognition and measurement
+
+Receivables and other assets are recognised when the Bank becomes a party to the contractual
+provisions of the asset. They are measured at their transaction price where the receivables do not
+contain a significant financing component. They are subsequently measured at amortised cost.
+
+The amortised cost is the amount recognised on the receivable initially, minus principal repayments,
+plus cumulative amortisation (interest) using the effective interest method (reflecting any difference
+between the initial and the maturity amount).
+
+The Bank applies IFRS 9's Expected Credit Loss (ECL) model using the General Approach to its financial
+assets. ECL is calculated for each counterparty as the product of the probability of default (PD), the loss given
+default (LGD) and the outstanding exposure. Each counterparty is assigned an internal credit rating based on
+the riskiness of its business, its payment history and its level of engagement with the Bank. Customers
+receive a score of 1 to 9 and this rating determines the PD (where a score of 3 is equivalent to a CCC rating
+and 9 is equivalent to a BBB rating), which is derived from published S&P historical default rates, and an LGD
+of 45% is applied based on the Basel framework’'s standard rate for unsecured exposures. BBB is considered
+the default credit rating with lower scores reducing the credit rating.
+
+This approach consists of three stages, as follows:
+
+Stage 1 is applied to assets that have not had a significant increase in credit risk since initial recognition. For
+stage 1, a 12-month ECL is recognised, using 12-month default rates (reflecting potential credit risk events
+within 12 months of the reporting date).
+
+Stage 2 is applied to assets that have had a significant increase in credit risk since initial recognition, but that
+do not have objective evidence of impairment. The Bank considers a significant increase in credit risk to have
+occurred when a balance is more than 30 days past due or where counterparty-specific information indicates
+increased risk. For stage 2, a lifetime ECL is recognised, using cumulative default rates over the expected life
+of the asset.
+
+Stage 3 is applied when assets are more than 90 days past due or there is other objective evidence of credit
+impairment at the reporting date. For stage 3, a lifetime ECL is recognised applying a PD of 100%.
+
+The Bank defines a financial asset as in default when it is 90 days past due or when management
+
+concludes the counterparty is unlikely to pay. The Bank writes off receivables against the related loss
+provisions when it concludes there is no reasonable expectation of recovery.
+
+Other assets, including intra-group receivables, are assessed for expected credit loss based on
+management's assessment of the counterparty.
+
+33
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 1S Bank af London
+
+Customer deposits
+
+Deposits from customers are initially measured at fair value, which is normally the proceeds received
+net of any directly attrioutable transaction costs incurred. Subsequent measurement is at amortised
+cost, using the effective interest method. A corresponding asset in connection to these amounts is
+maintained within cash and cash equivalents.
+
+Other payables classification
+
+Other payables (note 12), excluding tax, VAT and amounts received in advance, are classified as
+financial liabilities subsequently measured at amortised cost. Other payables are recognised when the
+Bank becomes a party to the contractual provisions, and are measured, at initial recognition, at fair
+value plus transaction costs, if any. Other payables expose the Bank to liquidity risk. Refer to note 16
+for details of risk exposure and management of this risk.
+
+Derecognition
+
+The Bank derecognises a financial asset only when the contractual rights to the cash flows from the
+asset expire, or when it transfers the financial asset and substantially all the risks and rewards of
+ownership of the asset to another party. If the Bank neither transfers nor retains substantially all the
+risks and rewards of ownership and continues to control the transferred asset, the Bank recognises its
+retained interest in the asset and an associated liability for amounts it may have to pay. If the Bank
+retains substantially all the risks and rewards of ownership of a transferred financial asset, the Bank
+continues to recognise the financial asset and also recognises a collateralised borrowing for the
+proceeds received.
+
+The Bank derecognises financial liabilities when, and only when, the Bank obligations are discharged,
+cancelled or they expire. The difference between the carrying amount of the financial liability
+derecognised and the consideration paid and payable, including any non-cash assets transferred or
+liabilities assumed, is recognised in profit or loss.
+
+16 Leases
+
+The Bank assesses whether a contract is, or contains a lease, at the inception of the contract.
+
+A contract is, or contains, a lease if the contract conveys the right to control the use of an identified
+asset for a period of time in exchange for consideration.
+
+In order to assess whether a contract is, or contains a lease, management determine whether the
+asset under consideration is “identified", which means that the asset is either explicitly or implicitly
+specified in the contract and that the supplier does not have a substantial right of substitution
+throughout the period of use. Once management has concluded that the contract deals with an
+identified asset, the right to control the use thereof is considered. To this end, control over the use of
+an identified asset only exists when the Bank has the right to substantially all of the economic benefits
+from the use of the asset as well as the right to direct the use of the asset.
+
+Bank as lessee
+
+A lease liability and corresponding right-of-use asset are recognised at the lease commencement
+date, for all lease agreements for which the Bank is a lessee, except for short-term leases of 12
+months or less, or leases of low value assets. For these leases, the Bank recognises the lease
+payments as an administrative expense (note 6) on a straight-line basis over the term of the lease
+unless another systematic basis is more representative of the time pattern in which economic benefits
+from the leased asset are consumed.
+
+34
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 (} Bankot London
+
+Lease llability
+
+The lease liability is initially measured at the present value of the lease payments that are not paid at
+the commencement date, discounted by using the rate implicit in the lease. If this rate cannot be
+readily determined, the Bank uses its incremental borrowing rate.
+
+Lease payments included in the measurement of the lease liability comprise the following:
+
+e any lease payments made at or before the commencement date, less any lease incentives
+received;
+
+e lease payments in an optional renewal period if the Bank is reasonably certain to exercise an
+extension option; and
+
+*® penalties for early termination of a lease, if the lease term reflects the exercise of an option to
+terminate the lease.
+
+Variable rents that do not depend on an index or rate are not included in the measurement of the
+lease liability (or right-of- use asset). The related payments are recognised as an expense in the
+period incurred and are included in administrative expenses (note 6).
+
+The lease liability is presented as a separate line item on the Statement of Financial Position.
+
+After the commencement date, the lease liability is measured by:
+
+(a) increasing the carrying amount to reflect interest on the lease liability;
+
+(b) reducing the carrying amount to reflect the lease payments made; and
+
+(c) remeasuring the carrying amount to reflect any reassessment or lease modifications where
+appropriate or to reflect revised in-substance fixed lease payments.
+
+Interest on the lease liability in each period during the lease term is the amount that produces a
+constant periodic rate of interest on the remaining balance of the lease liability. After the
+commencement date, both interest on the lease liability and variabie lease payments not included in
+the measurement of the lease liability in the period in which the event or condition that triggers those
+payments occurs are reflected in the Statement of profit or loss and other comprehensive income.
+
+The lease liability is reassessed when there is a change in lease payments. Change in lease payments
+arising from a change in the lease terms or a change in the assessment of an option to purchase a
+leased asset. When such changes occur, the lease liability is remeasured, and the corresponding
+adjustment is made to the right-of-use asset.
+
+The revised lease payments are discounted using the Bank's incremental borrowing rate at the date
+of reassessment when the rate implicit in the lease cannot be readily determined. The amount of the
+remeasurements of the lease liability is reflected as an adjustment to the carrying amount of the
+right-of-use asset.
+
+Right-of-use assets
+
+Lease payments included in the measurement of the right-of-use asset comprise the following:
+
+e the initial amount of the corresponding lease liability;
+
+* any lease payments made at or before the commencement date, less any lease incentives
+received;
+any initial direct costs incurred; and
+any estimated costs to dismantle and remove the underlying asset or to restore the
+underlying asset or the site on which it is located, when the Group incurs an obligation to do
+so, unless these costs are incurred to produce inventories.
+
+35
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 (5 Bank of London
+
+Right-of-use assets are subsequently measured at cost less accumulated depreciation and impairment
+losses.
+
+The Bank depreciates the right-of-use asset on a straight-line basis from the lease commencement
+date to the earlier of the end of the useful life of the right-of-use asset or the end of the lease term.
+The Bank also assesses the right-of-use asset for impairment when such indicators exist.
+
+The residual value, useful life and depreciation method of each asset are reviewed at the end of each
+reporting year. If the expectations differ from previous estimates, the change is accounted for
+prospectively as a change in accounting estimate. Each part of a right-of-use asset with a cost that is
+significant in relation to the total cost of the asset is depreciated separately.
+
+1.7 Employee benefits
+
+Short-term employee benefits
+
+The cost of short-term employee benefits, (those payable within 12 months after the service is rendered,
+such as paid vacation leave and sick leave, bonuses, and non-monetary benefits such as medical care),
+are recognised in the period in which the service is rendered and are not discounted.
+
+The expected cost of compensated absences is recognised as an expense as the employees render
+services that increase their entitlement or, in the case of non-accumulating absences, when the absence
+occurs.
+
+The expected cost of profit sharing and bonus payments is recognised as an expense when there is a
+legal or constructive obligation to make such payments as a result of past performance.
+
+Defined contribution plans
+Payments to defined contribution retirement benefit plans are charged as an expense as they fall due.
+
+18 Share-based payments
+
+The Group maintains a number of share-based payment plans for employees and certain Directors of
+the Bank. When such awards are made to employees, the fair value of these payments at grant date
+serves as the basis for caiculating the personnel expenses. Share-based payments that are not
+subject to any further conditions are expensed immediately at grant date. Share-based payments that
+are subject to the completion of a service period are expensed over the respective service period.
+
+Conditions that determine whether the counterparty receives the share-based payment are separated
+into vesting conditions and non-vesting conditions. Vesting conditions are all conditions that
+determine whether the entity receives the services that entitle the counterparty to the share-based
+payment and may be differentiated further between service or performance conditions.
+
+Performance conditions are either market conditions or non-market performance conditions. All other
+conditions are considered non-vesting conditions.
+
+The modified grant-date method requires entities to distinguish between the above-mentioned
+vesting and non-vesting conditions.
+
+Market conditions and non-vesting conditions are reflected as an adjustment (discount) to the initial
+
+estimate of fair value at grant date of the instrument to be received and there is no true up for
+differences between estimated and actual vesting due to market conditions.
+
+36
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 ) Bank of London
+
+The impact of service conditions and non-market performance conditions on vesting is estimated at
+grant date, but it is not reflected in the grant-date fair value itself. Instead, the accounting for the
+share-based payment is based on the number of equity instruments for which the service and non-
+market performance conditions are expected to be met. Subsequently, these estimates are trued up
+for differences between the number of instruments expected to vest and the actual number of
+instruments vested.
+
+Share-based payment plans that are settled in own equity instruments (shares or options) result in an
+offsetting credit in equity and are not remeasured for subsequent changes in the fair value of the
+underlying equity instruments.
+
+Share-based payment plans that are settled by the payment of cash are recognised as a liability and
+are adjusted through the Statement of profit or loss and other comprehensive income for changes in
+fair value of the underlying equity instruments until final settlement.
+
+1.9 Treatment of foreign currency
+
+Functional and presentation currency
+Items included in the financial statements are measured using the currency of the primary economic
+environment in which the entity operates (functional currency).
+
+The financial statements are presented in Pound Sterling which is the Company's functional and
+presentation currency.
+
+Foreign currency transactions
+
+A foreign currency transaction is recorded, on initial recognition in Pound Sterling, by applying to the
+foreign currency amount the spot exchange rate between the functional currency and the foreign
+currency at the date of the transaction.
+
+At the end of the reporting period:
+« foreign currency monetary items are translated using the closing rate;
+* non-monetary items that are measured in terms of historical cost in a foreign currency are
+translated using the exchange rate at the date of the transaction; and
+* non-monetary items that are measured at fair value in a foreign currency are translated using
+the exchange rates at the date when the fair value was determined.
+
+In circumstances where the Bank receives or pays an amount in foreign currency in advance of a
+transaction, the transaction date for purposes of determining the exchange rate to use on initial
+recognition of the related asset, income or expense is the date on which the Bank initially recognised
+the non-monetary item arising on payment or receipt of the advance consideration. If there are
+multiple payments or receipts in advance, the Bank determines a date of transaction for each payment
+or receipt of advance consideration.
+
+Exchange differences arising on the settlement of monetary items or on translating monetary items at
+rates different from those at which they were translated on initial recognition during the period or in
+previous annual report and financial statements are recognised in profit or loss in the period in which
+they arise.
+
+37
+The Bank of London Group Limited
+
+Notes to the Financia! Statements for the year ended 31 December 2025 1S Bankof London
+
+1.10 Revenue from contracts with customers
+
+The Bank earns fee and commission income from various services it provides to its customers. Fee and
+commission income is recognised at an amount that reflects the consideration to which the Bank expects to
+be entitled in exchange for providing the services. When the Bank provides a service to its customers,
+consideration is invoiced and generally due immediately upon satisfaction of a service provided at a point in
+time or at the end of the contract period for a service provided over time.
+
+The following steps occur on recognition of revenue:
+
+e Thecontract is identified and agreed with the customer, at the inception of the contract;
+
+e The performance obligations, as well as the timing of their satisfaction, are identified and agreed;
+e The transaction price is determined;
+
+e That transaction price is allocated to the agreed performance obligation; and
+
+e Revenue is then recognised when each of those performance obligations is satisfied.
+
+The Bank's principal revenue streams are:
+Fee income from services that are provided over time
+
+* Account fees - monthly account fees are charged for the provision, and maintenance, of the client's
+accounts, and are non-refundable;
+
+Fee income from services that are provided at a point in time
+
+e Service fees— these fees cover incremental costs for activity that is incurred specifically in the provision
+of banking services, that is not typically incurred when delivering our core payment services. This cost
+and activity includes such items as incremental due diligence and ongoing audits, on-boarding and
+screening controls, and other costs which will scale as the number of customer accounts increase; and
+
+e Transaction fees - transaction fees are fees for processing inbound and outbound transactions.
+
+1.11 Interest income and expense
+Interest income and expense are recognised in the Statement of Profit or Loss and other comprehensive
+
+income for the year ended 31 December 2025 for all interest-bearing financial instruments using the
+effective interest method in accordance with IFRS 9.
+
+2. New Standards and Interpretations
+
+2.1 Standards and interpretations effective and adopted in the current year
+
+The following amendment became effective as at 1 January 2025:
+‘ e Lack of Exchangeability - Amendments to IAS 21
+
+While relevant to the Company, it has not had a material financial impact on the results reported in these
+financial statements.
+
+« The Bank has early adopted the derecognition provisions relating to financial liabilities settled by
+
+electronic payment, introduced by the Amendments to IFRS 9 and IFRS 7, which became effective
+from 1 January 2026.
+
+38
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 (5 Bankot London
+
+2.2 Standards and interpretations not yet effective
+
+New and amended standards and interpretations that are issued, but not yet effective, up to the date of
+issuance of the Company’s financial statements are disclosed below. The Company intends to adopt these
+new and amended standards and interpretations, if applicable, when they become effective.
+
+e Classification and Measurement of Financial Instruments - Amendments to IFRS 9 and IFRS 7,
+which are effective from 1 January 2026.
+
+e Presentation and Disclosure in Financial Statements - New Standard IFRS 18 issued in April 2024,
+which is effective from 1 January 2027.
+
+e Subsidiaries without Public Accountability: Disclosure - New Standard IFRS 19 issued in May 2024,
+which is effective from 1 January 2027.
+
+The Bank is currently working to identify all impacts the amendments will have on the primary financial
+statements and notes to the financial statements.
+
+3. Net interest income
+
+2025 2024
+£'000 £'000
+&) Interest income calculated on an effective interest basis: .
+Interest income from funds held with Bank of England 24,290 24,027
+5) Interest expense calculated on an effective interest basis:
+Interest payable on customer deposits (20,149) (21,279)
+Net interest income total 4,141 2,748
+4. Net Fee and Commission Income
+2025 2024
+Fee and commission income £'000 £'000
+Fee income from services that are provided over time
+Account fees 2,928 868
+Fee income from services that are provided at a point in time
+Service based fees 36 603
+Transaction fees 124 39
+Total fee and commission income 3,088 1,510
+Fee and commission expense
+Bank payment fees (466) (431)
+Total fee and commission expense (466) (431)
+Net fee and commission income 2,622 1,079
+
+For 2025, fee income related to account fees included a £1,445k release of deferred income (see note 12).
+
+39
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+1D Bank of London
+
+5. Other operating expense
+
+Foreign currency losses
+
+6. Administrative expenses
+
+Employee Costs
+
+Professional Fees
+
+Advertising & Marketing
+Computer, Software & Licenses
+Facility expenses
+
+Depreciation and Amortisation
+Management charge from parent
+Other costs
+
+-Impairment
+
+Included in the above are the following expenses:
+
+Auditor's remuneration - external
+Fees payable to the Company's auditor for the audit of the Company
+
+Fees payable to the Company's auditor for other services
+- Other services
+Total amount payable to the Company's auditor
+
+Employee costs
+
+Salaries, wages, bonuses and other benefits
+Retirement benefit plans: Defined contribution expense
+Share-based compensation expense - equity settled
+
+Average number of staff employed during the year
+Board and Executive
+
+Administration
+Product, Technology and Operations
+
+Loss for the year is stated after charging the following, amongst others:
+
+e Details of the remuneration of Directors are included in note 15.
+
+2025 2024
+£'000 £°000
+7 2
+2025 2024
+£'000 £'000
+11,818 10,978
+2,751 1,343
+557 131
+268 78
+
+44 20
+
+104 52
+14,400 14,400
+224 657
+
+51 -
+30,217 27,659
+2025 2024
+£'000 £'000
+486 336
+364 29
+850 365
+2025 2024
+£'000 £'000
+11,226 9,941
+515 633
+
+77 404
+11,818 10,978
+2025 2024
+7 )
+
+28 27
+
+38 46
+
+73 78
+
+e Details of the management charge from parent are included in note 15.
+
+40
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+9 Bank of London
+
+7. Taxation
+
+Reconciliation of the accounting profit and tax expense
+Accounting loss
+
+Tax at the applicable tax rate of 25% (2024:25.00%)
+
+Fixed asset differences
+
+Impact of tax rate changes on adjusted prior year numbers
+Expenses not deductible for tax purposes
+
+Adjustments to brought forward values
+
+Deferred tax asset not recognised
+
+Income tax credit
+
+Unrecognised accumulated tax losses
+Expiring:
+No expiry date
+
+2025 2024
+£°000 £°000
+(23,503) (23,970)
+(5,876) (5,993)
+40 169
+- (15)
+5,836 5,839
+71,126 47,900
+71,126 47,900
+
+Any potential deferred tax has been measured using the enacted rate of 25%.
+
+The company has taxable losses of £71,126k (2024: £47,900k) and other gross temporary differences of
+£120k (2024: £170k) on which no deferred tax has been recognised. This is due to the uncertainty of
+
+availability of future taxable profits.
+8. Cash and cash equivalents
+
+Cash
+
+Bank of England
+Placements with other banks
+
+Cash equivalents
+
+Accrued interest on Bank of England balance
+
+Total cash and cash equivalents
+
+2025 2024
+£'000 £'000
+326,151 828,074
+251 238
+
+326,402 828,312
+2025 2024
+£'000 £'000
+472 1,382
+
+472 1,382
+326,874 829,694
+
+Amounts placed at the Bank of England include £301,129k (2024: £807,019k) from customer deposits, which
+are placed unencumbered at the Bank of England, track the Bank of England base rate and are available upon
+demand (see note 11). Collateral amounts of £25,200k are placed encumbered at the Bank of England (2024:
+
+£25,200k). All cash and cash equivalents are denominated in GBP.
+
+41
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+1D Bank of London
+
+9. Receivables and other assets
+
+2025 2024
+£'000 £'000
+Financial instruments:
+Amounts owed by group undertakings 18,245 17,806
+Accrued income 98 167
+Lease deposits 28 -
+Trade receivables 121 114
+18,492 18,087
+Non-financial instruments:
+Prepayments 982 114
+Total receivables and other assets 19,074 18,198
+Trade receivables, and the related ECL provision above, arise from contracts with customers.
+Trade receivables are stated net of ECL provision as follows:
+2025 2024
+£'000 £'000
+Trade receivables 182 197
+ECL provision (61) (83)
+121 114
+Amounts owed by group undertakings are stated net of ECL provisions as follows:
+2025 2024
+£'000 £'000
+Amounts owed by group undertakings 18,694 18,263
+ECL provision (449) (457)
+18,245 17,806
+Movement in total credit loss provisions
+Trade Amounts Total
+receivables owed by
+group
+undertakings
+£'000 £'000 £'000
+Balance at 1 January 2024 (9) (479) (488)
+Amount expensed in the year (158) 22 (136)
+Write-offs 84 - 84
+Balance at 31 December 2024 (83) (457) (540)
+Amount expensed in the year (50) 8 (42)
+Write-offs 72 - 72
+Balance at 31 December 2025 (61) (449) (510)
+
+Further detail on amounts owed by group undertakings is given in note 15 below.
+
+Further detail on credit loss provisions is given in note 16 below.
+
+42
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+9 Bank of London
+
+10. Property, plant and equipment
+
+Cost
+
+As at 1 January 2024
+Addition
+
+Disposal
+
+As at 31 December 2024
+Addition
+
+Disposal
+
+As at 31 December 2025
+
+Accumulated depreciation
+As at 1 January 2024
+Charge in year
+
+Disposal
+
+As at 31 December 2024
+Charge in year
+
+Disposal
+
+As at 31 December 2025
+
+Net book value
+
+As at Ist January 2024
+As at 31 December 2024
+As at 31 December 2025
+
+IT equipment Total
+£'000 £'000
+141 141
+
+17 17
+158 158
+
+1 1
+
+159 159
+(54) (54)
+(52) (52)
+(106) (106)
+(37) (37)
+(143) (143)
+87 87
+
+52 52
+
+16 16
+
+The fair value of the above items of property, plant and equipment is not materially different to the carrying amount.
+
+11.
+
+Customer deposits
+
+Customer deposits
+
+2025 2024
+£'000 £'000
+301,129 807,019
+301,129 807,019
+
+Customer deposits are placed at the Bank of England and most track the Bank of England base rate (see managed
+rate deposits, page 6 Strategic Report and Note 16, Interest Rate Risk). The customer base is a mix of retail, corporate
+and institutional customers.
+
+43
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+9 Bank of London
+
+12. Other payables
+
+Financial instruments:
+
+Accounts payable
+
+Amounts owed to group undertakings
+Accruals
+
+Non-financial instruments:
+Other creditors
+
+Total Other Payables
+
+2025 2024
+£'000 £'000
+423 87
+17,791 14,606
+1,915 1,071
+20,129 15,764
+1,053 2,724
+21,182 18,488
+
+Other creditors of £1,053k comprises deferred income of £544k, payroll tax payable of £352k, pension payable
+of £84k, VAT liabilities £60k, and salaries payable of £12k all representing amounts outstanding at the year end.
+
+Deferred income reduced by £1,445k from 2024 (£1,989k), with the recognition of fee income related to
+
+account fees (see.note 4).
+
+13. Share capital and other reserves
+
+2025 2024 2025 2024
+Allotted, issued and fully paid Number Number £'000 £'000
+Ordinary shares of £1 each
+At 1 January 345,300 250,300 345 250
+Issued in year 122,500 95,000 123 95
+At 31 December 467,800 345,300 468 345
+
+There is one class of ordinary share capital, which has full rights to voting and dividends. The
+
+Bank has no limit on authorised share capital.
+
+Share premium
+
+At 1 January
+Arising on issue of shares in year
+At 31 December
+
+2025 2024
+£'000 £'000
+
+70,695 91,790
+24,377 18,905
+
+95,072 70,695
+
+44
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 1} Bankot London
+
+Other components of equity
+Share-based Retained
+
+payment reserve Earnings Total
+
+£'000 £'000 £'000
+
+Balance at 31 December 2023 1,205 (26,559) (25,354)
+Loss for the year - (23,970) (23,970)
+Movement in share-based payment reserve 427 - 427
+Balance as at 31 December 2024 1,632 (50,529) (48,897)
+Loss for the year - (23,503) (23,503)
+Movement in share-based payment reserve 77 - 77
+Recycle shared-based payment reserve (728) 728 -
+Balance as at 31 December 2025 98) (73,304) (72,323)
+
+Share-based payment reserve
+
+The share-based payments reserve is used to recognise the value of equity-settled share-based payments
+provided to employees, including key management personnel, as part of their remuneration.
+
+An existing equity-settled share-based remuneration scheme is operated by the parent company, TBOL
+Holdings UK Limited (see note 17). In November 2025, the Board invoked Rule 9.2(c) of the previous plan (malus
+- material downturn in financial performance) and cancelled all outstanding options with effect from 20
+November 2025. There were movements in the share-based payment reserve related to the existing scheme up
+to the cancellation date. In accordance with IFRS 2 paragraph 28, the remaining unrecognised grant-date fair
+value of all outstanding options (£5k) was recognised immediately as an accelerated employee cost charge.
+The balance related to the employee share option scheme at the point of cancellation has been recycled within
+equity to retained earnings (£728k). The 2025 ending balance is £981k and this relates to other share-based
+plans for non-executive directors (see note 17).
+
+There is a new equity settled shared-based remuneration scheme, operated by the ultimate parent company,
+TBOL Holdings Jersey Limited. The grant date for the new equity-settled scheme is March 2026. Vesting
+periods and share-based expense charges commence from this date for all employees participating. At 31
+December 2025, there was no shared understanding of terms under which employees rendered services and
+therefore it was not possible to estimate the fair value of the awards (see Note 20).
+
+45
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 IS Bank of London
+
+14. Cash generated from operations
+
+2025 2024
+Note(s) £'000 £'000
+Loss for the year (23,503) (23,970)
+Adjusted for:
+Depreciation and Amortisation 10 104 52
+Share-based payments 17 77 404
+Interest income 3 (24,290) (24,027)
+Interest expense 3 20,149 21,279
+Lease Impairment Charge 19 50 -
+Lease modification (gain) /loss 19 1 -
+Unrealised foreign exchange (gains)/losses 5 7 -
+Provisions 18 143 , 74
+Movement in:
+Receivables and other assets and accrued interest 9 (1,788) 1,040
+Customer deposits 11 (505,890) 594,488
+Other Payables 12 2,626 16,253
+(532,314) 585,593
+
+15. Related parties
+
+Key management personnel
+
+Key management personnel are those having the authority and responsibility of planning, directing and
+controlling the activities of the Bank, and consist of the Directors, who are listed in the Directors’ Report
+
+on page 10.
+
+Details of key management personnel remuneration: 2025 2024
+£'000 £'000
+Short-term employee benefits 1,417 962
+Termination benefits 1 140
+Post-employment pension 11 -
+Share-based payment expense - 247
+1,429 1,349
+Details of directors’ remuneration: 2025 2024
+£'000 £'000
+Aggregate remuneration in respect of qualifying services 1,429 1,341
+Highest paid director - aggregate emoluments 456 364
+
+46
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 US Bank of London
+
+There are no amounts receivable by Directors under long-term incentive schemes (excluding the Employee
+Share Option Plan discussed in note 17). There were no Group share awards exercised by Directors in 2024 or
+2025, and no pension benefits or post-employment costs accruing to Directors.
+
+Related party transactions and balances with fellow Group companies
+
+Amounts Amounts
+FY2025 due from due to
+
+£'000 £°000
+
+TBOL Holdings UK Limited * 18,694 (17,713)
+TBOL (N.I.) Limited z (78)
+18,694 (17,791)
+
+Amounts Amounts
+due from due to
+
+FY2024
+
+£'000 £'000
+TBOL Holdings UK Limited * 18,253 (14,606)
+Gjennomsiktig Inc * 10
+
+18,263 (14,606)
+
+Details of related party transactions between the Company, its Parent Company, and fellow Group subsidiaries
+are as follows:
+
+During the year, TBOL Holdings UK Limited charged the Company £14,400k in management recharges (2024:
+£14,400k), for the provision of core banking technology and related support to the Company. These
+management recharges and other funding flows reduced the net receivable from TBOL Holdings UK Limited to
+£981k (2024: £3,647k).
+
+During the year, certain group entities settled liabilities on behalf of one another. TBOL Holdings UK Limited
+settled liabilities of £1,589k on behalf of the Bank, and Bank settled liabilities of £441k on behalf of TROL
+Holdings UK Limited, resulting in a net balance of £1,148k owed by Bank to TBOL Holdings UK Limited at year
+end. TBOL NI settled liabilities of £78k on behalf of the Bank, which remained outstanding at year end. In
+addition, Gjennomsiktig settled its intercompany balance with the Bank of £10k in cash during the year.
+
+The parent company also holds a deposit with the Bank of £1,381k (FY24: £13,047k). No fees were levied on nor
+was any interest credited to this account.
+
+* The Bank of London Group Holdings Limited was renamed Oplyse Holdings Limited in March 2025. Oplyse
+Holdings Limited was renamed TBOL Holdings UK Limited in May 2026. TBOL Inc. was renamed Gjennomsiktig
+Inc in January 2025.
+
+47
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 9 Bank of London
+
+Ultimate parent company
+
+TBOL Group and Holdings Corporation Limited, which was incorporated in Jersey on 1 November 2023, with
+registered office De Carteret House, 7 Castle Street, St. Helier, JE2 3BT, Jersey, became the ultimate parent
+company of the Bank on 2 May 2024. Until that date, the Bank’s immediate parent company, TBOL Holdings UK
+Limited with registered office 77 Cornhill, Fourth Floor, London, EC3V 3QQ, was the ultimate parent company of
+the Bank.
+
+On 11 February 2025, TBOL Group and Holdings Corporation Limited was renamed Feliesskap Group & Holdings
+Corporation Limited.
+
+On 22 May 2026, Fellesskap Group & Holdings Corporation Limited was renamed to TBOL Holdings Jersey
+Limited.
+
+16. Financial instruments and risk management
+
+- Categories of financial assets
+
+Amortised
+
+Note(s) cost ‘Total
+— 2025 £'000 £'000
+Receivables and other assets 9 18,492 18,492
+Cash and cash equivalents 8 326,874 326,874
+345,366 345,366
+
+2024
+Receivables and other assets 9 18,087 18,087
+Cash and cash equivalents 8 829,694 829,694
+847,781 847,781
+
+- Categories of financial liabilities
+Amortised
+
+Note(s) cost Total
+2025 £'000 £'000
+Customer deposits 11 301,129 301,129
+Other payables 12 20,129 20,129
+Lease Liability 19 94 94
+321,352 321,352
+
+2024
+Customer deposits 11 807,019 807,019
+Other payables 12 18,488 18,488
+825,507 825,507
+
+48
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 15 Bank of London
+
+Risk management
+
+The Bank uses its Risk Management Framework (RMF) to apply governance and oversight across the Bank.
+The RMF has been designed to provide a clear and consistent approach to the management of risks and
+controls aligned to risk appetite. The RMF is underpinned by our risk culture and three lines model, aligned to
+industry practice and UK Regulatory requirements.
+
+Risk Management Framework
+
+The Bank’s principal risks are laid out below and the order in which they are shown does not imply their
+importance. Each risk is equally important in assessing the performance of the Bank in the context of
+its overall risk appetite. The principal risks will be reviewed by the Board each year in line with the
+Strategic and Annual Planning processes and monitored on an ongoing basis.
+
+The Bank’s approach to identifying and managing risks continued to evolve throughout the period of
+mobilisation.
+
+Level 1 Risk Definition
+
+Business Model The risk that the Bank's. business model is unsustainable due to poor
+strategic decision making, execution and/or governance, resulting in
+the failure to meet the Bank's objectives and loss of revenue.
+
+Client The risk that poor service, a poor client experience, competitor
+actions, industry shifts, technological innovation, and/or inadequate
+communications result in failure to deliver our strategy, leading to
+financial loss.
+
+Product The risk that delays to product launches, poor product design and/or
+defective products result in failure to deliver our strategy, leading to
+financial loss.
+
+Reputational The risk that issues arise which lead to damage to the Bank's public
+
+image and brand, resulting in its inability to meet its current or
+projected financial and investment objectives and/or regulatory
+censure.
+
+Treasury The risk that the inadequate management of capital, foreign currency,
+liquidity and/or interest rate risks results in the Bank being unable to
+meet its current or projected financial and investment objectives.
+
+Financial Crime The risk that the Bank acts, omissions, practices or behaviours fail to
+prevent the facilitation of money laundering, terrorist financing, breach
+of sanctions, or bribery and corruption resulting in customer harm,
+regulatory censure, reputational and/or financial damage.
+
+Compliance The risk of legal or regulatory sanctions, material financial loss, or loss to
+reputation Bank may suffer as a result of its failure to comply with laws,
+regulations, rules, related self-regulatory organisation standards, and
+codes of conduct applicable to its activities and/or a failure to treat
+customers fairly, leading to poor customer outcomes.
+
+People The risk that limitations related to the capacity and/or capability
+available to the Bank results in its inability to meet its current or
+projected financial and investment objectives and/or regulatory censure.
+
+Third Party The risk that the actions, failure or vulnerabilities of external entities,
+such as vendors, suppliers or partners lead to data breaches, financial
+losses, reputational damage and/or regulatory censure.
+
+Technology Risk The risk of inadequate performance of IT infrastructure increasing the
+likelihood of the failure of the Bank's systems resulting in customer
+harm, financial loss, disruption or reputational damage.
+
+49
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 1} Bank of London
+
+Information Security Risk The risk that confidentiality, integrity, or availability of information or
+information systems is compromised, whether through internal or
+external acts or omissions, leading to regulatory, financial, operational,
+and/or reputational impact.
+
+Data Governance, Quality The risk that weaknesses in how data is owned, defined, captured,
+and Management quality-assured, protected, and used across the organisation lead to
+errors, bias, misuse, or non-compliance, causing operational, financial
+operational and/or reputational impact.
+
+Operational Resilience The risk of a failure to prevent, respond to, recover from, and learn
+from operational disruptions. leading to disruption to important
+business services which results in customer harm, financial loss,
+reputational damage and/or regulatory censure.
+
+Finance Control The risk of financial and/or financial reporting errors, resulting in
+incomplete, inaccurate and/or untimely submissions, misinterpretation
+of accounting requirements or payment errors, leading to client
+dissatisfaction, reputational damage and/or regulatory censure.
+
+The Bank faces various financial risks in its operations, principally marginal market risk (specifically interest
+rate fluctuations), nominal credit risk, and liquidity risk. Risk management is fundamental to our business
+model. The Board of Directors bears ultimate accountability for risk identification and management, including
+setting strategy and risk parameters.
+
+Framework Structure
+
+Our Risk Management Framework provides a structured approach to managing risks across financial,
+economic, operational and behavioural domains. This framework is built on the three lines model principle,
+emphasising frontline risk ownership with second-line challenge and third-line assurance, defining
+organisational responsibilities, processes and monitoring requirements.
+
+Risk Management and Monitoring
+
+Our risk management and monitoring balances our growth ambitions with risk management. We monitor both
+qualitative and quantitative metrics to assess risk exposure, supported by Key Risk indicators and Early
+Warning indicators which enable proactive risk management.
+
+Risk monitoring occurs through regular reviews by the Executive Risk and Compliance Committee, with
+quarterly oversight from the Board Risk Committee, facilitating scrutiny and debate of principal risks.
+
+Capital Management Strategy
+
+Maintaining appropriate capital levels is crucial for meeting regulatory requirements and supporting the Bank’s
+business objectives. Key capital risks include potential defaults on receivables, unexpected operational losses
+or challenges in capital raising.
+
+The Bank’s capital management approach includes:
+
+Board-set capital thresholds exceeding regulatory minimums;
+Periodic Internal Capital Adequacy Assessment Process (ICAAP) reviews, submitted to the PRA;
+Implementation of Standardised and Basic Indicator approaches for credit and operational risk
+assessment; and
+
+e Endeavouring to comply with regulatory capital requirements.
+
+50
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+9 Bank of London
+
+Capital and Liquidity Oversight
+
+The Asset and Liability Committee (ALCO) leads capital monitoring, focusing on resource allocation and
+regulatory compliance. The Board, Board Risk Committee, and Executive Committee receive regular updates
+
+on capital positions and forecasts.
+
+Our capital structure comprises Tier 1 instruments only. As of 31 December 2025, the unaudited CET1 Capital
+
+ratio was 82.94% (2024: 88.91%).
+
+Funding Position
+
+The Bank’s funding position as at 31 December 2024 and 2025 can be summarised as follows:
+
+Customer deposits
+Other payables
+Lease Liability
+Total borrowings
+
+Cash and cash equivalents
+Net funding position
+
+Total equity
+Liquidity Risk
+
+Note(s)
+
+11
+12
+19
+
+2025 2024
+£'000 £'000
+301,129 807,019
+20,129 ~—«-18, 488
+94 -
+321,352 825,507
+(326,874) (829,694)
+(5,522) (4,187)
+23,217. 22,143
+
+The maturity profile of contractual cash flows of non-derivative financial liabilities, and financial assets
+held to mitigate the risk, are presented in the following table. The cash flows are undiscounted
+contractual amounts. Given the short-term nature of the Bank’s non-derivative financial liabilities and
+financial assets, there are no differences from the amounts shown in the Statement of Financial Position.
+
+2025
+
+Receivables and other assets
+Intercompany receivables
+Cash and cash equivalents
+
+2024
+
+Receivables and other assets
+Intercompany receivables
+Cash and cash equivalents
+
+Within 12 After 12
+
+months months Total
+247 ~ 247
+18,245 - 18,245
+326,874 - 326,874
+345,366 - 345,366
+281 - 281
+17,806 - 17,806
+829,694 - 829,694
+847,781 - 847,781
+
+51
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+9 Bank of London
+
+Within 12 After 12
+months months Total
+2025
+Client Deposits 301,129 301,129
+Other payables 20,129 20,129
+Lease Liability 95 95
+321,353 321,353
+2024
+Client Deposits 807,019 807,019
+Other payables 18,488 18,488
+825,507 825,507
+
+Foreign currency risk
+
+The Bank is exposed to minimal foreign currency risk as its monetary assets and liabilities are GBP
+denominated, particularly the most material balances, being its cash, customer deposits, and
+receivables and payables. ,
+
+Interest rate risk
+
+Interest rate risk refers to the potential financial loss arising from un-hedged or mismatched asset and liability
+positions that are sensitive to interest rate fluctuations. The Bank's deposits are primarily at variable interest
+rates, with £268 million (2024: £729 million) held in instant access accounts and £33 million (2024: £78 million)
+in notice accounts with a 14-day repricing period. As a result, changes in interest rates have a minimal impact
+on net interest income.
+
+The majority of the Bank’s assets are held in the Bank of England cash reserve (see note 8) and are subject to
+fluctuations in the Base Rate. A 200-basis point increase/decrease in the Bank of England base rate would have
+had a £95k positive/negative (2024: £103k) net annualised impact on 2025 performance.
+
+Fair value
+
+Financial instruments measured at fair value subsequent to initial recognition are grouped into levels 1 to 3
+based on the degree to which the fair value is observable:
+
+e Level 1 fair value measurements are those derived from quoted prices (unadjusted) in active markets
+for identical assets or liabilities.
+
+e Level 2 fair value measurements are those derived from inputs other than quoted prices included
+within level 1 that are observable for the asset or liability, either directly or indirectly.
+
+« Level 3 fair value measurements are those derived from valuation techniques that include inputs for
+the asset or liability that are not based on observable market data (unobservable inputs).
+
+If one or more of the significant inputs are not based on observable market data, the instrument is included in
+level 3. The fair values of the Bank’s financial instruments are considered to approximate their carrying values,
+due to their short-term and floating rate nature.
+
+52
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025
+
+U9 Bank of London
+
+Credit risk
+
+Maximum exposure to credit risk
+
+Cash and cash equivalents
+
+Amounts owed by group undertakings
+Trade receivables
+
+Accrued income
+
+Lease deposits
+
+Gross credit risk exposure
+
+Less: allowance for impairment losses
+
+Net credit risk exposure
+
+2025 2024
+£'000 £'000
+326,874 829,694
+18,694 18,263
+182 197
+98 167
+28 -
+345,876 848,321
+(510) (540)
+345,366 847,781
+
+At 31 December 2025, cash and cash equivalents include £326,151k of central bank balances at the Bank of
+England (2024: £828,074k). At 31 December 2024 and 2025, the Bank of England's credit rating was AA-
+(Fitch Ratings), and the Bank’s related credit risk is considered immaterial. Credit ratings are not available for
+
+intra-group counterparties.
+
+Accrued income comprises short-term balances (maturity of 1 day) on which the Bank has minimal historical
+credit risk exposure. No ECL provisions are made in respect of these balances.
+
+Expected Credit Loss provisions, as analysed in note 9, consist of:
+
+Credit risk staging table - type 2
+
+Stage 1 Stage 2 Stage 3 Total
+£'000 £°000 £'000 £'000
+
+Amounts owed by group undertakings
+As at 1 January 2024 - - (479) (479)
+Amount expensed in the year - - 22 22
+As at 31 December 2024 - - (457) (457)
+Amount expensed in the year - - 8 8
+As at 31 December 2025 - - (449) (449)
+Trade receivables - Stage 1 Stage 2 Stage 3 Total
+
+£'000 £'000 £'000 £'000
+As at 1 January 2024 (9) - - (9)
+Amount expensed in the year (158) - - (158)
+Write-offs 84 - ~ 84
+Transfers to Stage 3 . . 57 * “> (57) -
+As at 31 December 2024 (26) = (57) (83)
+Amount expensed in the year - - (50) (50)
+Write-offs ~ ~ 72 72
+Transfers to Stage 2 1 (1) - -
+Transfers to Stage 3 1 - (11) -
+As at 31 December 2025 (14) (1) (46) (61) "
+
+53
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 U5 Bank of London
+
+The Bank applies the rebuttable presumptions in IFRS 9 ‘Financial Instruments’ that a significant increase in
+credit risk (SICR) has occurred when a financial asset is more than 30 days past due, and that default has
+occurred when it is more than 90 days past due. Neither presumption has been rebutted. The majority of the
+
+ECL provision on receivables relates to Stage 3 exposures. The Bank defines a financial asset as in default
+when it is 90 days past due or when management concludes the counterparty is unlikely to pay. The Bank
+writes off receivables against the related loss provisions when it concludes there is no reasonable
+expectation of recovery.
+
+The Bank's receivables are predominantly due from counterparties based in the United Kingdom, with limited
+exposure to other jurisdictions. Accordingly, country risk is not considered a significant driver of expected
+credit losses. Management has also considered the potential impact of wider geopolitical and
+macroeconomic uncertainty on the recoverability of receivables and, given the size, short-dated nature and
+concentration of the portfolio in the UK, concluded that any such impact is not a notable driver of the ECL
+provision.
+
+Over the course of 2024 and 2025 as set out in the Directors’ report, a number of the difficulties arose in the
+broader Group, negatively impacting the Bank’s Parent Company’s financial outlook. As a part of its on-going
+credit monitoring, the Bank concluded there was objective evidence of credit impairment at the reporting
+date. On this basis, the Bank classified the loan as a Stage 3 exposure and calculated the ECL on an
+individual basis, incorporating intercompany level inter-dependencies into the recovery scenario.
+
+17. Share-based payments
+
+Employee Share Option Plan ~ TBOL Holdings UK Limited
+
+The Group (and subsidiaries, including the Bank) operated an equity-settled share option plan — the TBOL
+Holdings UK Limited Share Option Plan (the 'Previous Plan’) — adopted September 2022, with grants dating
+back to 2018 for certain early joiners. Options were granted in four exercise-price series (£0.10, £225.59,
+£395.45 and £29.16) over ordinary shares in TBOL Holdings UK Limited. Options vested over 3~8 year periods
+and were exercisable only upon an exit event.
+
+Options were granted to eligible employees selected by the Board, with the only vesting conditions being that
+the individual remains an employee of the Company over the vesting period, which is typically 3 years, or if an
+‘exit event’ occurs.
+
+An exit event includes, but is not limited to a share sale, an asset sale and an Initial Public Offering. No options
+may be transferred, assigned or charged, and any purported transfer, assignment or charge shall cause the
+option to lapse immediately. Option holders who leave the Group and who are considered to be good leavers
+may keep the vested portion of their respective awards, but it will not usually become exercisable early.
+
+There are no cash settlement alternatives. The Group does not have a past practice of cash settlement for
+these share options. The Group accounts for the Previous Plan as an equity-settled plan. The fair value of the
+participant services received in exchange for the grant of the options is recognised as an expense. A credit is
+recognised directly in equity against Share-Based Payment Reserve. The total amount to be expensed is
+determined by reference to the fair value of the options granted, calculated on a Black Scholes basis.
+
+Options issued under the Option Plan allow Participants the right to acquire Ordinary Shares of £0.10 each in the
+Parent in the future.
+
+The total IFRS 2 charge recognised in profit and loss for snare-based compensation plans for the year to 31
+December 2025 under the Previous Plan was £77k (2024: £145k).
+
+54
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 I) Bankof London
+
+Other share-based plans
+
+The Bank also has an arrangement with some of its non-executive directors, where those non-executive
+directors can elect to receive a portion of their fee in the form of equity shares of the Parent. These
+transactions are treated as equity-settled share-based transactions in the Group accounts and are measured
+and recognised at the fair value of the amount payable under the arrangement. No shares were issued in 2025
+(2024: nil) as the arrangement was in place for 3 years from 2022-2024.
+
+The total IFRS 2 charge recognised in profit and loss for the non-executive director plans for the year to 31
+December 2025 was nil (2024: £259k).
+
+Limitation of scope
+
+Owing to significant turnover of staff and inadequate record keeping creating challenges to the retrieval of
+historical data, the Directors have been unable to conclude on the completeness, accuracy and disclosure of
+the employee share option scheme records relating to the Previous Plan. The employee share option scheme
+share-based payment entries reflected in these financial statements for the year ended 31 December 2025 and
+prior years are based on the information available. Given the limitation noted we have been unable to provide
+sufficient and appropriate audit evidence to our auditors to support the share-based payment booking resulting
+in a limitation of scope, as reported in the Independent Auditor's Report on page 15. The Employee Share Option
+Plan issued by the parent company, TBOL Holdings UK Limited, was approved by the Board for cancellation on
+17 April 2025, with all vested shares cancelled on 20 November 2025 following the issuance of formal
+confirmations to the members of the scheme. The balance in share-based payment reserves related to the
+employee share option scheme at the point of cancellation has been recycled within equity to retained earnings
+(£728k).
+
+In prior periods, the limitation of scope relating to share-based payment arrangements extended to certain non-
+executive directors and the Previous Plan. With the passage of time, during the current year, sufficient and
+appropriate evidence was obtained in respect of the non-executive directors’ share plan, including the
+associated comparative balances. Accordingly, the Directors have been able to conclude on the completeness,
+accuracy and disclosure of the non-executive directors' plan and the limitation of scope relates solely to the
+Previous Plan.
+
+18. Provisions and contingent liabilities
+
+From time to time and in the normal course of business, claims against the Bank may be received. Management
+has assessed the likelihood of an outflow of resources in respect of current open claims where it is able to
+measure the likely outflow. A provision of £253k is held at 31 December 2025 (2024: £294k) in respect of such
+claims.
+
+2025 2024
+£'000 £'000
+
+Restructuring provision 129 -
+Provisions for ongoing claims 253 294
+Total provisions 382 294
+
+During the second half of 2025 the Group undertook a strategic review under which several roles were placed
+at risk of redundancy. This comprised a redundancy review exercise in the London office and, following Board
+approval, the closure of the Group's Belfast office, with affected roles made redundant and activities migrated
+to London or transferred to an outsourced service provider. The plans were communicated to affected
+employees before 31 December 2025. A constructive obligation existed before 31 December 2025 as there was
+a formal plan approved and affected employees had been notified. A restructuring provision of £129k was
+
+55
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 1S Bank ot London
+
+recognised under IAS 37. The financial effect is largely based on actual redundancy costs per individual, since
+in most instances the employee redundancy costs have been finalised. The provision is expected to be fully
+utilised during 2026.
+
+Contingent Liabilities
+
+In addition to the matters provided for, the Bank disputes other claims where an outflow is not considered
+probable and at this point in time it is not possible to measure any potential outflow.
+
+19. Leases
+
+The Bank leases some of its premises as a lessee. Details of premises where property leases are in effect as at
+31 December 2025, and the remaining term, are as follows:
+
+Description of
+Premise
+
+Remaining lease
+
+Physical address Rental increase | term as at 31 Dec 2025
+
+Metro, 6-9 Donegall Square South,
+
+Belfast Office Belfast, BT1 5JA
+
+0.00% 7 months
+
+Right-of-use assets
+The carrying amount of right-of-use assets included in the following line items:
+
+2025 2024
+
+£'000 £'000
+Carrying value as at 7 January - -
+Additions to right of use asset 323 -
+Reassessment of right of use asset (166) -
+Current period depreciation (67) -
+Impairment (50) -
+Carrying value as at 31 December 40 -
+
+Depreciation recognised on each class of right-of-use assets (Property), includes depreciation which has been
+expensed in the total depreciation charge in profit or loss (note 6).
+
+2025 2024
+
+£'000 £'000
+Lease liabilities as at 1 January - -
+Additions 323 -
+Reassessment of lease liability (166) -
+Interest expense 5 -
+Payments during the year (68) -
+Lease liabilities as at 31 December 94 -
+
+The Company's Belfast (Metro) office lease was entered into during 2025 with an original term to July 2027. In
+‘ October 2025, as part of the Group's strategic review and restructuring undertaken (see note 18, provisions),
+the Board approved the closure of the office and the exercise of the break clause in the lease. This shortened
+
+56
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 Bank of London
+
+the remaining lease term from 19 to 7 months, with the lease now terminating effective 31 July 2026 and the
+office largely vacant for the remainder of the term. The Company reassessed the lease term and remeasured
+the Belfast lease liability and right-of-use asset accordingly. No prior year comparative is presented, as the
+Group's leases were previously held by another Group entity rather than by the Company.
+
+The closure decision was an indicator of impairment. The right-of-use asset, together with the associated
+leasehold improvements, was tested for impairment, with its recoverable amount determined on a value-in-use
+basis. An impairment loss of £50k was recognised in the year in addition to a £1k loss on termination, reducing
+the carrying amount of the Company's Belfast right-of-use asset to £40k at 31 December 2025. The remaining
+Belfast lease liability of £94k at 31 December 2025 is payable over the period to termination in July 2026. The
+redundancy costs arising from the closure are dealt with in note 18, provisions and contingent liabilities.
+
+2025 2024
+£'000 £'000
+Amounts expensed on short-term leases - -
+Total cash outflow from leases 68 ~
+
+The total lease payments were settled by other group companies.
+
+20. Events after the reporting period
+
+Since the year end, further capital injections of £35.0m have been made into Group and £31.7m has been down
+streamed into the Bank up to the date of the signing of these financial statements.
+
+The Group was previously notified by the PRA that it was under investigation in relation to certain historical
+matters that occurred prior to the Group's change in ownership. The PRA have concluded the investigation and
+the settlement of £2m was agreed. The Group has recognised a provision of £2m to cover the agreed
+settiement. The Group and Bank are jointly and severally liable for this matter, however, the Group have
+provided an indemnity to the Bank and will pay the required amount to discharge the obligation of the Bank in
+respect of all potential outflows and liabilities that may arise from the investigation, therefore, there is no
+provision to be recognised by the Bank for this matter.
+
+On 15 April 2025, the PRA approved a new controller of the Group. As part of the capital injections in March
+2026, the existing controller's shareholdings were transferred to other shareholders and there is no longer a
+controller of the Group.
+
+In October 2025, the Board decided to exit the Bank's Belfast office and notice of early termination was served
+on the lease with a termination date of July 2026. The physical exit was completed on 31 March 2026, with
+impacted roles either relocated to London or transitioned to an outsourcing partner.
+
+A new long term incentive plan, issued by TBOL Holdings Jersey Limited, was approved in 2026 and eligible
+participants in the scheme were notified on 5 March 2026. Management has considered the financial effect of
+both the cancellation of the previous employee share scheme and the implementation of the new scheme.
+
+The new scheme was determined to have a grant date of 5 March 2026, and under IAS 10 this is a non-
+adjusting event after the reporting period.
+
+57
+The Bank of London Group Limited
+
+Notes to the Financial Statements for the year ended 31 December 2025 1} Bank of London
+
+The total estimated FV of the awards is £7m-£9m and a total IFRS 2 charge of £5m-£6.5m after estimated
+
+forfeitures due to attrition. The charge is expensed in profit and loss over a 4-year period, in line with vesting
+schedules.
+
+Other than those stated above, the Directors are not aware of any material event which occurred after the
+reporting date and up to the date of this report which requires disclosure in these financial statements.
+
+58

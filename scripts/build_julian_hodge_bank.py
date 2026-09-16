@@ -705,6 +705,217 @@ def metric(name, unit, rows_data, sources_text, note=None, first_col_width=52, s
                         source_height=source_height, years=P3_DISCLOSURE_YEARS)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (KM1-018, 2026-09-16)
+#
+# Hodge publishes the key-metrics template in SIX editions, FY2018 to FY2023,
+# and it changes TEMPLATE GENERATION in the middle of that run. The two
+# generations are kept as two separate blocks on this sheet and are
+# deliberately NOT merged, for the same reason the map forbids merging the two
+# sides of the 1 January 2022 leverage basis break: they are different tables
+# with different row sets, different captions and a different numbering
+# convention, and running them down one row would assert a continuity Hodge
+# never published.
+#
+#   BLOCK A - "3 Key Regulatory Metrics", FY2022 and FY2023 editions. Numbered
+#       UK KM1, footed "Source: Template UK KM1". Carries UK11a, UK16a, UK16b
+#       and row 12, and its leverage rows are on the post-1-Jan-2022
+#       EXCLUDING-central-bank-claims basis.
+#   BLOCK B - "Key metrics" / "Key Metrics", FY2018 to FY2021 editions.
+#       UNNUMBERED, and it is the BCBS Basel III KM1 rather than the UK one:
+#       it prints a "Tier 2 (£m)" row the UK template does not have, uses
+#       "Total of bank CET1 specific buffer requirements" where the UK
+#       template says "Combined buffer requirement", has no UK11a / row 12 /
+#       UK16a / UK16b rows, and its leverage rows are the old
+#       INCLUDING-central-bank-claims measure. Under the map's row-set test it
+#       is still unmistakably the template (own funds, RWA, ratios, buffers,
+#       leverage, LCR and - from FY2020 - NSFR), so it is transcribed.
+#
+# Every cell comes from the edition in which that year is the REPORTING year,
+# never from the next edition's comparative. That matters twice here:
+#   - FY2021 CET1 is 143.8 in the FY2021 edition and 144 in the FY2022
+#     edition's comparative; 143.8 is used.
+#   - FY2021's leverage rows are 1,732.2 / 8.3% on its own edition's
+#     including-central-banks basis, while the FY2022 edition restates that
+#     comparative to 1,320 / 10.9% on the excluding basis. Both are real; the
+#     two bases sit in different blocks and are not merged.
+#
+# FY2024 and FY2025 have NO Pillar 3 document at all: FY2024 is an ordinary
+# gap, FY2025 is covered by the bank's SDDT modification (PRA Rule 3.1,
+# effective 18 February 2025), so no FY2025 KM1 will ever exist. FY2017 and
+# earlier are blank because those editions print no key-metrics table of any
+# kind - FY2017's figures exist only as the FY2018 edition's comparative.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "UK KM1 template - \"3 Key Regulatory Metrics\" (FY2022 and FY2023 editions; row numbers as Hodge prints them)", {}),
+    ("SECTION", "Available own funds (amounts) (£m)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1)", {"FY2023": 172.9, "FY2022": 177}),
+    ("DATA", "2    Tier 1", {"FY2023": 172.9, "FY2022": 177}),
+    ("DATA", "Total capital    [Hodge prints this row WITHOUT the template's row number 3]",
+     {"FY2023": 172.9, "FY2022": 177}),
+    ("SECTION", "Risk-weighted exposure amounts RWEA (£m)", {}),
+    ("DATA", "4    Total RWEA", {"FY2023": 704.7, "FY2022": 705}),
+    ("SECTION", "Capital ratios (as a percentage of RWEA)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio", {"FY2023": "24.5%", "FY2022": "25.2%"}),
+    ("DATA", "6    Tier 1 ratio", {"FY2023": "24.5%", "FY2022": "25.2%"}),
+    ("DATA", "7    Total capital ratio", {"FY2023": "24.5%", "FY2022": "25.2%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of RWEA)", {}),
+    ("DATA", "8    Capital conservation buffer", {"FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer", {"FY2023": "2.0%", "FY2022": "0.0%"}),
+    ("DATA", "11    Combined buffer requirement", {"FY2023": "4.5%", "FY2022": "2.5%"}),
+    ("DATA", "UK11a    Overall capital requirements", {"FY2023": "16.0%", "FY2022": "15.9%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements",
+     {"FY2023": "13.0%", "FY2022": "9.3%"}),
+    ("SECTION", "Leverage Ratio", {}),
+    ("DATA", "13    Total leverage Ratio exposure measure (£m)", {"FY2023": 1649.9, "FY2022": 1624}),
+    ("DATA", "14    Leverage Ratio", {"FY2023": "10.5%", "FY2022": "10.9%"}),
+    ("SECTION", "Liquidity Coverage Ratio*", {}),
+    ("DATA", "15    Total HQLA after haircuts (£m)", {"FY2023": 230.4, "FY2022": 334}),
+    ("DATA", "UK16a    Cash outflows - Total weighted value (£m)", {"FY2023": 141.0, "FY2022": 137}),
+    ("DATA", "UK16b    Cash inflows - Total weighted value (£m)", {"FY2023": 10.7, "FY2022": 4}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£m)", {"FY2023": 130.2, "FY2022": 133}),
+    ("DATA", "17    Liquidity coverage ratio (%)", {"FY2023": "176.9%", "FY2022": "252%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18    Total available stable funding", {"FY2023": 1721.9, "FY2022": 1549}),
+    ("DATA", "19    Total required stable funding", {"FY2023": 1144.2, "FY2022": 1085}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2023": "150.5%", "FY2022": "143%"}),
+
+    ("SECTION", "Basel III (BCBS) KM1 - \"Key metrics\" (FY2018 to FY2021 editions; Hodge prints no row numbers in these, and none have been added)", {}),
+    ("SECTION", "Available capital (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) (£m)",
+     {"FY2021": 143.8, "FY2020": 136.4, "FY2019": 156.6, "FY2018": 168.0}),
+    ("DATA", "Tier 1 (£m)", {"FY2021": 143.8, "FY2020": 136.4, "FY2019": 156.6, "FY2018": 168.0}),
+    ("DATA", "Tier 2 (£m)    [printed \"-\" in every one of the four editions - left blank, not zeroed]", {}),
+    ("DATA", "Total capital (£m)", {"FY2021": 143.8, "FY2020": 136.4, "FY2019": 156.6, "FY2018": 168.0}),
+    ("SECTION", "Risk weighted assets (amounts)", {}),
+    ("DATA", "Total risk-weighted assets (RWA) (£m)",
+     {"FY2021": 711.0, "FY2020": 693.8, "FY2019": 681.9, "FY2018": 754.6}),
+    ("SECTION", "Risk-based capital ratios as a percentage of RWA", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%"}),
+    ("DATA", "Tier 1 ratio (%)", {"FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%"}),
+    ("DATA", "Total capital ratio (%)",
+     {"FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "Capital conservation buffer requirement (%)",
+     {"FY2021": "2.50%", "FY2020": "2.50%", "FY2019": "2.50%", "FY2018": "1.88%"}),
+    ("DATA", "Countercyclical buffer requirement (%)",
+     {"FY2021": "0.00%", "FY2020": "0.00%", "FY2019": "1.00%", "FY2018": "0.50%"}),
+    ("DATA", "Total of bank CET1 specific buffer requirements (%)",
+     {"FY2021": "2.50%", "FY2020": "2.50%", "FY2019": "3.50%", "FY2018": "2.38%"}),
+    ("SECTION", "Basel III leverage ratio (INCLUDING claims on central banks - the pre-1-January-2022 measure)", {}),
+    ("DATA", "Total Basel III leverage ratio exposure measure (£m)",
+     {"FY2021": 1732.2, "FY2020": 1423.5, "FY2019": 1393.2, "FY2018": 1412.2}),
+    ("DATA", "Basel III leverage ratio (%)",
+     {"FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total HQLA after haircuts (£m)    [FY2018 edition prints \"Total HQLA (£m)\", without \"after haircuts\"]",
+     {"FY2021": 479.5, "FY2020": 196.4, "FY2019": 346.4, "FY2018": 245.2}),
+    ("DATA", "Total net cash outflow (£m)", {"FY2021": 137.1, "FY2020": 72.0, "FY2019": 67.0, "FY2018": 103.5}),
+    ("DATA", "LCR ratio (%)    [FY2021 edition prints the row as \"LCR (%)\"]",
+     {"FY2021": "349.6%", "FY2020": "272.9%", "FY2019": "516.9%", "FY2018": "236.9%"}),
+    ("SECTION", "Net Stable Funding Ratio    [this whole block is absent from the FY2018 and FY2019 editions]", {}),
+    ("DATA", "Total available stable funding", {"FY2021": 1551.0, "FY2020": 1226.2}),
+    ("DATA", "Total required stable funding", {"FY2021": 922.7, "FY2020": 793.3}),
+    ("DATA", "NSFR", {"FY2021": "168.1%", "FY2020": "154.6%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Julian Hodge Bank Limited's own key-metrics table in each year's Pillar 3 "
+    "Disclosures, from the Bank's own Financial Information page "
+    "(https://hodgebank.co.uk/hodge/financial-information/). Page numbers below are the PRINTED "
+    "folio on the page carrying the table:\n"
+    f"FY2023: Hodge Bank Pillar 3 Disclosures - Period ended 30 September 2023, \"3 Key Regulatory "
+    f"Metrics\", printed p.10, column headed 2023, footed \"Source: Template UK KM1\" - {P3_2023_URL}\n"
+    f"FY2022: Hodge Bank Pillar 3 Disclosures - Period ended 30 September 2022, \"3 Key Regulatory "
+    f"Metrics\", printed p.13, column headed 2022, footed \"Source: Template UK KM1\" - {P3_2022_URL}\n"
+    f"FY2021: Hodge Bank Pillar 3 Disclosures - Period ended 30 September 2021, \"Key Metrics\", "
+    f"printed p.16, column headed 30 September 2021 - {P3_2021_URL}\n"
+    f"FY2020: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 30 September 2020, "
+    f"\"3. Key Regulatory Metrics\", printed p.16, column headed 30 September 2020 - {P3_2020_URL}\n"
+    f"FY2019: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 31 October 2019, "
+    f"\"4. Key Regulatory Metrics\" / \"Key metrics\", printed p.9, column headed 31 October 2019 - "
+    f"{P3_2019_URL}\n"
+    f"FY2018: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 31 October 2018, "
+    f"\"4. Key Regulatory Metrics\" / \"Key metrics\", printed p.9, column headed 31 October 2018 - "
+    f"{P3_2018_URL}\n"
+    "KM1 presentation notes:\n"
+    "• ENTITY: Julian Hodge Bank Limited (trading as Hodge Bank), solo. Every edition's table is "
+    "headed \"for JHB\" or \"for the Bank\"; no group or consolidated column is printed anywhere, "
+    "so there is no basis ambiguity to resolve.\n"
+    "• TWO TEMPLATE GENERATIONS, SHOWN AS TWO BLOCKS AND NEVER MERGED. The FY2022 and FY2023 "
+    "editions print the numbered UK KM1 and foot it \"Source: Template UK KM1\". The FY2018-FY2021 "
+    "editions print the BCBS Basel III KM1 instead: unnumbered, with a \"Tier 2 (£m)\" row the UK "
+    "template does not contain, \"Total of bank CET1 specific buffer requirements\" in place of "
+    "\"Combined buffer requirement\", no UK11a / row 12 / UK16a / UK16b rows, and leverage rows on "
+    "the old INCLUDING-claims-on-central-banks measure. Running the two down one set of rows would "
+    "assert a continuity Hodge never published, so they are kept apart - the same treatment the map "
+    "requires for the 1 January 2022 leverage basis break, which is in fact exactly what separates "
+    "them.\n"
+    "• EACH YEAR FROM ITS OWN EDITION. Two visible consequences: (1) FY2021 CET1/Tier 1/Total "
+    "capital are 143.8 here, from the FY2021 edition, where the FY2022 edition's comparative "
+    "column rounds them to 144 and its RWA comparative to 711 (from 711.0); (2) FY2021's leverage "
+    "exposure and ratio are 1,732.2 and 8.3% here, on its own edition's including-central-banks "
+    "basis, where the FY2022 edition restates the same comparative to 1,320 and 10.9% on the "
+    "excluding basis. Both restatements are real and neither is applied.\n"
+    "• DIVERGENCE FROM THE NSFR METRIC SHEET, DELIBERATE AND EXPLAINED: that sheet carries an "
+    "FY2019 NSFR of 217.6%, which this sheet leaves blank. 217.6% is the FY2020 edition's 31 "
+    "October 2019 COMPARATIVE column; the FY2019 edition itself prints no Net Stable Funding Ratio "
+    "block at all (its table ends after the LCR rows), and neither does the FY2018 edition. A "
+    "reproduction of the FY2019 table therefore cannot carry an NSFR row, so the FY2019 and FY2018 "
+    "NSFR cells are blank here rather than back-filled from the following edition.\n"
+    "• A DASH IS NOT A ZERO: the \"Tier 2 (£m)\" row is printed \"-\" in all four Basel III-era "
+    "editions and is left BLANK here. The FY2018 edition prints its FY2017 countercyclical buffer "
+    "comparative as \"-%\", the same glyph - that column is not on this sheet in any case, since "
+    "the FY2017 edition prints no key-metrics table.\n"
+    "• PRECISION AND LABEL DRIFT, REPRODUCED: the FY2022 edition prints amounts as whole £m (177, "
+    "705, 1,624) where FY2023 prints one decimal (172.9, 704.7, 1,649.9); FY2022 prints buffers as "
+    "\"2.5%\" where the Basel III-era editions print \"2.50%\"; FY2022's row 4 is captioned \"Total "
+    "risk-weighted exposures amounts\" and FY2023's \"Total RWEA\" (FY2023's wording labels the "
+    "row); FY2022's row 9 is \"Institution specific countercyclical buffer\" and FY2023's adds "
+    "\"capital\" (FY2023's wording labels the row). The FY2020 edition lower-cases \"Basel III "
+    "leverage ratio\" where FY2021 capitalises it.\n"
+    "• ROW 3 IS UNNUMBERED IN THE SOURCE: both UK KM1 editions print \"Total capital\" with no row "
+    "number in the number column, while numbering 1, 2 and 4 normally. Reproduced as printed rather "
+    "than silently corrected to \"3\". Neither edition prints rows UK 7a-7d, UK 8a, UK 9a, 10 or UK "
+    "10a at all.\n"
+    "• LCR BASIS FOOTNOTE, HODGE'S OWN: both UK KM1 editions foot the table \"*=year end value for "
+    "LCR related metrics whereas detailed analysis at LIQ1 reports average values as defined in the "
+    "table\", so rows 15-17 are point-in-time, not the 12-month average most filers print. The "
+    "asterisk is kept on the section heading.\n"
+    "• FY2024 AND FY2025 ARE BLANK FOR DIFFERENT REASONS. FY2024 is an ordinary gap: no Pillar 3 "
+    "document was published for the year ended 30 September 2024, and its capital figures on the "
+    "metric sheets come from Note 32 of the FY2024 Annual Report, which is a statutory source and "
+    "is deliberately NOT back-filled into this template. FY2025 is NOT APPLICABLE rather than "
+    "missing: the Bank's SDDT modification (PRA Disclosure Rule 3.1, effective 18 February 2025) "
+    "removed its Pillar 3 duty before the 30 September 2025 year-end, so no FY2025 KM1 will ever "
+    "exist. FY2017 and earlier are blank because no edition before FY2018 prints a key-metrics "
+    "table of any kind; FY2017's figures survive only as the FY2018 edition's comparative column "
+    "and are not transcribed here.\n"
+    "• LATEST-EDITION CHECK, 2026-09-16: Hodge's own Financial Information page "
+    "(https://hodgebank.co.uk/hodge/financial-information/) was fetched directly and read in full. "
+    "Newest Pillar 3 listed = \"Pillar 3 Disclosure 2023\" (the FY2023 document already cited "
+    "here); newest Annual Report listed = \"Annual Report and Financial Statements, 30 September "
+    "2025\" (Hodge-AR-28.01.26.pdf), which this workbook already carries as its FY2025 source. "
+    "The page lists an unbroken Pillar 3 series 2010-2023 and simply stops - consistent with the "
+    "SDDT modification above. None newer."
+)
+
+bw.add_km1_sheet(
+    title="Julian Hodge Bank Limited (Hodge Bank) - KM1 Key Metrics",
+    subtitle="The Bank's own published key-metrics template, reproduced in Hodge's row order, row numbers, "
+             "labels and printed precision. Solo basis; amounts in £m, ratios as printed. Shown as TWO blocks "
+             "because Hodge changes template generation mid-series: the numbered UK KM1 in its FY2022 and "
+             "FY2023 editions, and the unnumbered BCBS Basel III KM1 in FY2018-FY2021. The two are not merged "
+             "- their leverage rows alone sit on opposite sides of the 1 January 2022 basis break. FY2024 has "
+             "no Pillar 3 document and FY2025 is covered by the Bank's SDDT modification; see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=460,
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018"],
+)
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 162.8, "FY2024": 166.2, "FY2023": 172.9, "FY2022": 177, "FY2021": 143.8, "FY2020": 136.4, "FY2019": 156.6, "FY2018": 168.0, "FY2017": 149.3, "FY2016": 129.1})],

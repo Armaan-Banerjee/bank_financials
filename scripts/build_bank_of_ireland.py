@@ -680,6 +680,58 @@ def metric(name, unit, rows_data, page, note=None, first_col_width=44, source_he
                          source_height=source_height)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE. Bank of Ireland (UK) Plc publishes no
+# Pillar 3 disclosure at the UK entity level, in any year, and so no KM1.
+# Every Pillar 3 figure in this workbook comes from the Capital management
+# and Funding and liquidity risk sections of the entity's own Annual Report.
+#
+# THE DECOY TO AVOID: the Irish parent, Bank of Ireland Group plc, DOES
+# publish a full Pillar 3 report with a KM1 table every year. That is a
+# different legal entity on a different consolidation, and under this
+# project's entity-basis rule it must never be used for this workbook. The
+# absence here is real, not a sourcing failure.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources — none. Bank of Ireland (UK) Plc publishes NO standalone Pillar 3 disclosure at this UK entity "
+    "level, and therefore no UK KM1 key-metrics template, for any year in this workbook.\n\n"
+    "Evidence, re-checked against the bank's own site 2026-09-16:\n"
+    "• bankofirelanduk.com has no investor-relations or results-and-reports section at all — both paths "
+    "return honest 404s, and neither of the site's two page sitemaps contains a single regulatory-reporting "
+    "or investor page among their entries.\n"
+    "• The upload tree that DOES serve the entity's Annual Reports (/app/uploads/) is live, and Pillar 3 "
+    "filenames under it return honest 404s — a real absence, not a blocked or moved host.\n"
+    "• An independent full-text search of all five FY2021–FY2025 Annual Report PDFs (2026-09-12, recorded on "
+    "the RWA Breakdown sheet) found no UK KM1, no OV1, and no numeric Pillar 1 risk-type table in any year. "
+    "The only RWA disclosure anywhere in those reports is the single aggregate 'Total risk weighted assets' "
+    "line in the Capital management note.\n\n"
+    "DO NOT SUBSTITUTE THE PARENT. Bank of Ireland Group plc, the Irish parent, publishes a full Pillar 3 "
+    "report with a KM1 table every year. It is a different legal entity on a different consolidation, and "
+    "using it here would breach the entity-basis rule this workbook follows throughout — the same trap as "
+    "the OSB Group and AIB parent documents elsewhere in this series. Nothing on this sheet has been taken "
+    "from it.\n\n"
+    "What the entity DOES disclose is on the individual Pillar 3 metric sheets that follow, sourced from its "
+    "own Annual Report's Capital management and Funding and liquidity risk sections, with the basis stated "
+    "on each sheet. Those figures are deliberately NOT reassembled into a KM1 shape here: the KM1 sheet "
+    "reproduces a published template, and a table built from an annual report would look like one without "
+    "being one."
+)
+
+bw.add_km1_sheet(
+    title="Bank of Ireland (UK) Plc — KM1 Key Metrics",
+    subtitle="Not applicable — this entity publishes no Pillar 3 disclosure, and so no UK KM1 key-metrics "
+             "template, in any year. The absence is documented rather than left blank. Note that the Irish "
+             "parent, Bank of Ireland Group plc, does publish a KM1; it is a different entity on a different "
+             "consolidation and is deliberately not used here.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template", {y: "Not published at UK entity level" for y in Y_CORE}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=44,
+    source_height=280,
+)
+
+
 metric(
     "CET1 Capital", "£m",
     [("Common equity tier 1 capital", {"FY2025": 1601, "FY2024": 1548, "FY2023": 1412, "FY2022": 1394, "FY2021": 1497, "FY2020": 1391, "FY2019": 1553, "FY2018": 1533, "FY2017": 1508, "FY2016": 1552, "FY2015": 1612, "FY2014": 1239})],

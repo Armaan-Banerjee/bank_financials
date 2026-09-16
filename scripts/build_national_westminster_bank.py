@@ -735,6 +735,227 @@ NWB_CAP_NOTE = (
     "reports' own NatWest-entity column specifically (excluding the adjacent Ulster Bank Ireland DAC/Limited "
     "column shown side-by-side in those years' combined disclosure tables) - not the RBS/NatWest Group figures."
 )
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NWB Plc's own "UK KM1: Key metrics template", from its own
+# standalone Pillar 3 Report each year. Points to watch, all preserved:
+#
+#   * ENTITY. NatWest Group plc, NatWest Holdings Group, NatWest Markets Plc,
+#     RBS plc and Coutts & Co each publish their OWN Pillar 3 report on the
+#     same NatWest Group investor-relations downloads page, and each carries
+#     its own UK KM1. Only the documents headed "National Westminster Bank
+#     Plc ... Pillar 3 Report" are used here; every column in them is headed
+#     "NWB Plc". NWG's and NWH Group's KM1s are different entities and are not
+#     used.
+#
+#   * FIVE COLUMNS PER EDITION (31 Dec, 30 Sep, 30 Jun, 31 Mar, 31 Dec prior).
+#     Only the year-end column of each edition is carried here; the three
+#     intra-year quarters belong to the Interim Pillar 3 sheet.
+#
+#   * THE 2022 EDITION PRINTS THE ROW NUMBERS 1-17 TWICE, on consecutive
+#     pages, for two DIFFERENT templates. Page 6 is "IFRS 9-FL: Comparison of
+#     institutions' own funds and capital and leverage ratios with and without
+#     the application of transitional arrangements for IFRS 9", whose own
+#     preamble says "Capital measures in this table are presented in line with
+#     table UK KM1" - an invitation to misread it. The real UK KM1 is on page
+#     7. Reading the first numbered table an anchor finds would put IFRS 9-FL
+#     row 7 (Total risk-weighted assets) where KM1 row 7 (Total capital ratio)
+#     belongs.
+#
+#   * ROWS 15-20 ARE BLANK IN EVERY EDITION, BY A STATED WAIVER, not by
+#     omission. Each edition footnotes the LCR and NSFR blocks: "Under the UK
+#     DoLSub waiver NWB plc liquidity is managed and disclosed at the sub-group
+#     level rather than entity level." The rows are printed with their cells
+#     shaded out. The workbook's LCR/NSFR sheets carry the UK DoLSub figures
+#     from elsewhere in the same reports, which is a different basis and is why
+#     they are not repeated here.
+#
+#   * ROWS 10 AND UK 10a APPEAR ONLY IN THE 2022 EDITION, and are shaded blank
+#     there too; the 2023-2025 editions drop them entirely, footnoting "The
+#     following rows are not presented in the table above because they are not
+#     applicable: UK8a, UK9a, 10 and UK10a". Kept in canonical order so the
+#     difference is visible.
+#
+#   * THE 1 JANUARY 2022 LEVERAGE BASIS BREAK. Rows 13/14 are blank for the
+#     31 December 2021 column of the 2022 edition, because the UK
+#     excluding-central-banks measure begins 1 January 2022. They are left
+#     blank rather than filled from the prior CRR measure, which that edition
+#     prints in a different table (IFRS 9-FL rows 15/16: exposure £426,681m,
+#     ratio 3.8%) and which the Leverage Ratio sheet carries with its own
+#     basis caption.
+#
+#   * UK 14a-14e ARE BLANK FOR FY2022 by the Bank's own footnote - "NWB Plc is
+#     not an LREQ firm therefore not subject to the additional leverage ratio
+#     disclosure requirements" - and became applicable from 1 January 2023.
+#
+#   * PRINTED ZEROS ARE KEPT. Row 9 reads "0.0" for FY2021 in the 2022 edition
+#     (UK CCyB was 0% until 13 December 2022). That is a zero, not a dash.
+#
+#   * A SOURCE TYPO, REPRODUCED IN THE NOTE NOT THE LABEL: the 2023 edition
+#     numbers the leverage exposure row "13.0" rather than "13".
+# ---------------------------------------------------------------
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+
+# Re-verified live 2026-09-16 (HTTP 200, application/pdf, %PDF magic bytes) from
+# NatWest Group's own results centre. The workbook elsewhere cites the Wayback
+# capture of the same file; the live URL is preferred here now that it resolves.
+NWH_P3_2021_LIVE_URL = (
+    "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/18022022/"
+    "nwh-pillar-3-supplement-fy-2021.pdf"
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) (£m)", {}),
+    ("DATA", "1    Common equity tier 1 (CET1) capital",
+     {"FY2025": 14968, "FY2024": 14181, "FY2023": 14082, "FY2022": 12713, "FY2021": 13924}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 17910, "FY2024": 17258, "FY2023": 16360, "FY2022": 14956, "FY2021": 16039}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 21701, "FY2024": 20629, "FY2023": 19798, "FY2022": 17877, "FY2021": 18945}),
+    ("SECTION", "Risk-weighted exposure amounts (£m)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 133749, "FY2024": 124522, "FY2023": 121740, "FY2022": 112428, "FY2021": 86217}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common equity tier 1 ratio (%)",
+     {"FY2025": "11.2%", "FY2024": "11.4%", "FY2023": "11.6%", "FY2022": "11.3%", "FY2021": "16.1%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "13.4%", "FY2024": "13.9%", "FY2023": "13.4%", "FY2022": "13.3%", "FY2021": "18.6%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "16.2%", "FY2024": "16.6%", "FY2023": "16.3%", "FY2022": "15.9%", "FY2021": "22.0%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.3%", "FY2024": "1.5%", "FY2023": "1.5%", "FY2022": "1.4%", "FY2021": "1.5%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.5%", "FY2024": "0.5%", "FY2023": "0.6%", "FY2022": "0.5%", "FY2021": "0.5%"}),
+    ("DATA", "UK 7c    Additional Tier 2 SREP requirements (%)",
+     {"FY2025": "0.6%", "FY2024": "0.7%", "FY2023": "0.7%", "FY2022": "0.7%", "FY2021": "0.7%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "10.4%", "FY2024": "10.7%", "FY2023": "10.8%", "FY2022": "10.6%", "FY2021": "10.7%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.8%", "FY2024": "1.8%", "FY2023": "1.8%", "FY2022": "0.9%", "FY2021": "0.0%"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer (%)", {}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.3%", "FY2024": "4.3%", "FY2023": "4.3%", "FY2022": "3.4%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "14.7%", "FY2024": "15.0%", "FY2023": "15.1%", "FY2022": "14.0%", "FY2021": "13.2%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "5.4%", "FY2024": "5.4%", "FY2023": "5.4%", "FY2022": "5.4%", "FY2021": "10.1%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 424554, "FY2024": 390032, "FY2023": 359897, "FY2022": 341308}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "4.2%", "FY2024": "4.4%", "FY2023": "4.5%", "FY2022": "4.4%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "UK 14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "4.2%", "FY2024": "4.4%", "FY2023": "4.5%"}),
+    ("DATA", "UK 14b    Leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.0%", "FY2024": "4.1%", "FY2023": "4.0%"}),
+    ("DATA", "UK 14c    Average leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "4.6%", "FY2024": "4.5%", "FY2023": "4.5%"}),
+    ("DATA", "UK 14d    Average leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.3%", "FY2024": "4.2%", "FY2023": "4.1%"}),
+    ("DATA", "UK 14e    Countercyclical leverage ratio buffer (%)",
+     {"FY2025": "0.6%", "FY2024": "0.6%", "FY2023": "0.6%"}),
+    ("SECTION", "Liquidity coverage ratio — every cell shaded out by the Bank under the UK DoLSub waiver", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (weighted value-average)", {}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value", {}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value", {}),
+    ("DATA", "16    Total net cash outflows (adjusted value)", {}),
+    ("DATA", "17    Liquidity coverage ratio (%)", {}),
+    ("SECTION", "Net stable funding ratio — every cell shaded out by the Bank under the UK DoLSub waiver", {}),
+    ("DATA", "18    Total available stable funding", {}),
+    ("DATA", "19    Total required stable funding", {}),
+    ("DATA", "20    NSFR ratio (%)", {}),
+]
+
+KM1_SOURCES = (
+    "Sources - National Westminster Bank Plc's own Pillar 3 Report for each year, \"UK KM1: Key metrics "
+    "template\" (Annex I: Key metrics and overview of risk-weighted assets). £m and % exactly as printed. Each "
+    "year is taken from the edition in which it is the reporting year:\n"
+    f"FY2025: NWB Plc Pillar 3 Report 2025, UK KM1 p.7, column '31 December 2025' - {P3_2025_URL}\n"
+    f"FY2024: NWB Plc Pillar 3 Report 2024, UK KM1 p.7, column '31 December 2024' - {P3_2024_URL}\n"
+    f"FY2023: NWB Plc Pillar 3 Report 2023, UK KM1 p.7, column '31 December 2023' - {P3_2023_URL}\n"
+    f"FY2022: NWB Plc Pillar 3 Report 2022, UK KM1 p.7, column '31 December 2022' - {P3_2022_URL}\n"
+    f"FY2021: the '31 December 2021' comparative column of the 2022 edition above - NWB Plc published no "
+    f"standalone Pillar 3 report for FY2021, and the FY2021 figures that do exist at this entity level appear "
+    f"inside NatWest Holdings Group's 2021 report as an IFRS 9-FL 'large subsidiaries' column, which is a "
+    f"DIFFERENT template and cannot supply UK KM1 rows: {NWH_P3_2021_LIVE_URL}\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16. NatWest Group's own investor site was enumerated directly - "
+    "https://investors.natwestgroup.com/results-centre.aspx, which lists every Pillar 3 PDF the group hosts. "
+    "The newest NWB Plc ANNUAL Pillar 3 is the 2025 report published 13 February 2026, already cited above and "
+    "already in this workbook; NWB Plc's FY2026 year-end has not occurred. The site does carry two NEWER "
+    "INTERIM NWB Plc editions than this workbook's Interim Pillar 3 sheet holds: Q1 2026 "
+    "(https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13052026/nwb-plc-pillar-3-q1-"
+    "2026.pdf) and H1 2026 (https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/"
+    "12082026/nwb-plc-pillar-3-hy-2026.pdf). They are noted here rather than transcribed, because this ticket "
+    "covers the annual KM1 and neither adds a financial year. No annual year was added.\n\n"
+    "ENTITY, CHECKED ON THE DOCUMENT AND NOT ON THE WEBSITE. NatWest Group plc, NatWest Holdings Group, "
+    "NatWest Markets Plc, The Royal Bank of Scotland plc and Coutts & Company each publish their own Pillar 3 "
+    "report from the same downloads page, each with its own UK KM1. Only documents headed \"National "
+    "Westminster Bank Plc ... Pillar 3 Report\" are used above, and every column inside them is headed \"NWB "
+    "Plc\". NatWest Group plc's KM1 is a different entity's disclosure and is NOT the source of any figure "
+    "here. FY2021 was additionally confirmed by cross-reading NWH Group's 2021 report, whose NWB Plc column "
+    "gives the same CET1 £13,924m and RWAs £86,217m as the 2022 edition's comparative.\n\n"
+    "TRANSCRIPTION NOTES:\n"
+    "• FIVE COLUMNS PER EDITION (31 Dec, 30 Sep, 30 Jun, 31 Mar, and the prior 31 Dec). Only the year-end "
+    "column of each edition is carried here; the intra-year quarters are on the Interim Pillar 3 sheet.\n"
+    "• THE 2022 EDITION PRINTS ROWS NUMBERED 1-17 TWICE, ON CONSECUTIVE PAGES, FOR TWO DIFFERENT TEMPLATES. "
+    "Page 6 is \"IFRS 9-FL: Comparison of institutions' own funds and capital and leverage ratios with and "
+    "without the application of transitional arrangements for IFRS 9\", whose own preamble reads \"Capital "
+    "measures in this table are presented in line with table UK KM1\". It is not UK KM1: its row 7 is Total "
+    "risk-weighted assets where KM1's row 7 is Total capital ratio. The UK KM1 is on page 7 and is the only "
+    "table used.\n"
+    "• ROWS 15-20 ARE BLANK IN EVERY EDITION BY A STATED WAIVER, not by omission, and not because they could "
+    "not be found. The Bank prints all six rows with their cells shaded out and footnotes them: \"Under the UK "
+    "DoLSub waiver NWB plc liquidity is managed and disclosed at the sub-group level rather than entity "
+    "level.\" This is the same kind of finding as a formal Article 432 exclusion: the Bank has declined to "
+    "disclose liquidity at entity level, so no entity-level LCR or NSFR row exists to transcribe. The "
+    "workbook's LCR and NSFR sheets carry the UK DoLSub (NWB Plc + RBS plc + Coutts & Company) figures "
+    "published elsewhere in the same reports - a sub-group basis, deliberately not copied into this "
+    "entity-level template.\n"
+    "• ROWS 10 AND UK 10a appear only in the 2022 edition, shaded blank there; the 2023-2025 editions drop "
+    "them, footnoting \"The following rows are not presented in the table above because they are not "
+    "applicable: UK8a, UK9a, 10 and UK10a\". The 2022 edition's equivalent footnote names only UK8a and UK9a. "
+    "Rows UK 8a and UK 9a are absent from every edition for that stated reason.\n"
+    "• THE 1 JANUARY 2022 LEVERAGE BASIS BREAK: rows 13 and 14 are blank for FY2021 because the UK "
+    "excluding-central-banks measure began on 1 January 2022. They are NOT filled from the prior CRR measure, "
+    "which the same edition prints in its IFRS 9-FL table (rows 15/16: exposure measure £426,681m, ratio "
+    "3.8%) and which the Leverage Ratio sheet carries under its own basis caption. Two bases, never merged.\n"
+    "• UK 14a-14e are blank for FY2022 by the Bank's own footnote: \"NWB Plc is not an LREQ firm therefore not "
+    "subject to the additional leverage ratio disclosure requirements.\" The 2023 edition footnotes the "
+    "switch: \"From 1 January 2023, NWB Plc is subject to additional disclosure requirements for LREQ firms "
+    "therefore 2022 comparatives are not available.\"\n"
+    "• PRINTED ZEROS KEPT AS ZEROS: row 9 reads \"0.0\" in the FY2021 column (the UK CCyB rate was 0% until "
+    "13 December 2022), and that is recorded as 0.0%, not left blank.\n"
+    "• A SOURCE TYPO: the 2023 edition numbers the leverage exposure row \"13.0\" instead of \"13\". The row "
+    "is labelled \"13\" above, matching the other four editions; the typo is recorded here rather than "
+    "reproduced in the label.\n"
+    "• IFRS 9 TRANSITIONAL BASIS. Every figure above is on the PRA transitional basis, as the Bank publishes "
+    "it. The 2025 edition footnotes that NWB Plc's IFRS 9 transitional capital adjustments were maintained "
+    "until 31 December 2024, so FY2021-FY2024 include that add-back and FY2025 does not - a basis change "
+    "inside the series, stated by the Bank and not adjusted for here.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="National Westminster Bank Plc — KM1 Key Metrics",
+    subtitle="NWB Plc's own \"UK KM1: Key metrics template\", from its own standalone Pillar 3 Report each year, "
+             "reproduced in its own row order, row numbers and printed precision. £m and % as published. "
+             "FY2021 is the 2022 edition's comparative column (NWB Plc published no FY2021 Pillar 3). Rows 15-20 "
+             "are blank in every edition because the Bank discloses liquidity at UK DoLSub sub-group level under "
+             "a PRA waiver, not at entity level. Shown for FY2021-FY2025 only: the UK KM1 template post-dates "
+             "this workbook's earlier years, which are sourced from Annual Report capital tables instead.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=88,
+    source_height=520,
+    years=KM1_YEARS,
+)
+
+
 metric("CET1 Capital", "£m", [("Common equity tier 1 (CET1) capital", {"FY2025": 14968, "FY2024": 14181, "FY2023": 14082, "FY2022": 12713, "FY2021": 13924, "FY2020": 15424, "FY2019": 12851, "FY2018": 13138, "FY2017": 13301, "FY2016": 10393, "FY2015": 7154, "FY2014": 9468})], note=NWB_CAP_NOTE)
 metric("CET1 Ratio", "% of RWA", [("Common equity tier 1 (CET1) ratio", {"FY2025": "11.2%", "FY2024": "11.4%", "FY2023": "11.6%", "FY2022": "11.3%", "FY2021": "16.1%", "FY2020": "17.8%", "FY2019": "15.9%", "FY2018": "17.4%", "FY2017": "23.5%", "FY2016": "16.1%", "FY2015": "11.6%", "FY2014": "13.9%"})], note=NWB_CAP_NOTE)
 metric("Tier 1 Capital", "£m", [("Tier 1 capital", {"FY2025": 17910, "FY2024": 17258, "FY2023": 16360, "FY2022": 14956, "FY2021": 16039, "FY2020": 17590, "FY2019": 15047, "FY2018": 15389, "FY2017": 13301, "FY2016": 10393, "FY2015": 7171, "FY2014": 9562})], note=NWB_CAP_NOTE)

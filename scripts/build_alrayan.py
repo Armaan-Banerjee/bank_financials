@@ -597,6 +597,118 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          note=note, first_col_width=52, source_height=200)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Alrayan's own published Annex I template, as printed.
+#
+# Alrayan prints a REDUCED row set: rows UK 7b, UK 7c, UK 8a, UK 9a, 10,
+# UK 10a and UK 14a-14e never appear in any edition. Only UK 7a and UK 7d are
+# given for the SREP block. The "Additional leverage ratio disclosure
+# requirements" section header IS printed in the FY2023 and FY2024 editions
+# with no rows beneath it, and is dropped again in the FY2025 edition; it is
+# kept here because that is what the bank published.
+#
+# Amounts are in £m (not £'000 as most banks use for KM1) - that is Alrayan's
+# own unit, and matches the rest of this workbook.
+#
+# Row 12 is printed to whole percents ("38%") while rows 5-7 carry two
+# decimals ("15.45%") and rows 14/17/20 one or none - reproduced as printed.
+#
+# FY2021 and FY2020 are blank: the FY2020 and FY2021 Pillar 3 Disclosures
+# pre-date Alrayan's adoption of the Annex I templates and contain no KM1 at
+# all (their capital figures come from Executive Summary tables instead, which
+# is why the individual metric sheets below still carry those years).
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts, £m)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 227.3, "FY2024": 208.2, "FY2023": 183.9, "FY2022": 152.7}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 230.3, "FY2024": 211.2, "FY2023": 186.9, "FY2022": 155.7}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 232.8, "FY2024": 224.9, "FY2023": 205.5, "FY2022": 178.4}),
+    ("SECTION", "Risk-weighted exposure amounts (£m)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 1471.7, "FY2024": 1307.8, "FY2023": 1059.1, "FY2022": 1022.3}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "15.45%", "FY2024": "15.95%", "FY2023": "17.36%", "FY2022": "14.93%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "15.65%", "FY2024": "16.15%", "FY2023": "17.65%", "FY2022": "15.23%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "15.82%", "FY2024": "17.19%", "FY2023": "19.41%", "FY2022": "17.45%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.54%", "FY2024": "1.80%", "FY2023": "1.80%", "FY2022": "2.82%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "9.54%", "FY2024": "9.80%", "FY2023": "9.80%", "FY2022": "10.82%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.38%", "FY2024": "1.25%", "FY2023": "1.33%", "FY2022": "0.65%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "3.88%", "FY2024": "3.75%", "FY2023": "3.83%", "FY2022": "3.15%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "13.42%", "FY2024": "13.55%", "FY2023": "13.63%", "FY2022": "13.97%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "38%", "FY2024": "38%", "FY2023": "44%", "FY2022": "28%"}),
+    ("SECTION", "Leverage ratio (£m / %)", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks",
+     {"FY2025": 3027.0, "FY2024": 2758.0, "FY2023": 2399.4, "FY2022": 2306.6}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "7.6%", "FY2024": "7.7%", "FY2023": "7.8%", "FY2022": "6.7%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("SECTION", "Liquidity Coverage Ratio (£m / %)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 249.5, "FY2024": 229.7, "FY2023": 202.1, "FY2022": 173.6}),
+    ("DATA", "UK 16a    Cash outflows – Total weighted value",
+     {"FY2025": 208.5, "FY2024": 198.3, "FY2023": 132.4, "FY2022": 159.4}),
+    ("DATA", "UK 16b    Cash inflows – Total weighted value",
+     {"FY2025": 290.2, "FY2024": 344.0, "FY2023": 266.6, "FY2022": 255.1}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 52.1, "FY2024": 49.6, "FY2023": 33.1, "FY2022": 39.8}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "481%", "FY2024": "523%", "FY2023": "641%", "FY2022": "442%"}),
+    ("SECTION", "Net Stable Funding Ratio (£m / %)", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 2540.2, "FY2024": 2331.0, "FY2023": 2071.3, "FY2022": 1982.3}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 1687.6, "FY2024": 1449.3, "FY2023": 1321.3, "FY2022": 1280.8}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "151%", "FY2024": "161%", "FY2023": "157%", "FY2022": "155%"}),
+]
+
+KM1_SOURCES = p3_sources(
+    "KM1 presentation notes:\n"
+    "• Alrayan publishes the table under the heading \"Key Metrics Template – KM1\" in Annex I of each "
+    "Pillar 3 Disclosures document, in £m. Rows are reproduced in the bank's own order with its own "
+    "template row numbers and printed precision.\n"
+    "• REDUCED ROW SET: Alrayan has never printed rows UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a or "
+    "UK 14a-14e in any edition — only UK 7a and UK 7d appear in the SREP block. Those rows are absent "
+    "here rather than shown blank, because the bank's template does not contain them.\n"
+    "• The \"Additional leverage ratio disclosure requirements\" heading is printed with no rows beneath "
+    "it in the FY2023 and FY2024 editions and is dropped entirely in the FY2025 edition. It is retained here "
+    "as published.\n"
+    "• UK 16b (cash inflows) exceeds UK 16a (cash outflows) in every year. That is as published and is "
+    "why row 16 (net outflows) is not 16a minus 16b: the LCR calculation caps recognised inflows at 75% of "
+    "outflows, so the excess inflow is disregarded.\n"
+    "• Row 12 is printed to whole percents while rows 5-7 carry two decimals; that mixed precision is "
+    "the bank's own.\n"
+    "• FY2021 and FY2020 are blank: the Pillar 3 Disclosures for those years pre-date Alrayan's adoption "
+    "of the Annex I templates and contain no key-metrics table. The FY2021/FY2020 figures on the individual "
+    "metric sheets in this workbook come from those editions' Executive Summary tables instead."
+)
+
+bw.add_km1_sheet(
+    title="Alrayan Bank Limited — KM1 Key Metrics",
+    subtitle="The bank's own published UK KM1 template (Annex I of its Pillar 3 Disclosures), reproduced in "
+             "Alrayan's row order with its own template row numbers and printed precision. Amounts in £m, "
+             "ratios as printed. FY2021 and FY2020 pre-date the template and are intentionally blank.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+)
+
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 227.3, "FY2024": 208.2, "FY2023": 183.9, "FY2022": 152.7, "FY2021": 142.4, "FY2020": 135.7})],

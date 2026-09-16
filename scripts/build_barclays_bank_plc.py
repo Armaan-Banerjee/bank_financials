@@ -461,6 +461,177 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - Barclays Bank PLC's own Pillar 3 Reports
+# ---------------------------------------------------------------
+KM1_P3_25_URL = ("https://home.barclays/content/dam/home-barclays/documents/investor-relations/"
+                 "ResultAnnouncements/FullYear2025Results/FY25-BBPLC-Pillar-3.pdf")
+KM1_P3_24_URL = ("https://home.barclays/content/dam/home-barclays/documents/investor-relations/"
+                 "ResultAnnouncements/FullYear2024Results/FY24-Barclays-Bank-PLC-Pillar-3-Report.pdf")
+KM1_P3_23_URL = ("https://home.barclays/content/dam/home-barclays/documents/investor-relations/"
+                 "reports-and-events/annual-reports/2023/BB-PLC-Pillar-3-Report-2023.pdf")
+KM1_P3_22_URL = ("https://home.barclays/content/dam/home-barclays/documents/investor-relations/"
+                 "reports-and-events/annual-reports/2022/Pillar-3/Barclays-Bank-PLC-Pillar-3-Report%202022.pdf")
+
+KM1_SOURCES = (
+    "Source - Barclays Bank PLC's own dedicated Pillar 3 Reports, each year from its OWN edition's year-end "
+    "column, £m:\n"
+    f"FY2025: Pillar 3 Report 2025, p.5 (Table 1: KM1 - Key metrics - Part 1) and p.6 (Part 2), 'As at "
+    f"31.12.25' column - {KM1_P3_25_URL}\n"
+    f"FY2024: Pillar 3 Report 2024, p.5 and p.6, 'As at 31.12.24' column - {KM1_P3_24_URL}\n"
+    f"FY2023: Pillar 3 Report 2023, p.5 and p.6, 'As at 31.12.23' column - {KM1_P3_23_URL}\n"
+    f"FY2022: Pillar 3 Report 2022, p.4 and p.5, 'As at 31.12.22' column - {KM1_P3_22_URL}\n"
+    "(Page numbers above are the reports' OWN printed folios, which run one behind the PDF's sheet count - "
+    "the FY2025 report carries '05' in the header of the Part 1 page and its Article 447 disclosure index "
+    "reads 'Page 5 / Table 1: KM1 - Key metrics'. Cite what a reader would turn to, not the PDF page index.)\n\n"
+    "THE COLUMNS IN THE SOURCE ARE QUARTER-ENDS, NOT YEARS - each edition prints its own 31 December followed "
+    "by the three preceding quarter-ends and the prior 31 December. Only each edition's own 31 December column "
+    "is used here.\n\n"
+    "FY2021 IS BLANK, AND THAT HAS BEEN TESTED RATHER THAN ASSUMED. Barclays Bank PLC published no Pillar 3 "
+    "report of its own before 2022: the Barclays annual-reports index lists Pillar 3 documents for this entity "
+    "for 2022, 2023, FY24 and FY25 only (checked 2026-09-16), and two direct probes for a 2021 edition return "
+    "404. Because a subsidiary's KM1 is often published inside its parent's report, the PARENT was checked "
+    "too: Barclays PLC Pillar 3 Report 2021 (257 pages, fetched and read in full) contains exactly one KM1 - "
+    "'Table 6: KM1 - Key metrics' on p.18 - and it is Barclays PLC's own. Its appendices cover the "
+    "countercyclical capital buffer and remuneration; none carries a subsidiary KM1. So no Barclays Bank PLC "
+    "KM1 exists for FY2021 in either the entity's own disclosures or its parent's. FY2021 capital and "
+    "liquidity figures remain on the individual metric sheets, sourced from the Annual Report's Treasury and "
+    "Capital risk section and cited there.\n\n"
+    "ROWS 13 AND 14 ARE PRINTED TWICE, FOR TWO DIFFERENT ENTITIES, and the two copies differ substantially. "
+    "Part 2 carries a 'Barclays Bank PLC sub-consolidated group' leverage block and then a 'Barclays Bank PLC "
+    "solo-consolidated' one - at 31.12.25, exposure of £980,935m at 5.8% against £870,620m at 4.1%. Both are "
+    "reproduced below under their own captions and neither is substituted for the other. Rows UK 14c/14d/14e "
+    "are printed only in the sub-consolidated block. The FY2022 edition prints a single unlabelled leverage "
+    "block; its figures (£742,730m, 4.6%) match the FY2023 edition's solo-consolidated 31.12.22 comparative "
+    "exactly, which is why they are placed on the solo-consolidated rows here.\n\n"
+    "EXPECTED DISAGREEMENTS WITH THIS WORKBOOK'S OWN METRIC SHEETS - all real, none a transcription slip:\n"
+    "  (a) Row 14, solo-consolidated, FY2023-FY2025 (4.3% / 4.1% / 4.1%). The Leverage Ratio sheet carries "
+    "the UK leverage ratio, which moved to a Barclays Bank PLC SUB-CONSOLIDATED basis from 1 January 2023 "
+    "(PRA approval 20 December 2022) and so reads 6.0% / 5.8% / 5.8%. The sub-consolidated rows below match "
+    "that sheet; the solo rows cannot, because they are a different basis printed in the same table.\n"
+    "  (b) Row 17, FY2024: 157.1% here against 147.9% on the LCR sheet. The FY2025 edition re-presented prior-"
+    "period LCR comparatives for a change to the calculation of outflows on certain secured financing "
+    "transactions (its note 7). The LCR sheet deliberately adopts the re-presented 147.9% for comparability "
+    "and says so; this sheet carries the FY2024 edition's own 157.1%, because each year here comes from its "
+    "own edition. Both figures are correct on their own basis.\n"
+    "  (c) Row 17, FY2022: 134% here against 148% on the LCR sheet. Row 17 is the 12-month average and row "
+    "17a is the period-end figure of 148%; the LCR sheet took the period-end one. Both are printed in the "
+    "same table and both appear below.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: the Barclays annual-reports index lists 58 Pillar 3 documents; the "
+    "newest for this entity is FY25-BBPLC-Pillar-3.pdf, which this workbook holds. Probes for an FY26 edition "
+    "return an HTML soft-404, consistent with a 31 December year-end. None newer exists.\n\n"
+    "ENTITY: every figure below is Barclays Bank PLC's own, on the basis its own report names in each block. "
+    "No Barclays PLC (group) figure appears anywhere on this sheet."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2025": 28177, "FY2024": 26995, "FY2023": 25470, "FY2022": 25907}),
+    ("DATA", "1a  Fully loaded common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2024": 26992, "FY2023": 25450, "FY2022": 25571}),
+    ("DATA", "2  Tier 1 capital (£m)",
+     {"FY2025": 35848, "FY2024": 33787, "FY2023": 33864, "FY2022": 34139}),
+    ("DATA", "2a  Fully loaded tier 1 capital (£m)",
+     {"FY2024": 33783, "FY2023": 33844, "FY2022": 33802}),
+    ("DATA", "3  Total capital (£m)",
+     {"FY2025": 42129, "FY2024": 40444, "FY2023": 40530, "FY2022": 42321}),
+    ("DATA", "3a  Fully loaded total capital (£m)",
+     {"FY2024": 39912, "FY2023": 39981, "FY2022": 41092}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£m)",
+     {"FY2025": 222247, "FY2024": 223648, "FY2023": 211193, "FY2022": 203833}),
+    ("DATA", "4a  Fully loaded total risk-weighted exposure amount (£m)",
+     {"FY2024": 223644, "FY2023": 211173, "FY2022": 203531}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "12.7%", "FY2024": "12.1%", "FY2023": "12.1%", "FY2022": "12.7%"}),
+    ("DATA", "5a  Fully loaded common Equity Tier 1 ratio (%)",
+     {"FY2024": "12.1%", "FY2023": "12.1%", "FY2022": "12.6%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "16.1%", "FY2024": "15.1%", "FY2023": "16.0%", "FY2022": "16.7%"}),
+    ("DATA", "6a  Fully loaded tier 1 ratio (%)",
+     {"FY2024": "15.1%", "FY2023": "16.0%", "FY2022": "16.6%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "19.0%", "FY2024": "18.1%", "FY2023": "19.2%", "FY2022": "20.8%"}),
+    ("DATA", "7a  Fully loaded total capital ratio (%)",
+     {"FY2024": "17.8%", "FY2023": "18.9%", "FY2022": "20.2%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.6%", "FY2024": "2.8%", "FY2023": "2.9%", "FY2022": "2.5%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.9%", "FY2024": "0.9%", "FY2023": "1.0%", "FY2022": "0.8%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)",
+     {"FY2025": "1.2%", "FY2024": "1.3%", "FY2023": "1.3%", "FY2022": "1.1%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2025": "12.7%", "FY2024": "13.1%", "FY2023": "13.1%", "FY2022": "12.5%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "0.8%", "FY2024": "0.7%", "FY2023": "0.7%", "FY2022": "0.3%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "3.3%", "FY2024": "3.3%", "FY2023": "3.2%", "FY2022": "2.8%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "16.0%", "FY2024": "16.3%", "FY2023": "16.3%", "FY2022": "15.3%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "5.5%", "FY2024": "4.7%", "FY2023": "4.7%", "FY2022": "5.7%"}),
+    ("SECTION", "Leverage ratio - Barclays Bank PLC sub-consolidated group (the first of the two blocks printed)", {}),
+    ("DATA", "13  Total exposure measure excl. claims on central banks - sub-consolidated group (£m)",
+     {"FY2025": 980935, "FY2024": 946809, "FY2023": 924826}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%) - sub-consolidated group",
+     {"FY2025": "5.8%", "FY2024": "5.8%", "FY2023": "6.0%"}),
+    ("DATA", "UK 14a  Fully loaded ECL accounting model leverage ratio excl. central banks (%) - sub-consolidated",
+     {"FY2025": "5.8%", "FY2024": "5.8%", "FY2023": "6.0%"}),
+    ("DATA", "UK 14b  Leverage ratio including claims on central banks (%) - sub-consolidated group",
+     {"FY2025": "4.7%", "FY2024": "4.8%", "FY2023": "4.9%"}),
+    ("DATA", "UK 14c  Average leverage ratio excluding claims on central banks (%) - sub-consolidated group",
+     {"FY2025": "5.2%", "FY2024": "5.2%", "FY2023": "5.4%"}),
+    ("DATA", "UK 14d  Average leverage ratio including claims on central banks (%) - sub-consolidated group",
+     {"FY2025": "4.3%", "FY2024": "4.4%", "FY2023": "4.5%"}),
+    ("DATA", "UK 14e  Countercyclical leverage ratio buffer (%) - sub-consolidated group",
+     {"FY2025": "0.2%", "FY2024": "0.2%", "FY2023": "0.2%"}),
+    ("SECTION", "Leverage ratio - Barclays Bank PLC solo-consolidated (the report's SECOND block; different figures)", {}),
+    ("DATA", "13  Total exposure measure excl. claims on central banks - solo-consolidated (£m)",
+     {"FY2025": 870620, "FY2024": 831060, "FY2023": 785494, "FY2022": 742730}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%) - solo-consolidated",
+     {"FY2025": "4.1%", "FY2024": "4.1%", "FY2023": "4.3%", "FY2022": "4.6%"}),
+    ("DATA", "UK 14a  Fully loaded ECL accounting model leverage ratio excl. central banks (%) - solo-consolidated",
+     {"FY2025": "4.1%", "FY2024": "4.1%", "FY2023": "4.3%"}),
+    ("DATA", "UK 14b  Leverage ratio including claims on central banks (%) - solo-consolidated",
+     {"FY2025": "3.4%", "FY2024": "3.4%", "FY2023": "3.6%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value) (£m)",
+     {"FY2025": 222575, "FY2024": 201875, "FY2023": 210787, "FY2022": 205518}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£m)",
+     {"FY2025": 364579, "FY2024": 297627, "FY2023": 245582}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£m)",
+     {"FY2025": 214872, "FY2024": 168808, "FY2023": 105530}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£m)",
+     {"FY2025": 149707, "FY2024": 128820, "FY2023": 140053, "FY2022": 153542}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2025": "149.7%", "FY2024": "157.1%", "FY2023": "151%", "FY2022": "134%"}),
+    ("DATA", "17a  Liquidity coverage ratio (%) (period end)",
+     {"FY2022": "148%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£m)",
+     {"FY2025": 381301, "FY2024": 372381, "FY2023": 338765, "FY2022": 309676}),
+    ("DATA", "19  Total required stable funding (£m)",
+     {"FY2025": 336720, "FY2024": 332874, "FY2023": 307648, "FY2022": 288035}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2025": "113.3%", "FY2024": "111.9%", "FY2023": "110%", "FY2022": "108%"}),
+]
+
+bw.add_km1_sheet(
+    title="Barclays Bank PLC - KM1 Key Metrics",
+    subtitle="Each year from its own Pillar 3 edition's year-end column - both published leverage bases shown",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=96,
+    source_height=580,
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 / capital metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):

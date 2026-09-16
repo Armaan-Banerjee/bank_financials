@@ -986,6 +986,118 @@ EXT_LEVERAGE_LCR_NOTE = (
     "31 March 2019 quarter)."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE. KM1-024, 16 September 2026.
+#
+# Two independent reasons, either of which would be enough on its own:
+#
+#   (a) THE TEMPLATE IS NOT USED in any edition PIB published. Every Pillar 3
+#       the Bank ever issued organises itself by its own section headings -
+#       Own Funds / Capital Requirements / Total Capital Requirement / Capital
+#       Buffers / Credit Risk / Market Risk / Operational Risk / Concentration
+#       Risk / IRRBB / Leverage Ratio / Remuneration - with bespoke tables in
+#       EUR '000 and no template row numbers anywhere.
+#
+#   (b) EVERY EDITION PREDATES THE UK KM1 TEMPLATE. PIB's newest Pillar 3 is
+#       31 March 2021. The UK KM1 arrived with the PRA Rulebook's Disclosure
+#       (CRR) Part on 1 January 2022, and the Bank published no Pillar 3 after
+#       that date - see P3_CESSATION_NOTE, which is evidenced from the Bank's
+#       own Annual Reports rather than inferred from a failed search.
+#
+# HOW THE ABSENCE WAS TESTED, so it is not mistaken for a tooling failure.
+# Case-insensitive probes of every text-native edition (FY2021, FY2020, FY2018,
+# FY2016) return ZERO hits for "km1", "key metric" and "key regulatory", while
+# the SAME extraction is rich on neighbouring terms (83-106 hits for "capital",
+# 87-109 for "ratio", 7-9 for "cet1", 4-8 for "leverage" in each). Each
+# document's own table of contents was read as well, and none lists a
+# key-metrics section. The FY2015 edition is an image-only Canon scan with no
+# text layer, so no grep could speak to it either way: its contents page was
+# RENDERED at 200dpi and READ BY EYE instead (Introduction / Overview of Risk
+# Management and RWA / Capital resources / Capital Adequacy / Risk Management /
+# Market risk / Operational risk / Interest rate risk / Remuneration policy) -
+# again no key-metrics section.
+#
+# PARENT CHECK, done before writing the non-disclosure claim. A UK subsidiary's
+# regulatory figures often live in the PARENT's Pillar 3 instead of its own.
+# That does not arise here: PIB is ITSELF the PRA-authorised firm and holds the
+# UK disclosure duty, which is why it published a Pillar 3 at all. Its two
+# shareholders, Bank Mellat and Bank Tejarat, are Iranian banks supervised by
+# the Central Bank of Iran, not the PRA, so no UK KM1 for PIB could exist in
+# their disclosures; both are also themselves subject to UK/EU financial
+# sanctions. No group Pillar 3 covering PIB exists to search.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - the UK KM1 key-metrics template is NOT used in any Persia International Bank Plc Pillar 3 "
+    "disclosure, in any year. This is a positive finding about the documents, not a failed search.\n\n"
+    "TWO INDEPENDENT REASONS, either sufficient on its own:\n"
+    "(a) THE TEMPLATE IS NOT USED. Every edition PIB published is organised by the Bank's own section "
+    "headings - Own Funds / Capital Requirements / Total Capital Requirement / Capital Buffers / Credit "
+    "Risk / Market Risk / Operational Risk / Concentration Risk / IRRBB / Leverage Ratio / Remuneration - "
+    "with bespoke tables of its own design and no template row numbers anywhere. Its capital table, for "
+    "example, is headed 'Values in (€000)' over columns '31/03/2021' and '31/03/2020' and runs Ordinary "
+    "share capital / Retained earnings / Loss of the period / Subordinated loan / Total capital, followed "
+    "by an 'Own Funds items' table with an 'Own Funds' and a '% of Own Funds' column. Neither is KM1: no "
+    "row numbers, no SREP rows, no combined-buffer row, no leverage rows, no LCR or NSFR template rows. "
+    "Under the row-set test that is a different table, so nothing is mapped onto template row numbers.\n"
+    "(b) EVERY EDITION PREDATES THE UK KM1 TEMPLATE. PIB's newest Pillar 3 is 31 March 2021. The UK KM1 "
+    "template arrived with the Disclosure (CRR) Part of the PRA Rulebook on 1 January 2022, and the Bank "
+    "published no Pillar 3 at all after that date (see the cessation note below, which is evidenced from "
+    "the Bank's own Annual Reports). There is therefore no PIB edition in which a UK KM1 could appear.\n\n"
+    "HOW THE ABSENCE WAS TESTED. Every text-native edition (31 March 2021, 2020, 2018 and 2016) was "
+    "extracted with pdftotext -layout and probed CASE-INSENSITIVELY: each returns ZERO hits for 'km1', "
+    "'key metric' and 'key regulatory', while the SAME extraction is rich on neighbouring terms - 83-106 "
+    "hits for 'capital', 87-109 for 'ratio', 7-9 for 'cet1' and 4-8 for 'leverage' in each document. A zero "
+    "beside that richness is a fact about the document rather than a failed tool. Each document's own table "
+    "of contents was read as well and none lists a key-metrics section. The 31 March 2015 edition is an "
+    "image-only Canon scan with NO text layer, so no grep could speak to it in either direction; its "
+    "contents page was RENDERED at 200dpi and READ BY EYE instead - Introduction / Overview of Risk "
+    "Management and RWA / Capital resources / Capital Adequacy / Risk Management / Market risk / "
+    "Operational risk / Interest rate risk / Remuneration policy - again with no key-metrics section.\n\n"
+    "LATEST-EDITION CHECK, 16 September 2026, done on the Bank's OWN site rather than from the URLs already "
+    "cited here. persiabank.co.uk's home page was fetched over PLAIN HTTP (its TLS is broken at the server "
+    "- see the scheme note at the top of this script) and its links enumerated. The ONLY Pillar 3 link on "
+    "the Bank's entire website is 'Pillar 3 2021 v3.pdf', the 31 March 2021 edition already cited here "
+    "(re-fetched and verified today: HTTP 200, application/pdf, %PDF magic bytes, 1,382,251 bytes, 29 PDF "
+    "pages). No newer Pillar 3 exists on the Bank's site. For the Annual Report, Companies House (company "
+    "04218020) was listed directly: the newest accounts filed are 'Full accounts made up to 31 MARCH 2025', "
+    "filed 2 September 2025 - already this workbook's FY2025. The 31 March 2026 accounts were not yet filed "
+    "as at 16 September 2026. Nothing newer to transcribe; YEARS is unchanged.\n"
+    "Also recorded from that same page-fetch, since it bears on whether the Bank is still publishing at "
+    "all: the site carries a notice dated 6 October 2025 stating that 'Persia International Bank PLC has "
+    "been made subject to financial sanctions by the UK Government and the European Union as of 29 "
+    "September 2025' and pointing to OFSI General Licence INT/2025/7345464. The Bank is therefore still "
+    "operating and still updating its website - it simply has not published a Pillar 3 since March 2021.\n\n"
+    "PARENT CHECK (done before writing this non-disclosure claim). A UK subsidiary's regulatory figures "
+    "frequently live in the PARENT's Pillar 3 rather than its own. That pattern does not arise here: PIB is "
+    "ITSELF the PRA-authorised firm and holds the UK disclosure obligation, which is why it published a "
+    "Pillar 3 at all. Its two shareholders, Bank Mellat and Bank Tejarat, are Iranian banks supervised by "
+    "the Central Bank of Iran and not by the PRA, so no UK KM1 for PIB could exist in their disclosures; "
+    "both are themselves subject to UK/EU financial sanctions. No group Pillar 3 covering PIB exists to "
+    "search.\n\n"
+    "NOT BACK-FILLED FROM THE STATUTORY ACCOUNTS. The Bank's Companies House filings do carry capital "
+    "figures, and this workbook uses them on the metric sheets for the years the Pillar 3 documents do not "
+    "cover. They are statutory-accounts disclosures on a different basis, not KM1 rows, and they are not "
+    "mapped onto template row numbers here.\n\n"
+    + P3_CESSATION_NOTE + "\n\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Persia International Bank Plc — KM1 Key Metrics",
+    subtitle="Not applicable, for two independent reasons. (1) The template is not used: every Pillar 3 PIB "
+             "published is organised by the Bank's own section headings with bespoke tables in EUR '000 and no "
+             "template row numbers. (2) Every edition predates the template: PIB's newest Pillar 3 is 31 March "
+             "2021, the UK KM1 arrived on 1 January 2022, and the Bank has published no Pillar 3 since — which "
+             "its own Annual Reports state. See the source note for how the absence was tested, including the "
+             "image-only 2015 edition that was rendered and read by eye.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not applicable — template not used, and not published in any year" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=48,
+    source_height=620,
+)
+
 metric("CET1 Capital", "£'000 (conv. from EUR)", [("Common Equity Tier 1 capital / disclosed Tier one base",
     {**CAPITAL_GBP, **CET1_TIER1_GBP_EXT, "FY2018": TIER1_STATUTORY_GBP["FY2018"], "FY2017": TIER1_STATUTORY_GBP["FY2017"], "FY2016": TIER1_STATUTORY_GBP["FY2016"]})],
     note=CAPITAL_NOTE + "\n\n" + EXT_CAPITAL_NOTE)

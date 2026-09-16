@@ -317,6 +317,107 @@ def metric(name, unit, rows_data, detail, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources, note=note, first_col_width=48, source_height=170)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE, on positive evidence from the Entity's
+# own accounts rather than on a failed search.
+#
+# The Entity publishes no Pillar 3 document of any kind, and says so itself.
+# The "Capital management" section of the Report of the Directors, in every
+# one of the five annual reports in this workbook, states verbatim:
+#
+#   "Pillar 3 of the Basel regulatory framework is related to market
+#    discipline and aims to make firms more transparent by requiring them to
+#    publish specific details of their risks and capital, and how these are
+#    managed. Separate Pillar 3 disclosures are not required for the Entity
+#    as the Entity is included in the consolidated Pillar 3 disclosures of
+#    HSBC UK Bank plc. These disclosures are published as a separate document
+#    on HSBC UK Bank plc's website."
+#
+# That is a declaration in the document, which is the strongest class of
+# evidence for an absence - the same class as Bank of Scotland plc's
+# "Appendix 1: Excluded templates" Article 432 exclusion, and the opposite of
+# an inference drawn from a fetch that failed.
+#
+# Cross-checked on the publication side the same day (2026-09-16) so the claim
+# does not rest on the Entity's own assertion alone: HSBC's own subsidiary
+# reporting index, https://www.hsbc.com/investors/results-and-announcements/
+# all-reporting/subsidiaries, loads normally (HTTP 200) and lists Pillar 3
+# documents for HSBC UK Bank plc, HSBC Bank plc, HSBC Continental Europe,
+# HSBC Bank Malta and HSBC Bank Malaysia. It carries no Marks and Spencer
+# Financial Services entry of any kind - no Pillar 3, no annual report.
+#
+# HSBC UK Bank plc's consolidated KM1 is NOT substituted here. A parent's
+# Pillar 3 is not the subsidiary's: HBUK's KM1 covers a ~£280bn ring-fenced
+# bank, this Entity's own RWAs are £3.2bn, and putting group rows on an
+# entity sheet would invent a disclosure the Entity never made.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - the Entity's own Annual Report and Financial Statements, 'Capital management' section of the "
+    "Report of the Directors, which is where the Entity states its Pillar 3 position:\n"
+    + "\n".join(
+        source(year, PAGES[year], "Capital management - 'Separate Pillar 3 disclosures are not required for the "
+                                  "Entity as the Entity is included in the consolidated Pillar 3 disclosures of "
+                                  "HSBC UK Bank plc'")
+        for year in YEARS
+    )
+    + "\n(In the 2025 report that section is printed page 11, which is page 13 of the Companies House PDF; the "
+      "page numbers above follow this workbook's existing convention for these filings.)\n\n"
+    "WHY THIS SHEET IS 'NOT APPLICABLE' RATHER THAN BLANK, and what was actually checked on 2026-09-16:\n"
+    "• THE ENTITY DECLARES THE POSITION ITSELF. This is not 'we could not find a Pillar 3'. Every one of the five "
+    "annual reports states, in its Capital management section: 'Pillar 3 of the Basel regulatory framework is "
+    "related to market discipline and aims to make firms more transparent by requiring them to publish specific "
+    "details of their risks and capital, and how these are managed. Separate Pillar 3 disclosures are not required "
+    "for the Entity as the Entity is included in the consolidated Pillar 3 disclosures of HSBC UK Bank plc. These "
+    "disclosures are published as a separate document on HSBC UK Bank plc's website.' No Pillar 3 document means no "
+    "KM1 template, in any year.\n"
+    "• PUBLICATION SIDE CHECKED TOO, so the finding does not rest only on the Entity's own assertion. HSBC's "
+    "subsidiary reporting index (https://www.hsbc.com/investors/results-and-announcements/all-reporting/"
+    "subsidiaries) loaded normally on 2026-09-16 - HTTP 200, no block, no interstitial - and lists Pillar 3 PDFs "
+    "for HSBC UK Bank plc, HSBC Bank plc, HSBC Continental Europe, HSBC Bank Malta plc and HSBC Bank Malaysia, and "
+    "nothing at all for Marks and Spencer Financial Services. The Entity's own customer site "
+    "(bank.marksandspencer.com) is a retail site and hosts no regulatory-disclosure index.\n"
+    "• THIS IS AN HSBC ENTITY, NOT A LLOYDS ONE. Worth saying plainly because the name invites the error: the "
+    "Entity's immediate parent is HSBC UK Bank plc and its ultimate parent HSBC Holdings plc (Note 30, Parent "
+    "undertakings); 'M&S' here is a brand partnership under a tripartite Relationship Agreement with M&S plc, not "
+    "ownership. The Lloyds Banking Group Financial Downloads page, checked the same day, carries no Marks and "
+    "Spencer document of any kind - correctly, since the Entity has never been an LBG company.\n"
+    "• HSBC UK BANK PLC'S GROUP KM1 IS DELIBERATELY NOT SUBSTITUTED. A parent's Pillar 3 is not the subsidiary's. "
+    "HBUK's KM1 is a ring-fenced-bank consolidation two orders of magnitude larger than this Entity (whose own "
+    "total RWAs are £3.20bn at FY2025); mapping group rows onto an entity sheet would fabricate a disclosure the "
+    "Entity never made.\n"
+    "• NOR ARE THE ENTITY'S OWN CAPITAL FIGURES RESHAPED INTO A KM1. The Entity does disclose an audited "
+    "'Calculation of actual capital' table - CET1, Tier 1, Total regulatory capital, RWAs split into credit-and-"
+    "counterparty and operational risk, and three capital ratios - and those figures populate the CET1 Capital, "
+    "CET1 Ratio, Tier 1 Capital, Tier 1 Ratio, Total Capital, Total Capital Ratio, Total RWAs and RWA Breakdown "
+    "sheets of this workbook. That table is NOT the KM1 template: it has no SREP rows, no buffer rows, no leverage "
+    "rows, no LCR and no NSFR, and its own rows are an accounting capital build-up rather than the template's "
+    "numbered row set. Mapping it onto KM1 row numbers would invent a correspondence the Entity never published, so "
+    "it is left where it belongs and this sheet stays empty.\n"
+    "• LATEST-EDITION CHECK, 2026-09-16: the Entity's Companies House filing history (company 01772585) was read "
+    "live; the newest accounts filed are 'made up to 31 December 2025', filed 27 June 2026, signed 27 February "
+    "2026 - which is the FY2025 edition this workbook already uses. Nothing newer exists. The FY2026 accounts are "
+    "not expected to be a full year: the 2025 Strategic Report discloses the 'Divisionalisation' of the Entity, a "
+    "Part VII Banking Business Transfer Scheme under which the business is expected to transfer to HSBC UK Bank "
+    "plc on 1 June 2026, after which 'the Entity would cease trading' with liquidation expected by June 2027. The "
+    "Entity was also renamed Marks and Spencer Financial Services Limited in June 2026.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Marks and Spencer Financial Services plc — KM1 Key Metrics",
+    subtitle="Not applicable. The Entity publishes no Pillar 3 disclosures in any year, and says so in its own "
+             "accounts: it is included in the consolidated Pillar 3 disclosures of its parent, HSBC UK Bank plc. "
+             "With no Pillar 3 document there is no KM1 template to reproduce. See the source note below for the "
+             "verbatim wording, the publication-side check, and why neither HSBC UK's group KM1 nor the Entity's "
+             "own capital-management table is substituted here.",
+    rows=[("DATA", "Not applicable — the Entity publishes no Pillar 3 disclosures, and therefore no KM1 template, "
+                   "in any year covered by this workbook", {})],
+    sources_text=KM1_SOURCES,
+    first_col_width=88,
+    source_height=420,
+)
+
+
 metric("CET1 Capital", "£'000", [("Common equity tier 1 capital", {"FY2025": 443918, "FY2024": 402910, "FY2023": 395366, "FY2022": 396478, "FY2021": 389044})], "CET1 capital")
 metric("CET1 Ratio", "% of RWA", [("Common equity tier 1 ratio", {"FY2025": "13.86%", "FY2024": "13.59%", "FY2023": "14.28%", "FY2022": "15.12%", "FY2021": "16.60%"})], "CET1 ratio")
 metric("Tier 1 Capital", "£'000", [("Tier 1 capital", {"FY2025": 503465, "FY2024": 471910, "FY2023": 464366, "FY2022": 465478, "FY2021": 458044})], "Tier 1 capital")

@@ -864,6 +864,208 @@ BASEL2_TOTAL_CAPITAL = {"FY2014": 387.3, "FY2012": NOT_LOCATED_2012, "FY2013": 3
 BASEL2_CREDIT_RWA = {"FY2014": 1415.9, "FY2012": NOT_LOCATED_2012, "FY2013": 775.3, "FY2011": 93.2, "FY2010": 19.0}
 
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics (wayfinder KM1-020, 2026-09-16)
+#
+# Placed BEFORE the first add_metric_sheet() call so the sheet lands
+# immediately after Asset Quality and immediately before CET1 Capital, per the
+# locked sheet order in wayfinder/km1/map.md.
+#
+# YEARS COVERED - FY2021 to FY2025 ONLY, and this is a fact about the source
+# documents, not a gap. Metro Bank's Pillar 3 editions for FY2016-FY2021 were
+# each read cover to cover for this ticket and NONE of them prints the KM1
+# template. Their index of tables runs "Table 1: RWA Summary / Table 2: Key
+# Ratios / Table 3: Capital Composition / ... / Table 7 (or 9): Comparison of
+# institutions' own funds ... IFRS 9 ... / EU OV1 / EU LIQ1 ...". "Table 2: Key
+# Ratios" is a four-to-six line summary (CET1 / Tier 1 / Total capital / CRR
+# leverage / LCR, with a prior-year comparison), with no row numbers, no SREP
+# rows, no buffer rows, no HQLA/net-outflow build-up and no NSFR block. That
+# fails the row-set test (map rule 8) the same way ABC International Bank's
+# "Table 3 Key Regulatory Metrics" does, so it is NOT transcribed onto KM1 row
+# numbers. The UK KM1 template arrived with the Disclosure (CRR) Part of the
+# PRA Rulebook, applying from 1 January 2022, which is exactly where Metro
+# Bank's first KM1 appears. The sheet therefore uses a years= override rather
+# than PILLAR3_YEARS: a KM1 column for FY2010-FY2020 would be 11 blank columns
+# asserting nothing.
+#
+# FY2021 comes from the FY2022 edition's 31 December 2021 comparative column,
+# because the FY2021 edition prints no KM1 at all. Stated on the sheet.
+#
+# ENTITY (map rule 6 - check the entity of every column, not just its year):
+# each edition prints the template exactly once, so there is no rule-11 double
+# printing here, but the REPORTING ENTITY CHANGES MID-SERIES. The FY2022
+# edition's every page header reads "Metro Bank PLC Pillar 3 2022"; the FY2023,
+# FY2024 and FY2025 editions' every page header reads "Metro Bank Holdings PLC
+# | Pillar 3 20XX". FY2021/FY2022 are therefore Metro Bank PLC and
+# FY2023-FY2025 are Metro Bank Holdings PLC consolidated - the same basis split
+# already labelled on every other Pillar 3 sheet in this workbook (see
+# ENTITY_NOTE). At the 31 December 2022 column the two editions agree exactly
+# (819 / 1,069 / 7,990 in both the FY2022 and the FY2023 edition), because the
+# holding company was not inserted until 19 May 2023.
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) (£'million)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 840, "FY2024": 808, "FY2023": 985, "FY2022": 819, "FY2021": 936}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 1082, "FY2024": 808, "FY2023": 985, "FY2022": 819, "FY2021": 936}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 1232, "FY2024": 958, "FY2023": 1135, "FY2022": 1069, "FY2021": 1184}),
+    ("SECTION", "Risk-weighted exposure amounts (£'million)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 6711, "FY2024": 6442, "FY2023": 7533, "FY2022": 7990, "FY2021": 7454}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "12.5%", "FY2024": "12.5%", "FY2023": "13.1%", "FY2022": "10.3%", "FY2021": "12.6%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "16.1%", "FY2024": "12.5%", "FY2023": "13.1%", "FY2022": "10.3%", "FY2021": "12.6%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "18.4%", "FY2024": "14.9%", "FY2023": "15.1%", "FY2022": "13.4%", "FY2021": "15.9%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    # FY2021 blank on UK 7a-7d, 12, UK 16a/16b and 18-20: the FY2022 edition
+    # SHADES OUT those cells in its 31 December 2021 column (verified on the
+    # rendered page, not just the text layer). They are empty cells, not
+    # dashes and not zeros - map rule 2.
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "0.7%", "FY2024": "0.2%", "FY2023": "0.2%", "FY2022": "0.3%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.2%", "FY2024": "0.1%", "FY2023": "0.1%", "FY2022": "0.1%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "0.3%", "FY2024": "0.1%", "FY2023": "0.1%", "FY2022": "0.1%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "9.2%", "FY2024": "8.4%", "FY2023": "8.4%", "FY2022": "8.5%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    # FY2021 is a PRINTED ZERO ("0.0%") in the FY2022 edition, not a dash and
+    # not an empty cell - recorded as the zero it is (map rule 2).
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%", "FY2021": "0.0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "13.7%", "FY2024": "12.9%", "FY2023": "12.9%", "FY2022": "12.0%", "FY2021": "11.6%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.3%", "FY2024": "7.8%", "FY2023": "8.4%", "FY2022": "5.5%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£'million)",
+     {"FY2025": 13837, "FY2024": 14417, "FY2023": 18420, "FY2022": 19348, "FY2021": 17869}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "7.8%", "FY2024": "5.6%", "FY2023": "5.3%", "FY2022": "4.2%", "FY2021": "5.2%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value - average) (£'million)",
+     {"FY2025": 5552, "FY2024": 7189, "FY2023": 5056, "FY2022": 6051, "FY2021": 6900}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value (£'million)",
+     {"FY2025": 1962, "FY2024": 2184, "FY2023": 2335, "FY2022": 2729}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value (£'million)",
+     {"FY2025": 189, "FY2024": 413, "FY2023": 256, "FY2022": 264}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£'million)",
+     {"FY2025": 1773, "FY2024": 1854, "FY2023": 2079, "FY2022": 2465, "FY2021": 2169}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "314%", "FY2024": "444%", "FY2023": "244%", "FY2022": "246%", "FY2021": "318%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18    Total available stable funding (£'million)",
+     {"FY2025": 13965, "FY2024": 16676, "FY2023": 18277, "FY2022": 18903}),
+    ("DATA", "19    Total required stable funding (£'million)",
+     {"FY2025": 8448, "FY2024": 10475, "FY2023": 13442, "FY2022": 13225}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "165%", "FY2024": "160%", "FY2023": "136%", "FY2022": "143%"}),
+]
+
+KM1_SOURCES = (
+    "KM1 Key Metrics sheet - each year transcribed from the 31 December column of THAT YEAR'S OWN Pillar 3 "
+    "edition (map rule 1), with one stated exception (FY2021, below). Every edition prints the template as a "
+    "three-column table - 31 December of the reporting year, 30 June of the reporting year, and 31 December of "
+    "the prior year - and ONLY the 31 December reporting-year column is taken. (This workbook has been bitten by "
+    "that before: ST-026 corrected six Pillar 3 metric sheets in which FY2023-FY2025 had been read off the 30 "
+    "June interim column.)\n\n"
+    "FY2025 - Metro Bank Holdings PLC Pillar 3 2025, 'Table 4: UK KM1 - Key metrics', printed p.10 (PDF p.10), "
+    + P3_2025 + "\n"
+    "FY2024 - Metro Bank Holdings PLC Pillar 3 2024, 'Table 4: UK KM1 - Key metrics', printed p.12 (PDF p.12), "
+    + P3_2024 + "\n"
+    "FY2023 - Metro Bank Holdings PLC Pillar 3 2023, 'Table 4: UK KM1 - Key metrics', printed p.12 (PDF p.12), "
+    + P3_2023 + "\n"
+    "FY2022 - Metro Bank PLC Pillar 3 2022, 'Table 3: UK KM1 - Key metrics', printed p.10 (PDF p.11), "
+    + P3_2022 + "\n"
+    "FY2021 - THE FY2021 EDITION PRINTS NO KM1, so this column is the FY2022 edition's own 31 December 2021 "
+    "comparative, taken from the same Table 3 cited above and labelled as such rather than presented as a "
+    "FY2021-edition figure. All five FY2022-edition URLs re-fetched 2026-09-16 with a browser User-Agent and "
+    "verified HTTP 200 / Content-Type application/pdf / %PDF magic bytes.\n\n"
+    "WHY THERE IS NO KM1 BEFORE FY2021. Metro Bank's FY2016-FY2021 Pillar 3 editions were read for this ticket "
+    "and none contains the template. Each one's index of tables offers 'Table 2: Key Ratios' - a short summary "
+    "of CET1 / Tier 1 / Total capital / CRR leverage / LCR against the prior year, with no row numbers, no SREP "
+    "rows, no combined-buffer rows, no HQLA and net-cash-outflow build-up and no NSFR block. That is a different "
+    "and shorter table, not an unnumbered KM1, so it is NOT mapped onto KM1 row numbers; doing so would invent a "
+    "correspondence Metro Bank never published. The UK KM1 template arrived with the Disclosure (CRR) Part of "
+    "the PRA Rulebook, applying from 1 January 2022, which is precisely when Metro Bank's first KM1 appears. The "
+    "capital, leverage and liquidity figures those earlier editions DO publish already populate the eleven "
+    "single-metric sheets in this workbook and are not duplicated here.\n\n"
+    "REPORTING ENTITY CHANGES MID-SERIES, and the columns are labelled accordingly. FY2021 and FY2022 are Metro "
+    "Bank PLC (every page header of the FY2022 edition reads 'Metro Bank PLC Pillar 3 2022'). FY2023, FY2024 and "
+    "FY2025 are Metro Bank Holdings PLC and its subsidiaries (every page header reads 'Metro Bank Holdings PLC | "
+    "Pillar 3 20XX'), following the insertion of the holding company on 19 May 2023. The two editions agree "
+    "exactly at 31 December 2022 (CET1 819, total capital 1,069, RWAs 7,990 in both the FY2022 and the FY2023 "
+    "edition), because the restructure post-dates that balance-sheet date. The series is NOT presented as one "
+    "continuous entity - see the workbook's entity/basis note.\n\n"
+    "BLANK CELLS, each one a row the bank printed and left empty rather than a row we failed to find. In the "
+    "FY2022 edition the 31 December 2021 column is SHADED OUT for UK 7a, UK 7b, UK 7c, UK 7d, 12, UK 16a, UK "
+    "16b, 18, 19 and 20 - confirmed by rendering the page at 200 dpi and looking, not only from the text layer. "
+    "Those cells are empty, not dashes and not zeros, so they are left blank. By contrast row 9 (institution "
+    "specific countercyclical capital buffer) prints '0.0%' in that same 31 December 2021 column, and a printed "
+    "zero is recorded as a zero.\n\n"
+    "ROWS 10 AND UK 10a ARE ABSENT FROM EVERY EDITION. Metro Bank's combined-buffer block runs 8, 9, 11, UK 11a, "
+    "12 in all four editions; it never prints a row 10 (systemic risk buffer) or UK 10a (O-SII buffer). They are "
+    "not shown as blank rows because the bank does not print them at all - which is a different statement from a "
+    "printed-but-empty cell.\n\n"
+    "THE BANK'S OWN FOOTNOTES, reproduced because they carry the basis: (i) the FY2022 edition footnotes its "
+    "leverage block 'Restated UK Leverage Ratio for comparison. Recalculated based on changes in PRA Policy "
+    "Statement 21/21 to exclude claims on central banks' - i.e. the 1 January 2022 basis break (map rule 5) is "
+    "handled by the bank restating the earlier column onto the new 'excluding claims on central banks' caption, "
+    "so rows 13/14 carry one caption throughout and the pre-2022 'including central bank claims' series is kept "
+    "SEPARATELY, on its own two rows of the Leverage Ratio sheet, never merged into this one; (ii) 'LCR is based "
+    "on 12-month average'; (iii) 'NSFR is based on 4-quarter average'.\n\n"
+    "PRECISION AND TYPOGRAPHY kept as printed: all percentages to one decimal place except rows 17 and 20, which "
+    "the bank prints as whole percentages. The FY2023-FY2025 editions typeset their section headings with an "
+    "en-dash ('Risk-weighted exposure amounts' is printed 'Risk–weighted exposure amounts') where the FY2022 "
+    "edition uses a hyphen; a plain hyphen is used on this sheet and the drift is recorded here rather than "
+    "reproduced glyph-for-glyph.\n\n"
+    "ONE DELIBERATE DIVERGENCE FROM THE LCR SHEET, DOCUMENTED RATHER THAN SILENCED. KM1 row 17 for FY2021 is "
+    "318%, while the LCR sheet's headline Liquidity Coverage Ratio row for FY2021 is 281%. Both are Metro Bank's "
+    "own published figures for 31 December 2021 on DIFFERENT BASES, and the FY2021 Pillar 3 edition says so "
+    "itself in section 8.2: 'Table 29 has been updated to align to the EBA/GL/2017/01 Guidelines and therefore "
+    "shows the amount of high-quality liquid assets, total net cash outflows and the LCR, averaged over a "
+    "12-month period. The ratio at the period end was 281%.' Its Table 29 (EU LIQ1) then prints HQLA 6,900, net "
+    "cash outflow 2,169 and a liquidity coverage ratio of 318% - the same three figures the FY2022 edition's KM1 "
+    "carries in its 31 December 2021 column, which independently corroborates that comparative. So 318% is the "
+    "12-month average and 281% is the point-in-time ratio at the balance-sheet date. Neither figure has been "
+    "edited to agree with the other. (Note in passing that 6,900 / 2,169 = 318%, so the LCR sheet's own HQLA and "
+    "net-outflow rows for FY2021 are the average-basis figures; only its headline ratio cell is the point-in-time "
+    "one.)\n\n"
+    "NEWER THAN THIS WORKBOOK, FLAGGED NOT TRANSCRIBED: the IR page also carries an H1 2026 edition, 'Metro Bank "
+    "Pillar 3 30 June 2026' (metro-bank-pillar-3-30-june-2026.pdf), and interim financial statements to 30 June "
+    "2026. They add no financial YEAR - Metro Bank's year-end is 31 December and FY2026 has not occurred - so "
+    "they are outside this workbook's annual series, but a later interim-focused ticket should pick them up.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Metro Bank - KM1 Key Metrics",
+    subtitle="Metro Bank's own \"UK KM1 - Key metrics\" table, reproduced in the bank's own row order, row "
+             "numbers, labels and printed precision. £'million and % exactly as published. FY2021-FY2022 are "
+             "Metro Bank PLC; FY2023-FY2025 are Metro Bank Holdings PLC consolidated, following the 19 May 2023 "
+             "holding-company insertion. FY2021 is the FY2022 edition's 31 December 2021 comparative, because "
+             "the FY2021 edition prints no KM1. No KM1 exists for FY2010-FY2020: the template post-dates those "
+             "editions, whose 'Table 2: Key Ratios' is a short summary, not an unnumbered KM1. Blank cells are "
+             "rows the bank printed and left empty; each is explained in the source note below.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=86,
+    source_height=620,
+    years=KM1_YEARS,
+)
+
+
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, P3_SOURCES, note=note, first_col_width=56, source_height=190, years=PILLAR3_YEARS)
 

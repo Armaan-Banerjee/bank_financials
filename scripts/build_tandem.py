@@ -374,6 +374,146 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=48, source_height=170)
 
 
+# ---------------------------------------------------------------------------
+# KM1 Key Metrics - TML Group's own "Key metrics table (UK KM1)", section 2
+# "Key Metrics" of the Pillar 3 Disclosures, reproduced whole in the Group's
+# own row order, row numbering, labels and printed precision.
+#
+# ONLY THREE EDITIONS CARRY THE TEMPLATE: FY2023, FY2024 and FY2025. FY2022 and
+# FY2021 are deliberately blank - see KM1_SOURCES for the two different reasons.
+#
+# Each column comes from the edition in which that year is the REPORTING year,
+# never a later edition's comparative. That is not a formality here: the
+# comparatives genuinely differ, and the later editions say so themselves in
+# their own footnotes (FY2025 edition footnote 4 "2024 ratio restated";
+# FY2024 edition footnote 4 "Restated" against its FY2023 leverage rows).
+# ---------------------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "AVAILABLE OWN FUNDS (£'000)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) Capital", {"FY2025": 168224, "FY2024": 165574, "FY2023": 150158}),
+    ("DATA", "2    Tier 1 Capital", {"FY2025": 168224, "FY2024": 165574, "FY2023": 150158}),
+    ("DATA", "3    Total Capital", {"FY2025": 196155, "FY2024": 192343, "FY2023": 175438}),
+    ("SECTION", "RISK-WEIGHTED EXPOSURE AMOUNTS (RWEA) (£'000)", {}),
+    ("DATA", "4    Total Risk Weighted Assets", {"FY2025": 1083333, "FY2024": 951607, "FY2023": 931650}),
+    ("SECTION", "CAPITAL RATIOS (as percentage of RWEA)", {}),
+    ("DATA", "5    Common Equity Tier 1 Ratio (%)", {"FY2025": "15.53%", "FY2024": "17.40%", "FY2023": "16.1%"}),
+    ("DATA", "6    Tier 1 Ratio (%)", {"FY2025": "15.53%", "FY2024": "17.40%", "FY2023": "16.1%"}),
+    ("DATA", "7    Total Capital Ratio (%)", {"FY2025": "18.11%", "FY2024": "20.21%", "FY2023": "18.8%"}),
+    ("SECTION", "ADDITIONAL OWN FUNDS REQUIREMENTS BASED ON SREP (as percentage of RWEA)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP Requirements (%)", {"FY2025": "1.04%", "FY2024": "1.04%", "FY2023": "1.5%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP Requirements (%)", {"FY2025": "0.35%", "FY2024": "0.35%", "FY2023": "0.5%"}),
+    ("DATA", "UK 7c    Additional T2 SREP Requirements (%)", {"FY2025": "0.46%", "FY2024": "0.46%", "FY2023": "0.7%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)", {"FY2025": "9.84%", "FY2024": "9.84%", "FY2023": "10.6%"}),
+    ("SECTION", "COMBINED BUFFER REQUIREMENT (as percentage of RWEA)", {}),
+    ("DATA", "8    Capital Conservation Buffer (%)", {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.5%"}),
+    ("DATA", "9    Institution Specific Countercyclical Capital Buffer (%)", {"FY2025": "1.96%", "FY2024": "1.95%", "FY2023": "1.9%"}),
+    ("DATA", "11    Combined Buffer Requirement (%)", {"FY2025": "4.46%", "FY2024": "4.45%", "FY2023": "4.4%"}),
+    ("DATA", "UK 11a    Overall Capital Requirement (%)", {"FY2025": "14.30%", "FY2024": "14.29%", "FY2023": "15.0%"}),
+    ("DATA", "12    CET1 available after meeting total SREP Own Funds Requirements (%)",
+     {"FY2025": "9.99%", "FY2024": "14.68%", "FY2023": "12.9%"}),
+    ("SECTION", "LEVERAGE RATIO", {}),
+    ("DATA", "13    Total Exposure Measure excluding Claims on Central Banks (£'000)",
+     {"FY2025": 1860727, "FY2024": 1652240, "FY2023": 1458860}),
+    ("DATA", "14    Leverage Ratio excluding Claims on Central Banks (%)",
+     {"FY2025": "9.04%", "FY2024": "10.02%", "FY2023": "9.8%"}),
+    ("SECTION", "LIQUIDITY COVERAGE RATIO", {}),
+    ("DATA", "15    Total High-Quality Liquid Assets (HQLA) (Weighted Value-Average) (£'000)",
+     {"FY2025": 1148813, "FY2024": 1927554, "FY2023": 1786879}),
+    ("DATA", "UK 16a    Cash Outflows – Total Weighted Value (£'000)", {"FY2025": 327080, "FY2024": 424591, "FY2023": 348061}),
+    ("DATA", "UK 16b    Cash Inflows – Total Weighted Value (£'000)", {"FY2025": 68928, "FY2024": 64311, "FY2023": 66597}),
+    ("DATA", "16    Total Net Cash Outflows (Adjusted Value) (£'000)", {"FY2025": 258152, "FY2024": 359743, "FY2023": 281464}),
+    ("DATA", "17    Liquidity Coverage Ratio (%)", {"FY2025": "443.40%", "FY2024": "534.75%", "FY2023": "636.0%"}),
+    ("SECTION", "NET STABLE FUNDING RATIO", {}),
+    ("DATA", "18    Total Available Stable Funding (£'000)", {"FY2025": 2560820, "FY2024": 3156347, "FY2023": 3142854}),
+    ("DATA", "19    Total Required Stable Funding (£'000)", {"FY2025": 1320668, "FY2024": 1199958, "FY2023": 1156379}),
+    ("DATA", "20    NSFR Ratio (%)", {"FY2025": "194.30%", "FY2024": "263.10%", "FY2023": "270.6%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Tandem Money Limited (TML) GROUP consolidated basis (TML + Tandem Bank Limited + Allium Lending "
+    "Group Limited), NOT Tandem Bank Limited solo. The Group's own 'Key metrics table (UK KM1)', section 2 "
+    "'Key Metrics', taken from EACH YEAR'S OWN edition rather than from any later edition's comparative column:\n"
+    f"FY2025: TML Pillar 3 Disclosures, 31 December 2025, p.4 - {P3_2025_URL}\n"
+    f"FY2024: TML Pillar 3 Disclosures, 31 December 2024, p.4 - {P3_2024_URL}\n"
+    f"FY2023: TML Pillar 3 Disclosures, 31 December 2023, p.3 - {P3_2023_URL}\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16, ON TANDEM'S OWN SITE. www.tandem.co.uk/newsroom was fetched directly "
+    "(HTTP 200, 178,512 bytes) and every PDF link on it extracted. It lists exactly three Pillar 3 documents - "
+    "'Pillar 3 Disclosures 31 December 2023', '...31 December 2024' and '...31 December 2025' - plus the "
+    "TML Annual Report and Accounts FY23/FY24/FY25. THE NEWEST PILLAR 3 IS THE 31 DECEMBER 2025 EDITION, which "
+    "this workbook already holds, so no year is added. (Tandem's year-end is 31 December, so an FY2026 edition "
+    "cannot exist before 2027.) All four PDFs used here were re-downloaded the same day and verified by HTTP "
+    "status, Content-Type application/pdf and %PDF magic bytes.\n\n"
+    "RESTATEMENTS FOUND AND DELIBERATELY NOT USED - THIS IS WHY EACH COLUMN COMES FROM ITS OWN EDITION.\n"
+    "  * Row 12, FY2024. The FY2024 edition prints 14.68% for 31 Dec '24. The FY2025 edition's 31 Dec '24 "
+    "comparative prints 11.86% and footnotes it '2024 ratio restated'. 14.68% is shown above, per this "
+    "workbook's convention; the restated figure remains visible in the FY2025 document.\n"
+    "  * Rows 13 and 14, FY2023. The FY2023 edition prints an exposure measure of 1,458,860 and a leverage "
+    "ratio of 9.8%. The FY2024 edition's 31 Dec '23 comparative prints 1,529,033 and 9.82%, both footnoted "
+    "'Restated'. The FY2023 edition's own figures are shown above.\n"
+    "  * The whole FY2023 SREP/buffer block is printed to one decimal place in its own edition (UK 7a 1.5%, "
+    "UK 7b 0.5%, UK 7c 0.7%, UK 7d 10.6%, row 9 1.9%, row 11 4.4%, UK 11a 15.0%, row 12 12.9%) and to two "
+    "decimals in the FY2024 edition's comparative (1.45% / 0.48% / 0.65% / 10.58% / 1.94% / 4.44% / 15.02% / "
+    "12.88%). These are not rounding artefacts to be tidied: PRECISION IS THE BANK'S OWN and the FY2023 column "
+    "above keeps the FY2023 edition's one-decimal house style throughout, including LCR 636.0% (534.75%-style "
+    "two-decimal printing starts with the FY2024 edition) and NSFR 270.6%.\n\n"
+    "FY2022 IS BLANK, AND A FULL FY2022 KM1 COLUMN DOES EXIST - AS THE FY2023 EDITION'S COMPARATIVE - AND IS "
+    "DELIBERATELY NOT USED. No standalone Pillar 3 edition for 31 December 2022 was ever published: Tandem's own "
+    "newsroom (checked 2026-09-16, see above) lists 2023, 2024 and 2025 only, and the 2021 edition sits on the "
+    "older assets.website-files.com CDN and is no longer linked from the newsroom at all. Every column on this "
+    "sheet comes from the edition in which that year is the reporting year, and there is no such edition for "
+    "FY2022. For the record, the FY2023 edition's '31 Dec '22' column prints: CET1 / Tier 1 / Total capital all "
+    "119,883; RWEA 790,158; CET1, Tier 1 and Total capital ratios all 15.2%; UK 7a-7d 1.5% / 0.5% / 0.7% / "
+    "10.6%; row 8 2.5%; row 9 1.0%; row 11 3.5%; UK 11a 14.1%; row 12 9.2%; row 13 1,401,205; row 14 8.8%; row "
+    "15 329,806; UK 16a 158,136; UK 16b 54,989; row 16 103,147; row 17 314.1%; row 18 1,447,618; row 19 922,410; "
+    "row 20 155.5%. Those figures DO appear on this workbook's single-metric sheets, captioned there as coming "
+    "from the FY2023 edition's comparative column - that is a different presentation from reproducing a "
+    "template Tandem never published for that date, which is why they are not carried here.\n\n"
+    "FY2021 IS BLANK BECAUSE THE TEMPLATE IS NOT USED, NOT BECAUSE NO PILLAR 3 EXISTS. TML published a full "
+    f"Pillar 3 report for 31 December 2021 ({P3_2021_URL}; re-read in full 2026-09-16, 139,114 characters of "
+    "clean text). It contains no KM1. Its section 4 'Capital Disclosures' (printed p.21, located from the "
+    "document's OWN table of contents rather than by scanning for digits) opens with a table headed 'Key "
+    "Regulatory Metrics' - but that table has exactly FOUR unnumbered rows (CET1 Capital 39,742; Total Risk "
+    "Weighted Assets 280,843; CET1 Capital Ratio 14.2%; Leverage Ratio 4.6%, with a 31 December 2020 "
+    "comparative). Four rows with no SREP block, no buffer block, no LCR rows and no NSFR rows is a different "
+    "and much shorter table, not an unnumbered KM1, so mapping it onto template row numbers would invent a "
+    "correspondence Tandem never published. Its figures appear on the single-metric sheets instead, captioned "
+    "as their own edition printed them. Supporting whole-document counts, all case-insensitive, on an "
+    "extraction shown to be RICH on neighbouring terms ('capital' 90, 'ratio' 120, 'cet1' 15, 'buffer' 22, "
+    "'leverage' 14) so the zeroes are facts about the document and not a failed instrument: 'km1' 0, 'srep' 0, "
+    "'UK 7a' 0, 'available own funds' 0, 'risk-weighted exposure' 0.\n\n"
+    "ROWS TANDEM DOES NOT PRINT ARE ABSENT, NOT ZERO. All three editions omit row 10 (G-SII buffer), UK 8a, "
+    "UK 9a and UK 10a, and rows 21-23, entirely - there is no cell, no dash and no zero to reproduce - so they "
+    "are not shown here at all rather than shown blank.\n\n"
+    "NO LEVERAGE BASIS BREAK TO CARRY. Tandem's first KM1 edition is FY2023, already after the 1 January 2022 "
+    "UK leverage change, so rows 13/14 carry the 'excluding Claims on Central Banks' caption in all three "
+    "editions and need only one caption block. (The Group states in each edition that it remains OUTSIDE the "
+    "scope of the full UK Leverage Ratio Framework.) The unit is £'000 in all three editions, so no "
+    "two-unit caption block is needed either.\n\n"
+    "THE TEMPLATE'S OWN FOOTNOTES, WHICH QUALIFY ROWS 15-20 IN EVERY EDITION: the LCR block is 'calculated as "
+    "average of monthly liquidity positions during' the year and the NSFR block 'as average of quarterly NSFR "
+    "positions during' the year - so rows 15-20 are AVERAGES, not point-in-time year-end figures, while rows "
+    "1-14 are point-in-time. Row 12 is defined by the Group as 'CET1 ratio less the minimum amount of CET1 "
+    "required to meet the total SREP own funds requirement (56.25% of Pillar 1 and Pillar 2A capital "
+    "requirements)', and the SREP block footnote reads 'Of which 56.25% of CET1 capital, 43.75% of AT1 capital "
+    "and 25% of Tier 2 capital'.\n\n"
+    + ENTITY_NOTE + "\n\n"
+    + "PILLAR 3 BASIS NOTE: this sheet is TML GROUP consolidated, whereas the four statement sheets in this "
+      "workbook are Tandem Bank Limited solo. Tandem does not publish a Bank-only Pillar 3 breakout, so the "
+      "basis mismatch is the group's own and cannot be closed."
+)
+
+bw.add_km1_sheet(
+    title="Tandem Bank Limited — KM1 Key Metrics",
+    subtitle="TML Group's own published 'Key metrics table (UK KM1)', reproduced in the Group's row order with "
+             "its own row numbers. TML GROUP CONSOLIDATED basis (TML + Tandem Bank Limited + Allium Lending "
+             "Group), not Bank solo. Amounts in £'000, ratios as printed. Only the FY2023, FY2024 and FY2025 "
+             "editions carry the template - FY2022 has no edition of its own and FY2021's edition does not use "
+             "the template.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    source_height=300,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 168224, "FY2024": 165574, "FY2023": 150158, "FY2022": 119883, "FY2021": 39742})],

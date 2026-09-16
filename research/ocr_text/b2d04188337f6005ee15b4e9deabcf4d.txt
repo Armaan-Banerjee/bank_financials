@@ -1,0 +1,2234 @@
+Chetwood Financial Limited
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Registered number 09964966
+
+Te
+
+COMPANIES HOUSE
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Company Information
+
+Directors
+
+AR Cook
+
+E Daly
+
+N Fisher
+
+J Gill
+
+M Jenkinson
+A Mielczarek
+M Symonds
+M Bracken
+
+Registered Number
+
+09964966
+
+Registered office
+
+Ellice Way
+
+Wrexham Technology Park
+Wrexham
+
+Wales
+
+LL13 7YT
+
+Auditor
+
+KPMG LLP
+
+One St Peter’s Square
+Manchester
+
+M2 3AE
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Contents
+
+Strategic Report.............0. deseteeesscsescanccsnesevansereoneseacrargnansnenessonscesnacseecensnnansesteasensaceeasccessosessnceecsuaoensecaraneneens 1
+Directors’ Report... santeatensesonsecesnsesnresasenecesenesnsesneseauecsessanessucenaueessessdeneaseerenetensneanessetesannensssounans 10
+Statement of Directors’ Responsibilities in respect of the Strategic Report, the Directors’ Report and the Financial
+StateEMeNtS or eccrcoesseserscsceeswsees . sesseneaneesoseseonssnnasanceasensouas 12
+Independent Auditor's report to the members of Chetwood Financial Limited... ee sssesssnessceerresesonsnsonsonens 13
+Statement of Total Comprehensive Income cannuensnagunsenequazenseessuseaavsnvesensensessanaeesseccarsnsssassnseesencessasaneneassasene rats 19
+Statement of Financial Position sotsessennesnnssaesssesenennesanscnnensernesanenanennesenees 20
+Statement of Changes in Equity ............cssocssscsscccssorssnsseecesserseaseessenccesensossssncsssseessasasnenenansececsceneesenerscssesnesuseseasonsennnsnns 21
+Statement of Cashflows ............... : soeecneceeaceareeesees 22
+
+Notes to the financial statements ..............scssescssssnsscessasserssssznscnecvsssseceseseneenenssansacessusacaeeeseusscaeseneueasensnsnedscessenenesesesees 23
+
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Strategic Report
+
+The directors present their strategic report for the year ended 31 March 2020.
+
+Review of the business
+
+The principal activities of the Company are the provision of consumer lending and savings products.
+
+The Company is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority
+and the Prudential Regulation Authority, under registration number 740551.
+
+The key financial performance indicators during the year were as follows:
+
+Year ended 31 | Year ended 31
+
+March 2020 March 2019
+
+£ ‘000 £ ‘000
+
+Loans and advances to customers 145,022 46,269
+Customer deposits 210,783 26,107
+Net interest margin* 7,673 1,699
+Risk adjusted margin* (3,901) (296)
+Loss for the financial period (18,314) (11,536)
+
+* Net interest margin is equai to net interest and similar income; Risk adjusted margin is equal to net interest and similar income minus impairment
+
+of loans and advances as per The Statement of Total Comprehensive income on page 19.
+The loss for the financial period was driven by a combination of investment in the development of new banking
+products, growth of the asset base and the consequent provision for impairment of loans and advances. During the
+year the company was successful in expanding its distribution network contributing to the increase in the asset base.
+A range of projects were completed to enhance automation driving efficiencies and scalability. Whilst the growth in
+assets resulted in some deterioration of asset quality this has been addressed by a range of management initiatives
+which are underway in relation to credit decisioning, product development and collections capability. The
+combination of these initiatives will support the achievement of positive risk adjusted margin and profitability in
+future years.
+
+The macroeconomic environment continues to be dominated by uncertainty surrounding the Covid-19 pandemic.
+One consequence of this will be a more challenging trading environment during 2020 than was originally anticipated
+by the Chetwood Board. In response to these circumstances Chetwood have developed a range of management
+actions to support customers, stakeholders and people such as payment holidays, remote working arrangements and
+regular communication with customers and stakeholders through alternative electronic means. The digital nature of
+Chetwood’s operating model has meant that Chetwood has been able to continue to support its customers without
+an interruption in service. Chetwood is confident that the measures taken will position it to trade through the crisis.
+
+Future developments
+
+The Covid-19 pandemic presents a significant risk to the world economy with the future course of this currently
+unknown on both the macro-economic environment as well as Chetwood specifically.
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+In spite of this uncertainty the Company will continue to focus on expanding the lending and savings portfolios
+through development of further distribution opportunities and additional banking products scheduled for launch
+later in 2020/2021.
+
+Chetwood has undertaken a range of stress scenarios considering the potential impact of Covid-19 on the macro-
+economy and consequent impacts on Chetwood. These scenarios have included consideration of the impact of
+payment holidays, changes in new business APR and acquisition volumes as well as default and delinquency levels.
+Regular management information is provided to both Executive Committee and Board to monitor the impact of
+Covid-19 and ensure that timely and appropriate management action is taken to mitigate any potential risks to
+Chetwood.
+
+As well as the consideration of the impact of COVID-19 the impact of Brexit continues to bring ongoing levels of
+uncertainty. While the Company does not have operations outside the UK, it continues to review its exposure to
+emerging developments in the Brexit process, and the political uncertainties surrounding it. This includes
+consideration of the possible impact on the regulatory environment, operational matters, the Company's market and
+customers, and macro-economic conditions. The results of these considerations are fed into the Company's
+forecasting and risk assessment. The Company considers itself well placed to address and mitigate the challenges
+arising from Brexit and will continue to monitor and respond to this risk as it develops.
+
+The principal investor has demonstrated their continued support of the Company’s growth plans by injecting capital
+during the year. Further capital injections are anticipated in 2020/2021 to support growth projections.
+
+Risk management
+
+The Board recognises the importance of having a robust risk culture and supports the key factors that contribute to
+an open and transparent environment where knowledgeable and skilled individuals take intelligent risk, under clear
+policies, in pursuit of achieving the Company’s business strategy.
+
+Chetwood is committed to delivering a robust approach to its management of risk, across all three lines of defence,
+and every colleague is expected to support this process. The Board has ultimate responsibility for overseeing
+Chetwood’s strategy, risk appetite, risk management and contro! frameworks.
+
+As a business Chetwood takes risks in delivering products and services to their customers. The following principles
+underpin risk management within its business:
+
+« Risk is taken within a defined risk appetite;
+
+* Risk taken needs to be adequately compensated;
+
+e Risk is factored in the overall decision-making process;
+* Risk should be dynamic and adaptable to change; and
+* Risk should be continuously monitored and managed.
+
+Managing risk well is a foundation of Chetwoaod’s business and its ability to deliver responsible growth. It contributes
+to the strength and sustainability of the company for the future, and it supports the work Chetwood does today to
+serve its customers, shareholders, stakeholders and employees.
+Chetwood Financial Limited .
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Risk Categories
+
+- Within the Chetwood business model, the Board has identified the following principal risk areas for regular review
+
+and management:
+
+meet financial obligations as they fall due
+
+| or can do so only at excessive cost.
+
+Risk Description Mitigation
+Strategic Risk | The risk which can affect Chetwood's Chetwood has a clearly defined Board-
+ability to achieve its corporate and approved strategy and has assumed a
+strategic objectives either through the corporate governance framework with a
+strategy failing to respond to changes in Board of experienced executive and non-
+the market, or management taking poor executive Directors. The Board subcommittees
+strategic decisions or poorly executing and executive committees are in place to
+such decisions. oversee and address strategic issues as they
+| arise. This is supported by a business plan, Risk
+Appetite Statement and an experienced
+executive team
+Capital Risk The risk that Chetwood has insufficient Chetwood assesses its capital requirements
+capital to cover regulatory requirements under an Internal Adequacy Assessment
+and/or the growth plans of the business. Process (ICAAP), in line with its business plan
+In order to ensure sufficient capital is and investment plan. Key metrics are
+maintained to support growth plans monitored and regularly reviewed by the
+Chetwood is reliant on the continued Executive Committee, through the Assets and
+support of its Investors. A complete Liability Committee (ALCO) and the Board,
+assessment of the Company’s capital including its capital adequacy and its
+requirement is contained in its Pillar 3 operational requirements. The Investors have
+disclosures published as a separate direct line of sight over the capital position
+document on the Company’s website. | through management information. In the
+absence of further funding there are actions
+management can take to ensure capital
+remains sufficient.
+Liquidity Risk | The risk that Chetwood is not able to Chetwood's liquidity risk is supported by the
+
+Treasury Policy with the risk managed by the
+Chief Financial Officer (CFO). Chetwood will
+assess its liquidity requirements through the
+Internal Liquidity Adequacy Assessment
+Process (ILAAP). The end to end process and
+key metrics are overseen by the Assets and
+Liability Committee with escalation to Board.
+Chetwood has two key sources of liquidity;
+issuing customer deposits, which it has done
+effectively during the 2020 year end and
+through its debt facility with its principal
+investor, which provides access to up to
+£100m.
+
+Chetwood Financial Limited
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Credit Risk
+
+The risk of financial loss arising from the
+borrower or a counterparty failing to
+meet their financial obligations to the
+
+| Company in accordance with agreed
+
+terms. This risk is heightened as a result
+of the impact of COVID-19 and its impact
+
+| on macro-economic conditions including
+| the specific impact of the development of |
+to the Board Risk Committee. Chetwood is
+
+losses from borrowers who have been
+
+| granted payment holidays.
+
+Chetwood's Board approved Credit Policy and
+Risk Appetite Statement describe the
+Company’s approach to managing credit risk
+
+| supported by procedures linked to a
+| scorecard-driven customer acquisition and
+
+credit management process. Credit exposures
+
+| are monitored regularly with oversight from
+
+the Credit Risk Committee as well as reporting .
+
+enhancing its management of credit risk
+
+| focusing on collections processes and
+
+arrangements for customers granted payment
+
+| holidays as well as front end decisioning.
+
+| Operational
+Risk
+
+| The risk of loss resulting from inadequate
+| or failed internal processes, people and
+
+systems or from external events. This risk
+
+| includes technology, information security,
+
+change management, outsourcing,
+people, legal, and financial control risks.
+This risk includes the exposure to Yobota
+as the third-party provider of the
+underlying banking platform.
+
+Chetwood has a suite of operational risk
+
+| policies and procedures covering the
+
+identification, management and reporting of
+risks associated with technology, information
+security, change management, outsourcing,
+people, legal and financial control risks. These
+risks are managed through the Risk and
+Control Self-Assessment (RCSA) process by the
+first line of defence and overseen by second
+line of defence, which provides assurance with
+risk management oversight through
+Operational Risk. This includes oversight of
+the third-party banking platform provider
+relationship. The RCSA ensures controls
+remain appropriate and robust to prevent,
+detect and mitigate risk. Outcome of the RCSA
+as well as material incidents is reported
+through to the executive team through the
+Legal, Operational, Regulatory and Conduct
+Committee.
+
+Conduct Risk
+
+The risk that products or services result in
+poor outcomes for customers as a result
+of inappropriate culture, internal
+practices, decision making, conflicts of
+interest or poor product governance.
+
+Chetwood's Conduct Risk Policy sets the
+framework for the fair treatment of customers
+as well as ensuring appropriate conduct by
+staff in line with the Company's expectations
+and the Financial Conduct Authority's
+
+(FCA’s) Conduct Rules. The Company has a
+range of measures and thresholds covering
+the Company's management of conduct risk
+across the customer journey. The policy is
+supported by the Risk Appetite Statement and
+
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+is reported to the Legal, Operational,
+Regulatory and Conduct Committee.
+
+Regulatory The failure to comply with, or effectively As a relatively newly licensed Bank Chetwood
+Risk respond to changes in, applicable is subject to close supervision by the regulator.
+regulations, principles, codes of conduct As aresult, Chetwood maintains frequent
+and standards of good practice resulting interaction with the Prudential Regulation
+in regulatory sanctions, financial loss or Authority (PRA) and the Financial Conduct
+reputational damage. Authority. A series of policies and procedures
+
+are in place to ensure that the Company is
+compliant with legislation and regulations,
+including a programme of mandatory staff
+training.
+
+Market risk, reputational risk and financial crime are also monitored and managed within the risk appetite and
+management framework.
+
+Risk governance and oversight
+
+Chetwood’s risk governance is the architecture within which risks are identified, assessed, managed, monitored and
+reported. The Board looks to senior management to ensure that the risk management framework and risk
+governance structure is applied in practice and operates robustly, The Board Risk Committee assists the Board in
+overseeing the effective design and operation of the risk management framework through the review of risk-related
+information. It is the Board that approves the risk appetite that defines the type and level of risk that the Company
+is prepared to take in pursuit of its business plan. The risk appetite is expressed in the form of a series of strategic
+risk objectives and risk appetite metrics with a limit structure in place to ensure delivery against appetite.
+
+The following diagram illustrates Chetwood’s current risk management governance structure which aligns principal
+risks with the appropriate governance committees to ensure that risks are appropriately managed within the agreed
+risk appetite and in accordance with the risk management framework.
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+‘d Aud
+: Oversight Risk ittee Boar Au it
+: - _ _ Committee
+Risk Category FirstUne Oversight Second Line
+Executive Committee .
+Strategic Risk and Senior Managers Executive Committee CRO
+; Asset and tiabllity
+Capityi fisk Finance Committee { f cro
+. Asset and Usability
+Risk §j cRO
+pensidity ; “mance Committee {ALCO}
+Asset and Uability
+Fi
+Market Risk nance Committee ( ) cro
+Credit Risk Credit management in|. ot aisk Committee Credit Risk
+operational areas
+Legal, Operational,
+Ajl business areas and Regulatory and :
+ore Fisk COO Functl Conduct ji Operational Risk intemal Audit
+Legal, Operational,
+. Regulatory and ,
+Conduct Risk All business areas ce Compliance
+(Lord)
+Lagat, Operations),
+Regulatory and .
+Regulatory Risk All business areas uct Committee Compliance
+. (Lord)
+Legal, Operational,
+Regulatory and
+Financial Cdme Risk] All business areas Committee Compliance
+{LORC)
+Legal, Operational,
+. Regutatory and
+Repu tational Risk All business areas uct Committee Operational Risk
+(Lord
+
+The following committees are in place to ensure that risks are appropriately managed within the agreed risk appetite
+and in accordance with the requirements of the risk management framework.
+
+e Board Risk Committee
+
+e Audit Committee
+
+« Remuneration and Nominations Committee
+® Executive Committee (ExCo)
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+ExCo has established a number of sub-committees as set out in the chart below:
+
+Enecawe Comotare
+|
+i] y t Ul { v t
+Crmnrmes Conwane ft - ‘Condacs Pricing Commies, Commerasee: Cornenaiee
+Comenmme
+Modet
+Governance
+Carenians
+
+Risk Frameworks
+
+The Company's approach to risk management uses a number of interconnected frameworks creating an Enterprise
+wide Risk Management Framework (ERMF) to address the key risks to which the Company is exposed. These are
+identified, assessed, managed, monitored and reported to the Board Risk Committee.
+
+The Enterprise wide Risk Management Framework comprises of:
+
+e = The Risk Appetite Statement
+
+« A Risk Management Framework (including policies and supporting documentation) together with
+independent governance and oversight of risk under the Chief Risk Officer ,
+
+e = Articulation of the principal risks as above
+
+e Stress testing of varied scenarios
+
+For a period during the year the position of CRO was vacant. The responsibilities relating to this position were held
+by the Chief Executive Officer. x
+
+The application of the risk frameworks includes all material risk types facing the Company and comprises as follows:
+
+Risk identification & measurement
+
+The process seeks to identify the risks to which Chetwood is exposed across each of the material risk categories. The
+risk identification process requires in-depth knowledge of the Company's strategic objectives, business objectives
+and operational processes and includes a detailed review of the risk factors that could impact Chetwood.
+
+A regular risk review cycle is integrated into the business planning process, new product development and project
+management process.
+
+Risk measurement quantifies the risks to the business and allows the selection of the appropriate means to manage
+the risk and enables appropriate resources to be dedicated to risk management.
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Risk appetite
+
+Chetwood’s Risk Appetite is formulated to support and maintain financial soundness, confidence from the
+stakeholders and our operational resilience. Chetwood’s risk appetite ensures that the following strategic risk
+objectives are met:
+
+* Fair outcomes for customers by designing and selling clear and transparent products that consistently meet
+customer needs
+
+* A positive reputation and confidence amongst all its stakeholders including customers, employees, distribution
+partners, investors and regulators
+
+* Sustainability and on-going viability through effective capital and liquidity management
+
+* Operational stability and resilience including through our third-party providers
+
+= Manage the risk appetite in line with our strategic plan and direction
+
+As a key component of the Risk Management Framework, the Risk Appetite Statement (RAS) is reviewed, challenged
+and approved annually by the Chetwood Board. The Risk Appetite metrics were reviewed in July 2019; at a high level
+Chetwood’s risk appetite is encapsulated in the following statement:
+
+“We will take risk/reward decisions to deploy our capital in areas that enable us to run an innovative digital bank
+being safe, sound and sustainable, delivering on our obligations to customers and key stakeholders in a reputable
+
+way.
+
+The Risk Appetite is then set out in a number of core thresholds for each principal type of risk, with a series of
+management triggers and early warning indicators that ensure action is taken before thresholds are approached.
+
+Risk operating model
+
+Chetwood employs a ‘Three Lines of Defence’ mode! which defines clear responsibilities and accountabilities, thereby
+ensuring effective, independent assurance over key business activities.
+
+Key outcomes of adopting the three-line model are that Chetwood ensures ownership of risk is embedded
+throughout its business, and that assurance of robust risk management, control and oversight can be provided to
+stakeholders.
+
+* First tine of defence is responsible for identifying, assessing and managing risks and controls related to their own
+business line activities on a day-to-day basis. First line colleagues operate the business in accordance with the
+risk management framework and ensure that its requirements are translated into effective operating processes.
+
+«Second line of defence is the Risk Function, which is responsible for overseeing the application of the risk
+management framework and ensuring that the business operates within the risk appetite, limits and tolerances
+that have been set by the Board.
+
+* Third line of defence is the Internal Audit function, which provides independent assurance over the adequacy
+of the first- and second-line activities in relation to all aspects of the business, including the effectiveness of the
+risk management practices and internal controls. The company has engaged PWC as internal auditor.
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Risk Testing and Planning
+
+In the current Covid-19 environment, with unknown outcomes, stress testing seeks to determine the circumstances
+where failure might arise under abnormal conditions or as a consequence of the occurrence of extreme, but
+plausible, events, as seen through the recent financial crisis. Chetwood have considered stress outcomes aligned to
+recently published Office for Budget Responsibility and Bank of England scenarios to determine the impact on future
+performance. Following management actions, it is considered the company would be able to withstand the impact
+of these stresses.
+
+The Company uses stress testing to inform capital and liquidity planning and Recovery Plans. The results from stress
+testing are subject to review and challenge through the Company's committee structure, and from the Chetwood
+Board.
+
+By order of the board
+
+B(Chiol
+Andrew Mielczarek
+
+Chief Executive Officer
+30 June 2020
+
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Directors’ Report
+
+The Directors present their report and audited financial statements of the Company for the year ended 31 March
+2020.
+
+Directors
+
+The Directors who held office during the period were as follows:
+
+e = Mr Alan Cook
+
+« Mr Matthew Symonds
+
+« Ms Emer Daly
+
+e Mr Andrew Mielczarek
+
+« Mr John Gill
+
+¢ Mr Nicholas Fisher
+
+e = =Mr Mark Jenkinson
+
+e Mr Christopher Davis (Resigned on 28 May 2019)
+
+Qualifying third party indemnity provisions
+
+The Company has put in place qualifying third party indemnity provisions for al! of the directors of Chetwood Financial
+Limited.
+
+Dividends
+
+No dividend was declared or paid during the current period.
+
+Political donations and political expenditure
+
+The Company made no political donations nor incurred any political expenditure during the period.
+
+Events since the balance sheet date
+
+On 30 June the Company raised £10m through the issuance of Tier 1 capital to existing investors. There have been
+no further significant events affecting the Company since the year end.
+
+Going concern
+
+Notwithstanding a loss before tax for the year ended 31 March 2020 of £18.3m the financial statements have been
+prepared on a going concern basis which the directors consider to be appropriate for the following reasons:
+
+On 30 June the company raised £10m through the issuance of Tier 1 capital to existing investors.
+
+The directors have prepared base case and stressed forecasts, which consider both capital requirements and liquidity,
+for a period of at least 12 months from the date of approval of these financial statements. In preparing those
+forecasts, the directors have considered the current economic uncertainty, in particular the effects of the COVID-19
+outbreak. The effects of COVID-19 have been severely felt throughout the wortd in recent months and the future
+impact on the results of the company are difficult to predict. In response to the outbreak, operational measures are
+already in place; with all employees currently working from home, the company has continued to provide consistent
+levels of customer service. Consequently, the Directors do not anticipate a significant impact on the company’s ability
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+to serve its customers. In assessing the going concern basis of preparation, the Directors have considered severe but
+plausible downside scenarios, including stress tests aligned to the ICAAP and factoring in uncertainty arising from
+Covid-19. These stress scenarios are considered to model stresses that are at least as severe as the 2007/2008
+financial crisis. The severe but plausible downside scenarios in the forecasts demonstrate that in the absence of
+additional funding from its investors the directors would need to consider management actions such as curtailing
+lending and ceasing investment in longer term strategic initiatives in order to continue to operate as a Going Concern.
+
+The company is still in the growth stage and the Directors expect the company, in the normal course of business, to
+require additional funding from its investors to fulfil its business plan and achieve longer-term sustainable
+profitability. The principal investor has been consistently supportive to date and has indicated that, based on the
+facts and circumstances they are aware of at the date of signing, it is their current intention to financially support the
+Company for a period of not less than 12 months from the date of approval of these financial statements. As with
+any company placing reliance on its investor for financial support, the directors acknowledge that there can be no
+certainty that this support will continue although, at the date of approval of these financial statements, they have no
+reason to believe that it will not do so. Consequently, the going concern basis of accounting has been used to prepare
+these financial statements.
+
+Matters covered in the Strategic Report
+
+Disclosures required under $416(4) of the Companies Act 2006 are commented upon in the Strategic Report as the
+directors consider them to be of strategic importance to the Company.
+
+Appointment of auditor
+KPMG LLP will be proposed for reappointment in accordance with section 485 of the Companies Act 2006.
+
+Disclosure of information to auditor
+
+The Directors who held office at the date of approval of this Directors’ report confirm that, so far as they are each
+aware, there is no relevant audit information of which the Company's auditor is unaware; and each Director has taken
+all the steps that he or she ought to have taken as a Director to make himself or herself aware of any relevant audit
+information and to establish that the Company's auditor is aware of that information.
+
+By order of the board
+
+B(Qidlapal
+
+Andrew Mielczarek
+Chief Executive Officer and Director
+30 June 2020
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Statement of Directors’ Responsibilities in respect of the Strategic
+Report, the Directors’ Report and the Financial Statements
+
+The directors are responsible for preparing the Strategic Report, the Directors’ Report and the financial statements
+in accordance with applicable taw and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law they have
+elected to prepare the financial statements in accordance with UK accounting standards and applicable law (UK
+Generally Accepted Accounting Practice), including FRS 102 The Financial Reporting Standard applicable in the UK
+and Republic of treland.
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they give
+a true and fair view of the state of affairs of the company and of the profit or loss of the company for that period. In
+preparing these financial statements, the directors are required to:
+
+e select suitable accounting policies and then apply them consistently;
+e make judgements and estimates that are reasonable and prudent;
+
+e state whether applicable UK accounting standards have been followed, subject to any material departures
+disclosed and explained in the financial statements;
+
+® assess the company’s ability to continue as a going concern, disclosing, as applicable, matters related to going
+concern; and
+
+® use the going concern basis of accounting unless they either intend to liquidate the company or to cease
+operations, or have no realistic alternative but to do so.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company’s transactions and disclose with reasonable accuracy at any time the financial position of the company and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They are responsible for
+such internal control as they determine is necessary to enable the preparation of financial statements that are free
+from material misstatement, whether due to fraud or error, and have general responsibility for taking such steps as
+are reasonably open to them to safeguard the assets of the company and to prevent and detect fraud and other
+irregularities.
+
+By order of the board
+
+BUiolgook
+Andrew Mielczarek
+
+Chief Executive Officer and Director
+30 June 2020
+to the members of Chetwood Financial Limited
+
+1. Our opinion is unmodified
+
+We have audited the financial statements of
+Chetwood Finanical Ltd ("the Company”) for the
+year ended 31 March 2020 which comprise the
+statement of total comprehensive income,
+statement of financial position, statement of
+changes in equity, statement of cashflows, and the
+related notes, including the accounting policies in
+note 3.
+
+In our opinion the financial statements:
+
+— give a true and fair view of the state of the
+Company's affairs as at 31March 2020 and of
+the company’s foss for the year then ended;
+
+-~ have been properly prepared in accordance with
+UK accounting standards, including FRS 102
+The Financial Reporting Standard applicable in
+the UK and Republic of Ireland, and
+
+— have been prepared in accordance with the
+requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with
+International Standards on Auditing (UK) (“ISAs
+(UK)") and applicable law. Our responsibilities are
+described below. We believe that the audit
+evidence we have obtained is a sufficient and
+appropriate basis for our opinion. Our audit opinion
+is consistent with our report to the audit
+committee.
+
+We were first appointed as auditor by the directors
+on 13 April 2017. The period of total uninterrupted
+engagement is for the three financial years ended
+31 March 2020. We have fulfilled our ethical
+responsibilities under, and we remain independent
+
+requirements including the FRC Ethical Standard as
+applied to public interest entities. No non-audit services
+prohibited by that standard were provided.
+
+Materiality: £820k (2019:£570k)
+nance asa 1-8% of Net Assets (2019: 4.9%
+whole of loss before tax)
+Key audit matters vs 2019
+Recurring risks Going concern A
+
+Impairment of loans A
+and receivables
+
+2..Key audit matters: our assessment of risks of material misstatement
+
+Key audit matters are those matters that, in our professional judgment, were of most significance in the audit of the financial
+statements and include the most significant assessed risks of material misstatement (whether or not due to fraud) identified by
+us, including those which had the greatest effect on: the overall audit strategy; the allocation of resources in the audit; and
+directing the efforts of the engagement team. We summarise below the key audit matters in decreasing order of audit
+significance, in arriving at our audit opinion above, together with our key audit procedures to address those matters and, as
+required for public interest entities, our results from those procedures. These matters were addressed, and our results are
+based on procedures undertaken, in the context of, and solely for the purpose of, our audit of the financial statements as a
+whole, and in forming our opinion thereon, and consequently are incidental to that opinion, and we do not provide a separate
+opinion on these matters.
+
+Key audit matter The risk Our response
+
+Going Concern Disclosure quality Our procedures included:
+
+Refer to page 23 (Note 2: Going The financial statements explain — Key dependency assessment: We
+
+Concern). how the Board has formed a assessed management's conclusion that the
+judgement that it is appropriate to Company is currently dependent on the
+adopt the going concern basis of continued support of its principal investor.
+
+preparation for the Company. — We assessed whether the assumptions
+
+made in the capital forecast are realistic and
+achievable and consistent with our
+knowledge of the external economic
+environment and relevant matters identified
+in the course of our audit.
+
+That judgement is based on an
+evaluation of the inherent risks to
+the Company's business model
+and how those risks might affect
+the Company's financial resources
+
+or ability to continue operations —— We assessed the ability and intent of the
+over a period of at least a year investor to provide the required support to
+from the date of approval of the the Company through an assessment of the
+financial statements. financial position and liquidity of the investor
+
+and their ability to meet the capital injections
+The risk most likely to adversely as they fall due.
+
+affect the Company’‘s available
+financial resources over this period
+was insufficient regulatory capital
+to meet minimum regulatory
+
+— We made direct inquiry of the Company
+directors and the principal investor
+representative to confirm the continued
+
+capital levels over the course of support.
+
+the next 12 months. Sensitivity analysis:
+
+There are also less predictable but — We considered sensitivities over the level of
+realistic second order impacts, available financial resources indicated by the
+such as the impact of COVID-19, Company's financial forecasts taking
+
+which could result in a rapid account of reasonably possible (but not
+increase in the level of impairment unrealistic) adverse effects that could arise
+in loans and receivables. from these risks individually and collectively.
+
+Evaluating directors’ intent:
+The risk for our audit is whether or 9
+
+not those risks were such that We evaluated the achievability of the actions
+they amounted to a material the Directors consider they would take to
+uncertainty that may have cast improve the position should the risks
+
+significant doubt about the ability materialise.
+to continue as a going concern.
+Had they been such, then that fact
+would have been required to have
+been disclosed.
+
+Assessing transparency: We assessed the
+completeness and accuracy of the matters
+covered in the going concern disclosure,
+including those in the strategic report, by
+comparing the overall picture against our
+understanding of the risks.
+
+Our results
+
+We found the going concern disclosure without
+any material uncertainty to be acceptable (2019:
+acceptable).
+
+(CY
+2. Key audit matters: our assessment of risks of material misstatement (Cont.)
+
+Key audit matter
+
+Impairment of loans and
+receivables
+
+(£13.28m; 2019: £1.97m)
+Refer to page 24 (accounting
+
+policy) and page 31 (financial
+disclosures).
+
+The risk
+
+Subjective estimate
+
+Impairment of loans and receivables covers
+collective and specific impairment of all
+loans including incurred but not yet
+specifically identified.
+
+For the purposes of the collective provision
+assessment, the Company applies a roll
+rate model based on historical experience
+and management judgement of loss given
+default (‘LGD’). The Company applies a
+specific provision for all accounts in default.
+
+We identified the following risks with
+regard to the impairment provision:
+
+— Risk of error in the calculation of the
+impairment provision;
+
+— Risk of fraud due to impairment being
+an inherently judgemental area within the
+financial statements of lending
+institutions;
+
+— Key assumptions may not be
+supported by robust and objective
+evidence, or may be out of line with wider
+industry experience, or not reflective of
+external conditions. The subjectivity in
+respect of these assumptions has
+increased further at the current year-end
+as a result of the uncertainties arising
+from COVID-19; and
+
+— Post-model adjustments made my
+management in respect of COVID-19.
+
+The effect of these matters is that, as part
+of our risk assessment, we determined
+that impairment of loans and receivables
+has a high degree of estimation
+uncertainty, with a potential range of
+reasonable outcomes greater than our
+materiality for the financial statements as
+a whole.
+
+The financial statements (note 2) disclose
+the sensitivity estimated by the Company.
+
+Our response
+
+Our procedures included:
+
+— Historical comparisons: We assessed
+and challenged the key assumptions
+within the impairment provision model
+with reference to historical data.
+
+— Sensitivity analysis: We evaluate the
+sensitivity of changes to judgemental
+assumptions, to critically assess the
+impact of alternative assumptions and
+identify those assumptions most
+significant to the estimate.
+
+— Tests of detail: We substantively tested
+the impairment model by replicating the
+mode! mechanics in our own model. We
+have agreed a sample of data inputs to
+the source data to assess the accuracy of
+the loan data.
+
+— We critically assessed the propensity to
+default (‘PD’) and LGD by analysing past
+arrears data and re-performing the
+calculation of these assumptions.
+
+— Wealso critically assessed the
+adequacy of the provision held as at the
+period end with reference to post
+period end arrears performance.
+
+~— We critically assessed the post-model
+COVID-19 adjustment by challenging
+the calculation methodology applied and
+critically assessing the assumptions
+used in determining the value of the
+adjustment recognised.
+
+— Assessing transparency: We assessed
+the adequacy of the Company’‘s
+disclosures about the degree of
+estimation involved in arriving at the
+impairment of loans and receivables.
+
+Our results
+
+— We found the resulting estimate of
+Impairment of loans and receivables to
+be acceptable (2019: acceptable).
+
+In the prior year, we reported a key audit matter in respect of the impact of uncertainties due to the UK exiting the European
+Union. As a result of developments since the prior year report, the relative significance of this matter on our audit work has
+reduced, including in relation to the assessment of going concern and impairment of loans and receivables, which remain key audit
+matters. Accordingly, we no longer consider this a key audit matter.
+
+CYC
+3. Our application of materiality and an overview Net Assets/Equity Materiality
+
+of the scope of our audit £51.2m (2019: £11.5m loss £820k (2019: £570k) .
+wo: oo before. tax}.
+
+Materiality for the financial statements as a whole £820k
+
+was set at £820k (2019: £570k), determined with Whole financial
+
+reference to a benchmark of Net Assets, of which it
+represents 1.6% (2019: 4.9% of loss before tax).
+
+statements materiality
+(2019: £570k)
+
+We agreed to report to the Audit Committee any
+corrected or uncorrected identified misstatements
+exceeding £41k (2019: £29k), in addition to other
+identified misstatements that warranted reporting
+on qualitative grounds.
+
+We have changed the selected benchmark for
+calculating materiality to net assets from loss
+before tax as this represents a more stable
+
+benchmark.
+
+Net Assets/Equity £41k
+Our audit of the Company was undertaken to the 8 Materiality Misstatements reported to the
+materiality level specified above and was audit committee (2019: £29k)
+
+performed by a single audit team.
+
+(CY
+4. We have nothing to report on going concern
+
+The Directors have prepared the financial statements on the
+going concern basis as they do not intend to liquidate the
+Company to cease their operations, and as they have
+concluded that the Company's financial position means that
+this is realistic. They have also concluded that there are no
+material uncertainties that could have cast significant doubt
+over their ability to continue as a going concern for at least
+a year from the date of approval of the financial statements
+(“the going concern period").
+
+Our responsibility is to conclude on the appropriateness of
+the Directors’ conclusions and, had there been a material
+uncertainty related to going concern, to make reference to
+that in this audit report. However, as we cannot predict all
+future events or conditions and as subsequent events may
+rasult in outcomes that are inconsistent with judgements
+that were reasonable at the time they were made, the
+absence of reference to a material uncertainty in this
+auditor's report is not a quarantee that the company will
+continue in operation.
+
+We identified going concern as a key audit matter (see
+section 2 of this report). Based on the work described in our
+response to that key audit matter, we are required to report
+to you if we have anything material to add or draw attention
+to in relation to the diréctors’ statement in Note 3 to the
+financial statements on the use of the going concern basis
+of accounting with no material uncertainties that may cast
+significant doubt over the Company's use of that basis for a
+period of at least twelve months from the date of approval
+of the financial statements.
+
+We have nothing to report in these respects.
+
+CLIC
+
+We have nothing to report on the strategic report and
+
+the directors’ report
+
+The directors are responsible for the strategic report and
+the directors’ report. Our opinion on the financial
+statements does not cover those reports and we do not
+express an audit opinion thereon.
+
+Our responsibility is to read the strategic report and the
+directors’ report and, in doing so, consider whether, based
+on our financial staternents audit work, the information
+therein is materially misstated or inconsistent with the
+financial statements or our audit knowledge. Based solely
+on that work: ;
+
+—- we have not identified material misstatements in those
+reports;
+
+~~ in our opinion the information given in the strategic
+report and the directors’ report for the financial year is
+consistent with the financial statements; and
+
+~~ in our opinion those reports have been prepared in
+accordance with the Companies Act 2006.
+
+. We have nothing to report on the other matters on
+
+which we are required to report by exception
+
+Under the Companies Act 2006, we are required to report
+
+to you if, in our opinion
+
+— adequate accounting records have not been kept by the
+Company; or
+
+— the Company financial statements are not in agreement
+with the accounting records and returns; or
+
+— certain disclosures of directors’ remuneration specified
+by law are not made; or
+
+— we have not received all the information and
+explanations we require for our audit.
+
+We have nothing to report in these respects.
+
+. Respective responsibilities
+
+Directors’ responsibilities
+
+As explained more fully in their statement set out on page
+12, the Directors are responsible for: the preparation of the
+financial statements including being satisfied that they give
+a true and fair view; such internal control as they determine
+is necessary to enable the preparation of financial
+statements that are free from material misstatement.
+whether due to fraud or error; assessing the Company's
+ability to continue as a going concern, disclosing, as
+applicable, matters related to going concern; and using the
+going concern basis of accounting unless they either intend
+to liquidate the Company or to cease operations, or have no
+realistic alternative but to do so.
+
+Auditor's responsibilities
+
+Our objectives are to obtain reasonable assurance about
+whether the financial statements as a whole are free from
+material misstatement, whether due to fraud or other
+irregularities (see below), or error, and to issue our opinion
+in an auditor's report. Reasonable assurance is a high level
+of assurance, but does not guarantee that an audit
+conducted in accordance with ISAs (UK) will always detect
+a material misstatement when it exists. Misstaternents can
+arise from fraud, other irregularities or error and are
+considered material if, individually or in aggregate, they
+could reasonably be expected to influence the economic
+decisions of users taken on the basis of the financial
+statements.
+
+A fuller description of our responsibilities is provided on the
+FRC's website at www. fre.org.uk/auditorsresponsibilities.
+
+Irregularities — ability to detect
+
+We identified areas of laws and regulations that could
+reasonably be expected to have a material effect on the
+financial statements from our general commercial and
+sector experience and through discussion with the directors
+and other management (as required by auditing standards),
+and from inspection of the company’s regulatory
+correspondence and discussed with the directors and other
+management the policies and procedures regarding
+compliance with laws and regulations.
+
+We communicated identified laws and regulations
+throughout our team and remained alert to any indications
+of non-compliance throughout the audit. The potential
+effect of these laws and regulations on the financial
+statements varies considerably.
+
+Firstly, the company is subject to laws and regulations that
+directly affect the financial statements including financial
+reporting legislation (including related companies
+legislation), distributable profits legislation taxation
+legislation, and we assessed the extent of compliance with
+these laws and regulations as part of our procedures on the
+related financial statement items.
+
+Secondly, the company is subject to many other laws and
+regulations where the consequences of non-compliance
+could have a material effect on amounts or disclosures in
+the financial statements, for instance through the
+imposition of fines or litigation or the loss of the company’s
+licence to operate.
+
+We identified the following areas as those most likely to
+have such an effect: health and safety, anti-bribery,
+employment law, regulatory capital and liquidity and certain
+aspects of company legislation recognising the financial and
+regulated nature of the company's activities and its legal
+form. Auditing standards limit the required audit procedures
+to identify non-compliance with these laws and regulations
+to enquiry of the directors and other management and
+inspection of regulatory and legal correspondence, if any.
+Through these procedures we became aware of actual or
+suspected non-compliance and considered the effect as
+part of our procedures on the related annual report and
+accounts items. The actual or suspected noncompliance
+was not sufficiently significant to our audit to result in our
+response being identified as a key audit matter.
+
+CYC
+
+Owing to the inherent limitations of an audit, there is an
+unavoidable risk that we may not have detected some
+material misstatements in the financial statements, even
+though we have properly planned and performed our audit
+in accordance with auditing standards. For example, the
+further removed non-compliance with laws and regulations
+(irregularities) is from the events and transactions reflected
+in the financial statements, the less likely the inherently
+limited procedures required by auditing standards would
+identify it. In addition, as with any audit, there remained a
+higher risk of non-detection of irregularities, as these may
+involve collusion, forgery, intentional omissions,
+misrepresentations, or the override of internal controls.
+
+We are not responsible for preventing non-compliance and
+cannot be expected to detect non-compliance with all laws
+and regulations.
+
+. The purpose of our audit work and to whom we owe
+
+our responsibilities
+
+This report is made solely to the Company‘s members, as a
+body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken
+so that we might state to the Company’s members those
+matters we are required to state to them in an auditor’s
+report and for no other purpose. To the fullest extent
+permitted by law, we do not accept or assume
+responsibility to anyone other than the Company and the
+Company's members, asa body, for our audit work, for this
+report, or for the opinions we have formed.
+
+Jessica. Ss. Kegon
+Jessica Katsouris
+(Senior Statutory Auditor)
+for and on behalf of KPMG LLP, Statutory Auditor
+Chartered Accountants
+1 St Peters Square Manchester
+M2 3AE
+1 July 2020
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Statement of Total Comprehensive Income
+
+Notes Year ended Year ended
+
+31 March 2020 31 March 2019
+
+£ ‘000 £ ‘000
+
+Interest receivable and similar income 9,687 2,666
+Interest payable and similar charges (2,014) (967)
+Net interest and similar income 7,673 - 1,699
+Administrative expenses 4 (14,413) (11,240)
+Impairment of loans and advances (11,574) (1,995)
+Loss on ordinary activities before taxation ; (18,314) (11,536)
+Tax on loss on ordinary activities 8 - -
+Loss for the financial period (18,314) (11,536)
+Other comprehensive income - -
+Total comprehensive income for the year (18,314) (11,536)
+
+The notes on pages 23 to 39 form part of these financial statements
+
+19
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Statement of Financial Position
+
+Notes As at As at
+31 March 2020 31 March 2019
+£ ‘000 £ ‘000
+
+Assets
+Cash and balances with the Bank of England 80,122 23,503
+Loans and advances to banks 8,358 4,104
+Loans and advances to customers 9 145,022 46,269
+Investment in debt securities 30,170 1,994
+Prepayments and accrued income 10 810 406
+Derivative financial instruments 21 4 -
+Other assets 11 605 448
+Tangible fixed assets 12 477 557
+tntangible fixed assets 13 485 486
+Total Assets 266,053 77,767
+
+Liabilities
+
+‘Customer deposits 14 210,783 26,107
+Accruals 2,768 1,649
+Derivative financial instruments 21 9 -
+Other liabilities 15 1,311 527
+Total liabilities 214,871 28,283
+
+Equity
+Called up share capital 18 84,688 64,688
+Share Premium account 18 2,851 2,851
+Profit and loss account (36,357) (18,055)
+Total Equity 51,182 49,484
+Total Liabilities and Equity 266,053 77,167
+
+The notes on pages 23 to 39 form part of these financial statements.
+
+These financial statements were approved by the board of Directors on 30 June 2020 and were signed on its behalf
+
+by:
+
+BUiclgorole
+
+Andrew Mielczarek
+Chief Executive Officer and Director
+30 June 2020
+
+Company registered number: 09964966
+
+20
+Chetwood Financial Limited
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Statement of Changes in Equity
+
+Called-up Share
+
+Balance at 1 April 2018
+Issue of shares
+
+Loss for the period
+Balance at 31 March 2019
+Issue of shares
+
+Equity-settled shared-based payment
+transactions
+
+Loss for the period
+Balance at 31 March 2020
+
+The notes on pages 23 to 39 form part of these financial statements
+
+21
+
+Share Profitand Total Equity
+
+Capital Premium Loss ,
+
+Account
+
+£ ‘000 £ ‘000 £ ‘000 £ ‘000
+9,451 2,851 (6,519) 5,783
+55,237 - - 55,237
+~ - (11,536) (11,536)
+64,688 2,851 (18,055) 49,484
+20,000 - - 20,000
+- - 12 12
+- - (18,314) (18,314)
+84,683 2,851 (36,357) §1,182
+
+Chetwood Financial Limited .
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Statement of Cashflows
+
+Cash Flows from Operating Activities
+Loss for the Period
+
+Adjustments to reconcile profit for the year to net cash
+flow from operating activities:
+
+Depreciation and Amortisation
+
+Increase in Provision
+
+Increase in Loans and Advances to Customers
+Decrease in Fair Value of Derivative Assets
+Increase in Prepayments and Accrued Income
+Increase in Other Assets
+
+Increase Customer Deposits
+
+Increase in Accruals and Deferred income
+increase/(decrease) in Other Liabilities
+Equity-settled shared-based payment transactions
+
+Net cash from operating activities
+
+Cash flows from Investing Activities
+Purchases of Tangible Assets
+
+Purchase of Intangible Asset
+
+Net Cash Flows from Investing Activities
+
+Cash Flows from Financing Activities
+Purchase of financial investments
+issuance of ordinary shares
+
+Net Cash Flows from Financing Activities
+
+Net Cash Flows for the Period
+Opening Cash and Cash Equivalents
+‘Closing Cash and Cash Equivalents
+
+The notes on pages 23 to 39 form part of these financial statements
+
+22
+
+Year ended Year ended
+31 March 2020 31 March 2019
+£ ‘000 £ ‘000
+(18,314) (11,536)
+230 152
+11,316 1,920
+(110,070) (44,506)
+5 -
+
+(404) (159)
+(157) (421)
+184,676 26,107
+1,119 829
+784 {6)
+
+12 -
+69,197 (27,620)
+(85) (462)
+
+(64) (52)
+(149) (514)
+(28,176) (1,994)
+20,000 55,237
+(8,176) 53,243
+60,872 25,109
+27,608 2,499
+88,480 27,608
+
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Notes to the financial statements
+
+1 General Information
+
+Chetwood Financial Limited (the “Company”) is a limited liability company incorporated, domiciled and registered
+in the UK. The registered number is 09964966 and the registered address is Ellice Way, Wrexham Technology Park,
+Wrexham, LL13 7YT.
+
+2 Statement of compliance
+
+The financial statements have been prepared in compliance with United Kingdom Accounting Standards, including
+Financial Reporting Standard 102, “The Financial Reporting Standard applicable in the United Kingdom and the
+Republic of treland” (“FRS 102”) and the Companies Act 2006.
+
+3 Summary of significant accounting policies
+
+a) Basis of preparation
+
+The principal accounting policies applied in the preparation of these financial statements are set out below. These
+policies have been consistently applied to all the periods presented, unless otherwise stated.
+
+The Company’s functional and presentation currency is the pound sterling. The Company's financial statements are
+presented in pound sterling and rounded to thousands. |
+
+b) Going concern
+
+Notwithstanding a loss before tax for the year ended 31 March 2020 of £18.3m the financial statements have been
+prepared on a going concern basis which the directors consider to be appropriate for the following reasons:
+
+On 30 June the company raised £10m through the issuance of Tier 1 capital to existing investors.
+
+The directors have prepared base case and stressed forecasts, which consider both capital requirements and
+liquidity, for a period of at least 12 months from the date of approval of these financial statements. In preparing
+those forecasts, the directors have considered the current economic uncertainty, in particular the effects of the
+COVID-19 outbreak. The effects of COVID-19 have been severely felt throughout the world in recent months and the
+future impact on the results of the company are difficult to predict. In response to the outbreak operational measures
+are already in place; with all employees currently working from home, the company has continued to provide
+consistent levels of customer service. Consequently, the Directors do not anticipate a significant impact on the
+company’s ability to serve its customers. In assessing the going concern basis of preparation, the Directors have
+considered severe but plausible downside scenarios, including stress tests aligned to the ICAAP and factoring in
+uncertainty arising from Covid-19. These stress scenarios are considered to mode! stresses that are at least as severe
+as the 2007/2008 financial crisis. The severe but plausible downside scenarios in the forecasts demonstrate that in
+the absence of additional funding from its investors the directors would need to consider management actions such
+as curtailing lending and ceasing investment in longer term strategic initiatives in order to continue to operate as a
+Going Concern.
+
+23
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+The company is still in the growth stage and the Directors expect the company, in the normal course of business, to
+require additional funding from its investors to fulfil its business plan and achieve longer-term sustainable
+profitability. The principal investor has been consistently supportive to date and has indicated that, based on the
+facts and circumstances they are aware of at the date of signing, it is their current intention to financially support
+the Company for a period of not less than 12 months from the date of approval of these financial statements. As
+with any company placing reliance on its investor for financia! support, the directors acknowledge that there can be
+no certainty that this support will continue although, at the date of approval of these financial statements, they have
+no reason to believe that it will not do so. Consequently, the going concern basis of accounting has been used to
+prepare these financial statements. ;
+
+) Critical accounting judgements and estimation uncertainty
+
+The company makes estimates and assumptions concerning the future. The estimates and assumptions that have a
+significant risk of causing a material adjustment to the carrying amounts of assets and liabilities within the next
+financial year are addressed below.
+
+i. Impairment of loans and advances to customers
+
+The Company regularly reviews its loan portfolio to assess the fevel of impairment. In determining whether an
+impairment loss should be recorded in the statement of comprehensive income, the Company makes judgements
+as to whether there is any observable data indicating that there is a measurable decrease in the estimated future
+cash flows from a portfolio of loans before the decrease can be identified with an individual loan in that portfolio.
+
+This evidence may include observable data indicating that there has been an adverse change in the payment status
+of borrowers in a group that correlate with defaults on assets in the group. Management applies estimates based
+on historical loss experience for assets with similar credit risk characteristics and objective evidence of impairment
+similar to those in the portfolio when estimating its future cash flows.
+
+in particular, management must make a significant judgement around the estimation of the probability of defaults
+(PD) and loss given default (LGD).
+
+Sensitivity analysis has been undertaken to estimate the impact of varying PD assumptions and emergence period
+on the loan impairment provision at year end. If all PDs were increased by 5%, 10% and 20%, the total provision
+would increase by 0.6%, 1.2% and 2.3% respectively. An increase in emergence period of 1 month would increase
+the overall impairment allowance by 11%. Management have considered the impact of Covid-19 on the PD
+assumptions and applied a judgemental uplift of 4.7% based on considerations of movements in external bureau
+data. If this uplift were to increase to 10% this would result in an incremental provision of £0.275 million as at the
+balance sheet date.
+
+ii. Effective interest rate (EIR)
+
+Cost arising on the acquisition of loan assets and estimated reduction in interest rates for customers are amortised
+through the Statement of Comprehensive Income over the expected life of the asset on an EIR basis. The ‘effective
+interest rate’ is the rate that exactly discounts the estimated future cash payments and receipts through the
+expected life of the financial asset or financial liability (or, where appropriate, a shorter period) to the carrying
+amount of the financial asset or financial liability. When calculating the EIR, the Company estimates future cash flows
+considering all contractual terms of the financial instrument, but not future credit losses. The calculation of the EIR
+includes those transaction costs and fees paid or received, which are deemed to be an integral part of the effective
+
+24
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+interest rate. Transaction costs include incremental costs that are directly attributable to the acquisition or issue of
+a financial asset or financial liability. ,
+
+The EIR method of accounting for income recognition requires management to make a number of assumptions. in
+particular, management must make a significant judgement around the estimation of the expected life of loan assets.
+in determining the expected life of loan assets, management consider likely redemption profiles and the anticipated
+level of early settlements.
+
+Sensitivity analysis performed around behavioural overlay of customer prepayment and interest rate reductions of
++/- 10% have an impact of +/- £68k on the EIR balance held at year end.
+
+d) Interest and similar income
+
+Interest and similar income on financial assets that are classified as loans and advances is recognised in the ‘Interest
+and similar income’ section of the income statement using the effective interest rates of the financial assets to which
+they relate.
+
+e) Government grants
+
+Government grants are recognised based on the accrual model, when it is reasonable to expect that the grants will
+be received and that all related conditions will be met, usually on submission of a valid claim for payment.
+
+Government grants in respect of capital expenditure are credited to a deferred income account and are released to
+profit over the expected useful lives of the relevant assets by equal annual instalments.
+
+f) Employee benefits
+
+Defined contribution plans
+
+A defined contribution plan is a post-employment benefit plan under which the Company pays fixed contributions
+into a separate entity and will have no legal or constructive obligation to pay further amounts. Obligations for
+contributions to defined contribution pension plans are recognised as an expense in the profit and loss account in
+the periods during which services are rendered by employees.
+
+Share-based payment transactions
+Shares in Shropshire Holdings Limited, the parent company of Chetwood Financial Limited are awarded to senior
+
+management positions within the company.
+
+The grant date fair value of share-based payment awards granted to employees is recognised as an employee
+expense, with a corresponding increase in equity in Shropshire Holdings Limited, over the period in which the
+employees become unconditionally entitled to the awards. The fair value of the awards granted is measured based
+on company specific observable market data, taking into account the terms and conditions upon which the awards
+were granted. The amount recognised as an expense is adjusted to reflect the actual number of awards for which
+the related service and non-market vesting conditions are expected to be met, such that the amount ultimately
+recognised as an expense is based on the number of awards that do meet the related service and non-market
+performance conditions at the vesting date.
+
+For share-based payment awards with no vesting conditions, the grant date fair value of the share-based payment is
+measured to reflect such conditions and there is no true-up for differences between expected and actual outcomes.
+
+25
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+g) Taxation
+
+Tax on the profit or loss for the year comprises current and deferred tax. Tax is recognised in the profit and loss
+account except to the extent that it relates to items recognised directly in equity, in which case it is recognised in
+
+; equity.
+
+Current tax is the expected tax payable or receivable on the taxable income or loss for the year, using tax rates
+enacted or substantively enacted at the balance sheet date, and any adjustment to tax payable in respect of previous
+years.
+
+Deferred tax is provided on temporary differences between the carrying amounts of assets and liabilities for financial
+reporting purposes and the amounts used for taxation purposes. The following temporary differences are not
+provided for: the initial recognition of goodwill; the initial recognition of assets or liabilities that affect neither
+accounting nor taxable profit other than in a business combination, and differences relating to investments in
+subsidiaries to the extent that they will probably not reverse in the foreseeable future. The amount of deferred tax
+provided is based on the expected manner of realisation or settlement of the carrying amount of assets and liabilities,
+using tax rates enacted or substantively enacted at the balance sheet date.
+
+A deferred tax asset is recognised only to the extent that it is probable that future taxable profits will be available
+against which the temporary difference can be utilised.
+
+h) intangible assets
+i. Research and development
+Expenditure on research activities is recognised in the income statement as an expense as incurred.
+
+Expenditure on development activities is capitalised if the product or process is technically and commercially feasible
+and the Company intends and has the technical ability and sufficient resources to complete development, future
+economic benefits are probable and if the Company can measure reliably the expenditure attributable to the
+intangible asset during its development. Development activities involve a plan or design for the production of new
+or substantially improved products or processes. The expenditure capitalised includes the cost of materials, direct
+labour and an appropriate proportion of overheads and capitalised borrowing costs.
+
+Other development expenditure is recognised in the income statement as an expense as incurred. Capitalised
+development expenditure is stated at cost less accumulated amortisation and less accumulated impairment losses.
+ii. Amortisation
+
+Amortisation is charged to the income statement on a straight-line basis over the estimated useful lives of intangible
+assets. Intangible assets are amortised from the date they are available for use. The estimated useful lives are as
+follows, based on the expected period over which the assets are will generate future economic benefits for the
+business:
+
+TT software 5 years
+
+Banking Licence _ 0years
+
+26
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+i) Tangible fixed assets
+
+Tangible fixed assets are stated at cost less accumulated depreciation and accumulated impairment losses.
+
+Depreciation is charged to the profit and loss account on a straight-line basis over the estimated useful lives of each
+part of an item of tangible fixed assets. The estimated useful lives are as follows:
+
+Fixtures, fittings and equipment 5. years
+IT equipment 3 years
+Motor vehicles S years
+
+j) Financial instruments
+
+In accordance with Sections 11 and 12 of FRS 102, financial instruments issued by the Company are treated as equity
+only to the extent that they meet the following two conditions:
+
+i. they include no contractual obligations upon the Company to deliver cash or other financial assets or to
+exchange financial assets or financial liabilities with another party under conditions that are potentially
+unfavourable to the Company; and
+
+ii. where the instrument will or may be settled in the Company’s own equity instruments, it is either a non-
+derivative that includes no obligation to deliver a variable number of the Company's own equity
+instruments or is a derivative that will be settled by the Company exchanging a fixed amount of cash or
+other financial assets for a fixed number of its own equity instruments.
+
+To the extent that this definition is not met, the proceeds of issue are classified as a financial liability. Where the
+instrument so classified takes the legal form of the Company’s own shares, the amounts presented in these financial
+statements for called up share capital and share premium account exclude amounts in relation to those shares.
+
+Financial assets and financial liabilities
+
+i. Cash and Cash equivalents
+Cash and Cash equivalents includes cash in hand and cash held with the Bank of England.
+ii. Investment in debt securities, loans and advances
+
+Investment in debt securities, loans and advances are non-derivative financial assets with fixed or determinable
+payments that are not quoted in an active market. These are recognised initially at fair value less attributable
+transaction costs. Subsequent to initial recognition, these are stated at amortised cost using the effective interest
+rate method, less any impairment losses.
+
+iii. impairment of loans and advances to customers
+
+A financial asset not carried at fair value through profit or loss is assessed at each reporting date to determine
+whether there is objective evidence that it is impaired. Where evidence indicates that a loss event has occurred after
+the initial recognition of the asset, and that the loss event had a negative effect on the estimated future cash flows
+of that asset that can be estimated reliably, then an impairment is deemed to exist.
+
+Interest on the impaired asset continues to be recognised through the unwinding of the discount. When a subsequent
+event causes the amount of impairment loss to decrease, the decrease in impairment loss is reversed through profit
+or loss.
+
+27
+Chetwocd Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+iv. Customer deposits
+Customer deposits are non-derivative financial liabilities with fixed or determinable payments. Deposits are carried
+at amortised cost using the effective interest rate method.
+
+Derivatives
+
+Interest rate swaps:
+
+The Company’s derivative activities are entered into for the purpose of matching or eliminating risk from potential
+movements in interest rates in the Company’s assets and liabilities.
+
+Such derivative financial instruments are initially recognised at fair value on the date on which a derivative contract
+is entered into and are subsequently re-measured at fair value.
+
+Derivatives are reviewed regularly for their effectiveness. Fair values are obtained from quoted market prices if in
+active markets and, where these are not available from valuation techniques including the internal asset and liability
+management information system. Derivatives are measured as assets where their fair value is positive and liabilities
+where their fair value is negative.
+
+The Company is not applying hedge accounting and related disclosures for 2020 and 2019.
+
+4 Operating Loss
+
+Operating loss is stated after charging/(crediting):
+
+Year ended 31 Year ended
+
+March 2020 31 March 201
+
+£ ‘000 £ ‘000
+
+Impairment of loans and advances to customers 11,574 1,995
+Operating lease charges 187 100
+Depreciation 165 87
+Amortisation 65 65
+Loss on disposal of tangible assets - 5
+Audit fees payable to the Company's auditor 249 113
+Government grant (276) (169)
+
+Government grant relates to the Company's award of business finance funding from the Welsh government to aid
+job creation.
+
+28
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+5 Employees
+
+The average number of persons employed by the Company during the period was 68 (2019: 51). Of these, 8 (2019:
+10) employees served as Directors during the year.
+
+The aggregate payroll costs of these persons were as follows:
+
+Year ended Year ended
+
+31 March 2020 31 March 2019
+
+£ ‘O00 £ ‘000
+
+Wages and salaries 4,715 4,293
+Social security costs 590 528
+Pension costs 138 101
+5,443 4,922
+
+6 Share Based Payments
+
+Shares in Shropshire Holdings Limited, the parent company of Chetwood Financial Limited are awarded to senior
+management positions within the company.
+
+The fair value of equity settled shares options granted is estimated at the date of grant, using the Expected
+Returns Methodology, taking into the account the terms and conditions on which the shares were granted.
+
+The services received and the liability to pay for those services are recognised over the expected vesting period.
+Until a liability is settled it is remeasured ‘at each reporting date with changes in fair value recognised in the
+Statement of Comprehensive Income.
+
+Total number of Number of Method of Vesting conditions Contractual life
+
+shares awarded to shares not yet settlement of options
+
+senior management | issued as at 31 accounting
+
+positions March 2020
+
+50,045 40,045 Equity settled | Employee remains No expiry date
+in service
+
+The total expense recognised for the year arising from equity settled share-based payments in respect of
+employee services received during the year are as follows;
+
+Year ended Year ended
+31 March 31 March
+2020 2019
+£’000 £’000
+Total share-based payment a
+
+expense
+
+29
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+7 Directors’ remuneration
+
+Year ended Year ended
+
+31 March 2020 31 March 2019
+
+£ ‘000 £ ‘000
+
+Directors’ remuneration 1410 1,496
+
+Pension contributions were made on behalf of 3 Directors amounting to £28,000 (2019: £17,405).
+
+The aggregate of remuneration of the highest paid director during the period was £385,051, including £12,000 of
+pension contributions (2019: £358,538, this includes pension contributions of £7,313.)
+
+8 Taxation
+
+The tax assessed for the year is higher than (2019- higher than) the standard rate of corporation tax in the UK of 19%
+(2019: 19%). The differences are explained below:
+
+Year ended Year ended
+
+31 March 2020 31 March 2019
+
+£’000 £ ‘000
+
+Loss on ordinary activities before tax (18,314) (11,536)
+Profit on ordinary activities multiplied by standard rate of
+
+corporation tax in the UK of 19% (2018 — 19%) - (3,480) (2,192)
+
+Effects of:
+
+Expenses not deductible for tax purposes 20 350
+
+Effect of tax rate changes - -
+
+Unrecognised deferred tax 3,460 1,842
+
+Tax charge for the year - -
+
+Based on their assessment of the timing and level of future taxable profits, the Directors have concluded that it
+would not be appropriate to recognise a deferred tax asset at the balance sheet date. The unrecognised deferred
+tax asset as at 31 March 2020 is £3,460,000 (2019: £1,842,000) based on future expected tax rate of 19%. Total
+unused tax losses as at 31 March 2020 are £34,632,002 (2019: £15,459,000).
+
+30
+Chetwood Financial Limited
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+9 Loans and advances to customers
+
+Loan receivables
+
+Impairment allowances
+
+Net loan receivables
+
+Maturity analysis:
+
+Repayable in not more than three months
+
+Repayable in more than three months but not more than one year
+Repayable in more than one year but not more than two years
+Repayable in more than two years but not more than four years
+Repayable in more than four years but not more than five years
+
+Repayable in more than five years
+
+Impairment allowance analysis:
+
+General allowance
+
+Specific allowance
+
+10 Prepayments and accrued income
+
+Prepayments
+
+Accrued income
+
+31
+
+As at As at
+
+31 March 2020 31 March 2019
+£ ‘000 £000
+
+~ 158,305 48,236
+(13,283) (1,967)
+145,022 46,269
+
+7,729 94
+
+33,366 1,030
+
+42,144 4,422
+
+59,347 23,337
+
+13,393 19,353
+
+2,326 -
+
+As at As at
+
+31 March 2020 31 March 2019
+£’000 £’000
+
+5,473 931
+
+7,810 1,036
+
+13,283 1,967
+
+As at As at
+
+31 March 2020 31 March 2019
+£ ‘000 £ ‘000
+
+766 406
+
+44 -
+
+810 406
+
+Chetwood Financial Limited
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+11 Other assets
+
+Receivables
+
+Due from parent company
+
+Due from fellow subsidiary company
+
+12 Tangible assets
+
+32
+
+Cost
+
+As at 1 April 2019
+Additions
+
+Disposals
+
+As at 31 March 2020
+
+Depreciation
+
+As at 1 April 2019
+Charge for the period
+Disposals
+
+As at 31 March 2020
+
+Net Book Value at 31 March 2020
+
+Net Book Value at 31 March 2019
+
+As at As at
+31 March 2020 31 March 2019
+£ ‘000 £ ‘000
+525 20
+80 30
+- 398
+605 448
+Fixtures, IT Total
+Fittings and equipment
+Equipment
+£ ‘000 £ ‘000 £ ‘000
+597 87 684
+23 62 85
+620 149 769
+94 33 127
+128 37 165
+222 70 292
+398 79 477
+503 54 557
+
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+13 intangible assets
+
+Banking Software Patents and Total
+Licence Licences Royalties
+£ ‘000 £ ‘000 £ ‘000 £ ‘000
+
+Cost
+As at 1 April 2019 494 50 7 551
+Additions - 60 4 64
+As at 31 March 2020 494 110 11 615
+Amortisation
+As at 1 April 2019 62 3 - 65
+Charge for the period 50 15 - 65
+As at 31 March 2020 112 18 = 130
+Net Book Value at 31 March 2020 382 92 1 485
+Net Book Value at 31 March 2019 432 47 7 486
+
+Intangible assets substantially represent the development costs incurred in obtaining the Company's banking
+licence. The banking licence will be subject to an annual impairment review. Management's assessment is that there
+is no impairment as at 31 March 2020.
+
+14 Customer Deposits
+
+The Customer Deposits balance of £210.7m (2019: £26.1m) at year ended 31 March 2020 is inclusive of £524k (2019:
+£18k) accrued interest on the SmartSave deposits.
+
+33
+Chetwood Financial Limited
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+15 Other Liabilities
+
+As at As at
+
+31 March 2020 31 March 2019
+
+£ ‘000 £ ‘000
+
+Trade creditors 916 272
+Taxation and social security 167 160
+Other creditors 17 95
+Due to fellow subsidiary 211 -
+1,311 527
+
+The above liabilities all fall due within 12 months of the balance sheet date.
+Included within other creditors are pension contributions of £12,000 (2019: ENil)
+
+16 Post-employment benefits
+
+The Company operates a defined contribution pension scheme. The assets of the scheme are held separately from
+those of the Company in an independently administered fund. The pension charge represents contributions payable
+by the Company to the fund and amounted to £138,000 (2019: £101,445). Contributions totalling £12,000 (2019:
+£Nil) are outstanding to the fund at the reporting date.
+
+17 Commitments under operating leases
+
+At 31 March 2020 the Company had future minimum lease payments under non-cancellable operating leases as
+follows:
+
+As at As at
+
+31 March 2020 31 March 2019
+
+£’000 £ ‘000
+
+Less than 1 year 200 126
+Between 1 and 5 years 503 472
+More than 5 years 252 -
+955 598
+
+34
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+18 Capital and reserves
+The Company’s capital and reserves are as follows:
+Share capital
+
+Called up share capital represents the nominal value of the shares issued.
+Allotted, called up and fully paid
+
+As at 31 March 2020 As at 31 March 2019
+Nominal Share Share Nominal Share Share
+Number value capital premium Number value capital premium
+£ £ £ £ £ £
+Ordinary 42,255,597 2.004 84,687,992 2,850,843 32,276,473 2.004 64,687,992 2,850,843
+42,255,597 84,687,992 2,850,843 32,276,473 64,687,992
+
+Share premium account
+
+The share premium account represents premiums paid above par value of share capital.
+
+Profit and Loss account
+
+’ The profit and loss account includes all current and prior period retained profits and losses.
+
+19 Related parties
+
+2,850,843
+
+During the year no “Beta” test loans were advanced to certain staff and directors which had been the case in previous
+periods. These were advanced in order to test system functionality and no interest was charged to the recipients.
+The value of test loans advanced to directors was ENil (2019: £3,000), with balances of £1,578 (2019: £4,638)
+
+receivable at the reporting date.
+
+See note 6 for disclosure of the directors’ remuneration and key management compensation.
+
+Other related party transactions of the company are with companies that are wholly owned within the Group headed
+by Shropshire Holdings Limited and therefore exempt from disclosure within these financial statements.
+
+35
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+20 Risk management
+
+Credit risk
+
+Credit risk is the risk of financial loss arising from a customer or counterparty failing to meet their contractual
+obligations to the Company in accordance with agreed terms. Credit risk is managed by the Board Risk Committee,
+which closely monitors the Company's credit risk profile and performance. The total financial statement position
+exposure at the reporting date is shown below:
+
+As at As at
+
+31 March 2020 31 March 2019
+
+£ ‘000 £ ‘000
+
+Cash and balances with the Bank of England 80,122 23,503
+Loans and advances to banks 8,358 4,104
+Investment in debt securities 30,170 1,994
+Derivative financial instruments (5) -
+Net loans and advances to customers 145,022 46,269
+Total financial statement position exposure 263,667 75,870
+
+All loans and advances to customers are unsecured personal loans with no collateral held as security.
+
+The Company's lending portfolio (by number of accounts) falls into the following concentration by loan size:
+
+As at As at
+
+31 March 2020 31 March 2019
+
+% %
+
+£0 - £10,000 81 98
+£10,001 - £16,000 19 2
+
+36
+Chetwoed Financial! Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+Liquidity risk
+
+Liquidity risk is the risk that the Company is not able to meet financial obligations as they fall due, or can only do so
+at excessive cost. Liquidity risk is managed by the ALCO and the Board Risk Committee.
+
+Contractual maturity for financial assets and liabilities at undiscounted amounts are summarised as follows:
+
+On Upto3 3to12 - 1toS More Total
+
+Demand months months years than 5
+
+years
+£‘000 = £ ‘000 £ ‘O00 £ ‘000 £ ‘000 £ ‘000
+Cash and balances with the Bank of 80,122 - - - - 80,122
+
+England
+Loans and advances to banks 8,358 - - - - 8,358
+Investment in debt securities 30,170 - - - - 30,170
+Loans and advances to customers ~ 7,729 33,366 114,884 2,326 158,305
+Customer deposits ~ - (210,783) - - (210,783)
+Other liabilities (1,311) - - - i (1,311)
+Market Risk
+
+Market risk is the risk of financial impact from movements in market prices on the value of assets and liabilities.
+
+Loans to customers are not impacted by changes to base rates and the Company reduced the risk of variable interest
+rate liabilities via undertaking interest rate swaps during 31 March 2020. The Company does not hold foreign
+currency, carry out proprietary trading or hold any positions in assets or equities which are actively traded.
+
+37
+Chetwood Financial Limited
+
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+21 Derivative financial instruments
+
+The Company holds derivative financial instruments in the normal course of its banking business for interest rate risk
+management and margin stabilisation purposes. The fair values and notional amounts of derivative instruments are
+
+presented in the following table:
+
+Notional Fair Value of Fair Value of
+Amount . assets liabilities
+£’000 £'000 £’000
+Interest rate swaps:
+At 31 March 2020 2,000 4 (9)
+interest rate swaps:
+At 31 March 2019 - - -
+Gains and losses from derivatives are as 2020 2019
+follows:
+£ ‘000 £ ‘000
+Gains on derivative financial instruments 4 -
+Losses on derivative financial instruments (9) -
+Fair value gains/(loss) on derivative (5) .
+
+financial instruments
+
+22 Country-by-country reporting
+
+Chetwood Financial Limited operates in the UK only. The principal activities of the Company are the provision of
+
+consumer lending and savings products.
+
+Turnover*
+Loss before tax
+Corporation tax paid
+
+Average number of employees (FTE)
+
+*Turnover is defined as total interest income less interest expense
+
+38
+
+As at 31 As at 31
+March 2020 March 2019
+£ ‘000 £ ‘000
+7,673 1,699
+(18,314) (11,536)
+
+68 51
+Chetwood Financial Limited
+Annual Report and Financial Statements for the year ended 31 March 2020
+
+The reporting obligations set out in the European Union’s Capital Requirements Directive IV (CRD IV) have been
+implemented in the UK by Capital Requirements (Country by Country Reporting) Regulations 2013. The regulations
+require the Company to disclose information regarding the source of its income and location of its operations.
+
+23 Capital management
+
+The regulatory capital resources managed by the Company as at 31 March 2020 are as follows:
+
+As at 31
+
+March 2020
+
+£000
+
+Share capital 84,688
+
+Share premium 2,851
+
+Retained earnings (36,357)
+
+Intangible assets (485)
+Common equity tier 1 capital 50,697 _
+
+Tier 2 capital - unaudited 2,138
+Total regulatory capital 52,835,
+
+Current and forecast levels of capital resources are monitored and reviewed by ALCO, the risk committee and the
+board on a regular basis. The Company operated above its regulatory capital requirements throughout the period.
+
+24 Controlling parties
+
+The immediate parent undertaking is Shropshire Holdings Limited, a company incorporated in Jersey, the registered
+office is 13-14 Esplanade, St Helier, Jersey, JE1 1EE.
+
+The directors consider the ultimate controlling parties to be Elliott Associates L.P. and Elliott International L.P.
+
+25 Events after the end of the reporting period
+As referenced in the strategic report, the Company received a €10million capital injection on 30 June 2020 from its
+existing investor. ,
+
+The principal investor has demonstrated their continued support of the Company's growth plans by injecting capital
+during the year. Further capital injections are anticipated in 2020/2021 to support growth projections.
+
+There are no further events impacting the Company since year end.
+
+39

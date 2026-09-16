@@ -462,6 +462,206 @@ NO_AT1_NOTE = (
     "capital is shown for GSIB in the annual key-metrics tables."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the GSIB column of GSG UK's own published template.
+#
+# ENTITY. This is NOT a parent's KM1 pressed into service for a subsidiary.
+# GSIB publishes no standalone Pillar 3 (its Annual Report says so in Note 1),
+# but GSG UK's "Table 1: Key Metric Template" is explicitly a THREE-ENTITY
+# table: every date block carries GSGUK, GSI and GSIB columns side by side,
+# and the introduction says so in terms ("...key regulatory metrics for GSGUK,
+# GSI and GSIB as at December 31, 2025..."). Only the GSIB columns are
+# reproduced here. GSGUK (the consolidated parent) and GSI (the sister
+# broker-dealer, company 02263951, not a bank) are different entities and their
+# figures are deliberately NOT carried onto this sheet.
+#
+# COLUMN SET. Each Q4 edition prints FIVE DATES x THREE ENTITIES = 15 columns:
+# the four quarter-ends of the reporting year plus the prior December. Only the
+# December year-end GSIB column is a financial year in this workbook, so the
+# September/June/March columns are dropped, and each FY is taken from the
+# edition in which that December is the reporting date rather than from a later
+# edition's prior-December comparative.
+#
+# CURRENCY. Left in USD millions, as GSG UK publishes it. The rest of this
+# workbook converts GSIB's USD to GBP at Bank of England rates; this sheet does
+# not, because reproducing the published template is the point of it. The
+# converted GBP equivalents are on the individual metric sheets.
+#
+# FY2021 IS BLANK. The Q4 2021 edition predates the template: it presents
+# bespoke tables ("Table 2: Regulatory Capital Ratios", "Table 3: Regulatory
+# Capital Resources") and its contents page lists no KM1 at all, whereas the
+# Q4 2022 edition's appendix lists "UK KM1 Key metrics template" as template 1.
+# The FY2021 figures on the metric sheets come from those bespoke tables and
+# are deliberately not reassembled into a KM1 shape here.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — $ in millions", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital",
+     {"FY2025": 4945, "FY2024": 4336, "FY2023": 3934, "FY2022": 3409}),
+    ("DATA", "2    Tier 1 capital",
+     {"FY2025": 4945, "FY2024": 4336, "FY2023": 3934, "FY2022": 3409}),
+    ("DATA", "3    Total capital",
+     {"FY2025": 5771, "FY2024": 5162, "FY2023": 4760, "FY2022": 4237}),
+    ("SECTION", "Risk-weighted exposure amounts — $ in millions", {}),
+    ("DATA", "4    Total risk-weighted exposure amount",
+     {"FY2025": 19936, "FY2024": 17767, "FY2023": 16546, "FY2022": 15674}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "24.81%", "FY2024": "24.41%", "FY2023": "23.77%", "FY2022": "21.75%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "24.81%", "FY2024": "24.41%", "FY2023": "23.77%", "FY2022": "21.75%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "28.96%", "FY2024": "29.06%", "FY2023": "28.77%", "FY2022": "27.03%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted "
+                "exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "3.85%", "FY2024": "3.85%", "FY2023": "2.23%", "FY2022": "2.23%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "5.14%", "FY2024": "5.14%", "FY2023": "2.98%", "FY2022": "2.98%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "6.85%", "FY2024": "6.85%", "FY2023": "3.97%", "FY2022": "3.97%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "14.85%", "FY2024": "14.85%", "FY2023": "11.97%", "FY2022": "11.97%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the "
+             "level of a Member State (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.15%", "FY2024": "1.03%", "FY2023": "0.92%", "FY2022": "0.42%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0%"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0%"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "3.65%", "FY2024": "3.53%", "FY2023": "3.42%", "FY2022": "2.92%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "18.50%", "FY2024": "18.38%", "FY2023": "15.39%", "FY2022": "14.89%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "13.66%", "FY2024": "13.27%", "FY2023": "14.81%", "FY2022": "12.77%"}),
+    ("SECTION", "Leverage ratio — $ in millions / %", {}),
+    ("DATA", "13    Leverage ratio total exposure measure",
+     {"FY2025": 58928, "FY2024": 48965, "FY2023": 53470, "FY2022": 49383}),
+    ("DATA", "14    Leverage ratio",
+     {"FY2025": "8.39%", "FY2024": "8.86%", "FY2023": "7.36%", "FY2022": "6.87%"}),
+    ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a "
+                "percentage of leverage ratio total exposure amount)", {}),
+    ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "N/A*"}),
+    ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "N/A*"}),
+    ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "N/A*"}),
+    ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)",
+     {"FY2025": "3.25%", "FY2024": "3.25%", "FY2023": "3.25%", "FY2022": "N/A*"}),
+    ("DATA", "UK 14e    Applicable leverage buffer",
+     {"FY2025": "0.40%", "FY2024": "0.40%", "FY2023": "0.30%", "FY2022": "N/A*"}),
+    ("DATA", "UK 14f    Overall leverage ratio requirements (%)",
+     {"FY2025": "3.65%", "FY2024": "3.65%", "FY2023": "3.55%", "FY2022": "N/A*"}),
+    ("SECTION", "Liquidity Coverage Ratio — $ in millions / %", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
+     {"FY2025": 32924, "FY2024": 31716, "FY2023": 28379, "FY2022": 20000}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value",
+     {"FY2025": 27998, "FY2024": 27382, "FY2023": 25109, "FY2022": 19375}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value",
+     {"FY2025": 6754, "FY2024": 7171, "FY2023": 6255, "FY2022": 6867}),
+    ("DATA", "16    Total net cash outflows (adjusted value)",
+     {"FY2025": 21244, "FY2024": 20210, "FY2023": 18855, "FY2022": 12506}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "155.57%", "FY2024": "158%", "FY2023": "151%", "FY2022": "161%"}),
+    ("SECTION", "Net Stable Funding Ratio — $ in millions / %", {}),
+    ("DATA", "18    Total available stable funding",
+     {"FY2025": 52125, "FY2024": 47029, "FY2023": 46071, "FY2022": 45775}),
+    ("DATA", "19    Total required stable funding",
+     {"FY2025": 40480, "FY2024": 27270, "FY2023": 26631, "FY2022": 30642}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "130.01%", "FY2024": "173%", "FY2023": "173%", "FY2022": "151%"}),
+    ("DATA", "* GSG UK's own footnote to the FY2022 edition: \"Row UK 14a-UK14f are not applicable "
+             "considering the GSGUK has no binding capital requirements and no leverage ratio buffer "
+             "requirements until 01 January 2023.\"", {}),
+]
+
+KM1_SOURCES = (
+    "Sources - the GSIB column of Goldman Sachs Group UK Limited's \"Table 1: Key Metric Template\" (UK KM1), "
+    "$ in millions and percentages exactly as printed:\n"
+    f"FY2025: Q4 2025 Pillar 3 Disclosures, p.15-16, \"As of December 2025 / GSIB\" column - {P3_2025_URL}\n"
+    f"FY2024: Q4 2024 Pillar 3 Disclosures, p.14-15, \"As of December 2024 / GSIB\" column - {P3_2024_URL}\n"
+    f"FY2023: Q4 2023 Pillar 3 Disclosures, p.14-15, \"As of December 2023 / GSIB\" column - {P3_2023_URL}\n"
+    f"FY2022: Q4 2022 Pillar 3 Disclosures, p.14-15, \"As of December 2022 / GSIB\" column - {P3_2022_URL}\n"
+    f"FY2021: no KM1 exists - see below - {P3_2021_URL}\n"
+    "\n"
+    "WHOSE TEMPLATE THIS IS. GSIB publishes no standalone Pillar 3 report; its Annual Report states each year "
+    "(Note 1) that \"the bank is included in the consolidated Pillar 3 disclosures of GSG UK\". That does NOT "
+    "make this a parent's KM1 borrowed for a subsidiary. GSG UK's Table 1 is a THREE-ENTITY table by "
+    "construction - its own introduction reads \"...key regulatory metrics for GSGUK, GSI and GSIB as at "
+    "December 31, 2025, September 30, 2025, June 30, 2025, March 31, 2025 and December 31, 2024\" - and every "
+    "date block prints GSGUK, GSI and GSIB columns side by side. Only the GSIB columns appear on this sheet. "
+    "GSGUK is the consolidated parent and GSI (Goldman Sachs International, company 02263951) is the UK "
+    "broker-dealer, not a bank; neither entity's figures are carried here, and neither may be substituted for "
+    "GSIB's.\n"
+    "\n"
+    "COLUMN SET. Each Q4 edition prints five dates x three entities = 15 value columns: the four quarter-ends "
+    "of the reporting year plus the prior December. Only the December year-end GSIB column is a financial year "
+    "in this workbook, so the September/June/March columns are not shown, and each year is taken from the "
+    "edition in which that December is the reporting date rather than from the next edition's prior-December "
+    "comparative. (The FY2022 edition is the exception in shape: it prints four dates, Dec/Sep/Jun/Mar 2022, "
+    "with no prior-December column.)\n"
+    "\n"
+    "CURRENCY. This sheet is left in USD millions, as GSG UK publishes it. Every other sheet in this workbook "
+    "converts GSIB's USD to GBP at Bank of England rates; reproducing the template as published is the point of "
+    "this one, so it is not converted. The GBP equivalents are on the individual Pillar 3 metric sheets.\n"
+    "\n"
+    "FY2021 IS BLANK, AND THAT IS A DATED ABSENCE, NOT A GAP. The Q4 2021 edition predates the UK KM1 "
+    "template. Its contents page and table list name no key-metrics template; it presents instead \"Table 1: "
+    "Minimum Regulatory Capital Ratios\", \"Table 2: Regulatory Capital Ratios\" and \"Table 3: Regulatory "
+    "Capital Resources\", bespoke tables with no template row numbers, no SREP or buffer rows and no "
+    "inflow/outflow split. The Q4 2022 edition's appendix, by contrast, lists \"UK KM1 Key metrics template\" as "
+    "template 1. The FY2021 figures on the metric sheets come from those bespoke Q4 2021 tables and are "
+    "deliberately not reassembled into a KM1 shape.\n"
+    "\n"
+    "PRECISION DRIFT AND RESTATEMENTS, reproduced rather than normalised. (a) Rows 17 and 20 are printed to "
+    "the whole percent in the FY2022, FY2023 and FY2024 editions (\"161%\", \"158%\", \"173%\") and to two "
+    "decimal places in the FY2025 edition (\"155.57%\", \"130.01%\"). Each cell is as its own edition printed "
+    "it. (b) The FY2025 edition restates its December 2024 comparative for those two rows to 157.71% and "
+    "172.94%, against the 158% and 173% the FY2024 edition printed as the reporting year; the FY2024 edition's "
+    "own figures are kept. (c) Row 14 for December 2022: the FY2022 edition prints 6.87%, the FY2023 edition "
+    "restates the same column to 6.90%; 6.87% is kept. (d) The FY2022 edition prints the four zero-buffer rows "
+    "as \"0%\" where later editions print \"0.00%\".\n"
+    "\n"
+    "ZERO GLYPHS AND MARKERS. GSG UK prints no dashes in this table. Every \"0%\"/\"0.00%\" is a measured zero "
+    "and is kept as such. The FY2022 column of rows UK 14a-UK 14f prints the bank's own word \"N/A\" with an "
+    "asterisk, carrying the footnote reproduced as the last row of this sheet; that marker is recorded, not "
+    "blanked and not back-filled from a later basis.\n"
+    "\n"
+    "LATEST-EDITION CHECK, 16 September 2026. Read off Goldman Sachs's own disclosures index at "
+    "https://www.goldmansachs.com/disclosures, not this script's citation list. It enumerates 22 GSG UK "
+    "Pillar 3 PDFs, Q4 2020 through Q1 2026. The newest ANNUAL (Q4) edition is Q4 2025, already cited here; "
+    "Q1 2026 is an interim quarter and carries no financial-year column. Checked, none newer. NOTE on fetching: "
+    "the /content/dam/gs/gscom/disclosures/<name>.pdf paths that the index page itself carries return HTTP 200 "
+    "with Content-Type text/html and a 572-byte JavaScript shim - a soft-404. The working path is "
+    "https://www.goldmansachs.com/disclosures/<name>.pdf/ WITH the trailing slash, which returns "
+    "Content-Type application/pdf and %PDF magic bytes. A failure on the first form is a fetch problem and "
+    "says nothing about whether the document exists.\n"
+    "\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Goldman Sachs International Bank — KM1 Key Metrics",
+    subtitle="The GSIB column of Goldman Sachs Group UK Limited's own published UK KM1 \"Key Metric "
+             "Template\", reproduced in GSG UK's row order with its template row numbers, labels and printed "
+             "precision. Amounts in USD millions as published - this sheet is NOT converted to GBP, unlike "
+             "the rest of this workbook. GSGUK and GSI columns of the same table are different entities and "
+             "are excluded. FY2021 is blank because the Q4 2021 edition predates the template.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=460,
+)
+
 metric("CET1 Capital", "£m (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", cet1_gbp)], note=NO_AT1_NOTE)
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO)])
 metric("Tier 1 Capital", "£m (conv. from USD)", [("Tier 1 capital", tier1_gbp)], note=NO_AT1_NOTE)
@@ -543,7 +743,7 @@ metric("NSFR", "£m (conv. from USD) / %", [
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "No GSIB-specific numeric MREL value is shown in the reviewed official GSG UK Q4 Pillar 3 disclosures; GSGUK MREL figures are not substituted."},
+    per_note={"MREL Ratio": "No GSIB-specific numeric MREL value is shown in the reviewed official GSG UK Q4 Pillar 3 disclosures; GSGUK MREL figures are not substituted. THE PARENT'S DOCUMENT WAS SEARCHED FOR A GSIB BLOCK, NOT ASSUMED EMPTY (re-confirmed 2026-09-16, table by table, in the Q4 2025 edition). This is the same document that DOES carry GSIB's key metrics, so the search was pointed at the right shelf: its Table 1 'Key Metric Template' prints GSGUK, GSI and GSIB columns side by side, which is exactly why every other Pillar 3 sheet in this workbook is sourced from it. The MREL tables in that same document are different in shape - Table 2 'Own Funds and Eligible Liabilities' and Table 3 'Own Funds and Eligible Liabilities Composition' each carry a SINGLE column, headed GSGUK, with no GSI or GSIB column and no separate subsidiary table or appendix anywhere in the 166-page document (14 occurrences of 'MREL' and 28 of 'own funds and eligible liabilities' were each read in place). The document says why: 'Material subsidiaries of an overseas banking group at the consolidated level, such as GSGUK, are required to have sufficient own funds and eligible liabilities to meet internal MREL' - the internal-MREL requirement attaches to GSGUK at the consolidated level, not to GSIB. So the absence here is a fact about where the obligation sits, established from the parent's own disclosure, and NOT an inference from GSIB publishing no standalone Pillar 3. Do not fill this sheet with GSGUK's 22.97% / 7.82%: those are the parent's ratios on the parent's RWAs and leverage exposure, a different reporting entity."},
 )
 
 # ---------------------------------------------------------------

@@ -458,6 +458,136 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=44, source_height=130)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Griffin's own published template, reproduced as printed.
+#
+# UNNUMBERED VARIANT. Griffin heads the table "4.1 Disclosure of key metrics -
+# KM1" and prints the template's section headings and row labels in the
+# template's order, but prints NO template row numbers at all - no "1", no
+# "UK 7a". The labels below are therefore given exactly as Griffin printed
+# them, without numbers invented to fill the gap. Same shape as Europe Arab
+# Bank's unnumbered KM1.
+#
+# ONE COLUMN. The table has a single column, "30 September 2023", under
+# Griffin's own footnote (1): "We were authorised as a bank by the PRA (with
+# restrictions) in 2023, and so we do not provide comparative information for
+# the prior period."
+#
+# FY2025 AND FY2024 ARE NOT BLANK - they carry the same "Not required (SDDT)"
+# cell as every other Pillar 3 sheet in this workbook. Griffin took a
+# Modification by Consent under Rule 3.1 of the SDDT Regime on 05/03/2024,
+# which REMOVES the Pillar 3 disclosure obligation outright; both later
+# year-ends fall after that date. See the source note and SDDT_EXEMPT_YEARS
+# above for the register evidence. The absence is a documented regulatory
+# fact, not a gap.
+#
+# SOURCE DEFECT REPRODUCED, NOT CORRECTED: the row "CET1 available after
+# meeting the total SREP own funds requirements (%)" is captioned as a
+# percentage but Griffin prints 5,088, which is plainly the £'000 amount. Shown
+# as published and flagged below - the same defect Monzo's row 12 carries.
+# ---------------------------------------------------------------
+KM1_VALUE_YEARS = {"FY2025": SDDT_CELL, "FY2024": SDDT_CELL}
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — £'000", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital", {**KM1_VALUE_YEARS, "FY2023": 8564}),
+    ("DATA", "Tier 1 capital", {**KM1_VALUE_YEARS, "FY2023": 8564}),
+    ("DATA", "Total capital", {**KM1_VALUE_YEARS, "FY2023": 8564}),
+    ("SECTION", "Risk-weighted exposure amounts — £'000", {}),
+    ("DATA", "Total risk-weighted exposure amount", {**KM1_VALUE_YEARS, "FY2023": 1879}),
+    ("SECTION", "Capital ratios (as % of RWAs)", {}),
+    ("DATA", "CET1 ratio (%)", {**KM1_VALUE_YEARS, "FY2023": "456%"}),
+    ("DATA", "Tier 1 ratio (%)", {**KM1_VALUE_YEARS, "FY2023": "456%"}),
+    ("DATA", "Total capital ratio (%)", {**KM1_VALUE_YEARS, "FY2023": "456%"}),
+    ("SECTION", "Additional own funds requirements based on SREP(2) (as % of RWAs)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)", {**KM1_VALUE_YEARS, "FY2023": "41%"}),
+    ("DATA", "Total SREP own funds requirements (%)", {**KM1_VALUE_YEARS, "FY2023": "72%"}),
+    ("SECTION", "Combined buffer requirement (as % of RWAs)", {}),
+    ("DATA", "Capital conservation buffer (%)", {**KM1_VALUE_YEARS, "FY2023": "2.50%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)", {**KM1_VALUE_YEARS, "FY2023": "1.97%"}),
+    ("DATA", "Combined buffer requirement (%)", {**KM1_VALUE_YEARS, "FY2023": "4.47%"}),
+    ("DATA", "Overall capital requirements (%)", {**KM1_VALUE_YEARS, "FY2023": "76.62%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)  [printed as an "
+             "amount, 5,088 — see note]", {**KM1_VALUE_YEARS, "FY2023": 5088}),
+    ("SECTION", "Leverage ratio — £'000 / %", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks", {**KM1_VALUE_YEARS, "FY2023": 9382}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)", {**KM1_VALUE_YEARS, "FY2023": "91%"}),
+    ("SECTION", "Liquidity coverage ratio(3) — £'000 / %", {}),
+    ("DATA", "Total high-quality liquid assets (weighted value - average)", {**KM1_VALUE_YEARS, "FY2023": 10387}),
+    ("DATA", "Cash outflows - total weighted value", {**KM1_VALUE_YEARS, "FY2023": 572}),
+    ("DATA", "Cash inflows - total weighted value", {**KM1_VALUE_YEARS, "FY2023": 184}),
+    ("DATA", "Total net cash outflows (adjusted value)", {**KM1_VALUE_YEARS, "FY2023": 388}),
+    ("DATA", "Liquidity coverage ratio (%)", {**KM1_VALUE_YEARS, "FY2023": "2,675%"}),
+    ("SECTION", "Net stable funding ratio(4) — £'000 / %", {}),
+    ("DATA", "Total available stable funding", {**KM1_VALUE_YEARS, "FY2023": 11039}),
+    ("DATA", "Total required stable funding", {**KM1_VALUE_YEARS, "FY2023": 1068}),
+    ("DATA", "Net stable funding ratio (%)", {**KM1_VALUE_YEARS, "FY2023": "1,034%"}),
+    ("DATA", "(1) We were authorised as a bank by the PRA (with restrictions) in 2023, and so we do not "
+             "provide comparative information for the prior period.  (2) Supervisory Review and Evaluation "
+             "Process.  (3) The LCR represents the average of eight months reported LCR (post-authorisation). "
+             " (4) The NSFR represents the average of eight months reported NSFR (post-authorisation). "
+             "[Griffin's own footnotes to this table]", {}),
+]
+
+KM1_SOURCES = (
+    "Sources - Griffin Bank Limited's own \"4.1 Disclosure of key metrics - KM1\" table, £'000 and "
+    "percentages as printed:\n"
+    f"FY2023 (15mo, period ended 30 September 2023): 2023 Pillar 3 Report, p.21 - {P3_2023_URL}\n"
+    "FY2025 and FY2024: no Pillar 3 report exists, and none is required - see below.\n"
+    "\n"
+    "GRIFFIN PRINTS THE TEMPLATE WITHOUT ITS ROW NUMBERS. The table is headed \"4.1 Disclosure of key "
+    "metrics - KM1\" and carries the template's section headings and row labels in the template's order, but "
+    "no template row numbers at all - no \"1\", no \"UK 7a\". The labels above are Griffin's own, verbatim; "
+    "row numbers have NOT been supplied from the PRA template, because inventing them would put words in the "
+    "bank's mouth. Griffin also prints no UK 7b/UK 7c rows, no UK 8a/UK 9a/10/UK 10a buffer rows and no "
+    "14a-14f additional-leverage block: that is Griffin's own row set as a small and non-complex institution "
+    "disclosing under Article 433b, not a transcription gap.\n"
+    "\n"
+    "ONE COLUMN, BY THE BANK'S OWN STATEMENT. The table has a single column, \"30 September 2023\", carrying "
+    "Griffin's footnote (1): \"We were authorised as a bank by the PRA (with restrictions) in 2023, and so we "
+    "do not provide comparative information for the prior period.\" There is no prior-year column to "
+    "transcribe.\n"
+    "\n"
+    "SOURCE DEFECT, REPRODUCED AND FLAGGED. The row \"CET1 available after meeting the total SREP own funds "
+    "requirements (%)\" is captioned as a percentage but Griffin prints 5,088 - plainly the £'000 amount, not "
+    "a ratio (5,088 is 8,564 of CET1 less the 72% x 1,879 SREP requirement, to the nearest £'000). It is "
+    "reproduced as published, with the label annotated, and is NOT converted into a percentage. Monzo's row "
+    "12 carries the identical defect.\n"
+    "\n"
+    "FY2025 AND FY2024 READ \"Not required (SDDT)\", NOT BLANK. Griffin holds a Modification by Consent under "
+    "Rule 3.1 of the SDDT Regime (PRA Rulebook, CRR Firms), start date 05/03/2024, no end date, per the Bank "
+    "of England's consolidated register of waivers and modifications for FRN 970920. Rule 3.1 is the opt-in "
+    "that makes a firm a Small Domestic Deposit Taker and REMOVES the Pillar 3 disclosure obligation outright "
+    "- distinct from Article 433b small-and-non-complex status, under which Griffin published the FY2023 "
+    "report above and which only reduces disclosure. Griffin's accounting reference date is 30 September, so "
+    "FY2024 (30 Sep 2024) and FY2025 (30 Sep 2025) both end after that start date. This is therefore a "
+    "documented regulatory absence, not a failed search, and nothing here is back-filled from the Annual "
+    "Reports - which in any case disclose only a narrative CET1 ratio (112% FY2025, 64% FY2024) and no other "
+    "KM1 line.\n"
+    "\n"
+    "LATEST-EDITION CHECK, 16 September 2026, against the Bank's own site rather than this script's citation "
+    "list. https://griffin.com/reports was re-fetched and every PDF link on it enumerated: it still carries "
+    "exactly six documents - Annual Impact Report 2025/2026, Annual Report 2025, Annual Impact Report "
+    "2024/2025, Annual Report 2024, 2023 Annual Report & Financial Statements, and \"Griffin Bank Ltd Pillar 3 "
+    "30 Sept 2023\". The newest Annual Report is FY2025, already cited throughout this workbook, and the only "
+    "Pillar 3 remains the FY2023 one. Checked, none newer.\n"
+    "\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Griffin Bank Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published UK key-metrics (KM1) table, reproduced in Griffin's row order with "
+             "its own labels and printed precision. Griffin prints the template WITHOUT row numbers, so none "
+             "are shown. Amounts in £'000, ratios as printed. FY2023 is a 15-month period ended 30 September "
+             "2023 and is the only year with a Pillar 3 report; FY2024 and FY2025 are covered by Griffin's "
+             "SDDT modification, which removes the disclosure obligation.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=70,
+    source_height=400,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {"FY2023": 8564})],

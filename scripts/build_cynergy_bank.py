@@ -972,6 +972,225 @@ FY2017_RWA_CAVEAT = (
     "FY2017 only; the three ratios above are the source's own directly-stated figures and are populated."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Cynergy's own published key-metrics table, reproduced as
+# printed (KM1-012).
+#
+# WHICH YEARS EXIST AT ALL. Cynergy publishes a UK KM1 table in exactly two
+# editions: the 2023 Pillar 3 (whose contents page names it "Key metrics table
+# (UK KM1)") and the 2022 Pillar 3 (headed only "Key metrics"). Neither prints
+# the template's row NUMBERS, so a presence test keyed on "UK 7a" or on a bare
+# leading "1" reports nothing here - the row labels, order and section headings
+# are the template line for line, which is what identifies it.
+#   - FY2023 and FY2022 each come from the edition in which that year is the
+#     reporting year.
+#   - FY2021 is the FY2022 edition's comparative column. The 2021 Pillar 3's
+#     own table (p.20, "Key capital, liquidity and leverage metrics", £m) is a
+#     much narrower pre-KM1 disclosure - nine rows, no SREP/buffer/NSFR/HQLA
+#     sections, and "risk-weighted assets" rather than the template's
+#     "risk-weighted exposure amount" - so it is NOT the KM1 template and is
+#     not transcribed here as one.
+#   - FY2020 and earlier predate the template; FY2024 and FY2025 postdate
+#     Cynergy's SDDT approval (17 January 2025), after which it is not required
+#     to publish Pillar 3 at all. Both absences are enumerated, not unfound -
+#     see ENUMERATION_NOTE and p3_sources().
+#
+# UNIT BREAK BETWEEN EDITIONS - the reason this sheet's amount rows are not one
+# unit down a row. The 2023 edition states "All amounts are presented rounded to
+# the nearest thousand except where stated" and prints CET1 as 306,251. The 2022
+# edition prints the SAME kind of row in WHOLE POUNDS (287,446,662) and states
+# no unit anywhere on or above the table. Each cell is transcribed from the
+# edition in which that year is the reporting year, exactly as printed, so
+# FY2023 amounts are £'000 and FY2022/FY2021 amounts are £. They are not
+# rescaled onto a common unit: rescaling is the one thing this sheet may not do,
+# and the £'000 equivalents are in any case already on the individual metric
+# sheets.
+#
+# HOW THAT IS EXPRESSED HERE (map rule 17, and the same shape rule 5 uses for
+# the 1 Jan 2022 leverage basis break): each amount row is printed TWICE, as two
+# adjacent caption blocks, one per unit - a "(£'000 ...)" row carrying the FY2023
+# column and a "(£ ...)" row carrying the FY2022/FY2021 columns. Neither series
+# is merged into the other and nothing is restated. This is a presentation of the
+# Bank's 24 published rows, NOT 35 disclosed rows: the two captions of a pair are
+# the same template row read out of two editions that printed it in two units.
+# The earlier single-row form, which named both units inside one label, is what
+# verify_workbook.py has to refuse to cross-check (one row, one scale); split
+# this way every amount cell is checked against its metric sheet automatically.
+# Ratio rows are unaffected - they are percentages in both editions.
+# ---------------------------------------------------------------
+# Unit captions. Deliberately worded WITHOUT "FY20xx" tokens: a label naming a
+# year beside a currency is how verify_workbook.py detects a row that declares
+# more than one unit, which is exactly the state this split exists to leave.
+_K = " (£'000 — the 2023 edition's own stated unit)"
+_P = " (£ — whole pounds, as the 2022 edition prints it; that edition states no unit at all)"
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital" + _K, {"FY2023": 306251}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital" + _P,
+     {"FY2022": "287,446,662", "FY2021": "197,331,379"}),
+    ("DATA", "Tier 1 capital" + _K, {"FY2023": 306251}),
+    ("DATA", "Tier 1 capital" + _P,
+     {"FY2022": "287,446,662", "FY2021": "197,331,379"}),
+    ("DATA", "Total capital" + _K, {"FY2023": 321251}),
+    ("DATA", "Total capital" + _P,
+     {"FY2022": "287,446,662", "FY2021": "227,199,733"}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount" + _K, {"FY2023": 2084246}),
+    ("DATA", "Total risk-weighted exposure amount" + _P,
+     {"FY2022": "1,822,159,262", "FY2021": "1,417,122,603"}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%"}),
+    ("DATA", "Tier 1 ratio (%)",
+     {"FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%"}),
+    ("DATA", "Total capital ratio (%)",
+     {"FY2023": "15.41%", "FY2022": "15.78%", "FY2021": "16.03%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)",
+     {"FY2023": "0.00%", "FY2022": "0.50%", "FY2021": "1.06%"}),
+    ("DATA", "Total SREP own funds requirements (%)",
+     {"FY2023": "8.51%", "FY2022": "9.60%", "FY2021": "9.60%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2023": "2.00%", "FY2022": "1%", "FY2021": "0%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2023": "4.50%", "FY2022": "3.50%", "FY2021": "2.50%"}),
+    ("DATA", "Overall capital requirements (%)",
+     {"FY2023": "13.01%", "FY2022": "13.60%", "FY2021": "13.16%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2023": "6.18%", "FY2022": "5.66%", "FY2021": "3.26%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Leverage ratio total exposure measure" + _K, {"FY2023": 4398669}),
+    ("DATA", "Leverage ratio total exposure measure" + _P,
+     {"FY2022": "3,886,578,610", "FY2021": "3,611,450,020"}),
+    ("DATA", "Leverage ratio",
+     {"FY2023": "6.96%", "FY2022": "7.40%", "FY2021": "5.46%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average)" + _K,
+     {"FY2023": 714224}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average)" + _P,
+     {"FY2022": "602,316,820", "FY2021": "395,795,983"}),
+    ("DATA", "Cash outflows - Total weighted value" + _K, {"FY2023": 364374}),
+    ("DATA", "Cash outflows - Total weighted value" + _P,
+     {"FY2022": "353,365,211", "FY2021": "250,909,201"}),
+    ("DATA", "Cash inflows - Total weighted value" + _K, {"FY2023": 129561}),
+    ("DATA", "Cash inflows - Total weighted value" + _P,
+     {"FY2022": "162,744,676", "FY2021": "97,008,515"}),
+    ("DATA", "Total net cash outflows (adjusted value)" + _K, {"FY2023": 234813}),
+    ("DATA", "Total net cash outflows (adjusted value)" + _P,
+     {"FY2022": "190,620,534", "FY2021": "153,900,686"}),
+    ("DATA", "Liquidity coverage ratio (%)",
+     {"FY2023": "304.44%", "FY2022": "315.98%", "FY2021": "242.91%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    # FY2021's three NSFR cells are printed "-" in the 2022 edition: a dash, so blank here.
+    ("DATA", "Total available stable funding" + _K, {"FY2023": 3903341}),
+    ("DATA", "Total available stable funding" + _P, {"FY2022": "3,721,028,413"}),
+    ("DATA", "Total required stable funding" + _K, {"FY2023": 2625631}),
+    ("DATA", "Total required stable funding" + _P, {"FY2022": "2,489,263,786"}),
+    ("DATA", "NSFR ratio (%)",
+     {"FY2023": "148.67%", "FY2022": "149.48%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Cynergy Bank's own published key-metrics (UK KM1) table, Consolidated Bank basis, "
+    "reproduced as printed:\n"
+    f"FY2023 (own column) and the FY2022 comparative (NOT used - see the restatement note below): "
+    f"Cynergy Bank Limited 2023 Pillar 3 Disclosures, 'Key metrics', p.7. The document's own contents "
+    f"page names this table 'Key metrics table (UK KM1)'. Columns: '31-Dec-23' and '31-Dec-22' - "
+    f"{P3_2023_URL}\n"
+    f"FY2022 (own column) and FY2021 (comparative column): Cynergy Bank Limited - 2022 Pillar 3, "
+    f"'Key metrics', p.6 (printed 'PAGE 6'). Columns: '31 Dec 2022' and '31 Dec 2021' - {P3_2022_URL} "
+    f"(delisted from the live site; the identical copy on the Bank's current Contentful CDN was used: "
+    f"{P3_2022_CDN_URL} , and the archived copy {P3_2022_WAYBACK} agrees)\n\n"
+    "PRESENTATION NOTES, all of them things the Bank did rather than choices made here:\n"
+    "* NO TEMPLATE ROW NUMBERS. Neither edition prints the template's row numbers ('1', 'UK 7a', '11a' "
+    "...). The row labels, their order and the section headings are the UK KM1 template line for line, "
+    "which is what identifies the table; the numbers are simply absent from the source and are not "
+    "added here.\n"
+    "* EACH AMOUNT ROW IS PRINTED TWICE, one caption per unit, and that is a presentation of the Bank's "
+    "24 published rows rather than 35 disclosed ones. Because the unit break falls between COLUMNS "
+    "(editions) while a spreadsheet row can carry only one unit, each of the 11 amount rows appears as "
+    "two adjacent rows: a \"(£'000 ...)\" caption carrying the FY2023 column, and a \"(£ — whole "
+    "pounds ...)\" caption carrying FY2022/FY2021. The two captions of a pair are the SAME template row, "
+    "read out of two editions that printed it in two different units; neither series is merged into the "
+    "other and no figure is restated. This is the shape the KM1 map's rule 17 prescribes for a unit break "
+    "between editions, and the same shape rule 5 uses for the 1 January 2022 leverage basis break. Ratio "
+    "rows are single, because percentages are percentages in both editions.\n"
+    "* REDUCED ROW SET. Both editions print the same 24 value rows. The template rows Cynergy omits "
+    "entirely - UK 7b/7c/7d in part, UK 8a, UK 9a, 10, UK 10a, 14a-14e and the MREL block - are not "
+    "shown as blank rows because the Bank does not print them at all; an omitted row and a row printed "
+    "empty are different disclosures. Cynergy does print 'Additional CET1 SREP requirements (%)' and "
+    "'Total SREP own funds requirements (%)' but not the AT1/T2 SREP split.\n"
+    "* UNIT BREAK BETWEEN EDITIONS, the reason the amount rows above carry a per-year unit marker. The "
+    "2023 edition says 'All amounts are presented rounded to the nearest thousand except where stated' "
+    "and prints CET1 capital as 306,251. The 2022 edition prints the same row in WHOLE POUNDS "
+    "(287,446,662) and states no unit at all, on or above the table. Each cell here is the figure the "
+    "edition in which that year is the reporting year actually printed, so FY2023 amounts are £'000 and "
+    "FY2022/FY2021 amounts are £. They are deliberately NOT rescaled onto one unit: this sheet "
+    "reproduces a published template, and the £'000 equivalents for FY2022/FY2021 are already on the "
+    "individual Pillar 3 metric sheets that follow (e.g. CET1 Capital FY2022 = 287,447). Percentage "
+    "rows are unaffected.\n"
+    "  DO NOT 'FIX' THIS. The four amount rows that also appear on a metric sheet (CET1 capital, Tier 1 "
+    "capital, Total capital, Total risk-weighted exposure amount) look a thousand times too large in "
+    "their \"(£ — whole pounds)\" caption beside those sheets. That is the Bank's own presentation, not "
+    "an error: 287,446,662 / 1000 = 287,446.662 vs the metric sheet's 287,447, and 1,417,122,603 / 1000 "
+    "= 1,417,122.603 vs 1,417,123 - each pair agrees to the rounding, which is itself the proof that the "
+    "difference is the unit and not a digit slip. All four rows were re-read cell by cell off p.6 of the "
+    "2022 edition on 2026-09-16 and are exactly as printed, as were the other seven amount rows. "
+    "Rescaling them onto £'000 would make this sheet stop reproducing the disclosure. With the two-"
+    "caption split above, verify_workbook.py resolves each cell's unit from its own row label and "
+    "cross-checks all of them against the metric sheets automatically - they agree.\n"
+    "* PRECISION AS PRINTED. The countercyclical buffer row is printed '2.00%' in the 2023 edition but "
+    "'1%' and '0%' (no decimals) in the 2022 edition; '0%' is a printed zero and is kept as such.\n"
+    "* A DASH IS NOT A ZERO. The 2022 edition prints '-' in all three Net Stable Funding Ratio rows of "
+    "its FY2021 comparative column - the Bank had no NSFR disclosure for 2021 on this basis - so those "
+    "three FY2021 cells are BLANK here, not zero. (The 2021 edition's own narrative states an FY2021 "
+    "NSFR of 130%, on its own different basis; that figure is on the NSFR sheet, not here.)\n"
+    "* FY2021 COMES FROM THE 2022 EDITION'S COMPARATIVE, not from its own year's document. The 2021 "
+    "Pillar 3's own table (p.20, 'Key capital, liquidity and leverage metrics', columns '2021' and "
+    "'2020', figures in £m) is a much narrower PRE-KM1 disclosure: nine value rows, no SREP, buffer, "
+    "NSFR or HQLA sections at all, and captioned 'Total risk-weighted assets' rather than the "
+    "template's 'Total risk-weighted exposure amount'. It is not the KM1 template and is not reproduced "
+    "here as one. Its rounded figures do agree with the comparative used (CET1 £197m, Total capital "
+    "£227m, RWAs £1,417m, CET1 ratio 13.9%, Total capital ratio 16.0%, leverage 5.5%, LCR 243%).\n\n"
+    "WHY FY2024, FY2025 AND FY2020-FY2014 ARE BLANK - both ends are enumerated absences, not failed "
+    "searches:\n"
+    + ENUMERATION_NOTE
+    + " Re-run independently on 2026-09-16 for this ticket with the same result: the page serves six "
+      "Pillar 3 editions (FY2018, FY2019, FY2020, FY2021, FY2022, FY2023) and nothing later.\n"
+    "At the older end, the FY2018, FY2019 and FY2020 editions contain no key-metrics table of any kind "
+    "(the UK KM1 template arrives with the Disclosure (CRR) Part of the PRA Rulebook, which post-dates "
+    "them), and FY2014-FY2017 predate standalone Pillar 3 publication by this entity altogether. Those "
+    "years' individual capital and ratio figures, where the Bank disclosed them at all, are on the "
+    "metric sheets that follow, sourced from narrative capital tables rather than from a KM1.\n\n"
+    + FY2023_RESTATEMENT_NOTE
+    + "\nThat restatement is visible on this sheet as a deliberate difference between what the 2023 "
+      "edition shows in its FY2022 comparative column (LCR 249.66%, NSFR 144.09%, HQLA 525,228, net "
+      "outflows 212,745, available stable funding 3,546,316, leverage exposure 3,886,759 - all £'000) "
+      "and the FY2022 column reproduced above from the 2022 edition itself.\n\n"
+    + SDDT_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Cynergy Bank Plc — KM1 Key Metrics",
+    subtitle="The Bank's own published UK key-metrics (KM1) table, reproduced in Cynergy's row order and "
+             "printed precision, Consolidated Bank basis. Cynergy prints this table in only two editions "
+             "(2022 and 2023) and prints no template row numbers in either. AMOUNT ROWS ARE NOT ONE UNIT: "
+             "the 2023 edition prints £'000, the 2022 edition whole pounds, and each year keeps its own "
+             "edition's presentation, so every amount row appears TWICE - once captioned (£'000) carrying "
+             "FY2023, once captioned (£) carrying FY2022/FY2021. Those pairs are the same published row in "
+             "two units, not two disclosures, and nothing is rescaled. FY2024/FY2025 are "
+             "blank because Cynergy became an SDDT on 17 January 2025 and no longer publishes Pillar 3; "
+             "FY2020 and earlier predate the template.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=300,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [

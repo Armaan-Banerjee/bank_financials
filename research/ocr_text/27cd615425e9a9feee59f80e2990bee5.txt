@@ -1,0 +1,4093 @@
+Company Registration number: 07653660
+
+ANNUAL ACCOUNTS
+
+For the year ended on 31 March 2019
+Glossary Uy) Union Bank
+of India (UK) Ltd
+
+Notation Description
+
+|AFS (Available for Sale
+
+ALCO Asset and Liability Committee
+
+AML Anti-Money Laundering
+
+CCF Credit Conversion Factor
+
+CET Common Equity Tier
+
+CRD Capital Requirements Directive
+
+CRR Capital Requirements Regulations
+
+DPD Days Past Due
+
+DPO Data Protection Officer
+
+ECL Expected Credit Loss
+
+EMC Executive Management Committee
+
+FCA Financial Conduct Authority
+
+F-IRB Foundation Internal Rating Based Approach
+
+FSCS Financial Services Compensation Scheme
+
+FVOCI Fair Value through Other Comprehensive Income
+
+FVTPL Fair Value through Profit and Loss
+
+GDP Gross Domestic Product
+
+IGDPR General Data Protection Regulation
+
+GSII |Globally Systemically Important Institutions
+
+HFT Held For Trading
+
+HQLA High Quality Liquid Asset
+
+HTM Held to Maturity
+
+IAS International Accounting Standard
+
+IASB International Accounting Standard Board
+
+ICAAP Internal Capital Adequacy Assessment Process
+
+IcG Individual Capital Guidance
+
+IFRS International Financial Reporting Standards
+
+ILAAP Internal Liquidity Adequacy Assessment Process
+
+ILG Individual Liquidity Guidance
+
+IT Information Technology
+
+LGD Loss Given Default
+
+MI Management Information
+
+MLRO Money Laundering Reporting Officer
+
+NPV Net Present Value
+
+oci Other Comprehensive Income
+
+OECD Organisation for Economic Co-operation and Development
+
+PD Probability of Default
+
+PRA Prudential Regulation Authority
+
+PSD Payment Service Directive
+
+RCC Risk and Compliance Committee
+
+ROU Right of Use
+
+S&P ‘Standard & Poor
+
+SICR Significant Increase in Credit Risk
+
+‘SPPI Solely Payments of Principal and Interest
+
+Table Ce it
+Oe saci @G Union Bank
+
+of India (UK) Ltd
+
+Contents Page No
+Glossary 1
+Officers and professional advisers 2
+Directors’ report 3
+Strategic report 5
+Statement of directors’ responsibilities 14
+Independent auditor's report to the members of Union Bank of India (UK) Ltd 15
+Income Statement 22
+Statement of Comprehensive Income 23
+Statement of Financial Position 24
+Statement of Changes in Equity 25
+Statement of Cash flows 26
+
+Notes to the Financial Statements 27
+OFFICERS AND PROFESSIONAL ADVISERS G Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019
+Company Registration Number
+
+The Board of Directors
+
+Registered Office
+
+Statutory Auditor
+
+of India (UK) Ltd
+
+07653660
+
+Mr. Rajkiran Rai G.
+Chairman
+
+Mr. Raj Kamal Verma
+Nominee Director (Resigned on 28/02/2019)
+
+Mr. Viswesvaran Radhakrishnan
+Managing Director & CEO (Appointed on 26/04/2018)
+
+Mr. Brajeshwar Sharma
+Managing Director & CEO (Resigned on 01/05/2018)
+
+Dr Anand Kumar
+Executive Director & Dy. CEO
+
+Mr. John Kerr
+Non-Executive Director
+
+Mr. Patrick Joseph Quinn
+Non-Executive Director
+
+Senator House
+
+85 Queen Victoria Street
+London
+
+EC4V 4AB
+
+Deloitte LLP
+
+2 New Street Square
+London
+
+EC4A 3BZ
+DIRECTORS' REPORT
+
+Fon Te Yan eNoco 3 Manch 2019 ] Union Bank
+of India (UK) Ltd
+
+The Directors have pleasure in presenting the annual report and the audited financial statements for
+
+the year ended 31 March 2019. These financial statements have been prepared in accordance with
+
+the Companies Act 2006 and applicable International Financial Reporting Standards (IFRSs) as
+
+endorsed by the European Union.
+
+Union Bank of India (UK) Ltd (the Bank) is a wholly owned subsidiary of Union Bank of India, one of
+the leading public-sector banks in India.
+
+Principal activity and Business review
+
+The Bank received permission to function as a Bank from the Prudential Regulation Authority (PRA)
+on 6 September 2013 and commenced its commercial operations on 10 July 2014. The Bank is
+regulated by the Financial Conduct Authority (FCA) and the Prudential Regulation Authority (PRA)
+
+The Bank offers a range of financial products to its customers covering retail, corporate and
+commercial banking along with trade finance and treasury services.
+
+Key Risks associated with current Business model are discussed in Strategic report and Risk Review
+(Note no 29)
+
+Proposed initiative
+
+During the year 2019-20, the Bank is working on following propositions:
+
++ Shifting the risk weighted assets from high risk to low and medium risk category;
+
++ Creating new products and facilities to cater to the need of existing and potential customers.
+
+Going concern
+
+The Financial Statements are prepared on a going concern basis. The Bank has adequate resources
+to continue its operations for the foreseeable future along with strong support from the parent Bank in
+the form of capital and operations.
+
+The Bank has considered its resilience in the face of stress, prominent events such as the UK’s
+decision to leave the EU and known challenges such as significant increase in Impaired Assets. In
+making the said assessment, the Bank has considered relevant information for the future, which was
+at least, but not limited to, 12 months from the reporting date.
+
+During going concern assessments, information considered includes; financial projections, estimated
+capital, funding, liquidity requirements, development of products, contingent liabilities, and probable
+economic and market outlook. The Bank monitors stress testing results as part of the adherence to
+the parameters mentioned in ICAAP, ILAAP, Risk Appetite and Risk Management Framework.
+
+Capital structure
+
+The Bank has maintained adequate capital base considering the current minimum requirements of the
+PRA.
+
+The issued and paid up share capital as of 31 March 2018 was $90m and £2 and there was further
+capital infusion of $10m during the financial year, making the total issued and paid up share capital as
+at 31 March 2019 of $100m and £2. One hundred percent shares of the Bank are held by Union Bank
+of India, the parent Bank.
+
+Political donations
+During the year the Bank did not make any political donations (2018: Nil).
+DIRECTORS’ REPORT
+
+FOR THE YEAR ENDED 31 MARCH 2019 wm Union Bank
+of India (UK) Ltd
+
+Directors
+
+The Directors who served during the year and to the date of signing the financial statements, are
+listed on page 2.
+
+Directors’ indemnities
+Directors’ and Officers’ Liability Insurance is maintained by the Company for all Directors.
+
+Directors’ and Officers’ Liability insurance covers defence costs for the Directors in certain
+circumstances. All the Directors were granted specific deeds of indemnity and any Director appointed
+subsequently has been granted such an indemnity. This means that on their appointment, new
+Directors are granted an indemnity as defined in the Companies Act 2006 in respect of any third party
+liabilities that they may incur as a result of their service by being on the Board of Union Bank of India
+(UK) Ltd. All Directors’ indemnities were in place during the year and it would remain in force.
+
+Statement as to disclosure of information to the auditor
+
+Each of the persons who is a Director on the date of approval of this annual report confirm that:
+
++ So far as the Directors are aware, there is no relevant audit information of which the Bank's
+Auditor is unaware of;
+
++ The Directors have taken all the steps that they ought to have taken as a Director in order to
+make themselves aware of any relevant audit information and to ensure that the Bank's Auditor is
+aware of that information
+
+This confirmation is given and should be interpreted in accordance with the provisions of section 418
+
+of the Companies Act 2006.
+
+Auditor
+There was no change in the Auditor of the Bank for the year ended 31 March 2019.
+
+Deloitte LLP are the Statutory Auditor of the Bank, and they have expressed their willingness to
+continue as Auditor of the Bank.
+
+General Meeting
+In accordance with the Companies Act 2006, the Bank is not required to hold an Annual General
+Meeting (AGM).
+
+Dividends
+The Directors do not recommend the payment of a dividend this financial year (2018: Nil).
+
+Events after Balance Sheet date
+The Directors are not aware of any reportable event after the Balance Sheet date.
+
+iS r was approved by the Board on 3rd May 2019 and signed on its behalf by:
+
+Viswesvaran Radhakrishnan
+Managing Director & CEO
+
+Registered office:
+Senator House
+
+85 Queen Victoria Street
+London - EC4V 4AB
+STRATEGIC REPORT 2
+FORTHE YEAR ENDED 31 MARCH 2018 G Union Bank
+of india (UK) Ltd
+
+The Directors have pleasure in presenting the Strategic Report and the financial statements for Union
+Bank of India (UK) Ltd. for the year ended 31 March 2019.
+
+Business model
+The Bank is a UK incorporated Bank authorised by the PRA and regulated by the FCA and the PRA.
+
+The Bank's focus is to build a sustainable business model with a strong and robust corporate
+governance and control environment. The Bank offers a simple range of products to its customers
+covering retail, corporate and commercial banking, trade finance and treasury services.
+
+The Bank offers retail and commercial banking services, with the focus of the commercial banking
+services on corporate and small- and medium-enterprise (“SME”) markets in UK. One of the other key
+business lines that the Bank focuses is the funding requirements of Indian linked corporates,
+leveraging off Union Bank's strength as a leading provider of corporate funding to Indian corporates.
+
+Continuing with the current funding structure, Bank manages its funding mainly through a combination
+of wholesale (corporate) deposits and retail deposits.
+
+Primary objectives
+The Bank's primary objectives are:
++ Finance the overseas business needs of Indian diaspora in the UK / Overseas,
++ Attract retail depositors by extending market competitive interest rates,
++ Excel in customer service through operational excellence,
++ Hold adequate Capital and sufficient Liquidity through robust governance and control,
++ Conduct its Business by complying with the regulatory expectation,
++ Maximise the Risk adjusted return on Capital by optimum utilization of resources.
+
+Review of the business
+The Bank commenced its commercial operations in July 2014. The Bank has set up robust systems,
+
+procedures and policies for prudent management of its business and its associated risks. The
+business strategy of the Bank has been mainly driven by the increased globalisation of the Indian
+economy, the growing trend of Indian corporates expanding overseas, the large population of Non-
+Resident Indians (NRI), persons of Indian origin across the globe and also overseas companies
+looking to invest in India.
+
+The purpose of the Strategic Report is to provide information for shareholders and help them to
+assess how the directors have performed their duty under Section 172 of the Companies Act 2006,
+the key objective of which is to promote the success of the bank. In doing so, the bank has regarded
+to a series of factors listed in the section, which refer to the promotion of economic, social and
+governance factors, taking other stakeholders into account.
+
+Income statement review
+2019 2018
+USD '000 USD ‘000
+Net interest income 13,348 11,062
+Non-interest income 211 1,171
+Operating expenses (5,013) (3,921)
+Impairment loss allowances (25,181) (1,930)
+Profit/(loss) before tax (16,635) 6,382
+Profit/(loss) after tax (13,696) 5,168
+
+By income statement review, movements compared to previous financial year were:
+* Loss during the year was $13.7m, mainly due to increase in Impairment loss allowance on
+defaulted assets
++ Non-interest income was down 80%, mainly due to reduction in profits/gains on sale of
+investments & fees and commission income.
+STRATEGIC REPORT
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+of India (UK) Ltd
+
+Income statement review (continued)
+
+* Operating expenses before impairment allowances were up 28% due to:
+- Increase in personnel costs by 13% and
+- IT, regulatory compliance and legal & professional costs increased by 55%.
+These expenses are normal considering the Business growth
+
+* During the year, impairment loss allowance of $25.2m was recognised due to increase in
+defaulted assets by $47.0m.
+The Bank has adopted IFRS 9 with effect from 1st April 2018. "Incurred loss Model" was used to
+calculate Impairment Loss (as per IAS39) and with adoption of IFRS 9, "Expected Credit loss"
+(ECL) model has been used
+
+* Tax credit of $2.9m recognised during the year (2018: $1.21m) due to losses
+
+Balance sheet review
+
+Assets 2019 2018
+
+USD ‘000 USD ‘000
+Loans and advances to customers 302,055 336,818
+Loans and advances to banks 26,337 :
+Financial Investments 115,507 98,004
+
++ Loans and advances to customers fell by 10% to $302.1m (2018: $336.8m) due to a conscious
+decision taken by the board to consolidate at the existing level.
++ Loans and advances to banks has increased to $26.3m at 31 March 2019 (2018: Nil).
+
++ Investment portfolio increased by 18% to $115.5m (2018: $98m), with planned increase in
+investment in HQLA for better liquidity management.
+
+Liabilities 2019 2018
+
+USD ‘000 USD ‘000
+Deposits from banks (including intragroup & Repo) 120,277 127,650
+Deposits from customers 239,778 215,566
+Equity 93,317 94,591
+
+* Deposits from banks are maintained at $120.3m at 31 March 2019 (2018: $127.7m) to fund the
+interest earning assets and to focus on medium to long term deposits to make overall funding
+stable.
+
+* Deposits from customers have grown by 11% to $239.8m at 31 March 2019 (2018: $215.6m) as
+the bank is focused on originating and retaining retail deposit accounts. The deposits as of Mar'19
+consists of 58% as Retail and 42% as Wholesale Deposit.
+
+* Total shareholders’ equity reduced to $93.3m at 31 March 2019 (2018: $94.6m), due to the loss
+reported during the financial year by the bank owing to increased provision on the new default
+accounts and was partially offset by the infusion of additional capital of $10m equity shares by the
+Parent Bank.
+
+Outlook (Source - World Economic Outlook report from International Monitory Fund)
+
+Macro Environment:
+
+The global economy has continued to expand, but third-quarter growth of 2018 has disappointed
+some economies. Idiosyncratic factors (new fuel emission standard in Germany, natural disasters in
+Japan) weighed on activity in large economies. But these developments occurred against a backdrop
+of weakening financial market sentiment, trade policy uncertainty, and concerns about China's
+outlook. Global growth for 2019 is estimated at 3.5% and for 3.6% in 2020 as compared to 3.7% for
+2018, as per the January 2019 World Economic Outlook (WEO) update, despite weaker performance
+in some economies, notably Europe and Asia.
+
+Growth in emerging and developing Asia is projected to dip from 6.5% in 2018 to 6.3% in 2019 and
+6.4% in 2020. India’s economy is poised to pick up in 2019, on strengthening investments and robust
+private consumption, as inflation pressures ease.
+STRATEGIC REPORT 2
+Fon THE YEAR ENDED 31 MARCH 2019 @m Union Bank
+
+of India (UK) Ltd
+
+Outlook (Continued)
+
+UK Macro Environment:
+
+Economic growth is projected to increase slightly in 2019 before slowing in 2020, on the assumption
+that there is a smooth exit from the European Union. An expansionary fiscal stance and a slow
+recovery in exports are expected to support growth, while the monetary stimulus will be gradually
+withdrawn. Inflation is projected to converge to 2% by the end of 2020.
+
+With inflation above target and large uncertainties remaining, monetary policy should normalise at a
+very gradual pace. The fiscal impulse is expected to peak in 2019. Economically, the preferred Brexit
+option should be to forge an agreement that will ensure the closest possible trading relationship with
+the European Union and complete access for financial services to overseas markets. Temporary
+measures will be needed to cushion the economy and support displaced workers in the event of a no-
+deal exit.
+
+GDP growth has eased to 1.4% in 2018. The depreciation of Sterling has increased input costs and
+led to pressures on corporate margins and private sector wages. Economic activity is likely to grow at
+just above 1% in 2018-19. The major risk for the economy is the uncertainty surrounding the exit
+process from the European Union, which could hold back private spending more than forecast.
+
+Geographical Macro Environment:
+GDP in Emerging Asia is estimated to grow by an annual average of 6.1% in 2019-23, based on the
+OECD Development Centre's medium Term Projection Framework (MPF-2019).
+
+For India, the Economic growth is forecasted to slow somewhat but remain robust, at close to 7.5% in
+2019 and 7.7% for 2020. Higher oil prices and the rupee depreciation are putting pressure on
+demand, inflation, the current account and public finances. However, business investment and
+exports will be strong, past structural reforms — including the new Insolvency and Bankruptcy Code,
+smoother implementation of the Goods and Services Tax (GST), better roads, electricity, ports and
+recapitalisation of the public sector Banks — are paying off the expected dividend to the Indian
+economy. Further, during the ensuing financial year 2019-20 General elections will be held, which will
+also decide the future growth path and financial plans.
+
+Growth in the Middle East, North Africa, Afghanistan, and Pakistan region is expected to remain
+subdued at 2.4 percent in 2019 before recovering to about 3 percent in 2020. Multiple factors weigh
+‘on the region's outlook, including weak oil output growth, which offsets an expected pickup in non-oil
+activity (Saudi Arabia); tightening fiscal conditions (Pakistan); US Sanctions (Iran), and across several
+economies, geopolitical tensions.
+
+In Sub-Saharan Africa; growth is expected to pick up from 2.9 percent in 2018 to 3.5 percent in 2019,
+and 3.6 percent in 2020. For both years the projection is 0.3 percentage point lower than last
+October's projection, as softening oil prices have caused downward revisions for Angola and Nigeria.
+The headline numbers for the region mark significant variation in performance, with over one-third of
+sub-Saharan economies expected to grow above 5 percent in 2019-20.
+
+In Euro Area , growth is set to moderate from 1.8 percent in 2018 to 1.6 percent in 2019 and 1.7
+percent in 2020. Growth rates have been marked down for many economies, notably Germany, Italy
+and France. The growth in emerging and developing Europe in 2019 is now expected to weaken more
+than previously anticipated, to 0.7 percent (from 3.8 percent in 2018) despite generally buoyant growth
+in Central and Eastern Europe, before recovering to 2.4 percent in 2020.
+
+Forward looking
+
+The UK is scheduled to leave the EU during 2019. However, the bank's projections and business plan
+is broadly based on the parent bank's strategy and global outlook, therefore the bank is not much
+affected by the Brexit outcome and UK separation from EU without deal.
+
+Brexit Impact - As the Bank does not have any branch or business operations outside UK, change in
+passporting rights would not have any direct impact on Bank's operations. Bank expects to continue to
+operate as per plan, without bringing any material change in the business model.
+STRATEGIC REPORT
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+Forward looking (continued)
+
+There is substantial uncertainty around the baseline projection of about 1.5 percent growth in the
+United Kingdom in 2019-20. The unchanged projection reflects the offsetting negative impact of
+prolonged uncertainty about the Brexit outcome and the positive impact from fiscal stimulus
+announced in the 2019 budget. This baseline projection assumes that a Brexit deal is reached and the
+UK transitions gradually to the new regime.
+
+Uncertain economic environment
+
+UK economic growth was lower in 2018, compared to 2017, as uncertainty over Brexit adversely
+impacted upon business confidence, with industry investment plans being delayed. Unemployment
+remains low and average weekly earnings have continued to trend higher since early 2017. Arrears
+remain at historically low levels, with good credit quality being maintained across the lending
+portfolios, supported by prudent approach to lending.
+
+Some normalisation from these cyclically low levels could arise over the medium term, should the
+credit cycle reach a turning point. Regulatory bodies have cited potential emerging risks to the global
+financial system from leveraged loans in the Corporate Debt markets, contagion from high levels of
+non-performing loans in the Eurozone, and a general repricing of risk premia in the markets.
+Wholesale funding costs for banks have increased as long-term funding spreads widened in 2018 due
+to the pace and scale of banks’ debt issuance.
+
+Retail Banking
+
+The Bank offers personal current accounts, personal savings accounts, business current accounts,
+fixed deposits and service for remittance to India. The Bank also facilitates Non-Resident Indian
+customers, based in the UK, for their India-related banking facilities.
+
+Corporate and Commercial Banking
+The Bank's corporate business aims to provide products and services to enhance trade and
+
+investment between the UK and other countries, including India. The Bank is looking to expand its
+product range, developing and deepening existing relationships and acquiring new ones, while
+minimising risk by remaining focused on its core competencies.
+
+Treasury
+
+The Treasury Function focuses on managing the funding, market and liquidity risks of the Bank. The
+Bank complies with and maintains a Liquidity Coverage Ratio (LCR) in line with the Individual Liquidity
+Guidance (ILG) stipulated by the PRA. The Bank also maintains an investment portfolio of Corporate
+Bonds. Both HQLA and Corporate Bonds are classified in line with the investment policy of the Bank,
+at the time of acquiring the investment. The Bank reviews the asset/liability maturity mismatches on an
+ongoing basis and maintains liquidity gaps within prescribed limits, which are monitored by the Asset
+and Liability Committee (ALCO) of the Bank.
+
+The Bank is able to access wholesale borrowings from the market and has been able to raise bilateral
+loans and borrowings at a competitive cost by leveraging on the existing relationships of Union Bank
+of India. Going further The Bank is planning to slowly part-off the high risk weighted assets from the
+balance sheet and looking for opportunity to on-board low / medium risk weighted assets.
+
+Corporate Governance
+
+Good governance is critical to deliver a sound and well managed business. At the centre of good
+governance is an effective Board which takes the first responsibility for maintaining the safety and
+soundness of the Bank.
+
+The Bank places a strong emphasis on internal governance and maintenance of high ethical
+standards in its working practices.
+
+The Bank's corporate governance is driven by the Board which comprises of two Executive Directors,
+two Non-Executive Directors representing the shareholder and two independent UK based Non-
+Executive Directors and the Board meets quarterly. All the Directors have considerable banking and
+regulatory experience gained at a senior level within leading financial institutions.
+STRATEGIC REPORT
+
+FOR THE YEAR ENDED 31 MARCH 2019 @m Union Bank
+of India (UK) Ltd
+
+Corporate Governance (continued)
+
+The Board has the collective responsibility for promoting the long-term success of the Bank. While the
+
+Executive Directors have direct responsibility for business operations, the Non-Executive Directors are
+
+responsible for bringing independent judgement and to analyse the decisions taken by the Executive
+
+Directors.
+
+The Bank follows the industry standard approach of “Three Lines of Defence” comprising:
+
++ Operational controls as set out in functional and departmental procedures, manuals
+
++ Oversight, monitoring and periodic reporting by the Bank's control functions and
+
++ Internal Audit
+
+Responsibility for overseeing the risk and compliance framework of the Bank is devolved to the
+following three Board level committees.
+
+Risk and Compliance Committee (RCC) meets quarterly, consisting of two independent UK based
+Non-Executive Directors, (one of whom acts as Chair), the two Executive Directors.
+
+Audit Committee of the Board (ACB) meets quarterly, consists of two independent UK based Non-
+Executive Directors (one of whom acts as Chair).
+
+Management Committee of the Board (MCB) meets quarterly, consisting of two independent UK
+based Non-Executive Directors and the two Executive Directors (CEO acts as Chair).
+
+a)
+b)
+c)
+
+Anti-Money Laundering (AML) & Compliance
+The Bank maintains an independent Compliance & MLRO Function, which ensures that the business
+is conducted in compliance with all regulatory requirements.
+
+The Bank's Compliance Function is responsible for ensuring that adequate policies and procedures
+are in place to ensure that the Bank and its employees are compliant with the legal and regulatory
+obligations in respect of both AML and Conduct of Business. Such policies and procedures are
+designed to detect and minimise any risk of failure by the Bank to comply with its regulatory
+obligations, and any associated risks.
+
+Internal Audit
+
+The Internal Audit function is the third line of defence and is independent of operations. It is
+responsible for reviewing all business lines and support functions such as Risk Management,
+Compliance and IT within the Bank. Internal Audit provides independent assurance that the Bank's
+policies and procedures have been implemented effectively and there are adequate controls and
+processes are in place to mitigate risks.
+
+Risk management framework
+
+The Bank has developed a risk management framework, including granular articulation of risk
+appetite, to ensure that the key risks are clearly identified, understood, measured, monitored and
+mitigated. The Bank is primarily exposed to credit risk, market risk, liquidity risk and operational risk
+including cyber risk.
+
+The Bank's risk appetite has been developed and articulated within the broader context considering
+the nature, scope, scale and complexity of the Bank's activities as per the business plan. The
+framework has been based on quantitative parameters such as liquidity and capital, as well as
+qualitative parameters such as reputation risk and conduct risk.
+
+Risk appetite statement is approved by the Board of the Bank. These are developed as part of the
+planning and budgeting process to ensure that the Bank's business plans are achievable within its
+capital and liquidity resources. Both Internal Liquidity Adequacy Assessment Process (ILAAP) and
+Internal Capital Adequacy Assessment Process (ICAAP) are subject to periodic review and update in
+response to material changes to the business or regulatory environment.
+STRATEGIC REPORT
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+Risk management framework (continued)
+
+The ILAAP and the ICAAP are reviewed by the PRA, which advises the Individual Liquidity Guidance
+(ILG) and Individual Capital Guidance (ICG) for the Bank. The Bank aims to comply with the ILG and
+ICG at all times.
+
+Brexit
+
+Bank considers Brexit-related risks to be manageable. However, given the ongoing uncertainty, the
+Bank has continued to focus on the refinement of the Brexit related contingency plans and also
+separately on actions that Bank would take, in the event of a no-deal Brexit. In such a scenario, the
+Bank could experience increased levels of activity, as customers seek to deal with changes in their
+financial circumstances. The Bank's planning has included testing the operational readiness to ensure
+that the Bank can continue to operate effectively in the event of this heightened activity. The Bank has
+also undertaken stress tests to ensure the its remains financially resilient, in the event of an economic
+shock following Brexit.
+
+Financial crime
+
+Aligned with the evolving regulatory environment in the UK, the Bank continues to upgrade its
+Financial Crime control framework. A centralised programme with direct oversight and governance
+has been established, including review by Risk and Compliance Committee (RCC). The Bank has
+enhanced systems and controls to aid compliance with its legal and regulatory obligations.
+
+Cyber-attacks
+
+In 2018, threats from the external cyber environment continued to evolve, due to heightened geo-
+political tension, and active well-established cyber-crime groups. There were also high profile
+incidents during the year impacting airlines, social media services, NHS services, and other UK
+banks. Specific mitigants implemented in Cyber Security Plans are currently proving effective and the
+Bank has not experienced any significant disruption to date. Bank is continuously improvising the
+controls in the system and processes to withstand the ever increasing cyber threat as it remains
+vigilant about such impending threat.
+
+Building and maintaining capital strength
+
+Decisions made by regulators on the implementation and interpretation of capital rules and on macro-
+prudential issues can impact the capital management, such as adjustments to the countercyclical
+capital buffer. The bank continuously reviews its capital position on a forward-looking basis, and it is
+also subject to the Bank of England's Stress Testing Regime.
+
+Credit Risk
+
+The risk of loss due to the default or credit quality deterioration of a customer or counterparty to which
+the Bank has provided credit, or for which the Bank has assumed a financial obligation. Credit risk is
+explained in detail in notes to accounts (Note no 29)
+
+The Bank has the following committees of executives:
+
++ Asset and Liability Committee (ALCO)
+
++ Credit Committee (CC)
+
++ Executive Management Committee (EMC)
+
++ Investment Committee (IC)
+
++ IT and Operations Committee (ITOC)
+
+The minutes of the committee meetings are placed before the Risk & Compliance Committee of the
+Board for review and discussion.
+
+Details of the Bank's risk management objectives and policies, including those in respect of financial
+instruments, and details of the Bank's indicative exposure to risks are given in Note 29.
+
+10
+STRATEGIC REPORT
+ron THe YEAR ENDED 31 MARCH 2019 @m Union Bank
+
+of India (UK) Ltd
+
+Internal control and financial reporting
+
+The Directors are responsible for establishing effective internal control in the Bank and for reviewing
+its effectiveness. Procedures have been designed for safeguarding assets against unauthorised use
+or misappropriation, for maintaining proper accounting records and for reliability of financial
+information used within the business and for publication.
+
+Such procedures are designed to contain and manage rather than eliminate the risk of failure to
+achieve business objectives and can only provide reasonable and not an absolute assurance against
+material misstatement, errors, losses or fraud. Policy and procedures that the Directors have
+
+established are designed to provide effective internal control within the Bank.
+The Directors and Senior Management of the Bank have adopted policies which set out the Board's
+
+approach and approval to risk management and internal controls. Significant risks identified in
+connection with the development of new activities are subject to consideration by the Board, while the
+risks of new products are reviewed by the RCC, which recommends to the Board for approval.
+
+The effectiveness of the internal control system is reviewed regularly by the Board, RCC and the Audit
+Committee.
+
+General Data Protection Regulation (GDPR)
+
+The Bank has successfully implemented the expansion of Data Protection Act known as General Data
+Protection Regulation (GDPR) in May 2018. This requires ‘Privacy by Design and Protection by
+Default’ with regards to data protection throughout the Bank.
+
+Bank had commenced preparation in the month of Jan 2018 and that initial awareness workshops had
+been organized along with staff training sessions. The project team has performed GAP Analysis,
+created Data flow maps, registers, processes, performed Data Protection Impact Assessments and
+also have in place Privacy statement and other policies with regard to Data Protection.
+
+Bank has a designated Data Protection Officer (DPO) in the UK and also a local DPO in India to take
+care of any GDPR related issues for UK office raised in India. All areas of customer information are
+monitored by DPO and Regular MI is provided to the Management in the Executive Management
+Committee.
+
+Ongoing training is being provided to staff with regards to the GDPR and data protection.
+
+Modem Slavery and Human Trafficking
+
+The Bank has zero tolerance approach to modern slavery in the organisation and its supply chains.
+Bank will not knowingly support or conduct business with any commercial organisation involved in
+such activities. The Bank relies on third party vendors to provide services and products. Bank expects
+all of its goods and services suppliers to act in a responsible, open, and ethical way. Bank considers
+the prevention, detection and reporting of modern slavery in any part of our organisation or supply
+
+chain as the responsibility of all those working for and its behalf. .
+The Bank generally does not consider a high risk of slavery or human trafficking occurring in its supply
+
+chain. However, Bank operate a risk-based approach in reviewing suppliers who may carry a higher
+risk in this respect. Bank has developed an enhanced supplier and third-party management
+framework including a Procurement policy which will include affirmation of Bank’s commitment to
+combatting slavery and human trafficking in its supply chain.
+
+The Bank emphasis on Third Party Supplier Risk happens through regular assessment, which is
+finally reviewed by Executive Management Committee and Risk and Compliance Committee.
+Regulatory environment
+
+The Capital Requirements Regulations (CRR) in place include implementing technical standards for
+reporting i.e. the guidance, templates, technical standards and validation required for reporting to
+supervisors.
+
+The Bank is aware that the regulations contain a provision that sets out the scope, frequency and
+remit for Capital Requirements Directive IV (CRD IV) reporting. The reporting documents have been
+developed by the European Banking Authority (EBA).
+
+The Bank operates in a highly regulated environment and is therefore subject to regulatory risk. The
+changes to the regulations are made frequently, however the Banks’ financial control and risk
+management functions ensure that the Bank is compliant with the rules.
+
+11
+STRATEGIC REPORT
+
+FOR THE YEAR ENDED 31 MARCH 2019 4) Union Bank
+of India (UK) Ltd
+
+The Bank continues to face a complex regulatory change agenda, with key projects due for delivery
+
+across 2019 and 2020 including Payment Service Directive-Il (PSD-Il). The Bank develops
+
+appropriate controls and processes in order to be compliant.
+
+Capital Requirements Directive
+
+The Bank is subject to the CRD IV framework, which implements capital requirements in the revised
+European Union Basel Ill framework. The Bank complies with the capital requirements of CRR and
+CRD IV (Basel Ill), as set out in the PRA’s approach document to banking supervision mainly covering
+the composition and quality of capital.
+
+CRD IV plays a significant role in determining how the Bank and other financial institutions globally
+undertake their business. The Bank is compliant with the Common Reporting standards (COREP) for
+capital adequacy and large exposures.
+
+It is the Bank's policy to remain compliant with all regulatory requirements at all times. In this
+endeavour the Bank continues to update its policies and procedures as required by the changes
+brought in by the regulators and statutory authorities.
+
+The framework for regulatory capital
+
+The PRA determines a minimum regulatory capital level and additional buffers for the banks, as set
+out under the Basel and EU risk-weighted framework. The UK capital framework comprises four parts:
+
++ Pillar 1 — Requirements to provide protection against credit, market and operational risk, for
+which banks follow internationally agreed methods of calculation and calibration
+
++ Pillar 2A — Requirements imposed by the PRA reflecting estimates of risks either not addressed
+or only partially addressed by the international standards for Pillar 1
+
++ CRD IV buffers, as applicable - These comprise the capital conservation buffer and the counter-
+cyclical capital buffer, which are relevant to all firms. For Globally Systemically Important
+Institutions (G-Slls); the G-SII buffer will be relevant and for domestic systemic firms, the systemic
+risk buffer will be relevant
+
++ The PRA buffer, as applicable — is an amount of capital that firms should hold in addition to their
+minimum level of regulatory capital (Pillar 1 plus Pillar 2A) to cover risks and elements of risk not
+covered elsewhere, and losses that may arise under a stress
+
+The leverage ratio framework
+
+To complement the risk-weighted capital regime, the Bank takes into account the risk of excessive
+leverage when assessing the adequacy of capital levels.
+
+For the Banks and Building Societies subject to the UK leverage ratio framework, the PRA requires a
+minimum leverage ratio be met at all times and expects firms in scope to have regulatory capital that
+is equal to or greater than any applicable leverage ratio buffers. This framework comprises three
+
+parts:
++ a 3% leverage ratio minimum requirement, denominated in Tier 1 capital, which must be met with
+
+at least 75% Common Equity Tier 1 (CET1) capital;
+
+* an additional leverage ratio buffer, applicable to UK Global Systemically Important Institutions (G-
+Slls) identified by the PRA, with the buffer rate calibrated at 35% of a relevant firm's G-SIl capital
+buffer rate, which must be met with CET1 capital; and
+
+* a countercyclical leverage ratio buffer of CET1 capital, calibrated at 35% of a relevant firm's
+countercyclical capital buffer rate and rounded to the nearest 10 basis points
+
+12
+STRATEGIC REPORT we
+
+FOR THE YEAR ENDED 31 MARCH 2019 @m Union Bank
+of India (UK) Ltd
+
+The liquidity framework
+
+The PRA expects all banks to take responsibility for ensuring that there is no significant risk that they
+
+cannot meet their liabilities as they fall due. PRA has increased supervisory activities to ensure that
+
+banks are running their business in a prudent manner to ensure they have an appropriate degree of
+
+resilience to liquidity stresses.
+
+On 10 October 2014, the European Commission published a Delegated Act to supplement EU
+
+Regulation (EU) No 575/2013 (Delegated Act) with regard to the liquidity coverage requirement (LCR)
+
+for credit institutions. EU legislation sets out direct requirements on liquidity. The EU Liquidity
+
+Coverage Requirement (LCR) sets a prescribed 30-day stress test, which banks must meet with
+
+qualifying liquid assets.
+
+UK Banks and in-scope investment firms need to meet a LCR requirement of 100% with effect from 1
+
+January 2018.
+
+The Bank is conducting stress testing on regular basis to ensure liquidity and capital adequacy. The
+
+Board approves the stress testing framework and reviews the outputs of stress testing as part of the
+
+approval processes for the ICAAP and the ILAAP.
+
+Compensation as per FSCS
+
+Eligible deposits with the Bank are protected up to the compensation limit by the Financial Services
+Compensation Scheme, the UK's deposit protection scheme.
+
+With effect from 30 January 2017, the deposit protection limit changed from £75,000 to £85,000 as a
+result of requirements in the European Deposit Guarantee Schemes Directive (DGSD).
+
+Single customer view
+
+The PRA requires deposit-takers to be able to produce a single, consistent view of each depositor's
+funds, to enable the FSCS to implement rapid pay-out. This ‘Single Customer View’ (SCV) is essential
+to ensure that the FSCS is able to recompense depositors in relation to covered deposits, minimising
+the adverse effect of bank's failure on the stability of the financial system. The Bank has put in place
+adequate systems and procedures to comply with the requirements.
+
+Senior Managers and Certification Regime
+
+The Senior Managers and Certification Regime (SMCR) came into force on 7 March 2016. It is aimed
+at supporting a change in culture at all levels in banks through a clear identification and allocation of
+responsibilities to individuals. This is an important element of the PRA’s approach to the assessment
+of management and governance of banks, and part of the integrated and structured way that the PRA
+delivers its forward-looking risk-based approach to banking supervision. The Bank has put in place
+adequate systems and procedures to comply with the requirements.
+
+This report was approved by the Board of Directors on 3 May 2019 and signed on its behalf by:
+
+Viswesvaran Radhakrishnan
+Managing Director & CEO
+Registered office:
+
+Senator House
+
+85 Queen Victoria Street
+London
+
+EC4V 4AB
+
+13
+STATEMENT OF DIRECTORS’ RESPONSIBILITIES =
+ron re een NDE wach oa (G) Union Bank
+
+of India (UK) Ltd
+
+The directors are responsible for preparing the Annual Report and the financial statements in
+accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under
+that law the directors have elected to prepare the financial statements in accordance with International
+Financial Reporting Standards (IFRSs) as adopted by the European Union. Under company law the
+directors must not approve the financial statements unless they are satisfied that they give a true and
+fair view of the state of affairs of the company and of the profit or loss of the company for that period.
+In preparing these financial statements, International Accounting Standard 1 requires that directors:
+
+* Properly select and apply accounting policies;
+
+¢ Present information, including accounting policies, in a manner that provides relevant, reliable,
+comparable and understandable information;
+
+* Provide additional disclosures when compliance with the specific requirements in IFRSs are
+insufficient to enable users to understand the impact of particular transactions, other events and
+conditions on the entity's financial position and financial performance; and
+
+Make an assessment of the company's ability to continue as a going concern.
+
+Directors’ responsibility statement
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and
+explain the company's transactions and disclose with reasonable accuracy at any time the financial
+position of the company and enable them to ensure that the financial statements comply with the
+Companies Act 2006. They are also responsible for safeguarding the assets of the company and
+hence for taking reasonable steps for the prevention and detection of fraud and other irregularities.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial
+
+information included on the company's website. Legislation in the United Kingdom governing the
+preparation and dissemination of financial statements may differ from legislation in other jurisdictions.
+
+By order of the Board
+
+os
+
+%
+Viswesvaran Radhakrishnan Dr Anand Kumar
+
+Managing Director & CEO Executive Director & Dy CEO
+3 May 2019
+
+14
+AUDITOR'S REPORT TO THE MEMBERS OF UNION BANK OF INDIA (UK) LIMITED
+
+Report on the audit of the financial statements
+
+Opinion
+In our opinion the financial statements of Union Bank of India (UK) Limited (the
+‘company’):
+
+. give a true and fair view of the state of the company’s affairs as at 31 March 2019
+and of its loss for the year then ended;
+° have been properly prepared in accordance with International Financial Reporting
+
+Standards (IFRSs) as adopted by the European Union; and
+° have been prepared in accordance with the requirements of the Companies Act
+2006.
+
+We have audited the financial statements which comprise:
+the income statement;
+
+the statement of comprehensive income;
+
+the statement of financial position;
+
+the statement of changes in equity;
+
+the statement of cash flows; and
+
+the related notes 1 to 32.
+
+The financial reporting framework that has been applied in their preparation is applicable law
+and IFRSs as adopted by the European Union.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK))
+and applicable law. Our responsibilities under those standards are further described in the auditor’s
+responsibilities for the audit of the financial statements section of our report.
+
+We are independent of the company in accordance with the ethical requirements that are relevant
+to our audit of the financial statements in the UK, including the Financial Reporting Council's (the
+‘FRC’s’) Ethical Standard as applied to public interest entities, and we have fulfilled our other
+ethical responsibilities in accordance with these requirements. We confirm that the non-audit
+services prohibited by the FRC’s Ethical Standard were not provided to the company.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a
+basis for our opinion.
+
+Summary of our audit approach
+
+Key audit matter The key audit matter that we identified in the current year was:
+e Loan loss provisioning
+
+Materiality The materiality that we used in the current year was $1.3m which was
+determined on the basis of 1.4% of net assets.
+
+Scoping Audit work to respond to the risks of material misstatement was performed
+directly by the audit engagement team. This includes risks identified by
+us, by management and those driven by changes in the business
+environment and new or complex accounting requirements.
+
+Significant We have changed the coefficient used in the calculation of materiality from
+changes in our 3% in the prior year to 1.4% this year to reflect the nature of risks within
+approach the business in the context of the users of the financial statements,
+
+15
+including the loss in the year that was driven by significant impairment
+charges.
+
+Conclusions relating to going concern
+
+We are required by ISAs (UK) to report in respect of the following We have nothing to
+
+matters where:
+
+report in respect of these
+
+. the directors’ use of the going concern basis of accounting matters.
+in preparation of the financial statements is not appropriate;
+or
+
+. the directors have not disclosed in the financial statements
+
+any identified material uncertainties that may cast
+significant doubt about the company’s ability to continue to
+adopt the going concern basis of accounting for a period of
+at least twelve months from the date when the financial
+statements are authorised for issue.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance
+in our audit of the financial statements of the current period and include the most significant
+assessed risks of material misstatement (whether or not due to fraud) that we identified. These
+matters included those which had the greatest effect on: the overall audit strategy, the allocation
+of resources in the audit; and directing the efforts of the engagement team.
+
+These matters were addressed in the context of our audit of the financial statements as a whole,
+and in forming our opinion thereon, and we do not provide a separate opinion on these matters.
+
+Loan Loss Provisioning
+
+Key audit matter
+description
+
+The company holds an IFRS 9 impairment provision of $27.47m against
+gross customer receivables of $329.5m (2017: IAS 39 impairment provision
+of $3.3m against gross customer receivables of $340m).
+
+From 1 April 2018, the company has implemented IFRS 9, which has
+resulted in the company applying an expected credit loss (“ECL”) model to
+determine the provision for impairment losses against loans and receivables
+to customers. In particular, for financial assets held at amortised cost, IFRS
+9 requires the carrying value of the asset to be assessed for impairment
+using unbiased forward-looking information.
+
+The measurement of expected credit losses is complex and involves a
+number of judgements and estimation of assumptions relating to customer
+default rates, historical collection rates, exposure at default, likely loss
+given default, assessing significant increases in credit risk and future
+economic scenario modelling. These assumptions are informed using
+historical behaviour and experience. They are also affected by
+management's consideration of the future economic environment including
+the potential effect of the withdrawal of the United Kingdom from the
+European Union.
+
+Due to the limited loan and default history of the company, primarily a
+parameter-based model has been utilised to calculate the expected credit
+loss on customer receivables, driven primarily by S&P global observed
+
+16
+default rates and a Standardised approach to Loss Given Default in line with
+Basel principles. Individual loan assessments have also been performed by
+management.
+
+Based on our risk assessment, we focused on the appropriateness of
+modelling methodologies adopted and the valuation of Defaulted (Stage 3)
+loans, in particular the valuation of collateral used in the calculation of level
+3 Expected Credit Loss (ECL).
+
+Given the significant level of management judgement involved and the
+direct impact on the reported results of the bank, we have determined that
+there is the potential for fraud through the manipulation of this balance.
+How the scope of
+our audit We evaluated the design and implementation of controls relating to the
+responded to the identification, valuation and recording of impairment provisions, in
+key audit matter _ particular over the valuation of collateral in relation to Stage 3 loans
+
+(=) We evaluated whether the methodology applied by management is
+compliant with the new requirements of IFRS 9, effective from 1 January
+2018.
+
+We challenged the appropriateness of management’s assumptions and
+inputs underlying the impairment provision calculations. This involved
+evaluating management's conclusions regarding the use of forward-looking
+information including Brexit considerations when assessing compliance with
+the standard, and confirming the reliability of source data used in the basic
+inputs to the model and the forward-looking scenarios.
+
+We reviewed management's individual assessments of Defaulted (Stage 3)
+loans, challenging the assumptions used and compared the individually-
+assessed ECLs calculated to the outputs of the ECL model, and challenging
+the final ECL booked by management.
+
+"Key observations The provision model was found to be compliant with the requirements of
+IFRS 9. We concluded that the assumptions underpinning the model were
+determined and applied appropriately.
+
+The impairment provisions held against the loan book are in line with
+current collections performance, and management's application of
+macroeconomic scenarios is reasonable.
+
+We concur with management that Expected Credit Losses have been valued
+appropriately.
+
+Our application of materiality
+
+We define materiality as the magnitude of misstatement in the financial statements that makes it
+probable that the economic decisions of a reasonably knowledgeable person would be changed or
+influenced. We use materiality both in planning the scope of our audit work and in evaluating the
+results of our work.
+
+Based on our professional judgement, we determined materiality for the financial statements as a
+whole as follows:
+
+ag omen
+
+17
+Basis for 1.4% of Net Assets (2018: 3%)
+
+determining
+
+materiality We have changed the coefficient used in the calculation of materiality
+from 3% in the prior year to 1.4% this year to reflect the nature of risks
+within the business in the context of the users of the financial
+statements, including the loss in the year that was driven by significant
+impairment charges.
+
+Rationale for th Net assets is a key metric within the company’s financial statements on
+brenur is @yssliel which the users, including the owner of the company, lenders and
+regulators tend to focus and is a valid proxy for regulatory capital.
+
+Net Assets $93m Materiality $1.3m
+
+= Net Assets
+——= Audit Committee
+
+reporting threshold
+$0.065m
+
+= Materiality
+
+We agreed with the Audit Committee that we would report to the Committee all audit differences in
+excess of $0.065m (2018: $0.14m), as well as differences below that threshold that, in our view,
+warranted reporting on qualitative grounds. We also report to the Audit Committee on disclosure
+matters that we identified when assessing the overall presentation of the financial statements.
+
+An overview of the scope of our audit
+
+Our audit was scoped by obtaining an understanding of the entity and its environment, including
+internal control, and assessing the risks of material misstatement. Audit work to respond to the
+risks of material misstatement was performed directly by the audit engagement team
+
+Our risk assessment included considering the size, composition and qualitative factors relating to
+account balances, classes of transactions and disclosures.
+
+Other information
+
+The directors are responsible for the other information. The other We have nothing to
+information comprises the information included in the annual report in respect of these
+report, other than the financial statements and our auditor's report matters.
+
+thereon.
+
+Our opinion on the financial statements does not cover the other
+information and, except to the extent otherwise explicitly stated in
+our report, we do not express any form of assurance conclusion
+thereon.
+
+In connection with our audit of the financial statements, our
+
+responsibility is to read the other information and, in doing so,
+consider whether the other information is materially inconsistent
+
+18
+with the financial statements or our knowledge obtained in the
+audit or otherwise appears to be materially misstated.
+
+If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether there is a
+material misstatement in the financial statements or a material
+misstatement of the other information. If, based on the work we
+have performed, we conclude that there is a material misstatement
+of this other information, we are required to report that fact.
+
+Responsibilities of directors
+As explained more fully in the directors’ responsibilities statement, the directors are responsible
+for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such internal control as the directors determine is necessary to enable the
+preparation of financial statements that are free from material misstatement, whether due to fraud
+or error.
+
+In preparing the financial statements, the directors are responsible for assessing the company’s
+ability to continue as a going concern, disclosing as applicable, matters related to going concern
+and using the going concern basis of accounting unless the directors either intend to liquidate the
+company or to cease operations, or have no realistic alternative but to do so.
+
+Auditor's responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a
+whole are free from material misstatement, whether due to fraud or error, and to issue an auditor’s
+report that includes our opinion. Reasonable assurance is a high level of assurance, but is not a
+guarantee that an audit conducted in accordance with ISAs (UK) will always detect a material
+misstatement when it exists. Misstatements can arise from fraud or error and are considered
+material if, individually or in the aggregate, they could reasonably be expected to influence the
+economic decisions of users taken on the basis of these financial statements.
+
+Details of the extent to which the audit was considered capable of detecting irregularities, including
+fraud are set out below.
+
+A further description of our responsibilities for the audit of the financial statements is located on
+the FRC’s website at: www.frc.org.uk/auditorsresponsibilities. This description forms part of our
+auditor’s report.
+
+Extent to which the audit was considered capable of detecting irregularities, including
+fraud
+
+We identify and assess the risks of material misstatement of the financial statements, whether
+due to fraud or error, and then design and perform audit procedures responsive to those risks,
+including obtaining audit evidence that is sufficient and appropriate to provide a basis for our
+opinion.
+
+Identifying and assessing potential risks related to irregularities
+In identifying and assessing risks of material misstatement in respect of irregularities, including
+fraud and non-compliance with laws and regulations, our procedures included the following:
+¢ enquiring of management , internal audit and the audit committee, including obtaining and
+reviewing supporting documentation, concerning the company’s policies and procedures
+
+relating to:
+
+o identifying, evaluating and complying with laws and regulations and whether they
+
+were aware of any instances of non-compliance
+
+© detecting and responding to the risks of fraud and whether they have knowledge
+of any actual, suspected or alleged fraud
+co the internal controls established to mitigate risks related to fraud or non-
+compliance with laws and regulations
+e discussing among the engagement team and involving relevant internal specialists,
+including tax, valuations and IT, regarding how and where fraud might occur in the
+financial statements and any potential indicators of fraud. As part of this discussion, we
+identified potential for fraud in the following areas: revenue recognition, loan loss
+provisioning; and
+¢ obtaining an understanding of the legal and regulatory frameworks that the company
+operates in, focusing on those laws and regulations that had a direct effect on the financial
+statements or that had a fundamental effect on the operations of the company. The key
+laws and regulations we considered in this context included the UK Companies Act,
+Prudential Regulation Authority (“PRA”) and Financial Conduct Authority (“FCA”)
+regulations, pensions legislation, tax legislation.
+
+Audit response to risks identified
+As a result of performing the above, we identified loan loss provisioning as a key audit matter. The
+key audit matters section of our report explains the matter in more detail and also describes the
+specific procedures we performed in response to that key audit matter.
+
+In addition to the above, our procedures to respond to risks identified included the following:
+
+* reviewing the financial statement disclosures and testing to supporting documentation to
+assess compliance with relevant laws and regulations discussed above;
+
+* enquiring of management, the audit committee and external legal counsel concerning
+actual and potential litigation and claims;
+
+* performing analytical procedures to identify any unusual or unexpected relationships that
+may indicate risks of material misstatement due to fraud;
+
+* reading minutes of meetings of those charged with governance, reviewing internal audit
+reports and reviewing correspondence with the Financial Conduct Authority and HMRC;
+
+e in addressing the risk of fraud associated to revenue, assessed management's judgement
+and assumptions over the effective interest rate for indications of potential bias; and
+
+« in addressing the risk of fraud through management override of controls, testing the
+appropriateness of journal entries and other adjustments; assessing whether the
+judgements made in making accounting estimates are indicative of a potential bias; and
+evaluating the business rationale of any significant transactions that are unusual or outside
+the normal course of business.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all
+engagement team members including internal specialists, and remained alert to any indications of
+fraud or non-compliance with laws and regulations throughout the audit.
+
+Report on other legal and regulatory requirements
+
+Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+« the information given in the strategic report and the directors’ report for the financial year for
+which the financial statements are prepared is consistent with the financial statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable
+legal requirements.
+
+In the light of the knowledge and understanding of the company and its environment obtained in
+the course of the audit, we have not identified any material misstatements in the strategic report
+or the directors’ report.
+
+20
+Matters on which we are required to report by exception
+
+Adequacy of explanations received and accounting records
+Under the Companies Act 2006 we are required to report to you if, We have nothing to
+in our opinion: report in respect of these
+e we have not received all the information and explanations matters.
+we require for our audit; or
+e adequate accounting records have not been kept, or
+returns adequate for our audit have not been received from
+branches not visited by us; or
+e the financial statements are not in agreement with the
+accounting records and returns.
+
+Directors’ remuneration
+
+Under the Companies Act 2006 we are also required to report if in We have nothing to report
+our opinion certain disclosures of directors’ remuneration have not in respect of this matter.
+been made.
+
+Other matters
+
+Auditor tenure
+
+Following the recommendation of the audit committee, we were appointed by Board of Directors
+of Union Bank of India (UK) Limited on 25 July 2014 to audit the financial statements for the year
+ending 31 March 2015 and subsequent financial periods. The period of total uninterrupted
+engagement including previous renewals and reappointments of the firm is 5 years, covering the
+years ending 31 March 2015 to 31 March 2019.
+
+Consistency of the audit report with the additional report to the audit committee
+Our audit opinion is consistent with the additional report to the audit committee we are required
+to provide in accordance with ISAs (UK).
+
+Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of
+Part 16 of the Companies Act 2006. Our audit work has been undertaken so that we might state
+to the company’s members those matters we are required to state to them in an auditor’s report
+and for no other purpose. To the fullest extent permitted by law, we do not accept or assume
+responsibility to anyone other than the company and the company’s members as a body, for our
+audit work, for this report, or for the opinions we have formed.
+
+Roan
+Russell Davis FCA (Senior Statutory auditor)
+For and on behalf of Deloitte LLP
+Statutory Auditor
+
+London, United Kingdom
+3 May 2019
+
+21
+INCOME STATEMENT *
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Notes 2019 2018
+
+USD ‘000 USD ‘000
+Interest and similar income 2 22,527 17,389
+Interest and similar expense 3 (9,179) (6,327)
+Net interest income 13,348 11,062
+Fees and commission income 4 263 541
+Fee and commission expense « a
+Net fee and commission income 263 541
+Net trading income / (loss) 54 256
+Net other operating income / (exp) (106) 374
+Total Operating income 13,559 12,233
+Personnel costs 5 (2,300) (2,032)
+Operating lease 25 (316) (307)
+Depreciation and amortisation 16,17 (160) (140)
+Other expenses 7 (2,237) (1,442)
+Operating expenses before impairment loss allowances (5,013) (3,921)
+Operating profit 8,546 8,312
+Impairment loss allowances 4 (25,181) (1,930)
+Profit / (Loss) before tax (16,635) 6,382
+Income tax credit / (charge) 8 2,939 (1,214)
+Profit / (Loss) after tax (13,696) 5,168
+
+@ Union Bank
+of India (UK) Ltd
+
+* There were no discontinued operations during the year
+
+The notes on pages 27 to 60 form part of these financial statements.
+
+22
+STATEMENT OF COMPREHENSIVE INCOME
+FOR THE YEAR ENDED 31 MARCH 2019
+
+2019
+USD ‘000
+
+Total profit/(loss) for the year attributable to equity (13,696)
+shareholders
+Other comprehensive income net of tax
+Items that may be reclassified subsequently to profit or loss
+
+- Change in fair value 1,593
+
+- Tax relating to change in fair value (325)
+Net other comprehensive income 1,268
+Te hensive i
+
+‘otal comprehensive income attributable to equity (12,427)
+
+shareholders for the year
+
+The notes on pages 27 to 60 form part of these financial statements.
+
+23
+
+Union Bank
+
+of India (UK) Ltd
+
+2018
+USD ‘000
+
+5,168
+
+(2,382)
+418
+
+(1,964)
+
+3,204
+Union Bank
+of India (UK) Ltd
+
+Notes 2019 2018
+
+USD ‘000 USD ‘000
+
+FOR THE YEAR ENDED 31 MARCH 2019
+
+STATEMENT OF FINANCIAL POSITION ( j
+
+Assets
+Cash and Balance at Bank 9 4,244 1,355
+Financial assets at amortised cost:
+- Loans and advances to customers 1 302,055 336,818
+- Loans and advances to Banks 10 26,337 -
+- Financial investments (2018 - HTM) 13, 12,239 13,807
+Financial assets at FVTPL:
+- Financial investments (2018 - HFT) - 1,916
+- Derivative financial instruments 14 409 -
+
+Financial assets at FVOCI:
+
+- Financial Instruments (2018 - AFS) 12 103,268 82,281
+Property, plant and equipment 16 290 395
+Intangible assets 17 164 49
+Capital work in progress 70 70
+Deferred tax assets (Net) 18 2,372 809
+Other assets 19 2,651 1,794
+Total Assets 454,100
+Liabilities
+Financial Liabilities at FVTPL:
+
+- Derivative financial instruments 14 - 426
+Financial liabilities at amortised cost:
+
+- Deposits from Banks 20 29,387 32,140
+
+- Intra-group borrowings 21 60,564 62,429
+
+- Deposits from customers 22 239,778 215,566
+
+- Repurchase agreements 23 30,326 33,081
+Other liabilities 24 730 1,061
+Total Liabilities — 360,784 344,703
+Equity
+Share capital 26 100,000 90,000
+Fair value reserves (964) (2,478)
+Retained earnings / (Accumulated losses) (5.719) 7,069
+Total Shareholder’s equity 93,317 94,591
+Total Equity and liabilities 454,100 439,295
+
+The notes on pages 27 to 60 form part of these financial statements.
+
+he financial statements were approved by the Board of Directors and aujhorised for issue on 3 May
+
+fesvaran Radhakrishnan Dr Anand Kumar
+Managing Director & CEO Executive Director & Dy CEO
+
+Company registration no: 07653660
+
+24
+STATEMENT OF CHANGES IN EQUITY
+FOR THE YEAR ENDED 31 MARCH 2019
+
+34 March 2019 Notes
+
+Balance as at 1 April 2018
+Impact of IFRS 9 transition 1.4
+
+Issue of share capital 26
+Total Comprehensive Income / (loss)
+Profit / (loss) for the year
+
+Other Comprehensive Income
+
+Balance as at 31 March 2019 attributable
+to shareholders of the Bank
+
+31 March 2018 Notes
+
+Balance as at 1 April 2017
+
+Issue of share capital 26
+Total Comprehensive Income / (loss)
+
+Profit / (loss) for the year
+
+Other Comprehensive Income
+
+Balance as at 31 March 2018 attributable
+to shareholders of the Bank
+
+@G Union Bank
+
+of India (UK) Ltd
+
+Issued Fair value Retained Total
+capital reserves earnings equity
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+90,000 (2,478) 7,069 94,591
+
+- 246 907 1,153
+10,000 - - 10,000
+- 1,268 (13,696) (12,427)
+- - (13,696) (13,696).
+- 1,268 : 1,268
+100,000 (964) (5,719) 93,317
+Issued Fair value Retained Total
+capital reserves earnings equity
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+80,000 (514) 1,901 81,387
+10,000 - - 10,000
+e (1,964) 5,168 3,204
+- ° 5,168 5,168
+« (1,964) : (1,964)
+90,000 (2,478) 7,069 94,591
+
+The notes on pages 27 to 60 form part of these financial statements.
+
+25
+
+STATEMENT OF CASH FLOWS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Cash flows from operating activities
+Net profit/(loss) before tax for the year
+
+Adjustments to reconcile profit from operations:
+Amortisation of intangible non-current asset
+Impairment loss during transition period
+Depreciation for property, plant and equipment
+Corporation tax credit during the year
+
+Cash flows before changes in operating activities
+
+Movement in working capital
+Decrease/(Increase) in receivables & prepayments
+Tax paid
+
+Increase / (Decrease) in other liabilities
+
+Net Increase in working capital
+
+Cash flows from operating activities
+
+Decrease / (Increase) in loans and advances to customers
+(Increase)/Decrease in loans and advances to banks
+(Decrease) / Increase in deposits from Banks
+
+(Decrease) / Increase in deposits from customers
+
+(Decrease) / Increase in repurchase agreements
+(Increase)/Decrease in derivative financial instruments - Assets
+(Decrease)/Increase on derivative financial instruments - Liab.
+
+Net cash flows used in operating activities (A)
+
+Cash flows from investing activities
+
+Acquisition of Investments - FVOCI (net of reserves)
+Decrease in Investments - Amortised cost
+
+Disposal / (Acquisition) of Investments - FVTPL
+Acquisition of property, plant and equipment
+Acquisition of intangible assets.
+
+(Increase) / decrease in capital work in progress
+
+Net cash flows used in investing activities (B)
+
+Cash flows from financing activities
+
+Proceeds from issue of equity share capital
+(Repayment to) / Proceeds from Intra-group borrowings
+Net cash flows from financing activities (C)
+
+Net increase in cash and cash equivalents (A+B+C)
+Cash and cash equivalents at beginning of the year
+
+Cash and cash equi'
+
+lents at close of the year
+
+The notes on pages 27 to 60 form part of these financial statements.
+
+26
+
+GY
+
+Notes
+
+19
+
+24
+
+1
+10
+20
+22
+23
+14
+14
+
+12
+13
+
+16
+17
+
+26
+21
+
+Union Bank
+
+of India (UK) Ltd
+
+2019
+
+USD ‘000
+
+(16,635)
+
+40
+907
+120
+
+2,939
+
+4,006
+
+371
+(1,228)
+
+(1,895)
+
+(2,752)
+
+34,763
+(26,337)
+(2,753)
+
+24,212
+(2,755)
+(409)
+(426)
+
+26,295,
+10,915
+
+(19,473)
+1,568
+1,916
+
+(15)
+(155)
+t)
+
+(16,159)
+
+10,000
+
+(1,867)
+
+8,133
+2,889
+
+1,355
+
+4,244
+
+2018
+
+USD ‘000
+
+6,382
+
+18
+
+122
+
+140
+
+(949)
+
+(1,774)
+
+(2,723)
+
+(59,833)
+7,000
+
+(3,561)
+46,624
+33,081
+324
+426
+
+24,061
+27,859
+
+(47,633)
+57
+
+(1,916)
+
+(56)
+
+(36)
+
+(1)
+
+(49,585)
+
+10,000
+12,161
+22,161
+
+436
+
+919
+
+1,355
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+ACCOUNTING POLICIES
+
+These financial statements are prepared for Union Bank of India (UK) Ltd. (the "Bank") under the UK
+Companies Act 2006. Union Bank of India (UK) Limited is a limited company incorporated in the United
+Kingdom under the Companies Act 2006 and registered in England and Wales. The Bank is a wholly
+owned subsidiary of Union Bank of India, one of the leading public-sector banks of India. The address of
+the registered office is Senator House, 85 Queen Victoria Street, London (UK) EC4V 4AB. The nature of
+the Bank's operations and its principal activity is set out on page 3.
+
+Basis of preparation
+The financial statements have been prepared on the going concern basis using the historical cost
+convention, as modified by the revaluation of available-for-sale financial assets, financial assets and
+financial liabilities held at fair value through profit or loss and all derivative contracts and assets held for
+sale, where applicable.
+
+Compliance with International Financial Reporting Standards (IFRS)
+
+Financial statements have been prepared in accordance with IFRSs as adopted by the European Union
+and as applied in accordance with the provision of the UK Companies Act 2006. Disclosures required by
+IFRS 7 ‘Financial Instruments: Disclosure’ relating to the nature and extent of risks arising from financial
+instruments, and IAS 1 ‘Presentation of Financial Statements’ relating to objectives, policies and
+processes for managing capital, can be found in the Risk Management. Those disclosures form an
+integral part of these financial statements.
+
+Recent accounting developments
+
+On 1 April 2018, Bank adopted IFRS 9 ‘Financial Instruments’ and IFRS 15 ‘Revenue from Contracts with
+Customers’. The new or revised accounting policies are set out below.
+
+The accounting policy changes for IFRS 9, set out below, have been applied from 1 April 2018.
+Comparatives have not been restated as permitted by IFRS 9 and IFRS 15. As a result of the change from
+IAS 39 to IFRS 9, some disclosures presented in respect of certain financial assets are not comparable
+because their classification may have changed between the two standards. This means that some IFRS 9
+disclosures are not directly comparable and some disclosures that relate to information presented on an
+IAS 39 basis are no longer relevant in the current period
+
+The application of IFRS 15 had no impact on the Bank as there were no changes in the recognition of in-
+scope income.
+
+The Adoption of IFRS 9
+
+In July 2014, the IASB issued the final version of IFRS 9 Financial Instruments. For the accounting period
+starting on or after 1 January 2016, IFRS 9 replaced IAS 39, and introduced new rules on how to classify
+and measure financial assets, as well as new concepts, principles and measures for credit impairment
+charges. Throughout FY 2018-19, Bank has enhanced and refined its accounting processes and
+procedures, internal controls and governance framework to embed the new requirements of IFRS 9. As
+IFRS 9 affects the timing when Bank recognise credit impairment charges, but not the amount of credit
+write-offs, its adoption did not materially change credit risk policies. Bank's credit risk appetite in terms of
+target markets, market share and the credit quality of customers, were not directly impacted. The main
+impacts were on how Bank monitors credit risk. As part of this, Bank has started to monitor IFRS 9
+metrics. These mainly centre on ECL and classification of exposures as Stages 1, 2 and 3. Bank expect to
+develop these metrics further in 2019.
+
+IFRS 9 has been adopted without restating comparative information. The reclassifications and the
+adjustments arising from the new impairment rules are therefore not reflected in the balance sheet as at
+31 March 2018, but are recognised in the opening balance sheet as on 1 April 2018. As prior periods have
+not been restated, changes in impairment of financial assets in the comparative period remain in
+accordance with IAS 39 and are therefore not necessarily comparable to the loss provisions reported for
+the current period.
+
+27
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+ACCOUNTING POLICIES (Continued)
+
+The Adoption of IFRS 9 (Continued)
+
+As a result of adoption of IFRS 9, the opening Capital has increased by $1.14m as on 1st of April'18
+mainly due to decrease in the provision by $1.04m and consequent decrease in the deferred tax assets by
+$0.1m. There has been no change in the carrying amount of the financial instruments on the basis of their
+measurement categories. All adjustments have arisen solely due to a replacement of the IAS 39 incurred
+loss impairment approach with an ECL approach.
+
+Condensed Statement of Financial Position
+
+31/03/2018 IFRS 9 01/04/2018
+adjustment- IFRS 9
+Classification adjustment-
+Varteulars As originally and Expected Credit
+presented — measurement Losses Restated
+USD'000 USD'000 USD‘000 USD ‘000
+Assets:-
+Loans & advances to customers 336,818 - 1,073 337,892
+Financial investments 13,807 “ (32) 13,775,
+Deferred tax assets 809 - 112 921
+Equity:-
+Retained Earnings 7,069 - 907 7,976
+Fair value reserve * (2,478) : 246 (2,233)
+
+*Note: The impact of IFRS 9 provision on the opening amount of Investments held in FVOCI has been
+adjusted in the retained earnings and Fair Value Reserve as on 01/04/2018.
+
+The total impact on the Bank's retains earning as at 1 April 2018 is as follows:-
+
+Particulars
+
+Closing retained earning 31 March 18 - IAS 39
+Decrease in provision for financial instruments
+
+Change in Modification Criteria
+Change in Fair value reserve
+
+Increase in deferred tax assets relating to impairment provisions
+Total Adjustment to retained earning from adoption of IFRS 9 on 1 April 2018
+Opening Retained Earning 1 April 18 - IFRS 9
+
+Classification of Financial Instruments as per
+
+IAS 39
+
+Financial assets
+
+Financial investments — AFS
+Financial investments — HTM
+Financial investments — HFT
+Loans and advances to customers
+
+Financial Liabilities
+
+Derivative financial instruments
+Deposits from Banks
+
+Deposits from customers
+Repurchase agreements
+
+IFRS 9
+
+Financial investments — FVOCI
+Financial investments — Amortised cost
+Financial investments — FVTPL
+
+Loans and advances to customers
+
+Derivative financial instruments
+Deposits from Banks
+
+Deposits from customers
+Repurchase agreements
+
+There is no change in classifications of Financial instruments due to adoption of IFRS 9
+
+28
+
+01/04/2018
+USD‘000
+7,069
+1,041
+
+(246)
+112
+907
+
+7,976
+
+31/03/2018
+UsD'000
+
+82,281
+13,807
+1,916
+340,118
+
+438,123
+
+426
+94,569
+215,566
+33,081
+
+343,642
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+The Adoption of IFRS 9 (Continued)
+
+The balance of Financial Instruments as on 31 March 2018 reconcile to the balance as on 1 April
+2018 as follows:-
+
+Financial Instrument Balance USD'‘000
+At 31 - March 2018 - Calculated under IAS 39 351,434
+Amounts restated through opening retained earnings 1,153
+Opening Balance as on 1 April 2018 - calculated under IFRS 9 352,587
+
+Total impairment loss allowances decreased on adoption of IFRS9, due to reversal of General provision
+recognised in previous financial years
+
+Reconciliation of impact due to transition to IFRS 9
+
+USD'000
+Estimated impact - Capital reduction - 31 March 2018 (Un- Audited) (2,615)
+Actual impact - increase in Capital - 1 April 2018 (Audited) 1,153
+Difference between Estimated and Actual 3,768
+
+EMBEDDING OF IFRS 9 CREDIT PROVISIONS
+
+The management had a appropriate methodology for evaluating the results of the models given their
+complexity and a clear trail of their workings, particularly due to the models’ key output.
+
+The model and methodology changes had been approved by the appropriate committee of the bank.
+
+The management 's judgement on level of credit provisions were considered appropriate and it will be
+monitored on regular basis.
+
+The credit portfolio was regularly reviewed to ensure that all impairment triggers have been identified.
+
+Apart from credit other exposures were also reviewed to ensure that there had been no impairment
+triggers that could warrant significant adjustment to provisions level.
+
+Classification — Financial assets
+
+IFRS 9 contains a new classification and measurement approach for financial assets. New classification
+categories include: measured at amortised cost, FVOCI (Fair Value Through Other Comprehensive
+Income) and FVTPL (Fair Value Though Profit and Loss).
+
+The standard will affect the classification and measurement of financial assets as follows; (subject to the
+Business Model Assessment (BMA) test and Solely Payments of Principal and Interest (SPPI) test)
+
+Loans and advances to banks and customers previously classified as loans and receivables and
+measured at amortised cost will in general also be measured at amortised cost under IFRS 9.
+
+Held to maturity investment securities previously measured at amortised cost will in general also be
+measured at amortised cost under IFRS9.
+
+Debt investment securities previously classified as available-for-sale, will in general, under IFRS 9, be
+measured at FVOCI
+
+Debt investment securities previously classified as held-to-trade, will in general, under IFRS 9, be
+measured at FVTPL
+
+29
+NOTES TO THE FINANCIAL STATEMENTS G Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+The Adoption of IFRS 9 (Continued)
+
+Impairment
+
+IFRS 9 replaces the “incurred loss" model under IAS 39 with a forward looking “expected credit loss”
+(ECL) model. Depending on the asset's classification under the three stage model (Stage 1- credit risk
+has not increased; Stage 2 — credit risk has increased significantly & Stage 3 — credit impaired or
+defaulted financial asset).
+
+Where credit risk is deemed not to have increased significantly since initial recognition (Stage 1) a loss
+allowance is calculated based on an amount equal to 12-month ECL (Expected Credit Loss).
+
+Where credit risk is deemed to have increased significantly since initial recognition (Stage 2) a loss
+allowance based on lifetime expected losses are calculated. An asset is deemed to have moved to Stage
+3 where management considers the asset to be impaired in accordance with the Bank's relevant policies.
+
+Quantitative modelling will be used in conjunction with internal &/or external credit grades and ratings in
+assessing whether credit risk has significantly increased. The Bank will monitor the effectiveness of the
+criteria used to identify any increase through regular reviews and watch list.
+
+Under IFRS 9 the Bank will consider a financial asset to be in default and or credit impaired when either
+the borrower is unlikely to pay its credit obligations or the borrower is more than 90 days past due.
+
+Bank uses a number of key metrics to measure and control credit risk, as follows:-
+ECL (Expected Credit Loss):- Probability-weighted (average) estimate of credit losses. Determined as
+the present value of the product of Probability of Default, Loss Given Default and Exposure at Default.
+
+EAD (Exposure at Default):- An estimate of the exposure at a future default date, taking into account
+expected changes in the exposure after the reporting date, including repayments of principal and interest,
+and expected drawdowns on committed facilities.
+
+12 month PD (12 month Probability of Default) :- The 12-month PD is the estimated probability of
+default occurring within the next 12 months (or over the remaining life of the financial instrument if that is
+less than 12 months). It is used to calculate 12-month ECLs.
+
+Lifetime PD (Lifetime Probability of Default):- The Lifetime PD is the estimated probability of a default
+occurring over the remaining life of the financial instrument. This is used to calculate lifetime ECLs for
+‘stage 2’ and ‘stage 3' exposures. PDs may be broken down further into marginal probabilities for sub-
+periods within the remaining life.
+
+LGD (Loss Given Default):- An estimate of the loss arising as a result of the default of the counterparty
+and is based on the difference between the contractual cash flows due and those that the lender would
+expect to receive, including from any collateral.
+
+CCF (Credit Conversion Factor):- An estimate of the probability of an off-balance sheet credit exposure
+shifting onto the balance sheet.
+
+EIR (Effective interest rate):- The rate that exactly discounts estimated future cash payments or receipts
+through the expected life of the financial asset or financial liability to the gross carrying amount of a
+financial asset or to the amortised cost of a financial liability.
+
+Recognising PD (Probability of Default)
+
+Bank determines an exposure's 12-month PD as follows:
+
+An appropriate rating of the counterparty is determined through the application of either the relevant
+
+Rating Scorecard (for the lending portfolio) or through the long term rating (for the investment portfolio).
+
+A credit cycle adjustment is applied to the sourced rating to produce a forward-looking PD. A forward-
+
+looking PD term structure (up to 30 years) is determined for three macroeconomic scenarios applicable to
+
+that counterparty.
+
++ These approaches have been selected given that the bank has insufficient default history to create its own
+PD models.
+
+30
+NOTES TO THE FINANCIAL STATEMENTS Uf} Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+The Adoption of IFRS 9 (Continued)
+
+Recognising LGD (Loss Given Default)
+
+The Basel Foundation Internal Rating Based Approach (“F-IRB”) is used in deriving LGDs for the bank's
+IFRS 9 implementation. The Basel F-IRB LGDs do not yet consider forward looking information. Given that
+the bank has been operating for only a few years and the data available is not sufficient to form a
+judgement. Whilst typically an overlay to the Basel FIRB LGD, to account for macroeconomic sensitivity
+would be recommended, a valid overlay cannot be inferred due to the insufficient data. In light of this,
+Bank has used the Basel FIRB LGD in the ECL computation, without adjustment, until sufficient history is
+built up.
+
+Macroeconomic Scenario
+
+Forward looking expectations and macroeconomic scenarios analysis are key themes in IFRS 9's
+impairment recognition model. The purpose of macroeconomic scenario analysis is to understand the
+impacts of changing economic scenarios on the stage allocation of an instrument and the resulting
+expected credit loss calculations. Bank has incorporated the impact of changing macroeconomic
+scenarios on both staging and the ECL computation through consideration of three discrete scenarios, i.e.
+Base Case, Upturn and Downturn, for e.g. Upturn scenario will Reflect, a plausible but slightly optimistic
+view of the exposure in the relevant cluster and Downturn, pessimistic view. For each scenario, expert
+judgement are applied to determine an appropriate probability of occurrence. These probabilities
+determined through management's consideration of global economic reports (e.g. World Bank forecasts)
+or alternatively sourced through external vendors such as Oxford Economics or Moody's Analytics.
+
+ECL Computation
+
+ECL computation is based on the probability weighted average approach. For each exposure, under each
+scenario, the 12 month and lifetime ECL are determined. 12 month and Lifetime ECLs are then computed
+under each scenario, with the final ECL determined as the probability weighted average of each scenarios
+ECL.
+
+Exposure at Default (EAD)
+
+EAD is computed on the basis of exposure type and the exposure's Credit Conversion Factor (CCF).
+Given that the bank is still in its infancy, insufficient behavioural data is available to model its own CCFs. In
+light of this, the CCFs as prescribed by Basel are applied.
+
+Significant Increase in Credit Risk (SICR)
+
+Loans which have suffered a SICR since origination are subject to a lifetime ECL assessment which
+extends to a maximum of the contractual maturity of the loan, or behavioural term for revolving facilities.
+Loans which have not experienced a SICR are subject to 12 month ECL. Assessment has been made for
+each facility's credit risk profile to determine which of three stages to allocate them to:
+
+- Stage 1: when there has been no SICR since initial recognition. Bank has applied a loss allowance
+equal to a 12 month ECL i.e. the proportion of lifetime expected losses that relate to that default event
+expected in the next 12 months
+
+- Stage 2: when there has been a SICR since initial recognition, but no credit impairment has
+materialised. Bank has applied a loss allowance equal to the lifetime ECL i.e. lifetime expected loss
+resulting from all possible defaults throughout the residual life of a facility
+
+— Stage 3: when the exposure is considered credit impaired. Bank has applied a loss allowance equal to
+the lifetime ECL. Objective evidence of credit impairment is required.
+
+31
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+The Adoption of IFRS 9 (Continued)
+
+Definition of default
+
+A facility is considered as “default” when:
+
+* The facility is 90 DPD; or
+
++ In case of bankruptcy, insolvency, legal receivership or other legal blocks (perhaps by regulators) to the
+timely payment of interest and/or principal; or
+
+If the debtor has been declared bankrupt or has become insolvent, claim on the debtor will be classified as
+default from the date, bankruptcy/ insolvency was declared, unless it was already classified as such.
+However, if the debtor has paid the interest due on an asset but has been unable to make repayments of
+the principal, the asset shall not be classified as non-performing if Bank along with the debtor have agreed
+on a new payment schedule and the account remains in the performing category.
+
+Future accounting developments
+At 31 March 2019, the Bank has not yet adopted the following significant new or revised standards and
+interpretations, and amendments thereto, which have been issued but which are not yet effective:
+
+IFRS 16 ‘Leases’
+
+In January 2016, the IASB issued IFRS 16. The standard is effective for annual periods beginning on or
+after 1 January 2019. IFRS 16 sets out the principles for the recognition, measurement, presentation and
+disclosure of leases for both lessees and lessors. For lessee accounting, IFRS 16 introduces a single
+lessee accounting model and requires a lessee to recognise a right-of-use (ROU) asset representing its
+right to use the underlying leased asset and a lease liability representing its obligation to make lease
+payments for all leases with a term of more than 12 months, unless the underlying asset is of low value.
+
+For lessor accounting, IFRS 16 substantially carries forward the lessor accounting requirements from the
+existing leasing standard (IAS 17) and a lessor continues to classify its leases as operating leases or
+finance leases and to account for those two types of leases differently.
+
+For the Bank, the application of IFRS 16 at 1 April 2019 is expected to increase property, plant and
+equipment by £1.09m ($1.43m) (being the net increase in ROU assets referred to above) and increase
+other liabilities by similar amount from recognising lease liabilities. There is expected to be no impact on
+shareholders’ equity. Impact of adoption of IFRS 16 is insignificant.
+
+Revenue recognition
+
+4) Interest income and expense
+Interest and similar income comprises interest income on financial assets measured at amortised cost,
+investments in debt instruments measured at FVOCI (2017-18: available-for-sale) and investments in debt
+instruments measured at FVTPL (2017-18: held-for-trade). Interest expense and similar charges
+comprises interest expense on financial liabilities measured at amortised cost.
+Interest income and expenses on financial assets is determined using the effective interest rate method.
+Fees and commissions that are not an integral part of the effective interest rate are recognised when the
+service is performed. Most fee and commission income is recognised at a point in time.
+
+Interest income is calculated by applying the effective interest rate to the gross carrying amount of
+financial assets, except for financial assets that have subsequently become credit-impaired (or ‘stage 3'),
+for which interest revenue is calculated by applying the effective interest rate to their amortised cost (i.e.
+net of the ECL provision).
+
+32
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+Revenue recognition (Continued)
+
+income and expense
+
+Fees and commissions that are not an integral part of the effective interest rate are recognised when the
+service is performed. Most fee and commission income is recognised at a point in time. Certain
+commitment, upfront and management fees are recognised over time but are not material.
+
+Fee and Commission income is earned from following services provided by the Bank to its customers and
+accounted for as follows;
+
++ income earned on the execution of a significant act is recognised as revenue when the act is completed
+(for example, fees arising from negotiating, facilitating, coordinating, or participating in the negotiation of, a
+transaction for a third-party);
+
++ income earned from the provision of services is recognised as revenue as the services are provided.
+
++ income from processing/upfront fee is recognised as revenue as received unless it is forming part of
+integral part of the effective interest rate.
+
+Fee and commission income which forms an integral part of the effective interest rate of a financial
+instrument is recognised as an adjustment to the effective interest rate and recorded in ‘Interest income’.
+Bank is not having Fee and Commission income of this nature.
+
+c) Dividend income
+Dividend income is recognised when the right to receive payment is established.
+
+0) Net trading and other income
+
+Net trading and other income includes all gains and losses from changes in the fair value of financial
+assets and liabilities held at fair value through profit or loss (financial assets and liabilities at fair value
+through profit or loss and derivatives). Changes in fair value of derivatives are also recognised in net
+trading and other income. Other income includes profits and losses arising on the sales of financial assets
+held at fair value through other comprehensive income.
+
+Borrowing costs
+
+Borrowing costs directly attributable to the acquisition, construction or production of qualifying assets,
+including computer software, which are assets that necessarily take a substantial period of time to develop
+for their intended use, are added to the cost of those assets, until the assets are substantially ready for
+their intended use. All other borrowing costs are recognised in profit or loss in the period in which they
+occur.
+
+Intangible assets
+
+The value of intangible assets is amortised on a straight-line basis over their useful economic life. Other
+intangible assets are reviewed annually for impairment indicators and tested for impairment where
+indicators are present.
+
+Software development costs are capitalised when they are direct costs associated with identifiable and
+unique software products that are expected to provide future economic benefits and the cost of those
+products can be measured reliably. These costs include payroll, materials, services and directly
+attributable overheads. Internally developed software meeting these criteria and externally purchased
+software are classified in intangible assets on the balance sheet and amortised on a straight-line basis
+over their useful life of three years, unless the software is an integral part of the related computer
+hardware, in which case it is treated as property, plant and equipment as described below. Capitalisation
+of costs ceases when the software is capable of operating as intended. Costs of maintaining software are
+expensed as incurred.
+
+33
+NOTES TO THE FINANCIAL STATEMENTS U] Un Ife) m B. an hk
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Property, plant and equipment
+
+Property, plant and equipment include owner-occupied properties (including leasehold properties), office
+fixtures and equipment and computer software. Property, plant and equipment are carried at cost less
+accumulated depreciation and accumulated impairment losses. A review for indications of impairment is
+carried out at each reporting date. Gains and losses on disposal are determined by reference to the
+carrying amount and are reported in net trading and other income. Repairs and renewals are charged to
+the income statement when the expenditure is incurred. Classes of property, plant and equipment are
+depreciated on a straight-line basis over their useful life, as follows:
+
+Leasehold improvements over the lease period
+Furniture and equipment up to 5 years
+Computer hardware up to 3 years
+
+1.10 Financial Instruments
+
+4) Initial recognition and measurement
+
+Financial assets and liabilities are initially recognised when the Bank becomes a party to the contractual
+terms of the instrument. The Bank determines the classification of its financial assets and liabilities at
+initial recognition and measures a financial asset or financial liability at its fair value plus or minus, in the
+case of a financial asset or financial liability not at FVTPL, transaction costs that are incremental and
+directly attributable to the acquisition or issue of the financial asset or financial liability. Transaction costs
+of financial assets and financial liabilities carried at fair value through profit or loss are expensed in profit
+or loss. Immediately after initial recognition, an expected credit loss (ECL) allowance is recognised for
+financial assets measured at amortised cost and investments in debt instruments measured at FVOCI.
+
+8) Financial assets and liabilities
+1) Classification and subsequent measurement
+From 1 April 2018, the Bank has applied IFRS 9 Financial Instruments and classifies its financial assets in
+the measurement categories of amortised cost, FVOCI and FVTPL.
+Financial assets and financial liabilities are classified as FVTPL where there is a requirement to do so or
+where they are otherwise designated at FVTPL on initial recognition. Financial assets and financial
+liabilities which are required to be held at FVTPL include:
+— Financial assets and financial liabilities held for trading
+— Debt instruments that do not have solely payments of principal and interest (SPPI) characteristics.
+Otherwise, such instruments are measured at amortised cost or FVOCI, and
+— Equity instruments that have not been designated as held at FVOCI.
+Financial assets and financial liabilities are classified as held for trading if they are derivatives or if they
+are acquired or incurred principally for the purpose of selling or repurchasing in the near-term, or form part
+of a portfolio of financial instruments that are managed together and for which there is evidence of short-
+term profit taking.
+The classification and measurement requirements for financial asset debt and equity instruments and
+financial liabilities are set out below.
+
+1.1) Financial assets: debt instruments
+
+Debt instruments are those instruments that meet the definition of a financial liability from the issuer's
+perspective, such as loans and government and corporate bonds. Classification and subsequent
+measurement of debt instruments depend on the Bank's business model for managing the asset, and the
+cash flow characteristics of the asset.
+
+34
+NOTES TO THE FINANCIAL STATEMENTS @m Un io m B. an Kk
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+FINANCIAL INSTRUMENTS (Continued)
+
+Business model
+
+The business model reflects how the Bank manages the assets in order to generate cash flows and,
+specifically, whether the Bank’s objective is solely to collect the contractual cash flows from the assets or
+is to collect both the contractual cash flows and cash flows arising from the sale of the assets. If neither of
+these is applicable, such as where the financial assets are held for trading purposes, then the financial
+assets are measured at FVTPL.
+
+Factors considered in determining the business model for a group of assets include past experience on
+how the cash flows for these assets were collected, how the assets’ performance is evaluated and what is
+the strategy for holding those assets.
+
+SPPI
+
+Where the business model is to hold assets to collect contractual cash flows or to collect contractual cash
+flows and sell, the Bank assesses whether the assets’ cash flows represent SPPI. In making this
+assessment, the Bank considers whether the contractual cash flows are consistent with a basic lending
+arrangement (i.e. interest includes only consideration for the time value of money, credit risk, other basic
+lending risks and a profit margin that is consistent with a basic lending arrangement). Where the
+contractual terms introduce exposure to risk or volatility that is inconsistent with a basic lending
+arrangement, the related asset is classified and measured at FVTPL.
+
+Based on these factors, the Bank classifies its debt instruments into one of the following measurement
+categories:
+
+- Amortised cost — Financial assets that are held for collection of contractual cash flows where those
+cash flows represent SPPI, and that are not designated at FVTPL, are measured at amortised cost. The
+carrying amount of these assets is adjusted by any ECL recognised and measured. Interest income from
+these financial assets is included in ‘Interest and similar income’ using the effective interest rate method.
+When estimates of future cash flows are revised, the carrying amount of the respective financial assets or
+financial liabilities is adjusted to reflect the new estimate discounted using the original effective interest
+rate. Any changes are recognised in the income statement.
+
+- FVOCI- Financial assets that are held for collection of contractual cash flows and for selling the assets,
+where the assets’ cash flows represent SPPI, and that are not designated at FVTPL, are measured at
+FVOCI. Movements in the carrying amount are recognised in OCI, except for the recognition of impairment
+gains or losses, interest revenue and foreign exchange gains and losses on the instrument's amortised
+cost which are recognised in profit or loss. When the financial asset is derecognised, the cumulative gain
+or loss previously recognised in OCI is reclassified from equity to profit or loss and recognised in ‘Net
+trading and other income’. Interest income from these financial assets is included in ‘Interest and similar
+income’ using the effective interest rate method.
+
+- FVTPL — Financial assets that do not meet the criteria for amortised cost or FVOCI are measured at
+FVTPL. A gain or loss on a debt instrument that is subsequently measured at FVTPL, including any debt
+instruments designated at fair value, is recognised in profit or loss and presented in the income statement
+in ‘Net trading and other income’ in the period in which it arises.
+
+The Bank reclassifies financial assets when and only when its business model for managing those assets
+changes. The reclassification takes place from the start of the first reporting period following the change.
+Such changes are expected to be very infrequent.
+
+35
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+FINANCIAL INSTRUMENTS (Continued)
+
+1.2) Financial assets: equity instruments
+
+Equity instruments are instruments that meet the definition of equity from the issuer's perspective, being
+instruments that do not contain a contractual obligation to pay cash and that evidence a residual interest in
+the issuer's net assets. All equity investments are subsequently measured at FVTPL, except where
+management has elected, at initial recognition, to irrevocably designate an equity investment at FVOCI.
+When this election is used, fair value gains and losses are recognised in OCI and are not subsequently
+reclassified to profit or loss, including on disposal. ECLs (and reversal of ECLs) are not reported
+separately from other changes in fair value. Dividends, when representing a return on such investments,
+continue to be recognised in profit or loss as other income when the right to receive payments is
+established. Gains and losses on equity investments at FVTPL are included in the ‘Net trading and other
+income’ line in the income statement.
+
+1.3) Financial liabilities
+
+Financial liabilities are classified as subsequently measured at amortised cost, except for:
+
+— Financial liabilities at fair value through profit or loss: this classification is applied to derivatives, financial
+liabilities held for trading and other financial liabilities designated as such at initial recognition. Gains or
+losses on financial liabilities designated at fair value through profit or loss are presented partially in other
+comprehensive income (the amount of change in the fair value of the financial liability that is attributable to
+changes in the credit risk of that liability) and partially in profit or loss (the remaining amount of change in
+the fair value of the liability) and
+
+— Financial guarantee contracts and loan commitments.
+
+1.4) Sale and repurchase agreements (including stock borrowing and lending)
+
+Securities sold subject to a commitment to repurchase them at a predetermined price (repos) under which
+substantially all the risks and rewards of ownership are retained by the Bank remain on the balance sheet
+and a liability is recorded in respect of the consideration received. Securities purchased under
+commitments to resell (reverse repos) are not recognised on the balance sheet and the consideration paid
+is recorded as an asset. The difference between the sale and repurchase price is treated as trading
+income in the income statement, except where the repo is not treated as part of the trading book, in which
+case the difference is recorded in interest income or expense.
+
+2) Impairment of debt instrument financial assets
+
+The Bank assesses on a forward-looking basis the ECL associated with its debt instrument assets carried
+at amortised cost and FVOCI and with the exposure arising from financial guarantee contracts and loan
+commitments. The Bank recognises a loss allowance for such losses at each reporting date. The
+measurement of ECL reflects:
+
+- An unbiased and probability-weighted amount that is determined by evaluating a range of possible
+outcomes
+
+— The time value of money and
+
+— Reasonable and supportable information that is available without undue cost or effort at the reporting
+date about past events, current conditions and forecasts of future economic conditions.
+
+2.1) Write-off
+
+For secured loans, a write-off is only made when all collection procedures have been exhausted and the
+security has been sold or from claiming on any mortgage indemnity guarantee or other insurance. In the
+corporate portfolio, there may be occasions where a write-off might occur for other reasons, such as
+following a consensual restructure or refinancing of the debt or where the debt is sold for strategic reasons
+into the secondary market at a value lower than its face value.
+
+36
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+FINANCIAL INSTRUMENTS (Continued)
+
+2.2) Recoveries
+
+Recoveries from impaired loans are adjusted against the respective loans accounts. Accordingly, it
+reduces the impaired loan balances and generally associated impairment loss allowances.
+
+3) Modifications of financial assets
+
+The treatment of a renegotiation or modification of the contractual cash flows of a financial asset normally
+depends upon whether the renegotiation or modification is due to financial difficulties of the borrower or for
+other commercial reasons.
+
+— Contractual modifications due to financial difficulties of the borrower: where the Bank modifies
+the contractual conditions to enable the borrower to fulfil their payment obligations, the asset is not
+derecognised. The gross carrying amount of the financial asset is recalculated as the present value of the
+renegotiated/modified contractual cash flows that are discounted at the financial asset's original EIR and
+any gain or loss arising from the modification is recognised in the income statement.
+
+- Contractual modifications for other commercial reasons: such modifications are treated as a new
+transaction resulting in derecognition of the original financial asset, and the recognition of a ‘new’ financial
+asset. Any difference between the carrying amount of the derecognised asset and the fair value of the
+new asset is recognised in the income statement as a gain or loss on derecognition.
+
+Any other contractual modifications, such as where a regulatory authority imposes a change in certain
+contractual terms or due to legal reasons, are assessed on a case-by- case basis to establish whether or
+not the financial asset should be derecognised.
+
+4) Derecognition other than on a modification
+
+Financial assets are derecognised when the rights to receive cash flows have expired or the Bank has
+transferred its contractual right to receive the cash flows from the assets and either: (1) substantially all
+the risks and rewards of ownership have been transferred; or (2) the Bank has neither retained nor
+transferred substantially all of the risks and rewards, but has transferred control.
+
+Financial liabilities are derecognised when extinguished, cancelled or expired.
+c) Financial guarantee contracts and loan commitments
+
+Financial guarantee contracts are initially measured at fair value and subsequently measured at the higher
+of the amount of the loss allowance, and the premium received on initial recognition less income
+recognised in accordance with the principles of IFRS 15. Loan commitments are measured as the amount
+of the loss allowance. The Bank has not provided any commitment to provide loans at a below-market
+interest rate, or that can be settled net in cash or by delivering or issuing another financial instrument.
+
+For financial guarantee contracts and loan commitments, the loss allowance is recognised as a provision
+and charged to credit impairment losses in the income statement. The loss allowance in respect of
+revolving facilities is classified in loans and advances to customers to the extent of any drawn balances.
+The loss allowance in respect of undrawn amounts is classified in provisions. When amounts are drawn,
+any related loss allowance is transferred from provisions to loans and advances to customers.
+
+0) Derivative financial instruments (derivatives)
+Derivatives are contracts or agreements whose value is derived from one or more underlying indices or
+asset values inherent in the contract or agreement, which require no or little initial net investment and are
+settled at a future date. Transactions are undertaken in cross currency swaps.
+Derivatives are recognised initially (on the date on which a derivative contract is entered into), and are
+subsequently remeasured, at their fair value. Fair values of cross currency swaps are calculated using
+forward currency exchange rate.
+
+37
+4
+
+NOTES TO THE FINANCIAL STATEMENTS YG Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+FINANCIAL INSTRUMENTS (Continued)
+
+All derivatives are carried as assets when their fair value is positive and as liabilities when their fair value
+is negative, except where netting is permitted. Gains and losses from changes in the fair value of
+derivatives are recognised in the income statement, and included within net trading and other income.
+
+€) Impairment of non-financial assets
+At each balance sheet date, or more frequently when events or changes in circumstances dictate,
+property plant and equipment and intangible assets are assessed for indicators of impairment. If
+indications are present, these assets are subject to an impairment review. The impairment review
+comprises a comparison of the carrying amount of the asset or cash generating unit with its recoverable
+amount: the higher of the asset's or cash-generating unit's fair value less costs to sell and its value in use.
+
+The fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly
+transaction between market participants at the measurement date. Value in use is calculated by
+discounting management's expected future cash flows obtainable as a result of the asset's continued use,
+including those resulting from its ultimate disposal, at a market based discount rate on a pre-tax basis.
+
+The carrying values of property, plant and equipment, goodwill and other intangible assets are written
+down by the amount of any impairment and the loss is recognised in the income statement in the period in
+which it occurs.
+
+Leases
+a) The Bank as lessor
+Bank has not entered in to any lease contract as a lessor, hence this is not applicable on the Bank.
+
+b) The Bank as lessee
+
+If the lease agreement transfers the risk and rewards of the asset, the lease is recorded as a finance
+lease and the related asset is capitalised. At inception, the asset is recorded at the lower of the present
+value of the minimum lease payments or fair value and depreciated over the lower of the estimated useful
+life and the life of the lease. The corresponding rental obligations are recorded as borrowings.
+
+1.12 Income taxes, including deferred taxes
+
+The tax expense represents the sum of the income tax currently payable and deferred income tax.
+
+Income tax payable on profits, based on the applicable tax law, is recognised as an expense in the period
+in which profits arise. Taxable profit differs from net profit as reported in the income statement because it
+excludes items of income or expense that are taxable or deductible in other years and it further excludes
+items that are never taxable or deductible. The liability for current tax is calculated using tax rates that
+have been enacted or substantively enacted by the balance sheet date.
+
+A current tax liability for the current or prior period is measured at the amount expected to be paid to the
+tax authorities. Where the amount of the final tax liability is uncertain or where a position is challenged by
+a taxation authority, the liability recognised is the most likely outcome.
+
+Deferred income tax is the tax expected to be payable or recoverable on income tax losses available to
+carry forward and on temporary differences arising between the tax bases of assets and liabilities and
+their carrying amounts in the Financial Statements. Deferred tax liabilities are generally recognised for all
+taxable temporary differences and deferred tax assets are recognised to the extent that it is probable that
+taxable profits will be available against which the assets may be utilised as they reverse.
+
+Deferred tax is calculated at the tax rates that are expected to apply in the period when the liability is
+settled or the asset is realised based on rates enacted or substantively enacted at the balance sheet date.
+Deferred tax is charged or credited in the income statement, except when it relates to items recognised in
+other comprehensive income or directly in equity, in which case the deferred tax is also recognised in
+other comprehensive income or directly in equity.
+
+38
+1.43
+
+1.44
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+Income taxes, including deferred taxes (Continued)
+
+The Bank reviews the carrying amount of deferred tax assets at each balance sheet date and reduces it to
+the extent that it is no longer probable that sufficient taxable profits will be available to allow all or part of
+the asset to be recovered.
+
+Deferred and current tax assets and liabilities are only offset when they arise in the same tax reporting
+group and where there is both the legal right and the intention to settle on a net basis or to realise the
+asset and settle the liability simultaneously.
+
+Cash and cash equivalents
+
+Cash and cash equivalents include notes and coins on hand, balances with Banks and highly liquid
+financial assets with original maturities of three months or less and that are subject to an insignificant risk
+of change in their fair value and are used by the Bank in the management of its short-term commitments.
+
+Provisions
+
+Provisions are recognised for present obligations arising as consequences of past events where it is more
+likely than not that a transfer of economic benefits will be necessary to settle the obligation, and it can be
+reliably estimated.
+
+Provision for leasehold dilapidations relates to the estimated cost of returning a leasehold property to its
+original state at the end of the lease in accordance with the lease terms. The main uncertainty relates to
+estimating the cost that will be incurred at the end of the lease.
+
+Provisions are reviewed at the end of each reporting date to reflect the current best estimate. If it is no
+longer probable that an outflow will be required to settle the obligation, the provisions are reversed.
+Contingent liabilities are possible obligations whose existence will be confirmed only by certain future
+events or present obligations where the transfer of economic benefit is uncertain or cannot be reliably
+measured. Contingent liabilities are not recognised but are disclosed unless they are remote.
+
+ACCOUNTIG POLICIES RELATING TO COMPARITIVES - IAS 39
+
+On 1 April, 2018, the bank adopted IFRS 9, which replaced IAS 39. In Accordance with the transition
+requirement of IFRS 9, comparatives were not restated. The accounting policies applied in accordance
+with IAS 39 for periods before the adoption of IFRS 9 are set below:-
+
+Financial assets and liabilities - IAS 39
+
+Financial assets and liabilities are initially recognised when the Bank becomes a party to the contractual
+terms of the instrument. The bank determines the classification of its financial assets and liabilities at initial
+recognition. Financial assets are classified as financial assets at fair value through profit or loss, loans and
+receivables, available-for-sale financial assets and held-to-maturity investments. Financial assets that are
+classified at fair value through profit or loss, which have not been designated as such or are not
+accounted for as derivatives, or assets classified as available-for-sale, may subsequently in rare
+circumstances, be reclassified from the fair value through profit or loss category to the loans and
+receivables, available-for-sale or held-to-maturity categories. Financial liabilities are classified as fair value
+through profit or loss if they are either held for trading or otherwise designated at fair value through profit
+or loss on initial recognition.
+
+39
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+ACCOUNTIG POLICIES RELATING TO COMPARITIVES - IAS 39 (Continued)
+
+a) Financial assets and liabilities at fair value through profit or loss
+
+Financial assets and financial liabilities are classified as FVTPL if they are either held for trading or
+otherwise designated at FVTPL on initial recognition. Financial assets and financial liabilities are classified
+as held for trading if they are derivatives or if they are acquired or incurred principally for the purpose of
+selling or repurchasing in the near- term, or form part of a portfolio of financial instruments that are
+managed together and for which there is evidence of short-term profit taking. In certain circumstances,
+financial assets and financial liabilities other than those that are held for trading are designated at FVTPL
+where this results in more relevant information because it significantly reduces a measurement
+inconsistency that would otherwise arise from measuring assets or liabilities or recognising the gains or
+losses on them on a different basis, where the assets or liabilities are managed and their performance
+evaluated on a fair value basis, or where a financial asset or financial liability contains one or more
+embedded derivatives which are not closely related to the host contract.
+
+Financial assets and financial liabilities classified as FVTPL are initially recognised at fair value and
+transaction costs are taken directly to the income statement. Gains and losses arising from changes in fair
+value are included directly in the income statement except for gains and losses on financial liabilities
+designated at FVTPL relating to own credit which are presented in other comprehensive income.
+
+b) Loans and receivables
+
+Loans and receivables are non-derivative financial assets with fixed or determinable payments, that are
+not quoted in an active market and which are not classified as available-for-sale or FVTPL. They arise
+when the Bank provides money or services directly to a customer with no intention of trading the loan.
+Loans and receivables are initially recognised at fair value including direct and incremental transaction
+costs. They are subsequently valued at amortised cost, using the effective interest method. Loans and
+receivables consist of loans and advances to banks and loans and advances to customers.
+
+c) Available-for-sale financial assets
+
+Available-for-sale financial assets are non-derivative financial assets that are designated as available-for-
+sale and are not categorised into any of the other categories described. They are initially recognised at fair
+value including direct and incremental transaction costs, and subsequently held at fair value. Gains and
+losses arising from changes in fair value are recognised in other comprehensive income until sale or until
+determined to be impaired when the cumulative gain or loss or impairment losses are transferred to the
+income statement. Where the financial asset is interest-bearing, interest is determined using the effective
+interest method. Income on investments in equity shares, debt instruments and other similar interests is
+recognised in the income statement as and when dividends are declared and interest is accrued.
+Impairment losses and foreign exchange translation differences on monetary items are recognised in the
+income statement.
+
+d) Held-to-maturity investments
+
+Held-to-maturity investments are non-derivative financial assets with fixed or determinable payments and
+fixed maturities that the Bank's management has the positive intention and ability to hold to maturity other
+than those that meet the definition of loans and receivables or that the Bank designates upon initial
+recognition as at fair value through profit or loss, or available-for-sale. They are initially recognised at fair
+value including direct and incremental transaction costs and measured subsequently at amortised cost,
+using the effective interest method, less any provision for impairment. A sale or reclassification of a more
+than insignificant amount of held-to-maturity investments would result in the reclassification of all held-to-
+maturity investments to available-for-sale financial assets.
+
+40
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+ACCOUNTIG POLICIES RELATING TO COMPARITIVES - IAS 39 (Continued)
+
+Impairment of financial assets — IAS 39
+
+At each reporting date, the Bank assesses whether there is objective evidence that a financial asset or a
+set of financial assets is impaired. A financial asset or a set of financial assets is impaired and impairment
+losses are incurred if there is:
+
++ objective evidence of impairment as a result of a loss event that occurred after the initial recognition of
+the asset and up to the reporting date;
+
++ the loss event had an impact on the estimated future cash flows of the Bank's financial assets; and
+
++ a reliable estimate of the amount can be realised.
+
+a) Assets carried at amortised cost
+
+For loans and advances and held-to-maturity investments, the amount of the loss is measured as the
+difference between the asset's carrying amount and the present value of estimated future cash flows
+(excluding future credit losses that have not been incurred) discounted at the financial asset's original
+effective interest rate. The carrying amount of the asset is reduced and the amount of the loss is
+recognised in profit or loss. If a loan or held-to-maturity investment has a variable interest rate, the
+discount rate for measuring any impairment loss is the current effective interest rate determined under the
+contract.
+
+Subsequent to the recognition of an impairment loss on a financial asset or a group of financial assets,
+interest income continues to be recognised on an effective interest rate basis, on the asset's carrying
+value net of impairment provisions. If, in a subsequent period, the amount of the impairment loss
+decreases and the decrease can be related objectively to an event occurring after the impairment was
+recognised (such as an improvement in the debtor's credit rating), the reversal of the previously
+recognised impairment loss is recognised in profit or loss.
+
+Impairment allowances are assessed individually for financial assets that are individually significant.
+Impairment allowances for portfolios of smaller balance homogenous loans that are below the individual
+assessment thresholds, and for loan losses that have been incurred but not separately identified at the
+balance sheet date, are determined on a collective basis.
+
+(b) Impairment of financial investments in AFS portfolio
+
+The Bank assesses, at each balance sheet date, whether there is objective evidence that a financial
+investment in the AFS portfolio is impaired. In case of such evidence, it is considered impaired if its
+acquisition cost (net of any principal repayments and amortisation) exceeds the recoverable amount. The
+recoverable amount of a quoted financial investment in the AFS portfolio is determined to be impaired if
+objective evidence indicates that the decline in market price has reached such a level that recovery of the
+cost value cannot be reasonably expected within the foreseeable future
+
+The standard method applied for a non-quoted equity instrument is based on the multiple of earnings
+observed in the market for comparable companies. Management may adjust the valuation determined in
+this way based on its judgement.
+
+If a financial investment in the AFS portfolio is determined to be impaired, the cumulative loss that was
+previously recognised in equity is included in the income statement as a component of ‘Impairment
+charges on financial assets’. After recognition of impairment on a financial investment in the AFS portfolio,
+an increase in fair value of a debt instrument up to the original cost is recognised in the income statement
+as a component of ‘Impairment charges on financial assets’, provided the fair value increase is objectively
+related to a specific event occurring after the impairment loss was recognised in the Income Statement.
+
+Impairment of non-financial assets
+
+At each Balance Sheet date, or more frequently when events or changes in circumstances dictate,
+property plant and equipment (including operating lease assets) and intangible assets (including goodwill)
+are assessed for indicators of impairment. If indications are present, these assets are subject to an
+impairment review.
+
+41
+1.16
+
+NOTES TO THE FINANCIAL STATEMENTS @| Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+ACCOUNTING POLICIES (Continued)
+
+ACCOUNTIG POLICIES RELATING TO COMPARITIVES - IAS 39 (Continued)
+
+The impairment review comprises a comparison of the carrying amount of the asset or cash generating
+unit with its recoverable amount: the higher of the asset's or cash-generating unit's fair value less costs to
+sell and its value in use. The cash-generating unit represents the lowest level at which non-financial
+assets including goodwill is monitored for internal management purposes and is not larger than an
+operating segment.
+
+The fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly
+transaction between market participants at the measurement date. Value in use is calculated by
+discounting management's expected future cash flows obtainable as a result of the asset's continued use,
+including those resulting from its ultimate disposal, at a market-based discount rate on a pre-tax basis.
+The recoverable amounts of goodwill have been based on value in use calculations.
+
+CRITICAL JUDGEMENTS AND ACCOUNTING ESTIMATES
+
+The preparation of the Financial Statements requires management to make judgements and accounting
+estimates that affect the reported amount of assets and liabilities at the date of the Financial Statements
+and the reported amount of income and expenses during the reporting period. Management evaluates its
+judgements and accounting estimates, which are based on historical experience and on various other
+factors that are believed to be reasonable under the circumstances, on an ongoing basis. Actual results
+may differ from these accounting estimates under different assumptions or conditions.
+
+The following accounting estimates and judgements are considered important for the Bank's financial
+results and financial condition because:
+
+(i) they are highly vulnerable to change from period to period as assumptions are made to calculate the
+estimates, and
+
+(ii) any significant difference between the estimated amounts and actual amounts could have a material
+impact on the Bank's future financial results and financial condition.
+
+Credit impairment allowance
+
+The application of the ECL impairment methodology for calculating credit impairment allowances is highly
+susceptible to change from period to period. The methodology requires management to make a number of
+judgmental assumptions in determining the estimates. Any significant difference between the estimated
+amounts and actual amounts could have a material impact on the Bank's future financial results and
+financial condition.
+
+Key areas of judgement in accounting estimates
+
+The key judgements made by management in applying the ECL impairment methodology are set out
+below.
+
+— Definition of default
+
+- Forward-looking information
+
+— Probability weights
+
+- SICR
+
+To give the impact of forward looking economic outlook on the Bank's portfolio, following economic
+indicators are used to predict the credit cycle
+
+- GDP Growth (%)
+
+- Change in Unemployment (%)
+
+- Change in S&P 500 (%)
+
+- Change in Energy Index (%)
+
+- Change in Non-Energy Index (%)
+
+- Change in the Proportion of Downgrades (%)
+
+42
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Interest and similar income
+
+Interest income from loans - Amortised cost
+Interest income from investments - FVOCI
+
+Interest income from investments - Amortised cost
+Interest income from investments - FVTPL
+Interest on interbank placements - Amortised cost
+
+Interest and similar expense
+Deposit from customers
+Deposit from banks
+
+Intra-group borrowings
+Repurchase agreements
+
+Net fees and commission income
+
+Processing fees and commission
+
+Personnel costs
+
+Wages and salaries (including Directors' emoluments)
+Social security costs
+Other employee benefits
+
+The average number of monthly employees (including executive Directors) was as follows:
+
+Commercial and retail banking activities
+Directors’ emoluments
+
+Short-term employee benefits
+
+Post-employment benefits (Defined Contribution)
+Other long-term benefits
+
+Termination benefits
+
+Share-based payment
+
+Emoluments comprise salary and benefits in kind
+
+Highest paid Director:
+Emoluments
+
+43
+
+Union Bank
+of India (UK) Ltd
+
+2019
+USD ‘000
+18,861
+2,483
+461
+16
+706
+
+22,527
+
+2019
+USD '000
+4,444
+1,328
+2,423
+984
+9,179
+
+2019
+USD ‘000
+263
+263
+
+2019
+USD ‘000
+
+2,031
+225
+44
+2,300
+
+2019
+Number
+24
+
+2019
+USD ‘000
+416
+
+3
+
+419
+
+156
+
+2018
+USD ‘000
+
+14,807
+1,859
+521
+19
+
+183
+
+17,389
+
+2018
+USD ‘000
+3,676
+656
+1,750
+245
+
+6,327
+
+2018
+USD ‘000
+
+541
+
+541
+
+2018
+USD ‘000
+
+1,796
+171
+65
+2,032
+
+2018
+
+Number
+21
+
+2018
+
+USD ‘000
+
+420
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Other Expenses
+
+Other premises costs
+
+IT costs
+
+Other administrative expenses
+Legal and professional costs
+Marketing expenses
+
+Finance costs
+
+Legal and professional costs include the following:
+Auditor's remuneration - Auditing of Financial Statements
+Auditor's remuneration - other services
+
+Tax on Profits
+
+Corporate tax charge/(credit)
+
+Deferred tax (see note 18):
+
+Effect of rate changes
+
+Relating to originating and reversal of temporary differences
+Adjustments in respect of prior years
+
+Total deferred tax charge/(credit)
+
+Total tax charge/(credit)
+
+44
+
+(Uf) Union Bank
+of India (UK) Ltd
+2019 2018
+
+USD ‘000 USD ‘000
+
+239 256
+
+449 278
+
+445 289
+
+931 475
+
+89 57
+
+85 87
+
+2,237 1,442
+
+87 85
+
+87 85
+
+2019 2018
+
+USD ‘000 USD ‘000
+(1,163) 1,138
+
+196 7)
+
+(1,869) 65
+
+(103) 18
+
+1,776) 76
+
+_ 2939) 1.214
+NOTES TO THE FINANCIAL STATEMENTS @ Un Ife) m Ba nm 14
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Tax on Profits (Continue)
+
+Factors affecting tax charge/(credit) for year
+
+The differences between the tax assessed for the year and the standard rate of corporation tax are
+explained as follows:
+
+2019 2018
+USD ‘000 USD ‘000
+Profit/(Loss) on ordinary activities before tax (16,635) 6,382
+Standard rate of corporation tax in the UK 19.0% 19.0%
+Tax charge/(credit) at the domestic income tax rate (3,161) 1,213
+Effects of:
+Tax effect of non - deductible depreciation 1 13
+Tax effect of other non - deductible expenses/non-taxable income (17) 15
+Tax effect of rate changes 196 (7)
+Loss utilised against profits of earlier period 1,298 -
+Adjustment in respect of prior years (1,266) (20)
+Total tax charge/(credit) for year (2,939) 1,214
+2019 2018
+USD ‘000 USD ‘000
+Tax relating to expense / (credit) in FVOCI 325 405)
+
+Tax relating to expense / (credit) in retained earnings on adoption of IFRS (142) -
+
+Factors that may affect future tax charges
+As per Finance Act 2016 (No. 2) there will be a reduction to the standard corporation tax rate for the year
+starting 1 April 2020 to 17%.
+
+Cash and balances with Banks 2019 2018
+USD ‘000 USD ‘000
+Cash on hand 31 20
+Cash at Bank 4,213 1,335
+ASB
+Loans and advances to Banks 2019 2018
+USD ‘000 USD ‘000
+Interbank placements 26,337 -
+26,337 -
+Loans and advances to customers 2019 2018
+USD ‘000 USD ‘000
+Term loan 294,726 297,604
+Overdraft 31,085 41,405
+Other loans 3,717 1,109
+Gross 329,528 340,118
+Impairment loss allowances:
+Collective Provision - (1,700)
+Specific provision (27,473) (1,600)
+Net 302,055 336,818
+
+Detailed information around impairment loss allowance is given under Note-29 in Credit Risk section.
+
+45
+12
+
+13
+
+NOTES TO THE FINANCIAL STATEMENTS Uy} Un io: nm B. an kk
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Financial Investments at Fair Value through OCI 2019 2018
+USD ‘000 USD ‘000
+Quoted investments
+Government debt securities 48,237 26,699
+Other securities 55,031 55,582
+103,268 82,281
+
+As per IFRS 9, the carrying amount of financial assets measured at FVOCI is not reduced by the ECL
+provision and it remains at fair value. Instead, an amount equal to the allowance is adjusted against fair
+value reserve.
+
+Other Financial Assets at Amortised Cost 2019 2018
+USD ‘000 USD ‘000
+Quoted investments
+Government debt securities - -
+Other securities 12,239 13,807
+12,239 13,807
+
+Derivative financial instruments
+
+The Bank deals in various currencies and it is not always possible to match the asset and liability in each
+currency. As a result, the Bank uses currency swaps to eliminate currency risks in long or short-term
+currency positions. These derivatives are revalued daily and any change in their fair value is recognised in
+the income statement.
+
+The table below shows the fair value of derivative financial instruments recorded as assets or liabilities
+together with their notional amounts. The notional amount, recorded gross, is the amount of a derivative's
+underlying asset, reference rate or index and is the basis upon which changes in the value of derivatives
+are measured. The notional amounts indicate the volume of transactions outstanding at the year end and
+are indicative of neither the market risk nor the credit risk.
+
+31-Mar-19
+Derivatives used as: Assets Liabilities Notional
+amount
+USD ‘000 USD ‘000 USD ‘000
+Currency swaps 409 - 74,534
+409 : 74,534
+31-Mar-18
+Assets Liabilities Notional
+amount
+USD ‘000 USD ‘000 USD ‘000
+Currency swaps - 426 25,084
+: 426 25,084
+
+There is no incidence of default of any counterparty with whom the Bank has entered into such contracts.
+The Bank does not anticipate deterioration of the credit quality of issuers of any such derivative contracts.
+All the contracts are double legged with the same institution, and as such maximum risk on account of
+default is the marked to market value, which is already provided in the financial statements. No exchange
+of principal is required in any of the trades.
+
+46
+15
+
+NOTES TO THE FINANCIAL STATEMENTS U] Un ion Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+Fair value of assets and liabilities
+
+IFRS 13 Fair Value Measurement requires an entity to classify its assets and liabilities according to a
+hierarchy that reflects the observability of significant market inputs. The three levels of the fair value
+hierarchy are defined below.
+
+Level 1 Securities: The fair value for financial instruments traded in active markets is based on their
+quoted market price or dealer price quotations without any deduction for transaction costs.
+
+Level 2 Securities: For all other financial instruments not traded in an active market, the fair value is
+determined by using appropriate valuation techniques. Valuation techniques include the discounted cash
+flow method, comparison to similar instruments for which market observable prices exist, options pricing
+models, credit models and other relevant valuation models.
+
+Financial Instrument classified as Level 2 & their valuation techniques are given below
+
+Financial Instruments Valuation techniques
+Financial assets
+
+Financial investments — Amortised cost Discounted cash flow method
+Loans and advances to Banks Discounted cash flow method
+Loans and advances to customers Discounted cash flow method
+
+Financial liabilities
+
+Deposits from Banks Discounted cash flow method
+Deposits from customers Discounted cash flow method
+Repurchase agreements. Discounted cash flow method
+
+The following tables set out the valuation methodologies adopted by asset and liability categories
+measured at fair value in the financial statements:
+
+2018-19
+Quoted Valuation Valuation
+market prices techniques techniques
+(Level 1) using using non-
+
+observable observable
+market data market data
+
+(Level 2) (Level 3)
+USD ‘000 USD ‘000 USD ‘000
+Financial assets
+Financial investments — FVOCI 48,237 55,031 -
+Financial investments — Amortised cost = 12,239 *
+Loans and advances to Banks - 26,337 =
+Loans and advances to customers (gross) - 329,528 -
+Derivative financial instruments - Assets : 409 -
+48,237 423,545 :
+Financial liabilities
+Derivative financial instruments - Liabilities * we *
+Deposits from Banks = 89,951 sa
+Deposits from customers - 239,778 -
+Repurchase agreements - 30,326 -
+- 360,054 :-
+
+47
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Fair value of assets and liabilities (continued)
+
+Union Bank
+
+of India (UK) Ltd
+
+2017-18
+Quoted Valuation Valuation
+market prices techniques techniques
+(Level 1) using using non-
+observable observable
+market data market data
+(Level 2) (Level 3)
+USD ‘000 USD ‘000 USD ‘000
+Financial assets
+Financial investments — AFS 26,699 55,582 -
+Financial investments - HTM : 13,807 -
+Financial investments — HFT 1,916 - a
+Loans and advances to Banks - - -
+Loans and advances to customers (gross) - 340,118 -
+Derivative financial instruments - Assets - : -
+28,615 409,507 :
+Financial liabilities
+Derivative financial instruments - liabilities - 426 -
+Deposits from Banks = 94,569 -
+Deposits from customers - 215,566 -
+Repurchase agreements : 33,081 -
+: 343,642 -
+Property, plant and equipment Leasehold Furniture & Computer Total
+improvements equipment hardware
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+Cost
+As at 31 March 2017 559 284 160 1,003
+Additions : 11 46 57
+As at 31 March 2018 559 295 206 1,060
+Additions . 4 10 14
+As at 31 March 2019 559 299 216 1,074
+Cumulative depreciation
+As at 31 March 2017 (205) (196) (141) (42)
+Depreciation charge (56) (58) (8) (122)
+As at 31 March 2018 (261) (254) (149) (664)
+Depreciation charge (56) (34) (30) (120)
+As at 31 March 2019 (317) (288) (179) (783)
+Net book value
+As at 1 April 2018 298 40 57, 395,
+As at 31 March 2019 242 11 37 290
+
+NOTES TO THE FINANCIAL STATEMENTS @ Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+” Capitalised
+Intangible assets software
+USD ‘000
+Cost
+As at 1 April 2017 244
+Additions 36
+As at 31 March 2018 280
+Additions 155
+As at 31 March 2019 435
+Amortisation
+As at 1 April 2017 (214)
+Additions (17)
+As at 31 March 2018 (231)
+Amortisation charge for the year (40)
+As at 31 March 2019 (271)
+Carrying value
+As at 31 March 2018 49
+As at 31 March 2019 ____ 164
+Deferred tax assets 2019 2018
+USD ‘000 USD ‘000
+Deferred tax assets on losses
+As at 1 April 826 489
+Tax credit to income statement 1,791 (68)
+Tax relating to change in fair value of AFS (325) 405
+Tax relating to IFRS transitional adjustment in retained earnings 112 -
+As at 31 March 2,404 826
+
+Deferred tax assets recognised during the financial year considering losses before tax amounting to
+$16.6m In view of the current Business plan, Bank is expecting to make appropriate profits to absorb its
+accumulate losses and realise the Deferred tax assets
+
+Deferred income tax is the tax expected to be payable or recoverable on income tax losses available to
+carry forward and on temporary differences arising between the tax bases of assets and liabilities and
+their carrying amounts in the Financial Statements.
+
+Deferred tax liabilities are generally recognised for all taxable temporary differences and deferred tax
+assets are recognised to the extent that it is probable that taxable profits will be available against which
+the assets may be utilised as they reverse.
+
+Deferred tax is calculated at the tax rates that are expected to apply in the period when the liability is
+settled or the asset is realised based on rates enacted or substantively enacted at the balance sheet date.
+
+The Bank reviews the carrying amount of deferred tax assets at each balance sheet date and reduces it to
+the extent that it is no longer probable that sufficient taxable profits will be available to allow all or part of
+the asset to be recovered.
+
+Deferred tax liabilities on fixed assets 2019 2018
+
+USD ‘000 USD ‘000
+As at 1 April 17 9
+Tax charge to income statement 15 8
+As at 31 March 32 17
+
+49
+19
+
+2
+
+22
+
+23
+
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Other assets
+
+Other receivables
+Prepayments and accrued income
+Corporation tax receivable
+
+Deposits from Banks
+
+Interbank borrowings
+
+Intra-group borrowings
+
+Intra-group borrowings
+
+Deposits from customers
+
+Current accounts
+Savings accounts
+Fixed term deposits
+
+Repurchase agreements
+
+(GQ) Union Bank
+of India (UK) Ltd
+2019 2018
+USD ‘000 USD ‘000
+426 458
+
+981 1,336
+1,244 a
+2,651 1,794
+2019 2018
+USD ‘000 USD ‘000
+29,387 32,140
+29,387 32,140
+2019 2018
+USD ‘000 USD ‘000
+60,564 62,429
+60,564 62,429
+2019 2018
+USD ‘000 USD ‘000
+9,834 5,064
+1,450 2,772
+228,494 207,730
+239,778 215,566
+
+The Bank enters into repurchase agreements in the normal course of business by which it transfers
+recognised financial assets directly to third parties. As the substance of the sale and repurchase is
+secured borrowings, the asset collateral continues to be recognised in full and the related liability reflecting
+the Bank's obligation to repurchase the transferred assets for a fixed price at a future date is recognised
+as liability. As a result of these transactions, the Bank is unable to use, sell or pledge the transferred
+assets for the duration of the transaction. The Bank remains exposed to interest rate risk and credit risk on
+these pledged transactions. The counterparty's recourse is not limited to the transferred assets.
+
+Repurchase agreements
+
+2019
+
+USD ‘000
+Carrying
+amount of
+transferred
+assets
+
+37,998
+
+2019 2018 2018
+
+USD ‘000 USD ‘000 USD ‘000
+
+Carrying Carrying Carrying
+
+amount of amount of amount of
+
+associated transferred associated
+
+liabilities assets liabilities
+30,326 39,585 33,081
+
+50
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019 Union Bank
+Other liabilities 2019 2018
+USD ‘000 USD ‘000
+Accruals and deferred income 632 554
+Corporation tax liability = 425
+Provisions for dilapidation 98 82
+730 1,061
+Operating lease commitments
+Payments recognised in expenses:
+Land and Land and
+buildings buildings
+2019 2018
+USD ‘000 USD ‘000
+Rent of Bank premises at Senator House 316 307
+316 307
+
+Total of future minimum lease payments under non-cancellable operating lease are as follows:
+
+2019 2018
+USD ‘000 USD ‘000
+Within one year 353, 379
+In two to five years 1,189 1,519
+In over five years * 47
+1,542 1,945
+Share capital 2019 2018 2019 2018
+Number Number USD ‘000 USD ‘000
+Authorised Capital
+Ordinary shares of GBP 1 each 2 2 0.003 0.003
+Ordinary shares of USD 1 each 100,000,000 100,000,000 100,000 100,000
+Issued and fully paid
+Ordinary shares of GBP 1 each 2 2 0.003 0.003,
+Ordinary shares of USD 1 each
+As at 1 April 90,000,000 80,000,000 90,000 80,000
+Issue of Share Capital * 10,000,000 10,000,000 10,000 10,000
+As at 31 March 100,000,000 90,000,000 100,000 90,000,
+
+* The Bank has issued share capital of $10,000,000 (2018: $10,000,000) in favour of its parent company,
+Union Bank of India, by way of ordinary shares of $1 each.
+
+51
+NOTES TO THE FINANCIAL STATEMENTS U] Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Other commitments and contingencies
+Commitments in respect of financial instruments are as follows:
+
+2019 2018
+
+USD ‘000 USD ‘000
+
+Foreign exchange - Assets 75,399 24,818
+Foreign exchange - Liabilities 74,990 25,244
+Bank guarantee 115 124
+Undrawn committed facilities 41,203 12,809
+
+Foreign exchange - Assets & Liabilities pertains to Fx Swap deals which are normally having original
+maturity less than one year
+
+Bank Guarantees - Performance Guarantees issued in favour of existing customers
+
+Contracted maturities of above commitments and contingencies varies from 90 days to 4 years.
+
+Undrawn Commitments - This is the amount which is available to draw for the Loan Customers
+
+Related party transactions
+
+) During the year, the Bank entered into the following transactions with various branches of the Union Bank
+of India, (the parent bank):
+
+2019 2018
+
+USD ‘000 USD ‘000
+
+Interest income on placements 102 -
+Interest income on trade finance i 16
+Interest expense on borrowings 2,423 1,750
+
+Balances with Related parties as at 31 March:
+Amounts owed by related
+
+parties
+2019 2018
+USD ’000 USD ’000
+Assets
+Nostro account balance with Union Bank of India, India 4 12
+4 12
+Amounts owed to related
+parties
+2019 2018
+USD "000 USD ’000
+Liabilities
+Intra-group borrowings 60,564 62,429
+60,564 62,429
+
+The amounts outstanding are unsecured and will be settled in cash. No guarantees have been given or
+received. No expense has been recognised in the year for bad or doubtful debts in respect of the amounts
+owed by related parties.
+
+») The ultimate controlling party of the Bank is Union Bank of India, incorporated in India which is both the
+parent Bank (ownership - 100%) and ultimate controlling party.
+
+©) The following key management personnel are also considered to be related parties:
+Mr. Viswesvaran Radhakrishnan (Managing Director and Chief Executive Officer)
+Dr. Anand Kumar (Executive Director and Deputy Chief Executive Officer)
+
+52
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+of India (UK) Ltd
+
+Risk management
+
+The Bank is exposed to the following risks in relation to its financial assets and liabilities:
+
++ Credit risk
+
++ Country risk
+
++ Liquidity risk
+
++ Market risk: Currency risk
++ Interest rate risk
+
++ Operational risk
+
++ Capital risk management
+
+Credit risk
+
+Credit risk refers to the risk of direct or indirect losses in on and off-balance sheet positions because of the
+failure of a borrower or counterparty to meet its obligations in accordance with agreed terms. The Bank
+has appropriate policies in place that describes the principles which underpin and drive the Bank's
+approach to credit risk management together with the systems and processes through which they are
+implemented and administered.
+
+Bank attempts to maintain a strong asset quality through disciplined credit risk management. Bank
+continuously monitors portfolio concentrations by borrower, groups, sectors, industry, geography, etc. and
+constantly strives to improve credit quality and maintain a risk profile that is diverse in terms of borrowers,
+products, industry types and geography.
+
+Bank's credit portfolio is subject to internal credit rating. Bank uses separate models of credit risk
+assessment for different exposure segments. Bank has adopted a standardized and well-defined approval
+process for all advances, which involves a committee approach for credit sanctions/approvals.
+
+The carrying amount of financial assets recorded in the financial statements, net of any allowances for
+losses, represents the Bank's maximum exposure to credit risk. There are no financial assets to related
+parties which are past due or impaired.
+
+2019 2018
+USD '000 USD ’000
+Neither past due nor impaired 250,435 320,029
+Past due but not impaired 15,137 3,178
+Impaired 63,956 16,911
+Gross 329,528 340,118
+Impairment loss allowances:
+Collective Provision - (1,700)
+Specific provision (27,473) (1,600)
+Net 302,055 336,818
+
+53
+NOTES TO THE FINANCIAL STATEMENTS @G Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Risk management (Continued)
+
+Financial assets are individually assessed to identify the event of impairment. The Bank considers several
+events including credit rating deterioration, negative media report, economic outlook of industry &
+geography, breach in key financial covenants, past due days etc. as triggers that may lead to impairment.
+
+If the impairment event triggers, then the bank considers the options of forbearance (if it's feasible for the
+counterparty to remain going concern) and liquidation. In case of forbearance, NPV (Net present value)
+loss arising from NPV comparison from existing and revised contract, is treated as impairment loss. In
+case of liquidation, available securities and hierarchy of debt is considered to calculate the impairment
+loss.
+
+During this financial year, impairment event triggered for eight loan assets. Total exposure to these assets
+is $46.4m. The recovery process has been started for these eight assets. Total specific impairment loss of
+$25.2m has been recognised during this financial year.
+
+CREDIT RISK REVIEW
+
+IFRS 9 Credit Quality
+
+Loans to Customers 2019 2018
+USD ‘000 USD ‘000
+
+Gross Exposure 329,528 340,118
+
+Less:- Loan loss provision (27,473) (3,300)
+
+Net Exposure 302,055 336,818
+
+Financial Instruments (excluding Derivatives) 2019 2018
+USD ‘000 USD ‘000
+
+Financial assets at fair value through profit or loss:
+
+Financial Investment = 1,916
+
+Financial Assets at amortised cost:
+
+Loans and advances to customers (gross) 329,528 340,118,
+
+Financial investments 12,239 13,807
+
+Loans and advances to Banks 26,337 -
+
+Other financial assets at amortised cost 4,244 1,355
+372,349 355,280
+
+Financial assets at fair value through other comprehensive
+
+income: 2019 2018
+USD ‘000 USD ‘000
+
+Financial investments 103,268 82,281
+
+Total 475,617 439,477
+
+54
+NOTES TO THE FINANCIAL STATEMENTS Uf} Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+CREDIT RISK REVIEW (Continued)
+
+Analysis of the Financial Instruments (excluding Derivatives) 2019 2018
+USD ‘000 USD ‘000
+Due within one year 122,799 40,792
+Due in more than one year 352,818 398,685
+Total 475,617 439,477
+2019 2018
+Particula
+cali usp‘000 «USD ‘000
+Neither past due nor impaired 396,523 419,388
+Past due but not impaired 15,137 3,178
+Impaired 63,956 16,911
+Total 475,617 439,477
+Loans to Customers as at 31 March 2019
+Stage 1 Stage 2 Stage 3 Total
+Partoulers usD‘000 —-USD'000. ©» USD'000.-—=—«USD ‘000
+Gross carrying amount 222,183 43,388 63,956 329,528
+Impairment provision (416) (35) (27,022) (27,473)
+Net amounts receivable 221,767 43,353 36,935 302,055
+Stage 1 Stage 2 Stage 3 Total
+Le
+aiaaiieiiiiiiia uspD‘000 ~=—-« USD'000.«~—SsUSD ‘000 »——s«USD ‘000
+Gross carrying amount as at 1st
+April 2018 323,208 : 16,911 340,118
+Changes in the loss provision
+attributable to:
+- Transfer from stage 1 to 2 (45,904) 45,904 - -
+- Transfer from stage 1 to 3 (46,437) - 46,437 -
+- Transfer from stage 2 to 1 - - - -
+- Transfer from stage 2 to 3 - - - -
+- Transfer from stage 3 to 2 - - - -
+- Transfer from stage 3 to 1 « = - tl!
+New receivables originated or
+purchased 39,948 3,259 - 43,207
+Net Repayments of loans (48,631) (5,775) 609 (53,797)
+Derecognition of modified loans - - - -
+Other movements - - - a
+Crossicarryinaiamount axiats? 222,183 43,388 63,956 329,528
+
+March 2019
+
+bj
+NOTES TO THE FINANCIAL STATEMENTS
+pectin @m Union Bank
+
+CREDIT RISK REVIEW (Continued)
+Analysis of the Financial Instruments (excluding Derivatives) (Continued)
+
+e Stage 1 Stage 2 Stage 3 Total
+
+Parties usD ‘000 USD ‘000 USD ‘000 USD ‘000
+* Loan loss provision as at 1 April 626 * 1,600 2,226
+2018
+Changes in the loss provision
+attributable to:
+- Transfer from stage 1 to 2 (75) 75 - -
+- Transfer from stage 1 to 3 (81) - 81 -
+- Transfer from stage 2 to 1 - - s ‘a
+- Transfer from stage 2 to 3 - - - =
+- Transfer from stage 3 to 2 - - - -|
+- Transfer from stage 3 to 1 - - - 5
+Net re-measurement of ECL arising
+from transfer of stage a8) (ae) 225125 aaaie
+New receivables originated or
+purchased 3 sf - =
+Net Repayments of loans (20) - 2,616 2,596
+Derecognition of modified loans - - - -
+Other movements - - - “|
+Loan loss provision as at 31 572 (40) 26,941 27,473
+
+March 2019
+* Note: Above loan loss provision as at 1st April 2019 is as per IFRS 9 (refer note 1.4)
+
+Rescheduled loans 2019 2018
+USD ‘000 USD ‘000
+Term loan 72,904 40,178
+Overdraft - 7
+Other Loans - =
+72,904 40,178
+The below tables provides detail on the staging of rescheduled loans as at 31 March 2019:
+Stage 1 Stage 2 Stage 3 Total
+USD ‘000 USD '000 USD ‘000 USD ‘000
+As at 31 March 2019
+Term loan 10,319 7,593 54,992 72,904
+Overdraft - : a is
+Other Loans = = 2 “
+Gross carrying amount 10,319 7,593 54,992 72,904
+Term loan 9 3 19,956 19,968
+Overdraft - - - -
+Other Loans - - - -
+Impairment provision 9 3 19,956 19,968
+Term loan 10,310 7,590 35,035, 52,936
+Overdraft - - - =
+Other Loans F = = =
+Net amounts receivable 10,310 7,590 35,035 52,936
+
+56
+NOTES TO THE FINANCIAL STATEMENTS @ Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Collateral:
+
+Collateral is held to mitigate credit risk exposure and may include one or more of:
+1. Bank Deposits under Lien including those with third party institutions
+
+2. Marketable Securities
+
+3. Current Assets
+
+4. Bank Guarantees & Letters of Credit
+
+5. Fixed Assets (Movable & Immovable )
+
+6. Real Estate
+
+7. Corporate/Personal Guaranty
+
+Bifurcation of loan book according to available security is give below:
+
+2019 2018
+USD ’000 USD ’000
+
+Secured 311,467 320,574
+Unsecured 18,061 19,544
+Total 329,528 340,118
+
+There is no significant change in quality of Collateral during the financial year due to change in accounting
+policies or otherwise
+
+Country risk exposure
+
+Country risk is the risk of an adverse effect that an occurrence within a country could have on the Bank.
+The Bank's risk management framework incorporates measures and tools to monitor this risk. The
+following table provides a summary by country of risk as of:
+
+2019 2018 2019 2018
+Countries Exposure Exposure % of Total % of Total
+Exposure Exposure
+
+USD ‘000 USD ‘000
+Australia 3,472 3,388 0.7% 0.8%
+Belgium 6,704 8,242 1.4% 1.9%
+British Virgin Island 16,673 20,561 3.5% 47%
+Cayman Island 17,995 18,168 3.8% 41%
+Germany 5,559 7,831 1.2% 1.8%
+India 120,806 96,326 25.4% 21.9%
+Indonesia 6,852 8,354 1.4% 1.9%
+Korea, Republic of 2,503. 2,444 0.5% 0.6%
+Kuwait 1,484 1,460 0.3% 0.3%
+Mauritius 4,945 7,980 1.0% 1.8%
+Mexico 6,534 7,489 1.4% 1.7%
+Netherlands 5,001 5,070 1.1% 1.2%
+Oman 3,718 3,793 0.8% 0.9%
+Other (MDBs) 3,620 3,411 0.8% 0.8%
+Portugal 2,385 3,359 0.5% 0.8%
+Singapore 25,918 27,579 5.4% 6.3%
+South Africa - 5,471 0.0% 1.2%
+United Arab Emirates 20,603 23,499 4.3% 5.3%
+United Kingdom 129,379 111,172 27.2% 25.3%
+United States of America 91,466 73,881 19.2% 16.8%
+475,617 439,477, 100.0% 100.0%
+
+57
+NOTES TO THE FINANCIAL STATEMENTS
+FOR THE YEAR ENDED 31 MARCH 2019
+
+Union Bank
+
+of India (UK) Ltd
+
+Risk management (Continued)
+
+Liquidity risk
+Liquidity risk is the risk of failure by the Bank to meet its financial obligations as and when they fall due.
+
+Liquidity risk is managed by balancing its cash flows with forward thinking rolling time bands so that under
+normal conditions the Bank is comfortably placed to meet its payment obligations as they fall due. The
+immediate focus is on short and medium-term funding and liquid asset management. This ensures
+management of liquidity risks as part of bank's ongoing business management within daily operations,
+‘strategy and planning.
+
+The Bank has developed its Internal Liquidity Adequacy Assessment Process (ILAAP) and stress testing
+process to assess the liquidity adequacy, the results of which have been reviewed by Senior Management
+during the year.
+
+The liquidity profile as at reporting date is as shown below:
+
+Non-derivative financial Non-derivative financial
+assets liabilities
+
+2019 2018 2019 2018
+
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+
+On Demand 5,744 11,284 7,836
+Due within 3 months 24,669 27,138 34,505 32,019
+Due between 3 to 12 months 83,690 88,213 165,370 150,399
+Due between 1 to 5 years 258,899 261,518 148,895 152,962
+Due after 5 years 102,613 62,608 - -
+Total 475,617, 439,477 360,054 343,216
+Derivative financial assets Derivative financial liabilities
+2019 2018 2019 2018
+USD ‘000 USD ‘000 USD ‘000 USD ‘000
+
+On Demand e 9 - =
+Due within 3 months 26,686 5,983 26,232 5,981
+Due between 3 to 12 months 48,713 18,835 48,758 19,263
+Due between 1 to 5 years - - 7
+Due after 5 years - : - :
+75,399 24,818 74,990 25,244
+
+The responsibility for ensuring that the Bank can meet its obligations as they fall due rests with the Bank's
+management. Under the PRA regulations the Bank is compliant with its ILG on an ongoing basis. The
+Bank has a prudent liquidity policy and adequate management systems and controls in place to ensure
+that the policy is adhered to at all times.
+
++ The Board of Directors are ultimately responsible for ensuring that the liquidity policy remains relevant
+and up to date at all times and is in line with the Bank's business activities and expressed risk tolerance.
+
+The Asset and Liability Committee (“ALCO”) is responsible for reviewing and recommending liquidity
+policy to the Board of Directors. ALCO is supported by the Risk function, which is responsible for
+monitoring the compliance on a daily basis.
+
+The Bank has developed its ILAAP, which includes a series of stress tests and limits.
+
++ The responsibility of day-to-day management of the Bank's liquidity position is delegated to the Bank's
+Treasury department.
+
+58
+NOTES TO THE FINANCIAL STATEMENTS U] Union Bank
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Risk management (Continued)
+
+Currency risk
+Currency risk is the risk that arises from the change in price of one currency against another.
+
+The Bank is mainly exposed to fluctuations in the value of GBP, EUR and INR. Bank manages the
+exposures to the variability in cash flows of foreign currency denominated assets and liabilities to
+movements in foreign exchange rates by entering into cross currency swaps. These instruments are
+entered into to match the cash flow profile. Bank has defined policy and low risk appetite to hold overnight
+open position in foreign currencies. Open position is monitored on daily basis and ensured that it remains
+within the risk appetite at all times.
+
+The Net open position in foreign currencies at the reporting date is as follows:
+
+Assets Liabilities
+2019 2018 2019 2018
+USD ‘000 USD '000 USD ‘000 USD ‘000
+INR 4 12 - -
+GBP a F 350 442
+EURO 286 667 - -
+
+The currency risk is managed by keeping open position within the risk appetite all the time.
+
+Upward or downward movement of exchange rates by 10% may impact profitability of the Bank by $0.03m
+(2018: $0.07m).
+
+Interest rate risk
+
+Interest rate risk is the risk that arises due to possibilities of a fluctuation in rates, and how that impacts on
+the pricing structure of the Bank's assets and liabilities. The Bank is also exposed to interest rate risk due
+to the nature of the rate being either fixed or floating. Most liabilities have fixed interest rates while for
+some assets interest rates are floating and are benchmarked to certain index rates like LIBOR or Bank
+rates which are dynamic and prone to fluctuations.
+
+The Bank's ALCO meets monthly to monitor this risk. ALCO in turn reviews the interest rates in various
+currencies arising from repricing of assets, liabilities and derivative instruments. The Bank manages part
+of this risk by carefully matching the cost of liabilities with that of asset pricing and if need be the Bank
+would use interest rate swaps to mitigate the risk.
+
+Interest rate risk, considering interest rate sensitivity analysis at 2% shift, is $5.03m as at 31 March 2019
+(2018: $6.59m)
+
+Operational risk
+
+Operational risk is defined as the potential risk of financial loss resulting from inadequate or failed internal
+process, systems, people or external events.
+
+The Bank has put in place an Operational Risk Management policy to manage operational risk in an
+effective, efficient and proactive manner. The primary objective of the policy is to identify the operational
+risks that the Bank is exposed to from failed, inadequate and/or missing controls, processes, people,
+systems or from external events or a combination of all the five, assess or measure their magnitude,
+monitor them and control or mitigate them by using a variety of checks. Within the Operational risk
+framework, new products, processes and services introduced by the Bank are subject to rigorous risk
+evaluation and approval. In addition to the policy, the Bank has specific operational policies in place
+covering (inter alia) IT & Cyber Security, Outsourcing policy and business continuity plan.
+
+The Bank has identified various possible risk scenarios and has put in place an internal control framework
+to mitigate identified risks. This framework is set out in the form of departmental policies and procedures,
+which are reviewed on a regular basis.
+
+59
+30
+
+3
+
+32
+
+NOTES TO THE FINANCIAL STATEMENTS Uf} Un ion Ba nk
+
+FOR THE YEAR ENDED 31 MARCH 2019 of India (UK) Ltd
+
+Risk management (continued)
+
+Capital risk management
+
+The Bank manages its capital to ensure that it will be able to continue as a going concern while
+maximising the return to stakeholders through the optimisation of its capital structure. The Bank's
+authority to operate as a bank is dependent upon the maintenance of adequate capital resources. The
+Bank is required to meet minimum regulatory requirements in the UK.
+
+The Bank's regulatory capital requirements are set by way of the ICG by the PRA. The Bank has had
+surplus capital over and above the capital required as per the ICG during the year.
+
+The Bank's regulatory capital is categorised into Tier one capital, which includes ordinary share capital,
+and retained earnings.
+
+2019 2018
+
+USD ‘000 USD ‘000
+
+Paid up share capital 100,000 90,000
+Retained earnings (5,719) 7,069
+
+Fair value reserves (964) (2,478)
+Tier one capital 93,317 94,591
+
+Ultimate parent company
+
+The ultimate parent company is Union Bank of India, a public-sector bank incorporated in India, which is
+both the immediate and ultimate controlling party. The consolidated financial statements for Union Bank
+of India are available to the public and may be obtained from Union Bank Bhavan, 239, Vidhan Bhavan
+Marg, Nariman Point, Mumbai 400021 or from their website www.unionbankofindia.co.in.
+
+Events after the balance sheet date
+
+There have been no reportable events after the balance sheet date.
+
+Brexit Impact - As the Bank does not have any branch or business operations outside UK, change in
+passporting rights would not have any direct impact on Bank's operations.
+
+Bank continues to operate as per plan, without making any change in the business model.
+
+In view of the Brexit, Bank has started to focus more on UK based assets instead of other EU member
+states.
+
+Pillar Ill
+
+The Bank is authorised by the PRA and regulated by the FCA and the PRA, therefore the Bank is required
+to publish the Pillar Ill disclosures. These are available at the Bank's website:
+\www.unionbankofindiauk.co.uk.
+
+60
+

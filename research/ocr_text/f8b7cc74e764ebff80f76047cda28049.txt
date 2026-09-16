@@ -1,0 +1,3204 @@
+BANK SEPAH INTERNATIONAL plc
+
+Company No: 04189598
+
+Annual Report and Financial Statements
+For the year ended 31 March 2025
+
+i
+
+A10
+
+FRIDAY
+
+*AEGK3HIL*
+11/07/2025
+
+ul
+
+#231
+
+COMPANIES HOUSE
+
+Contents
+
+Information about the Company
+
+Managing Director's Statement
+
+Strategic Report
+
+Directors’ Report
+
+Statement of Directors’ responsibilities
+Independent auditor's report to the members
+Statement of Comprehensive Income
+Statement of Financial Position
+
+Statement of Changes in Equity
+
+Statement of Cash Flows
+
+Notes to the Financial Statements
+
+Page
+
+3-13
+14-16
+17
+18-24
+25
+
+26
+
+27
+
+38
+
+29-58
+Information about the Company
+
+As at 31 March 2025
+
+Board of Directors
+Mohammad Reza Fatemi
+Chief Executive Officer and Managing Director
+
+lan Coleman
+Chairman and Independent Non-Executive
+Director
+
+Julian Anthony
+Chief Financial Officer and Executive Director
+
+David Swanney (resigning 30.06.25)
+Independent Non-Executive Director
+
+Robert Angel (resigned 31.03.25)
+Independent Non-Executive Director
+
+Kenneth Eglinton (appointed 01.01.25)
+Independent Non-Executive Director
+
+Mohammad Reza Khorsandi
+Non-Executive Director
+
+Seyed Mahdi Hosseini
+Non-Executive Director
+
+Company Secretary
+Stephen Lock
+Stephen.Lock@banksepah.co.uk
+
+Registered Office
+
+Bank Sepah International pic
+5/7 Eastcheap
+
+London EC3M 1JT
+
+Telephone: 020 7623 1371
+
+Fax: 020 7623 1221
+
+e-mail: info@banksepah.co.uk
+Website: www.banksepah.co.uk
+
+External Auditor
+
+Johnsons Financial Management Limited
+1 - 2 Craven Road
+
+London W5 2UA
+
+Internal Auditors
+
+MHA Macintyre Hudson
+2 London Wall Place
+London EC2Y 5AU
+
+Managing Director’s Statement
+
+Although there are currently no UN, EU or UK sanctions against Bank Sepah International Pic (“the Bank”) the
+United States’ unilateral withdrawal from the Joint Comprehensive Plan of Action (JCPOA) in 2018 and the
+consequential re-imposition of Office of Foreign Asset Control (OFAC) sanctions against numerous Iranian
+entities and their international subsidiaries including the Bank continues to severely restrict Iranian trade and
+banking business in Europe and the UK. Access to the SWIFT network was suspended for the majority of Iran’s
+State-owned banks including the Bank in November 2018.The conflict between Russia and Ukraine, and the
+ongoing events in the Middle East, whilst not directly affecting the Bank, continue to impact the negotiations that
+were taking place between the original parties to the JCPOA. Talks have recently re-commenced but the Bank
+does not expect any significant improvement in relations in the short term.
+
+The above factors and the current political situation in the US and the UK are unlikely to have a positive impact
+on the Bank’s operating environment in the near term and so the Bank continues to take a cautious approach to
+asset recognition and business opportunities during the year. Recognising the PRA focus on strong risk controls,
+financial and operational resilience the Bank’s three-year business plan remains similarly cautious. In addition,
+under the Board’s direction the Bank has taken professional advice on contingency planning and is in the process
+of updating the recovery options within its Recovery and Resolution Plan (RRP).
+
+Since the permission to resume business given by the PRA in 2016, political events have resulted in little of the
+potential business developing but the Bank has been successful in staff retention and further recruitment where
+necessary, and in 2023-2024 refreshed its IT infrastructure to future proof operational functionality. These
+achievements have enabled the Bank to deliver on the shareholder’s stated requirement that the Board and
+Management manage the Bank to meet all PRA threshold conditions and ensure the Bank’s staff and systems
+can meet any current operational needs as well as future business development once the political situation
+improves. Following a cyber-attack in November 2024 the Bank was able to recover with no loss of data or
+impact on customer service. The Bank has since upgraded controls, monitoring and security to further improve
+its resilience to any future attack.
+
+The Bank has continued to maintain strong capital and liquidity positions, utilising excess liquidity to achieve
+good returns. The Bank’s High Quality Liquid Assets (HQLA) have been supported by the purchase of state
+issued Eurobonds and UK Gilts, under a Board-approved mandate. The Bank’s key capital and liquidity ratios
+remain comfortably above regulatory minimum levels. As set out in note 2 we are satisfied that the Bank will
+continue to be able to meet its liabilities as they fall due.
+
+The success of the Bank’s remote working processes and infrastructure have led to the implementation of an
+ongoing hybrid working from home programme providing staff with flexible arrangements and no reduction in
+operational efficiency or of the ability of the Bank to function normally. This policy has proved effective and been
+well received by staff. Management will continue to monitor business levels and Key Performance indicators to
+ensure any need to change this policy is implemented in good time and with full staff consultation.
+
+The Bank’s results for the year ended 31 March 2025 are set out in the Annual Report commencing on page 25.
+The Bank’s assets are predominantly in Euros where interest rates have fallen over the past year, but with good
+cost control the Bank has maintained profitability. Bank Sepah, tran and the Bank’s Board continue to see a
+positive future for the Bank once the current political situation improves.
+
+The ongoing support of the Shareholder and the Board’s continued stewardship have enabled the Bank, the
+management team and staff to have another successful year in the face of major challenges. | would like to
+thank our Chairman, lan Coleman, who has led the Board with acumen and clarity. Collectively the Board, with
+directors old and new, have provided challenge and guidance to the Executives whilst maintaining good
+governance. | give my personal thanks to my fellow directors and to all members of staff for their continued
+efforts and support during the past year.
+
+Mohammed Reza Fatemi
+
+Managing Director
+27 June 2025
+Strategic Report
+
+Business strategy
+
+The majority of the Bank’s credit exposure is to Iranian financial institutions in Europe and Iran. The ongoing US
+action and the UK’s departure from the EU have all heavily restricted the Bank’s ability to pursue its Euro
+business strategy. Lack of direct access to the UK payment systems continues to prevent Sterling business.
+
+Currently the difficulties around the flow of funds and/or the perfection of security to support bilateral or
+syndicated lending persist. The loss of SWIFT access has continued to restrict regular trade finance business.
+
+Despite this, the Bank’s long-term strategy remains resolute: future growth of Trade Finance business alongside
+good quality lending. The lack of opportunities to expand the lending book however has resulted in money market
+placements to maintain profitability at plan levels.
+
+To support its business strategy, in the years immediately following the implementation of the JCPOA, the Bank
+recruited quality staff and upgraded its core IT systems. In 2024/2025 it refreshed core IT hardware and software
+to cope with technology upgrade and to be ready to accommodate future business volume increases. Active
+engagement with trade associations, advisory services and government information services support efforts to
+ensure all staff are equipped with the skills to meet their roles. In line with Board and regulatory focus,
+governance continues to be reviewed and enhanced embedding Financial and Operational Resilience as well
+as Environmental, Social, Governance and Climate Change awareness in everything we do, with a suite of
+policies and procedures which fit together and are regularly reviewed.
+
+Financial and Operational Resilience
+
+In line with PRA focus and despite the restrictions the Bank faces, Financial and Operational Resilience are core
+to how the Bank is managed and operates. A strict Credit Policy with all exposures reviewed by Credit and/or
+Risk Committees, and exposures predominantly to regulated Financial Institutions. The Bank maintains liquidity
+and capital ratios well above regulatory requirements and has demonstrated its financial resilience in its ILAAP,
+ICAAP and Recovery Pian stress test results.
+
+Operational Resilience poses significant issues to the Bank as many third-party suppliers are unable to service
+the Bank due to their banks’ or their own compliance policy as a result of US Sanctions. Despite this the Bank
+has implemented technology upgrades, is able to support all staff working remotely and has a fully remote
+disaster recovery provision. The Bank identified its Important Business Services (IBS), set impact tolerances,
+mapped vulnerabilities, undertaken scenario tests and assessed their impact, in good time for the March 2025
+PRA deadline.
+
+Environmental, Social, Governance and Climate Change
+The Bank has implemented an Environmental, Social, Governance and Climate Change Strategy taking account
+
+of physical and transitional climate risks and embedding these in its Risk Framework and credit processes. The
+Banks considers that its strategy complies with the requirements of the Companies Act.
+Strategic Report (continued)
+
+A formal Climate Change assessment is incorporated within every credit application including positive scoring
+for those which are environmentally sustainable or provide a net positive outcome. The Bank is an equal
+opportunities employer, does not tolerate harassment or prejudice with applicable policies in place and has a
+strong governance structure, with tone led from the top.
+
+The Bank recognises that the economy of its home market, Iran, has traditionally been dominated by fossil fuel
+and mineral resource sectors but Iran’s government has recently looked to support renewables and
+diversification. Although the Bank has provided financing for traditional sectors in the past, there is currently
+limited involvement in these areas. In time, the Bank’s focus will be on supporting sustainable projects and
+facilitating the transition of these traditional sectors into more environmentally-friendly and socially-responsible
+practices. This aligns with both the Iranian Government and the Shareholder’s strategy, and should in time lead
+to good business opportunities.
+
+Results
+
+The Bank’s results before tax amounted to a profit of €1,029k for the year ended 31 March 2025 (2024: €200k).
+
+2025 2024
+
+€ ‘000 € ‘000
+
+Net interest income 6,441 9,561
+Net fees and commission income (77) (120)
+Foreign currency gains/(losses) (3) (11)
+Other Income 72 1,291
+Operating income 6,433 10,721
+Administrative expenses (5,524) (5,008)
+Impairment gain/(loss) 120 (5,513)
+Profit before tax 1,029 200
+
+interest income remained strong in the year increasing by 5% but with interest expense increasing, as a result
+of 3% interest (2024 0%) on the €130m collateral deposit to the parent, total operating income reduced by 40%.
+Impairment provisions stabilised following the increased charges in the previous year and finished the year with
+an impairment credit. As a result, profit before tax increased by €829k (415%).
+
+The Bank operated during the year with an average of 24 employees (2024: 24) and 7 directors (2024: 7) of
+whom 5 were non-executive (2024: 5).
+
+A five-year performance summary which the board monitors as key performance indicators (“KPI”) follows on
+page 5.
+Strategic Report (continued)
+
+Performance Summary
+Total operating income
+Administrative expenses
+impairment charge
+
+Profit / (loss) before taxation
+Taxation
+
+Profit (loss) after taxation
+
+Shareholders’ funds
+Total capital resources
+
+Deposits from banks
+Amounts owed to other depositors
+Cash and cash equivalents
+
+Placements with, loans and advances
+to banks
+
+Loans and advances to customers
+Total assets
+
+Capital ratios
+
+Total capital to total risk- weighted
+assets
+Tier 1 capital to total risk- weighted
+assets
+
+Total equity to total assets
+
+Return on average equity
+- Profit / (loss) before taxation
+
+Return on average total assets
+- Profit / (loss) before taxation
+
+Cost / income ratio
+
+Year-end exchange rate - EURO/USD
+Average exchange rate - EURO/USD
+
+Year-end exchange rate - EURO/GBP
+Average exchange rate - EURO/GBP
+
+173
+173
+
+138
+
+148
+137
+
+315
+
+102.7%
+
+102.7%
+
+54.8%
+
+0.60%
+
+0.33%
+
+85.87%
+
+1.0822
+1.0739
+
+0.8354
+0.8418
+
+2024
+
+11
+(5)
+(6)
+
+172
+172.
+
+138
+
+154
+128
+
+313
+
+91.8%
+
+91.8%
+
+54.9%
+
+0.12%
+
+0.06%
+
+46.71% |
+
+1.0802
+1.0853
+
+0.8548
+0.8636
+
+2023
+
+(5)
+(1)
+
+172
+172
+
+138
+
+153
+103
+
+28
+314
+
+81.5%
+
+81.5%
+
+54.8%
+
+0.82%
+
+0.45%
+
+66.2%
+
+1.0867
+1.0418
+
+0.8782
+0.8645
+
+2022
+
+170
+170
+
+188
+
+204
+103
+
+29
+364
+
+67.5%
+
+67.5%
+
+46.9%
+
+0.99%
+
+0.47%
+
+74.7%
+
+1.1102
+1.1672
+
+0.8459
+0.8366
+
+2021
+
+169
+169
+
+187
+
+187
+142
+
+360
+
+61.2%
+
+61.2%
+
+47.0%
+
+0.97%
+
+0.45%
+
+73.5%
+
+1.1730
+1.1716
+
+0.8520
+0.8911
+Strategic Report (continued) “gut An,
+
+Capital Adequacy -
+
+The Bank has adopted the PRA’s implementation of the EU’s Capital Requirements Directive (CRD V). The
+CRD V framework consists of three Pillars.
+
+Pillar 1 determines the minimum capital requirements of banks to cover credit, market and operational risks.
+
+Pillar 2 can be divided into two major components: (i) institutions are expected to establish sound, effective and
+complete strategies and processes to assess and maintain, on an ongoing basis, the amounts, types and
+distribution of internal capital commensurate to their risk profiles, an Internal Capital Adequacy Assessment
+Process (ICAAP), as well as robust governance and internal control arrangements and (ii) a supervisory review
+and evaluation process (SREP). The key purpose of the SREP is to ensure that institutions have adequate
+arrangements, strategies, processes and mechanisms as well as capital and liquidity to ensure a sound
+management and coverage of their risks, to which they are or might be exposed, including those revealed by
+stress testing and risks that the institution may pose to the financial system.
+
+As part of the CRD V requirements an ICAAP has been approved by the Board which identifies a number of
+other (non-pillar 1) risks faced by the Bank which attract capital under the Pillar 2 rules. The total capital
+requirement of the Bank is determined as the sum of the Pillar 1 and Pillar 2 capital requirements.
+
+Pillar 3 of the CRD V requires all banks to publish certain details of their risk exposures, capital adequacy and
+risk management procedures over and above that provided in the Annual Report and Financial Statements. This
+information, which is not audited, has been published on the Bank’s website www.banksepah.co.uk.
+
+The Bank’s capital has been well in excess of both the combined Pillar 1 and Pillar 2 and the PRA’s requirements
+throughout the year. At 31 March 2025, the Bank’s total capital requirement amounted to €32.1m (2024: €39.1m)
+which means that, with Tier 1 capital of €172.3m (2024: €171.4m), the Bank had a capital surplus of €140. 3m
+(2024. €132.1m) at the year-end or 437.5% (2024: 337.6%). - . ~
+
+Liquidity
+
+The Bank is subject to the requirements set out in the PRA’s Rulebook. Individual Liquidity Guidance (iLG) is
+set by the PRA through a Liquidity Supervisory Review and Evaluation Process (LSREP) which, in turn, is guided
+by the Bank’s own Internal Liquidity Adequacy Assessment Process (ILAAP).
+
+The Treasury Department ensures that the Bank’s balance sheet remains robust and maintains liquidity in
+accordance with both internal and regulatory requirements. The Bank continues to maintain sufficient liquidity to
+meet all known and likely demands which could be made upon it by its customers and ensures that such liquidity
+is available on a day-to-day basis.
+Strategic Report (continued)
+
+The Liquidity Coverage Ratio (LCR) requires a bank to maintain unencumbered High Quality Liquid Assets
+(“HQLA”) that are equal to or in excess of 100% of its total net cash outflow assumptions over a 30-day period.
+The Bank maintained a healthy liquidity position during the year which was significantly in excess of the
+regulatory minimum. The LCR showed a steady increase during the year primarily due to the purchase of
+additional sovereign bonds which increased HQLA. The LCR at the year-end was 2034%.
+
+Cash, cash equivalents and deposits placed with banks comprise 90% of the Bank’s total assets as at 31 March
+2025 (2024: 90%).
+
+Credit operations
+
+The Bank has a conservative credit risk policy and credit risk appetite which are set by the Board. These are
+monitored by the Risk Committee and implemented through the Bank’s Credit Committee which has a limited
+delegated authority. All exposure limits are presented to Credit Committee with applications and reviews
+including full credit analysis, input from Compliance and Risk, with Climate change risks assessed.
+
+All limits are reviewed at least annually with Board approval for those above the Credit Committee’s delegated
+authority.
+
+Loans and Trade Finance
+
+The bilateral and syndicated loan market has remained subdued as Iranian counterparties’ access to hard
+currency for repayment is managed by the Central Bank of Iran and the Bank requires good quality security
+which is difficult to perfect outside of Iran.
+
+Although the Bank has access to the SEPAM messaging system which allows the transmission of L/Cs, a
+shortage of hard currency allocation to standard L/C transactions in Europe by the Central Bank of Iran as it
+prioritises strategic transactions, has resulted in no L/C business during the year. The bank continues to engage
+with counterparties to access strategic transactions through forfait arrangements or indirect lending and meet
+its business plan objectives. Meanwhile Nostros, Money Market lending and its bond portfolio generate the banks
+interest income.
+
+Total net outstanding commercial lending to customers represents 0% (2024: 0%) of the Bank’s total assets.
+Strategic Report (continued) 7
+Treasury
+
+Treasury operations are conducted under guidance of the Bank’s Asset Liability Committee (“ALCO”) and in
+accordance with approved credit limits. Activities are reviewed by the Risk Committee. Interest rate risk and
+foreign exchange risk are also monitored by ALCO. The Bank does not take proprietary positions or enter into
+any derivative contracts.
+
+The Bank has seen active non-Iranian correspondent banking relationships reduce since 2018, consequent to .
+the US withdrawal from the JCPOA and the Bank’s OFAC listing. Treasury continues to seek new relationships
+and strengthen existing ones with a daily financial markets commentary and regular contact.
+
+At the year end, the Bank’s cash and cash equivalents, being cash on hand and current account balances with
+correspondent banks, represent 47% of the Bank's total assets at 31 March 2025 (2024: 49%).
+
+Risk management
+
+The Board of Directors is responsible for setting the Bank’s overall risk appetite and documenting this within a
+Risk Appetite Statement (“RAS”). A Risk Framework document which sets out the risk management structure,
+its roles and operational systems is also approved by the Board, as is the Bank’s Risk Register.
+
+The Bank operates a “three lines of defence” methodology. Individual departments within the Bank are the first.
+line of defence and the senior managers in the department are the risk owners. There is appropriate segregation
+of activities between departments consistent with the scale of the Bank’s business. Each department is subject
+to relevant policies and have their own departmental procedures. Policies are approved by the Board and
+procedures are approved by Executive Management Committee (EMC).
+
+The second line of defence, comprising the separate Risk and Compliance departments, provide independent
+oversight of the first line of defence. In accordance with the Risk Framework the first and second lines are
+responsible for proposing changes to the policies and procedures to mitigate risk and for identifying emerging
+risks.
+
+The Risk department provides particular oversight of credit, liquidity, market and operational risk. Compliance
+provides oversight in respect of regulatory risk and risk reporting. This second line of defence delivers regular
+standing and ad hoc reports to the Risk Committee which review these and provides recommendations to the
+Board. These reports include the Risk Register and the latest Monthly Risk Report. The latter report details the
+principal risks facing the Bank and records month-end figures against the Early Warning Indicators and the
+minimum level of risk appetite. The Bank’s principal and emerging risks are reviewed by the EMC and the Risk
+Committee on a regular basis, alongside associated financial, operational and compliance controls. These
+documents, along with Operational Risk Events and Loss notification reports, and their associated remedial
+plans and mitigative actions, are formally reviewed by the Risk Committee on a quarterly basis.
+Strategic Report (continued)
+
+The third line of defence consists of the internal audit function which provides independent assurance and
+challenge, reporting to the Audit Committee. The internal audit function has been outsourced to an appropriately
+qualified firm of accountants separate from the Bank’s external auditors.
+
+Principal risks and uncertainties
+
+The principal inherent risks that the Bank faces are credit, market, operational, concentration and liquidity risks.
+Information on these principal risks is provided in note 25. The Directors have also identified the lack of access
+to GBP clearing facilities, loss of key personnel, lack of diversity of IT service providers and the geo-political
+uncertainties as giving rise to further major risks to which the bank is exposed.
+
+The Bank is committed to maintaining robust and effective governance to ensure the efficient and prudent —
+running of its operation. The responsibility for the risk management framework is discharged and administered
+through a number of delegated committees, both Board and Executive. In addition, the Managing Director has
+executive responsibility for the overall operational risk management of the Bank.
+
+Day-to-day risk oversight is delegated to key control departments, namely, Risk, Compliance, Operations and
+the Finance department ensuring that there is a robust management structure with clear segregation of duties
+and responsibilities, where possible, in keeping with the scale and complexity of the Bank.
+
+The Board has ultimate responsibility for the setting of the Bank's strategy, its risk appetite and on-going
+management of the Bank's risk exposure. This is communicated and embedded in the Bank's culture through
+a suite of policies and procedures. The Bank’s key risk principles are set out in its Risk Framework.
+
+The Board and the management have taken appropriate measures to mitigate its key risks as far as possible
+and have established other means to facilitate its GBP payments until such time it can re-join the GBP clearing
+system. Meanwhile additional contingency planning is underway, including professional advice to help the Bank
+mitigate its sterling liquidity risks. /
+
+Further to the above risks, the Bank has also considered the potential risk and impact of the prominent global
+crises on its operations such as ESG and climate change which have been covered at the start of this report.
+
+Compliance and financial crime
+
+The Bank has comprehensive policies and procedures in place to ensure that all its activities are compliant with
+existing regulations, any applicable sanctions regimes and the Board's risk appetite.
+Strategic Report (continued) .
+Emphasis is placed on measures to prevent all aspects of financial crime and compliance with sanctions
+requirements. The Bank recognises that its risk profile is high and therefore understands that enhanced systems
+and controls must be put in place to ensure its adherence to
+
+the regulatory requirements. The Bank uses third party software to maximise the effectiveness of controls to
+help mitigate financial crime and sanctions risks.
+
+There is no “straight-through” processing of transactions — there is manual intervention to ensure stringent
+checks on prospective transactions, customers and counterparties throughout the lifecycle of any transaction.
+
+The Compliance function continually reviews financial crime and sanctions policies, procedures and staff training
+to ensure its framework remains appropriate. The Risk Committee reviews the performance of Compliance, to
+ensure the Bank meets all regulatory standards and remains within the Board’s risk appetite.
+
+Compliance activities are reviewed annually by the internal audit function.
+
+In line with current regulations and best practice, all staff are trained in the Bank’s financial crime procedures
+and are required to complete annual Anti-Money Laundering (AML) training. In addition, Compliance issue
+guidance to staff on emerging threats or new legislation as they materialise throughout the year.
+
+Through effective customer due diligence and ongoing monitoring of transactions, the Bank has implemented
+the Board directed policy on the prevention of money laundering and financial crime.
+
+a Staff are encouraged to report suspicions via the Money Laundering Reporting Officer, through the Bank’s
+* Suspicious Activity Report programme, who, in turn, assesses these reports and makes appropriate filings to
+4, the National Crime Agency.
+
+Compliance produces a Compliance Monitoring Programme on a quarterly basis, encompassing all business
+areas of the Bank, and a report is made to the Risk Committee.
+
+Corporate governance
+The Bank is committed to high standards of corporate governance and business integrity in all its activities.
+Board of directors
+
+The members of the Board are shown on page 1. At 31 March 2025, it comprised two executive directors and
+six non-executive directors (one resigning on 30 June 2025), three of whom are independent.
+
+The Board of Directors is the principal decision-making forum for the Bank. It has overall responsibility for leading
+
+and controlling the Bank and is accountable to the Bank’s shareholders for financial and operational performance.
+The Board sets the Bank’s strategy and monitors performance of the Bank through KPIs as outlined on page 6.
+
+10
+Strategic Report (continued)
+All directors participate in setting strategy, performance and the financial and risk management of the Bank.
+
+Board balance and independence
+
+The directors provide the Bank with the knowledge, mix of skills, experience and network of contacts required.
+There is a Board Succession Plan and Diversity policy to support the Board’s composition and ongoing
+effectiveness. The Board’s committees consist of directors with a variety of relevant skills and experience to
+ensure no undue reliance is placed upon any individual. The Board met four times during the financial year.
+
+Information
+
+All directors receive complete and timely information on all relevant matters. Any requests for further information
+or Clarification are co-ordinated by the Company Secretary. In addition to the Executive Management Committee
+the following committees report directly to the Board.
+
+Audit Committee
+
+The Audit Committee is comprised of four non-executive directors including a Chairman who is financially
+qualified. The Audit Committee held four meetings during the year.
+
+The Audit Committee is responsible for:
+
+e Assisting the Board in discharging its responsibilities and in making all relevant disclosures in relation to
+the financial affairs of the Bank;
+
+e Reviewing the systems of internal control;
+
+e Making recommendations on the internal and external auditors’ appointments and remuneration;
+
+e Discussing any matters arising from the audits and recommendations made by the internal and external
+auditors;
+
+e Reviewing the annual financial statements, financial reporting and regulatory compliance; and
+Monitoring the processes for internal audit, risk management and the external audit.
+
+The Audit Committee undertakes an annual evaluation of the independence and objectivity of the external
+auditors and the effectiveness of the audit process, taking into consideration relevant professional and regulatory
+requirements. .
+
+Remuneration Committee
+
+The Remuneration Committee makes recommendations to the Board in relation to remuneration.
+
+The Remuneration Committee is comprised of the three UK based non-executive directors and the non-voting
+Managing Director.
+
+11
+Strategic Report (continued)
+The Remuneration Committee is responsible for:
+
+e Previewing the remuneration levels for all staff;
+
+e Review of bonus proposals prior to submission to Board for approval; and
+
+e Ensuring that any appointment to the Board of the Bank is made with due consideration to the
+Succession Plan and Diversity Policy of Directors.
+
+Risk Committee
+
+The Risk Committee is comprised of three UK-based non-executive directors and the two non-voting executive
+directors. Its purpose is to:
+
+Safeguard the independence and oversee the performance of the Risk function;
+
+Review the Bank’s risks and ensure that these are appropriately mitigated;
+
+Assess the performance of the Chief Risk Officer;
+
+Safeguard the independence and oversight of the Compliance function;
+
+Assess the performance of the Compliance Officer;
+
+Formulate and support the Board’s corporate governance responsibilities in relation to credit risk
+management; and
+
+e Approve the Bank’s credit risk management framework, other risk management policies and
+arrangements and internal control policies relating to the management of credit and related risks.
+
+Section 172 (1) Statement
+
+The directors have complied with their duty under section 172(1) of the Companies Act 2006 to promote the
+success of the Bank. Recognising that the Bank’s current operations are severely restricted, they have acted
+and made decisions during the year that are most likely to ensure productive relationships are established and
+maintained with a wide range of stakeholders including its shareholder, regulators, employees, banking
+correspondents, customers and the suppliers of goods and services. In discharging their responsibilities, the
+directors have paid particular attention to maintaining high standards of business conduct.
+
+The Board and its committees, in their discussions and decision making, consider regular reports from the
+management on issues concerning the aforementioned stakeholders and where applicable to the Bank’s
+operations, the environment and its communities. In addition, members of the Board have had interactions with
+various stakeholders including the Bank’s regulators.
+
+As part of the Bank’s outsourcing and operational resilience procedures, senior management meet regularly
+with its key service providers and suppliers to conduct due diligence and ensure a good standard of service
+delivery is maintained. Regular reports on these visits are provided to the relevant committees.
+
+12-
+Strategic Report (continued)
+
+Board members have direct access and regular engagement with the Bank’s employees including during Board
+visits and during social events or at any other time they may choose.
+
+The Board wishes to thank the shareholder for its continued support to the Bank’s business and maintaining
+strong levels of capital in line with the Bank's business plan, risk appetite and regulatory requirements.
+
+BY ORDER OF THE BOARD
+Mohammad Reza Fatemi
+Managing Director
+
+27 June 2025
+
+13
+Directors’ Report
+
+The directors present their annual report and the audited Financial Statements of the Bank for the year ended
+31 March 2025. ,
+
+Company name and number
+
+The Bank is an unlisted public limited company registered in England and Wales. The Company number is
+04189598.
+
+Principal activities and business review
+
+The Bank is a commercial bank and a wholly-owned subsidiary of Bank Sepah in Iran. The Bank is authorised
+under the Financial Services and Markets Act 2000 and regulated by the Prudential Regulation Authority and
+the Financial Conduct Authority. In the normal course of business, the principal activity of the Bank is the
+provision of banking and financial services to customers with extensive business interests in Iran and the Middle
+East..
+
+A review of business and performance indicators is outlined in the Strategic Report on pages 3-13.
+Financial Risk Management
+
+The objective of financial risk management is to minimise the impact to the bank of adverse movements in
+exchange and interest rates and to contain credit and concentration risk, within the constraints of the Bank’s risk
+appetite. The Bank’s Risk Appetite Statement sets out the Bank’s board approved limits for each type of financial
+risk that the Bank faces.
+
+The main financial risks faced by the Bank are credit, currency, interest rate, liquidity and operational risk. The
+Bank’s approach to the management of these risks and indicative exposures is set out in Notes 25 and 26.
+
+‘Further details of the Bank’s risk exposures, capital and risk management procedures required under Pillar 3 of
+the CRD V are published on the Bank’s website www.banksepah.co.uk.
+
+Post balance sheet events
+There have been no post balance sheet events.
+
+Results and dividends
+
+The results for the year are set out in the Statement of Comprehensive Income on Page 25. The profit after tax
+for the year ended 31 March 2025 amounted to €768k (2024: €210k).
+
+The directors do not propose a payment of a dividend (2024: nil).
+
+14
+Directors’ Report (continued)
+
+Going concern basis of accounting
+
+The Directors have reviewed the current and potential future business activities and financial position of the
+Bank, including an assessment of capital and liquidity requirements for the foreseeable future in line with its
+business plan. The review covers the going concern up to 31 July 2026. The going concern assessment is
+prepared by Executive Management, reviewed and approved by the Board.
+
+The planned business activities are very cautious and take into account the current geopolitical issues and
+restrictions the Bank operates within.
+
+As at 31 March 2025, the Bank held eligible capital of €172m (excluding current year profit) and had a capital
+surplus of €140m (2024 €132m). In line with previous years, the 2025 profits will be retained to further Strengthen
+the capital position.
+
+The Bank's latest ICAAP and ILAAP documents’ stress tests, which were updated during the financial year,
+demonstrate its resilience given its significant capital surplus and liquidity position. The bank ended the year
+with very strong capital and liquidity ratios.
+
+Based on this review, the Directors have a reasonable expectation that the Bank has adequate resources to
+
+continue in operational existence for at least up to 31 July 2026. Therefore, the financial statements have been
+prepared on a going concern basis.
+
+Future developments
+The Bank will continue to explore possibilities within the EEA following the UK's departure from the EU to
+facilitate expansion of its activities in trade finance and commercial lending with a Treasury function to support
+
+these business activities whilst maintaining a strong liquidity position. Until the political climate changes, reducing
+the Iran risk averse nature of the UK and European banks, any new business activity is likely to be limited.
+
+Directors and directors’ interests
+
+_ There have been no changes in the composition of the Board during the year other than referred to below.
+David Swanney indicated his intention to resign as an Independent Non-Executive Director with effect from the
+30 June 2025 and therefore remains in capacity as at the year end. Robert Angel resigned as an Independent
+Non-Executive Director with effect from the 30 March 2025. Kenneth Eglinton was appointed as an Independent
+
+Non-Executive Director with effect from 1 January 2025.
+
+There is no qualifying third party-indemnity provision in force for the directors.
+
+15
+Directors’ Report (continued)
+
+None of the directors has or had any beneficial interest in the share capital of the Bank. No rights to subscribe
+for shares in the Bank has been granted to, or exercised by, any director or member of his immediate family
+during the year. No director had a material interest at any time during the year in any contract of significance,
+other than a service contract with the Bank.
+
+Disclosure of information to auditors
+
+The directors who held office at the date of approval of this report confirm that, so far as they are
+
+each aware, there is no relevant audit information of which the Bank’s auditors are unaware. In addition, each
+director has taken all steps that he ought to have taken as a director to make himself aware of any relevant audit
+information and to establish that the Bank’s auditors are aware of that information.
+
+Auditors
+
+Johnsons, Chartered Accountants have expressed their willingness to continue in office as auditors and a
+resolution proposing their reappointment will be submitted at the next Annual General Meeting.
+
+BY ORDER OF THE BOARD
+Mohammad Reza Fatemi
+Managing Director
+
+27 June 2025
+
+16
+Statement of Directors’ responsibilities
+
+The directors are responsible for preparing the Strategic Report, the Directors’ Report and the Financial
+Statements in accordance with applicable United Kingdom law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law, the
+directors have elected to prepare the financial statements in accordance with UK adopted International
+Accounting Standards (IAS). Under company law, the directors must not approve the financial statements unless
+they are satisfied that they give a true and fair view of the state of affairs and profit or loss of the Bank for that
+period. In preparing these financial statements, the directors are required to:
+
+e Make judgements and accounting estimates that are reasonable and prudent;
+
+° Select suitable accounting policies in accordance with IAS 8: Accounting Policies, Changes in Accounting
+Estimates and Errors and then apply them consistently;
+
+° Present information, including accounting policies, in a manner that provides relevant, reliable,
+comparable and understandable information;
+
+° Provide additional disclosures when compliance with the specific requirements of UK adopted IAS is
+
+insufficient to enable users to understand the impact of particular transactions, other events and
+conditions on the Bank’s financial position and financial performance and
+
+° Comply with relevant UK adopted IASs, subject to any material departures being disclosed and explained
+in the financial statements.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain
+the Bank’s transactions and disclose with reasonable accuracy at any time the financial position of the Bank and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They are also
+responsible for safeguarding the assets of the Bank and hence for taking reasonable steps for the prevention
+and detection of fraud and other irregularities.
+
+The directors are satisfied that the Bank has adequate resources to continue in business for the foreseeable
+future. For this reason, the financial statements are prepared on a going concern basis.
+
+17
+Independent Auditor’s Report to the Members of Bank Sepah International Pic
+
+, AY,
+Opinion
+We have audited the financial statements of Bank Sepah International Pic (“the Company or the Bank”) for the
+year ended 31 March 2025 which comprise the Statement of Comprehensive Income, the Statement of Financial
+Position, the Statement of Changes in Equity, the Statement of Cash Flows and notes to the financial statements,
+including significant accounting policies except for part of note 25 marked as unaudited. The financial reporting
+framework that has been applied in the preparation applicable law and UK adopted international accounting
+standards.
+In our opinion the financial statements:
+
+* give a true and fair view of the state of the Company as at 31 March 2025, and its profit for the year then
+ended;
+
+* have been properly prepared in accordance with UK adopted international accounting standards; and
+
+*« have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable
+law. Our responsibilities under those standards are further described in the Auditor's Responsibilities for the
+Audit of the Financial Statements section of our report. We are independent of the Company in accordance with
+the ethical requirements that are relevant to our audit of the financial statements in the UK, including the FRC’s
+Ethical Standard, and we have fulfilled our other ethical responsibilities in accordance with those requirements.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our
+Opinion.
+
+Emphasis of Matter
+
+We draw attention to Note 2 in the financial statements, which describes how management is currently monitoring and
+assessing the ongoing conflict involving Iran. As disclosed in that note, there is uncertainty regarding potential future
+actions that may be taken by the Government in the UK and intemationally and the impact, such actions may have on
+the Bank's ability to continue as a going concern. Our opinion is not modified in respect of this matter.
+
+Conclusions relating to going concern
+In auditing the financial statements, we have concluded that the Directors’ use of the going concem basis of accounting
+in the preparation of the financial statements is appropriate. Our evaluation of the Directors’ assessment of the Company
+ability to continue to adopt the going concem basis of accounting included: :
+* Evaluated management's use of going concern basis of accounting in the preparation of the financial
+statements, including by reviewing management’s assessment and the underlying assumptions, and
+through discussions with management and those charged with governance.;
+¢ Assessed appropriateness of key assumptions made by management in the Bank’s Business plan by
+comparing them to historical performance and challenging the achievability of business growth. In
+assessing the reasonableness of management’s key assumptions, we considered the impact of change
+in interest rates, ongoing geopolitical conflicts, US sanctions on Iran, the trading environment, principal
+risks and appropriate mitigating factors. We performed back-testing by comparing the budget of prior
+periods to actual results to assess the accuracy of management's historical business plan;
+* Involved auditor experts to review Bank's compliance with ICAAP policies during the going concern
+period;
+¢ Reviewed supporting documents to confirm that the notice period required for draw down of collateral
+deposit by parent company of €130m is more than one year and with prior approval of the Bank.
+¢ Evaluated reasonableness of management's stress testing scenario assumptions and the plausibility of
+management's actions to mitigate the impact of management's reverse stress test;
+* Evaluated the level of liquidity of the Bank to support ongoing requirements;
+¢ Enquired with management regarding the critical events identified as part of the Bank’s contingency
+planning and their preparedness to respond to such events; and
+¢ Assessed the appropriateness of the going concern disclosures by evaluating the consistency of with
+management's assessment and for compliance with International Accounting Standards in conformity
+with the requirements of the Companies Act 2006.
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or
+conditions that, individually or collectively, may cast significant doubt on the Company’s ability to continue as a
+going concern for a period of at least twelve months from when the financial statements are authorised for issue.
+
+18
+Independent Auditor's Report to the Members of Bank Sepah International Pic (continued)
+
+Our responsibilities and the responsibilities of the Directors with respect to going concern are described in the
+relevant sections of this report. However, because not all future events or conditions can be predicted, this
+statement is not a guarantee as to the Company's ability to continue as a going concern.
+
+An overview of the scope of our audit
+
+Our audit was scoped by obtaining an understanding of the Company and its environment, including controls, and
+assessing the risks of material misstatement in the financial statements. We also addressed the risk of management
+override of internal controls, including assessing whether there was evidence of bias by the Directors that may have
+represented a risk of material misstatement. The scope of our audit was influenced by the level of materiality we
+determined.
+
+We tailored the scope of our audit to ensure that we performed enough work to be able to give an opinion on
+the financial statements as a whole, taking into account an understanding of their activities, the accounting
+processes and controls, and the industry in which the Company operates. Our planned audit testing was directed
+accordingly and was focused on areas where we assessed there to be the highest risk of material misstatement.
+
+During the audit we reassessed and re-evaluated audit risks and tailored our approach accordingly.
+The audit testing included substantive testing on significant transactions, balances and disclosures, the extent
+
+of which was based on various factors such as our overall assessment of the control environment, the
+effectiveness of controls and the management of specific risks.
+
+sz iWe communicated with those charged with governance regarding, among other matters, the planned scope and
+
+‘timing of the audit and significant findings, including any significant deficiencies in internal control that we
+‘identified during the audit.
+
+‘Key Audit Matters
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of the
+‘financial statements of the current period and include the most significant assessed risks of material misstatement
+i(whether due to fraud or error) we identified, including those which had the greatest effect on the overall audit strategy,
+. ‘the allocation of resources in the audit: and directing the efforts of the engagement team. These matters were addressed
+in the context of our audit of the financial statements, and in forming our opinion thereon, and we do not provide a
+separate opinion on these matters.
+independent Auditor’s Report to the Members of Bank Sepah International Pic (continued)
+
+Key audit matter
+
+How the matter was addressed in our audit
+
+The risk of inadequate expected
+credit loss (ECL) provisions for
+loans and advances’ to
+customers and banks
+
+Impairment gains in the year are a
+credit balance of €120,000 (2024:
+debit €5,513,000)
+
+Impairment loss provisions on
+loans and advances to customers
+and banks are €7,232,000 (2024:
+€7,167,000).
+
+Refer to Note 2 _ Significant
+accounting policies (Page 29); and
+Note 12 of the Financial Statements
+(Page 39).
+
+The key risks of inadequate
+expected credit loss provisions for
+loans and advances to customers
+and bank are that:
+
+a. credit loss events may have
+occurred but not been
+recognised by the Bank;
+
+b. assumptions that impact the
+recoverability of loans and
+
+advances may not be
+reasonable; and
+c. calculation of expected
+
+credit loss provision may be
+inaccurate.
+
+The procedures performed included:
+
+We assessed the design effectiveness of key
+controls for identifying credit events and for data
+validation;
+
+We involved auditor’s experts for reviewing Bank's
+expected credit loss methodology and challenging
+management's assumptions used in the expected
+credit loss model including recalculating of the
+expected credit loss on the financial assets as of
+year-end.
+
+We assessed appropriateness of staging
+classification of financial assets as per Bank’s|
+methodology and its compliance with IFRS 9
+requirements.
+
+We _ challenged management's assumptions
+concerning future cash flows, discount rate and
+alternative scenarios for stage 2 and stage 3
+financial assets;
+
+We assessed appropriateness of application of
+macro-economic factors in the ECL calculation;
+
+We challenged appropriateness of the PD's
+considered by management by referencing to third
+party reports.
+
+We obtained direct confirmation from counterparties
+for all significant loans and advances to customers
+and banks.
+
+- We assessed the appropriateness of the
+disclosures in the financial statements.
+Conclusion:
+
+As a result of the procedures performed, we did not identify
+any evidence of material misstatement in the expected
+credit loss provision for loans and advances to customers
+and banks.
+
+The risk of improper revenue
+recognition of interest income
+
+Interest income is €10,080,000
+(2024: €9,564,000)
+Refer to Note 2 Significant
+
+accounting policies (Page 30) and
+Note 3 of the Financial Statements
+(Page 36).
+
+There is a risk of material
+misstatement if interest income is
+not recorded correctly in the
+appropriate accounting period.
+
+The procedures performed included:
+
+We obtained understanding of the revenue
+recognition process and assessed the design
+effectiveness of key controls over interest income
+recognition process;
+
+We evaluated compliance of accounting policies
+with the requirements of IFRS 9 and IFRS 15.
+
+We recalculated interest income on a sample basis
+and agreed the inputs such as interest rate, nominal
+amount and maturity period to the supporting
+contracts. We ensured that the interest income is
+recognised using effective interest rate;
+
+We performed year-end cut off testing to check that
+the revenue was recognised in the appropriate
+accounting period;
+
+We assessed the appropriateness of
+disclosures in the financial statements.
+
+the
+
+Conclusion:
+
+As a result of the procedures performed, we did not identify
+any evidence of material misstatement in the interest
+income.
+
+20
+
+Independent Auditor’s Report to the Members of Bank Sepah International Pic (continued)
+
+Our application of materiality
+
+Our definition of materiality considers the value of error or omission on the financial statements that, individually or in
+aggregate, would change or influence of the economic decision of a reasonably knowledgeable user of those financial
+statements. Misstatements below these levels will not necessarily be evaluated as immaterial as we also take account
+of the nature of the identified misstatements, and the particular circumstances of their occurrence, when evaluating their
+effect on the financial statements as a whole. Materiality is used in planning the scope of our work, executing that work
+and evaluation the results.
+
+Overall materiality €1.72m (2024: €1.72m)
+Basis for determining We have determined materiality based on 1% of equity (2024: 1%
+overall materiality of equity).
+
+We believe that equity provides us with an appropriate basis to
+determine materiality as the Bank is operating in sanctions
+environment. Consequently, the Bank has had low profitability
+compared to the balance sheet size in recent years. The main
+users of the financial statements are the Parent Company,
+employees and the Prudential Regulatory Authority (PRA). The
+users of the financial statements generally do not expect Bank to
+generate significant profits in the short term; instead, the current
+focus is more on the capital maintenance and compliance with
+applicable regulations. |
+Performance materiality €0.86m (2024: €0.86m)
+
+We set the performance materiality based on 50% (2024: 50%) of
+overall materiality.
+Performance materiality is the application of materiality at the
+individual account or balance level, set at an amount to reduce,
+to an appropriately low level, the probability that the aggregate of
+the uncorrected and undetected misstatements exceeds
+materiality for the financial statements as a whole.
+in determining performance materiality, we considered several
+factors including our understanding of the control environment of
+the Company.
+Error reporting threshold We agreed to report any corrected or uncorrected adjustments
+exceeding €86k (2024: €86k) to the Board of directors as well as
+differences below this threshold that in our view warranted
+reporting on qualitative grounds.
+
+Other information
+
+The other information comprises the information included the Managing Director's Statement, Strategic Report
+and Director’s Report, other than the financial statements and our auditor's report thereon. The Directors are
+responsible for the other information contained within the annual report.
+
+Our opinion on the financial statements does not cover the other information and, except to the extent otherwise
+explicitly stated in our report, we do not express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our responsibility is to read the other information and, in
+doing so, consider whether the other information is materially inconsistent with the financial statements or our
+knowledge obtained in the audit or otherwise appears to be materially misstated. If we identify such material
+inconsistencies or apparent material misstatements, we are required to determine whether this gives rise to a
+material misstatement in the financial statements themselves. If, based on the work we have performed, we
+conclude that there is a material misstatement of this other information, we are required to report that fact.
+
+We have nothing to report in this regard.
+
+21
+cant
+
+Independent Auditor’s Report to the Members of Bank Sepah International Pic (continued)
+
+Opinions on other matters prescribed by the Companies Act 2006
+In our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the Strategic Report and Directors’ Report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+
+e the Strategic Report and Directors’ Report has been prepared in accordance with applicable legal
+requirements.
+
+Matters on which we are required to report by exception
+
+In the light of the knowledge and understanding of the Company and its environment obtained during the audit,
+we have not identified material misstatements in the Strategic Report or the Directors’ Report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+* adequate accounting records have not been kept, or returns adequate for our audit have not been
+received from branches not visited by us; or
+
+* the financial statements are not in agreement with the accounting records and returns; or
+
+¢ certain disclosures of Directors’ remuneration specified by law are not made; or
+
+* we have not received all the information and explanations we require for our audit.
+
+Responsibilities of Directors
+
+As explained more fully in the Directors’ responsibilities statement set out on page 18, the Directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such. internal control as the Directors determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error.
+
+in preparing the financial statements, the Directors are responsible for assessing the Company’s ability to
+continue as a going concern, disclosing, as applicable, matters related to going concern and using the going
+concern basis of accounting unless the Directors either intend to liquidate the Company or to cease operations,
+or have no realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our
+opinion. Reasonable assurance is a high level of assurance but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise
+from fraud or error and are considered material if, individually or in the aggregate, they could reasonably be
+expected to influence the economic decisions of users taken based on these financial statements.
+
+Extent to which the audit was considered capable of detecting irregularities, including fraud
+irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures
+in line with our responsibilities, outlined above, to detect material misstatements in respect of irregularities,
+including fraud.
+
+These audit procedures were designed to provide reasonable assurance that the financial statements were free
+from misstatements due to fraud or error. The risk of not detecting irregularities that result from fraud is higher
+than the risk of not detecting one resulting from error and detecting irregularities that result from fraud is
+inherently more difficult than detecting those that result from error, as fraud may involve collusion, deliberate
+concealment, forgery or intentional misrepresentations. Also, the further removed non-compliance with laws and
+regulations is from events and transactions reflected i in the financial statements, the less likely we would become
+aware Of it.
+
+22
+Independent Auditor’s Report to the Members of Bank Sepah International Pic (continued)
+
+Identifying and assessing potential risks arising from irregularities, including fraud
+The extent to the procedures undertaken to identify and assess the risk of material misstatement in respect of
+irregularities, including fraud, included the following:
+
+We considered the nature of the industry and sector the control environment, business performance
+including remuneration policies and the Company's own risk assessment that irregularities might occur
+as a result of fraud or error. From our sector experience and through discussion with the Directors, we
+obtained an understanding of the legal and regulatory framework applicable to the Company and
+determined that the most significant are Companies Act 2006, Financial Services and Market Act 2000,
+The Money Laundering and Terrorist Financing Regulations 2019, Tax legislation (governed by HM
+Revenue and Customers), Financial Services Act 2012, Capital Requirements Regulation and the
+relevant Prudential Regulatory Authority (PRA) and the Financial Conduct Authority (FCA) regulations.
+We enquired of the Directors and management concerning the policies and procedures relating to:
+- Identifying, evaluating and complying with the laws and regulations and whether they were aware
+of any instances of non-compliance;
+- Detecting and responding on the risks of fraud and whether they had any knowledge of actual or
+suspected fraud; and
+- The internal controls established to mitigate risks related to fraud or non-compliance with laws
+and regulations.
+We performed analytical review to identify unusual transactions and reviewed supporting documents to
+assess the risk of material misstatement.
+We reviewed meeting minutes of Board, Audit Committee and other sub committees including
+correspondence with regulators.
+We assessed the susceptibility of the financial statements to material misstatement, including how fraud
+might occur by evaluating management's incentives and opportunities for manipulation of the financial
+statements. This included utilising the spectrum of inherent risk and an evaluation of the risk of
+management override of controls. We determined that the principal risks were related to posting
+inappropriate journal entries to increase revenue or reduce costs, creating fictitious transactions to hide
+losses or to improve financial performance, and management bias in accounting estimates particularly
+in determining expected credit loss provision for loans and advances to customers and banks.
+
+Audit response to risks identified
+In respect of the above procedures:
+
+we corroborated the result of our enquiries through review of the minutes of the Bank’s audit committee
+meetings, inspection of the complaints registers and breaches register, internal audit reports, inspection
+of legal and regulatory correspondence and correspondence from regulators.
+
+audit procedures performed by the engagement team in connection with the risks identified including:
+
+- reviewing financial statement disclosures and testing to supporting documentation to assess
+compliance with applicable laws and regulations expected to have a direct impact on the financial
+statements.
+
+- testing journal entries, including those processed late for financial statements preparation, those
+posted by infrequent or unexpected users, those posted to unusual account combinations.
+
+- enquiry of management around actual and potential litigation and claims.
+
+- reviewing accounting estimate for bias including challenging the assumptions and judgments
+made by management in its significant accounting estimates;
+obtaining confirmations from third parties to confirm existence of balances.
+
+the Bank operate in a highly regulated industry. As such, the Senior Statutory Auditor considered the
+experience and expertise of the engagement team to ensure that the team had the appropriate
+competence and capabilities; and
+
+we communicated relevant laws and regulations and potential fraud risks to all engagement team
+members and remained alert to any indication of fraud or non-compliance with laws and regulations
+throughout the audit.
+
+Because of the inherent limitations of an audit, there is a risk that we will not detect all irregularities, including
+those leading to a material misstatement in the financial statements or non-compliance with regulation. This risk
+increases the more that compliance with a law or regulation is removed from the events and transactions
+reflected in the financial statements, as we will be less likely to become aware of instances of non-compliance.
+
+23
+independent Auditor’s Report to the Members of Bank Sepah International Pic (continued)
+
+The risk is also greater regarding irregularities occurring due to fraud rather than error, as fraud involves —
+intentional concealment, forgery, collusion, omission or misrepresentation.
+
+A further description of our responsibilities for the audit of the financial statements is located on the Financial
+Reporting Council's website at www.frc.org.uk/auditorsresponsibilities. This description forms part of our
+auditor’s report.
+
+Other requirements
+We were appointed by the Directors on 12 February 2024. Our total uninterrupted period of engagement is two years
+covering the year ended 31 March 2024 and 31 March 2025.
+
+We did not provide any non-audit services which are prohibited by the FRC Ethical Standard 2024 to the Bank,
+and we remain independent of the Company in conducting our audit.
+Our opinion is consistent with the additional report to the Board.
+
+Use of our report
+
+This report is made solely to the Company's members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Company’s members those
+matters we are required to state to them in an auditor's report and for no other purpose. To the fullest extent permitted
+by law, we do not accept or assume responsibility to anyone other than the Company and the Company’s members as
+a body, for our audit work, for this report, or for the opinions we have formed.
+
+Edmund Cartwright FCCA FMAAT (Senior Statutory Auditor)
+
+for and on behalf of Johnsons Chartered Accountants, Statutory Auditor
+London, United Kingdom
+
+Date: 30th June 2025
+
+24
+Statement of Comprehensive Income
+For the year ended 31 March 2025
+
+2025 2024
+Note € ‘000 € ‘000
+Interest and similar income 3 10,080 9,564
+Interest expense and similar charges 4 (3,639) (3)
+Net interest income 6,441 9,561
+Net fee and commission expense (77) (120)
+Foreign currency loss (3) (11)
+Other operating income 72 1,291
+Total operating income 6,433 10,721
+Operating expenses
+General administrative expenses 5 (5,524) (5,008)
+Credit impairment gains/(losses) 12 120 (5,513)
+Profit before taxation 6 1,029 200 |
+Taxation (charge) / credit 8 (261) 10
+Profit for the year after taxation 768 210
+Other Comprehensive Income - -
+Total Comprehensive income for the year 768 210
+
+‘All items in the Statement of Comprehensive Income relate to continuing activities.
+
+The notes to the Financial Statements on pages 29 to 58 form an integral part of the Financial Statements.
+
+25
+Statement of Financial Position
+As at 31 March 2025
+
+2025 2024
+Note € ‘000 € ‘000
+Assets
+Non-current assets
+Restricted cash and cash equivalents 9 989 -
+Placements with and loans and advances to banks 10 9,914 9,230
+Property and equipment . 15a 2,570 2,602
+Intangible assets 15b 434 574
+Debt instruments 19 9,647 15,913
+Total non-current assets . 23,554 28,319
+Current assets
+Cash and cash equivalents 9 446,807 154,198
+Placements with and loans and advances to banks 10 127,292 118,578
+Loans and advances to customers 11 399 479
+Other assets 13 6,928 6,597
+Debt instruments . 19 8,572 3,621
+Prepayments and accrued income 14 . 1,617 ~~ 1,684
+Total current assets 291,615 285,157
+Total assets - 315,169 313,476
+Liabilities
+Current liabilities
+Deposits from banks 16 7,722 7,726
+Amounts owed to other depositors 17 1,958 2,041
+. Corporation Taxation 8 225 -
+Other liabilities 20 565 554
+Accruals and deferred income 21 1,920 1,144
+Total current liabilities 12,390 11,465
+Non-Current Liabilities
+Deposits from Banks 16 130,000 130,000
+Total liabilities 142,390 141,465
+Equity
+Called up share capital 22 160,000 160,000
+Retained earnings 12,779 12,011
+Total equity | 172,779 172,014
+Total liabilities and equity 315,169 313,476
+
+The notes to the Financial Statements on pages 29 to 58 form an integral part of the Financial Statements.
+These Financial Statements were approved by the Board of Directors on 27 June 2025 and signed on its
+behalf by the Managing Director.
+
+kee
+
+Mohammad Reza Fatemi
+Director
+
+26
+Statement of Changes in Equity
+For the year ended 31 March 2025
+
+Note Share Retained Total
+Capital Earnings
+
+€ ‘000 € ‘000 € ‘000
+
+Balance as at 01 April 2023 22 160,000 11,801 171,801
+Profit for year ended 31 March 2024 - 210 210
+Balance as at 31 March 2024 22 160,000 12,011 172,011
+Profit for year ended 31 March 2025 - 768 768
+Total comprehensive income - 768 768
+Balance as at 31 March 2025 22 160,000 12,779 172,779
+
+The notes to the Financial Statements on pages 29 to 58 form an integral part of the Financial Statements.
+Statement of Cash Flows wan
+For the year ended 31 March 2025 hate ®
+
+Note 2025 2024
+€ ‘000 € ‘000
+
+Cash flows from operating activities
+Profit before taxation . 1,029 200
+Depreciation & Amortisation of assets 15 227 171
+Amortisation of bond premiums & discounts (35) (41)
+Net (credit) / charge for impairment losses 12 (120) 5,513
+Cash flows from operating profits before changes in
+operating assets and liabilities 1,101 5,843
+Corporation tax paid (26) . (225)
+Changes in operating assets and liabilities |
+- net (increase) in loans and advances to banks 10 (9,478) (26,439)
+- net decrease in loans and advances to customers 11 94 25,595
+; net Gnerease) / decrease in other assets and prepayments and 43-14 ; (239) 770
+- net (decrease) / increase in deposits from banks 16 (4) 30
+- net (decrease) / increase in other deposits 17 (83) 63
+- net increase in accruals and deferred income 21 1,027 182
+- net increase / (decrease) in other liabilities 20 AT (602)
+Net Cash from operating activities (7,597) 5,217
+Cash flows from investing activities
+Purchase of property and equipment 15a (55) _ (486)
+Purchase of intangible assets 15b - (120)
+Maturity / (purchase) of debt instruments 19 1,192 (1 51 6)
+Cash used in investing activities -, 1,137 (2,122)
+Net (decrease) / increase in cash and cash equivalents (6,460). 3,105
+Foreign currency exchange (loss) / gains _ * (106) (44)
+Cash and cash equivalents as at 1 April 2024 / 2023 9 156,069 153,018
+Cash and cash equivalents as at 31 March 2025 / 2024 9 149,503 156,069
+
+The year-end cash and cash equivalents balances include inactive nostros of €1,757k (net of provision €989k)
+(2024: €1,754k, net €996k), whose repayment date is uncertain due to the borrowers’ internal policy towards
+Iran. These balances are with overseas banks and repayment i is subject to authority being granted by the home
+regulator, which the Bank anticipates will be forthcoming | in due course.
+
+The notes to the Financial Statements on pages 29 to 58 form an integral part of the Financial Statements.
+28
+Notes to the Financial Statements
+
+For the year ended 31 March 2025
+
+1. Financial sanctions against iran
+
+The US reimposed sanctions on Iran on 4 November 2018 following its unilateral withdrawal from the Joint
+Comprehensive Plan of Action (JCPOA). The European and other signatories to the JCPOA have not changed
+their position in the intervening period.
+
+2. Significant accounting policies
+(a) Corporate Information
+
+Bank Sepah International pic (“the Bank”) is a public company limited by shares (company number 04189598)
+and the Bank is domiciled and incorporated in England with its registered office at 5-7 Eastcheap, London,
+England. The Bank has historically been primarily involved in provision of trade finance services, however,
+currently due to the US sanctions its business has been treasury related focusing on interbank lending.
+
+Basis of preparation
+
+The Bank has prepared its Financial Statements in accordance with International Financial Reporting Standards
+as effective for the Bank's reporting for the year ended 31 March 2025.
+
+Going Concern
+
+The Directors have reviewed the current and potential future business activities and financial position of the
+Bank, including an assessment of capital and liquidity requirements for the foreseeable future in line with its
+business plan.
+
+This review covers the going concern up to 31 July 2026. The going concern assessment is prepared by
+Executive Management, reviewed and approved by the Board.
+
+The planned business activities are very cautious and take into account the current geopolitical issues arising
+from US sanctions on Iranian banks.
+
+As at 31 March 2025, the Bank held eligible capital of €171m (note 25) which translates to a capital surplus of
+€132m which is considerably in excess of the regulatory requirements. In line with previous years, the 2025
+profits will be retained to further strengthen the capital position.
+
+The Bank has no credit exposure to UK counterparties except its service providers. The majority of the Bank’s
+credit exposure is to Iranian owned Financial Institutions in Europe and state-owned Banks in Iran. In any event
+the Bank’s latest ILAAP, ICAAP and Recovery Plan stresses show the Bank can survive significant credit losses
+and would still be within its regulatory ratios.
+
+Based on this review, the Directors have a reasonable expectation that the Bank has sufficient resources to
+continue its operation for the foreseeable future.
+
+In conducting this review, the Directors of the Bank have considered the ongoing and potentially escalating
+conflict in the Middle East and consider that the necessary contingency plans have been put in place. The Bank
+has assessed the impact of a range of scenarios including possible actions of the UK and international
+governments. As a result of continuous reassessment of these plans the Bank considers that its counterparties
+and customers will not be compromised.
+
+In summary the Bank’s strong capital and liquidity position support the going concern principle.
+
+29
+Notes (continued)
+2. Significant accounting policies (continued)
+
+New and revised IFRSs in issue |
+
+A summary of pronouncements that may be applied ‘by entities for the first time for the year-ended 31 March
+2025 is as follows:
+1. Classification of Liabilities as Current or Non-Current (Amendments to IAS 1)
+‘2. Lease Liability in a Sale and Leaseback (Amendments to IFRS 16)
+3. Non-Current Liabilities with Covenants (Amendments to IAS 1)
+
+None of the amendments and interpretations have had a material impact on the Bank’s financial statements.
+New and amended standards applicable for annual periods beginning on 1 April 2025 and beyond:
+
+There are no standards, amendments, and interpretations, which are relevant to the Bank, that may have a
+material effect on the Bank’s forthcoming financial statements. Adoption of all other standards, amendments and
+interpretations are not expected to have a material impact.
+
+(b) Interest income and expense
+
+Interest income and expense for all interest-bearing instruments are recognised in profit or loss, on an accruals
+basis, using the effective interest method. The effective interest method is a method of calculating the amortised
+cost of.a financial asset or liability and of allocating the interest income or interest expense. The effective interest
+rate is the rate that exactly discounts the estimated future cash payments or receipts over the expected life of.
+instrument or, when appropriate, a shorter period, to the net carrying amount of the financial asset or financial
+liability.
+
+The effective interest rate is calculated on initial recognition of the financial asset or liability, estimating the future
+cash flows after considering all the contractual terms of the instrument but not future credit losses. The
+calculation includes all amounts paid or received by the Bank including fees, expected early redemptions and
+related penalties and premiums and discounts that are an integral part of the overall return as well as direct
+incremental transaction costs related to the acquisition, issue or disposal of a financial instrument. For fixed rate
+financial assets this is the original effective interest rate and for floating rate financial assets this is the current
+effective interest rate.
+
+(c) Fees and commission income
+
+Fees and commissions are generally recognised at the point in time when the performance obligation is satisfied.
+Loan participation fees are amortised over the term of the loan through inclusion in the effective interest rate.
+Commissions arising.from trade finance related business such as advising and payments under letters of credit
+are recognised at the transaction date.
+
+(d) Cash and cash equivalents
+Cash and cash equivalents consist of cash and on-demand balances with correspondent banks. Cash flows
+
+arising from operating activities are stated after excluding the impact of foreign currency translation differences
+on asset and liability classes.
+
+(e) Functional and reporting currencies
+The directors regard the Euro as the currency of the primary economic environment in which the Bank operates.
+
+Accordingly, the Euro is regarded as being the functional currency of the Bank, which is also the reporting
+currency of the Bank.
+
+30
+Notes (continued)
+2. Significant Accounting Policies (continued)
+
+Transactions in foreign currencies are recorded in Euros at the rate of exchange prevailing at the end of the
+month in which the transaction arose. Monetary assets and liabilities denominated in foreign currencies are
+translated into the functional currency at the prevailing rate of exchange at the Statement of Financial Position
+date.
+
+Any resulting exchange differences are included in the Statement of Comprehensive Income. Non-monetary
+assets and liabilities that are measured in terms of historical cost in a foreign currency are translated into the
+functional currency using the rate of exchange at the date of the initial transaction.
+
+The closing Euro: USD exchange rate at 31 March 2025 was 1.0822 (2024: 1.0802).
+The closing Euro: GBP exchange rate at 31 March 2025 was 0.8354 (2024: 0.8548).
+
+(f) Property and equipment
+
+Depreciation commences when an asset is available for use. Depreciation is provided to write off the cost less
+estimated residual value of tangible assets (other than freehold land) by equal instalments over their estimated
+useful economic lives, as follows:
+
+Freehold buildings - 50 Years
+Furniture and equipment - 4 Years
+Computer hardware - 4 Years
+
+“All: property and equipment are stated at historical cost less depreciation and adjustment in the case of
+impairment.
+
+(9) Intangible assets
+
+“ Intangible assets comprise of computer software only which are amortised when an asset is available for use
+io over the contractual terms of the licence, where applicable;
+.¢ or 5 years.
+
+eae
+
+(hy Financial Instruments and impairment losses
+
+IFRS 9 requires that all financial assets are classified using one of the following categories based on the business
+model:
+
+1. Amortised Cost (AC) .
+These assets are held within a business model whose objective is to collect the contractual cash flows that
+are solely payments of principal and interest.
+
+2. Fair value through other comprehensive income (FVOCI)
+Assets which may be held to collect the contractual cash flows until maturity or until sale and contain
+contractual terms that give rise on specified dates to cashflows that are solely payments of principal and
+interest. The Bank did not hold any instruments that are valued at FVOCI.
+
+3. Fair value through profit and loss (FVTPL)
+The Bank did not hold any FVTPL instruments during the year.
+
+All financial liabilities are initially recognised at fair value and subsequently measured at amortised cost using
+the effective interest rate method
+
+31
+Notes (continued)
+2. Significant Accounting policies (continued)
+
+The classification and basis of measurement are subject to Bank’s business model for managing the financial
+assets and the contractual cash flow characteristics of the financial assets, as detailed below.
+
+Business Model Assessment
+
+An assessment of the bank’s business model for managing financial assets is fundamental to the classification
+of the financial asset. Financial assets are measured at amortised cost if they are held within the business model
+whose objective is to collect contractual cash flows, and their contractual cashflows represent solely payments
+of principal and interest. This constitutes the Bank’s HQLA. Financial assets are measured at FVOCI if they are
+held within a business model whose objective is achieved by both collecting contractual cash flows and selling
+financial assets, and their contractual cash flow represents solely payment of principal and interest. Other
+financial assets are measured at FVTPL.
+
+Solely Payments of Principal and Interest Test
+
+The Bank assesses the contractual terms of financial assets to confirm they meet this test. Principal is defined
+as the fair value of the financial asset at initial recognition and may change over the life of the asset if there are
+repayments of principal or amortisation of premium/discount. The interest for a financial instrument reflects the
+credit risk, duration and currency of the asset. Contractual terms that give rise to volatility in contractual cash
+flows require the instrument to be measured at FVPL. The Bank had no such financial instruments.
+
+Impairment Basis
+
+IFRS 9 requires a forward-looking expected credit loss methodology. All financial assets not held at FYPL and°*
+any undrawn commitments are assessed for an allowance for expected credit loss.
+
+The expected credit-loss (“ECL”) is calculated as the probability of default (“PD”) applied to a forecast exposure
+at default (“EAD”) multiplied by the Loss Given Default (“LGD”), which is the inverse of the anticipated recovery
+rate, to calculate the expected credit exposure (“ECE”). The ECE is then discounted by the effective interest
+rate (“EIR”) to calculate the ECL.
+
+Expected Credit Loss Methodology
+For a financial instrument ECL is calculated as the Expected Credit Exposure (“ECE”) discounted by EIR.
+
+The ECE is calculated for the following exposures:
+e Financings and debt instruments not held at FVPL
+
+Amounts due from financial institutions and customers
+
+Cash and balances with banks
+
+e Other assets representing amounts held in advance of payments to creditors
+
+e Off-balance sheet credit exposures such as undrawn committed facilities, letters of credit and
+guarantees. (The Bank has no undrawn commitments as at year end).
+
+Financings subject to the calculation of ECE are allocated into three stages.
+Stage1: This is the stage allocated to the exposure when recorded. At the time of recording an ECE is calculated
+
+based on a one-year probability of default. This continues until derecognised or the exposure moves to stage 2
+or 3.
+
+32
+Notes (continued)
+2. Significant Accounting policies (continued)
+
+Stage 2: Where a credit exposure has experienced a significant increase in credit risk since origination the Bank
+allocates the exposure to Stage 2. The PDs and LGDs are recalculated over the contractual maturity of the
+instrument or if overdue but not impaired on an expected maturity.
+
+Stage 3: Credit exposures considered impaired are transferred to stage 3. The PD for these exposures is fixed
+at 100%. The LGD is calculated on an individual basis as the weighted average of different scenarios in
+accordance with individual scenarios. Impairment losses and releases are considered separately from the
+Expected Credit Loss calculation for stage 1 and stage 2 exposures.
+
+Write-offs
+
+Financial Assets are written off when the Bank determines that the borrower does not have assets or sources
+of income that could generate sufficient cash flows to repay the amounts subject to the write-off. A write-off
+constitutes a derecognition event.
+
+Interest income basis
+
+Interest is calculated on the gross value of the interest-bearing instruments for stage 1 and stage 2 financial
+
+assets. Per IFRS 9, for credit-impaired financial assets (stage 3), the Bank applies the effective interest rate of
+the amortised cost of the financial asset net of impairment in subsequent reporting periods.
+
+. Definitions- ECL Calculation Components
+
+Bonds and other securities are calculated on the amount repayable on maturity.
+
+es,
+BA
+
+PD: The estimate of the likelihood of a payment default over a given time horizon. PDs are allocated to ratings
+in accordance with Board approved Expected Credit Loss Policy. Individual exposures are allocated to stages
+1, 2 or 3 by Credit Committee at the time of annual review or approval and are reviewed at the year end.
+
+EAD: The outstanding exposure at default prior to any adjustment for collateral held. Committed facilities are
+assumed to be fully drawn. Uncommitted facilities or exposures on demand are calculated on actual balance.
+
+LGD: This is the loss following an event of default which is measured based on the anticipated recovery rate
+following the default at a given time. It is based on the difference between the contractual cash flows due and
+those that the Bank expects to receive, including from the realisation of any collateral held.
+
+The LGD is the inverse of the recovery rate. The Bank has unsecured LGD rates which are approved by the
+Board. Adjustments for security are approved individually by Credit Committee and, if the facility is subject to
+Board approval, the Board.
+
+EIR: The effective interest rate is the rate that exactly discounts the estimated future cash payments or receipts
+over the expected life of the instrument or, when appropriate, a shorter period, to the net carrying amount of the
+financial asset or financial liability.
+
+The allocation of exposures from Stage 1 to Stage 2 and therefore from 12month ECL to lifetime ECL is
+determined by whether there has been a significant increase in credit risk over the life of the instrument.
+
+Significant Increase in Credit Risk
+For this assessment, a significant increase would be based upon factors such as
+
+e adowngrade as measured under the Bank’s Internal Credit Grade matrix since booking;
+e arecliassification under forbearance arrangements; or
+‘e payments past due in excess of 30 days.
+
+33
+Notes (continued)
+
+Bow Sr
+
+A change in counterparty rating since origination is the ost likely cause for a significant increase in credit risk.
+The Bank allocates counterparties an internal rating of between 1 and 20 at the time of origination which is
+mapped to External Credit Assessment Institution (ECAI) ratings for those exposures subject to ECAI ratings.
+
+2. Significant Accounting policies (continued)
+
+By using both external counterparty ratings, commonly used for regulatory reporting under the Standardised
+Method, in conjunction with proprietary information obtained regarding the counterparty, a recommendation will
+be submitted to the Credit Committee for their approval for each counterparty. Counterparty ratings are reviewed
+by Credit Committee. A two-notch deterioration is considered to represent a significant increase in credit risk,
+though each exposure will also be reviewed formally on a monthly basis. Particular attention will be focused
+upon material improvements to, or deterioration of, credit exposures. The Bank’s ECL policy uses default
+recovery rates depending upon the product type and country of origin of the counterparty, which translates into
+an LGD percentage used for calculating Expected Credit Loss
+
+Default
+
+Financial assets that have an objective evidence of impairment are considered to be Stage 3 for IFRS 9 purposes.
+The Bank considers Stage 3 is applicable to any facilities where payment is overdue by more than 90 days. An
+exception to this rule is where an exposure is past due for more than 90 days as a result of this being sanctions-
+related and the counterparty acknowledges the funds are due to the Bank and has the credit-capability to repay
+the Bank when those sanctions are lifted.
+
+(i) Pension costs
+Defined Contribution Pension Scheme
+
+The Bank operates a defined contribution pension scheme, with benefits accruing from 1 January 2002.
+Contributions are charged to the Statement of Comprehensive Income, as they become payable in accordance
+with the rules of the scheme, on an accruals basis.
+
+(j) Corporation Tax
+
+Corporation tax on the profit or loss for the year comprises current tax and deferred tax. Corporation tax is
+recognised in profit or loss except to the extent that it relates to items recognised directly in other comprehensive
+income in which case it is recognised in other comprehensive income.
+
+Current tax is the tax expected to be payable on the taxable profit for the year, calculated using rates applicable
+at the Statement of Financial Position date, and any adjustment to tax payable in respect of previous years.
+
+Deferred tax is accounted for using the liability method in respect of temporary differences arising from
+differences between the carrying amount of assets and liabilities in the Financial Statements and the
+corresponding tax basis used in the computation of taxable profit.
+
+In principle, deferred tax liabilities are recognised for all taxable temporary differences and deferred tax assets
+are recognised to the extent that it is probable that taxable profits will be available against which deductible
+temporary differences can be utilised.
+
+Deferred tax is calculated at the rates substantively enacted at the time of signing of the accounts. Deferred tax
+is charged or credited in the Statement of Comprehensive Income, except when it relates to items credited or
+charged directly to other comprehensive income, in which case the deferred tax is also dealt with in other
+comprehensive income. ,
+
+The directors believe that the judgements made in determining the Bank’s tax liabilities are reasonable and
+appropriate; however actual experience may differ and materially affect future tax charges.
+
+34
+a
+
+Notes (continued)
+
+2. Significant Accounting policies (continued)
+
+(k) Critical accounting judgements and key accounting estimates and assumptions
+
+The directors are required to make judgements, estimates and assumptions about the carrying amounts of
+assets and liabilities that are not readily apparent from other sources. The estimates and associated
+
+assumptions are based on historical experience and other factors that are considered to be relevant. Actual
+results may differ from these estimates. The estimates and underlying assumptions are reviewed on an ongoing
+
+basis.
+
+Critical judgements in applying the Bank’s accounting policies
+
+The following are the critical judgments, apart from those involving estimations (which are dealt with separately
+below), that the directors have made in the process of applying the banks accounting policies and that have the
+most significant effect on the amounts recognised in the financial statements:
+
+Significant increase of credit risk - As explained in note 2(h), ECL is measured as an allowance equal
+to 12-month ECL for stage 1 assets or lifetime ECL for stage 2 or stage 3. An asset moves to stage 2
+when its credit risk has increased significantly since initial recognition. In assessing whether the credit
+risk of an asset has significantly increased the Bank considers qualitative and quantitative reasonable
+and supportable forward-looking information.
+
+Provision for credit losses - The bank recognised provisions for credit gains of €120k (2024: €5,513k
+losses). Note 12 to the financial statements provides quantitative measurement of provisions for credit
+losses. The bank uses historical and forward-looking data from external rating agencies to calculate
+specific components of expected credit losses, probability of default and loss given default. The Bank
+sources this data externally as there is no sufficient historical internal data to use. Therefore, there is
+considerable judgement about the appropriateness and relevance of this data. The judgments are around
+the reliability and relevance of the data to the Bank’s specific risk assets. The bank mainly uses external
+and publicly available credit ratings to rate each obligor. When an exposure is not externally rated, the
+Bank uses its internal rating model to determine a credit rating for each obligor. The credit rating system
+and movements therein, determine the staging classification of each exposure in the expected credit loss
+model.
+
+The internal rating model uses a range of financial and non-financial inputs. And assessing the credit
+grade gradings and the impact of the current macro challenges in the market the bank has considered a
+number of qualitative and quantitative factors.
+
+Deferred tax asset - The management of the Bank has to make judgements in respect of tax assets to
+assess the likelihood that such tax differences may be realised in future years. Following the imposition
+of US sanctions against the Bank in November 2018 and in the view of the future income forecast
+(including uncertainty on Bank's ability to lend new loans) the Bank has decided not to recognise a
+deferred tax asset arising from tax losses as set out in Note 18.
+
+Impairment losses on financial assets - Under IFRS 9, the Bank uses judgements in relation to ECL
+based upon the PD of the counterparty, the LGD of the exposure and the expected exposure amount.
+The PD is based upon the Bank's internal rating. Where an external rating is available the Bank will map
+this to an internal rating. Where there is not an available external rating for the counterparty the Bank will
+use its judgement based upon factors such as the external weighting of the relevant sovereign and
+counterparty type. The LGD is determined by the type of exposure, counterparty type and external rating
+which will produce an appropriate LGD. The Bank has no off-balance sheet balances at the year end
+and the expected exposure amount is based upon drawn balances. The relevant PD, LGD and exposure
+amount was be used to calculate the ECL.
+
+35
+Notes (continued)
+
+2. Significant Accounting policies (continued)
+
+Key sources of estimation uncertainty
+
+The key estimations that the directors have used in the process of applying the banks accounting policies and
+that had the most significant effect on the amounts recognised in the financial statements:
+
+Probability of default - PD constitutes a key input in measuring ECL. PD is an estimate of the likelihood
+of default over a given time horizon, the calculation of which includes historical data, assumptions and
+expectations of future conditions. The range of PDs used by the Bank for stage 1 exposure is s between
+0.1% and 3.4%. See note 2 for sensitivities to movements.
+
+Loss given default - LGD is an estimate of the loss arising on default. It is based on the difference
+between the contractual cash flows due and those that the Bank would expect to receive, considering
+cash flows from collateral and integral credit enhancements. The Bank has applied 45% LGD on the
+exposures for calculating ECL (except where there is collateral).
+
+Sanction affected exposures - The Bank's market includes iran which faces considerable challenges
+from sanctions. For certain sanction affected exposures, there is currently an inherent risk which is not
+credit risk but is due to the obligor’s policy towards Iran meaning that repayment cannot be made at the
+present time. In these cases, specific repayment periods (notably three years for EUR and six years for
+USD exposures) have been assumed in the derivation of PDs.
+
+3. Interest and similar income
+
+2025 2024
+
+_ € ‘000 € ‘000
+Loans to banks — 9,708 9,221
+Loans to customers 13 11
+Investments 359 332
+
+10,080 ——9,564
+
+4. interest payable
+
+The Bank pays interest on the collateral deposit of €130m received from Bank Sepah, the parent company. In
+the financial year this amounted to €3,629k (2024: €Nil).
+
+5. General Administrative expenses
+
+2025 2024
+
+€ ‘000 € ‘000
+
+Salaries . 2,874 2,795
+Social security costs 370 360
+Defined contribution pension scheme costs 542 566
+Total staff employment costs 3,786 3,721
+Other staff costs 196 176
+Other administrative costs 1,315 940
+Depreciation of property and equipment (Note 15 a) 87 | 37
+Amortisation of intangible assets (Note 15 b) 140 . 134
+5,524 5,008
+
+The average number of persons employed by the Bank during the year was 31 (2024: 31), comprising 7
+directors (2024: 7), of which 5 were non-executive (2024: 5) and 24 other staff (2024: 24).
+
+36:
+Notes (continued)
+
+5. General Administrative expenses (continued)
+
+The Bank operates a defined contribution pension scheme for the staff whereby the Bank contributes in
+accordance with a fixed formula. In the year ended at March 2025 the Bank paid €512k (2024: €553k) by way
+
+of contributions into the scheme.
+
+The Bank also made payments during the current year to a defined contribution pension scheme in respect of
+
+the executive directors of €30k (2024: €13k).
+6. Profit before taxation
+
+Profit before taxation is arrived at after charging:
+Fees payable to the Bank's auditors for:
+audit of the financial statements
+
+Depreciation of property, equipment & amortisation of intangibles
+
+7. Emoluments of directors
+
+Directors’ fees, salaries and other emoluments
+Defined contribution pension scheme
+
+Highest paid director:
+
+Remuneration excluding pension contribution and benefits
+Salary in lieu of:
+
+Benefits
+
+Pension
+
+8. Taxation
+
+Current taxation:
+UK corporation tax charge / (credit) on income for the period
+Adjustments in respect of previous years
+
+Deferred taxation:
+Charge for the year
+Write off
+
+Tax reconciliation:
+
+2025 2024
+€ ‘000 € ‘000
+138 117
+227 171
+2025 2024
+€‘000 € ‘000
+888 820
+30 13
+
+912 833
+333 324
+
+94 88
+
+73 64
+2025 2024
+ € 000 € ‘000
+225 (10)
+
+36 -
+
+261 (10)
+
+The taxation charge for the year differs from the standard rate of corporation tax that has applied in the UK
+
+during the year of 25%. The differences are explained below.
+
+37
+Notes (continued)
+
+8. Taxation (continued)
+
+Profit before tax
+
+- Theoretical tax at UK corporation tax rate of 25% (2024: 25%)
+Effects of:
+Tax losses utilised during the year
+
+Adjustments in respect of prior years
+Expenses not deductible
+Total tax charge / (credit)
+
+9. Cash and Cash Equivalents
+
+Net restricted cash and cash equivalents
+Net cash and cash equivalents
+
+Cash and cash equivalents
+Less: IFRS 9 impairment provisions (Note 12)
+
+2025 2024
+€ ‘000 € ‘000
+1,029 200
+
+257 50
+(37). (66)
+36 6
+
+5 -
+
+261 (10)
+2025 2024
+€ ‘000 € ‘000
+989 996
+
+146,807 153,202
+
+147,796 154,198
+
+149,503 156,069
+(1,707) (1,871)
+
+147,796 154,198
+
+The cash in hand at year-end is €1,107k (2024: €1,083k). The year-end cash and cash equivalents balances
+include inactive nostros of €1,757k (net after provisioning €989k) (2024: €1,754k, net after provisioning €996k),
+whose repayment date is uncertain due to the borrowers’ internal policy towards Iran. These balances have
+been reclassified as non-current assets. These balances are with overseas banks and repayment is subject to
+authority being granted by the home regulator, which the Bank anticipates will be forthcoming in due course.
+
+10. Placements with and Loans, Advances to banks
+
+Other loans and advances remaining maturity:
+- Over 1 year
+Less: IFRS 9 impairment provisions (Note 12)
+
+Other loans and advances remaining maturity:
+- 3 months or less
+oo - 3 months or more but less than 1 year
+
+Less: IFRS 9 impairment provisions (Note 12)
+
+Balances over 1 year are with overseas banks and repayment is subject to authority
+being granted by the home regulator.
+
+38
+
+2025 2024
+
+€ ‘000 € ‘000
+10,760 10,024
+(846) (794)
+9,914 9,230
+62,601 10,000
+65,760 109,620
+128,361 119,620
+(1,069) (1,042)
+127,292 118,578
+
+Notes (continued)
+
+11. Loans and advances to customers
+
+2025 2024
+€ ‘000 € ‘000
+Repayable on demand or at short notice 220 109
+Other loans and advances remaining maturity:
+- 3 months or more but less than 1 year - 200
+- over 1 year 180 175
+Remaining maturity:
+- Overdue 5,316 5,326
+5,716 5,810
+Less: IFRS 9 impairment provisions (Note 12) (5,317) (5,331)
+399 479
+Impaired loans and advances to customers
+- before impairment allowances 5,316 5,326
+- impairment allowances (5,316) (5,326)
+
+- after impairment allowances - -
+
+12. IFRS 9 Impairment losses
+
+.. Credit impairment for the year is a recovery of €120k (2024: loss €5,513k) and credit impairment provision at
+«year-end is €8,945k (2024: €9,075k). The below table shows the expected credit losses at year-end for each
+* Class of financial asset.
+
+Stage 1 Stage 2 Stage 3 Total
+As at 31 March 2025 € ‘000 € ‘000 € ‘000 € ‘000
+“Cash and cash equivalents 938 757 12 1,707
+Loans and advances to banks 1,069 846 - 1,915
+Loans and advances to customers 1 - 5,316 5,317
+Debt instruments 3 - - 3
+Other assets 3 - - 3
+2,014 1,603 5,328 8,945
+Stage 1 Stage 2 Stage 3 Total
+As at 31 March 2024 € ‘000 € ‘000 € ‘000 € ‘000
+Cash and cash equivalents 1,114 757 - 1,871
+Loans and advances to banks 1,042 794 - 1,836
+Loans and advances to customers 5 - 5,326 §,331
+Debt instruments 9 - - 9
+Other assets 28 - 28
+
+2,198 1.551 5,326 9,075
+
+39
+Notes (continued)
+
+12. IFRS 9 Impairment losses (continued)
+
+An analysis of the significant changes in gross carrying amount of the assets in scope of IFRS 9 during the year
+is shown below:
+
+Stage 1 Stage 2 Stage 3 Total
+
+ECL € ‘000 € ‘000 € ‘000 € ‘000
+Balances as at 1 April 2024 298 542 11,778 5,326 315,646
+Changes due to transfers
+between stages
+e Transfers to stage 1 - - - -
+e Transfers from stage 2 - - - -
+e Transfers to stage 3 - - - -
+Originations 42,300 740 13 43,053
+Repayments (41,320) - - (41,320)
+Write offs - - - -
+Foreign currency adjustments 67 (12) (11) 44
+Balances as at 31 March 2025 299,589 12,506 5,328 317,423
+
+An analysis of the net movement in provisions during the year is shown below:
+
+Stage 1 Stage 2 Stage 3 Total
+
+‘ECL € ‘000 — € ‘000 € ‘000 € ‘000
+Balances as at 1 April 2024 2.452 1,297 5,326 9,075
+Changes due to transfers
+between stages _
+
+e Transfers to stage 1 - - os -
+
+e Transfers from stage 2 - - - -
+
+e Transfers to stage 3 - - - , -
+New, increased provisions (net (438) 308 10 (120)
+of releases)
+Foreign currency adjustments - (2) (8) (10)
+Balances as at 31 March 2025 2,014 1,603 5,328 8,945
+
+An analysis of carrying value of the financial assets in scope of IFRS 9 as at 31 March 2025 is shown below:
+
+Stage 1 Stage 2 Stage 3 ‘Total
+
+€ ‘000 € ‘000 €‘000 ~ € ‘000
+
+Cash and cash equivalents 146,639 1,745 12 148,396
+
+Loans and advances to banks 128,360 10,761 - 139,121
+
+Loans and advances to 400 - 5,316 5,716
+customers
+
+Debt instruments 17,943 - - 17,943
+
+Other assets 6,247 - - 6,247
+
+As at 31 March 2025 299,589 12,506 5,328 317,423
+
+40
+crn isne
+(aan
+
+=
+ra
+
+Notes (continued)
+
+An analysis of carrying value of the financial assets in scope of IFRS 9 as at 31 March 2024 is shown below:
+
+Stage 1 Stage 2 Stage 3 Total
+
+€ ‘000 € ‘000 € ‘000 € ‘000
+
+Cash and cash equivalents 153,231 1,749 - 154,980
+
+Loans and advances to banks 119,621 10,029 - 129,650
+
+Loans and advances to 484 = 5,326 5,810
+customers
+
+Debt instruments 19,135 - - 19,135
+
+Other assets . 6,071 -. - 6,071
+
+As at 31 March 2024 298,542 11,778 5,326 315,646
+
+Sensitivity to movements in PD and LGD rates
+
+A 1% adverse (increase) movement in PD and LGD applied to the exposures at 31 March 2024 would increase
+the ECL by €105k. A 1% favourable (decrease) movement in PD and LGD would result in decrease of ECL by
+€51k.
+
+‘<
+
+» 13. Other assets
+
+vor
+
+2025 2024
+; € ‘000 € ‘000
+VAT recoverable 47 48
+3. ‘Balances held with professional intermediaries 6,247 6,071
+* Other 637 506
+bo 6,931 6,625
+~-Léss: IFRS 9 impairment provisions (Note 12) (3) (28)
+6,928 6,597
+
+14. Prepayments and accrued income
+2025 2024
+€ ‘000 € ‘000
+interest receivable - 1,386 1,497
+Expense prepayments 231 187
+1,617 1,684
+
+4]
+Notes (continued)
+
+15 (a) Property and equipment
+
+_ Cost
+As at 1 April 2024
+Additions
+Disposals
+At 31 March 2025
+
+Accumulated depreciation
+As at 1 April 2024
+
+Charge for year
+
+Disposals
+
+At 31 March 2025
+
+Net book value at 31 March 2025
+Net book value at 31 March 2024
+
+Cost
+As at 1 April 2023
+Additions |
+Disposals
+
+At 31 March 2024
+
+Accumulated depreciation
+As at 1 April 2023
+
+Charge for year
+
+Disposals
+
+At 31 March 2024
+
+Net book value at 31 March 2024
+Net book value at 31 March 2023
+
+42
+
+Freehold Land/ Equipment
+Buildings Total
+€ ‘000 € ‘000 € ‘000
+2,729 576 =. 3,305
+- 55 55
+- (37) (37)
+2,729 594 3,323
+339 364 703
+19 68 87
+- (37) (37)
+358 395 753
+2,371 199 2,570
+2,390 212 2,602
+Freehold Land/
+Buildings Equipment Total
+€ ‘000 . €‘000 € ‘000
+2,461 358 (2,819
+268 218 486
+2,729 §76 3,305
+322 344 666
+17 20 37
+339 364 . 703
+2,390 212 2,602
+2,139 14 2,153
+
+Notes (continued)
+
+2025 2024
+15 (b) Intangible Assets _ € ‘000 € ‘000
+Cost
+As at 1 April 2024 / 2023 2,134 2,014
+Additions - 120
+Disposals - -
+At 31 March 2025/ 2024 2,134 2,134
+Accumulated amortisation
+As at 1 April 2024 / 2023 1,560 1,426
+Charge for the year 140 134
+Disposals - -
+At 31 March 2025 / 2024 1,700 1,560
+- Net book value at 31 March 2025/ 2024 434 574
+Intangible assets comprise solely of computer software.
+16. Deposits from banks 2025 2024
+
+€ ‘000 € ‘000
+
+Current Liabilities
+
+Repayable on demand cr at short notice 5,247 5,252
+With agreed maturity dates of periods or notice, by remaining maturity:
+- 3 months or less, excluding on demand or at short notice 2,474 2,474
+
+7,722 7,726
+
+; . Non-Current Liabilities
+“With no agreed maturity date (1 year and 1 day notice required) 130,000 130,000
+
+137,722 137,726
+
+Amounts include:
+- due to parent company 133,895 133,894
+
+Due to the notice period required, the parent company has committed not to call the €130m deposit before 1 July
+2026 at the earliest.
+
+17. Amounts owed to other depositors
+
+2025 2024
+
+€ ‘000 € ‘000
+
+Repayable on demand or at short notice 1,156 1,267
+With agreed maturity dates or periods of notice, by remaining maturity:
+
+- 3 months or less, excluding on demand or at short notice 798 770
+
+- 1 year or less, but over 3 months 4 4
+
+1,958 2,041
+
+43
+Notes (continued)
+
+18. Deferred taxation
+
+Deferred tax is calculated in full on temporary differences under the liability method using a tax rate of 25% (2024
+25%). The current year corporation tax has been calculated at 25% (2023: rate of 25%). Any deferred tax asset
+will be recognised on the Bank’s balance sheet if it is forecasted that there will be future taxable profits available
+
+in the foreseeable future against which the Bank can utilise the benefits therefrom.
+
+The deferred tax assets at the year-end comprised of:
+
+2025
+
+€ ‘000
+
+Accelerated capital allowances (81)
+- Trading losses (26)
+IFRS9 Transitional Adjustment ; 22
+Accrued holiday pay 85
+
+2024
+€ ‘000
+(104)
+
+33
+16
+
+Deferred tax assets at 31 March -
+
+As at 31 March 2025 the bank has corporation tax losses of €9,623k (2024: €9,957k) on which no deferred tax
+asset has been recognised as there is insufficient certainty as to whether the Bank will benefit from them in the
+
+foreseeable future.
+
+19. Debt instruments
+
+2024
+
+. 2025
+; € ‘000 € ‘000
+Sovereign bonds 18,222 19,543
+Net carrying amount oo ; 18,222 | 19,543
+Less: IFRS 9 impairment provisions (Note 12) (3) (9)
+18,219 19,534
+
+These bonds are held to collect and are recorded at amortised cost (non-current assets €9,647k and current
+
+assets €8,572k). The carrying vaiue includes unamortised premiums and discounts amounting to €297k.
+
+Geographical analysis is disclosed in Note 25.
+
+20. Other liabilities
+
+2025 2024
+
+; € ‘000 | € ‘000
+
+‘Sundry creditors (customer balances) 565 554
+21. Accruals and deferred income
+
+2025 2024
+
+€ ‘000 € ‘000
+
+Expense accruals 1,092 901
+
+Other creditors 175 240
+
+Interest payable 653 3
+
+1,920 1,144
+
+44
+Notes (continued)
+22. Share capital
+
+Authorised
+
+5,000,000 ordinary shares of £1 each
+200,000,000 ordinary shares of $1 each
+200,000,000 ordinary shares of €1 each
+
+Issued and fully paid
+160,000,000 ordinary shares of €1 each
+
+The ordinary shares carry dividend and voting rights.
+
+23. Related party disclosure
+
+2025
+£5,000,000
+$200,000,000
+€200,000,000
+
+2025
+€ ‘000
+
+160,000
+
+2024
+"£5,000,000
+$200,000,000
+€200,000,000
+
+2024
+€ ‘000
+
+160,000
+
+During the course of the year the Bank entered into transactions with Bank Sepah, its parent company. Details
+of Bank Sepah’s country of incorporation, address and its relationship with the Bank are disclosed in Note 24.
+
+The Bank received no fee income (2024: €nil) from the parent company.
+
+At 31 March 2025 Bank Sepah had deposits of €1.4m (2024: €1.4m) available on demand, notice deposits of
+€2.5m (2024: €2.5m) and collateral deposits of €130m (2024: €130m). Interest paid during the year on these
+balances amounted to €3.6m (2024: € nil). The Bank had Nostro balances with Bank Sepah of €107m (2024:
+€102m) at the year end and short-term placements with Bank Sepah, totalling €50m (2024: €50m). Interest
+
+received during the year on the balances amounted to €6.8m (2024: €6.5m).
+
+At 31 March 2025 the Bank had a money market placement with Karafarin Bank of €2.6m (2024: € nil) a related
+
+. party.
+
+Bank Sepah holds 100% of the issued share capital of €160m (2024: €160m).
+
+Remuneration of Key Management Personnel
+
+Salaries and other short term employee benefits
+Post employment benefits
+
+2025 2024
+€ ‘000 € ‘000
+1,110 1,047
+60 41
+1,170 1,088
+
+Key management personnel comprise the Managing Director, the Deputy Managing Director, the Chief Financial
+
+Officer and the Chief Operating Officer.
+
+The aggregate amount of remuneration paid to Directors was €912k (2024: €833k). The highest paid Director’s
+
+remuneration, including benefits in the year was €500k (2024: €476k).
+
+24. Ultimate Parent Undertaking
+
+The Bank’s ultimate parent undertaking is Bank Sepah of Negin Sepah Building, Nowrouz St, Africa Highway,
+Argentina Square, Tehran, Iran. The Bank's results are consolidated in the accounts of Bank Sepah. The Group
+
+financial statements can be obtained from the above address.
+
+45
+Notes (continued)
+
+25. Financial Risk management
+
+The Bank is exposed to credit, currency, interest rate and liquidity risk. The management of each of these risks
+is documented below.
+
+Credit Risk
+
+The Bank has exposure to credit risk, which is the risk that a counterparty will be unable to pay amounts in full
+when due.
+
+The Bank’s financial assets are cash and balances at banks, placements and loans and advances and held to
+collect investments. The Bank makes provisions for impairment as described in Note 2(h). The impairment
+losses as at 31 March 2025 are shown in Note 12.
+
+Concentrations of assets
+
+The tables below show the composition and geographical and sectoral concentration of the Bank’s credit risks
+as at 31 March 2025. The United Kingdom is the home country of the Bank and the geographic concentrations
+represent the ultimate country of risk in respect of assets owed by counterparties.
+
+With the exception of Iran, the United Kingdom and Germany no other individual country comprised more than
+10% of assets. At 31 March 2025, the Bank had no derivative contracts; and no committed facility to its parent,
+Bank Sepah, for the purpose of refinancing letters of credit (2024: nil).
+
+2025 2024
+
+€ ‘000 € ‘000
+
+Cash and balances at banks 147,796 _ 154,198
+Placements with and loans and advances to banks 137,206 127 808
+Loans and advances to customers 399 | 479
+Debt instruments 18,219 19,534
+Others 11,549 11,457
+Total 315,169 313,476
+
+The Bank regularly reviews its credit risk exposure to its counterparties and does not consider that any of these
+counterparties pose an unacceptable level of credit risk to the Bank.
+
+46
+Notes (continued)
+
+Credit quality of financial assets:
+
+At 31 March 2025
+
+The on-balance sheet assets have the following credit risk profile (based on ratings by external credit rating
+agencies):
+
+Cash and Placements Loans & Debt Others Total
+cash with and advances Instruments
+equivalents loans and to
+advances to customers
+banks
+€ ‘000 € ‘000 € ‘000 € ‘000 € ‘000 € ‘000
+Gross exposure 149,503 139,121 5,716 18,222 11,552 324,114
+Allowance for (1,707) (1,915) (5,317) (3) (3) (8,945)
+impairment
+éegve Carrying 147,796 137,206 399 18,219 11,549 315,169
+amount
+>: Neither past due
+nor impaired v
+* Credit rating:
+
+:, #4 AAA to AA- 36,884 33,539 - 11,931 - 82,354
+At to A- 1,752 - - 6,291 - 8,043
+‘' BBB+ to BBB- — 5 10,761 - - - 10,766
+*'BB+ to BB- - -— - - - -
+
+B+ to B- - - - * * =
+Unrated 110,862 94,821 5,716 - 11,552 222,951
+Allowance for (1,707) (1,915) (5,317) (3) (3) (8,945)
+impairment
+
+Carrying
+
+amount 147,796 137,206 399 18,219 11,549 315,169
+
+The gross carrying value above includes Stage 2 and Stage 3 assets in cash and cash equivalents of €1,757k,
+(2024 €1,749k, placements and loans to banks €10,761 (2024 €10,029k) and €5,317k loans and advances to
+customers (2024 €5,326k).
+
+47
+Notes (continued)
+
+25. Financial risk management (continued)
+Credit quality of financial assets:
+
+At 31 March 2024
+
+The on-balance sheet assets have the following credit risk profile:
+
+Cash and Placements Loans & Debt Others Total
+cash with and loans advances to Instruments
+equivalents and advances customers
+to banks
+
+€ ‘000 € ‘000 € ‘000 € ‘000 €‘000 € ‘000
+Gross 156,069 129,644 5,810 19,543 11,485 322,551
+exposure
+Allowance for (1,871) (1,836) (5,331) (9) (28) (9,075)
+impairment '
+Carrying
+amount 154,198 127,808 479 19,534 11,457 313,476
+Neither past
+duenor |
+impaired v —
+Credit rating:
+AAA to AA- ~~ 21,494 30,240 - 19,543 - 71,277
+At to A- Do 1,761 1,291 - - - 3,052
+BBB+ to - 8,733 - - - 8,733
+BBB-
+BB+ to BB- - - - - - _—
+B+ to B- 131,729 89,380 5,326 - - ° 226,435
+Unrated. , 1,085 - 484 . - 11,485 13,054
+Allowance for (1871) (1,836) (5,331) (9) (28) (9,075)
+impairment
+Carrying
+amount . 154,198 127,808 479 19,534 11,457 313,476
+
+48
+Notes (continued)
+
+25. Financial risk management (continued)
+
+Asset concentration by geography:
+
+The concentration by geography of on-balance sheet assets is as follows:
+
+United Kingdom
+Germany
+Other European countries
+lran
+
+Asia and Australia
+
+Total
+
+interest and similar income (net) by geography:
+
+as dan
+. UK
+: Others
+Total
+
+-ln.the year ended 31 March 2025 two counterparties generated income in excess of 10% of the total interest
+
+“<received (2024: two).
+- Assets (on balance sheet) by geography:
+
+Cash and cash equivalents, placements with and loans to
+banks
+
+° Iran
+
+e UK
+
+e Germany
+° Other
+
+Debt instruments held to collect
+° Europe
+° UK
+
+49
+
+2025 2024
+
+€ ‘000 € ‘000
+45,297 53,681
+49,948 51,001
+18,326 14,596
+200,609 193,205
+989 993.
+315,169 313,476
+2025 2024
+
+€ 000 € 000
+4,270 8,651
+1,704 625
+467 285
+6,441 9,561
+2025 2024
+€ ‘000 € ‘000
+200,609 193,205
+30,872 40,066
+49,450 47,457
+4,071 1,278
+285,002 282,006
+15,743 17,855
+2,476 1,679
+18,219 19,534
+
+Notes (continued) 7 4 7
+25. Financial risk management (continued)
+
+Assets (on balance sheet) by geography (continued)
+
+2025 2024
+Customer loans and receivables € ‘000 € ‘000
+° UK 399 479
+399 479
+Other .
+° UK | 11,549 11,457
+315,169 313,476 —
+
+Exposure to credit risk is managed through regular analysis of the ability of borrowers to meet interest and capital
+repayment obligations. This is aided, in part, by obtaining collateral or security in support of bilateral corporate
+loan facilities. The type and level of security is determined on a case-by-case basis but normally takes the form
+of one, or more, of the following:
+
+° A pledge of shares in listed companies;
+
+° A mortgage of property;
+
+° Bank, corporate or personal guarantees and
+° Cash
+
+None of the Bank’s assets were encumbered as at 31 March 2025 (2024: nil).
+
+Market risk
+
+The Bank takes on exposure to market risk. Market risk is the risk of a change in the market value, earnings or
+future cashflows of a financial asset. It is caused by movements in market variables such as bond, equity or
+security prices, interest and exchange rates. The Bank’s Treasury Department function has the responsibility for
+managing market, Nauidlty, interest rate and foreign exchange | rate risks.
+
+50
+Notes (continued)
+25. Financial Risk Management (continued)
+
+Currency risk
+
+The table below summarises the Bank’s gross exposure to foreign currency exchange risk at 31 March 2025. Included in the table are the
+Bank’s assets and liabilities.
+
+EUR USD CHF GBP JPY Other Total ECL Total
+All figures in € ‘000 equivalent ‘000 ‘000 ‘000 ‘000 ‘000 ‘000 ‘000 ‘000 * £000
+At 31 March 2025
+Assets
+Cash and balances at banks 146,156 1,788 5 1,513 40 1 149,503 (1,707) 147,796
+Due from banks 137,760 1,361 - - - - 139,121 (1,915) 137,206
+Debt instruments 15,745 - - 2,477 - - 18,222 (3) 18,219
+Loans and advances to customers 275 5,316 - 125 - - 5,716 (5,317) 399
+Other assets 9,767 5 - 1,781 - - 11,553 (3) 11,549
+Total assets 309,703. 8,470 5 5,896 40 1 324,114 (8,945) 315,169
+Liabilities
+Deposits from banks 135,422 1,984 36 269 - 11. 137,722 - 137,722
+Due to customers 383 157 3 1,284 131 - 1,958 - 1,958
+Other liabilities 3,619 5,782 5 104 - - 9,510 (8,945) 565
+“Accruals and deferred income 895 - - 1,250 - - 2,145 - 2,145
+Share capital and reserves 172,779 - - - - - 172,779 - 172,779
+Total liabilities 313,098 7,923 44 2,907 131 11 324,114 (8,945) 315,169
+
+Net on-balance sheet position (3,395) 547 (39) 2,989 (91) (10) - - -
+
+51
+Notes (continued)
+
+25. Financial risk management (continued)
+
+All figures in € ‘000 equivalent
+
+At 31 March 2024
+Assets .
+
+Cash and balances at banks
+
+Due from banks
+
+Debt instruments
+
+Loans and advances to customers
+Other assets
+
+- Total assets
+
+Liabilities
+
+Deposits from banks
+
+Due to customers
+
+Other liabilities
+
+Accruals and deferred income
+Share capital and reserves
+
+Total liabilities
+
+Net on-balance sheet position
+
+Sensitivity to movements in exchange rates
+
+EUR USD CHF . GBP JPY Other Total ECL Total
+‘000 ‘000 ‘000 ~=~=—=—é«'0000 ‘000 ‘000 ‘000 Provision ‘000
+
+: SO ‘000
+152,751 1,791 5 1,481 ry - 156,069 (1,871) 154,198
+128,353 1,291 - - - - 129,644 (1,836) 127,808
+17,864 - - 1,679 - - 19,543 (9) 19,534
+375 5,326 - 109 - - 5,810 (5,331) 479
+9,196 - 33 (414) 90 10 11,485 (28) 11,457
+308,539 10,978 38 2,855 134 10 322,551 (9,075) 313,476.
+135,429 1,988 35 263 - 11 137,726 - 137,726
+385 158 3 1,365 130 - 2,041 - 2,041
+oe 476 - 78 - - 554 - 554°
+19 - - 1,125 - - 1,144 - 1,144
+181,086 - - - - - 181,086 (9,075) 172,011
+316,919 2,622 38 2,831 130 11 322,551 (9,075) 313,476
+(8,380) 8,356 - 24 1 (1) - - .
+
+A 5% increase in exchange rates applied to the open foreign exchange-positions as at 31 March 2025 would give rise to-a joss of €162k
+(2024: profit €28k). A 5% decrease in exchange rates would result in a profit of €179k (2024: loss €31k).
+
+52
+Notes (continued)
+
+interest rate risk
+
+Interest rate risk is the risk that the future fair value of a financial instrument or future cash flows will fluctuate because of changes in market
+
+interest rates.
+
+The table below summarises the Bank’s gross exposure to interest rate risk. Included in the table are the Bank’s assets and liabilities at
+carrying amounts, categorised by the earlier of contractual repricing or maturity dates.
+
+All figures in € ‘000
+
+At 31 March 2025
+Assets
+
+Cash and bank balances
+Due from other banks
+Loans to customers
+Debt instruments
+
+Other assets
+
+Total assets
+
+Liabilities
+
+Deposits from banks
+
+Due to customers
+
+Other liabilities
+
+Accruals and deferred income
+Share capital and reserves
+
+Total liabilities
+
+interest sensitivity gap
+
+Cumulative interest
+sensitivity gap
+
+bearing | provision
+
+149,503 - - - - - 149,503 (1,707) 147,796
+
+10,760 62,600 23,540 42,221 - - 139,121 (1,915) 137,206
+
+5,636 - - - 80 - 5,716 (5,317) 399
+
+- 1,496 2,584 4,492 9,650 - 18,222 (3) 18,219
+
+- - - - - 11,552 11,552 (3) 11,549
+
+165,899 64,096 26,124 46,713 9,730 11,552 324,114 (8,945) 315,169
+
+5,248 2,474 - - 130,000 - 137,722 - 137,722
+
+1,156 - 798 4 - - 1,958 - 1,958
+
+- - - - - 9,510 9,510 (8,945) 565
+
+- - - - - 2,145 2,145 - 2,145
+
+- - - - - 172,779 172,779 - 172,779
+
+6,404 2,474 798 4 130,000 184,434 324,114 (8,945) 315,169
+159,495 61,622 25,326 46,709 (120,270) (172,882)
+159,495 221,117 246,443 293,152 172,882 -
+
+53
+Notes (continued)
+
+Interest rate risk
+All figures in € ‘000
+
+At 31 March 2024
+Assets
+
+Cash and bank balances
+Due from other banks
+Loans to customers
+Debt instruments
+
+Other assets
+
+Total assets
+
+Liabilities
+
+Deposits from banks
+Due to customers
+Other liabilities
+
+Accruals and deferred income
+Share capital and reserves
+
+Total liabilities
+
+Interest sensitivity gap
+
+Cumulative interest rate gap
+
+. 6to12. Ov _Non-
+Demand months months months months ‘rest © Total ECL Tota
+156,069 - - - - - 156,069 (1,871) 154,198
+10,023 10,000 - 109,621 - ~ 129,644 (1,836) 127,808
+5,429 200 1 5 175 - 5,810 (5,331) 479
+- - - 3,655 15,480 408 19,543 (9) 19,534
+- - - - - 11,485 11,485 (28) 11,457
+171,521 10,200 1 113,281 15,655 11,893 322,551 (9,075) 313,476
+5,252 2,474 - - 130,000 - 137,726 - 137,726
+1,267 770 - 4 - - 2,041 - 2,041
+- - - - - 554 554 - 554
+. . . . . 1,144 1,144 - 1,144
+. . - - - 181,086 181,086 (9,075) 172,011
+6,519 3,244 - 4 130,000 182,784 322,551 (9,075) 313,476
+165,002 6,956 1 113,277 (114,345) (170,891)
+165,002 171,958 171,959 285,236 :
+
+Sensitivity to movements in interest rates
+
+170,891
+
+The effect of an increase / decrease in interest rates of 2% in all currencies and in all maturities on 31 March 2025 would be a gain / (loss)
+of € 1.68m / € (1.77m) (2024: €0.78m / € (0.81m)). This calculation assumes that all interest rate gaps were closed in the market by taking
+
+deposits, or placing amounts, at interest rates 2% above or below the actual rate applied to each gap in each currency.
+
+54
+Notes (continued)
+Liquidity risk
+
+The. following table analyses the Bank’s gross assets and liabilities into relevant maturity groupings based on the remaining period at
+balance sheet date to contractual maturity date.
+
+All figures in €”’000 Demand Up to3 3 to 12 1to5 Over 5 Undated Total ECL Total
+months months years years Provision
+
+At 31 March 2025
+
+Assets ;
+
+Cash and bank balances 147,746 - - - 1,757 - 149,503 (1,707) 147,796
+
+Due from other banks - 62,601 65,760 ” 10,760 - 139,121 (1,915) 137,206
+
+Loans to customers 320 - - 80 - 5,316 5,716 . (5,317) 399
+
+Debt instruments - 1,495 7,077 9,650 - - 18,222 (3) 18,819
+
+Other assets 6,246 - - - - 5,306 11,552 (3) 11,549
+
+Total assets 154,312 64,096 72.837 9,730 12,517 10,622 324,114 (8,945) 31 5,169
+
+Liabilities
+
+Deposits from banks 3,264 2,474 - - 1,984 130,000 137,722 ° - 137,722
+
+Due to customers 1,156 - 802 - - - 1,958 - 1,958
+
+Other liabilities - - - - - 9,510 9,510 (8,945) 565
+
+Accruals and deferred income - - - - - 2,145 2,145 - 2,145
+
+Share capital and reserves - - - - - 172,779 172,779 - 172,779
+
+Total liabilities 4,420 2,474 802 - 1,984 314,434 324,114 (8,945) 315,169
+
+Undrawn Commitments . - - - - - - - - -
+
+Net liquidity gap — 149,892 61,622 72,035 9,730 10,533 (303,812)
+Cumulative liquidity gap 149,892 211,514 283,549 293,279 303,812 -
+
+55
+Notes (continued)
+
+25. Financial risk management (continued)
+
+Liquidity risk (continued)
+
+All figures in € ‘000
+At 31 March 2024
+
+Assets
+
+Cash and bank balances
+Due from other banks
+Loans to customers
+Debt instruments
+
+Other assets
+
+Total assets
+
+Liabilities
+
+Deposits from banks
+
+Due to customers
+
+Other liabilities
+
+Accruals and deferred income
+Share capital and reserves
+
+Total liabilities
+Undrawn Commitments
+
+Net liquidity gap
+Cumulative liquidity gap
+
+Demand Upto3 3 to 12 1to5 Over 5 Undated Total ECL Total
+months months years years provision
+154,315 - - - 1,754 - 156,069 (1,871) 154,198
+- 10,000 109,621 - 10,024 - 129,645 (1,836) - 127,808
+- 201 107 175 - 5,326 5,809 (5,331) 479
+- - 3,655 4,100 11,788 - 19,543 (9) 19,534
+6,071 - - - - 5,414 11,485 (28) 11,457
+160,386 10,201 113,383 4,275 23,566 10,740 322,551 (9,075) 313,476
+3,264 2,474 - - 1,988 130,000 137,726 - 137,726
+1,267 770 4 - - - 2,041 - 2,044
+- - - - - 554 554 - 554
+- - - - - 1,144 1,144 - 1,144
+- - - - - 181,086 181,086 (9,075) 172,011
+4,531 3,244 4 - 1,988 312,784 322,551 (9,075) 313,476
+155,855 6,957 113,379 4,275 21,578 (302,044)
+155,855 162,812 276,191 280,466 302,044 -
+
+56
+Notes (continued)
+
+Fair value analysis
+
+The carrying value of all assets and liabilities with the exception of the bank’s bonds approximates to their fair
+values as at 31 March 2025 and 31 March 2024. The bank’s bonds market value as at 31 March 2025 was
+
+€17.74m against a carrying value of €18.22m. This mark to market value was arrived at using quoted market
+prices (level 1 of the fair value measurement hierarchy).
+
+Capital Management:
+
+The Bank monitors its capital and liquidity positions on a daily basis.
+
+During the current financial year, its key regulatory ratios have been, and are, well above regulatory minimums,
+with its year-end position showing a capital surplus over CRD V and regulatory minimum requirements of 438%
+when current year earnings are incorporated into the Bank’s eligible capital.
+
+The Bank’s Total Reguiatory Capital comprises only Tier one resources.
+
+The regulatory capital of the Bank at 31 March 2025 was as follows:
+
+2025 2024
+
+€ ‘000 € ‘000
+
+Share Capital 160,000 160,000
+Retained Earnings (including current year profit) 12,779 12,011
+Total Capital 172,779 172,011
+~ Total Capital _ 172,779 172,011
+Deductions from Capital: intangible assets (434) | (574)
+Total Regulatory capital © 172,345 171,437
+Overall Capital Requirement & Pillar 2 Guidance (unaudited) 32,064 39,135
+Capital surplus (unaudited) . 140,281 132,092
+Capital surplus over regulatory minimum (unaudited) 438% 338%
+
+57
+Notes (continued)
+
+26. Operational risk management
+
+Operational risk is the risk that the Bank will incur direct or indirect losses resulting from inadequate or failed
+internal processes, people and systems, or from external events.
+
+The Bank has an Operational Risk Management Policy that is reviewed annually, which includes a framework
+to identify, monitor, measure and where possible, to mitigate the operational risks. Any changes to the
+-Operational Risk Policy require Board approval. Regulatory, reputational and legal risks are mitigated through
+procedures which are subject to operational risk reporting.
+
+Operational risk exposures are “owned” by individual departments and monitored by the Risk Department.
+
+A monthly report of key indicators and other identified risks forms the basis of a monthly report to the Executive
+
+Management Committee. The operational risk reporting is proportional to the volume and scope of business
+activities that has occurred during the year.
+
+27. Post Balance Sheet Events
+There have been no post balance sheet events.
+
+The geopolitical uncertainties that are currently evident in the Middle East are referred to in Note 2 of the financial
+statements.
+
+58

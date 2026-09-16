@@ -1,0 +1,2604 @@
+*ASG6Z1VN*
+_ 24/09/2016
+COMPANIES HOUS
+
+~
+z
+fan)
+ao
+—_
+je
+it
+UC
+
+Annual Report 2016
+
+The future of banking,
+available today —
+
+Ra
+
+esponsibilities Statement
+
+gistered Office.”
+mBank plc ”
+Umbria House
+Avkley Heads |
+Durhain DHL STS *
+
+Directors
+
+Anthony Thomson
+Chairman
+
+David McCarthy
+
+Chief Financial Officer
+
+Patricia Jackson
+Non-Executive Director
+Chair of Risk Committee
+
+Teppo Paavola
+Non-Executive Director
+
+a Bridget Rosewell
+Non-Executive Director
+Crair of Audit Committee
+
+Mark Mullen
+
+Chief Executive Officer
+
+Jonathan Hogan
+Non-Executive Director
+Chair of Nominations and
+Remunerations Committee
+
+Ergun Ozen
+Non-Executive Director
+
+Laurel Powers-Freeling
+Senior Non-Executive Director
+
+-”
+
+Atom Bank pic + Annual Report 2016
+
+Executive
+
+Management Team
+
+» Mark Multen
+
+} Chief Executive Officer
+:
+
+Stewart Bromley
+4 Chief Operating Officer
+
+Maria Harris
+Director of Retail Mortgages
+
+Rachael McLauchlan
+
+Chief Audit Executive
+
+Edward Twiddy
+Chief Innovation Officer
+Company Secretary
+
+O\
+
+David McCarthy
+
+Chief Financial Officer
+
+Andy Givens
+Chief Technology Officer
+
+Craig lley
+Managing Director.
+Business Banking
+
+Chris Sparks
+Chiat Risk Officer
+
+Lisa Wood
+
+Chief Marketing Officer
+
+atombank.co.uk
+
+Strategic
+
+Chairman's Statement
+
+The team at Atom Bank has made tremendous
+progress over the past twelve months.
+
+When we first started to think about building
+a new bank, it was important to me that we
+were as aligned on the ‘why’ as we were
+
+on the ‘whaz’. | believe passionately that
+profit should be a by-product of giving
+
+the custorner a better service, product or
+experience. If we do that well, and manage
+our business effectively, we will be profitable.
+
+When we were authorised as a bank in
+June 2015, we were the first bank in the UK
+designed for mobile. Since that tire, the
+tearn has worked tirelessly to complete the
+build and launch of the bank,
+
+By the end of April 2016, when we released
+our App and started to accept fixed term
+deposits and offer business loans, we had
+¢. 25,000 pre-account registrations,
+
+The team cor tinues to develop and introduce
+innovative new features to the App, including
+predictive analytics and contextual customer
+support using artificial intelligence.
+
+Over the course of the next twelve months,
+we intend to introduce a range of retail
+and business banking products, including
+mortgages ard current accounts.
+
+During the financial year ending March 2016,
+we raised £39m of shareholder capital, and
+after the year and, a further £78rn was raised.
+This enables us to continue to launch the
+
+build of the bank. £45m of that capital carne
+from BBVA, oné of the world’s leading digital
+banks. They share our commitment to mobile
+banking and have provided us with much
+support. !arn delighted to welcome them
+
+as a shareholder ard equally delighted to
+welcome Teppo Paavola and Ergun Ozen to
+our Board.
+
+BBVA does not currently have a large retail
+banking presence in the UK, but this strategic
+investment provides multiple opportunities
+for us to work with them in sharing innovative
+thinking.
+
+In February, we announced the successful
+integration of the team from Grasp (UK)
+Limited, which furtr er strengthened our App
+development team.
+
+There have been a rurnber of developrnents
+over the past twelve months that will impact
+us, including the continuing development of
+the regulatory environment. However, lam
+confident that our business model, underlying
+platform and use of open APIs (Application
+Programming Interfaces) will allow us to take
+full advantage of the opportunities that arise.
+
+Whilst the full impact of the UK’s decision to
+withdraw from the European Union will take
+sone time to be fully understood, as a UK-only
+bank we have almost no exposure outside
+
+of sterling and see ne reason to materially
+
+change the strategy we set at the outset.
+
+Building Atom Bank, and becoming licensed
+as a bank, has not been easy, but nor should
+it be. We are custodians of our customers’
+money and itis irnportant that the banking
+industry in the United Kingdom has the
+highest standards.
+
+We rernain on target to deliver a strong and
+stable retail funding base, which will enable
+us to lend, and are cornmitted to providing
+better products, service and experiences for
+our custorners.
+
+We strongly support diversity in our workplace
+and the creation of a high quality working
+environment for our colleagues.
+
+Atom is a signatory to the Women int Finance
+Charter and is committed to irnproving the
+progression of women into senior roles in
+the business. Our internship prograrnrne
+has provided over 25 peopte with an
+opportunity to learn from - and in many
+cases join - a brand new bank at one of the
+most exciting times in their careers. Atom
+
+is culturally diverse, bringing people from
+many continents together to build the bank.
+For our people the business offers the same
+comprehensive healthcare and benetits
+including pension regardless of role and
+provides a stimulating and engaging working
+experience.
+
+Our combination of banking and technical
+
+expertise and experience provides the perfect
+mix of skills to grow our business with the aim of
+producing superior returns for our shareholders.
+
+would like to thank all of the Atom team,
+
+led by CEO Mark Mullen, for their tremendous
+achievements over the past twelve rnonths,
+along with my Board colleagues and our
+investors for their continued support.
+
+belt tt —
+
+Anthony Thomson
+Chairman
+22 July. 2016
+
+Atom Bank pic + Annual Report 2016 atombank.co.uk
+
+Chief Executive's Review
+
+| am very privileged indeed to lead the Atom team.
+
+Together, we have a-very rare opportunity to
+create a completely new type of bank. A bank that
+has learned from the mistakes of the past. A bank
+that recognises and responds to the technologies
+and the interconnectedness of today’s customers,
+Abank that values simplicity, transparency and
+innovation, Atove all a bank that understands
+that all success flows from satisfying customers’
+needs and expectations.
+
+The Atom Timeline
+
+Founded in Agril of 2014, Atom’s hore is in
+the city of Durharn, in the North East of England.
+With the support of local business leaders
+and entreprensurs, we established a small,
+team to develcp our business model and.to
+prepare our Regulatory Business Plan. This
+was submitted to the PRA and the FCA in
+December of 2014 at which time we received
+additional capital support frorn arnang others,
+Neil Woodford’s Equity Income Fund.
+
+In June of 2015 our licence application
+
+was approved by ou regulators and we
+started the formal rnobilisaticn phase‘of
+our development. Trroughout this period
+we continued to build our. partnerships, our
+technologies and our team. We welcorned
+BBVA as strategic investors with fur ther
+support from Woodford and ToscaFund in
+April 2016. The restriction on our licence was
+removed and we exited from our mobilisation
+phase to launch the first version of our
+banking App.
+
+We have a busy year in prospect. Starting with
+a rnarket leading fixed rate savings offer for
+personal customers, already we are lending to
+small business customers and later in 2016 we
+will introduce our intermediary mortgage offer
+for personal customers. We continue to build
+our technologies with new versions of our App
+for iOS and for Android already delivered or
+pending. In the final quarter of 2016.we plan to
+
+First fully licensed mobite-focussed UK bank
+
+We re open for business!
+
+Bragress to date. Business Pton
+woodford Bank
+Atom 7 Mra UCNe AngodgaAsp Resaenvat & Personat
+igunded TOSCAPUND OV ec eany. taunch BTLMorgages Laan
+Jan ~ dun. un + Dec dan - dun
+wa A ae Duly 2014 += oo ee 2014 +++ dune 2015 -++6 Nov 2015 «+++ Ape 2018 ++ ++ 4 sens GS2016 «+e ee By esas BM ae >
+Estabiished HG Approve as tne cence restrictions tfted Current Creda
+an Durham {NE UN's first Bank buat < . Account (Beta Cart
+Engiand! exclusively for mobie, 408 Aop launch ch}
+SME intermediary channet
+and term deposit launch:
+10 Atom Bank pic » Annual Report 2015
+
+release an early version of our current account
+
+and in the early financial year of 2017 we will
+
+publish our APIs and start to broaden our
+financial ecosystem.
+
+ro : . we ene
+
+| Business Model
+
+Our business modei has been designed to
+serve the needs of today’s customers and
+| respond to changes in the way they expect
+to interact with their money.
+
+by Atoni to deliver security, flexibility and speed.
+| Building and integrating these technologies
++ has certainly been a challange but we are
+
+| increasingly well positioned to offer the tull
+
+i
+i
+1
+i
+{
+I
+
+| benefits that come from being an independently
+ragulated UK bank and a fast moving Fintech.
+
+As a bank our customer dapusits are
+protected by the Financia( Services
+Compensation Scheme (FSCS) and we can
+leverage our equity and our customers’
+deposits to lend to business and personal
+
+! customers directly. As a Fintech, our
+technology plattorm will be used to support
+
+Our technologies have been chosen or developed
+
+the development of a curated ecosystem of
+like-minded product and service providers.
+We will offer Atom products and set vices
+where we believe we can provide a better
+experience to our custorners than is available
+elsewhere, Where this isn’t the case, we will
+collaborate and partner with other Fintechs
+to ensure that we offer tne best value and
+most innevative solutions to their broader
+needs and expectations
+
+This is what it really means to put the
+customer first. To actin the customer's best
+interests is to recognise that it’s their money
+and that it’s our job to help them make the
+mast of it. We believe in making technology
+easy, reliable and secure but just in case,
+our Contact Centre tearm here in Durham are
+always on hand to help our custorners solve
+problems, answer questions or to sorkit out
+when things go wrong.
+
+i
+|
+i Systems of Record
+
+i
+'
+
+Systems of Differentiation
+
+Self service / Customer workftow +
+
+Social Medla Management am 3
+
+Being a bank Bet Fi
+
+Systems of Innovation
+
+Biometric Idemitication reneeeg ene oe se
+
+‘The Atom App
+
+Data Driven Nudges
+
+atembank.co.uk
+
+Meee
+
+Chief Executive s Review, continued...
+
+The First Phase of Atom
+
+As | write this we are nearing the completion
+of the first phase of our development. This
+involves completing the build of our core
+technology platforms, establishing our risk
+and control frameworks, recruiting and
+training our cevelopment. operations and
+customer support teams and finalising our
+products. We are in the middle of inviting
+our very patient pre-registered:customers
+to download our banking App and open one
+of our savings accounts, Very soon we will
+make our offer available to the whole of the
+UK market, oFering both iOS and Android
+versions of our App. We have a growing
+pipeline of business lending applications
+and we are co npleting the final testing of
+our intermediary mortgage offer for personal
+customers.
+
+With every init’ative and with every release
+we are focused on making things faster,
+
+on providing o.ir customers with better
+information and on giving them greater
+control. It takes minutes to open a new
+account using our banking App with its
+innovative biometric security controls and
+it’s a completely paper-free process. We aim
+to turn around business lending decisions
+within a maximum of 72 hours and our
+mortgage interinediary process will set a new
+standard in the industry and will provide our
+customers with real-time digital document
+exchange and App-based updates on the
+progress of their mortgage application.
+
+The Second Phase of Atom
+
+We have also laid the foundations for the
+second phase of our development. At the
+heart of Phase Il sits the Atom current account,
+our instant access savings account and our
+
+overdraft facility. We are building our own
+data and analytics services and will use these
+capabilities to enrich our customers’ experience
+by providing them with money management
+services, spend analysis, forecasting tools
+and real-time hints, tips and nudges. We
+remain convinced that the banking industry
+continues to exploit customers who forget
+maturity dates, fall outside account thresholds
+or rnake use of unplanned overdraft facilities,
+We have no intention of repeating their
+policies or behaviours.
+
+Side by side with the development of these
+products we are engineering our systems
+
+to support the publication of APis, This will
+enable us to create collaborative partnership
+with additional product, service and
+information providers and to further enrich
+our customer's experience. lam very excited
+at the opportunities this provides Atom to
+really transform expectations of what a bank
+can be and how it can act in the interests of
+customers. One size fits some, nat all, so we
+will not insist that our customers buy Atom-
+
+only products or services but rather provide
+
+the technology for them to see and manage
+all of their financial services through one
+simple and effective gateway.
+
+Customer Experience
+
+We work hard to ensure that we produce
+
+the right products, efficient and effective
+processes and the right customer experience
+at Atom. We have documented very clear
+product standards. These establish the
+non-negotiable facts and features of what
+constitutes an acceptable Atom product. For
+example, we do not offer teaser rates and we
+avoid minimum balance.thresholds that are
+designed to catch-out customers. Our vision
+is to ensure that all of our processes are
+
+12
+
+Atom Bank pic - Annual Report 2015
+
+real-time and straight-through via our
+banking App and already we have made
+remarkable progress towards making this a
+reality. We are using an embedded in-App Al
+facility to provide customers with effective
+self-help capabilities.
+
+We also employ our own Contact Centre
+Team as an integral part of the Atom family.
+They are available to help our customers
+
+24 hours a day, 7 days a week and have a
+range of diagnostic and problem solving
+tools at their disposal to make sure that they
+can support customers who do encounter
+difficulties both quickly and efficiently. We
+are socially connected to our customers and
+can interact with them directly using voice,
+App-chat, secure message and social rnedia.
+We colleci and monitor customer feedback in
+real-time and our Customer Experience team
+work to deliver continuous improvements to
+our App journeys in response to direct or to
+social media feedback.
+
+Our Business Banking team provide support
+to our commercial mortgage intermediary
+relationships to ensure that both they and
+their customers receive the support that they
+naed. Our Personal Mortgage Team provide
+similar levels of support and guidance to our
+national network of mortgage brokers.
+
+Employee Experience
+
+People matter more. Although Atom is a
+technology intense bank, everything we are
+and everything we do is conceived, created
+of managed by members of our team. Already
+we have 158 employees and while remaining
+lean and agile, we will continue to grow. We
+fully appreciate the importance of culture
+
+in shaping positive customer outcomes.
+
+Our values drive our recruitment and we are
+
+exacting in our standards. Our pay practices
+are designed to ensure that our people have
+a stake in the future success of our business
+and that ai all times they will act in the
+interests of our customers. For exarnple we
+do not pay cash bonuses. Discretionary pay
+takes the form of share options that vest
+over time and all of our employees can take
+advantage of individual training support to
+
+‘pursue interests outside of work,
+
+Cyber Security
+
+Security is essential in everything we do both
+digitally and physically, and embedded in
+
+all processes across our business. We have
+taken the approach when building our App
+nat to base it around browser technology
+which relies heavily on the safety and
+security of the installed browser. Instead
+
+our App front and is connected to a layered
+security framework so we focus on customer
+security and embrace a comprehensive
+approach that meets evolving security
+threats.
+
+We use sophisticated security measures
+
+to protect Atom data and systems from
+unauthorised access. The security measures
+include use of encryption and digital
+signatures to ensure continuing integrity of
+data, firewalls, intrusion detection systems
+and 24 x 7 physicat protection of our facilities
+where data is stored. We also carry out
+background checks for personnel that access
+physical facilities and ensure strong security
+procedures across all our operations.
+
+These measures hep ensure that data is safe
+and secure.
+
+Our Community
+We are very conscious of the importance of
+developing positive relationships with all of
+
+atombank.co.uk
+
+our stakeholcers. We are proud of our North
+East home and we look to the skills and
+knowledge of the region to help rnake our
+business a success. We also work to.mainiain
+an open, positive and ongoing dialogue with
+our regulatory supervision teams.
+
+In continuing to develop our talent pipeline
+and work closely with the educational
+establishments to nurture the skills we need,
+we've developed partnerships with each of the
+universities in our region. These partnerships
+have played ar important role in the success
+ol.our.Intern Programme. We've welcomed
+more than 25 interns through our doors in
+the last 18 months, each coming from the
+main universities in the region and from a’
+range of backgrounds and studies. Our Intern
+Programme has given these young people a
+taste of working ih a start-up business and a
+huge learning opportunity within the field of
+technology and finance. Importantly, Atorn
+has learnt from this group of people too.
+
+We continue to develop relationships with
+local colleges ar d other. community projects,
+exploring how we can both support learning
+and developrnent, as well.as providing
+
+sustainable job opportunities to those living locally
+We forged strong pa-inerships with tocal
+universities when developing our technological
+capabilities, and have worked closely with
+them on specific projects. We have put in
+place a Knowledge Trensfer Prograrame (KTP)
+with Durham University aimed at developing
+a Statistical model for the bank, which we
+will use to assist us ir managing our financial
+performance toward a7 optimal level. Under the
+KTP, Durharn Univers ty shares its world-class
+skills in mathematics ad statistics, and in return
+the individuals seconded learn more about
+running a retail bank.
+
+Agrant tias been provided by the University to
+pay for the highly skilled individuals that have
+been seconded to Atom.
+
+Over the course of the year the team has
+been involved in a number of community
+and charity initiatives ncluding the“CEO
+Sleep Gut’ and has supported over ten
+charities raising over £15,000 in total (we
+have atso planted many, many trees!)
+
+Atom Bank pic - Annual Report 2016
+
+Our Values
+
+Atom has a core set of business values that
+
+underpins the way we operate, focusing on an
+
+athos which promotes treating custorners fairly.
+
+Respectful
+© We care. We take ownership. We stand
+by our commitments and will see
+them through.
+© We act responsibly within our
+communities and for our environment.
+
+Pioneering
+¢ We are prepared to transform our
+industry for the better. Our customers
+expect evolution.
+¢ We have freedom to explore and invent.
+
+Sharing
+« We seek out partnerships with our
+customers, our people and our suppliers.
+* We are a united team.
+We collaborate internally and externally.
+
+Courageous
+* We are authentic, We have integrity.
+« We stand up for what is right and take
+the initiative.
+
+Energetic
+* We want to set the pace, one that
+anticipates and pre-ampts.
+« We are here for the long term, but live
+inthe moment.
+
+Joyful
+« We believe passianately in what we are
+doing. We have pride in who we are.
+© Banking can and will be fun.
+« We enjoy every day like it is our first.
+
+What's Next?
+
+tn common with all banks we are monitoring
+developments in the post-Brexit broader
+economy very carefully and we are taking
+appropriate steps to optimise our capital
+and minirnise wastage. We balance this
+against the need to maintain our hard-won
+momentum and to-realise our ultimate vision.
+We will invest:in communications to develop
+broader awareness of Atom, what we stand
+for and how we can help.
+
+We set out to earn the trust of our customers
+and our stakeholders but we will only do so
+by offering credibility, security and empathy
+and by keeping our promises. In the inter-
+connected digital economy this cannot be
+faked. Character is-action and not claim.
+
+Summary
+
+It remains for me to thank my irnrnediate
+leadership team and the broader Atom
+farnily here in Durham. Thanks also to my
+Atom Board colleagues led by our Chairman
+Anthony Thomson for their steadfast
+challenge, support and encouragement,
+The scale of our undertaking should not be
+underestimated but we face the future with
+our licence, with strong shareholder support
+and with an engaged and energised tearn.
+We are in a unique position to realise our
+vision, to change banking for good, that is
+permanently. for the better.
+
+Mark Mullen
+Chief Executive Officer
+22 July 2016
+
+atombank.co.uk
+
+Corporate Governance
+
+Atom’s Board of Directors is responsible for the
+overall governance of the bank.
+
+Good corporate governance underpins the * ABoard cornprising Executive and
+integrity of Atom and the wider community independent Non-Executive Directors
+in which it operates. {the ‘Board’;
+« Anoverarching Executive Committee
+The success of the bank is predicated on an ("ExCo”),
+established framework of effective systems ¢ Board committees for audit, risk anda
+of internal control, risk management and combined remuneration and nominations
+compliance, in accordance with regulatory committee;
+requirements. « Executive business oversight cornmittees;
+* Senior Management apportionment of
+Effective governance is not achieved by one responsibilities; and
+
+single committee, structure or forum but rather « A“Three Lines of Defence” operating model.
+a governance framework. This is underpinned
+
+by structure, oversight responsibilities, talent,
+
+culture and infrastructure. The effective
+
+governance structure for Atom Bank
+
+comprises the following (see fig. 1):
+
+Governanes Fromework (hg. 1}
+
+€ xe Committee (BAC) Commitee (BRC) Nominations Committee
+roach co +) C Asset & Liability a wes) (sect Risk Committee (ERC) )
+<=»
+
+atombank.co.uk
+
+Risk Management
+
+Effective risk management Is a core part of Atom’s
+strategy and is integral to being an authorised and
+credible bank. Our focus has been on implementing
+an effective risk management framework and strong
+risk management culture, with responsibilities
+clearly embedded within the business.
+
+Risk Management Framework
+Atom bas developed a risk management
+framework which outlines Atom’s approach
+to risk management and how its key risk
+exposures are identified, assessed, managed,
+monitored and reported.
+
+Thet rk has been established in order to:
+
+« Articulate Atorn’s risk strategy;
+« Establish szandards for the consistent
+identification, it, manag:
+
+monitoring and reporting of risk exposures;
+
+« Define the categories of risk to which the
+bank is exposed;
+
+* Define the Three Lines of Defence model;
+
+* Outline the approach taken in respect
+of setting and defining risk appetite and
+associated <olerances; and
+
+« Identify the governance committees that
+provide oversight and challenge over risk
+management activities.
+
+The framework applies to all material risk types
+facing the bank, Fowever Atom has identified 10
+tisk categories wr ich are most pertinent to the
+bank’s operations:
+
+1.
+
+5.
+
+Business / Strategic Risk ~ the risk
+
+that Atorn fails to execute its business
+strategy as a result of poor decision
+taking, substandard execution of decisions,
+inadequate resource allocation or from a
+failure to effectively respond to changes
+in the business / market environment.
+
+. Retail Credit Risk - the risk thata
+
+customer of the bank (personal or
+comrnercial) defaults on their contractual
+obligations to Atorn, or fails to perform
+its obligations in a timely manner.
+
+. Operational Risk ~ the risk of loss,
+
+whether direct or indirect, to which Atom
+is exposed due to inadequate or failed
+internal processes or systems, human
+error or external events.
+
+. Regulatory Risk - the risk of financial
+
+loss, reputational darnage and/or regulatory
+
+censure arising from (a) failing to comply
+
+with existing / future regulatory or legislative
+
+requirements, or (b) changes to existing
+qui that negatively impact the
+
+existing strategy / business model of
+
+the bank.
+
+Conduct Risk - the risks arising from
+
+inappropriate behaviour by Atom
+
+18
+
+Atom Bank ple - Annual Report 2016
+
+in its relationship with custorners,
+counterparties and markets.
+
+6. Market Risk - the risk that Atom
+could lose money as a consequence
+of movements in the market prices for
+which the bank has positions at risk,
+such as interest rates and foreign
+exchange rates.
+
+7. Solvency Risk ~ the risk that Atom could
+have insufficient capital to with dan
+
+maintained in day-to-day decision making,
+and that individual decisions are made in line
+with the agreed risk appetite.
+
+The Risk function and second line committees
+are responsible for assessing the adequacy
+and effectiveness of the first line risk governance
+and control framework. They ensure that risk
+limits are set at appropriate levels to keep
+ggregate risks within risk appetite and that
+
+extreme, but plausible, loss and thereby
+expose its depositors and other creditors
+to losses,
+
+8. Liquidity Risk ~ the risk that Atom could
+fail to meet its obligations as they fall
+due, including having the right type and
+quantity of funds, in the right place, at
+the right tirne.
+
+9. Wholesale Credit Risk ~ the current
+
+or prospective risk that a wholesale
+counterparty of the bank defaults on its
+contractual obligations to Atom, or fails
+to perform its obligations in a timely
+manner,
+
+. Reputational Risk - the risk of damage
+to Atom’s reputation and brand directly
+asa result of the actions of the bank
+itself, or indirectly due to the actions of
+employees, suppliers or other parties.
+
+1
+
+(=)
+
+Risk Governance and Oversight
+The Board is ultimately responsible for
+ensuring that the risk management
+framework and risk governance structure is
+applied in practice and operates robustly.
+The Board Risk Committee is the primary
+committee to receive and review risk-related
+information.
+
+First line management and committees are
+responsible for ensuring that the risk and
+control environment is established and
+
+the aggregate forward-looking risk profile
+ralative to risk appetite is effectively monitored
+and reported to the Board Risk Committee.
+
+Effective risk management at Atom is
+supported by a Three Lines of Defence model:
+
+The first line of defence is responsible for
+identifying, assessing and managing risks
+and controls related to their own business
+ling activities on a day-to-day basis. First
+line colleagues operate the business in
+accordance with the risk management
+frarnework and ensure that its requirements
+are translated into effective operating
+processes.
+
+The second line of defence is the Risk
+function. They are independent from the
+first line and responsible for overseeing
+
+the application of the risk management
+framework and ensuring that the business
+operates within the risk appetite, limits and
+tolerances that have been set by the Board.
+
+The third line of defence is the Internal
+Audit function. They provide independent
+assurance over the adequacy of first and
+second line activities in relation to all aspects
+of the business, including the effectiveness
+of risk management practices and internal
+controls.
+
+atombank.co.uk
+
+19
+
+Risk Management, continued...
+
+Key and Emerging Risks
+
+Delivery of our strategy exposes Atom to key
+risks which are regularly considered by the
+Executives and the Board through Atom’s Key
+and Emerging Risk Register.
+
+The identification and monitoring of these
+risks is integral to our approach to risk
+management, and forms.a cornerstone of
+our business planning activities, ensuring that
+strategies and activities are appropriately .
+focussed on-addressing these concerns.
+
+The Key and Emerging Risk Register presently
+consists of 12 risks, including the following
+
+3 which are particularly pertinent to Atom’s
+business model:
+
+¢ Financial / Cyber Crime - the launch
+of a new bank is expected to attract the
+attention of those tooking to perpetrate
+fraud, money laundering, terrorist financing
+and cyber crime. Any successful attack
+perpetrated against Atom has the potential
+to cause not only-significant financial loss,
+but also legal and regulatory action.
+
+Atom is deploying strong controls to
+monitor and authorise custorner access,
+transactions and devices, but there
+remaing a tisk that fraudsters employ
+technology to directly attack the systerns
+and networks that Atom is using rather
+than individuat accounts. As well as the
+due diligence, design and testing that is
+going into building network and systems
+security, Atom is operating perimeter
+controls to detect and prevent attempts
+to compromise systems.
+
+* Supplier Risk - rnany of Atom’s key
+functions are outsourced to third party
+contractors, and if any of these contractors
+are unable to del ver the required functions
+and processes in a timely manner and in
+accordance with our specifications; or if
+thitd party systems fail or do not perform
+as expected, Atorn’s banking activities
+could be severely compromised,
+
+Atom has designed a control framework
+for selection, contracting and management
+of outsourcing and other supplier
+arrangements in a way that is controlled,
+effective and fully compliant with all
+applicable regulatory requirements.
+Atom is also building resilience into
+
+its third party arrangements through
+appropriate rnon toring and reporting,
+business continuity and disaster recovery
+arrangements.
+
+Attracting Customers — Atorn’s business
+plan has been developed on the principle
+that a significant n umber of customers
+
+will be attracted by the Company's ‘digital
+first’ model, Thereis a risk that Atom
+fails-to stimulate enough awareness and
+interest in its services, either through the
+design of its banking solution or throughits
+products to attract the volume of business
+anticipated.
+
+Considerable customer research and
+insight activity has Seen conducted to
+establish the market for Atom’s App
+and products. Atorn also has early
+evidence of customer interest through
+registrations on the Atom website and
+interest in our first product offerings.
+
+20
+
+Atom Bank plc - Annual Report 2016
+
+Directors’ Report
+
+The Directors present their report and financial
+statements for the year ended 31 March 2016. Atom
+Bank plc isa public limited company, incorporated
+and demiciled in England and Wales, having its
+registered office in England and is authorised and is
+regulated by the PRA and the FCA.
+
+Review of Business
+
+Atom airns to be the UK's first truly mobile
+personal and business. bank. Its intention is
+to change the landscape of UK banking by
+offering a broad range of attractively priced
+products, delivered through an engaging and
+intuitive App-based platform, optimised for
+smartphones and tablets: During the year
+the business has made significant progress
+in preparation to start trading: -
+
+« Capital of £39m was raised via equity
+shares, with an additional E78nv raised in
+April 2016;
+
+« The first version of the App was
+developed and released in April 2016;
+
+* On 23 June 2015 Atom was granted
+
+authorised deposit-taker status by the
+
+FCA with a restriction to maximum total
+
+deposits of £50,000, The restriction was
+
+liked and a full banking licence was
+granted fcllowing the year end on 4 April
+
+2016; Atom started to accept savings and
+
+loan busir ess from this date;
+
+The process to enable lending to smail
+
+business customers was developed;
+
+* Significant investment has been made in
+
+the technology and platforms that will
+provide our services; and,
+
+The Atom family has grown to 153
+employees.
+
+Financial Performance
+
+As a result of the activities above Atom has
+made a net loss for the year of £22.5m (2015:
+£5.9m)}. The cash generated by the equity raise
+during the year has been utilised primarily to
+
+build the infrastructure of the bank including
+
+IT platforms, development of the Appand
+operating expenses during the year:
+
+Excess cash holdings were invested in short
+tertn financial instruments. These generated
+income of £46k (2015: £13k)
+
+Total operating-costs incurred in the year
+were £23.4m (2015: £6.3rn). Of this £1LL.6m
+(2015: £3.2m) was spent on staff costs which
+included £3.5m (2015: Nil) for employee share
+option schemes. Other significant costs
+within operating expenses of £11.8m (2015:
+£3.2m) related to development of IT functions
+of Atom. IT infrastructure costs and App
+development of £18.4m (2015: £3.2m)} were
+capitalised as intangible assets.
+
+22
+
+Atom Bank pic - Annual Report 2016
+
+A tax credit of £1.4m (2015: £0.6m) was
+recognised. during the year relating to
+
+amounts due from HMRC in respect of
+research and developrnent tax credits.
+
+Total assets at the year end were £37.5m
+(2015: £12.1m)}, with cash and financial
+investments totalling £13:8m (2015:-£5.2m)
+available to support the continued build of
+the bank phase.
+
+Atom is truly focused on managing conduct
+risk, placing the customer at the heart of Atom’s
+strategy and aiming to achieve fair customer
+outcomes. The Conduct Risk Framework and
+Policy is owned by the Board who uitirnately
+drive the approach. Atorn’s approach to
+conduct risk management is incorporated
+throughout each of the policies and standards
+across the business. Conduct risk management
+information has been designed to report on the:
+delivery of fair customer outcornes. A programme
+of compliance nionitoring has also been
+developed ona risk-based approach
+incorporating customer outcome testing,
+conduct and wider regulatory risks.
+
+Inf i garding risk 2 tis
+disclosed in the Strategic Report under the
+heading Risk Management.
+
+Directors
+
+The following persons served as directors
+
+during the year-and up to the date of approval
+of the report and financial statements.
+
+Anthony W Thomson (Chairman)
+
+John V Deane. (Resigned 31 December 2015}
+Jonathan D Hogan
+
+Patricia D Jackson
+
+David J McCarthy
+
+Mark T Mullen
+
+Ergun Ozen (Appointed 1 April 2016)
+Teppo Paavola (Appointed 1 April 2016)
+Laurel C Powers-Freeling (Appointed 28
+July 2015)
+
+Bridget C Rosewell
+
+Auditors
+Each person who was a director at the time
+this report was approved confirms that:
+© So far as he/she is aware, there is no
+relevant audit information of which the
+Company’s auditor is unaware;
+¢ He/she has taken ail the steps that
+they ought to have taken asa director
+in order to make themselves aware of
+any retevant audit information and to
+establish that the Company's auditor is
+aware of that information.
+
+This contirmation is-given and should be
+interpreted in accordance with the provisions
+of $418 of the Cornpanies Act 2006,
+PricewaterhouseCoopers LLP have expressed
+their willingness to continue in office as auditor
+and a resolution to reappoint them will be
+considered at the forthcoming Annual
+General Meeting.
+
+Approved by the Board and signed on its
+behalf by:
+
+Mark Mullen
+Chief Executive Officer
+22 July 2016
+
+atombank.co.uk
+
+23
+
+Directors |
+Responsibilities Statement
+
+The Directors are responsible for preparing
+the Strategic Report, Directors’ Report and
+
+the financial statements in accordance with
+applicable laws and regulations. ,
+
+Company law requires the Directors to
+prepare financial statements for each
+financial year. Under that taw the Directors
+have preparec the financial statements in
+accordance with International Financial
+Reporting Standards (IFRSs) as adopted
+by the European Union.
+
+Under compar y law the Directors must not
+approve the financial statements unless they
+are satisfied that they give a true and fair
+view of the state of affairs of the Company
+and of the profit or loss of the Company for
+that period.
+
+In preparing these financial statements, the
+Directors are required to:
+
+¢ Select suitable accounting policies and
+then apply them consistently;
+
+* Make judgernents and accounting
+estimates that are reasonable and prudent;
+
+« State whether applicable IFRSs as
+adopted by the European Union have
+been followed, subject to any material
+dapartures disclosed and explained in
+the financiat statements; and
+
+© Prepare the financial statements
+on a going concern basis untess itis
+inappropriate to presume that the
+Company will continue in business.
+
+The Directors are responsible for keeping
+adequate accounting records that are
+sufficient to show and explain the Company's
+transactions and disclose with reasonable
+accuracy at any time the financial position of
+the Company and enable them to ensure that
+the financial staternents comply with
+
+the Companies Act 2006.
+
+They are also responsible for safeguarding
+the assets of the Company and hence for
+taking reasonable steps for the prevention
+and detection of fraud and other
+irregularities.
+
+The Directors are responsible for the
+maintenance and integrity of the corporate
+and financial information included on the
+Cornpany’s website, Legislation in the United
+Kingdom governing the preparation and
+dissemination of financial information may
+differ frorn legislation in other jurisdictions.
+
+24
+
+Atom Bank pic « Annual Report 2016
+
+Approved by the Board and signed by order
+of the Board:
+
+Edward Twiddy
+Company Secretary
+22 July 2016
+
+Independent
+Auditors Report
+
+to the Members of Atom Bank plc
+
+Report on the financial statements
+Our opinion
+
+In our opinion, Atom Bank pic’s financial
+statements (the “financial statements’):
+
+* Give a true and fair view of the state of
+the company’s affairs as at 31 March 2016
+and of its loss and cash flows for the year
+then ended;
+
+* Have been properly prepared in accordance
+with International Financial Reporting
+Standards (“IFRSs”) as adopted by the
+European Union; and
+
+¢ Have been prepared in accordance with
+the requirernents of the Companies Act
+2006.
+
+What we have audited
+The financial statements, included within the
+Annual Report (the “Annual Report”), comprise:
+
+« The Statement of Financial Position as at
+31 March 2016;
+
+e The Stat it of Comp:
+for the year then ended;
+
+« The Statement of Cash Flows for the year
+then ended; ;
+
+¢ The Statement of Changes in Equity for
+the year then ended; and-
+
+« The notes to the financial staternents, which
+include a surnmary of significant accounting
+policies and other explanatory information.
+
+Income
+
+The financial reporting framework that has
+been applied in-the preparation of the
+financial statements is IFRSs as adopted by
+the European Union, and applicable law.
+
+In applying the financial reporting
+framework, the Directors have made a
+number of subjective judgements, for
+example in respect of significant accounting
+estimates. in making such estimates, they
+have made assumptions and considered
+future events.
+
+Opinion on other matter
+prescribed by the Companies
+Act 2006
+
+in our opinion, the information given in the
+Strategic Report for the financial year for
+which the financial statements are prepared
+is consistent with the financial statements.
+
+Other matters on which we are
+required to report by exception
+Adequacy of ing records and
+information and explanations received
+Under the Companies Act 2006 we are
+required to report to you if, in our opinion:
+
+« We have not received all the information and
+explanations we require for our audit; or
+
+atombank.co.uk
+
+27
+
+* Adequate accounting records have
+not been kept, or returns adequate for
+our audit have not been received from
+branches not visited by us;:or
+
+* The financial statements are not in
+agreemen: with the accounting records
+and returns.
+
+We have no exceptions to report arising frorn
+this responsibility.
+
+Directors’ remuneration
+
+Under the Companies Act 2006 we are
+required to report to you ifin our opinion,
+certain disclosures of Directors’ remuneration
+specified by law are not made. We-have
+
+no exceptions to report arising from this
+responsibility.
+
+Responsibilities for the financial
+statements and the audit
+
+Our responsibilities and those of
+
+the Directors
+
+As explained more fully in the Directors’
+Responsibilities Statement set out on page
+22, the Directors are responsible for the
+preparation of the financial statements and
+for being satisfied that they give a true and
+fair view.
+
+Gur responsibil ty is to audit and express
+
+an opinion on tre financial statements
+
+in accordance with applicable law and
+International Standards on Auditing (UK
+and Ireland) (“ISAs (UK & lreland)"}. Those
+standards require us to cornply with the
+Auditing Practices Board's Ethical Standards
+for Auditors.
+
+This report, including the opinions, has been
+prepared for and only for the company’s
+members as a body in accordance with
+
+Chapter 3 of Part 16 cf the Companies Act
+2006 and for no other purpose. We do not,
+
+in giving these opinicns, accept or assume
+responsibility for any other purpose or to any
+other person to whorn this report is shown or
+‘into whose hands it may come, save where
+expressly agreed by cur prior consent
+
+in writing.
+
+What an audit of financiat
+
+statements involves
+
+We conducted our audit in accordance
+with ISAs (UK & Iretand). An audit involves
+obtaining evidence about the amounts
+and disclosures in the financial staternents
+sufficient to give reasonable assurance
+that the financial statements are free from
+material misstatemert, whether caused by
+fraud or error. This includes an assessment of:
+
+« Whether the accounting policies *
+are appropriate to the. company’s
+circumstances and have been
+consistently applied and adequately
+disclosed;
+
+« The reasonableness of significant
+accounting estimates made by the
+directors; and
+
+* The overall presentation of the financial
+statements.
+
+We primarily focus our work in these areas
+
+by assessing the Direczors’ judgements
+against available evidence, forming our own
+judg and evaluating the disclosures in
+the financial statements.
+
+We test and examine information, using
+sampling and other auditing techniques, to
+the extent we consider necessary to provide a
+reasonable basis for us to draw conclusions.
+We obtain audit evidence through testing
+
+28
+
+Atom Bank pic « Annual Report 2016
+
+the effectiveness of controls,.substantive
+procedures or-a combination of both.
+
+in addition, we read all the financial and
+non-financial information in the Annual
+Report-to identify material inconsistencies
+with the audited financial statements and to
+identify any information that is apparently
+materially incorrect based on, or materially
+inconsistent with, the knowledge acquired
+by us in the course of performing the audit. If
+we become aware of any apparent material
+misstatements or inconsistencies we consider
+the irnplications for our report.
+
+a ae
+
+Gary Shaw
+
+Senior Statutory Auditor
+
+for and on behalf of PricewaterhouseCoopers LLP
+Chartered Accountants and Statutory Auditors
+Leeds
+
+22 July 2016
+
+atombank.co.uk
+
+29
+
+Statement of
+
+Comprehensive Income
+Year Ended 31 March 2016
+
+Notes Year Ended |* 8 Monthsto
+34 March 2016 | 31 March 2015
+£'000 £'000
+Interest and similar income , 2 46 13
+Interest and similar expense . - ()
+Net interest and similar income 46 12
+Fee and commission expense (28) -
+Staff costs 3 (11,580) (3,177)
+Operating expenses 5 (11,769) (3,177)
+Operating loss (23,332) (6,342)
+Depreciation and amortisation 6 {604) (143)
+Loss before taxation . (23,935} (6,485)
+Taxation 7 1,420 "614
+Total comprehensive loss for the year/period - (22,525) (5,871)
+Attributable to: .
+Owners of the Company (22,515) (5,871)
+
+The result for the year is derived entirely (rora continuing activities.
+
+Statement of |
+Financial Position
+As at 31 March 2016
+
+Notes |] 31 March 2016 | 31 March 2015
+£000 (restated)
+£000
+
+Assets
+Cash and cash equivalents - 8g 7,240 5,182
+Financial investments 9 6,559 |: ‘
+Trade receivables ; - |. 37
+Other assets 10 2,445 2,206
+Tax asset 7 1,420 614
+Property, plant and equipment li 484 357
+Intangible assets 2 19,341 3,695
+Total assets 37,489 12,091
+
+Liabilities
+Custorner accounts 10} *
+Other liabilities 13 8,193 } 3,068
+Total liabilities 8,193 3,068
+
+Equity
+
+Share capital 14 1 50
+Share premium account 1S 54,996 15,557
+Other reserves - 3,501 } 103
+Retained earnings (29,202) F (6,687)
+Total equity | 29,296 | 9,023
+Total Liabilities and Equity | 37,489 ; 12,091
+
+The notes and information on pages 32 to 49 form part of these financial statements.
+These financial statements were approved by the Board and were signed on its behalf by:
+
+HM
+
+Mark Mullen
+Chief Executive Officer
+22 Juty 2016
+
+David McCarthy
+Chief Financiat Officer
+22 July 2016
+
+30 Atom Bank pic « Annual Report 2016
+
+atombank.co.uk
+
+Statement of Changes
+
+In Equity
+
+Year Ended 31 March 2016
+
+Share Share premium Other Retained Total
+capital account reserves earnings equity
+£’000 £’000 £000 £000 £000
+As at 31 July 2014 50 3,108 - (816) 2,342
+Proceeds from issue of shares,
+net of expenses 12,449 . 12,449
+Other reserves . 103 . 103
+Loss for the period - - (5,871) (5,871)
+As at 31 March 2015 50 15,557 103 (6,687) 9,023
+Proceeds from issue af shares L 39,439 (103) - 39,337
+net of expenses
+Redemption of preference shares (50) - : (50)
+Share option scherne reserves - 3,501 . 3,501
+Loss for the year * : (22,515} (22,515)
+As at 31 March 2016 ‘ 1 $4,996 3,501 (29,202) 29,296
+
+Statement of
+Cash flows
+
+Year Ended 31 March 2016
+
+32
+
+Atom Bank ple « Annual Report 2016
+
+8 Months to
+12 Monthsto 31 March 2015
+31 March 2016 (restated)
+£000 £000
+Cash outflows from operating activities
+Loss for the year/period {22,515} (5,871)
+Adjustment for non-cash items
+- Depreciation and amortisation 64 43
+- Share option scheme reserves 3,501 103
+- Intangible assets adjustments and write-off 2,295
+Changes in operating assets and liabilities
+Net increase in financial investments (6,559!
+Net increase in custorner deposits 10 -
+Net decrease in trade receivables 37 .
+Net increase in other assets (239) (2,206)
+Net increase in tax asset (806) (614)
+Net increase in trade and other payables 5,115 2,551
+Net cash used in operating activities (18,557) (5,994)
+Cash flows from investing activities
+Payments for software (18,417, (2,564)
+Payments for banking licence 13} (674)
+Purchases of property, plant and equipment (247, (333)
+Net cash outflows from investing activities (18,672) (3,872)
+Cash flows from financing activities
+Proceeds from issuance of ordinary shares, net of expenses 35,337 12,449
+Redemption of preference shares 450} -
+Net cash inflows from financing activities 39,287 12,449
+Net increase in cash and cash equivalents 2,058 2,884
+Cash and cash equivalents at beginning of the financial year/period §,182 2,298
+Cash and cash equivalents at the end of the financial year/period 7,240 5,182
+atombank.co.uk 33
+
+Notes to Financial
+
+Statements
+
+Year Ended 31 March 2016
+
+1. Accounting Policies
+
+Basis of preparation
+
+The financial statemments.of Atom Bank ple
+have been prepared and approved by the
+Board.of Directors in accordance with the
+Companies Act 2006 and with international
+Financial Reporting Standards ("IFRSs")
+
+as adopted by the European Union ("EU").
+
+In preparing the 2016 financial statements, the
+2015 comparative numbers were restated from
+the original £ (nearest pound) to £ ‘000 (nearest
+thousand pounds). As a result of rounding issues
+arising from this change, the presentation of
+sorne of the comparative numbers may differ
+slightly to the 2015 financial statements.
+
+The accounting policies have been applied
+consistently, except as explained in the
+
+prior year restatement note below, The
+amounts expacied to be recovered or settled
+for assets and liabilities in the financial
+statements aré due no more than twelve
+months after the reporting period untess
+specifically stated.
+
+Accounting convention
+
+The financial statements have been prepared
+on an historical cost basis, except for the
+revaluation of certain financial ins
+
+Future ting develop tt:
+
+At the date of authorisation of these
+financial statements, certain standards and
+interpretations were in issue but not yet
+effective and have not been applied in these
+financial statements.
+
+The Directors do not expect that the adaption
+of those standards will have a material
+impact on the financial statements of the
+Company in future periods, except as follows:
+
++ IFRS 9 will impact both the measurernent
+and disclosures of financial instruments.
+
+# AFRS 15 may have an impact on revenue
+recognition and related disclosures.
+
+Beyond this information, it is not practicable
+to provide a reasonatile estimate of the effect
+of these standards until a detailed review has
+been completed.
+
+Going concern
+
+The financial statements have been prepared
+on a going concern basis, as the Directors are
+satisfied that the Company has the resources
+io continue in business for the foreseeable
+future {which has been taken as 12 rnonths
+frorn the date of apprcval of the financial
+
+The principal accounting policies are set
+out below.
+
+ts). in making this assessment, the
+Directors have considered a wide range of
+information relating to present and tuture
+
+34
+
+Atom Bank pic + Annual Report 2016
+
+conditions, including the current state of the
+balance sheet, capital resources, cash flows
+
+-and the long term strategy of the business.
+
+The Company's forecasts and projections
+show that it will be able to operate at
+adequate levels of both liquidity and capital
+for the foreseeable future, including a range
+of stressed scenarios. After making due
+enquiries, the Directors believe that the
+Company has sufficient resources to continue
+its activities for the foreseeable future and
+to continue its expansion, and the Company
+has sufficient capital to enable it.te continue
+to meet its regulatory capital requirements
+as set out by the Prudential Regulation
+Authority (“PRA”).
+
+Use of estimates and judg t
+The preparation of financial statements
+requires management to make judgements,
+
+estimates and assumptions that affect the
+
+application of accounting policies and the
+reported amounts of assets, liabilities,
+income and expenses. Actual results may
+differ from these estimates.
+
+Estimates and underlying assumptions are
+reviewed on an ongoing basis. Revisions to
+accounting estimates are recognised in the
+period in which the estimates are revised
+and in any future periods affected. The
+critical accounting judgements are noted
+
+in relevant notes to the financial statements.
+
+Interest and similar income and expense
+Interest'and siniilar income on financial
+assets that are classified as loans and
+receivables, held to maturity or available
+
+for sale, and interest expense on financial
+liabilities other than those at fair value
+through profit or loss, are recognised in the
+
+‘Interest. and similar income’ and ‘Interest
+and similar expense’ sections of the income
+statement using the effective interest rates
+of the financial assets or financial liabilities
+to which they relate.
+
+Financial assets and liabilities
+
+The Coripany applies IAS 39 Financial
+Instruments: Recognition and Measurement
+to the recognition, classification and
+measurement, and derecagnition of
+financial assets.and financial liabilities
+
+and the irnpairment of financial assets,
+
+All financial instruments are initially
+recognised at fair value onthe date of -
+initial recognition and, depending on
+
+the classification of the asset or liability,
+may continue to be held-at fair value
+either through profit or loss or other
+comprehensive income. The fair value of
+
+a financial instrument is the price that
+would be received to sell an asset or paid to
+transfer a liability in an orderly transaction
+between market participants at the
+measurement date.
+
+Property, plant and equipment
+Property, plant and equipment are stated
+at cost less accumulated depreciation and
+any provisions for impairment. Historical
+cost includes expenditure that is directly
+attributable to-the cost of the assets.
+
+Property, plant and equipment are
+depreciated, other than freehold land,
+
+at their depreciable amounts according to
+the straight-line method over the estimated
+useful life of each class of asset. Depreciable
+amount is the cost of an asset, or other
+amount substituted for cosi, less its
+
+residual value.
+
+atombank.co.uk
+
+Notes to Financial Staternents, continued...
+
+The useful life for each class of asset is
+as follows:
+
+Over the
+
+remaining life of the lease
+e Fixtures and fittings: 5-25 years
+© Office equipment: 3 years
+¢ IT equipment: 3 years
+
+At each balance sheet date, property, plant
+and equipment are assessed for indications
+of impairment. If indications are present,
+these assets are subjact to an.impairment
+review.
+
+The impairment review comprises a
+comparisan of the carrying amount of the
+asset with ils recoverable amount which is
+the higher of tre asset's net selling price and
+its value in use.
+
+The carrying values of fixed assets are written
+down by the amount of any impairment and
+this loss is recegnised in the income statement
+in the period in which it occurs. A previously
+recognised impairment loss relating to a fixed
+asset may be reversed in part or in fulkwhen
+a change in circumstances leads to a change
+in the estimates used to determine the fixed
+asset's recoverable amount.
+
+Intangible assets
+
+Intangible assets with finite useful lives
+that are acquired or built are carried at
+cost less accurnulated amortisation and
+impairment losses. intangible assets with
+indefinite useful lives that are acquired or
+built are carriec at cost less accurnulated
+impairment tosses.
+
+Amortisation is recognised on a straight
+line basis over their estimated useful lives.
+
+The estimated useful tife and amortisation
+methad arereviewed at the end of each
+reporting period, with the effect of any
+changes in estimate being accounted for on
+a prospective basis. The useful life for each
+class of intangible asset is as follows:
+
+« Banking Licence: The banking licence
+is assumed to have an indefinite life as
+there is no foreseeable limit to the period
+over which the asset is expected to
+genes ate benefits for the business. Costs
+relating to obtaining this asset are held at
+cost and are not being amortised,
+
+* IT Infrastructure: 5 years
+
+* App Development: 7 years
+
+At each balance sheet date, the Company
+reviews the carrying arnounts of its intangible
+assets to determine whether there is any
+indication that those assets have suffered
+
+an irnpairmenttoss. If any such indication
+exists, the recoverable amount of the asset
+
+is estimated to deterrnine the extent of the
+impairment toss (if any),
+
+lf the recoverable amount of an asset is
+astimated to be less than its carrying amount,
+the carrying arnount of the asset is reduced
+to its recoverable amount, Where an impairment
+loss subsequently reverses, the carrying amount
+of rhe asset is increased to the revised
+estimate of its recoverable amount, but so
+that the increased. carrying amount does not
+exceed the carrying arnount that would have
+been determined had no impairment loss
+been recognised for the asset in prior years.
+Areversal of an impairment loss is recognised
+immediately in profit or loss, unless the
+relevant asset is carried at a revalued amount,
+in which case the reversal of the impairment
+loss is treated as a revaluation increase.
+
+36
+
+Atom Bank ple - Annual Report 2016
+
+Research and development expenditure
+Research expenditure is written off to the
+income statement in the period in which
+
+it is incurred. Development expenditure is
+also weitten off to the income statement,
+except where the Directors are satistied as
+to the technical, commercial and financial
+viability of individual projects. In such cases,
+the identifiable expenditure is capitalised
+and amortised over the period in which
+
+the Company is expected to benefit.
+
+This expected period is detailed in the
+arnortisation policy detailed above.
+
+Employee benefits
+
+Short-term employee benefits, such as
+salaries, paid absences and other benefits,
+are accounted for on an accruals basis over
+the period during which employees have
+provided services in the year.
+
+The Company also provides a defined
+contribution pension scheme for its staff
+and share options scheme.
+
+i Pension Scheme
+For defined contribution schemes, the
+Company recognises contributions due
+in respect of the accounting period in
+the income statement. Any contributions
+unpaid at the balance sheet date are
+included as a liability.
+
+i Share Options Scheme
+Employees (including senior executives)
+may be entitled to receive remuneration
+in the form of share options to reward.
+strong long-term business performance
+and to incentivise growth for the future.
+
+The cost of the employee services
+received in respect of the shares or
+
+share options granted is recognised in
+the incorne statement over the period
+that employees provide services. This is
+generally the period in which the award
+is granted or notified and the vesting
+date of the shares or options. The overall
+cost of the award is calculated using the
+number of shares and options expected
+to vest and the fair value of the shares or
+options at the date of grant.
+
+The fair value of options at grant date
+is recognised as an employee expense
+with a corresponding increase in equity
+over the period that the employees:
+become unconditionally entitled to
+
+the awards. The grant date fair value
+
+is determined using val models
+which take into account the terms and
+conditions attached to the awards.
+Inputs into valuation models include
+the risk free interest rate, the expected
+volatility of the Company’s share price
+and other various factors which relate to
+performance conditions attached to
+the-award.
+
+Provisions
+
+Provisions (except impairment provisions)
+are recognised when it is probable that an
+outflow of economic benefits will be required
+fo settle a current legal or constructive
+obligation as aresult of past events, and a
+reliable estirnate can be. made of the ammount
+of the obligation.
+
+Taxes
+
+Income tax on the profit or toss for the year
+comprises current tax and deferred tax.
+Income tax is recognised in the income
+statement except to the extent that it relates
+to items recognised directly in shareholders’
+
+atombank.co.uk
+
+37
+
+Notes to Financial Statements, continued..
+
+equity, in which case it is recognised in
+shareholders’ equity.
+
+Current tax is the tax expected to be payable
+on the taxab e profit for the year, calculated
+using tax rates enacted or substantively
+enacted by the balance sheet date, and
+
+any adjustment to tax payable in respect of
+previous year.
+
+Deferred Tax
+
+A deferred tax liability is recognised on
+temporary differences between the carrying
+sheet and the amounts attributed to such
+assets and liahilities for tax purposes. Deferred
+tax liabilities are generally recognised for all
+taxable temporary differences and deferred
+tax assets are recognised to the extentitis
+probable that future taxable profits will be
+available agaitst which deductible ternporary
+differences can be utilised.
+
+Deterred tax is determined using tax rates and
+legislation in force at the balance sheet date
+and is expected to apply when the deferred
+tax asset is realised or the deferred tax liability
+is settled.
+
+Cash and Cash Equivalents
+
+For the purpose of presentation in the
+statement of cash flows, cash and cash
+equivalents includes cash in hand, deposits
+held at call with financial institutions, other
+short-term, higaly liquid investments with
+original maturicies of three months or
+
+less that are readily convertible to known
+amounts of cash and which are subject to
+an insigniticant risk of changes in value, and
+bank overdrafts. Bank overdrafts are shown
+within borrowings in current liabilities in the
+balance sheet.
+
+Capital Instruments
+
+The Company classifies a financial instrument
+thatitissues-as a financial asset, financial
+liability or an equity instrument in accordance
+with the substance of the contractual
+
+ar Ani vent is classified as a
+liability ifit is a contractual obligation to deliver
+cash or another financial asset, or to exchange
+financial assets or finencial liabilities on potentially
+unfavourable terms, An instrurnentis classified
+as equity if it evidences a residual interest in
+the assets of the Cornpany after the deduction
+of liabilities, The components of a compound
+financial instrument issued by the Company
+are classified and accounted for separately as
+financial assets, financial liabilities or equity as
+appropriate.
+
+Prior Year Restatement
+The comparative balances for the period
+ended 31 March 2015 have-been restated.
+
+\n the period ended 31 March 2015, costs
+relating to subscriptions for sofware licences
+were capitalised as intangible assets along
+with the develor 7 Of IT infrastruct
+However annual subscriptions for software
+licences are not regarded as an asset with long
+term benefits but a consumable cost requiring
+renewal on annual/periodic basis to carryout
+operations of the cornpany. £2.0m of such costs
+(along with amortisation of £0:1m) has been
+moved from intangible assets to current assets
+as a prepayment of subscription for licences.
+This further ensures consistency of treatment
+across all software and non IT related licence
+costs. There is no impact of the restatement
+on the St t of Comprehensive Income.
+
+The effect of the restatement on the lines. in
+the Statement of Financial Position and the
+Statement of Cash Flows is as follows:
+
+1. Accounting Policies, continued...
+
+31 March 2015.
+£'000
+Statement of Financial Position
+Decrease in Intangible Assets (2,900)
+Increase in Other assets 1,900
+Net impact on Total assets “
+2. Interest and Similar Income
+12 Months to 8 Months to
+Bi March 2016 | 34 March 2045
+£000 £000
+Interest and similar income
+Cash and cash equivalents 23 13
+Financial investments 23
+46 | 13
+
+Atom Bank pic +» Annual Report 2016 atombank.co.uk
+
+39
+
+Notes to Financial Staternents, continued...
+
+3. Staff Costs
+12 Months to 8 Months to
+31 March 2016 | 34 March 2015
+£000 £000
+Wages and salaries 6.701 2,635
+Employee share option schemes 3,501 -
+Pension costs 577 207
+Social security costs 801 335
+11,580 | 3,177
+
+The analysis above includes staff costs in relation to Executive and Non-Executive Directors.
+
+31 March 2016 | 31 March 2015
+_ Number Number
+
+Average monthly number of employees during the year/p
+Executive 7 2
+Business and customer operations 29 5
+Marketing and Innovation 27 7
+Risk - qi 3
+Finance 8 4
+Technology 12 5
+94 31
+
+The total number of persons ernployed at the end of 2016 was 158 (2015: 54). See note 17 tor
+
+further informe tion on employee share option schemes.
+
+Atom Bank pic + Annual Report 2016
+
+4. Disclosure of Key Management Personnel and Directors’ Emoluments
+
+12 Months to 8 Months to
+
+31 March 20161 34 March 2015
+
+£000 £000
+
+Wages and salaries 1,026 736
+Employee share option schemes 937
+
+Pension costs 107 81
+
+Social security costs 136 97
+
+2,216 914
+
+Key management personnel are defined as thase on the Executive Committee, excluding any
+Directors, for whom amounts have been separately disclosed below
+
+Directors’ emoluments
+
+Wages and salaries 1,132 822
+Pension contributions 50 32
+Social security costs 155 107
+Share based schemes 346 -
+1,683 961
+
+Highest paid Director
+Wages and salaries 269 La
+Pension contributions 20 20
+Social security costs 36 23
+Share based schemes 161 .
+486 215
+
+The highest paid Director did not exercise any share options. There were 2 Directors (2015: 2)
+who accrued retirement benefits under the defined contribution scheme-
+
+atombank.co.uk
+
+Notes to Financial Staternents, continued...
+
+5. Operating Expenses
+
+12 Months to 8 Months to
+
+31 March 2016 | 34 March 2015
+
+. £000 £°000
+
+Administrative expenses : 2,839 732
+IT costs 5,535 320
+Contractor costs 1,437 1,730
+Marketing , 1918 252
+Auditors’ remuneration for audit of the company’s financial 27 19
+Auditors’ remuneration for other services : 13 124
+t 11,769 | 3,177
+
+The auditors’ other services of £13k during the year comprised of wor< on audit related
+assurance services (2015: ICAAP advisory £111k and audit related assurance services £13k).
+
+6. Depreciation and Amortisation
+
+12 months to 8 months to
+31 March 2016 | 31 March 2015
+£'000 £'000
+Amortisation of intangible assets 484 101°
+Depreciation of property plant and equipment 120 42
+‘ 604 143
+
+42 Atom Bank pic « Annual Report 2016
+
+7. Taxation ;
+
+12 Months to }. 8 Months to
+
+31 March 2016 |. 31 March 2015
+
+£000 | £000
+
+Loss on ordinary activities before tax 23,935 | 6.485
+
+Standard rate of corporation tax 20% 21%
+
+Expected tax credit 4,787 1,362
+
+Adjustments in respect of prior periods . 73
+Research and developrnent tax credits 1,420 |, 54)»
+
+Other timing differences (4,787) }. (1,362)
+
+Total tax credit , 1,420 | 614
+
+No corporation tax liabilities are payable nor receivable from HMRC for the year (2015: Nil).
+Total tax credit £1,420 (2015: £614k) relates to amounts due frorn HMRC in respect of research
+and development tax credits for the year.
+
+Deferred Tax Assets
+
+The Directors have concluded that it is not appropriate to recognise a deferred tax asset at the
+balance sheet date as the majority of accurnulated losses will be available to offset against
+future taxable profits and the Company is not expected to make a profit in the foreseeable
+future, Were it to have been recognised, deferred tax asset would have an estimated value of
+£4.6m, being £25.6rn (2015: £1.3m) of trading losses carried forward taxed at the expected rate
+of 18%. These timing differences may be recognised in the future as taxable profits arise.
+
+atombank.co.uk
+
+43
+
+Notes to Financial Staternents, continued...
+
+8. Cash and Cash Equivalents
+
+31 fAarch 2016 | 31 March 2015
+
+£'000 £'000
+
+Cash at bank and in hand 240 5,182
+Investments 7,000 :
+7,240 §,182
+
+Investments comprise money market and time deposits with original maturities of 3 months
+orless
+
+9. Financial Investments . ce
+
+31March 2016 9 31 March 2015
+
+“ €'000 £°000
+Financial instruments 6,559
+
+6,559 "
+
+Financial instrurnents comprise UK Treasury Bills and Gilts and are valued by reference to a
+quoted market price, therefore included in IFRS13 Level 1 at 31 March 2016
+
+10. Other Assets
+
+11, Property, Plant and Equipment
+
+Fixtures and Office and IT
+Fittings Equipment Totat
+£'000 £°000 £'000
+
+Cost ,
+As at 1 April 2015 159 243 402
+Additions gu 167 247
+As at 31 March 2016 239 410 649 |
+Depreciation '
+As at 1 April 2015 5 40 4$
+Charge for the year 23 97 120
+As at 31 March 2016 28 137 165
+Net book value ;
+As at 31 March 2016 211 273 484.
+Cost
+As at 1 August 2014 . 69 69
+Additions 189 174 332
+As at 31 March 2015 189 243 402
+Depreciation
+As at | August 2014 . 3 3
+Charge for the year 5 37 42
+As at 31 March 2015 5 40 45
+Net book value
+As at 3] March 2015 154 203 357
+
+31 March 2015
+3h March 2016 {restated)
+£000 £000
+Rent and rates on premises 21 48
+Prepayments 2,424 * 2,158
+2,445 2,206
+
+44 Atom Bank plc - Annual Report 2016
+
+45
+
+Notes to Financial Statements,
+
+12. Intangible Assets
+
+continued...
+
+IT Infrastructure
+
+Banking and App .
+License Development Total
+£'000 £'0006 £'000
+. Cost
+As at LApri 2015 (restated) 990 2,706 3,696
+Adjustments ay (12) £123)
+Additions 8 18,417 18,425
+Write-off (2,172) 12,472}
+As at 31 March 2016 887 18,939 19,826
+' Amortisation
+_ Agat 1 April 2015 (restated) L i
+' Charge tor tine year - 886 886
+Write-off (402) (402)
+As at 31 March 2016 - 485 485
+Net book value
+* ASat 31 March 2015 (restated) 990 2,705 3,695
+_ Asat 31 March 2016 887 18,454 19,341
+
+Certain costs incurred in software development that had previously been capitalised have
+been written-cff. This follows a review by the Board of the various software components which
+
+concluded that elements would not be used, as alternative inter
+
+would replace them.
+
+tly developed solutions
+
+Adjustments relate to the revision of cost estimates used to capitalise Banking Licence in the
+
+prior period.
+
+46
+
+Atom Bank pie « Annual Report 2016
+
+12. Intangible Assets, continued...
+
+IT infrastructure
+
+Banking and App
+License Devetopment Total
+£'000 £'000 £'000
+Cost
+As at 1 August 2014 316 142 488
+Additions 674 2,564 3,238
+As at 31 March 2015 (restated) 990 2,706 3,696
+Amortisation
+As at 1 August 2014 -
+Charge for the year L Fl
+As at 31 March 2015 (restated) - 1 1
+Net book value
+AS at 31 July 2014 316 142 458
+As at 31 March 2015 (restated) 990 2,705 3,695
+atombank.co.uk 47
+
+Notes to Financial Statements, continued...
+
+13. Other Liabilities 15. Share Premium Account
+‘ 31 March 2016 [ 32 March 2015 31 March 2016 [ 31 March 2015
+
+£000 £'000 , £000 £'000
+Trade creditors 4,816 825 Share premiurn issued , 58,221 16,348
+Other taxes and social security costs. : 323 181 Expenses of issue of shares {3,225} (791)
+Accrued pension costs _ . 133 51 .
+Accruals and deferred income 2,861 2,001 54,996 15,557
+
+8,183 3,068 .
+
+. . 16. Capital Management
+
+The Company maintains an actively managed capital base to cover risks inherent in the
+
+14. Share Capital business. The primary objectives cf the capital management is to ensure that the Company
+BiMarch 2016 34 March 2016 complies with both external and internal capital requirernents and that the Company
+Number £ maintains healthy capital ratios in order to support its business and maximise shareholders’
+Issued share capital . , value. ;
+
+Ordinary shares of £0.00001 each 74,573,229 146
+Preference shares of £1 each, ; . : The Company manages its capital structure and makes adjustments to itin the light of changes
+
+in economic conditions, risk characteristics of its activities and regulatory requirements.
+
+74,573,229 746 :
+. The adequacy of the Companiy’s capital is rnonitored using, amongst others, the rules and
+. . ratios established by the PRA. During the past year, the Company complied in full with all its
+“31. March20%5 31 March 2015 externally imposed capital requirements.
+Number é
+Issued share capital Atom’s capital comprises net equity of £29r (2015: £9m)}. The regulatory capital base differs
+Ordinary shares of £0,00001 each 27,135,090 an from amounts reparted above due to differing treatment of certain reserves and deduction of
+Preference shares of £1 each 50,000 50,000 intangible assets.
+27,185,090 $0,271
+
+Ordinary shares have full voting rights attached, save that, irrespective of the number of shares
+held by CF Woodford Equity Income Fund. it wilt hold a maximum of 19.5% of the voting rights
+in-the Company. ‘
+
+During the year 47,438,139 Ordinary shares of £0.00001 were issued for £41,873k.
+
+The preference shares did not hold any voting rights in the Company nor do they carry rights to
+dividends. All preference shares were repaid during the year at par.
+
+48 , Atom Bank pic - Annual Report 2016 atombank.co.uk 49
+
+Notes to Financial Statements, continued...
+
+17. Employee Share Option Scheme
+There were three equity based employee share option schemes exercisable over 10 years
+available to amployees and senior executives during the year-as described below:
+
+Etigible Employees
+
+Nature of Award
+
+Vesting Period
+
+Build the bank share scheme Selected employees Employees will be Period to launch of first
+
+To reward selectad employees engaged:in earliest ganted shares once customer product to
+
+engaged in deve'oprnent of the days of sat up. the options vest. niatket,
+
+Company in early years
+
+I pert h rs Hempl hy, ott based isup to 4
+
+Replacement for cash bonuses to on performance of years from grant
+
+reward annual performance. bank and employee depending on the grade
+of the employees. For
+Executive Committee
+members thisis split
+equally over 4 years.
+
+‘ termi i h Cenai managers. Sh. ptions based 50% on 3rd and 50%
+
+Retention and recruitment of on performance of on Sth anniversary of
+
+selected senior managers. employee. award.
+
+The charge for the year arising from share based payment schemes was as below. There are no
+comparative figures as this was the first year for employee share options schemes.
+
+Number of opzions on ordinary shares granted
+Number of-opt'ons exercisable as at 31 March: 2016 -
+Weighted average exercise price
+
+Weighted average rernaining life
+
+Expense charged to the income statement-£'000
+
+Build Annual Long term
+
+the bank performance incentive
+scheme share scheme scheme
+4,000,000 3,536,978 §28,333
+4,000,000 404,015 -
+£0.75 £0.00001 £0.90
+
+5 years 5 years 5 years
+1,849 1,605 47
+
+50
+
+Atom Bank plc « Annual Report 2016
+
+17. Employee Share Option Scheme, continued...
+
+The expense charged to the income statement is based on the weighted average fair value of
+options, granted during the year, estimated by using the Black-Scholes valuation model. The fair
+value of the options was estimated on the date of grant, based on the fallowing assumptions:
+
+Build Annual Long Term
+
+the Bank Performance incentive
+
+Scheme Share Scheme Scheme
+
+Weighted average share price at date of grant £) £0.97 £0.90
+Weighted average exercise piice £0.75 £0.00001 £0.90
+Expected volatility 40.80% 40.80% 40.80%
+Expected life 5 years 5 years 5 years
+Risk free rate 0.93% 0.93% 0.93%
+
+The fair value of the share awards is-calculated using statistical models. The inputs to these
+models require management judgement to estimate the probability and tirnings of events
+taking place in the future. The significant inputs used in.the models include the exercise price,
+share price, expected volaiility and the risk-free rate. The share-based payment recognised can
+be materially affected by these assumptions.
+
+18. Ultimate Parent Undertaking
+There is no parent undertaking or ultimate controlling party.
+
+19. Subsequent Events
+The restriction to maximurn total deposits of £50,000 was lifted by the FCA and a full banking
+licence was granted on 4 April 2016.
+
+A further £781 of shareholder capital was raised after the year end.
+
+51
+
+LN
+Aytitay tases
+Outten DHA StS
+
+S25521RSEI
+the Financial Conduct
+
+by the Prudential Repulation Authority (
+ia] Services Revisiar numbenis
+

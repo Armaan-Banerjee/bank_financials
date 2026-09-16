@@ -1,0 +1,4056 @@
+| JN Bank UK Ltd
+
+Annual report and financial
+statements
+
+For the year ended 31 March 2023
+
+COMPANIES HOUSE
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+JN Bank UK Ltd
+
+Company number: 11734380
+
+Non-Executive directors
+
+Earl Jarrett
+
+Elizabeth Ann Jones
+
+Karen Angela Jordan
+
+Colin John Mander (Resigned: 30 June 2022 and appointed 28 June 2023)
+Margaret Olivia Semple
+
+Andrew Parr
+
+Asif Ahmad (Appointed: 30 May 2023)
+
+Executive directors
+
+Warren Henry Justice
+Paulette Dawn Simpson
+Paul Noble (Appointed: 21 April 2023)
+
+Secretary and Registered Office
+
+MFG Services Ltd
+- 410 Brixton Road
+
+London
+
+Sw9 7AW
+
+Independent auditor
+
+Mazars LLP
+30 Old Bailey
+London
+EC4M 7AU
+
+|
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 2
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Table of Contents
+
+Strategic report 4
+Directors’ report 13
+
+Statement of directors’ responsibilities in respect of the directors’ report
+
+and the Financial statements 16
+Independent auditor’s report to the members of JN Bank UK Ltd 17
+Statement of profit or loss and other comprehensive income 25
+Statement of financial position 26
+Statement of changes in equity ; 27
+Statement of cash Flows 28
+Notes to the Financial statements . 29
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 3
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+Strategic report
+
+The directors are pleased to present their Strategic Report of JN Bank UK Ltd (“the Bank”) for the
+year ended 31 March 2023.
+
+Key highlights
+
+The Bank has had a mixed year. The business development in data management, IT infrastructure,
+systems and controls has progressed. The Bank's customers have however had to contend with the
+end of the pandemic, rising interest rates, the most significant increase in cost of living For more
+than a generation and a background of economic uncertainty with recession always threating. As
+we enter the new Financial year the outlook is more positive with interest rates Falling, a few green
+shoots of economic growth and the possibility of recession and unemployment reducing.
+
+The book grew in the year from £57.3m to a peak of £80.0m in November 2022. New originations
+were progressing with the developments in automatic acceptance and pre-population of
+applications being launched. The lending criteria continued to develop as the book and the analysis
+of its performance developed. A number of new distribution partners were established.
+
+As our customer started to feel the impacts of the cost-of-living squeeze, performance of the
+portfolio deteriorated and in managing the portfolio to the risk appetite, volumes were
+progressively reduced as lending conditions were tightened. In December 2022 a decision was
+made to pause lending altogether to rebuild underwriting operating models to account for the
+change in economic conditions.
+
+The Bank grew its net interest income significantly to £6.8m (2022: £3.1m) however losses
+increased to £12.7m (2022: £6.5m) due to the impacts of higher credit losses and pausing lending.
+
+Business model
+
+The business model of the Bank is to provide unsecured personal lending across the retail market
+in segments which may be typically underserved by the larger banks. We differentiate ourselves
+with straightforward products, and a personalised approach to lending, that offer us a competitive
+advantage. In order to do this, the Bank employs a high level of data analysis and risk management
+expertise. Lending is originated both directly and through partners and is Funded by offering
+simple, competitively priced online savings products directly to personal customers.
+
+Our model is underpinned by a commitment to the disciplines of risk management, regulatory
+compliance and governance. Risk appetite and culture are set by the Board to provide the
+appropriate tone From the top.
+
+Our values
+
+We exist to work For our customers and their communities. We understand the importance of
+treating everyone with compassion and respect, that everyone has a story, and that is why helping
+our customers Find a way to achieve their goals is at our heart.
+
+Our approach is straightforward - Financial products that are fair, transparent and simple. Our
+background, being part of The Jamaica National Group, gives us a unique focus as part of a mutual
+organisation. We celebrate the differences of all our customers and the Bank’s ethos, as part of a
+mutual organisation, is built on inclusion and care for all. We care about our customers, their
+individual needs, and the environment in which we live.
+
+ee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 4
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+Business review
+
+To mitigate the impact of the pandemic the Bank implemented additional restrictions to moderate
+lending volumes and reduce credit. New lending in the First half of the Financial year was strong
+however further deterioration in the UK economy exposed weaknesses in the business’ credit
+assumptions. This led to higher than planned credit risks. The volumes of loans written has been
+controlled through credit risk criteria, pricing and proactive management. During the year in order
+to Further manage credit risk new lending was reviewed with substantially all lending paused in
+December 2022. The break in lending has allowed processes, systems and credit models to be
+reviewed and lending recommenced on 10° July 2023.
+
+As aresult, new loans lent to customers decreased to £44m (2022: £63m) in the year. The portfolio
+balance before provisions at the yearend was £68m (2022: £60m). As a result of reduced loan book
+growth and longer term customer deposits the overall level of deposits have increased to £99m
+(2022: £70m).
+
+Customer service remains at the heart of the business. The pause in lending is enabling the
+development of our customer journey and strengthened our relationship with our customers. The
+Bank was shortlisted for the Best Personal Lender, Treating Customers Fairly and Best British Bank
+awards at the British Bank Awards in 2023. These awards are voted for by consumers and reflect
+the great level of engagement we have with our customers, and we are proud of our achievements.
+
+Enhancements to the collection Functionality have been implemented during the year. The
+allowance for expected credit losses (ECLs) has increased to 18.2% of gross loans to customers
+(2022: 4.5%).
+
+Revenue has increased in the year £6.8m (2022: £3.1m) however the increased credit losses have
+increased the loss For the financial year to £12.7m (2022: £6.5m loss).
+
+Financial key performance indicators
+The Bank made a loss before tax For the year ended 31 March 2023 of £12.7m (2022: £6.5m).
+
+Common Equity Tier 1 (CET1) capital ratio as at 31 March 2023 was 16.28% (2022: 15. 9%) and
+exceeded the regulatory minima set by the PRA.
+
+The Bank's Liquidity Coverage Ratio (LCR) at 31 March 2023 of 7,758% (2022: 1,243%) greatly
+exceeded the regulatory minima set by the PRA. At that date the Bank had a total value of High-
+Quality Liquid Assets (HQLAs) of £46m (2022: £16.5m).
+
+The Bank manages its growth so as maintain the capital and liquidity ratios within its risk appetite.
+
+The Following shows the regulatory capital resources managed by the Bank:
+
+2023 2022
+
+: ‘£000 ‘£000
+Share capital 24,930 24,930
+Share premium 15,996 4,996
+Accumulated loss (32,289) (19,604)
+Deduction: Intangible assets (536) (2,310)
+Other regulatory adjustments - -
+Common Equity Tier 1 Capital 8,101 8,012
+Tier 2 capital : :
+Total Regulatory Capital 8,101 8,012
+
+The Bank also measures non-financial indicator to ensure that the Bank operates in line with its
+objectives, for example, the number of community events, staff satisfaction and staff productivity.
+
+ae
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 5
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Some of these measures are subjective and may not be comparable over a time period and hence
+not presented.
+
+Future developments
+
+The beginning of the year showed that the inflationary pressures, reductions in real income levels
+and the Russian invasion of Ukraine during February 2022 have created Further macroeconomic
+uncertainty. This economic instability was particularly felt by the Bank's customers and to manage
+the portfolio to credit risk appetite lending was paused.
+
+The customer and credit journey For the existing aggregator and direct channels to market have
+been reengineered For reliability and efficiency. 2023/24 will therefore provide the Bank with the
+opportunity to restart lending with a reduced credit risk appetite.
+
+New customer channels are being developed to provide the Bank with more diversified source of
+loans.
+
+New savings products are in development to provide customers with enhanced ways of managing
+their savings through family friendly products and products designed with the UK Jamaican
+community in mind.
+
+Despite this uncertainty the Bank will continue to focus on expanding Further the lending and
+savings portfolios through the development of Further distribution opportunities and introducing
+additional products. Supported by our resilient capital and liquidity base and the ability to react
+quickly during uncertain times, we are confident that we can adapt to these changing market
+conditions and support our colleagues and customers.
+
+Diversity
+
+Diversity of opinion and a collaborative culture are core to our ongoing success as they improve
+employee morale, support creativity and drive productivity. We foster this by valuing diversity of
+gender, sexual orientation, race, ethnicity and age; striving to create an environment and working
+practices which support everyone in reaching their Full potential.
+
+The Bank has signed the Race at Work Charter. This Charter is composed of Five principal calls to
+action for leaders and organisations across all sectors. Signing up means taking practical steps to
+ensure the Bank is tackling barriers that ethnic minority people Face in recruitment and progression
+and that it is representative of British society today.
+
+Principal risks and uncertainties
+
+Financial institutions operate in a competitive and highly regulated environment and are subject to
+economic and other uncertainties. The management of risk is therefore central to the continuing
+success of the Bank.
+
+The Board is responsible For determining the Bank's risk management framework and system of
+internal controls, which are designed to enable the Bank to achieve its objectives within a managed
+risk profile, not to eliminate all risk. To do this, the Bank bases its risk management framework on
+the ‘three lines of defence’ model. The ‘first line’ of defence is the checks and controls utilised by
+operational staff directly engaged in the management of the risks in their area of activity. The
+‘second line’ is the assurance provided by the Bank's Risk Management function. The ‘third line’ is
+the independent internal audit Function which undertakes reviews, the reports of which are
+regularly provided to management and the Board Audit and Board Risk Committees by an external
+provider.
+
+ee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 6
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+The Following table summarises the principal risks relevant to the Bank and the strategies in place
+
+to manage them:
+
+Risk area
+
+Description and key mitigating actions
+
+Credit risk
+
+Credit risk is the risk of suffering Financial loss should borrowers or
+counterparties default on their contractual obligations to the Bank. These
+risks are overseen by the Board Risk Committee and managed by policies and
+procedures operated by the three lines of defence as set out above, along
+with the Executive Credit Committee.
+
+Credit risk on consumer lending is mainly mitigated by way of automated and
+manual credit assessment, affordability checks and case-by-case review.
+
+Credit risk on treasury instruments and Financial institutions is limited
+through a Financial risk management policy to manage exposures, and as at
+31 March 2023 the exposures are predominantly to the UK government.
+
+Liquidity and
+Funding risk
+
+Liquidity risk is the risk that the Bank is unable to settle obligations with
+immediacy and maintain public and stakeholder confidence. Funding risk is
+the risk that the Bank is unable to realise assets or otherwise raise Funds on
+economic terms, and/or within reasonable timescales. The Bank mitigates
+these risks by holding an adequate portion of its assets in the Form of cash
+balances and high-quality liquid assets, and by managing the maturity profile
+of its Funding portfolio. The Bank manages its liquid assets to self-imposed
+limits, in addition to regulatory metrics, that ensure access to sufficient
+liquidity given a range of possible adverse scenarios.
+
+Operational
+risk
+
+Operational risk is the risk of losses resulting From inadequate or failed
+internal processes, people and systems or from external events, such as third-
+party supplier Failure, cyber-attacks or Fraud. The Bank has a low tolerance
+for operational losses and seeks to operate in such a way that these losses
+are mitigated. The Bank recognises that some operational risk events are
+inevitable and therefore ensures that significant risk events are logged,
+investigated and subject to root-cause analysis.
+
+Concentration
+risk
+
+Concentration risk arises From exposure to groups of connected
+counterparties, or from counterparties in the same economic sector,
+geographic region or From the same activity or commodity. As a provider of
+unsecured personal loans and savings accounts in the UK consumer markets,
+the Bank is exposed to concentration risk. However, this risk is actively
+monitored, and limits are imposed on individual credit exposures and Funding
+sources to mitigate this risk.
+
+Interest Rate
+
+IRRBB is the current or prospective risk to the Bank’s capital and earnings
+
+Risk in the arising From adverse movements in interest rates that affect the Bank’s Fixed
+
+Banking Book | rate assets and liabilities. The risk is mitigated using gap analysis and by
+
+(IRRBB) setting an appropriate overall risk limit, as well as individual gap limits.
+
+Key person Due to the Bank's small size, there is significant reliance placed upon the skills
+
+risk of individuals. The Bank undertakes succession planning to partially mitigate
+this risk and continues to document policies and procedures to limit reliance
+on key individuals.
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+[Risk area Description and key mitigating actions
+
+Legislative Banking is a highly regulated market and can be affected by Frequent changes
+
+and regulatory | and updates in legislation and regulation. The Prudential Regulation
+
+risks Authority (PRA) and the Financial Conduct Authority (FCA) are the primary
+bodies which regulate the banking industry in the UK. The Bank operates
+within a defined set of Frameworks and policies which outline the regulatory
+requirements and associated monitoring practices. In addition, the Bank has
+implemented internal processes to capture any future legislative and
+regulatory change well in advance of its implementation date, thus ensuring
+that the Bank is able to continue to adequately meet all regulatory
+requirements.
+
+Climate As the worldwide Focus on climate change intensifies, both the physical risks
+
+change and the transitional risks associated with climate change continue to grow.
+
+Physical risks can relate to specific weather events, such as storms and
+Flooding, or to longer-term shifts in the climate, such as rising sea levels.
+Transitional risks may arise From the adjustment towards a ‘low carbon’
+economy, such as loss of employment in ‘high carbon’ industries. The Board
+reviews climate change risks on a regular basis.
+
+The Board has considered the Financial risks From the climate crisis.
+
+The Bank would appear to be relatively isolated From the impacts of climate
+change.
+
+e The Bank has only one office and one branch, and lending is not
+secured on physical assets, there are no material exposures to
+physical climate crisis risks, either now or in the foreseeable Future.
+
+e \t has no exposure to property or businesses that could see changing
+fortunes resulting From legislation or economic impacts to their
+business models.
+
+However, it is possible that the wider impact on the economy and
+unemployment could be material. Any impact on the Bank would therefore
+be market-wide rather than idiosyncratic. The transition to a lower carbon
+economy may have a more significant long-term impact, and the risk Forms
+part of the Bank’s risk Framework. The Bank has undertaken stress testing by
+reviewing the possible impact of climate change on the UK economy and
+hence the Bank.
+
+The results show that although the impact (higher unemployment and higher
+inflation (CPI)) would have a material impact on the Bank, its viability would
+not be impacted.
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+[Risk area Description and key mitigating actions
+nelitical and Impact of COVID-19 and Russia/Ukraine war
+
+environment
+
+The UK economy continues to show resilience with strong recovery from the
+COVID-19 pandemic and the impact of the Russia/Ukraine war. External shocks
+have resulted in high inflation, tightening monetary policy geared towards
+curbing inflation and increased risk of a global recession. Inflation is above
+acceptable ranges and tighter monetary actions are expected to persist in
+most jurisdictions, leading to a slowdown in global economic activity,
+reduction in the fair value of some financial instruments and potentially
+impacting financial sector stability. The UK Government continues to be
+focused on recovery activities and the Bank of England has taken an aggressive
+monetary policy stance geared towards addressing the rising inflation
+concerns. The JN Group and the Bank continue to actively monitor and
+manage risks identified from the global macroeconomic environment due to
+the impact of Covid -19 and Russia/Ukraine war, other external shocks and
+potential Financial market uncertainty or instability in the markets in which the
+Bank operates,
+
+Brexit
+
+The impacts of Brexit are obscured by the stronger impacts of the
+Russian/Ukraine war and the pandemic. The impact of lower expected short-
+term growth in GDP are incorporated into Forecasts used by the Bank.
+
+The Board is confident that these exceptional risks have been appropriately
+captured and assessed within the Bank’s business plans and that JN Financial
+Group Limited will provide additional Financial support to enable the Bank to
+meet its ambitious growth plans.
+
+As part of its Internal Capital Adequacy Assessment (ICAAP) and internal
+Liquidity Adequacy Assessment (ILAAP), the Bank has considered several
+stress scenarios that could be triggered by a severe macro-economic
+downturn and has evaluated the impact on the Bank's capital and liquidity
+position. The scenarios consider the possible impact on the Bank of changes
+in key economic variables such as unemployment, Bank of England base rate,
+market interest rates and inflation, as well as ECLs.
+
+Management continues to review developments and their impact on the
+potential risks to the Bank.
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+Section 172 statement
+
+As a Board of Directors we consider, both collectively and individually, that we have acted in the
+way we consider, in good faith, would be most likely to promote the success of the Bank for the
+benefit of its stakeholders as a whole in the decisions taken during the year ended 31 March 2023.
+
+JN Bank UK Ltd aims to be a Bank in which people want to invest, From which people want to
+procure services, with which people want to partner and for which people want to work. This
+requires the Board, Executive Committee, senior managers and other employees to maintain an
+approach to strategic, Financial and operational decision-making that is values-based and
+sustainable in approach, and therefore aligned to the requirements and expectations of Section
+172.
+
+The Following are how the Directors have had regards to the matters set out in sections 172 (a)-(F)
+when discharging their section 172 duties and the effect of that on certain of the decisions taken
+by them.
+
+a. Likely consequences of any decision in the long term
+
+As a Board of Directors, we have taken decisions for the long term, our aim is always to uphold high
+standards of conduct and to behave responsibly to ensure that management also operate the
+business in a responsible manner. We understand that our business can only grow and prosper over
+the long term if we understand and respect the views and needs of our key stakeholders: our
+regulators, customers, colleagues and the communities in which we operate, as well as our
+suppliers, the environment and the shareholder to whom we are accountable. This is reflected in
+our values and behaviours, and the Bank employees’ section below sets out more detail on how we
+manage our relationships with some of our stakeholders.
+
+Our governance is designed to ensure that we take into account the views of all our stakeholders,
+so that our decision-making is collaborative and well-informed — both before and after we make
+our decisions public. Examples during the year include:
+
+A decision was made to reduce and eventually pause lending to ensure that the business processes
+were aligned with risk appetite. This decision was made by the Board and senior management.
+Investors, regulators, and staff were kept informed at all stages. The longer terms plans were
+regularly reviewed with the Board and investors who made the decision to keep supporting the
+Bank's growth in the longer term.
+
+A decision was made to transfer some intangible assets to the Ultimate Parent Company (The
+Jamaican National Group Limited) and one of its subsidiaries. This was part of a The Jamaican
+National Group Limited and its subsidiaries (the Group) initiative to consolidate the intangible
+assets of certain software in specialist companies in the Group. The Board agreed that the initiative
+for Group wide IT support in common platforms would provide long term IT stability benefits.
+
+A decision was made to sell loans to a related party. The Board decided there were several
+advantages to the Bank in demonstrating an ability to sell loans. The sale would provide additional
+asset management fees for the Bank and demonstrate that systems and processes were in place
+enhancing prudential risk management. The sale of loans would also enable the Group to enhance
+the management of market risk in businesses that have GB pound liabilities. This in turn would
+develop a stronger group and hence greater longer term stability For the Bank.
+
+b. Interests of the Bank's employees
+
+The Bank's culture is a major Focus of management across the firm and the Board. The Board
+receives an update on human resource matters at each of its meetings. Sustainable success and
+delivery of our strategy is dependent on the skills, talent and values of employees. The Bank is
+TT
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 10
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+committed to being a responsible employer in our approach to the pay and benefits our employees
+receive. The health, safety and well-being of our employees is one of our primary considerations in
+the way we do business. This has been reflected in our decisions to allow staff Flexibility in when
+they have returned to the office Following pandemic restrictions. Whilst working From home, staff
+have been encouraged to stay in contact with the wider Bank team through regular all-staff virtual
+meetings. Staff Feedback is gathered through an annual anonymous survey.
+
+Through the Remuneration Committee, the Board has ultimate oversight and an active role in
+talent management, succession planning and employee reward schemes. The Bank provides equal
+employment opportunities to all people in all aspects of the employment relationship and is
+committed to equal employment opportunities to all employees and applicants.
+
+c. The Bank's business relationships with suppliers, customers and others
+Customers
+
+The Bank's aim is to provide a personalised service in delivering straightforward financial products
+digitally. We regularly elicit feedback from our customers. We have been rated 4.9 stars by
+Trustpilot and were awarded ‘Best Personal Loan Provider 2022’ at the British Bank Awards 2022
+awards.
+
+As a Fair and responsible lender, the Bank seeks to ensure that customers can afford the monthly
+repayments through an affordability assessment during the application process. Throughout the
+duration of the loan agreement customers can contact the Bank if they experience Financial
+difficulty or if their circumstances should change. As part of our commitment to treating customers
+fairly, we strive to ensure all applicants or customers are being treated with respect and
+understanding.
+
+Regulators
+
+Board members and executive management engage actively with the PRA and the FCA through
+regular meetings. Management engagement and key correspondence are also reported to and
+discussed by the Board. The views of the regulators are used to impact future plans and the
+directors review and challenge management throughout the internal capital and liquidity
+assessment processes.
+
+Suppliers
+
+Supplier due diligence is undertaken as part of the onboarding process aimed at promoting strong
+supplier relationships while continuing to effectively manage risks. The Board recognises the
+important role supplier relationships play in the success of the Bank and the Financial control
+process ensures appropriate management oversight of supplier costs. The Bank attempts to pay all
+suppliers promptly and within terms of agreements.
+
+d. Impact of the Bank’s operations on the community and the environment
+
+Our community stakeholder group includes both the local community and wider environment. The
+Bank and its employees are active in the local communities throughout the year although
+opportunities have been limited due to the pandemic. We have engaged with The Errol McKellar
+Foundation, supporting events aimed at raising prostate cancer awareness. We have reached out
+to our customers and invited them to nominate local charities to receive donations From the Bank.
+We encourage the use of our branch on Brixton Road for community-related events, which have
+included book launches, a women’s networking event and cyber-crime awareness talks.
+
+We have used our social media channels to promote people and businesses that have made
+contemporary or historic achievements, particularly the Furtherance of rights for disadvantaged
+members of the community.
+
+ene
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 11
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+The Bank is environmentally aware and endeavours to minimise its carbon Footprint by working
+with recycled office furniture and equipment where feasible, encouraging a paperless working
+environment and limiting travel, including supporting employees to work remotely.
+
+e. Desirability of the Bank maintaining a reputation For high standards of business conduct
+
+TFhe-Bank-is-proud-oFits growing-reputation-as-a-trusted-business.partner..The.values.of.the.Bank_.
+described earlier in this report puts this desire at the heart of the way the business is managed.
+
+For example, products are designed to be fair and useful to the community that we serve. This is
+From the way we create simple, easy to understand products to how we interact with customers
+through the product lifecycle.
+
+fF. Acting fairly as between members of the Bank
+The Bank has a single shareholder.
+
+The Board maintains close relations with its shareholder and regular meetings take place between
+the shareholder and executives. The Board has oversight and directly approves the appointment of
+any shareholder director representative.
+
+The Strategic report was prepared in accordance with The Companies Act 2006 (Strategic Report
+and Directors’ Report) Regulations 2013.
+
+This report was approved by the Board on 20 July 2023 and signed on its behalF.
+
+VP
+
+Paul Noble
+Chief Executive Officer (designate)
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 12
+JN Bank UK Ltd
+
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Directors’ report
+
+The directors present their report and Financial statements for the year ended 31 March 2023.
+
+Principal Activities
+
+JN Bank UK Ltd is a UK bank, authorised by the PRA and regulated by the FCA and the PRA (Financial
+Services Register number: 832786). The Bank provides ‘Easy Access’ and ‘Fixed Term’ personal
+savings accounts, together with unsecured, Fixed rate personal loans with a term of between one
+
+and five years.
+
+Business Review and Future Developments
+
+Information regarding the business review and Future developments, key performance indicators
+
+and principal risks are contained in the Strategic report.
+
+Board Composition
+
+The directors who held office during the year, and through to the date of signing this report, were
+
+as Follows:
+
+lan Marshall
+
+Independent Non-Executive Director.
+Chair of the Board
+
+Appointed: 23 January 2019
+Resigned: 24 February 2023
+
+Earl Jarrett
+
+Shareholder Non-Executive Director
+
+Appointed: 19 December 2018
+
+Elizabeth Ann Jones
+
+Shareholder Non-Executive Director
+
+Appointed: 10 July 2019
+
+Karen Angela Jordan
+
+Independent Non-Executive Director.
+Chair of the Board Audit Committee.
+Chair of the Board Nominations and
+Remuneration Committee
+
+Appointed: 23 January 2019
+
+Colin John Mander
+
+Independent Non-Executive Director.
+Chair of the Board Risk Committee
+(resigned 30 June 2022)
+
+Chair of the Board (designate)
+(appointed 28 June 2023)
+
+Appointed: 23 January 2019
+Resigned: 30 June 2022
+
+Appointed: 28 June 2023
+
+Margaret Olivia
+Semple
+
+Independent Non-Executive Director
+
+Appointed: 5 September 2019
+
+Andrew Parr
+
+Independent Non-Executive Director,
+Chair of the Board Risk Committee
+
+Appointed: 13 January 2023
+
+Asif Ahmad
+
+Independent Non-Executive Director
+
+Appointed: 30 May 2023
+
+Dean Fensome
+
+Chief Executive Officer
+
+Appointed: 23 January 2019
+Resigned: 13 January 2023
+
+Paul Noble
+
+Chief Executive Officer (Designate)
+
+Appointed: 21 April 2023
+
+Warren Henry Justice
+
+Chief Financial Officer
+
+Appointed: 28 January 2022
+
+Paulette Dawn
+| Simpson
+
+Deputy Chief Executive Officer
+
+Appointed: 11 September 2020
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+13
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Results for the Year
+The Bank reported a loss of £12.7m (2022: £6.5m loss) For the year.
+
+Proposed Dividend
+
+The directors do not recommend the payment of a dividend.
+
+Political Donations
+
+The Bank did not make any political donations or incur any political expenditure during the year.
+
+Research and Development Activities
+
+The Bank does not undertake formal research activities. However, new products and services are
+developed in each of the business lines in the ordinary course of business in accordance with the
+Bank’s product and pricing governance framework. Under this framework, new products,
+campaigns and business initiatives are reviewed and approved by the Bank’s executive committees,
+most notably the Assets and Liabilities Committee (ALCO) and the Propositions and Product
+Committee. In addition to new products and services, the Bank invests in internally generated
+intangible assets.
+
+Remuneration Matters
+
+The Bank adheres to the requirements of the Remuneration Code as published by the FCA. The
+non-executive directors do not receive variable remuneration. Information on the Bank's
+remuneration policy is set out in the Bank’s Pillar 3 disclosures which are available on written
+request to the Chief Risk and Compliance Officer, 410 Brixton Road, London, SW9 7AW.
+
+Going Concern
+
+Notwithstanding a loss for the year of £12.7m (2022: £6.5m loss), the pausing of lending in
+December 2002 and resumption of lending on 10% July 2023, the Financial statements have been
+prepared on the going concern basis, which the directors consider to be appropriate For the
+Following reasons.
+
+The directors have taken into account the Bank’s business plan and related Forecasts For the next
+5 years up to 31 March 2028. These Forecasts indicate that, taking account of severe but plausible
+downside scenarios the Bank will have sufficient resources to continue in business For 12 months
+from the date of approval of these Financial statements.
+
+The directors have modelled a severe but plausible downside scenario using macro-economic
+assumptions that they consider to be at least as severe as those in the Bank of England's 2022
+published stress scenario. These assumptions result in a significant increase in projected credit
+losses in the severe but plausible scenario. This is driven by the uncertainty over the impact of
+inflationary pressures in the economy.
+
+The downside scenario indicates that the Bank is dependent on JN Financial Group Limited
+providing additional Financial support during that period in order to continue with its business
+plans. JN Financial Group Limited has nevertheless indicated its intention to continue to make
+available funds as are planned by the Bank for the period covered by the Forecasts. In addition, the
+directors have considered the capital strength of JN Financial Group Limited in their assessment of
+the Group’s ability to provide the additional Financial support.
+
+The financial statements have been prepared on the going concern basis as the directors are
+satisfied that the Bank will be able to operate with adequate levels of both liquidity and capital for
+a period of 12 months From the date of approval of these Financial statements. In making this
+
+ee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 14
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+assessment, the directors have considered a wide range of information relating to present and
+future conditions, including the Bank’s statement of financial position, Future projections of
+profitability, cash Flows, capital resources, and the longer-term strategy of the business.
+
+Financial Risk Management
+
+Details of how the Bank manages Financial risk are set out in note 29 to the Financial statements.
+
+Pillar 3 and Country-by-Country Reporting
+
+The disclosures required under EU Directives For Pillar 3 risk disclosure reporting are available on
+request by writing to Chief Risk and Compliance Officer, 410 Brixton Road, London, SW9 7AW.
+
+The requirements of Country-by-Country Reporting are disclosed in note 24 to the financial
+statements.
+
+Disclosure of Information to Auditor
+
+The directors who held office at the date of approval of this Directors’ report confirm that, so Far
+as each of the directors is aware, there is no relevant audit information of which the Bank’s auditor
+is unaware and the directors have taken all the steps that they ought to have taken as directors in
+order to make themselves aware of any relevant audit information and to establish that the Bank's
+auditor is aware of that information.
+
+Auditor
+
+Pursuant to Section 487 of the Companies Act 2006, the auditor will be deemed to be reappointed
+and Mazars will therefore continue in office.
+
+This report was approved by the Board on 20 July 2023 and signed on its behalf.
+Paul Ze
+Chief Executive Officer (Designate)
+
+aaa EE
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 1§
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+Statement of directors’ responsibilities in respect
+of the Annual Report, Strategic Report, the
+Directors’ Report and the Financial statements
+
+The directors are responsible For preparing the Annual Report, the Strategic Report, the Directors’
+Report and the Financial statements in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare Financial statements For each financial year. Under
+that law they have elected to prepare the financial statements in accordance with UK-adopted
+international accounting standards in conformity with the requirements of the Companies Act 2006
+and applicable law.
+
+Under company law the directors must not approve the financial statements unless they are
+satisfied that they give a true and Fair view of the state of affairs of the company and of the profit
+or loss of the company for that period. In preparing these financial statements, the directors are
+required to:
+
+e select suitable accounting policies and then apply them consistently;
+e make judgements and estimates that are reasonable, relevant and reliable;
+
+e state whether they have been prepared in accordance with UK-adopted International
+Accounting Standards in accordance with the requirements of the Companies Act 2006;
+
+e assess the company’s ability to continue as a going concern, disclosing, as applicable, matters
+related to going concern; and
+
+* use the going concern basis of accounting unless they either intend to liquidate the company,
+or to cease operations, or have no realistic alternative but to do so.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show
+and explain the company’s transactions and disclose with reasonable accuracy at any time the
+Financial position of the company and enable them to ensure that the Financial statements comply
+with the Companies Act 2006. They are responsible For such internal control as they determine is
+necessary to enable the preparation of financial statements that are Free from material
+misstatement, whether due to fraud or error, and have general responsibility for taking such steps
+as are reasonably open to them to safeguard the assets of the company and to prevent and detect
+fraud and other irregularities.
+
+a
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 16
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Independent auditor’s report to the members of JN Bank UK
+Ltd
+
+Opinion
+
+We have audited the financial statements of JN Bank UK Ltd (the ‘Bank’) for the year ended 31 March 2023
+which comprise the Statement of profit or loss and other comprehensive income, the Statement of financial
+position, the Statement of changes in equity, the Statement of cash flows and notes to the financial statements,
+including a summary of significant accounting policies.
+
+The financial reporting framework that has been applied in their preparation is applicable law and UK-adopted
+international accounting standards.
+
+In our opinion, the financial statements:
+
+* give a true and fair view of the state of the Bank's affairs as at 31 March 2023 and of its loss for the year
+then ended;
+
+e have been properly prepared in accordance with UK-adopted international accounting standards; and
+e have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable
+law. Our responsibilities under those standards are further described in the “Auditor's responsibilities for the
+audit of the financial statements” section of our report. We are independent of the Bank in accordance with the
+ethical requirements that are relevant to our audit of the financial statements in the UK, including the Financial
+Reporting Council’s (‘FRC’) Ethical Standard as applied to public interest entities, and we have fulfilled our other
+ethical responsibilities in accordance with these requirements. We believe that the audit evidence we have
+obtained is sufficient and appropriate to provide a basis for our opinion.
+
+Conclusions relating to going concern
+
+In auditing the financial statements, we have concluded that the directors’ use of the going concern basis of
+accounting in the preparation of the financial statements is appropriate.
+
+Our audit procedures to evaluate the directors’ assessment of the Bank’s ability to continue to adopt the going
+concern basis of accounting included but were not limited to:
+
+e Undertaking an initial assessment at the planning stage of the audit to identify events or conditions that
+may cast significant doubt on the Bank’s ability to continue as a going concern;
+
+« Making enquiries of the directors to understand the period of assessment considered by thern, the
+assumptions they considered and the implication of those when assessing the Bank’s future financial
+performance;
+
+e Assessing the sufficiency of the Bank's capital and liquidity taking into consideration the most recent
+Internal Capital Adequacy Assessment Process and Internal Liquidity Assessment Process, and
+
+Da
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 17
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+evaluating the results ofimanagement stress testing, including consideration of principal risks on liquidity
+and regulatory capital;
+
+e Reviewing the directors’ going concern assessment and evaluating the appropriateness of
+managements’ key assumptions including support from the parent entity and the stress testing
+performed by management in their assessment;
+
+«Considering the-consistency-of the directors“forecasts with-other-areas-of-the financial-statements-and------—-——-.-
+our audit;
+
+e Reading the Bank’s recovery and resolution plan to consider possible cost saving measures that could
+
+be taken in the event that circumstances prevent forecast results from being achieved;
+
+Reviewing regulatory correspondence and minutes of meetings of the risk committee, the board audit
+
+committee and the board of directors;
+
+Assessing the Bank's parent entity’s ability and intention to continue to make planned capital injections
+
+in the Bank including reviewing the parent entity's letter of support;
+
+Reviewing subsequent events to confirm no indicators of events existing that cast significant doubt on
+
+the Bank’s ability to continue as a going concern; and
+
+Evaluating the appropriateness of the directors’ disclosures in the financial statements on going
+
+concern.
+
+2
+
+Based on the work we have performed, we have not identified any material uncertainties relating to events or
+conditions that, individually or collectively, may cast significant doubt on the Bank’s ability to continue as a going
+concern for a period of twelve months from when the financial statements are authorised for issue.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described in the
+relevant sections of this report.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit
+of the financial statements of the current period and include the most significant assessed risks of material
+misstatement (whether or not due to fraud) we identified, including those which had the greatest effect on the
+overall audit strategy; the allocation of resources in the audit; and directing the efforts of the engagement
+team. These matters were addressed in the context of our audit of the financial statements as a whole, and in
+forming our opinion thereon, and we do not provide a separate opinion on these matters.
+
+We summarise below the key audit matter in forming our opinion above, together with an overview of the
+principal audit procedures performed to address this matter and our key observations arising from those
+procedures.
+
+This matter, together with our findings, were communicated to those charged with governance through our
+Audit Completion Report.
+
+Key Audit Matter How our scope addressed this matter
+impairment loss allowance - expected In relation to the overall ECL process we
+credit loss (‘ECL’) in relation to loans and | performed the following procedures:
+advances to customers - £12.4m (2022: + Obtained an understanding of the ECL
+£2.7m) process and assessed the design and
+implementation of key controls;
+
+a nO
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 18
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Refer to accounting policies (Note 1) and
+Notes 2, 14 and 29.a of the financial
+statements.
+
+The Bank is exposed to credit risk primarily
+from its portfolio of unsecured lending.
+
+The calculation of ECL in relation to loans
+and advances to customers is an inherently
+judgemental area due to the use of
+subjective assumptions and a high degree of
+estimation uncertainty. The ECL requires the
+directors to make judgements over the ability
+of counterparties to make future loan
+repayments. The Bank uses a model to
+determine the expected losses which require
+judgement to the input parameters and
+assumptions.
+
+The key areas of judgement and
+management estimation, that give raise to a
+significant audit risk relate to:
+
+* Utilising proxy data as a result of limited
+default history in estimating the
+probability of defaults PD’);
+
+* Applying management judgement in
+determining the loss given default (‘LGD’)
+percentage;
+
+* Staging of loans and the identification of
+Significant Increases in Credit Risk
+(‘SICR’);
+
+* Applying management judgement in
+selecting macro-economic variables
+(‘MEVs’) and a range of future economic
+scenarios including the probability
+weightings associated with these
+scenarios; and
+
+* Post model adjustments (‘PMAs’) to
+address model limitations due to
+uncertainties as a result of the prevailing
+economic environment.
+
+Given the level of judgement and significance
+of these into the ECL calculation, we have
+identified a significant risk of error over the
+appropriateness of the judgements and the
+application of these.
+
+The level of risk has remained consistent
+
+with the prior year.
+
+- Performed a stand-back assessment of
+the overall adequacy of the ECL
+coverage, taking into consideration the
+credit risk profile of the portfolio and
+benchmarking across comparable
+lenders; and
+
+« Reviewed the financial statement
+disclosures to ensure compliance with
+IFRS 9.
+
+We performed the following procedures to
+address the key areas of judgement and
+management estimation giving rise to a
+significant risk.
+
+» With the assistance of our in-house credit
+modelling specialists, we:
+
+- Assessed compliance of the Bank's
+impairment methodology with the
+requirements of IFRS 9;
+
+* Reviewed the Bank’s ECL model
+design, model implementation and
+validation procedures;
+
++ Challenged and assessed the key
+assumptions applied to determine
+PDs and LGDs; including testing the
+completeness and accuracy of key
+data elements that are used within
+the PD and LGD assumptions;
+
+- Assessed the methodology used to
+identify SICR and tested the stage
+allocation;
+
+* Performed sensitivity analysis over
+the assumptions relating to staging
+and to probability weighting assigned
+to the economic scenarios; and
+
+* Performed an independent re-run of
+the ECL model at year-end based on
+the Bank’s data input.
+
++ With the assistance of our in-house
+economists, we reviewed management's
+macroeconomic variables and scenario
+weightings for reasonableness.
+
+- We assessed the appropriateness,
+completeness and accuracy of PMAs
+addressing any model limitations.
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+19
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Our observations
+
+We found that the impairment loss allowance in
+relation to loans and advances to customers as at
+31 March 2023 and the approach taken in
+respect of ECL are consistent with the
+requirement of IFRS 9 and that the judgements
+made were reasonable.
+
+Our application of materiality and an overview of the scope of our audit
+
+The scope of our audit was influenced by our application of materiality. We set certain quantitative thresholds
+for materiality. These, together with qualitative considerations, helped us to determine the scope of our audit
+and the nature, timing and extent of our audit procedures on the individual financial statement line items and
+disclosures and in evaluating the effect of misstatements, both individually and on the financial statements as
+a whole. Based on our professional judgement, we determined materiality for the financial statements as a
+whole as follows:
+
+Overall materiality £129,000 (2022: £155,000)
+How we determined it 1.5% of net assets (2022: 1.5% of average net assets)
+Rationale for benchmark applied The Bank is loss making and net assets are deemed to be the
+
+most appropriate benchmark given this is the main focus of
+the shareholder (the overseas parent) to assess the value of
+their investment. Further, net assets as a benchmark is
+supported by the fact that regulatory capital is a key
+benchmark for management and regulators, where net assets
+is an approximation of regulatory capital resources.
+
+Performance materiality Performance materiality is set to reduce to an appropriately
+low level the probability that the aggregate of uncorrected and
+undetected misstatements in the financial statements
+exceeds materiality for the financial statements as a whole.
+We set performance materiality at £90,000 (2022: £93,000),
+which represents 70% (2022: 60%) of overall materiality.
+
+We considered several factors in determining performance
+materiality including, the level and nature of uncorrected and
+corrected misstatements in the prior year and the robustness
+of the control environment.
+
+Reporting threshold We agreed with the directors that we would report to them
+misstatements identified during our audit above £3,800
+(2022: £5,000) as well as misstatements below that amount
+that, in our view, warranted reporting for qualitative reasons.
+
+As part of designing our audit, we assessed the risk of material misstatement in the financial statements,
+whether due to fraud or error, and then designed and performed audit procedures responsive to those risks. In
+
+nnn nn nee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 20
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+particular, we looked at where the directors made subjective judgements, such as assumptions on significant
+accounting estimates.
+
+We tailored the scope of our audit to ensure that we performed sufficient work to be able to give an opinion on
+the financial statements as a whole. We used the outputs of our risk assessment, our understanding of the
+Bank, its environment, controls, and critical business processes, to consider qualitative factors to ensure that
+we obtained sufficient coverage across all financial statement line items.
+
+Other information
+
+The other information comprises the information included in the Annual Report and Financial Statements other
+than the financial statements and our auditor's report thereon. The directors are responsible for the other
+information. Our opinion on the financial statements does not cover the other information and, except to the
+extent otherwise explicitly stated in our report, we do not express any form of assurance conclusion thereon.
+
+Our responsibility is to read the other information and, in doing so, consider whether the other information is
+materially inconsistent with the financial statements or our knowledge obtained in the course of the audit or
+otherwise appears to be materially misstated. If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether this gives rise to a material misstatement in the financial
+statements themselves. If, based on the work we have performed, we conclude that there is a material
+misstatement of this other information, we are required to report that fact.
+
+We have nothing to report in this regard.
+
+enna
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 21
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the strategic report and the directors’ report for the financial year for which the
+financial statements are prepared is consistent with the financial statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable legal
+requirements.
+
+Matters on which we are required to report by exception
+
+In light of the knowledge and understanding of the Bank and its environment obtained in the course of the audit,
+we have not identified material misstatements in the strategic report or the directors’ report.
+
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+* adequate accounting records have not been kept by the Bank, or returns adequate for our audit have
+not been received from branches not visited by us; or
+
+e the Bank's financial statements are not in agreement with the accounting records and returns; or
+
+e certain disclosures of directors’ remuneration specified by law are not made; or
+
+* we have not received all the information and explanations we require for our audit.
+
+Responsibilities of Directors
+
+As explained more fully in the Statement of directors’ responsibilities set out on page 16, the directors are
+responsible for the preparation of the financial statements and for being satisfied that they give a true and fair
+view, and for such internal control as the directors determine is necessary to enable the preparation of financial
+statements that are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank’s ability to continue
+as a going concern, disclosing, as applicable, matters related to going concern and using the going concern
+basis of accounting unless the directors either intend to liquidate the Bank or to cease operations, or have no
+realistic alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our
+opinion. Reasonable assurance is a high level of assurance but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise
+from fraud or error and are considered material if, individually or in the aggregate, they could reasonably be
+expected to influence the economic decisions of users taken on the basis of these financial statements.
+
+The extent to which our procedures are capable of detecting irregularities, including fraud is detailed below.
+
+aa
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 22
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+irregularities, including fraud, are instances of non-compliance with laws and regulations. We design
+procedures in line with our responsibilities, outlined above, to detect material misstatements in respect of
+irregularities, including fraud.
+
+Based on our understanding of the Bank and its industry, we considered that non-compliance with the
+following laws and regulations might have a material effect on the financial statements: regulatory and
+supervisory requirements of the Prudential Regulation Authority ((PRA’) and Financial Conduct Authority
+(‘FCA’).
+
+To help us identify instances of non-compliance with these laws and regulations, and in identifying and
+assessing the risks of material misstatement in respect to non-compliance, our procedures included, but were
+not limited to:
+
+« Gaining an understanding of the legal and regulatory framework applicable to the Bank and the industry in
+which it operates, and considering the risk of acts by the Bank which were contrary to the applicable laws
+and regulations, including fraud;
+
+« Inquiring of the directors, management and, where appropriate, those charged with governance, as to
+whether the Bank is in compliance with laws and regulations, and discussing their policies and
+procedures regarding compliance with laws and regulations:
+
+¢ Inspecting correspondence with the PRA and FCA and holding discussions with the PRA;
+
+e Inspecting minutes of board of directors meetings held during the year;
+
+e« Attending board audit committee meetings and inspecting minutes of those meetings held during the year;
+and
+
+e¢ Discussing identified laws and regulations amongst the engagement team and remaining alert to any
+indications of non-compliance throughout our audit.
+
+We also considered those laws and regulations that have a direct effect on the preparation of the financial
+statements, such as UK tax legislation and the Companies Act 2006.
+
+In addition, we evaluated the directors’ and management's incentives and opportunities for fraudulent
+manipulation of the financial statements, including the risk of management override of controls, and
+determined that the principal risks related to posting manual journal entries to manipulate financial
+performance, management bias through judgements and assumptions in significant accounting estimates,
+and one-off transactions including sale of intangible and financial assets.
+
+Our procedures in relation to fraud included but were not limited to:
+
+« Making enquiries of the directors and management on whether they had knowledge of any actual,
+suspected, or alleged fraud;
+
+e Gaining an understanding of the internal controls established to mitigate risks related to fraud;
+
+« Discussing amongst the engagement team the risks of fraud:
+
+e Addressing the risks of fraud through management override of controls by performing journal entry testing
+on a sample basis and testing of one-off transactions; and
+
+« Being skeptical to the potential of management bias through judgements and assumptions in significant
+accounting estimates.
+
+The primary responsibility for the prevention and detection of irregularities, including fraud, rests with both
+those charged with governance and management. As with any audit, there remained a risk of non-detection of
+irreguiarities, as these may involve coilusion, forgery, intentional omissions, misrepresentations or the
+override of internal controls.
+
+aaa nena nanan
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 23
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+The risks of material misstatement that had the greatest effect on our audit are discussed in the “Key audit
+matters” section of this report.
+
+A further description of our responsibilities is available on the Financial Reporting Council's website at
+www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor’s report.
+
+Other matters which we are required to address
+
+Following the recommendation of the board audit committee, we were appointed by the board of directors on
+2 February 2022 to audit the financial statements for the year ended 31 March 2022 and subsequent financial
+periods. The period of total uninterrupted engagement is 2 years, covering the years ended 31 March 2022 to
+31 March 2023.
+
+The non-audit services prohibited by the FRC’s Ethical Standard were not provided to the Bank and we
+remain independent of the Bank in conducting our audit.
+
+Our audit opinion is consistent with our additional report to the board audit committee.
+Use of the audit report
+
+This report is made solely to the Bank’s members as a body in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Bank’s-members
+those matters we are required to state to them in an auditor's report and for no other purpose. To the fullest.
+extent permitted by law, we do not accept or assume responsibility to anyone other than the Bank and the
+Bank’s members as a body for our audit work, for this report, or for the opinions we have formed.
+
+[Vw LZ
+
+Maximiliano Bark (Senior Statutory Auditor) for and on behalf of Mazars LLP
+Chartered Accountants and Statutory Auditor
+
+30 Old Bailey, London, EC4M 7AU
+
+20 July 2023
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 24
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Statement of profit or loss and
+other comprehensive income
+
+2023 ~=—Ss.2022
+Note £000 £000
+Interest calculated using the effective interest method:
+Interest on investment securities 3 533 18
+Interest on loans and advances to customers 3 _ 8,082 3,619
+Interest payable and similar charges 3 (1,790) (585)
+Net interest income | 6,825 3,052
+Other income 4 974 115
+Administrative expenses 5 (8,651) (6,331)
+Impairment losses on Financial instruments 29.a (10,820). . (2,438)
+Depreciation 16 (173) (182)
+Amartisation 17 (480) (631)
+Other expenses 8 (360) (80)
+Loss before tax | (12,685) (6,495)
+Income tax expense 17 - -
+Loss for the year (12,685) . (6,495)
+|
+Total comprehensive loss for the period net of tax (12,685) (6,495)
+
+The above results are derived wholly From continuing operations.
+
+The accompanying notes Form part of these financial statements.
+
+ee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 25
+JN Bank UK Ltd
+
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Statement of Financial position
+
+2023 2022
+
+Note £000 £000
+Assets j
+Cash and cashequivalents 12 ' 5,264 4,159
+Investment securities 13 46,059 16,543
+Loans and advances to customers 14 55,364 57,279
+Amounts owed by group entities 15 994 158
+Other assets 18 . 408 403
+Property and equipment 16 967 1,121
+Intangible assets 17 536 2,310
+Deferred tax asset 19 Loot -
+Total assets J 109,592 | 81,973
+Liabilities
+Customer deposits 20 98,503 69,516
+Amounts owed to group entities 1S 747 375
+Other liabilities 21 1,705 1,760
+Total liabilities 100,955 | 71,651
+Equity
+Share capital 23 } 24,930 24,930
+Share premium 23 15,996 4,996
+Accumulated Loss (32,289) | (19,604)
+Total equity attributable to owners of the Bank 8,637 10,322
+Total equity and liabilities | 109,592 | 81,973
+
+The accompanying notes Form part of these Financial statements.
+
+These Financial statements were approved by the Board of Directors on 20% July 2023 and were
+
+signed on its behalf by
+
+CZs
+
+Paul Noble
+Chief Executive Officer (Designate)
+
+Company registration number: 11734380
+
+Warren Justice
+Chief Financial Officer
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+26
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Statement of changes in equity
+
+Share Share Accumulated }. Total
+Capital Premium Loss Equity
+£000 £000 £000 £000
+
+Balance as at 31 March 2021 24,930 496 (13,109) . 12,317
+Loss For the period - - (6,495) |. (6,495)
+Other comprehensive income - - foo.
+Total comprehensive loss For the period - - (6,495) } (6,495)
+Issue of shares - 4,500 - 4,500
+Balance as at 31 March 2022 24,930 4,996 (19,604) 10,322.
+Loss For the year - - (12,685) (12,685)
+Other comprehensive income - - - | -
+Total comprehensive loss for the year - - (12,685) (12,685)
+Issue of shares - 11,000 - 11,000
+Balance as at 31 March 2023 24,930 15,996 (32,289) | 8,637
+
+The accompanying notes form part of these Financial statements.
+
+|
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 27
+
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+Statement of cash Flows
+
+2023 2022
+
+Note £000 £000
+Cash flows From/(used in) operating activities
+Loss For the period 17 (12,685) (6,495)
+Adjustment for:
+Impairment charge on loans and advances to customers 29 9,650 2,287
+Impairment charge oninvestment securities 29 4 (3)
+Loans and advances written off, net of recoveries 29 , 1,166 154
+Lass onsale of intangible assets 8 6 -
+Loss onsale of Financial assets 8 354 4
+Depreciation 16 173 182
+Amortisation 17 480 707
+Net interest income 3 (6,825) (3,052)
+Changes in:
+Decrease in loans and advances to customers (9,264) (50,532)
+Decrease/(increase) in other assets 534 (50)
+Increase in customer deposits 28,987 37,220
+(Decrease) in other liabilities 21 (169) (292)
+(Decrease)/increase in Group entity transactions ' (464) 169
+Cash utilised by operating activities
+Interest received ; 8,121 3,253
+Interest paid (1,060) (228)
+Tax paid ‘ ; - -
+Net cash From/(used in) operating activities I 19,008 (16,676)
+Cash flow used in investing activities {
+Purchase of property and equipment 16 (19) (10)
+Purchase of investment securities (91,434) (55,590)
+Loss from disposal of property and equipment 8 - -
+Proceeds from maturities and disposal of investment securities 61,383 65,708
+Purchase of intangible assets 17 (283) (372)
+Sale of intangible assets 17 1,570 -
+Net cash from/(used in) investing activities | (28,783) 9,735
+Cash flow from/(used in) financing activities
+Net proceeds From the issue of share capital 23 11,000 4,500
+Payment of lease liabilities 22 (120) (120)
+Net cash from/(used in) financing activities | 10,880 4,380
+Net increase/(decrease) in cash and cash equivalents 1,105 (2,561)
+Cash and cash equivalents at beginning of year 4,159 6,720
+Cash and cash equivalents at end of year | 5,264 | 4,159
+
+Analysis of the cash balances as shown inthe statement of Financial position
+
+2023 2022
+
+Note £000 £000
+Cash at banks other than central banks 12 } 5,264 4,159
+Cash and cash equivalents at end of year | 5,264 4,159
+
+a
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 28
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+Notes to the financial statements for the year ended 31 March
+2023
+
+1 Accounting policies
+a) Reporting entity
+
+JN Bank UK Ltd (“the Bank”) is a private company limited by shares incorporated, domiciled and
+registered in England and Wales under the Companies Act 2006. The company registration
+number is 11734380 and the registered address is 410 Brixton Road, London, SwW9 7AW. The
+nature of the Bank’s operations and principal activities are set out in the Strategic report on page
+4,
+
+b) Basis of preparation
+
+b.1 Legislation
+
+The Bank’s Financial statements have been prepared and approved by the directors in accordance
+with UK-adopted International Accounting standards (IFRS) in accordance with the requirements
+of the Companies Act 2006 and applicable law.
+
+b.2 Application
+
+The accounting policies set out below have, unless otherwise stated, been applied consistently to
+all periods presented in these Financial statements.
+
+b.3 Currency
+
+The functional currency of the Bank and presentation currency of these Financial statements is
+sterling. All amounts in the Financial statements have been rounded to the nearest £1,000, except
+where otherwise indicated.
+
+Transactions in Foreign currencies are translated to the functional currency at the Foreign exchange
+rate ruling at the date of each transaction. Monetary assets and liabilities denominated in Foreign
+currencies at the reporting date are translated to the Functional currency at the exchange rate
+ruling at that date. Foreign currency differences arising on translation of monetary items are
+recognised in the statement of profit or loss and other comprehensive income.
+
+b.4 Convention
+
+The Financial statements have been prepared on the historical cost basis unless otherwise specified
+in the accounting policies.
+
+b.5 Comparatives
+
+The Bank's comparative balances in these Financial statements are for the year ended 31 March
+2022. The current balances in these Financial statements are for the year ended 31 March 2023.
+
+b.6 Going concern
+
+Notwithstanding a loss for the year of €12.7m (2022: £6.5m loss), the pausing of lending in
+December 2002 and resumption of lending on 10 July 2023, the financial statements have been
+prepared on the going concern basis, which the directors consider to be appropriate for the
+Following reasons.
+
+The directors have taken into account the Bank’s business plan and related Forecasts For the next
+5 years up to 31 March 2028. These forecasts indicate that, taxing account or severe But plausible
+downside scenarios, the Bank will have sufficient resources to continue in business for 12 months
+from the date of approval of these financial statements.
+
+a
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 29
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+b) Basis of preparation (continued)
+
+The directors have modelled a severe but plausible downside scenario using macro-economic
+assumptions that they consider to be at least as severe as those in the Bank of England’s 2022
+published stress scenario. These assumptions result in a significant increase in projected credit
+losses in the severe but plausible scenario. This is driven by the uncertainty over the impact
+inflationary pressures in the economy.
+
+The downside scenario indicates that the Bank is dependent on JN Financial Group Limited
+providing additional financial support during that period in order to continue with its business
+plans. JN Financial Group Limited has nevertheless indicated its intention to continue to make
+available funds as are planned by the Bank for the period covered by the forecasts. In addition, the
+directors have considered the capital strength of JN Financial Group Limited in their assessment of
+the Group's ability to provide the additional Financial support.
+
+The Financial statements have been prepared on the going concern basis as the directors are
+satisfied that the Bank will be able to operate with adequate levels of both liquidity and capital a
+period of 12 months from the date of approval of these financial statements. In making this
+assessment, the directors have considered a wide range of information relating to present and
+future conditions, including the Bank’s statement of financial position, Future projections of
+profitability, cash Flows, capital resources, and the longer-term strategy of the business.
+
+c) Use of estimates, assumptions and judgements
+
+The preparation of Financial statements requires management to make judgements, estimates and
+assumptions that affect the application of accounting policies and the reported amounts of assets,
+liabilities, income and expenses. Although these estimates are based on management's best
+knowledge of current events and actions, actual amounts could differ From these estimates.
+
+Estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to accounting
+estimates are recognised in the period in which the estimates are revised and in any Future periods
+affected.
+
+Information about significant areas of estimation uncertainty and critical judgements in applying
+accounting policies that have the most significant effect on the amounts recognised in the Financial
+statements are included in note 2.
+
+The Bank has applied IFRS 9 and classifies its Financial assets, where applicable, in the following
+measurement categories:
+
+e Amortised cost;
+e Fair value through other comprehensive income (FVOCI); or
+e Fair value through profit or loss (FVPL).
+
+The Bank’s business model is to borrow deposits from retail borrowers and lend unsecured loans
+to retail customers. The Bank therefore holds all loans to maturity.
+
+The following have been assessed by the Bank to be in a ‘held to collect’ business model and to
+have cash Flows that pass the ‘solely payments of principal and interest’ (SPPI) test, including
+investment securities (which are held to manage liquidity requirements):
+
+e Loans and advances to customers
+e Bank balances
+e Investment securities
+
+a
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 30
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+e Amounts owed by group entities
+
+1 Accounting policies (continued)
+c) Use of estimates, assumptions and judgements (continued)
+
+The Bank’s Financial assets measured at amortised cost are initially recognised at Fair value plus any
+directly attributable transaction costs. The assets are subsequently measured at amortised cost
+using the effective interest method, less impairment loss allowances. The effective interest
+method calculates an interest rate which exactly discounts the Forecast cash Flows of an asset over
+its expected life back to its carrying value. For Financial assets that are not credit-impaired, interest
+revenue is calculated by applying the effective interest rate to the gross carrying amount of the
+asset. For Financial assets that are credit-impaired, interest revenue is calculated by applying the
+effective interest rate to the amortised cost of the asset.
+
+d) Financial assets - Impairment
+
+The Bank recognises impairment loss allowances for Expected Credit Losses ("ECLs") on the
+Following Financial assets:
+e Loans and advances to customers; and
+*« Treasury assets, which comprise investment securities held at amortised cost and collateral
+balances with banks.
+
+d.1 Measurement of ECLs
+
+ECLs are an unbiased probability-weighted estimate of the present value of credit losses, taking
+account of forward-looking information. ECLs are measured as the difference between contractual
+cash flows and expected cash Flows arising from an asset, discounted at the asset's effective
+interest rate.
+
+When measuring ECLs, the Bank assesses the probability of default (“PD”), the expected exposure
+at the time of default, exposure at default (EAD), and the loss that is expected to arise in the event
+of default, loss given default (LGD). The maximum period considered is the maximum contractual
+period over which the Bank is exposed to credit risk. The Bank typically assesses ECLs on an
+individual asset basis.
+
+IFRS 9 requires an impairment loss allowance to be recognised at an amount equal to either 12-
+month ECLs or lifetime ECLs. Lifetime ECLs are the ECLs that result from all possible default events
+over the expected life of a Financial instrument. 12-month ECLs are the ECLs that result from
+default events that are possible within the 12 months after the reporting date.
+
+The Bank measures impairment loss allowances at an amount equal to lifetime ECLs, except for the
+Following which are measured as 12-month ECLs:
+
+e treasury assets that are determined to have low credit risk at the reporting date. The Bank
+considers a treasury asset to have low credit risk when its credit rating is equivalent to the
+globally understood definition of ‘investment grade’; and
+
+e other Financial assets on which credit risk has not increased significantly since their initial
+recognition and which were not considered to be credit impaired at the time of initial
+recognition.
+
+Lifetime ECLs are required where the credit risk on a Financial asset has increased significantly since
+initial recognition (except for investment grade treasury assets, as noted above), or where the
+assets were credit impaired at the time of initial recognition.
+
+a enna
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 31
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+
+d) Financial assets - Impairment (continued)
+
+Financial assets that are subject to the impairment requirements of IFRS 9 are described according
+to their ECLs ‘stage’ as Follows:
+
+e ‘Stage 1'- Assets for which there has not been a significant increase in credit risk since initial
+recognition and which are not credit-impaired;
+
+e ‘Stage 2’ - Assets for which there has been a significant increase in credit risk since initial
+recognition, but which are not credit-impaired;
+
+e ‘Stage 3’ - Assets which are credit-impaired For which a lifetime ECLs is recognised.
+
+The Bank’s definitions of ‘significant increase in credit risk’ and ‘credit-impaired’ are set out below.
+d.2 Forward-looking information
+
+The Bank incorporates forward-looking information into both its assessment of whether the credit
+risk of a Financial asset has increased significantly since initial recognition and its measurement of
+ECLs. The time period over which the Bank assesses forward-looking information is the maximum
+period over which the Bank is exposed to credit risk. The Bank considers a range of representative
+scenarios For the possible future direction of key economic variables. The scenarios are derived by
+reference to external information where this is publicly available and appropriate, together with
+internally generated views. A probability-weighting, based on management judgement, is assigned
+to each scenario.
+
+The Bank's ‘base case’ scenario represents a view of the most likely outcome and is aligned with
+information used by the Bank for other purposes such as strategic planning and budgeting. The
+selection of alternative scenarios is intended to model the non-linear impact of economic Factors
+on ECLs For the Bank’s Financial assets.
+
+For unsecured loan impairment, the Bank typically considers a minimum of three scenarios; this
+includes the base case scenario, together with an upside scenario (more optimistic than the base
+case) and a downside scenario (more pessimistic than the base case). For treasury asset impairment,
+the Bank typically considers the base case scenario and a downside scenario.
+
+d.3 Significant increase in credit risk
+
+The Bank monitors all financial assets that are subject to impairment requirements to assess
+whether there has been a significant increase in credit risk since initial recognition of the asset.
+
+The Bank uses internal credit risk metrics that reflect its assessment of the PD of individual
+counterparties. The credit risk of each exposure is assessed at initial recognition, based on the
+available information about the counterparty. For loans and advances to customers, the credit risk
+at initial recognition is typically assessed by reference to information as at the loan approval and
+drawdown date. All exposures are monitored, and the credit risk assessment is updated to reflect
+current information on an ongoing basis.
+
+For unsecured loans, the Bank uses the below criteria to determine whether there has been a
+significant increase in credit risk:
+
+Two quantitative tests based on movement in PD:
+e where the PD calculated at reporting date is below a threshold consistent with the
+origination score decline cut off; or
+e The PD calculated at reporting date has experienced a 2x increase or a 9.25% absolute value
+increase in comparison to the origination PD.
+
+nee nan
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 32
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+
+d) Financial assets - Impairment (continued)
+
+Four Qualitative tests that are determined using bureau data that is refreshed at each reporting
+date:
+e worst current status with other lenders is two months or more, or in default with other
+lenders;
+e recent utilisation of Pay day lending;
+e anew county court judgement (CCJ) or active insolvency being registered against an
+account holder;
+e Other qualitative indicator is an account becoming Forborne that is also 30 days past due; or
+e Abackstop of 30 days past due for all Financial assets (regardless of the change to calculated
+PD).
+
+For treasury assets, the Bank applies criteria that consider the relative increase in lifetime PD, by
+reference to external credit ratings where available. The Bank considers that credit risk has not
+increased significantly if the treasury asset is determined to have ‘low’ credit risk at the reporting
+date. The Bank considers a treasury asset to have low credit risk when its credit rating is equivalent
+to the globally understood definition of ‘investment grade’.
+
+d.4 Credit-impaired Financial assets
+
+At each reporting date, the Bank assesses whether Financial assets are credit impaired. For those
+assets that have become credit-impaired, interest revenue is subsequently calculated by applying
+.the effective interest rate to the amortised cost of the asset. A Financial asset is ‘credit-impaired’
+when one or more events have occurred that have a detrimental impact on the estimated future
+cash Flows of the Financial asset. Evidence that a Financial asset is credit-impaired includes the
+Following:
+
+e a breach of contract such as a default; or
+
+e the disappearance of an active market for a security because of Financial difficulties.
+
+For unsecured loans, the Bank considers that a loan that meets the definition of default is credit
+impaired. For loans to no longer be considered credit-impaired, consistently good repayments must
+be demonstrated over a probationary period, being not less than 90 days.
+
+To assess whether sovereign and corporate debt instruments are credit impaired, the Bank
+considers factors such as bond yields, credit ratings and the ability of the borrower to raise Funding.
+
+d.5 Definition of default
+
+For unsecured loans, default occurs when one or more of the Following criteria are met:
+
+e The borrower is 90 days or more past due on their contractual payments.
+e The borrower meets unlikeliness to pay criteria, which indicates the borrower is in
+significant Financial difficulty. The instances are:
+
+o the borrower has filed for bankruptcy;
+
+o the borrower has agreed an Individual Voluntary Arrangement (IVA) or a Debt
+Management Plan with their creditors
+
+o more than two payments are in arrears and Forbearance activity has been applied; or
+
+aaa
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 33
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+
+d) Financial assets - Impairment (continued)
+
+o other evidence is available that the customer is not going to be able to meet their
+loan commitments.
+
+The definition of default is consistent with the regulatory definition.
+
+d.6 Write-offs
+
+A financial asset is written off (in Full or in part) when the Bank judges there to be no reasonable
+expectation that the asset can be recovered (in Full or in part). This is typically the case when the
+Bank determines that the borrower does not have assets or sources of income that could generate
+sufficient cash Flows to repay the amounts subject to the write-off. This assessment is performed
+at the individual asset level. The related impairment loss allowance is also written off once all the
+necessary procedures have been completed and the loss amount has crystallised. Financial assets
+that are written off could still be subject to enforcement activities and subsequent recoveries of
+amounts previously written off decrease the amount of impairment losses recorded in the
+statement of profit or loss and other comprehensive income.
+
+d.7 Forbearance and modification of Financial asset as a result of credit risk
+
+The Bank uses forbearance arrangements to help borrowers, either through periods where their
+finances have become stretched and servicing of normal loan repayments have become difficult,
+or where there has been a significant change in circumstances meaning the agreement repayments
+are no longer sustainable. Using forbearance activities, where they are deemed appropriate for an
+individual borrower’s circumstances, the Bank will work with customers to ensure the solution is
+appropriate to their situation. Forbearance options typically include: agreeing a reduced
+repayment plan and extending the maturity of the loan, offering a hold period to allow the
+customer to seek free money advice, or capitalising arrears to allow a manageable rate of
+repayment. An assessment of the customers’ Financial circumstances, including their disposable
+income, is conducted prior to agreeing any Forbearance arrangements. The Credit Committee
+regularly receives reports on forbearance activities to review the performance of these measures
+and to ensure that Future payments continue to be likely.
+
+IF modifications are substantial, the loan is derecognised, as explained in note (1.d.10). Once the
+terms have been renegotiated without this resulting in the derecognition of the loan, any
+impairment is measured using the original Effective Interest Rate (EIR) as calculated before the
+modification of terms. The loans are classified as stage 2 Financial assets. All loans subject to
+forbearance activities and whose accounts are 30+ days past due (DPD) are classified as stage 3
+Financial assets. A probationary period of 90 days applies to customer loans that return to meeting
+their obligations under the original loan terms. After successfully completing the probationary
+period, the loans are classified as stage 2 Financial assets.
+
+d.8 Modification of Financial assets as a result of commercial restructuring
+
+When the contractual cash Flows of a financial asset are renegotiated or otherwise modified as a
+result of commercial restructuring activity rather than due to credit risk and impairment
+
+considerations, the Bank performs an assessment to determine whether the modifications result
+‘ in the derecognition of that financial asset. For financial assets, this assessment is based on
+qualitative factors.
+
+When assessing whether or not to derecognise a loan to a customer, amongst others, the Bank
+considers the Following Factors:
+e Change in currency of the loan;
+
+e Introduction of an equity Feature;
+a
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 34
+JN Bank UK Ltd
+Annual report and financial statements
+
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+d) Financial assets - Impairment (continued)
+
+e Change in counterparty; or
+e Whether the modification is such that the instrument would no longer meet the SPPI
+criterion.
+
+IF the modification does not result in cash flows that are substantially different, as set out in note
+(1.d.10), then it does not result in derecognition. Based on the change in cash flows discounted at
+the original EIR, the Bank records a modification gain or loss, to the extent that an impairment loss
+has not already been recorded.
+
+The date of the modification is the date of initial recognition For the new Financial asset when
+applying the impairment requirements of IFRS 9.
+
+Where a modification does not result in de-recognition, the gross carrying amount of the modified
+asset is adjusted to reflect the revised contractual cash Flows. The new gross carrying amount is
+determined as the present value of the estimated future modified contractual cash Flows
+discounted at the asset's original effective interest rate. The resulting adjustment is charged to the
+statement of profit or loss and other comprehensive income as a gain or loss on modification.
+
+The risk of default of such assets after modification is assessed at the reporting date and compared
+with the risk under the original terms at initial recognition. The Bank monitors the subsequent
+performance of modified assets. The Bank may determine that the credit risk has significantly
+improved after restructuring, so that the assets are moved from Stage 3 or Stage 2 (Lifetime ECLs)
+to Stage 1 (12-month ECLs). This is only the case For assets which have performed in accordance
+with the new terms For up to 90 days.
+
+The Bank continues to monitor if there is a subsequent significant increase in credit risk in relation
+to such assets through the use of specific models For modified assets.
+
+d.9. Modification of Financial liabilities
+
+When the modification of the terms of an existing Financial liability is not judged to be substantial
+and, consequently, does not result in derecognition, the amortised cost of the Financial liability is
+recalculated by computing the present value of estimated future contractual cash flows that are
+discounted at the financial liability’s original EIR. Any resulting difference is recognised
+immediately in profit or loss.
+
+For Financial liabilities, the Bank considers a modification to be substantial based on qualitative
+Factors and if it results in a difference between the adjusted discounted present value and the
+original carrying amount of the Financial liability of, or greater than, ten percent.
+
+IF the modification is judged to be substantial then the liability is derecognised see note 1.d.10.
+d.10. Derecognition of Financial assets and liabilities
+
+d.10.1 Derecognition of financial assets
+
+d.10.1.1 Derecognition due to substantial modification of terms and conditions
+
+The Bank derecognises a financial asset, such as a loan to a customer, when the terms and
+conditions have been renegotiated to the extent that, substantially, it becomes a new loan, with
+the difference recognised as a derecognition gain or loss, to the extent that an impairment loss has
+not already been recorded. The newly recognised loans are classified as Stage 1 for ECL
+measurement purposes.
+
+|
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 35
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting Policies (continued)
+
+d Financial assets — impairment (continued)
+
+d.10.1.2 Derecognition other than for substantial modification
+
+A Financial asset (or, where applicable, a part of a financial asset or part of a group of similar
+Financial assets) is derecognised when the rights to receive cash Flows From the Financial asset have
+expired. The Bank also derecognises the Financial asset if it has both transferred the Financial asset
+and the transfer qualifies For derecognition.
+
+d.10.2. Financial liabilities
+
+A financial liability is derecognised when the obligation under the liability is discharged, cancelled
+or expires. Where an existing Financial liability is replaced by another From the same lender on
+substantially different terms, or the terms of an existing liability are substantially modified, such
+an exchange or modification is treated as a derecognition of the original liability and the
+recognition of a new liability. The difference between the carrying value of the original Financial
+liability and the consideration paid is recognised in profit or loss.
+
+e) Financial liabilities and equity
+
+Financial instruments issued by the Bank are treated as equity only to the extent that they meet
+the Following two conditions:
+
+(i) they include no contractual obligations upon the Bank to deliver cash or other Financial assets
+or to exchange financial assets or Financial liabilities with another party under conditions that
+are potentially unfavourable to the Bank; and
+
+(ii) where the instrument will or may be settled in the Bank’s own equity instruments, it is either a
+non-derivative that includes no obligation to deliver a variable number of the Bank's own equity
+instruments or is a derivative that will be settled by the Bank’s exchanging a Fixed amount of
+cash or other Financial assets for a fixed number of its own equity instruments.
+
+To the extent that this definition is not met, the proceeds of issue are classified as a financial
+liability.
+Financial liabilities are classified as measured at amortised cost using the effective interest method.
+
+F) Leases
+
+At inception of a contract, the Bank assesses whether a contract is, or contains, a lease. A contract
+is, or contains, a lease if the contract conveys the right to control the use of an identified asset for
+a period of time in exchange For consideration. To assess whether a contract conveys the right to
+control the use of an identified asset, the Bank uses the definition of a lease in IFRS 16.
+
+f.1 Bank acting as a lessee
+
+At commencement of a contract for leases of branches and office premises the Bank has elected
+not to separate non-lease components and accounts for the lease and non-lease components as a
+single lease component.
+
+f.1.1 Right-of-use assets
+
+The Bank recognises right-of-use assets at the commencement date of the lease (i.e. the date the
+underlying asset becomes available for use). Right-of-use assets are measured at cost, less any
+accumulated depreciation and impairment losses, and adjusted For any re-measurement of lease
+liabilities.
+
+The cost of right-of-use assets includes the amount of lease liabilities recognised, initial direct costs
+incurred, and lease payments made at or before the commencement date, less any lease incentives
+
+a nO
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 36
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+F) Leases (continued)
+
+received. Where an obligation is incurred by the Bank, the cost also includes an estimate of costs
+For dismantling and removing the underlying asset, restoring the site on which it is located or
+restoring the underlying asset to the condition required by the terms and conditions of the lease.
+
+Unless the Bank is reasonably certain to obtain ownership of the leased asset at the end of the
+lease term, the recognised right-of-use asset is depreciated on the straight-line basis over the
+shorter of its estimated useful life and the lease term. Right-of-use assets are subject to
+impairment.
+
+F.1.2 Lease liabilities
+
+At the commencement date of the lease, the Bank recognises lease liabilities measured at the
+present value of lease payments to be made over the lease term. The lease payments for this
+purpose include Fixed payments (including in substance Fixed payments but deducting lease
+incentives receivable), variable lease payments that depend on an index or a rate and amounts
+expected to be paid under residual value guarantees. The lease payments also include the exercise
+price of a purchase option where reasonably certain to be exercised by the Bank, and payments of
+penalties for terminating a lease (if the lease term reflects the Bank exercising the option to
+terminate). Variable lease payments that do not depend on an index or a rate are recognised as an
+expense in the period in which the event or condition that triggers the payment occurs.
+
+The present value of lease payments is determined using an appropriate discount rate. The Bank
+uses the interest rate implicit in the lease where this can be readily determined; otherwise (and
+generally), the Bank uses its incremental borrowing rate at the lease commencement date.
+
+After the commencement date, the lease liability is increased to reflect the accretion of interest
+and is reduced for lease payments made. In addition, the lease liability is remeasured if there is a
+modification, a change in lease term, a change in the in-substance Fixed lease payments or a change
+in the assessment to purchase the underlying asset.
+
+When the lease liability is remeasured in this way, a corresponding adjustment is made to the
+carrying amount of the right-of-use asset or is recorded in profit or loss if the carrying amount of
+the right-of-use asset has been reduced to zero.
+
+The Bank presents right-of-use assets in ‘property and equipment’ and lease liabilities in ‘other
+liabilities’ in the statement of Financial position.
+
+F.1.3 Finance lease payments
+
+Lease payments are apportioned between the Finance charge and the reduction of the outstanding
+liability. The finance charge is allocated to each period during the lease term to produce a constant
+periodic rate of interest on the remaining balance of the liability.
+
+F.1.4 Exempt leases
+
+The Bank has elected to take the recognition exemption for short-term leases. Short-term leases
+are those which, at the commencement date, have a lease term of not more than twelve months
+and do not contain a purchase option. The Bank has elected to take the recognition exemption For
+leases for which the underlying asset is of low value, except for leases of motor vehicles. The Bank
+considers an underlying asset to be of low value where its value, when new, is not more than
+approximately £4k. For exempt leases, the Bank expenses lease rentals to the statement of profit
+or loss and other comprehensive income on the straight-line basis over the lease term.
+
+ee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 37
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+
+f) Leases (continued)
+F.1.5 Short-term lease payments
+
+Payments made under short-term leases are recognised in profit or loss on the straight-line basis
+over the term of the lease. Lease incentives received are recognised in profit or loss as an integral
+part of the total lease expense. Refer to note (1.f.1.4 Exempt Leases) For the recognition of exempt
+leases which give rise to short-term lease payments.
+
+g) Cash and cash equivalents
+
+Cash and cash equivalents are measured at amortised cost. They comprise cash balances and cash
+reserves at Financial institutions, cash in hand and short-term, highly liquid investments where
+original maturities do not exceed three months from the reporting date, are readily convertible to
+known amounts of cash, are subject to an insignificant risk of changes in value and are held for the
+purpose of meeting short-term commitments. Bank overdrafts are repayable on demand. Bank
+overdrafts that form an integral part of the Bank’s cash management for Financing operations are
+included as a component of cash and cash equivalents for the purpose of the statement of cash
+Flows. The statement of cash flows has been prepared using the indirect method.
+
+h) Interest
+
+h.1 Effective interest rate
+
+Interest income and expense are recognised in profit or loss using the effective interest method.
+The ‘effective interest rate’ is the rate that exactly discounts estimated future cash payments or
+receipts through the expected life of the financial asset or Financial liability to the gross carrying
+amount of the Financial asset or financial liability.
+
+When calculating the effective interest rate For Financial instruments the Bank estimates Future
+cash Flows considering all contractual terms of the Financial instrument, but not ECLs.
+
+The calculation of the effective interest rate includes transaction costs and Fees paid that are an
+integral part of the effective interest rate. Transaction costs include incremental costs that are
+directly attributable to the acquisition or issue of a Financial asset or financial liability.
+
+A key source of uncertainty is the rate of early settlement of loans (prepayments). A higher rate of
+prepayments can change the estimated life of the loan and hence the EIR. Prepayments are
+currently not easy to predict and there is insufficient observable data to apply a portfolio treatment
+For prepayments. The Bank therefore apportions costs over the contractual tife of customer loans.
+Any EIR balance resulting From capitalised costs is written off on settlement of loan ahead of the
+contractual date.
+
+The Bank has capitalised £432k (2022: £586k) of transaction costs which are incremental and
+directly attributable to the issue of customer loans, such as Fees and commissions paid to
+aggregators over the expected life of the customer loan. The Bank expensed £174k (2022: £182k)
+of transaction costs attributable to the effective interest rate treatment during the year ended 31
+March 2023.
+
+h.2 Amortised cost and gross carrying amount
+
+The ‘amortised cost’ of a Financial asset or Financial liability is the amount at which the Financial
+asset or Financial liability is measured on initial recognition minus the principal repayments, plus or
+minus the cumulative amortisation using the effective interest method of anv difference between
+that initial amount and the maturity amount and, For Financial assets, adjusted For any expected
+credit loss allowance. The ‘gross
+
+en
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 38
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+h) Interest (continued)
+
+carrying amount of a Financial asset’ is the amortised cost of a Financial asset before adjusting For
+any expected credit loss allowance.
+
+IFRS9 requires interest earned from loans to be measured under the EIR method. The effective
+interest rate (EIR) is the rate that exactly discounts estimated Future cashflows to the carrying
+value of the loans. The EIR method uses a discounted cashflow model to spread the interest and
+costs over the estimated life of the asset.
+
+h.3 Calculation of interest income
+
+The effective interest rate of a Financial asset is calculated on initial recognition of a Financial
+asset. In calculating interest income, the effective interest rate is applied to the gross carrying
+amount of the asset (when the asset is not credit-impaired).
+
+However, For financial assets that have become credit-impaired subsequent to initial recognition,
+interest income is calculated by applying the effective interest rate to the amortised cost of the
+Financial asset. if the asset is no longer credit-impaired, then the calculation of interest income
+reverts to the gross basis.
+
+For information on when financial assets are credit-impaired, see note 1.d.4.
+Presentation
+
+Interest income calculated using the effective interest method presented in the statement of
+profit or loss includes:
+
+e interest on Financial assets measured at amortised cost.
+Interest expense presented in the statement of profit or loss includes:
+
+e financial liabilities measured at amortised cost; and
+e interest expense on lease liabilities.
+
+i) Property and equipment
+
+Property and equipment are stated at cost less accumulated depreciation and accumulated
+impairment losses.
+
+Where parts of an item of property and equipment have different useful lives, they are accounted
+for as separate items of property and equipment.
+
+Depreciation is charged to the income statement on the straight-line basis over the estimated
+useful lives of each part of an item of property and equipment. Depreciation methods, useful lives
+and residual values are reviewed at each reporting date.
+
+Changes in the expected useful life are accounted For by changing the amortisation period or
+methodology, as appropriate, and treated as changes in accounting estimates. Right-of-use assets
+are presented together with property and equipment in the statement of Financial position - refer
+to the accounting policy in note 1.F.1.1. Right-of-use assets are depreciated on a straight-line basis
+over the shorter of lease term and useful life.
+
+a
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 39
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+i) Property and equipment (continued)
+
+Depreciation of owned assets is calculated on a straight-line basis over the estimated useful lives
+of the assets, as Follows:
+
+Depreciation Life:
+Computer equipment 3-years
+Leasehold improvements 10-years
+Fixtures & Fittings 10-years
+
+Leasehold buildings (Right of use asset) int of lease term and useful
+
+An item of property, plant and equipment and any significant part initially recognised is
+derecognised upon disposal (i.e. at the date the recipient obtains control) or when no Future
+economic benefits are expected From its use or disposal. Any gain or loss arising on derecognition
+of the asset (calculated as the difference between the net disposal proceeds and the carrying
+amount of the asset) is included in the statement of profit or loss and comprehensive income when
+the asset is derecognised.
+
+The residual values, useful lives and methods of depreciation of property, plant and equipment are
+reviewed at each financial year end and adjusted prospectively, if appropriate.
+
+j) Intangible assets
+
+j.1 Recognition
+
+Purchased software and costs directly associated with the internal development of computer
+software are capitalised as intangible assets where the software is an identifiable asset controlled
+by the Bank which will generate Future economic benefits and where costs can be reliably
+measured.
+
+Expenditure on internally developed software is recognised as an asset when the Bank is able to
+demonstrate:
+
+e that the product is technically and commercially Feasible;
+
+« itsintention and ability to complete the development and use the software in a manner that
+will generate future economic benefits; and
+
+e thatit can reliably measure the costs to complete the development.
+
+The capitalised costs of internally developed software include all costs directly attributable to
+developing the software and are amortised over its useful life. Internally developed software is
+stated at capitalised cost less accumulated amortisation and any accumulated impairment losses.
+
+Subsequent expenditure on software assets is capitalised only when it increases the future
+economic benefits embodied in the specific asset to which it relates.
+
+Website development costs are capitalised as intangible assets where costs can be reliably
+measured. The website is an identifiable asset controlled by the Bank which will generate Future
+economic benefits.
+
+Other intangible assets that are acquired by the Bank are stated at cost less accumulated
+amortisation and less accumuiated impairment losses.
+
+All other expenditure is recognised in profit or loss as it is incurred.
+
+be
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 40
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+
+j) Intangible assets (continued)
+
+j.2 Amortisation
+
+Amortisation is charged to profit or loss on the straight-line basis over the estimated useful lives
+of intangible assets unless such lives are indefinite. Intangible assets with an indefinite useful life
+and intangible assets not yet available For use are systematically tested for impairment at each
+reporting date. Other intangible assets are amortised From the date they are available For use.
+
+Purchased software and computer software/website development costs are amortised on the
+straight-line basis over the estimated useful life of between three and seven years.
+
+At each reporting date, the Bank reviews the carrying amounts of its non-financial assets to
+determine whether there is any indication of impairment. IF any such indication exists, then the
+asset’s recoverable amount is estimated.
+
+The current estimate of useful lives of intangible assets are:
+
+Amortisation
+
+Software development  5-years
+Website Development  5-years
+Licences 7-years
+
+j.3 Impairment of non-financial assets
+
+For impairment testing, assets are grouped together into the smallest group of assets that
+generates cash inflows from continuing use that is largely independent of the cash inflows of other
+assets or Cash Generating Unit(s) (CGUs). Due to the simple nature of the bank the whole business
+is treated as CGU.
+
+The recoverable amount of an asset or CGU is the greater of its value in use and its Fair value less
+costs to sell. Value in use is based on the estimated Future cash Flows, discounted to their present
+value using a pre-tax discount rate that reflects current market assessments of the time value of
+money and the risks specific to the asset or CGU.
+
+Animpairment loss is recognised if the carrying amount of an asset or CGU exceeds its recoverable
+amount.
+
+k) Employee benefits
+
+k.1 Defined-contribution plans
+
+A defined-contribution plan is a post-employment benefit plan under which the Bank pays fixed
+contributions into a separate entity and will have no legal or constructive obligation to pay further
+amounts. Obligations for contributions to defined-contribution pension plans are recognised as an
+expense in profit or loss in the periods during which services are rendered by employees.
+
+k.2 Short-term benefits
+
+Short-term employee benefit obligations are measured on an undiscounted basis and are expensed
+as the related service is provided. A liability is recognised for the amount expected to be paid under
+short-term cash bonus or profit-sharing plans if the Bank has a present legal or constructive
+obligation to pay this amount as a result of past service provided by the employee and the
+obligation can be estimated reliably.
+
+|
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 41
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+
+\) Provisions and contingencies
+
+A provision is recognised in the statement of financial position when the Bank has a present legal
+or constructive obligation as a result of a past event, that can be reliably measured, and it is
+probable that an outflow of economic benefits will be required to settle the obligation.
+
+Provisions are determined by discounting the expected Future cash Flows at a pre-tax rate that
+reflects risks specific to the liability.
+
+When it is not probable that an outflow of economic benefits will be required, or the amount cannot
+be estimated reliably, the obligation is disclosed as a contingent liability unless the probability of
+outflow of economic benefits is remote. Contingent assets are not recognised in the Financial
+statements but are disclosed when an inflow of economic benefits is probable.
+
+m) Other income
+
+Other income comprises of amounts recovered by the Bank From related parties For expenses paid
+on their behalf and net Foreign exchange gains.
+
+Other income is recognised in profit or loss income as it accrues and becomes receivable. Foreign
+currency gains and losses are reported on a net basis.
+
+n) Taxation
+
+Tax on the profit or loss For the year comprises current and deferred tax. Tax is recognised in the
+income statement to the extent that it relates to items recognised directly in the statement of
+profit and loss. Income tax relating to items recognised directly in equity or other comprehensive
+income is recognised in equity or other comprehensive income respectively and not in the
+Statement of Profit or Loss
+
+Current tax is the expected tax payable or receivable on the taxable income or loss For the year,
+using tax rates enacted or substantively enacted at the reporting date, and any adjustment to tax
+payable in respect of previous years.
+
+Deferred tax is provided on temporary differences between the carrying amounts of assets and
+liabilities For Financial reporting purposes and the amounts used For taxation purposes. The amount
+of deferred tax provided is based on the expected manner of realisation or settlement of the
+carrying amount.of assets and liabilities, using tax rates enacted or substantively enacted at the
+reporting date.
+
+The recognition of a deferred tax asset requires management to make assumptions concerning
+Future taxable profits against which deferred tax assets can be recovered.
+
+Deferred tax assets are recognised only when it is probable that taxable profits will be available
+against which the deferred tax asset can be utilised. The Bank has considered the recoverability of
+deferred tax assets taking into account the following:
+
+e the availability of sufficient taxable temporary differences;
+
+e the probability that the entity will have sufficient taxable profits in the foreseeable Future,
+in the same period as the reversal of the deductible temporary difference or in the periods
+into which a tax loss can be carried back or Forward; and
+
+e the availability of tax planning opportunities that allow the recovery of deferred tax assets.
+
+eee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 42
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+1 Accounting policies (continued)
+
+o) New and amended accounting standards
+
+Adoption of new and revised reporting standards.
+
+In the preparation of these financial statements, no accounting standards are being applied For the
+First time.
+
+Standards not yet adopted.
+
+There are no standards and interpretations in issue but not effective which address matters
+relevant to the Bank's accounting and reporting.
+
+2 Critical accounting judgements and key sources of estimation
+uncertainty
+
+The Bank must make judgements and estimations in applying its accounting policies which affect
+the amounts recognised in the Financial statements. It is reasonably possible, based on existing
+knowledge, that outcomes within the next Financial year that are different From these assumptions
+could require a material adjustment to the carrying amount reflected in the Financial statements.
+
+The key judgements and estimations that management has made in applying the Bank’s accounting
+policies, or which have a risk of material adjustment in the next year, are set out below.
+
+Judgements involving estimates that materially impact the short term (up to 12 months).
+
+a) Measurement of the ECLs allowance
+
+The measurement of the ECLs allowance For Financial assets measured at amortised cost requires
+the use of complex models and significant assumptions about future economic conditions and
+credit behaviour (e.g. the likelihood of customers defaulting and the resulting losses).
+
+A number of significant judgements are also required in applying the accounting requirements For
+measuring ECLs, such as:
+e Establishing the criteria For determining whether there has been a significant increase in
+
+credit risk;
+
+e Choosing appropriate models and assumptions For the measurement of ECLs;
+
+e Establishing the number and relative weightings of Forward-looking scenarios for each type
+of product/market and the associated ECLs; and
+
+e Establishing groups of similar Financial assets For the purposes of measuring ECLs.
+
+Detailed information about the judgements and estimates made by the Bank in the above areas is
+set out in note 1(d) and 29(a).
+Judgements involving estimates that materially impact the longer term.
+
+b) Measurement of Effective Interest Rate
+
+In calculating the Expected Interest Rate of a loan on origination the Bank makes a judgment that
+that actual rate of closure of loans is not materially different From the forecast early settlement
+rate that could be expected. Estimated prepayment curves are thus not used in calculating the EIR
+but any amount iF EIR balance written off when a loan closes.
+
+This measurement is periodically tested against Forecast prepayment curves to ensure that this
+estimate is materially correct. The policy is described in note (1.h) Interest.
+0S
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 43
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+3 Netinterest income
+
+2023 2022
+£000 £000
+Interest receivable and similar income
+Loans and advances to customers 8,082 3,619
+Investment securities at amortised cost } 533 18
+Total interest receivable and similar income 8,615 3,637
+Interest payable and similar charges
+Deposits From customers (1,776) (551)
+Wholesale and other funding - -
+Negative interest on investment securities at amortised cost - (18)
+Interest expense on lease liabilities (14) (16)
+Total interest payable and similar charges I (1,790) (585)
+Net Interest income | 6,825 3,052
+4 Other income
+2023 2022
+£000 £000
+
+Other income 153
+Income From property rental 120 120
+Loan servicing Fees 13} -
+Gain From sale of loans 685
+Net gain/(loss) From Foreign exchange 3 (5)
+Other income 1 974| 145
+
+Other income reflects recoveries by the Bank from related parties for shared costs paid on their
+
+behalf (note 10).
+
+5 Administrative expenses
+
+2023 2022
+
+£000 £000
+Staff costs (note 7) 4,969 3,508
+Marketing and advertising 64 47
+IT costs 1,465 1,050
+Legal and other professional fees 427 265
+Other administrative expenses 1,726 1,461
+Administrative expenses 1 8,651 6,331
+
+Other administrative expenses includes Auditor's remuneration (note 6) and Related party
+
+transactions (note 10).
+
+6 Auditor's remuneration
+
+2023 2022
+£000 £000
+Fees payable to the Bank's auditor For the audit of these Financial
+statements 330 273
+Fees payable to the Bank’s predecessor auditor For the audit of prior year 7
+financial statements _ 32
+Auditor’s remuneration 330 305
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+44
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+7 Staff costs
+
+2023 2022
+
+£000 £000
+Wages and salaries t 4,036 2,892
+Social security costs 416 344
+Employer pension contributions 377 201
+Other staff costs 140 71
+Staff costs (including directors) (note 5) i _. 4,969 3,508
+Directors emoluments included in Wages and salaries are disclosed in note 9.
+
+The average monthly number of full and part-time employees (including executive directors) during
+the period was as follows:
+
+2023 2022
+
+Employees L 58 | 42
+8 Other expenses
+
+2023 2022
+
+£000 £000
+Loss on sale of intangible assets 6 -
+Impairment of intangible assets co - 76
+Loss on sale of Financial assets 354 4
+Other expenses . 360 80
+
+The impairment of intangible assets resulted From the write down of software before the end of its
+useful economic life. The software was replaced to enhance the customer experience.
+
+|
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 45
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+9 Directors' emoluments
+
+2023 2022
+
+Amounts paid to directors’ For qualifying services are as Follows: £000 £000
+Directors’ remuneration 651 542
+Pension contributions 13 7
+Compensation For loss of office 81 -
+| 745 549
+
+There was one director £13k (2022: ENil) to whom defined contribution pension benefits were
+accruing during the period.
+
+The highest paid director received remuneration of £359k (2022: £222k). No defined contribution
+pension benefit was paid in the current or prior period on behalf of the highest paid director.
+
+The amount disclosed above for directors’ remuneration includes £52K (2022: £52K), being the
+estimated amount paid by JN Bank Financial Group Limited For services provided to the Bank.
+
+Amounts paid in respect of key management personnel are as Follows: £000 £000
+Short-term benefits 752 604
+Post-retirement benefits 13 7
+Termination benefits 81 -
+846 611
+
+10 Related party transactions
+
+The immediate holding company at the reporting date was JN Financial Group Limited. The Jamaica
+National Group Limited is the ultimate controlling party.
+
+Profit or loss before taxation includes income earned From, and expenses incurred in, transactions
+with other group entities and related parties in the ordinary course of business, as Follows:
+
+2023 2022
+Note £000 £000
+Management fees expense
+Ultimate parent - (92)
+Services expense
+Other related entities (i) (107) (135)
+Recoveries to the Bank for costs
+Ultimate parent 2
+Fellow subsidiaries ; (ii) 609 120
+Other related entities 0
+Recoveries from the Bank for costs
+Other related entities (30) (9)
+Recharges to the Bank For occupancy costs
+Fellow subsidiaries (iii) (65) (65)
+Recharges to Bank of IT support and service costs
+Ultimate parent (iv) (549) (41
+Parent . (9) 4 (
+Fellow subsidiaries (9) (3
+Other related entities (v) (112) (4
+
+aaa
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 46
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+10 Related Party Transactions (continued)
+
+Recoveries to the Bank for costs are included within the other income in the Statement of Profit
+and Loss and Other Comprehensive Income. All other balances were included within the
+administrative expenses the Statement of Profit or Loss and Other Comprehensive Income.
+
+(i) Includes Call centre costs of £107k.
+
+(ii) As part of the sale of loans to JN Bank Ltd a (Jamaican registered Fellow subsidiary) £685k of
+fees were charged. This Included a Fair value adjustment of £355k giving total income of £330k.
+£264k was charged as an allocation of costs of the Brixton Bank branch.
+
+(iii) The Bank pays a Fellow subsidiary for office space in the London Borough of Southwark.
+
+(iv) The Ultimate parent provided IT support and use of software. This amounted to £549k in the
+year.
+
+(v) The Related entities provided IT support and use of software in the year. This amounted to
+£112k.
+
+The statements of Financial position includes balances, net receivable/(payable), arising in the
+ordinary course of business, with other group entities and related parties, as Follows:
+
+2023 2022
+£000 £000
+Other Group entities cy
+Other assets :
+Ultimate parent . 1 36
+Fellow subsidiaries ; 356° 120
+Other related entities 637 2
+Other liabilities :
+Ultimate parent (372) (222)
+Fellow subsidiaries _ 304) (96)
+Other related entities , . 7 (71)" (57)
+
+The amounts are unsecured, interest free and payable within three (3) months.
+
+On 1 December 2022 the intangible assets at net book value of £636k were sold at arm's length to
+Management Control Systems Ltd and £933k were sold at arm’s length to The Jamaica National
+Group Ltd, which are related parties. The intangible assets sold were software assets that the
+respective related party purchased to consolidate with similar assets owned by the respective
+
+related party.
+
+During the year loans were sold to JN Bank Jamaica at carrying value of £10,654k with Fair value
+adjustment of (€354k) with arrangement Fee of £685k, resulting in net income on sale of loans of
+£330k.
+
+Key management personnel
+
+For the purposes of these disclosures, key management personnel are the executive and non-
+executive directors of the Bank. The compensation of key management personnel is shown in note
+
+9.
+
+Other than for the directors’ remuneration as disclosed in Note 9 the aggregate values of
+transactions and outstanding balances related to key management personnel were Enil (2022: Enil).
+
+aman Tanna nnn TEN a Inn ETT
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 . 47
+JN Bank UK Ltd
+
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+11 Tax expense
+
+For the year ended 31 March 2023 the Bank incurred no current or deferred tax expense (2022:Enil).
+
+A reconciliation of the tax for the year at the standard corporation tax rate to the actual tax
+
+_. expense is as follows:
+
+2023 2022
+
+£000 £000
+Loss for the year | (12,685) | _ (6,495)
+Tax using the UK corporation tax rate of 19% | (2,410) (1,234)
+Permanent non-deductible expenses . .
+Other permanent
+differences | - -
+Adjustments in respect of prior periods - -
+Effect of tax rate change - -
+Total unrecognised tax credit 2,410 1,234
+
+Total tax credit
+
+The UK corporation tax rate of 19% was substantively enacted on 17 March 2020. An
+
+increase in the UK corporation rate from 19% to 25% (effective 1 April 2023) was
+
+substantively enacted on 24 May 2021.
+
+Unused tax losses of £32.2m (2022: £19.5m) will be carried Forward and available for offset
+
+against future taxable profits (see note 19).
+
+12 Cash and cash equivalents
+
+2023 2022
+
+£000 £000
+Cash at banks other than central banks 5,264 | 4,159
+5,264 4,159
+
+A balance of £500k (2022:€500k) within Cash at banks other than central banks is a restricted deposit
+
+held by a financial institution as minimum collateral deposit.
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+48
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+13 Investment securities
+
+2023 2022
+£000 £000
+Amortised Cost ,
+Gilts 4,878 8,536
+Certificates of Deposit - -
+UK Treasury Bills 40,894 8,000
+Gross investments securities 45,772 ° 16,536
+Interest receivable 293 9
+Less
+ECL (6) (2)
+_ 46,059 16,543
+
+Investment securities are measured at amortised cost, using the effective interest method, less any
+
+impairment loss allowances.
+
+investments, excluding interest receivable and expected credit losses, are due from the reporting
+
+date, as Follows:
+
+2023 2022
+
+£000 £000
+No specific maturity - -
+Within 3 months 19,321 8,000
+3 months to 1 year 26,451 8,536
+1 year to 5 years - -
+S years and over - :
+45,772 16,536
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+49
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+14 Loans and advances to customers
+
+2023 2022
+£000 £000
+Unsecured personal loans t 55,3641 57,279
+Gross carrying amount 2023
+Stage 1 Stage 2 Stage 3 Total
+: £000 £000 £000 £000
+Not past due 40,281 16,246 - 56,527
+Past due: - - - .
+Up to 30 days 292 574 336 1,202
+31 to 60 Days - 924 718 1,642
+61 to 90 Days - 214 “450 664
+Over 90 days - - 7,709 7,709
+40,573 17,958 9,213 67,744
+Expected Credit Loss (ECL) coverage
+Less
+ECL (2,278) (1,944) (8,159) (12,380)
+i 38,295 16,014 1,054 55,364 |
+Gross carrying amount 2022
+Stage 1 Stage 2 Stage 3 Total
+£000 £000 £000 £000
+Not past due 54,446 2,633 - 57,079
+Past due: - - -
+Up to 30 days 419 312 144 875
+31 to 60 Days - 240 192 432
+61 to 90 Days - 188 60 248
+Over 90 days - - 1,375 1,375
+54,865 3,373 1,771 60,009
+Expected Credit Loss (ECL) coverage
+Less
+ECL (728) (533) (1,469) (2,730)
+§4,137 2,840 302 §7,279
+
+During the year loans were sold to JN Bank Jamaica at carrying value of £10,654k with Fair value
+adjustment of (£354k} with sale programme set up Fee, arrangement Fees, and transaction fees totalling
+£685k, resulting in net income on sale of loans of £330k.
+
+Loans, less allowance for losses are due from the reporting date, as follows:
+
+2023 2022
+£000 £000
+Within 3 months 5,269 3,500
+3 months to 1 year 10,648 9,712
+1 year to 5 years 39,447 44,067
+5 years and over - -
+55,364 57,279
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+so
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+15 Amounts owed by/to Group entities
+
+2023 2022
+Amounts owed by group entities -__€000 £000
+The Jamaica National Group
+Limited 1 50
+JN Bank Limited 365 120
+MC Systems Limited 637 2
+{ ; 994 158
+2023 2022
+Amounts owed to group entities £000 ~—- £000
+The Jamaica National Group
+Limited (372) (222)
+JN Bank Limited (304) (96)
+MC Systems Limited (62) (50)
+Total Credit Services Limited (9) (7)
+] (747) |__ (375)
+
+All the above companies are group entities and no balance was owed to/by to any other related
+party outside of group entities.
+16 Property and equipment
+
+Land & Leasehold Computer
+buildings Improvement Equipmen Fixtures
+
+Right of Use s t&Fittings WIP Total
+Cost £000 £000 £000 £000 £000 £000
+31 March 2021 1,036 256 104 70 23 1,489
+Additions - - 31 2 - 33
+Transfers - - - - (23) (23)
+Disposals - - (6) - - (6)
+31 March 2022 1,036 256 129 72 : 1,493
+Additions - - 19 0 - 19
+Disposals - - (0) : - (0)
+31 March 2023 ] 1,036 256 148 72 : 1,512
+Depreciation
+31 March 2021 (128) ; (13) (51) (4) - (196)
+Charge For the period (110) (26) (39) (7) - (182)
+Disposals - - 6 - - 6
+31 March 2022 (238) (39) (84) (11) : (372
+Charge For the period (110) (26) (30) (7) - (173)
+Disposals : - - - : : -
+31 March 2023 = _ (348) (65) (114) (18) - ~ (545)
+Net book value 31 March 20231 688 191 34. 54 967 |
+Net book value 31 March 2022 798 217 4s 61 - 1,121
+
+As at 31 March 2023, Land and Buildings consists of right-of-use assets of £688k (2022:
+£798k) related to leased branch and office premises (see note 22).
+
+era NU
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 $1
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+17 Intangible assets
+
+Computer Capitalised WIP
+Heeece Software Total
+
+Cost £000 £000 £000 £000
+31 March 2021 416 2,710 - 3,126
+Additions 3 169 178
+Disposals - - -
+Transfers - - 23
+31 March 2022 419 2,879 201 3,499
+Additions - 103 180
+Disposals - (2,509) (274) (2,783)
+Transfers - 64 (64)
+31 March 2023 | 419 537 43
+
+Amortisation and impairment losses
+31 March 2021 (46) (436) - (482
+Charge for the period , (59) (572) - (
+Impairment charge - (76) -
+Disposals - - -
+31 March 2022 (105) (1,084) : (1,189)
+Charge For the period (60) (420) - (480)
+Impairment charge - - a
+Disposals - 1,206 - 1,206
+31 March 2023 { (165) (298) : (463)
+Net book value 31 March 2023 7 asq 239 | 43
+Net book value 31 March 2022 314 1,795 201 2,310
+
+Intangible assets consist of the cost of computer licence fees, software and website development.
+
+Capitalised software relates to both internally developed and purchased intangible assets including website
+development.
+
+Allintangible assets reflected in the above balance were brought into use during the prior year following the
+Bank's launch in October 2020.
+
+in testing intangible assets For impairment, the recoverable amount of the CGU (the Bank) was estimated
+based on value in use. Where the recoverable amount exceeds the carrying amount, no impairment allowance
+is made. The recoverable amount for the Bank was arrived at by estimating its Future cash Flows and
+discounting these cash Flows using long-term discount rates applicable to the UK, as relevant. Future
+sustainable cash Flows were estimated based on the most recent Forecasts, based on past experience and
+management's plans.
+
+These projections included specific estimates for five years (2021: four years) and a terminal growth rate
+thereafter. The terminal growth rate was determined based on management's estimate of the long-term
+compound annual earnings before interest, taxes, depreciation and amortisation (EBITDA) growth rate,
+consistent with the assumption that a market participant will make. An assumed growth rate of 1.3% has
+been used with a discount rate of 21.5%.
+
+ea ea
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 52
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+17 Intangible Assets (Continued)
+
+Work in Progress ("WIP") consists of internally developed software still in the development phase
+that, as at the balance sheet date, has not been tested, is not ready For use, has not been deployed
+nor started being amortised.
+
+On 1 December 2023 certain intangible assets were sold. The net book value of capitalised
+software that was sold was £1,303k and that of WIP sold was £274k.
+
+18 Other assets
+
+2023 2022
+
+£000 £000
+
+Trade receivables - -
+Prepayments 348 335
+
+Accrued income - -
+Other 60 68
+| 408 403
+
+19 Deferred tax
+
+Deferred tax is calculated on temporary differences under the statement of Financial position asset and
+liability method, using the enacted tax rate expected to apply in the relevant period when these
+differences reverse.
+
+At 31 March 2023 the Bank has unused tax losses of £32.2m (2022: £19.2m) available For offset
+against Future taxable profits. No deferred tax asset has been recognised in respect of these
+amounts, reflecting the start-up nature of the Bank's activities.
+
+20 Customer deposits
+
+2023 2022
+£000 £000
+Current deposits 4,484 8,300
+Term deposits 94,019 61,216
+| _98,503 69,516
+Customer deposits are due from the reporting date as Follows:
+2023 2022
+£000 £000
+Within 3 months 5,900 8,300
+From 3 months to 1 year 42,066 6,293
+Over 1 year 50,537 54,923
+|. 98,503 69,516
+Customer deposits portfolio is concentrated as Follows:
+Number of accounts Value
+2023 2022 2023 2022
+£000 £000 £000 £000
+individuals zeal za97 ‘> 98,503 69,516
+| 3,940 2,897 98,503 69,516
+
+aan
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 53
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+21 Other liabilities
+
+2023 2022
+£000 £000
+Lease liabilities ‘707 813
+‘Trade payables - 116 27
+Short-term employee benefits , 189 590
+VAT liability ’ 32 54
+Accruals 661 254
+Other ae 22
+
+} 14,705 1,760
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 54
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+22 Leases
+
+Right-of-use assets
+Right of use assets relate to leased properties used by the Bank that and are accounted for in
+accordance with IFRS 16; they are presented in note 16, Property and equipment.
+2023 2022
+Leasehold Leasehold
+buildings buildings
+£000 £000
+
+Balances at beginning of year 798 908
+Additions s - -
+Disposals - .
+Depreciation charge For the year . (110) (110)
+Balance at end of year q 688 798
+Lease liabilities
+2023 2022
+£000 £000
+Balances at beginning of year 813 917
+Additions - -
+Disposal - -
+Interest expense related to lease liabilities 14 16
+Repayment of lease liabilities (120) (120)
+Balance at end of year ‘707 813
+Maturity analysis - contractual undiscounted cash Flows:
+2023 2022
+£000 £000
+Less than one year 120 120
+Between one and Five years 480 480
+More than Five years 150 270
+Total undiscounted lease liabilities at end of year 750 870
+2023 2022
+Analysed as: __ £000 £000
+Current 120 120
+Non Current 630 750
+750 870
+Amounts recognised in profit or loss
+2023 2022
+£000 £000
+interest on lease liabilities 14 16
+Depreciation on right-of-use assets 110 110
+Variable lease payments not included in the measurement of lease _ 3 1
+Net rental expense relating to short-term leases 65 65
+Amount recognised in the statement of cash Flows
+2023 2022
+£000 £000
+Total cash flows for leases i 120 | 120
+
+The Bank continues to assess its premises needs due to the ongoing impact of pandemic and the
+introduction of hybrid working conditions. it has maintained the arrangement with ancther Group
+entity to share existing office space in the current year. The costs of this arrangement are treated as
+a recharge For occupancy costs within other administrative expenses (see note 5).
+
+Ceeeeeee eee eee reer eee ee a ee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 55
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+23 Share capital and share premium
+
+Ordinary shares
+
+Share Share
+Share capital capital premium Total
+No. £ 3 £
+
+In issue at 31 March 2021 24,930,004 24,930,004 496,000 25,426,004
+Issue of shares 1 1 4,499,999 4,500,000
+In issue at 31 March 2022 24,930,005 24,930,005 4,995,999 29,926,004
+issue of shares 3. 3 10,999,997 11,000,000
+In issue at 31 March 2023 24,930,008 24,930,008 15,995,996 40,926,004
+Authorised - par value £1 30,000,000 30,000,000
+
+On 30 May 2022, 1 ordinary share issued at a share premium of £3,999,999.
+
+On 19 October 2022, 1 ordinary share issued at a share premium of £2,999,999.
+On 31 March 2023, 1 ordinary share issued at a share premium of £3,999,999,
+Ordinary shares
+
+The holders of ordinary shares are entitled to receive dividends as declared From time to time, and
+are entitled to one vote per share at meetings of the Bank. All ordinary shares rank equally with
+regard to the Bank's residual assets.
+
+24 Country-by-country reporting
+
+The disclosures set out in the table below are required by The Capital Requirements (Country-by-
+Country Reporting) Regulations 2013 (‘the Regulations’) which implement article 89 of the Capital
+Requirements Directive IV (CRD IV).
+
+2023 2022
+Location of operations United Kingdom United Kingdom
+Nature of activities Deposit taker and lender Deposit taker and
+Turnover* £7,799k £3,167k
+Average number of employees 58 42
+Loss before tax £(12,685)k £(6,495)k
+Cash tax paid Enil Enil
+Public subsidies Enil Enil
+
+* Note: Turnover is stated as Net operating income reported in the Bank's Statement of profit or
+loss and other comprehensive income.
+
+25 Contingent liabilities
+The Bank had no contingent liabilities at 31 March 2023 (2022:Enil).
+
+26 Other Financial commitments
+The Bank had no other Financial commitments at 31 March 2023 (2022:Enil).
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 56
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+27 Events after the reporting date
+
+The Bank resumed lending on 10 July 2023 after pausing lending in December 2022. The Bank
+issued 1 ordinary share for £3m on 31 May 2023. There are no post balance sheet events that
+require further disclosure or adjustment to the Financial statements.
+
+28 Fair Value of Financial instruments
+
+The fair value of Financial assets that are traded in an active market are based on quoted market
+prices.
+
+The Fair values of cash and cash equivalents, due to/from related entities, other assets, and other
+payables are considered to approximate their carrying values due to their relatively short-term
+nature,
+
+The estimated fair value of loans is the principal receivable less any allowance for losses.
+
+The carrying amounts of Financial assets and liabilities not measured at Fair value are a reasonable
+approximation of their Fair values.
+
+The Bank has no financial assets or financial liabilities measured at fair value.
+Classification of Financial assets and Financial liabilities
+
+The Following table analyses the financial assets and liabilities in the statement of Financial position
+by the class of instrument to which they are assigned and by the measurement basis.
+
+2023
+Amortised  Evocy FVTPL Total
+
+cost
+
+£000 £000 £000 £000
+Assets
+Cash and cash equivalents 5,264 - - 5,264
+Investment securities 46,059 - - 46,059
+Loans and advances to customers 55,364 - - 55,364
+Total Financial assets { 106,687 - - 106,687
+Liabilities
+Customer Deposits 98,503 - - 98,503
+Total financial liabilities | -98,503 - =: 98,503
+
+2022
+Amortised  evogy FVTPL Total
+
+cost
+
+£000 £000 £000 £000
+Assets
+Cash and cash equivalents 4,159 - - 4,159
+Investment securities 16,543 - - 16,543
+Loans and advances to customers 57,279 - - 57,279
+Total financial assets 77,981 - - 77,981
+Liabilikies
+Customer deposits 69,516 - - 69,516
+Total Financial liabilities 69,516 - - 69,516
+
+|
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 57
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+28 Fair Value of financial instruments (continued)
+Valuation of Financial assets and financial liabilities not carried at fair value
+
+The table below shows the fair values of the Bank's financial instruments by type, including a note
+of the method used to determine the fair value.
+
+Note 2023
+Carrying Fair value:
+value Level'1 Level2 Level3 Total
+£000 £000 £000 £000 £000
+Assets . ‘ . :
+Cash and cash equivalents (i) 5,264 - 5,264 noe . 5,264
+Loans and advances to customers (ii) 55,364 - - 57,882 $7,882
+Investment securities (iti) 46,059 46,034 : : 46,034
+Total Financial assets t 106,687 46,034 5,264 57,882 _- 109,180
+Liabilities
+Customer Deposits (iv) 98,503 - : 96,512 96,512
+Total financial liabilities i 98,503 - - 96,512 . 96,512
+Note 2022
+Carrying Fair value
+value Level1 Level2  Level3 Total
+£000 £000 £000 £000 £000
+
+Assets
+Cash and cash equivalents (i) 4,159 - 4,159 - 4,159
+Loans and advances to customers (ii) 57,279 - - 62,622 62,622
+Investment securities (iii) 16,543 16,516 : : 16,516
+Total financial assets 77,981 16,516 4,159 62,622 83,297
+Liabilities .
+Customer Deposits (iv) 69,516 : - 68,451 68,451
+Total Financial liabilities 69,516 - - 68,451 68,451
+
+Valuation techniques
+
+Fair values are determined using the Following Fair value hierarchy that reflects the significance of
+the inputs in measuring Fair value:
+
+Level 1: Quoted prices For similar instruments
+
+Level 2: Directly observable market inputs other than Level 1 inputs
+Level 3: Inputs not based on observable market data
+
+(i) Cash and cash equivalents
+
+The fair values of cash and cash equivalents, which are carried at amortised cost are not considered
+to be materially different From their book values. This is considered is reached due to their short-
+term nature and the use of highly rated counterparties. As these are cash balances, they are
+considered to be directly observable and considered to be level 2 measurements.
+
+(ii) Loans to customers
+
+To assess the likely Fair value of the Bank's loan assets in the absence of a liquid market, the
+directors have considered the estimated cash Flows expected to arise From the Bank's investments
+in its loans to customers based cn a mixture of market-based inputs, such as rates and pricing and
+non-market based inputs such as redemption rates. Given the mixture of observable and non-
+observable inputs these are considered to be level 3 measurements.
+
+aa
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 58
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+28. Fair Value of Financial instruments (continued)
+
+(iii) Investment Securities
+
+The fair value of investment securities is disclosed by reference to market prices. Investment
+securities, being government debt securities, are financial instruments issued by sovereign
+governments and include both long-term bonds and short-term bills with Fixed or Floating rate
+interest payments. These instruments are generally highly liquid and traded in active markets
+resulting in a Level 1 classification. When active market prices are not available, the Bank uses
+discounted cash flow models with observable market inputs of similar instruments and bond prices
+to estimate Future index levels and extrapolating yields outside the range of active market trading,
+in which instances the Bank classifies those securities as Level 2. The Bank does not have Level 3
+government securities where valuation inputs would be unobservable.
+
+(iv) Customer deposits
+
+To assess the likely Fair value of the Bank's retail deposit liabilities, the directors have considered
+the estimated cash Flows expected to arise based on a mixture of market-based inputs, such as
+rates and pricing and non-market based inputs such as withdrawal rates. Given the mixture of
+observable and non-observable inputs, these are considered to be level 3 measurements.
+
+Amount owed to or from Group entities (note 15) are not included in the analysis above as all are
+payable on demand and hence fair value is equal to current value.
+
+|
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 ° S9
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+29 Risk Management
+
+The main areas of Financial risk that the business is exposed to are:
+a. Credit risk;
+b. Concentration credit risk;
+c. Liquidity risk;
+d. Market risk and;
+e. Capital risk and management.
+
+a) Credit risk
+
+Credit risk is the risk of Financial loss to the Bank if a customer or counterparty to a financial
+instrument Fails to meet its contractual obligations. The Bank recognises impairment loss
+allowances For ECLs calculated as per IFRS 9 requirements at the statement of financial position
+date.
+
+Exposure to credit risk
+
+Credit risk exposure is the amount of loss that the Bank would suffer if all counterparties to which
+the Bank is exposed were to default at once. This is represented substantially by the gross carrying
+amount of Financial assets, without taking account of the value of any collateral held.
+
+There are no off-balance-sheet assets and the maximum exposure to credit risk is represented by
+the amount of Financial assets in the statements of financial position.
+
+Credit risk measurement
+Loans and advances
+
+The estimation of credit exposure For risk management purposes is complex and requires the use
+of models, as the exposure varies with changes in market conditions, expected cash Flows and the
+passage of time. The assessment of credit risk of a portfolio of assets involves estimations as to
+the likelihood of defaults occurring, of the associated loss ratios and of default correlations
+between counterparties. The Bank measures credit risk using Probability of Default (PD), Exposure
+at Default (EAD) and Loss Given Default (LGD).
+
+Credit risk grading
+
+The Bank uses internal credit risk gradings that reflect its assessment of the credit-worthiness of
+individual counterparties at origination date. Borrower and loan specific information collected at
+the time of application is fed into this rating model. This is supplemented with external data such
+as credit bureau scoring information on individual borrowers. In addition, the model enables expert
+judgement from management to be fed into the final internal credit rating For each exposure. This
+allows for considerations which may not be captured as part of the other data inputs into the
+model.
+
+The credit grades are calibrated such that the risk of default increases exponentially at each higher
+risk grade. The table below reflects the Bank's internal rating classification.
+
+Risk Credit
+Definition Garde risk
+
+Code grade
+Very Low Risk RG1 1
+Low Risk RG2 2
+Medium Risk RG3 3
+Hign-Marginai Risk RG4 4
+High Risk RG5 5
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 60
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+29 Risk Management (continued)
+a. Credit risk (continued)
+
+ECLs Scenario Management
+
+To calculate Forward looking provisions, the Bank sources data From its own internal information,
+the Bank of England Treasury Forecast and industry publications such as the Bank of England
+Annual Cyclical Scenario (ACS). Management exercises judgement in estimating the Future
+economic conditions which are incorporated into provisions through the modelling of multiple
+scenarios. For the Bank’s provision calculation of three different projected economic scenarios are
+considered to cover a range of possible outcomes, reflecting upside and downside scenarios
+relative to the baseline Forecast economic conditions. The economic scenarios are generated to
+capture a range of possible economic outcomes to Facilitate the calculation of unbiased and
+expected credit losses. The Bank’s economic scenarios, and the probability weightings assigned to
+each scenario, are produced by Credit and reviewed and challenged by the Bank’s Credit Committee
+and approved by Risk committee. The current Ukraine crisis and high cost of living have been
+reflected in the Bank’s assumptions to the extent that the impact is captured by economic
+forecasts. For example, inflation is captured by using CPI as a key driver of the model. The longer-
+term impact uses unemployment as a key variable. The Bank’s scenarios are weighted 47% base
+case, 22%downside and 31% upside. The description and Forecasts. are set out in the tables below:
+
+Scenarios Description
+Base case: Asharp drop in CPI over 2023 then taking a number of years to get to the Bank of
+England target of 2%. Unemployment rising in 2023 and 2024 before dropping a little.
+
+Downside: Inflation continues to increase and start to drop in Q3 2023. This leads to higher
+unemployment rates in 2023 peaking in 2024 before starting to reduce.
+
+Upside: The U.K. economy recovers from the high inflation quicker than expected and gets to
+target levels within a Few years avoiding deflation. There is a short term boost to employment
+before getting back to a steady state.
+
+2023 assumptions
+
+CPI (calendar year Annual Growth, %)
+
+2023 2024 2025 2026 2027
+Up side 1.5% 0.5% 0.0% 1.3% 2.0%
+Base 2.9% 0.5% -0.1% 1.1% 1.8%
+Downside 12.6% 4.8% 2.1% 1.8% 1.5%
+Unemployment (calendar year Annual Growth, %)
+
+2023 2024 2025 2026 2027
+Up side 4.0% 3.7% 4.0% 4.0% 4.1%
+Base 4.3% 4.4% 4.2% 4.1% 4.1%
+Downside 7.6% 8.3% 7.7% 7.1% 6.5%
+
+2022 assumptions
+GDP (calendar year Annual Growth, %)
+2022 2023 2024 2025 2026
+Up side 3.9% 3.9% 2.3% 2.0% 2.0%
+Base 3.5% 2.4% 1.7% 1.7% 1.7%
+Downside -1.5% 2.0% 1.4% 1.4% 14%
+Unemployment (calendar year Annual Growth, %)
+2022 2023 2024 2025 2026
+
+Up side 4.0% 3.8% 3.8% 3.8% 3.8%
+Base 4.1% 4.1% 4.1% 4.1% 4.1%
+Downside 7.7% 6.5% 4.3% 4.1% 4.1%
+
+ee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 61
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+29 Risk Management (continued)
+a. Credit risk (continued)
+
+Post Model Adjustment
+
+- Quantitative adjustments or overlays (Post Model Adjustments or PMA) may be made as temporary
+adjustments using expert credit judgement where in the Banks view existing regulatory guidance,
+inputs, assumptions, or modelling techniques do not capture all relevant risk factors. The use of
+PMAs may require significant judgement that impacts the amount of allowance recognised.
+
+The Bank has applied the following quantitative adjustment in relation to expected credit loss.
+
+Qualitative Reason for adjustment
+
+adjustment
+
+Unknown The ECL models derive the propensity to default based on (amongst other factors) the
+customer current credit score of a customer. The current credit score may however not pick up all
+activity activities of the customer that are leading to a higher risk of default but have
+
+nevertheless occurred. Examples are, fraud where the customers credit score may not
+reflect the Fraud until it crystalises or when the customer starts the process of an
+individual insolvency while not appearing to be in a stressed position.
+
+In the last year the Bank has seen a drop in the cases of Fraud but a significant increase
+in Individual Voluntary Arrangements and Debt Management Plans that were not
+predicted by a change in the customer’s credit score or payment behaviours.
+
+In these circumstances there is a higher risk of default than the models predict. The
+Bank therefore has used judgment to increase the provision For expected credit losses
+in the year. Management have assessed and calculated an expected rate of Individual
+Voluntary Arrangements and Debt Management Plans to determine a PMA. £203k
+(2022: £125k)
+
+Paucity of data
+
+The credit models use historic data to make assumptions on credit performance. The
+Bank has only been trading for 3 years and has limited historical data covering
+performance of the loan book. The credit model therefore has a lower predictive ability
+than a more mature model.
+
+The Covid pandemic disrupted some of the relationships between macroeconomic
+drivers and Macroeconomic Factors that drive the ECL models, in particular, the link
+between economic activity and unemployment. Unemployment is a key driver of credit,
+and this was heavy supported by government actions that are unlikely to reoccur.
+
+The Ukrainian war delivered a sudden increase in inflation which has not been seen for
+50 years. The ECL models used CPI and this is highly correlated, however the lack of
+historic data of the portfolio in changing CPI increases the potential for variability in the
+modelled outcomes.
+
+The Bank finds that while the ECL models have significant correction to historical data
+the volatile economics drivers of the last Few years may lead to the model becoming less
+predictive in more stable times. In these circumstances there is a higher risk of default
+than the models predict. The Bank therefore has used judgment to increase the
+provision For expected credit losses in the year. This is determined by adding an
+additional 45bps provision for all loans and a further 30bps on loans that the credit
+models have not calculated any indications provision for credit risk. ie stage 1 loans.
+
+/ £2864 (2022: £ nil),
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 62
+
+JN Bank UK Ltd
+Annual report and Financial statements
+
+For the year ended 31 March 2023
+
+29 Risk Management (continued)
+a. Credit risk (continued)
+
+impairment losses on Financial instruments
+
+Stage 1 Stage 2 Stage 3 2023
+12- tee op ye
+Loans month Lifetime Lifetime Total
+ECL ECL
+ECL
+£000 £000 £000 £000
+Loss allowance as at 1 April 2022 724 §23 1,483 2,730
+Movement within P&L
+Transfers:
+Transfer from Stage 1 to Stage 2 (212) 212 - -
+Transfer from Stage 1 to Stage 3 (112) - 112 -
+Transfer from Stage 2 to Stage 1 13 (13) - -
+Transfer from Stage 2 to Stage 3 - (223) 223 -
+Transfer from Stage 3 to Stage 2 - 10 (10) -
+Transfer from Stage 3 to Stage 1 - - - -
+Impact of transfers on ECLs - 336 5,066 5,402
+Changes due to update in methodology for estimation 845 (200) 14 659
+New financial assets originated or purchased 1,220 1,419 1,685 4,324
+Financial assets derecognised during the period (191) (43) (10) (244)
+Write-offs against provision (9) (79) (404) (491)
+Loss allowance recognised in profit or loss 1,553 1,421 6,676 9,650
+Loss allowance at 31 March 2023 2,278 1,944 8,159 12,380
+Stage 1 Stage 2 Stage 3 2023
+12- epg: opus
+investments month Lifetime Lifetime Total
+ECL cL ECL
+£000 £000 £000 £000
+Loss allowance as at 1 April 2022 2 - - 2
+Movement within P&L
+Transfers:
+Transfer from Stage 1 to Stage 2 - - - -
+Transfer from Stage 1 to Stage 3 - - - -
+Transfer from Stage 2 to Stage 1 - - - :
+Transfer from Stage 2 to Stage 3 - - - -
+Transfer from Stage 3 to Stage 2 - - - -
+Transfer from Stage 3 to Stage 1 - - - -
+Impact of transfers on ECLs - - - -
+Changes due to update in methodology for estimation - - - -
+New financial assets originated or purchased 11 - - 11
+Financial assets derecognised during the period (7) - - (7)
+Write-offs against provision : : - :
+Loss allowance recognised in profit or loss 4 - - 4
+Loss allowance at 31 March 2023 6 : - 6
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+63
+
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+29 Risk Management (continued)
+a. Credit risk (continued)
+
+Impairment losses on Financial instruments
+
+Stage1 Stage2 Stage3 2022
+12" Lifetime Lifetime
+Loans month ECL ECL Total
+ECL
+£000 £000 £000 £000
+Loss allowance as at 1 April 2021 261. 120 62 443
+Movement within P&L
+Transfers: .
+Transfer from Stage 1 to Stage 2 (15) 15 - -
+Transfer from Stage 1 to Stage 3 (16) - 16 -
+Transfer from Stage 2 to Stage 1 3 (3) - -
+Transfer from Stage 2 to Stage 3 - (28) 28 -
+Transfer from Stage 3 to Stage 2 ‘~ - - -
+Transfer from Stage 3 to Stage 1 - Loo - -
+Impact of transfers on ECLs - (4) 525 521
+Changes due to update in methodology for estimation (39) 5 (40) (74)
+New financial assets originated or purchased 693 563 904 2,160
+Financial assets derecognised during the period (143) (42) - (185)
+Write-offs against provision (16) (93) (26) (135)
+Loss allowance recognised in profit or loss | 467 413 1,407 2,287 |
+Loss allowance at 31 March 2022 1 728 533: 1,469 2,730 |
+Stage 1 Stage2 Stage3 2022
+12" Lifetime Lifetime
+Investments month ECL ECL Total
+ECL
+£000 £000 £000 £000
+Loss allowance as at 1 April 2021 5 - - 5
+Movement within P&L
+Transfers:
+Transfer from Stage 1 to Stage 2 - - “ -
+Transfer from Stage 1 to Stage 3 - - - -
+Transfer from Stage 2 to Stage 1 - - - -
+Transfer from Stage 2 to Stage 3 ; - - - -
+Transfer from Stage 3 to Stage 2 - - - -
+Transfer from Stage 3 to Stage 1 - - - -
+Impact of transfers on ECLs a - - -
+Changes due to update in methodology for estimation - - - -
+New financial assets originated or purchased 7 7
+Financial assets derecognised during the period (10) - - (10)
+Write-offs against provision - - : -
+Loss allowance recognised in profit or loss t. (3) " - - (3)]
+Loss allowance at 31 March 2022 [ 2 - _ 2)
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+64
+
+2}
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+29 Risk Management (continued)
+
+a. Credit risk (continued)
+
+Sensitivity of ECLs Scenarios
+
+The sensitivity to each scenario has been considered by reviewing the impact of each case in isolation
+compared to the weighted scenario.
+
+2023 2022
+Impact on profit (toss) _ £000 £000
+Upside 1,782 443
+Base 1,239 383
+Downside (3,630) (670)
+
+Exposure to credit risk
+The Following table contains an analysis of the credit risk exposure of Financial instruments For
+which an ECL allowance is recognised. The gross carrying amount of Financial assets below also
+represents the Bank’s maximum exposure to credit risk on these assets.
+
+2023 2022
+ECL staging ECL staging
+Stage Stage2 Stage3 Stage Stage2 Stage3
+. 12- Lifetime Lifetime - 12° Lifetime Lifetime
+Credit grade month ECL ECL Total month ECL ECL Total
+ECL ECL
+Loans £000 £000 £000 £000 £000 £000 £000 £000
+RG1 4,977 - - 4977 4,829 72 - 4,901
+RG2 7,479 18 - 7,497 6,917 175 - 7,093
+RG3 . $16,213 602 - 16,814 22,161 568 - 22,729
+RG4 9,952 455 - 10,407
+RGS 4,785 948 - 5,733
+Standard monitoring —_} 28,669 620. - 29,288 | | 48,645 2,218 - 50,863
+RG3 8,110 1,542 - 9,653
+RG4 3,659 7,445 - 11,104
+RGS 135 8,359 - 8,494 6,220 1,155 - 7,375
+Special monitoring {11,904 17,346 - 29,250 | } 6,220 1,155 - 7,375
+RG1 - - 6 6 - - 7 7
+RG2 - - 24 24 - - 10 10
+RG3 - - 291 291 - - 18 18
+RG4 “ - 1,051 1,051 - - 154 154
+RGS - - 7,841 7,841 - - 1,582 1,582
+Default - - 9,213 9,213 - - 1,771 1,771
+Gross carrying amount | 49.573 17,966 —9,213—«67,751 54,865 3,373 1,771 60,009
+Loss allowance (2,278) (1,944) (8,159) (12,380) (728) (533)___(1,469) (2,730)
+Carrying amount 138,295 16,022. (1,054 «55,371 54,137 2,840 ~—«-302_—=«SS7,,279'|
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+65
+
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+29 Risk Management (continued)
+a. Credit risk (continued)
+
+2023 2022
+ECL staging ECL staging
+Stage 1 Stage 2 Stage 3 Stage 1 Stage 2 Stage 3
+12- spe te as 12- te ge tp ge
+Credit grade month’ Lifetime Lifetime Total month Lifetime Lifetime Total
+ECL ECL ECL ECL
+ECL ECL
+investments £000 £000 £000 £000 £000 £000 £000 £000
+Standard 7 7
+monitoring 49,772 ° 45,772 16,536 ° 16,536
+Special monitoring . _ . . . 7 .
+Default . . . . . . .
+Gross carrying . . . .
+amount 45,772 45,772 16,536 16,536
+Loss allowance (6) _ ‘. (6) (2) : : (2)
+Carrying amount . . . .
+45,766 ; 45,766 16,534 16,534
+2023 2022
+ECL staging . ECL staging
+Stage 1 Stage 2 Stage 3 Stage 1 Stage 2 Stage 3
+12- ee as se ge 12- op 4: se:
+Credit grade month Lifetime Lifetime Total month Lifetime Lifetime Total
+ECL ECL ECL ECL '
+ECL ECL
+Other Financial £000 £000 £000 £000 £000 £000 £000 £000
+Standard 6,166 - - 6,166 4,317 - - 4,317
+monitoring . ;
+Special monitoring - - - - - - - -
+Default - : - : > : : :
+Gross carrying . . _- .
+amount 6,166 6,166 4,317 4,317
+Loss allowance - : : : - : : :
+Carrying amount . | | . .
+6,166 6,166 4,317 4,317
+
+nage
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 66
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+29 Risk Management (continued)
+a. Credit risk (continued)
+
+Impairment losses on Financial instruments (continued)
+Impairment losses recognised in profit or loss during the year is summarised below:
+
+2023 2022
+£000 £000
+Loans
+Loss allowance recognised in profit or loss (9,650) | (2,287)
+Loans written off (1,166) (154)
+Investments (4) 3
+Other financial assets - -
+Impairment losses on Financial instruments (10,820) | (2,438)
+
+The loss allowance recognised in the year is impacted by a variety of Factors, as described below:
+
+- Transfers between Stage 1 and Stages 2 or 3 due to Financial instruments experiencing significant
+increases (or decreases) of credit risk or becoming credit-impaired in the period, and the consequent “step
+up” (or “step down”) between 12-month and Lifetime ECLs;
+
+- Additional allowances for new Financial instruments recognised during the period, as well as releases For
+Financial instruments de-recognised in the period;
+
+- Discount unwound within ECLs due to the passage of time, as ECLs is measured on a present value basis;
+and
+
+- Financial assets derecognised during the period and write-offs of allowances related to assets that were
+written off during the period (see note 1.d.6).
+
+Loans and advances to customers subject to forbearance activities
+
+Customer loans subject to forbearance activities and whose account is less than or equal to 30 days past
+due (DPD) are classified as stage 2 financial assets. All loans subject to forbearance activities and whose
+accounts are 30+ DPD are classified as stage 3 Financial assets.
+
+The Following table sets out a summary of loans and advances to customers subject to Forbearance
+activities:
+
+2023
+Stage1 Stage2 Stage3 Total
+Loans No. £000 £000 £000 £000
+Reduced payment plan 118 - - ' 872 872
+Hold/breathing period - - - - -
+Debt management plans 800 - - 6,125 6,125
+Gross carrying amount 918 - - 6,997 6,997
+Loss allowance : - - (5,653) —_ (5,653)
+Carrying amount i ~ 918 - - 1,344 1,344
+2022
+Stage1 Stage2 Stage3 Total
+Loans No. £000 £000 £000 £000
+Reduced payment plan 41 - - 373 373
+Hold/breathing period 25 - - 192 192
+Debt management plans 120 - - 904 904
+Gross carrying amount 186 - - 1,469 1,469
+Loss allowance - -_- 1,004 1,004
+Carrying amount 186 - - 465 465
+
+eee
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 67
+
+JN Bank UK Ltd
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+29. Risk Management (continued)
+
+b) Concentration credit risk
+The Bank measures concentration risk by product type, geographic location and loan size.
+
+Currently the Bank only makes unsecured personal loans to retail customers.
+
+The geographic location of the Bank's lending portfolio is as Follows:
+
+2023 2022
+
+% %
+East Anglia 4.89 5.23
+Midlands (East and West) . 19.75 19.12
+Greater London 40.14 11.23
+SouthEast 695 6.39
+North East 14.64 14.38
+North West ; 13.70 13.34
+Scotland 8.99 8.82
+South West P  *93.16 13.23
+Wales — -§.01 4.94
+Northern Ireland 2,80. 3.32
+
+100.00 100.00
+
+The Bank's lending portfolio (by number of accounts) Falls into the following concentration by
+loan size:
+
+2023 2022
+
+No. No.
+0- £5k 2,608 1,119
+>€5k - £10k 1,703 3,579
+>£10k - £15k 4,562 2,186
+j » 8,873 ° 6,884
+
+Concentration risk - treasury assets
+
+Credit risk exists with treasury assets where the Bank has acquired Financial instruments from,
+or placed cash deposits with, other financial institutions. No treasury assets are held for
+speculative purposes or actively traded.
+
+The Bank's treasury assets are shown in the following table split by Fitch Ratings’ credit rating:
+
+2023 2022
+
+€000 ” £000
+AAA to AA- 46,059 16,545
+A+ to A- - 68
+Unrated 5,264 4,091
+[ 51,323. 20,704
+
+ene ea nena
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 68
+JN Bank UK Ltd
+
+Annual report and Financial statements
+For the year ended 31 March 2023
+
+29. Risk Management (continued)
+c) Liquidity risk
+
+Liquidity risk is the risk that the Bank is unable to meet its current and Future Financial obligations
+
+as they Fall due, or is only able to do so at excessive cost.
+
+The Bank has developed comprehensive funding and liquidity policies to ensure that it maintains
+sufficient liquid assets to be able to meet all of its Financial obligations and maintain public
+
+confidence.
+
+Liquidity stress testing is conducted under a variety of scenarios, covering both normal and more
+
+severe market conditions.
+
+The Bank's European Banking Authority liquidity coverage ratio at 31 March 2023 was >1,000% and
+
+the deposit to loans ratio was 178% (2022: 121%).
+
+The table below present the contractual residual maturities of the Financial assets and liabilities on
+
+the balance sheet:
+
+At 31 March 2023 Carrying Undiscounted Oto3 3to12 1toS More than
+Value inflow/ months months years 5 years
+(outflow)
+
+Assets £000 £000 £000 £000 £000 £000
+Cash and cash equivalents 5,264 5,264 5,264 - - -
+investment securities 46,059 46,065 19,508 26,557 - -
+Loans and advances to customers 55,364 72,235 5,450 16,146 50,639 -
+Amounts owed by group undertakings 994 994 994 - > -
+Total | 107,681 124,558 31,216 42,703 50,639 “
+
+Liabilities
+Customer deposits (98,503) (101,630) (5,910) (42,625) (53,095) -
+Amounts owed to group undertakings (747) (747) (747) : : :
+Total t (99,250) (102,377) (6,657) (42,625) (53,095) -
+Net Position t 8,431 22,181 24,559 78 (2,456) -
+
+At 31 March 2022 Carrying Undiscounted Oto3 3to12 1to5 More than
+Value inflow/ months months = years 5 years
+(outflow)
+
+Assets £000 £000 £000 £000 £000 £000
+Cash and cash equivalents 4,159 4,159 4,159 - - -
+Investment securities 16,543 16,549 8,000 8,549 - -
+Loans and advances to customers 57,279 74,560 4,795 14,349 55,416 -
+Amounts owed by group undertakings 158 158 158 - - -
+Total 78,139 95,426 17,112 22,898 55,416 -
+
+Liabilities
+Customer deposits (69,516) (72,356) (8,302) (6,393) (57,661) -
+Amounts owed to group undertakings (375) (375) (375) - - -
+Total (69,891) (72,731) (8,677) (6,393) (57,661) -
+Net Position 8,248 22,695 8,435 16,505 (2,245) -
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023
+
+69
+
+wpa
+
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+29. Risk Management (continued)
+
+d) Market risk
+
+Market risk is the risk:that the value of, or income arising from, the Bank's assets and liabilities change as a
+result of changes in market prices, the principal element being interest rate risk. Market risk only arises in
+
+the Banking book as the Bank does_not.engage-in-any-trading-operations-and-does-not-have-any foreign —
+
+currency exposure.
+
+Interest rate risk
+
+Interest rate risk is the potential adverse impact on the Bank's future cash flows From changes in interest
+rates and arises from the differing interest rate risk characteristics of the Bank’s assets and liabilities. In
+particular, fixed rate products expose the Bank to the risk that a change in interest rates could cause either
+a reduction in interest income or an increase in interest expense relative to variable rate interest flows.
+
+Interest rate sensitivity gap
+
+The Bank considers a parallel 200 basis points movement to be appropriate for scenario testing given the
+current economic outlook and industry expectations. The change in equity as a result would be as Follows:
+
+2023 2022
+
+£000 £000
+NPV sensitivity +200bp 209 449
+NPV sensitivity -200bp (214) (505)
+
+In addition, the Bank monitors how the impact of a 100 basis point movement may change net interest
+income on an annualised basis For one year (earnings at risk) as Follows:
+
+2023 2022
+
+£000 £000
+Earnings at risk +100bp . 183 85
+Earnings at risk-100bp (183) (107)
+
+The subsequent table gives an analysis of the re-pricing periods of assets and liabilities. Mismatches in the
+re-pricing timing of assets and liabilities creates interest rate risk. Items are allocated to time bands by
+reference to the earlier of the next contractual interest rate repricing date and the residual maturity date.
+
+a
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 70
+ae
+
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+29. Risk Management (continued)
+d. Market risk (continued)
+
+More Non-
+
+At 31 March 2023 O0to3 3to12 1to5 than interest
+
+months months years 5 years bearing Total
+
+£000 £000 £000 £000 £000 £000
+Assets
+Cash and cash equivalents 5,264 - - - - 5,264
+Investment securities 19,508 26,551 - - - 46,059
+Loans and advances to 3,667 11,513 42,651 . (2,467) 55,364
+customers : : ;
+Other assets : - - - 2,905 2,905
+Total assets t 28,439 38,064 42,651 | -— ._ 438 109,592
+Liabilities , ,
+Customer deposits 5,899 42,066 50,537 - 1 98,503
+Other liabilities - - - - 2,452 2,452
+Equity - - - - 8,637 8,637
+Total liabilities . | 5,899 42,066 50,537 - 11,090 109,592 |
+Interest rate sensitivity gap 22,540 (4,002) (7,886) - (10,652) -
+Cumulative gap 22,540 18,538 10,652 10,652 -
+More Non-
+
+At 31 March 2022 O0to3 3to 12 1to5 than interest
+
+months months years 5 years bearing Total
+
+£000 £000 £000 £000 £000 £000
+
+Assets
+Cash and cash equivalents 4,159 - - - - 4,159
+Investment securities 7,999 8,544 - - - 16,543
+Loans and advances to 3,500 9,712 44,067 - - 57,279
+customers
+Other assets - - - - 3,992 3,992
+Total assets 15,658 18,256 44,067 - 3,992 81,973
+Liabilities
+Customer deposits 8,300 6,293 54,923 - - 69,516
+Other liabilities - - - - 2,135 2,135
+Equity - - - - 3,827 3,827
+Total liabilities 8,300 6,293 54,923 - 5,962 75,478
+Interest rate sensitivity gap 7,358 11,963 (10,856) - (1,970) -
+Cumulative gap 7,358 19,321 8,465 8,465 -
+
+en
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 74
+JN Bank UK Ltd
+Annual report and financial statements
+For the year ended 31 March 2023
+
+29. Risk Management (continued)
+
+e) Capital risk and management
+
+The Bank has operated in line with its capital risk appetite as set by the Board and above its
+regulatory requirements throughout the period ended 31 March 2023.
+
+Capital is held to protect depositors, by ensuring that the Bank has sufficient capital resources to
+repay liabilities even in the face of unexpected losses. Day-to-day capital management is delegated
+to the Chief Financial Officer and overseen by the risk function, ALCO, Risk Committee: and
+ultimately the Board. The Bank's objective in managing its capital is to maintain appropriate levels
+of capital to support its business strategy and to meet regulatory requirements at all times. The
+Bank manages its capital in accordance with Capital Requirements Regulation (CRR) and Capital
+Requirements Directive (together referred to as CRD IV). The framework is enforced by the PRA.
+The PRA sets and monitors the Bank's capital requirements.
+
+The PRA's approach to the measurement of capital adequacy is primarily based on monitoring the
+relationship of the capital resources requirement to available capital resources. The regulator sets
+Total Capital Requirement (TCR) For each bank in excess of the minimum resources requirement of
+8% of risk weighted assets. A key input to the TCR setting process is the Bank's Internal Capital
+Adequacy Assessment Process (ICAAP).
+
+The Bank's policy is to maintain a strong capital base to maintain stakeholder and market
+confidence and to sustain the Future development of the business. The Bank monitors current and
+Forecast levels of capital against the capital risk appetite approved by the Board and reports the
+capital position to ALCO, Risk Committee and the Board on a regular basis. The capital Forecast
+forms an integral component of the annual budgeting process and is updated in line with changes
+to the Bank's business plan.
+
+30 Controlling party
+
+The Bank's immediate parent is the JN Financial Group Limited, a company registered in Jamaica
+under number 002 189 470 and whose registered office is at 2-4 Constant Spring Road, Kingston
+10, Jamaica. The ultimate controlling party is The Jamaica National Group Limited, a company
+registered in Jamaica under number 002 212 340 and whose registered office is at 2-4 Constant
+Spring Road, Kingston 10, Jamaica.
+
+The largest group in which these Financial statements are consolidated is that headed by The
+Jamaica National Group Limited. The Jamaica National Group Limited consolidated Financial
+statements Forms part of The Jamaica National Group Limited Annual report and can be accessed
+on the website per the Following link: https://www.ingroup.com/about-us/annual-reports/.
+
+The smallest group in which these financial statements are consolidated is that headed by JN
+Financial Group Limited.
+
+ANNUAL REPORT & FINANCIAL STATEMENTS 2023 7a

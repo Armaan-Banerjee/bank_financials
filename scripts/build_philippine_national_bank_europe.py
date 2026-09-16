@@ -629,6 +629,125 @@ PILLAR3_SKIP_NOTE = ("CORRECTED 2026-09-15 - THE FY2021 AND FY2020 PILLAR 3 DOCU
                      "reconciled; the Pillar 3 figure is retained for FY2023 because it is the like-for-"
                      "like source used for every other Pillar-3-sourced year.")
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE. KM1-024, 16 September 2026.
+#
+# The finding is "Pillar 3 IS published but the KM1 template is NOT used" -
+# NOT "no Pillar 3 is published", and NOT a failed fetch. PNBE publishes a
+# standalone Pillar 3 every year; none of the six editions this project can
+# reach contains the template, or anything with its row set.
+#
+# What PNBE prints instead are three short tables of its own design, in
+# GBP'000, each headed by a SINGLE "As at 31 Dec <year>" column with no
+# comparative: "Own Fund Composition" (share capital / P&L reserve / merger
+# reserve / Own Funds, and a "% to Total Own Funds" column that no KM1 has), a
+# Pillar 1 capital-requirements table (RWAs and capital requirement by risk
+# type), and a "Capital Buffers" table printing one CET1 capital ratio plus
+# narrative bullets on the PRA buffer, CCB and CCyB. There are no template row
+# numbers anywhere, no SREP rows, no combined-buffer row, no leverage rows and
+# no LCR or NSFR rows. Under the row-set test that is a different and shorter
+# table, not an unnumbered KM1, so nothing here is mapped onto template row
+# numbers.
+#
+# THE ZEROES ARE REAL, NOT AN INSTRUMENT FAILURE. Each edition was extracted
+# with pdftotext -layout and probed CASE-INSENSITIVELY. Every edition returns
+# zero hits for "km1", "key metric", "leverage", "liquidity coverage", "nsfr"
+# and "common equity" - while the SAME extraction is rich on neighbouring
+# terms (roughly 50 hits for "capital" and 33-36 for "ratio" in each). Editions
+# checked this way: FY2024, FY2023, FY2021, FY2020, FY2019, FY2017.
+#
+# PARENT CHECK. A UK subsidiary's regulatory figures often live in the
+# PARENT's Pillar 3 rather than its own, so that is checked before any
+# non-disclosure claim. It does not arise here: PNBE is ITSELF the
+# PRA-authorised firm and holds the UK disclosure duty itself, which is why it
+# publishes its own Pillar 3 at all, and its own documents state it discloses
+# un-consolidated, has no subsidiaries, and is "regarded as a stand-alone
+# entity" under the PRA's liquidity rules. Its parent, Philippine National
+# Bank (Manila), is a Philippine bank reporting under Bangko Sentral ng
+# Pilipinas rules, not the PRA's Disclosure (CRR) Part, so no UK KM1 for PNBE
+# can exist in the parent's disclosures. Recorded honestly: www.pnb.com.ph
+# refuses this fetcher outright (Akamai "Access Denied", HTTP 403, on every
+# path including the root), so the parent's own site was NOT readable here -
+# that is a BLOCK, an unknown, and it is not being reported as an absence.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - the UK KM1 key-metrics template is NOT used in any Philippine National Bank (Europe) Plc "
+    "Pillar 3 disclosure this project has been able to read. This is a positive finding about the "
+    "documents, not a failed search, and it is a DIFFERENT and weaker statement than 'no Pillar 3 is "
+    "published': PNBE publishes a standalone Pillar 3 every year.\n\n"
+    "WHAT PNBE PUBLISHES INSTEAD. Three short tables of its own design, in GBP'000, each headed by a "
+    "SINGLE 'As at 31 Dec <year>' column with no prior-year comparative:\n"
+    "• 'Own Fund Composition' - share capital, profit and loss reserve, merger reserve, Own Funds (Total "
+    "capital) - with a '% to Total Own Funds' column that appears in no version of KM1.\n"
+    "• A Pillar 1 capital-requirements table - RWAs and capital requirement by risk type (credit and "
+    "counterparty credit, market, operational), plus the 100% base capital requirement.\n"
+    "• 'Capital Buffers' - one printed CET1 capital ratio, footnoted 'Being CET1 capital the same as Tier "
+    "1 capital and Total capital, the CET1 capital ratio is equal to Tier 1 capital ratio and Total "
+    "capital ratio', followed by narrative bullets on the PRA buffer, the CCB and the CCyB.\n"
+    "None of these carries a template row number, and the set omits every distinguishing KM1 row: no SREP "
+    "rows (UK 7a-7d), no combined buffer requirement row, no leverage rows (13/14), no LCR rows "
+    "(15/UK 16a/UK 16b/16/17) and no NSFR rows (18-20). Mapping them onto template row numbers would "
+    "invent a correspondence PNBE never published, so this sheet is left as a single 'Not applicable' "
+    "row. The figures those tables DO give are on the individual Pillar 3 metric sheets in this workbook.\n\n"
+    "HOW THE ABSENCE WAS TESTED, so it is not mistaken for a tooling failure. Every located edition was "
+    "extracted with pdftotext -layout and probed CASE-INSENSITIVELY. Each returns ZERO hits for 'km1', "
+    "'key metric', 'leverage', 'liquidity coverage', 'nsfr' and 'common equity', while the SAME extraction "
+    "is rich on neighbouring terms - about 50 hits for 'capital' and 33-36 for 'ratio' in each document. A "
+    "zero beside that richness is a fact about the document. Editions tested: FY2024, FY2023, FY2021, "
+    "FY2020, FY2019 and FY2017. Each document's own table of contents was also read, and none lists a "
+    "key-metrics section: the FY2024 contents run Introduction / Risk Management Objectives and Policies / "
+    "Own Funds, Capital Requirements and Capital Buffers / Credit Risk / Market Risk / Operational Risk / "
+    "Other Risks / Remuneration.\n\n"
+    "LATEST-EDITION CHECK, 16 September 2026, AND WHAT IT COULD AND COULD NOT ESTABLISH. PNBE has no "
+    "separate investor site (pnbeurope.com does not resolve - connection timeout), and the publisher's own "
+    "host www.pnb.com.ph refuses this project's fetcher outright: every path, INCLUDING THE SITE ROOT, "
+    "returns HTTP 403 with an Akamai 'Access Denied' body. That is a BLOCK - an unknown - and per this "
+    "project's own standing rule it is NOT recorded as an absence. What could be established, from the S3 "
+    "bucket that does serve direct object requests: the live, overwriting URL "
+    + P3_2024_URL + " still holds the 31 DECEMBER 2024 edition as at 16 September 2026 (HTTP 200, "
+    "application/pdf, %PDF verified, 443,209 bytes, 12pp, cover 'Philippine National Bank (Europe) Plc / "
+    "Pillar 3 Disclosures / 31 December 2024', issued April 2025, Last-Modified 15 April 2025). The FY2025 "
+    "edition's cited URL on the newer /storage/asset-libraries/ path is 403 from both the live host and "
+    "the S3 bucket, so it could not be re-read today; its figures on the metric sheets stand from the "
+    "earlier session that did read it. No edition NEWER than FY2025 was found, and none can be ruled out "
+    "while the host blocks us. The bucket has no listing permission either (ListBucket returns "
+    "AccessDenied), so a 403 on a probed filename there means 'absent OR not permitted' and cannot be read "
+    "as absence.\n\n"
+    "PARENT CHECK (done before writing this non-disclosure claim). A UK subsidiary's regulatory figures "
+    "frequently live in the PARENT's Pillar 3 - in a subsidiary column of a group table, or in a separate "
+    "appendix - rather than in the subsidiary's own document. That pattern does not arise here, for a "
+    "structural reason: PNBE is ITSELF the PRA-authorised firm and holds the UK disclosure obligation "
+    "itself, which is why it publishes a Pillar 3 at all. Its own documents state that it discloses on an "
+    "un-consolidated basis, has no subsidiaries, and is 'regarded as a stand-alone entity' under the PRA's "
+    "liquidity rules. Its parent, Philippine National Bank (Manila), reports under Bangko Sentral ng "
+    "Pilipinas rules rather than the PRA's Disclosure (CRR) Part, so a UK KM1 for PNBE cannot exist in the "
+    "parent's disclosures. Recorded honestly: the parent's own website is the same blocked host, so it was "
+    "NOT read here. The claim above rests on PNBE's own documents and on which regulator imposes the "
+    "template - not on a search of the parent's site.\n\n"
+    "NOT BACK-FILLED FROM THE STATUTORY ACCOUNTS. PNBE's Companies House filings do carry a 'Capital "
+    "management' note (Note 18/20) with Tier 1 Capital and Total Capital rows, and this workbook uses it "
+    "for FY2022 on the metric sheets. It is a statutory-accounts note on a different basis, not a KM1 row, "
+    "and it is not reproduced here.\n\n"
+    + ENTITY_NOTE + "\n\n" + BLOCKED_HOST_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Philippine National Bank (Europe) Plc — KM1 Key Metrics",
+    subtitle="Not applicable — PNBE publishes a standalone Pillar 3 every year, but none of the six editions "
+             "this project can read uses the UK KM1 template or anything carrying its row set. What it prints "
+             "instead is three short tables of its own design (Own Fund Composition; Pillar 1 capital "
+             "requirements; Capital Buffers), each with a single 'As at 31 Dec' column, no template row "
+             "numbers, and no SREP, leverage, LCR or NSFR rows at all. See the source note for how the absence "
+             "was tested and for the editions and hosts checked.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not applicable — template not used in any located Pillar 3 edition" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=48,
+    source_height=560,
+)
+
 metric("CET1 Capital", "GBP '000", [("Common Equity Tier 1 (CET1) capital", CET1_FUNDS)],
        note=PILLAR3_SKIP_NOTE)
 metric("CET1 Ratio", "%", [("CET1 capital ratio", CAPITAL_RATIO)],

@@ -488,6 +488,105 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - the Bank's own 'Summary of Key Metrics', in EUR
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Source - Bank Sepah International Plc's own 'Table 1 Summary of Key Metrics', p.5 of each year's Pillar 3 "
+    "Disclosures, reproduced exactly as printed:\n"
+    f"FY2025 ('Mar 25' column): Pillar 3 Disclosures as at 31 March 2025, p.5 - {P3_2025_URL}\n"
+    f"FY2024 ('Mar 24' column): Pillar 3 Disclosures as at 31 March 2024, p.5 - {P3_2024_URL}\n"
+    f"FY2023 ('Mar 23' column): Pillar 3 Disclosures 31 March 2023, p.5 - {P3_2023_URL}\n"
+    f"FY2022 ('Mar 22' column): Pillar 3 Disclosures 31 March 2022, p.5 - {P3_2022_URL}\n"
+    f"FY2021 ('Mar 21' column): Pillar 3 Disclosures 31 March 2021, p.5 - {P3_2021_URL}\n\n"
+    "AMOUNTS ARE IN EURO THOUSANDS (EUR'000), NOT STERLING. The Bank reports in euro and prints this table "
+    "headed '€000'. It is reproduced in its published currency and is therefore NOT comparable cell-for-cell "
+    "with the individual metric sheets in this workbook, which are converted to sterling at the Bank's own "
+    "disclosed year-end rates (see the FX note on those sheets). No conversion, and no derivation of any "
+    "kind, has been applied to anything on this sheet.\n\n"
+    "THE COLUMNS IN THE SOURCE ARE QUARTER-ENDS, NOT YEARS. Each edition prints five columns - its own "
+    "financial year-end followed by the preceding four quarters (e.g. the March-2025 edition prints Mar 25, "
+    "Dec 24, Sep 24, Jun 24, Mar 24). The Bank's year-end is 31 MARCH, so only the 'Mar' column of each "
+    "edition is that financial year, and that is the only column used here. The four quarterly columns are "
+    "not reproduced.\n\n"
+    "EACH YEAR COMES FROM ITS OWN EDITION, WHICH MATTERS HERE - the same date is printed differently in "
+    "different editions, and the own-edition figure is the one used:\n"
+    "  March 2022: Total Risk Exposure 252,734 in the March-2022 edition vs 252,058 as the March-2023 "
+    "edition's comparative; NSFR 458% vs 459%.\n"
+    "  March 2023: CET1 172,027 and TRE 208,649 in the March-2023 edition vs 171,801 and 209,637 as the "
+    "March-2024 edition's comparatives.\n"
+    "  March 2024: LCR 2877% in the March-2024 edition vs 2875% as the March-2025 edition's comparative.\n\n"
+    "ROW-SET NOTE. The Bank captions this 'Summary of Key Metrics' and prints no template row numbers. It "
+    "carries the backbone of the KM1 template - capital, total risk exposure, the capital ratio, the "
+    "conservation and countercyclical buffers, CET1 available after the minimum requirement, the leverage "
+    "ratio, the LCR with its HQLA/outflow/inflow components, and the NSFR with its available/required stable "
+    "funding components - but it does NOT print separate Tier 1 or Total capital rows (the Bank has no AT1 or "
+    "Tier 2 instruments, so CET1 = Tier 1 = Total capital), nor a leverage exposure measure, nor the SREP or "
+    "combined-buffer blocks. Row labels are reproduced exactly as the Bank prints them, including "
+    "'Total required sable funding', which is spelled that way - missing the 't' - in all five editions. "
+    "Because these labels are the Bank's own rather than the template's, the workbook verifier's KM1 "
+    "cross-check matches none of them and reports zero cross-checked cells for this sheet. That is the "
+    "expected result, not a failure: the rows were not renamed to force agreement.\n\n"
+    "ROW DIFFERENCES BETWEEN EDITIONS (a row not printed is left blank, never filled from another year): the "
+    "March-2021 edition prints neither a 'Cash Outflows' nor a 'Cash Inflows' row, and labels its net figure "
+    "'Total net cash outflow' in the singular. It also prints the countercyclical buffer as 0%, where every "
+    "later edition prints a dash - so FY2021 carries a zero and the other four years are blank.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-16: the Bank's own documents page "
+    "(https://www.banksepah.co.uk/information) lists the March 2023, March 2024 and March 2025 Pillar 3 "
+    "disclosures; March 2025 is the newest and this workbook already holds it. No March-2026 edition has "
+    "been published. Note that the page no longer links the March-2021 or March-2022 editions even though "
+    "both URLs still serve the documents, so the citation list above is a better record of what exists than "
+    "the live page is. Retrieval requires certificate validation to be bypassed - the site's TLS certificate "
+    "is expired, which makes a default fetch fail with no HTTP status at all; that is a certificate-date "
+    "problem, not a dead link (see the expired-certificate note elsewhere in this workbook).\n\n"
+    "ENTITY: Bank Sepah International Plc, the UK-authorised bank, on its own solo basis. No parent figure is "
+    "used anywhere on this sheet."
+)
+
+km1_rows = [
+    ("SECTION", "TABLE 1  SUMMARY OF KEY METRICS (the Bank's own caption; amounts in EUR'000)", {}),
+    ("DATA", "CET1 (€'000)",
+     {"FY2025": 172779, "FY2024": 172011, "FY2023": 172027, "FY2022": 170751, "FY2021": 169065}),
+    ("DATA", "Total Risk Exposure (€'000)",
+     {"FY2025": 167006, "FY2024": 188600, "FY2023": 208649, "FY2022": 252734, "FY2021": 277208}),
+    ("DATA", "CET1 as a % of TRE",
+     {"FY2025": "103%", "FY2024": "91%", "FY2023": "82%", "FY2022": "68%", "FY2021": "61%"}),
+    ("DATA", "Capital Conservation Buffer",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "Countercyclical buffer %",
+     {"FY2021": "0%"}),
+    ("DATA", "CET1 available after meeting Minimum Capital Requirement as a % of TRE",
+     {"FY2025": "95%", "FY2024": "83%", "FY2023": "74%", "FY2022": "60%", "FY2021": "53%"}),
+    ("DATA", "Leverage ratio",
+     {"FY2025": "55%", "FY2024": "55%", "FY2023": "54%", "FY2022": "46%", "FY2021": "47%"}),
+    ("DATA", "Total HQLA (€'000)",
+     {"FY2025": 19041, "FY2024": 20009, "FY2023": 16244, "FY2022": 14609, "FY2021": 13585}),
+    ("DATA", "Cash Outflows (€'000)",
+     {"FY2025": 3744, "FY2024": 2782, "FY2023": 2778, "FY2022": 53766}),
+    ("DATA", "Cash Inflows (€'000)",
+     {"FY2025": 152541, "FY2024": 158931, "FY2023": 156620, "FY2022": 255734}),
+    ("DATA", "Total net cash outflows (€'000)",
+     {"FY2025": 936, "FY2024": 696, "FY2023": 695, "FY2022": 13419, "FY2021": 918}),
+    ("DATA", "LCR %",
+     {"FY2025": "2034%", "FY2024": "2877%", "FY2023": "2339%", "FY2022": "109%", "FY2021": "1480%"}),
+    ("DATA", "Total available stable funding (€'000)",
+     {"FY2025": 306143, "FY2024": 305367, "FY2023": 304095, "FY2022": 302584, "FY2021": 300254}),
+    ("DATA", "Total required sable funding (€'000)",
+     {"FY2025": 52659, "FY2024": 80677, "FY2023": 33914, "FY2022": 66013, "FY2021": 81302}),
+    ("DATA", "NSFR %",
+     {"FY2025": "581%", "FY2024": "379%", "FY2023": "897%", "FY2022": "458%", "FY2021": "369%"}),
+]
+
+bw.add_km1_sheet(
+    title="Bank Sepah International Plc - KM1 Key Metrics",
+    subtitle="The Bank's own 'Table 1 Summary of Key Metrics', year-end (March) column of each edition - EUR'000 as published",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=620,
+    years=YEARS,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):

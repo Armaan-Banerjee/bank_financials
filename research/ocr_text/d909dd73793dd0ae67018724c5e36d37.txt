@@ -1,0 +1,1177 @@
+Monzo Bank Limited (formerly Focus FS Limited)
+
+Report and Financial Statements
+28 February 2017
+Registered number: 09446231
+
+6 QNV
+
+COMPANIES HOUSE
+
+! ie
+
+|
+
+#8
+Contents
+
+Chief Executive’s review
+
+General information
+
+Directors’ report
+
+Statement of directors’ responsibilities
+Independent auditors’ report
+Statement of comprehensive income
+Statement of financial position
+Statement of changes in equity
+Statement of cashflows
+
+Notes to the financial statements
+
+PAGES
+
+17--32
+Annual Report 2017
+
+The last twelve months have seen hundreds of
+thousands of people sign up to Monzo as we
+prepare to launch our current account.
+
+Here we present our transparent annual report for
+our crowdfunding investors, our community and our
+customers, with financial statements for the year
+ending 28 February 2017.
+
+Chief Executive's review
+
+In February 2015, we set out to build a bank that we'd be proud to call our own. We were 12 people with zero
+customers, temporarily camped out in the offices of our friends at White Bear Yard in London. We wanted to change the
+way people thought about their money.
+
+Two years later, we're serving almost 250,000 customers across the UK and people write to us everyday letting us know
+how we’ve helped give them back control of their finances.
+
+; | Jdlia Costa-Simson | W Follow
+@jcdcaldas
+
+The future of banking is... NOW. First day using my Monzo and
+it's already changed my life @MonzoLoveTweets re }
+2:25 PM - 2 Jun 2017
+
+e& 1 4 0
+
+In time, we want Monzo to be a bank that improves the lives of a billion people around the world.
+
+Last year
+
+We have had a fantastic year - our prepaid programme has just hit 240,000 funded accounts, with more than £250m
+spent in total.
+
+Page 1 of 32
+The first five months of 2017 in particular have been very strong. Since January, we’ve seen an average of 5% weekly
+growth in customer numbers and 7% weekly growth in transaction volumes. This growth is almost entirely organic from -
+word-of-mouth referrals as people tell their friends and family.
+
+In February and March, we agreed £22.5m of investment from Passion Capital, Thrive, Orange Digital Ventures, and
+more than 6,500 Crowdcube investors. We have also now directly connected to both Faster Payments and Mastercard
+as members and in April of this year we received our full UK banking licence.
+
+The foundations are now in place for us to launch full bank accounts.
+
+The next year
+
+We have two key priorities for the next six months.
+First, we want to continue to grow our user base and ensure we can meet that level of demand operationally.
+
+Delightful customer support has been a key pillar of our success so far. Even though we’re running a mobile-only bank,
+offering authentic human interaction is crucial to building and maintaining trust. Our customers should be able to talk
+with someone at Monzo about their money, at any time of night or day.
+
+If we continue to grow at this rate, we will hit somewhere between 500,000 and 800,000 accounts by the end of the
+year. To continue to offer the level of support we aim for, we will need to significantly expand our team; we’re looking to
+bring on around 40 new customer operations staff in the next six months.
+
+Our second priority is rolling out the current account. We believe people shouldn't need to think about financial
+products. People didn’t sign up for Monzo because they were looking for a prepaid card; instead, they want immediate
+visibility and control of their money. The shift from prepaid card to current account, therefore, should be as seamless as
+possible for our customers. The current account will have all of the functionality of the existing prepaid card, but add on
+features like Direct Debits, Faster Payments and overdrafts.
+
+We try to avoid “big bang” launches, instead preferring to roll-out new features iteratively. This reduces risk and
+ensures we can continue to offer people the level of service they've come to expect from Monzo. We have about fifty
+current accounts live today among our staff, and we'll soon progress to a few thousand customers. At the moment,
+we're aiming to offer the current account to all existing customers in late summer. The wait might be frustrating at
+times for our community, but it’s important to get it right. We have a responsibility to keep our customers’ money safe.
+
+From a financial perspective, we’ve got enough capital for at least the first 12 months of life as a bank. To create a
+viable, sustainable business, it’s important that we reach profitability over time. However, profitability is not a key
+priority for this year, and we would prefer to focus on growth over driving revenue. As a consequence, and as explained
+in our crowdfunding pitch earlier this year, we’ll need to raise more funding in early 2018. If we grow even faster than
+expected, we may need to accelerate funding plans. We are also exploring ways to include a crowd component in the
+next investment round to include as many of our community as possible.
+
+Having built direct connections into Mastercard and Faster Payments, our unit economics will improve dramatically
+once customers move to the current account. The prepaid scheme loses around £50 per active customer per year.
+Simply by moving to current accounts powered by our own technology, we plan to significantly reduce this amount.
+
+The largest remaining costs are customer support and ATM usage. On customer support, we believe that we will be able
+to significantly improve efficiency in the long-term, so we’re prepared to over-invest in the short-term to provide our
+customers with a world-class experience.
+
+Page 2 of 32
+Around 40% of the per-customer loss is due to international ATM usage outside the UK or EU, with a smail minority of
+our user-base driving the majority of this cost. As a result, we will explore ways to reduce this cost in collaboration with
+our community — it will not be a profit-making exercise. UK and EU ATM usage costs us much less, and we aim to keep
+this free. We still believe foreign exchange at point-of-sale (in shops, restaurants and online) can be provided to
+customers for free.
+
+On the revenue side, we will start experimenting with lending functionality. Roughly speaking, we aim to be in the
+cheapest quarter of the market on price (adjusted for factors like risk, customer profile, and the type of lending), but we
+do not aim to be price leaders in all circumstances. Nor do we wish to set a single headline price and compete as part
+of "best-buy” tables. Instead, we will focus on offering lending tools to to help people manage their day-to-day finances
+more effectively. We want to give people immediate visibility and control of their money, rather than tempting them in
+with a low headline price and then recouping costs elsewhere.
+
+As a result, we will aim to run a number of quick, small-scale lending triais to better understand how people like to
+manage their money. When we’re confident these new product features work well for customers, we'll roll them out
+more widely. You may start to see glimpses of new features or pricing that we’re trialling over the next few months!
+
+Long-term
+
+In the long-term, we want to build a powerful financial control centre for a billion people. We don’t want to be a full-
+service bank, offering Monzo mortgages or Monzo credit cards. Instead, we want to be a platform or marketplace that
+gives people visibility and control of all of their money, whichever providers they use. The future of banking is data and
+identity.
+
+Imagine if you could collect loyalty points simply by using your Monzo card to pay in shops. Or if your gas and electricity
+tariff was automatically switched to ensure you’re always getting the best deal. Imagine opening a new ISA with a
+couple of taps, investing all the money Monzo has helped you save. We are looking at early prototypes of these third-
+party integrations today and some are already pretty magical. We will aim to roll out a handful of these to our customers
+in the next 12 months.
+
+There are clearly potential risks and pitfalls here. Who gets to access customer data? What purposes can they use it
+for? Is it stored securely after it’s shared? These are questions we will need to address before these third-party
+services can be offered to all customers.
+
+In principle, we believe the customer should be in control of their financial data. As such, we will explain what benefit
+you'll get from sharing, and we won’t share your personal data with third parties without your explicit consent. We also
+believe in transparency — if Monzo benefits from a data-sharing deal, we'll let you know about it upfront. If you don’t
+give consent, your data will remain private. We welcome new regulation (GDPR and PSD2 in particular) in this area
+because we believe it puts the customer firmly in control of their personal data.
+
+We see ourselves as trusted custodians of both your money and your data. We will only succeed if we maintain that
+trust.
+
+We’re incredibly excited about this year and the opportunities ahead of us. I'd like to thank the Monzo team, our
+investors, and the wider Monzo community who all have helped us get this far. Here’s to the next 12 months!
+
+Tom Blomfield
+CEO, Monzo
+2\st June 2017
+
+Page 3 of 32
+General information
+
+Directors
+
+« Baroness D Kingsmill
+« T Blomfield
+
+¢ T Brooke
+
+* E Burbidge
+
+« G Dolman
+
+« MGrimshaw
+
+« AKirk
+
+« K Woollard
+
+Auditors
+
+Ernst & Young LLP
+25 Churchill Place
+Canary Wharf
+London
+
+£14 5EY
+
+Bankers
+
+Royal Bank of Scotland Group Pic
+280 Bishopsgate
+
+London
+
+EC2M 4RB
+
+Solicitors
+
+Taylor Wessing LLP
+5 New Street Square
+London
+
+EC4A 3TW
+
+Page 4 of 32
+Registered Office
+
+1st Floor
+
+230 City Road
+London
+
+ECiV 2QY
+
+Page 5 of 32
+Directors’ report
+
+The directors present their report and financial statements for the 12 months ended 28 February 2017. These financial
+statements have been prepared under International Financial Reporting Standards as adopted by the European Union,
+rather than UK GAAP.
+
+Results and dividends
+
+The loss for the year after taxation amounted to £6,689,000 (2016 — loss of £1,446,000). The directors do not
+recommend a final dividend (2016 - £nil).
+
+Principal activities
+
+The principal activity of Monzo Bank Limited (the “Bank” or the “Company”) is to provide retail banking services in the
+UK.
+
+During the period the Company continued the building of the capability to provide banking services to its customers
+and obtaining an unrestricted license to do so. It also launched a prepaid debit card in order to be able to use the
+lessons learned from this to build the best possible current account product for its customers.
+
+Directors
+
+The directors who have held office during the year ended 28 February 2017 are as follows:
+
+* Baroness D Kingsmill (Chairman)
+
+* T Blomfield
+
+¢ T Brooke
+
+« £ Burbidge
+
+e G Dolman (appointed 7 November 2016)
+
+« M Grimshaw (appointed 21 February 2017)
+« K Woollard (appointed 23 May 2016)
+
+« AKirk (appointed 24 January 2017)
+
+Page 6 of 32
+‘Directors’ liabilities
+
+The Bank has indemnified all directors of the Bank against liability in respect of proceedings brought by third parties,
+subject to the conditions set out in the Companies Act 2006. Such qualifying third party indemnity provision was in
+force during the year.
+
+Financial risk management
+
+The Directors’ assessment and approach to financial risk management are detailed in note 4 of these accounts.
+
+Going concern
+
+Since incorporation the Company has undertaken a series of successful equity raisings to fund the start- up phase of
+the business. The initial focus of the Company was on obtaining a banking licence, which was received in August 2016
+subject to restrictions. The restrictions were lifted in April 2017 and the Company can now launch its product in the
+market.
+
+To support this launch and subsequent-phases of its growth, the Company has raised sufficient equity to ensure that it
+can survive for a period in excess of 12 months from the end of the reporting period. Details of equity raised are
+contained in Note 14. Consequently the financial statements have been prepared on a going concern basis.
+
+Events since the balance sheet date
+
+In March 2017 £2.5m was raised via the issue of 2.5m ordinary shares to investors.
+
+The restriction to maximum total deposits of £50,000 was lifted by the FCA and a full banking licence was granted in
+April 2017.
+
+Appointment of auditors
+
+Ernst & Young LLP were appointed as auditors of the Company on 28 February 2017 and have been re-appointed
+pursuant to section 487(2) of the Companies Act 2006 unless the members or directors resolve otherwise.
+
+Employment of disabled persons
+
+The company does not discriminate against any person on the grounds of disability.
+
+Disclosure of information to the auditor
+
+So far as each person who was a director at the date of approving this report is aware, there is no relevant audit
+information, being information needed by the auditor in connection with preparing its report, of which the auditor is
+unaware. Having made enquiries of fellow directors and the Company’s auditor, each director has taken all the steps
+that he is obliged to take as a director in order to make himself aware of any relevant audit information and to establish
+that the auditor is aware of that information.
+
+Page 7 of 32
+Auditors
+
+In accordance with section 485 of the Companies Act 2006, a resolution is to be proposed at the Annual General
+Meeting for reappointment of Ernst & Young LLP as auditors.
+
+On behalf of the Board
+
+Tom Blomfield
+Director
+21 June 2017
+
+Page 8 of 32
+Statement of directors’ responsibilities
+
+The directors are responsible for preparing the Directors Report and the financial statements in accordance with
+applicable United Kingdom law and those International Financial Reporting Standards as adopted by the European
+
+Union.
+
+Under Company Law the directors must not approve the financial statements unless they are satisfied that they present
+fairly the financial position, financial performance and cash flows of the company for that period. In preparing those
+financial statements the directors are required to:
+
+« select suitable accounting policies in accordance with IAS 8: Accounting Policies, Changes in Accounting
+Estimates and Errors and then apply them consistently;
+
+* present information, including accounting policies, in a manner that provides relevant, reliable, comparable and
+understandable information;
+
+* provide additional disclosures when compliance with the specific requirements in IFRSs is insufficient to enable
+users to understand the impact of particular transactions, other events and conditions on the company's financial
+position and financial performance;
+
+« state that the company has complied with IFRSs, subject to any material departures disclosed and explained in
+the financial statements; and
+
+¢ make judgements and estimates that are reasonable and prudent.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company's transactions and disclose with reasonable accuracy at any time the financial position of the company and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They are also responsible
+for safeguarding the assets of the company and hence for taking reasonable steps for the prevention and detection of
+fraud and other irregularities.
+
+Page 9 of 32
+independent auditors’ report
+
+to the members of Monzo Bank Limited (formerly Focus FS Limited)
+
+We have audited the financial statements of Monzo Bank Limited (formerly Focus FS Limited) for the 12 months ended
+28 February 2017 which comprise the Statement of Comprehensive Income, the Statement of Financial Position, the
+Statement of Changes in Equity, the Statement of Cash Flows and the related notes 1 to 19. The financial reporting
+framework that has been applied in their preparation is applicable law and International Financial Reporting Standards
+(IFRSs) as adopted by the European Union.
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the company’s members those
+matters we are required to state to them in an auditor's report and for no other purpose. To the fullest extent permitted
+by law, we do not accept or assume responsibility to anyone other than the company and the company’s members as a
+body, for our audit work, for this report, or for the opinions we have formed.
+
+Respective responsibilities of directors and auditor
+
+As explained more fully in the Directors’ Responsibilities Statement set out on page 9, the directors are responsible for
+the preparation of the financial statements and for being satisfied that they give a true and fair view. Our responsibility
+is to audit and express an opinion on the financial statements in accordance with applicable law and International
+Standards on Auditing (UK and Ireland). Those standards require us to comply with the Auditing Practices Board’s
+Ethical Standards for Auditors.
+
+Page 10 of 32
+Scope of the audit of the financial statements
+
+An audit involves obtaining evidence about the amounts and disclosures in the financial statements sufficient to give
+reasonable assurance that the financial statements are free from material misstatement, whether caused by fraud or
+error. This includes an assessment of: whether the accounting policies are appropriate to the company’s circumstances
+and have been consistently applied and adequately disclosed; the reasonableness of significant accounting estimates
+made by the directors; and the overall presentation of the financial statements. In addition, we read all the financial and
+non-financial information in the Directors’ Report to identify material inconsistencies with the audited financial
+statements. If we become aware of any apparent material misstatements or inconsistencies we consider the
+implications for our report.
+
+Opinion on the financial statements
+
+In our opinion the financial statements:
+
+* give a true and fair view of the state of the company’s affairs as at 12 months ended 28 February 2017 and of its
+loss for the year then ended;
+
+» have been properly prepared in accordance with IFRSs as adopted by the European Union; and
+
+« have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Opinion on other matter prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+* the information given in the Directors’ Report for the financial year for which the financial statements are
+prepared is consistent with the financial statements; and
+* the Board of Directors’ Report have been prepared in accordance with applicable legal requirements.
+
+Page 11 of 32
+Matters on which we are required to report by exception
+
+In light of the knowledge and understanding of the Bank and its environment obtained in the course of the audit, we
+have identified no material misstatements in the Board of Directors’ Report. We have nothing to report in respect of the
+following matters where the Companies Act 2006 requires us to report to you if, in our opinion:
+
+* adequate accounting records have not been kept, or returns adequate for our audit have not been received from
+branches not visited by us; or
+
+e the financial statements are not in agreement with the accounting records and returns; or
+
+* certain disclosures of directors’ remuneration specified by law are not made; or
+
+» we have not received all the information and explanations we require for our audit.
+
+Erst o ours LU
+
+Javier Faiz (Senior statutory auditor)
+
+for and on behalf of Ernst & Young LLP, Statutory Auditor
+London
+
+22nd June 2017
+
+The following foot note should be added to the audit report when it is published or distributed electronically:
+Notes:
+
+1. The maintenance and integrity of the Monzo Bank Limited (formerly Focus FS Limited) web site is the
+responsibility of the directors; the work carried out by the auditors does not involve consideration of these
+matters and, accordingly, the auditors accept no responsibility for any changes that may have occurred to the
+financial statements since they were initially presented on the web site.
+
+2. Legislation in the United Kingdom governing the preparation and dissemination of financial statements may differ
+from legislation in other jurisdictions.
+
+Page 12 of 32
+"Statement of comprehensive income
+
+For the 12 months ended 28 February 2017
+
+12 months ended 13 months ended
+
+28 February 2017 29 February 2016
+
+£000 £000
+
+Other operating income 120 | 5
+Administrative expenses 5 (8,047) | (1,691)
+Loss before tax (7,927) (1,686)
+Taxation | 8 1,238 | 240
+Total comprehensive loss . | (6,689) (1,446)
+
+The notes on pages 17 to 32 are an integral part of these financial statements. Other income and operating losses were
+
+derived from continuing operations in both the current and prior year.
+
+Page 13 of 32
+Statement of financial position
+
+at 28 February 2017
+
+Assets
+
+| Cash and cash equivatents
+Trade and other receivables
+Property plant and equipment
+Intangible assets
+Total assets
+Liabilities
+Trade and other payables
+Total liabilities
+Equity
+Called up share capital
+Share premium account
+Other reserves
+Accumulated losses
+Total equity
+
+Total liabilities and equity
+
+Notes 28 February 2017 29 February 2016
+£000 £000
+
+9 14,874 411
+10 4,402 320
+1 178 13
+12 24 -
+19,478 744
+
+13 1,080 176
+1,080 176
+
+14 0 0
+26,298 2,000
+
+235 14
+
+(8,135) (1,446)
+
+18,398 568
+
+19,478 744
+
+The notes on pages 17 to 32 are an integral part of these financial statements. The financial statements on pages 13 to
+
+32 were approved and authorised for issuance by the Board on 21st June 2017 and signed on its behalf by
+
+oa
+
+Tom Blomfield
+Director
+
+Page 14 of 32
+‘Statement of changes in equity
+
+for the 12 months ended 28 February 2017
+
+Share Share Other Retained
+capital premium reserves losses
+£000 £000 £000 £000 £000
+At 18 February 2015 - - - - -
+Shares issued _ 2,000 - . 2,000
+Share-based payments
+- - 14 - 14
+reserve
+Losses for the period - - - (1,446) (1,446)
+At 1 March 2016 - 2,000 14 (1,446) 568
+Shares issued - 24,288 - - 24,288
+Cost of issuance - (63) - - (63)
+Share-based payments
+- - 294 - 294
+reserve
+Exercise of options - 73 (73) - -
+Losses for the year - - - (6,689) (6,689)
+At 28 February 2017 - 26,298 235 (8,135) 18,398
+
+Page 15 of 32
+Statement of cashflows
+
+For the 12 months ended 28 February 2017
+
+12 months ended 28 12 months ended 29
+February 2017 February 2016
+£000 £000
+Cash flows from operating activities .
+Loss (6,689) (1,446)
+Adjustments for:
+Depreciation of property plant and 46 6
+equipment
+Amortisation of intangible assets 5 -
+Share-based payments 294 14
+(Increase) in trade and other receivables 10 (4,082) (320)
+Increase in trade and other payables 13 904 176
+Net cash used in operating activities (9,532) (1,570)
+Cash fiows from investing activities
+Acquisition of property, plant and
+a propery P 1" (201) (19)
+equipment
+Acquisition of intangible assets 12 (29) -
+Net cash from investing activities (230) (19)
+Cash flows from financing activities
+Net proceeds from issuance of ordinary
+24,225 2,000
+shares
+Net cash from financing activities 24,225 2,000
+Net increase in cash and cash equivalents 14,463 411
+Cash and cash equivalents at beginning of ant
+the period
+Cash and cash equivalents at end of
+9 14,874 411
+
+year/period
+
+Page 16 of 32
+| Notes to the financial statements
+
+at 28 February 2017
+
+1. Basis of preparation
+
+The accounts have been prepared on an historical cost basis and in accordance with International Financial Reporting
+Standards (‘IFRSs’) as adopted by the European Union. The company prepared its financial statements under Financial
+Reporting Standards for Smaller Entities (‘“FRSSE’) for the period from 18 February 2015 to 29 February 2016. FRSSE
+differs in certain respects from IFRSs, hence certain disclosures have been amended to comply with IFRSs. There have
+been no material changes to the financial statement results or balance sheet position in either the current or previous
+period as a result of the change in accounting policy. The significant accounting policies adopted are set out in Note 3.
+
+The financial statements are presented in GBP, which is also the Company's functional currency.
+
+Certain new accounting standards and interpretations have been published that are not mandatory for the 12 months
+ended 28 February 2017 and have not been early adopted by the company. In addition there are certain new standards
+that are not yet effective and may impact the Company in future periods. These include IFRS 9, ‘Financial Instruments’,
+IFRS 15, ‘Revenue from contracts with customers’ and IFRS 16, ‘Leases’. These standards are expected to impact the
+Company, in particular IFRS 9 once banking operations have commenced, though a detailed analysis of the impact on
+the company has not yet been performed.
+
+The financial statements of the Company have been prepared in accordance with IFRS as issued by the IASB.
+
+2. Critical accounting estimates and judgments
+
+The preparation of the financial statements requires the use of accounting estimates and assumptions. Estimates and
+judgements are continually evaluated based on historical experience and other factors, including expectations of future
+events that are believed to be reasonable under the circumstances. In the future, actual experience may differ from
+these estimates and assumptions.
+
+Management considers that the accounting estimates relating to fair valuing stock based compensation (Note 15), and
+the recognition (or not) of deferred tax assets for carried forward tax losses (Note 3(g)) are the most material to the
+financial statements.
+
+Going concern
+
+Since incorporation the company has undertaken a series of successful equity raisings to fund the start- up phase of
+the business. The initial focus of the company was on obtaining a banking licence. A licence with restrictions was
+obtained in August 2016 and the restrictions were lifted in April 2017. The focus of the company has been on further
+developing its customer proposition and building its operating mode! and infrastructure. The Company plans to launch
+its banking operations to customers in 2017. To support this launch, and subsequent-phases of its growth, the company
+has raised sufficient equity to ensure that it can survive for a period in excess of 12 months from the reporting date.
+However in order to support growth of the business it is expected that a further equity raise will be undertaken at the
+start of 2018. Given the success of previous equity raisings and the growth that is being experienced by Monzo we
+believe that there will be strong demand for that issue. Consequently the financial statements have been prepared on a
+going concern basis.
+
+Page 17 of 32
+Valuation of share options
+
+The Company measures the cost of equity-settled options based on the fair value of the awards granted. The fair value
+is determined based on the observable share prices or by using an appropriate valuation model. The use of option
+pricing models to determine the fair value requires the input of highly subjective assumptions including the expected
+price volatility, expected life of the award and dividend yield. Changes in the subjective assumptions can materially
+affect the fair value estimates. The assumptions and models used for estimating the fair value of share-based
+payments is disclosed in note 15.
+
+Summary of significant accounting policies
+
+This note provides a list of the significant accounting policies adopted in the preparation of these financial statements
+to the extent they have not already been disclosed in the other notes above.
+
+a. Receivables
+
+Receivables are recognised initially at fair value and subsequently measured at amortised cost using the
+effective interest method, less provision for impairment.
+
+b. Cash and cash equivalents
+
+For the purpose of presentation in the Statement of Cash Flows, cash and cash equivalents includes deposits
+‘held at call with financial institutions.
+
+c. Property, plant and equipment
+
+Items of property, plant and equipment are stated at cost less accumulated depreciation and impairment.
+Historical cost includes expenditure that is directly attributable to the cost of the assets.
+
+Depreciation is provided on all property, plant and equipment, and calculated using the straight-line method to
+allocate their cost, net of residual values, over their estimated useful lives, as follows:
+
+Office and IT Equipment — 3 years
+Fixtures and fittings ~ 4 years
+
+Office fit out costs and legal costs of acquiring a new office lease are recognised on a straight-line basis over the
+life of the lease.
+
+d. Intangible assets
+
+Intangible assets are stated at cost less accumulated amortisation and accumulated impairment losses.
+Amortisation is calculated using the straight-line method, to allocate the depreciable amount of the assets to
+their residual values over their estimated useful lives as follows once brought into use:
+
+Third party software licences — amortised over the length of licence, which varies between 1 and 10 years.
+Amoartisation is recorded within administrative expenses in the Statement of Comprehensive Income.
+e. Trade and other payables
+
+These amounts represent liabilities for goods and services provided to the company prior to the end of the
+
+Page 18 of 32
+aad
+
+financial period which are unpaid. The amounts are unsecured and usually paid within 30 days of recognition.
+Trade and other payables are presented as current liabilities. They are recognised initially at fair value and
+subsequently measured at amortised costs using the effective interest method.
+
+. Current Taxation
+
+Current income tax assets and liabilities for the current period are measured at the amount expected to be |
+recovered from or paid to the taxation authorities. The tax rates and tax laws used to compute the amounts are
+those that are enacted or substantively enacted, at the reporting date, when the Company generates taxable
+income. Management periodically evaluates positions taken in the tax returns with respect to situations in which
+applicable tax regulations are subject to interpretation and establishes provisions where appropriate.
+
+. Deferred tax
+
+Deferred tax is recognised on temporary differences arising between the tax bases of assets and liabilities and
+their carrying amounts in the financial statements. Deferred income tax is determined using tax rates (and laws)
+that have been enacted or substantively enacted by the reporting date and are expected to apply when the
+related deferred income tax asset is realised or the deferred income tax liability is settled.
+
+Deferred income tax assets are recognised only to the extent that it is probably that future taxable profits will be
+available against which the temporary differences can be utilised.
+
+. Share-based payments
+
+Employees (including senior executives) may be entitled to receive remuneration in the form of share options to
+reward strong long-term business performance and to incentivise growth for the future.
+
+The cost of the employee services received in respect of the share options granted is recognised over the period
+that employees provide services. This is generally the period in which the award is granted or notified and the
+vesting date. The overall cost of the award is calculated using the number of shares and options expected to vest
+and the fair value of the options at the date of grant.
+
+The fair value of options at grant date is recognised as an employee expense with a corresponding increase in
+equity over the period that the employees become unconditionally entitled to the awards. The grant date fair
+value is determined using valuation models which take into account the terms and conditions attached to the
+awards. Inputs into the valuation model include the risk free rate and the expected volatility of the Company’s
+share price.
+
+. Revenue Recognition
+
+At present the Company generates income from interchange and interest receivable. This is recognised to the
+extent that it is probable that the economic benefits will flaw to the Company and they can be reliably measured,
+which is consistent with the approach to be taken with revenue in future periods.
+
+. Foreign exchange
+
+The Bank’s financial statements are presented in GBP, which is the Bank's functional currency. That is the
+currency of the primary economic environment in which the Bank operates. Transactions in foreign currencies
+are initially recorded at the functional currency rate prevailing at the date of the transaction. Monetary assets and
+
+Page 19 of 32
+liabilities denominated in foreign currencies are retranslated at the functional currency spot rate of exchange
+ruling at the reporting date. All differences are taken to the Statement of Comprehensive Income. Non-monetary
+items that are measured in terms of historical cost in a foreign currency are translated using the exchange rates
+as at the dates of the initial transactions. Non-monetary items measured at fair value in a foreign currency are
+translated using the exchange rates at the date when the fair value is determined.
+
+4. Risk Management
+
+At Monzo, we take the responsibility of being a bank very seriously and recognise that the firm is exposed to a number
+of risks through our chosen business model and business strategy. Identifying, assessing, managing and reporting on
+those risks is central to the way we run the Bank. Good risk management enables the creativity we seek to provide for
+the development of our bank and its technology.
+
+Risk Management Framework
+
+Our approach to Risk Management supports the wider business strategy and is delivered through our Risk Management
+Framework which comprises 6 key components: Risk Appetite, Policies, a 3 Lines of Defence organisation structure,
+various risk procedures, tools and techniques, risk reporting and an appropriate governance structure.
+
+Principal Risks
+
+Through our business strategy and business model we are exposed to a number of risks, the most material of which we
+have termed our principal risks and they are:
+
+« Strategic and Business Model Risk ~ risk or threats that materially affect the business strategy, business model
+and consequently the successful execution of the business plan,
+
+* Customer Outcome Risk - risk that our culture, behaviours and/or actions result in poor customer outcome
+and/or detriment to customers through our product and services not meeting needs.
+
+* Retail Credit Risk - risk that customers who borrow do not meet their obligations in accordance with the agreed
+terms.
+
+« Operational Risk - risk of direct or indirect loss resulting from failed internal processes, people and systems and /
+or from external events.
+
+« Financial Risk ~ various risks which impact the financial profile of the business including liquidity risk, interest
+rate risk and wholesale credit risk.
+
+* Compliance Risk — risk of failure to meet with the relevant legislation and / or regulation.
+
+Page 20 of 32
+"Risk Profile
+
+During the year 2016/17 the business has been focused on a prepaid card programme with a number of partners to test
+a number of areas of the business model whilst building the infrastructure to launch a current account programme. The
+most significant risks are therefore the viability of the business model and the operational risks of running the prepaid
+programme.
+
+Financial crime, cyber security and operational process risk are the main exposures. There is very limited credit and
+financial risk in the prepaid card programme.
+
+As full banking operations commence the Company will be exposed to more significant risks and to the full range of
+risks described above.
+
+Governance
+
+Our governance structure has been developed to support our launch as a bank. It comprises a Board of Directors
+supported by 4 Board Committees each of which has membership drawn from the independent non-executives on the
+Board. The 4 committees are:
+
+« Risk & Compliance Committee
+« Audit Committee
+
+« Remuneration Committee
+
+« Nomination Committee
+
+Day to day running of the business is delegated to the CEO who has established 2 Management Committees to support
+him; an Executive Committee for general business matters and an Assets and Liability Committee on Balance Sheet
+matters.
+
+Page 21 of 32
+5. Loss before tax
+
+12 months ended 13 months ended
+
+28 February 2017
+£000
+
+This is stated after charging:
+Depreciation and amortisation of owned assets 41
+Share-based payments 294
+Auditors’ remuneration for audit of the Company’s financial statements 30
+Prepaid card scheme development 2,713
+Premises cost 233
+Marketing 376
+
+6. Directors’ remunerations
+
+29 February 2016
+
+£000
+
+111
+145
+
+49
+
+12 months ended 13 months ended
+
+Total Directors’ remunerations
+
+Wages and salaries
+
+Share-based payments
+
+Highest paid Director
+Wages and salaries
+
+Share-based payments
+
+28 February 2017 29 February 2016
+£000 £000
+
+65 69
+
+73 -
+
+138 69
+
+60 69
+
+60 69
+
+Page 22 of 32
+7. Personnel Expenses
+
+Employee benefit expense (including Directors) comprise:
+
+12 months ended 13 months ended
+
+28 February 2017 29 February 2016 |
+£000 £000
+Salaries 1,995 | 697
+Social security contributions 239 91
+Share-based payments 294 | 14
+2,528 802
+
+The average number of employees of the company during the period was 47 (13 months ended 29 February 2016 - 14)
+all of whom were employed in management, operations and administration.
+
+Page 23 of 32
+8. Taxation
+
+12 months ended 13 months ended
+
+28 February 2017 29 February 2016
+£000 £000
+UK corporation tax credit on loss for the period 1,238 240
+
+Factors affecting future tax charges
+
+From April 2017 the UK corporation tax rate will fall from 20% to 19%. This has no immediate impact in the current or
+next financial period for the company, however it should result in lower tax charges as and when the company becomes
+profitable and all the carried forward trading losses are utilised.
+
+12 months ended 13 months ended
+
+28 February 2017 29 February 2016
+
+| £000 £000
+
+Loss on ordinary activities before tax (7,927) (1,686)
+
+Standard rate of corporation tax 20% 20%
+
+Expected tax credit 1,585 337
+Effects of:
+
+Expenses not deductible for tax (27) (7)
+
+Additional deduction for R&D expenditure 966 187
+
+Impact of surrendering losses at lower rate (470) (92)
+
+Loss in year where no deferred tax asset recognised | (816) (185)
+
+Total tax credit for the period 1,238 240
+
+Page 24 of 32
+’ Deferred tax
+
+The deferred tax included in the balance sheet is as follows:
+
+12 months ended 13 months ended
+
+28 February 2017 29 February 2016
+£000 £000
+
+Included in debtors - -
+
+12 months ended 13 months ended
+
+28 February 2017 29 February 2016
+
+£000 £000
+
+Accelerated capital allowances (25) (2)
+Losses 25 2
+
+The UK Government has announced reductions in UK corporation tax to 17% by 1 April 2020. The closing deferred tax.
+assets and liabilities have been calculated taking into account that existing temporary differences may unwind in
+periods subject to the reduced rates. A deferred tax asset has not been recognised in respect of tax losses carried
+forward totalling £4,993,718 as there is insufficient evidence as to their recoverability.
+
+9. Cash and cash equivalents
+
+Cash and cash equivalents consists of balances held on overnight deposit with the Bank of England and RBS and
+amount to £14,874,000 at 28 February 2017 (29 February 2016 ~ £411,000).
+
+10. Trade and other receivables
+
+28 February 2017 29 February 2016
+
+£000 £000
+Prepayments 348 20
+Collateral provided to payment scheme providers 2,461 -
+R&D tax reclaim 1,238 240
+Deposit on premises 171 -
+Other receivables 184 60
+
+4,402 320
+
+Page 25 of 32
+11. Property, plant and equipment
+
+Fixtures and fittings Office and IT equipment Total
+£000 £000 £000
+
+Cost
+At 18 February 2015 - - -
+Additions - | 19 19
+Disposals - - -
+At 1 March 2016 - 19 19
+Additions 1 200 201
+Disposals - - ~
+At 28 February 2017 . 1 219 220
+Depreciation
+At 18 February 2015 | - - -
+Charge for this period ~ 6 6
+Depreciation on disposal - - ~
+At 1 March 2016 - 6 6
+charge for this period - | 36 36
+Depreciation on disposal - - -
+At 28 February 2017 ~ 42 42
+Net book value
+At 28 February 2017 1 77 178
+At 29 February 2016 - 13 13
+
+Page 26 of 32
+"12. Intangible assets
+
+Software licenses
+
+£000
+
+Cost
+At 18 February 2015 ~
+
+Additions -
+
+At 29 February 2016 -
+
+Additions ‘ 29
+
+At 28 February 2017 29
+Depreciation
+
+At 18 February 2015 , -
+Charge for this period , ~
+
+Depreciation on disposal ~
+
+At 29 February 2016 ~
+Charge for this period 5
+
+Depreciation on disposal . -
+
+At 28 February 2017 5
+Net book value
+
+At 28 February 2017 24
+
+At 29 February 2016 ~
+
+Page 27 of 32
+13. Trade and other payables .
+
+28 February 2017 29 February 2016
+
+£000 £000
+Trade creditors 229 | 54 |
+| Other taxes and social security costs | : | 103 , 29
+accruals | | 748 93
+| | | 1,080 176
+
+Page 28 of 32
+14. Called up share capital
+
+28 February 2017 29 February 2016
+
+£ £
+Ordinary shares of £0.0000001/£0.00001 each 7 4
+Deferred shares of £0.00001 each ~ 1
+7 5
+Number of ord. Number of deferred Share
+Nominal .
+shares shares capital
+As at 18 February 2015 - - -
+Shares issued 0.001 1,000 - 1
+Shares split - 99,000 -
+0.00001 100,000 - 1
+Shares issued 0.00001 350,746 - 4
+Conversion to deferred
+(50,231) 50,231 -
+shares
+As at 1 March 2016 0.00001 400,515 50,231 5
+Shares split 0.0000001 39,650,985 4,972,869 -
+40,051,500 5,023,100 5
+Shares:issued 0.0000001 Apr-16 11,676,610 - 1
+Conversion to deferred
+(13,125) 13,125
+shares
+Cancellation of deferred
+- (5,036,225) (1)
+shares
+Options exercised 0.0000001 Oct-16 355,459 - -
+Shares issued 0.0000001 Oct-16 6,203,955 - 1
+Shares issued 0.0000001 Feb-17 13,422,181 - 1
+As at 28 February 2017 71,696,550 - 7
+
+Some of the shares in issue are owned by management and staff and are subject to time based vesting conditions. At
+the balance sheet date 10,636,554 shares were unvested. In the event of shares failing to vest the Company has the
+right to repurchase the shares at their nominal value.
+
+Page 29 of 32
+At the balance sheet date 159,629 ordinary shares were subject to a monthly vesting programme and in accordance
+with IFRS 2 will be treated as Treasury shares whilst they remain unvested.
+
+15. Share-based payments
+
+The company operates two share options scheme for the benefit of certain members of staff. The first is an HMRC
+approved Company Share Option scheme (‘CSOP’) in which awards can be made to employees subject to conditions.
+The strike price for these options is set according to the fair market share price at the time of issue as agreed with
+HMRC. For the Non-CSOP scheme, awards are made with the strike price set equal to the nominal value of the shares.
+For both schemes typically twenty five per cent of the options vest at the end of the first year of employment. The
+remainder vest evenly over the next three years. The fair value per share was based on the pricing achieved in the
+funding round immediately preceding the issuance given the shares are not actively traded. The total expense in 2017
+was £294k (2016 £14k).
+
+The main assumptions that have been used in deriving the value of the options at grant are;
+
+Risk free rate 0.32%
+Volatility 40%
+Dividend yield nil
+Expected lift 4 years
+
+Page 30 of 32
+q«
+
+" Share-based payments (continued)
+
+CcSOP Non-CSOP
+
+Fair value share price at date Fair value share price at
+Number Number
+of issue date of issue
+£ £
+Outstanding 18
+February 2015
+Granted during the
+; 12,615 19.967 28,990 19.967
+period
+At 29 February 2016 12,615 28,990
+Share split 1,261,500 0.19967 2,899,000 0.19967
+Granted during the
+period
+45,100 0.19967 113,933 0.19967
+976,714 0.5133 322,938 0.5133
+- 646,766 0.7737 277,827 0.7737
+29,827 1.0058 - 1.0058
+Lapsed (131,211) (43,820)
+Exercised - (355,459)
+At 28 February 2017 2,828,696 3,214,419
+
+16. Related party transactions
+
+Key management personnel compensation
+
+28 February 2017 29 February 2016
+
+£000 £000
+
+Salaries & renumeration 327 206
+Social security contributions 40 25
+Share-based payments 118 4
+485 235
+
+Page 31 of 32
+At the balance sheet date there was a loan to an employee of £22,500. With the exception of this there were no
+balances due to or from a related party.
+
+In the opinion of the Directors there is no overall controlling party.
+
+17. Operating leases
+
+Commitments for minimum lease payments in relation to non-cancellable operating leases are payable as follows:
+
+28 February 2017 29 February 2016
+
+£000 £000
+Within one year 127 13
+Later than one year but not later than five years 1,175 ~
+Later than five years | ~ ~
+
+Total 1,302 13
+
+18. Country reporting disclosure
+
+In 2015, the UK Government enacted legislation (contained in the Financial Services and Markets Act 2000 Statutory
+Instrument 3118)) with respect to country reporting disclosure. As the Company only operates in the UK this
+requirement has been considered and no further disclosure is required.
+
+19. Events after reporting date
+
+The Company raised £2.5m of equity share capital from existing and new investors during the period from 1 March 2017
+to the date of signing the accounts.
+
+The restriction to maximum total deposits of £50,000 was lifted by the FCA and a full banking licence was granted in
+April 2017.
+
+Page 32 of 32

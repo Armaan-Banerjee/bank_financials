@@ -1,0 +1,3266 @@
+x
+g
+OakNorth Bank Limited Fa I i
+Balance sheet = ie pends a7
+As at 31 December 2017 COMPANIES HOUSE
+2017 2016
+Note £'000 £'000
+ASSETS
+Cash and balances at central bank 148,340 51,175
+Loans and advances to banks 8 5,362 9,161
+Loans and advances to customers 9, 10 604,937 225,508
+Debt Securities 11 2,115 500
+Intangible assets 12 276 312
+Tangibie fixed assets 13 3,109 3,750
+Prepayments and accruals 14 4,137 1,225
+Other assets 15 311 291
+Total assets 768,587 291,922
+LIABILITIES
+Customer deposits 16 491,261 202,397
+Borrowings under BOE Term funding 7 1,000 -
+scheme
+Accrued interest on customer deposits 5,845 1,297
+Trade payables and other provisions 18 4,561 1,730
+Deferred tax liabilities (net) 3 6 -
+Other liabilities 19 12,085 5,137
+514,758 210,561
+CAPITAL AND RESERVES
+Called up share capital 25 249,320 86,320
+Capital contribution 25 4
+Profit and loss account 26 4,511 (4,963)
+Available for sale reserve (27) :
+253,829 81,361
+Total liabilities and capital and reserves 768,587 291,922
+
+The financial statements of OakNorth Bank Limited were approved by the Board of
+Directors and authorised for issue on 26 February 2018. They were signed on its behalf by:
+
+(| foo. ye
+“o LAM sh
+Rishi Khosla eran
+
+1 Cristina Alba Ochoa
+Executive Director Pxecutive Director Executive Director
+CEO and Co-Founder TSO and Co-Founder CFO
+
+36 [Page
+
+OakNorth Bank Limited
+Statement of comprehensive income
+For the year ended 31 December 2017
+
+Profit/{Loss) after tax
+
+Fair value changes on available for sale
+financial instruments
+
+Taxation
+
+Total comprehensive income/(loss) for the year
+
+attributable to equity shareholders
+
+35[ Page
+
+2017 2016
+£000 £'000
+9,474 (2,421)
+(33) 7
+
+6
+9,447 (2,414)
+
+Annual report 2017
+
+Lending for Entrepreneurs, by
+Entrepreneurs
+
+OakNorth Bank Limited Annual report and Financial
+Statements for the year ended 31 December 2017
+
+OakNorth
+
+Registered number: 08595042
+
+OakNorth Bank Limited
+
+September 2015
+
+Launch
+
+facilities of £130.6 million.
+
+2|Page
+
+2016
+
+Loan book:
+
+£276 million
+
+Contents
+
+Page
+Directors 3
+Chairman's statement 4
+Chief Executive's review 6
+Key Business highlights 10
+Strategic Report 14
+Directors’ Report 23
+Statement of Directors’ respansibilitics 25
+independent auditor’s report 26
+Profit and loss statement 34
+Statement of comprehensive income 35
+Balance sheet 36
+Statement of changes in equity 37
+Cash flow statement 38
+Notes to the financial statements 39
+
+2017
+
+Loan book:
+
+£851' million
+
+' Funded loan book £613.1 million (2016: £229.4 million), excluding unamortised fees of £5.8 million (2016: £3.0
+million) and including undrawn committed facilities of £107.7 million (2016: £46.5 million) and uncommitted
+
+OakNorth Bank Limited
+Directors
+
+Cyrus Ardalan
+Chairman
+
+Rishi Khosla
+Chief Executive Officer and
+Co-founder
+
+Robert Burgess
+
+Joel Perlman
+Non-Executive Director
+
+Chief Strategy Officer and
+Co-founder
+
+Navtej S Nandra
+
+Graham Olive
+Non-Executive Director
+
+Deputy Chief Executive
+Officer
+
+Edward Barry Berk
+
+Cristina Alba Ochoa
+Non-Executive Director
+
+Chief Financial Officer
+
+Ajit Mittal
+
+Non-Executive Director
+
+Gagan Banga
+Non-Executive Director
+
+3) Page
+
+QakNorth Bank | imited
+Chairman's statement
+
+“The UK is much better at creating new
+companies than nurturing the ones
+that already exist. We're trying to
+change that - we want the UK to be
+known as a nation of scale-ups, rather
+than a nation of start-ups.”
+
+Cyrus Ardalan
+Chairman
+
+The ability of Small and Medium Enterprises (SMEs) to access adequate and suitable
+financing to grow their businesses remains a major challenge. If you consider the SME
+lending market today, at the smaller end of the scale (loans of sub £0.5m), large banks offer
+several debt options, including small general-purpose business loans, asset finance, and
+invoice finance. To make these propositions commercially viable, these options are
+standardised and typicatly built on automated credit models, which allow lenders to process
+loans quickly and efficiently. There is little flexibility in the structure and terms of these
+loans. At the larger end of the scale (loans of £30 million+), however, lenders can justify
+allocating significant amounts of time and resources to underwriting the loan because the
+potential returns are substantial, Borrowers with loans that fall outside these parameters see
+their applications extend over months and are often rejected or poorly served, OakNorth’s
+co-founders, Rishi Khosla and Joel Pertman, launched OakNorth Bank Limited in September
+2015 to tackle this problem.
+
+During 2017 we continued to witness considerable uncertainty in the UK economy. The
+triggering of Article 50, a shock general election, and some of the most damaging and
+widespread cyber security breaches in history, impacted the financial position and
+confidence of many UK businesses. This led to a general deceleration of economic growth.
+Despite this, we saw demand for our bespoke lending services continue to rise - at the end
+of 2016, our loan facilities stood at £276.0 million and as at 31 December 2017, the gross
+funded loan book and undrawn facilities ended at £851.5 million’, and we have a further
+qualified pipeline of over £1 billion. We are proud to call some of the UK’s most recognisable
+brands and renowned house builders our clients, and we have demonstrated to the market
+that we are a disruptor that is here to stay.
+
+OakNorth Bank Limited (‘OakNorth’) ended 2017 with a strong balance sheet of £768.6
+million (2016: £291.9 million) and we are pleased to have been able to deliver strong
+underlying operating profit before tax of £10.6 million (2016: £2.4 million toss) in our second
+full year of operations. Our disciplined approach towards cost management will allow us to
+
+2 Funded loan book £613.1 million (2016: £229.4 million), excluding unamortised fees of £5.8 million (2016: £3.0
+miilion) and including undrawn committed facilities of £107.7 million (2016: £46.5 million) and uncommitted
+facilities of £130.6 million.
+
+4|fage
+
+OakNorth Bank Limited
+Chairman's statement continued
+
+operate efficiently and invest in delivering growth in the loan book in 2018. We anticipate a
+significant growth in revenues and further improvement in the operating results in 2018.
+
+In January 2017, we became the first challenger bank to join the British Business Bank’s
+Help to Grow Programme, providing OakNorth with guarantees on £30 million of loans to
+innovative UK companies over the next two years. We completed the first transaction under
+the scheme since it launched, in March 2017, and since then, have closed several deals under
+it.
+
+The Board has a very constructive and effective relationship with the management on the
+firm's strategy and its implementation. The Board committees play a key role in this process
+and are chaired by two independent Non-Executive Directors (NEDs) - Robert Burgess, and
+Navtej S. Nandra; with Edward Barry Berk also a member and Ajit Mittal and Gagan Banga
+from Indiabulls Housing Finance Limited in attendance. The Board will continue to enhance
+the firm’s governance and risk management framework and ensure that best practices are
+followed as we continue to scale,
+
+To conclude, | would like, on behalf of the Board, to thank all our customers for supporting
+OakNorth. | would also like to acknowledge the tremendous work of all employees whose
+commitment has been vital for enabling us to achieve all that we have so far, and all that we
+hope to achieve in the years to come.
+
+Chairman
+Cyrus Ardalan
+26 February 2018
+
+5[Paqe
+
+OakNorth Bank Limited
+Chief Executive's Review
+
+“Our loans have already had a
+significant impact on the UK economy,
+directly helping with the creation of
+thousands of new jobs and_ the
+development of thousands of new
+homes.”
+
+Rishi Khosla
+Chief Executive Officer and Co-Founder
+
+A year of milestones and momentum
+
+It has been another exceptional year for OakNorth; we have solidified our position in the
+SME lending market, providing over £1 billion of gross lending in the UK - up from £300
+million a year ago. The gross funded and undrawn loan facilities ended at £851.5 million? as
+at 31 December 2017. Through growing the loan book, we have upheld the quality of credit
+- not a single missed payment throughout the year - whilst maintaining a clear view of how
+each business we have lent to is performing.
+
+While many large banks continued to retrench amidst ongoing Brexit uncertainty, we saw
+it as an opportunity to help UK entrepreneurs at a time when they needed it. We have now
+lent to 200 businesses across the UK and across sectors - from hotels, bars and restaurant
+chains, to care homes, nurseries, manufacturing businesses, security companies, tech firms,
+property developers, art galleries, catering companies, private equity houses, and media
+agencies.
+
+Our lending has been supported by our incredibly strong deposit customer base - we now
+have thousands of deposit customers who are making the most of their savings with our
+FSCS-protected products. In addition to our range of competitive fixed-rate bond, easy access
+and notice savings accounts, we also launched easy access and fixed-rate cash ISAs this year,
+as well as savings accounts for businesses. We keep our cost of funding low through our
+deposit raising platform which is highly automated and enables individuals to open accounts
+in three minutes on average, and businesses to open accounts in 20 minutes on average. We
+raised over £491.3 million in retail deposits as of 31 December 2017 (2016: £202.4 million).
+
+OakNorth’s close association with ACORN machine, our sister entity, has been an important
+differentiating factor. The purpose of ACORN machine is to not only help OakNorth
+continue scaling its business in the UK, but also replicate our proposition globally. Through
+leveraging fundamental credit analysis with artificial intelligence and machine learning, we
+are able to fuel data-driven decision making across the loan lifecycle- from our exceptionally
+
+3 Funded loan book £613.1 million (2016: £229.4 million), excluding unamortised fees of £5.8 million (2016: £3.0
+million) and including undrawn committed facilities of £107.7 million (2016: £46.5 million) and uncommitted
+facilities of £130.6 million.
+
+6|Poege
+
+OakNorth Bank Limited
+Chief Executive's Review continued
+
+high-quality crigination capability. to our rigorous underwriting and monitoring that’s more
+akin to that undertaken by private equity firms.
+
+We are incredibly humbied and grateful that in 2017, we won several industry awards and
+received recognition from the community for our achievements so far. These included -
+being named on The Leap 100: a list of the fastest-growing companies in the UK, and
+winning the National Technology Award for Cloud Innovation, the Property Week RESI
+Award for Residential Financier of the Year and City A.M.’s Bank of the Year.
+
+in November 2017, our holding company closed an investment round of £250 million
+(primary and secondary), raising funds from: GIC, Toscafund, Coltrane Asset Management
+and The Clermont Group. Our strong capital position will allow us to lend a further £1.5
+billion to UK businesses.
+
+However, none of these significant milestones could have been achieved without the
+brilliant work of the team. They have lived and breathed our values — momentum, 10X, one
+team, say it how it is, challenge and simplify, and right ambition - and have shown incredible
+dedication to what we are trying to achieve for UK SMEs.
+
+Attracting the world’s best talent
+
+The one overarching ingredient which | believe bonds together the unique culture within
+our organisation is the fact that over a third of our employees have taken the opportunity to
+become owners of the business. As such, their instinct is to build for the long term and for
+the benefit of the overall company.
+
+QOakNorth’s headcount at the end of 2017 was 65 across our offices im London and
+Manchester, and we have already made new hires in 2018, including Debt Finance Directors
+and Credit Directors. OakNorth is supported by other entities in the Group? which had a
+total headcount of 144 by the end of 20175.
+
+We continue to grow the ACORN machine team which currently comprises of a mix of core
+technologists and machine learning experts recruited from Palantir, Amazon, Google and
+Tencent, working alongside highly experienced SME lending practitioners.
+
+Robust corporate governance
+
+OakNorth has an experienced senior management team with a Board comprising of six
+highly experienced non-executive directors who provide oversight of all activity. This
+includes monitoring of credit risk, conduct risk, financial risk, regulatory risk, operational
+risk, reputational risk and compliance.
+
+Our Executive Committee has leadership responsibility for the various functional areas of
+the firm. We have a strong governance framework in place with independent oversight and
+assurance provided by the Chief Risk Officer (‘second line of defence’) and Head of Internal
+Audit (‘third line of defence’). Strategic planning and balance sheet management is handled
+
+4 Includes entities under the ACORN OakNorth Holdings Limited -ACORN Machine and OakNorth Global
+Private Limited. More details are provided in Note 28 Related Party Transactions
+
+5 Excluding the Bank
+
+7[Poequ
+
+OakNorth Bank Limited
+Chief Executive's Review continued
+
+by the Asset and Liability Committee. An Operations Committee oversees the structure,
+framework, policies, processes and performance retated to the operational infrastructure.
+
+In addition to the above, we have an advisory board including Lord (Adair) Turner, former
+Chairman of the Financial Services Authority and Lord (Francis) Maude, former Minister
+for the Cabinet Office and for Trade and Investment and Nick Lee, former Head of New
+Banks at the Bank of England.
+
+We have a robust and comprehensive risk appetite framework which sets parameters and
+early warning indicators for the key aspects of our business. For credit risk in particular,
+robust processes and controls have been embedded to monitor loan performance, early
+warning indicators and covenants.
+
+Financial performance
+
+OakNorth had a pre-tax income of £10.6 million for the 2017 calendar year (2016: loss £2.4
+million), recovering all previously brought-forward losses. The average yield on the loan
+book was 8.5%® and the average cost of deposits was 1.7%, resulting in a net margin of 6.9%.
+We had no loan defaults and there were no specific provisions, and together with improved
+cost efficiencies-contributes to improved profitability which keeps increasing in line with
+business expectations.
+
+The growth in income was driven by maintaining high credit quality and stable returns on
+the committed loan book which grew by over 2.5x from the prior year, and our continued
+efforts to maintain optimal operating cost base and cost of funding. The liquidity and capital
+position remained strong throughout the year. Details on capital adequacy can be found
+separately in our Pillar 3 disclosures document.
+
+The future - unlocking the potential in bespoke lending to SMEs
+
+ACORN machine is our Group’s fintech platform that helps automate the way OakNorth
+provides bespoke loans to SMEs in the UK. It does this by leveraging process excellence,
+machine learning and technology to fuel data-driven decision-making across the joan
+lifecycle. Through ACORN, we are giving foreign banks and lending institutions the
+opportunity to unlock the potential in bespoke lending to SMEs and replicate OakNorth’s
+success outside the UK, and, in doing so, help thousands more SMEs around the world
+achieve their growth ambitions.
+
+VLA
+
+Rishi Khosia
+Chief Executive Officer and Co-Founder
+26 February 2018
+
+6 Including fee income
+
+8) Page
+
+OakNorth Bank Limited
+
+Key business highlights
+
+9| Page
+
+OakNorth Bank Limited
+
+2017 Highlights
+
+Second full year of operation
+
+Grew the net interest and fee income by 269%
+from £7.7 million to £28.3 million, with profit
+before tax for the year at £10.6 million, recovering
+
+all previous losses
+
+Grew the loan book including undrawn facilities,
+from £276 million to £851 million
+
+Attracted °O of savings customers across
+our different deposit products
+
+Launched fixed-rate bond savings accounts for
+
+businesses, as well as personal fixed rate and
+
+easy access cash ISAs
+
+Received full authorisation from the Bank
+
+of England to join its Term Funding Scheme
+
+Increased equity base to £254 million
+
+OakWNorth Bank Limited
+
+OakNorth Bank
+
+6 Floor, Nightingale House. r—~
+65 Curzon Stre tn, OakNorth Bank
+
+’
+
+London W1J 8PE
+oaknorthbankuk
+
+www.oaknorth.com
+
+OakNorth Bank Limited is authorised by the Prudential Regulation Authority and regulated by
+the Financial Conduct Authority and the Prudential Regulation Authority. (Financial Services
+Register number: 629564. The Financial Services Register can be accessed at
+www.fca.org.uk/register). Registered Office: 6th Floor, Nightingale House, 65 Curzon Street,
+London W1J 8PE. Reaistered in Enaland No. 08595042
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+29 Controlling party
+
+In the opinion of the Directors, OakNorth’s immediate and ultimate controlling party is
+ACORN OakNorth Holdings Limited, Jersey, with registered office at- Ordnance House, 31
+Pier Road, St. Helier, Jersey JE4 8PW.
+
+30 Post balance sheet events
+As of 09 February 2018, OakNorth had purchased £75.0 million of GILTS with maturity date
+of 22 July 2019 at a yield of 63bps.
+
+As of 22 February 2018, OakNorth had drawn down £147.6 million under the Bank of
+England's Term Funding Scheme. £159.3 million of OakNorth’s gross loan boak and £75.0
+million of the GILTS had been encumbered against the borrowing.
+
+There have been no other material events after the balance sheet date which would require
+disctosure or adjustments to the 31 December 2017 financial statements.
+
+64] fage
+
+OakNorth Bank Lirnited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+The following amounts were outstanding at
+the balance sheet date:
+
+2017 2016
+£'000 £'000
+Equity holding
+ACORN OakNorth Holdings Limited, Jersey 249,320 86,320
+Amounts owed to / (from) related parties
+OakNorth Global Private Limited, India 418 (60)
+ACORN Machine (UK) Limited 48 -
+ACORN Machine (SG) Pte Limited (274) -
+Key management personnel - 13
+
+ACORN OakNorth Holdings Limited, Jersey is a related party of OakNorth because it is the
+holding company. OakNorth Global Private Limited, ACORN Machine (UK) Limited, ACORN
+Machine (SG) Pte Limited are related parties of OakNorth because they are fellow
+subsidiaries. Heady LLC is related party of OakNorth as some of the Directors of OakNorth
+or their close relatives had the ability to exercise significant influence on the financial and
+Operational policies.
+
+The amounts outstanding are unsecured and will be settled in cash. No guarantees have been
+given or received. No provisions have been made for doubtful debts in respect of the
+amounts owed by related parties.
+
+Directors’ transactions
+Other related party transactions
+
+The total remuneration for key management personnel are as detailed in note 6.
+
+2017 2016
+
+£'000 £'000
+
+Employee costs 1,367 420
+Other taxable benefits 8 -
+Share-based payment 3 -
+Total cost 1,378 420
+
+The share-based payments expense included in the above is the expense recognised as per
+the vesting schedule.
+
+63(Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+26 Profit and loss account
+
+2017 2016
+
+£'000 £'000
+
+As at the start of the year (4,963) (2,542)
+Profit/(Loss) during the year 9,474 (2,421)
+As at end of year 31 December 4,511 (4,963)
+
+27 Segmental information
+
+OakNorth operates in one segment of business which is lending. All income on such foans
+
+granted arises in the United Kingdom.
+
+28 Related party transactions
+
+Transactions with related parties include contract charges for services provided by
+OakNorth Globat Private Limited, ACORN Machine (UK) Limited- fellow subsidiary entities
+of the group and subscription of share capital by the Holding Company, as disclosed below.
+
+2017
+£'000
+ACORN OakNorth Holdings Limited, Jersey
+- Subscription of shares 163,000
+
+OakNorth Global Private Limited, India
+- Purchase of services 3,386
+- Advances paid -
+
+ACORN Machine (UK) Limited
+- Purchase of services 137
+- Expenses recoverable 89
+
+ACORN Machine (SG) Pte Limited
+
+- Expenses recoverable 274
+Heady LLC
+~ Purchase of services 69
+
+The disclosures are presented including amounts accrued but not billed.
+
+2016
+£'000
+
+820
+
+1,068
+60
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+Conduct, compliance and regulatory risks
+
+Conduct Risk is defined as the risk that a firm's behaviour results in poor outcomes for
+customers. Conduct risk is seen across regulatory, operational and reputational risk
+categories. OakNorth is focussed on delivering good outcomes for its customers.
+Compliance risk is defined as the risk of impairment to the organisation's business model,
+reputation and/or financial condition resulting from failure to meet laws, regulations,
+standards and policies, and expectations of regulators and society as whole. OakNorth has a
+zero appetite for any breach of regulation, code or standard of conduct.
+
+Regulatory risk is defined as the risk of regulatory sanction, financial loss, or loss to
+reputation OakNorth may suffer because of failure to comply with alt laws and regulations,
+and the expectations of regulators.
+
+OakNorth uses the customer outcomes approach to assess conduct and regulatory
+compliance risk. Staff are provided with a Compliance Manual and appropriate training to
+provide an overview of the regulatory system under which OakNorth operates, to provide
+an outline of OakNorth’s Compliance policy in each area, and to provide instructions on
+policies and procedures for compliance,
+
+25 Called-up share capital
+
+2017 2016
+£'000 £'000
+Allotted, called-up and fully-paid
+249,320,001 (previous year: 86,320,001)
+ordinary shares of £1 each 249,320 86,320
+
+No of shares
+
+{in ‘000)
+AS at 31 December 2015 85,500
+Issue of shares during the year 820
+AS at 31 December 2016 86,320
+Issue of shares during the year 163,000
+AS at 31 December 2017 249,320
+
+61[ Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+e Pipeline Risk: The uncertainties of occurrence of future transactions.
+
+« Prepayment Risk: Borrowers redeeming fixed rate products when interest rates change
+or prepaying loans for other reasons.
+
+OakNorth’s interest rate risk management policy is detailed in OakNorth’s Market Risk
+Management policy, which defines, measures, sets hedging policy statements and details the
+governance process around the management, monitoring and reporting of the interest rate
+risks.
+
+The Head of Treasury is responsible for the day-to-day management of the interest rate risk
+position of OakNorth. The CFO, reporting to the ALCO, takes an oversight role of this
+function with risk limits and current position against these limits reported monthly.
+
+The two key measures / reports that OakNorth uses for measurement and monitoring of
+interest rate risk are: sensitivity to 200 basis point (bps) shift in the entire yield curve to
+measure the interest rate risk in the banking book (IRRBB) and the basis risk exposure report.
+OakNorth monitors the Net Present Value (NPV) sensitivity to the positive and negative 200
+basis points shift in the yield curve including the Bank of England base rate or LIBOR- linked
+floors embedded within the customer loan agreements,
+
+As at 31 December, the NPV sensitivity to +-200bps shift was as follows, which indicates a
+positive effect of the rate floors on OakNorth's interest rate risk:
+
+2017 2016
+
+em £m
+
+NPV Sensitivity to +2% shift (including base/LIBOR rate floors) 5.8 3.3
+NPV Sensitivity to -2% shift (including base/LIBOR rate floors) 17.2 4.0
+
+As at 31 December 2017, the basis risk exposure due to a 25bps reduction in the Bank of
+England base rate would reduce the net interest margin by approximately £406K (2016:
+£131K) on an annualised basis. The impact is mainly driven by the balances held at the Bank
+of England. The impact on the lending book is low due to the base rate floors embedded
+within OakNorth’s loan agreements.
+
+Operational Risk
+
+Operationat risk is defined as the risk of direct or indirect impacts resulting from human
+factors, inadequate or failed internal processes and systems, or external events. OakNorth
+aims to mitigate each risk with robust controls and monitoring.
+
+OakNorth has implemented a rigorous Operational Risk policy and risk mitigation processes.
+Each function, as the first line of defence, ensures that any operational risk in their area is
+mitigated by clearly defined and documented process documents and undertakes a thorough
+Risk and Controls Self-Assessment (RCSA) process. Appropriate risk limits and their
+thresholds and early warning indicators are set. Reporting of appropriate MI on process
+effectiveness and any events or near misses is made monthly to the OPCO, EXCO and Board.
+
+60|hage
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+Liquidity risk
+
+This is defined as the risk that OakNorth is unable to meet its contractual financial
+obligations as they fall due and is unable to fund future lending growth opportunities or is
+able to do so only at significantly higher funding costs. The most important liquidity risk
+OakNorth faces is retail funding risk - i.e. the risk that retail funds may be withdrawn from
+OakNorth at their earliest contractual maturity in the event of a stress occurring.
+
+OakNorth has a detailed Funding policy which sets out the approach to funding the asset
+book and at the same time limiting the concentration of the funding sources. OakNorth has
+put in place an Individual Liquidity Adequacy Assessment Process (ILAAP), which informs
+OakNorth’s Board of the ongoing assessment and quantification of OakNorth’s liquidity risks
+by defining OakNorth’s ILAAP methodology and prescribed stress tests, how OakNorth
+mitigates those risks and how much current and future liquidity is required. OakNorth also
+has a “Liquidity Contingency Funding Plan” (LCP) in place which is designed to ensure that
+OakNorth can meet its obligations as they fall due even in a stress situation. OakNorth also
+regularly updates its Recovery plan, which is designed to detail a range of credible options
+for addressing capital and liquidity challenges under a range of stress scenarios.
+
+OakNorth’s liquidity position is monitored in accordance with OakNorth’s Liquidity Risk
+Management Policy and in accordance with the Liquidity risk appetite statements as
+approved by OakNorth’s Board.
+
+The Asset and Liability Management Committee (ALCO) is responsible for setting and
+Monitoring the appropriate thresholds and limits on the capital and liquidity risk drivers, the
+day-to-day decision-making process around early warning triggers and ensuring that
+OakNorth remains on target and within its capital and liquidity risk appetite. Further
+oversight is provided by the Risk function. The ALCO also conducts risk appetite appraisals
+to ensure that the Capital and Liquidity risk appetite staternents are up to date and remain
+relevant to OakNorth’s opcrations.
+
+As at 31 December 2017, OakNorth held high quality liquid assets of £150.5 million (2016:
+£51.7 million) of which £1.1 million of GILTS were encumbered (2016: nil).
+
+Interest rate risk
+
+Interest rate risk in the banking book is defined as the risk of losses arising from changes in
+the interest rates associated with OakNorth’s banking book exposures. The risk may arise
+due to the following:
+
+¢ Duration or Repricing Risk: The risk arising from repricing mismatch of assets and
+liabilities. The majority of OakNorth’s assets reprice bascd on the base rates while most
+deposit liabilities are fixed rate.
+
+¢ Basis Risk: Unhedged exposure to one interest rate benchmark with exposure to another
+interest rate benchmark that reprices under different conditions (e.g. Bank of England
+Base rate and LIBOR).
+
+59] Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+and limits on the credil risk drivers and ensuring that the day-to-day decision-making
+process meets the risk appetite limits.
+
+OakNorth has set its detailed guidance and specific Lending Policy metrics. Every approved
+loan is assigned a risk rating (based on a Probability of Default (PD) and Loss Given Default
+(LGD)) which drives both pricing and the level of ongoing monitoring which OakNorth
+adopts.
+
+Credit proposals are approved by the CRMC or the BCC based on the arnount and/or the
+internal risk rating of the facility. All credit considered by the BCC are initially recommended
+by the CRMC.
+
+Concentration risk is managed through the risk appetite framework which also stipulates
+the various limits to manage exposure concentrations within OakNorth.
+
+Credit monitoring is completed by the Credit Risk Portfolio Management team on a
+regular/daily basis. Credit facilities are subject to formal periodic (minimum annuai) review.
+OakNorth reviews its credit exposure both at the facility and on a portfolio level. OakNorth
+has processes to identify potential financial difficulty in a customer account via regular
+monitoring and reviews, Trigger Events or Early Warning Indicators (for example, financial
+performance not in line with the projections or breach of covenants). Intensive monitoring
+of customers with potential/ actual financial difficulty takes place via a Watch List process.
+OakNorth also has a forbearance policy in place.
+
+OakNorth seeks to mitigate credit risk through, inter alia, eligible collateral. OakNorth’s
+CRMP details the eligible collateral that OakNorth may accept for risk mitigation purposes.
+This includes debenture/ charge on fixed and floating assets, charge on freehold land or
+property, guarantees (personal, corporate), and cash reserves/deposits. OakNorth has a
+policy guidance on the valuation conditions and methods. OakNorth also has a policy in
+relation to the external valuation firms/quantity surveyors who can be added to OakNorth’s
+valuation panel. Any review of collateral is done in line with the scheduled (minimum
+annual) review for the credit and frequency as specific to the security type, as applicable.
+
+As on 31 December 2017, around 92% of OakNorth’s loan facilities were collateralised by
+security comprising of fixed assets (including property) - these exclude any charges on
+floating assets and guarantees not supported by charge on fixed assets (2016: 87%).
+
+Both the CRMC and BCC monitor the performance of the overall portfolio on a regular basis
+and at least monthly through the production of management information including: lending
+volumes, key credit model output performance, rating downgrades, concentration risk
+(including large exposures), impairments and any material recoveries (if ary).
+
+OakNorth had no overdue exposures as at 31 December 2017 (2016: Nif). OakNorth had not
+granted any forbearance on the accounts during the year. All credit risk exposures of
+OakNorth {i.e. the collaterals and business cash flows) are in the UK.
+
+58( Page
+
+OakNorth Barik Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+OakNorth uses the Standardised Approach for computing capital requirements for credit
+risk and market risk and the Basic Indicator Approach for operational risk. The disclosures
+in this document are based on these approaches, OakNorth has complied with all regulatory
+capital requirements throughout the year.
+
+OakNorth has Tier 1 capital resources which include ordinary share capital, Available For
+Sale revaluation reserve, Employee Share Scheme valuation reserves and retained earnings,
+reduced by the intangible assets. Tier 2 capital includes IBNR provisions reserve. More
+information is provided in OakNorth’s Pillar 3 disclosures available in a separate document.
+
+24 Risk Management Framework
+
+OakNorth has adopted the governance framework in line with the corporate governance
+practices at other UK financial institutions. As a financial institution, OakNorth is exposed
+to various types of risks. Oak North has implemented an Enterprise Wide Risk Management
+Framework to identify, measure and monitor these risks, OakNorth has developed a risk
+appetite framework to manage the risks. The risk appetite statements cascade to the suite
+of Policies which define the controls needed to implement them. The Policies in turn cascade
+to Standard Operating Procedures (SOPs) which operationalise the controls.
+
+The Board of Directors oversees the risks assumed by OakNorth and specific Board
+committees have been constituted to facilitate focused oversight of various risks. The Board
+is assisted by its committees, the Board Audit Committee, Board Risk & Compliance
+Committee, Board Credit Committee and Board Remuneration Committee. The day-to-day
+responsibilities are further delegated to the Executive Committee (EXCO). The EXCO is
+supported by various other committees including: Credit Risk Management Committee,
+Operations Committee and Asset and Liability Committee.
+
+The approach to manage key risks is outlined below
+
+Credit Risk
+
+Credit Risk is defined as the potential that a borrower or counterparty will fail to meet its
+obligations in accordance with agreed, contractual terms. This risk arises from OakNorth’s
+lending activities as a result of defaulting loans and is the most significant risk faced by
+OakNorth as the loan book grows.
+
+QakNorth does not actively trade in financial instruments, other than for liquidity
+management purposes,
+
+A detailed Credit Risk Management Policy (CRMP) has been set, designed to ensure that
+OakNorth’s lending is prudent and is managed in alignment with the overall Board risk
+appetite and corresponding financial and capital targets for OakNorth. The Board Credit
+Committee (BCC) is responsible for ensuring that the Credit risk appetite statements are up
+to date and relevant to OakNorth’s operations. Specific credit risk management portfolio
+oversight and approval of lending decisions within authority is delegated by the Board ta the
+BCC and in turn to the executive Credit Risk Management Committee (CRMC) and Head of
+Credit Risk. The Head of Credit Risk is responsible for monitoring the appropriate thresholds
+
+STP age
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+Total future minimum lease payments under
+non-cancellable operating leases are as follows:
+
+2017 2016
+
+£'000 £'000
+
+- within one year 230 48
+- between one and five years -
+
+- after five years : -
+
+230 48
+
+21 Contingent liabilities and commitments
+
+As on 31 December 2017, OakNorth had undrawn loan commitments outstanding for £107.7
+million (2016: £46.5 million). Additionally, OakNorth also had £130.6 million of uncommitted
+facilities outstanding as of 31 December 2017, OakNorth had no other contingent liabilities
+as on 31 December 2017 (2016: Nil).
+
+OakNorth allows for drawdowns under property development facilities only where our
+quantity surveyor has verified the costs and progress of the development. For other business
+lending, OakNorth always stipulates conditions precedent for drawdown.
+
+22 Country by country reporting
+
+The Capital Requirements Directive 4 (CRD [V’) requirements stipulate reporting on a
+consolidated basis, by country where the reporting institution has an establishment, the
+name, nature of activities, geographical location, number of employees, turnover, pre-tax
+profit/loss, corporation taxes paid and any public subsidies received. OakNorth is a UK based
+bank and only operates out of its offices in London and Manchester.
+
+23 Capital management
+
+OakNorth’s risk appetite statement and framework are designed to ensure that OakNorth
+maintains sufficient capital, with appropriate buffers, to meet regulatory requirements for
+its ongoing growth projections, even in periods of stress. To enable this, OakNorth conducts
+the Internal Capital Adequacy Assessment Process (ICAAP?), which is a formal capital
+planning exercise over a 5-year period. As a part of the ICAAP, the Board is required to
+consider all material risks OakNorth faces and determine the amount, type and distribution
+of capital that will be required to cover such risks. This is achieved through the “Stress
+testing” process. On an ongoing basis, OakNorth monitors the capital adequacy through the
+volume of growth in the loan book. The capital adequacy and capital buffer position (forecast
+and actuals) are reported to the ALCO, EXCO, the Board Risk Committee and the Board on
+a monthly basis.
+
+56[P age
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+17. Borrowings under the Bank of England (BOE) Term funding scheme (TFS)
+
+As of 31 December 2017, OakNorth had pledged £1.1 million of GILTS as collateral and drawn
+£1.0 million under the TFS scheme (2016: nil). The interest payable on the borrowings is
+linked to the BOE base rate, which is currently 50bps. The borrowing is repayable after four
+years of drawdown which is year 2022 for this borrowing.
+
+18 Trade payables and other provisions - amounts falling due within one year
+
+2017 2016
+
+£'000 £'000
+
+Trade creditors and accruals 3,303 1,496
+Payroll taxes and social security 299 234
+Corporation tax payable 959 -
+4,561 1,730
+
+The carrying amount of trade payables approximates to their fair value.
+
+19 Other liabilities
+
+2017 2016
+£'000 £'000
+Deferred income & income received in advance 11,404 4,555
+Other payables/ Items in suspense 681 582
+12,085 5,137
+
+20 Operating lease commitments
+2017 2016
+£'000 £°000
+Lease expense charged to the profit and loss 269 164
+
+Operating lease payments represent rentals payable by OakNorth for its office premises
+and for flat rented for use of full time employees.
+
+55[Paqe
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+14 Prepayments and accruals
+
+2017 2016
+£'000 £'000
+
+Accrued interest and fees receivable 3,598 1,067
+Prepayments & other receivables 539 158
+
+4,137 1,225
+
+15 Other assets
+
+2017 2016
+£'000 £'000
+Security deposits 48 48
+Other assets 263 243
+311 291
+16 Customer deposits
+
+2017 2016
+£'000 £'000
+Customer deposits 491,261 202,397
+
+Amounts due:
+- within one year 331,990 93,174
+- over one year but less than five years 149,106 109,050
+481,096 202,224
+repayable on demand or at short notice 10,165 173
+Total deposits 491,261 202,397
+
+The fair values of financial liabilities are approximate to their book values.
+
+OakNorth Bank Limited
+
+Notes to the financial statements
+For the year ended 31 December 2017
+
+All the investments held have been fair valued based on market price (Level 1). None of the
+investments were impaired as at 31 December 2017 (2016: Nil). The T-Bills held as at 31
+December 2016 matured during the year.
+
+12 Intangible assets
+
+Cost
+
+At 31 December 2016
+Additions
+
+At 31 December 2017
+Amortisation
+
+At 31 December 2016
+Charge for the period
+At 31 December 2017
+Carrying amount
+At 31 December 2017
+
+At 31 December 2016
+
+13 Tangible fixed assets
+
+Cost
+
+At 31 December 2016
+Additions
+Impairment
+
+At 31 December 2017
+
+Depreciation
+
+At 31 December 2016
+Charge for the period
+Impairment
+
+At 31 December 2017
+Carrying amount
+At 31 December 2017
+At 31 December 2016
+
+53], P age
+
+Banking
+
+License
+
+£'000
+
+360
+
+360
+
+48
+
+38.
+
+B4
+
+276
+
+312
+
+Leasehold Computer and Fixtures, Total
+improvements ITequipment __ fittings and
+office
+equipment
+
+£'000 £'000 £'000 £'000
+
+52 4,512 28 4,592
+
+68 280 15 363
+
+- (60) - (60)
+
+120 43 4,895
+
+4,732
+
+13 823 6 842
+
+20 916 8 944
+
+33 1,739 14 1,786
+
+87 2,993 29 3,109
+
+39 3,689 22 3,750
+
+Oak North Bank Limited
+
+Notes to the financial statements
+For the year ended 31 December 2017
+
+10 Provision for impairment losses
+
+IBNR provisions
+
+As at beginning of the year
+Charged during the year
+Released during the year
+Written off during the year
+As at end of the year
+
+Moverent in the profit and loss account
+
+IBNR provision charged
+
+2017 2016
+£'000 £'00
+
+0
+
+937 62
+1,420 875
+2,357 937.
+1,420 875
+1,420 875
+
+There were no specific impairment charges on OakNorth’s lending portfolio during the
+
+year,
+
+11 Debt securities
+
+Analysed by class:
+Treasury Bills
+Bonds
+
+Analysed by issuer
+Issued by public bodies: Government
+
+Analysed by designation
+Available for saie
+
+Analysed by maturity
+Due within one year
+
+Fair value of debt securities
+Issued by public bodies: Government
+
+52 Pane
+
+2017 2076
+£'000 £'000
+- 500
+2,115 :
+2,115 500
+2,115 500
+2,115 500
+2,115 500
+2,115 500
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+8 Loans and advances to banks
+
+2017 2016
+
+£'000 £'000
+
+Balances held with other banks 5,360 9,161
+Balances held with custodian 2 -
+Total §,362 9,161
+
+The loans and advances to banks are measured at amortised cost. The fair values of
+financial assets are approximate to their book values.
+
+9 Loans and advances to customers
+
+2017 2016
+£'000 £'000
+Loans and advances to customers
+Amount due:
+- within one year 168,236 58,204
+- over one year but Jess than five years 415,919 156,256
+- over five years 23,139 11,985
+Grass loans and advances 607,294 226,445
+IBNR provisions allowance (2,357) (937)
+Loans and advances to customers (net) 604,937 225,508
+
+of which repayable on demand or at short notice - -
+
+There were no past due or impaired accounts as at 31 December 2017 (2016: Nil). Ali credit
+risk exposures of OakNorth (i.¢. the collaterals and business cash flows) are in the UK. The loans and
+advances to customers are measured at amortised cost. The fair values of the loan financial
+assets are approximate to their book values. The above balances are stated net of
+unamortised fees for £5.8 million as at 31 December 2017 (2016: £3.0 million).
+
+51[ Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+determine the vesting oulcome and the shares available for exercise. If an employee leaves,
+the unvested shares are bought back.
+
+During the year 9,151 shares were granted (2016: 11,699). No shares had vested or expired
+during the year. 304 shares were forfeited during the year.
+
+6 Directors’ remuneration and transactions
+
+2017 2016
+£'000 £'000
+Directors’ remuneration
+Emoluments 1,774 770
+Share-based payment 3 -
+Other taxable benefits 8 .
+Net amount expensed to profit and loss account 1,785 770
+Remuneration of the highest paid director:
+Emoiuments 750 133
+Share-based payment - -
+Other taxable benefits 8 -
+Net amount expensed to profit and loss account 758 133
+
+Total number of share-based payments granted to the Directors was 3,034 shares. No new
+shares were granted to the highest paid director during the year. The expense recognised
+above is recognised over the vesting period (refer note 5 for details of the scheme).
+
+Directors’ advances, credits and guarantees
+
+Details of transactions with directors during the year are disclosed in note 28.
+
+7 Financial Services Compensation Scheme “FSCS”
+
+As a regulated UK deposit-taker, OakNorth pays levies to the FSCS which offers protection
+to individual deposit holders on amounts up to £85,000 (applicable as of 31 December 2017).
+The FSCS levy covers management expenses and compensation levies. In addition to the
+overall levy, FSCS also recovers costs, capital and interest costs associated with Treasury
+loans during the banking crisis in 2008 (“Specificd Deposit Default (SDD) levy”). During 2017,
+OakNorth made a provision of £108K in respect of the FSCS levies (2016: £79K).
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+Change in tax rate: The 2017 tax provisions have been provided at a blended rate of 19.25%
+(20% for period January-March 2017 and 19% thereafter). A reduction in the UK corporation
+tax rate from 21% to 20% (effective 1 April 2015) was substantively enacted on 2 July 2013.
+Further reductions to 19% (effective 1 April 2017) and to 18% (effective 1 April 2020) were
+substantively enacted on 26 October 2015, and an additional reduction to 17% {effective 1
+April 2020) was substantively enacted on 6 September 2016. This will reduce the company’s
+future current tax charge accordingly.
+
+Deferred tax provisions have arisen on accounting of timing differences in relation to
+annual capital allowances for fixed assets, bonus provisions and unrealised loss on mark to
+market for GILTS.
+
+4 Staff numbers and costs
+The average number of employees (including executive and non-executive directors) was:
+
+2017 2016
+
+Average number of employees 62 50
+Their aggregate remuneration comprised:
+
+2017 2016
+
+£'000 £'000
+
+Salaries and bonuses 7,410 4,661
+
+Social security & pension costs 963 579
+
+Share-based payment 21 4
+
+Other costs & statutory levies 21 30
+
+8,415 5,274
+
+During the year OakNorth made £38 of contributions towards a pension scheme for
+employees (2016: nil).
+
+5 Restricted share scheme
+
+OakNorth’s holding company operates an employee share scheme (ESS) which was
+introduced in 2016. The shares granted vest over a period of six years, with vesting
+commencing only from year three at 50%, increasing equally per year up to 100% by end of
+year 6. The vesting is subject to performance conditions which must be met. The
+Remuneration Committee will assess the outcome of the performance conditions and
+
+49} Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+3 Taxation
+
+The tax charge comprises
+
+Total current tax
+
+Factors affecting tax charge for the current period
+
+Profit/ (Loss) on ordinary activities before tax
+
+Tax at standard UK corporation tax rate
+
+Effects of:
+
+Expenses not deductible for tax purposes
+Adjustments in respect of prior years
+
+Effect of rate changes
+
+Other timing differences on which deferred tax not
+previously recognised
+
+Utilisation of losses on which no deferred tax previously
+recognised
+
+Total tax charge for period
+
+Analysis of tax charge on ordinary activities
+UK corporation tax
+
+Adjustment in respect of prior years
+
+Deferred tax
+
+Current year- P&L.
+
+Effect of rate changes in respect of prior years
+Total tax charge - P&L
+
+Total tax credit - equity
+
+Balance sheet provision for taxes payable
+Advance tax paid
+Net tax payable
+
+Net deferred tax liability on account of timing differences-
+charge to P&L
+
+Net deferred tax asset on account of timing differences- credit
+to other comprehensive income
+
+Net Deferred tax liability
+
+48[ Page
+
+2017
+£7000
+
+2016
+£'000
+
+1,106
+
+2017
+£'000
+
+10,580
+2,036
+
+29
+(45)
+
+112
+
+(1,026)
+
+2016
+£000
+
+(2,421)
+(484)
+
+1,106
+
+1,139
+(45)
+
+12
+
+1,106
+
+(6)
+
+1,139
+(180)
+
+959
+
+12
+
+(6)
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+of 12 months has been applied to the IBNR provision calculation. OakNorth has assessed
+£2,357K (2016: £937K) as IBNR impairment allowance on its performing book as at 31
+December 2017.
+
+2 Profit/{Loss) on ordinary activities before tax
+Profit/(Loss) on ordinary activities before tax is stated after charging;
+
+2017 2016
+
+£000 £'000
+
+Depreciation of tangible fixed assets 944 826
+Amortisation of intangible assets 36 38
+Operating lease rentals 269 164
+Foreign exchange loss 1 5
+1,250 1,033
+
+Further information is provided in notes 12, 13 and 19
+
+The analysis of the auditor’s remuneration is as follows (including VAT):
+
+2017 2016
+£'000 £'000
+Fees payable to OakNorth’s auditor for the audit of 110 83
+OakNorth’s annual accounts
+Fees payable to OakNorth’s auditor for Interim profit 18 -
+verification .
+Total audit fees 128 83
+Taxation compliance services - 3
+Other services - 3
+Total non-audit fees - 6
+Total fees to auditor 128 89
+
+4AM Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+revision affects only that period, or in the period of the revision and future periods if the
+revision affects both current and future periods.
+
+The following are the critical judgements and estimation uncertainty, that the Directors
+have made in the process of applying OakNorth’s accounting policies and that have the most
+significant effect on the amounts recognised in financial statements.
+
+Key sources of estimation uncertainty
+
+The key assumptions concerning the future, and other key sources of estimation uncertainty
+at the balance sheet date, that have a significant risk of causing a material adjustment to the
+carrying amounts of assets and liabilities within the next financial year, are discussed below.
+
+Useful lives and recoverability of tangible fixed assets and intangible assets: As described
+above, OakNorth reviews the estimated useful life and recoverability of fixed assets at the
+end of each reporting period.
+
+During the year, management reconsidered the recoverability of the costs capitalised in
+processing the Banking licence intangible asset which is included in its balance sheet at
+£276K (2016: £312K). When OakNorth obtained the banking licence amortisation of the
+intangible asset commenced.
+
+Detailed sensitivity analysis has been carried out and management is confident that the
+carrying amounts of the tangible fixed assets and intangible assets will be recovered in full,
+even if returns are reduced. The recoverability will be monitored, and any adjustments as
+deemed appropriate will be made.
+
+Allowance for credit losses: Credit loss allowances are established to recognise any incurred
+losses in OakNorth’s Joan portfolio. Note 1.10 details OakNorth’s monitoring and
+provisioning process. In accordance with OakNorth’s CRMP. OakNorth monitors the
+performance of the lending exposures, both at an account level and at portfolio level, on a
+monthly basis against the approved terms and conditions of sanction and covenants. Any
+material variances are flagged for immediate review and escalation, including where
+appropriate, a formal ‘Watch Account’ process is initiated. The governance procedures
+followed by OakNorth in relation to Credit Risk managernent are summarised in the
+Strategic Report and in note 24 on Risk Management Framework.
+
+Specific impairment is identified based on impairment triggers under 1AS39, and impairment
+provisions are made where there is objective evidence of impairment as a result of one or
+more events that occurred after the initial recognition of the asset and that loss event (or
+events) has an impact on the estimated future cash flows from the asset that can be reliably
+estimated. Evidence of impairment is considered at both individual and portfolio level.
+OakNorth has reviewed its portfolio as at 31 December 2017 for any specific impairment
+triggers and no accounts are considered as specifically impaired (2016: nil).
+
+In accordance with the provisioning policy, OakNorth estimates provisions for IBNR on its
+performing book. As detailed in note 1.10, the estimate is based on funded exposure x PD x
+LGD x EP. As OakNorth does not have its own loss data, OakNorth uses external data to
+calibrate a range of PDs. The final PD scores for each exposure are determined taking into
+account the business profile, financials and strength of management. The LGDs are based
+on OakNorth’s estimate of the recoverable value that may be applied to the type of collateral
+received after factoring costs of recovery and downturn asset values. An emergence period
+
+46[ Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+monetary items that are measured in terms of historical cost in a foreign currency are not
+retranslated.
+
+1.16 Leases
+
+Operating lease rentals are charged to the profit and loss account on a straight-line basis over
+the non-cancellable lease term provided the same is ascertainable unless another basis is
+more appropriate.
+
+1.17. Pension scheme costs
+
+OakNorth offers a defined contribution pension scheme for its employees. Any
+contributions made by OakNorth are charged to operating expenses as incurred.
+
+1.18  Share-based award
+
+OakNorth’s holding company - ACORN OakNorth Holdings Limited, issues equity settled
+share-based remuneration awards to some of OakNorth’s employees as an incentive to
+support long-term business growth of OakNorth, subject to vesting conditions.
+
+1.19 Other Provisions (excluding impairment provisions)
+
+Provisions are recognised when OakNorth has a present obligation (legal or constructive) as
+aresult of a past event; it is probable that OakNorth will be required to settle that obligation
+and, a reliable estimate can be made of the amount of the obligation. The amount recognised
+as a provision is the best estimate of the consideration required to settle the obligation at the
+balance sheet date, taking into account any risks and uncertainties in relation to the
+obligation. Where a provision is measured using the cash flows estimated to settle the
+present obligation, where the effect of time value of money is material, the carrying amount
+is computed as the present value of those cash flows.
+
+1.20. Share capital
+
+Shares are classified as equity when there is no contractual obligation to transfer cash or
+other financial assets. ncremental costs, if any, directly attributable to the issue of equity
+instruments are shown in equity as a deduction from proceeds, net of tax.
+
+1.21 Critical accounting judgements and key sources of estimation uncertainty
+
+In the application of OakNorth’s accounting policies, which are described in note 1, the
+Directors are required to make judgements, estimates and assumptions about the carrying
+amounts of assets and liabilities that are not readily apparent from other sources. The
+estimates and associated assumptions are based on historical experience and other factors
+that are considered to be relevant. Actual results may differ from these estimates.
+
+The estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to
+accounting estimates are recognised in the period in which the estimate is revised if the
+
+45|Paqe
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+As an accounting policy, as OakNorth retains the ownership of the eligible collateral assets,
+and therefore, all associated credit risks and ownership of the cash flows from those assets-
+any collateral placed with the Bank of England continue to be recognised as an asset on the
+balance sheet and any funding raised is recognised as liability.
+
+1.13. Taxation
+
+Current tax is provided at amounts expected to be paid (or recovered) using the tax rates and
+laws that have been enacted or substantively enacted by the balance sheet date.
+
+Deferred tax is recognised in respect of all timing differences that have originated but not
+reversed at the balance sheet date where transactions or events that result in an obligation
+to pay more tax in the future or a right to pay fess tax in the future have occurred at the
+balance sheet date. Deferred tax assets are recognised only to the extent that, on the basis of
+all available evidence, it can be regarded as more likely than not that there will be suitable
+taxable profits from which the future reversal of the underlying timing differences can be
+deducted,
+
+1.14 Revenue recognition
+
+Interest income and interest expense are recognised in the profit and loss account as accrued
+using effective interest rate (EIR) method. The EIR is the rate which discounts the expected
+future cash flows, over the expected life of the financial instrument, to its net carrying value.
+Fees which are an integral part of the EIR of a financial instrument are amortised over the
+expected life of the instrument. When calculating the effective interest rate, OakNorth
+estimates the future cash flows considering all contractual terms of the financial
+instruments but not the credit losses. The effective interest rate is established on initial
+recognition (or upon reclassification) of the financial asset and tiability and is not revised
+subsequently,
+
+Fees and commission are recognised in the profit and loss account when the service has been
+rendered, except when those fees are an adjustment to the yield on the related asset. Fees
+and commissions and transaction costs payable on borrowings are expensed to the profit and
+loss account over the life of the borrowing raised using the effective interest rate method
+and are included in interest expense.
+
+1.15 Foreign currency
+
+The financial statements are presented in pounds sterling, which is the currency of the
+primary economic environment in which OakNorth operates (its functional currency).
+
+Monetary assets and liabilities denominated in foreign currencies are translated into the
+functional currency at the exchange rates as at the balance sheet date and the translation
+gains or losses are recognised in the profit and loss account. Income and expenses
+denominated in foreign currencies are converted into the functional currency at the
+exchange rate at the date of the transaction.
+
+Non-monetary items carried at fair value that are denominated in foreign currencies are
+translated at the rates prevailing at the date when the fair value was determined. Non-
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+In accordance with OakNorth’s Credit Risk Management Policy (CRMP), OakNorth is
+required to regularly review the loan accounts, including monitoring compliance with key
+financial covenants, track repayments against schedule and identify any Trigger Events or
+Early Warning Indicators. OakNorth’s Provisions and Impairment Policy dctails the
+Watchlist process for monitoring of any such accounts. OakNorth classifies non-performing
+exposures where any principal or interest repayments are contractually past due by over 90
+days. OakNorth has a forbearance policy and may provide support to a borrower struggling
+to meet its obligations. This may range from waiving a breach of a loan covenant, to giving
+the borrower more time to meet its loan obligations, to providing some form of active
+payment relief.
+
+OakNorth’s Provisioning policy provides for specific assessment of individually significant
+exposures and portfolio level assessment for smaller value loans.
+
+Wherever there is an objective trigger of impairment as defined under 1|AS39, the specific
+impairment provision as per the policy is required to be calculated on net present value basis
+including any legal and professional fees/charges, accrued interest, and discounting is based
+on the effective interest rate.
+
+OakNorth also has a provisioning policy for incurred but not reported losses (IBNR). This is
+calculated as non-defaulted funded balances x Loss Given default (LGD) x probability of
+default (PD) x Emergence period (EP). Any impairment loss is recognised in the profit and
+loss account, As OakNorth does not have its own historic loss data, for estimating the PD,
+OakNorth uses external data calibrated for its own portfolio type to determine the PDs and
+also applies LGD to estimate recoverability of security received. OakNorth currently applies
+an emergence period of 12 months to its portfolio.
+
+Where indicators exist for a decrease in impairment loss, and the decrease can be related
+objectively to an event occurring after the impairment was recognised, the prior impairment
+Joss is tested to determine reversal. An impairment loss is reversed on an individual impaired
+financial asset to the extent that the revised recoverable value does not lead to a revised
+carrying amount higher than the carrying value had no impairment been recognised.
+
+1.11 Sale and repurchase transactions
+
+Securities sold by OakNorth under agreements to repurchase continue to be recognised as
+assets on the balance sheet and the associated liability is also recognised on the balance sheet.
+Similarly, securities purchased under commitments to sell are not recognised on the balance
+sheet.
+
+1.12 Bank of England “Term Funding Scheme” (TFS)
+
+OakNorth is an approved participant under the “TFS” scheme. During the year OakNorth
+pledged £1.1 million of GILTS and drew £1 million under the scheme. OakNorth had also pre-
+positioned £171.4 million of eligible loan collateral pool under the scheme, however no
+drawdowns have been made as of 31 December 2017 and no collateral has been transferred
+as at the reporting date. However, subsequently drawdowns had been made which have
+been detailed in the Notes to Accounts Post Balance Sheet events.
+
+43|Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+When independent prices are not available or if the market for a financial instrument is not
+active, fair values are determined by using valuation techniques. These may refer to
+observable market data, comparison with similar instruments where market observable
+prices exist, discounted cash flow analysis, option pricing models and other valuation
+techniques commonly used by market participants. However, some of the inputs to the
+techniques may be based on unobservable data, e.g. in case of unlisted entities, if there is
+little or no current market data available, in which case valuation adjustments are done to
+reflect uncertainties in fair values resulting from a lack of market data inputs.
+
+1.8 Loans and receivables
+
+Loans and receivables, which include loans and advances and other receivables, are non-
+derivative financial assets with fixed or determinable payments that are not quoted in an
+active market and which are not designated at fair value through profit and loss, available
+for sale or held to maturity. Loans and receivables are initially recognised at fair value
+including direct and incremental transaction costs, They are subsequently valued at
+amortised cost using effective interest rate method. Loans and receivables are stated at
+amortised cost after deduction of amounts which are required as impairment provisions.
+OakNorth’s policy in relation to irnapairments and impairment provisions is detailed in note
+1.10.
+
+1.9 Available for sale financial assets
+
+Available for sale financial assets are those non-derivative financial assets that are
+designated as available for sale and are not categorised into any of the other categories
+described above. These are initially recognised at fair value including direct and incremental
+transaction costs and subsequently held at fair value. Gains and losses arising from changes
+in fair value are included in the available for sale securities reserve until sale or de-
+recognition, when the cumulative gain or loss is transferred to the profit and loss account.
+
+Any impairment losses on available for sale investment securities is required to be
+recognised by transferring the cumulative loss that has been recognised directly in equity to
+profit and loss. If, in a subsequent period, the fair value of an impaired available for sale debt
+security increases and the increase can be objectively related to an event occurring after the
+impairment loss was recognised in profit or loss, the impairment loss is reversed, with the
+amount of the reversal recognised in profit or loss. However, any subsequent recovery in
+the fair value of an impaired available for sale equity investment is recognised directly in
+equity since it cannot be reversed through the profit and loss account.
+
+1.10 Impairment of assets held at amortised cost
+
+Impairment provisions are made where there is objective evidence of impairment as a result
+of one or more events that occurred after the initial recognition of the asset and that loss
+event (or events) has an impact on the estimated future cash flows from the asset that can
+be reliably estimated. Losses expected as a result of future events are not recognised.
+Evidence of impairment is considered both on an individual and on portfolio basis.
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+1.5 Impairment of tangible and intangible assets
+
+At each balance sheet date, OakNorth reviews the carrying amounts of its tangible and
+intangible assets to determine whether there is any indication that those assets have
+suffered an impairment loss. If any such indication exists, the recoverable amount of the
+asset is estimated to determine the extent of the impairment loss (if any). Recoverable
+amount is the higher of fair value less costs to sell and value in use. tn assessing value in use,
+the estimated future cash flows are discounted to their present value using a pre-tax
+discount rate that reflects current market assessments of the time value of money and the
+risks specific to the asset for which the estimates of future cash flows have not been adjusted.
+
+If the recoverable amount of an asset is estimated to be less than its carrying amount, the
+carrying amount of the asset is reduced to its recoverable amount. An impairment loss is
+recognised immediately in profit or loss, unless the relevant asset is carried at a revalued
+amount, in which case the impairment loss is treated as a reduction to the revalued amount.
+
+Where an impairment loss subsequently reverses, the carrying arnount of the asset is
+increased to the revised estimate of its recoverable amount, but only to the extent that the
+increased carrying amount does not exceed the carrying amount that would have been
+determined had no impairment loss been recognised for the asset in prior years. A reversal
+of an impairment loss is recognised immediately in profit or loss, unless the relevant asset is
+carried at a revalued amount, in which case the reversal of the impairment loss is treated as
+a revaluation increase.
+
+1.6 Financial instruments
+
+OakNorth uses 1AS39 for the recognition and measurement of financial instruments based
+on the accounting policy choice permitted under UK GAAP FRS 102,
+
+OakNorth initially recognises loans and advances, deposits, and other market borrowings
+debt securities issued and subordinated liabilities on the date of origination at fair value.
+OakNorth classifies its financial assets in the following categories: Loans and receivables;
+and available for sale financial assets. Management determines the classification of financial
+assets at initial recognition. The financial assets are de-recognised when the rights to receive
+cash flows have expired or OakNorth has transferred substantially all the risks and rewards
+of ownership. Financial instruments are recognised at trade date, being the date on which
+OakNorth commits to purchase or sell the instruments. Financial liabilities (other than
+derivatives) are measured at amortised cost and are recognised at value date. They are de-
+recognised when liabilities are extinguished, Details of accounting policy in relation to the
+measurement and recognition of the various financial instruments are detailed in the
+subsequent notes.
+
+1.7 Fair value measurement
+
+Fair value is the amount for which an asset could be exchanged, or a liability settled, between
+knowledgeable, willing partics in an arm's length transaction, on the measurement date.
+This is determined by reference to the quoted bid price or asking price (as appropriate) in an
+active market wherever possible.
+
+41|Page
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+1.3 Tangible fixed assets
+
+Fixtures, fittings and office equipment and Computer and IT equipment are stated at cost
+less accumulated depreciation and any recognised impairment loss. Computer and IT
+equipment includes laptops, desktops, software, licences and core banking platform.
+Consultancy and other costs incurred in acquiring and developing software for internal use
+which is directly attributable to the functioning of the computer hardware are capitalised as
+tangible fixed assets where software supports a significant business system and the
+expenditure leads to the creation of an identifiable durable asset.
+
+Depreciation is recognised so as to write off the cost or valuation of assets Jess their residual
+values over their useful lives, using the straight-line method, on the following bases:
+
+Fixtures, fittings and office equipment 5 years
+
+Computers and IT equipment 3-5 years
+
+Leasehold improvements shorter of over the term of the lease or useful
+life
+
+The estimated useful lives, residual values and depreciation method are reviewed at the end
+of each reporting period, with the effect of any changes in estimate accounted for on a
+prospective basis.
+
+An item of tangible fixed assets is derecognised upon disposal or when no future economic
+benefits are expected to arise from the continued use of the asset. The gain or foss arising on
+the disposal or scrapping of an asset is determined as the difference between the sales’
+proceeds and the carrying amount of the asset and is recognised in income.
+
+1.4 Intangible fixed assets
+
+The amount initially recognised for internally-generated intangible assets is the sum of the
+expenditure incurred from the date when the intangible asset first meets the recognition
+criteria.
+
+Subsequent to initial recognition, internally-generated intangible assets are reported at cost
+Jess accumulated amortisation and accumulated impairment fosses, on the same basis as
+intangible assets that, are acquired separately.
+
+Amortisation is recognised so as to write off the cost or valuation of assets less their residual
+values over their useful lives, using the straight-line method, on the folowing bases:
+
+Banking Licence 10 years
+
+Expenditure on research activities is recognised as an expense in the period in which it is
+incurred.
+
+De-recognition of intangible assets
+
+An intangible asset is derecognised on disposal, or when no future economic benefits are
+expected from use or disposal. Gains or losses arising from de-recognition of an intangible
+asset, measured as the difference between the net disposal proceeds and the carrying
+amount of the asset, is recognised in profit or loss when the asset is derecognised.
+
+40] lage
+
+OakNorth Bank Limited
+Notes to the financial statements
+For the year ended 31 December 2017
+
+1. Accounting policies
+
+The principal accounting policies are summarised below. They have all been applied
+consistently throughout the year and to the preceding reporting period.
+
+1.1 General information and basis of accounting
+
+OakNorth Bank Limited (registered number: 08595042) is a Bank incorporated in the United
+Kingdom under the Companies Act 2006. The address of the registered office is at Sixth
+Floor, Nightingale House, 65 Curzon Street, London WJ 8PE, England. The nature of
+OakNorth’s operations and its principal activities are set out in the Strategic report and
+Directors’ report.
+
+The financial statements have been prepared under the historical cost convention, modified
+to include certain items at fair value, and in accordance with Financial Reporting Standard
+102 (FRS 102) issued by the Financial Reporting Council. OakNorth has adopted !AS39 for
+recognition and measurement of financial instruments based on the accounting policy
+choice permitted under FRS 102. The accounting policies detailed below have been applied
+consistently to all periods presented in these financial statements.
+
+In December 2017, the Financial Reporting Council issued amendment? to FRS 102 which
+allowed the accounting policy choice of adopting IFRS 9 effective 01 January 2018 or
+retaining |AS39 until FRS 102 requirements for the impairment of financial assets have been
+amended to reflect IFRS 9. OakNorth has currently made an accounting policy choice to
+continue to apply provisions of |AS39 available under FRS 102.
+
+The functional currency of OakNorth Bank Limited is considered to be pounds sterling
+because that is the currency of the primary economic environment in which OakNorth
+operates.
+
+1.2 Going concern
+
+The financial statements are prepared on a going concern basis as OakNorth is satisfied that
+it has adequate resources to continue operating in the foreseeable future. Information on
+OakNorth’s business stratezy. performance and outlook at detailed in the Chairman's
+statement, CEO's statement and the Strategic Report. The Strategic report further details the
+key risks faced by OakNorth and mitigants and provides an overview of OakNorth’s Risk
+Management Framework. The Directors, in making their assessment, have also considered
+OakNorth’s business forecasts and projections, including stress testing and scenario analysis
+and future profitability, which show that OakNorth will be able to operate at adequate
+capital and liquidity levels for the foreseeable future.
+
+13 Financial Reporting Council: Amendments to FRS 102 The Financial Reporting Standard applicable in the
+UK and Republic of treland: Triennial review 2017 Incremental improvements and clarifications (December
+2017)
+
+39|[Page
+
+OakNoarth Bank Limited
+Cash flow statement
+For the year ended 31 December 2017
+
+Profit/(Loss) from ordinary activities before tax
+Adjustments for
+
+Depreciation and amortisation
+
+Provisions for incurred but not reported losses
+Impairment of fixed assets
+
+Share-based to employees
+
+Fair value changes on available for sale financial
+instruments
+
+Increase in receivables
+
+Increase in payables
+
+Increase in loan receivables
+
+Increase in customer deposits
+
+Increase in borrowings
+
+Income taxes paid
+
+Income tax refund received
+
+Net cash flows used in operating activities
+Purchase of property, plant and equipment,
+implementation of software and intangible assets
+Purchase of debt securities
+
+Proceeds from maturity of debt securities
+
+Net cash fiows (used in)/generated from
+investing activities
+
+Proceeds on issue of shares
+Net cash flows fram financing activities
+
+Net increase in cash and cash equivalents
+
+Cash and cash equivalents at beginning of year
+
+Cash and cash equivalents at end of year
+Reconciliation to cash at banks
+Cash and balances at central bank
+
+Loans and advances to banks (Note 8)
+Total
+
+38[ Ph oge
+
+2017 2016
+£'000 £'000
+10,580 (2,421)
+980 864
+1,420 875
+60 96
+
+21 4
+
+- 7
+(2,932) (724)
+13,368 7,282
+(380,849) (211,477)
+288,864 191,458
+1,000 -
+(180) -
+
+45 :
+(67,623) (14,036)
+(363) (758)
+(2,148) (499)
+500 53,238
+(2,011) 51,981
+163,000 820
+163,000 820
+93,366 38,765
+60,336 21,571
+153,702 60,336
+148,340 51,175
+5,362 9,161
+153,702 60,336
+
+OakNorth Bank Limited
+Statement of changes in equity
+As at 31 December 2017
+
+Called Profitand Available Capital Total
+up loss forsale contribution
+Share account reserve
+Capital
+
+£'000 £'000 £000 £000 = £000
+As at 31 December 85,500 (2,542) (7) - 82,951
+2015
+Issue of share capital 820 - - - 820
+Loss after tax - (2,421) : - (2,421)
+Capital contribution
+(employee share-based - - - 4 4
+payments)
+Fair value changes on
+available for sale - - 7 - 7
+financial instruments
+As at 31 December 86,320 (4,963) - 4 81,361
+2016
+Issue of share capital 163,000 - - - 163,000
+Profit after tax - 9,474 - - 9,474
+Capital contribution
+(employee share- : - - 2) 21
+
+based payments)
+
+Fair value changes on
+available for sale - - (33) - (33)
+financial instruments
+
+Deferred tax impact
+on fair value changes
+
+on available for sale . . . 6
+financial instruments
+As at 31 December 249,320 4,511 (27) 25 253,829
+
+2017
+
+37 [Page
+
+OakNorth Bank Limited
+Profit and loss statement
+
+For the year ended 31 December 2017
+
+Interest receivable
+Interest payable
+Net Interest income
+
+Fees and commissions
+
+Net interest and Fee income
+
+Administrative expenses
+Depreciation and amortisation
+Provision for impairment losses
+
+Profit/(Loss) from ordinary
+activities before tax
+
+Taxation
+
+Profit/(Loss) after tax from ordinary
+activities
+
+34[fage
+
+Note
+
+12, 13
+10
+
+2017 2016
+£'000 £'000
+31,218 8,683
+
+(6,294) (1,490)
+24,924 7,193
+3,347 474
+28,271 7,667
+(15,291) (8,349)
+(980) (864)
+(1,420) (875)
+(17,691) (10,088)
+10,580 (2,421)
+(1,106) -
+9,474 (2,421)
+
+OakNorth Bank Limited
+Independent auditor’s report to the members of OakNorth
+Bank Limited
+
+Matters on which we are required to report by exception
+
+Adequacy of explanations received and accounting records
+
+Under the Companies Act 2006 we are required to report to We have nothing to report
+you if, in our opinion: in respect of these matters.
+
+* we have not received all the information and
+explanations we require for our audit; or
+
+* adequate accounting records have not been kept, or
+returns adequate for our audit have not been received
+from branches not visited by us; or
+
+* the financial statements are not in agreement with
+the accounting records and returns.
+
+Directors’ remuneration
+
+Under the Companies Act 2006 we are also required to report We have nothing to report
+if in our opinion certain disclosures of directors’ in respect of this matter.
+remuneration have not been made.
+
+Other matters
+
+Auditor tenure
+
+Following the recommendation of the audit committee, we were appointed by the Board
+of Directors on 14 January 2015 to audit the financial statements for the period ending 31
+December 2014 and subsequent financial periods. The period of total uninterrupted
+engagement including previous renewals and reappointments of the firm is four years,
+covering the years ending 31 December 2014 to 31 December 2017.
+
+Consistency of the audit report with the additional report to the audit committee
+
+Our audit opinion is consistent with the additional report to the audit committee we are
+required to provide in accordance with ISAs (UK).
+
+Caroline Britton (Senior statutory auditor)
+For and on behalf of Deloitte LLP
+
+Statutory Auditor
+London, United Kingdom
+
+28 February 2018
+
+33/Page
+
+OakNorth Bank Limited
+Independent auditor’s report to the members of OakNorth
+Bank Limited
+
+Auditor's responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements
+as a whole are free from material misstatement, whether due to fraud or error, and to issue
+an auditor's report that includes our opinion. Reasonable assurance is a high level of
+assurance, but is not a guarantee that an audit conducted in accordance with ISAs (UK) will
+always detect a material misstatement when it exists. Misstatements can arise from fraud
+or error and are considered material if, individually or in the aggregate, they could
+reasonably be expected to influence the economic decisions of users taken on the basis of
+these financial statements.
+
+A further description of our responsibilities for the audit of the financial statements is
+located on the Financial Reporting Council’s website at:
+www fre.org.uk/auditorsresponsibilities. This description forms part of our auditor's
+report.
+
+Use of our report
+
+This report is made sclely to the company’s members, as a bady, in accordance with
+Chapter 3 of Part 16 of the Companies Act 2006. Our audit work has been undertaken so
+that we might state to the company’s members those matters we are required to state to
+them in an auditor's report and for no other purpose. To the fullest extent permitted by
+law, we do not accept or assume responsibility to anyone other than the company and the
+company’s members as a body, for our audit work, for this report, or for the opinions we
+have formed.
+
+Report on other legal and regulatory requirements
+
+Opinions on other matters prescribed by the Companies Act 2006
+
+In our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the strategic report and the directors’ report for the financial
+year for which the financial statements are prepared is consistent with the financial
+statements; and
+
+e the strategic report and the directors’ report have been prepared in accordance with
+applicable legal requirements.
+
+in the light of the knowledge and understanding of the company and its environment
+obtained in the course of the audit, we have not identified any material misstatements in
+the strategic report or the dirccters’ report.
+
+32; Ph aye
+
+OakNorth Bank Limited
+
+Independent auditor’s report to the members of OakNorth
+
+Bank Limited
+
+to respond to the risks of material misstatement was performed directly by the audit
+
+engagement team.
+
+Other information
+
+The directors are responsible for the other information. The We have nothing to report
+in respect of these matters.
+
+other information comprises the information included in the
+annual report, other than the financial statements and our
+auditor’s report thereon.
+
+Our opinion on the financial statements does not cover the
+other information and, except to the extent otherwise
+explicitly stated in our report, we do not express any form of
+assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our
+responsibility is to read the other information and, in doing
+so, consider whether the other information is materially
+inconsistent with the financial statements or our knowledge
+obtained in the audit or otherwise appears to be materially
+misstated.
+
+If we identify such material inconsistencies or apparent
+material misstatements, we are required to determine
+whether there is a material misstatement in the financial
+statements or a material misstatement of the other
+information. If, based on the work we have performed, we
+conclude that there is a material misstatement of this other
+information, we are required to report that fact.
+
+Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement. the directors are
+responsible for the preparation of the financial statements and for being satisfied that they
+give a true and fair view, and for such internal control as the directors determine is
+necessary to enable the preparation of financial statements that are free from material
+
+misstatement, whether due to fraud or error,
+
+In preparing the financial statements, the directors are responsible for assessing the
+company’s ability to continue as a going concern, disclosing as applicable. matters related
+to going concern and using the going concern basis of accounting unless the directors
+either intend to liquidate the company or to cease operations, or have no realistic
+
+alternative but to do so.
+
+31f Page
+
+OakNorth Bank Limited
+Independent auditor's report to the members of OakNorth
+Bank Limited
+
+Our application of materiality
+
+We define materiality as the magnitude of misstatement in the financial statements that
+makes it probable that the economic decisions of a reasonably knowledgeable person
+would be changed or influenced. We use materiality both in planning the scope of our
+audit work and in evaluating the results of our work.
+
+Based on our professional judgement, we determined materiality for the financial
+statements as a whole as follows:
+
+Materiality £1.1 million
+
+Basis for Materiality has been determined on the basis of 1% of equity.
+determining
+
+materiality
+
+Ciilaclimmescemm Cuity has been used as the basis for materiality to reflect what
+benchmark we believe to be the key external metric; regulatory capital, which
+applied is proxied by the equity balance.
+
+_ Materiality £1.1
+
+Equity £254 million
+million
+Audit Committee
+reporting
+threshold E55K
+* Equity
+Materiality
+
+We agreed with the Audit Committee that we would report to the Committee all audit
+differences in excess of £55K, as well as differences below that threshold that, in our
+view, warranted reporting on qualitative grounds. We also report to the Audit Committee
+on disclosure matters that we identified when assessing the overall presentation of the
+financial statements.
+
+An overview of the scope of our audit
+
+Our audit was scoped by obtaining an understanding of the company and its environment,
+including internal controls, and assessing the risks of material misstatement. Audit work
+
+30, aga
+
+OakNorth Bank Limited
+Independent auditor’s report to the members of OakNorth
+Bank Limited
+
+Revenue recognition
+
+Key audit matter The main revenue stream within OakNorth is interest income of
+
+description £31.2 million (2016: £8.7 million) which should be recognised based on
+- the effective interest rate method in accordance with IAS 39.
+a) Additional revenues are earned from fees and commissions totalling
+£3.4 million (2016: £480K) charged to customers for transactions.
+
+Revenue has increased significantly in 2017 due to growth in the loan
+book.
+
+For further details please refer to the profit and loss statement on
+page 34 and the accounting policy note in the financial statements for
+revenue recognition.
+
+The application of the effective interest rate method in deriving the
+interest income recognised involves management judgement,
+specifically around the interest rates. In addition, the calculation and
+booking of fees and commissions are manual and therefore there is
+potential for error and fraud through possible manipulation of this
+balance.
+
+How the scope We reviewed the bank’s revenue recognition policies and discussed
+of our audit these with management to verify their appropriateness to the bank’s
+responded to the specific circumstances, that they are compliant with applicable
+key audit matter accounting standards and that they have been applied consistently
+
+© throughout the year.
+
+aoe We evaluated the design and tested the implementation of controls
+related to the recognition of fee income and the methodology of the
+fee arnortisation calculation.
+
+We considered all types of fees and commissions charged by
+OakNorth to its customers and assessed the accounting treatment
+adopted for each type by reference to the relevant contractual
+arrangements.
+
+For a sample of loan facilities we recalculated the commission and fee
+income due based on the facility terms and checked that the income
+had been recognised in the correct accounting period.
+
+Key We found the application of the effective interest rate method in
+observations deriving the interest income recognised to be appropriate and in
+
+@) accordance with IAS 39.
+maw
+
+29|Paqe
+
+Oak North Bank Limited
+Independent auditor’s report to the members of OakNorth
+
+Bank Limited
+
+Loan loss provisioning
+
+Key audit matter
+description
+
+In accordance with Financial Reporting Standard 102 “The Financial
+Reporting Standard applicable in the UK and Republic of Ireland”
+(FRS102), the bank has chosen to apply the recognition and
+measurement provisions of [AS 39 Financial Instruments: Recognition
+and Measurement.
+
+OakNorth Bank Limited (OakNorth’, ‘the bank’) holds an incurred but
+not reported (IBNR’)) provision of £2.3 million at year end (2016:
+£937K) against loans and advances to customers of £607 million
+(2016: £225.5 million).
+
+For further details please refer to the critical accounting judgements
+and key sources of estimation uncertainty note and note 9 on page
+51 in the financial statements.
+
+The !BNR involves management judgements in respect of the
+emergence period, probability of default and loss given default.
+
+Given the significant level of management judgement involved, we
+have determined that there was a potential for fraud through possible
+manipulation of this balance.
+
+How the scope
+of our audit
+responded to the
+key audit matter
+
+We updated our understanding of the business rationale for the IBNR
+provision and we assessed the design and implementation of controls
+around the IBNR methodology.
+
+We evaluated the IBNR approach to determine whether it is
+appropriate based on IAS 39 and our knowledge of the business. We
+also tested the inputs and assumptions for the provision to assess
+whether they are consistent with our understanding of current
+market conditions and the bank’s portfclio.
+
+We also re-performed the calculation of the IBNR provision to verify
+arithmetic accuracy and traced inputs to supporting documentation.
+
+To evidence the challenge of the estimate by management and
+directors, we reviewed board and committee minutes and papers.
+
+Key
+observations
+
+7
+
+sy
+
+@
+
+(eG
+
+‘
+
+Overall, we found that the IBNR provisioning methodology used by
+the bank is in line with IAS 39 and is reasonable given the size of the
+bank and its stage of early development.
+
+The bank’s provision model was found to be working as intended and
+the underlying assumptions are reasonable.
+
+28) Page
+
+OakNorth Bank Limited
+Independent auditor’s report to the members of OakNorth
+Bank Limited
+
+Summary of our audit approach
+
+MOA M atom The key audit matters that we identified in the current year were:
+« Loan loss provisioning; and,
+« Revenue recognition
+
+Materiality The materiality that we used in the current year was £1.1 million
+which was determined on the basis of equity.
+
+Scoping Audit work to respond to the risks of material misstatement was
+performed directly by the audit engagement team.
+
+Conclusions relating to going concern
+
+We are required by ISAs (UK) to report in respect of the We have nothing to
+following matters where: report in respect of
+
+e the directors’ use of the going concern basis of these matters.
+
+accounting in preparation of the financial statements is
+not appropriate; or
+
+. the directors have not disclosed in the financial
+statements any identified material uncertainties that
+may cast significant doubt about the company’s ability
+to continue to adopt the going concern basis of
+accounting for a period of at least twelve months from
+the date when the financial statements are authorised
+for issue.
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most
+significance in our audit of the financial statements of the current period and include the
+most significant assessed risks of material misstatement (whether or not due to fraud) that
+we identified, These matters included those which had the greatest effect on: the overall
+audit strategy, the allocation of resources in the audit; and directing the efforts of the
+engagement team,
+
+These matters were addressed in the context of our audit of the financial statements as a
+whole, and in forming our opinion thereon, and we do not provide a separate opinion on
+these matters.
+
+27; Page
+
+OakNorth Bank Limited
+Independent auditor’s report to the members of OakNorth
+Bank Limited
+
+In our opinion the financial statements:
+
+give a true and fair view of the state of the company’s affairs as at 31 December 2017
+and of its profit for the year then ended;
+
+have been properly prepared in accordance with United Kingdom Generally Accepted
+Accounting Practice including Financial Reporting Standard 102 “The Financial
+Reporting Standard applicable in the UK and Republic of Ireland”: and
+
+have been prepared in accordance with the requirements of the Companies Act 2006.
+
+We have audited the financial statements of OakNorth Bank Limited (the ‘company’} which
+comprise:
+
+ae © © © © &
+
+the profit and loss account;
+
+the statement of comprehensive income;
+the balance sheet,
+
+the statement of changes in equity;
+
+the cash flow statement;
+
+the statement of accounting policies; and
+the related notes 1 to 30,
+
+The financial reporting framework that has been applied in their preparation is applicable
+law and United Kingdom Accounting Standards, including Financial Reporting Standard 102
+"The Financial Reporting Standard applicable in the UK and Republic of Ireland” (United
+
+Kingdom Generally Accepted Accounting Practice),
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK)
+(ISAs (UK)) and applicable law, Our responsibilities under those standards are further
+described in the auditor's responsibilities for the audit of the financial statements
+section of our report.
+
+We are independent of the company in accordance with the ethical requirements that
+are relevant to our audit of the financial statements in the UK. including the FRC’s
+Ethical Standard as applied to public interest entities, and we have fulfilled our other
+ethical responsibilities in accordance with these requirements. We confirm that the
+non-audit services prohibited by the FRC’s Ethical Standard were not provided to the
+company.
+
+We believe that the audit evidence we have obtained is sufficient and appropriate to
+provide a basis for our opinion.
+
+OakNorth Bank Limited
+Statement of Directors’ responsibilities
+
+The Directors are responsible for preparing the Annual Report and the financial statements
+in accordance with applicable law and regulations.
+
+Company taw requires the Directors to prepare financial statements for each financial year.
+Under that law the Directors have elected to prepare the financial statements in accordance
+with United Kingdom Generally Accepted Accounting Practice (United Kingdom Accounting
+Standards and applicable flaw), including FRS 102 “The Financial Reporting Standard
+applicable in the UK and Republic of Ireland’.
+
+Under company law the Directors must not approve the financial statements unless they are
+satisfied that they give a true and fair view of the state of affairs of the company and of the
+profit or loss of the company for that period. In preparing these financial statements, the
+Directors are required to:
+
+select suitable accounting policies and then apply them consistently;
+make judgements and accounting estimates that are reasonable and prudent;
+state whether applicable UK Accounting Standards have been followed, subject to
+any material departures disclosed and explained in the financial statements; and
+
+* prepare the financial staternents on the going concern basis unless it is inappropriate
+to presume that the company will continue in business.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to
+show and explain the company’s transactions and disclose with reasonable accuracy at any
+time the financial position of the company and enable therm to ensure that the financial
+statements comply with the Companies Act 2006, They are also responsible for safeguarding
+the assets of the company and hence for taking reasonable steps for the prevention and
+detection of fraud and other irregularities.
+
+The Directors are responsible for the maintenance and integrity of the corporate and
+financial information included on the company’s website. Legislation in the United Kingdom
+governing the preparation and dissemination of financial statements may differ from
+legisiation in other jurisdictions.
+
+OakNorth Bank Limited
+Directors’ report continued
+
+23 Feb 16
+
+08 Jan 15
+
+Gagan Banga
+
+| Ajit Kumar Mittal | Notified Non-Executive Direct
+
+| Lord Adair Turner Senior Independent Director
+
+he
+
+Directors’ indemnities
+OakNorth has made qualifying third-party indemnity provisions for the benefit of its
+Directors which were made during the year and remain in force at the date of this report.
+
+Political contributions
+No political contributions were made during the year.
+
+Post balance sheet events
+Please refer to note 30 in the Notes to financial statements.
+
+Future developments
+Please refer to Strategic Report.
+
+Auditor
+Each of the persons who is a Director at the date of approval of this report confirms that:
+
+* so far as the Director is aware, there is no relevant audit information of which OakNorth's
+auditor is unaware; and
+
+« the Director has taken all the steps that he/she ought to have taken as a Director in order
+to make himself/herself aware of any relevant audit information and to establish that
+OakNorth’'s auditor is aware of that information.
+
+This confirmation is given and should be interpreted in accordance with the provisions of
+$418 of the Companies Act 2006,
+
+Aresolution to reappoint Deloitte LLP as auditor will be proposed at the next Annual General
+Meeting.
+
+Approved by the Board and signed on its behalf by:
+
+Rishi Khosta
+Chief Executive Officer and Co-Founder
+26 February 2018
+
+24[P age
+
+OakNorth Bank Limited
+Directors’ Report
+
+The Directors present their annual report on the affairs of OakNorth, together with the
+financial statements and auditor's report, for the year ended 31 December 2017.
+
+Going concern
+
+The Directors confirm they are satisfied that OakNorth has adequate resources to continue
+in business for the foreseeable future. For this reason, they continue to adopt the ‘going
+concern’ basis for preparing accounts.
+
+Financial Risk Management
+
+The disclosures required to be included in the Directors’ report in respect of the Company’s
+exposure to financial risk and its financial risk management policies are detailed in the
+Strategic report and additional information has been provided in the notes to accounts. The
+Pillar 3 disclosures, including disclosures on OakNorth’s remuneration policy are available
+on request via OakNorth’s website.
+
+Dividends
+The Directors do not recommend a dividend.
+
+Directors
+The Directors, who served throughout the year except as noted, were as follows:
+
+Designation:
+
+Executive Director :
+Rishi Khosla Chief Executive Officer andCo- | 18 Dec 13 -
+
+coe Founder
+i Executive Director
+: Joel Perlman | Chief Strategy Officer and Co- 18Deci3
+ee on Founder ob afc /
+Graham Leslie Olive Executive Director ( 29FeD
+
+|__Deputy Chief Executive Officer | Co
+Executive Director i
+
+cristina al Alba Ochoa oa _.._‘Chief Financial Officer 064 April whet eee
+/ Cyrus Ardalan Chairman 29 Jun 15 - :
+a indepen dent Non Executive —feonenee need
+Robert Bt Burgess oo Director | 01 Jan 15 {oo
+“Senior Independent Non-
+Navte) $ Nandra ww Executive Director Jun eects
+__ Notified Non-Executive Directo _09 Mat y17
+
+23) Page
+
+OakNorth Bank Limited
+Strategic Report continued
+
+opportunity to service entrepreneurs with expert, tailored financial services remains
+substantial - and the strong pipeline is an indicator of these growth opportunities. They
+expect OakNorth to be active in both the lending and deposit markets in line with our
+strategy and plans in the forthcoming year.
+
+OakNorth’s operating model is supported by services from its Group companies - OakNorth
+Global Private Limited and ACORN machine, and the Group will continue to expand the
+teams in these entities in order to enable an efficient and scalable operating platform.
+
+Any adverse changes to the current economic conditions in the UK could affect OakNorth’s
+business and financial performance; OakNorth maintains a cautious approach to the outlook
+for the UK economy due to uncertainties surrounding the negotiations related to ‘Brexit’.
+OakNorth’s credit underwriting process focuses on a selective risk-based approach to
+lending, robust credit analysis and proactive monitoring.
+
+OakNorth is well positioned to withstand any adverse developments due to its current levels
+of surplus capital and liquidity. OakNorth undertakes a comprehensive assessment of its risk
+appetite and exposure including stress testing the business model to ensure that it can meet
+its objectives in severe but plausible economic conditions.
+
+Approved by the Board and signed on its behalf by:
+
+é
+/
+
+Rishi Khosla
+Chief Executive Officer and Co-Founder
+26 February 2018
+
+OakNorth Bank Limited
+Strategic Report continued
+
+provider service level agreement violations;
+System availability and capacity utilisation.
+
+Protect OakNorth's reputation through ‘Events likely to cause reputational impact”
+effective systems and controls and high with key stakeholders including (but not
+levels of customer service. limited to) customers, regulators, service
+providers; actual or high likelihood of
+adverse coverage of OakNorth in the media.
+Reputational In addition to mitigating risks through .
+effective systems and control, OakNorth will
+further manage its reputation by continually
+investing in and embedding its risk
+management framework and control
+culture across the Firm.
+
+A number of detailed policies and frameworks, including stress testing framework, approved
+by the Board and Board committees detail the governance frameworks ensuring that
+QOakNorth’s activities are consistent with the risk appetite approved by the Board, These
+policies cover ail areas including (but not limited to): Operational risk, Conduct and Customer
+Experience, Financial Crime, Fraud and Anti-Money Laundering (AML), Compliance
+Manual, Code of Conduct, Credit Risk Management, Market Risk Management (including
+liquidity and interest rate risk management), Business Planning and Stress Testing.
+
+Further details are provided in the Risk Management section in the Notes to Accounts!?.
+
+A review of the adequacy and effectiveness of the overall risk management framework and
+compliance management is made annually, in accordance with the Control and Compliance
+Review and Certification process. The Risk function, as second line of defence, is responsible
+for providing assurance that those controls are implemented, are being operated
+satisfactorily, and that risk and control registers are comprehensive. Internal Audit, as third
+line of defence, conducts reviews in tine with the internal audit plan to test the effectiveness
+of the operational risk framework, including first line controls and the quality of the second
+line oversight.
+
+Business and economic outlook
+
+QakNorth continues to grow its loan book and revenues, while maintaining strict credit
+quality and credit monitoring controls, monitoring and optimising the funding and operating
+cost bases, enhancing technological capabilities and continually improving process
+efficiencies.
+
+As detailed in the Chairman's statement and the CEO's review, in spite of the uncertainties
+in the UK’s economic environment, OakNorth was able to expand its loan book significantly
+in 2017. With its flexible and transparent appreach to the lending process, OakNorth has
+already established itself as a credible contender in UK SME lending and has been leading
+the change in the way entrepreneurs and mid-sized companies finance their growth.
+
+OakNorth’s holding company attracted significant equity investment during the year, which
+was further invested in OakNorth and has now further strengthened OakNorth’s capital
+Position to continue to support the growth of the loan book. The Directors believe the
+
+12 Note 24
+
+21[ Page
+
+OakNorth Bank Limited
+Strategic Report continued
+
+the ICAAP and ILAAP are discussed and challenged in detail across both the executive
+committee and the Board.
+
+The Board has set a risk appetite based on OakNorth’s strategic risk objectives. OakNorth’s
+risk appetite sets out the type and quantum of risk OakNorth is prepared to accept to achieve
+its strategic business objectives. It is cascaded top-down, deriving logically from OakNorth’s
+high-level risk objectives to the low-level measures or limits used in day-to-day decision-
+making by the team, and is defined and measurable.
+
+The strategic objectives which the risk appetite for OakNorth is based on are articulated as
+
+follows:
+
+Financial
+{including
+Capital,
+Liquidity.
+Interest rate
+risk)
+
+Credit
+
+Regulatory
+&
+Compliance
+
+Conduct
+
+Operational
+
+20, Page
+
+Ensure that OakNorth has sufficient capital,
+with appropriate buffers, to meet regulatory
+requirements for its on-going growth
+projections, even in periods of stress (when
+new equity may be unavailable).
+
+Ensure that OakNorth has sufficient funding
+and liquidity to meet all obligations as they
+fall due, even in periods of stress.
+
+Build stable earnings and sufficient volume
+to achieve profitability, at an appropriate
+risk/reward balance whilst avoiding risk
+concentrations.
+
+Maintain compliance and the
+
+confidence of our Regulators
+
+keep
+
+Be proactive and forward-looking in
+understanding, adhering to, and applying
+regulatory requirements in full. Staff are
+educated and aware of their personal
+obligations at all times ensuring any
+breaches of regulatory or legal requirements
+are minimised with zero tolerance for any
+material breaches of any nature.
+
+Maintain integrity and keep the confidence
+of our customers.
+
+Focus on delivery of great outcomes for our
+customers, meeting their needs and
+expectations through providing suitable
+products and a high-quality service.
+
+Proactively manage all OakNorths
+operational risks to achieve a low level of
+operational loss.
+
+Capital adequacy buffer, capital resources in
+place for specified number of days forecast
+needs, capital ratios tested under stress
+‘testing scenarios.
+
+Total liquidity pool, daily cash balance,
+funding concentration, liquidity ratios
+{including LCR and NSFR), liquidity survival
+period under stress testing.
+
+Portfolio and individual level maximum
+probability of default, joss given default:
+sectoral and single name concentration;
+
+Credit risk monitoring policies and
+procedures.
+Material findings reported through
+
+compliance assurance tests / internal audit
+reviews, monitoring of remedial action plan;
+satisfactory assurance checks on customer
+due diligence; mandatory staff training;
+monitoring and reporting of policy
+exceptions and compliance breaches.
+
+Customer satisfaction scores and surveys for
+products and marketing material; complaints
+as % of number of customers; customer net
+promoter score.
+
+‘Operational risk events, fraud attempts,
+‘cybercrime event, data protection loss- “near
+Miss” maximum loss from aps risk events as.
+% of income; loss of key staff; Satisfactory
+self-assurance reviews; third-party service
+
+OakNorth Bank Limited
+Strategic Report continued
+
+assessment of key risks (as detailed below) which may impact OakNorth’s growth and
+business performance.
+
+e Credit risk: the risk of financial loss arising from a borrower or counterparty failing to
+meet their contractual financial obligations to OakNorth. This also includes the risk
+arising out of concentration in the credit portfolio.
+
+e Capital risk: the risk that OakNorth has insufficient capital to meet its regulatory
+requirements and growth objectives.
+
+e Liquidity risk: the risk that OakNorth is unable to meet its contractual financial
+obligations as they fall due and is unable to fund future lending growth opportunities or
+is able to do so only at significantly higher funding costs.
+
+e Interest rate risk: the risk of financial loss arising from re-pricing mismatches in the asset.
+and liabilities positions which have not been hedged.
+
+* Operational risk {including IT risk): the risk of direct or indirect impacts resulting from
+human factors, inadequate or failed internal processes and systems, or external events.
+This covers several areas including:
+
+o Therisk of financial loss or Joss of reputation due to inadequate internal controls;
+o Loss due to internal or external fraud;
+
+o Failure of IT systems causing loss or reduction of service to customers,
+
+o The risk of cyber-attack; and
+
+o Key person dependencies,
+
+* Conduct, compliance and regulatory risk: Conduct Risk is defined as the risk that a firm's
+behaviour results in poor outcomes for custorners. Compliance risk is defined as the risk
+of impairment to the organisation's business medel, reputation and/or financial
+condition resulting from failure to meet laws, regulations, standards and policies, and
+expectations of regulators and society as whole. For OakNorth, this includes compliance
+with FCA and PRA Handboaoks/Rulebook, as well as financial crime laws and regulations
+including those relating to Anti-Money Laundering, Anti-Bribery and Corruption and
+the facilitation of tax evasion. Regulatory risk is defined as the risk of regulatory
+sanction, financial loss, or loss to reputation a bank may suffer because of a failure to
+comply with all laws and regulations, and the expectations of regulators.
+
+* Reputational risk: Reputation risk is a direct consequence of failing to control adequately
+all risks facing the organisation impacting on revenue streams, brand value and staff
+motivation,
+
+OakNorth seeks to mitigate each of these risks through a comprehensive Risk Management
+Framework (RMF). The RMF enables OakNorth to ensure that the key risks facing OakNorth
+are identified, measured, monitored and managed and that appropriate policies, procedures
+and controls are established such that each risk is mitigated to an acceptable degree.
+
+OakNorth has a rigorous annual Individual Capital Adequacy Assessment Process (ICAAP)
+and Individual Liquidity Adequacy Assessment Process (ILAAP) in place. The purpose of the
+ICAAP and ILAAP is to ensure OakNorth’s Board can undertake a fully informed assessment
+of the sufficiency of OakNorth’s current and projected capital and liquidity resources given
+its strategy, risk exposure, risk management framework and exposure to stressed
+environments. The key risks, stress testing scenarios, and baseline projections that underpin
+
+Wl Page
+
+OakNorth Bank Limited
+Strategic Report continued
+
+i Committee receives reports from the Credit Risk Management Committee
+concerning individual credit exposures and the portfolio as a whole,
+including model performance. The Committee reviews the Watchlist and
+receive reports concerning the progress on any material recoveries.
+
+Executive Committee (EXCO) | The EXCO takes delegated authority from the Board and is responsible for
+developing OakNorth’s strategy and ensuring OakNorth delivers its
+financial plan and that the agreed strategy is executed across all dimensions.
+Additionally, the EXCO has responsibility for the Risk Management
+Framework of OakNorth and for management of all risks and reports its
+output to the Board. The Board also delegates authority to the EXCO for the
+review and approval of policies listed in the EXCO Terms of Reference.
+
+Asset & Liability Committee The Asset & Liability Committee (ALCO) meets monthly to review risk
+(ALCO) appetite metrics. Additionally, weekly and daily meetings are held as
+required. It implements OakNorth’s Asset & Liability Management {AI.M}
+policy, with a focus on active management of liquidity. The ALM activities
+include specific policies and procedures relating to Liquidity and Funding
+Risk, Capital Risk, Interest Rate Risk, Credit Risk of counterparties, and
+Market/Investment Risk. It also monitors regulatory reporting.
+
+Credit Risk Management Operating under mandate from the Board Credit Committee, the purpose of
+Committee (CRMC) the Credit Risk Management Committee (CRMC) is to oversee, monitor and
+control credit risk on a day to day basis, and to approve facilities under a
+delegated authority. It ensures that the RMF is implemented as it relates to
+Credit Risk and that all credit control processes are fit for purpose and
+Operative so that credit risk is mitigated via: Identification; Evaluation;
+Mitigation, Reporting; Management and Challenge. The CRMC
+recommends Credit Policy changes to the Board.
+
+Operations Committee | OPCO’s main objective is to review the performance of all business
+(OPCO) operations and reach an agreement on actions to address any issues
+identified. The Committee leads the design and review of Standard
+Operating Procedures (SOPs) and manage change. The Committee reviews,
+in depth, any operational issues impacting Product, Operations, IT and
+Change Management, Finance, Risk, Compliance and People Operations.
+The Cornmittee's main objective is to promote efficiency. address
+operational issues in a timely manner, and manage Operational Risk across
+OakNorth.
+
+Principal risks and uncertainties
+
+Given the nature of the activities undertaken, the principal risks that OakNorth faces are
+business risk, credit risk, capital risk, tiquidity risk, interest rate risk, operational risk
+{including IT systems risk) and conduct, compliance and regulatory risk.
+
+The risks are defined below:
+
+« Business risk: the risks which can affect OakNorth’s ability to achieve its strategic
+objectives. OakNorth’s Board defines and reviews performance metrics vs the strategy
+and business plan at least annually. The annual strategic review includes (but is not
+limited to) an analysis of OakNorth’s economic and compctitive landscape and an
+
+OakNorth Bank Limited
+
+Strategic Report continued
+
+e Board and Committee structure chart
+
+e Prescribed Responsibilities allocation
+
+« Committee charters
+« Role Profiles for SMFs
+The table below summarised the responsibilities of the various committees:
+
+Committees
+
+Responsibility
+
+The Board's principal dury is to create and deliver a sustainable business
+model by senting OakNortl: Bank's strategy and overscocing its
+implementation. It does so with regards to the interests of customers,
+employees, the environment, communities and suppliers. It seeks to achieve
+abalance between promoting Jong term objectives and short-term goals, and
+sets the culture of OakNorth, ensuring that it is focussed on detivering good
+customer outcomes. It is responsible for maintaining a systern of internal
+control and ensuring that management maintain an effective Risk
+Management Framework with appropriate oversight processes and for
+embedding the principle of safety and soundness in the culture of the whole
+organisation, including whistleblowing. The Board maintains oversight over
+the effectiveness of each Board Committee through the receipt, review and
+challenge of regular updates, minutes and management information from
+each.
+
+Remuneration Committee
+(REMCO)
+
+The Board Remuneration Committee (REMCO) is responsible for ensuring
+that remuneration arrangements support the strategic aims of OakNorth,
+comply with best practice and enable the recruitment, motivation and
+retention of senior executives. The Committee further ensures compliance
+with the requirements of regulation (Remuneration Code SYSC 19D) and
+sees its principles are put in place to expressly discourage any and all
+inappropriate behaviours. The Committee has delegated authority from the
+Board for the review and approval of the Remuneration Policy and is
+responsible for setting remuneration for all executive directors, NEDs, the
+Chairman and key individuals, including employees captured under the
+scope of the Certification Regime, including pension rights and any fixed
+and variable compensation payments. The Committee also recommends and
+monitors the level and structure of remuneration for senior management.
+
+Board Risk & Compliance
+Committee (BRCC)
+
+The BRCC takes delegated authority from the Board to oversee the Risk
+Management Framework of OakNorth, with an overall view across the 1°
+and 2"9 jines of defence. The Committee ensures that through its control
+processes and through further delegation of responsibility to the EXCO, all
+risks (excluding Credit Risk} taken by OakNorth Bank are properly
+identified, evaluated, mitigated, reported, managed and challenged. This
+includes fraud and money laundering risk, anti-bribery risk, compliance and
+conduct risk. The Committee oversees the Compliance function and
+approves the annual Compliance Monitoring Plan.
+
+Board Audit Committee
+(BAC)
+
+The Board Audit Committee takes delegated authority from the Board for
+the review and approval of the Internal Audit Charter and Methodology,
+the Accounting Policy with a view across the 2nd and 3rd lines of defence,
+and for ensuring that QakNorth Bank values and principles are being
+adhered to. It monitors the integrity of financial statements and public
+disclosures; appoints the external auditor and their remuneration; reviews
+the effectiveness of the internal audit function, and appoints and removes
+the Head of Internal Audit.
+
+Board Credit Committee
+(BCC)
+
+The Board Credit Committee takes delegated authority from the Board to
+oversee all Credit Risk related matters for OakNorth and approves all
+material credit exposures, impairments and write-offs. The Board Credit
+
+W7[Pagqe
+
+OakNorth Bank Limited
+Strategic Report continued
+
+responsible for ensuring that management maintains an effective Enterprise Risk
+Management Framework (RMF) with appropriate oversight processes and for embedding
+the principle of safety and soundness in the culture of the whole organisation. OakNorth’s
+Board of Directors is responsible for approving the RMF and the Business Strategy,
+understanding major risks, ensuring that appropriate limits are set against those risks and
+that they are adequately controlled and monitored,
+
+Through delegated authority from the Board, the Board Risk and Compliance Committee,
+Board Credit Committee and Board Audit Committee provide overall supervision and
+assurance of the RMF, with independent oversight reporting lines for the Chief Financial
+Officer (CFO) and Chief Risk Officer (CRO), Head of Credit Risk and Head of Internal Audit
+to the relevant Board Committee Chair, to support this.
+
+‘Board Risk & Board Audit Board Credit Board
+
+Committee Committee
+
+Remuneration
+
+Compliance f
+Committee
+
+Committee
+
+Executive Committee
+
+Operations Asset and Liability Credit Risk
+
+Committee Committee
+
+Management
+Committee
+
+The Board meets once every month, with in person meetings every other month. The Board
+maintains oversight of the effectiveness of each Board Committee through the receipt,
+review and challenge of regular standing reports, ad-hoc briefings, minutes and
+management information from each and will undertake a formal review annually of its own
+effectiveness, that of its Committees and individual directors.
+
+The Board Remuneration Committee assists the Board in determining the optimum Board
+size at any point of time within the legal and regulatory framework. The Board believes that
+its current size of ten members, comprising of four Executive, three Non-Executive
+Independent Directors and three notified non-Executive Directors, is optimal given the
+current scale of operations and the desired competencies of the Board members.
+Additionally, the CEO has reputable Independent Advisors such as Lord Turner and Lord
+Francis Maude and Nick Lee.
+
+The governance framework is summarised in OakNorth’s Firm Management
+Responsibilities Map (FMRM)), which includes:
+
+e Senior Management Function (SMF) structure chart
+
+lade
+
+OakNorth Bank Limited
+Strategic Report continued
+
+Key performance indicators
+
+2017 is the second full year of operations of OakNorth and we continue to be in high growth.
+The Directors consider the following as the key financial performance indicators, including
+the ability to maintain funding / liquidity strength, capital strength, credit quality of the loan
+book and cost containment:
+
+2017 2016
+Called up share capital (£ million) 249.3 86.3
+Cash and cash equivalent balances (£ million) 154.7 60.8
+Total capital adequacy ratio 35.1% 26.9%
+Yield on average loan book? 8.5% 8.9%
+Cost of funds on average deposit book 1.7% 1.8%
+Net margin on the average loan book! 6.9% NM"
+Specific impairment charge Nil Nil
+
+OakNorth has robust credit underwriting and monitoring processes in place to ensure that
+the quality of the loan book is strong and any issues which may impact the credit quality of
+the borrower are identified promptly. The Risk Management Framework detailed in the
+subsequent sections provides more information on OakNorth’s Credit Risk Management
+processes. As at 31 December 2017, OakNorth had no accounts in watchlist and no accounts
+were deemed as impaired. Approximately 92% of OakNorth’s lending facilities are
+collateralised with a weighted average LTV of 53% as of 31 December 2017.
+
+OakNorth has already recovered all its prior-year brought forward losses and continues to
+improve its profitability. With the increase in QakNorth’s paid up capital base in 2017, we
+are well positioned to support the growth in the foan book.
+
+As at 31 December 2017, OakNorth complied with the Liquidity Coverage Ratio (LCR)
+requirements.
+
+Risk Management
+
+OakNorth has established a strong enterprise-wide comprehensive risk management
+framework and robust governance structure, which underpin OakNorth’s operations.
+
+Governance structure
+
+OakNorth is an unlisted company and therefore the UK Corporate Governance Code does
+not apply in full. However, OakNorth has chosen to comply with the majority of the
+provisions of the Code, as appropriate to OakNorth’s size and nature.
+
+The Board's principal duty is to create and deliver a sustainable business model by sctting
+OakNorth’s strategy and overseeing its implementation. It is responsible for ensuring that a
+system of internal controls is designed, implemented, maintained and tested. It is also
+
+9 Including fee income
+10 (Loan interest income + fee income less cost of deposits & borrowing)/average loans
+11 Not meaningful, since the loan book was largely funded with equity through most part of the year
+
+16|Paqge
+
+OakNorth Bank Limited
+Strategic Report
+
+The Directors present their strategic report for OakNorth for the year ended 31 Decernber
+2017.
+
+Principal Activities and Review of the business
+
+OakNorth Bank Limited (“Oaknorth’) was incorporated on 3 July 2013 in the UK and is
+focused on providing fast, flexible and accessible debt finance for entrepreneurs and mid-
+sized growth businesses. OakNorth received its full banking licence in the UK on 28 August
+2015,
+
+OakNorth provides loans of up to £30 million to its borrowers. The two loan products that
+OakNorth focuses on are: Business Lending - which is primarily cash-flow based lending to
+companies to finance their funding requirements including (but not limited to) for growth,
+working capital and acquisitions; and Property Finance - which includes finance of new
+development, refurbishment as well as medium-term property investment funding. On the
+deposits side, OakNorth offers attractive savings products to retail customers which include-
+fixed term deposit accounts with tenors ranging from 6 to 60 months, easy access accounts,
+fixed rate ISAs and notice accounts. OakNorth also offers business customers fixed term
+savings accounts for up to 12 months as well as easy access and notice accounts.
+
+OakNorth’s total gross loan book including undrawn facilities increased to £851.5 million! as
+at 31 December 2017 (2016: £276.0 million) and the deposit book grew to £491.3 million (2016:
+£202.4 million), The total net interest and fee income grew significantly to £28.3 million in
+2017 from £7.7 million in 2016. OakNorth maintained an average yield on its loan book of
+8.5%.
+
+Operating expenses (administrative expenses, depreciation and amortisation) increased to
+£16.3 million from £9.2 million in 2016 largely driven by the growth in the headcount and
+increase in IT spend to support the growth of OakNorth’s lending book and the development
+of its systems including analytics and machine learning. QakNorth continues to invest in
+systems and controls to support growth plans and deliver an enhanced proposition to its
+customers. OakNorth is supported in its operations by its sister companies- OakNorth Global
+Private Limited and ACORN machine, that enable it to maintain high quality and cost
+efficiencies in the operations. Additionally, hosting our systems in the “cloud” using Amazon
+Web Services, allows us to scale up more quickly with fewer resources, enabling launch of
+new services and products more efficiently.
+
+An impairment provision charge for general provisions (incurred but not reported losses) of
+£1.4 million was booked during the year (2016: £875K). No specific provisions were made in
+the year,
+
+OakNorth maintained high cash and cash equivalent balances of at least 20% of total assets
+and 30% of its deposit liabilities. During the year, a part of OakNorth’s loan book was
+approved under the Bank of England's Term Funding Scheme, and a drawdown of £147.6
+million had been made as of 22 February 2018 (nil as of 31 December 2017).
+
+Following a large equity raising round at the holding company level, OakNorth received an
+additional £163.0 million of core equity investment. As detailed in the Chief Executive
+Officer's review, this investment will enable OakNorth to expand its lending further in 2018
+to hundreds of more SMEs in the UK and support their business growth plans, coupled with
+its strong product proposition, systems and operating framework, and governance structure.
+
+W4]ioqe
+
+OakNorth Bank Limited
+
+Strategic Report
+
+OakNorth Bank Limited
+
+Due to the extent that SMEs are
+underserved, we increased our equity
+base and brought in new investors at the
+holding company level...
+
+®
+* * e
+£250 million ;
+e
+In November, we closed a £250 million e
+investment round at the holding company e
+level- the largest of any UK fintech to date, e
+after attracting investments from GIC,
+Toscafund, Coltrane and The Clermont °
+Group. £163 million was invested in bd
+OakNorth following the equity raising bd
+round, e
+®
+e
+e
+e
+e
+e
+e
+®
+: £1.5 billion
+s
+® Our strong capital position will enable us to
+s lend a further £7.5 billion to UK businesses
+® and take our solution for SME lending
+e global via ACORN machine
+®
+e
+®
+
+12| Page
+
+OakNorth Bank Limited
+
+The £1 billion we've lent to date has
+already had a significant impact on the UK
+economy ...
+
+3,400
+
+To date, our loans have directly
+helped with the development of
+over 3,4007 new homes in the UK.
+
+Jobs ‘000s
+
+To date, our loans have significantly
+increased the number of jobs available in
+the country with several of our
+borrowers saying the loan will help them
+employ more staff - LEON (1,000 new
+jobs}® and Brasserie Bar Co. (700 new
+jobs)®.
+
+eoneeasensses GF eesssennssees &
+
+7 Based on the property sector lending provided by OakNorth since inception for funding development of
+residential units
+
+8 http://www. casualdiningmagazine.co,uk/news/2017-06-28-brasserie- bar-co-secyres-20m-funding
+http://www.telegraph.co.uk/business/2016/08/08/leon-to-create- 1000-new-jobs-as-it-raises-funds-from-
+banking-sta/
+
+W1[ Page
+

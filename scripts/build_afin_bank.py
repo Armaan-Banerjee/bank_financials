@@ -364,6 +364,150 @@ def metric(name, unit, rows_data, note=None):
     )
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (KM1-003)
+# ---------------------------------------------------------------
+# ONE COLUMN, AND THE BANK SAYS WHY. Afin prints a single 31/12/2024 column
+# and footnotes it: "*We were authorised as a bank by the PRA (with
+# restrictions) in Oct 2024. Therefore we do not provide comparative
+# information for the prior periods." That is the document declaring the
+# exclusion, which is a far stronger finding than a year we merely failed to
+# locate - FY2023/FY2022/FY2021 are blank here because no KM1 obligation or
+# disclosure existed, not because none was found.
+#
+# THE FULL TEMPLATE, INCLUDING ITS EMPTY ROWS. Afin prints the complete UK KM1
+# row set, including UK 8a, UK 9a, 10 and UK 10a - each as a DASH. Under map
+# rule 2 a dash is left BLANK and is not recorded as zero. That matters here
+# because this same table also prints GENUINE ZEROES two blocks below (UK 16a
+# and row 16 are "0", not "-"), so the two glyphs appear in one column and mean
+# different things. Recording the dashes as zeros would assert that Afin has a
+# systemic risk buffer requirement of exactly nil where the bank in fact
+# disclosed nothing.
+#
+# ROW 17 IS A SENTINEL, NOT A RATIO, AND IS REPRODUCED AS PUBLISHED (rule 7).
+# Afin prints "999999%" for the liquidity coverage ratio with its own
+# footnote: "(1) We are currently authorised as a bank by the PRA (with
+# restrictions). At present we do not have any qualifying cash outflows.
+# Therefore our LCR is reported as 999999%." It follows directly from row 16
+# being a printed zero. It is carried verbatim rather than blanked or capped:
+# blanking it would hide a disclosure the bank made, and "fixing" it would
+# invent a number the bank did not publish.
+#
+# PRECISION IS THE BANK'S OWN (rule 3): row 8 prints "2.5%" while row 9 prints
+# "2%", and UK 11a and row 12 print "147%" and "276%" with no decimals at all,
+# in the same column as "418.5%" and "142.5%". Not normalised.
+#
+# The table BREAKS ACROSS PAGES (rule 12): rows 1-14 and the "Liquidity
+# Coverage Ratio" heading sit on p.4, rows 15-20 and both footnotes on p.5.
+# The citation names both pages.
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)", {"FY2024": 12922}),
+    ("DATA", "2  Tier 1 capital (£'000)", {"FY2024": 12922}),
+    ("DATA", "3  Total capital (£'000)", {"FY2024": 12922}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£'000)", {"FY2024": 3087}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2024": "418.5%"}),
+    ("DATA", "6  Tier 1 ratio (%)", {"FY2024": "418.5%"}),
+    ("DATA", "7  Total capital ratio (%)", {"FY2024": "418.5%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {"FY2024": "75.7%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {"FY2024": "25.2%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {"FY2024": "33.6%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)", {"FY2024": "142.5%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {"FY2024": "2.5%"}),
+    ("DATA", "UK 8a  Conservation buffer due to macro-prudential or systemic risk identified at the "
+             "level of a Member State (%)", {}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)", {"FY2024": "2%"}),
+    ("DATA", "UK 9a  Systemic risk buffer (%)", {}),
+    ("DATA", "10  Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a  Other Systemically Important Institution buffer", {}),
+    ("DATA", "11  Combined buffer requirement (%)", {"FY2024": "4.5%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2024": "147%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {"FY2024": "276%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£'000)", {"FY2024": 14782}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)", {"FY2024": "87.4%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)", {"FY2024": 8909}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)", {"FY2024": 0}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)", {"FY2024": 3971}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£'000)", {"FY2024": 0}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {"FY2024": "999999%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£'000)", {"FY2024": 21486}),
+    ("DATA", "19  Total required stable funding (£'000)", {"FY2024": 4365}),
+    ("DATA", "20  NSFR ratio (%)", {"FY2024": "492.2%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Afin Bank Limited's own published UK KM1 template, reproduced in its own row order, row "
+    "numbers, labels and precision. Amounts in £'000 as published.\n"
+    f"FY2024: Afin Bank 2024 Pillar 3 Disclosures, pp.4-5, 'Table 1 UK KM1 - Key Metrics', column 31/12/2024 "
+    f"- {P3_2024_URL}\n"
+    "The table BREAKS ACROSS A PAGE: rows 1-14 and the 'Liquidity Coverage Ratio' heading on p.4, rows 15-20 "
+    "and both of the bank's footnotes on p.5. A citation naming only p.4 would send a checker to a page that "
+    "does not contain the liquidity rows.\n"
+    "ENTITY: Afin Bank Limited (company 13090556) only. The document states the template 'has been disclosed "
+    "in accordance with Annex I and Annex II of the Disclosure (CRR) Part of the PRA Rulebook'.\n"
+    "\n"
+    "WHY THERE IS ONLY ONE COLUMN - THE BANK STATES IT.\n"
+    "Footnote to the column header: \"*We were authorised as a bank by the PRA (with restrictions) in Oct "
+    "2024. Therefore we do not provide comparative information for the prior periods.\" FY2023, FY2022 and "
+    "FY2021 are blank because Afin was not an authorised bank and published no KM1 for those years - a "
+    "declared exclusion, not a document we failed to find, and not a figure to be back-filled from the "
+    "statutory accounts, which are a different basis.\n"
+    "\n"
+    "TWO MISSING-VALUE GLYPHS APPEAR IN THIS ONE COLUMN AND THEY MEAN DIFFERENT THINGS.\n"
+    "Rows UK 8a, UK 9a, 10 and UK 10a are printed as a DASH and are therefore left BLANK here (map rule 2): "
+    "the bank disclosed no figure, which is not the same as disclosing nil. Rows UK 16a and 16 are printed as "
+    "'0' and are recorded as genuine zeroes. Both glyphs sit in the same column of the same table, so "
+    "normalising either one would misstate what Afin published.\n"
+    "\n"
+    "ROW 17 IS PUBLISHED AS '999999%' AND IS REPRODUCED, NOT CORRECTED (rule 7).\n"
+    "Afin's own footnote: \"(1) We are currently authorised as a bank by the PRA (with restrictions). At "
+    "present we do not have any qualifying cash outflows. Therefore our LCR is reported as 999999%.\" It is a "
+    "sentinel standing for an undefined ratio - row 16, the denominator, is a printed zero - and it is carried "
+    "exactly as disclosed. It is not a conventional finite ratio and should not be charted or compared as one.\n"
+    "\n"
+    "THE FIGURES ARE SMALL AND THE RATIOS EXTREME, AND THAT IS CORRECT AS PUBLISHED. Total risk-weighted "
+    "exposures of £3,087k against CET1 of £12,922k give the printed 418.5% capital ratios, and the SREP "
+    "requirement is correspondingly high (UK 7d 142.5%). This is what a bank authorised with restrictions in "
+    "October 2024, two months before its year-end, actually looks like; none of it is derived here.\n"
+    "\n"
+    "PRECISION IS THE BANK'S OWN (rule 3): row 8 prints '2.5%' while row 9 prints '2%', and UK 11a and row 12 "
+    "print '147%' and '276%' without decimals, in the same column as '418.5%' and '142.5%'.\n"
+    "\n"
+    "SDDT STATUS - INTENT, NOT A WAIVER. The report's section 3.4 says that under the proposals in CP 7/24 "
+    "Afin 'would meet the definition of a Small Domestic Deposit Taker (SDDT) and intends to become an SDDT, "
+    "if this proposed regulatory change is implemented', in which case it 'would therefore no longer be "
+    "required to make Pillar 3 disclosures under CRR Article 433b'. That is a stated future intention "
+    "contingent on a consultation, NOT a PRA Rulebook Rule 3.1 election, and it removes no disclosure duty for "
+    "FY2024 - which is why a full KM1 exists for this year.\n"
+    "\n"
+    "LATEST-EDITION CHECK: Afin's own index at https://afinbank.com/about/annual-reports-and-disclosures/ was "
+    "read successfully on 2026-09-16 (HTTP 200, unblocked). It lists exactly three PDFs: this 2024 Pillar 3 "
+    "document, the FY2024 signed year-end accounts, and an interest-rate history. The 2024 edition is the "
+    "newest Pillar 3 published. NONE NEWER - and this is a positive reading of the bank's live index, not an "
+    "inference from a failed fetch."
+)
+
+bw.add_km1_sheet(
+    title="Afin Bank Limited - KM1 Key Metrics",
+    subtitle="Afin Bank's own published UK KM1 template, in its own row order, row numbers, labels and "
+             "precision. Amounts in £'000; ratios as printed. FY2024 is the only column because the bank was "
+             "authorised (with restrictions) in October 2024 and states it provides no prior-period "
+             "comparatives. Dashed rows are left blank; the zeroes in UK 16a and row 16 are the bank's own. "
+             "Row 17 is published as 999999% - see the sources note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=70,
+    source_height=320,
+    years=YEARS,
+)
+
 metric("CET1 Capital", "£'000", [
     ("Common Equity Tier 1 (CET1) capital", {"FY2024": 12922, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
 ])
